@@ -1,0 +1,41 @@
+{
+  "runs": [
+    {
+      "bytes": 872,
+      "equals_native": true,
+      "exit": 0,
+      "mode": [],
+      "script": "search_third.py",
+      "sha256": "24e63bd5126050f2d5b620fcb841cde4acf40043bd0e4c3bbfa26a2522c75c26"
+    },
+    {
+      "bytes": 872,
+      "equals_native": true,
+      "exit": 0,
+      "mode": [
+        "-O"
+      ],
+      "script": "search_third.py",
+      "sha256": "24e63bd5126050f2d5b620fcb841cde4acf40043bd0e4c3bbfa26a2522c75c26"
+    },
+    {
+      "bytes": 331,
+      "equals_native": null,
+      "exit": 0,
+      "mode": [],
+      "script": "verify_third.py",
+      "sha256": "f27ac208587a0c7368ed3ab814be432c7d0f134bce0137b90cbb576631afd4b6"
+    },
+    {
+      "bytes": 331,
+      "equals_native": null,
+      "exit": 0,
+      "mode": [
+        "-O"
+      ],
+      "script": "verify_third.py",
+      "sha256": "f27ac208587a0c7368ed3ab814be432c7d0f134bce0137b90cbb576631afd4b6"
+    }
+  ],
+  "status": "PASS"
+}

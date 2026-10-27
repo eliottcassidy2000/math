@@ -1,0 +1,30 @@
+{
+  "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+  "repository": "eliottcassidy2000/math",
+  "source_files": [
+    {
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "repository_path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "snapshot_path": "sources/AGENTS.md"
+    },
+    {
+      "git_blob": "150da5a150d6f4fa7b0b34666629d90d746e9a56",
+      "repository_path": "05-knowledge/hypotheses/HYP-9419-unifying-candidates-three-layer-composition-rank-laws-dissection-obstructions-pattern-clocks.md",
+      "sha256": "6dc3a287b7c103591c8f432f5d4fea01cf3c5e943a5bda2811bcbddf50c45636",
+      "snapshot_path": "sources/HYP-9419.md"
+    },
+    {
+      "git_blob": "326806c166879628ceedce1be280ba02baad0a6b",
+      "repository_path": "01-canon/theorems/THM-4809-incidence-cycle-law-degree-bound-on-restored-guards-and-clock-pattern-circulants.md",
+      "sha256": "d9c1bc93ed049e80202d8335a808889e9ab0075e0869b04a8bff376068c8498c",
+      "snapshot_path": "sources/THM-4809.md"
+    },
+    {
+      "git_blob": "c2313c5d454b0db2377d15953482c440fcf09895",
+      "repository_path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-response/REPORT.md",
+      "sha256": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+      "snapshot_path": "sources/SESSION72-RESPONSE-REPORT.md"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "cases": [
+    {
+      "downward_closure_count": 2,
+      "full_support_count": 2,
+      "k": 1,
+      "n": 3,
+      "rank_Q": 2
+    },
+    {
+      "downward_closure_count": 2,
+      "full_support_count": 2,
+      "k": 2,
+      "n": 3,
+      "rank_Q": 2
+    },
+    {
+      "downward_closure_count": 8,
+      "full_support_count": 6,
+      "k": 1,
+      "n": 4,
+      "rank_Q": 8
+    },
+    {
+      "downward_closure_count": 8,
+      "full_support_count": 6,
+      "k": 2,
+      "n": 4,
+      "rank_Q": 8
+    },
+    {
+      "downward_closure_count": 46,
+      "full_support_count": 31,
+      "k": 1,
+      "n": 5,
+      "rank_Q": 44
+    },
+    {
+      "downward_closure_count": 64,
+      "full_support_count": 53,
+      "k": 2,
+      "n": 5,
+      "rank_Q": 64
+    }
+  ],
+  "commands": [
+    "python3 check.py > check.normal.json",
+    "python3 -O check.py > check.optimized.json",
+    "cmp check.normal.json check.optimized.json"
+  ],
+  "independent_routes": [
+    "direct arc evaluation vs signed cylinders",
+    "symbolic coefficients vs Boolean Mobius inversion",
+    "integer primitive echelon vs exact Fraction reverse pivot elimination",
+    "Bareiss nonsingular minor certificates"
+  ],
+  "output_sha256": "08c895973e1b8bdb0a682858348dc20876867d2cb3923d8c1da12ab557ead1b2",
+  "outputs_byte_identical": true,
+  "python": "3.12.14",
+  "scope": "All labelled fixed-identity-path states and all named permutations at n=3,4,5; depths1,2; no n7 computation",
+  "sharp_depth_status": "OPEN at n7; untouched",
+  "source_commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+  "status": "PASS",
+  "worktree_changes_by_this_worker": "none; all output in delegated /tmp packet"
+}

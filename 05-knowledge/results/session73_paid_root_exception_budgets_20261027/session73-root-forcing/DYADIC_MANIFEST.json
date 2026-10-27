@@ -1,0 +1,26 @@
+{
+  "schema": "session73-dyadic-profile-obstruction-v1",
+  "dependency_core_manifest_sha256": "6d00f944cb9b06e032d5cdeb2df1291b642025d157f2e89c6b488391b3b8142c",
+  "files": [
+    {
+      "path": "DYADIC_PROFILE_OBSTRUCTION.md",
+      "bytes": 5939,
+      "sha256": "d75b7855c3e745d5ab2d49d7510d5f26bc081457aebc374cd6f4706d722cc02a"
+    },
+    {
+      "path": "check_dyadic_profile.py",
+      "bytes": 2809,
+      "sha256": "fe284e734ebb5afc22a33af981839fc2bcf848edb7e47c863582aa350464e5be"
+    },
+    {
+      "path": "dyadic.normal.json",
+      "bytes": 38358,
+      "sha256": "d24a678c2f6e9e667a7cdb23e052ee90dde43f4ba23fcbb4e072b189f7c9bdcd"
+    },
+    {
+      "path": "dyadic.optimized.json",
+      "bytes": 38358,
+      "sha256": "d24a678c2f6e9e667a7cdb23e052ee90dde43f4ba23fcbb4e072b189f7c9bdcd"
+    }
+  ]
+}

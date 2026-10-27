@@ -1,0 +1,26 @@
+{
+  "schema": "session73-root-forcing-supplement-v1",
+  "core_manifest_sha256": "6d00f944cb9b06e032d5cdeb2df1291b642025d157f2e89c6b488391b3b8142c",
+  "files": [
+    {
+      "path": "SUPPLEMENT.md",
+      "bytes": 7396,
+      "sha256": "58abbbd9936dddc0be550ccb026f083c9c4472420b9d6713a1e9a6e49be6d906"
+    },
+    {
+      "path": "check_supplement.py",
+      "bytes": 4634,
+      "sha256": "ea0d7c22cf3606604bafaffa8f9816c64d85af90f467d3f5cd88fb571ddcc7da"
+    },
+    {
+      "path": "supplement.normal.json",
+      "bytes": 2791,
+      "sha256": "fac4a1cf4ccde8912fb17d518022aeff7c4621d09dbe81e657960676ac39b390"
+    },
+    {
+      "path": "supplement.optimized.json",
+      "bytes": 2791,
+      "sha256": "fac4a1cf4ccde8912fb17d518022aeff7c4621d09dbe81e657960676ac39b390"
+    }
+  ]
+}

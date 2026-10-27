@@ -1,0 +1,18 @@
+{
+  "schema": "sha256-file-manifest-v1",
+  "self_excluded": "MANIFEST.json",
+  "sha256": {
+    "README.md": "3517e561c624067a69aa127fc914b2a6c737349391133fd05785adc25cbf96ac",
+    "REPORT.md": "bce2e0c56e295c5f6934ac5313fd5ca5b79390d9c6c40a6b260250c1d9becdb5",
+    "SOURCE_PINS.json": "8484898731fd038cfa7e7bd14e8471a4c21f7d2aaed5627630219205ec30717b",
+    "VERIFICATION.json": "63b7b8fe9d91fd55c2e2301afdaafc734c1957cd119bb8bafc6c1f3d7694a39b",
+    "check.normal.json": "08c895973e1b8bdb0a682858348dc20876867d2cb3923d8c1da12ab557ead1b2",
+    "check.optimized.json": "08c895973e1b8bdb0a682858348dc20876867d2cb3923d8c1da12ab557ead1b2",
+    "check.py": "13a9300f5dd0f77e4ff99f5db47d549c5b8bc056ccb53f3f6562f7ca5d29940d",
+    "sources/AGENTS.md": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+    "sources/HYP-9419.md": "6dc3a287b7c103591c8f432f5d4fea01cf3c5e943a5bda2811bcbddf50c45636",
+    "sources/SESSION72-RESPONSE-REPORT.md": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+    "sources/THM-4809.md": "d9c1bc93ed049e80202d8335a808889e9ab0075e0869b04a8bff376068c8498c"
+  },
+  "source_commit": "64a7985e7054821c5958dc85f6dd489c844111f2"
+}

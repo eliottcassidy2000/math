@@ -1,0 +1,76 @@
+{
+  "negative_controls": [
+    {
+      "exit": 1,
+      "last_error": "RuntimeError: EQUAL_PRIME_GUARD_FAILED: s(9)=4, not 7",
+      "mode": []
+    },
+    {
+      "exit": 1,
+      "last_error": "RuntimeError: EQUAL_PRIME_GUARD_FAILED: s(9)=4, not 7",
+      "mode": [
+        "-O"
+      ]
+    }
+  ],
+  "replays": [
+    {
+      "lane": "arithmetic",
+      "runs": [
+        {
+          "bytes": 6477,
+          "equal_native": true,
+          "exit": 0,
+          "mode": "normal",
+          "sha256": "0019973938bad89683f2a0de9add81ed3c77df3ebecc3ea854b8d082bd9fd6f8"
+        },
+        {
+          "bytes": 6477,
+          "equal_native": true,
+          "exit": 0,
+          "mode": "optimized",
+          "sha256": "0019973938bad89683f2a0de9add81ed3c77df3ebecc3ea854b8d082bd9fd6f8"
+        }
+      ]
+    },
+    {
+      "lane": "scaling",
+      "runs": [
+        {
+          "bytes": 7599,
+          "equal_native": true,
+          "exit": 0,
+          "mode": "normal",
+          "sha256": "1f7a8e6541e14aad5f9634927007ba80c6d26007b0cbece99418676ea247e0c2"
+        },
+        {
+          "bytes": 7599,
+          "equal_native": true,
+          "exit": 0,
+          "mode": "optimized",
+          "sha256": "1f7a8e6541e14aad5f9634927007ba80c6d26007b0cbece99418676ea247e0c2"
+        }
+      ]
+    },
+    {
+      "lane": "root-scalar",
+      "runs": [
+        {
+          "bytes": 330,
+          "equal_native": true,
+          "exit": 0,
+          "mode": "normal",
+          "sha256": "47396977164e068597b12acbcaabd3c6fca6d334bf4a2f94e3463365d86a6883"
+        },
+        {
+          "bytes": 330,
+          "equal_native": true,
+          "exit": 0,
+          "mode": "optimized",
+          "sha256": "47396977164e068597b12acbcaabd3c6fca6d334bf4a2f94e3463365d86a6883"
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

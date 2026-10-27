@@ -1,0 +1,20 @@
+{
+  "status": "FROZEN_CHECKPOINT2_SUPPLEMENT",
+  "files": [
+    {
+      "path": "check_scalar_budget.py",
+      "sha256": "5b484567555349ab9b1c3d2380ca066bb124a4714277e17a46993269b937f67e",
+      "bytes": 1072
+    },
+    {
+      "path": "scalar.normal.json",
+      "sha256": "47396977164e068597b12acbcaabd3c6fca6d334bf4a2f94e3463365d86a6883",
+      "bytes": 330
+    },
+    {
+      "path": "scalar.optimized.json",
+      "sha256": "47396977164e068597b12acbcaabd3c6fca6d334bf4a2f94e3463365d86a6883",
+      "bytes": 330
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "checked_date": "2026-10-27",
+  "sources": [
+    {"url":"https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/92/1/111831/the-exceptional-set-of-goldbach-numbers-ii","scope":"Primary publisher theorem statement: ordinary two-odd-prime Goldbach exceptional count O(X^0.914); no distinctness. Analytic proof not re-audited.","pdf_status":"Exact linked ICM PDF returned403; publisher HTML successfully read."},
+    {"url":"https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/mit18_785f21_lec18.pdf","scope":"Theorem18.1 on infinitely many primes in each coprime fixed residue class read directly."},
+    {"url":"https://arxiv.org/abs/0808.1408v2","scope":"Versioned Dirichlet1837 translation metadata and theorem title; no new Dirichlet proof claimed."}
+  ]
+}

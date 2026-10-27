@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "actual_coefficient_supports": 2,
+      "full_supports": 2,
+      "guard_rank_Q": 2,
+      "n": 3,
+      "nonzero_possible_paths": 3,
+      "two_guard_rank_Q": 2
+    },
+    {
+      "actual_coefficient_supports": 8,
+      "full_supports": 6,
+      "guard_rank_Q": 8,
+      "n": 4,
+      "nonzero_possible_paths": 11,
+      "two_guard_rank_Q": 8
+    },
+    {
+      "actual_coefficient_supports": 46,
+      "full_supports": 31,
+      "guard_rank_Q": 44,
+      "n": 5,
+      "nonzero_possible_paths": 53,
+      "two_guard_rank_Q": 64
+    }
+  ],
+  "n5_11_term_annihilator_on_all_guards": true,
+  "scope": "independent literal adjacency guard tables, subset finite differences, and rational elimination n3..5",
+  "sharp_depth_n7": "NOT COMPUTED",
+  "status": "PASS"
+}

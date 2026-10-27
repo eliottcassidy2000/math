@@ -1,0 +1,21 @@
+[
+  {
+    "archive_note": "URL/metadata verified via web; external full text not archived or content-hashed",
+    "author": "Peter Gustav Lejeune Dirichlet",
+    "checked_utc_date": "2026-10-27",
+    "edition": "1837 original, R. Stephan translation; arXiv v2 dated2014-11-24",
+    "role": "CITED Dirichlet theorem; no claim to reproduce its analytic proof",
+    "title": "There are infinitely many prime numbers in all arithmetic progressions with first term and difference coprime",
+    "url": "https://arxiv.org/abs/0808.1408v2"
+  },
+  {
+    "archive_note": "PDF read via web; external full text not archived or content-hashed",
+    "author": "Andrew V. Sutherland",
+    "checked_utc_date": "2026-10-27",
+    "edition": "2021-11-10",
+    "locator": "Theorem18.1 on page1",
+    "role": "Independent authoritative statement of the cited Dirichlet theorem",
+    "title": "18.785 Lecture18: Dirichlet L-functions, primes in arithmetic progressions",
+    "url": "https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/mit18_785f21_lec18.pdf"
+  }
+]

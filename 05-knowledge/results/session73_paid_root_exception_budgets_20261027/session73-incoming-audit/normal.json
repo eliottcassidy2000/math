@@ -1,0 +1,98 @@
+{
+  "clone_controls": {
+    "(1, 2, 3)": {
+      "cycles_at_min_edges": [
+        0
+      ],
+      "edges_at_min_cycles": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "interleavings": 60,
+      "minimum_cycles": 0,
+      "minimum_edges": 2
+    },
+    "(2, 3, 3)": {
+      "cycles_at_min_edges": [
+        0,
+        2
+      ],
+      "edges_at_min_cycles": [
+        6,
+        7
+      ],
+      "interleavings": 560,
+      "minimum_cycles": 0,
+      "minimum_edges": 6
+    },
+    "(3, 3, 3)": {
+      "cycles_at_min_edges": [
+        2,
+        4
+      ],
+      "edges_at_min_cycles": [
+        9,
+        10
+      ],
+      "interleavings": 1680,
+      "minimum_cycles": 2,
+      "minimum_edges": 9
+    },
+    "(3, 3, 4)": {
+      "cycles_at_min_edges": [
+        4
+      ],
+      "edges_at_min_cycles": [
+        10,
+        11
+      ],
+      "interleavings": 4200,
+      "minimum_cycles": 2,
+      "minimum_edges": 9
+    }
+  },
+  "native_seed_controls": 24,
+  "norm_matrix_vectors": 25,
+  "s3": {
+    "P_braid_clock": 3,
+    "U_literal_clock": 7,
+    "U_shortcut_clock": 5,
+    "U_source_probability": "1/6",
+    "U_valuations": [
+      1,
+      4
+    ],
+    "local_price": "1/31"
+  },
+  "scope": "bounded independent interface checks only; no full packet or large scale census replay",
+  "status": "PASS",
+  "synthetic_pair_ledger": {
+    "energies": {
+      "1": 15,
+      "2": 18,
+      "4": 11,
+      "8": 13,
+      "16": 13
+    },
+    "level_debts": [
+      -3,
+      7,
+      -2,
+      0
+    ],
+    "pair_owner_counts": {
+      "1": 6,
+      "2": 3,
+      "4": 3,
+      "8": 1
+    },
+    "source_norm": 13,
+    "sources": 8
+  },
+  "tower9_constructed_frame": {
+    "cycles": 4,
+    "edges": 12
+  }
+}

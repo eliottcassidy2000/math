@@ -1,0 +1,269 @@
+{
+  "arithmetic_negative_controls": [
+    {
+      "exit": 1,
+      "last_error": "RuntimeError: EQUAL_PRIME_GUARD_FAILED: s(9)=4, not 7",
+      "mode": []
+    },
+    {
+      "exit": 1,
+      "last_error": "RuntimeError: EQUAL_PRIME_GUARD_FAILED: s(9)=4, not 7",
+      "mode": [
+        "-O"
+      ]
+    }
+  ],
+  "independent_runs": [
+    {
+      "bytes": 2641,
+      "normal_optimized_equal": true,
+      "script": "check_independent.py",
+      "sha256": "0d245e12eb9911694cb5f3a41f8ac87afa423885a21daec740525206ff12651b"
+    },
+    {
+      "bytes": 789,
+      "normal_optimized_equal": true,
+      "script": "check_guards_independent.py",
+      "sha256": "5735968572255d2f76ebb5efcf0ea6078366b87767fee4036de9ca25124d5c0f"
+    }
+  ],
+  "producer_runs": [
+    {
+      "bytes": 6477,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "arithmetic",
+      "mode": "normal",
+      "script": "check.py",
+      "sha256": "0019973938bad89683f2a0de9add81ed3c77df3ebecc3ea854b8d082bd9fd6f8"
+    },
+    {
+      "bytes": 6477,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "arithmetic",
+      "mode": "optimized",
+      "script": "check.py",
+      "sha256": "0019973938bad89683f2a0de9add81ed3c77df3ebecc3ea854b8d082bd9fd6f8"
+    },
+    {
+      "bytes": 7599,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "scaling",
+      "mode": "normal",
+      "script": "verify_scaling.py",
+      "sha256": "1f7a8e6541e14aad5f9634927007ba80c6d26007b0cbece99418676ea247e0c2"
+    },
+    {
+      "bytes": 7599,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "scaling",
+      "mode": "optimized",
+      "script": "verify_scaling.py",
+      "sha256": "1f7a8e6541e14aad5f9634927007ba80c6d26007b0cbece99418676ea247e0c2"
+    },
+    {
+      "bytes": 330,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "root-scalar",
+      "mode": "normal",
+      "script": "check_scalar_budget.py",
+      "sha256": "47396977164e068597b12acbcaabd3c6fca6d334bf4a2f94e3463365d86a6883"
+    },
+    {
+      "bytes": 330,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "root-scalar",
+      "mode": "optimized",
+      "script": "check_scalar_budget.py",
+      "sha256": "47396977164e068597b12acbcaabd3c6fca6d334bf4a2f94e3463365d86a6883"
+    },
+    {
+      "bytes": 2791,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "forcing",
+      "mode": "normal",
+      "script": "check_supplement.py",
+      "sha256": "fac4a1cf4ccde8912fb17d518022aeff7c4621d09dbe81e657960676ac39b390"
+    },
+    {
+      "bytes": 2791,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "forcing",
+      "mode": "optimized",
+      "script": "check_supplement.py",
+      "sha256": "fac4a1cf4ccde8912fb17d518022aeff7c4621d09dbe81e657960676ac39b390"
+    },
+    {
+      "bytes": 3696,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "measure",
+      "mode": "normal",
+      "script": "check_measure_diagnostic.py",
+      "sha256": "ab71b3025f7e6d694cdd09d35cac114cee54d7c10ff0f20959fdc64973f6c668"
+    },
+    {
+      "bytes": 3696,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "measure",
+      "mode": "optimized",
+      "script": "check_measure_diagnostic.py",
+      "sha256": "ab71b3025f7e6d694cdd09d35cac114cee54d7c10ff0f20959fdc64973f6c668"
+    },
+    {
+      "bytes": 38358,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "dyadic",
+      "mode": "normal",
+      "script": "check_dyadic_profile.py",
+      "sha256": "d24a678c2f6e9e667a7cdb23e052ee90dde43f4ba23fcbb4e072b189f7c9bdcd"
+    },
+    {
+      "bytes": 38358,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "dyadic",
+      "mode": "optimized",
+      "script": "check_dyadic_profile.py",
+      "sha256": "d24a678c2f6e9e667a7cdb23e052ee90dde43f4ba23fcbb4e072b189f7c9bdcd"
+    },
+    {
+      "bytes": 1340,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "moduli-scope",
+      "mode": "normal",
+      "script": "check_scope.py",
+      "sha256": "8a91980d44f90f1126b350c40aba5378f83159215cefa61da900ab574da12fa8"
+    },
+    {
+      "bytes": 1340,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "moduli-scope",
+      "mode": "optimized",
+      "script": "check_scope.py",
+      "sha256": "8a91980d44f90f1126b350c40aba5378f83159215cefa61da900ab574da12fa8"
+    },
+    {
+      "bytes": 1144,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "moduli-scope",
+      "mode": "normal",
+      "script": "check_patterns.py",
+      "sha256": "94101dff38132046ea66012dc2359e4f93b681f4568616a40db169ccde6e246d"
+    },
+    {
+      "bytes": 1144,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "moduli-scope",
+      "mode": "optimized",
+      "script": "check_patterns.py",
+      "sha256": "94101dff38132046ea66012dc2359e4f93b681f4568616a40db169ccde6e246d"
+    },
+    {
+      "bytes": 12565,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "guard-support",
+      "mode": "normal",
+      "script": "check.py --verify-manifest",
+      "sha256": "08c895973e1b8bdb0a682858348dc20876867d2cb3923d8c1da12ab557ead1b2"
+    },
+    {
+      "bytes": 12565,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "guard-support",
+      "mode": "optimized",
+      "script": "check.py --verify-manifest",
+      "sha256": "08c895973e1b8bdb0a682858348dc20876867d2cb3923d8c1da12ab557ead1b2"
+    },
+    {
+      "bytes": 696,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "depth",
+      "mode": "normal",
+      "script": "verify_depth_receipt.py",
+      "sha256": "c30c5f3221c19d2d67cd2918e35fc8ce1e135d9694ab4bfb64d444ba0fa930e7"
+    },
+    {
+      "bytes": 696,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "depth",
+      "mode": "optimized",
+      "script": "verify_depth_receipt.py",
+      "sha256": "c30c5f3221c19d2d67cd2918e35fc8ce1e135d9694ab4bfb64d444ba0fa930e7"
+    },
+    {
+      "bytes": 872,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "third",
+      "mode": "normal",
+      "script": "search_third.py",
+      "sha256": "24e63bd5126050f2d5b620fcb841cde4acf40043bd0e4c3bbfa26a2522c75c26"
+    },
+    {
+      "bytes": 872,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "third",
+      "mode": "optimized",
+      "script": "search_third.py",
+      "sha256": "24e63bd5126050f2d5b620fcb841cde4acf40043bd0e4c3bbfa26a2522c75c26"
+    },
+    {
+      "bytes": 331,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "third",
+      "mode": "normal",
+      "script": "verify_third.py",
+      "sha256": "f27ac208587a0c7368ed3ab814be432c7d0f134bce0137b90cbb576631afd4b6"
+    },
+    {
+      "bytes": 331,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "third",
+      "mode": "optimized",
+      "script": "verify_third.py",
+      "sha256": "f27ac208587a0c7368ed3ab814be432c7d0f134bce0137b90cbb576631afd4b6"
+    },
+    {
+      "bytes": 2016,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "depth",
+      "mode": "normal",
+      "script": "search_depth.py",
+      "sha256": "60899d4510d9aa3b6df1c716828d6208f83e65a01753d732bae186b280275420"
+    },
+    {
+      "bytes": 2016,
+      "equals_native": true,
+      "exit": 0,
+      "lane": "depth",
+      "mode": "optimized",
+      "script": "search_depth.py",
+      "sha256": "60899d4510d9aa3b6df1c716828d6208f83e65a01753d732bae186b280275420"
+    }
+  ],
+  "reviewed_producer_bytes_unchanged": true,
+  "scope": "full bounded searches and finite exact verifiers; no broader accessibility or source-positivity inference",
+  "status": "PASS"
+}

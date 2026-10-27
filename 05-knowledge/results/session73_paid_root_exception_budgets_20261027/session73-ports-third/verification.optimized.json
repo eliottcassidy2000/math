@@ -1,0 +1,23 @@
+{
+  "additional_path": [
+    4,
+    7,
+    5,
+    10,
+    1,
+    3,
+    0,
+    8,
+    2,
+    6,
+    9
+  ],
+  "independent_prepend_FAS": [
+    20,
+    15,
+    13,
+    12
+  ],
+  "status": "VERIFIED bounded no-witness receipt and literal best third path; no depth3 impossibility or upper-bound claim",
+  "whole_complement_clock": 3
+}

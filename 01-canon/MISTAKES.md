@@ -4,6 +4,11 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-27 — polynomial supports are not independent guard coordinates
+
+- **Source / failed implication:** the separate support form in HYP-9419(2) identifies the dimension of a guard span with the number of full path-support monomials. At n4,k1 there are6 full supports but guard rank8; lower-degree terms cannot be omitted. Its downward-closure repair also fails: at n5,k1 the46-dimensional supported coefficient space contains only a44-dimensional guard span.
+- **Strongest survivor / lineage:** retain the actual signed-cylinder coefficient matrix and its linear dependencies, rather than merely its nonzero coordinates. Session72 already recorded the latter rank deficiency in Walsh coordinates; the present [source-pinned independent audit](../05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-guard-support/REPORT.md) gives exact coefficient witnesses and a compatible-support sandwich, not a new rank-discovery claim. Session72's distinct sharp restored-test depth conjecture remains OPEN at n7; incoming higher-order tables are not reaudited here.
+
 ## 2026-10-27 — a cube census is not a polynomial-degree exclusion
 
 - **Source / failed implication:** HYP-9419(4), at incoming `64a7985e705`, extended a finite census of named sequences (including cubes) to every polynomial of degree at least three, and called that broader claim FINITE-EXACT through modulus120.

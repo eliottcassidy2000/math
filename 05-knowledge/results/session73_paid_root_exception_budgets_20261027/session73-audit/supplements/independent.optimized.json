@@ -1,0 +1,115 @@
+{
+  "arithmetic": "exact integers/Fractions",
+  "scaling": [
+    {
+      "difference": 1,
+      "n": 5,
+      "source_fas": 1,
+      "target_fas": 2
+    },
+    {
+      "difference": 2,
+      "n": 6,
+      "source_fas": 1,
+      "target_fas": 3
+    },
+    {
+      "difference": 3,
+      "n": 7,
+      "source_fas": 1,
+      "target_fas": 4
+    },
+    {
+      "difference": 3,
+      "n": 8,
+      "source_fas": 1,
+      "target_fas": 4
+    },
+    {
+      "difference": 4,
+      "n": 9,
+      "source_fas": 1,
+      "target_fas": 5
+    },
+    {
+      "difference": 5,
+      "n": 10,
+      "source_fas": 1,
+      "target_fas": 6
+    },
+    {
+      "difference": 6,
+      "n": 11,
+      "source_fas": 1,
+      "target_fas": 7
+    },
+    {
+      "difference": 6,
+      "n": 12,
+      "source_fas": 1,
+      "target_fas": 7
+    },
+    {
+      "difference": 7,
+      "n": 13,
+      "source_fas": 1,
+      "target_fas": 8
+    },
+    {
+      "difference": 8,
+      "n": 14,
+      "source_fas": 1,
+      "target_fas": 9
+    }
+  ],
+  "spatial": {
+    "folded_rows": 256,
+    "literal_shortcut_sources": 1024,
+    "row_attainers": 256,
+    "windows": [
+      {
+        "Cauchy_upper": "146567991349/3",
+        "X": 4,
+        "actual_centered_spatial_energy": 124,
+        "hilbert_schmidt_squared": "11274460873",
+        "source_operator_squared_norm_lower": "11274451650"
+      },
+      {
+        "Cauchy_upper": "7004550960784/3",
+        "X": 8,
+        "actual_centered_spatial_energy": 32,
+        "hilbert_schmidt_squared": "538811612368",
+        "source_operator_squared_norm_lower": "184901007060"
+      },
+      {
+        "Cauchy_upper": "105793999268243/2",
+        "X": 16,
+        "actual_centered_spatial_energy": 592,
+        "hilbert_schmidt_squared": "24413999831133/2",
+        "source_operator_squared_norm_lower": "3066650848800"
+      },
+      {
+        "Cauchy_upper": "4115090541802019/6",
+        "X": 32,
+        "actual_centered_spatial_energy": 2640,
+        "hilbert_schmidt_squared": "316545426292463/2",
+        "source_operator_squared_norm_lower": "19616830032800"
+      },
+      {
+        "Cauchy_upper": "108130911483853037/6",
+        "X": 64,
+        "actual_centered_spatial_energy": 4808,
+        "hilbert_schmidt_squared": "8317762421834849/2",
+        "source_operator_squared_norm_lower": "906443258043456"
+      },
+      {
+        "Cauchy_upper": "128975221129194193871/6",
+        "X": 128,
+        "actual_centered_spatial_energy": 16832,
+        "hilbert_schmidt_squared": "9921170856091861067/2",
+        "source_operator_squared_norm_lower": "2116758473188128000"
+      }
+    ]
+  },
+  "status": "PASS"
+}

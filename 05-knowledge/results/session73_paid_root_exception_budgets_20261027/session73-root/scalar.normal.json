@@ -1,0 +1,10 @@
+{
+  "cutoff": 5001,
+  "maximum_odd_steps": 87,
+  "paid_lower_rational": "47106529/2000000000",
+  "paid_upper_rational": "236498201/10000000000",
+  "scope": "independent direct first-hit replay; inherited total nonroot W<=13/3 used for all larger sources",
+  "sources": 2500,
+  "status": "PASS",
+  "strict_upper_1_over_42": true
+}

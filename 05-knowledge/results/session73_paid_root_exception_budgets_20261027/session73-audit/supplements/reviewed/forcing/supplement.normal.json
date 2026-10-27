@@ -1,0 +1,81 @@
+{
+  "boundaries": [
+    "scalar payment is not spatial covariance",
+    "inverse masses are not supplied by positive-energy existence",
+    "zero ROOT mass never provides an invertible observation weight"
+  ],
+  "checks": 3169,
+  "phase_transport": {
+    "distinct_visited_vertices": 350,
+    "nonroot_marked_visits": 1694,
+    "phase_forgetting_hostile": {
+      "occupation_mass": "20371390811942089744198469/84447634578773019107954400",
+      "phase_erased_J": "-115207974814978105869265571/591133442051411133755680800",
+      "phase_retained_J": "20371390811942089744198469/84447634578773019107954400",
+      "vertex": 5
+    },
+    "sources": 84,
+    "weighted_energy_upper_13_over_3": true
+  },
+  "scalar": {
+    "counters_sha256": "a08ca9f6b2dcb5e6c5ff0408f7eac0923bb4198f11ec66cf8c0a60224c19935f",
+    "cutoff": 5001,
+    "maximum_odd_steps": 87,
+    "method": "cached native counters, integer binomial weight; inherited nonroot mass13/3 tail",
+    "outward_rational_interval": [
+      "47106529/2000000000",
+      "236498201/10000000000"
+    ],
+    "sources": 2500,
+    "strict_upper_1_over_42": true
+  },
+  "spatial_current": {
+    "all_N_1_to_256_direct_fold_agree": true,
+    "current_sha256": "0695bef4e9ae668b3801bb38b8e6681adc287a31d7434a815da4b959222e4c51",
+    "windows": [
+      {
+        "Cauchy_upper": "146567991349/3",
+        "X": 4,
+        "actual_centered_spatial_energy": 124,
+        "hilbert_schmidt_squared": "11274460873",
+        "source_operator_squared_norm_lower": "11274451650"
+      },
+      {
+        "Cauchy_upper": "7004550960784/3",
+        "X": 8,
+        "actual_centered_spatial_energy": 32,
+        "hilbert_schmidt_squared": "538811612368",
+        "source_operator_squared_norm_lower": "184901007060"
+      },
+      {
+        "Cauchy_upper": "105793999268243/2",
+        "X": 16,
+        "actual_centered_spatial_energy": 592,
+        "hilbert_schmidt_squared": "24413999831133/2",
+        "source_operator_squared_norm_lower": "3066650848800"
+      },
+      {
+        "Cauchy_upper": "4115090541802019/6",
+        "X": 32,
+        "actual_centered_spatial_energy": 2640,
+        "hilbert_schmidt_squared": "316545426292463/2",
+        "source_operator_squared_norm_lower": "19616830032800"
+      },
+      {
+        "Cauchy_upper": "108130911483853037/6",
+        "X": 64,
+        "actual_centered_spatial_energy": 4808,
+        "hilbert_schmidt_squared": "8317762421834849/2",
+        "source_operator_squared_norm_lower": "906443258043456"
+      },
+      {
+        "Cauchy_upper": "128975221129194193871/6",
+        "X": 128,
+        "actual_centered_spatial_energy": 16832,
+        "hilbert_schmidt_squared": "9921170856091861067/2",
+        "source_operator_squared_norm_lower": "2116758473188128000"
+      }
+    ]
+  },
+  "status": "PASS"
+}

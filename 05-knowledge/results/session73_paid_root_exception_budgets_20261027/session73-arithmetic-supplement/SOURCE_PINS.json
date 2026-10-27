@@ -1,0 +1,24 @@
+{
+  "base_report_sha256": "8b8c92876e0d4edbbb85ca93aa1215164f7adc00504fa665a7eec27db089cce6",
+  "base_report_label": "Session73 source-faithful arithmetic grammars and the two gap pairs",
+  "classical_sources": [
+    {
+      "title": "The exceptional set of Goldbach numbers (II)",
+      "author": "Hongze Li",
+      "journal": "Acta Arithmetica 92 (2000), 71-88",
+      "doi": "10.4064/aa-92-1-71-88",
+      "url": "https://www.impan.pl/en/publishing-house/journals-and-series/acta-arithmetica/all/92/1/111831/the-exceptional-set-of-goldbach-numbers-ii",
+      "pdf_url": "https://matwbn.icm.edu.pl/ksiazki/aa/aa92/aa9217.pdf",
+      "read_scope": "Primary publisher first-page theorem text and indexed primary PDF first-page theorem text. Full PDF download returned403; analytic proof not independently audited.",
+      "imported_statement": "Ordinary two-odd-prime Goldbach exceptions E(X)=O(X^0.914). No distinctness imported."
+    },
+    {
+      "title": "254A Notes2, equation6",
+      "author": "Terence Tao",
+      "date": "2014-12-09",
+      "url": "https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/",
+      "imported_statement": "PNT in each fixed primitive residue class; no uniform moving-modulus estimate."
+    }
+  ],
+  "checked_utc_date": "2026-10-27"
+}

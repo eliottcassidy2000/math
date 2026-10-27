@@ -1,0 +1,54 @@
+{
+  "P": [
+    6,
+    0,
+    3,
+    1,
+    2,
+    7,
+    10,
+    4,
+    5,
+    8,
+    9
+  ],
+  "Q": [
+    10,
+    1,
+    9,
+    0,
+    8,
+    4,
+    3,
+    2,
+    7,
+    6,
+    5
+  ],
+  "family_clock_lower_bounds": [
+    {
+      "FAS": 7,
+      "complement_lower_bound": 1,
+      "n": 7
+    },
+    {
+      "FAS": 70,
+      "complement_lower_bound": 3,
+      "n": 21
+    },
+    {
+      "FAS": 651,
+      "complement_lower_bound": 10,
+      "n": 63
+    }
+  ],
+  "final_components": 2,
+  "final_rank_cycle_debt": 4,
+  "independent_FAS": [
+    20,
+    15,
+    13
+  ],
+  "status": "VERIFIED finite receipt and literal near miss; no two-complement impossibility claim",
+  "whole_complement_clock": 2
+}

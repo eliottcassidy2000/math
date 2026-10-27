@@ -1,0 +1,119 @@
+{
+  "checks": 519,
+  "rows": [
+    {
+      "alpha": 1,
+      "beta": 3,
+      "finite_source_partial": "85966593586828919409157587011/13201980205814848653876871200",
+      "leaf_mass_before_normalization": "1/2",
+      "literal_clock_upper": "67/2"
+    },
+    {
+      "alpha": 1,
+      "beta": 4,
+      "finite_source_partial": "49944556750297169198508377957/6600990102907424326938435600",
+      "leaf_mass_before_normalization": "1/3",
+      "literal_clock_upper": "153/5"
+    },
+    {
+      "alpha": 1,
+      "beta": 5,
+      "finite_source_partial": "3566871650904864427388588471/440066006860494955129229040",
+      "leaf_mass_before_normalization": "1/4",
+      "literal_clock_upper": "95/3"
+    },
+    {
+      "alpha": 1,
+      "beta": 6,
+      "finite_source_partial": "614453511476177106357455047/73344334476749159188204840",
+      "leaf_mass_before_normalization": "1/5",
+      "literal_clock_upper": "236/7"
+    },
+    {
+      "alpha": 2,
+      "beta": 3,
+      "finite_source_partial": "315982779267822370268852711/57903421955328283569635400",
+      "leaf_mass_before_normalization": "1",
+      "literal_clock_upper": "182/5"
+    },
+    {
+      "alpha": 2,
+      "beta": 4,
+      "finite_source_partial": "8921355946076694676005540859/1320198020581484865387687120",
+      "leaf_mass_before_normalization": "2/3",
+      "literal_clock_upper": "29"
+    },
+    {
+      "alpha": 2,
+      "beta": 5,
+      "finite_source_partial": "1109057605000156001958768283/146688668953498318376409680",
+      "leaf_mass_before_normalization": "1/2",
+      "literal_clock_upper": "193/7"
+    },
+    {
+      "alpha": 2,
+      "beta": 6,
+      "finite_source_partial": "1653746450224003759902137281/205219615678785824723647040",
+      "leaf_mass_before_normalization": "2/5",
+      "literal_clock_upper": "221/8"
+    },
+    {
+      "alpha": 3,
+      "beta": 3,
+      "finite_source_partial": "2272415618047295107329765917/495074257718056824520382670",
+      "leaf_mass_before_normalization": "3/2",
+      "literal_clock_upper": "124/3"
+    },
+    {
+      "alpha": 3,
+      "beta": 4,
+      "finite_source_partial": "7861193447151985334382167171/1320198020581484865387687120",
+      "leaf_mass_before_normalization": "1",
+      "literal_clock_upper": "213/7"
+    },
+    {
+      "alpha": 3,
+      "beta": 5,
+      "finite_source_partial": "15642501472822645885117158/2268052154986581142143965",
+      "leaf_mass_before_normalization": "3/4",
+      "literal_clock_upper": "55/2"
+    },
+    {
+      "alpha": 3,
+      "beta": 6,
+      "finite_source_partial": "24470738889269960832967315/3242271167806483066154472",
+      "leaf_mass_before_normalization": "3/5",
+      "literal_clock_upper": "239/9"
+    },
+    {
+      "alpha": 4,
+      "beta": 3,
+      "finite_source_partial": "2063626299445275104851192033/528079208232593946155074848",
+      "leaf_mass_before_normalization": "2",
+      "literal_clock_upper": "655/14"
+    },
+    {
+      "alpha": 4,
+      "beta": 4,
+      "finite_source_partial": "1938515508007974171199577701/369395308221814484502564672",
+      "leaf_mass_before_normalization": "4/3",
+      "literal_clock_upper": "261/8"
+    },
+    {
+      "alpha": 4,
+      "beta": 5,
+      "finite_source_partial": "972587276493079818271027799/155704417709776454223464760",
+      "leaf_mass_before_normalization": "1",
+      "literal_clock_upper": "256/9"
+    },
+    {
+      "alpha": 4,
+      "beta": 6,
+      "finite_source_partial": "40650347330491113863178330017/5818525799892717735803046210",
+      "leaf_mass_before_normalization": "4/5",
+      "literal_clock_upper": "107/4"
+    }
+  ],
+  "scope": "different normalized beta measures; original native lambda remains Beta1,2",
+  "status": "PASS"
+}

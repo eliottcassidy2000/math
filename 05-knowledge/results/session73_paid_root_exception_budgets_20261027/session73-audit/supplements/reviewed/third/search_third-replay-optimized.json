@@ -1,0 +1,59 @@
+{
+  "best_target": {
+    "FAS": 12,
+    "R": [
+      4,
+      7,
+      5,
+      10,
+      1,
+      3,
+      0,
+      8,
+      2,
+      6,
+      9
+    ],
+    "overlap": 5,
+    "rows": [
+      1924,
+      397,
+      1624,
+      1585,
+      483,
+      1351,
+      907,
+      1580,
+      1676,
+      50,
+      594
+    ],
+    "source_rank": [
+      9,
+      10,
+      3,
+      2,
+      7,
+      0,
+      8,
+      1,
+      6,
+      5,
+      4
+    ]
+  },
+  "budget": {
+    "final_rank_draws_if_FAS_at_most10": 32,
+    "final_slack_limit": 2,
+    "maximum_overlap_paths_per_rank": 4,
+    "optimal_rank_draws": 32
+  },
+  "distinct_targets": 93,
+  "final_rank_draws": 0,
+  "minimum_FAS": 12,
+  "minimum_observed_beta": null,
+  "path_draws": 128,
+  "rank_draws": 32,
+  "seed": 73073311,
+  "status": "NO_WITNESS_IN_DECLARED_BEST_STATE_BATCH; THREE_COMPLEMENT_EXISTENCE_NOT_DECIDED"
+}

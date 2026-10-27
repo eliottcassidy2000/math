@@ -1,0 +1,77 @@
+{
+  "examples": {
+    "fibonacci": [
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        3,
+        8,
+        6
+      ],
+      [
+        5,
+        20,
+        18
+      ],
+      [
+        7,
+        16,
+        14
+      ],
+      [
+        21,
+        16,
+        14
+      ],
+      [
+        512,
+        768,
+        766
+      ]
+    ],
+    "primes": [
+      [
+        2,
+        3,
+        3
+      ],
+      [
+        3,
+        7,
+        2
+      ],
+      [
+        5,
+        11,
+        19
+      ],
+      [
+        7,
+        29,
+        13
+      ],
+      [
+        21,
+        43,
+        41
+      ],
+      [
+        512,
+        7681,
+        3583
+      ]
+    ]
+  },
+  "fibonacci_pair_states": 133717,
+  "fibonacci_records_sha256": "0cc5548d418a4c54103a042f862d626dc9cd2590d6ab34b8463d8e2bb59aaa76",
+  "full_pair_inverse_checks": 11439,
+  "largest_selected_prime": 13711,
+  "m1": "excluded; empty connection set is a vacuous one-vertex tournament",
+  "nontrivial_moduli": 511,
+  "prime_sieve_bound": 1000000,
+  "prime_witnesses_sha256": "d59238efa0c7b8feed479c7174561c523dfafc06d9df414c69debdfc0637586b",
+  "status": "PASS"
+}

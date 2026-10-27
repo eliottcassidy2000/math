@@ -1,0 +1,1061 @@
+{
+  "checks": 1891,
+  "dyadic_moduli": [
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "10477568/2365941",
+          "odd_phase_predecessor": 213,
+          "root_predecessor": 21
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "1374372757504/17109393609",
+          "odd_phase_predecessor": 13653,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "9481260565004288/4030927084287",
+          "odd_phase_predecessor": 873813,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "47223664687958963781632/557320425399386571",
+          "odd_phase_predecessor": 55924053,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "49517601569109367986751275008/14419589246205743336523",
+          "odd_phase_predecessor": 3579139413,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "341598477534937482588434250858496/2274192279877960371122091",
+          "odd_phase_predecessor": 229064922453,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "1701411834604672974503759203092045758464/245460298414501610239045930593",
+          "odd_phase_predecessor": 14660155037013,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "223007451985306191801275925594314818287828992/670032570383131190993142486665775",
+          "odd_phase_predecessor": 938249922368853,
+          "root_predecessor": 93824992236885
+        }
+      ],
+      "common_odd_residue": 1,
+      "index_modulus": 1,
+      "integer_modulus": 2,
+      "target": 5,
+      "target_root_ray_depth": 1
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "10477568/2365941",
+          "odd_phase_predecessor": 213,
+          "root_predecessor": 21
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "1374372757504/17109393609",
+          "odd_phase_predecessor": 13653,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "9481260565004288/4030927084287",
+          "odd_phase_predecessor": 873813,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "47223664687958963781632/557320425399386571",
+          "odd_phase_predecessor": 55924053,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "49517601569109367986751275008/14419589246205743336523",
+          "odd_phase_predecessor": 3579139413,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "341598477534937482588434250858496/2274192279877960371122091",
+          "odd_phase_predecessor": 229064922453,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "1701411834604672974503759203092045758464/245460298414501610239045930593",
+          "odd_phase_predecessor": 14660155037013,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "223007451985306191801275925594314818287828992/670032570383131190993142486665775",
+          "odd_phase_predecessor": 938249922368853,
+          "root_predecessor": 93824992236885
+        }
+      ],
+      "common_odd_residue": 1,
+      "index_modulus": 2,
+      "integer_modulus": 4,
+      "target": 5,
+      "target_root_ray_depth": 1
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "10477568/2365941",
+          "odd_phase_predecessor": 213,
+          "root_predecessor": 21
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "1374372757504/17109393609",
+          "odd_phase_predecessor": 13653,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "9481260565004288/4030927084287",
+          "odd_phase_predecessor": 873813,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "47223664687958963781632/557320425399386571",
+          "odd_phase_predecessor": 55924053,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "49517601569109367986751275008/14419589246205743336523",
+          "odd_phase_predecessor": 3579139413,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "341598477534937482588434250858496/2274192279877960371122091",
+          "odd_phase_predecessor": 229064922453,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "1701411834604672974503759203092045758464/245460298414501610239045930593",
+          "odd_phase_predecessor": 14660155037013,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "223007451985306191801275925594314818287828992/670032570383131190993142486665775",
+          "odd_phase_predecessor": 938249922368853,
+          "root_predecessor": 93824992236885
+        }
+      ],
+      "common_odd_residue": 5,
+      "index_modulus": 4,
+      "integer_modulus": 8,
+      "target": 5,
+      "target_root_ray_depth": 1
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "10477568/2365941",
+          "odd_phase_predecessor": 213,
+          "root_predecessor": 21
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "1374372757504/17109393609",
+          "odd_phase_predecessor": 13653,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "9481260565004288/4030927084287",
+          "odd_phase_predecessor": 873813,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "47223664687958963781632/557320425399386571",
+          "odd_phase_predecessor": 55924053,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "49517601569109367986751275008/14419589246205743336523",
+          "odd_phase_predecessor": 3579139413,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "341598477534937482588434250858496/2274192279877960371122091",
+          "odd_phase_predecessor": 229064922453,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "1701411834604672974503759203092045758464/245460298414501610239045930593",
+          "odd_phase_predecessor": 14660155037013,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "223007451985306191801275925594314818287828992/670032570383131190993142486665775",
+          "odd_phase_predecessor": 938249922368853,
+          "root_predecessor": 93824992236885
+        }
+      ],
+      "common_odd_residue": 5,
+      "index_modulus": 8,
+      "integer_modulus": 16,
+      "target": 5,
+      "target_root_ray_depth": 1
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "2860507136/534119547",
+          "odd_phase_predecessor": 58197,
+          "root_predecessor": 21
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "14997337931776/154128760527",
+          "odd_phase_predecessor": 3724629,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "98286558199014227968/33814040802755625",
+          "odd_phase_predecessor": 238376277,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "1288261576512765465460736/12002740039396727283",
+          "odd_phase_predecessor": 15256081749,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "13508401708679763716690029838336/3025488540520830115780017",
+          "odd_phase_predecessor": 976389231957,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "354114645752074299792483275723767808/1766025282532419741122613243",
+          "odd_phase_predecessor": 62488910845269,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "29009071780010002801326865668929065320448/3053931585996604754844595519845",
+          "odd_phase_predecessor": 3999290294097237,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "6083643290159153989049535819065256139154259968/12997538516790069857122346166387075",
+          "odd_phase_predecessor": 255954578822223189,
+          "root_predecessor": 93824992236885
+        }
+      ],
+      "common_odd_residue": 21,
+      "index_modulus": 16,
+      "integer_modulus": 32,
+      "target": 341,
+      "target_root_ray_depth": 4
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "2860507136/534119547",
+          "odd_phase_predecessor": 58197,
+          "root_predecessor": 21
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "14997337931776/154128760527",
+          "odd_phase_predecessor": 3724629,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "98286558199014227968/33814040802755625",
+          "odd_phase_predecessor": 238376277,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "1288261576512765465460736/12002740039396727283",
+          "odd_phase_predecessor": 15256081749,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "13508401708679763716690029838336/3025488540520830115780017",
+          "odd_phase_predecessor": 976389231957,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "354114645752074299792483275723767808/1766025282532419741122613243",
+          "odd_phase_predecessor": 62488910845269,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "29009071780010002801326865668929065320448/3053931585996604754844595519845",
+          "odd_phase_predecessor": 3999290294097237,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "6083643290159153989049535819065256139154259968/12997538516790069857122346166387075",
+          "odd_phase_predecessor": 255954578822223189,
+          "root_predecessor": 93824992236885
+        }
+      ],
+      "common_odd_residue": 21,
+      "index_modulus": 32,
+      "integer_modulus": 64,
+      "target": 341,
+      "target_root_ray_depth": 4
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "11716637229056/128427301401",
+          "odd_phase_predecessor": 58197,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "1535727404213862400/564769704051279",
+          "odd_phase_predecessor": 3724629,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "201290871191581138878464/2015220021558510117",
+          "odd_phase_predecessor": 238376277,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "10553438834792574693054349312/2556026974221952352439",
+          "odd_phase_predecessor": 15256081749,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "55330413398752312183562362217824256/300455845103317539090339351",
+          "odd_phase_predecessor": 976389231957,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "4304016584571205732789351624227160064/496892188153555817197151703",
+          "odd_phase_predecessor": 62488910845269,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "1901138528174735543587757468478935224840880128/4486770071345293249123777347851925",
+          "odd_phase_predecessor": 3999290294097237,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "49837205832983789478293797429782578291951697657856/2332931430395063809953618330014398017",
+          "odd_phase_predecessor": 255954578822223189,
+          "root_predecessor": 6004799503160661
+        }
+      ],
+      "common_odd_residue": 85,
+      "index_modulus": 64,
+      "integer_modulus": 128,
+      "target": 341,
+      "target_root_ray_depth": 4
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "11716637229056/128427301401",
+          "odd_phase_predecessor": 58197,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "1535727404213862400/564769704051279",
+          "odd_phase_predecessor": 3724629,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "201290871191581138878464/2015220021558510117",
+          "odd_phase_predecessor": 238376277,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "10553438834792574693054349312/2556026974221952352439",
+          "odd_phase_predecessor": 15256081749,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "55330413398752312183562362217824256/300455845103317539090339351",
+          "odd_phase_predecessor": 976389231957,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "4304016584571205732789351624227160064/496892188153555817197151703",
+          "odd_phase_predecessor": 62488910845269,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "1901138528174735543587757468478935224840880128/4486770071345293249123777347851925",
+          "odd_phase_predecessor": 3999290294097237,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "49837205832983789478293797429782578291951697657856/2332931430395063809953618330014398017",
+          "odd_phase_predecessor": 255954578822223189,
+          "root_predecessor": 6004799503160661
+        }
+      ],
+      "common_odd_residue": 85,
+      "index_modulus": 128,
+      "integer_modulus": 256,
+      "target": 341,
+      "target_root_ray_depth": 4
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "14997337931776/154128760527",
+          "odd_phase_predecessor": 3724629,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "98286558199014227968/33814040802755625",
+          "odd_phase_predecessor": 238376277,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "1288261576512765465460736/12002740039396727283",
+          "odd_phase_predecessor": 15256081749,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "13508401708679763716690029838336/3025488540520830115780017",
+          "odd_phase_predecessor": 976389231957,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "354114645752074299792483275723767808/1766025282532419741122613243",
+          "odd_phase_predecessor": 62488910845269,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "29009071780010002801326865668929065320448/3053931585996604754844595519845",
+          "odd_phase_predecessor": 3999290294097237,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "6083643290159153989049535819065256139154259968/12997538516790069857122346166387075",
+          "odd_phase_predecessor": 255954578822223189,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "63791623466219250573105398471083467788375831594663936/2683478643686771980390381681418887516071",
+          "odd_phase_predecessor": 16381093044622284117,
+          "root_predecessor": 6004799503160661
+        }
+      ],
+      "common_odd_residue": 341,
+      "index_modulus": 256,
+      "integer_modulus": 512,
+      "target": 341,
+      "target_root_ray_depth": 4
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "14997337931776/154128760527",
+          "odd_phase_predecessor": 3724629,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "98286558199014227968/33814040802755625",
+          "odd_phase_predecessor": 238376277,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "1288261576512765465460736/12002740039396727283",
+          "odd_phase_predecessor": 15256081749,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "13508401708679763716690029838336/3025488540520830115780017",
+          "odd_phase_predecessor": 976389231957,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "354114645752074299792483275723767808/1766025282532419741122613243",
+          "odd_phase_predecessor": 62488910845269,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "29009071780010002801326865668929065320448/3053931585996604754844595519845",
+          "odd_phase_predecessor": 3999290294097237,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "6083643290159153989049535819065256139154259968/12997538516790069857122346166387075",
+          "odd_phase_predecessor": 255954578822223189,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "63791623466219250573105398471083467788375831594663936/2683478643686771980390381681418887516071",
+          "odd_phase_predecessor": 16381093044622284117,
+          "root_predecessor": 6004799503160661
+        }
+      ],
+      "common_odd_residue": 341,
+      "index_modulus": 512,
+      "integer_modulus": 1024,
+      "target": 341,
+      "target_root_ray_depth": 4
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "96075326018289664/985047653967069",
+          "odd_phase_predecessor": 954422613,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "3148196283508481589248/1080862493127475455",
+          "odd_phase_predecessor": 61083047253,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "3301123066185056052693696512/30695340128474134218261",
+          "odd_phase_predecessor": 3909315024213,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "3461478420248206603618925976485888/773710835163056590584554295",
+          "odd_phase_predecessor": 250196161549653,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "453702899498773233458628286377606774784/2257996936466125539366590748789",
+          "odd_phase_predecessor": 16012554339177813,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "118935492886206411730375879675717558472802304/12493931974664482198952599841939679",
+          "odd_phase_predecessor": 1024803477707380053,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "15589112923580846800819514420054978458343778025472/33230617101193010384583035814905124225",
+          "odd_phase_predecessor": 65587422573272323413,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "16346369672956710015057012490284530859510963045429936128/686007681367330770173926142880797297765901",
+          "odd_phase_predecessor": 4197595044689428698453,
+          "root_predecessor": 6004799503160661
+        }
+      ],
+      "common_odd_residue": 1365,
+      "index_modulus": 1024,
+      "integer_modulus": 2048,
+      "target": 21845,
+      "target_root_ray_depth": 7
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "96075326018289664/985047653967069",
+          "odd_phase_predecessor": 954422613,
+          "root_predecessor": 1365
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "3148196283508481589248/1080862493127475455",
+          "odd_phase_predecessor": 61083047253,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "3301123066185056052693696512/30695340128474134218261",
+          "odd_phase_predecessor": 3909315024213,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "3461478420248206603618925976485888/773710835163056590584554295",
+          "odd_phase_predecessor": 250196161549653,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "453702899498773233458628286377606774784/2257996936466125539366590748789",
+          "odd_phase_predecessor": 16012554339177813,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "118935492886206411730375879675717558472802304/12493931974664482198952599841939679",
+          "odd_phase_predecessor": 1024803477707380053,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "15589112923580846800819514420054978458343778025472/33230617101193010384583035814905124225",
+          "odd_phase_predecessor": 65587422573272323413,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "16346369672956710015057012490284530859510963045429936128/686007681367330770173926142880797297765901",
+          "odd_phase_predecessor": 4197595044689428698453,
+          "root_predecessor": 6004799503160661
+        }
+      ],
+      "common_odd_residue": 1365,
+      "index_modulus": 2048,
+      "integer_modulus": 4096,
+      "target": 21845,
+      "target_root_ray_depth": 7
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "393524535370914463744/135189781516911861",
+          "odd_phase_predecessor": 954422613,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "103160095818005924716478464/959777569056221038617",
+          "odd_phase_predecessor": 61083047253,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "6760700039546994795916690456576/1512009282804819859342101",
+          "odd_phase_predecessor": 3909315024213,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "14178215609336654248423120799686197248/70602944305081106972452856733",
+          "odd_phase_predecessor": 250196161549653,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "340297944762310046556773752243669172224/35768725759708624400397563373",
+          "odd_phase_predecessor": 16012554339177813,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "121789944715475365611904900787934779876149559296/259772982339119390688779710658250825",
+          "odd_phase_predecessor": 1024803477707380053,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "7981625816873393562019591383068148970672014349041664/335177568377433779819067913449102115509",
+          "odd_phase_predecessor": 65587422573272323413,
+          "root_predecessor": 6004799503160661
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "66954730180430684221673523160205438400556904634081018380288/54045236600294401288065076928215390196100795",
+          "odd_phase_predecessor": 4197595044689428698453,
+          "root_predecessor": 384307168202282325
+        }
+      ],
+      "common_odd_residue": 5461,
+      "index_modulus": 4096,
+      "integer_modulus": 8192,
+      "target": 21845,
+      "target_root_ray_depth": 7
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "393524535370914463744/135189781516911861",
+          "odd_phase_predecessor": 954422613,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "103160095818005924716478464/959777569056221038617",
+          "odd_phase_predecessor": 61083047253,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "6760700039546994795916690456576/1512009282804819859342101",
+          "odd_phase_predecessor": 3909315024213,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "14178215609336654248423120799686197248/70602944305081106972452856733",
+          "odd_phase_predecessor": 250196161549653,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "340297944762310046556773752243669172224/35768725759708624400397563373",
+          "odd_phase_predecessor": 16012554339177813,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "121789944715475365611904900787934779876149559296/259772982339119390688779710658250825",
+          "odd_phase_predecessor": 1024803477707380053,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "7981625816873393562019591383068148970672014349041664/335177568377433779819067913449102115509",
+          "odd_phase_predecessor": 65587422573272323413,
+          "root_predecessor": 6004799503160661
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "66954730180430684221673523160205438400556904634081018380288/54045236600294401288065076928215390196100795",
+          "odd_phase_predecessor": 4197595044689428698453,
+          "root_predecessor": 384307168202282325
+        }
+      ],
+      "common_odd_residue": 5461,
+      "index_modulus": 8192,
+      "integer_modulus": 16384,
+      "target": 21845,
+      "target_root_ray_depth": 7
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "393524535370914463744/135189781516911861",
+          "odd_phase_predecessor": 954422613,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "103160095818005924716478464/959777569056221038617",
+          "odd_phase_predecessor": 61083047253,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "6760700039546994795916690456576/1512009282804819859342101",
+          "odd_phase_predecessor": 3909315024213,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "14178215609336654248423120799686197248/70602944305081106972452856733",
+          "odd_phase_predecessor": 250196161549653,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "340297944762310046556773752243669172224/35768725759708624400397563373",
+          "odd_phase_predecessor": 16012554339177813,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "121789944715475365611904900787934779876149559296/259772982339119390688779710658250825",
+          "odd_phase_predecessor": 1024803477707380053,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "7981625816873393562019591383068148970672014349041664/335177568377433779819067913449102115509",
+          "odd_phase_predecessor": 65587422573272323413,
+          "root_predecessor": 6004799503160661
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "66954730180430684221673523160205438400556904634081018380288/54045236600294401288065076928215390196100795",
+          "odd_phase_predecessor": 4197595044689428698453,
+          "root_predecessor": 384307168202282325
+        }
+      ],
+      "common_odd_residue": 21845,
+      "index_modulus": 16384,
+      "integer_modulus": 32768,
+      "target": 21845,
+      "target_root_ray_depth": 7
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "393524535370914463744/135189781516911861",
+          "odd_phase_predecessor": 954422613,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "103160095818005924716478464/959777569056221038617",
+          "odd_phase_predecessor": 61083047253,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "6760700039546994795916690456576/1512009282804819859342101",
+          "odd_phase_predecessor": 3909315024213,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "14178215609336654248423120799686197248/70602944305081106972452856733",
+          "odd_phase_predecessor": 250196161549653,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "340297944762310046556773752243669172224/35768725759708624400397563373",
+          "odd_phase_predecessor": 16012554339177813,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "121789944715475365611904900787934779876149559296/259772982339119390688779710658250825",
+          "odd_phase_predecessor": 1024803477707380053,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "7981625816873393562019591383068148970672014349041664/335177568377433779819067913449102115509",
+          "odd_phase_predecessor": 65587422573272323413,
+          "root_predecessor": 6004799503160661
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "66954730180430684221673523160205438400556904634081018380288/54045236600294401288065076928215390196100795",
+          "odd_phase_predecessor": 4197595044689428698453,
+          "root_predecessor": 384307168202282325
+        }
+      ],
+      "common_odd_residue": 21845,
+      "index_modulus": 32768,
+      "integer_modulus": 65536,
+      "target": 21845,
+      "target_root_ray_depth": 7
+    },
+    {
+      "certificates": [
+        {
+          "k": 0,
+          "lower_energy_per_root_squared": "96405544767418531840/33098305896596007",
+          "odd_phase_predecessor": 244335859029,
+          "root_predecessor": 87381
+        },
+        {
+          "k": 1,
+          "lower_energy_per_root_squared": "3301172651033231737084706816/30695495291578752172473",
+          "odd_phase_predecessor": 15637494977877,
+          "root_predecessor": 5592405
+        },
+        {
+          "k": 2,
+          "lower_energy_per_root_squared": "266271570286912178382517588459520/59516551727212728017909481",
+          "odd_phase_predecessor": 1000799678584149,
+          "root_predecessor": 357913941
+        },
+        {
+          "k": 3,
+          "lower_energy_per_root_squared": "191035669216168447983859197813167489024/950741075128138061622093877329",
+          "odd_phase_predecessor": 64051179429385557,
+          "root_predecessor": 22906492245
+        },
+        {
+          "k": 4,
+          "lower_energy_per_root_squared": "475749117474530986687264688911128501409546240/49976018969309665900598703194907639",
+          "odd_phase_predecessor": 4099275483480675669,
+          "root_predecessor": 1466015503701
+        },
+        {
+          "k": 5,
+          "lower_energy_per_root_squared": "124714776651243450979137688848317523141897358409728/265846459178686794676880226308660932275",
+          "odd_phase_predecessor": 262353630942763242837,
+          "root_predecessor": 93824992236885
+        },
+        {
+          "k": 6,
+          "lower_energy_per_root_squared": "13236125672252454742305876507827461404978493907795968/555474892986027116110354227471571331637",
+          "odd_phase_predecessor": 16790632380336847541589,
+          "root_predecessor": 6004799503160661
+        },
+        {
+          "k": 7,
+          "lower_energy_per_root_squared": "17140668385441120630077304037591003789580596476098010526253056/13826507938611644740104784895923643716271641665",
+          "odd_phase_predecessor": 1074600472341558242661717,
+          "root_predecessor": 384307168202282325
+        }
+      ],
+      "common_odd_residue": 87381,
+      "index_modulus": 65536,
+      "integer_modulus": 131072,
+      "target": 1398101,
+      "target_root_ray_depth": 10
+    }
+  ],
+  "scope": "dyadic periodic first-stage no-go, not all moduli; odd modulus first-stage repair fails occupation energy",
+  "status": "PASS",
+  "ternary_all_depth_hostile": [
+    {
+      "k": 0,
+      "occupation_invoice": "31/3",
+      "occupation_weight": "1/3",
+      "source": 5
+    },
+    {
+      "k": 1,
+      "occupation_invoice": "2047/15",
+      "occupation_weight": "1/15",
+      "source": 341
+    },
+    {
+      "k": 2,
+      "occupation_invoice": "131071/36",
+      "occupation_weight": "1/36",
+      "source": 21845
+    },
+    {
+      "k": 3,
+      "occupation_invoice": "8388607/66",
+      "occupation_weight": "1/66",
+      "source": 1398101
+    },
+    {
+      "k": 4,
+      "occupation_invoice": "536870911/105",
+      "occupation_weight": "1/105",
+      "source": 89478485
+    },
+    {
+      "k": 5,
+      "occupation_invoice": "34359738367/153",
+      "occupation_weight": "1/153",
+      "source": 5726623061
+    },
+    {
+      "k": 6,
+      "occupation_invoice": "2199023255551/210",
+      "occupation_weight": "1/210",
+      "source": 366503875925
+    },
+    {
+      "k": 7,
+      "occupation_invoice": "140737488355327/276",
+      "occupation_weight": "1/276",
+      "source": 23456248059221
+    },
+    {
+      "k": 8,
+      "occupation_invoice": "9007199254740991/351",
+      "occupation_weight": "1/351",
+      "source": 1501199875790165
+    },
+    {
+      "k": 9,
+      "occupation_invoice": "576460752303423487/435",
+      "occupation_weight": "1/435",
+      "source": 96076792050570581
+    },
+    {
+      "k": 10,
+      "occupation_invoice": "36893488147419103231/528",
+      "occupation_weight": "1/528",
+      "source": 6148914691236517205
+    },
+    {
+      "k": 11,
+      "occupation_invoice": "2361183241434822606847/630",
+      "occupation_weight": "1/630",
+      "source": 393530540239137101141
+    },
+    {
+      "k": 12,
+      "occupation_invoice": "151115727451828646838271/741",
+      "occupation_weight": "1/741",
+      "source": 25185954575304774473045
+    }
+  ],
+  "ternary_first_stage": {
+    "global_bound": "1/19",
+    "partial_paid": "6045601300186194855483573533526302301939142841493479008857395307371762861765000488706248577009528600816417121857610684468427317876952077749423436596840433525181593435949768482979895779061462330824687957833330091642512032062135938654782071256135508712952977721370669486504076549227670343590086936825305041980509841740438716084677038674560028118613310504686143708938663691806333359397087969243629514591139953/579933407810181098730360021995882674452249691212851389809048079520606906641743814639340173299989369707723782908143797851209555577643332004356189940859995989455636333597930485183028166294318377608510363001356747953518674811925744988456399534401197649850792674211992252860798097916758382387980003202845869882454130732940443948862464949333712017479063582770762505222230663487046915671397896644799067852308150000",
+    "sources": 167
+  }
+}

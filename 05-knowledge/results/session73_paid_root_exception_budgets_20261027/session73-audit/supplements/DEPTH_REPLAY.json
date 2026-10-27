@@ -1,0 +1,35 @@
+{
+  "full_search_runs": [
+    {
+      "bytes": 2016,
+      "equals_native": true,
+      "exit": 0,
+      "mode": "normal",
+      "sha256": "60899d4510d9aa3b6df1c716828d6208f83e65a01753d732bae186b280275420"
+    },
+    {
+      "bytes": 2016,
+      "equals_native": true,
+      "exit": 0,
+      "mode": "optimized",
+      "sha256": "60899d4510d9aa3b6df1c716828d6208f83e65a01753d732bae186b280275420"
+    }
+  ],
+  "independent_receipt_verifier": [
+    {
+      "bytes": 696,
+      "exit": 0,
+      "mode": [],
+      "sha256": "c30c5f3221c19d2d67cd2918e35fc8ce1e135d9694ab4bfb64d444ba0fa930e7"
+    },
+    {
+      "bytes": 696,
+      "exit": 0,
+      "mode": [
+        "-O"
+      ],
+      "sha256": "c30c5f3221c19d2d67cd2918e35fc8ce1e135d9694ab4bfb64d444ba0fa930e7"
+    }
+  ],
+  "status": "PASS"
+}

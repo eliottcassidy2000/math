@@ -1,0 +1,345 @@
+{
+  "n10_path": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    1,
+    3,
+    5,
+    7,
+    9
+  ],
+  "n10_source_exception": [
+    1,
+    8
+  ],
+  "rows": [
+    {
+      "FAS_U_proved": 2,
+      "complement_difference": 1,
+      "max_edge_triangle_load": "1",
+      "n": 5,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "7/4"
+    },
+    {
+      "FAS_U_proved": 3,
+      "complement_difference": 2,
+      "max_edge_triangle_load": "1",
+      "n": 6,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "5/2"
+    },
+    {
+      "FAS_U_proved": 4,
+      "complement_difference": 3,
+      "max_edge_triangle_load": "1",
+      "n": 7,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "13/4"
+    },
+    {
+      "FAS_U_proved": 4,
+      "complement_difference": 3,
+      "max_edge_triangle_load": "1",
+      "n": 8,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "4"
+    },
+    {
+      "FAS_U_proved": 5,
+      "complement_difference": 4,
+      "max_edge_triangle_load": "1",
+      "n": 9,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "19/4"
+    },
+    {
+      "FAS_U_proved": 6,
+      "complement_difference": 5,
+      "max_edge_triangle_load": "1",
+      "n": 10,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "11/2"
+    },
+    {
+      "FAS_U_proved": 7,
+      "complement_difference": 6,
+      "max_edge_triangle_load": "1",
+      "n": 11,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "25/4"
+    },
+    {
+      "FAS_U_proved": 7,
+      "complement_difference": 6,
+      "max_edge_triangle_load": "1",
+      "n": 12,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "7"
+    },
+    {
+      "FAS_U_proved": 8,
+      "complement_difference": 7,
+      "max_edge_triangle_load": "1",
+      "n": 13,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "31/4"
+    },
+    {
+      "FAS_U_proved": 9,
+      "complement_difference": 8,
+      "max_edge_triangle_load": "1",
+      "n": 14,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "17/2"
+    },
+    {
+      "FAS_U_proved": 10,
+      "complement_difference": 9,
+      "max_edge_triangle_load": "1",
+      "n": 15,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "37/4"
+    },
+    {
+      "FAS_U_proved": 10,
+      "complement_difference": 9,
+      "max_edge_triangle_load": "1",
+      "n": 16,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "10"
+    },
+    {
+      "FAS_U_proved": 11,
+      "complement_difference": 10,
+      "max_edge_triangle_load": "1",
+      "n": 17,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "43/4"
+    },
+    {
+      "FAS_U_proved": 12,
+      "complement_difference": 11,
+      "max_edge_triangle_load": "1",
+      "n": 18,
+      "source_FAS": 1,
+      "subset_DP": true,
+      "triangle_weight": "23/2"
+    },
+    {
+      "FAS_U_proved": 13,
+      "complement_difference": 12,
+      "max_edge_triangle_load": "1",
+      "n": 19,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "49/4"
+    },
+    {
+      "FAS_U_proved": 13,
+      "complement_difference": 12,
+      "max_edge_triangle_load": "1",
+      "n": 20,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "13"
+    },
+    {
+      "FAS_U_proved": 14,
+      "complement_difference": 13,
+      "max_edge_triangle_load": "1",
+      "n": 21,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "55/4"
+    },
+    {
+      "FAS_U_proved": 15,
+      "complement_difference": 14,
+      "max_edge_triangle_load": "1",
+      "n": 22,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "29/2"
+    },
+    {
+      "FAS_U_proved": 16,
+      "complement_difference": 15,
+      "max_edge_triangle_load": "1",
+      "n": 23,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "61/4"
+    },
+    {
+      "FAS_U_proved": 16,
+      "complement_difference": 15,
+      "max_edge_triangle_load": "1",
+      "n": 24,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "16"
+    },
+    {
+      "FAS_U_proved": 17,
+      "complement_difference": 16,
+      "max_edge_triangle_load": "1",
+      "n": 25,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "67/4"
+    },
+    {
+      "FAS_U_proved": 18,
+      "complement_difference": 17,
+      "max_edge_triangle_load": "1",
+      "n": 26,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "35/2"
+    },
+    {
+      "FAS_U_proved": 19,
+      "complement_difference": 18,
+      "max_edge_triangle_load": "1",
+      "n": 27,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "73/4"
+    },
+    {
+      "FAS_U_proved": 19,
+      "complement_difference": 18,
+      "max_edge_triangle_load": "1",
+      "n": 28,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "19"
+    },
+    {
+      "FAS_U_proved": 20,
+      "complement_difference": 19,
+      "max_edge_triangle_load": "1",
+      "n": 29,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "79/4"
+    },
+    {
+      "FAS_U_proved": 21,
+      "complement_difference": 20,
+      "max_edge_triangle_load": "1",
+      "n": 30,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "41/2"
+    },
+    {
+      "FAS_U_proved": 22,
+      "complement_difference": 21,
+      "max_edge_triangle_load": "1",
+      "n": 31,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "85/4"
+    },
+    {
+      "FAS_U_proved": 22,
+      "complement_difference": 21,
+      "max_edge_triangle_load": "1",
+      "n": 32,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "22"
+    },
+    {
+      "FAS_U_proved": 23,
+      "complement_difference": 22,
+      "max_edge_triangle_load": "1",
+      "n": 33,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "91/4"
+    },
+    {
+      "FAS_U_proved": 24,
+      "complement_difference": 23,
+      "max_edge_triangle_load": "1",
+      "n": 34,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "47/2"
+    },
+    {
+      "FAS_U_proved": 25,
+      "complement_difference": 24,
+      "max_edge_triangle_load": "1",
+      "n": 35,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "97/4"
+    },
+    {
+      "FAS_U_proved": 25,
+      "complement_difference": 24,
+      "max_edge_triangle_load": "1",
+      "n": 36,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "25"
+    },
+    {
+      "FAS_U_proved": 26,
+      "complement_difference": 25,
+      "max_edge_triangle_load": "1",
+      "n": 37,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "103/4"
+    },
+    {
+      "FAS_U_proved": 27,
+      "complement_difference": 26,
+      "max_edge_triangle_load": "1",
+      "n": 38,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "53/2"
+    },
+    {
+      "FAS_U_proved": 28,
+      "complement_difference": 27,
+      "max_edge_triangle_load": "1",
+      "n": 39,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "109/4"
+    },
+    {
+      "FAS_U_proved": 28,
+      "complement_difference": 27,
+      "max_edge_triangle_load": "1",
+      "n": 40,
+      "source_FAS": 1,
+      "subset_DP": false,
+      "triangle_weight": "28"
+    }
+  ],
+  "status": "FINITE-EXACT controls for all-n proof"
+}

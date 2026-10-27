@@ -1,0 +1,91 @@
+{
+  "finite_modulus_same_word_hostiles": 160,
+  "hostiles": [
+    {
+      "endpoint_index_modulus": 3,
+      "literal_clock": 5,
+      "shortcut_clock": 4,
+      "sources": [
+        5,
+        37
+      ],
+      "states": [
+        [
+          5,
+          1
+        ],
+        [
+          37,
+          7
+        ]
+      ],
+      "strict_first_hit": [
+        true,
+        false
+      ],
+      "word": [
+        4
+      ]
+    },
+    {
+      "endpoint_index_modulus": 9,
+      "literal_clock": 7,
+      "shortcut_clock": 6,
+      "sources": [
+        21,
+        405
+      ],
+      "states": [
+        [
+          21,
+          1
+        ],
+        [
+          405,
+          19
+        ]
+      ],
+      "strict_first_hit": [
+        true,
+        false
+      ],
+      "word": [
+        6
+      ]
+    },
+    {
+      "endpoint_index_modulus": 9,
+      "literal_clock": 8,
+      "shortcut_clock": 6,
+      "sources": [
+        5,
+        133
+      ],
+      "states": [
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          133,
+          25,
+          19
+        ]
+      ],
+      "strict_first_hit": [
+        false,
+        false
+      ],
+      "word": [
+        4,
+        2
+      ]
+    }
+  ],
+  "prefix_checks": 2496,
+  "source_lifts": 672,
+  "status": "PASS",
+  "strict_first_hit_words": 5,
+  "word_count": 84
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "kind": "git",
+    "commit": "2f1311e0b0ea5bfec36fb4d9919656864a19a0d2",
+    "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+    "blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+    "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c",
+    "snapshot": "sources/incoming_README.md"
+  },
+  {
+    "kind": "git",
+    "commit": "2f1311e0b0ea5bfec36fb4d9919656864a19a0d2",
+    "path": "05-knowledge/results/paid_root_cycle_budget_20261026/AUDIT.md",
+    "blob": "aa12cce1b375700faf16fa068700505c21f4d675",
+    "sha256": "c61537eeb822c5880d5156725a0e1afc5416e12a8b22c6c9dd81a132de3f81e4",
+    "snapshot": "sources/incoming_AUDIT.md"
+  },
+  {
+    "kind": "git",
+    "commit": "2f1311e0b0ea5bfec36fb4d9919656864a19a0d2",
+    "path": "05-knowledge/results/root_actual_clock_certificate_20261018o.md",
+    "blob": "1f0b0572d2ad9fe39109036df6fcf28b74ac0a63",
+    "sha256": "7154006e8df8e2708cb2d48ca4e79705fa9a1999d4314a0c995be8e2ae5ffc02",
+    "snapshot": "sources/root_actual_clock_certificate_20261018o.md"
+  },
+  {
+    "kind": "git",
+    "commit": "2f1311e0b0ea5bfec36fb4d9919656864a19a0d2",
+    "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+    "blob": "2da8811e64696f018835744846b7558f04f4d87e",
+    "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233",
+    "snapshot": "sources/root_eisenstein_first_arrival_20261018j.md"
+  },
+  {
+    "kind": "frozen-tar-member",
+    "archive": "/workspace/scratch/07d5532f2fce/session73-frozen-research.tar.gz",
+    "path": "session73-root-forcing/SUPPLEMENT.md",
+    "sha256": "58abbbd9936dddc0be550ccb026f083c9c4472420b9d6713a1e9a6e49be6d906",
+    "snapshot": "sources/session73-root-forcing_SUPPLEMENT.md"
+  },
+  {
+    "kind": "frozen-tar-member",
+    "archive": "/workspace/scratch/07d5532f2fce/session73-frozen-research.tar.gz",
+    "path": "session73-root-forcing/DYADIC_PROFILE_OBSTRUCTION.md",
+    "sha256": "d75b7855c3e745d5ab2d49d7510d5f26bc081457aebc374cd6f4706d722cc02a",
+    "snapshot": "sources/session73-root-forcing_DYADIC_PROFILE_OBSTRUCTION.md"
+  },
+  {
+    "kind": "frozen-tar-member",
+    "archive": "/workspace/scratch/07d5532f2fce/session73-frozen-research.tar.gz",
+    "path": "session73-ports/REPORT.md",
+    "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699",
+    "snapshot": "sources/session73-ports_REPORT.md"
+  },
+  {
+    "kind": "frozen-tar-member",
+    "archive": "/workspace/scratch/07d5532f2fce/session73-frozen-research.tar.gz",
+    "path": "session73-root-forcing/REPORT.md",
+    "sha256": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5",
+    "snapshot": "sources/session73-root-forcing_REPORT.md"
+  },
+  {
+    "kind": "local-parent-review",
+    "path": "/workspace/scratch/07d5532f2fce/session73-root/INCOMING_2F1311_RECONCILIATION.md",
+    "sha256": "a52e7d84b6180e56f0e44fad05bf8b41272453f2158fe6efb01166e9087bcbfa",
+    "snapshot": "sources/INCOMING_2F1311_RECONCILIATION.md"
+  }
+]

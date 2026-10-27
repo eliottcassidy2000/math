@@ -1,0 +1,16 @@
+[
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_critical_beta_weights_20261005.md",
+    "snapshot": "diagnostic-sources/collatz_critical_beta_weights_20261005.md",
+    "sha256": "b5d84136db3fa72c06bce84fada17c0a28080d15d55a95f45f7d04c1d266efb4",
+    "blob": "1a5e78cea5991ef5183e936f84338581890a639b"
+  },
+  {
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/collatz_mixed_refuel_weights_20261005.md",
+    "snapshot": "diagnostic-sources/collatz_mixed_refuel_weights_20261005.md",
+    "sha256": "203265776da4705cddc131bcb8924cf24c782d7321ea96c30d094e30b245df2e",
+    "blob": "dd2bc340cd2c120da1bbb0e58dd8762cfb7b8925"
+  }
+]

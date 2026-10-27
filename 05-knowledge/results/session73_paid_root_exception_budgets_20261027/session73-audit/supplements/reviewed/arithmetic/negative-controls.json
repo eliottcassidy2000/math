@@ -1,0 +1,12 @@
+[
+  {
+    "command": "python3 check.py --negative-control",
+    "returncode": 1,
+    "error": "RuntimeError: EQUAL_PRIME_GUARD_FAILED: s(9)=4, not 7"
+  },
+  {
+    "command": "python3 -O check.py --negative-control",
+    "returncode": 1,
+    "error": "RuntimeError: EQUAL_PRIME_GUARD_FAILED: s(9)=4, not 7"
+  }
+]

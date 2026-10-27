@@ -1,0 +1,41 @@
+{
+  "schema": "session73-root-forcing-optional-measure-diagnostic-v1",
+  "scope": "Different measures only; does not alter original native lambda",
+  "files": [
+    {
+      "path": "MEASURE_DIAGNOSTIC.md",
+      "bytes": 3704,
+      "sha256": "06e2204acfdc7fdc41cd0403438732641432430281b18c99aea5dab16ec70bfc"
+    },
+    {
+      "path": "check_measure_diagnostic.py",
+      "bytes": 1502,
+      "sha256": "01db6fab657a1658ef902d1031cd15e747e74ecaa759cb6077051c3473a16a0e"
+    },
+    {
+      "path": "measure.normal.json",
+      "bytes": 3696,
+      "sha256": "ab71b3025f7e6d694cdd09d35cac114cee54d7c10ff0f20959fdc64973f6c668"
+    },
+    {
+      "path": "measure.optimized.json",
+      "bytes": 3696,
+      "sha256": "ab71b3025f7e6d694cdd09d35cac114cee54d7c10ff0f20959fdc64973f6c668"
+    },
+    {
+      "path": "MEASURE_SOURCE_PINS.json",
+      "bytes": 725,
+      "sha256": "2f7e8c8af7d02e3437daa059d2e6d43a1ae9c278b336f1a62b4cd02b611c129b"
+    },
+    {
+      "path": "diagnostic-sources/collatz_critical_beta_weights_20261005.md",
+      "bytes": 12330,
+      "sha256": "b5d84136db3fa72c06bce84fada17c0a28080d15d55a95f45f7d04c1d266efb4"
+    },
+    {
+      "path": "diagnostic-sources/collatz_mixed_refuel_weights_20261005.md",
+      "bytes": 12454,
+      "sha256": "203265776da4705cddc131bcb8924cf24c782d7321ea96c30d094e30b245df2e"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "files": [
+    {
+      "bytes": 341,
+      "path": "CORE_PINS.json",
+      "sha256": "7b03e644af4d7b7539f55b99c60dce6db030fec6cc2603bf8dd17896c8f4f24d"
+    },
+    {
+      "bytes": 1052,
+      "path": "EXTERNAL_SOURCES.json",
+      "sha256": "21f7fb974d66dbfdee47761c4ce34272417f775c9a6000d9c769f51af071dbde"
+    },
+    {
+      "bytes": 7064,
+      "path": "FIRST_HIT_CLOCK_SCOPE.md",
+      "sha256": "8c1b5db1ae9cdf4e08b2eb454258d1bfe84e59edaad5d7fc499006f02e14bbfd"
+    },
+    {
+      "bytes": 4333,
+      "path": "INCOMING_FIBONACCI_PRIME_CLOSURES.md",
+      "sha256": "5ca830e6fff8a6c283f155a57267dba08ea9f01dc11b93361b472f2f620d704e"
+    },
+    {
+      "bytes": 2302,
+      "path": "README.md",
+      "sha256": "b3bfb74b5daba2d4916cf5f7c0a31e5b6240fbd1711b53a04e73c70c08f63366"
+    },
+    {
+      "bytes": 1578,
+      "path": "SOURCE_PINS.json",
+      "sha256": "978674827358443aafa9dcf754e12ee05fadc564ffda8f4481eb24c10c031183"
+    },
+    {
+      "bytes": 2659,
+      "path": "check_patterns.py",
+      "sha256": "f906a54d201f20005fbb4b13c9bc7dcb62e4398d4f6f968ac9a1b9afc9cb6e11"
+    },
+    {
+      "bytes": 3699,
+      "path": "check_scope.py",
+      "sha256": "6af7ba160a8080449d2b824cb64e6436c696f6e58893d72db5212cd7d95973e7"
+    },
+    {
+      "bytes": 1435,
+      "path": "manifest.py",
+      "sha256": "26ec220f3da70ac29b34aa80f9d30f811bcdd354943310c984937a99cf03b806"
+    },
+    {
+      "bytes": 1340,
+      "path": "normal.json",
+      "sha256": "8a91980d44f90f1126b350c40aba5378f83159215cefa61da900ab574da12fa8"
+    },
+    {
+      "bytes": 1340,
+      "path": "optimized.json",
+      "sha256": "8a91980d44f90f1126b350c40aba5378f83159215cefa61da900ab574da12fa8"
+    },
+    {
+      "bytes": 1144,
+      "path": "patterns-normal.json",
+      "sha256": "94101dff38132046ea66012dc2359e4f93b681f4568616a40db169ccde6e246d"
+    },
+    {
+      "bytes": 1144,
+      "path": "patterns-optimized.json",
+      "sha256": "94101dff38132046ea66012dc2359e4f93b681f4568616a40db169ccde6e246d"
+    },
+    {
+      "bytes": 10236,
+      "path": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_CLOCKS-MACHINES.md",
+      "sha256": "d5780e190ff3a911361fbc2c0a8eda3c96ea84c126b6dc6e6a9ab35b67859cde"
+    },
+    {
+      "bytes": 4947,
+      "path": "sources/HYP-9419-INCOMING.md",
+      "sha256": "6dc3a287b7c103591c8f432f5d4fea01cf3c5e943a5bda2811bcbddf50c45636"
+    },
+    {
+      "bytes": 33389,
+      "path": "sources/INCOMING-S62-note.md",
+      "sha256": "ab5169062d3121e2d6a06d0e5a5c737b17e3e482301039b92f43097355a23418"
+    },
+    {
+      "bytes": 30317,
+      "path": "sources/native_return-README.md",
+      "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f"
+    }
+  ],
+  "hash_semantics": "native exact bytes",
+  "status": "SEALED"
+}

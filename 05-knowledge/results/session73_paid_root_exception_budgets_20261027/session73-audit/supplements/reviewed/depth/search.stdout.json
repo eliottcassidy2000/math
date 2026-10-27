@@ -1,0 +1,147 @@
+{
+  "best_literal_candidate": {
+    "P": [
+      6,
+      0,
+      3,
+      1,
+      2,
+      7,
+      10,
+      4,
+      5,
+      8,
+      9
+    ],
+    "Q": [
+      10,
+      1,
+      9,
+      0,
+      8,
+      4,
+      3,
+      2,
+      7,
+      6,
+      5
+    ],
+    "final_FAS": 13,
+    "final_edges": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ]
+    ],
+    "final_rank": [
+      9,
+      10,
+      3,
+      2,
+      7,
+      0,
+      8,
+      1,
+      6,
+      5,
+      4
+    ],
+    "final_rank_beta": 4,
+    "final_rows": [
+      370,
+      632,
+      227,
+      453,
+      1676,
+      1560,
+      1584,
+      355,
+      118,
+      1421,
+      399
+    ],
+    "intermediate_FAS": 15,
+    "intermediate_rows": [
+      1420,
+      901,
+      1936,
+      1574,
+      107,
+      391,
+      303,
+      1624,
+      1688,
+      113,
+      626
+    ],
+    "whole_complement_clock": 2
+  },
+  "budget": {
+    "final_rank_draws_per_second_state": 32,
+    "first_maximum_overlap_paths_per_rank": 8,
+    "first_optimal_rank_draws": 64,
+    "max_final_rank_slack": 2,
+    "second_maximum_overlap_paths_per_rank": 4,
+    "second_optimal_rank_draws_per_distinct_first_state": 8
+  },
+  "distinct_first_states": 337,
+  "distinct_second_states": 8517,
+  "final_rank_draws": 0,
+  "first_min_fas": 15,
+  "first_path_draws": 512,
+  "first_rank_draws": 64,
+  "minimum_observed_final_beta": null,
+  "second_min_fas": 13,
+  "second_path_draws": 10784,
+  "second_rank_draws": 2696,
+  "seed": 7307311,
+  "status": "NO_WITNESS_IN_DECLARED_FINITE_SEARCH; TWO_COMPLEMENT_EXISTENCE_OPEN"
+}

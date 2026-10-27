@@ -1,0 +1,34 @@
+[
+  {
+    "blob": "5d89f3ecd05815bccb3af7f4df6e739e5cb76a8c",
+    "bytes": 10236,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/clock_even_guarded_composition_20261026/CLOCKS-MACHINES.md",
+    "sha256": "d5780e190ff3a911361fbc2c0a8eda3c96ea84c126b6dc6e6a9ab35b67859cde",
+    "snapshot": "sources/05-knowledge_results_clock_even_guarded_composition_20261026_CLOCKS-MACHINES.md"
+  },
+  {
+    "blob": "fbdf4129436e53b2aa485c0b84221d3b04326bb3",
+    "bytes": 30317,
+    "commit": "92e7f12f3b95840cff92c5e6cf40b2ae8952cae4",
+    "path": "05-knowledge/results/native_return_necklaces_20261026/README.md",
+    "sha256": "eeb4068188a477766bd6cf793c69fa68dbb40b43f5059c241d62b05ab5ae2b7f",
+    "snapshot": "sources/native_return-README.md"
+  },
+  {
+    "blob": "150da5a150d6f4fa7b0b34666629d90d746e9a56",
+    "bytes": 4947,
+    "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+    "path": "05-knowledge/hypotheses/HYP-9419-unifying-candidates-three-layer-composition-rank-laws-dissection-obstructions-pattern-clocks.md",
+    "sha256": "6dc3a287b7c103591c8f432f5d4fea01cf3c5e943a5bda2811bcbddf50c45636",
+    "snapshot": "sources/HYP-9419-INCOMING.md"
+  },
+  {
+    "blob": "7210f53d623262f57f71264d87c1cc78d764f603",
+    "bytes": 33389,
+    "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+    "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026.md",
+    "sha256": "ab5169062d3121e2d6a06d0e5a5c737b17e3e482301039b92f43097355a23418",
+    "snapshot": "sources/INCOMING-S62-note.md"
+  }
+]

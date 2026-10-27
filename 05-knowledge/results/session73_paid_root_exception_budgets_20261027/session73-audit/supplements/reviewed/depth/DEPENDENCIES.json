@@ -1,0 +1,16 @@
+{
+  "base_commit": "92e7f12f3b95",
+  "dependencies": [
+    {
+      "packet": "session73-ports",
+      "path": "REPORT.md",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+    },
+    {
+      "packet": "session73-ports",
+      "path": "SOURCE_PINS.json",
+      "sha256": "e34b629281bbb4ca954b08fca491eb30d8971f323bbb0f8422d5c369adff6716"
+    }
+  ],
+  "new_source_input": "Paley11 arcs defined literally by nonzero squares modulo11; no external input files"
+}
