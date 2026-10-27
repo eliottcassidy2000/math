@@ -501,6 +501,54 @@ digest's section 2 and audit.
 3. M1's one-afternoon test; M2's depth-decomposition test from the digest's outputs; M3's P1-P3 replay.
 4. The ledger rows are to be re-checked for external verification before any promotion (ledger section 4).
 
-## 10. Audit record
+## 10. Audit records
 
-(to be appended when the independent audit is applied)
+### 10a. Adversarial referee reading of Mazur's paper (independent subagent, 2026-10-27; scratch scripts `audit_mazur/`, not committed; the report is summarised here)
+
+The referee was given the paper's text only (a `pdftotext` extraction), not the digest, and asked to break the
+chain. **Verdict: nothing checked is wrong.** Checked by hand or computation: Lemma 2.1; the identification of
+(2.3) with Tao's Proposition 1.14 (the oscillation `Osc_(m,n)`, read from the arXiv HTML of 1909.03562v7: in Mazur's
+recursion `Y_q mod 3^m` depends only on the last `m` valuations and has exactly the law `mu_m`, so the finite
+distribution statement is Tao's); (3.6), (3.7) given (2.3); the residue multiplicity bound (3.9)-(3.11) (a history at
+a fixed generation is determined by its endpoint, since the forward orbit is unique and meets `M` once; equal
+`(D, A)` pairs have constant weight and endpoints spaced `>= 3^q` in an interval of length `2^(b_0+1)/W`; the role of
+`q <= 2 b_n` is exactly to make `3^q W <= 16^(b_0) (9/16)^(b_n)`); Lemma 4.1 (seeds, `q <= 7`, three windows) and
+Proposition 4.2; Lemma 5.1; the structure of Proposition 5.2 (the stated exponential is weaker than what
+concentration gives, hence valid); Proposition 5.3 (the overshoot-reduction map `F_j(x) = 4^j x + (4^j-1)/3` is
+`x + j mod 3`, so it does move units to nonunits and the full-group means are necessary); Lemma 6.1 (the identity
+`3^d x = 2^A M - Sigma'`, `Sigma' > 0`, on 35,450 enumerated inverse orbits; injectivity history → source because the
+forward orbit is unique and `M` is visited once; the range `[X, 32X)`); Lemma 6.2 and the 8.5 thresholds; the whole of
+Section 7 at 50 digits (`296/1029` is the two-term series lower bound for `2 artanh(1/7) = log(4/3)`; (7.8) reproduces
+`604680379/126443520000000` exactly after the two substitutions; (7.9) holds with slack `2.0e-4`, the final ratio being
+`10.4597 <= 10.46`); the 8.3/8.4/8.5 arithmetic ((8.7), `(200/201)^6`, `2^(-1/100)`, `175/256`, the geometric moment
+bound, the strip bound). The concentration inequality for geometric sums was verified exactly for `t <= 40`
+(worst ratio `0.478`). Not verified: the explicit mixing coefficient `C` and Lemma 8.1 (Lean only), the exact rounding
+constants in (6.2), the full Section 8 recipe beyond spot checks, and the Lean definitions behind `countBelow`
+(the page shows the theorem but not the definitions; the source file was not inspected). The referee's reading of
+why Tao's method stops at logarithmic density and Mazur's reaches natural density: Tao runs forward from a
+scale-invariant start and needs the 3-adic scale to grow (so the target grows), while Mazur grows the inverse tree
+from the fixed target with the weight `3^d 2^(-A)` as a Radon-Nikodym factor, applies mixing at scales `b_j -> infinity`
+and extracts integer sources at the leaves without a `1/n` weighting; the price is `c` proportional to `1/M` with
+`M >= 16^(2^80)`.
+
+**Two expository findings that matter for the repository.** (i) *The extraction drops superscripts and the letter
+`l`.* Read literally, "`b_0 >= 325`", "`b_0 = 5125`" and "`b = 280`" make several displayed Section 7 inequalities
+false (the (7.2) coefficient bound fails at `b_0 = 325` and at `5125`; "`(2n+1)L <= B/10^6`" needs `b_0 >= 1.4 10^6`;
+Lemma 7.1 needs `b >= 512^5`); under the consistent reading `b_0 >= 32^5`, `b_0 = 512^5`, `b = 2^80` everything
+checks, and the owner should confirm against the PDF rendering. With the literal `5125` the achievable constant would
+be `10.467`, so Corollary 1.2's `10.48` would still hold and `10.46` would not. The digest of 2026-09-28 carried one
+such artifact: its "a fixed odd seed `M >= 16 b_0`" is `M >= 16^(b_0)` (corrected there today with a dated
+bracket; MISTAKE-684 records the mechanism). (ii) *The constant is tight to its stated rational bounds*: (7.9) has
+slack `2e-4`, so `523/50` cannot be lowered within the paper's own bounds without re-deriving `kappa = 34881/10000`.
+
+**Surfaced, not read:** arXiv:2608.27617 (R. A. Tavares, 2026-08-27, math.GM), "Wirsching's Positive-Predecessor-
+Density Program: Proofs of Conjectures 1 and 3". From its abstract (fetched today): it proves two of the three
+conjectures in Wirsching's reduction of uniform positive predecessor density to a chain of conditions and reduces the
+chain to the single condition `(*3)`, which it does not claim; no Lean, no AI assistance, no mention of Mazur. Entered
+in the ledger at T2 (abstract only, conditional, not refereed). Note the direction: Wirsching's program is
+root-uniform ("uniform positive predecessor density"), which THM-4517 shows cannot hold with a root-independent
+constant; a per-root positive density is what Mazur's companion claims.
+
+### 10b. Independent audit of this note
+
+(to be appended when applied)

@@ -207,7 +207,10 @@ the platform's word.
    1)/3` (`S(R_j) = 1` with valuation `2j`) permute the residues mod `3^q`
    as `j` runs over `0..3^q - 1`; averaging the weighted terminal sums over
    the residue classes and picking a class at least as good as the mean
-   gives a fixed odd seed `M >= 16 b_0`, `3 ∤ M`.
+   gives a fixed odd seed `M >= 16 b_0`, `3 ∤ M`. [Correction 2026-10-27 (opus-2026-10-27-S64, MISTAKE-684): the
+   `pdftotext` extraction dropped the superscript; the paper's bound is `M >= 16^(b_0)` with `b_0 >= 32^5`
+   (Section 3) and `b_0 = 2^80` in the explicit recipe (Section 8.2), so the seed is at least `16^(2^80)`;
+   see the three-pillars note, section 10a.]
 6. **Terminal selection (Proposition 5.2) and the comparison of two residue
    moduli (Proposition 5.3),** then the **source charge (Lemma 6.1)** `x
    omega(w) <= M` (each history's source times its weight is at most the
