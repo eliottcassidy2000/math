@@ -1,0 +1,22 @@
+level 0: 1 states (reached so far 1)
+level 1: 1 states (reached so far 2)
+level 2: 56 states (reached so far 58)
+level 3: 5783 states (reached so far 5841)
+level 4: 361098 states (reached so far 366939)
+level 5: 3427684 states (reached so far 3794623)
+level 6: 12249783 states (reached so far 16044406)
+level 7: 28162826 states (reached so far 44207232)
+level 8: 46895678 states (reached so far 91102910)
+level 9: 57722868 states (reached so far 148825778)
+level 10: 53263152 states (reached so far 202088930)
+level 11: 37052612 states (reached so far 239141542)
+level 12: 19349048 states (reached so far 258490590)
+level 13: 7462978 states (reached so far 265953568)
+level 14: 2056896 states (reached so far 268010464)
+level 15: 380928 states (reached so far 268391392)
+level 16: 42016 states (reached so far 268433408)
+level 17: 2048 states (reached so far 268435456)
+n = 8: 268435456 labelled tournaments; reached 268435456 (connected); eccentricity of the transitive tournament 17
+level counts: 0:1 1:1 2:56 3:5783 4:361098 5:3427684 6:12249783 7:28162826 8:46895678 9:57722868 10:53263152 11:37052612 12:19349048 13:7462978 14:2056896 15:380928 16:42016 17:2048
+score bound: max L = 6; violations of d >= L: 0; (d - L) histogram: 0:1135962 1:6863133 2:18647922 3:32626432 4:42724681 5:45895861 6:41501838 7:32227948 8:22063407 9:13035254 10:6845108 11:3118856 12:1195970 13:424424 14:100710 15:25532 16:2130 17:288
+forward-arc parity of reached states: even 134217728, odd 134217728 (one move toggles 21 pairs: odd, no parity obstruction)

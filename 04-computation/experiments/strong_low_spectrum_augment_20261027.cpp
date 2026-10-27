@@ -17,6 +17,7 @@
 #include <set>
 #include <algorithm>
 #include <numeric>
+#include <string>
 using namespace std;
 typedef unsigned int u32; typedef unsigned long long u64;
 
@@ -45,7 +46,7 @@ static void report(int n, const vector<char>& att, int B, size_t cand) {
     printf("order %d: f(%d) = %d%s; odd gaps in [f, %d]:", n, n, fn, fn ? "" : " (none <= B)", B); int g = 0; if (fn) for (int v = fn; v <= B; v += 2) if (!att[v]) { printf(" %d", v); g++; } printf(" (%d gaps)\n", g); fflush(stdout); }
 
 int main(int argc, char** argv) {
-    int B = argc > 1 ? atoi(argv[1]) : 200; bool do11 = argc > 2 && atoi(argv[2]) == 11;
+    int B = argc > 1 ? atoi(argv[1]) : 200; bool do11 = argc > 2 && atoi(argv[2]) == 11; bool dump = argc > 2 && string(argv[2]) == "dump";   // "dump": write the strong 8-classes and the order-9 list to files
     // (1) classes at order 7
     set<u64> all7, strong7;
     #pragma omp parallel
@@ -78,6 +79,8 @@ int main(int argc, char** argv) {
         { list9.insert(list9.end(), loc.begin(), loc.end()); for (int v = 0; v <= B; v++) if (la[v]) att9[v] = 1; }
     }
     report(9, att9, B, list9.size());
+    if (dump) { FILE* f = fopen("sla_strong8_classes.txt", "w"); for (u64 k : strong8) fprintf(f, "%llu\n", k); fclose(f);
+        f = fopen("sla_list9.txt", "w"); for (u64 k : list9) fprintf(f, "%llu\n", k); fclose(f); printf("dumped %zu strong 8-class codes and %zu order-9 codes\n", strong8.size(), list9.size()); fflush(stdout); }
     // (4) order 10
     vector<u64> list10; vector<char> att10(B + 1, 0);
     #pragma omp parallel
