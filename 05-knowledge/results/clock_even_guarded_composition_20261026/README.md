@@ -17,6 +17,12 @@ operation envelope in the concurrently received
 [Session72 packet](../session72_even_graph_unifying_carriers_20261026/README.md).
 That packet arrived at `00f1c9aa39` while this work was running; its Fourier
 envelope and positive-cone results are inherited, not claimed again here.
+Its final test-return theorem at `31002464ae` also gives a useful literal
+corollary here: applying the same named native complement twice is the guarded
+identity. Products of these tests span all functions on labelled tournaments
+at every size, using inherited THM-4807 reconstruction. [F6](FOURIER.md) states
+the full-cube, absorbing-failure scope. Averaging the names produces the
+different counted-response problem below.
 
 The second response already separates the 81/27 hostile. Let
 

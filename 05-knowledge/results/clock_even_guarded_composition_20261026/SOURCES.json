@@ -147,6 +147,36 @@
       "revision": "31c118ba7e12c021de9912e80764c3641164828f",
       "sha256_lf": "6d67062e7530e18e404e66b0e99881e0fdcfc7d0ffd33757558977742d33399e",
       "read_scope": "Predictions only, not used as proved dependencies."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/README.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "e9be621e8e36b4fa092eccb85f733e631d108128f1dddbc63558191ae4792849",
+      "read_scope": "Final synthesis read; response ranks, test-return protocol, sparse phase layers and boundaries; incoming 31002464ae."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-response/REPORT.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "e81ee9da59a2649ce4400e8bf99c40fb1c2fc3afabe4bfe6afd089292f8524da",
+      "read_scope": "Theorem C and section 6: full test-return proof and fixed-path application; general mechanism credited. Other response claims inherited only as stated in final synthesis."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-cross-domain/THEOREM-CYCLIC-ALIGNMENT.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf",
+      "read_scope": "Sections 1--5: complete cyclic phases, prime-layer sparsity, field dictionary and native carousel realization; incoming proof, no independent numerical replay."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-cross-domain/native-paley/README.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "194625fc91b47171ca68e58caf468bf46832d158fda93148aab0bd70acaa5dad",
+      "read_scope": "Native Paley7 triple control and F8 rank distinction; inherited audited computation, not rerun."
+    },
+    {
+      "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "revision": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "sha256_lf": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498",
+      "read_scope": "T1--T2 excerpt: forest-frame composition, exact complement update, Paley7 all-rank cycle obstruction and joined r-copy amplification. Other renewal claims not inherited."
     }
   ],
   "primary_literature": [
@@ -166,5 +196,6 @@
       "scope": "Original paper mirror, sections 1--2 configurations and section 8 diagonal/circularity argument. Modern halt-decider contradiction proved directly in the report."
     }
   ],
-  "incoming_boundary": "THM-4809 and HYP-9419 were RESERVED in the inspected incoming snapshot, not dependencies; incoming S62 restore-depth conjectures remain predictions. THM-4808 audit was noticed but no Berggren theorem is newly inherited here."
+  "incoming_boundary": "THM-4809 and HYP-9419 were RESERVED in the inspected incoming snapshot, not dependencies; incoming S62 restore-depth conjectures remain predictions. THM-4808 audit was noticed but no Berggren theorem is newly inherited here.",
+  "late_source_snapshot": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80"
 }

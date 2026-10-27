@@ -146,3 +146,44 @@ vector having nonzero projection on every eigenspace there. This equivalence
 is elementary spectral decomposition; neither spectral condition is proved
 uniformly. The observed ranks do not imply that every other observer, every
 normalized kernel, or the full blue attachment grammar has the same quotient.
+
+## F6. Named native-complement test-return is complete at every size
+
+This is a direct application of incoming
+[Session72 response Theorem C](../session72_even_graph_unifying_carriers_20261026/session72-response/REPORT.md),
+not a new abstract test-return theorem. It makes the restoration operation
+literal for native complement on the **full labelled tournament cube**.
+
+Adjoin an absorbing failure state and let a named operation test P, perform
+tau_P if legal, and fail otherwise. F2 gives K_P^2=M_(g_P), multiplication
+by g_P. Consequently a sequence of doubled named operations has terminal
+survival response
+
+    (K_(P1)^2 ... K_(Pr)^2)1 = product_i g_(Pi).
+
+The actual operation returns to the same labelled source after each successful
+pair, so the product is a joint test, not a product of separate expectations.
+
+By inherited THM-4807, the complete Hamilton-word legality signature determines
+every labelled tournament. For each T, its signature-cell indicator is
+
+    1_{T} = product_(P legal in T) g_P
+              * product_(P illegal in T) (1-g_P).
+
+Expand the second product. Every summand is a terminal response of a doubled
+operation word (the empty word gives 1). Thus these responses span the entire
+2^binom(n,2)-dimensional function space on labelled tournaments, over every field. This proves
+full linear law recovery on the valid states, for every n>=1. The indicator
+expansion uses signed linear combinations of experiments; it is not a claim
+that one positive survival experiment isolates every tournament.
+
+On a fixed-path subcube, the same observation separates initial states, but
+the experiment may pass outside that subcube between the two moves. Closure
+therefore requires permitting those intermediate marked states. The incoming
+re-marking/inverse protocol stays within its own fixed-path carrier and has
+rank 2^((n-1)(n-2)/2); these are different declared universes.
+
+The new finite control constructs the full guard algebra through n4 over F2.
+This named all-size statement does not prove Conjecture C: replacing each
+named K_P by their sum L averages away the ability to choose a specific test.
+It also makes no black-only accessibility claim.

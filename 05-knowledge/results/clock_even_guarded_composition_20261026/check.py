@@ -144,7 +144,22 @@ def tournament_controls():
                             if j<cut:fl|=1<<left.index[i,j]
                             elif i>=cut:fr|=1<<right.index[i-cut,j-cut]
                     need(parity(f&t)==parity(fl&u)*parity(fr&v),'ordered join character restriction');joins+=1
-    return {'atlases':results,'guard_character_truth_tables':cases,'ordered_join_character_checks':joins}
+    # Products of full labelled Hamilton-word guards, independent Boolean algebra.
+    guard_ranks=[]
+    for n in range(2,5):
+        a=Atlas(n)
+        guards=[sum(int(all(a.forward(t,u,v) for u,v in zip(p,p[1:])))<<t for t in range(a.N)) for p in permutations(range(n))]
+        basis={};queue=[(1<<a.N)-1]
+        while queue:
+            v=queue.pop()
+            while v:
+                j=v.bit_length()-1
+                if j in basis:v^=basis[j]
+                else:
+                    basis[j]=v;queue.extend(v&g for g in guards);break
+        need(len(basis)==a.N,'named full-cube guard algebra')
+        guard_ranks.append({'n':n,'labelled_states':a.N,'guard_algebra_rank_mod2':len(basis)})
+    return {'atlases':results,'guard_character_truth_tables':cases,'ordered_join_character_checks':joins,'named_full_cube_guard_algebra':guard_ranks}
 
 def clock_controls():
     affine=0;division=0;parities=[]

@@ -82,6 +82,28 @@ These results are inherited from that audited packet, not independently
 reproved in this session. Incoming S62 restore-depth predictions remain
 pre-registered hypotheses; they are not used as conclusions.
 
+The final Session72 pull at `31002464ae` further proves the test-return guard
+algebra theorem and all-arity cyclic alignment. F6 applies the former to
+named native complement itself. For the latter, periods d_i have
+product(d_i)/lcm(d_i) simultaneous-shift classes; complete named relative
+phases modulo gcd(d_i,d_j) classify them, with triple compatibility. A sparse
+set of pair tests suffices exactly when its induced graph on each nonempty
+prime-power layer is connected. This is an explicit economical answer for
+the cyclic transport portion of the carrier, not for arbitrary atom actions.
+Its native Paley-seven triple hostile has equal pair types but unequal joint
+guards (F8 ranks two and three). Both results are credited to the incoming
+[cyclic alignment theorem](../session72_even_graph_unifying_carriers_20261026/session72-cross-domain/THEOREM-CYCLIC-ALIGNMENT.md)
+and its linked native control; they are not new computations in this packet.
+
+Incoming `f4ef2ab273` also supplies a useful obstruction to an economical
+incidence carrier: one legal complement can take a tournament with a forest
+exception frame to Paley7, which needs at least seven backward edges in every
+rank. Joined copies require exactly r independent exception cycles on 7r
+vertices. The [port-forest proof](../weighted_renewal_moving_modulus_20261026/README.md),
+T1--T2, was read as incoming evidence. It turns "retain more path data" into
+an explicit growing cycle cost, without proving that every compact carrier
+needs that particular representation.
+
 ## The exact finite framework and its limits
 
 For each boundary type b, declare a state set X_b and a language C_b of

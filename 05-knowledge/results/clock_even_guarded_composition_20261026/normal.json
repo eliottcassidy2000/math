@@ -879,6 +879,23 @@
       }
     ],
     "guard_character_truth_tables": 1536,
+    "named_full_cube_guard_algebra": [
+      {
+        "guard_algebra_rank_mod2": 2,
+        "labelled_states": 2,
+        "n": 2
+      },
+      {
+        "guard_algebra_rank_mod2": 8,
+        "labelled_states": 8,
+        "n": 3
+      },
+      {
+        "guard_algebra_rank_mod2": 64,
+        "labelled_states": 64,
+        "n": 4
+      }
+    ],
     "ordered_join_character_checks": 32768
   }
 }
