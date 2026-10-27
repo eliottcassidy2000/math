@@ -1,0 +1,9 @@
+n=3: mine=1 producer=1 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=5: mine=1 producer=1 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=6: mine=1 producer=1 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=7: mine=5 producer=5 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=8: mine=12 producer=12 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=9: mine=102 producer=102 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=10: mine=895 producer=895 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=11: mine=12155 producer=12155 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0
+n=12: mine=285705 producer=285705 same_class_set=True aut/sc agree=True producer-stated aut/sc mismatches=0

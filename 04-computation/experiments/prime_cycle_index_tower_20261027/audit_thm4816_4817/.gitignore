@@ -1,0 +1,7 @@
+# auditor binaries and large regenerable class lists (reproduce.sh rebuilds them in about a minute)
+audit_census
+audit_census_p
+audit_reclass
+prime_fraction
+my_cls12.txt
+re_cls12.txt

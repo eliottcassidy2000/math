@@ -1,0 +1,111 @@
+== Burnside (auditor) ==
+n= 1 A=1 SC=1
+n= 2 A=1 SC=1
+n= 3 A=2 SC=2
+n= 4 A=4 SC=2
+n= 5 A=12 SC=8
+n= 6 A=56 SC=12
+n= 7 A=456 SC=88
+n= 8 A=6,880 SC=176
+n= 9 A=191,536 SC=2,752
+n=10 A=9,733,056 SC=8,784
+n=11 A=903,753,248 SC=279,968
+n=12 A=154,108,311,168 SC=1,492,288
+n=13 A=48,542,114,686,912 SC=95,458,560
+n=14 A=28,401,423,719,122,304 SC=872,687,552
+n=15 A=31,021,002,160,355,166,848 SC=111,698,291,584
+n=16 A=63,530,415,842,308,265,100,288 SC=1,787,154,671,104
+
+== non-rigid rows: auditor census vs producer nr{n} vs klein census (non-rigid rows) ==
+n=3: auditor 1 classes in 1 rows; producer 1 in 1 rows; identical=True; klein non-rigid 1 in 1 rows, identical=True
+n=4: auditor 0 classes in 0 rows; producer 0 in 0 rows; identical=True; klein non-rigid 0 in 0 rows, identical=True
+n=5: auditor 1 classes in 1 rows; producer 1 in 1 rows; identical=True; klein non-rigid 1 in 1 rows, identical=True
+n=6: auditor 1 classes in 1 rows; producer 1 in 1 rows; identical=True; klein non-rigid 1 in 1 rows, identical=True
+n=7: auditor 5 classes in 4 rows; producer 5 in 4 rows; identical=True; klein non-rigid 5 in 4 rows, identical=True
+n=8: auditor 12 classes in 1 rows; producer 12 in 1 rows; identical=True; klein non-rigid 12 in 1 rows, identical=True
+n=9: auditor 102 classes in 6 rows; producer 102 in 6 rows; identical=True; klein non-rigid 102 in 6 rows, identical=True
+n=10: auditor 895 classes in 7 rows; producer 895 in 7 rows; identical=True; klein non-rigid 895 in 7 rows, identical=True
+n=11: auditor 12155 classes in 10 rows; producer 12155 in 10 rows; identical=True
+n=12: auditor 285705 classes in 12 rows; producer 285705 in 12 rows; identical=True
+n=13: auditor 11256145 classes in 20 rows; producer 11256145 in 20 rows; identical=True
+
+== producer full tables t{n} vs klein census files (n=3..10) ==
+n=3: identical=True
+n=4: identical=True
+n=5: identical=True
+n=6: identical=True
+n=7: identical=True
+n=8: identical=True
+n=9: identical=True
+n=10: identical=True
+n=3: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=4: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=5: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=6: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=7: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=8: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=9: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=10: auditor tower table (own census + own ledger rigid rows) == klein census: True
+n=11: rigid non-SC 796,605,430, rigid SC 258,844; table == producer t11: True
+n=12: rigid non-SC 142,978,979,910, rigid SC 1,170,176; table == producer t12: True
+n=13: rigid non-SC 46,453,763,046,048, rigid SC 92,975,268; table == producer t13: True
+
+== ledger (auditor) ==
+A(n)                         n=3: 2 | n=4: 4 | n=5: 12 | n=6: 56 | n=7: 456 | n=8: 6,880 | n=9: 191,536 | n=10: 9,733,056 | n=11: 903,753,248 | n=12: 154,108,311,168 | n=13: 48,542,114,686,912 | n=14: 28,401,423,719,122,304
+non-strong                   n=3: 1 | n=4: 3 | n=5: 6 | n=6: 21 | n=7: 103 | n=8: 872 | n=9: 13,403 | n=10: 377,107 | n=11: 19,288,658 | n=12: 1,798,161,433 | n=13: 307,332,423,619 | n=14: 96,931,930,964,248
+strong non-prime             n=3: 0 | n=4: 1 | n=5: 3 | n=6: 20 | n=7: 156 | n=8: 2,000 | n=9: 41,478 | n=10: 1,449,788 | n=11: 87,588,161 | n=12: 9,329,713,944 | n=13: 1,780,914,985,832 | n=14: 617,279,770,545,341
+P(n)                         n=3: 1 | n=4: 0 | n=5: 3 | n=6: 15 | n=7: 197 | n=8: 4,008 | n=9: 136,655 | n=10: 7,906,161 | n=11: 796,876,429 | n=12: 142,980,435,791 | n=13: 46,453,867,277,461 | n=14: 27,687,212,017,612,715
+S(n)                         n=3: 1 | n=4: 1 | n=5: 6 | n=6: 35 | n=7: 353 | n=8: 6,008 | n=9: 178,133 | n=10: 9,355,949 | n=11: 884,464,590 | n=12: 152,310,149,735 | n=13: 48,234,782,263,293 | n=14: 28,304,491,788,158,056
+SC(n)                        n=3: 2 | n=4: 2 | n=5: 8 | n=6: 12 | n=7: 88 | n=8: 176 | n=9: 2,752 | n=10: 8,784 | n=11: 279,968 | n=12: 1,492,288 | n=13: 95,458,560 | n=14: 872,687,552
+SC non-strong                n=3: 1 | n=4: 1 | n=5: 2 | n=6: 3 | n=7: 9 | n=8: 14 | n=9: 91 | n=10: 185 | n=11: 2,768 | n=12: 8,839 | n=13: 280,111 | n=14: 1,492,876
+SC strong non-prime          n=3: 0 | n=4: 1 | n=5: 3 | n=6: 6 | n=7: 24 | n=8: 90 | n=9: 426 | n=10: 3,074 | n=11: 17,893 | n=12: 312,500 | n=13: 2,182,256 | n=14: 103,568,601
+SCP(n)                       n=3: 1 | n=4: 0 | n=5: 3 | n=6: 3 | n=7: 55 | n=8: 72 | n=9: 2,235 | n=10: 5,525 | n=11: 259,307 | n=12: 1,170,949 | n=13: 92,996,193 | n=14: 767,626,075
+c_s(n)                       n=3: 1 | n=4: 1 | n=5: 6 | n=6: 22 | n=7: 214 | n=8: 3,074 | n=9: 90,255 | n=10: 4,680,547 | n=11: 442,336,617 | n=12: 76,154,750,809 | n=13: 24,117,379,959,402 | n=14: 14,152,240,453,790,335
+c(n)                         n=3: 2 | n=4: 3 | n=5: 9 | n=6: 32 | n=7: 247 | n=8: 3,328 | n=9: 93,612 | n=10: 4,774,417 | n=11: 447,114,461 | n=12: 76,601,960,166 | n=13: 24,193,986,713,786 | n=14: 14,176,434,888,156,918
+s_lab(n)                     n=3: 2 | n=4: 24 | n=5: 544 | n=6: 22,320 | n=7: 1,677,488 | n=8: 236,522,496 | n=9: 64,026,088,576 | n=10: 33,832,910,196,480 | n=11: 35,262,092,417,856,512 | n=12: 72,926,863,133,112,198,144 | n=13: 300,318,571,786,159,783,496,704 | n=14: 2,467,430,973,323,656,141,183,549,440
+labelled strong non-prime    n=3: 0 | n=4: 24 | n=5: 280 | n=6: 12,000 | n=7: 703,808 | n=8: 75,242,496 | n=9: 14,461,559,296 | n=10: 5,145,203,665,920 | n=11: 3,453,658,999,907,072 | n=12: 4,439,096,863,965,333,504 | n=13: 11,049,420,738,014,601,539,584 | n=14: 53,707,186,056,806,868,633,815,040
+P_lab(n)                     n=3: 2 | n=4: 0 | n=5: 264 | n=6: 10,320 | n=7: 973,680 | n=8: 161,280,000 | n=9: 49,564,529,280 | n=10: 28,687,706,530,560 | n=11: 31,808,433,417,949,440 | n=12: 68,487,766,269,146,864,640 | n=13: 289,269,151,048,145,181,957,120 | n=14: 2,413,723,787,266,849,272,549,734,400
+l(n)                         n=3: 2 | n=4: 11 | n=5: 208 | n=6: 8,563 | n=7: 680,426 | n=8: 101,747,483 | n=9: 28,904,318,404 | n=10: 15,824,793,243,139 | n=11: 16,901,802,400,214,078 | n=12: 35,524,962,710,023,558,019 | n=13: 147,811,543,365,879,760,556,872 | n=14: 1,222,222,358,932,702,742,749,843,027
+
+== labelled-count identity  sum count*n!/|Aut| over the table == P_lab(n) ==
+n=3: sum=2  P_lab=2  equal=True  (klein census)
+n=4: sum=0  P_lab=0  equal=True  (klein census)
+n=5: sum=264  P_lab=264  equal=True  (klein census)
+n=6: sum=10,320  P_lab=10,320  equal=True  (klein census)
+n=7: sum=973,680  P_lab=973,680  equal=True  (klein census)
+n=8: sum=161,280,000  P_lab=161,280,000  equal=True  (klein census)
+n=9: sum=49,564,529,280  P_lab=49,564,529,280  equal=True  (klein census)
+n=10: sum=28,687,706,530,560  P_lab=28,687,706,530,560  equal=True  (klein census)
+n=11: sum=31,808,433,417,949,440  P_lab=31,808,433,417,949,440  equal=True  (auditor census + auditor ledger)
+n=12: sum=68,487,766,269,146,864,640  P_lab=68,487,766,269,146,864,640  equal=True  (auditor census + auditor ledger)
+n=13: sum=289,269,151,048,145,181,957,120  P_lab=289,269,151,048,145,181,957,120  equal=True  (auditor census + auditor ledger)
+
+== Burnside defects (n! P(n) - P_lab(n))/n! ==
+n=3: 2/3 = 0.666667   census sum (1-1/|Aut|) = 2/3  equal=True
+n=4: 0 = 0.000000   census sum (1-1/|Aut|) = 0  equal=True
+n=5: 4/5 = 0.800000   census sum (1-1/|Aut|) = 4/5  equal=True
+n=6: 2/3 = 0.666667   census sum (1-1/|Aut|) = 2/3  equal=True
+n=7: 80/21 = 3.809524   census sum (1-1/|Aut|) = 80/21  equal=True
+n=8: 8 = 8.000000   census sum (1-1/|Aut|) = 8  equal=True
+n=9: 616/9 = 68.444444   census sum (1-1/|Aut|) = 616/9  equal=True
+n=10: 8972/15 = 598.133333   census sum (1-1/|Aut|) = 8972/15  equal=True
+n=11: 1337728/165 = 8107.442424   census sum (1-1/|Aut|) = 1337728/165  equal=True
+n=12: 8571902/45 = 190486.711111   census sum (1-1/|Aut|) = 8571902/45  equal=True
+n=13: 4389979016/585 = 7504237.634188   census sum (1-1/|Aut|) = 4389979016/585  equal=True
+n=14: 3574801896/7 = 510685985.142857
+
+== self-checks ==
+n=3: P-SCP even: True;  P/A=0.5000  P_lab/2^C=0.2500  c/A=1.0000
+n=4: P-SCP even: True;  P/A=0.0000  P_lab/2^C=0.0000  c/A=0.7500
+n=5: P-SCP even: True;  P/A=0.2500  P_lab/2^C=0.2578  c/A=0.7500
+n=6: P-SCP even: True;  P/A=0.2679  P_lab/2^C=0.3149  c/A=0.5714
+n=7: P-SCP even: True;  P/A=0.4320  P_lab/2^C=0.4643  c/A=0.5417
+n=8: P-SCP even: True;  P/A=0.5826  P_lab/2^C=0.6008  c/A=0.4837
+n=9: P-SCP even: True;  P/A=0.7135  P_lab/2^C=0.7213  c/A=0.4887
+n=10: P-SCP even: True;  P/A=0.8123  P_lab/2^C=0.8154  c/A=0.4905
+n=11: P-SCP even: True;  P/A=0.8817  P_lab/2^C=0.8829  c/A=0.4947
+n=12: P-SCP even: True;  P/A=0.9278  P_lab/2^C=0.9282  c/A=0.4971
+n=13: P-SCP even: True;  P/A=0.9570  P_lab/2^C=0.9571  c/A=0.4984
+n=14: P-SCP even: True;  P/A=0.9749  P_lab/2^C=0.9749  c/A=0.4991
+
+sources: {3: 'klein census', 4: 'klein census', 5: 'klein census', 6: 'klein census', 7: 'klein census', 8: 'klein census', 9: 'klein census', 10: 'klein census', 11: 'auditor census + auditor ledger', 12: 'auditor census + auditor ledger', 13: 'auditor census + auditor ledger'}

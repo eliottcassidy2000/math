@@ -1,0 +1,3 @@
+(a) order-6 class: scores [1, 1, 2, 3, 4, 4] (|Aut|, #anti) = (1, 0) L = 1.0
+(b) S_4 => S_5': S_5' scores [1, 1, 2, 3, 3] | scores [7, 7, 6, 6, 1, 1, 3, 3, 2] delta0 = 1 eligible: [] |Aut| = 1 #anti = 0
+(b) S_4 => S_5': S_5' scores [1, 2, 2, 2, 3] | scores [7, 7, 6, 6, 1, 2, 2, 3, 2] delta0 = 1 eligible: [] |Aut| = 1 #anti = 0

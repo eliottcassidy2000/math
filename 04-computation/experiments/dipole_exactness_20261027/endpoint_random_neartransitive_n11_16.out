@@ -1,0 +1,6 @@
+n=11 mode=3 samples=200000 nonregular-tested; tied extremes 101714 | C7 failures 0 | C9 tested 200000 failures 0 | strong 115358, kappa>=2 27330, no L-descent 0
+n=12 mode=3 samples=200000 nonregular-tested; tied extremes 99798 | C7 failures 0 | C9 tested 0 failures 0 | strong 117229, kappa>=2 30447, no L-descent 0
+n=13 mode=3 samples=100000 nonregular-tested; tied extremes 49279 | C7 failures 0 | C9 tested 100000 failures 0 | strong 59374, kappa>=2 16728, no L-descent 0
+n=14 mode=3 samples=50000 nonregular-tested; tied extremes 24344 | C7 failures 0 | C9 tested 0 failures 0 | strong 29777, kappa>=2 8786, no L-descent 0
+n=15 mode=3 samples=30000 nonregular-tested; tied extremes 14264 | C7 failures 0 | C9 tested 30000 failures 0 | strong 18114, kappa>=2 5669, no L-descent 0
+n=16 mode=3 samples=15000 nonregular-tested; tied extremes 7153 | C7 failures 0 | C9 tested 0 failures 0 | strong 9052, kappa>=2 2977, no L-descent 0

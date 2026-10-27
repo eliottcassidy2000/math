@@ -1,0 +1,2 @@
+p=3 c=1 f=0 bits=1 reps=1 invariant=2 prime=2 new_classes=1 (cum classes 1) t=0.0s
+n=3 invariant_total=2 prime_total=2 nonrigid_classes=1 types=1 reps: t(0)=1 cpu=0.0s

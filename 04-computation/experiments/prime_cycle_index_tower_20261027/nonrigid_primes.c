@@ -188,6 +188,7 @@ static void build_frep(int f) {
         key128 k = canon(q, f, NULL, 0, NULL);
         int dup = 0; for (int s = 0; s < nseen; s++) if (seen[s].lo == k.lo && seen[s].hi == k.hi) { dup = 1; break; }
         if (dup) continue;
+        if (nseen >= 2048) { fprintf(stderr, "more than 2048 F-representatives (f >= 8): enlarge frep/seen\n"); exit(10); }
         seen[nseen++] = k; memcpy(frep[nfrep++], q, sizeof q);
     }
 }

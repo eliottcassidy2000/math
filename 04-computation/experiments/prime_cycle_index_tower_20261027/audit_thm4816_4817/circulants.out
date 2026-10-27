@@ -1,0 +1,14 @@
+p=11: 32 connection sets, 4 multiplier orbits; Burnside (32+0+2+2+2+0+0+0+2+0)/10 = 4.0
+  multipliers fixing some set: {1: 32, 3: 2, 4: 2, 5: 2, 9: 2}
+  10 000000000000000000001ff79e3c3c1f aut=11 sc=1 prime=1
+  10 000000000000000000443ebb3b3e2c1f aut=11 sc=1 prime=1
+  10 000000000000000000563ed394e9741f aut=11 sc=1 prime=1
+   2 00000000000000000066add2de69cc1f aut=55 sc=1 prime=1
+p=13: 64 connection sets, 6 multiplier orbits; Burnside (64+0+4+0+0+0+0+0+4+0+0+0)/12 = 6.0
+  multipliers fixing some set: {1: 64, 3: 4, 9: 4}
+  12 00000000000000007ff7cf8f87c1f03f aut=13 sc=1 prime=1
+  12 0000000000001331fd9f8ea72d2ba03f aut=13 sc=1 prime=1
+  12 0000000000002040fd7b9f4ec7e1703f aut=13 sc=1 prime=1
+  12 0000000000002a127de36b8b4f07b03f aut=13 sc=1 prime=1
+   4 0000000000002a2973e3aa5ab696d03f aut=39 sc=1 prime=1
+  12 0000000000003b30e7d6edd6e1c9e03f aut=13 sc=1 prime=1

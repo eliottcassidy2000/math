@@ -1,0 +1,5 @@
+p=3 c=2 f=6 bits=17 reps=56 invariant=7340032 prime=3901632 new_classes=268116 (cum classes 268116) t=14.6s
+p=3 c=3 f=3 bits=21 reps=2 invariant=4194304 prime=2666304 new_classes=14584 (cum classes 282700) t=22.7s
+p=3 c=4 f=0 bits=22 reps=1 invariant=4194304 prime=3823632 new_classes=2933 (cum classes 285633) t=32.9s
+p=5 c=2 f=2 bits=13 reps=1 invariant=8192 prime=2880 new_classes=72 (cum classes 285705) t=32.9s
+n=12 invariant_total=15736832 prime_total=10394448 nonrigid_classes=285705 types=12 reps: t(0)=1 t(2)=1 t(3)=2 t(6)=56 cpu=32.9s

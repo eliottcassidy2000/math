@@ -1,0 +1,1 @@
+n=4 invariant_total=0 prime_total=0 nonrigid_classes=0 types=0 reps: cpu=0.0s

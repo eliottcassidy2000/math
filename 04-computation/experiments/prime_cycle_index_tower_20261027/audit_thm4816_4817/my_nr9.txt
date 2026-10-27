@@ -1,0 +1,6 @@
+TYPE count=56 n=9 aut=3 AUT: 1^3.3^2:2 1^9:1 SC=0 ANTI: 
+TYPE count=8 n=9 aut=3 AUT: 1^3.3^2:2 1^9:1 SC=1 ANTI: 1^1.2^1.6^1:2 1^1.2^4:1
+TYPE count=8 n=9 aut=3 AUT: 1^3.3^2:2 1^9:1 SC=1 ANTI: 1^1.2^4:3
+TYPE count=16 n=9 aut=3 AUT: 1^9:1 3^3:2 SC=0 ANTI: 
+TYPE count=12 n=9 aut=3 AUT: 1^9:1 3^3:2 SC=1 ANTI: 1^1.2^4:3
+TYPE count=2 n=9 aut=9 AUT: 1^9:1 3^3:2 9^1:6 SC=1 ANTI: 1^1.2^4:9

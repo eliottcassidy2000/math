@@ -5,9 +5,12 @@ status: >
   FINITE-EXACT (mac-mini-2026-10-27-dipole; not independently audited at filing). The ledger at order n uses the prime
   cycle-index types of orders < n (THM-4816: klein's census through 10 reproduced, the tower at 11-13) and A(n), SC(n)
   computed by Burnside's lemma (equal to OEIS A000568 and A002785 through n = 15). Agreeing cross-checks: the strong
-  counts S(n) equal OEIS A051337(n) and the labelled strong counts equal A054946(n) at n = 12, 13, 14; at n = 12 and 13
-  the labelled-count identity of THM-4816 A5 holds against the full non-rigid census. The order-14 non-rigid sum is a
-  prediction (no order-14 census).
+  counts S(n) equal OEIS A051337(n) and the labelled strong counts equal A054946(n) at n = 12, 13, 14 (consistency of the inputs only: S = A/(1 + A) is fixed
+  by A000568 and S_lab = 1 - 1/T by 2^C(n,2), so these two agreements do not test the prime types); at n = 12 and 13
+  the labelled-count identity of THM-4816 A5 holds against the full non-rigid census. The order-14 non-rigid sum was
+  pre-registered; its 7- and 5-adic parts were then checked against the order-14 primes with an automorphism of order
+  7 or 5 (98 and 4,200 classes; both agree). The 3-part is untested. Independently audited: PASS WITH CORRECTIONS (18
+  edits applied; audit_thm4816_4817/REPORT.md).
 session: mac-mini-2026-10-27-dipole
 source: 05-knowledge/results/dipole_principle_and_prime_cycle_index_tower_20261027.md (section 7)
 scripts:
@@ -30,7 +33,7 @@ The identities are those of THM-4803 and THM-4814 (B), evaluated from the types 
 - `SC(n) = SC_nonstrong(n) + SC_strong-nonprime(n) + SCP(n)` (self-converse classes; Burnside over `Aut±(Q)` with
   self-converse contents on the odd anti-automorphism cycles);
 - `c = MSET(c_s)`, `c_s = X + sum_{Q up to duality} Z_{Aut±(Q)}[c]` (intransitivity classes, THM-4803);
-- `1 + T_lab = 1/(1 - S_lab)` with `T_lab` from `2^C(n,2)`, labelled strong non-primes `n! sum_k P_lab(k)/k! [x^n] (T_lab - 1)^k`,
+- `T_lab = 1/(1 - S_lab)` with `T_lab = sum_{n >= 0} 2^C(n,2) x^n/n!`, labelled strong non-primes `n! sum_k P_lab(k)/k! [x^n] (T_lab - 1)^k`,
   and `l_s = x + (1/2) sum_k P_lab(k) l^k/k!`, `1 + l = exp(l_s)` (labelled intransitivity structures).
 
 ## The ledgers (FINITE-EXACT)
@@ -67,7 +70,8 @@ classes `c(n)`, `c_s(n)`, `l(n)` as above. None of these four is in the OEIS (se
 **Cross-check.** klein's THM-4818 (B) computed the order-12 column independently (the same identities, its own
 order-11 types): `P(12)`, `SCP(12)`, `c_s(12)` and `c(12)` agree exactly. Its `P_lab(12)` and `l(12)` differ by
 1,024 and 512 from the values above. The values here are exact, as confirmed by the labelled identity against the
-order-12 types; THM-4818's are double-precision roundings (MISTAKE-683).
+order-12 types; THM-4818's `P_lab(12)` is the nearest IEEE double to the exact value, and its `l(12)`, computed exactly from that
+`P_lab(12)`, inherits half of the error (MISTAKE-683).
 
 ## The Burnside defects
 
@@ -82,5 +86,10 @@ order-12 types; THM-4818's are double-precision roundings (MISTAKE-683).
 
 The order-14 value is pre-registered (HYP-9423 (6)). Its reduced denominator is 7, so some order-14 prime has an
 automorphism group of order divisible by 7 (an element of type `7^2`), and, if every such group has order exactly 7,
-their number is congruent to 6 modulo 7. With nearly all non-rigid primes of `|Aut| = 3`, the order-14 non-rigid
+their number is congruent to 6 modulo 7. Audit (2026-10-27, `04-computation/experiments/prime_cycle_index_tower_20261027/audit_thm4816_4817/`; the same as the later `out/nr14_p7.txt`,
+`out/nr14_p5.txt`): the 8,192 invariant tournaments of type `7^2` give 98 prime classes, 93 with `|Aut| = 7` and 5 with
+`|Aut| = 21`, so the hypothesis of the last clause fails; their 7-adic part `93 · 6/7 + 5 · 20/21 = 1774/21 ≡ 1/7`
+(mod `Z_(7)`) agrees with `3,574,801,896/7`. The 524,288 invariant tournaments of type `1^4 5^2` give 4,200 classes, all
+with `|Aut| = 5`, and `4,200 · 4/5` is an integer, as the denominator requires. The rest, `1,532,047,622/3`, comes from
+the groups of 3-power order, so the order-14 non-rigid count is at most `98 + 4,200 + (3/2) · 1,532,047,622/3 = 766,028,109`. With nearly all non-rigid primes of `|Aut| = 3`, the order-14 non-rigid
 count is about `(3/2) · 510,685,985 ≈ 7.7 · 10^8`.

@@ -1,0 +1,12 @@
+n=3: non-rigid 1 (SC 1); |Aut| hist {3: 1}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 1, 3: 2}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=4: non-rigid 0 (SC 0); |Aut| hist {}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=5: non-rigid 1 (SC 1); |Aut| hist {5: 1}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 1, 5: 4}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=6: non-rigid 1 (SC 1); |Aut| hist {3: 1}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 1, 3: 2}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=7: non-rigid 5 (SC 5); |Aut| hist {3: 3, 7: 1, 21: 1}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 5, 3: 20, 7: 12}; elements of order divisible by 7: 12; cycle types of order-9 elements: []
+n=8: non-rigid 12 (SC 0); |Aut| hist {3: 12}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 12, 3: 24}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=9: non-rigid 102 (SC 30); |Aut| hist {3: 100, 9: 2}; |Aut|=9: Z_9 2, Z_3^2 0; element orders (weighted by classes) {1: 102, 3: 204, 9: 12}; elements of order divisible by 7: 0; cycle types of order-9 elements: ['((9, 1),)']
+n=10: non-rigid 895 (SC 21); |Aut| hist {3: 884, 5: 11}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 895, 3: 1768, 5: 44}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=11: non-rigid 12155 (SC 463); |Aut| hist {3: 12128, 5: 23, 11: 3, 55: 1}; |Aut|=9: Z_9 0, Z_3^2 0; element orders (weighted by classes) {1: 12155, 3: 24256, 5: 136, 11: 40}; elements of order divisible by 7: 0; cycle types of order-9 elements: []
+n=12: non-rigid 285705 (SC 773); |Aut| hist {3: 285601, 5: 72, 9: 32}; |Aut|=9: Z_9 8, Z_3^2 24; element orders (weighted by classes) {1: 285705, 3: 571410, 5: 288, 9: 48}; elements of order divisible by 7: 0; cycle types of order-9 elements: ['((3, 1), (9, 1))']
+n=13: non-rigid 11256145 (SC 20925); |Aut| hist {3: 11255339, 5: 432, 9: 368, 13: 5, 39: 1}; |Aut|=9: Z_9 16, Z_3^2 352; element orders (weighted by classes) {1: 11256145, 3: 22513552, 5: 1728, 9: 96, 13: 72}; elements of order divisible by 7: 0; cycle types of order-9 elements: ['((1, 1), (3, 1), (9, 1))']
+13 from: my_nr13.txt

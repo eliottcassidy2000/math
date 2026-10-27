@@ -1,0 +1,1 @@
+TYPE count=12 n=8 aut=3 AUT: 1^2.3^2:2 1^8:1 SC=0 ANTI: 

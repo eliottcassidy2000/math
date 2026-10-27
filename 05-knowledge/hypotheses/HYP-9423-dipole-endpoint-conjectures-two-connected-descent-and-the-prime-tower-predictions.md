@@ -62,7 +62,10 @@ related:
 6. **Pre-registered order-14 values** (from THM-4817, before any order-14 census):
    `sum over non-rigid order-14 primes of (1 - 1/|Aut|) = 3,574,801,896/7 = 510,685,985.142857...`. Some order-14
    prime has an automorphism of order 7, of type `7^2`. If all such groups have order 7, their number is
-   `≡ 6 (mod 7)`, and the contributions of the 3-, 5- and 9-parts sum to an integer. The total non-rigid count lies
+   `≡ 6 (mod 7)`, and the contributions of the 3-, 5- and 9-parts sum to an integer. (Audit 2026-10-27, `04-computation/experiments/prime_cycle_index_tower_20261027/audit_thm4816_4817/`:
+   98 order-14 primes have an automorphism of order 7, 93 with `|Aut| = 7` and 5 with `|Aut| = 21`, so this conditional does
+   not apply; their 7-adic part `≡ 1/7` matches the prediction, and the 4,200 primes with an automorphism of order 5 all
+   have `|Aut| = 5`, `4,200 ≡ 0 (mod 5)`, as the denominator requires; the upper end of the interval becomes 766,028,109.) The total non-rigid count lies
    in `[510,685,986, 766,028,977]`, and near the top: about 766.0 million, as nearly all have `|Aut| = 3`. The tower
    also predicts `P(14) = 27,687,212,017,612,715` and `SCP(14) = 767,626,075`. Those follow from `A000568(14)` and
    `A002785(14)` and are not independent predictions.

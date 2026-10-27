@@ -1,0 +1,4 @@
+n=10 f=4 bits=13 reps=4 unweighted prime fraction 0.426270 (13968/32768); labelled prime fraction 0.384521 (labelled total 524288 = 2^19)
+n=11 f=5 bits=15 reps=12 unweighted prime fraction 0.478760 (188256/393216); labelled prime fraction 0.463829 (labelled total 33554432 = 2^25)
+n=12 f=6 bits=17 reps=56 unweighted prime fraction 0.531555 (3901632/7340032); labelled prime fraction 0.539344 (labelled total 4294967296 = 2^32)
+n=13 f=7 bits=19 reps=456 unweighted prime fraction 0.596191 (142534464/239075328); labelled prime fraction 0.602874 (labelled total 1099511627776 = 2^40)

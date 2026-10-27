@@ -1,0 +1,180 @@
+A(n)	3	2
+A(n)	4	4
+A(n)	5	12
+A(n)	6	56
+A(n)	7	456
+A(n)	8	6880
+A(n)	9	191536
+A(n)	10	9733056
+A(n)	11	903753248
+A(n)	12	154108311168
+A(n)	13	48542114686912
+A(n)	14	28401423719122304
+non-strong	3	1
+non-strong	4	3
+non-strong	5	6
+non-strong	6	21
+non-strong	7	103
+non-strong	8	872
+non-strong	9	13403
+non-strong	10	377107
+non-strong	11	19288658
+non-strong	12	1798161433
+non-strong	13	307332423619
+non-strong	14	96931930964248
+strong non-prime	3	0
+strong non-prime	4	1
+strong non-prime	5	3
+strong non-prime	6	20
+strong non-prime	7	156
+strong non-prime	8	2000
+strong non-prime	9	41478
+strong non-prime	10	1449788
+strong non-prime	11	87588161
+strong non-prime	12	9329713944
+strong non-prime	13	1780914985832
+strong non-prime	14	617279770545341
+P(n)	3	1
+P(n)	4	0
+P(n)	5	3
+P(n)	6	15
+P(n)	7	197
+P(n)	8	4008
+P(n)	9	136655
+P(n)	10	7906161
+P(n)	11	796876429
+P(n)	12	142980435791
+P(n)	13	46453867277461
+P(n)	14	27687212017612715
+S(n)	3	1
+S(n)	4	1
+S(n)	5	6
+S(n)	6	35
+S(n)	7	353
+S(n)	8	6008
+S(n)	9	178133
+S(n)	10	9355949
+S(n)	11	884464590
+S(n)	12	152310149735
+S(n)	13	48234782263293
+S(n)	14	28304491788158056
+SC(n)	3	2
+SC(n)	4	2
+SC(n)	5	8
+SC(n)	6	12
+SC(n)	7	88
+SC(n)	8	176
+SC(n)	9	2752
+SC(n)	10	8784
+SC(n)	11	279968
+SC(n)	12	1492288
+SC(n)	13	95458560
+SC(n)	14	872687552
+SC non-strong	3	1
+SC non-strong	4	1
+SC non-strong	5	2
+SC non-strong	6	3
+SC non-strong	7	9
+SC non-strong	8	14
+SC non-strong	9	91
+SC non-strong	10	185
+SC non-strong	11	2768
+SC non-strong	12	8839
+SC non-strong	13	280111
+SC non-strong	14	1492876
+SC strong non-prime	3	0
+SC strong non-prime	4	1
+SC strong non-prime	5	3
+SC strong non-prime	6	6
+SC strong non-prime	7	24
+SC strong non-prime	8	90
+SC strong non-prime	9	426
+SC strong non-prime	10	3074
+SC strong non-prime	11	17893
+SC strong non-prime	12	312500
+SC strong non-prime	13	2182256
+SC strong non-prime	14	103568601
+SCP(n)	3	1
+SCP(n)	4	0
+SCP(n)	5	3
+SCP(n)	6	3
+SCP(n)	7	55
+SCP(n)	8	72
+SCP(n)	9	2235
+SCP(n)	10	5525
+SCP(n)	11	259307
+SCP(n)	12	1170949
+SCP(n)	13	92996193
+SCP(n)	14	767626075
+c_s(n)	3	1
+c_s(n)	4	1
+c_s(n)	5	6
+c_s(n)	6	22
+c_s(n)	7	214
+c_s(n)	8	3074
+c_s(n)	9	90255
+c_s(n)	10	4680547
+c_s(n)	11	442336617
+c_s(n)	12	76154750809
+c_s(n)	13	24117379959402
+c_s(n)	14	14152240453790335
+c(n)	3	2
+c(n)	4	3
+c(n)	5	9
+c(n)	6	32
+c(n)	7	247
+c(n)	8	3328
+c(n)	9	93612
+c(n)	10	4774417
+c(n)	11	447114461
+c(n)	12	76601960166
+c(n)	13	24193986713786
+c(n)	14	14176434888156918
+s_lab(n)	3	2
+s_lab(n)	4	24
+s_lab(n)	5	544
+s_lab(n)	6	22320
+s_lab(n)	7	1677488
+s_lab(n)	8	236522496
+s_lab(n)	9	64026088576
+s_lab(n)	10	33832910196480
+s_lab(n)	11	35262092417856512
+s_lab(n)	12	72926863133112198144
+s_lab(n)	13	300318571786159783496704
+s_lab(n)	14	2467430973323656141183549440
+labelled strong non-prime	3	0
+labelled strong non-prime	4	24
+labelled strong non-prime	5	280
+labelled strong non-prime	6	12000
+labelled strong non-prime	7	703808
+labelled strong non-prime	8	75242496
+labelled strong non-prime	9	14461559296
+labelled strong non-prime	10	5145203665920
+labelled strong non-prime	11	3453658999907072
+labelled strong non-prime	12	4439096863965333504
+labelled strong non-prime	13	11049420738014601539584
+labelled strong non-prime	14	53707186056806868633815040
+P_lab(n)	3	2
+P_lab(n)	4	0
+P_lab(n)	5	264
+P_lab(n)	6	10320
+P_lab(n)	7	973680
+P_lab(n)	8	161280000
+P_lab(n)	9	49564529280
+P_lab(n)	10	28687706530560
+P_lab(n)	11	31808433417949440
+P_lab(n)	12	68487766269146864640
+P_lab(n)	13	289269151048145181957120
+P_lab(n)	14	2413723787266849272549734400
+l(n)	3	2
+l(n)	4	11
+l(n)	5	208
+l(n)	6	8563
+l(n)	7	680426
+l(n)	8	101747483
+l(n)	9	28904318404
+l(n)	10	15824793243139
+l(n)	11	16901802400214078
+l(n)	12	35524962710023558019
+l(n)	13	147811543365879760556872
+l(n)	14	1222222358932702742749843027
