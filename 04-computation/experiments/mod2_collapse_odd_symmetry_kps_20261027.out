@@ -1,0 +1,10 @@
+PASS S1 sum_T z^D_sigma(T) = prod_O ((1+z)^L_O + eps_O (1-z)^L_O) for every permutation of n <= 6 vertices (direct enumeration)
+PASS S2 for odd L the even part of (1+z)^L is (1+z)^(L-1) modulo 2, L = 1..39
+PASS S3 every odd-order sigma on n <= 7 vertices: P_sigma / 2^#orbits = (1+z)^(#pairs - #orbits) mod 2
+PASS S4 integrally the normalized polynomial is never the binomial (1+z)^n (all 1852 odd-order non-identity permutations, n <= 7): no n independent toggles  [(1852, 1852)]
+    example sigma = (1, 2, 0) orbit lengths [3] n = 2 normalized counts {0: 1, 2: 3}
+    example sigma = (2, 0, 1) orbit lengths [3] n = 2 normalized counts {0: 1, 2: 3}
+    example sigma = (0, 2, 3, 1) orbit lengths [3, 3] n = 4 normalized counts {0: 1, 2: 6, 4: 9}
+PASS S5 the integral defect polynomial determines the multiset of pair-orbit lengths (n <= 7); its mod-2 image does not
+5 checks, 0 failed
+ALL CHECKS PASSED

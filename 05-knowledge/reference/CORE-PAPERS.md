@@ -17,6 +17,7 @@
 - **Planar repair:** [Li's method](CORE-PAPERS-SMATRIX-2026-09-06.md) inspires complete measurements, without importing its theorem.
   [Curve inputs](CORE-PAPERS-JC-FLOW-CURVES-2026-09-06.md) support non-rationality of specified flows.
 - [Euler/NS: scoped results and audit](OPENAI-EULER-AUDIT-2026-09-08.md).
+- **2026 external results, trust-tiered (checked 2026-10-27):** [TRUSTED-ADVANCES-2026-10-27](TRUSTED-ADVANCES-2026-10-27.md). T1: the Erdős unit distance conjecture is FALSE (OpenAI model, companion by Alon–Bloom–Gowers–Litt–Sawin–Shankar–Tsimerman–Wang–Matchett Wood; finite-`n` canon untouched); zeta zeros `>= 2/3` simple and on the line (Alpöge–Furman/Claude, Lean; Lamzouri reproof). T2: forced Navier–Stokes blow-up (Lean; scope disputed; unforced OPEN). T3: ETH-is-false and local-smoothing/Kakeya manuscripts (PREPRINT CLAIMS). Collatz: verified to `2^71`; no credible proof.
 
 ## Rule 30
 
