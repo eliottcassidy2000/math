@@ -1,0 +1,12 @@
+centred rectangular family, points u = v mod 2, Q = u^2 + c v^2
+  c=1: minimal norm 2, 4 unit charges, reachable 185/185, max g/Q = 0.0000; (Q, g) samples: [(2, 0), (4, 0), (8, 0), (10, 0), (16, 0), (18, 0), (20, 0), (26, 0), (32, 0), (34, 0), (36, 0), (40, 0), (50, 0), (52, 0)]
+  c=2: minimal norm 3, 4 unit charges, reachable 205/205, max g/Q = 0.2800; (Q, g) samples: [(3, 0), (4, 0), (8, 2), (11, 2), (12, 2), (16, 4), (19, 4), (24, 6), (27, 6), (32, 8), (36, 8), (43, 10), (44, 10), (48, 12)]
+  c=3: minimal norm 4, 6 unit charges, reachable 211/211, max g/Q = 0.3333; (Q, g) samples: [(4, 0), (12, 4), (16, 4), (28, 8), (36, 12), (48, 16), (52, 16), (64, 20), (76, 24), (84, 28), (100, 32), (108, 36), (112, 36), (124, 40)]
+  c=4: minimal norm 4, 2 unit charges, reachable 15/185, max g/Q = 0.8571; (Q, g) samples: [(4, 0), (16, 8), (36, 24), (64, 48), (100, 80), (144, 120), (196, 168)]
+root lattices with Q = x.x/2 (roots have Q = 1)
+  D3 = A3: 12 roots, window Q <= 8: 141 points, reachable 141, max g = 0
+  D4: 24 roots, window Q <= 5: 313 points, reachable 313, max g = 0
+  D3 = A3: 12 minimal vectors, window Q <= 12: 249 points, reachable 249, max g = 0
+  D4: 24 minimal vectors, window Q <= 7: 601 points, reachable 601, max g = 0
+  A4: 20 minimal vectors, window Q <= 6: 331 points, reachable 331, max g = 0
+  aspect 2: window Q <= 600, 661 points; g = 2 floor(Q/8) everywhere: False; exceptions: [((-23, -3), 547, 138), ((-23, 3), 547, 138), ((-17, -3), 307, 78), ((-17, 3), 307, 78), ((-15, -1), 227, 58), ((-15, 1), 227, 58), ((-13, -13), 507, 128), ((-13, 13), 507, 128), ((-10, 0), 100, 28), ((-9, -13), 419, 106), ((-9, -1), 83, 22), ((-9, 1), 83, 22)]

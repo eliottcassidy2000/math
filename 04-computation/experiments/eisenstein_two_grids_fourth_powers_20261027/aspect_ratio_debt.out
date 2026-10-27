@@ -1,0 +1,5 @@
+aspect c = 1/1: 4 minimal vectors (norm 2); g/Q on the outer half of the window in [0.0000, 0.0000]; angle law (c-1)/(2c) = 0.0000
+aspect c = 3/2: 4 minimal vectors (norm 5); g/Q on the outer half of the window in [0.1290, 0.1406]; angle law (c-1)/(2c) = 0.1667
+aspect c = 2/1: 4 minimal vectors (norm 3); g/Q on the outer half of the window in [0.2449, 0.2559]; angle law (c-1)/(2c) = 0.2500
+aspect c = 5/2: 4 minimal vectors (norm 7); g/Q on the outer half of the window in [0.2705, 0.2902]; angle law (c-1)/(2c) = 0.3000
+aspect c = 3/1: 6 minimal vectors (norm 4); g/Q on the outer half of the window in [0.3279, 0.3333]; angle law (c-1)/(2c) = 0.3333

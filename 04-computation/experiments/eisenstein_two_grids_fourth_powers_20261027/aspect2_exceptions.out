@@ -1,0 +1,4 @@
+window Q <= 900; points with exact values: 1001 (all of norm <= 891)
+residues of Q mod 8 present: [0, 3, 4]
+exceptional norms (norm, excesses): [(83, [2]), (100, [4]), (107, [2]), (147, [2]), (211, [2]), (227, [2]), (251, [2]), (307, [2]), (347, [2]), (419, [2]), (475, [2]), (507, [2]), (547, [2]), (587, [2]), (643, [2]), (659, [2]), (676, [4]), (747, [2]), (787, [2]), (811, [2]), (827, [2])]
+count of exceptional norms below 500: 11 of 106 norms

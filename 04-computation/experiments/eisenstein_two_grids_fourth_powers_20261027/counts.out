@@ -1,0 +1,54 @@
+(1) sums of four fourth powers
+   N=5: representable positives 4, non-representable 1
+   N=10: representable positives 4, non-representable 6
+   N=25: representable positives 8, non-representable 17
+   N=50: representable positives 13, non-representable 37
+   N=100: representable positives 21, non-representable 79
+   N=200: representable positives 30, non-representable 170
+   N=500: representable positives 53, non-representable 447
+   N=1000: representable positives 96, non-representable 904
+   N=10000: representable positives 540, non-representable 9460
+   representable in 1..50: [1, 2, 3, 4, 16, 17, 18, 19, 32, 33, 34, 48, 49]
+   gaps below 81 (start, end, length): [(5, 15, 11), (20, 31, 12), (35, 47, 13), (50, 63, 14)]
+   below 81 the representable set is {16a + b : a + b <= 4}: True
+   residues mod 16 of all sums <= 10^4: [0, 1, 2, 3, 4]
+(2) square-later integers (session69): n = 2^a u, a >= 1, u odd; qualifying iff u > 2^a
+   X=5: evens 2, qualifying 0, failures 2
+   X=10: evens 5, qualifying 2, failures 3
+   X=25: evens 12, qualifying 6, failures 6
+   X=50: evens 25, qualifying 16, failures 9
+   X=100: evens 50, qualifying 37, failures 13
+   X=200: evens 100, qualifying 81, failures 19
+   X=1000: evens 500, qualifying 454, failures 46
+   X=10000: evens 5000, qualifying 4859, failures 141
+   failures <= 100: [2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 80, 96]
+(3) lattice-ball counts
+   Z^2 counts: [1, 5, 9, 13, 21, 25, 29, 37, 45, 49, 57, 61, 69, 81, 89, 97, 101, 109, 113, 121, 129, 137, 145, 149]
+   Z[w] counts: [1, 7, 13, 19, 31, 37, 43, 55, 61, 73, 85, 91, 97, 109, 121, 127, 139, 151, 163, 169, 187, 199, 211, 223]
+   common values: [1, 13, 37, 61, 97, 109, 121, 169, 241, 253, 301, 349, 385]
+   13 = #Z^2 in x^2+y^2 <= 4: 13  37 = #Z^2 in x^2+y^2 <= 10: 37
+   13 = #Z[w] in Q <= 3: 13  37 = #Z[w] in Q <= 9: 37
+   star numbers: [1, 13, 37, 73, 121, 181, 253]  centred hexagonal: [1, 7, 19, 37, 61, 91, 127]
+   primes = 1 mod 12 below 200 (split in both Z[i] and Z[w]): [13, 37, 61, 73, 97, 109, 157, 181, 193]
+   13 = x^2+y^2 at [(2, 3)]; = x^2+3y^2 at [(1, 2)]
+   37 = x^2+y^2 at [(1, 6)]; = x^2+3y^2 at [(5, 2)]
+(4) zero-sum quartic identity
+   a^4 + b^4 + (a+b)^4 = 2(a^2+ab+b^2)^2 for |a|,|b| <= 60: True ; a+b+c=0 => 9 sum a^4 = 2 Q(a+bw+cw^2)^2: True
+   values 2(a^2+ab+b^2)^2 <= 50: [2, 18, 32]
+(5) 13 and 37 in both grids
+   primitive Pythagorean triangles with a leg 12: hypotenuses [13, 37]
+   primitive 120-degree triangles (c^2 = a^2 + ab + b^2) with a side 7: longest sides [13, 37]
+   13^2 = 11^2 + 3*4^2: True ; 37^2 = 13^2 + 3*20^2: True
+   smallest integers with two representations as a sum of two positive squares: [50, 65, 85, 125, 130]
+   5: Gaussian norm True, Eisenstein norm False
+   10: Gaussian norm True, Eisenstein norm False
+   25: Gaussian norm True, Eisenstein norm True
+   50: Gaussian norm True, Eisenstein norm False
+   100: Gaussian norm True, Eisenstein norm True
+   11: Gaussian norm False, Eisenstein norm False
+   12: Gaussian norm False, Eisenstein norm True
+   13: Gaussian norm True, Eisenstein norm True
+   37: Gaussian norm True, Eisenstein norm True
+(6) do the next primes = 1 mod 12 share sides in both grids?
+   13, 37: shared Pythagorean side(s) [12] AND shared 120-degree side(s) [7]
+   61: [11, 60] [9, 56]  109: [60, 91] [24, 95]
