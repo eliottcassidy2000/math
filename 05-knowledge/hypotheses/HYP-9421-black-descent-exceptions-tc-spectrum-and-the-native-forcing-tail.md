@@ -1,6 +1,6 @@
 ---
 id: HYP-9421
-title: "After THM-4811-4813: (1) the strong tournaments without a black descent are exactly C3, R5 and the doubled-stack family E(M; Z) (refuted as stated; resolved by THM-4811 Theorem A with the larger family E); (2) the black distance to the non-strong locus never exceeds lambda + 1 (outside C3, R5; proved); (3) the presentation-count spectrum: every odd v other than 7 and 21 is tc(T) for some tournament on at most 10 vertices, for v <= 2001 (PRE-REGISTERED); (4) the native ROOT forcing of a Collatz orbit is a tail property: sup F(s) over primitive seeds s < 10^8 is below 0.1127503 (PRE-REGISTERED); (5) strong presentation fibres are finite with order O(log^2 v), and the black-core connectivity reduction; (6) every strong tournament other than C3, R5 is exactly delta^0 black moves from a singleton plus a strong core"
+title: "After THM-4811-4813: (1) the strong tournaments without a black descent are exactly C3, R5 and the doubled-stack family E(M; Z) (refuted as stated; resolved by THM-4811 Theorem A with the larger family E); (2) the black distance to the non-strong locus never exceeds lambda + 1 (outside C3, R5; proved); (3) the presentation-count spectrum: every odd v other than 7 and 21 is tc(T) for some tournament on at most 10 vertices, for v <= 2001 (PRE-REGISTERED); (4) the native ROOT price (sum of lambda) of a Collatz orbit is a tail property: sup F(s) over primitive seeds s < 10^8 is below 0.1127503 (PRE-REGISTERED); (5) strong presentation fibres are finite with order O(log^2 v), and the black-core connectivity reduction; (6) every strong tournament other than C3, R5 is exactly delta^0 black moves from a singleton plus a strong core"
 status: "(1) REFUTED as stated and RESOLVED (THM-4811 Theorem A: the exceptions are R5 and the larger family E); (2) PROVED (THM-4811 Theorem B); (3), (4) PRE-REGISTERED (commit 8ab6b3e358) and CONFIRMED; (5) first clause PROVED in THM-4812 (f), second OPEN; (6) OPEN (FINITE-EXACT through order 10, all 9,355,949 strong classes there)"
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
@@ -12,7 +12,7 @@ related:
   - 05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md
 ---
 
-# HYP-9421 — black-descent exceptions, the presentation spectrum, the forcing tail
+# HYP-9421 — black-descent exceptions, the presentation spectrum, the price tail
 
 ## (1) Classification of black-descent failures
 
@@ -48,7 +48,10 @@ the presentation spectrum below 6002 is exactly `{odd} \ {7, 21}`. The `tc = 1` 
 13, 19, 28`, are the `K1`/`C3`-stack counts (THM-4741; A000930), and the `tc = 3` counts `1, 2, 3, 6, 11, 18` (orders
 5-10) are the one-`R5` stacks of HYP-9352 (1).
 
-## (4) The forcing tail (PRE-REGISTERED)
+## (4) The price tail (PRE-REGISTERED)
+
+(Terminology corrected after the audit: `F(s)` is the price sum `sum lambda`; the forcing cocycle `2 artanh(lambda)` sums to
+about twice as much, at most `0.225534` below `2 10^6`.)
 
 For a primitive seed `s` let `F(s)` be the total native price `sum lambda` along its compressed orbit to 1 (THM-4813 (A)).
 Below `2 10^6` the maximum is `0.112749293418` (at `s = 1056939`), shared to many digits by seeds whose orbits share a

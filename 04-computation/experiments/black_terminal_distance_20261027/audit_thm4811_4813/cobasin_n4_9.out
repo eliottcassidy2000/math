@@ -1,0 +1,12 @@
+cobasin n=4 k=2: non-strong classes 3 (merged 2, with a black line 1, pure blue 1); lambda=1 classes 1, without black descent 0;
+  certificate edges used 3; touched merged nodes: non-strong 1, lambda=1 1, conflicting kind 0; components 1
+cobasin n=5 k=2: non-strong classes 6 (merged 4, with a black line 2, pure blue 2); lambda=1 classes 5, without black descent 0;
+  certificate edges used 12; touched merged nodes: non-strong 2, lambda=1 5, conflicting kind 0; components 1
+cobasin n=6 k=2: non-strong classes 21 (merged 12, with a black line 10, pure blue 2); lambda=1 classes 30, without black descent 0;
+  certificate edges used 70; touched merged nodes: non-strong 10, lambda=1 18, conflicting kind 0; components 1
+cobasin n=7 k=2: non-strong classes 103 (merged 56, with a black line 52, pure blue 4); lambda=1 classes 266, without black descent 0;
+  certificate edges used 584; touched merged nodes: non-strong 52, lambda=1 152, conflicting kind 0; components 1
+cobasin n=8 k=2: non-strong classes 872 (merged 443, with a black line 440, pure blue 3); lambda=1 classes 3623, without black descent 0;
+  certificate edges used 7686; touched merged nodes: non-strong 440, lambda=1 1843, conflicting kind 0; components 1
+cobasin n=9 k=2: non-strong classes 13403 (merged 6747, with a black line 6741, pure blue 6); lambda=1 classes 78515, without black descent 0;
+  certificate edges used 163771; touched merged nodes: non-strong 6741, lambda=1 39573, conflicting kind 0; components 1

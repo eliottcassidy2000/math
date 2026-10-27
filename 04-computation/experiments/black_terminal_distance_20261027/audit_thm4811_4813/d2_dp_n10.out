@@ -1,0 +1,19 @@
+D2-dp(big) n=10 black moves, target CORE: classes 9733056, strong 9355949, reaching CORE in exactly delta0 black moves 9355949 (nauty calls in search 9374449); by delta0: 1:2817434/2817434 2:5124714/5124714 3:1400468/1400468 4:13333/13333
+       23.91 real        25.14 user         0.14 sys
+           186335232  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               13561  page reclaims
+                  21  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                6833  voluntary context switches
+                3816  involuntary context switches
+            18145263  instructions retired
+             7762999  cycles elapsed
+              918080  peak memory footprint

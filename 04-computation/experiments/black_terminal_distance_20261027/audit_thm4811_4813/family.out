@@ -1,0 +1,22 @@
+E(M;Z) members (M = C3 => M', Z nonempty stack), order 2(1+|M|+|Z|) <= 16
+  E(C3 ; K1) n=10 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=657 black words=558 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3 ; K1=>K1) n=12 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=2601 black words=2394 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3=>K1 ; K1) n=12 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=2745 black words=2538 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3 ; K1=>K1=>K1) n=14 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=10377 black words=9954 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3 ; C3) n=14 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=23409 black words=21546 descent words=81 (blue 81, closed 81) |Aut|=81  black-distance-2 certificate=1
+  E(C3=>K1 ; K1=>K1) n=14 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=12321 black words=11862 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3=>K1=>K1 ; K1) n=14 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=11241 black words=10818 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3 ; K1=>K1=>K1=>K1) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=41481 black words=40626 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3 ; K1=>C3) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=93393 black words=89586 descent words=81 (blue 81, closed 81) |Aut|=81  black-distance-2 certificate=1
+  E(C3 ; C3=>K1) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=93393 black words=89586 descent words=81 (blue 81, closed 81) |Aut|=81  black-distance-2 certificate=1
+  E(C3=>K1 ; K1=>K1=>K1) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=52641 black words=51678 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3=>K1 ; C3) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=110889 black words=106758 descent words=81 (blue 81, closed 81) |Aut|=81  black-distance-2 certificate=1
+  E(C3=>K1=>K1 ; K1=>K1) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=53361 black words=52398 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3=>K1=>K1=>K1 ; K1) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=45513 black words=44658 descent words=9 (blue 9, closed 9) |Aut|=9  black-distance-2 certificate=1
+  E(C3=>C3 ; K1) n=16 strong=1 lambda=1 mincuts=1 uniqueD*=1 H=101169 black words=97362 descent words=81 (blue 81, closed 81) |Aut|=81  black-distance-2 certificate=1
+variants with M starting with K1 (not in the family):
+  E(K1=>K1=>K1 ; K1) n=10 lambda=1 mincuts=3 descent words=3 black descent words=2
+  E(K1=>K1=>K1 ; K1=>K1) n=12 lambda=1 mincuts=3 descent words=3 black descent words=2
+  E(K1=>K1=>K1=>K1 ; K1) n=12 lambda=1 mincuts=3 descent words=3 black descent words=2
+  E(K1=>C3 ; K1) n=12 lambda=1 mincuts=3 descent words=27 black descent words=18
+E(C3;K1) isomorphic to the E10 code: YES

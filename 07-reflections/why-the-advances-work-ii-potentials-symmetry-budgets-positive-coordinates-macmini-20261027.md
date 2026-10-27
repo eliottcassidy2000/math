@@ -23,7 +23,7 @@ locus under the monoid `M`. They all have the same two-sided form.
 | Instance | Potential | Lipschitz | Descent certificate | Exact? |
 |---|---|---|---|---|
 | distance to the non-strong locus (THM-4811 (B)) | arc connectivity `lambda` | 1 | Camion cycle entering a minimum cut | always |
-| same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word into a minimum cut | all but `C3`, `R5`, `E(M; Z)` |
+| same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word starting in a minimum out-cut and ending outside it | all but `C3`, `R5` and the family `E` of THM-4811 Theorem A (pre-audit); `E(M; Z)` is only its `t = 1` subfamily |
 | distance to the transitive class (THM-4810 L, Session74) | `L = (1/2) sum |s_(i) - i|` | 1 | explicit 15-move word for `P_11` | `P_11` yes; `P_7` no (7 > 6) |
 | triangle descent (black_descent_20261020c) | `c3` | `s(a) - s(b) - 1` | black closed path with `s(b) >= s(a)` | descent always (C3, R5 aside) |
 | forest frames (Session74) | `beta >= L - n + 2` | 1 | six moves for `P_11` | `P_11` yes |
@@ -39,7 +39,8 @@ trace-norm bounds. A session that finds "a cut-score bound" (the regular basin t
 (THM-4810), "a sharp local price per clock" (paid ROOT R2) or "a trace-norm obstruction" (Session75) is reading this
 one law through a different functional. This is why the concurrent sessions converged: the regular black-core
 distance `m` arrived from three sessions in one night (the aliquot_power_124 basin theorem, klein's THM-4814 (D), and
-THM-4811 as the all-source case).
+THM-4811: (B) gives the exact distance to the larger non-strong locus from every source, while the all-source black-core
+version is FINITE-EXACT only through order 10 (D2) and conjectured in general (HYP-9421 (6))).
 
 **Where exactness fails, a symmetry is forced.** The black failures are exactly `R5` (with `C3`) and the family `E` of
 THM-4811 Theorem A: a bottom layer, a chain of middle vertices, and its converse. In each, every descent word is
@@ -87,7 +88,7 @@ is a positive affine map.
 - **Collatz.** In the numerator `X = 3s+1` the Syracuse step is `X -> 3X/2^v + 1`, the `4x+1` lift is `X -> 4X`, and
   the native ROOT edge is `X -> (3X + 2^a)/2^t` (paid ROOT R1, THM-4813 (A)). The ROOT forcing cocycle
   `log(1 + 2^a/(3X))` equals the drift cocycle `t log 2 - log 3` plus the coboundary of `log X`. Around a cycle it is
-  the Steiner-Eliahou identity (THM-4633); at the fixed points it is THM-4600's anchors `c_a = 1/(2^a - 3)`.
+  the Steiner-Eliahou identity (THM-4633); at the fixed points of the Syracuse letters `X -> 3X/2^a + 1` it is THM-4600's anchors `c_a = 1/(2^a - 3)` (the `B`-free native edges give `c_1 = -1`, `c_2 = 1`).
 - **Berggren.** In slope coordinates the three branches are the Hashimoto operator of a tree (THM-4808), and the branch
   character is a determinant read off the even continued fraction.
 - **Circulants.** In the centred lattice the cyclic shift is multiplication by `zeta`, and the Paley skew operator is the
@@ -105,10 +106,11 @@ question is the same phenomenon seen from the involution side.
   exception; its structure gave an infinite subfamily within the hour, and the attempt to prove the corrected lemma
   produced the complete family and a classification proof (with one bounded finite check) a few hours later. The
   intermediate generalisation was too narrow, and the order-11 census refuted the pre-stated conjecture.
-- **Retype on contact with concurrent work.** Two of tonight's claims (the sharp spectral constant, the doubly-regular
-  lattice module) had concurrent published versions by the time they were filed. They are now cited and kept only as
+- **Retype on contact with concurrent work.** Three of tonight's claims (the sharp spectral constant, the doubly-regular
+  lattice module, and the trace-norm move tariff with its linear clock bound, Session75 RESULT section 6) had concurrent
+  published versions by the time they were filed. They are now cited and kept only as
   comparison points. Convergence is evidence; double counting is not.
-- **Pre-register the cheap tests.** Two pre-registered tests (the `tc` spectrum at order <= 10 and the forcing tail to
+- **Pre-register the cheap tests.** Two pre-registered tests (the `tc` spectrum at order <= 10 and the price tail to
   `10^8`) were committed before their runs (HYP-9421 (3)-(4)).
 
 ## 4. Short version (additions to part I's eight steps)

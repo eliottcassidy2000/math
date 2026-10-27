@@ -1,0 +1,31 @@
+bfs n=3 classes=2 strong=1 lines(labelled class-words)=4 black=0 asymmetric-edges=0 pure-blue classes=2
+  d_any(NS) != lambda (all classes): 0 | strong: d_black(NS) != lambda: 1
+  strong: d_any(SING) != delta0: 0, d_black(SING) != delta0: 1
+  strong: d_any(CORE) != delta0: 1, d_black(CORE) != delta0: 1
+  black components among non-pure-blue classes: unmerged 0, merged 0; non-strong merged classes 1, with a black line 0
+  NS-black 101 lam=1 d=-1
+  SING-black 101 d0=1 d=-1
+  CORE-black 101 d0=1 d=-1
+bfs n=4 classes=4 strong=1 lines(labelled class-words)=12 black=8 asymmetric-edges=0 pure-blue classes=1
+  d_any(NS) != lambda (all classes): 0 | strong: d_black(NS) != lambda: 0
+  strong: d_any(SING) != delta0: 0, d_black(SING) != delta0: 0
+  strong: d_any(CORE) != delta0: 0, d_black(CORE) != delta0: 0
+  black components among non-pure-blue classes: unmerged 1, merged 1; non-strong merged classes 2, with a black line 1
+bfs n=5 classes=12 strong=6 lines(labelled class-words)=92 black=60 asymmetric-edges=0 pure-blue classes=3
+  d_any(NS) != lambda (all classes): 0 | strong: d_black(NS) != lambda: 1
+  strong: d_any(SING) != delta0: 0, d_black(SING) != delta0: 1
+  strong: d_any(CORE) != delta0: 0, d_black(CORE) != delta0: 1
+  black components among non-pure-blue classes: unmerged 1, merged 1; non-strong merged classes 4, with a black line 2
+  NS-black 1100110111 lam=2 d=-1
+  SING-black 1100110111 d0=2 d=-1
+  CORE-black 1100110111 d0=2 d=-1
+bfs n=6 classes=56 strong=35 lines(labelled class-words)=1224 black=1128 asymmetric-edges=0 pure-blue classes=2
+  d_any(NS) != lambda (all classes): 0 | strong: d_black(NS) != lambda: 0
+  strong: d_any(SING) != delta0: 0, d_black(SING) != delta0: 0
+  strong: d_any(CORE) != delta0: 0, d_black(CORE) != delta0: 0
+  black components among non-pure-blue classes: unmerged 1, merged 1; non-strong merged classes 12, with a black line 10
+bfs n=7 classes=456 strong=353 lines(labelled class-words)=35180 black=34400 asymmetric-edges=0 pure-blue classes=4
+  d_any(NS) != lambda (all classes): 0 | strong: d_black(NS) != lambda: 0
+  strong: d_any(SING) != delta0: 0, d_black(SING) != delta0: 0
+  strong: d_any(CORE) != delta0: 0, d_black(CORE) != delta0: 0
+  black components among non-pure-blue classes: unmerged 1, merged 1; non-strong merged classes 56, with a black line 52

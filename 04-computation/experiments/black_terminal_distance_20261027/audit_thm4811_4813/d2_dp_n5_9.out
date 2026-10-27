@@ -1,0 +1,8 @@
+D2-dp n=5 black moves, target CORE: strong classes 6, reaching the target in exactly delta0 moves 5 (nauty calls 5); by delta0: 1:5/5 2:0/1
+  fails: 1100110111
+D2-dp n=6 black moves, target CORE: strong classes 35, reaching the target in exactly delta0 moves 35 (nauty calls 35); by delta0: 1:30/30 2:5/5
+D2-dp n=7 black moves, target CORE: strong classes 353, reaching the target in exactly delta0 moves 353 (nauty calls 353); by delta0: 1:266/266 2:84/84 3:3/3
+D2-dp n=8 black moves, target CORE: strong classes 6008, reaching the target in exactly delta0 moves 6008 (nauty calls 6008); by delta0: 1:3623/3623 2:2300/2300 3:85/85
+D2-dp n=9 black moves, target CORE: strong classes 178133, reaching the target in exactly delta0 moves 178133 (nauty calls 178147); by delta0: 1:78515/78515 2:89366/89366 3:10237/10237 4:15/15
+D2-dp n=9 any moves, target SING: strong classes 178133, reaching the target in exactly delta0 moves 178133 (nauty calls 178133); by delta0: 1:78515/78515 2:89366/89366 3:10237/10237 4:15/15
+D2-dp n=9 black moves, target SING: strong classes 178133, reaching the target in exactly delta0 moves 178133 (nauty calls 178133); by delta0: 1:78515/78515 2:89366/89366 3:10237/10237 4:15/15

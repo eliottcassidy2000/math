@@ -1,0 +1,45 @@
+census n=3 strong classes=1
+  lambda=1: 1 classes, no black descent 1 (pure blue 1), no descent word 0
+  (lambda,delta0) histogram: (1,1):1
+  lambda < delta0: 0
+  sum of H over strong classes: 3
+  EXCEPTION 101 (pure blue)
+census n=4 strong classes=1
+  lambda=1: 1 classes, no black descent 0 (pure blue 0), no descent word 0
+  (lambda,delta0) histogram: (1,1):1
+  lambda < delta0: 0
+  sum of H over strong classes: 5
+census n=5 strong classes=6
+  lambda=1: 5 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=2: 1 classes, no black descent 1 (pure blue 1), no descent word 0
+  (lambda,delta0) histogram: (1,1):5 (2,2):1
+  lambda < delta0: 0
+  sum of H over strong classes: 72
+  EXCEPTION 1100110111 (pure blue)
+census n=6 strong classes=35
+  lambda=1: 30 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=2: 5 classes, no black descent 0 (pure blue 0), no descent word 0
+  (lambda,delta0) histogram: (1,1):30 (2,2):5
+  lambda < delta0: 0
+  sum of H over strong classes: 1043
+census n=7 strong classes=353
+  lambda=1: 266 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=2: 84 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=3: 3 classes, no black descent 0 (pure blue 0), no descent word 0
+  (lambda,delta0) histogram: (1,1):266 (2,2):84 (3,3):3
+  lambda < delta0: 0
+  sum of H over strong classes: 32785
+census n=8 strong classes=6008
+  lambda=1: 3623 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=2: 2300 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=3: 85 classes, no black descent 0 (pure blue 0), no descent word 0
+  (lambda,delta0) histogram: (1,1):3623 (2,2):2300 (3,3):85
+  lambda < delta0: 0
+  sum of H over strong classes: 2073672
+census n=9 strong classes=178133
+  lambda=1: 78515 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=2: 89366 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=3: 10237 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=4: 15 classes, no black descent 0 (pure blue 0), no descent word 0
+  (lambda,delta0) histogram: (1,1):78515 (2,2):89366 (3,3):10237 (4,4):15
+  lambda < delta0: 0

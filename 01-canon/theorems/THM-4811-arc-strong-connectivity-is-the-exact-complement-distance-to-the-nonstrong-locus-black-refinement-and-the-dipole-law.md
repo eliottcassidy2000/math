@@ -12,7 +12,9 @@ status: >
   The classification proof was written in this session by a dedicated proof agent and reviewed by a second agent with its
   own code (no logical error found); not yet independently audited at the repository level.
   FINITE-EXACT: black_descent.cpp over every strong class of orders 3-10 (1, 1, 6, 35, 353, 6,008, 178,133, 9,355,949): the
-  descent criterion of (B) verified on all legal words through order 8 (2,073,672 words at order 8, no failure); every strong
+  descent criterion of (B) verified on all legal words of all strong classes through order 8 (2,073,672 words at order 8,
+  no failure; independent audit: every class, strong or not, through order 9, 2,143,304 words at order 8 and 270,447,284
+  at order 9); every strong
   class has a descent word, and a black one except C3, R5 (pure blue) and E10 = E_1(S5); the classification checkers
   (classification/): the order-11 census of all 884,464,590 strong classes (exactly one exception, E_2(S5)), bottom-layer
   census for |S| <= 9 (1, 2, 5, 12, 28), all even shapes through order 14 and odd shapes through order 15 (exceptions
@@ -30,8 +32,12 @@ status: >
   dipole law), the concurrent regular basin theorem of the aliquot_power_124 session (scalar_root_reparse_20261026/basins,
   independently audited there, uncommitted at filing: exactly m black moves from a regular (2m+1)-tournament to a singleton
   plus a strong core; its cut-charge bound is the case lambda = m of (B)), the concurrent dyadic-module-spectrum session's
-  matrix form K' = -K + 2A_P, klein's THM-4814 (D) (pushed before this file: the bound m for regular sources and all-black
+  matrix form K' = -K + 2A_P (also Session75 RESULT (6.1), on main and audited before this file, with the path spectrum
+  and the trace-norm tariff (6.2)-(6.3)), klein's THM-4814 (D) (pushed before this file: the bound m for regular sources and all-black
   witnesses at orders 7, 9 and for P_11; HYP-9422), Session75 (black-core audit rounds announced).
+  AUDITED (independent, 2026-10-27; PASS WITH CORRECTIONS, MISTAKE-681; report
+  04-computation/experiments/black_terminal_distance_20261027/audit_thm4811_4813/REPORT.md): (A), (B), (D1), (D2), (E) and the
+  E(M; Z) properties, with the census through order 10 reproduced; Theorems A, B, C are under a separate independent audit.
   OPEN: the singleton-plus-strong-core distance delta^0 at every order (HYP-9421 (6)); black-core connectivity at every order
   (HYP-9348 (b)); the closed extremal-predecessor form of black_descent_20261020c/cycles.md section 7 in the case of two
   minimum-score vertices.
@@ -94,10 +100,12 @@ the last step iff `T` is regular (`n` odd) or near-regular (`n` even); conversel
 `X` of size `k` in a regular tournament, and the analogous count holds for near-regular ones (census: the classes with
 maximal `lambda` are exactly A255599's). Moreover `lambda = min(delta^+, delta^-)` whenever `n <= 4 delta^0 + 1`: a cut
 `X` of size `k >= 2` has `f(X) >= k delta^+ - C(k,2)` and `f(X) >= (n-k) delta^- - C(n-k,2)`, and `f(X) < delta^0` forces
-`k >= 2 delta^0 + 1` and `n - k >= 2 delta^0 + 1`. So every strong tournament of order at most 9 has `lambda = delta^0`
+`k >= 2 delta^0 + 1` and `n - k >= 2 delta^0 + 1`. So every strong tournament of order at most 9 has `lambda = delta^0` (for `delta^0 = 1` because strong means `lambda >= 1`;
+for `delta^0 >= 2` because `n <= 9 <= 4 delta^0 + 1`)
 (census: no exception through order 9), and the first separation occurs at order 10 (two copies of `R5` joined by all
-arcs one way except one: `lambda = 1`, `delta^0 = 2`). For a regular `(2m+1)`-tournament the distance is `m`: the concurrent regular
-basin theorem's cut-score bound is the case `lambda = m` of (B), and (B) shows the bound is attained from every source.
+arcs one way except one: `lambda = 1`, `delta^0 = 2`). For a regular `(2m+1)`-tournament the distance to the non-strong locus is
+`m`: the concurrent regular basin theorem's cut-score lower bound (for its smaller target, a singleton plus a strong
+core) is the case `lambda = m` of (B), and (B) shows that the non-strong-locus bound `lambda(T)` is attained from every source.
 
 ## (C) Black moves
 
@@ -149,7 +157,8 @@ Let `delta^0(T) = min_v min(s_v, n - 1 - s_v)`. By (A) each `|s_v - (n-1)/2|` ch
 the smaller locus `CORE` (a source or sink whose deletion is strong).
 
 **D1 (PROVED).** If `lambda(T) = delta^0(T) = k`, then `d(T, SING) = k` with moves of either colour. Protect a vertex
-`v` attaining `delta^0`, say `s(v) = k` (otherwise pass to the converse). Make `v` the start of the first word, the end
+`v` attaining `delta^0`, say `s(v) = k` (otherwise pass to the converse); this is the protected-vertex route of the
+concurrent regular basin theorem (B3), run here with the cut potential. Make `v` the start of the first word, the end
 of the second, and so on: `s(v)` runs `k, n - k, k - 2, n - k + 2, ...`, so `|s(v) - (n-1)/2|` grows by one each step
 and `v` is a sink or source after `k` steps. Each intermediate tournament `T_j` (`j < k`) has `lambda(T_j) >= k - j >= 1`
 by (B), so it is strong and has Hamiltonian paths starting and ending at `v` (Camion). This applies to every strong
@@ -168,9 +177,11 @@ general.
 ## (E) Black-core connectivity through order 10
 
 Let `B_n` be the bipartite graph between the `lambda = 1` strong classes and the non-strong classes (converse-merged),
-an edge for each black descent word. Every black line at a non-strong class is such an edge (by (B) its other end has
-`lambda = 1`), and by (B)-(C) every non-pure-blue strong class of order at most 10 is joined to a `lambda = 1` class by
-black moves (for every order, by Theorems A and B). So if `B_n` is connected, the black core of order `n` is connected. **FINITE-EXACT**
+an edge for each black descent word. Every black line at a non-strong class is such an edge (its other end is strong by THM-4729 L3, so has
+`lambda = 1` by (B)), and every non-pure-blue strong class is joined by black moves to a `lambda = 1` class with a black
+descent: at every order already by the inherited strong black `c3`-descent (black_descent_20261020c; the last strong
+class of a black descent chain has `lambda = 1` and its last move is a black descent word), independently of Theorems A
+and B, and through order 10 also by (C1). So if `B_n` is connected, the black core of order `n` is connected. **FINITE-EXACT**
 (`cobasin_connectivity.cpp`): `B_n` is connected for `n = 4, ..., 10` and covers every non-strong class with a black line
 (440 of 443 merged non-strong classes at order 8, 6,741 of 6,747 at order 9, 188,642 of 188,646 at order 10, the rest
 pure blue; 4,216,712 and 537,339,904 black descent lines at orders 9 and 10). At order 10, 2,817,449 of the 2,817,450

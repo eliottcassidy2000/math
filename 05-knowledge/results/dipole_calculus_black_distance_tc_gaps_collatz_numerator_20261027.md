@@ -38,7 +38,7 @@ lower bound for native-move distances in the repo is a functional of `K` that th
 | `sum d_v^2` (equivalently `c3`) | `c3' - c3 = s(a) - s(b) - 1` | triangle descent (black_descent_20261020c) | descents exist (inherited) |
 | THM-4810's `L = (1/2) sum |s_(i) - i|` | at most 1 | distance to the transitive class | `P11`: 15 (Session74); `P7`: 7 > 6 |
 | `(1/2) sum |d_v|` | at most 1 | distance from regular score vectors | |
-| `||K||_op`, `||K||_*` | `4 cos(pi/(n+1))`, `2 sum |2 cos(k pi/(n+1))|` | linear move bounds only (THM-4813 (C)) | far from tight |
+| `||K||_op`, `||K||_*` | `4 cos(pi/(n+1))`, `2 sum |2 cos(k pi/(n+1))|` (trace-norm tariff: Session75 RESULT (6.2)-(6.3)) | linear move bounds only (THM-4813 (C); Session75's exception tariff gives `n/4 - O(sqrt(n) log n)`) | far from tight |
 | exceptions to a converse-closed family | at most `n - 1` | static budgets (concurrent T6) | first-order sharp for `P_q` vs `G_b` |
 
 The cut-charge row is the new one: the "cut-score bound" of the regular basin theorem is exactly the arc-strong
@@ -88,9 +88,11 @@ order and in both counts, the aliquot ones are not.
 `X = 3s+1` is the numerator of the next Collatz step. In it the Syracuse map is `X -> 3X/2^v + 1`, the `4x+1` lift is
 multiplication by 4, and the native seed map is `X -> (3X + 2^a)/2^t`. The forcing cocycle `2 artanh(lambda) =
 log(1 + 2^a/(3X))` is cohomologous to the Collatz drift cocycle `t log 2 - log 3` (transfer function `log X`). Around a
-native cycle the energy identity pays exactly `(T log 2 - d log 3)/2`: the classical Steiner-Eliahou identity
-(THM-4633) in forcing language. The trivial cycle pays `lambda = 1/7` per lap, `2 artanh(1/7) = log(4/3)`; the
-fixed points of the `B`-free edges are THM-4600's anchors `c_a = 1/(2^a - 3)`. Native cycles and Syracuse cycles
+native cycle the forcing cocycle sums to exactly `T log 2 - d log 3` (so `sum artanh(lambda) = (T log 2 - d log 3)/2`,
+and the price `sum lambda` actually paid is strictly smaller): the classical Steiner-Eliahou identity (THM-4633) in
+forcing language. The trivial cycle pays `lambda = 1/7` per lap, `2 artanh(1/7) = log(4/3)`; the
+fixed points of the `B`-free edges are THM-4600's anchors `c_1 = -1`, `c_2 = 1` (every `c_a = 1/(2^a - 3)` is the fixed point of
+the Syracuse letter `X -> 3X/2^a + 1`). Native cycles and Syracuse cycles
 correspond bijectively with the same `(d, T)`. Nothing here bounds the coherent ROOT readout or excludes cycles beyond
 the classical results.
 
@@ -112,8 +114,8 @@ only linear native-move bounds, while the score potential gives `(q^2-1)/8`.
   lattice lift, `beta = 1 + 2 omega`, the ROOT rows `(2 + omega) z`, trace-norm theorem T1-T6.
 - paid_root_cycle_budget (on main): R1 corrected affine carry, R2 price bound; session73's reconciliation.
 - klein-2026-10-27, THM-4814 / HYP-9422 (pushed during this session): regular sources need at least `m` native moves and
-  all-black geodesic witnesses at orders 7, 9 and for `P_11` (our THM-4811 (B) is the all-source version, (C) the black
-  census through order 10); nuclear-norm extremals (skew-Hadamard deletions) and the edit-count comparison with the
+  all-black geodesic witnesses at orders 7, 9 and for `P_11` (our THM-4811 (B) gives the exact distance lambda(T) to the larger non-strong locus from every source, (D1) the
+  singleton distance delta^0 whenever lambda = delta^0, (C) the black census through order 10); nuclear-norm extremals (skew-Hadamard deletions) and the edit-count comparison with the
   score bound; the doubly-regular `Z[(1+sqrt(-q))/2]`-module (the general form of our circulant Gauss-sum statement).
 - Session75 checkpoint 1 (pushed during this session, audited): the bounded-arity nuclear-norm cap and the sharp
   `(1/2 - o(1))` exception budget, which our THM-4813 (C1) only records; black-core and ROOT audit rounds continue there.

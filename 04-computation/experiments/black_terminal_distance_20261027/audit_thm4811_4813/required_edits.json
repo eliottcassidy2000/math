@@ -1,0 +1,163 @@
+[
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "on every native cycle the total forcing is exactly (T log 2 - d log 3)/2 (the Steiner-Eliahou cycle identity of THM-4633)",
+    "new": "on every native cycle the forcing cocycle sums to exactly T log 2 - d log 3, i.e. sum artanh(lambda) = (T log 2 - d log 3)/2 while the price sum lambda is strictly smaller (the Steiner-Eliahou cycle identity of THM-4633, factor by factor at the lifted Syracuse elements)",
+    "reason": "Factor-2 inconsistency: the title itself defines the forcing cocycle as 2 artanh(lambda) = log(1 + 2^a/(3X)); its sum over a closed word is T log 2 - d log 3 (auditor: 61 rational cycles at 50 digits; trivial cycle 2 artanh(1/7) = log(4/3) = 2 log 2 - log 3, not half of it).",
+    "finding": "M1"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "the total forcing is `(T log 2 - d log 3)/2 > 0`: the native\nenergy identity pays, around a cycle, exactly half the logarithmic defect of `2^T/3^d`.",
+    "new": "the forcing cocycle sums to `sum_i 2 artanh(lambda_i) = T log 2 - d log 3 > 0`, i.e.\n`sum_i artanh(lambda_i)` is exactly half the logarithmic defect of `2^T/3^d`; the price actually paid by the energy\nidentity, `sum_i lambda_i`, is strictly smaller (`artanh(x) > x` for `x > 0`).",
+    "reason": "Same factor-2 inconsistency (A2 calls 2 artanh(lambda) the forcing cocycle; the sentence's own trivial-cycle example has forcing log(4/3) = T log 2 - d log 3 per lap). 'Pays exactly half' is false for the payment sum lambda, which is strictly below half.",
+    "finding": "M1"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "observation, the total forcing `F(s)` of the native orbit of a primitive seed `s < 2 10^6` down to `1` never exceeds\n`0.11275`;",
+    "new": "observation, the total price `F(s) = sum lambda` of the native orbit of a primitive seed `s < 2 10^6` down to `1` never\nexceeds `0.11275` (its forcing `sum 2 artanh(lambda)` is about twice that, at most `0.225534` there);",
+    "reason": "F(s) in forcing_tail.c / HYP-9421 (4) is the price sum lambda; under A2's definition of forcing (2 artanh lambda) the maximum below 2 10^6 is 0.225533682 (auditor price_sum.c), so 'total forcing never exceeds 0.11275' is false as worded.",
+    "finding": "M1"
+  },
+  {
+    "file": "05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md",
+    "old": "Around a\nnative cycle the energy identity pays exactly `(T log 2 - d log 3)/2`: the classical Steiner-Eliahou identity\n(THM-4633) in forcing language.",
+    "new": "Around a\nnative cycle the forcing cocycle sums to exactly `T log 2 - d log 3` (so `sum artanh(lambda) = (T log 2 - d log 3)/2`,\nand the price `sum lambda` actually paid is strictly smaller): the classical Steiner-Eliahou identity (THM-4633) in\nforcing language.",
+    "reason": "Same normalisation error as THM-4813 A3; the payment sum lambda is strictly below half the defect.",
+    "finding": "M1"
+  },
+  {
+    "file": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "old": "  matrix form K' = -K + 2A_P, klein's THM-4814 (D)",
+    "new": "  matrix form K' = -K + 2A_P (also Session75 RESULT (6.1), on main and audited before this file, with the path spectrum\n  and the trace-norm tariff (6.2)-(6.3)), klein's THM-4814 (D)",
+    "reason": "Session75 (d5f10e1cf2, 01:22) states K(tau_P T) = -K(T) + 2L as (6.1) before THM-4811's first commit (8ab6b3e358, 01:40).",
+    "finding": "M2"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "  (C) the Lipschitz constants from K' = -K + 2A_Q (THM-4811 (A)) and the path spectrum 2i cos(k pi/(n+1)); the",
+    "new": "  (C) the operator-norm Lipschitz constant 4 cos(pi/(n+1)) from K' = -K + 2A_Q and the path spectrum 2i cos(k pi/(n+1));\n  CITED: the matrix law K(tau_P T) = -K(T) + 2L, the trace-norm tariff 2||L||_* = 2 sum_k |2 cos(k pi/(n+1))| ~ 8n/pi\n  and the linear clock bound t >= (n(n-1) - C_b n^(3/2) log2 n)/(4(n-1)) = n/4 - O(sqrt(n) log n) are Session75's\n  audited RESULT section 6, (6.1)-(6.3) and item 5 (C), pushed (d5f10e1cf2) before this file; the",
+    "reason": "Session75 RESULT section 6 (on main, audited, 18 minutes before THM-4813's first commit) already proves (6.1) K(tau_P T) = -K(T) + 2L, (6.2)-(6.3) the trace-norm tariff with the path eigenvalues 2cos(j pi/(n+1)) and the 8n/pi asymptotics, and a stronger linear clock bound (n/4) via exception tariffs; THM-4813 typed these as its own PROVED content.",
+    "finding": "M2"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "which is linear in `q`, while THM-4810's score potential gives `(q^2-1)/8`",
+    "new": "which is linear in `q` (precisely `q/(2 pi) - sqrt(q)/4 + O(1/q)`; `0.94` at `q = 11`) and weaker than the linear clock\nbound `q/4 - O(q^(1/2) log q)` already proved by Session75 (RESULT section 6 and item 5 (C): exception tariff `n - 1` per\nmove; its trace-norm tariff (6.2)-(6.3) is the second Lipschitz constant above), while THM-4810's score potential gives `(q^2-1)/8`",
+    "reason": "Credit and calibration: the op-norm bound is the weakest of the available linear bounds; Session75 already has the trace-norm tariff and the q/4 bound; the 'about q/(2 pi)' is only the leading term.",
+    "finding": "M2"
+  },
+  {
+    "file": "05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md",
+    "old": "| `||K||_op`, `||K||_*` | `4 cos(pi/(n+1))`, `2 sum |2 cos(k pi/(n+1))|` | linear move bounds only (THM-4813 (C)) | far from tight |",
+    "new": "| `||K||_op`, `||K||_*` | `4 cos(pi/(n+1))`, `2 sum |2 cos(k pi/(n+1))|` (trace-norm tariff: Session75 RESULT (6.2)-(6.3)) | linear move bounds only (THM-4813 (C); Session75's exception tariff gives `n/4 - O(sqrt(n) log n)`) | far from tight |",
+    "reason": "Credit the already-published Session75 section 6 results in the table.",
+    "finding": "M2"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "  three ROOT rows (2+omega)(a + b omega), and the trace-norm bound for bounded-arity substitution parses (T1-T6) are the\n  concurrent dyadic-module-spectrum session's (worktree dyadic_module_spectrum_20261026), published in audited form by\n  Session75 (05-knowledge/results/session75_overnight_black_root_spectral_20261027);",
+    "new": "  three ROOT rows (2+omega)(a + b omega) and the trace-norm theorem T1-T6 are the concurrent dyadic-module-spectrum\n  session's (worktree dyadic_module_spectrum_20261026, not on main, not audited); the integral ROOT rows themselves,\n  c^r = 2 Re(omega^r A) = (2a - b, -a - b, -a + 2b), are root_eisenstein_first_arrival_20261018j E1/E2 (recovered by\n  Session75's inheritance report, which states that the directed-C3 map was NOT source-recovered); the audited\n  bounded-arity nuclear-norm cap C_b n log2 n is Session75's own theorem\n  (05-knowledge/results/session75_overnight_black_root_spectral_20261027, session75-spectral/RESULT.md);",
+    "reason": "False provenance: Session75's packet contains no three-chart lift, no beta = 1 + 2 omega, no (2+omega) row form and no T1-T6 (grep of the whole packet); its INHERITANCE_REPORT says 'The prompt's directed-C3 map is not yet source-recovered, although these exact integral rows are'. Its nuclear cap has its own constant C_b = 2 sqrt(alpha(1-alpha))/h2(alpha), not the dyadic all-tree constant cited by THM-4814.",
+    "finding": "M3"
+  },
+  {
+    "file": "07-reflections/why-the-advances-work-ii-potentials-symmetry-budgets-positive-coordinates-macmini-20261027.md",
+    "old": "| same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word into a minimum cut | all but `C3`, `R5`, `E(M; Z)` |",
+    "new": "| same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word starting in a minimum out-cut and ending outside it | all but `C3`, `R5` and the family `E` of THM-4811 Theorem A (pre-audit); `E(M; Z)` is only its `t = 1` subfamily |",
+    "reason": "Stale row: it lists E(M; Z), which the current THM-4811 (Theorem A) and HYP-9421 (1) call an incomplete subfamily (E_2(S5) at order 11 is an exception outside it); in eca666b44c the same row stated the then-OPEN classification as fact.",
+    "finding": "M4"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "and the fixed points of the B-free native edges are exactly THM-4600's anchors c_a = 1/(2^a - 3).",
+    "new": "and the fixed points of the B-free native edges (a = 1, 2) are THM-4600's anchors c_1 = -1 and c_2 = 1 (every anchor c_a = 1/(2^a - 3) is the fixed point of the Syracuse letter X -> 3X/2^a + 1; the B-layered native edges, j >= 1, fix non-anchors such as -1/5, -3/13).",
+    "reason": "Only c_1, c_2 arise from native edges (a in {1,2}); c_3 = 1/5, c_4 = 1/13, ... are fixed points of Syracuse letters, not of native edges (auditor A4 check).",
+    "finding": "m1"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "Anchored debts are the fixed points of the\n`B`-free native edges read in the numerator coordinate.",
+    "new": "In the numerator coordinate every anchor `c_a` (all `a >= 1`) is the\nfixed point `2^a/(2^a - 3)` of the Syracuse letter `X -> 3X/2^a + 1`; the `B`-free native edges are the letters `a = 1, 2`.",
+    "reason": "Overgeneralisation (see previous edit).",
+    "finding": "m1"
+  },
+  {
+    "file": "05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md",
+    "old": "the\nfixed points of the `B`-free edges are THM-4600's anchors `c_a = 1/(2^a - 3)`.",
+    "new": "the\nfixed points of the `B`-free edges are THM-4600's anchors `c_1 = -1`, `c_2 = 1` (every `c_a = 1/(2^a - 3)` is the fixed point of\nthe Syracuse letter `X -> 3X/2^a + 1`).",
+    "reason": "Same overgeneralisation.",
+    "finding": "m1"
+  },
+  {
+    "file": "07-reflections/why-the-advances-work-ii-potentials-symmetry-budgets-positive-coordinates-macmini-20261027.md",
+    "old": "at the fixed points it is THM-4600's anchors `c_a = 1/(2^a - 3)`.",
+    "new": "at the fixed points of the Syracuse letters `X -> 3X/2^a + 1` it is THM-4600's anchors `c_a = 1/(2^a - 3)` (the `B`-free native edges give `c_1 = -1`, `c_2 = 1`).",
+    "reason": "Same overgeneralisation.",
+    "finding": "m1"
+  },
+  {
+    "file": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "old": "So every strong tournament of order at most 9 has `lambda = delta^0`",
+    "new": "So every strong tournament of order at most 9 has `lambda = delta^0` (for `delta^0 = 1` because strong means `lambda >= 1`;\nfor `delta^0 >= 2` because `n <= 9 <= 4 delta^0 + 1`)",
+    "reason": "The criterion n <= 4 delta^0 + 1 does not cover delta^0 = 1 at orders 6-9; the missing step is lambda >= 1 for strong T.",
+    "finding": "m2"
+  },
+  {
+    "file": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "old": "Every black line at a non-strong class is such an edge (by (B) its other end has\n`lambda = 1`), and by (B)-(C) every non-pure-blue strong class of order at most 10 is joined to a `lambda = 1` class by\nblack moves (for every order, by Theorems A and B).",
+    "new": "Every black line at a non-strong class is such an edge (its other end is strong by THM-4729 L3, so has\n`lambda = 1` by (B)), and every non-pure-blue strong class is joined by black moves to a `lambda = 1` class with a black\ndescent: at every order already by the inherited strong black `c3`-descent (black_descent_20261020c; the last strong\nclass of a black descent chain has `lambda = 1` and its last move is a black descent word), independently of Theorems A\nand B, and through order 10 also by (C1).",
+    "reason": "(B) alone gives only lambda <= 1 at the other end; strongness of the other end is THM-4729 L3. The all-order reduction does not need the (pre-audit) classification: the inherited all-order black c3-descent suffices.",
+    "finding": "m4"
+  },
+  {
+    "file": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "old": "descent criterion of (B) verified on all legal words through order 8 (2,073,672 words at order 8, no failure);",
+    "new": "descent criterion of (B) verified on all legal words of all strong classes through order 8 (2,073,672 words at order 8,\n  no failure; independent audit: every class, strong or not, through order 9, 2,143,304 words at order 8 and 270,447,284\n  at order 9);",
+    "reason": "The producer's check ran on strong classes only (gentourng -c); 2,073,672 is the strong-class word count at order 8.",
+    "finding": "m6"
+  },
+  {
+    "file": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "old": "Protect a vertex\n`v` attaining `delta^0`, say `s(v) = k` (otherwise pass to the converse).",
+    "new": "Protect a vertex\n`v` attaining `delta^0`, say `s(v) = k` (otherwise pass to the converse); this is the protected-vertex route of the\nconcurrent regular basin theorem (B3), run here with the cut potential.",
+    "reason": "Credit: the note attributes the protected-vertex route to the aliquot_power_124 basin theorem B3; the theorem file does not.",
+    "finding": "m7"
+  },
+  {
+    "file": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+    "old": "For a regular `(2m+1)`-tournament the distance is `m`: the concurrent regular\nbasin theorem's cut-score bound is the case `lambda = m` of (B), and (B) shows the bound is attained from every source.",
+    "new": "For a regular `(2m+1)`-tournament the distance to the non-strong locus is\n`m`: the concurrent regular basin theorem's cut-score lower bound (for its smaller target, a singleton plus a strong\ncore) is the case `lambda = m` of (B), and (B) shows that the non-strong-locus bound `lambda(T)` is attained from every source.",
+    "reason": "The basin theorem's target is CORE, a sub-locus; the sentence conflated the two targets.",
+    "finding": "m8"
+  },
+  {
+    "file": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md",
+    "old": "This is the precise reason for the shared\nspectrum;",
+    "new": "This is the precise reason for the shared\nsingular values (`|2 + omega| = |1 + 2 omega| = sqrt(3)`; the eigenvalues differ by the unit, `(3 +- i sqrt(3))/2` against\n`+- i sqrt(3)`);",
+    "reason": "-RK and K have different eigenvalues on Lambda_3 (auditor: 1.5 +- 0.866i vs +-1.732i); only the moduli agree.",
+    "finding": "m9"
+  },
+  {
+    "file": "05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md",
+    "old": "(our THM-4811 (B) is the all-source version, (C) the black\n  census through order 10)",
+    "new": "(our THM-4811 (B) gives the exact distance lambda(T) to the larger non-strong locus from every source, (D1) the\n  singleton distance delta^0 whenever lambda = delta^0, (C) the black census through order 10)",
+    "reason": "THM-4814 (D) is about the singleton locus; THM-4811 (B) is about the non-strong locus.",
+    "finding": "m10"
+  },
+  {
+    "file": "07-reflections/why-the-advances-work-ii-potentials-symmetry-budgets-positive-coordinates-macmini-20261027.md",
+    "old": "Two of tonight's claims (the sharp spectral constant, the doubly-regular\n  lattice module) had concurrent published versions by the time they were filed.",
+    "new": "Three of tonight's claims (the sharp spectral constant, the doubly-regular\n  lattice module, and the trace-norm move tariff with its linear clock bound, Session75 RESULT section 6) had concurrent\n  published versions by the time they were filed.",
+    "reason": "Session75 section 6 also predates THM-4813 (C).",
+    "finding": "m11"
+  },
+  {
+    "file": "07-reflections/why-the-advances-work-ii-potentials-symmetry-budgets-positive-coordinates-macmini-20261027.md",
+    "old": "klein's THM-4814 (D), and\nTHM-4811 as the all-source case).",
+    "new": "klein's THM-4814 (D), and\nTHM-4811: (B) gives the exact distance to the larger non-strong locus from every source, while the all-source black-core\nversion is FINITE-EXACT only through order 10 (D2) and conjectured in general (HYP-9421 (6))).",
+    "reason": "THM-4811 proves the all-source statement for the non-strong locus, not for the black-core target (CORE, black moves), which is D2 (orders 6-9) plus HYP-9421 (6).",
+    "finding": "m12"
+  }
+]

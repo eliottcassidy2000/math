@@ -1,0 +1,5 @@
+E10: scores 2 2 2 2 3 6 7 7 7 7; lambda=1 mincuts=1 strong=1
+  |Aut| = 9, self-converse = 1 (so #anti-automorphisms = |Aut|)
+  H=657 black=558 descent words=9 (blue 9, closed 9)
+  black moves by (lambda', target has black descent): (1,1):108 (2,1):450
+  lambda=2 neighbours (any colour): 540; without a black descent avoiding E10 (exact canonical test): 0

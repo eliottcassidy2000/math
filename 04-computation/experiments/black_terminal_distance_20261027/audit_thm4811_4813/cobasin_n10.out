@@ -1,0 +1,4 @@
+cobasin n=10 k=2: non-strong classes 377107 (merged 188646, with a black line 188642, pure blue 4); lambda=1 classes 2817450, without black descent 1;
+  certificate edges used 5823540; touched merged nodes: non-strong 188642, lambda=1 1409455, conflicting kind 0; components 1
+  lambda=1 without black descent: 111001111101111111111111111111111111000111101
+( gentourng -q 10 | ./aud cobasin 10 2; )  77.83s user 0.41s system 102% cpu 1:16.06 total

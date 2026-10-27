@@ -1,0 +1,29 @@
+A1: 2^t Y = 3X + 2^a, Y = (3X/2^a+1)/4^j, P(s) primitive, for 750000 primitive s < 2000000 (root via valuations): failures 0
+A1: 3B(x)+1 = 4(3x+1), 3U(x)+1 = 3X/2^v+1, U(B(x)) = U(x) for odd |x| <= 10001: failures 0
+A2: lambda = 2^a/(6X+2^a), 1/b = 1 + 2^a/(3X) = 2^t Y/(3X), (1+lam)/(1-lam) = 1/b (exact rationals): failures 0
+A2: carry 2^T X_d = 3^d X_0 + C_d with C_d = sum 3^(d-i) 2^(T_(i-1)+a_i), prod b = 3^d X_0/(2^T X_d), 3000 random words: failures 0
+A3: rational cycles x = n/k, k in [1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47]: 61 Syracuse cycles, 61 native cycles; bijection z_i = U(y_(i-1)) / rho, same (d, T), sum 2artanh(lam) = T log2 - d log3 at 50 digits, factorwise Steiner-Eliahou: failures 0
+  (cycles with some negative lambda, where sum lam < sum artanh lam fails as expected since artanh(x) < x for x < 0: 17; positive-lambda cycles all satisfy sum lam < sum artanh lam = (T log2 - d log3)/2)
+  sample (k, d, T, sum lam, sum artanh lam, sum 2artanh lam, T log2 - d log3):
+    (1, 1, 1, -0.2, -0.202732554, -0.405465108, -0.405465108)
+    (1, 1, 2, 0.142857143, 0.143841036, 0.287682072, 0.287682072)
+    (1, 2, 3, -0.058873003, -0.058891518, -0.117783036, -0.117783036)
+    (1, 7, 11, -0.032833021, -0.032833517, -0.065667035, -0.065667035)
+    (5, 1, 3, 0.454545455, 0.490414627, 0.980829253, 0.980829253)
+    (5, 3, 5, 0.084917225, 0.084949518, 0.169899037, 0.169899037)
+    (5, 3, 5, 0.084924428, 0.084949518, 0.169899037, 0.169899037)
+    (5, 17, 27, 0.019282441, 0.019282484, 0.038564968, 0.038564968)
+A3: trivial cycle P(1) = 1, a = 2, t = 2, lambda = 1/7, b = 3/4; (1+lam)/(1-lam) = 4/3; so 2 artanh(1/7) = log(4/3) = T log2 - d log3 with (d,T) = (1,2); artanh(1/7) = 0.143841036226
+A3 window: max lambda/t over primitive 1009 <= s <= 400001 is 1/9139 = 1/9139 at s = 1015 (packet R2: 1/9139 at 1015); max exterior lambda <= 2/(9*1009+5), 2artanh(l)/l <= 2.00000003230154 < 2 + 1e-6
+A4: native-edge fixed points (a, j, t, s*): [(1, 0, 1, '-1'), (1, 1, 3, '-1/5'), (1, 2, 5, '-9/29'), (1, 3, 7, '-41/125'), (1, 4, 9, '-169/509'), (1, 5, 11, '-681/2045'), (2, 0, 2, '1'), (2, 1, 4, '-3/13'), (2, 2, 6, '-19/61'), (2, 3, 8, '-83/253'), (2, 4, 10, '-339/1021'), (2, 5, 12, '-1363/4093')]; failures 0
+A4: which THM-4600 anchors c_b (b = 1..10) are native-edge fixed points: [((1, 0), [1]), ((2, 0), [2])] -> only c_1 = -1 and c_2 = 1 (j = 0); c_3 = 1/5, c_4 = 1/13, ... are fixed points of Syracuse letters X -> 3X/2^b + 1, not of native edges
+A4: X* = 1 + 3c_b is the fixed point of X -> 3X/2^b + 1 for b = 1..10: True
+B1: Paley q in [3,7,11,19,23,31,43,47]: G^2 = -q in Z[zeta], K K^T = qI - J, K^2 = -q on Lambda_q, K = sum (R^s - R^-s): failures 0
+B1: ||K_C(S)||_* = sum_j |sum_s 2 sin(2 pi j s/q)| on 160 random circulant tournaments (q = 5..21, incl. composite q): failures 0
+B2: ROOT rows (2a-b, -a-b, -a+2b) = 2Re(w^r A) = iota((2+w)(a+bw)) = -R K iota(a+bw); iota intertwines w <-> R, 1+2w <-> K: failures 0; -RK iota(1) = [np.int64(2), np.int64(-1), np.int64(-1)]
+B2: eigenvalues of -RK on C^3: [-0. +0.j        1.5+0.866025j  1.5-0.866025j]; of K: [0.+1.732051j 0.-1.732051j 0.+0.j      ] (same moduli sqrt3 on Lambda_3, different arguments)
+C: spectral FAS lower bound vs (q^2-1)/8: [(7, 2.4, 6.0), (11, 8.9, 15.0), (19, 35.9, 45.0), (23, 57.1, 66.0), (31, 115.7, 120.0), (43, 246.0, 231.0), (47, 301.1, 276.0), (59, 502.4, 435.0)]; first q with spectral > rearrangement: 43; later failures up to 400: []
+C: q=7: ||K_T||_op = 4.381286 vs cot(pi/2q) = 4.381286; ||K_T||_* = 12.233642 vs sum|cot| = 12.233642; move bound (cot(pi/2q) - sqrt q)/(4cos(pi/(q+1))) = 0.470, q/(2pi) = 1.114
+C: q=11: ||K_T||_op = 6.955153 vs cot(pi/2q) = 6.955153; ||K_T||_* = 22.470393 vs sum|cot| = 22.470393; move bound (cot(pi/2q) - sqrt q)/(4cos(pi/(q+1))) = 0.942, q/(2pi) = 1.751
+C: q=19: ||K_T||_op = 12.068205 vs cot(pi/2q) = 12.068205; ||K_T||_* = 45.486930 vs sum|cot| = 45.486930; move bound (cot(pi/2q) - sqrt q)/(4cos(pi/(q+1))) = 1.951, q/(2pi) = 3.024
+THM-4811 (A) + THM-4813 (C) on 2100 random (tournament, Hamiltonian path) pairs, n = 4..12, 16, 20, 25, 31, 40: failures {'K': 0, 'd': 0, 'cut': 0, 'c3': 0, 'op': 0, 'nuc': 0, 'pathspec': 0}; max observed |d op|/4cos(pi/(n+1)) = 0.377, max |d nuc|/(2 sum|2cos|) = 0.226

@@ -1,0 +1,4 @@
+lemmalab n=3 labelled tournaments=8 paths=12: lambda/descent failures 0, dipole failures 0, cut-law failures 0, c3 failures 0, identity failures 0 (brute=1)
+lemmalab n=4 labelled tournaments=64 paths=192: lambda/descent failures 0, dipole failures 0, cut-law failures 0, c3 failures 0, identity failures 0 (brute=1)
+lemmalab n=5 labelled tournaments=1024 paths=7680: lambda/descent failures 0, dipole failures 0, cut-law failures 0, c3 failures 0, identity failures 0 (brute=1)
+lemmalab n=6 labelled tournaments=32768 paths=737280: lambda/descent failures 0, dipole failures 0, cut-law failures 0, c3 failures 0, identity failures 0 (brute=1)

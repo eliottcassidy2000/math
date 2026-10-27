@@ -1,9 +1,12 @@
 ---
 id: THM-4813
-title: "The Collatz numerator coordinate X = 3s+1 and the native ROOT seed map; the Gauss-sum intertwiner behind the shared C3 / ROOT / Paley spectra; first-order sharpness of the spectral exception budget (credited to Session75) and the native-move Lipschitz constants of spectral potentials. (A) In X = 3x+1 the Syracuse step is X -> 3X/2^v + 1, the 4x+1 lift is X -> 4X, and the native compressed seed map of the paid-ROOT packet is X -> (3X + 2^a)/2^t (t = a + 2j); its contraction b = 3X/(2^t Y) and price lambda = 2^a/(6X + 2^a) satisfy -log b = 2 artanh(lambda) = log(1 + 2^a/(3X)), so the forcing cocycle is cohomologous to the Collatz drift cocycle t log 2 - log 3 with transfer function log X; on every native cycle the total forcing is exactly (T log 2 - d log 3)/2 (the Steiner-Eliahou cycle identity of THM-4633), native cycles correspond bijectively to Syracuse cycles with the same (d, T), the trivial cycle pays lambda = 1/7 per lap (2 artanh(1/7) = log(4/3)), and the fixed points of the B-free native edges are exactly THM-4600's anchors c_a = 1/(2^a - 3). (B) On the centred lattice Lambda_q = {x in Z^q : sum x = 0} with the cyclic shift R acting as zeta_q, the skew operator of the circulant tournament C(S) is multiplication by g_S = sum_{s in S} (zeta^s - zeta^-s); for the Paley tournament (q = 3 mod 4 prime) g_S is the quadratic Gauss sum G with G^2 = -q, which gives K^2 = -q on Lambda_q and K K^T = qI - J; for q = 3, G = 1 + 2 omega, and the three ROOT rows are multiplication by 2 + omega = -omega (1 + 2 omega), i.e. ROOT = -R K on Lambda_3: same prime ideal (sqrt(-3)), different unit. (C) (CITED for the exception count: Session75's audited theorem already gives (1/2 - o(1)) of all arcs with sharp leading constant) spectral norms are Lipschitz under native moves with constants 4 cos(pi/(n+1)) (operator norm) and 2 sum_k |2 cos(k pi/(n+1))| (trace norm), which bound move distances only linearly (d(P_q, transitive) >= about q/(2 pi)) where the score potential of THM-4810 gives (q^2-1)/8."
+title: "The Collatz numerator coordinate X = 3s+1 and the native ROOT seed map; the Gauss-sum intertwiner behind the shared C3 / ROOT / Paley spectra; first-order sharpness of the spectral exception budget (credited to Session75) and the native-move Lipschitz constants of spectral potentials. (A) In X = 3x+1 the Syracuse step is X -> 3X/2^v + 1, the 4x+1 lift is X -> 4X, and the native compressed seed map of the paid-ROOT packet is X -> (3X + 2^a)/2^t (t = a + 2j); its contraction b = 3X/(2^t Y) and price lambda = 2^a/(6X + 2^a) satisfy -log b = 2 artanh(lambda) = log(1 + 2^a/(3X)), so the forcing cocycle is cohomologous to the Collatz drift cocycle t log 2 - log 3 with transfer function log X; on every native cycle the forcing cocycle sums to exactly T log 2 - d log 3, i.e. sum artanh(lambda) = (T log 2 - d log 3)/2 while the price sum lambda is strictly smaller (the Steiner-Eliahou cycle identity of THM-4633, factor by factor at the lifted Syracuse elements), native cycles correspond bijectively to Syracuse cycles with the same (d, T), the trivial cycle pays lambda = 1/7 per lap (2 artanh(1/7) = log(4/3)), and the fixed points of the B-free native edges (a = 1, 2) are THM-4600's anchors c_1 = -1 and c_2 = 1 (every anchor c_a = 1/(2^a - 3) is the fixed point of the Syracuse letter X -> 3X/2^a + 1; the B-layered native edges, j >= 1, fix non-anchors such as -1/5, -3/13). (B) On the centred lattice Lambda_q = {x in Z^q : sum x = 0} with the cyclic shift R acting as zeta_q, the skew operator of the circulant tournament C(S) is multiplication by g_S = sum_{s in S} (zeta^s - zeta^-s); for the Paley tournament (q = 3 mod 4 prime) g_S is the quadratic Gauss sum G with G^2 = -q, which gives K^2 = -q on Lambda_q and K K^T = qI - J; for q = 3, G = 1 + 2 omega, and the three ROOT rows are multiplication by 2 + omega = -omega (1 + 2 omega), i.e. ROOT = -R K on Lambda_3: same prime ideal (sqrt(-3)), different unit. (C) (CITED for the exception count: Session75's audited theorem already gives (1/2 - o(1)) of all arcs with sharp leading constant) spectral norms are Lipschitz under native moves with constants 4 cos(pi/(n+1)) (operator norm) and 2 sum_k |2 cos(k pi/(n+1))| (trace norm), which bound move distances only linearly (d(P_q, transitive) >= about q/(2 pi)) where the score potential of THM-4810 gives (q^2-1)/8."
 status: >
   PROVED (elementary): (A) all statements; (B) given the classical evaluation G^2 = (-1/q) q of the quadratic Gauss sum;
-  (C) the Lipschitz constants from K' = -K + 2A_Q (THM-4811 (A)) and the path spectrum 2i cos(k pi/(n+1)); the
+  (C) the operator-norm Lipschitz constant 4 cos(pi/(n+1)) from K' = -K + 2A_Q and the path spectrum 2i cos(k pi/(n+1));
+  CITED: the matrix law K(tau_P T) = -K(T) + 2L, the trace-norm tariff 2||L||_* = 2 sum_k |2 cos(k pi/(n+1))| ~ 8n/pi
+  and the linear clock bound t >= (n(n-1) - C_b n^(3/2) log2 n)/(4(n-1)) = n/4 - O(sqrt(n) log n) are Session75's
+  audited RESULT section 6, (6.1)-(6.3) and item 5 (C), pushed (d5f10e1cf2) before this file; the
   exception-count statement (C1) is Session75's audited theorem (session75_overnight_black_root_spectral_20261027,
   pushed before this file), recorded here only as the comparison point.
   FINITE-EXACT: numerator_dictionary_check.py (D1-D7: the edge identity for every primitive seed below 2 10^6, the Syracuse
@@ -16,14 +19,21 @@ status: >
   (session73_paid_root_exception_budgets_20261027/session73-root/INCOMING_2F1311_RECONCILIATION.md); the cycle product
   identity 2^K/3^k = prod(1 + 1/(3 n_i)) is classical (Steiner 1977, Eliahou 1993; THM-4633); the anchors are THM-4600;
   the Eisenstein three-chart lift, the identity beta = omega - omega^2 = 1 + 2 omega for the C3 skew operator and the
-  three ROOT rows (2+omega)(a + b omega), and the trace-norm bound for bounded-arity substitution parses (T1-T6) are the
-  concurrent dyadic-module-spectrum session's (worktree dyadic_module_spectrum_20261026), published in audited form by
-  Session75 (05-knowledge/results/session75_overnight_black_root_spectral_20261027); klein's THM-4814 (E) proves the
+  three ROOT rows (2+omega)(a + b omega) and the trace-norm theorem T1-T6 are the concurrent dyadic-module-spectrum
+  session's (worktree dyadic_module_spectrum_20261026, not on main, not audited); the integral ROOT rows themselves,
+  c^r = 2 Re(omega^r A) = (2a - b, -a - b, -a + 2b), are root_eisenstein_first_arrival_20261018j E1/E2 (recovered by
+  Session75's inheritance report, which states that the directed-C3 map was NOT source-recovered); the audited
+  bounded-arity nuclear-norm cap C_b n log2 n is Session75's own theorem
+  (05-knowledge/results/session75_overnight_black_root_spectral_20261027, session75-spectral/RESULT.md); klein's THM-4814 (E) proves the
   general doubly-regular form (theta = (I + S)/2 makes the sum-zero lattice a Z[(1+sqrt(-q))/2]-module on which S acts as
   sqrt(-q)), of which (B1) for Paley circulants is the explicit Gauss-sum case; THM-4814 (C) has the nuclear-norm
   extremals and the edit-count comparison with THM-4810's score bound; the Gauss sum and the Paley Gram identity are
   classical; the transitive skew spectrum i cot((2k-1)pi/2n)
   is THM-1875; THM-4810 supplies f(P_q) and the score potential.
+  AUDITED (independent, 2026-10-27; PASS WITH CORRECTIONS, MISTAKE-681; report
+  04-computation/experiments/black_terminal_distance_20261027/audit_thm4811_4813/REPORT.md): A1-A4, the cycle bijection on 61
+  rational cycles, the price maxima, (B1) for Paley q <= 47 and the (C) numbers reproduced; the forcing normalisation, the
+  Session75 priority and the provenance of the Eisenstein material corrected.
   NOT CLAIMED: any Collatz convergence or cycle-exclusion statement beyond the cited classical identity; any bound on the
   coherent ROOT terminal readout; the second-order term of dist(P_q, G_b).
 session: mac-mini-2026-10-27-potentials
@@ -72,8 +82,9 @@ So the forcing cocycle `2 artanh(lambda)` differs from the **Collatz drift cocyc
 
 and `artanh(lambda) > lambda` yields the packet's inequality (7), strictly.
 
-**A3 (cycles).** On a closed native word (`X_d = X_0`) the total forcing is `(T log 2 - d log 3)/2 > 0`: the native
-energy identity pays, around a cycle, exactly half the logarithmic defect of `2^T/3^d`. This is the classical product
+**A3 (cycles).** On a closed native word (`X_d = X_0`) the forcing cocycle sums to `sum_i 2 artanh(lambda_i) = T log 2 - d log 3 > 0`, i.e.
+`sum_i artanh(lambda_i)` is exactly half the logarithmic defect of `2^T/3^d`; the price actually paid by the energy
+identity, `sum_i lambda_i`, is strictly smaller (`artanh(x) > x` for `x > 0`). This is the classical product
 identity `2^K/3^k = prod (1 + 1/(3 n_i))` (Steiner 1977, Eliahou 1993; THM-4633) in forcing language. Native cycles and
 Syracuse cycles correspond bijectively with the same `d` and `T`: the primitive-root map `rho` (strip `B`-layers) satisfies
 `rho U = P rho` on odd integers, and a native cycle `(y_0, ..., y_(d-1))` lifts to the Syracuse cycle of the elements
@@ -85,12 +96,12 @@ native cycle avoiding that frontier into `0 < T log 2 - d log 3 <= (2 + 10^-6) T
 
 **A4 (anchors).** The edge map `X -> (3X + 2^a)/2^t` has the unique fixed point `X* = 2^a/(2^t - 3)`, i.e.
 `s* = (2^a - 2^t + 3)/(3(2^t - 3))`. For `j = 0` (`t = a`) this is `s* = 1/(2^a - 3) = c_a`, the anchor of THM-4600, with
-`X* = 1 + 3c_a`: `c_1 = -1` (the cycle at `-1`) and `c_2 = 1` (the trivial cycle). Anchored debts are the fixed points of the
-`B`-free native edges read in the numerator coordinate.
+`X* = 1 + 3c_a`: `c_1 = -1` (the cycle at `-1`) and `c_2 = 1` (the trivial cycle). In the numerator coordinate every anchor `c_a` (all `a >= 1`) is the
+fixed point `2^a/(2^a - 3)` of the Syracuse letter `X -> 3X/2^a + 1`; the `B`-free native edges are the letters `a = 1, 2`.
 
 **A5 (finite checks).** D1-D7 of `numerator_dictionary_check.py` (all exact or at 60 digits) confirm A1-A4. As a side
-observation, the total forcing `F(s)` of the native orbit of a primitive seed `s < 2 10^6` down to `1` never exceeds
-`0.11275`; the maximisers share one tail, so the supremum is a property of small seeds (not claimed in general).
+observation, the total price `F(s) = sum lambda` of the native orbit of a primitive seed `s < 2 10^6` down to `1` never
+exceeds `0.11275` (its forcing `sum 2 artanh(lambda)` is about twice that, at most `0.225534` there); the maximisers share one tail, so the supremum is a property of small seeds (not claimed in general).
 
 ## (B) The Gauss-sum intertwiner
 
@@ -111,7 +122,8 @@ embedding `iota(a + b omega) = (a, -b, b - a)` the three ROOT rows are `iota((2 
 
 (checked on a basis: `-R K iota(1) = (2, -1, -1)`). The ROOT row map and the directed-triangle skew operator generate the
 same prime ideal `(sqrt(-3))` and differ by the unit `-omega` of order six. This is the precise reason for the shared
-spectrum; the marked first ROOT row is not preserved by the unit, as the concurrent packet stresses. For general circulants
+singular values (`|2 + omega| = |1 + 2 omega| = sqrt(3)`; the eigenvalues differ by the unit, `(3 +- i sqrt(3))/2` against
+`+- i sqrt(3)`); the marked first ROOT row is not preserved by the unit, as the concurrent packet stresses. For general circulants
 (B1) gives `||K_(C(S))||_* = sum_(j=1)^(q-1) |sum_(s in S) 2 sin(2 pi j s/q)|`.
 
 ## (C) Spectral potentials: sharp for exceptions, weak for moves
@@ -135,7 +147,9 @@ Therefore `| ||K'||_op - ||K||_op | <= 4 cos(pi/(n+1))` and `| ||K'||_* - ||K||_
 
     d(P_q, transitive class) >= (cot(pi/(2q)) - sqrt(q))/(4 cos(pi/(q+1))),  about q/(2 pi),
 
-which is linear in `q`, while THM-4810's score potential gives `(q^2-1)/8` (attained at `q = 11` by Session74's fifteen
+which is linear in `q` (precisely `q/(2 pi) - sqrt(q)/4 + O(1/q)`; `0.94` at `q = 11`) and weaker than the linear clock
+bound `q/4 - O(q^(1/2) log q)` already proved by Session75 (RESULT section 6 and item 5 (C): exception tariff `n - 1` per
+move; its trace-norm tariff (6.2)-(6.3) is the second Lipschitz constant above), while THM-4810's score potential gives `(q^2-1)/8` (attained at `q = 11` by Session74's fifteen
 moves). The spectral potentials measure static representation complexity (exceptions, rank, trace mass); dynamic move
 counts are governed by the cut and score potentials of THM-4811 (A). This is recorded as the failure anatomy of a tempting
 transfer, not as a new bound.

@@ -1,0 +1,5 @@
+bfs n=8 classes=6880 strong=6008 lines(labelled class-words)=2143304 black=2138792 asymmetric-edges=0 pure-blue classes=3
+  d_any(NS) != lambda (all classes): 0 | strong: d_black(NS) != lambda: 0
+  strong: d_any(SING) != delta0: 0, d_black(SING) != delta0: 0
+  strong: d_any(CORE) != delta0: 0, d_black(CORE) != delta0: 0
+  black components among non-pure-blue classes: unmerged 1, merged 1; non-strong merged classes 443, with a black line 440

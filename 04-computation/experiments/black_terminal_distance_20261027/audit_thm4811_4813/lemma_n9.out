@@ -1,0 +1,2 @@
+lemma n=9 classes=191536 paths=270447284: lambda/descent failures 0, dipole failures 0, cut-law failures 0, c3 failures 0, identity failures 0 (brute=0)
+( gentourng -q 9 | ./aud lemma 9; )  412.39s user 2.73s system 96% cpu 7:08.06 total

@@ -1,0 +1,10 @@
+census n=10 strong classes=9355949
+  lambda=1: 2817450 classes, no black descent 1 (pure blue 0), no descent word 0
+  lambda=2: 5124698 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=3: 1400468 classes, no black descent 0 (pure blue 0), no descent word 0
+  lambda=4: 13333 classes, no black descent 0 (pure blue 0), no descent word 0
+  (lambda,delta0) histogram: (1,1):2817434 (1,2):16 (2,2):5124698 (3,3):1400468 (4,4):13333
+  lambda < delta0: 16
+  EXCEPTION 111001111101111111111111111111111111000111101 (has black words)
+  (lambda = 2 classes were required to have a black descent whose target is not E10)
+( gentourng -cq 10 | ./aud census 10; )  139.52s user 0.89s system 99% cpu 2:21.68 total
