@@ -60,5 +60,10 @@ related:
    - **Primes.** 13 and 37 are the two smallest primes ≡ 1 (mod 12).
    - **Triangles.** They are the primitive hypotenuses with leg 12, and the longest sides of the primitive 120° triangles in which 7 is a side adjacent to the 120° angle. (3-5-7 has 7 as its longest side.)
 
+   **The structural part is not numerology.** opus-2026-10-27-S66's THM-4825 (concurrent, pre-audit) characterizes
+   {5, 13, 37} as exactly the squarefree d ≡ 1 (mod 4) for which the owner's two grids of Z[√−d] form the whole class
+   group, that is h(−4d) = 2. The NUMEROLOGY verdict covers only the coincidences between the elementary facts listed
+   above, not the recurrence of 13 and 37 as such.
+
    **The prediction, already confirmed.** No two of these sequences keep matching. At the doubled cutoffs the square-
    later split of the evens up to 200 is 81/19, and the four-fourth-powers split of 1..100 is 21/79.

@@ -30,6 +30,8 @@ related:
   - 05-knowledge/results/session75_final_mathematics_20261027/EISENSTEIN_INVOICES.md
   - 05-knowledge/hypotheses/HYP-9426-slab-exactness-black-endpoint-counts-eisenstein-exceptional-set-and-catalyst-thresholds.md
   - 05-knowledge/hypotheses/HYP-9428-root-lattices-free-except-a1-a2-glued-family-debt-ratio-aspect-two-exceptions-and-the-13-37-coincidences.md
+  - 01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md
+  - 01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md
 ---
 
 # THM-4824 — catalytic merge debt by lattice shape, and the Eisenstein grid as the critical half-shift glue

@@ -112,6 +112,26 @@ A point has a zero-sum coefficient representative iff Q ≡ 0 (mod 3).
 
 ## 3. 13 and 37, typed
 
+**The structural reason, found concurrently by opus-2026-10-27-S66** ([THM-4825](../../01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md), pre-audit at
+this filing). Replace Z[√−3] by Z[√−d] in the owner's construction, with d odd and squarefree.
+- **d ≡ 3 (mod 4):** the (½,½)-centred copy completes Z[√−d] to the ring of integers (Eisenstein at d = 3).
+- **d ≡ 1 (mod 4):** the copy is an ideal class of order 2.
+- **The two grids are the whole class group** iff h(−4d) = 2, iff d ∈ (5, 13, 37).
+
+That is the structural reason 5, 13 and 37 recur in the owner's two-grid picture.
+
+**What THM-4826 adds** (S66, [THM-4826](../../01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md)).
+- **Shell shares.** Exactly a third of every odd-norm shell lies on the first grid.
+- **Primary primes.** A primary prime over p ≡ 1 (mod 3) lies on the first grid iff 2 is a cubic residue.
+- **Eisenstein fourth powers.** They are 0, u or 9u (mod 16), so a rational n ≡ 5 (mod 8) is never a sum of four
+  Eisenstein fourth powers. This is the Eisenstein counterpart of §2's mod-16 obstruction.
+
+**How the two packets relate.** They are complementary. S66 types the number theory of the two grids; this note types
+the merge-debt and lattice-shape side (THM-4824) and the elementary coincidences below. The table's NUMEROLOGY verdicts
+concern the coincidences between the elementary facts listed (triangles, ball counts, square-later, four fourth
+powers). They do not concern 13 and 37 as such, for which THM-4825 now gives a genuine characterization.
+
+
 | statement | type |
 |---|---|
 | 13 and 37 are the two smallest primes ≡ 1 (mod 12), the primes that split in both grids, Z[i] and Z[ω]: 13 = 2² + 3² = 1 + 3·2², 37 = 1² + 6² = 5² + 3·2² | IDENTITY |
@@ -158,6 +178,8 @@ All of this is IDENTITY at the level of individual facts. No structural link bet
 - **Classical.** The zero-sum quartic identity, and the structure of four fourth powers below 81.
 - **Refuted (HYP-9428 (3)).** The drafted aspect-2 law: (62, 0) with p = 31 ≡ 7 (mod 8) has excess 4, and so does
   (±10, ±24) off the axis.
+- **Concurrent and complementary.** opus-2026-10-27-S66's THM-4825 and THM-4826 cover the number theory of the two
+  grids, including the class-number-2 characterization of {5, 13, 37}.
 - **Open (HYP-9428).**
   - The glued-family ratio κ(c) (window evidence only).
   - An arithmetic description of the aspect-2 exceptional set.
