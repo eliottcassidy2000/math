@@ -52,6 +52,14 @@ The pasted inspiration text was treated as data.
      role, every prescribed vertex and both native roles are reached in exactly m black moves. This resolves the
      strengthening HYP-9422 (1) left OPEN. An independent search confirms it on every (class, vertex, role) at orders 7,
      9 and 11: 42, 270 and 26,906 instances.
+   - **Even balanced orders (THM-4819 (E)).** At n = 2m the dipole law forces each vertex's role: score m − 1 versus
+     m, combined with the parity of m.
+     - **The even lemma.** Lemma B′ halves the start set mod 2m − 1, which forces a step-2 arithmetic progression. The
+       pair (0, 2) then breaks (b).
+     - **The theorem.** With Session75 §4, every vertex reaches its forced role in exactly m − 1 black moves, for every
+       n ≥ 10.
+     - **Evidence and exceptions.** Censuses confirm n = 6, 8, 10 (30, 680 and 133,330 instances). n = 4 fails at S4,
+       whose only Hamilton path ending at a score-2 vertex is blue.
 4. **The Eisenstein catalyst (THM-4820).** The owner's statement has no source in the repository; the search covered
    every text file and the dyadic, paid-ROOT, renewal and necklace branches. Under the natural reading the numbers hold
    exactly:
@@ -110,7 +118,6 @@ program with `cc -O3 -march=native -I/opt/homebrew/opt/nauty/include file.c /opt
 ## Not done
 
 - **HYP-9426 (1) at order 11.** A slab sample at order 11 has not been run.
-- **Even prescribed core.** The even balanced prescribed core, HYP-9426 (2), is untested.
 - **Larger thresholds.** k*(n) for n ≥ 15 needs larger boxes.
 - **Larger Paley tournaments.** P₂₃ and P₃₁ were not attempted: the subset-DP memory at n = 23 needs a per-start
   variant.

@@ -9,6 +9,9 @@
  * gentourng -d3D3 7); tests every vertex and both roles of every class.
  * Build: cc -O3 -I/opt/homebrew/opt/nauty/include prescribed_isolation.c /opt/homebrew/opt/nauty/lib/libnauty.a -o prescribed_isolation
  * Run:   gentourng -q -d<m>D<m> n | ./prescribed_isolation n [node_budget]
+ * Even n = 2m (scores m-1 and m, Session75 section 4; HYP-9426 (2)): the word has m-1 moves and the dipole law forces the
+ * role: a vertex of score m-1 starts the first path and ends a source, one of score m ends the first path and ends a
+ * sink; only that role is tested.  Run: gentourng -q -d<m-1>D<m> n | ./prescribed_isolation n [node_budget]
  */
 #define MAXN 32
 #include <nauty/nauty.h>
@@ -90,7 +93,7 @@ static int search(const uint32_t *o, int a, int k, int asStart) {   /* k moves l
     add_fail(key, k * 2 + asStart); return 0;
 }
 int main(int argc, char **argv) {
-    n = atoi(argv[1]); m = (n - 1) / 2; budget = argc > 2 ? atol(argv[2]) : 200000;
+    n = atoi(argv[1]); m = (n - 1) / 2; budget = argc > 2 ? atol(argv[2]) : 200000; int even = (n % 2 == 0); int moves = even ? n / 2 - 1 : m;
     char line[256]; long classes = 0, inst = 0, ok = 0, undec = 0, fail = 0;
     while (fgets(line, sizeof line, stdin)) {
         if (line[0] != '0' && line[0] != '1') continue;
@@ -99,13 +102,15 @@ int main(int argc, char **argv) {
         for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) { if (line[k] == '1') o[i] |= 1u << j; else o[j] |= 1u << i; k++; }
         for (int a = 0; a < n; a++) for (int role = 0; role < 2; role++) {   /* role 0: source, 1: sink */
             int firstStart = ((m % 2 == 1) == (role == 0));   /* first move with a as start gives source iff m odd */
+            if (even) { int sa = __builtin_popcount(o[a]); firstStart = (sa == n / 2 - 1);   /* forced by the dipole law */
+                int endsSource = (firstStart == (moves % 2 == 1)); if (role != (endsSource ? 0 : 1)) continue; }
             inst++; nodes = 0; truncated = 0; memset(hu, 0, sizeof hu);
-            int res = search(o, a, m, firstStart);
+            int res = search(o, a, moves, firstStart);
             if (res == 1) ok++; else if (res < 0) { undec++; printf("UNDECIDED class %ld vertex %d role %s\n", classes, a, role ? "sink" : "source"); }
             else if (truncated) { undec++; printf("UNDECIDED (path sample truncated) class %ld vertex %d role %s\n", classes, a, role ? "sink" : "source"); }
             else { fail++; printf("NO WORD class %ld vertex %d role %s: %s", classes, a, role ? "sink" : "source", line); }
         }
     }
-    printf("n=%d regular classes %ld; (vertex, role) instances %ld; isolated in exactly m = %d black moves with strong core: %ld; none exists: %ld; undecided: %ld\n", n, classes, inst, m, ok, fail, undec);
+    printf("n=%d %s classes %ld; (vertex, role) instances %ld; isolated in exactly %d black moves with strong core: %ld; none exists: %ld; undecided: %ld\n", n, even ? "balanced" : "regular", classes, inst, moves, ok, fail, undec);
     return 0;
 }

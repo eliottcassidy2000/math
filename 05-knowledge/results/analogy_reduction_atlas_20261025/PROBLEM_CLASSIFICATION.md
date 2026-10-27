@@ -152,7 +152,7 @@ The definitions are klein's (§2–§3 there); the placements and their pointers
 | Hadwiger–Nelson `χ = 7` | not a loop | `Σ⁰₁` witnesses (finite unit-distance graphs). The residue colourings of field planes are I1 objects (THM-4558) | the repository's HN censuses |
 | `3×3` magic square of squares | not a loop | I1 (no congruence obstruction) and I3 (the geometry of the parametrizing surfaces) | Sessions 57–61 searches |
 | `H ≥ disc` | not a loop | structural (reduced to the strong base, THM-1950) | exhaustive `n ≤ 6`, sampled `7, 8` (THM-1950) |
-| black-core connectivity | not a loop | structural. **Regular starts are PROVED at every order `≥ 7`**: exactly `m` black moves, with an unprescribed singleton (Session75) and with a prescribed singleton in either role (THM-4819 (D)) | every strong class through order 10 (THM-4811 (D2)) |
+| black-core connectivity | not a loop | structural. **Regular starts are PROVED at every order `≥ 7`**: exactly `m` black moves, with an unprescribed singleton (Session75) and with a prescribed singleton in either role (THM-4819 (D)); balanced even starts at every even order `≥ 10`, in the role the dipole law forces (THM-4819 (E)) | every strong class through order 10 (THM-4811 (D2)) |
 | Rule 30 aperiodicity | 8 local rules | **I1** (periodic points by transfer matrices; the dyadic atlases); THM-3778 is a finite-scale no-go | — |
 | ABC | not a loop | I3 | — |
 | Kakeya in `R^4`; AMM 12592 | not arithmetical / real-analytic | — | — |

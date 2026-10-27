@@ -1,0 +1,5 @@
+n=8 balanced classes 85; (vertex, role) instances 680; isolated in exactly 3 black moves with strong core: 680; none exists: 0; undecided: 0
+n=6 balanced classes 5; (vertex, role) instances 30; isolated in exactly 2 black moves with strong core: 30; none exists: 0; undecided: 0
+NO WORD class 1 vertex 2 role sink: 100111
+NO WORD class 1 vertex 3 role source: 100111
+n=4 balanced classes 1; (vertex, role) instances 4; isolated in exactly 1 black moves with strong core: 2; none exists: 2; undecided: 0

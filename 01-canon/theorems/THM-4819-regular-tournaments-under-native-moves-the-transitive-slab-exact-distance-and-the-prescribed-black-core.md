@@ -1,6 +1,6 @@
 ---
 id: THM-4819
-title: "Regular tournaments under native moves: (A) every geodesic between the transitive class and the regular classes lies in the slab L + R = (n^2-1)/8, and the slab classes on geodesics are exactly those reachable from TT by R-descending moves; (B) slab censuses at orders 5, 7, 9 (every slab class with R <= m-1 is on a geodesic); (C) every regular class through order 11, all 64 circulants and 1,000 random regular 13-tournaments, all 128 order-15 circulants and 200 random regular 15-tournaments, R5[C3], C3[R5], D(P7) and P19 are exactly (n^2-1)/8 moves from the transitive class; (D) the black endpoint lemma (for every Hamilton cycle of T - v, some rotation closed at v is black) and hence every prescribed vertex of a regular tournament on 2m+1 >= 7 vertices is detached from a strong core in exactly m black native moves, in either native role"
+title: "Regular tournaments under native moves: (A) every geodesic between the transitive class and the regular classes lies in the slab L + R = (n^2-1)/8, and the slab classes on geodesics are exactly those reachable from TT by R-descending moves; (B) slab censuses at orders 5, 7, 9 (every slab class with R <= m-1 is on a geodesic); (C) every regular class through order 11, all 64 circulants and 1,000 random regular 13-tournaments, all 128 order-15 circulants and 200 random regular 15-tournaments, R5[C3], C3[R5], D(P7) and P19 are exactly (n^2-1)/8 moves from the transitive class; (D) the black endpoint lemma (for every Hamilton cycle of T - v, some rotation closed at v is black) and hence every prescribed vertex of a regular tournament on 2m+1 >= 7 vertices is detached from a strong core in exactly m black native moves, in either native role; (E) the even balanced analogue (forced role, m - 1 black moves) at every even order >= 10, finite-exact at 6, 8, 10, false at 4"
 status: >
   PROVED (mac-mini-2026-10-27-slab; independent audit pending at filing): (A) the slab inequality and its equality case,
   confinement of geodesics, the reachability characterization and the source/sink obstruction; (D) the black endpoint
@@ -201,3 +201,50 @@ Every instance succeeds:
 | 11 | 1,223 | 26,906 | 37 s |
 
 **Consequence.** HYP-9422 (1)'s prescribed-singleton strengthening is PROVED: the detached singleton can be chosen in advance, in either native role. This is the regular-start case of the atlas's "black-core connectivity" row. The even balanced case of Session75 §4 with a prescribed singleton is HYP-9426 (2).
+
+## (E) Even balanced orders (PROVED for n ≥ 10; FINITE-EXACT at n = 6, 8, 10; FALSE at n = 4)
+
+Let n = 2m and let every score lie in {m − 1, m}. Session75 §4 (audited) proves that the black distance to C is m − 1 with an unprescribed singleton.
+
+**Which role is forced.** Put d = s − (n − 1)/2 = ±1/2. One move changes |d| by at most one, so after m − 1 moves a singleton has been an endpoint of every path, with alternating roles. Hence:
+- a vertex of score m ends as a source if m is odd and as a sink if m is even;
+- a vertex of score m − 1 ends in the opposite role.
+
+Only that role is reachable in m − 1 moves. The other role costs at least m moves (Session75 §2: a named sink needs d⁺(v) moves).
+
+**Lemma B′ (even black endpoint lemma).** Let n = 2m ≥ 10, let v have score m, and let c_0 → ⋯ → c_{2m−2} → c_0 be any Hamilton cycle of T − v. This cycle exists, because T − v is strong by Session75 §4's cut bound. Then some rotation (c_t, …, c_{t−1}, v), with c_{t−1} ∈ N⁻(v), is black.
+
+*Proof.*
+
+**Rotations starting at score m.** A blue path has endpoint scores summing to n − 1 = 2m − 1. So a rotation whose start has score m is black.
+
+**Setup.** Suppose all m − 1 rotations are blue. The derivation of Lemma B carries over verbatim with indices mod M = 2m − 1. It gives (★), (a) and (b) for U = {t : c_{t−1} ∈ N⁻(v)}, where |U| = m − 1.
+
+**Halving.** M is odd, so U′ = U/2 is well defined. By (a), U′ has no two cyclically consecutive elements of Z_M. Since |U′| = m − 1 = ⌊M/2⌋, the m − 1 cyclic gaps are all at least 2 and sum to 2m − 1. So all gaps equal 2 except one, which equals 3. After a translation, which preserves (a) and (b), U′ = {0, 2, …, 2m − 4}.
+
+**The pair (0, 2).** Take t = 0 and t′ = 4, which correspond to 0 and 2 in U′. Using 1/2 ≡ m (mod M), the witnesses of (b) are, in halved coordinates, m − 2 and m + 4. They have the same parity, and for m ≥ 6 both lie in [0, 2m − 2].
+- **Odd m ≥ 7.** Both witnesses are odd, so neither is in U′.
+- **Even m ≥ 8.** Both are even and at most 2m − 4, so both are in U′.
+
+Either way (b) fails.
+
+**m = 5 and 6.** An exhaustive search over the subsets of Z_9 and Z_11 (`start_set_conditions_even.py`) finds no U satisfying (a) and (b). ∎
+
+At m = 3 and 4, (a) and (b) do have solutions: (0,1) and (0,4) mod 5; (0,1,4), (0,3,4) and (0,3,6) mod 7. So orders 6 and 8 rest on the census. `start_set_conditions_even.py` and an inline check confirm that the progression always has a violating pair for m = 5, …, 60.
+
+**Theorem E.** Let T be balanced on n = 2m ≥ 10 vertices, let v be a vertex and let ρ be the role the dipole law forces. There is an all-black native word of length exactly m − 1 into C(v, ρ), and none shorter.
+
+*Proof.*
+- **Score m.** If s(v) = m, take P₁ to be a black Hamilton path ending at v (Lemma B′) and run Session75 §4 from its second move. The core stays strong, a second start is available because v has m − 2 ≥ 2 in-neighbours, and the endpoint sums are at least 2m > n − 1. All of this needs only m ≥ 4.
+- **Score m − 1.** Pass to T^op. It is balanced, v has score m there, and the converse conjugation applies as in Theorem D. ∎
+
+**Census** (FINITE-EXACT, `prescribed_isolation.c`, even mode). For each vertex the census tests only the forced role.
+
+| n | balanced classes | instances | result |
+|---|---|---|---|
+| 6 | 5 | 30 | all succeed |
+| 8 | 85 | 680 | all succeed |
+| 10 | 13,333 | 133,330 | all succeed (24 s) |
+| 4 | 1 (S4 = "100111") | 4 | 2 fail |
+
+At n = 4, the only Hamilton path ending at S4's score-2 vertex is 3 → 0 → 1 → 2, and it is blue. This is the even analogue of the T5 exception.
