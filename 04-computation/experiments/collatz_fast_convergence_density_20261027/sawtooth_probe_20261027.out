@@ -1,0 +1,69 @@
+(a) quarter-dyadic blocks: k, i, lower bound, size, floor#, G(8), G(13), floor density x 1e4
+ 20 0       524288     131072     1304  0.3582  0.7479  99.487  (ratio to previous quarter nan)
+ 20 1       655360     131072     1051  0.3635  0.7325  80.185  (ratio to previous quarter 0.806)
+ 20 2       786432     131072     1725  0.3516  0.7610  131.607  (ratio to previous quarter 1.641)
+ 20 3       917504     131072      619  0.3656  0.7284  47.226  (ratio to previous quarter 0.359)
+ 21 0      1048576     262144     2502  0.3587  0.7527  95.444  (ratio to previous quarter 2.021)
+ 21 1      1310720     262144     1341  0.3471  0.7492  51.155  (ratio to previous quarter 0.536)
+ 21 2      1572864     262144     2378  0.3774  0.7292  90.714  (ratio to previous quarter 1.773)
+ 21 3      1835008     262144     1932  0.3388  0.7614  73.700  (ratio to previous quarter 0.812)
+ 22 0      2097152     524288     4787  0.3408  0.7406  91.305  (ratio to previous quarter 1.239)
+ 22 1      2621440     524288     1696  0.3143  0.7423  32.349  (ratio to previous quarter 0.354)
+ 22 2      3145728     524288     3227  0.3476  0.7543  61.550  (ratio to previous quarter 1.903)
+ 22 3      3670016     524288     2523  0.3036  0.7551  48.122  (ratio to previous quarter 0.782)
+ 23 0      4194304    1048576     7570  0.3303  0.7607  72.193  (ratio to previous quarter 1.500)
+ 23 1      5242880    1048576     8962  0.3199  0.7853  85.468  (ratio to previous quarter 1.184)
+ 23 2      6291456    1048576     4337  0.3263  0.7607  41.361  (ratio to previous quarter 0.484)
+ 23 3      7340032    1048576     3261  0.3231  0.7812  31.099  (ratio to previous quarter 0.752)
+ 24 0      8388608    2097152    10240  0.3262  0.7675  48.828  (ratio to previous quarter 1.570)
+ 24 1     10485760    2097152    12422  0.3208  0.7598  59.233  (ratio to previous quarter 1.213)
+ 24 2     12582912    2097152     5801  0.3400  0.7754  27.661  (ratio to previous quarter 0.467)
+ 24 3     14680064    2097152     4180  0.3125  0.7575  19.932  (ratio to previous quarter 0.721)
+ 25 0     16777216    4194304    13750  0.3383  0.7679  32.783  (ratio to previous quarter 1.645)
+ 25 1     20971520    4194304    17067  0.3216  0.7735  40.691  (ratio to previous quarter 1.241)
+ 25 2     25165824    4194304    13042  0.3334  0.7473  31.095  (ratio to previous quarter 0.764)
+ 25 3     29360128    4194304    23970  0.2859  0.7845  57.149  (ratio to previous quarter 1.838)
+ 26 0     33554432    8388608    18285  0.3205  0.7670  21.797  (ratio to previous quarter 0.381)
+ 26 1     41943040    8388608    23246  0.2912  0.7826  27.711  (ratio to previous quarter 1.271)
+ 26 2     50331648    8388608    17038  0.3051  0.7767  20.311  (ratio to previous quarter 0.733)
+ 26 3     58720256    8388608    33387  0.2938  0.8004  39.800  (ratio to previous quarter 1.960)
+ 27 0     67108864   16777216    51081  0.2938  0.7771  30.447  (ratio to previous quarter 0.765)
+ 27 1     83886080   16777216    48130  0.3095  0.7965  28.688  (ratio to previous quarter 0.942)
+ 27 2    100663296   16777216    22071  0.2900  0.7802  13.155  (ratio to previous quarter 0.459)
+ 27 3    117440512   16777216    46095  0.3116  0.7904  27.475  (ratio to previous quarter 2.088)
+ 28 0    134217728   33554432    81002  0.2959  0.7817  24.140  (ratio to previous quarter 0.879)
+ 28 1    167772160   33554432    66537  0.2963  0.7754  19.830  (ratio to previous quarter 0.821)
+ 28 2    201326592   33554432    28402  0.3149  0.7898  8.464  (ratio to previous quarter 0.427)
+ 28 3    234881024   33554432    63124  0.2882  0.7713  18.812  (ratio to previous quarter 2.223)
+
+(b) blocks of ratio 3: j, [3^j, 3^(j+1)), size, floor#, floor density x 1e4, G(8), G(13), count ratio
+ 10        59049       177147     118098     2240  189.673  0.3966  0.7145  nan
+ 11       177147       531441     354294     4361  123.090  0.3594  0.7319  1.947
+ 12       531441      1594323    1062882     8905  83.782  0.3561  0.7470  2.042
+ 13      1594323      4782969    3188646    20915  65.592  0.3320  0.7530  2.349
+ 14      4782969     14348907    9565938    47368  49.517  0.3265  0.7695  2.265
+ 15     14348907     43046721   28697814    92053  32.077  0.3189  0.7675  1.943
+ 16     43046721    129140163   86093442   220487  25.610  0.2991  0.7851  2.395
+
+(c) blocks of ratio 4: j, [4^j, 4^(j+1)), size, floor#, floor density x 1e4, G(8), G(13), count ratio
+  8        65536       262144     196608     2953  150.197  0.3835  0.7148  nan
+  9       262144      1048576     786432     8188  104.116  0.3582  0.7403  2.773
+ 10      1048576      4194304    3145728    20386  64.805  0.3362  0.7481  2.490
+ 11      4194304     16777216   12582912    56773  45.119  0.3249  0.7674  2.785
+ 12     16777216     67108864   50331648   159785  31.746  0.3084  0.7772  2.814
+ 13     67108864    268435456  201326592   406442  20.188  0.2996  0.7817  2.544
+
+(d) dyadic blocks once more, with the two-block ratio (k vs k-2) and the implied exponent log_4(ratio):
+ 16 floor#      691
+ 17 floor#     1208
+ 18 floor#     1745  two-block ratio 2.525  exponent 0.668
+ 19 floor#     3489  two-block ratio 2.888  exponent 0.765
+ 20 floor#     4699  two-block ratio 2.693  exponent 0.715
+ 21 floor#     8153  two-block ratio 2.337  exponent 0.612
+ 22 floor#    12233  two-block ratio 2.603  exponent 0.690
+ 23 floor#    24130  two-block ratio 2.960  exponent 0.783
+ 24 floor#    32643  two-block ratio 2.668  exponent 0.708
+ 25 floor#    67829  two-block ratio 2.811  exponent 0.746
+ 26 floor#    91956  two-block ratio 2.817  exponent 0.747
+ 27 floor#   167377  two-block ratio 2.468  exponent 0.652
+ 28 floor#   239065  two-block ratio 2.600  exponent 0.689
