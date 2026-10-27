@@ -1,0 +1,8 @@
+n=3 classes 2: W4-free (every out-neighbourhood transitive) 2; locally transitive (both) 2
+n=4 classes 4: W4-free (every out-neighbourhood transitive) 3; locally transitive (both) 2
+n=5 classes 12: W4-free (every out-neighbourhood transitive) 6; locally transitive (both) 4
+n=6 classes 56: W4-free (every out-neighbourhood transitive) 11; locally transitive (both) 6
+n=7 classes 456: W4-free (every out-neighbourhood transitive) 20; locally transitive (both) 10
+n=8 classes 6880: W4-free (every out-neighbourhood transitive) 35; locally transitive (both) 16
+n=9 classes 191536: W4-free (every out-neighbourhood transitive) 64; locally transitive (both) 30
+n=10 classes 9733056: W4-free (every out-neighbourhood transitive) 115; locally transitive (both) 52

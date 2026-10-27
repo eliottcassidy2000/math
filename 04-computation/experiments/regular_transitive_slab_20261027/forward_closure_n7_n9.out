@@ -1,0 +1,27 @@
+n=7 level 0: 1 class
+n=7 level 1: 1 classes (from 1 R-descending moves)
+n=7 level 2: 17 classes (from 20 R-descending moves)
+n=7 level 3: 133 classes (from 428 R-descending moves)
+n=7 level 4: 82 classes (from 3598 R-descending moves)
+n=7 level 5: 15 classes (from 1496 R-descending moves)
+n=7 level 6: 3 classes (from 97 R-descending moves)
+n=9 level 0: 1 class
+n=9 level 1: 1 classes (from 1 R-descending moves)
+n=9 level 2: 82 classes (from 84 R-descending moves)
+n=9 level 3: 5424 classes (from 15168 R-descending moves)
+n=9 level 4: 26678 classes (from 1578729 R-descending moves)
+n=9 level 5: 47666 classes (from 9948024 R-descending moves)
+n=9 level 6: 45484 classes (from 20627424 R-descending moves)
+n=9 level 7: 21489 classes (from 19529895 R-descending moves)
+n=9 level 8: 4979 classes (from 7317483 R-descending moves)
+n=9 level 9: 457 classes (from 1010542 R-descending moves)
+n=9 level 10: 15 classes (from 29617 R-descending moves)
+n=11 level 0: 1 class
+n=11 level 1: 1 classes (from 1 R-descending moves)
+n=11 level 2: 314 classes (from 316 R-descending moves)
+n=11 level 3: 136099 classes (from 373646 R-descending moves)
+n=11 level 4: 2947607 classes (from 337893101 R-descending moves)
+./forward_closure 11 6  1652.14s user 6.89s system 97% cpu 28:16.87 total
+tr '\n' '
+'  0.00s user 0.00s system 0% cpu 28:16.87 total
+[exited with code 0]

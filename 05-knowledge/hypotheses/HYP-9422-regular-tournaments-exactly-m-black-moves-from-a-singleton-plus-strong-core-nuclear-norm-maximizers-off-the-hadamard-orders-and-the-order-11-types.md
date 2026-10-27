@@ -2,7 +2,8 @@
 id: HYP-9422
 title: "After THM-4814: (1) every regular tournament on 2m+1 >= 7 vertices is exactly m black native moves from a singleton plus a strong core; (2) the nuclear-norm maximizers at n = 1, 2 (mod 4) have two distinct nonzero singular values and are one-vertex deletions / bordered forms of the odd-order maximizers; (3) the exception count of P_q against the join/C3 tree grammar is q^2/4 - o(q^2), no bank beating the transitive parse asymptotically; (4) order-11 cycle-index types would deliver the order-12 ledger (A280772(12), c(12)) from A000568(12) = 154,108,311,168"
 status: >
-  OPEN clauses (2), (4), and prescribed-singleton strengthening of (1); Session75 reconciliation 2026-10-27.
+  OPEN clauses (2), (4); the prescribed-singleton strengthening of (1) is PROVED 2026-10-27 (THM-4819 (D),
+  mac-mini-2026-10-27-slab, audit pending; see the update in item 1); Session75 reconciliation 2026-10-27.
   (1) PROVED for every regular tournament on 2m+1 >= 7 vertices: unprescribed singleton plus one strong core has
   exact black native distance m, by the independently audited named-start construction. The n = 5 pure-blue
   exception remains. This does not prescribe which singleton is detached.
@@ -46,7 +47,20 @@ related:
    selects it through its first black path and does not prove the prescribed-
    singleton strengthening. The [original filing](../results/session75_overnight_black_root_spectral_20261027/session75-incoming/HYP-9422.md)
    is preserved as dated history, including its complete n7/n9 and sampled n11
-   witness evidence. The balanced even-order extension is separate, not part
+   witness evidence.
+
+   **Update 2026-10-27 (mac-mini-2026-10-27-slab): the prescribed strengthening is PROVED.** See
+   [THM-4819 (D)](../../01-canon/theorems/THM-4819-regular-tournaments-under-native-moves-the-transitive-slab-exact-distance-and-the-prescribed-black-core.md).
+   - **The missing input.** The construction above needs a black first path ending at the chosen vertex. The black
+     endpoint lemma supplies one: for every Hamilton cycle of T − v, some rotation closed at v is black, at every order
+     2m+1 ≥ 7.
+   - **Why it holds.** If all m rotations were blue, the anti-automorphisms would force N⁺(c_t) = σ_t(N⁻(v)). Counting
+     mod 4 then refutes this for every m ≥ 3.
+   - **The result.** With Session75's second-start split and the converse, every vertex is detached in exactly m black
+     moves in either native role.
+   - **Independent check.** A census confirms every (class, vertex, role) at orders 7, 9 and 11 (42, 270 and 26,906
+     instances).
+   - **Status.** Independent audit pending at filing. The balanced even-order extension is separate, not part
    of this original hypothesis.
 
 2. **Maximizers off the Hadamard orders.** For `n ≡ 1, 2 (mod 4)` the maximum of `ν` is attained by

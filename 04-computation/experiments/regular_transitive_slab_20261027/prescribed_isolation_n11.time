@@ -1,0 +1,1 @@
+( gentourng -q -d5D5 11 | ./prescribed_isolation 11 400000 >  2>&1; )  37.03s user 0.31s system 92% cpu 40.548 total

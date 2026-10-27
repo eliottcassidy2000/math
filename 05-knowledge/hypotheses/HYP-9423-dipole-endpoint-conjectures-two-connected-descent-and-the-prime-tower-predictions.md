@@ -84,3 +84,12 @@ related:
    1,223 of them, with every path replayed and `P_11` among them. The order-9 class census agrees. This is the
    all-regular form of HYP-9420 (4)'s bounded-excess question, with excess 0. Test next: order 13 (1,495,297 regular
    classes) needs a smarter covering than random chains.
+   **Update 2026-10-27 (mac-mini-2026-10-27-slab, THM-4819).**
+   - **The geodesics.** Every geodesic lies in the slab L + R = (n²−1)/8, and the slab classes on geodesics are exactly
+     the R-descending chains from TT (THM-4819 (A), PROVED).
+   - **New exact instances,** found by a replayed L-descending search:
+     - order 13: all 64 circulants and 1,000 random regular tournaments;
+     - order 15: all 128 circulants and 200 random regular tournaments, plus R5[C3], C3[R5] and D(P₇);
+     - order 19: P₁₉, at 45 moves.
+   - **A strengthening.** HYP-9426 (1) conjectures that every slab class with R ≤ m − 1 is on a geodesic.
+   - **Status.** The all-order statement stays OPEN.

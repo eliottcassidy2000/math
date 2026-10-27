@@ -1,0 +1,5 @@
+n=4: classes 4; identities hold: True; score sequences 4, with #S4 not determined by the scores: 0; pattern-free classes: TT4 3, W4 3, L4 3, S4 3
+n=5: classes 12; identities hold: True; score sequences 9, with #S4 not determined by the scores: 2; pattern-free classes: TT4 3, W4 6, L4 6, S4 4
+n=6: classes 56; identities hold: True; score sequences 22, with #S4 not determined by the scores: 11; pattern-free classes: TT4 1, W4 11, L4 11, S4 6
+n=7: classes 456; identities hold: True; score sequences 59, with #S4 not determined by the scores: 41; pattern-free classes: TT4 1, W4 20, L4 20, S4 9
+n=8: classes 6880; identities hold: True; score sequences 167, with #S4 not determined by the scores: 136; pattern-free classes: TT4 0, W4 35, L4 35, S4 13
