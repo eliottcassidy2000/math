@@ -1,0 +1,75 @@
+{
+  "GF27_Gram": "27I-J (exact)",
+  "GF27_irreducible_polynomial": "x^3-x+1 over F3",
+  "entropy_ratio_grid_samples_numeric_only": 10000,
+  "integer_mod27_hostile": "not antisymmetric, rejected",
+  "maximally_unbalanced_binary_chain_max_n": 32,
+  "native_controls": {
+    "all_native_moves_n2_n3_n4": 206,
+    "native_rank_two_hostile_rank": 4,
+    "random_symmetry_words": 100
+  },
+  "parse_plane_shapes_n2_through_n7_b2_b3_b4": 2154,
+  "sampled_Paley27_tower27_relabelling_converse_count": 128,
+  "sampled_arc_disagreement_range": [
+    147,
+    200
+  ],
+  "scope": "Independent finite exact controls; only entropy grid is floating-point; all-order proof separate",
+  "status": "PASS",
+  "tower_Paley_bounds_exact_arithmetic": [
+    {
+      "arc_lower_bound": 0,
+      "k": 1,
+      "n": 3,
+      "native_word_lower_bound": 0
+    },
+    {
+      "arc_lower_bound": 54,
+      "k": 3,
+      "n": 27,
+      "native_word_lower_bound": 3
+    },
+    {
+      "arc_lower_bound": 9234,
+      "k": 5,
+      "n": 243,
+      "native_word_lower_bound": 39
+    },
+    {
+      "arc_lower_bound": 988524,
+      "k": 7,
+      "n": 2187,
+      "native_word_lower_bound": 453
+    }
+  ],
+  "tower_spectrum_exact_controls": [
+    {
+      "gram_eigenvalue_multiplicities": {
+        "3": 2
+      },
+      "k": 1,
+      "n": 3,
+      "trace_sqrt3_coefficient": 2
+    },
+    {
+      "gram_eigenvalue_multiplicities": {
+        "3": 6,
+        "27": 2
+      },
+      "k": 2,
+      "n": 9,
+      "trace_sqrt3_coefficient": 12
+    },
+    {
+      "gram_eigenvalue_multiplicities": {
+        "3": 18,
+        "27": 6,
+        "243": 2
+      },
+      "k": 3,
+      "n": 27,
+      "trace_sqrt3_coefficient": 54
+    }
+  ]
+}

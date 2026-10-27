@@ -1,0 +1,8 @@
+{
+  "authorization": "Parent /root at 2026-10-27 07:02:58 UTC: promote only RESULT.md status after independent PASS; no new math/probes",
+  "candidate": "status-promotion/RESULT.reviewed-candidate.md",
+  "diff": "status-promotion/status-only.diff",
+  "edit": "One-line status-only replacement; all other bytes identical",
+  "final_result_sha256": "09872984617860f95b21020acfa9f02df2e46594194520dd82d3162f113b6d94",
+  "reviewed_candidate_sha256": "ac9ce92c4802508d66a36c8d41053b741db99ef882a3eaa4290927bfd3845c16"
+}

@@ -12,7 +12,7 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [Maps](../05-knowledge/results/support_image_composition_20261026/README.md).
 
-[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md).
+[S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md); [S75](S75.md).
 
 ## Orientation
 
@@ -124,5 +124,4 @@ python3 agents/start_session.py --topic "<target statement or object>"
 
 ## Maintaining this brief
 
-Keep current facts here and in `CURRENT-FRONTIER.md`; superseded arguments
-belong in history.
+Current facts: here and `CURRENT-FRONTIER.md`; superseded arguments: history.

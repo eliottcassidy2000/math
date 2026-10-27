@@ -1,0 +1,9 @@
+{
+  "rejected": [
+    "nonzero_singleton",
+    "wrong_target_minimum",
+    "false_lower_bound",
+    "duplicate_named_leaf"
+  ],
+  "status": "PASS"
+}

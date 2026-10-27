@@ -1,0 +1,37 @@
+[
+  {
+    "commit": "96e35642110104cc547516a63f37eebcf930f707",
+    "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+    "snapshot": "sources/01-README.md",
+    "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+    "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+  },
+  {
+    "commit": "96e35642110104cc547516a63f37eebcf930f707",
+    "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+    "snapshot": "sources/02-REPORT.md",
+    "git_blob": "093d428c50981bd361909ac1f3ba044ceadeaabb",
+    "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+  },
+  {
+    "commit": "96e35642110104cc547516a63f37eebcf930f707",
+    "path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+    "snapshot": "sources/03-THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+    "git_blob": "e0cab9a112bd0ab4dd304c6a8eb24fe9a2ab81e3",
+    "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+  },
+  {
+    "commit": "96e35642110104cc547516a63f37eebcf930f707",
+    "path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+    "snapshot": "sources/04-CLASSIFICATION.md",
+    "git_blob": "63ead76e66bf475ee7c5a09ffecba4aab45298c4",
+    "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+  },
+  {
+    "commit": "96e35642110104cc547516a63f37eebcf930f707",
+    "path": "00-navigation/S74.md",
+    "snapshot": "sources/05-S74.md",
+    "git_blob": "41925443e17c8dd5ecbf821cf7f1d557ed88b35b",
+    "sha256": "923c55a7739fef08817c87378ec999e9d937aac52a4378eb211b21516f0a6cf5"
+  }
+]

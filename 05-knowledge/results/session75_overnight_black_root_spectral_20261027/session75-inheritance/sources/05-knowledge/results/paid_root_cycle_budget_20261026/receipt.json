@@ -1,0 +1,771 @@
+{
+  "aliquot": {
+    "complete_inverse_fibres": {
+      "2": [],
+      "5": [],
+      "7": [
+        8
+      ],
+      "21": [
+        18,
+        51,
+        91
+      ]
+    },
+    "source_bound": 400
+  },
+  "cycles": {
+    "cases": [
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 1,
+        "orders": 6,
+        "sizes": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 1,
+        "orders": 12,
+        "sizes": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 1,
+        "orders": 20,
+        "sizes": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 1,
+        "orders": 30,
+        "sizes": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 2,
+        "orders": 30,
+        "sizes": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 2,
+        "orders": 60,
+        "sizes": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 2,
+        "orders": 105,
+        "sizes": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 3,
+        "orders": 140,
+        "sizes": [
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 3,
+        "orders": 280,
+        "sizes": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 4,
+        "orders": 630,
+        "sizes": [
+          1,
+          4,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 4,
+        "orders": 90,
+        "sizes": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 1,
+        "minimum_edges": 4,
+        "orders": 210,
+        "sizes": [
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 1,
+        "minimum_edges": 4,
+        "orders": 420,
+        "sizes": [
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 6,
+        "orders": 560,
+        "sizes": [
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 2,
+        "minimum_edges": 6,
+        "orders": 1260,
+        "sizes": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 0,
+        "minimum_beta_at_minimum_edges": 0,
+        "minimum_edges": 8,
+        "orders": 3150,
+        "sizes": [
+          2,
+          4,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 2,
+        "minimum_beta_at_minimum_edges": 2,
+        "minimum_edges": 9,
+        "orders": 1680,
+        "sizes": [
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "minimum_beta": 2,
+        "minimum_beta_at_minimum_edges": 4,
+        "minimum_edges": 9,
+        "orders": 4200,
+        "sizes": [
+          3,
+          3,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 3,
+        "minimum_beta_at_minimum_edges": 3,
+        "minimum_edges": 12,
+        "orders": 11550,
+        "sizes": [
+          3,
+          4,
+          4
+        ]
+      },
+      {
+        "minimum_beta": 6,
+        "minimum_beta_at_minimum_edges": 6,
+        "minimum_edges": 16,
+        "orders": 34650,
+        "sizes": [
+          4,
+          4,
+          4
+        ]
+      }
+    ],
+    "paley_module_subsets_checked": 119,
+    "unrestricted_six_vertex_orders": 720
+  },
+  "native": {
+    "all_N_scan": {
+      "first_N": 4096,
+      "first_violation": null,
+      "integer_scales": 61441,
+      "last_N": 65536,
+      "maximum_debt_N": 18275,
+      "maximum_debt_ratio": "4076/44381",
+      "maximum_forcing_N": 65280,
+      "maximum_forcing_upper_ratio": "40631883308881/158535000000000000",
+      "sufficient_half_source_debt_violations": 0
+    },
+    "denominator": 1000000000000,
+    "frontier_sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+    "primitive_edges_checked": 37501,
+    "rows": [
+      {
+        "N": 4096,
+        "forcing_ratio_interval": [
+          "1227141298647/4974500000000000",
+          "98171307169/397960000000000"
+        ],
+        "max_clock": 110,
+        "max_depth": 67,
+        "nyquist_norm": 9629,
+        "prefix_debt": {
+          "clock": {
+            "at_cutoff": 108,
+            "cutoffs_checked": 97,
+            "max_positive_debt": 469,
+            "source_norm": 9949
+          },
+          "depth": {
+            "at_cutoff": 36,
+            "cutoffs_checked": 61,
+            "max_positive_debt": 494,
+            "source_norm": 9949
+          }
+        },
+        "refinement_energies": [
+          [
+            1,
+            9629
+          ],
+          [
+            2,
+            9431
+          ],
+          [
+            4,
+            9708
+          ],
+          [
+            8,
+            9941
+          ],
+          [
+            16,
+            10116
+          ],
+          [
+            32,
+            10073
+          ],
+          [
+            64,
+            10140
+          ],
+          [
+            128,
+            9961
+          ],
+          [
+            256,
+            9972
+          ],
+          [
+            512,
+            9981
+          ],
+          [
+            1024,
+            9959
+          ],
+          [
+            2048,
+            9941
+          ],
+          [
+            4096,
+            9946
+          ],
+          [
+            8192,
+            9949
+          ]
+        ],
+        "retained_port_clock_norm": 9396,
+        "route_sha256": "d7cb28f971abc27371c951b1a4dcd3b990e678221fd3cc15872eafe8efe4275a",
+        "source_norm": 9949,
+        "sources": 6144,
+        "sum_positive_refinement_debt": 460,
+        "ungauged_ratio_interval": [
+          "12881721703234209596841/9949000000000000",
+          "6440860851617104812101/4974500000000000"
+        ],
+        "weighted_clock": 163906
+      },
+      {
+        "N": 5997,
+        "forcing_ratio_interval": [
+          "245068322173/970800000000000",
+          "122534165723/485400000000000"
+        ],
+        "max_clock": 110,
+        "max_depth": 67,
+        "nyquist_norm": 14420,
+        "prefix_debt": {
+          "clock": {
+            "at_cutoff": 109,
+            "cutoffs_checked": 104,
+            "max_positive_debt": 901,
+            "source_norm": 14562
+          },
+          "depth": {
+            "at_cutoff": 66,
+            "cutoffs_checked": 67,
+            "max_positive_debt": 901,
+            "source_norm": 14562
+          }
+        },
+        "refinement_energies": [
+          [
+            1,
+            14420
+          ],
+          [
+            2,
+            14005
+          ],
+          [
+            4,
+            14078
+          ],
+          [
+            8,
+            14645
+          ],
+          [
+            16,
+            14933
+          ],
+          [
+            32,
+            14685
+          ],
+          [
+            64,
+            14560
+          ],
+          [
+            128,
+            14493
+          ],
+          [
+            256,
+            14455
+          ],
+          [
+            512,
+            14464
+          ],
+          [
+            1024,
+            14516
+          ],
+          [
+            2048,
+            14531
+          ],
+          [
+            4096,
+            14551
+          ],
+          [
+            8192,
+            14562
+          ],
+          [
+            16384,
+            14562
+          ]
+        ],
+        "retained_port_clock_norm": 13677,
+        "route_sha256": "068bcb7466806e6ec4eee9f179ef48ecbee6f3e61af3e1cf2d10eece840db4c0",
+        "source_norm": 14562,
+        "sources": 8996,
+        "sum_positive_refinement_debt": 893,
+        "ungauged_ratio_interval": [
+          "5509978369366484634181/2912400000000000",
+          "9183297282277474405751/4854000000000000"
+        ],
+        "weighted_clock": 278845
+      },
+      {
+        "N": 11002,
+        "forcing_ratio_interval": [
+          "3366368677483/13361000000000000",
+          "1346547532603/5344400000000000"
+        ],
+        "max_clock": 164,
+        "max_depth": 100,
+        "nyquist_norm": 25611,
+        "prefix_debt": {
+          "clock": {
+            "at_cutoff": 78,
+            "cutoffs_checked": 120,
+            "max_positive_debt": 2147,
+            "source_norm": 26722
+          },
+          "depth": {
+            "at_cutoff": 44,
+            "cutoffs_checked": 75,
+            "max_positive_debt": 2181,
+            "source_norm": 26722
+          }
+        },
+        "refinement_energies": [
+          [
+            1,
+            25611
+          ],
+          [
+            2,
+            27977
+          ],
+          [
+            4,
+            27439
+          ],
+          [
+            8,
+            26885
+          ],
+          [
+            16,
+            27462
+          ],
+          [
+            32,
+            26981
+          ],
+          [
+            64,
+            26879
+          ],
+          [
+            128,
+            26866
+          ],
+          [
+            256,
+            26708
+          ],
+          [
+            512,
+            26622
+          ],
+          [
+            1024,
+            26681
+          ],
+          [
+            2048,
+            26606
+          ],
+          [
+            4096,
+            26666
+          ],
+          [
+            8192,
+            26724
+          ],
+          [
+            16384,
+            26727
+          ],
+          [
+            32768,
+            26722
+          ]
+        ],
+        "retained_port_clock_norm": 24446,
+        "route_sha256": "a6916df1697319aebd4ea7b9d10dcf8d5153fdcfee5ec0d1d7beb3eaf97fe648",
+        "source_norm": 26722,
+        "sources": 16503,
+        "sum_positive_refinement_debt": 2012,
+        "ungauged_ratio_interval": [
+          "94285310026348154074391/26722000000000000",
+          "94285310026348154176999/26722000000000000"
+        ],
+        "weighted_clock": 619687
+      },
+      {
+        "N": 16384,
+        "forcing_ratio_interval": [
+          "2004676610571/7958000000000000",
+          "10023383565361/39790000000000000"
+        ],
+        "max_clock": 172,
+        "max_depth": 104,
+        "nyquist_norm": 35299,
+        "prefix_debt": {
+          "clock": {
+            "at_cutoff": 149,
+            "cutoffs_checked": 137,
+            "max_positive_debt": 3330,
+            "source_norm": 39790
+          },
+          "depth": {
+            "at_cutoff": 90,
+            "cutoffs_checked": 89,
+            "max_positive_debt": 3330,
+            "source_norm": 39790
+          }
+        },
+        "refinement_energies": [
+          [
+            1,
+            35299
+          ],
+          [
+            2,
+            41271
+          ],
+          [
+            4,
+            40261
+          ],
+          [
+            8,
+            39676
+          ],
+          [
+            16,
+            41447
+          ],
+          [
+            32,
+            41171
+          ],
+          [
+            64,
+            40621
+          ],
+          [
+            128,
+            40381
+          ],
+          [
+            256,
+            40387
+          ],
+          [
+            512,
+            39936
+          ],
+          [
+            1024,
+            39955
+          ],
+          [
+            2048,
+            39878
+          ],
+          [
+            4096,
+            39832
+          ],
+          [
+            8192,
+            39809
+          ],
+          [
+            16384,
+            39797
+          ],
+          [
+            32768,
+            39790
+          ]
+        ],
+        "retained_port_clock_norm": 35780,
+        "route_sha256": "18f87132d05115f8677903205db7ab49dcf5639c078ca5e138b223e0ee533f2e",
+        "source_norm": 39790,
+        "sources": 24576,
+        "sum_positive_refinement_debt": 3277,
+        "ungauged_ratio_interval": [
+          "1956855270217381254881/346000000000000",
+          "225038356074998844482263/39790000000000000"
+        ],
+        "weighted_clock": 1030934
+      },
+      {
+        "N": 65536,
+        "forcing_ratio_interval": [
+          "20389747644277/79578500000000000",
+          "40779498086181/159157000000000000"
+        ],
+        "max_clock": 201,
+        "max_depth": 122,
+        "nyquist_norm": 120569,
+        "prefix_debt": {},
+        "refinement_energies": [
+          [
+            1,
+            120569
+          ],
+          [
+            2,
+            138284
+          ],
+          [
+            4,
+            143334
+          ],
+          [
+            8,
+            145003
+          ],
+          [
+            16,
+            150580
+          ],
+          [
+            32,
+            156338
+          ],
+          [
+            64,
+            160883
+          ],
+          [
+            128,
+            162260
+          ],
+          [
+            256,
+            159404
+          ],
+          [
+            512,
+            160440
+          ],
+          [
+            1024,
+            160955
+          ],
+          [
+            2048,
+            159673
+          ],
+          [
+            4096,
+            159593
+          ],
+          [
+            8192,
+            159526
+          ],
+          [
+            16384,
+            159188
+          ],
+          [
+            32768,
+            159153
+          ],
+          [
+            65536,
+            159181
+          ],
+          [
+            131072,
+            159157
+          ]
+        ],
+        "retained_port_clock_norm": 133552,
+        "route_sha256": "88697f7521b12ed791df1d6dacc48999e053d722cb8db1404f833a770ac3df0f",
+        "source_norm": 159157,
+        "sources": 98304,
+        "sum_positive_refinement_debt": 4682,
+        "ungauged_ratio_interval": [
+          "1047420527591287546181613/31831400000000000",
+          "1309275659489109432960709/39789250000000000"
+        ],
+        "weighted_clock": 5625092
+      }
+    ],
+    "sharp_exterior_cost_per_clock": "1/9139",
+    "word_carry_controls": 49
+  },
+  "norm_seven": {
+    "denominator": 7,
+    "integer_vectors": 225,
+    "inverse_lifts": 304,
+    "marked_readout_numerator": [
+      5,
+      -1
+    ],
+    "source_norm_shells_after_twist": [
+      0,
+      7,
+      21
+    ],
+    "twist_matrix": [
+      [
+        3,
+        -1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "status": "PASS"
+}

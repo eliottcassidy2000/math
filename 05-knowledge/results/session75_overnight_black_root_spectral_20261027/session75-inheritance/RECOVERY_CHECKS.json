@@ -1,0 +1,15 @@
+{
+  "base": "96e35642110104cc547516a63f37eebcf930f707",
+  "first3_witness": {
+    "a": 1,
+    "left": 32,
+    "right": 32,
+    "s": 3,
+    "t": 3,
+    "y": 1
+  },
+  "literal_native_edges_checked": 37501,
+  "maximum_seed": 100001,
+  "scope": "Source recovery and literal affine edge check only; no all-depth energy or entry theorem.",
+  "source_hashes_verified": 21
+}

@@ -1,0 +1,153 @@
+{
+  "source_head": "96e35642110104cc547516a63f37eebcf930f707",
+  "scope": "Targeted recovery; full files hashed, only relevant sections assessed. No claim of full-corpus audit.",
+  "sources": [
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c",
+      "local_copy": "sources/05-knowledge/results/paid_root_cycle_budget_20261026/README.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/AUDIT.md",
+      "blob": "aa12cce1b375700faf16fa068700505c21f4d675",
+      "sha256": "c61537eeb822c5880d5156725a0e1afc5416e12a8b22c6c9dd81a132de3f81e4",
+      "local_copy": "sources/05-knowledge/results/paid_root_cycle_budget_20261026/AUDIT.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json",
+      "blob": "2b23884eb8e708b846f2415fb1d1dc96d8a69fb0",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d",
+      "local_copy": "sources/05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "blob": "cc53682f39ece4e8f266a41198a2785e114fd9e8",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2",
+      "local_copy": "sources/05-knowledge/results/paid_root_cycle_budget_20261026/verify.py"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/receipt.json",
+      "blob": "184447fc9dde61930d981e3b1e42d4f9a845ee99",
+      "sha256": "54f08df37647feaac759d5e7a868263834f485348d9d2cebbf9416c7a9a2435f",
+      "local_copy": "sources/05-knowledge/results/paid_root_cycle_budget_20261026/receipt.json"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/root_actual_clock_certificate_20261018o.md",
+      "blob": "1f0b0572d2ad9fe39109036df6fcf28b74ac0a63",
+      "sha256": "7154006e8df8e2708cb2d48ca4e79705fa9a1999d4314a0c995be8e2ae5ffc02",
+      "local_copy": "sources/05-knowledge/results/root_actual_clock_certificate_20261018o.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233",
+      "local_copy": "sources/05-knowledge/results/root_eisenstein_first_arrival_20261018j.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "blob": "6a3584125cb613e4675f5f071b167dbd84f40772",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec",
+      "local_copy": "sources/05-knowledge/results/root_sparse_boundary_module_20261017i.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md",
+      "blob": "9267ae323d8ffb9723a94c79247c75114ce1037b",
+      "sha256": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5",
+      "local_copy": "sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/FINAL_FINDINGS.md",
+      "blob": "06280fcc071916156893b05ec1dde5d3b5e6944d",
+      "sha256": "47522e3af94965ecd36ef193ed4dbfacf2687c2426b40d9a6eb3fa76f9385e64",
+      "local_copy": "sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/FINAL_FINDINGS.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/TYPED_PAYMENT_SYNTHESIS.md",
+      "blob": "5824accbc5de6e29556df4c3a80f97eb73378108",
+      "sha256": "f2caf2e4e74e3b049091475caaa7f59d5b7364b5d56c3a8141b08d8d04a5fa0d",
+      "local_copy": "sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/TYPED_PAYMENT_SYNTHESIS.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+      "blob": "093d428c50981bd361909ac1f3ba044ceadeaabb",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699",
+      "local_copy": "sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/COMPILER_CLOCK_LOWER_BOUND.md",
+      "blob": "922ffeeca0c7660a99e77bc3742d52b1d281886f",
+      "sha256": "98f58e15614b5a72642aef3e2532033adece1a91d661f7881ad767c12cf35832",
+      "local_copy": "sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/COMPILER_CLOCK_LOWER_BOUND.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "blob": "61660fe2dc9fc1d4951db899253ac5f75b0640a5",
+      "sha256": "83ddf9b08f516f18a260c95279b280eed5a7de34c35166080194625bc6df1f76",
+      "local_copy": "sources/05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "local_copy": "sources/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md",
+      "blob": "584c29bd1140b2812c57093238ddd18805638ac8",
+      "sha256": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67",
+      "local_copy": "sources/01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498",
+      "local_copy": "sources/05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "blob": "4bf25ff0b9cd1a673525c70416174999cf464181",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938",
+      "local_copy": "sources/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "blob": "4bcf5fe8955eca7f5c1a80f5b0f319cff384912d",
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388",
+      "local_copy": "sources/05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "05-knowledge/results/pure_blue_atom_classification_20261020/VALIDATION.md",
+      "blob": "b729bb3b4e0672aa896455caa3073eea084a0eb7",
+      "sha256": "c37433a5bc3680123e81f6b07b85dc2cd1ad0b4c02ac730e74e744ed02b00dd9",
+      "local_copy": "sources/05-knowledge/results/pure_blue_atom_classification_20261020/VALIDATION.md"
+    },
+    {
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "blob": "e0cab9a112bd0ab4dd304c6a8eb24fe9a2ab81e3",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106",
+      "local_copy": "sources/01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md"
+    }
+  ]
+}

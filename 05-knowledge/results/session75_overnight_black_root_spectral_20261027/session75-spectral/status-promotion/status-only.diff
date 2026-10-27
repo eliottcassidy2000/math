@@ -1,0 +1,11 @@
+--- RESULT.reviewed-candidate.md
++++ RESULT.md
+@@ -1,7 +1,7 @@
+ # Spectral budgets for bounded tournament substitution grammars
+ 
+ Session75; 2026-10-27. **PROVED self-contained in the stated interfaces;
+-FINITE-EXACT benchmarks; pending independent parent audit.** No historical
++FINITE-EXACT benchmarks; INDEPENDENTLY AUDITED in the stated scope.** No historical
+ priority claim. This packet neither closes native all-word reachability nor
+ proves a ROOT positivity statement.
+ 

@@ -1,0 +1,9 @@
+{
+  "corruptions_rejected_normal_and_optimized": [
+    "final_minimum",
+    "interior_subset_optimum",
+    "illegal_quotient_orientation",
+    "duplicated_vertex"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,96 @@
+---
+id: THM-4810
+title: "Hamiltonian-path spectra, strong fibres, and the native complement grammar on labelled tournaments. (A) Atlas, orders 3-8 (FINITE-EXACT): for every order n <= 8 the number of labelled tournaments, isomorphism classes and strong classes with each Hamiltonian-path count H; the strong spectra S_n with floors f(n) = 3, 5, 9, 15, 25, 45 and maxima 3, 5, 15, 45, 189, 661; S_6 omits 21, 35, 39; S_7 omits 63, 107, 119, 149 and 161-187 except 171, 175; S_8 omits 47, 55, 67 and the top holes 611, 615, 617, 619, 623, 625, 635, 647, 655; every odd 3 <= v <= 609 except 7 and 21 is the path count of a strong tournament on at most 8 vertices; the complete strong fibres F_s(v) (strong classes of all orders with H = v) for odd v <= 74 are empty exactly at 1, 7, 21 and singletons exactly at 3, 5, 11, 13; extended to v <= 124 by canonical forms at order 9, with minimum 10 on [75, 123] and no further singleton (THM-4744's P_d(1) has the same fibres for every odd d < 625). (B) Low end at orders 9-10 by augmentation (FINITE-EXACT, via Moon 1966): S_9 ∩ [1, 200] = {75, 81} ∪ (odd [85, 199]), so f(9) = 75 and the only odd gaps of S_9 below 200 are 77, 79, 83; S_10 ∩ [1, 200] = {125, 135, 145, 147, 153, 155, 159, 161, 165, 167, 169, 171} ∪ (odd [175, 199]), so f(10) = 125 with the thirteen gaps 127, 129, 131, 133, 137, 139, 141, 143, 149, 151, 157, 163, 173; with the certified strong witnesses at orders 9 (every odd value of [85, 2881]) and 10 (every odd value of [175, 6000]), every odd 3 <= v <= 6,000 except 7 and 21 is the path count of a strong tournament on at most 10 vertices, reproducing inside canon's range (THM-4744 to 625 completely, HYP-9029 / THM-4102 / THM-4104 to 80,265; Chan-Pak's Conjecture 6.2, Royle to 80,557) that the strong-untouchable odd values below 6,001 are exactly 1, 7, 21; f(11) = 225 with S_11 ∩ [1, 300] = {225, 243, 245, 255, 261, 265, 267, 273, 279, 281, 285, 289, 291, 295, 297}. (C) Native complement moves (PROVED): tau_P(T) = T^op xor E(P) composes as tau_Q tau_P (T) = T xor (E(P) xor E(Q)); for n = 1, 2 (mod 4) the parity of the number of forward arcs is invariant under every move and re-marking (for n = 1 mod 4 also under the converse), so the in-place grammar reaches at most half of the labelled tournaments; two-move criterion: d(T, transitive class) <= 2 iff some order's backward set is E(P) xor E(Q) for a path P of T and a path Q of tau_P(T); f(tau_P T) <= f(T) + n - 1 and d(T) >= ceil(f(T)/(n-1)); every regular tournament on q vertices has f >= (q^2 - 1)/8 and for q >= 15 is beyond one complement from any forest frame; score monotonicity: one move changes L(T) = (1/2) sum_i |s_(i) - i| (sorted out-degrees) by at most one, so d(T, T') >= |L(T) - L(T')|, d(T, transitive) >= L(T) and d(T, forest frames) >= L(T) - (n - 1); for the Paley clocks d(P_q, transitive) >= (q^2 - 1)/8, quadratic in q, and P_11 is at least fifteen moves from the transitive class and five from any forest frame. (D) Census (FINITE-EXACT): the move graph is connected at orders 4, 7 and 8 and has exactly the two parity classes as components at orders 5 and 6; the transitive tournament has eccentricity 7, 6, 7, 13, 17 at orders 4-8 and diameters 7, 6, 7 at orders 4-6; the bound ceil(f/(n-1)) is attained only by the transitive tournament and its unique neighbour; P_7 is at distance 7 from the transitive tournament. (E) Paley clocks (FINITE-EXACT): f(P_q) = 7, 20, 64, 92, 180 for q = 7, 11, 19, 23, 31 (7 and 20 are the classical extremal values of A003141 / Bermond 1972 and session73's); cycle debts b(P_7) = 1 (21 orders), b(P_11) = 10 (2,420 orders, all with 20 backward arcs); f(P_7[C_3]) = f(C_3[P_7]) = 70 as session73's G1 predicts; from P_11 the exact minimum feedback-arc count after one move is 14; at depth two the exact census of all 8,349,303,325 path pairs shows that every state has score bound L >= 13 (so f >= 13; session73's depth-two witness with f = 13 is optimal), that no state has f <= 10 and that none is forest-framed, so P_11 is not within two complements of a forest frame and, by score monotonicity, not within four; the minimum f at depth k from P_11 is exactly 15 - k for k = 1, 2, 3."
+status: >
+  CURRENT ADDENDUM (Session74, 2026-10-27, PROVED with independently checked certificates): exact P_11 distance 6 to forest frames and 15 to the transitive class; original S63 lower bounds remain valid.
+  FINITE-EXACT: (A) h_spectrum_sweep_20261027.cpp (full labelled sweep, Burnside class counts over the odd-cycle-type
+  permutations; totals 2, 4, 12, 56, 456, 6,880 and strong 1, 1, 6, 35, 353, 6,008 agree with the known sequences;
+  the spectra agree with THM-1370 / S152 where those are recorded) and h_spectrum_summary_20261027.py; (B)
+  strong_low_spectrum_augment_20261027.cpp (brute-force canonical forms at orders 7 and 8 reproduce 456 / 353 and 6,008);
+  (D) complement_moves_bfs_20261027.cpp and complement_moves_bfs_n8_20261027.cpp (order 8: all 2^28 states, connected, eccentricity 17); (E) paley_exception_budgets_20261027.cpp (subset DP for f, 2 GB at q = 31;
+  brute force over q! orders for b, q <= 11) and paley11_two_moves_20261027.cpp (exact depth-one and depth-two censuses).
+  PROVED: (C), elementary (section 4 of the note).
+  CITED: Moon 1966 (every strong tournament on n >= 4 vertices has a vertex whose deletion leaves a strong tournament;
+  THM-1370's citation) and the insertion lemma H(T - v) <= H(T) (THM-1370); THM-1370 / THM-079 / THM-115 for the omission
+  of 7 and 21 at every order and the floor law (Moon 1972, Busch 2006); session73's G1 / G2 laws, its P_11 barrier
+  (f(P_11) = 20 > 18) and its bounded depth probes; CONJ-002 / LEM-001 for H(P_11) = 95,095; THM-4743 (C_3, Z_5{1,2}, P_7
+  exceptional); weighted renewal T1-T2 (forest frames, forest -> P_7); THM-4807 (paths determine the tournament).
+  FINITE-EXACT membership certificates at orders 9 and 10 (the order-9 set equals THM-4097's exact S_9).
+  CITED (missed at filing, found by the audit; MISTAKE-680): THM-4744 (complete strong inventories P_d for odd d < 625;
+  strong-untouchables below 625 = {1, 7, 21}; P_d(1) = 1 only at 3, 5, 11, 13), THM-4097 (the exact 1,482-value S_9),
+  THM-4102 / THM-4104 / HYP-9029 (strong witnesses for every odd of [65, 80265]), THM-1862 / THM-1936 (multiplicative
+  closure), Chan-Pak, Conjecture 6.2 (TCS 1015 (2024) 114776, arXiv:2308.10214; bof and Royle, MO 232751; verified below
+  80,557), OEIS A003141 / Bermond 1972 (f = 7, 20 extremal at orders 7, 11), session73's G3 tariff |f(tau_P T) - f(T)| <= n - 3.
+  AUDITED: PASS WITH CORRECTIONS (every number reproduced with the auditor's own code; five majors, all prior art and
+  two false sentences, applied; sixteen minors applied; MISTAKE-680; report beside the note).
+  OPEN: whether every odd v >= 23 is the path count of a strong tournament (Chan-Pak's Conjecture 6.2 in HYP-9029's
+  strong form; HYP-9420 (1)); connectivity of the move graph
+  for n = 0, 3 (mod 4) beyond 7 and the two-component law for n = 1, 2 (mod 4) beyond 6; the distance of P_11 from the
+  transitive class was OPEN at filing and is now exactly 15 (Session74 addendum below); the diameter at order 7.
+session: opus-2026-10-27-S63
+source: 05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md
+related:
+  - THM-1370
+  - THM-079
+  - THM-115
+  - THM-4790
+  - THM-4805
+  - THM-4743
+  - THM-4807
+  - HYP-9420
+---
+
+# Hamiltonian-path spectra, strong fibres, and the native complement grammar
+
+## Current distance addendum — 2026-10-27 (Session74, PROVED)
+
+For every tournament on `n >= 2` vertices and every **actual backward graph** D,
+`L(T) <= n - 2 + b(D)`, with b the graph cycle rank. Consequently a forest frame
+has `L <= n - 2`, sharpening the older upper bound `n - 1` used below.
+Paley11 starts at L=15, and Theorem L changes L by at most one per native move.
+The [six legal moves](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-paley/certificate.json)
+attain a forest frame, so its exact forest-class distance is **6**.
+A [fifteen-move certificate](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-paley/supplement/certificate15.json)
+attains the transitive class, so its exact transitive-class distance is **15**.
+Both statements survive free relabelling and full converse; neither asserts
+distance to each separately prescribed labelled transitive tournament.
+
+See the [score proof and independent audit](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit/REPORT.md)
+and [independent fifteen-move audit](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit-supplement/REPORT.md).
+The initial intrinsic cycle debt is still 10; the attained depths 1–6 have
+exact debts 5,4,3,2,1,0. Raw cycle debt is not one-step Lipschitz. A forest's
+edge budget remains n−1, not n−2. The complete proof uses actual graph
+acyclicity, not merely an equinumerous family or a low edge count.
+
+The earlier lower bounds of five and fifteen and the depth censuses are
+retained at their original scope; this addendum does not re-audit unrelated
+S63 claims. Only HYP-9420(4)'s five-move attainability prediction is refuted;
+its distinct asymptotic
+transitive-excess O(q) and bounded O(1) hypotheses both remain OPEN. Finite
+orders 7 and 11 settle neither. See the [current hypothesis](../../05-knowledge/hypotheses/HYP-9420-strong-untouchables-1-7-21-complement-graph-components-paley-depth-quadratic-bound.md).
+
+Full statements, tables, proofs and reproduction: the [source note](../../05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md). Definitions: H(T) is the number of Hamiltonian paths of a tournament T; S_n the set of values of H on strong n-tournaments, f(n) = min S_n; F_s(v) the number of strong classes (all orders) with H = v; the native complement of T along a Hamiltonian path P is tau_P(T) = T^op xor E(P) (every arc off P reversed); d(T) is the number of complement moves from the transitive tournament, re-marking being free; f(T) is the minimum feedback-arc count and b(T) the minimum cycle debt |E| - n + components of a backward-pair graph over all total orders.
+
+## (A) Atlas, orders 3-8
+
+See section 1 of the note: the per-order table (classes, strong classes, |A_n|, |S_n|, f(n), max, gaps), the sets S_n, the first-instance orders, and the complete strong fibre table F_s(v) for odd v <= 74 (complete because f(9) = 75, computed in (B)). Corollary: every odd v with 3 <= v <= 609, v not 7 or 21, is attained by a strong tournament on at most 8 vertices (S_7 ∪ S_8 covers [25, 609] except 7, 21, and S_3..S_6 cover 3, 5, 9-19, 23); THM-1370 recorded the all-tournament version via joins, and HYP-9029's strong(7) / strong(8) intervals contain the strong version.
+
+## (B) Low end at orders 9-10
+
+Augmentation (section 2 of the note; strong_low_spectrum_augment_20261027.cpp): every strong n-tournament with H <= B is a one-vertex augmentation of a strong (n-1)-tournament with H <= B (Moon 1966 and the insertion lemma), so S_n ∩ [1, B] is exact once the strong (n-1)-classes with H <= B are enumerated. With B = 200: S_9 ∩ [1, 200] = {75, 81} ∪ (odd [85, 199]), so f(9) = 75 and the only odd gaps of S_9 below 200 are 77, 79, 83; S_10 ∩ [1, 200] = {125, 135, 145, 147, 153, 155, 159, 161, 165, 167, 169, 171} ∪ (odd [175, 199]), so f(10) = 125 with the thirteen gaps 127, 129, 131, 133, 137, 139, 141, 143, 149, 151, 157, 163, 173. The order-10 witness search found exactly the complement of these thirteen gaps below 200, an independent agreement. Combined with the atlas and the certificates (every odd value of [85, 2881] at order 9, of [175, 6000] at order 10): every odd 3 <= v <= 6,000 except 7 and 21 is the Hamiltonian-path count of a strong tournament on at most 10 vertices, and the strong-untouchable odd values below 6,001 are exactly 1, 7, 21 (7 and 21 by THM-1370); this reproduces, inside canon's range, THM-4744 (inventories to 625) and HYP-9029 / THM-4102 / THM-4104 (witnesses to 80,265). With B = 300 the same augmentation reaches order 11: S_11 ∩ [1, 300] = {225, 243, 245, 255, 261, 265, 267, 273, 279, 281, 285, 289, 291, 295, 297}, so f(11) = 225; the floors f(9), f(10), f(11) = 75, 125, 225 equal the Moon-Busch law min{3^a 5^b : 2a + 3b = n - 1} (Busch 2006, CITED for the general law), and F_s(v) is complete for v <= 224 from orders <= 10.
+
+## (C) The native complement grammar: proofs
+
+**Lemma 1.** One move toggles exactly the pairs off P. Two moves toggle the symmetric difference of the two path pair sets: tau_Q tau_P (T) = T xor (E(P) xor E(Q)), P a Hamiltonian path of T, Q one of tau_P(T). Proof: (all \ E(P)) xor (all \ E(Q)) = E(P) xor E(Q). The same P twice is the identity.
+
+**Theorem P (parity).** The number of toggled pairs per move is (n-1)(n-2)/2, even iff n = 1, 2 (mod 4). Then the parity of the number of forward arcs (i -> j, i < j) is invariant under every move and under re-marking, so the move graph has at least two components, each inside a parity class; the full converse toggles n(n-1)/2 pairs, odd for n = 2 (mod 4) (it joins the halves) and even for n = 1 (mod 4) (the obstruction survives). At n = 5 the labelled circulant Z_5{1, 2} (seven forward arcs) is in the other class from the transitive tournament (ten) and is unreachable from it even with the converse; the obstruction separates labelled tournaments only, since a transposition of two labels flips the forward-arc parity and every isomorphism type has copies in both halves. For n = 0, 3 (mod 4) the toggle count is odd and no such invariant exists.
+
+**Theorem C2 (two moves).** d(T, transitive class) <= 2 iff some total order r satisfies D_r(T) = E(P) xor E(Q) with P a Hamiltonian path of T and Q one of tau_P(T), because Tr_r = T xor D_r(T) and Lemma 1. If f(T) = 2(n-1), the two paths cannot share a pair, so d(T, transitive class) <= 2 iff some f-optimal backward graph is the disjoint union of two directed Hamiltonian paths of T (the second being the reverse, in T, of Q).
+
+**Proposition B (clock-linear bounds).** Relative to the reversed best order of T the backward set of tau_P(T) is D xor E(P), so f(tau_P T) <= f(T) + n - 1 and d(T, transitive class) >= ceil(f(T)/(n-1)); session73's G3 tariff |f(tau_P T) - f(T)| <= n - 3 (n >= 4) gives the sharper ceil(f/(n-3)). For any total order the out-degree of the vertex in position i is (n-1-i) - b_i^in + b_i^out with sum_i (b_i^in + b_i^out) = 2f, so f >= (1/2) sum_i |s_(i) - i| for the sorted scores (rearrangement); a regular tournament on q vertices has all scores (q-1)/2, hence f >= (q^2 - 1)/8 and d >= ceil((q+1)/8). Since (q^2 - 1)/8 > 2q - 4 for q >= 15, no regular tournament on at least 15 vertices is one complement away from a forest frame (session73's one-step ceiling); P_11 needs its exact f = 20 (session73).
+
+**Theorem L (score monotonicity).** |L(tau_P T) - L(T)| <= 1 for every T and every Hamiltonian path P. Proof: the out-degrees of T^op are n - 1 - d_v; restoring the arcs of P changes only the two ends (+1 at the start, -1 at the end; internal vertices lose one out-arc and gain one). The reflection s -> n - 1 - s fixes sum_i |s_(i) - i| (sorted scores reflect to sorted scores), and sum_i |s_(i) - i| = min over bijections pi of sum_v |s_v - pi(v)| is 1-Lipschitz in each score, so two unit changes move it by at most 2; the sum is even (the signed sum vanishes), so L is an integer and moves by at most 1. Consequences: d(T, T') >= |L(T) - L(T')|; d(T, transitive class) >= L(T); d(T, forest-framed class) >= L(T) - (n - 1) since f <= n - 1 there; for regular tournaments on q vertices L = (q^2 - 1)/8, so d(P_q, transitive) >= (q^2 - 1)/8 and d(P_q, forest frames) >= (q - 1)(q - 7)/8. Checked exhaustively at orders 3-7: no move changes L by more than one, and d >= L for every tournament (at order 7, 15,771 tournaments attain d = L).
+
+## (D) Census at orders 3-7 and (E) Paley clocks
+
+The tables of sections 4 and 5 of the note. Highlights: connected at n = 4, 7, 8; two components equal to the parity classes at n = 5, 6; eccentricity of the transitive tournament 2, 7, 6, 7, 13, 17 (n = 3..8; order 8 by a parallel BFS over 2^28 states, d >= L with no violation); P_7 (f = 7, b = 1, 189 paths) at distance 7 from the transitive tournament with eccentricity 7; f(P_q) = 7, 20, 64, 92, 180 (q = 7, 11, 19, 23, 31; 7 and 20 classical, A003141) against (q^2 - 1)/8 = 6, 15, 45, 66, 120; b(P_11) = 10 = f - n + 1 (every f-optimal backward graph of P_11 is connected); f(P_7[C_3]) = f(C_3[P_7]) = 70 (G1; both atoms have feedback density 1/3). From P_11: 95,095 one-move images with exact minimum f = 14; the depth-two census of all 8,349,303,325 path pairs has every state at L in {13, 14, 15} (2L histogram 26: 6,621,199,255; 28: 1,618,277,760; 30: 109,826,310), hence f >= 13 everywhere, no state with f <= 10 and no forest frame; with Theorem L, depth three has L >= 12 and depth four L >= 11, so P_11 is at least five complements from any forest frame and at least fifteen from the transitive class; the minimum f at depth 1, 2, 3 from P_11 is exactly 14, 13, 12 (exact censuses at depths 1 and 2; Theorem L plus session73's depth-three witness at depth 3).

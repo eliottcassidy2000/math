@@ -1,0 +1,194 @@
+{
+  "balanced_cut_controls": [
+    {
+      "b": 2,
+      "cut_count": 31,
+      "integer_nuclear_upper": 176,
+      "max_balanced_depth": 7,
+      "n": 32
+    },
+    {
+      "b": 3,
+      "cut_count": 30,
+      "integer_nuclear_upper": 170,
+      "max_balanced_depth": 8,
+      "n": 31
+    },
+    {
+      "b": 3,
+      "cut_count": 26,
+      "integer_nuclear_upper": 146,
+      "max_balanced_depth": 6,
+      "n": 27
+    },
+    {
+      "b": 3,
+      "cut_count": 2,
+      "integer_nuclear_upper": 6,
+      "max_balanced_depth": 2,
+      "n": 3
+    },
+    {
+      "b": 3,
+      "cut_count": 6,
+      "integer_nuclear_upper": 24,
+      "max_balanced_depth": 4,
+      "n": 7
+    },
+    {
+      "b": 3,
+      "cut_count": 10,
+      "integer_nuclear_upper": 42,
+      "max_balanced_depth": 4,
+      "n": 11
+    }
+  ],
+  "exact_distances": [
+    {
+      "minimum_arc_flips": 0,
+      "n": 3,
+      "partition_counts": [
+        6,
+        1
+      ],
+      "witness_exceptions": []
+    },
+    {
+      "minimum_arc_flips": 3,
+      "n": 7,
+      "partition_counts": [
+        966,
+        1701
+      ],
+      "witness_exceptions": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "minimum_arc_flips": 11,
+      "n": 11,
+      "partition_counts": [
+        86526,
+        611501
+      ],
+      "witness_exceptions": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ]
+    }
+  ],
+  "flat_field_order": 27,
+  "flat_prime_orders": [
+    3,
+    7,
+    11,
+    19,
+    31,
+    43,
+    59
+  ],
+  "miscellaneous": {
+    "clone_frobenius_loss": 6,
+    "comb_n": 1023,
+    "naive_triangle_sum_lower": 30304,
+    "rank_two_block_arc_count": 35,
+    "true_nuclear_bound_upper": "22165/2",
+    "weighted_pair_debt": "107/49"
+  },
+  "native": {
+    "all_fixed_path_tournaments_n2_to_n6": 1099
+  },
+  "paley7_hostile": {
+    "proper_nontrivial_modules_tested": 119,
+    "radius_two_masks": 232
+  },
+  "source_pins": 5,
+  "status": "PASS",
+  "tower": {
+    "examples": [
+      {
+        "arc_lower": 0,
+        "complement_lower": 0,
+        "level": 1,
+        "n": 3
+      },
+      {
+        "arc_lower": 54,
+        "complement_lower": 3,
+        "level": 3,
+        "n": 27
+      },
+      {
+        "arc_lower": 9234,
+        "complement_lower": 39,
+        "level": 5,
+        "n": 243
+      },
+      {
+        "arc_lower": 988524,
+        "complement_lower": 453,
+        "level": 7,
+        "n": 2187
+      }
+    ],
+    "n": 27,
+    "squared_singular_nullities": {
+      "243": 2,
+      "27": 6,
+      "3": 18
+    }
+  }
+}

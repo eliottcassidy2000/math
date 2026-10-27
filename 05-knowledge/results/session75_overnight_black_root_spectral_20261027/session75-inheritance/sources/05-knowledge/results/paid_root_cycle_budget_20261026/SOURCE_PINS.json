@@ -1,0 +1,126 @@
+{
+  "base_commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+  "correction_lineage": "The base actual-clock note contains the displayed additive error corrected in this session. Its literal compiler and support bound survive.",
+  "external": [
+    {
+      "consulted": "2026-10-26",
+      "scope": "Aliquot definition, untouchability of 2 and 5, conditional distinct-prime Goldbach route.",
+      "section": "Exercise 8.26, printed page 272",
+      "title": "Not Always Buried Deep",
+      "url": "https://www.pollack-math.net/NABDofficial.pdf"
+    }
+  ],
+  "incoming_read_through": "64a7985e7054821c5958dc85f6dd489c844111f2",
+  "scope": "Relevant bounded sections were read; source hashes pin full files, not a claim of whole-corpus audit.",
+  "session": "paid_root_cycle_budget_20261026",
+  "sources": [
+    {
+      "blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "blob": "eba004dc7182dd82395710efd37ca20539b05239",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "01-canon/theorems/THM-4690-first-arrival-ladder-port-and-integer-clock-decompositions-and-the-nineteen-adic-copy-obstruction.md",
+      "sha256": "083eef4977d1d7ea0a9336b7a9b933318433960691d518460b6c676843ddb3aa"
+    },
+    {
+      "blob": "351668995c2c9be0ae2dde6d095f7b11170edbbe",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/root_actual_clock_certificate_20261018o.md",
+      "sha256": "943963021dacacbca4c635caa5eea1b5e326967a0176ba137fba4b51f473d481"
+    },
+    {
+      "blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "blob": "a14b172ff874203b4757b44835569e156ff44f6e",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "04-computation/experiments/root_clock_channels_20261018o.py",
+      "sha256": "6349cd853a933e49dc31cfc3dd6d733ee0271977c1cf5339ac8fa9bc56970385"
+    },
+    {
+      "blob": "fcbfd949e06b2edfda01b47b85cb0d243cd1eafd",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/cross_scale_frontier_credits_20261021/README.md",
+      "sha256": "33006feb994515cc1592e9d4b01566172e6d9654e87039b4931239ae78a2bc45"
+    },
+    {
+      "blob": "b24028fea28b5241f1398c8f48a0e8ef61936314",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/native_cancellation_105_20261018g.md",
+      "sha256": "91b52f8e7bd7332ff1edcbd1dfdd0b43afca15cf17c7e451b32f3d5621c0b839"
+    },
+    {
+      "blob": "6a3584125cb613e4675f5f071b167dbd84f40772",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "blob": "e75409b39df2dc11017c3a0ce7038ee9f97a6550",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/rank_geometry_metagraph_20261026/README.md",
+      "sha256": "add4e63f7c497e146531c221dd47bd27b960ad5f94edc8cf69c213150664176c"
+    },
+    {
+      "blob": "46c5c523a935c3271545fef062428206c7255c58",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/README.md",
+      "sha256": "23d7b17fefd07cfc6a0d763f7ba15d2feabbdb656adf75f7edcc47c860ff205c"
+    },
+    {
+      "blob": "412691ee808a3969fc922165c6079906e1b82704",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/s57_untouchables_root27_20261026/README.md",
+      "sha256": "a98e4a1e3ecfc17d31a48508914c52253c9911c706ede318916ea64feb75ca09"
+    },
+    {
+      "blob": "48ae3786dc9622a5793c18487e1fa1b3355d0ced",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "05-knowledge/results/aliquot_power_124_20261026/aliquot/README.md",
+      "sha256": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19"
+    },
+    {
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "blob": "584c29bd1140b2812c57093238ddd18805638ac8",
+      "commit": "f4ef2ab273c1442aa88a1079a92fb6a2c2aabd80",
+      "path": "01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md",
+      "sha256": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67"
+    },
+    {
+      "blob": "c01b2c25195f2a14688b48c703808def2b23e47c",
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/README.md",
+      "sha256": "c21d4d87e9d7143b9629d5a2d657e1d6bb7669f51ee86305e977eec1fe9c068d"
+    },
+    {
+      "blob": "5d89f3ecd05815bccb3af7f4df6e739e5cb76a8c",
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/CLOCKS-MACHINES.md",
+      "sha256": "d5780e190ff3a911361fbc2c0a8eda3c96ea84c126b6dc6e6a9ab35b67859cde"
+    },
+    {
+      "blob": "326806c166879628ceedce1be280ba02baad0a6b",
+      "commit": "64a7985e7054821c5958dc85f6dd489c844111f2",
+      "path": "01-canon/theorems/THM-4809-incidence-cycle-law-degree-bound-on-restored-guards-and-clock-pattern-circulants.md",
+      "sha256": "d9c1bc93ed049e80202d8335a808889e9ab0075e0869b04a8bff376068c8498c"
+    }
+  ]
+}

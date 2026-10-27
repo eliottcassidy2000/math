@@ -1,0 +1,95 @@
+{
+  "cases": [
+    {
+      "minimum_arc_edits": 0,
+      "n": 3,
+      "root_partition_counts": [
+        6,
+        1
+      ],
+      "subset_optima_recomputed": 8,
+      "witness_exceptions": []
+    },
+    {
+      "minimum_arc_edits": 3,
+      "n": 7,
+      "root_partition_counts": [
+        966,
+        1701
+      ],
+      "subset_optima_recomputed": 128,
+      "witness_exceptions": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "minimum_arc_edits": 11,
+      "n": 11,
+      "root_partition_counts": [
+        86526,
+        611501
+      ],
+      "subset_optima_recomputed": 2048,
+      "witness_exceptions": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ]
+    }
+  ],
+  "certificate_compared": true,
+  "method": "independent maximum-correlation subset optimization, no producer imports",
+  "status": "PASS"
+}
