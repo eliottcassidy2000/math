@@ -11,6 +11,9 @@ results note: [mod-2 collapse and the Collatz strategy audit](../results/mod2_co
   statement was read by named experts, or independently re-proved. Importable as CITED with the usual statement check.
 - **T2** — Lean-checked or expert-checked but with an open dispute about scope, statement fidelity or priority, or a
   human preprint not yet refereed. Read for technique shapes; cite with the dispute named; not a proved dependency.
+  [Clause added 2026-10-27, opus-2026-10-27-S64, on the audit's request: also a platform-kernel-checked statement with
+  the standard axioms and no dispute, but with no named-expert reading and no independent replay (the Mazur rows of
+  section 1b).]
 - **T3** — fresh AI-generated manuscript with no external verification found. The repository's existing rule applies
   (CORE-PAPERS-OPENAI-FIVE-MANUSCRIPTS: PREPRINT CLAIM, used as a proved input nowhere).
 

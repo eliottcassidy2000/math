@@ -41,6 +41,10 @@ Universe: all 1 <= n < 2^KMAX (default KMAX = 28); exact 64-bit integer arithmet
 printed; it must stay far below 2^63). tau(1) = 0; n = 1 counts as fast for every C >= 0.
 
 Usage: python fast_convergence_density_20261027.py [KMAX]     (KMAX = 28 takes a few minutes and ~0.6 GB)
+
+Resolution note (audit, 2026-10-27): the density columns are read off a histogram of r = tau/ln n with bins of width
+0.01 (bin centres <= C), exact for the integer, 10.46 and 10.48 columns; the 3.307 column therefore counts r < 3.31
+(4718 against the exact 4699 at k = 20), the floor counts (P4) are exact, and medians have resolution 0.01.
 """
 import math
 import sys

@@ -1,0 +1,74 @@
+# A. sigma derivation
+E[a] = 2.000000000000, Var[a] = 2.000000000000
+E[c] = 1 + E[a] = 3.000000 ; E[delta] = 2 ln2 - ln3 = ln(4/3) = 0.28768207 ; C* = E[c]/E[delta] = 3/ln(4/3) = 10.428178
+Var(c - C* delta) = 2 (1 - C* ln2)^2 = 77.582508 ; / E[delta] = 269.6814 ; sigma = 16.4220
+direct numeric Var(c - C* delta) = 77.582508 (mean of c - C* delta = 2.258e-16, should be 0)
+Mazur 523/50 = 10.4600 ; ratio to C* = 1.003051 ; i.e. 0.305% above C*
+renewal-reward CLT (e.g. Asmussen, Applied Probability and Queues, VI.3; Smith 1955):
+  cycles (delta_i, c_i) iid, N(t) = #cycles with cumulative delta <= t, R(t) = sum c_i:
+  (R(t) - r t)/sqrt(t) -> N(0, Var(c - r delta)/E delta), r = E c / E delta.  Here t = ln n.
+
+# E. Lagarias-Weiss constant from the T-map word count (odd fraction p, gamma T-steps per ln n)
+gamma_BP (T-steps) = 41.677648, odd fraction p = 0.609090 ; ordinary-step version gamma (1+p) = 67.0631
+typical T-steps per ln n = 2/ln(4/3) = 6.95212 ; ordinary = 3/ln(4/3) = 10.42818
+
+# B. heuristic exponent E(C)
+model: #{n < X : k halvings, d odd steps, 2^k = 3^d X} ~ C(k,d) 3^-d ; k = kappa ln X, d = delta ln X
+exponent(kappa, delta) = kappa H(delta/kappa) - delta ln3 with kappa ln2 - delta ln3 = 1
+at p = delta/kappa = 1/2: E = 1.000000, kappa = 6.95212, delta = 3.47606, tau/lnX = kappa + delta = 10.42818
+unconstrained max over p of the exponent: E = 1.000000 at p = 0.50001
+1/(ln2 - ln3/2) = 6.95212
+C =  2.0000 : E(C) grid = 0.4208 (p = 0.1208, kappa = 1.7844, delta = 0.2156) | boundary closed form p_b = 0.1208 -> E = 0.4208
+C =  2.5000 : E(C) grid = 0.5841 (p = 0.1956, kappa = 2.0910, delta = 0.4090) | boundary closed form p_b = 0.1956 -> E = 0.5841
+C =  3.0000 : E(C) grid = 0.6897 (p = 0.2513, kappa = 2.3975, delta = 0.6024) | boundary closed form p_b = 0.2513 -> E = 0.6897
+C =  3.3070 : E(C) grid = 0.7383 (p = 0.2789, kappa = 2.5858, delta = 0.7212) | boundary closed form p_b = 0.2789 -> E = 0.7383
+C =  3.3074 : E(C) grid = 0.7383 (p = 0.2789, kappa = 2.5860, delta = 0.7214) | boundary closed form p_b = 0.2789 -> E = 0.7383
+C =  4.0000 : E(C) grid = 0.8195 (p = 0.3286, kappa = 3.0107, delta = 0.9893) | boundary closed form p_b = 0.3286 -> E = 0.8195
+C =  5.0000 : E(C) grid = 0.8942 (p = 0.3797, kappa = 3.6238, delta = 1.3761) | boundary closed form p_b = 0.3797 -> E = 0.8942
+C =  6.0000 : E(C) grid = 0.9401 (p = 0.4161, kappa = 4.2370, delta = 1.7630) | boundary closed form p_b = 0.4161 -> E = 0.9401
+C =  8.0000 : E(C) grid = 0.9861 (p = 0.4643, kappa = 5.4632, delta = 2.5367) | boundary closed form p_b = 0.4643 -> E = 0.9861
+C = 10.0000 : E(C) grid = 0.9996 (p = 0.4949, kappa = 6.6895, delta = 3.3104) | boundary closed form p_b = 0.4949 -> E = 0.9996
+C = 10.4280 : E(C) grid = 1.0000 (p = 0.5000, kappa = 6.9519, delta = 3.4759) | boundary closed form p_b = 0.5000 -> E = 1.0000
+C = 10.4600 : E(C) grid = 1.0000 (p = 0.5000, kappa = 6.9521, delta = 3.4760) | boundary closed form p_b = 0.5004 -> E = 1.0000
+C = 13.0000 : E(C) grid = 1.0000 (p = 0.5000, kappa = 6.9521, delta = 3.4760) | boundary closed form p_b = 0.5242 -> E = 1.0000
+
+finite-X direct model sum S(X, C) = sum_{d} C(k_d, d) 3^-d over k_d = round((ln X + d ln3)/ln2) with k_d + d <= C ln X
+  C = 3.307, X = 2^40 : S = 1.6582e+08, ln S / ln X = 0.6826
+  C = 3.307, X = 2^60 : S = 3.7800e+12, ln S / ln X = 0.6964  local exponent = 0.7238
+  C = 3.307, X = 2^80 : S = 1.3464e+17, ln S / ln X = 0.7113  local exponent = 0.7560
+  C = 3.307, X = 2^100 : S = 3.4290e+21, ln S / ln X = 0.7154  local exponent = 0.7318
+  C = 3.307, X = 2^140 : S = 1.5502e+30, ln S / ln X = 0.7164  local exponent = 0.7188
+  C = 8.000, X = 2^40 : S = 8.3159e+11, ln S / ln X = 0.9899
+  C = 8.000, X = 2^60 : S = 6.4131e+17, ln S / ln X = 0.9859  local exponent = 0.9778
+  C = 8.000, X = 2^80 : S = 5.2696e+23, ln S / ln X = 0.9850  local exponent = 0.9824
+  C = 8.000, X = 2^100 : S = 4.2045e+29, ln S / ln X = 0.9841  local exponent = 0.9803
+  C = 8.000, X = 2^140 : S = 2.9637e+41, ln S / ln X = 0.9840  local exponent = 0.9840
+
+# C. Proposition F constant and entropy saving
+C_F = (1 + (1 + log2 3)/2)/ln 2 = 3.307351
+tau >= k0 + d0 + log2(m0) with m0 >= 3^d0  ->  tau >= k0 + d0 (1 + log2 3) ; with d0 = p k0, k0 ~ log2 X: tau/ln X >= (1 + p (1 + log2 3))/ln 2
+  p = 0.50 : lower bound tau/ln X >= 3.3074 ; #{words of weight <= p k0} <= 2^(k0 H2(p)), H2 = 1.00000, exponent saving c = 0.00000
+  p = 0.49 : lower bound tau/ln X >= 3.2701 ; #{words of weight <= p k0} <= 2^(k0 H2(p)), H2 = 0.99971, exponent saving c = 0.00029
+  p = 0.48 : lower bound tau/ln X >= 3.2328 ; #{words of weight <= p k0} <= 2^(k0 H2(p)), H2 = 0.99885, exponent saving c = 0.00115
+  p = 0.45 : lower bound tau/ln X >= 3.1209 ; #{words of weight <= p k0} <= 2^(k0 H2(p)), H2 = 0.99277, exponent saving c = 0.00723
+  p = 0.40 : lower bound tau/ln X >= 2.9344 ; #{words of weight <= p k0} <= 2^(k0 H2(p)), H2 = 0.97095, exponent saving c = 0.02905
+  p = 0.30 : lower bound tau/ln X >= 2.5615 ; #{words of weight <= p k0} <= 2^(k0 H2(p)), H2 = 0.88129, exponent saving c = 0.11871
+so for C < C_F choose p < 1/2 with (1 + p(1+log2 3))/ln2 > C: count of n in [X/2,X) with tau < C ln n is <= 2 * 2^(k0 H2(p)) = O(X^(1-c)).
+entropy bound log2(sum_{j<=pk} C(k,j)) - k H2(p) max over k < 400, p <= 1/2 : 0.000000 (must be <= 0)
+
+# D. 3x-1 seeds r_j = (2^(2j+1) + 1)/3
+r_j odd integer for j < 2000: True ; 3 r_j - 1 = 2^(2j+1): True ; v3(2^(2j+1)+1) = 1 + v3(2j+1): True
+q = 1 : r_0..r_(3^q-1) permute Z/3^q: True
+q = 2 : r_0..r_(3^q-1) permute Z/3^q: True
+q = 3 : r_0..r_(3^q-1) permute Z/3^q: True
+q = 4 : r_0..r_(3^q-1) permute Z/3^q: True
+q = 5 : r_0..r_(3^q-1) permute Z/3^q: True
+q = 6 : r_0..r_(3^q-1) permute Z/3^q: True
+  ord_(3^2)(4) = 3 = 3^1 : True
+  ord_(3^3)(4) = 9 = 3^2 : True
+  ord_(3^4)(4) = 27 = 3^3 : True
+  ord_(3^5)(4) = 81 = 3^4 : True
+  ord_(3^6)(4) = 243 = 3^5 : True
+  ord_(3^7)(4) = 729 = 3^6 : True
+(3y - 1)/2^a <= (3y-1)/2 < 3y/2 <= 2y for every odd y >= 1, a >= 1: True (and T(y) = (3y-1)/2 <= 2y)
+numeric: S(y) = (3y-1)/2^(v2(3y-1)) <= 2y for odd y < 10^5: True
