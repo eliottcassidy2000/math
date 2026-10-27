@@ -54,12 +54,20 @@ Notation: `tau(n)` is the ordinary total stopping time (`n -> n/2`, `n -> 3n+1`,
    three `3x-1` cycles has a positive-lower-density basin reached in logarithmic time. Test: replay the digest's
    P1-P3 for `3x-1`; then list the sign-dependent lemmas of the formal development (expected: only the seed lemma
    and `S(y) <= 2y`). Refuted by a sign-dependent step that does not transfer.
-4. **The dyadic sawtooth is a size lattice (CONJECTURE, post hoc).** The floor set `{tau(n) < 3.307 ln n}` has
-   quarter-dyadic densities varying by factors up to `2.85` inside one block (`24.1, 19.8, 8.5, 18.8` per `10^4` in
-   `[2^27, 2^28)`). Prediction: its histogram of `log_2 n` at resolution `1/16` over `[2^20, 2^28)` has its peaks
-   (local maxima above twice the block mean) within `1/8` of points `k - d log_2 3` with `k + d <= 3.307 ln n`
-   and `d/k` in `[0.15, 0.40]`, and at least `80%` of the floor set lies within `1/4` of such a point. Refuted by
-   peaks away from the lattice or by a flat histogram at that resolution.
+4. **The dyadic sawtooth is word geometry, not 3-adic conspiracy (CONJECTURE, post hoc; test pre-registered
+   here before the run).** The floor set `{tau(n) < 3.307 ln n}` has quarter-dyadic densities varying by factors up
+   to `2.85` inside one block (`24.1, 19.8, 8.5, 18.8` per `10^4` in `[2^27, 2^28)`). An integer of the floor set
+   with T-word of length `k` and `d` odd steps is `n = (2^k - c_w)/3^d`, `c_w = sum_(odd steps j) 3^(d_j') 2^j`
+   (`d_j'` the number of odd steps after `j`), so its position inside a block is fixed by the word's carry `c_w/2^k`.
+   The independent-3-adic model (HYP (2)) predicts the floor count of a sub-block `B` as
+   `sum_(k,d) C(k,d) 3^(-d) P_(k,d)(n in B, k + d < 3.307 ln n)`, `P` over uniformly random words of that shape ending
+   with an even step. Prediction: over the 36 quarter-dyadic cells of `k = 20..28`, the Pearson correlation between
+   `log(model)` and `log(observed)` exceeds `0.8`, and the model reproduces the sign of every within-block change
+   between consecutive quarters in at least `70%` of the 27 comparisons. Refuted by a correlation below `0.5` or a
+   sign agreement at chance level (`50%`); a pass means the oscillation is the carry geometry of the few admissible
+   `(k, d)` shapes, a fail means the integrality events are correlated at this resolution (a 3-adic effect, which
+   would be the interesting outcome). (The earlier draft of this item proposed a lattice-proximity test that is
+   vacuous at this scale because the lattice `{k - d log_2 3}` is dense; withdrawn before any run.)
 5. **Pillar completeness (SYNTHESIS, falsifiable).** Every row of the strategy atlas that drops the integral
    coordinate has the `Z_2`/rational hostile, every row that drops positivity has the `3x-1` hostile, every row that
    drops the operation has the `5x+1` or choice hostile; the rows with all three pillars are counts or identities
