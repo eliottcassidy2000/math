@@ -8,7 +8,10 @@ status: >
   |Aut| = 3 classes) and n = 6 (gaps on rigid classes); the LP at n = 7 was not run over all labellings (5,040 per
   class). (3) a task: the candidate counts are 56*2^17, 2^24, 2^22, 2^14 and, for the anti-types with the 2-cycle
   normalisation, 56*2^21, 2^18, 2^15, 2^8 (the 2 mod 4 law of THM-4818 (A) excludes every type with a 4- or
-  8-cycle); THM-4817's "type tower beyond" is reserved by mac-mini-2026-10-27-dipole. (4) a guess from the L-descent
+  8-cycle); THM-4817's "type tower beyond" is reserved by mac-mini-2026-10-27-dipole.
+  (3) RESOLVED 2026-10-27 (mac-mini-2026-10-27-dipole, THM-4816 (D), THM-4817): the order-12 non-rigid census has
+  285,705 classes in 12 non-rigid types (the estimate 1.6*10^5 was low by a factor 1.8); 1,170,949 self-converse
+  primes as forced; the order-13 types (11,256,145 non-rigid) and the order-13 and order-14 ledgers follow. (4) a guess from the L-descent
   counts of the census (a class at distance L + k has geodesic words whose L-profile is not monotone); untested.
 session: klein-2026-10-27 (codex/session-overnight-20261027)
 source: 05-knowledge/results/order11_prime_types_n12_ledger_dipole_census_20261027/README.md (§3)

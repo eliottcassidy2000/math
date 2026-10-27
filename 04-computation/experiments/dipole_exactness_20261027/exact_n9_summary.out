@@ -1,0 +1,44 @@
+Order-9 class census (dipole_exactness 9 details); full details file exact_n9_details.out (21.8 MB) kept out of git, regenerate with: gentourng -q 9 | ./dipole_exactness 9 details
+n=9 classes=191536 asymmetric-edges any=0 black=0
+target TT   any   potential L                unreachable 0  d<bound 0  failures 17936 (symmetric 1062)  local-minima 13545 (symmetric 707)
+   (bound, d-bound): (0,+0):1 (1,+0):1 (1,+1):3 (1,+2):81 (1,+3):42 (2,+0):94 (2,+1):1458 (2,+2):651 (3,+0):6650 (3,+1):6581 (3,+2):209 (3,+3):2 (4,+0):32512 (4,+1):4693 (4,+2):82 (5,+0):56438 (5,+1):3276 (5,+2):15 (6,+0):50964 (6,+1):840 (6,+2):3 (7,+0):21489 (8,+0):4979 (9,+0):457 (10,+0):15 
+   local minima by (lambda, kappa): (0,0):13303 (1,1):231 (2,1):11 
+target TT   black potential L                unreachable 191535  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target TT   any   potential ceil(fas/(n-1))  unreachable 0  d<bound 0  failures 191534 (symmetric 5794)  local-minima 167589 (symmetric 4935)
+   (bound, d-bound): (0,+0):1 (1,+0):1 (1,+1):97 (1,+2):8189 (1,+3):39786 (1,+4):61336 (1,+5):48773 (1,+6):9200 (1,+7):193 (2,+3):4 (2,+4):5551 (2,+5):13144 (2,+6):4789 (2,+7):457 (2,+8):15 
+   local minima by (lambda, kappa): (0,0):13402 (1,1):77898 (2,1):153 (2,2):74402 (3,2):15 (3,3):1704 (4,3):1 (4,4):14 
+target TT   black potential ceil(fas/(n-1))  unreachable 191535  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target NS   any   potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):13403 (1,+0):78515 (2,+0):89366 (3,+0):10237 (4,+0):15 
+   local minima by (lambda, kappa): 
+target NS   black potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):13403 (1,+0):78515 (2,+0):89366 (3,+0):10237 (4,+0):15 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target SING any   potential delta0           unreachable 0  d<bound 0  failures 99 (symmetric 91)  local-minima 99 (symmetric 91)
+   (bound, d-bound): (0,+0):13304 (1,+0):78515 (1,+1):99 (2,+0):89366 (3,+0):10237 (4,+0):15 
+   local minima by (lambda, kappa): (0,0):99 
+target SING black potential delta0           unreachable 2  d<bound 0  failures 97 (symmetric 89)  local-minima 97 (symmetric 89)
+   (bound, d-bound): (0,+0):13304 (1,+0):78515 (1,+1):97 (2,+0):89366 (3,+0):10237 (4,+0):15 
+   local minima by (lambda, kappa): (0,0):97 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target CORE any   potential delta0           unreachable 0  d<bound 0  failures 1387 (symmetric 333)  local-minima 1387 (symmetric 333)
+   (bound, d-bound): (0,+0):12016 (0,+2):1288 (1,+0):78515 (1,+1):99 (2,+0):89366 (3,+0):10237 (4,+0):15 
+   local minima by (lambda, kappa): (0,0):1387 
+target CORE black potential delta0           unreachable 6  d<bound 0  failures 1381 (symmetric 327)  local-minima 1381 (symmetric 327)
+   (bound, d-bound): (0,+0):12016 (0,+2):1284 (1,+0):78515 (1,+1):97 (2,+0):89366 (3,+0):10237 (4,+0):15 
+   local minima by (lambda, kappa): (0,0):1381 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target REG  any   potential R                unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):15 (1,+0):457 (2,+0):4979 (3,+0):21489 (4,+0):45989 (5,+0):55323 (6,+0):39941 (7,+0):17687 (8,+0):4764 (9,+0):812 (10,+0):80 
+   local minima by (lambda, kappa): 
+target REG  black potential R                unreachable 6  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):15 (1,+0):457 (2,+0):4979 (3,+0):21489 (4,+0):45989 (5,+0):55323 (6,+0):39941 (7,+0):17686 (8,+0):4764 (9,+0):810 (10,+0):77 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0

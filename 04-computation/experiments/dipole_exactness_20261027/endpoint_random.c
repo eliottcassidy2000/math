@@ -5,7 +5,9 @@
  *   (K2) kappa >= 2 implies an L-descending move (some Hamiltonian path joins a pair of D_L).
  * Samplers (mode): 0 uniform; 1 near-regular (regular circulant, many random 3-cycle reversals, then f random arc
  * flips, f uniform in 1..4: ties among the extreme scores are typical); 2 planted ties: like 1 but then forces every
- * maximum-score vertex to beat every minimum-score vertex (the tied configuration not covered by Lu's theorem).
+ * maximum-score vertex to beat every minimum-score vertex (the tied configuration not covered by Lu's theorem);
+ * 3 near-transitive: the transitive tournament with k random arc reversals, k uniform in 2..2n (small L, where the
+ * known L-local minima live).
  * Build: cc -O3 -march=native endpoint_random.c -o endpoint_random ; Run: ./endpoint_random n samples mode seed
  */
 #include <stdio.h>
@@ -46,6 +48,11 @@ int main(int argc, char **argv) {
     for (long it = 0; it < samples; it++) {
         for (int i = 0; i < n; i++) out_[i] = 0;
         if (mode == 0) { for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) { if (rnd() & 1) setarc(i, j); else setarc(j, i); } }
+        else if (mode == 3) {
+            for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) setarc(i, j);
+            int k = 2 + rnd() % (2 * n - 1);
+            for (int r = 0; r < k; r++) { int a = rnd() % n, b = rnd() % n; if (a == b) continue; if (out_[a] >> b & 1) setarc(b, a); else setarc(a, b); }
+        }
         else {
             int m = n / 2;   /* rotational base: i -> i+1..i+m (n odd regular; n even: almost regular, ties broken) */
             for (int i = 0; i < n; i++) for (int j = i + 1; j < n; j++) { int d = j - i; if (d <= m && !(n % 2 == 0 && d == m && i >= m)) setarc(i, j); else setarc(j, i); }

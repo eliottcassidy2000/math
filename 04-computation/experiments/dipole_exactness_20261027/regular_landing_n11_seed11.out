@@ -1,0 +1,6 @@
+  after 10 chains: 10 distinct regular classes
+  after 100 chains: 97 distinct regular classes
+  after 1000 chains: 684 distinct regular classes
+  after 10000 chains: 1221 distinct regular classes
+  after 100000 chains: 1223 distinct regular classes
+n=11: 150000 random R-descending chains from the transitive tournament (each 15 moves) land on 1223 distinct regular classes

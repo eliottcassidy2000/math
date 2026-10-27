@@ -1,0 +1,6 @@
+TYPE count=2 k=14 aut=21 AUT: 1^14,:1 1^2,3^4,:14 7^2,:6 SC=1 ANTI: 2^1,6^2,:14 2^7,:7
+TYPE count=9 k=14 aut=7 AUT: 1^14,:1 7^2,:6 SC=1 ANTI: 14^1,:6 2^7,:1
+TYPE count=10 k=14 aut=7 AUT: 1^14,:1 7^2,:6 SC=1 ANTI: 2^7,:7
+TYPE count=1 k=14 aut=21 AUT: 1^14,:1 1^2,3^4,:14 7^2,:6 SC=1 ANTI: 14^1,:6 2^1,6^2,:14 2^7,:1
+TYPE count=2 k=14 aut=21 AUT: 1^14,:1 1^2,3^4,:14 7^2,:6 SC=0 ANTI:
+TYPE count=74 k=14 aut=7 AUT: 1^14,:1 7^2,:6 SC=0 ANTI:
