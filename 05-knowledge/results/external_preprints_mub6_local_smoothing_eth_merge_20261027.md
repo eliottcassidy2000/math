@@ -139,6 +139,10 @@ circuit bound is not a superpolynomial bound for NP.
 - **TOOL RESEMBLANCE only.** Modulus amplification mod `2^ℓ`, 2-adic tapering `q_t = h·max(0, u − v_2(t))` and Hermite
   recovery over `Z/2^ℓ` resemble the repository's 2-adic clocks (THM-4556 and the Collatz numerator coordinate THM-4813);
   the resemblance is in the ring, not in any statement.
+- The machine–Collatz dictionary (a `k`-state machine is a modular loop with `O(k)` branches), the three levels of
+  invariant (regular, semilinear, beyond) and the two tool identities (the replacement interpolant as a Bonferroni
+  truncation; modulus amplification as the Hensel idempotent) are in the reflection
+  [eth-false-busy-beaver-sizes-and-modular-loops](../../07-reflections/eth-false-busy-beaver-sizes-and-modular-loops-the-machine-collatz-dictionary-klein-20261027.md).
 - The paper cites "the Unique Games Theorem [Ope26]" (another preprint of the same collection) only to contrast
   NP-hardness of approximation with its own subexponential approximation; that claim is not examined here.
 
