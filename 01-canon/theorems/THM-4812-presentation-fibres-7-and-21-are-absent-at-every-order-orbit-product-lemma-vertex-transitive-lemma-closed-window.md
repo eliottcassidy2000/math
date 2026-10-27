@@ -1,6 +1,6 @@
 ---
 id: THM-4812
-title: "Presentation fibres 7 and 21 are absent at every order: no tournament has tc = H/|Aut| in {7, 21} (the tc version of THM-1370; HYP-9352 (2) PROVED). (a) Order 12 by exhaustive invariant scans over the order-12 type lemma (THM-4790 had n <= 11); (b) orbit product lemma: tc(T) >= prod over the Aut(T)-orbits O of tc(T[O]), each T[O] vertex-transitive; (c) vertex-transitive lemma: every vertex-transitive tournament other than K1, C3, R5 and P7 (tc = 1, 1, 3, 9) has tc >= 23; (d) so a counterexample would contain a strong S with tc(S) = 21, 13 <= |S| <= 20 or |S| = 22, all of whose Aut-orbits induce K1, C3, R5 or P7, and Aut(S) a subgroup of index 1 or 3 of the product of the orbit groups; an exhaustive search of the 83 resulting (configuration, subgroup) cases finds none; (e) the prime untouchables have relative density zero among the primes; (f) every strong presentation fibre is finite: a strong T with tc(T) = v has order at most 3 ln(v^(1 + M(v)/6)/0.5848)/ln(5/3), M(v) the largest order of a vertex-transitive tournament with tc <= v, so O(log^2 v)."
+title: "Presentation fibres 7 and 21 are absent at every order: no tournament has tc = H/|Aut| in {7, 21} (the tc version of THM-1370; HYP-9352 (2) PROVED). (a) Order 12 by exhaustive invariant scans over the order-12 type lemma (THM-4790 had n <= 11); (b) orbit product lemma: tc(T) >= prod over the Aut(T)-orbits O of tc(T[O]), each T[O] vertex-transitive; (c) vertex-transitive lemma: every vertex-transitive tournament other than K1, C3, R5 and P7 (tc = 1, 1, 3, 9) has tc >= 23; (d) so a counterexample would contain a strong S with tc(S) = 21, 13 <= |S| <= 20 or |S| = 22, all of whose Aut-orbits induce K1, C3, R5 or P7, and Aut(S) a subgroup of index 1 or 3 of the product of the orbit groups; an exhaustive search of the 83 resulting (configuration, subgroup) cases finds none; (e) the prime untouchables have relative density zero among the primes; (f) every strong presentation fibre is finite: a strong T with tc(T) = v has order at most 3 ln(v^(1 + M(v)/6)/0.5848)/ln(5/3), M(v) the largest order of a vertex-transitive tournament with tc <= v, so O(log^2 v); (g) the strong fibres for odd v <= 21 have sizes 2, 1, 2, 0, 5, 4, 1, 6, 6, 4, 0 (v = 1, 3, ..., 21), all of order at most 8."
 status: >
   PROVED (all orders), given the cited theorems and the finite certificates below: tc(T) is never 7 or 21.
   PROVED: (b) from THM-002 (OCF: H(T) >= prod H(T[B_i]) over any vertex partition) and the faithful restriction of Aut(T) to
@@ -26,6 +26,9 @@ status: >
   prescribed orbit structure were scanned (H by the block-run substitution DP for the 73 module cases, cross-checked against
   Held-Karp on all 93,646 module tournaments of order <= 16, and by Held-Karp for the 10 non-module cases), no tc in {7, 21}.
   PROVED (f) from (b), (c)'s greedy bound, THM-4741 and Busch's f(n).
+  FINITE-EXACT (g): the strong census of orders 3-10 (tc_strong_fibres.cpp) and the generalised window search
+  (fibre_configs.py, fibre_scan.cpp: 567 configuration-subgroup cases, 811,496 strong invariant tournaments of orders >= 11,
+  no tc value <= 21) with the order bounds of the same counting.
   OPEN: whether every odd v not in {7, 21} is a tc value (HYP-9352 (1)-type spectrum question); an audit of the window search.
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
@@ -44,6 +47,8 @@ scripts:
   - 04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py (+ vt15_noncayley.out)
   - 04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py (+ .out)
   - 04-computation/experiments/tc_fibres_n12_20261027/window_configs.py, tc_window_scan.cpp (+ window_scan.out)
+  - 04-computation/experiments/tc_fibres_n12_20261027/tc_strong_fibres.cpp, fibre_configs.py, fibre_scan.cpp, strong_fibre_table.py (+ fibre_scan_v5_21.out, strong_fibre_table.out)
+  - 04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_sweep.cpp (+ tc_spectrum_summary.out)
 ---
 
 # THM-4812 — the {7, 21} presentation gaps hold at every order
@@ -156,3 +161,20 @@ i.e. `n <= 3 ln(v^(1 + M(v)/6)/0.5848)/ln(5/3)`. Since `M(v) = O(log v/log log v
 `v = 21`, `M = 7` and the bound is 41; the sharper accounting of (d) gives 22.) The full fibre of `v` (all tournaments)
 is infinite, because stacking `K1` and `C3` components does not change `tc`; finiteness is a statement about strong
 classes.
+
+## (g) The strong fibres below 22
+
+For odd `v <= 21` the counting of (d), with the vertex-transitive pieces `K1, C3, R5, P7` (the only ones with
+`tc <= 21`) and the product constraint `prod tc(T[O]) <= v`, bounds the order of a strong `S` with `tc(S) = v` (by 12
+for `v = 5`, 16 for `v = 9`, 19 for `v = 11, 13, 15`, 22 for `v = 17, 19, 21`), and the admissible subgroups again have
+index 1 or 3 (index 5 would need a factor 5 of `|P|` in a configuration where it does not occur). The generalised search
+over orders `>= 11` (567 cases, 811,496 strong invariant tournaments) finds no strong tournament with `tc <= 21`, and
+the strong census of orders `<= 10` gives the fibres:
+
+| `v` | 1 | 3 | 5 | 7 | 9 | 11 | 13 | 15 | 17 | 19 | 21 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| strong classes with `tc = v` | 2 | 1 | 2 | 0 | 5 | 4 | 1 | 6 | 6 | 4 | 0 |
+| orders | 1, 3 | 5 | 4, 5 | - | 5-7 | 5-7 | 5 | 6-7 | 6-8 | 6-7 | - |
+
+(`v = 1`: `K1`, `C3`; `v = 3`: `R5`; per-order counts in `strong_fibre_table.out`.) Every strong presentation fibre
+below 22 is therefore finite, explicit, and supported on orders at most 8.

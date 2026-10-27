@@ -25,6 +25,9 @@ status: >
   concurrent dyadic-module-spectrum session's matrix form K' = -K + 2A_P; klein's THM-4814 (D) (concurrent, pushed before
   this file: the lower bound m for regular sources and all-black geodesic witnesses at orders 7, 9 and for P_11; HYP-9422)
   and Session75 (black-core audit rounds announced).
+  PROVED (D1): if lambda(T) = delta^0(T) the distance to the singleton locus is delta^0 (either colour).
+  FINITE-EXACT (D2): every strong class of orders 6-9 is exactly delta^0 black moves from a singleton plus a strong core;
+  (E): the black core is connected at orders 4-9 (co-basin reduction).
   OPEN: the classification of strong tournaments without a black descent (HYP-9421 (1): exactly C3, R5 and E(M; Z)); whether
   the black distance is always at most lambda + 1 (HYP-9421 (2)); black-core connectivity (HYP-9348 (b)).
 session: mac-mini-2026-10-27-potentials
@@ -42,6 +45,9 @@ scripts:
   - 04-computation/experiments/black_terminal_distance_20261027/black_descent_profile.cpp, score_sum_descent.cpp, all_black_cycle.cpp (+ .out)
   - 04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py (+ .out)
   - 04-computation/experiments/black_terminal_distance_20261027/dipole_law_check.py (+ .out)
+  - 04-computation/experiments/black_terminal_distance_20261027/singleton_distance.cpp (+ singleton_distance_n6_8.out, singleton_distance_n9.out)
+  - 04-computation/experiments/black_terminal_distance_20261027/cobasin_connectivity.cpp (+ cobasin_connectivity_n4_9.out)
+  - 04-computation/experiments/black_terminal_distance_20261027/locus_distances.cpp, lambda_vs_delta0.cpp (+ .out)
 ---
 
 # THM-4811 — arc connectivity is the exact distance to the non-strong locus
@@ -80,7 +86,11 @@ visits both `Y` and its complement, so it has an arc `u -> w` with `u` outside `
 Since `f({v}) = s(v)` and `f(V\{v}) = n - 1 - s(v)`, `lambda <= min(delta^+, delta^-) <= floor((n-1)/2)`, with equality in
 the last step iff `T` is regular (`n` odd) or near-regular (`n` even); conversely `f(X) = k(n-k)/2 >= (n-1)/2` for every
 `X` of size `k` in a regular tournament, and the analogous count holds for near-regular ones (census: the classes with
-maximal `lambda` are exactly A255599's). For a regular `(2m+1)`-tournament the distance is `m`: the concurrent regular
+maximal `lambda` are exactly A255599's). Moreover `lambda = min(delta^+, delta^-)` whenever `n <= 4 delta^0 + 1`: a cut
+`X` of size `k >= 2` has `f(X) >= k delta^+ - C(k,2)` and `f(X) >= (n-k) delta^- - C(n-k,2)`, and `f(X) < delta^0` forces
+`k >= 2 delta^0 + 1` and `n - k >= 2 delta^0 + 1`. So every strong tournament of order at most 9 has `lambda = delta^0`
+(census: no exception through order 9), and the first separation occurs at order 10 (two copies of `R5` joined by all
+arcs one way except one: `lambda = 1`, `delta^0 = 2`). For a regular `(2m+1)`-tournament the distance is `m`: the concurrent regular
 basin theorem's cut-score bound is the case `lambda = m` of (B), and (B) shows the bound is attained from every source.
 
 ## (C) Black moves
@@ -109,6 +119,38 @@ a `C3`, `Z` nonempty. Put `D = C3[x0, M, Z]` (`x0 -> M => Z => x0`), let `D*` be
 The order-10 exception is `E(C3; K1)`, the only member of order 10. At order 12 the members are `E(C3; K1 => K1)` and
 `E(C3 => K1; K1)`.
 
-**C3 (what remains).** Whether `C3`, `R5` and `E(M; Z)` are all the strong tournaments without a black descent, and whether
+## (D) Singleton targets
+
+Let `delta^0(T) = min_v min(s_v, n - 1 - s_v)`. By (A) each `|s_v - (n-1)/2|` changes by at most one per move, so
+`delta^0` is a 1-Lipschitz potential for the distance to the singleton locus `SING` (some source or sink), and also for
+the smaller locus `CORE` (a source or sink whose deletion is strong).
+
+**D1 (PROVED).** If `lambda(T) = delta^0(T) = k`, then `d(T, SING) = k` with moves of either colour. Protect a vertex
+`v` attaining `delta^0`, say `s(v) = k` (otherwise pass to the converse). Make `v` the start of the first word, the end
+of the second, and so on: `s(v)` runs `k, n - k, k - 2, n - k + 2, ...`, so `|s(v) - (n-1)/2|` grows by one each step
+and `v` is a sink or source after `k` steps. Each intermediate tournament `T_j` (`j < k`) has `lambda(T_j) >= k - j >= 1`
+by (B), so it is strong and has Hamiltonian paths starting and ending at `v` (Camion). This applies to every strong
+tournament of order at most 9 and to every regular or near-regular tournament (section (B)).
+
+**D2 (FINITE-EXACT).** Every strong class of orders 6-9 (35, 353, 6,008, 178,133) reaches `CORE` in exactly `delta^0`
+**black** moves (`singleton_distance.cpp`: exhaustive depth-first search over the moves that raise the maximal
+deviation, which are the only moves on a route of length `delta^0`). At order 5 only `R5` fails (no black move). For a
+regular `(2m+1)`-tournament this is the concurrent basin theorem's "exactly `m` black moves from a singleton plus a
+strong core" (all orders there), here extended to all strong sources at these orders; HYP-9421 (6) conjectures it in
+general.
+
+## (E) Black-core connectivity through order 9
+
+Let `B_n` be the bipartite graph between the `lambda = 1` strong classes and the non-strong classes (converse-merged),
+an edge for each black descent word. Every black line at a non-strong class is such an edge (by (B) its other end has
+`lambda = 1`), and by (B)-(C) every non-pure-blue strong class of order at most 10 is joined to a `lambda = 1` class by
+black moves. So if `B_n` is connected, the black core of order `n` is connected. **FINITE-EXACT**
+(`cobasin_connectivity.cpp`): `B_n` is connected for `n = 4, ..., 9` and covers every non-strong class with a black line
+(440 of 443 merged non-strong classes at order 8, 6,741 of 6,747 at order 9; 4,216,712 black descent lines at order 9).
+This reproduces THM-4731's black connectivity through order 8 by a different route and extends it to order 9.
+
+## (F) What remains
+
+Whether `C3`, `R5` and `E(M; Z)` are all the strong tournaments without a black descent, and whether
 the black distance never exceeds `lambda + 1`, are HYP-9421 (1)-(2). Black-core connectivity (HYP-9348 (b)) is not
 claimed: (B)-(C) connect each strong class to the non-strong locus, not the non-strong basins to each other.

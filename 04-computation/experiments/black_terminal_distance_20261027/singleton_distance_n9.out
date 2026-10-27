@@ -1,0 +1,2 @@
+n=9 classes 178133: distance delta0 to SING 178133, to CORE 178133; with black moves: SING 178133, CORE 178133
+( gentourng -cq 9 | ./singleton_distance 9; )  10.30s user 0.04s system 98% cpu 10.505 total

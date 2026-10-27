@@ -1,0 +1,6 @@
+n=4: non-strong merged classes 2, with a black line 1, covered by B_n 1; lambda=1 strong classes 1, with a black descent 1; black descent lines 2; components of B_n: 1
+n=5: non-strong merged classes 4, with a black line 2, covered by B_n 2; lambda=1 strong classes 5, with a black descent 5; black descent lines 16; components of B_n: 1
+n=6: non-strong merged classes 12, with a black line 10, covered by B_n 10; lambda=1 strong classes 30, with a black descent 30; black descent lines 132; components of B_n: 1
+n=7: non-strong merged classes 56, with a black line 52, covered by B_n 52; lambda=1 strong classes 266, with a black descent 266; black descent lines 2126; components of B_n: 1
+n=8: non-strong merged classes 443, with a black line 440, covered by B_n 440; lambda=1 strong classes 3623, with a black descent 3623; black descent lines 66722; components of B_n: 1
+n=9: non-strong merged classes 6747, with a black line 6741, covered by B_n 6741; lambda=1 strong classes 78515, with a black descent 78515; black descent lines 4216712; components of B_n: 1

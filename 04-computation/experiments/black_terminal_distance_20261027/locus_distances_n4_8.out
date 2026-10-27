@@ -1,0 +1,35 @@
+n=4 classes=4
+  target NS   any  : potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):3 (1,+0):1 
+  target NS   black: potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):3 (1,+0):1 
+  target SING any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):3 (1,+0):1 
+  target SING black: potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):3 (1,+0):1 
+  target CORE any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):2 (0,+2):1 (1,+0):1 
+  target CORE black: potential delta0; unreachable 1; d < potential 0; (potential, d - potential): (0,+0):2 (1,+0):1 
+n=5 classes=12
+  target NS   any  : potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):6 (1,+0):5 (2,+0):1 
+  target NS   black: potential lambda; unreachable 1; d < potential 0; (potential, d - potential): (0,+0):6 (1,+0):5 
+  target SING any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):6 (1,+0):5 (2,+0):1 
+  target SING black: potential delta0; unreachable 1; d < potential 0; (potential, d - potential): (0,+0):6 (1,+0):5 
+  target CORE any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):2 (0,+2):4 (1,+0):5 (2,+0):1 
+  target CORE black: potential delta0; unreachable 3; d < potential 0; (potential, d - potential): (0,+0):2 (0,+2):2 (1,+0):5 
+n=6 classes=56
+  target NS   any  : potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):21 (1,+0):30 (2,+0):5 
+  target NS   black: potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):21 (1,+0):30 (2,+0):5 
+  target SING any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):20 (1,+0):30 (1,+1):1 (2,+0):5 
+  target SING black: potential delta0; unreachable 1; d < potential 0; (potential, d - potential): (0,+0):20 (1,+0):30 (2,+0):5 
+  target CORE any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):12 (0,+2):8 (1,+0):30 (1,+1):1 (2,+0):5 
+  target CORE black: potential delta0; unreachable 2; d < potential 0; (potential, d - potential): (0,+0):12 (0,+2):7 (1,+0):30 (2,+0):5 
+n=7 classes=456
+  target NS   any  : potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):103 (1,+0):266 (2,+0):84 (3,+0):3 
+  target NS   black: potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):103 (1,+0):266 (2,+0):84 (3,+0):3 
+  target SING any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):100 (1,+0):266 (1,+1):3 (2,+0):84 (3,+0):3 
+  target SING black: potential delta0; unreachable 1; d < potential 0; (potential, d - potential): (0,+0):100 (1,+0):266 (1,+1):2 (2,+0):84 (3,+0):3 
+  target CORE any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):70 (0,+2):30 (1,+0):266 (1,+1):3 (2,+0):84 (3,+0):3 
+  target CORE black: potential delta0; unreachable 4; d < potential 0; (potential, d - potential): (0,+0):70 (0,+2):27 (1,+0):266 (1,+1):2 (2,+0):84 (3,+0):3 
+n=8 classes=6880
+  target NS   any  : potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):872 (1,+0):3623 (2,+0):2300 (3,+0):85 
+  target NS   black: potential lambda; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):872 (1,+0):3623 (2,+0):2300 (3,+0):85 
+  target SING any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):856 (1,+0):3623 (1,+1):16 (2,+0):2300 (3,+0):85 
+  target SING black: potential delta0; unreachable 1; d < potential 0; (potential, d - potential): (0,+0):856 (1,+0):3623 (1,+1):15 (2,+0):2300 (3,+0):85 
+  target CORE any  : potential delta0; unreachable 0; d < potential 0; (potential, d - potential): (0,+0):706 (0,+2):150 (1,+0):3623 (1,+1):16 (2,+0):2300 (3,+0):85 
+  target CORE black: potential delta0; unreachable 3; d < potential 0; (potential, d - potential): (0,+0):706 (0,+2):148 (1,+0):3623 (1,+1):15 (2,+0):2300 (3,+0):85 
