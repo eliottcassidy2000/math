@@ -1,0 +1,38 @@
+A3: class-based independent checks
+p = 3, K =  2: class lemma checked directly at all 2 levels (sparse aggregation), a* = 1; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  3: class lemma checked directly at all 3 levels (sparse aggregation), a* = 5; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  4: class lemma checked directly at all 4 levels (sparse aggregation), a* = 5; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  5: class lemma checked directly at all 5 levels (sparse aggregation), a* = 21; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  6: class lemma checked directly at all 6 levels (sparse aggregation), a* = 21; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  7: class lemma checked directly at all 7 levels (sparse aggregation), a* = 85; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  8: class lemma checked directly at all 8 levels (sparse aggregation), a* = 85; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K =  9: class lemma checked directly at all 9 levels (sparse aggregation), a* = 341; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K = 10: class lemma checked directly at all 10 levels (sparse aggregation), a* = 341; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K = 11: class lemma checked directly at all 11 levels (sparse aggregation), a* = 1365; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+p = 3, K = 12: class lemma checked directly at all 12 levels (sparse aggregation), a* = 1365; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.0s]
+   K = 12 hitting counts [2, 20, 90, 240, 420, 504, 420, 240, 90, 20, 2]
+   K = 12 average TV profile [0.9995, 0.9941, 0.9673, 0.8867, 0.7256, 0.5, 0.2744, 0.1133, 0.0327, 0.0059, 0.0005, 0.0]
+p = 3, K = 13: class lemma checked directly at all 13 levels (sparse aggregation), a* = 5461; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.1s]
+p = 3, K = 14: class lemma checked directly at all 14 levels (sparse aggregation), a* = 5461; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.2s]
+p = 3, K = 15: class lemma checked directly at all 15 levels (sparse aggregation), a* = 21845; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.4s]
+p = 3, K = 16: class lemma checked directly at all 16 levels (sparse aggregation), a* = 21845; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.9s]
+p = 3, K = 17: class lemma checked directly at all 17 levels (sparse aggregation), a* = 87381; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [1.8s]
+p = 3, K = 18: class lemma checked directly at all 18 levels (sparse aggregation), a* = 87381; R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [3.9s]
+p = 3, K = 19: R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [0.4s]
+p = 3, K = 20: R_n = all classes of precision <= K-n with multiplicity binom(K-m-1, n-1); hitting counts 2 binom(K-2, h-1), mean K/2, worst TV, Dobrushin, l^2 = binomial tails  [1.0s]
+p = 3, K = 21: trajectory checks pass  [3.1s]
+p = 3, K = 22: trajectory checks pass  [6.4s]
+p = 1: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = -1: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 5: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 7: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 9: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 11: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 13: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 15: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 17: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 33: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = 1023: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = -3: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+p = -5: class lemma (K <= 12) and all trajectory checks pass for K = 2..16
+A3 ALL CHECKS PASSED  [21s]

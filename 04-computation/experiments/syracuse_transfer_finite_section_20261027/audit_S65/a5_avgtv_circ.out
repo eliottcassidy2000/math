@@ -1,0 +1,5 @@
+avg TV(n) = P(B > n) + P(B = n)/2, B ~ Bin(K-2, 1/2): exact for K = 2..18, all n; equals 1/2 at n = (K-2)/2
+L = 2: eigenvalues of Circ(w) (note convention) = {1/(2 eta - 1)} up to 2.7e-17; max | |z - 1/3| - 2/3 | = 1.1e-16; min |z| = 0.3333
+L = 6: eigenvalues of Circ(w) (note convention) = {1/(2 eta - 1)} up to 6.7e-16; max | |z - 1/3| - 2/3 | = 7.8e-16; min |z| = 0.3333
+L = 18: eigenvalues of Circ(w) (note convention) = {1/(2 eta - 1)} up to 7.9e-16; max | |z - 1/3| - 2/3 | = 6.7e-16; min |z| = 0.3333
+L = 54: eigenvalues of Circ(w) (note convention) = {1/(2 eta - 1)} up to 2.7e-15; max | |z - 1/3| - 2/3 | = 2.2e-15; min |z| = 0.3333

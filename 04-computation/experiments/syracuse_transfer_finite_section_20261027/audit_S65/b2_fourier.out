@@ -1,0 +1,10 @@
+B2: Syrac(Z/9) = (0,8,16,0,11,4,0,2,22)/63 exactly (recursion)
+    consistency Syrac(Z/3^J) mod 3^(J-1) = Syrac(Z/3^(J-1)) exact for J = 2..7
+J = 1: TV(Syrac, uniform on units) = 0.16667
+J = 2: TV(Syrac, uniform on units) = 0.27778; max primitive |mu_hat| = 0.37792363 at xi = 4 (THM-4520 (5): 0.37792; agree to 5 decimals: True)
+J = 3: TV(Syrac, uniform on units) = 0.34601; max primitive |mu_hat| = 0.25223684 at xi = 8 (THM-4520 (5): 0.25224; agree to 5 decimals: True)
+J = 4: TV(Syrac, uniform on units) = 0.37054; max primitive |mu_hat| = 0.17699888 at xi = 65 (THM-4520 (5): 0.177; agree to 5 decimals: True)
+J = 5: TV(Syrac, uniform on units) = 0.38887; max primitive |mu_hat| = 0.12927357 at xi = 211 (THM-4520 (5): 0.12927; agree to 5 decimals: True)
+J = 6: TV(Syrac, uniform on units) = 0.39855; max primitive |mu_hat| = 0.096106391 at xi = 64 (THM-4520 (5): 0.09611; agree to 5 decimals: True)
+J = 7: TV(Syrac, uniform on units) = 0.40686; max primitive |mu_hat| = 0.075870038 at xi = 256 (THM-4520 (5): 0.07587; agree to 5 decimals: True)
+B2 DONE

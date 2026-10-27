@@ -9,21 +9,29 @@ a* = -1/3 mod 2^K (v >= K) it is uniform on all odd residues.  The integer count
 for every other row C_K(a, b) = #{t mod 2^(K-1) : S(a + 2^K t) = b mod 2^K} (exact, since only t mod 2^v matters).
 
 Carrier 2 (3-adic).  Tao's Syracuse chain on Z/3^J: x -> (3x+1) 2^-a mod 3^J with P(a) = 2^-a, a >= 1.  Its
-stationary law is the law of Syrac(Z/3^J) (Tao 2019, Lemma 1.12, Remark 1.13).  P_J(x, y) = 2^(L-a0)/(2^L - 1),
-L = 2 3^(J-1), a0 in [1, L] with 2^a0 = (3x+1)/y mod 3^J (y a unit), 0 otherwise.
+stationary law is the law of Syrac(Z/3^J) (Tao, Forum Math. Pi 10 (2022), e12, Lemma 1.12, Remark 1.13).
+P_J(x, y) = 2^(L-a0)/(2^L - 1), L = 2 3^(J-1), a0 in [1, L] with 2^a0 = (3x+1)/y mod 3^J (y a unit), 0 otherwise.
 
 Sections:
   A  build C_K for K = 8..20: row and column sums (doubly stochastic), nnz = K 2^(K-1)
   B  the class lemma, checked exactly at every level: P_K maps the uniform law on a class mod 2^m to the uniform
      law on a class of strictly smaller precision (or to the stationary law)
-  C  exact consequences for K = 8..20: R_n = all classes of precision <= K - n, rank P^n = 2^(K-1-n), the Jordan
-     type of P - Pi, the hitting times (h - 1 ~ Binomial(K - 2, 1/2)), worst-case total variation, Dobrushin
-     coefficients; hence SLEM = 0 exactly and P^(K-1) = Pi, P^(K-2) != Pi
+  C  exact consequences for K = 8..20: R_n = all classes of precision <= K - n, each class of precision m >= 2
+     repeated binom(K-m-1, n-1) times, rank P^n = 2^(K-1-n), the Jordan type of P - Pi, the hitting times
+     (h - 1 ~ Binomial(K - 2, 1/2)), worst-case total variation, Dobrushin coefficients; hence SLEM = 0 exactly
+     and P^(K-1) = Pi, P^(K-2) != Pi
+  C2 the l^2(pi) profile and the full singular spectrum of P_K^n (exact level weights; float SVD as a guide)
   D  independent dense check for K = 8..12: C^(K-1) = 2^((K-1)(K-2)) J entrywise, proved modulo primes whose
      product exceeds the entry bound; C^(K-2) differs (certificate prime); K = 8 also in exact Python integers
   E  floating point as a guide only: numpy eigenvalues of P_K report spurious |lambda_2| (Jordan blocks)
-  F  carrier 2 for J = 1..6 exact (J = 7 modulo primes): P^J = Pi, P^(J-1) != Pi, rank P^n = 3^(J-n), the
-     stationary law (Tao's mod-9 law at J = 2), max primitive |Fourier coefficient| of Syrac(Z/3^J) against THM-4520
+  F  carrier 2 for J = 1..6 exact (J = 7, 8 modulo a prime): P^J = Pi, P^(J-1) != Pi, rank P^n = 3^(J-n) (and
+     2 3^(J-1-n) on the recurrent class), the stationary law (Tao's mod-9 law at J = 2), max primitive
+     |Fourier coefficient| of Syrac(Z/3^J) against THM-4520
+  G  contrasts: the T-map random chain mod 3^J (SLEM exactly 1/2) and the T-map Ulam (de Bruijn) matrix mod 2^K
+     (C^K = J, sigma_2 = 1)
+  H  the multiplier p: the Ulam matrices of (px+1)/2^v are permutation-conjugate to p = 3 (parity vectors), and
+     the chain (px+1) 2^-a mod p^J has the same structure with p in the counts
+  I  the rows of C_K against direct Haar lift counts (K = 3..7, five multipliers)
 """
 import itertools
 import math
@@ -61,13 +69,14 @@ def node(c, m):
     return (np.int64(1) << (m - 1)) + ((c - 1) >> 1)
 
 
-def build_counting_matrix(K):
-    """C_K = 2^(K-1) P_K in CSR form (indptr, indices, data); rows/columns indexed by i = (a-1)/2."""
+def build_counting_matrix(K, p=3):
+    """C_K = 2^(K-1) P_K in CSR form (indptr, indices, data) for x -> (px+1)/2^v (p odd; p = 3 is S);
+    rows/columns indexed by i = (a-1)/2."""
     n = 1 << (K - 1)
     a = 2 * np.arange(n, dtype=np.int64) + 1
-    t = 3 * a + 1
-    v = v2(t)
-    special = v >= K
+    t = (p * a + 1) % (np.int64(1) << K)                 # p a + 1 mod 2^K: zero iff v_2(p a + 1) >= K
+    special = t == 0
+    v = v2(np.where(special, np.int64(1) << K, t))
     vv = np.minimum(v, K - 1)
     counts = np.where(special, n, np.int64(1) << vv)
     indptr = np.zeros(n + 1, dtype=np.int64)
@@ -144,12 +153,17 @@ def section_C(K):
     hit = np.full(n, -1, dtype=np.int64)
     ranks, worst_tv, avg_tv, dobrushin = [], [], [], []
     for step in range(0, K):
-        ids = np.unique(node(c, m))
+        ids, mult = np.unique(node(c, m), return_counts=True)
         levels = np.unique(m)
         if step == 0:   # R_0 = the 2^(K-1) fine classes
             assert len(ids) == n and np.all(levels == K)
         else:           # R_n = every class of precision 1..K-n (all 2^(K-n) - 1 of them)
             assert len(ids) == (1 << (K - step)) - 1 and np.array_equal(levels, np.arange(1, K - step + 1)), (K, step)
+            # a class of precision m >= 2 is the row of exactly binom(K-m-1, n-1) residues (choose the n - 1
+            # intermediate precisions strictly between m and K)
+            prec = np.frexp(ids.astype(np.float64))[1]           # node id 2^(m-1) + ... has bit length m
+            want = np.array([math.comb(K - int(mm) - 1, step - 1) for mm in prec])
+            assert np.all((prec == 1) | (mult == want)), (K, step)
         r = tree_rank(K, ids)
         assert r == 1 << (K - 1 - step)
         ranks.append(r)
@@ -341,7 +355,8 @@ def rank_mod(A, q):
 def section_F_modular(J, q, ranks=True):
     """Rows of P^J equal mod q (consistent with the proof), rows of P^(J-1) differ mod q (rigorous certificate
     that P^(J-1) != Pi over Q), and rank_q(P^n) = 3^(J-n): a lower bound on the rational rank that meets the
-    structural upper bound (rows of P^n depend on x_0 only mod 3^(J-n)), hence the exact rank."""
+    structural upper bound (rows of P^n depend on x_0 only mod 3^(J-n)), hence the exact rank.  On the recurrent
+    class (the units, closed under P) the same argument gives rank 2 3^(J-1-n) for n < J and 1 at n = J."""
     P = modular_matrix(J, q)
     n = len(P)
     assert n * q * q < 2 ** 53
@@ -352,11 +367,14 @@ def section_F_modular(J, q, ranks=True):
         powers.append(R)
     assert np.all(powers[J] == powers[J][0])
     assert np.any(powers[J - 1] != powers[J - 1][0])
-    rk = None
+    rk = rku = None
     if ranks:
         rk = [rank_mod(powers[s].astype(np.int64), q) for s in range(J + 1)]
         assert rk == [3 ** (J - s) for s in range(J + 1)], rk
-    return rk
+        units = [x for x in range(n) if x % 3]
+        rku = [rank_mod(powers[s][np.ix_(units, units)].astype(np.int64), q) for s in range(J + 1)]
+        assert rku == [2 * 3 ** (J - 1 - s) for s in range(J)] + [1], rku
+    return rk, rku
 
 
 def fourier_max(law, J):
@@ -375,7 +393,8 @@ def section_G_tmap_3adic(J):
     """Contrast: the T-map random chain on Z/3^J, x -> x/2 or (3x+1)/2 with probability 1/2 each (2^-1 mod 3^J).
     Exact characteristic polynomial: det(lambda I - P) = (lambda - 1) prod_(d=1..J) (lambda^(L_d) - 2^(-L_d)),
     L_d = 2 3^(d-1): the depth-preserving halving branch is 1/2 times the doubling cycle on the units mod 3^d
-    (THM-4631 at u = v = 1), so the second-largest eigenvalue modulus is exactly 1/2."""
+    (THM-4631 with j = 0 on the line u = v = z: det(I - zU) = (1 - z) prod_d (1 - (z/2)^(L_d))), so the
+    second-largest eigenvalue modulus is exactly 1/2."""
     import sympy as sp
     M3 = 3 ** J
     h = pow(2, -1, M3)
@@ -392,12 +411,17 @@ def section_G_tmap_3adic(J):
 
 def section_G_tmap_2adic(K):
     """Contrast: the T-map Ulam matrix on all residues mod 2^K (de Bruijn): row a is uniform on the two lifts of
-    T(a) mod 2^(K-1).  Exact integers: (2P)^K = 2^(K-1) J? -> P^K = Pi, P^(K-1) != Pi (THM-4629 2(c))."""
+    T(a) mod 2^(K-1).  Exact integers, C = 2P: C^K = J (all ones: the binary de Bruijn graph has exactly one walk of
+    length K between any two words), i.e. P^K = Pi, and P^(K-1) != Pi (classical de Bruijn; the spectrum is
+    THM-4629 proof 2(d)).  C C^T = 2 x the pairing of the two residues with the same T mod 2^(K-1), so P P^T is a
+    sum of 2 x 2 averaging blocks: the singular values of P are 1 and 0, each 2^(K-1) times (sigma_2 = 1)."""
     n = 1 << K
     C = [[0] * n for _ in range(n)]
+    tval = []
     for a in range(n):
         t = a // 2 if a % 2 == 0 else (3 * a + 1) // 2
         base = t % (n // 2)
+        tval.append(base)
         C[a][base] += 1
         C[a][base + n // 2] += 1
     cols = [[k for k in range(n) if C[k][j]] for j in range(n)]
@@ -406,34 +430,48 @@ def section_G_tmap_2adic(K):
     for _ in range(K - 1):
         M = [[sum(M[i][k] * C[k][j] for k in cols[j]) for j in range(n)] for i in range(n)]
         powers.append(M)
-    allsame_K = all(row == powers[K][0] for row in powers[K])
+    ones_K = all(x == 1 for row in powers[K] for x in row)
     allsame_K1 = all(row == powers[K - 1][0] for row in powers[K - 1])
-    return allsame_K and not allsame_K1
+    Cn, tv = np.array(C, dtype=np.int64), np.array(tval)
+    gram = np.array_equal(Cn @ Cn.T, 2 * (tv[:, None] == tv[None, :]).astype(np.int64))
+    pairs = bool(np.all(np.bincount(tv, minlength=n // 2) == 2))
+    return ones_K and not allsame_K1 and gram and pairs
 
 
 def section_C2(K):
-    """l^2(pi) norms: ||(P - Pi)^n|| = sqrt(P(Bin(K-2, 1/2) >= n)) (proved in the note: P^n f = sum over levels of
-    conditional expectations with level weights; the maximiser is f = +-1 on 1 mod 4 / 3 mod 4).  Exact value of
-    ||P^n f0||^2 for that f0, and a float SVD as a guide that nothing larger occurs."""
+    """l^2(pi) profile (proved in the note): (P^n)^T P^n = sum_m w_m(n) E_m, with E_m the conditional expectation
+    on the classes mod 2^m and w_m(n) the fraction of residues whose row of P^n has precision m.  The E_m are nested
+    projections, so the singular values of P^n are 1 and sqrt(T_j(n)) with multiplicity 2^(j-2), j = 2..K, where
+    T_j(n) = sum_(m >= j) w_m(n) = P(Bin(K-j, 1/2) >= n); in particular ||(P - Pi)^n||^2 = T_2(n), attained at
+    f0 = +-1 on 1 mod 4 / 3 mod 4.  Exact: every tail weight T_j(n) from the class trajectories.  Float SVD as a
+    guide: the full singular spectrum of every power for K <= 11, the norm of (P - Pi)^n for K = 12."""
     n = 1 << (K - 1)
-    exact = [sum(Fraction(math.comb(K - 2, j), 2 ** (K - 2)) for j in range(s, K - 1)) for s in range(0, K)]
-    # ||P^s f0||^2 exactly through the classes: f0 averages to +-1 on every class of precision >= 2, to 0 on the root
+
+    def tail(j, s):
+        return sum(Fraction(math.comb(K - j, i), 2 ** (K - j)) for i in range(s, K - j + 1))
+
+    exact = [tail(2, s) for s in range(K)]
     c = 2 * np.arange(n, dtype=np.int64) + 1
     m = np.full(n, K, dtype=np.int64)
-    f0vals = []
     for s in range(K):
-        f0vals.append(Fraction(int(np.sum(m >= 2)), n))
+        for j in range(2, K + 1):
+            assert Fraction(int(np.sum(m >= j)), n) == tail(j, s), (K, s, j)
         c, m = phi(c, m)
-    assert f0vals == exact
     svd = None
     if K <= 12:
-        C = dense_C(K).astype(np.float64)
-        N = C / n - 1.0 / n
-        Nk = np.eye(n)
+        P = dense_C(K).astype(np.float64) / n
+        Pk = np.eye(n)
         svd = []
         for s in range(1, K):
-            Nk = Nk @ N
-            svd.append(np.linalg.norm(Nk, 2) ** 2)
+            Pk = Pk @ P
+            if K <= 11:
+                got = np.sort(np.linalg.svd(Pk, compute_uv=False))
+                want = np.sort(np.array([1.0] + [math.sqrt(float(tail(j, s))) for j in range(2, K + 1)
+                                                 for _ in range(2 ** (j - 2))]))
+                assert np.max(np.abs(got - want)) < 1e-9, (K, s)
+                svd.append(got[-2] ** 2)
+            else:
+                svd.append(np.linalg.norm(Pk - 1.0 / n, 2) ** 2)
         assert all(abs(svd[s - 1] - float(exact[s])) < 1e-9 for s in range(1, K))
     return exact, svd
 
@@ -485,8 +523,9 @@ def section_H_2adic(K, p):
 
 
 def section_H_padic(p, J, q=1048573):
-    """Universality: the chain x -> (p x + 1) 2^-a on Z/p^J (a ~ Geom(1/2)): P^J = Pi, P^(J-1) != Pi and
-    rank P^n = p^(J-n) (modular lower bound = structural upper bound), whether or not 2 is a primitive root."""
+    """The chain x -> (p x + 1) 2^-a on Z/p^J (a ~ Geom(1/2)): P^J = Pi, P^(J-1) != Pi and rank P^n = p^(J-n)
+    (modular lower bound = structural upper bound), whether or not 2 is a primitive root.  On the recurrent class
+    {y : y mod p in <2>} (closed: every image is 2^-a mod p), rank P^n = r p^(J-1-n) for n < J, r = |<2 mod p>|."""
     M = p ** J
     L = 1
     while pow(2, L, M) != 1:
@@ -500,16 +539,97 @@ def section_H_padic(p, J, q=1048573):
             y = y * h % M                                 # (p x + 1) 2^-a
             P[x, y] = (P[x, y] + pow(2, L - a, q) * inv) % q
     assert M * q * q < 2 ** 53
+    sub = {pow(2, k, p) for k in range(p)}
+    rec = [y for y in range(M) if y % p in sub]
+    r = len(sub)
     R = np.eye(M)
-    ranks = [M]
+    ranks, rec_ranks = [M], [len(rec)]
     for s in range(1, J + 1):
         R = np.fmod(R @ P, q)
         ranks.append(rank_mod(R.astype(np.int64), q))
+        rec_ranks.append(rank_mod(R[np.ix_(rec, rec)].astype(np.int64), q))
         if s == J - 1:
             assert np.any(R != R[0])
     assert np.all(R == R[0])
     assert ranks == [p ** (J - s) for s in range(J + 1)], ranks
-    return L, ranks
+    assert rec_ranks == [r * p ** (J - 1 - s) for s in range(J)] + [1], rec_ranks
+    return L, ranks, r, rec_ranks
+
+
+def parity_code(K, p):
+    """Q_p: x mod 2^K -> its first K parities under T_p(x) = x/2, (px+1)/2, as a K-bit integer (bit k = parity of
+    T_p^k(x)).  Terras's argument makes it a bijection of Z/2^K for every odd p."""
+    x = np.arange(1 << K, dtype=np.int64)
+    code = np.zeros(1 << K, dtype=np.int64)
+    for k in range(K):
+        x = x % (np.int64(1) << (K - k))          # T_p^k(x) mod 2^(K-k) depends only on x mod 2^K
+        e = x & 1
+        code |= e << k
+        x = np.where(e == 1, p * x + 1, x) // 2
+    return code
+
+
+def sorted_entries(K, p, perm=None):
+    """The nonzero entries of C_K for (px+1)/2^v, relabelled by perm, as sorted keys row 2^(K-1) + column and the
+    values in the same order."""
+    indptr, indices, data, _, _ = build_counting_matrix(K, p)
+    rows = np.repeat(np.arange(1 << (K - 1), dtype=np.int64), np.diff(indptr))
+    if perm is not None:
+        rows, indices = perm[rows], perm[indices]
+    key = (rows << (K - 1)) + indices
+    o = np.argsort(key)
+    return key[o], data[o]
+
+
+def section_H_conjugacy(K, ps):
+    """P_K^(p) = Q P_K^(3) Q^(-1) for every odd p: psi = Q_3^(-1) o Q_p is a tree automorphism of Z/2^K (it maps
+    classes mod 2^m to classes mod 2^m) that conjugates T_p to T_3.  S_p is the first return of T_p to the odd
+    residues ("shift past the next 1" in parity coordinates, the same for every p), so psi conjugates S_p to S_3
+    and the Ulam matrices to each other.  Checked entry by entry on the counting matrices."""
+    N = 1 << K
+    q3 = parity_code(K, 3)
+    assert len(np.unique(q3)) == N
+    inv3 = np.empty(N, dtype=np.int64)
+    inv3[q3] = np.arange(N, dtype=np.int64)
+    ref = sorted_entries(K, 3)
+    out = {}
+    for p in ps:
+        qp = parity_code(K, p)
+        assert len(np.unique(qp)) == N
+        psi = inv3[qp]
+        assert np.all((psi & 1) == (np.arange(N) & 1))  # the parity bit is kept: odd residues go to odd residues
+        got = sorted_entries(K, p, (psi[1::2] - 1) >> 1)
+        out[p] = all(np.array_equal(u, w) for u, w in zip(got, ref))
+    return out
+
+
+def section_I_lifts(K, p, D=12):
+    """The rows of C_K against the definition.  For x = a + 2^K t, t < 2^D, the image (px+1)/2^v mod 2^K is fixed by
+    x mod 2^(K+D) iff v <= D.  A non-special row has v < K <= D on every lift, and the lift counts reproduce
+    C_K(a, .) exactly.  For the special row a* the 2^(K-1) lifts with v > D are set aside and the determined lifts
+    are uniform on the odd residues (2^(D-K+1) - 1 each), so the Haar limit D -> oo is the uniform row."""
+    n = 1 << (K - 1)
+    indptr, indices, data, _, special = build_counting_matrix(K, p)
+    mod = 1 << K
+    for i in range(n):
+        a = 2 * i + 1
+        cnt = [0] * n
+        undetermined = 0
+        for t in range(1 << D):
+            w = p * (a + mod * t) + 1
+            v = (w & -w).bit_length() - 1 if w else D + 1
+            if v > D:
+                undetermined += 1
+                continue
+            cnt[((w >> v) % mod - 1) // 2] += 1
+        row = [0] * n
+        for j in range(int(indptr[i]), int(indptr[i + 1])):
+            row[int(indices[j])] = int(data[j])
+        if special[i]:
+            assert undetermined == n and all(c == (1 << (D - K + 1)) - 1 for c in cnt) and all(x == 1 for x in row)
+        else:
+            assert undetermined == 0 and all(cnt[j] * n == row[j] * (1 << D) for j in range(n)), (K, p, a)
+    return True
 
 
 def main():
@@ -534,15 +654,18 @@ def main():
     print(f'  K = 12 average TV profile n = 0..11: {[round(float(x), 4) for x in info["avg_tv"]]}')
     print('  -> for every K: P_K = Pi + N_K with N_K nilpotent of index exactly K - 1; spectrum {1, 0, ..., 0};')
     print('     second-largest eigenvalue modulus 0; Dobrushin coefficient of P^n is 1 for n <= K - 2 and 0 at n = K - 1')
-    print('== C2. the l^2(pi) operator norms: ||(P_K - Pi)^n||^2 = P(Bin(K-2, 1/2) >= n)')
+    print('== C2. the l^2(pi) operator norms: ||(P_K - Pi)^n||^2 = P(Bin(K-2, 1/2) >= n); singular values of P_K^n:')
+    print('       1 and sqrt(P(Bin(K-j, 1/2) >= n)) with multiplicity 2^(j-2), j = 2..K (tail weights checked exactly)')
     for K in KS:
         exact, svd = section_C2(K)
         s1 = math.sqrt(float(exact[1]))
         print(f'  K = {K:2d}: ||P_K - Pi||^2 = 1 - 2^-(K-2) = {exact[1]} (norm {s1:.7f}; singular-value gap '
               f'1 - norm = {1 - s1:.3e} ~ 2^-(K-1) = {2.0 ** -(K - 1):.3e})' +
-              ('; float SVD of all powers agrees' if svd else ''))
+              ('; float SVD: full singular spectrum of every power agrees' if svd and K <= 11 else
+               '; float SVD: norm of every power agrees' if svd else ''))
     print('  -> the eigenvalue gap is 1 for every K, but P_K is far from normal: its second singular value tends to 1')
-    print('     like 1 - 2^-(K-1), and the l^2 profile of the worst function is the binomial tail (cutoff at n = K/2)')
+    print('     like 1 - 2^-(K-1); the average total variation is P(B > n) + P(B = n)/2, B ~ Bin(K-2, 1/2), equal to 1/2')
+    print('     at n = (K-2)/2, a binomial cutoff with a window of order sqrt(K)')
     print('== D. independent dense checks (no class machinery)')
     for K in range(8, 13):
         k = section_D(K)
@@ -577,11 +700,15 @@ def main():
             assert got == tao
     q = 1048573
     for J in range(2, 9):
-        rk = section_F_modular(J, q, ranks=(J <= 6))
-        print(f'  J = {J} (mod q = {q}): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate)' +
-              (f'; rank P^n = {rk} = 3^(J-n): the modular lower bound meets the structural upper bound' if rk else ''))
-    print('  Jordan type of P_J - Pi (from rank P^n = 3^(J-n), proved for all J in the note): two blocks of size J and')
-    print('  4 3^(J-1-s) blocks of size s for s = 1..J-1, e.g. J = 6:', {s: 4 * 3 ** (6 - 1 - s) for s in range(1, 6)} | {6: 2})
+        rk, rku = section_F_modular(J, q, ranks=(J <= 6))
+        print(f'  J = {J} (mod q = {q}): rows of P^J equal mod q from all {3 ** J} starts, rows of P^(J-1) differ mod q '
+              f'(certificate)' +
+              (f'; rank P^n = {rk} = 3^(J-n), on the units {rku}: the modular lower bound meets the structural upper '
+               f'bound' if rk else ''))
+    print('  Jordan type of P_J - Pi on Z/3^J (from rank P^n = 3^(J-n), proved for all J in the note): two blocks of size J')
+    print('  and 4 3^(J-1-s) blocks of size s for s = 1..J-1, e.g. J = 6:', {s: 4 * 3 ** (6 - 1 - s) for s in range(1, 6)} | {6: 2})
+    print('  on the recurrent class (the units; rank 2 3^(J-1-n)): one block of size J, three of size J - 1 and')
+    print('  8 3^(J-2-s) of size s <= J - 2, e.g. J = 6:', {s: 8 * 3 ** (6 - 2 - s) for s in range(1, 5)} | {5: 3, 6: 1})
     print('  float guide (numpy): |lambda_2| of P_J and the l^2(pi) norm of P_J - Pi on the units:')
     for J in range(2, 7):
         lam2, nrm = section_E3(J, laws[J])
@@ -590,23 +717,42 @@ def main():
     for J in (1, 2, 3):
         ok = section_G_tmap_3adic(J)
         print(f'  Z/3^{J}: det(lambda I - P) = (lambda - 1) prod_(d=1..{J}) (lambda^(L_d) - 2^-(L_d)) exactly: {ok} '
-              f'-> second-largest eigenvalue modulus exactly 1/2 (the doubling cycles of THM-4631 at u = v = 1)')
+              f'-> second-largest eigenvalue modulus exactly 1/2 (the doubling cycles of THM-4631 with j = 0 on the '
+              f'line u = v = z)')
         assert ok
     for K in (6, 7, 8):
         ok = section_G_tmap_2adic(K)
-        print(f'  Z/2^{K} (de Bruijn Ulam matrix, exact integers): P^K = Pi and P^(K-1) != Pi: {ok} (THM-4629 2(c))')
+        print(f'  Z/2^{K} (de Bruijn Ulam matrix, exact integers): (2P)^K = J (all ones), P^(K-1) != Pi, and '
+              f'(2P)(2P)^T = 2 x (pairing), so sigma_2 = 1: {ok} (de Bruijn A^K = J; spectrum THM-4629 proof 2(d))')
         assert ok
-    print('== H. universality in the multiplier p (the finite sections cannot see p = 3)')
+    print('== H. the multiplier p (the finite sections cannot see p = 3)')
     for p in (1, 5, 7, -1):
         oks = [section_H_2adic(K, p) for K in range(8, 15)]
         print(f'  x -> ({p} x + 1)/2^v on odd residues mod 2^K, K = 8..14: same reachable classes, ranks 2^(K-1-n), '
               f'Jordan type and hitting times as p = 3: {all(oks)}')
         assert all(oks)
+    conj = {}
+    for K in KS:
+        ps = (1, 5, 7, 9, 15, -1, -3, 1023) if K <= 14 else (5, -1)
+        for p, ok in section_H_conjugacy(K, ps).items():
+            conj.setdefault(p, []).append((K, ok))
+    for p, res in conj.items():
+        Ks = [K for K, _ in res]
+        print(f'  parity-vector conjugacy: C_K for ({p} x + 1)/2^v equals C_K for p = 3 after relabelling the residues '
+              f'by psi = Q_3^(-1) Q_p, K = {Ks[0]}..{Ks[-1]}: {all(ok for _, ok in res)}')
+        assert all(ok for _, ok in res)
     for p, Js in ((5, (1, 2, 3)), (7, (1, 2, 3))):
         for J in Js:
-            L, rk = section_H_padic(p, J)
+            L, rk, r, rkr = section_H_padic(p, J)
             print(f'  x -> ({p} x + 1) 2^-a on Z/{p}^{J} (ord of 2 = {L}{", 2 not primitive" if L < (p - 1) * p ** (J - 1) else ""}): '
-                  f'P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = {rk} = {p}^(J-n)')
+                  f'P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = {rk} = {p}^(J-n); on the recurrent class '
+                  f'(r = |<2 mod {p}>| = {r}) {rkr} = r {p}^(J-1-n)')
+    print('== I. the rows of C_K against direct Haar lift counts (lifts mod 2^(K+12))')
+    for p in (3, 5, 7, 1, -1):
+        oks = [section_I_lifts(K, p) for K in range(3, 8)]
+        print(f'  ({p} x + 1)/2^v, K = 3..7: every non-special row equals the lift counts; the special row a* has '
+              f'2^(K-1) undetermined lifts and is otherwise uniform: {all(oks)}')
+        assert all(oks)
     print('ALL CHECKS PASSED')
 
 

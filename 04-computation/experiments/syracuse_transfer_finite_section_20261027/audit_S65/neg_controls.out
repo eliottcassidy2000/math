@@ -1,0 +1,3 @@
+control 1 ok: class-lemma check rejects the wrong class map
+control 2 ok: perturbed matrix has a different minimal polynomial
+control 3 ok: Tao-chain checks reject a perturbed kernel

@@ -1,0 +1,25 @@
+E1 (1) numpy eigvals of P_K: |lambda_2| (exact value 0)
+  K = 8: |lambda_2| natural order = 0.0029; three random relabellings: 0.0027, 0.0023, 0.0030; (1.1e-16)^(1/(K-1)) = 0.0053; number of computed |lambda| > 1e-6 besides 1: 63
+  K = 9: |lambda_2| natural order = 0.0046; three random relabellings: 0.0055, 0.0056, 0.0044; (1.1e-16)^(1/(K-1)) = 0.0101; number of computed |lambda| > 1e-6 besides 1: 127
+  K = 10: |lambda_2| natural order = 0.0089; three random relabellings: 0.0079, 0.0075, 0.0074; (1.1e-16)^(1/(K-1)) = 0.0169; number of computed |lambda| > 1e-6 besides 1: 255
+  K = 11: |lambda_2| natural order = 0.0125; three random relabellings: 0.0123, 0.0127, 0.0151; (1.1e-16)^(1/(K-1)) = 0.0254; number of computed |lambda| > 1e-6 besides 1: 511
+  K = 12: |lambda_2| natural order = 0.0179; three random relabellings: 0.0215, 0.0156, 0.0224; (1.1e-16)^(1/(K-1)) = 0.0354; number of computed |lambda| > 1e-6 besides 1: 1023
+E1 (2) singular spectrum of P_K vs closed form
+  K =  4: max |svd - closed form| = 1.29e-16; sigma_2 = 0.8660254038 vs sqrt(1 - 2^-(K-2)) = 0.8660254038
+  K =  5: max |svd - closed form| = 3.33e-16; sigma_2 = 0.9354143467 vs sqrt(1 - 2^-(K-2)) = 0.9354143467
+  K =  6: max |svd - closed form| = 3.33e-16; sigma_2 = 0.9682458366 vs sqrt(1 - 2^-(K-2)) = 0.9682458366
+  K =  7: max |svd - closed form| = 4.44e-16; sigma_2 = 0.9842509843 vs sqrt(1 - 2^-(K-2)) = 0.9842509843
+  K =  8: max |svd - closed form| = 5.55e-16; sigma_2 = 0.9921567416 vs sqrt(1 - 2^-(K-2)) = 0.9921567416
+  K =  9: max |svd - closed form| = 1.67e-15; sigma_2 = 0.9960860907 vs sqrt(1 - 2^-(K-2)) = 0.9960860907
+  K = 10: max |svd - closed form| = 1.70e-15; sigma_2 = 0.9980449639 vs sqrt(1 - 2^-(K-2)) = 0.9980449639
+  K = 11: max |svd - closed form| = 5.44e-15; sigma_2 = 0.9990229602 vs sqrt(1 - 2^-(K-2)) = 0.9990229602
+  K = 12: max |svd - closed form| = 8.27e-15; sigma_2 = 0.9995115995 vs sqrt(1 - 2^-(K-2)) = 0.9995115995
+E1 (3) Tao chain: numpy |lambda_2| and ||P - Pi|| in l^2(pi) on the units
+  J = 2: numpy |lambda_2| = 0.0000; ||P_J - Pi||_(l^2(pi), units) = 0.674200
+  J = 3: numpy |lambda_2| = 0.0000; ||P_J - Pi||_(l^2(pi), units) = 0.971291
+  J = 4: numpy |lambda_2| = 0.0001; ||P_J - Pi||_(l^2(pi), units) = 0.996151
+  J = 5: numpy |lambda_2| = 0.0002; ||P_J - Pi||_(l^2(pi), units) = 0.999518
+  J = 6: numpy |lambda_2| = 0.0013; ||P_J - Pi||_(l^2(pi), units) = 0.999946
+  J = 2 (40 digits): ||P_J - Pi||_(l^2(pi), units) = 0.674199862463242
+  J = 3 (40 digits): ||P_J - Pi||_(l^2(pi), units) = 0.971290824687078
+E1 DONE

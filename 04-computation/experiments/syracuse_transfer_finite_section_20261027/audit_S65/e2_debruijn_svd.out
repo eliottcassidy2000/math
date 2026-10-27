@@ -1,0 +1,10 @@
+K =  2: singular values: 2 equal to 1, 2 equal to 0 (of 4); sigma_2 = 1.000000000000
+K =  3: singular values: 4 equal to 1, 4 equal to 0 (of 8); sigma_2 = 1.000000000000
+K =  4: singular values: 8 equal to 1, 8 equal to 0 (of 16); sigma_2 = 1.000000000000
+K =  5: singular values: 16 equal to 1, 16 equal to 0 (of 32); sigma_2 = 1.000000000000
+K =  6: singular values: 32 equal to 1, 32 equal to 0 (of 64); sigma_2 = 1.000000000000
+K =  7: singular values: 64 equal to 1, 64 equal to 0 (of 128); sigma_2 = 1.000000000000
+K =  8: singular values: 128 equal to 1, 128 equal to 0 (of 256); sigma_2 = 1.000000000000
+K =  9: singular values: 256 equal to 1, 256 equal to 0 (of 512); sigma_2 = 1.000000000000
+K = 10: singular values: 512 equal to 1, 512 equal to 0 (of 1024); sigma_2 = 1.000000000000
+K = 11: singular values: 1024 equal to 1, 1024 equal to 0 (of 2048); sigma_2 = 1.000000000000

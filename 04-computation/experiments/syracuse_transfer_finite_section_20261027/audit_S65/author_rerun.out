@@ -1,0 +1,104 @@
+== A, B. the 2-adic Ulam matrices P_K: exact construction and the class lemma
+  K =  8:     128 states, nnz = K 2^(K-1) =      1024; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 85 (= -1/3 mod 2^K); class lemma checked at all 8 levels  [0.0s]
+  K =  9:     256 states, nnz = K 2^(K-1) =      2304; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 341 (= -1/3 mod 2^K); class lemma checked at all 9 levels  [0.0s]
+  K = 10:     512 states, nnz = K 2^(K-1) =      5120; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 341 (= -1/3 mod 2^K); class lemma checked at all 10 levels  [0.0s]
+  K = 11:    1024 states, nnz = K 2^(K-1) =     11264; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 1365 (= -1/3 mod 2^K); class lemma checked at all 11 levels  [0.0s]
+  K = 12:    2048 states, nnz = K 2^(K-1) =     24576; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 1365 (= -1/3 mod 2^K); class lemma checked at all 12 levels  [0.0s]
+  K = 13:    4096 states, nnz = K 2^(K-1) =     53248; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 5461 (= -1/3 mod 2^K); class lemma checked at all 13 levels  [0.0s]
+  K = 14:    8192 states, nnz = K 2^(K-1) =    114688; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 5461 (= -1/3 mod 2^K); class lemma checked at all 14 levels  [0.0s]
+  K = 15:   16384 states, nnz = K 2^(K-1) =    245760; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 21845 (= -1/3 mod 2^K); class lemma checked at all 15 levels  [0.0s]
+  K = 16:   32768 states, nnz = K 2^(K-1) =    524288; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 21845 (= -1/3 mod 2^K); class lemma checked at all 16 levels  [0.0s]
+  K = 17:   65536 states, nnz = K 2^(K-1) =   1114112; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 87381 (= -1/3 mod 2^K); class lemma checked at all 17 levels  [0.1s]
+  K = 18:  131072 states, nnz = K 2^(K-1) =   2359296; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 87381 (= -1/3 mod 2^K); class lemma checked at all 18 levels  [0.1s]
+  K = 19:  262144 states, nnz = K 2^(K-1) =   4980736; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 349525 (= -1/3 mod 2^K); class lemma checked at all 19 levels  [0.3s]
+  K = 20:  524288 states, nnz = K 2^(K-1) =  10485760; row sums = column sums = 2^(K-1) (doubly stochastic); special residue a* = 349525 (= -1/3 mod 2^K); class lemma checked at all 20 levels  [0.6s]
+== C. exact consequences: R_n, ranks, Jordan type, hitting times, total variation, Dobrushin
+  K =  8: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 7 and 2^(K-2-s) blocks of size s for s = 1..6 (sizes 1..4: [32, 16, 8, 4]); mean exact mixing time = K/2 = 4; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.2266
+  K =  9: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 8 and 2^(K-2-s) blocks of size s for s = 1..7 (sizes 1..4: [64, 32, 16, 8]); mean exact mixing time = K/2 = 9/2; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3633
+  K = 10: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 9 and 2^(K-2-s) blocks of size s for s = 1..8 (sizes 1..4: [128, 64, 32, 16]); mean exact mixing time = K/2 = 5; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.2539
+  K = 11: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 10 and 2^(K-2-s) blocks of size s for s = 1..9 (sizes 1..4: [256, 128, 64, 32]); mean exact mixing time = K/2 = 11/2; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3770
+  K = 12: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 11 and 2^(K-2-s) blocks of size s for s = 1..10 (sizes 1..4: [512, 256, 128, 64]); mean exact mixing time = K/2 = 6; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.2744
+  K = 13: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 12 and 2^(K-2-s) blocks of size s for s = 1..11 (sizes 1..4: [1024, 512, 256, 128]); mean exact mixing time = K/2 = 13/2; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3872
+  K = 14: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 13 and 2^(K-2-s) blocks of size s for s = 1..12 (sizes 1..4: [2048, 1024, 512, 256]); mean exact mixing time = K/2 = 7; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.2905
+  K = 15: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 14 and 2^(K-2-s) blocks of size s for s = 1..13 (sizes 1..4: [4096, 2048, 1024, 512]); mean exact mixing time = K/2 = 15/2; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3953
+  K = 16: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 15 and 2^(K-2-s) blocks of size s for s = 1..14 (sizes 1..4: [8192, 4096, 2048, 1024]); mean exact mixing time = K/2 = 8; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3036
+  K = 17: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 16 and 2^(K-2-s) blocks of size s for s = 1..15 (sizes 1..4: [16384, 8192, 4096, 2048]); mean exact mixing time = K/2 = 17/2; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.4018
+  K = 18: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 17 and 2^(K-2-s) blocks of size s for s = 1..16 (sizes 1..4: [32768, 16384, 8192, 4096]); mean exact mixing time = K/2 = 9; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3145
+  K = 19: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 18 and 2^(K-2-s) blocks of size s for s = 1..17 (sizes 1..4: [65536, 32768, 16384, 8192]); mean exact mixing time = K/2 = 19/2; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.4073
+  K = 20: rank P^n = 2^(K-1-n) for n = 0..K-1 (checked); Jordan type of P - Pi on the mean-zero space: one block of size 19 and 2^(K-2-s) blocks of size s for s = 1..18 (sizes 1..4: [131072, 65536, 32768, 16384]); mean exact mixing time = K/2 = 10; worst TV at n = K-2: 1/2; average TV at n = K/2: 0.3238
+  K = 12 hitting-time counts (h = 1..11): [2, 20, 90, 240, 420, 504, 420, 240, 90, 20, 2] = 2 C(10, h-1)
+  K = 12 average TV profile n = 0..11: [0.9995, 0.9941, 0.9673, 0.8867, 0.7256, 0.5, 0.2744, 0.1133, 0.0327, 0.0059, 0.0005, 0.0]
+  -> for every K: P_K = Pi + N_K with N_K nilpotent of index exactly K - 1; spectrum {1, 0, ..., 0};
+     second-largest eigenvalue modulus 0; Dobrushin coefficient of P^n is 1 for n <= K - 2 and 0 at n = K - 1
+== C2. the l^2(pi) operator norms: ||(P_K - Pi)^n||^2 = P(Bin(K-2, 1/2) >= n)
+  K =  8: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 63/64 (norm 0.9921567; singular-value gap 1 - norm = 7.843e-03 ~ 2^-(K-1) = 7.812e-03); float SVD of all powers agrees
+  K =  9: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 127/128 (norm 0.9960861; singular-value gap 1 - norm = 3.914e-03 ~ 2^-(K-1) = 3.906e-03); float SVD of all powers agrees
+  K = 10: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 255/256 (norm 0.9980450; singular-value gap 1 - norm = 1.955e-03 ~ 2^-(K-1) = 1.953e-03); float SVD of all powers agrees
+  K = 11: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 511/512 (norm 0.9990230; singular-value gap 1 - norm = 9.770e-04 ~ 2^-(K-1) = 9.766e-04); float SVD of all powers agrees
+  K = 12: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 1023/1024 (norm 0.9995116; singular-value gap 1 - norm = 4.884e-04 ~ 2^-(K-1) = 4.883e-04); float SVD of all powers agrees
+  K = 13: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 2047/2048 (norm 0.9997558; singular-value gap 1 - norm = 2.442e-04 ~ 2^-(K-1) = 2.441e-04)
+  K = 14: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 4095/4096 (norm 0.9998779; singular-value gap 1 - norm = 1.221e-04 ~ 2^-(K-1) = 1.221e-04)
+  K = 15: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 8191/8192 (norm 0.9999390; singular-value gap 1 - norm = 6.104e-05 ~ 2^-(K-1) = 6.104e-05)
+  K = 16: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 16383/16384 (norm 0.9999695; singular-value gap 1 - norm = 3.052e-05 ~ 2^-(K-1) = 3.052e-05)
+  K = 17: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 32767/32768 (norm 0.9999847; singular-value gap 1 - norm = 1.526e-05 ~ 2^-(K-1) = 1.526e-05)
+  K = 18: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 65535/65536 (norm 0.9999924; singular-value gap 1 - norm = 7.629e-06 ~ 2^-(K-1) = 7.629e-06)
+  K = 19: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 131071/131072 (norm 0.9999962; singular-value gap 1 - norm = 3.815e-06 ~ 2^-(K-1) = 3.815e-06)
+  K = 20: ||P_K - Pi||^2 = 1 - 2^-(K-2) = 262143/262144 (norm 0.9999981; singular-value gap 1 - norm = 1.907e-06 ~ 2^-(K-1) = 1.907e-06)
+  -> the eigenvalue gap is 1 for every K, but P_K is far from normal: its second singular value tends to 1
+     like 1 - 2^-(K-1), and the l^2 profile of the worst function is the binomial tail (cutoff at n = K/2)
+== D. independent dense checks (no class machinery)
+  K = 8: C^(K-1) = 2^((K-1)(K-2)) J proved by congruence modulo 3 primes (product > 2^((K-1)^2+1)); C^(K-2) != 2^((K-1)(K-3)) J (certificate prime 1048573)
+  K = 9: C^(K-1) = 2^((K-1)(K-2)) J proved by congruence modulo 4 primes (product > 2^((K-1)^2+1)); C^(K-2) != 2^((K-1)(K-3)) J (certificate prime 1048573)
+  K = 10: C^(K-1) = 2^((K-1)(K-2)) J proved by congruence modulo 5 primes (product > 2^((K-1)^2+1)); C^(K-2) != 2^((K-1)(K-3)) J (certificate prime 1048573)
+  K = 11: C^(K-1) = 2^((K-1)(K-2)) J proved by congruence modulo 6 primes (product > 2^((K-1)^2+1)); C^(K-2) != 2^((K-1)(K-3)) J (certificate prime 1048573)
+  K = 12: C^(K-1) = 2^((K-1)(K-2)) J proved by congruence modulo 7 primes (product > 2^((K-1)^2+1)); C^(K-2) != 2^((K-1)(K-3)) J (certificate prime 1048573)
+  K = 8 in exact Python integers: C^7 = 2^42 J: True
+== E. floating point (a guide only): numpy eigenvalues of P_K
+  K = 8: numpy reports |lambda_2| = 0.0029 (exact value 0; a Jordan block of size 7 perturbed by 1e-16 has eigenvalues of modulus about 1e-16^(1/7) = 0.0052)
+  K = 9: numpy reports |lambda_2| = 0.0046 (exact value 0; a Jordan block of size 8 perturbed by 1e-16 has eigenvalues of modulus about 1e-16^(1/8) = 0.0100)
+  K = 10: numpy reports |lambda_2| = 0.0089 (exact value 0; a Jordan block of size 9 perturbed by 1e-16 has eigenvalues of modulus about 1e-16^(1/9) = 0.0167)
+  K = 11: numpy reports |lambda_2| = 0.0125 (exact value 0; a Jordan block of size 10 perturbed by 1e-16 has eigenvalues of modulus about 1e-16^(1/10) = 0.0251)
+  K = 12: numpy reports |lambda_2| = 0.0179 (exact value 0; a Jordan block of size 11 perturbed by 1e-16 has eigenvalues of modulus about 1e-16^(1/11) = 0.0351)
+== F. carrier 2: Tao's Syracuse chain on Z/3^J
+  J = 1: 3 states, L = 2; rows of P^J equal (exact, 3 starts), rows of P^(J-1) differ; TV(Syrac(Z/3^J), uniform on units) = 0.16667
+  J = 2: 9 states, L = 6; rows of P^J equal (exact, 9 starts), rows of P^(J-1) differ; TV(Syrac(Z/3^J), uniform on units) = 0.27778; max primitive |hat mu_J| = 0.37792 (THM-4520 (5) table: 0.37792)
+    stationary law mod 9 = ['0', '8/63', '16/63', '0', '11/63', '4/63', '0', '2/63', '22/63']; Tao's mod-9 law: True
+  J = 3: 27 states, L = 18; rows of P^J equal (exact, 27 starts), rows of P^(J-1) differ; TV(Syrac(Z/3^J), uniform on units) = 0.34601; max primitive |hat mu_J| = 0.25224 (THM-4520 (5) table: 0.25224)
+  J = 4: 81 states, L = 54; rows of P^J equal (exact, 81 starts), rows of P^(J-1) differ; TV(Syrac(Z/3^J), uniform on units) = 0.37054; max primitive |hat mu_J| = 0.17700 (THM-4520 (5) table: 0.177)
+  J = 5: 243 states, L = 162; rows of P^J equal (exact, 5 starts), rows of P^(J-1) differ; TV(Syrac(Z/3^J), uniform on units) = 0.38887; max primitive |hat mu_J| = 0.12927 (THM-4520 (5) table: 0.12927)
+  J = 6: 729 states, L = 486; rows of P^J equal (exact, 5 starts), rows of P^(J-1) differ; TV(Syrac(Z/3^J), uniform on units) = 0.39855; max primitive |hat mu_J| = 0.09611 (THM-4520 (5) table: 0.09611)
+  J = 2 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate); rank P^n = [9, 3, 1] = 3^(J-n): the modular lower bound meets the structural upper bound
+  J = 3 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate); rank P^n = [27, 9, 3, 1] = 3^(J-n): the modular lower bound meets the structural upper bound
+  J = 4 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate); rank P^n = [81, 27, 9, 3, 1] = 3^(J-n): the modular lower bound meets the structural upper bound
+  J = 5 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate); rank P^n = [243, 81, 27, 9, 3, 1] = 3^(J-n): the modular lower bound meets the structural upper bound
+  J = 6 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate); rank P^n = [729, 243, 81, 27, 9, 3, 1] = 3^(J-n): the modular lower bound meets the structural upper bound
+  J = 7 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate)
+  J = 8 (mod q = 1048573): rows of P^J equal mod q, rows of P^(J-1) differ mod q (certificate)
+  Jordan type of P_J - Pi (from rank P^n = 3^(J-n), proved for all J in the note): two blocks of size J and
+  4 3^(J-1-s) blocks of size s for s = 1..J-1, e.g. J = 6: {1: 324, 2: 108, 3: 36, 4: 12, 5: 4, 6: 2}
+  float guide (numpy): |lambda_2| of P_J and the l^2(pi) norm of P_J - Pi on the units:
+    J = 2: numpy |lambda_2| = 0.0000 (exact 0); ||P_J - Pi||_(l^2(pi)) = 0.674200
+    J = 3: numpy |lambda_2| = 0.0000 (exact 0); ||P_J - Pi||_(l^2(pi)) = 0.971291
+    J = 4: numpy |lambda_2| = 0.0001 (exact 0); ||P_J - Pi||_(l^2(pi)) = 0.996151
+    J = 5: numpy |lambda_2| = 0.0002 (exact 0); ||P_J - Pi||_(l^2(pi)) = 0.999518
+    J = 6: numpy |lambda_2| = 0.0013 (exact 0); ||P_J - Pi||_(l^2(pi)) = 0.999946
+== G. contrast: the T-map (x/2 or (3x+1)/2 with fair coins)
+  Z/3^1: det(lambda I - P) = (lambda - 1) prod_(d=1..1) (lambda^(L_d) - 2^-(L_d)) exactly: True -> second-largest eigenvalue modulus exactly 1/2 (the doubling cycles of THM-4631 at u = v = 1)
+  Z/3^2: det(lambda I - P) = (lambda - 1) prod_(d=1..2) (lambda^(L_d) - 2^-(L_d)) exactly: True -> second-largest eigenvalue modulus exactly 1/2 (the doubling cycles of THM-4631 at u = v = 1)
+  Z/3^3: det(lambda I - P) = (lambda - 1) prod_(d=1..3) (lambda^(L_d) - 2^-(L_d)) exactly: True -> second-largest eigenvalue modulus exactly 1/2 (the doubling cycles of THM-4631 at u = v = 1)
+  Z/2^6 (de Bruijn Ulam matrix, exact integers): P^K = Pi and P^(K-1) != Pi: True (THM-4629 2(c))
+  Z/2^7 (de Bruijn Ulam matrix, exact integers): P^K = Pi and P^(K-1) != Pi: True (THM-4629 2(c))
+  Z/2^8 (de Bruijn Ulam matrix, exact integers): P^K = Pi and P^(K-1) != Pi: True (THM-4629 2(c))
+== H. universality in the multiplier p (the finite sections cannot see p = 3)
+  x -> (1 x + 1)/2^v on odd residues mod 2^K, K = 8..14: same reachable classes, ranks 2^(K-1-n), Jordan type and hitting times as p = 3: True
+  x -> (5 x + 1)/2^v on odd residues mod 2^K, K = 8..14: same reachable classes, ranks 2^(K-1-n), Jordan type and hitting times as p = 3: True
+  x -> (7 x + 1)/2^v on odd residues mod 2^K, K = 8..14: same reachable classes, ranks 2^(K-1-n), Jordan type and hitting times as p = 3: True
+  x -> (-1 x + 1)/2^v on odd residues mod 2^K, K = 8..14: same reachable classes, ranks 2^(K-1-n), Jordan type and hitting times as p = 3: True
+  x -> (5 x + 1) 2^-a on Z/5^1 (ord of 2 = 4): P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = [5, 1] = 5^(J-n)
+  x -> (5 x + 1) 2^-a on Z/5^2 (ord of 2 = 20): P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = [25, 5, 1] = 5^(J-n)
+  x -> (5 x + 1) 2^-a on Z/5^3 (ord of 2 = 100): P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = [125, 25, 5, 1] = 5^(J-n)
+  x -> (7 x + 1) 2^-a on Z/7^1 (ord of 2 = 3, 2 not primitive): P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = [7, 1] = 7^(J-n)
+  x -> (7 x + 1) 2^-a on Z/7^2 (ord of 2 = 21, 2 not primitive): P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = [49, 7, 1] = 7^(J-n)
+  x -> (7 x + 1) 2^-a on Z/7^3 (ord of 2 = 147, 2 not primitive): P^J = Pi, P^(J-1) != Pi (mod q), rank P^n = [343, 49, 7, 1] = 7^(J-n)
+ALL CHECKS PASSED
+exit 0 elapsed 74 s

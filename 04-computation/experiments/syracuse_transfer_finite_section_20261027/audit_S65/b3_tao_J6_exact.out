@@ -1,0 +1,8 @@
+n = 1: rows of P^n depend only on x mod 3^5; rank P^n = 243 = 3^(J-n)  [1s]
+n = 2: rows of P^n depend only on x mod 3^4; rank P^n = 81 = 3^(J-n)  [5s]
+n = 3: rows of P^n depend only on x mod 3^3; rank P^n = 27 = 3^(J-n)  [10s]
+n = 4: rows of P^n depend only on x mod 3^2; rank P^n = 9 = 3^(J-n)  [17s]
+n = 5: rows of P^n depend only on x mod 3^1; rank P^n = 3 = 3^(J-n)  [26s]
+n = 6: rows of P^n depend only on x mod 3^0; rank P^n = 1 = 3^(J-n)  [37s]
+J = 6: P^6 = Pi exactly for all 729 starts; P^5 != Pi; ranks exact
+exit 0
