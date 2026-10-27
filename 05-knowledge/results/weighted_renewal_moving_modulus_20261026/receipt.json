@@ -1,0 +1,396 @@
+{
+  "adaptive_sources": {
+    "energy_9_to_t_precision_schedules": {
+      "1": [
+        128,
+        1024,
+        4096,
+        32768,
+        262144,
+        1048576,
+        8388608,
+        33554432,
+        268435456,
+        1073741824,
+        8589934592,
+        68719476736,
+        274877906944,
+        2199023255552,
+        8796093022208,
+        70368744177664,
+        562949953421312
+      ],
+      "3": [
+        64,
+        256,
+        512,
+        1024,
+        4096,
+        8192,
+        16384,
+        32768,
+        131072,
+        262144,
+        524288,
+        2097152,
+        4194304,
+        8388608,
+        16777216,
+        67108864,
+        134217728
+      ],
+      "6": [
+        64,
+        128,
+        256,
+        512,
+        512,
+        1024,
+        2048,
+        2048,
+        4096,
+        8192,
+        16384,
+        16384,
+        32768,
+        65536,
+        131072,
+        131072,
+        262144
+      ]
+    },
+    "finite_alias_controls": 192
+  },
+  "moduli": {
+    "all_words_through_depth": 8,
+    "height_lift_and_pole_controls": 9841,
+    "root_alias_moduli": 256
+  },
+  "paley_escape": {
+    "all_rank_orders": 5040,
+    "joined_sharp_cycle_debt_copies": 12,
+    "minimum_exception_cycle_rank": 1,
+    "minimum_paley_feedback_edges": 7,
+    "natural_repair": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "predecessor_defects": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "predecessor_rank_order": [
+      0,
+      3,
+      1,
+      6,
+      4,
+      2,
+      5
+    ]
+  },
+  "passive": {
+    "actual_32_odd_step_prefixes": 256,
+    "single_branch_rational_identities": 32768
+  },
+  "renewal": {
+    "artificial_refinement_rayleigh": {
+      "2": "5/2",
+      "4": "15/2",
+      "8": "51/2",
+      "16": "187/2",
+      "32": "715/2"
+    },
+    "collatz_all_one_controls": [
+      {
+        "L": 1,
+        "endpoint": 5,
+        "integer_clock": 2,
+        "source": 3
+      },
+      {
+        "L": 2,
+        "endpoint": 17,
+        "integer_clock": 4,
+        "source": 7
+      },
+      {
+        "L": 3,
+        "endpoint": 53,
+        "integer_clock": 6,
+        "source": 15
+      },
+      {
+        "L": 4,
+        "endpoint": 161,
+        "integer_clock": 8,
+        "source": 31
+      },
+      {
+        "L": 5,
+        "endpoint": 485,
+        "integer_clock": 10,
+        "source": 63
+      },
+      {
+        "L": 6,
+        "endpoint": 1457,
+        "integer_clock": 12,
+        "source": 127
+      },
+      {
+        "L": 7,
+        "endpoint": 4373,
+        "integer_clock": 14,
+        "source": 255
+      },
+      {
+        "L": 8,
+        "endpoint": 13121,
+        "integer_clock": 16,
+        "source": 511
+      },
+      {
+        "L": 9,
+        "endpoint": 39365,
+        "integer_clock": 18,
+        "source": 1023
+      },
+      {
+        "L": 10,
+        "endpoint": 118097,
+        "integer_clock": 20,
+        "source": 2047
+      },
+      {
+        "L": 11,
+        "endpoint": 354293,
+        "integer_clock": 22,
+        "source": 4095
+      },
+      {
+        "L": 12,
+        "endpoint": 1062881,
+        "integer_clock": 24,
+        "source": 8191
+      },
+      {
+        "L": 13,
+        "endpoint": 3188645,
+        "integer_clock": 26,
+        "source": 16383
+      },
+      {
+        "L": 14,
+        "endpoint": 9565937,
+        "integer_clock": 28,
+        "source": 32767
+      },
+      {
+        "L": 15,
+        "endpoint": 28697813,
+        "integer_clock": 30,
+        "source": 65535
+      },
+      {
+        "L": 16,
+        "endpoint": 86093441,
+        "integer_clock": 32,
+        "source": 131071
+      },
+      {
+        "L": 17,
+        "endpoint": 258280325,
+        "integer_clock": 34,
+        "source": 262143
+      },
+      {
+        "L": 18,
+        "endpoint": 774840977,
+        "integer_clock": 36,
+        "source": 524287
+      },
+      {
+        "L": 19,
+        "endpoint": 2324522933,
+        "integer_clock": 38,
+        "source": 1048575
+      },
+      {
+        "L": 20,
+        "endpoint": 6973568801,
+        "integer_clock": 40,
+        "source": 2097151
+      },
+      {
+        "L": 21,
+        "endpoint": 20920706405,
+        "integer_clock": 42,
+        "source": 4194303
+      },
+      {
+        "L": 22,
+        "endpoint": 62762119217,
+        "integer_clock": 44,
+        "source": 8388607
+      },
+      {
+        "L": 23,
+        "endpoint": 188286357653,
+        "integer_clock": 46,
+        "source": 16777215
+      },
+      {
+        "L": 24,
+        "endpoint": 564859072961,
+        "integer_clock": 48,
+        "source": 33554431
+      },
+      {
+        "L": 25,
+        "endpoint": 1694577218885,
+        "integer_clock": 50,
+        "source": 67108863
+      },
+      {
+        "L": 26,
+        "endpoint": 5083731656657,
+        "integer_clock": 52,
+        "source": 134217727
+      },
+      {
+        "L": 27,
+        "endpoint": 15251194969973,
+        "integer_clock": 54,
+        "source": 268435455
+      },
+      {
+        "L": 28,
+        "endpoint": 45753584909921,
+        "integer_clock": 56,
+        "source": 536870911
+      },
+      {
+        "L": 29,
+        "endpoint": 137260754729765,
+        "integer_clock": 58,
+        "source": 1073741823
+      },
+      {
+        "L": 30,
+        "endpoint": 411782264189297,
+        "integer_clock": 60,
+        "source": 2147483647
+      },
+      {
+        "L": 31,
+        "endpoint": 1235346792567893,
+        "integer_clock": 62,
+        "source": 4294967295
+      },
+      {
+        "L": 32,
+        "endpoint": 3706040377703681,
+        "integer_clock": 64,
+        "source": 8589934591
+      }
+    ],
+    "refinement_vectors": 756,
+    "weighted_gram_cases": 7620
+  },
+  "status": "PASS",
+  "tournaments": {
+    "binary_joins": 200,
+    "first_frozen_forest_tau_hostile": {
+      "defects": [
+        [
+          0,
+          2
+        ]
+      ],
+      "n": 3,
+      "new_defects": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "path": [
+        0,
+        1,
+        2
+      ],
+      "rank": [
+        0,
+        1,
+        2
+      ]
+    },
+    "forests_by_order": {
+      "1": 1,
+      "2": 2,
+      "3": 7,
+      "4": 38,
+      "5": 291,
+      "6": 2932
+    },
+    "guarded_moves": 2044019,
+    "legal_paths": 57495
+  }
+}

@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — conserved mass and sparse ports do not erase refinement debt
+
+- **Exploratory claims rejected before promotion:** conserving source mass makes arbitrary refinement energy stable; a forest exception frame can always be repaired after path complement by choosing another rank.
+- **Minimal local witnesses / failed implications:** splitting one atom into two half-mass sequential prefix steps gives energy ratio5/2 on (1,1), despite conserved mass. A three-vertex forest updates to a triangle under the prescribed complement frame; this alone does not exclude a different rank.
+- **Stronger all-rank obstruction:** an explicit seven-vertex forest frame has legal path complement Paley7. Its fourteen cyclic triangles, two per edge, force at least seven backward edges in every rank, so no forest frame exists. A natural unicyclic frame attains the bound. Joining r predecessors forces exactly r independent exception cycles on7r vertices after one complement; adding helpers cannot erase an induced Paley block.
+- **Strongest survivors / repair:** same-clock weighted copy/conditional-mean refinement preserves norm; actual fine-mode defects and rank-one boundary carries need their own budget. Relocation and J/star joins preserve forest frames, while complement has the exact update D symmetric-difference E(P) and a recorded cycle debt. Relative Collatz contraction also retains an explicit forcing cost, asymptotic to3n/2.
+- **New question and lineage:** can the actual source-weighted ROOT currents pay the budget, and can all complement words admit a uniform linear (rather than constant) exception budget? [Proofs, witnesses and exact controls](../05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md), extending the native-return packet and audited THM-4807/4808. These are scoped failures, not retractions of those inherited results.
+
 ## 2026-10-26 — forgetting ports must sum multiplicities
 
 - **Source / failed implication:** `04-computation/experiments/joint_port_bisimulation_20261026/atom_responses.py` constructed `Counter({fc[h]: c for h,c in resp[a]})`. Distinct rooted targets can have the same free class, so the dictionary overwrites coefficients before Counter sees them. This is not a histogram pushforward.
