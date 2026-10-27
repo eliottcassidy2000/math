@@ -37,7 +37,7 @@ A native move along a legal word `Q = (a, ..., b)` replaces the skew matrix `K` 
 | arc connectivity `lambda = min_X f(X)` | at most 1 | distance to the non-strong locus | **always** (any colour); black: all but `R5` and the classified family `E` (section 2) |
 | `delta^0 = min_v min(s_v, n-1-s_v)` | at most 1 | distance to a singleton / singleton plus strong core | when `lambda = delta^0`; exhaustive through order 10 |
 | `sum d_v^2` (equivalently `c3`) | `c3' - c3 = s(a) - s(b) - 1` | triangle descent (black_descent_20261020c) | descents exist (inherited) |
-| THM-4810's `L = (1/2) sum |s_(i) - i|` | at most 1 | distance to the transitive class | `P11`: 15 (Session74); `P7`: 7 > 6 |
+| THM-4810's `L = (1/2) sum |s_(i) - i|` | at most 1 | distance to the transitive class | `P11`: 15 (Session74); `P7`: 6 (corrected: THM-4810's 7 is the labelled distance to one fixed transitive tournament, forced by parity; THM-4815 (C), MISTAKE-682) |
 | `||K||_op`, `||K||_*` | `4 cos(pi/(n+1))`, `2 sum |2 cos(k pi/(n+1))|` (trace tariff: Session75 (6.2)-(6.3)) | linear move bounds only (Session75's exception tariff gives `n/4 - O(sqrt(n) log n)`) | far from tight |
 | exceptions to a converse-closed family | at most `n - 1` | static budgets (Session75, dyadic T6) | first-order sharp for `P_q` vs `G_b` |
 

@@ -12,6 +12,10 @@ status: >
   the matching leading upper constant assumes transitive baselines are available. Variable banks, physical
   port identifications, block-exception counts and native-move distances are not identified with that scope.
   (4) a task: 903,753,248 classes at order 11 by gentourng in parts (hours on eight cores), then species11.py at n = 12.
+  RESOLVED 2026-10-27 (mac-mini-2026-10-27-dipole, THM-4816 / THM-4817) without the census: the order-11 types come from
+  the 12,155 non-rigid primes (prediction 'fewer than two hundred thousand, about 12,200' confirmed) plus the ledger;
+  P(12) = 142,980,435,791, SCP(12) = 1,170,949, c(12) = 76,601,960,166, l(12) = 35,524,962,710,023,558,019; the tower
+  continues to the order-13 types and the order-14 ledger.
 session: klein-2026-10-27 (codex/session-overnight-20261027)
 source: 05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md (§2–§4)
 scripts:

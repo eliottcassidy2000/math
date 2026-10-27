@@ -1,0 +1,7 @@
+CASE n=13 p=3 c=2 f=7 Freps=456 bits=19 enumerated=239075328 prime=142534464 new=10960216
+CASE n=13 p=3 c=3 f=4 Freps=4 bits=24 enumerated=67108864 prime=43522272 new=253656
+CASE n=13 p=3 c=4 f=1 Freps=1 bits=26 enumerated=67108864 prime=54527040 new=41836
+CASE n=13 p=5 c=2 f=3 Freps=2 bits=15 enumerated=65536 prime=32640 new=432
+CASE n=13 p=13 c=1 f=0 Freps=1 bits=6 enumerated=64 prime=64 new=5
+n=13 nonrigid_prime_classes=11256145 selfconverse=20925 enumerated=373358656 prime_labelled=240616480 distinct_types=20
+aut_hist: 3:11255339 5:432 9:368 13:5 39:1

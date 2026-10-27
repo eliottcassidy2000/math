@@ -1,0 +1,1 @@
+TYPE count=1 k=5 aut=5 AUT: 1^5,:1 5^1,:4 SC=1 ANTI: 1^1,2^2,:5

@@ -1,0 +1,1 @@
+./nonrigid_primes 12 out/nr12.txt out/nrclasses12.txt > out/nonrigid12.log 2>  34.74s user 0.23s system 98% cpu 35.355 total

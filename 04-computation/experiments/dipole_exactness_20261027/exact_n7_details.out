@@ -1,0 +1,861 @@
+n=7 classes=456 asymmetric-edges any=0 black=0
+target TT   any   potential L                unreachable 0  d<bound 0  failures 182 (symmetric 52)  local-minima 110 (symmetric 32)
+   (bound, d-bound): (0,+0):1 (1,+0):1 (1,+1):3 (1,+2):20 (1,+3):7 (2,+0):21 (2,+1):92 (2,+2):17 (3,+0):151 (3,+1):42 (3,+2):1 (4,+0):82 (5,+0):15 (6,+0):3 
+   local minima by (lambda, kappa): (0,0):99 (1,1):11 
+   LOCALMIN class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 2 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   LOCALMIN class 3 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 47 pot 2 dist 4
+   LOCALMIN class 7 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 8 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 1 H 33 pot 1 dist 2
+   LOCALMIN class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   LOCALMIN class 11 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   LOCALMIN class 12 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 33 pot 2 dist 3
+   LOCALMIN class 13 scores 1222446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+   LOCALMIN class 14 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 15 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   LOCALMIN class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   LOCALMIN class 18 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 37 pot 2 dist 3
+   LOCALMIN class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 2 dist 3
+   LOCALMIN class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 2 dist 3
+   LOCALMIN class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   LOCALMIN class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   LOCALMIN class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 3 dist 4
+   LOCALMIN class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 26 scores 1222446 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 2 dist 3
+   LOCALMIN class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 2 dist 3
+   LOCALMIN class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 4
+   LOCALMIN class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   LOCALMIN class 30 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   LOCALMIN class 35 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 2 dist 3
+   LOCALMIN class 41 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 33 pot 2 dist 3
+   LOCALMIN class 52 scores 0233355 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+   LOCALMIN class 63 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 41 pot 3 dist 4
+   LOCALMIN class 86 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   LOCALMIN class 109 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 37 pot 2 dist 3
+   LOCALMIN class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 2 dist 4
+   LOCALMIN class 120 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   LOCALMIN class 121 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 122 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 123 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 2 dist 3
+   LOCALMIN class 124 scores 1133346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 2 dist 3
+   LOCALMIN class 126 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 127 scores 2223336 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 3 dist 4
+   LOCALMIN class 128 scores 2222346 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 129 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 3 dist 4
+   LOCALMIN class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 2 dist 4
+   LOCALMIN class 132 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 133 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 2 dist 4
+   LOCALMIN class 134 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 135 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 136 scores 1133346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+   LOCALMIN class 138 scores 2223336 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 3 dist 4
+   LOCALMIN class 139 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 140 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 141 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 163 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 185 scores 0333336 comps 1>5>1 |Aut| 5 SC 1 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 3 dist 5
+   LOCALMIN class 187 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 189 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 41 pot 3 dist 4
+   LOCALMIN class 190 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 3 dist 4
+   LOCALMIN class 191 scores 0133356 comps 1>1>3>1>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 192 scores 0233355 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 2 dist 3
+   LOCALMIN class 197 scores 0233346 comps 1>5>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 2 dist 4
+   LOCALMIN class 199 scores 1233336 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 200 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 2 dist 3
+   LOCALMIN class 201 scores 1133346 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 2 dist 3
+   LOCALMIN class 202 scores 0333345 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 214 scores 0124455 comps 4>1>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 4
+   LOCALMIN class 216 scores 0224445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 2 dist 3
+   LOCALMIN class 223 scores 0224445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+   LOCALMIN class 230 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 17 pot 1 dist 3
+   LOCALMIN class 236 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 29 pot 1 dist 3
+   LOCALMIN class 237 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 242 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 29 pot 1 dist 3
+   LOCALMIN class 243 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 25 pot 1 dist 3
+   LOCALMIN class 244 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 2 dist 3
+   LOCALMIN class 245 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   LOCALMIN class 246 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 47 pot 2 dist 4
+   LOCALMIN class 253 scores 0234444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 260 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 268 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 2 dist 4
+   LOCALMIN class 276 scores 0333444 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 3 dist 4
+   LOCALMIN class 284 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 3 dist 4
+   LOCALMIN class 307 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 2 dist 3
+   LOCALMIN class 308 scores 0234444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   LOCALMIN class 316 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 2 dist 3
+   LOCALMIN class 318 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 2 dist 3
+   LOCALMIN class 325 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 334 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 343 scores 0333444 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 3 dist 4
+   LOCALMIN class 352 scores 0144444 comps 5>1>1 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 3 dist 4
+   LOCALMIN class 353 scores 0234444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 360 scores 0124446 comps 1>3>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 361 scores 1114446 comps 1>3>3 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 2 dist 4
+   LOCALMIN class 362 scores 0224445 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 2 dist 3
+   LOCALMIN class 367 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   LOCALMIN class 369 scores 1222446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 2 dist 3
+   LOCALMIN class 370 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 371 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 2 dist 3
+   LOCALMIN class 372 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 17 pot 1 dist 3
+   LOCALMIN class 373 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 374 scores 0134445 comps 5>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 2 dist 3
+   LOCALMIN class 375 scores 0234444 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   LOCALMIN class 381 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 2 dist 3
+   LOCALMIN class 389 scores 0123555 comps 3>1>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 391 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 396 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 3 H 27 pot 1 dist 3
+   LOCALMIN class 397 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 398 scores 0222555 comps 3>3>1 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 2 dist 4
+   LOCALMIN class 401 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   LOCALMIN class 402 scores 0233355 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 2 dist 3
+   LOCALMIN class 415 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   LOCALMIN class 424 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 2 dist 3
+   LOCALMIN class 434 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 3 dist 4
+   FAIL class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   FAIL class 2 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   FAIL class 3 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 47 pot 2 dist 4
+   FAIL class 6 scores 1222455 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 41 pot 2 dist 3
+   FAIL class 7 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 1 fas 2 H 27 pot 1 dist 3
+   FAIL class 8 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 1 fas 1 H 33 pot 1 dist 2
+   FAIL class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   FAIL class 11 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   FAIL class 12 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 33 pot 2 dist 3
+   FAIL class 13 scores 1222446 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+   FAIL class 14 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   FAIL class 15 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   FAIL class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   FAIL class 18 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 37 pot 2 dist 3
+   FAIL class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 11 pot 2 dist 3
+   FAIL class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 13 pot 2 dist 3
+   FAIL class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   FAIL class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   FAIL class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 delta0 0 L 3 fas 3 H 15 pot 3 dist 4
+   FAIL class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   FAIL class 26 scores 1222446 comps 1>6 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 27 pot 2 dist 3
+   FAIL class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 15 pot 2 dist 3
+   FAIL class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 4
+   FAIL class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   FAIL class 30 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   FAIL class 31 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 3 fas 3 H 51 pot 3 dist 4
+   FAIL class 34 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 59 pot 2 dist 3
+   FAIL class 35 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 49 pot 2 dist 3
+   FAIL class 36 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 39 pot 2 dist 4
+   FAIL class 38 scores 2223345 comps 7 |Aut| 3 SC 0 lambda 1 delta0 1 L 3 fas 4 H 69 pot 3 dist 4
+   FAIL class 41 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 33 pot 2 dist 3
+   FAIL class 45 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 71 pot 2 dist 3
+   FAIL class 46 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 71 pot 2 dist 3
+   FAIL class 52 scores 0233355 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+   FAIL class 55 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 45 pot 2 dist 3
+   FAIL class 56 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 49 pot 2 dist 3
+   FAIL class 57 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 51 pot 2 dist 3
+   FAIL class 58 scores 1133355 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 2 fas 2 H 41 pot 2 dist 3
+   FAIL class 63 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 3 fas 3 H 41 pot 3 dist 4
+   FAIL class 86 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   FAIL class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   FAIL class 109 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 37 pot 2 dist 3
+   FAIL class 113 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 77 pot 2 dist 3
+   FAIL class 114 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 73 pot 2 dist 3
+   FAIL class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 2 fas 2 H 11 pot 2 dist 4
+   FAIL class 120 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 4
+   FAIL class 121 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   FAIL class 122 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   FAIL class 123 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 3 H 25 pot 2 dist 3
+   FAIL class 124 scores 1133346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 19 pot 2 dist 3
+   FAIL class 126 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   FAIL class 127 scores 2223336 comps 1>6 |Aut| 3 SC 0 lambda 0 delta0 0 L 3 fas 4 H 45 pot 3 dist 4
+   FAIL class 128 scores 2222346 comps 1>6 |Aut| 3 SC 0 lambda 0 delta0 0 L 3 fas 3 H 33 pot 3 dist 4
+   FAIL class 129 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 3 fas 4 H 43 pot 3 dist 4
+   FAIL class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 2 fas 2 H 13 pot 2 dist 4
+   FAIL class 132 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 3 fas 3 H 37 pot 3 dist 4
+   FAIL class 133 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 3 H 25 pot 2 dist 4
+   FAIL class 134 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   FAIL class 135 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 3 H 29 pot 2 dist 3
+   FAIL class 136 scores 1133346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 2 dist 3
+target TT   black potential L                unreachable 455  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target TT   any   potential ceil(fas/(n-1))  unreachable 0  d<bound 0  failures 454 (symmetric 126)  local-minima 452 (symmetric 124)
+   (bound, d-bound): (0,+0):1 (1,+0):1 (1,+1):24 (1,+2):263 (1,+3):148 (1,+4):16 (1,+5):1 (2,+4):2 
+   local minima by (lambda, kappa): (0,0):102 (1,1):265 (2,1):1 (2,2):83 (3,3):1 
+   LOCALMIN class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 2 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   LOCALMIN class 3 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 47 pot 1 dist 4
+   LOCALMIN class 4 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 85 pot 1 dist 2
+   LOCALMIN class 5 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 59 pot 1 dist 2
+   LOCALMIN class 6 scores 1222455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 41 pot 1 dist 3
+   LOCALMIN class 7 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 8 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 1 H 33 pot 1 dist 2
+   LOCALMIN class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   LOCALMIN class 10 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 93 pot 1 dist 2
+   LOCALMIN class 11 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 4
+   LOCALMIN class 12 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 33 pot 1 dist 3
+   LOCALMIN class 13 scores 1222446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 3
+   LOCALMIN class 14 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 15 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   LOCALMIN class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   LOCALMIN class 17 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 69 pot 1 dist 2
+   LOCALMIN class 18 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 37 pot 1 dist 3
+   LOCALMIN class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 1 dist 3
+   LOCALMIN class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 1 dist 3
+   LOCALMIN class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   LOCALMIN class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   LOCALMIN class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 1 dist 4
+   LOCALMIN class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 25 scores 1222455 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 51 pot 1 dist 2
+   LOCALMIN class 26 scores 1222446 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 4
+   LOCALMIN class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   LOCALMIN class 30 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 4
+   LOCALMIN class 31 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 51 pot 1 dist 4
+   LOCALMIN class 32 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 109 pot 1 dist 3
+   LOCALMIN class 33 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 81 pot 1 dist 3
+   LOCALMIN class 34 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 3
+   LOCALMIN class 35 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   LOCALMIN class 36 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 39 pot 1 dist 4
+   LOCALMIN class 37 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 38 scores 2223345 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 69 pot 1 dist 4
+   LOCALMIN class 39 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 115 pot 1 dist 3
+   LOCALMIN class 40 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 41 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 33 pot 1 dist 3
+   LOCALMIN class 42 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 103 pot 1 dist 3
+   LOCALMIN class 43 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 73 pot 1 dist 3
+   LOCALMIN class 44 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 45 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   LOCALMIN class 46 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   LOCALMIN class 47 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 59 pot 1 dist 2
+   LOCALMIN class 48 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 123 pot 1 dist 3
+   LOCALMIN class 49 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 97 pot 1 dist 3
+   LOCALMIN class 50 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 51 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 115 pot 1 dist 3
+   LOCALMIN class 52 scores 0233355 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 3
+   LOCALMIN class 53 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 79 pot 1 dist 3
+   LOCALMIN class 54 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 99 pot 1 dist 3
+   LOCALMIN class 55 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 45 pot 1 dist 3
+   LOCALMIN class 56 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   LOCALMIN class 57 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 51 pot 1 dist 3
+   LOCALMIN class 58 scores 1133355 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 41 pot 1 dist 3
+   LOCALMIN class 59 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 93 pot 1 dist 3
+   LOCALMIN class 60 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 61 scores 2222355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 57 pot 1 dist 3
+   LOCALMIN class 62 scores 2222355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 65 pot 1 dist 3
+   LOCALMIN class 63 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 41 pot 1 dist 4
+   LOCALMIN class 64 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 101 pot 1 dist 4
+   LOCALMIN class 65 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 111 pot 1 dist 4
+   LOCALMIN class 66 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 113 pot 1 dist 4
+   LOCALMIN class 67 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 68 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 83 pot 1 dist 3
+   LOCALMIN class 69 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 83 pot 1 dist 3
+   LOCALMIN class 70 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 151 pot 1 dist 5
+   LOCALMIN class 71 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 151 pot 1 dist 5
+   LOCALMIN class 72 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 157 pot 1 dist 5
+   LOCALMIN class 73 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 131 pot 1 dist 4
+   LOCALMIN class 74 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 135 pot 1 dist 4
+   LOCALMIN class 75 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 131 pot 1 dist 4
+   LOCALMIN class 76 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 121 pot 1 dist 4
+   LOCALMIN class 77 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 133 pot 1 dist 4
+   LOCALMIN class 78 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 131 pot 1 dist 4
+   LOCALMIN class 79 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 105 pot 1 dist 3
+   LOCALMIN class 80 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 123 pot 1 dist 4
+   LOCALMIN class 81 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 131 pot 1 dist 4
+   LOCALMIN class 82 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 137 pot 1 dist 4
+   LOCALMIN class 83 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 84 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 3 H 105 pot 1 dist 3
+   LOCALMIN class 85 scores 3333333 comps 7 |Aut| 7 SC 1 lambda 3 kappa 3 delta0 3 L 6 fas 6 H 175 pot 1 dist 6
+   LOCALMIN class 86 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 87 scores 1333335 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 83 pot 1 dist 4
+   LOCALMIN class 88 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 129 pot 1 dist 4
+   LOCALMIN class 89 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 90 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 71 pot 1 dist 3
+   LOCALMIN class 91 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 67 pot 1 dist 3
+   LOCALMIN class 92 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 67 pot 1 dist 3
+   LOCALMIN class 93 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 155 pot 1 dist 5
+   LOCALMIN class 94 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 111 pot 1 dist 4
+   LOCALMIN class 95 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 145 pot 1 dist 4
+   LOCALMIN class 96 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 109 pot 1 dist 4
+   LOCALMIN class 97 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 139 pot 1 dist 4
+   LOCALMIN class 98 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 99 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 101 pot 1 dist 4
+   LOCALMIN class 100 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 143 pot 1 dist 4
+   LOCALMIN class 101 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 91 pot 1 dist 3
+   LOCALMIN class 102 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 83 pot 1 dist 3
+   LOCALMIN class 103 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 101 pot 1 dist 4
+   LOCALMIN class 104 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 141 pot 1 dist 4
+   LOCALMIN class 105 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 91 pot 1 dist 3
+   LOCALMIN class 106 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 107 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 83 pot 1 dist 3
+   LOCALMIN class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   LOCALMIN class 109 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 37 pot 1 dist 3
+   LOCALMIN class 110 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 111 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 112 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 99 pot 1 dist 3
+   LOCALMIN class 113 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 77 pot 1 dist 3
+   LOCALMIN class 114 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 73 pot 1 dist 3
+   LOCALMIN class 115 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 69 pot 1 dist 2
+   LOCALMIN class 116 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 117 pot 1 dist 3
+   LOCALMIN class 117 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 117 pot 1 dist 3
+   LOCALMIN class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 1 dist 4
+   LOCALMIN class 119 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 111 pot 1 dist 3
+   LOCALMIN class 120 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 4
+   LOCALMIN class 121 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 122 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 123 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 1 dist 3
+   LOCALMIN class 124 scores 1133346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 1 dist 3
+   LOCALMIN class 125 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 126 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 127 scores 2223336 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 1 dist 4
+   LOCALMIN class 128 scores 2222346 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 129 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 1 dist 4
+   LOCALMIN class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 1 dist 4
+   LOCALMIN class 131 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 117 pot 1 dist 3
+   LOCALMIN class 132 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 133 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 1 dist 4
+   LOCALMIN class 134 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 135 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 136 scores 1133346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 3
+   LOCALMIN class 137 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 113 pot 1 dist 3
+   LOCALMIN class 138 scores 2223336 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 1 dist 4
+   LOCALMIN class 139 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 140 scores 2222346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 141 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 142 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 121 pot 1 dist 4
+   LOCALMIN class 143 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 81 pot 1 dist 3
+   LOCALMIN class 144 scores 1333335 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 95 pot 1 dist 4
+   LOCALMIN class 145 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 77 pot 1 dist 3
+   LOCALMIN class 146 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 73 pot 1 dist 3
+   LOCALMIN class 147 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 77 pot 1 dist 3
+   LOCALMIN class 148 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 145 pot 1 dist 4
+   LOCALMIN class 149 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 159 pot 1 dist 5
+   LOCALMIN class 150 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 113 pot 1 dist 4
+   LOCALMIN class 151 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 139 pot 1 dist 4
+   LOCALMIN class 152 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 153 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 109 pot 1 dist 4
+   LOCALMIN class 154 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 135 pot 1 dist 4
+   LOCALMIN class 155 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 97 pot 1 dist 3
+   LOCALMIN class 156 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 111 pot 1 dist 4
+   LOCALMIN class 157 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 4
+   LOCALMIN class 158 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 133 pot 1 dist 4
+   LOCALMIN class 159 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 109 pot 1 dist 3
+   LOCALMIN class 160 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 123 pot 1 dist 4
+   LOCALMIN class 161 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 101 pot 1 dist 3
+   LOCALMIN class 162 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 97 pot 1 dist 3
+   LOCALMIN class 163 scores 0333345 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 164 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 123 pot 1 dist 4
+   LOCALMIN class 165 scores 1333335 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 93 pot 1 dist 4
+   LOCALMIN class 166 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 167 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 168 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 73 pot 1 dist 3
+   LOCALMIN class 169 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 79 pot 1 dist 3
+   LOCALMIN class 170 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 159 pot 1 dist 5
+   LOCALMIN class 171 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 139 pot 1 dist 4
+   LOCALMIN class 172 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 115 pot 1 dist 4
+   LOCALMIN class 173 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 143 pot 1 dist 4
+   LOCALMIN class 174 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 111 pot 1 dist 4
+   LOCALMIN class 175 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 91 pot 1 dist 3
+   LOCALMIN class 176 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 139 pot 1 dist 4
+   LOCALMIN class 177 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 105 pot 1 dist 4
+   LOCALMIN class 178 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 101 pot 1 dist 3
+   LOCALMIN class 179 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 180 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 137 pot 1 dist 4
+   LOCALMIN class 181 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 121 pot 1 dist 4
+   LOCALMIN class 182 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 183 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 101 pot 1 dist 3
+   LOCALMIN class 184 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 103 pot 1 dist 3
+   LOCALMIN class 185 scores 0333336 comps 1>5>1 |Aut| 5 SC 1 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 1 dist 5
+   LOCALMIN class 186 scores 1333335 comps 7 |Aut| 5 SC 1 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 135 pot 1 dist 4
+   LOCALMIN class 187 scores 1233336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 188 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 129 pot 1 dist 4
+   LOCALMIN class 189 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 41 pot 1 dist 4
+   LOCALMIN class 190 scores 2223336 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 1 dist 4
+   LOCALMIN class 191 scores 0133356 comps 1>1>3>1>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 192 scores 0233355 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 193 scores 1233345 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 69 pot 1 dist 3
+   LOCALMIN class 194 scores 1233345 comps 7 |Aut| 3 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 111 pot 1 dist 3
+   LOCALMIN class 195 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 55 pot 1 dist 3
+   LOCALMIN class 196 scores 1133355 comps 7 |Aut| 3 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 51 pot 1 dist 3
+   LOCALMIN class 197 scores 0233346 comps 1>5>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 1 dist 4
+   LOCALMIN class 198 scores 1233345 comps 7 |Aut| 3 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 123 pot 1 dist 3
+   LOCALMIN class 199 scores 1233336 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 200 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 1 dist 3
+   LOCALMIN class 201 scores 1133346 comps 1>6 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 202 scores 0333345 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 203 scores 1333344 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 123 pot 1 dist 4
+   LOCALMIN class 204 scores 1333335 comps 7 |Aut| 3 SC 1 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 99 pot 1 dist 4
+   LOCALMIN class 205 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 67 pot 1 dist 3
+   LOCALMIN class 206 scores 1233345 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 69 pot 1 dist 3
+   LOCALMIN class 207 scores 2333334 comps 7 |Aut| 3 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 5 H 159 pot 1 dist 5
+   LOCALMIN class 208 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 137 pot 1 dist 4
+   LOCALMIN class 209 scores 2233335 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 111 pot 1 dist 4
+   LOCALMIN class 210 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 79 pot 1 dist 4
+   LOCALMIN class 211 scores 2233344 comps 7 |Aut| 3 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 135 pot 1 dist 4
+   LOCALMIN class 212 scores 2233335 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 123 pot 1 dist 4
+   LOCALMIN class 213 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 214 scores 0124455 comps 4>1>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 4
+   LOCALMIN class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 216 scores 0224445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 1 dist 3
+   LOCALMIN class 217 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 45 pot 1 dist 2
+   LOCALMIN class 218 scores 1224444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 219 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 69 pot 1 dist 3
+   LOCALMIN class 220 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 2
+   LOCALMIN class 221 scores 1124445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 35 pot 1 dist 3
+   LOCALMIN class 222 scores 1124445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 33 pot 1 dist 2
+   LOCALMIN class 223 scores 0224445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 3
+   LOCALMIN class 224 scores 1224444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 89 pot 1 dist 3
+   LOCALMIN class 225 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 53 pot 1 dist 3
+   LOCALMIN class 226 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   LOCALMIN class 227 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 69 pot 1 dist 3
+   LOCALMIN class 228 scores 1124445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 41 pot 1 dist 3
+   LOCALMIN class 229 scores 1124445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 41 pot 1 dist 3
+   LOCALMIN class 230 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 17 pot 1 dist 3
+   LOCALMIN class 231 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   LOCALMIN class 232 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 77 pot 1 dist 3
+   LOCALMIN class 233 scores 1222455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 35 pot 1 dist 3
+   LOCALMIN class 234 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   LOCALMIN class 236 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 29 pot 1 dist 3
+   LOCALMIN class 237 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 238 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 2
+   LOCALMIN class 239 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 77 pot 1 dist 2
+   LOCALMIN class 240 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 53 pot 1 dist 3
+   LOCALMIN class 241 scores 1222455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 33 pot 1 dist 2
+   LOCALMIN class 242 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 29 pot 1 dist 3
+   LOCALMIN class 243 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 25 pot 1 dist 3
+   LOCALMIN class 244 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 1 dist 3
+   LOCALMIN class 245 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 4
+   LOCALMIN class 246 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 47 pot 1 dist 4
+   LOCALMIN class 247 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 97 pot 1 dist 3
+   LOCALMIN class 248 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 81 pot 1 dist 3
+   LOCALMIN class 249 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 73 pot 1 dist 3
+   LOCALMIN class 250 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 53 pot 1 dist 3
+   LOCALMIN class 251 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 37 pot 1 dist 2
+   LOCALMIN class 252 scores 2222445 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 69 pot 1 dist 4
+   LOCALMIN class 253 scores 0234444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 254 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 255 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 256 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 257 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 258 scores 1224444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 83 pot 1 dist 3
+   LOCALMIN class 259 scores 1134444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 65 pot 1 dist 3
+   LOCALMIN class 260 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 261 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 262 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 263 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 3
+   LOCALMIN class 264 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 77 pot 1 dist 3
+   LOCALMIN class 265 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 65 pot 1 dist 3
+   LOCALMIN class 266 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 51 pot 1 dist 3
+   LOCALMIN class 267 scores 2222445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 83 pot 1 dist 3
+   LOCALMIN class 268 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 1 dist 4
+   LOCALMIN class 269 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 65 pot 1 dist 4
+   LOCALMIN class 270 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 271 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 272 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 4
+   LOCALMIN class 273 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 55 pot 1 dist 3
+   LOCALMIN class 274 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 45 pot 1 dist 3
+   LOCALMIN class 275 scores 2222445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 65 pot 1 dist 4
+   LOCALMIN class 276 scores 0333444 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 1 dist 4
+   LOCALMIN class 277 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 109 pot 1 dist 4
+   LOCALMIN class 278 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 95 pot 1 dist 3
+   LOCALMIN class 279 scores 2333334 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 151 pot 1 dist 5
+   LOCALMIN class 280 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 139 pot 1 dist 4
+   LOCALMIN class 281 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 137 pot 1 dist 4
+   LOCALMIN class 282 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 131 pot 1 dist 4
+   LOCALMIN class 283 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 123 pot 1 dist 3
+   LOCALMIN class 284 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 1 dist 4
+   LOCALMIN class 285 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 101 pot 1 dist 4
+   LOCALMIN class 286 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 109 pot 1 dist 4
+   LOCALMIN class 287 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 115 pot 1 dist 4
+   LOCALMIN class 288 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 91 pot 1 dist 3
+   LOCALMIN class 289 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 290 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 91 pot 1 dist 3
+   LOCALMIN class 291 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 147 pot 1 dist 5
+   LOCALMIN class 292 scores 2333334 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 153 pot 1 dist 5
+   LOCALMIN class 293 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 153 pot 1 dist 5
+   LOCALMIN class 294 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 129 pot 1 dist 4
+   LOCALMIN class 295 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 133 pot 1 dist 4
+   LOCALMIN class 296 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 141 pot 1 dist 4
+   LOCALMIN class 297 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 121 pot 1 dist 4
+   LOCALMIN class 298 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 141 pot 1 dist 4
+   LOCALMIN class 299 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 135 pot 1 dist 4
+   LOCALMIN class 300 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 301 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 131 pot 1 dist 4
+   LOCALMIN class 302 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 131 pot 1 dist 4
+   LOCALMIN class 303 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 139 pot 1 dist 4
+   LOCALMIN class 304 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 117 pot 1 dist 4
+   LOCALMIN class 305 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 117 pot 1 dist 3
+   LOCALMIN class 307 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 1 dist 3
+   LOCALMIN class 308 scores 0234444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 37 pot 1 dist 4
+   LOCALMIN class 309 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 79 pot 1 dist 4
+   LOCALMIN class 310 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 95 pot 1 dist 3
+   LOCALMIN class 311 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 312 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 101 pot 1 dist 3
+   LOCALMIN class 313 scores 1224444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 314 scores 1134444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 65 pot 1 dist 3
+   LOCALMIN class 315 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 316 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 25 pot 1 dist 3
+   LOCALMIN class 317 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 318 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   LOCALMIN class 319 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 73 pot 1 dist 3
+   LOCALMIN class 320 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 321 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 61 pot 1 dist 3
+   LOCALMIN class 322 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 43 pot 1 dist 3
+   LOCALMIN class 323 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 5 H 115 pot 1 dist 3
+   LOCALMIN class 324 scores 2222445 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 325 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 326 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 113 pot 1 dist 3
+   LOCALMIN class 327 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 328 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 55 pot 1 dist 3
+   LOCALMIN class 329 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 77 pot 1 dist 3
+   LOCALMIN class 330 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 67 pot 1 dist 3
+   LOCALMIN class 331 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   LOCALMIN class 332 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 5 H 129 pot 1 dist 3
+   LOCALMIN class 333 scores 2222445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 334 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 335 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 101 pot 1 dist 3
+   LOCALMIN class 336 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 77 pot 1 dist 3
+   LOCALMIN class 337 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 338 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 2
+   LOCALMIN class 339 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 69 pot 1 dist 3
+   LOCALMIN class 340 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   LOCALMIN class 341 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 123 pot 1 dist 3
+   LOCALMIN class 342 scores 2222445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 343 scores 0333444 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 45 pot 1 dist 4
+   LOCALMIN class 344 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 111 pot 1 dist 4
+   LOCALMIN class 345 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 93 pot 1 dist 3
+   LOCALMIN class 346 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 159 pot 1 dist 5
+   LOCALMIN class 347 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 135 pot 1 dist 4
+   LOCALMIN class 348 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 135 pot 1 dist 4
+   LOCALMIN class 349 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 129 pot 1 dist 4
+   LOCALMIN class 350 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 123 pot 1 dist 3
+   LOCALMIN class 352 scores 0144444 comps 5>1>1 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 1 dist 4
+   LOCALMIN class 353 scores 0234444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 354 scores 1224444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 65 pot 1 dist 4
+   LOCALMIN class 355 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 4
+   LOCALMIN class 356 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 93 pot 1 dist 3
+   LOCALMIN class 357 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 97 pot 1 dist 3
+   LOCALMIN class 358 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 91 pot 1 dist 3
+   LOCALMIN class 359 scores 1134444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 57 pot 1 dist 3
+   LOCALMIN class 360 scores 0124446 comps 1>3>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 361 scores 1114446 comps 1>3>3 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 1 dist 4
+   LOCALMIN class 362 scores 0224445 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 363 scores 1224444 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 69 pot 1 dist 4
+   LOCALMIN class 364 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 77 pot 1 dist 2
+   LOCALMIN class 365 scores 1124445 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 45 pot 1 dist 3
+   LOCALMIN class 366 scores 1124445 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 51 pot 1 dist 2
+   LOCALMIN class 367 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   LOCALMIN class 368 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 93 pot 1 dist 2
+   LOCALMIN class 369 scores 1222446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 1 dist 3
+   LOCALMIN class 370 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 371 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 1 dist 3
+   LOCALMIN class 372 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 17 pot 1 dist 3
+   LOCALMIN class 373 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 374 scores 0134445 comps 5>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 375 scores 0234444 comps 6>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 33 pot 1 dist 4
+   LOCALMIN class 376 scores 1233444 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 69 pot 1 dist 4
+   LOCALMIN class 377 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 97 pot 1 dist 3
+   LOCALMIN class 378 scores 1224444 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 75 pot 1 dist 3
+   LOCALMIN class 379 scores 1134444 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 57 pot 1 dist 3
+   LOCALMIN class 380 scores 2223444 comps 7 |Aut| 9 SC 1 lambda 2 kappa 1 delta0 2 L 3 fas 5 H 99 pot 1 dist 3
+   LOCALMIN class 381 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 1 dist 3
+   LOCALMIN class 382 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 101 pot 1 dist 3
+   LOCALMIN class 383 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 2
+   LOCALMIN class 384 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   LOCALMIN class 385 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 87 pot 1 dist 3
+   LOCALMIN class 386 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   LOCALMIN class 387 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 53 pot 1 dist 3
+   LOCALMIN class 388 scores 2222445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 89 pot 1 dist 3
+   LOCALMIN class 389 scores 0123555 comps 3>1>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   LOCALMIN class 390 scores 1113555 comps 3>1>3 |Aut| 9 SC 1 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 9 pot 1 dist 4
+   LOCALMIN class 391 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 392 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 37 pot 1 dist 2
+   LOCALMIN class 393 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   LOCALMIN class 394 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 73 pot 1 dist 3
+   LOCALMIN class 395 scores 1222455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 41 pot 1 dist 3
+   LOCALMIN class 396 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 3 H 27 pot 1 dist 3
+   LOCALMIN class 397 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 1 fas 2 H 27 pot 1 dist 3
+   LOCALMIN class 398 scores 0222555 comps 3>3>1 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 1 dist 4
+   LOCALMIN class 399 scores 1222455 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 45 pot 1 dist 3
+   LOCALMIN class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 3
+   LOCALMIN class 401 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   LOCALMIN class 402 scores 0233355 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 19 pot 1 dist 3
+   LOCALMIN class 403 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 39 pot 1 dist 4
+   LOCALMIN class 404 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 77 pot 1 dist 3
+   LOCALMIN class 405 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   LOCALMIN class 406 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 51 pot 1 dist 3
+   LOCALMIN class 407 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 43 pot 1 dist 3
+   LOCALMIN class 408 scores 1133355 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 31 pot 1 dist 2
+   LOCALMIN class 409 scores 2222355 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 65 pot 1 dist 3
+   LOCALMIN class 410 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 95 pot 1 dist 3
+   LOCALMIN class 411 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   LOCALMIN class 412 scores 2222355 comps 7 |Aut| 3 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 3 H 57 pot 1 dist 3
+   LOCALMIN class 413 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 414 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 95 pot 1 dist 3
+   LOCALMIN class 415 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 29 pot 1 dist 3
+   LOCALMIN class 416 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 73 pot 1 dist 3
+   LOCALMIN class 417 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 65 pot 1 dist 4
+   LOCALMIN class 418 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 115 pot 1 dist 3
+   LOCALMIN class 419 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 67 pot 1 dist 3
+   LOCALMIN class 420 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 65 pot 1 dist 3
+   LOCALMIN class 421 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 51 pot 1 dist 3
+   LOCALMIN class 422 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 93 pot 1 dist 3
+   LOCALMIN class 423 scores 2223444 comps 7 |Aut| 3 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 5 H 129 pot 1 dist 3
+   LOCALMIN class 424 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 3 H 31 pot 1 dist 3
+   LOCALMIN class 425 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 79 pot 1 dist 3
+   LOCALMIN class 426 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 117 pot 1 dist 3
+   LOCALMIN class 427 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 67 pot 1 dist 3
+   LOCALMIN class 428 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 69 pot 1 dist 3
+   LOCALMIN class 429 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 4 H 65 pot 1 dist 3
+   LOCALMIN class 430 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 2 fas 3 H 55 pot 1 dist 3
+   LOCALMIN class 431 scores 2223444 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 5 H 127 pot 1 dist 3
+   LOCALMIN class 432 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 5 H 91 pot 1 dist 3
+   LOCALMIN class 433 scores 2223444 comps 7 |Aut| 3 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 5 H 135 pot 1 dist 3
+   LOCALMIN class 434 scores 0333444 comps 6>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 4 H 43 pot 1 dist 4
+   LOCALMIN class 435 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 105 pot 1 dist 4
+   LOCALMIN class 436 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 111 pot 1 dist 4
+   LOCALMIN class 437 scores 1333344 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 4 fas 5 H 111 pot 1 dist 4
+   LOCALMIN class 438 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 5 H 91 pot 1 dist 3
+   LOCALMIN class 439 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 440 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 kappa 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   LOCALMIN class 441 scores 2333334 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 153 pot 1 dist 5
+   LOCALMIN class 442 scores 2333334 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 151 pot 1 dist 5
+   LOCALMIN class 443 scores 2333334 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 5 fas 6 H 151 pot 1 dist 5
+   LOCALMIN class 444 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 129 pot 1 dist 4
+   LOCALMIN class 445 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 133 pot 1 dist 4
+   LOCALMIN class 446 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 137 pot 1 dist 4
+   LOCALMIN class 447 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 125 pot 1 dist 4
+   LOCALMIN class 448 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 143 pot 1 dist 4
+   LOCALMIN class 449 scores 2233344 comps 7 |Aut| 1 SC 1 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 133 pot 1 dist 4
+   LOCALMIN class 450 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 109 pot 1 dist 3
+   LOCALMIN class 451 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 4 H 133 pot 1 dist 4
+   LOCALMIN class 452 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 131 pot 1 dist 4
+   LOCALMIN class 453 scores 2233344 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 4 fas 5 H 137 pot 1 dist 4
+   LOCALMIN class 454 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 117 pot 1 dist 3
+   LOCALMIN class 455 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 kappa 2 delta0 2 L 3 fas 4 H 115 pot 1 dist 3
+   FAIL class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   FAIL class 2 scores 0223455 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   FAIL class 3 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 47 pot 1 dist 4
+   FAIL class 4 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 2 fas 2 H 85 pot 1 dist 2
+   FAIL class 5 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 59 pot 1 dist 2
+   FAIL class 6 scores 1222455 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 41 pot 1 dist 3
+   FAIL class 7 scores 1123455 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 1 fas 2 H 27 pot 1 dist 3
+   FAIL class 8 scores 1123455 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 1 fas 1 H 33 pot 1 dist 2
+   FAIL class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   FAIL class 10 scores 1223445 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 2 fas 2 H 93 pot 1 dist 2
+   FAIL class 11 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 4
+   FAIL class 12 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 33 pot 1 dist 3
+   FAIL class 13 scores 1222446 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 3
+   FAIL class 14 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 15 pot 1 dist 3
+   FAIL class 15 scores 1123446 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 17 pot 1 dist 2
+   FAIL class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 3
+   FAIL class 17 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 69 pot 1 dist 2
+   FAIL class 18 scores 1223346 comps 1>6 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 37 pot 1 dist 3
+   FAIL class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 11 pot 1 dist 3
+   FAIL class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 13 pot 1 dist 3
+   FAIL class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 9 pot 1 dist 3
+   FAIL class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   FAIL class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 delta0 0 L 3 fas 3 H 15 pot 1 dist 4
+   FAIL class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 4
+   FAIL class 25 scores 1222455 comps 7 |Aut| 3 SC 0 lambda 1 delta0 1 L 2 fas 2 H 51 pot 1 dist 2
+   FAIL class 26 scores 1222446 comps 1>6 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 27 pot 1 dist 3
+   FAIL class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 15 pot 1 dist 3
+   FAIL class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 4
+   FAIL class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 1 dist 3
+   FAIL class 30 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 4
+   FAIL class 31 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 3 fas 3 H 51 pot 1 dist 4
+   FAIL class 32 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 3 H 109 pot 1 dist 3
+   FAIL class 33 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 3 H 81 pot 1 dist 3
+   FAIL class 34 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 59 pot 1 dist 3
+   FAIL class 35 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   FAIL class 36 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 39 pot 1 dist 4
+   FAIL class 37 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 81 pot 1 dist 3
+   FAIL class 38 scores 2223345 comps 7 |Aut| 3 SC 0 lambda 1 delta0 1 L 3 fas 4 H 69 pot 1 dist 4
+   FAIL class 39 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 delta0 2 L 3 fas 4 H 115 pot 1 dist 3
+   FAIL class 40 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 89 pot 1 dist 3
+   FAIL class 41 scores 0233445 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 33 pot 1 dist 3
+   FAIL class 42 scores 1233444 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 3 H 103 pot 1 dist 3
+   FAIL class 43 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 3 H 73 pot 1 dist 3
+   FAIL class 44 scores 1233345 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 3 fas 3 H 91 pot 1 dist 3
+   FAIL class 45 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   FAIL class 46 scores 1223445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 71 pot 1 dist 3
+   FAIL class 47 scores 1133445 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 2 H 59 pot 1 dist 2
+   FAIL class 48 scores 2223444 comps 7 |Aut| 1 SC 0 lambda 2 delta0 2 L 3 fas 4 H 123 pot 1 dist 3
+   FAIL class 49 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 97 pot 1 dist 3
+   FAIL class 50 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+   FAIL class 51 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 115 pot 1 dist 3
+   FAIL class 52 scores 0233355 comps 6>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 23 pot 1 dist 3
+   FAIL class 53 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 3 H 79 pot 1 dist 3
+   FAIL class 54 scores 1233345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 3 H 99 pot 1 dist 3
+   FAIL class 55 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 45 pot 1 dist 3
+   FAIL class 56 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 49 pot 1 dist 3
+   FAIL class 57 scores 1223355 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 2 fas 3 H 51 pot 1 dist 3
+   FAIL class 58 scores 1133355 comps 7 |Aut| 1 SC 1 lambda 1 delta0 1 L 2 fas 2 H 41 pot 1 dist 3
+   FAIL class 59 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 93 pot 1 dist 3
+   FAIL class 60 scores 2223345 comps 7 |Aut| 1 SC 0 lambda 1 delta0 1 L 3 fas 4 H 103 pot 1 dist 3
+target TT   black potential ceil(fas/(n-1))  unreachable 455  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target NS   any   potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):103 (1,+0):266 (2,+0):84 (3,+0):3 
+   local minima by (lambda, kappa): 
+target NS   black potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):103 (1,+0):266 (2,+0):84 (3,+0):3 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target SING any   potential delta0           unreachable 0  d<bound 0  failures 3 (symmetric 3)  local-minima 3 (symmetric 3)
+   (bound, d-bound): (0,+0):100 (1,+0):266 (1,+1):3 (2,+0):84 (3,+0):3 
+   local minima by (lambda, kappa): (0,0):3 
+   LOCALMIN class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 390 scores 1113555 comps 3>1>3 |Aut| 9 SC 1 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 9 pot 1 dist 2
+   LOCALMIN class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 390 scores 1113555 comps 3>1>3 |Aut| 9 SC 1 lambda 0 delta0 1 L 2 fas 2 H 9 pot 1 dist 2
+   FAIL class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+target SING black potential delta0           unreachable 1  d<bound 0  failures 2 (symmetric 2)  local-minima 2 (symmetric 2)
+   (bound, d-bound): (0,+0):100 (1,+0):266 (1,+1):2 (2,+0):84 (3,+0):3 
+   local minima by (lambda, kappa): (0,0):2 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+   LOCALMIN class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+target CORE any   potential delta0           unreachable 0  d<bound 0  failures 33 (symmetric 21)  local-minima 33 (symmetric 21)
+   (bound, d-bound): (0,+0):70 (0,+2):30 (1,+0):266 (1,+1):3 (2,+0):84 (3,+0):3 
+   local minima by (lambda, kappa): (0,0):33 
+   LOCALMIN class 0 scores 0123456 comps 1>1>1>1>1>1>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 0 fas 0 H 1 pot 0 dist 2
+   LOCALMIN class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   LOCALMIN class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   LOCALMIN class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   LOCALMIN class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   LOCALMIN class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   LOCALMIN class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   LOCALMIN class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   LOCALMIN class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   LOCALMIN class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   LOCALMIN class 185 scores 0333336 comps 1>5>1 |Aut| 5 SC 1 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   LOCALMIN class 191 scores 0133356 comps 1>1>3>1>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 197 scores 0233346 comps 1>5>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   LOCALMIN class 214 scores 0124455 comps 4>1>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 244 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   LOCALMIN class 307 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   LOCALMIN class 352 scores 0144444 comps 5>1>1 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   LOCALMIN class 360 scores 0124446 comps 1>3>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 361 scores 1114446 comps 1>3>3 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 367 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 374 scores 0134445 comps 5>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   LOCALMIN class 389 scores 0123555 comps 3>1>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 390 scores 1113555 comps 3>1>3 |Aut| 9 SC 1 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 9 pot 1 dist 2
+   LOCALMIN class 398 scores 0222555 comps 3>3>1 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 401 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   FAIL class 0 scores 0123456 comps 1>1>1>1>1>1>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 0 fas 0 H 1 pot 0 dist 2
+   FAIL class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   FAIL class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   FAIL class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   FAIL class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   FAIL class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   FAIL class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   FAIL class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   FAIL class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   FAIL class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   FAIL class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   FAIL class 185 scores 0333336 comps 1>5>1 |Aut| 5 SC 1 lambda 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   FAIL class 191 scores 0133356 comps 1>1>3>1>1 |Aut| 3 SC 1 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 197 scores 0233346 comps 1>5>1 |Aut| 3 SC 1 lambda 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   FAIL class 214 scores 0124455 comps 4>1>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 244 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   FAIL class 307 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   FAIL class 352 scores 0144444 comps 5>1>1 |Aut| 5 SC 0 lambda 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   FAIL class 360 scores 0124446 comps 1>3>1>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 361 scores 1114446 comps 1>3>3 |Aut| 9 SC 0 lambda 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   FAIL class 367 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   FAIL class 374 scores 0134445 comps 5>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   FAIL class 389 scores 0123555 comps 3>1>1>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 390 scores 1113555 comps 3>1>3 |Aut| 9 SC 1 lambda 0 delta0 1 L 2 fas 2 H 9 pot 1 dist 2
+   FAIL class 398 scores 0222555 comps 3>3>1 |Aut| 9 SC 0 lambda 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   FAIL class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 401 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+target CORE black potential delta0           unreachable 4  d<bound 0  failures 29 (symmetric 17)  local-minima 29 (symmetric 17)
+   (bound, d-bound): (0,+0):70 (0,+2):27 (1,+0):266 (1,+1):2 (2,+0):84 (3,+0):3 
+   local minima by (lambda, kappa): (0,0):29 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+   LOCALMIN class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   LOCALMIN class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   LOCALMIN class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   LOCALMIN class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   LOCALMIN class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   LOCALMIN class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   LOCALMIN class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   LOCALMIN class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   LOCALMIN class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   LOCALMIN class 197 scores 0233346 comps 1>5>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   LOCALMIN class 214 scores 0124455 comps 4>1>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   LOCALMIN class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 244 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   LOCALMIN class 307 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   LOCALMIN class 352 scores 0144444 comps 5>1>1 |Aut| 5 SC 0 lambda 0 kappa 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   LOCALMIN class 360 scores 0124446 comps 1>3>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 361 scores 1114446 comps 1>3>3 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 367 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 374 scores 0134445 comps 5>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   LOCALMIN class 389 scores 0123555 comps 3>1>1>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 398 scores 0222555 comps 3>3>1 |Aut| 9 SC 0 lambda 0 kappa 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   LOCALMIN class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 401 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   FAIL class 1 scores 1113456 comps 1>1>1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 9 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   FAIL class 16 scores 0223356 comps 1>1>4>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 19 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   FAIL class 20 scores 1222356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   FAIL class 21 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   FAIL class 22 scores 1123356 comps 1>1>5 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   FAIL class 23 scores 2222256 comps 1>1>5 |Aut| 5 SC 0 lambda 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   FAIL class 24 scores 0222456 comps 1>1>1>3>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 27 scores 1222356 comps 1>1>5 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   FAIL class 28 scores 1122456 comps 1>1>1>4 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 29 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 9 pot 0 dist 2
+   FAIL class 108 scores 0133446 comps 1>4>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 118 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   FAIL class 130 scores 0233346 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   FAIL class 197 scores 0233346 comps 1>5>1 |Aut| 3 SC 1 lambda 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   FAIL class 214 scores 0124455 comps 4>1>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 0 dist 2
+   FAIL class 215 scores 1114455 comps 4>3 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 244 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 11 pot 0 dist 2
+   FAIL class 307 scores 0134445 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 2 fas 2 H 13 pot 0 dist 2
+   FAIL class 352 scores 0144444 comps 5>1>1 |Aut| 5 SC 0 lambda 0 delta0 0 L 3 fas 3 H 15 pot 0 dist 2
+   FAIL class 360 scores 0124446 comps 1>3>1>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 361 scores 1114446 comps 1>3>3 |Aut| 9 SC 0 lambda 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   FAIL class 367 scores 0223446 comps 1>5>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+   FAIL class 374 scores 0134445 comps 5>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 2 fas 2 H 15 pot 0 dist 2
+   FAIL class 389 scores 0123555 comps 3>1>1>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 398 scores 0222555 comps 3>3>1 |Aut| 9 SC 0 lambda 0 delta0 0 L 2 fas 2 H 9 pot 0 dist 2
+   FAIL class 400 scores 1122555 comps 3>4 |Aut| 3 SC 0 lambda 0 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 401 scores 0133455 comps 5>1>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 2 H 9 pot 0 dist 2
+target REG  any   potential R                unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):3 (1,+0):15 (2,+0):82 (3,+0):162 (4,+0):131 (5,+0):51 (6,+0):12 
+   local minima by (lambda, kappa): 
+target REG  black potential R                unreachable 4  d<bound 0  failures 1 (symmetric 1)  local-minima 1 (symmetric 1)
+   (bound, d-bound): (0,+0):3 (1,+0):15 (2,+0):81 (2,+2):1 (3,+0):161 (4,+0):131 (5,+0):50 (6,+0):10 
+   local minima by (lambda, kappa): (1,1):1 
+   colour obstructions (descending moves exist, all blue): 1, self-converse 1
+   LOCALMIN class 186 scores 1333335 comps 7 |Aut| 5 SC 1 lambda 1 kappa 1 delta0 1 L 4 fas 4 H 135 pot 2 dist 4
+   FAIL class 186 scores 1333335 comps 7 |Aut| 5 SC 1 lambda 1 delta0 1 L 4 fas 4 H 135 pot 2 dist 4

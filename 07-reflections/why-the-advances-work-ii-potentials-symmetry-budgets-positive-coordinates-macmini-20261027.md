@@ -25,7 +25,7 @@ locus under the monoid `M`. They all have the same two-sided form.
 | distance to the non-strong locus (THM-4811 (B)) | arc connectivity `lambda` | 1 | Camion cycle entering a minimum cut | always |
 | same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word starting in a minimum out-cut and ending outside it | all but `C3`, `R5` and the family `E` of THM-4811 Theorem A (audited); `E(M; Z)` is only its `t = 1` subfamily |
 | distance to a singleton plus a strong core (THM-4811 (D)) | `delta^0` | 1 | protected vertex; singleton-type black descent (Theorem C) | singleton locus when `lambda = delta^0`; exhaustive through order 10 |
-| distance to the transitive class (THM-4810 L, Session74) | `L = (1/2) sum |s_(i) - i|` | 1 | explicit 15-move word for `P_11` | `P_11` yes; `P_7` no (7 > 6) |
+| distance to the transitive class (THM-4810 L, Session74) | `L = (1/2) sum |s_(i) - i|` | 1 | explicit 15-move word for `P_11` | `P_11` and `P_7` yes (`P_7`'s 7 is a labelled distance, forced by parity; corrected, THM-4815 (C)); fails at sources, sinks and cut vertices (section 5) |
 | triangle descent (black_descent_20261020c) | `c3` | `s(a) - s(b) - 1` | black closed path with `s(b) >= s(a)` | descent always (C3, R5 aside) |
 | forest frames (Session74) | `beta >= L - n + 2` | 1 | six moves for `P_11` | `P_11` yes |
 | exceptions to a bounded-arity bank (Session75, dyadic T1-T6) | trace norm | `2 sum |2 cos(k pi/(n+1))|` per move | none needed (static) | first order only |
@@ -55,6 +55,9 @@ exposes the first member (part I, section 6: the first-untested-point law).
 
 **The test this suggests.** For every distance statement in the repository, write the potential and the certificate.
 If exactness is claimed, exhibit the descent at every state; if not, find the local minima and their forced symmetry.
+
+*Correction (2026-10-27, section 5).* The test was run (THM-4815). The forced-symmetry claim holds only for colour
+failures; most failures are cuts, and the `P_7` example above was not a failure.
 
 ## 1. Symmetry budgets: counting modulo automorphisms
 
@@ -122,7 +125,35 @@ question is the same phenomenon seen from the involution side.
 ## 4. Short version (additions to part I's eight steps)
 
 9. **For a distance, write the potential and the certificate.** Exactness means no local minima.
-10. **Expect the local minima to be symmetric**, and find them at the first untested order.
+10. **Expect the local minima to be cuts or colours** (corrected in section 5): a cut confines the endpoints of
+    Hamiltonian paths, or every good path is blue and forces an anti-automorphism. Find them at the first untested order.
 11. **For a count up to symmetry, reduce to vertex-transitive atoms** and a finite orbit-group search.
 12. **Conjugate to a positive coordinate** and read identities as coboundaries; then say which boundary term is still
     open.
+
+## 5. The test, carried out (THM-4815, 2026-10-27)
+
+Section 0 proposed two theses and a test. A second session the same day ran the test across the repository and the
+census (THM-4815, HYP-9423).
+
+**One identity: confirmed, and wider than claimed.** Every native-move lower bound the survey found is the identity
+`K -> -K + 2A_Q` read through a converse-invariant functional. The non-potential bounds come from the same identity:
+summed mod 2 it is THM-4810's parity theorem (and every move flips the parity when `n ≡ 0, 3 (mod 4)`), applied twice
+it is the two-move XOR law, and restricted to endpoints it gives the non-adjacency of non-strong nodes, module
+shattering and the source/sink trap.
+
+**Forced symmetry: true for colour, false for cuts.** For score and cut functionals only the two endpoints of the path
+matter. So a descent fails only when no Hamiltonian path joins a descending pair (a *cut*: for non-strong tournaments
+the endpoints are confined to top x bottom component; the strong local minima found through order 10 all have a cut
+vertex), or when every descending path is blue (a *colour* obstruction, which forces an anti-automorphism). The second
+is the reflection's mechanism. The first is the common one, and it has rigid, non-self-converse examples from order 6.
+
+**The regular target never fails.** Every tournament has a Hamiltonian path from a maximum-score to a minimum-score
+vertex. So at odd orders the distance to the regular class is exactly `R = (1/2) sum |s_v - (n-1)/2|`. The regular
+target's descending pairs run with the natural direction of Hamiltonian paths (high to low), the transitive target's
+against it. This is why `L` fails where `R` cannot.
+
+**The example was wrong.** `P_7` is 6 = `L` moves from the transitive class. The 7 of THM-4810 is the labelled distance
+to one fixed transitive tournament, forced odd by the parity law (MISTAKE-682). The lesson for section 3's method: a
+distance quoted from a labelled census must say whether the target is a labelling or a class.
+

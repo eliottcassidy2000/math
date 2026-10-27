@@ -1,0 +1,4 @@
+# compiled binaries and large intermediate files (rebuild with the commands in the note)
+nonrigid_primes
+out/nrclasses12.txt
+out/nrclasses13.txt

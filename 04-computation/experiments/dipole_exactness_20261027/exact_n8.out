@@ -1,0 +1,31 @@
+n=8 classes=6880 asymmetric-edges any=0 black=0
+target TT   any   potential L                unreachable 0  d<bound 0  failures 1431 (symmetric 173)  local-minima 904 (symmetric 114)
+   local minima by (lambda, kappa): (0,0):855 (1,1):47 (2,1):2 
+target TT   black potential L                unreachable 6879  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target TT   any   potential ceil(fas/(n-1))  unreachable 0  d<bound 0  failures 6878 (symmetric 486)  local-minima 6812 (symmetric 474)
+   local minima by (lambda, kappa): (0,0):871 (1,1):3622 (2,1):10 (2,2):2268 (3,3):41 
+target TT   black potential ceil(fas/(n-1))  unreachable 6879  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target NS   any   potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   local minima by (lambda, kappa): 
+target NS   black potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target SING any   potential delta0           unreachable 0  d<bound 0  failures 16 (symmetric 16)  local-minima 16 (symmetric 16)
+   local minima by (lambda, kappa): (0,0):16 
+target SING black potential delta0           unreachable 1  d<bound 0  failures 15 (symmetric 15)  local-minima 15 (symmetric 15)
+   local minima by (lambda, kappa): (0,0):15 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target CORE any   potential delta0           unreachable 0  d<bound 0  failures 166 (symmetric 66)  local-minima 166 (symmetric 66)
+   local minima by (lambda, kappa): (0,0):166 
+target CORE black potential delta0           unreachable 3  d<bound 0  failures 163 (symmetric 63)  local-minima 163 (symmetric 63)
+   local minima by (lambda, kappa): (0,0):163 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target REG  any   potential R                unreachable 0  d<bound 0  failures 306 (symmetric 46)  local-minima 70 (symmetric 8)
+   local minima by (lambda, kappa): (1,1):40 (2,2):30 
+target REG  black potential R                unreachable 3  d<bound 0  failures 306 (symmetric 46)  local-minima 70 (symmetric 8)
+   local minima by (lambda, kappa): (1,1):40 (2,2):30 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0

@@ -1,0 +1,8 @@
+# compiled binaries and large intermediate files (rebuild with the commands in the note)
+dipole_exactness
+endpoint_checks
+labelled_bfs
+median_checks
+lu_exceptions
+endpoint_random
+graph_n8.txt

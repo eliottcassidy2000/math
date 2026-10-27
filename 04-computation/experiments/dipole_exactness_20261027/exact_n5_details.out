@@ -1,0 +1,87 @@
+n=5 classes=12 asymmetric-edges any=0 black=0
+target TT   any   potential L                unreachable 0  d<bound 0  failures 6 (symmetric 4)  local-minima 6 (symmetric 4)
+   (bound, d-bound): (0,+0):1 (1,+0):1 (1,+1):3 (1,+2):3 (2,+0):3 (3,+0):1 
+   local minima by (lambda, kappa): (0,0):5 (1,1):1 
+   LOCALMIN class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   LOCALMIN class 2 scores 02233 comps 4>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   LOCALMIN class 6 scores 11233 comps 5 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 1 H 9 pot 1 dist 2
+   LOCALMIN class 8 scores 02224 comps 1>3>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   LOCALMIN class 10 scores 11224 comps 1>4 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   LOCALMIN class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   FAIL class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   FAIL class 2 scores 02233 comps 4>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   FAIL class 6 scores 11233 comps 5 |Aut| 1 SC 1 lambda 1 delta0 1 L 1 fas 1 H 9 pot 1 dist 2
+   FAIL class 8 scores 02224 comps 1>3>1 |Aut| 3 SC 1 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   FAIL class 10 scores 11224 comps 1>4 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   FAIL class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+target TT   black potential L                unreachable 11  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target TT   any   potential ceil(fas/(n-1))  unreachable 0  d<bound 0  failures 10 (symmetric 8)  local-minima 10 (symmetric 8)
+   (bound, d-bound): (0,+0):1 (1,+0):1 (1,+1):6 (1,+2):4 
+   local minima by (lambda, kappa): (0,0):5 (1,1):4 (2,2):1 
+   LOCALMIN class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   LOCALMIN class 2 scores 02233 comps 4>1 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   LOCALMIN class 3 scores 12223 comps 5 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 11 pot 1 dist 2
+   LOCALMIN class 4 scores 12223 comps 5 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 13 pot 1 dist 2
+   LOCALMIN class 6 scores 11233 comps 5 |Aut| 1 SC 1 lambda 1 kappa 1 delta0 1 L 1 fas 1 H 9 pot 1 dist 2
+   LOCALMIN class 7 scores 22222 comps 5 |Aut| 5 SC 1 lambda 2 kappa 2 delta0 2 L 3 fas 3 H 15 pot 1 dist 3
+   LOCALMIN class 8 scores 02224 comps 1>3>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   LOCALMIN class 9 scores 12223 comps 5 |Aut| 3 SC 1 lambda 1 kappa 1 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   LOCALMIN class 10 scores 11224 comps 1>4 |Aut| 1 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   LOCALMIN class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   FAIL class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   FAIL class 2 scores 02233 comps 4>1 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   FAIL class 3 scores 12223 comps 5 |Aut| 1 SC 1 lambda 1 delta0 1 L 2 fas 2 H 11 pot 1 dist 2
+   FAIL class 4 scores 12223 comps 5 |Aut| 1 SC 1 lambda 1 delta0 1 L 2 fas 2 H 13 pot 1 dist 2
+   FAIL class 6 scores 11233 comps 5 |Aut| 1 SC 1 lambda 1 delta0 1 L 1 fas 1 H 9 pot 1 dist 2
+   FAIL class 7 scores 22222 comps 5 |Aut| 5 SC 1 lambda 2 delta0 2 L 3 fas 3 H 15 pot 1 dist 3
+   FAIL class 8 scores 02224 comps 1>3>1 |Aut| 3 SC 1 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+   FAIL class 9 scores 12223 comps 5 |Aut| 3 SC 1 lambda 1 delta0 1 L 2 fas 2 H 15 pot 1 dist 2
+   FAIL class 10 scores 11224 comps 1>4 |Aut| 1 SC 0 lambda 0 delta0 0 L 1 fas 1 H 5 pot 1 dist 2
+   FAIL class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 1 dist 3
+target TT   black potential ceil(fas/(n-1))  unreachable 11  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target NS   any   potential lambda           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):6 (1,+0):5 (2,+0):1 
+   local minima by (lambda, kappa): 
+target NS   black potential lambda           unreachable 1  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):6 (1,+0):5 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target SING any   potential delta0           unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):6 (1,+0):5 (2,+0):1 
+   local minima by (lambda, kappa): 
+target SING black potential delta0           unreachable 1  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):6 (1,+0):5 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+target CORE any   potential delta0           unreachable 0  d<bound 0  failures 4 (symmetric 4)  local-minima 4 (symmetric 4)
+   (bound, d-bound): (0,+0):2 (0,+2):4 (1,+0):5 (2,+0):1 
+   local minima by (lambda, kappa): (0,0):4 
+   LOCALMIN class 0 scores 01234 comps 1>1>1>1>1 |Aut| 1 SC 1 lambda 0 kappa 0 delta0 0 L 0 fas 0 H 1 pot 0 dist 2
+   LOCALMIN class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 8 scores 02224 comps 1>3>1 |Aut| 3 SC 1 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 0 scores 01234 comps 1>1>1>1>1 |Aut| 1 SC 1 lambda 0 delta0 0 L 0 fas 0 H 1 pot 0 dist 2
+   FAIL class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 8 scores 02224 comps 1>3>1 |Aut| 3 SC 1 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+target CORE black potential delta0           unreachable 3  d<bound 0  failures 2 (symmetric 2)  local-minima 2 (symmetric 2)
+   (bound, d-bound): (0,+0):2 (0,+2):2 (1,+0):5 
+   local minima by (lambda, kappa): (0,0):2 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0
+   LOCALMIN class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   LOCALMIN class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 kappa 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 1 scores 11134 comps 1>1>3 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+   FAIL class 11 scores 01333 comps 3>1>1 |Aut| 3 SC 0 lambda 0 delta0 0 L 1 fas 1 H 3 pot 0 dist 2
+target REG  any   potential R                unreachable 0  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 (1,+0):3 (2,+0):5 (3,+0):3 
+   local minima by (lambda, kappa): 
+target REG  black potential R                unreachable 11  d<bound 0  failures 0 (symmetric 0)  local-minima 0 (symmetric 0)
+   (bound, d-bound): (0,+0):1 
+   local minima by (lambda, kappa): 
+   colour obstructions (descending moves exist, all blue): 0, self-converse 0

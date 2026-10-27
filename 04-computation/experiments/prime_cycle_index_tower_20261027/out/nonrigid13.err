@@ -1,0 +1,5 @@
+n=13 p=3 c=2 f=7: F-reps=456 bits=19 enumerated=239075328 prime=142534464 new classes=10960216
+n=13 p=3 c=3 f=4: F-reps=4 bits=24 enumerated=67108864 prime=43522272 new classes=253656
+n=13 p=3 c=4 f=1: F-reps=1 bits=26 enumerated=67108864 prime=54527040 new classes=41836
+n=13 p=5 c=2 f=3: F-reps=2 bits=15 enumerated=65536 prime=32640 new classes=432
+n=13 p=13 c=1 f=0: F-reps=1 bits=6 enumerated=64 prime=64 new classes=5

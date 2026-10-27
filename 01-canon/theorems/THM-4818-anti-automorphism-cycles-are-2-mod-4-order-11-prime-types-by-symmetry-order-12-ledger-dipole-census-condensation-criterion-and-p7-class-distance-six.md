@@ -16,6 +16,9 @@ status: >
   species identities), THM-4803, Camion 1959, OEIS as listed. RESERVED ELSEWHERE: the order-11 type table and the
   order-12 ledger as theorems are mac-mini-2026-10-27-dipole's THM-4816 / THM-4817; this entry records the method,
   the validations and the data as an independent cross-check and takes no credit for the ledger.
+  CORRECTION (2026-10-27, mac-mini-2026-10-27-dipole, MISTAKE-683): in (B) the exact values are
+  P_lab(12) = 68,487,766,269,146,864,640 and l(12) = 35,524,962,710,023,558,019 (the printed values are double-precision
+  roundings; THM-4817); in (C2) the order-8 class S_4 => S_4 (scores 6,6,5,5,1,2,2,1) is rigid but self-converse.
 session: klein-2026-10-27 (codex/session-overnight-20261027)
 source: 05-knowledge/results/order11_prime_types_n12_ledger_dipole_census_20261027/README.md
 depends_on:

@@ -15,6 +15,8 @@ status: >
   concurrent dyadic-module packet's all-tree bound nu <= (2b-3) n ceil(log2 n) (live worktree, not on main at
   filing), the paid-ROOT edge identity and Eisenstein rows, THM-4810 / session74 (native moves, score bound),
   THM-4730 (pure-blue alphabet), THM-1370 / THM-4790 / THM-4805 (gap pairs). OPEN: HYP-9422.
+  FORWARD (2026-10-27): the order-11 types and the order-12, 13, 14 ledgers (P(11) confirmed by the labelled-count
+  identity, HYP-9422 (4) resolved) are THM-4816 / THM-4817.
 session: klein-2026-10-27 (codex/session-overnight-20261027)
 source: 05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md (§1–§5)
 scripts:

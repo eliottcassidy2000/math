@@ -1,0 +1,69 @@
+n=4 classes=4 strong=1
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 0
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 2
+(C3') strong L-local minima 0, by (lambda,kappa):; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 0 (of which L-local minima 0)
+(C6) kappa >= 2: classes 0, with a pair joined in neither direction 0
+(C7) strong nonregular 1: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 0;  (C7b) some (max, min) pair not joined max -> min: 1
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0
+n=5 classes=12 strong=6
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 0
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 5
+(C3') strong L-local minima 1, by (lambda,kappa): (1,1):1; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 3 (of which L-local minima 1)
+(C4) R (regular target): non-regular classes 11, without a descending move 0
+(C6) kappa >= 2: classes 1, with a pair joined in neither direction 0
+(C7) strong nonregular 5: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 0;  (C7b) some (max, min) pair not joined max -> min: 1
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0
+n=6 classes=56 strong=35
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 1
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 19
+(C3') strong L-local minima 3, by (lambda,kappa): (1,1):3; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 16 (of which L-local minima 3)
+(C6) kappa >= 2: classes 5, with a pair joined in neither direction 2
+(C7) strong nonregular 35: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 1;  (C7b) some (max, min) pair not joined max -> min: 5
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0
+n=7 classes=456 strong=353
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 3
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 99
+(C3') strong L-local minima 11, by (lambda,kappa): (1,1):11; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 97 (of which L-local minima 11)
+(C4) R (regular target): non-regular classes 453, without a descending move 0
+(C6) kappa >= 2: classes 86, with a pair joined in neither direction 0
+(C7) strong nonregular 350: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 2;  (C7b) some (max, min) pair not joined max -> min: 12
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0
+n=8 classes=6880 strong=6008
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 16
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 855
+(C3') strong L-local minima 49, by (lambda,kappa): (1,1):47 (2,1):2; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 863 (of which L-local minima 49)
+(C6) kappa >= 2: classes 2375, with a pair joined in neither direction 0
+(C7) strong nonregular 6008: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 8;  (C7b) some (max, min) pair not joined max -> min: 64
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0
+n=9 classes=191536 strong=178133
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 99
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 13303
+(C3') strong L-local minima 242, by (lambda,kappa): (1,1):231 (2,1):11; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 11431 (of which L-local minima 242)
+(C4) R (regular target): non-regular classes 191521, without a descending move 0
+(C6) kappa >= 2: classes 99465, with a pair joined in neither direction 0
+(C7) strong nonregular 178118: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 64;  (C7b) some (max, min) pair not joined max -> min: 514
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0

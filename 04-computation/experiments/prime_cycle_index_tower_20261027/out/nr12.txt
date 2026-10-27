@@ -1,0 +1,12 @@
+TYPE count=304 k=12 aut=3 AUT: 1^12,:1 1^6,3^2,:2 SC=1 ANTI: 2^6,:3
+TYPE count=72 k=12 aut=5 AUT: 1^12,:1 1^2,5^2,:4 SC=0 ANTI:
+TYPE count=71 k=12 aut=3 AUT: 1^12,:1 3^4,:2 SC=1 ANTI: 2^6,:1 6^2,:2
+TYPE count=304 k=12 aut=3 AUT: 1^12,:1 1^6,3^2,:2 SC=1 ANTI: 2^3,6^1,:2 2^6,:1
+TYPE count=4 k=12 aut=9 AUT: 1^12,:1 1^3,3^3,:2 3^4,:6 SC=0 ANTI:
+TYPE count=6 k=12 aut=9 AUT: 1^12,:1 1^6,3^2,:4 3^4,:4 SC=1 ANTI: 2^6,:3 6^2,:6
+TYPE count=88 k=12 aut=3 AUT: 1^12,:1 3^4,:2 SC=1 ANTI: 2^6,:3
+TYPE count=14572 k=12 aut=3 AUT: 1^12,:1 1^3,3^3,:2 SC=0 ANTI:
+TYPE count=8 k=12 aut=9 AUT: 1^12,:1 1^3,3^3,:2 3^1,9^1,:6 SC=0 ANTI:
+TYPE count=14 k=12 aut=9 AUT: 1^12,:1 1^6,3^2,:4 3^4,:4 SC=0 ANTI:
+TYPE count=267488 k=12 aut=3 AUT: 1^12,:1 1^6,3^2,:2 SC=0 ANTI:
+TYPE count=2774 k=12 aut=3 AUT: 1^12,:1 3^4,:2 SC=0 ANTI:

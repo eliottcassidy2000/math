@@ -1,0 +1,11 @@
+n=10 classes=9733056 strong=9355949
+(C1) non-strong: Pi(T) = C_1 x C_k fails for 0 classes
+(C2) delta0 >= 1: 'descending move <=> strong' fails for 0; delta0 local minima 915
+(C3) L, non-strong non-transitive: 'descending move <=> no source and no sink' fails for 0; non-strong L-local minima 376191
+(C3') strong L-local minima 1302, by (lambda,kappa): (1,1):1230 (2,1):72; with kappa >= 2: 0
+(C5) strong nonregular classes with no Hamiltonian path from a min-score to a max-score vertex: 241039 (of which L-local minima 1302)
+(C6) kappa >= 2: classes 6535588, with a pair joined in neither direction 0
+(C7) strong nonregular 9355949: no Hamiltonian path from a max-score to a min-score vertex: 0
+(C7a) some max-score vertex reaches no min-score vertex: 1092;  (C7b) some (max, min) pair not joined max -> min: 8156
+(C8) some max-score vertex starts no Hamiltonian path ending below (n-1)/2: 0
+(C9) no Hamiltonian path from a vertex above (n-1)/2 to a vertex below it: 0
