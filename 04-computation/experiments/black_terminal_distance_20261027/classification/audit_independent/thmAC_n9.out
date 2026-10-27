@@ -1,0 +1,6 @@
+n=9 mode=all strong classes read=178133 examined=178133 (self-converse nonregular=0, regular=15)
+  lambda histogram over all classes read: 1:78515 2:89366 3:10237 4:15
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=0  lambda=delta=178133  TheoremC-failures=0
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=368716 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0

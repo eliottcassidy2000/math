@@ -1,22 +1,25 @@
 ---
 id: THM-4811
-title: "Arc-strong connectivity is the exact native-complement distance to the non-strong locus, and its black refinement is classified. (A) Dipole law: a native move along a legal word Q = (a, ..., b) sends the skew matrix K to -K + 2A_Q, the score deviations d to -d + e_a - e_b, and the cut function f(X) = e(X -> V\\X) to f(V\\X) + [a in X] - [b in X]; hence c3' - c3 = s(a) - s(b) - 1. (B) For every tournament, the arc-strong connectivity lambda changes by at most one per move, it drops iff the word starts in a minimum out-cut and ends outside it, and the distance to the non-strong locus by moves of either colour is exactly lambda(T); lambda = delta^0 below order 10. (C) Black moves only (Theorems A, B): a strong tournament on n >= 4 vertices has no black descent iff it is R5 or a member of the explicit family E = {E_t(S, x0)} (bottom layer S, t - 1 middle vertices, converse top layer, one upward jump chain), which has members at every order n >= 10 (1, 1, 3, 3, 8, 8, 20, 20 at n = 10..17); the black distance to the non-strong locus is lambda(T) for every strong T other than R5 (no black move) and the members of E (black distance 2 = lambda + 1). (D) Singleton targets: distance delta^0 when lambda = delta^0 (black moves suffice); every strong class of orders 6-10 is exactly delta^0 black moves from a singleton plus a strong core. (E) The black core is connected through order 10."
+title: "Arc-strong connectivity is the exact native-complement distance to the non-strong locus, and its black refinement is classified. (A) Dipole law: a native move along a legal word Q = (a, ..., b) sends the skew matrix K to -K + 2A_Q, the score deviations d to -d + e_a - e_b, and the cut function f(X) = e(X -> V\\X) to f(V\\X) + [a in X] - [b in X]; hence c3' - c3 = s(a) - s(b) - 1. (B) For every tournament, the arc-strong connectivity lambda changes by at most one per move, it drops iff the word starts in a minimum out-cut and ends outside it, and the distance to the non-strong locus by moves of either colour is exactly lambda(T); lambda = delta^0 below order 10. (C) Black moves only (Theorems A, B): a strong tournament on n >= 4 vertices has no black descent iff it is R5 or a member of the explicit family E = {E_t(S, x0)} (bottom layer S, t - 1 middle vertices, converse top layer, one upward jump chain), which has members at every order n >= 10 (1, 1, 3, 3, 8, 8, 20, 20 at n = 10..17); the black distance to the non-strong locus is lambda(T) for every strong T on n >= 4 vertices other than R5 (no black move) and the members of E (black distance 2 = lambda + 1). (D) Singleton targets: distance delta^0 when lambda = delta^0 (black moves suffice); every strong class of orders 6-10 is exactly delta^0 black moves from a singleton plus a strong core. (E) The black core is connected through order 10."
 status: >
   PROVED (elementary): (A); (B) given Camion's theorem (proof inherited in blue_quotient_20261020b/structure.md, section 2);
-  (C) Theorems A and B, all orders, given the PROVED repo inputs cited in classification/PROOF.md (THM-2477 via
-  Benhocine-Wojda, LEM-003, the blue-cut coset lemma and all-blue constructions of blue_quotient_20261020b/structure.md, the
+  (C) Theorems A, B and C, all orders, given the CITED Benhocine-Wojda theorem (the n >= 7 step of THM-2477's all-order
+  rigidity, taken there from the publisher abstract) and the PROVED repo inputs cited in classification/PROOF.md (THM-2477,
+  LEM-003, the blue-cut coset lemma and all-blue constructions of blue_quotient_20261020b/structure.md, the
   prime-orbit block normal form and its consequences in black_descent_20261020c/cycles.md sections 3-7, the uniform
   prefix-rerouting theorem for odd circulants, Camion) and one bounded finite check (the last-block lemma in the single case
   of a 6-vertex block with a 3-fold rotation: all 35 strong 6-tournaments and all subsets, re-done by an independent checker
   for every block size <= 9); (D1) and its black version (Theorem C of the classification); (C2) my earlier subfamily proof.
-  The classification proof was written in this session by a dedicated proof agent and reviewed by a second agent with its
-  own code (no logical error found); not yet independently audited at the repository level.
+  The classification proof was written in this session by a dedicated proof agent, reviewed by a second agent with its
+  own code, and independently audited (2026-10-27, PASS WITH CORRECTIONS: every step of Parts I-VIII and Theorems A, B, C
+  confirmed; an overstated side claim about the extremal-predecessor statement withdrawn).
   FINITE-EXACT: black_descent.cpp over every strong class of orders 3-10 (1, 1, 6, 35, 353, 6,008, 178,133, 9,355,949): the
   descent criterion of (B) verified on all legal words of all strong classes through order 8 (2,073,672 words at order 8,
   no failure; independent audit: every class, strong or not, through order 9, 2,143,304 words at order 8 and 270,447,284
   at order 9); every strong
   class has a descent word, and a black one except C3, R5 (pure blue) and E10 = E_1(S5); the classification checkers
-  (classification/): the order-11 census of all 884,464,590 strong classes (exactly one exception, E_2(S5)), bottom-layer
+  (classification/): the order-11 census of all 884,464,590 strong classes (descent test on the 276,971 nonregular
+  self-converse ones, the rest by Part I; exactly one exception, E_2(S5)), bottom-layer
   census for |S| <= 9 (1, 2, 5, 12, 28), all even shapes through order 14 and odd shapes through order 15 (exceptions
   1, 3, 8 = e(n)), exhaustive lambda = 2 < delta^0 configurations at order 14, all 44 members of E with n <= 16 (strong,
   lambda = 1, delta = 2, cut chain of length t, no black descent, two-move certificate); my own code re-checks E_1(S5),
@@ -27,7 +30,8 @@ status: >
   FINITE-EXACT (D2): every strong class of orders 6-10 (9,355,949 at order 10, among them the 16 with lambda < delta^0) is
   exactly delta^0 black moves from a singleton plus a strong core; (E): the co-basin graph is connected at orders 4-10 (order 10: 537,339,904
   black descent lines), so the black core is connected there.
-  CITED / CREDITED: Camion 1959; THM-4729 (lines, blue/black), THM-4730 / blue_quotient_20261020b (pure-blue C3, R5; black
+  CITED / CREDITED: Camion 1959; Benhocine-Wojda 1983 (Hamiltonian bypasses in tournaments of order >= 7, through THM-2477
+  and merged_metagraph_finite_pure_atoms_20261020 section 3); THM-4729 (lines, blue/black), THM-4730 / blue_quotient_20261020b (pure-blue C3, R5; black
   closed paths), black_descent_20261020c (the c3 change; the tools listed above), THM-4810 Theorem L (the score form of the
   dipole law), the concurrent regular basin theorem of the aliquot_power_124 session (scalar_root_reparse_20261026/basins,
   independently audited there, uncommitted at filing: exactly m black moves from a regular (2m+1)-tournament to a singleton
@@ -37,10 +41,17 @@ status: >
   witnesses at orders 7, 9 and for P_11; HYP-9422), Session75 (black-core audit rounds announced).
   AUDITED (independent, 2026-10-27; PASS WITH CORRECTIONS, MISTAKE-681; report
   04-computation/experiments/black_terminal_distance_20261027/audit_thm4811_4813/REPORT.md): (A), (B), (D1), (D2), (E) and the
-  E(M; Z) properties, with the census through order 10 reproduced; Theorems A, B, C are under a separate independent audit.
+  E(M; Z) properties, with the census through order 10 reproduced; Theorems A, B, C audited separately (PASS WITH
+  CORRECTIONS; own code: Theorems A and C on every strong class through order 9 and every nonregular self-converse class of
+  order 10, the family E from its definition through order 18, the last-block lemma for blocks of order <= 9, Lemma BL for
+  |S| <= 9, exhaustive lambda = 1 < delta^0 searches through order 17 and lambda = 2 < delta^0 searches at orders 14-17, and
+  exact class-level black distances through order 9).
   OPEN: the singleton-plus-strong-core distance delta^0 at every order (HYP-9421 (6)); black-core connectivity at every order
-  (HYP-9348 (b)); the closed extremal-predecessor form of black_descent_20261020c/cycles.md section 7 in the case of two
-  minimum-score vertices.
+  (HYP-9348 (b)); the extremal-predecessor statement of black_descent_20261020c/cycles.md section 7, closed and open-path
+  forms (Theorem C gives only the weaker black Hamiltonian path from a minimum-score vertex; the closed form is settled only
+  when a minimum-score vertex has a non-strong deletion or the minimum score is 1 and attained once, the open-path form
+  also when the minimum score is attained once; FINITE-EXACT through order 10: both forms hold for every nonregular strong
+  self-converse class, independent classification audit).
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
 depends_on:
@@ -113,7 +124,8 @@ core) is the case `lambda = m` of (B), and (B) shows that the non-strong-locus b
 except one class `E10` of order 10 (code `111001111101111111111111111111111111000111101`); every `lambda = 2` class
 adjacent to `E10` still has a black descent into another class, so through order 10 the black distance is `lambda`
 except for `C3`, `R5` and `E10`, which has black distance 2. At order 11 the census of all 884,464,590 strong classes
-(classification/census_sc.cpp) finds exactly one exception.
+(classification/census_sc.cpp; the descent test runs directly on the 276,971 nonregular self-converse classes, the others
+being covered by Part I of the proof) finds exactly one exception, `E_2(S5)`.
 
 **C2 (the family `E`).** A *bottom layer* is a pair `(S, x0)` with `S - x0 = R_1 => ... => R_q` (`q >= 2`) a stack of
 `K1` and `C3` blocks whose last block `R_q` is a `C3`, `x0` uniform on every block, `x0 => R_1` and `R_q => x0` (the
@@ -124,7 +136,8 @@ relation of `x0` to the blocks between is free). For `t >= 1`, `E_t(S, x0)` has 
 `|S| = 5..11`), so the members number 1, 1, 3, 3, 8, 8, 20, 20, 48, 48 at orders 10-19. `E10 = E_1(S5, x0)` with
 `S5 = (x0 -> K1 => C3 => x0)`, and the order-11 exception is `E_2(S5, x0)`. Every member is strong with `lambda = 1`,
 `delta^0 = 2`, minimum cuts exactly the `t` cuts `S`, `S + c_1`, ...; its descent words are
-`(P_0, c_1, ..., c_(t-1), P_t)` with `P_0` a Hamiltonian path of `S` into `x0`, and the stabiliser of `x0` (independent
+`(P_0, c_1, ..., c_(t-1), P_t)` with `P_0` a Hamiltonian path of `S` into `x0` and `P_t` one of `sigma(S)` from
+`sigma(x0)`, and the stabiliser of `x0` (independent
 rotations of the `C3` blocks) acts simply transitively on these paths, so every descent word is the converse
 identification composed with an automorphism: all are blue (classification/PROOF.md, Part VII).
 
@@ -140,14 +153,19 @@ move) and the members of `E` (black distance `2 = lambda + 1`, attained by an ex
 *Proof outline* (classification/PROOF.md). Non-self-converse tournaments have only black words, and regular ones other
 than `C3`, `R5` have black closed paths, so an exception is self-converse and non-regular. *Theorem C:* if
 `lambda = delta^0` there is a black descent of singleton type (starting at a minimum-score vertex or ending at a
-maximum-score one), by blue-cut cosets, the prime-orbit block normal form and two vertex arguments; this also proves the
-open-path form of the extremal-predecessor statement left open in black_descent_20261020c/cycles.md section 7. If
+maximum-score one), by blue-cut cosets, the prime-orbit block normal form and two vertex arguments. The same case
+analysis does not use `lambda = delta^0` and shows that every nonregular strong self-converse tournament has a black
+Hamiltonian path starting at a minimum-score vertex; this is weaker than the extremal-predecessor statement of
+black_descent_20261020c/cycles.md section 7 (closed form, or its open-path form: a Hamiltonian path from a minimum-score
+vertex to a vertex of less than maximum score), which stays OPEN outside the special cases listed in
+classification/PROOF.md (Remark after Theorem C). If
 `lambda < delta^0`, minimum cuts cannot cross, so they form a chain, and every anti-automorphism reverses the chain's
 layers. For `2 <= lambda < delta^0` an all-blue candidate set forces a stabiliser to act simply transitively, which forces
 a `C3` block with impossible degrees, so there is no exception. For `lambda = 1 < delta^0`, layers cannot be skipped,
 middle layers are single vertices, and a bottom-layer lemma (THM-2477 via Benhocine-Wojda) pins down `S`: the exceptions
 are exactly `E`. For Theorem B, a singleton-type descent keeps `lambda = delta^0`, a descent from
-`2 <= lambda < delta^0` stays in that regime and cannot enter `E`, and for `T` in `E` a black word starting and ending in
+`2 <= lambda < delta^0` stays in the regime `lambda < delta^0` and cannot enter `E` (for `lambda = 2` at most one vertex of
+the target has outdegree below 3, while members of `E` have three vertices of outdegree 2) or `R5`, and for `T` in `E` a black word starting and ending in
 `S` keeps `lambda = 1` and reaches `lambda = delta^0 = 1`.
 
 ## (D) Singleton targets
@@ -194,4 +212,5 @@ through order 8 by a different route and extends it to orders 9 and 10 (HYP-9348
 Theorems A and B settle HYP-9421 (1)-(2) (the conjectured exceptional list `C3, R5, E(M; Z)` was incomplete: the right
 family is `E`). Open: the singleton-plus-strong-core distance `delta^0` at every order (HYP-9421 (6); D1 gives the
 singleton locus when `lambda = delta^0`); black-core connectivity at every order (HYP-9348 (b), FINITE-EXACT through 10 by
-(E)); the closed extremal-predecessor statement when two vertices have minimum score.
+(E)); the extremal-predecessor statement of black_descent_20261020c/cycles.md section 7 (closed and open-path forms)
+outside the special cases listed in classification/PROOF.md (Remark after Theorem C).

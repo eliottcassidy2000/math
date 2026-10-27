@@ -1,0 +1,3 @@
+p=3 m=6 configurations=8 (x2 choices of B): (H1)=0 (H1)+(H2)=0  consecutive-B cycle exists=16  (H1) with consecutive-B cycle=0
+p=5 m=10 configurations=128 (x2 choices of B): (H1)=0 (H1)+(H2)=0  consecutive-B cycle exists=256  (H1) with consecutive-B cycle=0
+p=7 m=14 configurations=2048 (x2 choices of B): (H1)=0 (H1)+(H2)=0  consecutive-B cycle exists=4096  (H1) with consecutive-B cycle=0

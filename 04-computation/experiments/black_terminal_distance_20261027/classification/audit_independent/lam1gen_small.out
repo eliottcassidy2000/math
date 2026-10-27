@@ -1,0 +1,16 @@
+a=5 k=0 n=10 E-members-at-n=1 built=30 in-regime(lambda=1<delta)=8 no-black-descent=1 (in E 1, NEW 0)
+exit=0
+a=5 k=1 n=11 E-members-at-n=1 built=60 in-regime(lambda=1<delta)=16 no-black-descent=1 (in E 1, NEW 0)
+exit=0
+a=5 k=2 n=12 E-members-at-n=3 built=180 in-regime(lambda=1<delta)=32 no-black-descent=2 (in E 2, NEW 0)
+exit=0
+a=5 k=3 n=13 E-members-at-n=3 built=480 in-regime(lambda=1<delta)=112 no-black-descent=2 (in E 2, NEW 0)
+exit=0
+a=5 k=4 n=14 E-members-at-n=8 built=2400 in-regime(lambda=1<delta)=512 no-black-descent=8 (in E 8, NEW 0)
+exit=0
+a=6 k=0 n=12 E-members-at-n=3 built=210 in-regime(lambda=1<delta)=73 no-black-descent=3 (in E 3, NEW 0)
+exit=0
+a=6 k=1 n=13 E-members-at-n=3 built=420 in-regime(lambda=1<delta)=146 no-black-descent=3 (in E 3, NEW 0)
+exit=0
+a=6 k=2 n=14 E-members-at-n=8 built=1260 in-regime(lambda=1<delta)=292 no-black-descent=6 (in E 6, NEW 0)
+exit=0

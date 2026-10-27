@@ -1,0 +1,1 @@
+( for ak in "8 1" "7 3" "6 5" "5 7"; do; a=${ak% *} ; k=${ak#* } ; ./lam1gen )  504.21s user 1.07s system 70% cpu 11:55.07 total

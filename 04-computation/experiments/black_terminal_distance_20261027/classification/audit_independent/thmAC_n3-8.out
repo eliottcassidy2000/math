@@ -1,0 +1,41 @@
+NO-BLACK-DESCENT 101 lambda=1 delta=1 ncuts=6 regular=1 paths=3 cand=3 candBlue=3
+NO-SINGLETON-BLACK-DESCENT 101 lambda=1 delta=1 regular=1
+F6-HIT H=|Aut|=3 101
+n=3 mode=all strong classes read=1 examined=1 (self-converse nonregular=0, regular=1)
+  lambda histogram over all classes read: 1:1
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=1  lambda=delta=1  TheoremC-failures=1
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=3 blue(violations)=3
+  F6 control: classes (examined) with H=|Aut|>1: 1
+n=4 mode=all strong classes read=1 examined=1 (self-converse nonregular=0, regular=0)
+  lambda histogram over all classes read: 1:1
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=0  lambda=delta=1  TheoremC-failures=0
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=1 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0
+NO-BLACK-DESCENT 1100110111 lambda=2 delta=2 ncuts=10 regular=1 paths=15 cand=15 candBlue=15
+NO-SINGLETON-BLACK-DESCENT 1100110111 lambda=2 delta=2 regular=1
+n=5 mode=all strong classes read=6 examined=6 (self-converse nonregular=0, regular=1)
+  lambda histogram over all classes read: 1:5 2:1
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=1  lambda=delta=6  TheoremC-failures=1
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=5 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0
+n=6 mode=all strong classes read=35 examined=35 (self-converse nonregular=0, regular=0)
+  lambda histogram over all classes read: 1:30 2:5
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=0  lambda=delta=35  TheoremC-failures=0
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=29 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0
+n=7 mode=all strong classes read=353 examined=353 (self-converse nonregular=0, regular=3)
+  lambda histogram over all classes read: 1:266 2:84 3:3
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=0  lambda=delta=353  TheoremC-failures=0
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=343 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0
+n=8 mode=all strong classes read=6008 examined=6008 (self-converse nonregular=0, regular=0)
+  lambda histogram over all classes read: 1:3623 2:2300 3:85
+  classes with lambda < delta (all read): 0
+  examined: crossing min-cut pairs=0  no-black-descent=0  lambda=delta=6008  TheoremC-failures=0
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=7188 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0

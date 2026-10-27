@@ -1,0 +1,8 @@
+NO-BLACK-DESCENT 111001111101111111111111111111111111000111101 lambda=1 delta=2 ncuts=1 regular=0 paths=657 cand=9 candBlue=9
+n=10 mode=sc strong classes read=9355949 examined=8599 (self-converse nonregular=8599, regular=0)
+  lambda histogram over all classes read: 1:2817450 2:5124698 3:1400468 4:13333
+  classes with lambda < delta (all read): 16
+  examined: crossing min-cut pairs=0  no-black-descent=1  lambda=delta=8595  TheoremC-failures=0
+  F10 control: Ham-cycle cuts from min-score v with T-v nonstrong: checked=62103 blue(violations)=0
+  F6 control: classes (examined) with H=|Aut|>1: 0
+  self-converse test disagreements (nauty vs own backtracking, sc mode only): 0

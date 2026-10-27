@@ -1,0 +1,1 @@
+( gentourng -cq 8 | ./lam2gen 8 1 > lam2gen_n17_a8k1.out; gentourng -cq 7 |  )  207.72s user 1.33s system 98% cpu 3:32.86 total

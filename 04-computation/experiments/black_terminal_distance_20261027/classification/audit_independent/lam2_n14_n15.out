@@ -1,0 +1,2 @@
+a=7 n=14 mode=t1 built=14826 in-regime(2<=lambda<delta)=430 no-black-descent=0   (lambda,delta) counts: (2,3):430
+a=7 n=15 mode=mid built=39536 in-regime(2<=lambda<delta)=1131 no-black-descent=0   (lambda,delta) counts: (2,3):1131

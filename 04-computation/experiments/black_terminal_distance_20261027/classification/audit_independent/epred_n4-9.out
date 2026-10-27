@@ -1,0 +1,6 @@
+n=4 nonregular strong self-converse=1 (lambda<delta: 0): C' fails=0  E fails=0 (with lambda<delta 0)  Ecl fails=0
+n=5 nonregular strong self-converse=5 (lambda<delta: 0): C' fails=0  E fails=0 (with lambda<delta 0)  Ecl fails=0
+n=6 nonregular strong self-converse=9 (lambda<delta: 0): C' fails=0  E fails=0 (with lambda<delta 0)  Ecl fails=0
+n=7 nonregular strong self-converse=76 (lambda<delta: 0): C' fails=0  E fails=0 (with lambda<delta 0)  Ecl fails=0
+n=8 nonregular strong self-converse=162 (lambda<delta: 0): C' fails=0  E fails=0 (with lambda<delta 0)  Ecl fails=0
+n=9 nonregular strong self-converse=2646 (lambda<delta: 0): C' fails=0  E fails=0 (with lambda<delta 0)  Ecl fails=0

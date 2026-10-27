@@ -1,0 +1,1 @@
+( gentourng -cq 8 | ./fshape 8 even > fshape_a8_even.out; gentourng -cq 8 |  )  100.66s user 0.24s system 99% cpu 1:41.43 total

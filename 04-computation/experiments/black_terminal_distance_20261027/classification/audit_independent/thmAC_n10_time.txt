@@ -1,0 +1,1 @@
+( gentourng -cq 10 | ./thmAC 10 sc > thmAC_n10_sc.out 2>&1; )  33.70s user 0.15s system 104% cpu 32.540 total

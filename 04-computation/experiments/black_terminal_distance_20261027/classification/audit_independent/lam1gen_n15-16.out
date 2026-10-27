@@ -1,0 +1,8 @@
+a=5 k=5 n=15 E-members-at-n=8 built=11520 in-regime(lambda=1<delta)=2880 no-black-descent=8 (in E 8, NEW 0)
+a=5 k=6 n=16 E-members-at-n=20 built=107520 in-regime(lambda=1<delta)=26752 no-black-descent=48 (in E 48, NEW 0)
+a=6 k=3 n=15 E-members-at-n=8 built=3360 in-regime(lambda=1<delta)=1022 no-black-descent=6 (in E 6, NEW 0)
+a=6 k=4 n=16 E-members-at-n=20 built=16800 in-regime(lambda=1<delta)=4672 no-black-descent=24 (in E 24, NEW 0)
+a=7 k=0 n=14 E-members-at-n=8 built=2471 in-regime(lambda=1<delta)=1220 no-black-descent=8 (in E 8, NEW 0)
+a=7 k=1 n=15 E-members-at-n=8 built=4942 in-regime(lambda=1<delta)=2440 no-black-descent=8 (in E 8, NEW 0)
+a=7 k=2 n=16 E-members-at-n=20 built=14826 in-regime(lambda=1<delta)=4880 no-black-descent=16 (in E 16, NEW 0)
+a=8 k=0 n=16 E-members-at-n=20 built=48064 in-regime(lambda=1<delta)=30713 no-black-descent=20 (in E 20, NEW 0)

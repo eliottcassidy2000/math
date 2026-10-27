@@ -1,0 +1,6 @@
+n=11 samples=20000 kept(strong nonregular self-converse)=19771 lambda=delta:19770 TheoremC-fail:0  lambda<delta:1 no-black:0 not-in-E:0
+n=12 samples=20000 kept(strong nonregular self-converse)=19887 lambda=delta:19886 TheoremC-fail:0  lambda<delta:1 no-black:0 not-in-E:0
+n=13 samples=20000 kept(strong nonregular self-converse)=19938 lambda=delta:19938 TheoremC-fail:0  lambda<delta:0 no-black:0 not-in-E:0
+n=14 samples=20000 kept(strong nonregular self-converse)=19965 lambda=delta:19965 TheoremC-fail:0  lambda<delta:0 no-black:0 not-in-E:0
+n=15 samples=20000 kept(strong nonregular self-converse)=19982 lambda=delta:19982 TheoremC-fail:0  lambda<delta:0 no-black:0 not-in-E:0
+n=16 samples=20000 kept(strong nonregular self-converse)=19983 lambda=delta:19983 TheoremC-fail:0  lambda<delta:0 no-black:0 not-in-E:0

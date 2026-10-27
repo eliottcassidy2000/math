@@ -1,0 +1,7 @@
+scores: 7 7 7 7 6 2 3 2 2 2
+lambda=1 delta=2 ncuts=1 cut0=56789
+|Aut| own=9 nauty=9
+anti-automorphisms=9 involutions=3
+Ham paths=657 black=558
+level-1 targets by lambda: 0:0 1:108 2:450 3:0
+level-2: black moves from level-1 targets=765720, landing non-strong=918, distinct labelled non-strong tournaments=690

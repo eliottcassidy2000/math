@@ -1,0 +1,7 @@
+(H1)+(H2): R=101 A=0 |G|=3 |H'|=3 (C3, A empty: the lemma's conclusion)
+m=3 classes=1 rigid-skipped=0 pairs=7 (H2)=1 (H1)+(H2)=1  |G| own-vs-nauty disagreements=0
+m=4 classes=1 rigid-skipped=0 pairs=15 (H2)=4 (H1)+(H2)=0  |G| own-vs-nauty disagreements=0
+m=5 classes=6 rigid-skipped=0 pairs=186 (H2)=87 (H1)+(H2)=0  |G| own-vs-nauty disagreements=0
+m=6 classes=35 rigid-skipped=0 pairs=2205 (H2)=1214 (H1)+(H2)=0  |G| own-vs-nauty disagreements=0
+m=7 classes=353 rigid-skipped=0 pairs=44831 (H2)=29762 (H1)+(H2)=0  |G| own-vs-nauty disagreements=0
+m=8 classes=6008 rigid-skipped=0 pairs=1532040 (H2)=1175617 (H1)+(H2)=0  |G| own-vs-nauty disagreements=0

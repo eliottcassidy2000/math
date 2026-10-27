@@ -8,7 +8,9 @@ Status:
     if and only if T is the regular 5-tournament R5 or T belongs to the family E of Section 3.
   - **Theorem B (black distance).** For strong T on n >= 4 vertices, d_black(T) = lambda(T) unless T is R5
     (no black move at all) or T is in E, in which case d_black(T) = 2 = lambda(T) + 1.
-- **FINITE-EXACT** controls: complete gentourng censuses n <= 11, exhaustive structured searches n <= 16
+- **FINITE-EXACT** controls: complete gentourng censuses n <= 11 (the descent test runs on every strong class for n <= 9 and
+  on the nonregular self-converse classes for n = 10, 11, the others being covered by Part I), exhaustive structured
+  searches n <= 16
   (Section 13). One sub-case of one lemma (the last-block lemma, case (m, p) = (6, 3)) is closed by a finite
   check rather than by an argument; everything else is a proof.
 
@@ -204,8 +206,16 @@ D has length 3 and n = 4. Contradiction.
 n = 4 falls under (c1) (its only strong class has a min-score vertex with non-strong deletion). So (H) fails:
 some Hamiltonian path starting in m or ending in M is black; it is a singleton-type descent candidate. QED
 
-Remark: this is the open-path form of the "extremal predecessor" statement left OPEN in cycles.md Section 7; the
-closed form is not needed and is not claimed (Step 3 is non-constructive).
+Remark (what (c1)-(c2) prove without lambda = delta). The case analysis never uses lambda = delta (only the last
+sentence does), so it proves: **every nonregular strong self-converse T (n >= 4) has a black Hamiltonian path starting at a
+minimum-score vertex** (a black path ending in M becomes one starting in m by sigma and reversal). This is weaker than
+the "extremal predecessor" statement left OPEN in cycles.md Section 7, both in its closed form and in its open-path form
+(a Hamiltonian path from a minimum-score vertex to a vertex of less than maximum score): a black path from m may end in M,
+and Steps 1 and 3 use the blueness in (H) (the coset lemma, F2 at inner positions), not only "every path from m ends in
+M". The argument settles the open-path form only in case (c1) and when mu = 1 (Step 2 uses (H) only through "every
+Hamiltonian path from v ends in M"), and the closed form only in case (c1) and when mu = 1 and delta = 1 (then every
+Hamiltonian path from v is closed). Both forms remain OPEN; an independent check finds the closed form true for every
+nonregular strong self-converse class of order <= 10.
 
 ---------------------------------------------------------------------------------------------------------------
 
@@ -431,11 +441,12 @@ Non-self-converse classes at n >= 10 were not tested for it (irrelevant to the K
 | `family1.cpp` (all strong S, a = 5,6,7) | every F(S,x0) (all even-order exceptions have this shape) | KEY fails 1, 3, 8 at n = 10, 12, 14 = e(n) |
 | `family_odd.cpp` (a = 4..7) | every odd shape with a sigma-fixed middle vertex | KEY fails 0, 1, 3, 8 at n = 9, 11, 13, 15 = e(n) |
 | `family2.cpp` (n = 14) | all lambda = 2 < delta configurations (t = 1 is forced at n = 14, so exhaustive in that regime) | 430 configurations, 0 failures |
-| `family3.cpp` (n = 15) | lambda = 2 < delta with a fixed middle vertex (t = 2) | 1131 configurations, 0 failures |
+| `family3.cpp` (n = 15) | lambda = 2 < delta with a fixed middle vertex (t = 2); exhaustive in that regime, since L_0 and L_t have 7 vertices each and the single middle vertex is sigma-fixed | 1131 configurations, 0 failures |
 | `e_check.cpp` | all 44 members of E with n <= 16: strong, lambda = 1, delta = 2, cut chain = t, no black descent, explicit two-move certificate of Part VIII.4, >= 3 vertices of outdegree 2 | 44/44 |
 | `black_distance.cpp` | labelled BFS from the n = 10 exception; cut identity on all 671,454 (Q, X) pairs | distance 2, 0 identity failures |
 | `verify_counterexample.py` | independent Python check of the n = 10 and n = 11 exceptions | confirmed |
 | `audit/` (independent auditor, own code, no `tour.hpp`) | last-block lemma for all strong R with m <= 9 and all A; Lemma BL hypotheses for a <= 9; Theorem C on 78,387 random self-converse nonregular strong T with lambda = delta, n = 10..13; the 19 members of E with n <= 15 | 0 counterexamples; BL pairs 1, 2, 5, 12, 28; all 78,387 have a singleton-type black descent; 19/19 |
+| second independent audit (2026-10-27, own C + nauty code) | Theorems A and C on all strong classes n <= 9 and all nonregular self-converse classes n = 10; E from its definition (112 members, n <= 18); last-block lemma m <= 9 with (H1) tested directly; Lemma BL a <= 9; exhaustive lambda = 1 < delta searches n <= 17 and lambda = 2 < delta searches n = 14..17; all F/G shapes with a <= 8; exact class-level black BFS n <= 9 | no counterexample; every exception found is R5 or a member of E; d_black = lambda for every strong class n <= 9 except R5 |
 
 Commands: `g++ -O2 -std=c++17 -o X X.cpp`, then e.g. `gentourng -cq 8 | ./keylemma_check 8`,
 `gentourng -cq 10 | ./census_sc 10`, `gentourng -cq 11 r/8 | ./census_sc 11` (r = 0..7),
@@ -450,13 +461,16 @@ Outputs are in `results/`. Exploration programs (`explore*.cpp`, `describe*.cpp`
 - Cited, not re-proved here: THM-2477 (via Benhocine-Wojda 1983, a published theorem), LEM-003, the coset lemma
   and even all-blue construction (structure.md), the regular-case black path (structure.md Section 2, via the
   uniform prefix-rerouting theorem for odd circulants), the block normal form and its consequences (cycles.md
-  Sections 3-5, 7; Cauchy-Davenport), Camion. All are marked PROVED in the repo and were read for this note.
+  Sections 3-5, 7; Cauchy-Davenport), Camion. All are marked PROVED in the repo and were read for this note; the n >= 7 step of THM-2477's all-order
+  rigidity is the CITED Benhocine-Wojda theorem (publisher abstract), so Theorems A-C are PROVED given that citation.
 - An independent audit (fresh reader, own code in `audit/`) found no logical error; its presentation remarks
   (K1 in F6, the complementary case of III.2, why B_q is nonempty, strongness of E, the source of the lower
   bound 2 in Part VIII.4) are incorporated.
 - One finite step: the last-block lemma in the case (m, p) = (6, 3) (Section 9), settled by an exhaustive check
   over the 35 strong 6-tournaments and all subsets A (re-done independently for every m <= 9 in `audit/`).
-- Theorem C, Step 3 is by contradiction: it shows a singleton-type black candidate exists but does not exhibit it,
-  so the closed "extremal predecessor" statement of cycles.md Section 7 stays open in the case mu = 2.
+- Theorem C (c2) is by contradiction from (H); Steps 1 and 3 use the blueness of the paths, not only their endpoint
+  scores. It shows that a singleton-type black candidate exists but does not exhibit it, and it does not prove the
+  "extremal predecessor" statement of cycles.md Section 7 (closed or open-path form) except in the cases listed in the
+  Remark after Theorem C; both forms stay OPEN, not only for mu = 2.
 - The census data at n = 10, 11 and the structured searches up to n = 16 agree with Theorems A and B in every
   instance; they are controls, not inputs to the proofs.

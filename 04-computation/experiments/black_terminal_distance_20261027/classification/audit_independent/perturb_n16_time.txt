@@ -1,0 +1,1 @@
+./perturb 16 16 3000 7 > perturb_n16.out  82.68s user 0.17s system 99% cpu 1:23.07 total

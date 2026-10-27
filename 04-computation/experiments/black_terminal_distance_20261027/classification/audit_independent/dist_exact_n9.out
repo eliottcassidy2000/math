@@ -1,0 +1,10 @@
+layer 1: 78515 classes
+layer 2: 89366 classes
+layer 3: 10237 classes
+layer 4: 15 classes
+layer 5: 0 classes
+n=9 mode=exact classes=191536 strong=178133: d=lambda 178133, d!=lambda 0, unreachable 0; F1 checks 600628126 failures 0
+  lambda=1 d=1 : 78515
+  lambda=2 d=2 : 89366
+  lambda=3 d=3 : 10237
+  lambda=4 d=4 : 15

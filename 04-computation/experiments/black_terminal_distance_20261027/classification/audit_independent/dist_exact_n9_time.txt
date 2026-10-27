@@ -1,0 +1,1 @@
+( gentourng -q 9 | ./dist 9 exact > dist_exact_n9.out; )  180.64s user 0.54s system 99% cpu 3:01.65 total

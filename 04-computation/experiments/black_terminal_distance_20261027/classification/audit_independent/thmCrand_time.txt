@@ -1,0 +1,1 @@
+( for n in 11 12 13 14 15 16; do; ./thmCrand $n 20000 $n; done > ; )  18.56s user 0.02s system 53% cpu 34.793 total
