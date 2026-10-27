@@ -1,6 +1,6 @@
 ---
 id: THM-4811
-title: "Arc-strong connectivity is the exact native-complement distance to the non-strong locus, and its black refinement is classified. (A) Dipole law: a native move along a legal word Q = (a, ..., b) sends the skew matrix K to -K + 2A_Q, the score deviations d to -d + e_a - e_b, and the cut function f(X) = e(X -> V\\X) to f(V\\X) + [a in X] - [b in X]; hence c3' - c3 = s(a) - s(b) - 1. (B) For every tournament, the arc-strong connectivity lambda changes by at most one per move, it drops iff the word starts in a minimum out-cut and ends outside it, and the distance to the non-strong locus by moves of either colour is exactly lambda(T); lambda = delta^0 below order 10. (C) Black moves only (Theorems A, B): a strong tournament on n >= 4 vertices has no black descent iff it is R5 or a member of the explicit family E = {E_t(S, x0)} (bottom layer S, t - 1 middle vertices, converse top layer, one upward jump chain), which has members at every order n >= 10 (1, 1, 3, 3, 8, 8, 20, 20 at n = 10..17); the black distance to the non-strong locus is lambda(T) for every strong T other than R5 (no black move) and the members of E (black distance 2 = lambda + 1). (D) Singleton targets: distance delta^0 when lambda = delta^0 (black moves suffice); every strong class of orders 6-9 is exactly delta^0 black moves from a singleton plus a strong core. (E) The black core is connected through order 10."
+title: "Arc-strong connectivity is the exact native-complement distance to the non-strong locus, and its black refinement is classified. (A) Dipole law: a native move along a legal word Q = (a, ..., b) sends the skew matrix K to -K + 2A_Q, the score deviations d to -d + e_a - e_b, and the cut function f(X) = e(X -> V\\X) to f(V\\X) + [a in X] - [b in X]; hence c3' - c3 = s(a) - s(b) - 1. (B) For every tournament, the arc-strong connectivity lambda changes by at most one per move, it drops iff the word starts in a minimum out-cut and ends outside it, and the distance to the non-strong locus by moves of either colour is exactly lambda(T); lambda = delta^0 below order 10. (C) Black moves only (Theorems A, B): a strong tournament on n >= 4 vertices has no black descent iff it is R5 or a member of the explicit family E = {E_t(S, x0)} (bottom layer S, t - 1 middle vertices, converse top layer, one upward jump chain), which has members at every order n >= 10 (1, 1, 3, 3, 8, 8, 20, 20 at n = 10..17); the black distance to the non-strong locus is lambda(T) for every strong T other than R5 (no black move) and the members of E (black distance 2 = lambda + 1). (D) Singleton targets: distance delta^0 when lambda = delta^0 (black moves suffice); every strong class of orders 6-10 is exactly delta^0 black moves from a singleton plus a strong core. (E) The black core is connected through order 10."
 status: >
   PROVED (elementary): (A); (B) given Camion's theorem (proof inherited in blue_quotient_20261020b/structure.md, section 2);
   (C) Theorems A and B, all orders, given the PROVED repo inputs cited in classification/PROOF.md (THM-2477 via
@@ -22,8 +22,8 @@ status: >
   n=8: 3623, 2300, 85; n=9: 78515, 89366, 10237, 15; n=10: 2817450, 5124698, 1400468, 13333 (lambda = 1, 2, ...); the top
   values are the (semi-)regular counts of OEIS A255599; the 2-arc-strong counts 1, 5, 87, 2385, 99618, 6538499 (n = 5..10)
   are not in OEIS. dipole_law_check.py: (A) on 2940 random path complements (n = 4..31), no failure.
-  FINITE-EXACT (D2): every strong class of orders 6-9, and the 16 order-10 classes with lambda < delta^0, is exactly delta^0
-  black moves from a singleton plus a strong core; (E): the co-basin graph is connected at orders 4-10 (order 10: 537,339,904
+  FINITE-EXACT (D2): every strong class of orders 6-10 (9,355,949 at order 10, among them the 16 with lambda < delta^0) is
+  exactly delta^0 black moves from a singleton plus a strong core; (E): the co-basin graph is connected at orders 4-10 (order 10: 537,339,904
   black descent lines), so the black core is connected there.
   CITED / CREDITED: Camion 1959; THM-4729 (lines, blue/black), THM-4730 / blue_quotient_20261020b (pure-blue C3, R5; black
   closed paths), black_descent_20261020c (the c3 change; the tools listed above), THM-4810 Theorem L (the score form of the
@@ -51,7 +51,7 @@ scripts:
   - 04-computation/experiments/black_terminal_distance_20261027/exceptional_family.py, e10_analysis.py (+ .out)
   - 04-computation/experiments/black_terminal_distance_20261027/classification/ (PROOF.md, tour.hpp, keylemma_check.cpp, census_sc.cpp, bottom_layers.cpp, lastblock_check.cpp, e_check.cpp, family*.cpp, black_distance.cpp, verify_counterexample.py, results/, audit/)
   - 04-computation/experiments/black_terminal_distance_20261027/dipole_law_check.py (+ .out)
-  - 04-computation/experiments/black_terminal_distance_20261027/singleton_distance.cpp (+ singleton_distance_n6_8.out, singleton_distance_n9.out)
+  - 04-computation/experiments/black_terminal_distance_20261027/singleton_distance.cpp (+ singleton_distance_n6_8.out, singleton_distance_n9.out, singleton_distance_n10.out)
   - 04-computation/experiments/black_terminal_distance_20261027/cobasin_connectivity.cpp (+ cobasin_connectivity_n4_9.out, cobasin_connectivity_n10.out)
   - 04-computation/experiments/black_terminal_distance_20261027/locus_distances.cpp, lambda_vs_delta0.cpp (+ .out)
 ---
@@ -157,9 +157,9 @@ tournament of order at most 9 and to every regular or near-regular tournament (s
 gives a black singleton-type descent whenever `lambda = delta^0` (`T` not `R5`), after which `lambda = delta^0` again; at
 the end `delta^0 = 0`, so the black distance to `SING` is also `delta^0`.
 
-**D2 (FINITE-EXACT).** Every strong class of orders 6-9 (35, 353, 6,008, 178,133), and each of the 16 order-10 classes
-with `lambda < delta^0` (all with `lambda = 1`, `delta^0 = 2`, among them `E10`), reaches `CORE` in exactly `delta^0`
-**black** moves (`singleton_distance.cpp`: exhaustive depth-first search over the moves that raise the maximal
+**D2 (FINITE-EXACT).** Every strong class of orders 6-10 (35, 353, 6,008, 178,133, 9,355,949; at order 10 including the
+16 classes with `lambda < delta^0`, all with `lambda = 1`, `delta^0 = 2`, among them `E10`) reaches `CORE` in exactly
+`delta^0` **black** moves (`singleton_distance.cpp`: exhaustive depth-first search over the moves that raise the maximal
 deviation, which are the only moves on a route of length `delta^0`). At order 5 only `R5` fails (no black move). For a
 regular `(2m+1)`-tournament this is the concurrent basin theorem's "exactly `m` black moves from a singleton plus a
 strong core" (all orders there), here extended to all strong sources at these orders; HYP-9421 (6) conjectures it in

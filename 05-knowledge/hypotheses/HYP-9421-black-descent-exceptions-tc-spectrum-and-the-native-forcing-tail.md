@@ -1,7 +1,7 @@
 ---
 id: HYP-9421
 title: "After THM-4811-4813: (1) the strong tournaments without a black descent are exactly C3, R5 and the doubled-stack family E(M; Z) (refuted as stated; resolved by THM-4811 Theorem A with the larger family E); (2) the black distance to the non-strong locus never exceeds lambda + 1 (outside C3, R5; proved); (3) the presentation-count spectrum: every odd v other than 7 and 21 is tc(T) for some tournament on at most 10 vertices, for v <= 2001 (PRE-REGISTERED); (4) the native ROOT forcing of a Collatz orbit is a tail property: sup F(s) over primitive seeds s < 10^8 is below 0.1127503 (PRE-REGISTERED); (5) strong presentation fibres are finite with order O(log^2 v), and the black-core connectivity reduction; (6) every strong tournament other than C3, R5 is exactly delta^0 black moves from a singleton plus a strong core"
-status: "(1) REFUTED as stated and RESOLVED (THM-4811 Theorem A: the exceptions are R5 and the larger family E); (2) PROVED (THM-4811 Theorem B); (3), (4) PRE-REGISTERED (commit 8ab6b3e358) and CONFIRMED; (5) first clause PROVED in THM-4812 (f), second OPEN; (6) OPEN (FINITE-EXACT through order 9 and the order-10 classes with lambda < delta^0)"
+status: "(1) REFUTED as stated and RESOLVED (THM-4811 Theorem A: the exceptions are R5 and the larger family E); (2) PROVED (THM-4811 Theorem B); (3), (4) PRE-REGISTERED (commit 8ab6b3e358) and CONFIRMED; (5) first clause PROVED in THM-4812 (f), second OPEN; (6) OPEN (FINITE-EXACT through order 10, all 9,355,949 strong classes there)"
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
 related:
@@ -70,7 +70,7 @@ reduce black-core connectivity (HYP-9348 (b)) to connecting the non-strong basin
 **Conjecture.** Every strong tournament other than `C3` and `R5` is exactly `delta^0 = min_v min(s_v, n - 1 - s_v)` black
 moves from a singleton plus a strong core (and from the singleton locus). The lower bound is the singleton cut
 potential of THM-4811 (A) (each move changes every `|s_v - (n-1)/2|` by at most one). Evidence: every strong class of
-orders 6-9 (184,529 classes; `singleton_distance.cpp`, exact depth-first search over the moves that raise the maximal
-deviation); there `delta^0 = lambda`, so the statement is the singleton refinement of THM-4811. The regular case is the
-concurrent basin theorem (aliquot_power_124) and klein's HYP-9422; order 10, where `lambda < delta^0` first occurs, is
-the first informative test.
+orders 6-10 (9,540,478 classes; `singleton_distance.cpp`, exact depth-first search over the moves that raise the maximal
+deviation), including the first informative order 10, where `lambda < delta^0` first occurs (16 classes, `E10` among
+them). Through order 9 `delta^0 = lambda` and the singleton-locus part is proved (THM-4811 D1 and its black version via
+Theorem C). The regular case is the concurrent basin theorem (aliquot_power_124) and klein's HYP-9422.
