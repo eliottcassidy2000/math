@@ -1,0 +1,26 @@
+P11: f = 20, score bound L = 15, H(P11) = 95095 Hamiltonian paths
+depth one: 95095 states (one per path, with repetitions), exact minimum f = 14
+  progress: 5000 of 95095 depth-one states expanded
+  progress: 10000 of 95095 depth-one states expanded
+  progress: 15000 of 95095 depth-one states expanded
+  progress: 20000 of 95095 depth-one states expanded
+  progress: 25000 of 95095 depth-one states expanded
+  progress: 30000 of 95095 depth-one states expanded
+  progress: 35000 of 95095 depth-one states expanded
+  progress: 40000 of 95095 depth-one states expanded
+  progress: 45000 of 95095 depth-one states expanded
+  progress: 50000 of 95095 depth-one states expanded
+  progress: 55000 of 95095 depth-one states expanded
+  progress: 60000 of 95095 depth-one states expanded
+  progress: 65000 of 95095 depth-one states expanded
+  progress: 70000 of 95095 depth-one states expanded
+  progress: 75000 of 95095 depth-one states expanded
+  progress: 80000 of 95095 depth-one states expanded
+  progress: 85000 of 95095 depth-one states expanded
+  progress: 90000 of 95095 depth-one states expanded
+  progress: 95000 of 95095 depth-one states expanded
+depth two: 8349303325 path pairs; minimum score bound L = 13; states with L <= 10: 0; exact minimum f among them = 999 (every other state has f >= 11)
+score-bound histogram 2L over all depth-two states: 26:6621199255 28:1618277760 30:109826310
+f histogram over the states with L <= 10 (with repetitions):
+states with f <= 10: 0 (0 distinct)
+forest-framed (cycle debt 0) states at depth two from P11: 0  => P11 is NOT within two complement moves from a forest frame

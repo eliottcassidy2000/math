@@ -3,4 +3,6 @@ level counts: 0:1 1:1 2:8 3:62 4:221 5:197 6:22
 forward-arc parity of reached states: even 512, odd 0 (all tournaments: even 512, odd 512); one move toggles (n-1)(n-2)/2 = 6 pairs (even: parity is invariant)
 max f(T) = 3; dist - ceil(f/(n-1)) histogram: 0:2 1:8 2:62 3:210 4:180 5:30 6:20  (tight: 2)
 per level [min f, max f]: 0:[0,0] 1:[2,2] 2:[1,2] 3:[1,3] 4:[0,3] 5:[0,3] 6:[0,1]
+score bound: max L = 3; violations of d >= L: 0; (d - L) histogram: 0:10 1:31 2:128 3:141 4:152 5:30 6:20
+Lipschitz check |L(T') - L(T)| <= 1 over every move of every tournament: 0 violations
 regular tournament on 5 vertices (Z_5 with {1,4}): f = 2, distance from transitive = 255

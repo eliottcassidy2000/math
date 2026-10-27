@@ -60,6 +60,13 @@ int main(int argc, char** argv) {
         slack[min(s, 15)]++; if (s == 0) tight++; if (f > maxF) maxF = f; minFlev[d] = min(minFlev[d], f); maxFlev[d] = max(maxFlev[d], f); }
     printf("max f(T) = %d; dist - ceil(f/(n-1)) histogram:", maxF); for (int s = 0; s < 16; s++) if (slack[s]) printf(" %d:%llu", s, slack[s]); printf("  (tight: %llu)\n", tight);
     printf("per level [min f, max f]:"); for (int d = 0; d <= ecc; d++) printf(" %d:[%d,%d]", d, minFlev[d], maxFlev[d]); printf("\n");
+    { // score bound L(T) = (1/2) sum |s_(i) - i| (sorted out-degrees); the claim d(T) >= L(T) (one move changes L by at most 1)
+      vector<uint8_t> L2(N); u32 out[8]; for (u32 c = 0; c < N; c++) { decode(c, out); int s[8]; for (int v = 0; v < n; v++) s[v] = __builtin_popcount(out[v]); sort(s, s + n); int t = 0; for (int i = 0; i < n; i++) t += abs(s[i] - i); L2[c] = (uint8_t)t; }
+      u64 sl[32] = {0}; int viol = 0, maxL = 0; for (u32 c = 0; c < N; c++) { if (dist[c] == 255) continue; int L = L2[c] / 2; if (L > maxL) maxL = L; int s = dist[c] - L; if (s < 0) viol++; else sl[min(s, 31)]++; }
+      printf("score bound: max L = %d; violations of d >= L: %d; (d - L) histogram:", maxL, viol); for (int s = 0; s < 32; s++) if (sl[s]) printf(" %d:%llu", s, sl[s]); printf("\n");
+      // Lipschitz check on every edge: |L(T') - L(T)| <= 1 over all moves from every tournament
+      int lipViol = 0; vector<u32> res; for (u32 c = 0; c < N; c++) { decode(c, out); res.clear(); for (int v = 0; v < n; v++) hpaths(out, v, 1u << v, 0, res); for (u32 pm : res) { u32 nb = c ^ (fullP ^ pm); if (abs((int)L2[nb] - (int)L2[c]) > 2) lipViol++; } }
+      printf("Lipschitz check |L(T') - L(T)| <= 1 over every move of every tournament: %d violations\n", lipViol); }
     if (n % 4 == 3 && (n == 3 || n == 7)) { u32 pc = paleyCode(); printf("Paley P_%d: code %u, f = %d, lower bound %d, forest one-step ceiling 2n-4 = %d, distance from transitive = %d\n", n, pc, F[pc], (F[pc] + n - 2) / (n - 1), 2 * n - 4, dist[pc]);
         vector<uint8_t> d2(N); int e2 = bfs(pc, d2, queue); vector<u64> lv(e2 + 1, 0); for (u32 c = 0; c < N; c++) if (d2[c] != 255) lv[d2[c]]++;
         printf("BFS from P_%d: reached %zu, eccentricity %d, level counts:", n, queue.size(), e2); for (int d = 0; d <= e2; d++) printf(" %d:%llu", d, lv[d]); printf("\n"); }
