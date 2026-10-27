@@ -1,0 +1,317 @@
+{
+  "caveat": "No distance to every fixed labelled transitive tournament is claimed.",
+  "distance_justification": "15 explicit legal moves plus inherited |delta L|<=1 and L(P11)=15; not exhaustive distance search",
+  "exact_distance_to_transitive_class": 15,
+  "final_forward_order": [
+    6,
+    0,
+    2,
+    9,
+    7,
+    4,
+    8,
+    5,
+    10,
+    3,
+    1
+  ],
+  "initial": "P11",
+  "moves": [
+    {
+      "L": 14,
+      "depth": 1,
+      "f": 14,
+      "scores": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4
+      ]
+    },
+    {
+      "L": 13,
+      "depth": 2,
+      "f": 14,
+      "scores": [
+        4,
+        6,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "L": 12,
+      "depth": 3,
+      "f": 12,
+      "scores": [
+        7,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "L": 11,
+      "depth": 4,
+      "f": 12,
+      "scores": [
+        2,
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5,
+        5,
+        7
+      ]
+    },
+    {
+      "L": 10,
+      "depth": 5,
+      "f": 11,
+      "scores": [
+        9,
+        2,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "L": 9,
+      "depth": 6,
+      "f": 10,
+      "scores": [
+        1,
+        9,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5,
+        4,
+        7
+      ]
+    },
+    {
+      "L": 8,
+      "depth": 7,
+      "f": 10,
+      "scores": [
+        9,
+        1,
+        6,
+        5,
+        5,
+        5,
+        5,
+        6,
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "L": 7,
+      "depth": 8,
+      "f": 11,
+      "scores": [
+        1,
+        9,
+        4,
+        6,
+        5,
+        5,
+        5,
+        4,
+        6,
+        3,
+        7
+      ]
+    },
+    {
+      "L": 6,
+      "depth": 9,
+      "f": 8,
+      "scores": [
+        9,
+        1,
+        7,
+        4,
+        5,
+        5,
+        5,
+        6,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "L": 5,
+      "depth": 10,
+      "f": 7,
+      "scores": [
+        1,
+        9,
+        3,
+        7,
+        5,
+        5,
+        4,
+        4,
+        6,
+        3,
+        8
+      ]
+    },
+    {
+      "L": 4,
+      "depth": 11,
+      "f": 7,
+      "scores": [
+        9,
+        1,
+        8,
+        2,
+        5,
+        5,
+        6,
+        6,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "L": 3,
+      "depth": 12,
+      "f": 5,
+      "scores": [
+        1,
+        9,
+        2,
+        9,
+        5,
+        5,
+        3,
+        4,
+        6,
+        3,
+        8
+      ]
+    },
+    {
+      "L": 2,
+      "depth": 13,
+      "f": 4,
+      "scores": [
+        9,
+        1,
+        8,
+        1,
+        5,
+        4,
+        8,
+        6,
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "L": 1,
+      "depth": 14,
+      "f": 5,
+      "scores": [
+        1,
+        9,
+        2,
+        9,
+        5,
+        7,
+        1,
+        4,
+        6,
+        3,
+        8
+      ]
+    },
+    {
+      "L": 0,
+      "depth": 15,
+      "f": 0,
+      "scores": [
+        9,
+        0,
+        8,
+        1,
+        5,
+        3,
+        10,
+        6,
+        4,
+        7,
+        2
+      ]
+    }
+  ],
+  "parent_six_move_certificate_sha256": "b34f8023a41ad073399f7396aff37b4a806c413557e381c2f540818384b6b9d0",
+  "source_sink_hostile_checks": [
+    {
+      "all_legal_moves_from_source_or_sink_states": 2,
+      "n": 2
+    },
+    {
+      "all_legal_moves_from_source_or_sink_states": 6,
+      "n": 3
+    },
+    {
+      "all_legal_moves_from_source_or_sink_states": 72,
+      "n": 4
+    },
+    {
+      "all_legal_moves_from_source_or_sink_states": 1680,
+      "n": 5
+    }
+  ],
+  "stalled_greedy_control": {
+    "L": 1,
+    "f": 4,
+    "legal_paths": 243,
+    "one_step_transitive_descents": 0
+  },
+  "status": "PASS"
+}

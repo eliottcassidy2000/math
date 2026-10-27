@@ -1,0 +1,31 @@
+{
+  "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "source_mapping": {
+    "sources/THM-4507-finite-valuation-collatz-potential-obstruction.md": "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+    "sources/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md": "01-canon/theorems/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+    "sources/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md": "01-canon/theorems/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+    "sources/THM-4528-collatz-parity-in-base-phi-golden-beta-map-and-holonomy.md": "01-canon/theorems/THM-4528-collatz-parity-in-base-phi-golden-beta-map-and-holonomy.md",
+    "sources/crossroads_crossing_20260926_resource.md": "05-knowledge/results/crossroads_crossing_20260926_resource.md",
+    "sources/crossroads_crossing_20260926_phase_audit.md": "05-knowledge/results/crossroads_crossing_20260926_phase_audit.md",
+    "sources/golden_collatz_resonance_20261007.md": "05-knowledge/results/golden_collatz_resonance_20261007.md",
+    "sources/golden_order_bridge_20261014j.md": "05-knowledge/results/golden_order_bridge_20261014j.md"
+  },
+  "correction": "MISTAKE-584 at the same pin; exact excerpt retained in sources/MISTAKE-584.txt",
+  "prior_claim_boundary": "THM-4592 finite-exact n<=22; golden_order_bridge_20261014j explicitly disclaims a general bijection",
+  "external_priority_claim": false,
+  "primary_literature": [
+    {
+      "url": "https://arxiv.org/pdf/math/9810085",
+      "authors": "Nikita Sidorov and Anatoly Vershik",
+      "year": 1998,
+      "locations": "Proposition 1.3 and Remark 1 pp.9-10; Fibonacci example p.11",
+      "role": "direct prior boundary-identification structure; not imported as a pointwise fixed-period proof"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0006159",
+      "author": "Nikita Sidorov",
+      "year": 2000,
+      "role": "broader Pisot arithmetic coding context"
+    }
+  ]
+}

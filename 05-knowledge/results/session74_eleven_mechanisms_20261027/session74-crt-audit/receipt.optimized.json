@@ -1,0 +1,136 @@
+{
+  "checks": 8387,
+  "hostiles": [
+    "scalar4 is nonunit on full R15",
+    "J(a)J(b)=J(3ab), not J(ab)",
+    "original eleven-source mass is not ambient uniform mass",
+    "the K action on the selected source forgets its order15 factor"
+  ],
+  "lift": {
+    "K_order": 75,
+    "K_source_action_kernel_order": 15,
+    "K_source_action_order": 5,
+    "Q_CRT": [
+      0,
+      3,
+      0
+    ],
+    "Q_coefficients": [
+      38,
+      60
+    ],
+    "Q_reduced": [
+      124,
+      0
+    ],
+    "local_idempotent": [
+      496,
+      0
+    ],
+    "projected_sources": [
+      0,
+      124,
+      248,
+      31,
+      155,
+      279,
+      62,
+      186,
+      310,
+      93,
+      217
+    ],
+    "source_cardinality": 11
+  },
+  "period3_kernel": {
+    "Q_coefficients": [
+      117,
+      188
+    ],
+    "Q_reduced": [
+      341,
+      0
+    ],
+    "words": [
+      {
+        "ring_label": [
+          0,
+          0
+        ],
+        "source": "0",
+        "word": "000000000000000"
+      },
+      {
+        "ring_label": [
+          341,
+          0
+        ],
+        "source": "4",
+        "word": "001001001001001"
+      },
+      {
+        "ring_label": [
+          260,
+          1
+        ],
+        "source": "2",
+        "word": "010010010010010"
+      },
+      {
+        "ring_label": [
+          601,
+          1
+        ],
+        "source": "1",
+        "word": "100100100100100"
+      }
+    ]
+  },
+  "quotient": {
+    "fiber_size": 4,
+    "kernel_representatives": [
+      [
+        0,
+        0
+      ],
+      [
+        260,
+        1
+      ],
+      [
+        341,
+        0
+      ],
+      [
+        601,
+        1
+      ]
+    ],
+    "order": 341,
+    "phi_image": 81,
+    "scalar4_image_size_at_source": 341
+  },
+  "source_cells": 1364,
+  "status": "PASS",
+  "weights": {
+    "ambient_normalized_tax": 174,
+    "ambient_tax": 59334,
+    "full_ring_tax": 237336,
+    "nonuniform_source_tax": 13299,
+    "nonuniform_source_weights": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "source_normalized_tax": 186,
+    "source_tax": 2046
+  }
+}

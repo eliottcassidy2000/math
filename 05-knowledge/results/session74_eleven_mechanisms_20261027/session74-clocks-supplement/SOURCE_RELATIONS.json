@@ -1,0 +1,12 @@
+{
+  "repository_source_pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "frozen_parent_packet": "/tmp/session74-clocks",
+  "frozen_parent_result_sha256": "fd83461b940d45079a0dc48e7bd21a7aa32edffea785127d232f858e5f2f4bb5",
+  "dependencies": ["All-period golden fibre theorem, session74-clocks/RESULT.md sections 2-3, independently audited", "Same-source ideal lift law, session74-clocks/RESULT.md section 4, independently audited"],
+  "cross_lane": "session74-arithmetic: bracket q=341 square-pushforward with 4/2/1 source multiplicities; weighted-axis numbers independently rederived here",
+  "proposal_credit": "root session: period-fifteen CRT bridge and conductor-11 lift interpretation",
+  "rooted_vs_necklaces": "1364 rooted words, not necklaces",
+  "new_finite_universe": "all cyclic no-11 words of length fifteen; all 341 residues and selected axes",
+  "historical_novelty_claim": false,
+  "frozen_parent_modified": false
+}

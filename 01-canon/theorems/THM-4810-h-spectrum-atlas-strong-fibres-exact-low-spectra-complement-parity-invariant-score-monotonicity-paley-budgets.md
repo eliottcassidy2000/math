@@ -2,6 +2,7 @@
 id: THM-4810
 title: "Hamiltonian-path spectra, strong fibres, and the native complement grammar on labelled tournaments. (A) Atlas, orders 3-8 (FINITE-EXACT): for every order n <= 8 the number of labelled tournaments, isomorphism classes and strong classes with each Hamiltonian-path count H; the strong spectra S_n with floors f(n) = 3, 5, 9, 15, 25, 45 and maxima 3, 5, 15, 45, 189, 661; S_6 omits 21, 35, 39; S_7 omits 63, 107, 119, 149 and 161-187 except 171, 175; S_8 omits 47, 55, 67 and the top holes 611, 615, 617, 619, 623, 625, 635, 647, 655; every odd 3 <= v <= 609 except 7 and 21 is the path count of a strong tournament on at most 8 vertices; the complete strong fibres F_s(v) (strong classes of all orders with H = v) for odd v <= 74 are empty exactly at 1, 7, 21 and singletons exactly at 3, 5, 11, 13; extended to v <= 124 by canonical forms at order 9, with minimum 10 on [75, 123] and no further singleton (THM-4744's P_d(1) has the same fibres for every odd d < 625). (B) Low end at orders 9-10 by augmentation (FINITE-EXACT, via Moon 1966): S_9 ∩ [1, 200] = {75, 81} ∪ (odd [85, 199]), so f(9) = 75 and the only odd gaps of S_9 below 200 are 77, 79, 83; S_10 ∩ [1, 200] = {125, 135, 145, 147, 153, 155, 159, 161, 165, 167, 169, 171} ∪ (odd [175, 199]), so f(10) = 125 with the thirteen gaps 127, 129, 131, 133, 137, 139, 141, 143, 149, 151, 157, 163, 173; with the certified strong witnesses at orders 9 (every odd value of [85, 2881]) and 10 (every odd value of [175, 6000]), every odd 3 <= v <= 6,000 except 7 and 21 is the path count of a strong tournament on at most 10 vertices, reproducing inside canon's range (THM-4744 to 625 completely, HYP-9029 / THM-4102 / THM-4104 to 80,265; Chan-Pak's Conjecture 6.2, Royle to 80,557) that the strong-untouchable odd values below 6,001 are exactly 1, 7, 21; f(11) = 225 with S_11 ∩ [1, 300] = {225, 243, 245, 255, 261, 265, 267, 273, 279, 281, 285, 289, 291, 295, 297}. (C) Native complement moves (PROVED): tau_P(T) = T^op xor E(P) composes as tau_Q tau_P (T) = T xor (E(P) xor E(Q)); for n = 1, 2 (mod 4) the parity of the number of forward arcs is invariant under every move and re-marking (for n = 1 mod 4 also under the converse), so the in-place grammar reaches at most half of the labelled tournaments; two-move criterion: d(T, transitive class) <= 2 iff some order's backward set is E(P) xor E(Q) for a path P of T and a path Q of tau_P(T); f(tau_P T) <= f(T) + n - 1 and d(T) >= ceil(f(T)/(n-1)); every regular tournament on q vertices has f >= (q^2 - 1)/8 and for q >= 15 is beyond one complement from any forest frame; score monotonicity: one move changes L(T) = (1/2) sum_i |s_(i) - i| (sorted out-degrees) by at most one, so d(T, T') >= |L(T) - L(T')|, d(T, transitive) >= L(T) and d(T, forest frames) >= L(T) - (n - 1); for the Paley clocks d(P_q, transitive) >= (q^2 - 1)/8, quadratic in q, and P_11 is at least fifteen moves from the transitive class and five from any forest frame. (D) Census (FINITE-EXACT): the move graph is connected at orders 4, 7 and 8 and has exactly the two parity classes as components at orders 5 and 6; the transitive tournament has eccentricity 7, 6, 7, 13, 17 at orders 4-8 and diameters 7, 6, 7 at orders 4-6; the bound ceil(f/(n-1)) is attained only by the transitive tournament and its unique neighbour; P_7 is at distance 7 from the transitive tournament. (E) Paley clocks (FINITE-EXACT): f(P_q) = 7, 20, 64, 92, 180 for q = 7, 11, 19, 23, 31 (7 and 20 are the classical extremal values of A003141 / Bermond 1972 and session73's); cycle debts b(P_7) = 1 (21 orders), b(P_11) = 10 (2,420 orders, all with 20 backward arcs); f(P_7[C_3]) = f(C_3[P_7]) = 70 as session73's G1 predicts; from P_11 the exact minimum feedback-arc count after one move is 14; at depth two the exact census of all 8,349,303,325 path pairs shows that every state has score bound L >= 13 (so f >= 13; session73's depth-two witness with f = 13 is optimal), that no state has f <= 10 and that none is forest-framed, so P_11 is not within two complements of a forest frame and, by score monotonicity, not within four; the minimum f at depth k from P_11 is exactly 15 - k for k = 1, 2, 3."
 status: >
+  CURRENT ADDENDUM (Session74, 2026-10-27, PROVED with independently checked certificates): exact P_11 distance 6 to forest frames and 15 to the transitive class; original S63 lower bounds remain valid.
   FINITE-EXACT: (A) h_spectrum_sweep_20261027.cpp (full labelled sweep, Burnside class counts over the odd-cycle-type
   permutations; totals 2, 4, 12, 56, 456, 6,880 and strong 1, 1, 6, 35, 353, 6,008 agree with the known sequences;
   the spectra agree with THM-1370 / S152 where those are recorded) and h_spectrum_summary_20261027.py; (B)
@@ -25,7 +26,7 @@ status: >
   OPEN: whether every odd v >= 23 is the path count of a strong tournament (Chan-Pak's Conjecture 6.2 in HYP-9029's
   strong form; HYP-9420 (1)); connectivity of the move graph
   for n = 0, 3 (mod 4) beyond 7 and the two-component law for n = 1, 2 (mod 4) beyond 6; the distance of P_11 from the
-  transitive class beyond the depth-two census; the diameter at order 7.
+  transitive class was OPEN at filing and is now exactly 15 (Session74 addendum below); the diameter at order 7.
 session: opus-2026-10-27-S63
 source: 05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md
 related:
@@ -40,6 +41,33 @@ related:
 ---
 
 # Hamiltonian-path spectra, strong fibres, and the native complement grammar
+
+## Current distance addendum — 2026-10-27 (Session74, PROVED)
+
+For every tournament on `n >= 2` vertices and every **actual backward graph** D,
+`L(T) <= n - 2 + b(D)`, with b the graph cycle rank. Consequently a forest frame
+has `L <= n - 2`, sharpening the older upper bound `n - 1` used below.
+Paley11 starts at L=15, and Theorem L changes L by at most one per native move.
+The [six legal moves](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-paley/certificate.json)
+attain a forest frame, so its exact forest-class distance is **6**.
+A [fifteen-move certificate](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-paley/supplement/certificate15.json)
+attains the transitive class, so its exact transitive-class distance is **15**.
+Both statements survive free relabelling and full converse; neither asserts
+distance to each separately prescribed labelled transitive tournament.
+
+See the [score proof and independent audit](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit/REPORT.md)
+and [independent fifteen-move audit](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit-supplement/REPORT.md).
+The initial intrinsic cycle debt is still 10; the attained depths 1–6 have
+exact debts 5,4,3,2,1,0. Raw cycle debt is not one-step Lipschitz. A forest's
+edge budget remains n−1, not n−2. The complete proof uses actual graph
+acyclicity, not merely an equinumerous family or a low edge count.
+
+The earlier lower bounds of five and fifteen and the depth censuses are
+retained at their original scope; this addendum does not re-audit unrelated
+S63 claims. Only HYP-9420(4)'s five-move attainability prediction is refuted;
+its distinct asymptotic
+transitive-excess O(q) and bounded O(1) hypotheses both remain OPEN. Finite
+orders 7 and 11 settle neither. See the [current hypothesis](../../05-knowledge/hypotheses/HYP-9420-strong-untouchables-1-7-21-complement-graph-components-paley-depth-quadratic-bound.md).
 
 Full statements, tables, proofs and reproduction: the [source note](../../05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md). Definitions: H(T) is the number of Hamiltonian paths of a tournament T; S_n the set of values of H on strong n-tournaments, f(n) = min S_n; F_s(v) the number of strong classes (all orders) with H = v; the native complement of T along a Hamiltonian path P is tau_P(T) = T^op xor E(P) (every arc off P reversed); d(T) is the number of complement moves from the transitive tournament, re-marking being free; f(T) is the minimum feedback-arc count and b(T) the minimum cycle debt |E| - n + components of a backward-pair graph over all total orders.
 

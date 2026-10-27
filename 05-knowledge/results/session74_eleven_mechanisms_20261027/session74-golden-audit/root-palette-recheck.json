@@ -1,0 +1,15 @@
+{
+  "arc_checks": 220,
+  "mass": 66,
+  "presentation_clocks": [
+    10,
+    15,
+    55
+  ],
+  "repeat_multipliers": [
+    2,
+    3,
+    11
+  ],
+  "status": "PASS"
+}

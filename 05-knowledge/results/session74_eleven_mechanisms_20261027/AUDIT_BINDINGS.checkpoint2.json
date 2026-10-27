@@ -1,0 +1,34 @@
+{
+  "crt": {
+    "delta": "Status line and appended independent-audit reference only; reconstructed candidate exactly matches original review digest.",
+    "final_sha256": "51f3bfa19209502cf04c71d21ea749a15d3625ce1a6fcd90a321295f2641497d",
+    "final_target": "session74-clocks-supplement/RESULT.md",
+    "original_candidate_sha256": "713b9ca0cc57da6d4a379722bfb03ce74ea67f3ebefbc80c73ff5f5139ee3cdb",
+    "original_review": "session74-crt-audit/PRODUCER-REVIEW.json",
+    "review": "session74-crt-final-review/FINAL-REVIEW.json",
+    "sha256": "7200e548e71708c1d93a682c469ff4211055fae93ef27dd65a84889ead205022"
+  },
+  "golden": {
+    "review": "session74-golden-final-hash-review/FINAL_HASH_REVIEW.json",
+    "sha256": "38cd956998942c1b01462542c47f959c1475716dfd89765218b1a2342aa1e43e",
+    "targets": [
+      {
+        "full_text_reread": true,
+        "path": "session74-clocks/RESULT.md",
+        "sha256": "fd83461b940d45079a0dc48e7bd21a7aa32edffea785127d232f858e5f2f4bb5"
+      },
+      {
+        "full_text_reread": true,
+        "path": "session74-root/THREE_RETURN_OPERATORS.md",
+        "sha256": "ad00f5f3f7d9769491f9b29d59fc9e759ccef086f10a2a99dfeafe43ee841bb2"
+      },
+      {
+        "full_text_reread": false,
+        "path": "session74-root/PALETTE_MANIFEST.json",
+        "sha256": "782ac26284b1c370942af99502eac125b0d9e2221c17bde23f4cc5143ff9964c"
+      }
+    ]
+  },
+  "schema": "session74-final-audit-bindings-v1",
+  "scope": "Separate final-byte review preserves earlier frozen audits; target hashes and both review records are independently bound by the active provenance rules."
+}

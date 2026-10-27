@@ -1,0 +1,40 @@
+{
+  "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "sources": [
+    {
+      "bytes": 6823,
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "snapshot_path": "sources/AGENTS.md",
+      "source_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "source_path": "AGENTS.md"
+    },
+    {
+      "bytes": 4586,
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22",
+      "snapshot_path": "sources/procgen_numerology_20260923_odd_square_brackets.md",
+      "source_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "source_path": "05-knowledge/results/procgen_numerology_20260923_odd_square_brackets.md"
+    },
+    {
+      "bytes": 42169,
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46",
+      "snapshot_path": "sources/procgen_brackets_20260924_pairings_transitions.md",
+      "source_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "source_path": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md"
+    },
+    {
+      "bytes": 12582,
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be",
+      "snapshot_path": "sources/decoder_prime_square_20260925.md",
+      "source_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "source_path": "05-knowledge/results/decoder_prime_square_20260925.md"
+    },
+    {
+      "bytes": 26018,
+      "sha256": "4fd88b4f4c1c2e98027ca528ca1ccee3dbed121737f28cad1999fcadc6f31ee2",
+      "snapshot_path": "sources/session24-arithmetic-README.md",
+      "source_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "source_path": "05-knowledge/results/arithmetic_clock_tournaments_20261021/session24-arithmetic/README.md"
+    }
+  ]
+}

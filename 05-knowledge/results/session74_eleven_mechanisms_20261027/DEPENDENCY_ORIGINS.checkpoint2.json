@@ -1,0 +1,257 @@
+{
+  "checks": [
+    {
+      "bytes": 1910496,
+      "git_blob": "f75efcb73494e5548be0ea3c54d89c6a31003dde",
+      "git_mode": "100644",
+      "path": "01-canon/MISTAKES.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "4e80fa95ba1fe3a8fc5905c601b9c40b3ab45aa64e17b97090c589f72d33d042"
+    },
+    {
+      "bytes": 6977,
+      "git_blob": "44e80ea75b6179e345558176d20f54c2d3583b35",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-1455-why-eleven-spectra.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "0ae0c31654d8ee68a5277cae679e9e7011707b7aabbc1ea905e74758ae991df7"
+    },
+    {
+      "bytes": 7533,
+      "git_blob": "496eaf04c9fbbd72624e3e848f697f3f807cfe68",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4484-free-and-sporadic-cycles.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "96058743dbc390652916a1e0ee7e9d2b57032ef7e8527e2763ec2bb796d47a17"
+    },
+    {
+      "bytes": 4652,
+      "git_blob": "8e10f5f304ea7b86ad7bc5f31f87e3ec1730d2b7",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274"
+    },
+    {
+      "bytes": 3629,
+      "git_blob": "6495cf9b26bb1a5526b4e7a3787f4aaadc917e8e",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4528-collatz-parity-in-base-phi-golden-beta-map-and-holonomy.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "5a29a8f7b07b41f92a9d82764250f58931c09e80d201d4f95c61d2b50db1db98"
+    },
+    {
+      "bytes": 6546,
+      "git_blob": "38cf3332c8acce4fbb57c6cfab062c5bfa41f9bf",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f"
+    },
+    {
+      "bytes": 7498,
+      "git_blob": "cae560d4d3c3a6119e2e6b62d91dc1659f52f2fd",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e"
+    },
+    {
+      "bytes": 29480,
+      "git_blob": "17c7c724cd8a32699501cb8ae237d077d79d97c7",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222"
+    },
+    {
+      "bytes": 14974,
+      "git_blob": "f51bec36bc386296862a21440eaedf7fab806e2a",
+      "git_mode": "100644",
+      "path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "0bfeab69fcb2eb1a38e46f063781d66f47a17e592eb4d6abf50312b233141216"
+    },
+    {
+      "bytes": 7654,
+      "git_blob": "b753edf5631e482eed80cc3f4e5712f76a815983",
+      "git_mode": "100644",
+      "path": "04-computation/experiments/decoder_prime_square_20260925.py",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "3e325a5236d125f8cf0213deaf5bd2a7fbb6bbc62c0102274f9fd67e1344daa0"
+    },
+    {
+      "bytes": 1234,
+      "git_blob": "a223663f0a436c147580956e67c10bdad2768033",
+      "git_mode": "100644",
+      "path": "04-computation/experiments/lattice_bridges_20261021/score_vectors_forests.py",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "9daae423e43079df8c2f0ddb216b4f65b1f57e3e71f1f4fd9443926d96c3c3f3"
+    },
+    {
+      "bytes": 5367,
+      "git_blob": "eb28a577be5c73aa2f7e10c9ea6b3f1cbf0424e0",
+      "git_mode": "100644",
+      "path": "05-knowledge/hypotheses/HYP-9420-strong-untouchables-1-7-21-complement-graph-components-paley-depth-quadratic-bound.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "d1b6c0fe13db7db1067a76be3ee2f00879ec8d0cf8cfeaaa7c073f85903f4226"
+    },
+    {
+      "bytes": 26018,
+      "git_blob": "d6d2ed39ee487187e1c974574cd4e40b05655d12",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/arithmetic_clock_tournaments_20261021/session24-arithmetic/README.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "4fd88b4f4c1c2e98027ca528ca1ccee3dbed121737f28cad1999fcadc6f31ee2"
+    },
+    {
+      "bytes": 17415,
+      "git_blob": "804758d38f6f9da2d2908ce5837a996cb7c1302a",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/crossroads_crossing_20260926_phase_audit.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "bc58f8f46e2579aed599c20d227cb78d9d440ea4ec91c43d0a51c35525998d98"
+    },
+    {
+      "bytes": 9246,
+      "git_blob": "ac91740c1a019048a41ce6dd35c84c3e9c13c723",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/crossroads_crossing_20260926_resource.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "d87090eebb998ed4c5a508eab06a69ff4bee6032e69fc797506898030e7bc480"
+    },
+    {
+      "bytes": 12582,
+      "git_blob": "ecf12fa03e5f9fc2af7973ce5c49a17ca695a873",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/decoder_prime_square_20260925.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be"
+    },
+    {
+      "bytes": 28393,
+      "git_blob": "d982fad17aa77018588dc824355e97ba6a43ad77",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/golden_collatz_resonance_20261007.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "8b7ffb085b9337826f2595bb7d8398f5ce257c04f764f2fcec5bbb59e42cceef"
+    },
+    {
+      "bytes": 14399,
+      "git_blob": "20e5920167d1b531ab800198a0be8c514de0bc6d",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/golden_order_bridge_20261014j.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "7035f5c41ea07ab88061fba88c38cc962dc16aacd9e28d27f81ea511c4315bac"
+    },
+    {
+      "bytes": 49353,
+      "git_blob": "9356fedb4674c6099482979aae33deba2aafd218",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "6571e9806650447fdfe7e6deb2a28531394018e3707cefa1b8c09376d0c400bf"
+    },
+    {
+      "bytes": 35728,
+      "git_blob": "73e8b9f449bc27dec9503dd49bed9533fed6b653",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027_audit.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "320816aeebff65d75ac91e9cb89fd61ac1291696fb9df421f43151f6f1c0f3a0"
+    },
+    {
+      "bytes": 42169,
+      "git_blob": "b068e5b1db168594c60e7e207030adcd57188d03",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46"
+    },
+    {
+      "bytes": 4586,
+      "git_blob": "dfbb1daece299c28ef5af7f4b7aff2395f69e910",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/procgen_numerology_20260923_odd_square_brackets.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22"
+    },
+    {
+      "bytes": 13449,
+      "git_blob": "f30098f21dd3d52c0618754382ae8a8923b8757c",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/seam_mills_20260925.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ccdf517df435a27c7cc6f5dd68a9f06e62b456c9e3272d381057c1fe4a9abddf"
+    },
+    {
+      "bytes": 5762,
+      "git_blob": "82ba304700a6469867227b049988f49726e5015f",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/LATE_INHERITANCE.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6"
+    },
+    {
+      "bytes": 3778,
+      "git_blob": "327d949efd72981f70d0a1a7a6ba9884d3fb80be",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-fourth/FOURTH_AUDIT.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015"
+    },
+    {
+      "bytes": 7132,
+      "git_blob": "df1727164c3451ec9cbdb8131690512f183064a4",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-second/SECOND_AUDIT.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4"
+    },
+    {
+      "bytes": 18374,
+      "git_blob": "cd0025524d68780fba1a22615ff590b1fec83500",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb"
+    },
+    {
+      "bytes": 7054,
+      "git_blob": "24cb735cbfbd40d9ded6264d65ae42f18634e6de",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/score-forest-counts/COROLLARIES.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "340a01bf8417a31d1caa19893ec1d5832fc0c90790b5c70c077db26b8bcc91a2"
+    },
+    {
+      "bytes": 11144,
+      "git_blob": "5bdbf156cc230dda67aceec789659d8874434706",
+      "git_mode": "100644",
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/score-forest-counts/REPORT.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "9a7b2107f5dfc3245a251f46eef51698932a4b006d94c607f757497cd917c886"
+    },
+    {
+      "bytes": 6823,
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "git_mode": "100644",
+      "path": "AGENTS.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    }
+  ],
+  "excerpts": [
+    {
+      "byte_offset": 448982,
+      "bytes": 1893,
+      "exact_unique_substring_verified": true,
+      "packet_path": "session74-clocks/sources/MISTAKE-584.txt",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/MISTAKES.md",
+      "sha256": "221f4439c886665350a43548a4ae2c2fb763956f477e762dbe234b454a85b127"
+    }
+  ],
+  "scope": "Targeted exact local Git source reads at pinned research commit; no remote read or full-corpus audit. Nonduplicated dependency payloads have digest readbacks, while duplicated snapshots are separately actively bound by PROVENANCE_RULES.checkpoint2.json.",
+  "status": "PASS"
+}

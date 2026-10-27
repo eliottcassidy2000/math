@@ -1,0 +1,29 @@
+{
+  "status": "FROZEN_C2_PALETTE",
+  "files": [
+    {
+      "path": "THREE_RETURN_OPERATORS.md",
+      "sha256": "ad00f5f3f7d9769491f9b29d59fc9e759ccef086f10a2a99dfeafe43ee841bb2"
+    },
+    {
+      "path": "check_return_palette.py",
+      "sha256": "ea3fefd1e0fca12972182df75e18ea87f9113f45be4452aa88f6823b438ec5a4"
+    },
+    {
+      "path": "palette.normal.json",
+      "sha256": "b8314fa534fa86ad186bed7a4a7d4e0b7e4ecc733e29a0e0377deea9b1af9daf"
+    },
+    {
+      "path": "palette.optimized.json",
+      "sha256": "b8314fa534fa86ad186bed7a4a7d4e0b7e4ecc733e29a0e0377deea9b1af9daf"
+    }
+  ],
+  "replays": [
+    {
+      "script": "check_return_palette.py",
+      "normal": "palette.normal.json",
+      "optimized": "palette.optimized.json"
+    }
+  ],
+  "audit_note": "Independent golden auditor accepted; clock wording distinguishes length-five presentation from minimal period-one zero orbit."
+}

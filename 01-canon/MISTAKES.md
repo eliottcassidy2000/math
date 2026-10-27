@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-27 — the five-move Paley11 forest prediction misses the score ceiling
+
+- **Source / failed prediction:** HYP-9420(4), at `4959b4933cba7e6561b9f19b1d68278ecf6cb2f5`, predicts exact forest-frame distance five from Paley11, extrapolating tight score decreases through depth three. THM-4810's weaker lower bound of five remains true; no proof of five-move attainability had been supplied.
+- **Decisive obstruction / repair:** the [Session74 independently audited proof](../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit/REPORT.md) gives `L(T) <= n - 2 + b(D)` for every actual backward graph D on `n >= 2` vertices. A forest frame at order eleven therefore has `L <= 9`, whereas Paley11 starts at 15 and each lawful path complement changes L by at most one. Five moves leave L at least 10. The [literal six-move certificate](../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-paley/certificate.json) attains a forest frame, so the exact distance is six, including free relabelling and converse. No depth-five BFS is needed.
+- **Strongest survivor / scope:** the distinct [fifteen-move extension](../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit-supplement/REPORT.md) attains a transitive tournament and proves exact distance 15. The original title's transitive excess `O(q)` and body's bounded excess `O(1)` are different OPEN hypotheses; exact excesses 1 at q=7 and 0 at q=11 settle neither. Retain actual target acyclicity and its sharper score ceiling, not just the backward-edge budget. Update HYP-9420 and its current index route while preserving the original close-out letter and frozen checkpoint as historical records; all other hypothesis clauses survive unchanged.
+
 ## 2026-10-26 — weighted cycle counts do not invert from the digits of H
 
 - **Source / failed implication:** [THM-466 / weighted odd-cycle digits](theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md) correctly proves `H=sum_k alpha_k 2^k` and its truncation congruences, but then said the digits "read off" the separate collection counts. Weighted evaluation is not an injective map of coefficient profiles.

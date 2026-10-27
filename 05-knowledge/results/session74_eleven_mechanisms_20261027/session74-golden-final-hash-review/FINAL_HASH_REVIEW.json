@@ -1,0 +1,71 @@
+{
+  "accepted_scope": [
+    "Producer RESULT.md Sections 2-4 at the exact bound hash",
+    "All-period golden fibres; carry completeness; quotient index; cyclic seam; rooted and period-dividing conventions",
+    "Separate rational standard-Collatz source legality and bijection",
+    "Injective ideal/module lift and return composition multiplication by r",
+    "Q squared equals r Q and the eleven-cell square-zero ideal",
+    "Smith return-loss formula gcd(r,d_m)*gcd(r,N_m/d_m)",
+    "Corrected length-m presentation clock wording, including least-period-one zero source",
+    "Final qualified 2/3/11 operator palette, arc actions, presentation clocks, source weights, and non-uniqueness guards"
+  ],
+  "clock_wording_guard": "RESOLVED in both final Markdown targets",
+  "excluded_new_claims": [
+    "historical priority",
+    "inherited integer-cycle census",
+    "inherited finite-valuation obstruction",
+    "PRIMARY_LITERATURE.md contents",
+    "Collatz convergence",
+    "new unbounded integer-shadow or integer-cycle classification"
+  ],
+  "final_changes_reviewed": [
+    "corrected presentation-clock wording",
+    "root-authorized status header",
+    "independent audit acceptance summary"
+  ],
+  "final_palette_manifest_entries_checked": 4,
+  "independent_receipt_checks": 105461,
+  "independent_receipt_sha256": "0b191472543d422b8ad7a65e360b9c7365af468d7a81af798e6df346b0cd9a71",
+  "kind": "separate final-byte provenance closure; no new research or canonical promotion",
+  "previous_frozen_audit_preserved": true,
+  "previous_frozen_bindings": [
+    {
+      "path": "/tmp/session74-golden-audit/AUDIT.md",
+      "sha256": "2a736b0235d60988ab5e90b5d54b559a3d1dac7cd2c0cf563ec933648f9d5e36"
+    },
+    {
+      "path": "/tmp/session74-golden-audit/SHA256SUMS",
+      "sha256": "14aa95e2430d1bb3bc2bbfa30ca5c361bfaf13b33c58eff35cec04162ac8bbbf"
+    },
+    {
+      "path": "/tmp/session74-golden-audit/FREEZE_FILES",
+      "sha256": "5d56453c3da72664b3fff4d093bd6ec9a9c3a348832c86bed2a9b930e569feca"
+    }
+  ],
+  "previous_frozen_manifest_entries_checked": 7,
+  "review_date_utc": "2026-10-27",
+  "review_note": {
+    "path": "/tmp/session74-golden-final-hash-review/FINAL_HASH_REVIEW.md",
+    "sha256": "f38194fc46f4a1067149c0924d6dbcc7cea069ed5fdf1449f88def605c8a7c55"
+  },
+  "reviewer": "/root/audit_golden_period_fibres",
+  "status": "ACCEPTED_FINAL_BYTES",
+  "substantive_proof_change_detected": false,
+  "targets": [
+    {
+      "full_text_reread": true,
+      "path": "/tmp/session74-clocks/RESULT.md",
+      "sha256": "fd83461b940d45079a0dc48e7bd21a7aa32edffea785127d232f858e5f2f4bb5"
+    },
+    {
+      "full_text_reread": true,
+      "path": "/tmp/session74-root/THREE_RETURN_OPERATORS.md",
+      "sha256": "ad00f5f3f7d9769491f9b29d59fc9e759ccef086f10a2a99dfeafe43ee841bb2"
+    },
+    {
+      "full_text_reread": false,
+      "path": "/tmp/session74-root/PALETTE_MANIFEST.json",
+      "sha256": "782ac26284b1c370942af99502eac125b0d9e2221c17bde23f4cc5143ff9964c"
+    }
+  ]
+}

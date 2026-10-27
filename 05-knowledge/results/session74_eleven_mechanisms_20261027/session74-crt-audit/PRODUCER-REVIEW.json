@@ -1,0 +1,25 @@
+{
+  "frozen_original_packets_modified": false,
+  "independent_checks": 8387,
+  "independent_path": "1364 explicit quotient-lattice representatives, not producer CRT representation",
+  "producer_packet": "session74-clocks-supplement",
+  "producer_replay": "verify.py independently executed; output byte-matched receipt.json",
+  "producer_result_status_at_review": "PROOF CANDIDATE; exact controls passed; independent audit pending",
+  "required_guards_present": [
+    "scalar4 nonunit on full R15",
+    "phi and scalar81 differ before quotient",
+    "J multiplication twist and phase124",
+    "11 sources lie on zero-coordinate axis, not unit K",
+    "source weights not replaced by ambient uniform mass",
+    "kernel quartet not rational additive cosets"
+  ],
+  "reviewed_producer_files_sha256": {
+    "RESULT.md": "713b9ca0cc57da6d4a379722bfb03ce74ea67f3ebefbc80c73ff5f5139ee3cdb",
+    "SOURCE_RELATIONS.json": "bb2c6b3d3170db0cece0ab7034913df17b522c65ddae89e982ed3b7a8720998e",
+    "receipt.json": "1c5cb4453362dba92754d9b0cfeda495fa4505eb55cfefef7c1a6d86c9aa5693",
+    "receipt.optimized.json": "1c5cb4453362dba92754d9b0cfeda495fa4505eb55cfefef7c1a6d86c9aa5693",
+    "verify.py": "3527d59c9dd1feac82c59305b93c6df42f39c48093d4c5a89f52b0cbb5efb8a1"
+  },
+  "substantive_errors_found": [],
+  "verdict": "ACCEPTED"
+}

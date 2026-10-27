@@ -1,0 +1,10 @@
+{
+  "status": "FROZEN_C2_FINAL_GUIDE",
+  "files": [
+    {
+      "path": "FINAL_FINDINGS.md",
+      "sha256": "237dccba59d5f432a767247341e39f42b7cdd90b03e08f151c012906eb3d5d9c"
+    }
+  ],
+  "scope": "Synthesis of independently audited producer/auditor packets; no new theorem or numerical claim beyond them."
+}

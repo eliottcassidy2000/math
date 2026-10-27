@@ -1,0 +1,29 @@
+--- reviewed-candidate.RESULT.md
++++ final.RESULT.md
+@@ -1,6 +1,6 @@
+ # The period-fifteen CRT bridge: eleven sources on the formerly discarded axis
+ 
+-**Status: PROOF CANDIDATE; exact controls passed; independent audit pending.**
++**Status: PROVED + INDEPENDENTLY AUDITED; exact controls passed.**
+ This bounded supplement leaves the frozen session74-clocks packet unchanged.
+ The bridge was proposed by the root session after the all-period golden-fibre
+ proof. It is an explicit map, not an inference from the equality `L_15=4*341`.
+@@ -181,3 +181,18 @@
+ controls for dropping the `F_4` component or the source-specific phase.
+ The structural CRT and source-lift statements are proved above for these
+ fixed moduli; there is no unbounded computational or Collatz claim.
++
++
++## Independent audit acceptance
++
++The independent packet `session74-crt-audit/AUDIT.md` accepts the complete
++proof and replayed the producer verifier to the identical receipt. Its own
++quotient-lattice enumeration and rooted-word implementation imports no
++producer code and passes 8,387 exact checks normally and under `-O`.
++Independent audit SHA256:
++`7fab43fd0d0910a930942b429e0214ae7c0444ca49175d8243f12f75cb8441ac`;
++independent paired-receipt SHA256:
++`73179d201cbc98f4962dd814b17f803310586a84987bf2f450816e362b5f4294`.
++Root authorized finalization after this review. No mathematical content
++changed after the content audit; only the status and this audit reference
++were appended.

@@ -1,0 +1,25 @@
+target_L 8 checked 6856 eligible 677
+path 2 0 4 6 5 9 1 7 3 10 8
+rows 2042 128 243 1318 1130 1922 1578 1880 86 1310 262
+target_L 7 checked 9002 eligible 446
+path 3 1 7 4 5 8 6 10 2 0 9
+rows 512 2037 777 723 805 333 1173 53 1737 224 701
+target_L 6 checked 4953 eligible 257
+path 2 0 9 5 3 1 6 7 4 8 10
+rows 2042 64 1267 1286 1354 1178 936 1818 1062 1342 66
+target_L 5 checked 3561 eligible 1
+path 3 2 0 4 8 5 7 9 10 1 6
+rows 16 1021 769 757 932 709 1045 581 745 1089 447
+target_L 4 checked 4004 eligible 57
+path 2 0 4 5 7 9 6 10 1 8 3
+rows 2042 256 1275 1026 1130 1418 1450 1818 1052 382 514
+target_L 3 checked 2574 eligible 25
+path 3 1 8 2 0 4 5 7 10 9 6
+rows 16 2037 513 1015 932 709 21 1093 741 193 893
+target_L 2 checked 636 eligible 4
+path 2 9 6 0 4 5 7 10 3 1 8
+rows 1982 256 2042 2 1130 1418 1451 1818 1048 1402 10
+target_L 1 checked 433 eligible 2
+path 5 7 10 3 1 8 4 6 0 2 9
+rows 4 2037 512 1015 709 725 517 1093 757 129 893
+NO_GREEDY_EXTENSION target_L 0 checked 243 eligible 0

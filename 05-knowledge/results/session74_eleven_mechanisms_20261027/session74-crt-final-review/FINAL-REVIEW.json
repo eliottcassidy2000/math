@@ -1,0 +1,50 @@
+{
+  "diff_file": "status-and-audit-reference.diff",
+  "exact_changes": [
+    "One status line changes from PROOF CANDIDATE/pending to PROVED + INDEPENDENTLY AUDITED/passed.",
+    "One Independent audit acceptance section is appended, with verified audit and paired-receipt hashes."
+  ],
+  "existing_frozen_audit_files_modified": false,
+  "final_producer_result": {
+    "bytes": 8452,
+    "file": "RESULT.md",
+    "packet": "session74-clocks-supplement",
+    "sha256": "51f3bfa19209502cf04c71d21ea749a15d3625ce1a6fcd90a321295f2641497d"
+  },
+  "independent_audit_reference": {
+    "AUDIT.md_sha256": "7fab43fd0d0910a930942b429e0214ae7c0444ca49175d8243f12f75cb8441ac",
+    "checks": 8387,
+    "paired_receipt_sha256": "73179d201cbc98f4962dd814b17f803310586a84987bf2f450816e362b5f4294"
+  },
+  "mathematical_content_unchanged": true,
+  "producer_code_receipts_and_source_relations_unchanged": [
+    {
+      "file": "SOURCE_RELATIONS.json",
+      "sha256": "bb2c6b3d3170db0cece0ab7034913df17b522c65ddae89e982ed3b7a8720998e",
+      "unchanged": true
+    },
+    {
+      "file": "receipt.json",
+      "sha256": "1c5cb4453362dba92754d9b0cfeda495fa4505eb55cfefef7c1a6d86c9aa5693",
+      "unchanged": true
+    },
+    {
+      "file": "receipt.optimized.json",
+      "sha256": "1c5cb4453362dba92754d9b0cfeda495fa4505eb55cfefef7c1a6d86c9aa5693",
+      "unchanged": true
+    },
+    {
+      "file": "verify.py",
+      "sha256": "3527d59c9dd1feac82c59305b93c6df42f39c48093d4c5a89f52b0cbb5efb8a1",
+      "unchanged": true
+    }
+  ],
+  "reviewed_candidate": {
+    "bytes": 7781,
+    "recovery": "Reconstructed by reversing the single status change and removing the appended audit-reference section; byte hash equals the previously retained independent-review hash.",
+    "sha256": "713b9ca0cc57da6d4a379722bfb03ce74ea67f3ebefbc80c73ff5f5139ee3cdb"
+  },
+  "scope": "Publication provenance closure only; no new research, no repository writes, no frozen packet mutations.",
+  "status_authorization": "Root explicitly requested finalization after independent acceptance; this receipt binds the final bytes.",
+  "verdict": "ACCEPTED: final producer RESULT.md exactly extends the reviewed mathematical content"
+}

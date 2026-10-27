@@ -1,9 +1,10 @@
 ---
 id: THM-4592
-title: "The eleven-squares Fibonacci torus is Collatz's period-5 cycle set: reading the parity word of a periodic point of the standard Collatz map (x -> 3x+1, x/2) in base phi gives kappa_n : {C-periodic points of period dividing n} -> R_n = Z[phi]/(phi^n - 1) with kappa_n(Cx) = phi kappa_n(x), a bijection for odd n (FINITE-EXACT, n <= 22; for even n exactly 0, -1, -2 collapse); for n = 5 the eleven cells of the Fibonacci torus of the eleven-squares paper are 0, the 1/13 cycle (labels = the quadratic residues H = {1,3,4,5,9} mod 11, the paper's gold cells) and the -5 cycle (labels -H, the teal cells); the paper's group G_5 = <x+1, phi x> on F_11 is BS(1,3) = <x+1, 3x> mod 11, the relation group of THM-4581"
+title: "The eleven-squares Fibonacci torus is Collatz's period-5 cycle set: reading the parity word of a periodic point of the standard Collatz map (x -> 3x+1, x/2) in base phi gives kappa_n : {C-periodic points of period dividing n} -> R_n = Z[phi]/(phi^n - 1) with kappa_n(Cx) = phi kappa_n(x), a bijection for odd n (PROVED for all n by the Session74 addendum; historically FINITE-EXACT through n <= 22; for even n exactly 0, -1, -2 collapse); for n = 5 the eleven cells of the Fibonacci torus of the eleven-squares paper are 0, the 1/13 cycle (labels = the quadratic residues H = {1,3,4,5,9} mod 11, the paper's gold cells) and the -5 cycle (labels -H, the teal cells); the paper's group G_5 = <x+1, phi x> on F_11 is BS(1,3) = <x+1, 3x> mod 11, the relation group of THM-4581"
 status: >
   PROVED (elementary): equivariance, the labels at n = 5, and G_5 = BS(1,3) mod 11 (since <3> = <4> = H in F_11^x).
-  FINITE-EXACT: bijectivity of kappa_n for n <= 22 (golden reader), and the n = 10 identification of the 121-cell cover.
+  PROVED (Session74, 2026-10-27, independently audited): all-period golden word fibres; odd n bijective, even n surjective with exactly the three-word zero fibre.
+  HISTORICAL FINITE-EXACT: bijectivity of kappa_n for n <= 22 (golden reader); the n = 10 identification of the 121-cell cover retains its original scope.
   DICTIONARY: the paper's statements about R_5, R_10 and G_5 become statements about rational Collatz cycles.
   The eleven-squares paper (Pingyou Ltd) is a trusted source per owner directive. Found by the session's golden reader
   (inheriting collatz_golden_carriers_20261004 section 4, which had the denominators 1, 2, 11, 76); re-verified here.
@@ -18,6 +19,32 @@ related:
 
 # THM-4592 — the Fibonacci torus of eleven squares is Collatz's period-5 cycle set
 
+## Current counting addendum — 2026-10-27 (Session74, PROVED)
+
+For every `n >= 1`, let `W_n` be the **rooted** binary words of length n with
+no cyclic adjacent `11`. Reading `w` as `sum w_i phi^(n-1-i)` in
+`R_n = Z[phi]/(phi^n-1)` is bijective when n is odd. When n is even it is
+surjective, with the only nonsingleton fibre the three-way zero fibre
+`0...0`, `1010...`, `0101...`. Via the separately proved rational 2-adic
+standard-Collatz source coding these are precisely sources `0,-1,-2`.
+Here period n means fixed by the nth iterate, not necessarily least period n.
+
+The [complete carry proof](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-clocks/RESULT.md)
+and [independent proof audit](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-golden-audit/AUDIT.md)
+bound every cyclic carry in both real embeddings, classify all recurrent
+carry states, and use the quotient index to establish surjectivity. The
+all-period statement follows from those proofs, not extrapolation of a census.
+The earlier finite checks and MISTAKE-584 correction below remain historical
+provenance; the original evidence was correctly restricted at that time.
+
+[Prior-art scope](../../05-knowledge/results/session74_eleven_mechanisms_20261027/session74-clocks/PRIMARY_LITERATURE.md):
+Sidorov–Vershik's Fibonacci arithmetic coding and boundary identifications are
+classical predecessors. This addendum supplies a self-contained fixed-period
+proof and does not claim historical priority. It does not prove positive-integer
+Collatz convergence, integer-cycle completeness, or identify standard-map and
+Terras clocks. The original bounded and n=5/n=10 computations below retain
+their stated provenance and scope.
+
 ## Setting
 
 * `C` is the standard Collatz map on `Z_2 ∩ Q`: `C(x) = 3x+1` for odd `x`, and `x/2` for even `x`.
@@ -28,7 +55,7 @@ related:
 ## Statements
 
 1. **Golden reading.** `κ_n(x) = Σ_j w_j φ^(n−1−j) mod (φ^n − 1)` satisfies `κ_n(C x) = φ·κ_n(x)`. The map `C` is a shift of the cyclic word, and the wrap-around digit dies modulo `φ^n − 1`.
-2. **Counting.** The cyclic words without `11` of length `n` number `L_n` (Lucas). For odd `n`, `κ_n` is a bijection onto `R_n`. For even `n`, the words `0…0`, `1010…` and `0101…` all read as 0; these are the points 0, −1 and −2, the cycle `−1 → −2`. FINITE-EXACT for `n ≤ 22`.
+2. **Counting.** The cyclic words without `11` of length `n` number `L_n` (Lucas). For odd `n`, `κ_n` is a bijection onto `R_n`. For even `n`, the words `0…0`, `1010…` and `0101…` all read as 0; these are the points 0, −1 and −2, the cycle `−1 → −2`. Historically FINITE-EXACT for `n ≤ 22`; PROVED for all n by the current counting addendum above.
 3. **`n = 5`: the eleven cells.** `R_5 ≅ F_11` via `φ ↦ 4`. The eleven period-5 points and their labels:
 
    | point | label |

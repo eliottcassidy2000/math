@@ -1,0 +1,50 @@
+{
+  "status": "FROZEN_C2_ROOT_ARITHMETIC",
+  "source_pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "files": [
+    {
+      "path": "WEIGHTED_PALEY_INTERFACE.md",
+      "sha256": "2ee759fefa4a6ab98f7ff448e44a0eec59deaf198a961aa5d54249e525f0aba0"
+    },
+    {
+      "path": "ARITHMETIC_AUDIT.md",
+      "sha256": "71d8037376b2200f2f7cf3d853999f8e6679831641b04abef470b167f4736a03"
+    },
+    {
+      "path": "check_bracket_residue.py",
+      "sha256": "55c1f6cc33fc21a1c014e10353269891c1face472cf5b19506cc03dd6bcffcee"
+    },
+    {
+      "path": "check_marked_paley.py",
+      "sha256": "dcb748044eec00dc68b330e81f1f10e3eebe6827713fa75f3a1242f23abe80c0"
+    },
+    {
+      "path": "bracket.normal.json",
+      "sha256": "99e84f7e0d84759dbe8336c1136615223c1a852ec08df0776e4c96dc3f56dd90"
+    },
+    {
+      "path": "bracket.optimized.json",
+      "sha256": "99e84f7e0d84759dbe8336c1136615223c1a852ec08df0776e4c96dc3f56dd90"
+    },
+    {
+      "path": "marked.normal.json",
+      "sha256": "093467627ac896a2f2cb9eaf48e98131c4f56b39721e8803590ce3960385b7a2"
+    },
+    {
+      "path": "marked.optimized.json",
+      "sha256": "093467627ac896a2f2cb9eaf48e98131c4f56b39721e8803590ce3960385b7a2"
+    }
+  ],
+  "replays": [
+    {
+      "script": "check_bracket_residue.py",
+      "normal": "bracket.normal.json",
+      "optimized": "bracket.optimized.json"
+    },
+    {
+      "script": "check_marked_paley.py",
+      "normal": "marked.normal.json",
+      "optimized": "marked.optimized.json"
+    }
+  ]
+}
