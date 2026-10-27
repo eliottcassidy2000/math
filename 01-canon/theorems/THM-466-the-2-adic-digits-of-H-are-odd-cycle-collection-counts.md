@@ -1,4 +1,4 @@
-# THM-466 — The 2-adic digits of H are odd-cycle collection counts (the higher-Rédei tower)
+# THM-466 — The 2-adic digits of H are determined by weighted odd-cycle collection counts
 
 **Type:** Theorem
 **Status:** PROVED (parts (i)–(iii), all n; one-line consequences of THM-002/OCF) + VERIFIED
@@ -25,9 +25,17 @@ of T (α_0 = 1), i.e. the independence numbers of the conflict graph Ω(T) of TH
 H  ≡  Σ_{k<m} α_k 2^k   (mod 2^m).
 ```
 
-H mod 2^m is determined by the collections of **fewer than m** disjoint odd cycles. The
-residues of H at all powers of 2 — equivalently the 2-adic digits of H — read off the
-disjoint-odd-cycle collection counts.
+H mod 2^m is determined by the collections of **fewer than m** disjoint odd cycles.
+This determination is one-way: the residues at every power of 2 recover H,
+but need not recover the separate disjoint-odd-cycle collection counts.
+**Correction, 2026-10-26:** the previous sentence said that the digits
+"read off" those counts. At n=6, `C3 -> C3` has `(alpha_0,alpha_1,alpha_2)=(1,2,1)`,
+while an H=9 five-tournament joined to a singleton has `(1,4,0)`; both
+give H=9. Their row masks and independent path/cycle checks are recorded
+in [the Liouville–Möbius recovery](../../05-knowledge/results/liouville_mobius_11_13_20261026/RECOVERY.md).
+This is the first possible order for such a collision, since n<=5 has
+only alpha_0 and alpha_1. The congruence and every forward implication
+in (i) remain unchanged.
 
 **Corollaries of (i).**
 - (m = 1) H ≡ α_0 = 1 (mod 2): **Rédei's theorem** is the ground floor of the tower.

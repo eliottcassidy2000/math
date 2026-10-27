@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — weighted cycle counts do not invert from the digits of H
+
+- **Source / failed implication:** [THM-466 / weighted odd-cycle digits](theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md) correctly proves `H=sum_k alpha_k 2^k` and its truncation congruences, but then said the digits "read off" the separate collection counts. Weighted evaluation is not an injective map of coefficient profiles.
+- **Minimal witness / strongest survivor:** at n6, `C3 -> C3` has profile `(1,2,1)` and an H9 five-tournament joined to a singleton has `(1,4,0)`. Both have H9, hence identical residues at every power of two. At n<=5 only the single-cycle channel exists, so H does recover the profile there. The forward identity and the H11/H13 counterexample to score determination remain valid.
+- **Repair / missing coordinate:** the theorem now states the one-way determination and preserves this correction lineage. Retain the full odd-cycle independence polynomial to recover its coefficients; evaluation at2 loses them. [Exact row masks and reproduction](../05-knowledge/results/liouville_mobius_11_13_20261026/RECOVERY.md) check both path counts and profiles independently. The next question is which additional evaluations or operations distinguish a specified finite profile class.
+
 ## 2026-10-27 — polynomial supports are not independent guard coordinates
 
 - **Source / failed implication:** the separate support form in HYP-9419(2) identifies the dimension of a guard span with the number of full path-support monomials. At n4,k1 there are6 full supports but guard rank8; lower-degree terms cannot be omitted. Its downward-closure repair also fails: at n5,k1 the46-dimensional supported coefficient space contains only a44-dimensional guard span.

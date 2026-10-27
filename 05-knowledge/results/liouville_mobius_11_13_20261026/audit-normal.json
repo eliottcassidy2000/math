@@ -1,0 +1,82 @@
+{
+  "order15": [
+    {
+      "Aut": {
+        "colour_cells": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "order": 3,
+        "permutations_tested": 7776
+      },
+      "H": 152377413
+    },
+    {
+      "Aut": {
+        "colour_cells": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "order": 1,
+        "permutations_tested": 1
+      },
+      "H": 152377413
+    },
+    {
+      "Aut": {
+        "colour_cells": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "order": 1,
+        "permutations_tested": 1
+      },
+      "H": 152377413
+    },
+    {
+      "Aut": {
+        "colour_cells": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "order": 3,
+        "permutations_tested": 7776
+      },
+      "H": 152377413
+    }
+  ],
+  "sieve_bound": 1000,
+  "status": "FINITE-EXACT independent implementation, same-agent proof review"
+}

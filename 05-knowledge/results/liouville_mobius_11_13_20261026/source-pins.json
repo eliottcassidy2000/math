@@ -1,0 +1,20 @@
+{
+  "repaired_source": {
+    "after_sha256": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c",
+    "before_sha256": "e5bdf462e82bb11be83931f92400b4ab2d6e739870a18e4d107419eb5a94008b",
+    "path": "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md"
+  },
+  "reviewed_base": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "sources": {
+    "01-canon/theorems/THM-383-lrc-half-turn-boundary-compactification-audit.md": "0ede2236a9094f078906eabcf690526fee8a17708c377e9c3b04a9e5748045cf",
+    "01-canon/theorems/THM-519-alcuin-number-of-the-conflict-graph.md": "e7b92c2ec409d344b73c24bad0736a22afd55ca7b89f7bf2d6a35de6e3469033",
+    "05-knowledge/results/boundary_support_20261020_metagraph.md": "9c9a760996f5adc53bf069394553ea06ee874f2f9ad5272f96986b76c2027593",
+    "05-knowledge/results/cyclictriple_composition_20261026/README.md": "a0e6faed7d6e454699b3eaa0a5da2bbc1d613288665eb4a205d8ee69f04caa4e",
+    "05-knowledge/results/fresh_remarking_quotient_and_divisor_arrangements_20261026.md": "030c56bf14b91a59fe35b8454293e5a51a0faac524a94adb72dfcd584f03784b",
+    "05-knowledge/results/module_shattering_lines_carousel_finite_field_20261026.md": "2aab40e671b7c55d7ae7b897adb25505cba789663bfbcfc47799fc0ac83a2dd3",
+    "05-knowledge/results/prime_power_bias_collatz_collector_20261014.md": "f29b9c1f6987d8ac490dd4a80e39f4d286919b8157c8a5a08ff53cd88e61eb85",
+    "05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5",
+    "05-knowledge/results/tournament_composition_classification_20261026/metagraph/RESULT.md": "5a03f1724212a6870272291da864c42bddb5dc2a5ba7b962fd23171616a7a1fd",
+    "07-reflections/euler-product-ghosts-and-zeta-side-cancellation-gates.md": "561f575617cfcd310a1c83d068c59f3fdcb9699fbdf3c41ed09625bb8573d864"
+  }
+}

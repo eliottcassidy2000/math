@@ -1,0 +1,475 @@
+{
+  "Euler_coefficients_at_11_13": {
+    "lambda": [
+      -2,
+      2
+    ],
+    "mu": [
+      1,
+      1
+    ]
+  },
+  "Euler_degree": 80,
+  "H_digits_do_not_invert_cycle_collections": [
+    {
+      "H": 9,
+      "alpha": [
+        1,
+        2,
+        1
+      ],
+      "rows": [
+        58,
+        60,
+        57,
+        16,
+        32,
+        8
+      ]
+    },
+    {
+      "H": 9,
+      "alpha": [
+        1,
+        4,
+        0
+      ],
+      "rows": [
+        48,
+        33,
+        35,
+        39,
+        46,
+        0
+      ]
+    }
+  ],
+  "actual_join_controls": [
+    {
+      "H": 121,
+      "factors": [
+        11,
+        11
+      ],
+      "lambda": 1,
+      "mu": 0
+    },
+    {
+      "H": 143,
+      "factors": [
+        11,
+        13
+      ],
+      "lambda": 1,
+      "mu": 1
+    },
+    {
+      "H": 143,
+      "factors": [
+        13,
+        11
+      ],
+      "lambda": 1,
+      "mu": 1
+    },
+    {
+      "H": 169,
+      "factors": [
+        13,
+        13
+      ],
+      "lambda": 1,
+      "mu": 0
+    }
+  ],
+  "arithmetic_universe": 1000,
+  "arithmetic_values": {
+    "11": {
+      "factorization": {
+        "11": 1
+      },
+      "lambda": -1,
+      "mu": -1
+    },
+    "121": {
+      "factorization": {
+        "11": 2
+      },
+      "lambda": 1,
+      "mu": 0
+    },
+    "13": {
+      "factorization": {
+        "13": 1
+      },
+      "lambda": -1,
+      "mu": -1
+    },
+    "143": {
+      "factorization": {
+        "11": 1,
+        "13": 1
+      },
+      "lambda": 1,
+      "mu": 1
+    },
+    "169": {
+      "factorization": {
+        "13": 2
+      },
+      "lambda": 1,
+      "mu": 0
+    },
+    "17145": {
+      "factorization": {
+        "3": 3,
+        "5": 1,
+        "127": 1
+      },
+      "lambda": -1,
+      "mu": 0
+    },
+    "27": {
+      "factorization": {
+        "3": 3
+      },
+      "lambda": -1,
+      "mu": 0
+    },
+    "462915": {
+      "factorization": {
+        "3": 6,
+        "5": 1,
+        "127": 1
+      },
+      "lambda": 1,
+      "mu": 0
+    },
+    "5715": {
+      "factorization": {
+        "3": 2,
+        "5": 1,
+        "127": 1
+      },
+      "lambda": 1,
+      "mu": 0
+    },
+    "81": {
+      "factorization": {
+        "3": 4
+      },
+      "lambda": 1,
+      "mu": 0
+    }
+  },
+  "binary_necklaces": [
+    {
+      "length": 1,
+      "primitive_necklaces": 2,
+      "primitive_words": 2
+    },
+    {
+      "length": 2,
+      "primitive_necklaces": 1,
+      "primitive_words": 2
+    },
+    {
+      "length": 3,
+      "primitive_necklaces": 2,
+      "primitive_words": 6
+    },
+    {
+      "length": 4,
+      "primitive_necklaces": 3,
+      "primitive_words": 12
+    },
+    {
+      "length": 5,
+      "primitive_necklaces": 6,
+      "primitive_words": 30
+    },
+    {
+      "length": 6,
+      "primitive_necklaces": 9,
+      "primitive_words": 54
+    },
+    {
+      "length": 7,
+      "primitive_necklaces": 18,
+      "primitive_words": 126
+    },
+    {
+      "length": 8,
+      "primitive_necklaces": 30,
+      "primitive_words": 240
+    },
+    {
+      "length": 9,
+      "primitive_necklaces": 56,
+      "primitive_words": 504
+    },
+    {
+      "length": 10,
+      "primitive_necklaces": 99,
+      "primitive_words": 990
+    },
+    {
+      "length": 11,
+      "primitive_necklaces": 186,
+      "primitive_words": 2046
+    },
+    {
+      "length": 12,
+      "primitive_necklaces": 335,
+      "primitive_words": 4020
+    },
+    {
+      "length": 13,
+      "primitive_necklaces": 630,
+      "primitive_words": 8190
+    }
+  ],
+  "full_labelled_order5_H_census": {
+    "1": 120,
+    "3": 120,
+    "5": 240,
+    "9": 240,
+    "11": 120,
+    "13": 120,
+    "15": 64
+  },
+  "full_order15_fibre": {
+    "hypergraph_Aut": 384,
+    "labelled_lifts": 1024,
+    "mass": "8/3",
+    "orbit_sizes": [
+      128,
+      384,
+      384,
+      128
+    ]
+  },
+  "historical_11_13": [
+    {
+      "H": 11,
+      "aut": 1,
+      "cycles_3_4_5": [
+        4,
+        4,
+        1
+      ],
+      "lambda": -1,
+      "mu": -1,
+      "rows": [
+        2,
+        12,
+        25,
+        17,
+        3
+      ]
+    },
+    {
+      "H": 13,
+      "aut": 1,
+      "cycles_3_4_5": [
+        4,
+        3,
+        2
+      ],
+      "lambda": -1,
+      "mu": -1,
+      "rows": [
+        2,
+        20,
+        9,
+        19,
+        5
+      ]
+    }
+  ],
+  "kernel_controls": [
+    {
+      "integer_inverse_verified": true,
+      "liouville_rank": 1,
+      "mobius_rank": 2,
+      "primes": 1
+    },
+    {
+      "integer_inverse_verified": true,
+      "liouville_rank": 1,
+      "mobius_rank": 4,
+      "primes": 2
+    },
+    {
+      "integer_inverse_verified": true,
+      "liouville_rank": 1,
+      "mobius_rank": 8,
+      "primes": 3
+    },
+    {
+      "integer_inverse_verified": true,
+      "liouville_rank": 1,
+      "mobius_rank": 16,
+      "primes": 4
+    },
+    {
+      "integer_inverse_verified": true,
+      "liouville_rank": 1,
+      "mobius_rank": 32,
+      "primes": 5
+    }
+  ],
+  "mobius_Aut_order15": [
+    {
+      "Aut": 3,
+      "H": 152377413,
+      "cyclic_triples": 131,
+      "rows": [
+        1018,
+        1012,
+        1017,
+        1010,
+        992,
+        32576,
+        32384,
+        32544,
+        32320,
+        31744,
+        26655,
+        20511,
+        25631,
+        18463,
+        31
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 152377413,
+      "cyclic_triples": 131,
+      "rows": [
+        1018,
+        1012,
+        1017,
+        1010,
+        992,
+        32576,
+        32384,
+        32544,
+        32320,
+        31744,
+        4127,
+        9247,
+        2079,
+        5151,
+        15391
+      ]
+    },
+    {
+      "Aut": 1,
+      "H": 152377413,
+      "cyclic_triples": 131,
+      "rows": [
+        1018,
+        1012,
+        1017,
+        1010,
+        992,
+        31872,
+        32032,
+        31808,
+        31904,
+        32224,
+        4127,
+        9247,
+        2079,
+        5151,
+        15391
+      ]
+    },
+    {
+      "Aut": 3,
+      "H": 152377413,
+      "cyclic_triples": 131,
+      "rows": [
+        996,
+        1001,
+        994,
+        997,
+        1007,
+        31872,
+        32032,
+        31808,
+        31904,
+        32224,
+        4127,
+        9247,
+        2079,
+        5151,
+        15391
+      ]
+    }
+  ],
+  "multiplicative_pairs": 10000,
+  "order4_ambiguous_labelled_fibres": 4,
+  "prime_square_necklace_hostiles": [
+    {
+      "Liouville_numerator_remainder": 2,
+      "correct_numerator_remainder": 0,
+      "length": 121
+    },
+    {
+      "Liouville_numerator_remainder": 2,
+      "correct_numerator_remainder": 0,
+      "length": 169
+    }
+  ],
+  "rigid_ambiguous_labelled_fibres_order5": 30,
+  "sharp_squarefree_5p_controls": [
+    {
+      "Aut": [
+        3,
+        1
+      ],
+      "cyclic_triples": 131,
+      "p": 3,
+      "vertices": 15
+    },
+    {
+      "Aut": [
+        5,
+        1
+      ],
+      "cyclic_triples": 635,
+      "p": 5,
+      "vertices": 25
+    },
+    {
+      "Aut": [
+        7,
+        1
+      ],
+      "cyclic_triples": 1764,
+      "p": 7,
+      "vertices": 35
+    },
+    {
+      "Aut": [
+        11,
+        1
+      ],
+      "cyclic_triples": 6897,
+      "p": 11,
+      "vertices": 55
+    },
+    {
+      "Aut": [
+        13,
+        1
+      ],
+      "cyclic_triples": 11401,
+      "p": 13,
+      "vertices": 65
+    }
+  ],
+  "status": "FINITE-EXACT, controls of separately proved statements"
+}

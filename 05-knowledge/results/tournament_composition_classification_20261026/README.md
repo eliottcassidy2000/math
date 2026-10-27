@@ -23,6 +23,13 @@ The observer preserves the cyclic triples but forgets the child colours.
 For a fixed observer hypergraph C, the valid aggregate identity is
 `sum_[T] 1/|Aut(T)| = |R(C)|/|Aut(C)|`; uniform orbit division is unwarranted.
 
+The [Liouville–Möbius continuation](../liouville_mobius_11_13_20261026/README.md)
+sharpens4p to5p when one realization has squarefree automorphism order.
+It proves the first variation of `mu(|Aut|)` occurs at15, with one bad
+hypergraph type,1024 labelled lifts and orders3/1/1/3. It also identifies
+the metagraph H11/13 pair with THM-466's historical five-cycle witness and
+classifies their different arithmetic responses under order-join.
+
 At n=12, base three gives 110. The unrestricted maximum 3-part is 243,
 attained by a 9-block joined to a 3-block; the strong maximum 3-part is 81.
 These are prime-specific extrema, not a theorem identifying the maximum
