@@ -91,9 +91,9 @@ the classical results.
 
 On the centred lattice with the cyclic shift acting as `zeta_q`, every circulant tournament's skew operator is
 multiplication by `sum_(s in S)(zeta^s - zeta^-s)`; for Paley it is the quadratic Gauss sum with square `-q`, which is
-the Gram identity `KK^T = qI - J`. At `q = 3` the concurrent session's `beta = 1 + 2 omega` appears, and the three ROOT
+the Gram identity `KK^T = qI - J` (klein's THM-4814 (E) gives the general doubly-regular module). At `q = 3` the concurrent session's `beta = 1 + 2 omega` appears, and the three ROOT
 rows are `-R K`: the same prime ideal `(sqrt(-3))`, a different unit. The concurrent trace-norm exception bound for
-bounded-arity parses is sharp to first order (`dist(P_q, G_b) <= q(q-1)/4` trivially), but spectral potentials give
+bounded-arity parses is sharp to first order (Session75; `dist(P_q, G_b) <= q(q-1)/4` trivially), but spectral potentials give
 only linear native-move bounds, while the score potential gives `(q^2-1)/8`.
 
 ## 6. Concurrent work credited
@@ -104,6 +104,12 @@ only linear native-move bounds, while the score potential gives `(q^2-1)/8`.
 - dyadic_module_spectrum session (uncommitted at filing): the three-chart identity `M = (E + 2S)/3`, the Eisenstein
   lattice lift, `beta = 1 + 2 omega`, the ROOT rows `(2 + omega) z`, trace-norm theorem T1-T6.
 - paid_root_cycle_budget (on main): R1 corrected affine carry, R2 price bound; session73's reconciliation.
+- klein-2026-10-27, THM-4814 / HYP-9422 (pushed during this session): regular sources need at least `m` native moves and
+  all-black geodesic witnesses at orders 7, 9 and for `P_11` (our THM-4811 (B) is the all-source version, (C) the black
+  census through order 10); nuclear-norm extremals (skew-Hadamard deletions) and the edit-count comparison with the
+  score bound; the doubly-regular `Z[(1+sqrt(-q))/2]`-module (the general form of our circulant Gauss-sum statement).
+- Session75 checkpoint 1 (pushed during this session, audited): the bounded-arity nuclear-norm cap and the sharp
+  `(1/2 - o(1))` exception budget, which our THM-4813 (C1) only records; black-core and ROOT audit rounds continue there.
 - Session74 (Paley11 distances), S63 / THM-4810 (score potential), S57 / THM-4790 (`tc` through 11).
 
 ## 7. Reproduction

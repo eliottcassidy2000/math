@@ -22,7 +22,9 @@ status: >
   score form of the dipole law), the concurrent regular basin theorem of the aliquot_power_124 session
   (scalar_root_reparse_20261026/basins, independently audited there, uncommitted at filing: exactly m black moves from a
   regular (2m+1)-tournament to a singleton plus a strong core; its cut-charge bound is the case lambda = m of (B)), and the
-  concurrent dyadic-module-spectrum session's matrix form K' = -K + 2A_P.
+  concurrent dyadic-module-spectrum session's matrix form K' = -K + 2A_P; klein's THM-4814 (D) (concurrent, pushed before
+  this file: the lower bound m for regular sources and all-black geodesic witnesses at orders 7, 9 and for P_11; HYP-9422)
+  and Session75 (black-core audit rounds announced).
   OPEN: the classification of strong tournaments without a black descent (HYP-9421 (1): exactly C3, R5 and E(M; Z)); whether
   the black distance is always at most lambda + 1 (HYP-9421 (2)); black-core connectivity (HYP-9348 (b)).
 session: mac-mini-2026-10-27-potentials
