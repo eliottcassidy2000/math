@@ -1,10 +1,12 @@
 ---
 id: THM-4809
-title: "Three quantities of a finite response protocol, and clock patterns. (A) Incidence-cycle law: if every state of a finite protocol has two terminal responses a(x) in A, b(x) in B, with E the attained pairs, V the attained responses and c the components of the bipartite graph (V, E), then a joint law on the paired cells is observed through its marginals with rank |V| - c, and exactly |E| - |V| + c directions, the cycle space, are invisible; for the anonymous reset cells ([x], [tau x]) of the marked carrier X_n this gives (E, V, c, rank, lost) = (7, 8, 1, 7, 0), (50, 24, 1, 23, 27), (732, 112, 1, 111, 621), (24654, 912, 1, 911, 23743) at n = 4, 5, 6, 7. (B) Degree bound: a named Hamilton-path guard on X_n is a subcube indicator fixing at most n - 1 of the M = (n-1)(n-2)/2 free pairs, so k-fold products are Boolean polynomials of degree <= k(n - 1); full recovery of the 2^M presentation-law coordinates by k-fold restored tests needs k >= ceil((n-2)/2); pairs span at orders 4, 5, 6 (ranks 8, 64, 1024) and cannot from order 7 (at most 32647 of 32768); single guards have rational rank 8, 44, 273 at n = 4, 5, 6. (C) Clock patterns: the pattern S_m of a sequence modulo m (its nonzero residues) defines the circulant Clk(Z/m, S_m), an oriented graph iff S_m and -S_m are disjoint and a tournament iff moreover |S_m| = (m-1)/2; the squares give a tournament iff p = 3 mod 4 (Paley), the powers a^k iff -1 is not in <a> and <a> has index 2."
+title: "Three quantities of a finite response protocol, and clock patterns. (A) and (B) are session72's statements (published at 31002464ae minutes before this filing), restated with proofs and extended by the order-7 paired-cell row, the guard ranks at orders 6-7 and the cover-depth census; (C) is this session's. (A) Incidence-cycle law: if every state of a finite protocol has two terminal responses a(x) in A, b(x) in B, with E the attained pairs, V the attained responses and c the components of the bipartite graph (V, E), then a joint law on the paired cells is observed through its marginals with rank |V| - c, and exactly |E| - |V| + c directions, the cycle space, are invisible; for the anonymous reset cells ([x], [tau x]) of the marked carrier X_n this gives (E, V, c, rank, lost) = (7, 8, 1, 7, 0), (50, 24, 1, 23, 27), (732, 112, 1, 111, 621), (24654, 912, 1, 911, 23743) at n = 4, 5, 6, 7. (B) Degree bound: a named Hamilton-path guard on X_n is a subcube indicator fixing at most n - 1 of the M = (n-1)(n-2)/2 free pairs, so k-fold products are Boolean polynomials of degree <= k(n - 1); full recovery of the 2^M presentation-law coordinates by k-fold restored tests needs k >= ceil((n-2)/2); pairs span at orders 4, 5, 6 (ranks 8, 64, 1024) and cannot from order 7 (at most 32647 of 32768); single guards have rational rank 8, 44, 273 at n = 4, 5, 6. (C) Clock patterns: the pattern S_m of a sequence modulo m (its nonzero residues) defines the circulant Clk(Z/m, S_m), an oriented graph iff S_m and -S_m are disjoint and a tournament iff moreover |S_m| = (m-1)/2; the squares give a tournament iff p = 3 mod 4 (Paley), the powers a^k iff -1 is not in <a> and <a> has index 2."
 status: >
-  PROVED: (A) the marginal map is the transpose of the vertex-edge incidence map of a graph, of rank |V| - c with
-  kernel the cycle space (classical); (B) monomial counting on the Boolean cube; (C) THM-4532's circulant criterion
-  with the order of -1 in <a>.
+  CITED-CONCURRENT, restated: (A) and (B) are session72's reset-action cycle theorem and Boolean-degree obstruction
+  (05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-response/REPORT.md, with its sharp-depth
+  conjecture d_n = ceil((n-2)/2) verified through order 6); the proofs here are the classical ones (the marginal map is the
+  transpose of a vertex-edge incidence map, of rank |V| - c with kernel the cycle space; monomial counting on the cube).
+  PROVED: (C) THM-4532's circulant criterion with the order of -1 in <a>.
   FINITE-EXACT: guard_ranks_paired_cells_20261026.cpp (rational ranks modulo two primes at n <= 6, exact over Q with
   fractions at n <= 5 in guard_rank_restored_pairs_20261026.py, GF(2) ranks, the paired-cell graphs at n <= 7, all
   connected), restore_depth_20261026.cpp (cover depths: least cover depth among coverable states equals the degree
@@ -40,7 +42,7 @@ related:
 
 # THM-4809: three quantities, and clock patterns
 
-## Theorem A (incidence-cycle law)
+## Theorem A (incidence-cycle law; session72, restated)
 
 Let a finite protocol attach to every state `x` terminal responses `a(x) in A` and `b(x) in B`; let `E` be the set of attained pairs `(a(x), b(x))`, `V` the attained responses, `c` the number of components of the bipartite graph `(V, E)`. A joint law `mu` on the paired cells (a vector indexed by `E`) is observed through its marginals `(mu_A, mu_B)`; this linear map has rank `|V| - c` and kernel the cycle space of `(V, E)`, of dimension `|E| - |V| + c`.
 
@@ -48,7 +50,7 @@ Let a finite protocol attach to every state `x` terminal responses `a(x) in A` a
 
 For the anonymous reset cells `([x], [tau x])` of `X_n` (`tau` complements every free pair; `[.]` the isomorphism class): orders 4, 5, 6, 7 give `E = 7, 50, 732, 24654`, `V = 8, 24, 112, 912` (twice the number of tournament classes), `c = 1`, rank `7, 23, 111, 911`, lost directions `0, 27, 621, 23743`. The order-5 row is the pasted "50 / 23 / 27".
 
-## Theorem B (degree bound on restored named guards)
+## Theorem B (degree bound on restored named guards; session72's lower bound, restated)
 
 On `X_n` a named guard `g_p` (`p in S_n`) is the indicator of the subcube of states whose free pairs along `p`, at most `n - 1` of them, are oriented as `p` requires. A product `g_(p_1) ... g_(p_k)` is therefore the indicator of a subcube fixing at most `k(n - 1)` free pairs, i.e. a Boolean polynomial of degree `<= k(n - 1)` in the `M` coordinates, and the span of all `k`-fold products has dimension at most `sum_(j <= k(n-1)) binom(M, j)`. Full recovery of the `2^M` presentation-law coordinates by `k`-fold restored tests needs `k(n - 1) >= M`, i.e. `k >= ceil((n - 2)/2)`.
 
