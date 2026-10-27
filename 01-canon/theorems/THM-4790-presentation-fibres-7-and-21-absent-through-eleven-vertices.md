@@ -17,7 +17,9 @@ status: >
     n <= 11 also holds using only Cauchy and the order-9 argument.
   CITED: THM-1370 (the same reduction for H, with the insertion lemma; H never 7 or 21 for any n), MathOverflow
   232751 and Grinberg's notes (the H version).
-  OPEN: n >= 12 (the 3-group case needs the type (3)(3)(3) on 12 points, 2^24 invariant tournaments); HYP-9352 (2) in general.
+  OPEN at filing: n >= 12 (the 3-group case needs the type (3)(3)(3) on 12 points, 2^24 invariant tournaments); HYP-9352 (2) in general.
+  RESOLVED (2026-10-27): THM-4812 extends the exclusion to every order (order-12 scans, orbit product lemma, vertex-transitive
+  lemma, closed window; independently audited).
 session: opus-2026-10-26-S57
 source: 05-knowledge/results/s57_untouchables_root27_20261026/README.md
 depends_on:

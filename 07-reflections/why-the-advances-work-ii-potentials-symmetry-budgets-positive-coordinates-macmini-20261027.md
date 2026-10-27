@@ -23,7 +23,8 @@ locus under the monoid `M`. They all have the same two-sided form.
 | Instance | Potential | Lipschitz | Descent certificate | Exact? |
 |---|---|---|---|---|
 | distance to the non-strong locus (THM-4811 (B)) | arc connectivity `lambda` | 1 | Camion cycle entering a minimum cut | always |
-| same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word starting in a minimum out-cut and ending outside it | all but `C3`, `R5` and the family `E` of THM-4811 Theorem A (pre-audit); `E(M; Z)` is only its `t = 1` subfamily |
+| same, black moves only (THM-4811 (C)) | `lambda` | 1 | a black word starting in a minimum out-cut and ending outside it | all but `C3`, `R5` and the family `E` of THM-4811 Theorem A (audited); `E(M; Z)` is only its `t = 1` subfamily |
+| distance to a singleton plus a strong core (THM-4811 (D)) | `delta^0` | 1 | protected vertex; singleton-type black descent (Theorem C) | singleton locus when `lambda = delta^0`; exhaustive through order 10 |
 | distance to the transitive class (THM-4810 L, Session74) | `L = (1/2) sum |s_(i) - i|` | 1 | explicit 15-move word for `P_11` | `P_11` yes; `P_7` no (7 > 6) |
 | triangle descent (black_descent_20261020c) | `c3` | `s(a) - s(b) - 1` | black closed path with `s(b) >= s(a)` | descent always (C3, R5 aside) |
 | forest frames (Session74) | `beta >= L - n + 2` | 1 | six moves for `P_11` | `P_11` yes |
@@ -66,9 +67,10 @@ through order 11 (THM-4790); tonight's THM-4812 closes it at every order. The me
 2. **Vertex-transitive atoms.** Vertex-transitive pieces are few at small `tc`: only `K1, C3, R5, P7` have `tc <= 21`.
    Primes give circulants, small composites a finite group analysis, and large orders a greedy packing of disjoint
    triangles against Dixon's bound.
-3. **A finite group search.** Small `tc` with large `|Aut|` forces the automorphism group to be nearly the full
-   product of its orbit groups (index 1 or 3). Index 1 makes every orbit a module, and the rest is a search over 83
-   cases.
+3. **A finite group search.** Small `tc` with large `|Aut|` forces the automorphism group to be the full product of
+   its orbit groups: applying the product lemma to the group itself gives `tc >= [P : G] prod tc(T[O])`, so the index is
+   1 (an observation of the independent audit; the search also scanned the index-3 cases). Index 1 makes every orbit a
+   module, and the rest is a search over the 24 resulting substitution configurations.
 
 The general lesson: **a symmetry quotient of a super-multiplicative count is controlled by its vertex-transitive
 atoms.** It explains why the raw-`H` gaps transfer to `tc`, and it predicts the same reduction for any "count up to
@@ -111,7 +113,11 @@ question is the same phenomenon seen from the involution side.
   published versions by the time they were filed. They are now cited and kept only as
   comparison points. Convergence is evidence; double counting is not.
 - **Pre-register the cheap tests.** Two pre-registered tests (the `tc` spectrum at order <= 10 and the price tail to
-  `10^8`) were committed before their runs (HYP-9421 (3)-(4)).
+  `10^8`) were committed before their runs (HYP-9421 (3)-(4)); both were confirmed.
+- **Audit everything that was pushed.** Three independent audits each found errors the producer had missed: a factor two
+  in a normalisation that the file itself defined, a "monotone" margin that is a sawtooth, an index case left out, a
+  false provenance claim, and a side claim one case too strong (MISTAKE-681). None changed a main theorem; each would
+  have misled a later reader.
 
 ## 4. Short version (additions to part I's eight steps)
 
