@@ -1,0 +1,2 @@
+n = 4: states 8, distinct single guards 10 (of 24 permutations), pair products 13; rank singles 8, rank pair products 7, rank singles+pairs 8 (rational); guard support sizes [0, 1, 2, 4, 8]
+n = 5: states 64, distinct single guards 47 (of 120 permutations), pair products 252; rank singles 44, rank pair products 63, rank singles+pairs 64 (rational); guard support sizes [0, 4, 8, 16, 32, 64]
