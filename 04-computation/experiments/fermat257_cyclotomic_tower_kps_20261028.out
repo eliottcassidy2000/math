@@ -1,0 +1,29 @@
+PASS T1 H_k = <3^(2^k)> has order 2^(8-k), k = 0..8
+PASS T2 <9> = H_1 (Paley squares), <2> = H_4 (the halving clock, order 16), and 2^8 = -1 mod 257
+PASS T3 -1 in H_k iff k <= 7 (so G_k is undirected exactly for k <= 7)
+    level 1: degree 128  omega = 7  alpha = 7  =>  R(8,8) > 257
+    level 2: degree  64  omega = 5  alpha = 19  =>  R(6,20) > 257
+    level 3: degree  32  omega = 5  alpha = None  =>  R(6,?) > 257
+    level 4: degree  16  omega = 3  alpha = None  =>  R(4,?) > 257
+    level 5: degree   8  omega = 2  alpha = None  =>  R(3,?) > 257
+    level 6: degree   4  omega = 2  alpha = None  =>  R(3,?) > 257
+    level 7: degree   2  omega = 2  alpha = 128  =>  R(3,129) > 257
+PASS T4 Paley level k = 1 has omega = alpha = 7 (self-complementary; R(8,8) > 257; matches number_tournament_bridges_20261014)
+PASS T5 omega is non-increasing and alpha non-decreasing down the tower (H_(k+1) subset of H_k), where computed
+PASS T6 level 7 is the 257-cycle: omega = 2, alpha = 128
+    Gauss period polynomial, level 1 (degree 2): [1, 1, -64]
+PASS G1 level-1 period polynomial is x^2 + x - 64 (p = 257 = 1 mod 4: (p-1)/4 = 64)
+    Gauss period polynomial, level 2 (degree 4): [1, 1, -96, -16, 256]
+PASS G2 level-2 period polynomial is monic quartic with x^3 coefficient 1 and integer coefficients
+    Gauss period polynomial, level 3 (degree 8): [1, 1, -112, -542, 349, 4481, 778, -9316, 2312]
+    Gauss period polynomial, level 4 (degree 16): [1, 1, -120, -292, 4390, 13894, -66604, -257972, 422785, 2255633, -434628, -9169776, -6074688, 12553200, 18123520, 7237376, 591872]
+PASS S1 spectrum of G_1: trace 0 and trace of A^2 = 257 * degree via the period polynomial's power sums  [(128, -1, 129)]
+PASS S2 spectrum of G_2: trace 0 and trace of A^2 = 257 * degree via the period polynomial's power sums  [(64, -1, 193)]
+PASS S3 spectrum of G_3: trace 0 and trace of A^2 = 257 * degree via the period polynomial's power sums  [(32, -1, 225)]
+PASS S4 spectrum of G_4: trace 0 and trace of A^2 = 257 * degree via the period polynomial's power sums  [(16, -1, 241)]
+PASS C1 Paley conference matrix at 257: S^2 = 257 I - J on 7 sampled rows (Paley II Hadamard matrix of order 516)
+PASS K1 Somer-Krizek (CITED via s58): squaring on (Z/n)^* has only fixed-point cycles iff n is constructible, n = 3..600
+PASS K2 x -> 3x+1 on Z/257 is a fixed point (128 = Pepin's exponent 2^7) plus one 256-cycle
+PASS K3 Syracuse predecessors of 257 are (257*2^k - 1)/3 for odd k: 171, 685, 2741, 10965 (171 = 9*19 is a leaf); 257 -> 193 -> 145 -> 109 -> 41
+16 checks, 0 failed; 2761 s
+ALL CHECKS PASSED
