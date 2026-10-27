@@ -1,0 +1,1470 @@
+{
+  "Cplusplus_crosschecks": [
+    {
+      "Cayley_tree_count": 1,
+      "count": 2,
+      "maxL": 0,
+      "n": 2
+    },
+    {
+      "Cayley_tree_count": 3,
+      "count": 7,
+      "maxL": 1,
+      "n": 3
+    },
+    {
+      "Cayley_tree_count": 16,
+      "count": 38,
+      "maxL": 1,
+      "n": 4
+    },
+    {
+      "Cayley_tree_count": 125,
+      "count": 291,
+      "maxL": 3,
+      "n": 5
+    },
+    {
+      "Cayley_tree_count": 1296,
+      "count": 2932,
+      "maxL": 3,
+      "n": 6
+    },
+    {
+      "Cayley_tree_count": 16807,
+      "count": 36961,
+      "maxL": 5,
+      "n": 7
+    },
+    {
+      "Cayley_tree_count": 262144,
+      "count": 561948,
+      "maxL": 6,
+      "n": 8
+    },
+    {
+      "Cayley_tree_count": 4782969,
+      "count": 10026505,
+      "maxL": 7,
+      "n": 9
+    }
+  ],
+  "P11": {
+    "L": 15,
+    "forest_ceiling": 9,
+    "move_lower_bound": 6,
+    "quadratic_residues": [
+      1,
+      3,
+      4,
+      5,
+      9
+    ],
+    "scores": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  },
+  "P11_first_complement": {
+    "L": 14,
+    "backward_pairs": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        10
+      ]
+    ],
+    "basis": "Lipschitz gives L>=14 on every one-step image, hence beta>=5; this legal image attains both L14 and beta5.",
+    "components": 2,
+    "forward_frame": [
+      0,
+      6,
+      1,
+      7,
+      2,
+      8,
+      3,
+      9,
+      4,
+      10,
+      5
+    ],
+    "frame_beta": 5,
+    "intrinsic_beta_exact": 5,
+    "legal_path": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "m": 14,
+    "minimum_beta_over_all_one_step_P11_images_exact": 5,
+    "minimum_feedback_arc_count_exact": 14,
+    "scores": [
+      6,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      4
+    ],
+    "sorted_scores": [
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6
+    ]
+  },
+  "arbitrary_backward_graph_beta_controls": [
+    {
+      "connected": 1,
+      "n": 2,
+      "slack_histogram": {
+        "0": 2
+      },
+      "total_graphs": 2
+    },
+    {
+      "connected": 4,
+      "n": 3,
+      "slack_histogram": {
+        "0": 2,
+        "1": 5,
+        "2": 1
+      },
+      "total_graphs": 8
+    },
+    {
+      "connected": 38,
+      "n": 4,
+      "slack_histogram": {
+        "1": 25,
+        "2": 25,
+        "3": 10,
+        "4": 3,
+        "5": 1
+      },
+      "total_graphs": 64
+    },
+    {
+      "connected": 728,
+      "n": 5,
+      "slack_histogram": {
+        "0": 4,
+        "1": 81,
+        "2": 297,
+        "3": 276,
+        "4": 190,
+        "5": 107,
+        "6": 49,
+        "7": 15,
+        "8": 4,
+        "9": 1
+      },
+      "total_graphs": 1024
+    },
+    {
+      "connected": 26704,
+      "n": 6,
+      "slack_histogram": {
+        "1": 344,
+        "2": 2675,
+        "3": 5889,
+        "4": 6874,
+        "5": 6267,
+        "6": 4750,
+        "7": 3058,
+        "8": 1676,
+        "9": 788,
+        "10": 316,
+        "11": 101,
+        "12": 24,
+        "13": 5,
+        "14": 1
+      },
+      "total_graphs": 32768
+    }
+  ],
+  "exact_distance_conclusion": {
+    "P11_to_any_forest_framed_tournament": 6,
+    "final_feedback_count": "Independent subset DP gives f=10 for the final forest-framed tournament: the old forest f<=n-1 ceiling itself cannot improve to n-2.",
+    "free_operations": "Relabelling and converse preserve L and the forest-framed property; the same lower bound and exact distance hold with either free.",
+    "lower_bound": "P11 has L15; every forest-framed order11 tournament has L<=9; each legal move changes L by at most1.",
+    "upper_bound": "Six literal legal paths verified above, with final backward graph a connected ten-edge tree."
+  },
+  "hostiles": {
+    "even_n8_refutes_n_minus_3": {
+      "L": 6,
+      "forest": true,
+      "m": 6,
+      "n": 8,
+      "reversed_edges": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "scores": [
+        1,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "sorted_scores": [
+        1,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "m_le_n_minus_1_without_forest_is_not_enough": {
+      "L": 6,
+      "forest": false,
+      "m": 6,
+      "n": 7,
+      "reversed_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "scores": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "sorted_scores": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "not_every_m_edge_forest_has_L_le_m_minus_1": {
+      "L": 1,
+      "forest": true,
+      "m": 1,
+      "n": 3,
+      "reversed_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "scores": [
+        1,
+        1,
+        1
+      ],
+      "sorted_scores": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "independent_forests": [
+    {
+      "brute_assignment_checks": 2,
+      "count": 2,
+      "counts_by_edges": {
+        "0": 1,
+        "1": 1
+      },
+      "histogram": {
+        "0": 2
+      },
+      "n": 2
+    },
+    {
+      "brute_assignment_checks": 7,
+      "count": 7,
+      "counts_by_edges": {
+        "0": 1,
+        "1": 3,
+        "2": 3
+      },
+      "histogram": {
+        "0": 5,
+        "1": 2
+      },
+      "n": 3
+    },
+    {
+      "brute_assignment_checks": 38,
+      "count": 38,
+      "counts_by_edges": {
+        "0": 1,
+        "1": 6,
+        "2": 15,
+        "3": 16
+      },
+      "histogram": {
+        "0": 13,
+        "1": 25
+      },
+      "n": 4
+    },
+    {
+      "brute_assignment_checks": 291,
+      "count": 291,
+      "counts_by_edges": {
+        "0": 1,
+        "1": 10,
+        "2": 45,
+        "3": 110,
+        "4": 125
+      },
+      "histogram": {
+        "0": 34,
+        "1": 184,
+        "2": 69,
+        "3": 4
+      },
+      "n": 5
+    },
+    {
+      "brute_assignment_checks": 0,
+      "count": 2932,
+      "counts_by_edges": {
+        "0": 1,
+        "1": 15,
+        "2": 105,
+        "3": 435,
+        "4": 1080,
+        "5": 1296
+      },
+      "histogram": {
+        "0": 89,
+        "1": 1126,
+        "2": 1373,
+        "3": 344
+      },
+      "n": 6
+    }
+  ],
+  "legal_complement_controls": [
+    {
+      "change_histogram": {
+        "0": 2
+      },
+      "legal_moves": 2,
+      "n": 2
+    },
+    {
+      "change_histogram": {
+        "-1": 6,
+        "1": 6
+      },
+      "legal_moves": 12,
+      "n": 3
+    },
+    {
+      "change_histogram": {
+        "-1": 24,
+        "0": 144,
+        "1": 24
+      },
+      "legal_moves": 192,
+      "n": 4
+    },
+    {
+      "change_histogram": {
+        "-1": 2160,
+        "0": 3360,
+        "1": 2160
+      },
+      "legal_moves": 7680,
+      "n": 5
+    }
+  ],
+  "scope": "All backward forests on a fixed labelled total order n=2..6; all tournaments and legal Hamiltonian paths n=2..5; explicit hostiles and n11 sharpness.",
+  "sharp_n11_tree": {
+    "L": 9,
+    "forest": true,
+    "m": 10,
+    "n": 11,
+    "regular_score_transport_half_l1": 6,
+    "reversed_edges": [
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        10
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "scores": [
+      2,
+      3,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      7,
+      8
+    ],
+    "sorted_scores": [
+      2,
+      3,
+      4,
+      5,
+      5,
+      5,
+      5,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "sharp_regular_carousels": [
+    {
+      "L": 1,
+      "beta": 0,
+      "components": 2,
+      "m": 1,
+      "n": 3,
+      "regular_degree": 1
+    },
+    {
+      "L": 3,
+      "beta": 0,
+      "components": 2,
+      "m": 3,
+      "n": 5,
+      "regular_degree": 2
+    },
+    {
+      "L": 6,
+      "beta": 1,
+      "components": 2,
+      "m": 6,
+      "n": 7,
+      "regular_degree": 3
+    },
+    {
+      "L": 10,
+      "beta": 3,
+      "components": 2,
+      "m": 10,
+      "n": 9,
+      "regular_degree": 4
+    },
+    {
+      "L": 15,
+      "beta": 6,
+      "components": 2,
+      "m": 15,
+      "n": 11,
+      "regular_degree": 5
+    },
+    {
+      "L": 21,
+      "beta": 10,
+      "components": 2,
+      "m": 21,
+      "n": 13,
+      "regular_degree": 6
+    },
+    {
+      "L": 28,
+      "beta": 15,
+      "components": 2,
+      "m": 28,
+      "n": 15,
+      "regular_degree": 7
+    },
+    {
+      "L": 36,
+      "beta": 21,
+      "components": 2,
+      "m": 36,
+      "n": 17,
+      "regular_degree": 8
+    },
+    {
+      "L": 45,
+      "beta": 28,
+      "components": 2,
+      "m": 45,
+      "n": 19,
+      "regular_degree": 9
+    },
+    {
+      "L": 55,
+      "beta": 36,
+      "components": 2,
+      "m": 55,
+      "n": 21,
+      "regular_degree": 10
+    },
+    {
+      "L": 66,
+      "beta": 45,
+      "components": 2,
+      "m": 66,
+      "n": 23,
+      "regular_degree": 11
+    },
+    {
+      "L": 78,
+      "beta": 55,
+      "components": 2,
+      "m": 78,
+      "n": 25,
+      "regular_degree": 12
+    },
+    {
+      "L": 91,
+      "beta": 66,
+      "components": 2,
+      "m": 91,
+      "n": 27,
+      "regular_degree": 13
+    },
+    {
+      "L": 105,
+      "beta": 78,
+      "components": 2,
+      "m": 105,
+      "n": 29,
+      "regular_degree": 14
+    },
+    {
+      "L": 120,
+      "beta": 91,
+      "components": 2,
+      "m": 120,
+      "n": 31,
+      "regular_degree": 15
+    }
+  ],
+  "six_move_certificate_independent_verification": [
+    {
+      "L": 14,
+      "adjacency_rows": [
+        1478,
+        908,
+        1816,
+        1585,
+        1123,
+        199,
+        398,
+        796,
+        1592,
+        1137,
+        226
+      ],
+      "backward_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          10
+        ]
+      ],
+      "beta_intrinsic_exact": 5,
+      "components": 2,
+      "depth": 1,
+      "distance_from_P11_exact": 1,
+      "distance_to_forest_exact": 5,
+      "f_dp_exact": 14,
+      "forward_order": [
+        0,
+        6,
+        1,
+        7,
+        2,
+        8,
+        3,
+        9,
+        4,
+        10,
+        5
+      ],
+      "m": 14,
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "scores": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4
+      ],
+      "sorted_scores": [
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6
+      ]
+    },
+    {
+      "L": 13,
+      "adjacency_rows": [
+        1080,
+        1145,
+        451,
+        964,
+        716,
+        796,
+        1697,
+        1059,
+        211,
+        391,
+        828
+      ],
+      "backward_pairs": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          10
+        ]
+      ],
+      "beta_intrinsic_exact": 4,
+      "components": 1,
+      "depth": 2,
+      "distance_from_P11_exact": 2,
+      "distance_to_forest_exact": 4,
+      "f_dp_exact": 14,
+      "forward_order": [
+        1,
+        10,
+        5,
+        4,
+        3,
+        9,
+        2,
+        8,
+        6,
+        7,
+        0
+      ],
+      "m": 14,
+      "path": [
+        1,
+        3,
+        9,
+        0,
+        10,
+        5,
+        2,
+        8,
+        4,
+        6,
+        7
+      ],
+      "scores": [
+        4,
+        6,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5,
+        5,
+        6
+      ],
+      "sorted_scores": [
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        6
+      ]
+    },
+    {
+      "L": 12,
+      "adjacency_rows": [
+        974,
+        960,
+        1586,
+        1078,
+        1187,
+        1667,
+        316,
+        1868,
+        1084,
+        1368,
+        67
+      ],
+      "backward_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ]
+      ],
+      "beta_intrinsic_exact": 3,
+      "components": 2,
+      "depth": 3,
+      "distance_from_P11_exact": 3,
+      "distance_to_forest_exact": 3,
+      "f_dp_exact": 12,
+      "forward_order": [
+        0,
+        7,
+        9,
+        6,
+        8,
+        3,
+        2,
+        4,
+        5,
+        10,
+        1
+      ],
+      "m": 12,
+      "path": [
+        0,
+        3,
+        2,
+        1,
+        6,
+        5,
+        9,
+        8,
+        4,
+        7,
+        10
+      ],
+      "scores": [
+        7,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        5,
+        5,
+        3
+      ],
+      "sorted_scores": [
+        3,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "L": 11,
+      "adjacency_rows": [
+        48,
+        1149,
+        409,
+        737,
+        968,
+        852,
+        1669,
+        291,
+        587,
+        1159,
+        445
+      ],
+      "backward_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "beta_intrinsic_exact": 2,
+      "components": 1,
+      "depth": 4,
+      "distance_from_P11_exact": 4,
+      "distance_to_forest_exact": 2,
+      "f_dp_exact": 12,
+      "forward_order": [
+        1,
+        10,
+        5,
+        2,
+        4,
+        8,
+        3,
+        6,
+        9,
+        7,
+        0
+      ],
+      "m": 12,
+      "path": [
+        1,
+        6,
+        2,
+        4,
+        7,
+        8,
+        3,
+        5,
+        9,
+        10,
+        0
+      ],
+      "scores": [
+        2,
+        7,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5,
+        5,
+        7
+      ],
+      "sorted_scores": [
+        2,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        7,
+        7
+      ]
+    },
+    {
+      "L": 10,
+      "adjacency_rows": [
+        2014,
+        768,
+        738,
+        1318,
+        1070,
+        1411,
+        570,
+        1626,
+        1236,
+        1336,
+        70
+      ],
+      "backward_pairs": [
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "beta_intrinsic_exact": 1,
+      "components": 1,
+      "depth": 5,
+      "distance_from_P11_exact": 5,
+      "distance_to_forest_exact": 1,
+      "f_dp_exact": 11,
+      "forward_order": [
+        0,
+        8,
+        2,
+        7,
+        6,
+        9,
+        4,
+        3,
+        5,
+        10,
+        1
+      ],
+      "m": 11,
+      "path": [
+        0,
+        4,
+        3,
+        5,
+        8,
+        6,
+        9,
+        10,
+        2,
+        7,
+        1
+      ],
+      "scores": [
+        9,
+        2,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        5,
+        5,
+        3
+      ],
+      "sorted_scores": [
+        2,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "L": 9,
+      "adjacency_rows": [
+        16,
+        1533,
+        1801,
+        1617,
+        964,
+        541,
+        421,
+        45,
+        681,
+        195,
+        1009
+      ],
+      "backward_pairs": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "beta_intrinsic_exact": 0,
+      "components": 1,
+      "depth": 6,
+      "distance_from_P11_exact": 6,
+      "distance_to_forest_exact": 0,
+      "f_dp_exact": 10,
+      "forward_order": [
+        1,
+        10,
+        4,
+        6,
+        8,
+        7,
+        5,
+        2,
+        3,
+        9,
+        0
+      ],
+      "m": 10,
+      "path": [
+        1,
+        8,
+        7,
+        3,
+        10,
+        6,
+        5,
+        0,
+        4,
+        2,
+        9
+      ],
+      "scores": [
+        1,
+        9,
+        5,
+        5,
+        5,
+        5,
+        5,
+        4,
+        5,
+        4,
+        7
+      ],
+      "sorted_scores": [
+        1,
+        4,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        7,
+        9
+      ]
+    }
+  ],
+  "status": "PASS: all explicit requires passed; theorem proof remains separate from finite controls."
+}

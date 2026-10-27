@@ -1,0 +1,383 @@
+{
+  "allowed_source_pins": [
+    "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5"
+  ],
+  "native_manifests": [
+    {
+      "file": "MANIFEST.json",
+      "lane": "session74-inheritance",
+      "mapping": true,
+      "root_mapping": true
+    }
+  ],
+  "repository_origins": [
+    {
+      "bytes": 4586,
+      "git_blob": "dfbb1daece299c28ef5af7f4b7aff2395f69e910",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/procgen_numerology_20260923_odd_square_brackets.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/procgen_numerology_20260923_odd_square_brackets.md",
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22"
+    },
+    {
+      "bytes": 42169,
+      "git_blob": "b068e5b1db168594c60e7e207030adcd57188d03",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/procgen_brackets_20260924_pairings_transitions.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46"
+    },
+    {
+      "bytes": 12582,
+      "git_blob": "ecf12fa03e5f9fc2af7973ce5c49a17ca695a873",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/decoder_prime_square_20260925.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/decoder_prime_square_20260925.md",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be"
+    },
+    {
+      "bytes": 7654,
+      "git_blob": "b753edf5631e482eed80cc3f4e5712f76a815983",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/decoder_prime_square_20260925.py",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "04-computation/experiments/decoder_prime_square_20260925.py",
+      "sha256": "3e325a5236d125f8cf0213deaf5bd2a7fbb6bbc62c0102274f9fd67e1344daa0"
+    },
+    {
+      "bytes": 13449,
+      "git_blob": "f30098f21dd3d52c0618754382ae8a8923b8757c",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/seam_mills_20260925.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/seam_mills_20260925.md",
+      "sha256": "ccdf517df435a27c7cc6f5dd68a9f06e62b456c9e3272d381057c1fe4a9abddf"
+    },
+    {
+      "bytes": 18374,
+      "git_blob": "cd0025524d68780fba1a22615ff590b1fec83500",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/session40-square-sum-README.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb"
+    },
+    {
+      "bytes": 7132,
+      "git_blob": "df1727164c3451ec9cbdb8131690512f183064a4",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/SECOND_AUDIT.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-second/SECOND_AUDIT.md",
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4"
+    },
+    {
+      "bytes": 3778,
+      "git_blob": "327d949efd72981f70d0a1a7a6ba9884d3fb80be",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/FOURTH_AUDIT.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-fourth/FOURTH_AUDIT.md",
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015"
+    },
+    {
+      "bytes": 5762,
+      "git_blob": "82ba304700a6469867227b049988f49726e5015f",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/session40-LATE_INHERITANCE.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/LATE_INHERITANCE.md",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6"
+    },
+    {
+      "bytes": 4652,
+      "git_blob": "8e10f5f304ea7b86ad7bc5f31f87e3ec1730d2b7",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274"
+    },
+    {
+      "bytes": 7533,
+      "git_blob": "496eaf04c9fbbd72624e3e848f697f3f807cfe68",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/THM-4484-free-and-sporadic-cycles.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/theorems/THM-4484-free-and-sporadic-cycles.md",
+      "sha256": "96058743dbc390652916a1e0ee7e9d2b57032ef7e8527e2763ec2bb796d47a17"
+    },
+    {
+      "bytes": 6546,
+      "git_blob": "38cf3332c8acce4fbb57c6cfab062c5bfa41f9bf",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/theorems/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f"
+    },
+    {
+      "bytes": 7498,
+      "git_blob": "cae560d4d3c3a6119e2e6b62d91dc1659f52f2fd",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/theorems/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e"
+    },
+    {
+      "bytes": 29480,
+      "git_blob": "17c7c724cd8a32699501cb8ae237d077d79d97c7",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222"
+    },
+    {
+      "bytes": 6977,
+      "git_blob": "44e80ea75b6179e345558176d20f54c2d3583b35",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session74-inheritance/THM-1455-why-eleven-spectra.md",
+      "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "repository_path": "01-canon/theorems/THM-1455-why-eleven-spectra.md",
+      "sha256": "0ae0c31654d8ee68a5277cae679e9e7011707b7aabbc1ea905e74758ae991df7"
+    }
+  ],
+  "reviewed_bindings": [
+    {
+      "bytes": 3778,
+      "path": "session74-inheritance/FOURTH_AUDIT.md",
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015"
+    },
+    {
+      "bytes": 10192,
+      "path": "session74-inheritance/INHERITANCE.md",
+      "sha256": "1889aeafd76267747602bff24210dcb4bbed1e9a871f3f26775692a47391561a"
+    },
+    {
+      "bytes": 378,
+      "path": "session74-inheritance/MANIFEST.json",
+      "sha256": "862c91eaa73003a86352adea3d61b4acf9eb61d426659a0a857dda5b5f845d80"
+    },
+    {
+      "bytes": 7132,
+      "path": "session74-inheritance/SECOND_AUDIT.md",
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4"
+    },
+    {
+      "bytes": 5607,
+      "path": "session74-inheritance/SOURCES.json",
+      "sha256": "63603165e166266883aa87b51ddc414b292dd5a3bb8313a95ebc8db892f7a8af"
+    },
+    {
+      "bytes": 6977,
+      "path": "session74-inheritance/THM-1455-why-eleven-spectra.md",
+      "sha256": "0ae0c31654d8ee68a5277cae679e9e7011707b7aabbc1ea905e74758ae991df7"
+    },
+    {
+      "bytes": 7533,
+      "path": "session74-inheritance/THM-4484-free-and-sporadic-cycles.md",
+      "sha256": "96058743dbc390652916a1e0ee7e9d2b57032ef7e8527e2763ec2bb796d47a17"
+    },
+    {
+      "bytes": 4652,
+      "path": "session74-inheritance/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274"
+    },
+    {
+      "bytes": 6546,
+      "path": "session74-inheritance/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f"
+    },
+    {
+      "bytes": 7498,
+      "path": "session74-inheritance/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e"
+    },
+    {
+      "bytes": 29480,
+      "path": "session74-inheritance/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222"
+    },
+    {
+      "bytes": 15277,
+      "path": "session74-inheritance/decoder-replay-normal.out",
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795"
+    },
+    {
+      "bytes": 15277,
+      "path": "session74-inheritance/decoder-replay-optimized.out",
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795"
+    },
+    {
+      "bytes": 12582,
+      "path": "session74-inheritance/decoder_prime_square_20260925.md",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be"
+    },
+    {
+      "bytes": 7654,
+      "path": "session74-inheritance/decoder_prime_square_20260925.py",
+      "sha256": "3e325a5236d125f8cf0213deaf5bd2a7fbb6bbc62c0102274f9fd67e1344daa0"
+    },
+    {
+      "bytes": 42169,
+      "path": "session74-inheritance/procgen_brackets_20260924_pairings_transitions.md",
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46"
+    },
+    {
+      "bytes": 4586,
+      "path": "session74-inheritance/procgen_numerology_20260923_odd_square_brackets.md",
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22"
+    },
+    {
+      "bytes": 13449,
+      "path": "session74-inheritance/seam_mills_20260925.md",
+      "sha256": "ccdf517df435a27c7cc6f5dd68a9f06e62b456c9e3272d381057c1fe4a9abddf"
+    },
+    {
+      "bytes": 5762,
+      "path": "session74-inheritance/session40-LATE_INHERITANCE.md",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6"
+    },
+    {
+      "bytes": 18374,
+      "path": "session74-inheritance/session40-square-sum-README.md",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb"
+    },
+    {
+      "bytes": 1538,
+      "path": "session74-paley/DEPENDENCIES.json",
+      "sha256": "e8e8eeb71a4406612216abf4397b9af818e0255024f36af7cd4c9ccc68ee425e"
+    },
+    {
+      "bytes": 13817,
+      "path": "session74-paley/REPORT.md",
+      "sha256": "ea8f2641a7a20f05596f2885df78932192803f10d5e0ef76bc38527e18bdc3f2"
+    },
+    {
+      "bytes": 631,
+      "path": "session74-paley/SHA256SUMS",
+      "sha256": "16f5bbf0c21d7a0b2c07f64116f4c3bf3d5ae32fd863d75fa16b03f83e2132f5"
+    },
+    {
+      "bytes": 3991,
+      "path": "session74-paley/certificate.json",
+      "sha256": "b34f8023a41ad073399f7396aff37b4a806c413557e381c2f540818384b6b9d0"
+    },
+    {
+      "bytes": 6572,
+      "path": "session74-paley/check.py",
+      "sha256": "a4bab5da2916b7095185afd20c7e0626d771caec2b82c1039d06f8c479ed208f"
+    },
+    {
+      "bytes": 2052,
+      "path": "session74-paley/greedy.cpp",
+      "sha256": "eb3bd982414e4af2d21a636f8b637b0f76a2ac995f57180ce6d7cac7bfa3e821"
+    },
+    {
+      "bytes": 982,
+      "path": "session74-paley/greedy.out",
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada"
+    },
+    {
+      "bytes": 7700,
+      "path": "session74-paley/normal.json",
+      "sha256": "b6eed39008c526d330316af09cddd916c183f78618a2e17fb95854dabaa77255"
+    },
+    {
+      "bytes": 7700,
+      "path": "session74-paley/optimized.json",
+      "sha256": "b6eed39008c526d330316af09cddd916c183f78618a2e17fb95854dabaa77255"
+    },
+    {
+      "bytes": 8707,
+      "path": "session74-score-audit/REPORT.md",
+      "sha256": "6cb3a0c70ac8a77a47890cb24d662d87f46da42ed456e53cfa85a5bca0b5fa5b"
+    },
+    {
+      "bytes": 777,
+      "path": "session74-score-audit/SHA256SUMS",
+      "sha256": "4b031f92d1a6405427bb91f7beacb3a05c1235d238dff25d42cc0e8f1108ee5b"
+    },
+    {
+      "bytes": 1470,
+      "path": "session74-score-audit/forest_audit.cpp",
+      "sha256": "053663cf9c1193441766d11585b54761146515f59db4b2049c8bd22ec3e0a5b7"
+    },
+    {
+      "bytes": 990,
+      "path": "session74-score-audit/forest_audit.out",
+      "sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83"
+    },
+    {
+      "bytes": 990,
+      "path": "session74-score-audit/forest_audit.sanitized.out",
+      "sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83"
+    },
+    {
+      "bytes": 20419,
+      "path": "session74-score-audit/independent-normal.json",
+      "sha256": "657dda0c3f8265dab318c5682920e48ce3052d4c322b566ec78ecc172e21d674"
+    },
+    {
+      "bytes": 20419,
+      "path": "session74-score-audit/independent-optimized.json",
+      "sha256": "657dda0c3f8265dab318c5682920e48ce3052d4c322b566ec78ecc172e21d674"
+    },
+    {
+      "bytes": 12949,
+      "path": "session74-score-audit/independent_check.py",
+      "sha256": "80e9ef41ffccdc9a3e14a1e5187ce222b2d3086e07685855f13ed4d258d032bc"
+    },
+    {
+      "bytes": 982,
+      "path": "session74-score-audit/producer-greedy.pinned.out",
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada"
+    },
+    {
+      "bytes": 400,
+      "path": "session74-score-audit/reproduce.sh",
+      "sha256": "d5b28293711a93922c2394fe3edcd73ba39d3bfafbab34eb1d794e4d68bd975a"
+    },
+    {
+      "bytes": 2777,
+      "path": "session74-root/SESSION_PLAN.md",
+      "sha256": "085d7503ecbf7306f808b7894f4c42e081750c06acda4cbe640c527b75a02a93"
+    },
+    {
+      "equal_to": "session74-score-audit/producer-greedy.pinned.out",
+      "path": "session74-paley/greedy.out",
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada"
+    }
+  ],
+  "schema": "session74-provenance-rules-v1",
+  "sha256sum_manifests": [
+    {
+      "file": "SHA256SUMS",
+      "lane": "session74-paley"
+    },
+    {
+      "file": "SHA256SUMS",
+      "lane": "session74-score-audit"
+    }
+  ]
+}

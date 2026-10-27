@@ -1,0 +1,121 @@
+{
+  "pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "sources": [
+    {
+      "path": "05-knowledge/results/procgen_numerology_20260923_odd_square_brackets.md",
+      "git_blob": "dfbb1daece299c28ef5af7f4b7aff2395f69e910",
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22",
+      "bytes": 4586,
+      "snapshot": "procgen_numerology_20260923_odd_square_brackets.md"
+    },
+    {
+      "path": "05-knowledge/results/procgen_brackets_20260924_pairings_transitions.md",
+      "git_blob": "b068e5b1db168594c60e7e207030adcd57188d03",
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46",
+      "bytes": 42169,
+      "snapshot": "procgen_brackets_20260924_pairings_transitions.md"
+    },
+    {
+      "path": "05-knowledge/results/decoder_prime_square_20260925.md",
+      "git_blob": "ecf12fa03e5f9fc2af7973ce5c49a17ca695a873",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be",
+      "bytes": 12582,
+      "snapshot": "decoder_prime_square_20260925.md"
+    },
+    {
+      "path": "04-computation/experiments/decoder_prime_square_20260925.py",
+      "git_blob": "b753edf5631e482eed80cc3f4e5712f76a815983",
+      "sha256": "3e325a5236d125f8cf0213deaf5bd2a7fbb6bbc62c0102274f9fd67e1344daa0",
+      "bytes": 7654,
+      "snapshot": "decoder_prime_square_20260925.py"
+    },
+    {
+      "path": "05-knowledge/results/seam_mills_20260925.md",
+      "git_blob": "f30098f21dd3d52c0618754382ae8a8923b8757c",
+      "sha256": "ccdf517df435a27c7cc6f5dd68a9f06e62b456c9e3272d381057c1fe4a9abddf",
+      "bytes": 13449,
+      "snapshot": "seam_mills_20260925.md"
+    },
+    {
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/square-sum/README.md",
+      "git_blob": "cd0025524d68780fba1a22615ff590b1fec83500",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb",
+      "bytes": 18374,
+      "snapshot": "session40-square-sum-README.md"
+    },
+    {
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-second/SECOND_AUDIT.md",
+      "git_blob": "df1727164c3451ec9cbdb8131690512f183064a4",
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4",
+      "bytes": 7132,
+      "snapshot": "SECOND_AUDIT.md"
+    },
+    {
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-fourth/FOURTH_AUDIT.md",
+      "git_blob": "327d949efd72981f70d0a1a7a6ba9884d3fb80be",
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015",
+      "bytes": 3778,
+      "snapshot": "FOURTH_AUDIT.md"
+    },
+    {
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/LATE_INHERITANCE.md",
+      "git_blob": "82ba304700a6469867227b049988f49726e5015f",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6",
+      "bytes": 5762,
+      "snapshot": "session40-LATE_INHERITANCE.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "git_blob": "8e10f5f304ea7b86ad7bc5f31f87e3ec1730d2b7",
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274",
+      "bytes": 4652,
+      "snapshot": "THM-4507-finite-valuation-collatz-potential-obstruction.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4484-free-and-sporadic-cycles.md",
+      "git_blob": "496eaf04c9fbbd72624e3e848f697f3f807cfe68",
+      "sha256": "96058743dbc390652916a1e0ee7e9d2b57032ef7e8527e2763ec2bb796d47a17",
+      "bytes": 7533,
+      "snapshot": "THM-4484-free-and-sporadic-cycles.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "git_blob": "38cf3332c8acce4fbb57c6cfab062c5bfa41f9bf",
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f",
+      "bytes": 6546,
+      "snapshot": "THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "git_blob": "cae560d4d3c3a6119e2e6b62d91dc1659f52f2fd",
+      "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e",
+      "bytes": 7498,
+      "snapshot": "THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "git_blob": "17c7c724cd8a32699501cb8ae237d077d79d97c7",
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222",
+      "bytes": 29480,
+      "snapshot": "THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1455-why-eleven-spectra.md",
+      "git_blob": "44e80ea75b6179e345558176d20f54c2d3583b35",
+      "sha256": "0ae0c31654d8ee68a5277cae679e9e7011707b7aabbc1ea905e74758ae991df7",
+      "bytes": 6977,
+      "snapshot": "THM-1455-why-eleven-spectra.md"
+    }
+  ],
+  "replay": {
+    "decoder-replay-normal.out": {
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795",
+      "bytes": 15277
+    },
+    "decoder-replay-optimized.out": {
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795",
+      "bytes": 15277
+    },
+    "byte_identical": true
+  }
+}

@@ -1,0 +1,582 @@
+{
+  "replays": [
+    {
+      "normal": "session74-inheritance/decoder-replay-normal.out",
+      "optimized": "session74-inheritance/decoder-replay-optimized.out",
+      "scope": "Inherited exact source replay; not new research",
+      "script": "session74-inheritance/decoder_prime_square_20260925.py"
+    },
+    {
+      "normal": "session74-paley/normal.json",
+      "optimized": "session74-paley/optimized.json",
+      "script": "session74-paley/check.py"
+    },
+    {
+      "normal": "session74-score-audit/independent-normal.json",
+      "optimized": "session74-score-audit/independent-optimized.json",
+      "script": "session74-score-audit/independent_check.py"
+    },
+    {
+      "normal": "cpp.normal.json",
+      "optimized": "cpp.optimized.json",
+      "script": "replay_forest_cpp.py",
+      "timeout_seconds": 900
+    }
+  ],
+  "negative_controls": [],
+  "evidence_bindings": [
+    {
+      "bytes": 3778,
+      "path": "session74-inheritance/FOURTH_AUDIT.md",
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015"
+    },
+    {
+      "bytes": 10192,
+      "path": "session74-inheritance/INHERITANCE.md",
+      "sha256": "1889aeafd76267747602bff24210dcb4bbed1e9a871f3f26775692a47391561a"
+    },
+    {
+      "bytes": 378,
+      "path": "session74-inheritance/MANIFEST.json",
+      "sha256": "862c91eaa73003a86352adea3d61b4acf9eb61d426659a0a857dda5b5f845d80"
+    },
+    {
+      "bytes": 7132,
+      "path": "session74-inheritance/SECOND_AUDIT.md",
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4"
+    },
+    {
+      "bytes": 5607,
+      "path": "session74-inheritance/SOURCES.json",
+      "sha256": "63603165e166266883aa87b51ddc414b292dd5a3bb8313a95ebc8db892f7a8af"
+    },
+    {
+      "bytes": 6977,
+      "path": "session74-inheritance/THM-1455-why-eleven-spectra.md",
+      "sha256": "0ae0c31654d8ee68a5277cae679e9e7011707b7aabbc1ea905e74758ae991df7"
+    },
+    {
+      "bytes": 7533,
+      "path": "session74-inheritance/THM-4484-free-and-sporadic-cycles.md",
+      "sha256": "96058743dbc390652916a1e0ee7e9d2b57032ef7e8527e2763ec2bb796d47a17"
+    },
+    {
+      "bytes": 4652,
+      "path": "session74-inheritance/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274"
+    },
+    {
+      "bytes": 6546,
+      "path": "session74-inheritance/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f"
+    },
+    {
+      "bytes": 7498,
+      "path": "session74-inheritance/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e"
+    },
+    {
+      "bytes": 29480,
+      "path": "session74-inheritance/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222"
+    },
+    {
+      "bytes": 15277,
+      "path": "session74-inheritance/decoder-replay-normal.out",
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795"
+    },
+    {
+      "bytes": 15277,
+      "path": "session74-inheritance/decoder-replay-optimized.out",
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795"
+    },
+    {
+      "bytes": 12582,
+      "path": "session74-inheritance/decoder_prime_square_20260925.md",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be"
+    },
+    {
+      "bytes": 7654,
+      "path": "session74-inheritance/decoder_prime_square_20260925.py",
+      "sha256": "3e325a5236d125f8cf0213deaf5bd2a7fbb6bbc62c0102274f9fd67e1344daa0"
+    },
+    {
+      "bytes": 42169,
+      "path": "session74-inheritance/procgen_brackets_20260924_pairings_transitions.md",
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46"
+    },
+    {
+      "bytes": 4586,
+      "path": "session74-inheritance/procgen_numerology_20260923_odd_square_brackets.md",
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22"
+    },
+    {
+      "bytes": 13449,
+      "path": "session74-inheritance/seam_mills_20260925.md",
+      "sha256": "ccdf517df435a27c7cc6f5dd68a9f06e62b456c9e3272d381057c1fe4a9abddf"
+    },
+    {
+      "bytes": 5762,
+      "path": "session74-inheritance/session40-LATE_INHERITANCE.md",
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6"
+    },
+    {
+      "bytes": 18374,
+      "path": "session74-inheritance/session40-square-sum-README.md",
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb"
+    },
+    {
+      "bytes": 1538,
+      "path": "session74-paley/DEPENDENCIES.json",
+      "sha256": "e8e8eeb71a4406612216abf4397b9af818e0255024f36af7cd4c9ccc68ee425e"
+    },
+    {
+      "bytes": 13817,
+      "path": "session74-paley/REPORT.md",
+      "sha256": "ea8f2641a7a20f05596f2885df78932192803f10d5e0ef76bc38527e18bdc3f2"
+    },
+    {
+      "bytes": 631,
+      "path": "session74-paley/SHA256SUMS",
+      "sha256": "16f5bbf0c21d7a0b2c07f64116f4c3bf3d5ae32fd863d75fa16b03f83e2132f5"
+    },
+    {
+      "bytes": 3991,
+      "path": "session74-paley/certificate.json",
+      "sha256": "b34f8023a41ad073399f7396aff37b4a806c413557e381c2f540818384b6b9d0"
+    },
+    {
+      "bytes": 6572,
+      "path": "session74-paley/check.py",
+      "sha256": "a4bab5da2916b7095185afd20c7e0626d771caec2b82c1039d06f8c479ed208f"
+    },
+    {
+      "bytes": 2052,
+      "path": "session74-paley/greedy.cpp",
+      "sha256": "eb3bd982414e4af2d21a636f8b637b0f76a2ac995f57180ce6d7cac7bfa3e821"
+    },
+    {
+      "bytes": 982,
+      "path": "session74-paley/greedy.out",
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada"
+    },
+    {
+      "bytes": 7700,
+      "path": "session74-paley/normal.json",
+      "sha256": "b6eed39008c526d330316af09cddd916c183f78618a2e17fb95854dabaa77255"
+    },
+    {
+      "bytes": 7700,
+      "path": "session74-paley/optimized.json",
+      "sha256": "b6eed39008c526d330316af09cddd916c183f78618a2e17fb95854dabaa77255"
+    },
+    {
+      "bytes": 8707,
+      "path": "session74-score-audit/REPORT.md",
+      "sha256": "6cb3a0c70ac8a77a47890cb24d662d87f46da42ed456e53cfa85a5bca0b5fa5b"
+    },
+    {
+      "bytes": 777,
+      "path": "session74-score-audit/SHA256SUMS",
+      "sha256": "4b031f92d1a6405427bb91f7beacb3a05c1235d238dff25d42cc0e8f1108ee5b"
+    },
+    {
+      "bytes": 1470,
+      "path": "session74-score-audit/forest_audit.cpp",
+      "sha256": "053663cf9c1193441766d11585b54761146515f59db4b2049c8bd22ec3e0a5b7"
+    },
+    {
+      "bytes": 990,
+      "path": "session74-score-audit/forest_audit.out",
+      "sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83"
+    },
+    {
+      "bytes": 990,
+      "path": "session74-score-audit/forest_audit.sanitized.out",
+      "sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83"
+    },
+    {
+      "bytes": 20419,
+      "path": "session74-score-audit/independent-normal.json",
+      "sha256": "657dda0c3f8265dab318c5682920e48ce3052d4c322b566ec78ecc172e21d674"
+    },
+    {
+      "bytes": 20419,
+      "path": "session74-score-audit/independent-optimized.json",
+      "sha256": "657dda0c3f8265dab318c5682920e48ce3052d4c322b566ec78ecc172e21d674"
+    },
+    {
+      "bytes": 12949,
+      "path": "session74-score-audit/independent_check.py",
+      "sha256": "80e9ef41ffccdc9a3e14a1e5187ce222b2d3086e07685855f13ed4d258d032bc"
+    },
+    {
+      "bytes": 982,
+      "path": "session74-score-audit/producer-greedy.pinned.out",
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada"
+    },
+    {
+      "bytes": 400,
+      "path": "session74-score-audit/reproduce.sh",
+      "sha256": "d5b28293711a93922c2394fe3edcd73ba39d3bfafbab34eb1d794e4d68bd975a"
+    },
+    {
+      "bytes": 2777,
+      "path": "session74-root/SESSION_PLAN.md",
+      "sha256": "085d7503ecbf7306f808b7894f4c42e081750c06acda4cbe640c527b75a02a93"
+    },
+    {
+      "equal_to": "session74-score-audit/producer-greedy.pinned.out",
+      "path": "session74-paley/greedy.out",
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada"
+    }
+  ],
+  "inert_source_snapshots": [
+    "session74-inheritance/FOURTH_AUDIT.md",
+    "session74-inheritance/SECOND_AUDIT.md",
+    "session74-inheritance/THM-1455-why-eleven-spectra.md",
+    "session74-inheritance/THM-4484-free-and-sporadic-cycles.md",
+    "session74-inheritance/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+    "session74-inheritance/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+    "session74-inheritance/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+    "session74-inheritance/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+    "session74-inheritance/decoder_prime_square_20260925.md",
+    "session74-inheritance/procgen_brackets_20260924_pairings_transitions.md",
+    "session74-inheritance/procgen_numerology_20260923_odd_square_brackets.md",
+    "session74-inheritance/seam_mills_20260925.md",
+    "session74-inheritance/session40-LATE_INHERITANCE.md",
+    "session74-inheritance/session40-square-sum-README.md"
+  ],
+  "approved_source_replays": [
+    "session74-inheritance/decoder_prime_square_20260925.py"
+  ],
+  "schema": "session74-frozen-packet-v1",
+  "source_pin": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 23,
+      "sha256": "aca07970df50b15cddb5333b18259deb2a0c6efb48c494c55a7dfdb37fcba5a5",
+      "mode": 420
+    },
+    {
+      "path": "DEPENDENCY_ORIGINS.checkpoint1.json",
+      "bytes": 2544,
+      "sha256": "f00406c7da54f1883200c66af5b809c9066e736d2c32c35400ace0e2b57a9b43",
+      "mode": 420
+    },
+    {
+      "path": "NATIVE_COPY_MANIFEST.checkpoint1.json",
+      "bytes": 12424,
+      "sha256": "191f58d39c6ff1217060fef470486dae7acaad4705190888e21948ab667d7c10",
+      "mode": 420
+    },
+    {
+      "path": "PROVENANCE_RULES.checkpoint1.json",
+      "bytes": 15252,
+      "sha256": "7e6a41bfd8639e757d0109fc1d9b1d08c1d084fa8e3df07a9000d393eebd685f",
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "bytes": 3919,
+      "sha256": "712f9ac0b38d9258d13690c12b0b466253bf556cda8f6e38dab14b38dd27c414",
+      "mode": 420
+    },
+    {
+      "path": "SOURCE_LICENSES.md",
+      "bytes": 406,
+      "sha256": "24cad36f330429090c2dfcac7e4f67262e12a0a4a44819f249cf0749d1734a03",
+      "mode": 420
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 2044,
+      "sha256": "0972e221e3347f97c0e02d947bd047680ebc4119426f0b8fcc55f6edd1b4387d",
+      "mode": 420
+    },
+    {
+      "path": "cpp.normal.json",
+      "bytes": 522,
+      "sha256": "81b2564f5f1adf2dbe736700a4150d22a70c420458d58d8ab26cbc31430611da",
+      "mode": 420
+    },
+    {
+      "path": "cpp.optimized.json",
+      "bytes": 522,
+      "sha256": "81b2564f5f1adf2dbe736700a4150d22a70c420458d58d8ab26cbc31430611da",
+      "mode": 420
+    },
+    {
+      "path": "replay_forest_cpp.py",
+      "bytes": 1883,
+      "sha256": "9c234049f8c3cd87dc9ebb7e4fe81b3dd05ebaee978bb0cbea11ad6a4f31d526",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/FOURTH_AUDIT.md",
+      "bytes": 3778,
+      "sha256": "2b98cbdca5f533bfbd559366b52930ffb431a2dc436bcd6956290b2100dfe015",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/INHERITANCE.md",
+      "bytes": 10192,
+      "sha256": "1889aeafd76267747602bff24210dcb4bbed1e9a871f3f26775692a47391561a",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/MANIFEST.json",
+      "bytes": 378,
+      "sha256": "862c91eaa73003a86352adea3d61b4acf9eb61d426659a0a857dda5b5f845d80",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/SECOND_AUDIT.md",
+      "bytes": 7132,
+      "sha256": "ce234bda09606c492a482ed95b0684a2d97166026124662e49f44dfff3c73ba4",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/SOURCES.json",
+      "bytes": 5607,
+      "sha256": "63603165e166266883aa87b51ddc414b292dd5a3bb8313a95ebc8db892f7a8af",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/THM-1455-why-eleven-spectra.md",
+      "bytes": 6977,
+      "sha256": "0ae0c31654d8ee68a5277cae679e9e7011707b7aabbc1ea905e74758ae991df7",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/THM-4484-free-and-sporadic-cycles.md",
+      "bytes": 7533,
+      "sha256": "96058743dbc390652916a1e0ee7e9d2b57032ef7e8527e2763ec2bb796d47a17",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "bytes": 4652,
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/THM-4591-integer-cycles-of-the-terras-map-to-period-301993-are-the-five-pythagorean-cycles.md",
+      "bytes": 6546,
+      "sha256": "ec9961776558de0e30d6349821961979a3dd2e77bb2496a593a528659c5a057f",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/THM-4592-the-eleven-squares-fibonacci-torus-is-the-period-five-collatz-cycle-set.md",
+      "bytes": 7498,
+      "sha256": "3a3a04a17d40d366a594889d0d2651eed867d91ad108dd3e631eec247260203e",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/THM-4746-camion-pseudoprimes-strong-tournament-counts-are-quasi-periodic-mod-p-korselt-criterion-carmichael-numbers-and-the-triangle.md",
+      "bytes": 29480,
+      "sha256": "bab46a00c24008f55702385cf96e031fd0ae9b8ef10aa00e04d62f7a7a283222",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/decoder-replay-normal.out",
+      "bytes": 15277,
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/decoder-replay-optimized.out",
+      "bytes": 15277,
+      "sha256": "c7e4b43843490b96adac0e527d3a6393d5d63d08ef9f44c2b050167b5f834795",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/decoder_prime_square_20260925.md",
+      "bytes": 12582,
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/decoder_prime_square_20260925.py",
+      "bytes": 7654,
+      "sha256": "3e325a5236d125f8cf0213deaf5bd2a7fbb6bbc62c0102274f9fd67e1344daa0",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/procgen_brackets_20260924_pairings_transitions.md",
+      "bytes": 42169,
+      "sha256": "34a3c26f753c02cc4fea81b304a56206da358c6191dd7775e7aceb2835803d46",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/procgen_numerology_20260923_odd_square_brackets.md",
+      "bytes": 4586,
+      "sha256": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/seam_mills_20260925.md",
+      "bytes": 13449,
+      "sha256": "ccdf517df435a27c7cc6f5dd68a9f06e62b456c9e3272d381057c1fe4a9abddf",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/session40-LATE_INHERITANCE.md",
+      "bytes": 5762,
+      "sha256": "2172b5fd847dfc00a5ade9f6a876abcb5bacf6eb4b4244a857a59f6446bd1ad6",
+      "mode": 420
+    },
+    {
+      "path": "session74-inheritance/session40-square-sum-README.md",
+      "bytes": 18374,
+      "sha256": "404889bc084bee84ad10b3b5783f25def9a166ea4a74efb74a79583ab10300eb",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/DEPENDENCIES.json",
+      "bytes": 1538,
+      "sha256": "e8e8eeb71a4406612216abf4397b9af818e0255024f36af7cd4c9ccc68ee425e",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/REPORT.md",
+      "bytes": 13817,
+      "sha256": "ea8f2641a7a20f05596f2885df78932192803f10d5e0ef76bc38527e18bdc3f2",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/SHA256SUMS",
+      "bytes": 631,
+      "sha256": "16f5bbf0c21d7a0b2c07f64116f4c3bf3d5ae32fd863d75fa16b03f83e2132f5",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/certificate.json",
+      "bytes": 3991,
+      "sha256": "b34f8023a41ad073399f7396aff37b4a806c413557e381c2f540818384b6b9d0",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/check.py",
+      "bytes": 6572,
+      "sha256": "a4bab5da2916b7095185afd20c7e0626d771caec2b82c1039d06f8c479ed208f",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/greedy.cpp",
+      "bytes": 2052,
+      "sha256": "eb3bd982414e4af2d21a636f8b637b0f76a2ac995f57180ce6d7cac7bfa3e821",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/greedy.out",
+      "bytes": 982,
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/normal.json",
+      "bytes": 7700,
+      "sha256": "b6eed39008c526d330316af09cddd916c183f78618a2e17fb95854dabaa77255",
+      "mode": 420
+    },
+    {
+      "path": "session74-paley/optimized.json",
+      "bytes": 7700,
+      "sha256": "b6eed39008c526d330316af09cddd916c183f78618a2e17fb95854dabaa77255",
+      "mode": 420
+    },
+    {
+      "path": "session74-root/SESSION_PLAN.md",
+      "bytes": 2777,
+      "sha256": "085d7503ecbf7306f808b7894f4c42e081750c06acda4cbe640c527b75a02a93",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/REPORT.md",
+      "bytes": 8707,
+      "sha256": "6cb3a0c70ac8a77a47890cb24d662d87f46da42ed456e53cfa85a5bca0b5fa5b",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/SHA256SUMS",
+      "bytes": 777,
+      "sha256": "4b031f92d1a6405427bb91f7beacb3a05c1235d238dff25d42cc0e8f1108ee5b",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/forest_audit.cpp",
+      "bytes": 1470,
+      "sha256": "053663cf9c1193441766d11585b54761146515f59db4b2049c8bd22ec3e0a5b7",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/forest_audit.out",
+      "bytes": 990,
+      "sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/forest_audit.sanitized.out",
+      "bytes": 990,
+      "sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/independent-normal.json",
+      "bytes": 20419,
+      "sha256": "657dda0c3f8265dab318c5682920e48ce3052d4c322b566ec78ecc172e21d674",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/independent-optimized.json",
+      "bytes": 20419,
+      "sha256": "657dda0c3f8265dab318c5682920e48ce3052d4c322b566ec78ecc172e21d674",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/independent_check.py",
+      "bytes": 12949,
+      "sha256": "80e9ef41ffccdc9a3e14a1e5187ce222b2d3086e07685855f13ed4d258d032bc",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/producer-greedy.pinned.out",
+      "bytes": 982,
+      "sha256": "48c734fb6148cfe9e7db87c9fe0c524f47dc6d8efe36bd9ccf65a118575f4ada",
+      "mode": 420
+    },
+    {
+      "path": "session74-score-audit/reproduce.sh",
+      "bytes": 400,
+      "sha256": "d5b28293711a93922c2394fe3edcd73ba39d3bfafbab34eb1d794e4d68bd975a",
+      "mode": 493
+    },
+    {
+      "path": "test_packet_corruption.py",
+      "bytes": 4684,
+      "sha256": "ad156fd954552240f9b3ee62d418bd2f62b8fa582c5cbbc538b3321881be57fc",
+      "mode": 420
+    },
+    {
+      "path": "test_provenance_corruption.py",
+      "bytes": 4021,
+      "sha256": "af516f962940afa3415fe6afcf8c015d24b407e88914283f546ea61896ecaac5",
+      "mode": 420
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 8874,
+      "sha256": "5c632ed76a371eb5d2e4faca7b1bc6c83c9a2e5b0addcaa7c5c537152bd1a863",
+      "mode": 420
+    },
+    {
+      "path": "verify_provenance.py",
+      "bytes": 5101,
+      "sha256": "612a3392d96dfbac98d179b6a2c0d8c5a4d6627b5e35f4212538094584f6bab7",
+      "mode": 420
+    }
+  ],
+  "native_copy_ledger": "NATIVE_COPY_MANIFEST.checkpoint1.json"
+}

@@ -1,0 +1,36 @@
+{
+  "baseline_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "files": [
+    {
+      "bytes": 14974,
+      "path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md",
+      "sha256": "0bfeab69fcb2eb1a38e46f063781d66f47a17e592eb4d6abf50312b233141216"
+    },
+    {
+      "bytes": 49353,
+      "path": "05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027.md",
+      "sha256": "6571e9806650447fdfe7e6deb2a28531394018e3707cefa1b8c09376d0c400bf"
+    },
+    {
+      "bytes": 35728,
+      "path": "05-knowledge/results/h_spectrum_atlas_complement_budgets_paley_clocks_20261027_audit.md",
+      "sha256": "320816aeebff65d75ac91e9cb89fd61ac1291696fb9df421f43151f6f1c0f3a0"
+    },
+    {
+      "bytes": 11144,
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/score-forest-counts/REPORT.md",
+      "sha256": "9a7b2107f5dfc3245a251f46eef51698932a4b006d94c607f757497cd917c886"
+    },
+    {
+      "bytes": 7054,
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/score-forest-counts/COROLLARIES.md",
+      "sha256": "340a01bf8417a31d1caa19893ec1d5832fc0c90790b5c70c077db26b8bcc91a2"
+    },
+    {
+      "bytes": 1234,
+      "path": "04-computation/experiments/lattice_bridges_20261021/score_vectors_forests.py",
+      "sha256": "9daae423e43079df8c2f0ddb216b4f65b1f57e3e71f1f4fd9443926d96c3c3f3"
+    }
+  ],
+  "inherited_source_commit": "ca5a9f7bee48a08bad9d1f471ece85f8b085c345"
+}

@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "mode": "optimized",
+      "status": "PASS",
+      "stdout_sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83"
+    },
+    {
+      "mode": "ubsan",
+      "status": "PASS",
+      "stdout_sha256": "cfaf5d471b4a44259e68648ffd169ae0e5a9ffbdd4d7f0c5d2b49be8ff21de83"
+    }
+  ],
+  "scope": "Exact native ordered-forest enumeration n=2..9; no universal theorem inferred",
+  "source_sha256": "053663cf9c1193441766d11585b54761146515f59db4b2049c8bd22ec3e0a5b7",
+  "status": "PASS"
+}
