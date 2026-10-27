@@ -56,7 +56,7 @@ assertion that all six object classes are isomorphic.
    finite autonomous state. [THM-2842 / ordered positive-cone observability](../../../01-canon/theorems/THM-2842-ordered-positive-cone-vandermonde-multiplier-observability.md)
    similarly uses extra multiplier observations to recover a hidden quotient;
    those observations are access assumptions, not consequences of a vanished
-   scalar. Its metadata and §§1--4 are inherited, not re-audited numerically here.
+   scalar. Its metadata and §§1 and 4 were inspected, not re-audited numerically here.
 4. **October 11 / 20:** the [SCC/Lyndon codec](../tournament_even_bijection_20261011c.md)
    transports ordered join through an explicit ranking codec. The affine clock
    and observable-algebra packets distinguish state separation, closure of
@@ -149,6 +149,11 @@ frames can still require the relative phase. The earlier F8 Paley mechanism
 adds an orientation character of order two, distinct from Frobenius order three.
 The [prior field audit](../unnamed_carrier_dissection_20261026/CONNECTIONS.md)
 also distinguishes F8 x F8 at seventh roots from F16 at fifth roots.
+More explicitly, write the retained frame as z=F^(-i)(x_w), with F(x)=x^2.
+An entrance re-marking by delta sends z to F^(-delta)(z). Complement does
+not itself apply Frobenius: it changes the relation while ancestral labels
+remain fixed. The old children may cease to be modules, so ancestry is a
+separate coordinate if future contexts still query it.
 
 The inherited [sharp 4p theorem F2](../tournament_composition_classification_20261026/fibre/RESULT.md)
 makes this a quantitative boundary: for every odd prime p, the p-part of

@@ -22,7 +22,9 @@ The second response already separates the 81/27 hostile. Let
 
     (L f)(T) = sum_{P a directed Hamilton path of T} f(T^op xor E(P)).
 
-Then L1=H and L^2 1 counts two successive legal path-complement choices:
+Then L1=H and L^2 1 counts two successive legal path-complement choices.
+Every legal path is included, with multiplicity; this is not a black-only
+connectivity test.
 
 | source | Aut | H | L^2 1 |
 |---|---:|---:|---:|

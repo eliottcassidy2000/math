@@ -52,7 +52,7 @@ def main():
     for path in HERE.glob('*.md'):
         for target in re.findall(r'\]\(([^)]+)\)',path.read_text(encoding='utf-8')):
             if '://' not in target and not target.startswith('#'):
-                need((path.parent/target.split('#')[0]).exists(),'local link: '+target)
+                need((path.parent/target.split('#')[0]).resolve().exists(),'local link: '+target)
     sources=read('SOURCES.json')
     need(sources['executable_inputs']==[],'standalone executable scope')
     print('Packet seals, links, normal/-O receipts and independent rank overlap agree.',flush=True)
