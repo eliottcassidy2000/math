@@ -149,7 +149,13 @@ Every generated source is separately replayed forward to its first V hit.
 
 One can also bound its numerical support explicitly. For one native edge,
 
-    3(3s+1)=2^t(3y+1)+(3-2^a),  a in {1,2}.
+    3(3s+1)=2^t(3y+1)-2^a,  a in {1,2}.
+
+Correction 2026-10-26: the former displayed constant `3-2^a` was three
+too large. The native edge `s=3 -> y=1`, with `a=1,t=3`, gives30=32-2.
+Directly reversing `(3s+1)/2^a=B^j(y)` gives the corrected identity. The
+inequality and finite support cutoff below are unchanged; the inverse-tree
+compiler used the literal map. See the [native paid-forcing check](paid_root_cycle_budget_20261026/README.md).
 
 Hence 3s+1<=2^t(3y+1), and an entire path gives
 s<2^h(max(V)+1). No convergence statement is used to enumerate F_h.

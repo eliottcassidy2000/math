@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-26 — native affine carry and the choice of exception baseline
+
+- **Demonstrated source error:** the [actual-clock certificate](../05-knowledge/results/root_actual_clock_certificate_20261018o.md), R3, displayed `3(3s+1)=2^t(3y+1)+(3-2^a)`. Its additive constant is three too large: the native edge `3 -> 1`, with `a=1,t=3`, gives `30=32-2`, not `30=32+1`.
+- **Repair / strongest survivor:** directly substituting `(3s+1)/2^a=B^j(y)`, `B(x)=4x+1`, gives `2^t(3y+1)=3(3s+1)+2^a`. The support inequality and finite inverse-tree cutoff survive; the compiler already used the literal map. The new native gain uses this corrected coordinate. Native braid clock and ordinary Collatz clocks remain distinct.
+- **Exploratory budget implication rejected:** minimum backward-edge count need not minimize cycle rank. For `C3[T3,T3,T4]`, every nine-edge minimum has cycle rank four, while a ten-edge frame has the true cycle minimum two. For sorted block sizes `a<=b<=c`, the exact all-order cycle minimum is `max(a-2,0)(b-1)`, so balanced cyclic clones force quadratic total-order exception debt.
+- **Scope / missing coordinate:** this refutes a linear budget for a clone-closed class, not the narrower native four-map word language; those cloning operations have not been generated there. A baseline retaining cyclic modules represents these examples with zero exceptions and costs at most `n-1` after one complement. Repeated reparsing with shared ports remains OPEN.
+- **Lineage / new question:** [native paid forcing, source-owned dyadic debt, and exact module proof](../05-knowledge/results/paid_root_cycle_budget_20261026/README.md), with normal/optimized checks and internal adversarial review. A cheap sign-gauged forcing term does not bound coherent terminal readout; uniform source-weighted cancellation and universal entry remain separate obligations.
+
 ## 2026-10-26 — conserved mass and sparse ports do not erase refinement debt
 
 - **Exploratory claims rejected before promotion:** conserving source mass makes arbitrary refinement energy stable; a forest exception frame can always be repaired after path complement by choosing another rank.
