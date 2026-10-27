@@ -1,0 +1,43 @@
+{
+  "commit": "96e35642110104cc547516a63f37eebcf930f707",
+  "sources": [
+    {
+      "local_path": "sources/paid_root_README.md",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c",
+      "git_object_verified": true,
+      "byte_equal": true
+    },
+    {
+      "local_path": "sources/paid_root_verify.py",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2",
+      "git_object_verified": true,
+      "byte_equal": true
+    },
+    {
+      "local_path": "sources/root_eisenstein_first_arrival_20261018j.md",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233",
+      "git_object_verified": true,
+      "byte_equal": true
+    },
+    {
+      "local_path": "frontier.txt",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+      "git_object_verified": true,
+      "byte_equal": true
+    }
+  ],
+  "producer_manifest_verified": true,
+  "producer_initial_manifest_sha256": "ecece80add30c41c4ad4161c6b9689511797f0af181e3fa271074d2210ce5b3d",
+  "producer_revision2_manifest_sha256": "ad8d60b20884230f7bd2180e22115b16f970d4cd0aa284a1149d45cd51f321e8",
+  "producer_revision2_verified": true,
+  "original_frontier": {
+    "repository_path": "04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt",
+    "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+    "git_object_verified": true,
+    "byte_equal": true
+  }
+}

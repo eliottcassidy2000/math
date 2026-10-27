@@ -1,0 +1,29 @@
+{
+  "assert_validation_gates": false,
+  "checker_sha256": "f72b6ed3f8147f555d1b2890e7f8c7e2711d8526a1b0f91065654715ecc44289",
+  "commands": [
+    "python3 check.py > normal.json",
+    "python3 -O check.py > optimized.json",
+    "cmp normal.json optimized.json"
+  ],
+  "files": {
+    "REPORT.md": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1",
+    "SOURCE_PINS.json": "ceb5e34cc3819448b4795e1a21cc0126b5dd96b82a50732a557e1ec32e26c23e",
+    "check.py": "f72b6ed3f8147f555d1b2890e7f8c7e2711d8526a1b0f91065654715ecc44289",
+    "normal.json": "670ee2d90a418b3c7f018b3afbb05814b229868324526cc99d22603666a1e892",
+    "optimized.json": "670ee2d90a418b3c7f018b3afbb05814b229868324526cc99d22603666a1e892",
+    "sources/frontier.txt": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+    "sources/paid_root_README.md": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c",
+    "sources/root_eisenstein_first_arrival.md": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+  },
+  "imports": [
+    "collections",
+    "fractions",
+    "hashlib",
+    "pathlib",
+    "json"
+  ],
+  "receipt_byte_identity": true,
+  "source_commit": "96e35642110104cc547516a63f37eebcf930f707",
+  "status": "PASS"
+}

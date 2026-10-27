@@ -1,0 +1,12 @@
+--- reviewed/BLACK_CORE_GEODESICS.pre-promotion.md
++++ BLACK_CORE_GEODESICS.md
+@@ -1,7 +1,7 @@
+ # Balanced black-core geodesics, with distinct named starts
+ 
+-**Session 75, 2026-10-27. Proof candidate for independent review.**
+-The regular theorem reconstructs the trusted user-transcript claim; it is not
++**Session 75, 2026-10-27. PROVED in the stated scopes, independently audited; finite heads explicitly certified.**
++The regular theorem is the user-supplied claim, reconstructed here; it is not
+ presented as a newly discovered statement. The even-order extension and target
+ separation are new work in this packet. No all-order black connectivity claim.
+ 

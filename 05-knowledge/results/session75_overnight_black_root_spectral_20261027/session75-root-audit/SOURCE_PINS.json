@@ -1,0 +1,24 @@
+{
+  "pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "acquisition": "Independent git show of exact pinned blobs; not copied from producer",
+  "sources": [
+    {
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "local": "sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "local": "sources/root_eisenstein_first_arrival.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "local": "sources/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    }
+  ]
+}

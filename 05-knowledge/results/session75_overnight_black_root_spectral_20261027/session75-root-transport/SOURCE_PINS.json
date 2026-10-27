@@ -1,0 +1,55 @@
+{
+  "pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "sources": [
+    {
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "local": "sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "2b23884eb8e708b846f2415fb1d1dc96d8a69fb0",
+      "local": "sources/paid_root_SOURCE_PINS.json",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d"
+    },
+    {
+      "path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+      "local": "sources/weighted_renewal_moving_modulus_20261026__README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "local": "sources/results__root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "path": "05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "6a3584125cb613e4675f5f071b167dbd84f40772",
+      "local": "sources/results__root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "path": "05-knowledge/results/root_transport_energy_20261017.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "99aed7a34c6106d2903ee798cadae4b4736eb1fa",
+      "local": "sources/root_transport_energy.md",
+      "sha256": "bdfc51ebf2e27c4b8c25a1908322f84d6cb33e5ea22ae57d90cc973601910b86"
+    },
+    {
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "local": "sources/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    }
+  ],
+  "scope": "Native P/S/cutoff source charges only; S73 U/lambda/W not imported."
+}

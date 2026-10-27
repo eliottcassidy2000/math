@@ -1,0 +1,450 @@
+{
+  "ROOT_inverse_examples": [
+    {
+      "clock": 3,
+      "gain": "15/16",
+      "k": 0,
+      "s": 3
+    },
+    {
+      "clock": 9,
+      "gain": "1023/1024",
+      "k": 1,
+      "s": 227
+    },
+    {
+      "clock": 15,
+      "gain": "65535/65536",
+      "k": 2,
+      "s": 14563
+    },
+    {
+      "clock": 21,
+      "gain": "4194303/4194304",
+      "k": 3,
+      "s": 932067
+    }
+  ],
+  "actual_debt_ledgers": [
+    {
+      "D_over_S": "0",
+      "D_positive": 0,
+      "N": 1,
+      "S": 4,
+      "levels": 3
+    },
+    {
+      "D_over_S": "1/5",
+      "D_positive": 1,
+      "N": 2,
+      "S": 5,
+      "levels": 4
+    },
+    {
+      "D_over_S": "1",
+      "D_positive": 9,
+      "N": 3,
+      "S": 9,
+      "levels": 4
+    },
+    {
+      "D_over_S": "2/5",
+      "D_positive": 4,
+      "N": 4,
+      "S": 10,
+      "levels": 5
+    },
+    {
+      "D_over_S": "1/2",
+      "D_positive": 7,
+      "N": 5,
+      "S": 14,
+      "levels": 5
+    },
+    {
+      "D_over_S": "26/41",
+      "D_positive": 26,
+      "N": 17,
+      "S": 41,
+      "levels": 7
+    },
+    {
+      "D_over_S": "79/157",
+      "D_positive": 79,
+      "N": 64,
+      "S": 157,
+      "levels": 9
+    },
+    {
+      "D_over_S": "67/315",
+      "D_positive": 67,
+      "N": 129,
+      "S": 315,
+      "levels": 10
+    },
+    {
+      "D_over_S": "281/622",
+      "D_positive": 281,
+      "N": 256,
+      "S": 622,
+      "levels": 11
+    }
+  ],
+  "check_sha256": "f72b6ed3f8147f555d1b2890e7f8c7e2711d8526a1b0f91065654715ecc44289",
+  "checks": {
+    "E_centered_congruence": 1681,
+    "E_inverse": 1681,
+    "E_norm": 1681,
+    "K_image_divisible_by_3": 1681,
+    "K_image_surjects_3A2": 1681,
+    "K_intertwines_alpha": 1681,
+    "K_not_L_automorphism": 1,
+    "K_square": 1681,
+    "L_surjects_congruence_plane": 561,
+    "N1_exact_support": 1,
+    "N1_forward_closed": 1,
+    "ROOT_boundary_forcing_price": 1,
+    "ROOT_self_edge": 1,
+    "actual_energy_K_scaling": 9,
+    "actual_marked_hostile_arrival": 1,
+    "actual_marked_hostile_charges": 1,
+    "actual_marked_hostile_owner": 1,
+    "actual_marked_hostile_pair": 1,
+    "all_original_source_rows": 49408,
+    "alpha_norm_multiplier": 1681,
+    "alpha_square": 1,
+    "backward_homogeneous_mode": 303043,
+    "bilinear_lift": 6561,
+    "bilinear_skew_scale": 6561,
+    "centered_not_in_L": 1,
+    "combined_frontier_bound": 9000,
+    "conjugated_marked_observer": 1681,
+    "counting_l2_nondecay": 32,
+    "cutoff_distinct_null_representatives": 20011,
+    "cutoff_exact_charge": 20011,
+    "cutoff_exact_target": 20011,
+    "cutoff_j_zero": 20011,
+    "cutoff_single_chain_term": 20011,
+    "cutoff_source_in_band": 20011,
+    "cutoff_target_outside": 20011,
+    "cyclic_orientation": 1681,
+    "direct_ROOT_gain": 32,
+    "direct_ROOT_inverse": 32,
+    "direct_inverse_integrality": 32,
+    "energy_debt_telescope": 9,
+    "explicit_quotient_failure": 63,
+    "exterior_logarithmic_forcing": 9000,
+    "exterior_polynomial_bound": 9000,
+    "exterior_product_factorization": 9000,
+    "exterior_q_at_least_4543": 88844,
+    "exterior_tail_lower_bound": 10000,
+    "first_hit_boundary_mode": 9000,
+    "frontier_C_lt_1_57": 1,
+    "frontier_C_maximizer_rank_gain": 1,
+    "frontier_closed": 16219,
+    "frontier_exact_C": 1,
+    "frontier_minimum_exterior": 1,
+    "frontier_minimum_q_exterior": 1,
+    "frontier_no_duplicate_labels": 1,
+    "frontier_primitive_labels": 627,
+    "frontier_rank_exact_step": 16219,
+    "frontier_rank_matches_literal_word": 627,
+    "frontier_root_rank": 1,
+    "frontier_size_maximum": 1,
+    "frontier_unique_C_maximizer": 1,
+    "global_first_hit_polynomial_bound": 9000,
+    "inflated_initial_terminal": 9000,
+    "initial_energy_inflation": 9000,
+    "lattice_index_3": 1,
+    "literal_primitive_support": 256,
+    "literal_vs_chain_source": 49408,
+    "log_integral_direction_exact_control": 257,
+    "marked_cross_hostile": 1,
+    "marked_observer": 1681,
+    "marked_rotation_hostile": 1,
+    "native_affine_identity": 446222,
+    "native_target_primitive": 446222,
+    "native_valuation_vs_peeling": 446222,
+    "normalized_debt_unchanged": 9,
+    "original_positive_b_invoice": 36,
+    "path_product_telescope": 9000,
+    "pinned_source_bytes": 3,
+    "positive_after_level_debt_K_scaling": 9,
+    "ranked_global_polynomial": 512,
+    "ranked_q_formula": 10000,
+    "ranked_q_simple_lower_bound": 10000,
+    "repetition_forcing_repair": 96,
+    "repetition_inflation_repair": 96,
+    "root_excluded_from_ranked_q": 1,
+    "s3_conventions_differ": 1,
+    "signed_c_invoice": 36,
+    "signed_level_debt_K_scaling": 9,
+    "signed_two_port_identity": 108,
+    "source_is_final_refinement": 9,
+    "source_shells": 49408,
+    "strict_edge_contraction": 303043,
+    "unchanged_initial_attenuation": 9000,
+    "unique_pair_owner": 97199,
+    "zero_signed_forcing_invoice": 9000
+  },
+  "claims_not_made": [
+    "universal ROOT arrival",
+    "a fixed native all-source Hilbert weight",
+    "uniform source debt bound",
+    "a positive-b and signed-c forcing identification",
+    "unmarked C3 energy as the original marked readout"
+  ],
+  "cutoff_examples": [
+    {
+      "A": [
+        -1,
+        -1
+      ],
+      "N": 2,
+      "P(s)": 11,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 7
+    },
+    {
+      "A": [
+        1,
+        0
+      ],
+      "N": 3,
+      "P(s)": 17,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 11
+    },
+    {
+      "A": [
+        0,
+        1
+      ],
+      "N": 4,
+      "P(s)": 23,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 15
+    },
+    {
+      "A": [
+        0,
+        1
+      ],
+      "N": 5,
+      "P(s)": 23,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 15
+    },
+    {
+      "A": [
+        1,
+        0
+      ],
+      "N": 6,
+      "P(s)": 35,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 23
+    },
+    {
+      "A": [
+        -1,
+        -1
+      ],
+      "N": 9,
+      "P(s)": 47,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 31
+    },
+    {
+      "A": [
+        -1,
+        -1
+      ],
+      "N": 20000,
+      "P(s)": 119999,
+      "mu_s": 1,
+      "mu_y": 0,
+      "s": 79999
+    }
+  ],
+  "cutoff_universe": "N=2..20000 plus all four residues for bases 2^60, 3^100, 10^150",
+  "finite_first_hit_universe": "every primitive s<=24000; no cap hit, no repeats before ROOT",
+  "forcing_convention_examples": [
+    {
+      "b": "3/4",
+      "epsilon": 1,
+      "positive_b_unit_price": "1/7",
+      "s": 1,
+      "signed_c_unit_price": "1/7"
+    },
+    {
+      "b": "15/16",
+      "epsilon": -1,
+      "positive_b_unit_price": "31",
+      "s": 3,
+      "signed_c_unit_price": "1/31"
+    },
+    {
+      "b": "33/34",
+      "epsilon": -1,
+      "positive_b_unit_price": "67",
+      "s": 7,
+      "signed_c_unit_price": "1/67"
+    },
+    {
+      "b": "21/22",
+      "epsilon": 1,
+      "positive_b_unit_price": "1/43",
+      "s": 9,
+      "signed_c_unit_price": "1/43"
+    },
+    {
+      "b": "51/52",
+      "epsilon": -1,
+      "positive_b_unit_price": "103",
+      "s": 11,
+      "signed_c_unit_price": "1/103"
+    },
+    {
+      "b": "69/70",
+      "epsilon": -1,
+      "positive_b_unit_price": "139",
+      "s": 15,
+      "signed_c_unit_price": "1/139"
+    },
+    {
+      "b": "39/40",
+      "epsilon": 1,
+      "positive_b_unit_price": "1/79",
+      "s": 17,
+      "signed_c_unit_price": "1/79"
+    },
+    {
+      "b": "255/256",
+      "epsilon": 1,
+      "positive_b_unit_price": "1/511",
+      "s": 113,
+      "signed_c_unit_price": "1/511"
+    },
+    {
+      "b": "1023/1024",
+      "epsilon": -1,
+      "positive_b_unit_price": "2047",
+      "s": 227,
+      "signed_c_unit_price": "1/2047"
+    }
+  ],
+  "frontier": {
+    "maximizer_gain": "460166680231540515/576460752303423488",
+    "maximizer_rank": 31,
+    "maximum_exterior_depth_in_finite_universe": 67,
+    "maximum_internal_inflation": "332306998946228968225951765070086144/211753373595316860199691410086465225",
+    "size": 627,
+    "unique_maximizer": 993
+  },
+  "maximum_clock": 176,
+  "maximum_depth": 102,
+  "null_representative_examples": [
+    {
+      "N": 2,
+      "input_norm_sq": 0,
+      "null_coordinate": 11,
+      "pullback_norm_sq": 1
+    },
+    {
+      "N": 3,
+      "input_norm_sq": 0,
+      "null_coordinate": 17,
+      "pullback_norm_sq": 1
+    },
+    {
+      "N": 4,
+      "input_norm_sq": 0,
+      "null_coordinate": 23,
+      "pullback_norm_sq": 1
+    },
+    {
+      "N": 5,
+      "input_norm_sq": 0,
+      "null_coordinate": 23,
+      "pullback_norm_sq": 1
+    }
+  ],
+  "path_count": 9000,
+  "path_examples": [
+    {
+      "B": "1",
+      "clock": 0,
+      "depth": 0,
+      "h_ROOT_1": "1",
+      "mu": 1,
+      "s": 1
+    },
+    {
+      "B": "15/16",
+      "clock": 3,
+      "depth": 1,
+      "h_ROOT_1": "-16/15",
+      "mu": 3,
+      "s": 3
+    },
+    {
+      "B": "891/1024",
+      "clock": 9,
+      "depth": 4,
+      "h_ROOT_1": "-1024/891",
+      "mu": 1,
+      "s": 7
+    },
+    {
+      "B": "459/512",
+      "clock": 8,
+      "depth": 3,
+      "h_ROOT_1": "512/459",
+      "mu": 1,
+      "s": 11
+    },
+    {
+      "B": "255/256",
+      "clock": 8,
+      "depth": 1,
+      "h_ROOT_1": "256/255",
+      "mu": 1,
+      "s": 113
+    },
+    {
+      "B": "1023/1024",
+      "clock": 9,
+      "depth": 1,
+      "h_ROOT_1": "-1024/1023",
+      "mu": 1,
+      "s": 227
+    },
+    {
+      "B": "1071641503229025260034200424501/1267650600228229401496703205376",
+      "clock": 99,
+      "depth": 55,
+      "h_ROOT_1": "-1267650600228229401496703205376/1071641503229025260034200424501",
+      "mu": 1,
+      "s": 4095
+    },
+    {
+      "B": "7411874864275269351/9223372036854775808",
+      "clock": 62,
+      "depth": 30,
+      "h_ROOT_1": "9223372036854775808/7411874864275269351",
+      "mu": 1,
+      "s": 23999
+    }
+  ],
+  "source_commit": "96e35642110104cc547516a63f37eebcf930f707",
+  "source_digest": "993fdfe9cc8ef67f6080b5253a95dc16f06870c74247e0017e677320cf890113",
+  "source_universe": "all literal odd inputs m<4N for N=1..256",
+  "status": "PASS"
+}

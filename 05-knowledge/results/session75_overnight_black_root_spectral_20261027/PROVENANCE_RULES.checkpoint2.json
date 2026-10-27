@@ -1,0 +1,1962 @@
+{
+  "allowed_source_pins": [
+    "235333940cab42a6b4ef7126a742c7cf040e91b0",
+    "96e35642110104cc547516a63f37eebcf930f707"
+  ],
+  "native_manifests": [
+    {
+      "file": "FINAL_BYTE_ACCEPTANCE.json",
+      "lane": "session75-spectral-final-byte-acceptance",
+      "mapping": true,
+      "payload_lane": "session75-spectral",
+      "rows_key": "final_producer_manifest_entries_verified",
+      "strip_dot_prefix": true
+    },
+    {
+      "file": "FINAL_BYTE_ACCEPTANCE.json",
+      "lane": "session75-spectral-final-byte-acceptance",
+      "mapping": true,
+      "payload_lane": "session75-spectral-audit",
+      "rows_key": "frozen_prior_audit_entries_verified"
+    },
+    {
+      "file": "REVIEW_BINDING.json",
+      "lane": "session75-spectral-audit",
+      "mapping": true,
+      "rows_key": "independent_artifacts"
+    },
+    {
+      "file": "MANIFEST.json",
+      "lane": "session75-black-core",
+      "rows_key": "portable_publication_inventory"
+    },
+    {
+      "file": "MANIFEST.json",
+      "lane": "session75-root-audit",
+      "mapping": true
+    },
+    {
+      "file": "MANIFEST.json",
+      "lane": "session75-dyadic",
+      "mapping": true
+    },
+    {
+      "file": "producer_revision2/MANIFEST.json",
+      "lane": "session75-dyadic-audit",
+      "mapping": true,
+      "path_prefix": "producer_revision2/"
+    }
+  ],
+  "repository_origins": [
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 8487,
+      "git_blob": "aa12cce1b375700faf16fa068700505c21f4d675",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/AUDIT.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/AUDIT.md",
+      "sha256": "c61537eeb822c5880d5156725a0e1afc5416e12a8b22c6c9dd81a132de3f81e4"
+    },
+    {
+      "bytes": 6299,
+      "git_blob": "2b23884eb8e708b846f2415fb1d1dc96d8a69fb0",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d"
+    },
+    {
+      "bytes": 16323,
+      "git_blob": "cc53682f39ece4e8f266a41198a2785e114fd9e8",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 15320,
+      "git_blob": "184447fc9dde61930d981e3b1e42d4f9a845ee99",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/receipt.json",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/receipt.json",
+      "sha256": "54f08df37647feaac759d5e7a868263834f485348d9d2cebbf9416c7a9a2435f"
+    },
+    {
+      "bytes": 13800,
+      "git_blob": "1f0b0572d2ad9fe39109036df6fcf28b74ac0a63",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/root_actual_clock_certificate_20261018o.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_actual_clock_certificate_20261018o.md",
+      "sha256": "7154006e8df8e2708cb2d48ca4e79705fa9a1999d4314a0c995be8e2ae5ffc02"
+    },
+    {
+      "bytes": 14898,
+      "git_blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 26664,
+      "git_blob": "6a3584125cb613e4675f5f071b167dbd84f40772",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "bytes": 16049,
+      "git_blob": "9267ae323d8ffb9723a94c79247c75114ce1037b",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md",
+      "sha256": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5"
+    },
+    {
+      "bytes": 8133,
+      "git_blob": "06280fcc071916156893b05ec1dde5d3b5e6944d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/FINAL_FINDINGS.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/FINAL_FINDINGS.md",
+      "sha256": "47522e3af94965ecd36ef193ed4dbfacf2687c2426b40d9a6eb3fa76f9385e64"
+    },
+    {
+      "bytes": 6369,
+      "git_blob": "5824accbc5de6e29556df4c3a80f97eb73378108",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/TYPED_PAYMENT_SYNTHESIS.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/TYPED_PAYMENT_SYNTHESIS.md",
+      "sha256": "f2caf2e4e74e3b049091475caaa7f59d5b7364b5d56c3a8141b08d8d04a5fa0d"
+    },
+    {
+      "bytes": 18470,
+      "git_blob": "093d428c50981bd361909ac1f3ba044ceadeaabb",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+    },
+    {
+      "bytes": 6537,
+      "git_blob": "922ffeeca0c7660a99e77bc3742d52b1d281886f",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/COMPILER_CLOCK_LOWER_BOUND.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/COMPILER_CLOCK_LOWER_BOUND.md",
+      "sha256": "98f58e15614b5a72642aef3e2532033adece1a91d661f7881ad767c12cf35832"
+    },
+    {
+      "bytes": 7216,
+      "git_blob": "61660fe2dc9fc1d4951db899253ac5f75b0640a5",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "sha256": "83ddf9b08f516f18a260c95279b280eed5a7de34c35166080194625bc6df1f76"
+    },
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 10491,
+      "git_blob": "584c29bd1140b2812c57093238ddd18805638ac8",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md",
+      "sha256": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67"
+    },
+    {
+      "bytes": 24746,
+      "git_blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "bytes": 21173,
+      "git_blob": "4bf25ff0b9cd1a673525c70416174999cf464181",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938"
+    },
+    {
+      "bytes": 10837,
+      "git_blob": "4bcf5fe8955eca7f5c1a80f5b0f319cff384912d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388"
+    },
+    {
+      "bytes": 4375,
+      "git_blob": "b729bb3b4e0672aa896455caa3073eea084a0eb7",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/05-knowledge/results/pure_blue_atom_classification_20261020/VALIDATION.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/pure_blue_atom_classification_20261020/VALIDATION.md",
+      "sha256": "c37433a5bc3680123e81f6b07b85dc2cd1ad0b4c02ac730e74e744ed02b00dd9"
+    },
+    {
+      "bytes": 10021,
+      "git_blob": "e0cab9a112bd0ab4dd304c6a8eb24fe9a2ab81e3",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral/sources/01-README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 18470,
+      "git_blob": "093d428c50981bd361909ac1f3ba044ceadeaabb",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral/sources/02-REPORT.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+    },
+    {
+      "bytes": 10021,
+      "git_blob": "e0cab9a112bd0ab4dd304c6a8eb24fe9a2ab81e3",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral/sources/03-THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 8936,
+      "git_blob": "63ead76e66bf475ee7c5a09ffecba4aab45298c4",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral/sources/04-CLASSIFICATION.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "bytes": 2653,
+      "git_blob": "41925443e17c8dd5ecbf821cf7f1d557ed88b35b",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral/sources/05-S74.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "00-navigation/S74.md",
+      "sha256": "923c55a7739fef08817c87378ec999e9d937aac52a4378eb211b21516f0a6cf5"
+    },
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/paid_root_README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 6299,
+      "git_blob": "2b23884eb8e708b846f2415fb1d1dc96d8a69fb0",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/paid_root_SOURCE_PINS.json",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d"
+    },
+    {
+      "bytes": 24746,
+      "git_blob": "6dbaae6b3295d9791b2beb154ee4bdfdf686edd7",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/weighted_renewal_moving_modulus_20261026__README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "bytes": 14898,
+      "git_blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/results__root_eisenstein_first_arrival_20261018j.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 26664,
+      "git_blob": "6a3584125cb613e4675f5f071b167dbd84f40772",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/results__root_sparse_boundary_module_20261017i.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "bytes": 24768,
+      "git_blob": "99aed7a34c6106d2903ee798cadae4b4736eb1fa",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/root_transport_energy.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_transport_energy_20261017.md",
+      "sha256": "bdfc51ebf2e27c4b8c25a1908322f84d6cb33e5ea22ae57d90cc973601910b86"
+    },
+    {
+      "bytes": 4620,
+      "git_blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-transport/sources/frontier.txt",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-audit/sources/paid_root_README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 14898,
+      "git_blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-audit/sources/root_eisenstein_first_arrival.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 4620,
+      "git_blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-root-audit/sources/frontier.txt",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic/sources/paid_root_README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "git_blob": "cc53682f39ece4e8f266a41198a2785e114fd9e8",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic/sources/paid_root_verify.py",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "git_blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic/sources/root_eisenstein_first_arrival_20261018j.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 4620,
+      "git_blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic/frontier.txt",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/sources/paid_root_README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "git_blob": "cc53682f39ece4e8f266a41198a2785e114fd9e8",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/sources/paid_root_verify.py",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "git_blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/sources/root_eisenstein_first_arrival_20261018j.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 4620,
+      "git_blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/frontier.txt",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "git_blob": "f00fd7484371260186464a52007b856a10aa1b6a",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/producer_revision2/sources/paid_root_README.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "git_blob": "cc53682f39ece4e8f266a41198a2785e114fd9e8",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/producer_revision2/sources/paid_root_verify.py",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "git_blob": "2da8811e64696f018835744846b7558f04f4d87e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/producer_revision2/sources/root_eisenstein_first_arrival_20261018j.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 4620,
+      "git_blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/producer_revision2/frontier.txt",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 9921,
+      "git_blob": "87ca14bda63ab2b69a73f46e0eee3a8411a8126e",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-incoming/THM-4814.md",
+      "pin": "235333940cab42a6b4ef7126a742c7cf040e91b0",
+      "repository_path": "01-canon/theorems/THM-4814-order-ten-prime-cycle-index-types-order-eleven-ledger-skew-hadamard-nuclear-norm-extremality-and-black-core-distance-of-regular-tournaments.md",
+      "sha256": "619675ec852819f4c4b8f5b1b2f3755a67c40255f8754725a6e44438fa5bf8e3"
+    },
+    {
+      "bytes": 4939,
+      "git_blob": "8b8bb137ea3525ebaed07bb10463bebe5a0e2563",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-incoming/HYP-9422.md",
+      "pin": "235333940cab42a6b4ef7126a742c7cf040e91b0",
+      "repository_path": "05-knowledge/hypotheses/HYP-9422-regular-tournaments-exactly-m-black-moves-from-a-singleton-plus-strong-core-nuclear-norm-maximizers-off-the-hadamard-orders-and-the-order-11-types.md",
+      "sha256": "0c16c42b808993fd16757682fc7663f9e68c1971d20c7467f7936e49dd8fb8e5"
+    },
+    {
+      "bytes": 22983,
+      "git_blob": "02301a873bfff6ee73c5477944a99676521ed394",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-incoming/README.source.md",
+      "pin": "235333940cab42a6b4ef7126a742c7cf040e91b0",
+      "repository_path": "05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md",
+      "sha256": "fac0596901e8a69765c052d3c358c6b1c24c697accc9bf75367fdc4679a722c8"
+    },
+    {
+      "bytes": 10021,
+      "git_blob": "e0cab9a112bd0ab4dd304c6a8eb24fe9a2ab81e3",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral-audit/INHERITED_THM-1960.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 17251,
+      "git_blob": "7cbe9215bae8d6fa881519283bb5726b841d9a2f",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-spectral-audit/INHERITED_THM-4810.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md",
+      "sha256": "963d2244b7a3504d8c549da28c6f3de8b608c95a07cdd8bab9aab4c9532f1a1c"
+    },
+    {
+      "bytes": 6823,
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/AGENTS.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 9133,
+      "git_blob": "7ca5d30d79d99cbbf815ea7b671efbeed73effbd",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/00-navigation/START-HERE.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "00-navigation/START-HERE.md",
+      "sha256": "b703e146d92f18506354df0da8e5bf51196407c79a165b31c6b29f69aaaa2433"
+    },
+    {
+      "bytes": 10465,
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/00-navigation/RESEARCH-PROTOCOL.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "bytes": 23418,
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/01-canon/ACTIVE-GUARDRAILS.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "bytes": 7216,
+      "git_blob": "61660fe2dc9fc1d4951db899253ac5f75b0640a5",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "sha256": "83ddf9b08f516f18a260c95279b280eed5a7de34c35166080194625bc6df1f76"
+    },
+    {
+      "bytes": 15899,
+      "git_blob": "8fcb41a887e1a0e912043b51e04660eece6831e1",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "sha256": "bb1cf7d9956c4bd83dabe89c419e76b7649dda743176cb567e8f440b7a62d56e"
+    },
+    {
+      "bytes": 19260,
+      "git_blob": "4c546b0d51d2d41302322a241c9c575d28e85a29",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/results/black_descent_20261020c/cycles.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/black_descent_20261020c/cycles.md",
+      "sha256": "b8c998e416dae8a9b7397a2b02b17a380b49bb272a272e07a1255214b5ff6280"
+    },
+    {
+      "bytes": 12531,
+      "git_blob": "c29885db938b8f57d7b47a8fa9118a77a6030e90",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/results/black_descent_20261020c/scc.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/black_descent_20261020c/scc.md",
+      "sha256": "72c3e2ab6d3b98d45a4cb0e50e0884afc65d0d65c1ed9aa9b073e1d267c93f47"
+    },
+    {
+      "bytes": 16559,
+      "git_blob": "ade24f7a1e13fe5b9ff12b6d11a939d952d4e1fd",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/results/blue_quotient_20261020b/structure.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/blue_quotient_20261020b/structure.md",
+      "sha256": "ad380c7bd6ab8ed0b6b48c8e042183813ced001dc03d1931ab816d9cbe42ad74"
+    },
+    {
+      "bytes": 10837,
+      "git_blob": "4bcf5fe8955eca7f5c1a80f5b0f319cff384912d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388"
+    },
+    {
+      "bytes": 21173,
+      "git_blob": "4bf25ff0b9cd1a673525c70416174999cf464181",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938"
+    },
+    {
+      "bytes": 21387,
+      "git_blob": "c3c050c4d2488a964d8cafe67deb5798268493c7",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/05-knowledge/results/merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "05-knowledge/results/merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md",
+      "sha256": "2df36d3726740274bd33792231b6f92d21f209adaac41ced38195ff8ea2ce736"
+    },
+    {
+      "bytes": 2500,
+      "git_blob": "4087fb8cad9e59d7b09581b1ba67a62ef9475946",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a"
+    },
+    {
+      "bytes": 24382,
+      "git_blob": "6a6c94e2dd617727f61660e8073dce8a63e9d5e0",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c"
+    },
+    {
+      "bytes": 142515,
+      "git_blob": "9b0e7d12ad61e421abdd034adc288455527bf45d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-black-audit/sources/04-computation/experiments/tiling_line_metagraph_census_20261020_lines_n7.tsv",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "04-computation/experiments/tiling_line_metagraph_census_20261020_lines_n7.tsv",
+      "sha256": "404785053e9b39bca7dfe138b5a1c0bc927476c55b6a0b11177500056f1d33a0"
+    },
+    {
+      "bytes": 4620,
+      "git_blob": "0ab0d566e6eca73a3cbb0275182501631a79204d",
+      "git_mode": "100644",
+      "mode": 420,
+      "path": "session75-dyadic-audit/frontier.txt",
+      "pin": "96e35642110104cc547516a63f37eebcf930f707",
+      "repository_path": "04-computation/experiments/first_arrival_20261018/V_closed_Y1000.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    }
+  ],
+  "reviewed_bindings": [
+    {
+      "bytes": 13862,
+      "path": "session75-inheritance/INHERITANCE_REPORT.md",
+      "sha256": "0ec508ce2ffc8ff51794172c0ea2acd525e3d96ec2d71eea99c8c91f70e587c9"
+    },
+    {
+      "bytes": 367,
+      "path": "session75-inheritance/RECOVERY_CHECKS.json",
+      "sha256": "2b72c1a932f68b0ae9bb1b65f2e0fb0cbfaa305773f3dee1a16adc5a407d8677"
+    },
+    {
+      "bytes": 367,
+      "path": "session75-inheritance/RECOVERY_CHECKS.optimized.json",
+      "sha256": "2b72c1a932f68b0ae9bb1b65f2e0fb0cbfaa305773f3dee1a16adc5a407d8677"
+    },
+    {
+      "bytes": 9167,
+      "path": "session75-inheritance/SOURCE_PINS.json",
+      "sha256": "5023833f590d5bc02f8139f6f3d5ab534122bec7cfe925f88908d254e69b53b3"
+    },
+    {
+      "bytes": 1352,
+      "path": "session75-inheritance/recovery_check.py",
+      "sha256": "cb586d4242da5f80872d4fdbc71d3891f62e2fe3cceb11938f306a6f2fbfa83f"
+    },
+    {
+      "bytes": 5667,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 10021,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 21173,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938"
+    },
+    {
+      "bytes": 10491,
+      "path": "session75-inheritance/sources/01-canon/theorems/THM-4790-presentation-fibres-7-and-21-absent-through-eleven-vertices.md",
+      "sha256": "5a8774a26abc554cbbaa985a5a73873b27a6bb26fbe0b5c4110e95f449e40c67"
+    },
+    {
+      "bytes": 7216,
+      "path": "session75-inheritance/sources/05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "sha256": "83ddf9b08f516f18a260c95279b280eed5a7de34c35166080194625bc6df1f76"
+    },
+    {
+      "bytes": 8487,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/AUDIT.md",
+      "sha256": "c61537eeb822c5880d5156725a0e1afc5416e12a8b22c6c9dd81a132de3f81e4"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 6299,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/SOURCE_PINS.json",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d"
+    },
+    {
+      "bytes": 15320,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/receipt.json",
+      "sha256": "54f08df37647feaac759d5e7a868263834f485348d9d2cebbf9416c7a9a2435f"
+    },
+    {
+      "bytes": 16323,
+      "path": "session75-inheritance/sources/05-knowledge/results/paid_root_cycle_budget_20261026/verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 10837,
+      "path": "session75-inheritance/sources/05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388"
+    },
+    {
+      "bytes": 4375,
+      "path": "session75-inheritance/sources/05-knowledge/results/pure_blue_atom_classification_20261020/VALIDATION.md",
+      "sha256": "c37433a5bc3680123e81f6b07b85dc2cd1ad0b4c02ac730e74e744ed02b00dd9"
+    },
+    {
+      "bytes": 13800,
+      "path": "session75-inheritance/sources/05-knowledge/results/root_actual_clock_certificate_20261018o.md",
+      "sha256": "7154006e8df8e2708cb2d48ca4e79705fa9a1999d4314a0c995be8e2ae5ffc02"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-inheritance/sources/05-knowledge/results/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 26664,
+      "path": "session75-inheritance/sources/05-knowledge/results/root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "bytes": 18470,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+    },
+    {
+      "bytes": 16049,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md",
+      "sha256": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5"
+    },
+    {
+      "bytes": 6537,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/COMPILER_CLOCK_LOWER_BOUND.md",
+      "sha256": "98f58e15614b5a72642aef3e2532033adece1a91d661f7881ad767c12cf35832"
+    },
+    {
+      "bytes": 8133,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/FINAL_FINDINGS.md",
+      "sha256": "47522e3af94965ecd36ef193ed4dbfacf2687c2426b40d9a6eb3fa76f9385e64"
+    },
+    {
+      "bytes": 6369,
+      "path": "session75-inheritance/sources/05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root/TYPED_PAYMENT_SYNTHESIS.md",
+      "sha256": "f2caf2e4e74e3b049091475caaa7f59d5b7364b5d56c3a8141b08d8d04a5fa0d"
+    },
+    {
+      "bytes": 24746,
+      "path": "session75-inheritance/sources/05-knowledge/results/weighted_renewal_moving_modulus_20261026/README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "bytes": 1485,
+      "path": "session75-spectral/README.md",
+      "sha256": "028b92f2ddbed27beb726b1343c687e9c97108271a3cf3f41eb0e6ff5722c087"
+    },
+    {
+      "bytes": 20667,
+      "path": "session75-spectral/RESULT.md",
+      "sha256": "09872984617860f95b21020acfa9f02df2e46594194520dd82d3162f113b6d94"
+    },
+    {
+      "bytes": 1783,
+      "path": "session75-spectral/SHA256SUMS",
+      "sha256": "1ee829368406effd1d058ea2b5e3d9854500d89947c1b1b0ea1360894ad06aa1"
+    },
+    {
+      "bytes": 1757,
+      "path": "session75-spectral/SOURCE_PINS.json",
+      "sha256": "4882a43740530a6aef0d8720fac40992e6baebfe1fe72d41f0b3bf476781208a"
+    },
+    {
+      "bytes": 27190,
+      "path": "session75-spectral/certificate.json",
+      "sha256": "e906f3c17a577d707af7f4a4d2de44c15f16ef1ded935aad3c456d6523df7914"
+    },
+    {
+      "bytes": 12342,
+      "path": "session75-spectral/check.py",
+      "sha256": "bbd5e7886a38e9a8adc51069cc84817e2d6865b1747984577669f434b6af8907"
+    },
+    {
+      "bytes": 149,
+      "path": "session75-spectral/corruption.normal.json",
+      "sha256": "c77363070adb6cdeb3b475915efebf949f9a7bc806f61147ab5c3e6c959de501"
+    },
+    {
+      "bytes": 149,
+      "path": "session75-spectral/corruption.optimized.json",
+      "sha256": "c77363070adb6cdeb3b475915efebf949f9a7bc806f61147ab5c3e6c959de501"
+    },
+    {
+      "bytes": 1911,
+      "path": "session75-spectral/generate_certificate.py",
+      "sha256": "51b36bdbf64f4aa3135b2637b3bc1740a136f63b8eac68cc83186dc79e57d894"
+    },
+    {
+      "bytes": 3086,
+      "path": "session75-spectral/receipt.normal.json",
+      "sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e"
+    },
+    {
+      "bytes": 3086,
+      "path": "session75-spectral/receipt.optimized.json",
+      "sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-spectral/sources/01-README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 18470,
+      "path": "session75-spectral/sources/02-REPORT.md",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+    },
+    {
+      "bytes": 10021,
+      "path": "session75-spectral/sources/03-THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 8936,
+      "path": "session75-spectral/sources/04-CLASSIFICATION.md",
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6"
+    },
+    {
+      "bytes": 2653,
+      "path": "session75-spectral/sources/05-S74.md",
+      "sha256": "923c55a7739fef08817c87378ec999e9d937aac52a4378eb211b21516f0a6cf5"
+    },
+    {
+      "bytes": 515,
+      "path": "session75-spectral/status-promotion/PROMOTION.json",
+      "sha256": "d224ad5e8d74b9ad6d2d26bdd92959d21369cffb2a312615744a7ce5bb5e8bfc"
+    },
+    {
+      "bytes": 20658,
+      "path": "session75-spectral/status-promotion/RESULT.reviewed-candidate.md",
+      "sha256": "ac9ce92c4802508d66a36c8d41053b741db99ef882a3eaa4290927bfd3845c16"
+    },
+    {
+      "bytes": 481,
+      "path": "session75-spectral/status-promotion/status-only.diff",
+      "sha256": "12fcb53a9d892cac5d4d4702cc0ff81581d7b3c51cc361bf17f79eecc7fbcf6d"
+    },
+    {
+      "bytes": 849,
+      "path": "session75-spectral/test_corruption.py",
+      "sha256": "240f6c1b971ce3cf71dded8e426af6d9d4ee71d745f76fd0d7f5dee7bd2b7956"
+    },
+    {
+      "bytes": 10021,
+      "path": "session75-spectral-audit/INHERITED_THM-1960.md",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 17251,
+      "path": "session75-spectral-audit/INHERITED_THM-4810.md",
+      "sha256": "963d2244b7a3504d8c549da28c6f3de8b608c95a07cdd8bab9aab4c9532f1a1c"
+    },
+    {
+      "bytes": 18640,
+      "path": "session75-spectral-audit/REPORT.md",
+      "sha256": "e4b21bb78bc99afd23a377d059908448945fe469d4e7f9c7f66c61ae68295ee7"
+    },
+    {
+      "bytes": 4668,
+      "path": "session75-spectral-audit/REVIEW_BINDING.json",
+      "sha256": "a926cf4348f011211f35e519e9b35e21f8b4135d216f122c2cfd30eb0104c767"
+    },
+    {
+      "bytes": 1490,
+      "path": "session75-spectral-audit/SHA256SUMS",
+      "sha256": "90e46fa9ae6ec5abbabd0e2cae70190a7a1ec24e9fee30eadcf29215dc5e049e"
+    },
+    {
+      "bytes": 41,
+      "path": "session75-spectral-audit/SOURCE_COMMIT",
+      "sha256": "d2ef66c4c12d365a62eb0dc13e07bc36dc952615b5c11435be32e3567121bcf2"
+    },
+    {
+      "bytes": 13208,
+      "path": "session75-spectral-audit/audit_checks.py",
+      "sha256": "36ec22c81612f375a810aff8b1f3eb7d48717bdf4d506f3ccfb2b78e9ff30053"
+    },
+    {
+      "bytes": 27190,
+      "path": "session75-spectral-audit/certificate.reviewed.json",
+      "sha256": "e906f3c17a577d707af7f4a4d2de44c15f16ef1ded935aad3c456d6523df7914"
+    },
+    {
+      "bytes": 189,
+      "path": "session75-spectral-audit/corruption.normal.json",
+      "sha256": "adf9508d7a9ddd6c9d729ad2c85c71d5eee3b5ca4624df4f62d82253a2c14e03"
+    },
+    {
+      "bytes": 189,
+      "path": "session75-spectral-audit/corruption.optimized.json",
+      "sha256": "adf9508d7a9ddd6c9d729ad2c85c71d5eee3b5ca4624df4f62d82253a2c14e03"
+    },
+    {
+      "bytes": 1402,
+      "path": "session75-spectral-audit/distances.normal.json",
+      "sha256": "0123209a9479bf438f26d97fefa24d9bbf6f049c608247c57713eb4dffbf7868"
+    },
+    {
+      "bytes": 1402,
+      "path": "session75-spectral-audit/distances.optimized.json",
+      "sha256": "0123209a9479bf438f26d97fefa24d9bbf6f049c608247c57713eb4dffbf7868"
+    },
+    {
+      "bytes": 5119,
+      "path": "session75-spectral-audit/independent_distances.py",
+      "sha256": "1962437b3001737b65850f8bf23ef8a6a89530c5c4398ec8c7f25aa84a05cf1b"
+    },
+    {
+      "bytes": 1693,
+      "path": "session75-spectral-audit/normal.json",
+      "sha256": "d6aad135e88b16016fd9f0bc039bfeb0c60163dfb933ec1871e7725231dcfd34"
+    },
+    {
+      "bytes": 1693,
+      "path": "session75-spectral-audit/optimized.json",
+      "sha256": "d6aad135e88b16016fd9f0bc039bfeb0c60163dfb933ec1871e7725231dcfd34"
+    },
+    {
+      "bytes": 3086,
+      "path": "session75-spectral-audit/producer-replay.normal.json",
+      "sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e"
+    },
+    {
+      "bytes": 3086,
+      "path": "session75-spectral-audit/producer-replay.optimized.json",
+      "sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e"
+    },
+    {
+      "bytes": 1794,
+      "path": "session75-spectral-audit/test_certificate_corruption.py",
+      "sha256": "bece13c5fec80d9e24ddd4c61b7b1139c4af6ecd7f24524b0730af75d939d5ae"
+    },
+    {
+      "bytes": 5510,
+      "path": "session75-spectral-final-byte-acceptance/FINAL_BYTE_ACCEPTANCE.json",
+      "sha256": "0ff4ff494d1077e4bc670d4e59cd4a751e5b94eaf9e0d14690d69e302cf91316"
+    },
+    {
+      "bytes": 794,
+      "path": "session75-spectral-final-byte-acceptance/README.md",
+      "sha256": "a9c29c318ff068b2c96233c02a29b5b672015597f05a01613d298d2382e7ea3b"
+    },
+    {
+      "bytes": 252,
+      "path": "session75-spectral-final-byte-acceptance/SHA256SUMS",
+      "sha256": "3d5606d9fb8ea49f9d61a765b1c4a8dc3e504de61758955a8269a2d22f5da327"
+    },
+    {
+      "bytes": 481,
+      "path": "session75-spectral-final-byte-acceptance/status-only.diff",
+      "sha256": "12fcb53a9d892cac5d4d4702cc0ff81581d7b3c51cc361bf17f79eecc7fbcf6d"
+    },
+    {
+      "bytes": 4245,
+      "path": "session75-root/OVERNIGHT_PLAN.md",
+      "sha256": "f27770dbe2ba47dfd4bdab9c9a3d5e07bb86e8c405ae4997abf3332cbae90b2e"
+    },
+    {
+      "bytes": 13453,
+      "path": "session75-black-core/BLACK_CORE_GEODESICS.md",
+      "sha256": "c4c15eaafd577706bb74a8b03f67b3077c4c1732777e53b264cee70628e2994e"
+    },
+    {
+      "bytes": 2207,
+      "path": "session75-black-core/MANIFEST.json",
+      "sha256": "70d52013c1c8813e7a65e4793f5f423ecc9a2e4af2bacb682534546ec0382e05"
+    },
+    {
+      "bytes": 959,
+      "path": "session75-black-core/SHA256SUMS",
+      "sha256": "0c7baaa04e0544f4a5f65ff3071d55351850a8a107bf812c8eb13ccdbe57dd10"
+    },
+    {
+      "bytes": 5026,
+      "path": "session75-black-core/SOURCE_LEDGER.json",
+      "sha256": "cc7ade14b99d6f9bbfeab19e3233bd073cd4b129e03a8648a2b558d1411906b3"
+    },
+    {
+      "bytes": 663,
+      "path": "session75-black-core/STATUS_PROMOTION.diff",
+      "sha256": "f1f8bab1b5d1b427e1e8841f9f01bc61e649a9acf67400135dc5a3a2b1a74ce4"
+    },
+    {
+      "bytes": 642,
+      "path": "session75-black-core/audit-normal.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "bytes": 642,
+      "path": "session75-black-core/audit-optimized.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "bytes": 8594,
+      "path": "session75-black-core/check_black_core.py",
+      "sha256": "3fd5607fc099c27bcd9b7b78b21990dcf0550ab7d769312cd4e88207844a41f8"
+    },
+    {
+      "bytes": 3604,
+      "path": "session75-black-core/independent_audit.py",
+      "sha256": "dac1562305de0e47cb9ea7dcb1ac707d5913976546c3435138c48cdc6cba30be"
+    },
+    {
+      "bytes": 225405,
+      "path": "session75-black-core/normal.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "bytes": 225405,
+      "path": "session75-black-core/optimized.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "bytes": 13406,
+      "path": "session75-black-core/reviewed/BLACK_CORE_GEODESICS.pre-promotion.md",
+      "sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d"
+    },
+    {
+      "bytes": 15445,
+      "path": "session75-black-audit/ADVERSARIAL_REPORT.md",
+      "sha256": "4fed89b0c5d65711af71ef31f2609307cf39dbba408abebcb9de03398309156a"
+    },
+    {
+      "bytes": 3400,
+      "path": "session75-black-audit/CHECKSUMS.sha256",
+      "sha256": "a1a46c4664588f83af35dae82c8d1239746e26ebef143d47b37797a1505b1fb0"
+    },
+    {
+      "bytes": 3556,
+      "path": "session75-black-audit/REVIEW_CONTEXT.json",
+      "sha256": "60eefb373716b3f94623c3c01eda99e3da2cff40f44edb8652ba4bc702565887"
+    },
+    {
+      "bytes": 6597,
+      "path": "session75-black-audit/SOURCE_BINDINGS.json",
+      "sha256": "f5991558d9c1e1f1ad381d621beae4bb5dc4b2dd5cf2e02ecc431015cdd1b357"
+    },
+    {
+      "bytes": 12556,
+      "path": "session75-black-audit/audit.py",
+      "sha256": "4e4e446d65575acab350e748193721e2c91d788f5390cc8a06645f0405b17c90"
+    },
+    {
+      "bytes": 8553,
+      "path": "session75-black-audit/normal.json",
+      "sha256": "a17a13fde4d58773b149978f839c329734f7e54d5b113418cedd0c1112fa81f2"
+    },
+    {
+      "bytes": 8553,
+      "path": "session75-black-audit/optimized.json",
+      "sha256": "a17a13fde4d58773b149978f839c329734f7e54d5b113418cedd0c1112fa81f2"
+    },
+    {
+      "bytes": 10465,
+      "path": "session75-black-audit/sources/00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "bytes": 9133,
+      "path": "session75-black-audit/sources/00-navigation/START-HERE.md",
+      "sha256": "b703e146d92f18506354df0da8e5bf51196407c79a165b31c6b29f69aaaa2433"
+    },
+    {
+      "bytes": 23418,
+      "path": "session75-black-audit/sources/01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "bytes": 21173,
+      "path": "session75-black-audit/sources/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938"
+    },
+    {
+      "bytes": 2500,
+      "path": "session75-black-audit/sources/04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a"
+    },
+    {
+      "bytes": 24382,
+      "path": "session75-black-audit/sources/04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c"
+    },
+    {
+      "bytes": 142515,
+      "path": "session75-black-audit/sources/04-computation/experiments/tiling_line_metagraph_census_20261020_lines_n7.tsv",
+      "sha256": "404785053e9b39bca7dfe138b5a1c0bc927476c55b6a0b11177500056f1d33a0"
+    },
+    {
+      "bytes": 7216,
+      "path": "session75-black-audit/sources/05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "sha256": "83ddf9b08f516f18a260c95279b280eed5a7de34c35166080194625bc6df1f76"
+    },
+    {
+      "bytes": 19260,
+      "path": "session75-black-audit/sources/05-knowledge/results/black_descent_20261020c/cycles.md",
+      "sha256": "b8c998e416dae8a9b7397a2b02b17a380b49bb272a272e07a1255214b5ff6280"
+    },
+    {
+      "bytes": 12531,
+      "path": "session75-black-audit/sources/05-knowledge/results/black_descent_20261020c/scc.md",
+      "sha256": "72c3e2ab6d3b98d45a4cb0e50e0884afc65d0d65c1ed9aa9b073e1d267c93f47"
+    },
+    {
+      "bytes": 16559,
+      "path": "session75-black-audit/sources/05-knowledge/results/blue_quotient_20261020b/structure.md",
+      "sha256": "ad380c7bd6ab8ed0b6b48c8e042183813ced001dc03d1931ab816d9cbe42ad74"
+    },
+    {
+      "bytes": 21387,
+      "path": "session75-black-audit/sources/05-knowledge/results/merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md",
+      "sha256": "2df36d3726740274bd33792231b6f92d21f209adaac41ced38195ff8ea2ce736"
+    },
+    {
+      "bytes": 10837,
+      "path": "session75-black-audit/sources/05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388"
+    },
+    {
+      "bytes": 15899,
+      "path": "session75-black-audit/sources/05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "sha256": "bb1cf7d9956c4bd83dabe89c419e76b7649dda743176cb567e8f440b7a62d56e"
+    },
+    {
+      "bytes": 6823,
+      "path": "session75-black-audit/sources/AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 13406,
+      "path": "session75-black-audit/sources/producer/BLACK_CORE_GEODESICS.md",
+      "sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d"
+    },
+    {
+      "bytes": 5026,
+      "path": "session75-black-audit/sources/producer/SOURCE_LEDGER.json",
+      "sha256": "cc7ade14b99d6f9bbfeab19e3233bd073cd4b129e03a8648a2b558d1411906b3"
+    },
+    {
+      "bytes": 642,
+      "path": "session75-black-audit/sources/producer/audit-normal.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "bytes": 642,
+      "path": "session75-black-audit/sources/producer/audit-optimized.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "bytes": 8594,
+      "path": "session75-black-audit/sources/producer/check_black_core.py",
+      "sha256": "3fd5607fc099c27bcd9b7b78b21990dcf0550ab7d769312cd4e88207844a41f8"
+    },
+    {
+      "bytes": 3604,
+      "path": "session75-black-audit/sources/producer/independent_audit.py",
+      "sha256": "dac1562305de0e47cb9ea7dcb1ac707d5913976546c3435138c48cdc6cba30be"
+    },
+    {
+      "bytes": 225405,
+      "path": "session75-black-audit/sources/producer/normal.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "bytes": 225405,
+      "path": "session75-black-audit/sources/producer/optimized.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "bytes": 20896,
+      "path": "session75-root-transport/REPORT.md",
+      "sha256": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa"
+    },
+    {
+      "bytes": 1150,
+      "path": "session75-root-transport/SHA256SUMS",
+      "sha256": "2eeb0ffd5c0346ce65efad647f8a5079b0de107376731f0521caff054f5603a3"
+    },
+    {
+      "bytes": 2647,
+      "path": "session75-root-transport/SOURCE_PINS.json",
+      "sha256": "d8d2c7712d3862d9789a71494faf01ef6b29513c34110dd70ef191ba7b0c778d"
+    },
+    {
+      "bytes": 7965,
+      "path": "session75-root-transport/check.py",
+      "sha256": "e45112beb8ed4d035d7c21bcbdb42301f39519be0f648f0de571cb7cf360eb34"
+    },
+    {
+      "bytes": 4705,
+      "path": "session75-root-transport/normal.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "bytes": 4705,
+      "path": "session75-root-transport/optimized.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "bytes": 4620,
+      "path": "session75-root-transport/sources/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-root-transport/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 6299,
+      "path": "session75-root-transport/sources/paid_root_SOURCE_PINS.json",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-root-transport/sources/results__root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 26664,
+      "path": "session75-root-transport/sources/results__root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "bytes": 24768,
+      "path": "session75-root-transport/sources/root_transport_energy.md",
+      "sha256": "bdfc51ebf2e27c4b8c25a1908322f84d6cb33e5ea22ae57d90cc973601910b86"
+    },
+    {
+      "bytes": 24746,
+      "path": "session75-root-transport/sources/weighted_renewal_moving_modulus_20261026__README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "bytes": 1250,
+      "path": "session75-root-audit/MANIFEST.json",
+      "sha256": "aa8b1a04d31b31761dd830fa58ad3a280d40aec7f1352cdad7dae872c4b14e37"
+    },
+    {
+      "bytes": 16689,
+      "path": "session75-root-audit/REPORT.md",
+      "sha256": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1"
+    },
+    {
+      "bytes": 1014,
+      "path": "session75-root-audit/SOURCE_PINS.json",
+      "sha256": "ceb5e34cc3819448b4795e1a21cc0126b5dd96b82a50732a557e1ec32e26c23e"
+    },
+    {
+      "bytes": 19402,
+      "path": "session75-root-audit/check.py",
+      "sha256": "f72b6ed3f8147f555d1b2890e7f8c7e2711d8526a1b0f91065654715ecc44289"
+    },
+    {
+      "bytes": 9951,
+      "path": "session75-root-audit/normal.json",
+      "sha256": "670ee2d90a418b3c7f018b3afbb05814b229868324526cc99d22603666a1e892"
+    },
+    {
+      "bytes": 9951,
+      "path": "session75-root-audit/optimized.json",
+      "sha256": "670ee2d90a418b3c7f018b3afbb05814b229868324526cc99d22603666a1e892"
+    },
+    {
+      "bytes": 4620,
+      "path": "session75-root-audit/sources/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-root-audit/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-root-audit/sources/root_eisenstein_first_arrival.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 5472,
+      "path": "session75-dyadic/AUDIT.md",
+      "sha256": "3e024951463f4e7e2f4c3ce81efc18151104412a0364d2abc774028a2692186a"
+    },
+    {
+      "bytes": 1773,
+      "path": "session75-dyadic/MANIFEST.json",
+      "sha256": "ad8d60b20884230f7bd2180e22115b16f970d4cd0aa284a1149d45cd51f321e8"
+    },
+    {
+      "bytes": 984,
+      "path": "session75-dyadic/MANIFEST.superseded-v1.json",
+      "sha256": "ecece80add30c41c4ad4161c6b9689511797f0af181e3fa271074d2210ce5b3d"
+    },
+    {
+      "bytes": 21639,
+      "path": "session75-dyadic/README.md",
+      "sha256": "68ca416d26ae06f2f09b3707ad65bd6620ef8ba531a26c008aa811ec9f1d92aa"
+    },
+    {
+      "bytes": 1042,
+      "path": "session75-dyadic/SOURCE_PINS.json",
+      "sha256": "9dcd95e7a791587eb578c8f19b299c2580925cac9ac4d1170158e04aac5d865c"
+    },
+    {
+      "bytes": 4620,
+      "path": "session75-dyadic/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 106249,
+      "path": "session75-dyadic/native_sources_N1024.json",
+      "sha256": "6f939ab19c52f4840fd7032c9fdd9ba76a98c7ee3dc9dc5d2f5c14228315f847"
+    },
+    {
+      "bytes": 439790,
+      "path": "session75-dyadic/native_sources_N4096.json",
+      "sha256": "4ed6130bd0b368cab2af3252958b940f3d056749bf72f1d85784745914d044ba"
+    },
+    {
+      "bytes": 51611,
+      "path": "session75-dyadic/native_sources_N512.json",
+      "sha256": "12c32cbbaba51708441918a969806bd384d01c671167407389d227b25a91ca3f"
+    },
+    {
+      "bytes": 52917,
+      "path": "session75-dyadic/receipt.json",
+      "sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb"
+    },
+    {
+      "bytes": 52917,
+      "path": "session75-dyadic/receipt.optimized.json",
+      "sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-dyadic/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "path": "session75-dyadic/sources/paid_root_verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-dyadic/sources/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 16188,
+      "path": "session75-dyadic/verify.py",
+      "sha256": "a751e923e83fcc537e9511fae7d868bd185db3bbc5c74b034636b4febdc888d8"
+    },
+    {
+      "bytes": 14174,
+      "path": "session75-dyadic-audit/AUDIT_REPORT.md",
+      "sha256": "aee269f890f6348add45d92c64f7432519ac60b50b56b25732a72544efdb00d9"
+    },
+    {
+      "bytes": 3415,
+      "path": "session75-dyadic-audit/MANIFEST.audit.json",
+      "sha256": "97fb86238bb42bca169aeb5f0da4dffc936ab67a361d2ae4056b74eee8afd521"
+    },
+    {
+      "bytes": 1840,
+      "path": "session75-dyadic-audit/SOURCE_BINDINGS.json",
+      "sha256": "fbd52f66fd7f2cff38cc6c23a0095cf047ad882512e6407341c374446c50c263"
+    },
+    {
+      "bytes": 4620,
+      "path": "session75-dyadic-audit/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 19834,
+      "path": "session75-dyadic-audit/independent_verify.py",
+      "sha256": "3086213d044d300f2f637ce4e691392ae1fca3ea079084fe3fd8e5e60453bc7d"
+    },
+    {
+      "bytes": 5472,
+      "path": "session75-dyadic-audit/producer_revision2/AUDIT.md",
+      "sha256": "3e024951463f4e7e2f4c3ce81efc18151104412a0364d2abc774028a2692186a"
+    },
+    {
+      "bytes": 1773,
+      "path": "session75-dyadic-audit/producer_revision2/MANIFEST.json",
+      "sha256": "ad8d60b20884230f7bd2180e22115b16f970d4cd0aa284a1149d45cd51f321e8"
+    },
+    {
+      "bytes": 984,
+      "path": "session75-dyadic-audit/producer_revision2/MANIFEST.superseded-v1.json",
+      "sha256": "ecece80add30c41c4ad4161c6b9689511797f0af181e3fa271074d2210ce5b3d"
+    },
+    {
+      "bytes": 21639,
+      "path": "session75-dyadic-audit/producer_revision2/README.md",
+      "sha256": "68ca416d26ae06f2f09b3707ad65bd6620ef8ba531a26c008aa811ec9f1d92aa"
+    },
+    {
+      "bytes": 1042,
+      "path": "session75-dyadic-audit/producer_revision2/SOURCE_PINS.json",
+      "sha256": "9dcd95e7a791587eb578c8f19b299c2580925cac9ac4d1170158e04aac5d865c"
+    },
+    {
+      "bytes": 4620,
+      "path": "session75-dyadic-audit/producer_revision2/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 106249,
+      "path": "session75-dyadic-audit/producer_revision2/native_sources_N1024.json",
+      "sha256": "6f939ab19c52f4840fd7032c9fdd9ba76a98c7ee3dc9dc5d2f5c14228315f847"
+    },
+    {
+      "bytes": 439790,
+      "path": "session75-dyadic-audit/producer_revision2/native_sources_N4096.json",
+      "sha256": "4ed6130bd0b368cab2af3252958b940f3d056749bf72f1d85784745914d044ba"
+    },
+    {
+      "bytes": 51611,
+      "path": "session75-dyadic-audit/producer_revision2/native_sources_N512.json",
+      "sha256": "12c32cbbaba51708441918a969806bd384d01c671167407389d227b25a91ca3f"
+    },
+    {
+      "bytes": 52917,
+      "path": "session75-dyadic-audit/producer_revision2/receipt.json",
+      "sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb"
+    },
+    {
+      "bytes": 52917,
+      "path": "session75-dyadic-audit/producer_revision2/receipt.optimized.json",
+      "sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-dyadic-audit/producer_revision2/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "path": "session75-dyadic-audit/producer_revision2/sources/paid_root_verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-dyadic-audit/producer_revision2/sources/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 16188,
+      "path": "session75-dyadic-audit/producer_revision2/verify.py",
+      "sha256": "a751e923e83fcc537e9511fae7d868bd185db3bbc5c74b034636b4febdc888d8"
+    },
+    {
+      "bytes": 67329,
+      "path": "session75-dyadic-audit/receipt.compared.json",
+      "sha256": "5a7177ac3f205a7a58682d4fcb6f867e32f74bee09a23b54f6d19203f749fdbe"
+    },
+    {
+      "bytes": 67329,
+      "path": "session75-dyadic-audit/receipt.optimized.json",
+      "sha256": "5a7177ac3f205a7a58682d4fcb6f867e32f74bee09a23b54f6d19203f749fdbe"
+    },
+    {
+      "bytes": 67283,
+      "path": "session75-dyadic-audit/receipt.standalone.json",
+      "sha256": "aa1d3a1121f3e01e007b0c1b56349320cae650005f8ed7d0b7e7ba6fa073f162"
+    },
+    {
+      "bytes": 511,
+      "path": "session75-dyadic-audit/run_audit.sh",
+      "sha256": "ad0ffd07cdefd40f2ee6973bc48df042ffc763f027ff1c8e930036ed9da55a2c"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-dyadic-audit/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 16323,
+      "path": "session75-dyadic-audit/sources/paid_root_verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-dyadic-audit/sources/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 4348,
+      "path": "session75-root-c2-acceptance/ACCEPTANCE.json",
+      "sha256": "6ca68f74d265a3a4613e4af8c80c488bd84cb322205992773991669ca9731b2b"
+    },
+    {
+      "bytes": 1853,
+      "path": "session75-root-c2-acceptance/ACCEPTANCE.md",
+      "sha256": "673cae50e321f092f50e04dd5e8cebf5b0f18cedc80abe1842bbb7a1d673a0fa"
+    },
+    {
+      "bytes": 4705,
+      "path": "session75-root-c2-acceptance/replayed-normal.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "bytes": 4705,
+      "path": "session75-root-c2-acceptance/replayed-optimized.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "bytes": 1834,
+      "path": "session75-root-c2-acceptance/reviewed_inventory.json",
+      "sha256": "f774f8020caf2e955f1ccd6013e5ac9ce821e1a9544ad87db5f5a6410e2837ab"
+    },
+    {
+      "bytes": 4939,
+      "path": "session75-incoming/HYP-9422.md",
+      "sha256": "0c16c42b808993fd16757682fc7663f9e68c1971d20c7467f7936e49dd8fb8e5"
+    },
+    {
+      "bytes": 10650,
+      "path": "session75-incoming/INTEGRATION_NOTE.md",
+      "sha256": "49959ff2c42844da9eec3af924a95c8a9681946bf4fdac02d2d137de11f1ebea"
+    },
+    {
+      "bytes": 1751,
+      "path": "session75-incoming/MINIMAL_ORDER_CORRECTION.patch",
+      "sha256": "76d32cf149f4f7129100d81d39706ddb6ec696b84e0d1bfbc473e9ab083d8152"
+    },
+    {
+      "bytes": 22983,
+      "path": "session75-incoming/README.source.md",
+      "sha256": "fac0596901e8a69765c052d3c358c6b1c24c697accc9bf75367fdc4679a722c8"
+    },
+    {
+      "bytes": 3623,
+      "path": "session75-incoming/SOURCE_PINS.json",
+      "sha256": "489b381198b1e97fa6dc2a9cb9259fb36e0c4131d4514e502281ec5f88af782f"
+    },
+    {
+      "bytes": 9921,
+      "path": "session75-incoming/THM-4814.md",
+      "sha256": "619675ec852819f4c4b8f5b1b2f3755a67c40255f8754725a6e44438fa5bf8e3"
+    },
+    {
+      "equal_to": "session75-spectral/certificate.json",
+      "path": "session75-spectral-audit/certificate.reviewed.json",
+      "sha256": "e906f3c17a577d707af7f4a4d2de44c15f16ef1ded935aad3c456d6523df7914"
+    },
+    {
+      "equal_to": "session75-spectral/receipt.normal.json",
+      "path": "session75-spectral-audit/producer-replay.normal.json",
+      "sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e"
+    },
+    {
+      "equal_to": "session75-spectral/receipt.optimized.json",
+      "path": "session75-spectral-audit/producer-replay.optimized.json",
+      "sha256": "f9749bb57e569c6318b53d7120b88bc791970d1bc1a9630f6366b6795fa7278e"
+    },
+    {
+      "bytes": 20896,
+      "path": "session75-root-transport/REPORT.md",
+      "sha256": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa"
+    },
+    {
+      "bytes": 1150,
+      "path": "session75-root-transport/SHA256SUMS",
+      "sha256": "2eeb0ffd5c0346ce65efad647f8a5079b0de107376731f0521caff054f5603a3"
+    },
+    {
+      "bytes": 2647,
+      "path": "session75-root-transport/SOURCE_PINS.json",
+      "sha256": "d8d2c7712d3862d9789a71494faf01ef6b29513c34110dd70ef191ba7b0c778d"
+    },
+    {
+      "bytes": 7965,
+      "path": "session75-root-transport/check.py",
+      "sha256": "e45112beb8ed4d035d7c21bcbdb42301f39519be0f648f0de571cb7cf360eb34"
+    },
+    {
+      "bytes": 4705,
+      "path": "session75-root-transport/normal.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "bytes": 4705,
+      "path": "session75-root-transport/optimized.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "bytes": 4620,
+      "path": "session75-root-transport/sources/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 22488,
+      "path": "session75-root-transport/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 6299,
+      "path": "session75-root-transport/sources/paid_root_SOURCE_PINS.json",
+      "sha256": "ea399b9e78c684f1486a6985698ee7ef1eb550173d615c06ec30dcd55667a05d"
+    },
+    {
+      "bytes": 14898,
+      "path": "session75-root-transport/sources/results__root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "bytes": 26664,
+      "path": "session75-root-transport/sources/results__root_sparse_boundary_module_20261017i.md",
+      "sha256": "2a82460174f806daa64cae31b1fe856ff6b24812e4d90e285a50d51c03805dec"
+    },
+    {
+      "bytes": 24768,
+      "path": "session75-root-transport/sources/root_transport_energy.md",
+      "sha256": "bdfc51ebf2e27c4b8c25a1908322f84d6cb33e5ea22ae57d90cc973601910b86"
+    },
+    {
+      "bytes": 24746,
+      "path": "session75-root-transport/sources/weighted_renewal_moving_modulus_20261026__README.md",
+      "sha256": "53cbc148eecb8dcbbbd22acf2f7c4289127fd2698bd25633514df8ece2b96498"
+    },
+    {
+      "equal_to": "session75-root-transport/normal.json",
+      "path": "session75-root-c2-acceptance/replayed-normal.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "equal_to": "session75-root-transport/optimized.json",
+      "path": "session75-root-c2-acceptance/replayed-optimized.json",
+      "sha256": "51c0e70941c3163492d6d2b238a7e87dd6a9d05e94f1f87a9d0a1367d883e8bf"
+    },
+    {
+      "equal_to": "session75-black-core/reviewed/BLACK_CORE_GEODESICS.pre-promotion.md",
+      "path": "session75-black-audit/sources/producer/BLACK_CORE_GEODESICS.md",
+      "sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d"
+    },
+    {
+      "equal_to": "session75-black-core/SOURCE_LEDGER.json",
+      "path": "session75-black-audit/sources/producer/SOURCE_LEDGER.json",
+      "sha256": "cc7ade14b99d6f9bbfeab19e3233bd073cd4b129e03a8648a2b558d1411906b3"
+    },
+    {
+      "equal_to": "session75-black-core/normal.json",
+      "path": "session75-black-audit/sources/producer/normal.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "equal_to": "session75-black-core/optimized.json",
+      "path": "session75-black-audit/sources/producer/optimized.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "equal_to": "session75-black-core/audit-normal.json",
+      "path": "session75-black-audit/sources/producer/audit-normal.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "equal_to": "session75-black-core/audit-optimized.json",
+      "path": "session75-black-audit/sources/producer/audit-optimized.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "equal_to": "session75-black-core/check_black_core.py",
+      "path": "session75-black-audit/sources/producer/check_black_core.py",
+      "sha256": "3fd5607fc099c27bcd9b7b78b21990dcf0550ab7d769312cd4e88207844a41f8"
+    },
+    {
+      "equal_to": "session75-black-core/independent_audit.py",
+      "path": "session75-black-audit/sources/producer/independent_audit.py",
+      "sha256": "dac1562305de0e47cb9ea7dcb1ac707d5913976546c3435138c48cdc6cba30be"
+    },
+    {
+      "equal_to": "session75-dyadic/AUDIT.md",
+      "path": "session75-dyadic-audit/producer_revision2/AUDIT.md",
+      "sha256": "3e024951463f4e7e2f4c3ce81efc18151104412a0364d2abc774028a2692186a"
+    },
+    {
+      "equal_to": "session75-dyadic/MANIFEST.json",
+      "path": "session75-dyadic-audit/producer_revision2/MANIFEST.json",
+      "sha256": "ad8d60b20884230f7bd2180e22115b16f970d4cd0aa284a1149d45cd51f321e8"
+    },
+    {
+      "equal_to": "session75-dyadic/MANIFEST.superseded-v1.json",
+      "path": "session75-dyadic-audit/producer_revision2/MANIFEST.superseded-v1.json",
+      "sha256": "ecece80add30c41c4ad4161c6b9689511797f0af181e3fa271074d2210ce5b3d"
+    },
+    {
+      "equal_to": "session75-dyadic/README.md",
+      "path": "session75-dyadic-audit/producer_revision2/README.md",
+      "sha256": "68ca416d26ae06f2f09b3707ad65bd6620ef8ba531a26c008aa811ec9f1d92aa"
+    },
+    {
+      "equal_to": "session75-dyadic/SOURCE_PINS.json",
+      "path": "session75-dyadic-audit/producer_revision2/SOURCE_PINS.json",
+      "sha256": "9dcd95e7a791587eb578c8f19b299c2580925cac9ac4d1170158e04aac5d865c"
+    },
+    {
+      "equal_to": "session75-dyadic/frontier.txt",
+      "path": "session75-dyadic-audit/producer_revision2/frontier.txt",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "equal_to": "session75-dyadic/native_sources_N1024.json",
+      "path": "session75-dyadic-audit/producer_revision2/native_sources_N1024.json",
+      "sha256": "6f939ab19c52f4840fd7032c9fdd9ba76a98c7ee3dc9dc5d2f5c14228315f847"
+    },
+    {
+      "equal_to": "session75-dyadic/native_sources_N4096.json",
+      "path": "session75-dyadic-audit/producer_revision2/native_sources_N4096.json",
+      "sha256": "4ed6130bd0b368cab2af3252958b940f3d056749bf72f1d85784745914d044ba"
+    },
+    {
+      "equal_to": "session75-dyadic/native_sources_N512.json",
+      "path": "session75-dyadic-audit/producer_revision2/native_sources_N512.json",
+      "sha256": "12c32cbbaba51708441918a969806bd384d01c671167407389d227b25a91ca3f"
+    },
+    {
+      "equal_to": "session75-dyadic/receipt.json",
+      "path": "session75-dyadic-audit/producer_revision2/receipt.json",
+      "sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb"
+    },
+    {
+      "equal_to": "session75-dyadic/receipt.optimized.json",
+      "path": "session75-dyadic-audit/producer_revision2/receipt.optimized.json",
+      "sha256": "1ea18ead8fdf30dde1329104c69d18769101f834278886e2b98a7384f2e7d6eb"
+    },
+    {
+      "equal_to": "session75-dyadic/sources/paid_root_README.md",
+      "path": "session75-dyadic-audit/producer_revision2/sources/paid_root_README.md",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "equal_to": "session75-dyadic/sources/paid_root_verify.py",
+      "path": "session75-dyadic-audit/producer_revision2/sources/paid_root_verify.py",
+      "sha256": "f6889495e0938a2fa3bece3e536be1a943aa6315a9ee4f3f33f12fbe987c94b2"
+    },
+    {
+      "equal_to": "session75-dyadic/sources/root_eisenstein_first_arrival_20261018j.md",
+      "path": "session75-dyadic-audit/producer_revision2/sources/root_eisenstein_first_arrival_20261018j.md",
+      "sha256": "accf35a22c7fc6557e55a9098134eb6e6a74092abc372cc3f24d4f5a41556233"
+    },
+    {
+      "equal_to": "session75-dyadic/verify.py",
+      "path": "session75-dyadic-audit/producer_revision2/verify.py",
+      "sha256": "a751e923e83fcc537e9511fae7d868bd185db3bbc5c74b034636b4febdc888d8"
+    },
+    {
+      "path": "session75-spectral/RESULT.md",
+      "sha256": "09872984617860f95b21020acfa9f02df2e46594194520dd82d3162f113b6d94"
+    },
+    {
+      "path": "session75-spectral/status-promotion/RESULT.reviewed-candidate.md",
+      "sha256": "ac9ce92c4802508d66a36c8d41053b741db99ef882a3eaa4290927bfd3845c16"
+    },
+    {
+      "path": "session75-spectral/status-promotion/PROMOTION.json",
+      "sha256": "d224ad5e8d74b9ad6d2d26bdd92959d21369cffb2a312615744a7ce5bb5e8bfc"
+    },
+    {
+      "path": "session75-spectral-audit/REPORT.md",
+      "sha256": "e4b21bb78bc99afd23a377d059908448945fe469d4e7f9c7f66c61ae68295ee7"
+    },
+    {
+      "path": "session75-spectral-audit/REVIEW_BINDING.json",
+      "sha256": "a926cf4348f011211f35e519e9b35e21f8b4135d216f122c2cfd30eb0104c767"
+    },
+    {
+      "path": "session75-black-core/reviewed/BLACK_CORE_GEODESICS.pre-promotion.md",
+      "sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d"
+    },
+    {
+      "path": "session75-black-audit/ADVERSARIAL_REPORT.md",
+      "sha256": "4fed89b0c5d65711af71ef31f2609307cf39dbba408abebcb9de03398309156a"
+    },
+    {
+      "path": "session75-black-audit/SOURCE_BINDINGS.json",
+      "sha256": "f5991558d9c1e1f1ad381d621beae4bb5dc4b2dd5cf2e02ecc431015cdd1b357"
+    },
+    {
+      "path": "session75-root-transport/REPORT.md",
+      "sha256": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa"
+    },
+    {
+      "path": "session75-root-audit/REPORT.md",
+      "sha256": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1"
+    },
+    {
+      "path": "session75-root-audit/MANIFEST.json",
+      "sha256": "aa8b1a04d31b31761dd830fa58ad3a280d40aec7f1352cdad7dae872c4b14e37"
+    },
+    {
+      "path": "session75-dyadic/README.md",
+      "sha256": "68ca416d26ae06f2f09b3707ad65bd6620ef8ba531a26c008aa811ec9f1d92aa"
+    },
+    {
+      "path": "session75-dyadic-audit/AUDIT_REPORT.md",
+      "sha256": "aee269f890f6348add45d92c64f7432519ac60b50b56b25732a72544efdb00d9"
+    },
+    {
+      "path": "session75-dyadic-audit/MANIFEST.audit.json",
+      "sha256": "97fb86238bb42bca169aeb5f0da4dffc936ab67a361d2ae4056b74eee8afd521"
+    }
+  ],
+  "schema": "session75-provenance-rules-v1",
+  "sha256sum_manifests": [
+    {
+      "file": "SHA256SUMS",
+      "lane": "session75-spectral"
+    },
+    {
+      "file": "SHA256SUMS",
+      "lane": "session75-spectral-audit"
+    },
+    {
+      "file": "SHA256SUMS",
+      "lane": "session75-spectral-final-byte-acceptance"
+    },
+    {
+      "file": "CHECKSUMS.sha256",
+      "lane": "session75-black-audit"
+    },
+    {
+      "file": "SHA256SUMS",
+      "lane": "session75-black-core"
+    },
+    {
+      "file": "SHA256SUMS",
+      "lane": "session75-root-transport"
+    }
+  ]
+}

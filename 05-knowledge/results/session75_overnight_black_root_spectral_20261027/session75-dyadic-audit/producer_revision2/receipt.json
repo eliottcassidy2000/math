@@ -1,0 +1,2450 @@
+{
+  "algebra": {
+    "four_tuple_universe": 625,
+    "four_tuples_checked": 625,
+    "higher_arity": [
+      {
+        "C": 11,
+        "P": 13,
+        "mean": "13",
+        "n": 2,
+        "perfect_matchings": 1
+      },
+      {
+        "C": 19,
+        "P": 43,
+        "mean": "27",
+        "n": 4,
+        "perfect_matchings": 3
+      },
+      {
+        "C": 27,
+        "P": 91,
+        "mean": "199/5",
+        "n": 6,
+        "perfect_matchings": 15
+      },
+      {
+        "C": 43,
+        "P": 111,
+        "mean": "369/7",
+        "n": 8,
+        "perfect_matchings": 105
+      }
+    ],
+    "sharp_hostile": {
+      "C": 16,
+      "P": 16,
+      "children": [
+        [
+          2,
+          -1
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "full_source_norm": 8,
+      "labelled_unit_sources": [
+        [
+          "a1",
+          0,
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          "a2",
+          0,
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          "a3",
+          0,
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          "b1",
+          1,
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          "b2",
+          1,
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          "b3",
+          1,
+          [
+            0,
+            -1
+          ]
+        ],
+        [
+          "c1",
+          2,
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "d1",
+          3,
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "local_debts": [
+        16,
+        8,
+        8
+      ],
+      "mean_local_debt": "32/3",
+      "mean_middle": "16",
+      "middle_energies": [
+        32,
+        8,
+        8
+      ]
+    },
+    "terminal_aggregation": [
+      {
+        "copies": 1,
+        "minimum_excess": 8
+      },
+      {
+        "copies": 2,
+        "minimum_excess": 8
+      },
+      {
+        "copies": 3,
+        "minimum_excess": 0
+      },
+      {
+        "copies": 4,
+        "minimum_excess": 8
+      },
+      {
+        "copies": 5,
+        "minimum_excess": 8
+      },
+      {
+        "copies": 6,
+        "minimum_excess": 0
+      }
+    ]
+  },
+  "native": {
+    "controls": [
+      {
+        "D_plus": 79,
+        "N": 512,
+        "S_arrived": 1244,
+        "S_full": 1244,
+        "arrived_sources": 768,
+        "depth_cutoff": 42,
+        "empty_bin_ledger": [
+          {
+            "conceptual_bins": 500,
+            "occupied_by_labels": 500,
+            "q": 1,
+            "unoccupied_bins": 0
+          },
+          {
+            "conceptual_bins": 1000,
+            "occupied_by_labels": 579,
+            "q": 2,
+            "unoccupied_bins": 421
+          },
+          {
+            "conceptual_bins": 2000,
+            "occupied_by_labels": 629,
+            "q": 4,
+            "unoccupied_bins": 1371
+          },
+          {
+            "conceptual_bins": 4000,
+            "occupied_by_labels": 693,
+            "q": 8,
+            "unoccupied_bins": 3307
+          },
+          {
+            "conceptual_bins": 8000,
+            "occupied_by_labels": 728,
+            "q": 16,
+            "unoccupied_bins": 7272
+          },
+          {
+            "conceptual_bins": 16000,
+            "occupied_by_labels": 745,
+            "q": 32,
+            "unoccupied_bins": 15255
+          },
+          {
+            "conceptual_bins": 32000,
+            "occupied_by_labels": 756,
+            "q": 64,
+            "unoccupied_bins": 31244
+          },
+          {
+            "conceptual_bins": 64000,
+            "occupied_by_labels": 763,
+            "q": 128,
+            "unoccupied_bins": 63237
+          },
+          {
+            "conceptual_bins": 128000,
+            "occupied_by_labels": 767,
+            "q": 256,
+            "unoccupied_bins": 127233
+          },
+          {
+            "conceptual_bins": 256000,
+            "occupied_by_labels": 768,
+            "q": 512,
+            "unoccupied_bins": 255232
+          },
+          {
+            "conceptual_bins": 512000,
+            "occupied_by_labels": 768,
+            "q": 1024,
+            "unoccupied_bins": 511232
+          }
+        ],
+        "energies": [
+          1313,
+          1274,
+          1268,
+          1261,
+          1255,
+          1242,
+          1252,
+          1247,
+          1244,
+          1244,
+          1244
+        ],
+        "four_child_controls": [
+          {
+            "C": 1268,
+            "P": 1313,
+            "global_same_pattern_middle_energies": [
+              1281,
+              1274,
+              1294
+            ],
+            "mean_middle": "1283",
+            "q": 1,
+            "two_level_debts": [
+              45,
+              45,
+              45
+            ]
+          },
+          {
+            "C": 1261,
+            "P": 1274,
+            "global_same_pattern_middle_energies": [
+              1265,
+              1268,
+              1263
+            ],
+            "mean_middle": "3796/3",
+            "q": 2,
+            "two_level_debts": [
+              13,
+              13,
+              13
+            ]
+          },
+          {
+            "C": 1255,
+            "P": 1268,
+            "global_same_pattern_middle_energies": [
+              1265,
+              1261,
+              1252
+            ],
+            "mean_middle": "3778/3",
+            "q": 4,
+            "two_level_debts": [
+              13,
+              13,
+              16
+            ]
+          },
+          {
+            "C": 1242,
+            "P": 1261,
+            "global_same_pattern_middle_energies": [
+              1244,
+              1255,
+              1246
+            ],
+            "mean_middle": "3745/3",
+            "q": 8,
+            "two_level_debts": [
+              19,
+              19,
+              19
+            ]
+          },
+          {
+            "C": 1252,
+            "P": 1255,
+            "global_same_pattern_middle_energies": [
+              1251,
+              1242,
+              1266
+            ],
+            "mean_middle": "1253",
+            "q": 16,
+            "two_level_debts": [
+              4,
+              13,
+              14
+            ]
+          },
+          {
+            "C": 1247,
+            "P": 1242,
+            "global_same_pattern_middle_energies": [
+              1242,
+              1252,
+              1242
+            ],
+            "mean_middle": "3736/3",
+            "q": 32,
+            "two_level_debts": [
+              0,
+              5,
+              0
+            ]
+          },
+          {
+            "C": 1244,
+            "P": 1252,
+            "global_same_pattern_middle_energies": [
+              1251,
+              1247,
+              1242
+            ],
+            "mean_middle": "3740/3",
+            "q": 64,
+            "two_level_debts": [
+              8,
+              8,
+              10
+            ]
+          },
+          {
+            "C": 1244,
+            "P": 1247,
+            "global_same_pattern_middle_energies": [
+              1244,
+              1244,
+              1247
+            ],
+            "mean_middle": "1245",
+            "q": 128,
+            "two_level_debts": [
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "C": 1244,
+            "P": 1244,
+            "global_same_pattern_middle_energies": [
+              1244,
+              1244,
+              1244
+            ],
+            "mean_middle": "1244",
+            "q": 256,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "level_deltas": [
+          39,
+          6,
+          7,
+          6,
+          13,
+          -10,
+          5,
+          3,
+          0,
+          0
+        ],
+        "moduli": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "same_terminal_labelled_pairs": 537,
+        "sources_total": 768,
+        "sum_positive_labelled_pair_interactions": 433,
+        "sum_positive_parent_bin_interactions": 293,
+        "terminal_energy": 1313,
+        "zero_charge_arrivals": 12
+      },
+      {
+        "D_plus": 335,
+        "N": 1024,
+        "S_arrived": 2485,
+        "S_full": 2485,
+        "arrived_sources": 1536,
+        "depth_cutoff": 43,
+        "empty_bin_ledger": [
+          {
+            "conceptual_bins": 559,
+            "occupied_by_labels": 559,
+            "q": 1,
+            "unoccupied_bins": 0
+          },
+          {
+            "conceptual_bins": 1118,
+            "occupied_by_labels": 724,
+            "q": 2,
+            "unoccupied_bins": 394
+          },
+          {
+            "conceptual_bins": 2236,
+            "occupied_by_labels": 856,
+            "q": 4,
+            "unoccupied_bins": 1380
+          },
+          {
+            "conceptual_bins": 4472,
+            "occupied_by_labels": 1072,
+            "q": 8,
+            "unoccupied_bins": 3400
+          },
+          {
+            "conceptual_bins": 8944,
+            "occupied_by_labels": 1251,
+            "q": 16,
+            "unoccupied_bins": 7693
+          },
+          {
+            "conceptual_bins": 17888,
+            "occupied_by_labels": 1370,
+            "q": 32,
+            "unoccupied_bins": 16518
+          },
+          {
+            "conceptual_bins": 35776,
+            "occupied_by_labels": 1444,
+            "q": 64,
+            "unoccupied_bins": 34332
+          },
+          {
+            "conceptual_bins": 71552,
+            "occupied_by_labels": 1494,
+            "q": 128,
+            "unoccupied_bins": 70058
+          },
+          {
+            "conceptual_bins": 143104,
+            "occupied_by_labels": 1519,
+            "q": 256,
+            "unoccupied_bins": 141585
+          },
+          {
+            "conceptual_bins": 286208,
+            "occupied_by_labels": 1531,
+            "q": 512,
+            "unoccupied_bins": 284677
+          },
+          {
+            "conceptual_bins": 572416,
+            "occupied_by_labels": 1533,
+            "q": 1024,
+            "unoccupied_bins": 570883
+          },
+          {
+            "conceptual_bins": 1144832,
+            "occupied_by_labels": 1536,
+            "q": 2048,
+            "unoccupied_bins": 1143296
+          }
+        ],
+        "energies": [
+          2803,
+          2748,
+          2614,
+          2626,
+          2572,
+          2530,
+          2525,
+          2529,
+          2492,
+          2487,
+          2488,
+          2485
+        ],
+        "four_child_controls": [
+          {
+            "C": 2614,
+            "P": 2803,
+            "global_same_pattern_middle_energies": [
+              2756,
+              2748,
+              2527
+            ],
+            "mean_middle": "2677",
+            "q": 1,
+            "two_level_debts": [
+              189,
+              189,
+              276
+            ]
+          },
+          {
+            "C": 2626,
+            "P": 2748,
+            "global_same_pattern_middle_energies": [
+              2660,
+              2614,
+              2726
+            ],
+            "mean_middle": "8000/3",
+            "q": 2,
+            "two_level_debts": [
+              122,
+              134,
+              122
+            ]
+          },
+          {
+            "C": 2572,
+            "P": 2614,
+            "global_same_pattern_middle_energies": [
+              2599,
+              2626,
+              2533
+            ],
+            "mean_middle": "2586",
+            "q": 4,
+            "two_level_debts": [
+              42,
+              54,
+              81
+            ]
+          },
+          {
+            "C": 2530,
+            "P": 2626,
+            "global_same_pattern_middle_energies": [
+              2562,
+              2572,
+              2552
+            ],
+            "mean_middle": "2562",
+            "q": 8,
+            "two_level_debts": [
+              96,
+              96,
+              96
+            ]
+          },
+          {
+            "C": 2525,
+            "P": 2572,
+            "global_same_pattern_middle_energies": [
+              2512,
+              2530,
+              2580
+            ],
+            "mean_middle": "7622/3",
+            "q": 16,
+            "two_level_debts": [
+              60,
+              47,
+              55
+            ]
+          },
+          {
+            "C": 2529,
+            "P": 2530,
+            "global_same_pattern_middle_energies": [
+              2516,
+              2525,
+              2547
+            ],
+            "mean_middle": "7588/3",
+            "q": 32,
+            "two_level_debts": [
+              14,
+              5,
+              18
+            ]
+          },
+          {
+            "C": 2492,
+            "P": 2525,
+            "global_same_pattern_middle_energies": [
+              2506,
+              2529,
+              2474
+            ],
+            "mean_middle": "2503",
+            "q": 64,
+            "two_level_debts": [
+              33,
+              37,
+              51
+            ]
+          },
+          {
+            "C": 2487,
+            "P": 2529,
+            "global_same_pattern_middle_energies": [
+              2502,
+              2492,
+              2509
+            ],
+            "mean_middle": "2501",
+            "q": 128,
+            "two_level_debts": [
+              42,
+              42,
+              42
+            ]
+          },
+          {
+            "C": 2488,
+            "P": 2492,
+            "global_same_pattern_middle_energies": [
+              2487,
+              2487,
+              2494
+            ],
+            "mean_middle": "7468/3",
+            "q": 256,
+            "two_level_debts": [
+              5,
+              5,
+              6
+            ]
+          },
+          {
+            "C": 2485,
+            "P": 2487,
+            "global_same_pattern_middle_energies": [
+              2484,
+              2488,
+              2485
+            ],
+            "mean_middle": "7457/3",
+            "q": 512,
+            "two_level_debts": [
+              3,
+              3,
+              2
+            ]
+          }
+        ],
+        "level_deltas": [
+          55,
+          134,
+          -12,
+          54,
+          42,
+          5,
+          -4,
+          37,
+          5,
+          -1,
+          3
+        ],
+        "moduli": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ],
+        "same_terminal_labelled_pairs": 4678,
+        "sources_total": 1536,
+        "sum_positive_labelled_pair_interactions": 4288,
+        "sum_positive_parent_bin_interactions": 1619,
+        "terminal_energy": 2803,
+        "zero_charge_arrivals": 25
+      },
+      {
+        "D_plus": 66,
+        "N": 4096,
+        "S_arrived": 1794,
+        "S_full": 9949,
+        "arrived_sources": 1093,
+        "depth_cutoff": 1,
+        "empty_bin_ledger": [
+          {
+            "conceptual_bins": 606,
+            "occupied_by_labels": 606,
+            "q": 1,
+            "unoccupied_bins": 0
+          },
+          {
+            "conceptual_bins": 1212,
+            "occupied_by_labels": 843,
+            "q": 2,
+            "unoccupied_bins": 369
+          },
+          {
+            "conceptual_bins": 2424,
+            "occupied_by_labels": 930,
+            "q": 4,
+            "unoccupied_bins": 1494
+          },
+          {
+            "conceptual_bins": 4848,
+            "occupied_by_labels": 1012,
+            "q": 8,
+            "unoccupied_bins": 3836
+          },
+          {
+            "conceptual_bins": 9696,
+            "occupied_by_labels": 1052,
+            "q": 16,
+            "unoccupied_bins": 8644
+          },
+          {
+            "conceptual_bins": 19392,
+            "occupied_by_labels": 1071,
+            "q": 32,
+            "unoccupied_bins": 18321
+          },
+          {
+            "conceptual_bins": 38784,
+            "occupied_by_labels": 1083,
+            "q": 64,
+            "unoccupied_bins": 37701
+          },
+          {
+            "conceptual_bins": 77568,
+            "occupied_by_labels": 1088,
+            "q": 128,
+            "unoccupied_bins": 76480
+          },
+          {
+            "conceptual_bins": 155136,
+            "occupied_by_labels": 1092,
+            "q": 256,
+            "unoccupied_bins": 154044
+          },
+          {
+            "conceptual_bins": 310272,
+            "occupied_by_labels": 1092,
+            "q": 512,
+            "unoccupied_bins": 309180
+          },
+          {
+            "conceptual_bins": 620544,
+            "occupied_by_labels": 1092,
+            "q": 1024,
+            "unoccupied_bins": 619452
+          },
+          {
+            "conceptual_bins": 1241088,
+            "occupied_by_labels": 1092,
+            "q": 2048,
+            "unoccupied_bins": 1239996
+          },
+          {
+            "conceptual_bins": 2482176,
+            "occupied_by_labels": 1093,
+            "q": 4096,
+            "unoccupied_bins": 2481083
+          },
+          {
+            "conceptual_bins": 4964352,
+            "occupied_by_labels": 1093,
+            "q": 8192,
+            "unoccupied_bins": 4963259
+          }
+        ],
+        "energies": [
+          1850,
+          1808,
+          1806,
+          1791,
+          1788,
+          1788,
+          1791,
+          1798,
+          1794,
+          1794,
+          1794,
+          1794,
+          1794,
+          1794
+        ],
+        "four_child_controls": [
+          {
+            "C": 1806,
+            "P": 1850,
+            "global_same_pattern_middle_energies": [
+              1846,
+              1808,
+              1808
+            ],
+            "mean_middle": "5462/3",
+            "q": 1,
+            "two_level_debts": [
+              44,
+              44,
+              44
+            ]
+          },
+          {
+            "C": 1791,
+            "P": 1808,
+            "global_same_pattern_middle_energies": [
+              1788,
+              1806,
+              1796
+            ],
+            "mean_middle": "5390/3",
+            "q": 2,
+            "two_level_debts": [
+              20,
+              17,
+              17
+            ]
+          },
+          {
+            "C": 1788,
+            "P": 1806,
+            "global_same_pattern_middle_energies": [
+              1800,
+              1791,
+              1791
+            ],
+            "mean_middle": "1794",
+            "q": 4,
+            "two_level_debts": [
+              18,
+              18,
+              18
+            ]
+          },
+          {
+            "C": 1788,
+            "P": 1791,
+            "global_same_pattern_middle_energies": [
+              1786,
+              1788,
+              1793
+            ],
+            "mean_middle": "1789",
+            "q": 8,
+            "two_level_debts": [
+              5,
+              3,
+              5
+            ]
+          },
+          {
+            "C": 1791,
+            "P": 1788,
+            "global_same_pattern_middle_energies": [
+              1788,
+              1788,
+              1794
+            ],
+            "mean_middle": "1790",
+            "q": 16,
+            "two_level_debts": [
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "C": 1798,
+            "P": 1788,
+            "global_same_pattern_middle_energies": [
+              1793,
+              1791,
+              1800
+            ],
+            "mean_middle": "5384/3",
+            "q": 32,
+            "two_level_debts": [
+              0,
+              0,
+              2
+            ]
+          },
+          {
+            "C": 1794,
+            "P": 1791,
+            "global_same_pattern_middle_energies": [
+              1791,
+              1798,
+              1790
+            ],
+            "mean_middle": "1793",
+            "q": 64,
+            "two_level_debts": [
+              0,
+              4,
+              1
+            ]
+          },
+          {
+            "C": 1794,
+            "P": 1798,
+            "global_same_pattern_middle_energies": [
+              1798,
+              1794,
+              1794
+            ],
+            "mean_middle": "5386/3",
+            "q": 128,
+            "two_level_debts": [
+              4,
+              4,
+              4
+            ]
+          },
+          {
+            "C": 1794,
+            "P": 1794,
+            "global_same_pattern_middle_energies": [
+              1794,
+              1794,
+              1794
+            ],
+            "mean_middle": "1794",
+            "q": 256,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 1794,
+            "P": 1794,
+            "global_same_pattern_middle_energies": [
+              1794,
+              1794,
+              1794
+            ],
+            "mean_middle": "1794",
+            "q": 512,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 1794,
+            "P": 1794,
+            "global_same_pattern_middle_energies": [
+              1794,
+              1794,
+              1794
+            ],
+            "mean_middle": "1794",
+            "q": 1024,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 1794,
+            "P": 1794,
+            "global_same_pattern_middle_energies": [
+              1794,
+              1794,
+              1794
+            ],
+            "mean_middle": "1794",
+            "q": 2048,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "level_deltas": [
+          42,
+          2,
+          15,
+          3,
+          0,
+          -3,
+          -7,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "moduli": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192
+        ],
+        "same_terminal_labelled_pairs": 643,
+        "sources_total": 6144,
+        "sum_positive_labelled_pair_interactions": 493,
+        "sum_positive_parent_bin_interactions": 436,
+        "terminal_energy": 1850,
+        "zero_charge_arrivals": 97
+      },
+      {
+        "D_plus": 144,
+        "N": 4096,
+        "S_arrived": 3600,
+        "S_full": 9949,
+        "arrived_sources": 2115,
+        "depth_cutoff": 3,
+        "empty_bin_ledger": [
+          {
+            "conceptual_bins": 606,
+            "occupied_by_labels": 606,
+            "q": 1,
+            "unoccupied_bins": 0
+          },
+          {
+            "conceptual_bins": 1212,
+            "occupied_by_labels": 911,
+            "q": 2,
+            "unoccupied_bins": 301
+          },
+          {
+            "conceptual_bins": 2424,
+            "occupied_by_labels": 1131,
+            "q": 4,
+            "unoccupied_bins": 1293
+          },
+          {
+            "conceptual_bins": 4848,
+            "occupied_by_labels": 1504,
+            "q": 8,
+            "unoccupied_bins": 3344
+          },
+          {
+            "conceptual_bins": 9696,
+            "occupied_by_labels": 1778,
+            "q": 16,
+            "unoccupied_bins": 7918
+          },
+          {
+            "conceptual_bins": 19392,
+            "occupied_by_labels": 1937,
+            "q": 32,
+            "unoccupied_bins": 17455
+          },
+          {
+            "conceptual_bins": 38784,
+            "occupied_by_labels": 2027,
+            "q": 64,
+            "unoccupied_bins": 36757
+          },
+          {
+            "conceptual_bins": 77568,
+            "occupied_by_labels": 2076,
+            "q": 128,
+            "unoccupied_bins": 75492
+          },
+          {
+            "conceptual_bins": 155136,
+            "occupied_by_labels": 2099,
+            "q": 256,
+            "unoccupied_bins": 153037
+          },
+          {
+            "conceptual_bins": 310272,
+            "occupied_by_labels": 2107,
+            "q": 512,
+            "unoccupied_bins": 308165
+          },
+          {
+            "conceptual_bins": 620544,
+            "occupied_by_labels": 2110,
+            "q": 1024,
+            "unoccupied_bins": 618434
+          },
+          {
+            "conceptual_bins": 1241088,
+            "occupied_by_labels": 2111,
+            "q": 2048,
+            "unoccupied_bins": 1238977
+          },
+          {
+            "conceptual_bins": 2482176,
+            "occupied_by_labels": 2114,
+            "q": 4096,
+            "unoccupied_bins": 2480062
+          },
+          {
+            "conceptual_bins": 4964352,
+            "occupied_by_labels": 2115,
+            "q": 8192,
+            "unoccupied_bins": 4962237
+          }
+        ],
+        "energies": [
+          3692,
+          3637,
+          3598,
+          3596,
+          3605,
+          3581,
+          3605,
+          3589,
+          3581,
+          3590,
+          3597,
+          3597,
+          3600,
+          3600
+        ],
+        "four_child_controls": [
+          {
+            "C": 3598,
+            "P": 3692,
+            "global_same_pattern_middle_energies": [
+              3647,
+              3637,
+              3604
+            ],
+            "mean_middle": "10888/3",
+            "q": 1,
+            "two_level_debts": [
+              94,
+              94,
+              94
+            ]
+          },
+          {
+            "C": 3596,
+            "P": 3637,
+            "global_same_pattern_middle_energies": [
+              3584,
+              3598,
+              3647
+            ],
+            "mean_middle": "10829/3",
+            "q": 2,
+            "two_level_debts": [
+              53,
+              41,
+              51
+            ]
+          },
+          {
+            "C": 3605,
+            "P": 3598,
+            "global_same_pattern_middle_energies": [
+              3594,
+              3596,
+              3618
+            ],
+            "mean_middle": "10808/3",
+            "q": 4,
+            "two_level_debts": [
+              4,
+              2,
+              13
+            ]
+          },
+          {
+            "C": 3581,
+            "P": 3596,
+            "global_same_pattern_middle_energies": [
+              3580,
+              3605,
+              3573
+            ],
+            "mean_middle": "3586",
+            "q": 8,
+            "two_level_debts": [
+              16,
+              24,
+              23
+            ]
+          },
+          {
+            "C": 3605,
+            "P": 3605,
+            "global_same_pattern_middle_energies": [
+              3627,
+              3581,
+              3607
+            ],
+            "mean_middle": "3605",
+            "q": 16,
+            "two_level_debts": [
+              22,
+              24,
+              2
+            ]
+          },
+          {
+            "C": 3589,
+            "P": 3581,
+            "global_same_pattern_middle_energies": [
+              3592,
+              3605,
+              3562
+            ],
+            "mean_middle": "10759/3",
+            "q": 32,
+            "two_level_debts": [
+              3,
+              16,
+              19
+            ]
+          },
+          {
+            "C": 3581,
+            "P": 3605,
+            "global_same_pattern_middle_energies": [
+              3593,
+              3589,
+              3585
+            ],
+            "mean_middle": "3589",
+            "q": 64,
+            "two_level_debts": [
+              24,
+              24,
+              24
+            ]
+          },
+          {
+            "C": 3590,
+            "P": 3589,
+            "global_same_pattern_middle_energies": [
+              3600,
+              3581,
+              3588
+            ],
+            "mean_middle": "10769/3",
+            "q": 128,
+            "two_level_debts": [
+              10,
+              8,
+              1
+            ]
+          },
+          {
+            "C": 3597,
+            "P": 3581,
+            "global_same_pattern_middle_energies": [
+              3590,
+              3590,
+              3595
+            ],
+            "mean_middle": "10775/3",
+            "q": 256,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 3597,
+            "P": 3590,
+            "global_same_pattern_middle_energies": [
+              3590,
+              3597,
+              3597
+            ],
+            "mean_middle": "10784/3",
+            "q": 512,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 3600,
+            "P": 3597,
+            "global_same_pattern_middle_energies": [
+              3600,
+              3597,
+              3600
+            ],
+            "mean_middle": "3599",
+            "q": 1024,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 3600,
+            "P": 3597,
+            "global_same_pattern_middle_energies": [
+              3597,
+              3600,
+              3600
+            ],
+            "mean_middle": "3599",
+            "q": 2048,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "level_deltas": [
+          55,
+          39,
+          2,
+          -9,
+          24,
+          -24,
+          16,
+          8,
+          -9,
+          -7,
+          0,
+          -3,
+          0
+        ],
+        "moduli": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192
+        ],
+        "same_terminal_labelled_pairs": 4856,
+        "sources_total": 6144,
+        "sum_positive_labelled_pair_interactions": 4593,
+        "sum_positive_parent_bin_interactions": 2185,
+        "terminal_energy": 3692,
+        "zero_charge_arrivals": 97
+      },
+      {
+        "D_plus": 86,
+        "N": 4096,
+        "S_arrived": 7252,
+        "S_full": 9949,
+        "arrived_sources": 4361,
+        "depth_cutoff": 10,
+        "empty_bin_ledger": [
+          {
+            "conceptual_bins": 608,
+            "occupied_by_labels": 608,
+            "q": 1,
+            "unoccupied_bins": 0
+          },
+          {
+            "conceptual_bins": 1216,
+            "occupied_by_labels": 943,
+            "q": 2,
+            "unoccupied_bins": 273
+          },
+          {
+            "conceptual_bins": 2432,
+            "occupied_by_labels": 1226,
+            "q": 4,
+            "unoccupied_bins": 1206
+          },
+          {
+            "conceptual_bins": 4864,
+            "occupied_by_labels": 1890,
+            "q": 8,
+            "unoccupied_bins": 2974
+          },
+          {
+            "conceptual_bins": 9728,
+            "occupied_by_labels": 2709,
+            "q": 16,
+            "unoccupied_bins": 7019
+          },
+          {
+            "conceptual_bins": 19456,
+            "occupied_by_labels": 3413,
+            "q": 32,
+            "unoccupied_bins": 16043
+          },
+          {
+            "conceptual_bins": 38912,
+            "occupied_by_labels": 3862,
+            "q": 64,
+            "unoccupied_bins": 35050
+          },
+          {
+            "conceptual_bins": 77824,
+            "occupied_by_labels": 4110,
+            "q": 128,
+            "unoccupied_bins": 73714
+          },
+          {
+            "conceptual_bins": 155648,
+            "occupied_by_labels": 4246,
+            "q": 256,
+            "unoccupied_bins": 151402
+          },
+          {
+            "conceptual_bins": 311296,
+            "occupied_by_labels": 4306,
+            "q": 512,
+            "unoccupied_bins": 306990
+          },
+          {
+            "conceptual_bins": 622592,
+            "occupied_by_labels": 4338,
+            "q": 1024,
+            "unoccupied_bins": 618254
+          },
+          {
+            "conceptual_bins": 1245184,
+            "occupied_by_labels": 4353,
+            "q": 2048,
+            "unoccupied_bins": 1240831
+          },
+          {
+            "conceptual_bins": 2490368,
+            "occupied_by_labels": 4358,
+            "q": 4096,
+            "unoccupied_bins": 2486010
+          },
+          {
+            "conceptual_bins": 4980736,
+            "occupied_by_labels": 4361,
+            "q": 8192,
+            "unoccupied_bins": 4976375
+          }
+        ],
+        "energies": [
+          7051,
+          7100,
+          7072,
+          7224,
+          7233,
+          7250,
+          7267,
+          7217,
+          7240,
+          7249,
+          7241,
+          7242,
+          7251,
+          7252
+        ],
+        "four_child_controls": [
+          {
+            "C": 7072,
+            "P": 7051,
+            "global_same_pattern_middle_energies": [
+              6963,
+              7100,
+              7132
+            ],
+            "mean_middle": "7065",
+            "q": 1,
+            "two_level_debts": [
+              88,
+              28,
+              60
+            ]
+          },
+          {
+            "C": 7224,
+            "P": 7100,
+            "global_same_pattern_middle_energies": [
+              7200,
+              7072,
+              7276
+            ],
+            "mean_middle": "21548/3",
+            "q": 2,
+            "two_level_debts": [
+              0,
+              28,
+              52
+            ]
+          },
+          {
+            "C": 7233,
+            "P": 7072,
+            "global_same_pattern_middle_energies": [
+              7148,
+              7224,
+              7166
+            ],
+            "mean_middle": "21538/3",
+            "q": 4,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 7250,
+            "P": 7224,
+            "global_same_pattern_middle_energies": [
+              7241,
+              7233,
+              7250
+            ],
+            "mean_middle": "21724/3",
+            "q": 8,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 7267,
+            "P": 7233,
+            "global_same_pattern_middle_energies": [
+              7249,
+              7250,
+              7268
+            ],
+            "mean_middle": "21767/3",
+            "q": 16,
+            "two_level_debts": [
+              0,
+              0,
+              1
+            ]
+          },
+          {
+            "C": 7217,
+            "P": 7250,
+            "global_same_pattern_middle_energies": [
+              7201,
+              7267,
+              7216
+            ],
+            "mean_middle": "7228",
+            "q": 32,
+            "two_level_debts": [
+              49,
+              50,
+              34
+            ]
+          },
+          {
+            "C": 7240,
+            "P": 7267,
+            "global_same_pattern_middle_energies": [
+              7201,
+              7217,
+              7329
+            ],
+            "mean_middle": "7249",
+            "q": 64,
+            "two_level_debts": [
+              66,
+              50,
+              89
+            ]
+          },
+          {
+            "C": 7249,
+            "P": 7217,
+            "global_same_pattern_middle_energies": [
+              7216,
+              7240,
+              7259
+            ],
+            "mean_middle": "21715/3",
+            "q": 128,
+            "two_level_debts": [
+              1,
+              0,
+              10
+            ]
+          },
+          {
+            "C": 7241,
+            "P": 7240,
+            "global_same_pattern_middle_energies": [
+              7237,
+              7249,
+              7236
+            ],
+            "mean_middle": "21722/3",
+            "q": 256,
+            "two_level_debts": [
+              3,
+              8,
+              4
+            ]
+          },
+          {
+            "C": 7242,
+            "P": 7249,
+            "global_same_pattern_middle_energies": [
+              7241,
+              7241,
+              7251
+            ],
+            "mean_middle": "21733/3",
+            "q": 512,
+            "two_level_debts": [
+              8,
+              8,
+              9
+            ]
+          },
+          {
+            "C": 7251,
+            "P": 7241,
+            "global_same_pattern_middle_energies": [
+              7251,
+              7242,
+              7250
+            ],
+            "mean_middle": "21743/3",
+            "q": 1024,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "C": 7252,
+            "P": 7242,
+            "global_same_pattern_middle_energies": [
+              7249,
+              7251,
+              7246
+            ],
+            "mean_middle": "21746/3",
+            "q": 2048,
+            "two_level_debts": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "level_deltas": [
+          -49,
+          28,
+          -152,
+          -9,
+          -17,
+          -17,
+          50,
+          -23,
+          -9,
+          8,
+          -1,
+          -9,
+          -1
+        ],
+        "moduli": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192
+        ],
+        "same_terminal_labelled_pairs": 32163,
+        "sources_total": 6144,
+        "sum_positive_labelled_pair_interactions": 30964,
+        "sum_positive_parent_bin_interactions": 6978,
+        "terminal_energy": 7051,
+        "zero_charge_arrivals": 97
+      },
+      {
+        "D_plus": 460,
+        "N": 4096,
+        "S_arrived": 9949,
+        "S_full": 9949,
+        "arrived_sources": 6144,
+        "depth_cutoff": 67,
+        "empty_bin_ledger": [
+          {
+            "conceptual_bins": 608,
+            "occupied_by_labels": 608,
+            "q": 1,
+            "unoccupied_bins": 0
+          },
+          {
+            "conceptual_bins": 1216,
+            "occupied_by_labels": 952,
+            "q": 2,
+            "unoccupied_bins": 264
+          },
+          {
+            "conceptual_bins": 2432,
+            "occupied_by_labels": 1244,
+            "q": 4,
+            "unoccupied_bins": 1188
+          },
+          {
+            "conceptual_bins": 4864,
+            "occupied_by_labels": 1960,
+            "q": 8,
+            "unoccupied_bins": 2904
+          },
+          {
+            "conceptual_bins": 9728,
+            "occupied_by_labels": 2941,
+            "q": 16,
+            "unoccupied_bins": 6787
+          },
+          {
+            "conceptual_bins": 19456,
+            "occupied_by_labels": 3957,
+            "q": 32,
+            "unoccupied_bins": 15499
+          },
+          {
+            "conceptual_bins": 38912,
+            "occupied_by_labels": 4810,
+            "q": 64,
+            "unoccupied_bins": 34102
+          },
+          {
+            "conceptual_bins": 77824,
+            "occupied_by_labels": 5376,
+            "q": 128,
+            "unoccupied_bins": 72448
+          },
+          {
+            "conceptual_bins": 155648,
+            "occupied_by_labels": 5739,
+            "q": 256,
+            "unoccupied_bins": 149909
+          },
+          {
+            "conceptual_bins": 311296,
+            "occupied_by_labels": 5922,
+            "q": 512,
+            "unoccupied_bins": 305374
+          },
+          {
+            "conceptual_bins": 622592,
+            "occupied_by_labels": 6033,
+            "q": 1024,
+            "unoccupied_bins": 616559
+          },
+          {
+            "conceptual_bins": 1245184,
+            "occupied_by_labels": 6092,
+            "q": 2048,
+            "unoccupied_bins": 1239092
+          },
+          {
+            "conceptual_bins": 2490368,
+            "occupied_by_labels": 6129,
+            "q": 4096,
+            "unoccupied_bins": 2484239
+          },
+          {
+            "conceptual_bins": 4980736,
+            "occupied_by_labels": 6144,
+            "q": 8192,
+            "unoccupied_bins": 4974592
+          }
+        ],
+        "energies": [
+          9629,
+          9431,
+          9708,
+          9941,
+          10116,
+          10073,
+          10140,
+          9961,
+          9972,
+          9981,
+          9959,
+          9941,
+          9946,
+          9949
+        ],
+        "four_child_controls": [
+          {
+            "C": 9708,
+            "P": 9629,
+            "global_same_pattern_middle_energies": [
+              9181,
+              9431,
+              10433
+            ],
+            "mean_middle": "29045/3",
+            "q": 1,
+            "two_level_debts": [
+              448,
+              198,
+              725
+            ]
+          },
+          {
+            "C": 9941,
+            "P": 9431,
+            "global_same_pattern_middle_energies": [
+              9422,
+              9708,
+              10183
+            ],
+            "mean_middle": "9771",
+            "q": 2,
+            "two_level_debts": [
+              9,
+              0,
+              242
+            ]
+          },
+          {
+            "C": 10116,
+            "P": 9708,
+            "global_same_pattern_middle_energies": [
+              9831,
+              9941,
+              10168
+            ],
+            "mean_middle": "9980",
+            "q": 4,
+            "two_level_debts": [
+              0,
+              0,
+              52
+            ]
+          },
+          {
+            "C": 10073,
+            "P": 9941,
+            "global_same_pattern_middle_energies": [
+              10012,
+              10116,
+              9959
+            ],
+            "mean_middle": "10029",
+            "q": 8,
+            "two_level_debts": [
+              0,
+              43,
+              0
+            ]
+          },
+          {
+            "C": 10140,
+            "P": 10116,
+            "global_same_pattern_middle_energies": [
+              10044,
+              10073,
+              10279
+            ],
+            "mean_middle": "10132",
+            "q": 16,
+            "two_level_debts": [
+              72,
+              43,
+              139
+            ]
+          },
+          {
+            "C": 9961,
+            "P": 10073,
+            "global_same_pattern_middle_energies": [
+              9882,
+              10140,
+              9973
+            ],
+            "mean_middle": "29995/3",
+            "q": 32,
+            "two_level_debts": [
+              191,
+              179,
+              112
+            ]
+          },
+          {
+            "C": 9972,
+            "P": 10140,
+            "global_same_pattern_middle_energies": [
+              9962,
+              9961,
+              10161
+            ],
+            "mean_middle": "10028",
+            "q": 64,
+            "two_level_debts": [
+              178,
+              179,
+              189
+            ]
+          },
+          {
+            "C": 9981,
+            "P": 9961,
+            "global_same_pattern_middle_energies": [
+              9949,
+              9972,
+              10002
+            ],
+            "mean_middle": "29923/3",
+            "q": 128,
+            "two_level_debts": [
+              12,
+              0,
+              21
+            ]
+          },
+          {
+            "C": 9959,
+            "P": 9972,
+            "global_same_pattern_middle_energies": [
+              9955,
+              9981,
+              9954
+            ],
+            "mean_middle": "29890/3",
+            "q": 256,
+            "two_level_debts": [
+              17,
+              22,
+              18
+            ]
+          },
+          {
+            "C": 9941,
+            "P": 9981,
+            "global_same_pattern_middle_energies": [
+              9946,
+              9959,
+              9958
+            ],
+            "mean_middle": "29863/3",
+            "q": 512,
+            "two_level_debts": [
+              40,
+              40,
+              40
+            ]
+          },
+          {
+            "C": 9946,
+            "P": 9959,
+            "global_same_pattern_middle_energies": [
+              9960,
+              9941,
+              9950
+            ],
+            "mean_middle": "29851/3",
+            "q": 1024,
+            "two_level_debts": [
+              14,
+              18,
+              13
+            ]
+          },
+          {
+            "C": 9949,
+            "P": 9941,
+            "global_same_pattern_middle_energies": [
+              9954,
+              9946,
+              9939
+            ],
+            "mean_middle": "29839/3",
+            "q": 2048,
+            "two_level_debts": [
+              5,
+              0,
+              2
+            ]
+          }
+        ],
+        "level_deltas": [
+          198,
+          -277,
+          -233,
+          -175,
+          43,
+          -67,
+          179,
+          -11,
+          -9,
+          22,
+          18,
+          -5,
+          -3
+        ],
+        "moduli": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048,
+          4096,
+          8192
+        ],
+        "same_terminal_labelled_pairs": 91710,
+        "sources_total": 6144,
+        "sum_positive_labelled_pair_interactions": 86664,
+        "sum_positive_parent_bin_interactions": 11419,
+        "terminal_energy": 9629,
+        "zero_charge_arrivals": 97
+      }
+    ],
+    "frontier_sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26",
+    "native_marked_cross_hostile": {
+      "N": 512,
+      "beta_Q": 0,
+      "marked_cross": 6,
+      "records": [
+        {
+          "A": [
+            -2,
+            -1
+          ],
+          "d": 0,
+          "m": 399,
+          "p": 0,
+          "s": 799,
+          "t": 0,
+          "u": 799,
+          "v": [
+            -2,
+            -1
+          ]
+        },
+        {
+          "A": [
+            0,
+            1
+          ],
+          "d": 1,
+          "m": 532,
+          "p": 1065,
+          "s": 1065,
+          "t": 2,
+          "u": 799,
+          "v": [
+            0,
+            1
+          ]
+        }
+      ]
+    },
+    "native_minimal_support_pairing_hostiles": [
+      {
+        "C": 3,
+        "N": 512,
+        "P": 3,
+        "child_records": [
+          [
+            {
+              "A": [
+                0,
+                1
+              ],
+              "d": 5,
+              "m": 916,
+              "p": 4643,
+              "s": 1833,
+              "t": 10,
+              "u": 435,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "A": [
+                0,
+                1
+              ],
+              "d": 0,
+              "m": 217,
+              "p": 0,
+              "s": 435,
+              "t": 0,
+              "u": 435,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [],
+          [
+            {
+              "A": [
+                -1,
+                -1
+              ],
+              "d": 4,
+              "m": 687,
+              "p": 4643,
+              "s": 1375,
+              "t": 8,
+              "u": 435,
+              "v": [
+                -1,
+                -1
+              ]
+            }
+          ]
+        ],
+        "child_sums": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            -1,
+            -1
+          ]
+        ],
+        "local_debts": [
+          2,
+          1,
+          1
+        ],
+        "middle_energies": [
+          5,
+          2,
+          2
+        ],
+        "native_middle_index": 1,
+        "parent_residue": 0,
+        "q": 1,
+        "terminal": 435
+      },
+      {
+        "C": 3,
+        "N": 4096,
+        "P": 3,
+        "child_records": [
+          [
+            {
+              "A": [
+                0,
+                1
+              ],
+              "d": 2,
+              "m": 6304,
+              "p": 9457,
+              "s": 12609,
+              "t": 8,
+              "u": 443,
+              "v": [
+                0,
+                1
+              ]
+            }
+          ],
+          [
+            {
+              "A": [
+                -1,
+                -1
+              ],
+              "d": 12,
+              "m": 6996,
+              "p": 9457,
+              "s": 13993,
+              "t": 24,
+              "u": 443,
+              "v": [
+                -1,
+                -1
+              ]
+            }
+          ],
+          [
+            {
+              "A": [
+                -1,
+                -1
+              ],
+              "d": 1,
+              "m": 4728,
+              "p": 9457,
+              "s": 9457,
+              "t": 6,
+              "u": 443,
+              "v": [
+                -1,
+                -1
+              ]
+            }
+          ],
+          []
+        ],
+        "child_sums": [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            -1,
+            -1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "local_debts": [
+          1,
+          1,
+          2
+        ],
+        "middle_energies": [
+          2,
+          2,
+          5
+        ],
+        "native_middle_index": 1,
+        "parent_residue": 0,
+        "q": 4,
+        "terminal": 443
+      }
+    ],
+    "source_artifact_sha256": {
+      "native_sources_N1024.json": "6f939ab19c52f4840fd7032c9fdd9ba76a98c7ee3dc9dc5d2f5c14228315f847",
+      "native_sources_N4096.json": "4ed6130bd0b368cab2af3252958b940f3d056749bf72f1d85784745914d044ba",
+      "native_sources_N512.json": "12c32cbbaba51708441918a969806bd384d01c671167407389d227b25a91ca3f"
+    },
+    "source_pin": "96e35642110104cc547516a63f37eebcf930f707",
+    "verified_433_vs_79": "N512, complete finite first arrival, max depth42; historical provenance not identified."
+  },
+  "status": "PASS",
+  "trees": {
+    "compatible_tree_mean_energies": [
+      "0",
+      "32/7",
+      "48/7",
+      "8"
+    ],
+    "debt_of_mean_energies": "0",
+    "greedy_coherent_sharpness": [
+      {
+        "P": 1,
+        "debt": 0,
+        "n": 1
+      },
+      {
+        "P": 4,
+        "debt": 2,
+        "n": 2
+      },
+      {
+        "P": 16,
+        "debt": 12,
+        "n": 4
+      },
+      {
+        "P": 64,
+        "debt": 56,
+        "n": 8
+      }
+    ],
+    "greedy_sharp_hostile_tree": {
+      "debt": 8,
+      "energies": [
+        16,
+        8,
+        16
+      ],
+      "tree_blocks_bottom_up": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            2,
+            1,
+            3
+          ]
+        ]
+      ]
+    },
+    "greedy_sign_words_checked": 256,
+    "mean_actual_debt": "8/7",
+    "permutations_checked": 40320,
+    "unbounded_fixed_tree_family": [
+      {
+        "n": 2,
+        "native_shaped_debt": 0,
+        "source_norm": 2,
+        "terminal_energy": 0
+      },
+      {
+        "n": 4,
+        "native_shaped_debt": 4,
+        "source_norm": 4,
+        "terminal_energy": 0
+      },
+      {
+        "n": 8,
+        "native_shaped_debt": 24,
+        "source_norm": 8,
+        "terminal_energy": 0
+      },
+      {
+        "n": 16,
+        "native_shaped_debt": 112,
+        "source_norm": 16,
+        "terminal_energy": 0
+      },
+      {
+        "n": 32,
+        "native_shaped_debt": 480,
+        "source_norm": 32,
+        "terminal_energy": 0
+      },
+      {
+        "n": 64,
+        "native_shaped_debt": 1984,
+        "source_norm": 64,
+        "terminal_energy": 0
+      },
+      {
+        "n": 128,
+        "native_shaped_debt": 8064,
+        "source_norm": 128,
+        "terminal_energy": 0
+      },
+      {
+        "n": 256,
+        "native_shaped_debt": 32512,
+        "source_norm": 256,
+        "terminal_energy": 0
+      },
+      {
+        "n": 512,
+        "native_shaped_debt": 130560,
+        "source_norm": 512,
+        "terminal_energy": 0
+      },
+      {
+        "n": 1024,
+        "native_shaped_debt": 523264,
+        "source_norm": 1024,
+        "terminal_energy": 0
+      }
+    ]
+  }
+}

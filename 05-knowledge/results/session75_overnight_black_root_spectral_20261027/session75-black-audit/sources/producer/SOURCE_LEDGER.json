@@ -1,0 +1,96 @@
+{
+  "trusted_transcript_regular_claim": "inherited user history; exact earlier source file not yet found",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "00-navigation/START-HERE.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "b703e146d92f18506354df0da8e5bf51196407c79a165b31c6b29f69aaaa2433",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9348-endpoint-layers-black-core-connectivity-and-the-next-zero-heavy-layers.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "83ddf9b08f516f18a260c95279b280eed5a7de34c35166080194625bc6df1f76",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/results/shape_ports_20261025/tournaments.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "bb1cf7d9956c4bd83dabe89c419e76b7649dda743176cb567e8f440b7a62d56e",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/results/black_descent_20261020c/cycles.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "b8c998e416dae8a9b7397a2b02b17a380b49bb272a272e07a1255214b5ff6280",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/results/black_descent_20261020c/scc.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "72c3e2ab6d3b98d45a4cb0e50e0884afc65d0d65c1ed9aa9b073e1d267c93f47",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/results/blue_quotient_20261020b/structure.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "ad380c7bd6ab8ed0b6b48c8e042183813ced001dc03d1931ab816d9cbe42ad74",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/results/pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "787ab6282c22e9f60ac734d2c3e96c0836d34b8e1d2b0c6fb11c05e5eefd4388",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "05-knowledge/results/merged_metagraph_endpoint_transport_20261020/endpoint-transport-and-complement-leakage.md",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "2df36d3726740274bd33792231b6f92d21f209adaac41ced38195ff8ea2ce736",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n6.tsv",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "5f6abef9eb0dac477ae208f7d9d72d73354598d26b4d87881d3534b43b5c326a",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "04-computation/experiments/tiling_line_metagraph_census_20261020_classes_n7.tsv",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "0f00ae59a6dd95262926840f5609e5c8f8f5a28306bec16ecfeab1c9323aaa4c",
+      "status_use": "current corrected source; exact scope described in note"
+    },
+    {
+      "path": "04-computation/experiments/tiling_line_metagraph_census_20261020_lines_n7.tsv",
+      "commit": "96e35642110104cc547516a63f37eebcf930f707",
+      "sha256": "404785053e9b39bca7dfe138b5a1c0bc927476c55b6a0b11177500056f1d33a0",
+      "status_use": "current corrected source; exact scope described in note"
+    }
+  ],
+  "startup_limitation": "agents/start_session.py and processor status require absent .machine-id; worker did not modify shared checkout"
+}

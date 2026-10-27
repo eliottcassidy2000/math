@@ -1,0 +1,63 @@
+{
+  "excluded": "inputs/, __pycache__/, all auxiliary probes including class_probe.py and distance_probe.py",
+  "packet": "session75-black-core",
+  "paired_receipts_identical": {
+    "audit-normal/audit-optimized": true,
+    "normal/optimized": true
+  },
+  "portable_publication_inventory": [
+    {
+      "bytes": 13453,
+      "path": "BLACK_CORE_GEODESICS.md",
+      "sha256": "c4c15eaafd577706bb74a8b03f67b3077c4c1732777e53b264cee70628e2994e"
+    },
+    {
+      "bytes": 5026,
+      "path": "SOURCE_LEDGER.json",
+      "sha256": "cc7ade14b99d6f9bbfeab19e3233bd073cd4b129e03a8648a2b558d1411906b3"
+    },
+    {
+      "bytes": 8594,
+      "path": "check_black_core.py",
+      "sha256": "3fd5607fc099c27bcd9b7b78b21990dcf0550ab7d769312cd4e88207844a41f8"
+    },
+    {
+      "bytes": 3604,
+      "path": "independent_audit.py",
+      "sha256": "dac1562305de0e47cb9ea7dcb1ac707d5913976546c3435138c48cdc6cba30be"
+    },
+    {
+      "bytes": 225405,
+      "path": "normal.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "bytes": 225405,
+      "path": "optimized.json",
+      "sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881"
+    },
+    {
+      "bytes": 642,
+      "path": "audit-normal.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "bytes": 642,
+      "path": "audit-optimized.json",
+      "sha256": "f1569894ebd6b39fc263805ac17e2fee1817ceb1c30030bd56e197695b30e2d0"
+    },
+    {
+      "bytes": 13406,
+      "path": "reviewed/BLACK_CORE_GEODESICS.pre-promotion.md",
+      "sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d"
+    },
+    {
+      "bytes": 663,
+      "path": "STATUS_PROMOTION.diff",
+      "sha256": "f1f8bab1b5d1b427e1e8841f9f01bc61e649a9acf67400135dc5a3a2b1a74ce4"
+    }
+  ],
+  "promotion_scope": "Two opening-status/provenance wording changes only; no mathematical statements, code, receipts, or sources changed. Reviewed candidate preserved with exact unified diff.",
+  "source_pin": "96e35642110104cc547516a63f37eebcf930f707",
+  "status": "PROVED in stated scopes; independently audited; final-byte acceptance pending"
+}

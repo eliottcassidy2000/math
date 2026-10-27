@@ -1,0 +1,84 @@
+{
+  "incoming_sources": [
+    {
+      "commit": "235333940cab42a6b4ef7126a742c7cf040e91b0",
+      "path": "01-canon/theorems/THM-4814-order-ten-prime-cycle-index-types-order-eleven-ledger-skew-hadamard-nuclear-norm-extremality-and-black-core-distance-of-regular-tournaments.md",
+      "snapshot": "THM-4814.md",
+      "git_blob": "87ca14bda63ab2b69a73f46e0eee3a8411a8126e",
+      "sha256": "619675ec852819f4c4b8f5b1b2f3755a67c40255f8754725a6e44438fa5bf8e3"
+    },
+    {
+      "commit": "235333940cab42a6b4ef7126a742c7cf040e91b0",
+      "path": "05-knowledge/hypotheses/HYP-9422-regular-tournaments-exactly-m-black-moves-from-a-singleton-plus-strong-core-nuclear-norm-maximizers-off-the-hadamard-orders-and-the-order-11-types.md",
+      "snapshot": "HYP-9422.md",
+      "git_blob": "8b8bb137ea3525ebaed07bb10463bebe5a0e2563",
+      "sha256": "0c16c42b808993fd16757682fc7663f9e68c1971d20c7467f7936e49dd8fb8e5"
+    },
+    {
+      "commit": "235333940cab42a6b4ef7126a742c7cf040e91b0",
+      "path": "05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md",
+      "snapshot": "README.source.md",
+      "git_blob": "02301a873bfff6ee73c5477944a99676521ed394",
+      "sha256": "fac0596901e8a69765c052d3c358c6b1c24c697accc9bf75367fdc4679a722c8"
+    }
+  ],
+  "reviewed_local_artifacts": [
+    {
+      "path": "/tmp/session75-spectral/RESULT.md",
+      "sha256": "09872984617860f95b21020acfa9f02df2e46594194520dd82d3162f113b6d94"
+    },
+    {
+      "path": "/tmp/session75-spectral/status-promotion/RESULT.reviewed-candidate.md",
+      "sha256": "ac9ce92c4802508d66a36c8d41053b741db99ef882a3eaa4290927bfd3845c16"
+    },
+    {
+      "path": "/tmp/session75-spectral/status-promotion/PROMOTION.json",
+      "sha256": "d224ad5e8d74b9ad6d2d26bdd92959d21369cffb2a312615744a7ce5bb5e8bfc"
+    },
+    {
+      "path": "/tmp/session75-spectral-audit/REPORT.md",
+      "sha256": "e4b21bb78bc99afd23a377d059908448945fe469d4e7f9c7f66c61ae68295ee7"
+    },
+    {
+      "path": "/tmp/session75-spectral-audit/REVIEW_BINDING.json",
+      "sha256": "a926cf4348f011211f35e519e9b35e21f8b4135d216f122c2cfd30eb0104c767"
+    },
+    {
+      "path": "/tmp/session75-black-core/BLACK_CORE_GEODESICS.md",
+      "sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d"
+    },
+    {
+      "path": "/tmp/session75-black-audit/ADVERSARIAL_REPORT.md",
+      "sha256": "4fed89b0c5d65711af71ef31f2609307cf39dbba408abebcb9de03398309156a"
+    },
+    {
+      "path": "/tmp/session75-black-audit/SOURCE_BINDINGS.json",
+      "sha256": "f5991558d9c1e1f1ad381d621beae4bb5dc4b2dd5cf2e02ecc431015cdd1b357"
+    },
+    {
+      "path": "/tmp/session75-root-transport/REPORT.md",
+      "sha256": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa"
+    },
+    {
+      "path": "/tmp/session75-root-audit/REPORT.md",
+      "sha256": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1"
+    },
+    {
+      "path": "/tmp/session75-root-audit/MANIFEST.json",
+      "sha256": "aa8b1a04d31b31761dd830fa58ad3a280d40aec7f1352cdad7dae872c4b14e37"
+    },
+    {
+      "path": "/tmp/session75-dyadic/README.md",
+      "sha256": "68ca416d26ae06f2f09b3707ad65bd6620ef8ba531a26c008aa811ec9f1d92aa"
+    },
+    {
+      "path": "/tmp/session75-dyadic-audit/AUDIT_REPORT.md",
+      "sha256": "aee269f890f6348add45d92c64f7432519ac60b50b56b25732a72544efdb00d9"
+    },
+    {
+      "path": "/tmp/session75-dyadic-audit/MANIFEST.audit.json",
+      "sha256": "97fb86238bb42bca169aeb5f0da4dffc936ab67a361d2ae4056b74eee8afd521"
+    }
+  ],
+  "mutations": "Only /tmp/session75-incoming; no shared edits or remote operations"
+}

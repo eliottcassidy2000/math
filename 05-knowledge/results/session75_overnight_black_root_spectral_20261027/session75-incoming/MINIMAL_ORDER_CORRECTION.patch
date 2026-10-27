@@ -1,0 +1,20 @@
+--- a/05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md
++++ b/05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md
+@@ -187,12 +187,15 @@
+ `q` (`S² = J − qI`, `S1 = 0`) and `v` in the sum-zero lattice `Λ = Zⁿ ∩ 1^⊥ ≅ A_{q−1}`,
+ `((I+S)v)_i = 2v_i + 2Σ_{j ∈ N⁺(i)} v_j`, so `θ = (I+S)/2` is an integral endomorphism of `Λ` with
+ `θ² − θ + (q+1)/4 = 0` (`= (S² + qI)/4 = J/4 = 0` on `1^⊥`): `Λ` is a module of rank `(q−1)/2` over the
+-maximal order `Z[(1+√−q)/2]` of `Q(√−q)`, and `S = 2θ − 1 = √−q` on it. Checked for `q = 3, 7, 11, 19,
++quadratic order `Z[(1+√−q)/2]` of `Q(√−q)`, and `S = 2θ − 1 = √−q` on it. Checked for `q = 3, 7, 11, 19,
+ 23`. For `q = 3` this is the paid-ROOT / dyadic-module statement that the directed three-cycle's
+ skew operator is `±(1+2ω)` on the centred triangular lattice `A_2 = Z[ω]` (sign = orientation
+ convention; `(1+2ω)² = −3`); the three ROOT rows `(2a−b, −a−b, −a+2b) = ι((2+ω)(a+bω))` are that
+ packet's L6, CITED. The Paley case is the natural generalisation: the "shared spectrum" is
+-`√−q` acting on a rank-`(q−1)/2` `O_{−q}`-module.
++`√−q` acting on a rank-`(q−1)/2` module over that quadratic order.
++The order need not be maximal for nonsquarefree `q`: at `q = 27`, writing
++`η = (1+√−3)/2`, it is `Z[3η−1] = Z + 3Zη`, of index 3 in `Z[η]`.
++This qualification leaves the integral action and polynomial identity unchanged.
+ 
+ **Four-bin ledger repair (CITED, elementary).** For any quadratic form `Q` and four vectors, the
+ three pairings `p` have `Σ_p M_p = E + 2S` (each cross term once, each diagonal three times), so the

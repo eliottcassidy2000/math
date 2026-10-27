@@ -1,0 +1,25 @@
+{
+  "complete_native_source_comparison_receipt_sha256": "5a7177ac3f205a7a58682d4fcb6f867e32f74bee09a23b54f6d19203f749fdbe",
+  "generated_outside_frozen_packet": true,
+  "status": "PASS",
+  "stored_audit_manifest_entries_verified": 26,
+  "temporary_outputs_removed": true,
+  "unchanged_audit_manifest_sha256": "97fb86238bb42bca169aeb5f0da4dffc936ab67a361d2ae4056b74eee8afd521",
+  "verified_omitted_outputs": [
+    {
+      "bytes": 178272,
+      "path": "reconstructed/independent_sources_N512.json",
+      "sha256": "926220339cff9acf5e6afc4d8d4a289bc1bcb936811ed3ae2cd17c6e47c593bf"
+    },
+    {
+      "bytes": 530835,
+      "path": "reconstructed/independent_sources_N1024.json",
+      "sha256": "19a8b8b3e0d9fbc0be108c11a0b20fa152e601ef2826edf692f4b7b8b7f196f1"
+    },
+    {
+      "bytes": 3706054,
+      "path": "reconstructed/independent_sources_N4096.json",
+      "sha256": "c081148bb4c34ec9d4cef42560d6a30fad72980b7e050dce8f1f50c9ff473538"
+    }
+  ]
+}

@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-27 — an integral quadratic action does not imply a maximal order
+
+- **Source / failed implication:** the [order-eleven lattice discussion](../05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md#5-lattices-ledgers-and-the-root-coordinate) called `Z[(1+sqrt(-q))/2]` maximal for arbitrary doubly regular order q. The integral action and its quadratic polynomial do not establish that the acting order is maximal.
+- **Exact witness / repair:** finite-field Paley q=27 exists. With `eta=(1+sqrt(-3))/2`, the stated order is `Z[3eta-1]=Z+3Z eta`, of index3 in `Z[eta]`; eta is integral but absent. Replace “maximal order” by “quadratic order” and name that order instead of ambiguous maximal-order notation. The integral lattice action, polynomial identity and rank statement survive; THM-4814(E) did not use the false adjective.
+- **Lineage / missing coordinate:** [source-pinned Session75 reconciliation and minimal diff](../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-incoming/INTEGRATION_NOTE.md#5-one-demonstrated-incidental-correction-maximal-order) retain the reviewed incoming bytes. The missing coordinate is the square factor/conductor: q need not be squarefree. Whether an action extends to a larger order is a separate question, not a consequence of the displayed generator alone. This correction does not re-audit the incoming enumeration or refute its separate spectral lower bound.
+
 ## 2026-10-27 — the five-move Paley11 forest prediction misses the score ceiling
 
 - **Source / failed prediction:** HYP-9420(4), at `4959b4933cba7e6561b9f19b1d68278ecf6cb2f5`, predicts exact forest-frame distance five from Paley11, extrapolating tight score decreases through depth three. THM-4810's weaker lower bound of five remains true; no proof of five-move attainability had been supplied.

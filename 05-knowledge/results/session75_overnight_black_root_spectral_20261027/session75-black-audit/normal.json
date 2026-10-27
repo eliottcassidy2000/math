@@ -1,0 +1,465 @@
+{
+  "balanced_R_and_K_moves_checked": 13224,
+  "checker_sha256": "4e4e446d65575acab350e748193721e2c91d788f5390cc8a06645f0405b17c90",
+  "complete_allcolour_lambda_check": {
+    "3": {
+      "1": 2
+    },
+    "4": {
+      "1": 24
+    },
+    "5": {
+      "1": 520,
+      "2": 24
+    },
+    "6": {
+      "1": 19680,
+      "2": 2640
+    }
+  },
+  "complete_balanced_universes": {
+    "4": {
+      "converse_selected_count": 12,
+      "first_literal_witness": {
+        "distance": 1,
+        "dual": true,
+        "initial_rows": [
+          12,
+          1,
+          2,
+          6
+        ],
+        "moves": [
+          {
+            "K_target_rows": [
+              8,
+              13,
+              1,
+              4
+            ],
+            "K_word": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "R_target_rows": [
+              6,
+              0,
+              10,
+              3
+            ],
+            "R_word": [
+              1,
+              0,
+              3,
+              2
+            ],
+            "failed_anti_R": [
+              0,
+              2,
+              1,
+              3
+            ]
+          }
+        ],
+        "terminal_extreme": [
+          1
+        ]
+      },
+      "labelled_count": 24,
+      "witness_digest": "25f8664ca36c580c9abbb9b692d7ffd92e547b36d847c128f24f03ebb98dcecc"
+    },
+    "6": {
+      "converse_selected_count": 743,
+      "first_literal_witness": {
+        "distance": 2,
+        "dual": true,
+        "initial_rows": [
+          48,
+          49,
+          3,
+          7,
+          12,
+          28
+        ],
+        "moves": [
+          {
+            "K_target_rows": [
+              30,
+              36,
+              24,
+              34,
+              42,
+              5
+            ],
+            "K_word": [
+              0,
+              4,
+              3,
+              1,
+              5,
+              2
+            ],
+            "R_target_rows": [
+              32,
+              25,
+              35,
+              21,
+              5,
+              26
+            ],
+            "R_word": [
+              0,
+              4,
+              3,
+              1,
+              5,
+              2
+            ],
+            "failed_anti_R": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "K_target_rows": [
+              0,
+              29,
+              49,
+              37,
+              9,
+              19
+            ],
+            "K_word": [
+              1,
+              2,
+              4,
+              3,
+              5,
+              0
+            ],
+            "R_target_rows": [
+              0,
+              29,
+              49,
+              37,
+              9,
+              19
+            ],
+            "R_word": [
+              0,
+              5,
+              3,
+              4,
+              2,
+              1
+            ],
+            "failed_anti_R": [
+              2,
+              0,
+              1,
+              5
+            ]
+          }
+        ],
+        "terminal_extreme": [
+          0
+        ]
+      },
+      "labelled_count": 2640,
+      "witness_digest": "23fb9ff02cab2eb00b1e088b35e5def5f776a21c7f566b1b7440eafb56e88b78"
+    },
+    "7": {
+      "converse_selected_count": 0,
+      "first_literal_witness": {
+        "distance": 3,
+        "dual": false,
+        "initial_rows": [
+          84,
+          97,
+          98,
+          7,
+          14,
+          25,
+          56
+        ],
+        "moves": [
+          {
+            "K_target_rows": [
+              46,
+              88,
+              26,
+              96,
+              73,
+              22,
+              37
+            ],
+            "K_word": [
+              0,
+              2,
+              1,
+              6,
+              5,
+              4,
+              3
+            ],
+            "R_target_rows": [
+              80,
+              37,
+              97,
+              23,
+              38,
+              73,
+              26
+            ],
+            "R_word": [
+              0,
+              2,
+              1,
+              6,
+              5,
+              4,
+              3
+            ],
+            "failed_anti_R": [
+              0,
+              4,
+              2,
+              3
+            ]
+          },
+          {
+            "K_target_rows": [
+              66,
+              36,
+              81,
+              87,
+              35,
+              13,
+              50
+            ],
+            "K_word": [
+              3,
+              6,
+              5,
+              2,
+              4,
+              0,
+              1
+            ],
+            "R_target_rows": [
+              66,
+              36,
+              81,
+              87,
+              35,
+              13,
+              50
+            ],
+            "R_word": [
+              1,
+              0,
+              4,
+              2,
+              5,
+              6,
+              3
+            ],
+            "failed_anti_R": [
+              1,
+              2,
+              2,
+              3
+            ]
+          },
+          {
+            "K_target_rows": [
+              62,
+              92,
+              104,
+              0,
+              44,
+              74,
+              25
+            ],
+            "K_word": [
+              0,
+              1,
+              2,
+              6,
+              4,
+              5,
+              3
+            ],
+            "R_target_rows": [
+              64,
+              33,
+              19,
+              119,
+              67,
+              21,
+              38
+            ],
+            "R_word": [
+              0,
+              1,
+              2,
+              6,
+              4,
+              5,
+              3
+            ],
+            "failed_anti_R": [
+              0,
+              6,
+              6,
+              3
+            ]
+          }
+        ],
+        "terminal_extreme": [
+          3
+        ]
+      },
+      "labelled_count": 2640,
+      "witness_digest": "a93f63987b4fa21adace85db0d0af41e7515dcd02021fa498b9fc650d5b098d2"
+    }
+  },
+  "complete_strong_descending_check": {
+    "3": {
+      "descending_black_witnesses": 0,
+      "pure_blue_exceptions": 2,
+      "strong_labelled": 2
+    },
+    "4": {
+      "descending_black_witnesses": 24,
+      "pure_blue_exceptions": 0,
+      "strong_labelled": 24
+    },
+    "5": {
+      "descending_black_witnesses": 520,
+      "pure_blue_exceptions": 24,
+      "strong_labelled": 544
+    },
+    "6": {
+      "descending_black_witnesses": 22320,
+      "pure_blue_exceptions": 0,
+      "strong_labelled": 22320
+    }
+  },
+  "independence": "No producer imports. Gray enumeration; ordered-arc operations; explicit anti-map on all arcs; graph reachability for target.",
+  "n10_separation": {
+    "black_core_distance": 2,
+    "black_nonstrong_exit": {
+      "R_word": [
+        6,
+        7,
+        8,
+        9,
+        5,
+        0,
+        2,
+        3,
+        4,
+        1
+      ],
+      "failed_anti": [
+        0,
+        1,
+        6,
+        5
+      ],
+      "terminal_rows": [
+        994,
+        1020,
+        1009,
+        997,
+        1001,
+        704,
+        256,
+        576,
+        160,
+        320
+      ]
+    },
+    "black_words": 624,
+    "delta": 2,
+    "hamilton_words": 657,
+    "lambda": 1,
+    "one_step_core_targets_all_colours": 0,
+    "scores": [
+      6,
+      7,
+      7,
+      7,
+      7,
+      3,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "producer_literal_moves_independently_checked": 210,
+  "pure_blue_all_permutation_controls": [
+    {
+      "black_words": 0,
+      "hamilton_words": 3,
+      "name": "C3"
+    },
+    {
+      "black_words": 0,
+      "hamilton_words": 15,
+      "name": "R5"
+    },
+    {
+      "black_words": 0,
+      "hamilton_words": 9,
+      "name": "C3_to_C3"
+    },
+    {
+      "black_words": 0,
+      "hamilton_words": 9,
+      "name": "C3_to_1_to_C3"
+    }
+  ],
+  "same_start_hostile": {
+    "colors": [
+      "black",
+      "blue",
+      "blue"
+    ],
+    "middle": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "middle_regular_strong": true,
+    "sink": [
+      6
+    ],
+    "source": [
+      0
+    ],
+    "terminal_rows": [
+      126,
+      76,
+      88,
+      112,
+      98,
+      70,
+      0
+    ]
+  },
+  "source_bindings": {
+    "bindings_sha256": "f5991558d9c1e1f1ad381d621beae4bb5dc4b2dd5cf2e02ecc431015cdd1b357",
+    "bound_files": 23,
+    "pin": "96e35642110104cc547516a63f37eebcf930f707"
+  },
+  "status": "PASS"
+}

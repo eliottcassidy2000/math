@@ -2,13 +2,15 @@
 id: HYP-9422
 title: "After THM-4814: (1) every regular tournament on 2m+1 >= 7 vertices is exactly m black native moves from a singleton plus a strong core; (2) the nuclear-norm maximizers at n = 1, 2 (mod 4) have two distinct nonzero singular values and are one-vertex deletions / bordered forms of the odd-order maximizers; (3) the exception count of P_q against the join/C3 tree grammar is q^2/4 - o(q^2), no bank beating the transitive parse asymptotically; (4) order-11 cycle-index types would deliver the order-12 ledger (A280772(12), c(12)) from A000568(12) = 154,108,311,168"
 status: >
-  OPEN (klein-2026-10-27). (1) lower bound PROVED (THM-4814 (D)); witnesses FINITE-EXACT at n = 7, 9 (every regular class)
-  and for P_11 plus twelve random regular 11-tournaments; the all-order statement needs a construction (alternate the
-  singleton as start and end, keep the core strong, keep every path black); n = 5 is excluded by the pure-blue atom T5.
+  OPEN clauses (2), (4), and prescribed-singleton strengthening of (1); Session75 reconciliation 2026-10-27.
+  (1) PROVED for every regular tournament on 2m+1 >= 7 vertices: unprescribed singleton plus one strong core has
+  exact black native distance m, by the independently audited named-start construction. The n = 5 pure-blue
+  exception remains. This does not prescribe which singleton is detached.
   (2) FINITE-EXACT at n = 5, 6, 9 (ratios to the Cauchy-Schwarz bound 0.9789, 0.9636, 0.9842; at n = 9 all 216 maximizers
   share the singular values sqrt7 (x6), sqrt15 (x2)); the proposed description is untested at n = 10.
-  (3) heuristic: the spectral bound gives q^2/8 for every fixed bank and the score bound q^2/8 for linear parses, while
-  f(P_q) = q^2/4 - O(q^{3/2}) for the transitive parse; no construction with fewer than (1/4 - o(1)) q^2 exceptions is known.
+  (3) PROVED for fixed-b disjoint bounded-arity substitution parses and individual named arc disagreements;
+  the matching leading upper constant assumes transitive baselines are available. Variable banks, physical
+  port identifications, block-exception counts and native-move distances are not identified with that scope.
   (4) a task: 903,753,248 classes at order 11 by gentourng in parts (hours on eight cores), then species11.py at n = 12.
 session: klein-2026-10-27 (codex/session-overnight-20261027)
 source: 05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md (§2–§4)
@@ -25,25 +27,52 @@ related:
 
 # HYP-9422 — Black distance of regular tournaments, nuclear-norm maximizers off the Hadamard orders, and the next ledger
 
-1. **Exact black distance.** For every regular tournament on `2m+1 >= 7` vertices there is a word of
-   `m` black native moves ending at a tournament with a vertex of score `0` or `2m` whose deletion is
-   strong, and no shorter word (black or blue) reaches such a tournament. The lower bound is THM-4814
-   (D); the geodesics alternate the singleton as start and end of the paths (the "two distinct path
-   starts"); every regular class at orders 7 and 9, `P_11` and twelve random regular 11-tournaments
-   have such words (found within 60 candidates per level). Test next: all 1,223 regular classes at
-   order 11; whether the first move can always be chosen with a prescribed singleton `a` (true in every
-   witness so far: the search fixed `a = 0`).
+1. **Exact black distance — PROVED, 2026-10-27.** For every regular tournament on
+   `2m+1 >= 7` vertices, the black native distance to a singleton plus one strong
+   core is exactly `m`. The [Session75 named-start proof](../results/session75_overnight_black_root_spectral_20261027/session75-black-core/BLACK_CORE_GEODESICS.md)
+   and [independent adversarial audit](../results/session75_overnight_black_root_spectral_20261027/session75-black-audit/ADVERSARIAL_REPORT.md)
+   supply the all-order construction; THM-4814(D)'s lower bound and finite
+   witnesses remain valid. The proof retains one reversal-gauge endpoint and
+   two distinct *other named starts*, not merely alternating the eventual
+   singleton between native start/end positions. This guards both blackness
+   and a terminal with only one singleton. The pure-blue order-five exception
+   remains excluded.
+
+   **Still OPEN:** choosing the detached singleton in advance. The construction
+   selects it through its first black path and does not prove the prescribed-
+   singleton strengthening. The [original filing](../results/session75_overnight_black_root_spectral_20261027/session75-incoming/HYP-9422.md)
+   is preserved as dated history, including its complete n7/n9 and sampled n11
+   witness evidence. The balanced even-order extension is separate, not part
+   of this original hypothesis.
 
 2. **Maximizers off the Hadamard orders.** For `n ≡ 1, 2 (mod 4)` the maximum of `ν` is attained by
    tournaments with exactly two distinct nonzero singular values; at `n = 9` they are `√7` (×6) and
    `√15` (×2) (216 classes). Conjecturally these are vertex deletions or borderings of the order-`n∓1`
    extremals; `n = 10` (9,733,056 classes, numpy at 10 × 10, about an hour) decides the next case.
 
-3. **No bank beats the transitive parse.** The minimum number of exceptions of `P_q` against any
-   bounded-arity substitution parse (the join/`C3` grammar of session73, or any fixed bank) is
-   `q²/4 − o(q²)`, the same as the feedback number of the transitive parse. The spectral bound of
-   THM-4814 (C) gives `q²/8`, the score bound gives `q²/8` on linear parses only; the gap between
-   `1/8` and `1/4` is the open quantity.
+3. **No bank beats the transitive parse — PROVED in the fixed-bank scope,
+   2026-10-27.** For each fixed effective arity bound `b>=2`, the
+   [audited all-shape spectral theorem](../results/session75_overnight_black_root_spectral_20261027/session75-spectral/RESULT.md)
+   gives, for finite-field Paley order `q`,
+
+       e_min >= max(0,ceil((q(q-1)-C_b q^(3/2) log2(q))/4)).
+
+   Here `C_b` is the explicit entropy constant in that theorem. Counts are
+   individual disagreeing unordered named pairs, children are disjoint modules,
+   all internal tournaments are retained, and arbitrary parse shapes/labels are
+   allowed. If the grammar includes transitive baselines (as join/C3 does),
+   averaging total orders gives `e_min <= floor(q(q-1)/4)`. Hence
+   `e_min=q^2/4-o(q^2)` for fixed `b`. This closes the earlier gap in the leading
+   constant, not a claim of equality with the finite transitive optimum.
+
+   The [independent audit](../results/session75_overnight_black_root_spectral_20261027/session75-spectral-audit/REPORT.md)
+   and [incoming reconciliation](../results/session75_overnight_black_root_spectral_20261027/session75-incoming/INTEGRATION_NOTE.md)
+   retain the scope: no arbitrary growing bank, undecomposed large module,
+   physical identification of shared ports, block-exception currency, or native-
+   move distance is inferred. A bank without transitive baselines needs its
+   own upper bound/admissible orders. THM-4814(C)'s weaker earlier lower bound
+   and the [original filing](../results/session75_overnight_black_root_spectral_20261027/session75-incoming/HYP-9422.md)
+   remain historical provenance, not counterexamples to this resolution.
 
 4. **The order-12 ledger.** The order-11 cycle-index types (a parts run of `gentourng 11` through
    `tourn_types`) would give, with `A000568(12) = 154,108,311,168` and `A002785(12) = 1,492,288`, the

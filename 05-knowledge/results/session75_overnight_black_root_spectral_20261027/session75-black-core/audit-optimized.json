@@ -1,0 +1,34 @@
+{
+  "complete_balanced_orbit_coverage": {
+    "4": 24,
+    "6": 2640,
+    "7": 2640
+  },
+  "independence": "no producer imports; arc sets and permutation anti-map; orbit coverage vs memoized score-count recurrence",
+  "independent_score_vector_counts": {
+    "4": 24,
+    "6": 2640,
+    "7": 2640
+  },
+  "literal_K_moves_checked": 210,
+  "producer_receipt_sha256": "59bbed6c0b4edbd96f1e532d8f0c1ec9d5730eaf05eb8800182c6b2fa3845881",
+  "pure_blue_all_permutations": [
+    [
+      "C3",
+      3
+    ],
+    [
+      "R5",
+      15
+    ],
+    [
+      "C3_to_C3",
+      9
+    ],
+    [
+      "C3_to_1_to_C3",
+      9
+    ]
+  ],
+  "status": "PASS"
+}

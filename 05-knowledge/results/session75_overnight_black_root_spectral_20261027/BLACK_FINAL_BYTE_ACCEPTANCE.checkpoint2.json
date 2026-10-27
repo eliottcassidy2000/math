@@ -1,0 +1,21 @@
+{
+  "verdict": "ACCEPTED",
+  "scope": "Narrow final-byte acceptance for two opening status/provenance edits only; no new mathematical claim or extension is accepted by this record. Original audit verdict PASS remains applicable.",
+  "reviewed_original_sha256": "88745463ec15c76fed3c15e299de0806818aaa2dcc6e7dd651bbbf86cee54e5d",
+  "accepted_final_proof_sha256": "c4c15eaafd577706bb74a8b03f67b3077c4c1732777e53b264cee70628e2994e",
+  "status_promotion_diff_sha256": "f1f8bab1b5d1b427e1e8841f9f01bc61e649a9acf67400135dc5a3a2b1a74ce4",
+  "producer_manifest_sha256": "70d52013c1c8813e7a65e4793f5f423ecc9a2e4af2bacb682534546ec0382e05",
+  "unchanged_compared_with_independent_audit_snapshot": [
+    "SOURCE_LEDGER.json",
+    "check_black_core.py",
+    "independent_audit.py",
+    "normal.json",
+    "optimized.json",
+    "audit-normal.json",
+    "audit-optimized.json"
+  ],
+  "portable_manifest_inventory_entries_verified": 10,
+  "sha256sums_check": "all 11 entries PASS",
+  "original_independent_audit_receipt_sha256": "a17a13fde4d58773b149978f839c329734f7e54d5b113418cedd0c1112fa81f2",
+  "timestamp_utc": "2026-10-27T07:27:00Z"
+}
