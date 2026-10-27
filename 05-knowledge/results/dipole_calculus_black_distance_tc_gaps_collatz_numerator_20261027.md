@@ -34,7 +34,7 @@ lower bound for native-move distances in the repo is a functional of `K` that th
 
 | potential | change per move | what it bounds | attained? |
 |---|---|---|---|
-| arc connectivity `lambda = min_X f(X)` | at most 1 | distance to the non-strong locus | **always** (any colour); black: all but `C3`, `R5`, family `E` (section 2) |
+| arc connectivity `lambda = min_X f(X)` | at most 1 | distance to the non-strong locus | **always** (any colour); black: all but `R5` and the classified family `E` (section 2) |
 | `sum d_v^2` (equivalently `c3`) | `c3' - c3 = s(a) - s(b) - 1` | triangle descent (black_descent_20261020c) | descents exist (inherited) |
 | THM-4810's `L = (1/2) sum |s_(i) - i|` | at most 1 | distance to the transitive class | `P11`: 15 (Session74); `P7`: 7 > 6 |
 | `(1/2) sum |d_v|` | at most 1 | distance from regular score vectors | |
@@ -44,22 +44,29 @@ lower bound for native-move distances in the repo is a functional of `K` that th
 The cut-charge row is the new one: the "cut-score bound" of the regular basin theorem is exactly the arc-strong
 connectivity, and it is attained for **every** source.
 
-## 2. Black distance equals arc connectivity (THM-4811)
-
-See the theorem file for the complete statement; summary:
+## 2. Black distance equals arc connectivity, with a classified exceptional family (THM-4811)
 
 - **PROVED, all orders:** `|lambda(tau_Q T) - lambda(T)| <= 1`, with equality `lambda - 1` iff some minimum out-cut
   contains the start and misses the end of `Q`. Camion's Hamiltonian cycle enters every cut, so its cut at the entry
   vertex is a descent: the native-complement distance from any tournament to the non-strong locus is exactly
-  `lambda(T)`; the maximum `floor((n-1)/2)` is attained exactly by the (semi-)regular tournaments (A255599 counts).
-- **Black moves:** exhaustive through order 10 (9,355,949 strong classes at order 10): every strong class except the
-  pure-blue `C3`, `R5` and **one** order-10 class has a black descent, and every descent target chain stays black, so
-  `d_black = lambda` there. The exception `E10` (scores 2,2,2,2,3,6,7,7,7,7; `|Aut| = 9`; nine descent words, all blue)
-  has `d_black = 2 = lambda + 1`.
-- `E10` is the first member of an infinite family `E(M; Z)`: doubled copies of `D = C3[K1, M, Z]` (stacks `M`, `Z`, the
-  first block of `M` a `C3`) joined by all arcs `D -> D*` except one reversed arc. **PROVED:** `lambda = 1`, the unique
-  minimum cut is `D*`, every descent word is palindromic under an anti-automorphism, hence blue. Members through order 16
-  have no black descent; members through order 14 have black distance exactly 2.
+  `lambda(T)`; the maximum `floor((n-1)/2)` is attained exactly by the (semi-)regular tournaments (A255599 counts), and
+  `lambda = delta^0` below order 10.
+- **Black moves, PROVED (Theorems A, B):** a strong tournament on `n >= 4` vertices has no black descent iff it is `R5`
+  or a member of the family `E = {E_t(S, x0)}`: a bottom layer `S` (a `K1`/`C3` stack ending in `C3`, with a vertex `x0`
+  uniform on the blocks), `t - 1` middle vertices and a converse top layer, joined downward except for one upward jump
+  chain. Members exist at every order `n >= 10` (1, 1, 3, 3, 8, 8, 20, 20 at orders 10-17). The black distance is
+  `lambda` except `R5` (no black move) and `E` (black distance `2 = lambda + 1`). The proof (a dedicated proof agent, with
+  an independent agent review) uses blue-cut cosets, the block normal form, a cut-chain structure theorem for
+  `lambda < delta^0` and THM-2477; one bounded case (a 6-vertex block with a 3-fold rotation) is an exhaustive check.
+- **How the family was found:** the order-10 census (9,355,949 strong classes) found one exception `E10`; its structure
+  suggested the subfamily `E(M; Z)` (the case `t = 1` with an initial-segment pattern), the classification proof found the
+  rest, and the order-11 census (884,464,590 strong classes) found exactly the one predicted member `E_2(S5)`, refuting the
+  narrower pre-stated conjecture (HYP-9421 (1)).
+- **Singleton targets:** when `lambda = delta^0` the (black) distance to the singleton locus is `delta^0`; every strong
+  class of orders 6-9, and the 16 order-10 classes with `lambda < delta^0`, is exactly `delta^0` black moves from a
+  singleton plus a strong core (HYP-9421 (6) conjectures this at every order).
+- **Black-core connectivity** (HYP-9348 (b)) holds through order 10: the co-basin graph joining `lambda = 1` strong
+  classes to the non-strong classes they black-descend to is connected (537,339,904 black descent lines at order 10).
 
 ## 3. The {7, 21} presentation gaps at every order (THM-4812)
 

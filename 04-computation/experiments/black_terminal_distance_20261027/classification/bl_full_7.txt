@@ -1,0 +1,6 @@
+S 111110111111111101111 x0=6 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+S 111000111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+S 110000111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+S 111000101111111111101 x0=0 h=9 |Stab|=9  S-x0 blocks: [size 3, x0->3, ->x0 0] [size 3, x0->0, ->x0 3]
+S 101000111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+a=7: (S,x0) pairs=2471  conditionA=1153  transitive=5  h-histogram: 3:4 9:1

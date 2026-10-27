@@ -1,0 +1,38 @@
+a=5 n=10  strong T built=30 (nonstrong skipped 0)  strongForm fails=6  openScore fails=6  KEY fails=1
+         4 lambda=1 delta=1 ncuts=11 strongForm=1 openScore=1 key=1
+        13 lambda=1 delta=1 ncuts=3 strongForm=1 openScore=1 key=1
+         3 lambda=1 delta=1 ncuts=5 strongForm=1 openScore=1 key=1
+         2 lambda=1 delta=1 ncuts=7 strongForm=1 openScore=1 key=1
+         1 lambda=1 delta=2 ncuts=1 strongForm=0 openScore=0 key=0
+         5 lambda=1 delta=2 ncuts=1 strongForm=0 openScore=0 key=1
+         2 lambda=1 delta=2 ncuts=1 strongForm=1 openScore=1 key=1
+a=6 n=12  strong T built=210 (nonstrong skipped 0)  strongForm fails=8  openScore fails=8  KEY fails=3
+         8 lambda=1 delta=1 ncuts=13 strongForm=1 openScore=1 key=1
+        91 lambda=1 delta=1 ncuts=3 strongForm=1 openScore=1 key=1
+        12 lambda=1 delta=1 ncuts=5 strongForm=1 openScore=1 key=1
+        19 lambda=1 delta=1 ncuts=7 strongForm=1 openScore=1 key=1
+         7 lambda=1 delta=1 ncuts=9 strongForm=1 openScore=1 key=1
+         2 lambda=1 delta=2 ncuts=1 strongForm=0 openScore=0 key=0
+         4 lambda=1 delta=2 ncuts=1 strongForm=0 openScore=0 key=1
+        63 lambda=1 delta=2 ncuts=1 strongForm=1 openScore=1 key=1
+         1 lambda=1 delta=2 ncuts=3 strongForm=0 openScore=0 key=0
+         1 lambda=1 delta=2 ncuts=3 strongForm=0 openScore=0 key=1
+         2 lambda=1 delta=2 ncuts=3 strongForm=1 openScore=1 key=1
+a=7 n=14  strong T built=2471 (nonstrong skipped 0)  strongForm fails=102  openScore fails=102  KEY fails=8
+        20 lambda=1 delta=1 ncuts=11 strongForm=1 openScore=1 key=1
+        16 lambda=1 delta=1 ncuts=15 strongForm=1 openScore=1 key=1
+       951 lambda=1 delta=1 ncuts=3 strongForm=1 openScore=1 key=1
+        99 lambda=1 delta=1 ncuts=5 strongForm=1 openScore=1 key=1
+       115 lambda=1 delta=1 ncuts=7 strongForm=1 openScore=1 key=1
+        50 lambda=1 delta=1 ncuts=9 strongForm=1 openScore=1 key=1
+         5 lambda=1 delta=2 ncuts=1 strongForm=0 openScore=0 key=0
+        68 lambda=1 delta=2 ncuts=1 strongForm=0 openScore=0 key=1
+      1044 lambda=1 delta=2 ncuts=1 strongForm=1 openScore=1 key=1
+         2 lambda=1 delta=2 ncuts=3 strongForm=0 openScore=0 key=0
+         4 lambda=1 delta=2 ncuts=3 strongForm=0 openScore=0 key=1
+        53 lambda=1 delta=2 ncuts=3 strongForm=1 openScore=1 key=1
+         1 lambda=1 delta=2 ncuts=5 strongForm=0 openScore=0 key=0
+         1 lambda=1 delta=2 ncuts=5 strongForm=0 openScore=0 key=1
+         6 lambda=1 delta=2 ncuts=5 strongForm=1 openScore=1 key=1
+        21 lambda=1 delta=3 ncuts=1 strongForm=0 openScore=0 key=1
+        15 lambda=1 delta=3 ncuts=1 strongForm=1 openScore=1 key=1

@@ -1,0 +1,13 @@
+S 1111110111111111111111101111 x0=7 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->0, ->x0 1] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+S 1111000111111111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+S 1110000111111111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+S 1111000111111101111111111101 x0=0 h=9 |Stab|=9  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 3, x0->3, ->x0 0] [size 3, x0->0, ->x0 3]
+S 1101000111111111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+S 1101111111111111111000111101 x0=3 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->0, ->x0 1] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+S 1100000111111111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+S 1111110101111111111111101111 x0=7 h=9 |Stab|=9  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3] [size 3, x0->0, ->x0 3]
+S 1111000101111111111111111101 x0=0 h=9 |Stab|=9  S-x0 blocks: [size 3, x0->3, ->x0 0] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+S 1110000101111111111111111101 x0=0 h=9 |Stab|=9  S-x0 blocks: [size 3, x0->3, ->x0 0] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+S 1011000111111111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->1, ->x0 0] [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+S 1010000111111111111111111101 x0=0 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 1, x0->1, ->x0 0] [size 1, x0->0, ->x0 1] [size 3, x0->0, ->x0 3]
+a=8: (S,x0) pairs=48064  conditionA=29460  transitive=12  h-histogram: 3:8 9:4

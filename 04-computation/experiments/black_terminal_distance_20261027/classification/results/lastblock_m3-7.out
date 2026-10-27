@@ -1,0 +1,6 @@
+  (H1)+(H2): R=101 A=0 |G|=3 h_B=3 (C3, A empty: allowed)
+m=3: (R,A) pairs=7  satisfying (H2)=1  satisfying (H1)+(H2)=1
+m=4: (R,A) pairs=15  satisfying (H2)=4  satisfying (H1)+(H2)=0
+m=5: (R,A) pairs=186  satisfying (H2)=87  satisfying (H1)+(H2)=0
+m=6: (R,A) pairs=2205  satisfying (H2)=1214  satisfying (H1)+(H2)=0
+m=7: (R,A) pairs=44831  satisfying (H2)=29762  satisfying (H1)+(H2)=0

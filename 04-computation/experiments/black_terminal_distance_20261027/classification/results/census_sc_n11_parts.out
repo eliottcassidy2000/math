@@ -1,0 +1,88 @@
+n=11 strong classes=125555422 regular=185 nonregular-non-self-converse=125516072 nonregular-self-converse=39165
+  among nonregular self-converse: strongForm fails=0  openScore fails=0  KEY LEMMA fails=0
+      3118  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+       108  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+     10847  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2217  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      8929  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      9093  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       296  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      4557  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+n=11 strong classes=114932628 regular=160 nonregular-non-self-converse=114896753 nonregular-self-converse=35715
+  among nonregular self-converse: strongForm fails=0  openScore fails=0  KEY LEMMA fails=0
+      3789  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+        72  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+     10595  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2001  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      7426  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      7585  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       249  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      3998  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+n=11 strong classes=122565908 regular=203 nonregular-non-self-converse=122527905 nonregular-self-converse=37800
+  among nonregular self-converse: strongForm fails=0  openScore fails=0  KEY LEMMA fails=0
+      3449  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+        61  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+         1  lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=1 openScore=1 key=1
+     11031  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2171  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      8020  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      8649  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       243  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      4175  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+n=11 strong classes=95876844 regular=130 nonregular-non-self-converse=95845895 nonregular-self-converse=30819
+  among nonregular self-converse: strongForm fails=0  openScore fails=0  KEY LEMMA fails=0
+      3401  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+       121  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      9377  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2154  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      5916  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      6704  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       190  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2956  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+n=11 strong classes=104346437 regular=119 nonregular-non-self-converse=104313001 nonregular-self-converse=33317
+  among nonregular self-converse: strongForm fails=1  openScore fails=1  KEY LEMMA fails=0
+      3486  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+       127  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+         1  lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=0 openScore=0 key=1
+      9718  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2083  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      7037  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      7546  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       197  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      3122  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+  strongFormOnlyFail 1100011111110111111111111111111111111111110111100110111 scores 2,2,2,2,3,5,7,8,8,8,8 lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=0 openScore=0 key=1
+n=11 strong classes=86533610 regular=99 nonregular-non-self-converse=86506346 nonregular-self-converse=27165
+  among nonregular self-converse: strongForm fails=0  openScore fails=0  KEY LEMMA fails=0
+      2561  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+        63  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+         1  lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=1 openScore=1 key=1
+      8017  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      1826  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      5555  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      6186  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       197  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2759  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+n=11 strong classes=107405784 regular=131 nonregular-non-self-converse=107372004 nonregular-self-converse=33649
+  among nonregular self-converse: strongForm fails=1  openScore fails=1  KEY LEMMA fails=1
+      2993  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+        76  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+         1  lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=0 openScore=0 key=0
+         1  lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=1 openScore=1 key=1
+      9937  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      1864  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      7383  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      7571  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       254  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      3569  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+  KEYFAIL 1110101111101111111111111111111111111111110001111111101 scores 2,2,2,2,3,5,7,8,8,8,8 lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=0 openScore=0 key=0
+n=11 strong classes=127247957 regular=196 nonregular-non-self-converse=127208420 nonregular-self-converse=39341
+  among nonregular self-converse: strongForm fails=0  openScore fails=0  KEY LEMMA fails=0
+      3091  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+        93  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+         3  lambda=1 delta=2 lam<delta=1 ncuts=2-3 strongForm=1 openScore=1 key=1
+     10809  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2119  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+      9237  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      9086  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       291  lambda=4 delta=4 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      4612  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1

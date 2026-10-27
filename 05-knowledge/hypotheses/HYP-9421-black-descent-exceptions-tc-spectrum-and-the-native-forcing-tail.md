@@ -1,7 +1,7 @@
 ---
 id: HYP-9421
-title: "After THM-4811-4813: (1) the strong tournaments without a black descent are exactly C3, R5 and the doubled-stack family E(M; Z); (2) the black distance to the non-strong locus never exceeds lambda + 1 (outside C3, R5); (3) the presentation-count spectrum: every odd v other than 7 and 21 is tc(T) for some tournament on at most 10 vertices, for v <= 2001 (PRE-REGISTERED); (4) the native ROOT forcing of a Collatz orbit is a tail property: sup F(s) over primitive seeds s < 10^8 is below 0.1127503 (PRE-REGISTERED); (5) strong presentation fibres are finite with order O(log^2 v), and the black-core connectivity reduction; (6) every strong tournament other than C3, R5 is exactly delta^0 black moves from a singleton plus a strong core"
-status: "OPEN (1), (2), (5) second clause; (3), (4) PRE-REGISTERED (commit 8ab6b3e358) and CONFIRMED; (5) first clause PROVED in THM-4812 (f)"
+title: "After THM-4811-4813: (1) the strong tournaments without a black descent are exactly C3, R5 and the doubled-stack family E(M; Z) (refuted as stated; resolved by THM-4811 Theorem A with the larger family E); (2) the black distance to the non-strong locus never exceeds lambda + 1 (outside C3, R5; proved); (3) the presentation-count spectrum: every odd v other than 7 and 21 is tc(T) for some tournament on at most 10 vertices, for v <= 2001 (PRE-REGISTERED); (4) the native ROOT forcing of a Collatz orbit is a tail property: sup F(s) over primitive seeds s < 10^8 is below 0.1127503 (PRE-REGISTERED); (5) strong presentation fibres are finite with order O(log^2 v), and the black-core connectivity reduction; (6) every strong tournament other than C3, R5 is exactly delta^0 black moves from a singleton plus a strong core"
+status: "(1) REFUTED as stated and RESOLVED (THM-4811 Theorem A: the exceptions are R5 and the larger family E); (2) PROVED (THM-4811 Theorem B); (3), (4) PRE-REGISTERED (commit 8ab6b3e358) and CONFIRMED; (5) first clause PROVED in THM-4812 (f), second OPEN; (6) OPEN (FINITE-EXACT through order 9 and the order-10 classes with lambda < delta^0)"
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
 related:
@@ -16,17 +16,24 @@ related:
 
 ## (1) Classification of black-descent failures
 
-**Conjecture.** A strong tournament has no black word starting in a minimum out-cut and ending outside it if and only if
-it is `C3`, `R5`, or a member of `E(M; Z)` (THM-4811 (C2)). Evidence: complete through order 10 (exactly `C3`, `R5`,
-`E(C3; K1)`); members built through order 16 behave as predicted; the variant whose `M` starts with `K1` is not
-exceptional. The family has only even orders, so the conjecture predicts no exception at order 11 and exactly two
-classes at order 12.
+**Conjecture (as first stated).** A strong tournament has no black word starting in a minimum out-cut and ending outside
+it if and only if it is `C3`, `R5`, or a member of `E(M; Z)`. Evidence then: complete through order 10.
+
+**Outcome: REFUTED as stated, RESOLVED.** The order-11 census (all 884,464,590 strong classes) has exactly one exception,
+`E_2(S5)`, which has odd order and a middle vertex, so it is not in `E(M; Z)` (the conjecture predicted none at order 11).
+THM-4811 Theorem A proves the corrected statement at every order: the exceptions (`n >= 4`) are exactly `R5` and the
+family `E = {E_t(S, x0)}` of bottom layers with `t - 1` middle vertices; `E(M; Z)` is its subfamily with `t = 1` and an
+initial-segment pattern. The prediction "exactly two classes at order 12" was also wrong: there are three
+(`E_3(S5)` and the two of `E(M; Z)`).
 
 ## (2) One extra move suffices
 
 **Conjecture.** Every strong tournament other than `C3` and `R5` reaches the non-strong locus by at most `lambda + 1`
 black moves, with `lambda + 1` needed exactly for the members of `E(M; Z)`. Evidence: order <= 10 complete; six family
 members through order 14 have black distance exactly 2.
+
+**Outcome: PROVED (THM-4811 Theorem B)** with the corrected family: the black distance is `lambda` except `R5` and the
+members of `E`, where it is `2 = lambda + 1`.
 
 ## (3) The presentation spectrum (PRE-REGISTERED)
 

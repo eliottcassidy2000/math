@@ -1,0 +1,2 @@
+m=9 strong=178133  H1+H2: 0 (A nonempty: 0)   H1+|B|>=2: 0 (A nonempty: 0)
+( gentourng -cq 9 2> /dev/null | ./lb_indep 9; )  56.11s user 0.24s system 97% cpu 57.806 total

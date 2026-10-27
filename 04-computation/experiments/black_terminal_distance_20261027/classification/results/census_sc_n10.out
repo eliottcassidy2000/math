@@ -1,0 +1,14 @@
+n=10 strong classes=9355949 regular=0 nonregular-non-self-converse=9347350 nonregular-self-converse=8599
+  among nonregular self-converse: strongForm fails=2  openScore fails=2  KEY LEMMA fails=1
+      1381  lambda=1 delta=1 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+        77  lambda=1 delta=1 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+         1  lambda=1 delta=2 lam<delta=1 ncuts=1 strongForm=0 openScore=0 key=0
+         1  lambda=1 delta=2 lam<delta=1 ncuts=1 strongForm=0 openScore=0 key=1
+         2  lambda=1 delta=2 lam<delta=1 ncuts=1 strongForm=1 openScore=1 key=1
+      2867  lambda=2 delta=2 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      1151  lambda=2 delta=2 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       786  lambda=3 delta=3 lam<delta=0 ncuts=2-3 strongForm=1 openScore=1 key=1
+      2104  lambda=3 delta=3 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+       229  lambda=4 delta=4 lam<delta=0 ncuts=>3 strongForm=1 openScore=1 key=1
+  strongFormOnlyFail 110011011110111111111111111111111111100110111 scores 2,2,2,2,3,6,7,7,7,7 lambda=1 delta=2 lam<delta=1 ncuts=1 strongForm=0 openScore=0 key=1
+  KEYFAIL 111001111101111111111111111111111111000111101 scores 2,2,2,2,3,6,7,7,7,7 lambda=1 delta=2 lam<delta=1 ncuts=1 strongForm=0 openScore=0 key=0

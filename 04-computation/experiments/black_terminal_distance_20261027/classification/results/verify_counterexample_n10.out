@@ -1,0 +1,14 @@
+code 111001111101111111111111111111111111000111101
+  scores [7, 7, 7, 7, 6, 2, 3, 2, 2, 2]  strong=True regular=False  lambda=1
+  minimum out-cuts (1): [[5, 6, 7, 8, 9]]
+  Hamiltonian paths: 657; descent candidates: 9; black candidates: 0; closed score-certified candidates: 0
+    candidate (6, 7, 8, 9, 5, 0, 1, 2, 3, 4)  blue=True  closed=True
+    candidate (6, 7, 8, 9, 5, 0, 2, 3, 1, 4)  blue=True  closed=True
+    candidate (6, 7, 8, 9, 5, 0, 3, 1, 2, 4)  blue=True  closed=True
+    candidate (6, 8, 9, 7, 5, 0, 1, 2, 3, 4)  blue=True  closed=True
+    candidate (6, 8, 9, 7, 5, 0, 2, 3, 1, 4)  blue=True  closed=True
+    candidate (6, 8, 9, 7, 5, 0, 3, 1, 2, 4)  blue=True  closed=True
+    candidate (6, 9, 7, 8, 5, 0, 1, 2, 3, 4)  blue=True  closed=True
+    candidate (6, 9, 7, 8, 5, 0, 2, 3, 1, 4)  blue=True  closed=True
+    candidate (6, 9, 7, 8, 5, 0, 3, 1, 2, 4)  blue=True  closed=True
+  verdict: KEY LEMMA FAILS (no black descent candidate)

@@ -1,0 +1,2 @@
+a=9 strong=178133  transitive (S,z) orbits=676  [|R_q|=1: 156, H2 fails: 492]  BL-hyp=28  violations=0
+( gentourng -cq 9 2> /dev/null | ./bl_indep 9; )  15.63s user 0.07s system 97% cpu 16.082 total

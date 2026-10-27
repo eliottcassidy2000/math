@@ -1,0 +1,2 @@
+S 1110101111 x0=4 h=3 |Stab|=3  S-x0 blocks: [size 1, x0->1, ->x0 0] [size 3, x0->0, ->x0 3]
+a=5: (S,x0) pairs=30  conditionA=8  transitive=1  h-histogram: 3:1

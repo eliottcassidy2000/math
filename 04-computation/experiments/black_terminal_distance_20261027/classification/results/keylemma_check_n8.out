@@ -1,0 +1,12 @@
+n=8 strong classes=6008
+  [C1 min cuts non-crossing / chain if lambda<delta] tested 6008 classes, failures 0
+  [C2 blue reversals permute min cuts (X -> V\r(X))] tested 162 classes, failures 0
+  [C3 black descent exists iff T != R5] tested 6008 classes, failures 0
+  [C4 lambda=delta: singleton-type black descent keeping lambda=delta] tested 6008 classes, failures 0
+  [C5 Section-7 case: all cycle cuts at v black, s(last)<Delta] tested 18 classes, failures 0
+  [C6 case C2: black path from a min / into a max vertex] tested 144 classes, failures 0
+  [C7 cut identity on every (Q, X)] tested 6008 classes, failures 0
+  case distribution:
+        5846  non-self-converse [black descent]
+          18  self-converse lambda=delta, a min deletion nonstrong [black descent]
+         144  self-converse lambda=delta, all min deletions strong [black descent]

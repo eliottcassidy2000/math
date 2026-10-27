@@ -41,12 +41,15 @@ one law through a different functional. This is why the concurrent sessions conv
 distance `m` arrived from three sessions in one night (the aliquot_power_124 basin theorem, klein's THM-4814 (D), and
 THM-4811 as the all-source case).
 
-**Where exactness fails, a symmetry is forced.** The black failures are the pure-blue `C3`, `R5` and the doubled
-stacks `E(M; Z)`. In each, every descent word is palindromic under an anti-automorphism, so every move that could
-lower the potential is blue. The order-10 census found one such class among 9,355,949; the general family appeared
-from its structure in one step (THM-4811 (C2)). The pattern recurs across the repository: the exceptions to a uniform
-descent are small symmetric families (the pure-blue alphabet, THM-4730; the regular `R5`; Paley sevens), and the first
-untested order exposes the first member (part I, section 6: the first-untested-point law).
+**Where exactness fails, a symmetry is forced.** The black failures are exactly `R5` (with `C3`) and the family `E` of
+THM-4811 Theorem A: a bottom layer, a chain of middle vertices, and its converse. In each, every descent word is
+palindromic under an anti-automorphism, so every move that could lower the potential is blue. The order-10 census found
+one such class among 9,355,949. Generalising its visible structure gave the subfamily `E(M; Z)` within the hour, but that
+generalisation was incomplete: the proof, and the order-11 census it suggested, found the middle-vertex members (every
+odd order) and the free block patterns. So the exception exposed the mechanism (a forced anti-automorphism), but only the
+proof delimited its scope. The pattern recurs across the repository: the exceptions to a uniform descent are small
+symmetric families (the pure-blue alphabet, THM-4730; the regular `R5`; Paley sevens), and the first untested order
+exposes the first member (part I, section 6: the first-untested-point law).
 
 **The test this suggests.** For every distance statement in the repository, write the potential and the certificate.
 If exactness is claimed, exhibit the descent at every state; if not, find the local minima and their forced symmetry.
@@ -98,9 +101,10 @@ question is the same phenomenon seen from the involution side.
 
 ## 3. What the night showed about method
 
-- **Exhaust, then generalise the exception.** The census at order 10 produced one exception. Its structure gave an
-  infinite family and its proof within the hour, which is faster than any search for a proof of the false lemma could
-  have been.
+- **Exhaust, then generalise the exception, then prove the classification.** The census at order 10 produced one
+  exception; its structure gave an infinite subfamily within the hour, and the attempt to prove the corrected lemma
+  produced the complete family and a classification proof (with one bounded finite check) a few hours later. The
+  intermediate generalisation was too narrow, and the order-11 census refuted the pre-stated conjecture.
 - **Retype on contact with concurrent work.** Two of tonight's claims (the sharp spectral constant, the doubly-regular
   lattice module) had concurrent published versions by the time they were filed. They are now cited and kept only as
   comparison points. Convergence is evidence; double counting is not.

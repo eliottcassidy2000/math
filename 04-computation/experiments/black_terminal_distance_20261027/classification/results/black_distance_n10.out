@@ -1,0 +1,5 @@
+root 111001111101111111111111111111111111000111101  lambda=1
+  cut identity checked on 671454 (path, X) pairs: 0 failures
+  level 1: black moves examined 558, new labelled tournaments 558, lambda histogram: 1:108 2:450
+  level 2: black moves examined 765720, new labelled tournaments 600395, lambda histogram: 0:690 1:133451 2:466254
+  => black distance to the non-strong locus = 2
