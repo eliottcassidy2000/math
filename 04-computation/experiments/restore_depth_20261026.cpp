@@ -1,8 +1,9 @@
 // restore_depth_20261026.cpp -- opus-2026-10-26-S62
-// Restore depth on the marked carrier X_n: for each state x, the least k such that k of its own Hamiltonian paths have
+// Cover depth on the marked carrier X_n: for each state x, the least k such that k of its own Hamiltonian paths have
 // free pairs covering all M = (n-1)(n-2)/2 free pairs (then the point indicator of x is the k-fold product of named
-// guards g_p, "test p, restore, test q, ...").  k-fold products are subcube indicators fixing at most k(n-1) free pairs,
-// so k >= ceil(M/(n-1)) always (degree bound).  Exhaustive for n <= 7 (all 2^M states); random sample for n = 8.
+// guards g_p, "test p, restore, test q, ...").  A state with a dark free pair (a free pair on no Hamiltonian path of x)
+// is never covered (class 0 below).  k-fold products are subcube indicators fixing at most k(n-1) free pairs, so a
+// covered state needs k >= ceil(M/(n-1)) (degree bound).  Exhaustive for n <= 7 (all 2^M states); random sample for n = 8.
 // Build: g++ -O2 -std=c++17 -o rdepth restore_depth_20261026.cpp ; run: ./rdepth [maxExhaustive=7] [samples8=10000]
 #include <cstdio>
 #include <cstdint>
@@ -14,7 +15,7 @@ using namespace std;
 typedef unsigned long long u64; typedef unsigned int u32;
 
 static int n, M; static int adj[9][9]; static int pairIndex[9][9]; static int order[9];
-static vector<u32> masks;                       // free-pair masks of the Hamiltonian paths of the current state
+static vector<u32> masks;
 
 static void dfs(int pos, int used, u32 mask) {
     if (pos == n) { masks.push_back(mask); return; }
@@ -23,16 +24,16 @@ static void dfs(int pos, int used, u32 mask) {
         int k = pairIndex[last][v]; order[pos] = v; dfs(pos + 1, used | 1 << v, k >= 0 ? (mask | (1u << k)) : mask);
     }
 }
-static int depthOf() {                           // least k in {1,2,3,4} covering all M free pairs, or 5 if none
+// 0 = uncoverable (a free pair lies on no Hamiltonian path of x); else the least k <= 4 covering all free pairs; 5 = needs five or more
+static int depthOf() {
     u32 full = (1u << M) - 1;
     sort(masks.begin(), masks.end()); masks.erase(unique(masks.begin(), masks.end()), masks.end());
+    u32 U = 0; for (u32 m : masks) U |= m; if (U != full) return 0;
     for (u32 m : masks) if (m == full) return 1;
-    vector<char> cover(1u << M, 0);              // cover[s] = 1 iff some path mask contains s (superset closure)
+    vector<char> cover(1u << M, 0);
     for (u32 m : masks) cover[m] = 1;
     for (int b = 0; b < M; b++) for (u32 s = 0; s < (1u << M); s++) if ((s >> b & 1) && cover[s]) cover[s ^ (1u << b)] = 1;
-    // depth 2: exists a with cover[full & ~a]
     for (u32 a : masks) if (cover[full & ~a]) return 2;
-    // depth 3: exists a, b with cover[full & ~(a|b)]
     vector<u32> un; un.reserve(masks.size() * (masks.size() + 1) / 2);
     for (size_t i = 0; i < masks.size(); i++) for (size_t j = i; j < masks.size(); j++) { u32 ab = masks[i] | masks[j]; if (cover[full & ~ab]) return 3; un.push_back(ab); }
     sort(un.begin(), un.end()); un.erase(unique(un.begin(), un.end()), un.end());
@@ -53,11 +54,13 @@ int main(int argc, char** argv) {
             for (int i = 0; i + 1 < n; i++) adj[i][i + 1] = 1;
             for (int k = 0; k < M; k++) { int i = pairs[k].first, j = pairs[k].second; if (code >> k & 1) adj[i][j] = 1; else adj[j][i] = 1; }
             masks.clear(); for (int v = 0; v < n; v++) { order[0] = v; dfs(1, 1 << v, 0); }
-            int d = depthOf(); hist[d]++; if (d > maxd) maxd = d;
+            int d = depthOf(); hist[d]++; if (d >= 1 && d <= 4 && d > maxd) maxd = d;
         }
         int bound = (M + n - 2) / (n - 1);
-        printf("n = %d: M = %d, degree bound ceil(M/(n-1)) = %d, %s %llu states: depth histogram 1:%llu 2:%llu 3:%llu 4:%llu >=5:%llu; restore depth d(%d) = %d%s\n",
-               n, M, bound, exhaustive ? "exhaustive" : "sampled", (unsigned long long)total, (unsigned long long)hist[1], (unsigned long long)hist[2], (unsigned long long)hist[3], (unsigned long long)hist[4], (unsigned long long)hist[5], n, maxd, (maxd == bound ? " (= bound)" : ""));
+        printf("n = %d: M = %d, degree bound ceil(M/(n-1)) = %d, %s %llu states: uncoverable (dark free pair) %llu; cover depth 1:%llu 2:%llu 3:%llu 4:%llu five-or-more:%llu; least cover depth among covered states = %d, largest finite depth found %d\n",
+               n, M, bound, exhaustive ? "exhaustive" : "sampled", (unsigned long long)total, (unsigned long long)hist[0],
+               (unsigned long long)hist[1], (unsigned long long)hist[2], (unsigned long long)hist[3], (unsigned long long)hist[4], (unsigned long long)hist[5],
+               (hist[1] ? 1 : hist[2] ? 2 : hist[3] ? 3 : hist[4] ? 4 : 5), maxd);
         fflush(stdout);
     }
     return 0;

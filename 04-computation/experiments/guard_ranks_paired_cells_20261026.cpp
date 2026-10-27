@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
         }
         // distinct single guard vectors
         set<vector<i64>> distinct(G.begin(), G.end()); vector<vector<i64>> singles(distinct.begin(), distinct.end());
-        int r1a = rank_mod(singles, 1000000007LL), r1b = rank_mod(singles, 998244353LL);
+        int r1a = -1, r1b = -1; if (n <= 6) { r1a = rank_mod(singles, 1000000007LL); r1b = rank_mod(singles, 998244353LL); }
         // pair products over GF(2)
         GF2Basis B(N); auto tovec = [&](const vector<i64>& v) { vector<u64> w((N + 63) / 64, 0); for (int c = 0; c < N; c++) if (v[c]) w[c >> 6] |= 1ULL << (c & 63); return w; };
         for (auto& s : singles) B.add(tovec(s));
@@ -81,7 +81,7 @@ int main(int argc, char** argv) {
                 vector<i64> v(N); bool nz = false; for (int c = 0; c < N; c++) { v[c] = singles[a][c] & singles[b][c]; nz |= v[c]; }
                 if (nz) { B.add(tovec(v)); tested++; } }
         } else {
-            for (int t = 0; t < samples7 && B.rank < N; t++) { size_t a = rnd() % singles.size(), b = rnd() % singles.size(); if (a == b) continue;
+            for (int t = 0; t < samples7 && B.rank < N && n <= 6; t++) { size_t a = rnd() % singles.size(), b = rnd() % singles.size(); if (a == b) continue;
                 vector<i64> v(N); bool nz = false; for (int c = 0; c < N; c++) { v[c] = singles[a][c] & singles[b][c]; nz |= v[c]; }
                 if (nz) { B.add(tovec(v)); tested++; } }
         }

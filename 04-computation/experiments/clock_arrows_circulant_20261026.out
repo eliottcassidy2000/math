@@ -1,0 +1,13 @@
+C:\Users\Eliott\AppData\Local\Temp\math-wt-s62\04-computation\experiments\clock_arrows_circulant_20261026.py:6: SyntaxWarning: invalid escape sequence '\ '
+  disjoint, and a tournament iff moreover S_m u -S_m = Z/m \ {0}, i.e. S_m is a skew half-set (m odd).  Squares modulo a
+squares: oriented moduli (S and -S disjoint) [3, 4, 7, 9, 11, 12, 16, 19, 21, 23, 27, 28, 31, 33, 36, 43, 44, 47, 48, 49, 57, 59, 63, 64, 67, 69, 71, 76, 77, 79, 81, 83, 84, 92, 93, 99, 103, 107, 108, 112]; tournament moduli (skew half-set) [3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107]
+cubes: oriented moduli (S and -S disjoint) []; tournament moduli (skew half-set) []
+2^k: oriented moduli (S and -S disjoint) [7, 14, 15, 21, 23, 28, 30, 31, 35, 39, 42, 45, 46, 47, 49, 51, 55, 56, 60, 62, 63, 69, 70, 71, 73, 75, 77, 78, 79, 84, 85, 87, 89, 90, 91, 92, 93, 94, 95, 98, 102, 103, 105, 110, 111, 112, 115, 117, 119, 120]; tournament moduli (skew half-set) [7, 23, 47, 71, 79, 103]
+3^k: oriented moduli (S and -S disjoint) [3, 8, 9, 11, 13, 16, 20, 22, 23, 24, 26, 27, 32, 33, 35, 39, 40, 44, 46, 47, 48, 52, 55, 56, 59, 60, 64, 65, 66, 68, 69, 70, 71, 72, 77, 78, 80, 81, 83, 85, 88, 91, 92, 94, 95, 96, 99, 100, 104, 105, 107, 109, 110, 112, 115, 116, 117, 118, 119, 120]; tournament moduli (skew half-set) [3, 11, 23, 47, 59, 71, 83, 107]
+Fibonacci: oriented moduli (S and -S disjoint) []; tournament moduli (skew half-set) []
+primes: oriented moduli (S and -S disjoint) []; tournament moduli (skew half-set) []
+triangular: oriented moduli (S and -S disjoint) [3, 5, 15]; tournament moduli (skew half-set) [3, 5]
+factorials: oriented moduli (S and -S disjoint) [6, 20, 24, 40, 45, 60, 90, 112, 120]; tournament moduli (skew half-set) []
+Collatz odd successors: oriented moduli (S and -S disjoint) []; tournament moduli (skew half-set) []
+squares: tournament moduli [3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107] versus primes = 3 mod 4 below 121: [3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83, 103, 107]
+2^k: tournament moduli [7, 23, 47, 71, 79, 103] versus primes with ord_p(2) = (p-1)/2 and p = 7 mod 8: [7, 23, 47, 71, 79, 103]
