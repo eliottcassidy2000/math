@@ -42,4 +42,27 @@ the source note §5):
 
 ---
 
-*Results (appended after the runs):*
+*Results (appended after the runs, 2026-10-27; program `04-computation/experiments/eisenstein_four_fourth_powers_20261027.c`, validated
+on the B = 20 window and on 22 and 38, which share 6's residue class mod 16):*
+
+1. **CONFIRMED.** The exact box search (modes `box`, |a|, |b| ≤ 150) finds no representation of 6: 0 hits among
+   32,062,500 × 31,640,625 pair-sum combinations, in 14 s.
+2. **REFUTED.** With bases ≤ 60 (mode `all`), 27 of the 150 integers in 51..200 have no representation:
+   - 19 are the obstructed n ≡ 5 (mod 8): 53, 61, …, 197;
+   - 8 are not obstructed: 54, 60, 75, 78, 102, 124, 140, 186.
+
+   Eight is more than the predicted three. The prediction underestimated how sparse representations are at this size.
+   - **No local obstruction.** None of the eight, nor 6, is obstructed modulo 2⁸, 3⁵, 5³ or 7², and composite moduli
+     add nothing by the Chinese remainder theorem.
+   - **Pattern.** Six of the nine misses (6, 54, 60, 75, 78, 102) are multiples of 3, against about one third
+     expected. This is not significant at this size.
+   - **Reading.** The misses are consistent with the critical-dimension heuristic (counts growing like c(n)·log B).
+     They are not explained by any congruence.
+
+**Pre-registered (filed after the results above, before its run):**
+
+3. At least 3 of the 8 values 54, 60, 75, 78, 102, 124, 140, 186 acquire a representation with all bases |a|, |b| ≤ 120
+   (mode `all`).
+   - **What it tests.** The log-growth reading predicts that most misses fill in as B grows. A hidden global
+     obstruction predicts that none do.
+   - **Falsifier.** Zero, one or two of the eight acquire a representation.
