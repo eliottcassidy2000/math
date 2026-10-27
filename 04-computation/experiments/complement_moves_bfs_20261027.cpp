@@ -6,8 +6,8 @@
 // from the transitive tournament (distance = the number of complement moves needed = the exception budget of the native
 // grammar relative to the transitive baseline), and from the Paley clock P_n when n is a prime 3 mod 4.  For every
 // tournament it also computes f(T) = the minimum feedback-arc count (subset DP), and compares the distance with the
-// exact lower bound ceil(f(T)/(n-1)) (one move toggles n-1 ... exactly the M-(n-1) pairs off the path; relative to the
-// reversed order of a best order of T, the backward set changes by the n-1 path pairs, so f changes by at most n-1 per move).
+// exact lower bound ceil(f(T)/(n-1)) (one move toggles exactly the M-(n-1) pairs off the path; relative to the reversed
+// order of a best order of T, the backward set changes by the n-1 path pairs, so f changes by at most n-1 per move).
 // With the flag "diam" (n <= 6) it also computes the exact diameter of the move graph by BFS from every tournament.
 // Build: g++ -O2 -std=c++17 -o cmb complement_moves_bfs_20261027.cpp ; run: ./cmb n [diam]
 #include <cstdio>
@@ -70,7 +70,8 @@ int main(int argc, char** argv) {
     if (n % 4 == 3 && (n == 3 || n == 7)) { u32 pc = paleyCode(); printf("Paley P_%d: code %u, f = %d, lower bound %d, forest one-step ceiling 2n-4 = %d, distance from transitive = %d\n", n, pc, F[pc], (F[pc] + n - 2) / (n - 1), 2 * n - 4, dist[pc]);
         vector<uint8_t> d2(N); int e2 = bfs(pc, d2, queue); vector<u64> lv(e2 + 1, 0); for (u32 c = 0; c < N; c++) if (d2[c] != 255) lv[d2[c]]++;
         printf("BFS from P_%d: reached %zu, eccentricity %d, level counts:", n, queue.size(), e2); for (int d = 0; d <= e2; d++) printf(" %d:%llu", d, lv[d]); printf("\n"); }
-    if (n == 5) { u32 pc = paleyCode(); printf("regular tournament on 5 vertices (Z_5 with {1,4}): f = %d, distance from transitive = %d\n", F[pc], dist[pc]); }
+    if (n == 5) { u32 pc = 0; for (int k = 0; k < M; k++) { int i = pairs[k].first, j = pairs[k].second; int d = (j - i) % 5; if (d == 1 || d == 2) pc |= 1u << k; }   // the circulant Z_5{1,2}, regular
+        printf("labelled circulant Z_5{1,2} (regular; code %u, forward arcs %d, parity %s): f = %d, distance from transitive = %s\n", pc, __builtin_popcount(pc), (__builtin_popcount(pc) & 1) ? "odd" : "even", F[pc], dist[pc] == 255 ? "unreachable (other parity class)" : "reachable"); }
     if (diam && n <= 6) { int D = 0; u64 pairsAt[32] = {0}; vector<uint8_t> dd(N);
         for (u32 s = 0; s < N; s++) { int e = bfs(s, dd, queue); if (e > D) D = e; for (u32 c = 0; c < N; c++) pairsAt[dd[c] == 255 ? 31 : dd[c]]++; }
         printf("diameter of the move graph: %d; ordered-pair distance counts:", D); for (int d = 0; d < 32; d++) if (pairsAt[d]) printf(" %d:%llu", d == 31 ? -1 : d, pairsAt[d]); printf("\n"); }
