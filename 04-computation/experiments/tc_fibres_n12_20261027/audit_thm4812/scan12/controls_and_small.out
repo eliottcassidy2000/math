@@ -1,0 +1,48 @@
+scan12 n=7 type (3) ord=3 pair-orbits=11 invariant=2^11 amin=3 slice=0/1
+strong=1088 minH=45 minTc=11 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=1088
+replayed repository filter: candidates=0, |Aut| histogram:
+|Aut| histogram of all strong invariant: 3:1056 9:32
+small tc values (<64) among strong invariant: 11:32 15:96 17:144 19:96 23:288 25:96 33:48 37:48 41:144 45:48 53:48
+time 0.0 s
+scan12 n=9 type (3) (3) (3) ord=3 pair-orbits=12 invariant=2^12 amin=5 slice=0/1
+strong=3760 minH=1011 minTc=39 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=3760
+replayed repository filter: candidates=432, |Aut| histogram: 3:432
+|Aut| histogram of all strong invariant: 3:3348 9:360 81:52
+small tc values (<64) among strong invariant: 39:52
+time 0.0 s
+scan12 n=10 type (3) (3) (3) ord=3 pair-orbits=15 invariant=2^15 amin=7 slice=0/1
+strong=23520 minH=1269 minTc=47 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=23520
+replayed repository filter: candidates=5976, |Aut| histogram: 3:5400 9:576
+|Aut| histogram of all strong invariant: 3:20736 9:2592 27:192
+small tc values (<64) among strong invariant: 47:96
+time 0.8 s
+scan12 n=10 type (5) (5) ord=5 pair-orbits=9 invariant=2^9 amin=7 slice=0/1
+strong=480 minH=8175 minTc=1635 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=480
+replayed repository filter: candidates=40, |Aut| histogram: 5:40
+|Aut| histogram of all strong invariant: 5:480
+small tc values (<64) among strong invariant:
+time 0.0 s
+scan12 n=11 type (3) (3) (3) ord=3 pair-orbits=19 invariant=2^19 amin=11 slice=0/1
+strong=392000 minH=1701 minTc=63 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=392000
+replayed repository filter: candidates=82704, |Aut| histogram: 3:67392 9:13968 27:768 63:576
+|Aut| histogram of all strong invariant: 3:338472 9:48816 27:4320 63:288 81:104
+small tc values (<64) among strong invariant: 63:192
+time 26.9 s
+scan12 n=12 type (11) ord=11 pair-orbits=6 invariant=2^6 amin=19 slice=0/1
+strong=0 minH=18446744073709551615 minTc=-1 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=0
+replayed repository filter: candidates=0, |Aut| histogram:
+|Aut| histogram of all strong invariant:
+small tc values (<64) among strong invariant:
+time 0.0 s
+scan12 n=12 type (5) (5) ord=5 pair-orbits=14 invariant=2^14 amin=19 slice=0/1
+strong=9024 minH=14625 minTc=585 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=9024
+replayed repository filter: candidates=2320, |Aut| histogram: 5:2320
+|Aut| histogram of all strong invariant: 5:8640 25:384
+small tc values (<64) among strong invariant:
+time 1.4 s
+scan12 n=12 type (5) (3) (3) ord=15 pair-orbits=12 invariant=2^12 amin=19 slice=0/1
+strong=2112 minH=12825 minTc=285 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=2112
+replayed repository filter: candidates=192, |Aut| histogram: 15:192
+|Aut| histogram of all strong invariant: 15:1728 45:384
+small tc values (<64) among strong invariant:
+time 0.2 s

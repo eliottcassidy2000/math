@@ -1,0 +1,6 @@
+scan12 n=12 type (3) (3) (3) ord=3 pair-orbits=24 invariant=2^24 amin=19 slice=0/1
+strong=13643136 minH=2295 minTc=85 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=13643136
+replayed repository filter: candidates=2676384, |Aut| histogram: 3:2104704 9:515808 27:45504 63:10368
+|Aut| histogram of all strong invariant: 3:11606976 9:1846368 27:182592 63:5184 81:2016
+small tc values (<64) among strong invariant:
+time 2109.4 s

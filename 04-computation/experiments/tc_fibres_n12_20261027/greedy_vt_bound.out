@@ -1,0 +1,20 @@
+m=19: kmax=3, log(greedy LB) - log(23*3^((m-1)/2)) = 0.962
+m=21: kmax=3, log(greedy LB) - log(23*3^((m-1)/2)) = 1.625
+m=23: kmax=3, log(greedy LB) - log(23*3^((m-1)/2)) = 1.780
+m=25: kmax=3, log(greedy LB) - log(23*3^((m-1)/2)) = 1.715
+m=27: kmax=4, log(greedy LB) - log(23*3^((m-1)/2)) = 2.896
+m=31: kmax=4, log(greedy LB) - log(23*3^((m-1)/2)) = 5.270
+m=41: kmax=5, log(greedy LB) - log(23*3^((m-1)/2)) = 9.415
+m=51: kmax=6, log(greedy LB) - log(23*3^((m-1)/2)) = 13.963
+m=101: kmax=12, log(greedy LB) - log(23*3^((m-1)/2)) = 45.934
+m=201: kmax=23, log(greedy LB) - log(23*3^((m-1)/2)) = 121.275
+m=401: kmax=45, log(greedy LB) - log(23*3^((m-1)/2)) = 301.495
+odd m in [19,401] with greedy LB <= 23*3^((m-1)/2): []; minimum log-margin 0.962 at m = 19
+m in (401, 20000] violating c3 - k(D+1) >= 0.0229 m^3: [] (count 0)
+stated-tail margin at m = 401: 32.775
+number of odd m in [401, 2000) where the stated margin DEcreases from m to m+2: 720 (first: m=401: 32.775 -> 31.975)
+minimum of the stated-tail margin over odd m in (401, 200000]: 25.522 at m = 419
+minimum of the exact single-term margin over odd m in (401, 20000]: 32.681 at m = 419
+rigorous tail lower bound F(20k+19) >= tail_lb(k): k=20: 22.737, k=21: 26.671, k=30: 65.955, k=100: 496.549
+d/dk tail_lb at k = 20: 3.884 (increasing for k >= 20 since the bracket grows with log k)
+tail_lb(k) <= stated margin at m = 20k+19 for k = 20..2000: True

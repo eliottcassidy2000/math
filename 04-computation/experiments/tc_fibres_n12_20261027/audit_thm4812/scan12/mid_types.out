@@ -1,0 +1,12 @@
+scan12 n=12 type (5) (3) ord=15 pair-orbits=18 invariant=2^18 amin=19 slice=0/1
+strong=178560 minH=3645 minTc=243 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=178560
+replayed repository filter: candidates=38400, |Aut| histogram: 15:38400
+|Aut| histogram of all strong invariant: 15:177024 45:1536
+small tc values (<64) among strong invariant:
+time 16.9 s
+scan12 n=12 type (7) ord=7 pair-orbits=18 invariant=2^18 amin=19 slice=0/1
+strong=178560 minH=10815 minTc=393 hits(tc in {7,21})=0 H%Aut failures=0 strong-test mismatches(sampled)=0 nontrivial-Aut=178560
+replayed repository filter: candidates=30880, |Aut| histogram: 7:18720 21:11520 63:640
+|Aut| histogram of all strong invariant: 7:131040 21:46560 63:960
+small tc values (<64) among strong invariant:
+time 17.5 s

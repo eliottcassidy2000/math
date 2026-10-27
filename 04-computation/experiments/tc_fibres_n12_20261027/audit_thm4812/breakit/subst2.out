@@ -1,0 +1,4 @@
+s=7 orders 13..21 maxbig=0: substitutions 34947, hits 0, HK checks 24710 (fail 0), H%Aut fail 0; min tc by order: 13:125 15:289 17:797 19:2397 21:12539029
+s=7 orders 13..30 maxbig=1: substitutions 1976, hits 0, HK checks 532 (fail 0), H%Aut fail 0; min tc by order: 13:20979 15:350487 17:3047145 19:42619839 21:2681562805 23:750043346019 25:32158775805795
+s=9 orders 13..27 maxbig=0: substitutions 502, hits 0, HK checks 120 (fail 0), H%Aut fail 1; min tc by order: 13:24399 15:133907 17:5903247 19:74060745 21:462273189 23:344027413641 25:33603406387423
+SUBST2 DONE

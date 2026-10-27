@@ -1,0 +1,109 @@
+"""make_edits.py -- builds required_edits.json and verifies every `old` string occurs exactly once in the current file."""
+import json, os
+ROOT = "/Users/e/Documents/GitHub/math-wt-pyth-cuboids"
+THM = "01-canon/theorems/THM-4812-presentation-fibres-7-and-21-are-absent-at-every-order-orbit-product-lemma-vertex-transitive-lemma-closed-window.md"
+NOTE = "05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md"
+HYP = "05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md"
+
+edits = [
+ # 1  M1: analytic tail
+ dict(file=THM,
+      old="logarithm exceeds `log 23 + ((m-1)/2) log 3` with a margin increasing in `m` (33 at `m = 401`). `QED`",
+      new=("logarithm exceeds `log 23 + ((m-1)/2) log 3`. The margin is not monotone in `m`: for fixed `k` it falls by\n"
+           "  `log 3 - 3k log((m+2)/m) >= 0.79` per step `m -> m + 2`, so its minimum on the block `20k <= m <= 20k + 19` is at\n"
+           "  `m = 20k + 19`, where `3 log m >= 3 log(20k)` and `log k! <= k log k - k + (1/2) log(2 pi k) + 1/(12k)` give a margin\n"
+           "  of at least `k(2 log k - 4.083) - (1/2) log(2 pi k) - 13.03`, which is `>= 22.7` at `k = 20` and increasing for\n"
+           "  `k >= 20` (exact values: 32.8 at `m = 401`; minimum 25.5 over `m > 401`, at `m = 419`). `QED`"),
+      reason="M1: the stated monotonicity is false (the margin is a sawtooth, decreasing at 720 of the odd m in [401, 2000)); the corrected block-minimum argument proves the same conclusion."),
+ # 2  M2: index 1 or 3
+ dict(file=THM,
+      old="There the index `[P : G] <= 21|P|/f(|S|)` is at most 6, and being odd it is 1 or\n3.",
+      new=("There the index `[P : G] <= 21|P|/f(|S|)` is at most 6 and divides `|P|`, so it is 1, 3 or 5,\n"
+           "and 5 is excluded because every configuration with `5 | |P|` (`r >= 1`) has `21|P|/f(|S|) < 3`. (Sharper: (b) applied\n"
+           "with `G` itself gives `tc(S) = H(S)/|G| >= [P : G] prod tc(T[O]) = [P : G] 3^r 9^p`; configurations with `(r, p)` in\n"
+           "`{(0,0), (1,0)}` have `21|P|/f(|S|) < 3` and the others have `3^r 9^p = 9`, so `[P : G] = 1` in all 24 configurations,\n"
+           "every orbit is a module and `S` is a substitution; the 59 index-3 cases below are redundant and were scanned anyway.)"),
+      reason="M2: odd and <= 6 leaves 1, 3, 5; index 5 needs a separate (easy) exclusion, and the product lemma applied to G itself forces index 1."),
+ # 3  m1: script for [19, 401] in the body
+ dict(file=THM,
+      old="this exceeds `23 |Aut|` for every odd `m` in `[19, 401]` (exact integers)",
+      new="this exceeds `23 |Aut|` for every odd `m` in `[19, 401]` (exact rationals, `greedy_vt_bound.py`; smallest ratio 2.6, at `m = 19`)",
+      reason="m1: the FINITE-EXACT certificate had no script; the audit's greedy.py reproduces it (copy as greedy_vt_bound.py)."),
+ # 4  m1: status line + scripts list
+ dict(file=THM,
+      old="tournament (tc 162165 and 515241); the greedy bound for every odd m in [19, 401], with an analytic tail beyond.",
+      new="tournament (tc 162165 and 515241); the greedy bound for every odd m in [19, 401] (greedy_vt_bound.py; smallest ratio 2.6, at m = 19), with an analytic tail beyond.",
+      reason="m1: name the certificate."),
+ dict(file=THM,
+      old="  - 04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py (+ .out)\n",
+      new="  - 04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py (+ .out)\n  - 04-computation/experiments/tc_fibres_n12_20261027/greedy_vt_bound.py (+ .out; the (c) certificate for odd m in [19, 401] and the tail check)\n",
+      reason="m1: list the new script."),
+ # 5  m2: validity of the greedy product
+ dict(file=THM,
+      old="others, so `i_k >= prod_(i<k) (c3 - i(D+1))/k!` and `H >= sum_k 2^k i_k`.",
+      new="others, so `i_k >= prod_(i<k) (c3 - i(D+1))/k!` whenever `c3 > (k-1)(D+1)` (choose the triangles one at a time) and\n  `H >= sum_k 2^k i_k`.",
+      reason="m2: the product bound holds only while every factor is positive."),
+ # 6  m3: kernel nontrivial
+ dict(file=THM,
+      old="the kernel `K` acts on each block as `Z_3`",
+      new="the kernel `K` acts on each block as `Z_3` (`K != 1` since `15 | |G|`; `K` is normal, so its actions on the blocks are\n  conjugate)",
+      reason="m3: justify that K is nontrivial on every block."),
+ # 7  m4: relabelling
+ dict(file=THM,
+      old="Fix the standard labelled copies of the orbit\ntournaments (any `S` can be relabelled so)",
+      new=("Fix the standard labelled copies `X_O` of the orbit\n"
+           "tournaments (relabel each orbit by an isomorphism `T[O] -> X_O`; this conjugates `Aut(S)|_O <= Aut(T[O])` into\n"
+           "`Aut(X_O)`, so `Aut(S)` becomes a subgroup of the fixed group `P`, and every index-1 and index-3 subgroup of this `P`\n"
+           "is listed, not only conjugacy representatives)"),
+      reason="m4: make explicit why the standard copies and the standard Aut groups may be assumed."),
+ # 8  m5: counting for all n
+ dict(file=THM,
+      old="for every `n >= 23`, and for `tc = 7` at every `n >= 13` (`type_lemma_checks.py`);",
+      new=("for every `n >= 23`, and for `tc = 7` at every `n >= 13` (`type_lemma_checks.py`, exact to `n = 199`; for all `n`,\n"
+           "`f(n) >= 5^(-1/3) 5^(n/3)` while `|P| <= 1.618 * 3^(n/3)` (`21/3^(7/3)` is the largest of `1, 5/3^(5/3), 25/3^(10/3),\n"
+           "21/3^(7/3)`), so `f(n) > 21|P|` for `n >= 24`, and `|P| <= 3^(n/3)` gives `f(n) > 7|P|` for `n >= 15`);"),
+      reason="m5: the numerical check stops at 199; a one-line analytic bound covers every order."),
+ # 9  m6: depends_on
+ dict(file=THM,
+      old="  - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md\nrelated:",
+      new="  - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md\n  - 01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md\nrelated:",
+      reason="m6: Busch's f (THM-4744) is used in (a), (d), (f) and (g)."),
+ # 10 m7: (e) wording
+ dict(file=THM,
+      old="almost all primes are touchable, unconditionally.",
+      new=("almost all primes are touchable, unconditionally (a routine corollary: `s(qr) = 1 + q + r` is the classical step\n"
+           "behind \"Goldbach implies that 5 is the only odd untouchable\", and the same exceptional-set bound gives the folklore\n"
+           "statement that almost all odd numbers are touchable)."),
+      reason="m7: credit the classical argument; the density statement is a corollary, not a new theorem."),
+ # 11 m8: note total
+ dict(file=NOTE,
+      old="(24.9 million invariant tournaments over seven",
+      new="(21.5 million invariant tournaments, 18.1 million strong, over seven",
+      reason="m8: 2^6 + 2*2^18 + 2^14 + 2^12 + 2^22 + 2^24 = 21,516,352 invariant, 18,138,240 strong."),
+ # 12 m9: OPEN item
+ dict(file=THM,
+      old="  OPEN: whether every odd v not in {7, 21} is a tc value (HYP-9352 (1)-type spectrum question); an audit of the window search.",
+      new=("  AUDITED (independent, 2026-10-27): every count of (a), (c), (d) and the (g) window reproduced with separate code\n"
+           "  (own conjugates, own group construction by element-wise kernels, Landau strong test, pull Held-Karp, a subset-run\n"
+           "  substitution DP checked against Held-Karp and Karp's inclusion-exclusion, own |Aut| for every strong tournament,\n"
+           "  no candidate filter): no tc in {7, 21}; corrections to the (c) tail and the (d) index step.\n"
+           "  OPEN: whether every odd v not in {7, 21} is a tc value (HYP-9352 (1)-type spectrum question)."),
+      reason="m9: the audit of the window search is done (wording to be adjusted by the owner)."),
+ # 13 m9 optional: HYP-9352 (2)
+ dict(file=HYP,
+      old="2. **Forbidden fibre sizes.** No node of the line metagraph has `tc = 7` or `tc = 21` at any order",
+      new="2. **Forbidden fibre sizes.** PROVED at every order by THM-4812 (through order 11 by THM-4790). No node of the line metagraph has `tc = 7` or `tc = 21` at any order",
+      reason="m9 (optional bookkeeping): HYP-9352 (2) is now a theorem."),
+]
+
+ok = True
+for i, e in enumerate(edits, 1):
+    path = os.path.join(ROOT, e['file'])
+    txt = open(path, encoding='utf-8').read()
+    c = txt.count(e['old'])
+    if c != 1:
+        ok = False
+        print(f"edit {i}: old string occurs {c} times in {e['file']}")
+print("all old strings unique:", ok)
+json.dump(edits, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'required_edits.json'), 'w'), indent=2, ensure_ascii=False)
+print("written", len(edits), "edits")

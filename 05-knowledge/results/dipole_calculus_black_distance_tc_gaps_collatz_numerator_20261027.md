@@ -71,7 +71,7 @@ connectivity, and it is attained for **every** source.
 ## 3. The {7, 21} presentation gaps at every order (THM-4812)
 
 The owner's observation that `H` and `tc = H/|Aut|` have different `{7, 21}` scopes is resolved: **no tournament has
-`tc in {7, 21}`.** Ingredients: the order-12 extension of THM-4790 (24.9 million invariant tournaments over seven
+`tc in {7, 21}`.** Ingredients: the order-12 extension of THM-4790 (21.5 million invariant tournaments, 18.1 million strong, over seven
 automorphism types); the orbit product lemma `tc(T) >= prod tc(T[O])` over the `Aut(T)`-orbits, from the OCF; the
 vertex-transitive lemma (only `K1, C3, R5, P7` have `tc <= 21`; complete via circulants at prime orders, the regular
 census at 9, two explicit groups at 15, and a greedy triangle packing against Dixon's bound from 19 on); the counting

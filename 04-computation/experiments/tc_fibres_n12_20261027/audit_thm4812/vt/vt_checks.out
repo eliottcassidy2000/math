@@ -1,0 +1,57 @@
+== order-9 regular census
+class  1: regular=1 H=3267 |Aut|=9 vertex-transitive=1 tc=363
+class  2: regular=1 H=3357 |Aut|=9 vertex-transitive=1 tc=373
+class  3: regular=1 H=3279 |Aut|=3 vertex-transitive=0 tc=1093
+class  4: regular=1 H=3249 |Aut|=1 vertex-transitive=0 tc=3249
+class  5: regular=1 H=3297 |Aut|=1 vertex-transitive=0 tc=3297
+class  6: regular=1 H=3255 |Aut|=1 vertex-transitive=0 tc=3255
+class  7: regular=1 H=3275 |Aut|=1 vertex-transitive=0 tc=3275
+class  8: regular=1 H=3333 |Aut|=3 vertex-transitive=0 tc=1111
+class  9: regular=1 H=3243 |Aut|=3 vertex-transitive=0 tc=1081
+class 10: regular=1 H=3303 |Aut|=3 vertex-transitive=0 tc=1101
+class 11: regular=1 H=3281 |Aut|=1 vertex-transitive=0 tc=3281
+class 12: regular=1 H=3255 |Aut|=1 vertex-transitive=0 tc=3255
+class 13: regular=1 H=3255 |Aut|=3 vertex-transitive=0 tc=1085
+class 14: regular=1 H=3159 |Aut|=81 vertex-transitive=1 tc=39
+class 15: regular=1 H=3299 |Aut|=1 vertex-transitive=0 tc=3299
+classes 15, vertex-transitive 3
+== order-7 regular census
+class  1: regular=1 H=175 |Aut|=7 vertex-transitive=1 tc=25
+class  2: regular=1 H=171 |Aut|=3 vertex-transitive=0 tc=57
+class  3: regular=1 H=189 |Aut|=21 vertex-transitive=1 tc=9
+classes 3, vertex-transitive 2
+== order-5 regular census
+class  1: regular=1 H=15 |Aut|=5 vertex-transitive=1 tc=3
+classes 1, vertex-transitive 1
+== Cayley
+Cayley Z_3 x Z_1: 2 connection sets, min tc 1, sets with tc <= 21: 2; distinct (H,|Aut|,tc): (3,3,1)x2
+Cayley Z_5 x Z_1: 4 connection sets, min tc 3, sets with tc <= 21: 4; distinct (H,|Aut|,tc): (15,5,3)x4
+Cayley Z_7 x Z_1: 8 connection sets, min tc 9, sets with tc <= 21: 2; distinct (H,|Aut|,tc): (175,7,25)x6 (189,21,9)x2
+Cayley Z_9 x Z_1: 16 connection sets, min tc 39, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (3267,9,363)x6 (3357,9,373)x6 (3159,81,39)x4
+Cayley Z_3 x Z_3: 16 connection sets, min tc 39, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (3159,81,39)x16
+Cayley Z_11 x Z_1: 32 connection sets, min tc 1729, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (93027,11,8457)x10 (92411,11,8401)x10 (95095,55,1729)x2 (93467,11,8497)x10
+Cayley Z_13 x Z_1: 64 connection sets, min tc 94949, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (3711175,13,285475)x12 (3669497,13,282269)x12 (3683797,13,283369)x12 (3707483,13,285191)x12 (3703011,39,94949)x4 (3704857,13,284989)x12
+Cayley Z_15 x Z_1: 128 connection sets, min tc 162165, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (198464295,15,13230953)x8 (195695145,15,13046343)x8 (196216545,15,13081103)x8 (196963035,15,13130869)x8 (197127315,15,13141821)x8 (196277235,15,13085149)x8 (197347005,15,13156467)x8 (197094945,15,13139663)x8 (197030475,1215,162165)x8 (196922055,15,13128137)x8 (196361595,15,13090773)x8 (197728485,15,13181899)x8 (193215375,375,515241)x8 (196264905,15,13084327)x8 (196261035,15,13084069)x8 (197068455,15,13137897)x8
+Cayley Z_5 x Z_3: 128 connection sets, min tc 162165, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (197030475,1215,162165)x8 (197068455,15,13137897)x8 (197127315,15,13141821)x8 (196922055,15,13128137)x8 (196361595,15,13090773)x8 (196261035,15,13084069)x8 (196277235,15,13085149)x8 (195695145,15,13046343)x8 (198464295,15,13230953)x8 (197347005,15,13156467)x8 (196963035,15,13130869)x8 (196264905,15,13084327)x8 (196216545,15,13081103)x8 (193215375,375,515241)x8 (197728485,15,13181899)x8 (197094945,15,13139663)x8
+Cayley Z_17 x Z_1: 256 connection sets, min tc 792878221, sets with tc <= 21: 0; distinct (H,|Aut|,tc): (13689269499,17,805251147)x16 (13496380733,17,793904749)x16 (13486964977,17,793350881)x16 (13491417243,17,793612779)x16 (13551423911,17,797142583)x16 (13526567225,17,795680425)x16 (13478929757,17,792878221)x16 (13627838945,17,801637585)x16 (13560055389,17,797650317)x16 (13519308361,17,795253433)x16 (13506158929,17,794479937)x16 (13544403013,17,796729589)x16 (13551813041,17,797165473)x16 (13492503135,17,793676655)x16 (13540194969,17,796482057)x16 (13507244311,17,794543783)x16
+== affine15
+G_A: |G| = 405, transitive=1, max element order 5
+  orbital pairs 3 -> 8 invariant tournaments
+  tournament 0: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 1: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 2: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 3: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 4: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 5: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 6: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+  tournament 7: blocks are modules=1 H=197030475 |Aut|=1215 VT=1 tc=162165
+G_B: |G| = 75, transitive=1, max element order 5
+  orbital pairs 3 -> 8 invariant tournaments
+  tournament 0: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 1: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 2: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 3: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 4: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 5: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 6: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241
+  tournament 7: blocks are modules=1 H=193215375 |Aut|=375 VT=1 tc=515241

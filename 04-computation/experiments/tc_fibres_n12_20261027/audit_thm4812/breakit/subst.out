@@ -1,0 +1,4 @@
+s=3 orders 13..30 maxbig=2: substitutions 24, hits 0, HK checks 24 (fail 0), H%Aut fail 0; min tc by order: 13:1881 15:7731 17:3019437
+s=4 orders 13..30 maxbig=2: substitutions 110, hits 0, HK checks 104 (fail 0), H%Aut fail 0; min tc by order: 14:1143 16:6885 18:27567 20:27427617
+s=5 orders 13..30 maxbig=1: substitutions 816, hits 0, HK checks 786 (fail 0), H%Aut fail 0; min tc by order: 13:165 15:963 17:3825 19:3829977
+s=6 orders 13..30 maxbig=1: substitutions 12740, hits 0, HK checks 11270 (fail 0), H%Aut fail 0; min tc by order: 14:219 16:633 18:3663 20:14517 22:57323325

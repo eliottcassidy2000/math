@@ -16,7 +16,7 @@ status: >
   480 (n = 10, (5)(5)) and 392,000 (n = 11, (3)^3). (c) at orders 3-17: Cayley tournaments on Z_3, Z_5, Z_7, Z_9, Z_3^2,
   Z_11, Z_13, Z_15, Z_17 (minimum tc 1, 3, 9, 39, 39, 1729, 94949, 162165, 792878221; tc <= 21 only for C3, R5, P7); the
   complete census of the 15 regular 9-tournaments (vertex-transitive ones: tc 363, 373, 39); every G_A- and G_B-invariant
-  tournament (tc 162165 and 515241); the greedy bound for every odd m in [19, 401], with an analytic tail beyond.
+  tournament (tc 162165 and 515241); the greedy bound for every odd m in [19, 401] (greedy_vt_bound.py; smallest ratio 2.6, at m = 19), with an analytic tail beyond.
   CITED: THM-4790 (reduction to strong components, n <= 11), THM-1370 (H never 7 or 21), THM-002 (OCF), THM-4741 (tc = 1 iff
   K1/C3 stack), Dixon 1967 (|Aut T| <= 3^((n-1)/2)), Moon 1972 / Busch 2006 / THM-4744 (strong minimum f); Feit-Thompson 1963 and Galois's theorem on solvable primitive groups (or the list of primitive groups of degree 15),
   Montgomery-Vaughan 1975 (Acta Arith. 27) and the Brun-Selberg upper-bound sieve for (e). The {2, 5} prime-untouchable completeness remains conditional on the
@@ -29,7 +29,13 @@ status: >
   FINITE-EXACT (g): the strong census of orders 3-10 (tc_strong_fibres.cpp) and the generalised window search
   (fibre_configs.py, fibre_scan.cpp: 567 configuration-subgroup cases for v <= 21 and 141 for v = 23, 811,496 + 3,589,258
   strong invariant tournaments of orders >= 11, no tc value <= 23) with the order bounds of the same counting.
-  OPEN: whether every odd v not in {7, 21} is a tc value (HYP-9352 (1)-type spectrum question); an audit of the window search.
+  AUDITED (independent, 2026-10-27; PASS WITH CORRECTIONS, two text majors and nine minors applied; report
+  04-computation/experiments/tc_fibres_n12_20261027/audit_thm4812/REPORT.md): every count of (a), (c), (d) and the (g) window for v <= 21 reproduced with separate code
+  (own conjugates, own group construction by element-wise kernels, Landau strong test, pull Held-Karp, a subset-run
+  substitution DP checked against Held-Karp and Karp's inclusion-exclusion, own |Aut| for every strong tournament,
+  no candidate filter): no tc in {7, 21}; corrections to the (c) tail and the (d) index step. The (g) extension to v = 23 was filed after the
+  audit and is not covered by it.
+  OPEN: whether every odd v not in {7, 21} is a tc value (HYP-9352 (1)-type spectrum question).
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
 depends_on:
@@ -37,6 +43,7 @@ depends_on:
   - 01-canon/theorems/THM-002-ocf.md
   - 01-canon/theorems/THM-4741-presentation-counts-single-view-classes-are-k1-c3-stacks-rotation-inequality-and-forbidden-fibre-sizes-7-and-21.md
   - 01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md
+  - 01-canon/theorems/THM-4744-interval-chains-attain-busch-and-are-the-extremal-strong-tournaments-through-order-twelve.md
 related:
   - 01-canon/theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md
   - 05-knowledge/hypotheses/HYP-9352-presentation-count-laws-strong-spectrum-forbidden-fibre-sizes-and-the-three-move-law-at-n-11.md
@@ -46,6 +53,7 @@ scripts:
   - 04-computation/experiments/tc_fibres_n12_20261027/regular_vertex_transitive.py (+ regular9_vertex_transitive.out)
   - 04-computation/experiments/tc_fibres_n12_20261027/vt15_noncayley.py (+ vt15_noncayley.out)
   - 04-computation/experiments/tc_fibres_n12_20261027/type_lemma_checks.py (+ .out)
+  - 04-computation/experiments/tc_fibres_n12_20261027/greedy_vt_bound.py (+ .out; the (c) certificate for odd m in [19, 401] and the tail check)
   - 04-computation/experiments/tc_fibres_n12_20261027/window_configs.py, tc_window_scan.cpp (+ window_scan.out)
   - 04-computation/experiments/tc_fibres_n12_20261027/tc_strong_fibres.cpp, fibre_configs.py, fibre_scan.cpp, strong_fibre_table.py (+ fibre_scan_v5_21.out, fibre_scan_v23.out, strong_fibre_table.out)
   - 04-computation/experiments/tc_fibres_n12_20261027/tc_spectrum_sweep.cpp (+ tc_spectrum_summary.out)
@@ -107,7 +115,8 @@ and each `T[O]` is vertex-transitive (hence regular, of odd order).
   363, 373, 39` (the last is `C3[C3]`, `|Aut| = 81`).
 - `m = 15`: an odd-order group is solvable (Feit-Thompson) and a solvable primitive group has prime-power degree, so the
   group is imprimitive with blocks of size 3 or 5. With five blocks of size 3 the action on blocks is `Z_5` (the only
-  odd-order transitive group of degree 5), the kernel `K` acts on each block as `Z_3`, and transporting labels by a Sylow
+  odd-order transitive group of degree 5), the kernel `K` acts on each block as `Z_3` (`K != 1` since `15 | |G|`; `K` is normal, so its actions on the blocks are
+  conjugate), and transporting labels by a Sylow
   5-subgroup `P` identifies `K` with a nonzero `F_3[Z_5]`-submodule of `F_3^5` projecting onto every coordinate: the
   diagonal, the augmentation module `A_3`, or everything (`x^4+x^3+x^2+x+1` is irreducible over `F_3`). The diagonal and
   the full module give a regular `Z_15`; `K = A_3` gives `G_A`. Three blocks of size 5 give likewise the diagonal, all, or
@@ -116,10 +125,15 @@ and each `T[O]` is vertex-transitive (hence regular, of odd order).
   `R5[C3]` (`tc` 162165) and `C3[R5]` (`tc` 515241).
 - `m >= 19`: in the OCF sum keep only collections of disjoint directed triangles. A vertex-transitive tournament has
   `c3 = m(m^2-1)/24` triangles, `(m^2-1)/8` through each vertex, and each triangle meets at most `D = 3((m^2-1)/8 - 1)`
-  others, so `i_k >= prod_(i<k) (c3 - i(D+1))/k!` and `H >= sum_k 2^k i_k`. With Dixon's bound
-  `|Aut| <= 3^((m-1)/2)` this exceeds `23 |Aut|` for every odd `m` in `[19, 401]` (exact integers), and for `m > 401` the
+  others, so `i_k >= prod_(i<k) (c3 - i(D+1))/k!` whenever `c3 > (k-1)(D+1)` (choose the triangles one at a time) and
+  `H >= sum_k 2^k i_k`. With Dixon's bound
+  `|Aut| <= 3^((m-1)/2)` this exceeds `23 |Aut|` for every odd `m` in `[19, 401]` (exact rationals, `greedy_vt_bound.py`; smallest ratio 2.6, at `m = 19`), and for `m > 401` the
   single term `k = floor(m/20)` suffices: there `c3 - k(D+1) >= 0.0229 m^3` and `2^k i_k >= (0.0458 m^3)^k/k!`, whose
-  logarithm exceeds `log 23 + ((m-1)/2) log 3` with a margin increasing in `m` (33 at `m = 401`). `QED`
+  logarithm exceeds `log 23 + ((m-1)/2) log 3`. The margin is not monotone in `m`: for fixed `k` it falls by
+  `log 3 - 3k log((m+2)/m) >= 0.79` per step `m -> m + 2`, so its minimum on the block `20k <= m <= 20k + 19` is at
+  `m = 20k + 19`, where `3 log m >= 3 log(20k)` and `log k! <= k log k - k + (1/2) log(2 pi k) + 1/(12k)` give a margin
+  of at least `k(2 log k - 4.083) - (1/2) log(2 pi k) - 13.03`, which is `>= 22.7` at `k = 20` and increasing for
+  `k >= 20` (exact values: 32.8 at `m = 401`; minimum 25.5 over `m > 401`, at `m = 419`). `QED`
 
 ## (d) The window, and its closure
 
@@ -129,13 +143,20 @@ orbit of `Aut(S)` induces `K1`, `C3`, `R5` or `P7`, and the product of their `tc
 of the orbit groups `Aut(C3)`, `Aut(R5)`, `Aut(P7)`), with `3c + 5r + 7p <= |S|`, `(r, p)` in `{(0,0), (1,0)}` for
 `tc = 7` and in `{(0,0), (1,0), (2,0), (0,1)}` for `tc = 21`, and `|G| >= f(|S|)/tc(S)` because `H(S) >= f(|S|)`
 (`f(3k) = 3 5^(k-1)`, `f(3k+1) = 5^k`, `f(3k+2) = 9 5^(k-1)`; Busch). The inequality `f(n) <= tc |P|` fails at `n = 21`,
-for every `n >= 23`, and for `tc = 7` at every `n >= 13` (`type_lemma_checks.py`); with (a) only `tc(S) = 21` and
-`13 <= |S| <= 20` or `|S| = 22` remain. There the index `[P : G] <= 21|P|/f(|S|)` is at most 6, and being odd it is 1 or
-3. An index-3 subgroup of an odd-order group is normal (3 is the least prime divisor), hence the kernel of a surjection
+for every `n >= 23`, and for `tc = 7` at every `n >= 13` (`type_lemma_checks.py`, exact to `n = 199`; for all `n`,
+`f(n) >= 5^(-1/3) 5^(n/3)` while `|P| <= 1.618 * 3^(n/3)` (`21/3^(7/3)` is the largest of `1, 5/3^(5/3), 25/3^(10/3),
+21/3^(7/3)`), so `f(n) > 21|P|` for `n >= 24`, and `|P| <= 3^(n/3)` gives `f(n) > 7|P|` for `n >= 15`); with (a) only `tc(S) = 21` and
+`13 <= |S| <= 20` or `|S| = 22` remain. There the index `[P : G] <= 21|P|/f(|S|)` is at most 6 and divides `|P|`, so it is 1, 3 or 5,
+and 5 is excluded because every configuration with `5 | |P|` (`r >= 1`) has `21|P|/f(|S|) < 3`. (Sharper: (b) applied
+with `G` itself gives `tc(S) = H(S)/|G| >= [P : G] prod tc(T[O]) = [P : G] 3^r 9^p`; configurations with `(r, p)` in
+`{(0,0), (1,0)}` have `21|P|/f(|S|) < 3` and the others have `3^r 9^p = 9`, so `[P : G] = 1` in all 24 configurations,
+every orbit is a module and `S` is a substitution; the 59 index-3 cases below are redundant and were scanned anyway.) An index-3 subgroup of an odd-order group is normal (3 is the least prime divisor), hence the kernel of a surjection
 `P -> Z_3`, which factors through `P^ab = Z_3^(p+c) x Z_5^r`. This leaves 24 orbit configurations and 83 subgroups. For
 index 1 every orbit is a module (the rotation of one orbit alone is an automorphism), so `S` is a substitution of the
-blocks into a quotient; for index 3 the between-orbit orbitals may split. Fix the standard labelled copies of the orbit
-tournaments (any `S` can be relabelled so) and enumerate every orientation of every pair of mutually inverse
+blocks into a quotient; for index 3 the between-orbit orbitals may split. Fix the standard labelled copies `X_O` of the orbit
+tournaments (relabel each orbit by an isomorphism `T[O] -> X_O`; this conjugates `Aut(S)|_O <= Aut(T[O])` into
+`Aut(X_O)`, so `Aut(S)` becomes a subgroup of the fixed group `P`, and every index-1 and index-3 subgroup of this `P`
+is listed, not only conjugacy representatives) and enumerate every orientation of every pair of mutually inverse
 between-orbit orbitals of `G`: the 185,642 strong tournaments obtained have no `tc in {7, 21}` (status line). Hence no
 tournament has `tc` equal to 7 or 21.
 
@@ -145,7 +166,9 @@ If `p >= 7` is prime and `p - 1 = q + r` with distinct primes `q, r` (`q = 2` al
 prime untouchable `p > 5` has either `p - 1` outside the Goldbach set, or `p - 1 = 2q` as its only representation. The
 first set has `O(x^(1-delta))` elements up to `x` (Montgomery-Vaughan); the second lies in `{p = 2q + 1 : q prime}`, which
 has `O(x/log^2 x)` elements (upper-bound sieve). Hence the prime untouchables up to `x` number `O(x/log^2 x) = o(pi(x))`:
-almost all primes are touchable, unconditionally. That 2 and 5 are the only ones remains the conditional statement of
+almost all primes are touchable, unconditionally (a routine corollary: `s(qr) = 1 + q + r` is the classical step
+behind "Goldbach implies that 5 is the only odd untouchable", and the same exceptional-set bound gives the folklore
+statement that almost all odd numbers are touchable). That 2 and 5 are the only ones remains the conditional statement of
 THM-4805.
 
 ## (f) Strong presentation fibres are finite
