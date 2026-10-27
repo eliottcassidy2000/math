@@ -1,20 +1,23 @@
 ---
 id: THM-4824
-title: "Catalytic merge debt by lattice shape: with the minimal vectors as unit charges, the square grid, every checkerboard lattice D_n (n >= 2) and E8 = D8 u (D8 + (1/2)^8) are free (zero debt at every point); a lattice with collinear minimal vectors (the first grid Z[sqrt-3], units +-1) costs n(n-1) on its line and nothing else is reachable; in the (1/2,1/2)-glued rectangular family {u = v mod 2, Q = u^2 + c v^2} the Eisenstein grid c = 3 is the critical member, where the glued points tie with the base vectors and six units appear; the aspect-2 member has the floor 2 floor(Q/8) with its own exceptional points; tight Eisenstein splits are the points of one parity coset on two or four norm shells; zero-sum triples have a^4 + b^4 + c^4 = 2(a^2 + ab + b^2)^2"
+title: "Catalytic merge debt by lattice shape: with the minimal vectors as unit charges, a root lattice is free (zero debt at every point) iff it is neither A1 nor A2 (the square grid, D_n, A_n for n >= 3, E6, E7, E8 = D8 u (D8 + (1/2)^8) and every reducible root lattice are free); a lattice with collinear minimal vectors (the first grid Z[sqrt-3], units +-1) costs n(n-1) on its line and nothing else is reachable; in the (1/2,1/2)-glued rectangular family {u = v mod 2, Q = u^2 + c v^2} the Eisenstein grid c = 3 is the critical member, where the glued points tie with the base vectors and six units appear; the aspect-2 member has the floor 2 floor(Q/8) with its own exceptional points; tight Eisenstein splits are the points of one parity coset on two or four norm shells; zero-sum triples have a^4 + b^4 + c^4 = 2(a^2 + ab + b^2)^2"
 status: >
-  PROVED (mac-mini-2026-10-27-slab; independent audit pending at filing):
+  PROVED (mac-mini-2026-10-27-slab; independently audited 2026-10-27, corrections applied:
+  04-computation/experiments/eisenstein_two_grids_fourth_powers_20261027/audit/REPORT_THM4824.md):
   (A) the square grid, D_n (n >= 2) and E8 are free, by explicit constructions;
-  (B) the collinear law, with a potential and a matching tree;
+  (B) the collinear law;
   (C) the critical-aspect statement for the glued family;
-  (D) the aspect-2 floor g >= 2 floor(Q/8), by a potential, and the window lemma;
-  (E) the parity-coset shell lemma for Z[w].
+  (D) the aspect-2 floor g >= 2 floor(Q/8) and the window lemma;
+  (E) the parity-coset shell lemma;
+  (G) the classification of root lattices: free iff not A1 or A2. This is the audit's upgrade of HYP-9428 (1), by
+  support reduction for A_n, index-2 glue for E6, E7, E8, and perpendicular helpers for reducible lattices.
   CLASSICAL: (F) the zero-sum quartic identity.
   FINITE-EXACT:
-  - A4 (window Q <= 6) and A5 (Q <= 4) free;
-  - the aspect-2 exceptional norms below 891;
-  - the debt ratios at aspects 3/2 and 5/2.
-  Inherited: THM-4820 (the Eisenstein floor floor(Q/3) and its exceptions); Session75's parity-shell and lifting
-  criterion (EISENSTEIN_INVOICES), of which (E) is the all-type form. OPEN: HYP-9428.
+  - the aspect-2 exceptional norms below 891 and the on-axis row;
+  - the windowed freeness checks (A4).
+  WINDOW EVIDENCE ONLY (upper bounds g <= g_W): the debt ratios at aspects 3/2 and 5/2, and hence the refutation of
+  the angle law.
+  Inherited: THM-4820 and Session75's parity-shell criterion. OPEN: HYP-9428.
 session: mac-mini-2026-10-27-slab
 source: 05-knowledge/results/eisenstein_two_grids_13_37_fourth_powers_20261027.md
 scripts:
@@ -54,7 +57,7 @@ related:
 - **Odd a.** a = 2k + 1 = (k+1)(1+i) + (k − (k+1)i), with β = −2(k+1) < 0. Both parts are perpendicular merges of
   free real and imaginary integers.
 
-Unit rotations then make every imaginary integer free, and a + bi = a + (bi) is a perpendicular merge. ∎
+This covers a > 0, and the symmetry x → −x covers a < 0. Unit rotations then make every imaginary integer free, and a + bi = a + (bi) is a perpendicular merge. ∎
 
 **(A2) Checkerboard lattices D_n.** Here D_n = {x ∈ Z^n : Σxᵢ even}, Q = x·x/2, and the roots are ±eᵢ ± eⱼ. Every D_n
 with n ≥ 2 is free.
@@ -70,14 +73,14 @@ with n ≥ 2 is free.
   xᵢeᵢ + xⱼeⱼ = ((xᵢ+xⱼ)/2)(eᵢ + eⱼ) + ((xᵢ−xⱼ)/2)(eᵢ − eⱼ), a perpendicular merge. Each even coordinate contributes
   xᵢeᵢ. Pieces with disjoint supports are perpendicular, so x is a merge of free perpendicular pieces. ∎
 
-**(A3) E8 = D8 ∪ (D8 + (½)⁸).** E8 is free, which is the 8-dimensional form of the half-shift glue.
+**(A3) E8 = D8 ∪ (D8 + (½)⁸).** E8 is free. [ANALOGY: this is the 8-dimensional version of the half-shift glue.] More simply, any glue-coset root h with x·h ≤ 0 works, since −h lies in the same coset; see (G), step 4.
 - **Integer points.** Points of D8 are free by (A2).
 - **Glue points.** Let x lie in the glue coset. Take h′ = −½·sign(x), coordinatewise; the coordinates of x are half-odd,
   so none is 0. If h′ has an odd number of minus signs, flip the sign at a coordinate of least |xⱼ|.
 - **Why the split works.** Then h′ is a root (an even number of minus signs), and x − h′ ∈ D8. Moreover
   β = x·h′ − 2 ≤ −(3/8)Σ|xᵢ| − 2 < 0. So x = (x − h′) + h′ is a free merge. ∎
 
-**(A4) Finite checks** (`root_lattice_debt2.py`, `e8_check.py`). All finds 0 everywhere:
+**(A4) Finite checks** (`root_lattice_debt2.py`, `e8_check.py`; the audit extends them to D3 Q ≤ 24, D4 Q ≤ 10, D5 Q ≤ 6, A4 Q ≤ 9, A5 Q ≤ 6, E8 Q ≤ 3, A6 Q ≤ 4, A7 Q ≤ 3, E6 Q ≤ 4, E7 Q ≤ 3, A2 ⊕ A1 Q ≤ 40, A2 ⊕ A2 Q ≤ 16). All find 0 everywhere:
 
 | lattice | roots | window | points |
 |---|---|---|---|
@@ -116,13 +119,13 @@ basis vector, and the last aspect at which they are minimal at all. Along the fa
 | 3 | ⌊Q/3⌋, THM-4820 (here scaled by 4) |
 | > 3 | the collinear law (B) |
 
-Measured debt ratios g/Q on the outer half of a window of 120 minimal norms (`aspect_ratio_debt.py`):
+Windowed values g_W/Q on the outer half of a window of 120 minimal norms (`aspect_ratio_debt.py`). These are **upper bounds** on g/Q at those points. At c = 3/2 and 5/2 no potential or window lemma is available, so they bound nothing from below:
 
 | c | 1 | 3/2 | 2 | 5/2 | 3 |
 |---|---|---|---|---|---|
 | g/Q | 0 | [0.129, 0.141] | [0.245, 0.256] | [0.271, 0.290] | [0.328, 0.333] |
 
-A first-drafted angle law, ratio (c − 1)/(2c), fits c = 1, 2, 3 but not 3/2 or 5/2. It is withdrawn; see HYP-9428 (2).
+A first-drafted angle law, ratio (c − 1)/(2c), fits c = 1, 2, 3. It is refuted on window evidence, not by proof: at 4× larger windows the outer-half maxima are 0.1352 at c = 3/2 (law 0.1667) and 0.2794 at c = 5/2 (law 0.3) (audit). It is withdrawn; see HYP-9428 (2).
 
 ## (D) The aspect-2 floor (PROVED lower bound; FINITE-EXACT exceptions)
 
@@ -143,7 +146,9 @@ THM-4820 audit.
 exceptional norms are 83, 100, 107, 147, 211, 227, 251, 307, 347, 419, 475, 507, 547, 587, 643, 659, 676, 747, 787,
 811, 827.
 - **Excess 4** at 100 and 676, the on-axis points (±10, 0) and (±26, 0).
-- **Excess 2** at all the others.
+- **Excess 2** at all the others. At 747 only the (±13, ±17) orbit is exceptional, not (±27, ±3).
+
+Beyond 891 the audit finds more points of excess 4, both on the axis (for example (62, 0)) and off it (for example (±10, ±24) at norm 1252); see HYP-9428 (3).
 
 ## (E) Tight Eisenstein splits are parity-coset shells (PROVED)
 
@@ -176,7 +181,50 @@ If a + b + c = 0, then a² + b² + c² = 2(a² + ab + b²) and
 
 using Q(a + bω + cω²) = a² + b² + c² − ab − bc − ca. This was checked for |a|, |b| ≤ 60 (`counts.py` §4).
 
-**The link to THM-4820.** The zero-sum condition is the neutral-triple (catalyst) condition 1·a + ω·b + ω²·c, read on
-the coefficients. So the fourth-power sums of zero-sum triples are exactly twice squared Eisenstein norms
-(a² + ab + b² = Q(a − bω)). Below 51 these are 2, 18 and 32. [IDENTITY of the formula; the merge-debt and Waring
-problems themselves are not identified.]
+**The link to THM-4820** [ANALOGY]. The fourth-power sums of zero-sum triples are exactly twice squared Eisenstein norms (a² + ab + b² = Q(a − bω)). Below 51 these are 2, 18 and 32.
+- **How it relates to the catalyst.** The zero-sum plane is the orthogonal complement of the catalyst direction (1, 1, 1), not the catalyst itself. A point x has a zero-sum coefficient representative iff Q(x) ≡ 0 (mod 3), and then Q(x) = 3(a² + ab + b²) (audit).
+- **What is not claimed.** The merge-debt and Waring problems are not identified.
+
+## (G) Which root lattices pay (PROVED; the audit's upgrade of HYP-9428 (1))
+
+**Theorem G.** Let L be a root lattice, that is, an orthogonal sum of A, D, E root lattices, normalized so that roots
+have Q = x·x/2 = 1. Take the roots as unit charges. Then L is free iff L is neither A₁ nor A₂.
+- **A₁** is collinear: (B) applies.
+- **A₂** is the Eisenstein grid: it pays ⌊Q/3⌋ plus its exceptional set (THM-4820).
+- **Rank 2 caveat.** B₂ has the square lattice, which is free. G₂'s root lattice is the A₂ lattice, whose minimal vectors
+  are the short roots, so it pays.
+
+*Proof.*
+1. **Perpendicular helpers.** If α ⊥ h are roots, then Zα ⊕ Zh is a square grid whose units ±α, ±h are roots of L. By
+   (A1), every point of it is free in L, and in particular every root multiple kα.
+2. **A_n for n ≥ 3.** Here A_n = {x ∈ Z^(n+1) : Σxᵢ = 0}.
+   - **Root multiples.** Every root has a perpendicular root (e₁ − e₂ ⊥ e₃ − e₄), so every root multiple is free by
+     step 1.
+   - **Support reduction.** If x has support of size ≥ 3, two of its nonzero coordinates xᵢ, x_t have the same sign.
+     Put y = xᵢ(eᵢ − e_t) and z = x − y. Then supp z = supp x \ {i}, and β(y, z) = y·z = −xᵢ(xᵢ + x_t) < 0.
+   - **Induction.** Induct on the support: support 2 is a root multiple, and support 0 is 0.
+3. **D_n for n ≥ 4** is (A2).
+4. **E₆, E₇, E₈ by index-2 glue.**
+   - **The glue step.** Let M ⊂ L have index 2. Suppose M is free with its own roots, and the other coset contains a
+     root h. Then for x ∉ M, both x − h and x + h lie in M. Choose the sign so that x·h′ ≤ 0 for h′ = ±h. Then
+     β(x − h′, h′) = x·h′ − 2 ≤ −2, a free merge.
+   - **The three cases.** E₈ ⊃ D₈, E₇ ⊃ A₇ and E₆ ⊃ A₅ ⊕ A₁ have index 2: the determinant ratios 4/1, 8/2 and 12/3 all
+     equal 4 = 2².
+   - **Roots in the glue coset.** These are proper root subsystems, so the glue coset contains roots. The audit counts 40
+     of them for E₆.
+   - **The sublattices are free.** D₈ by step 3, A₇ by step 2, A₅ ⊕ A₁ by step 5.
+5. **Reducible lattices.**
+   - **Root multiples.** Every root has a perpendicular root in another component, so every root multiple is free.
+   - **A₂ components.** Every point of an A₂ component is (a + b)r₁ + b·r₃ for two roots at 120° and a, b ≥ 0. That is
+     a free merge, with β = −(a + b)b ≤ 0.
+   - **Other components** are free by steps 2–4.
+   - **General points.** A general point is a merge of mutually perpendicular free pieces, one per component. ∎
+
+The audit also verified explicit zero-cost trees for A₃–A₉, E₆, E₇ and A₂ ⊕ A₁ on random points.
+
+**Prior art (from memory).** No literature on merge trees with positive-part pair costs is known to the audit.
+- **Without the positive part.** The total cost is the same for every tree, Q(root) − Σ Q(leaves). Its scalar case is
+  the classical pile-splitting invariant Σab = n(n−1)/2.
+- **The split–coset correspondence** of (E) is the device behind Voronoi's relevant-vector criterion (Conway–Sloane,
+  SPLAG).
+

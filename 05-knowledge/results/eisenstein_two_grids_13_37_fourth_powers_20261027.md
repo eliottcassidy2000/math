@@ -1,7 +1,9 @@
 # The Eisenstein grid as a half-shifted copy of the first grid; 13 and 37; sums of four fourth powers
 
-2026-10-27, mac-mini-2026-10-27-slab. **Status:** THM-4824 (PROVED parts plus FINITE-EXACT checks) and HYP-9428 (OPEN),
-with a typed table of the numerical connections. Independent audit pending at the pre-audit checkpoint.
+2026-10-27, mac-mini-2026-10-27-slab. **Status:** THM-4824 (PROVED parts plus FINITE-EXACT checks) and HYP-9428 (partly resolved, partly refuted, the rest
+OPEN), with a typed table of the numerical connections. Independently audited
+(`04-computation/experiments/eisenstein_two_grids_fourth_powers_20261027/audit/REPORT_THM4824.md`). Every number was
+reproduced; the corrections are applied and recorded as MISTAKE-688.
 
 ## Owner's directive (verbatim)
 
@@ -61,15 +63,18 @@ are minimal.
 - c = 1 is the square grid: zero.
 - c = 2 has the floor 2⌊Q/8⌋, with its own exceptions.
 - c = 3 has ⌊Q/3⌋.
-- c = 3/2 and 5/2 have measured ratios of about 0.13 and 0.28.
+- c = 3/2 and 5/2 have windowed ratios of about 0.135 and 0.28. These are upper bounds only, since no potential is
+  known at those aspects.
 
-A tempting angle law fits three of these points and is refuted by the other two (HYP-9428 (2)).
+A tempting angle law fits three of these points. It is refuted by the other two, on window evidence (HYP-9428 (2)).
 
 **Beyond the plane.**
-- **Glue in other dimensions.** The 8-dimensional half-shift glue E₈ = D₈ ∪ (D₈ + (½)⁸) is free, and so are the
-  checkerboards D_n.
-- **The conjecture.** A₂ is the only root lattice with a positive floor (HYP-9428 (1)). Its distinguishing property is
-  that no two of its roots are perpendicular.
+- **Glue in other dimensions.** E₈ = D₈ ∪ (D₈ + (½)⁸) is free, and so are the checkerboards D_n. [ANALOGY: E₈ is
+  the 8-dimensional version of the half-shift glue.]
+- **The classification (THM-4824 (G), the audit's upgrade of HYP-9428 (1)).** With the roots as unit charges, a root
+  lattice pays a positive debt iff it is A₁ (collinear) or A₂ (the Eisenstein grid). A_n for n ≥ 3, D_n, E₆, E₇, E₈ and
+  every reducible root lattice are free. The distinguishing property of A₂ is that no two of its roots are
+  perpendicular.
 
 **Parity cosets.** The four cosets of 2Z[ω] refine the two grids. Every tight split of x is a point of x + 2Z[ω] on two
 or four norm shells (THM-4824 (E)). This is the all-type form of Session75's parity-shell criterion, and it gives a
@@ -79,15 +84,16 @@ finite, purely arithmetic seed test. For example, 51 is a seed.
 
 **Below 81.** The only fourth powers available are 0, 1 and 16. So the representable set is the triangle
 {16a + b : a + b ≤ 4}, with 15 points.
-- **The composition simplex.** These are the compositions of 4 into the three types 0, 1, 16. This is the same simplex
-  as THM-4820's charge vectors (p, q, r), here weighted by 0, 1, 16 instead of 1, ω, ω².
+- **The composition simplex.** These are the compositions of 4 into the three types 0, 1, 16. [ANALOGY: the same
+  simplex as THM-4820's charge vectors (p, q, r), here weighted by 0, 1, 16 instead of 1, ω, ω².]
 - **Up to 50.** The representable positives number 4 + 4 + 3 + 2 = 13: namely 1–4, 16–19, 32–34 and 48–49. The other
   37 are not representable.
-- **Gaps.** The gaps have lengths 11, 12, 13, 14 = 16 − 5 + a, for a = 0, 1, 2, 3. Within 1..50 the last gap is the
-  lone 50.
+- **Gaps.** Below 64 the gaps have lengths 11, 12, 13, 14 = 16 − 5 + a, for a = 0, 1, 2, 3. Within 1..50 the last gap
+  is the lone 50. The fifth gap below 81 is 65–80, of length 16, which breaks the pattern.
 - **Mod 16.** Odd bases give 1 (mod 16) and even bases 0 (mod 16), so a sum of four fourth powers is ≡ 0, …, 4 (mod 16).
-  The eleven residues 5, …, 15 never occur. This is the two-grid (even/odd) obstruction, and it is why 79 = 4·16 + 15
-  needs 19 fourth powers.
+  The eleven residues 5, …, 15 never occur. [ANALOGY with the two grids: the even/odd split of the bases.]
+- **Why 79 needs 19 fourth powers.** The residue 15 (mod 16) forces at least 15 odd summands. And 79 < 3⁴, so only 1
+  and 16 are available, giving 4·16 + 15·1, with 19 summands.
 
 | N | 5 | 10 | 25 | 50 | 100 | 200 | 500 | 1000 | 10⁴ |
 |---|---|---|---|---|---|---|---|---|---|
@@ -99,8 +105,10 @@ finite, purely arithmetic seed test. For example, 51 is a seed.
     a⁴ + b⁴ + c⁴ = 2(a² + ab + b²)² = (2/9) Q(a + bω + cω²)².
 
 So the fourth-power sums of zero-sum triples are twice squared Eisenstein norms. Of the 13 representable numbers up to
-50, the ones of this form are 2, 18 and 32. The zero-sum condition is the catalyst condition 1 + ω + ω² = 0 read on the
-coefficients.
+50, the ones of this form are 2, 18 and 32.
+
+[ANALOGY.] The zero-sum plane is the orthogonal complement of the catalyst direction (1, 1, 1), not the catalyst itself.
+A point has a zero-sum coefficient representative iff Q ≡ 0 (mod 3).
 
 ## 3. 13 and 37, typed
 
@@ -108,7 +116,7 @@ coefficients.
 |---|---|
 | 13 and 37 are the two smallest primes ≡ 1 (mod 12), the primes that split in both grids, Z[i] and Z[ω]: 13 = 2² + 3² = 1 + 3·2², 37 = 1² + 6² = 5² + 3·2² | IDENTITY |
 | the primitive Pythagorean triangles with a leg 12 have hypotenuses exactly {13, 37}: 5-12-13 and 35-12-37 | IDENTITY (via (c−b)(c+b) = 144) |
-| the primitive 120° triangles (c² = a² + ab + b²) with a side 7 have longest sides exactly {13, 37}: 7-8-13 and 7-33-37 | IDENTITY (via (2c−2b−7)(2c+2b+7) = 147) |
+| the primitive 120° triangles (c² = a² + ab + b²) in which 7 is a side adjacent to the 120° angle have longest sides exactly {13, 37}: 7-8-13 and 7-33-37. (3-5-7 has 7 as its longest side.) | IDENTITY (via (2c−2b−7)(2c+2b+7) = 147) |
 | the same pair arising in both grids | FINITE-EXACT: among the primes ≡ 1 (mod 12) below 200 (13, 37, 61, 73, 97, 109, 157, 181, 193), {13, 37} is the only pair sharing both a Pythagorean side and a 120° side (`counts.py` §6). For example, 61 and 109 share the leg 60 but no 120° side. No general law is claimed (NUMEROLOGY) |
 | 13² = 11² + 3·4² and 37² = 13² + 3·20²: the squares of the first-grid primes above 13 and 37 give the chain 11 → 13 → 37 | IDENTITY each; the chain is NUMEROLOGY |
 | 13 = #Z[ω] with Q ≤ 3, the star number S₂; 37 = #Z[ω] with Q ≤ 9 = S₃ = centred hexagonal H₄; also 13 = #Z² with x² + y² ≤ 4 and 37 = #Z² with x² + y² ≤ 10 | IDENTITY each; common ball counts of the two grids are 1, 13, 37, 61, 97, 109, 121, 169, … (all ≡ 1 mod 12) |
@@ -124,7 +132,7 @@ coefficients.
 | 5 | yes | no | odd | 1 |
 | 10 | yes | no | qualifies (u = 5 > 2) | 8 |
 | 25 | yes (= 3² + 4²) | yes (= Q(5)) | odd | 6, perfect |
-| 50 | yes (1² + 7² = 5² + 5², the first two-way sum of two positive squares) | no | qualifies | 43 |
+| 50 | yes (1² + 7² = 5² + 5²: the first number with two representations as a sum of two positive squares if 5² + 5² counts; with distinct squares the first is 65) | no | qualifies | 43 |
 | 100 | yes | yes (= Q(10)) | qualifies | 117 |
 | 11 | no | no | odd | 1 |
 | 12 | no | yes (= Q(2√−3)) | fails (u = 3 ≤ 4) | 16 |
@@ -142,17 +150,18 @@ All of this is IDENTITY at the level of individual facts. No structural link bet
 ## 5. What is new, and what is open
 
 - **New, PROVED (THM-4824).**
-  - The square grid, every D_n and E₈ are free.
+  - The classification: among root lattices, exactly A₁ and A₂ pay.
   - The first grid alone is collinear.
   - The Eisenstein grid is the critical (tie) member of the half-shift glued family.
   - The aspect-2 floor 2⌊Q/8⌋, and the window lemma.
   - The parity-coset shell lemma.
 - **Classical.** The zero-sum quartic identity, and the structure of four fourth powers below 81.
+- **Refuted (HYP-9428 (3)).** The drafted aspect-2 law: (62, 0) with p = 31 ≡ 7 (mod 8) has excess 4, and so does
+  (±10, ±24) off the axis.
 - **Open (HYP-9428).**
-  - A₂ is the only paying root lattice.
-  - The glued-family ratio κ(c).
-  - The aspect-2 exceptional set (on-axis primes ≡ 5 mod 8).
-  - The 13/37 coincidences are typed numerology.
+  - The glued-family ratio κ(c) (window evidence only).
+  - An arithmetic description of the aspect-2 exceptional set.
+  - The 13/37 coincidences, typed as numerology.
 
 ## Reproduction
 

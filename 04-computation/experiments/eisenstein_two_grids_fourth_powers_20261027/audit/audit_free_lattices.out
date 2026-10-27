@@ -1,0 +1,21 @@
+== THM-4824 (A4) windows ==
+D3=A3      roots   12 (expect 12)  window Q<=12:    249 points, unreachable 0, max g 0   [0.0s]
+D4         roots   24 (expect 24)  window Q<=7:    601 points, unreachable 0, max g 0   [0.0s]
+A4         roots   20 (expect 20)  window Q<=6:    331 points, unreachable 0, max g 0   [0.0s]
+A5         roots   30 (expect 30)  window Q<=4:    531 points, unreachable 0, max g 0   [0.0s]
+E8         roots  240 (expect 240)  window Q<=2:   2401 points, unreachable 0, max g 0   [0.2s]
+== larger windows ==
+D3=A3      roots   12  window Q<=24:    683 points, unreachable 0, max g 0   [0.0s]
+D4         roots   24  window Q<=10:   1081 points, unreachable 0, max g 0   [0.0s]
+D5         roots   40 (expect 40)  window Q<=6:   1531 points, unreachable 0, max g 0   [0.1s]
+A4         roots   20  window Q<=9:    801 points, unreachable 0, max g 0   [0.0s]
+A5         roots   30  window Q<=6:   1221 points, unreachable 0, max g 0   [0.1s]
+== lattices HYP-9428 (1) calls OPEN ==
+A6         roots   42 (expect 42)  window Q<=4:   1485 points, unreachable 0, max g 0   [0.1s]
+A7         roots   56 (expect 56)  window Q<=3:   1373 points, unreachable 0, max g 0   [0.1s]
+E6         roots   72 (expect 72)  window Q<=4:   1999 points, unreachable 0, max g 0   [0.1s]
+E7         roots  126 (expect 126)  window Q<=3:   2955 points, unreachable 0, max g 0   [0.3s]
+E8         roots  240 (expect 240)  window Q<=3:   9121 points, unreachable 0, max g 0   [2.5s]
+== reducible controls (A2 = Z[w] block [[2,-1],[-1,2]]/2) ==
+A2+A1      roots    8 (expect 8)  window Q<=40:   1267 points, unreachable 0, max g 0   [0.1s]
+A2+A2      roots   12 (expect 12)  window Q<=16:   1885 points, unreachable 0, max g 0   [0.1s]

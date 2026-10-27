@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.o
+*.bin
+a.out
+/knuth_c

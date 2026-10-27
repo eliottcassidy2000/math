@@ -1,0 +1,52 @@
+(F) zero-sum quartic identity, symbolic
+   a^4+b^4+c^4 - 2(a^2+ab+b^2)^2 = 0 ; - (a^2+b^2+c^2)^2/2 = 0
+   Q(a+bw+cw^2) on a+b+c=0 equals 3(a^2+ab+b^2): True ; (2/9)Q^2 - lhs = 0
+   norm of (a-c)+(b-c)w equals a^2+b^2+c^2-ab-bc-ca (general a,b,c): True
+   2N^2 (N an Eisenstein norm) below 51: [2, 18, 32] ; a^2+ab+b^2 takes every Eisenstein norm (|a|,|b|<=20 sample): True
+(G1) sums of four fourth powers (zeros allowed) = n needs at most 4 positive fourth powers; DP on min count
+   N = 5: representable 4, not 1
+   N = 10: representable 4, not 6
+   N = 25: representable 8, not 17
+   N = 50: representable 13, not 37
+   N = 100: representable 21, not 79
+   N = 200: representable 30, not 170
+   N = 500: representable 53, not 447
+   N = 1000: representable 96, not 904
+   N = 10000: representable 540, not 9460
+   representable in 1..50: [1, 2, 3, 4, 16, 17, 18, 19, 32, 33, 34, 48, 49]
+   all gaps in 1..80 (start, end, length): [(5, 15, 11), (20, 31, 12), (35, 47, 13), (50, 63, 14), (65, 80, 16)] ; 81 representable: True
+   set below 81 equals {16a+b : a+b <= 4}: True ; size 15
+   residues mod 16 of representable n <= 10^4: [0, 1, 2, 3, 4] ; mc(79) = 19 ; n <= 10^4 needing 19: [79, 159, 239, 319, 399, 479, 559]
+(G2) square-later: n = 2^a u, a >= 1, u odd, qualifying iff u > 2^a
+   X = 5: evens 2, qualifying 0, failures 2
+   X = 10: evens 5, qualifying 2, failures 3
+   X = 25: evens 12, qualifying 6, failures 6
+   X = 50: evens 25, qualifying 16, failures 9
+   X = 100: evens 50, qualifying 37, failures 13
+   X = 200: evens 100, qualifying 81, failures 19
+   X = 1000: evens 500, qualifying 454, failures 46
+   X = 10000: evens 5000, qualifying 4859, failures 141
+   failures <= 100: [2, 4, 8, 12, 16, 24, 32, 40, 48, 56, 64, 80, 96]
+(G3) lattice-ball counts (closed-form row sums)
+   common values <= 400: [1, 13, 37, 61, 97, 109, 121, 169, 241, 253, 301, 349, 385] ; all = 1 mod 12: True
+   #Z2(x^2+y^2<=4) = 13  #Z2(<=10) = 37  #Zw(Q<=3) = 13  #Zw(Q<=9) = 37 ; S_2, S_3 = 13 37 ; H_4 = 37
+(G4) primes = 1 mod 12 below 200: [13, 37, 61, 73, 97, 109, 157, 181, 193]
+     13, 37 as x^2+y^2 and x^2+3y^2: {13: ([(2, 3)], [(1, 2)]), 37: ([(1, 6)], [(5, 2)])}
+(G5) triangles
+   primitive Pythagorean triangles with a leg 12: [(5, 12, 13), (12, 35, 37)]
+   primitive 120-degree triangles with 7 adjacent to the 120-degree angle: [(7, 8, 13), (7, 33, 37)] ; with 7 as the LONGEST side: [(3, 5, 7)]
+   pairs sharing BOTH a Pythagorean leg and a 120-degree side: [(13, 37)] ; Pythagorean only: [(61, 109, [60])] ; 120 only: []
+   61: [11, 60] [9, 56]  109: [60, 91] [24, 95]
+   13^2 = 11^2 + 3*4^2: True ; 37^2 = 13^2 + 3*20^2: True ; reps x^2+3y^2 of 169: [(11, 4), (13, 0)]  of 1369: [(13, 20), (37, 0)]
+(G6) norm / aliquot table
+      5: Gaussian True, Eisenstein False, square-later odd, s(n) = 1
+     10: Gaussian True, Eisenstein False, square-later qualifies, s(n) = 8
+     25: Gaussian True, Eisenstein True, square-later odd, s(n) = 6
+     50: Gaussian True, Eisenstein False, square-later qualifies, s(n) = 43
+    100: Gaussian True, Eisenstein True, square-later qualifies, s(n) = 117
+     11: Gaussian False, Eisenstein False, square-later odd, s(n) = 1
+     12: Gaussian False, Eisenstein True, square-later fails, s(n) = 16
+     13: Gaussian True, Eisenstein True, square-later odd, s(n) = 1
+   s(25) = 6 is perfect: True
+   aliquot fibres (n < 20000; complete since composite n has s(n) > sqrt n): {6: [6, 25], 7: [8], 8: [10, 49], 11: [21], 12: [121], 13: [27, 35]}
+   two representations as a sum of two positive squares: [50, 65, 85, 125] ; with distinct squares: [65, 85, 125]

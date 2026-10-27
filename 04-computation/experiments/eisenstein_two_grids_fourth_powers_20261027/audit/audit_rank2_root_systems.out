@@ -1,0 +1,4 @@
+A2: 6 roots, perpendicular pair: False
+B2: 8 roots, perpendicular pair: True ; root lattice Z^2, minimal vectors +-e_i (square grid: free by (A1))
+G2: 12 roots, perpendicular pair: True ; root lattice = Z[w] (short roots generate), minimal vectors = the 6 short roots = A2 -> pays floor(Q/3) (THM-4820)
+   perpendicular pairs in G2 are short-long only: True

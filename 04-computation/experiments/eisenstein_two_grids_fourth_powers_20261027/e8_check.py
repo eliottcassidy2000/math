@@ -1,4 +1,4 @@
-"""Sanity check of THM-4824 (E): catalytic merge debt on E8 = D8 u (D8 + (1/2)^8) (doubled coordinates: all entries of
+"""Sanity check of THM-4824 (A3)/(A4): catalytic merge debt on E8 = D8 u (D8 + (1/2)^8) (doubled coordinates: all entries of
 one parity, sum = 0 mod 4; Q = x.x/8 so that roots have Q = 1) and on A5, inside small windows."""
 import itertools
 from root_lattice_debt import relax

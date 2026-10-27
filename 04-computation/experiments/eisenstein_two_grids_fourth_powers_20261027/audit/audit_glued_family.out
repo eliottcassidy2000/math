@@ -1,0 +1,32 @@
+(C) minimal vectors of L_c, exact (enumeration |u|,|v| <= 12):
+   c = 1/3  : minimal norm 4/3 (u^2 + c v^2), 6 vectors [(-1, -1), (-1, 1), (0, -2), (0, 2), (1, -1), (1, 1)]
+   c = 1/2  : minimal norm 3/2 (u^2 + c v^2), 4 vectors [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+   c = 1    : minimal norm 2 (u^2 + c v^2), 4 vectors [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+   c = 3/2  : minimal norm 5/2 (u^2 + c v^2), 4 vectors [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+   c = 2    : minimal norm 3 (u^2 + c v^2), 4 vectors [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+   c = 5/2  : minimal norm 7/2 (u^2 + c v^2), 4 vectors [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+   c = 29/10: minimal norm 39/10 (u^2 + c v^2), 4 vectors [(-1, -1), (-1, 1), (1, -1), (1, 1)]
+   c = 3    : minimal norm 4 (u^2 + c v^2), 6 vectors [(-2, 0), (-1, -1), (-1, 1), (1, -1), (1, 1), (2, 0)]
+   c = 31/10: minimal norm 4 (u^2 + c v^2), 2 vectors [(-2, 0), (2, 0)]
+   c = 7/2  : minimal norm 4 (u^2 + c v^2), 2 vectors [(-2, 0), (2, 0)]
+   c = 4    : minimal norm 4 (u^2 + c v^2), 2 vectors [(-2, 0), (2, 0)]
+(B) collinear law: first grid Z[sqrt-3] (Q = a^2 + 3b^2, units +-1) and L_4 (units +-(2,0))
+   reachable points all on the real line: True ; g(n) = n(n-1) for |n| <= 40: True
+   L_4: reachable only (2n, 0): True ; g(2n,0) = 4(n^2-|n|): True
+   potential (k^2-|k|) satisfies Phi(a+b)-Phi(a)-Phi(b) <= (2ab)_+ for |a|,|b| <= 200: True
+(C) debt ratios g_W/Q on the outer half Q > W/2, W = 120 m, and window stability
+   c = 1/1, W = 120m = 240: 373 pts, unreachable 0, outer-half g/Q in [0.0000, 0.0000]  [0.0s]
+   c = 1/1, W = 240m = 480: 749 pts, unreachable 0, outer-half g/Q in [0.0000, 0.0000]; of the 188 outer-half points of W0 = 240, 0 have smaller g at W = 480  [0.0s]
+   c = 1/1, W = 480m = 960: 1489 pts, unreachable 0, outer-half g/Q in [0.0000, 0.0000]; of the 188 outer-half points of W0 = 240, 0 have smaller g at W = 960  [0.1s]
+   c = 3/2, W = 120m = 600: 387 pts, unreachable 0, outer-half g/Q in [0.1290, 0.1406]  [0.0s]
+   c = 3/2, W = 240m = 1200: 765 pts, unreachable 0, outer-half g/Q in [0.1304, 0.1389]; of the 196 outer-half points of W0 = 600, 0 have smaller g at W = 1200  [0.0s]
+   c = 3/2, W = 480m = 2400: 1543 pts, unreachable 0, outer-half g/Q in [0.1301, 0.1352]; of the 196 outer-half points of W0 = 600, 0 have smaller g at W = 2400  [0.1s]
+   c = 2/1, W = 120m = 360: 399 pts, unreachable 0, outer-half g/Q in [0.2449, 0.2559]  [0.0s]
+   c = 2/1, W = 240m = 720: 801 pts, unreachable 0, outer-half g/Q in [0.2474, 0.2544]; of the 194 outer-half points of W0 = 360, 0 have smaller g at W = 720  [0.0s]
+   c = 2/1, W = 480m = 1440: 1599 pts, unreachable 0, outer-half g/Q in [0.2487, 0.2539]; of the 194 outer-half points of W0 = 360, 0 have smaller g at W = 1440  [0.1s]
+   c = 5/2, W = 120m = 840: 413 pts, unreachable 0, outer-half g/Q in [0.2705, 0.2902]  [0.0s]
+   c = 5/2, W = 240m = 1680: 835 pts, unreachable 0, outer-half g/Q in [0.2715, 0.2804]; of the 202 outer-half points of W0 = 840, 0 have smaller g at W = 1680  [0.0s]
+   c = 5/2, W = 480m = 3360: 1661 pts, unreachable 0, outer-half g/Q in [0.2725, 0.2794]; of the 202 outer-half points of W0 = 840, 0 have smaller g at W = 3360  [0.1s]
+   c = 3/1, W = 120m = 480: 433 pts, unreachable 0, outer-half g/Q in [0.3279, 0.3333]  [0.0s]
+   c = 3/1, W = 240m = 960: 859 pts, unreachable 0, outer-half g/Q in [0.3306, 0.3388]; of the 222 outer-half points of W0 = 480, 0 have smaller g at W = 960  [0.0s]
+   c = 3/1, W = 480m = 1920: 1735 pts, unreachable 0, outer-half g/Q in [0.3320, 0.3355]; of the 222 outer-half points of W0 = 480, 0 have smaller g at W = 1920  [0.1s]

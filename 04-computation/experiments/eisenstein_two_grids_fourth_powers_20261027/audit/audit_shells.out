@@ -1,0 +1,5 @@
+x with 2 <= Q(x) <= 700: 2532; mismatches between brute-force tight splits and the shell criterion: 0
+rational-integer seeds (no tight split) with n^2 <= QMAX: [11, 23, 25]
+seed norms <= QMAX: [121, 529, 625]
+seed test for 11: coset points on shells: {121: [(-11, 0), (11, 0)], 123: []}
+seed test for 51: coset points on shells: {2599: [], 2601: [(-51, 0), (51, 0)], 2603: [], 2605: []}

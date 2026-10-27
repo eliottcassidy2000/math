@@ -1,0 +1,18 @@
+(A1) Z[i]: zero-cost trees verified for all |a|,|b| <= 60 and 200 random points with |coords| <= 5000
+(A2) D3: literal construction verified on 400 random points (|coords| <= 60) and all j(e1 +- e2), j < 80
+(A2) D4: literal construction verified on 400 random points (|coords| <= 60) and all j(e1 +- e2), j < 80
+(A2) D5: literal construction verified on 400 random points (|coords| <= 60) and all j(e1 +- e2), j < 80
+(A2) D6: literal construction verified on 400 random points (|coords| <= 60) and all j(e1 +- e2), j < 80
+(A2) D7: literal construction verified on 400 random points (|coords| <= 60) and all j(e1 +- e2), j < 80
+(A2) D8: literal construction verified on 400 random points (|coords| <= 60) and all j(e1 +- e2), j < 80
+(A3) E8: literal glue construction verified on 3000 random points; beta <= -(3/8) sum|x_i| - 2 holds (max gap 0.000)
+(aud) A3: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) A4: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) A5: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) A6: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) A7: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) A8: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) A9: support reduction + square-grid root multiples verified on 300 random points (|coords| <= 50)
+(aud) E7: index-2 glue over A7 verified on 2000 random points
+(aud) E6: index-2 glue over A5+A1 verified on 2000 random points
+(aud) A2+A1: free via perpendicular-root square grids + support reduction, verified on 2000 random points

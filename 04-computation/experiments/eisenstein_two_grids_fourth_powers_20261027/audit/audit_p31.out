@@ -1,0 +1,3 @@
+W = 3860: g(62,0) = 964, 2 floor(Q/8) = 960, certified (4g+7 <= W): False
+W = 6000: g(62,0) = 964, 2 floor(Q/8) = 960, certified (4g+7 <= W): True
+extracted tree: root (62, 0), total cost 964, 1876 unit leaves (all of norm 3)
