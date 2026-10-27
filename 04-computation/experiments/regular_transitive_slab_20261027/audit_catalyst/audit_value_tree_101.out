@@ -1,0 +1,1 @@
+audit_value_tree_101.txt: root (101, 0) norm 10201; 357 distinct derived values; expanded tree has 8566 unit leaves; cost = 3402; Phi(root) = 3400; total slack = 2; cost - Phi = 2

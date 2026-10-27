@@ -1,0 +1,4 @@
+n=11 slab samples with R=1 (L=14): 257; exactly L moves from TT (word found and replayed): 257; undecided: 0; with source/sink: 0
+n=11 slab samples with R=2 (L=13): 272; exactly L moves from TT (word found and replayed): 272; undecided: 0; with source/sink: 0
+n=11 slab samples with R=3 (L=12): 233; exactly L moves from TT (word found and replayed): 233; undecided: 0; with source/sink: 0
+n=11 slab samples with R=4 (L=11): 238; exactly L moves from TT (word found and replayed): 238; undecided: 0; with source/sink: 0

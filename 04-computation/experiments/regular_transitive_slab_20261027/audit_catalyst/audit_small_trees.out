@@ -1,0 +1,5 @@
+1. explicit enumeration: 119 three-unit multisets with <= 7 leaves, 403149 trees in total; minimum == count-vector DP in every case
+2. labelled-subset DP == count-vector DP on 201 multisets with 8..12 leaves
+   f is invariant under permuting the unit types (all u <= (4,4,4))
+3. six-unit leaves: 923 multisets with <= 6 leaves; replacing negative units by free pairs never increases the optimum and preserves the root value
+TOTAL FAILURES: 0

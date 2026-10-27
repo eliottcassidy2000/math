@@ -1,0 +1,9 @@
+# compiled binaries
+audit_dp
+audit_lattice
+*.o
+# large lattice dumps, regenerated in seconds by run_audit.sh
+audit_lat_W2500_m3.txt
+audit_lat_W3500.txt
+audit_lat_W7500.txt
+audit_lat_W10500.txt

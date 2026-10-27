@@ -1,0 +1,25 @@
+# construct_DE n trials seed: executes the proof of Theorem D (odd) / Theorem E (even) with random choices, replays natively
+n=7 m=3: tournaments 3; (vertex, role, random trial) runs 2100; construction succeeded and replayed: 2100; failed: 0
+n=9 m=4: tournaments 15; (vertex, role, random trial) runs 13500; construction succeeded and replayed: 13500; failed: 0
+n=11 m=5: tournaments 1223; (vertex, role, random trial) runs 269060; construction succeeded and replayed: 269060; failed: 0
+# order 13: 64 circulants + 100 random regular; order 15: 128 circulants + 100 random regular
+n=13 m=6: tournaments 164; (vertex, role, random trial) runs 85280; construction succeeded and replayed: 85280; failed: 0
+n=15 m=7: tournaments 228; (vertex, role, random trial) runs 68400; construction succeeded and replayed: 68400; failed: 0
+# even balanced, forced role (n = 4, 6 are below the proof's range; reported for information)
+n=4 m=2: tournaments 1; (vertex, role, random trial) runs 200; construction succeeded and replayed: 0; failed: 200
+   failure kind 'step1: Hamilton cycle of B-v missing': 100
+   failure kind 'step1: chosen cycle has no black rotation (Lemma B/B' strong form)': 100
+n=6 m=3: tournaments 5; (vertex, role, random trial) runs 1500; construction succeeded and replayed: 0; failed: 1500
+   failure kind 'step1: chosen cycle has no black rotation (Lemma B/B' strong form)': 300
+   failure kind 'step2: U1-v not strong': 83
+   failure kind 'step2: fewer than 2 in-neighbours of v / no rotation with start != a': 1117
+n=8 m=4: tournaments 85; (vertex, role, random trial) runs 34000; construction succeeded and replayed: 34000; failed: 0
+n=10 m=5: tournaments 13333; (vertex, role, random trial) runs 1333300; construction succeeded and replayed: 1333300; failed: 0
+# even balanced: self-converse circulant-minus-vertex (n = 8, 10, 12, 14) and random (n = 12, 14, 16)
+n=8 m=4: tournaments 16; (vertex, role, random trial) runs 2560; construction succeeded and replayed: 2560; failed: 0
+n=10 m=5: tournaments 32; (vertex, role, random trial) runs 6400; construction succeeded and replayed: 6400; failed: 0
+n=12 m=6: tournaments 64; (vertex, role, random trial) runs 15360; construction succeeded and replayed: 15360; failed: 0
+n=14 m=7: tournaments 128; (vertex, role, random trial) runs 35840; construction succeeded and replayed: 35840; failed: 0
+n=12 m=6: tournaments 200; (vertex, role, random trial) runs 48000; construction succeeded and replayed: 48000; failed: 0
+n=14 m=7: tournaments 100; (vertex, role, random trial) runs 28000; construction succeeded and replayed: 28000; failed: 0
+n=16 m=8: tournaments 50; (vertex, role, random trial) runs 8000; construction succeeded and replayed: 8000; failed: 0

@@ -1,0 +1,74 @@
+=== (D) lattice table ===
+producer lattice_W2500.txt vs audit Knuth-Dijkstra W=2500: 9061 points, 0 mismatches (1459 points of norm <= 400, 0 mismatches there)
+three-unit seeds (1, w, w^2 only) vs six-unit seeds at W=2500: 0 differences
+W=2500 vs W=3500 on norms <= 2500: 0 differences
+norms <= 2000: excess g - floor(Q/3) histogram {0: 7069, 1: 198}
+exceptional norms <= 2000 (20): [121, 229, 313, 421, 484, 529, 625, 733, 841, 853, 1033, 1093, 1213, 1429, 1597, 1609, 1681, 1693, 1825, 1936]
+    all exceptional at Q = 1 mod 3: True
+    represented norms = 1 mod 3 up to 2000: 329 including the unit norm 1, 328 excluding it (theorem: 328, i.e. norm 1 excluded as in tight_splits.py)
+    exceptional norms where NOT every point of that norm is exceptional: []
+      norm 121: 6/6 points exceptional
+      norm 229: 12/12 points exceptional
+      norm 313: 12/12 points exceptional
+      norm 421: 12/12 points exceptional
+      norm 484: 6/6 points exceptional
+      norm 529: 6/6 points exceptional
+      norm 625: 6/6 points exceptional
+      norm 733: 12/12 points exceptional
+      norm 841: 6/6 points exceptional
+      norm 853: 12/12 points exceptional
+      norm 1033: 12/12 points exceptional
+      norm 1093: 12/12 points exceptional
+      norm 1213: 12/12 points exceptional
+      norm 1429: 12/12 points exceptional
+      norm 1597: 12/12 points exceptional
+      norm 1609: 12/12 points exceptional
+      norm 1681: 6/6 points exceptional
+      norm 1693: 12/12 points exceptional
+      norm 1825: 12/12 points exceptional
+      norm 1936: 6/6 points exceptional
+window-free tight closure (all points to norm 2600) vs W=2500 exceptional set: 9061 points compared, 0 disagreements
+window-free tight closure (to norm 7500) vs W=7500 exceptional set: 27175 points compared, 0 disagreements
+W=7500, all points of norm <= 7499: excess histogram {0: 26311, 1: 864}
+    exceptional norms = 0 mod 3 below 7500: [2601] (count 1)
+    number of exceptional norms below 7500: 80; total exceptional points 864
+    represented norms below 7500: 1756
+=== rational n ===
+g(n), n=1..16, audit W=400, 900, 2500 and producer W=2500 agree: [0, 1, 3, 5, 8, 12, 16, 21, 27, 33, 41, 48, 56, 65, 75, 85]
+producer lattice_W7500.txt vs audit W=7500, n <= 86: 0 mismatches
+exceptional rational n <= 86 (W=7500): [11, 22, 23, 25, 29, 41, 44, 46, 47, 50, 51, 58, 59, 82, 83, 85]
+    max excess on n <= 86: 1
+    window-free closure status available (B(n) <= 7500) for all n <= 86: True; closure-exceptional n: [11, 22, 23, 25, 29, 41, 44, 46, 47, 50, 51, 58, 59, 82, 83, 85]
+=== propagation structure of the exceptional points (norms <= 2000, one representative per norm) ===
+  norm 121, x=(-11, -11): 0 ordered tight splits, none with both parts in G
+  norm 229, x=(-17, -12): 2 ordered tight splits, none with both parts in G
+  norm 313, x=(-19, -16): 2 ordered tight splits, none with both parts in G
+  norm 421, x=(-21, -20): 2 ordered tight splits, none with both parts in G
+  norm 484, x=(-22, -22): 4 ordered tight splits, none with both parts in G
+  norm 529, x=(-23, -23): 0 ordered tight splits, none with both parts in G
+  norm 625, x=(-25, -25): 0 ordered tight splits, none with both parts in G
+  norm 733, x=(-31, -19): 2 ordered tight splits, none with both parts in G
+  norm 841, x=(-29, -29): 0 ordered tight splits, none with both parts in G
+  norm 853, x=(-31, -27): 2 ordered tight splits, none with both parts in G
+  norm 1033, x=(-37, -21): 2 ordered tight splits, none with both parts in G
+  norm 1093, x=(-36, -29): 2 ordered tight splits, none with both parts in G
+  norm 1213, x=(-39, -28): 2 ordered tight splits, none with both parts in G
+  norm 1429, x=(-43, -28): 2 ordered tight splits, none with both parts in G
+  norm 1597, x=(-43, -36): 2 ordered tight splits, none with both parts in G
+  norm 1609, x=(-45, -32): 2 ordered tight splits, none with both parts in G
+  norm 1681, x=(-41, -41): 0 ordered tight splits, none with both parts in G
+  norm 1693, x=(-43, -39): 2 ordered tight splits, none with both parts in G
+  norm 1825, x=(-45, -40): 2 ordered tight splits, none with both parts in G
+  norm 1936, x=(-44, -44): 4 ordered tight splits, none with both parts in G
+  theorem's example 229 = (-11) + (-6 - 12w): ((-17, -12), 0)
+  n=51: 0 ordered tight splits, e.g. []; any with both parts in G: False
+  n=59: 4 ordered tight splits, e.g. [((-2, -27), (61, 27), -1), ((25, 27), (34, -27), -1)]; any with both parts in G: False
+=== (C)/(E) f(n+k,k,k) from audit_dp 76 62 62 ===
+f(11+k,k,k), k = 0..62: [110, 109, 106, 103, 100, 97, 94, 92, 89, 87, 84, 82, 80, 78, 75, 73, 71, 69, 67, 65, 63, 61, 59, 57, 55, 53, 52, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41]
+   agrees with the theorem's printed row (k <= 36) and with merge_debt_11.out (k <= 60); constant 41 for 36 <= k <= 62; first k with 41: 36
+k*(n), n=1..14: [0, 1, 2, 4, 7, 10, 14, 19, 24, 31, 36, 44, 52, 61]
+ceil lower bounds (n^2-n-g(n))/3: [0, 1, 1, 3, 4, 6, 9, 12, 15, 19, 23, 28, 34, 39]
+f(n+K,K,K) at K = 4n+8 for n = 15, 16 (theorem: K insufficient): {15: (None, 75), 16: (None, 85)}
+f(15+k,k,k), k = 55..61: [90, 89, 88, 87, 86, 85, 84]  g(15) = 75
+
+TOTAL FAILURES: 0

@@ -1,0 +1,1 @@
+./audit_dp 47 36 36 verify tree 47 36 36 > audit_dp_47_36_36.out 2>   1.20s user 0.01s system 99% cpu 1.216 total

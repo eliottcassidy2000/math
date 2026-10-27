@@ -1,0 +1,26 @@
+(A1) count formula: 35625 pairs checked against the sqrt(-3) value model and the complex embedding
+(A2)/(A4) free merges verified: 1+w (beta -1), (1+w)+w^2 = 0 (beta -2), x+0 (beta 0); -1, -w, -w^2 as beta -1 merges
+(A3) every random tree on n ones (n < 40, 20 trees each) costs n(n-1)
+(B) 707281 ordered pairs in the box |a|,|b| <= 14: floor identity, Phi inequality, slack >= 0, tight characterisation, and 'Q(x) = 1 mod 3 => tight split iff beta in {0,-1}' all verified
+    beta values of tight merges seen: [-2, -1, 0, 1]
+    max over tight merges with both children nonzero of max(Q(y),Q(z)) - Q(x): Q(x)=0 mod 3: 1, Q(x)=1 mod 3: 0  (confinement lemma predicts 1 and 0)
+(B) telescoping cost = Phi(root) + sum slack verified on 3000 random six-unit trees
+(C) brute-force tight splits for every odd n <= 241, 3 not dividing n: perpendicular-split criterion (prime = 1 mod 3), obtuse criterion (M = b^2 + 3t^2, brute force) and the inert-odd-exponent form all agree
+    odd n <= 241, 3 not dividing n, with NO tight split: [11, 23, 25, 29, 41, 47, 83, 85, 101, 107, 113, 115, 131, 137, 173, 179, 187, 191, 197, 205, 227, 235, 239]
+(C) table rows:
+    n=11: prime factors of n {11: 1} (all = 2 mod 3: True), M=41 = {41: 1}, inert primes to odd power: [41], brute b^2+3t^2: None
+    n=23: prime factors of n {23: 1} (all = 2 mod 3: True), M=177 = {3: 1, 59: 1}, inert primes to odd power: [59], brute b^2+3t^2: None
+    n=25: prime factors of n {5: 2} (all = 2 mod 3: True), M=209 = {11: 1, 19: 1}, inert primes to odd power: [11], brute b^2+3t^2: None
+    n=29: prime factors of n {29: 1} (all = 2 mod 3: True), M=281 = {281: 1}, inert primes to odd power: [281], brute b^2+3t^2: None
+    n=41: prime factors of n {41: 1} (all = 2 mod 3: True), M=561 = {3: 1, 11: 1, 17: 1}, inert primes to odd power: [11, 17], brute b^2+3t^2: None
+    n=47: prime factors of n {47: 1} (all = 2 mod 3: True), M=737 = {11: 1, 67: 1}, inert primes to odd power: [11], brute b^2+3t^2: None
+    n=53: n factors {53: 1}, M=937 = {937: 1}, perp split False, obtuse rep (13, 16)
+    n=55: n factors {5: 1, 11: 1}, M=1009 = {1009: 1}, perp split False, obtuse rep (31, 4)
+    n=59: n factors {59: 1}, M=1161 = {3: 3, 43: 1}, perp split False, obtuse rep (27, 12)
+    n=71: n factors {71: 1}, M=1681 = {41: 2}, perp split False, obtuse rep (41, 0)
+    n=83: n factors {83: 1}, M=2297 = {2297: 1}, perp split False, obtuse rep None
+    n=85: n factors {5: 1, 17: 1}, M=2409 = {3: 1, 11: 1, 73: 1}, perp split False, obtuse rep None
+(E) sum of beta over a tree on (n+k,k,k) = n^2 - (n+3k): 2000 random trees
+(E) n=11 lower bound (121-11-41)/3 = 23
+
+TOTAL FAILURES: 0

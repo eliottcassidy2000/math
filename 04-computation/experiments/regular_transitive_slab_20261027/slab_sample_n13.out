@@ -1,0 +1,6 @@
+UNDECIDED R=1 (budget 50000, result -1): 1332 0ec4 1351 0a87 056a 130e 0d29 0275 168a 1c50 08ad 11b5 04da
+n=13 slab samples with R=1 (L=20): 59; exactly L moves from TT (word found and replayed): 58; undecided: 1; with source/sink: 0
+n=13 slab samples with R=2 (L=19): 59; exactly L moves from TT (word found and replayed): 59; undecided: 0; with source/sink: 0
+n=13 slab samples with R=3 (L=18): 58; exactly L moves from TT (word found and replayed): 58; undecided: 0; with source/sink: 0
+n=13 slab samples with R=4 (L=17): 61; exactly L moves from TT (word found and replayed): 61; undecided: 0; with source/sink: 0
+n=13 slab samples with R=5 (L=16): 63; exactly L moves from TT (word found and replayed): 63; undecided: 0; with source/sink: 0

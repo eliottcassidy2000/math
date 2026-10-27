@@ -1,13 +1,17 @@
 ---
 id: THM-4823
-title: "The four 4-vertex tournaments inside a tournament: their counts are the score sums sum C(s,3), sum C(n-1-s,3), C(n,4) and one trace tr(A^4)/4, and the trace is not a function of the scores from order 5 on (counting strong 4-subtournaments costs one matrix multiplication); the pattern-free classes are K1/C3 stacks (S4-free, Narayana), orders <= 7 only (TT4-free, P7 last), and the W4-free class, which is exactly the locally transitive tournaments followed by a transitive tail of successive sinks, so W(n) = W(n-1) + A000016(n) - 1 = 1, 1, 2, 3, 6, 11, 20, 35, 64, 115 (not in OEIS)"
+title: "The four 4-vertex tournaments inside a tournament: their counts are the score sums sum C(s,3), sum C(n-1-s,3), C(n,4) and one trace tr(A^4)/4, and the trace is not a function of the scores from order 5 on (counting strong 4-subtournaments costs at most one matrix multiplication); the pattern-free classes are K1/C3 stacks (S4-free, Narayana), orders <= 7 only (TT4-free, P7 last), and the W4-free class, which is exactly the locally transitive tournaments followed by a transitive tail of successive sinks, so W(n) = W(n-1) + A000016(n) - 1 = A133670(n) - n = 1, 1, 2, 3, 6, 11, 20, 35, 64, 115 (not in OEIS), with the labelled count n! + sum_k C(n,k)(n-k)!(2^(k-1)(k-1)! - k!)"
 status: >
-  PROVED (mac-mini-2026-10-27-slab; independent audit pending at filing): (A) the census identities (the trace
-  identity is THM-118's tr(A^4) = 4 c_4, kind-pasteur); (B) the S4-free and TT4-free descriptions (classical inputs:
-  Moon's pancyclicity, Erdős–Moser and Reid–Parker via THM-455/THM-4526); (C) the W4-free structure theorem and the
-  recursion. The count of locally transitive classes is A000016 (Brouwer 1980, as attributed in THM-468). FINITE-EXACT:
-  the census checks at orders 4-8 (pattern4.py) and the W4-free and locally transitive counts at orders 3-10 (w4free.c).
-  No literature novelty claim for (C); OEIS has no entry for W(n) (searched 2026-10-27).
+  PROVED (mac-mini-2026-10-27-slab; independently audited 2026-10-27, PASS with wording corrections applied:
+  04-computation/experiments/regular_transitive_slab_20261027/audit_four/REPORT_THM4823_LEDGER.md): (A) the census
+  identities (the trace identity is THM-118's tr(A^4) = 4 c_4, kind-pasteur) and the non-determination of #S4 by the
+  scores at every order >= 5; (B) the S4-free and TT4-free descriptions (classical inputs: Moon's pancyclicity,
+  Erdős–Moser and Reid–Parker via THM-455/THM-4526); (C) the W4-free structure theorem, the recursion, and the labelled
+  closed form. The class closed form W(n) = A133670(n) - n is PROVED modulo the CITED count of locally transitive
+  classes, A000016 (Brouwer 1980, as attributed in THM-468); that count is FINITE-EXACT here to order 10. FINITE-EXACT:
+  the census checks at orders 4-8 (pattern4.py; the audit extends them to order 10) and the W4-free and locally
+  transitive counts at orders 3-10 (w4free.c). No literature novelty claim for (C); OEIS has no entry for W(n) or for
+  the labelled sequence 56, 544, 6384, 85728 (searched 2026-10-27).
 session: mac-mini-2026-10-27-slab
 source: 05-knowledge/results/regular_slab_prescribed_black_core_eisenstein_catalyst_20261027.md
 scripts:
@@ -46,13 +50,19 @@ Hence
 
     #S4 = tr(A⁴)/4,   #TT4 = P + Q + #S4 − C(n,4),   #W4 = C(n,4) − Q − #S4,   #L4 = C(n,4) − P − #S4.
 
-**The trace is genuinely needed.** #S4 is not a function of the score sequence from order 5 on. The number of score sequences on which #S4 takes more than one value is:
+**The trace is genuinely needed.** #S4 is not a function of the score sequence at any order n ≥ 5.
+- **Order 5.** The scores (1,1,2,3,3) occur both with #S4 = 2 and with #S4 = 3 (`1101111101` and `1101111110`; audit).
+- **Every larger order.** Add the same transitive tail of sinks to both witnesses. The score sequences stay equal, and #S4 is unchanged, since every 4-set containing a tail vertex has a sink.
 
-| n | 5 | 6 | 7 | 8 |
-|---|---|---|---|---|
-| sequences with non-constant #S4 | 2 of 9 | 11 of 22 | 41 of 59 | 136 of 167 |
+The number of score sequences on which #S4 takes more than one value is:
 
-So the 4-vertex census costs exactly one matrix product, O(n^ω), beyond the scores. This is one step up from the level of degree statistics. It matches the fact that H is a spectral invariant at orders 4 and 5 and stops being one at order 6 (THM-1780). `pattern4.py` checks every identity on every class of orders 4 to 8.
+| n | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|
+| sequences with non-constant #S4 | 2 of 9 | 11 of 22 | 41 of 59 | 136 of 167 | 437 of 490 | 1,397 of 1,486 |
+
+Orders 9 and 10 are from the audit's `census4.c`.
+
+So the 4-vertex census costs at most one matrix product beyond the scores. One product gives A², and then tr A⁴ = Σ (A²)ᵢⱼ(A²)ⱼᵢ costs O(n²). No lower bound is claimed: that the scores do not determine #S4 does not show that a product is necessary. `pattern4.py` checks every identity on every class of orders 4 to 8, and the audit extends the check to order 10. [ANALOGY, not part of the theorem: H is a spectral invariant at orders 4 and 5 and stops being one at order 6 (THM-1780). That is a different threshold, at a different level.]
 
 ## (B) S4-free and TT4-free (PROVED from classical inputs)
 
@@ -86,7 +96,15 @@ and LT(n) − 1 counts the locally transitive classes without a sink; TT_n is th
 
 **The structure statement.** A W4-free tournament with a sink z has T − z W4-free. Conversely, adding a sink keeps out-neighbourhoods transitive. Repeated removal of sinks ends at a W4-free tournament without a sink, which is locally transitive by the first part, or at a single vertex. Conversely, L ⇒ TT_j is W4-free whenever L is locally transitive: an out-neighbourhood N⁺_L(x) ∪ TT_j is transitive because N⁺_L(x) dominates TT_j.
 
-**The count.** A locally transitive tournament with a sink z has N⁻(z) = V − z transitive, so it is TT_n. ∎
+**Uniqueness of the decomposition.** A tournament has at most one sink, so peeling sinks is canonical. The core L and the tail length j are therefore isomorphism invariants, and the count is a sum over cores.
+
+**The count.** A locally transitive tournament with a sink z has N⁻(z) = V − z transitive, so it is TT_n.
+
+**The labelled count.** By Knuth (THM-468) there are 2^(k−1)(k−1)! labelled locally transitive tournaments on k vertices, and k! of them are transitive. Choosing the core's vertex set and the order of the tail gives
+
+    W_lab(n) = n! + Σ_{k=3..n} C(n,k) (n−k)! (2^(k−1)(k−1)! − k!) = 56, 544, 6,384, 85,728 at n = 4, …, 7,
+
+which equals brute force (audit `labeled4.c`). ∎
 
 | n | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
 |---|---|---|---|---|---|---|---|---|
@@ -95,8 +113,17 @@ and LT(n) − 1 counts the locally transitive classes without a sink; TT_n is th
 
 Both rows come from the census (`w4free.c` over gentourng), and both agree with the formula. W(1) = W(2) = 1.
 
+**In OEIS terms.** W(n) = A133670(n) − n, where A133670 is the sequence of partial sums of A000016 (checked for n = 1, …, 10). The closed form for all n rests on the CITED identification LT(n) = A000016(n) (Brouwer 1980). Neither W(n) nor the labelled sequence is in OEIS.
+
+**A correction elsewhere.** THM-402's verification script (`04-computation/lrc_round_2dichromatic_s592.py`) tests only out-neighbourhoods. So its "544 round tournaments at m = 5" counts W4-free labelled tournaments, W_lab(5) = 544, and not the locally transitive ones (384). THM-402's χ ≤ 2 still holds on the larger set: on L ⇒ TT_j, append the tail to either transitive part. This was found by the THM-4823 audit, and the note is added in THM-402.
+
 ## Reading (typed)
 
 - **IDENTITY.** The 4-vertex census sits exactly at the level of degree sums plus one trace, and three of the four pattern-free classes are counted by explicit recurrences or formulas.
-- **NO TRANSFER.** A subexponential counter for forbidden local substructures over the C(n,2) arc bits, such as the external ETH preprint's 2^{o(n²)}, has nothing to add for 4-vertex patterns. TT4-free is empty from order 8, S4-free is a linear recurrence, and W4-free and L4-free are polynomial-time from A000016.
-- **What would change that.** Richer pattern classes, with non-recursive counts, begin with 5-vertex patterns. That is where such a counter could first matter.
+- **NO TRANSFER.** Take a subexponential counter for forbidden local substructures over the C(n,2) arc bits, such as the external ETH preprint's 2^{o(n²)} (trust tier T3, PREPRINT CLAIM, kind-pasteur TRUSTED-ADVANCES §2). It has nothing to add for 4-vertex patterns, either for classes or for labelled counts:
+  - TT4-free is empty from order 8;
+  - S4-free has labelled count n!·a(n), with a(n) = a(n−1) + a(n−3)/3;
+  - W4-free and L4-free have the closed forms above.
+
+  The avoidance system is a 6-CNF with 8·C(n,4) clauses: not sparse, but within the preprint's k-CNF scope.
+- **Proposal (not proved).** Pattern classes whose counts have no known recursive description may begin with 5-vertex patterns, and such a counter could first matter there. Five-vertex type counts are not determined by the scores and the spectrum from order 7 on (the reflection's §5 data).

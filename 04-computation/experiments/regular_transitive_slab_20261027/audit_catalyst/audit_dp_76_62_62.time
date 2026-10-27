@@ -1,0 +1,1 @@
+./audit_dp 76 62 62 > audit_dp_76_62_62.out 2> audit_dp_76_62_62.err  11.93s user 0.06s system 99% cpu 12.016 total

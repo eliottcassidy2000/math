@@ -1,0 +1,3 @@
+Knuth-Dijkstra: W=10500 mode=6 finalised 38083 points, 425311762 combinations
+tight closure: 38083 points of norm <= 10500, 383874 tight splits, 13 rounds
+derivation of (101,0) written, g = 3402

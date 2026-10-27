@@ -1,0 +1,29 @@
+# slab_audit: full class move graph, BFS distances, checks (A1)-(A4) and the (B) table
+n=5: classes 12; slab classes 10; on a TT-REG geodesic 6; move graph connected (all classes reach TT and REG): 1; native moves enumerated 92
+  (A1) L+R >= c for all classes: 1; equality iff s_(i) between i and m: 1
+  (B8) dREG = R for all classes: 1;  dTT >= L for all classes: 1
+  (A2) regular classes at dTT = c and geodesic classes inside the slab: 1
+  (A3) slab: on-geodesic = (dTT = L) = R-descending reachable from TT: 1
+  (A4) source/sink classes: R >= m, no L-descending move, never on a geodesic when L >= 1: 1
+  level (L,R): slab / geodesic (failing: source or sink, strong lambda = 1, other)
+   (0,3): 1 / 1 (0, 0, 0)
+   (1,2): 5 / 1 (3, 1, 0)
+   (2,1): 3 / 3 (0, 0, 0)
+   (3,0): 1 / 1 (0, 0, 0)
+  every slab class with R <= m-1 is on a geodesic: 1
+n=7: classes 456; slab classes 389; on a TT-REG geodesic 252; move graph connected (all classes reach TT and REG): 1; native moves enumerated 35180
+  (A1) L+R >= c for all classes: 1; equality iff s_(i) between i and m: 1
+  (B8) dREG = R for all classes: 1;  dTT >= L for all classes: 1
+  (A2) regular classes at dTT = c and geodesic classes inside the slab: 1
+  (A3) slab: on-geodesic = (dTT = L) = R-descending reachable from TT: 1
+  (A4) source/sink classes: R >= m, no L-descending move, never on a geodesic when L >= 1: 1
+  level (L,R): slab / geodesic (failing: source or sink, strong lambda = 1, other)
+   (0,6): 1 / 1 (0, 0, 0)
+   (1,5): 25 / 1 (17, 7, 0)
+   (2,4): 101 / 17 (33, 51, 0)
+   (3,3): 162 / 133 (19, 9, 1)
+   (4,2): 82 / 82 (0, 0, 0)
+   (5,1): 15 / 15 (0, 0, 0)
+   (6,0): 3 / 3 (0, 0, 0)
+  every slab class with R <= m-1 is on a geodesic: 1
+   'other' failure: level (3,3), dTT 4, lambda 2, scores 4 4 4 2 3 2 2

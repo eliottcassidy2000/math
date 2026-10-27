@@ -1,17 +1,19 @@
 ---
 id: THM-4820
-title: "Eisenstein merge debt and the catalyst threshold: merging unit charges 1, omega, omega^2 by a binary tree in which each merge costs the positive part of beta(x,y) = Q(x+y) - Q(x) - Q(y), every tree with root x costs floor(Q(x)/3) plus nonnegative integer slacks, so the catalytic minimum is g(x) >= floor(Q(x)/3), and neutral triples 1 + omega + omega^2 are free catalysts; an odd n prime to 3 with only inert prime factors and (n^2+2)/3 not of the form v^2 + 3t^2 has no tight split, so g(n) = (n^2+2)/3 for n = 11 (41), and the charges (11+k, k, k) cost 41 exactly when k >= 36 (the owner's threshold, reproduced); g is floor(Q/3) or one more on every point of norm <= 2000, with twenty exceptional norms; thresholds k*(n) for n <= 14"
+title: "Eisenstein merge debt and the catalyst threshold: merging unit charges 1, omega, omega^2 by a binary tree in which each merge costs the positive part of beta(x,y) = Q(x+y) - Q(x) - Q(y), every tree with root x costs floor(Q(x)/3) plus nonnegative integer slacks, so the catalytic minimum is g(x) >= floor(Q(x)/3), and neutral triples 1 + omega + omega^2 are free catalysts; an odd n prime to 3 with only inert prime factors and (n^2+2)/3 not of the form v^2 + 3t^2 has no tight split, so g(n) = (n^2+2)/3 for n = 11 (41), and the charges (11+k, k, k) cost 41 exactly when k >= 36 (the owner's threshold; derived concurrently and independently in Session75's EISENSTEIN_INVOICES note); g is floor(Q/3) or one more, exactly, on every point of norm <= 2000, with twenty exceptional norms, while g(101) = floor(101^2/3) + 2; thresholds k*(n) for n <= 15"
 status: >
-  PROVED (mac-mini-2026-10-27-slab; independent audit pending at filing): the count formula for beta; neutral triples
-  are free catalysts and f(n,0,0) = n(n-1); g(n) = min_k f(n+k,k,k); the potential bound with its tightness criterion;
-  the tight-split criterion for rational integers and hence g(n) >= (n^2+2)/3 for n = 11, 23, 25, 29, 41, 47; the lower
-  bound k*(n) >= (n^2 - n - g(n))/3. FINITE-EXACT: a cost-41 tree on (47,36,36), checked by an independent
-  value-arithmetic verifier, so f(11+k,k,k) = 41 for all k >= 36; f(46,35,35) = 42 by exact dynamic programming over
-  every count vector, so the threshold is sharp; the table f(11+k,k,k), k <= 60; the lattice table of g on norms
-  <= 2000 (window-restricted trees, norms <= 2500) and on rational n <= 86 (window 7500); k*(n) for n <= 14. RECONSTRUCTION: the owner's statement has no
-  source in the repository at filing (searched: every text file, the dyadic, paid-ROOT, renewal and necklace branches).
-  This theorem fixes the reading (unit Eisenstein charges, free binary merges, per-merge positive part of the
-  Session75 dyadic pair interaction), under which the stated numbers hold exactly. OPEN: HYP-9426 (3)-(5).
+  PROVED (mac-mini-2026-10-27-slab; independently audited 2026-10-27, all numbers PASS, labels corrected:
+  04-computation/experiments/regular_transitive_slab_20261027/audit_catalyst/REPORT_THM4820.md): the count formula for
+  beta; neutral triples are free catalysts and f(n,0,0) = n(n-1); g(n) = min_k f(n+k,k,k); the potential bound with its
+  tightness criterion; the tight-split criterion for rational integers and hence g(n) >= (n^2+2)/3 for n = 11, 23, 25,
+  29, 41, 47; f(11+k,k,k) = 41 for every k >= 36 (from (C), (A2) and the verified certificate); the window-exactness
+  lemma of (D); the lower bound k*(n) >= (n^2 - n - g(n))/3. FINITE-EXACT: f(46,35,35) = 42 by exact dynamic
+  programming over every count vector, so the threshold is sharp (re-certified by the audit, 500,209,345 pairs); the row
+  f(11+k,k,k), k <= 62; the exact values of g on every point of norm <= 2000 and on rational n <= 86; k*(n) for n <= 15.
+  CONCURRENT: Session75's 05-knowledge/results/session75_final_mathematics_20261027/EISENSTEIN_INVOICES.md (committed
+  minutes after this theorem's first push; not seen before filing) reaches the same reading, the same potential, the
+  same 41 and k >= 36, plus an exceptional-set lifting lemma and the infinite family 11^(1+820k); the owner's statement
+  evidently comes from that work. OPEN: HYP-9426 (3)-(5) ((3) as first drafted is REFUTED by g(101)).
 session: mac-mini-2026-10-27-slab
 source: 05-knowledge/results/regular_slab_prescribed_black_core_eisenstein_catalyst_20261027.md
 scripts:
@@ -26,6 +28,8 @@ related:
   - 01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md
   - 01-canon/theorems/THM-4285-universal-two-eisenstein-norm-shell-and-exact-contact-trichotomy.md
   - 05-knowledge/hypotheses/HYP-9426-slab-exactness-black-endpoint-counts-eisenstein-exceptional-set-and-catalyst-thresholds.md
+  - 05-knowledge/results/session75_final_mathematics_20261027/EISENSTEIN_INVOICES.md
+  - 04-computation/experiments/regular_transitive_slab_20261027/audit_catalyst/REPORT_THM4820.md
 ---
 
 # THM-4820 — Eisenstein merge debt: the floor Q/3, free neutral catalysts, and 41 at k ≥ 36
@@ -66,7 +70,7 @@ Units and 0 have Φ = 0. Telescoping over a tree, each internal value appears on
 Hence g(x) ≥ ⌊Q(x)/3⌋ and f(n + k, k, k) ≥ ⌊n²/3⌋ for every k.
 
 **Tight merges.** A merge has slack 0 exactly in two cases:
-- β = 1 with r = s = 1, a lossless paid merge at 60°;
+- β = 1 with r = s = 1, a lossless paid merge (two single units at 60°, or larger piles at other angles);
 - −(r + s) ≤ β ≤ 0.
 
 If Q(x) ≡ 1 (mod 3), a tight split x = y + z with y, z ≠ 0 is either **perpendicular** (β = 0) or **obtuse with β = −1**. The other cases are impossible: β = 1 forces Q(x) ≡ 0, and β = −2 forces r = s = 0, which allows no negative β.
@@ -112,37 +116,59 @@ So the minimum merge cost for charges (11 + k, k, k) is 41 exactly when k ≥ 36
 
     110 109 106 103 100 97 94 92 89 87 84 82 80 78 75 73 71 69 67 65 63 61 59 57 55 53 52 50 49 48 47 46 45 44 43 42 41
 
-The value stays at 41 through k = 60.
+The value stays at 41 through k = 62 (the audit's box (76, 62, 62)).
 
-## (D) The lattice table (FINITE-EXACT inside the stated window)
+## (D) The lattice table (FINITE-EXACT; exact values)
 
-`lattice_debt.c` relaxes g over trees whose intermediate values have norm at most W. The runs at W = 400, 900 and 2500 agree on every n ≤ 16. For every point of norm at most 2000 (run at W = 2500):
+`lattice_debt.c` relaxes g over trees whose intermediate values have norm at most W. The windowed values are exact.
 
-- **Two values only.** g_W ∈ {⌊Q/3⌋, ⌊Q/3⌋ + 1}. Trees realize these values, so g ≤ ⌊Q/3⌋ + 1 is PROVED on this range, and g = ⌊Q/3⌋ is exact at every non-exceptional point.
-- **Where the +1 occurs.** It occurs only at Q ≡ 1 (mod 3), at 20 of the 328 such norms: 121, 229, 313, 421, 484, 529, 625, 733, 841, 853, 1033, 1093, 1213, 1429, 1597, 1609, 1681, 1693, 1825, 1936.
-  - **Window-free exceptions.** The rational-integer norms 11², 23², 25², 29², 41² have no tight split at all, so (C) makes them exceptional for every tree.
-  - **Window-dependent exceptions.** The other fifteen have tight splits, but only through an exceptional part. For example, 229 splits as (−11) + (−6 − 12ω), and the part −11 is exceptional. Their "+1" is therefore window-dependent.
-- **Rational integers.** For n ≤ 50, g(n) = ⌊n²/3⌋ + 1 exactly at n = 11, 22, 23, 25, 29, 41, 44, 46, 47, 50. The even ones are 2 or 4 times an odd exception.
-- **The larger window (W = 7500, n ≤ 86).** It agrees with W = 2500 on every n ≤ 50 and adds the exceptions 51, 58, 59, 82, 83, 85.
-  - **Two new kinds.** 51 has norm ≡ 0 (mod 3), the first such exception. 59 has a tight split, so it is exceptional only by propagation.
-  - **The criterion of (C).** It predicts 83 and 85 and excludes 53, 55, 71. All five predictions hold.
-  - The sequence g(n) for n = 1, …, 16 is 0, 1, 3, 5, 8, 12, 16, 21, 27, 33, 41, 48, 56, 65, 75, 85.
+**Window lemma (PROVED; found by the audit).** Every subtree of a tree of cost C costs at most C. By (B), every node v
+of the tree therefore satisfies ⌊Q(v)/3⌋ ≤ C, that is, Q(v) ≤ 3C + 1. So the windowed value g_W(x) equals g(x) whenever
+W ≥ 3 g_W(x) + 1. At W = 2500 this covers every point of norm < 2500, and at W = 7500 every rational n ≤ 86. A
+window-free computation of the zero-slack-buildable points, in the audit, agrees point by point.
+
+For every point of norm at most 2000 (W = 2500):
+
+- **Two values only.** g ∈ {⌊Q/3⌋, ⌊Q/3⌋ + 1}.
+- **Where the +1 occurs.** It occurs only at Q ≡ 1 (mod 3), at 20 of the 328 such norms in (1, 2000]: 121, 229, 313,
+  421, 484, 529, 625, 733, 841, 853, 1033, 1093, 1213, 1429, 1597, 1609, 1681, 1693, 1825, 1936. Every point at each of
+  these norms is exceptional.
+  - **No tight split at all.** The rational-integer norms 11², 23², 25², 29², 41² have no tight split, so (C) applies.
+  - **By propagation.** The other fifteen have tight splits, but every tight split has an exceptional part. For example,
+    229 splits as (−11) + (−6 − 12ω), and −11 is exceptional.
+- **Rational integers.** For n ≤ 50, g(n) = ⌊n²/3⌋ + 1 exactly at n = 11, 22, 23, 25, 29, 41, 44, 46, 47, 50. The even
+  ones are 2 or 4 times an odd exception.
+- **To n = 86 (W = 7500).** The window adds the exceptions 51, 58, 59, 82, 83, 85.
+  - **51** has norm ≡ 0 (mod 3), the only such exception below norm 7500. It has no tight split at all: for norm ≡ 0,
+    tight means β ∈ {−2, …, 1}, and none of the norm equations 2601, 2599 = 23·113, 2603 = 19·137, 2605 = 5·521 has a
+    nontrivial solution (audit).
+  - **59** has a tight split and is exceptional by propagation.
+  - **Where (C) applies.** (C) applies to 83 and 85, which are exceptional. It does not apply to 53, 55, 59 or 71; of
+    these, computation shows 53, 55 and 71 are not exceptional and 59 is.
+- **The first excess of 2 (audit).** g(101) = 3402 = ⌊101²/3⌋ + 2.
+  - **Lower bound.** A tree of cost ≤ Φ + 1 would need a first split with β ∈ {−4, …, 2}, and every one of the
+    corresponding norm equations for 101 fails.
+  - **Upper bound.** An explicit tree of cost 3402, independently verified.
+
+  On every norm below 10,201, g ∈ {⌊Q/3⌋, ⌊Q/3⌋ + 1} (W = 10,500). The same arithmetic gives an excess of at least 2 for
+  78 odd n ≤ 3000, beginning 101, 115, 197, 235, 257, 289.
+- **The sequence g(n), n = 1, …, 16:** 0, 1, 3, 5, 8, 12, 16, 21, 27, 33, 41, 48, 56, 65, 75, 85.
 
 ## (E) Catalyst thresholds (PROVED lower bound; FINITE-EXACT values)
 
 A tree with L = n + 3k leaves and root n has Σβ = n² − L, and Σβ ≤ cost. So any tree attaining g(n) needs
 
-    k ≥ (n² − n − g(n))/3,   which is ≈ (2/9) n².
+    k ≥ (n² − n − g(n))/3.
 
-The exact thresholds, from `merge_debt.c` with K = 4n + 8, are:
+The exact thresholds, from `merge_debt.c` with K = 4n + 8 (and K = 90 for n = 15), are:
 
-| n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| k*(n) | 0 | 1 | 2 | 4 | 7 | 10 | 14 | 19 | 24 | 31 | 36 | 44 | 52 | 61 |
+| n | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| k*(n) | 0 | 1 | 2 | 4 | 7 | 10 | 14 | 19 | 24 | 31 | 36 | 44 | 52 | 61 | 70 |
 
-For n = 11 the lower bound gives 23, against the true 36. Orders n ≥ 15 need K > 4n + 8.
+For n = 11 the lower bound gives 23, against the true 36. Orders n ≥ 16 need K > 4n + 8.
 
-The catalyst lowers the cost from n(n − 1) to about n²/3. Asymptotically it saves two thirds of the cost, and it needs on the order of n² neutral triples to do so.
+The catalyst lowers the cost from n(n − 1) to g(n) ≥ ⌊n²/3⌋. So the saving is at most two thirds asymptotically. That it is asymptotically two thirds, and that k*(n) grows like a constant times n², both need an upper bound g(n) ≤ n²/3 + o(n²), which is CONJECTURE (HYP-9426 (5)). The data: g(n) − ⌊n²/3⌋ ∈ {0, 1} for n ≤ 100, and g(101) − ⌊101²/3⌋ = 2.
 
 ## Reading (typed)
 
@@ -150,5 +176,5 @@ The catalyst lowers the cost from n(n − 1) to about n²/3. Asymptotically it s
   - 1, ω and ω² are the weights of the A₂ fundamental representation, and 1 + ω + ω² = 0 is the colour singlet. This is the external note §4 dictionary, in which arcs map to roots and the n = 3 roots are the six Eisenstein units.
   - The constant 3 is the index of √−3·Z[ω] in Z[ω].
   - The only lossless paid merges are the β = 1 merges of two norm-≡1 piles. Each such merge spends one unit of debt and gains one unit of Φ, that is, three units of norm.
-- **IDENTITY (arithmetic of the exceptions).** Exceptional status is an inertness statement in Z[ω]. 11 is inert, so it has no perpendicular split, and 41 is inert, so 11 has no obtuse split.
+- **IDENTITY (arithmetic of the (C) class).** For the exceptions of (C), exceptional status is an inertness statement in Z[ω]: 11 is inert, so it has no perpendicular split, and 41 is inert, so 11 has no obtuse split. In general it is not: 229 is a split prime, 59 has tight splits, and 51 = 3·17. Session75's lifting lemma ('h + 1_E is a subsolution iff every zero-slack merge with parent in E has a child in E') is the general mechanism, and its parity-shell criterion yields the infinite family 11^(1+820k).
 - **ANALOGY (Session75 dyadic ledger).** Session75's sharp four-child witness has its own mod-3 threshold: B copies have zero global excess iff 3 | B. Its debt is the whole-level positive part, which is smaller than the per-merge positive part used here. The two thresholds are different quantities on the same pair interaction.

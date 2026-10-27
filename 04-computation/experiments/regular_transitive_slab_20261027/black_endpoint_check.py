@@ -1,4 +1,4 @@
-"""Check of the black endpoint lemma (THM-4819 (C)) in its strong form: for a regular tournament T on 2m+1 >= 7 vertices,
+"""Check of the black endpoint lemma (THM-4819 (D), Lemma B) in its strong form: for a regular tournament T on 2m+1 >= 7 vertices,
 a vertex v and ANY Hamilton cycle C of T - v, at least one of the m paths (succ_C(u), ..., u, v), u in N^-(v), is black
 (its positional reversal is not an anti-automorphism).  Instances: all circulants and random regular tournaments
 (3-cycle reversal walks) of orders 7..15; every vertex; several random Hamilton cycles of T - v per vertex.

@@ -1,0 +1,31 @@
+(1) odd case: Z_{2m}, |U| = m
+   m=2: (a)-sets 4 (= the four mod-4 unions: True); (a)+(b)-sets 4 [(0, 1), (0, 3), (1, 2), (2, 3)]
+   m=3: (a)-sets 0; (a)+(b)-sets 0 []
+   m=4: (a)-sets 4 (= the four mod-4 unions: True); (a)+(b)-sets 0 []
+   m=5: (a)-sets 0; (a)+(b)-sets 0 []
+   m=6: (a)-sets 4 (= the four mod-4 unions: True); (a)+(b)-sets 0 []
+   m=7: (a)-sets 0; (a)+(b)-sets 0 []
+   m=8: (a)-sets 4 (= the four mod-4 unions: True); (a)+(b)-sets 0 []
+   m=9: (a)-sets 0; (a)+(b)-sets 0 []
+   m=10: (a)-sets 4 (= the four mod-4 unions: True); (a)+(b)-sets 0 []
+   m=11: (a)-sets 0; (a)+(b)-sets 0 []
+(2) even case: Z_{2m-1}, |U| = m-1
+   m=3: (a)-sets 5; equal to the 5 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 5; with 0 in U: [(0, 1), (0, 4)]
+   m=4: (a)-sets 7; equal to the 7 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 7; with 0 in U: [(0, 1, 4), (0, 3, 4), (0, 3, 6)]
+   m=5: (a)-sets 9; equal to the 9 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=6: (a)-sets 11; equal to the 11 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=7: (a)-sets 13; equal to the 13 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=8: (a)-sets 15; equal to the 15 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=9: (a)-sets 17; equal to the 17 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=10: (a)-sets 19; equal to the 19 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=11: (a)-sets 21; equal to the 21 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=12: (a)-sets 23; equal to the 23 translates of 2*{0,2,...,2m-4}: True; (a)+(b)-sets 0; with 0 in U: []
+   m=5: progression U = [0, 3, 4, 8]; violating pairs 1 (first [(0, 3)]); pair (0,4) violates: False; halved witnesses 3,0
+   m=6: progression U = [0, 1, 4, 5, 8]; violating pairs 1 (first [(1, 5)]); pair (0,4) violates: False; halved witnesses 4,10
+   m=7: progression U = [0, 3, 4, 7, 8, 12]; violating pairs 3 (first [(0, 4), (3, 7), (4, 7)]); pair (0,4) violates: True; halved witnesses 5,11
+   m=8: progression U = [0, 1, 4, 5, 8, 9, 12]; violating pairs 5 (first [(0, 4), (0, 5), (1, 5)]); pair (0,4) violates: True; halved witnesses 6,12
+   m = 5..60: progression always has a violating pair, and (0,4) violates with halved witnesses m-2, m+4 for m >= 7: True []
+(3) cycle types of sigma_t sigma_t' (remark 'an alternative route that fails')
+   direct composition = closed form for all m = 3..40 and all pairs: True
+   m <= 40 NOT settled if the n-cycle case counts as settled: [5, 10, 13, 17, 25, 26, 29, 34, 37]
+   m <= 24 NOT settled if only 'even order is impossible' is used: [4, 5, 10, 13, 17]

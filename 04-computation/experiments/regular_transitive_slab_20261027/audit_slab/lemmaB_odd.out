@@ -1,0 +1,37 @@
+# lemmaB_all_cycles: all regular classes (gentourng -q -dmDm n), every vertex, ALL Hamilton cycles of T - v
+  ALL-BLUE cycle: v=0 (score 2), cycle 1 2 3 4 (2 rotations)
+  ALL-BLUE cycle: v=1 (score 2), cycle 0 2 3 4 (2 rotations)
+  ALL-BLUE cycle: v=2 (score 2), cycle 0 1 3 4 (2 rotations)
+  ALL-BLUE cycle: v=3 (score 2), cycle 0 1 2 4 (2 rotations)
+  ALL-BLUE cycle: v=4 (score 2), cycle 0 1 2 3 (2 rotations)
+n=5: tournaments 1
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 5; rotations 10; blue rotations 10; cycles with ALL rotations blue 5; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 2:5
+  identity (*) failures over all blue rotations: 0
+n=7: tournaments 3
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 98; rotations 294; blue rotations 88; cycles with ALL rotations blue 0; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 0:38 1:32 2:28
+  identity (*) failures over all blue rotations: 0
+n=9: tournaments 15
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 6772; rotations 27088; blue rotations 1260; cycles with ALL rotations blue 0; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 0:5818 1:648 2:306
+  identity (*) failures over all blue rotations: 0
+n=11: tournaments 1223
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 12366554; rotations 61832770; blue rotations 29296; cycles with ALL rotations blue 0; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 0:12337616 1:28580 2:358
+  identity (*) failures over all blue rotations: 0
+# order 13: all 64 circulant connection sets (labelled), then 100 random regular (gen_tournaments.py regular 13 100 5)
+n=13: tournaments 64
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 21057972; rotations 126347832; blue rotations 505128; cycles with ALL rotations blue 0; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 0:20557836 1:495144 2:4992
+  identity (*) failures over all blue rotations: 0
+n=13: tournaments 100
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 33135819; rotations 198814914; blue rotations 620; cycles with ALL rotations blue 0; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 0:33135199 1:620
+  identity (*) failures over all blue rotations: 0
+# order 15: all 128 circulant connection sets (gen_tournaments.py circ 15), every vertex, ALL Hamilton cycles of T - v
+n=15: tournaments 128
+  every vertex (score m): (T, v, Hamilton cycle of T-v) instances 1905167640; rotations 13336173480; blue rotations 13981200; cycles with ALL rotations blue 0; vertices v with T-v non-Hamiltonian 0; blue rotations with endpoint sum != n-1 0
+    histogram of #blue rotations per cycle: 0:1891908600 1:12536880 2:722160
+  identity (*) failures over all blue rotations: 0
+( bin/lemmaB_all_cycles 15 < circ15.txt; )  754.73s user 3.88s system 98% cpu 12:50.28 total

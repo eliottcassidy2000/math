@@ -1,0 +1,4 @@
+n=4 labelled=64 | TT4-free 40 | W4-free 56 (formula 56) L4-free 56 | LT 48 (2^(n-1)(n-1)! = 48) | S4-free 40 (formula 40.0)
+n=5 labelled=1024 | TT4-free 184 | W4-free 544 (formula 544) L4-free 544 | LT 384 (2^(n-1)(n-1)! = 384) | S4-free 240 (formula 240.0)
+n=6 labelled=32768 | TT4-free 240 | W4-free 6384 (formula 6384) L4-free 6384 | LT 3840 (2^(n-1)(n-1)! = 3840) | S4-free 1760 (formula 1760.0)
+n=7 labelled=2097152 | TT4-free 240 | W4-free 85728 (formula 85728) L4-free 85728 | LT 46080 (2^(n-1)(n-1)! = 46080) | S4-free 15120 (formula 15120.0)

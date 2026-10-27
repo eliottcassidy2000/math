@@ -1,0 +1,6 @@
+# census_small_even.py (exhaustive black-word search; n = 4, 6 both roles unpruned; n = 8 forced role)
+n=4: balanced classes 1; forced-role instances 4, succeed 2; other-role instances 4, succeed 0
+   forced-role failure: class 100111 vertex 2 score 2 role sink
+   forced-role failure: class 100111 vertex 3 score 1 role source
+n=6: balanced classes 5; forced-role instances 30, succeed 30; other-role instances 30, succeed 0
+n=8: balanced classes 85; forced-role instances 680, succeed 680; other-role instances 0, succeed 0

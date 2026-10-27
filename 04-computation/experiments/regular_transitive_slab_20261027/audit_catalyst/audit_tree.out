@@ -1,0 +1,12 @@
+../catalyst/tree_47_36_36.txt: 118 merges, 119 unit leaves, root count (47, 36, 36), root value (X+Y sqrt(-3))/2 with X=22, Y=0 (= 11), norm 121
+  total cost sum beta+ = 41;  Phi(root) = 40;  total slack = 1;  Phi + slack = 41
+  beta histogram: {-1: 39, 0: 39, 1: 39, 2: 1};  sum beta = 2 (= Q(root) - #leaves = 2)
+  merges with positive slack: [((47, 36, 36), (17, 10, 16), (30, 26, 20), 2, 1)]
+audit_own_tree_47_36_36.txt: 118 merges, 119 unit leaves, root count (47, 36, 36), root value (X+Y sqrt(-3))/2 with X=22, Y=0 (= 11), norm 121
+  total cost sum beta+ = 41;  Phi(root) = 40;  total slack = 1;  Phi + slack = 41
+  beta histogram: {-1: 39, 0: 39, 1: 39, 2: 1};  sum beta = 2 (= Q(root) - #leaves = 2)
+  merges with positive slack: [((47, 36, 36), (17, 10, 16), (30, 26, 20), 2, 1)]
+audit_own_tree_47_36_36_lastmin.txt: 118 merges, 119 unit leaves, root count (47, 36, 36), root value (X+Y sqrt(-3))/2 with X=22, Y=0 (= 11), norm 121
+  total cost sum beta+ = 41;  Phi(root) = 40;  total slack = 1;  Phi + slack = 41
+  beta histogram: {-1: 39, 0: 39, 1: 39, 2: 1};  sum beta = 2 (= Q(root) - #leaves = 2)
+  merges with positive slack: [((47, 36, 36), (30, 26, 20), (17, 10, 16), 2, 1)]

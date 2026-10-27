@@ -1,8 +1,9 @@
 # The transitive slab, the prescribed black core, the Eisenstein catalyst, and the four 4-vertex tournaments
 
 2026-10-27, mac-mini-2026-10-27-slab. **Status:** THM-4819, THM-4820, THM-4823 (PROVED parts plus FINITE-EXACT
-censuses) and HYP-9426 (OPEN), plus a ledger addendum and a typed reflection. Independent audits are pending at the
-pre-audit checkpoint; the audit outcome will be appended below.
+censuses) and HYP-9426 (OPEN), plus a ledger addendum and a typed reflection. All of it has been independently audited
+(three audits; reports under `04-computation/experiments/regular_transitive_slab_20261027/audit_*/`). Every proof was
+confirmed and every number reproduced; the corrections are applied, and MISTAKE-687 records them.
 
 ## Owner's directive
 
@@ -30,7 +31,9 @@ The pasted inspiration text was treated as data.
    - Every TT–regular geodesic stays in this slab.
    - The slab classes on geodesics are exactly those reachable from TT by R-descending moves.
 
-   The censuses at orders 5, 7 and 9 put every slab class with R ≤ m − 1 on a geodesic (HYP-9426 (1)).
+   The censuses at orders 5, 7 and 9 put every slab class with R ≤ m − 1 on a geodesic (HYP-9426 (1)). Samples of slab
+   classes built from regular tournaments, rather than from TT, are all exactly L from TT: 1,000 of 1,000 at order 11 and
+   300 of 300 at order 13 (`slab_sample_search.c`).
    - "Order 11 is exactly 15" is the realized score-transport distance 1 + 2 + 3 + 4 + 5.
    - Moves only rearrange score units monotonically.
    - The hard part is realizing each descending pair by a Hamilton path while avoiding sources and sinks.
@@ -60,9 +63,11 @@ The pasted inspiration text was treated as data.
        n ≥ 10.
      - **Evidence and exceptions.** Censuses confirm n = 6, 8, 10 (30, 680 and 133,330 instances). n = 4 fails at S4,
        whose only Hamilton path ending at a score-2 vertex is blue.
-4. **The Eisenstein catalyst (THM-4820).** The owner's statement has no source in the repository; the search covered
-   every text file and the dyadic, paid-ROOT, renewal and necklace branches. Under the natural reading the numbers hold
-   exactly:
+4. **The Eisenstein catalyst (THM-4820; independently audited, every number PASS).** At filing the owner's statement
+   had no source in the repository; the search covered every text file and the dyadic, paid-ROOT, renewal and necklace
+   branches. Session75's `session75_final_mathematics_20261027/EISENSTEIN_INVOICES.md`, committed minutes later, derives
+   the same result independently under the same reading, and is evidently the owner's source. Under that reading the
+   numbers hold exactly:
    - **The reading.** Unit charges 1, ω, ω²; free binary merges; each merge costs β(x,y)₊, Session75's dyadic pair
      interaction.
    - **PROVED.**
@@ -76,9 +81,14 @@ The pasted inspiration text was treated as data.
    So **f(11+k,k,k) = 41 exactly when k ≥ 36**. Further results:
    - **The lattice table.** g is ⌊Q/3⌋ or ⌊Q/3⌋ + 1 on all norms ≤ 2000, with twenty exceptional norms.
    - **Thresholds.** k*(n) for n ≤ 14 is 0, 1, 2, 4, 7, 10, 14, 19, 24, 31, 36, 44, 52, 61.
-   - **The larger window (n ≤ 86).** It confirmed every window-free prediction (83 and 85 exceptional; 53, 55, 71 not).
-     It also produced two kinds of exception the first draft did not foresee: 51 (norm ≡ 0) and 59, an exception by
-     propagation that refutes the first-drafted converse. HYP-9426 (4) records the correction.
+   - **The larger window (n ≤ 86).**
+     - **Exact values.** By the audit's window lemma (a cost-C tree has every node at norm ≤ 3C + 1), these values are
+       exact.
+     - **Predictions.** Every (C) prediction held: 83 and 85 are exceptional, and 53, 55, 71 are not.
+     - **New exceptions.** 51 is a seed of norm ≡ 0, with no tight split at all. 59 is an exception by propagation, and
+       it refutes the first-drafted converse.
+   - **Beyond (audit).** g(101) = ⌊101²/3⌋ + 2, which refutes HYP-9426 (3) as drafted. The excess is 0 or 1 below norm
+     10,201.
 5. **The four 4-vertex tournaments (THM-4823).**
    - **The census.** It is Σ C(s,3), Σ C(n−1−s,3), C(n,4) and one trace, tr(A⁴)/4 (THM-118). The trace is not a
      function of the scores from order 5 on, so the census costs exactly one matrix product.
@@ -88,7 +98,7 @@ The pasted inspiration text was treated as data.
      W(n) = W(n−1) + A000016(n) − 1 = 1, 1, 2, 3, 6, 11, 20, 35, 64, 115. This sequence is not in OEIS.
 6. **Ledger addendum.** PROBLEM_CLASSIFICATION §5 adds, per klein's reflection §6:
    - the branch-count coordinate, the three invariant levels and census horizons, with every row placed;
-   - the ETH Σ⁰₄ remark;
+   - the ETH level remark (corrected by the audit: ETH proper is Σ⁰₃, the 2^{o(n)} form is Π⁰₄, the preprint's claim is Σ⁰₂);
    - one new tournament row, whose strongest invariant is the I2 slab.
 7. **Reflection.** [eth-sigma-four-the-four-vertex-tournament-galactic-algorithms-and-the-micro-macrocosm-macmini-20261027](../../07-reflections/eth-sigma-four-the-four-vertex-tournament-galactic-algorithms-and-the-micro-macrocosm-macmini-20261027.md).
 
@@ -117,8 +127,44 @@ program with `cc -O3 -march=native -I/opt/homebrew/opt/nauty/include file.c /opt
 
 ## Not done
 
-- **HYP-9426 (1) at order 11.** A slab sample at order 11 has not been run.
-- **Larger thresholds.** k*(n) for n ≥ 15 needs larger boxes.
+- **Larger thresholds.** k*(15) = 70 needed a box with K = 90; n ≥ 16 needs larger boxes.
 - **Larger Paley tournaments.** P₂₃ and P₃₁ were not attempted: the subset-DP memory at n = 23 needs a per-start
   variant.
 - **Five vertices.** No five-vertex census was attempted (the reflection, item 3).
+
+## Audit outcome (2026-10-27)
+
+- **THM-4819** (`audit_slab/REPORT_THM4819.md`). Every proof was PROVED as written. The audit added:
+  - the strong form of Lemma B, checked on every Hamilton cycle: all regular classes at orders 7–11 and every
+    circulant at orders 13 and 15, about 1.97·10⁹ instances;
+  - the proof's construction executed and replayed;
+  - 127 archived geodesic words.
+
+  Corrections:
+  - R5[C3] and C3[R5] are Z₁₅ circulants, not non-Cayley;
+  - one side clause of a remark was valid only for the weak form, so m = 4 joins its list;
+  - (E) now holds from n = 8, after an exhaustive Lemma B′ check;
+  - wording fixes.
+- **THM-4820** (`audit_catalyst/REPORT_THM4820.md`). Every number passed, including f(46,35,35) = 42, certified over
+  5·10⁸ pairs. Corrections:
+  - **Exact, not window-dependent.** The windowed values are exact, by the window lemma (proved).
+  - **51** has no tight split at all.
+  - **Overclaims removed.** The inertness reading is restricted to the (C) class, and the two-thirds asymptotics is
+    marked conjecture.
+  - **HYP-9426 (3)** is refuted by g(101) = ⌊101²/3⌋ + 2.
+  - **Concurrent derivation.** Session75's EISENSTEIN_INVOICES derives 41 at k ≥ 36 independently, and is credited.
+- **THM-4823, the ledger and the reflection** (`audit_four/REPORT_THM4823_LEDGER.md`).
+  - THM-4823 passed, with wording fixes and added formulas: the labelled count W_lab and W(n) = A133670(n) − n.
+  - Side finding: THM-402's verification count of 544 is the W4-free count; a correction note is added there.
+  - In the ledger §5:
+    - the ETH level is corrected to Σ⁰₃ (a note is added upstream in klein's reflection);
+    - the horizons are taken from canon (Collatz 2⁷¹, cycles above 1.375·10¹¹ odd elements, JC(2) degrees 101 and 108,
+      H ≥ disc through order 7);
+    - the definitions and the Reading are corrected;
+    - missing rows are added.
+  - In the reflection:
+    - the rigidity mechanism is trace duality, not Lipschitz;
+    - "rank is not Lipschitz" is deleted;
+    - the Klein-four sentence is fixed;
+    - EM is typed as an ANALOGY, and its citations were web-checked.
+

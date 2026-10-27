@@ -1,0 +1,8 @@
+38083 points of norm <= 10500
+383874 ordered tight splits (6.2s)
+closure converged in 21 rounds; points with exact status: 38083; not in G (exceptional, window-free): 1350
+comparison with the C closure in audit_lat_W10500.txt: 38083 points, 0 disagreements
+x = 101 + 0w (norm 10201, Phi 3400): in G: False; ordered tight splits 0; ordered slack-1 splits 0 (beta values []); all parts have exact G-status: True; slack-1 splits with BOTH parts in G: 0
+   => g(101 + 0w) >= Phi + 2 = 3402 (window-free)
+   exceptional parts used by its slack-1 splits (norms): []
+done (6.3s)

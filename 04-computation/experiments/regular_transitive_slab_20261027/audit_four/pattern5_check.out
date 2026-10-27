@@ -1,0 +1,25 @@
+the twelve 5-vertex types:
+   T00: scores(0, 1, 2, 3, 4) c3=0 c4=0 c5=0 H=1 |Aut|=1
+   T07: scores(0, 1, 3, 3, 3) c3=1 c4=0 c5=0 H=3 |Aut|=3
+   T03: scores(0, 2, 2, 2, 4) c3=1 c4=0 c5=0 H=3 |Aut|=3
+   T05: scores(0, 2, 2, 3, 3) c3=2 c4=1 c5=0 H=5 |Aut|=1
+   T01: scores(1, 1, 1, 3, 4) c3=1 c4=0 c5=0 H=3 |Aut|=3
+   T02: scores(1, 1, 2, 2, 4) c3=2 c4=1 c5=0 H=5 |Aut|=1
+   T06: scores(1, 1, 2, 3, 3) c3=3 c4=2 c5=1 H=9 |Aut|=1
+   T04: scores(1, 1, 2, 3, 3) c3=3 c4=3 c5=1 H=9 |Aut|=1
+   T10: scores(1, 2, 2, 2, 3) c3=4 c4=3 c5=2 H=13 |Aut|=1
+   T09: scores(1, 2, 2, 2, 3) c3=4 c4=3 c5=3 H=15 |Aut|=3
+   T08: scores(1, 2, 2, 2, 3) c3=4 c4=4 c5=1 H=11 |Aut|=1
+   T11: scores(2, 2, 2, 2, 2) c3=5 c4=5 c5=2 H=15 |Aut|=5
+n=5: classes 12; statistic groups 12; types whose count is a function of (scores, trA^4, trA^5): ['T00', 'T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08', 'T09', 'T10', 'T11']
+      with (scores, all of tr A^3..tr A^n): groups 12; determined types: ['T00', 'T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08', 'T09', 'T10', 'T11']
+      pattern-free classes per type: T00:11, T07:11, T03:11, T05:11, T01:11, T02:11, T06:11, T04:11, T10:11, T09:11, T08:11, T11:11; min 11, max 11
+n=6: classes 56; statistic groups 46; types whose count is a function of (scores, trA^4, trA^5): ['T00', 'T09']
+      with (scores, all of tr A^3..tr A^n): groups 46; determined types: ['T00', 'T09']
+      pattern-free classes per type: T00:35, T07:43, T03:43, T05:33, T01:43, T02:33, T06:35, T04:32, T10:35, T09:43, T08:33, T11:49; min 32, max 49
+n=7: classes 456; statistic groups 293; types whose count is a function of (scores, trA^4, trA^5): []
+      with (scores, all of tr A^3..tr A^n): groups 311; determined types: []
+      pattern-free classes per type: T00:121, T07:226, T03:219, T05:85, T01:226, T02:85, T06:116, T04:75, T10:122, T09:229, T08:109, T11:318; min 75, max 318
+n=8: classes 6880; statistic groups 2393; types whose count is a function of (scores, trA^4, trA^5): []
+      with (scores, all of tr A^3..tr A^n): groups 3640; determined types: []
+      pattern-free classes per type: T00:376, T07:1312, T03:1303, T05:188, T01:1312, T02:188, T06:394, T04:139, T10:452, T09:1567, T08:394, T11:2971; min 139, max 2971

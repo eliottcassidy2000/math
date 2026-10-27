@@ -1,0 +1,61 @@
+1. n = 5: score sequences with more than one #S4 value
+   scores (1, 1, 2, 3, 3) #S4 values [2, 3] classes [(2, '1101111101'), (3, '1101111110')]
+   scores (1, 2, 2, 2, 3) #S4 values [3, 4] classes [(4, '1100111111'), (3, '1101110111'), (3, '1110101111')]
+2. the four 4-vertex types
+   TT4: scores (0, 1, 2, 3)  H = 1  c3 = 0  directed 4-cycles = 0  tr(A^4)/4 = 0
+   W4: scores (1, 1, 1, 3)  H = 3  c3 = 1  directed 4-cycles = 0  tr(A^4)/4 = 0
+   L4: scores (0, 2, 2, 2)  H = 3  c3 = 1  directed 4-cycles = 0  tr(A^4)/4 = 0
+   S4: scores (1, 1, 2, 2)  H = 5  c3 = 2  directed 4-cycles = 1  tr(A^4)/4 = 1
+   H = 1 + 2 c3 on all 64 labelled 4-tournaments: failures 0
+3. one arc reversal
+   singular values of 2(E_ij - E_ji): [2. 2. 0.]; nuclear norm 4.000000; rank 2
+4. Paley skew matrices
+   q=7: circulant True, skew True, rank 6, nonzero singular values all sqrt(q): True, nuclear 15.8745 = (q-1)sqrt(q) 15.8745; S S^T = qI - J: True
+   q=11: circulant True, skew True, rank 10, nonzero singular values all sqrt(q): True, nuclear 33.1662 = (q-1)sqrt(q) 33.1662; S S^T = qI - J: True
+   q=19: circulant True, skew True, rank 18, nonzero singular values all sqrt(q): True, nuclear 78.4602 = (q-1)sqrt(q) 78.4602; S S^T = qI - J: True
+   q=23: circulant True, skew True, rank 22, nonzero singular values all sqrt(q): True, nuclear 105.5083 = (q-1)sqrt(q) 105.5083; S S^T = qI - J: True
+   q=31: circulant True, skew True, rank 30, nonzero singular values all sqrt(q): True, nuclear 167.0329 = (q-1)sqrt(q) 167.0329; S S^T = qI - J: True
+   q=43: circulant True, skew True, rank 42, nonzero singular values all sqrt(q): True, nuclear 275.4124 = (q-1)sqrt(q) 275.4124; S S^T = qI - J: True
+   q=47: circulant True, skew True, rank 46, nonzero singular values all sqrt(q): True, nuclear 315.3601 = (q-1)sqrt(q) 315.3601; S S^T = qI - J: True
+   q=59: circulant True, skew True, rank 58, nonzero singular values all sqrt(q): True, nuclear 445.5065 = (q-1)sqrt(q) 445.5065; S S^T = qI - J: True
+   edit lower bounds against parses with nuclear norm U = (13/12) q log2 q (Session75 b = 3 constant):
+   q=103: Lipschitz 72.3 (~q^1.5/4 = 261); Frobenius 102 (~q^2/8 = 1.33e+03); duality 733 (~q^2/4 = 2.65e+03)
+   q=1031: Lipschitz 5.47e+03 (~q^1.5/4 = 8.28e+03); Frobenius 5.82e+04 (~q^2/8 = 1.33e+05); duality 1.76e+05 (~q^2/4 = 2.66e+05)
+   q=10007: Lipschitz 2.14e+05 (~q^1.5/4 = 2.5e+05); Frobenius 9.17e+06 (~q^2/8 = 1.25e+07); duality 2.14e+07 (~q^2/4 = 2.5e+07)
+   q=100003: Lipschitz 7.46e+06 (~q^1.5/4 = 7.91e+06); Frobenius 1.11e+09 (~q^2/8 = 1.25e+09); duality 2.36e+09 (~q^2/4 = 2.5e+09)
+5. regular classes (gentourng -d m -D m on 2m+1 vertices)
+   n=3: >Z 1 graphs generated in 0.00 sec
+   n=5: >Z 1 graphs generated in 0.00 sec
+   n=7: >Z 3 graphs generated in 0.00 sec
+   n=9: >Z 15 graphs generated in 0.00 sec
+   n=11: >Z 1223 graphs generated in 0.03 sec
+6. the TT4-free classes at orders 5, 6, 7 (is the order-7 one doubly regular, i.e. P7; is the order-6 one P7 - v?)
+   n=5: TT4-free class, scores [1, 2, 2, 2, 3]
+   n=5: TT4-free class, scores [2, 2, 2, 2, 2]
+   n=5: TT4-free class, scores [1, 2, 2, 2, 3]
+   n=6: TT4-free class, scores [2, 2, 2, 3, 3, 3], isomorphic to P7 - v: True
+   n=7: TT4-free class, scores [3, 3, 3, 3, 3, 3, 3], common out-neighbours of distinct pairs {1} (doubly regular iff {1}), isomorphic to P7: True
+7. skew-Hadamard doubling D = [[H, H], [-H^T, H^T]] (sigma-four section 2(b) extension)
+   order 4: H + H^T = 2I True, H H^T = N I True, S = H - I is a tournament skew matrix True, nuclear norm 6.9282 = N sqrt(N-1) 6.9282
+   order 8: H + H^T = 2I True, H H^T = N I True, S = H - I is a tournament skew matrix True, nuclear norm 21.1660 = N sqrt(N-1) 21.1660
+   order 16: H + H^T = 2I True, H H^T = N I True, S = H - I is a tournament skew matrix True, nuclear norm 61.9677 = N sqrt(N-1) 61.9677
+   order 32: H + H^T = 2I True, H H^T = N I True, S = H - I is a tournament skew matrix True, nuclear norm 178.1685 = N sqrt(N-1) 178.1685
+   order 64: H + H^T = 2I True, H H^T = N I True, S = H - I is a tournament skew matrix True, nuclear norm 507.9843 = N sqrt(N-1) 507.9843
+   order 128: H + H^T = 2I True, H H^T = N I True, S = H - I is a tournament skew matrix True, nuclear norm 1442.4867 = N sqrt(N-1) 1442.4867
+8. Goldbach row: every even N is a sum of two units modulo m (all m <= 300)
+   failures: []
+9. Sloane row: 2 is a primitive root mod 3^k (k <= 12), so 2^n mod 3^k is equidistributed over the units; units whose k low ternary digits avoid 0 number 2^k, a share (2/3)^(k-1)
+   k=1: ord_M(2) = 2 = phi = 2: True; zero-free units 2 = 2^k True
+   k=2: ord_M(2) = 6 = phi = 6: True; zero-free units 4 = 2^k True
+   k=3: ord_M(2) = 18 = phi = 18: True; zero-free units 8 = 2^k True
+   k=4: ord_M(2) = 54 = phi = 54: True; zero-free units 16 = 2^k True
+   k=5: ord_M(2) = 162 = phi = 162: True; zero-free units 32 = 2^k True
+   k=6: ord_M(2) = 486 = phi = 486: True; zero-free units 64 = 2^k True
+   k=7: ord_M(2) = 1458 = phi = 1458: True; zero-free units 128 = 2^k True
+   k=8: ord_M(2) = 4374 = phi = 4374: True; zero-free units 256 = 2^k True
+   k=9: ord_M(2) = 13122 = phi = 13122: True; zero-free units 512 = 2^k True
+   k=10: ord_M(2) = 39366 = phi: True
+   k=11: ord_M(2) = 118098 = phi: True
+   k=12: ord_M(2) = 354294 = phi: True
+10. labelled W4-free counts from Theorem C: W_lab(n) = n! + sum_{k=3..n} C(n,k)(n-k)!(2^(k-1)(k-1)! - k!)
+    [1, 2, 8, 56, 544, 6384, 85728, 1290624, 21574656, 397912320]

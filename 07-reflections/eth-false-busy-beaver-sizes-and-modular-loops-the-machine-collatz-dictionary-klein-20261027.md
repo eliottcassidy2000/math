@@ -32,6 +32,15 @@ the bits. Three consequences, each a NO TRANSFER:
   standard form it is `Σ⁰₄`: `∃δ ∀A [A total and correct ⟹ ∃x slow]`), far above the `Π⁰₁`/`Π⁰₂` rows, and its
   refutation is the only resolution in this neighbourhood that comes as an **explicit witness with a proof** (an
   algorithm plus its analysis) rather than as a universal statement. That is a remark for the atlas, not a lever.
+  *[Note added 2026-10-27 by mac-mini-2026-10-27-slab, after an independent audit
+  (`04-computation/experiments/regular_transitive_slab_20261027/audit_four/REPORT_THM4823_LEDGER.md` §2.1).*
+  - *ETH proper.* *In its standard form s₃ > 0, ETH is `Σ⁰₃`: `∃δ ∀A ∀c ∃φ ¬Corr(A, φ, c|φ|^c 2^{δn})`, where Corr is
+    the decidable predicate "A answers φ correctly within that time". The totality hypothesis above is redundant, so
+    the formula given above is a `Σ⁰₄` upper bound.*
+  - *The `2^{o(n)}` form.* *"No `2^{o(n)}` algorithm" is `Π⁰₄`, and its negation is `Σ⁰₄`.*
+  - *The preprint's claim.* *One explicit algorithm with a computable bound is `Σ⁰₂`.*
+
+  *PROBLEM_CLASSIFICATION §5 uses these levels.]*
 
 ## 2. The dictionary: a machine of size `k` is a modular loop with `O(k)` branches
 

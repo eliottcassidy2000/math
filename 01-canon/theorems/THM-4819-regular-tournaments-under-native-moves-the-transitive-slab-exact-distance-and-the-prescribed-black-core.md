@@ -1,16 +1,21 @@
 ---
 id: THM-4819
-title: "Regular tournaments under native moves: (A) every geodesic between the transitive class and the regular classes lies in the slab L + R = (n^2-1)/8, and the slab classes on geodesics are exactly those reachable from TT by R-descending moves; (B) slab censuses at orders 5, 7, 9 (every slab class with R <= m-1 is on a geodesic); (C) every regular class through order 11, all 64 circulants and 1,000 random regular 13-tournaments, all 128 order-15 circulants and 200 random regular 15-tournaments, R5[C3], C3[R5], D(P7) and P19 are exactly (n^2-1)/8 moves from the transitive class; (D) the black endpoint lemma (for every Hamilton cycle of T - v, some rotation closed at v is black) and hence every prescribed vertex of a regular tournament on 2m+1 >= 7 vertices is detached from a strong core in exactly m black native moves, in either native role; (E) the even balanced analogue (forced role, m - 1 black moves) at every even order >= 10, finite-exact at 6, 8, 10, false at 4"
+title: "Regular tournaments under native moves: (A) every geodesic between the transitive class and the regular classes lies in the slab L + R = (n^2-1)/8, and the slab classes on geodesics are exactly those reachable from TT by R-descending moves; (B) slab censuses at orders 5, 7, 9 (every slab class with R <= m-1 is on a geodesic); (C) every regular class through order 11, all 64 circulants and 1,000 random regular 13-tournaments, all 128 order-15 circulants and 200 random regular 15-tournaments, R5[C3], C3[R5], D(P7) and P19 are exactly (n^2-1)/8 moves from the transitive class; (D) the black endpoint lemma (for every Hamilton cycle of T - v, some rotation closed at v is black) and hence every prescribed vertex of a regular tournament on 2m+1 >= 7 vertices is detached from a strong core in exactly m black native moves, in either native role; (E) the even balanced analogue (forced role, m - 1 black moves) at every even order >= 8, finite-exact at 6, false at 4"
 status: >
-  PROVED (mac-mini-2026-10-27-slab; independent audit pending at filing): (A) the slab inequality and its equality case,
-  confinement of geodesics, the reachability characterization and the source/sink obstruction; (D) the black endpoint
-  lemma for every regular tournament on 2m+1 >= 7 vertices and, with Session75's audited named-start construction from
-  its second move on, the prescribed-singleton theorem for both native roles. This resolves the prescribed-singleton
-  strengthening that HYP-9422 (1) left OPEN. The endpoint lemma also replaces the pure-blue classification as the source
-  of the first black path. FINITE-EXACT: (B) the slab censuses; (C) the listed instances (search words replayed and
-  checked; the lower bound is THM-4810 (C)); (D') every (class, vertex, role) at orders 7, 9, 11 by an independent
-  search (42; 270; 26,906 instances). OPEN: HYP-9426 (1)-(2); HYP-9423 (7) (every regular class at every odd order)
-  stays OPEN.
+  PROVED (mac-mini-2026-10-27-slab; independently audited 2026-10-27: every proof PROVED as written, no error affects a
+  proof; wording corrections applied:
+  04-computation/experiments/regular_transitive_slab_20261027/audit_slab/REPORT_THM4819.md): (A) the slab inequality
+  and its equality case, confinement of geodesics, the reachability characterization and the source/sink obstruction;
+  (D) the black endpoint lemma for every regular tournament on 2m+1 >= 7 vertices and, with Session75's audited
+  named-start construction from its second move on, the prescribed-singleton theorem for both native roles. This
+  resolves the prescribed-singleton strengthening that HYP-9422 (1) left OPEN, and the endpoint lemma replaces the
+  pure-blue classification as the source of the first black path. (E) the even balanced analogue, with the role forced
+  by the dipole law: Lemma B' and Theorem E for every even n >= 8 (n >= 10 by the proof; n = 8 by an exhaustive check
+  of Lemma B' over all Hamilton cycles, in the audit). FINITE-EXACT: (B) the slab censuses; (C) the listed instances
+  (search words replayed and checked; the lower bound is THM-4810 (C)); (D') every (class, vertex, role) at orders 7,
+  9, 11 by an independent search (42; 270; 26,906 instances); (E) censuses at n = 6, 8, 10; the audit's exhaustive
+  strong-form checks of Lemma B (all Hamilton cycles: every regular class at orders 7-11, every circulant at 13 and 15).
+  FALSE at n = 4 (S4) for (E). OPEN: HYP-9426 (1); HYP-9423 (7) (every regular class at every odd order) stays OPEN.
 session: mac-mini-2026-10-27-slab
 source: 05-knowledge/results/regular_slab_prescribed_black_core_eisenstein_catalyst_20261027.md
 scripts:
@@ -18,6 +23,8 @@ scripts:
   - 04-computation/experiments/regular_transitive_slab_20261027/regular_geodesic_search.c, paley_geodesic_search.c, rerun_undecided.sh, special15.py (+ regular_geodesic_n13_*.out, regular_geodesic_n15_*.out, paley19_geodesic.out, special15_rows.txt, special15_geodesic.out)
   - 04-computation/experiments/regular_transitive_slab_20261027/prescribed_isolation.c (+ prescribed_isolation_n7_n9.out, prescribed_isolation_n11.out)
   - 04-computation/experiments/regular_transitive_slab_20261027/start_set_conditions.py, gap_parity.py, black_endpoint_check.py (+ .out)
+  - 04-computation/experiments/regular_transitive_slab_20261027/start_set_conditions_even.py (+ .out), prescribed_isolation.c even mode (+ prescribed_isolation_even_n4_n8.out, prescribed_isolation_even_n10.out)
+  - 04-computation/experiments/regular_transitive_slab_20261027/audit_slab/ (independent audit: own canonical form, slab closure, exhaustive Lemma B / B' cycle checks, the construction executed, 127 archived and replayed geodesic words)
 related:
   - 01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md
   - 01-canon/theorems/THM-4815-dipole-principle-native-move-distance-bounds-endpoint-relation-cut-or-colour-exactness-and-the-p7-parity-correction.md
@@ -69,7 +76,7 @@ On a word of length c from TT to a regular class, L must rise and R must fall by
 - (ii) ⇒ (iii): along a chain of length L(T) from TT, the j-th state has L = j. It has R ≥ c − j by (A1), and R ≤ R(T) + (L(T) − j) = c − j by the Lipschitz bound. So R falls by one at each step.
 - (iii) ⇒ (i): every R-descending move from a slab state is L-ascending and stays in the slab, since ΔR = −1 and L + R ≥ c force ΔL = +1. So the chain has length L(T). Continue with R(T) further R-descending moves to a regular class (B8), for a total of c. ∎
 
-**(A4) Sources and sinks.** A tournament with a source or sink has R ≥ m: one deviation is ±m, and the deviations sum to zero. It also has no L-descending move (Session74 supplement, pruning lemma, PROVED). Since moves are involutions, such a class with L ≥ 1 is never on a geodesic. A geodesic must therefore realize, at every step, an endpoint-descending pair (THM-4815 B1) by a Hamilton path, without ever passing through a class with a source or sink.
+**(A4) Sources and sinks.** A tournament with a source or sink has R ≥ m: one deviation is ±m, and the deviations sum to zero. It also has no L-descending move (Session74 supplement, pruning lemma, PROVED). Since moves are involutions, such a class with L ≥ 1 is never on a geodesic. A geodesic must therefore realize, at every step, an endpoint-descending pair (THM-4815 B1) by a Hamilton path, without ever passing through a class with a source or sink other than TT itself.
 
 ## (B) Slab censuses (FINITE-EXACT)
 
@@ -104,9 +111,17 @@ Every word is replayed from the input labelled tournament. Each path is checked 
 | 11 | every regular class (1,223) | exact (THM-4815 B8', random descending chains from TT); P₁₁ also by Session74's checked certificate |
 | 13 | all 64 circulant connection sets; 1,000 random regular tournaments (rotational circulant followed by 60n² random 3-cycle reversals) | 64/64; 999 at node budget 50,000, the last at budget 200,000 |
 | 15 | all 128 circulant connection sets | 121 at budget 50,000, the other 7 at budget 300,000 with 20 candidates |
-| 15 | R5[C3] and C3[R5] (THM-4812's vertex-transitive non-Cayley classes); the doubling D(P₇) (THM-4557, Aut = F₂₁) | all three exact (28 moves) |
+| 15 | R5[C3] and C3[R5] (the G_A- and G_B-invariant classes of THM-4812 (c); both are also Z₁₅ circulants, with connection sets {1,2,6,7,10,11,12} and {1,4,6,7,10,12,13}, so they already lie among the 128 circulants); the doubling D(P₇) (THM-4557, Aut = F₂₁) | all three exact (28 moves) |
 | 15 | 200 random regular tournaments | 189 at budget 50,000, the other 11 at budget 300,000 with 20 candidates (`regular_geodesic_n15_random_rerun.out`) |
 | 19 | P₁₉ | exact (45 moves); the word is in `paley19_geodesic.out` |
+
+**Archived certificates.**
+- **The producer's word.** P₁₉ (`paley19_geodesic.out`).
+- **The independent audit's words.** `audit_slab/geodesic_search_audit.out` holds words from the audit's own search,
+  replayed in pure Python. They cover 40 regular classes of order 11, all 64 order-13 circulants, 20 random regular
+  13-tournaments, and R5[C3], C3[R5] and D(P₇).
+- **The remaining instances.** The producer's other instances were replayed in-process when found, but their words
+  were not archived. The commands in the results note regenerate them.
 
 **The order-11 fact merged.** "Every regular tournament of order 11 is exactly 15 moves from the transitive class" is the statement that the score-transport distance 15 = 1 + 2 + 3 + 4 + 5 is realized. By (A), every geodesic is a monotone flow of score units inside the slab:
 - at each step one endpoint pair, one vertex above its sorted target and one below, moves one unit toward the middle;
@@ -160,11 +175,21 @@ Two consequences:
 **Remarks on Lemma B.**
 - **Order five.** At m = 2 the conditions (a) and (b) have solutions (U = {0,1} or {0,3}), as they must: the regular 5-tournament is pure blue (THM-4730).
 - **What the proof avoids.** It uses neither the automorphism group nor the pure-blue classification. Session75 used the classification only to obtain *some* black first path.
-- **An alternative route that fails.** The products σ_t σ_{t′} are automorphisms of an explicit cycle type, computed in `gap_parity.py` and checked against direct composition for m ≤ 40. Write d = t − t′, e = gcd(d, m) and ℓ = m/e:
+- **An alternative route that fails.** The products σ_t σ_{t′} are automorphisms whose cycle types can be computed
+  explicitly (`gap_parity.py`, checked against direct composition for m ≤ 40). Write d = t − t′, e = gcd(d, m) and
+  ℓ = m/e:
   - if d/e is odd, the type is [1 + 2ℓ, ℓ^(2e−2)];
   - if d/e is even, the type is [((ℓ+1)/2)², ℓ^(2e−1)].
 
-  An even order is impossible, because tournament automorphism groups have odd order. A full (2m+1)-cycle would make T vertex-transitive and hence pure blue, which is impossible for n ≥ 7. These two facts alone settle every m ≤ 40 except 5, 10, 13, 17, 25, 26, 29, 34, 37. Those are the m at which every even gap is bad, so U can be the set of even positions. In this range they are the m such that m or m/2 is odd with every prime factor ≡ 1 (mod 4); this pattern is observed, not proved. The neighbourhood identity (★) is the uniform argument.
+  An even order is impossible, because tournament automorphism groups have odd order. This alone leaves, for m ≤ 40,
+  the m in {4, 5, 10, 13, 17, 25, 26, 29, 34, 37} unsettled (audit, `remark_nocycle.py`). There is one more fact under
+  the stronger hypothesis that every Hamilton path ending at v is blue. Then a full (2m+1)-cycle among the products
+  makes T vertex-transitive, hence pure blue, which is impossible for n ≥ 7. That removes m = 4.
+
+  Lemma B's strong form assumes only that one cycle's m rotations are blue, so that clause is unavailable there: P₇ is
+  vertex-transitive and not pure blue. The remaining m are those at which every even gap is bad, so U can be the set of
+  even positions. In this range they are the m such that m or m/2 is odd with every prime factor ≡ 1 (mod 4); this
+  pattern is observed, not proved. The neighbourhood identity (★) is the uniform argument.
 - **Data** (`black_endpoint_check.py`).
   - Instances: 14,862 (tournament, vertex, Hamilton cycle of T − v), at orders 7 to 15.
   - Tournaments: every circulant and 30 random regular tournaments per order, every vertex, three random cycles each.
@@ -200,9 +225,9 @@ Every instance succeeds:
 | 9 | 15 | 270 | — |
 | 11 | 1,223 | 26,906 | 37 s |
 
-**Consequence.** HYP-9422 (1)'s prescribed-singleton strengthening is PROVED: the detached singleton can be chosen in advance, in either native role. This is the regular-start case of the atlas's "black-core connectivity" row. The even balanced case of Session75 §4 with a prescribed singleton is HYP-9426 (2).
+**Consequence.** HYP-9422 (1)'s prescribed-singleton strengthening is PROVED: the detached singleton can be chosen in advance, in either native role. This is the regular-start case of the atlas's "black-core connectivity" row. The even balanced case, with the role forced by the dipole law, is (E) below; it resolves HYP-9426 (2).
 
-## (E) Even balanced orders (PROVED for n ≥ 10; FINITE-EXACT at n = 6, 8, 10; FALSE at n = 4)
+## (E) Even balanced orders (PROVED for n ≥ 8; FINITE-EXACT at n = 6; FALSE at n = 4)
 
 Let n = 2m and let every score lie in {m − 1, m}. Session75 §4 (audited) proves that the black distance to C is m − 1 with an unprescribed singleton.
 
@@ -210,7 +235,7 @@ Let n = 2m and let every score lie in {m − 1, m}. Session75 §4 (audited) prov
 - a vertex of score m ends as a source if m is odd and as a sink if m is even;
 - a vertex of score m − 1 ends in the opposite role.
 
-Only that role is reachable in m − 1 moves. The other role costs at least m moves (Session75 §2: a named sink needs d⁺(v) moves).
+Only that role is reachable in m − 1 moves. Reaching |d| = m − 1/2 in m − 1 native moves forces the alternation, and the alternation fixes the final sign: after m − 1 moves d = (−1)^(m−1)(m − 1/2) for score m, and the opposite for score m − 1. So the other role needs at least m moves. (In the reversal gauge this is Session75 §2's bound: a named sink needs d⁺(v) moves.)
 
 **Lemma B′ (even black endpoint lemma).** Let n = 2m ≥ 10, let v have score m, and let c_0 → ⋯ → c_{2m−2} → c_0 be any Hamilton cycle of T − v. This cycle exists, because T − v is strong by Session75 §4's cut bound. Then some rotation (c_t, …, c_{t−1}, v), with c_{t−1} ∈ N⁻(v), is black.
 
@@ -232,10 +257,12 @@ Either way (b) fails.
 
 At m = 3 and 4, (a) and (b) do have solutions: (0,1) and (0,4) mod 5; (0,1,4), (0,3,4) and (0,3,6) mod 7. So orders 6 and 8 rest on the census. `start_set_conditions_even.py` and an inline check confirm that the progression always has a violating pair for m = 5, …, 60.
 
-**Theorem E.** Let T be balanced on n = 2m ≥ 10 vertices, let v be a vertex and let ρ be the role the dipole law forces. There is an all-black native word of length exactly m − 1 into C(v, ρ), and none shorter.
+**Lemma B′ at n = 8.** The proof above starts at m = 5. At n = 8 (m = 4), the audit checked Lemma B′ exhaustively: every balanced class, every vertex of score 4, every Hamilton cycle of T − v, 4,382 instances with none all-blue. At n = 6 the lemma is false: 3 cycles have all rotations blue. Theorem E at n = 6 rests on the census alone.
+
+**Theorem E.** Let T be balanced on n = 2m ≥ 8 vertices, let v be a vertex and let ρ be the role the dipole law forces. There is an all-black native word of length exactly m − 1 into C(v, ρ), and none shorter.
 
 *Proof.*
-- **Score m.** If s(v) = m, take P₁ to be a black Hamilton path ending at v (Lemma B′) and run Session75 §4 from its second move. The core stays strong, a second start is available because v has m − 2 ≥ 2 in-neighbours, and the endpoint sums are at least 2m > n − 1. All of this needs only m ≥ 4.
+- **Score m.** If s(v) = m, take P₁ to be a black Hamilton path ending at v (Lemma B′, or its n = 8 check) and run Session75 §4 from its second move. The core stays strong, a second start is available because v has m − 2 ≥ 2 in-neighbours, and the endpoint sums are at least 2m > n − 1. All of this needs only m ≥ 4.
 - **Score m − 1.** Pass to T^op. It is balanced, v has score m there, and the converse conjugation applies as in Theorem D. ∎
 
 **Census** (FINITE-EXACT, `prescribed_isolation.c`, even mode). For each vertex the census tests only the forced role.
@@ -247,4 +274,4 @@ At m = 3 and 4, (a) and (b) do have solutions: (0,1) and (0,4) mod 5; (0,1,4), (
 | 10 | 13,333 | 133,330 | all succeed (24 s) |
 | 4 | 1 (S4 = "100111") | 4 | 2 fail |
 
-At n = 4, the only Hamilton path ending at S4's score-2 vertex is 3 → 0 → 1 → 2, and it is blue. This is the even analogue of the T5 exception.
+At n = 4, S4 = "100111" has two score-2 vertices, 1 and 2. The only Hamilton path ending at vertex 2 is 3 → 0 → 1 → 2, and it is blue; vertex 1 has the black path (2, 3, 0, 1). The failing instances are vertex 2 (role sink) and vertex 3 (role source). This is the even analogue of the T5 exception.

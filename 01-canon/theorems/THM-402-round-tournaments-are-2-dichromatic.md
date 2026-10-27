@@ -59,5 +59,14 @@ sporadics alike. Therefore:
 transitive `χ=1`, 424 with `χ=2`, **0 with `χ≥3`**) and a sample on `m=7` (147 round, all
 `χ≤2`) — exactly matching the theorem.
 
+**Correction (2026-10-27, mac-mini-2026-10-27-slab; found by the THM-4823 audit).**
+- **What the script tests.** Its `is_round` checks only the out-neighbourhoods, so it tests W4-freeness, not local
+  transitivity. The 544 tournaments at `m=5` are the W4-free labelled tournaments, W_lab(5) = 544. The round (locally
+  transitive) ones number 2^(m−1)(m−1)! = 384.
+- **The theorem is unaffected.** It also holds on the larger W4-free set. By THM-4823 (C) a W4-free tournament is
+  L ⇒ TT_j, with L locally transitive, and appending the transitive tail to either colour class of L keeps both classes
+  transitive. So the verification checks a superset of the theorem's hypothesis, and its conclusion χ ≤ 2 still holds
+  there.
+
 **Artifacts:** `04-computation/lrc_round_2dichromatic_s592.py` (+`.out`). Builds on
 HYP-2133 (LRC ⟹ round), THM-401 (additive interval). New: **HYP-2134**.

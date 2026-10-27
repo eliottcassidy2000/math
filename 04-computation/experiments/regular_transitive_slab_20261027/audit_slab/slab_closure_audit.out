@@ -1,0 +1,29 @@
+# slab_closure_audit: own canonical form, forward R-descending closure from TT
+n=5: classes 12; slab classes 10; R-descending moves explored 10
+   (0,3): 1 / 1 (0, 0, 0)
+   (1,2): 5 / 1 (3, 1, 0)
+   (2,1): 3 / 3 (0, 0, 0)
+   (3,0): 1 / 1 (0, 0, 0)
+  geodesic classes in total: 6
+n=7: classes 456; slab classes 389; R-descending moves explored 5640
+   (0,6): 1 / 1 (0, 0, 0)
+   (1,5): 25 / 1 (17, 7, 0)
+   (2,4): 101 / 17 (33, 51, 0)
+   (3,3): 162 / 133 (19, 9, 1)
+   (4,2): 82 / 82 (0, 0, 0)
+   (5,1): 15 / 15 (0, 0, 0)
+   (6,0): 3 / 3 (0, 0, 0)
+  geodesic classes in total: 252
+n=9: classes 191536; slab classes 165342; R-descending moves explored 60056967
+   (0,10): 1 / 1 (0, 0, 0)
+   (1,9): 113 / 1 (81, 31, 0)
+   (2,8): 1770 / 82 (747, 941, 0)
+   (3,7): 10525 / 5424 (2496, 2441, 164)
+   (4,6): 30123 / 26678 (3438, 7, 0)
+   (5,5): 49881 / 47666 (2215, 0, 0)
+   (6,4): 45989 / 45484 (505, 0, 0)
+   (7,3): 21489 / 21489 (0, 0, 0)
+   (8,2): 4979 / 4979 (0, 0, 0)
+   (9,1): 457 / 457 (0, 0, 0)
+   (10,0): 15 / 15 (0, 0, 0)
+  geodesic classes in total: 152276
