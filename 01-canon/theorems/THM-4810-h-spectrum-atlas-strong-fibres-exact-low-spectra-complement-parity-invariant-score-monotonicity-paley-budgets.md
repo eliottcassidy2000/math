@@ -6,7 +6,7 @@ status: >
   permutations; totals 2, 4, 12, 56, 456, 6,880 and strong 1, 1, 6, 35, 353, 6,008 agree with the known sequences;
   the spectra agree with THM-1370 / S152 where those are recorded) and h_spectrum_summary_20261027.py; (B)
   strong_low_spectrum_augment_20261027.cpp (brute-force canonical forms at orders 7 and 8 reproduce 456 / 353 and 6,008);
-  (D) complement_moves_bfs_20261027.cpp; (E) paley_exception_budgets_20261027.cpp (subset DP for f, 2 GB at q = 31;
+  (D) complement_moves_bfs_20261027.cpp and complement_moves_bfs_n8_20261027.cpp (order 8: all 2^28 states, connected, eccentricity 17); (E) paley_exception_budgets_20261027.cpp (subset DP for f, 2 GB at q = 31;
   brute force over q! orders for b, q <= 11) and paley11_two_moves_20261027.cpp (exact depth-one and depth-two censuses).
   PROVED: (C), elementary (section 4 of the note).
   CITED: Moon 1966 (every strong tournament on n >= 4 vertices has a vertex whose deletion leaves a strong tournament;
