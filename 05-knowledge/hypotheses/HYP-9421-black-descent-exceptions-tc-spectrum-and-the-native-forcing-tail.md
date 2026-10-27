@@ -1,7 +1,7 @@
 ---
 id: HYP-9421
 title: "After THM-4811-4813: (1) the strong tournaments without a black descent are exactly C3, R5 and the doubled-stack family E(M; Z); (2) the black distance to the non-strong locus never exceeds lambda + 1 (outside C3, R5); (3) the presentation-count spectrum: every odd v other than 7 and 21 is tc(T) for some tournament on at most 10 vertices, for v <= 2001 (PRE-REGISTERED); (4) the native ROOT forcing of a Collatz orbit is a tail property: sup F(s) over primitive seeds s < 10^8 is below 0.1127503 (PRE-REGISTERED); (5) strong presentation fibres are finite with order O(log^2 v), and the black-core connectivity reduction"
-status: "OPEN (1), (2), (5) second clause; PRE-REGISTERED (3), (4) before the runs (this commit); (5) first clause PROVED in THM-4812 (f)"
+status: "OPEN (1), (2), (5) second clause; (3), (4) PRE-REGISTERED (commit 8ab6b3e358) and CONFIRMED; (5) first clause PROVED in THM-4812 (f)"
 session: mac-mini-2026-10-27-potentials
 source: 05-knowledge/results/dipole_calculus_black_distance_tc_gaps_collatz_numerator_20261027.md
 related:
@@ -35,6 +35,12 @@ THM-4812 proves that `tc` never takes the values 7 and 21. **Prediction:** for e
 concerns products of strong values). Test: a sweep of all classes of orders 1-10 (`gentourng`), `tc = H/|Aut|` by
 Held-Karp and nauty. Refutation: any odd `v <= 2001`, `v` not 7 or 21, missing.
 
+**Outcome (CONFIRMED, `tc_spectrum_summary.out`).** Over all 9,733,056 + 191,536 + ... classes of orders 1-10 the
+attained odd values `<= 6001` are exactly the odd numbers other than 7 and 21 (no even value occurs). So, with THM-4812,
+the presentation spectrum below 6002 is exactly `{odd} \ {7, 21}`. The `tc = 1` counts by order, `1, 1, 2, 3, 4, 6, 9,
+13, 19, 28`, are the `K1`/`C3`-stack counts (THM-4741; A000930), and the `tc = 3` counts `1, 2, 3, 6, 11, 18` (orders
+5-10) are the one-`R5` stacks of HYP-9352 (1).
+
 ## (4) The forcing tail (PRE-REGISTERED)
 
 For a primitive seed `s` let `F(s)` be the total native price `sum lambda` along its compressed orbit to 1 (THM-4813 (A)).
@@ -42,6 +48,9 @@ Below `2 10^6` the maximum is `0.112749293418` (at `s = 1056939`), shared to man
 tail. **Prediction:** `max F(s) < 0.1127503` over every primitive `s < 10^8`, i.e. the excess over the small-seed maximum
 stays below `10^-6`, because the price of a step at numerator `X` is `2^a/(6X + 2^a)`. Refutation: any `s < 10^8` with
 `F(s) >= 0.1127503`.
+
+**Outcome (CONFIRMED, `forcing_tail_1e8.out`).** `max F(s) = 0.112749570730` at `s = 78027147` (longest native orbit
+356 edges), `2.8 10^-7` above the small-seed maximum.
 
 ## (5) Fibres and connectivity
 
