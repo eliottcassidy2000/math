@@ -1,0 +1,473 @@
+{
+  "arithmetic": {
+    "convolution_range": 10000,
+    "eleven_powers": {
+      "11": [
+        -1,
+        -1
+      ],
+      "121": [
+        0,
+        1
+      ],
+      "1331": [
+        0,
+        -1
+      ]
+    },
+    "factor_cross_checks": 10000,
+    "hostile_H_factorization": {
+      "3": 6,
+      "5": 1,
+      "127": 1
+    },
+    "multiplication_pairs": 10000,
+    "summatory_range": 2000
+  },
+  "exclusion": {
+    "bank_mu": [
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "bank_numbers": [
+      1,
+      2,
+      3,
+      6,
+      11,
+      22,
+      33,
+      66
+    ],
+    "correlation_controls": [
+      {
+        "after_full_multiplier": [
+          "-1/4",
+          "0"
+        ],
+        "equal_marginal_order": 1,
+        "primes": 3
+      },
+      {
+        "after_full_multiplier": [
+          "1/8",
+          "0"
+        ],
+        "equal_marginal_order": 2,
+        "primes": 4
+      },
+      {
+        "after_full_multiplier": [
+          "-1/16",
+          "0"
+        ],
+        "equal_marginal_order": 3,
+        "primes": 5
+      },
+      {
+        "after_full_multiplier": [
+          "1/32",
+          "0"
+        ],
+        "equal_marginal_order": 4,
+        "primes": 6
+      },
+      {
+        "after_full_multiplier": [
+          "-1/64",
+          "0"
+        ],
+        "equal_marginal_order": 5,
+        "primes": 7
+      }
+    ],
+    "hostile": {
+      "mu_outputs": [
+        0,
+        -1
+      ],
+      "multiplier": 3,
+      "same_mu_lambda": [
+        1,
+        1
+      ],
+      "states": [
+        6,
+        22
+      ]
+    },
+    "tensor_controls": [
+      {
+        "joint_mu_lambda_states": 4,
+        "joint_output_linear_rank": 3,
+        "lambda_rank": 1,
+        "live_states": 2,
+        "mu_rank": 2,
+        "mu_total_states": 3,
+        "primes": 1
+      },
+      {
+        "joint_mu_lambda_states": 6,
+        "joint_output_linear_rank": 5,
+        "lambda_rank": 1,
+        "live_states": 4,
+        "mu_rank": 4,
+        "mu_total_states": 5,
+        "primes": 2
+      },
+      {
+        "joint_mu_lambda_states": 10,
+        "joint_output_linear_rank": 9,
+        "lambda_rank": 1,
+        "live_states": 8,
+        "mu_rank": 8,
+        "mu_total_states": 9,
+        "primes": 3
+      },
+      {
+        "joint_mu_lambda_states": 18,
+        "joint_output_linear_rank": 17,
+        "lambda_rank": 1,
+        "live_states": 16,
+        "mu_rank": 16,
+        "mu_total_states": 17,
+        "primes": 4
+      },
+      {
+        "joint_mu_lambda_states": 34,
+        "joint_output_linear_rank": 33,
+        "lambda_rank": 1,
+        "live_states": 32,
+        "mu_rank": 32,
+        "mu_total_states": 33,
+        "primes": 5
+      },
+      {
+        "joint_mu_lambda_states": 66,
+        "joint_output_linear_rank": 65,
+        "lambda_rank": 1,
+        "live_states": 64,
+        "mu_rank": 64,
+        "mu_total_states": 65,
+        "primes": 6
+      }
+    ]
+  },
+  "extra": {
+    "affine_hostile": {
+      "odd_inputs": [
+        3,
+        17
+      ],
+      "output_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "outputs": [
+        10,
+        52
+      ],
+      "same_pair": [
+        -1,
+        -1
+      ]
+    },
+    "one_shot_projectors": [
+      {
+        "Q": 6,
+        "mobius_sum": "1/72",
+        "nonzero_overlap": "1/72"
+      },
+      {
+        "Q": 30,
+        "mobius_sum": "-1/1800",
+        "nonzero_overlap": "1/1800"
+      },
+      {
+        "Q": 66,
+        "mobius_sum": "-1/8712",
+        "nonzero_overlap": "1/8712"
+      },
+      {
+        "Q": 1001,
+        "mobius_sum": "-1/2004002",
+        "nonzero_overlap": "1/2004002"
+      }
+    ],
+    "signed_collatz_cycles": [
+      {
+        "halvings": 2,
+        "odd_steps": 1,
+        "period": 3,
+        "root": 1,
+        "word": [
+          1,
+          4,
+          2
+        ]
+      },
+      {
+        "halvings": 3,
+        "odd_steps": 2,
+        "period": 5,
+        "root": -5,
+        "word": [
+          -5,
+          -14,
+          -7,
+          -20,
+          -10
+        ]
+      },
+      {
+        "halvings": 11,
+        "odd_steps": 7,
+        "period": 18,
+        "root": -17,
+        "word": [
+          -17,
+          -50,
+          -25,
+          -74,
+          -37,
+          -110,
+          -55,
+          -164,
+          -82,
+          -41,
+          -122,
+          -61,
+          -182,
+          -91,
+          -272,
+          -136,
+          -68,
+          -34
+        ]
+      },
+      {
+        "halvings": 1,
+        "odd_steps": 1,
+        "period": 2,
+        "root": -1,
+        "word": [
+          -1,
+          -2
+        ]
+      }
+    ]
+  },
+  "fields": {
+    "Phi11_binary_mask": 2047,
+    "Phi23_binary_factors": [
+      2787,
+      3189
+    ],
+    "degree121_primitive_orbits": "21970710674130840874443091905460224",
+    "doubling_clocks": [
+      {
+        "doubling_invariant_tournaments": 0,
+        "ord_2": 10,
+        "prime": 11
+      },
+      {
+        "doubling_invariant_tournaments": 2,
+        "ord_2": 11,
+        "prime": 23
+      },
+      {
+        "doubling_invariant_tournaments": 16,
+        "ord_2": 11,
+        "prime": 89
+      }
+    ],
+    "lambda_wrong_degree121": "2658455991569831745807614120560687106/121",
+    "primitive_necklaces": [
+      {
+        "n": 1,
+        "primitive_orbits": 2
+      },
+      {
+        "n": 2,
+        "primitive_orbits": 1
+      },
+      {
+        "n": 3,
+        "primitive_orbits": 2
+      },
+      {
+        "n": 4,
+        "primitive_orbits": 3
+      },
+      {
+        "n": 5,
+        "primitive_orbits": 6
+      },
+      {
+        "n": 6,
+        "primitive_orbits": 9
+      },
+      {
+        "n": 7,
+        "primitive_orbits": 18
+      },
+      {
+        "n": 8,
+        "primitive_orbits": 30
+      },
+      {
+        "n": 9,
+        "primitive_orbits": 56
+      },
+      {
+        "n": 10,
+        "primitive_orbits": 99
+      },
+      {
+        "n": 11,
+        "primitive_orbits": 186
+      },
+      {
+        "n": 12,
+        "primitive_orbits": 335
+      }
+    ]
+  },
+  "geometry": {
+    "H11_mask_downward": 12,
+    "H11_out_rows": [
+      6,
+      28,
+      24,
+      17,
+      1
+    ],
+    "bracket_escape_pairs": [
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        11
+      ]
+    ],
+    "joins": [
+      {
+        "H": 9,
+        "join": "C3+C3",
+        "mu_lambda": [
+          0,
+          1
+        ],
+        "n": 6
+      },
+      {
+        "H": 33,
+        "join": "C3+H11",
+        "mu_lambda": [
+          1,
+          1
+        ],
+        "n": 8
+      },
+      {
+        "H": 121,
+        "join": "H11+H11",
+        "mu_lambda": [
+          0,
+          1
+        ],
+        "n": 10
+      }
+    ],
+    "prime_search_bound": 100000
+  },
+  "series": {
+    "degree": 160,
+    "eta_divided_by_q_prefix": [
+      1,
+      -2,
+      -1,
+      2,
+      1,
+      2,
+      -2,
+      0,
+      -2,
+      -2,
+      1,
+      -2
+    ],
+    "lambda_product_prefix": [
+      1,
+      -1,
+      1,
+      0,
+      -1,
+      2,
+      -2,
+      2,
+      0,
+      -2,
+      3,
+      -2,
+      1,
+      2,
+      -3,
+      3,
+      -2
+    ],
+    "mu_product_prefix": [
+      1,
+      -1,
+      1,
+      0,
+      0,
+      1,
+      -1,
+      2,
+      -1,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      2
+    ],
+    "wrong_lambda_inverse": {
+      "b121": "486/121",
+      "b4": "5/2"
+    }
+  }
+}

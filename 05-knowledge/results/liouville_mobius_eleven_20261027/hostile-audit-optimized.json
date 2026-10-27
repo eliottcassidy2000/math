@@ -1,0 +1,19 @@
+{
+  "all_H_bins_arithmetic_audited": true,
+  "independent_partner_counts": 16,
+  "independent_source_counts": 2,
+  "results": [
+    {
+      "distinct_H_bins": 4796,
+      "mean_lambda": "-41/5715",
+      "mean_mu": "-4/635",
+      "word": "000"
+    },
+    {
+      "distinct_H_bins": 13945,
+      "mean_lambda": "-49/17145",
+      "mean_mu": "11/17145",
+      "word": "001"
+    }
+  ]
+}

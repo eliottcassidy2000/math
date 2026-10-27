@@ -1,3 +1,19 @@
+> **HISTORICAL STATUS CORRECTION — 2026-10-27.** Section III's claim that
+> every odd Hamilton-path count except7,21 is already proved is unsupported.
+> [HYP-9029 / strong-interval-tiling-law](../05-knowledge/hypotheses/HYP-9029-strong-interval-tiling-law.md)
+> keeps all-order coverage **OPEN**; proving two forbidden values does not prove
+> no further gaps. No counterexample to that coverage conjecture is claimed.
+> A multiplicative realizability set is not a numerical semigroup in the
+> standard additive sense, so the stated genus/Frobenius terminology is not
+> justified by Moon's join law. Also Rédei's H mod2=1 is not Liouville's
+> (-1)^Omega(H): C3 has H3 and Liouville sign-1, while C3->C3 has H9 and sign+1.
+> [The new duality packet](../05-knowledge/results/liouville_mobius_eleven_20261027/README.md)
+> gives the precise guarded multiplicative connection. Section IV's all-order
+> binary cut/cycle splitting also inherits the already corrected error:
+> see the [clock/even-graph audit](../05-knowledge/results/clock_even_guarded_composition_20261026/FOURIER.md).
+> This warning repairs those demonstrated inferences; it is not a full audit
+> of the BSD/Hodge discussion. Original text is retained below as provenance.
+
 # The Self-Dual Middle: where parity lives (BSD, Hodge, RH, and the tournament)
 
 **Source:** mac-mini-2026-06-11-S2. Dispatch: merge Birch–Swinnerton-Dyer and Hodge

@@ -1,0 +1,132 @@
+{
+  "base_commit": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+  "repository_sources": [
+    {
+      "path": "05-knowledge/results/procgen_numerology_20260923_odd_square_brackets.md",
+      "git_blob": "dfbb1daece299c28ef5af7f4b7aff2395f69e910",
+      "sha256_lf": "6a9b8fca2422ccd91d22ddb04eeab43b5030ce8aa9e0df6bdbb3be2e2f30bf22",
+      "read_scope": "Sections 1-2: exact bracket and all-prime exception proof; other empirical claims not inherited."
+    },
+    {
+      "path": "07-reflections/euler-product-ghosts-and-zeta-side-cancellation-gates.md",
+      "git_blob": "f28783655087f9ab61d95ec976092887eb94e0ef",
+      "sha256_lf": "561f575617cfcd310a1c83d068c59f3fdcb9699fbdf3c41ed09625bb8573d864",
+      "read_scope": "Definitions and exponent/ghost/coefficient distinction; provenance, not current analytic truth."
+    },
+    {
+      "path": "05-knowledge/results/eta11_lossless_coordinates_20261005.md",
+      "git_blob": "503d22e07975067b203e46b6b2000054c22af4bf",
+      "sha256_lf": "b00824e870718973b56c29203bed9293f23765ede315b9220c06de0e7d8e400c",
+      "read_scope": "Sections 1-3 and opening seeds of section4: formal Euler inverse, cited modular factors, finite geometry, type boundaries."
+    },
+    {
+      "path": "05-knowledge/results/collatz_golden_carriers_20261004.md",
+      "git_blob": "07e3299f0830db061f4b338f980197ebfb115609",
+      "sha256_lf": "0a7757c99638fc9b60ad5f873040f48180aec082066ec80e218406fd09c73c96",
+      "read_scope": "Section 3: known signed cycle words and separate golden carrier; finite cycles rerun."
+    },
+    {
+      "path": "01-canon/theorems/THM-2318-one-shot-three-prime-mobius-amplifier.md",
+      "git_blob": "b0c9575a2f586237d7d5cd37ca31d57a290d6ed0",
+      "sha256_lf": "b2c555b738962d76b2417b369e028b990a55c6a1ce0bf287cfc8006490d475b2",
+      "read_scope": "Status, definitions, corner assumption, unit selector, frequency bound and limitations; ell=11 specialization conditional on the stated corner."
+    },
+    {
+      "path": "05-knowledge/results/squarefree_cycle_inventory_20261019/SQUAREFREE_CYCLE_BRIDGES.md",
+      "git_blob": "56ca933de568bf3e4e0eb78654403e700fec1903",
+      "sha256_lf": "691afd4916ebf7f0baa42279c20f2e6d6fd24c06588c4cd78f4818a75f504ddb",
+      "read_scope": "SQ1-SQ2 and algebra type warnings; reuse mechanism, no novelty claim."
+    },
+    {
+      "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-vitali/REPORT.md",
+      "git_blob": "27dfe5b257be508916c342b919e4738c2d03f1c5",
+      "sha256_lf": "da137bfa8ad50378a29f963b87e7b7950b8878c4cfea79590c06783c0d4d4792",
+      "read_scope": "A1-A3 native Boolean guard realization and rank, named/unnamed operation boundary."
+    },
+    {
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md",
+      "git_blob": "914b5f0073689f1815f39f3aa9e50ba84082cef1",
+      "sha256_lf": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5",
+      "read_scope": "F1-F3 common C3 fibre, sharp4p threshold and81/27 control, including cited decomposition dependency."
+    },
+    {
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/THEORY.md",
+      "git_blob": "1e1f8c3021fdeb6afd6f44fe719ebf13978f9f92",
+      "sha256_lf": "a62e9aeb6fb2000c547d81b1917869333fe570f30bbf9d067d0ee9e3885c5168",
+      "read_scope": "Actual counted path operator, continuation carrier programme and old-source boundaries."
+    },
+    {
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/FOURIER.md",
+      "git_blob": "501c0588127ebfa4070dc4b85fa9f6766156806b",
+      "sha256_lf": "d9a19db74e95daca22b70efe195df44749d1a8d94e3c50453780b3fe2e47722b",
+      "read_scope": "Previously corrected cut/cycle and score interpretation; not rerun here."
+    },
+    {
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/hostile.cpp",
+      "git_blob": "aa939eeaf7451e5c5f721dac6e59a50f4369947e",
+      "sha256_lf": "3e15b748c76bf8324618cb6038c9b7380e23542ca8fe650885174f1f07cc0cf4",
+      "read_scope": "Direct producer lineage for full twelve-vertex path/presentation enumeration."
+    },
+    {
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/hostile.json",
+      "git_blob": "7359e97093cb7700ead02d87d681c0394e03f300",
+      "sha256_lf": "69cb01f10a47bbe24888ff4dfe3366441278aeeac04461069966cf99f2f86129",
+      "read_scope": "Existing second-response controls; full sums reproduced in the extended producer."
+    },
+    {
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/audit_hostile.py",
+      "git_blob": "210bcdfda5359f1a93944959079d983bddfaea2a",
+      "sha256_lf": "41270ecde77004d48933a6299973a01a0fa6594604e5736fbc06280b874ead64",
+      "read_scope": "Recursive source/partner count method inherited and extended with independent linear arithmetic sieve."
+    },
+    {
+      "path": "05-knowledge/results/unnamed_carrier_dissection_20261026/CONNECTIONS.md",
+      "git_blob": "acb4e72ee3d4117e0e3269cbfa8d2066b33d7a44",
+      "sha256_lf": "0aca4b20279defbb19a793823cc8aca9f1c3fe72b018a0acdd1314d1eaa6c9c5",
+      "read_scope": "Prior finite-field,4p and44/5 type boundaries; no transfer of dissection claims."
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-9029-strong-interval-tiling-law.md",
+      "git_blob": "ce71db7b4526d3799989d5902448189ec6ba1e57",
+      "sha256_lf": "53e99d2dac64795ce25baea1615455e104cdb5ea4bff9ad830a1d3079ce969c2",
+      "read_scope": "Current OPEN coverage status and finite prefix, authoritative over June reflection."
+    },
+    {
+      "path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md",
+      "git_blob": "f51bec36bc386296862a21440eaedf7fab806e2a",
+      "sha256_lf": "0bfeab69fcb2eb1a38e46f063781d66f47a17e592eb4d6abf50312b233141216",
+      "read_scope": "Incoming status/metadata checked for spectrum scope; detailed new computations not inherited."
+    },
+    {
+      "path": "07-reflections/the-self-dual-middle-where-parity-lives.md",
+      "git_blob": "b244aae5a0ee3115e00faccac2f8d9648caf1d3b",
+      "sha256_lf": "32a9d3846201ba3185d45bd1f1e92e896fa3530e23bc296971f3ab6de17e26cb",
+      "read_scope": "Historical sections II-IV: scoped correction of coverage, parity identification and cut/cycle split; no wholesale BSD/Hodge audit."
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256_lf": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "read_scope": "Mathematical session protocol and validity gate."
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "sha256_lf": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "read_scope": "Targeted analytic/tournament literature routes before external claims."
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://dlmf.nist.gov/27.4",
+      "scope": "Classical Dirichlet-series formulas 27.4.5,7,8; no priority claim.",
+      "access_date": "2026-10-27"
+    },
+    {
+      "url": "https://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/11/2/a/a/",
+      "scope": "Level11 weight2 label and displayed q-expansion; not a finite-check proof of the infinite eta identity.",
+      "access_date": "2026-10-27"
+    }
+  ],
+  "status_policy": "Local proofs are PROVED within explicit operation alphabets; finite checks have explicit universes; inherited classical and repo claims retain cited scope."
+}
