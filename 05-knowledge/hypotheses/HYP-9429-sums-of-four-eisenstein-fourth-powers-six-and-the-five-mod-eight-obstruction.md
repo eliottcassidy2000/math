@@ -66,3 +66,43 @@ on the B = 20 window and on 22 and 38, which share 6's residue class mod 16):*
    - **What it tests.** The log-growth reading predicts that most misses fill in as B grows. A hidden global
      obstruction predicts that none do.
    - **Falsifier.** Zero, one or two of the eight acquire a representation.
+
+**Result of (3): REFUTED.** Mode `all` with bases ≤ 120 (421,704,361 pair sums, 102 s) represents only 2 of the 8:
+- 102 = (113 + 99ω)⁴ + (51 − 41ω)⁴ + (104 + 31ω)⁴ + (106 + 13ω)⁴;
+- 186 = (37 − 44ω)⁴ + (16 + 40ω)⁴ + (54 + 36ω)⁴ + (77 + 14ω)⁴.
+
+54, 60, 75, 78, 124 and 140 remain unrepresented, and so does 6. The misses persist longer than the rough log-growth
+rate behind (3) assumed. Neither reading is settled: a slower fill-in and a hidden global (non-congruence) obstruction
+both remain possible.
+
+**Post-hoc check (not pre-registered;
+`04-computation/experiments/eisenstein_fourth_power_obstructions_20261027.py`).** The 2-adic × 3-adic local densities
+were computed exactly by four-fold convolution modulo 128 and 243.
+- **Stability.** By Hensel's lemma the densities are stable from 2⁵ for n ≢ 0 (mod 16) and from 3³ for n ≢ 0 (mod 9);
+  both are checked on 1..200. For the misses they are printed at every modulus. 54 = 2·27 settles from 3⁴.
+- **The misses.** 6 of the 7 persistent misses have below-median density (the median over n ≢ 5 (mod 8), n ≤ 200, is
+  2.667). Their densities and ranks among 175 (ties broken by n) are:
+
+  | n | density | rank |
+  |---|---|---|
+  | 124 | 0.444 | 11 |
+  | 140 | 0.444 | 12 |
+  | 60 | 0.593 | 19 |
+  | 6 | 1.778 | 42 |
+  | 78 | 1.778 | 50 |
+  | 75 | 2.370 | 66 |
+  | 54 | 3.556 | 109 |
+
+  The two that filled in rank 53 (102) and 117 (186).
+- **Why 124 and 140 are low.** n ≡ 4 (mod 8) forces all four bases ≡ 1 (mod 2), which gives the lowest density class
+  (0.444).
+- **But low density does not decide it.** Every other member of that class up to 200 is represented: 4, 20, 28, 44,
+  52, 68, 76, 92, 100, 116, 148, 164, 172, 188, 196.
+
+So low local density raises the chance of a miss, as the heuristic says, but does not determine it. The status of the
+seven is OPEN.
+
+**Status after the runs.** (1) CONFIRMED, (2) REFUTED, (3) REFUTED.
+- **Open question.** Are 6, 54, 60, 75, 78, 124, 140 sums of four fourth powers of Eisenstein integers at all?
+- **Settling it.** A representation settles each one. An integral Brauer–Manin computation, or another global
+  argument, would be needed to rule one out.
