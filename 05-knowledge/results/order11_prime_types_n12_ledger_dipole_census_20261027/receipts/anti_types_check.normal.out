@@ -1,0 +1,11 @@
+2 admissible: [[2]] law holds: True
+3 admissible: [[2, 1]] law holds: True
+4 admissible: [[2, 2]] law holds: True
+5 admissible: [[2, 2, 1]] law holds: True
+6 admissible: [[6], [2, 2, 2]] law holds: True
+7 admissible: [[6, 1], [2, 2, 2, 1]] law holds: True
+8 admissible: [[6, 2], [2, 2, 2, 2]] law holds: True
+9 admissible: [[6, 2, 1], [2, 2, 2, 2, 1]] law holds: True
+10 admissible: [[10], [6, 2, 2], [2, 2, 2, 2, 2]] law holds: True
+11 admissible: [[10, 1], [6, 2, 2, 1], [2, 2, 2, 2, 2, 1]] law holds: True
+12 admissible: [[10, 2], [6, 6], [6, 2, 2, 2], [2, 2, 2, 2, 2, 2]] law holds: True

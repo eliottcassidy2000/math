@@ -1,0 +1,4 @@
+start=tt reachable distance histogram: 0:1 1:1 2:30 3:1364 4:35263 5:196755 6:415382 7:521492 8:465574 9:292614 10:126214 11:35870 12:6112 13:480 unreachable:0
+distance to nearest transitive tournament = 0
+labelled distance to TT (i<j order) = 0, to its converse = 7
+transitive labellings at distance 6: 367, at distance 7: 766 (of 5040)

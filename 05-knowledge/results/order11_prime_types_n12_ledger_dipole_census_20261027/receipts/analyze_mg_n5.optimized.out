@@ -1,0 +1,24 @@
+n=5 classes=12 blue moves=32 blue non-loops=32
+both colours:
+  dist to TT: potential L: exact on 6/12, failures 6, unreachable 0
+  dist to non-strong: potential lambda: exact on 12/12, failures 0, unreachable 0
+  dist to singleton: potential delta0: exact on 12/12, failures 0, unreachable 0
+black only:
+  dist to TT: potential L: exact on 1/12, failures 0, unreachable 11
+  dist to non-strong: potential lambda: exact on 11/12, failures 0, unreachable 1
+  dist to singleton: potential delta0: exact on 11/12, failures 0, unreachable 1
+failures to TT (both colours) by (dist, L, sc, aut, strong):
+    dist=2 bound=1 sc=0 aut=1 strong=0: 2 classes
+    dist=2 bound=1 sc=1 aut=1 strong=1: 1 classes
+    dist=3 bound=1 sc=0 aut=3 strong=0: 2 classes
+    dist=3 bound=1 sc=1 aut=3 strong=0: 1 classes
+failures to singleton (both colours):
+failures to non-strong, black only:
+failures to singleton, black only:
+max dist to TT 3  classes at max: [(1, [4, 3, 1, 1, 1], 1), (7, [2, 2, 2, 2, 2], 3), (8, [4, 2, 2, 2, 0], 1), (11, [3, 3, 3, 1, 0], 1)]
+  class 1 scores=[4, 3, 1, 1, 1] sc=0 aut=3 H=3 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 2 scores=[3, 3, 2, 2, 0] sc=0 aut=1 H=5 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1
+  class 6 scores=[3, 3, 2, 1, 1] sc=1 aut=1 H=9 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 2
+  class 8 scores=[4, 2, 2, 2, 0] sc=1 aut=3 H=3 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 10 scores=[4, 1, 2, 2, 1] sc=0 aut=1 H=5 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1
+  class 11 scores=[3, 3, 3, 1, 0] sc=0 aut=3 H=3 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3

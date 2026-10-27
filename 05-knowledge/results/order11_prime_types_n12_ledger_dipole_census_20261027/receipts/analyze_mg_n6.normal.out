@@ -1,0 +1,39 @@
+n=6 classes=56 blue moves=96 blue non-loops=88
+both colours:
+  dist to TT: potential L: exact on 23/56, failures 33, unreachable 0
+  dist to non-strong: potential lambda: exact on 56/56, failures 0, unreachable 0
+  dist to singleton: potential delta0: exact on 55/56, failures 1, unreachable 0
+black only:
+  dist to TT: potential L: exact on 1/56, failures 0, unreachable 55
+  dist to non-strong: potential lambda: exact on 56/56, failures 0, unreachable 0
+  dist to singleton: potential delta0: exact on 55/56, failures 0, unreachable 1
+failures to TT (both colours) by (dist, L, sc, aut, strong):
+    dist=2 bound=1 sc=0 aut=1 strong=0: 2 classes
+    dist=2 bound=1 sc=1 aut=1 strong=1: 1 classes
+    dist=3 bound=1 sc=0 aut=1 strong=0: 4 classes
+    dist=3 bound=1 sc=0 aut=1 strong=1: 2 classes
+    dist=3 bound=1 sc=1 aut=1 strong=0: 1 classes
+    dist=3 bound=2 sc=0 aut=1 strong=0: 4 classes
+    dist=3 bound=2 sc=0 aut=1 strong=1: 8 classes
+    dist=3 bound=2 sc=0 aut=3 strong=0: 2 classes
+    dist=3 bound=2 sc=1 aut=1 strong=1: 2 classes
+    dist=3 bound=2 sc=1 aut=9 strong=0: 1 classes
+    dist=4 bound=1 sc=0 aut=3 strong=0: 4 classes
+    dist=4 bound=3 sc=0 aut=5 strong=0: 2 classes
+failures to singleton (both colours):
+    dist=2 bound=1 sc=1 aut=9 strong=0: 1 classes
+failures to non-strong, black only:
+failures to singleton, black only:
+max dist to TT 4  classes at max: [(1, [5, 4, 3, 1, 1, 1], 1), (14, [5, 2, 2, 2, 2, 2], 3), (15, [5, 4, 2, 2, 2, 0], 1), (39, [3, 3, 3, 3, 3, 0], 3), (43, [5, 3, 3, 3, 1, 0], 1), (48, [4, 4, 4, 2, 1, 0], 1)]
+  class 1 scores=[5, 4, 3, 1, 1, 1] sc=0 aut=3 H=3 dist=4 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 2 scores=[4, 4, 3, 2, 2, 0] sc=0 aut=1 H=9 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1
+  class 5 scores=[4, 4, 2, 2, 2, 1] sc=0 aut=1 H=23 dist=3 L=2 L-tight moves: 6 (blue 0) geodesic moves: 8
+  class 6 scores=[4, 4, 3, 1, 2, 1] sc=0 aut=1 H=15 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 5
+  class 7 scores=[4, 4, 3, 2, 1, 1] sc=1 aut=1 H=17 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 8 scores=[5, 3, 3, 2, 2, 0] sc=1 aut=1 H=5 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1
+  class 10 scores=[5, 2, 3, 2, 2, 1] sc=0 aut=1 H=11 dist=3 L=2 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 11 scores=[5, 3, 2, 2, 2, 1] sc=0 aut=1 H=13 dist=3 L=2 L-tight moves: 0 (blue 0) geodesic moves: 5
+  class 12 scores=[5, 3, 3, 1, 2, 1] sc=0 aut=1 H=9 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 13 scores=[5, 3, 3, 2, 1, 1] sc=0 aut=1 H=9 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1
+  class 14 scores=[5, 2, 2, 2, 2, 2] sc=0 aut=5 H=15 dist=4 L=3 L-tight moves: 0 (blue 0) geodesic moves: 15
+  class 15 scores=[5, 4, 2, 2, 2, 0] sc=0 aut=3 H=3 dist=4 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3

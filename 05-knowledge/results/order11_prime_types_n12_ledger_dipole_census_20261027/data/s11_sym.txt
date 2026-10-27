@@ -1,0 +1,2 @@
+n=11 lines=1316960 strong_lines=1111416 distinct_prime_classes=270999 prime_selfconverse=259307 distinct_types=11
+prime_aut_hist: 1:258844 3:12128 5:23 11:3 55:1

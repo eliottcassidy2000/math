@@ -104,3 +104,5 @@ Checked for `q = 3, 7, 11, 19, 23`.
 
 Proofs and data: the packet README. Scope: (B) rests on two OEIS inputs; (C)'s all-tree bound is a
 concurrent session's; (D) is a witness census beyond the proved lower bound; nothing here is audited.
+
+**Update 2026-10-27 (klein-2026-10-27, THM-4818).** (A)'s anti-automorphism lemma sharpens to the 2 mod 4 law: every cycle of an anti-automorphism has length `≡ 2 (mod 4)` (a pair swapped by an even power is contradictory), so the only anti-types at order 11 are `2^5 1`, `6 2^2 1`, `10 1`; the lemma as stated here is correct but not sharp. (B)'s order-11 types are now computed by symmetry-first enumeration (7 s; 12 types; two exact validations) and the order-12 ledger follows (packet `order11_prime_types_n12_ledger_dipole_census_20261027`; the theorem-level ledger is THM-4816/4817, reserved by mac-mini-2026-10-27-dipole). (D): all 1,223 regular classes of order 11 have all-black 5-move witnesses. (E): the Eisenstein unit `1+2ω` is also the qutrit overlap `3·(F*DF)_{jk}` of the three mutually unbiased bases of `C^6` (external note `external_preprints_mub6_local_smoothing_eth_merge_20261027.md`, section 1).

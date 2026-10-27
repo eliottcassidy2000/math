@@ -1,0 +1,64 @@
+class 0 scores=[5, 4, 3, 2, 1, 0] sc=1 aut=1 dist=0 L=0 LPbound=0 (lp_even=0.000, lp_odd=9.000) EXACT
+class 1 scores=[5, 4, 3, 1, 1, 1] sc=0 aut=3 dist=4 L=1 LPbound=2 (lp_even=2.000, lp_odd=9.000) GAP
+class 2 scores=[4, 4, 3, 2, 2, 0] sc=0 aut=1 dist=2 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) EXACT
+class 3 scores=[3, 4, 3, 2, 2, 1] sc=0 aut=1 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 4 scores=[4, 3, 3, 2, 2, 1] sc=1 aut=1 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 5 scores=[4, 4, 2, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 6 scores=[4, 4, 3, 1, 2, 1] sc=0 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 7 scores=[4, 4, 3, 2, 1, 1] sc=1 aut=1 dist=2 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) EXACT
+class 8 scores=[5, 3, 3, 2, 2, 0] sc=1 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 9 scores=[4, 3, 3, 2, 2, 1] sc=1 aut=1 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 10 scores=[5, 2, 3, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 11 scores=[5, 3, 2, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 12 scores=[5, 3, 3, 1, 2, 1] sc=0 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 13 scores=[5, 3, 3, 2, 1, 1] sc=0 aut=1 dist=2 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) EXACT
+class 14 scores=[5, 2, 2, 2, 2, 2] sc=0 aut=5 dist=4 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) GAP
+class 15 scores=[5, 4, 2, 2, 2, 0] sc=0 aut=3 dist=4 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 16 scores=[4, 4, 2, 2, 2, 1] sc=0 aut=3 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 17 scores=[5, 3, 2, 2, 2, 1] sc=0 aut=3 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 18 scores=[5, 4, 1, 2, 2, 1] sc=0 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 19 scores=[4, 4, 3, 3, 1, 0] sc=0 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 20 scores=[3, 4, 3, 3, 2, 0] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 21 scores=[2, 4, 3, 3, 2, 1] sc=0 aut=1 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 22 scores=[3, 3, 3, 3, 2, 1] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 23 scores=[3, 4, 2, 3, 2, 1] sc=1 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 24 scores=[3, 4, 3, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 25 scores=[3, 4, 3, 3, 1, 1] sc=0 aut=1 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 26 scores=[2, 4, 2, 3, 2, 2] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 27 scores=[3, 3, 2, 3, 2, 2] sc=1 aut=3 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 28 scores=[2, 4, 3, 2, 2, 2] sc=0 aut=3 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 29 scores=[3, 3, 3, 2, 2, 2] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 30 scores=[4, 3, 3, 3, 2, 0] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 31 scores=[3, 3, 3, 3, 2, 1] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 32 scores=[4, 2, 3, 3, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 33 scores=[4, 3, 2, 3, 2, 1] sc=1 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 34 scores=[4, 3, 3, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 35 scores=[4, 3, 3, 3, 1, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 36 scores=[3, 3, 2, 3, 2, 2] sc=1 aut=3 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 37 scores=[4, 2, 2, 3, 2, 2] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 38 scores=[4, 2, 3, 2, 2, 2] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 39 scores=[3, 3, 3, 3, 3, 0] sc=0 aut=5 dist=4 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) GAP
+class 40 scores=[2, 3, 3, 3, 3, 1] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 41 scores=[2, 2, 3, 3, 3, 2] sc=1 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 42 scores=[2, 3, 2, 3, 3, 2] sc=0 aut=1 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 43 scores=[5, 3, 3, 3, 1, 0] sc=0 aut=3 dist=4 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 44 scores=[4, 3, 3, 3, 2, 0] sc=0 aut=3 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 45 scores=[3, 3, 3, 3, 2, 1] sc=0 aut=3 dist=3 L=3 LPbound=3 (lp_even=6.000, lp_odd=3.000) EXACT
+class 46 scores=[4, 2, 3, 3, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 47 scores=[4, 3, 3, 3, 1, 1] sc=0 aut=3 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 48 scores=[4, 4, 4, 2, 1, 0] sc=0 aut=3 dist=4 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 49 scores=[4, 4, 4, 1, 1, 1] sc=1 aut=9 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=9.000) GAP
+class 50 scores=[3, 4, 4, 2, 2, 0] sc=0 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+class 51 scores=[2, 4, 4, 2, 2, 1] sc=0 aut=1 dist=2 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) EXACT
+class 52 scores=[3, 3, 4, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 53 scores=[3, 4, 3, 2, 2, 1] sc=0 aut=1 dist=3 L=2 LPbound=2 (lp_even=2.000, lp_odd=7.000) GAP
+class 54 scores=[3, 4, 4, 1, 2, 1] sc=1 aut=1 dist=1 L=1 LPbound=1 (lp_even=8.000, lp_odd=1.000) EXACT
+class 55 scores=[3, 4, 4, 2, 1, 1] sc=0 aut=1 dist=3 L=1 LPbound=2 (lp_even=2.000, lp_odd=8.000) GAP
+summary (dist, LPbound, exact): count
+   (0, 0, True) 1
+   (1, 1, True) 1
+   (2, 2, True) 11
+   (3, 2, False) 24
+   (3, 3, True) 13
+   (4, 2, False) 4
+   (4, 3, False) 2

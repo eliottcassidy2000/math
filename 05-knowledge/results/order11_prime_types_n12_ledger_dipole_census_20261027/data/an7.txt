@@ -1,0 +1,58 @@
+n=7 classes=456 blue moves=780 blue non-loops=780
+both colours:
+  dist to TT: potential L: exact on 274/456, failures 182, unreachable 0
+  dist to non-strong: potential lambda: exact on 456/456, failures 0, unreachable 0
+  dist to singleton: potential delta0: exact on 453/456, failures 3, unreachable 0
+black only:
+  dist to TT: potential L: exact on 1/456, failures 0, unreachable 455
+  dist to non-strong: potential lambda: exact on 456/456, failures 0, unreachable 0
+  dist to singleton: potential delta0: exact on 453/456, failures 2, unreachable 1
+failures to TT (both colours) by (dist, L, sc, aut, strong):
+    dist=2 bound=1 sc=0 aut=1 strong=0: 2 classes
+    dist=2 bound=1 sc=1 aut=1 strong=1: 1 classes
+    dist=3 bound=1 sc=0 aut=1 strong=0: 12 classes
+    dist=3 bound=1 sc=0 aut=1 strong=1: 4 classes
+    dist=3 bound=1 sc=1 aut=1 strong=0: 2 classes
+    dist=3 bound=1 sc=1 aut=1 strong=1: 2 classes
+    dist=3 bound=2 sc=0 aut=1 strong=0: 30 classes
+    dist=3 bound=2 sc=0 aut=1 strong=1: 44 classes
+    dist=3 bound=2 sc=0 aut=3 strong=0: 8 classes
+    dist=3 bound=2 sc=0 aut=3 strong=1: 2 classes
+    dist=3 bound=2 sc=1 aut=1 strong=1: 7 classes
+    dist=3 bound=2 sc=1 aut=3 strong=1: 1 classes
+    dist=4 bound=1 sc=0 aut=1 strong=0: 2 classes
+    dist=4 bound=1 sc=0 aut=3 strong=0: 4 classes
+    dist=4 bound=1 sc=1 aut=3 strong=0: 1 classes
+    dist=4 bound=2 sc=0 aut=1 strong=0: 6 classes
+    dist=4 bound=2 sc=0 aut=1 strong=1: 4 classes
+    dist=4 bound=2 sc=0 aut=9 strong=0: 2 classes
+    dist=4 bound=2 sc=1 aut=1 strong=0: 2 classes
+    dist=4 bound=2 sc=1 aut=1 strong=1: 1 classes
+    dist=4 bound=2 sc=1 aut=3 strong=0: 1 classes
+    dist=4 bound=2 sc=1 aut=9 strong=0: 1 classes
+    dist=4 bound=3 sc=0 aut=1 strong=0: 18 classes
+    dist=4 bound=3 sc=0 aut=1 strong=1: 8 classes
+    dist=4 bound=3 sc=0 aut=3 strong=0: 8 classes
+    dist=4 bound=3 sc=0 aut=3 strong=1: 4 classes
+    dist=4 bound=3 sc=0 aut=5 strong=0: 2 classes
+    dist=4 bound=3 sc=1 aut=1 strong=1: 2 classes
+    dist=5 bound=3 sc=1 aut=5 strong=0: 1 classes
+failures to singleton (both colours):
+    dist=2 bound=1 sc=0 aut=3 strong=0: 2 classes
+    dist=2 bound=1 sc=1 aut=9 strong=0: 1 classes
+failures to non-strong, black only:
+failures to singleton, black only:
+    dist=2 bound=1 sc=0 aut=3 strong=0: 2 classes
+max dist to TT 6  classes at max: [(85, [3, 3, 3, 3, 3, 3, 3], 6), (306, [3, 3, 3, 3, 3, 3, 3], 6), (351, [3, 3, 3, 3, 3, 3, 3], 6)]
+  class 1 scores=[6, 5, 4, 3, 1, 1, 1] sc=0 aut=3 H=3 dist=4 L=1 L-tight moves: 0 (blue 0) geodesic moves: 3
+  class 2 scores=[5, 5, 4, 3, 2, 2, 0] sc=0 aut=1 H=17 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1
+  class 3 scores=[4, 5, 4, 3, 2, 2, 1] sc=0 aut=1 H=47 dist=4 L=2 L-tight moves: 0 (blue 0) geodesic moves: 46
+  class 6 scores=[5, 5, 4, 2, 2, 2, 1] sc=0 aut=1 H=41 dist=3 L=2 L-tight moves: 4 (blue 0) geodesic moves: 5
+  class 7 scores=[5, 5, 4, 3, 1, 2, 1] sc=0 aut=1 H=27 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 5
+  class 8 scores=[5, 5, 4, 3, 2, 1, 1] sc=1 aut=1 H=33 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 4
+  class 9 scores=[6, 4, 4, 3, 2, 2, 0] sc=1 aut=1 H=9 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 2
+  class 11 scores=[6, 3, 4, 3, 2, 2, 1] sc=0 aut=1 H=23 dist=4 L=2 L-tight moves: 0 (blue 0) geodesic moves: 23
+  class 12 scores=[6, 4, 3, 3, 2, 2, 1] sc=0 aut=1 H=33 dist=3 L=2 L-tight moves: 0 (blue 0) geodesic moves: 5
+  class 13 scores=[6, 4, 4, 2, 2, 2, 1] sc=0 aut=1 H=23 dist=3 L=2 L-tight moves: 0 (blue 0) geodesic moves: 5
+  class 14 scores=[6, 4, 4, 3, 1, 2, 1] sc=0 aut=1 H=15 dist=3 L=1 L-tight moves: 0 (blue 0) geodesic moves: 5
+  class 15 scores=[6, 4, 4, 3, 2, 1, 1] sc=0 aut=1 H=17 dist=2 L=1 L-tight moves: 0 (blue 0) geodesic moves: 1

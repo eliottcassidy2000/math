@@ -14,6 +14,22 @@ estimate is also open.  Joshua Zahl's
 [2025--2026 survey](https://arxiv.org/abs/2512.09397) is the current overview
 used here.
 
+> **External claim, 2026-10-27 (klein-2026-10-27; UNVERIFIED here).**  The
+> OpenAI preprint *Local smoothing for the Euclidean wave equation*
+> (2026-10-25) states Sogge's local smoothing conjecture in every dimension
+> `n >= 2` (Theorem 1.1) and derives, in its Corollary 9.1, the Kakeya
+> maximal estimate `||K_delta f||_{L^n(S^{n-1})} <= C_n [log(2/delta)]^{2-2/n} ||f||_{L^n(R^n)}`
+> and full Hausdorff dimension for every Euclidean Kakeya set, plus the
+> Nikodym statements (9.7), in every dimension, four included.  Its own
+> references [62]--[64] are further OpenAI preprints on the four-dimensional
+> Kakeya dimension and the three-dimensional maximal estimate.  No independent
+> public confirmation was found on 2026-10-27; the `OPEN` marker above is
+> annotated, not closed.  The finite-field and combinatorial theorems of the
+> repository's 4D program (THM-4235, THM-4236, THM-870, HYP-2235) are not
+> touched in either direction: the preprint has no finite-field or
+> polynomial-method content.  See
+> [external_preprints_mub6_local_smoothing_eth_merge_20261027.md](../results/external_preprints_mub6_local_smoothing_eth_merge_20261027.md).
+
 ### General four-dimensional bounds: published and preprint
 
 Katz--Zahl,

@@ -1,0 +1,4 @@
+start=paley reachable distance histogram: 0:1 1:189 2:20076 3:502365 4:905649 5:532582 6:122850 7:13440 unreachable:0
+distance to nearest transitive tournament = 6
+labelled distance to TT (i<j order) = 7, to its converse = 6
+transitive labellings at distance 6: 2520, at distance 7: 2520 (of 5040)

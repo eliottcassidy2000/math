@@ -1,0 +1,5 @@
+  class 215 scores=[5, 5, 4, 4, 1, 1, 1] comps=[4, 3] sc=0 aut=3 dist=2 delta0=1 eligible=[] EXPLAINED
+  class 390 scores=[5, 5, 5, 3, 1, 1, 1] comps=[3, 1, 3] sc=1 aut=9 dist=2 delta0=1 eligible=[] EXPLAINED
+  class 400 scores=[5, 5, 5, 1, 2, 2, 1] comps=[3, 4] sc=0 aut=3 dist=2 delta0=1 eligible=[] EXPLAINED
+n=7: singleton failures 3, explained by the condensation criterion 3, unexplained 0, criterion-fires-but-exact 0
+n=7: L-local-minima classes 110 of 456; by (sc, aut, strong): {(0, 3, 0): 18, (0, 1, 0): 70, (0, 1, 1): 8, (1, 1, 1): 3, (1, 1, 0): 4, (0, 5, 0): 2, (1, 5, 0): 1, (1, 3, 0): 2, (0, 9, 0): 2}
