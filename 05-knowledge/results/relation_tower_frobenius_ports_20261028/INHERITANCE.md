@@ -74,3 +74,16 @@ work already captures much of it. Triggers: known named domains and
 compatible maps. Counterindications: disconnected support, nontrivial
 one-sided kernels, nonnormal profile collisions, global distinctness,
 or operations that observe a discarded gauge.
+
+## Concurrent work integrated at close-out
+
+Commit08840182798686f53fda188add62a82fbb60a8ad, Session86, adds the
+aggregate universal-palette separation theorem and a separate counting
+implementation. It arrived after this packet's order-nine generation.
+We read the full note, reviewed the palette proof, ran its default
+count50/prime20 checker, and compared our ordinary and prime class counts
+at their common ranges. Its contribution is credited in README and THEORY;
+the saved receipt is [incoming_a000568.json](incoming_a000568.json).
+The earlier count-through200 record remains credited in the incoming
+note; neither our generated bank nor its new round trip claims that
+scalar counting record. No message was sent to the other session.

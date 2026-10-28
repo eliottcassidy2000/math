@@ -1,4 +1,4 @@
-"""Alternate-path checks and hostile mutations, independent of search decisions."""
+"""Alternate-path checks and hostile controls, independent of search decisions."""
 import gzip
 import hashlib
 import importlib.util

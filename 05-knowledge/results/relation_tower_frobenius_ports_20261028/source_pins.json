@@ -75,5 +75,18 @@
       "blob": "3a672ae2af35d1fb5e92b4e6f178e33a73752c09",
       "sha256": "9d669a7e7125dbc20fdfa802804bda169fa99002744fce48af334c15293b499a"
     }
-  ]
+  ],
+  "incoming": {
+    "commit": "08840182798686f53fda188add62a82fbb60a8ad",
+    "sources": [
+      {
+        "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md",
+        "sha256": "1a81b5dab907ce296244df738fd83556c2c4196c7580d259b108550cb27ecfa1"
+      },
+      {
+        "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/recreate_a000568.py",
+        "sha256": "a8d85c9bc0e355ed4bf8140f6ae23b6d2c4141aad51d1b8bf3c067f302ee564f"
+      }
+    ]
+  }
 }

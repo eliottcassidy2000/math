@@ -24,7 +24,7 @@ construction is distinct from this explicit execution cap.
 |---|---|---|
 |[fields.json](fields.json)|F4,F16,F64,F256; full alternating-form constraint spaces, all normal-orbit pairs, every three-port phase tuple; all698027 new triple relations;699788 active checks|F64 ambient32768-form exhaustion; F64/F256 full-period collisions; sharp bit-probe witnesses|
 |[prime_bank.json](prime_bank.json)|2047 masks over11 coordinate primes,4085 recursive prime certificates|Alternate verifier reconstructs factors and checks Lucas conditions; all698027 integer triple products checked as actual squares|
-|[signed.json](signed.json)|8428 signed systems: every s=+/-1 and w in[-3,3] on3-vertex path/triangle and4-vertex path/star; labels0..4|Brute-force distinct integer labelings; odd square-cycle integrality failure; exact eight graceful labelings of the5-path|
+|[signed.json](signed.json)|8428 signed systems: every s=+/-1 and w in [-3,3] on3-vertex path/triangle and4-vertex path/star; labels0..4|Brute-force distinct integer labelings; odd square-cycle integrality failure; exact eight graceful labelings of the5-path|
 |[root_switch.json](root_switch.json)|Every parent attachment orbit and every rerooting through9;6292804 active checks|No child canon/count inputs; exact Burnside check; full independent automorphism/Hamilton audits through8;81/27 hostile|
 |[audit.json](audit.json)|900180 alternate checks|Entire native metagraph tc histograms through8, all labelled tournaments/permutations through5, bank type checks,15-cell125-kernel hostile|
 
@@ -62,3 +62,19 @@ explicit n=0 return; it was fixed before the first census. This was a
 program boundary error, not a mathematical count correction. No old
 canon claim was changed in this packet. The incoming THM-4840 repairs
 at5edadbae58 were read before reuse and are preserved.
+
+Normal and optimized runs of the field, signed-label and alternate-audit
+scripts give byte-identical receipts; see [optimized_checks.json](optimized_checks.json).
+A separate optimized root-switch replay through8 matches every reported
+semantic field and the81/27 witness; execution times are excluded from
+that comparison. The order-nine run was not redundantly repeated.
+All local Markdown links resolve; [final_validation.json](final_validation.json).
+The repository's agent-facing documentation checker also passed.
+
+The concurrent Session86 default checker was replayed after its arrival
+at0884018279. It reconstructs ordinary counts through50 and the aggregate
+prime cycle index through20 (129 monomials), with independent pair-action
+and exponent checks. The [incoming receipt](incoming_a000568.json) agrees
+with our constructive class bank through9 and prime counts through8.
+It does not independently enumerate those large prime classes; the
+prime-index recovery/recomposition is explicitly a structural round trip.

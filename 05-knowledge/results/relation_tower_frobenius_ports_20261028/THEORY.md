@@ -47,7 +47,7 @@ For any subset J of this **distinct-prime** bank, multiplicativity gives
     sigma(product_(b in J) p_b) = product_(b in J)(p_b+1),
     this is a square iff XOR_(b in J) b = 0.
 
-Thus this finite bank realizes Hamming[2047,2036,3]. Its square-total
+Thus this finite bank realizes Hamming [2047,2036,3]. Its square-total
 subset count is 2^2036. Only698027 triple relations were explicitly
 enumerated; the much larger subset count follows from the proved rank.
 The first15 masks reproduce the inherited fifteen-prime bank exactly.
@@ -353,9 +353,37 @@ tree gain cannot restore them. One can instead retain the fibre itself
 or quotient by these kernels **only if** later observations are also
 kernel-invariant. Literal owner queries force them back.
 
-This15 is the order of a composite tournament; the15 in Hamming[15,11,3]
+This15 is the order of a composite tournament; the15 in Hamming [15,11,3]
 is a set of nonzero vectors in a4-dimensional space. Here they meet
 through a precise contrast in stabilizer kernels, not through an
 asserted equivalence. The 81/27 pair is the same warning at a different
 composition boundary: child-type and action data survive after cycle
 supports have forgotten them.
+
+## Incoming closure for aggregate ordinary composition
+
+At close-out, commit08840182798686f53fda188add62a82fbb60a8ad supplied
+[Session86's universal rigid-palette theorem](../session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md).
+For prime inventories of bounded arity3..K, equality of aggregate
+vertex-action cycle indices is equivalent to equality of ordinary
+inflation counts for every finite nonempty palette of distinct rigid
+transitive children. The single palette with child sizes
+1,(K+1),...,(K+1)^(K-1) already separates different indices.
+
+Its elementary mechanism is injectivity of power-sum substitution into
+K color variables (triangular by merging partition parts), followed by
+collision-free base-(K+1) encoding of their exponent vectors as sizes.
+Every digit is at most K. For tagged root multisets, tags must remain
+counted; deleting them changes the observer. We reviewed this proof and
+replayed the supplied exact computation, agreeing with all our generated
+ordinary counts through9 and prime counts through8.
+
+This answers a different minimality question from T3: universal aggregate
+ordinary substitution counts, with no request for individual class or
+stabilizer distributions. It also differs from T6's exact chart comparison
+and the named legal-move language that reconstructs a full tournament.
+Thus there are three precise levels: aggregate cycle index; relative
+port/gain data where injective; and actual joint attachment fibres and
+actions where kernels survive. The81/27 pair does not contradict the
+aggregate theorem because a single decoration's stabilizer is outside
+its promised observations.

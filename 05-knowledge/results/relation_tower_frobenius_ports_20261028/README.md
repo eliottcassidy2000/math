@@ -14,7 +14,7 @@ The new results and explicit boundaries are in [THEORY.md](THEORY.md):
 
 - **T1:** relations become objects through7 ->15 ->2047, then
   2^2036-1. The2047 stage has698027 triple relations. An explicit2047-prime
-  bank realizes Hamming[2047,2036,3]; every prime has an exact recursive
+  bank realizes Hamming [2047,2036,3]; every prime has an exact recursive
   certificate. Its2^2036 square-total subsets are a theorem, not an
   enumerated universe of that size.
 - **T2–T3:** for fixed normal Frobenius port orbits in F_(2^r), r even,
@@ -57,16 +57,16 @@ than testing only a preselected trace-form family. F64 also exhausts all
 
 ```mermaid
 flowchart LR
-  A[Arithmetic parity columns] -->|kernel words become points| B[7 to 15 to 2047]
-  C[Known field and subfield spread] -->|Frobenius| D[Unique trace form]
-  D -->|normal anchor| E[Injective relative-phase decoder]
-  E --> F[Tree transport and LCA recovery]
-  G[Five and seven chart kernels] -->|trivial one-sided kernel| F
-  H[Signed affine edge maps] --> F
-  I[Fifteen-cell kernel: 125 choices] --> J[Retain unresolved fibres]
-  K[81 versus 27] --> J
-  J --> L[Actual tournament attachment transport]
-  L -->|root-switch quotient| M[A000568 classes]
+  A [Arithmetic parity columns] -->|kernel words become points| B [7 to 15 to 2047]
+  C [Known field and subfield spread] -->|Frobenius| D [Unique trace form]
+  D -->|normal anchor| E [Injective relative-phase decoder]
+  E --> F [Tree transport and LCA recovery]
+  G [Five and seven chart kernels] -->|trivial one-sided kernel| F
+  H [Signed affine edge maps] --> F
+  I [Fifteen-cell kernel: 125 choices] --> J [Retain unresolved fibres]
+  K [81 versus 27] --> J
+  J --> L [Actual tournament attachment transport]
+  L -->|root-switch quotient| M [A000568 classes]
 ```
 
 The all-order reconstruction of A000568 from metagraph relations was
@@ -85,3 +85,16 @@ source pins and concept board; [AUDIT.md](AUDIT.md) for exact universes,
 hostiles and reproduction commands. The prime and tournament banks are
 [prime_bank.json](prime_bank.json) and
 [tournament_bank.json.gz](tournament_bank.json.gz).
+
+**Concurrent integration.** Session86's
+[ordinary-composition theorem](../session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md)
+arrived during close-out. It proves that the aggregate prime cycle index
+is the coarsest quotient for counts under every finite rigid transitive
+child palette. We reviewed its separating-palette proof and replayed its
+count reconstruction through50 and prime-index recovery/recomposition
+through20. All our class counts through9 and prime counts through8 agree.
+This supplies a precise minimal carrier for **aggregate substitution
+counts** alongside the relative-port carrier above; aligned individual
+attachments require more information. The prime-index round trip is
+structural verification, not independent discovery of the sequence.
+[Integration receipt](incoming_a000568.json).
