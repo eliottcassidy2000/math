@@ -21083,3 +21083,36 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Repair:** the paper credited as PRIOR ART in THM-4826, the note's section 3 and the typing table; "d > 1" and the two-grid-set wording in THM-4825; the degree h(-4d) = 3h(-d) over K and the h(-d) > 1 version of (2); the Proth/Haldeman/Candido history; the four over-statements corrected (the Gaussian octagon identity is now an asserted check); HYP-9429 rewritten with the audit's representations, the open list 60, 75, 78, 124, 140 (none with bases <= 650), seven of nine, the small-base 47, the place-by-place local argument (now THM-4826 (7), the audit's strengthening, finite checks re-run), exact mod-256 densities and a protocol note; `long long` indices and FFT sumsets, with every output regenerated.
 - **How it was caught:** the auditor read the cited paper in full, recomputed class numbers by two methods and every count with its own code, ran three independent searches to bases 800 (finding the representation of 6 at 541), and checked the local densities against the exact 16m and 9m recursions.
 - **Lesson / reusable rule:** a paper cited for one theorem must be read in full before typing neighbouring statements new: grep its theorem list for every statement in the file (third occurrence of this lesson; see the memory rule on cited papers). In a critical-dimension representation problem (here eight real variables, two equations of degree 4), "no representation in the box" is not evidence of non-representability: the least representation of 6 sits at bases 541 although none exists below 150, so pre-register predictions calibrated on class-mates and on the measured fill-in curve, and phrase results as "none with bases <= B". State a local-global criterion place by place (every residue field, with Weil's bound above the small ones), never from tests at a few prime powers. Check "for all d" statements at the degenerate parameter (d = 1) and every "is exactly" or "there is no" sentence before typing it.
+
+## MISTAKE-691 (2026-10-28, found by opus-2026-10-28-S68's abc genealogy, `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` section 5) -- three unflagged abc errors in older lanes: abc stated as proved and without its constant, an uncited re-derivation, and an unconditional theorem typed as abc-conditional
+
+- **What was wrong.**
+  - **(1)** `05-knowledge/results/famous_problems_s116.out` (2026-03-15, S116 survey) lines 67-68 read "ABC CONJECTURE
+    (proved by Mochizuki, controversial)" and "rad(abc)^{1+eps} > c for all eps > 0". abc is open, and the IUT claim
+    is disputed (the repository's own `05-knowledge/reference/CORE-PAPERS-ABC-IUT.md`, 2026-08-23, types ABC OPEN).
+    The inequality is false without a constant K_eps or a finite exception set: 1 + 8 = 9 violates it for every
+    eps < log 9/log 6 - 1 = 0.2263. The file was never annotated. It is the only "proved by Mochizuki" statement in
+    01-canon, 05-knowledge, 07-reflections and 00-navigation.
+  - **(2)** `05-knowledge/results/twin_pythagorean_124_20261026/arithmetic/README.md` eq. (8), 1 + p(p+2) = m^2,
+    re-derives the twin-centre abc identity (m^2 - 1) + 1 = m^2 of
+    `05-knowledge/results/abc_difference_families_20261011c.md` eq. (2) (2026-10-11 Codex packet) without citing it.
+  - **(3)** THM-3833 (2026-08-23, audited PASS) types "ABC also implies non-effective finiteness for every fixed
+    primitive hyperbolic Fermat-Catalan signature" as a PROVED CONDITIONAL IMPLICATION.
+    - For each fixed (p, q, r) with 1/p + 1/q + 1/r < 1 that finiteness is an unconditional theorem (H. Darmon and
+      A. Granville, Bull. LMS 27 (1995) 513-543, Theorem 2, via Faltings and Chevalley-Weil).
+    - The genuinely abc-conditional content is the uniform statement over all hyperbolic signatures. abc gives
+      z^r <= K_eps (z^r)^{(41/42)(1 + eps)}, because 1/p + 1/q + 1/r <= 41/42 with equality at (2,3,7). That is the
+      standard implication abc => Fermat-Catalan conjecture.
+- **Repair.** Recorded here and in the genealogy note.
+  - (1) The S116 output is historical. Its statement is superseded by `CORE-PAPERS-ABC-IUT.md` and should be read as
+    "abc: OPEN; there exists K_eps with c <= K_eps rad(abc)^{1+eps}".
+  - (2) The 10-11 packet is the source of the twin-centre identity.
+  - (3) THM-3833's fixed-signature clause should be read as CITED (Darmon-Granville 1995, unconditional). Its
+    conditional clause is the uniform version (standard), with the deficit 1/42 = 1 - 1/2 - 1/3 - 1/7 (THM-4838's B_6).
+  - The theorem files themselves are left unchanged, by protocol; this entry is the correction of record.
+- **How it was caught.** A read-only survey of every abc mention since 2026-03-14 was spot-checked against the files.
+  The fixed-signature clause was compared with the classical literature on generalized Fermat equations.
+- **Lesson / reusable rule.** Before typing an "X-conditional" implication, check whether the conclusion is already
+  known unconditionally. For Diophantine finiteness this means checking Faltings-type theorems (Darmon-Granville for
+  generalized Fermat, Siegel/Baker for S-units), not only the conjecture's textbook consequences. A conditional result
+  is valuable only where it exceeds the unconditional state of the art: here, uniformity and effectivity.

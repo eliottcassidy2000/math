@@ -1,0 +1,77 @@
+window THM-1..THM-4839: 3957 theorem files (RESERVED stubs excluded)
+family sizes (share of files):
+  BINARY_ALGEBRA   2010  ( 50.8%)
+  MODULAR          1354  ( 34.2%)
+  TOURNAMENT       1163  ( 29.4%)
+  DIVISOR          1033  ( 26.1%)
+  OBSERVER          990  ( 25.0%)
+  ZETA              563  ( 14.2%)
+  FINITE_GEOMETRY   488  ( 12.3%)
+  COLLATZ           304  (  7.7%)
+  ABC               121  (  3.1%)
+  QUADRATIC          85  (  2.1%)
+files touching >= 2 families: 2550 (64.4%); mean families per file 2.05
+
+all 45 pairs by z (observed n_ij, lift, z):
+  FINITE_GEOMETRY  TOURNAMENT       n= 288  lift= 2.01  z= 13.36
+  BINARY_ALGEBRA   MODULAR          n= 806  lift= 1.17  z=  6.31
+  ABC              DIVISOR          n=  65  lift= 2.06  z=  5.83
+  BINARY_ALGEBRA   DIVISOR          n= 630  lift= 1.20  z=  5.78
+  DIVISOR          MODULAR          n= 447  lift= 1.26  z=  5.27
+  COLLATZ          MODULAR          n= 153  lift= 1.47  z=  5.11
+  BINARY_ALGEBRA   ZETA             n= 341  lift= 1.19  z=  3.65
+  DIVISOR          ZETA             n= 195  lift= 1.33  z=  3.62
+  BINARY_ALGEBRA   COLLATZ          n= 195  lift= 1.26  z=  3.61
+  COLLATZ          FINITE_GEOMETRY  n=  58  lift= 1.55  z=  2.60
+  ABC              BINARY_ALGEBRA   n=  77  lift= 1.25  z=  2.03
+  OBSERVER         ZETA             n= 171  lift= 1.21  z=  1.73
+  MODULAR          QUADRATIC        n=  40  lift= 1.38  z=  1.73
+  ABC              MODULAR          n=  54  lift= 1.30  z=  1.72
+  DIVISOR          QUADRATIC        n=  31  lift= 1.40  z=  1.52
+  QUADRATIC        ZETA             n=  18  lift= 1.49  z=  1.15
+  FINITE_GEOMETRY  QUADRATIC        n=  15  lift= 1.43  z=  0.79
+  COLLATZ          QUADRATIC        n=  10  lift= 1.53  z=  0.77
+  ABC              COLLATZ          n=  13  lift= 1.40  z=  0.51
+  ABC              QUADRATIC        n=   4  lift= 1.54  z=  0.49
+  MODULAR          ZETA             n= 211  lift= 1.10  z=  0.36
+  FINITE_GEOMETRY  ZETA             n=  80  lift= 1.15  z=  0.30
+  BINARY_ALGEBRA   OBSERVER         n= 531  lift= 1.06  z=  0.13
+  BINARY_ALGEBRA   QUADRATIC        n=  47  lift= 1.09  z=  0.08
+  COLLATZ          ZETA             n=  49  lift= 1.13  z=  0.03
+  ABC              ZETA             n=  19  lift= 1.10  z= -0.29
+  ABC              OBSERVER         n=  32  lift= 1.06  z= -0.49
+  DIVISOR          OBSERVER         n= 269  lift= 1.04  z= -0.64
+  OBSERVER         QUADRATIC        n=  20  lift= 0.94  z= -0.92
+  ABC              FINITE_GEOMETRY  n=  14  lift= 0.94  z= -1.01
+  FINITE_GEOMETRY  OBSERVER         n= 124  lift= 1.02  z= -1.06
+  QUADRATIC        TOURNAMENT       n=  23  lift= 0.92  z= -1.10
+  BINARY_ALGEBRA   FINITE_GEOMETRY  n= 247  lift= 1.00  z= -1.79
+  COLLATZ          TOURNAMENT       n=  84  lift= 0.94  z= -1.90
+  MODULAR          OBSERVER         n= 330  lift= 0.97  z= -2.39
+  COLLATZ          DIVISOR          n=  68  lift= 0.86  z= -2.54
+  COLLATZ          OBSERVER         n=  66  lift= 0.87  z= -2.67
+  ABC              TOURNAMENT       n=  24  lift= 0.67  z= -2.98
+  BINARY_ALGEBRA   TOURNAMENT       n= 575  lift= 0.97  z= -3.42
+  DIVISOR          FINITE_GEOMETRY  n= 102  lift= 0.80  z= -3.99
+  FINITE_GEOMETRY  MODULAR          n= 140  lift= 0.84  z= -4.32
+  OBSERVER         TOURNAMENT       n= 252  lift= 0.87  z= -5.16
+  TOURNAMENT       ZETA             n= 121  lift= 0.73  z= -5.88
+  DIVISOR          TOURNAMENT       n= 220  lift= 0.72  z= -9.22
+  MODULAR          TOURNAMENT       n= 297  lift= 0.75  z= -9.52
+
+lift-degree (# partners with z >= 2) and positive-z strength:
+  BINARY_ALGEBRA   degree 5   strength  21.59
+  DIVISOR          degree 4   strength  22.02
+  MODULAR          degree 3   strength  20.50
+  COLLATZ          degree 3   strength  12.64
+  FINITE_GEOMETRY  degree 2   strength  17.05
+  ZETA             degree 2   strength  10.86
+  ABC              degree 2   strength  10.59
+  TOURNAMENT       degree 1   strength  13.36
+  QUADRATIC        degree 0   strength   6.55
+  OBSERVER         degree 0   strength   1.87
+
+PRE-REGISTERED CHECKS (HYP-9437), window THM-1..4839:
+  P1 MODULAR touches >= 20% of files: True (34.2%)
+  P2 MODULAR has the largest lift-degree (ties count): False (MODULAR 3, max 5: ['BINARY_ALGEBRA'])
+  P3 a top-3 pair lies inside {MODULAR, QUADRATIC, FINITE_GEOMETRY}: False (top3 = [('FINITE_GEOMETRY', 'TOURNAMENT'), ('BINARY_ALGEBRA', 'MODULAR'), ('ABC', 'DIVISOR')])

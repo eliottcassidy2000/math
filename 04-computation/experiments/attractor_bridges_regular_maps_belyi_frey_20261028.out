@@ -1,0 +1,61 @@
+==============================================================================
+A. complete unit Cayley graphs of imaginary quadratic residue fields
+==============================================================================
+  complete unit Cayley graphs with N(P) >= 4 (fields d in [1, 2, 3, 7, 11, 19, 43], p < 60): [('Q(sqrt-3)', 4), ('Q(i)', 5), ('Q(sqrt-3)', 7)]
+
+==============================================================================
+B. toroidal regular maps from Gaussian and Eisenstein ideals
+==============================================================================
+  {4,4}_(2,1)  V = 5   simple E = 10  edge multiplicity 1 girth 3 bipartite False girth-Euler bound 9   -> K5: True
+  {4,4}_(2,2)  V = 8   simple E = 16  edge multiplicity 1 girth 4 bipartite True  girth-Euler bound 12  -> K4,4: True
+  {3,6}_(2,0)  V = 4   simple E = 6   edge multiplicity 2 girth 3 bipartite False girth-Euler bound 6   -> K4: True
+  {3,6}_(2,1)  V = 7   simple E = 21  edge multiplicity 1 girth 3 bipartite False girth-Euler bound 15  -> K7: True
+  {6,3}_(1,1)  V = 6   simple E = 9   edge multiplicity 1 girth 4 bipartite True  girth-Euler bound 8   -> K3,3: True
+  {6,3}_(2,1)  V = 14  simple E = 21  edge multiplicity 1 girth 6 bipartite True  girth-Euler bound 18  -> Heawood: True
+
+==============================================================================
+C. Petersen = hemi-dodecahedron
+==============================================================================
+  dodecahedron 20 vertices, 30 edges; antipodal quotient: V = 10, E = 15, cubic True, girth 5, Petersen: True
+
+==============================================================================
+D. Euclid's parametrisation squared is a Klein-four Belyi map
+==============================================================================
+  lambda(t) = ((1-t^2)/(1+t^2))^2, invariant under t -> -t, 1/t, -1/t (Klein four-group)
+  finite critical points [-1, 0, 1] with critical values {0, 1}; 1 - lambda = 4*t**2/(t**2 + 1)**2
+  fibres: over 0 -> t = +-1 (e=2), over 1 -> t = 0, oo (e=2), over oo -> t = +-i (e=2): passport (2^2, 2^2, 2^2), genus 0
+
+==============================================================================
+E. Berggren tree and Pythagorean Frey curves: a rational point of order 4
+==============================================================================
+  Berggren tree to depth 9: 29524 triples; every primitive triple with c <= 2000 appears exactly once (319)
+  for 6000 (triple, leg-order) pairs: Q = (a(a+c), ac(a+c)) lies on y^2 = x(x - a^2)(x + b^2), 2Q = (a^2, 0), 4Q = O
+
+==============================================================================
+F. abc qualities of the Berggren triples (a^2, b^2, c^2)
+==============================================================================
+  depth <= 9: 29524 triples, 60 abc hits (rad(abc) < c^2); best qualities:
+    q = 1.2659  (36207, 18424, 40625)
+    q = 1.2425  (1377, 3136, 3425)
+    q = 1.2182  (2793, 10624, 10985)
+    q = 1.2040  (7, 24, 25)
+    q = 1.1889  (1519, 720, 1681)
+    q = 1.1545  (117, 44, 125)
+
+==============================================================================
+G. Collatz clocks K/L (convergents and semiconvergents of log2 3) as abc triples
+==============================================================================
+    1/1   |2^K - 3^L| = 1                            rad = 6*rad(d) = 6                              q = 0.6131  (0.0s)
+    2/1   |2^K - 3^L| = 1                            rad = 6*rad(d) = 6                              q = 0.7737  (0.0s)
+    3/2   |2^K - 3^L| = 1                            rad = 6*rad(d) = 6                              q = 1.2263 HIT (0.0s)
+    5/3   |2^K - 3^L| = 5                            rad = 6*rad(d) = 30                             q = 1.0190 HIT (0.0s)
+    8/5   |2^K - 3^L| = 13                           rad = 6*rad(d) = 78                             q = 1.2728 HIT (0.0s)
+   11/7   |2^K - 3^L| = 139                          rad = 6*rad(d) = 834                            q = 1.1433 HIT (0.0s)
+   19/12  |2^K - 3^L| = 7153                         rad = 6*rad(d) = 42918                          q = 1.2359 HIT (0.0s)
+   27/17  |2^K - 3^L| = 5077565                      rad = 6*rad(d) = 30465390                       q = 1.0861 HIT (0.0s)
+   46/29  |2^K - 3^L| = 1738366812781                rad = 6*rad(d) = 10430200876686                 q = 1.0637 HIT (0.0s)
+   65/41  |2^K - 3^L| = 420491770248316829           rad = 6*rad(d) = 2522950621489900974            q = 1.0633 HIT (0.0s)
+   84/53  |2^K - 3^L| = 40432553845953101497907      rad = 6*rad(d) = 242595323075718608987442       q = 1.0814 HIT (0.0s)
+  every clock from 3/2 on is a hit: |2^K - 3^L| < max/6 forces q > 1; Baker's bound sends q -> 1 along convergents
+
+ALL ASSERTIONS PASSED (1.7s)
