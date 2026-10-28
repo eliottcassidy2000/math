@@ -149,3 +149,34 @@ each matching's order-three map fixes four of the16 orientations, two in each
 chirality orbit. See the last section of FIFTYSIX.md. This uses the incoming
 classification and supplies a new retained-fibre count, not a replacement for
 its dual-coordinate convention.
+
+
+## 6. Final incoming results change the synthesis
+
+Session85's [supersingular-prime control](../session85_arithmetic_codes_free_bits_20261028/FIFTEEN_PRIME_GRAPHIC_CONTROL.md)
+represents the actual fifteen Ogg primes by a five-vertex multigraph. Its square-
+sigma code has dimension11 like Hamming15, but minimum distance1 and its first
+correlations at order2, not8. Six of our seven Fano primes form a K4 restriction;
+89 is the least prime supplying the missing square class10. It acts as a
+four-vertex hyperedge, the common boundary of the three K4 perfect matchings.
+Their binary boundaries agree while the charges(1,1,-1,-1) give pairing energies
+8,0,0. This is a particularly sharp bridge and limit for ROOT energy.
+
+The [relation-gluing packet](../relation_gluing_7_15_20261028/THEOREMS.md)
+proves optimal separator dimension r-1 for the complete rank-r binary geometry.
+For the Fano seven exactly693 of10395 rooted labelled leaf trees attain the
+optimum, a derived1/15 fraction. It also constructs dependencies as objects
+at the next scale, a nonsplit ring gluing sequence, and the exact multiplicative
+fusion correction for overlapping prime powers. These give concrete operations
+beyond rejecting illegal products. Its full integral subset-module decoration
+reduces the168 Fano symmetries to2, so the binary action must not be exported
+unchanged to integer arithmetic.
+
+THM-4840 arrived with the useful K6 equal-degree model and finite rank-five/six
+prime realizations. Checking its claimed consequences exposed the wrong
+sixteenth-coordinate bit and omitted signing quantifiers. [The repair](INCOMING_REPAIR.md)
+corrects those sources, preserves the valid parts, and constructs a smallest
+regular nongraphic prime bank: nine primes with maximum839, realizing M*(K3,3).
+The four Fano/Kuratowski excluded minors now connect the user's graph triple
+to arithmetic through exact dependency matrices. A graph minor still does
+not determine a six-colour port relation or Collatz energy.

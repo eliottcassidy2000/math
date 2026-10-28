@@ -116,8 +116,31 @@ cross-domain complexity claim remains OPEN, with explicit counterindications.
 
 ## Repository validation
 
-All31 local Markdown links resolve to files or tracked sparse paths. The
+The initial31 local Markdown links resolve to files or tracked sparse paths. The
 agent-facing documentation checker passes. Its inherited122-line hypothesis
 index exceeded the120-line limit; joining two wrapped bullet continuations
 restored the limit without changing mathematical content or the leading banner.
 The same formatting repair independently arrived upstream during close-out.
+
+
+## Final incoming audit and positive repair
+
+At5ed1835235 the incoming relation-gluing packet, Session85 graphic control,
+and THM-4840/HYP-9438 were read. Their full linear/module proofs were inspected;
+not every broad historical speculation in their atlases was adopted. Several
+THM-4840 consequences failed exact small controls and are repaired in place,
+with a date-headed MISTAKES entry. INCOMING_REPAIR.md gives the lineage.
+`incoming_repair.py` and `python3 -O incoming_repair.py` agree byte for byte:
+3632 checks. These newly justified tests cover the incorrect sixteen-column
+extension, a regular matrix with no support-preserving TU signing, actual
+unit quotient roots, and all512 subsets of the new cographic nine-prime bank.
+The source packet's README hash is refreshed; its unchanged earlier finite
+receipts continue to attest only their originally tested claims.
+
+The final28 weighted-query checks compare the character formula with explicit
+source enumeration at every syndrome for ranks2,3,4, using signed local weights.
+They are included in the3632 repair count.
+
+Final close-out validation:35 local packet links resolve; the6-entry incoming
+source hash manifest matches; Python syntax and agent-facing documentation
+checks pass. Normal/optimized verification agrees for all three code paths.

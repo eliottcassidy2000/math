@@ -1,5 +1,7 @@
 # Binary dependence, free bits and the number six: the theorem behind "graph cycles cannot represent arithmetic dependence", the K₆ reading of the fifteen-prime Hamming bank, rank-5 and rank-6 prime banks, the information principle behind guarded observations, and the instances of 7, 56, 5 and 15, typed
 
+> **CORRECTED 2026-10-28:** the prescribed-matrix signing criterion, the sixteenth parity bit, and the explicit unit quotient maps are repaired below. The unrestricted distinct-prime realization has the one-loop boundary. HYP-9438's ten-element regular-nongraphic minimum is refuted by a nine-prime bank. See [exact repairs and receipts](../free_bits_seven_fiftysix_20261028/INCOMING_REPAIR.md); the fifteen-column identity and rank-five/six computations survive.
+
 **Session:** klein-2026-10-28 (worktree `codex/session-synthesis-20261028`). Canon:
 [THM-4840](../../../01-canon/theorems/THM-4840-tutte-camion-dichotomy-for-arithmetic-square-class-banks-hamming-15-is-the-equal-parity-degree-space-of-k6-rank-6-prime-banks-unit-cayley-tournaments-c3-t5-p7-and-fano-chromatic-numbers.md);
 open problems: [HYP-9438](../../hypotheses/HYP-9438-every-binary-matroid-is-a-prime-square-class-matroid-arithmetic-r10-and-kuratowski-banks-sum-free-chromatic-numbers-square-sum-descent-and-the-unbounded-dual-word-signature-of-cryptids.md);
@@ -74,17 +76,11 @@ matroid** of the bank. It is binary by construction, because exponent parity liv
 
 1. `M(P)` is the cycle matroid of an ordinary graph iff it has no minor isomorphic to `F_7`, `F_7*`, `M*(K_5)` or
    `M*(K_{3,3})` (Tutte 1959, CITED).
-2. `M(P)` has *any* representation over `Q` — hence any integer incidence model: signed incidence (the graceful side),
-   signless incidence (the square-sum side), gain graphs over `Z`, totally unimodular matrices — iff it is regular iff
-   it has no `F_7` or `F_7*` minor (Tutte 1958, CITED; a binary matroid representable over a field of characteristic
-   `≠ 2` is regular).
-3. A binary representation of `M(P)` can be signed to a totally unimodular `±1` matrix iff `M(P)` is regular (Camion
-   1963, CITED). So the "signed-incidence connection between graceful labels and square-sum labels" is Camion's signing,
-   and it exists exactly for the regular banks.
+2. `M(P)` is representable over Q iff regular iff it has no F7 or F7* minor (Tutte, CITED). This gives some TU representation, not necessarily a signed-graph incidence model.
+3. A specified matrix A has a TU signing iff the binary matroid of `[I | A]` is regular. For a standard representation `[I | D]` of a regular matroid, D has such a signing. The arbitrary-matrix version formerly stated here is false; columns(111,110,101,011) provide the exact counterexample.
 
 **Consequences.** The seven-prime bank `{2,5,7,19,29,59,89}` is `F_7` itself (THEORY §A1), representable over no field
-of characteristic `≠ 2`; its dependence has no model by *any* signed or unsigned integer incidence structure, which is
-sharper than "not graphic". The Kuratowski obstructions of THM-4701 (`K_5`, `K_{3,3}`, whose cographic matroids are two
+of characteristic `≠ 2`; it has no characteristic-zero representation preserving the same column dependencies. Integer valuation lifts with different rational dependencies remain valid. The Kuratowski obstructions of THM-4701 (`K_5`, `K_{3,3}`, whose cographic matroids are two
 of Tutte's four excluded minors) and the Fano obstruction of the seven-prime bank are the two halves of one theorem:
 for arithmetic banks, Kuratowski and Fano are the same kind of object. The six-prime bank `{2,3,5,7,11,13}` (columns
 `010, 000, 110, 100, 010, 101` on `(2,3,7)`) is graphic: a loop at 3, a parallel pair `{2,11}`, two triangles sharing
@@ -107,9 +103,8 @@ The code is the cycle space of `K_6` (all degrees even, dimension 10) together w
 claw-plus-disjoint-edge subgraphs; the full weight distribution `1, 35, 105, 168, 280, 435, 435, 280, 168, 105, 35, 1`
 (weights `0, 3, …, 12, 15`) agrees with the Hamming code's by enumeration (`data/synthesis_checks.out`). Equivalently
 `PG(3,2) = M(K_6)/𝟙`: the projective geometry is the graphic matroid of `K_6` with the all-ones vector adjoined and
-contracted. Adjoining that vector as a sixteenth element (the all-vertices element, "overall parity") gives the extended
-code `[16,11,4]` with its five checks `= 4 + 1` and dual `RM(1,4)`: session85's "five checks from fifteen four-bit
-labels" is `K_6` plus its degree-parity bit.
+contracted. Adjoining the edge-count parity bit gives the extended code `[16,11,4]`: use check columns(1,h_e) for the fifteen quotient columns and(1,0) for the added bit. Adjoining the all-ones six-vector to the original incidence matrix instead records the common degree bit and gives minimum distance3, since triangles survive. These are different one-bit extensions.
+
 
 **What this buys.** (i) *The 7/15/5 link in one picture.* `7 = PG(2,2)` is the Fano plane, which is `K_4` with its four
 vertices and three perfect matchings as points; `15 = PG(3,2)` is the duad geometry of six points; `5 = dim RM(1,4) = 1
@@ -166,7 +161,7 @@ phenomena sort cleanly:
 | Terras: parity vectors of Collatz | cylinders `mod 2^k` | zero free bits (full shift) | bijective coding; no dependent test |
 | Antihydra halting `Σ(2v_i − 3) = −6` | a linear form of unbounded support | never recoverable by a bounded scope | the dual word's support exceeds every bag |
 | the all-ones projection `K_6 → PG(3,2)` (§2) | global degree parity | the one bit the graph model must forget | elementary quotient by `𝟙` |
-| the affine lift `[15,11,3] → [16,11,4]` | the sixteenth element | one element buys one unit of distance | adjoin the contracted vector |
+| the affine lift `[15,11,3] → [16,11,4]` | the sixteenth element | one element buys one unit of distance | adjoin the parity of the selected edge count |
 | the bipartite sign gauge (THEORY §D) | edge sums versus edge differences | one free root parameter on bipartite graphs; fixed, with `Z/2` torsion, otherwise | Camion signing exists iff regular |
 
 The last two rows are the same move seen from both sides: adjoin or contract the all-ones vector. The Antihydra row is
@@ -196,16 +191,16 @@ of the Paley tournament `P_7` is already in canon-adjacent notes
 note was being written) owns the finer statement: a fixed Fano plane admits exactly 16 compatible Paley orientations (three
 partner bits and one chirality bit), and flipping the three arcs of a line when its prime is selected transports square
 `σ` exactly to "the result is Paley". What is added here is the ring reading. Let `π = 3 + ω` in `Z[ω]`, of norm 7,
-so `Z[ω]/(π) ≅ F_7` with `ω ↦ 2`. The cube roots of unity `{1, ω, ω²}` map to `{1, 2, 4}`, the quadratic residues mod 7,
+so `Z[ω]/(π) ≅ F_7` with `ω ↦ 4`. The cube roots of unity `{1, ω, ω²}` map to `{1, 2, 4}`, the quadratic residues mod 7,
 which is the `(7,3,1)` difference set (re-checked: every pair of points on exactly one line). So **`P_7` is the Cayley tournament
 of `Z[ω]/(3+ω)` with connection set the cube roots of unity, the Fano plane is its out-neighbourhood design, the Heawood
 graph (THM-4839's toroidal map at norm 7) is the Fano incidence graph, and `K_7 = {3,6}_{(2,1)}` (THM-4839 (a), (b)) is
 the symmetrization of `P_7` and the dual of the Heawood map.** The same recipe at the other norms gives the pure-blue
 alphabet of THM-4730: at norm 3, `Z[ω]/(2+ω) ≅ F_3` with all six units mapping onto `{±1}` and the half `{1, ω, ω²}`
-onto `{1}`, the Cayley tournament is `C_3`; at norm 5, `Z[i]/(2+i) ≅ F_5` with `i ↦ 2`, the half `{1, i}` maps to
-`{1, 2}` and the Cayley tournament is the regular 5-tournament `T_5`. **The unit-Cayley tournaments of the Eisenstein and
+onto `{1}`, the Cayley tournament is `C_3`; at norm 5, `Z[i]/(2+i) ≅ F_5` with `i ↦ 3`, the half `{1, i}` maps to
+`{1, 3}` and the Cayley tournament is the regular 5-tournament `T_5`. **The unit-Cayley tournaments of the Eisenstein and
 Gaussian integers at the primes of norm 3, 5, 7 are `C_3`, `T_5`, `P_7`**: the first two are exactly the strong pure-blue
-atoms (THM-4730), and the third is the Fano plane. At norm 4 (`Z[ω]/(2) ≅ F_4`) there is no half because `−1 = 1`, which
+atoms (THM-4730), and the third is the Fano plane. At norm 4 (`Z[ω]/(2) ≅ F_4`) there is no reduced tournament half because `−1 = 1`, which
 is why `K_4` has no regular tournament and the alphabet stops at `T_5`. The group behind the seven-prime bank
 (`GL(3,2)`, the Fano collineation group, order 168) is the group behind the triangle group `(2,3,7)` of THM-4838 (`X(7)`
 is Klein's quartic, automorphism group `PSL(2,7) ≅ GL(3,2)`): the finite-geometry and modular families that HYP-9437's
@@ -234,7 +229,7 @@ degree-two del Pezzo surface (`2 × 28` bitangents), `|PSL(2,7)|/3`; the last is
 is not pursued here.
 
 **6.4 Fives and fifteens.** `5 = dim RM(1,4)`, the five checks of `[16,11,4]`, and the Hamming-7 access structure (overall
-parity from every five-coordinate set, never from two, from a four-set only if it is a line: session85 §1) — IDENTITIES
+parity from every five-coordinate set, never from two, from a four-set exactly when it contains a line: session85 §1) — IDENTITIES
 of §2. `15 = C(6,2)`, the points of `PG(3,2)`, the perfect matchings of `K_6`, the edges of the Petersen graph (`L(K_5)`'s
 crossing graph needs five hierarchies: LCA note), the odd weight-three codewords — one object (§2). `f(6) = 15`
 (THM-1370's strong floor) and `A000568(6) = 56` — same six vertices, no mechanism (COINCIDENCE). `5 ≤ χ(R²)` (de Grey)

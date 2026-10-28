@@ -1,12 +1,12 @@
 ---
 id: HYP-9438
-title: "After THM-4840: (1) every binary matroid is the square-class matroid of a set of distinct primes (simple ones unconditionally for rank <= 6; all of them under Schinzel's hypothesis H for the quadratics d k^2 - 1); (2) the least prime banks whose square-class matroid is R10, M*(K5) or M*(K3,3) exist and have largest prime below 10^6; (3) the chromatic number of the line hypergraph of PG(r-1,2), i.e. the least number of sum-free sets partitioning F2^r minus 0, is 2, 3, 3, 4 for r = 2..5 and grows like log_2 r + O(1); (4) square-sum Hamiltonian paths on [n] admit a Berggren-type descent (unique inverse, decreasing height) on their alternating square sequences; (5) the minimal Nerode quotient of guarded square-sigma multiplication is a function of the matroid and the conflict graph alone; (6) a Pi^0_1 cryptid's halting certificate is a dual word of unbounded support, and this separates the cryptids from the machines decided by regular or bounded-Parikh deciders; (7) the duad/syntheme self-duality of the fifteen-prime bank is induced by an arithmetic involution"
+title: "After THM-4840: prime realization with at most one loop, explicit cographic and R10 banks, sum-free chromatic growth, square-sum descent and observation-dependent arithmetic quotients"
 status: >
-  OPEN (klein-2026-10-28). (1) FINITE-EXACT for simple matroids of rank <= 6 (THM-4840 (C)); the general statement needs
+  MIXED / CORRECTED 2026-10-28. The original every-matroid statement is REFUTED by two loops; at-most-one-loop realization remains CONDITIONAL/OPEN. The ten-element minimum in (2) is REFUTED: nine is sharp and an explicit M*(K3,3) prime bank has maximum839. (1) FINITE-EXACT for simple matroids of rank <= 6 (THM-4840 (C)); the general statement needs
   one prime value of each quadratic d k^2 - 1 (Bunyakovsky/Schinzel-type) and, for parallel elements, infinitely many.
-  (2) untested; a search over the squarefree parts of p + 1 for p <= 10^6 decides it. (3) FINITE-EXACT for r <= 5
+  (2) M*(K3,3) realized explicitly; the R10 and M*(K5) optimization targets remain open. (3) FINITE-EXACT for r <= 5
   (2, 3, 3, 4); the growth guess is from the sizes of maximal sum-free sets (affine hyperplane complements, 2^(r-1)) and
-  may be wrong; what refutes it: chi(PG(5,2)) = 4 or 6. (4) a programme in unifying_relations' third theory; no descent
+  may be wrong; use the explicitly quantified prediction in the body, not the earlier inconsistent rank-six example. (4) a programme in unifying_relations' third theory; no descent
   is known; the onset 15, 23, 25 (THM-4510, aliquot_66 ATLAS section 6) is the hostile any descent must reproduce.
   (5) session85 measured 86, 87, 96 states for the seven-atom bank under three observation sets; the claim is that
   the first number is determined by (M, conflict graph) and that the +1 for F = U + S is a general one-bit law.
@@ -22,18 +22,20 @@ related:
   - 05-knowledge/results/analogy_reduction_atlas_20261025/PROBLEM_CLASSIFICATION.md
 ---
 
-# HYP-9438 — seven open problems on binary arithmetic dependence and free bits
+# HYP-9438 — seven questions, with explicit refutations and surviving targets
 
-1. **Prime realization of binary matroids.** For squarefree `d`, let `L(d)` be the least prime of the form `d k² − 1`.
-   THM-4840 (C) exhibits `L(d)` for all `d | 30030` (largest `k = 42`). Prediction: `L(d)` exists for every squarefree
+
+> **CORRECTION:** [proofs and exact controls](../results/free_bits_seven_fiftysix_20261028/INCOMING_REPAIR.md) settle the loop obstruction and the minimum-size part of(2). These are not still open.
+
+1. **Prime realization of binary matroids with at most one loop.** The original unrestricted claim is REFUTED: two loops would require two distinct primes with square p+1, but only3 exists. For squarefree `d > 1`, let `L(d)` be the least prime of the form `d k² − 1`.
+   THM-4840 (C) exhibits `L(d)` for all `d > 1` dividing `30030` (largest `k = 42`). Prediction: `L(d)` exists for every squarefree
    `d` (one prime value of the quadratic `d k² − 1`, a Schinzel-H instance), with `k ≤ C log d`; hence every simple binary
    matroid is a square-class matroid of primes. Parallel elements need infinitely many primes `d k² − 1` for one `d`
    (Bunyakovsky). Decisive test: `L(d)` for all squarefree `d ≤ 10^5`; a `d` with no prime value below `k = 10^4` would
    be the first warning. The loop (prime 3) is the one element that can never be repeated.
 2. **The arithmetic `R_{10}` and the arithmetic Kuratowski banks.** The regular-but-not-graphic matroids are those
    containing `R_{10}`, `M*(K_5)` or `M*(K_{3,3})` but no Fano minor (Seymour). Prediction: prime banks realizing each of
-   the three exist with all primes below `10^6`, and the smallest prime bank that is regular but not graphic has ten
-   elements. Test: enumerate the squarefree parts of `p + 1` for `p ≤ 10^6`, pick ten columns forming `R_{10}` (five
+   the three exist with all primes below `10^6`. The former ten-element minimum is REFUTED: the bank{2,5,7,19,83,89,139,251,839} realizes M*(K3,3), and Tutte's excluded minors prove nine is minimal. Minimizing its largest prime, and the other two banks, remains OPEN. Test: enumerate the squarefree parts of `p + 1` for `p ≤ 10^6`, pick ten columns forming `R_{10}` (five
    row primes suffice).
 3. **The sum-free chromatic ladder.** `χ(PG(r−1,2)) = 2, 3, 3, 4` for `r = 2, 3, 4, 5` (THM-4840 (D)). Prediction:
    `χ(PG(5,2)) = 4` and `χ(PG(r−1,2)) ≤ ⌈log_2(r+1)⌉ + 1`; refutation: a rank-six search returning 5. The arithmetic

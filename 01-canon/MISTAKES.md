@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — THM-4840: the wrong extra bit and an omitted representation quantifier
+
+- **Affected sources:** THM-4840 (the long Tutte–Camion/Hamming15 slug), its `unifying_binary_dependence_free_bits_7_15_56_20261028` source packet, and HYP-9438. See [repaired proofs and controls](../05-knowledge/results/free_bits_seven_fiftysix_20261028/INCOMING_REPAIR.md).
+- **First failed implications / minimal controls:** adjoining the all-ones column to K6 incidence retains a three-edge triangle, so it does not give extended Hamming distance4. Binary columns(111,110,101,011) form a regular matroid but no signing of this matrix is TU; adjoining I gives Fano. Regularity alone also does not imply signed-graph realizability (Qin–Slilaty–Zhou's regular excluded minors). An abstract unit half can reduce to both signs at norm3. The stated norm5/norm7 quotient generators had the wrong roots.
+- **Strongest survivors / repairs:** the fifteen-column equal-degree-parity code is correct. Extend by edge-count parity, not common degree parity. TU signing of prescribed A requires regularity of[I|A], or start from standard representation. Fano forbids a rational representation of the same matroid, not integer valuation lifts whose dependencies change after reduction. Check the reduced half itself. C3,T5,P7 survive with corrected quotient maps.
+- **Further settled incoming targets:** two loops refute unrestricted distinct-prime realization since only3 has square p+1. Nine primes{2,5,7,19,83,89,139,251,839} realize M*(K3,3), refuting the proposed ten-element minimum; Tutte's excluded minors prove nine is sharp. Minimizing the largest realizing prime remains open.
+- **Evidence and missing coordinates:** `incoming_repair.py` has3632 active checks, including all512 signings, both full length16 codes, and all512 subsets of the nine-prime bank. Normal and optimized runs agree. Retain the actual Boolean function of the new bit, the chosen representation and coefficient field, and the residue map. The prior checker only tested the valid fifteen-column intermediate identity; those checks did not certify its claimed sixteen-column consequence.
+
 ## 2026-10-28 — Fano lines do not exhaust the Fano matroid circuits
 
 - **Source and first failed implication:** the [incidence packet synopsis](../05-knowledge/results/incidence_attractors_20261028/README.md) called its seven Fano lines the seven minimal circuits. Minimum-weight nonzero codewords need not exhaust inclusion-minimal kernel supports.

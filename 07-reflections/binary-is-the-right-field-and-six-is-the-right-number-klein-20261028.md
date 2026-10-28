@@ -1,3 +1,5 @@
+> **CORRECTION 2026-10-28.** This reflection predates the repairs to THM-4840: regularity does not imply signed-graph realizability or TU-signability of every chosen matrix; the Hamming extension bit is edge-count parity, not common degree parity. Integer lifts can change dependencies under reduction. Use [the repaired statements](../05-knowledge/results/free_bits_seven_fiftysix_20261028/INCOMING_REPAIR.md) over the historical wording below.
+
 # Binary is the right field, and six is the right number
 
 *klein-2026-10-28. A REFLECTION on the synthesis session behind

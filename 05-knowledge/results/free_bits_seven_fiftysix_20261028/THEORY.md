@@ -213,3 +213,28 @@ widths, only the Hamming-weight distribution survives, and all nonzero Hamming
 syndromes give the same scalar law. The construction therefore exhibits both
 loss and a precisely priced way of removing it. It suggests active probe
 design rather than passive accumulation of more coarse invariants.
+
+
+## 7. Exact weighted queries can be small even when the source set is large (CITED mechanism)
+
+For local weights f_i(0),f_i(1) in C, character orthogonality gives
+
+    Z_s = sum_(Hc=s) product_i f_i(c_i)
+        = 2^(-r) sum_(b in F2^r) (-1)^(b dot s)
+          product_i [f_i(0)+(-1)^(b dot H_i) f_i(1)].       (8)
+
+This is the classical binary Fourier/sum-product identity, the weighted
+version of Section3 and the incoming gluing construction. Forming its2^r
+products takes O(n*2^r) arithmetic operations; a Walsh transform supplies
+all syndrome sums in another O(r*2^r). For Hamming n=2^r-1 this is O(n²),
+although its source code has2^(n-r) words. At a fixed Fourier frequency the
+uniform-magnitude factors provide f_i and yield every code-conditioned
+characteristic function by this exact formula.
+
+This is a genuine constructive compression of a stated query, not just a
+quotient warning. It requires product weights and retains the syndrome. It
+does not bound numerical bit complexity, uniformly approximate a tiny tail,
+or make an arbitrary correlated Collatz source measure factor. The absolute
+values/cancellations of its messages are a separate analytic obligation.
+The tree and Fourier realizations should be compared on actual native packet
+weights rather than importing their efficiency from abstract code cardinality.

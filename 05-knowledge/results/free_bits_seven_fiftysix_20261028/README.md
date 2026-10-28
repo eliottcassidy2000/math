@@ -26,6 +26,8 @@ an explicit tail contribution, not merely a warning about a quotient.
 - [The exact 56-object correspondence](FIFTYSIX.md): oriented Fano triangles,
   Frobenius conjugates and labelled matching kernels; each leaves exactly four
   compatible Paley orientations in the incoming sixteen-state carrier.
+- [Incoming repairs and a nine-prime K3,3 bank](INCOMING_REPAIR.md): the sharp
+  regular/nongraphic size boundary and corrected extra-bit/signing rules.
 - [Recovered 7/56 atlas](ATLAS.md): old proofs, corrected temptations, genuine
   Fano/affine/E7 maps, and the separate Borwein threshold mechanism.
 - [Applications and open targets](APPLICATIONS.md): square-sum port decoding,
