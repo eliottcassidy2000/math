@@ -18,7 +18,11 @@ def need(condition,message):
     CHECKS+=1
     if not condition: raise RuntimeError(message)
 def read(name): return json.loads((HERE/name).read_text(encoding='utf-8'))
-def semantic(row): return {k:v for k,v in row.items() if k!='seconds'}
+def semantic(row):
+    result={k:v for k,v in row.items() if k!='seconds'}
+    result.setdefault('neighbor_signature_rejections',0)
+    result.setdefault('higher_neighbor_signature_roots_skipped',0)
+    return result
 
 def main():
     pins=read('source_pins.json')
@@ -36,7 +40,7 @@ def main():
     need(kernel['unmarked_hub_quotient']==25 and kernel['states']==125,'quotient')
     need(kernel['diagonal_guard_table']==[[i==j for j in range(5)] for i in range(5)],'native guards')
     need(ports['full_chart_group']==21 and ports['four_atom_relative_gain_states']==9261,'actual ports')
-    degree=read('root_degree.json'); plain=read('root_minimum.json')
+    degree=read('root_degree.json'); plain=read('root_minimum.json'); neighbor=read('root_neighbor.json')
     reference=json.loads((root.PRIOR/'root_switch.json').read_text(encoding='utf-8'))
     for a,b,c in zip(degree['results'],plain['results'],reference['results']):
         for key in ('classes','pointed_states','automorphism_order_histogram'):
@@ -44,21 +48,27 @@ def main():
         need(a['rejected_candidates']+a['classes']==a['pointed_states'],'candidate partition')
     need(degree['results'][-1]['reroots_examined']==278461,'degree certificate work')
     need(degree['exact_class_bijection_to_prior_bank'],'full exact reference coverage')
+    need(neighbor['exact_class_bijection_to_prior_bank'],'refined full exact reference coverage')
+    need(neighbor['results'][-1]['reroots_examined']==24005,'refined certificate work')
+    for a,b in zip(neighbor['results'],degree['results']):
+        for key in ('classes','pointed_states','automorphism_order_histogram'):
+            need(a[key]==b[key],'refined '+key)
     raw=gzip.decompress((root.PRIOR/'tournament_bank.json.gz').read_bytes())
     need(hashlib.sha256(raw).hexdigest()==plain['bank_sha256'],'plain exact bank identity')
-    for report in (degree,plain):
+    for report in (degree,plain,neighbor):
         h=report['hostile_81_27']
         need(h['automorphism_orders']==[81,27] and h['labelled_cyclic_triples']==67,'hostile groups')
         need(h['Hamilton_paths']==[462915,462915] and h['identity_order_legal']==[True,False],'hostile guards')
     # The saved order-nine run is not repeated. Reproduce its short prefix
     # with optimization enabled by running this audit itself under -O.
-    parents=[()]
     with contextlib.redirect_stdout(io.StringIO()):
-        for n in range(1,9):
-            parents,row=root.generate(parents,n,65536,True)
-            # JSON roundtrip normalizes integer histogram keys.
-            row=json.loads(json.dumps(row))
-            need(semantic(row)==semantic(degree['results'][n-1]),'small degree-first replay')
+        for refined,report in ((False,degree),(True,neighbor)):
+            parents=[()]
+            for n in range(1,9):
+                parents,row=root.generate(parents,n,65536,True,refined)
+                # JSON roundtrip normalizes integer histogram keys.
+                row=json.loads(json.dumps(row))
+                need(semantic(row)==semantic(report['results'][n-1]),'small selector replay')
     channels=read('sequence_channels.json')
     orders=[row['m'] for row in channels['rows']]
     need(orders==list(range(31))+[50,100,200],'exact executed channel universe')
@@ -75,7 +85,8 @@ def main():
             links+=1
     report={'status':'PASS','checks':CHECKS,'source_pins':len(pins['sha256']),
             'optimized_byte_identical_receipts':['kernel125.json','strong_ports.json','legacy_repairs.json'],
-            'degree_generation_replayed_through':8,'order9_full_receipt_checked':True,
+            'degree_generation_replayed_through':8,'neighbor_generation_replayed_through':8,
+            'order9_full_receipt_checked':True,
             'order9_reference_audit':'full exact bijection was executed in root_minimum.py --degree-first',
             'local_document_links_checked':links}
     (HERE/'audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')

@@ -1,0 +1,343 @@
+{
+  "status": "FINITE-EXACT",
+  "generation": "least pointed-root certificate; early reject at first smaller root",
+  "degree_first": true,
+  "neighbor_degrees": true,
+  "results": [
+    {
+      "order": 1,
+      "classes": 1,
+      "pointed_states": 1,
+      "reroots_examined": 0,
+      "old_all_rows_reroots": 1,
+      "own_root_queries_saved": 1,
+      "rejected_candidates": 0,
+      "degree_rejections": 0,
+      "higher_degree_roots_skipped": 0,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "neighbor_signature_rejections": 0,
+      "higher_neighbor_signature_roots_skipped": 0,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 65536,
+        "currsize": 0
+      },
+      "exact_parent_isomorphism_lookups": 0,
+      "seconds": 0.0
+    },
+    {
+      "order": 2,
+      "classes": 1,
+      "pointed_states": 2,
+      "reroots_examined": 0,
+      "old_all_rows_reroots": 4,
+      "own_root_queries_saved": 2,
+      "rejected_candidates": 1,
+      "degree_rejections": 1,
+      "higher_degree_roots_skipped": 1,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "neighbor_signature_rejections": 0,
+      "higher_neighbor_signature_roots_skipped": 0,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 65536,
+        "currsize": 0
+      },
+      "exact_parent_isomorphism_lookups": 0,
+      "seconds": 0.0
+    },
+    {
+      "order": 3,
+      "classes": 2,
+      "pointed_states": 4,
+      "reroots_examined": 2,
+      "old_all_rows_reroots": 12,
+      "own_root_queries_saved": 4,
+      "rejected_candidates": 2,
+      "degree_rejections": 2,
+      "higher_degree_roots_skipped": 2,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "neighbor_signature_rejections": 0,
+      "higher_neighbor_signature_roots_skipped": 0,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 2,
+        "maxsize": 65536,
+        "currsize": 2
+      },
+      "exact_parent_isomorphism_lookups": 2,
+      "seconds": 0.0
+    },
+    {
+      "order": 4,
+      "classes": 4,
+      "pointed_states": 12,
+      "reroots_examined": 2,
+      "old_all_rows_reroots": 48,
+      "own_root_queries_saved": 12,
+      "rejected_candidates": 8,
+      "degree_rejections": 7,
+      "higher_degree_roots_skipped": 9,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 2,
+        "3": 2
+      },
+      "neighbor_signature_rejections": 1,
+      "higher_neighbor_signature_roots_skipped": 1,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 2,
+        "maxsize": 65536,
+        "currsize": 2
+      },
+      "exact_parent_isomorphism_lookups": 2,
+      "seconds": 0.0
+    },
+    {
+      "order": 5,
+      "classes": 12,
+      "pointed_states": 48,
+      "reroots_examined": 6,
+      "old_all_rows_reroots": 240,
+      "own_root_queries_saved": 48,
+      "rejected_candidates": 36,
+      "degree_rejections": 33,
+      "higher_degree_roots_skipped": 39,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 7,
+        "3": 4,
+        "5": 1
+      },
+      "neighbor_signature_rejections": 3,
+      "higher_neighbor_signature_roots_skipped": 3,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 6,
+        "maxsize": 65536,
+        "currsize": 6
+      },
+      "exact_parent_isomorphism_lookups": 6,
+      "seconds": 0.002
+    },
+    {
+      "order": 6,
+      "classes": 56,
+      "pointed_states": 296,
+      "reroots_examined": 25,
+      "old_all_rows_reroots": 1776,
+      "own_root_queries_saved": 296,
+      "rejected_candidates": 240,
+      "degree_rejections": 214,
+      "higher_degree_roots_skipped": 249,
+      "reject_position_histogram": {
+        "1": 1,
+        "4": 1,
+        "5": 3
+      },
+      "automorphism_order_histogram": {
+        "1": 41,
+        "3": 12,
+        "5": 2,
+        "9": 1
+      },
+      "neighbor_signature_rejections": 21,
+      "higher_neighbor_signature_roots_skipped": 26,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 5,
+        "misses": 20,
+        "maxsize": 65536,
+        "currsize": 20
+      },
+      "exact_parent_isomorphism_lookups": 20,
+      "seconds": 0.01
+    },
+    {
+      "order": 7,
+      "classes": 456,
+      "pointed_states": 3040,
+      "reroots_examined": 125,
+      "old_all_rows_reroots": 21280,
+      "own_root_queries_saved": 3040,
+      "rejected_candidates": 2584,
+      "degree_rejections": 2323,
+      "higher_degree_roots_skipped": 2544,
+      "reject_position_histogram": {
+        "1": 2,
+        "2": 2,
+        "4": 1,
+        "5": 16,
+        "6": 15
+      },
+      "automorphism_order_histogram": {
+        "1": 399,
+        "3": 47,
+        "5": 4,
+        "7": 1,
+        "9": 4,
+        "21": 1
+      },
+      "neighbor_signature_rejections": 225,
+      "higher_neighbor_signature_roots_skipped": 247,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 30,
+        "misses": 95,
+        "maxsize": 65536,
+        "currsize": 95
+      },
+      "exact_parent_isomorphism_lookups": 95,
+      "seconds": 0.064
+    },
+    {
+      "order": 8,
+      "classes": 6880,
+      "pointed_states": 54256,
+      "reroots_examined": 1117,
+      "old_all_rows_reroots": 434048,
+      "own_root_queries_saved": 54256,
+      "rejected_candidates": 47376,
+      "degree_rejections": 43322,
+      "higher_degree_roots_skipped": 45526,
+      "reject_position_histogram": {
+        "1": 21,
+        "2": 26,
+        "3": 9,
+        "4": 27,
+        "5": 41,
+        "6": 174,
+        "7": 148
+      },
+      "automorphism_order_histogram": {
+        "1": 6556,
+        "3": 292,
+        "5": 10,
+        "7": 2,
+        "9": 16,
+        "15": 2,
+        "21": 2
+      },
+      "neighbor_signature_rejections": 3608,
+      "higher_neighbor_signature_roots_skipped": 4010,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 306,
+        "misses": 811,
+        "maxsize": 65536,
+        "currsize": 811
+      },
+      "exact_parent_isomorphism_lookups": 811,
+      "seconds": 0.359
+    },
+    {
+      "order": 9,
+      "classes": 191536,
+      "pointed_states": 1716608,
+      "reroots_examined": 24005,
+      "old_all_rows_reroots": 15449472,
+      "own_root_queries_saved": 1716608,
+      "rejected_candidates": 1525072,
+      "degree_rejections": 1405799,
+      "higher_degree_roots_skipped": 1464109,
+      "reject_position_histogram": {
+        "1": 211,
+        "2": 252,
+        "3": 82,
+        "4": 336,
+        "5": 510,
+        "6": 915,
+        "7": 4360,
+        "8": 4128
+      },
+      "automorphism_order_histogram": {
+        "1": 188337,
+        "3": 3047,
+        "5": 40,
+        "7": 4,
+        "9": 94,
+        "15": 8,
+        "21": 4,
+        "27": 1,
+        "81": 1
+      },
+      "neighbor_signature_rejections": 108479,
+      "higher_neighbor_signature_roots_skipped": 118063,
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 11776,
+        "misses": 12229,
+        "maxsize": 65536,
+        "currsize": 12229
+      },
+      "exact_parent_isomorphism_lookups": 12229,
+      "seconds": 9.842
+    }
+  ],
+  "bank_sha256": "ded6594ac6f316daabb7dfcfa5e6907405dd128553539871e0b4702c1955c13a",
+  "byte_identical_to_prior_bank": false,
+  "exact_class_bijection_to_prior_bank": true,
+  "hostile_81_27": {
+    "rows_AAA": [
+      250,
+      252,
+      249,
+      240,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "rows_BAA": [
+      242,
+      244,
+      241,
+      247,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "labelled_cyclic_triples": 67,
+    "automorphism_orders": [
+      81,
+      27
+    ],
+    "Hamilton_paths": [
+      462915,
+      462915
+    ],
+    "identity_order_legal": [
+      true,
+      false
+    ]
+  },
+  "source_oracle": "05-knowledge\\results\\relation_tower_frobenius_ports_20261028\\check_root_switch.py",
+  "checks": 404230
+}

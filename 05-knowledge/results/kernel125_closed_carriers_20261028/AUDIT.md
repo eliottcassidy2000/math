@@ -11,6 +11,7 @@ From the repository root, with Python3 and the standard library:
 python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/kernel125.py
 python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/strong_ports.py
 python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/root_minimum.py --max-order 9 --degree-first
+python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/root_minimum.py --max-order 9 --degree-first --neighbor-degrees
 python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/sequence_channels.py --large 200
 python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/legacy_audit.py
 python3 -B 05-knowledge/results/kernel125_closed_carriers_20261028/audit.py
@@ -21,6 +22,10 @@ Its saved receipt predates the addition of degree-only instrumentation:
 zero degree counters and the explicit false degree_first field were absent.
 Its bank is byte-identical to the predecessor; the degree-first bank has
 different root representatives, checked by an exact class bijection.
+The later neighbor-degree counters are also absent from the two earlier
+receipts; omitted counters mean zero in those earlier algorithms. The
+auditor normalizes these instrumentation-only differences. Both improved
+selectors are replayed through8 under optimized Python.
 Timing fields are descriptive and are excluded from semantic comparisons.
 The new code does not save a duplicate compressed bank; reproduction checks
 against the existing bank only after constructing its answer.
@@ -29,7 +34,7 @@ against the existing bank only after constructing its answer.
 |---|---|---|
 | kernel125.json | all125 phases, all32768 binary rows, all64 linear subspaces, all125 actual hub attachments,3125 five-cell phase tuples | Direct binary responses agree iff relative coordinates agree; native guard separates the diagonal fibre; actual converse includes polarity; native complement leaves T5. |
 | strong_ports.json | all5040 permutations of P7,21 actual matching attachments,21^3 four-cell relative configurations | Literal tournament automorphisms vs semilinear action; nonnormal but separating promised orbit; whole-field collision; native complement exits family. |
-| root_degree.json | all parent-mask orbits through9,191536 final classes | Independent Burnside totals; every prior automorphism-order histogram; full child-group calculation through7; exact full-bank bijection;81/27 control. |
+| root_degree.json / root_neighbor.json | all parent-mask orbits through9,191536 final classes for each selector | Independent Burnside totals; every prior automorphism-order histogram; full child-group calculation through7; exact full-bank bijections;81/27 control. |
 | root_minimum.json | same universe, original pointed-key order | Entire order-nine bank byte-identical to predecessor; same hostile. |
 | sequence_channels.json | m=0..30,50,100,200; three scalar channels | Independent rational partition sums through30; independent ordinary future-response counts at every executed order; native self-converse census through8. |
 | legacy_repairs.json | original and repaired producers; corrected functions0..30 | Cyclic pair-action average through30; literal ordered-pair tracing on all cycle types through8. |
@@ -58,3 +63,7 @@ Source hashes are recorded in [source_pins.json](source_pins.json).
 The legacy audit additionally records the full pre-repair Git commit.
 The historical control is intentionally reproducible even though its
 producer was false. No historical output file is overwritten.
+
+The shared legacy file received the same parity repair concurrently in
+Session87. Rebase retained its stronger front warning and our explicit
+minimal witness and repair lineage. The merged source was re-audited.

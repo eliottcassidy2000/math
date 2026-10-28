@@ -215,6 +215,24 @@ The generation phase took19.877 seconds in this run; timings exclude
 the subsequent full reference-bank bijection and are not controlled
 cross-session speed ratios.
 
+**Incoming refinement:** Session87's
+[exact generator](../session87_four_vertices_enumeration_20261028/EXACT_GENERATION.md)
+uses neighbor-degree signatures before the exact pointed key. We integrated
+that idea with our minimum convention:
+
+    signature(v)=(d(v), sorted degrees of outneighbors,
+                        sorted degrees of inneighbors).
+
+Replace the degree prefix by this signature; all previous minimum-orbit
+arguments still apply since it is an isomorphism invariant. Its exact
+parent-key tie-breaker remains mandatory. The integrated order-nine run
+uses24005 competitor queries, and its full bank is again checked by an
+exact bijective class map. Generation took9.842 seconds before that audit.
+This extends the incoming refinement to the existing order-nine bank;
+the filter itself is inherited. The incoming code chooses maximum
+signatures and a different pointed-key order; its work counts cannot be
+copied to our minimum selector.
+
 ## K6. One exact structural DAG, three counting channels
 
 For an odd partition lambda of m, let k be its number of parts,

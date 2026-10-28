@@ -16,7 +16,7 @@ weakening its exact isomorphism data.
 | Smallest restricted phase carrier | 25 states, naturally F25; all 125 actual twenty-vertex hub attachments checked. Add a known cross-edge polarity bit for full converse. Native path complement is a different operation and leaves this family. |
 | Full named operations | The relative response plus five named Hamilton guards distinguishes all 125. This is an explicit obstruction, consistent with the inherited all-order named reconstruction theorem. |
 | Frobenius/LCA on actual atoms | Paley7 has chart group21; pinning one owner leaves Frobenius3. All 21 actual fourteen-vertex matching attachments are strong; all 9261 four-cell relative configurations recover their pair data from a gain tree. |
-| Constructive A000568 | All 191536 order-nine classes regenerated. Degree-first root selection uses 278461 re-rooting tests instead of 15449472; exact bijection with the prior bank and all automorphism-order histograms verified. |
+| Constructive A000568 | All 191536 order-nine classes regenerated. Degree-first root selection uses 278461 re-rooting tests instead of15449472; integrating Session87's neighbor-degree refinement reduces this further to24005. Exact bank bijections and all automorphism-order histograms verified. |
 | Related counting sequences | One existing defect DAG evaluates A000568(m), SC(2m), SC(2m+1), at m=0..30,50,100,200. At m=200 it shares 2219922 odd-factor evaluations across three channels. |
 | Old-work repairs | Two March partition generators repaired; first historical failures at orders5 and2. Corrected counting functions agree with independent cyclic pair-action sums through30. |
 

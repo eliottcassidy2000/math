@@ -102,8 +102,9 @@ encoding but asks only whether the chosen root is minimum.
 | Prior full operator | 15449472 | 1716608 | unbounded in that run |
 | Minimum pointed key, no degree prefix | 5986841 | 0 | 65536 |
 | Minimum key with degree first | 278461 | 0 | 65536 |
+| Neighbor-degree refinement integrated from Session87 | 24005 | 0 | 65536 |
 
-The last method rejected1405799 candidates by degree before any deletion
+The degree-first method rejected1405799 candidates by degree before any deletion
 isomorphism. It skipped2049256 higher-degree roots during remaining
 candidate scans. It still used the actual parent action on masks, and
 retained full accepted representatives. The complete order-nine bank
@@ -117,6 +118,31 @@ transport are not newly implemented. A concrete next optimization is to
 enumerate only masks satisfying the degree filter, before constructing
 extensions, but it must preserve one representative per parent-mask orbit.
 This is OPEN implementation work, not a claimed result.
+
+### Incoming work integrated before publication
+
+At origin/main 7a0bab9bfa, the concurrent
+[Session87 synthesis](../session87_four_vertices_enumeration_20261028/README.md)
+arrived with the same odd-generator repair, a stronger root invariant,
+and a faster complete-prefix scalar implementation. We retained both
+correction routes when resolving the shared source edit. Its additional
+hypergraph repair is preserved and is outside our independent audit.
+
+The neighbor-degree selector was incorporated and tested through9 here.
+It eliminates another108479 candidates after the initial degree filter,
+uses24005 competitor-key queries and12229 exact parent lookups, and
+preserves the entire class bank. Its observed generation time was9.842
+seconds, excluding the exact full-bank comparison. Its rejection
+certificate can be smaller without quotienting away a single accepted
+child type.
+
+Session87's degree-bucket counter improves the existing complete-prefix
+baseline and reports controlled benchmarks. Our shared three-channel
+experiment has a different output and graph construction. We do not
+compare their wall times as if they had the same workload. The recovered
+K4 partial-spread result also agrees with K4 above: injectivity on a
+promised set can survive a nontrivial linear kernel, but unrestricted
+addition can restore the information requirement.
 
 ## Cross-topic maps and their decisive boundaries
 
@@ -148,7 +174,7 @@ their cardinalities.
 
 ## The 81/27 hostile remains active
 
-Both generator receipts reconstruct the12-vertex control. The two
+All three generator receipts reconstruct the12-vertex control. The two
 tournaments have the same67 labelled cyclic triples and462915 Hamilton
 paths each, but automorphism orders81 and27. The identity vertex order
 is a legal Hamilton path only in the first. Thus cyclic triples and

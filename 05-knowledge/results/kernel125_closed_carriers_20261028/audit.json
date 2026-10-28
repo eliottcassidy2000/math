@@ -1,14 +1,15 @@
 {
   "status": "PASS",
-  "checks": 137,
-  "source_pins": 17,
+  "checks": 180,
+  "source_pins": 19,
   "optimized_byte_identical_receipts": [
     "kernel125.json",
     "strong_ports.json",
     "legacy_repairs.json"
   ],
   "degree_generation_replayed_through": 8,
+  "neighbor_generation_replayed_through": 8,
   "order9_full_receipt_checked": true,
   "order9_reference_audit": "full exact bijection was executed in root_minimum.py --degree-first",
-  "local_document_links_checked": 25
+  "local_document_links_checked": 27
 }
