@@ -1,0 +1,20 @@
+{
+  "revision": "4e88a9401adb3d1960053263d9254e8582149053",
+  "scope": "tracked md/tex/org, excluding agents, dot paths and this packet",
+  "files_scanned": 15990,
+  "unique_blobs_scanned": 14914,
+  "matched_files": 15145,
+  "files_by_theme": {
+    "7": 12691,
+    "56": 1684,
+    "5": 13263,
+    "15": 6988,
+    "codes": 1517,
+    "ancestors": 501,
+    "exceptional": 669,
+    "borwein": 134,
+    "square_graceful": 840,
+    "collatz": 7822,
+    "geometry": 2487
+  }
+}
