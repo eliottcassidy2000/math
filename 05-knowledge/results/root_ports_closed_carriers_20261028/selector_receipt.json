@@ -1,0 +1,78 @@
+{
+  "abstract_three_interior_hostile_rejected": true,
+  "candidate_patterns": 779625,
+  "checks": 15160,
+  "equality_partitions": 15,
+  "exterior_triangle_double_contacts": [
+    [
+      -1,
+      1
+    ],
+    [
+      1,
+      -1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "improper_boundary_rejected": 765514,
+  "interior_choices": 495,
+  "matchings": 105,
+  "oriented_bridge_matchings": 56,
+  "points": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "proper_patterns_extend": 14111,
+  "proper_patterns_in_56_family": 6372,
+  "small_complement_controls": 1045,
+  "status": "FINITE-EXACT"
+}

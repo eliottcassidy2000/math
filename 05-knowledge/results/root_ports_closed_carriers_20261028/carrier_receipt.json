@@ -1,0 +1,198 @@
+{
+  "checks": 407011,
+  "full_labelled_independent_order": 6,
+  "generation": [
+    {
+      "accepted_classes": 1,
+      "baseline_competitor_leaves": 0,
+      "baseline_competitor_queries": 0,
+      "baseline_preparation_leaves": 1,
+      "canon_searches": 1,
+      "competitor_leaves": 0,
+      "order": 1,
+      "pointed_mask_orbits": 1,
+      "preparation_leaves": 1,
+      "production_max_canonicalized_order": 0
+    },
+    {
+      "accepted_classes": 1,
+      "baseline_competitor_leaves": 0,
+      "baseline_competitor_queries": 0,
+      "baseline_preparation_leaves": 1,
+      "canon_searches": 1,
+      "competitor_leaves": 0,
+      "order": 2,
+      "pointed_mask_orbits": 2,
+      "preparation_leaves": 1,
+      "production_max_canonicalized_order": 1,
+      "stable_selector_rejected": 1
+    },
+    {
+      "accepted_classes": 2,
+      "baseline_competitor_leaves": 1,
+      "baseline_competitor_queries": 2,
+      "baseline_preparation_leaves": 1,
+      "canon_searches": 2,
+      "competitor_key_queries": 2,
+      "competitor_leaves": 1,
+      "order": 3,
+      "pointed_mask_orbits": 4,
+      "preparation_leaves": 1,
+      "production_max_canonicalized_order": 2,
+      "stable_selector_rejected": 2
+    },
+    {
+      "accepted_classes": 4,
+      "baseline_competitor_leaves": 1,
+      "baseline_competitor_queries": 2,
+      "baseline_preparation_leaves": 7,
+      "canon_searches": 4,
+      "competitor_key_queries": 2,
+      "competitor_leaves": 1,
+      "order": 4,
+      "pointed_mask_orbits": 12,
+      "preparation_leaves": 7,
+      "production_max_canonicalized_order": 3,
+      "stable_selector_rejected": 8
+    },
+    {
+      "accepted_classes": 12,
+      "baseline_competitor_leaves": 13,
+      "baseline_competitor_queries": 6,
+      "baseline_preparation_leaves": 17,
+      "canon_searches": 11,
+      "competitor_key_queries": 6,
+      "competitor_leaves": 5,
+      "order": 5,
+      "pointed_mask_orbits": 48,
+      "preparation_leaves": 12,
+      "production_max_canonicalized_order": 4,
+      "stable_selector_rejected": 36
+    },
+    {
+      "accepted_classes": 56,
+      "baseline_competitor_leaves": 59,
+      "baseline_competitor_queries": 18,
+      "baseline_preparation_leaves": 179,
+      "canon_searches": 30,
+      "competitor_key_queries": 14,
+      "competitor_leaves": 14,
+      "order": 6,
+      "pointed_mask_orbits": 296,
+      "preparation_leaves": 36,
+      "production_max_canonicalized_order": 5,
+      "stable_selector_rejected": 240
+    },
+    {
+      "accepted_classes": 456,
+      "baseline_competitor_leaves": 901,
+      "baseline_competitor_queries": 90,
+      "baseline_preparation_leaves": 1039,
+      "canon_searches": 130,
+      "competitor_key_queries": 52,
+      "competitor_leaves": 67,
+      "complete_key_rejected": 2,
+      "order": 7,
+      "pointed_mask_orbits": 3040,
+      "preparation_leaves": 145,
+      "production_max_canonicalized_order": 6,
+      "stable_selector_rejected": 2582
+    },
+    {
+      "accepted_classes": 6880,
+      "baseline_competitor_leaves": 8787,
+      "baseline_competitor_queries": 693,
+      "baseline_preparation_leaves": 28747,
+      "canon_searches": 861,
+      "competitor_key_queries": 146,
+      "competitor_leaves": 162,
+      "complete_key_rejected": 2,
+      "order": 8,
+      "pointed_mask_orbits": 54256,
+      "preparation_leaves": 1027,
+      "production_max_canonicalized_order": 7,
+      "stable_selector_rejected": 47374
+    },
+    {
+      "accepted_classes": 191536,
+      "canon_searches": 12966,
+      "competitor_key_queries": 1286,
+      "competitor_leaves": 1248,
+      "complete_key_rejected": 80,
+      "order": 9,
+      "pointed_mask_orbits": 1716608,
+      "preparation_leaves": 13276,
+      "production_max_canonicalized_order": 8,
+      "stable_selector_rejected": 1524992
+    }
+  ],
+  "nine_port_native_closure": {
+    "closure_sizes": [
+      9,
+      64
+    ],
+    "distinct_named_path_guard_profiles": 64,
+    "lost_kernel_bits": 2,
+    "same_four_probes_different_guards": [
+      0,
+      45
+    ],
+    "seed_ports": [
+      1,
+      2,
+      4,
+      5,
+      8,
+      16,
+      24,
+      32,
+      34
+    ],
+    "states": 64
+  },
+  "no_polynomial_or_scalar_count_speed_claim": true,
+  "order_nine_bank_audit": {
+    "classes": 191536,
+    "exact_class_bijection": true,
+    "reference_sha256": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec",
+    "reference_uses_different_generation_engine": true
+  },
+  "status": "FINITE-EXACT",
+  "strong_attachments": [
+    {
+      "automorphisms": 3,
+      "binary_attachment_orbits": 4,
+      "canon_leaves": 3,
+      "object": "C3",
+      "transporter_0_to_4": null
+    },
+    {
+      "automorphisms": 5,
+      "binary_attachment_orbits": 8,
+      "canon_leaves": 5,
+      "object": "T5",
+      "transporter_0_to_4": 1
+    },
+    {
+      "automorphisms": 21,
+      "binary_attachment_orbits": 12,
+      "canon_leaves": 21,
+      "object": "Paley7",
+      "transporter_0_to_4": 3
+    },
+    {
+      "automorphisms": 81,
+      "binary_attachment_orbits": 176,
+      "canon_leaves": 81,
+      "object": "81",
+      "transporter_0_to_4": 27
+    },
+    {
+      "automorphisms": 27,
+      "binary_attachment_orbits": 512,
+      "canon_leaves": 27,
+      "object": "27",
+      "transporter_0_to_4": 0
+    }
+  ]
+}
