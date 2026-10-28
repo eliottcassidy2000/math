@@ -2,7 +2,7 @@
   "committed_sources": {
     "01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md": "717b71a25a98b293c05115f50d67c0abe1c2df128126f1ec739357f30fecf58a",
     "01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md": "6d3d58d3f78b85daf87175d6a949414fd23c549d57f092f251bbf0bcbc92bdae",
-    "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md": "bf5828d7b4f9e83417039b6ce5670c612f08ba6aed774f9abc5a87bea6edc431",
+    "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2",
     "05-knowledge/results/dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md": "017707e6519a9aa211a8925119ad846fce1a76a42e92d0c51995d28a56480790",
     "05-knowledge/results/liouville_mobius_11_13_20261026/ARITHMETIC.md": "92d0ee805d68b757102f820c869e0d8f5940e1c0fe2281344d6cacfa41b85642",
     "05-knowledge/results/liouville_mobius_11_13_20261026/README.md": "f9a643e265515eca623ef9a0cf420320da6014805d70a0b849b569d91e82fe2d",
@@ -15,7 +15,7 @@
     "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31",
     "05-knowledge/results/tournament_composition_classification_20261026/README.md": "9816d23a9eed30006cd8f71be7a936fea007973b6610a233b739fcfa134040a0"
   },
-  "compression_incoming_revision": "20cd9e3bc7772743f25da04d9eade5333d966e69",
+  "compression_incoming_revision": "b187424274843eb16f67e949438d0d4fc8b43fc8",
   "external_sources": [
     {
       "scope": "near-perfect terminology and historical family; introduction",
