@@ -150,6 +150,10 @@ def main():
         for size in (1,2):
             zero_subsets += [subset for subset in combinations(ps,size) if square(sigma(prod(subset)))]
         check(bool(zero_subsets)==(3 in fs),f"three-column dependence type {n}")
+    check(7*19*89==11837 and sigma(11837)==14400,
+          "incoming Frobenius preserves square total")
+    check(2*2-4*3*3946==-4*11837 and gcd(gcd(3,2),3946)==1 and 0<2<3<3946,
+          "incoming Frobenius does not preserve idoneality")
     # Root-leg map: all primitive Euclid pairs in this finite parameter box.
     root_rows = []
     hostile = None

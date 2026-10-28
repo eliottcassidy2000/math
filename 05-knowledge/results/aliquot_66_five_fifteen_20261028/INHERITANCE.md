@@ -66,6 +66,28 @@ bijection and is not advanced as a replacement. Its hostile at
 canonical even chart of the incoming work is stronger and is the one
 used by P4.
 
+## Second incoming wave
+
+The pre-push fetch advanced to `a14c71ec13`, including `c0d47b3f14`,
+`4f4e8daeff`, `48277e33d0` and `9e996bbdd4`. Relevant mathematical sections
+of [incidence_attractors](../incidence_attractors_20261028/THEORY.md) and
+[unifying_relations](../unifying_relations_20261028/THEORY.md) were read:
+arithmetic circuits and the guarded atom4, the Fano extension, equal
+low-order marginals, Frobenius, persistent sigma towers, and the
+divisor-height adjunction/carry law. P7's matroid reading is already in
+these packets and is now explicitly credited.
+
+The Fano code has14 circuits: seven lines and their seven four-element
+complements. The incoming correction is preserved alongside the present
+historical-five correction in the shared mistakes ledger. Minimum-weight
+codewords do not exhaust minimal supports.
+
+Their Frobenius70→11837 preserves square sigma. P7 adds the strictly
+reduced form `(3,2,3946)`, showing that it changes idoneality. This is the
+specific additional transfer test performed here. The latest harmonic
+crossing work has an OPEN preregistered hypothesis and RESERVED theorem
+slots4837/4838; none is used as a proved dependency.
+
 ## What is added here
 
 - A self-contained HNF/content derivation of the classical sigma/psi

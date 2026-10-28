@@ -121,7 +121,7 @@
       "q": 10799
     }
   ],
-  "checks": 68305,
+  "checks": 68307,
   "class_forms": {
     "15": {
       "discriminant": -60,
@@ -950,7 +950,7 @@
       14118
     ]
   ],
-  "script_sha256": "d593b5efc080e51cb9d1e2a28944b16ededaf93d42c4bc65cdac740e72fd5ab0",
+  "script_sha256": "fd56fc7fec9e5f1ab8d1c5e9bab9e1f3e226767a4e841644730d75412752e97f",
   "sigma_source_limit": 200000,
   "square_sigma_sources": 2242,
   "status": "FINITE-EXACT controls, not an independent proof audit",

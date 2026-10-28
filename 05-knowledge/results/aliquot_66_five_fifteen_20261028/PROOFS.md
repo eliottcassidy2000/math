@@ -271,6 +271,10 @@ matroid. A squarefree source N has square sigma exactly when the columns
 on its support sum to zero. This is the exponent-parity construction
 already used by Session82 to build coprime square-sigma blocks; the
 matroid language records which subsets carry the dependence.
+The later incoming [unifying-relations packet](../unifying_relations_20261028/THEORY.md)
+and [incidence packet](../incidence_attractors_20261028/THEORY.md) supply
+this same interpretation and explicit graphic/Fano carriers. They are
+concurrent inherited work, not a novelty claim for this section.
 
 There is exactly one zero column: v(3)=0. Indeed p+1 square forces
 `p=(h−1)(h+1)`, hence h2,p3. Therefore a squarefree square-sigma source
@@ -295,6 +299,16 @@ accompanied by a **different internal factorization of the cancellation**.
 The full class-group calculations go the other way:66 has a hidden genus
 bit while70 has none. Neither kind of decomposability determines the other.
 This is a useful hostile to identifying their two parity spaces.
+
+**The incoming Frobenius transport loses idoneality.** In its explicitly
+marked F8 model the incidence packet sends `{2,5,7}` to `{19,89,7}`.
+Thus70 maps to11837, and sigma144 to14400; both are squares. But the form
+`(3,2,3946)` has discriminant−47348=−4·11837, is primitive and strictly
+reduced, and is distinct from its inverse. Hence11837 is non-idoneal,
+whereas70 is idoneal by P3. A genuine symmetry of the arithmetic parity
+incidence therefore need not preserve the class-genus kernel. The field
+and basis marking selecting this Frobenius are retained; no unmarked
+canonical action on natural numbers is claimed.
 
 ## Research questions arising from these proofs
 

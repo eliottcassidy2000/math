@@ -264,3 +264,39 @@ that uniformly on one arithmetic ray. It does not yet produce the
 weighted cancellation bound required by Collatz or a six-colour forcing
 gadget. Those transfers have named missing maps in P4–P6, rather than an
 asserted identification by matching numbers.
+
+## 8. Incoming arithmetic incidence sharpens the six-number chart
+
+The [incidence packet](../incidence_attractors_20261028/THEORY.md) gives
+an explicit graph for atoms{4,2,5,3,7,13,11}: sigma-signature columns in
+coordinates(2,3,7) are reduced incidence columns. Atom3 is a loop,2/11
+are parallel edges, and{2,5,7},{4,7,13} are triangles. The prime-support
+guard forbids2 and4 together. There are96 legal subsets and12 legal
+zero-signature subsets. Two legal circuits can have illegal symmetric
+difference; a formal kernel is not automatically the arithmetic state
+space. The incoming exact contextual quotients86,87,96 use different
+observations and are not state counts for our class-group problem.
+
+Seven suitable prime atoms extend the chart to the Fano matroid and
+Hamming[7,4,3] code. All14 circuits, including four-element complements,
+are retained after the incoming correction. This matroid is nongraphic:
+a simple rank-three graph matroid has at most six edges. Thus the common
+language has to accommodate binary incidence beyond ordinary graph cycles.
+
+This is a second precise interpretation of the six-number pattern,
+separate from height iteration. The least common legal multiplier205
+distinguishes the square-sigma outputs of4 and13 despite their identical
+height futures. Enlarging the operation language changes its quotient.
+
+The [unifying-relations packet](../unifying_relations_20261028/THEORY.md)
+also proves
+`σ(2^a·33)=σ(2^a·35)=σ(2^a·47)=48(2^(a+1)−1)`;
+only a1 has square sigma. The two triple towers balance at a2; the47
+tower has no composite balance layer. This strengthens the isolated
+66/70 comparison without identifying their class groups.
+
+Finally the actual F8 Frobenius carries70 to11837 and preserves square
+sigma. P7's form `(3,2,3946)` proves that the latter is non-idoneal,
+whereas70 is idoneal. A linear incidence symmetry can therefore lose a
+quadratic-order predicate. This is a concrete cross-thread obstruction,
+with the source labels and the lost property both specified.

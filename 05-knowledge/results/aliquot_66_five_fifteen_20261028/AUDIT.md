@@ -8,7 +8,7 @@ or hypothesis ID was reserved or promoted.
 
 `check.py` uses only the Python standard library and explicit exceptions;
 none of its checks disappears under optimization. The normal and `-O`
-outputs agree byte-for-byte with `receipts.json`: **68,305 checks**.
+outputs agree byte-for-byte with `receipts.json`: **68,307 checks**.
 
 Declared universes and independent paths:
 
