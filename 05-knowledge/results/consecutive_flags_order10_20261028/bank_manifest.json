@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "artifacts": {
+    "parents9.u64.gz": {
+      "bytes": 512500,
+      "uncompressed_bytes": 1532288,
+      "sha256": "92cb19bbcdc0bcb58b0ded354aacdd1809c72251e2e29d28d23f92de2d8bbe05",
+      "uncompressed_sha256": "ebf130ce836492c1d8031e08d1a1a08ba25cce4944e28fd00320677c5bc54238"
+    },
+    "flags10.varint.gz": {
+      "bytes": 317399,
+      "uncompressed_bytes": 9914682,
+      "sha256": "ef5cf3d13f5b679890cbe69bcd1f78189161953e726e12d169fb576845677ef7",
+      "uncompressed_sha256": "bba8bc51fc8509fdd0e5dbc94635bb87a43eef6f7d1b600cf37868e265f15679"
+    }
+  },
+  "decoded_tournament_order": 10,
+  "flag_parent_order": 9,
+  "address_bits": 27,
+  "parent_index_bits": 18,
+  "attachment_mask_bits": 9,
+  "decoded_dense_bank_bytes": 77864448,
+  "combined_compressed_bytes": 829899
+}

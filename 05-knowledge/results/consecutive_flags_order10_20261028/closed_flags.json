@@ -1,0 +1,128 @@
+{
+  "status": "FINITE-EXACT",
+  "operations": [
+    "native fixed-path complement",
+    "uniform fresh re-marking preserving distinguished vertex"
+  ],
+  "output": "ordinary child class and ordinary deletion-parent class",
+  "results": [
+    {
+      "order": 2,
+      "literal_path_root_states": 2,
+      "pointed_types": 2,
+      "child_parent_observations": 1,
+      "coarsest_closed_carrier": 1,
+      "refinement_sizes": [
+        1
+      ],
+      "stronger_pointed_pair_carrier": 2,
+      "witnesses": {
+        "distinct_pointed_types_same_declared_future": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "literal_path_root_states": 6,
+      "pointed_types": 4,
+      "child_parent_observations": 2,
+      "coarsest_closed_carrier": 2,
+      "refinement_sizes": [
+        2
+      ],
+      "stronger_pointed_pair_carrier": 6,
+      "witnesses": {
+        "distinct_pointed_types_same_declared_future": [
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "literal_path_root_states": 32,
+      "pointed_types": 12,
+      "child_parent_observations": 7,
+      "coarsest_closed_carrier": 22,
+      "refinement_sizes": [
+        7,
+        18,
+        20,
+        22
+      ],
+      "stronger_pointed_pair_carrier": 32,
+      "witnesses": {
+        "equal_child_parent_classes_different_futures": [
+          0,
+          4
+        ],
+        "distinct_pointed_types_same_declared_future": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "literal_path_root_states": 320,
+      "pointed_types": 48,
+      "child_parent_observations": 29,
+      "coarsest_closed_carrier": 293,
+      "refinement_sizes": [
+        29,
+        208,
+        263,
+        293
+      ],
+      "stronger_pointed_pair_carrier": 293,
+      "witnesses": {
+        "equal_child_parent_classes_different_futures": [
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "order": 6,
+      "literal_path_root_states": 6144,
+      "pointed_types": 296,
+      "child_parent_observations": 215,
+      "coarsest_closed_carrier": 5442,
+      "refinement_sizes": [
+        215,
+        4941,
+        5279,
+        5442
+      ],
+      "stronger_pointed_pair_carrier": 5442,
+      "witnesses": {
+        "equal_child_parent_classes_different_futures": [
+          0,
+          5
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "literal_path_root_states": 229376,
+      "pointed_types": 3040,
+      "child_parent_observations": 2591,
+      "coarsest_closed_carrier": 207070,
+      "refinement_sizes": [
+        2591,
+        201421,
+        204756,
+        207070
+      ],
+      "stronger_pointed_pair_carrier": 207070,
+      "witnesses": {
+        "equal_child_parent_classes_different_futures": [
+          0,
+          6
+        ]
+      }
+    }
+  ]
+}
