@@ -6,7 +6,7 @@
 
 The strongest unifying statement is not that 7,21,11,13 or A1,A2 denote interchangeable objects. It is that a representation must be judged against its **future operations and requested output**. Several apparently strong observers provably forget the very coordinate that a later symmetry calculation needs. Conversely, some quotients are exactly closed under an entire operation grammar, so collecting more of the same observations can never restore that coordinate.
 
-This packet establishes eight complementary parts.
+This packet establishes nine complementary parts.
 
 ### 1. A complete path observer can still hide exponentially differing symmetries
 
@@ -60,6 +60,12 @@ The H and H/|Aut| exclusions of 7 and 21 remain separately attributed inherited 
 
 A mixed multiplier genuinely fails: q=40 sends both 22,655 and 24,275 to observations (5857,1303480), and the complete inverse algorithm certifies exactly those two sources. The valuation profile on multiplier primes restores injectivity. This is an exact shared *descent criterion* with tournament attachment, not an identification of their objects or a claim about Collatz termination or prime untouchables.
 
+### 9. Even group order, exponent and nilpotency class can all collide
+
+[GROUP_SHAPES.md](GROUP_SHAPES.md) strengthens the counterexample factory again. At order 4·3^h, it constructs at least h pairwise nonisomorphic automorphism groups within one full path-observer fiber, all of order 3^(3^h+1), exponent 9 and nilpotency class 3. Moving the single active symmetry node through the composition tree changes the center and lower central series without changing these coarse invariants.
+
+At 36 vertices the two groups both have order **59,049**, but their centers have orders **2,187 and 27**. Their commutator subgroups have orders 9 and 729. Both generated permutation groups were enumerated completely; identifying them as the full automorphism groups uses the canonical decomposition theorem, not an unperformed search through 36! permutations. Thus even knowing the prime modules and total symmetry order does not replace the location of the stabilizer action in the composition tree.
+
 ## What to regard as the proposed unifying framework
 
 For each representation, specify:
@@ -75,7 +81,7 @@ The exact theorems above instantiate this framework. A useful next theorem must 
 
 ## Reproduce the packet
 
-All nine Python files use the standard library and explicit failure checks. From this directory:
+All ten Python files use the standard library and explicit failure checks. From this directory:
 
 ```sh
 python3 check_lifting.py
@@ -87,6 +93,7 @@ python3 check_sparse_symmetry.py
 python3 check_conflict.py
 python3 check_root_cost.py
 python3 check_aliquot.py
+python3 check_group_shapes.py
 ```
 
 Each was also checked under `python3 -O`, with matching output. `check_observer_grammar.py` imports the adjacent `check_lifting.py`; the others are standalone. Results are printed, not required as preexisting receipt files. The reports distinguish public-checker ranges, additional independent audits, symbolic proofs, and inherited citations. No large-class enumeration beyond the stated bounds is implied.

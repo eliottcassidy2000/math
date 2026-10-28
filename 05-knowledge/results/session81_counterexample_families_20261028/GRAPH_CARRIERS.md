@@ -22,7 +22,7 @@ Live board: (i) marked free-coordinate cubes, (ii) automorphism-sign-even graph 
 
 ### The recovered trijection, precisely
 
-Let t(n) be the number of tournament isomorphism classes. For a tournament together with one specified coherent mark on all n vertices:
+Let t(n) be the number of tournament isomorphism classes. In this marked-trijection comparison assume n≥4, so the directed cycle C_(n−1) is a simple cycle. For a tournament together with one specified coherent mark on all n vertices:
 
 | mark | orientations | marked-type count |
 |---|---|---:|
