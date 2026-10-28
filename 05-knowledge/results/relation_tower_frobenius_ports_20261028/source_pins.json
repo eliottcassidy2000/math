@@ -1,0 +1,79 @@
+{
+  "base": "5edadbae58b0541bf75a1b9adda42f854048fbe8",
+  "random_seed": 71564256,
+  "random_universe": "tracked result Markdown paths, Git sorted order at base",
+  "random_paths": [
+    "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-incoming-review/REPORT.md",
+    "05-knowledge/results/clock_owned_runner_events_20261021/audit/source/README.md",
+    "05-knowledge/results/tournament_graph_distance_four_20261020/audit/AUDIT.md",
+    "05-knowledge/results/unifying_binary_dependence_free_bits_7_15_56_20261028/README.md",
+    "05-knowledge/results/odd_cell_completion_20261023/seven/AUDIT.md"
+  ],
+  "sources": [
+    {
+      "path": "05-knowledge/results/clock_owned_runner_events_20261021/audit/source/README.md",
+      "blob": "958325904535d45d3567a47b3f583c2f221038ce",
+      "sha256": "cf49309a88e3113843a0b7cfc03ea3b15ec8fa789d98c85e314e8df3e9e7fdc3"
+    },
+    {
+      "path": "05-knowledge/results/free_bits_seven_fiftysix_20261028/INCOMING_REPAIR.md",
+      "blob": "c0ec806e146c50fb17857e9598ed4080c25bb23b",
+      "sha256": "888757be47f96b9cc02812bf1d0acf762963e8a0d9dbe2e66dfaf1f42e7a5ce9"
+    },
+    {
+      "path": "05-knowledge/results/free_bits_signed_incidence_20261028/THEORY.md",
+      "blob": "bb88c509bc19b03bbad6daff46786dba6caa326d",
+      "sha256": "628c98efc18bce12879a4888fb63cbdf87f1e1116d95d0693fe937f24f0d6a07"
+    },
+    {
+      "path": "05-knowledge/results/guard_reconstruction_20261026/README.md",
+      "blob": "fffb450732023f41e37b5a308b2e92e72866975d",
+      "sha256": "0e8d76b8bfca01b5c3d016a62dcd5aff3c2450a41971c7a46a0d3a91b6157799"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/five/README.md",
+      "blob": "816f896b285cabaf47acca9299f5fd0eaffa59a3",
+      "sha256": "4e23886e6077f0c730bb84ae59067e2b53b942cfb989ea79e24fd9c604a6479f"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/AUDIT.md",
+      "blob": "dd80bcde1e97ab1baaf5f3fc08918a42e01cd16e",
+      "sha256": "39d30f837cdcdf42d92bd2f75ea21e74878059bdddc73490996838425ddd6f7a"
+    },
+    {
+      "path": "05-knowledge/results/odd_cell_completion_20261023/seven/PROOF.md",
+      "blob": "442d078cf66892c32bdac553831c79011cc92f26",
+      "sha256": "f25d99937c7bb1f7b4d00c5aac429f15607a16f42f143dfdf2d488fce297671f"
+    },
+    {
+      "path": "05-knowledge/results/relation_gluing_7_15_20261028/THEOREMS.md",
+      "blob": "242fe6e7f35daa18aaec8e92f3a8c51b99128bff",
+      "sha256": "17345d518b9c3c556cb88ce6877f860e8b0887ff5140fa6f09d818824ca8d60d"
+    },
+    {
+      "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-incoming-review/REPORT.md",
+      "blob": "d1552604fa284713bc62e6cd9f6f2ee88d8bbda4",
+      "sha256": "e7c8ada6114c2fc6a5837eb04d93ffb586a21c17f1050ba06a50131d20fcc877"
+    },
+    {
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/COUNT_FREE_ENUMERATION.md",
+      "blob": "684c0c90a63e7d4b28f20cd25bd5f7bbdf75c337",
+      "sha256": "4d1ce0b7022ed3d3a9c25cd124ec0e30ec7e65a9a4ddc454a1d2bd7f71d9aa7e"
+    },
+    {
+      "path": "05-knowledge/results/session79_tournament_enumeration_20261027/ROOT_SWITCH.md",
+      "blob": "54206575a9af266c1d1d8729e459da6659d586bc",
+      "sha256": "e2fe8f6b5fbb3d654effb523cbbe6e2282f06d70928c5b6e3734f2b10be910ca"
+    },
+    {
+      "path": "05-knowledge/results/tournament_graph_distance_four_20261020/audit/AUDIT.md",
+      "blob": "4bdab7365c89d1fb11bf6d745949ea8316457bb5",
+      "sha256": "0940c7edcc4d558746702178f50941bd4ebb13faaf982da85f1df73fb8995187"
+    },
+    {
+      "path": "05-knowledge/results/unifying_binary_dependence_free_bits_7_15_56_20261028/README.md",
+      "blob": "3a672ae2af35d1fb5e92b4e6f178e33a73752c09",
+      "sha256": "9d669a7e7125dbc20fdfa802804bda169fa99002744fce48af334c15293b499a"
+    }
+  ]
+}

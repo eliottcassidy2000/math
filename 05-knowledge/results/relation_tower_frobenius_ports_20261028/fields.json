@@ -1,0 +1,281 @@
+{
+  "status": "FINITE-EXACT",
+  "fields": [
+    {
+      "degree": 2,
+      "polynomial_mask": 7,
+      "form_spaces": {
+        "frobenius": {
+          "dimension": 1,
+          "forms": 2,
+          "nondegenerate": 1
+        },
+        "spread": {
+          "dimension": 1,
+          "forms": 2,
+          "nondegenerate": 1
+        },
+        "joint": {
+          "dimension": 1,
+          "forms": 2,
+          "nondegenerate": 1
+        }
+      },
+      "canonical_form_mask": 1,
+      "spread_lines": 3,
+      "normal_elements": 2,
+      "full_period_elements": 2,
+      "normal_orbit_pairs_minimum_bit_queries": {
+        "1": 1
+      },
+      "sharp_query_witness": {
+        "x": 2,
+        "y": 2,
+        "profiles": [
+          2,
+          1
+        ]
+      },
+      "full_period_nonnormal_hostile": null,
+      "three_port_relative_states": 4
+    },
+    {
+      "degree": 4,
+      "polynomial_mask": 19,
+      "form_spaces": {
+        "frobenius": {
+          "dimension": 2,
+          "forms": 4,
+          "nondegenerate": 2
+        },
+        "spread": {
+          "dimension": 2,
+          "forms": 4,
+          "nondegenerate": 3
+        },
+        "joint": {
+          "dimension": 1,
+          "forms": 2,
+          "nondegenerate": 1
+        }
+      },
+      "canonical_form_mask": 60,
+      "spread_lines": 5,
+      "normal_elements": 8,
+      "full_period_elements": 12,
+      "normal_orbit_pairs_minimum_bit_queries": {
+        "3": 4
+      },
+      "sharp_query_witness": {
+        "x": 8,
+        "y": 8,
+        "profiles": [
+          14,
+          13,
+          11,
+          7
+        ]
+      },
+      "full_period_nonnormal_hostile": {
+        "x": 2,
+        "x_orbit": [
+          2,
+          4,
+          3,
+          5
+        ],
+        "x_span_rank": 3,
+        "y": 2,
+        "other_y": 3,
+        "y_orbit": [
+          2,
+          4,
+          3,
+          5
+        ],
+        "profile": 10
+      },
+      "three_port_relative_states": 16
+    },
+    {
+      "degree": 6,
+      "polynomial_mask": 67,
+      "form_spaces": {
+        "frobenius": {
+          "dimension": 3,
+          "forms": 8,
+          "nondegenerate": 2
+        },
+        "spread": {
+          "dimension": 3,
+          "forms": 8,
+          "nondegenerate": 7
+        },
+        "joint": {
+          "dimension": 1,
+          "forms": 2,
+          "nondegenerate": 1
+        }
+      },
+      "canonical_form_mask": 27760,
+      "spread_lines": 9,
+      "normal_elements": 24,
+      "full_period_elements": 54,
+      "normal_orbit_pairs_minimum_bit_queries": {
+        "3": 8,
+        "5": 8
+      },
+      "sharp_query_witness": {
+        "x": 32,
+        "y": 32,
+        "profiles": [
+          62,
+          61,
+          59,
+          55,
+          47,
+          31
+        ]
+      },
+      "full_period_nonnormal_hostile": {
+        "x": 2,
+        "x_orbit": [
+          2,
+          4,
+          16,
+          12,
+          19,
+          9
+        ],
+        "x_span_rank": 5,
+        "y": 34,
+        "other_y": 35,
+        "y_orbit": [
+          34,
+          52,
+          44,
+          35,
+          53,
+          45
+        ],
+        "profile": 36
+      },
+      "three_port_relative_states": 36
+    },
+    {
+      "degree": 8,
+      "polynomial_mask": 283,
+      "form_spaces": {
+        "frobenius": {
+          "dimension": 4,
+          "forms": 16,
+          "nondegenerate": 8
+        },
+        "spread": {
+          "dimension": 4,
+          "forms": 16,
+          "nondegenerate": 15
+        },
+        "joint": {
+          "dimension": 1,
+          "forms": 2,
+          "nondegenerate": 1
+        }
+      },
+      "canonical_form_mask": 130154448,
+      "spread_lines": 17,
+      "normal_elements": 128,
+      "full_period_elements": 240,
+      "normal_orbit_pairs_minimum_bit_queries": {
+        "4": 192,
+        "6": 32,
+        "7": 32
+      },
+      "sharp_query_witness": {
+        "x": 32,
+        "y": 46,
+        "profiles": [
+          128,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "full_period_nonnormal_hostile": {
+        "x": 2,
+        "x_orbit": [
+          2,
+          4,
+          16,
+          27,
+          94,
+          228,
+          77,
+          250
+        ],
+        "x_span_rank": 7,
+        "y": 18,
+        "other_y": 19,
+        "y_orbit": [
+          18,
+          31,
+          78,
+          255,
+          19,
+          30,
+          79,
+          254
+        ],
+        "profile": 221
+      },
+      "three_port_relative_states": 64
+    }
+  ],
+  "relation_tower": {
+    "point_counts": [
+      7,
+      15,
+      2047
+    ],
+    "ranks": [
+      3,
+      4,
+      11
+    ],
+    "next_rank": 2036,
+    "next_points_expression": "2^2036 - 1",
+    "hamming15_kernel_basis_support_masks": [
+      7,
+      25,
+      42,
+      75,
+      385,
+      642,
+      1155,
+      2184,
+      4233,
+      8330,
+      16523
+    ],
+    "new_triple_relations": 698027,
+    "hamming15_weight_enumerator": {
+      "0": 1,
+      "3": 35,
+      "4": 105,
+      "5": 168,
+      "6": 280,
+      "7": 435,
+      "8": 435,
+      "9": 280,
+      "10": 168,
+      "11": 105,
+      "12": 35,
+      "15": 1
+    }
+  },
+  "active_checks": 699788
+}

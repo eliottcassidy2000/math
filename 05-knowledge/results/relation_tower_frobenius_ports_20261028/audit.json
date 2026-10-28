@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "checks": 900180,
+  "native_metagraph_crosscheck_orders": [
+    1,
+    8
+  ],
+  "full_labelled_permutation_oracle_orders": [
+    1,
+    5
+  ],
+  "arithmetic_triples_integer_checked": 698027,
+  "rank15_chart_kernel": 125,
+  "rank15_wreath_subgroup": 375,
+  "bank_order": 9,
+  "bank_classes": 191536,
+  "bank_uncompressed_sha256": "5c63f503272f4d23713e1c35d459b39b88eec252c667ccaa513701a23fe9790a"
+}
