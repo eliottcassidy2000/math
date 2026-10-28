@@ -282,3 +282,36 @@ sigma144 and edge70->74. The precise connection is cancellation in a
 prime-indexed parity vector, with coprimality as realization guard. Source
 factorization/divisor incidence, total square class, and the chosen observed
 predicate remain distinct coordinates even when numerical totals agree.
+
+## Second incoming result: the eleven-term layer is now closed (INHERITED)
+
+The [dyadic lane's aliquot proof](../dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md)
+at afc3efe0ea independently proves the same all-n factor-pair equivalence,
+and supplies the stronger all-size eleven-term conclusion missing from our
+earlier finite scan. Its result is: tau(n)=12 and s(n)=n+2 iff n is650 or1952.
+Here is the audit of the additional case split, retaining its attribution.
+
+The possible exponent shapes are(11),(5,1),(3,2),(2,1,1). The first is
+deficient. The complete two-prime theorem forces the second or third to
+have n=2^a p, with tau=2(a+1)=12. Thus a=5,p=61,n=1952. It remains to
+classify p^2qr with three distinct primes.
+
+If all are odd, the largest abundancy ratio is
+(1+1/3+1/9)(1+1/5)(1+1/7)=624/315<2. Assigning the square to the smallest
+prime maximizes it because its upgrade factor1+1/[p(p+1)] decreases with p.
+If p=2, sigma(4qr) is divisible by4 whereas2n+2 is2 mod4. In the remaining
+even case write n=2p^2r with p,r distinct odd primes. The equation reduces to
+
+    r=3+(12p+10)/(p^2-3p-3).
+
+For p=3 it is negative; for p=5 it gives r=13; for p=7 it is169/25. For
+p>=11 it lies strictly between3 and5, containing no odd prime. Hence the
+only source of this shape is650. This proves the incoming eleven-term result.
+Ten proper divisors means a prime tenth power and is deficient. Combining
+this with P2/P3 gives the complete excess2 list through eleven proper divisors:
+
+    20,104,464,650,1952.
+
+The earlier finite statement about650 and1952 is therefore upgraded by an
+explicit inherited proof, while the unrestricted excess2 problem stays open.
+No change to the finite computation's universe or receipts is implied.

@@ -26,7 +26,8 @@ and22. No new pattern card or general theorem is promoted from this one lane.
   p^a q excess2 classification does not claim all excess2 numbers have that
   shape:650 is an explicit counterexample. The seven/nine-term uniqueness
   proofs enumerate ALL possible exponent shapes at tau8/tau10. Eleven-term
-  data are not promoted to an all-size classification.
+  data alone are not promoted to an all-size classification. The later
+  inherited eleven-term proof is audited separately below.
 - **Classical attribution:** the redundant-divisor2 family is already in
   Shevelev's Theorem3. Near-perfect means one omitted divisor here, not two.
   We make no infinite prime-supply claim or global assertion that every
@@ -81,3 +82,9 @@ literature-priority claim is added. The new hostile continuation uses only
 the exact divisor identities sigma2=3,sigma5=6,sigma11=12 and coprimality.
 The packet's finite receipts are unchanged by this documentation
 integration; no new census or all-order minimality assertion is introduced.
+
+Read the dyadic lane's ALIQUOT_OVERLAP.md and INCOMING_20261028.md in full
+at afc3efe0ea. It independently proves P1/P2 and extends the excess2 arity
+classification to eleven proper divisors. The last section of THEORY checks
+all four tau12 exponent shapes and the decisive p^2qr inequalities. This is
+an inherited all-size proof upgrade, not an extrapolation from our receipts.

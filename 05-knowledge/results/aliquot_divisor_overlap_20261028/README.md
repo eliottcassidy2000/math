@@ -72,6 +72,13 @@ also connects{2,3,11} and{2,5,7}: sigma(66)=sigma(70)=144. The final section
 of THEORY explains why composition needs the whole prime-exponent parity
 vector of sigma, in addition to the source's Mobius/Liouville signs.
 
+A second incoming [divisor-pair proof](../dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md)
+independently obtains the same all-n compression theorem and closes the next
+layer: the eleven-proper-divisor overlaps are exactly650 and1952. Thus the
+complete excess2 overlap list through eleven proper divisors is
+20,104,464,650,1952. This stronger scope is inherited, not inferred from our
+finite scan; its remaining exponent case is audited at the end of THEORY.
+
 Reproduce from the repository root:
 
 ```text

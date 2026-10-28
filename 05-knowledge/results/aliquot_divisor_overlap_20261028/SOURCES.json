@@ -90,6 +90,18 @@
       "git_blob": "a113c9d0e57e4c2905e37f17faf9edd30b79a96c",
       "sha256_lf": "c511a691d888e505490ec6334882e9a2c0b3798b45c4b072989c04bf63f304c1",
       "read_scope": "Full file: incoming literal-arity, fixed-excess and square-class composition evidence; scoped integration in THEORY.md."
+    },
+    {
+      "path": "05-knowledge/results/dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md",
+      "git_blob": "5932df3372cd03555c96e50553a09627d2ccc9d2",
+      "sha256_lf": "017707e6519a9aa211a8925119ad846fce1a76a42e92d0c51995d28a56480790",
+      "read_scope": "Full file: independent compression theorem and inherited eleven-term classification; unrelated dyadic conclusions not used."
+    },
+    {
+      "path": "05-knowledge/results/dyadic_module_spectrum_20261026/INCOMING_20261028.md",
+      "git_blob": "fc168ba1783e5f8474e53728aa007391ab74a6d8",
+      "sha256_lf": "56910f5a10b1e4f2adb081cfcdaea766e987cbd92f491f277c85894746e316b8",
+      "read_scope": "Full file: independent compression theorem and inherited eleven-term classification; unrelated dyadic conclusions not used."
     }
   ],
   "external_sources": [
@@ -105,5 +117,6 @@
     }
   ],
   "interpretation": "Formal factor-pair compression retains ab=n as well as s(n)=1+a+b;16 fails it and is explicitly retained as a boundary.",
-  "integration_commit": "ae7c073e864d05be74fed85ba0a2bc164e026a6d"
+  "integration_commit": "ae7c073e864d05be74fed85ba0a2bc164e026a6d",
+  "second_integration_commit": "afc3efe0ea8b7b03342318b0e166f86f5dc8e8a4"
 }
