@@ -1,0 +1,23 @@
+{
+  "AUDIT.md": "163cea1b22028bd7c777864d3e4470a2b8da53a96e595aeb2b2fe62a2d5aa386",
+  "boundary-receipt.json": "c463261edfb42a9cabc3f8b0da4defab3d6ba17c579c16f049c6d4cd2019e0ec",
+  "boundary_profile.py": "6ff983ff1083878555034030b9f02e2c34220c6c09465828b487a13ad9db8ae5",
+  "check_theory.py": "d1559b263396ed4b13a939bab6d1937fbfa1d1e35bd9d5f9645154b37bd4f8b6",
+  "CONNECTIONS.md": "6d9c8c80bdae21d9262bb6b8e601223c194572ab81e29ed4855bac7502b46dad",
+  "count_extension.py": "a9e195da4357ee91299083f92ca2463a9dbd858814f7b50ab0b30b796c3969b3",
+  "counts-bucket-350.json": "adaaf5a53e0598eeba78cbf4d1bed695a9a13975965c2e32a55c69df2520fa4e",
+  "counts-reference-350.json": "43818232b34138b5517e60d35ce1a53d1de501f135454b599cc41f5e664b2121",
+  "cross-domain-receipt.json": "0bd3e6008fc00f5a35368641eccfde34cbb7894b1b36ebcea050276ccdaa3f9b",
+  "cross_domain.py": "733963a3ae35f04b3a8f5711e9965c8e98bd6a344927ea3e87b3b314736df54a",
+  "lazy-root-receipt.json": "fa3915f0843bde153d34fba37a5b62c74f45ee6008f54b11cda9af67a76d3b42",
+  "lazy_root_switch.py": "a66e2a30dd74d6848bb15c445a84a3fd7e5073f901da628b3ab69f09896ef077",
+  "pair-square-receipt.json": "44f5ecfecd5ea20aba91f50cc4ef8aa61514288a2923ae22b1df4837453dadd4",
+  "pair_square.py": "397ddbe31f6e6d6d4debe5b2c4e2c7cfa36fa9855164758fc528749b5bb3fda4",
+  "README.md": "ece341d2af99093a4eb873ee710c55e46346e32a8ede0d2647e4dd6bec4727ae",
+  "reconstruct.py": "55b4ec3e08f03e299d0d7210561920bfcfbf8c6766abeac5a8ccac0ad70de779",
+  "rooted-seven.json": "cd3514ce370a1a6cb1159df5417860b440455a0186fed69e464bcce4a349f242",
+  "sources.json": "51df9eed27c13f8877d9fce4f3129f9992685701cef2991e98fa1e27c8f15aa8",
+  "theory-receipt.json": "b3b986b06464e99584f5f13fcc6edde3a94335cc744489d375512c1a1eb9e1b1",
+  "THEORY.md": "a4916e5f1f1bc12c270dde8a07c1abbb0b3e53f8530b326f79e484e2bcdc1b56",
+  "verify.py": "8cc7713c4cc8d5b81783bd4d985fdf76e8ebc51327a3fc806bb99ca8d4f0de19"
+}

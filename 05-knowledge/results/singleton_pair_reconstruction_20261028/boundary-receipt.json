@@ -1,0 +1,290 @@
+{
+  "status": "FINITE-EXACT",
+  "profile_updates": [
+    {
+      "n": 1,
+      "presentations": 1,
+      "boundary_profiles": 1,
+      "updates": 3
+    },
+    {
+      "n": 2,
+      "presentations": 1,
+      "boundary_profiles": 1,
+      "updates": 3
+    },
+    {
+      "n": 3,
+      "presentations": 2,
+      "boundary_profiles": 2,
+      "updates": 6
+    },
+    {
+      "n": 4,
+      "presentations": 8,
+      "boundary_profiles": 7,
+      "updates": 24
+    },
+    {
+      "n": 5,
+      "presentations": 64,
+      "boundary_profiles": 26,
+      "updates": 192
+    },
+    {
+      "n": 6,
+      "presentations": 1024,
+      "boundary_profiles": 68,
+      "updates": 3072
+    },
+    {
+      "n": 7,
+      "presentations": 32768,
+      "boundary_profiles": 154,
+      "updates": 98304
+    }
+  ],
+  "witness_profile": [
+    7,
+    [],
+    [],
+    [],
+    [],
+    false
+  ],
+  "seven_closed_carrier_cells": 32272,
+  "inherited_sharpness": [
+    {
+      "n": 1,
+      "presentations": 1,
+      "ordinary_classes": 1,
+      "reset_complement_colour_cells": 1,
+      "bounded_attachment_cells": 1,
+      "strong_presentations": 1,
+      "strong_cells": 1,
+      "split_witness": null,
+      "separating_context": null
+    },
+    {
+      "n": 2,
+      "presentations": 1,
+      "ordinary_classes": 1,
+      "reset_complement_colour_cells": 1,
+      "bounded_attachment_cells": 1,
+      "strong_presentations": 0,
+      "strong_cells": 0,
+      "split_witness": null,
+      "separating_context": null
+    },
+    {
+      "n": 3,
+      "presentations": 2,
+      "ordinary_classes": 2,
+      "reset_complement_colour_cells": 2,
+      "bounded_attachment_cells": 2,
+      "strong_presentations": 1,
+      "strong_cells": 1,
+      "split_witness": null,
+      "separating_context": null
+    },
+    {
+      "n": 4,
+      "presentations": 8,
+      "ordinary_classes": 4,
+      "reset_complement_colour_cells": 7,
+      "bounded_attachment_cells": 8,
+      "strong_presentations": 5,
+      "strong_cells": 5,
+      "split_witness": [
+        2,
+        5
+      ],
+      "separating_context": {
+        "word": [
+          "singleton-left",
+          "singleton-left",
+          "singleton-left",
+          "complement"
+        ],
+        "terminal_n": 7,
+        "observations": [
+          [
+            122,
+            false
+          ],
+          [
+            239,
+            false
+          ]
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "presentations": 64,
+      "ordinary_classes": 12,
+      "reset_complement_colour_cells": 50,
+      "bounded_attachment_cells": 64,
+      "strong_presentations": 50,
+      "strong_cells": 50,
+      "split_witness": [
+        5,
+        36
+      ],
+      "separating_context": {
+        "word": [
+          "singleton-left",
+          "singleton-left",
+          "complement"
+        ],
+        "terminal_n": 7,
+        "observations": [
+          [
+            45,
+            false
+          ],
+          [
+            281,
+            false
+          ]
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "presentations": 1024,
+      "ordinary_classes": 56,
+      "reset_complement_colour_cells": 740,
+      "bounded_attachment_cells": 1019,
+      "strong_presentations": 903,
+      "strong_cells": 898,
+      "split_witness": [
+        11,
+        1012
+      ],
+      "separating_context": {
+        "word": [
+          "singleton-left",
+          "complement"
+        ],
+        "terminal_n": 7,
+        "observations": [
+          [
+            123,
+            false
+          ],
+          [
+            436,
+            false
+          ]
+        ]
+      },
+      "order_eight_residual_probes": [
+        {
+          "pair": [
+            100,
+            689
+          ],
+          "separating_context": {
+            "word": [
+              "complement",
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ],
+            "terminal_n": 8,
+            "terminal_masks": [
+              12544,
+              301120
+            ]
+          }
+        },
+        {
+          "pair": [
+            225,
+            564
+          ],
+          "separating_context": {
+            "word": [
+              "complement",
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ],
+            "terminal_n": 8,
+            "terminal_masks": [
+              45120,
+              268544
+            ]
+          }
+        },
+        {
+          "pair": [
+            326,
+            697
+          ],
+          "separating_context": {
+            "word": [
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ],
+            "terminal_n": 8,
+            "terminal_masks": [
+              301632,
+              74112
+            ]
+          }
+        },
+        {
+          "pair": [
+            334,
+            923
+          ],
+          "separating_context": {
+            "word": [
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ],
+            "terminal_n": 8,
+            "terminal_masks": [
+              301120,
+              12544
+            ]
+          }
+        },
+        {
+          "pair": [
+            459,
+            798
+          ],
+          "separating_context": {
+            "word": [
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ],
+            "terminal_n": 8,
+            "terminal_masks": [
+              268544,
+              45120
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "presentations": 32768,
+      "ordinary_classes": 456,
+      "reset_complement_colour_cells": 24754,
+      "bounded_attachment_cells": 24754,
+      "strong_presentations": 30773,
+      "strong_cells": 23049,
+      "split_witness": null,
+      "separating_context": null
+    }
+  ],
+  "scope": "Raw and compressed blue signatures; all presentations through seven, all three one-step operations."
+}

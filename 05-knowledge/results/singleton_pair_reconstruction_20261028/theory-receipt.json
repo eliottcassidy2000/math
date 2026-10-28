@@ -1,0 +1,165 @@
+{
+  "status": "FINITE-EXACT",
+  "witness": {
+    "masks": [
+      1072,
+      4176
+    ],
+    "rows": [
+      [
+        66,
+        12,
+        41,
+        17,
+        39,
+        75,
+        30
+      ],
+      [
+        66,
+        20,
+        9,
+        51,
+        37,
+        71,
+        30
+      ]
+    ],
+    "endpoint_maps": [
+      [
+        0,
+        1,
+        4,
+        2,
+        3,
+        5,
+        6
+      ],
+      [
+        0,
+        2,
+        4,
+        1,
+        5,
+        3,
+        6
+      ]
+    ],
+    "context_levels": [
+      1,
+      4,
+      16,
+      64,
+      256,
+      1024,
+      4096,
+      16384
+    ],
+    "checked_strong_family_orders": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "Hamilton_counts": [
+      127,
+      127,
+      93,
+      93
+    ],
+    "automorphism_orders": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "blue_dead_audit": [
+    {
+      "order": 3,
+      "seeds": 0,
+      "contexts": 0
+    },
+    {
+      "order": 4,
+      "seeds": 0,
+      "contexts": 0
+    },
+    {
+      "order": 5,
+      "seeds": 24,
+      "contexts": 2040
+    },
+    {
+      "order": 6,
+      "seeds": 728,
+      "contexts": 61880
+    }
+  ],
+  "seven_vertex_summary": {
+    "n": 7,
+    "states": 32768,
+    "cells": 32272,
+    "largest": 3
+  },
+  "nonsingleton_cells_with_two_blue_dead_members": 412,
+  "hostile_controls": [
+    {
+      "object": "C3",
+      "automorphisms": 3,
+      "canon_leaves": 3,
+      "binary_attachment_orbits": 4,
+      "transporter_0_to_4": null
+    },
+    {
+      "object": "T5",
+      "automorphisms": 5,
+      "canon_leaves": 5,
+      "binary_attachment_orbits": 8,
+      "transporter_0_to_4": 1
+    },
+    {
+      "object": "Paley7",
+      "automorphisms": 21,
+      "canon_leaves": 21,
+      "binary_attachment_orbits": 12,
+      "transporter_0_to_4": 3
+    },
+    {
+      "object": "81",
+      "automorphisms": 81,
+      "canon_leaves": 81,
+      "binary_attachment_orbits": 176,
+      "transporter_0_to_4": 27
+    },
+    {
+      "object": "27",
+      "automorphisms": 27,
+      "canon_leaves": 27,
+      "binary_attachment_orbits": 512,
+      "transporter_0_to_4": 0
+    }
+  ],
+  "hostile_same_labelled_cyclic_triples": 67,
+  "hostile_same_Hamilton_paths": 462915
+}

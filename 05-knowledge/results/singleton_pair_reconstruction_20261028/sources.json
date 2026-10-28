@@ -1,0 +1,15 @@
+{
+  "05-knowledge/results/strong_attachment_tail_compiler_20261028/native.py": "2883ba7fb592fbeec8d189d88140150a36b8aef003d136ba50aeda2d52fc0c48",
+  "05-knowledge/results/strong_attachment_tail_compiler_20261028/counting.py": "0c323cf4cc72457bbd8f31c51393545eea945afc4cb6aef6b70be0b2f278345b",
+  "05-knowledge/results/strong_attachment_tail_compiler_20261028/ordinary-300.json": "f400cd992bb8224f82c908b1146d667ea95a1c168b582af6e609372a2589f2db",
+  "05-knowledge/results/strong_atom_continuation_vitali_20261026/core.py": "70006ab270f41afc135dc01954a2a009e1fd6fc033edb8ae9c1d67f50d0242b7",
+  "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+  "05-knowledge/results/relation_tower_frobenius_ports_20261028/tournament_bank.json.gz": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec",
+  "05-knowledge/results/root_ports_closed_carriers_20261028/check_carriers.py": "0f55486fde955c52bfab3cc1449b38329843b3f8506f72af468ff7bd7d0a532e",
+  "05-knowledge/results/session87_four_vertices_enumeration_20261028/check_generation.py": "f5d3da961f34dc1a32eaa0c1b69fad9bda983154578ea0187c5fd6b2e2d10fae",
+  "05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+  "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/check_blockfill.py": "cb246f280786f6a7f8b1f829d9d9b9e0993cb2298eb399783809bedb27780bdb",
+  "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/baseline_sources.py": "684368faaf908d9d28b966bfa8f9642d0ba1f3848e1083e6531c86bd3cc8bdbc",
+  "05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-channels/channels.py": "b27d30d8f8cc81768c8f6b382f446658515d86f2cf5f212d2b59e20859ba6792",
+  "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad"
+}

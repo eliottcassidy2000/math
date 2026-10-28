@@ -1,0 +1,173 @@
+{
+  "status": "FINITE-EXACT",
+  "results": [
+    {
+      "order": 1,
+      "classes": 1,
+      "pointed_states": 1,
+      "stored_anchor_root_records": 1,
+      "materialized_root_records": 1,
+      "classification_requests": 1,
+      "parent_canon_leaves": 1,
+      "parent_canon_searches": 1,
+      "maximum_production_canon_order": 0,
+      "seconds": 8.759999764151871e-05,
+      "audit": {
+        "lazy_rows_independently_recomputed": 1,
+        "all_retained_maps_checked": 1,
+        "full_lazy_expansion": true,
+        "trace": 1
+      }
+    },
+    {
+      "order": 2,
+      "classes": 1,
+      "pointed_states": 2,
+      "stored_anchor_root_records": 2,
+      "materialized_root_records": 4,
+      "classification_requests": 2,
+      "parent_canon_leaves": 1,
+      "parent_canon_searches": 1,
+      "maximum_production_canon_order": 1,
+      "seconds": 5.7199998991563916e-05,
+      "audit": {
+        "lazy_rows_independently_recomputed": 2,
+        "all_retained_maps_checked": 2,
+        "full_lazy_expansion": true,
+        "trace": 2
+      }
+    },
+    {
+      "order": 3,
+      "classes": 2,
+      "pointed_states": 4,
+      "stored_anchor_root_records": 6,
+      "materialized_root_records": 12,
+      "classification_requests": 6,
+      "parent_canon_leaves": 2,
+      "parent_canon_searches": 2,
+      "maximum_production_canon_order": 2,
+      "seconds": 0.00017780000052880496,
+      "audit": {
+        "lazy_rows_independently_recomputed": 4,
+        "all_retained_maps_checked": 6,
+        "full_lazy_expansion": true,
+        "trace": 6
+      }
+    },
+    {
+      "order": 4,
+      "classes": 4,
+      "pointed_states": 12,
+      "stored_anchor_root_records": 16,
+      "materialized_root_records": 48,
+      "classification_requests": 16,
+      "parent_canon_leaves": 9,
+      "parent_canon_searches": 5,
+      "maximum_production_canon_order": 3,
+      "seconds": 0.0003259000077378005,
+      "audit": {
+        "lazy_rows_independently_recomputed": 12,
+        "all_retained_maps_checked": 20,
+        "full_lazy_expansion": true,
+        "trace": 16
+      }
+    },
+    {
+      "order": 5,
+      "classes": 12,
+      "pointed_states": 48,
+      "stored_anchor_root_records": 60,
+      "materialized_root_records": 240,
+      "classification_requests": 60,
+      "parent_canon_leaves": 28,
+      "parent_canon_searches": 18,
+      "maximum_production_canon_order": 4,
+      "seconds": 0.0012222999939695,
+      "audit": {
+        "lazy_rows_independently_recomputed": 48,
+        "all_retained_maps_checked": 76,
+        "full_lazy_expansion": true,
+        "trace": 60
+      }
+    },
+    {
+      "order": 6,
+      "classes": 56,
+      "pointed_states": 296,
+      "stored_anchor_root_records": 336,
+      "materialized_root_records": 1776,
+      "classification_requests": 336,
+      "parent_canon_leaves": 158,
+      "parent_canon_searches": 106,
+      "maximum_production_canon_order": 5,
+      "seconds": 0.008703400002559647,
+      "audit": {
+        "lazy_rows_independently_recomputed": 296,
+        "all_retained_maps_checked": 416,
+        "full_lazy_expansion": true,
+        "trace": 336
+      }
+    },
+    {
+      "order": 7,
+      "classes": 456,
+      "pointed_states": 3040,
+      "stored_anchor_root_records": 3192,
+      "materialized_root_records": 21280,
+      "classification_requests": 3192,
+      "parent_canon_leaves": 1329,
+      "parent_canon_searches": 1059,
+      "maximum_production_canon_order": 6,
+      "seconds": 0.0781453999952646,
+      "audit": {
+        "lazy_rows_independently_recomputed": 3040,
+        "all_retained_maps_checked": 3652,
+        "full_lazy_expansion": true,
+        "trace": 3192
+      }
+    },
+    {
+      "order": 8,
+      "classes": 6880,
+      "pointed_states": 54256,
+      "stored_anchor_root_records": 55040,
+      "materialized_root_records": 434048,
+      "classification_requests": 55040,
+      "parent_canon_leaves": 19764,
+      "parent_canon_searches": 17580,
+      "maximum_production_canon_order": 7,
+      "seconds": 1.594209699993371,
+      "audit": {
+        "lazy_rows_independently_recomputed": 54256,
+        "all_retained_maps_checked": 58472,
+        "full_lazy_expansion": true,
+        "trace": 55040
+      }
+    },
+    {
+      "order": 9,
+      "classes": 191536,
+      "pointed_states": 1716608,
+      "stored_anchor_root_records": 1723824,
+      "materialized_root_records": 15449472,
+      "classification_requests": 1723824,
+      "parent_canon_leaves": 586619,
+      "parent_canon_searches": 565281,
+      "maximum_production_canon_order": 8,
+      "seconds": 56.451377500008675,
+      "audit": {
+        "lazy_rows_independently_recomputed": 1026,
+        "all_retained_maps_checked": 1763536,
+        "full_lazy_expansion": false,
+        "trace": 1723824
+      }
+    }
+  ],
+  "independent_bank": {
+    "classes": 191536,
+    "canonical_code_sha256": "cead65c6a674bd9f9167bac3eabd34088da2b9dc03ffb0288eb2f7c5fb5e9b45",
+    "reference_gzip_sha256": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec"
+  },
+  "scope": "One anchor row and exact lazy root transport, no black/blue graph at order nine."
+}

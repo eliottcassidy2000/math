@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Strongest survivor / repair:** both logarithmic dimensions have leading term n^2/2. The strip decomposition remains useful. A maintained qualification now prevents applying the dimensional statement to counts, densities, or orbit distributions.
 - **Missing coordinate / new question:** retain the output contract and the path/relative-alignment data required by later operations. The [consecutive-flag packet](../05-knowledge/results/consecutive_flags_order10_20261028/THEORY.md) proves a scoped closed quotient and the ordered-forest deletion update; it does not infer universal compression from dimension ratios.
 
+## 2026-10-28 — singleton reconstruction stops at seven; zero-tests are not syndromes
+
+- **Candidate and status:** extrapolating the exact singleton/complement/fresh-reset separation through six to all orders fails. The previous compiler explicitly left this OPEN; this is a resolved candidate, not a retraction of a claimed proved theorem. [S2--S4 and receipts](../05-knowledge/results/singleton_pair_reconstruction_20261028/THEORY.md) give a sufficient all-size carrier and strong indistinguishable presentations at every order at least seven.
+- **Least witness and missing coordinate:** free masks1072/4176 have different literal path relations but the same ordered-endpoint types for both native-complement partners and the same truncated blue boundary record. Singleton contexts never expose their hidden internal path alignment. Named-path and arbitrary joint-port guards are stronger languages and are unaffected.
+- **Rejected local probe / repaired statement:** the two masks have the same empty-context linear blue syndrome5216, so the draft claim that their initial syndromes differ was false. After J_L their syndromes are1820815/1982543, both nonzero; the observed blue zero-tests still agree. The stronger syndrome observer and the actual conjunction/zero-test observer must not be identified. The new packet records the failed initial probe and its exact replacement.
+- **Strongest survivor / next question:** the explicit closed carrier uses two endpoint-rooted relation types plus a linear-size boundary sidecar. Its minimal quotient is still OPEN; test any proposed stronger selector against this witness before extrapolating a bounded census.
+
 ## 2026-10-28 — March A000568 prototypes: an even restart and an omitted odd-cycle filter
 
 - **Affected sources:** `04-computation/a000568_speedup.py`, `04-computation/a000568_v3_s90dm.py`; the historical April reflection `07-reflections/three-computational-threads-s25.md` also contains an incorrectly normalized three-cycle correction and an invalid inference from relative approximation to modular residues.
