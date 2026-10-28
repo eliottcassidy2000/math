@@ -1,0 +1,31 @@
+{
+  "alternating_pairs": 6,
+  "baseline": "Session87 neighbor_degrees, production-only",
+  "max_order": 8,
+  "median_seconds": {
+    "baseline": 1.0976018960000147,
+    "refined": 0.4981873335000273
+  },
+  "median_speed_ratio": 2.2031910933760313,
+  "new": "degree prefilter plus stable selector and individualization/refinement",
+  "representatives": 6880,
+  "seconds": {
+    "baseline": [
+      1.1819936249994498,
+      1.095350249999683,
+      1.0946854169997096,
+      1.0995114580000518,
+      1.0956923339999776,
+      1.0995332089996737
+    ],
+    "refined": [
+      0.5015391659999295,
+      0.4996165000002293,
+      0.5007179590002124,
+      0.4945405420003226,
+      0.49675816699982533,
+      0.49496320799971727
+    ]
+  },
+  "status": "VERIFIED local timing, no asymptotic claim"
+}

@@ -156,12 +156,53 @@ def block_proof():
         expected = [W[(1-k) % 3] for k in range(3*h+2)]+[(-2, -1), (1, 2)]
         need(zs == expected and source(C, D, 3*h+4) >= 4*N, 'explicit sharp debt family word')
         need(energy_debt(zs) == (2*h+2, 3*h+8, 4), 'explicit debt family formula')
-        family.append(dict(h=h, N=str(N), positive_debt=2*h+2, source_norm=3*h+8, total_norm=4))
+        C2, D2, _ = ray(1, 2)
+        even = [literal_charge(source(C2, D2, k), N) for k in range(3*h+4)]
+        expected_even = [mul(W[k % 3], (-1, -2)) for k in range(3*h+2)]+[(0, 1), (-1, -1)]
+        need(even == expected_even and source(C2, D2, 3*h+4) >= 4*N, 'paired even-clock word')
+        def increments(word):
+            out = []; tail = (0, 0)
+            for z in reversed(word):
+                new = add(z, tail); out.append(norm(new)-norm(z)-norm(tail)); tail = new
+            return list(reversed(out)), tail
+        odd_d, odd_t = increments([scale(z, -1) for z in zs])
+        even_d, even_t = increments(even)
+        need(odd_d == [2, -3, -2]*h+[2, -3, -3, 0], 'odd-stage increments')
+        need(even_d == [-3]*(3*h+2)+[-1, 0], 'even-stage increments')
+        need(all(x+y <= 0 for x, y in zip(odd_d, even_d)), 'adjacent refinement-stage cancellation')
+        cross = norm(add(odd_t, even_t))-norm(odd_t)-norm(even_t)
+        need(cross == 4 and norm(add(odd_t, even_t)) == 9, 'paired initial split and endpoint')
+        family.append(dict(h=h, N=str(N), positive_debt=2*h+2, source_norm=3*h+8, total_norm=4,
+                           paired_source_norm=12*h+16, paired_positive_debt=4,
+                           unpaired_two_ray_positive_debt=2*h+6, paired_endpoint_norm=9))
     # Merging different rays needs a separate bound: four is not inherited.
     merged = add(*(scale(literal(1864022, *ray(1, a)[:2]), (-1)**ray(1, a)[2]) for a in (1, 2)))
     need(merged == (-1, -4) and norm(merged) == 13, 'cross-ray amplitude hostile')
+    target_seven = []
+    for h in (0, 1, 4, 7, 20, 100):
+        N = (22*4**(9*h+11)-65530)//9
+        data = []
+        for a in (1, 2):
+            C, D, tau = ray(7, a)
+            zs = [scale(literal_charge(source(C, D, k), N), (-1)**tau) for k in range(3*h+4)]
+            need(source(C, D, 3*h+4) >= 4*N, 'target-seven full source interval')
+            ds = []; tail = (0, 0)
+            for z in reversed(zs):
+                v = add(z, tail); ds.append(norm(v)-norm(z)-norm(tail)); tail = v
+            data.append((zs, list(reversed(ds)), tail))
+        odd = [(1, 2), (1, -1), (-2, -1)]*h+[(1, 2), (0, -1), (-1, 0), (1, 1)]
+        even = [(0, 1), (-1, -1), (1, 0)]*h+[(0, 1), (-1, -1), (2, 1), (-1, 1)]
+        need(data[0][0] == odd and data[1][0] == even, 'target-seven explicit phase words')
+        paired = [x+y for x, y in zip(data[0][1], data[1][1])]
+        need(paired == [2, -9, -5]*h+[2, -5, -4, 0], 'target-seven paired increments')
+        cross = norm(add(data[0][2], data[1][2]))-norm(data[0][2])-norm(data[1][2])
+        need(cross == 6 and sum(norm(z) for zs, _, _ in data for z in zs) == 12*h+14,
+             'target-seven source energy and cross split')
+        target_seven.append(dict(h=h, N=str(N), source_norm=12*h+14, paired_positive_debt=2*h+8,
+                                 endpoint_norm=norm(add(data[0][2], data[1][2]))))
     return dict(finite_induction_rows=len(rows), front_triple_slopes=sorted(slopes),
-                sharp_debt_family=family, cross_ray_hostile=dict(target=1, N=1864022, charge=merged, norm=13))
+                sharp_debt_family=family, target_seven_unbounded_pair_debt=target_seven,
+                cross_ray_hostile=dict(target=1, N=1864022, charge=merged, norm=13))
 
 
 def main():

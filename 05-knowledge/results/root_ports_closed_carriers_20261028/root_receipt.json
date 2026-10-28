@@ -36,55 +36,127 @@
       {
         "N": "931158",
         "h": 0,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 16,
         "positive_debt": 2,
         "source_norm": 8,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 6
       },
       {
         "N": "244335916374",
         "h": 1,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 28,
         "positive_debt": 4,
         "source_norm": 11,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 8
       },
       {
         "N": "4401564584125796532974662998",
         "h": 4,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 64,
         "positive_debt": 10,
         "source_norm": 20,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 14
       },
       {
         "N": "1153843746341072806340110295381334",
         "h": 5,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 76,
         "positive_debt": 12,
         "source_norm": 23,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 16
       },
       {
         "N": "20785801064261730392230184287520469612884373943638",
         "h": 8,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 112,
         "positive_debt": 18,
         "source_norm": 32,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 22
       },
       {
         "N": "2189000344244137734015502227785756322504429959470302592663794078013651209527622811745237014160273091155923777238358",
         "h": 20,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 256,
         "positive_debt": 42,
         "source_norm": 68,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 46
       },
       {
         "N": "66594687606394182188193352391408981762813576008365180028487412937769003259420333173556479332789315646346328134484404834605263566802384999517019745183768767959335061737000200197065588002564844950290435406132741103263218076517741504895765110062966085682406149804357274501331847029921450694758953728661827525785368863822223635124670580493265833325765654506032647450151090467791461195868594156508377105657848379485100625038232940857636991949579744242350084963050092204846049685270663795082753365286578679552447851634860886213588018311505856861045667158",
         "h": 100,
+        "paired_endpoint_norm": 9,
+        "paired_positive_debt": 4,
+        "paired_source_norm": 1216,
         "positive_debt": 202,
         "source_norm": 308,
-        "total_norm": 4
+        "total_norm": 4,
+        "unpaired_two_ray_positive_debt": 206
+      }
+    ],
+    "target_seven_unbounded_pair_debt": [
+      {
+        "N": "10245462",
+        "endpoint_norm": 13,
+        "h": 0,
+        "paired_positive_debt": 8,
+        "source_norm": 14
+      },
+      {
+        "N": "2687695082838",
+        "endpoint_norm": 13,
+        "h": 1,
+        "paired_positive_debt": 10,
+        "source_norm": 26
+      },
+      {
+        "N": "48417210425383761862721295702",
+        "endpoint_norm": 13,
+        "h": 4,
+        "paired_positive_debt": 16,
+        "source_norm": 62
+      },
+      {
+        "N": "872206923320308816202285870219135916678337878",
+        "endpoint_norm": 13,
+        "h": 7,
+        "paired_positive_debt": 22,
+        "source_norm": 98
+      },
+      {
+        "N": "24079003786685515074170524505643319547548729554173328519301734858150163304803850929197607155763004002715161549624662",
+        "endpoint_norm": 13,
+        "h": 20,
+        "paired_positive_debt": 48,
+        "source_norm": 254
+      },
+      {
+        "N": "732541563670336004070126876305498799390949336092016980313361542315459035853623664909121272660682472109809609479328453180657899234826234994687217197021456447552685679107002202167721468028213294453194789467460152135895398841695156553853416210692626942506467647847930019514650317329135957642348491015280102783639057502044459986371376385425924166583422199566359121951661995145706073154554535721592148162236332174336106875420562349434006911445377186665850934593551014253306546537977301745910287018152365475076926367983469748349468201426564425471502341462",
+        "endpoint_norm": 13,
+        "h": 100,
+        "paired_positive_debt": 208,
+        "source_norm": 1214
       }
     ]
   },
-  "checks": 1003105,
+  "checks": 1003170,
   "dense_scales": [
     1,
     2048

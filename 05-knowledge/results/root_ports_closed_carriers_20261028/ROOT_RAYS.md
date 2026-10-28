@@ -207,7 +207,93 @@ two positive-part invoices. Iterating to first-arrival ROOT or the627 frontier
 also introduces different downstream phases and noninterval membership.
 Uniform control of those cross-ray terms remains OPEN.
 
-## 7. Reproduction and exact scope
+## 7. A paid pairing that removes the hostile family's growing debt
+
+The second ray supplies a concrete repair of the sharp family, rather than
+just a proposed cancellation. At the same N_h, its a=2 charge word is
+
+    (-1-2omega,2+omega,-1+omega)^h,
+    -1-2omega,2+omega,omega,omega^2.
+
+It has source energy9h+8 and total -omega. The odd ray transports with
+negative sign and has total -2omega. Including both gives total -3omega
+of norm9, against original source energy12h+16.
+
+Write the signed dyadic increment for splitting off source k as
+Delta_k=Q(T_k)-Q(z_k)-Q(T_(k+1)). Direct evaluation of the displayed words
+gives, from their small-source ends,
+
+    odd ray:  (2,-3,-2)^h, 2,-3,-3,0;
+    even ray: (-3)^(3h+2), -1,0.
+
+For target1 the even ray splits at dyadic exponents3+6k and the odd ray
+at4+6k, by the exact valuation identity in section5. They are consecutive
+actual refinement stages. Pair these consecutive increments **before**
+taking the positive part. Every paired increment is nonpositive. The
+initial split between the two rays contributes4, so
+
+    unpaired positive debt = 2h+6,
+    paired positive debt = 4,       for every h>=0.
+
+This is an exact all-h repair of this obstruction. It preserves both source
+weights, both source addresses and all clocks. The source1 is already stopped
+at ROOT with clock0; its positive charge is the same, and it is kept with that
+tag rather than assigned a fictitious first-arrival loop. The dyadic pairing
+is by the proved address exponents, not by overwriting that exceptional clock.
+All other paired source clocks differ by1 as stated in section6.
+
+The finite phase can be stored separately from two integer counters: total
+charge depends on block lengths modulo3; source energy and positive variation
+depend on the quotient counters. This is a small exact controller for the
+declared ray grammar, not a finite-state representation of arbitrary Collatz
+continuation. The remaining target is a uniform compatible pairing for other
+cutoffs and targets, then for genuinely changing downstream controllers.
+
+There is an explicit guard against overextending this repair. For target7,
+take M_h=(22*4^(9h+11)-65530)/9. Its two signed words are
+
+    (1+2omega,1-omega,-2-omega)^h, 1+2omega,-omega,-1,1+omega;
+    (omega,omega^2,1)^h, omega,omega^2,2+omega,-1+omega.
+
+The second ray's active upper shell is i=9h+11, cut through k=3h+1;
+the first ray's lower threshold gives the first displayed word. The same
+shell comparison used above verifies both for every h. Their paired
+increments are (2,-9,-5)^h followed by2,-5,-4,0, with initial cross split6.
+Consequently source energy is12h+14, endpoint energy13, but paired positive
+debt is2h+8 and is unbounded. The pairing does not have a universal constant
+invoice even for one fixed native target. Its *relative* cost tends to1/6,
+so this is not a refutation of a suitably weighted budget.
+
+Targets1 and7 have the same least clock choices (3,2), but different marked
+Eisenstein phases. Their contrasting words show exactly why the terminal
+source/phase cannot be discarded. The appropriate next target is a weighted,
+phase-resolved paired bound, with endpoint correction and real integer
+clock, rather than universal constant debt or a phase-blind controller.
+
+**OPEN candidate, tested independently of the above proof:** for every
+complete one-step inverse fibre and cutoff, let D_pair include the positive
+initial odd/even-ray split, any unpaired minimal odd-clock head (when u=2
+modulo3), and positive parts of the paired consecutive internal increments.
+The candidate is
+
+    D_pair <= S/2 + 3.
+
+`check_paired_probe.py` tests217541 (u,N) pairs:98 targets, every N<=2048,
+and adjacent cutoff events in37 shells for9 declared targets. It finds no
+failure. The additive3 is attained at u=1,N=3, where D_pair=S=6. This is
+FINITE-EXACT evidence only. It does not justify an all-parameter promotion,
+nor summing a cost3 over uncontrolled terminal sets.
+
+A concrete proof route is a coupled two-block automaton: retain target
+phase modulo9, the relative positions of the two cutoffs, the block residues,
+the exceptional head, and the exact integer clock offset. Price each allowed
+transition by twice its positive paired increment minus its newly owned
+source energy. To certify the candidate, one would need admissible transition
+inequalities for the actual shared C and a potential bounding all path costs
+by6. Arbitrarily combining two independent formal ray words changes the
+source law and is not an admissible substitute.
+
+## 8. Reproduction and exact scope
 
 Run `python3 check_root_rays.py` from this directory (also with `-O`).
 The receipt covers97 primitive targets through257, every N=1..2048, all

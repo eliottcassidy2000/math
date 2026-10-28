@@ -1,0 +1,40 @@
+{
+  "audit_scope": "same-agent proofs, literal versus regrouped arithmetic, exact reference-bank bijection, independent full-labelled/arc searches",
+  "dependency_sha256": {
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/tournament_bank.json.gz": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec",
+    "05-knowledge/results/session87_four_vertices_enumeration_20261028/check_generation.py": "f5d3da961f34dc1a32eaa0c1b69fad9bda983154578ea0187c5fd6b2e2d10fae"
+  },
+  "independent_agent_audit": false,
+  "own_script_sha256": {
+    "benchmark_carriers.py": "5f03406eabc0f438d5c3deab4dd03128a95aec6a81d59e895319bc6e88bb1bc5",
+    "check_bank_bridge.py": "b905fb54373135af63d12226eaf12d420b250e5a2642d5ca1e1b6630f69e14bb",
+    "check_carriers.py": "0f55486fde955c52bfab3cc1449b38329843b3f8506f72af468ff7bd7d0a532e",
+    "check_paired_probe.py": "6427e4876240eec31189ec3f7c594be749563b4d4ca1febfb0cc2cf7ccd99dd7",
+    "check_root_rays.py": "9ceaf34868343148bb6c2c2c2da89349934e51763e08ca531207f428f54f8709",
+    "check_selectors.py": "bd735aef43cdfa19d43dc780615b934358911952c3cbdff68c54e53a7e2b5ab8",
+    "verify.py": "aeca83c257789356f0ec2ee322c3f7892eb7ab0ab265dae3efbaa5d282712140"
+  },
+  "semantic_jobs": {
+    "check_bank_bridge.py": {
+      "normal_optimized_byte_identical": true,
+      "receipt_sha256": "8fc08be670f13ffc5c87465204e76f0c823d4a08ad88f189f565405f9d23665d"
+    },
+    "check_carriers.py": {
+      "normal_optimized_byte_identical": true,
+      "receipt_sha256": "2ce01ffbfc9a4aab2c389e1b98104675618ac961569b5ddf1f32cb65b48facfa"
+    },
+    "check_paired_probe.py": {
+      "normal_optimized_byte_identical": true,
+      "receipt_sha256": "93cc6b8c86dc592fd393e0376d24f36b972c88a20bce976dcd2f12d724a3e128"
+    },
+    "check_root_rays.py": {
+      "normal_optimized_byte_identical": true,
+      "receipt_sha256": "d151cc7eaca85f79a3182374f4ae97b3e3bfba39a603bb4abe8421e221287aff"
+    },
+    "check_selectors.py": {
+      "normal_optimized_byte_identical": true,
+      "receipt_sha256": "0c50af0f56604036e3438e2662f9f3b881f9d194eeeb02f8d6b78b4979a7f08b"
+    }
+  },
+  "status": "PASS"
+}

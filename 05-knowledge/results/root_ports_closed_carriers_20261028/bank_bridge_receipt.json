@@ -1,0 +1,171 @@
+{
+  "added_kernel_lifts": [
+    51,
+    30,
+    45
+  ],
+  "added_prime_bank_lines": [
+    [
+      1,
+      16,
+      34
+    ],
+    [
+      2,
+      4,
+      24
+    ],
+    [
+      5,
+      8,
+      32
+    ]
+  ],
+  "complete_subset_universe": 512,
+  "edge_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "field_relation_count": 8,
+  "lost_relation_dimensions": 2,
+  "original_field_lines": [
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      32,
+      34
+    ],
+    [
+      8,
+      16,
+      24
+    ]
+  ],
+  "output_change_columns": [
+    1,
+    2,
+    12,
+    7
+  ],
+  "prime_bank": [
+    2,
+    7,
+    13,
+    19,
+    41,
+    59,
+    83,
+    89,
+    139
+  ],
+  "square_total_subset_count": 32,
+  "status": "FINITE-EXACT explicit linear bridge",
+  "table": [
+    {
+      "edge_mask": 1,
+      "field_mask": 58,
+      "four_probe_mask": 11,
+      "prime": 19,
+      "square_class": 5,
+      "square_class_mask": 4
+    },
+    {
+      "edge_mask": 2,
+      "field_mask": 20,
+      "four_probe_mask": 13,
+      "prime": 83,
+      "square_class": 21,
+      "square_class_mask": 10
+    },
+    {
+      "edge_mask": 4,
+      "field_mask": 1,
+      "four_probe_mask": 9,
+      "prime": 59,
+      "square_class": 15,
+      "square_class_mask": 6
+    },
+    {
+      "edge_mask": 5,
+      "field_mask": 59,
+      "four_probe_mask": 2,
+      "prime": 2,
+      "square_class": 3,
+      "square_class_mask": 2
+    },
+    {
+      "edge_mask": 8,
+      "field_mask": 26,
+      "four_probe_mask": 14,
+      "prime": 13,
+      "square_class": 14,
+      "square_class_mask": 9
+    },
+    {
+      "edge_mask": 16,
+      "field_mask": 6,
+      "four_probe_mask": 10,
+      "prime": 89,
+      "square_class": 10,
+      "square_class_mask": 5
+    },
+    {
+      "edge_mask": 24,
+      "field_mask": 28,
+      "four_probe_mask": 4,
+      "prime": 139,
+      "square_class": 35,
+      "square_class_mask": 12
+    },
+    {
+      "edge_mask": 32,
+      "field_mask": 11,
+      "four_probe_mask": 12,
+      "prime": 41,
+      "square_class": 42,
+      "square_class_mask": 11
+    },
+    {
+      "edge_mask": 34,
+      "field_mask": 31,
+      "four_probe_mask": 1,
+      "prime": 7,
+      "square_class": 2,
+      "square_class_mask": 1
+    }
+  ],
+  "weight_enumerator": {
+    "0": 1,
+    "3": 6,
+    "4": 9,
+    "5": 9,
+    "6": 6,
+    "9": 1
+  }
+}
