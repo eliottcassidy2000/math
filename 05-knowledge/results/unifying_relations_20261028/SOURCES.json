@@ -1,0 +1,153 @@
+{
+  "repository_sources": [
+    {
+      "path": "01-canon/MISTAKES.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "1ccf3ccbd5e2323661ece727eff5a34b09b7f736896bc9a1730c6df4997cf961",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "01-canon/theorems/THM-261-petersen-root-orthogonality.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "86ecf3cdfa49939e99370e155028fd3cf429b6ed669369187def953838408ec7",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "01-canon/theorems/THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "2d4ce187193eda64858e3f80e9c01bb0a518ed5d1d4a9ae79480a2c92e4fe4a6",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "01-canon/theorems/THM-4701-kuratowski-graphs-the-petersen-graph-and-the-finite-unit-circle-graphs.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "c685b5fa2a92f394cd0ae16d8fad446d43aa80299d9dbd4378b343a56381da1a",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "70d8245ec53ed98a7f11617cfb850ad9b63844127d741c603cf2c4a05a95cf5c",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids2_20260917_fano_code.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "8e8d8b508eb0df90451af85d7de9bebddcd8d1b36da151da38a2b41ed3c34a31",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_divisor_balance_family.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "06d1430303a47c40a83ce74b04c2323721eda1cd01e2ffefb58df43f35b3c560",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/e_atlas_20261019.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "9d3e067d170d660d275797d385782757865e09eea54a345dcf7e85fd357de2f3",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/THEORY.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "9e9c2c18572195708fd3b3e7765fca9bed2960f3bb3076f001e70dd8a6ac0236",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/cycle-geometry/PROOF.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "bd04cad6a9bacafadb7f58f7f40910e07ef286b52102795bc842b595db9650a0",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-inheritance/INHERITANCE.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "1889aeafd76267747602bff24210dcb4bbed1e9a871f3f26775692a47391561a",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/CARRIER_AND_144_BRIDGE.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "5ecdacc08941937a8aa86a98231648b1f41d7093c77ae87fd3a1d919d245e0d9",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/BALANCE_AND_EXCESS.md",
+      "commit": "a6bdb2bbfacbad03ff545edd2a8477e6cbfe14e5",
+      "sha256": "0350eb8cfc67b6221ef66b6f5d19d52d2ea7ec357963211e8619b30cc5cb4f40",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/BERGGREN_SEMIPRIME_BRIDGE.md",
+      "commit": "a6bdb2bbfacbad03ff545edd2a8477e6cbfe14e5",
+      "sha256": "b1496fe2423d633b83d1d74e2f42e90c106b1b73e7f1538131442261b22acded",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/GUARDED_OBSERVERS.md",
+      "commit": "a6bdb2bbfacbad03ff545edd2a8477e6cbfe14e5",
+      "sha256": "d17d1c5d28f890503f2321ce3b173d4098769bafda3451936797cbcfef1f5be3",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/square_sum_bipartite_bridge_20261019/SQUARE_SUM_BIPARTITE_CLEANUP.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "e1fc74b527a08345c44dfe57c209bc1285691ad2cc1d0cf28f61674b57495430",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "07-reflections/the-LRC-is-a-sum-product-rigidity-the-AP-is-the-additive-multiplicative-coincidence.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "9b138cb3cbe92d371f4c27f17bbe66e69d04f03f00839291403e7436453a9139",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "07-reflections/the-parallel-class-circle-quotient-by-rotation-extremal-at-contiguity.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "7372815073e6ea48776ae4f3649126e22ab88fd0338a7c1b4cfd0f2be5330fd7",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "07-reflections/two-hopf-problems-repair-quotients-factorial-cusps-and-frontier-extension-root-20260824.md",
+      "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
+      "sha256": "90363e99950a9323646368211cec554b4fba8a73d07c15e2b0a15802212b6d6b",
+      "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://people.math.binghamton.edu/zaslav/Oldcourses/510.S18/mts.pdf",
+      "title": "Thomas Zaslavsky, Matrices in the Theory of Signed Simple Graphs",
+      "scope": "Theorem 4.1 and section 4.6: classical signed-incidence rank; integral proof is displayed locally."
+    },
+    {
+      "url": "https://arxiv.org/abs/2511.11331v2",
+      "title": "Letzter, Pokrovskiy, Williams, On the gracesize of trees",
+      "scope": "2026 revision abstract only: asymptotic gracesize, not exact graceful-tree conjecture."
+    }
+  ],
+  "runtime": {
+    "python": "3.13.14",
+    "sympy": "1.14.0"
+  },
+  "review": "Same-agent proof review and independent computational paths; no independent-agent audit."
+}
