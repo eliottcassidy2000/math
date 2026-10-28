@@ -1,5 +1,18 @@
 #!/usr/bin/env python3
 """
+SESSION 89 CODEC REPAIR (2026-10-28): The executable upper-triangle map
+is (lo, hi) -> (lo, hi-1), not (lo, hi-2). This restores the smaller
+tiling's range-two bits and makes build_square a lossless square codec.
+
+LEGACY / PROVENANCE WARNING: The exploratory narrative below is retained,
+including superseded coordinate descriptions that this repair does not endorse.
+The saved 05-knowledge/results/tiling_square_s325.out was produced by the
+old lossy map and is NOT a full-binary-matrix rank/determinant census. It is
+not regenerated here. The old map forgot n-3 bits at tiling size n.
+The separate new_sequences_s327.py repeated that defect and is not repaired
+by this file. See the Session 89 repaired-square-codec note and independent
+AST-isolated build_square audit for the exact scope of this correction.
+
 tiling_square_s325.py -- opus-2026-03-24-S325
 
 THE TILING SQUARE: δ_{n-2} + δ_{n-3} = (n-2)² SQUARE
@@ -160,9 +173,9 @@ grid_n1 = [['.' for _ in range(side)] for _ in range(side)]
 # We flip: tile (i,j) → grid position (row=i, col=j-2) but in the UPPER part
 # Upper triangle: r < c
 for idx, (lo, hi) in enumerate(tiles_n1):
-    # Map to upper triangle: row = lo, col = hi - 2
+    # Correct upper chart: row = lo, col = hi - 1 (range-two tiles retained).
     r = lo
-    c = hi - 2
+    c = hi - 1
     if r < side and c < side and r < c:  # upper triangle
         grid_n1[r][c] = chr(97 + idx)  # a, b, c, ...
 
@@ -340,8 +353,8 @@ def build_square(n5_bits, n4_bits, n):
     tiles_n1_list = [(i,j) for i in range(n-1) for j in range(i+1,n-1) if j-i >= 2]
     tiles_n1_list.sort()
     for k, (lo, hi) in enumerate(tiles_n1_list):
-        # Transpose: (lo, hi) → grid (lo, hi-2) in the upper part
-        r = lo; c = hi - 2
+        # Shifted transpose: (lo, hi) → grid (lo, hi-1), strictly upper.
+        r = lo; c = hi - 1
         if r < side and c < side and r < c:
             M[r][c] = (n4_bits >> k) & 1
 
