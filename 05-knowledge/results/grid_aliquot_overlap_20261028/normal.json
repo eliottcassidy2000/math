@@ -77,6 +77,10 @@
     28841,
     29177
   ],
+  "compression_checks": {
+    "direct_factor_pairs_bound": 5000,
+    "vieta_bound": 1000000
+  },
   "divisor_rows": [
     {
       "excess": -1,

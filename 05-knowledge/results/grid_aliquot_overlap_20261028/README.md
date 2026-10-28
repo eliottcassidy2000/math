@@ -3,8 +3,8 @@
 2026-10-28. **PROVED elementary results and reformulations**, **CITED**
 classical and repository inputs, and **FINITE-EXACT** controls with explicit
 universes. The user's clarification identifies a useful overlap at 20:
-its five proper divisors sum to22, and its four nontrivial proper divisors
-sum to21=20+1. Keeping divisor shape and additive excess separately makes
+its five proper divisors sum to 22, and its four nontrivial proper divisors
+sum to 21=20+1. Keeping divisor shape and additive excess separately makes
 that overlap precise without discarding either property.
 
 The main conclusions are:
@@ -13,7 +13,7 @@ The main conclusions are:
   rectangular basis `1,sqrt(-3)`. In ordinary Cartesian coordinates the
   shift is `(1/2,sqrt(3)/2)`.
 - There are 14 representable nonnegative values through 50, including zero;
-  equivalently 13 positive values and 37 exclusions in 1..50. The missing50
+  equivalently 13 positive values and 37 exclusions in 1..50. The missing 50
   becomes representable over **the first rectangular grid already**:
   `50=2^4+2^4+(sqrt(-3))^4+(sqrt(-3))^4`. The value 37 remains forbidden
   even over the full Eisenstein ring, by its residue 5 modulo 8.
@@ -24,9 +24,9 @@ The main conclusions are:
   is `n=2^a(2^(a+1)-3)`, where `a>=2` and `2^(a+1)-3` is prime.
   This is the classical near-perfect family with redundant divisor 2;
   [the self-contained proof](PROOFS.md) is short.
-- The1001 characterization is inherited from Session82 and checked again
-  in its exact scope. Its first aliquot edge1001→343 is not square-sum;
-  343→57 is. The separate square-sum adjacency1001—1001000 is not an
+- The 1001 characterization is inherited from Session 82 and checked again
+  in its exact scope. Its first aliquot edge 1001→343 is not square-sum;
+  343→57 is. The separate square-sum adjacency 1001—1001000 is not an
   aliquot edge in either direction.
 
 ![Exact coordinate diagrams for the two Eisenstein cosets, the four-summand budget, and the common divisor-box shape of 12 and 20](grids-and-divisors.png)
@@ -47,12 +47,12 @@ odd u,v form its shifted copy. The norm is
 while its rectangular metric has aspect ratio sqrt(3). Replacing that
 metric by the square-grid metric changes lengths, angles and norms.
 
-There is a direct connection with the requested5,10,25,50,100 family,
+There is a direct connection with the requested 5,10,25,50,100 family,
 but it uses the **d=5 quadratic field**, not merely another drawing of
 the Eisenstein field. The corrected
-[THM-4825 / half-shifted grid and the class over2](../../../01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md)
-proves: for odd squarefree d, the analogous union is a ring when d=3 mod4;
-for d=1 mod4 it is a fractional ideal representing the class over2.
+[THM-4825 / half-shifted grid and the class over 2](../../../01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md)
+proves: for odd squarefree d, the analogous union is a ring when d=3 mod 4;
+for d=1 mod 4 it is a fractional ideal representing the class over 2.
 For d>1 in the latter case, the two ideal classes exhaust the class group
 exactly at d=5,13,37, using the **CITED** classical class-number-two list.
 The centred coset alone is not an ideal.
@@ -63,8 +63,8 @@ In the d=5 case the two reduced forms are
 Q0(x,y)=x²+5y²,          Q1(x,y)=2x²+2xy+3y².
 ```
 
-On the ramified family `2^a*5^b`, the ideal class is selected by a mod2.
-Thus 5,25,100 use Q0, while10,50 use Q1; explicit values are
+On the ramified family `2^a*5^b`, the ideal class is selected by a mod 2.
+Thus 5,25,100 use Q0, while 10,50 use Q1; explicit values are
 `Q0(0,1)=5`, `Q0(5,0)=25`, `Q0(10,0)=100`,
 `Q1(1,-2)=10`, `Q1(5,0)=50`.
 These normalized ideal norms should not be confused with the ordinary
@@ -77,7 +77,7 @@ The equal numbers alone do not identify the maps.
 
 ## 2 Four slots give the gaps and explain the exceptional fifty
 
-Below81 the only integer fourth powers available are 0,1,16. Write a target
+Below 81 the only integer fourth powers available are 0,1,16. Write a target
 as `n=16b+a`, with `a,b>=0` and `a+b<=4`. This gives
 
 ```text
@@ -85,14 +85,14 @@ as `n=16b+a`, with `a,b>=0` and `a+b<=4`. This gives
 ```
 
 with 14 values including 0. The complement in 1..50 is
-`5..15`, `20..31`, `35..47`, `{50}`, of lengths11,12,13,1.
-The last singleton is a cutoff: the full next gap is 50..63, of length14,
-followed by 64. Beyond64 there is a further gap65..80, of length16.
+`5..15`, `20..31`, `35..47`, `{50}`, of lengths 11,12,13,1.
+The last singleton is a cutoff: the full next gap is 50..63, of length 14,
+followed by 64. Beyond 64 there is a further gap 65..80, of length 16.
 The complete budget proof is inherited from
-[Session78 / fourth powers](../session78_fourth_power_aliquot_20261027/FOURTH_POWERS.md).
+[Session 78 / fourth powers](../session78_fourth_power_aliquot_20261027/FOURTH_POWERS.md).
 
-37 and 50 fail for different reasons. Integer fourth powers are 0 or1
-modulo 16, so37=5 mod16 is impossible with four terms at any height.
+37 and 50 fail for different reasons. Integer fourth powers are 0 or 1
+modulo 16, so 37=5 mod 16 is impossible with four terms at any height.
 50 has allowed residue 2 but requires five nonzero integer terms:
 `16+16+16+1+1`. Over `L=Z[sqrt(-3)]`, however,
 
@@ -107,13 +107,13 @@ is not responsible for every newly available residue.
 
 For the full ring, the existing
 [THM-4826 / norm shells and fourth powers](../../../01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md)
-has a particularly simple budget reading. Modulo8 each fourth power is
+has a particularly simple budget reading. Modulo 8 each fourth power is
 one of `0,1,omega,omega²`. If their nonzero counts are r,s,t, then their
 sum is `(r-t)+(s-t)omega`. With at most four terms, being rational modulo 8
 forces s=t, and `r+2t<=4`. Hence the possible rational residues are
-the integers in[-2,4] modulo 8: every residue except5.
+the integers in[-2,4] modulo 8: every residue except 5.
 
-The exact least term counts for residues0..7, modulo 8 only, are
+The exact least term counts for residues 0..7, modulo 8 only, are
 
 ```text
 residue:       0 1 2 3 4 5 6 7
@@ -143,7 +143,7 @@ weights gives s(n). The prime labels and exponents are part of this model.
 
 This formalizes the analogy with cubes and fifth powers as a count of
 proper-divisor terms. It is not polynomial degree. Prime powers form
-chains, pq forms a2×2 box, and p²q forms a3×2 box. The number16 in the
+chains, pq forms a2×2 box, and p²q forms a3×2 box. The number 16 in the
 clarification is a prime-power chain with four proper-divisor terms;
 it does not have the literal three-term formula of a prime cube.
 
@@ -162,17 +162,37 @@ that precisely captures the extra equality is the excess
 Delta(n)=s(n)-n=sigma(n)-2n.
 ```
 
+The multiplication in the clarification supplies a further essential guard.
+Define `C(n)` by the existence of positive integers a,b such that
+`ab=n` and `s(n)=1+a+b`. The incoming
+[overlap theorem P1](../aliquot_divisor_overlap_20261028/THEORY.md)
+and [divisor-pair analysis](../dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md)
+prove the exact all-size classification
+
+```text
+C(n) iff tau(n)=4 or Delta(n)=2.
+```
+
+The first branch uses the two actual nonunit proper divisors; the second
+uses the outer pair (1,n). The branches are disjoint and no diagonal
+pair a=b works. Thus the formulation preserves both source product and
+aliquot sum, not merely the ability to regroup an arbitrary sum. At 20,
+`a*b=20`, `a+b=21`, and `1+a+b=22`. At 16 the factor-pair sums are
+17,10,8, none equal to `s(16)-1=14`; it remains a prime power but does
+not satisfy this cubic representation. Section 1a of
+[PROOFS.md](PROOFS.md) reproduces the short argument.
+
 **PROVED:** among numbers with five proper divisors, the entire
 nondeficient set (`Delta>=0`) is
 
 | n | Proper divisors | s(n) | Delta(n) | Additional identity |
 |---:|---|---:|---:|---|
-|12|1,2,3,4,6|16|4|removing4 leaves a sum of 12|
-|18|1,2,3,6,9|21|3|removing3 leaves a sum of 18|
-|20|1,2,4,5,10|22|2|removing2 leaves a sum of 20|
+|12|1,2,3,4,6|16|4|removing 4 leaves a sum of 12|
+|18|1,2,3,6,9|21|3|removing 3 leaves a sum of 18|
+|20|1,2,4,5,10|22|2|removing 2 leaves a sum of 20|
 |28|1,2,4,7,14|28|0|already perfect|
 
-This proves the rarity of 20's overlap. It also restores the implicit1
+This proves the rarity of 20's overlap. It also restores the implicit 1
 in the user's sums for 12,18,28 and 24. The analogous actual three-term
 distinct-semiprime class satisfies `Delta(pq)=2-(p-1)(q-1)<=0`, with
 equality only at 6. Thus the excess-two equality is additional information,
@@ -181,12 +201,12 @@ not a consequence of having three proper-divisor terms.
 The natural global objects are therefore overlapping properties:
 prime-power chain, divisor-box shape, number of proper divisors, and excess.
 The pair `(tau,Delta)` alone is still incomplete:24 and 30 both have
-`tau=8,Delta=12`, but their shapes are 4×2 and 2×2×2. Moreover12 divides24
-but not30, so only 24 has 12 as a single redundant divisor.
+`tau=8,Delta=12`, but their shapes are 4×2 and 2×2×2. Moreover 12 divides 24
+but not 30, so only 24 has 12 as a single redundant divisor.
 
 The [Liouville–Möbius packet](../liouville_mobius_11_13_20261026/README.md)
 uses exactly this chain-versus-Boolean-box distinction: mu kills repeated
-prime directions, while lambda retains total exponent parity. For20,
+prime directions, while lambda retains total exponent parity. For 20,
 mu=0 and lambda=-1; for 30 both are-1. No conservation of these signs
 under aliquot iteration is asserted.
 
@@ -203,7 +223,7 @@ s(n)=n+2  iff  n=2^a(2^(a+1)-3),
 This is Proposition 2.3 of
 [Li–Ma–Zhang (2013)](https://publi.math.unideb.hu/paper/1759/download/),
 also recovered in the incoming
-[Session83 fixed-excess analysis](../session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md).
+[Session 83 fixed-excess analysis](../session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md).
 That paper uses “near-perfect” specifically for excess 2; the broader
 redundant-divisor definition below follows Pollack–Shevelev.
 
@@ -218,14 +238,14 @@ all integers. The complete census through one million finds exactly
 **An exact connection with the fourth-power obstruction:** every odd prime
 parameter q in this two-prime family satisfies `q=5 mod8`, because a>=2.
 Consequently q cannot be a sum of four Eisenstein fourth powers. The
-source 104 supplies q=13. The prime37 also has residue 5, but37+3=40 is
-not a power of two, so37 is not a parameter of this family. This is a
+source 104 supplies q=13. The prime 37 also has residue 5, but 37+3=40 is
+not a power of two, so 37 is not a parameter of this family. This is a
 proved one-way transfer from the aliquot equation to a representation
 obstruction; the congruence alone does not characterize the family.
 
 In standard terminology, an even n with excess 2 is near-perfect with
 redundant divisor 2: omit that one divisor and the remaining proper
-divisors sum to n. Replacing2 by 1+1 does not create two distinct omitted
+divisors sum to n. Replacing 2 by 1+1 does not create two distinct omitted
 divisors. The original
 [Pollack–Shevelev paper, Proposition 1](https://www.pollack-math.net/pnp-4.pdf)
 constructs a broader family with a power of two as redundant divisor.
@@ -250,38 +270,38 @@ target s(n). The complete small fibres are
 F11={21}, F12={121}, F13={27,35}, F37={155,203,299,323}.
 ```
 
-They are inherited from [Session78 / aliquot observations](../session78_fourth_power_aliquot_20261027/ALIQUOT.md)
+They are inherited from [Session 78 / aliquot observations](../session78_fourth_power_aliquot_20261027/ALIQUOT.md)
 and rechecked with the proved bound `n<=(t-1)²` for any composite source
 of a target t>=2. A fibre at 1 is instead infinite (all primes), and s(1)=0.
 
-The requested5,10,25,50,100 have aliquot sums 1,8,6,43,117.
-Within the fixed odd-part25 doubling tower, the existing exact formula is
+The requested 5,10,25,50,100 have aliquot sums 1,8,6,43,117.
+Within the fixed odd-part 25 doubling tower, the existing exact formula is
 
 ```text
 s(2^a*25)=37*2^a-31.
 ```
 
 Here 37 is the odd coefficient `2*sigma(25)-25`, not a count of excluded
-fourth-power targets. The carry is 31. The fixed odd-part5 tower instead
-has `s(2^a*5)=7*2^a-6`, with carry 6. The full fibre13 exposes why the
+fourth-power targets. The carry is 31. The fixed odd-part 5 tower instead
+has `s(2^a*5)=7*2^a-6`, with carry 6. The full fibre 13 exposes why the
 carry matters:27 and 35 share s=13 but double to sources 54 and 70 with
 aliquot values 66 and 74. The retained coordinate repairs the operation.
 
-Session82 gives two more precise13/37 appearances: minimum shared-source
+Session 82 gives two more precise 13/37 appearances: minimum shared-source
 obstructions for lifting paths through merged aliquot fibres. See
 [FIBER_PORTS.md](../session82_decimal_aliquot_square_sum_20261028/FIBER_PORTS.md).
 Those are predicates about labelled source compatibility, not another
-proof that the fourth-power cutoff must split13/37. This continuation
+proof that the fourth-power cutoff must split 13/37. This continuation
 does not repeat their full graph census.
 
 ## 6 The two different square edges at the 1001 anchor
 
-The inherited [Session82 characterization](../session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md)
+The inherited [Session 82 characterization](../session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md)
 is exact:1001 is the unique squarefree product of exactly three primes
 whose aliquot successor is a prime cube with square divisor sum.
-The classical Ljunggren square-repunit theorem forces that cube to be343;
+The classical Ljunggren square-repunit theorem forces that cube to be 343;
 its scope is explicitly stated by
-[Bugeaud–Mignotte–Roy, page257](https://msp.org/pjm/2000/193-2/pjm-v193-n2-p.pdf).
+[Bugeaud–Mignotte–Roy, page 257](https://msp.org/pjm/2000/193-2/pjm-v193-n2-p.pdf).
 The remaining factor-pair argument is elementary and is reproduced in
 [PROOFS.md](PROOFS.md).
 
@@ -289,7 +309,7 @@ The remaining factor-pair argument is elementary and is reproduced in
 1001=7*11*13  -> 343=7³ -> 57=3*19 -> 23 -> 1 -> 0.
 ```
 
-The first arrow has total1344, not a square. The second has total400=20².
+The first arrow has total 1344, not a square. The second has total 400=20².
 The complete inverse fibre of 343 has 19 sources;1001 is unique only in
 the specified squarefree three-prime class. The checker exhausts the
 proved bound 116964 and reproduces all 19 sources.
@@ -304,9 +324,9 @@ edge: `s(1001)=343` and `s(1001000)=2143960`. The confirmed other orbit is
 ```
 
 All these short edges are independently refactored in the new check.
-No extension of the separate long1001000 orbit is claimed; its certified
+No extension of the separate long 1001000 orbit is claimed; its certified
 prefix and unresolved endpoint remain in
-[Session82 / orbit connections](../session82_decimal_aliquot_square_sum_20261028/ORBIT_CONNECTIONS.md).
+[Session 82 / orbit connections](../session82_decimal_aliquot_square_sum_20261028/ORBIT_CONNECTIONS.md).
 
 ## 7 Returning to tournament composition and the two arithmetic observers
 
@@ -345,13 +365,13 @@ Anchor: the user's overlapping aliquot classes, with 20 retained in both
 descriptions. Niche: exact coset and divisor coordinates. Wildcard:50's
 fourth-power repair on the first grid. The five-concept board is divisor
 shape / additive excess / retained source / norm or residue / term budget.
-The inherited mechanisms are Session78's divisor-sum formulas and budget
-theorem, THM-4825/4826's corrected grid theory, and Session82's1001
+The inherited mechanisms are Session 78's divisor-sum formulas and budget
+theorem, THM-4825/4826's corrected grid theory, and Session 82's1001
 classification. The hostile is 650 against an unrestricted two-prime law;
 the corrected near miss is 14 nonnegative versus 13 positive values. The
 least-used sidecar is the full divisor-box evaluation polynomial.
 
-Incoming Session83 already supplies the divisor-term shapes, the complete
+Incoming Session 83 already supplies the divisor-term shapes, the complete
 five-term nondeficient list, and the classical two-prime excess-2 family.
 Its [fixed-excess analysis](../session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md)
 also gives the useful identity

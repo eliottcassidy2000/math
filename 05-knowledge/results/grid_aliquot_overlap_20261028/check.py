@@ -66,6 +66,13 @@ def main():
     need([n for n in range(1,N+1) if tau[n]==6 and s[n]>=n]==[12,18,20,28],
          'all nondeficient five-proper-divisor sources')
     need([n for n in excess_two if tau[n]==6]==[20],'unique five-divisor overlap')
+    for n in range(1,N+1):
+        total=s[n]-1; discriminant=total*total-4*n
+        compressed=(total>0 and discriminant>=0 and isqrt(discriminant)**2==discriminant)
+        need(compressed==(tau[n]==4 or s[n]==n+2),'factor-pair compression classification')
+        if n<=5000:
+            direct=any(n%d==0 and s[n]==1+d+n//d for d in range(1,isqrt(n)+1))
+            need(compressed==direct,'direct factor-pair control including square fixed points')
     need(all(s[n]<=n for n in range(2,N+1) if omega[n]==2 and tau[n]==4),
          'distinct-semiprime boundary')
     need(all(isqrt(sig[n])**2!=sig[n] for n in two_prime),'two-prime excess-two family has no square-sigma edge')
@@ -129,6 +136,7 @@ def main():
     need(fibers=={'11':[21],'12':[121],'13':[27,35],'37':[155,203,299,323]},'complete bounded inverse fibers')
     print(json.dumps({'status':'FINITE-EXACT controls of displayed proofs and inherited claims',
         'census_bound':N,'excess_two_all':excess_two,'excess_two_two_primes':two_prime,
+        'compression_checks':{'vieta_bound':N,'direct_factor_pairs_bound':5000},
         'nondeficient_tau6':[12,18,20,28],'divisor_rows':rows,'fourth_power_values_0_50':reps,
         'fourth_power_omissions_1_50':missing,'Eisenstein_fourth_residues_mod8':sorted(quartics),
         'rational_residues_by_term_budget':rational,'minimum_terms_mod8':minima,
