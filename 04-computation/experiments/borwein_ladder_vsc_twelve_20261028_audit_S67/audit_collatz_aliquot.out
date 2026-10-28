@@ -1,0 +1,22 @@
+==========================================================================================
+1. Collatz: the 17-step Syracuse word 231 -> 233 and its cylinder
+==========================================================================================
+  word: [231, 347, 521, 391, 587, 881, 661, 31, 47, 71, 107, 161, 121, 91, 137, 103, 155, 233]
+  valuations: [1, 1, 2, 1, 1, 2, 6, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1] (sum 27)
+  [PASS] the recorded word
+  [PASS] 27 halvings in 17 odd steps (the 27/17 clock)
+  [PASS] m_17(231 + 2^28 t) = 233 + 2*3^17 t with the same valuation word, t = 0..2000 and two large t
+  modulus check: 231 + 2^27 has valuation word [2, 1, 3] (differs from 231's: True)
+
+==========================================================================================
+2. Aliquot / square-sigma facts
+==========================================================================================
+  [PASS] s(345) = 231, sigma(345) = 576 = 24^2
+  [PASS] s(364) = 420, sigma(364) = 784 = 28^2
+  all n <= 233^2 with s(n) = 233: 7 of them, e.g. [687, 1135, 7831, 9487, 10207, 12367] ; with square sigma: []
+  [PASS] no n with square sigma has s(n) = 233 (composite n has s(n) >= 1 + sqrt(n), so n < 233^2 is exhaustive)
+  [PASS] s(n) >= 1 + floor(sqrt n) for composite n < 20000 (sanity of the exhaustiveness bound)
+  complete square-sigma preimage lists: of 231 -> [345, 6169] ; of 420 -> [364]
+
+FAILURES: none
+exit 0

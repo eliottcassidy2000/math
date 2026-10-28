@@ -21116,3 +21116,59 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   known unconditionally. For Diophantine finiteness this means checking Faltings-type theorems (Darmon-Granville for
   generalized Fermat, Siegel/Baker for S-units), not only the conjecture's textbook consequences. A conditional result
   is valuable only where it exceeds the unconditional state of the art: here, uniformity and effectivity.
+
+## MISTAKE-692 (2026-10-28, opus-2026-10-28-S67, THM-4837, THM-4838, HYP-9436 and the note `05-knowledge/results/borwein_ladder_owner_numbers_vsc_twelve_20261028.md` at the pre-audit commit 7a5cd669d0; found by the independent audit `04-computation/experiments/borwein_ladder_vsc_twelve_20261028_audit_S67/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- published results typed new (including from a paper on the session's own citation list), a scope error at p = 3, a missing growth step, under-credited repository work, and over-typed interpretations
+
+- **What was wrong.**
+  - **(1)** THM-4837 typed as NEW "the 2 pi break at 80499 and its reading as the vanishing range of the cosine transform
+    at one turn".
+    - Baillie-Borwein-Borwein, "Surprising sinc sums and integrals" (Amer. Math. Monthly 115, 2008), Example 1(b):
+      the sinc sum equals the sinc integral for N <= 40248 and first fails at N = 40249 (denominator 80499). The
+      session's "cosine transform at one full turn" is the k = 1 Poisson term of that error.
+    - Crandall's error estimate, "about 8.42e-226577" in Baillie's arXiv:1105.3943, is the two-sided normalisation of
+      the session's 4.21e-226577.
+    - BBB 2008 was on the session's own citation list.
+  - **(2)** It typed as NEW "the observation that the first failure is always single-corner" and the closed-form value
+    at 113.
+    - The first is Borwein-Borwein 2001 Corollary 1 (= BBB 2008 Theorem 2 "First Bite"), whose hypotheses define the
+      first failure.
+    - The 1/113 deficit is in Almkvist-Gustavsson (arXiv:1405.1265) and on Wikipedia.
+    - Basel-Baillie (Elem. Math. 71, 2016) tabulate the whole crossing ladder for thresholds 2..10 with 40-digit
+      deficits.
+  - **(3)** The "rigorous window criterion" was presented without crediting the explicit-remainder test in G. Kirchner's
+    2020 OEIS comment (certified n <= 1000). The "+1/8 refutation" was presented as a discovery, although the
+    entry's own DATA term a(17) contradicts that formula line.
+  - **(4)** THM-4838 (2) was stated for primes p >= 3. Its mod-1 "iff" fails at p = 3, where vSC(2) = {2,3} but
+    chi(2,3,3) + B_2 = 1/3.
+  - **(5)** The |B_2k| growth step behind THM-4838 (1)-(2) was asserted, not proved.
+  - **(6)** The congruence list (5, 7, 11, 23, 47, ...) is OEIS A092307 and was not cited. Repository prior work was
+    under-credited: `bernoulli_tournament_primes_s18h.out`, S33 `number_tournament_bridges_20261014.out` (a chi(2,3,k)
+    table) and `understand_2357_s90bl.out`.
+  - **(7)** The decode of the owner's 231, 233 (three-digit matches) and 420 (two digits, only via a naive truncated
+    float sum) was typed as "explained". The unifying "twelve" reading of the owner's sets was placed in a theorem
+    title, but it is numerology: {p : (p+1) | 12} and {p : (p-1) | 12} are strictly larger than the owner's triples.
+  - **(8)** Minor:
+    - THM-4837 (1) failed at the edge m = 0, xi = 1;
+    - "extraspecial centralizers" should be normalisers N(pB) (C(2B) for p = 2);
+    - the note over-corrected the Hurwitz quaternion remark, since (2,3,7) is the unit group of the Hurwitz order over
+      Z[2cos(2 pi/7)].
+- **Repair.**
+  - THM-4837 retyped as mostly CITED. It is NEW only for the one-sided 11-digit value with the factor-2 remark, the fully
+    proved window criterion with the extended range, and the explicit OEIS observation. The decode is INTERPRETATION,
+    and 420 SPECULATIVE.
+  - THM-4838: p >= 5, the ratio argument added, A092307 cited, prior work credited, the "twelve" reading typed
+    NUMEROLOGY, and the Monster and Hurwitz wording fixed.
+  - HYP-9436: Kirchner credited; heuristic 3.6e-54; interval re-certification recorded.
+  - The note was rewritten accordingly.
+- **How it was caught.** The auditor fetched BBB 2008 and Baillie 2011, Almkvist-Gustavsson, Basel-Baillie, OEIS
+  A092315/A092307 and Wikipedia. It recomputed all 39 numbers with exact rationals and interval arithmetic, and grepped
+  the repository for earlier vSC/Hurwitz tables.
+- **Lesson / reusable rule.** This is the fourth occurrence of "a cited paper was not read in full" (MISTAKE-690, -686,
+  -675 lineage). Before typing anything NEW in a classical topic:
+  - search the topic's standard follow-ups, not only the founding paper: here BBB 2008, Almkvist-Gustavsson and
+    Basel-Baillie, found via the Wikipedia page's references;
+  - grep every cited paper for the exact numbers at stake (40248, 80499, 113, 2.33e-138);
+  - read the OEIS entry's DATA as well as its FORMULA lines.
+
+  An owner's numbers that match famous published values are most likely taken from those publications. The decode is
+  then a citation, not a discovery.

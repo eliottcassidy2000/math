@@ -1,0 +1,92 @@
+====================================================================================================
+1. Odd harmonic crossings m(T) = least m with O_m > T, exact rationals (binary splitting)
+====================================================================================================
+  T = 1 : m = 1       2m+1 = 3       O_m - T = 0.333333333333 ; O_(m-1) - T = 0.0
+  T = 2 : m = 7       2m+1 = 15      O_m - T = 0.0218004218004 ; O_(m-1) - T = -0.0448662448662
+  T = 3 : m = 56      2m+1 = 113     O_m - T = 0.00328705881207 ; O_(m-1) - T = -0.00556249871006
+  T = 4 : m = 418     2m+1 = 837     O_m - T = 0.000690591638868 ; O_(m-1) - T = -0.000504151491359
+  T = 5 : m = 3091    2m+1 = 6183    O_m - T = 4.17200434812e-5 ; O_(m-1) - T = -0.000120013742707
+  T = 6 : m = 22845   2m+1 = 45691   O_m - T = 2.06761975732e-5 ; O_(m-1) - T = -1.20995068362e-6
+  T = 7 : m = 168803  2m+1 = 337607  O_m - T = 1.79178429102e-6 ; O_(m-1) - T = -1.17023960067e-6
+  [PASS] m(2..7) = 7, 56, 418, 3091, 22845, 168803 (exact rationals)
+  [PASS] m(1) = 1
+  T = 1*pi : m = 75, 2m+1 = 151 ; O_m - T = 0.00553263633385 ; O_(m-1) - T = -0.00108988022244
+  [PASS] m(1 pi) = 75 certified by exact rationals and rational pi bounds (100 digits)
+  T = 2*pi : m = 40249, 2m+1 = 80499 ; O_m - T = 2.34726733956e-6 ; O_(m-1) - T = -1.00752472258e-5
+  [PASS] m(2 pi) = 40249 certified by exact rationals and rational pi bounds (100 digits)
+
+====================================================================================================
+2. First-failure values  pi * eps^m * (2m+1)!!/(2m)!!  (BB 2001 Cor. 1 / BBB 2008 Thm 2 'First Bite')
+====================================================================================================
+  T = 2 (denominator 15): first-failure value = 2.3100572725481 x 10^-11   (loggamma route agrees to 0.0)
+  T = 3 (denominator 113): first-failure value = 2.3324296128422 x 10^-138   (loggamma route agrees to 0.0)
+  T = 4 (denominator 837): first-failure value = 4.5195214276882 x 10^-1320   (loggamma route agrees to 4.32e-78)
+  T = 2pi (denominator 80499): first-failure value in [4.2101759371451, 4.2101759371451] x 10^-226577
+     two-sided Poisson discrepancy sum_Z - int_R = 2 x value = 8.42035187429 x 10^-226577
+  [PASS] 2 pi value = 4.2101759371e-226577 (enclosure)
+  [PASS] T=2 value 2.3100572725e-11
+  [PASS] T=3 value 2.3324296128e-138
+  [PASS] T=4 value 4.5195214277e-1320
+  [PASS] I_7(1)/pi = 467807924713440738696537864469/935615849440640907310521750000 (BB 2001 eq. 10)
+  [PASS] deficit/pi = 6879714958723010531/935615849440640907310521750000 (BBB 2008 eq. 5)
+  [PASS] general sign-sum formula (BB 2001 Thm 2) reproduces the published 1/15 value independently
+  [PASS] 1/113 case: exactly one corner (all gamma_k = -1) has b_gamma < 0; excess = 0.003287058812
+  [PASS] one-sided sum-minus-integral = F(2 pi) (single cosine term): BBB Example 4 exact s_7, i_7 reproduced
+
+====================================================================================================
+3. 'Naive double precision' mantissa at 80499 (sensitivity to summation order)
+====================================================================================================
+  forward (python loop)          exact 2pi         O = 6.283187654446901  eps = 2.34726731449e-6  mantissa = 4.20837 x 10^-226577
+  forward (python loop)          double 2*math.pi  O = 6.283187654446901  eps = 2.34726731474e-6  mantissa = 4.20838 x 10^-226577
+  reverse (smallest first)       exact 2pi         O = 6.2831876544469223  eps = 2.34726733581e-6  mantissa = 4.20991 x 10^-226577
+  reverse (smallest first)       double 2*math.pi  O = 6.2831876544469223  eps = 2.34726733606e-6  mantissa = 4.20992 x 10^-226577
+  math.fsum (correctly rounded)  exact 2pi         O = 6.2831876544469258  eps = 2.34726733936e-6  mantissa = 4.21016 x 10^-226577
+  math.fsum (correctly rounded)  double 2*math.pi  O = 6.2831876544469258  eps = 2.34726733961e-6  mantissa = 4.21018 x 10^-226577
+  numpy.sum (pairwise)           exact 2pi         O = 6.2831876544469267  eps = 2.34726734025e-6  mantissa = 4.21023 x 10^-226577
+  numpy.sum (pairwise)           double 2*math.pi  O = 6.2831876544469267  eps = 2.3472673405e-6  mantissa = 4.21024 x 10^-226577
+  exact O_40249 - 2pi = 2.34726733956354e-6
+  [PASS] forward double sum + exact 2pi gives 4.208 (session's claim reproduced)
+
+====================================================================================================
+4. Crossing-index window test with INTERVAL arithmetic: m(n) = floor(X), X = exp(2n - gamma)/4,
+   certified when frac(X) >= X/(24 floor(X)^2)  [O_m = ln(4M)/2 + gamma/2 + r(M), 0 < r < 1/(48M^2)]
+====================================================================================================
+  n = 2..3000 : window exceptions [] ; undecided [] ; tightest n = 2 with frac/window >= 101.84  (5.2s)
+  [PASS] m(n) = floor(exp(2n - gamma)/4) certified for 2 <= n <= 3000 (interval arithmetic)
+  [PASS] tightest case n = 2, frac/window = 101.8
+  KS distance of frac(X_n) from uniform: D = 0.0192 (N = 2999; 1% critical 1.63/sqrt(N) = 0.0298)
+  [PASS] KS D = 0.0192 < 0.0298
+  heuristic expected exceptions: all n >= 2: 0.006288 ; n >= 61: 3.56e-54
+  Hasler floor(X + 1/8) differs from floor(X) at 375 of the n <= 3000; first [17, 31, 45, 57, 59, 63, 86, 118, 123, 124]
+  [PASS] 375 Hasler failures, first 17, 31, 45, 57, 59, 63, 86, 118
+  [PASS] OEIS A092315 DATA a(1..22) = floor(exp(2n - gamma)/4) for every listed term
+  OEIS DATA terms where Hasler's +1/8 formula disagrees with the DATA itself: n = [17]
+  [PASS] the entry's own DATA contradicts the +1/8 formula exactly at n = 17 (within n <= 22)
+  n = 17, a = 81897532160124 : O_a - 17 in [3.9681161e-16, 3.9681161e-16] ; O_(a-1) - 17 in [-5.7083785e-15, -5.7083785e-15]
+     digamma: O_a - 17 = 3.96812e-16 ; O_(a-1) - 17 = -5.70838e-15
+  [PASS] a(17) = 81897532160124 certified (envelope + intervals); floor(X+1/8) = 81897532160125
+  k*pi, k = 1..500: window exceptions [], undecided [] ; (k, m, 2m+1, frac): [(1, 75, 151, 0.16421709132769519), (2, 40249, 80499, 0.8110464578842177), (3, 21553437, 43106875, 0.9518266957956251)]
+  [PASS] m(k pi) = floor(X) for k <= 500; m(pi), m(2pi), m(3pi) = 75, 40249, 21553437
+  fsum route: O_m - 3pi = 1.11753e-9 ; O_(m-1) - 3pi = -2.20806e-8 ; rigorous rounding error < 3.3e-15
+  [PASS] m(3 pi) = 21553437 confirmed by fsum with explicit error bound
+  envelope route: O_m - 3pi in [1.1175318e-9, 1.1175318e-9] ; O_(m-1) - 3pi in [-2.2080624e-8, -2.2080624e-8]
+  [PASS] m(3 pi) = 21553437 confirmed by the DLMF envelope in interval arithmetic
+
+====================================================================================================
+5. The remainder r(M) = O_(M-1) - ln(4M)/2 - gamma/2: algebra and bounds
+====================================================================================================
+  [PASS] r(M) = 1/(48M^2) - 7/(1920M^4) - eps_2M + eps_M/2 (algebra)
+  [PASS] 0 < r(M) < 1/(48M^2) and the two-sided envelope hold for M = 1..3000 (50-digit direct sums)
+  [PASS] 0 < eps_N < 1/(252 N^6) (GKP (9.89); DLMF 5.11.2 + 5.11(ii)) checked directly for N = 1..199
+
+====================================================================================================
+6. Normalisation of (1)-(2) by quadrature (m = 4), independent of all closed forms
+====================================================================================================
+  F_4(3/2): quadrature 0.0525360834855 ; pi*P(xi-1 <= S' <= xi+1) = 0.0525360759523 ; |tail| <= 3.1e-7
+  [PASS] F_m(xi) = pi*P(xi-1 <= S' <= xi+1) at xi = 3/2 (quadrature)
+  F_4(7/4): quadrature 1.49638776312e-5 ; pi*P(xi-1 <= S' <= xi+1) = 1.49678598524e-5 ; |tail| <= 3.1e-7
+  [PASS] F_m(xi) = pi*P(xi-1 <= S' <= xi+1) at xi = 7/4 (quadrature)
+
+FAILURES: none
+total 9.5s
+exit 0

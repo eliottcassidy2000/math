@@ -1,0 +1,77 @@
+================================================================================================
+1. vSC(2k) = {p : (p-1) | 2k}; chi_k = 2 - |vSC| + sum 1/p; N_k = B_2k + sum 1/p (2k <= 200)
+================================================================================================
+  [PASS] von Staudt-Clausen and chi_k = -B_2k (mod 1) for every 2k <= 200
+  [PASS] exact equality chi_k = -B_2k only for 2k in {4, 6, 8, 10} (2k <= 200)
+  [PASS] N_k = 1 for 2k <= 12
+  N_k for 2k = 14, 16, 18, 20: [2, -6, 56, -528]
+  [PASS] |B_2k| > 2 sqrt(2k) + 2 >= d(2k) + 2 >= |vSC(2k)| + 2 for 20 <= 2k <= 200
+  min_{20 <= 2k <= 198} |B_(2k+2)/B_2k| = 11.703  (>= (21*22/(4 pi^2)) * zeta(22)/zeta(20) = 11.703)
+  -> the growth step needed by THM-4838 (1) and (2) is a one-line ratio argument; it is NOT in the theorem file.
+
+================================================================================================
+2. Triangle groups (2,3,p): chi = 1/p - 1/6 vs -B_(p-1)
+================================================================================================
+  [PASS] chi(2,3,p) = -B_(p-1) exactly iff p in {5, 7, 11} (p < 2000)
+  congruence mod 1 holds for p in [5, 7, 11, 23, 47, 59, 83, 107, 167, 179, 227, 239, 263, 347, 359, 383] ...
+  vSC(p-1) = {2,3,p} as SETS for p in [3, 5, 7, 11, 23, 47, 59, 83, 107, 167, 179, 227, 239, 263, 347, 359] ...
+  [PASS] for p >= 5: congruence iff vSC(p-1) = {2,3,p}
+  [PASS] p = 3 is a COUNTEREXAMPLE to THM-4838 (2) as scoped 'p >= 3': vSC(2) = {2,3} = {2,3,p} but chi(2,3,3) + B_2 = 1/3
+  [PASS] list 5, 7, 11, 23, 47, 59, 83, 107 (note line 151)
+
+================================================================================================
+3. X(p) -> X(1) branched (2,3,p): 2g-2 = |PSL2(F_p)| (1/6 - 1/p); genus of X_0(p)
+================================================================================================
+  [PASS] p = 5: |PSL2| = 60, 2g - 2 = -2 = |PSL2| * B_4 (g = 0)
+  [PASS] p = 7: |PSL2| = 168, 2g - 2 = 4 = |PSL2| * B_6 (g = 3)
+  [PASS] p = 11: |PSL2| = 660, 2g - 2 = 50 = |PSL2| * B_10 (g = 26)
+  [PASS] genus X_0(p) = 0 iff p in {2,3,5,7,13} = {p:(p-1)|24} = {p:(p-1)|12} = vSC(12) (p < 5000)
+  [PASS] sanity: g(X_0(11)) = 1, g(X_0(37)) = 2
+
+================================================================================================
+4. Monster and Baby Monster (decimal orders from Wikipedia, factored here)
+================================================================================================
+  |M|  = 2^46 3^20 5^9 7^6 11^2 13^3 17^1 19^1 23^1 29^1 31^1 41^1 47^1 59^1 71^1
+  |B|  = 2^41 3^13 5^6 7^2 11^1 13^1 17^1 19^1 23^1 31^1 47^1
+  [PASS] |M| factorisation
+  [PASS] |B| factorisation
+  [PASS] p^3 | |M| iff p in {2,3,5,7,13}
+  |M|/|B| = 2^5 3^7 5^3 7^4 11^1 13^2 29^1 41^1 59^1 71^1
+  [PASS] small-prime (p <= 13) core of |M|/|B| = 2^5 3^7 5^3 7^4 11 13^2 = 39,046,339,332,000 (Session43 N)
+  primes > 13 in |M|/|B|: [29, 41, 59, 71] (the 'core' is a choice: it drops 29, 41, 59, 71)
+  [PASS] exponent >= 2 primes of N = {2,3,5,7,13}
+  [PASS] room for p^(1+24/(p-1)) in |M| (13^(1+2) is a full Sylow 13-subgroup)
+
+================================================================================================
+5. J-homomorphism / Eisenstein denominators; {p:(p+1)|24}; sigma = 144
+================================================================================================
+  denominators of B_2k/(4k), k = 1..6: [24, 240, 504, 480, 264, 65520] (|im J| in pi_(4k-1)^s)
+  [PASS] 264 (pi_19) and 65520 (pi_23) as stated
+  [PASS] E_10 = 1 - 264 sum sigma_9(n) q^n
+  [PASS] {p:(p+1)|24} = {2,3,5,7,11,23}; {p:(p+1)|12} = {2,3,5,11}; {p:(p-1)|12} = {2,3,5,7,13}
+  [PASS] {d+1 : d | 12} = {2,3,4,5,7,13}
+  [PASS] sigma^{-1}(144) = {66, 70, 94, 115, 119} (sigma(n) > n, so n < 144 suffices)
+  prime sets with prod(p+1) = 144: [(2, 47), (5, 23), (7, 17), (2, 3, 11), (2, 5, 7)]
+  [PASS] only 3-prime sets: {2,3,11}, {2,5,7}
+  [PASS] unique subset of vSC(12) with prod(p+1) = 144
+
+================================================================================================
+6. vSC sinc products by the BB 2001 Theorem 2 sign-sum formula (independent of the session's code)
+================================================================================================
+  2k = 2   vSC = [2, 3]             excess = -1/6       deficit/pi = 0
+  [PASS] 2k = 2: exactly pi/2
+  2k = 4   vSC = [2, 3, 5]          excess = 1/30       deficit/pi = 1/43200
+  [PASS] 2k = 4: deficit pi/43200
+  2k = 6   vSC = [2, 3, 7]          excess = -1/42      deficit/pi = 0
+  [PASS] 2k = 6: exactly pi/2
+  2k = 8   vSC = [2, 3, 5]          excess = 1/30       deficit/pi = 1/43200
+  [PASS] 2k = 8: deficit pi/43200
+  2k = 10  vSC = [2, 3, 11]         excess = -5/66      deficit/pi = 0
+  [PASS] 2k = 10: exactly pi/2
+  2k = 12  vSC = [2, 3, 5, 7, 13]   excess = 691/2730   deficit/pi = 74322914521/101569313664000
+  [PASS] 2k = 12: deficit pi (691^5 - 271^5)/(3840 * 2730^4)
+  [PASS] BBB 2008 Ex. 2(b): int_0^oo sinc(x/2) sinc(x/3) sinc(x/5) dx = pi (1 - 1/240) [prior art: prime-reciprocal sinc products]
+  (value/pi = 239/240)
+
+FAILURES: none
+exit 0

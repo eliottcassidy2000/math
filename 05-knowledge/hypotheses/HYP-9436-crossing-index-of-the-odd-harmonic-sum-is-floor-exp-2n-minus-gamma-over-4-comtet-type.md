@@ -20,8 +20,9 @@ For a real threshold xi > 1 let m(xi) be the least m with
 and put X(xi) = exp(2 xi - gamma)/4. **Conjecture:** m(n) = floor(X(n)) for every integer n >= 2.
 
 The owner's 7, 56, 418 are m(2), m(3), m(4); 15 and 113 are 2m+1 at n = 2, 3; 80499 is 2m+1 at xi = 2 pi
-(THM-4837). The formula is the one displayed in OEIS A092315. Its status there must be checked by the audit;
-this file treats it as unproved in general.
+(THM-4837). The formula is G. Kirchner's FORMULA line in OEIS A092315 (2020, untagged). Kirchner's comment gives an
+explicit-remainder test (remainder -127t/(1920 m^4), 0 < t < 1, supported numerically) certifying n <= 1000. No
+proof for all n is known, so it is treated as unproved in general.
 
 ## What is proved (THM-4837 (5))
 
@@ -45,7 +46,7 @@ over all n >= 2 is 0.0063.
 Confirmatory run: `python3 borwein_ladder_vsc_twelve_20261028.py 3000 500`.
 
 - **(P1)** The window test has no exception for 61 <= n <= 3000, so the formula is PROVED for all 2 <= n <= 3000.
-  Prediction: TRUE. Heuristically the expected number of hits for n >= 61 is about 10^-52.
+  Prediction: TRUE. Heuristically the expected number of hits for n >= 61 is about 4 x 10^-54 (the audit computes 3.56e-54).
 - **(P2)** The fractional parts frac(X_n), 2 <= n <= 3000, pass a Kolmogorov-Smirnov uniformity test at the 1%
   level (D < 1.63/sqrt(N)). Prediction: TRUE.
 - **(P3)** The owner's 2 pi generalised: for the thresholds xi = k pi with 1 <= k <= 500, the window test has no
@@ -69,10 +70,21 @@ Command: `python3 borwein_ladder_vsc_twelve_20261028.py 3000 500`.
   m(2 pi) = 40249 (80499), m(3 pi) = 21553437 (43106875).
 
 **OEIS A092315 status (read 2026-10-28).**
-- G. Kirchner (2020) states the floor formula with a precision check for n <= 1000.
-- M. F. Hasler (2017) conjectures floor(exp(2n - gamma)/4 + 1/8). That form is **false**: it differs from the proved
+- G. Kirchner (2020) states the floor formula with an explicit-remainder test certifying n <= 1000. Its remainder
+  bound is supported numerically; the GKP/DLMF envelope used here proves it.
+- M. F. Hasler (2017) has the formula line floor(exp(2n - gamma)/4 + 1/8) (conjectured). It contradicts the entry's
+  own DATA term a(17), so it is **false**: it differs from the proved
   value at n = 17, 31, 45, 57, 59, 63, 86, 118, ..., 375 of the n <= 3000 (THM-4837 (6)). The case n = 17 is also
   checked independently via digamma.
 
 The rerun added the Hasler and digamma checks and the genus and Monster assertions of THM-4838. The pre-registered
 quantities are unchanged.
+
+**Audit (2026-10-28,
+`04-computation/experiments/borwein_ladder_vsc_twelve_20261028_audit_S67/AUDIT.md`, SOUND WITH CORRECTIONS).**
+- The pre-registration order is confirmed: a14c71ec13 precedes the confirmatory checkpoint 7a5cd669d0, and the P1-P3
+  text is unchanged.
+- The session's window test was high-precision floating point with a guard. The audit re-certified it in mpmath
+  interval arithmetic for 2 <= n <= 3000 and k <= 500, finding no exception (tightest n = 2, frac/window = 101.84).
+  "PROVED for 2 <= n <= 3000" stands.
+- P1-P3 were near-certain predictions, so their confirmation adds little beyond the certificate.
