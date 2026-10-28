@@ -83,6 +83,23 @@
         59
       ]
     ],
+    "uniform_coset_hostile": {
+      "coordinate_subsets_compared": 64,
+      "even_odd_counts_each": [
+        8,
+        8
+      ],
+      "largest_marginal_order": 3,
+      "sources_per_law": 16,
+      "square_probabilities": [
+        1,
+        0
+      ],
+      "syndromes": [
+        0,
+        1
+      ]
+    },
     "weight_transport_control": {
       "image": 11837,
       "image_sigma": 14400,

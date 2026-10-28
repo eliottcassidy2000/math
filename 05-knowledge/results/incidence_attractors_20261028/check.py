@@ -1,5 +1,6 @@
 """Exact finite bridge tests. Standard library; every guard survives -O."""
 from itertools import combinations, permutations, product
+from collections import Counter
 from math import gcd, isqrt, prod
 import json
 
@@ -185,15 +186,23 @@ def fano_extension():
         need(factors(p)=={p:1},'prime realization')
         need(signature(sigma(p))==frozenset(q for i,q in enumerate((2,3,5)) if v>>i&1),'Fano column')
         need(not any(factors(q)=={q:1} and signature(sigma(q))==signature(sigma(p)) for q in range(2,p)), 'least prime in specified square class')
-    words=[];weight_counts={}
+    words=[];weight_counts={};cosets={s:[] for s in range(8)}
     for mask in range(128):
         vs=[v for v in range(1,8) if mask>>(v-1)&1];syndrome=0
         for v in vs:syndrome^=v
         n=prod(by_vector[v] for v in vs)
+        cosets[syndrome].append(frozenset(vs))
         need(square(sigma(n))==(syndrome==0),'Fano arithmetic code')
         if syndrome==0:
             words.append(vs);weight_counts[len(vs)]=weight_counts.get(len(vs),0)+1
     need(weight_counts=={0:1,3:7,4:7,7:1},'Hamming enumerator')
+    marginal_tests=0
+    for r in range(4):
+        for coordinates in combinations(range(1,8),r):
+            laws=[Counter(tuple(int(v in w) for v in coordinates) for w in cosets[s]) for s in (0,1)]
+            need(laws[0]==laws[1] and set(laws[0].values())=={2**(4-r)},'three-wise marginal hostile')
+            marginal_tests+=1
+    for s in (0,1):need(Counter(len(w)%2 for w in cosets[s])=={0:8,1:8},'same sign marginals')
     lines={frozenset(w) for w in words if len(w)==3}
     autos=sum({frozenset(perm[v-1] for v in line) for line in lines}==lines for perm in permutations(range(1,8)))
     need(autos==168,'Fano automorphisms')
@@ -230,6 +239,8 @@ def fano_extension():
             'Fano_automorphism_order':autos,'chosen_phase_prime_order':[by_vector[v] for v in powers],
             'Frobenius_on_prime_labels':frob,'chosen_Paley_Hamilton_paths':hp,'chosen_Paley_automorphism_order':ta,
             'normal_basis_vectors':normal,'normal_basis_prime_labels':[by_vector[v] for v in normal],
+            'uniform_coset_hostile':{'syndromes':[0,1],'sources_per_law':16,'coordinate_subsets_compared':marginal_tests,
+                'largest_marginal_order':3,'even_odd_counts_each':[8,8],'square_probabilities':[1,0]},
             'weight_transport_control':{'source':70,'image':7*19*89,'source_sigma':sigma(70),'image_sigma':sigma(7*19*89)}}
 
 if __name__=='__main__':

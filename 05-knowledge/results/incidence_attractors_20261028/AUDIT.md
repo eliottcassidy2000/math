@@ -61,6 +61,9 @@ noncoprime contexts are rejected before array access. It verifies all128
 Fano products by direct divisor-pair enumeration, independently of the parity
 matrix. It also directly enumerates all positive norm-one triples with c<=150
 and verifies their unique descent to one of the three inherited roots.
+The Fano marginal hostile compares uniform square-code sources with the
+prime7-toggle coset on all64 coordinate subsets of size<=3. Both implementations
+check the separate equal sign law and the disjoint square-output supports.
 
 Every check uses an explicit exception, not a removable assert. Producer and
 audit each run normally and under-O, with equal JSON receipts. `verify.py`

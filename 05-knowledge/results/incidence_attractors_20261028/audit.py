@@ -1,5 +1,6 @@
 """Independent additive-divisor and full-context audit; imports no producer code."""
 from itertools import combinations
+from collections import Counter
 from math import gcd,isqrt,prod
 from pathlib import Path
 import json
@@ -62,13 +63,20 @@ def main():
     need(candidates==[364],'complete minimum bound')
     context=[m for m in range(1,206) if gcd(m,52)==1 and square(sums[4*m])!=square(sums[13*m])]
     need(context==[205],'common context bound')
-    fano_primes=(2,5,7,19,29,59,89);weights={}
+    fano_primes=(2,5,7,19,29,59,89);weights={};square_masks=[]
     # Independent direct divisor-pair enumeration, without a parity matrix.
     for mask in range(128):
         ps=[p for i,p in enumerate(fano_primes) if mask>>i&1];n=prod(ps)
         total=sum(d+n//d if d*d!=n else d for d in range(1,isqrt(n)+1) if n%d==0)
-        if square(total):weights[len(ps)]=weights.get(len(ps),0)+1
+        if square(total):weights[len(ps)]=weights.get(len(ps),0)+1;square_masks.append(mask)
     need(weights=={0:1,3:7,4:7,7:1},'independent Hamming census')
+    shifted=[mask^4 for mask in square_masks]  # Toggle the prime7 coordinate.
+    need(not set(square_masks)&set(shifted),'disjoint square/nonsquare laws')
+    for r in range(4):
+        for coords in combinations(range(7),r):
+            laws=[Counter(tuple((m>>i)&1 for i in coords) for m in family) for family in (square_masks,shifted)]
+            need(laws[0]==laws[1],'independent marginal hostile')
+    need(all(Counter(m.bit_count()%2 for m in family)=={0:8,1:8} for family in (square_masks,shifted)),'independent sign laws')
     # Norm-one shell audit by brute coordinates and explicit unique descent.
     roots={(1,1,1),(2,1,2),(1,2,2)};counts={r:0 for r in roots}
     def parent(x):
@@ -90,6 +98,7 @@ def main():
             'merged_pairs':merged,'square_sources':actual,'least_p2qr_square_sigma':364,
             'least_common_context':205,'norm_one_shell_c_bound':150,
             'norm_one_shell_root_counts':{str(k):v for k,v in sorted(counts.items())},
-            'Fano_direct_divisor_subset_count':128,'Fano_square_weight_counts':weights}
+            'Fano_direct_divisor_subset_count':128,'Fano_square_weight_counts':weights,
+            'Fano_coset_threewise_and_sign_hostile':'PASS'}
 
 if __name__=='__main__':print(json.dumps(main(),indent=2,sort_keys=True))

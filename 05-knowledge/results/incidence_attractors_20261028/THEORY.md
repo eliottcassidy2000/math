@@ -144,6 +144,29 @@ is not a graph cycle matroid. In particular it is not the cycle matroid of
 Petersen, K5, K3,3 or any other graph. Binary incidence is a broader common
 language than ordinary graph cycles.
 
+### A literal marginal obstruction in the arithmetic code
+
+Let C_t={x in F2^7: Hx=t}, for the displayed parity-check matrix H. Compare
+the uniform laws on C_0 and C_1, with1 denoting the first nonzero coordinate
+vector, not an integer source. Each law has16 squarefree arithmetic sources.
+For any chosen r<=3 coordinate bits, the remaining at least four distinct
+nonzero columns span F2³ (a two-dimensional subspace has only three nonzero
+vectors). Therefore every assignment of the selected bits has exactly2^(4-r)
+completions, independently of t. All their marginals through order3 agree.
+
+Each coset also has eight even-weight and eight odd-weight words: translating
+by an odd-weight codeword gives a parity-reversing bijection within the coset.
+Thus the marginal joint law of(mu(n),lambda(n)) agrees as well, with the two
+signs equal because every source is squarefree. Nevertheless square sigma has
+probability1 on C_0 and0 on C_1. The separate sign-law assertion does not claim
+equality of its joint distribution with every selected bit tuple.
+
+This is a precise finite counterpart of the prior Vitali/guard correlation
+mechanism: low-order observations and an additional sign law can miss a joint
+predicate. It is not an all-bank lower bound or an identification of these
+arithmetic sources with Vitali atoms. All64 coordinate subsets of size<=3 are
+checked, independently from both the parity matrix and direct divisor sums.
+
 ### Frobenius and an explicitly chosen tournament
 
 Identify the parity space with F8=F2[alpha]/(alpha³+alpha+1), using the

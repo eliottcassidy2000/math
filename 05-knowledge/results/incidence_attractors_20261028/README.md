@@ -34,6 +34,10 @@ forward observation. Their arithmetic attachments differ.
    `1+7z^3+7z^4+z^7`. The seven minimal circuits form the Fano plane.
    This matroid is not graphic: ordinary graph cycle spaces cannot model
    every extension of the first graphic chart.
+   Uniform laws on two code cosets agree on every at-most-three-prime
+   selection marginal and on the marginal joint law of(mu,lambda), yet
+   have square-sigma probabilities1 and0: a finite arithmetic analogue of
+   the earlier Vitali alignment obstruction.
 5. **Frobenius phase is explicit.** In F8=F2[alpha]/(alpha³+alpha+1), the
    chosen normal basis has arithmetic point labels `(5,89,29)`. Frobenius
    rotates them. It preserves the zero-syndrome predicate but sends source70
