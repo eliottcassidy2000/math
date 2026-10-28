@@ -66,6 +66,30 @@
       "git_blob": "346991110594940fc0aa36138b984f61be1dfe04",
       "sha256_lf": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
       "read_scope": "Three named cards at lines51-66; reused with evidence in AUDIT.md."
+    },
+    {
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/README.md",
+      "git_blob": "ca86ceb1700dc985c4e1d31d4f326f77549fc2f3",
+      "sha256_lf": "8becf2ff5f0dd8d47a853305ee220aa7048edbfaa190cb082529816cae2dc36f",
+      "read_scope": "Full file: incoming literal-arity, fixed-excess and square-class composition evidence; scoped integration in THEORY.md."
+    },
+    {
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md",
+      "git_blob": "c54162500fd95e197d6fb6e013b9e2f195f06522",
+      "sha256_lf": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31",
+      "read_scope": "Full file: incoming literal-arity, fixed-excess and square-class composition evidence; scoped integration in THEORY.md."
+    },
+    {
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/CARRIER_AND_144_BRIDGE.md",
+      "git_blob": "433de8635d791252c24c9148e240cd241c0b650d",
+      "sha256_lf": "5ecdacc08941937a8aa86a98231648b1f41d7093c77ae87fd3a1d919d245e0d9",
+      "read_scope": "Full file: incoming literal-arity, fixed-excess and square-class composition evidence; scoped integration in THEORY.md."
+    },
+    {
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/LOW_TERM_ATLAS.md",
+      "git_blob": "a113c9d0e57e4c2905e37f17faf9edd30b79a96c",
+      "sha256_lf": "c511a691d888e505490ec6334882e9a2c0b3798b45c4b072989c04bf63f304c1",
+      "read_scope": "Full file: incoming literal-arity, fixed-excess and square-class composition evidence; scoped integration in THEORY.md."
     }
   ],
   "external_sources": [
@@ -80,5 +104,6 @@
       "access_date": "2026-10-28"
     }
   ],
-  "interpretation": "Formal factor-pair compression retains ab=n as well as s(n)=1+a+b;16 fails it and is explicitly retained as a boundary."
+  "interpretation": "Formal factor-pair compression retains ab=n as well as s(n)=1+a+b;16 fails it and is explicitly retained as a boundary.",
+  "integration_commit": "ae7c073e864d05be74fed85ba0a2bc164e026a6d"
 }

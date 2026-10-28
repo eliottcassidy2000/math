@@ -62,6 +62,16 @@ construction m+m(m-1)=m^2 at m1001, not an aliquot edge from1001.
 The short orbit of1000001 passes through21->11->1->0, as independently
 recomputed. Full unbounded aliquot dynamics are not inferred from these facts.
 
+The incoming [Session83 atlas](../session83_aliquot_divisor_grammar_20261028/README.md)
+classifies literal proper-divisor counts. Our predicate C also permits the
+unit-pair compression; these are separate coordinates, so its exclusion of20
+from the literal three-divisor class agrees with our overlap theorem. Its
+two-prime excess classification strengthens the scope of our p^a q chart.
+Its [144 bridge](../session83_aliquot_divisor_grammar_20261028/CARRIER_AND_144_BRIDGE.md)
+also connects{2,3,11} and{2,5,7}: sigma(66)=sigma(70)=144. The final section
+of THEORY explains why composition needs the whole prime-exponent parity
+vector of sigma, in addition to the source's Mobius/Liouville signs.
+
 Reproduce from the repository root:
 
 ```text

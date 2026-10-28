@@ -229,3 +229,56 @@ tournament, Turing tape, or Collatz dynamical system.
 No global classification of excess2 numbers, prime supply, aliquot basins,
 or LRC(14) is established. The new closed statements concern(C), its exact
 five/seven/nine-term overlaps, and the stated finite universe.
+
+## Incoming integration: literal arity, compression, and two parity spaces
+
+The [Session83 low-term atlas](../session83_aliquot_divisor_grammar_20261028/LOW_TERM_ATLAS.md)
+independently classifies abundance through nine proper divisors. Its literal
+three-divisor class and our C predicate must remain distinct: the former
+requires three actual proper divisors, while C explicitly permits the unit
+pair(1,n). Thus20 lies outside the former but inside C. No contradiction or
+change to either definition follows. Its five-term abundance list12,18,20
+and perfect source28 independently explain our P2 boundary.
+
+The [fixed-excess report](../session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md)
+proves a stronger scope for(5): it classifies ALL excess2 sources with at
+most two distinct prime factors. Its elementary reduction is worth retaining.
+Two odd prime factors give abundancy strictly below(3/2)(5/4)<2, and prime
+powers are deficient. Otherwise n=2^a p^b, with p odd prime and a,b>=1. Put
+R=1+p+...+p^(b-1). Then
+
+    sigma(n)-2n+1=(2^(a+1)-p)R.
+
+Excess2 forces the product to be3. If b>=2 then R>=p+1>=4, impossible.
+Thus b=1 and p=2^(a+1)-3, recovering(5) with a>=2. This classification is
+inherited from that report, which credits Li–Ma–Zhang(2013), Proposition2.3;
+our earlier Shevelev citation already supplies the family itself. The source
+650 has three distinct prime factors and remains the necessary scope guard.
+
+The [144 bridge](../session83_aliquot_divisor_grammar_20261028/CARRIER_AND_144_BRIDGE.md)
+adds another exact connection with the earlier{2,3,11} work. Define Q(x) to
+be the vector(v_p(x) mod2)_p, of finite support. It records a square class,
+not merely the bit saying whether x is square. For coprime a,b,
+
+    Q(sigma(ab))=Q(sigma(a))+Q(sigma(b)) over F2.
+
+The source signs mu(n),lambda(n) concern the exponents of n; this second
+parity space concerns the exponents of sigma(n). They are different data.
+A cheap hostile example for merging them is a=2 versus a=5. Both source
+sign pairs are(-1,-1), and both sigma values3,6 are nonsquare. The common
+legal multiplier11 has sigma12, with square class3. Consequently
+
+    sigma(2*11)=3*12=36 is square,
+    sigma(5*11)=6*12=72 is not square.
+
+The guards gcd(2,11)=gcd(5,11)=1 hold. Thus even the joint summary of both
+source signs and the square/nonsquare bit of sigma fails this continuation.
+Keeping Q(sigma) suffices for this predicate under coprime multiplication.
+This is not a claim of a smallest carrier for every arithmetic operation.
+
+At the next step sigma(3)=4 has zero square class, so multiplying22 by3
+gives66->78 with square total144. The alternative triple70=2*5*7 also has
+sigma144 and edge70->74. The precise connection is cancellation in a
+prime-indexed parity vector, with coprimality as realization guard. Source
+factorization/divisor incidence, total square class, and the chosen observed
+predicate remain distinct coordinates even when numerical totals agree.

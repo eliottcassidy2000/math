@@ -70,3 +70,14 @@ edge using both the sieve and the factored divisor-sum formula.
 Source hashes and read scopes are in [SOURCES.json](SOURCES.json), and every
 packet file except SHA256SUMS is sealed. Source pins refer to immutable Git
 blobs, so later corrections do not silently overwrite the reviewed evidence.
+
+## Incoming integration audit
+
+Read Session83's README, fixed-excess proof, low-term atlas and144 bridge
+in full at ae7c073e864d05be74fed85ba0a2bc164e026a6d. Their literal-arity
+classification is not substituted for C. The stronger two-prime theorem is
+credited as inherited, with its elementary proof reproduced; no new
+literature-priority claim is added. The new hostile continuation uses only
+the exact divisor identities sigma2=3,sigma5=6,sigma11=12 and coprimality.
+The packet's finite receipts are unchanged by this documentation
+integration; no new census or all-order minimality assertion is introduced.
