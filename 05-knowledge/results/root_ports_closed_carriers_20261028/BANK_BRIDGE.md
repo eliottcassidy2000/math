@@ -81,6 +81,16 @@ arithmetic dependence columns the cycle matroid of a planar geometric graph.
 The explicit incidence calculation, rather than the coincidence of nine
 ports and nine primes, is the bridge.
 
+The conclusion extends to all8 successful wedge pairings inherited from
+Session87. They form one S4 orbit (a chosen vertex and a directed triangle,
+with stabilizer C3). Permuting K4 edges preserves the even cycle kernel of M,
+so it induces an invertible linear map on the four-dimensional quotient.
+Transporting the displayed dictionary therefore gives the same cographic
+configuration for every successful chart. This is a change of coordinate
+assignment. Actual relabeling of tournament orientation bits also has the
+inherited affine gauge correction; it must not be replaced by this linear
+coordinate statement when testing named Hamilton guards.
+
 ## Which operations survive
 
 Preserved: exact four-probe outputs, all their binary dependencies, the nine

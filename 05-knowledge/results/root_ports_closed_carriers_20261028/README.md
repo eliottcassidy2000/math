@@ -69,6 +69,14 @@ The initial pin was7a0bab9bfa7b. Before publication, the session integrated:
 4. `132bf67c38` through `1301010ae5`: Session88 full named block filling,
    compact Qv factors, archive symmetry recovery and interval-pattern
    certificates. Complete rows remain a different output from representatives.
+5. `780e5e3507` through `03408f84ac`, read at final integration: weighted
+   conditional-expectation tower laws require the actual pushed masses;
+   signed linear combinations permit operations unavailable to positive
+   native averaging words. This supports keeping our original complex
+   charges and source energy separate. Its stabilizer-first hostile also
+   shows that recovering a full automorphism group need not classify every
+   named root. We therefore retain exact tied-root comparisons and do not
+   claim the representative selector outputs the full root-switch response.
 
 The recovered March–August mechanisms are compared explicitly in
 [CARRIERS.md](CARRIERS.md): odd-partition scalar counting; June divisor
