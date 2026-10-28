@@ -23,7 +23,7 @@ def main():
     for s in sources['repository_sources']:
         blob=subprocess.run(['git','cat-file','blob',s['git_blob']],cwd=ROOT,capture_output=True,check=True).stdout
         need(digest(blob)==s['sha256_lf'],'pinned source: '+s['path'])
-    for name in ['README.md','THEORY.md','ELEVEN.md']:
+    for name in ['README.md','THEORY.md','ELEVEN.md','INCOMING.md']:
         for target in re.findall(r'\]\(([^)]+)\)',(HERE/name).read_text(encoding='utf-8')):
             if '://' in target or target.startswith('#'):continue
             need((HERE/target.split('#')[0]).exists(),'local link '+target)

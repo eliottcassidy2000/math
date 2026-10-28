@@ -105,6 +105,16 @@ prime values c_p in a field, the guarded local matrix is
 `[[1,c_p],[c_p,0]]`, determinant -c_p^2. Exponential rank arises from
 independent exclusion guards, even when the transport factors are trivial.
 
+Across all primes the Möbius continuation index is infinite: arbitrarily
+large finite banks already give unbounded numbers of distinguishable states.
+There is still a two-state Liouville machine when the INPUT is a stream of
+prime factors, toggling once for each factor. This does not compute lambda
+from decimal digits using two states: factoring is a separate representation
+change. Möbius on the factor stream needs the seen-prime set until failure;
+the joint observer also keeps sign thereafter. This is a precise connection
+to finite-state versus unbounded-memory computation, with no undecidability
+claim and no cost-free factoring assumption.
+
 ## D3. Joint laws, square-zero algebra and the Vitali mechanism (PROVED)
 
 For k=3 compare the uniform laws on the following squarefree integers:

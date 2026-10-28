@@ -39,6 +39,22 @@ A=C3->1 or its converse. The all-A word and a word with one converse child
 give44-vertex tournaments whose automorphism orders have ratio11. At p=3
 the same construction is exactly the81/27 hostile control.
 
+The [companion squarefree-symmetry theorem S1](../liouville_mobius_11_13_20261026/SYMMETRY.md)
+sharpens4p to5p if at least one automorphism order is squarefree. Its mechanism
+is exact: ambiguous four-vertex children each carry internal Aut3, and an
+orbit of at least p such children would force a square divisor. A rigid
+ambiguous child first occurs at size5, namely D=S4->1 and its converse.
+Decorating a prime carousel with D, then changing one child, gives orders p
+and1 on5p vertices. Thus at p11 the squarefree boundary is55 rather than44;
+the same normal-basis degree11 mechanism below applies to the decoration
+word, but its child cost changes from4 to5. The companion proof is reviewed
+and inherited here; its full finite census is not rerun by this packet.
+
+The first variation of lambda(|Aut|) is at12; that of mu(|Aut|) is at15.
+These are different statements from our twelve-vertex variation of
+`L(mu composed with H)`. The group order, path count and successor sum must
+remain distinct observables. See [the integration record](INCOMING.md).
+
 Given a normal basis `(beta,beta^2,...,beta^(2^(m-1)))` of F_(2^m), map a binary
 decoration word w to `alpha(w)=sum_i w_i beta^(2^i)`. Squaring alpha rotates
 the word by one position. If its least rotational period is d|m, then alpha

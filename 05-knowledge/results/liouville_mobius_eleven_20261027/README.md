@@ -62,6 +62,14 @@ new integrations are:
 - Replacing Möbius by Liouville in inversion passes squarefree-divisor tests
   such as degree11, but fails at degree121 and in the level-11 ghost inverse.
 
+The [companion arithmetic/symmetry packet](../liouville_mobius_11_13_20261026/README.md)
+also derives the shared transforms and response matrix, and proves a sharp
+**5p threshold when one automorphism order is squarefree**. At p11 this is55,
+compared with the unrestricted44 threshold. Its observer is mu(|Aut(T)|),
+distinct from our mu(H(T)) complement readout. [INCOMING.md](INCOMING.md)
+records attribution, the proof-scope review, and which results are additional
+here. The two packets were developed from the same base commit.
+
 Reproduce from the repo root:
 
 ```text

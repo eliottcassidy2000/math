@@ -114,6 +114,30 @@
       "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
       "sha256_lf": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
       "read_scope": "Targeted analytic/tournament literature routes before external claims."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_11_13_20261026/README.md",
+      "git_blob": "70d956ff75ad2e5b799e7d3ab9e2c750b9f9e4d7",
+      "sha256_lf": "f9a643e265515eca623ef9a0cf420320da6014805d70a0b849b569d91e82fe2d",
+      "read_scope": "Full result summary and observer scope."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_11_13_20261026/ARITHMETIC.md",
+      "git_blob": "8f71a5fe418ba08b0c6df09e1f09db25f7721ff8",
+      "sha256_lf": "92d0ee805d68b757102f820c869e0d8f5940e1c0fe2281344d6cacfa41b85642",
+      "read_scope": "Full A1-A5: parallel derivations and native H11/H13 application."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_11_13_20261026/SYMMETRY.md",
+      "git_blob": "9d2d9c802a7e00c30c12a13fad9b08db8e4918e9",
+      "sha256_lf": "474d5dbc2f6598da730cd48933c530c857b7f2abbf42b112e4a868bb4fd41452",
+      "read_scope": "Full S1-S3: reviewed sharp5p proof and inherited finite claims; no local rerun of its census."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_11_13_20261026/AUDIT.md",
+      "git_blob": "4e0028ceae71443a61b8c258a5fb5adb879903aa",
+      "sha256_lf": "d30702db03a6813bb667e7237dcf14af42e4d4e0c1df23ebc068db67f4d89efe",
+      "read_scope": "Full proof obligations, finite universes and provenance boundaries."
     }
   ],
   "external_sources": [
@@ -128,5 +152,6 @@
       "access_date": "2026-10-27"
     }
   ],
-  "status_policy": "Local proofs are PROVED within explicit operation alphabets; finite checks have explicit universes; inherited classical and repo claims retain cited scope."
+  "status_policy": "Local proofs are PROVED within explicit operation alphabets; finite checks have explicit universes; inherited classical and repo claims retain cited scope.",
+  "incoming_commit": "7f3cad483639f449f7f89b980ec52deed7d641b4"
 }
