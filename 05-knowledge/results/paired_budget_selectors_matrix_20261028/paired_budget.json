@@ -1,0 +1,218 @@
+{
+  "checks": 198119,
+  "controls": {
+    "decoded_cutoffs": 34999,
+    "decoded_modes": {
+      "('A', 0)": 20374,
+      "('A', 1)": 1393,
+      "('A', 2)": 1548,
+      "('B', 0)": 10726,
+      "('B', 1)": 958
+    },
+    "hostile_families": [
+      {
+        "D_pair": 4,
+        "S": 16,
+        "h": 0,
+        "target": 1
+      },
+      {
+        "D_pair": 8,
+        "S": 14,
+        "h": 0,
+        "target": 7
+      },
+      {
+        "D_pair": 0,
+        "S": 3,
+        "h": 0,
+        "target": 7
+      },
+      {
+        "D_pair": 4,
+        "S": 28,
+        "h": 1,
+        "target": 1
+      },
+      {
+        "D_pair": 10,
+        "S": 26,
+        "h": 1,
+        "target": 7
+      },
+      {
+        "D_pair": 1,
+        "S": 6,
+        "h": 1,
+        "target": 7
+      },
+      {
+        "D_pair": 4,
+        "S": 76,
+        "h": 5,
+        "target": 1
+      },
+      {
+        "D_pair": 18,
+        "S": 74,
+        "h": 5,
+        "target": 7
+      },
+      {
+        "D_pair": 5,
+        "S": 18,
+        "h": 5,
+        "target": 7
+      },
+      {
+        "D_pair": 4,
+        "S": 256,
+        "h": 20,
+        "target": 1
+      },
+      {
+        "D_pair": 48,
+        "S": 254,
+        "h": 20,
+        "target": 7
+      },
+      {
+        "D_pair": 20,
+        "S": 63,
+        "h": 20,
+        "target": 7
+      },
+      {
+        "D_pair": 4,
+        "S": 1216,
+        "h": 100,
+        "target": 1
+      },
+      {
+        "D_pair": 208,
+        "S": 1214,
+        "h": 100,
+        "target": 7
+      },
+      {
+        "D_pair": 100,
+        "S": 303,
+        "h": 100,
+        "target": 7
+      }
+    ],
+    "maximum_integer_bits": 542,
+    "native_cutoffs": 56494,
+    "sharp_control": {
+      "D_pair": 6,
+      "N": "3",
+      "S": 6,
+      "target": 1,
+      "twice_excess": 6
+    },
+    "source_first_fibres": 308
+  },
+  "proof": {
+    "base_rows": 702,
+    "certificate_sha256": "c2a1713b7917bddd670ed7f2fb41ca96bdaba83acb4fec9cdf7f36c6d23a0423",
+    "maximum_thrice_excess": [
+      12,
+      [
+        "A",
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        6,
+        6,
+        6
+      ]
+    ],
+    "maximum_twice_excess": [
+      6,
+      [
+        "A",
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        6,
+        6,
+        6
+      ]
+    ],
+    "slopes": [
+      [
+        "A",
+        0,
+        -12
+      ],
+      [
+        "A",
+        0,
+        -3
+      ],
+      [
+        "A",
+        3,
+        -12
+      ],
+      [
+        "A",
+        3,
+        -10
+      ],
+      [
+        "A",
+        3,
+        -3
+      ],
+      [
+        "A",
+        3,
+        -1
+      ],
+      [
+        "B",
+        0,
+        -12
+      ],
+      [
+        "B",
+        0,
+        -3
+      ],
+      [
+        "B",
+        3,
+        -12
+      ],
+      [
+        "B",
+        3,
+        -10
+      ],
+      [
+        "B",
+        3,
+        -8
+      ],
+      [
+        "B",
+        3,
+        -3
+      ]
+    ]
+  },
+  "scope": "native unit-counting source charges and original terminal phase; no multi-depth or universal-entry conclusion",
+  "status": "PROVED by event grammar and finite induction; controls FINITE-EXACT",
+  "theorem": "D_pair <= min(S/2 + 3, S/3 + 4) for complete one-step native fibres"
+}

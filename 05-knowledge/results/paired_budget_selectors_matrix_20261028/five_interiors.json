@@ -1,0 +1,72 @@
+{
+  "checks": 4,
+  "critical": {
+    "complement_component_types_tested": 76,
+    "seven_critical_complements": [
+      [
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ]
+      ],
+      [
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "P",
+          1
+        ],
+        [
+          "C",
+          5
+        ]
+      ]
+    ]
+  },
+  "exclusions": "No conclusion for six interiors, coincident ports, arbitrary abstract graphs, or global plane colouring",
+  "geometry": {
+    "fan_external_triple_centres": 0,
+    "hexagon_common_centre": [
+      0,
+      0
+    ],
+    "induced_lattice_five_cycles": 0,
+    "rooted_directed_lattice_five_cycles": 10
+  },
+  "status": "PROVED in FIVE_INTERIORS.md; finite exact independent controls",
+  "theorem": "Every proper six-colouring constant on four disjoint port pairs extends across at most five private interior vertices in the Euclidean unit-distance graph"
+}
