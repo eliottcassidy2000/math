@@ -2,8 +2,14 @@
 """
 a000568_speedup.py — Fast computation of A000568 (nonisomorphic tournaments).
 
-STATE OF THE ART: Davis formula (1954) sums over all partitions of n
-into odd parts. Number of terms = p(n) ~ exp(pi*sqrt(2n/3)).
+LEGACY RESEARCH PROTOTYPE: the odd-part generator and its direct/Dirichlet
+callers were repaired and regression-tested in Session87 (2026-10-28).
+Historical CRT experiments below remain unvalidated; this is not the current
+performance baseline. Prefer the degree-local counter at
+05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py.
+
+CLASSICAL INPUT: Davis formula (1954) sums over all partitions of n
+into odd parts. Number of terms = the odd-part partition count A000009(n), not p(n).
 
 THIS SCRIPT explores multiple speedup strategies:
 
@@ -41,7 +47,7 @@ def euler_totient(n):
     return result
 
 def partitions_odd_parts(n):
-    """Generate all partitions of n into odd parts (= all partitions of n by Euler)."""
+    """Generate odd-part partitions (= distinct-part partitions in number, by Euler)."""
     # We generate partitions of n into odd parts directly
     def _gen(remaining, max_part):
         if remaining == 0:
@@ -50,7 +56,10 @@ def partitions_odd_parts(n):
         # max_part must be odd
         if max_part % 2 == 0:
             max_part -= 1
-        for k in range(min(remaining, max_part), 0, -2):  # odd parts only
+        start = min(remaining, max_part)
+        if start % 2 == 0:
+            start -= 1
+        for k in range(start, 0, -2):  # odd parts only
             for rest in _gen(remaining - k, k):
                 yield [k] + rest
     yield from _gen(n, n if n % 2 == 1 else n - 1)
