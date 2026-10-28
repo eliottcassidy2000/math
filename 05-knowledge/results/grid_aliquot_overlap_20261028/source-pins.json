@@ -1,0 +1,27 @@
+{
+  "committed_sources": {
+    "01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md": "717b71a25a98b293c05115f50d67c0abe1c2df128126f1ec739357f30fecf58a",
+    "01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md": "6d3d58d3f78b85daf87175d6a949414fd23c549d57f092f251bbf0bcbc92bdae",
+    "05-knowledge/results/liouville_mobius_11_13_20261026/ARITHMETIC.md": "92d0ee805d68b757102f820c869e0d8f5940e1c0fe2281344d6cacfa41b85642",
+    "05-knowledge/results/session78_fourth_power_aliquot_20261027/ALIQUOT.md": "628b155529b97490630fcb2b5255bb070a11878c424e801f5a1f336817bdf437",
+    "05-knowledge/results/session78_fourth_power_aliquot_20261027/FOURTH_POWERS.md": "8020a85fdb390178e3373c8f689a95b99d2d418d3bfdb41ba6649ef2621ad936",
+    "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md": "4ff8e6ff99976d85960e182e9aa9e6734a39bfce1ec4737d16468e25a2809af3",
+    "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/FIBER_PORTS.md": "c9e0163702ee5bf9798b8e65ad1e76c3b9efd28cb3b88df72b21aa940d65798a",
+    "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ORBIT_CONNECTIONS.md": "af10ca6e58bdb4d2c7433ed127df27c4c76c053c8d008e8987a05221d9076840"
+  },
+  "external_sources": [
+    {
+      "scope": "near-perfect terminology and historical family; introduction",
+      "url": "https://math.colgate.edu/~integers/y61/y61.pdf"
+    },
+    {
+      "scope": "actual sums of cubes are a separate representation problem; introduction and Theorem1.2",
+      "url": "https://manjilsaikia.in/publ/papers/borah_mahanta_saikia.pdf"
+    },
+    {
+      "scope": "Ljunggren square-repunit theorem as stated on printed page257; cited input only",
+      "url": "https://msp.org/pjm/2000/193-2/pjm-v193-n2-p.pdf"
+    }
+  ],
+  "reviewed_base": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f"
+}

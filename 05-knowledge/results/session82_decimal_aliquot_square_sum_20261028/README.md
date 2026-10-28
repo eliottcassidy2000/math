@@ -139,3 +139,11 @@ python3 check_anchor.py
 ```
 
 The first command generates the deterministic input for the square-sigma filter and prefix audit. Each finite checker also passed under `python3 -O`. For the longer orbit replay, use the separate generator/verifier commands in ORBIT_CONNECTIONS.md; the generator requires POSIX alarm support and may take several minutes. The public packet contains nine Markdown files, ten Python programs, and one dependency file, with generated data kept local.
+
+**October28 continuation:** [Eisenstein coordinates and overlapping aliquot properties](../grid_aliquot_overlap_20261028/README.md)
+retains the owner's two descriptions of20, proves its unique excess-two
+overlap among five-proper-divisor sources, and recovers the full two-prime
+family. Its odd prime parameter is always5 modulo8, giving an exact
+transfer to the Eisenstein fourth-power obstruction;650 limits the
+factorization scope. The1001 characterization above is inherited and
+rechecked, with the square-sum and aliquot edge types kept distinct.
