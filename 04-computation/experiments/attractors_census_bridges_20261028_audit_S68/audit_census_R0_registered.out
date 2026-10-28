@@ -1,0 +1,53 @@
+run R0: window 4400..4839 body 6000 lexicon registered seed 20261028 null 2000 excluded [4839] (7.1s)
+  files 320; shares: BINARY_ALGEBRA 57.5%, MODULAR 53.8%, COLLATZ 49.7%, TOURNAMENT 30.6%, FINITE_GEOMETRY 21.9%, DIVISOR 21.2%, OBSERVER 18.4%, ZETA 16.9%, ABC 6.2%, QUADRATIC 5.6%
+  top pairs: FINITE_GEOMETRY-TOURNAMENT 7.12; COLLATZ-MODULAR 3.37; BINARY_ALGEBRA-TOURNAMENT 2.13; ABC-ZETA 2.03; ABC-QUADRATIC 1.95; BINARY_ALGEBRA-FINITE_GEOMETRY 1.87
+  bottom pairs: BINARY_ALGEBRA-OBSERVER -2.36; MODULAR-OBSERVER -3.17; COLLATZ-TOURNAMENT -3.33; COLLATZ-OBSERVER -5.86
+  lift-degree: TOURNAMENT 2, FINITE_GEOMETRY 1, BINARY_ALGEBRA 1, ABC 1, MODULAR 1, ZETA 1, COLLATZ 1, DIVISOR 0, QUADRATIC 0, OBSERVER 0
+  least strength: OBSERVER (1.24)
+  P1 True  P2 False  P3 False
+  all pairs (n_obs, null mean, null sd, z):
+    FINITE_GEOMETRY  TOURNAMENT         48    23.97   3.38   7.12
+    COLLATZ          MODULAR           102    87.49   4.30   3.37
+    BINARY_ALGEBRA   TOURNAMENT         67    58.59   3.95   2.13
+    ABC              ZETA                8     4.53   1.71   2.03
+    ABC              QUADRATIC           4     1.74   1.16   1.95
+    BINARY_ALGEBRA   FINITE_GEOMETRY    49    42.31   3.58   1.87
+    BINARY_ALGEBRA   COLLATZ           101    93.32   4.29   1.79
+    DIVISOR          FINITE_GEOMETRY    22    17.19   2.96   1.63
+    FINITE_GEOMETRY  ZETA               18    14.01   2.80   1.43
+    ABC              DIVISOR             8     5.42   1.89   1.37
+    MODULAR          ZETA               35    30.93   3.17   1.28
+    ABC              OBSERVER            7     4.86   1.72   1.24
+    FINITE_GEOMETRY  MODULAR            44    39.71   3.47   1.24
+    QUADRATIC        ZETA                6     4.14   1.64   1.13
+    DIVISOR          TOURNAMENT         27    23.34   3.35   1.09
+    BINARY_ALGEBRA   DIVISOR            44    41.15   3.55   0.80
+    ABC              BINARY_ALGEBRA     14    12.53   2.02   0.73
+    MODULAR          QUADRATIC          12    10.67   2.05   0.65
+    DIVISOR          QUADRATIC           6     4.93   1.77   0.60
+    FINITE_GEOMETRY  QUADRATIC           6     5.11   1.77   0.50
+    DIVISOR          ZETA               14    13.59   2.75   0.15
+    BINARY_ALGEBRA   ZETA               33    32.75   3.16   0.08
+    BINARY_ALGEBRA   MODULAR           101   100.74   4.11   0.06
+    COLLATZ          FINITE_GEOMETRY    37    37.13   3.51  -0.04
+    ABC              FINITE_GEOMETRY     5     5.60   1.86  -0.32
+    ABC              COLLATZ            10    10.98   2.10  -0.47
+    OBSERVER         TOURNAMENT         19    20.52   3.21  -0.47
+    ABC              MODULAR            10    11.81   2.16  -0.84
+    OBSERVER         QUADRATIC           3     4.47   1.73  -0.85
+    COLLATZ          ZETA               26    28.98   3.30  -0.90
+    QUADRATIC        TOURNAMENT          5     6.80   1.94  -0.93
+    DIVISOR          OBSERVER           12    14.75   2.87  -0.96
+    MODULAR          TOURNAMENT         51    55.32   4.05  -1.07
+    ABC              TOURNAMENT          5     7.40   2.06  -1.17
+    COLLATZ          DIVISOR            31    35.98   3.61  -1.38
+    FINITE_GEOMETRY  OBSERVER           11    15.02   2.81  -1.43
+    OBSERVER         ZETA                8    12.10   2.70  -1.52
+    TOURNAMENT       ZETA               14    18.81   2.99  -1.61
+    DIVISOR          MODULAR            33    38.83   3.55  -1.64
+    BINARY_ALGEBRA   QUADRATIC           8    11.27   1.97  -1.66
+    COLLATZ          QUADRATIC           6    10.01   2.00  -2.01
+    BINARY_ALGEBRA   OBSERVER           28    35.85   3.32  -2.36
+    MODULAR          OBSERVER           23    33.73   3.38  -3.17
+    COLLATZ          TOURNAMENT         38    51.24   3.97  -3.33
+    COLLATZ          OBSERVER           12    31.39   3.31  -5.86

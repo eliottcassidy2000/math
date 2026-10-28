@@ -56,6 +56,6 @@ G. Collatz clocks K/L (convergents and semiconvergents of log2 3) as abc triples
    46/29  |2^K - 3^L| = 1738366812781                rad = 6*rad(d) = 10430200876686                 q = 1.0637 HIT (0.0s)
    65/41  |2^K - 3^L| = 420491770248316829           rad = 6*rad(d) = 2522950621489900974            q = 1.0633 HIT (0.0s)
    84/53  |2^K - 3^L| = 40432553845953101497907      rad = 6*rad(d) = 242595323075718608987442       q = 1.0814 HIT (0.0s)
-  every clock from 3/2 on is a hit: |2^K - 3^L| < max/6 forces q > 1; Baker's bound sends q -> 1 along convergents
+  every clock from 3/2 on is a hit: |L log2 3 - K| <= 0.2451 < log2(6/5) gives |2^K - 3^L| < max/6, so q > 1; Baker makes log(max)/log(6|2^K - 3^L|) -> 1 (q -> 1 itself would need abc)
 
-ALL ASSERTIONS PASSED (1.7s)
+ALL ASSERTIONS PASSED (2.0s)

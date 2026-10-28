@@ -501,6 +501,7 @@ for K, L in clocks:
     say("  %3d/%-3d |2^K - 3^L| = %-28d rad = 6*rad(d) = %-30d q = %.4f %s (%.1fs)"
         % (K, L, d, R, q, "HIT" if q > 1 else "", time.time() - t1))
 assert [r[:2] for r in rows if r[3] > 1] == clocks[2:]       # every clock from 3/2 on is an abc hit
-say("  every clock from 3/2 on is a hit: |2^K - 3^L| < max/6 forces q > 1; Baker's bound sends q -> 1 along convergents")
+say("  every clock from 3/2 on is a hit: |L log2 3 - K| <= 0.2451 < log2(6/5) gives |2^K - 3^L| < max/6, so q > 1;"
+    " Baker makes log(max)/log(6|2^K - 3^L|) -> 1 (q -> 1 itself would need abc)")
 say("")
 say("ALL ASSERTIONS PASSED (%.1fs)" % (time.time() - T0))

@@ -1,0 +1,153 @@
+====================================================================================================
+A. complete unit Cayley graphs over every imaginary quadratic field with |D| <= 2000, primes p <= 200
+====================================================================================================
+  fundamental discriminants scanned: 611 (class numbers 1..56; e.g. h histogram head [(1, 9), (2, 18), (3, 16), (4, 54), (5, 22), (6, 40)])
+  complete unit Cayley graphs with N(P) >= 4:
+    D = -3 (h = 1), p = 2 (inert), N(P) = 4  -> K4
+    D = -3 (h = 1), p = 7 (split), N(P) = 7  -> K7
+    D = -3 (h = 1), p = 7 (split), N(P) = 7  -> K7
+    D = -4 (h = 1), p = 5 (split), N(P) = 5  -> K5
+    D = -4 (h = 1), p = 5 (split), N(P) = 5  -> K5
+  -> exactly (Q(sqrt-3), 4), (Q(i), 5) [both primes over 5], (Q(sqrt-3), 7) [both primes over 7]
+  small-norm cases excluded by N(P) >= 4: every field gives K2 at N = 2 and K3 at N = 3 (units +-1 suffice)
+
+====================================================================================================
+B. toroidal maps as genuine maps (Coxeter-Moser convention)
+====================================================================================================
+  {4,4}_(2,1)  V=5   E=10  F=5   chi=0 faces[4] max-mult=1 loops=False  skeleton~K5: True  planar=False  orientably-regular=True  chiral=True
+  {4,4}_(2,2)  V=8   E=16  F=8   chi=0 faces[4] max-mult=1 loops=False  skeleton~K4,4: True  planar=False  orientably-regular=True  chiral=False
+  {3,6}_(2,0)  V=4   E=12  F=8   chi=0 faces[3] max-mult=2 loops=False  skeleton~K4: True  planar=True  orientably-regular=True  chiral=False
+  {3,6}_(2,1)  V=7   E=21  F=14  chi=0 faces[3] max-mult=1 loops=False  skeleton~K7: True  planar=False  orientably-regular=True  chiral=True
+  {6,3}_(1,1)  V=6   E=9   F=3   chi=0 faces[6] max-mult=1 loops=False  skeleton~K3,3: True  planar=False  orientably-regular=True  chiral=False
+  {6,3}_(2,1)  V=14  E=21  F=7   chi=0 faces[6] max-mult=1 loops=False  skeleton~Heawood: True  planar=False  orientably-regular=True  chiral=True
+  -> all six identifications hold in Coxeter-Moser's convention (norm b^2+c^2, resp. b^2+bc+c^2);
+     {4,4}_(2,1) [K5], {3,6}_(2,1) [K7], {6,3}_(2,1) [Heawood] are CHIRAL (orientably regular, not reflexible)
+     {3,6}_(2,0): 4 vertices, 12 edges, every K4 edge doubled
+  girth-Euler bound E <= g(V-2)/(g-2) for the simple skeletons:
+    K5       V=5  E=10 girth 3 bound 9      violated=True  planar=False
+    K3,3     V=6  E=9  girth 4 bound 8      violated=True  planar=False
+    K7       V=7  E=21 girth 3 bound 15     violated=True  planar=False
+    Heawood  V=14 E=21 girth 6 bound 18     violated=True  planar=False
+    K4,4     V=8  E=16 girth 4 bound 12     violated=True  planar=False
+    Petersen V=10 E=15 girth 5 bound 40/3   violated=True  planar=False
+    K6       V=6  E=15 girth 3 bound 12     violated=True  planar=False
+  small maps {4,4}_(b,c), {3,6}_(b,c), {6,3}_(b,c) (b >= c >= 0, b >= 1): simple? planar?
+    {4,4}_(1,0): V=1  simple=False planar(simple skeleton)=True
+    {4,4}_(1,1): V=2  simple=False planar(simple skeleton)=True
+    {4,4}_(2,0): V=4  simple=False planar(simple skeleton)=True
+    {4,4}_(2,1): V=5  simple=True  planar(simple skeleton)=False
+    {4,4}_(2,2): V=8  simple=True  planar(simple skeleton)=False
+    {4,4}_(3,0): V=9  simple=True  planar(simple skeleton)=False
+    {4,4}_(3,1): V=10 simple=True  planar(simple skeleton)=False
+    {4,4}_(3,2): V=13 simple=True  planar(simple skeleton)=False
+    {4,4}_(3,3): V=18 simple=True  planar(simple skeleton)=False
+    {3,6}_(1,0): V=1  simple=False planar(simple skeleton)=True
+    {3,6}_(1,1): V=3  simple=False planar(simple skeleton)=True
+    {3,6}_(2,0): V=4  simple=False planar(simple skeleton)=True
+    {3,6}_(2,1): V=7  simple=True  planar(simple skeleton)=False
+    {3,6}_(2,2): V=12 simple=True  planar(simple skeleton)=False
+    {3,6}_(3,0): V=9  simple=True  planar(simple skeleton)=False
+    {3,6}_(3,1): V=13 simple=True  planar(simple skeleton)=False
+    {3,6}_(3,2): V=19 simple=True  planar(simple skeleton)=False
+    {3,6}_(3,3): V=27 simple=True  planar(simple skeleton)=False
+    {6,3}_(1,0): V=2  simple=False planar(simple skeleton)=True
+    {6,3}_(1,1): V=6  simple=True  planar(simple skeleton)=False
+    {6,3}_(2,0): V=8  simple=True  planar(simple skeleton)=True
+    {6,3}_(2,1): V=14 simple=True  planar(simple skeleton)=False
+    {6,3}_(2,2): V=24 simple=True  planar(simple skeleton)=False
+    {6,3}_(3,0): V=18 simple=True  planar(simple skeleton)=False
+    {6,3}_(3,1): V=26 simple=True  planar(simple skeleton)=False
+    {6,3}_(3,2): V=38 simple=True  planar(simple skeleton)=False
+    {6,3}_(3,3): V=54 simple=True  planar(simple skeleton)=False
+
+====================================================================================================
+C. Petersen = hemi-dodecahedron; map group
+====================================================================================================
+  dodecahedron: V=20 E=30 F=12; antipodal map = unique vertex at distance 5, an automorphism, maps faces to faces
+  quotient: V=10 E=15, 6 face pentagons, isomorphic to Petersen: True; chi = 1 (projective plane)
+  |Aut(Petersen graph)| = 120; automorphisms preserving the 6 hemi-dodecahedral faces: 60
+  flags: 60; orbit of one flag under the 60 map automorphisms: 60 (regular action)
+  element orders of the map group: {1: 1, 2: 15, 3: 20, 5: 24}  (A_5: {1: 1, 2: 15, 3: 20, 5: 24})
+  hemi-icosahedron (the other (2,3,5) quotient): K6 is non-planar too: planar(K6) = False
+
+====================================================================================================
+D. the Klein-four Belyi map and X(4) -> X(2)
+====================================================================================================
+  lambda = (t - 1)**2*(t + 1)**2 / (t**2 + 1)**2 ; lambda - 1 = -4*t**2 / (t**2 + 1)**2
+  at t = oo (t = 1/s): lambda = (s - 1)**2*(s + 1)**2/(s**2 + 1)**2 ; lambda - 1 = -4*s**2/(s**2 + 1)**2
+  fibre over 0: {1: 2, -1: 2} ; over 1: {0: 2} plus t = oo (order of vanishing of lambda-1 at s=0: 2) ; over oo: {-I: 2, I: 2}
+  finite critical points (zeros of lambda'): {-1: 1, 1: 1, 0: 1}
+  deck group {t, -t, 1/t, -1/t} = Z/2 x Z/2 of order 4 = degree -> Galois; R-H: 2*0-2 = 4*(2*0-2) + 6 -> True
+  numerical monodromy on the fibre over 1/2 (4 points): {'around 0': [1, 0, 3, 2], 'around 1': [3, 2, 1, 0]}
+  monodromy group order 4, all non-identity elements involutions without fixed points: True
+  theta check at tau = (0.137 + 1.21j): |lambda(t(tau)) - lambda(tau)| = 1.98e-31
+    gamma = (1, 4, 0, 1)       in +-Gamma(4): True   t(gamma tau) = t   (residual 3.4e-31)
+    gamma = (1, 0, 4, 1)       in +-Gamma(4): True   t(gamma tau) = t   (residual 2.4e-31)
+    gamma = (5, -4, 4, -3)     in +-Gamma(4): True   t(gamma tau) = t   (residual 2.3e-30)
+    gamma = (-3, 4, -4, 5)     in +-Gamma(4): True   t(gamma tau) = t   (residual 1.1e-30)
+    gamma = (1, -4, 4, -15)    in +-Gamma(4): True   t(gamma tau) = t   (residual 2.9e-30)
+    gamma = (5, 4, 16, 13)     in +-Gamma(4): True   t(gamma tau) = t   (residual 7.7e-31)
+    gamma = (1, 2, 0, 1)       in +-Gamma(4): False  t(gamma tau) = 1/t   (residual 1.0e-30)
+    gamma = (1, 0, 2, 1)       in +-Gamma(4): False  t(gamma tau) = -t   (residual 1.1e-31)
+    gamma = (3, 2, 4, 3)       in +-Gamma(4): False  t(gamma tau) = 1/t   (residual 1.9e-30)
+    gamma = (-1, 2, -2, 3)     in +-Gamma(4): False  t(gamma tau) = -1/t   (residual 2.3e-30)
+  -> t is a Hauptmodul for Gamma(4) and Gamma(2)/(+-Gamma(4)) acts as t -> +-t^(+-1): the Klein-four Belyi map
+     is the modular cover X(4) -> X(2) (also forced: F_2 = Gamma(2)-bar has a unique normal subgroup with quotient V_4)
+
+====================================================================================================
+E. Pythagorean Frey curves y^2 = x(x - a^2)(x + b^2): 4-torsion, full torsion, and the Kubert family
+====================================================================================================
+  order-4 point (a(a+c), ac(a+c)) with 2Q = (a^2, 0): verified for 6560 (triple, leg order) pairs (depth <= 7)
+  pairs whose curve has a halvable point of order 4 (torsion Z/2 x Z/8): 0 []
+    (3,4,5): gcd of #E(F_p) over good p < 400 = 8 (torsion order divides it)
+    (5,12,13): gcd of #E(F_p) over good p < 400 = 8 (torsion order divides it)
+    (21,20,29): gcd of #E(F_p) over good p < 400 = 8 (torsion order divides it)
+    (15,8,17): gcd of #E(F_p) over good p < 400 = 8 (torsion order divides it)
+    (7,24,25): gcd of #E(F_p) over good p < 400 = 8 (torsion order divides it)
+    (55,48,73): gcd of #E(F_p) over good p < 400 = 8 (torsion order divides it)
+  y^2 = x(x+1)(x+4): (0,0) halvable (0-(-1)=1, 0-(-4)=4 squares) -> Z/2 x Z/4 subset of E(Q);
+    its six lambda-values [Fraction(-3, 1), Fraction(-1, 3), Fraction(1, 4), Fraction(3, 4), Fraction(4, 3), Fraction(4, 1)]; values with lambda and 1-lambda both squares: [] -> NOT a Pythagorean Frey curve
+  So the Pythagorean Frey curves are the thin subfamily lambda, 1-lambda both squares = image of X(4)(Q),
+  i.e. a degree-2 image inside the Z/2 x Z/4 family (X_1(2,4) = X(Gamma(2) cap Gamma_1(4))); over Q(i) they have full 4-torsion.
+
+====================================================================================================
+F. Berggren abc hits (a^2, b^2, c^2), depth <= 9 (independent generator)
+====================================================================================================
+  triples 29524, hits 60
+    q = 1.265900  (36207, 18424, 40625)  rad = 19118190
+    q = 1.242545  (1377, 3136, 3425)  rad = 489090
+    q = 1.218210  (2793, 10624, 10985)  rad = 4305210
+    q = 1.203969  (7, 24, 25)  rad = 210
+    q = 1.188850  (1519, 720, 1681)  rad = 266910
+    q = 1.154541  (117, 44, 125)  rad = 4290
+    q = 1.114561  (107217, 21056, 109265)  rad = 1099488390
+    q = 1.111329  (12463, 2016, 12625)  rad = 24030930
+  (175, 288, 337) present: True (q = 1.0424)
+  (7, 24, 25): q = 1.2040
+  primitive triples with c <= 2000: 319
+
+====================================================================================================
+G. Collatz clocks = convergents and semiconvergents K/L of log2 3
+====================================================================================================
+  log2 3 = [1; 1, 1, 2, 2, 3, 1, 5, 2, 23, 2, 2, 1, 1]
+  clocks with L <= 53: [(1, 1), (2, 1), (3, 2), (5, 3), (8, 5), (11, 7), (19, 12), (27, 17), (46, 29), (65, 41), (84, 53)]
+      1/1   d = 1                          d < max/6: False rad = 6                          q = 0.6131 no
+      2/1   d = 1                          d < max/6: False rad = 6                          q = 0.7737 no
+      3/2   d = 1                          d < max/6: True  rad = 6                          q = 1.2263 HIT
+      5/3   d = 5                          d < max/6: True  rad = 30                         q = 1.0190 HIT
+      8/5   d = 13                         d < max/6: True  rad = 78                         q = 1.2728 HIT
+     11/7   d = 139                        d < max/6: True  rad = 834                        q = 1.1433 HIT
+     19/12  d = 7153                       d < max/6: True  rad = 42918                      q = 1.2359 HIT
+     27/17  d = 5077565                    d < max/6: True  rad = 30465390                   q = 1.0861 HIT
+     46/29  d = 1738366812781              d < max/6: True  rad = 10430200876686             q = 1.0637 HIT
+     65/41  d = 420491770248316829         d < max/6: True  rad = 2522950621489900974        q = 1.0633 HIT
+     84/53  d = 40432553845953101497907    d < max/6: True  rad = 242595323075718608987442   q = 1.0814 HIT
+  every clock with 2 <= L <= 20000 (40 clocks) satisfies |2^K - 3^L| < max/6, hence is an abc hit
+
+====================================================================================================
+H. hyperbolic signatures and the S116 inequality
+====================================================================================================
+  max of 1/p+1/q+1/r < 1 over 2 <= p <= q <= r (p,q < 60, r < 400; the tail is trivially smaller): 41/42 at [(2, 3, 7)]
+  1 + 8 = 9, rad = 6: rad^{1+eps} > 9 fails exactly for eps <= log 9/log 6 - 1 = 0.22629439
+
+ALL ASSERTIONS PASSED (4.0 s)

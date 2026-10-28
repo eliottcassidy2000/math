@@ -1,7 +1,7 @@
 ---
 id: HYP-9437
 title: "Pre-registered keyword census: in recent canon (THM-4400..4839) the modular/triangle-group family (PSL_2(Z), Farey, Berggren, Pythagorean, Pell, modular forms, triangle groups) is the most bridging of ten concept families against a degree-preserving null model"
-status: TESTED 2026-10-28 - P1 CONFIRMED, P2 REFUTED, P3 REFUTED (the modular family is pervasive but is not the bridging hub)
+status: TESTED 2026-10-28 - P1 CONFIRMED, P2 REFUTED, P3 REFUTED (not the bridging hub; the registered 53.8% share is inflated by a lexicon bug, 23.1% corrected; verdicts unchanged)
 session: opus-2026-10-28-S68
 date: 2026-10-28
 related: [THM-4839, THM-4837, THM-4838, THM-4808, THM-4825]
@@ -21,8 +21,8 @@ lanes propose methodological unifiers:
 
 They explicitly decline any dynamical "attractor". This session's mathematical thesis is that the main **object-level**
 attractor is the world of the modular group PSL_2(Z) = Delta(2,3,oo) with:
-- its congruence and triangle-group quotients (PSL_2(F_p) = Delta(2,3,p) quotients; the Euclidean groups Delta(2,4,4) and
-  Delta(2,3,6) of the Gaussian and Eisenstein grids);
+- its congruence and triangle-group quotients: PSL_2(F_p) as Delta(2,3,p) quotients, and the Euclidean Delta(2,3,6) of the
+  Eisenstein grid. The Gaussian grid's Delta(2,4,4) is a sibling, not a quotient of PSL_2(Z) (audit n9);
 - its trees (Farey, Stern-Brocot, Berggren via Gamma(2));
 - its Euler characteristics, which are Bernoulli values (THM-4838).
 
@@ -62,6 +62,8 @@ The full canon (all ids) is reported as an exploratory, non-registered compariso
 of files touching at least two families.
 
 - **(P1) CONFIRMED.** MODULAR touches 53.8% of the files. Only BINARY_ALGEBRA, at 57.5%, is more frequent.
+  This is with the registered lexicon. `Hecke` matches "checked" in 98 files; with a word boundary the share is
+  23.1%, and the verdict is unchanged.
 - **(P2) REFUTED.** Lift-degrees (partners with z >= 2): TOURNAMENT 2; FINITE_GEOMETRY, BINARY_ALGEBRA, MODULAR and
   COLLATZ 1 each; the rest 0.
 - **(P3) REFUTED.** The top three pairs are FINITE_GEOMETRY-TOURNAMENT (z = 7.29), COLLATZ-MODULAR (3.31) and
@@ -76,10 +78,26 @@ of files touching at least two families.
 - Lift-degree leaders are BINARY_ALGEBRA 5, DIVISOR 4, MODULAR 3 and COLLATZ 3.
 - OBSERVER is again the least bridging.
 
-**Reading.** The session's first thesis, the modular family as the hub, is refuted on this measure. What survives is
-two object-level hubs:
-- finite geometry with tournaments;
-- Collatz with modular arithmetic.
+**Reading (corrected after audit).** The session's first thesis, the modular family as the hub, is refuted on this
+measure.
+- What survives is **one robust association**: finite geometry with tournaments, the strongest pair in all 26 audit
+  variants.
+- Also robust: the separation of Collatz notes from "carrier"/"observer" vocabulary.
+- The registered COLLATZ-MODULAR pair (z = 3.31) is an artifact of the `Hecke`/"checked" lexicon bug: z = 1.4 after
+  correction, and 0.75 over the whole canon.
+- So is the binary family's all-canon lead.
 
-They share a common binary language and sit beside an observer layer that is lexically isolated. THM-4839 supplies
-explicit morphisms across the weak FINITE_GEOMETRY-MODULAR gap. The census itself is lexical evidence only.
+THM-4839 supplies explicit morphisms across the finite-geometry/modular gap. Over the whole canon these two vocabularies
+are anti-associated (z = -4.3).
+
+**Audit (2026-10-28, `04-computation/experiments/attractors_census_bridges_20261028_audit_S68/AUDIT.md`, SOUND WITH
+CORRECTIONS).**
+- Pre-registration integrity is confirmed: the script is unchanged since 593105aedd, and the corpus is 320 files at that
+  commit.
+- The registered script is left unchanged. The corrected-lexicon, robustness and spot-check runs are the audit's
+  exploratory scripts:
+  - P2 flips at BODY_CHARS = 12000;
+  - stripping the front matter sends COLLATZ-MODULAR to 0.11;
+  - the output depends on PYTHONHASHSEED (FG-T z = 7.13-7.38);
+  - 15 of 31 spot-checked family assignments were false positives.
+- To reproduce on later checkouts use ID_MAX = 4838 (THM-4839 now exists) and PYTHONHASHSEED = 0.

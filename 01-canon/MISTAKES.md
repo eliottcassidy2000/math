@@ -21084,34 +21084,39 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **How it was caught:** the auditor read the cited paper in full, recomputed class numbers by two methods and every count with its own code, ran three independent searches to bases 800 (finding the representation of 6 at 541), and checked the local densities against the exact 16m and 9m recursions.
 - **Lesson / reusable rule:** a paper cited for one theorem must be read in full before typing neighbouring statements new: grep its theorem list for every statement in the file (third occurrence of this lesson; see the memory rule on cited papers). In a critical-dimension representation problem (here eight real variables, two equations of degree 4), "no representation in the box" is not evidence of non-representability: the least representation of 6 sits at bases 541 although none exists below 150, so pre-register predictions calibrated on class-mates and on the measured fill-in curve, and phrase results as "none with bases <= B". State a local-global criterion place by place (every residue field, with Weil's bound above the small ones), never from tests at a few prime powers. Check "for all d" statements at the degenerate parameter (d = 1) and every "is exactly" or "there is no" sentence before typing it.
 
-## MISTAKE-691 (2026-10-28, found by opus-2026-10-28-S68's abc genealogy, `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` section 5) -- three unflagged abc errors in older lanes: abc stated as proved and without its constant, an uncited re-derivation, and an unconditional theorem typed as abc-conditional
+## MISTAKE-691 (2026-10-28, found by opus-2026-10-28-S68's abc genealogy, `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` section 5) -- abc genealogy findings in older lanes: abc stated as proved and without its constant, an uncited duplication, and an unconditional finiteness theorem omitted from an abc-conditional statement (amended after the S68 audit)
 
 - **What was wrong.**
-  - **(1)** `05-knowledge/results/famous_problems_s116.out` (2026-03-15, S116 survey) lines 67-68 read "ABC CONJECTURE
+  - **(1)** `05-knowledge/results/famous_problems_s116.out` (2026-03-15, S116 survey; generator
+    `04-computation/famous_problems_s116.py` line 76) lines 67-68 read "ABC CONJECTURE
     (proved by Mochizuki, controversial)" and "rad(abc)^{1+eps} > c for all eps > 0". abc is open, and the IUT claim
     is disputed (the repository's own `05-knowledge/reference/CORE-PAPERS-ABC-IUT.md`, 2026-08-23, types ABC OPEN).
     The inequality is false without a constant K_eps or a finite exception set: 1 + 8 = 9 violates it for every
     eps < log 9/log 6 - 1 = 0.2263. The file was never annotated. It is the only "proved by Mochizuki" statement in
     01-canon, 05-knowledge, 07-reflections and 00-navigation.
-  - **(2)** `05-knowledge/results/twin_pythagorean_124_20261026/arithmetic/README.md` eq. (8), 1 + p(p+2) = m^2,
-    re-derives the twin-centre abc identity (m^2 - 1) + 1 = m^2 of
-    `05-knowledge/results/abc_difference_families_20261011c.md` eq. (2) (2026-10-11 Codex packet) without citing it.
-  - **(3)** THM-3833 (2026-08-23, audited PASS) types "ABC also implies non-effective finiteness for every fixed
-    primitive hyperbolic Fermat-Catalan signature" as a PROVED CONDITIONAL IMPLICATION.
-    - For each fixed (p, q, r) with 1/p + 1/q + 1/r < 1 that finiteness is an unconditional theorem (H. Darmon and
-      A. Granville, Bull. LMS 27 (1995) 513-543, Theorem 2, via Faltings and Chevalley-Weil).
-    - The genuinely abc-conditional content is the uniform statement over all hyperbolic signatures. abc gives
-      z^r <= K_eps (z^r)^{(41/42)(1 + eps)}, because 1/p + 1/q + 1/r <= 41/42 with equality at (2,3,7). That is the
-      standard implication abc => Fermat-Catalan conjecture.
+  - **(2)** An uncited duplication; no novelty is claimed, so this is a credit omission rather than an error.
+    `05-knowledge/results/twin_pythagorean_124_20261026/arithmetic/README.md` eq. (8), 1 + p(p+2) = m^2, duplicates
+    the twin-centre identity (m^2 - 1) + 1 = m^2 of `05-knowledge/results/abc_difference_families_20261011c.md`
+    eq. (2) (2026-10-11 Codex packet). No file of the packet cites it, although the packet disclaims novelty.
+  - **(3)** THM-3833 (2026-08-23, audited PASS) states, in Theorem 4.1, a true abc-conditional implication:
+    finiteness, with an explicit height bound (18), for each fixed primitive hyperbolic Fermat-Catalan
+    signature.
+    - It does not record that fixed-signature finiteness is an unconditional theorem (H. Darmon and
+      A. Granville, Bull. LMS 27 (1995) 513-543, Theorem 2, via Faltings).
+    - The abc-conditional content of its Theorem 4.1 is the height bound (18).
+    - The uniform version follows from (18) and THM-3833's own (24) (1/42 is the least hyperbolic
+      curvature). It is Darmon-Granville 1995 section 5.2, the standard abc => Fermat-Catalan step.
 - **Repair.** Recorded here and in the genealogy note.
   - (1) The S116 output is historical. Its statement is superseded by `CORE-PAPERS-ABC-IUT.md` and should be read as
     "abc: OPEN; there exists K_eps with c <= K_eps rad(abc)^{1+eps}".
   - (2) The 10-11 packet is the source of the twin-centre identity.
-  - (3) THM-3833's fixed-signature clause should be read as CITED (Darmon-Granville 1995, unconditional). Its
-    conditional clause is the uniform version (standard), with the deficit 1/42 = 1 - 1/2 - 1/3 - 1/7 (THM-4838's B_6).
+  - (3) THM-3833's fixed-signature finiteness also holds unconditionally (Darmon-Granville 1995). Its own abc content
+    is the height bound (18). The uniform version is DG 1995 section 5.2, with the deficit
+    1/42 = 1 - 1/2 - 1/3 - 1/7 (THM-4838's B_6).
   - The theorem files themselves are left unchanged, by protocol; this entry is the correction of record.
 - **How it was caught.** A read-only survey of every abc mention since 2026-03-14 was spot-checked against the files.
-  The fixed-signature clause was compared with the classical literature on generalized Fermat equations.
+  The fixed-signature clause was compared with the classical literature. THM-4516 (2026-09-29) and the 10-11 packet
+  had already cited Darmon-Granville. The S68 audit corrected this entry's first framing of (2) and (3).
 - **Lesson / reusable rule.** Before typing an "X-conditional" implication, check whether the conclusion is already
   known unconditionally. For Diophantine finiteness this means checking Faltings-type theorems (Darmon-Granville for
   generalized Fermat, Siegel/Baker for S-units), not only the conjecture's textbook consequences. A conditional result
@@ -21172,3 +21177,62 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 
   An owner's numbers that match famous published values are most likely taken from those publications. The decode is
   then a citation, not a discovery.
+
+## MISTAKE-693 (2026-10-28, opus-2026-10-28-S68, HYP-9437, THM-4839, MISTAKE-691 and the note `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` at the pre-audit commit 4e32454073; found by the independent audit `04-computation/experiments/attractors_census_bridges_20261028_audit_S68/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a lexicon bug ('Hecke' matching 'checked') that manufactured a census hub, the wrong modular curve for Pythagorean Frey curves, and over-statements in the bridges and the genealogy
+
+- **What was wrong.**
+  - **(1)** The pre-registered census lexicon put `Hecke` in the MODULAR family with no word boundary, matched
+    case-insensitively. It matches "checked", "checker" and "cross-checked".
+    - In the 320-file window, 98 of the 172 MODULAR files matched only through it. The MODULAR share, 53.8%, is 23.1%
+      with a word boundary.
+    - The note's "Collatz <-> modular hub" (z = 3.3 recent, 5.1 overall) was this artifact: z = 1.4 and 0.75 after
+      correction.
+    - The binary family's all-canon lead was likewise inflated: "character" matches "characteristic", and "parity"
+      matches file names.
+    - The registered verdicts (P1 confirmed, P2/P3 refuted) survive, but the readings were wrong.
+  - **(2)** THM-4839 (d) said the Pythagorean Frey curves "form the genus-zero family with torsion containing
+    Z/2 x Z/4" (Gamma(2) cap Gamma_1(4)). They are the fibres over X(4) (lambda and 1 - lambda both squares), a double
+    cover of Kubert's X_1(2,4). So they are a thin subfamily: y^2 = x(x+1)(x+4) is a Z/2 x Z/4 curve that is not
+    Pythagorean. The Klein-four map of (c) is the classical X(4) -> X(2) (Darmon-Granville 1995 section 7.1) and was
+    typed as if new.
+  - **(3)** Over-statements.
+    - "Baker sends q -> 1" is false as stated: Baker bounds |2^K - 3^L|, not its radical.
+    - "The first non-planar regular-map quotients": the hemi-icosahedron gives K6, so the claim holds only by type, and
+      three of the maps are chiral.
+    - "Only K4, K5, K7" lacked N(P) >= 4 in the title.
+    - The "class-number-one fields" list omitted 67 and 163.
+    - "a quotient of the (2,3,5) triangle group by A_5" was garbled.
+  - **(4)** Uncredited internal prior art:
+    - Petersen = hemi-dodecahedron in four notes of 2026-10-01..18;
+    - K7 as the chiral {3,6}_(2,1) (camion_busch, 10-02);
+    - the N(P) = 7 case (torus_voltage G2, 10-20).
+  - **(5)** Genealogy paraphrases.
+    - session69's bijection is only for B = 2^a, C odd.
+    - Collatz clocks are Pillai-type, not {2,3}-unit-equation, points.
+    - "Baker beats abc ... this session confirms" overstated the atlas.
+    - MISTAKE-604/676/678 were mis-described.
+    - "Each step cites the previous" was false.
+    - MISTAKE-691 (3) mischaracterised THM-3833 (corrected in place above).
+  - **(6)** THM-4839's 205-character file name exceeded Windows MAX_PATH from this checkout path.
+- **Repair.**
+  - HYP-9437's status, P1 note and Reading corrected, with the registered script left unchanged.
+  - THM-4839 rewritten under a short file name:
+    - (a) titled with N(P) >= 4, and checked by the audit over all |D| <= 2000;
+    - (b) stated by map type, with chirality;
+    - (c) typed CITED as X(4) -> X(2);
+    - (d) corrected to the X(4) subfamily, citing Kubert and Halbeisen-Hungerbuehler;
+    - the clock-hit proof added; Baker's role stated correctly.
+  - The note rewritten: one robust association, the anti-associated finite-geometry/modular vocabularies, and the
+    genealogy fixes.
+  - MISTAKE-691 amended. INDEX rows updated.
+- **How it was caught.**
+  - The auditor tabulated every lexicon term's hits, which exposed `Hecke` at 127 files against 2 genuine.
+  - It spot-checked 10 random files and ran 26 robustness variants.
+  - It identified the Klein-four cover via theta functions and the uniqueness of the V_4 quotient of Gamma(2)-bar.
+  - It found a non-Pythagorean Z/2 x Z/4 curve.
+- **Lesson / reusable rule.**
+  - Before any regex census, print each term's hit count and a sample of matched contexts, and use word boundaries for
+    every proper name. A pre-registration protects against post-hoc readings, not against a buggy instrument; validate
+    the instrument on a labelled sample first.
+  - When a parametrised family is identified with a modular curve, check the degree of the map to the named curve and
+    look for a family member outside the image.

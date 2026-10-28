@@ -1,0 +1,96 @@
+per-alternative match counts (files whose first 6000 chars match), window 4400..4839, 320 files
+  MODULAR: 172 files; top alternatives (files, files matched ONLY by this alternative):
+       127   98  Hecke
+        14    4  convergent
+        12    4  Pythagorean
+         9    1  \bcusp
+         7    4  Markov
+         7    2  \beta\(
+         7    2  Gamma_0
+         7    1  \bSL ?_?2
+         7    1  \bPSL
+  QUADRATIC: 18 files; top alternatives (files, files matched ONLY by this alternative):
+         8    4  Heegner
+         6    0  class number
+         4    2  idoneal
+         4    1  imaginary quadratic
+         4    1  Hilbert class
+         3    3  quadratic form
+         1    1  \bZ\[i\]
+         1    0  norm form
+         1    0  genus theory
+  FINITE_GEOMETRY: 70 files; top alternatives (files, files matched ONLY by this alternative):
+        38   21  \bPaley
+        18    7  \bF_q\b
+         8    3  \bFano
+         7    5  Kuratowski
+         6    4  Steiner
+         6    2  finite field
+         5    0  Petersen
+         4    3  Hamming
+         4    0  \bK_?5\b
+  BINARY_ALGEBRA: 184 files; top alternatives (files, files matched ONLY by this alternative):
+       114   75  parity
+        76   45  character
+        16    4  \bF_2\b
+        16    2  Walsh
+        13    2  \bXOR\b
+         8    2  Hadamard
+         6    2  Boolean
+         1    0  square class
+         0    0  syndrome
+  DIVISOR: 68 files; top alternatives (files, files matched ONLY by this alternative):
+        24   20  divisor
+        21   17  \bsigma\(
+        12    7  squarefree
+         7    5  radical
+         6    5  Moebius
+         4    3  Liouville
+         3    1  aliquot
+         3    0  perfect number
+         1    1  Möbius
+  COLLATZ: 159 files; top alternatives (files, files matched ONLY by this alternative):
+       142   49  Collatz
+        48    5  2-adic
+        43    2  3x ?\+ ?1
+        38    1  Terras
+        29    2  3n ?\+ ?1
+        29    0  log_?2 ?\(?3
+        19    1  Syracuse
+        15    0  3-adic
+        11    1  parity vector
+  TOURNAMENT: 98 files; top alternatives (files, files matched ONLY by this alternative):
+        95   56  tournament
+        32    2  Hamiltonian path
+        16    0  Redei
+        14    1  \bH\(T\)
+         4    0  Rédei
+         3    0  score sequence
+  ZETA: 54 files; top alternatives (files, files matched ONLY by this alternative):
+        23   18  \bzeta
+        11   11  Bernoulli
+         9    3  Apery
+         7    6  Dirichlet
+         3    2  Gauss sum
+         3    1  Kloosterman
+         3    0  Apéry
+         1    1  polylog
+         1    1  Riemann hypothesis
+  ABC: 20 files; top alternatives (files, files matched ONLY by this alternative):
+         7    4  \bABC\b
+         5    5  Baker
+         4    4  S-unit
+         3    0  abc[- ](conjecture|triple|hit|quality)
+         2    1  \brad\(
+         2    1  Fermat.?Catalan
+         1    1  Pillai
+         1    0  \bBeal\b
+         0    0  Szpiro
+  OBSERVER: 59 files; top alternatives (files, files matched ONLY by this alternative):
+        42   37  carrier
+        14   12  observer
+         8    5  guarded
+         0    0  minimal automaton
+         0    0  deterministic quotient
+         0    0  Nerode
+         0    0  Myhill
