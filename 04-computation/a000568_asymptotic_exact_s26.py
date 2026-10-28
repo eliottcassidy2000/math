@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
 """
+CORRECTION 2026-10-28: the polynomial-time exactness claim below is unproved;
+the fixed-precision/rounding implication is false. Relative error must be
+converted to absolute error on the exponentially large final coefficient.
+The earlier June repair 04-computation/a000568_exact_burnside.py documents
+wrong float-rounded values at n=14 and15. For the explicit omitted-term
+obstruction and lineage, see
+05-knowledge/results/strong_attachment_tail_compiler_20261028/HISTORY.md.
+The historical experiment is retained, not promoted to an exact method.
+
+Historical proposal (not a proved algorithm):
 opus-2026-04-05-S26: Polynomial-time A000568 via asymptotic expansion.
 
 THE BIG IDEA:

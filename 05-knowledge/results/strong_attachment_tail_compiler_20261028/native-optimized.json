@@ -1,0 +1,715 @@
+{
+  "actual_atoms": {
+    "P7_triple_hostile": {
+      "common_out": [
+        0,
+        1
+      ],
+      "marker_attachments": [
+        {
+          "H": [
+            4281,
+            4315
+          ],
+          "marker_order": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "H": [
+            4287,
+            4325
+          ],
+          "marker_order": [
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "H": [
+            4287,
+            4325
+          ],
+          "marker_order": [
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "H": [
+            4281,
+            4315
+          ],
+          "marker_order": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "H": [
+            4281,
+            4315
+          ],
+          "marker_order": [
+            2,
+            0,
+            1
+          ]
+        },
+        {
+          "H": [
+            4287,
+            4325
+          ],
+          "marker_order": [
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "ports": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          5
+        ]
+      ]
+    },
+    "complement_closures": {
+      "C3": {
+        "H": 3,
+        "closure_ordinary_classes": 2,
+        "closure_presentations": 2,
+        "first_partner_classes": 1,
+        "minimum_reset_complement_colour_cells": 2,
+        "partners": [
+          {
+            "Aut": 1,
+            "H": 1,
+            "class_id": 1,
+            "strong": false
+          }
+        ],
+        "path_orbits": 1
+      },
+      "P7": {
+        "H": 189,
+        "closure_ordinary_classes": 456,
+        "closure_presentations": 32768,
+        "first_partner_classes": 7,
+        "minimum_reset_complement_colour_cells": 24754,
+        "partners": [
+          {
+            "Aut": 1,
+            "H": 151,
+            "class_id": 30,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 155,
+            "class_id": 114,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 151,
+            "class_id": 142,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 151,
+            "class_id": 161,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 153,
+            "class_id": 308,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 153,
+            "class_id": 353,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 153,
+            "class_id": 406,
+            "strong": true
+          }
+        ],
+        "path_orbits": 9
+      },
+      "T5": {
+        "H": 15,
+        "closure_ordinary_classes": 12,
+        "closure_presentations": 64,
+        "first_partner_classes": 3,
+        "minimum_reset_complement_colour_cells": 50,
+        "partners": [
+          {
+            "Aut": 3,
+            "H": 15,
+            "class_id": 1,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 11,
+            "class_id": 2,
+            "strong": true
+          },
+          {
+            "Aut": 1,
+            "H": 13,
+            "class_id": 7,
+            "strong": true
+          }
+        ],
+        "path_orbits": 3
+      }
+    },
+    "field_frame_controls": [
+      {
+        "conflicts": [
+          {
+            "phase": 1,
+            "reversed_pair": [
+              0,
+              3
+            ]
+          },
+          {
+            "phase": 3,
+            "reversed_pair": [
+              0,
+              3
+            ]
+          },
+          {
+            "phase": 5,
+            "reversed_pair": [
+              0,
+              3
+            ]
+          }
+        ],
+        "field": 64,
+        "normal_basis": [
+          32,
+          48,
+          60,
+          47,
+          38,
+          36
+        ],
+        "strong_atom_realization": {
+          "atom": "C3[C3,C3,C3]",
+          "phase_two_permutation": [
+            1,
+            2,
+            0,
+            4,
+            5,
+            3,
+            6,
+            7,
+            8
+          ],
+          "ports": [
+            0,
+            3,
+            1,
+            4,
+            2,
+            5
+          ]
+        },
+        "tournament_admissible_phases": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "conflicts": [
+          {
+            "phase": 1,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          },
+          {
+            "phase": 2,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          },
+          {
+            "phase": 3,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          },
+          {
+            "phase": 4,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          },
+          {
+            "phase": 5,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          },
+          {
+            "phase": 6,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          },
+          {
+            "phase": 7,
+            "reversed_pair": [
+              0,
+              4
+            ]
+          }
+        ],
+        "field": 256,
+        "normal_basis": [
+          32,
+          108,
+          151,
+          148,
+          145,
+          128,
+          154,
+          197
+        ],
+        "tournament_admissible_phases": [
+          0
+        ]
+      }
+    ],
+    "frames": {
+      "C3": {
+        "Aut": 3,
+        "first_frame": [
+          0
+        ],
+        "minimum_free_frame_size": 1,
+        "n": 3,
+        "tuple_counts": {
+          "2": {
+            "all_pair_records": 2,
+            "joint_orbits": 2,
+            "largest_pair_fibre": 1,
+            "star_records": 2
+          },
+          "3": {
+            "all_pair_records": 2,
+            "joint_orbits": 2,
+            "largest_pair_fibre": 1,
+            "star_records": 2
+          }
+        },
+        "two_relative_frame_coordinates": 9
+      },
+      "C3[C3,C3,C3]": {
+        "Aut": 81,
+        "first_frame": [
+          0,
+          3,
+          6
+        ],
+        "minimum_free_frame_size": 3,
+        "n": 9,
+        "tuple_counts": {
+          "2": {
+            "all_pair_records": 4,
+            "joint_orbits": 4,
+            "largest_pair_fibre": 1,
+            "star_records": 4
+          },
+          "3": {
+            "all_pair_records": 16,
+            "joint_orbits": 16,
+            "largest_pair_fibre": 1,
+            "star_records": 14
+          }
+        },
+        "two_relative_frame_coordinates": 6561
+      },
+      "P7": {
+        "Aut": 21,
+        "first_frame": [
+          0,
+          1
+        ],
+        "minimum_free_frame_size": 2,
+        "n": 7,
+        "tuple_counts": {
+          "2": {
+            "all_pair_records": 2,
+            "joint_orbits": 2,
+            "largest_pair_fibre": 1,
+            "star_records": 2
+          },
+          "3": {
+            "all_pair_records": 8,
+            "joint_orbits": 10,
+            "largest_pair_fibre": 2,
+            "star_records": 4
+          }
+        },
+        "two_relative_frame_coordinates": 441
+      },
+      "T27": {
+        "Aut": 27,
+        "first_frame": [
+          0,
+          4,
+          8
+        ],
+        "minimum_free_frame_size": 3,
+        "n": 12,
+        "tuple_counts": {
+          "2": {
+            "all_pair_records": 36,
+            "joint_orbits": 36,
+            "largest_pair_fibre": 1,
+            "star_records": 36
+          },
+          "3": {
+            "all_pair_records": 216,
+            "joint_orbits": 216,
+            "largest_pair_fibre": 1,
+            "star_records": 201
+          }
+        },
+        "two_relative_frame_coordinates": 729
+      },
+      "T5": {
+        "Aut": 5,
+        "first_frame": [
+          0
+        ],
+        "minimum_free_frame_size": 1,
+        "n": 5,
+        "tuple_counts": {
+          "2": {
+            "all_pair_records": 4,
+            "joint_orbits": 4,
+            "largest_pair_fibre": 1,
+            "star_records": 4
+          },
+          "3": {
+            "all_pair_records": 12,
+            "joint_orbits": 12,
+            "largest_pair_fibre": 1,
+            "star_records": 12
+          }
+        },
+        "two_relative_frame_coordinates": 25
+      },
+      "T81": {
+        "Aut": 81,
+        "first_frame": [
+          0,
+          4,
+          8
+        ],
+        "minimum_free_frame_size": 3,
+        "n": 12,
+        "tuple_counts": {
+          "2": {
+            "all_pair_records": 12,
+            "joint_orbits": 12,
+            "largest_pair_fibre": 1,
+            "star_records": 12
+          },
+          "3": {
+            "all_pair_records": 72,
+            "joint_orbits": 72,
+            "largest_pair_fibre": 1,
+            "star_records": 67
+          }
+        },
+        "two_relative_frame_coordinates": 6561
+      }
+    },
+    "transporter_hostile": {
+      "Aut": [
+        81,
+        27
+      ],
+      "H": [
+        462915,
+        462915
+      ],
+      "identical_nonempty_pointwise_stabilizers": true,
+      "labelled_cyclic_triples": 67,
+      "transporter_3_to_7": [
+        27,
+        0
+      ]
+    }
+  },
+  "bounded_unnamed": [
+    {
+      "bounded_attachment_cells": 1,
+      "n": 1,
+      "ordinary_classes": 1,
+      "presentations": 1,
+      "reset_complement_colour_cells": 1,
+      "separating_context": null,
+      "split_witness": null,
+      "strong_cells": 1,
+      "strong_presentations": 1
+    },
+    {
+      "bounded_attachment_cells": 1,
+      "n": 2,
+      "ordinary_classes": 1,
+      "presentations": 1,
+      "reset_complement_colour_cells": 1,
+      "separating_context": null,
+      "split_witness": null,
+      "strong_cells": 0,
+      "strong_presentations": 0
+    },
+    {
+      "bounded_attachment_cells": 2,
+      "n": 3,
+      "ordinary_classes": 2,
+      "presentations": 2,
+      "reset_complement_colour_cells": 2,
+      "separating_context": null,
+      "split_witness": null,
+      "strong_cells": 1,
+      "strong_presentations": 1
+    },
+    {
+      "bounded_attachment_cells": 8,
+      "n": 4,
+      "ordinary_classes": 4,
+      "presentations": 8,
+      "reset_complement_colour_cells": 7,
+      "separating_context": {
+        "observations": [
+          [
+            122,
+            false
+          ],
+          [
+            239,
+            false
+          ]
+        ],
+        "terminal_n": 7,
+        "word": [
+          "singleton-left",
+          "singleton-left",
+          "singleton-left",
+          "complement"
+        ]
+      },
+      "split_witness": [
+        2,
+        5
+      ],
+      "strong_cells": 5,
+      "strong_presentations": 5
+    },
+    {
+      "bounded_attachment_cells": 64,
+      "n": 5,
+      "ordinary_classes": 12,
+      "presentations": 64,
+      "reset_complement_colour_cells": 50,
+      "separating_context": {
+        "observations": [
+          [
+            45,
+            false
+          ],
+          [
+            281,
+            false
+          ]
+        ],
+        "terminal_n": 7,
+        "word": [
+          "singleton-left",
+          "singleton-left",
+          "complement"
+        ]
+      },
+      "split_witness": [
+        5,
+        36
+      ],
+      "strong_cells": 50,
+      "strong_presentations": 50
+    },
+    {
+      "bounded_attachment_cells": 1019,
+      "n": 6,
+      "order_eight_residual_probes": [
+        {
+          "pair": [
+            100,
+            689
+          ],
+          "separating_context": {
+            "terminal_masks": [
+              12544,
+              301120
+            ],
+            "terminal_n": 8,
+            "word": [
+              "complement",
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ]
+          }
+        },
+        {
+          "pair": [
+            225,
+            564
+          ],
+          "separating_context": {
+            "terminal_masks": [
+              45120,
+              268544
+            ],
+            "terminal_n": 8,
+            "word": [
+              "complement",
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ]
+          }
+        },
+        {
+          "pair": [
+            326,
+            697
+          ],
+          "separating_context": {
+            "terminal_masks": [
+              301632,
+              74112
+            ],
+            "terminal_n": 8,
+            "word": [
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ]
+          }
+        },
+        {
+          "pair": [
+            334,
+            923
+          ],
+          "separating_context": {
+            "terminal_masks": [
+              301120,
+              12544
+            ],
+            "terminal_n": 8,
+            "word": [
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ]
+          }
+        },
+        {
+          "pair": [
+            459,
+            798
+          ],
+          "separating_context": {
+            "terminal_masks": [
+              268544,
+              45120
+            ],
+            "terminal_n": 8,
+            "word": [
+              "singleton-right",
+              "singleton-left",
+              "complement"
+            ]
+          }
+        }
+      ],
+      "ordinary_classes": 56,
+      "presentations": 1024,
+      "reset_complement_colour_cells": 740,
+      "separating_context": {
+        "observations": [
+          [
+            123,
+            false
+          ],
+          [
+            436,
+            false
+          ]
+        ],
+        "terminal_n": 7,
+        "word": [
+          "singleton-left",
+          "complement"
+        ]
+      },
+      "split_witness": [
+        11,
+        1012
+      ],
+      "strong_cells": 898,
+      "strong_presentations": 903
+    },
+    {
+      "bounded_attachment_cells": 24754,
+      "n": 7,
+      "ordinary_classes": 456,
+      "presentations": 32768,
+      "reset_complement_colour_cells": 24754,
+      "separating_context": null,
+      "split_witness": null,
+      "strong_cells": 23049,
+      "strong_presentations": 30773
+    }
+  ],
+  "scope_max_order": 7
+}

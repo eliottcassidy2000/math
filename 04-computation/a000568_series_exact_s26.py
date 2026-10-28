@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """
+CORRECTION 2026-10-28: this historical experiment is not an exact large-n
+algorithm. The single (3,1^(n-3)) contribution already exceeds one for n>=4
+and grows; a small relative correction is not a small absolute error.
+Only the complete partition enumeration below is exact. No valid rigorous
+tail bound is supplied by the truncated branch. See
+05-knowledge/results/strong_attachment_tail_compiler_20261028/HISTORY.md
+and the earlier June repair 04-computation/a000568_exact_burnside.py.
+
+Historical proposal (REFUTED where it claims exactness from truncation):
 opus-2026-04-05-S26: A000568 via asymptotic series — pure integer arithmetic.
 
 KEY INSIGHT: a(n) = (1/n!) × Σ_λ (n!/z_λ) × 2^{e(λ)}
@@ -249,7 +258,7 @@ if __name__ == "__main__":
 
         if units_3 == 0:
             print(f"  n={n}: 3-cycle correction < 1! (correction={float(correction_3)/float(nfact):.6e})")
-            print(f"         Identity alone gives exact a(n) for n ≥ {n}")
+            print("         One small correction would not bound the complete omitted tail.")
             break
 
     # Even bigger test: compute at n=500 using just identity
@@ -263,6 +272,6 @@ if __name__ == "__main__":
     ndigits = len(str(result_500))
     print(f"  a(500) ≈ {str(result_500)[:40]}...")
     print(f"  {ndigits} digits, computed in {elapsed:.3f}s")
-    print(f"  (exact if 3-cycle correction < 1, which it is for n ≥ threshold)")
+    print("  Approximation only: the 3-cycle correction exceeds 1 for every n >= 4.")
 
     print("\n\nDONE.")

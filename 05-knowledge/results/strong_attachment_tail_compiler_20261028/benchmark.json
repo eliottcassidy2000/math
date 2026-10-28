@@ -1,0 +1,184 @@
+{
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "scope": "same process; three alternating runs; wall clock; no historical cross-machine comparison",
+  "rows": [
+    {
+      "bound": 100,
+      "core": false,
+      "timings": {
+        "baseline": [
+          0.04611990001285449,
+          0.043624400001135655,
+          0.04466269999102224
+        ],
+        "unit_tail": [
+          0.0396859000029508,
+          0.037858800002140924,
+          0.03658409998752177
+        ],
+        "tail13": [
+          0.0579859999998007,
+          0.054192800002056174,
+          0.05535420001251623
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.04466269999102224,
+        "unit_tail": 0.037858800002140924,
+        "tail13": 0.05535420001251623
+      },
+      "baseline_over_unit_tail": 1.179717793181415,
+      "counts": {
+        "baseline": {
+          "transitions": 90219,
+          "precomputed_transfers": 11109,
+          "peak_states": 2953
+        },
+        "unit_tail": {
+          "transitions": 61947,
+          "precomputed_transfers": 6254,
+          "peak_states": 2953,
+          "tail_input_states": 819,
+          "tail_polynomials": 98,
+          "tail_evaluations": 4855,
+          "tail_products": 4757,
+          "mode": "ordinary",
+          "bound": 100
+        },
+        "tail13": {
+          "transitions": 43410,
+          "precomputed_transfers": 4699,
+          "peak_states": 2953,
+          "tail_input_states": 1896,
+          "tail_polynomials": 843,
+          "tail_products": 28743,
+          "tail_evaluations": 28743,
+          "kernel_evaluations": 1070,
+          "mode": "ordinary-13",
+          "bound": 100
+        }
+      }
+    },
+    {
+      "bound": 200,
+      "core": false,
+      "timings": {
+        "baseline": [
+          2.136305700012599,
+          2.087471499995445,
+          2.0991499000083422
+        ],
+        "unit_tail": [
+          2.0000867000053404,
+          1.9981145999918226,
+          2.046687900001416
+        ],
+        "tail13": []
+      },
+      "median_seconds": {
+        "baseline": 2.0991499000083422,
+        "unit_tail": 2.0000867000053404
+      },
+      "baseline_over_unit_tail": 1.0495294528995855,
+      "counts": {
+        "baseline": {
+          "transitions": 2994814,
+          "precomputed_transfers": 51374,
+          "peak_states": 96836
+        },
+        "unit_tail": {
+          "transitions": 2770773,
+          "precomputed_transfers": 31669,
+          "peak_states": 96836,
+          "tail_input_states": 3302,
+          "tail_polynomials": 198,
+          "tail_evaluations": 19705,
+          "tail_products": 19507,
+          "mode": "ordinary",
+          "bound": 200
+        }
+      }
+    },
+    {
+      "bound": 250,
+      "core": false,
+      "timings": {
+        "baseline": [
+          11.381859100001748,
+          11.569960299995728,
+          11.361106099997414
+        ],
+        "unit_tail": [
+          10.947824000002583,
+          11.113122299997485,
+          10.895816699994612
+        ],
+        "tail13": []
+      },
+      "median_seconds": {
+        "baseline": 11.381859100001748,
+        "unit_tail": 10.947824000002583
+      },
+      "baseline_over_unit_tail": 1.0396457871444647,
+      "counts": {
+        "baseline": {
+          "transitions": 12461024,
+          "precomputed_transfers": 83767,
+          "peak_states": 441859
+        },
+        "unit_tail": {
+          "transitions": 12024202,
+          "precomputed_transfers": 52887,
+          "peak_states": 441859,
+          "tail_input_states": 5169,
+          "tail_polynomials": 248,
+          "tail_evaluations": 30880,
+          "tail_products": 30632,
+          "mode": "ordinary",
+          "bound": 250
+        }
+      }
+    },
+    {
+      "bound": 50,
+      "core": true,
+      "timings": {
+        "baseline": [
+          0.03496040000754874,
+          0.03390189999481663,
+          0.03361970001424197
+        ],
+        "unit_tail": [
+          0.014411099997232668,
+          0.01413299998966977,
+          0.014051699996343814
+        ],
+        "tail13": []
+      },
+      "median_seconds": {
+        "baseline": 0.03390189999481663,
+        "unit_tail": 0.01413299998966977
+      },
+      "baseline_over_unit_tail": 2.398775915912866,
+      "counts": {
+        "baseline": {
+          "transitions": 87961,
+          "precomputed_transfers": 21817,
+          "peak_states": 438
+        },
+        "unit_tail": {
+          "transitions": 10952,
+          "precomputed_transfers": 3151,
+          "peak_states": 438,
+          "tail_input_states": 375,
+          "tail_polynomials": 48,
+          "tail_evaluations": 1180,
+          "tail_products": 18618,
+          "mode": "pair-free",
+          "bound": 50
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9",
+  "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
+  "04-computation/a000568_enum.py": "2688d01a85d3853aef03ec0d3db9cc74335e04deb58ba02af6151af59a52e328",
+  "04-computation/a000568_exact_burnside.py": "30cb5c5eb3728a345b2f2a093fb6306f3741374dc2059d0d157d4aaeacbef66c",
+  "04-computation/a000568_gmp_enum_v4.c": "5de96e0878b000585ba0f5f127a92ac1f6a55a8de1c3e34c7199eaf3e20c6b56",
+  "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+  "05-knowledge/results/frobenius_lca_metagraph_20261028/THEORY.md": "7352bb5699c5ba277b8618c6f282f2e290a8aa8b9f351561a5972bd8942e7f05",
+  "05-knowledge/results/frobenius_lca_metagraph_20261028/fields.py": "f9a3f669c60d3f9e9ab7df914f987c510147e2cf0010b95d29c2a6e2b014c4a1",
+  "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+  "05-knowledge/results/relation_tower_frobenius_ports_20261028/root_switch.json": "23b5a1f036045c29a2326afb06af349a136a61aa2e4bd13fe8c920cb951485df",
+  "05-knowledge/results/relation_tower_frobenius_ports_20261028/tournament_bank.json.gz": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec",
+  "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-cross-domain/native-paley/README.md": "194625fc91b47171ca68e58caf468bf46832d158fda93148aab0bd70acaa5dad",
+  "05-knowledge/results/session79_tournament_enumeration_20261027/ROOT_SWITCH.md": "e2fe8f6b5fbb3d654effb523cbbe6e2282f06d70928c5b6e3734f2b10be910ca",
+  "05-knowledge/results/strong_atom_continuation_vitali_20261026/core.py": "70006ab270f41afc135dc01954a2a009e1fd6fc033edb8ae9c1d67f50d0242b7",
+  "05-knowledge/results/tournament_future_boundary_20261020/a000568-reference.txt": "57bc930603cb7f943b4edfe96e1b3c04494677963548bc50dca98244353195d4",
+  "05-knowledge/results/tournament_future_boundary_20261020/receipt.json": "79cc8cc0dac954566de69da7ea3dccb099616cfb20628ae2feec29508891d333",
+  "05-knowledge/results/tournament_future_boundary_20261020/verify.py": "3bd5b74354809c8ed365163d3c08281a25c796ee2a06e9ef177ca301f65612e4",
+  "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463",
+  "05-knowledge/results/unprotected_ports_cancellation_20261025/counting/README.md": "aff3484a76d4e49e5c0401d1410f81c18b1109ebc4a31774c49e7eadd52c738c"
+}

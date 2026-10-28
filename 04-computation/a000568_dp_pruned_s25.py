@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 """
+CORRECTION 2026-10-28: the exponent heuristic in STRATEGY 2 below is reversed.
+The identity partition has e=binomial(n,2), while one odd n-cycle has
+e=(n-1)/2. Also, if a bucket stores 1/z_lambda, sum bucket[e]*2^e is already
+the Burnside average: do not divide it by n! again. Truncation needs a bound
+on the whole absolute omitted mass. See
+05-knowledge/results/strong_attachment_tail_compiler_20261028/HISTORY.md.
+
+Historical proposal (incorrect heuristics retained for provenance):
 opus-2026-04-05-S25: Three practical speedups for A000568 computation.
 
 STRATEGY 1: DP Memoization on edge-count

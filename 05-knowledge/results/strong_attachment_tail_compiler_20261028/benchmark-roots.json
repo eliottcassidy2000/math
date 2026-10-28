@@ -1,0 +1,73 @@
+{
+  "order": 8,
+  "samples": {
+    "all_rows": [
+      7.657143000003998,
+      7.295420900001773,
+      7.495934099992155
+    ],
+    "one_per_block": [
+      1.6613362000061898,
+      1.4075336000096286,
+      1.4112027999944985
+    ]
+  },
+  "median_seconds": {
+    "all_rows": 7.495934099992155,
+    "one_per_block": 1.4112027999944985
+  },
+  "all_rows_over_one_per_block": 5.3117341462342464,
+  "stats": {
+    "all_rows": {
+      "order": 8,
+      "pointed_states": 54256,
+      "classes": 6880,
+      "computed_rows": 54256,
+      "omitted_identical_rows": 0,
+      "parent_classification_calls": 434048,
+      "parent_cache_size": 31060,
+      "trace": 55040,
+      "automorphism_order_histogram": {
+        "1": 6556,
+        "3": 292,
+        "5": 10,
+        "7": 2,
+        "9": 16,
+        "15": 2,
+        "21": 2
+      },
+      "block_size_histogram": {
+        "2": 6,
+        "4": 56,
+        "6": 262,
+        "8": 6556
+      }
+    },
+    "one_per_block": {
+      "order": 8,
+      "pointed_states": 54256,
+      "classes": 6880,
+      "computed_rows": 6880,
+      "omitted_identical_rows": 47376,
+      "parent_classification_calls": 55040,
+      "parent_cache_size": 7334,
+      "trace": 55040,
+      "automorphism_order_histogram": {
+        "1": 6556,
+        "3": 292,
+        "5": 10,
+        "7": 2,
+        "9": 16,
+        "15": 2,
+        "21": 2
+      },
+      "block_size_histogram": {
+        "2": 6,
+        "4": 56,
+        "6": 262,
+        "8": 6556
+      }
+    }
+  },
+  "scope": "three alternating runs, same setup and checks, no extra H/prime audit; all representatives equal"
+}
