@@ -89,3 +89,12 @@ the square-sum claim at a local attachment, and the atom claim at the
 specified open joint-response question. There was no demonstrable new
 mathematical error requiring a new MISTAKE entry; the existing Fano
 correction and withdrawn LRC near miss are explicitly respected.
+
+After the first local checkpoint, origin/main added the Session85 arithmetic,
+constraint/LCA and signed-incidence notes. Their relevant proof sections were
+read and credited in PROGRAMME and THEORY. Their independent15-prime bank
+agrees exactly with ours. Source pins include their immutable incoming blobs;
+their additional script counts are inherited rather than added to our replay
+claims. The S68 audit also corrected its vocabulary census (notably the
+unbounded `Hecke` substring matching `checked`); no census claim is used as
+mathematical evidence here.

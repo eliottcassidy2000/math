@@ -150,6 +150,30 @@
       "git_blob": "684bd4ccfec6b8cd53d1f298ffb861288ba73fc9",
       "sha256_lf": "e3fa55579c6be52a7ab0f37d8b12bf736ceb8f2c7aaf7ed2ba8300a870787cce",
       "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/ARITHMETIC_FREE_BITS.md",
+      "git_blob": "3a322b9321d48e2bd7213484f343b876ade9fca1",
+      "sha256_lf": "e5466ee1981c6a1ddf5f649acd3c528df74b58debef1f6fe5ec79d42f797ae90",
+      "read_scope": "Incoming Session85 relevant sections named in PROGRAMME; scripts not replayed."
+    },
+    {
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/CONSTRAINT_CERTIFICATES.md",
+      "git_blob": "2ca1adf4beac5ed8fb5ecbbc306f0c0fa98d3a95",
+      "sha256_lf": "2bc10f95b24c579fc4a496e66a224d21d437edce8813f2c00e635d2d63fe935b",
+      "read_scope": "Incoming Session85 relevant sections named in PROGRAMME; scripts not replayed."
+    },
+    {
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/LINEAR_GLUING_INFORMATION.md",
+      "git_blob": "25cde3d19550116f28eceae346b640dec0cd0181",
+      "sha256_lf": "d284e8507fc81f931e90627563cf0cb430d90a9d48221ea52fde5ad582e1806f",
+      "read_scope": "Incoming Session85 relevant sections named in PROGRAMME; scripts not replayed."
+    },
+    {
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/SIGNED_INCIDENCE_RELATIONS.md",
+      "git_blob": "66f5dd244849a5a2fb7e281f848837117de5f651",
+      "sha256_lf": "880c92c1dceb6c71f1f9b8d4623556b23830d021b54275604cdaa0205b456483",
+      "read_scope": "Incoming Session85 relevant sections named in PROGRAMME; scripts not replayed."
     }
   ],
   "external_sources": [
@@ -184,5 +208,6 @@
       "scope": "Location only; raw PDF parsing failed. No lower-bound theorem imported from it."
     }
   ],
-  "external_checked": "2026-10-28"
+  "external_checked": "2026-10-28",
+  "incoming_commit": "067d9f6cad"
 }

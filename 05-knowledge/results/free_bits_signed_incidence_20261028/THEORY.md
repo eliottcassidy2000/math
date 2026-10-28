@@ -5,6 +5,14 @@ frameworks; FINITE-EXACT enumerations.** Classical Hamming codes, trace forms,
 signed graphs and parity coding are not claimed as new. Local names P1–P6
 below are packet labels, not reserved canon IDs.
 
+**Concurrent credit:** incoming Session85 at702a6a3013 independently obtains
+the identical15-prime bank and the same joint sign/marginal boundary.
+Its [arithmetic note](../session85_arithmetic_codes_free_bits_20261028/ARITHMETIC_FREE_BITS.md)
+also gives erasure recovery, a16-prime extended code and sharp legal-addition
+costs. These shared results are credited as concurrent, not exclusive new
+discoveries of this packet. P1's exact adaptive coordinate-query cost and
+P3's trace reconstruction address additional questions.
+
 ## P1 The exact cost of a bit when linear information is already known
 
 Let x range over ALL of F2^n. The observer already knows Ax, can ask for
