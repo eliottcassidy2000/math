@@ -1,0 +1,111 @@
+{
+  "affine_compiler": {
+    "blue_half_edge_hamilton_counts": [
+      11,
+      13
+    ],
+    "missing_separator_bits": 1,
+    "operation_tests": 1357,
+    "ordered_join_cells": 229,
+    "universes": [
+      {
+        "affine_cells": 1,
+        "n": 1,
+        "presentations": 1
+      },
+      {
+        "affine_cells": 1,
+        "n": 2,
+        "presentations": 1
+      },
+      {
+        "affine_cells": 3,
+        "n": 3,
+        "presentations": 2
+      },
+      {
+        "affine_cells": 51,
+        "n": 4,
+        "presentations": 8
+      }
+    ]
+  },
+  "hostile": {
+    "LCA_invariant_constraints": [
+      3,
+      6
+    ],
+    "all_decorations": [
+      {
+        "Aut": 81,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 3,
+        "decoration": 0,
+        "presentations": 5715,
+        "reset_diagonal": "1/5715"
+      },
+      {
+        "Aut": 27,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 1,
+        "decoration": 1,
+        "presentations": 17145,
+        "reset_diagonal": "1/17145"
+      },
+      {
+        "Aut": 27,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 1,
+        "decoration": 2,
+        "presentations": 17145,
+        "reset_diagonal": "1/17145"
+      },
+      {
+        "Aut": 27,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 1,
+        "decoration": 3,
+        "presentations": 17145,
+        "reset_diagonal": "1/17145"
+      },
+      {
+        "Aut": 27,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 1,
+        "decoration": 4,
+        "presentations": 17145,
+        "reset_diagonal": "1/17145"
+      },
+      {
+        "Aut": 27,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 1,
+        "decoration": 5,
+        "presentations": 17145,
+        "reset_diagonal": "1/17145"
+      },
+      {
+        "Aut": 27,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 1,
+        "decoration": 6,
+        "presentations": 17145,
+        "reset_diagonal": "1/17145"
+      },
+      {
+        "Aut": 81,
+        "H": 462915,
+        "cyclic_colour_stabilizer": 3,
+        "decoration": 7,
+        "presentations": 5715,
+        "reset_diagonal": "1/5715"
+      }
+    ],
+    "constraint_rank": 2,
+    "identical_labelled_cyclic_triples": 67,
+    "invariant_decorations": [
+      0,
+      7
+    ]
+  }
+}

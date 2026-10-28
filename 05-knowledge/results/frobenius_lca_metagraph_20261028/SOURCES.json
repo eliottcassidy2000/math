@@ -1,0 +1,67 @@
+{
+  "base_commit": "5ed1835235b36a57b8cd11eb705aa259b6bc0f08",
+  "external_sources": [
+    {
+      "retrieved": "2026-10-28",
+      "scope": "numeric terms 0..50; obtained via web reader",
+      "url": "https://oeis.org/A000568/b000568.txt"
+    }
+  ],
+  "repository_sources": [
+    {
+      "git_blob": "2f576b5e900f794c6843424d51046f1ec9258442",
+      "path": "05-knowledge/results/strong_atom_continuation_vitali_20261026/README.md",
+      "sha256_lf": "af6765410791751e774b59763eff174ffde038185c1d76e49b490bb020f6b985"
+    },
+    {
+      "git_blob": "9c30bee83bb0b631ac21430341c1e472a28d3ee8",
+      "path": "05-knowledge/results/unnamed_carrier_dissection_20261026/README.md",
+      "sha256_lf": "72682f94cde93741f81deea49ec538bad5fadc4aee640468d0b8f565ddb69463"
+    },
+    {
+      "git_blob": "bb88c509bc19b03bbad6daff46786dba6caa326d",
+      "path": "05-knowledge/results/free_bits_signed_incidence_20261028/THEORY.md",
+      "sha256_lf": "628c98efc18bce12879a4888fb63cbdf87f1e1116d95d0693fe937f24f0d6a07"
+    },
+    {
+      "git_blob": "3b76cca98ac3f7df947cf840817ce22ab4a40256",
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/session72-cross-domain/THEOREM-CYCLIC-ALIGNMENT.md",
+      "sha256_lf": "c9cdb86dfd94929b7bdf5a3a9145bf42fc95be4e6f10f2305197cb39d96650cf"
+    },
+    {
+      "git_blob": "25cde3d19550116f28eceae346b640dec0cd0181",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/LINEAR_GLUING_INFORMATION.md",
+      "sha256_lf": "d284e8507fc81f931e90627563cf0cb430d90a9d48221ea52fde5ad582e1806f"
+    },
+    {
+      "git_blob": "57b3c573a595486978d51ceb0c6c1b7fafbf9c6a",
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/README.md",
+      "sha256_lf": "9816d23a9eed30006cd8f71be7a936fea007973b6610a233b739fcfa134040a0"
+    },
+    {
+      "git_blob": "5ca8bf4d3ac5edd96daa70834962935873bf0643",
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/metagraph/RESULT.md",
+      "sha256_lf": "5a03f1724212a6870272291da864c42bddb5dc2a5ba7b962fd23171616a7a1fd"
+    },
+    {
+      "git_blob": "79e2aa99512134e3c976ba7d519ae8c166c6ce69",
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/README.md",
+      "sha256_lf": "1d9d740182215c196ec1a38b51269f23fcb09afff20ace36f3e01201f941f475"
+    },
+    {
+      "git_blob": "0cd7f3d22bbe3cfa2fca18f5499ab66fc995656d",
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/enumerate.cpp",
+      "sha256_lf": "21a1c77169aa66e45b7d868e1e23ff94fc7ceb7bb9bea960ca1e758a941138c3"
+    },
+    {
+      "git_blob": "82a2e69e405c2f8af7a0ca279339e29039e7987e",
+      "path": "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/output/census.json",
+      "sha256_lf": "215147ff754d70a289862b1edecefa37fc9d51f31b43523e5bef7d91c1d97082"
+    },
+    {
+      "git_blob": "ebda52cc8bc0159db3deda37345b6eaa83706532",
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/README.md",
+      "sha256_lf": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f"
+    }
+  ]
+}

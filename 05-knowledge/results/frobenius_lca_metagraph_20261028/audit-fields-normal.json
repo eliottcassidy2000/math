@@ -1,0 +1,128 @@
+[
+  {
+    "circulant_nondegenerate_coefficients": {
+      "12": 2,
+      "60": 3
+    },
+    "degree": 4,
+    "oriented_pair_audit": [
+      {
+        "orientation_obstruction": false,
+        "power": 0,
+        "unordered_pair_orbits": 105
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 1,
+        "unordered_pair_orbits": 29
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 2,
+        "unordered_pair_orbits": 57
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 3,
+        "unordered_pair_orbits": 29
+      }
+    ],
+    "trace_coefficients": 3
+  },
+  {
+    "circulant_nondegenerate_coefficients": {
+      "27760": 7,
+      "656": 4
+    },
+    "degree": 6,
+    "oriented_pair_audit": [
+      {
+        "orientation_obstruction": false,
+        "power": 0,
+        "unordered_pair_orbits": 1953
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 1,
+        "unordered_pair_orbits": 335
+      },
+      {
+        "orientation_obstruction": false,
+        "power": 2,
+        "unordered_pair_orbits": 653
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 3,
+        "unordered_pair_orbits": 1001
+      },
+      {
+        "orientation_obstruction": false,
+        "power": 4,
+        "unordered_pair_orbits": 653
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 5,
+        "unordered_pair_orbits": 335
+      }
+    ],
+    "trace_coefficients": 7
+  },
+  {
+    "circulant_nondegenerate_coefficients": {
+      "130154448": 14,
+      "133605968": 12,
+      "144457296": 9,
+      "145451984": 11,
+      "205970640": 15,
+      "208767312": 13,
+      "52108624": 8,
+      "53233872": 10
+    },
+    "degree": 8,
+    "oriented_pair_audit": [
+      {
+        "orientation_obstruction": false,
+        "power": 0,
+        "unordered_pair_orbits": 32385
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 1,
+        "unordered_pair_orbits": 4079
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 2,
+        "unordered_pair_orbits": 8157
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 3,
+        "unordered_pair_orbits": 4079
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 4,
+        "unordered_pair_orbits": 16305
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 5,
+        "unordered_pair_orbits": 4079
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 6,
+        "unordered_pair_orbits": 8157
+      },
+      {
+        "orientation_obstruction": true,
+        "power": 7,
+        "unordered_pair_orbits": 4079
+      }
+    ],
+    "trace_coefficients": 14
+  }
+]
