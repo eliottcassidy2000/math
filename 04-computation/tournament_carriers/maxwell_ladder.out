@@ -1,0 +1,5 @@
+j=2 n=4 (5 edges): (linear, maxwell, weak) -> {(True, True, True): 10}; disagreements: 0
+j=2 n=5 (7 edges): (linear, maxwell, weak) -> {(True, True, True): 136, (False, False, True): 8}; disagreements: 0
+j=2 n=6 (9 edges): (linear, maxwell, weak) -> {(True, True, True): 3581, (False, False, True): 224, (False, False, False): 6, (True, False, True): 6}; disagreements: 6
+j=3 n=5 (9 edges): (linear, maxwell, weak) -> {(True, True, True): 48, (True, False, True): 2}; disagreements: 2
+j=3 n=6 (12 edges): (linear, maxwell, weak) -> {(True, True, True): 2562, (True, False, True): 9, (False, False, True): 153, (False, True, False): 1, (False, False, False): 13, (False, True, True): 2}; disagreements: 12

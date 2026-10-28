@@ -1,0 +1,138 @@
+{
+ "bigon": [
+  {
+   "order": 2,
+   "marked_types": 32,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "predicted_marked": 32,
+   "k": 2,
+   "n": 5
+  },
+  {
+   "order": 2,
+   "marked_types": 16384,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "predicted_marked": 16384,
+   "k": 3,
+   "n": 7
+  },
+  {
+   "order": 2,
+   "marked_types": 134217728,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "predicted_marked": 134217728,
+   "k": 4,
+   "n": 9
+  },
+  {
+   "order": 2,
+   "marked_types": 17592186044416,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "predicted_marked": 17592186044416,
+   "k": 5,
+   "n": 11
+  }
+ ],
+ "alternating": [
+  {
+   "order": 4,
+   "marked_types": 16,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "k": 2,
+   "n": 5
+  },
+  {
+   "order": 6,
+   "marked_types": 5472,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "k": 3,
+   "n": 7
+  },
+  {
+   "order": 8,
+   "marked_types": 33554432,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "k": 4,
+   "n": 9
+  },
+  {
+   "order": 10,
+   "marked_types": 3518437209088,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true,
+   "k": 5,
+   "n": 11
+  }
+ ],
+ "dense": [
+  {
+   "order": 2,
+   "marked_types": 1048576,
+   "fixes_vertex": true,
+   "maxwell": false,
+   "linear": false,
+   "weak": true
+  }
+ ],
+ "trees": [
+  {
+   "n": 8,
+   "samples": 150,
+   "end_edge_bijective": 150,
+   "end_edge_equivariant": 150,
+   "maxwell": 150,
+   "linear": 150
+  },
+  {
+   "n": 9,
+   "samples": 150,
+   "end_edge_bijective": 150,
+   "end_edge_equivariant": 150,
+   "maxwell": 150,
+   "linear": 150
+  }
+ ],
+ "functional": [
+  {
+   "n": 8,
+   "samples": 150,
+   "root_swap_bijective": 150,
+   "reversal_compatible": 150,
+   "equivariant": 150,
+   "maxwell": 150,
+   "linear": 150
+  },
+  {
+   "n": 9,
+   "samples": 150,
+   "root_swap_bijective": 150,
+   "reversal_compatible": 150,
+   "equivariant": 150,
+   "maxwell": 150,
+   "linear": 150
+  }
+ ]
+}

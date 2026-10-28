@@ -1,0 +1,13 @@
+bigon 2 {'order': 2, 'marked_types': 32, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'predicted_marked': 32, 'k': 2, 'n': 5}
+bigon 3 {'order': 2, 'marked_types': 16384, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'predicted_marked': 16384, 'k': 3, 'n': 7}
+bigon 4 {'order': 2, 'marked_types': 134217728, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'predicted_marked': 134217728, 'k': 4, 'n': 9}
+bigon 5 {'order': 2, 'marked_types': 17592186044416, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'predicted_marked': 17592186044416, 'k': 5, 'n': 11}
+alternating 2 {'order': 4, 'marked_types': 16, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'k': 2, 'n': 5}
+alternating 3 {'order': 6, 'marked_types': 5472, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'k': 3, 'n': 7}
+alternating 4 {'order': 8, 'marked_types': 33554432, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'k': 4, 'n': 9}
+alternating 5 {'order': 10, 'marked_types': 3518437209088, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True, 'k': 5, 'n': 11}
+dense K4+K2+2K1 {'order': 2, 'marked_types': 1048576, 'fixes_vertex': True, 'maxwell': False, 'linear': False, 'weak': True}
+trees {'n': 8, 'samples': 150, 'end_edge_bijective': 150, 'end_edge_equivariant': 150, 'maxwell': 150, 'linear': 150}
+functional {'n': 8, 'samples': 150, 'root_swap_bijective': 150, 'reversal_compatible': 150, 'equivariant': 150, 'maxwell': 150, 'linear': 150}
+trees {'n': 9, 'samples': 150, 'end_edge_bijective': 150, 'end_edge_equivariant': 150, 'maxwell': 150, 'linear': 150}
+functional {'n': 9, 'samples': 150, 'root_swap_bijective': 150, 'reversal_compatible': 150, 'equivariant': 150, 'maxwell': 150, 'linear': 150}

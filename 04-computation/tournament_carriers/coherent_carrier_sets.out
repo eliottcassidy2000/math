@@ -1,0 +1,9 @@
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\utils\backends.py:535: UserWarning: The hashes produced for directed graphs changed in version v3.5 due to a bugfix to track in and out edges separately (see documentation).
+  return self.orig_func(*args, **kwargs)
+C:\Users\Eliott\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\networkx\algorithms\graph_hashing.py:211: UserWarning: The hashes produced for graphs without node or edge attributeschanged in v3.5 due to a bugfix (see documentation).
+  node_labels = _init_node_labels(G, edge_attr, node_attr)
+types t_n = [1, 1, 2, 4, 12, 56, 456]  strong s_n = [1, 0, 1, 1, 6, 35, 353]
+4 {'observed': {'LS': 1, 'CL': 1, 'CLS': 2}, 'predicted': {'CL': 1, 'CLS': 2, 'LS': 1, 'L': 0}, 'L_alone_characterised': True, 'pair_or_triple_for_all': True}
+5 {'observed': {'LS': 4, 'CL': 6, 'CLS': 2}, 'predicted': {'CL': 6, 'CLS': 2, 'LS': 4, 'L': 0}, 'L_alone_characterised': True, 'pair_or_triple_for_all': True}
+6 {'observed': {'LS': 8, 'CL': 35, 'CLS': 12, 'L': 1}, 'predicted': {'CL': 35, 'CLS': 12, 'LS': 8, 'L': 1}, 'L_alone_characterised': True, 'pair_or_triple_for_all': False}
+7 {'observed': {'LS': 30, 'CL': 353, 'CLS': 70, 'L': 3}, 'predicted': {'CL': 353, 'CLS': 70, 'LS': 30, 'L': 3}, 'L_alone_characterised': True, 'pair_or_triple_for_all': False}

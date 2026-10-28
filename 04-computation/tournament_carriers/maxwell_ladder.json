@@ -1,0 +1,1114 @@
+{
+ "j=2,n=4": {
+  "edges": 5,
+  "tally(linear,maxwell,weak)": {
+   "(True, True, True)": 10
+  },
+  "disagreements": []
+ },
+ "j=2,n=5": {
+  "edges": 7,
+  "tally(linear,maxwell,weak)": {
+   "(True, True, True)": 136,
+   "(False, False, True)": 8
+  },
+  "disagreements": []
+ },
+ "j=2,n=6": {
+  "edges": 9,
+  "tally(linear,maxwell,weak)": {
+   "(True, True, True)": 3581,
+   "(False, False, True)": 224,
+   "(False, False, False)": 6,
+   "(True, False, True)": 6
+  },
+  "disagreements": [
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 24,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 24,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      4,
+      3
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 24,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      5,
+      4
+     ]
+    ],
+    "order": 3,
+    "marked_types": 24,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 24,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 24,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   }
+  ]
+ },
+ "j=3,n=5": {
+  "edges": 9,
+  "tally(linear,maxwell,weak)": {
+   "(True, True, True)": 48,
+   "(True, False, True)": 2
+  },
+  "disagreements": [
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ]
+    ],
+    "order": 6,
+    "marked_types": 1,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      1,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      3,
+      4
+     ]
+    ],
+    "order": 6,
+    "marked_types": 1,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   }
+  ]
+ },
+ "j=3,n=6": {
+  "edges": 12,
+  "tally(linear,maxwell,weak)": {
+   "(True, True, True)": 2562,
+   "(True, False, True)": 9,
+   "(False, False, True)": 153,
+   "(False, True, False)": 1,
+   "(False, False, False)": 13,
+   "(False, True, True)": 2
+  },
+  "disagreements": [
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "order": 18,
+    "marked_types": 2,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "order": 6,
+    "marked_types": 4,
+    "fixes_vertex": true,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 4,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "order": 6,
+    "marked_types": 4,
+    "fixes_vertex": true,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      3
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      2,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 4,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      3,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      5,
+      2
+     ]
+    ],
+    "order": 18,
+    "marked_types": 2,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 4,
+    "marked_types": 2,
+    "fixes_vertex": true,
+    "maxwell": true,
+    "linear": false,
+    "weak": false
+   },
+   {
+    "arcs": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 4,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 2,
+    "marked_types": 4,
+    "fixes_vertex": true,
+    "maxwell": true,
+    "linear": false,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      1,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      2,
+      1
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      5
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 4,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      2
+     ],
+     [
+      4,
+      0
+     ],
+     [
+      0,
+      5
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      1
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      3,
+      2
+     ],
+     [
+      2,
+      4
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 2,
+    "marked_types": 4,
+    "fixes_vertex": true,
+    "maxwell": true,
+    "linear": false,
+    "weak": true
+   },
+   {
+    "arcs": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      0,
+      4
+     ],
+     [
+      5,
+      0
+     ],
+     [
+      1,
+      2
+     ],
+     [
+      1,
+      3
+     ],
+     [
+      5,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4,
+      2
+     ],
+     [
+      3,
+      4
+     ],
+     [
+      3,
+      5
+     ],
+     [
+      4,
+      5
+     ]
+    ],
+    "order": 3,
+    "marked_types": 4,
+    "fixes_vertex": false,
+    "maxwell": false,
+    "linear": true,
+    "weak": true
+   }
+  ]
+ }
+}

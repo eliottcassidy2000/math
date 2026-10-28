@@ -1,0 +1,64 @@
+{
+ "4": {
+  "observed": {
+   "LS": 1,
+   "CL": 1,
+   "CLS": 2
+  },
+  "predicted": {
+   "CL": 1,
+   "CLS": 2,
+   "LS": 1,
+   "L": 0
+  },
+  "L_alone_characterised": true,
+  "pair_or_triple_for_all": true
+ },
+ "5": {
+  "observed": {
+   "LS": 4,
+   "CL": 6,
+   "CLS": 2
+  },
+  "predicted": {
+   "CL": 6,
+   "CLS": 2,
+   "LS": 4,
+   "L": 0
+  },
+  "L_alone_characterised": true,
+  "pair_or_triple_for_all": true
+ },
+ "6": {
+  "observed": {
+   "LS": 8,
+   "CL": 35,
+   "CLS": 12,
+   "L": 1
+  },
+  "predicted": {
+   "CL": 35,
+   "CLS": 12,
+   "LS": 8,
+   "L": 1
+  },
+  "L_alone_characterised": true,
+  "pair_or_triple_for_all": false
+ },
+ "7": {
+  "observed": {
+   "LS": 30,
+   "CL": 353,
+   "CLS": 70,
+   "L": 3
+  },
+  "predicted": {
+   "CL": 353,
+   "CLS": 70,
+   "LS": 30,
+   "L": 3
+  },
+  "L_alone_characterised": true,
+  "pair_or_triple_for_all": false
+ }
+}

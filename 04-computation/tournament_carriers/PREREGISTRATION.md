@@ -82,3 +82,49 @@ Predictions, for every tournament type with 4 <= n <= 7:
   | {L} | the remainder |
 
 - The {L} counts are n = 6: 1, n = 7: 3, n = 8: 16.
+
+## Outcomes (appended after the runs; predictions above unchanged)
+
+### P1 — PASSED in every item (`families_and_controls.py`)
+
+- **(a) Bigons, k = 2..5 (n = 5, 7, 9, 11).** Each is not linear and is weak. The marked-type counts are exactly
+  2^(C(2k,2)-1): 32, 16384, 2^27, 2^44.
+- **(b) Alternating C_{2k} + K_1, k = 2..5.** Each is not linear and is weak (|A| = 2k).
+- **(c) Dense core K_4 + K_2 + 2K_1.** Not linear, and also weak.
+- **(d) Controls.** 150 random oriented trees and 150 random functional orientations at each of n = 8 and n = 9:
+  - the end-edge map (trees) and the root-swap map (functional) are bijective, reversal-compatible and equivariant in
+    all 600 cases;
+  - (C) holds in all 600, and linear trijectivity holds in all 600.
+
+### P2 — FAILED as stated (`maxwell_ladder.py`)
+
+- **Agreement.**
+  - j = 2: agrees for n = 4 (10 carriers) and n = 5 (144 carriers).
+  - j = 2, n = 6: 6 of 3817 disagree.
+  - j = 3: 2 of 50 disagree at n = 5, and 15 of 2740 at n = 6.
+- **Linear without the count.** Every such disagreement violates the count only at an order-3 subgroup K. There
+  C(x,2) = C(|V^K|,2) - |E^K| has a solution x != |V^K| - j, e.g. x = 1 at a fixed-point-free Z_3 (j = 2), or x = 3
+  at |V^K| = 3, |E^K| = 0 (j = 3).
+- **Count without linearity** (3 cases, j = 3). The count holds, but A fixes only 2 < j vertices.
+- **Post hoc reading.**
+  - Sufficiency needs "A fixes >= j vertices and the count holds for all K". For j = 1 the count at K = A
+    self-certifies a fixed vertex.
+  - Necessity holds for 2-subgroups for every j (index-2 chain argument). For j >= 2 it fails at odd-order subgroups.
+  - For j = 1 (the trijection), the odd-prime alternatives are excluded for the full automorphism group; see the
+    results note. This is why the trijection is the rigid rung of the ladder.
+
+### P3 — PASSED exactly, n = 4..7 (`coherent_carrier_sets.py`)
+
+- The observed class sizes equal the predictions:
+
+  | n | {L,C} | {L,C,S} | {L,S} | {L} |
+  |---|---|---|---|---|
+  | 4 | 1 | 2 | 1 | 0 |
+  | 5 | 6 | 2 | 4 | 0 |
+  | 6 | 35 | 12 | 8 | 1 |
+  | 7 | 353 | 70 | 30 | 3 |
+
+- Pair-or-triple holds for every type iff n <= 5.
+- Sigma = {L} exactly characterises the non-strong types whose first and last strong components have >= 3 vertices
+  (all n checked).
+- The type counts t_n = 1, 1, 2, 4, 12, 56, 456 and the strong counts s_n = 1, 0, 1, 1, 6, 35, 353 were reproduced.
