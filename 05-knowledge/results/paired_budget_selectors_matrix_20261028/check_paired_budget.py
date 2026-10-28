@@ -91,12 +91,16 @@ def score(odd, even, head):
 
 
 def certificate():
-    rows = []; slopes = set(); peak = None; stronger_peak = None
+    rows = []; slopes = set(); peak = None; stronger_peak = None; norm_peak = 0
     for mode, r, alpha, m, n, eps, head in product('AB', range(3), range(3), range(3), range(3), range(2), range(3)):
         if head == 2 and (m or eps):
             continue
         args = mode, r, alpha, m, n, eps, head
         base = score(*words(*args), head)
+        odd, even = words(*args)
+        total_norm = Q(add(*odd, *even))
+        need(total_norm <= 13, ('joint amplitude', args, total_norm))
+        norm_peak = max(norm_peak, total_norm)
         need(base[0] <= 6, ('base', args, base))
         stronger = 3*base[1]-base[2]
         need(stronger <= 12, ('one-third base', args, base))
@@ -125,6 +129,7 @@ def certificate():
     raw = json.dumps(rows, separators=(',', ':')).encode()
     return dict(base_rows=len(rows), maximum_twice_excess=peak, slopes=sorted(slopes),
                 maximum_thrice_excess=stronger_peak,
+                maximum_joint_charge_norm=norm_peak,
                 certificate_sha256=hashlib.sha256(raw).hexdigest())
 
 

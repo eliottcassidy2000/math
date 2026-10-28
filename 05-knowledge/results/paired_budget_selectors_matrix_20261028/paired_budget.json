@@ -1,5 +1,5 @@
 {
-  "checks": 198119,
+  "checks": 198821,
   "controls": {
     "decoded_cutoffs": 34999,
     "decoded_modes": {
@@ -115,6 +115,7 @@
   "proof": {
     "base_rows": 702,
     "certificate_sha256": "c2a1713b7917bddd670ed7f2fb41ca96bdaba83acb4fec9cdf7f36c6d23a0423",
+    "maximum_joint_charge_norm": 13,
     "maximum_thrice_excess": [
       12,
       [

@@ -13,6 +13,12 @@ complete one-step fibres. This does **not** prove a uniform multilevel ROOT
 bound or universal Collatz entry. Nor does it permit arbitrary replacement
 of the original source weights by new weights.
 
+The same grammar also proves the sharp joint amplitude bound
+`Q(sum_(P(s)=u) (-1)^t A_N(s)) <= 13`. Triple extensions leave the total
+unchanged; the 702 base states have maximum 13. The inherited target-seven
+family attains it. Thus the older merged-charge hostile of norm 13 is now
+matched by an all-cutoff upper bound.
+
 ## Inheritance and exact scope
 
 Use the primitive positive odd sources `s not congruent to 5 mod 8`, native
@@ -226,3 +232,13 @@ follows from one-step coverage. The next useful target is a source-preserving
 grammar for two successive native fibres, with explicit shared cutoff and
 integer-clock data. A global averaged norm or an independent rescaling of
 the two rays is not a substitute.
+
+That boundary is now concrete. `check_depth_two.py` enumerates the original
+sources and keeps both clocks. At cutoff `N=19`, target one has outer words
+`(-omega)` and `(-omega,-omega)`: outer paired debt is six but the child
+energy is three. The one-step bound cannot simply be applied to these new
+words. At `N=57`, target one has outer debt 27, child energy 12 and original
+source energy 16; its actual endpoint norm is 39. Even replacing the child
+energy with the original source energy fails to repair the naive iteration.
+The receipt retains every original address and clock for both witnesses.
+This refutes an extension, not the proved one-step theorem.

@@ -1,0 +1,191 @@
+{
+  "K4_probe_strong_hostiles": [
+    {
+      "canonical_code": 10850734724,
+      "core_determinant": 1,
+      "disagreement": 0,
+      "primitive_kernel": [
+        1,
+        -27,
+        -9,
+        -3,
+        -1,
+        -27,
+        -9,
+        -3,
+        -1
+      ],
+      "probes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "canonical_code": 275776032,
+      "core_determinant": -31,
+      "disagreement": 45,
+      "primitive_kernel": [
+        31,
+        -17,
+        -19,
+        7,
+        -11,
+        -17,
+        -19,
+        7,
+        -11
+      ],
+      "probes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "K4_zero_probe_fibre_determinants": {
+    "0": 1,
+    "30": 1,
+    "45": -31,
+    "51": -31
+  },
+  "aligned_pairs": 2752,
+  "centralizer_profiles": [
+    {
+      "anti_involutions": 1,
+      "classes": 2597,
+      "lift_aut": 1,
+      "pair_aut": 1
+    },
+    {
+      "anti_involutions": 3,
+      "classes": 109,
+      "lift_aut": 3,
+      "pair_aut": 1
+    },
+    {
+      "anti_involutions": 5,
+      "classes": 8,
+      "lift_aut": 5,
+      "pair_aut": 1
+    },
+    {
+      "anti_involutions": 7,
+      "classes": 2,
+      "lift_aut": 7,
+      "pair_aut": 1
+    },
+    {
+      "anti_involutions": 9,
+      "classes": 4,
+      "lift_aut": 9,
+      "pair_aut": 1
+    },
+    {
+      "anti_involutions": 1,
+      "classes": 12,
+      "lift_aut": 3,
+      "pair_aut": 3
+    },
+    {
+      "anti_involutions": 3,
+      "classes": 16,
+      "lift_aut": 9,
+      "pair_aut": 3
+    },
+    {
+      "anti_involutions": 7,
+      "classes": 2,
+      "lift_aut": 21,
+      "pair_aut": 3
+    },
+    {
+      "anti_involutions": 9,
+      "classes": 1,
+      "lift_aut": 27,
+      "pair_aut": 3
+    },
+    {
+      "anti_involutions": 27,
+      "classes": 1,
+      "lift_aut": 81,
+      "pair_aut": 3
+    }
+  ],
+  "checks": 355180,
+  "exact_full_image_equality": true,
+  "full_bank_sha256": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec",
+  "full_ordinary_bank": 191536,
+  "image_sha256": "90ebbec029e1d3233c9b3354fe0251aa2d3b28f84598d1760d68ca5f26cb5e7f",
+  "labelled_signed_core_determinants": {
+    "1": {
+      "1": 1
+    },
+    "2": {
+      "1": 4
+    },
+    "3": {
+      "-7": 8,
+      "1": 48,
+      "9": 8
+    },
+    "4": {
+      "-15": 384,
+      "-31": 192,
+      "-7": 512,
+      "1": 1920,
+      "17": 384,
+      "33": 192,
+      "9": 512
+    }
+  },
+  "necessary_score_filter_survivors": 54552,
+  "per_K4_core": {
+    "0": 1024,
+    "16": 352,
+    "2": 352,
+    "4": 1024
+  },
+  "retained_81_27_controls": [
+    {
+      "automorphisms": 3,
+      "binary_attachment_orbits": 4,
+      "canon_leaves": 3,
+      "object": "C3",
+      "transporter_0_to_4": null
+    },
+    {
+      "automorphisms": 5,
+      "binary_attachment_orbits": 8,
+      "canon_leaves": 5,
+      "object": "T5",
+      "transporter_0_to_4": 1
+    },
+    {
+      "automorphisms": 21,
+      "binary_attachment_orbits": 12,
+      "canon_leaves": 21,
+      "object": "Paley7",
+      "transporter_0_to_4": 3
+    },
+    {
+      "automorphisms": 81,
+      "binary_attachment_orbits": 176,
+      "canon_leaves": 81,
+      "object": "81",
+      "transporter_0_to_4": 27
+    },
+    {
+      "automorphisms": 27,
+      "binary_attachment_orbits": 512,
+      "canon_leaves": 27,
+      "object": "27",
+      "transporter_0_to_4": 0
+    }
+  ],
+  "self_converse_image": 2752,
+  "source": "incoming Session89 exact lift and aligned-pair generator; previous IR canonicalizer",
+  "status": "PROVED algebra; FINITE-EXACT full order-nine audit"
+}

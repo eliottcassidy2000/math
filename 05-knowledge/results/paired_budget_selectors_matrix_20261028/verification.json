@@ -1,0 +1,43 @@
+{
+  "audit": "same-agent alternate-path exact checks; not independent human review or a proof-assistant formalization",
+  "exact_receipts": [
+    {
+      "receipt": "paired_budget.json",
+      "receipt_sha256": "be7deb1f14c7f15a444ece05aaecb2a8aac97f00a3b66428ddc4f2cb79db5c34",
+      "script": "check_paired_budget.py",
+      "source_sha256": "8907ab7d34b817ff22375b03b495d3ba8786272050a2b9e6ca613dfea8be928c"
+    },
+    {
+      "receipt": "five_interiors.json",
+      "receipt_sha256": "fef685439131438e5e87565cd9d93eccbdc60e41ceb34908f4a1980b67fdcd98",
+      "script": "check_five_interiors.py",
+      "source_sha256": "b672c4ccf78bafda74e1c27277d441d8dd9e597d598098ad4fc470bc34bb56e6"
+    },
+    {
+      "receipt": "lift_gram.json",
+      "receipt_sha256": "bdf91a85caf9f2691569b7360ce553c959830cd0f6a41a93cbae3ce6946af0c7",
+      "script": "check_lift_gram.py",
+      "source_sha256": "5c2b18d0feecf843634a3cb9915744e3b221ffacdea4f111240a6a1823609060"
+    },
+    {
+      "receipt": "depth_two.json",
+      "receipt_sha256": "5cc96c7cc366a74aebfe085a044e4587d75c0966da537780bf4abb0fa82ddbbb",
+      "script": "check_depth_two.py",
+      "source_sha256": "a1ccddbb5147fa83c0c252f6d3e6cc78fc7d2a8372bba58f1b2aec0b39a5a8a1"
+    }
+  ],
+  "inherited_source_sha256": {
+    "root_ports_closed_carriers_20261028/check_carriers.py": "0f55486fde955c52bfab3cc1449b38329843b3f8506f72af468ff7bd7d0a532e",
+    "root_ports_closed_carriers_20261028/check_root_rays.py": "9ceaf34868343148bb6c2c2c2da89349934e51763e08ca531207f428f54f8709",
+    "session87_four_vertices_enumeration_20261028/check_generation.py": "f5d3da961f34dc1a32eaa0c1b69fad9bda983154578ea0187c5fd6b2e2d10fae",
+    "session88_symmetry_certificates_20261028/blockfill/check_blockfill.py": "cb246f280786f6a7f8b1f829d9d9b9e0993cb2298eb399783809bedb27780bdb",
+    "session89_consecutive_tournament_pairs_20261028/generation/check_lift.py": "18dabfc0f24c81775e8ffc4eacbe9fd8455c56a6f24c7ba19a7c68e90ceaafb9",
+    "session89_consecutive_tournament_pairs_20261028/generation/check_pairs.py": "b1516d3f0ac26ba69d7d18ddb24fa235b1389dd6cfcdaae9e71744ceda1650e6"
+  },
+  "limits": [
+    "one-step ROOT theorem, not universal convergence",
+    "five-interior paired-port architecture, not global plane chromatic number",
+    "full order-nine self-converse image and scoped algebra, not an all-order canonical-label algorithm"
+  ],
+  "status": "PASS"
+}

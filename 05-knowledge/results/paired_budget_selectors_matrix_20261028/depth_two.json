@@ -1,0 +1,240 @@
+{
+  "cases": 134025,
+  "conclusion": "One-step theorem remains valid. Child phase correlations and ancestry cannot be replaced by the child diagonal energies or the original total mass alone.",
+  "first_one_third_failure": {
+    "N": 19,
+    "child_addresses": [
+      [
+        3
+      ],
+      [
+        1,
+        113
+      ]
+    ],
+    "child_energy": 3,
+    "endpoint_charge": [
+      0,
+      -3
+    ],
+    "original_energy": 6,
+    "original_sources": [
+      {
+        "child": 1,
+        "first_clock": 3,
+        "original_charge": [
+          0,
+          1
+        ],
+        "original_energy": 1,
+        "second_clock": 0,
+        "source": 3,
+        "target": 1
+      },
+      {
+        "child": 3,
+        "first_clock": 4,
+        "original_charge": [
+          1,
+          0
+        ],
+        "original_energy": 1,
+        "second_clock": 3,
+        "source": 17,
+        "target": 1
+      },
+      {
+        "child": 3,
+        "first_clock": 5,
+        "original_charge": [
+          1,
+          -1
+        ],
+        "original_energy": 3,
+        "second_clock": 3,
+        "source": 35,
+        "target": 1
+      },
+      {
+        "child": 113,
+        "first_clock": 1,
+        "original_charge": [
+          0,
+          1
+        ],
+        "original_energy": 1,
+        "second_clock": 8,
+        "source": 75,
+        "target": 1
+      }
+    ],
+    "outer_debt": 6,
+    "outer_words": [
+      [
+        [
+          0,
+          -1
+        ]
+      ],
+      [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          -1
+        ]
+      ]
+    ],
+    "target": 1
+  },
+  "original_weight_hostile": {
+    "N": 57,
+    "child_addresses": [
+      [
+        3,
+        227
+      ],
+      [
+        1,
+        113
+      ]
+    ],
+    "child_energy": 12,
+    "endpoint_charge": [
+      -5,
+      -7
+    ],
+    "original_energy": 16,
+    "original_sources": [
+      {
+        "child": 1,
+        "first_clock": 0,
+        "original_charge": [
+          -2,
+          -1
+        ],
+        "original_energy": 3,
+        "second_clock": 0,
+        "source": 1,
+        "target": 1
+      },
+      {
+        "child": 1,
+        "first_clock": 3,
+        "original_charge": [
+          0,
+          1
+        ],
+        "original_energy": 1,
+        "second_clock": 0,
+        "source": 3,
+        "target": 1
+      },
+      {
+        "child": 3,
+        "first_clock": 4,
+        "original_charge": [
+          2,
+          1
+        ],
+        "original_energy": 3,
+        "second_clock": 3,
+        "source": 17,
+        "target": 1
+      },
+      {
+        "child": 3,
+        "first_clock": 5,
+        "original_charge": [
+          1,
+          0
+        ],
+        "original_energy": 1,
+        "second_clock": 3,
+        "source": 35,
+        "target": 1
+      },
+      {
+        "child": 113,
+        "first_clock": 1,
+        "original_charge": [
+          1,
+          2
+        ],
+        "original_energy": 3,
+        "second_clock": 8,
+        "source": 75,
+        "target": 1
+      },
+      {
+        "child": 1,
+        "first_clock": 8,
+        "original_charge": [
+          1,
+          -1
+        ],
+        "original_energy": 3,
+        "second_clock": 0,
+        "source": 113,
+        "target": 1
+      },
+      {
+        "child": 227,
+        "first_clock": 1,
+        "original_charge": [
+          -1,
+          -1
+        ],
+        "original_energy": 1,
+        "second_clock": 9,
+        "source": 151,
+        "target": 1
+      },
+      {
+        "child": 1,
+        "first_clock": 9,
+        "original_charge": [
+          1,
+          0
+        ],
+        "original_energy": 1,
+        "second_clock": 0,
+        "source": 227,
+        "target": 1
+      }
+    ],
+    "outer_debt": 27,
+    "outer_words": [
+      [
+        [
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      [
+        [
+          -2,
+          -3
+        ],
+        [
+          -1,
+          -2
+        ]
+      ]
+    ],
+    "target": 1
+  },
+  "peak_thrice_excess": {
+    "N": 57,
+    "target": 1,
+    "thrice_excess": 69
+  },
+  "status": "REFUTED naive iteration; FINITE-EXACT hostile search",
+  "universe": "all positive N<=512, all nonzero targets of two absorbing native steps from sources<4N"
+}

@@ -10,12 +10,32 @@ Inherited live tip: `b38ec1a1eaf7`. No existing research changes were overwritte
 * **PROVED:** [at most five private interiors cannot obstruct](FIVE_INTERIORS.md)
   any proper six-colouring constant on four disjoint port pairs in a planar
   unit-distance graph. The next possible selector has at least six interiors.
-* **IN PROGRESS:** aligned consecutive tournament pairs and their constructive
-  self-converse correspondence; enumeration and transporter controls will be
-  recorded in this packet before close-out.
+* **PROVED / FINITE-EXACT:** [signed-core and Gram refinement](SIGNED_CORE_AND_GRAM.md)
+  of the concurrently supplied aligned-pair lift. Its complete order-nine
+  image is independently checked against all 191,536 ordinary classes.
+  The first signed triangle produces determinant 9 or -7 through Eisenstein
+  norms. Two strong K4-derived lifts expose the four-probe kernel directly.
+* **REFUTED extension:** the one-step budget cannot simply be iterated on
+  child charges or repaired using original source mass alone. `depth_two.json`
+  retains exact two-generation hostiles, every original source and both clocks.
+
+[Synthesis and next targets](SYNTHESIS.md) connects the finite weighted
+controller, groupoid/centralizer sidecar, signed cycle-cover filtration, and
+geometric contact obstruction. It records the incoming complete order-ten
+generator without attributing that work to this session.
 
 The executable checks and matching JSON receipts live beside the proofs.
 The finite checks are distinguished from the event-order and geometric proofs.
+
+Reproduce from the repository root:
+
+```sh
+python3 -B 05-knowledge/results/paired_budget_selectors_matrix_20261028/verify.py
+python3 -B -O 05-knowledge/results/paired_budget_selectors_matrix_20261028/verify.py
+```
+
+`verification.json` pins the source and receipt hashes. See `AUDIT.md` for
+scope, proof checks and the same-agent audit limitation.
 
 ## Concept board and inheritance
 
