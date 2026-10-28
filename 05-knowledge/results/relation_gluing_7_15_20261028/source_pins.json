@@ -1,0 +1,192 @@
+{
+  "base_commit": "83b601158076669edc8729ce461f150da1c3877e",
+  "incoming_read_commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+  "scope": "Inherited sources; exact sections and transfer boundaries in ATLAS.md, not full independent audits.",
+  "sources": [
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "01-canon/theorems/THM-2148-three-target-finite-kernel-fano-obstruction.md",
+      "sha256_lf": "fdebc942f50a88501ea9364abb4ed362530d63db9dbc6b9933ef493d25582300"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "01-canon/theorems/THM-2703-c3-boundary-tree-arm-determinant-standard-plane-gate.md",
+      "sha256_lf": "2ea340805e929ad9428056e4de593806f8a0b85c9db71ec5cd45b6afc72d48be"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md",
+      "sha256_lf": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "01-canon/theorems/THM-2770-tree-incidence-a-d-weyl-clutch-and-four-vertex-fan-dichotomy.md",
+      "sha256_lf": "2d4ce187193eda64858e3f80e9c01bb0a518ed5d1d4a9ae79480a2c92e4fe4a6"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "sha256_lf": "70d8245ec53ed98a7f11617cfb850ad9b63844127d741c603cf2c4a05a95cf5c"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "01-canon/theorems/THM-4839-unit-cayley-graphs-toroidal-maps-petersen-klein-four-belyi-pythagorean-frey.md",
+      "sha256_lf": "ca556ab69ffe706051b72b85d0195002309d40371ab3c09adf096f6e0bdb0693"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/README.md",
+      "sha256_lf": "23fd34af23e215c31ae8a2ba4022d12ef62a01a95422a0ee4016f7c827a6560c"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/bsd_selmer_growth_20261013a.md",
+      "sha256_lf": "120ba2d4a7147ac85a22e1152babc96754a0b466a785dbdfda101818db4544ca"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "sha256_lf": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/collatz_mod6_20260917_divisor_balance_family.md",
+      "sha256_lf": "06d1430303a47c40a83ce74b04c2323721eda1cd01e2ffefb58df43f35b3c560"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "sha256_lf": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/collatz_pentagon_operator_coherence_20260930.md",
+      "sha256_lf": "ac72a2461985a3428ad32aede3a674f091d573529fd8f910b043de7f8ec23fd0"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/conductors/DEDEKIND_CONDUCTORS.md",
+      "sha256_lf": "c1e6df3229601cedee96ba8e2cd4d6d86d3fd25d19276d43607d0ce461ebd735"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/lca/LCA_AND_PETERSEN_MERGES.md",
+      "sha256_lf": "f97d6a3cfca74a4b524e03ade66d186d16be351543484cb466b56ae148995c28"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "05-knowledge/results/free_bits_signed_incidence_20261028/README.md",
+      "sha256_lf": "6b96af621279f0d9c07f0252009eb7449a34751c2cba2b37fcf3c3461de120e7"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/incidence_attractors_20261028/THEORY.md",
+      "sha256_lf": "20c35ab4fab0784ecc0cf7791fe4529c2b3ed6861e076b7eed711a396eab42c6"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/THEORY.md",
+      "sha256_lf": "9e9c2c18572195708fd3b3e7765fca9bed2960f3bb3076f001e70dd8a6ac0236"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/mod19_resonance_depth_20261004.md",
+      "sha256_lf": "0869b4f6112c32ba0bc19052780d5a7e3254af77707573bd2a5dc44d73f62248"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session33_continuation_states_20261023/FANO_CONTINUATION_SPECTRUM.md",
+      "sha256_lf": "47957f7ff47bce840773249fc3ef6a5881350362ef6c8147057d94c3acf9a69f"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fifteen-kernels/README.md",
+      "sha256_lf": "747ab7952914b4a9002ecc33ac98d6714596f9f1eb7cfc1cc9ace240930a8c07"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/README.md",
+      "sha256_lf": "e79120a9a0b5f6e4a7cfc597b20250ae54448034773e00d86b81e55c469f695b"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/correlated-gluing/THEOREM.md",
+      "sha256_lf": "486221eeab577d016d69c6170077fa36135ddf935b497e9ddaeca3058914cf48"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session56_rmq_lca_connections_20261025/hierarchy-covers/REPORT.md",
+      "sha256_lf": "5aa49a7a9c58b6b652cd1e359275a6ff6d5f6cfe7fd7377aba2f63243b35073f"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/BALANCE_AND_EXCESS.md",
+      "sha256_lf": "0350eb8cfc67b6221ef66b6f5d19d52d2ea7ec357963211e8619b30cc5cb4f40"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/BERGGREN_SEMIPRIME_BRIDGE.md",
+      "sha256_lf": "b1496fe2423d633b83d1d74e2f42e90c106b1b73e7f1538131442261b22acded"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/GUARDED_OBSERVERS.md",
+      "sha256_lf": "d17d1c5d28f890503f2321ce3b173d4098769bafda3451936797cbcfef1f5be3"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/ARITHMETIC_FREE_BITS.md",
+      "sha256_lf": "e5466ee1981c6a1ddf5f649acd3c528df74b58debef1f6fe5ec79d42f797ae90"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/CONSTRAINT_CERTIFICATES.md",
+      "sha256_lf": "2bc10f95b24c579fc4a496e66a224d21d437edce8813f2c00e635d2d63fe935b"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/FANO_PALEY_INFORMATION.md",
+      "sha256_lf": "857c7c2867a2f625388ab29b001773783041452cb6295b822d5d10e5216d8e05"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/LINEAR_GLUING_INFORMATION.md",
+      "sha256_lf": "d284e8507fc81f931e90627563cf0cb430d90a9d48221ea52fde5ad582e1806f"
+    },
+    {
+      "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/SIGNED_INCIDENCE_RELATIONS.md",
+      "sha256_lf": "880c92c1dceb6c71f1f9b8d4623556b23830d021b54275604cdaa0205b456483"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md",
+      "sha256_lf": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/tetrahedral_fano_duality_20261021/session23b-duality/PROOF.md",
+      "sha256_lf": "af297f77570dc82643e1453eaccc3f7b6976001e4dc016996a07a01d96d43729"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/two_grids_ring_or_ideal_class_13_37_20261027.md",
+      "sha256_lf": "69c5ae10fab33ef41bb195c2485ca5b3fd08ead213fa08b26c5ca7fe2a444802"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/unifying_relations_20261028/README.md",
+      "sha256_lf": "1a63363132a41662a5afe6cc49741e217ce8dbf73f4ac8d6ca2d1e0cf4fd10cb"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/unifying_relations_20261028/THEORY.md",
+      "sha256_lf": "e3fa55579c6be52a7ab0f37d8b12bf736ceb8f2c7aaf7ed2ba8300a870787cce"
+    },
+    {
+      "commit": "83b601158076669edc8729ce461f150da1c3877e",
+      "path": "05-knowledge/results/unit_path_ring_kuratowski_pythagorean_yang_mills_20261018.md",
+      "sha256_lf": "1ed962e2c3e9b159c087316bd81516d4e16e533a0b71329d98e632670de9c6fa"
+    }
+  ]
+}

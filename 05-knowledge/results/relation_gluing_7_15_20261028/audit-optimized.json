@@ -1,0 +1,44 @@
+{
+  "binary_automorphisms": 168,
+  "grid_ideal_controls": [
+    5,
+    13,
+    37
+  ],
+  "group_law_pairs": 256,
+  "hierarchy_lines": 15,
+  "integer_profiles_via_minors": 128,
+  "integral_stabilizer": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3,
+      5,
+      4,
+      7,
+      6
+    ]
+  ],
+  "method": "same-agent alternate standard-library paths",
+  "new_triple_divisor_lists": 455,
+  "old_divisor_lists": 128,
+  "order_controls": {
+    "127": 7,
+    "19": 18
+  },
+  "parallelism_lines": 35,
+  "pentads": 6,
+  "perfect_matchings": 15,
+  "permutations": 5040,
+  "projective_lines": 35,
+  "status": "PASS"
+}
