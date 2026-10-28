@@ -1,0 +1,475 @@
+{
+  "arithmetic_codes": {
+    "3": {
+      "bank": [
+        [
+          1,
+          2,
+          7,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          5,
+          1
+        ],
+        [
+          4,
+          5,
+          19,
+          2
+        ],
+        [
+          5,
+          10,
+          89,
+          3
+        ],
+        [
+          6,
+          15,
+          59,
+          2
+        ],
+        [
+          7,
+          30,
+          29,
+          1
+        ]
+      ],
+      "code_size": 16,
+      "full_membership_queries_with_parity": 6,
+      "full_membership_queries_without_parity": 7,
+      "joint_formula_checks": 896,
+      "joint_witness_primes": [
+        2,
+        19,
+        59
+      ],
+      "one_check_queries_with_parity": 3,
+      "one_check_queries_without_parity": 4,
+      "parity_joint_law_comparisons": 29,
+      "subsets": 128,
+      "weight_enumerator": {
+        "0": 1,
+        "3": 7,
+        "4": 7,
+        "7": 1
+      }
+    },
+    "4": {
+      "bank": [
+        [
+          1,
+          2,
+          7,
+          2
+        ],
+        [
+          2,
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          6,
+          5,
+          1
+        ],
+        [
+          4,
+          5,
+          19,
+          2
+        ],
+        [
+          5,
+          10,
+          89,
+          3
+        ],
+        [
+          6,
+          15,
+          59,
+          2
+        ],
+        [
+          7,
+          30,
+          29,
+          1
+        ],
+        [
+          8,
+          7,
+          251,
+          6
+        ],
+        [
+          9,
+          14,
+          13,
+          1
+        ],
+        [
+          10,
+          21,
+          83,
+          2
+        ],
+        [
+          11,
+          42,
+          41,
+          1
+        ],
+        [
+          12,
+          35,
+          139,
+          2
+        ],
+        [
+          13,
+          70,
+          5669,
+          9
+        ],
+        [
+          14,
+          105,
+          419,
+          2
+        ],
+        [
+          15,
+          210,
+          839,
+          2
+        ]
+      ],
+      "code_size": 2048,
+      "full_membership_queries_with_parity": 14,
+      "full_membership_queries_without_parity": 15,
+      "joint_formula_checks": 491520,
+      "joint_witness_primes": null,
+      "one_check_queries_with_parity": 7,
+      "one_check_queries_without_parity": 8,
+      "parity_joint_law_comparisons": 0,
+      "subsets": 32768,
+      "weight_enumerator": {
+        "0": 1,
+        "3": 35,
+        "4": 105,
+        "5": 168,
+        "6": 280,
+        "7": 435,
+        "8": 435,
+        "9": 280,
+        "10": 168,
+        "11": 105,
+        "12": 35,
+        "15": 1
+      }
+    }
+  },
+  "bounded_lifts": {
+    "K4_gram_rank": 3,
+    "anchors": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "charge_tests": 14,
+    "degree_table": [
+      {
+        "effective_modulus": 5,
+        "first_nonlinear_equivariant_shear_degree": 4,
+        "linear_through_degree": 3,
+        "moduli": [
+          5
+        ]
+      },
+      {
+        "effective_modulus": 7,
+        "first_nonlinear_equivariant_shear_degree": 6,
+        "linear_through_degree": 5,
+        "moduli": [
+          7
+        ]
+      },
+      {
+        "effective_modulus": 15,
+        "first_nonlinear_equivariant_shear_degree": 14,
+        "linear_through_degree": 13,
+        "moduli": [
+          15
+        ]
+      },
+      {
+        "effective_modulus": 35,
+        "first_nonlinear_equivariant_shear_degree": 34,
+        "linear_through_degree": 33,
+        "moduli": [
+          5,
+          7
+        ]
+      },
+      {
+        "effective_modulus": 15,
+        "first_nonlinear_equivariant_shear_degree": 14,
+        "linear_through_degree": 13,
+        "moduli": [
+          5,
+          15
+        ]
+      },
+      {
+        "effective_modulus": 105,
+        "first_nonlinear_equivariant_shear_degree": 104,
+        "linear_through_degree": 103,
+        "moduli": [
+          7,
+          15
+        ]
+      },
+      {
+        "effective_modulus": 72,
+        "first_nonlinear_equivariant_shear_degree": 71,
+        "linear_through_degree": 70,
+        "moduli": [
+          8,
+          9
+        ]
+      }
+    ],
+    "mirror_points": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1
+      ]
+    ]
+  },
+  "frobenius": {
+    "3": {
+      "normal_basis": [
+        3,
+        5,
+        7
+      ],
+      "orbit_length_counts": {
+        "1": 1,
+        "3": 2
+      },
+      "orbits": [
+        [
+          1
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3,
+          5,
+          7
+        ]
+      ],
+      "polynomial_bits": 11
+    },
+    "4": {
+      "normal_basis": [
+        8,
+        12,
+        15,
+        10
+      ],
+      "orbit_length_counts": {
+        "1": 1,
+        "2": 1,
+        "4": 3
+      },
+      "orbits": [
+        [
+          1
+        ],
+        [
+          2,
+          4,
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12,
+          15,
+          10
+        ],
+        [
+          9,
+          13,
+          14,
+          11
+        ]
+      ],
+      "polynomial_bits": 19
+    }
+  },
+  "geometry15": {
+    "Frobenius_compatible_forms": [
+      {
+        "Frobenius_fixed_spreads": 0,
+        "form_mask": 12,
+        "isotropic_line_count": 15,
+        "spreads": 6
+      },
+      {
+        "Frobenius_fixed_spreads": 2,
+        "form_mask": 60,
+        "isotropic_line_count": 15,
+        "spreads": 6
+      }
+    ],
+    "all_spreads": 56,
+    "alternating_forms": 28,
+    "isotropic_lines": 15,
+    "lines": 35,
+    "lines_per_spread": 5,
+    "lines_through_point": 7,
+    "sample_prime_partition": [
+      [
+        7,
+        2,
+        5
+      ],
+      [
+        19,
+        251,
+        139
+      ],
+      [
+        89,
+        83,
+        839
+      ],
+      [
+        59,
+        41,
+        5669
+      ],
+      [
+        29,
+        13,
+        419
+      ]
+    ],
+    "single_line_separator": [
+      2,
+      12,
+      14
+    ],
+    "standard_form_mask": 18,
+    "subfield_nonzero_vectors": [
+      1,
+      6,
+      7
+    ],
+    "subfield_spread": [
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        2,
+        12,
+        14
+      ],
+      [
+        3,
+        9,
+        10
+      ],
+      [
+        4,
+        11,
+        15
+      ],
+      [
+        5,
+        8,
+        13
+      ]
+    ],
+    "subfield_spread_compatible_forms": [
+      27,
+      39,
+      60
+    ],
+    "symplectic_spreads": 6,
+    "unique_spread_and_Frobenius_form": 60
+  },
+  "parity_lifts": {
+    "claim": "parity/residue bijection and two opposite next-bit lifts; no convergence claim",
+    "max_depth": 10,
+    "signs": [
+      -1,
+      1
+    ],
+    "words_checked": 4092
+  },
+  "signed_incidence": {
+    "even_affine_labels": [
+      1,
+      8,
+      136,
+      440
+    ],
+    "even_control_all_edges_square": true,
+    "graph_counts": {
+      "1": 1,
+      "2": 3,
+      "3": 27,
+      "4": 729
+    },
+    "nonintegral_square_edge_cycle": [
+      4,
+      4,
+      1
+    ],
+    "square_triangle": [
+      5,
+      20,
+      44
+    ],
+    "total": 760
+  }
+}

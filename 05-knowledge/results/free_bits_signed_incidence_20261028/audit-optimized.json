@@ -1,0 +1,139 @@
+{
+  "Hamming_weight_enumerators": {
+    "3": {
+      "0": 1,
+      "3": 7,
+      "4": 7,
+      "7": 1
+    },
+    "4": {
+      "0": 1,
+      "3": 35,
+      "4": 105,
+      "5": 168,
+      "6": 280,
+      "7": 435,
+      "8": 435,
+      "9": 280,
+      "10": 168,
+      "11": 105,
+      "12": 35,
+      "15": 1
+    }
+  },
+  "adaptive_queries": {
+    "one_check": {
+      "known_parity": 3,
+      "no_parity": 4
+    },
+    "square": {
+      "known_parity": 6,
+      "no_parity": 7
+    }
+  },
+  "matchings": {
+    "factorizations": 6,
+    "matchings": 15,
+    "triples": [
+      [
+        3,
+        12,
+        15
+      ],
+      [
+        3,
+        11,
+        8
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        5,
+        10,
+        15
+      ],
+      [
+        5,
+        13,
+        8
+      ],
+      [
+        5,
+        2,
+        7
+      ],
+      [
+        9,
+        6,
+        15
+      ],
+      [
+        9,
+        13,
+        4
+      ],
+      [
+        9,
+        2,
+        11
+      ],
+      [
+        14,
+        6,
+        8
+      ],
+      [
+        14,
+        10,
+        4
+      ],
+      [
+        14,
+        2,
+        12
+      ],
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        1,
+        10,
+        11
+      ],
+      [
+        1,
+        13,
+        12
+      ]
+    ]
+  },
+  "prime_bank_independent_sieve": "PASS",
+  "trace_reconstruction": {
+    "1": {
+      "Frobenius_invariant_coefficients": [
+        1
+      ],
+      "candidate_forms": 1,
+      "subfield_size": 2
+    },
+    "2": {
+      "Frobenius_invariant_coefficients": [
+        1
+      ],
+      "candidate_forms": 3,
+      "subfield_size": 4
+    },
+    "3": {
+      "Frobenius_invariant_coefficients": [
+        1
+      ],
+      "candidate_forms": 7,
+      "subfield_size": 8
+    }
+  }
+}

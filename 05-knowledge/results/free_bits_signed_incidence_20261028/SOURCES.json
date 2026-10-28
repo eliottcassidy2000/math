@@ -1,0 +1,188 @@
+{
+  "base_commit": "83b601158076669edc8729ce461f150da1c3877e",
+  "repository_sources": [
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "git_blob": "6baaaf6c19dbf55d1936c478343508a5665e6f3f",
+      "sha256_lf": "8cd830262236c8a4a3586298684915efa6282883982fdf75a2b9fe11a3832a86",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256_lf": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "00-navigation/START-HERE.md",
+      "git_blob": "21d7ca583bce461dbcd219f84a2ec0d8446ba007",
+      "sha256_lf": "cc2013267c65a1c7b282b34d5dbc2933284a6b356d2cd6e5b49ebef5f923f0cb",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "sha256_lf": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "01-canon/MISTAKES.md",
+      "git_blob": "e730de8f2cf60932057a9e7cc970b821f1baead5",
+      "sha256_lf": "a6955b4b1938444322ca4f9c6b6415112c2ddeccdc4ecd1aeb777be7cb33b271",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "01-canon/theorems/THM-1200-two-sevens-parity-extension.md",
+      "git_blob": "6563006a2be3627451a5d12e88e0de46bc8ebfd7",
+      "sha256_lf": "40c913f3d6cc807f84f7ca3ca6a3ec98579f2155f35d4701d7b72a0f57d1506e",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "01-canon/theorems/THM-1247-q15-contracted-fano-stalk-and-blocker-complete-guardrail.md",
+      "git_blob": "deb2c9edfed802284bdc88e78e80f6c40e0858be",
+      "sha256_lf": "473e44ec000a58cab728cce710c9f08919f319e56dc8a06e0de873889bc59ee5",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md",
+      "git_blob": "cefdf13fa728d04e714b3d11b0d8d23489ca4d1f",
+      "sha256_lf": "ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "01-canon/theorems/THM-862-scale-three-hamming-six-decision.md",
+      "git_blob": "bb3fc2198c63731f4a3f35c6bba2a09d2a5ca6bd",
+      "sha256_lf": "c8736131fc6e3f90c2b85737d64d4ffb8e76cdb18ff1b99353c0f5f8e3e63a77",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-2220-vieta-perfect-aliquot-carriers.md",
+      "git_blob": "68c75b7158336266ab164c55bbb0b0afee5e1903",
+      "sha256_lf": "d9b64252880755c1ed1399f763386ee1487598c4ed43db8fa6a7241e72608162",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "sha256_lf": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md",
+      "git_blob": "d84acd997fbb7dd181a86d2f5059ae83dca17a70",
+      "sha256_lf": "60d672f425b42718e2a3a4e1c7bef0d4c7f8f1ae7580169dbbb9a55ee9804b5a",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_divisors.md",
+      "git_blob": "03972562a6d17fe59937d810e353c4a8d2cdea75",
+      "sha256_lf": "2c9224962e8395082bdafaf490f664be1943511a82e28ef4a86569b637aca958",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/cardinality_bridges_20261018m.md",
+      "git_blob": "2cbd3ad3962eec0e0363746fa2d3139a3b33e17d",
+      "sha256_lf": "0bdb02e403ec498dccd654459dc311667441dc14888a30ec430bbb9efd3c7a81",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/incidence_attractors_20261028/README.md",
+      "git_blob": "a5387d44fd4277cb5c42b6285c7eafd8a0ac792c",
+      "sha256_lf": "2e8d5e2bfe31dc6dcc992e0e831b2741fa223b541e78d49f0d95fee9deb657f9",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/incidence_attractors_20261028/THEORY.md",
+      "git_blob": "1be46e2720c3c2c738405fb1146e765ffe3a2986",
+      "sha256_lf": "20c35ab4fab0784ecc0cf7791fe4529c2b3ed6861e076b7eed711a396eab42c6",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/arithmetic/README.md",
+      "git_blob": "477e1a700275e0830806b3c43f82be7bc361fef9",
+      "sha256_lf": "88f83d3d2b0a144bd6ad423ee4b2de15ae6778ca046c5cecd274416eadd49457",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/README.md",
+      "git_blob": "21a7f522d037c0e4beecd49535a879456735cb9d",
+      "sha256_lf": "3c93784c8f0785a69cf0503a6a0a608cd48665e3c697d1e5ddc2dc8f91aa8a43",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/normseven_arithmetic_f1_20261026/README.md",
+      "git_blob": "ca4e5c0ac980e0cf47ae08d5219fa0006e55516e",
+      "sha256_lf": "901084dbf14e53123b7817eb797fc3d9357d75e1b2cb7720838082615bf83ec2",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/FINITE_GUARDS_AND_DEGREE.md",
+      "git_blob": "d1c83f71f7a56704a4c66423e300c785b5741436",
+      "sha256_lf": "3a6603cc95de0d1c5c0cb10af4f162b4f83d19e078d6831ff0f0b244ca63c1e6",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/SYNTHESIS.md",
+      "git_blob": "4f4916fcdd5b700a3f76737541a6d01850922c19",
+      "sha256_lf": "ea6f312b4fd06d8cd4998b8dce55799c3692b9b64e1f7e76805aa03a34150640",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/session72_even_graph_unifying_carriers_20261026/README.md",
+      "git_blob": "258095839fc7dfb288b55ee59257556fe8980dc9",
+      "sha256_lf": "e9be621e8e36b4fa092eccb85f733e631d108128f1dddbc63558191ae4792849",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/square_sum_berggren_absorber_bijection_20261019.md",
+      "git_blob": "93967525e35a0ce171a2bdbb491901c9189979f3",
+      "sha256_lf": "71c06b6dc39b953359ac4ec53f4aaf6d21442f6368a060486c7d002c83a66633",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/unifying_relations_20261028/README.md",
+      "git_blob": "0dc9550b2525ddc6e666f4b6e66866dbb641e0af",
+      "sha256_lf": "1a63363132a41662a5afe6cc49741e217ce8dbf73f4ac8d6ca2d1e0cf4fd10cb",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    },
+    {
+      "path": "05-knowledge/results/unifying_relations_20261028/THEORY.md",
+      "git_blob": "684bd4ccfec6b8cd53d1f298ffb861288ba73fc9",
+      "sha256_lf": "e3fa55579c6be52a7ab0f37d8b12bf736ceb8f2c7aaf7ed2ba8300a870787cce",
+      "read_scope": "Named section or result summarized in PROGRAMME/THEORY; navigation and corrections were read selectively. Not a blanket audit of this file."
+    }
+  ],
+  "external_sources": [
+    {
+      "title": "Bernstein and Lagarias, The 3x+1 Conjugacy Map",
+      "url": "https://websites.umich.edu/~lagarias/doc/bernstein.pdf",
+      "scope": "Parity convention and finite residue permutation; abstract and introduction checked; finite formulas proved locally."
+    },
+    {
+      "title": "Zaslavsky, Signed Graphs and Geometry",
+      "url": "https://people.math.binghamton.edu/zaslav/Tpapers/sggm.pdf",
+      "scope": "Theorem3.6 signed-incidence rank; local affine proof included."
+    },
+    {
+      "title": "Zaslavsky, Matrices in the Theory of Signed Simple Graphs",
+      "url": "https://people.math.binghamton.edu/zaslav/Oldcourses/510.S18/mts.pdf",
+      "scope": "Primary source and inherited integral-incidence attribution; full Smith proof inherited from relation packet."
+    },
+    {
+      "title": "Planat and Saniga, On the Pauli graphs of N-qudits",
+      "url": "https://arxiv.org/abs/quant-ph/0701211",
+      "scope": "Primary bibliographic record and classical Pauli/symplectic relation; marked binary map verified locally."
+    },
+    {
+      "title": "Ball and Zieve, Symplectic spreads and permutation polynomials",
+      "url": "https://web.mat.upc.edu/simeon.michael.ball/symplecticspreadpps.pdf",
+      "scope": "First-page title/authors and classical PG(3,q) framework; not cited for priority of P3 uniqueness."
+    },
+    {
+      "title": "External HN paper location",
+      "url": "https://github.com/openai/math/blob/main/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/paper.pdf",
+      "scope": "Location only; raw PDF parsing failed. No lower-bound theorem imported from it."
+    }
+  ],
+  "external_checked": "2026-10-28"
+}
