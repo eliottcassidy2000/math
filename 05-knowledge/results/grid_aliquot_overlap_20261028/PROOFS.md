@@ -18,7 +18,7 @@ P_a(X)=product_i(1+X_i+...+X_i^a_i)-product_i X_i^a_i,
 s(n)=P_a(p_1,...,p_r).
 ```
 
-P has exactly tau(n)-1 monomials, each with coefficient1. It records
+P has exactly tau(n)-1 monomials, each with coefficient 1. It records
 actual proper divisors, before evaluation forgets their identities.
 Factoring the small target values of tau gives the complete shape lists:
 
@@ -31,7 +31,7 @@ Factoring the small target values of tau gives the complete shape lists:
 Distinct variables correspond to distinct primes. Repeated substitution
 of one prime into two distinct variables would double-count divisors.
 This is why scalar regrouping cannot silently replace the divisor box.
-In particular20 and12 share the polynomial
+In particular20 and 12 share the polynomial
 `1+X+X²+Y+XY`, at `(X,Y)=(2,5)` and `(2,3)` respectively.
 
 Prime powers are always deficient: for p>=2 and a>=1,
@@ -53,10 +53,10 @@ so n is deficient. The two even cases are:
 1. `n=4q`, q odd prime. Here `s(n)=7+3q`, so
    `Delta(n)=7-q`. Nondeficiency requires q in{3,5,7}, giving12,20,28.
 2. `n=2p²`, p odd prime. Here `s(n)=3+3p+p²`, so
-   `Delta(n)=3+3p-p²`. It is3 at p=3 and negative for p>=5,
+   `Delta(n)=3+3p-p²`. It is 3 at p=3 and negative for p>=5,
    giving18 as the only nondeficient case.
 
-These cases are exhaustive. The corresponding excesses are4,2,0,3.
+These cases are exhaustive. The corresponding excesses are 4,2,0,3.
 In particular20 is the only integer with tau(n)=6 and Delta(n)=2.
 Equivalently, it is the only integer with five proper divisors whose
 nontrivial proper divisors sum to n+1. QED.
@@ -70,7 +70,7 @@ nontrivial proper divisors sum to n+1. QED.
 n=2^a q,   a>=2,   q=2^(a+1)-3 prime.
 ```
 
-**Proof.** If both primes are odd, the same15/8 upper bound on the
+**Proof.** If both primes are odd, the same 15/8 upper bound on the
 abundancy excludes Delta(n)>0, regardless of their positive exponents.
 Thus `n=2^a q^b` with a,b>=1 and q odd prime. Put `X=2^(a+1)`.
 The equation sigma(n)=2n+2 is
@@ -91,25 +91,30 @@ strictly between q and q+1, contradicting integrality of X. Hence b=1
 and X=q+3. The case a=1 gives q=1, so a>=2. Conversely the prescribed
 prime q and the divisor formula give Delta(n)=2 exactly. QED.
 
-The term family is part of the classical near-perfect classification,
-with redundant divisor2. The proof here does not import the stronger
+This is the classical classification in Proposition 2.3 of
+[Li–Ma–Zhang (2013)](https://publi.math.unideb.hu/paper/1759/download/).
+The incoming [Session83 analysis](../session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md)
+also gives it using the factorized identity
+`Delta(2^a*q^b)+1=(2^(a+1)-q)(1+q+...+q^(b-1))`.
+These even sources have redundant divisor 2 in Pollack–Shevelev's
+terminology. The proof here does not import the stronger
 classification of every possible redundant divisor.
-The least example is20; an integer with three distinct primes is at
-least30 and prime powers are deficient, so20 is also the least positive
-integer of any factorization type with excess2. The statement that all
-such integers have two prime factors is false:650 has excess2 and
+The least example is 20; an integer with three distinct primes is at
+least 30 and prime powers are deficient, so20 is also the least positive
+integer of any factorization type with excess 2. The statement that all
+such integers have two prime factors is false:650 has excess 2 and
 factorization2*5²*13.
 
-For every even n with excess2, `sigma(n)=2(n+1)` has2-adic valuation one.
+For every even n with excess 2, `sigma(n)=2(n+1)` has 2-adic valuation one.
 It cannot be a square. This includes the complete two-prime family,
 so none of its own aliquot edges is square-sum. QED.
 
 **Corollary connecting the aliquot and fourth-power lanes.** In the
-two-prime family, the odd prime factor q is5 modulo8, since a>=2.
+two-prime family, the odd prime factor q is 5 modulo 8, since a>=2.
 By the exact Eisenstein residue calculation below it needs at least five
 fourth-power summands in that ring. This is a necessary representation
 obstruction on a specified prime factor, not on the whole source n.
-The converse fails at q=37: it is5 modulo8 but q+3 is not a power of two.
+The converse fails at q=37: it is 5 modulo 8 but q+3 is not a power of two.
 
 ## 4 The inherited one thousand and one characterization
 
@@ -125,19 +130,19 @@ For distinct primes p<q<r, the equation s(pqr)=343 is
 (p+q+1)(p+r+1)=343+p(p+1).
 ```
 
-The left sum is at least1+3p+3p², so p<11. The case p=2 gives even s,
-whereas343 is odd. For p=3,5,7 the factor-pair targets are355,373,399.
+The left sum is at least 1+3p+3p², so p<11. The case p=2 gives even s,
+whereas343 is odd. For p=3,5,7 the factor-pair targets are 355,373,399.
 The smaller factor must be at least p+q+1 for a prime q>p. For355 its
-possible smaller factors1,5 are too small; for373 only1 is possible.
-For399 the smaller factors are1,3,7,19, and only19 is large enough.
-Its partner21 yields q=11,r=13. Thus the unique source is1001.
+possible smaller factors1,5 are too small; for 373 only 1 is possible.
+For399 the smaller factors are 1,3,7,19, and only 19 is large enough.
+Its partner21 yields q=11,r=13. Thus the unique source is 1001.
 
 This reproduces [Session82's proof](../session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md)
 and preserves its restricted scope. Complete inverse checking uses a
 general bound: if s(n)=t>=2, n is composite; for its least prime divisor p,
-the distinct proper divisors1 and n/p give
+the distinct proper divisors 1 and n/p give
 `t>=1+n/p>=1+sqrt(n)`. Hence `n<=(t-1)²`.
-At t=343 this is116964. The complete fibre has19 sources, only one of
+At t=343 this is 116964. The complete fibre has 19 sources, only one of
 which is squarefree with three distinct primes. QED.
 
 ## 5 The ring calculation behind the residue budget
@@ -151,12 +156,12 @@ With `omega²=-1-omega`, exact expansion gives
 
 Modulo8 this equals0,1,omega,omega² according as `(a,b) mod2` is
 `(0,0),(1,0),(0,1),(1,1)`. This follows from an odd integer's square
-being1 modulo8, its fourth power being1 modulo16, and the displayed
+being1 modulo 8, its fourth power being1 modulo 16, and the displayed
 even coefficients. It proves the residue palette for every ring element,
 not only for a bounded search of representatives.
 
-For k<=5 summands, let r,s,t count the palette values1,omega,omega².
-Being a rational integer modulo8 requires `s-t=0 mod8`; as
+For k<=5 summands, let r,s,t count the palette values 1,omega,omega².
+Being a rational integer modulo 8 requires `s-t=0 mod8`; as
 `|s-t|<=k<8`, this is exactly s=t. The resulting integer coefficient
 is r-t, with `r+2t<=k`. The attainable integer coefficients form the
 whole interval `[-floor(k/2),k]`: nonnegative values use t=0 and
@@ -170,16 +175,16 @@ its sufficiency does not assert a global representation of each integer.
 | Source and map | Preserved information | Lost information and required coordinate | Decisive control |
 |---|---|---|---|
 | Eisenstein coefficients `(a,b)` to parity coordinates `(2a-b,b)` | Lattice addition and exact norm after its metric is transported | Square-grid metric is not the transported norm; retain the factor3 | Six units on the norm-one circle |
-| Exponent box to integer weights, then sum | The divisor sum | Individual divisors and exponent shape; retain prime labels and P_a | 12 and20 share shape, but have excess4 and2 |
-| Proper-divisor sum to excess `s(n)-n` | The chosen near-perfect equality | Prime support and term count; retain n or factorization | 20 and650 share excess2 |
-| Two-prime excess-two source to its odd prime q | q=5 modulo8, hence exclusion from four Eisenstein fourth powers | The congruence alone loses the power-of-two guard q+3 | 13 is a parameter,37 is not |
+| Exponent box to integer weights, then sum | The divisor sum | Individual divisors and exponent shape; retain prime labels and P_a | 12 and 20 share shape, but have excess 4 and 2 |
+| Proper-divisor sum to excess `s(n)-n` | The chosen near-perfect equality | Prime support and term count; retain n or factorization | 20 and 650 share excess 2 |
+| Two-prime excess-two source to its odd prime q | q=5 modulo 8, hence exclusion from four Eisenstein fourth powers | The congruence alone loses the power-of-two guard q+3 | 13 is a parameter,37 is not |
 | Four-term count vectors to integer or Eisenstein residues | The specified representation or congruence predicate | Budget or integral lifting; retain counts and the permitted ring | 37 has a residue obstruction;50 has an integer budget obstruction repaired in L |
-| Source n to its inverse-fibre label s(n) | Its aliquot target | Source compatibility and dilation carry | 27 and35 have target13 but different doubled outputs |
-| Aliquot edge to endpoint sum sigma(n) | Square-sum predicate when n is retained | Arbitrary square adjacency need not be an aliquot edge | 343–57 versus1001–1001000 |
+| Source n to its inverse-fibre label s(n) | Its aliquot target | Source compatibility and dilation carry | 27 and 35 have target 13 but different doubled outputs |
+| Aliquot edge to endpoint sum sigma(n) | Square-sum predicate when n is retained | Arbitrary square adjacency need not be an aliquot edge | 343–57 versus 1001–1001000 |
 
 The concept board changed in three concrete ways. The clarification about20
 replaced a proposed partition by simultaneous shape and excess coordinates.
-The full two-prime calculation produced a complete family and the650
+The full two-prime calculation produced a complete family and the 650
 boundary. The unit-residue calculation connected the fourth-power budget
 to the Eisenstein relation `1+omega+omega²=0`, while the explicit50 witness
 located its repair in the first grid. These changes supply actual maps;

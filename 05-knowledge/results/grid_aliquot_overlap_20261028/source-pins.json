@@ -3,11 +3,15 @@
     "01-canon/theorems/THM-4825-the-half-shifted-second-grid-is-a-ring-or-the-order-two-class-over-two-the-two-grids-are-the-class-group-iff-d-is-5-13-or-37.md": "717b71a25a98b293c05115f50d67c0abe1c2df128126f1ec739357f30fecf58a",
     "01-canon/theorems/THM-4826-which-grid-carries-a-norm-shell-one-to-two-split-cubic-character-of-two-centred-units-complete-the-quartic-designs-four-eisenstein-fourth-powers-miss-five-mod-eight.md": "6d3d58d3f78b85daf87175d6a949414fd23c549d57f092f251bbf0bcbc92bdae",
     "05-knowledge/results/liouville_mobius_11_13_20261026/ARITHMETIC.md": "92d0ee805d68b757102f820c869e0d8f5940e1c0fe2281344d6cacfa41b85642",
+    "05-knowledge/results/liouville_mobius_11_13_20261026/README.md": "f9a643e265515eca623ef9a0cf420320da6014805d70a0b849b569d91e82fe2d",
+    "05-knowledge/results/liouville_mobius_eleven_20261027/THEORY.md": "9e9c2c18572195708fd3b3e7765fca9bed2960f3bb3076f001e70dd8a6ac0236",
     "05-knowledge/results/session78_fourth_power_aliquot_20261027/ALIQUOT.md": "628b155529b97490630fcb2b5255bb070a11878c424e801f5a1f336817bdf437",
     "05-knowledge/results/session78_fourth_power_aliquot_20261027/FOURTH_POWERS.md": "8020a85fdb390178e3373c8f689a95b99d2d418d3bfdb41ba6649ef2621ad936",
     "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md": "4ff8e6ff99976d85960e182e9aa9e6734a39bfce1ec4737d16468e25a2809af3",
     "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/FIBER_PORTS.md": "c9e0163702ee5bf9798b8e65ad1e76c3b9efd28cb3b88df72b21aa940d65798a",
-    "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ORBIT_CONNECTIONS.md": "af10ca6e58bdb4d2c7433ed127df27c4c76c053c8d008e8987a05221d9076840"
+    "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ORBIT_CONNECTIONS.md": "af10ca6e58bdb4d2c7433ed127df27c4c76c053c8d008e8987a05221d9076840",
+    "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31",
+    "05-knowledge/results/tournament_composition_classification_20261026/README.md": "9816d23a9eed30006cd8f71be7a936fea007973b6610a233b739fcfa134040a0"
   },
   "external_sources": [
     {
@@ -21,7 +25,16 @@
     {
       "scope": "Ljunggren square-repunit theorem as stated on printed page257; cited input only",
       "url": "https://msp.org/pjm/2000/193-2/pjm-v193-n2-p.pdf"
+    },
+    {
+      "scope": "Proposition 2.3: complete two-prime excess-two classification; Remark 2.4: 650 boundary; terminology differs from Pollack-Shevelev",
+      "url": "https://publi.math.unideb.hu/paper/1759/download/"
+    },
+    {
+      "scope": "Redundant-divisor definition and Proposition 1: power-of-two redundant-divisor family",
+      "url": "https://www.pollack-math.net/pnp-4.pdf"
     }
   ],
+  "incoming_reviewed_revision": "ae7c073e864d05be74fed85ba0a2bc164e026a6d",
   "reviewed_base": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f"
 }
