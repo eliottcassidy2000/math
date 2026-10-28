@@ -1,0 +1,17 @@
+(a) non-linear carriers n<=7 by (weak, odd-order defect, involution defect): {(True, False, True): 208, (True, True, True): 2, (False, True, True): 5}
+(b) non-weak [(1, 2), (1, 6), (2, 5), (2, 6), (5, 1), (5, 6)] marked 1888 Tour(X)/A values [1856, 5472, 5504, 10944, 11008, 16384, 32768] match: False
+(b) non-weak [(1, 5), (2, 1), (2, 5), (2, 6), (5, 6), (6, 1)] marked 1888 Tour(X)/A values [1856, 5472, 5504, 10944, 11008, 16384, 32768] match: False
+(b) non-weak [(0, 5), (1, 5), (2, 0), (2, 1), (2, 4), (4, 5)] marked 2816 Tour(X)/A values [2736, 2752, 5472, 5504, 8192, 16384, 32768] match: False
+(b) non-weak [(0, 2), (0, 5), (1, 2), (1, 5), (4, 2), (4, 5)] marked 1408 Tour(X)/A values [2736, 2752, 4096, 5472, 5504, 8192, 16384, 32768] match: False
+(b) non-weak [(2, 0), (2, 1), (2, 4), (5, 0), (5, 1), (5, 4)] marked 1408 Tour(X)/A values [2736, 2752, 4096, 5472, 5504, 8192, 16384, 32768] match: False
+(c) theta_3, k=2, n=7: Z_p-orbits on Pi = 9; X fixed-point counts matching = []
+(c) theta_3, k=3, n=10: Z_p-orbits on Pi = 16; X fixed-point counts matching = []
+(c) theta_3, k=4, n=13: Z_p-orbits on Pi = 26; X fixed-point counts matching = []
+(c) theta_5, k=2, n=11: Z_p-orbits on Pi = 21; X fixed-point counts matching = []
+(c) theta_5, k=3, n=16: Z_p-orbits on Pi = 33; X fixed-point counts matching = []
+(c) theta_7, k=2, n=15: Z_p-orbits on Pi = 37; X fixed-point counts matching = []
+(d) K4+3K1 linear for full S3 / Z3 / Z2: {'full_S3': (False, None), 'Z3': (True, [3, 3]), 'Z2': (False, None)}
+(e) n=3: sum_T sum_r prod s_v = 18; F_n 2^C(n-1,2) = 18; F_n = 9
+(e) n=4: sum_T sum_r prod s_v = 576; F_n 2^C(n-1,2) = 576; F_n = 72
+(e) n=5: sum_T sum_r prod s_v = 52160; F_n 2^C(n-1,2) = 52160; F_n = 815
+(e) n=6: sum_T sum_r prod s_v = 11980800; F_n 2^C(n-1,2) = 11980800; F_n = 11700

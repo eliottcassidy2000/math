@@ -128,3 +128,8 @@ Predictions, for every tournament type with 4 <= n <= 7:
 - Sigma = {L} exactly characterises the non-strong types whose first and last strong components have >= 3 vertices
   (all n checked).
 - The type counts t_n = 1, 1, 2, 4, 12, 56, 456 and the strong counts s_n = 1, 0, 1, 1, 6, 35, 353 were reproduced.
+
+## Correction (appended; nothing above edited)
+
+The P2 outcome above miscounts j = 3, n = 6. maxwell_ladder.out reports 12 disagreements, not 15: 9 linear without
+the count and 3 count without linearity. The j = 3 total is therefore 14 of 2790.
