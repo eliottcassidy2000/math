@@ -1,0 +1,37 @@
+primes below 1000000: 78498; distinct square classes: 60956; loop class d=1 at p=3
+reference F7        elements  7 rank 3 circuits by size {3: 7, 4: 7}
+reference F7*       elements  7 rank 4 circuits by size {4: 7}
+reference R10       elements 10 rank 5 circuits by size {4: 15, 6: 15}
+reference M*(K5)    elements 10 rank 6 circuits by size {4: 5, 6: 10}
+reference M*(K3,3)  elements  9 rank 4 circuits by size {3: 6, 4: 9, 5: 9}
+--- F7 (Fano) ---
+  least max prime 89: classes [2, 3, 5, 6, 10, 15, 30] primes [7, 2, 19, 5, 89, 59, 29]
+--- F7* = AG(3,2) minus a point ---
+  least max prime 89: classes [5, 10, 14, 15, 21, 30, 42] primes [19, 89, 13, 59, 83, 29, 41]
+--- M*(K3,3) = 3x3 grid ---
+  N=6000: |D|=552, 3-circuits=1518
+  least max prime 139: classes [2, 3, 5, 10, 14, 15, 21, 35, 42] primes [7, 2, 19, 89, 13, 59, 83, 139, 41]
+--- R10 = weight-3 vectors of F2^5 (affine, rank 5) ---
+  N=15000: |D|=1272, 4-circuits=277073
+  configurations tested: 611
+  least max prime 307: classes [5, 6, 11, 14, 15, 33, 35, 42, 77, 110] primes [19, 5, 43, 13, 59, 131, 139, 41, 307, 109]
+--- M*(K5): star search ---
+  N=5400: |D|=501, 4-circuits=40139, max per element=1347
+  candidate max prime 4423
+  candidate max prime 3989
+  candidate max prime 2843
+  candidate max prime 2789
+  candidate max prime 1487
+  candidate max prime 1481
+  candidate max prime 1217
+  candidate max prime 1091
+  candidate max prime 1063
+  candidate max prime 857
+  candidate max prime 769
+  candidate max prime 461
+  candidate max prime 379
+  candidate max prime 373
+  candidate max prime 367
+  candidate max prime 311
+  configurations tested: 9503
+  least max prime 311: classes [2, 5, 11, 26, 33, 35, 42, 78, 110, 182] primes [7, 19, 43, 103, 131, 139, 41, 311, 109, 181]

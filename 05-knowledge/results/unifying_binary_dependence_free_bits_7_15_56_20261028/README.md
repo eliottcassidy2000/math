@@ -134,6 +134,42 @@ quadratic `d k² − 1`, OPEN in general and conditional on Schinzel's hypothesi
 (two primes with the same `d`) need infinitely many such primes for one `d`. The prime 3 is the unique loop
 (`p + 1` square forces `p = 3`), so loops are the one structure a prime bank cannot repeat.
 
+### 3b. The least prime banks for Tutte's four excluded minors and for R₁₀ (FINITE-EXACT, added after the owner's go-ahead)
+
+`scripts/bank_search.py` takes every prime below `10^6` (78,498 primes; 60,956 distinct square classes `d = sqf(p+1)`;
+the loop class `d = 1` only at `p = 3`), keeps for each class its least prime `L(d)`, and searches exhaustively inside
+`D(N) = {d : L(d) < N}` for configurations isomorphic to each target, minimising the largest prime (any bank can be
+replaced class by class with least primes, so this is the true minimum). Fano: all seven nonzero points of a 3-space.
+`F_7* = AG(3,2)` minus a point: seven points of a coset of a 3-space avoiding `0`. `M*(K_{3,3})`: the `3×3` grid
+`{a_1, a_2, a_1a_2, b_1, b_2, b_1b_2, a_1b_1, a_2b_2, a_1a_2b_1b_2}` on four independent classes (the hyperbolic quadric
+of `PG(3,2)`), every row-to-row matching tried. `R_{10}` (affine, rank 5): grown from four-circuits through hyperplanes
+with at least six points to five-spaces with at least ten, then every affine-hyperplane section. `M*(K_5)` (affine, rank
+6): its only four-circuits are the five vertex stars of `K_5`, pairwise meeting in one element, so the search walks the
+four-circuit hypergraph. Every candidate is checked by rank, circuit profile and an explicit backtracking isomorphism
+to a reference representation; receipts byte-identical.
+
+| target | elements, rank | least max prime | square classes `d` | primes |
+|---|---|---:|---|---|
+| `F_7` (Fano) | 7, 3 | **89** | 2, 3, 5, 6, 10, 15, 30 | 7, 2, 19, 5, 89, 59, 29 |
+| `F_7*` (`AG(3,2)` minus a point) | 7, 4 | **89** | 5, 10, 14, 15, 21, 30, 42 | 19, 89, 13, 59, 83, 29, 41 |
+| `M*(K_{3,3})` | 9, 4 | **139** | 2, 3, 5, 10, 14, 15, 21, 35, 42 | 7, 2, 19, 89, 13, 59, 83, 139, 41 |
+| `R_{10}` | 10, 5 | **307** | 5, 6, 11, 14, 15, 33, 35, 42, 77, 110 | 19, 5, 43, 13, 59, 131, 139, 41, 307, 109 |
+| `M*(K_5)` | 10, 6 | **311** | 2, 5, 11, 26, 33, 35, 42, 78, 110, 182 | 7, 19, 43, 103, 131, 139, 41, 311, 109, 181 |
+
+Minima are unique as values, not as witnesses: `M*(K_{3,3})` at 139 is also realized by `7, 19, 5, 89, 13, 83, 29, 139, 41`
+(classes `2, 5, 6, 10, 14, 21, 30, 35, 42`), found by an earlier traversal order. Exhaustive ranges: `D(200)`, `D(400)`, `D(6000)`, `D(15000)`, `D(5400)` respectively (a construction gave an `M*(K_5)`
+bank at 5,393, so the minimum lies in `D(5394)`; the `R_{10}` search found 611 candidate ten-sets, the `M*(K_5)` search
+9,503). Readings. (i) **The owner's seven primes are the least Fano bank**: no seven primes with largest prime below 89
+have square classes forming `F_7`. (ii) Both Fano minors live below 89, so **the first prime bank with no
+characteristic-zero model appears by `p = 89`**; the `F_7*` bank is seven of the eight classes `{5, 10, 14, 15, 21, 30,
+35, 42}` (an `AG(3,2)` coset of `2·{...}`-type), sharing `5, 10, 15, 30` with the Fano bank. (iii) **The smallest regular
+but non-graphic prime bank has nine primes, not ten** (HYP-9438 (2) said ten; `M*(K_{3,3})` has nine elements; the codex repair of the same day already refuted the ten with a nine-prime bank of largest prime 839 and proved nine sharp by Tutte's minors), with
+largest prime 139; `R_{10}` and `M*(K_5)` follow at 307 and 311, four orders of magnitude below the `10^6` the
+hypothesis allowed. (iv) All five least banks reuse the small classes `5, 10, 14, 15, 30, 35, 42` (primes 19, 89, 13,
+59, 29, 139, 41): the square classes of `p + 1` for small primes are dense in the low-rank geometries, which is why the
+excluded minors appear so early. Typed: FINITE-EXACT within the stated ranges; the all-rank realization question
+(HYP-9438 (1)) is unchanged.
+
 ## 4. The information principle, stated once (FRAMING with exact instances)
 
 "What later operations can test determines what information a representation must retain" has a precise form that the
@@ -291,8 +327,8 @@ banks, and the unit-Cayley reading `C_3, T_5, P_7`; everything else in this sect
 ## 8. Open problems proposed (HYP-9438)
 
 (1) every binary matroid is a prime square-class matroid (conditional on Schinzel H; rank `≤ 6` done here); (2) the
-arithmetic `R_{10}` and the arithmetic cographic Kuratowski banks: the least prime banks whose square-class matroid is
-`R_{10}`, `M*(K_5)`, `M*(K_{3,3})` — regular-but-not-graphic arithmetic dependence; (3) the sum-free chromatic ladder
+arithmetic `R_{10}` and the arithmetic cographic Kuratowski banks — RESOLVED in §3b (least maximal primes 307, 311, 139;
+nine elements, not ten); (3) the sum-free chromatic ladder
 `χ(PG(r−1,2)) = 2, 3, 3, 4, …` and its arithmetic Ramsey reading; (4) a Berggren-type descent for square-sum paths;
 (5) the exact Nerode quotient of guarded square-sigma multiplication as a function of the matroid and the conflict
 graph (session85's 86/87/96); (6) the unbounded-dual-word signature as a formal criterion separating cryptids from

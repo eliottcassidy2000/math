@@ -4,7 +4,8 @@ title: "After THM-4840: prime realization with at most one loop, explicit cograp
 status: >
   MIXED / CORRECTED 2026-10-28. The original every-matroid statement is REFUTED by two loops; at-most-one-loop realization remains CONDITIONAL/OPEN. The ten-element minimum in (2) is REFUTED: nine is sharp and an explicit M*(K3,3) prime bank has maximum839. (1) FINITE-EXACT for simple matroids of rank <= 6 (THM-4840 (C)); the general statement needs
   one prime value of each quadratic d k^2 - 1 (Bunyakovsky/Schinzel-type) and, for parallel elements, infinitely many.
-  (2) M*(K3,3) realized explicitly; the R10 and M*(K5) optimization targets remain open. (3) FINITE-EXACT for r <= 5
+  (2) M*(K3,3) realized explicitly (codex, maximum 839); the largest-prime minimization is CLOSED (klein, same day, THM-4840 update,
+  packet section 3b, exhaustive and isomorphism-verified): M*(K3,3) at 139 with nine primes, R10 at 307, M*(K5) at 311, F7 and F7* at 89. (3) FINITE-EXACT for r <= 5
   (2, 3, 3, 4); the growth guess is from the sizes of maximal sum-free sets (affine hyperplane complements, 2^(r-1)) and
   may be wrong; use the explicitly quantified prediction in the body, not the earlier inconsistent rank-six example. (4) a programme in unifying_relations' third theory; no descent
   is known; the onset 15, 23, 25 (THM-4510, aliquot_66 ATLAS section 6) is the hostile any descent must reproduce.
@@ -36,7 +37,8 @@ related:
 2. **The arithmetic `R_{10}` and the arithmetic Kuratowski banks.** The regular-but-not-graphic matroids are those
    containing `R_{10}`, `M*(K_5)` or `M*(K_{3,3})` but no Fano minor (Seymour). Prediction: prime banks realizing each of
    the three exist with all primes below `10^6`. The former ten-element minimum is REFUTED: the bank{2,5,7,19,83,89,139,251,839} realizes M*(K3,3), and Tutte's excluded minors prove nine is minimal. Minimizing its largest prime, and the other two banks, remains OPEN. Test: enumerate the squarefree parts of `p + 1` for `p ≤ 10^6`, pick ten columns forming `R_{10}` (five
-   row primes suffice).
+   row primes suffice). **Outcome (packet §3b):** `M*(K_{3,3})` at 139 with nine primes, `R_{10}` at 307, `M*(K_5)` at 311;
+   the least Fano and dual-Fano banks both sit at 89. The size prediction (ten) was a slip, refuted first by the codex repair (nine-prime bank at 839); the largest-prime minimization it left open is closed at 139, 307, 311.
 3. **The sum-free chromatic ladder.** `χ(PG(r−1,2)) = 2, 3, 3, 4` for `r = 2, 3, 4, 5` (THM-4840 (D)). Prediction:
    `χ(PG(5,2)) = 4` and `χ(PG(r−1,2)) ≤ ⌈log_2(r+1)⌉ + 1`; refutation: a rank-six search returning 5. The arithmetic
    reading: the least number of colours on a rank-`r` prime bank avoiding monochromatic square-`σ` circuits.
