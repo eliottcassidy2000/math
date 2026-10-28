@@ -122,8 +122,10 @@ e or group order, determines which triples are constant.
 
 In particular a_h=|F_h| satisfies a_0=2 and
 `a_(h+1)=(a_h^3+2a_h)/3`; a_0,a_1,a_2,a_3=2,4,24,4624.
-These are classes inside this specified construction family, **not** all
-realizations of its C3 hypergraph and not a tournament or prime census.
+The construction does not list every **labelled** realization of its C3
+hypergraph. The subsequent [full-fiber normalization theorem](FIBER_ACTION.md)
+proves that it nevertheless meets **every ordinary isotype in this particular
+fiber**. These are not counts of all tournaments or all prime tournaments.
 
 ### Every intermediate symmetry order occurs
 
