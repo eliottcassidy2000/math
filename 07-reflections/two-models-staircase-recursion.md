@@ -1,5 +1,12 @@
 # Two Models, One Staircase: Fixed HP, Recursive Structure, and the Index Shift
 
+> **Historical qualification, 2026-10-28:** the dimension ratio below tends to
+> one, but the cardinality ratio of the fixed-spine space to all labelled
+> tournaments is `2^(-(n-1))`, which tends to zero. Thus “asymptotically identical”
+> applies only to the leading logarithmic dimension, not to counting densities,
+> orbit distributions, or operation-compatible carriers. See the
+> [recovery and output audit](../05-knowledge/results/consecutive_flags_order10_20261028/HISTORY_AND_COMPLEXITY.md).
+
 **Session:** oracle-2026-05-05
 **Depends on:** `everything-is-the-triangle.md`, `the-recursive-meta-graph.md`,
 `product-graph-sc-spine-fractal-dimensions.md`, THM-082, THM-292, the inshat framework

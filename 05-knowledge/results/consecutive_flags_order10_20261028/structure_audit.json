@@ -1,0 +1,203 @@
+{
+  "status": "PASS",
+  "audit": "literal permutations and literal Hamilton resets",
+  "carriers": [
+    {
+      "order": 2,
+      "literal_states": 2,
+      "refinement_sizes": [
+        1
+      ]
+    },
+    {
+      "order": 3,
+      "literal_states": 6,
+      "refinement_sizes": [
+        2
+      ]
+    },
+    {
+      "order": 4,
+      "literal_states": 32,
+      "refinement_sizes": [
+        7,
+        18,
+        20,
+        22
+      ]
+    },
+    {
+      "order": 5,
+      "literal_states": 320,
+      "refinement_sizes": [
+        29,
+        208,
+        263,
+        293
+      ]
+    }
+  ],
+  "deletion_forest": {
+    "cases": 6504,
+    "minimal_interior_witness": {
+      "order": 3,
+      "freecode": 1,
+      "root": 1,
+      "parent_rows": [
+        2,
+        0
+      ],
+      "partner_parent_rows": [
+        0,
+        1
+      ]
+    }
+  },
+  "self_converse_native_nonclosure": {
+    "0": {
+      "order": 4,
+      "path": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "freecode": 1,
+      "rows": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "partner_rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "ordinary_codes": [
+        4,
+        5,
+        2
+      ]
+    },
+    "1": {
+      "order": 5,
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "freecode": 1,
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        7
+      ],
+      "partner_rows": [
+        26,
+        28,
+        25,
+        16,
+        0
+      ],
+      "ordinary_codes": [
+        8,
+        11,
+        2
+      ]
+    }
+  },
+  "child_parent_insufficiency": {
+    "states": [
+      0,
+      4
+    ],
+    "rows": [
+      [
+        2,
+        4,
+        9,
+        3
+      ],
+      [
+        6,
+        4,
+        8,
+        3
+      ]
+    ],
+    "roots": [
+      0,
+      0
+    ],
+    "initial_output": [
+      34,
+      5
+    ],
+    "after_complement": [
+      [
+        0,
+        0
+      ],
+      [
+        40,
+        0
+      ]
+    ]
+  },
+  "root_system_scores": {
+    "labelled_inputs": 599,
+    "odd_shift": "score_plus = B_score - 1/2",
+    "even_shift": "score_plus = D_score + 1/2"
+  },
+  "hostile_81_27": {
+    "rows_AAA": [
+      250,
+      252,
+      249,
+      240,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "rows_BAA": [
+      242,
+      244,
+      241,
+      247,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "labelled_cyclic_triples": 67,
+    "automorphism_orders": [
+      81,
+      27
+    ],
+    "Hamilton_paths": [
+      462915,
+      462915
+    ],
+    "identity_order_legal": [
+      true,
+      false
+    ],
+    "source": "../relation_tower_frobenius_ports_20261028/check_root_switch.py"
+  },
+  "checks": 43962
+}

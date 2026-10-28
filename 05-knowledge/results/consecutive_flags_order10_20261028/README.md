@@ -31,6 +31,12 @@ have the inherited faithful-reconstruction obstructions.
 
 ## Packet
 
+- [Generation proof and bank format](GENERATION.md), [paired operations and carrier proofs](THEORY.md),
+  [historical recovery and ETH scope](HISTORY_AND_COMPLEXITY.md), and [audit](AUDIT.md).
+- `verify.py`, `source_pins.json`: lightweight validation or `--full` rebuild
+  of every producer and the complete alternate bank audit.
+- `check_structure.py`, `structure_audit.json`: literal permutation/Hamilton
+  reset audit, deletion forests, signed scores, native nonclosure and81/27.
 - `generate.cpp`, `generation.json`: complete constructive census through ten.
 - `verify_bank.cpp`, `verification10.json`: full alternate canonicalization audit.
 - `publish.py`, `bank_manifest.json`, `parents9.u64.gz`, `flags10.varint.gz`:
@@ -63,3 +69,10 @@ Earlier order-ten work already supplied a nauty census and a parent-nine scalar
 trace. The advance here is this refined generator's complete bank, compact
 attachment-address export, full alternate audit, and the paired-operation
 analysis. It is not the first order-ten tournament census.
+
+Eplett's 1979 representation theorem is the classical predecessor of the odd
+self-converse bridge. Concurrent Session89 recovered a paired codec and exact
+double-coset/stream formulas; this packet integrates them and adds the even and
+odd exhaustive centralizer checks. The signed B/D root operator connects the
+paired score map to graceful differences and square-sum equations, while
+retaining their unsolved label-selection constraints.

@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — fixed-spine dimension agreement is not counting-space agreement
+
+- **Source:** `07-reflections/two-models-staircase-recursion.md`, May 5, called the fixed-Hamilton-path and unrestricted tournament spaces “asymptotically identical.”
+- **First failed implication:** a ratio of bit dimensions tending to one implies an asymptotically negligible loss of states. The dimensions differ by n-1, so the cardinality ratio is exactly 2^(-(n-1)); at order ten it is 1/512, and it tends to zero.
+- **Strongest survivor / repair:** both logarithmic dimensions have leading term n^2/2. The strip decomposition remains useful. A maintained qualification now prevents applying the dimensional statement to counts, densities, or orbit distributions.
+- **Missing coordinate / new question:** retain the output contract and the path/relative-alignment data required by later operations. The [consecutive-flag packet](../05-knowledge/results/consecutive_flags_order10_20261028/THEORY.md) proves a scoped closed quotient and the ordered-forest deletion update; it does not infer universal compression from dimension ratios.
+
 ## 2026-10-28 — March A000568 prototypes: an even restart and an omitted odd-cycle filter
 
 - **Affected sources:** `04-computation/a000568_speedup.py`, `04-computation/a000568_v3_s90dm.py`; the historical April reflection `07-reflections/three-computational-threads-s25.md` also contains an incorrectly normalized three-cycle correction and an invalid inference from relative approximation to modular residues.
