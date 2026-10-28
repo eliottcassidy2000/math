@@ -133,3 +133,13 @@ Predictions, for every tournament type with 4 <= n <= 7:
 
 The P2 outcome above miscounts j = 3, n = 6. maxwell_ladder.out reports 12 disagreements, not 15: 9 linear without
 the count and 3 count without linearity. The j = 3 total is therefore 14 of 2790.
+
+## Post-audit notes (appended; nothing above edited; see audit_20261027/REPORT.md)
+
+- **P2 anatomy (audit m2).** "Violates the count only at an order-3 subgroup" is inaccurate. The failing subgroups
+  have order divisible by 3 (3, 6, 9 or 18). The two j = 3, n = 5 cases fail only at the whole group A ≅ Z_6, which has
+  an empty fixed set. The numerical outcomes are confirmed.
+- **Necessity (audit N1).** The criterion (C) is now proved necessary for all subgroups, by the referee's lemmas L1–L4
+  (THM-4835 part 4). The exploratory census agreement is therefore a theorem.
+- **HYP-9435(3)** ("every non-linear carrier has an involution witness") is refuted at n = 10 by the referee,
+  confirming the session's stated expectation.

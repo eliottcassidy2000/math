@@ -1,0 +1,9 @@
+theta_3^2+2K1 (n=7): Z_3-orbits on Pi = 9 (|V^rho|=4); X options (x, orbits) = [(0, 5), (3, 7), (6, 15)]; matching x: []
+theta_3^3+2K1 (n=10): Z_3-orbits on Pi = 16 (|V^rho|=4); X options (x, orbits) = [(0, 12), (3, 14), (6, 22), (9, 36)]; matching x: []
+theta_5^2+4K1 (n=11): Z_5-orbits on Pi = 21 (|V^rho|=6); X options (x, orbits) = [(0, 9), (5, 17), (10, 45)]; matching x: []
+theta_5^3+4K1 (n=16): Z_5-orbits on Pi = 33 (|V^rho|=6); X options (x, orbits) = [(0, 21), (5, 29), (10, 57), (15, 105)]; matching x: []
+theta_7^2+6K1 (n=15): Z_7-orbits on Pi = 37 (|V^rho|=8); X options (x, orbits) = [(0, 13), (7, 31), (14, 91)]; matching x: []
+theta_7^3+6K1 (n=22): Z_7-orbits on Pi = 54 (|V^rho|=8); X options (x, orbits) = [(0, 30), (7, 48), (14, 108), (21, 210)]; matching x: []
+theta_5^2+4K1: odd-class orbit numbers on Pi {'11': 45, '31': 31, '51': 21, '13': 27, '33': 19, '53': 11}; marked count = 12232128512
+   lhs - 2^45 = 44158025728 < 2^45: True
+   local odd-class profiles of 10-point actions giving the same count: []

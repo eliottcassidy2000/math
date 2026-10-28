@@ -1,0 +1,32 @@
+== 6(a) bigons B_k ==
+B_2: n=5 |H|=2 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=32 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (2, 1)], [(2, 1), (2, 1)]]
+   predicted count 2^(C(2k,2)-1) = 32; equal: True
+B_3: n=7 |H|=2 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=16384 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (1, 2), (1, 2), (2, 1)], [(1, 2), (1, 2), (2, 1), (2, 1)]]
+   predicted count 2^(C(2k,2)-1) = 16384; equal: True
+B_4: n=9 |H|=2 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=134217728 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (2, 1)], [(1, 2), (1, 2), (1, 2), (1, 2), (2, 1), (2, 1)]]
+   predicted count 2^(C(2k,2)-1) = 134217728; equal: True
+B_5: n=11 |H|=2 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=17592186044416 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (2, 1)], [(1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (2, 1), (2, 1)]]
+   predicted count 2^(C(2k,2)-1) = 17592186044416; equal: True
+== 6(b) alternating C_2k + K1 ==
+altC_4+K1: n=5 |H|=4 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=16 count_matches_some_X=True linX=[] weakX=[[(2, 2), (2, 2)], [(2, 2), (2, 2)]]
+altC_6+K1: n=7 |H|=6 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=5472 count_matches_some_X=True linX=[] weakX=[[(3, 2), (3, 2)], [(6, 1)]]
+altC_8+K1: n=9 |H|=8 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=33554432 count_matches_some_X=True linX=[] weakX=[[(1, 8), (1, 8), (1, 8), (1, 8), (4, 2)], [(1, 8), (1, 8), (1, 8), (1, 8), (4, 2)]]
+altC_10+K1: n=11 |H|=10 crit(C)=False defects(|K|,delta)=[(2, 2)] linear=False weak=True count=3518437209088 count_matches_some_X=True linX=[] weakX=[[(5, 2), (5, 2)], [(10, 1)]]
+== 6(c) dense core TT4 + K2 + 2K1 (n=8) ==
+TT4+K2+2K1: n=8 |H|=2 crit(C)=False defects(|K|,delta)=[(2, -2)] linear=False weak=True count=1048576 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (1, 2), (1, 2), (1, 2), (2, 1)], [(1, 2), (1, 2), (1, 2), (2, 1), (2, 1)]]
+== 6(d) odd thetas (p=3) ==
+theta_3^2+2K1: n=7 |H|=12 crit(C)=False defects(|K|,delta)=[(2, -2), (2, 2), (3, 3), (6, 1), (6, 3), (12, 1)] linear=False weak=False count=2816 count_matches_some_X=False linX=[] weakX=[]
+theta_3^3+2K1: n=10 |H|=12 crit(C)=False defects(|K|,delta)=[(2, -2), (2, 2), (3, 3), (6, 1), (6, 3), (12, 1)] linear=False weak=False count=5726633984 count_matches_some_X=False linX=[] weakX=[]
+theta_3^4+2K1: n=13 |H|=12 crit(C)=False defects(|K|,delta)=[(2, -2), (2, 2), (3, 3), (6, 1), (6, 3), (12, 1)] linear=False weak=False count=6148914691247702016 count_matches_some_X=False linX=[] weakX=[]
+== 8 group dependence: TT4 + 3K1 ==
+   |Aut| = 6
+TT4+3K1 under Z3: n=7 |H|=3 crit(C)=False defects(|K|,delta)=[(3, -3)] linear=True weak=True count=10944 count_matches_some_X=True linX=[[(3, 1), (3, 1)]] weakX=[[(3, 1), (3, 1)]]
+TT4+3K1 under Z2: n=7 |H|=2 crit(C)=False defects(|K|,delta)=[(2, -2)] linear=False weak=True count=16384 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (1, 2), (1, 2), (2, 1)], [(1, 2), (1, 2), (2, 1), (2, 1)]]
+TT4+3K1 under S3 (full): n=7 |H|=6 crit(C)=False defects(|K|,delta)=[(2, -2), (3, -3), (6, -3)] linear=False weak=True count=5472 count_matches_some_X=True linX=[] weakX=[[(3, 2), (3, 2)], [(6, 1)]]
+== audit: strong T4 + 3K1 (weak with odd-order defect) ==
+strongT4+3K1: n=7 |H|=6 crit(C)=False defects(|K|,delta)=[(2, -2), (3, -3), (6, -3)] linear=False weak=True count=5472 count_matches_some_X=True linX=[] weakX=[[(3, 2), (3, 2)], [(6, 1)]]
+== audit: HYP-9435(3) counterexample, K4(C3+source) + K1 + K2 + dirP3 (n=10) ==
+K4(C3+src)+K1+K2+P3: n=10 |H|=3 crit(C)=False defects(|K|,delta)=[(3, 3)] linear=False weak=False count=22917677056 count_matches_some_X=False linX=[] weakX=[]
+   element orders: [1, 3, 3]  involutions: 0
+== audit: rigid diamond + 2K1 (n=6) ==
+diamond+2K1: n=6 |H|=2 crit(C)=False defects(|K|,delta)=[(2, -2)] linear=False weak=True count=512 count_matches_some_X=True linX=[] weakX=[[(1, 2), (1, 2), (1, 2), (2, 1)], [(1, 2), (2, 1), (2, 1)]]

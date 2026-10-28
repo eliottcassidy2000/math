@@ -1,0 +1,6 @@
+|A| = 6  element orders: [1, 2, 3, 3, 6, 6]
+  |K|=1 |V^K|=5 |E^K|=9 count_ok=True
+  |K|=2 |V^K|=3 |E^K|=3 count_ok=True
+  |K|=3 |V^K|=2 |E^K|=0 count_ok=True
+  |K|=6 |V^K|=0 |E^K|=0 count_ok=False
+  linear 3-jective: True X: [[(2, 3)]]  count criterion: False

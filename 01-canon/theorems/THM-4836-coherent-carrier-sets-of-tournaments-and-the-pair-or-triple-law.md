@@ -5,8 +5,10 @@ status: >
   PROVED from cited classical theorems: Rédei (every tournament has a Hamiltonian path); Camion and Moon (every
   strong tournament on m >= 3 vertices is Hamiltonian and vertex-pancyclic). The counts come from the unique ordered
   decomposition into strong components. FINITE-EXACT confirmation: every type for 4 <= n <= 7
-  (coherent_carrier_sets.py; pre-registered P3, pushed in efdf0b0a5f before the run, PASSED exactly). Not yet
-  audited.
+  (coherent_carrier_sets.py; pre-registered P3, pushed in efdf0b0a5f before the run, PASSED exactly).
+  Independently audited (audit_20261027: all checks CONFIRMED). The referee re-enumerated all types for n <= 7 and
+  confirmed t_8 = 6880 (A000568) and s_8 = 6008 (A051337). Further formula values from the referee: n = 9 classes
+  178133 / 12016 / 1288 / 99, and n = 10: {L} = 915. Harary-Moser pancyclicity already suffices for part 2.
   The n = 4 dictionary (TT4 -> {L,S}, strong -> {L,C}, C3 +- source/sink -> {L,C,S}; tetrahedral duality acting as
   complementation C <-> S on these sets) is from the S3 note, restated.
   Concurrent work: session81 (GRAPH_CARRIERS.md) reads the owner's "pair or triple" as an encoding-capacity question

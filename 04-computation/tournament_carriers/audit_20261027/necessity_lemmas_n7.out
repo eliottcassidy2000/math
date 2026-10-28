@@ -1,0 +1,5 @@
+n=3: {'carriers': 3, 'twin_nonzero': 0, 'twin_nonzero_and_linear': 0, 'B_hyp': 3, 'B_viol': 0, 'E_viol': 0, 'F_viol': 0} [0.0s]
+n=4: {'carriers': 10, 'twin_nonzero': 0, 'twin_nonzero_and_linear': 0, 'B_hyp': 10, 'B_viol': 0, 'E_viol': 0, 'F_viol': 0} [0.0s]
+n=5: {'carriers': 41, 'twin_nonzero': 0, 'twin_nonzero_and_linear': 0, 'B_hyp': 41, 'B_viol': 0, 'E_viol': 0, 'F_viol': 0} [0.1s]
+n=6: {'carriers': 187, 'twin_nonzero': 10, 'twin_nonzero_and_linear': 0, 'B_hyp': 177, 'B_viol': 0, 'E_viol': 0, 'F_viol': 0} [2.2s]
+n=7: {'carriers': 1009, 'twin_nonzero': 131, 'twin_nonzero_and_linear': 0, 'B_hyp': 876, 'B_viol': 0, 'E_viol': 0, 'F_viol': 0} [16.1s]

@@ -21000,3 +21000,52 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Repair:** every item applied in the filed versions. The audit also upgraded HYP-9428 (1) to a theorem (THM-4824 (G): a root lattice pays iff it is A₁ or A₂).
 - **How it was caught:** an auditor with its own Knuth–Dijkstra solver, explicit tree checks of every construction, and exact window-lemma certificates for both counterexamples.
 - **Lesson / reusable rule:** (a) Before attributing a residue law to inertness, check that the competing residue classes are not also inert (here 5 and 7 mod 8 both are). (b) An "exactly" claim about a finite list needs the defining condition stated as computed ("adjacent to the 120° angle"), not paraphrased. (c) Loops over gaps must flush the trailing gap. (d) Window values are upper bounds unless a potential and a window lemma certify them.
+
+## MISTAKE-689 (2026-10-27, kind-pasteur-2026-10-27-S8; independent S8 referee, audit_20261027) -- a "tier law" was advertised as PROVED although the session's own output contained two counterexamples, an "i.e." equated pair-level trijections with F2-affine ones, a failure anatomy and a count claim were stated more broadly than shown, a concurrent packet's statement of the same question was under-credited, and a census predicate passed empty fixed sets
+
+- **Affected claims:**
+  - THM-4835 (title, Setting, part 5, Reading, status on necessity);
+  - HYP-9435 (2) wording and (1) status;
+  - results note §§2, 3.3, 3.5, 4.2, 5, 6;
+  - PREREGISTRATION P2 outcome wording;
+  - carrier_census.py.
+- **First failed implications:**
+  - (i) **Tier law.** "Odd-order defects break counts and A-sets" was typed PROVED. Yet TT4 + 3K1 and
+    (strong T4) + 3K1 at n = 7 have delta(Z3) = -3 and are weakly trijective, through the alternative fixed count
+    x = 0. The session's own tiers_and_sporadics.out recorded them as "(True, True, True): 2".
+  - (ii) **Affine versus linear.** "Pair-level, i.e. an F2-affine isomorphism" is false. A rigid oriented diamond plus
+    2K1 (n = 6) admits an equivariant affine bijection to Tour(X) but no pair-level one.
+  - (iii) **Anatomy and counts.**
+    - "Every Maxwell-ladder disagreement is at an order-3 subgroup" is wrong. The failing subgroups have order
+      divisible by 3, including Z_6 itself.
+    - "Even the count fails" for odd thetas was claimed for all odd primes. It is proved only for p = 3 (and checked
+      for (5,2)).
+  - (iv) **Credit.** Session81 GRAPH_CARRIERS.md §5 was pushed before this session's first commit. It already stated
+    the mark law and posed the pair-coordinate question that THM-4835 answers, but was credited only for its capacity
+    reading.
+  - (v) **Census predicate.** carrier_census.py treated an empty fixed set as passing chi(G^K) = 1; it should fail
+    (chi = 0). No reported flag changed.
+  - (vi) **Necessity, internally inconsistent.** The note said "exactly when" while the THM said necessity was open.
+    The referee then PROVED full necessity (lemmas L1-L4), which is now THM-4835 part 4.
+  - (vii) **Earlier slips in this session, already disclosed in PREREGISTRATION.md:**
+    - commit 181cd92f0f announced a pre-registration file that a failed shell step had left out (added in efdf0b0a5f
+      before any confirmatory run);
+    - a 15-for-12 miscount of j = 3 disagreements.
+- **Repairs (all applied):**
+  - **Tier law.** Restated as three claims:
+    - (a) PROVED: counts and A-sets see only odd-order subgroups;
+    - (b) PROVED: if A fixes a vertex and there are no odd defects, the carrier is weak;
+    - (c) FINITE-EXACT: the converse of (b) fails.
+  - **Linear trijection.** Defined as a monomial F2-affine isomorphism; the affine tier is recorded.
+  - **Anatomy and counts.** The anatomy now reads "order divisible by 3". The count claim is typed: p = 3 proved,
+    (5,2) checked, otherwise open.
+  - **Credit.** Session81 §5 is credited.
+  - **Census predicate.** The predicate is fixed.
+  - **Necessity.** Full necessity is adopted with credit to the referee.
+  - **HYP-9435(3)** is marked REFUTED by the referee's n = 10 carrier.
+  - **Data.** The referee's n = 8 census (5781 carriers) is added.
+- **Prevention rules:**
+  - Before typing a structural "law" PROVED, grep the session's own tally files for rows contradicting it.
+  - "i.e." between two notions of isomorphism requires a proof of equivalence in both directions.
+  - Read every section of a concurrent packet on the same prompt (not only its summary) before writing the credit
+    paragraph.

@@ -1,0 +1,48 @@
+n=3: carriers 3 (full 3, big 0, big all tree+linear+C: True)
+   linear != crit_all: 0; crit_cyclic != crit_all: 0; crit_intersection != crit_all: 0
+   non-linear 0, with involution defect 0
+   A fixes no vertex: 0 -> []
+   linear but X=V-r fails: 0
+   weak-only 0; of which with an odd-order subgroup defect 0 (odd element defect 0)
+   neither 0:
+   count equals some |Tour(X)/A| but A-sets differ: 0
+n=4: carriers 10 (full 10, big 0, big all tree+linear+C: True)
+   linear != crit_all: 0; crit_cyclic != crit_all: 0; crit_intersection != crit_all: 0
+   non-linear 0, with involution defect 0
+   A fixes no vertex: 0 -> []
+   linear but X=V-r fails: 0
+   weak-only 0; of which with an odd-order subgroup defect 0 (odd element defect 0)
+   neither 0:
+   count equals some |Tour(X)/A| but A-sets differ: 0
+n=5: carriers 41 (full 41, big 0, big all tree+linear+C: True)
+   linear != crit_all: 0; crit_cyclic != crit_all: 0; crit_intersection != crit_all: 0
+   non-linear 2, with involution defect 2
+   A fixes no vertex: 0 -> []
+   linear but X=V-r fails: 0
+   weak-only 2; of which with an odd-order subgroup defect 0 (odd element defect 0)
+   neither 0:
+   count equals some |Tour(X)/A| but A-sets differ: 0
+n=6: carriers 187 (full 187, big 0, big all tree+linear+C: True)
+   linear != crit_all: 0; crit_cyclic != crit_all: 0; crit_intersection != crit_all: 0
+   non-linear 20, with involution defect 20
+   A fixes no vertex: 0 -> []
+   linear but X=V-r fails: 0
+   weak-only 20; of which with an odd-order subgroup defect 0 (odd element defect 0)
+   neither 0:
+   count equals some |Tour(X)/A| but A-sets differ: 0
+n=7: carriers 1009 (full 1007, big 2, big all tree+linear+C: True)
+   linear != crit_all: 0; crit_cyclic != crit_all: 0; crit_intersection != crit_all: 0
+   non-linear 193, with involution defect 193
+   A fixes no vertex: 2 -> [[[1, 0], [2, 0], [3, 0], [1, 4], [2, 4], [3, 4]], [[0, 1], [0, 2], [0, 3], [4, 1], [4, 2], [4, 3]]]
+   linear but X=V-r fails: 0
+   weak-only 188; of which with an odd-order subgroup defect 2 (odd element defect 2)
+      weak-only with odd defect: |A|=6 arcs=[[0, 1], [0, 2], [0, 3], [1, 2], [1, 3], [2, 3]]
+      weak-only with odd defect: |A|=6 arcs=[[0, 1], [0, 2], [3, 0], [1, 2], [1, 3], [2, 3]]
+   neither 5:
+      |A|=12 count=2816 count_matches_some_X=False odd_sub_defect=True arcs=[[0, 1], [0, 2], [0, 3], [1, 4], [2, 4], [3, 4]]
+      |A|=24 count=1408 count_matches_some_X=False odd_sub_defect=True arcs=[[1, 0], [2, 0], [3, 0], [1, 4], [2, 4], [3, 4]]
+      |A|=24 count=1408 count_matches_some_X=False odd_sub_defect=True arcs=[[0, 1], [0, 2], [0, 3], [4, 1], [4, 2], [4, 3]]
+      |A|=18 count=1888 count_matches_some_X=False odd_sub_defect=True arcs=[[0, 1], [2, 0], [0, 3], [1, 2], [1, 3], [2, 3]]
+      |A|=18 count=1888 count_matches_some_X=False odd_sub_defect=True arcs=[[1, 0], [0, 2], [3, 0], [1, 2], [1, 3], [2, 3]]
+   count equals some |Tour(X)/A| but A-sets differ: 0
+Counter({'carriers': 1250, 'linear': 1035})

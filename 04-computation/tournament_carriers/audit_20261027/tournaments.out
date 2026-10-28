@@ -1,0 +1,13 @@
+t_n (n=0..10): [1, 1, 1, 2, 4, 12, 56, 456, 6880, 191536, 9733056]
+s_n (n=1..10): [1, 0, 1, 1, 6, 35, 353, 6008, 178133, 9355949]
+formula n=4: {L,C}=1 {L,C,S}=2 {L,S}=1 {L}=[x^n]S3^2T=0 (t-s-2t'+t''=0) total=4 t_n=4
+formula n=5: {L,C}=6 {L,C,S}=2 {L,S}=4 {L}=[x^n]S3^2T=0 (t-s-2t'+t''=0) total=12 t_n=12
+formula n=6: {L,C}=35 {L,C,S}=12 {L,S}=8 {L}=[x^n]S3^2T=1 (t-s-2t'+t''=1) total=56 t_n=56
+formula n=7: {L,C}=353 {L,C,S}=70 {L,S}=30 {L}=[x^n]S3^2T=3 (t-s-2t'+t''=3) total=456 t_n=456
+formula n=8: {L,C}=6008 {L,C,S}=706 {L,S}=150 {L}=[x^n]S3^2T=16 (t-s-2t'+t''=16) total=6880 t_n=6880
+formula n=9: {L,C}=178133 {L,C,S}=12016 {L,S}=1288 {L}=[x^n]S3^2T=99 (t-s-2t'+t''=99) total=191536 t_n=191536
+formula n=10: {L,C}=9355949 {L,C,S}=356266 {L,S}=19926 {L}=[x^n]S3^2T=915 (t-s-2t'+t''=915) total=9733056 t_n=9733056
+enumeration n=4: types 4 strong 1 tally {('L', 'S'): 1, ('C', 'L'): 1, ('C', 'L', 'S'): 2} singleton characterisation holds: True [0.0s]
+enumeration n=5: types 12 strong 6 tally {('L', 'S'): 4, ('C', 'L'): 6, ('C', 'L', 'S'): 2} singleton characterisation holds: True [0.0s]
+enumeration n=6: types 56 strong 35 tally {('L', 'S'): 8, ('C', 'L'): 35, ('C', 'L', 'S'): 12, ('L',): 1} singleton characterisation holds: True [0.1s]
+enumeration n=7: types 456 strong 353 tally {('L', 'S'): 30, ('C', 'L'): 353, ('C', 'L', 'S'): 70, ('L',): 3} singleton characterisation holds: True [14.3s]

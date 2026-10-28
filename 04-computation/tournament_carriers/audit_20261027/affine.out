@@ -1,0 +1,4 @@
+tau_V is an automorphism of D: True
+phi bijective onto Tour(X): True
+phi equivariant (phi(tau T) = tau phi(T) for all 1024 T): True
+=> an A-equivariant F2-affine bijection exists although D is not linearly trijective (census).

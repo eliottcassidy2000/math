@@ -216,7 +216,7 @@ def classify(n, edges, mask, autG, max_order=200):
     def fix_ok(K):
         F = [v for v in range(n) if all(G.el[k][v] == v for k in K)]
         if not F:
-            return None
+            return False   # audit_20261027 N5: an empty fixed set has chi = 0 != 1 (no reported flag changes for n <= 7)
         eF = sum(1 for a, b in edges if a in F and b in F)
         return eF == len(F) - 1
     crit_cyc = all(fix_ok(G.closure([i])) is not False for i in range(len(G.el)))

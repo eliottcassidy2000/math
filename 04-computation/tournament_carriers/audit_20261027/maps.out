@@ -1,0 +1,20 @@
+trees n=3: 1/1 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 2) [0.0s]
+trees n=4: 2/2 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 6) [0.0s]
+trees n=5: 3/3 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 24) [0.0s]
+trees n=6: 6/6 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 120) [0.0s]
+trees n=7: 11/11 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 720) [0.1s]
+trees n=8: 23/23 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 5040) [0.5s]
+trees n=9: 47/47 end-edge maps are Aut(G)-equivariant signed bijections (max |Aut(G)| = 40320) [8.7s]
+functional n=3: 9 labelled (r,f) [formula F_n=9], root-swap equivariant signed bijection in 9/9 [0.0s]
+functional n=4: 72 labelled (r,f) [formula F_n=72], root-swap equivariant signed bijection in 72/72 [0.0s]
+functional n=5: 815 labelled (r,f) [formula F_n=815], root-swap equivariant signed bijection in 815/815 [0.2s]
+functional n=6: 11700 labelled (r,f) [formula F_n=11700], root-swap equivariant signed bijection in 11700/11700 [4.1s]
+functional n=7: 201747 labelled (r,f), formula F_7 = 201747
+random n=8: end-edge ok 100/100, root-swap ok 100/100
+random n=9: end-edge ok 100/100, root-swap ok 100/100
+random n=10: end-edge ok 100/100, root-swap ok 100/100
+score identity n=3: LHS=18 F_n*2^C(n-1,2)=18 equal=True F_n=9 [0.0s]
+score identity n=4: LHS=576 F_n*2^C(n-1,2)=576 equal=True F_n=72 [0.0s]
+score identity n=5: LHS=52160 F_n*2^C(n-1,2)=52160 equal=True F_n=815 [0.0s]
+score identity n=6: LHS=11980800 F_n*2^C(n-1,2)=11980800 equal=True F_n=11700 [0.0s]
+score identity n=7: LHS=6610845696 F_n*2^C(n-1,2)=6610845696 equal=True F_n=201747 [11.9s]

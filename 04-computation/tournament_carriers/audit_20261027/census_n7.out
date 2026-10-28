@@ -1,0 +1,5 @@
+n=3: underlying graphs 1, oriented carriers 3, linear 3, weak-only 0, neither 0, big-group(skipped full) 0, 0.0s
+n=4: underlying graphs 3, oriented carriers 10, linear 10, weak-only 0, neither 0, big-group(skipped full) 0, 0.0s
+n=5: underlying graphs 6, oriented carriers 41, linear 39, weak-only 2, neither 0, big-group(skipped full) 0, 0.1s
+n=6: underlying graphs 15, oriented carriers 187, linear 167, weak-only 20, neither 0, big-group(skipped full) 0, 1.3s
+n=7: underlying graphs 41, oriented carriers 1009, linear 816, weak-only 188, neither 5, big-group(skipped full) 2, 22.0s

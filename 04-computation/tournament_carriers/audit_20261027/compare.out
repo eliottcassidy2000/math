@@ -1,0 +1,5 @@
+n=3: referee 3 classes, author 3 classes, identical class sets: True, flag disagreements: 0
+n=4: referee 10 classes, author 10 classes, identical class sets: True, flag disagreements: 0
+n=5: referee 41 classes, author 41 classes, identical class sets: True, flag disagreements: 0
+n=6: referee 187 classes, author 187 classes, identical class sets: True, flag disagreements: 0
+n=7: referee 1009 classes, author 1009 classes, identical class sets: True, flag disagreements: 0
