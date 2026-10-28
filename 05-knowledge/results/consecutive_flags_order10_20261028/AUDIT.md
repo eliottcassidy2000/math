@@ -48,7 +48,7 @@ by reversing one four-vertex module. The two implementations need not use the
 same vertex labels. `structure_audit.json` records 43,962 active checks.
 
 Explicit `need` exceptions replace Python assertions, so optimized Python
-retains the gates. `source_pins.json` hashes eleven dependency files after
+retains the gates. `source_pins.json` hashes twelve dependency files after
 CRLF-to-LF normalization; it does not freeze unrelated repository history.
 The bank manifest uses raw-byte SHA256 for plain and compressed artifacts.
 

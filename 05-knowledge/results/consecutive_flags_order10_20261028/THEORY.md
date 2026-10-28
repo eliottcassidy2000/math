@@ -214,6 +214,34 @@ arithmetic dependency with graph cycles.
 
 ## Concept-board update
 
+The closing integration recovered a complementary all-size result in concurrent
+[Session89's future rectangle carrier](../session89_consecutive_tournament_pairs_20261028/history/concurrent/FUTURE_BANK_CARRIER.md).
+For the binary rectangle code C_n={M_ij=a_i+b_j}, observe only membership in C_n,
+and allow all named cell toggles and natural paired-tournament relabellings.
+Its exact deterministic future kernel is
+
+    D_n = intersection_g P_g^(-1)(C_n) = {M_ij=a_i+a_j+c},  n>=3,
+
+where P_g is the linear part of the affine relabelling. Thus the minimal
+carrier has n^2-n bits: at n=3, 64 states instead of 512. This is a **CITED
+concurrent theorem**, not a result newly computed here. Its operations include
+all translations, hence bitwise complement, but do not implement our Hamilton
+re-marking/reset protocol. Observing membership rather than every arc permits
+genuine forgetting even with named toggles. This does not contradict THM-4807.
+
+Its proof supplies a cheap decisive test: if a difference is outside D_n,
+choose a relabelling sending it outside C_n, then translate one input to zero.
+The two membership answers differ. Inside D_n all permitted future decisions
+agree. Our P4 uses probabilistic partition refinement instead; the common
+principle is to compute the kernel of the **whole declared operation/observation
+system**, not merely the present statistic.
+
+The six-bit kernel has weight enumerator 1+3z^4+3z^5+z^9. The earlier nine-prime
+F64 port map has kernel enumerator 1+3z^3+3z^6+z^9. Consequently equal dimension
+does not give a prime-coordinate permutation or Frobenius-compatible field
+identification. This concrete hostile sharpens the link with our signed-score
+map: preserve the actual kernel and operation action, not just rank.
+
 The canonical root supplies a small *enumeration address*. Relative alignment
 supplies a *gluing coordinate*. The reversing involution supplies the missing
 *symmetry mark*. The ordered forest supplies the *native update coordinate*.

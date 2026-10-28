@@ -76,3 +76,8 @@ double-coset/stream formulas; this packet integrates them and adds the even and
 odd exhaustive centralizer checks. The signed B/D root operator connects the
 paired score map to graceful differences and square-sum equations, while
 retaining their unsolved label-selection constraints.
+
+The closing integration also routes Session89's all-size rectangle-code future
+kernel, giving a64-state arithmetic decision carrier at n=3. Its named-toggle
+and paired-relabel protocol is distinct from this packet's Hamilton-reset
+protocol; THEORY records the exact connection and the F64 kernel obstruction.
