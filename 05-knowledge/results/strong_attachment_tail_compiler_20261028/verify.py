@@ -6,6 +6,7 @@ from pathlib import Path
 from math import factorial
 import argparse,gzip,json,sys
 import counting,native
+from seal import digest
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
 CHECKS=Counter()
@@ -100,14 +101,20 @@ def main():
             control,_=generate(before,n,skip_blocks=False)
             check(parents==control,'matched whole-row constructive control')
     if args.replay_roots:check([list(t) for t in parents]==bank['rows'],'complete order-nine regeneration')
+    import incoming
+    incoming_live=incoming.run(100);incoming_saved=read('incoming.json')
+    check(incoming_live['selector_class_bijections']==incoming_saved['selector_class_bijections'],
+          'incoming selector class bijections through seven')
+    check(incoming_saved['degree_bucket_bound']==300 and incoming_saved['degree_bucket_complete_agreement'],
+          'incoming degree-bucket large receipt')
     pins=HERE/'sources.json'
     check(pins.exists(),'dependency pins exist')
-    for path,digest in json.loads(pins.read_text()).items():
-        check(sha256((ROOT/path).read_bytes()).hexdigest()==digest,'pinned dependency')
+    for path,expected_hash in json.loads(pins.read_text()).items():
+        check(digest(ROOT/path)==expected_hash,'pinned dependency')
     if not args.record:
         check((HERE/'manifest.json').exists(),'packet manifest exists')
-        for path,digest in read('manifest.json').items():
-            check(sha256((HERE/path).read_bytes()).hexdigest()==digest,'sealed packet file')
+        for path,expected_hash in read('manifest.json').items():
+            check(digest(HERE/path)==expected_hash,'sealed packet file')
     report=dict(checks=dict(sorted(CHECKS.items())),scope=dict(ordinary=300,external_ordinary=76,
         direct_partitions=40,strong=300,external_strong=50,pair_free=50,native_max_full=7,
         reconstructed_all_presentations_through=6,reconstruction_horizon=8,constructive_bank=9),

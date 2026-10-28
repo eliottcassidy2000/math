@@ -4,6 +4,13 @@
 scope.** [Proofs](THEORY.md) | [Historical recovery and connections](HISTORY.md)
 | [Audit and reproduction](AUDIT.md).
 
+**Concurrent integration:** [Session87 and kernel125](INCOMING.md) arrived
+before publication. Session87 independently supplies the unit-tail fold and
+a faster positive degree-bucket kernel, also checked here through300. Their
+root selector needs fewer queries when only representatives are required.
+Our complete-block method computes the additional rooted responses. The
+timings below compare against the stated earlier baseline.
+
 This continuation makes the fixed-atom frame mechanism concrete, shows why
 complement needs more information, and improves two exact enumeration paths.
 It retains joint incidence, actual witness transport and realization guards.

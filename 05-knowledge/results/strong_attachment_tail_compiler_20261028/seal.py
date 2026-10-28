@@ -4,6 +4,10 @@ from pathlib import Path
 import argparse,json
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
+def digest(path):
+    data=path.read_bytes()
+    if path.suffix!='.gz':data=data.replace(b'\r\n',b'\n')
+    return sha256(data).hexdigest()
 DEPENDENCIES=[
  '04-computation/a000568_exact_burnside.py',
  '04-computation/a000568_enum.py',
@@ -24,14 +28,18 @@ DEPENDENCIES=[
  '05-knowledge/results/relation_tower_frobenius_ports_20261028/tournament_bank.json.gz',
  '05-knowledge/results/frobenius_lca_metagraph_20261028/fields.py',
  '05-knowledge/results/frobenius_lca_metagraph_20261028/THEORY.md',
+ '05-knowledge/results/session87_four_vertices_enumeration_20261028/fast_counts.py',
+ '05-knowledge/results/session87_four_vertices_enumeration_20261028/FAST_COUNTS.md',
+ '05-knowledge/results/kernel125_closed_carriers_20261028/root_minimum.py',
+ '05-knowledge/results/kernel125_closed_carriers_20261028/root_neighbor.json',
 ]
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--sources',action='store_true');args=parser.parse_args()
     if args.sources:
-        data={p:sha256((ROOT/p).read_bytes()).hexdigest() for p in DEPENDENCIES};target=HERE/'sources.json'
+        data={p:digest(ROOT/p) for p in DEPENDENCIES};target=HERE/'sources.json'
     else:
-        data={p.name:sha256(p.read_bytes()).hexdigest() for p in sorted(HERE.iterdir())
+        data={p.name:digest(p) for p in sorted(HERE.iterdir())
               if p.is_file() and p.name!='manifest.json'};target=HERE/'manifest.json'
     target.write_text(json.dumps(data,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     print(target.name,len(data))

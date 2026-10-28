@@ -56,9 +56,16 @@ tournaments, including nonstrong ones.
 
 `sources.json` pins imported code, mathematical dependencies and external
 reference tables. `manifest.json` seals this packet except its own manifest.
+Text SHA256 inputs normalize CRLF to LF, so Git's Windows line-ending policy
+does not invalidate the seals; compressed binary banks use their raw bytes.
 `validation.json` records exact checks, not elapsed time; `benchmark.json`
 contains machine-sensitive times. The probe receipts are exploratory runs,
 not additional independent benchmarks.
+
+The [concurrent integration](INCOMING.md) adds a third exact ordinary kernel
+through300 and independent selected-root class bijections through7. Its
+single-run32.53s is not a paired speed ratio. The incoming algorithms keep
+their own credit and distinguish representative selection from full rows.
 
 ## Literature checked
 

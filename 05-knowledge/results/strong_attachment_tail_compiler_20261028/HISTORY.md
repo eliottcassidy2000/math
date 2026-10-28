@@ -6,6 +6,11 @@ It is not a claim to have read every historical session. Embedded dates and
 messages identify provenance; current proofs and reproduced computations
 decide mathematical status. Historical timings are not current benchmarks.
 
+The [incoming integration](INCOMING.md) credits the independent terminal fold,
+faster degree-bucket counter and representative-only root selector received
+before publication. Our isolated fold is not presented as the newest positive
+scalar frontier.
+
 ## Mechanisms recovered
 
 | era and source | retained mechanism | consequence for this continuation |
