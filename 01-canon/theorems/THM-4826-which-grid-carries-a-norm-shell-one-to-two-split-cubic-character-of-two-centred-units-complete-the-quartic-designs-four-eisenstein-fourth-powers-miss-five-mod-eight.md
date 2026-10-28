@@ -1,22 +1,34 @@
 ---
 id: THM-4826
-title: "Which grid carries a norm shell: for Z[omega] and the Hurwitz order (residue field F_4 over 2, first grid Z + P, a unit of order 3) exactly one third of every odd-norm shell lies on the first grid and every even-norm element does (Lipschitz 8 sigma(n) of Hurwitz 24 sigma(n)); among the rings Z[(1+sqrt-d)/2] (d = 3 mod 4) the centred grid carries a positive share of every odd shell only for d = 3 (d = 7 mod 8: none; d = 3 mod 8, d > 3: prime shells lie on one grid, first-grid share 1/3 by the cubic ring class field); the primary prime over p = 1 mod 3 lies on the first grid iff 2 is a cubic residue iff p = x^2 + 27y^2, so the primes over Mersenne primes 2^q - 1 (q > 3) lie on the first grid; the units of each grid alone are not 4-designs but their unions (hexagon, 24-cell) are 5-designs, which is what Candido's and Liouville's quartic identities need; Eisenstein fourth powers are 0, u or 9u mod 16 (u in mu_3 = mu_6^4, the merge charges), so a rational n = 5 mod 8 is never a sum of four Eisenstein fourth powers"
+title: "Which grid carries a norm shell: for Z[omega] and the Hurwitz order (residue field F_4 over 2, first grid Z + P, a unit of order 3) exactly one third of every odd-norm shell lies on the first grid and every even-norm element does (Lipschitz 8 sigma(n) of Hurwitz 24 sigma(n)); among the rings Z[(1+sqrt-d)/2] (d = 3 mod 4) the centred grid carries a positive share of every odd shell only for d = 3 (d = 7 mod 8: none; d = 3 mod 8, d > 3: prime shells lie on one grid, first-grid share 1/3 by the cubic ring class field); the primary prime over p = 1 mod 3 lies on the first grid iff 2 is a cubic residue iff p = x^2 + 27y^2, so the primes over Mersenne primes 2^q - 1 (q > 3) lie on the first grid; the units of each grid alone are not 4-designs but their unions (hexagon, 24-cell) are 5-designs, which is what Candido's and Liouville's quartic identities need; Eisenstein fourth powers are 0, u or 9u mod 16 (u in mu_3 = mu_6^4, the merge charges), so a rational n = 5 mod 8 is never a sum of four Eisenstein fourth powers, while every other rational n is one in every completion of Q(omega)"
 status: >
   PROVED (elementary: units acting on (O/P)* = F_4*; the Frobenius on F_4; the binomial expansion of (1 + 2 beta)^4; a
   residue count mod 8). CITED: Jacobi's r_4(n) = 8 sigma(n) (n odd) and Hurwitz's 24 sigma(n); the cubic reciprocity
   supplement for 2 (Ireland and Rosen, Prop. 9.6.1-9.6.2, restated as Thm 4.2 of Dechakulkamjorn-Rungtanapirom,
   arXiv:2208.02454) and Gauss's p = x^2 + 27y^2 (Cox, Primes of the Form x^2 + ny^2, Thm 4.15); the ring class field of
-  Z[sqrt-d] and the class number formula for orders (Cox Thm 7.24, Thm 9.4); Candido's identity (Candido 1951; the
-  special case is older, Proth 1878) and Liouville's identity with Liouville's bound g(4) <= 53 (now g(4) = 19,
+  Z[sqrt-d] and the class number formula for orders (Cox Thm 7.24, Thm 9.4); Candido's identity (named after Candido,
+  Scripta Math. 17 (1951), who applied it to Fibonacci numbers; the identity itself was used by Proth (1878) and is
+  credited to C. B. Haldeman (1905) in Dickson's History, vol. II, pp. 650, 657) and Liouville's identity with Liouville's bound g(4) <= 53 (now g(4) = 19,
   Balasubramanian-Deshouillers-Dress 1986); spherical designs (Delsarte-Goethals-Seidel 1977). FINITE-EXACT: the split
   law for Z[omega] (n <= 20,000) and the Hurwitz order (n <= 300); d = 7 mod 8 (odd n <= 3000, d <= 47); d = 11, 19,
   43, 67 (every split prime below 3*10^5 on one grid; first-grid shares 0.3325, 0.3334, 0.3343, 0.3336); h(-4d)/h(-d)
   for squarefree d = 3 mod 4 below 200; the cubic-character equivalence for all 39,231 primes p = 1 mod 3 below 10^6
   (0 mismatches; residue share 0.3322); x^2 + 27y^2 representations of 2^q - 1 for q = 5, ..., 127; the design table
   and both identities (sympy); Eisenstein fourth powers mod 16; the n = 5 (mod 8) obstruction and the absence of other
-  obstructions modulo 2^8, 3^5, 5^3, 7^2 on 0..200. The representability of the remaining n (6 among them) is HYP-9429.
-  NEW TO THE REPOSITORY: the uniform two-grid statement of (1)-(2), the design-completion reading of (4), and (6); the
-  rest is classical in grid language. Independent audit: OWED (pre-audit checkpoint).
+  obstructions modulo 2^8, 3^5, 5^3, 7^2 on 0..200; the residue-field and 2^5 checks of (7). The global representability
+  of the remaining n is HYP-9429 (6 and 54 are representable: 6 with bases <= 541, found by the audit, and 54 = 9 * 6 by
+  scaling with 1 + 2 omega = sqrt-3). PRIOR ART: the Z[omega] case of (1), with the same unit-cycling proof, is
+  Dechakulkamjorn-Rungtanapirom, arXiv:2208.02454 (2022), Thm 4.1; the d = 7 case of (2) is their Thm 3.2(c), and the
+  Heegner cases d >= 11 are their Lemma 3.3, Lemma 3.5 (even shells, every squarefree d = 3 mod 8) and Thm 3.6; the
+  Hurwitz case of (1) is the classical step from Hurwitz's 24 sigma(n) to Jacobi's 8 sigma(n); the Mersenne corollary
+  of (3) is folklore (reported by the audit: B. Allombert, pari-users, 2024); the correspondence between quartic Hilbert
+  identities and antipodal 4-designs behind (4) is classical (e.g. Reznick, Mem. AMS 96 (1992) no. 463). NEW TO THE
+  REPOSITORY: the uniform two-grid packaging of (1)-(2), the design-completion reading of (4), (6) and (7); the rest is
+  classical in grid language. Independent audit (2026-10-27,
+  04-computation/experiments/two_grids_class_group_20261027_audit_S66/AUDIT.md): SOUND WITH CORRECTIONS; every number
+  re-derived; corrections applied (the prior-art credit above, the Candido history, the ring-class-field degree in the
+  proof of (2), the primary-prime wording and the converse in (3)); (7) is the audit's optional strengthening 1, with
+  the finite checks re-run here (MISTAKE-690).
 session: opus-2026-10-27-S66
 source: 05-knowledge/results/two_grids_ring_or_ideal_class_13_37_20261027.md
 scripts:
@@ -48,11 +60,15 @@ Norms are the field norm, respectively the reduced norm.
 2. **(The family Z[(1 + √−d)/2], d ≡ 3 (mod 4), first grid Z[√−d].)**
    - If d ≡ 7 (mod 8), every element of odd norm lies on the first grid.
    - If d ≡ 3 (mod 8) and d > 3, the elements of norm p (p a split prime) lie all on the first grid or all on the centred
-     grid; the first iff p = x² + dy². When h(−d) = 1, the first-grid primes have density 1/3 among split primes, since
-     the ring class field of Z[√−d] has degree h(−4d)/h(−d) = 3 over K.
+     grid; the first iff p = x² + dy². The ring class field of Z[√−d] has degree h(−4d) = 3h(−d) over K, that is 3 over
+     the Hilbert class field. So among the split primes whose shells are non-empty (the principal ones), the first-grid
+     primes have density 1/3; when h(−d) = 1 these are all the split primes.
    - Hence the centred grid carries a positive share of every non-empty odd shell only for d = 3.
-3. **(The cubic character of 2.)** Let p ≡ 1 (mod 3), and let π = a + bω be the primary prime over p (π ≡ 2 mod 3).
-   - π lies on the first grid (b even) ⟺ 2 is a cubic residue mod p ⟺ p = x² + 27y².
+3. **(The cubic character of 2.)** Let p ≡ 1 (mod 3), and let π = a + bω be a primary prime over p (π ≡ 2 mod 3).
+   Either of the two conjugate primary primes may be taken; they lie on the same grid.
+   - (2/π)₃ ≡ π (mod 2) in F₄* = μ₃. So the cubic residue symbol of 2 is the class of π mod 2: 1 on the first grid, and
+     ω, ω² on the two classes of the centred grid.
+   - Hence π lies on the first grid (b even) ⟺ 2 is a cubic residue mod p ⟺ p = x² + 27y².
    - For a Mersenne prime p = 2^q − 1 with q > 3, 2 = (2^m)³ where 3m ≡ 1 (mod q). So π lies on the first grid and
      p = x² + 27y². For example, 31 = 2² + 27·1² and 127 = 10² + 27·1².
 4. **(Designs.)** The units of the first grid are {±1}, respectively the 8 Lipschitz units (the 16-cell). The units of the
@@ -70,6 +86,9 @@ Norms are the field norm, respectively the reduced norm.
    Also μ₆⁴ = μ₃: the merge charges 1, ω, ω² of THM-4820 are exactly the fourth powers of the six units.
 6. **(Four Eisenstein fourth powers.)** A rational integer n ≡ 5 (mod 8) is not a sum α⁴ + β⁴ + γ⁴ + δ⁴ with α, β, γ, δ
    ∈ Z[ω]. In particular 13 and 37 are excluded over Z[ω] as well as over Z.
+7. **(The local criterion.)** A rational integer n is a sum of four fourth powers in the completion O_𝔭 for every prime
+   𝔭 of Z[ω] (and trivially in C) iff n ≢ 5 (mod 8). So n ≡ 5 (mod 8) is the only local obstruction, and whether every
+   other n is a global sum is an integral Hasse-principle question (HYP-9429).
 
 **Proof.**
 - *(1)* Elements of odd norm are units modulo 𝔓 (N𝔓 = 4), so they lie in (O/𝔓)* = F₄*. Elements of even norm lie in
@@ -82,10 +101,13 @@ Norms are the field norm, respectively the reduced norm.
   - If d ≡ 3 (mod 8), then O/2O = F₄ and the units ±1 act trivially. Conjugation acts on F₄ as the Frobenius, fixing 1
     and swapping the other two classes. So ±π and ±π̄ are all in L or all outside it.
   - π ∈ L ⟺ p = x² + dy² ⟺ p splits completely in the ring class field of Z[√−d] (Cox Thm 9.4). Its degree over K is
-    h(−4d)/h(−d) = 3 (Cox Thm 7.24, with unit index 1 for d > 3), and Chebotarev gives density 1/3.
-- *(3)* The supplementary law gives (2/π)₃ ≡ π^((N2 − 1)/3) = π (mod 2), so 2 is a cubic residue iff π ≡ 1 (mod 2), iff
-  b is even (Ireland–Rosen 9.6.1–2). For primary π on the first grid, π = (a − b/2) + (b/2)√−3 with 3 | b/2, so
-  p = x² + 27y².
+    h(−4d) = 3h(−d) (Cox Thm 7.24, with unit index 1 for d > 3), so 3 over the Hilbert class field H. The shell is
+    non-empty iff p splits completely in H, and Chebotarev gives relative density 1/3 among those primes.
+- *(3)* 2 is a primary prime of Z[ω]. Cubic reciprocity gives (2/π)₃ = (π/2)₃ ≡ π^((N2 − 1)/3) = π (mod 2). So 2 is a
+  cubic residue iff π ≡ 1 (mod 2), iff b is even (Ireland–Rosen 9.6.1–2).
+  - For primary π on the first grid, π = (a − b/2) + (b/2)√−3 with 3 | b/2, so p = x² + 27y².
+  - Conversely, if p = x² + 27y², then ±(x + 3y√−3) is a primary prime over p on the first grid.
+  - Conjugation acts on Z[ω]/2 = F₄ as the Frobenius, fixing 1, so π̄ lies on the grid of π.
 - *(4)* These are polynomial identities in the coordinates, verified exactly. The design property of the unions is the
   4-design identity together with antipodality.
 - *(5)* If α ∉ 2Z[ω], then α = u₀(1 + 2β) for a unit u₀, since μ₆ → F₄* is onto. So
@@ -96,4 +118,13 @@ Norms are the field norm, respectively the reduced norm.
   - rationality forces |B| = |C| =: k, as both are at most 4;
   - the rational coordinate is ≡ |A| − k (mod 8), with |A| + 2k ≤ 4.
 
-  So n mod 8 ∈ {0, 1, 2, 3, 4} ∪ {7, 0, 1} ∪ {6}, which never contains 5. ∎
+  So n mod 8 ∈ {0, 1, 2, 3, 4} ∪ {7, 0, 1} ∪ {6}, which never contains 5.
+- *(7)* Necessity is (6), read in Z₂[ω]: the residue count only uses congruences mod 16. For sufficiency, let 𝔭 have
+  residue field F_q and F = x₁⁴ + x₂⁴ + x₃⁴ + x₄⁴ − n.
+  - **At 𝔭 = (2) (q = 4).** For a unit coordinate x_i, ∂F/∂x_i = 4x_i³ has valuation 2, so a solution mod 2⁵ with a
+    unit coordinate lifts (Hensel). Such a solution exists for every residue n mod 32 with n ≢ 5 (mod 8) (finite check).
+  - **At 𝔭 ∤ 2.** A solution mod 𝔭 with some x_i ≢ 0 is a smooth point, and lifts.
+    - If 𝔭 ∤ n, Weil's bound for diagonal equations gives N ≥ q³ − 81q^(3/2) > 0 once q ≥ 19.
+    - If 𝔭 | n, put x₄ = 1 and solve x₁⁴ + x₂⁴ + x₃⁴ = −1, with N ≥ q² − 27q > 0 once q > 27.
+    - The remaining residue fields are F₃ (𝔭 = (1 − ω)), F₇, F₁₃, F₁₉ and F₂₅ (𝔭 = (5)). For them a solution with a
+      nonzero coordinate exists for every residue of n (finite check). ∎

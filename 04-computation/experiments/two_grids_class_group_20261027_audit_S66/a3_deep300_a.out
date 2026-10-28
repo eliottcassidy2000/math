@@ -1,0 +1,3 @@
+deep n = 6, B = 300: 1015875000 pair sums processed; 0 hits (multiset-split solutions, verified) [13 s wall]
+deep n = 54, B = 300: 1015875000 pair sums processed; 0 hits (multiset-split solutions, verified) [13 s wall]
+deep n = 60, B = 300: 1528908825 pair sums processed; 0 hits (multiset-split solutions, verified) [19 s wall]

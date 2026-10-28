@@ -1,0 +1,5 @@
+    hit: (12,-149) (150,541) (123,427) (297,-309)
+    hit: (304,427) (606,309) (161,149) (391,541)
+deep n = 6, B = 800: 51264000000 pair sums processed; 2 hits (multiset-split solutions, verified) [1228 s wall]
+deep n = 54, B = 800: 51264000000 pair sums processed; 0 hits (multiset-split solutions, verified) [1233 s wall]
+DONE800

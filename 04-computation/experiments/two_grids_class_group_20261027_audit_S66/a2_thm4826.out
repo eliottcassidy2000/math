@@ -1,0 +1,43 @@
+== (1) the 1:2 split: Z[w] (n <= 20000) and the Hurwitz order (n <= 400)
+  Z[w]: r(n) = 6 sum chi_-3 for all n <= 20000: True; odd n: first = 2 sum chi_-3 = r/3, centred = 2 first: True; even n: centred = 0: True
+  Hurwitz, n <= 400: odd n: Lipschitz 8 sigma(n), centred 16 sigma(n); even n: Lipschitz 24 sigma(odd part), centred 0: True
+  units of order 3: N(w - 1) = 3 and N(zeta - 1) = 3 (odd), so both act on F4* by a 3-cycle
+== (2) the family Z[(1+sqrt-d)/2], d = 3 mod 4
+  d = 7 mod 8, d in [7, 15, 23, 31, 39, 47, 55, 71, 79, 87, 95, 103]: no element of odd norm n <= 3000 on the centred grid
+  d =  11: split primes < 300000: 12963; non-empty prime shells 12963; all four elements on one grid; first grid for 4310 = 0.3325 of the non-empty shells (0.3325 of all split)
+  d =  19: split primes < 300000: 12959; non-empty prime shells 12959; all four elements on one grid; first grid for 4321 = 0.3334 of the non-empty shells (0.3334 of all split)
+  d =  43: split primes < 300000: 13011; non-empty prime shells 13011; all four elements on one grid; first grid for 4350 = 0.3343 of the non-empty shells (0.3343 of all split)
+  d =  67: split primes < 300000: 12927; non-empty prime shells 12927; all four elements on one grid; first grid for 4313 = 0.3336 of the non-empty shells (0.3336 of all split)
+  d = 163: split primes < 300000: 13017; non-empty prime shells 13017; all four elements on one grid; first grid for 4278 = 0.3286 of the non-empty shells (0.3286 of all split)
+  d =  35: split primes < 100000: 4785; non-empty prime shells 2375; all four elements on one grid; first grid for 776 = 0.3267 of the non-empty shells (0.1622 of all split)
+  d =  51: split primes < 100000: 4777; non-empty prime shells 2371; all four elements on one grid; first grid for 782 = 0.3298 of the non-empty shells (0.1637 of all split)
+  d =  91: split primes < 100000: 4812; non-empty prime shells 2393; all four elements on one grid; first grid for 784 = 0.3276 of the non-empty shells (0.1629 of all split)
+  d = 115: split primes < 100000: 4775; non-empty prime shells 2365; all four elements on one grid; first grid for 771 = 0.3260 of the non-empty shells (0.1615 of all split)
+  d = 123: split primes < 100000: 4741; non-empty prime shells 2361; all four elements on one grid; first grid for 793 = 0.3359 of the non-empty shells (0.1673 of all split)
+  d = 187: split primes < 100000: 4767; non-empty prime shells 2367; all four elements on one grid; first grid for 789 = 0.3333 of the non-empty shells (0.1655 of all split)
+  d = 235: split primes < 100000: 4807; non-empty prime shells 2386; all four elements on one grid; first grid for 794 = 0.3328 of the non-empty shells (0.1652 of all split)
+  d = 267: split primes < 100000: 4809; non-empty prime shells 2396; all four elements on one grid; first grid for 780 = 0.3255 of the non-empty shells (0.1622 of all split)
+  d = 403: split primes < 100000: 4799; non-empty prime shells 2397; all four elements on one grid; first grid for 788 = 0.3287 of the non-empty shells (0.1642 of all split)
+  d = 427: split primes < 100000: 4799; non-empty prime shells 2385; all four elements on one grid; first grid for 780 = 0.3270 of the non-empty shells (0.1625 of all split)
+== (3) the cubic character of 2 (all p = 1 mod 3 below 10^6)
+  39231 primes; mismatches of (b even) <=> (2 cubic residue) <=> (p = x^2 + 27y^2): 0; 2 a cubic residue for 13032 (0.3322); the symbol (2/pi)_3 equals pi mod 2 in {1, w, w^2} for every p: True; the conjugate primary prime has the same grid: True
+  p < 50: 7: pi = 2+3w (centred), 13: pi = -4-3w (centred), 19: pi = 2-3w (centred), 31: pi = -1-6w (first), 37: pi = -4+3w (centred), 43: pi = -7-6w (first)
+  Mersenne: the listed x^2 + 27y^2 representations of 2^q - 1 (q = 5..127) are correct, 2 is a cube via 3m = 1 (mod q), and (q <= 61) the primary prime recomputed by a Euclidean gcd gives the same (x, y): True; q = 3 excluded
+== (4) designs and identities
+  {+-1}                           : design strength 1 (moment test) / 1 (Gegenbauer test); 2-design False, 4-design False, 6-design False
+  {+-w, +-w^2}                    : design strength 1 (moment test) / 1 (Gegenbauer test); 2-design False, 4-design False, 6-design False
+  hexagon                         : design strength 5 (moment test) / 5 (Gegenbauer test); 2-design True, 4-design True, 6-design False
+  16-cell                         : design strength 3 (moment test) / 3 (Gegenbauer test); 2-design True, 4-design False, 6-design False
+  tesseract                       : design strength 3 (moment test) / 3 (Gegenbauer test); 2-design True, 4-design False, 6-design False
+  24-cell                         : design strength 5 (moment test) / 5 (Gegenbauer test); 2-design True, 4-design True, 6-design False
+  square                          : design strength 3 (moment test) / 3 (Gegenbauer test); 2-design True, 4-design False, 6-design False
+  octagon (d = 1 two-grid units)  : design strength 7 (moment test) / 7 (Gegenbauer test); 2-design True, 4-design True, 6-design True
+  Candido: True; Liouville: True; sum over hexagon <u,x>^4 = (9/4)|x|^4: True; sum over 24-cell = 3|x|^4: True; octagon identity 6(a^2+b^2)^2 = 4a^4 + 4b^4 + (a+b)^4 + (a-b)^4: True
+  (1+i) * Hurwitz units = the 24 roots of D4 (left: True, right: True)
+  negative controls: Candido with 3 instead of 2: False; Liouville with 5 instead of 6: False; 24-cell minus one point has design strength 0
+== (5) Eisenstein fourth powers mod 16, (6) sums of four
+  fourth powers mod 16: [(0, 0), (0, 1), (0, 9), (1, 0), (7, 7), (9, 0), (15, 15)]
+  alpha in 2Z[w] -> 0; else u or 9u with u = alpha^4 mod 2: True; mu6^4 = [(-1, -1), (0, 1), (1, 0)] = {1, w, w^2}
+  rational residues mod 16 of four fourth powers: over Z [0, 1, 2, 3, 4]; over the first grid Z[sqrt-3] [0, 1, 2, 3, 4, 9, 10, 11, 12]; over Z[w] [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15]
+  negative control: adding the false residue 5 to the fourth-power set makes [5, 13] reachable
+FAILURES: 0

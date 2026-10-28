@@ -1,0 +1,6 @@
+deep n = 78, B = 650: 44695747200 pair sums processed; 0 hits (multiset-split solutions, verified) [774 s wall]
+deep n = 60, B = 650: 33573064850 pair sums processed; 0 hits (multiset-split solutions, verified) [803 s wall]
+deep n = 124, B = 650: 33573064850 pair sums processed; 0 hits (multiset-split solutions, verified) [499 s wall]
+deep n = 140, B = 650: 33573064850 pair sums processed; 0 hits (multiset-split solutions, verified) [602 s wall]
+deep n = 75, B = 650: 56092949250 pair sums processed; 0 hits (multiset-split solutions, verified) [1445 s wall]
+DONE650

@@ -54,7 +54,12 @@
   centred units (tesseract): 2-design True, 4-design False, 6-design False
   Hurwitz units (24-cell): 2-design True, 4-design True, 6-design False
   Gaussian units (square): 2-design True, 4-design False, 6-design False
+  Gaussian square + normalised centred points (octagon): 2-design True, 4-design True, 6-design True
   Candido a^4 + b^4 + (a+b)^4 = 2(a^2+ab+b^2)^2: True; Liouville 6(sum x_i^2)^2 = sum_(i<j) (x_i +- x_j)^4: True; sum over the 24 Hurwitz units of <u,x>^4 = 3|x|^4: True; (1+i) maps the Hurwitz units onto the 24 D4 roots: True
   Eisenstein fourth powers mod 16 (pairs (a, b) for a + b omega): [(0, 0), (0, 1), (0, 9), (1, 0), (7, 7), (9, 0), (15, 15)]
   fourth powers of the six units: [(-1, -1), (0, 1), (1, 0)] = 1, omega, omega^2 (the merge charges of THM-4820)
-ALL CHECKS PASSED  [8 s]
+  rational residues mod 16 of four fourth powers with bases in Z: [0, 1, 2, 3, 4]
+  rational residues mod 16 of four fourth powers with bases in Z[sqrt-3]: [0, 1, 2, 3, 4, 9, 10, 11, 12]
+  rational residues mod 16 of four fourth powers with bases in Z[omega]: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15]
+  -> the first grid adds 9..12 to Z's 0..4; the centred grid adds 6, 7, 8, 14, 15; only 5 and 13 (n = 5 mod 8) stay out
+ALL CHECKS PASSED  [7 s]

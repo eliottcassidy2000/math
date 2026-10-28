@@ -1,0 +1,12 @@
+n = 4 (mod 16 = 4): 3 admissible multisets: {1,1,1,1} {1,1,9,9} {9,9,9,9}
+n = 12 (mod 16 = 12): 2 admissible multisets: {1,1,1,9} {1,9,9,9}
+n = 0 (mod 16 = 0): 3 admissible multisets: {0,0,0,0} {0,1,w,w2} {0,9,9w,9w2}
+n = 1 (mod 16 = 1): 4 admissible multisets: {0,0,0,1} {1,1,w,w2} {1,9,9w,9w2} {9,9,w,w2}
+n = 2 (mod 16 = 2): 2 admissible multisets: {0,0,1,1} {0,0,9,9}
+n = 3 (mod 16 = 3): 2 admissible multisets: {0,1,1,1} {0,1,9,9}
+n = 7 (mod 16 = 7): 1 admissible multisets: {0,0,9w,9w2}
+n = 8 (mod 16 = 8): 2 admissible multisets: {0,1,9w,9w2} {0,9,w,w2}
+n = 9 (mod 16 = 9): 4 admissible multisets: {0,0,0,9} {1,1,9w,9w2} {1,9,w,w2} {9,9,9w,9w2}
+n = 10 (mod 16 = 10): 1 admissible multisets: {0,0,1,9}
+n = 14 (mod 16 = 14): 4 admissible multisets: {w,w,w2,w2} {w,w,9w2,9w2} {9w,9w,w2,w2} {9w,9w,9w2,9w2}
+n = 15 (mod 16 = 15): 1 admissible multisets: {0,0,w,w2}

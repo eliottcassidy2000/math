@@ -1,0 +1,4 @@
+deep n = 6, B = 540: 10648503000 pair sums processed; 0 hits (multiset-split solutions, verified) [240 s wall]
+    hit: (12,-149) (150,541) (123,427) (297,-309)
+deep n = 6, B = 541: 10767258451 pair sums processed; 1 hits (multiset-split solutions, verified) [238 s wall]
+DONEMIN

@@ -92,7 +92,7 @@ int main(int argc, char **argv) {
             for (int j = i; j < np; j++) { S[k].x = P[i].x + P[j].x; S[k].y = P[i].y + P[j].y; S[k].i = i; S[k].j = j; k++; }
         qsort(S, npr, sizeof(pr), cmp_pr);
         int width = (int)(hi - lo + 1);
-        long *wit = malloc(sizeof(long) * 2 * width);
+        ll *wit = malloc(sizeof(ll) * 2 * width);          /* 64-bit: pair indices exceed 2^31 beyond B ~ 175 */
         for (int t = 0; t < 2 * width; t++) wit[t] = -1;
         /* for each P (index p), look in the bucket y = -y_P for x in [lo - x_P, hi - x_P] */
         size_t p = 0;
@@ -113,7 +113,7 @@ int main(int argc, char **argv) {
                 for (size_t v = l2; v < b1 && S[v].x <= xhi; v++) {
                     ll n = S[u].x + S[v].x;
                     int t = (int)(n - lo);
-                    if (wit[2 * t] < 0) { wit[2 * t] = (long)u; wit[2 * t + 1] = (long)v; }
+                    if (wit[2 * t] < 0) { wit[2 * t] = (ll)u; wit[2 * t + 1] = (ll)v; }
                 }
             }
         }

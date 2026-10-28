@@ -1,0 +1,7 @@
+deep n = 6, B = 150: 63703125 pair sums processed; 0 hits (multiset-split solutions, verified) [1 s wall]
+deep n = 54, B = 150: 63703125 pair sums processed; 0 hits (multiset-split solutions, verified) [1 s wall]
+deep n = 60, B = 150: 96195975 pair sums processed; 0 hits (multiset-split solutions, verified) [2 s wall]
+deep n = 75, B = 150: 162042375 pair sums processed; 0 hits (multiset-split solutions, verified) [4 s wall]
+deep n = 78, B = 150: 127434450 pair sums processed; 0 hits (multiset-split solutions, verified) [2 s wall]
+deep n = 124, B = 150: 96195975 pair sums processed; 0 hits (multiset-split solutions, verified) [1 s wall]
+deep n = 140, B = 150: 96195975 pair sums processed; 0 hits (multiset-split solutions, verified) [1 s wall]

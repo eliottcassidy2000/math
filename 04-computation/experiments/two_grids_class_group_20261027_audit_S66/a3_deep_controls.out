@@ -1,0 +1,44 @@
+deep n = 22, B = 30: 1861 fourth powers up to sign; class sizes: 0:481 1:225 9:240 w:225 9w:240 w2:225 9w2:225
+  admissible class multisets mod 16 (machine-enumerated): 1
+  multiset {w,9w,w2,9w2}: split (w,9w | w2,9w2), 1.05e+05 pair sums
+    hit: (0,5) (2,5) (5,5) (3,5)
+    hit: (0,1) (6,7) (1,1) (1,7)
+    hit: (0,1) (2,-1) (1,1) (3,1)
+deep n = 22, B = 30: 104625 pair sums processed; 3 hits (multiset-split solutions, verified) [0 s wall]
+deep n = 38, B = 30: 1861 fourth powers up to sign; class sizes: 0:481 1:225 9:240 w:225 9w:240 w2:225 9w2:225
+  admissible class multisets mod 16 (machine-enumerated): 1
+  multiset {w,9w,w2,9w2}: split (w,9w | w2,9w2), 1.05e+05 pair sums
+    hit: (4,-1) (2,-3) (5,1) (5,3)
+deep n = 38, B = 30: 104625 pair sums processed; 1 hits (multiset-split solutions, verified) [0 s wall]
+deep n = 30, B = 30: 1861 fourth powers up to sign; class sizes: 0:481 1:225 9:240 w:225 9w:240 w2:225 9w2:225
+  admissible class multisets mod 16 (machine-enumerated): 4
+  multiset {w,w,w2,w2}: split (w,w | w2,w2), 5.08e+04 pair sums
+  multiset {w,w,9w2,9w2}: split (w,w | 9w2,9w2), 5.08e+04 pair sums
+  multiset {9w,9w,w2,w2}: split (9w,9w | w2,w2), 5.43e+04 pair sums
+  multiset {9w,9w,9w2,9w2}: split (9w,9w | 9w2,9w2), 5.43e+04 pair sums
+    hit: (2,-3) (2,5) (1,-1) (3,1)
+    hit: (2,1) (2,-1) (3,5) (5,3)
+deep n = 30, B = 30: 210390 pair sums processed; 2 hits (multiset-split solutions, verified) [0 s wall]
+deep n = 102, B = 120: 29041 fourth powers up to sign; class sizes: 0:7321 1:3660 9:3600 w:3660 9w:3600 w2:3600 9w2:3600
+  admissible class multisets mod 16 (machine-enumerated): 1
+  multiset {w,9w,w2,9w2}: split (w,9w | w2,9w2), 2.61e+07 pair sums
+    hit: (92,41) (14,-99) (73,-31) (93,-13)
+    hit: (104,31) (106,13) (51,-41) (113,99)
+deep n = 102, B = 120: 26136000 pair sums processed; 2 hits (multiset-split solutions, verified) [0 s wall]
+deep n = 186, B = 120: 29041 fourth powers up to sign; class sizes: 0:7321 1:3660 9:3600 w:3660 9w:3600 w2:3600 9w2:3600
+  admissible class multisets mod 16 (machine-enumerated): 1
+  multiset {0,0,1,9}: split (0,0 | 1,9), 4e+07 pair sums
+    hit: (54,36) (16,40) (37,-44) (77,14)
+    hit: (18,-36) (24,40) (81,44) (63,-14)
+    hit: (6,-52) (58,52) (61,0) (17,34)
+deep n = 186, B = 120: 39978181 pair sums processed; 3 hits (multiset-split solutions, verified) [1 s wall]
+deep n = 47, B = 20: 841 fourth powers up to sign; class sizes: 0:221 1:110 9:100 w:110 9w:100 w2:100 9w2:100
+  admissible class multisets mod 16 (machine-enumerated): 1
+  multiset {0,0,w,w2}: split (0,0 | w,w2), 3.55e+04 pair sums
+    hit: (10,-10) (14,6) (4,17) (7,15)
+    hit: (2,4) (4,8) (0,7) (7,7)
+    hit: (4,2) (2,-2) (4,1) (3,-1)
+deep n = 47, B = 20: 35531 pair sums processed; 5 hits (multiset-split solutions, verified) [0 s wall]
+deep n = 13, B = 50: 5101 fourth powers up to sign; class sizes: 0:1301 1:625 9:650 w:625 9w:650 w2:625 9w2:625
+  admissible class multisets mod 16 (machine-enumerated): 0
+deep n = 13, B = 50: 0 pair sums processed; 0 hits (multiset-split solutions, verified) [0 s wall]

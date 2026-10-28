@@ -1,0 +1,8 @@
+deep n = 6, B = 500: 7828125000 pair sums processed; 0 hits (multiset-split solutions, verified) [156 s wall]
+deep n = 54, B = 500: 7828125000 pair sums processed; 0 hits (multiset-split solutions, verified) [160 s wall]
+deep n = 60, B = 500: 11765718875 pair sums processed; 0 hits (multiset-split solutions, verified) [270 s wall]
+deep n = 124, B = 500: 11765718875 pair sums processed; 0 hits (multiset-split solutions, verified) [162 s wall]
+deep n = 140, B = 500: 11765718875 pair sums processed; 0 hits (multiset-split solutions, verified) [191 s wall]
+deep n = 78, B = 500: 15656562750 pair sums processed; 0 hits (multiset-split solutions, verified) [263 s wall]
+deep n = 75, B = 500: 19609593875 pair sums processed; 0 hits (multiset-split solutions, verified) [513 s wall]
+DONE500

@@ -1,0 +1,33 @@
+fourth powers mod 16: [(0, 0), (0, 1), (0, 9), (1, 0), (7, 7), (9, 0), (15, 15)] = {0} u mu_3 u 9 mu_3
+  M =  16:     7 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M =  32:    28 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M =  64:   100 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M = 128:   388 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M = 256:  1543 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M =  27:   247 fourth-power residues; obstructed n in 0..200: none
+  M =  81:  2215 fourth-power residues; obstructed n in 0..200: none
+  M = 243: 19930 fourth-power residues; obstructed n in 0..200: none
+  M =  25:   151 fourth-power residues; obstructed n in 0..200: none
+  M = 125:  3751 fourth-power residues; obstructed n in 0..200: none
+  M =  49:   484 fourth-power residues; obstructed n in 0..200: none
+  n =   6: 2-adic density mod 32/64/128 = 1.5000/1.5000/1.5000; 3-adic mod 27/81/243 = 1.1852/1.1852/1.1852
+  n =  54: 2-adic density mod 32/64/128 = 1.5000/1.5000/1.5000; 3-adic mod 27/81/243 = 2.4815/2.3704/2.3704
+  n =  60: 2-adic density mod 32/64/128 = 0.5000/0.5000/0.5000; 3-adic mod 27/81/243 = 1.1852/1.1852/1.1852
+  n =  75: 2-adic density mod 32/64/128 = 2.0000/2.0000/2.0000; 3-adic mod 27/81/243 = 1.1852/1.1852/1.1852
+  n =  78: 2-adic density mod 32/64/128 = 1.5000/1.5000/1.5000; 3-adic mod 27/81/243 = 1.1852/1.1852/1.1852
+  n = 124: 2-adic density mod 32/64/128 = 0.5000/0.5000/0.5000; 3-adic mod 27/81/243 = 0.8889/0.8889/0.8889
+  n = 140: 2-adic density mod 32/64/128 = 0.5000/0.5000/0.5000; 3-adic mod 27/81/243 = 0.8889/0.8889/0.8889
+  n = 102: 2-adic density mod 32/64/128 = 1.5000/1.5000/1.5000; 3-adic mod 27/81/243 = 1.1852/1.1852/1.1852
+  n = 186: 2-adic density mod 32/64/128 = 3.0000/3.0000/3.0000; 3-adic mod 27/81/243 = 1.1852/1.1852/1.1852
+local densities (2-adic mod 128 x 3-adic mod 243), n = 1..200, n != 5 mod 8: median 2.6667, minimum 0.4444
+  n =   6 (miss): density 1.7778, rank 42 of 175
+  n =  54 (miss): density 3.5556, rank 109 of 175
+  n =  60 (miss): density 0.5926, rank 19 of 175
+  n =  75 (miss): density 2.3704, rank 66 of 175
+  n =  78 (miss): density 1.7778, rank 50 of 175
+  n = 124 (miss): density 0.4444, rank 11 of 175
+  n = 140 (miss): density 0.4444, rank 12 of 175
+  n = 102 (filled at B <= 120): density 1.7778, rank 53 of 175
+  n = 186 (filled at B <= 120): density 3.5556, rank 117 of 175
+  the lowest density class (0.4444): [4, 20, 28, 44, 52, 68, 76, 92, 100, 116, 124, 140, 148, 164, 172, 188, 196]
+ALL CHECKS PASSED  [360 s]

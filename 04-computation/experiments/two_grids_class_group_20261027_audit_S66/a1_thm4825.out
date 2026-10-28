@@ -1,0 +1,28 @@
+== A. ring or ideal class (odd squarefree d <= 999)
+  204 values d = 3 mod 4: G_d is the ring Z[tau] (tau integral); 200 values d = 1 mod 4: 2G_d = (2, 1+sqrt-d), p2^2 = (2), principal only at d = 1, tau^2 escapes; 2N(x + y tau) = 2x^2 + 2xy + ((1+d)/2) y^2
+== C. three grids agree for d = 5, 13, 37; converse; first counterexamples
+  d = 5: 8962 split primes q < 200000: first form <=> q = 1 mod 4 <=> sum of two squares; else second form
+  d = 13: 8939 split primes q < 200000: first form <=> q = 1 mod 4 <=> sum of two squares; else second form
+  d = 37: 8938 split primes q < 200000: first form <=> q = 1 mod 4 <=> sum of two squares; else second form
+  total split primes checked: 26839
+  squarefree d = 1 mod 4, d <= 3000: no counterexample below 2*10^5 exactly for d in [1, 5, 13, 37]
+  listed first counterexamples: {17: 13, 29: 5, 41: 5, 61: 5, 21: 5, 53: 13, 85: 37, 33: 17, 65: 29, 73: 37} (all match)
+  largest least counterexample for d <= 3000: 113 at d = 2477
+== D. statement (5): one grid per ramified norm
+  d = 5: every n = 2^a d^b <= 10^8 is represented by exactly one of x^2 + dy^2, 2x^2+2xy+((1+d)/2)y^2, the first iff a even: True
+  d = 13: every n = 2^a d^b <= 10^8 is represented by exactly one of x^2 + dy^2, 2x^2+2xy+((1+d)/2)y^2, the first iff a even: True
+  d = 37: every n = 2^a d^b <= 10^8 is represented by exactly one of x^2 + dy^2, 2x^2+2xy+((1+d)/2)y^2, the first iff a even: True
+  d = 17: every n = 2^a d^b <= 10^8 is represented by exactly one of x^2 + dy^2, 2x^2+2xy+((1+d)/2)y^2, the first iff a even: True
+  d = 29: every n = 2^a d^b <= 10^8 is represented by exactly one of x^2 + dy^2, 2x^2+2xy+((1+d)/2)y^2, the first iff a even: True
+  d = 41: every n = 2^a d^b <= 10^8 is represented by exactly one of x^2 + dy^2, 2x^2+2xy+((1+d)/2)y^2, the first iff a even: True
+  owner numbers 5, 25, 100 first grid; 10, 50 second grid (d = 5); 13, 52 / 26 and 37, 148 / 74 as stated
+== E. side claims in the note
+  d = 12: (1/2,1/2)-copy closed under sqrt-12: False; ring: False; the lattice Z + Z(1/2 + sqrt-3) has primitive minimal form (4, -4, 13), discriminant -192 = -3 * 64, so its multiplier ring is the order of conductor 8 (Z[sqrt-48]), not Z[sqrt-12]
+  idoneal m = 1 mod 4 with no prime factor = 3 mod 4: [1, 5, 13, 25, 37, 85]; squarefree ones: [1, 5, 13, 37, 85]
+  reduced primitive forms of discriminant -100: [(1, 0, 25), (2, 2, 13)] (h = 2; exponent <= 2, so 25 is idoneal)
+  reduced primitive forms of discriminant -340: [(1, 0, 85), (2, 2, 43), (5, 0, 17), (10, 10, 11)]
+== negative controls
+  ring test on d = 1 mod 4 (should be empty): []
+  perturbed second form for d = 5 breaks exclusivity at split q: [3, 7, 23, 43, 47, 67, 83, 103] ... (20 of 34)
+  d = 17, q = 13: split True, q = 1 mod 4, first form False, second form True -> agreement fails as it must
+FAILURES: 0

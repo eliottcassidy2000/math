@@ -467,6 +467,12 @@ def section_F():
         res[name] = [is_design_k(pts, k, (x, y, z, w))[0] for k in (2, 4, 6)]
     sq4 = [(1, 0), (0, 1), (-1, 0), (0, -1)]
     res['Gaussian units (square)'] = [is_design_k(sq4, k, (x, y))[0] for k in (2, 4, 6)]
+    # the Gaussian two-grid set G_1 = (1/2)(1+i)Z[i]: the square with the normalised centred points (+-1 +- i)/sqrt2 is the
+    # regular octagon (a 7-design); its quartic identity is Liouville's at x3 = x4 = 0 (found by the S66 audit)
+    r2 = sp.sqrt(2)
+    octa = sq4 + [(s1 / r2, s2 / r2) for s1 in (1, -1) for s2 in (1, -1)]
+    res['Gaussian square + normalised centred points (octagon)'] = [is_design_k(octa, k, (x, y))[0] for k in (2, 4, 6)]
+    assert sp.expand(6 * (x * x + y * y) ** 2 - (4 * x ** 4 + 4 * y ** 4 + (x + y) ** 4 + (x - y) ** 4)) == 0
     candido = sp.expand(a ** 4 + b ** 4 + (a + b) ** 4 - 2 * (a * a + a * b + b * b) ** 2) == 0
     X = (x, y, z, w)
     liou = sp.expand(sum((X[i] + X[j]) ** 4 + (X[i] - X[j]) ** 4 for i in range(4) for j in range(i + 1, 4))
@@ -497,7 +503,22 @@ def section_F():
         return r
     fourth_mod16 = sorted({tuple(c % 16 for c in epow((s, t), 4)) for s in range(16) for t in range(16)})
     mu3 = sorted({epow(u, 4) for u in UNITS6})
-    return res, candido, liou, hurw4, d4, fourth_mod16, mu3
+
+    # rational residues mod 16 of sums of four fourth powers: bases in Z, in the first grid Z[sqrt-3] (b even), in Z[omega]
+    def rational_residues(bases):
+        S = {tuple(c % 16 for c in epow(x_, 4)) for x_ in bases}
+        R = {(0, 0)}
+        for _ in range(4):
+            R = R | {((r0 + s0) % 16, (r1 + s1) % 16) for (r0, r1) in R for (s0, s1) in S}
+        return sorted(n for n in range(16) if (n, 0) in R)
+    box = [(s, t) for s in range(16) for t in range(16)]
+    repair = {'Z': rational_residues([(s, 0) for s in range(16)]),
+              'Z[sqrt-3]': rational_residues([x_ for x_ in box if x_[1] % 2 == 0]),
+              'Z[omega]': rational_residues(box)}
+    assert repair['Z'] == [0, 1, 2, 3, 4]
+    assert repair['Z[sqrt-3]'] == [0, 1, 2, 3, 4, 9, 10, 11, 12]
+    assert repair['Z[omega]'] == [n for n in range(16) if n not in (5, 13)]
+    return res, candido, liou, hurw4, d4, fourth_mod16, mu3, repair
 
 
 def main():
@@ -543,7 +564,7 @@ def main():
         else:
             print(f'  Mersenne 2^{q} - 1 = {x}^2 + 27*{y}^2; 2 cubic residue: {cubic}; primary prime on the first grid: {fg}')
     print('== F. the centred units complete the quartic designs')
-    res, candido, liou, hurw4, d4, f16, mu3 = section_F()
+    res, candido, liou, hurw4, d4, f16, mu3, repair = section_F()
     for name, flags in res.items():
         print(f'  {name}: 2-design {flags[0]}, 4-design {flags[1]}, 6-design {flags[2]}')
     print(f'  Candido a^4 + b^4 + (a+b)^4 = 2(a^2+ab+b^2)^2: {candido}; Liouville 6(sum x_i^2)^2 = sum_(i<j) (x_i +- x_j)^4: '
@@ -551,6 +572,10 @@ def main():
           f'D4 roots: {d4}')
     print(f'  Eisenstein fourth powers mod 16 (pairs (a, b) for a + b omega): {f16}')
     print(f'  fourth powers of the six units: {mu3} = 1, omega, omega^2 (the merge charges of THM-4820)')
+    for ring, rr in repair.items():
+        print(f'  rational residues mod 16 of four fourth powers with bases in {ring}: {rr}')
+    print('  -> the first grid adds 9..12 to Z\'s 0..4; the centred grid adds 6, 7, 8, 14, 15; only 5 and 13 (n = 5 mod 8) '
+          'stay out')
     print(f'ALL CHECKS PASSED  [{time.time() - t0:.0f} s]')
 
 

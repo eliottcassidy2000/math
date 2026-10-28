@@ -1,0 +1,6 @@
+deep n = 22, B = 500: 7828125000 pair sums processed; 10 hits (multiset-split solutions, verified) [102 s wall]
+deep n = 38, B = 500: 7828125000 pair sums processed; 3 hits (multiset-split solutions, verified) [104 s wall]
+deep n = 86, B = 500: 7828125000 pair sums processed; 1 hits (multiset-split solutions, verified) [136 s wall]
+deep n = 134, B = 500: 7828125000 pair sums processed; 2 hits (multiset-split solutions, verified) [128 s wall]
+deep n = 166, B = 500: 7828125000 pair sums processed; 1 hits (multiset-split solutions, verified) [129 s wall]
+DONECALIB500

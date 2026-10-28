@@ -1,0 +1,13 @@
+rep A: bases [(12, -149), (150, 541), (123, 427), (297, -309)]
+   fourth powers (x, y) = x + y w: [(-177942480, 472672849), (55998567600, 53453732761), (21982559631, 19871492431), (-77803184745, -73797898041)]
+   sum in basis (1, w): (6, 0);  symbolic value: 6;  max |a|,|b| = 541
+   norms N(alpha) = a^2 - ab + b^2: [24133, 234031, 144937, 275463]
+rep B (complex conjugate of A): bases [(304, 427), (606, 309), (161, 149), (391, 541)]
+   fourth powers (x, y) = x + y w: [(2111067200, -19871492431), (-4005286704, 73797898041), (-650615329, -472672849), (2544834839, -53453732761)]
+   sum in basis (1, w): (6, 0);  symbolic value: 6;  max |a|,|b| = 606
+   norms N(alpha) = a^2 - ab + b^2: [144937, 275463, 24133, 234031]
+conj of rep A (up to sign): [(161, 149), (-391, -541), (-304, -427), (606, 309)]
+   base (12,-149) = (0,1) mod 2; fourth power mod 16 = (0,1)
+   base (150,541) = (0,1) mod 2; fourth power mod 16 = (0,9)
+   base (123,427) = (1,1) mod 2; fourth power mod 16 = (15,15)
+   base (297,-309) = (1,1) mod 2; fourth power mod 16 = (7,7)

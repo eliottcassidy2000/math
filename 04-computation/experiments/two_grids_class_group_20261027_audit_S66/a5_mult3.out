@@ -1,0 +1,3 @@
+population (6 and non-obstructed 51..200): 132 multiples of 3: 45 (0.341)
+nine misses at B<=60: 7 of 9 are multiples of 3 ([6, 54, 60, 75, 78, 102, 186]); hypergeometric tail P(>= 7) = 0.0075; binomial(1/3) tail = 0.0083
+seven persistent misses: 5 of 7 are multiples of 3 ([6, 54, 60, 75, 78]); hypergeometric tail P(>= 5) = 0.0452; binomial(1/3) tail = 0.0453

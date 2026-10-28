@@ -1,0 +1,74 @@
+== 1. rational residues reachable by four fourth powers (meet-in-the-middle on pair sums)
+  M =  16:      7 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M =  32:     28 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M =  64:    100 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M = 128:    388 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M = 256:   1543 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M = 512:   6172 fourth-power residues; obstructed n in 0..200: exactly n = 5 mod 8
+  M =   9:     28 fourth-power residues; obstructed n in 0..200: none
+  M =  27:    247 fourth-power residues; obstructed n in 0..200: none
+  M =  81:   2215 fourth-power residues; obstructed n in 0..200: none
+  M = 243:  19930 fourth-power residues; obstructed n in 0..200: none
+  M =  25:    151 fourth-power residues; obstructed n in 0..200: none
+  M = 125:   3751 fourth-power residues; obstructed n in 0..200: none
+  M =  49:    484 fourth-power residues; obstructed n in 0..200: none
+  M = 343:  21904 fourth-power residues; obstructed n in 0..200: none
+  M =  13:     16 fourth-power residues; obstructed n in 0..200: none
+  M = 169:   1600 fourth-power residues; obstructed n in 0..200: none
+  M =  11:     31 fourth-power residues; obstructed n in 0..200: none
+  M = 121:   3631 fourth-power residues; obstructed n in 0..200: none
+  negative control: with the integer residues {0,1} mod 16 the obstructed set in 0..20 would be [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+== 2. local solvability at every prime p <= 211 (Hensel), Weil above
+  p = 2: n with a unit-coordinate solution mod 32 (hence 2-adically representable): all except exactly n = 5 mod 8
+  p = 3: x^4 = 1 mod (1 - w) for units, so any n has a unit-coordinate solution mod (1 - w) (take n mod 3 or 3 units), and 4x^3 is a unit there: no 3-adic obstruction
+  every n in 1..200 has a nonsingular solution mod p (hence is p-adically representable) for all primes 5 <= p <= 211: True
+  p > 211: p does not divide n <= 200, the residue field has q >= p > 81^(2/3) = 18.7 elements, and Weil (N >= q^3 - 81 q^(3/2) > 0 for c != 0) gives a solution, which lifts (4x^3 a unit). [For p | n one would use x1^4 + x2^4 + x3^4 = -1, N >= q^2 - 27 q > 0 for q > 27; not needed above 211.]
+  archimedean place: Z[w] (x) R = C, no condition
+== 3. local densities (exact integer counts; pair-support convolution, no FFT)
+  2-adic modulus 32: support 28; done [42 s]
+  2-adic modulus 64: support 100; done [42 s]
+  2-adic modulus 128: support 388; done [42 s]
+  2-adic modulus 256: support 1543; done [42 s]
+  2-adic modulus 512: support 6172; done [47 s]
+  3-adic modulus 9: support 28; done [47 s]
+  3-adic modulus 27: support 247; done [47 s]
+  3-adic modulus 81: support 2215; done [47 s]
+  3-adic modulus 243: support 19930; done [55 s]
+  2-adic: n <= 200 whose density at 2^7 differs from 2^9: [16, 32, 48, 64, 128, 144, 160, 176, 192]
+          n <= 200 whose density at 2^8 differs from 2^9: []
+  3-adic: n <= 200 whose density at 3^4 differs from 3^5: [81, 162]
+    n = 16: sigma_2 at 32/64/128/256/512 = 7.0000/7.0000/10.0000/11.0000/11.0000
+    n = 32: sigma_2 at 32/64/128/256/512 = 7.0000/6.7500/7.5000/9.0000/9.0000
+    n = 48: sigma_2 at 32/64/128/256/512 = 7.0000/7.0000/7.0000/8.0000/8.0000
+    n = 64: sigma_2 at 32/64/128/256/512 = 7.0000/7.7500/6.2500/6.5000/6.5000
+    n = 128: sigma_2 at 32/64/128/256/512 = 7.0000/7.7500/12.2500/12.0000/12.0000
+    n = 144: sigma_2 at 32/64/128/256/512 = 7.0000/7.0000/10.0000/11.0000/11.0000
+    n = 160: sigma_2 at 32/64/128/256/512 = 7.0000/6.7500/7.5000/9.0000/9.0000
+    n = 176: sigma_2 at 32/64/128/256/512 = 7.0000/7.0000/7.0000/8.0000/8.0000
+    n = 192: sigma_2 at 32/64/128/256/512 = 7.0000/7.7500/6.2500/6.5000/6.5000
+  [author modulus 2^7] median 2.6667, minimum 0.4444; misses/fills:
+     n = 124: sigma_2 = 0.5000, sigma_3 = 0.8889, product 0.4444, rank 11 of 175
+     n = 140: sigma_2 = 0.5000, sigma_3 = 0.8889, product 0.4444, rank 12 of 175
+     n =  60: sigma_2 = 0.5000, sigma_3 = 1.1852, product 0.5926, rank 19 of 175
+     n =   6: sigma_2 = 1.5000, sigma_3 = 1.1852, product 1.7778, rank 42 of 175
+     n =  78: sigma_2 = 1.5000, sigma_3 = 1.1852, product 1.7778, rank 50 of 175
+     n =  75: sigma_2 = 2.0000, sigma_3 = 1.1852, product 2.3704, rank 66 of 175
+     n =  54: sigma_2 = 1.5000, sigma_3 = 2.3704, product 3.5556, rank 109 of 175
+     n = 102: sigma_2 = 1.5000, sigma_3 = 1.1852, product 1.7778, rank 53 of 175
+     n = 186: sigma_2 = 3.0000, sigma_3 = 1.1852, product 3.5556, rank 117 of 175
+     lowest class: [4, 20, 28, 44, 52, 68, 76, 92, 100, 116, 124, 140, 148, 164, 172, 188, 196]
+     persistent misses below the median: [6, 60, 75, 78, 124, 140]
+  [stable modulus 2^9] median 2.6667, minimum 0.4444; misses/fills:
+     n = 124: sigma_2 = 0.5000, sigma_3 = 0.8889, product 0.4444, rank 11 of 175
+     n = 140: sigma_2 = 0.5000, sigma_3 = 0.8889, product 0.4444, rank 12 of 175
+     n =  60: sigma_2 = 0.5000, sigma_3 = 1.1852, product 0.5926, rank 19 of 175
+     n =   6: sigma_2 = 1.5000, sigma_3 = 1.1852, product 1.7778, rank 42 of 175
+     n =  78: sigma_2 = 1.5000, sigma_3 = 1.1852, product 1.7778, rank 50 of 175
+     n =  75: sigma_2 = 2.0000, sigma_3 = 1.1852, product 2.3704, rank 66 of 175
+     n =  54: sigma_2 = 1.5000, sigma_3 = 2.3704, product 3.5556, rank 109 of 175
+     n = 102: sigma_2 = 1.5000, sigma_3 = 1.1852, product 1.7778, rank 53 of 175
+     n = 186: sigma_2 = 3.0000, sigma_3 = 1.1852, product 3.5556, rank 117 of 175
+     lowest class: [4, 20, 28, 44, 52, 68, 76, 92, 100, 116, 124, 140, 148, 164, 172, 188, 196]
+     persistent misses below the median: [6, 60, 75, 78, 124, 140]
+FAILURES: 0 []
+[55 s]

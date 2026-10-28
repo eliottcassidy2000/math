@@ -1,0 +1,45 @@
+p = 3, modulus 81:
+    1: total 0.888889, unit 0.888889, all-nonunit 0.000000
+    2: total 0.888889, unit 0.888889, all-nonunit 0.000000
+    9: total 2.074074, unit 1.185185, all-nonunit 0.888889
+    18: total 2.074074, unit 1.185185, all-nonunit 0.888889
+    81: total 3.370370, unit 1.185185, all-nonunit 2.185185
+    162: total 3.370370, unit 1.185185, all-nonunit 2.185185
+    27: total 2.370370, unit 1.185185, all-nonunit 1.185185
+    54: total 2.370370, unit 1.185185, all-nonunit 1.185185
+p = 3, modulus 243:
+    1: total 0.888889, unit 0.888889, all-nonunit 0.000000
+    2: total 0.888889, unit 0.888889, all-nonunit 0.000000
+    9: total 2.074074, unit 1.185185, all-nonunit 0.888889
+    18: total 2.074074, unit 1.185185, all-nonunit 0.888889
+    81: total 3.259259, unit 1.185185, all-nonunit 2.074074
+    162: total 3.259259, unit 1.185185, all-nonunit 2.074074
+    27: total 2.370370, unit 1.185185, all-nonunit 1.185185
+    54: total 2.370370, unit 1.185185, all-nonunit 1.185185
+p = 2, modulus 128:
+    1: total 5.000000, unit 5.000000, all-nonunit 0.000000
+    2: total 3.000000, unit 3.000000, all-nonunit 0.000000
+    3: total 2.000000, unit 2.000000, all-nonunit 0.000000
+    4: total 0.500000, unit 0.500000, all-nonunit 0.000000
+    16: total 10.000000, unit 6.000000, all-nonunit 4.000000
+    32: total 7.500000, unit 6.000000, all-nonunit 1.500000
+    64: total 6.250000, unit 6.000000, all-nonunit 0.250000
+    128: total 12.250000, unit 6.000000, all-nonunit 6.250000
+p = 2, modulus 256:
+    1: total 5.000000, unit 5.000000, all-nonunit 0.000000
+    2: total 3.000000, unit 3.000000, all-nonunit 0.000000
+    3: total 2.000000, unit 2.000000, all-nonunit 0.000000
+    4: total 0.500000, unit 0.500000, all-nonunit 0.000000
+    16: total 11.000000, unit 6.000000, all-nonunit 5.000000
+    32: total 9.000000, unit 6.000000, all-nonunit 3.000000
+    64: total 6.500000, unit 6.000000, all-nonunit 0.500000
+    128: total 12.000000, unit 6.000000, all-nonunit 6.000000
+p = 2, modulus 512:
+    1: total 5.000000, unit 5.000000, all-nonunit 0.000000
+    2: total 3.000000, unit 3.000000, all-nonunit 0.000000
+    3: total 2.000000, unit 2.000000, all-nonunit 0.000000
+    4: total 0.500000, unit 0.500000, all-nonunit 0.000000
+    16: total 11.000000, unit 6.000000, all-nonunit 5.000000
+    32: total 9.000000, unit 6.000000, all-nonunit 3.000000
+    64: total 6.500000, unit 6.000000, all-nonunit 0.500000
+    128: total 12.000000, unit 6.000000, all-nonunit 6.000000

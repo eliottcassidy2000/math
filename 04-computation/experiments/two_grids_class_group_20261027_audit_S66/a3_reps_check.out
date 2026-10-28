@@ -1,0 +1,10 @@
+47 (note/HYP)            -> 47
+47 (small box, audit)    -> 47
+102 (note/HYP)           -> 102
+102 (second, audit)      -> 102
+186 (note/HYP)           -> 186
+186 (audit)              -> 186
+30 (HYP window)          -> 30
+22 (box validation)      -> 22
+38 (box validation)      -> 38
+perturbed 102 (113 -> 112) -> 4557018 - 902187*sqrt(3)*I

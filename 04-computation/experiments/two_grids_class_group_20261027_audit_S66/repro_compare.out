@@ -1,0 +1,3 @@
+IDENTICAL (CRLF and timing ignored; 374 lines): repro_e4.out vs eisenstein_four_fourth_powers_20261027.out
+IDENTICAL (CRLF and timing ignored; 60 lines): repro_two_grids.out vs two_grids_class_group_20261027.out
+IDENTICAL (CRLF and timing ignored; 33 lines): repro_obstructions.out vs eisenstein_fourth_power_obstructions_20261027.out

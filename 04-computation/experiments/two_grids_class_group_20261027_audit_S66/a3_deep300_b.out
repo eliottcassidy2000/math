@@ -1,0 +1,4 @@
+deep n = 75, B = 300: 2548203825 pair sums processed; 0 hits (multiset-split solutions, verified) [44 s wall]
+deep n = 78, B = 300: 2031862650 pair sums processed; 0 hits (multiset-split solutions, verified) [15 s wall]
+deep n = 124, B = 300: 1528908825 pair sums processed; 0 hits (multiset-split solutions, verified) [12 s wall]
+deep n = 140, B = 300: 1528908825 pair sums processed; 0 hits (multiset-split solutions, verified) [14 s wall]

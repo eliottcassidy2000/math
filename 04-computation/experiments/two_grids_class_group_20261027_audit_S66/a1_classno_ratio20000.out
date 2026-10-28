@@ -1,0 +1,1 @@
+h(-4d)/h(-d) for squarefree d = 3 mod 4 in [3, 20000): 4055 values, 0 failures of the rule (1 at 3; 3 for d = 3 mod 8; 1 for d = 7 mod 8)

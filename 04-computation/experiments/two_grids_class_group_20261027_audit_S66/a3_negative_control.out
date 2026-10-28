@@ -1,0 +1,13 @@
+== negative control: search 22 with the class multisets of 30 (14 mod 16) and of 12 (12 mod 16), B = 30
+  admissible class multisets mod 16 (machine-enumerated): 4
+  multiset {w,w,w2,w2}: split (w,w | w2,w2), 5.08e+04 pair sums
+  multiset {w,w,9w2,9w2}: split (w,w | 9w2,9w2), 5.08e+04 pair sums
+  multiset {9w,9w,w2,w2}: split (9w,9w | w2,w2), 5.43e+04 pair sums
+  multiset {9w,9w,9w2,9w2}: split (9w,9w | 9w2,9w2), 5.43e+04 pair sums
+deep n = 22, B = 30: 210390 pair sums processed; 0 hits (multiset-split solutions, verified) [2 s wall]
+  admissible class multisets mod 16 (machine-enumerated): 2
+  multiset {1,1,1,9}: split (1,1 | 1,9), 7.94e+04 pair sums
+  multiset {1,9,9,9}: split (1,9 | 9,9), 8.29e+04 pair sums
+deep n = 22, B = 30: 162345 pair sums processed; 0 hits (multiset-split solutions, verified) [2 s wall]
+== correct patterns:
+deep n = 22, B = 30: 104625 pair sums processed; 3 hits (multiset-split solutions, verified) [1 s wall]
