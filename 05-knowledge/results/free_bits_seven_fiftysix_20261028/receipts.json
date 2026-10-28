@@ -1,5 +1,5 @@
 {
-  "checks": 10375,
+  "checks": 10508,
   "guarded_erasures": [
     {
       "fixed": [],
@@ -432,6 +432,9 @@
     0,
     1080
   ],
+  "paley_orientations_per_matching": {
+    "4": 56
+  },
   "collatz_cosets": [
     {
       "syndrome": 0,

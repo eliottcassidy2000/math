@@ -184,6 +184,27 @@ def contraction(M,q):
  return count
 geometric_counts=[contraction(N,6) for N in [M,Mi]]
 require(geometric_counts==[0,1080])
+# Incoming Session85 map: line normals, not point labels, index the arithmetic code.
+alpha_powers=[1,2,4,3,6,7,5];logs={v:i for i,v in enumerate(alpha_powers)}
+def dot(a,b):return (a&b).bit_count()%2
+base={(x,y) for x in range(1,8) for y in range(1,8) if x!=y and (logs[y]-logs[x])%7 in [1,2,4]}
+line_normal={}
+for x,y in combinations(range(1,8),2):
+ ns=[a for a in range(1,8) if dot(a,x)==dot(a,y)==0]
+ require(len(ns)==1);line_normal[x,y]=ns[0]
+orientations={}
+for word in C:
+ edges=set()
+ for x,y in combinations(range(1,8),2):
+  flip=word>>(line_normal[x,y]-1)&1
+  edges.add((x,y) if ((x,y) in base)^bool(flip) else (y,x))
+ orientations[word]=edges
+paley_fixes=[]
+for T in matrices:
+ fixed=[w for w,es in orientations.items() if {(apply(T,a),apply(T,b)) for a,b in es}==es]
+ require(len(fixed)==4)
+ require(sum(w.bit_count()%2==0 for w in fixed)==2)
+ paley_fixes.append(len(fixed))
 # Actual Collatz parity cylinders at an unchanged seven-step integer clock.
 parity_sources={}
 for n in range(1,129):
@@ -238,6 +259,6 @@ for t,m in [(1,7),(2,56)]:
  rational=eps**m/(2**m*factorial(m)*prod(widths))
  if m==7:require(rational==Q(6879714958723010531,935615849440640907310521750000))
  borwein.append({'threshold':t,'first_m':m,'last_m':m-1,'first_denominator':2*m+1,'epsilon':str(eps),'deficit_over_pi':str(rational)})
-result={'checks':checks,'guarded_erasures':erasures,'banks':banks,'fano_cut_census':{str(k):v for k,v in sorted(cuts.items())},'orthant_moments':moments,'orthant_tail_at_6.5':{'C0':'1/10321920','C1':'0'},'affine_planes':len(planes),'pointed_planes':56,'GL3_order3':len(matrices),'matching_direction_counts':dict(directions),'equivariant_triangles':len(triangles),'affine_triple_orbits':dict(triple_types),'unit_distance_orientation_counts':geometric_counts,'collatz_cosets':collatz_cosets,'square_sum_sample':ham_receipts,'permutation_decoding':permutation_summary,'borwein':borwein}
+result={'checks':checks,'guarded_erasures':erasures,'banks':banks,'fano_cut_census':{str(k):v for k,v in sorted(cuts.items())},'orthant_moments':moments,'orthant_tail_at_6.5':{'C0':'1/10321920','C1':'0'},'affine_planes':len(planes),'pointed_planes':56,'GL3_order3':len(matrices),'matching_direction_counts':dict(directions),'equivariant_triangles':len(triangles),'affine_triple_orbits':dict(triple_types),'unit_distance_orientation_counts':geometric_counts,'paley_orientations_per_matching':dict(Counter(paley_fixes)),'collatz_cosets':collatz_cosets,'square_sum_sample':ham_receipts,'permutation_decoding':permutation_summary,'borwein':borwein}
 (P/'receipts.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k not in ['banks','borwein']},indent=2))

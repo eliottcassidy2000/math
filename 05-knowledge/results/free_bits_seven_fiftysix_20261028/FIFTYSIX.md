@@ -119,3 +119,36 @@ distance gadget. Geometry and colour semantics must still be authenticated.
 The verification enumerates all105 matchings, all168 invertible matrices,
 all56 order-three matrices, all56 oriented triangles, and all9,408
 object/symmetry pairs. No random or bounded-height inference is needed.
+
+## Incoming refinement: one matching leaves four compatible Paley orientations
+
+Session85's [Fano–Paley transport](../session85_arithmetic_codes_free_bits_20261028/FANO_PALEY_INFORMATION.md)
+arrived during this work. With a fixed Fano plane and a chosen Paley baseline,
+it identifies the16 compatible orientations with Hamming words
+
+    c(S,v)(a)=S+a dot v, S in F2, v in F2^3,
+
+where a indexes **line normals**. The eight v choose the disjoint Fano partner;
+S chooses global reversal. Its field chart makes Frobenius an automorphism of
+the baseline. The16/112 classification and Hamilton counts189/171 are inherited
+and are not rediscovered here.
+
+**Corollary (PROVED relative to that finite classification).** Every one of our
+56 matchings, through its order-three map T, is compatible with exactly four
+of these16 Paley orientations. Two lie in each global-chirality orbit. Thus
+retaining the matching/Frobenius leaves two binary choices in this four-state
+fibre, not zero choices.
+
+For the baseline Frobenius, transport of line normals is contragredient and
+transport of v is v->Tv. Since the baseline is fixed, c(S,v) is invariant
+exactly when Tv=v. The fixed space is one-dimensional, giving two v and two S.
+Every order-three T is GL-conjugate to Frobenius; conjugation permutes the16
+orientations and proves the count for every T. The checker independently
+constructs the16 line-flipped tournaments and tests all56 maps, obtaining four
+fixed orientations, two of each codeword parity, every time.
+
+This adds a concrete fibre to the common theory: Fano incidence determines
+neither a Paley orientation nor its reversal, and even a specified Frobenius
+matching does not remove both remaining choices. Reading prime columns as
+line normals uses the declared polarity; forgetting that dual-coordinate
+change would give the wrong transport rule.

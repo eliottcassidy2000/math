@@ -27,6 +27,7 @@ and source-specific dynamical payments as separate data.
 | Seven nonzero vectors of F2^3 | Fano plane; Hamming[7,4,3] parity-check columns | primal columns vs dual checks |
 | Fifteen nonzero words of its dimension-four code | 7 triples+7 quadrangles+all-one word | all-one word is not a minimal circuit |
 | Fifteen columns of F2^4 minus0 | next Hamming[15,11,3], different use of15 | actual prime realization |
+| 56 spreads of PG(3,2) | partitions of15 points into five lines; each point lies on seven lines | isotropy needs a chosen alternating form |
 | Sixteen affine columns(1,v), v in F2^4 | five independent checks; extended[16,11,4] | adding a zero column alone is not an overall parity check |
 | Seven Fano quadrangles, eight matchings each | 56 four-direction matchings in105=7+42+56 | actual binary addresses and pairing |
 | 56 oriented noncollinear Fano triangles | GL3 order-three maps and56 matchings, exact new assembly | orientation and fixed origin |
@@ -55,9 +56,9 @@ not equality of those two counts.
 ## 3. Older threads that changed the present argument
 
 **June, two meanings of Lyapunov.**
-[The E7/tournament-game reflection](../../07-reflections/two-lyapunovs-the-tournament-game-and-the-e7-symplectic-tournament-kps.md)
+[The E7/tournament-game reflection](../../../07-reflections/two-lyapunovs-the-tournament-game-and-the-e7-symplectic-tournament-kps.md)
 proposed a56-dimensional symplectic game and a Coxeter-frequency interpretation.
-Its [follow-up](../../07-reflections/the-ocf-is-a-mayer-gas-lrc-is-its-conditional-twin-e7-is-its-fano-cousin-kps.md)
+Its [follow-up](../../../07-reflections/the-ocf-is-a-mayer-gas-lrc-is-its-conditional-twin-e7-is-its-fano-cousin-kps.md)
 explicitly retracts that frequency claim: a symplectic form is not the Coxeter
 operator on a rank-seven Cartan space. A torus-invariant pairing of weight
 vectors pairs opposite weights; its zero pairings also prevent treating it as
@@ -71,16 +72,16 @@ weights on the same constrained selection object. Formal signed expansions
 still require their own convergence or finite-sum scope.
 
 **May/June, chirality and56.**
-[HYP-1824](../../05-knowledge/hypotheses/HYP-1824-lrc-tournament-56-chirality-bridge.md)
+[HYP-1824](../../../05-knowledge/hypotheses/HYP-1824-lrc-tournament-56-chirality-bridge.md)
 records the missing-cell/tournament comparison as EXPLORATORY. The modern
-[THM-1420](../../01-canon/theorems/THM-1420-no-linear-tournament-invariants-and-the-chirality-that-survives.md)
+[THM-1420](../../../01-canon/theorems/THM-1420-no-linear-tournament-invariants-and-the-chirality-that-survives.md)
 proves why naive binary invariants fail to descend: relabelling acts affinely
 on edge bits. Restricting to an action preserving a marked frame can retain a
 bit that the full quotient destroys. This is directly relevant to our GL3
 versus affine/projective eight-point action distinction.
 
 **July, moment blindness and a false growing-cover extrapolation.**
-[Three seams](../../07-reflections/three-seams-the-quantized-seven-tile-wall-moment-blindness-and-the-sliver-kind-pasteur-S128c90.md)
+[Three seams](../../../07-reflections/three-seams-the-quantized-seven-tile-wall-moment-blindness-and-the-sliver-kind-pasteur-S128c90.md)
 contains a corrected seven-tile story: apparent growth toward extinction is
 blocked by the universal13-cover from the AP. It also records moment-matched
 sources with different loneliness. We do not import its broad asymptotic
@@ -89,7 +90,7 @@ version of low-order moment blindness, with explicit first distinguishing
 moment and tail endpoint.
 
 **August, the E7 hostile.**
-[THM-4019](../../01-canon/theorems/THM-4019-e7-character-transference-sharp-constant-counterexample.md)
+[THM-4019](../../../01-canon/theorems/THM-4019-e7-character-transference-sharp-constant-counterexample.md)
 explains a rank-seven obstruction through a Gram-radical characteristic and
 integral minima. It prevents substituting a binary rank count for an analytic
 energy bound. Our rank-to-corner amplification is exact only for the stated
@@ -124,3 +125,27 @@ square-sum threshold.
 Incoming audited THM-4837/4838/4839 distinguish published content, elementary
 repo deductions, finite tests and numerology. Their corrected status is used
 here; pre-audit abstracts are not treated as current truth.
+
+## 5. Late incoming refinements
+
+The [free-bits/signed-incidence packet](../free_bits_signed_incidence_20261028/THEORY.md)
+adds a particularly good common instance of7,15,5,56: projective3-space overF2
+has15 points, seven lines through each point, and56 partitions into five
+lines. After an alternating form is chosen,15 of its35 lines are isotropic,
+and six spreads are isotropic. Each spread supports three nondegenerate forms:
+28*6=56*3=168 incident form/spread pairs. That168 is an incidence count; we
+have not identified this action with the168-element GL(3,2) torsor.
+
+Its all-size trace theorem proves that an actual subfield spread together with
+absolute Frobenius selects a unique nondegenerate alternating form. This is a
+constructive free-information result: Frobenius alone and the spread alone
+leave choices, while their compatibility removes them. The normal-basis phase
+is still not selected. This stronger incoming theorem is inherited, not redone.
+
+Session85's [Fano–Paley map](../session85_arithmetic_codes_free_bits_20261028/FANO_PALEY_INFORMATION.md)
+transports the arithmetic Hamming kernel to16 Paley orientations via line
+normals and a baseline orientation. We add the precise link to our56-matchings:
+each matching's order-three map fixes four of the16 orientations, two in each
+chirality orbit. See the last section of FIFTYSIX.md. This uses the incoming
+classification and supplies a new retained-fibre count, not a replacement for
+its dual-coordinate convention.

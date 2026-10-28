@@ -107,7 +107,7 @@ integer obstruction group.
 ## Planar Jacobian: valuation codes need a global completion
 
 The exact closest mechanism is
-[THM-2685](../../01-canon/theorems/THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate.md).
+[THM-2685](../../../01-canon/theorems/THM-2685-equivariant-kummer-boundary-parity-completion-and-divisor-residue-gate.md).
 For squareclasses on a normal affine complex variety, divisor-valuation parity
 is a binary code, but its kernel fits into
 

@@ -37,13 +37,17 @@ SIGNED_INCIDENCE_RELATIONS are credited explicitly. Their code and tables are
 not overwritten. The new rank-to-corner and matching maps compose with these
 results rather than promoting the same linear recovery theorem again.
 
+Late incoming0f45d3b463,a0103d88fe,1b86e4eadc add trace-form reconstruction
+and the Fano–Paley map. The final section of FIFTYSIX.md extends their
+classification by the four-compatible-orientations count.
+
 The final repository revision may be newer than the inventory pin. The
 inventory is intentionally reproducible at that fixed pin. It does not count
 later additions as if they had already been searched.
 
 ## Checks and exact universes
 
-`python3 check.py` and `python3 -O check.py` give identical output and10,375
+`python3 check.py` and `python3 -O check.py` give identical output and10,508
 active checks (exceptions, not assert). They cover:
 
 - the eight observation contexts of the four-erasure composite bank;
@@ -55,6 +59,8 @@ active checks (exceptions, not assert). They cover:
 - all56 Steiner triples/pointed affine planes;
 - all105 matchings,168 GL3 matrices,56 order-three elements,56 oriented triangles,
   and9,408 equivariance pairs;
+- all56 order-three maps against the16 incoming Paley orientations, with four
+  fixed orientations and two of each chirality for every map;
 - the exact single-edge unit-distance port relation, all6^4 pair-colour assignments;
 - all128 positive sources at the seven-step Collatz clock;
 - all permutation edge-sum fibres through order8;
@@ -107,3 +113,11 @@ detectors; turn certificate failure into an address, then change sidecars;
 retain the product and shared labels before taking scalar totals; treat pulls
 as synthesis opportunities. No new universal card is promoted: the stronger
 cross-domain complexity claim remains OPEN, with explicit counterindications.
+
+## Repository validation
+
+All31 local Markdown links resolve to files or tracked sparse paths. The
+agent-facing documentation checker passes. Its inherited122-line hypothesis
+index exceeded the120-line limit; joining two wrapped bullet continuations
+restored the limit without changing mathematical content or the leading banner.
+The same formatting repair independently arrived upstream during close-out.
