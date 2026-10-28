@@ -1,7 +1,7 @@
 ---
 id: HYP-9436
 title: "The crossing index of the odd harmonic sum is floor(exp(2n - gamma)/4) for every n >= 2 (the odd, half-shifted analogue of Comtet's harmonic-number problem); pre-registered exact test to n = 3000 and to the thresholds k*pi, k <= 500"
-status: OPEN (PRE-REGISTERED; confirmatory run pending at the time of this commit)
+status: OPEN in general; PROVED for 2 <= n <= 3000; pre-registered P1, P2, P3 all CONFIRMED (2026-10-28)
 session: opus-2026-10-28-S67
 date: 2026-10-28
 related: [THM-4837, THM-4838]
@@ -57,3 +57,22 @@ Confirmatory run: `python3 borwein_ladder_vsc_twelve_20261028.py 3000 500`.
 The conjecture is refuted by any n with frac(X_n) inside the window together with an exact check (via the r(M)
 bounds and, if needed, the next Euler-Maclaurin term) showing that O at M = floor(X) already exceeds n. A precision
 failure (the guard is not met) is reported as UNDECIDED, not as a refutation.
+
+## Results (confirmatory run, 2026-10-28, after the pre-registration commit a14c71ec13)
+
+Command: `python3 borwein_ladder_vsc_twelve_20261028.py 3000 500`.
+
+- **(P1) CONFIRMED.** No window exception for 2 <= n <= 3000, so m(n) = floor(exp(2n - gamma)/4) is PROVED there. The
+  tightest case is n = 2, with frac(X)/window = 101.8. n = 1 holds by direct check (m(1) = 1).
+- **(P2) CONFIRMED.** Kolmogorov-Smirnov D = 0.0192 for N = 2999, against the 1% critical value 0.0298.
+- **(P3) CONFIRMED.** No exception for the thresholds k pi, 1 <= k <= 500: m(pi) = 75 (denominator 151),
+  m(2 pi) = 40249 (80499), m(3 pi) = 21553437 (43106875).
+
+**OEIS A092315 status (read 2026-10-28).**
+- G. Kirchner (2020) states the floor formula with a precision check for n <= 1000.
+- M. F. Hasler (2017) conjectures floor(exp(2n - gamma)/4 + 1/8). That form is **false**: it differs from the proved
+  value at n = 17, 31, 45, 57, 59, 63, 86, 118, ..., 375 of the n <= 3000 (THM-4837 (6)). The case n = 17 is also
+  checked independently via digamma.
+
+The rerun added the Hasler and digamma checks and the genus and Monster assertions of THM-4838. The pre-registered
+quantities are unchanged.

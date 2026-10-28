@@ -289,6 +289,31 @@ mp.mp.dps = 40
 say("  thresholds xi = k*pi, k = 1..%d: window exceptions %s ; m(k pi), 2m+1 for k = 1, 2, 3: %s" % (KMAX, exc_pi, first))
 assert exc_pi == [] and first[1] == (2, 40249, 80499)
 
+# C3. OEIS A092315 lists two formulas: floor(X) (Kirchner 2020) and floor(X + 1/8) (Hasler 2017, 'conjectured').
+#     They differ exactly when frac(X) >= 7/8; there the window test proves floor(X), so the +1/8 form fails.
+mp.mp.dps = DMAX
+G = +mp.euler
+hasler_fail = []
+for n in range(2, NMAX + 1):
+    X = mp.exp(2 * n - G) / 4
+    if X - mp.floor(X) >= mp.mpf(7) / 8:
+        hasler_fail.append(n)
+mp.mp.dps = 80
+def O_dg(m):                       # O_m = (psi(m + 3/2) - psi(1/2))/2, an independent evaluation
+    return (mp.digamma(m + mp.mpf(3) / 2) - mp.digamma(mp.mpf(1) / 2)) / 2
+for m in [0, 1, 7, 56, 418]:
+    assert abs(O_dg(m) - mp.fsum([mp.mpf(1) / (2 * j + 1) for j in range(m + 1)])) < mp.mpf(10) ** -70
+checks = []
+for n in hasler_fail[:3]:
+    X = mp.exp(2 * n - mp.euler) / 4
+    F = int(mp.floor(X))
+    assert O_dg(F - 1) < n < O_dg(F)           # a(n) = floor(X), not floor(X) + 1
+    checks.append((n, F, mp.nstr(O_dg(F - 1) - n, 3), mp.nstr(O_dg(F) - n, 3)))
+mp.mp.dps = 40
+say("  Hasler's floor(X + 1/8) differs from the proved value at %d of the n <= %d; first: %s" % (len(hasler_fail), NMAX, hasler_fail[:8]))
+say("  digamma cross-check (n, a(n), O_(a-1) - n, O_a - n): %s" % checks)
+assert hasler_fail[0] == 17 and checks[0][1] == 81897532160124
+
 # ---------------------------------------------------------------- D
 say("")
 say("=" * 78)
@@ -401,6 +426,35 @@ for k, want in [(5, 264), (6, 65520)]:
     val = B(2 * k) / (4 * k)
     assert abs(val.denominator) == want
 say("  denominators of B_10/20 and B_12/24 (= |im J| in pi_19^s and pi_23^s): 264 = 2^3*3*11 and 65520 = 2^4*3^2*5*7*13")
+
+# E2. the twelve behind the labels: (p-1) | 12, (p+1) | 12 and (p+1) | 24 lists; genus of X_0(p); Monster exponents
+P200 = [p for p in range(2, 200) if isprime(p)]
+def genus_X0(p):
+    if p == 2 or p == 3:
+        return 0
+    nu2 = 1 + (1 if p % 4 == 1 else -1)
+    nu3 = 1 + (1 if p % 3 == 1 else -1)
+    g = Fr(p + 1, 12) - Fr(nu2, 4) - Fr(nu3, 3)
+    assert g.denominator == 1
+    return int(g)
+gz = [p for p in P200 if genus_X0(p) == 0]
+m12 = [p for p in P200 if 12 % (p - 1) == 0]
+p12 = [p for p in P200 if 12 % (p + 1) == 0]
+p24 = [p for p in P200 if 24 % (p + 1) == 0]
+assert gz == m12 == vsc(12) == [2, 3, 5, 7, 13]
+assert p12 == [2, 3, 5, 11] and p24 == [2, 3, 5, 7, 11, 23]
+assert all(12 % (q + 1) == 0 for q in (2, 3, 11)) and all(12 % (q - 1) == 0 for q in (2, 5, 7))
+say("  genus X_0(p) = 0 exactly for p in %s = {p : (p-1) | 12} = vSC(12)" % gz)
+say("  {p : (p+1) | 12} = %s contains {2,3,11}; {p : (p-1) | 12} contains {2,5,7}; {p : (p+1) | 24} = %s (M24 eta products)" % (p12, p24))
+MON = {2: 46, 3: 20, 5: 9, 7: 6, 11: 2, 13: 3, 17: 1, 19: 1, 23: 1, 29: 1, 31: 1, 41: 1, 47: 1, 59: 1, 71: 1}
+BAB = {2: 41, 3: 13, 5: 6, 7: 2, 11: 1, 13: 1, 17: 1, 19: 1, 23: 1, 31: 1, 47: 1}
+cube = sorted(p for p, e in MON.items() if e >= 3)
+ratio = {p: MON[p] - BAB.get(p, 0) for p in MON if MON[p] - BAB.get(p, 0) > 0}
+sq_ratio = sorted(p for p, e in ratio.items() if e >= 2)
+assert cube == [2, 3, 5, 7, 13] == sq_ratio
+assert {p: ratio[p] for p in (2, 3, 5, 7, 11, 13)} == {2: 5, 3: 7, 5: 3, 7: 4, 11: 1, 13: 2}
+assert all(MON[p] >= 1 + 24 // (p - 1) for p in cube)          # room for the extraspecial p^(1+24/(p-1))
+say("  Monster: p^3 | |M| exactly for p in %s; primes with exponent >= 2 in |M|/|B| = %s; exponents 2^5 3^7 5^3 7^4 11 13^2 (Session43 cycle)" % (cube, sq_ratio))
 
 # ---------------------------------------------------------------- F
 say("")

@@ -1,0 +1,87 @@
+==============================================================================
+A. Odd harmonic crossings: m(T) = least m with O_m = sum_{j<=m} 1/(2j+1) > T
+==============================================================================
+  T = 2      m(T) = 7       denominator 2m+1 = 15      O_m - T in [0.021800422, 0.021800422]
+  T = 3      m(T) = 56      denominator 2m+1 = 113     O_m - T in [0.0032870588, 0.0032870588]
+  T = 4      m(T) = 418     denominator 2m+1 = 837     O_m - T in [0.00069059164, 0.00069059164]
+  T = 5      m(T) = 3091    denominator 2m+1 = 6183    O_m - T in [4.1720043e-5, 4.1720043e-5]
+  T = 6      m(T) = 22845   denominator 2m+1 = 45691   O_m - T in [2.0676198e-5, 2.0676198e-5]
+  T = 7      m(T) = 168803  denominator 2m+1 = 337607  O_m - T in [1.7917843e-6, 1.7917843e-6]
+  T = 2*pi  m(T) = 40249 denominator = 80499 ; O_m - 2pi in [2.34726733956e-6, 2.34726733956e-6] ; O_(m-1) - 2pi <= -1.00752e-5
+  => owner's 7, 56, 418 = m(2), m(3), m(4); owner's 15, 113 = 2m+1 at T = 2, 3; owner's 80499 = 2m+1 at T = 2*pi.
+     (the T = 4 denominator is 837 = 2*418 + 1; 80499 is NOT on the integer ladder 15, 113, 837, 6183, 45691, 337607)
+
+==============================================================================
+B. Borwein integrals I_m(t) = int_0^oo (sin tx / x) prod_{j=1}^m sinc(x/(2j+1)) dx = pi/2 - pi*P(S'_m > t)
+   F_m(xi) = int_R prod_{j=0}^m sinc(x/(2j+1)) cos(xi x) dx = pi*P(xi-1 <= S'_m <= xi+1)
+==============================================================================
+  I_7(1)/pi = 467807924713440738696537864469/935615849440640907310521750000
+  matches the published Borwein value 467807924713440738696537864469/935615849440640907310521750000 * pi
+  t=1 (classic, owner 15)            m = 7      D = 15     first-failure value = [2.3100572725, 2.3100572725] x 10^-11
+  t=2 (2cos x variant, owner 113)    m = 56     D = 113    first-failure value = [2.3324296128, 2.3324296128] x 10^-138
+  t=3 (837)                          m = 418    D = 837    first-failure value = [4.5195214277, 4.5195214277] x 10^-1320
+  xi=2pi (owner 80499)               m = 40249  D = 80499  first-failure value = [4.2101759371, 4.2101759371] x 10^-226577
+  => owner's 231 and 233 are the 3-digit mantissas at the breaks 15 and 113;
+     the 2*pi break (80499) has mantissa 4.2102 (owner's 420 agrees to two digits).
+  naive forward double-precision summation gives eps = 2.34726731449e-6 and mantissa 4.20837 (truncates to 4.20)
+  telescoping identity pi/2 - I_m(t) = sum_{k>=0} F_m(t+1+2k): exact for m <= 8, t in {0,1/3,1/2,1,3/2}
+  quadrature on [0, 697.434]: pi/2 - I_7(1) = 2.3100582e-11 (tail <= 3.6e-15); closed form 2.3100572725e-11
+
+==============================================================================
+C. Crossing formula: m(xi) = floor(X), X = exp(2 xi - gamma)/4, whenever frac(X) >= X/(24 floor(X)^2)
+   (O_m = (1/2)ln(4M) + gamma/2 + r(M), M = m+1, 0 < r(M) < 1/(48 M^2) for M >= 1: GKP (9.89) bounds on H_N)
+==============================================================================
+  0 < r(M) < 1/(48 M^2) verified directly for M < 400, M = 1000, 5000
+  formula reproduces m(2..7) and m(2*pi) = 40249 (X = 40249.81105)
+  n = 2..3000: exceptions to the window test: [] ; tightest n = 2 with frac(X)/window = 101.84 (frac = 0.663662)
+  => m(n) = floor(exp(2n - gamma)/4) PROVED for every 2 <= n <= 3000 (6.8s)
+  heuristic: frac(X_n) KS distance from uniform D = 0.0192 (N = 2999; 1%-critical ~ 0.0298)
+  heuristic expected number of exceptions over all n >= 2 (uniform fractional parts): 0.006288
+  thresholds xi = k*pi, k = 1..500: window exceptions [] ; m(k pi), 2m+1 for k = 1, 2, 3: [(1, 75, 151), (2, 40249, 80499), (3, 21553437, 43106875)]
+  Hasler's floor(X + 1/8) differs from the proved value at 375 of the n <= 3000; first: [17, 31, 45, 57, 59, 63, 86, 118]
+  digamma cross-check (n, a(n), O_(a-1) - n, O_a - n): [(17, 81897532160124, '-5.71e-15', '3.97e-16'), (31, 118444884434618963782483288, '-3.91e-27', '3.15e-28'), (45, 171301750842755065780514989501366646742, '-2.87e-39', '4.44e-41')]
+
+==============================================================================
+D. von Staudt-Clausen as orbifold Euler characteristics
+==============================================================================
+  2k = 2   vSC = [2, 3]            chi_orb = 5/6          -B_2k = -1/6         N_k = 1
+  2k = 4   vSC = [2, 3, 5]         chi_orb = 1/30         -B_2k = 1/30         N_k = 1
+  2k = 6   vSC = [2, 3, 7]         chi_orb = -1/42        -B_2k = -1/42        N_k = 1
+  2k = 8   vSC = [2, 3, 5]         chi_orb = 1/30         -B_2k = 1/30         N_k = 1
+  2k = 10  vSC = [2, 3, 11]        chi_orb = -5/66        -B_2k = -5/66        N_k = 1
+  2k = 12  vSC = [2, 3, 5, 7, 13]  chi_orb = -4769/2730   -B_2k = 691/2730     N_k = 1
+  2k = 14  vSC = [2, 3]            chi_orb = 5/6          -B_2k = -7/6         N_k = 2
+  chi_orb(S^2(vSC(2k))) = -B_2k (mod 1) for all 2k <= 120; exact equality only at 2k in [4, 6, 8, 10]
+  triangle groups (2,3,p): chi = 1/p - 1/6 = -B_(p-1) exactly for p in [5, 7, 11]
+  chi = -B_(p-1) mod 1 iff vSC(p-1) = {2,3,p}: p in [5, 7, 11, 23, 47, 59, 83, 107, 167, 179, 227, 239, 263, 347]
+  X(5): 2g - 2 = |PSL2(F_5)| * B_4 = 60 * -1/30 = -2  (g = 0)
+  X(7): 2g - 2 = |PSL2(F_7)| * B_6 = 168 * 1/42 = 4  (g = 3)
+  X(11): 2g - 2 = |PSL2(F_11)| * B_10 = 660 * 5/66 = 50  (g = 26)
+
+==============================================================================
+E. The twelve: {2,3,4,5,7,13}, {2,3,11}, {2,5,7}
+==============================================================================
+  {d+1 : d | 12} = [2, 3, 4, 5, 7, 13] ; primes = vSC(12) = [2, 3, 5, 7, 13] ; B_12 = -691/2730 ; vSC(10) = [2, 3, 11], B_10 = 5/66
+  sigma^{-1}(144) = [66, 70, 94, 115, 119] ; prime sets with prod(p+1) = 144: [[2, 3, 11], [2, 5, 7], [2, 47], [5, 23], [7, 17]]
+  the only 3-prime solutions are {2,3,11} = vSC(10) and {2,5,7}, the unique subset of vSC(12) with sigma = 144
+  triangle groups: chi(2,3,11) = -5/66 = -B_10 ; chi(2,5,7) = -11/70
+  2k = 2   vSC = [2, 3]            excess sum(1/p) - 1 = -1/6       deficit (pi/2 - I)/pi = 0
+  2k = 4   vSC = [2, 3, 5]         excess sum(1/p) - 1 = 1/30       deficit (pi/2 - I)/pi = 1/43200
+  2k = 6   vSC = [2, 3, 7]         excess sum(1/p) - 1 = -1/42      deficit (pi/2 - I)/pi = 0
+  2k = 8   vSC = [2, 3, 5]         excess sum(1/p) - 1 = 1/30       deficit (pi/2 - I)/pi = 1/43200
+  2k = 10  vSC = [2, 3, 11]        excess sum(1/p) - 1 = -5/66      deficit (pi/2 - I)/pi = 0
+  2k = 12  vSC = [2, 3, 5, 7, 13]  excess sum(1/p) - 1 = 691/2730   deficit (pi/2 - I)/pi = 74322914521/101569313664000
+  => for 2k <= 12 the vSC sinc product is a Borwein integral with excess -B_2k: exact (pi/2) for 2k = 2, 6, 10;
+     deficit pi/43200 for 2k = 4, 8; deficit pi*(691^5 - 271^5)/(3840*2730^4) for 2k = 12 (271 = 691 - 420, 420 = 2*2730/13)
+  denominators of B_10/20 and B_12/24 (= |im J| in pi_19^s and pi_23^s): 264 = 2^3*3*11 and 65520 = 2^4*3^2*5*7*13
+  genus X_0(p) = 0 exactly for p in [2, 3, 5, 7, 13] = {p : (p-1) | 12} = vSC(12)
+  {p : (p+1) | 12} = [2, 3, 5, 11] contains {2,3,11}; {p : (p-1) | 12} contains {2,5,7}; {p : (p+1) | 24} = [2, 3, 5, 7, 11, 23] (M24 eta products)
+  Monster: p^3 | |M| exactly for p in [2, 3, 5, 7, 13]; primes with exponent >= 2 in |M|/|B| = [2, 3, 5, 7, 13]; exponents 2^5 3^7 5^3 7^4 11 13^2 (Session43 cycle)
+
+==============================================================================
+F. {231, 233, 420} in prior repository work
+==============================================================================
+  Collatz: 17 Syracuse steps 231 -> 233 (crossroads233_20260926_graph.md); m_17(231 + 2^28 t) = 233 + 2*3^17 t checked t = 1..3
+  aliquot: 231 = s(345), sigma(345) = 24^2 ; 420 = s(364), sigma(364) = 28^2 ; square-sigma preimages of 233: []
+
+ALL ASSERTIONS PASSED (21.0s)
