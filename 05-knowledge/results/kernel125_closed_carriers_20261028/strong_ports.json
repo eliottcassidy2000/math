@@ -1,0 +1,47 @@
+{
+  "status": "FINITE-EXACT",
+  "actual_strong_atom_order": 7,
+  "full_chart_group": 21,
+  "pinned_owner_chart_group": 3,
+  "matching_attachments": 21,
+  "all_attachments_strong_order": 14,
+  "F8_polynomial_mask": 11,
+  "actual_frobenius_orbit": [
+    2,
+    4,
+    6
+  ],
+  "restricted_profiles": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "unrestricted_profile_collision": [
+    2,
+    3
+  ],
+  "four_atom_relative_gain_states": 9261,
+  "off_tree_matching_checks": 55566,
+  "native_complement_scores": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4
+  ],
+  "checks": 65953
+}

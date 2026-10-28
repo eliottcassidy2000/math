@@ -1,0 +1,332 @@
+{
+  "status": "FINITE-EXACT",
+  "generation": "least pointed-root certificate; early reject at first smaller root",
+  "degree_first": true,
+  "results": [
+    {
+      "order": 1,
+      "classes": 1,
+      "pointed_states": 1,
+      "reroots_examined": 0,
+      "old_all_rows_reroots": 1,
+      "own_root_queries_saved": 1,
+      "rejected_candidates": 0,
+      "degree_rejections": 0,
+      "higher_degree_roots_skipped": 0,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 65536,
+        "currsize": 0
+      },
+      "exact_parent_isomorphism_lookups": 0,
+      "seconds": 0.0
+    },
+    {
+      "order": 2,
+      "classes": 1,
+      "pointed_states": 2,
+      "reroots_examined": 0,
+      "old_all_rows_reroots": 4,
+      "own_root_queries_saved": 2,
+      "rejected_candidates": 1,
+      "degree_rejections": 1,
+      "higher_degree_roots_skipped": 1,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 0,
+        "maxsize": 65536,
+        "currsize": 0
+      },
+      "exact_parent_isomorphism_lookups": 0,
+      "seconds": 0.0
+    },
+    {
+      "order": 3,
+      "classes": 2,
+      "pointed_states": 4,
+      "reroots_examined": 2,
+      "old_all_rows_reroots": 12,
+      "own_root_queries_saved": 4,
+      "rejected_candidates": 2,
+      "degree_rejections": 2,
+      "higher_degree_roots_skipped": 2,
+      "reject_position_histogram": {},
+      "automorphism_order_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 0,
+        "misses": 2,
+        "maxsize": 65536,
+        "currsize": 2
+      },
+      "exact_parent_isomorphism_lookups": 2,
+      "seconds": 0.0
+    },
+    {
+      "order": 4,
+      "classes": 4,
+      "pointed_states": 12,
+      "reroots_examined": 4,
+      "old_all_rows_reroots": 48,
+      "own_root_queries_saved": 12,
+      "rejected_candidates": 8,
+      "degree_rejections": 7,
+      "higher_degree_roots_skipped": 9,
+      "reject_position_histogram": {
+        "1": 1
+      },
+      "automorphism_order_histogram": {
+        "1": 2,
+        "3": 2
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 1,
+        "misses": 3,
+        "maxsize": 65536,
+        "currsize": 3
+      },
+      "exact_parent_isomorphism_lookups": 3,
+      "seconds": 0.001
+    },
+    {
+      "order": 5,
+      "classes": 12,
+      "pointed_states": 48,
+      "reroots_examined": 12,
+      "old_all_rows_reroots": 240,
+      "own_root_queries_saved": 48,
+      "rejected_candidates": 36,
+      "degree_rejections": 33,
+      "higher_degree_roots_skipped": 46,
+      "reject_position_histogram": {
+        "2": 1,
+        "4": 2
+      },
+      "automorphism_order_histogram": {
+        "1": 7,
+        "3": 4,
+        "5": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 4,
+        "misses": 8,
+        "maxsize": 65536,
+        "currsize": 8
+      },
+      "exact_parent_isomorphism_lookups": 8,
+      "seconds": 0.003
+    },
+    {
+      "order": 6,
+      "classes": 56,
+      "pointed_states": 296,
+      "reroots_examined": 71,
+      "old_all_rows_reroots": 1776,
+      "own_root_queries_saved": 296,
+      "rejected_candidates": 240,
+      "degree_rejections": 214,
+      "higher_degree_roots_skipped": 297,
+      "reject_position_histogram": {
+        "1": 5,
+        "2": 3,
+        "3": 6,
+        "4": 1,
+        "5": 11
+      },
+      "automorphism_order_histogram": {
+        "1": 41,
+        "3": 12,
+        "5": 2,
+        "9": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 33,
+        "misses": 38,
+        "maxsize": 65536,
+        "currsize": 38
+      },
+      "exact_parent_isomorphism_lookups": 38,
+      "seconds": 0.008
+    },
+    {
+      "order": 7,
+      "classes": 456,
+      "pointed_states": 3040,
+      "reroots_examined": 627,
+      "old_all_rows_reroots": 21280,
+      "own_root_queries_saved": 3040,
+      "rejected_candidates": 2584,
+      "degree_rejections": 2323,
+      "higher_degree_roots_skipped": 3389,
+      "reject_position_histogram": {
+        "1": 9,
+        "2": 12,
+        "3": 34,
+        "4": 23,
+        "5": 45,
+        "6": 138
+      },
+      "automorphism_order_histogram": {
+        "1": 399,
+        "3": 47,
+        "5": 4,
+        "7": 1,
+        "9": 4,
+        "21": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 364,
+        "misses": 263,
+        "maxsize": 65536,
+        "currsize": 263
+      },
+      "exact_parent_isomorphism_lookups": 263,
+      "seconds": 0.08
+    },
+    {
+      "order": 8,
+      "classes": 6880,
+      "pointed_states": 54256,
+      "reroots_examined": 9309,
+      "old_all_rows_reroots": 434048,
+      "own_root_queries_saved": 54256,
+      "rejected_candidates": 47376,
+      "degree_rejections": 43322,
+      "higher_degree_roots_skipped": 62353,
+      "reject_position_histogram": {
+        "1": 179,
+        "2": 201,
+        "3": 265,
+        "4": 202,
+        "5": 237,
+        "6": 657,
+        "7": 2313
+      },
+      "automorphism_order_histogram": {
+        "1": 6556,
+        "3": 292,
+        "5": 10,
+        "7": 2,
+        "9": 16,
+        "15": 2,
+        "21": 2
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 6198,
+        "misses": 3111,
+        "maxsize": 65536,
+        "currsize": 3111
+      },
+      "exact_parent_isomorphism_lookups": 3111,
+      "seconds": 0.656
+    },
+    {
+      "order": 9,
+      "classes": 191536,
+      "pointed_states": 1716608,
+      "reroots_examined": 278461,
+      "old_all_rows_reroots": 15449472,
+      "own_root_queries_saved": 1716608,
+      "rejected_candidates": 1525072,
+      "degree_rejections": 1405799,
+      "higher_degree_roots_skipped": 2049256,
+      "reject_position_histogram": {
+        "1": 2195,
+        "2": 3431,
+        "3": 6569,
+        "4": 5976,
+        "5": 8350,
+        "6": 10042,
+        "7": 20921,
+        "8": 61789
+      },
+      "automorphism_order_histogram": {
+        "1": 188337,
+        "3": 3047,
+        "5": 40,
+        "7": 4,
+        "9": 94,
+        "15": 8,
+        "21": 4,
+        "27": 1,
+        "81": 1
+      },
+      "parent_cache_capacity": 65536,
+      "parent_cache": {
+        "hits": 205383,
+        "misses": 73078,
+        "maxsize": 65536,
+        "currsize": 65536
+      },
+      "exact_parent_isomorphism_lookups": 73078,
+      "seconds": 19.877
+    }
+  ],
+  "bank_sha256": "e41e109f5a2c957994aef37c4e82862c7a713131c7f9124283d8e1617a43d1e6",
+  "byte_identical_to_prior_bank": false,
+  "exact_class_bijection_to_prior_bank": true,
+  "hostile_81_27": {
+    "rows_AAA": [
+      250,
+      252,
+      249,
+      240,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "rows_BAA": [
+      242,
+      244,
+      241,
+      247,
+      4000,
+      4032,
+      3984,
+      3840,
+      2575,
+      3087,
+      2319,
+      15
+    ],
+    "labelled_cyclic_triples": 67,
+    "automorphism_orders": [
+      81,
+      27
+    ],
+    "Hamilton_paths": [
+      462915,
+      462915
+    ],
+    "identity_order_legal": [
+      true,
+      false
+    ]
+  },
+  "source_oracle": "05-knowledge\\results\\relation_tower_frobenius_ports_20261028\\check_root_switch.py",
+  "checks": 467568
+}

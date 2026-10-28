@@ -1,5 +1,14 @@
 # Three Computational Threads — S25 Synthesis
 
+> **Historical correction,2026-10-28:** the A000568 discussion below is not
+> a current numerical source. The exact single-three-cycle relative term is
+> `2*binom(n,3)*2^(-(2*n-4))`, not `binom(n,3)*2^-3`. Small relative real
+> error does not justify dropping terms in a modular computation. The
+> asserted persistent factor1.714 is contradicted by exact counts; the
+> corrected normalizations and replay are in
+> [the historical comparison](../05-knowledge/results/kernel125_closed_carriers_20261028/HISTORY.md).
+> Other sections remain historical and were not audited in this session.
+
 **Session:** opus-2026-04-05-S25
 **Topics:** DP/pruning for A000568, tournament CA dynamics, literature integration
 

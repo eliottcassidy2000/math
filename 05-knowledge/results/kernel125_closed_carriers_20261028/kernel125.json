@@ -1,0 +1,192 @@
+{
+  "status": "FINITE-EXACT",
+  "states": 125,
+  "named_single_vertex_probe_counts_by_active_modules": {
+    "0": 8,
+    "1": 360,
+    "2": 5400,
+    "3": 27000
+  },
+  "unmarked_hub_quotient": 25,
+  "forgetful_fibres": 5,
+  "linear_subspaces": 64,
+  "rotation_converse_invariant_kernel_sizes": [
+    1,
+    5,
+    25,
+    125
+  ],
+  "invariant_quotient_sizes": [
+    1,
+    5,
+    25,
+    125
+  ],
+  "strong_twenty_vertex_attachments_checked": 125,
+  "native_guard_paths": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      19,
+      15,
+      16,
+      17,
+      18
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      15
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      15,
+      16
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      18,
+      19,
+      15,
+      16,
+      17
+    ]
+  ],
+  "diagonal_guard_table": [
+    [
+      true,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  ],
+  "native_complement_T5_rows": [
+    26,
+    20,
+    9,
+    18,
+    4
+  ],
+  "native_complement_T5_scores": [
+    1,
+    2,
+    2,
+    2,
+    3
+  ],
+  "five_cell_tree_tuples": 3125,
+  "LCA_pair_checks": 31250,
+  "checks": 82652
+}

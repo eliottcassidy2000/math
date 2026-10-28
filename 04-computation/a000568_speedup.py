@@ -19,6 +19,12 @@ Strategy C: CRT + modular arithmetic
 Strategy D: Dirichlet-accelerated gcd quadratic form
 
 Author: opus-2026-03-07-S46f
+
+CORRECTION 2026-10-28: the original odd-part generator could restart on an
+even remainder (first wrong count: a(5)=10 instead of12). Its start parity
+is now repaired and Strategy A is independently replayed through n=30.
+Strategies B-D are not certified by that replay. Historical output is not a
+validation receipt. See kernel125_closed_carriers_20261028/HISTORY.md.
 """
 
 from math import gcd, factorial, isqrt

@@ -1,0 +1,22 @@
+{
+  "base": "b8672af00bcc6d440a9a00a6915325faf39fcdff",
+  "sha256": {
+    "04-computation/a000568_speedup.py": "9f982e3bbeac678b21bbec47cf2c28b8ba54047d5bc67891afb008f96c93b3d9",
+    "04-computation/a000568_v3_s90dm.py": "f2be15fb7d9ac6134c48cb228c3411e9d9d36193698442e409d014302839d17c",
+    "05-knowledge/results/kernel125_closed_carriers_20261028/audit.py": "a8f23b6207368d8c595c5111d362ff4a7de88bcf1f7151812372e1feeb360f97",
+    "05-knowledge/results/kernel125_closed_carriers_20261028/kernel125.py": "607ace8871a8558521ffd815b9079c058fd0ba55591682819712a62fa8322c6e",
+    "05-knowledge/results/kernel125_closed_carriers_20261028/legacy_audit.py": "d9a882bfaaa05fc04e3f9d2a4fa609d13a0fc812b3b3ab91272a9c07bd754b46",
+    "05-knowledge/results/kernel125_closed_carriers_20261028/root_minimum.py": "3d64d9662618aa9835388c3ee9bb8f7478c7ccb826f315cb29ec4b6bb7ca9b7a",
+    "05-knowledge/results/kernel125_closed_carriers_20261028/sequence_channels.py": "704247ae1427cc0d0766a711f856e1ec37e0649806cbbb4e84ec80a2b6ac1d1c",
+    "05-knowledge/results/kernel125_closed_carriers_20261028/strong_ports.py": "4fab97365339fc90213f1fed633f77dbb2a70ede0d407ff7f76f27593ddbef70",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/fields.json": "bfece67c670c885152f6966ba9f30000cb3d40f296904cdc3222be877c48e1d0",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/root_switch.json": "23b5a1f036045c29a2326afb06af349a136a61aa2e4bd13fe8c920cb951485df",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/tournament_bank.json.gz": "bd19e673c7172e26d7662d06ff14703f1034f95965fdc4709effb6b74af9adec",
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/contracted_ordinary.py": "63b45349cacb5eb9312c6f98a02e0e459a4e478b6319e6f87005b4c6211fd37a",
+    "05-knowledge/results/session64_lca_reverse_valuation_20261026/session64-counting/reverse_ordinary.py": "04d8ac415d8bfec7dd818702e4cee8e718c528248f4f3da2cd100d89e7496312",
+    "05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-root/output/census.json": "328c0f93b0ca090c411853e0ec41275d5766a55f623c927f5fea4a224a020f11",
+    "05-knowledge/results/session86_relations_attachment_carriers_20261028/recreate_a000568.py": "a8d85c9bc0e355ed4bf8140f6ae23b6d2c4141aad51d1b8bf3c067f302ee564f",
+    "05-knowledge/results/tournament_future_boundary_20261020/receipt.json": "79cc8cc0dac954566de69da7ea3dccb099616cfb20628ae2feec29508891d333"
+  }
+}

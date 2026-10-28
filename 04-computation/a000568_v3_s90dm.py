@@ -3,21 +3,27 @@
 a000568_v3_s90dm.py — A000568 version 3: further speedups
 opus-2026-03-16-S90dm
 
-Key insight: the partition sum T(n) = (1/n!) * sum |C_lambda| * 2^c(lambda)
-can be rewritten as:
-  T(n) = sum_{lambda |- n} 2^{c(lambda)} / (prod l_i^{m_i} * prod m_i!)
+CORRECTION 2026-10-28: the original code included even cycle types and
+already returned2 instead of1 at n=2. It now restricts to odd parts. The
+implementation still uses n! for integral accumulation; the former claim
+that it avoided n! was false. Historical timings/counts are not receipts
+for this corrected implementation. See kernel125_closed_carriers_20261028/HISTORY.md.
 
-This avoids computing n! entirely! We only need the denominator product.
+The partition sum T(n) = (1/n!) * sum |C_lambda| * 2^c(lambda)
+can be rewritten as:
+  T(n) = sum_{lambda |- n, all parts odd} 2^{c(lambda)} / (prod l_i^{m_i} * prod m_i!)
+
+The equality is rational; this implementation clears denominators with n!.
 
 Further speedup: precompute 2^k for k up to C(n,2) = n(n-1)/2.
 And: use MEMOIZATION on the gcd contributions.
 """
 
-from math import gcd, factorial
+from math import gcd, factorial, comb
 import time
 
 def T_v3(n):
-    """Fastest A000568 using direct formula without n! computation."""
+    """Exact odd-cycle Burnside sum with integral n!-scaled accumulation."""
     if n <= 1:
         return 1
 
@@ -46,11 +52,14 @@ def T_v3(n):
         if remaining == 0:
             yield []
             return
-        for size in range(min(remaining, max_size), 0, -1):
+        start = min(remaining, max_size)
+        if start % 2 == 0:
+            start -= 1
+        for size in range(start, 0, -2):
             max_mult = remaining // size
             for mult in range(1, max_mult + 1):
                 used = size * mult
-                for rest in gen(remaining - used, size - 1):
+                for rest in gen(remaining - used, size - 2):
                     yield [(size, mult)] + rest
 
     for parts in gen(n, n):
@@ -95,16 +104,18 @@ for n in [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]:
     elapsed = time.time() - t0
     digits = len(str(r))
 
-    # Count partitions (rough estimate)
+    # Count exactly the same odd-part partitions used by T_v3.
     part_count = [0]
     def count_gen(remaining, max_size):
-        pass
         if remaining == 0:
             part_count[0] += 1
             return
-        for size in range(min(remaining, max_size), 0, -1):
+        start = min(remaining, max_size)
+        if start % 2 == 0:
+            start -= 1
+        for size in range(start, 0, -2):
             for mult in range(1, remaining // size + 1):
-                count_gen(remaining - size * mult, size - 1)
+                count_gen(remaining - size * mult, size - 2)
 
     if n <= 50:
         part_count = [0]
@@ -112,7 +123,8 @@ for n in [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]:
     else:
         part_count = -1  # too slow to count
 
-    print(f"{n:4d} | {digits:7d} | {elapsed:10.2f} | {part_count[0] if part_count[0] >= 0 else '~':>10}")
+    displayed_count = part_count[0] if isinstance(part_count, list) else '~'
+    print(f"{n:4d} | {digits:7d} | {elapsed:10.2f} | {displayed_count:>10}")
 
     if elapsed > 300:
         print("  (stopping: too slow)")
@@ -157,8 +169,7 @@ for n in range(2, 12):
 print(f"\n  T(n) vs 2^C(n,2)/n!:")
 for n in range(3, 12):
     exact = vals[n]
-    approx = 2**comb(n,2) // factorial(n)
-    ratio = exact / approx if approx > 0 else 0
+    ratio = exact * factorial(n) / 2**comb(n,2)
     print(f"    T({n}) / (2^C({n},2)/n!) = {ratio:.6f}")
 
 from math import comb
@@ -166,8 +177,9 @@ from math import comb
 print(f"""
 
 The ratio T(n) / (2^C(n,2)/n!) approaches 1 as n grows.
-This is because for large n, almost all permutations have
-c(sigma) = 0 (only the identity contributes significantly).
+The identity contribution is asymptotically dominant in the Burnside sum.
+Even-cycle permutations fix no tournaments; this is a consistency
+obstruction, not a claim that their pair-orbit exponent is zero.
 
 The LEADING TERM: T(n) ~ 2^{{C(n,2)}} / n!.
 The CORRECTION: T(n) = 2^{{C(n,2)}}/n! * (1 + O(2^{{-n/2}})).

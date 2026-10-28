@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — March A000568 prototypes: an even restart and an omitted odd-cycle filter
+
+- **Affected sources:** `04-computation/a000568_speedup.py`, `04-computation/a000568_v3_s90dm.py`; the historical April reflection `07-reflections/three-computational-threads-s25.md` also contains an incorrectly normalized three-cycle correction and an invalid inference from relative approximation to modular residues.
+- **Minimal witnesses / first failed implication:** the speedup generator made its initial cap odd but restarted at `min(remaining,cap)` without restoring parity; `(3,2)` appeared at n=5 while valid odd continuations disappeared, yielding10 instead of12. The v3 producer included every partition and returned2 instead of1 at n=2; its claimed n!-free implementation still multiplied/divided by n!.
+- **Repair and strongest survivor:** make every recursive start odd, omit all even cycles, preserve exact integral Burnside accumulation, and test against independent pair-orbit counting. The valid formula and later production methods survive. Historical output is retained as provenance, not a current receipt. The exact one-three-cycle term relative to the identity is `2*binom(n,3)*2^(-(2*n-4))`; relative real smallness is not a divisibility bound.
+- **Evidence / missing coordinate / next question:** [new history and receipts](../05-knowledge/results/kernel125_closed_carriers_20261028/HISTORY.md) test corrected functions and retain pre-correction witnesses. Future cycle-length parity and exact residue precision must remain explicit. These corrections do not imply the entire historical corpus has been audited or that the modern exact A000568 counts are wrong.
+
 ## 2026-10-28 — THM-4840: the wrong extra bit and an omitted representation quantifier
 
 - **Affected sources:** THM-4840 (the long Tutte–Camion/Hamming15 slug), its `unifying_binary_dependence_free_bits_7_15_56_20261028` source packet, and HYP-9438. See [repaired proofs and controls](../05-knowledge/results/free_bits_seven_fiftysix_20261028/INCOMING_REPAIR.md).
