@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — parity, chart choice, and source budgets in recovered work
+
+- **Demonstrated canon correction:** THM-1875's correct formula gives `x^3+3x` at n3, contradicting its sentence that the skew characteristic polynomial is always even. The polynomial has parity n; the title and body are repaired, retaining the formula and THM-1440's precise parity law. Purely imaginary spectrum is not enough to infer even parity at odd dimension.
+- **Failed draft implication / repaired form:** one of three pairings need not avoid intermediate positive debt. Allowed ROOT vectors `(1,0),(1,0),(1,2),(0,1)` have source norm6, endpoint norm9 and middle energies11,5,5: every individual chart costs at least4 instead of3. Averaging the middle energies gives7, with the same endpoints, and pays exactly3. Source orientations are not averaged.
+- **Resource boundary:** free catalytic lattice merging allows extra leaves. Telescoping still requires helper norm at least `Q(root)-S` for zero cost with original norm S; an isometric embedding alone cannot pay a fixed-source ROOT bill. Likewise the outer cubic representation of20 preserves n and s(n), not its named proper-divisor ports. Preserve the source and expansion witness.
+- **Lineage and scope:** [recovered packet and proofs](../05-knowledge/results/dyadic_module_spectrum_20261026/README.md), [internal review](../05-knowledge/results/dyadic_module_spectrum_20261026/AUDIT.md), [incoming/adaptive clipping](../05-knowledge/results/dyadic_module_spectrum_20261026/INCOMING_20261028.md). All-scale ROOT control and native coverage remain OPEN; finite computations are not promoted to those claims.
+
 ## 2026-10-27 — removed source norm alone cannot pay clipping debt
 
 - **Failed implication / native witness:** deleting source labels of total norm22 need not increase positive-part refinement debt by at most22. In the [audited N4096 joint-cutoff packet](../05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/AUDIT.md), fixing clock64 and tightening depth67 to36 removes16 labels of norm22 but raises debt439 to495, an increase56. The original denominator9949 is unchanged.

@@ -1,0 +1,870 @@
+{
+  "cases": [
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 1,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 3,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 5,
+      "backwards": 1,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 4,
+      "repeat": 1,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 3,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 7,
+      "backwards": 1,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 4,
+      "repeat": 0,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 7,
+      "backwards": 1,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 4,
+      "repeat": 1,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 7,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 7,
+      "backwards": 0,
+      "light_mass": 2,
+      "n": 3,
+      "rectangle_invoice": 0,
+      "repeat": 3,
+      "staircase_invoice": 5
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 4,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 1,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 4,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 3,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 4,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 5,
+      "backwards": 1,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 4,
+      "repeat": 1,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 4,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 3,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 7,
+      "backwards": 0,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 7,
+      "backwards": 0,
+      "light_mass": 4,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 1,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 7,
+      "backwards": 0,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 7,
+      "backwards": 1,
+      "light_mass": 3,
+      "n": 4,
+      "rectangle_invoice": 4,
+      "repeat": 3,
+      "staircase_invoice": 8
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 7,
+      "n": 7,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 6,
+      "n": 7,
+      "rectangle_invoice": 0,
+      "repeat": 1,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 8,
+      "n": 7,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 8,
+      "n": 7,
+      "rectangle_invoice": 0,
+      "repeat": 3,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 5,
+      "backwards": 2,
+      "light_mass": 7,
+      "n": 7,
+      "rectangle_invoice": 6,
+      "repeat": 0,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 5,
+      "backwards": 3,
+      "light_mass": 6,
+      "n": 7,
+      "rectangle_invoice": 12,
+      "repeat": 1,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 5,
+      "backwards": 0,
+      "light_mass": 7,
+      "n": 7,
+      "rectangle_invoice": 0,
+      "repeat": 2,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 5,
+      "backwards": 1,
+      "light_mass": 8,
+      "n": 7,
+      "rectangle_invoice": 4,
+      "repeat": 3,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 7,
+      "backwards": 4,
+      "light_mass": 6,
+      "n": 7,
+      "rectangle_invoice": 16,
+      "repeat": 0,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 7,
+      "backwards": 1,
+      "light_mass": 8,
+      "n": 7,
+      "rectangle_invoice": 4,
+      "repeat": 1,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 7,
+      "backwards": 7,
+      "light_mass": 7,
+      "n": 7,
+      "rectangle_invoice": 24,
+      "repeat": 2,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 7,
+      "backwards": 7,
+      "light_mass": 6,
+      "n": 7,
+      "rectangle_invoice": 28,
+      "repeat": 3,
+      "staircase_invoice": 20
+    },
+    {
+      "arity": 3,
+      "backwards": 4,
+      "light_mass": 16,
+      "n": 11,
+      "rectangle_invoice": 14,
+      "repeat": 0,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 14,
+      "n": 11,
+      "rectangle_invoice": 0,
+      "repeat": 1,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 3,
+      "backwards": 1,
+      "light_mass": 14,
+      "n": 11,
+      "rectangle_invoice": 4,
+      "repeat": 2,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 3,
+      "backwards": 8,
+      "light_mass": 15,
+      "n": 11,
+      "rectangle_invoice": 12,
+      "repeat": 3,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 5,
+      "backwards": 9,
+      "light_mass": 13,
+      "n": 11,
+      "rectangle_invoice": 28,
+      "repeat": 0,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 5,
+      "backwards": 10,
+      "light_mass": 13,
+      "n": 11,
+      "rectangle_invoice": 22,
+      "repeat": 1,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 5,
+      "backwards": 6,
+      "light_mass": 13,
+      "n": 11,
+      "rectangle_invoice": 18,
+      "repeat": 2,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 5,
+      "backwards": 6,
+      "light_mass": 14,
+      "n": 11,
+      "rectangle_invoice": 14,
+      "repeat": 3,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 7,
+      "backwards": 11,
+      "light_mass": 12,
+      "n": 11,
+      "rectangle_invoice": 40,
+      "repeat": 0,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 7,
+      "backwards": 14,
+      "light_mass": 11,
+      "n": 11,
+      "rectangle_invoice": 50,
+      "repeat": 1,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 7,
+      "backwards": 9,
+      "light_mass": 13,
+      "n": 11,
+      "rectangle_invoice": 20,
+      "repeat": 2,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 7,
+      "backwards": 3,
+      "light_mass": 15,
+      "n": 11,
+      "rectangle_invoice": 10,
+      "repeat": 3,
+      "staircase_invoice": 39
+    },
+    {
+      "arity": 3,
+      "backwards": 0,
+      "light_mass": 33,
+      "n": 19,
+      "rectangle_invoice": 0,
+      "repeat": 0,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 3,
+      "backwards": 5,
+      "light_mass": 29,
+      "n": 19,
+      "rectangle_invoice": 12,
+      "repeat": 1,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 3,
+      "backwards": 1,
+      "light_mass": 27,
+      "n": 19,
+      "rectangle_invoice": 4,
+      "repeat": 2,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 3,
+      "backwards": 28,
+      "light_mass": 30,
+      "n": 19,
+      "rectangle_invoice": 42,
+      "repeat": 3,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 5,
+      "backwards": 9,
+      "light_mass": 28,
+      "n": 19,
+      "rectangle_invoice": 30,
+      "repeat": 0,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 5,
+      "backwards": 37,
+      "light_mass": 26,
+      "n": 19,
+      "rectangle_invoice": 86,
+      "repeat": 1,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 5,
+      "backwards": 11,
+      "light_mass": 26,
+      "n": 19,
+      "rectangle_invoice": 26,
+      "repeat": 2,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 5,
+      "backwards": 14,
+      "light_mass": 26,
+      "n": 19,
+      "rectangle_invoice": 26,
+      "repeat": 3,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 7,
+      "backwards": 20,
+      "light_mass": 27,
+      "n": 19,
+      "rectangle_invoice": 56,
+      "repeat": 0,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 7,
+      "backwards": 31,
+      "light_mass": 27,
+      "n": 19,
+      "rectangle_invoice": 52,
+      "repeat": 1,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 7,
+      "backwards": 10,
+      "light_mass": 25,
+      "n": 19,
+      "rectangle_invoice": 38,
+      "repeat": 2,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 7,
+      "backwards": 15,
+      "light_mass": 28,
+      "n": 19,
+      "rectangle_invoice": 50,
+      "repeat": 3,
+      "staircase_invoice": 82
+    },
+    {
+      "arity": 3,
+      "backwards": 9,
+      "light_mass": 64,
+      "n": 31,
+      "rectangle_invoice": 22,
+      "repeat": 0,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 3,
+      "backwards": 12,
+      "light_mass": 48,
+      "n": 31,
+      "rectangle_invoice": 22,
+      "repeat": 1,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 3,
+      "backwards": 7,
+      "light_mass": 53,
+      "n": 31,
+      "rectangle_invoice": 20,
+      "repeat": 2,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 3,
+      "backwards": 26,
+      "light_mass": 58,
+      "n": 31,
+      "rectangle_invoice": 34,
+      "repeat": 3,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 5,
+      "backwards": 59,
+      "light_mass": 54,
+      "n": 31,
+      "rectangle_invoice": 68,
+      "repeat": 0,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 5,
+      "backwards": 26,
+      "light_mass": 59,
+      "n": 31,
+      "rectangle_invoice": 60,
+      "repeat": 1,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 5,
+      "backwards": 30,
+      "light_mass": 49,
+      "n": 31,
+      "rectangle_invoice": 80,
+      "repeat": 2,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 5,
+      "backwards": 50,
+      "light_mass": 56,
+      "n": 31,
+      "rectangle_invoice": 102,
+      "repeat": 3,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 7,
+      "backwards": 24,
+      "light_mass": 53,
+      "n": 31,
+      "rectangle_invoice": 86,
+      "repeat": 0,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 7,
+      "backwards": 35,
+      "light_mass": 48,
+      "n": 31,
+      "rectangle_invoice": 78,
+      "repeat": 1,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 7,
+      "backwards": 31,
+      "light_mass": 56,
+      "n": 31,
+      "rectangle_invoice": 70,
+      "repeat": 2,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 7,
+      "backwards": 34,
+      "light_mass": 48,
+      "n": 31,
+      "rectangle_invoice": 104,
+      "repeat": 3,
+      "staircase_invoice": 154
+    },
+    {
+      "arity": 3,
+      "backwards": 36,
+      "light_mass": 137,
+      "n": 63,
+      "rectangle_invoice": 72,
+      "repeat": 0,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 3,
+      "backwards": 64,
+      "light_mass": 129,
+      "n": 63,
+      "rectangle_invoice": 94,
+      "repeat": 1,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 3,
+      "backwards": 19,
+      "light_mass": 140,
+      "n": 63,
+      "rectangle_invoice": 46,
+      "repeat": 2,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 3,
+      "backwards": 81,
+      "light_mass": 144,
+      "n": 63,
+      "rectangle_invoice": 106,
+      "repeat": 3,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 5,
+      "backwards": 98,
+      "light_mass": 128,
+      "n": 63,
+      "rectangle_invoice": 200,
+      "repeat": 0,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 5,
+      "backwards": 174,
+      "light_mass": 125,
+      "n": 63,
+      "rectangle_invoice": 200,
+      "repeat": 1,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 5,
+      "backwards": 462,
+      "light_mass": 129,
+      "n": 63,
+      "rectangle_invoice": 286,
+      "repeat": 2,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 5,
+      "backwards": 133,
+      "light_mass": 111,
+      "n": 63,
+      "rectangle_invoice": 164,
+      "repeat": 3,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 7,
+      "backwards": 84,
+      "light_mass": 129,
+      "n": 63,
+      "rectangle_invoice": 172,
+      "repeat": 0,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 7,
+      "backwards": 443,
+      "light_mass": 116,
+      "n": 63,
+      "rectangle_invoice": 316,
+      "repeat": 1,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 7,
+      "backwards": 94,
+      "light_mass": 129,
+      "n": 63,
+      "rectangle_invoice": 222,
+      "repeat": 2,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 7,
+      "backwards": 247,
+      "light_mass": 119,
+      "n": 63,
+      "rectangle_invoice": 296,
+      "repeat": 3,
+      "staircase_invoice": 377
+    },
+    {
+      "arity": 3,
+      "backwards": 297,
+      "light_mass": 321,
+      "n": 127,
+      "rectangle_invoice": 216,
+      "repeat": 0,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 3,
+      "backwards": 49,
+      "light_mass": 305,
+      "n": 127,
+      "rectangle_invoice": 112,
+      "repeat": 1,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 3,
+      "backwards": 331,
+      "light_mass": 313,
+      "n": 127,
+      "rectangle_invoice": 164,
+      "repeat": 2,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 3,
+      "backwards": 183,
+      "light_mass": 312,
+      "n": 127,
+      "rectangle_invoice": 140,
+      "repeat": 3,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 5,
+      "backwards": 612,
+      "light_mass": 284,
+      "n": 127,
+      "rectangle_invoice": 470,
+      "repeat": 0,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 5,
+      "backwards": 1066,
+      "light_mass": 292,
+      "n": 127,
+      "rectangle_invoice": 482,
+      "repeat": 1,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 5,
+      "backwards": 928,
+      "light_mass": 277,
+      "n": 127,
+      "rectangle_invoice": 464,
+      "repeat": 2,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 5,
+      "backwards": 409,
+      "light_mass": 271,
+      "n": 127,
+      "rectangle_invoice": 366,
+      "repeat": 3,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 7,
+      "backwards": 1711,
+      "light_mass": 268,
+      "n": 127,
+      "rectangle_invoice": 788,
+      "repeat": 0,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 7,
+      "backwards": 2970,
+      "light_mass": 302,
+      "n": 127,
+      "rectangle_invoice": 832,
+      "repeat": 1,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 7,
+      "backwards": 1570,
+      "light_mass": 280,
+      "n": 127,
+      "rectangle_invoice": 828,
+      "repeat": 2,
+      "staircase_invoice": 888
+    },
+    {
+      "arity": 7,
+      "backwards": 770,
+      "light_mass": 280,
+      "n": 127,
+      "rectangle_invoice": 634,
+      "repeat": 3,
+      "staircase_invoice": 888
+    }
+  ],
+  "scope": "96 finite structural controls; all-size norm inequalities proved in README",
+  "status": "PASS"
+}

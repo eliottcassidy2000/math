@@ -1,0 +1,39 @@
+{
+  "consecutive_scales": 61441,
+  "first_N": 4096,
+  "last_N": 65536,
+  "peaks": {
+    "adaptive_1to3": {
+      "N": 19616,
+      "debt": 1119,
+      "ratio": "1119/47639",
+      "source": 47639
+    },
+    "binary": {
+      "N": 18275,
+      "debt": 4076,
+      "ratio": "4076/44381",
+      "source": 44381
+    },
+    "eightary": {
+      "N": 40448,
+      "debt": 2901,
+      "ratio": "2901/98234",
+      "source": 98234
+    },
+    "fourary": {
+      "N": 5900,
+      "debt": 845,
+      "ratio": "845/14324",
+      "source": 14324
+    }
+  },
+  "scope": "complete first arrivals only; selected finite depth and clock cuts are in receipt.json",
+  "status": "PASS",
+  "violations_of_half_source": {
+    "adaptive_1to3": 0,
+    "binary": 0,
+    "eightary": 0,
+    "fourary": 0
+  }
+}

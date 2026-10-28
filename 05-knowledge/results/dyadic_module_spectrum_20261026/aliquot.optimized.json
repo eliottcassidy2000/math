@@ -1,0 +1,505 @@
+{
+  "classification_counts": {
+    "interior": 209892,
+    "outer": 7
+  },
+  "complete_343_fiber": [
+    578,
+    1001,
+    1685,
+    3641,
+    9077,
+    9641,
+    16697,
+    17141,
+    19241,
+    19637,
+    20777,
+    24341,
+    24617,
+    25397,
+    25877,
+    27641,
+    28757,
+    28841,
+    29177
+  ],
+  "direct_pair_controls": 20002,
+  "exceptions": [
+    {
+      "carry": 6,
+      "factors": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "n": 20,
+      "odd_aliquot": 1,
+      "odd_part": 5,
+      "proper_divisor_count": 5,
+      "v2": 2
+    },
+    {
+      "carry": 14,
+      "factors": [
+        [
+          2,
+          3
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "n": 104,
+      "odd_aliquot": 1,
+      "odd_part": 13,
+      "proper_divisor_count": 7,
+      "v2": 3
+    },
+    {
+      "carry": 30,
+      "factors": [
+        [
+          2,
+          4
+        ],
+        [
+          29,
+          1
+        ]
+      ],
+      "n": 464,
+      "odd_aliquot": 1,
+      "odd_part": 29,
+      "proper_divisor_count": 9,
+      "v2": 4
+    },
+    {
+      "carry": 434,
+      "factors": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "n": 650,
+      "odd_aliquot": 109,
+      "odd_part": 325,
+      "proper_divisor_count": 11,
+      "v2": 1
+    },
+    {
+      "carry": 62,
+      "factors": [
+        [
+          2,
+          5
+        ],
+        [
+          61,
+          1
+        ]
+      ],
+      "n": 1952,
+      "odd_aliquot": 1,
+      "odd_part": 61,
+      "proper_divisor_count": 11,
+      "v2": 5
+    },
+    {
+      "carry": 510,
+      "factors": [
+        [
+          2,
+          8
+        ],
+        [
+          509,
+          1
+        ]
+      ],
+      "n": 130304,
+      "odd_aliquot": 1,
+      "odd_part": 509,
+      "proper_divisor_count": 17,
+      "v2": 8
+    },
+    {
+      "carry": 1022,
+      "factors": [
+        [
+          2,
+          9
+        ],
+        [
+          1021,
+          1
+        ]
+      ],
+      "n": 522752,
+      "odd_aliquot": 1,
+      "odd_part": 1021,
+      "proper_divisor_count": 19,
+      "v2": 9
+    }
+  ],
+  "full_integer_universe": [
+    1,
+    1000000
+  ],
+  "orbits": [
+    [
+      1001,
+      343,
+      57,
+      23,
+      1,
+      0
+    ],
+    [
+      1000001,
+      10003,
+      1437,
+      483,
+      285,
+      195,
+      141,
+      51,
+      21,
+      11,
+      1,
+      0
+    ]
+  ],
+  "p2qr_controls": 6900,
+  "samples": {
+    "10": {
+      "abundance": -2,
+      "aliquot": 8,
+      "cubic_ports": [
+        [
+          2,
+          5
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        5
+      ],
+      "square_total": false
+    },
+    "1001": {
+      "abundance": -658,
+      "aliquot": 343,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        7,
+        11,
+        13,
+        77,
+        91,
+        143
+      ],
+      "square_total": false
+    },
+    "104": {
+      "abundance": 2,
+      "aliquot": 106,
+      "cubic_ports": [
+        [
+          1,
+          104
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8,
+        13,
+        26,
+        52
+      ],
+      "square_total": false
+    },
+    "12": {
+      "abundance": 4,
+      "aliquot": 16,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "square_total": false
+    },
+    "14": {
+      "abundance": -4,
+      "aliquot": 10,
+      "cubic_ports": [
+        [
+          2,
+          7
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        7
+      ],
+      "square_total": false
+    },
+    "15": {
+      "abundance": -6,
+      "aliquot": 9,
+      "cubic_ports": [
+        [
+          3,
+          5
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        3,
+        5
+      ],
+      "square_total": false
+    },
+    "16": {
+      "abundance": -1,
+      "aliquot": 15,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "square_total": false
+    },
+    "18": {
+      "abundance": 3,
+      "aliquot": 21,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ],
+      "square_total": false
+    },
+    "20": {
+      "abundance": 2,
+      "aliquot": 22,
+      "cubic_ports": [
+        [
+          1,
+          20
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        5,
+        10
+      ],
+      "square_total": false
+    },
+    "21": {
+      "abundance": -10,
+      "aliquot": 11,
+      "cubic_ports": [
+        [
+          3,
+          7
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        3,
+        7
+      ],
+      "square_total": false
+    },
+    "24": {
+      "abundance": 12,
+      "aliquot": 36,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12
+      ],
+      "square_total": false
+    },
+    "25": {
+      "abundance": -19,
+      "aliquot": 6,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        5
+      ],
+      "square_total": false
+    },
+    "28": {
+      "abundance": 0,
+      "aliquot": 28,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        7,
+        14
+      ],
+      "square_total": false
+    },
+    "343": {
+      "abundance": -286,
+      "aliquot": 57,
+      "cubic_ports": [
+        [
+          7,
+          49
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        7,
+        49
+      ],
+      "square_total": true
+    },
+    "35": {
+      "abundance": -22,
+      "aliquot": 13,
+      "cubic_ports": [
+        [
+          5,
+          7
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        5,
+        7
+      ],
+      "square_total": false
+    },
+    "4": {
+      "abundance": -1,
+      "aliquot": 3,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        2
+      ],
+      "square_total": false
+    },
+    "49": {
+      "abundance": -41,
+      "aliquot": 8,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        7
+      ],
+      "square_total": false
+    },
+    "6": {
+      "abundance": 0,
+      "aliquot": 6,
+      "cubic_ports": [
+        [
+          2,
+          3
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        3
+      ],
+      "square_total": false
+    },
+    "650": {
+      "abundance": 2,
+      "aliquot": 652,
+      "cubic_ports": [
+        [
+          1,
+          650
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        5,
+        10,
+        13,
+        25,
+        26,
+        50,
+        65,
+        130,
+        325
+      ],
+      "square_total": false
+    },
+    "8": {
+      "abundance": -1,
+      "aliquot": 7,
+      "cubic_ports": [
+        [
+          2,
+          4
+        ]
+      ],
+      "proper_divisors": [
+        1,
+        2,
+        4
+      ],
+      "square_total": false
+    },
+    "9": {
+      "abundance": -5,
+      "aliquot": 4,
+      "cubic_ports": [],
+      "proper_divisors": [
+        1,
+        3
+      ],
+      "square_total": false
+    }
+  },
+  "scope": "Finite validation supplements the elementary proofs; no all-odd exclusion or infinitude claim.",
+  "status": "PASS",
+  "tower_cases": 38906
+}

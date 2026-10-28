@@ -1,0 +1,121 @@
+{
+  "N": 4096,
+  "binary_invoice": 82,
+  "block_partitions": 1705,
+  "boundary_pairs": 951,
+  "delta": [
+    -34,
+    -19,
+    -1,
+    -11,
+    13,
+    -6,
+    -8,
+    2,
+    2,
+    0,
+    -3,
+    0,
+    0
+  ],
+  "full_budgets": {
+    "adaptive_1to3": 99,
+    "adaptive_word": [
+      3,
+      2,
+      3,
+      3,
+      2
+    ],
+    "binary": 439,
+    "eightary": 156,
+    "fourary": 198
+  },
+  "full_energy": [
+    9663,
+    9419,
+    9624,
+    9870,
+    9856,
+    9857,
+    9924,
+    9766,
+    9781,
+    9791,
+    9784,
+    9773,
+    9768,
+    9771
+  ],
+  "minimum_invoice_on_full_optimum_and_word": [
+    67,
+    [
+      3,
+      2,
+      3,
+      3,
+      2
+    ]
+  ],
+  "minimum_upper_and_word": [
+    166,
+    [
+      3,
+      2,
+      3,
+      3,
+      2
+    ]
+  ],
+  "original_source_norm": 9949,
+  "removed_labels": [
+    1819,
+    2425,
+    3233,
+    3639,
+    4851,
+    5371,
+    9159,
+    9707,
+    10105,
+    10215,
+    10415,
+    12135,
+    13473,
+    14561,
+    15323,
+    15623
+  ],
+  "removed_norm": 22,
+  "retained_budgets": {
+    "adaptive_1to3": 110,
+    "adaptive_word": [
+      3,
+      2,
+      3,
+      3,
+      2
+    ],
+    "binary": 495,
+    "eightary": 163,
+    "fourary": 260
+  },
+  "retained_energy": [
+    9706,
+    9428,
+    9614,
+    9859,
+    9834,
+    9848,
+    9909,
+    9743,
+    9760,
+    9772,
+    9765,
+    9751,
+    9746,
+    9749
+  ],
+  "scope": "one native joint-cutoff hostile, fixed original labels/tree/denominator; not all-scale control",
+  "status": "PASS"
+}

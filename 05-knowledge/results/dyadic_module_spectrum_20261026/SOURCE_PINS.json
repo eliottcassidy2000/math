@@ -1,0 +1,185 @@
+{
+  "sources": [
+    {
+      "bytes": 22488,
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "bytes": 15320,
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/receipt.json",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "54f08df37647feaac759d5e7a868263834f485348d9d2cebbf9416c7a9a2435f"
+    },
+    {
+      "bytes": 4620,
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/frontier.txt",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "df88f03b576b13c98c0c5378fc1cf61685eeb6817073681266d2a781dc329b26"
+    },
+    {
+      "bytes": 3894,
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/README.checkpoint2.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ca55319c3d40be732a0e4ea2c59411c4a59e8099293e5bd809e61d145997af52"
+    },
+    {
+      "bytes": 18470,
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-ports/REPORT.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "83f220f14746c833aec885ecb67fd0c0f2caaf184ad082219dbaed4fe9db3699"
+    },
+    {
+      "bytes": 11244,
+      "path": "05-knowledge/results/eisenstein_circuit_completion_20261018g.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ba08c30559bb5ba4a9757d9a048d8b008151cf00f586f1f43b03b671a176d367"
+    },
+    {
+      "bytes": 14974,
+      "path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "0bfeab69fcb2eb1a38e46f063781d66f47a17e592eb4d6abf50312b233141216"
+    },
+    {
+      "bytes": 10021,
+      "path": "01-canon/theorems/THM-1960-tournaments-compose-from-regular-seeds-the-spectral-substitution-law.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "845c71699708b993a6802188119c716b669f999c9891952f49e4aca4e9aca106"
+    },
+    {
+      "bytes": 11988,
+      "path": "01-canon/theorems/THM-1440-seidel-spectra-are-sine-and-the-odd-n-projection-is-one-parity-fact.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "55c7c00ac8dcad6cb333ea1c20d382e801f379bc1e7b0979fa5a0945f65c7ded"
+    },
+    {
+      "bytes": 6753,
+      "path": "01-canon/theorems/THM-1875-transitive-skew-char-is-the-binomial-reflection-tangent-revival.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ab57c1b675a4635076f22e480bfadfb256af8fbdfbf12ceba64dbc36fd2c4920"
+    },
+    {
+      "bytes": 25351,
+      "path": "01-canon/theorems/THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "e8aa36c8f1c5d33d5c88e43c43d9c2ad9d43791aa0ec97417b38732ce31888a4"
+    },
+    {
+      "bytes": 20138,
+      "path": "01-canon/theorems/THM-3512-rule30-van-der-put-haar-cocycle-and-profinite-automaton-boundary.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "82c177c9db3c112f0d9bd7e493d8cfd6db53926ba46151b0d9d2d2ef61199d81"
+    },
+    {
+      "bytes": 9564,
+      "path": "01-canon/theorems/THM-3729-rooted-pfaffian-response-and-sign-root-deletion-average.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "83655b41b7e357a7bf45ea5c9e36542b3993346dd86b35a07c9952198346c38e"
+    },
+    {
+      "bytes": 9684,
+      "path": "01-canon/theorems/THM-4285-universal-two-eisenstein-norm-shell-and-exact-contact-trichotomy.md",
+      "revision": "4959b4933cba7e6561b9f19b1d68278ecf6cb2f5",
+      "sha256": "ca2ccc00121f04322c82ebccc33e2002abc2b7e30f27050eb674a15854a1f5db"
+    },
+    {
+      "bytes": 4287,
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "4ff8e6ff99976d85960e182e9aa9e6734a39bfce1ec4737d16468e25a2809af3"
+    },
+    {
+      "bytes": 13775,
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/SQUARE_SIGMA_EDGES.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "b6b3a29ba0ea752b34c80f4975a2b485f9f1ddc51eac1a898ae81b8f9f9d4d1a"
+    },
+    {
+      "bytes": 8883,
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/FIBER_PORTS.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "c9e0163702ee5bf9798b8e65ad1e76c3b9efd28cb3b88df72b21aa940d65798a"
+    },
+    {
+      "bytes": 8369,
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ORBIT_CONNECTIONS.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "af10ca6e58bdb4d2c7433ed127df27c4c76c053c8d008e8987a05221d9076840"
+    },
+    {
+      "bytes": 14542,
+      "path": "05-knowledge/results/session78_fourth_power_aliquot_20261027/ALIQUOT.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "628b155529b97490630fcb2b5255bb070a11878c424e801f5a1f336817bdf437"
+    },
+    {
+      "bytes": 8707,
+      "path": "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-score-audit/REPORT.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "6cb3a0c70ac8a77a47890cb24d662d87f46da42ed456e53cfa85a5bca0b5fa5b"
+    },
+    {
+      "bytes": 11260,
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-joint-cutoff-audit/AUDIT.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "054e4061169f9d3e0aba31aaf59cb0d0e7898fe5fc6e72badcd7100e8a73fa48"
+    },
+    {
+      "bytes": 16096,
+      "path": "01-canon/theorems/THM-4824-catalytic-merge-debt-by-lattice-shape-square-checkerboard-and-e8-free-first-grid-collinear-eisenstein-the-critical-half-shift-glue-parity-coset-shells-zero-sum-quartics.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "bb1819077e351224b5102ce42403a3966279c01e496fbaa65f9ed4d701b46186"
+    },
+    {
+      "bytes": 10940,
+      "path": "01-canon/theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "d978a1c657d04d8766b9fc56cc73f8fef53e08b1273a2f3691cc2ac3d0a8c340"
+    },
+    {
+      "bytes": 6067,
+      "path": "05-knowledge/hypotheses/HYP-2220-vieta-perfect-aliquot-carriers.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "d9b64252880755c1ed1399f763386ee1487598c4ed43db8fa6a7241e72608162"
+    },
+    {
+      "bytes": 2917,
+      "path": "05-knowledge/hypotheses/HYP-2221-perfect-aliquot-fixed-point-carrier.md",
+      "revision": "6192c0df22ad13989070f4c6e8d3eb0ad7000a3f",
+      "sha256": "7627cce960f05b77070fce07024cb02a4659e1cf927af8fb6d7046d297cec131"
+    },
+    {
+      "bytes": 14416,
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/DIVISOR_TERM_CLASSES.md",
+      "revision": "5a47a981217d431e526cb7216f5015b21105f0cf",
+      "sha256": "aa5f3061b7173fd79a405f811245c218bf41d9f7a713c06d03cd49470b0d60b2"
+    },
+    {
+      "bytes": 9717,
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md",
+      "revision": "5a47a981217d431e526cb7216f5015b21105f0cf",
+      "sha256": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31"
+    },
+    {
+      "bytes": 5440,
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/LOW_TERM_ATLAS.md",
+      "revision": "5a47a981217d431e526cb7216f5015b21105f0cf",
+      "sha256": "c511a691d888e505490ec6334882e9a2c0b3798b45c4b072989c04bf63f304c1"
+    },
+    {
+      "bytes": 8537,
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/SEVEN_TERM_ABUNDANCE.md",
+      "revision": "5a47a981217d431e526cb7216f5015b21105f0cf",
+      "sha256": "b4514f6ca0291922be830effeaba488b02fa72123e106fe7154ba5b055407b14"
+    },
+    {
+      "bytes": 4985,
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/SQUARE_EXCESS_OBSTRUCTION.md",
+      "revision": "5a47a981217d431e526cb7216f5015b21105f0cf",
+      "sha256": "cd34e14f63b1539c33bba801a1142765b5f69fdd5b38ff63ae72a07455bacd77"
+    }
+  ],
+  "status": "source provenance, not a status promotion"
+}
