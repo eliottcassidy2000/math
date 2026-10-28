@@ -1,0 +1,793 @@
+{
+  "class_counts": {
+    "factor_pair_compression": 209875,
+    "prime_power": 78734,
+    "remaining": 711391
+  },
+  "classical_redundant_two_family": [
+    {
+      "a": 2,
+      "n": 20,
+      "prime": 5,
+      "proper_divisors": 5
+    },
+    {
+      "a": 3,
+      "n": 104,
+      "prime": 13,
+      "proper_divisors": 7
+    },
+    {
+      "a": 4,
+      "n": 464,
+      "prime": 29,
+      "proper_divisors": 9
+    },
+    {
+      "a": 5,
+      "n": 1952,
+      "prime": 61,
+      "proper_divisors": 11
+    },
+    {
+      "a": 8,
+      "n": 130304,
+      "prime": 509,
+      "proper_divisors": 17
+    },
+    {
+      "a": 9,
+      "n": 522752,
+      "prime": 1021,
+      "proper_divisors": 19
+    },
+    {
+      "a": 11,
+      "n": 8382464,
+      "prime": 4093,
+      "proper_divisors": 23
+    },
+    {
+      "a": 13,
+      "n": 134193152,
+      "prime": 16381,
+      "proper_divisors": 27
+    }
+  ],
+  "complete_F343": [
+    578,
+    1001,
+    1685,
+    3641,
+    9077,
+    9641,
+    16697,
+    17141,
+    19241,
+    19637,
+    20777,
+    24341,
+    24617,
+    25397,
+    25877,
+    27641,
+    28757,
+    28841,
+    29177
+  ],
+  "complete_small_fibres": {
+    "6": [
+      6,
+      25
+    ],
+    "8": [
+      10,
+      49
+    ],
+    "15": [
+      16,
+      33
+    ],
+    "16": [
+      12,
+      26
+    ],
+    "21": [
+      18,
+      51,
+      91
+    ],
+    "22": [
+      20,
+      38
+    ],
+    "28": [
+      28
+    ],
+    "36": [
+      24
+    ]
+  },
+  "compressed_count": 209900,
+  "examples": [
+    {
+      "excess": -1,
+      "factor_pair": null,
+      "factorization": {
+        "2": 2
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 4,
+      "proper_divisor_count": 2,
+      "proper_divisors": [
+        1,
+        2
+      ],
+      "s": 3
+    },
+    {
+      "excess": -5,
+      "factor_pair": null,
+      "factorization": {
+        "3": 2
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 9,
+      "proper_divisor_count": 2,
+      "proper_divisors": [
+        1,
+        3
+      ],
+      "s": 4
+    },
+    {
+      "excess": -19,
+      "factor_pair": null,
+      "factorization": {
+        "5": 2
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 25,
+      "proper_divisor_count": 2,
+      "proper_divisors": [
+        1,
+        5
+      ],
+      "s": 6
+    },
+    {
+      "excess": -1,
+      "factor_pair": [
+        2,
+        4
+      ],
+      "factorization": {
+        "2": 3
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 8,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        2,
+        4
+      ],
+      "s": 7
+    },
+    {
+      "excess": -41,
+      "factor_pair": null,
+      "factorization": {
+        "7": 2
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 49,
+      "proper_divisor_count": 2,
+      "proper_divisors": [
+        1,
+        7
+      ],
+      "s": 8
+    },
+    {
+      "excess": 0,
+      "factor_pair": [
+        2,
+        3
+      ],
+      "factorization": {
+        "2": 1,
+        "3": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 6,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        2,
+        3
+      ],
+      "s": 6
+    },
+    {
+      "excess": -2,
+      "factor_pair": [
+        2,
+        5
+      ],
+      "factorization": {
+        "2": 1,
+        "5": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 10,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        2,
+        5
+      ],
+      "s": 8
+    },
+    {
+      "excess": -6,
+      "factor_pair": [
+        3,
+        5
+      ],
+      "factorization": {
+        "3": 1,
+        "5": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 15,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        3,
+        5
+      ],
+      "s": 9
+    },
+    {
+      "excess": -4,
+      "factor_pair": [
+        2,
+        7
+      ],
+      "factorization": {
+        "2": 1,
+        "7": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 14,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        2,
+        7
+      ],
+      "s": 10
+    },
+    {
+      "excess": -1,
+      "factor_pair": null,
+      "factorization": {
+        "2": 4
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 16,
+      "proper_divisor_count": 4,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "s": 15
+    },
+    {
+      "excess": -10,
+      "factor_pair": [
+        3,
+        7
+      ],
+      "factorization": {
+        "3": 1,
+        "7": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 21,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        3,
+        7
+      ],
+      "s": 11
+    },
+    {
+      "excess": -22,
+      "factor_pair": [
+        5,
+        7
+      ],
+      "factorization": {
+        "5": 1,
+        "7": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 35,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        5,
+        7
+      ],
+      "s": 13
+    },
+    {
+      "excess": -8,
+      "factor_pair": [
+        2,
+        11
+      ],
+      "factorization": {
+        "2": 1,
+        "11": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 22,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        2,
+        11
+      ],
+      "s": 14
+    },
+    {
+      "excess": 4,
+      "factor_pair": null,
+      "factorization": {
+        "2": 2,
+        "3": 1
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 12,
+      "proper_divisor_count": 5,
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "s": 16
+    },
+    {
+      "excess": 3,
+      "factor_pair": null,
+      "factorization": {
+        "2": 1,
+        "3": 2
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 18,
+      "proper_divisor_count": 5,
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ],
+      "s": 21
+    },
+    {
+      "excess": 2,
+      "factor_pair": [
+        1,
+        20
+      ],
+      "factorization": {
+        "2": 2,
+        "5": 1
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 20,
+      "proper_divisor_count": 5,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        5,
+        10
+      ],
+      "s": 22
+    },
+    {
+      "excess": 0,
+      "factor_pair": null,
+      "factorization": {
+        "2": 2,
+        "7": 1
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 28,
+      "proper_divisor_count": 5,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        7,
+        14
+      ],
+      "s": 28
+    },
+    {
+      "excess": 12,
+      "factor_pair": null,
+      "factorization": {
+        "2": 3,
+        "3": 1
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 24,
+      "proper_divisor_count": 7,
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12
+      ],
+      "s": 36
+    },
+    {
+      "excess": 2,
+      "factor_pair": [
+        1,
+        104
+      ],
+      "factorization": {
+        "2": 3,
+        "13": 1
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 104,
+      "proper_divisor_count": 7,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8,
+        13,
+        26,
+        52
+      ],
+      "s": 106
+    },
+    {
+      "excess": 2,
+      "factor_pair": [
+        1,
+        464
+      ],
+      "factorization": {
+        "2": 4,
+        "29": 1
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 464,
+      "proper_divisor_count": 9,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        29,
+        58,
+        116,
+        232
+      ],
+      "s": 466
+    },
+    {
+      "excess": 2,
+      "factor_pair": [
+        1,
+        650
+      ],
+      "factorization": {
+        "2": 1,
+        "5": 2,
+        "13": 1
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 650,
+      "proper_divisor_count": 11,
+      "proper_divisors": [
+        1,
+        2,
+        5,
+        10,
+        13,
+        25,
+        26,
+        50,
+        65,
+        130,
+        325
+      ],
+      "s": 652
+    },
+    {
+      "excess": 2,
+      "factor_pair": [
+        1,
+        1952
+      ],
+      "factorization": {
+        "2": 5,
+        "61": 1
+      },
+      "mu_lambda": [
+        0,
+        1
+      ],
+      "n": 1952,
+      "proper_divisor_count": 11,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        61,
+        122,
+        244,
+        488,
+        976
+      ],
+      "s": 1954
+    },
+    {
+      "excess": -658,
+      "factor_pair": null,
+      "factorization": {
+        "7": 1,
+        "11": 1,
+        "13": 1
+      },
+      "mu_lambda": [
+        -1,
+        -1
+      ],
+      "n": 1001,
+      "proper_divisor_count": 7,
+      "proper_divisors": [
+        1,
+        7,
+        11,
+        13,
+        77,
+        91,
+        143
+      ],
+      "s": 343
+    },
+    {
+      "excess": -286,
+      "factor_pair": [
+        7,
+        49
+      ],
+      "factorization": {
+        "7": 3
+      },
+      "mu_lambda": [
+        0,
+        -1
+      ],
+      "n": 343,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        7,
+        49
+      ],
+      "s": 57
+    },
+    {
+      "excess": -34,
+      "factor_pair": [
+        3,
+        19
+      ],
+      "factorization": {
+        "3": 1,
+        "19": 1
+      },
+      "mu_lambda": [
+        1,
+        1
+      ],
+      "n": 57,
+      "proper_divisor_count": 3,
+      "proper_divisors": [
+        1,
+        3,
+        19
+      ],
+      "s": 23
+    }
+  ],
+  "factor_pair_cases": {
+    "3": [
+      [
+        1,
+        355
+      ],
+      [
+        5,
+        71
+      ]
+    ],
+    "5": [
+      [
+        1,
+        373
+      ]
+    ],
+    "7": [
+      [
+        1,
+        399
+      ],
+      [
+        3,
+        133
+      ],
+      [
+        7,
+        57
+      ],
+      [
+        19,
+        21
+      ]
+    ]
+  },
+  "finite_prime_power_square_sigma_sources": [
+    3,
+    81,
+    343
+  ],
+  "finite_small_arity_overlaps": {
+    "5": [
+      20
+    ],
+    "7": [
+      104
+    ],
+    "9": [
+      464
+    ],
+    "11": [
+      650,
+      1952
+    ]
+  },
+  "five_proper_divisor_overlap": [
+    20
+  ],
+  "independent_divisor_range": 5000,
+  "orbits": [
+    [
+      1001,
+      343,
+      57,
+      23,
+      1,
+      0
+    ],
+    [
+      1000001,
+      10003,
+      1437,
+      483,
+      285,
+      195,
+      141,
+      51,
+      21,
+      11,
+      1,
+      0
+    ]
+  ],
+  "scope": "General classification and unique20 use proofs in THEORY.md; prime-cube square uniqueness imports Ljunggren. No universal aliquot orbit theorem.",
+  "sigma_sha256_uint32le": "4867ae723cbb5a6c21b48499ed43e1624e247115021ca638cc70ee28b096ddd8",
+  "tau_sha256_uint32le": "7fc909d84bf691ed15197279f25f71fb24cc75b707e18c97eadfc544f21e394a",
+  "three_distinct_prime_F343": [
+    1001
+  ],
+  "unit_compression_sources": [
+    20,
+    104,
+    464,
+    650,
+    1952,
+    130304,
+    522752
+  ],
+  "universe_max_source": 1000001
+}

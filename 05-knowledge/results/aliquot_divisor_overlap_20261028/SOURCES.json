@@ -1,0 +1,84 @@
+{
+  "base_commit": "130bfba5d836e5a7a4d9b2c1b964eb991f81cd9c",
+  "repository_sources": [
+    {
+      "path": "01-canon/theorems/THM-4805-aliquot-sources-of-2-5-7-21-twin-prime-collisions-the-powers-and-doublings-chain-structure-and-abc-hits-on-the-row-of-one.md",
+      "git_blob": "67abe8eae43036831b9b737214b3732bb38cee8a",
+      "sha256_lf": "d978a1c657d04d8766b9fc56cc73f8fef53e08b1273a2f3691cc2ac3d0a8c340",
+      "read_scope": "Status and Lemma1: small proper-divisor-count regimes and the16/12 thresholds; unrelated all-k claims not inherited."
+    },
+    {
+      "path": "05-knowledge/results/aliquot_power_124_20261026/CORRECTIONS.md",
+      "git_blob": "a852f2f035f64f124987c4940eadda0e0903b26f",
+      "sha256_lf": "51bb5b0eab0156fed88edd8958a7da8a948447bdb74dda86c2e2cd789cd6f171",
+      "read_scope": "Full short correction note: distinct-prime Goldbach condition and observer-fibre scope."
+    },
+    {
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/README.md",
+      "git_blob": "167a194f83630daa2c929508315563eb81d6ecfa",
+      "sha256_lf": "7fb5f01afb6e7a069592ccd6ec099693b865000c8f34dc4961647923c244348d",
+      "read_scope": "Full synthesis: explicit graph types, short orbits, inverse-fibre and square-edge scope."
+    },
+    {
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md",
+      "git_blob": "b0ba68cd960f3cd43ab98727a5a9f3ea9a0b72d1",
+      "sha256_lf": "4ff8e6ff99976d85960e182e9aa9e6734a39bfce1ec4737d16468e25a2809af3",
+      "read_scope": "Full restricted uniqueness proof, all19 predecessors, cutoff and classical dependency."
+    },
+    {
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/SQUARE_SIGMA_EDGES.md",
+      "git_blob": "8865cfd6ef051cea222d5d7d009cf6dbb4e24971",
+      "sha256_lf": "b6b3a29ba0ea752b34c80f4975a2b485f9f1ddc51eac1a898ae81b8f9f9d4d1a",
+      "read_scope": "Prime-power classification, Ljunggren statement, native edge guard and multiplicative chart; short orbit claims independently rerun."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/THEORY.md",
+      "git_blob": "4de2ff1474549d77e1c6219f74ca3e3dd9cd4f70",
+      "sha256_lf": "9e9c2c18572195708fd3b3e7765fca9bed2960f3bb3076f001e70dd8a6ac0236",
+      "read_scope": "Prior packet: arithmetic signs, divisor-incidence mechanism and operation-relative carrier scope."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/README.md",
+      "git_blob": "21a7f522d037c0e4beecd49535a879456735cb9d",
+      "sha256_lf": "3c93784c8f0785a69cf0503a6a0a608cd48665e3c697d1e5ddc2dc8f91aa8a43",
+      "read_scope": "Prior packet summary and current scope."
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256_lf": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "read_scope": "Truth precedence, portfolio, inheritance and finite validation requirements."
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "sha256_lf": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "read_scope": "Universal observer/quotient guards and bounded-result discipline."
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "sha256_lf": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "read_scope": "Literature routing before external claims; no global conjecture imported from a historical note."
+    },
+    {
+      "path": "00-navigation/META-PATTERNS.md",
+      "git_blob": "346991110594940fc0aa36138b984f61be1dfe04",
+      "sha256_lf": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+      "read_scope": "Three named cards at lines51-66; reused with evidence in AUDIT.md."
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1011.6160",
+      "scope": "Shevelev, near-perfect definition, Theorem3 redundant-divisor2 specialization, and650 counterexample; no use of conjectures.",
+      "access_date": "2026-10-28"
+    },
+    {
+      "url": "https://msp.org/pjm/2000/193-2/pjm-v193-n2-p.pdf",
+      "scope": "Bugeaud-Mignotte-Roy, printedp257/PDFpage2: explicit statement that Ljunggren solved the square-repunit case.",
+      "access_date": "2026-10-28"
+    }
+  ],
+  "interpretation": "Formal factor-pair compression retains ab=n as well as s(n)=1+a+b;16 fails it and is explicitly retained as a boundary."
+}

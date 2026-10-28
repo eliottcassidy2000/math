@@ -1,0 +1,23 @@
+{
+  "F343_size": 19,
+  "all_sigma_tau_values": "MATCH",
+  "class_counts": {
+    "factor_pair_compression": 209875,
+    "prime_power": 78734,
+    "remaining": 711391
+  },
+  "five_term_overlap": [
+    20
+  ],
+  "implementation": "least-prime-factor multiplicative recurrence",
+  "independent_range": 1000001,
+  "unit_sources": [
+    20,
+    104,
+    464,
+    650,
+    1952,
+    130304,
+    522752
+  ]
+}
