@@ -1,0 +1,87 @@
+{
+  "Fano_direct_divisor_subset_count": 128,
+  "Fano_square_weight_counts": {
+    "0": 1,
+    "3": 7,
+    "4": 7,
+    "7": 1
+  },
+  "additional_observer_class_counts": {
+    "with_FUS": 87,
+    "with_tau": 96
+  },
+  "formal_zero_states": 16,
+  "full_residual_table_entries": 12288,
+  "least_common_context": 205,
+  "least_p2qr_square_sigma": 364,
+  "legal_states": 96,
+  "merged_pairs": [
+    [
+      154,
+      308
+    ],
+    [
+      462,
+      924
+    ],
+    [
+      770,
+      1540
+    ],
+    [
+      910,
+      1820
+    ],
+    [
+      2002,
+      4004
+    ],
+    [
+      2310,
+      4620
+    ],
+    [
+      2730,
+      5460
+    ],
+    [
+      6006,
+      12012
+    ],
+    [
+      10010,
+      20020
+    ],
+    [
+      30030,
+      60060
+    ]
+  ],
+  "minimal_classes": 86,
+  "norm_one_shell_c_bound": 150,
+  "norm_one_shell_root_counts": {
+    "(1, 1, 1)": 277,
+    "(1, 2, 2)": 151,
+    "(2, 1, 2)": 151
+  },
+  "sigma_method": "add every divisor into its multiples",
+  "sigma_universe": [
+    1,
+    60060
+  ],
+  "square_sources": [
+    1,
+    3,
+    22,
+    66,
+    70,
+    210,
+    364,
+    385,
+    1092,
+    1155,
+    2860,
+    8580
+  ],
+  "subset_universe": 128
+}

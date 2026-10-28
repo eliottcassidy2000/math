@@ -1,0 +1,172 @@
+{
+  "base_commit": "5f18ca1e5ad344ce9e7bc77e3aa6040bde5903eb",
+  "incoming_commit": "852b9a9b14c0bdc36a183d2825ace325959733d5",
+  "repository_sources": [
+    {
+      "path": "05-knowledge/hypotheses/HYP-2220-vieta-perfect-aliquot-carriers.md",
+      "git_blob": "68c75b7158336266ab164c55bbb0b0afee5e1903",
+      "sha256_lf": "d9b64252880755c1ed1399f763386ee1487598c4ed43db8fa6a7241e72608162",
+      "read_scope": "First95 lines; OPEN status, exact91/21 and triangular identities only."
+    },
+    {
+      "path": "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md",
+      "git_blob": "cefdf13fa728d04e714b3d11b0d8d23489ca4d1f",
+      "sha256_lf": "ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446",
+      "read_scope": "Status, inheritance, branch matrices and conventions; no unreplayed aggregate formulas imported."
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_divisors.md",
+      "git_blob": "03972562a6d17fe59937d810e353c4a8d2cdea75",
+      "sha256_lf": "2c9224962e8395082bdafaf490f664be1943511a82e28ef4a86569b637aca958",
+      "read_scope": "DB1-DB3 through the defect strata and finite-profile discussion."
+    },
+    {
+      "path": "05-knowledge/results/ogg_triangular_chowla_20260927.md",
+      "git_blob": "81b6b1a7a5e3e0a3e0b005b4de6c23db46f58f47",
+      "sha256_lf": "966974dd168eb974e8c05fbdbe9c235d8b2e6cb93f768af32b82a61712605c48",
+      "read_scope": "Introduction only, as historical notation warning, no literature claims inherited."
+    },
+    {
+      "path": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "git_blob": "c0af17fdbc762501280c79697ab57a279b4e7815",
+      "sha256_lf": "2ed6f99a61bc8497a1cf79e91e3fee2df8a338fe9c8fa76e569ae445a26525cb",
+      "read_scope": "Definitions, FUS classification and scoped divisor symmetries."
+    },
+    {
+      "path": "01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "git_blob": "e8c7d06ced43a4107830989bc3fe6dd87a08d834",
+      "sha256_lf": "bb990b326f4dced3118a83ef240accb47ebf387c9586dcd67994507a64194098",
+      "read_scope": "Status and complete core fold/fixed-point proof through section5."
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/SYNTHESIS.md",
+      "git_blob": "667651bb558976ab2d7bed1a5d80752f17be5a95",
+      "sha256_lf": "ed5d576273210add3c6bac9bb9e9c0650ca57da8b7cdfdbc3adeabebd5724b61",
+      "read_scope": "Full synthesis as navigation; exact cycle claims checked against its proof."
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/cycle-geometry/PROOF.md",
+      "git_blob": "4d1ed053fa42279bcbe15e7d06c0c71e1343d68e",
+      "sha256_lf": "bd04cad6a9bacafadb7f58f7f40910e07ef286b52102795bc842b595db9650a0",
+      "read_scope": "Sections1-2 and6 full; monodromy portions read but not used as dependencies."
+    },
+    {
+      "path": "05-knowledge/results/session70_attachment_guard_alignment_20261026/session70-graph-labeling/REPORT.md",
+      "git_blob": "a53777261584109f58a7622ea67ed627f253d1e9",
+      "sha256_lf": "3859b1c1e588da3945764ec840870981af9e7b5bd2f95114dedccb053f23208b",
+      "read_scope": "Sections2-5: pairing proof, square insertion, graceful overwrite quotient, Petersen and K33 maps."
+    },
+    {
+      "path": "05-knowledge/results/unnamed_carrier_dissection_20261026/CONNECTIONS.md",
+      "git_blob": "acb4e72ee3d4117e0e3269cbfa8d2066b33d7a44",
+      "sha256_lf": "0aca4b20279defbb19a793823cc8aca9f1c3fe72b018a0acdd1314d1eaa6c9c5",
+      "read_scope": "Section5a operation boundary table; adjacent Penrose paragraph as background only."
+    },
+    {
+      "path": "05-knowledge/results/square_sum_berggren_absorber_bijection_20261019.md",
+      "git_blob": "93967525e35a0ce171a2bdbb491901c9189979f3",
+      "sha256_lf": "71c06b6dc39b953359ac4ec53f4aaf6d21442f6368a060486c7d002c83a66633",
+      "read_scope": "Sections1-4: matrices, positive norm-one trees, address bijection and absorber formula."
+    },
+    {
+      "path": "05-knowledge/results/berggren_nonbacktracking_branch_character_sieve_levels_20261026.md",
+      "git_blob": "911c5214fdc0978e071cf24e77e59b9d2bfdd09a",
+      "sha256_lf": "0489c2e5b5b6fc4c19ec3dff5b9cc5c0f3d4f2dab76b045824336028c7d34472",
+      "read_scope": "Status and sections1-2; no spectral computations imported as newly verified."
+    },
+    {
+      "path": "01-canon/theorems/THM-4808-berggren-tree-is-non-backtracking-branch-character-pole-frame-every-modulus-obstruction-cusp-pairing.md",
+      "git_blob": "c463a407507e363726c21dae2be7eacaa1d6ea3f",
+      "sha256_lf": "70d8245ec53ed98a7f11617cfb850ad9b63844127d741c603cf2c4a05a95cf5c",
+      "read_scope": "Audited status/corrections and source routes; elementary branch context only."
+    },
+    {
+      "path": "05-knowledge/results/twin_pythagorean_124_20261026/finite_field/README.md",
+      "git_blob": "2c57f91532db088239512964ec66c0b4b4ec5cb2",
+      "sha256_lf": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413",
+      "read_scope": "Sections1-3: actual marking, paired-design scope and normal-basis warning."
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/README.md",
+      "git_blob": "21a7f522d037c0e4beecd49535a879456735cb9d",
+      "sha256_lf": "3c93784c8f0785a69cf0503a6a0a608cd48665e3c697d1e5ddc2dc8f91aa8a43",
+      "read_scope": "Full summary, especially exact carrier scope and inherited81/27 responses; no rerun of full path enumeration."
+    },
+    {
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/SQUARE_SIGMA_EDGES.md",
+      "git_blob": "8865cfd6ef051cea222d5d7d009cf6dbb4e24971",
+      "sha256_lf": "b6b3a29ba0ea752b34c80f4975a2b485f9f1ddc51eac1a898ae81b8f9f9d4d1a",
+      "read_scope": "Sections4-5: coprime parity composition, hostiles and classical attribution."
+    },
+    {
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/CARRIER_AND_144_BRIDGE.md",
+      "git_blob": "433de8635d791252c24c9148e240cd241c0b650d",
+      "sha256_lf": "5ecdacc08941937a8aa86a98231648b1f41d7093c77ae87fd3a1d919d245e0d9",
+      "read_scope": "Full carrier and square-class144 bridge, reviewed in preceding session and targeted again here."
+    },
+    {
+      "path": "00-navigation/META-PATTERNS.md",
+      "git_blob": "346991110594940fc0aa36138b984f61be1dfe04",
+      "sha256_lf": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe",
+      "read_scope": "Named cards recorded in RECOVERY.md."
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256_lf": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "read_scope": "Startup portfolio, context contracts, exact evidence and closeout."
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "git_blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "sha256_lf": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "read_scope": "Startup and relevant literature routes; no unaudited frontier result imported."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/FUS_DIVISOR_FRONTIER.md",
+      "git_blob": "3d24534169dbe49c90878992d118effc00c2e208",
+      "sha256_lf": "fdd3821e8e91d03f0710dddbeee05b041546cb70c41d95300d225337634cafb5",
+      "read_scope": "Results, count definitions, updates, square promotion/intersection, source-polynomial comparison;364minimum credited."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/GUARDED_OBSERVERS.md",
+      "git_blob": "34a6e8abdc08de3a94653e2b0742821030114f8a",
+      "sha256_lf": "d17d1c5d28f890503f2321ce3b173d4098769bafda3451936797cbcfef1f5be3",
+      "read_scope": "Results and standard context theorem; later numeric-rank and full-domain results retained only as scope comparisons."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/BRANCH_MEMORY.md",
+      "git_blob": "cda66e704d370651d5fb86e45be284e186e52420",
+      "sha256_lf": "c7f240b229e67367a1cf86dafdd3fe71c0765ec30306ad29387fdc92428a3700",
+      "read_scope": "Results and sections1-7: endpoint congruence versus target descent, universal matrix witness, one-bit repair and limits."
+    },
+    {
+      "path": "05-knowledge/results/session84_guarded_unification_20261028/BERGGREN_SEMIPRIME_BRIDGE.md",
+      "git_blob": "0872096fccb9630c40be57a8554101fce5b2de67",
+      "sha256_lf": "b1496fe2423d633b83d1d74e2f42e90c106b1b73e7f1538131442261b22acded",
+      "read_scope": "Sections1-2 charts/proof and sections3-5 transport/prime guard examples; finite counts cited, not reaudited."
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://arxiv.org/abs/math/0408232",
+      "scope": "Lovasz, connection matrices and graph algebras; abstract only, no representation theorem assumed.",
+      "access_date": "2026-10-28"
+    },
+    {
+      "url": "https://arxiv.org/abs/cs/0609109",
+      "scope": "Courcelle-Weil recognizability; abstract and primary publisher description, operation-signature scope.",
+      "access_date": "2026-10-28"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/0406512",
+      "scope": "Romik, finite ternary addresses and modified Euclidean algorithm; abstract.",
+      "access_date": "2026-10-28"
+    },
+    {
+      "url": "https://research-portal.uu.nl/en/publications/power-values-of-divisor-sums/",
+      "scope": "Beukers-Luca-Oort bibliographic record and abstract; PDF retrieval failed, no full-proof-read claim.",
+      "access_date": "2026-10-28"
+    }
+  ]
+}
