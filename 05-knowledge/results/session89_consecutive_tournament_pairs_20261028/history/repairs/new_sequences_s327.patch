@@ -1,0 +1,31 @@
+--- a/04-computation/new_sequences_s327.py
++++ b/04-computation/new_sequences_s327.py
+@@ -1,5 +1,16 @@
+ #!/usr/bin/env python3
+ """
++SESSION 89 CODEC REPAIR (2026-10-28): The smaller tiling maps
++(lo, hi) -> (lo, hi-1) in the strict upper triangle. The old hi-2
++coordinate silently discarded its range-two bits (n-3 bits at size n).
++
++LEGACY / PROVENANCE WARNING: Saved rank/determinant data produced by the
++old version were NOT full-binary-matrix censuses. Historical output is
++not rewritten or regenerated here. Only the inline square codec is
++corrected; the other exploratory calculations, OEIS claims, and narrative
++below are retained without revalidation. See the Session 89 repaired-square
++codec note and AST-isolated regression for the scope of this correction.
++
+ new_sequences_s327.py -- opus-2026-03-24-S327
+ 
+ NEW OEIS SEQUENCES FROM THE FRACTAL CODEC AND TILING SQUARE
+@@ -202,9 +213,9 @@
+                 r = hi - 2; c = lo
+                 if r < side and c < side:
+                     M[r][c] = (nb >> k) & 1
+-            # (n-1)-tiling → upper (transposed)
++            # (n-1)-tiling → strict upper (shifted transpose)
+             for k, (lo, hi) in enumerate(tiles_n1):
+-                r = lo; c = hi - 2
++                r = lo; c = hi - 1
+                 if r < side and c < side and r < c:
+                     M[r][c] = (nb1 >> k) & 1
+ 
