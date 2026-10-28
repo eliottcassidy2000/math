@@ -1,6 +1,11 @@
 /*
  * Fast k-uniform hypergraph enumeration using divisor-signature Mobius approach.
  *
+ * LEGACY RESEARCH PROTOTYPE: Session87 adds strict integer-input validation
+ * and refuses composition-capacity truncation. Fixed-width arithmetic and
+ * the orbit-bucket cap are NOT generally certified; this is not a general
+ * correctness guarantee for every input accepted by the capacity guard.
+ *
  * Instead of iterating t=0..L-1 for Burnside orbit counting, enumerate all
  * selections of at most k "active" parts and compute orbit counts via Mobius
  * inversion over divisor tuples.
@@ -25,8 +30,11 @@
 #include <pthread.h>
 #include <stdatomic.h>
 #include <gmp.h>
+#include <errno.h>
+#include <limits.h>
 
 #define MAX_K 20
+#define MAX_COMPOSITIONS 10000
 #define MAX_DEPTH 200
 
 static int global_n, global_k;
@@ -39,8 +47,8 @@ static int max_t_val;
 
 /* Precomputed: all ordered compositions of global_k into p positive parts (p=1..min(k,depth)) */
 static int num_comps;
-static int comp_data[10000][MAX_K]; /* comp_data[i] = j values */
-static int comp_len[10000];          /* number of parts */
+static int comp_data[MAX_COMPOSITIONS][MAX_K]; /* comp_data[i] = j values */
+static int comp_len[MAX_COMPOSITIONS];          /* number of parts */
 
 typedef struct { int pi; int m; } WorkItem;
 static WorkItem *work_items;
@@ -147,7 +155,10 @@ static long long count_gcd_pattern(int *rs, int *ds, int p, long long L) {
 /* Generate all ordered compositions of global_k into positive parts */
 static void gen_compositions(int remaining, int *prefix, int plen) {
     if (remaining == 0) {
-        if (num_comps >= 10000) return;
+        if (num_comps >= MAX_COMPOSITIONS) {
+            fprintf(stderr, "ERROR: composition capacity exceeded; refusing truncated count\n");
+            exit(EXIT_FAILURE);
+        }
         memcpy(comp_data[num_comps], prefix, plen * sizeof(int));
         comp_len[num_comps] = plen;
         num_comps++;
@@ -348,17 +359,34 @@ static void *thread_worker(void *arg) {
     return NULL;
 }
 
+static int parse_int_arg(const char *text, const char *name, int *out) {
+    char *end;
+    errno = 0;
+    long value = strtol(text, &end, 10);
+    if (errno == ERANGE || end == text || *end != '\0' || value < INT_MIN || value > INT_MAX) {
+        fprintf(stderr, "ERROR: invalid integer for %s\n", name);
+        return 0;
+    }
+    *out = (int)value;
+    return 1;
+}
+
 int main(int argc, char *argv[]) {
     if (argc < 3) {
         fprintf(stderr, "Usage: %s <k> <n> [threads]\n", argv[0]);
         return 1;
     }
 
-    global_k = atoi(argv[1]);
-    global_n = atoi(argv[2]);
+    int num_threads = 1;
+    if (!parse_int_arg(argv[1], "k", &global_k) ||
+        !parse_int_arg(argv[2], "n", &global_n) ||
+        (argc >= 4 && !parse_int_arg(argv[3], "threads", &num_threads))) return 1;
     int n = global_n;
     int k = global_k;
-    int num_threads = (argc >= 4) ? atoi(argv[3]) : 1;
+    if (k < 1 || n < 0 || num_threads < 1) {
+        fprintf(stderr, "ERROR: require k >= 1, n >= 0, threads >= 1\n");
+        return 1;
+    }
 
     if (k > MAX_K) {
         fprintf(stderr, "k must be <= %d\n", MAX_K);
@@ -368,6 +396,13 @@ int main(int argc, char *argv[]) {
     if (n < k) {
         printf("a(%d,%d) = 1\n", n, k);
         return 0;
+    }
+
+    /* The complete positive-composition family has 2^(k-1) entries. */
+    if (k > 0 && (1U << (k - 1)) > MAX_COMPOSITIONS) {
+        fprintf(stderr, "ERROR: k=%d needs %u compositions, capacity is %d; unsupported\n",
+                k, 1U << (k - 1), MAX_COMPOSITIONS);
+        return 1;
     }
 
     /* Precompute compositions */
