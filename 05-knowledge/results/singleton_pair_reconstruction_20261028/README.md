@@ -54,6 +54,14 @@ Enumeration advances are separate:
 * The aligned-pair channel F_n(2,1) is reproduced through100 with the inherited
   counter and checked structurally through n=3. It is not A000568(n)a000568(n+1).
 
+Before close-out, [concurrent generation reached10](../consecutive_flags_order10_20261028/README.md):
+9733056 classes in an829899-byte compressed bank. This session reruns its full
+alternate audit and integrates [Session89's paired enumeration and low-bit
+theorem](../session89_consecutive_tournament_pairs_20261028/README.md). All351
+ordinary and101 paired coefficients pass the new low-bit constraints. See
+[incoming integration](CONNECTIONS.md#incoming-work-integrated-before-close-out)
+for credits and the distinct carrier menus.
+
 Read [the proofs and precise menus](THEORY.md), [history, ETH/Jacobian bridges
 and open targets](CONNECTIONS.md), and [the audit/reproduction scope](AUDIT.md).
 The ETH counting transfer is conditional on the released stronger #CNF theorem;

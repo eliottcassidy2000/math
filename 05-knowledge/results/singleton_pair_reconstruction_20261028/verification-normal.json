@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "python_optimized": false,
+  "replayed_contexts": 21845,
+  "replayed_profile_updates": 101604,
+  "closed_cells_at_seven": 32272,
+  "scalar_prefix": 350,
+  "scalar_digits": 17646,
+  "lazy_root_complete_order": 9,
+  "incoming_full_bank_order": 10,
+  "all_size_scope": "Sufficient K; reconstruction refuted first at seven; minimality open"
+}

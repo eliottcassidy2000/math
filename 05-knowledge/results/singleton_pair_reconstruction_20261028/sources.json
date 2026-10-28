@@ -11,5 +11,12 @@
   "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/check_blockfill.py": "cb246f280786f6a7f8b1f829d9d9b9e0993cb2298eb399783809bedb27780bdb",
   "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/baseline_sources.py": "684368faaf908d9d28b966bfa8f9642d0ba1f3848e1083e6531c86bd3cc8bdbc",
   "05-knowledge/results/converse_tournament_count_channels_20261021/session22-converse-channels/channels.py": "b27d30d8f8cc81768c8f6b382f446658515d86f2cf5f212d2b59e20859ba6792",
-  "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad"
+  "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+  "05-knowledge/results/consecutive_flags_order10_20261028/generate.cpp": "53258803231c6e6f22581be67758acd0a0a06613a9677cba85caf7e23ebc4a5c",
+  "05-knowledge/results/consecutive_flags_order10_20261028/verify_bank.cpp": "8fd8bf13f0191c6c6248605d3cb1901bfd0d3e48c98726504e78c16da9f4d5c4",
+  "05-knowledge/results/consecutive_flags_order10_20261028/bank_manifest.json": "5d6e86b591bb1fe68097a86f57e5ad794f73e9629e32268a0a09ab5074773b94",
+  "05-knowledge/results/consecutive_flags_order10_20261028/verification10.json": "a1ddb537517d7e9d50c9571f8a4b67f0c71b1e5e54b569470bf4d83fb7b9cdfc",
+  "05-knowledge/results/consecutive_flags_order10_20261028/parents9.u64.gz": "92cb19bbcdc0bcb58b0ded354aacdd1809c72251e2e29d28d23f92de2d8bbe05",
+  "05-knowledge/results/consecutive_flags_order10_20261028/flags10.varint.gz": "ef5cf3d13f5b679890cbe69bcd1f78189161953e726e12d169fb576845677ef7",
+  "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/counting/LOW_BITS.md": "0ade859bd4bdb78976a1e6607eabe8cc8a815b478c89dbcaa10192bbb15e2591"
 }

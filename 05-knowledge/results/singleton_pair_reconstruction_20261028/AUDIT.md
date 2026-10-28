@@ -47,6 +47,12 @@ costs. Lazy recovery also costs time when requested.
   checked by ordered-component convolution; empty strong coefficient is0.
 * `cross_domain.py`: exact symbolic determinant -2 and three rational images
   from existing THM-1300; blue syndrome/zero-test distinction after J_L.
+* `incoming_check.py`: new independent low-bit constraints on351 ordinary and
+ 101 paired coefficients; literal order4 complement-family hostile; both byte
+  hashes for the incoming10-bank. With `--full-bank`, compile and rerun its
+  complete alternate canonicalizer on9733056 exported classes, checking
+  uniqueness, all automorphism orders and labelled mass2^45. Its row encoding
+  is shared with its producer; this is a fresh full run, not a new verifier.
 
 Discarded probe: the two7-presentations have equal empty-context syndromes,
 both5216, so they do not witness different syndromes until a left singleton
@@ -63,12 +69,14 @@ python -B -O 05-knowledge/results/singleton_pair_reconstruction_20261028/verify.
 python -B 05-knowledge/results/singleton_pair_reconstruction_20261028/lazy_root_switch.py --max-order 9
 python -B 05-knowledge/results/singleton_pair_reconstruction_20261028/count_extension.py --bound 350
 python -B 05-knowledge/results/singleton_pair_reconstruction_20261028/count_extension.py --bound 350 --reference
+python -B 05-knowledge/results/singleton_pair_reconstruction_20261028/incoming_check.py --full-bank
 ```
 
 The default verifier replays the small exhaustive mathematics, validates all
 saved350 coefficients and their full equality, and checks source/receipt hashes.
 It does not silently rerun the larger enumeration or timing jobs. Those are
-the explicit final three commands. Fresh timings change the raw receipt hash;
+the explicit larger-job commands above. The final command additionally needs
+a C++17 compiler named `g++`. Fresh timings change the raw receipt hash;
 compare semantic fields, not wall-clock times, when rerunning large jobs.
 Hashes normalize LF for text and retain raw bytes for gzip. No assertion can
 be disabled with `python -O`; checks raise explicit exceptions.

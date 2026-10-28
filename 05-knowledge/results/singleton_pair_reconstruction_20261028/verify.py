@@ -19,9 +19,10 @@ def seals():
 
 def main():
     sys.set_int_max_str_digits(0);seals()
-    import check_theory,boundary_profile,pair_square,cross_domain
+    import check_theory,boundary_profile,pair_square,cross_domain,incoming_check
     with contextlib.redirect_stdout(io.StringIO()):
         theory=check_theory.main();boundary=boundary_profile.main();pair_square.main();cross_domain.main()
+        incoming=incoming_check.main()
     seals()
     a=json.loads((HERE/'counts-bucket-350.json').read_text())
     b=json.loads((HERE/'counts-reference-350.json').read_text())
@@ -41,11 +42,16 @@ def main():
         N=row['order'];r.need(row['classes']==a['values'][N],'constructive/scalar comparison')
         r.need(row['classification_requests']==N*row['classes']==row['audit']['trace'],'root trace')
     r.need(root['independent_bank']['classes']==191536,'complete bank receipt')
+    saved_incoming=json.loads((HERE/'incoming-receipt.json').read_text())
+    r.need(all(saved_incoming[k]==v for k,v in incoming.items()),'incoming cheap rechecks')
+    r.need(saved_incoming['full_bank_audit']['classes']==9733056 and
+           saved_incoming['full_bank_audit']['full_class_uniqueness'] and
+           saved_incoming['full_bank_audit']['labelled_mass']==1<<45,'incoming complete ten-bank receipt')
     result=dict(status='PASS',python_optimized=not __debug__,
                 replayed_contexts=sum(theory['witness']['context_levels']),
                 replayed_profile_updates=sum(x['updates'] for x in boundary['profile_updates']),
                 closed_cells_at_seven=boundary['seven_closed_carrier_cells'],
-                scalar_prefix=350,scalar_digits=17646,lazy_root_complete_order=9,
+                scalar_prefix=350,scalar_digits=17646,lazy_root_complete_order=9,incoming_full_bank_order=10,
                 all_size_scope='Sufficient K; reconstruction refuted first at seven; minimality open')
     print(json.dumps(result,indent=2))
 

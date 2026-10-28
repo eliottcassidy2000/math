@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "ordinary_low_bits": {
+    "empty": 1,
+    "odd_exact": 175,
+    "two": 1,
+    "even_equal": 27,
+    "even_strict": 147
+  },
+  "paired_low_bits": {
+    "empty": 1,
+    "odd_exact": 50,
+    "two": 1,
+    "even_equal": 12,
+    "even_strict": 37
+  },
+  "native_self_converse_hostile": [
+    [
+      6,
+      4,
+      8,
+      3
+    ],
+    [
+      10,
+      12,
+      9,
+      0
+    ]
+  ],
+  "bank_compressed_bytes": 829899,
+  "full_bank_audit": {
+    "status": "PASS",
+    "order": 10,
+    "classes": 9733056,
+    "labelled_mass": 35184372088832,
+    "full_class_uniqueness": true,
+    "automorphism_order_histogram": {
+      "1": 9677605,
+      "3": 54370,
+      "5": 274,
+      "7": 10,
+      "9": 738,
+      "15": 32,
+      "21": 12,
+      "25": 1,
+      "27": 10,
+      "63": 2,
+      "81": 2
+    },
+    "seconds": 14.3377
+  }
+}

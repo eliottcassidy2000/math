@@ -18,9 +18,9 @@ polynomial construction bound.
 
 October's [XOR disagreement corollary](../converse_tournament_count_channels_20261021/session22-converse-review/COROLLARY_REVIEW.md)
 deliberately did not claim a doubled-order structural map. Recovering Eplett's
-1979 odd-order representation now supplies that missing classical bridge for
-the consecutive-pair interpretation. The even-order version lacks its unique
-fixed pole; we have not extended the odd construction to it.
+1979 odd-order representation supplies that missing classical bridge for the
+consecutive-pair interpretation. The incoming order-ten packet also supplies
+an even-order normalization by paired-arc winners; see the integration below.
 
 The [new weighted-fiber transfer account](../session88_symmetry_certificates_20261028/operators/TRANSFER.md)
 explains why reset and root switching carry actual mark multiplicities.
@@ -137,10 +137,11 @@ that all declared future operations provably fail to test.
    witness first. Prove an all-size separation theorem only after specifying
    the selector. The named-path theorem is an upper benchmark, not the answer
    for every intermediate menu.
-3. **Even doubles with an honest gauge.** Replace the odd fixed pole by an
-   explicitly retained antipodal owner and switching action. Determine the
-   smallest sidecar giving both a class bijection and transporter recovery.
-   Test n=2,3 against the inherited F_n(2,0) counts before a general claim.
+3. **Doubles under actual continuation.** The incoming even/odd codecs settle
+   the class-level correspondence. Determine the smallest additional data for
+   path attachments and native complement: the self-converse family already
+   fails closure at4. Quantify how centralizer indices and actual transports
+   change under these operations, retaining the C3 and Paley7 controls.
 4. **Count constrained atoms without listing them.** Choose a fixed forbidden
    orientation or bounded joint-port guard; compile its fixed-permutation CNF
    parsimoniously and compare small exact counts to the actual banks. This
@@ -152,3 +153,39 @@ separate the relation, its coherent transport, and the predicates realizable
 by future operations. S2--S4 now give a nontrivial all-size theorem for one
 such interface. They do not establish a universal compression theorem for
 arithmetic, LRC(14), Collatz, or all joint-port attachments.
+
+## Incoming work integrated before close-out
+
+Two concurrent packets landed after the initial computations. Their stronger
+overlapping results are incorporated rather than presented as new here.
+
+* [Session89](../session89_consecutive_tournament_pairs_20261028/README.md)
+  gives the same consecutive-pair distinction, odd-order class bridge, a
+  complete paired bank through n=5, actual residual-group cache reuse, and a
+  fused scalar counter with matched timing/memory measurements. It also proves
+  when an equivariant orientation anchor exists: precisely for an odd-order
+  acting group. Our odd-map convention normalizes the pole arcs; its convention
+  normalizes the paired arcs. Raw output codes require a gauge change.
+* Its [low-bit theorem](../session89_consecutive_tournament_pairs_20261028/counting/LOW_BITS.md)
+  supplies a cheap independent arithmetic check: odd n has
+  v2(F_n(r,s))=r(n-1)/2+s; at even n>=4, the normalized bit at rn/2+2s is
+  phi(n)/2 mod2. `incoming_check.py` checks all351 ordinary and101 paired
+  coefficients against it. These checks detect some errors; they do not
+  certify every high bit or replace the two complete exact computations.
+* [Consecutive flags/order ten](../consecutive_flags_order10_20261028/README.md)
+  supplies9733056 classes in an829899-byte compressed parent/attachment bank.
+  We check both compressed and decoded hashes and rerun its alternate complete
+  canonicalizer on **every** exported class, recovering uniqueness, all group
+  orders, and labelled mass2^45. This is an independent run of their verifier,
+  not a third independent low-level encoding or a new generation claim here.
+* That packet also gives the even class bijection and native-complement
+  failure rows(6,4,8,3) -> (10,12,9,0), rechecked here by exact isomorphism.
+  Its minimal207070-state order7 carrier observes a child and deletion-parent
+  class and preserves a distinguished root during reset. It differs from our
+  growing singleton/blue menu; the two minima cannot be compared as if their
+  operations and observations agreed.
+
+The all-size closed K theorem and its least seven-vertex reconstruction
+obstruction remain this packet's distinct contribution. The growing corpus
+now has actual representative generation through10, our scalar prefix through350,
+and several explicitly different closed observer languages.
