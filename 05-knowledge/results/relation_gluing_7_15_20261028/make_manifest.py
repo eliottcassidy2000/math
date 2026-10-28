@@ -9,6 +9,7 @@ p=Path(__file__).resolve().parent
 repo=p.parents[2]
 base='83b601158076669edc8729ce461f150da1c3877e'
 incoming='1b86e4eadcd6bab19019a1226059f2f1fbf37e13'
+later='a2105a4f1731ee006c2454e5499f3ab3ec4e370f'
 paths=set()
 for f in p.glob('*.md'):
     for link in re.findall(r'\]\(([^)]+)\)',f.read_text(encoding='utf-8')):
@@ -21,6 +22,7 @@ for f in p.glob('*.md'):
 pins=[]
 for path in sorted(paths):
     commit=incoming if ('session85_arithmetic_codes_free_bits' in path or 'free_bits_signed_incidence_20261028' in path or 'THM-4839-' in path) else base
+    if 'free_bits_seven_fiftysix_20261028' in path or 'FIFTEEN_PRIME_GRAPHIC_CONTROL' in path: commit=later
     out=subprocess.run(['git','show',commit+':'+path],cwd=repo,capture_output=True,check=True).stdout
     pins.append({'path':path,'commit':commit,
                  'sha256_lf':hashlib.sha256(out.replace(b'\r\n',b'\n')).hexdigest()})

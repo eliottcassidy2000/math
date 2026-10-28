@@ -1,0 +1,21 @@
+{
+  "computational_replay": {
+    "local_links": 75,
+    "manifest_files": 18,
+    "receipt_pairs_equal": 2,
+    "replay": true,
+    "source_pins": 37,
+    "status": "PASS"
+  },
+  "final_static_verification": {
+    "local_links": 77,
+    "manifest_files": 18,
+    "receipt_pairs_equal": 2,
+    "replay": false,
+    "source_pins": 39,
+    "status": "PASS"
+  },
+  "navigation_repair": "Joined two wrapped bullet lines without changing their content to restore the hypothesis-index120-line budget.",
+  "note": "Only source-credit and navigation metadata changed after the full computational replay.",
+  "repository_documentation_check": "PASS: bounded startup surface, frontier status, correction sentinels, router smoke"
+}

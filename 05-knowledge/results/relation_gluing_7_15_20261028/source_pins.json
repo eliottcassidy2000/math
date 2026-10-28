@@ -74,6 +74,11 @@
       "sha256_lf": "f97d6a3cfca74a4b524e03ade66d186d16be351543484cb466b56ae148995c28"
     },
     {
+      "commit": "a2105a4f1731ee006c2454e5499f3ab3ec4e370f",
+      "path": "05-knowledge/results/free_bits_seven_fiftysix_20261028/FIFTYSIX.md",
+      "sha256_lf": "ad8c17098f3e06e288e964cb45e7c4995071909ca6af2f40358727dc548bcc46"
+    },
+    {
       "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
       "path": "05-knowledge/results/free_bits_signed_incidence_20261028/README.md",
       "sha256_lf": "6b96af621279f0d9c07f0252009eb7449a34751c2cba2b37fcf3c3461de120e7"
@@ -147,6 +152,11 @@
       "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",
       "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/FANO_PALEY_INFORMATION.md",
       "sha256_lf": "857c7c2867a2f625388ab29b001773783041452cb6295b822d5d10e5216d8e05"
+    },
+    {
+      "commit": "a2105a4f1731ee006c2454e5499f3ab3ec4e370f",
+      "path": "05-knowledge/results/session85_arithmetic_codes_free_bits_20261028/FIFTEEN_PRIME_GRAPHIC_CONTROL.md",
+      "sha256_lf": "4b0f36c90a0811a045097cccb0bb2e369498f768be6c0ae2ff47580cca9f7862"
     },
     {
       "commit": "1b86e4eadcd6bab19019a1226059f2f1fbf37e13",

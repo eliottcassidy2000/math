@@ -39,3 +39,19 @@ atlas uses its corrected explicit norm-five/norm-seven maps only.
 
 No external manuscript-dependent BSD conclusion, arbitrary fifteen-vertex
 tournament formula, or general prime-realization assertion is imported.
+
+## Final concurrent controls
+
+The [56-object matching proof](../free_bits_seven_fiftysix_20261028/FIFTYSIX.md)
+identifies oriented Fano bases, order-three linear maps and four-direction
+matchings on eight ports. Its56 are different objects from the56 projective
+spreads on fifteen points counted here; no equivariant identification is
+claimed between these two universes.
+
+The [graphic fifteen-prime control](../session85_arithmetic_codes_free_bits_20261028/FIFTEEN_PRIME_GRAPHIC_CONTROL.md)
+is even sharper: a different15-prime bank has the same rank4 and2048
+square-total selections but a loop and parallel columns, hence weight-one
+and weight-two codewords. It is graphic. Its six primes{2,5,7,19,29,59}
+form a K4; adding89 supplies the missing square class and produces Fano.
+Thus length, rank and code size do not determine the dependence geometry.
+These are inherited finite controls, read before the final route was added.

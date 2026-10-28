@@ -82,10 +82,8 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 ## LRC(14) — OPEN
 
 - **THM-2074:** density-one strict LRC(14), not universal closure.
-- **THM-2080:** dyadic depth at most four, terminal size `7..10`, maximum at
-  least `25`; depth-zero eleven and rank twelve remain separate.
-- **HYP-6820 (MIXED):** uniform `q<=25` is refuted; non-AP/deep multi-defect
-  emptiness remains open.
+- **THM-2080:** dyadic depth at most four, terminal size `7..10`, maximum at least `25`; depth-zero eleven and rank twelve remain separate.
+- **HYP-6820 (MIXED):** uniform `q<=25` is refuted; non-AP/deep multi-defect emptiness remains open.
 - **Live residues:** rank-seven finite banks; the guard-`13` pencil and
   nontransverse guarded lanes; depth-zero eleven, marked circuits, and the
   rank-twelve box.
