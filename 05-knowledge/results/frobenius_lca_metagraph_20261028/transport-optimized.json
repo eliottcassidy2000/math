@@ -193,7 +193,19 @@
       "all_normal_basis_generators": 8,
       "binary_storage_bits": 2,
       "degree": 4,
+      "different_orbit_scope": {
+        "adaptive_cost_histogram": {
+          "3": 4
+        },
+        "aggregate_query_cost": 2,
+        "nonadaptive_cost_histogram": {
+          "3": 4
+        },
+        "normal_orbits": 2,
+        "ordered_pairs": 4
+      },
       "distinct_relative_tables": 4,
+      "full_period_not_normal_hostile": null,
       "joint_parity_decoder_masks": [
         10,
         6
@@ -455,7 +467,29 @@
       "all_normal_basis_generators": 24,
       "binary_storage_bits": 3,
       "degree": 6,
+      "different_orbit_scope": {
+        "adaptive_cost_histogram": {
+          "3": 8,
+          "5": 8
+        },
+        "aggregate_query_cost": 3,
+        "nonadaptive_cost_histogram": {
+          "3": 8,
+          "5": 8
+        },
+        "normal_orbits": 4,
+        "ordered_pairs": 16
+      },
       "distinct_relative_tables": 6,
+      "full_period_not_normal_hostile": {
+        "anchor": 2,
+        "anchor_span_rank": 5,
+        "common_profile": 36,
+        "targets": [
+          34,
+          35
+        ]
+      },
       "joint_parity_decoder_masks": [
         21,
         24,
@@ -1035,7 +1069,30 @@
       "all_normal_basis_generators": 128,
       "binary_storage_bits": 3,
       "degree": 8,
+      "different_orbit_scope": {
+        "adaptive_cost_histogram": {
+          "4": 224,
+          "7": 32
+        },
+        "aggregate_query_cost": 3,
+        "nonadaptive_cost_histogram": {
+          "4": 192,
+          "6": 32,
+          "7": 32
+        },
+        "normal_orbits": 16,
+        "ordered_pairs": 256
+      },
       "distinct_relative_tables": 8,
+      "full_period_not_normal_hostile": {
+        "anchor": 2,
+        "anchor_span_rank": 7,
+        "common_profile": 221,
+        "targets": [
+          18,
+          19
+        ]
+      },
       "joint_parity_decoder_masks": [
         170,
         153,

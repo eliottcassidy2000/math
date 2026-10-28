@@ -20,11 +20,12 @@ The concrete new results are:
   port matrix through the LCA. Mixed periods require connectivity at each
   prime-power layer. Degree-six and degree-eight layers have explicit
   minimum-edge constructions; all three-frame cases were exhausted.
-- **FINITE-EXACT access cost:** all 24 normal generators of F64 require
-  five individual incidence queries to find a relative phase; all 128 of
-  F256 require four. **PROVED:** three joint parity queries suffice in
-  both, with explicit decoders. Storing three bits and acquiring them are
-  different tasks.
+- **FINITE-EXACT access cost for copies of the same normal orbit:** all 24
+  normal generators of F64 require five individual incidence queries;
+  all 128 of F256 require four. Across different normal-orbit pairs the
+  worst costs are five/seven. For32 F256 pairs adaptivity reduces six
+  fixed probes to four. **PROVED:** three joint parity queries suffice
+  in every case. Storing three bits and acquiring them are different tasks.
 - **PROVED affine operation compiler:** fixed named legal re-marking,
   complement, blue slicing and fixed attachment wiring preserve affine
   cells. Disjunctions/reset can require mixtures; general efficient closure
@@ -34,6 +35,15 @@ The concrete new results are:
   through n=6 agree with the classical odd-partition formula, evaluated
   through n=50. The existing actual metagraph census through n=8 was rebuilt
   and reproduced, including colours and multiplicities.
+
+**Concurrent credit:** incoming [normal-port/root-switch work](../relation_tower_frobenius_ports_20261028/README.md)
+shares the phase-tree minimum, supplies the different-orbit probe census,
+and constructs all191536 order-nine tournaments. We reproduced its broader
+phase census, added adaptive/parity query refinements, and checked its saved
+bank's types and counts; we did not rerun order-nine generation.
+[Session86's universal rigid-palette theorem](../session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md)
+settles a separate coarsest aggregate composition quotient. Neither result
+closes the full black/blue attachment classification.
 
 The hostile order-12 pair again has identical 67 labelled cyclic triples
 and H=462915 but automorphism orders 81/27. Its reset masses are 1/5715

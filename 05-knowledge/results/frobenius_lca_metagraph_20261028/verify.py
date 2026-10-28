@@ -1,5 +1,6 @@
 """Verify sealed receipts and pinned sources; replay exact computations on request."""
 import argparse
+import gzip
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -55,6 +56,20 @@ def main():
     for row in relocation:
         need(row['ordinary_classes']==counts[row['n']],'relocation versus Burnside')
         need(2*row['merged_classes']-row['self_converse']==row['ordinary_classes'],'converse lift')
+    incoming=ROOT/'05-knowledge/results/relation_tower_frobenius_ports_20261028'
+    root_switch=json.loads((incoming/'root_switch.json').read_text())
+    for row in root_switch['results']:
+        need(row['classes']==counts[row['order']],'incoming root-switch count')
+        if row['order']<=8:
+            need(row['tc_histogram']==relocation[row['order']-1]['tc_histogram'],'incoming whole presentation histogram')
+    bank=json.loads(gzip.decompress((incoming/'tournament_bank.json.gz').read_bytes()))
+    need(bank['order']==9 and len(bank['rows'])==counts[9],'incoming n9 bank size')
+    need(len({tuple(row) for row in bank['rows']})==counts[9],'incoming no exact duplicate encodings')
+    for rows in bank['rows']:
+        need(len(rows)==9 and all(0<=x<512 for x in rows),'incoming row types')
+        need(all(not(rows[i]>>i&1) for i in range(9)) and all(
+            (rows[i]>>j&1)+(rows[j]>>i&1)==1 for i in range(9) for j in range(i+1,9)),
+            'incoming tournament relation')
     if args.replay_metagraph:
         source=old.parent.parent/'enumerate.cpp'
         with tempfile.TemporaryDirectory(prefix='frobenius-metagraph-') as tmp:
@@ -64,7 +79,8 @@ def main():
             result=subprocess.run([str(exe),'8'],cwd=ROOT,check=True,capture_output=True,timeout=120)
             need(json.loads(result.stdout)==relocation,'compiled relocation replay')
     print(json.dumps(dict(sealed_files=len(names),source_pins='PASS',links='PASS',receipts='PASS',
-                          external_counts='0..50 PASS',replay=args.replay,metagraph_replay=args.replay_metagraph),sort_keys=True))
+                          external_counts='0..50 PASS',incoming_bank_types=counts[9],replay=args.replay,
+                          metagraph_replay=args.replay_metagraph),sort_keys=True))
 
 
 if __name__=='__main__':main()

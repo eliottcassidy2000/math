@@ -1,5 +1,9 @@
 {
   "base_commit": "5ed1835235b36a57b8cd11eb705aa259b6bc0f08",
+  "concurrent_integration": [
+    "dd1e1bbd6e5d7ca8e7825a4c84b264f69d1b8bb6",
+    "0884018279"
+  ],
   "external_sources": [
     {
       "retrieved": "2026-10-28",
@@ -62,6 +66,41 @@
       "git_blob": "ebda52cc8bc0159db3deda37345b6eaa83706532",
       "path": "05-knowledge/results/lca_ports_reverse_20261025/counting/README.md",
       "sha256_lf": "3def1841ef1824842eb24d1b17567093bc371dd4179dad754f849b3bb433282f"
+    },
+    {
+      "git_blob": "8e965e157788a59894b335ea9a3f16799f5fcd2c",
+      "path": "05-knowledge/results/relation_tower_frobenius_ports_20261028/README.md",
+      "sha256_lf": "4fc94c8c0353a341a1ec4132eb882b1ba7d547e1a0f48a2d25af409c1bdd74c7"
+    },
+    {
+      "git_blob": "afd6502c82b41ad2b9bcb6ec9c3276aaf7c0787a",
+      "path": "05-knowledge/results/relation_tower_frobenius_ports_20261028/THEORY.md",
+      "sha256_lf": "79049fe1488aa789723ce3994c61a6058d9923323b5211eb651e946c22cf08e1"
+    },
+    {
+      "git_blob": "932a389424c32ab7a8959266a89b58f990811a81",
+      "path": "05-knowledge/results/relation_tower_frobenius_ports_20261028/AUDIT.md",
+      "sha256_lf": "668867b1e394aecb8108031743ccd20fe591ea4700a461819c0528ebd05a3372"
+    },
+    {
+      "git_blob": "bdb9d573dc0bc343694a70cdf9054aef6182dc5e",
+      "path": "05-knowledge/results/relation_tower_frobenius_ports_20261028/root_switch.json",
+      "sha256_lf": "d2d2c1b908474176ecd45c8e8819cc58a2935c4371292206fa09b6031d4c203a"
+    },
+    {
+      "git_blob": "7f14bd8a017aead9bd1d50d9cee395a40737ffdb",
+      "path": "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py",
+      "sha256_lf": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259"
+    },
+    {
+      "git_blob": "0afb4b1ea17b656c25ffe802fa17ed7c5d6ced0e",
+      "path": "05-knowledge/results/relation_tower_frobenius_ports_20261028/tournament_bank.json.gz",
+      "sha256_lf": "f7012b3644f45b005f219ddf0d5bfe7e5e1abbbbc62021bd11bf6f3fe64434c4"
+    },
+    {
+      "git_blob": "4d15384c9b49d04a6001725d6f0b3cb6ebc95f50",
+      "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md",
+      "sha256_lf": "1a81b5dab907ce296244df738fd83556c2c4196c7580d259b108550cb27ecfa1"
     }
   ]
 }

@@ -6,6 +6,14 @@ means precisely the listed exhaustive universe. Inherited results are linked.
 There is no claim to a first enumeration formula for tournaments or to an
 efficient complete classification of arbitrary strong atoms.
 
+**Concurrent integration.** While this packet was being checked, commits
+dd1e1bbd6e and 0884018279 supplied the [normal-port/root-switch packet](../relation_tower_frobenius_ports_20261028/README.md)
+and [Session86 aggregate composition theorem](../session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md).
+The normal-frame minimum and all-order enumeration mechanisms are shared
+or inherited, not exclusive new discoveries here. Their broader orbit-pair
+tests and order-nine bank are incorporated below; the one-line form tests
+and joint-parity/adaptive query refinements address additional questions.
+
 ## F1. One marked subfield line can determine the entire incidence form
 
 Let r=2m, F=F_(2^r), K=F_(2^m), and phi(x)=x^2. Work with alternating
@@ -98,7 +106,9 @@ We exhaust all normal generators: 8 in F16, 24 in F64, 128 in F256.
 | F256 | 8 | 3 | 4 | 3 |
 
 Individual queries ask one M_k(i,j), with adaptive choice allowed. The costs
-hold for every normal basis in the listed finite fields. The exhaustive
+hold for every normal basis in the listed finite fields when both pieces
+use that SAME normal Frobenius orbit. They are not bounds for arbitrary
+pairs of different normal orbits. The exhaustive
 decision-tree optimization and an elementary lower bound agree:
 
 - F64's two possible trace rows have weights one and five. Each query
@@ -120,6 +130,33 @@ This is a change of interface, not free access to an unavailable parity:
 if only single incidence entries can be requested, computing one aggregate
 may itself require several entries. If the parent already owns the required
 joint parity, the corresponding phase bit needs no extra observation.
+
+### Different normal orbits: the integrated broader test
+
+The incoming [T2--T3 normal-port theorem](../relation_tower_frobenius_ports_20261028/THEORY.md)
+allows different normal orbits for the two frames. We replayed its entire
+ordered orbit-pair query universe, then optimized ADAPTIVE trees as well:
+
+| field | ordered normal-orbit pairs | minimum fixed-entry queries: pair counts | minimum adaptive-entry queries: pair counts |
+|---|---:|---|---|
+| F64 | 16 | 3:8, 5:8 | 3:8, 5:8 |
+| F256 | 256 | 4:192, 6:32, 7:32 | 4:224, 7:32 |
+
+In particular, 32 F256 orbit pairs improve from six fixed probes to four
+adaptive probes. Every pair admits THREE joint parity probes: the matrix
+of its complete profiles is invertible because both frames are normal and
+B_0 is nondegenerate. The aggregate decoder proof above applies unchanged.
+The all-degree worst case r-1 for individual probes is proved in incoming
+T2 by choosing dual normal bases, whose profiles are unit vectors. This
+does not contradict the four-query same-orbit F256 result.
+
+The incoming full-period-but-nonnormal hostiles were also rerun: F64 has
+anchor 2 and targets 34,35 with common profile 36; F256 has anchor 2 and
+targets 18,19 with common profile 221. The target pair differs by phi^(r/2)
+and the anchor's conjugate span has rank r-1. Full degree alone does not
+certify the injective decoder. Incoming T3 gives closure under re-rooting,
+restriction and gluing over a nonempty shared port set; disjoint gluing
+still needs a supplied relative phase.
 
 ## F3. LCA recovers joint matrices only at sufficient phase precision
 
@@ -212,6 +249,7 @@ The operation menu must remain explicit:
 | strong two-port state; output full class after singleton hinges on both sides | the joint rooted class is recoverable | inherited U1, all sizes |
 | named legal re-marking, complement, all ordered quotient-walk attachments | aligned relations, ordered run ports and multiplicities | inherited C1, sufficient; alignment cannot have bounded size |
 | full normal-basis field frames with known B_0; simultaneous Frobenius | coherent relative phases on the sufficient layer trees | F2--F3, minimal in this restricted model |
+| aggregate ordinary inflation counts for every rigid palette, bounded root arity | aggregate prime vertex-action cycle index | concurrent Session86 section4, coarsest for that observer |
 
 Sources are [unnamed U1--U2](../unnamed_carrier_dissection_20261026/README.md)
 and [strong-atom C1--C5](../strong_atom_continuation_vitali_20261026/README.md).
@@ -363,6 +401,34 @@ It uses legal right relocations on all presentations, not Burnside input.
 The n=8 result includes 2,097,152 presentations, 6,880 ordinary classes,
 3,528 converse-merged vertices, 2,048 blue lines and 1,046,528 black lines.
 The replay is credited as a replay, not a new enumeration record.
+
+### Integrated constructive continuation through order nine
+
+The concurrent [T5 root-switch construction](../relation_tower_frobenius_ports_20261028/THEORY.md)
+has now generated all 191536 order-nine classes from 1716608 pointed
+attachment states, preserving each subset mask through the SAME deletion
+parent isomorphism. We incorporated its saved bank and checked every row
+is a tournament, all encodings are distinct, its class counts agree with
+E2, and its entire presentation-fibre histograms agree with the actual
+metagraph through eight. The order-nine construction was not rerun here;
+bank type/distinct-encoding checks are not independent isomorphism proofs.
+The construction's proof and its own finite run remain the source of
+order-nine completeness. Its order-nine Hamilton-fibre census is not supplied.
+
+This gives a second actual class-count projector: the incoming rerooting
+operator Q_N satisfies Q_N^2=N Q_N and a(N)=tr(Q_N)/N over Q. It counts
+vertex-root fibres; E1's R counts Hamilton-path presentation fibres. Both
+have one block per ordinary tournament, with different masses. Neither
+allows attachment masks or their shared parent alignment to be discarded.
+
+Session86's [universal rigid-palette equivalence, section4](../session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md)
+also identifies the aggregate prime cycle index as the coarsest invariant
+for all ordinary inflation counts from finite rigid palettes at bounded
+root arity. A base-(K+1) size palette separates every colour monomial, so
+the count observer recovers the index. This resolves a precise aggregate
+minimum, while individual decorated stabilizers and actual black/blue
+transport still require additional data. The81/27 pair is compatible
+with that theorem: summing every decoration differs from selecting one.
 
 **Remaining research target.** Find an effective attachment grammar whose
 residual states are smaller than complete presentations, preserve the

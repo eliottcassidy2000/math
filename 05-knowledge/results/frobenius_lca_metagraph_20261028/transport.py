@@ -1,5 +1,6 @@
 """Relative Frobenius phase: exact joint tables, query costs, mixed periods."""
 import argparse
+from collections import Counter
 from functools import lru_cache
 from itertools import combinations, product
 import json
@@ -47,22 +48,48 @@ def phase_queries(data):
         reconstructed=sum((sum((w>>j&1)*matrices[k][j] for j in range(r))%2)<<bit
                           for bit,w in enumerate(decoders))
         need(reconstructed==k,'joint parity phase decoder')
-    spectrum={}; generators=0
+    spectrum={}; generators=0; representatives=[]
     for a in range(1,f.size):
         orbit=f.orbit(a)
         if len(orbit)!=r or rank(orbit)!=r: continue
         generators+=1
+        if a==min(orbit): representatives.append(a)
         row=tuple(B(a,b) for b in orbit)
         if row not in spectrum:
             shifted=[tuple(row[(j+k-i)%r] for i in range(r) for j in range(r)) for k in range(r)]
             ca,cn=query_costs(shifted)
             spectrum[row]=dict(trace_row=row,adaptive=ca,nonadaptive=cn,normal_generators=0)
         spectrum[row]['normal_generators']+=1
+    pair_costs=Counter(); adaptive_pair_costs=Counter(); aggregate_pairs=0
+    for a,b in product(representatives,repeat=2):
+        row=tuple(B(a,f.power(b,1<<j)) for j in range(r))
+        shifted=[tuple(row[(j+k-i)%r] for i in range(r) for j in range(r)) for k in range(r)]
+        ca,cn=query_costs(shifted); adaptive_pair_costs[ca]+=1; pair_costs[cn]+=1
+        # Different normal orbit pairs still have invertible joint row tables.
+        need(rank([sum(x<<j for j,x in enumerate(v[:r])) for v in shifted])==r,'cross-normal invertibility')
+        for bit in range((r-1).bit_length()):
+            need(any(all(sum((w>>j&1)*shifted[k][j] for j in range(r))%2==((k>>bit)&1)
+                         for k in range(r)) for w in range(1<<r)),'cross-orbit parity decoder')
+        aggregate_pairs+=1
+    if r==6: need(dict(pair_costs)=={3:8,5:8},'incoming F64 orbit-pair census')
+    if r==8: need(dict(pair_costs)=={4:192,6:32,7:32},'incoming F256 orbit-pair census')
+    full_period_hostile=None
+    if r in (6,8):
+        a,b=2,(34 if r==6 else 18); c=b^1
+        profile=lambda y:sum(B(f.power(a,1<<j),y)<<j for j in range(r))
+        need(len(f.orbit(a))==r and len(f.orbit(b))==r and f.power(b,1<<(r//2))==c,'full-period hostile phase')
+        need(profile(b)==profile(c) and rank(f.orbit(a))==r-1,'normality guard hostile')
+        full_period_hostile=dict(anchor=a,targets=[b,c],common_profile=profile(b),anchor_span_rank=r-1)
     return dict(degree=r,trace_row=matrices[0][:r],distinct_relative_tables=len(set(matrices)),
                 binary_storage_bits=(r-1).bit_length(),minimum_adaptive_incidence_queries=adaptive,
                 minimum_nonadaptive_incidence_queries=nonadaptive,
                 optimal_joint_parity_queries=len(decoders),joint_parity_decoder_masks=decoders,
                 all_normal_basis_generators=generators,normal_basis_query_spectrum=list(spectrum.values()),
+                full_period_not_normal_hostile=full_period_hostile,
+                different_orbit_scope=dict(normal_orbits=len(representatives),ordered_pairs=aggregate_pairs,
+                    nonadaptive_cost_histogram=dict(sorted(pair_costs.items())),
+                    adaptive_cost_histogram=dict(sorted(adaptive_pair_costs.items())),
+                    aggregate_query_cost=(r-1).bit_length()),
                 all_joint_tables=matrices)
 
 
