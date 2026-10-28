@@ -124,3 +124,21 @@ without replacing the full transporter certificate? The four-probe zero
 fibre `{0,30,45,51}` is the first required hostile: determinant mod 64 restores
 one bit, but leaves two genuine possibilities. This is a finite filter
 question with a clear baseline, not a proposed scalar formula for A000568.
+
+The last incoming checkpoint adds an especially relevant exact comparison:
+`../session89_consecutive_tournament_pairs_20261028/history/concurrent/FUTURE_BANK_CARRIER.md`
+proves that the nine-prime rectangle decision needs six state bits under
+named toggles and natural paired relabelings, versus its four present-syndrome
+bits. This six-bit quotient is **not** the old F64 port quotient: their
+nine-cell kernels have different weight enumerators. Our strong-lift test
+likewise needs the actual kernel, not just its dimension. This gives two
+independent concrete contexts in which “restore two bits” names a required
+amount of information but does not identify the correct information.
+
+The incoming `counting/LOW_BITS.md` gives a different dyadic filtration:
+for the positive paired channel `F_n(2,1)`, odd n has exact valuation n,
+and even n has a totient-controlled lowest bit. At core order four it checks
+`2752 = 64*43`. This is a useful scalar checksum for our full-image audit;
+it does not certify the retained representatives or transporter groups.
+The signed-core determinant filtration and this positive Burnside count
+filtration act on different objects and are not interchangeable.
