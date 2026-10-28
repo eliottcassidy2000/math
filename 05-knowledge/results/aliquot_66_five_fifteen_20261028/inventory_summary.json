@@ -1,0 +1,20 @@
+{
+  "revision": "f19c0ededc61205810b94384b51e84743c674ad1",
+  "scope": "tracked md/tex/org, excluding agents, dot paths and this packet",
+  "files_scanned": 15962,
+  "unique_blobs_scanned": 14886,
+  "matched_files": 13846,
+  "files_by_theme": {
+    "66": 796,
+    "5": 13235,
+    "15": 6968,
+    "platonic_fermat": 258,
+    "moonshine": 213,
+    "divisor_balance": 105,
+    "graph_triple": 417,
+    "graceful_square": 815,
+    "berggren": 372,
+    "seven_twentyone": 996,
+    "idoneal": 95
+  }
+}

@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair and strongest survivor:** the seven three-element circuits are the Fano lines; their seven four-element complements are also circuits, for14 total. The weight enumerator, Hamming code, nongraphic obstruction and coset-marginal argument remain unchanged. The synopsis is corrected and its packet hash updated.
 - **Missing coordinate and decisive test:** check support containment, not just minimum weight. All128 subsets and all14 minimal supports are checked in the [unifying-relations packet](../05-knowledge/results/unifying_relations_20261028/THEORY.md). This is a correction of circuit terminology, not a new Fano-plane result.
 
+## 2026-10-28 — a historical five-bridge reflection overstates its invariants
+
+- **Affected source:** [Five as the Bridge Between Worlds](../07-reflections/five-as-bridge.md), March21 S97. This is a separate unwarned reflection adjacent to the already corrected five-Platonic and angle-defect notes.
+- **First failed implications:** the curvature inequality for one triangle family does not classify all finite symmetry groups or identify tournament spaces; equality of the orders of S5 and the full icosahedral group does not identify their actions. Calling the logarithmic direction “transcendentally independent” exceeds the norm argument, which proves rational linear independence, not algebraic independence of logarithms.
+- **Minimal controls:** cyclic groups supply finite symmetries of arbitrarily large order; the full icosahedral group A5×C2 has nontrivial centre while S5 does not. Conjugation/norm in Q(sqrt5) proves the actual logarithmic multiplicative-independence claim.
+- **Repair / strongest survivor:** a front warning preserves the historical body and routes to the [typed atlas](../05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md). The `(2,3,5/6/7)` curvature signs, classical Platonic reflection types, and rational-linear-independence statement survive. Missing coordinates are the exact class of objects, group action, and quantifier on independence. No broad Collatz, LRC or tournament consequence is inherited from the reflection.
+
 ## 2026-10-28 — parity, chart choice, and source budgets in recovered work
 
 - **Demonstrated canon correction:** THM-1875's correct formula gives `x^3+3x` at n3, contradicting its sentence that the skew characteristic polynomial is always even. The polynomial has parity n; the title and body are repaired, retaining the formula and THM-1440's precise parity law. Purely imaginary spectrum is not enough to infer even parity at odd dimension.

@@ -1,3 +1,15 @@
+> **HISTORICAL REFLECTION / SCOPE REPAIR (2026-10-28):** the curvature sign
+> of `(2,3,m)` at m=5,6,7 and the three Platonic reflection-group types
+> survive. They do not identify tournament spaces with a hyperbolic
+> geometry, make five the last finite symmetry group, or prove the
+> per-path claims below. Equal group orders are not group isomorphisms:
+> the full icosahedral symmetry group is A5×C2, whereas S5 has trivial
+> centre. The norm argument proves **Q-linear independence** of log(phi)
+> from logarithms of rational primes; it does not prove their algebraic
+> independence. The original body is retained as idea provenance. Use
+> the [typed66/5/15 atlas](../05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md)
+> and the corrected cardinality/Platonic notes it routes to for exact maps.
+
 # Five as the Bridge Between Worlds
 
 **Session:** opus-2026-03-21-S97
