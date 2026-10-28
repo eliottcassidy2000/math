@@ -2,7 +2,9 @@
   "base_commit": "5ed1835235b36a57b8cd11eb705aa259b6bc0f08",
   "concurrent_integration": [
     "dd1e1bbd6e5d7ca8e7825a4c84b264f69d1b8bb6",
-    "0884018279"
+    "0884018279",
+    "4c9fe1b3ce",
+    "4f752df86f"
   ],
   "external_sources": [
     {
@@ -101,6 +103,21 @@
       "git_blob": "4d15384c9b49d04a6001725d6f0b3cb6ebc95f50",
       "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md",
       "sha256_lf": "1a81b5dab907ce296244df738fd83556c2c4196c7580d259b108550cb27ecfa1"
+    },
+    {
+      "git_blob": "5de981f93b680e10a481991ebf25aab08a8c0ef2",
+      "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/FIELD_RESULTS.md",
+      "sha256_lf": "d9756129c9be0f1ae045a2683d1d1811ca46fe2046ed90102f9f5a3ff1b2d54f"
+    },
+    {
+      "git_blob": "c48704fea6dbf5cd6469e9e982d9c80fa99adf12",
+      "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/81_27_TRANSPORTERS.md",
+      "sha256_lf": "fd5fae6683a4ef4eb4d0bdc41a962efc33ad64670c948e23d70a72447a80ed17"
+    },
+    {
+      "git_blob": "099424cff6a169fd9d388f4396afa45fceabf061",
+      "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/CLOSED_ATTACHMENT_CARRIERS.md",
+      "sha256_lf": "a5eba655f7c265321bff8dfd0ec6ef77fbf39a6b488704ab2b7048ac653971bf"
     }
   ]
 }

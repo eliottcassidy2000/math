@@ -14,6 +14,12 @@ or inherited, not exclusive new discoveries here. Their broader orbit-pair
 tests and order-nine bank are incorporated below; the one-line form tests
 and joint-parity/adaptive query refinements address additional questions.
 
+The later concurrent [Session86 marked-line result](../session86_relations_attachment_carriers_20261028/FIELD_RESULTS.md)
+at4f752df86f independently obtains the same one-line F64/F256 classification
+and circulant nondegeneracy mechanism. Its F256 polynomial marking differs,
+so raw masks must not be compared without a field-coordinate transport.
+The shared one-line result is credited jointly.
+
 ## F1. One marked subfield line can determine the entire incidence form
 
 Let r=2m, F=F_(2^r), K=F_(2^m), and phi(x)=x^2. Work with alternating
@@ -313,11 +319,33 @@ Aut=27. The 000 and 001 examples have exactly the same 67 LABELLED cyclic
 triples. `carriers.py` recomputes their Hamilton counts by subset DP and
 their automorphism groups by adjacency-checked permutation backtracking.
 
-Knowing cyclic invariance would impose the two independent parent rows
+Knowing that this PARTICULAR decoration is pointwise fixed by rotation
+would impose the two independent parent rows
 z_0+z_1=0 and z_1+z_2=0, recovering all three decoration bits from one.
 But cyclic triples and H do not establish that promise: applying it to
 001 discards a legitimate hostile state. This is the tournament instance
 of F1's distinction between a known constraint and an assumed constraint.
+
+An invariant law or invariant family does not imply this pointwise condition:
+the uniform law on all eight decorations is rotation-invariant but only two
+of its states are fixed. This distinction is explicit in concurrent
+[Session86's transporter hostile](../session86_relations_attachment_carriers_20261028/81_27_TRANSPORTERS.md).
+
+That packet also strengthens the hostile beyond group orders. We replayed
+it on our labelling: the actual groups satisfy H<G, and every element of
+G minus H is fixed-point-free. Hence their pointwise stabilizers of EVERY
+nonempty named subset coincide. Nevertheless the transporter from port3
+to port7 has27 elements in G and none in H. Pointwise stabilizers retain
+loops at ports, but lose arrows between ports. This independently checked
+fact uses our C3->1 labels; the incoming packet uses1->C3 labels.
+
+The incoming [weighted-relation closure theorem, sections2--4](../session86_relations_attachment_carriers_20261028/CLOSED_ATTACHMENT_CARRIERS.md)
+therefore keeps the action on actual witness fibres for symmetry-sensitive
+composition. A boundary table and its port action alone are insufficient.
+Element-fixed fibre tables suffice for its fixed-group final orbit-count
+observer; full subgroup marks support the stronger stabilizer observer.
+These are precisely specified closure/minimality results, not a smaller
+universal representation for all complement and re-marking operations.
 
 The presentation fibres have sizes H/Aut=5715 and 17145; their reset
 diagonal masses are 1/5715 and 1/17145. Forgetting the colour stabilizer

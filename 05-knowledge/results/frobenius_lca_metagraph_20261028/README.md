@@ -44,6 +44,11 @@ bank's types and counts; we did not rerun order-nine generation.
 [Session86's universal rigid-palette theorem](../session86_relations_attachment_carriers_20261028/A000568_COMPOSITION.md)
 settles a separate coarsest aggregate composition quotient. Neither result
 closes the full black/blue attachment classification.
+Session86 subsequently [independently recovered the same one-line result](../session86_relations_attachment_carriers_20261028/FIELD_RESULTS.md);
+it is credited jointly. Its stronger81/27 transporter control was also
+replayed: all nonempty pointwise stabilizers agree, but a cross-block
+transporter has27 elements versus none. Local symmetry data therefore
+cannot replace actual witness transport.
 
 The hostile order-12 pair again has identical 67 labelled cyclic triples
 and H=462915 but automorphism orders 81/27. Its reset masses are 1/5715

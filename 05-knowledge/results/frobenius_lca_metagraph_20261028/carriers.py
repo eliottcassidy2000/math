@@ -130,19 +130,22 @@ def hamilton(t):
     return sum(dp[-1])
 
 
-def aut_count(t):
+def aut_count(t,keep_elements=False):
     n=len(t); degrees=[x.bit_count() for x in t]
     candidates=[[j for j in range(n) if degrees[j]==degrees[i]] for i in range(n)]
-    order=sorted(range(n),key=lambda i:len(candidates[i])); assignment={}; total=0
+    order=sorted(range(n),key=lambda i:len(candidates[i])); assignment={}; total=0; elements=[]
     def rec(k,used):
         nonlocal total
-        if k==n: total+=1; return
+        if k==n:
+            total+=1
+            if keep_elements: elements.append(tuple(assignment[i] for i in range(n)))
+            return
         u=order[k]
         for v in candidates[u]:
             if used>>v&1: continue
             if all(((t[u]>>a)&1)==((t[v]>>b)&1) for a,b in assignment.items()):
                 assignment[u]=v; rec(k+1,used|(1<<v)); del assignment[u]
-    rec(0,0); return total
+    rec(0,0); return elements if keep_elements else total
 
 
 def hostile():
@@ -162,15 +165,26 @@ def hostile():
         return tuple(c for c in combinations(range(12),3) if all(sum((t[u]>>v)&1 for v in c if v!=u)==1 for u in c))
     a,b=assemble(0),assemble(1)
     need(triples(a)==triples(b),'labelled C3 hostile')
-    result=[]
+    result=[]; groups={}
     for word in range(8):
-        t=assemble(word); h=hamilton(t); aut=aut_count(t)
+        t=assemble(word); h=hamilton(t)
+        if word<2:
+            groups[word]=set(aut_count(t,True)); aut=len(groups[word])
+        else: aut=aut_count(t)
         stabilizer=sum(all(((word>>i)&1)==((word>>((i+s)%3))&1) for i in range(3)) for s in range(3))
         need(aut==27*stabilizer and h==462915,'decorated LCA stabilizer')
         result.append(dict(decoration=word,H=h,Aut=aut,presentations=h//aut,
                            reset_diagonal=str(Fraction(aut,h)),cyclic_colour_stabilizer=stabilizer))
     need([result[i]['Aut'] for i in (0,1)]==[81,27],'81/27 control')
+    G,H=groups[0],groups[1]
+    need(H<G and all(all(g[v]!=v for v in range(12)) for g in G-H),'nonempty pointwise stabilizer theorem')
+    need(all({g for g in G if g[v]==v}=={h for h in H if h[v]==v} for v in range(12)),
+         'all named vertex stabilizers identical')
+    transport=[sum(g[3]==7 for g in group) for group in (G,H)]
+    need(transport==[27,0],'same local stabilizers lose inter-port transport')
     return dict(all_decorations=result,identical_labelled_cyclic_triples=len(triples(a)),
+                transporter_3_to_7=transport,identical_nonempty_pointwise_stabilizers=True,
+                all_elements_in_difference_fixed_point_free=len(G-H),
                 LCA_invariant_constraints=[3,6],constraint_rank=rank([3,6]),
                 invariant_decorations=[z for z in range(8) if all((z&r).bit_count()%2==0 for r in (3,6))])
 

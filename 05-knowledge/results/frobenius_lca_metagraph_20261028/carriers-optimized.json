@@ -101,11 +101,17 @@
         "reset_diagonal": "1/5715"
       }
     ],
+    "all_elements_in_difference_fixed_point_free": 54,
     "constraint_rank": 2,
     "identical_labelled_cyclic_triples": 67,
+    "identical_nonempty_pointwise_stabilizers": true,
     "invariant_decorations": [
       0,
       7
+    ],
+    "transporter_3_to_7": [
+      27,
+      0
     ]
   }
 }
