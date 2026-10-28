@@ -123,3 +123,21 @@ precedence over the older index synopsis. The remaining claim there that
 automorphism order is a C3 invariant was corrected to point to the existing
 2026-10-26 mistake record and repaired fibre theorem; this is propagation
 of an already logged correction, not a new mathematical retraction.
+
+The next incoming commits `c0d47b3f14` and `4f4e8daeff` supplied
+[the incidence-attractors packet](../incidence_attractors_20261028/THEORY.md).
+Its README and THEORY A1–A5/U were read, including the exact same arithmetic
+Fano bank. This is overlapping concurrent work, credited rather than presented
+as a separate priority claim. Adding composite atom4 closes {4,7,13}, so the
+apparent isolation of13 in our prime-only chart is a bank-dependent property.
+The mixed-atom counts and the noncoprime symmetric-difference hostile are
+independently replayed here. The inherited 86/87/96 observer counts and
+coset-marginal theorem are not re-audited by our producer.
+
+Its synopsis called the seven Fano lines the seven minimal circuits.
+The actual matroid also has seven minimal four-element supports; our
+explicit14-circuit enumeration and THEORY A1 supply the repair. The incoming
+synopsis and its hash were corrected, preserving all original computations.
+The mechanism is recorded in MISTAKES: minimum weight and inclusion-minimal
+support are different notions. Its underlying THEORY already listed all
+seven weight-four codewords and did not require the mistaken synopsis.

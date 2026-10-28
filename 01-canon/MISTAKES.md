@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — Fano lines do not exhaust the Fano matroid circuits
+
+- **Source and first failed implication:** the [incidence packet synopsis](../05-knowledge/results/incidence_attractors_20261028/README.md) called its seven Fano lines the seven minimal circuits. Minimum-weight nonzero codewords need not exhaust inclusion-minimal kernel supports.
+- **Minimal omitted witness:** the arithmetic support {19,29,59,89}, the complement of the line {2,5,7}, has zero square-class sum and no nonempty zero-sum proper subset. Its divisor-sum product is 1800^2.
+- **Repair and strongest survivor:** the seven three-element circuits are the Fano lines; their seven four-element complements are also circuits, for14 total. The weight enumerator, Hamming code, nongraphic obstruction and coset-marginal argument remain unchanged. The synopsis is corrected and its packet hash updated.
+- **Missing coordinate and decisive test:** check support containment, not just minimum weight. All128 subsets and all14 minimal supports are checked in the [unifying-relations packet](../05-knowledge/results/unifying_relations_20261028/THEORY.md). This is a correction of circuit terminology, not a new Fano-plane result.
+
 ## 2026-10-28 — parity, chart choice, and source budgets in recovered work
 
 - **Demonstrated canon correction:** THM-1875's correct formula gives `x^3+3x` at n3, contradicting its sentence that the skew characteristic polynomial is always even. The polynomial has parity n; the title and body are repaired, retaining the formula and THM-1440's precise parity law. Purely imaginary spectrum is not enough to infer even parity at odd dimension.

@@ -101,6 +101,20 @@ Delete the row of vertex 0 from its binary incidence matrix. The resulting
 columns are exactly the square classes above. This construction preserves
 subset dependence, not the numerical values of the products or divisor sums.
 
+Restoring the original composite atom **4** adds the column
+`Q(sigma(4))=Q(7)`, or the edge `0--7`. The incoming
+[incidence packet, A1 and A5](../incidence_attractors_20261028/THEORY.md)
+then supplies the second circuit `{4,7,13}`:
+`364=4*7*13`, `sigma(364)=784=28^2`, and `(F,U,S)=(10,3,7)`.
+Thus 13 is a bridge only in the six-prime bank; adding 4 makes it cyclic.
+
+This extension also exposes the required guard. The symmetric difference
+of `{2,5,7}` and `{4,7,13}` is `{2,4,5,13}`, whose columns sum to
+zero. But 2 and 4 are not coprime: the formal product of their divisor sums
+is `42^2`, whereas their actual product 520 has sigma 1260. The enlarged
+binary code contains 16 subsets, of which 12 are arithmetically legal.
+The coprimality condition must accompany the code.
+
 ### The ordinary graph model has a sharp boundary
 
 The prime bank
@@ -129,6 +143,11 @@ distinct nonzero columns would have no loops or parallel edges and rank
 three, hence at most six edges. This elementary obstruction stops the
 claim that every arithmetic dependence is a hidden ordinary graph cycle.
 No universal realization theorem for binary matroids by primes is asserted.
+The same explicit prime bank was obtained in the concurrent
+[incidence packet, A3](../incidence_attractors_20261028/THEORY.md), which also
+develops its low-order marginal obstruction and chosen Frobenius marking.
+The seven Fano lines are the three-element circuits; there are **14 circuits
+in total**, including the seven four-element complements of lines.
 
 ## The exact bridge to F equals U plus S
 

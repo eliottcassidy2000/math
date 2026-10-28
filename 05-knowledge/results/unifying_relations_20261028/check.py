@@ -126,6 +126,22 @@ def main():
     need(set(fano['columns'])==set(range(1,8)),'all Fano points occur')
     need(fano['weight_enumerator']=={0:1,3:7,4:7,7:1},'Hamming weight polynomial')
     need(len(fano['circuits'])==14,'seven lines and seven four-element circuits')
+    atom_bank=[4,2,5,3,7,13,11]
+    formal_kernel=legal_count=legal_kernel=0
+    legal_sources=[]
+    for bits in product((0,1),repeat=7):
+        atoms=[b for b,use in zip(atom_bank,bits) if use]
+        formal=prod(sigma(b) for b in atoms)
+        legal=all(gcd(a,b)==1 for a,b in combinations(atoms,2))
+        formal_kernel+=square(formal);legal_count+=legal
+        if legal:
+            need(formal==sigma(prod(atoms)), 'mixed-atom coprime transport')
+            legal_kernel+=square(formal)
+            if square(formal):legal_sources.append(prod(atoms))
+    need((formal_kernel,legal_count,legal_kernel)==(16,96,12),'incoming mixed-atom complete counts')
+    need(sigma(364)==784 and fus(364)==[10,3,7], 'restored 4/7/13 circuit')
+    need(prod(sigma(b) for b in [2,4,5,13])==1764 and sigma(520)==1260,
+         'illegal circuit symmetric difference')
 
     tower=[]
     for a in range(41):
@@ -228,6 +244,8 @@ def main():
     need(bracket_sources==[2,3,4,10,11,12],'inherited bracket sources')
 
     print(json.dumps({'small_prime_bank':small,'fano_prime_bank':fano,'doubling_towers':tower,
+          'mixed_atom_bank':{'atoms':atom_bank,'formal_kernel':formal_kernel,'legal_subsets':legal_count,
+                             'legal_square_sigma_sources':sorted(legal_sources)},
           'complete_sigma_fibres':fibres,'FUS_profile_universe':profile_count,
           'divisor_height':{'N':N,'tail_counts':tail,'exact_height_counts':dict(sorted(Counter(heights.values()).items())), 'cycle':cycle},
           'graphs':graph_results,'connected_graphs_through5':graph_count,

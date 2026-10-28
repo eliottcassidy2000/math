@@ -131,6 +131,12 @@
       "commit": "f19c0ededc61205810b94384b51e84743c674ad1",
       "sha256": "90363e99950a9323646368211cec554b4fba8a73d07c15e2b0a15802212b6d6b",
       "scope": "See RECOVERY.md; historical reflections are inspiration only."
+    },
+    {
+      "path": "05-knowledge/results/incidence_attractors_20261028/THEORY.md",
+      "commit": "4f4e8daeff11a527c3b33f0c2fa5513079c668b5",
+      "sha256": "20c35ab4fab0784ecc0cf7791fe4529c2b3ed6861e076b7eed711a396eab42c6",
+      "scope": "Concurrent overlap: A1 composite-atom guard, A3 Fano/Hamming, A5 balanced364; full context in RECOVERY.md."
     }
   ],
   "external_sources": [

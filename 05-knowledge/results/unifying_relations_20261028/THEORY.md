@@ -88,6 +88,26 @@ most binom(4,2)=6 edges, whereas this matroid has seven. Contradiction.
 The positive multigraph model of the six-prime bank therefore has a real
 boundary, rather than being a universal hidden-graph explanation.
 
+### A2 Restoring the composite atom requires a coprimality condition
+
+The concurrent [incidence packet A1](../incidence_attractors_20261028/THEORY.md)
+extends the six-prime chart by atom 4. Its sigma is 7, so the new column
+is the graph edge 0--7. It closes the circuit {4,7,13}, and its legal product
+364 has sigma `7*8*14=784` and F,U,S equal to 10,3,7.
+
+For arbitrary pairwise coprime atoms b_i, the same parity proof applies
+with columns Q(sigma(b_i)). Pairwise coprimality is sufficient by sigma's
+multiplicativity, and it is part of the domain here. In this seven-atom
+bank the only conflict is {2,4}; excluding subsets containing both leaves
+96 of 128 subsets. Of the 16 formal kernel subsets, exactly 12 are legal.
+These complete finite counts are rechecked in this packet.
+
+The legal circuits {2,5,7} and {4,7,13} have illegal symmetric difference
+{2,4,5,13}. Its formal sigma is `3*7*6*14=1764`, but the product
+520=2^3*5*13 has actual sigma `15*6*14=1260`. Hence the legal subset
+family is not closed under binary addition, although the formal kernel is.
+The binary matroid and its arithmetic domain are distinct retained objects.
+
 ## B Persistent equal totals with different exceptional layers
 
 The starting equality is

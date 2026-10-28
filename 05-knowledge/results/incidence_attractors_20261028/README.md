@@ -31,7 +31,8 @@ forward observation. Their arithmetic attachments differ.
 4. **A Fano extension.** The prime bank `{2,5,7,19,29,59,89}` realizes all
    seven nonzero parity vectors on coordinates `{2,3,5}`. Its square-sigma
    subsets form the Hamming[7,4,3] code, with weight enumerator
-   `1+7z^3+7z^4+z^7`. The seven minimal circuits form the Fano plane.
+   `1+7z^3+7z^4+z^7`. The seven three-element circuits are the Fano lines;
+   their seven four-element complements are also circuits, for14 in total.
    This matroid is not graphic: ordinary graph cycle spaces cannot model
    every extension of the first graphic chart.
    Uniform laws on two code cosets agree on every at-most-three-prime
