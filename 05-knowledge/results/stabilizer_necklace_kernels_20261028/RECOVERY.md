@@ -75,3 +75,15 @@ valid for all-arc converse, and is not used as native-complement closure.
 No new META-PATTERNS card is promoted. The session supplies further evidence
 for the existing operation-sensitive representation pattern, including a
 three-state re-marking witness showing exactly which cyclic frame was lost.
+
+## Incoming work at close-out
+
+The clean rebase integrated Session95 through d92d6c0d74. Its
+[orbit-mass recurrence](../session95_niche_recurrences_20261029/attachments/ORBIT_MASS_RECURRENCES.md)
+was read and linked explicitly to our weighted stabilizer polynomial in S4.
+Its [pole-memory note](../session95_niche_recurrences_20261029/jets/POLE_RECURRENCE_MEMORY.md)
+distinguishes recurrence in iteration time from recurrence in moment degree.
+That is compatible with our two-section generator versus full circulant rank:
+the axes being compressed must be stated. Its arithmetic boundary and flow
+claims are not dependencies of this packet and were not independently
+audited here. No incoming result is credited as a new discovery of this session.

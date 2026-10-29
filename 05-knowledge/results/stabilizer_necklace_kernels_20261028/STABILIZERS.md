@@ -1,6 +1,6 @@
 # Stabilizer-sensitive attachment recurrences
 
-**PROVED** S1-S3. The binary A_k specialization is inherited from
+**PROVED** S1-S4. The binary A_k specialization is inherited from
 [Session68 CLASSIFICATION, section5](../session68_tournament_composition_classification_20261026/session68-classification/CLASSIFICATION.md),
 including its exact polynomial and the two rigid palettes. Existence of
 regular subsets for arbitrary tournament automorphism groups is classical,
@@ -128,3 +128,30 @@ wreath product for a constant triple, and folded diagonal action for C_k.
 This is the group-action version of the recovered
 [conditional boundary-weight multiplication](../context_leaves_prime_weights_and_union_20261011d.md):
 independence holds after the shared boundary/source is fixed, not before.
+
+## S4. Incoming orbit-mass recurrences are another evaluation of this carrier
+
+The concurrently integrated [Session95 orbit-mass note](../session95_niche_recurrences_20261029/attachments/ORBIT_MASS_RECURRENCES.md)
+derives the source-probability hierarchy
+
+    S_r(k+1)=3^(r-1)S_r(k)^3-(3^(r-1)-1)S_(3r)(k),
+
+where S_r=sum_orbits mu(orbit)^r under an iid leaf palette law. This is
+credited incoming work. Its connection to the stabilizer recurrence is exact.
+For the uniform q-colour law, with g_k=|A_k| and N=3^k,
+
+    S_r(k)=(g_k/q^N)^r P_k(q; z=3^(-r)).               (S9)
+
+Here q means q distinct equal-cost colours and x=1. An orbit with stabilizer
+3^e has source probability g_k/(3^e q^N), which proves(S9). For arbitrary
+positive palette probabilities p_a, instead give colour a weight p_a^r
+inside P_k and multiply by g_k^r. The child-diagonal term in(S1) then
+evaluates at p_a^(3r),z=3^(-3r), exactly producing S_(3r). Thus count,
+stabilizer, and source collision laws are different evaluations of one
+weighted object, rather than independent analogies.
+
+For C_2 with uniform binary inputs, S_2=23/4096; uniformly choosing among
+its192 orbit classes would instead give1/192. The source law cannot be
+replaced by a class-uniform convention. The incoming note extends the
+mass law to all cyclic arities with divisor Möbius terms; that extension
+is not re-proved here.
