@@ -1,0 +1,103 @@
+{
+  "append_one_fixed_points": [
+    "37/35",
+    "221/175"
+  ],
+  "certificates": [
+    {
+      "anchors": [
+        0,
+        3795,
+        5214
+      ],
+      "capacities": [
+        3795,
+        1419,
+        4986
+      ],
+      "carry": 19,
+      "count_sha256": "1e8e2065a1cc0cd6fab37eaffa997b81f380a6c4c20b2ec03bfbea6ec511b555",
+      "fixed_phases": [
+        "19/101",
+        "79/101",
+        "169/101"
+      ],
+      "gap": 101,
+      "gaps": [
+        3795,
+        1419,
+        4987
+      ],
+      "last_source_residue": 7332,
+      "max_squarefree_repetitions": 4985,
+      "repair_period": 12,
+      "repair_prime": 13,
+      "repair_seed": 50,
+      "roots": [
+        0,
+        3400,
+        9067
+      ],
+      "word": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "anchors": [
+        0,
+        8601,
+        8780
+      ],
+      "capacities": [
+        8601,
+        179,
+        1420
+      ],
+      "carry": 31,
+      "count_sha256": "78ca209616e4dbf9421eb8edc4347edde7fa823c39d3168c4c4e367dcc08fe5b",
+      "fixed_phases": [
+        "31/101",
+        "97/101",
+        "49/101"
+      ],
+      "gap": 101,
+      "gaps": [
+        8601,
+        179,
+        1421
+      ],
+      "last_source_residue": 5818,
+      "max_squarefree_repetitions": 8600,
+      "repair_period": 6,
+      "repair_prime": 7,
+      "repair_seed": 1,
+      "roots": [
+        0,
+        3400,
+        9067
+      ],
+      "word": [
+        1,
+        3,
+        3
+      ]
+    }
+  ],
+  "checks": 129553,
+  "hostile": {
+    "avoiding_class": "1 mod5",
+    "fixed_point": "1/3275",
+    "square_modulus": 25,
+    "word": [
+      1,
+      13
+    ]
+  },
+  "scope": "Proof in README; no Collatz convergence claim; large-source existence uses fixed-word sieve, not enumeration.",
+  "source_commit": "e871dd4513c",
+  "source_path": "05-knowledge/results/collatz_guards_20260921_squarefree.md",
+  "source_sha256": "a7727f346a5ff53d34c94d1a788c0810b28c0a203c1645f7d80be0753000df0f",
+  "status": "FINITE-EXACT"
+}
