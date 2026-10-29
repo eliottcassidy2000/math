@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "count": 7,
+  "scripts": [
+    {
+      "script": "structural/check_geometric_slots.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "a618e3d1b63b4af5fabacc04cff6ab823b77bc53003b60ef9c863917d6df5fc0"
+    },
+    {
+      "script": "poles/verify_pole_transport.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "08d092c89870f7b5440f8d2943b3331d6ce23bac162a87a7fc7747995e920883"
+    },
+    {
+      "script": "readout/check_pole_readout.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "fa6bd87b9034573abd5b9f4cfc993349dec4dafa70938b06a5a12f7171739099"
+    },
+    {
+      "script": "transfer/check_carry_clock_poles.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "324b020921e604e917947bd1202874a2a2f4dc0611df9c2481a07ca6eccb0b83"
+    },
+    {
+      "script": "transfer/check_intercept_moments.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "3651da77de0c678c603bc0edb379173effa44ed869e22af6378aab393dadd194"
+    },
+    {
+      "script": "audit/check_independent.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "55abd26d90c6f26cbfc3d8a008a8feabbf8bbe59a0981333f8566ef4bbd7291d"
+    },
+    {
+      "script": "audit/check_intercept_independent.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "99a622d04c367bbadfd4ab83f2262792d3a84d892acfc213487646c8dec235e1"
+    }
+  ]
+}
