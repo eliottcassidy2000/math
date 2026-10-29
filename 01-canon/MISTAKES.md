@@ -4,6 +4,15 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — Catalan carry propagation and the orbit inversion-graph carrier
+
+- **Sources:** `05-knowledge/results/collatz_catalan_ramsey_20260927.md`, Propositions 2 and 5, its producer in `04-computation/experiments/`, and the corresponding synthesis paragraph.
+- **Minimal witnesses:** `n=5=(12)_3` has two carries in `n+n` but only one digit 2. The sequence `(1,3,2)` has LIS=LDS=2, while the proposed tournament is the full transitive 3-tournament. Its rule always orients by value, erasing the comparison with time. The producer also compared the non-certified fraction with `sqrt(2/(pi*k))` instead of `1/sqrt(2*pi*k)`.
+- **First failed implications:** local carry starts count all propagated carries; monotone subsequences are all transitive subtournaments of a value-order orientation. Both are false.
+- **Strongest survivors / repairs:** no ternary digit 2 is equivalent to no carries in doubling; the Catalan coprime-to-six criterion survives. Replace the tournament by the inversion graph: clique=LDS and independent set=LIS. The original subsequence computations survive. Repair the asymptotic comparison; retain historical output with an overriding warning in its source note.
+- **Evidence:** `05-knowledge/results/affine_tree_recurrences_20261028/check_recurrences.py` checks full ternary carry chains through 1000 and the value-order orientation on all permutations through order 7. The packet reruns the affected producer sections. Other historical Ramsey claims are not reaudited by this correction.
+- **New question / missing coordinate:** retain both time and value order when extracting orbit structure; use a graph or poset when a tournament orientation would discard one of them.
+
 ## 2026-10-28 — recovered Lucas/modular prose confused indices, forgotten structure, and modular weights
 
 - **Sources:** historical `05-knowledge/results/fibonacci_lfunctions.out`, `dihedral_fibonacci_bridge.out`, and `monstrous_moonshine_s134.out`; recovered during four bounded corpus-search waves, not accepted as current truth.

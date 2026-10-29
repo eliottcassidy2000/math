@@ -120,3 +120,9 @@ allowed-probe decoders; a native ROOT signed-innovation decomposition with
 an independently paid tail; and port-preserving arithmetic operations which
 retain the refinement-activated null modes. The proposed source-decorated
 refinement system in the energy note makes these obligations explicit.
+
+**Follow-up:** [Affine stopping-tree recurrences](../affine_tree_recurrences_20261028/README.md)
+retain the chronological carry, prove the critical infinite-mean carry
+obstruction, and give a cheaper `(3,3)` grammar with an exponential carry
+tail and an explicit source-cylinder refinement budget. The latter is a
+measure bound for the original conditioned source, not universal descent.

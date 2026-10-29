@@ -1,4 +1,15 @@
-# Catalan numbers, the Ramsey rows and the Collatz spine: the critical spine blocks are Dyck paths, Catalan parity lives at the Mersenne tower orders, the Paley rows of both Ramsey tables, an exact law for the Seidel doubling of graphs, and the orbit as a permutation tournament
+# Catalan numbers, the Ramsey rows and the Collatz spine: critical Dyck blocks, Catalan parity, Seidel doubling, and the orbit inversion graph
+
+**Correction, 2026-10-28:** Proposition 5's former tournament interpretation
+was false: its orientation is simply the total order by value. The correct
+carrier is the inversion graph, with independence number LIS and clique
+number LDS. Proposition 2's no-ternary-2 criterion survives, but its former
+equality between the number of carries and the number of digits 2 ignored
+propagating carries (`n=5` is a counterexample). The script's asymptotic
+comparison in part 1 also had a factor-two error, now repaired. The historical
+output is provenance, not a receipt for the repaired interpretation. See
+`affine_tree_recurrences_20261028/AUDIT.md` for exact controls. Other historical
+literature and numerical claims have not been independently reaudited here.
 
 **Session:** opus, `collatz-posets-zeta5-20260927` (seventh note), 2026-09-27.
 **Owner's directive:** "merge in the fact that 1, 2, 5, 14, 42 counts binary
@@ -70,7 +81,7 @@ doubling is `0, 1` or `2` on every graph with at most 6 vertices and reaches
 Catalan values in the Ramsey tables (`R(3,5) = R(5) = 14 = C_4`, Exoo's `42 =
 C_5`) are coincidences; the exact Catalan–Ramsey link is Erdős–Szekeres
 (`123`-avoiding permutations are counted by `C_n`), and the orbit of `27`,
-read as a permutation tournament, has largest transitive subtournament `18`
+read through its inversion graph, has largest clique-or-independent-set `18`
 (Proposition 5).
 
 ## 1. Catalan numbers are the critical spine blocks (PROVED + FINITE-EXACT)
@@ -92,7 +103,7 @@ pi k)`.
 *Proof.* (a) is the ballot theorem; (b) a positive word ends at its minimum
 `1` iff the path after its first step is a Dyck path returning to level 1;
 (c) is THM-4495's decomposition, whose two factors are here the Catalan and
-central-binomial generating functions (`1/(1 - t C(t^2)) = sum C(k-1,
+central-binomial generating functions (`1/(1 - t C(t^2)) = 1 + sum_{k>=1} C(k-1,
 floor((k-1)/2)) t^k`); (d) Stirling. Checked to length 15 (script part 1). ∎
 
 Reading. `1, 2, 5, 14, 42` are the numbers of tight spine blocks of lengths
@@ -119,8 +130,10 @@ sum of distinct powers of 3). Below `n = 4000` this holds for `n = 0, 1, 3, 31,
 *Proof.* Kummer: `v_2(C(2n, n))` is the number of carries in `n + n` in base
 2, i.e. `s_2(n)`, so `v_2(C_n) = s_2(n) - v_2(n+1) = s_2(n+1) - 1`, zero iff
 `n + 1 = 2^k`. Likewise `v_3(C(2n,n))` is the number of base-3 carries of
-`n + n`, which is the number of ternary digits `2` of `n`, and `v_3(n+1) = 0`
-for `n + 1 = 2^k`. Checked directly to `n = 4000` and `k = 200` (script part
+`n + n`, including carries propagated through a digit 1. This number is zero
+iff `n` has no ternary digit 2, and `v_3(n+1) = 0`
+for `n + 1 = 2^k`. The former exact count by digits 2 fails at `n=5=(12)_3`:
+there are two carries and only one digit 2. Checked directly to `n = 4000` and `k = 200` (script part
 2). ∎
 
 Reading. The odd Catalan numbers sit exactly at the orders `3, 7, 15, 31,
@@ -170,8 +183,8 @@ quadratic-residue tournament on `GF(27)`, not prime Paley tournaments.
 **Coincidences (NUMEROLOGY).** `R(3,5) = 14 = C_4 = R(5)` and Exoo's `42 =
 C_5` vertices. The exact Catalan–Ramsey link is elsewhere: Erdős–Szekeres
 (a sequence of length `(r-1)(s-1) + 1` has an increasing `r`-subsequence or a
-decreasing `s`-subsequence) is the Ramsey theorem for permutation
-tournaments, and the permutations of `[n]` with no increasing 3-subsequence
+decreasing `s`-subsequence) gives a clique/independence statement for permutation
+inversion graphs, and the permutations of `[n]` with no increasing 3-subsequence
 are counted by `C_n` (Knuth): the Catalan numbers count the extremal
 witnesses of the smallest Erdős–Szekeres instance, not Ramsey numbers.
 
@@ -232,20 +245,24 @@ share is the mechanism: a doubling that carries a copy and a reversed
 (complemented) copy cannot suppress the mixed substructures, and the mixed
 substructures are exactly the objects the Ramsey question counts.
 
-## 5. The orbit as a permutation tournament (PROVED, elementary; FINITE-EXACT)
+## 5. The orbit inversion graph (CORRECTED; elementary)
 
-The value-time poset of an orbit (parallel note: `i` below `j` iff `i < j`
-and `x_i > x_j`) is a permutation poset; the associated permutation
-tournament (`i -> j` iff `i < j` and `x_i < x_j`, else `j -> i`) has
-transitive subtournaments equal to monotone subsequences of the value
-sequence, so its largest transitive subtournament is `max(LIS, LDS)`, and
-Erdős–Szekeres guarantees a monotone subsequence of length `ceil(sqrt(L))`
-in `L` values. For the orbits of `27, 703, 6171, 77031` (`42, 63, 97, 130` odd
-values): `(LIS, LDS) = (18, 9), (18, 17), (17, 21), (18, 32)`, largest
-transitive subtournaments `18, 18, 21, 32`, against the guaranteed `7, 8, 10,
-12`. A divergent orbit's permutation tournament would have unbounded
-transitive subtournaments (its records form an increasing subsequence); the
-tournament Ramsey numbers add nothing to Erdős–Szekeres here.
+For distinct orbit values define the inversion graph by the edges `ij`
+with `i<j` and `x_i>x_j`. A clique is exactly a decreasing subsequence and
+an independent set exactly an increasing subsequence. Thus its clique and
+independence numbers are LDS and LIS, respectively. Erdős–Szekeres forces
+one of these to be at least `ceil(sqrt(L))` in `L` distinct values.
+
+The previous tournament rule, interpreting each pair with `i<j`, directs
+every edge from the smaller value to the larger. The entire tournament is
+transitive. The sequence `(1,3,2)` already has tournament transitivity 3
+but `max(LIS,LDS)=2`; the former Proposition 5 was false.
+
+The reported orbit statistics for `27,703,6171,77031` are the valid
+subsequence quantities `(18,9),(18,17),(17,21),(18,32)`, on respectively
+`42,63,97,130` odd values. They describe inversion-graph independence and
+clique numbers, not largest transitive subtournaments. The corrected script
+reproduces these statistics. No tournament Ramsey improvement follows.
 
 ## 6. Directions (DIRECTION; none pursued)
 

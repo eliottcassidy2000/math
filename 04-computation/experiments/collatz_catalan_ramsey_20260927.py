@@ -17,8 +17,8 @@
      diagonal), D(G) has Seidel matrix [[S, S + I], [S + I, -S]]: G, G and its complement on the copies, twins non-adjacent.
      The law for omega(D(G)) - omega(G) and alpha(D(G)) - alpha(G) over all labeled graphs on 5 and 6 vertices, and the values
      on P_5, P_13, P_17 (the Ramsey-extremal Paley graphs).
- (5) The value-time poset of an orbit as a permutation tournament: its largest transitive subtournament is the longer of the
-     longest increasing and decreasing subsequences of the orbit's values (Erdos-Szekeres): 27, 703, 6171, 77031.
+ (5) CORRECTED 2026-10-28: the orbit inversion graph has independence number LIS and clique number LDS.
+     The former tournament interpretation was false; its value orientation is transitive on the whole orbit.
  (6) The exact law of the Seidel doubling (the graph analogue of THM-483's zigzag law): omega(D(G)) is the largest induced
      complete split subgraph (a clique completely joined to an independent set) and alpha(D(G)) = max(alpha(G) + 1, largest
      induced clique plus independent set with no edges between); verified exhaustively for n <= 6 and on random graphs for
@@ -64,7 +64,7 @@ def part1():
         ok &= (conv == W[k])
     print(" W = 1/(1 - P) (W_k = sum_j P_j W_(k-j)): %s" % ok)
     print(" certification density at q = 4: fraction of length-k words that are NOT positive = 1 - C(k-1,floor((k-1)/2))/2^k; the")
-    print(" non-certified fraction ~ sqrt(2/(pi k)):", [round(math.comb(k - 1, (k - 1) // 2) / 2 ** k, 4) for k in (10, 100, 1000)], "vs", [round(math.sqrt(2 / (math.pi * k)), 4) for k in (10, 100, 1000)])
+    print(" non-certified fraction ~ 1/sqrt(2*pi*k):", [round(math.comb(k - 1, (k - 1) // 2) / 2 ** k, 4) for k in (10, 100, 1000)], "vs", [round(1 / math.sqrt(2 * math.pi * k), 4) for k in (10, 100, 1000)])
     print(" C_n ~ 4^n n^(-3/2)/sqrt(pi): ratio C_n n^(3/2) sqrt(pi)/4^n at n = 10, 100, 500:", [round(catalan(n) * n ** 1.5 * math.sqrt(math.pi) / 4 ** n, 4) for n in (10, 100, 500)])
 
 
@@ -241,14 +241,14 @@ def lis(seq):
 
 
 def part5():
-    print("== (5) the orbit as a permutation tournament: Erdos-Szekeres ==")
+    print("== (5) the orbit inversion graph: Erdos-Szekeres (corrected carrier) ==")
     for n in (27, 703, 6171, 77031):
         vals = [n]; m = n
         while m != 1:
             m, _ = U(m); vals.append(m)
         L = len(vals); I = lis(vals); Dd = lis([-x for x in vals])
         r = math.isqrt(L - 1) + 1
-        print(" n = %d: %d odd values; LIS = %d, LDS = %d (largest transitive subtournament of the permutation tournament = %d); Erdos-Szekeres guarantees a monotone subsequence of length %d" % (n, L, I, Dd, max(I, Dd), r))
+        print(" n = %d: %d odd values; LIS = %d, LDS = %d (largest clique-or-independent-set in the inversion graph = %d); Erdos-Szekeres guarantees a monotone subsequence of length %d" % (n, L, I, Dd, max(I, Dd), r))
 
 
 def split_numbers(S):
