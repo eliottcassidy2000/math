@@ -1,0 +1,50 @@
+[
+  {
+    "source": "README.md",
+    "target": "exterior/K4_EXTERIOR_BOUNDARY.md"
+  },
+  {
+    "source": "README.md",
+    "target": "positive/POSITIVE_INCIDENCE_AND_ATOMS.md"
+  },
+  {
+    "source": "README.md",
+    "target": "audit_incoming/INCOMING_COMMON_RANK_AUDIT.md"
+  },
+  {
+    "source": "README.md",
+    "target": "descent/POSITIVE_ATOMS_AND_INTEGER_DESCENT.md"
+  },
+  {
+    "source": "README.md",
+    "target": "summands/THREE_CHAINS_RECOVERED.md"
+  },
+  {
+    "source": "README.md",
+    "target": "summands/SUMMAND_SQUARES.md"
+  },
+  {
+    "source": "README.md",
+    "target": "audit_algebra/REPORT.md"
+  },
+  {
+    "source": "README.md",
+    "target": "audit_descent/REPORT.md"
+  },
+  {
+    "source": "exterior/K4_EXTERIOR_BOUNDARY.md",
+    "target": "positive/POSITIVE_INCIDENCE_AND_ATOMS.md"
+  },
+  {
+    "source": "summands/SUMMAND_SQUARES.md",
+    "target": "summands/THREE_CHAINS_RECOVERED.md"
+  },
+  {
+    "source": "positive/POSITIVE_INCIDENCE_AND_ATOMS.md",
+    "target": "../session103_words_necklaces_20261029/triangularity/AVOIDING_WORD_TRIANGULARITY.md"
+  },
+  {
+    "source": "positive/POSITIVE_INCIDENCE_AND_ATOMS.md",
+    "target": "audit_descent/REPORT.md"
+  }
+]
