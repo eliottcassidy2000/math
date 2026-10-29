@@ -1,0 +1,56 @@
+{
+ "P7 k=2": {
+  "a": "11904",
+  "b": "-23232",
+  "N": "1497710592",
+  "gcd(a,b)": "192",
+  "lines": [
+   "p=2 split, exponent 14: (v_P, v_Pbar) = (8, 6) -> TWO-SIDED",
+   "p=3 inert, exponent 2 in N(beta), v_p(gcd(a,b)) = 1",
+   "p=1451 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided"
+  ]
+ },
+ "P7 k=3": {
+  "a": "3257463411200",
+  "b": "-12008276134400",
+  "N": "338124979454702127677440000",
+  "gcd(a,b)": "12800",
+  "lines": [
+   "p=2 split, exponent 22: (v_P, v_Pbar) = (9, 13) -> TWO-SIDED",
+   "p=5 inert, exponent 4 in N(beta), v_p(gcd(a,b)) = 2",
+   "p=11 split, exponent 2: (v_P, v_Pbar) = (0, 2) -> one-sided",
+   "p=79 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided",
+   "p=5861 split, exponent 2: (v_P, v_Pbar) = (2, 0) -> one-sided",
+   "p=392809 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided"
+  ]
+ },
+ "P11 k=2": {
+  "a": "-3277268084602821875221568",
+  "b": "2438700943997336799818048",
+  "N": "36574549752769999306785510448859020421208897228800",
+  "gcd(a,b)": "704",
+  "lines": [
+   "p=2 inert, exponent 12 in N(beta), v_p(gcd(a,b)) = 6",
+   "p=5 split, exponent 2: (v_P, v_Pbar) = (2, 0) -> one-sided",
+   "p=31 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided",
+   "p=53 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided",
+   "p=89 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided",
+   "p=62987 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided",
+   "p=665251 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided"
+  ]
+ },
+ "P19 k=2": {
+  "a": "3257894888955064409337376885401308115764860327880801819066291111472370591443654798013683834575839441385917410510277883899372748470233001911554060840648832",
+  "b": "23099205287745248056289086810100610940558413012369416628916912329687527518120034305541137274131866088382585500044939893000520261925165549898282279729530192",
+  "N": "2603225520888600630182885176658854739994952461675926177755634444739311908925820098785316560952809699405757551758865400130875735251595675732875649995868050545506522553157788280588480900637568899607589134330941720458787141477079532163020799336351717247679152888368296974816652818458993723646841075047132127212800",
+  "gcd(a,b)": "16",
+  "lines": [
+   "p=2 inert, exponent 8 in N(beta), v_p(gcd(a,b)) = 4",
+   "p=5 split, exponent 2: (v_P, v_Pbar) = (0, 2) -> one-sided",
+   "p=11 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided",
+   "p=47 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided",
+   "p=61 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided",
+   "p=263 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided"
+  ]
+ }
+}

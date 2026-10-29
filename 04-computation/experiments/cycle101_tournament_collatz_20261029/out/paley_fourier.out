@@ -1,0 +1,18 @@
+P_7: det B_0 = {3: 3, 7: 1, 13: 3}; det M_2 = det B_0 * N(det B_1): True
+   N(det B_1) = {2: 42, 3: 6, 7: 3, 1451: 3} ; all exponents divisible by (q-1)/2 = 3: True
+      p=2 exponent 42 (quadratic-norm exponent 14), (-q/p) = 0
+      p=3 exponent 6 (quadratic-norm exponent 2), (-q/p) = -1
+      p=1451 exponent 3 (quadratic-norm exponent 1), (-q/p) = 1
+P_11: det B_0 = {3: 1, 11: 2, 19: 3, 23: 1, 43: 1, 241: 2, 22291: 2}; det M_2 = det B_0 * N(det B_1): True
+   N(det B_1) = {2: 60, 5: 10, 11: 10, 31: 5, 53: 5, 89: 5, 62987: 5, 665251: 5, 35096521: 5, 4780984157: 5, 2871099599: 5} ; all exponents divisible by (q-1)/2 = 5: True
+      p=2 exponent 60 (quadratic-norm exponent 12), (-q/p) = 0
+      p=5 exponent 10 (quadratic-norm exponent 2), (-q/p) = 1
+      p=31 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=53 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=89 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=62987 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=665251 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=35096521 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=4780984157 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+      p=2871099599 exponent 5 (quadratic-norm exponent 1), (-q/p) = 1
+rc=0

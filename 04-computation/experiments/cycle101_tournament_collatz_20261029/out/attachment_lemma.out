@@ -1,0 +1,4 @@
+attachment lemma: 8055 prime-power tests, 0 failures
+locking corollary: 4894 tests, 0 failures
+7x+169 orbit of 79: [79, 361, 337] returns to 79
+3x+1 (odd-step) orbit of 79: [79, 119, 179, 269, 101, 19, 29, 11, 17, 13, 5, 1]

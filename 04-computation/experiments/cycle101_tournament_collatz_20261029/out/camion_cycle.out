@@ -1,0 +1,11 @@
+19*79                      n=1501      strong Camion test: False [p=19 r=7 nonzero; p=79 r=19 nonzero]; tournament-count test: False
+19*101                     n=1919      strong Camion test: False [p=19 r=11 nonzero; p=101 r=19 zero]; tournament-count test: False
+79*101                     n=7979      strong Camion test: False [p=79 r=23 nonzero; p=101 r=79 nonzero]; tournament-count test: False
+19*79*101                  n=151601    strong Camion test: False [p=19 r=5 nonzero; p=79 r=47 nonzero; p=101 r=1 zero]; tournament-count test: False
+19*169                     n=3211      strong Camion test: False [169: r=91 nonzero; p=19 r=7 nonzero]; tournament-count test: False
+79*169                     n=13351     strong Camion test: False [169: r=91 nonzero; p=79 r=13 nonzero]; tournament-count test: False
+101*169                    n=17069     strong Camion test: False [169: r=65 nonzero; p=101 r=69 nonzero]; tournament-count test: False
+19*79*169 (cycle product)  n=253669    strong Camion test: False [169: r=13 zero; p=19 r=13 nonzero; p=79 r=13 nonzero]; tournament-count test: False
+19*79*101*169              n=25620569  strong Camion test: False [169: r=65 nonzero; p=19 r=17 nonzero; p=79 r=65 nonzero; p=101 r=69 nonzero]; tournament-count test: False
+169                        n=169       strong Camion test: True  [169: r=13 zero]; tournament-count test: False
+13*101                     n=1313      strong Camion test: False [p=13 r=5 nonzero; p=101 r=13 nonzero]; tournament-count test: False

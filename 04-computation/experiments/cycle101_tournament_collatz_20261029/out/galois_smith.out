@@ -1,0 +1,109 @@
+P7 (q=7, S=[1, 2, 4], k=2, H=[1, 2, 4], 42x42): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=2 (p mod q = 2, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 6, 2: 9, 6: 3} -> ok
+    p=3 (p mod q = 3, f = 6, required multiplicity divisor 6): trivial block {1: 3}, nontrivial part {1: 6} -> ok
+    p=13 (p mod q = 6, f = 2, required multiplicity divisor 6): trivial block {1: 3}, nontrivial part {} -> ok
+    p=1451 (p mod q = 2, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+P7 (q=7, S=[1, 2, 4], k=3, H=[1, 2, 4], 210x210): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=2 (p mod q = 2, f = 3, required multiplicity divisor 3): trivial block {2: 2, 1: 10}, nontrivial part {1: 21, 3: 3, 4: 9} -> ok
+    p=3 (p mod q = 3, f = 6, required multiplicity divisor 6): trivial block {4: 1, 2: 6, 1: 2}, nontrivial part {} -> ok
+    p=5 (p mod q = 5, f = 6, required multiplicity divisor 6): trivial block {}, nontrivial part {1: 12} -> ok
+    p=11 (p mod q = 4, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 6} -> ok
+    p=17 (p mod q = 3, f = 6, required multiplicity divisor 6): trivial block {1: 4}, nontrivial part {} -> ok
+    p=79 (p mod q = 2, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=5861 (p mod q = 2, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 6} -> ok
+    p=392809 (p mod q = 4, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+P11 (q=11, S=[1, 3, 4, 5, 9], k=2, H=[1, 3, 4, 5, 9], 110x110): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=2 (p mod q = 2, f = 10, required multiplicity divisor 10): trivial block {}, nontrivial part {1: 30, 3: 10} -> ok
+    p=3 (p mod q = 3, f = 5, required multiplicity divisor 5): trivial block {1: 1}, nontrivial part {} -> ok
+    p=5 (p mod q = 5, f = 5, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 10} -> ok
+    p=19 (p mod q = 8, f = 10, required multiplicity divisor 10): trivial block {1: 3}, nontrivial part {} -> ok
+    p=23 (p mod q = 1, f = 1, required multiplicity divisor 5): trivial block {1: 1}, nontrivial part {} -> ok
+    p=31 (p mod q = 9, f = 5, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 5} -> ok
+    p=43 (p mod q = 10, f = 2, required multiplicity divisor 10): trivial block {1: 1}, nontrivial part {} -> ok
+    p=53 (p mod q = 9, f = 5, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 5} -> ok
+    p=89 (p mod q = 1, f = 1, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 5} -> ok
+    p=241 (p mod q = 10, f = 2, required multiplicity divisor 10): trivial block {1: 2}, nontrivial part {} -> ok
+    p=22291 (p mod q = 5, f = 5, required multiplicity divisor 5): trivial block {1: 2}, nontrivial part {} -> ok
+    p=62987 (p mod q = 1, f = 1, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 5} -> ok
+    p=665251 (p mod q = 4, f = 5, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 5} -> ok
+    p=bundle(27 digits) (p mod q = None, f = None, required multiplicity divisor 5): trivial block {}, nontrivial part {1: 5} -> ok
+Z13 <3> A (q=13, S=[1, 2, 3, 5, 6, 9], k=2, H=[1, 3, 9], 156x156): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=3 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {4: 1, 3: 1, 2: 1, 1: 2}, nontrivial part {1: 3, 2: 6} -> ok
+    p=7 (p mod q = 7, f = 12, required multiplicity divisor 12): trivial block {2: 1, 1: 2}, nontrivial part {} -> ok
+    p=23 (p mod q = 10, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=73 (p mod q = 8, f = 4, required multiplicity divisor 12): trivial block {2: 1}, nontrivial part {} -> ok
+    p=107 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {1: 1}, nontrivial part {} -> ok
+    p=277 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=1907 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=2011 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=5783 (p mod q = 11, f = 12, required multiplicity divisor 12): trivial block {1: 1}, nontrivial part {} -> ok
+    p=9871 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 1}, nontrivial part {} -> ok
+    p=437677 (p mod q = 6, f = 12, required multiplicity divisor 12): trivial block {1: 2}, nontrivial part {} -> ok
+    p=bundle(170 digits) (p mod q = None, f = None, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+Z13 <3> B (q=13, S=[1, 3, 7, 8, 9, 11], k=2, H=[1, 3, 9], 156x156): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=3 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {4: 1, 3: 1, 2: 1, 1: 2}, nontrivial part {1: 3, 2: 6} -> ok
+    p=7 (p mod q = 7, f = 12, required multiplicity divisor 12): trivial block {2: 1, 1: 2}, nontrivial part {} -> ok
+    p=23 (p mod q = 10, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=73 (p mod q = 8, f = 4, required multiplicity divisor 12): trivial block {2: 1}, nontrivial part {} -> ok
+    p=107 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {1: 1}, nontrivial part {} -> ok
+    p=277 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=1907 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=2011 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=5783 (p mod q = 11, f = 12, required multiplicity divisor 12): trivial block {1: 1}, nontrivial part {} -> ok
+    p=9871 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 1}, nontrivial part {} -> ok
+    p=437677 (p mod q = 6, f = 12, required multiplicity divisor 12): trivial block {1: 2}, nontrivial part {} -> ok
+    p=bundle(170 digits) (p mod q = None, f = None, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+Z13 <3> C (q=13, S=[2, 4, 5, 6, 10, 12], k=2, H=[1, 3, 9], 156x156): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=3 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {4: 1, 3: 1, 2: 1, 1: 2}, nontrivial part {1: 3, 2: 6} -> ok
+    p=7 (p mod q = 7, f = 12, required multiplicity divisor 12): trivial block {2: 1, 1: 2}, nontrivial part {} -> ok
+    p=23 (p mod q = 10, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=73 (p mod q = 8, f = 4, required multiplicity divisor 12): trivial block {2: 1}, nontrivial part {} -> ok
+    p=107 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {1: 1}, nontrivial part {} -> ok
+    p=277 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=1907 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=2011 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=5783 (p mod q = 11, f = 12, required multiplicity divisor 12): trivial block {1: 1}, nontrivial part {} -> ok
+    p=9871 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 1}, nontrivial part {} -> ok
+    p=437677 (p mod q = 6, f = 12, required multiplicity divisor 12): trivial block {1: 2}, nontrivial part {} -> ok
+    p=bundle(170 digits) (p mod q = None, f = None, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+Z13 <3> D (q=13, S=[4, 7, 8, 10, 11, 12], k=2, H=[1, 3, 9], 156x156): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=3 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {4: 1, 3: 1, 2: 1, 1: 2}, nontrivial part {1: 3, 2: 6} -> ok
+    p=7 (p mod q = 7, f = 12, required multiplicity divisor 12): trivial block {2: 1, 1: 2}, nontrivial part {} -> ok
+    p=23 (p mod q = 10, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=73 (p mod q = 8, f = 4, required multiplicity divisor 12): trivial block {2: 1}, nontrivial part {} -> ok
+    p=107 (p mod q = 3, f = 3, required multiplicity divisor 3): trivial block {1: 1}, nontrivial part {} -> ok
+    p=277 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 2}, nontrivial part {} -> ok
+    p=1907 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=2011 (p mod q = 9, f = 3, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+    p=5783 (p mod q = 11, f = 12, required multiplicity divisor 12): trivial block {1: 1}, nontrivial part {} -> ok
+    p=9871 (p mod q = 4, f = 6, required multiplicity divisor 6): trivial block {1: 1}, nontrivial part {} -> ok
+    p=437677 (p mod q = 6, f = 12, required multiplicity divisor 12): trivial block {1: 2}, nontrivial part {} -> ok
+    p=bundle(170 digits) (p mod q = None, f = None, required multiplicity divisor 3): trivial block {}, nontrivial part {1: 3} -> ok
+R7 control (q=7, S=[1, 2, 3], k=2, H=[1], 42x42): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=2 (p mod q = 2, f = 3, required multiplicity divisor 3): trivial block {5: 1, 2: 2, 1: 1}, nontrivial part {1: 12} -> ok
+    p=3 (p mod q = 3, f = 6, required multiplicity divisor 6): trivial block {1: 1}, nontrivial part {} -> ok
+    p=29 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=71 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=337 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=303073 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=2277647 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+R11 control (q=11, S=[1, 2, 3, 4, 5], k=2, H=[1], 110x110): det B_1 fixed by H: True; det M = det B_0 * N(det B_1): True; kernel dim 0; multiplicity law: True
+    p=2 (p mod q = 2, f = 10, required multiplicity divisor 10): trivial block {4: 2, 1: 6}, nontrivial part {1: 60} -> ok
+    p=3 (p mod q = 3, f = 5, required multiplicity divisor 5): trivial block {1: 1}, nontrivial part {} -> ok
+    p=5 (p mod q = 5, f = 5, required multiplicity divisor 5): trivial block {2: 1}, nontrivial part {} -> ok
+    p=13 (p mod q = 2, f = 10, required multiplicity divisor 10): trivial block {1: 1}, nontrivial part {} -> ok
+    p=17 (p mod q = 6, f = 10, required multiplicity divisor 10): trivial block {1: 1}, nontrivial part {} -> ok
+    p=23 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=67 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=389 (p mod q = 4, f = 5, required multiplicity divisor 5): trivial block {1: 1}, nontrivial part {} -> ok
+    p=397 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=661 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=1087 (p mod q = 9, f = 5, required multiplicity divisor 5): trivial block {1: 1}, nontrivial part {} -> ok
+    p=1277 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=3079 (p mod q = 10, f = 2, required multiplicity divisor 2): trivial block {1: 1}, nontrivial part {} -> ok
+    p=8933 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=187133 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=323473 (p mod q = 7, f = 10, required multiplicity divisor 10): trivial block {1: 1}, nontrivial part {} -> ok
+    p=457711 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=2476189 (p mod q = 1, f = 1, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok
+    p=bundle(196 digits) (p mod q = None, f = None, required multiplicity divisor 1): trivial block {}, nontrivial part {1: 1} -> ok

@@ -1,0 +1,26 @@
+P7, k=2: beta = 11904 + (-23232) eta ; gcd(a,b) = {2: 6, 3: 1}
+   p=2 split, exponent 14: (v_P, v_Pbar) = (8, 6) -> TWO-SIDED
+   p=3 inert, exponent 2 in N(beta), v_p(gcd(a,b)) = 1
+   p=1451 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided
+P7, k=3: beta = 3257463411200 + (-12008276134400) eta ; gcd(a,b) = {2: 9, 5: 2}
+   p=2 split, exponent 22: (v_P, v_Pbar) = (9, 13) -> TWO-SIDED
+   p=5 inert, exponent 4 in N(beta), v_p(gcd(a,b)) = 2
+   p=11 split, exponent 2: (v_P, v_Pbar) = (0, 2) -> one-sided
+   p=79 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+   p=5861 split, exponent 2: (v_P, v_Pbar) = (2, 0) -> one-sided
+   p=392809 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+P11, k=2: beta = -3277268084602821875221568 + (2438700943997336799818048) eta ; gcd(a,b) = {2: 6, 11: 1}
+   p=2 inert, exponent 12 in N(beta), v_p(gcd(a,b)) = 6
+   p=5 split, exponent 2: (v_P, v_Pbar) = (2, 0) -> one-sided
+   p=31 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+   p=53 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided
+   p=89 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+   p=62987 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+   p=665251 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided
+P19, k=2: beta = 3257894888955064409337376885401308115764860327880801819066291111472370591443654798013683834575839441385917410510277883899372748470233001911554060840648832 + (23099205287745248056289086810100610940558413012369416628916912329687527518120034305541137274131866088382585500044939893000520261925165549898282279729530192) eta ; gcd(a,b) = {2: 4}
+   p=2 inert, exponent 8 in N(beta), v_p(gcd(a,b)) = 4
+   p=5 split, exponent 2: (v_P, v_Pbar) = (0, 2) -> one-sided
+   p=11 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+   p=47 split, exponent 1: (v_P, v_Pbar) = (0, 1) -> one-sided
+   p=61 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided
+   p=263 split, exponent 1: (v_P, v_Pbar) = (1, 0) -> one-sided

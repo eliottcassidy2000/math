@@ -1,0 +1,27 @@
+locking theorem: 26665 (word, letter, prime power) tests, 26665 agree, 153 locked
+
+interval words of R_q under appended v = 1: locked primes vs gcd(2^m - 1, 3^m - 1), m = (q+1)/2
+  q= 3  m= 2  locked []  gcd primes []  ok
+  q= 5  m= 3  locked []  gcd primes []  ok
+  q= 7  m= 4  locked [5]  gcd primes [5]  ok
+  q=11  m= 6  locked [7]  gcd primes [7]  ok
+  q=13  m= 7  locked []  gcd primes []  ok
+  q=17  m= 9  locked []  gcd primes []  ok
+  q=19  m=10  locked [11]  gcd primes [11]  ok
+  q=23  m=12  locked [5, 7, 13]  gcd primes [5, 7, 13]  ok
+  q=29  m=15  locked []  gcd primes []  ok
+  q=31  m=16  locked [5, 17]  gcd primes [5, 17]  ok
+  q=37  m=19  locked []  gcd primes []  ok
+  q=41  m=21  locked []  gcd primes []  ok
+  q=43  m=22  locked [23]  gcd primes [23]  ok
+  q=47  m=24  locked [5, 7, 13]  gcd primes [5, 7, 13]  ok
+  q=53  m=27  locked []  gcd primes []  ok
+  q=59  m=30  locked [7, 11, 31]  gcd primes [7, 11, 31]  ok
+  q=61  m=31  locked []  gcd primes []  ok
+  q=67  m=34  locked []  gcd primes []  ok
+  q=71  m=36  locked [5, 7, 13, 19, 37, 73]  gcd primes [5, 7, 13, 19, 37, 73]  ok
+  q=73  m=37  locked []  gcd primes []  ok
+  q=79  m=40  locked [5, 11, 41]  gcd primes [5, 11, 41]  ok
+  q=83  m=42  locked [7, 43]  gcd primes [7, 43]  ok
+  q=89  m=45  locked []  gcd primes []  ok
+  q=97  m=49  locked []  gcd primes []  ok

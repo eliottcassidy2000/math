@@ -1,0 +1,19 @@
+(k,H) = (3,7): D = 2^7 - 3^3 = 101 ; words: 15 ; necklaces: 5
+  S = (0, 1, 2) words [(1, 1, 5), (1, 5, 1), (5, 1, 1)] numerators [19, 79, 169] | reversal -> (0, 1, 2) | x2 -> (0, 2, 4) | x3 -> (0, 1, 4)
+  S = (0, 1, 3) words [(1, 2, 4), (2, 4, 1), (4, 1, 2)] numerators [23, 85, 89] | reversal -> (0, 1, 5) | x2 -> (0, 1, 3) | x3 -> (0, 1, 5)
+  S = (0, 1, 4) words [(1, 3, 3), (3, 1, 3), (3, 3, 1)] numerators [31, 49, 97] | reversal -> (0, 1, 4) | x2 -> (0, 1, 2) | x3 -> (0, 2, 4)
+  S = (0, 1, 5) words [(1, 4, 2), (2, 1, 4), (4, 2, 1)] numerators [47, 29, 121] | reversal -> (0, 1, 3) | x2 -> (0, 1, 5) | x3 -> (0, 1, 3)
+  S = (0, 2, 4) words [(2, 2, 3), (2, 3, 2), (3, 2, 2)] numerators [37, 53, 65] | reversal -> (0, 2, 4) | x2 -> (0, 1, 4) | x3 -> (0, 1, 2)
+Z_7^* decimation orbits on the five necklaces: [[(0, 1, 2), (0, 1, 4), (0, 2, 4)], [(0, 1, 3), (0, 1, 5)]]
+  necklace (0, 1, 3) contains a translate of QR = {1,2,4}: Paley P7 connection set
+  necklace (0, 1, 5) contains a translate of NQR = {3,5,6}: the converse P7^op
+
+One-letter futures: append v to each marked word w; C(wv) = 3 C(w) + 2^7, D(wv) = 2^(7+v) - 81
+  v=1: D = 175; reduced denominators -> numerators C(w): {7: [49], 25: [53], 35: [19, 29, 79, 89, 169], 175: [23, 31, 37, 47, 65, 85, 97, 121]}
+  v=2: D = 431; reduced denominators -> numerators C(w): {431: [19, 23, 29, 31, 37, 47, 49, 53, 65, 79, 85, 89, 97, 121, 169]}
+  v=3: D = 943; reduced denominators -> numerators C(w): {23: [53], 943: [19, 23, 29, 31, 37, 47, 49, 65, 79, 85, 89, 97, 121, 169]}
+  v=4: D = 1967; reduced denominators -> numerators C(w): {281: [53], 1967: [19, 23, 29, 31, 37, 47, 49, 65, 79, 85, 89, 97, 121, 169]}
+  v=5: D = 4015; reduced denominators -> numerators C(w): {11: [79], 73: [49], 803: [19, 29, 89, 169], 4015: [23, 31, 37, 47, 53, 65, 85, 97, 121]}
+  v=6: D = 8111; reduced denominators -> numerators C(w): {8111: [19, 23, 29, 31, 37, 47, 49, 53, 65, 79, 85, 89, 97, 121, 169]}
+
+3x+101 integer cycles of the family (numerators): [[19, 79, 169], [23, 85, 89], [29, 47, 121], [31, 49, 97], [37, 53, 65]]
