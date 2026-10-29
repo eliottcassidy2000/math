@@ -204,7 +204,11 @@ plain integer multiplication and an independent Bareiss determinant for
 unimodularity; a separate elementary Smith producer agrees. The complete
 receipt stores matrices, transforms, source rows and the prime-label map.
 
-The next precise target is the analogous integer response module for
-ordered multiple-run attachments, with shared endpoints retained. The
-all-prime formula A2 suggests testing the exceptional cases gcd(a,b)>1
-or q|s separately instead of extrapolating a formula beyond its hypotheses.
+**Continuation.** [PALEY_PENCIL P4--P9](PALEY_PENCIL.md) now proves the
+formerly excluded common-content and ramified cases, plus singular signed
+weights. A2 remains the unramified primitive specialization.
+[TWO_RUN R1--R6](TWO_RUN.md) computes the analogous integer module for
+actual ordered two-run attachments, including the stronger modulo3
+81/27 separator and the integral run-swap glue. The next unresolved
+interface is the full complemented relation under repeated operations,
+not merely these endpoint modules.

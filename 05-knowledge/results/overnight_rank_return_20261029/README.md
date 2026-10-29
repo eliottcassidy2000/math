@@ -4,6 +4,22 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+**08:00 UTC continuation.** [PALEY_PENCIL P4--P9](PALEY_PENCIL.md)
+completes the integer Smith formula for every signed prime-Paley pencil,
+including common content, ramification and the singular skew case.
+The correction divides gcd(R,N) by gcd(q,s). An F27 hostile explains why
+prime order is essential: its characteristic rank is8, following the
+all-degree law ((p+1)/2)^m rather than the prime-only value14.
+
+[TWO_RUN R1--R6](TWO_RUN.md) computes actual ordered two-run response
+modules. Paley7 has rational rank42 and parity rank24; its symmetric and
+antisymmetric sectors require integral parity glue. The actual order21
+transporter makes these sectors convolution operators whose quadratic
+norms explain the new factor1451=38^2+7. The81/27 pair has identical
+two-run total9011898 but joint-response ranks24/22 modulo3, a separation
+one ternary digit earlier than the single-run observer. The six-vertex
+literal-complement revisit hostile is retained and rerun.
+
 The new composition comparison is [FIFTEEN G1--G5](FIFTEEN.md): one
 Lagrangian needs four storage bits, natural quadratic guards require five
 queries even adaptively, and weighted response carriers have dimensions
@@ -89,9 +105,12 @@ The requested hourly continuation runs through 08:00 America/Denver on
 repeat the completed single-block derivation. Preserve clean Git checkpoints.
 
 Completed targets include the three independence certificates and the
-fifteen-object transport/query distinction above. Next targets are relation
-loci on actual strong-atom attachments, weighted closure of their omitted
-coordinates, and primary algorithm manuscripts behind Big O Speedrun.
+fifteen-object transport/query distinction above, the full prime-Paley
+pencil and the exact two-run modules. Next targets are three-run integral
+gluing at primes2 and3, a carry recurrence for prime-power Paley Smith
+layers, and retention of actual complemented relations alongside these
+weighted modules. Primary algorithm manuscripts behind Big O Speedrun
+remain a separate lane.
 Treat reported algorithm breakthroughs as source claims
 until their actual statements, models and proofs have been audited. The
 existing rank-21 heuristic is not a proved rank cap.
@@ -100,3 +119,11 @@ The continuing arithmetic question is whether the five-cylinder failure
 menu admits a source-preserving return contraction and a pointwise
 certificate for its own exceptional integers. A finite menu alone need
 not be closed under future observations.
+
+Incoming mainline `dae22995d1` adds Eisenstein clock joins and compatible
+CRT response counts in the separate overnight packet. Its C3 norm has a
+literal counterpart in the quotient-character sector of TWO_RUN R4;
+the source forms and legal operations remain distinct. The recovered
+Session35/37 square-zero and signed-sector work is credited before the
+new integral-gluing experiment. Meta-patterns used: audit the consumer's
+integral quotient; pay algebraic rank before claiming physical compression.
