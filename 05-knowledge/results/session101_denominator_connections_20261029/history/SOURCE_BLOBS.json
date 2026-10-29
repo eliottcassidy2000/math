@@ -1,0 +1,247 @@
+[
+  {
+    "path": "05-knowledge/results/collatz_guards_20260921_squarefree.md",
+    "pinned_blob": "3d5f4de4ba511876db6a1c8fb9190a98da8a2b58",
+    "read_blob": "3d5f4de4ba511876db6a1c8fb9190a98da8a2b58",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_guards_20260921_synthesis.md",
+    "pinned_blob": "6f9ff3804268af1d1def757a318f59ce584b664a",
+    "read_blob": "6f9ff3804268af1d1def757a318f59ce584b664a",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_catalan_ramsey_20260927.md",
+    "pinned_blob": "c5b459cad19c60dc7516b3d00c3913af2b1cff60",
+    "read_blob": "c5b459cad19c60dc7516b3d00c3913af2b1cff60",
+    "matches": true,
+    "superseded_local_read_blob": "cb7a1c9a07dc3f61939e7bfd1c43d936f16645cb",
+    "read_method": "git show pinned HEAD; original pinned source linked in map"
+  },
+  {
+    "path": "05-knowledge/results/collatz_mediant_tree_K_20260930.md",
+    "pinned_blob": "3478c509980239d4bdd802671442286d854b148d",
+    "read_blob": "3478c509980239d4bdd802671442286d854b148d",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_pentagon_fixed_points_argument_styles_20260930.md",
+    "pinned_blob": "a1c392cca61b90f70fa92282ef372b33538c1676",
+    "read_blob": "a1c392cca61b90f70fa92282ef372b33538c1676",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_mod6_20260921_pillai_convergents_cycle_gates.md",
+    "pinned_blob": "ecccbdf6a6e9fdafe9736a3b1d50d3fb99828127",
+    "read_blob": "ecccbdf6a6e9fdafe9736a3b1d50d3fb99828127",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+    "pinned_blob": "217f21402b0eb91251caf6dbc719ca04af96db12",
+    "read_blob": "217f21402b0eb91251caf6dbc719ca04af96db12",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_mod6_20260917_wild_typing.md",
+    "pinned_blob": "93cf17f65c3eb1f91f77f4598c4fb2a4f0286392",
+    "read_blob": "93cf17f65c3eb1f91f77f4598c4fb2a4f0286392",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_cycles_tubes_debt_walk_openai_20261006.md",
+    "pinned_blob": "9bfb11f55dad25d14520f0fc9cc134738113f773",
+    "read_blob": "9bfb11f55dad25d14520f0fc9cc134738113f773",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_completion_paper24_23_20261007b.md",
+    "pinned_blob": "b4c50964c74cf943d8b2bc4f29e37966a62030a6",
+    "read_blob": "b4c50964c74cf943d8b2bc4f29e37966a62030a6",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_completion_synthesis_20261007b.md",
+    "pinned_blob": "e3980371bac617bec58d03288b896b86c4229e7d",
+    "read_blob": "e3980371bac617bec58d03288b896b86c4229e7d",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_receipts_four_questions_20261005.md",
+    "pinned_blob": "54d9066cb587ed84452c43d5d47c2fcc3b7aa4a1",
+    "read_blob": "54d9066cb587ed84452c43d5d47c2fcc3b7aa4a1",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_branch_toll_rank_20261004.md",
+    "pinned_blob": "5c0772da902932955ccaa7181dc4d766836ae58b",
+    "read_blob": "5c0772da902932955ccaa7181dc4d766836ae58b",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_procgen_20260922_order_laws.md",
+    "pinned_blob": "e230a086d347b8fc4f4b85b42b88db43353489fe",
+    "read_blob": "e230a086d347b8fc4f4b85b42b88db43353489fe",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_successor_holonomy_20261014b.md",
+    "pinned_blob": "d2602fe5645dda580e57c5e8e3e3fad4771c02a1",
+    "read_blob": "d2602fe5645dda580e57c5e8e3e3fad4771c02a1",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_odd_adjacent_return_20261019.md",
+    "pinned_blob": "107bcaa74901a37e791b60d9cf262a44baae8350",
+    "read_blob": "107bcaa74901a37e791b60d9cf262a44baae8350",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_maximal_run_reset_20261019.md",
+    "pinned_blob": "d1b73763e5bdf1f5527865e1e72d21198cead1e7",
+    "read_blob": "d1b73763e5bdf1f5527865e1e72d21198cead1e7",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_bank_reset_20261019.md",
+    "pinned_blob": "cfebde68da74bfc0992a4447c3ac463fbf063415",
+    "read_blob": "cfebde68da74bfc0992a4447c3ac463fbf063415",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_return_rank_obstruction_20261019.md",
+    "pinned_blob": "bcb71f8727223d54770208c0c3fcb392b5d1df83",
+    "read_blob": "bcb71f8727223d54770208c0c3fcb392b5d1df83",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/procgen_sporadic_20260926_free_and_sporadic_cycles.md",
+    "pinned_blob": "a58428016180a298b0d27400a60d544660e341c0",
+    "read_blob": "a58428016180a298b0d27400a60d544660e341c0",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/procgen_gates_20260925_gate_equidistribution.md",
+    "pinned_blob": "8702468acb054d46562f89a194d550c3366e50df",
+    "read_blob": "8702468acb054d46562f89a194d550c3366e50df",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/procgen_tcpc_20261001_tournament_clock_prime_collatz.md",
+    "pinned_blob": "505f6528f4fe65145364c9bf82fab9d55ee7159b",
+    "read_blob": "505f6528f4fe65145364c9bf82fab9d55ee7159b",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+    "pinned_blob": "917faeb7c5d7655b3a69d62e8eee9cc682e5a34b",
+    "read_blob": "917faeb7c5d7655b3a69d62e8eee9cc682e5a34b",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/sierpinski_steiner_collatz_tournaments_20261022.md",
+    "pinned_blob": "f198aa8e54bff8d5499b1c0b1952c5d8a512117e",
+    "read_blob": "f198aa8e54bff8d5499b1c0b1952c5d8a512117e",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/lattices_codes_tournaments_20261021.md",
+    "pinned_blob": "22c3240636a9c7e99764cacbba613e054d1f7b62",
+    "read_blob": "22c3240636a9c7e99764cacbba613e054d1f7b62",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/scale_credit_and_tournament_compression_20261021a.md",
+    "pinned_blob": "3ccc9784a8632288bc517ff83d175832b4891e5c",
+    "read_blob": "3ccc9784a8632288bc517ff83d175832b4891e5c",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/syracuse_window_alphabet_general_m_20261005.md",
+    "pinned_blob": "a45e3370b1819ce15fcbb402b9c0b172fff76abf",
+    "read_blob": "a45e3370b1819ce15fcbb402b9c0b172fff76abf",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/tournament-subset-decks-higher-order-faces-and-kneser-middle-duality-codex-20260821.md",
+    "pinned_blob": "dadf6abc5d06db53f30e350619f36f9e7f170c14",
+    "read_blob": "dadf6abc5d06db53f30e350619f36f9e7f170c14",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/tournaments-as-polygons-lrc-twin-bridge-s522.md",
+    "pinned_blob": "3cd7f53ee3f276ee12bbc825cb0077b595a2a0f6",
+    "read_blob": "3cd7f53ee3f276ee12bbc825cb0077b595a2a0f6",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/lrc-as-a-tournament-and-its-fibonacci-isoclass-menu-s518.md",
+    "pinned_blob": "4c0c1e3647d67c571ff48fe71c326969095eb9e8",
+    "read_blob": "4c0c1e3647d67c571ff48fe71c326969095eb9e8",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/lrc-is-a-round-tournament-necklace-s523.md",
+    "pinned_blob": "9add5407826d5901b0aa000b07aaf1b3bff61ce8",
+    "read_blob": "9add5407826d5901b0aa000b07aaf1b3bff61ce8",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/the-atoms-are-a-heptagon-the-census-is-a-polygon-tournament-and-the-extremizer-is-the-pentagon-kps.md",
+    "pinned_blob": "1b32c96d4b70dfc6559b0eb922a07e4d9041f4d0",
+    "read_blob": "1b32c96d4b70dfc6559b0eb922a07e4d9041f4d0",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/the-heptagon-tournament-6-units-plus-antipode-are-roots-of-z7-minus1-a-self-complementary-D7-tournament-Cayley-dual-to-the-runners-opus-20260701.md",
+    "pinned_blob": "1387df19e5557dedfc9e610c4bc705ad12e910e5",
+    "read_blob": "1387df19e5557dedfc9e610c4bc705ad12e910e5",
+    "matches": true
+  },
+  {
+    "path": "07-reflections/spectral-tournamentgraffiti-a-forbidden-eigenvalue-count-and-h-dominates-the-skew-determinant-deathstar-S78.md",
+    "pinned_blob": "8733e92fb37d3ef66b006c204565c7d0a9125b4b",
+    "read_blob": "8733e92fb37d3ef66b006c204565c7d0a9125b4b",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/h_spectrum_multiplicities_20261021.md",
+    "pinned_blob": "bfe3a1a09a3ff79710bfc3567be3dfa23db0068d",
+    "read_blob": "bfe3a1a09a3ff79710bfc3567be3dfa23db0068d",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/crossroads10_20260926_arithmetic.md",
+    "pinned_blob": "420ebbd6aecee3027ee09c7291b80ea8f7313d0b",
+    "read_blob": "420ebbd6aecee3027ee09c7291b80ea8f7313d0b",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/number_tournament_bridges_20261014.md",
+    "pinned_blob": "f2ac5dc7ed4d0a42d8a9032adad3bba83d08919f",
+    "read_blob": "f2ac5dc7ed4d0a42d8a9032adad3bba83d08919f",
+    "matches": true
+  },
+  {
+    "path": "05-knowledge/results/collatz_two_swap_repetition_classification_20261020/TWO_EDIT_REPETITION_CLASSIFICATION.md",
+    "pinned_blob": "46d4eacb2e4f3c1e57e6879eef2bd9a0430fd3e8",
+    "read_blob": "46d4eacb2e4f3c1e57e6879eef2bd9a0430fd3e8",
+    "matches": true,
+    "read_method": "git show pinned HEAD"
+  },
+  {
+    "path": "05-knowledge/results/session66_root27_aliquot_graph_interfaces_20261026/session66-aliquot/REPORT.md",
+    "pinned_blob": "178197e219423462c49657e682a01bfb83340644",
+    "read_blob": "178197e219423462c49657e682a01bfb83340644",
+    "matches": true,
+    "read_method": "git show pinned HEAD"
+  },
+  {
+    "path": "05-knowledge/results/grid_aliquot_overlap_20261028/README.md",
+    "pinned_blob": "2ec77dea6e7b243c0d67c11835e90113fa60f1f4",
+    "read_blob": "2ec77dea6e7b243c0d67c11835e90113fa60f1f4",
+    "matches": true,
+    "read_method": "git show pinned HEAD"
+  }
+]
