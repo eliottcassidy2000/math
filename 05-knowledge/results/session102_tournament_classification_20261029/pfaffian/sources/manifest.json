@@ -1,0 +1,20 @@
+{
+  "commit": "3b6e3ef82382da222fc59aa02914eea72d5a105b",
+  "verified_exact_blobs": [
+    {
+      "path": "01-canon/theorems/THM-3729-rooted-pfaffian-response-and-sign-root-deletion-average.md",
+      "git_blob": "324de48d2438e4cb269b30e591af90ff0327b5f0",
+      "sha256": "83655b41b7e357a7bf45ea5c9e36542b3993346dd86b35a07c9952198346c38e"
+    },
+    {
+      "path": "01-canon/theorems/THM-174-pfaffian-determinant-identity.md",
+      "git_blob": "853ba727c864af52c518d33abb3bbe68b84aa9b7",
+      "sha256": "545d11dccd75e45327700e7aeee185eec9a300591ff9f189819003ad3d7d2d98"
+    },
+    {
+      "path": "01-canon/theorems/THM-1455-skew-pfaffian-parity-and-a-mod-16-law.md",
+      "git_blob": "49bd9ec026ab58cf377df79282ebb66591569e06",
+      "sha256": "26ad10ef8f262aee6bb3345388a8ee079fb8197f19f690df36c62538c5f4a37a"
+    }
+  ]
+}
