@@ -19,6 +19,11 @@ def main():
         if digest(ROOT/name)!=wanted:raise RuntimeError(('inherited source changed; audit before resealing',name))
     for name in ('reconstruct.py','boundary_profile.py','rooted-seven.json','THEORY.md'):
         path=previous/name;pins[path.relative_to(ROOT).as_posix()]=digest(path)
+    incoming=HERE.parent/'session90_even_graphs_odd_descent_20261029'
+    for name in ('carriers/check_wreath_family.py','carriers/check_transport.py',
+                 'carriers/ITERATED_TRIANGLE_FAMILY.md','carriers/TRANSPORT_AND_HOLONOMY.md',
+                 'oddness/FIXED_ORBIT_DESCENT.md'):
+        path=incoming/name;pins[path.relative_to(ROOT).as_posix()]=digest(path)
     (HERE/'sources.json').write_text(json.dumps(dict(sorted(pins.items())),indent=2)+'\n',encoding='utf-8')
     exclude={'manifest.json','verification.json','verification.optimized.json'}
     manifest={path.name:digest(path) for path in sorted(HERE.iterdir()) if path.is_file() and path.name not in exclude}

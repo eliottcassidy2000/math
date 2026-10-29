@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "scope": "Fresh replay of incoming algorithm, not an independent implementation.",
+  "inherited": {
+    "status": "PASS",
+    "active_checks": 12336,
+    "finite_scope": "k=0..4, N=1,3,9,27,81; group order formulas proved, not exhaustive group enumeration beyond9",
+    "family": [
+      {
+        "k": 0,
+        "vertices": 1,
+        "aut_order": 1,
+        "centralizer_order": 1,
+        "anti_involutions": 1,
+        "anti_involutions_per_fixed_root": 1,
+        "nonflat": false
+      },
+      {
+        "k": 1,
+        "vertices": 3,
+        "aut_order": 3,
+        "centralizer_order": 1,
+        "anti_involutions": 3,
+        "anti_involutions_per_fixed_root": 1,
+        "nonflat": false
+      },
+      {
+        "k": 2,
+        "vertices": 9,
+        "aut_order": 81,
+        "centralizer_order": 3,
+        "anti_involutions": 27,
+        "anti_involutions_per_fixed_root": 3,
+        "nonflat": true
+      },
+      {
+        "k": 3,
+        "vertices": 27,
+        "aut_order": 1594323,
+        "centralizer_order": 243,
+        "anti_involutions": 6561,
+        "anti_involutions_per_fixed_root": 243,
+        "nonflat": true
+      },
+      {
+        "k": 4,
+        "vertices": 81,
+        "aut_order": 12157665459056928801,
+        "centralizer_order": 387420489,
+        "anti_involutions": 31381059609,
+        "anti_involutions_per_fixed_root": 387420489,
+        "nonflat": true
+      }
+    ]
+  },
+  "distinct_observer_comparison": [
+    {
+      "order": 9,
+      "blue_states": 28,
+      "blue_fixed_length_bits": 5,
+      "reversal_marks_at_named_root": 3,
+      "exact_mark_fixed_length_bits": 2
+    },
+    {
+      "order": 27,
+      "blue_states": 100,
+      "blue_fixed_length_bits": 7,
+      "reversal_marks_at_named_root": 243,
+      "exact_mark_fixed_length_bits": 8
+    },
+    {
+      "order": 81,
+      "blue_states": 316,
+      "blue_fixed_length_bits": 9,
+      "reversal_marks_at_named_root": 387420489,
+      "exact_mark_fixed_length_bits": 29
+    }
+  ]
+}

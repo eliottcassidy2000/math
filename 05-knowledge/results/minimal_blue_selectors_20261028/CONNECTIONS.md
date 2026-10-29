@@ -198,6 +198,54 @@ named guards recover distinctions that this restricted geometry cannot.
 M5 now gives an explicit family for the growing distance to a hidden alignment.
 This is stronger evidence than a suggestive similarity of integer sequences.
 
+## Incoming work: a quantitative alignment-memory mechanism
+
+Before close-out, Session90's
+[iterated triangle family](../session90_even_graphs_odd_descent_20261029/carriers/ITERATED_TRIANGLE_FAMILY.md)
+and [transport theorem](../session90_even_graphs_odd_descent_20261029/carriers/TRANSPORT_AND_HOLONOMY.md)
+arrived. They sharpen the proposed composition program and are credited to
+that packet, not claimed as new here. We read the proofs and reran its exact
+family checker through81 vertices; this replay is not an independent algorithm.
+
+For W_k=C3[W_(k-1),W_(k-1),W_(k-1)] of order N=3^k, let C be the centralizer
+of digitwise negation. Intrinsic top-block recovery proves the full wreath
+group, and conjugating the two exchanged children forces their actions to
+match. The resulting formulas are
+
+    |Aut(W_k)| = 3^((N-1)/2) = N |C|^2,
+    |C| = 3^((N-2k-1)/4).
+
+Exactly |C| anti-involutions fix any one named vertex. At N=27 this is243;
+specifying the actual reversal mark needs8 further bits. Asymptotically the
+requirement is (N/4)log2(3)+O(log N) bits. At N=81 it already needs29 bits,
+whereas the blue residual B has316 states and needs9 bits. These answer
+different questions: an exact named reversal frame versus the restricted
+future blue verdict. The small B does not compress every reversal frame.
+
+This supplies a quantitative partner to M5. M5 hides alignment beyond every
+fixed boundary width; the wreath family counts how many reversal alignments
+remain even after a pole is supplied. It provides a concrete tournament
+mechanism for the growing-memory theme, without identifying it with every
+Vitali or arithmetic construction.
+
+The same incoming packet supplies an exact way to avoid one search: for
+supplied anti-involutions s,t, the odd permutation square root g(t,s)=sqrt(ts)
+conjugates s to t. Compute it cyclewise. No search for a correcting
+automorphism is necessary once the initial isomorphism and marks are known.
+But g(u,t)g(t,s) can differ from g(u,s) by a nontrivial centralizer element;
+the9-vertex wreath example realizes this error. Thus a local canonical
+correction does not automatically give globally consistent transport.
+A shared base frame makes the path products consistent, as in the LCA theorem.
+
+The companion [coprime fixed-orbit proof](../session90_even_graphs_odd_descent_20261029/oddness/FIXED_ORBIT_DESCENT.md)
+also clarifies the oddness comparison: for compatible p-group A and coprime
+G actions, X^A/C_G(A) maps bijectively to (X/G)^A. An A-stable orbit, and the
+transporter between two fixed points in it, both have size prime to p and
+hence contain A-fixed elements. The classical descent argument applies to
+the joint relational object; applying it separately to marginals discards
+alignment. This is a precise sufficient condition for recovering a symmetry
+choice, with the missing joint-data hypothesis visible.
+
 ## 5. Concrete open problems and next decisive tests
 
 **OPEN A: least endpoint-decoding cost.** Four insertions suffice for arbitrary
@@ -223,8 +271,8 @@ quotient that revisits a child; require the six-vertex counterexample and
 
 **OPEN D: enumerating the behavioral quotient itself.** Count K_min classes
 at8 using rooted source/partner types and B, and compare direct construction
-with finite-horizon refinement. M3 gives a certified stopping horizon12,
-but direct K construction avoids materializing X_12. Measure both storage
+with finite-horizon refinement. M3 gives a certified stopping horizon13,
+but direct K construction avoids materializing X_13. Measure both storage
 and canonicalization work. This is a new count channel, not A000568: at7
 the respective counts are32272 and456. Existing A000568350-prefix and complete
 order10 class banks remain inherited; this session does not extend them.

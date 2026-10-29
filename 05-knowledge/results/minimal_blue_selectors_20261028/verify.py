@@ -3,7 +3,7 @@ from hashlib import sha256
 from pathlib import Path
 import contextlib,io,json
 import blue_minimum as m
-import selector_probes,bridges
+import selector_probes,bridges,incoming_alignment
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 
@@ -22,7 +22,8 @@ def seals():
 
 def main():
     seals()
-    jobs=[('blue-receipt.json',m.main),('selector-receipt.json',selector_probes.main),('bridge-receipt.json',bridges.main)]
+    jobs=[('blue-receipt.json',m.main),('selector-receipt.json',selector_probes.main),('bridge-receipt.json',bridges.main),
+          ('incoming-receipt.json',incoming_alignment.main)]
     with contextlib.redirect_stdout(io.StringIO()):
         results={}
         for name,job in jobs:
@@ -40,7 +41,8 @@ def main():
     result=dict(status='PASS',optimized=not __debug__,all_presentations=sum(v['presentations'] for v in results['blue-receipt.json']['universes']),
                 minimal_blue_counts=[v['blue_states'] for v in results['blue-receipt.json']['universes']],
                 exact_minimal_cells_at7=32272,successor_port_cells_at7=32768,
-                successor_counterexample_order=9,hostile_groups=[81,27],borwein_denominators=[15,113,80499])
+                successor_counterexample_order=9,hostile_groups=[81,27],borwein_denominators=[15,113,80499],
+                incoming_wreath_checks=results['incoming-receipt.json']['inherited']['active_checks'])
     print(json.dumps(result,indent=2));return result
 
 

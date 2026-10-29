@@ -58,12 +58,23 @@ not recomputed or newly proved.
   anti-involutions; inherited exact81/27 automorphism/attachment algorithms
   replayed with an independent constraint-search group check, cyclic-triple
   equality and subset-DP Hamilton counts.
+* incoming_alignment.py: replay of Session90's12336 active wreath-family
+  checks through81 vertices, including its embedded nonflat transport witness;
+  comparison of exact reversal-mark information with the different blue
+  residual task. This is a rerun of the incoming implementation, not a new
+  independent verifier or a full81-vertex automorphism enumeration.
 
 Shared ancestry is disclosed: the state classifier uses the old boundary
 primitive, and comparison uses literal relation construction; the native
 class bank and isomorphism oracle are inherited. verify.py also rebuilds
 the entire rooted7-bank rather than trusting only its saved cell count.
 The all-size conclusions rest on the proofs in addition to these tests.
+
+Correction after the first checkpoint: the OPEN order8 experiment originally
+evaluated max(n+4,2n-3) as12. It is13. The theorem's formula was unchanged;
+CONNECTIONS.md now gives the correct sufficient horizon and makes no claim
+that12 is impossible. The arithmetic-boundary mechanism is recorded in
+01-canon/MISTAKES.md.
 
 ## Reproduction
 

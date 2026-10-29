@@ -49,6 +49,12 @@ Paley7 retains seven anti-involutions, a centralizer of order3 inside Aut21,
 and the explicit Frobenius phase i->2i. The inherited F64/F256 orientation
 guards and LCA witness constraints remain necessary for richer interfaces.
 
+The [incoming alignment-memory synthesis](CONNECTIONS.md#incoming-work-a-quantitative-alignment-memory-mechanism)
+integrates Session90's iterated-triangle family: at27 vertices a named pole
+still allows243 reversal markings. Its exact transport correction can save
+a search, but its composition needs centralizer data. The family checker is
+replayed through81 vertices, with full credit and scope recorded.
+
 ## Inheritance and scope
 
 Anchor: minimizing K and separating the7-pair. Niche: odd fibers versus

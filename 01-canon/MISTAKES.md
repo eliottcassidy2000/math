@@ -12,6 +12,13 @@ a historical synthesis or promoting computational evidence.
 - **Strongest survivors / repair:** retain the lattice construction, its difference-set correlation, and the actual tournament parity facts. Maintained warnings now distinguish those from the historical synthesis. [L1-L2 and G1-G4](../05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md) prove the natural-reflection trace boundary and explicit independence of geometric realization and marked trijectivity. Mixed-parity speeds (1,2) have empty, isolated, or interval good sets at different thresholds, all with trace zero.
 - **Missing coordinate / next question:** retain metric separation, exact joint actions, and the predicate transported by any claimed map. A useful LRC parity object must distinguish those three controls and the AP13 six-point boundary; a shared oddness vocabulary is insufficient.
 
+## 2026-10-28 — evaluate both branches of a finite-horizon bound
+
+- **Source:** `05-knowledge/results/minimal_blue_selectors_20261028/CONNECTIONS.md`, OPEN D, first checkpoint `3c3861df0d`.
+- **Failed implication:** the proved sufficient horizon `max(n+4,2n-3)` was evaluated as12 at n=8 by using only the first branch. The second branch is13.
+- **Repair / strongest survivor:** the all-size M3 theorem and its formula are unchanged. The proposed order8 experiment now uses the certified sufficient horizon13, without asserting that12 cannot suffice by another argument.
+- **Mechanism / lesson:** the endpoint decoder dominates at small n; the blue-offset bound overtakes it beyond7. Evaluate every branch when transferring a maximum bound to a new scale.
+
 ## 2026-10-28 — fixed-spine dimension agreement is not counting-space agreement
 
 - **Source:** `07-reflections/two-models-staircase-recursion.md`, May 5, called the fixed-Hamilton-path and unrestricted tournament spaces “asymptotically identical.”
@@ -24,7 +31,7 @@ a historical synthesis or promoting computational evidence.
 - **Candidate and status:** extrapolating the exact singleton/complement/fresh-reset separation through six to all orders fails. The previous compiler explicitly left this OPEN; this is a resolved candidate, not a retraction of a claimed proved theorem. [S2--S4 and receipts](../05-knowledge/results/singleton_pair_reconstruction_20261028/THEORY.md) give a sufficient all-size carrier and strong indistinguishable presentations at every order at least seven.
 - **Least witness and missing coordinate:** free masks1072/4176 have different literal path relations but the same ordered-endpoint types for both native-complement partners and the same truncated blue boundary record. Singleton contexts never expose their hidden internal path alignment. Named-path and arbitrary joint-port guards are stronger languages and are unaffected.
 - **Rejected local probe / repaired statement:** the two masks have the same empty-context linear blue syndrome5216, so the draft claim that their initial syndromes differ was false. After J_L their syndromes are1820815/1982543, both nonzero; the observed blue zero-tests still agree. The stronger syndrome observer and the actual conjunction/zero-test observer must not be identified. The new packet records the failed initial probe and its exact replacement.
-- **Strongest survivor / next question:** the explicit closed carrier uses two endpoint-rooted relation types plus a linear-size boundary sidecar. Its minimal quotient is still OPEN; test any proposed stronger selector against this witness before extrapolating a bounded census.
+- **Strongest survivor / next question:** the explicit closed carrier uses two endpoint-rooted relation types plus a boundary sidecar. [M1--M5](../05-knowledge/results/minimal_blue_selectors_20261028/THEORY.md) now prove its exact minimal quotient for this operation language, reducing the blue sidecar to4n-8 states at n>=5. One successor port separates the7-pair but fails on a strong9-pair; test stronger selectors before extrapolating a bounded census.
 
 ## 2026-10-28 — March A000568 prototypes: an even restart and an omitted odd-cycle filter
 
