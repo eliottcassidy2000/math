@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "deterministic_optimized_receipts": [
+    "seam_checks.json",
+    "reverse_checks.json"
+  ],
+  "precision_optimized_equal_excluding_timings": true,
+  "source_snapshots_checked": 3,
+  "local_links_checked": true,
+  "independent_full_74_audit": false
+}

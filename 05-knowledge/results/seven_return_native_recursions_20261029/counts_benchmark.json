@@ -1,0 +1,211 @@
+{
+  "benchmarks": [
+    {
+      "answer_sha256": "1d290d31b74fb08a9e73a6de3e842fc4a1d5bca8c1657107e7f14c0a0471e9c4",
+      "median_seconds": {
+        "prefix_old": 0.028308792010648176,
+        "prefix_parked": 0.026334667010814883,
+        "projective_both": 0.02302066700940486,
+        "projective_full": 0.024259625002741814,
+        "projective_half": 0.024247499997727573,
+        "projective_old": 0.023642875006771646,
+        "projective_park": 0.023541292001027614
+      },
+      "n": 100,
+      "seconds": {
+        "prefix_old": [
+          0.028308792010648176,
+          0.02835370899992995,
+          0.027656209000269882
+        ],
+        "prefix_parked": [
+          0.02706137500354089,
+          0.026153790997341275,
+          0.026334667010814883
+        ],
+        "projective_both": [
+          0.02302066700940486,
+          0.023072124997270294,
+          0.022953082996536978
+        ],
+        "projective_full": [
+          0.024444249997031875,
+          0.024259625002741814,
+          0.02416800000355579
+        ],
+        "projective_half": [
+          0.024247499997727573,
+          0.024248417001217604,
+          0.024139791989000514
+        ],
+        "projective_old": [
+          0.023858209009631537,
+          0.023642875006771646,
+          0.02344791700306814
+        ],
+        "projective_park": [
+          0.023621250002179295,
+          0.023541292001027614,
+          0.0231798750028247
+        ]
+      },
+      "stats": {
+        "prefix_old": {
+          "peak_states": 2953,
+          "precomputed_transfers": 11109,
+          "transitions": 90219
+        },
+        "prefix_parked": {
+          "parked_visits_avoided": 3219,
+          "peak": 2953,
+          "state_visits": 12192,
+          "transitions": 58728
+        },
+        "projective_both": {
+          "digit_width": 6,
+          "negative_shifts": 14292,
+          "parked_visits_avoided": 2896,
+          "peak": 2721,
+          "state_visits": 10450,
+          "transitions": 47050
+        },
+        "projective_full": {
+          "digit_width": 7,
+          "negative_shifts": 14292,
+          "parked_visits_avoided": 0,
+          "peak": 2721,
+          "state_visits": 13346,
+          "transitions": 49946
+        },
+        "projective_half": {
+          "digit_width": 6,
+          "negative_shifts": 14292,
+          "parked_visits_avoided": 0,
+          "peak": 2721,
+          "state_visits": 13346,
+          "transitions": 49946
+        },
+        "projective_old": {
+          "negative_shifts": 14292,
+          "peak": 2721,
+          "profile_templates": 6254,
+          "total_states": 13443,
+          "transitions": 49946
+        },
+        "projective_park": {
+          "digit_width": 7,
+          "negative_shifts": 14292,
+          "parked_visits_avoided": 2896,
+          "peak": 2721,
+          "state_visits": 10450,
+          "transitions": 47050
+        }
+      }
+    },
+    {
+      "answer_sha256": "f3b799a195877c94345f682c46fb0a70435c709002e80c6e7198fedde662013d",
+      "median_seconds": {
+        "prefix_old": 1.3762298749934416,
+        "prefix_parked": 1.305886999994982,
+        "projective_both": 1.9709827499900712,
+        "projective_full": 2.0014103749999776,
+        "projective_half": 1.986543958002585,
+        "projective_old": 1.9762685839959886,
+        "projective_park": 1.986822167003993
+      },
+      "n": 200,
+      "seconds": {
+        "prefix_old": [
+          1.4099212080036523,
+          1.3285325829929207,
+          1.3762298749934416
+        ],
+        "prefix_parked": [
+          1.3054835420043673,
+          1.3064996670000255,
+          1.305886999994982
+        ],
+        "projective_both": [
+          1.9709827499900712,
+          1.9692074579943437,
+          1.9731734999950277
+        ],
+        "projective_full": [
+          1.998055125004612,
+          2.0014103749999776,
+          2.0019465000077616
+        ],
+        "projective_half": [
+          1.9832901249901624,
+          1.9912664169969503,
+          1.986543958002585
+        ],
+        "projective_old": [
+          1.9738203330052784,
+          1.9762685839959886,
+          1.9897521250095451
+        ],
+        "projective_park": [
+          2.087595541990595,
+          1.986822167003993,
+          1.986460458007059
+        ]
+      },
+      "stats": {
+        "prefix_old": {
+          "peak_states": 96836,
+          "precomputed_transfers": 51374,
+          "transitions": 2994814
+        },
+        "prefix_parked": {
+          "parked_visits_avoided": 88915,
+          "peak": 96836,
+          "state_visits": 546833,
+          "transitions": 2681858
+        },
+        "projective_both": {
+          "digit_width": 7,
+          "negative_shifts": 992759,
+          "parked_visits_avoided": 83325,
+          "peak": 95709,
+          "state_visits": 495459,
+          "transitions": 2219725
+        },
+        "projective_full": {
+          "digit_width": 8,
+          "negative_shifts": 992759,
+          "parked_visits_avoided": 0,
+          "peak": 95709,
+          "state_visits": 578784,
+          "transitions": 2303050
+        },
+        "projective_half": {
+          "digit_width": 7,
+          "negative_shifts": 992759,
+          "parked_visits_avoided": 0,
+          "peak": 95709,
+          "state_visits": 578784,
+          "transitions": 2303050
+        },
+        "projective_old": {
+          "negative_shifts": 992759,
+          "peak": 95709,
+          "profile_templates": 31669,
+          "total_states": 578981,
+          "transitions": 2303050
+        },
+        "projective_park": {
+          "digit_width": 8,
+          "negative_shifts": 992759,
+          "parked_visits_avoided": 83325,
+          "peak": 95709,
+          "state_visits": 495459,
+          "transitions": 2219725
+        }
+      }
+    }
+  ],
+  "explicit_checks": 355,
+  "small_universe": "all n=0..30; colors 1,2,3; four projective and two prefix modes",
+  "status": "PASS"
+}

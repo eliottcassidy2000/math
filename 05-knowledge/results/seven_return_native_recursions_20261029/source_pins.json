@@ -1,0 +1,22 @@
+{
+  "commit": "201fa96604d51171909318cc482220e00df54c38",
+  "files": {
+    "baseline87.py": {
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/enumeration/baseline87.py",
+      "sha256": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece"
+    },
+    "baseline105.py": {
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/enumeration/integer_response.py",
+      "sha256": "4585674b8ee21758f2ad89e835ea09ae82114af48c110d8aa31a6d38fe6e7f46"
+    }
+  },
+  "incoming": {
+    "commit": "f8846701cdf0a08196a2e27683de96670687f16c",
+    "files": {
+      "baseline_precision.py": {
+        "path": "05-knowledge/results/metagraph_scheduled_recursion_20261029/precision_counts.py",
+        "sha256": "ccc6ef0f561daf61b2b225e7902cbec4f21427b7e0436021d868f0ea49474f5b"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "n": 101,
+      "bits": 16,
+      "residue": 53763,
+      "full_decimal_sha256": "5b1d1deb36621e4a38ecb84d747979525fa3edd9624480b33a74ee615a4f3fb4"
+    },
+    {
+      "n": 201,
+      "bits": 8,
+      "residue": 67,
+      "full_decimal_sha256": "ec041dbf7b53f7b1985f2ace0121b70a8219d03d199057709cc1dc1c30f7d5f8"
+    }
+  ]
+}

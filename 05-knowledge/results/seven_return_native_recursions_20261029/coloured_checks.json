@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "colors": [
+    1,
+    2,
+    3
+  ],
+  "full_prefix_through": 30,
+  "method": "grouped-core kernel with analytic 3-tail; parked response DP",
+  "stats": {
+    "core_nodes": 104,
+    "gcd_group_terms": 64,
+    "gcd_table_entries": 169,
+    "kernel_cells": 69,
+    "three_tail_transfer_terms": 231,
+    "unit_kernel_cells": 76,
+    "palette_count": 3
+  }
+}

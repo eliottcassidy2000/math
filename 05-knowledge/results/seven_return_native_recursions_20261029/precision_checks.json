@@ -1,0 +1,279 @@
+{
+  "benchmarks": [
+    {
+      "bits": 8,
+      "median_seconds": {
+        "collision": 0.0807742080069147,
+        "completion": 0.035013500004424714,
+        "inherited": 0.15056520800862927,
+        "sum": 0.02984508400550112
+      },
+      "n": 201,
+      "residue": 67,
+      "seconds": {
+        "collision": [
+          0.0807742080069147,
+          0.08068166699376889,
+          0.08502520799811464
+        ],
+        "completion": [
+          0.04328062498825602,
+          0.03293704100360628,
+          0.035013500004424714
+        ],
+        "inherited": [
+          0.15114604200061876,
+          0.14835616599884816,
+          0.15056520800862927
+        ],
+        "sum": [
+          0.0311891659948742,
+          0.027390417002607137,
+          0.02984508400550112
+        ]
+      },
+      "stats": {
+        "collision": {
+          "base": 100,
+          "completed": 12339,
+          "cycle_cap": 5,
+          "nodes": 51706,
+          "pruned_nodes": 16959,
+          "retained": 1044
+        },
+        "completion": {
+          "base": 100,
+          "completed": 1044,
+          "cycle_cap": 5,
+          "nodes": 39571,
+          "pruned_nodes": 22653,
+          "retained": 1044
+        },
+        "inherited": {
+          "base": 100,
+          "by_cycles": {
+            "1": {
+              "retained": 1,
+              "visited": 1
+            },
+            "3": {
+              "retained": 636,
+              "visited": 867
+            },
+            "5": {
+              "retained": 407,
+              "visited": 42910
+            }
+          },
+          "cycle_cap": 5,
+          "retained": 1044,
+          "shortcut": null,
+          "visited": 43778
+        },
+        "sum": {
+          "base": 100,
+          "completed": 1044,
+          "cycle_cap": 5,
+          "nodes": 27225,
+          "pruned_nodes": 22365,
+          "retained": 1044
+        }
+      }
+    },
+    {
+      "bits": 8,
+      "median_seconds": {
+        "collision": 1.2632144160015741,
+        "completion": 0.445249458993203,
+        "inherited": 2.169330415999866,
+        "sum": 0.3447462919866666
+      },
+      "n": 401,
+      "residue": 103,
+      "seconds": {
+        "collision": [
+          1.267072458009352,
+          1.2632144160015741,
+          1.2625873749930179
+        ],
+        "completion": [
+          0.4451442919962574,
+          0.445249458993203,
+          0.4458611669979291
+        ],
+        "inherited": [
+          2.1784871669951826,
+          2.169330415999866,
+          2.147379207992344
+        ],
+        "sum": [
+          0.35411212500184774,
+          0.3447462919866666,
+          0.34318250000069384
+        ]
+      },
+      "stats": {
+        "collision": {
+          "base": 200,
+          "completed": 202769,
+          "cycle_cap": 5,
+          "nodes": 746679,
+          "pruned_nodes": 225089,
+          "retained": 4983
+        },
+        "completion": {
+          "base": 200,
+          "completed": 4983,
+          "cycle_cap": 5,
+          "nodes": 565149,
+          "pruned_nodes": 336925,
+          "retained": 4983
+        },
+        "inherited": {
+          "base": 200,
+          "by_cycles": {
+            "1": {
+              "retained": 1,
+              "visited": 1
+            },
+            "3": {
+              "retained": 2646,
+              "visited": 3400
+            },
+            "5": {
+              "retained": 2336,
+              "visited": 618834
+            }
+          },
+          "cycle_cap": 5,
+          "retained": 4983,
+          "shortcut": null,
+          "visited": 622235
+        },
+        "sum": {
+          "base": 200,
+          "completed": 4983,
+          "cycle_cap": 5,
+          "nodes": 363825,
+          "pruned_nodes": 334876,
+          "retained": 4983
+        }
+      }
+    },
+    {
+      "bits": 16,
+      "median_seconds": {
+        "collision": 0.017978208998101763,
+        "completion": 0.012614790990483016,
+        "inherited": 0.07175258400093298,
+        "sum": 0.013251624986878596
+      },
+      "n": 101,
+      "residue": 53763,
+      "seconds": {
+        "collision": [
+          0.017954667011508718,
+          0.018369375000474975,
+          0.017978208998101763
+        ],
+        "completion": [
+          0.012614790990483016,
+          0.012554959001136012,
+          0.012708000009297393
+        ],
+        "inherited": [
+          0.07175258400093298,
+          0.07175649999408051,
+          0.07154866700875573
+        ],
+        "sum": [
+          0.013248290997580625,
+          0.013261291998787783,
+          0.013251624986878596
+        ]
+      },
+      "stats": {
+        "collision": {
+          "base": 50,
+          "completed": 2486,
+          "cycle_cap": 7,
+          "nodes": 10059,
+          "pruned_nodes": 3024,
+          "retained": 1802
+        },
+        "completion": {
+          "base": 50,
+          "completed": 1802,
+          "cycle_cap": 7,
+          "nodes": 7229,
+          "pruned_nodes": 2223,
+          "retained": 1802
+        },
+        "inherited": {
+          "base": 50,
+          "by_cycles": {
+            "1": {
+              "retained": 1,
+              "visited": 1
+            },
+            "3": {
+              "retained": 200,
+              "visited": 225
+            },
+            "5": {
+              "retained": 1505,
+              "visited": 3266
+            },
+            "7": {
+              "retained": 96,
+              "visited": 13534
+            }
+          },
+          "cycle_cap": 7,
+          "retained": 1802,
+          "shortcut": null,
+          "visited": 17026
+        },
+        "sum": {
+          "base": 50,
+          "completed": 1802,
+          "cycle_cap": 7,
+          "nodes": 6789,
+          "pruned_nodes": 1941,
+          "retained": 1802
+        }
+      }
+    }
+  ],
+  "channels": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "explicit_checks": 2491,
+  "full_fraction_orders": [
+    0,
+    30
+  ],
+  "precisions": [
+    1,
+    2,
+    4,
+    8,
+    12
+  ],
+  "status": "PASS"
+}

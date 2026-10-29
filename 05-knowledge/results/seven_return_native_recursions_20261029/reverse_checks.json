@@ -1,0 +1,55 @@
+{
+  "accepted_endpoints": 28,
+  "bound74": {
+    "ell_lower_bound": 64,
+    "least_source_lower_bound": 53456334770533302271,
+    "mass_upper_bound": "641060333941629/356811923176489970264571492362373784095686656"
+  },
+  "endpoint_universe": 100000,
+  "explicit_checks": 1706,
+  "legal_suffixes": 416,
+  "signature_residues": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      7,
+      4,
+      7,
+      7
+    ],
+    [
+      7,
+      13,
+      16,
+      7
+    ],
+    [
+      61,
+      13,
+      70,
+      34
+    ]
+  ],
+  "source_hostile": {
+    "endpoint_m": 12150,
+    "macro_source_m": 6399,
+    "marked_source_inside_suffix_m": 8100
+  },
+  "stable_sources": 211,
+  "status": "PASS",
+  "weaker_layer_hostile": {
+    "endpoint_m": 5913,
+    "letters": [
+      1,
+      4
+    ],
+    "source_m": [
+      4671,
+      5535
+    ]
+  }
+}

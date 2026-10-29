@@ -1,0 +1,162 @@
+{
+  "audit_scope": "Independent native scan through 16 and audited minimum control at 55; no independent full horizon-74 audit",
+  "bound74": {
+    "counterexample": false,
+    "exclusive_bound": 53456334770533302271,
+    "k": 74,
+    "visited": 763878259
+  },
+  "explicit_checks": 106,
+  "high_control": {
+    "counterexample": true,
+    "endpoint": "146016798311649430222923959",
+    "exclusive_bound": 59501570680684544,
+    "k": 55,
+    "source": 59501570680684543,
+    "visited": 38142325,
+    "word": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "high_division_clock": 75,
+  "high_odd_clock": 67,
+  "native_universe": "all odd 1<=n<150000, first 16 growing returns",
+  "small_controls": [
+    {
+      "k": 1,
+      "minimum": 3,
+      "visited": 1
+    },
+    {
+      "k": 2,
+      "minimum": 7,
+      "visited": 2
+    },
+    {
+      "k": 3,
+      "minimum": 15,
+      "visited": 3
+    },
+    {
+      "k": 4,
+      "minimum": 31,
+      "visited": 4
+    },
+    {
+      "k": 5,
+      "minimum": 63,
+      "visited": 6
+    },
+    {
+      "k": 6,
+      "minimum": 127,
+      "visited": 9
+    },
+    {
+      "k": 7,
+      "minimum": 255,
+      "visited": 11
+    },
+    {
+      "k": 8,
+      "minimum": 511,
+      "visited": 17
+    },
+    {
+      "k": 9,
+      "minimum": 1023,
+      "visited": 23
+    },
+    {
+      "k": 10,
+      "minimum": 2047,
+      "visited": 35
+    },
+    {
+      "k": 11,
+      "minimum": 4095,
+      "visited": 56
+    },
+    {
+      "k": 12,
+      "minimum": 8191,
+      "visited": 78
+    },
+    {
+      "k": 13,
+      "minimum": 16383,
+      "visited": 101
+    },
+    {
+      "k": 14,
+      "minimum": 32767,
+      "visited": 131
+    },
+    {
+      "k": 15,
+      "minimum": 56575,
+      "visited": 173
+    },
+    {
+      "k": 16,
+      "minimum": 131071,
+      "visited": 241
+    }
+  ],
+  "source_sha256": "c5ec15854fc64e93fb0993ea056fa38c317b0b23c1233d0d1bb8d59c345afbad",
+  "status": "PASS"
+}

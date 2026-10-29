@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "flags": [
+    "undefined",
+    "unsigned-integer-overflow"
+  ],
+  "row": {
+    "k": 30,
+    "exclusive_bound": 2147483648,
+    "visited": 19909,
+    "counterexample": true,
+    "source": 2147483647,
+    "endpoint": "411782264189297",
+    "word": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
