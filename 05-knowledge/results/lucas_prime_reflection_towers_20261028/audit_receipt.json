@@ -1,0 +1,83 @@
+{
+  "recursive_centralizers": [
+    {
+      "depth": 1,
+      "sha256": "c0be322c1ad6af50f418b96232d98fe25a36d5d0a557291833f8248f2084b8ef",
+      "size": 1
+    },
+    {
+      "depth": 2,
+      "sha256": "d82f18cc1dc4fd195bded70bfdef0bf9d8896711dcfa54fdafea40a256a44681",
+      "size": 3
+    },
+    {
+      "depth": 3,
+      "sha256": "6475024c5cc9e2cd1a5b046683275932cd7f913fdc974f9fb408102f2e4698ed",
+      "size": 243
+    }
+  ],
+  "schreier_sims_groups": [
+    {
+      "agrees": true,
+      "exact_order": "660",
+      "method": "Schreier-Sims",
+      "n": 5,
+      "p": 11
+    },
+    {
+      "agrees": true,
+      "exact_order": "4420880996869850977271808000000",
+      "method": "Schreier-Sims",
+      "n": 7,
+      "p": 29
+    },
+    {
+      "agrees": true,
+      "certificate": {
+        "cycle_lengths": [
+          1,
+          2,
+          2,
+          2,
+          3,
+          11,
+          26
+        ],
+        "fixed_points": 36,
+        "isolating_power": "78",
+        "prime_cycle": 11,
+        "word_exponents": [
+          12
+        ]
+      },
+      "exact_order": "129311620755584090321482177576805989984598816194560000000000",
+      "method": "explicit Jordan prime-cycle certificate plus reflection sign",
+      "n": 8,
+      "p": 47
+    },
+    {
+      "agrees": true,
+      "certificate": {
+        "cycle_lengths": [
+          19,
+          24,
+          37,
+          59,
+          60
+        ],
+        "fixed_points": 140,
+        "isolating_power": "84360",
+        "prime_cycle": 59,
+        "word_exponents": [
+          180,
+          31
+        ]
+      },
+      "exact_order": "3943289336823952517761816069660925311475679888435866316473712666221797249817016714601521420059923119520886060694598194151288213951213185525309633124764149655567314286353816586186984944719612228107258321201270166459320656137141474266387621212037869516201606287027897843301130159520851620311758504293980894611113948118519486873600000000000000000000000000000000000000000000000",
+      "method": "explicit Jordan prime-cycle certificate plus reflection sign",
+      "n": 11,
+      "p": 199
+    }
+  ],
+  "scope": "same-agent alternate computation, not independent-agent audit"
+}
