@@ -127,6 +127,48 @@ and a sharp boundary on an overgeneralization, in the same example.
   clocks, or deterministic integer orbits. F_27's distinct third moment
   is an explicit reason to preserve the whole offspring law.
 
+## Incoming synthesis after the main computation
+
+Before publication the clean worktree incorporated 39 incoming commits
+through f41b1d1bfd. The earlier document-count proxy remains tied to its
+original snapshot; it was not silently presented as a new-corpus census.
+
+The incoming
+[Session95 pole-memory note](../session95_niche_recurrences_20261029/jets/POLE_RECURRENCE_MEMORY.md)
+uses the same Vandermonde mechanism for a signed source translated along
+arithmetic progressions. After equal sites are merged and zero weights
+removed, positivity is unnecessary for its exact finite-support rank.
+Our positive group masses make that merging boundary automatic. The genuine
+unification is a support-growth rule for linear recurrence order: translation
+can produce linear growth, while branching here produces exponential growth.
+Neither growth law alone specifies the full nonlinear attachment carrier.
+
+The incoming
+[Schur boundary recurrence](../session95_niche_recurrences_20261029/flows/SCHUR_BOUNDARY_RECURRENCES.md)
+keeps incoming and outgoing partitions paired against one child flow. Its
+cyclic three-child composition is a trace of joint response matrices. This
+is a useful design model for R1, but counts nonnegative integral flows under
+complete bipartite attachment, whereas R2 must reject closed successor
+cycles. The operation and realization predicates differ; no path-count
+formula is obtained merely by substituting those flow matrices.
+
+The incoming
+[signed digit kernel](../stabilizer_necklace_kernels_20261028/KERNELS.md)
+has two Cartier sections but full rational circulant rank 3^k. This is a
+second explicit separation of compact description from exact linear rank.
+Its rank changes to one in characteristic two and remains full in
+characteristic three. That coefficient-field change is distinct from adding
+Frobenius automorphisms of a fixed F_27 tournament in S1--S3.
+
+The incoming
+[affine stopping-tree packet](../affine_tree_recurrences_20261028/README.md)
+retains chronological carry and source refinement budgets. Its correction
+to the old Catalan/Collatz orbit picture is relevant: orienting solely by
+value loses time order and produces a transitive tournament even on
+(1,3,2). The inversion graph retains both comparisons. Our tournament
+actions have intrinsic field-difference arcs; none is inferred from an
+arithmetic orbit drawing alone.
+
 ## Three next problems with cheap decisive tests
 
 1. **Nonabelian charge recurrence. OPEN.** Extend F1 to the F_27 semilinear
