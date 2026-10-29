@@ -28,6 +28,13 @@ the exact exceptional-cell recurrence, the full rational isogeny-image test,
 and the source-preserving change from binary to ternary rank observations.
 Those imported results are attributed to their source packets; the 66-list
 and K3 proofs were read and integrated, not independently replayed here.
+A final clean-tree synchronization through `722e29c0e8` added the independent
+phase-seven audit, exact two-primary saturations, pairwise rational
+non-isogeny of the 66 curves, and the fixed-family height exponent. These
+were read and integrated with their actual scopes; the earlier binary-bank
+failure is no longer left as an unexplained hypothetical index defect for
+the two named inputs. The abstract ell-saturation lemma in RANKS is a direct
+algebraic restatement of that mechanism, not a new empirical extrapolation.
 
 ## Exact verification universes
 

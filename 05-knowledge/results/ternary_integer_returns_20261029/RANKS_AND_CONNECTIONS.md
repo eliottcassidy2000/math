@@ -58,6 +58,24 @@ generic rank and obtaining specializations, not a statistical law inferred
 from a record table. The determinant-948 certificate is not transported to
 the discriminant-1152 surface without a map.
 
+Two further incoming results sharpen the family interpretation. The
+[isogeny separation certificate](../session97_overnight_arithmetic_carriers_20261029/isogeny/README.md)
+separates every pair among the 66 rank-at-least-30 curves by unequal traces
+at a common good prime at most 71. Thus these are 66 distinct rational
+isogeny classes; they need not come from 66 different parameter families.
+The [family-height calculation](../overnight_research_20261029/FAMILY_HEIGHT.md)
+proves that the specified 4239 fibration has `Theta(H^(1/12))` distinct
+smooth rational isomorphism classes up to minimal invariant height `H`.
+Its degree-8 and degree-12 invariants have no common projective zero, so
+parameter height `B` gives curve height comparable to `B^24`, with bounded
+minimalization and bounded multiplicity of the degree-24 j-map.
+
+Substituting that count into the earlier **assumed** shifted-tail diagnostic
+would give `r0+3`, or 20 for generic rank 17. This is not a rank-20 theorem
+or a validated replacement prediction: the shifted-tail law for this family
+is exactly the missing statistical input. The family count is proved; the
+rank-tail distribution is not.
+
 ## 2. Extend the forgotten August optimal-observer result
 
 The [August rank-30 certificate](../elliptic_rank30_optimal_local_observer_certificate_codex_20260821.out)
@@ -103,6 +121,31 @@ torsion guards. Our optimal binary banks are existence statements for the
 three named records, not a theorem that every independent point list admits
 such a direct binary certificate. Failure of those probes is not dependence
 and does not establish an even-index subgroup without a saturation proof.
+
+The next checkpoint supplies precisely that additional proof for these two
+hostiles. Its [exact two-primary saturation](../session97_overnight_arithmetic_carriers_20261029/halving/phase2/README.md)
+constructs `L'` containing the original point span `L`, with
+`[L':L]=2^13`, `L'/L=(Z/2)^13`, and full binary rank on the terminal basis.
+Every original point is recovered by an integral inverse transport. No
+individual original point is a rational double, while selected sums are;
+joint information, rather than the individual point labels alone, explains
+the thirteen missing directions. This resolves the earlier uncertainty for
+these inputs without asserting full Mordell-Weil saturation or an ambient
+rank upper bound.
+
+The abstract certificate behind this is useful beyond the two examples.
+Let ell be prime, let an abelian group `A` have no ell-torsion, and let `L'`
+be a free finite-rank subgroup. Suppose a bank of homomorphisms
+`A -> F_ell` has full column rank when evaluated on a basis of `L'`.
+Then `L'` is ell-saturated: if `ell Q=sum a_i P'_i`, the observations force
+every `a_i` divisible by ell; cancelling ell proves `Q` lies in `L'`.
+If `ell L' subset L subset L'`, the kernel of
+`L/ell L -> A/ell A` is exactly `ell L'/ell L`. Its dimension is
+`log_ell [L':L]`. Indeed saturation makes `L intersect ell A=ell L'`, and
+multiplication by ell identifies `L'/L` with `ell L'/ell L`.
+This is the elementary general form of the imported proof, not an additional
+rank discovery. It requires actual lifts and a terminal full-rank bank;
+vanishing observations alone supply neither.
 
 ## 3. A genuine 7-to-21 map for the cheaper controller
 
