@@ -21400,6 +21400,10 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
      - "permutations" should be "cycle types" in the core sum.
      - Two steps lacked proofs: the remainder estimate and the almost-sure radius (the latter needs Pringsheim).
   6. *Code.* `compound_kernel.py` imposed constraints at a sink. This was harmless: no failure count changed.
+  7. *An uncredited classical count* (second audit, `audit2/REPORT.md`). THM-4845 (B) stated the self-converse count
+     without credit. The count is classical (Zelinka; Salvi-Zagaglia; Sridharan 1970) and already repo canon as
+     THM-283 and THM-793. Only the Gaussian form is new. This repeats MISTAKE-694's failure mode within the same
+     session, so grep the repo for the object's name (here "SC(n)", "A002785", "self-converse") before writing it up.
 - **Repair:** all of the above are corrected in the files, using the audit's evidence and proofs. The audit's
   upgrades are recorded: `F_6`, `F_9` and `F_11` fail both strong rotation tests, (D′) holds through order 7, and the
   order-9 unique-cycle split. No result was withdrawn.

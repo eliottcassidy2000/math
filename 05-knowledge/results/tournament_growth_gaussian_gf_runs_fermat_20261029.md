@@ -1,7 +1,8 @@
 # Tournament growth: a generating function for A000568, partial structures of the metagraph, T5's four spurious Z/6, and Fermat primes
 
 *mac-mini-2026-10-29-growth, 2026-10-29. Independently audited, corrections applied
-([audit report](../../04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md), MISTAKE-694,
+([audit report](../../04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md),
+[second audit](../../04-computation/experiments/growth_gf_runs_fermat_20261029/audit2/REPORT.md), MISTAKE-694,
 MISTAKE-695). Theorems: THM-4845, THM-4846, THM-4847. Open problems: HYP-9445.*
 *Experiments: [`04-computation/experiments/growth_gf_runs_fermat_20261029/`](../../04-computation/experiments/growth_gf_runs_fermat_20261029/).*
 
@@ -75,7 +76,8 @@ has generating function `exp(Σ W_p x^p/p)`. The tournament numbers are its aver
   switched off. Doubling the covariance gives digraphs, and base 3 gives oriented graphs. In general, session98's
   palette family with `q` colours, `t` of them reversal-fixed, is the field with covariance `ln q · gcd`, odd weights
   `q^(−1/2) e^X` and even weights `(t/q) e^X`. The self-converse tournaments (A002785) are the twisted version
-  `E[(1 + W_1 x) exp(Σ_{j ≡ 2 (mod 4)} e^(X_j) x^j / j)]`, checked through order 16.
+  `E[(1 + W_1 x) exp(Σ_{j ≡ 2 (mod 4)} e^(X_j) x^j / j)]`, checked through order 16. The count is classical
+  (Sridharan 1970; repo THM-283); only the Gaussian form is new.
 - **The inherited PDE.** It is the Cameron–Martin formula for this field. Inserting a `p`-cycle shifts the field by
   `ln 2 · gcd(p, ·)`, and session98's projective state is that shift taken modulo the dilation direction.
 - **The normalized series is meromorphic** (session98 first; found independently here). `F(y)` extends to all of

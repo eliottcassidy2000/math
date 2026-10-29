@@ -1,0 +1,1 @@
+python3 ghost3_audit.py 7 > out/ghost3_audit_n7.out 2>&1  91.98s user 1.73s system 95% cpu 1:37.91 total

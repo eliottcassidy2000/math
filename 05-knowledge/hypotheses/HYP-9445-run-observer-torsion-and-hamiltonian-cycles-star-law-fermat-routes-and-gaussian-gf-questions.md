@@ -3,8 +3,10 @@ id: HYP-9445
 title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 9, exhaustively, 184 304 classes; k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments have a unimodular two-run observer (det M_2 in {0, +-1} through order 9; unimodular counts 1, 1, 3, 7, 16, 36, 81 for orders 3..9; the pre-registered 80 at order 9 FAILED); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
 status: >
   OPEN (mac-mini-2026-10-29-growth, 2026-10-29).
-  - Independently audited 2026-10-29, with corrections applied
-    (04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md, MISTAKE-695).
+  - Independently audited twice on 2026-10-29, with corrections applied
+    (04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md and audit2/REPORT.md, MISTAKE-695).
+  - The second audit certified every verdict in (1) and (2) through order 8 without trusting Smith forms
+    (determinants, ranks mod p and gcds of maximal minors).
   - The audit recomputed every count through order 8 with independent code, and the order-9 unique-cycle split.
   - It did not re-check the order-9 claim for classes with at least two Hamiltonian cycles, or the random samples.
   - Every evidence statement below is FINITE-EXACT, over all isomorphism classes from gentourng with exact Smith
@@ -45,7 +47,8 @@ invariant factor of `M_k(T)` equals 1.
    - **The sign sector already carries it.** The two-run sign sector `S_2` (signed covers; THM-4846 (F), a Jacobi
      ratio of cycle-cover minors) has torsion for every strong class with at least two Hamiltonian cycles: 3, 27,
      332 and 5953 classes at orders 5 to 8.
-     - For unique-cycle classes `S_2` is torsion-free through order 7 (32 of 32).
+     - For unique-cycle classes `S_2` is torsion-free through order 7 (34 of 34, counting C3 and S4; the second audit
+       corrected an earlier "32 of 32", which counted orders 5 to 7 only).
      - At order 8 it is torsion-free for 54 of 55. The exception is `1010111111111111111101111101`, with Smith form
        `1^21 2^4 0^3`.
      - The plus sector `P_2` (unordered covers) has torsion for both kinds of class (`p2_vs_hc.py`,

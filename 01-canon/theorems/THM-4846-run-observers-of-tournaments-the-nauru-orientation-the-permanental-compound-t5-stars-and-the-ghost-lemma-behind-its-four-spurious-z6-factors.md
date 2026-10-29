@@ -9,7 +9,10 @@ status: >
   (D') and (F), added after the audit launched, were checked by it too.
   PROVED (elementary; mac-mini-2026-10-29-growth): (A) the orientation statement, the trivial and sign
   blocks and the Schur factorization of det M_{n-1}; (B) the compound law; (C) the T5 identity, hence the kernel,
-  together with its identification with the inherited tetrahedron-boundary kernel; (D) the ghost lemma at p = 2.
+  together with its identification with the inherited tetrahedron-boundary kernel; (D) the ghost lemma at p = 2;
+  (D') the ghost lemma at p = 3 (checked through n = 7 by two audits); (F) the compound and Jacobi form of the
+  sectors. A second audit covering (D') and HYP-9445 is
+  04-computation/experiments/growth_gf_runs_fermat_20261029/audit2/REPORT.md.
   FINITE-EXACT (scripts in 04-computation/experiments/growth_gf_runs_fermat_20261029, every class from gentourng):
   - (A) at n = 4, 5, 6, with the Nauru isomorphism at n = 4 and the determinant table;
   - (B) against direct enumeration for n <= 7;
@@ -174,9 +177,10 @@ Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign
   mod 3.
 - *The action.* `M` acts by `u → Pu`, `v → Sv` and `W′ → L′W′`, where `L′ = [[L11, L12],[L21, L22]]` satisfies
   `L21 ≡ 0`, `L11 ≡ P` and `L22 ≡ S`.
-- *The two blocks.* In the `Z_(3)`-basis `(u, v, y11, w12, y21, y22)`, with `w11 = u + 3y11`, `w21 = 3y21` and
-  `w22 = v + 3y22`, `M` reduces mod 3 to two block-lower-triangular pieces. Put `D1 = (L11 − P)/3`, `D2 = L21/3` and
-  `D3 = (L22 − S)/3`. Then
+- *The two blocks.* Use the `Z_(3)`-basis with coordinates `u, v, y11, w12, y21, y22`, where `w11 = u + 3y11`,
+  `w21 = 3y21` and `w22 = v + 3y22`. Ordered as `(u, y21, y11 | v, w12, y22)`, this basis reduces `M` mod 3 to two
+  block-lower-triangular pieces (the order matters: in the order `(u, y11, y21)` the block `L12` would sit above the
+  diagonal). Put `D1 = (L11 − P)/3`, `D2 = L21/3` and `D3 = (L22 − S)/3`. Then
 
       I = [[P,0,0],[D2,S,0],[D1,L12,P]],   II = [[S,0,0],[L12,P,0],[D3,D2,S]],
 
@@ -188,7 +192,9 @@ Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign
   `spur_3 = rank(Ē : ker P̄ → coker P̄)` with `E = D1 − L12 S⁻¹ D2`. For T5 that map is again an isomorphism on the
   4-dimensional span of the stars mod 3, which gives the four spurious `Z/3`.
 - *Verification.* Checked on every class `n = 4, 5, 6` against direct mod-3 ranks (`ghost3_lemma.py`). The classes
-  with `spur_3 > 0` number 0, 3 and 21, as in the census.
+  with `spur_3 > 0` number 0, 3 and 21, as in the census. Both audits extended this to `n = 7` (271 classes with
+  `spur_3 > 0`, the same as the census). The second audit (`audit2/REPORT.md`) also machine-checked the reduction for
+  invertible `S̄` on all 122 such classes, and the T5 isomorphism.
 
 **(E) What changes as the order grows (FINITE-EXACT).**
 

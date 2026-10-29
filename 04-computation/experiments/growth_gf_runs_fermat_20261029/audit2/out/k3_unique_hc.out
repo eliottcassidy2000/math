@@ -1,0 +1,11 @@
+n=3 k=3 unique-HC: torsion-free 1, torsion 0 []
+n=4 k=3 unique-HC: torsion-free 1, torsion 0 []
+n=5 k=3 unique-HC: torsion-free 3, torsion 0 []
+n=6 k=3 unique-HC: torsion-free 8, torsion 0 []
+n=7 k=3 unique-HC: torsion-free 16, torsion 5 [('110101111111111111101', '1^185 3^1 12^3 0^21'), ('110111111111100111111', '1^185 3^1 12^3 0^21'), ('110111111111101111101', '1^192 3^3 12^3 36^1 864^2 0^9'), ('110111111111101111110', '1^175 2^1 6^2 0^32'), ('110111111111111101101', '1^175 2^1 6^2 0^32')]
+n=3 P2 torsion among unique-HC classes: 0/1
+n=4 P2 torsion among unique-HC classes: 0/1
+n=5 P2 torsion among unique-HC classes: 0/3
+n=6 P2 torsion among unique-HC classes: 1/8
+n=7 P2 torsion among unique-HC classes: 5/21
+n=8 P2 torsion among unique-HC classes: 19/55

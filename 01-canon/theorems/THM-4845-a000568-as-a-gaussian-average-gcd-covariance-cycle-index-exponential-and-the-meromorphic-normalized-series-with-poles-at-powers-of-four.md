@@ -113,9 +113,13 @@ so **tournaments are graphs with the even power sums switched off**. Two more me
     digraphs `(4,2)`.
   - `t = 0` switches the even power sums off.
   - Checked for nine `(q,t)` through order 9.
-- *Self-converse tournaments (A002785, the repo's SC(n)).* Added after the audit was launched. A permutation `σ` maps
-  a labelled tournament to its converse, `σ·T = T^op`, only if `σ` has at most one fixed point and every other cycle
-  has length `≡ 2 (mod 4)`. In that case there are `2^((mᵀGm − m_1)/2)` such tournaments:
+- *Self-converse tournaments (A002785, the repo's SC(n)).* The count is CLASSICAL and already repo canon; only its
+  Gaussian form is new. The antimorphism criterion is due to Zelinka (1970) and Salvi-Zagaglia (1979). The count is
+  Sridharan's (Indag. Math. 32 (1970) 441–447), surveyed in Farrugia 1999 (§§4.12–4.14, 5.2, 7.32). In this repo it
+  is THM-283 (`sc-burnside-formula`), THM-849 (17) and THM-793 (SC(n) = A002785); the second audit flagged the
+  missing credit, the failure mode of MISTAKE-694. The statement: a permutation `σ` maps a labelled tournament to
+  its converse, `σ·T = T^op`, iff `σ` has at most one fixed point and every other cycle has length `≡ 2 (mod 4)`. In
+  that case there are `2^((mᵀGm − m_1)/2)` such tournaments:
   - each pair orbit must flip orientation at every step;
   - a non-reversing orbit therefore needs even length;
   - the antipodal orbit of a `2r`-cycle needs odd length `r`.

@@ -1,0 +1,1 @@
+python3 k3_hc2.py > out/k3_hc2.out 2>&1  484.11s user 12.74s system 99% cpu 8:19.60 total

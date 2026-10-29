@@ -1,0 +1,39 @@
+A. labelled brute force
+   n=1: SC(n) = 1 ; sigmas (or cycle types) violating the claimed condition/count: 0
+   n=2: SC(n) = 1 ; sigmas (or cycle types) violating the claimed condition/count: 0
+   n=3: SC(n) = 2 ; sigmas (or cycle types) violating the claimed condition/count: 0
+   n=4: SC(n) = 2 ; sigmas (or cycle types) violating the claimed condition/count: 0
+   n=5: SC(n) = 8 ; sigmas (or cycle types) violating the claimed condition/count: 0
+   n=6: SC(n) = 12 ; sigmas (or cycle types) violating the claimed condition/count: 0
+   n=7: SC(n) = 88 ; sigmas (or cycle types) violating the claimed condition/count: 0
+A'. pair-orbit check of the condition and count for n <= 14 (orbits computed by brute force)
+   n=1: cycle types violating the claim: 0
+   n=2: cycle types violating the claim: 0
+   n=3: cycle types violating the claim: 0
+   n=4: cycle types violating the claim: 0
+   n=5: cycle types violating the claim: 0
+   n=6: cycle types violating the claim: 0
+   n=7: cycle types violating the claim: 0
+   n=8: cycle types violating the claim: 0
+   n=9: cycle types violating the claim: 0
+   n=10: cycle types violating the claim: 0
+   n=11: cycle types violating the claim: 0
+   n=12: cycle types violating the claim: 0
+   n=13: cycle types violating the claim: 0
+   n=14: cycle types violating the claim: 0
+B. unlabelled brute force (gentourng -z, nauty labelg canonical forms of T and T^op)
+   n=2: classes=1 (distinct canonical forms 1), converse closed: True, self-converse = 1
+   n=3: classes=2 (distinct canonical forms 2), converse closed: True, self-converse = 2
+   n=4: classes=4 (distinct canonical forms 4), converse closed: True, self-converse = 2
+   n=5: classes=12 (distinct canonical forms 12), converse closed: True, self-converse = 8
+   n=6: classes=56 (distinct canonical forms 56), converse closed: True, self-converse = 12
+   n=7: classes=456 (distinct canonical forms 456), converse closed: True, self-converse = 88
+   n=8: classes=6880 (distinct canonical forms 6880), converse closed: True, self-converse = 176
+   n=9: classes=191536 (distinct canonical forms 191536), converse closed: True, self-converse = 2752
+C. twisted Burnside sum over cycle types vs OEIS A002785
+   n=1..16 : [1, 1, 2, 2, 8, 12, 88, 176, 2752, 8784, 279968, 1492288, 95458560, 872687552, 111698291584, 1787154671104]
+   agrees with OEIS data n=1..23: True ; first disagreement: None
+   n=24..30: [11366387654892573612292388020224, 46556723820466754971372107819614208, 14668949288904162047463947008098750464, 120168032571772498571496608802337202151424, 70315465915893174441024003399660143662776320, 1152048593563759047291703598630499208305956290560, 1258344277129349172788504169658233466126232363057152]
+D. Gaussian form from the explicit divisor realisation
+   coefficients n=0..23: [1, 1, 1, 2, 2, 8, 12, 88, 176, 2752, 8784, 279968, 1492288, 95458560, 872687552, 111698291584, 1787154671104, 457509297625088, 13013584213369088, 6662951988432581120, 341143107490935724032, 349330527429800077778944, 32519496073514216703585280, 66599927718689841715666229248]
+   n=1..23 agree with OEIS A002785: True ; constant term 1

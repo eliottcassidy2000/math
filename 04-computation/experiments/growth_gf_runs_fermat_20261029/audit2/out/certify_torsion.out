@@ -1,0 +1,6 @@
+n=3 {'S_tors_ok': 0, 'M_tors_ok': 0, 'n_hc2': 0, 'S_tf_ok': 1, 'S_tf_claims': 1, 'M_tf_ok': 1, 'M_tf_claims': 1, 'S_tors_unique_ok': 0, 'S_tors_unique': 0, 'M_tors_unique_ok': 0, 'M_tors_unique': 0} failures: []
+n=4 {'S_tors_ok': 0, 'M_tors_ok': 0, 'n_hc2': 0, 'S_tf_ok': 1, 'S_tf_claims': 1, 'M_tf_ok': 1, 'M_tf_claims': 1, 'S_tors_unique_ok': 0, 'S_tors_unique': 0, 'M_tors_unique_ok': 0, 'M_tors_unique': 0} failures: []
+n=5 {'S_tors_ok': 3, 'M_tors_ok': 3, 'n_hc2': 3, 'S_tf_ok': 3, 'S_tf_claims': 3, 'M_tf_ok': 3, 'M_tf_claims': 3, 'S_tors_unique_ok': 0, 'S_tors_unique': 0, 'M_tors_unique_ok': 0, 'M_tors_unique': 0} failures: []
+n=6 {'S_tors_ok': 27, 'M_tors_ok': 27, 'n_hc2': 27, 'S_tf_ok': 8, 'S_tf_claims': 8, 'M_tf_ok': 8, 'M_tf_claims': 8, 'S_tors_unique_ok': 0, 'S_tors_unique': 0, 'M_tors_unique_ok': 0, 'M_tors_unique': 0} failures: []
+n=7 {'S_tors_ok': 332, 'M_tors_ok': 332, 'n_hc2': 332, 'S_tf_ok': 21, 'S_tf_claims': 21, 'M_tf_ok': 16, 'M_tf_claims': 16, 'S_tors_unique_ok': 0, 'S_tors_unique': 0, 'M_tors_unique_ok': 5, 'M_tors_unique': 5} failures: []
+n=8 {'S_tors_ok': 5953, 'M_tors_ok': 5953, 'n_hc2': 5953, 'S_tf_ok': 54, 'S_tf_claims': 54, 'M_tf_ok': 36, 'M_tf_claims': 36, 'S_tors_unique_ok': 1, 'S_tors_unique': 1, 'M_tors_unique_ok': 19, 'M_tors_unique': 19} failures: []

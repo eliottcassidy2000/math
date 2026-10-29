@@ -1,0 +1,4 @@
+n=5 k=3: strong HC>=2 classes 3, torsion certified 3 (singular 3), counterexamples []
+n=6 k=3: strong HC>=2 classes 27, torsion certified 27 (singular 19), counterexamples []
+n=7 k=3: strong HC>=2 classes 332, torsion certified 332 (singular 172), counterexamples []
+EXIT=0

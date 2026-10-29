@@ -1,0 +1,29 @@
+(a) F from definition == (R2): True
+    rho is a homomorphism for composition (g o h)(k) = g(h(k)): True
+    det F = 54  Smith F = [1, 1, 1, 3, 3, 6]
+    H = 6 F^-1 == (R4): True
+    columns of F satisfy (R3); |(R3) lattice mod 6| = 864  => index 54 (= |det F| = 54, so image == (R3) lattice)
+    on all of (Z/3)^6: (R3) mod 3  <=>  Q^-1 W Q = [[u,*],[0,v]] mod 3 : True
+    symbolic: Q^-1 W Q = [[c+d, c],[a+b-c-d, a-c]]  ->  c+d=u, a+b=c+d, a-c=v (mod 3) == (R3) mod 3
+
+(d) T5 (arcs i -> i+1, i+2 mod 5)
+    Smith M3 = 1^52 3^2 6^2 0^4  (R7 says 1^52 3^2 6^2 0^4)
+    Smith N  = 1^48 3^2 6^6 0^4  (R7 unglued says 1^48 3^2 6^6 0^4)
+    sectors: P 1^6 0^4 | S 1^6 2^4 | L (one column of W) 1^16 3^3 6^1
+    left-mult block form True | right-mult alternative False | congruences True | exact mod-3 reduction to diag(I,II) True
+    rank_F3: P=6 S=10 (S invertible mod 3: True, det S = 16)
+    spur3 (ranks) = 4, formula = 4, Smith-count spur3 = 4, connecting rank of E on ker P = 4
+    P v_w = 0 over Z for all five stars: True
+    rank of the stars: over Q 4 , mod 3 4 , dim ker P mod 3 = 4
+    rank(E on span(stars) -> coker P) mod 3 = 4 (4 = isomorphism onto 4-dim coker)
+    star relation: sum_w (-1)^w v_w = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+n=4 {'classes': 4, 'left_ok': 4, 'right_ok': 0, 'cong': 4, 'reduction_exact': 4, 'rankM_eq': 4, 'rankN_eq': 4, 'formula_eq': 4, 'spur3_pos': 0, 'S_inv': 1, 'E_eq': 1, 'snf_eq': 4}
+   spur3 distribution: {0: 4}
+
+n=5 {'classes': 12, 'left_ok': 12, 'right_ok': 0, 'cong': 12, 'reduction_exact': 12, 'rankM_eq': 12, 'rankN_eq': 12, 'formula_eq': 12, 'spur3_pos': 3, 'S_inv': 5, 'E_eq': 5, 'snf_eq': 12}
+   spur3 distribution: {0: 9, 3: 1, 4: 1, 5: 1}
+   n=5 spur3 by class: [('1111111111', 0), ('1111111101', 0), ('1101111111', 0), ('1100111111', 0), ('1101110111', 0), ('1101111101', 0), ('1101111110', 0), ('1100110111', 4), ('1111101111', 3), ('1110101111', 5), ('1111100111', 0), ('1011111111', 0)]
+
+n=6 {'classes': 56, 'left_ok': 56, 'right_ok': 0, 'cong': 56, 'reduction_exact': 56, 'rankM_eq': 56, 'rankN_eq': 56, 'formula_eq': 56, 'spur3_pos': 21, 'S_inv': 20, 'E_eq': 20, 'snf_eq': 0}
+   spur3 distribution: {0: 35, 1: 8, 2: 2, 3: 7, 4: 1, 5: 1, 6: 1, 8: 1}
