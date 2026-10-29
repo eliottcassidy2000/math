@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-29 — a March Bernoulli reflection omitted a divisor-prime and overgeneralized a Sylvester coincidence
+
+- **Source:** `07-reflections/bernoulli-fixed-point.md`, kind-pasteur March16 S116n32, recovered while searching earlier uses of12 and22.
+- **Minimal witnesses:** the claimed fixed set {2,3} is not fixed, since7-1 divides6; the exact next value is42. Among positive even inputs with composite n+1, the first is n=8, and its divisor-prime map gives30 despite9 being composite.
+- **Failed implications:** checking the old prime set proves closure; a composite successor n+1 makes the entire divisor-prime map freeze. Both omit other divisors d with prime d+1.
+- **Repair / strongest survivor:** the chain6->42->1806->1806 survives by the complete divisor lists. The historical universal Sylvester description and unsupported generic-growth prose are withdrawn; the note retains a correction banner and its original provenance. No current canon theorem is retracted.
+- **Evidence / missing coordinate:** `05-knowledge/results/twelve_twenty_two_trace_20261029/check_precision.py` verifies6,8,12,22,42,1806; the classical von Staudt--Clausen input is pinned in its archaeology note. Retain the full divisor-prime selector, not only the largest divisor. The same selection intersects the split-prime condition at13 in the new twelfth-power observer calculation, without identifying the two dynamics.
+
 ## 2026-10-28 — Catalan carry propagation and the orbit inversion-graph carrier
 
 - **Sources:** `05-knowledge/results/collatz_catalan_ramsey_20260927.md`, Propositions 2 and 5, its producer in `04-computation/experiments/`, and the corresponding synthesis paragraph.
@@ -692,6 +700,7 @@ of two different forward orbits follows.
 
 ## 2026-10-24 — a graded trace is not an unspecified topological invariant
 
+- **2026-10-29 propagation:** the still-unrepaired June29 source `05-knowledge/results/signed-cycle-index-verified-SC-extended-and-the-free-monoid-bridge-opus-20260629.md` now carries this correction in place. Its order-six row is an immediate witness: SC=12, even-sector dimension34, odd-sector dimension22. The numerical table and reversal-word fixed-class interpretation survive; unsupported topological/LRC identifications are withdrawn. This is propagation of the existing correction, not a new counting result.
 - **Affected sources:** [THM-587](theorems/THM-587-per-level-signed-cycle-index-antipodal-euler-number.md) and [THM-588](theorems/THM-588-metagraph-laplacian-algebraic-connectivity-four.md).
 - **Failed implications:** a character trace was written as a fixed-subspace dimension; a graded alternating trace was promoted to Euler/Betti information without a complex and differential; the uncentered cyclicity count was called the nonconstant eigenfunction.
 - **Repair:** average representation traces, retain only the graded antipodal trace and fixed-class count, and use c(T)-C(n,3)/4 with uniform labelled-tournament weights (equivalently orbit-size weights on classes). The nonzero constant component is the eigenfunction counterexample. Numerical spectra and counts are unchanged; unrelated historical performance and mixing claims are not revalidated.

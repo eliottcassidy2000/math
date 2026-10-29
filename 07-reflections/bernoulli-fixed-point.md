@@ -1,5 +1,13 @@
 # The Bernoulli Fixed Point: 6 -> 42 -> 1806 -> 1806
 
+**Historical note, corrected 2026-10-29.** The displayed chain and fixed
+point1806 are valid. The original claim that {2,3} was already fixed at6
+was false: 7-1 divides6. The suggested universal Sylvester/primality-filter
+rule was also false; n=8 has composite n+1=9 but maps to30. See the
+[exact repair and connection atlas](../05-knowledge/results/twelve_twenty_two_trace_20261029/ARCHAEOLOGY.md)
+and its `check_precision.py` receipt. This reflection is provenance, not a
+general classification of Bernoulli-denominator dynamics.
+
 **Session:** kind-pasteur-2026-03-16-S116n32
 
 ## The Chain
@@ -10,7 +18,8 @@ Define the Bernoulli chain: start with 2k, compute denom(B_{2k}) via von Staudt-
 - B_42: primes with (p-1)|42 are {2,3,7,43}. Product = 1806.
 - B_1806: primes with (p-1)|1806 are {2,3,7,43}. Product = 1806.
 
-**1806 is a FIXED POINT.** The chain stabilizes in exactly 3 steps.
+**1806 is a FIXED POINT.** Starting at6, two updates reach1806; the third
+displayed update confirms that it remains there.
 
 ## Why It Stabilizes
 
@@ -31,15 +40,21 @@ So 1806 is **self-selecting**: the only primes p with (p-1)|1806 are exactly the
 
 The Sylvester sequence 2, 3, 7, 43, 1807, ... has partial products 2, 6, 42, 1806, ...
 
-The Bernoulli chain agrees with Sylvester's partial products through P_4 = 1806, but Sylvester's next term a_5 = 1807 = 13*139 is composite. When this happens, the Bernoulli chain cannot absorb the composite number as a new prime factor, so it stabilizes.
+This particular Bernoulli chain agrees with the displayed Sylvester partial
+products through1806. Its fixed-point proof uses the COMPLETE divisor list
+above: the prime values d+1 are exactly2,3,7,43. The compositeness of1807
+alone would not establish the fixed point; other divisors can introduce
+new primes.
 
-**The Bernoulli chain is Sylvester's sequence with a primality filter.** It follows Sylvester as long as the next term is prime, and freezes when a composite term appears.
+The historical sentence identifying every Bernoulli chain with a
+primality-filtered Sylvester sequence is retracted. At n=8, n+1=9 is
+composite, but divisors1,2,4 contribute primes2,3,5 and the next value is30.
 
 ## Self-Selecting Sets of Primes
 
 A set S of primes is **von Staudt self-selecting** if: the primes p with (p-1) | prod(S) are exactly S itself.
 
-{2, 3} is self-selecting: (p-1)|6, primes are {2,3}. Fixed point at 6.
+{2, 3} is NOT self-selecting: (p-1)|6 gives primes {2,3,7}, so6 maps to42.
 {2, 3, 7} is NOT self-selecting: (p-1)|42 gives {2,3,7,43}.
 {2, 3, 7, 43} IS self-selecting: (p-1)|1806 gives {2,3,7,43}. Fixed point at 1806.
 
@@ -47,6 +62,9 @@ The chain 6 -> 42 -> 1806 passes through a non-fixed-point (42) to reach a fixed
 
 ## Why This Matters
 
-42 = denom(B_6) is the TRANSITIONAL value — neither a starting point (6) nor a fixed point (1806), but the bridge between them. It is the unique intermediate step in the Bernoulli chain from the simplest nontrivial fixed point {2,3} to the next fixed point {2,3,7,43}.
+42 = denom(B_6) is an intermediate value in the exact chain starting at6
+and ending at the fixed point1806. The starting set {2,3} is not fixed.
 
-The fact that 42 = 2*3*7 attracts exactly one new prime (43) to form a self-selecting set is arithmetically rare. Most numbers n attract multiple new primes when you compute the VS primes for (p-1)|n, creating an expanding cascade. 42 attracts exactly one, and that one closes the system.
+42 adds the prime43, and the complete divisor test at1806 then closes
+this particular chain. No density estimate or assertion that most inputs
+generate expanding cascades is established by this example.
