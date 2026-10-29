@@ -207,6 +207,38 @@ this is NOT a census or an obstruction. No successful3^10 chain is saved.
 The full paired minimum now has form2^40*3^a*11^6*79^3*5861^6*392809^3
 with a in{10,12,14,16,18}. Keep original port projections and all clocks.
 
+Incoming078be2b84d was integrated after that proof checkpoint. Its
+[DEFECT_TRANSFER](../overnight_rank_return_20261029/DEFECT_TRANSFER.md)
+gives an all-size joint-port evaluator linear in n for fixed k and
+supplied backward-arc cutwidth c. Every first interval complement has
+c<=2; component endpoint pairing survives expiry of vertex names. Its
+full checker replayed here. The incoming full1320-by1320 three-run
+81/27 matrices have ternary ranks430/435 and common mass80614764; this
+larger census is INHERITED, not rerun in this continuation. Our own
+singleton-slice hostile was rerun by the separate certificate verifier.
+
+The incoming periodic two-run-length complement family has35 boundary
+states, minimal rational scalar order18, and minimal ternary order12.
+The latter is F3[X]/((X+1)^2*g^2), with g irreducible of degree5 and its
+field root of order121. Periodic_defect.py replayed normally and under-O.
+This actual F243 chart supplies a precise5/11 connection; the full clock
+period is726, and forgetting five nilpotent coordinates preserves that
+period while losing observable states. Keep this operator distinct from
+our native126-element group action.
+
+The new [PERIODIC_FROBENIUS_LIFT](PERIODIC_FROBENIUS_LIFT.md) constructs
+an order-five algebra automorphism X->X^487, where487=3 mod242 and1 mod3.
+It conjugates the full recurrence clock to its487th power and retains
+all12 coordinates; naive cubing has rank6. The12-by12 Hankel chart H
+transports it into ACTUAL future-response windows. Its initial window is
+fixed, but its original scalar selector is not: b_2=0 and b_248=2 mod3.
+Retain ell'=ell*Phi^-1 to preserve observations under source transport.
+All726 orbit states and all144 basis products pass, with identical
+normal/optimized receipts. This is NOT a constructed native attachment
+or vertex symmetry. The next test is realization in the native operation
+language with its selector transported. Do not identify the two ternary
+modules, or infer arithmetic Selmer compatibility from either lift.
+
 Incoming6b83fd8383 strengthens all396 native recovery certificates to
 strong targets whenever a second observation is needed; C3 needs zero
 moves. Its recovered March interval family has exact ordered-k-cover

@@ -1,0 +1,43 @@
+{
+  "script": "periodic_frobenius_lift.py",
+  "byte_identical": true,
+  "canonical_sha256": "9aa5620da41d3298d8540ae0796a546dbb9f516a906d0ab705585480aba204b3",
+  "runs": [
+    {
+      "optimized": false,
+      "summary": {
+        "gates": 179,
+        "crt_exponent": 487,
+        "frobenius_order": 5,
+        "naive_cube_rank": 6,
+        "first_scalar_mismatch": {
+          "r": 2,
+          "b_r_mod3": 0,
+          "reindexed_r": 248,
+          "b_reindexed_mod3": 2
+        }
+      }
+    },
+    {
+      "optimized": true,
+      "summary": {
+        "gates": 179,
+        "crt_exponent": 487,
+        "frobenius_order": 5,
+        "naive_cube_rank": 6,
+        "first_scalar_mismatch": {
+          "r": 2,
+          "b_r_mod3": 0,
+          "reindexed_r": 248,
+          "b_reindexed_mod3": 2
+        }
+      }
+    }
+  ],
+  "incoming_checks": {
+    "commit": "078be2b84d",
+    "defect_transfer": "PASS full read-only replay",
+    "periodic_defect": "PASS normal and optimized read-only replay",
+    "full_three_run_hostile": "INHERITED; not rerun here"
+  }
+}

@@ -128,7 +128,13 @@ nonzero fixed vector on the3-torsion
 of W/A; its fixed space is stable under S. Since2 is invertible, that
 space has a one-dimensional S-eigenline. Its inverse image is the needed
 index-three extension. This also proves that repeated T1--T3 steps are
-complete for this coisotropic completion question.
+complete for this coisotropic completion question. More generally, the
+same fixed-vector argument can be repeated on each intermediate quotient
+without assuming coisotropy. Including every invariant starting form
+and every legal carry/character choice therefore gives a finite exhaustive
+search scheme for the minimum, stopping no later than hyperbolic doubling
+at index |V|. The present checker implements the exact step equations
+and first-step exclusion, not that full potentially enormous search.
 
 The condition that z read the old radical is exact: if z is nonzero
 there, its image has order3 and the extended radical has one-third the

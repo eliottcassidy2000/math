@@ -13,6 +13,12 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Compatible CRT Frobenius lift](PERIODIC_FROBENIUS_LIFT.md): incoming
+  native periodic complements supply a degree-five F243 phase of order121
+  and a12-dimensional ternary response. The explicit lift X->X^487
+  preserves all nilpotent coordinates and conjugates the full clock;
+  its Hankel chart transports the observation selector too. Naive cubing
+  has rank6, and keeping the old selector gives a literal r=2 mismatch.
 - [Ternary root recurrence and strict completion obstruction](TERNARY_EXTENSION_OBSTRUCTION.md):
   all-size source-fixed index-three attachments preserve both order-three
   clocks, the involution, carries, and the new pairing character. All18
