@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "optimized": false,
+  "cursor_separator_at9": 2,
+  "strong_partner_H": [
+    2899675,
+    2906091
+  ],
+  "forest_controls": 593,
+  "folded_states": [
+    64,
+    24,
+    16
+  ],
+  "guarded_folded_states": [
+    35,
+    64
+  ],
+  "small_lifts": {
+    "cases": 531,
+    "totals": {
+      "labelled": 12420,
+      "equitable": 5396,
+      "orbit": 12292
+    }
+  },
+  "tree_controls": 18248,
+  "hostile_groups": [
+    81,
+    27
+  ],
+  "Paley27_Frobenius_cycle": [
+    3,
+    5,
+    4
+  ]
+}

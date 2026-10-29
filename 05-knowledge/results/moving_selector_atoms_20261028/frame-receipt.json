@@ -1,0 +1,437 @@
+{
+  "status": "FINITE-EXACT",
+  "forests": [
+    {
+      "n": 1,
+      "source": [
+        0
+      ],
+      "forests": 1,
+      "by_arity": {
+        "1": 1
+      },
+      "fiber_orbits_summed": 1
+    },
+    {
+      "n": 3,
+      "source": [
+        2,
+        4,
+        1
+      ],
+      "forests": 7,
+      "by_arity": {
+        "1": 3,
+        "2": 3,
+        "3": 1
+      },
+      "fiber_orbits_summed": 11
+    },
+    {
+      "n": 4,
+      "source": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "forests": 23,
+      "by_arity": {
+        "1": 5,
+        "2": 11,
+        "3": 6,
+        "4": 1
+      },
+      "fiber_orbits_summed": 87
+    },
+    {
+      "n": 5,
+      "source": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "forests": 84,
+      "by_arity": {
+        "1": 9,
+        "2": 33,
+        "3": 31,
+        "4": 10,
+        "5": 1
+      },
+      "fiber_orbits_summed": 621
+    },
+    {
+      "n": 5,
+      "source": [
+        2,
+        8,
+        3,
+        21,
+        7
+      ],
+      "forests": 84,
+      "by_arity": {
+        "1": 9,
+        "2": 33,
+        "3": 31,
+        "4": 10,
+        "5": 1
+      },
+      "fiber_orbits_summed": 621
+    },
+    {
+      "n": 5,
+      "source": [
+        2,
+        12,
+        9,
+        17,
+        7
+      ],
+      "forests": 96,
+      "by_arity": {
+        "1": 13,
+        "2": 39,
+        "3": 33,
+        "4": 10,
+        "5": 1
+      },
+      "fiber_orbits_summed": 649
+    },
+    {
+      "n": 5,
+      "source": [
+        2,
+        20,
+        9,
+        3,
+        13
+      ],
+      "forests": 94,
+      "by_arity": {
+        "1": 11,
+        "2": 39,
+        "3": 33,
+        "4": 10,
+        "5": 1
+      },
+      "fiber_orbits_summed": 647
+    },
+    {
+      "n": 5,
+      "source": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ],
+      "forests": 106,
+      "by_arity": {
+        "1": 15,
+        "2": 45,
+        "3": 35,
+        "4": 10,
+        "5": 1
+      },
+      "fiber_orbits_summed": 579
+    },
+    {
+      "n": 5,
+      "source": [
+        16,
+        5,
+        9,
+        3,
+        14
+      ],
+      "forests": 98,
+      "by_arity": {
+        "1": 15,
+        "2": 39,
+        "3": 33,
+        "4": 10,
+        "5": 1
+      },
+      "fiber_orbits_summed": 555
+    }
+  ],
+  "frames": {
+    "atoms": [
+      {
+        "object": "five",
+        "order": 5,
+        "group": 3,
+        "base": [
+          0
+        ],
+        "all_singleton_order_orbits": 40
+      },
+      {
+        "object": "Paley7",
+        "order": 7,
+        "group": 21,
+        "base": [
+          0,
+          1
+        ],
+        "all_singleton_order_orbits": 240
+      },
+      {
+        "object": "wreath9",
+        "order": 9,
+        "group": 81,
+        "base": [
+          0,
+          3,
+          6
+        ],
+        "all_singleton_order_orbits": 4480
+      },
+      {
+        "object": "81",
+        "order": 12,
+        "group": 81,
+        "base": [
+          1,
+          5,
+          9
+        ],
+        "all_singleton_order_orbits": 5913600
+      },
+      {
+        "object": "27",
+        "order": 12,
+        "group": 27,
+        "base": [
+          1,
+          5,
+          9
+        ],
+        "all_singleton_order_orbits": 17740800
+      }
+    ],
+    "hostile": [
+      {
+        "object": "81",
+        "automorphisms": 81,
+        "canon_leaves": 81,
+        "binary_attachment_orbits": 176,
+        "transporter_0_to_4": 27
+      },
+      {
+        "object": "27",
+        "automorphisms": 27,
+        "canon_leaves": 27,
+        "binary_attachment_orbits": 512,
+        "transporter_0_to_4": 0
+      }
+    ],
+    "holonomy": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3,
+      8,
+      6,
+      7
+    ],
+    "holonomy_parity": 0,
+    "F64_shifts": [
+      0,
+      2,
+      4
+    ],
+    "F256_shifts": [
+      0
+    ]
+  },
+  "parity_fiber": [
+    {
+      "middle": [
+        0,
+        1,
+        2
+      ],
+      "parity": 0,
+      "H": 2483993,
+      "all_strong_H": 2899675,
+      "orbit": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "middle": [
+        0,
+        2,
+        1
+      ],
+      "parity": 1,
+      "H": 2491877,
+      "all_strong_H": 2906091,
+      "orbit": [
+        3,
+        0,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "middle": [
+        1,
+        0,
+        2
+      ],
+      "parity": 1,
+      "H": 2491877,
+      "all_strong_H": 2906091,
+      "orbit": [
+        3,
+        0,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "middle": [
+        1,
+        2,
+        0
+      ],
+      "parity": 0,
+      "H": 2483993,
+      "all_strong_H": 2899675,
+      "orbit": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "middle": [
+        2,
+        0,
+        1
+      ],
+      "parity": 0,
+      "H": 2483993,
+      "all_strong_H": 2899675,
+      "orbit": [
+        3,
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "middle": [
+        2,
+        1,
+        0
+      ],
+      "parity": 1,
+      "H": 2491877,
+      "all_strong_H": 2906091,
+      "orbit": [
+        3,
+        0,
+        2,
+        1,
+        4
+      ]
+    }
+  ],
+  "paley27": {
+    "field_polynomial": "x^3+2x+1 over F3",
+    "order": 27,
+    "rows": [
+      38910914,
+      75982788,
+      19586497,
+      42587671,
+      70466599,
+      21424655,
+      72005304,
+      26340664,
+      36133496,
+      58164372,
+      114264353,
+      96174666,
+      61615778,
+      108547852,
+      97787473,
+      91058450,
+      64647268,
+      112521353,
+      118040797,
+      118637491,
+      117740910,
+      6112491,
+      10361246,
+      3974005,
+      48375131,
+      81840374,
+      31527853
+    ],
+    "Frobenius": [
+      0,
+      1,
+      2,
+      5,
+      3,
+      4,
+      7,
+      8,
+      6,
+      13,
+      14,
+      12,
+      15,
+      16,
+      17,
+      11,
+      9,
+      10,
+      26,
+      24,
+      25,
+      19,
+      20,
+      18,
+      21,
+      22,
+      23
+    ],
+    "fixed_ports": [
+      0,
+      1,
+      2
+    ],
+    "alpha_orbit": [
+      3,
+      5,
+      4
+    ],
+    "swapped_ports": [
+      3,
+      5
+    ],
+    "single_port_profiles_agree": true,
+    "full_joint_orders_differ": true,
+    "scope": "Displayed C3 subgroup, not a full automorphism-group or modular-primality classification."
+  }
+}

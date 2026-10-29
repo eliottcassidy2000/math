@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — visiting every port separately does not retain their joint order
+
+- **Candidate and scope:** a read-only moving selector defeats the earlier fixed-boundary nine-pair, but its individual child-run responses are not sufficient for general composition. This resolves a proposed extension, not a retraction of the minimal singleton theorem or a counterexample to all-size Hamilton-presentation scanning.
+- **Witness:** in the strong child C3[C3,1,1], singleton-run orders(3,0,1,2,4) and(3,0,2,1,4) agree on every single-port observation with outer ports3,4, on both relation sheets. No common automorphism realizes the required transposition. The same prime-C3 quotient walk with three strong children gives partners with H=2,899,675 and2,906,091.
+- **First failed implication:** the existence of a suitable transporter for each visited port implies the existence of one transporter for the entire ordered list. The witnesses differ with the query.
+- **Repair / strongest survivor:** [C1--C5](../05-knowledge/results/moving_selector_atoms_20261028/THEORY.md) give an exact moving-selector carrier for its narrower language, a one-bit joint-order repair for this fiber, and the base criterion for universally sufficient individual component probes. The folded count can still be minimized to16 states when those additional port queries are excluded.
+
 ## 2026-10-28 — geometric degree restrictions and unsupported parity transfers
 
 - **Sources:** the June3 reflections `unit-distance-n22-and-its-deep-tie-to-tournaments-and-lrc-s599.md` and `lrc-tournament-parity-sectors-worry-is-the-odd-sector-s587.md` in `07-reflections/`.

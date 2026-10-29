@@ -1,0 +1,60 @@
+{
+  "status": "FINITE-EXACT",
+  "scope": "All underlying spanning trees allowed; current tree orientation is induced, no Hamilton legality restriction.",
+  "orders": [
+    {
+      "order": 2,
+      "trees": 1,
+      "pair_bits": 1,
+      "complement_rank": 0,
+      "difference_rank": 0,
+      "labelled_components": 2,
+      "codec_checks": 2
+    },
+    {
+      "order": 3,
+      "trees": 3,
+      "pair_bits": 3,
+      "complement_rank": 3,
+      "difference_rank": 2,
+      "labelled_components": 1,
+      "codec_checks": 24
+    },
+    {
+      "order": 4,
+      "trees": 16,
+      "pair_bits": 6,
+      "complement_rank": 6,
+      "difference_rank": 5,
+      "labelled_components": 1,
+      "codec_checks": 1024
+    },
+    {
+      "order": 5,
+      "trees": 125,
+      "pair_bits": 10,
+      "complement_rank": 9,
+      "difference_rank": 9,
+      "labelled_components": 2,
+      "codec_checks": 0
+    },
+    {
+      "order": 6,
+      "trees": 1296,
+      "pair_bits": 15,
+      "complement_rank": 14,
+      "difference_rank": 14,
+      "labelled_components": 2,
+      "codec_checks": 0
+    },
+    {
+      "order": 7,
+      "trees": 16807,
+      "pair_bits": 21,
+      "complement_rank": 21,
+      "difference_rank": 20,
+      "labelled_components": 1,
+      "codec_checks": 0
+    }
+  ]
+}
