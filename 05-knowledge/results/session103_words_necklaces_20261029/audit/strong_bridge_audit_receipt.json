@@ -1,0 +1,26 @@
+{
+  "scope": "all legal histories through order9; all vertex subsets; blocks explicitly size>=3",
+  "words_by_order": {
+    "4": 1,
+    "5": 3,
+    "6": 8,
+    "7": 21,
+    "8": 55,
+    "9": 144
+  },
+  "first_appearance_words": 19,
+  "standard_singleton_seed_counterexample": {
+    "R": [
+      2
+    ],
+    "Q": [
+      0,
+      1,
+      3
+    ],
+    "bridge": [
+      2,
+      3
+    ]
+  }
+}
