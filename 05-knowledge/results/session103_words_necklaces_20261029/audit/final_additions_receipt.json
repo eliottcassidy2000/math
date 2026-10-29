@@ -1,0 +1,41 @@
+{
+  "singular_parent": {
+    "det": 1,
+    "hc": 1
+  },
+  "unimodular_parent": {
+    "det": 1,
+    "hc": 1
+  },
+  "singular_child": {
+    "det": 0,
+    "hc": 1
+  },
+  "kernel_minor_det": 1,
+  "unimodular_child": {
+    "det": 1,
+    "hc": 1
+  },
+  "repair_child": {
+    "det": -1,
+    "hc": 1
+  },
+  "R5_exact_hc": 2,
+  "marked_walk_coefficients": [
+    1,
+    3,
+    7,
+    16,
+    36,
+    81,
+    182,
+    409,
+    919,
+    2065,
+    4640,
+    10426,
+    23427,
+    52640,
+    118281
+  ]
+}
