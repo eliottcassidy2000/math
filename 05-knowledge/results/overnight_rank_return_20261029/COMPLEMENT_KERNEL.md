@@ -297,3 +297,11 @@ already invertible. The inherited March interval family supplies new all-size
 ordered-cover recurrences and a joint-port query compiler. Its actual strong
 complements can leave that family. The general selected-path conjecture and
 realization-constrained closure remain open.
+
+**12:00 UTC continuation:** [DEFECT_TRANSFER D6](DEFECT_TRANSFER.md) now
+computes the complete twelve-vertex 81/27 three-run response matrices:
+equal mass 80614764, ranks 430/435 over F3, maximum entries 396/540.
+This supersedes the earlier computational boundary about uncomputed full
+matrices; three-run minimality and integral complement recovery there are
+still unclaimed. D2--D4 also give exact query recurrences for bounded backward
+cutwidth, retaining component pairing and the literal source relation.

@@ -4,6 +4,28 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+**12:00 UTC continuation.** [DEFECT_TRANSFER D1--D8](DEFECT_TRANSFER.md)
+extends joint-port counting to actual complements. For a supplied order of
+backward-arc cutwidth c, an exact component-pairing transfer evaluates a
+k-port query in n * 2^O((k+c)log(k+c+2)) arithmetic operations. Every first
+interval-family complement has c<=2, including targets outside that family.
+Specified thousand-vertex queries are evaluated with full port matching;
+forgetting component pairing already invents a cover at five. Repeated
+complements can increase width in the retained frame.
+The full twelve-vertex 81/27 three-run matrices now have equal mass 80614764
+but ternary ranks 430/435 and maximum entries 396/540. The two-run comparison
+24/22 reverses; no full Smith form or integral complement certificate at
+twelve is claimed. Common Frobenius phase and full target relations remain.
+
+[PERIODIC_COMPLEMENT E1--E5](PERIODIC_COMPLEMENT.md) then closes a specific
+bulk-observation language: the repeated two-vertex-run targets have 35
+component states, minimal rational recurrence order 18, and an exact Smith
+formula for the smallest weighted observer at every modulus. Modulo three
+the actual recurrence has minimal degree 12 and period 726. Its literal
+F243 norm-one clock has order 121=11^2, Frobenius degree five, and an
+observable nilpotent layer. Dropping that five-dimensional layer can leave
+the clock period unchanged. This does not close arbitrary re-marking.
+
 **11:00 UTC continuation.** [RUN_RECURRENCE R1--R7](RUN_RECURRENCE.md)
 strengthens the 396-class certificate: every source needing a probe has an
 integrally successful actual complement that remains strong. The March
@@ -153,6 +175,9 @@ Paley pencil and the exact two- and three-run modules. Next targets are
 the all-size integral selected-path conjecture and strong-target variant
 (both now certified through seven, allowing zero moves),
 and the full complemented relation with physically realizable port laws.
+The new bounded-width transfer counts actual port realizations, but does
+not yet output every literal complemented-target distribution. Controlling
+width under selected repeated complements is a separate open target.
 The path-framed weighted unnamed observer is now closed through seven;
 free class-valued reset remains a different operation. Primary algorithm manuscripts
 behind Big O Speedrun remain a separate lane.

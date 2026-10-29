@@ -245,3 +245,106 @@ two-run verifier rechecks the twelve-vertex 81/27 hostile without changing
 its scope. Incoming 78adba0b08 and its primary-clock dependency are inherited;
 no claim about Collatz trajectories, general attachment closure, new A000568
 terms or rank-distribution bounds follows from these interval recurrences.
+
+## 12:00 UTC: actual defect relations and paired boundary components
+
+DEFECT_TRANSFER D2 is an all-size bijective prefix proof, not an inference
+from the finite bank. An introduced vertex may join a prior tail to a prior
+head only when the literal arcs permit it. Joining a component to itself
+would close a cycle and is rejected. Expired open heads are impossible;
+expired tails have uniform future adjacency but retain their component's
+head. Completed named pairs must match. Anonymous-tail multiplicities are
+counted by component occurrences, not by independently multiplying bags.
+The finite five-vertex damaged-quotient witness changes zero to one.
+
+The width is the maximum number of backward defect arcs crossing a cut in
+a SUPPLIED order. It is not ordinary complete-graph cutwidth, degreewidth,
+minimum feedback size or an isomorphism invariant. The state bound includes
+all impossible assignments and is only sufficient. Input scheduling and
+growing integer sizes are charged separately from arithmetic operation
+counts. No unproved best-order algorithm or minimality is used. The first
+interval complement width-two proof retains both cut edges and hinges;
+the second-complement width-three example is explicitly frame-relative.
+
+The full source relation is kept beside the query state. This transfer
+counts physically realized path covers with specified ports, but does not
+identify each cover's literal complemented target. Session69's larger
+recursively closed target carrier remains inherited. Neither the new query
+compiler nor the old arbitrary-weight left inverse closes general minimal
+attachment realization.
+
+The verifier checks 18,900 entries on 764 source/selected-target occurrences
+covering all 396 inherited strong classes, and 37,908 entries across all
+227 interval-path complements at orders 3--9. Full target matrices through
+five use permutation cuts and subset convolution; larger target probes use
+independent vertex-mask convolution. The thousand-vertex values are proved
+transfer evaluations, not independent full enumeration. Existing interval
+queries at 20,40,100 agree through a different transfer, now of width one.
+The 81/27 two-run mass and ternary ranks remain exact controls.
+
+The full twelve-vertex three-run census uses a separate C++ constructor,
+checked against the inherited Python rows. Its pruning excludes only
+permutation prefixes already needing more than two cuts. All counts fit
+uint64 by the a priori 12!*binom(11,2) bound. A second mask/last/bad-join DP
+checks its 20,338,857 complete permutations. Subset convolution checks the
+80614764 total; 97 selected entries per source, including a maximum, agree
+with both the boundary transfer and independent subset masks. The full
+matrices commute with every source automorphism and S3 generators in the
+same named frame. Exact NumPy modular elimination and an independent
+two-bitplane row elimination give ranks 430/435 modulo three. No rational
+rank, Smith factors, all-modulus inverse or minimality is inferred from
+these ranks. The reversal of the two-run ordering is an actual finite
+obstruction to that proposed monotonic comparison.
+
+The k-path cyclic-splice obstruction is proved by the bijection between
+accepted matchings and k-cycles, then enumerated through k=7. It tests a
+different guard from degree constraints: one global cycle can still encode
+the wrong prescribed matching. The Paley7 phase check transports both port
+lists; one-sided transport changes a nonzero response. No Frobenius phase
+is obtained by silently changing the source chart.
+
+Primary literature checks are bounded and attributed. Li's ICALP paper
+supplies the cited determinant connectivity mechanism, not our complexity
+bound. Bills's pinned Subset Sum note states its inherited hypotheses;
+only its zero-multiplier boundary argument and shared-phase requirement
+are used as method comparisons. No full external algorithm or Lean proof
+was independently checked here. Incoming 6c45d7f245's joint-clock completion
+is inherited. Normal and optimized local replays use explicit exceptions;
+no independent-agent or proof-assistant audit is claimed.
+
+### Periodic continuation: the exact source of 18, 121 and 726
+
+PERIODIC_COMPLEMENT rebuilds all 35 reachable component states and every
+bulk transition, with a separate four-vertex prefix and suffix. Repeated
+two-vertex insertions encode exactly the actual (2,2,...,2) complement
+targets on n=8+2r vertices. Twenty initial queries and the previous large
+queries agree with the independently implemented general frontier transfer.
+
+The recurrence is certified by the full vector identity p(B)b=0. Its
+nonzero 18-by-18 Hankel determinant proves minimal scalar order over Q.
+The 18-by-35 observation matrix instead has the recorded Smith factors,
+rechecked by independent prime-power elimination at every nonunit prime.
+It defines the smallest quotient for arbitrary weights on these boundary
+states under bulk insertion and terminal observation. Its 16 binary or
+3^12 ternary states must not be confused with the particular initial
+trajectory's one or 726 states. Physical realization and larger operation
+languages may have different minima.
+
+The ternary scalar recurrence has degree 12, proved by a separate nonzero
+Hankel minor and a projected recurrence certificate. Exact polynomial
+arithmetic proves the degree-five factor irreducible, the field generator's
+order 121, and the nonzero square-zero layer in its g^2 quotient. The
+Hensel formula X-g/g' supplies a literal field lift. Cubing kills the
+nilpotent coordinate, so field Frobenius cannot be extended by naively
+cubing the entire local algebra. The degree-five field phase and the
+order-121 multiplication clock are separately typed.
+
+The actual recurrence-state orbit is checked until its first return,
+giving exact period 726 with no transient modulo 3 and 6. Minimality of
+the scalar recurrence, not the period alone, detects the five lost
+coordinates: the dimension-seven quotient still has clock order 726.
+The 66/70 and September Lucas sources are recovered as distinct arithmetic
+objects, not silently identified with this field or with Collatz paths.
+Normal and optimized replays agree. An exploratory variable-name collision
+was caught by JSON serialization before publication, renamed, and both
+replays rerun; it produced no accepted certificate.

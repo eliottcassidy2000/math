@@ -290,3 +290,10 @@ control is replayed unchanged. No extension of A000568 or complete
 size-eight class census is claimed. Meta-patterns used: recover the original
 source before composing; retain the first/last boundary; test the actual
 integral consumer instead of only its scalar mass.
+
+**12:00 UTC continuation:** [DEFECT_TRANSFER D2--D4](DEFECT_TRANSFER.md)
+answers the single-query compiler question for every first actual interval
+complement: its backward-arc cutwidth is at most two, giving O_k(n)
+arithmetic evaluation with paired components. The original interval source
+has width one in reversed order. Literal target distributions and bounded
+width under repeated complements remain separate obligations.
