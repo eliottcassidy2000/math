@@ -13,4 +13,4 @@ Live concepts: (1) exterior/cut/cycle, (2) positive cone visibility, (3) future-
 
 Each bridge names its map and lost information. Numerical identities alone are not identifications. No Collatz, LRC(14), or abc closure is claimed. Classical algebra and inherited results retain credit.
 
-Source worktree is clean/read-only pinned75bd8; newer precise blobs were read through the GitHub connector, with main baseline dfed31327fd60e611a4cbea7c6e0c6bb946d79b7. Bounded startup ran successfully; no machine identity invented. No authorized desktop/coding environment exists, so work uses this available cloud workspace and connectors.
+Historical source baseline: dfed31327fd60e611a4cbea7c6e0c6bb946d79b7. Subsequent concurrent wedge_descent_168 work is incorporated with its own pinned revision and independent narrow audit, preserving source attribution.
