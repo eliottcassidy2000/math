@@ -1,0 +1,342 @@
+{
+  "charts": {
+    "admissible_fixed_chart_samples": 990,
+    "nontrivial_odd_roots_in_samples": 3,
+    "sample_lags": [
+      0,
+      1,
+      2
+    ],
+    "sample_orders": [
+      3,
+      5,
+      7
+    ],
+    "theorem_is_symbolic": true
+  },
+  "cycles": {
+    "all_words": 21699,
+    "common_one_step_attachment": [
+      "37/35",
+      "221/175"
+    ],
+    "cone_tests": 13224,
+    "denominator_101_cycles_k3_H7": 5,
+    "dp_cases": 588,
+    "explicit_transports": [
+      {
+        "five": [
+          13,
+          33,
+          83
+        ],
+        "forcing": 101,
+        "three": [
+          "19/101",
+          "79/101",
+          "169/101"
+        ],
+        "word": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "five": [
+          17,
+          43,
+          27
+        ],
+        "forcing": 101,
+        "three": [
+          "31/101",
+          "97/101",
+          "49/101"
+        ],
+        "word": [
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "five": [
+          1,
+          3
+        ],
+        "forcing": 23,
+        "three": [
+          "5/23",
+          "19/23"
+        ],
+        "word": [
+          1,
+          4
+        ]
+      }
+    ],
+    "native_cycles": {
+      "3": [
+        {
+          "cycle": [
+            1
+          ],
+          "word": [
+            2
+          ]
+        }
+      ],
+      "5": [
+        {
+          "cycle": [
+            1,
+            3
+          ],
+          "word": [
+            1,
+            4
+          ]
+        },
+        {
+          "cycle": [
+            13,
+            33,
+            83
+          ],
+          "word": [
+            1,
+            1,
+            5
+          ]
+        },
+        {
+          "cycle": [
+            17,
+            43,
+            27
+          ],
+          "word": [
+            1,
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    "primitive_necklaces": 4788,
+    "universe": "positive valuation words k<=5, H<=20; primitive rotation orbits"
+  },
+  "fermat": {
+    "F5_fraction_of_units_detected": "261734/261735",
+    "F5_kernel": 16384,
+    "F5_odd_Hall": 261735,
+    "finite_certificates": [
+      {
+        "F_bits": 3,
+        "n": 1,
+        "three_projection": "1"
+      },
+      {
+        "F_bits": 5,
+        "n": 2,
+        "three_projection": "1"
+      },
+      {
+        "F_bits": 9,
+        "n": 3,
+        "three_projection": "1"
+      },
+      {
+        "F_bits": 17,
+        "n": 4,
+        "three_projection": "1"
+      },
+      {
+        "F_bits": 33,
+        "n": 5,
+        "three_projection": "3029026160"
+      },
+      {
+        "F_bits": 65,
+        "n": 6,
+        "three_projection": "8752249535465629170"
+      },
+      {
+        "F_bits": 129,
+        "n": 7,
+        "three_projection": "47511664169441434718291075092691853899"
+      },
+      {
+        "F_bits": 257,
+        "n": 8,
+        "three_projection": "113080593127052224644745291961064595403241347689552251078258028018246279223993"
+      },
+      {
+        "F_bits": 513,
+        "n": 9,
+        "three_projection": "13387457852131866017809974335626508736765841341908171621341620739066502578793457441078230804865246011339933833061458906559278633032869468345609327807927612"
+      },
+      {
+        "F_bits": 1025,
+        "n": 10,
+        "three_projection": "146809528970244036024821005514683473483244699825046485942988727983049278671435326268165085575181832374726912946280018892919388962699993405908818784177788470178225764936427450039582955979907044211973217849267621360435307454207055855850222255439616231847463892347771894224104545724927599853426578286430466818141"
+      }
+    ],
+    "uniform_base_three_claim": "OPEN: not inferred from this finite box"
+  },
+  "gates": {
+    "F5 Hall orders": 1,
+    "F5 factor certificate": 1,
+    "Hall fibers including prime powers": 7,
+    "all finite prefixes inhabited": 20,
+    "base three finite Fermat certificates": 10,
+    "base three unit": 10,
+    "base two blindness": 11,
+    "base two half clock": 11,
+    "carry phase clock": 19,
+    "composition universe": 1,
+    "cycle product": 14364,
+    "cyclotomic odd root rigidity samples": 9,
+    "denominator collision": 1,
+    "denominator prime to multiplier": 14364,
+    "even clock hostile control": 24,
+    "explicit transports": 3,
+    "finite prefix exact clock": 630,
+    "fixed chart effective cutoff": 3,
+    "fixed chart exclusion above cutoff": 588,
+    "forcing Mobius inversion": 168,
+    "independent modular powering": 10,
+    "inherited explicit order three": 1,
+    "inherited tournament hostile control": 1,
+    "integer cone sign reversal": 5,
+    "multiplier cone separation": 13224,
+    "native controls in finite box": 1,
+    "necklace Mobius integrality": 966,
+    "odd image orders": 7,
+    "odd rational domain": 65540,
+    "one shared attachment separates denominators": 1,
+    "rational phase recurrence": 64902,
+    "residue DP vs conductor divisor sum": 588,
+    "rotation denominator": 64902,
+    "scaled forcing": 8,
+    "word selector needed": 1
+  },
+  "hostile_81_27": {
+    "automorphisms": [
+      81,
+      27
+    ],
+    "common_labelled_cyclic_triples": 67,
+    "two_run_mod3_ranks": [
+      24,
+      22
+    ]
+  },
+  "repeated_word_fuel": {
+    "period_mod_101": 100,
+    "rows": [
+      {
+        "carry": 9,
+        "least_source": 23,
+        "repetitions": 1
+      },
+      {
+        "carry": 34,
+        "least_source": 11031,
+        "repetitions": 2
+      },
+      {
+        "carry": 5,
+        "least_source": 207639,
+        "repetitions": 3
+      },
+      {
+        "carry": 75,
+        "least_source": 398666519,
+        "repetitions": 4
+      },
+      {
+        "carry": 14,
+        "least_source": 9525472023,
+        "repetitions": 5
+      },
+      {
+        "carry": 8,
+        "least_source": 696720239383,
+        "repetitions": 6
+      },
+      {
+        "carry": 19,
+        "least_source": 211802952772375,
+        "repetitions": 7
+      },
+      {
+        "carry": 83,
+        "least_source": 118431293171247895,
+        "repetitions": 8
+      },
+      {
+        "carry": 33,
+        "least_source": 6027154004281338647,
+        "repetitions": 9
+      },
+      {
+        "carry": 91,
+        "least_source": 2127402722480879774487,
+        "repetitions": 10
+      },
+      {
+        "carry": 52,
+        "least_source": 155604313415744349219607,
+        "repetitions": 11
+      },
+      {
+        "carry": 73,
+        "least_source": 27960898164552215367461655,
+        "repetitions": 12
+      },
+      {
+        "carry": 85,
+        "least_source": 4167322904525042509561408279,
+        "repetitions": 13
+      },
+      {
+        "carry": 63,
+        "least_source": 395356375318705209377684663063,
+        "repetitions": 14
+      },
+      {
+        "carry": 36,
+        "least_source": 28917494880453866743053506784023,
+        "repetitions": 15
+      },
+      {
+        "carry": 35,
+        "least_source": 3598621585123147861357769733122839,
+        "repetitions": 16
+      },
+      {
+        "carry": 20,
+        "least_source": 263213464511864529287882586194127639,
+        "repetitions": 17
+      },
+      {
+        "carry": 98,
+        "least_source": 165087484941841432769359958060956855063,
+        "repetitions": 18
+      },
+      {
+        "carry": 56,
+        "least_source": 12074970327174687653987471218172844256023,
+        "repetitions": 19
+      },
+      {
+        "carry": 32,
+        "least_source": 883197829644777154120226466243499465583383,
+        "repetitions": 20
+      }
+    ]
+  },
+  "total_gates": 240402
+}
