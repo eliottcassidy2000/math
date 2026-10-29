@@ -1,0 +1,46 @@
+{
+  "source_commit": "d3132eafbfa9c43c6d9f1110566b1e9c3a3286e1",
+  "source_path": "05-knowledge/results/operation_closed_synthesis_20261029/tournament_results.json",
+  "records": {
+    "dc": {
+      "bits": "100001100111111",
+      "word": "dc",
+      "type": "A",
+      "det_plus": 1,
+      "det_minus": 1,
+      "det": 1
+    },
+    "ecb": {
+      "bits": "100000100001010111111",
+      "word": "ecb",
+      "type": "B",
+      "det_plus": 1,
+      "det_minus": -1,
+      "det": -1
+    },
+    "cbe": {
+      "bits": "100000100101011111111",
+      "word": "cbe",
+      "type": "B",
+      "det_plus": 64,
+      "det_minus": 0,
+      "det": 0
+    },
+    "de": {
+      "bits": "100001000101111",
+      "word": "de",
+      "type": "B",
+      "det_plus": 1,
+      "det_minus": 1,
+      "det": 1
+    },
+    "ed": {
+      "bits": "100001000100111",
+      "word": "ed",
+      "type": "B",
+      "det_plus": 1,
+      "det_minus": 1,
+      "det": 1
+    }
+  }
+}
