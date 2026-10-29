@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-29 — a common fixed point and a reciprocal telescope do not imply universal attraction
+
+- **Source:** `07-reflections/the-recursive-mindset-phi6-iteration-is-sylvester-the-observers-one-is-the-apex-egyptian-fraction-opus-20260630.md`, June30, title, universal-flow section and old status.
+- **Minimal witnesses:** Φ₆(2)=3 and its orbit grows2,3,7,43,...; iterating the allowed add-one map also diverges. For real f(x)=x²−x+1, the exact basin of1 is[0,1], not all real or positive integer sources.
+- **First failed implication:** f(1)=1, or the sum of reciprocal denominators tending to1, makes the state recursion converge to1. It confuses an observable limit with the underlying state dynamics, and also changes the iteration rule.
+- **Repair / strongest survivor:** a maintained warning preserves the historical text; the Sylvester recurrence, pairwise coprimality and Egyptian-fraction telescope remain valid. `05-knowledge/results/quasirandom_order_lifts_20261029/README.md`, §8 proves the exact basin, and P5 distinguishes real growth from the actual19-adic return law.
+- **Missing coordinate / new question:** retain the map, source and topology before transferring attraction or cancellation. No Collatz or LRC implication follows from the repaired identity.
+
 ## 2026-10-29 — a failed Hamilton-count heuristic is not an impossibility theorem
 
 - **Source:** THM-1390 / `theorems/THM-1390-leverage-audit-five-threads.md`, part(I).

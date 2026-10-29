@@ -1,3 +1,13 @@
+> **HISTORICAL REFLECTION — CORRECTION (2026-10-29).** The universal-attractor
+> statements in the title, body and old status below are **REFUTED**. For
+> f(x)=x²−x+1, f(x)−x=(x−1)²; its exact real basin of1 is[0,1], whereas the
+> displayed orbit from2 grows without bound. Iterating x+1 also diverges.
+> The valid Sylvester recurrence, pairwise coprimality and reciprocal telescope
+> survive. A fixed point or a limiting observable is not a universal basin.
+> See [the proof and scope repair](../05-knowledge/results/quasirandom_order_lifts_20261029/README.md),
+> §8, and the 2026-10-29 mistake entry. No covering/LRC claim in this historical
+> reflection is promoted by that repair. Original prose follows for provenance.
+
 # The recursive mindset, pushed: iterating the covering-min denominator Φ₆(n)=n(n−1)+1=b(2T_{n−1}) IS Sylvester's sequence 2,3,7,43,1807,… (the apex primes 3,7 are its first odd terms, Φ₆(2)=3, Φ₆(3)=7), and the OBSERVER'S irreducible 1 is exactly its Egyptian fraction 1/2+1/3+1/7+1/43+…→1 (telescoping 1/(a−1)−1/(a²−a)=1/a); the doublet {0,1}={0,b(0)} is origin+observer (the apex minimal core), the Cayley-Dickson tower is n=2^k+1=b(2^k), and EVERY flow of a=÷2, b=+1 converges to the fixed point 1 — the two columns are both the observer's +1, on the minimal core (doublet) and on the doubled triangle (cover)
 
 *opus-2026-06-30. Owner: push the recursive functional thinking further, extend creatively, get into the
