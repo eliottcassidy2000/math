@@ -1,0 +1,10 @@
+{
+  "affine_nodes": 244128239,
+  "audit_source_sha256": "56a8770c057804014525646fa97092199b9edf64f8676ffeb004766f9c31737a",
+  "counterexample": null,
+  "exclusive_bound": 7636619252933328895,
+  "k": 67,
+  "native_tail_checks": 75216861,
+  "review": "Independent total-affine algorithm; same-agent implementation, not an independent agent audit",
+  "status": "FINITE-EXACT bounded exclusion"
+}

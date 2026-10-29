@@ -1,0 +1,64 @@
+{
+  "explicit_checks": 18,
+  "fixed_integer": 1806,
+  "limit": 1000000,
+  "prime_count": 78498,
+  "rows": [
+    {
+      "clock": 0,
+      "least_possible_discrepancy": 2,
+      "lower_count": 0,
+      "upper_count": 78498
+    },
+    {
+      "clock": 1,
+      "least_possible_discrepancy": 3,
+      "lower_count": 1,
+      "upper_count": 29397
+    },
+    {
+      "clock": 2,
+      "least_possible_discrepancy": 7,
+      "lower_count": 2,
+      "upper_count": 5745
+    },
+    {
+      "clock": 3,
+      "least_possible_discrepancy": 43,
+      "lower_count": 3,
+      "upper_count": 935
+    },
+    {
+      "clock": 4,
+      "least_possible_discrepancy": 283,
+      "lower_count": 4,
+      "upper_count": 148
+    },
+    {
+      "clock": 5,
+      "least_possible_discrepancy": 1319,
+      "lower_count": 4,
+      "upper_count": 30
+    },
+    {
+      "clock": 6,
+      "least_possible_discrepancy": 55399,
+      "lower_count": 4,
+      "upper_count": 11
+    },
+    {
+      "clock": 7,
+      "least_possible_discrepancy": null,
+      "lower_count": 4,
+      "upper_count": 4
+    }
+  ],
+  "selected_primes": [
+    2,
+    3,
+    7,
+    43
+  ],
+  "source_sha256": "9a8c525b275014766df86b1dcddd6d0ac164aff3c61b5b671a70464c9d86d1e0",
+  "status": "FINITE-EXACT bounded coordinates, all initial banks"
+}

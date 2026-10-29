@@ -1,0 +1,38 @@
+{
+  "base_commit": "c49370cdbf6c331a735a17c690a8e865beb3ac2b",
+  "cpp_sanitizer": {
+    "command": "c++ -std=c++17 -O1 -fsanitize=undefined,unsigned-integer-overflow least.cpp; UBSAN_OPTIONS=halt_on_error=1 binary 40",
+    "scope": "horizons1..40 exact output identical to first forty producer rows",
+    "status": "PASS"
+  },
+  "incoming_read": [
+    "a1777fe4d4",
+    "26aaf41b0c",
+    "193329556d"
+  ],
+  "normal_optimized_identical": [
+    "check.py",
+    "prime_dependency.py"
+  ],
+  "scope": "Proof notes and exact finite computations; no universal Collatz or six-colour closure",
+  "sha256": {
+    "ATOMIC.md": "551b5731f9fa4e51c5852b520878035c9dc23f9f068de68b2ce971a5968ebd7e",
+    "PRIME_DEPENDENCY.md": "00520d37cb7d562c8146e13e9083619818e7361bd85d3f802389820d47319b99",
+    "README.md": "fdb0ab1e7a49a6b6578b9ad47fc7bf629db676ae23ae75c7f6a730c5feac135a",
+    "RECOVERY.md": "f5a6ff544ffcfbbe2de72ab8d25b28a4789d92f170c1a49d74a9b32e768eeda9",
+    "WEDGE_GEOMETRY.md": "2a0c4e0281fc3533d4e6cf3b955a28da4f41d70789432f6aa39f4d282d6f1401",
+    "audit_bound.py": "56a8770c057804014525646fa97092199b9edf64f8676ffeb004766f9c31737a",
+    "audit_minimum.py": "957f8183ce791dd575636770e0277b00032db2aafd6f405385ac7c2482beb89a",
+    "bound67_audit.json": "af05591c84eec7908639818b5797bfa1ef796fefd5dc2b519a7580aa1a370f9a",
+    "check.py": "1b3cb5183a050464d54d957cf72399cf2c9fbd4e50809e6c07c8026068edf9e9",
+    "checks.json": "c882eaa3bc330816ce74d19c9b78754b25e458cd28b3b2a81fbcebe52854f2db",
+    "inherited40.json": "1cd56d32649e9b2f59a11129730fa83e64da54d90d8b82f084d8cb0303a3cd89",
+    "least.cpp": "0c038de6e62f2e3d59d89a0f601da6d4f675d66691d71586a3411fabfed82741",
+    "least60.json": "32298b3fe175d3c2a86ab8db065bb19d62356b41d2f53c9f74311cc1d63cb005",
+    "minimum_audit.json": "073d23a3db5de51766634ef27011a467b47b529b92742bb960936a662255c580",
+    "prime_checks.json": "349c296e70342f71bdb31324e7d7fe9ff4a3c4d5bc769e40bd249dfa6ce95e40",
+    "prime_dependency.py": "9a8c525b275014766df86b1dcddd6d0ac164aff3c61b5b671a70464c9d86d1e0",
+    "window_checks.json": "d68d7b2dfe909ee06df0c7fe96b7e47ec30111a77b6efa4c15cd4ffc93fbb8a6",
+    "window_hostile.cpp": "2e2ef2974fad5538f7a7137a7f528174fb327c3a571f44fb3ad18f76e6c578bb"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "positive_control": {
+    "counterexample": true,
+    "endpoint": "146016798311649430222923959",
+    "exclusive_bound": 59501570680684544,
+    "k": 55,
+    "source": 59501570680684543,
+    "visited": 38142325,
+    "word": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "rows": [
+    {
+      "counterexample": false,
+      "exclusive_bound": 9773493361049599,
+      "k": 61,
+      "visited": 17291156
+    },
+    {
+      "counterexample": false,
+      "exclusive_bound": 416510994764791807,
+      "k": 62,
+      "visited": 89716687
+    },
+    {
+      "counterexample": false,
+      "exclusive_bound": 416510994764791807,
+      "k": 63,
+      "visited": 89716687
+    },
+    {
+      "counterexample": false,
+      "exclusive_bound": 416510994764791807,
+      "k": 64,
+      "visited": 89716687
+    },
+    {
+      "counterexample": false,
+      "exclusive_bound": 502749620284162047,
+      "k": 65,
+      "visited": 97997700
+    },
+    {
+      "counterexample": false,
+      "exclusive_bound": 502749620284162047,
+      "k": 66,
+      "visited": 97997700
+    },
+    {
+      "counterexample": false,
+      "exclusive_bound": 7636619252933328895,
+      "k": 67,
+      "visited": 324667175
+    }
+  ],
+  "scope": "FINITE-EXACT out-of-sample seven-return lower bounds, horizons61..67",
+  "source_sha256": "2e2ef2974fad5538f7a7137a7f528174fb327c3a571f44fb3ad18f76e6c578bb"
+}

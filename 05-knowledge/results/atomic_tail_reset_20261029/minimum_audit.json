@@ -1,0 +1,37 @@
+{
+  "audit_source_sha256": "957f8183ce791dd575636770e0277b00032db2aafd6f405385ac7c2482beb89a",
+  "input_sha256": "32298b3fe175d3c2a86ab8db065bb19d62356b41d2f53c9f74311cc1d63cb005",
+  "producer_source_sha256": "0c038de6e62f2e3d59d89a0f601da6d4f675d66691d71586a3411fabfed82741",
+  "review": "Independent algorithms by one agent; not an independent agent audit",
+  "rows": [
+    {
+      "affine_nodes": 153471,
+      "k": 40,
+      "least_source": 406360948735,
+      "native_tail_checks": 43755,
+      "status": "PASS"
+    },
+    {
+      "affine_nodes": 4256831,
+      "k": 50,
+      "least_source": 716331825496063,
+      "native_tail_checks": 1086115,
+      "status": "PASS"
+    },
+    {
+      "affine_nodes": 28687171,
+      "k": 55,
+      "least_source": 59501570680684543,
+      "native_tail_checks": 8825516,
+      "status": "PASS"
+    },
+    {
+      "affine_nodes": 101841393,
+      "k": 60,
+      "least_source": 1090945607561904127,
+      "native_tail_checks": 34350291,
+      "status": "PASS"
+    }
+  ],
+  "scope": "Independent affine-cylinder audit; each stated horizon searches all positive odd sources"
+}
