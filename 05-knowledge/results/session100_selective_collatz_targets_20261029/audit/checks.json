@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "counts": {
+    "exhaustive_cylinders": 117,
+    "denominator_prehistories": 1452,
+    "controller_runs": 5000,
+    "barrier_triggers": 15716
+  },
+  "prior_not_endpoint_descent": {
+    "b": 3,
+    "n0": 165,
+    "k": 17,
+    "endpoint": 167,
+    "S": 27
+  },
+  "scope": "Finite checks only; infinite claims separately proof-audited."
+}
