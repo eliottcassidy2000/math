@@ -1,0 +1,18 @@
+{
+  "conjugacy_class_sizes": [
+    1,
+    21,
+    24,
+    24,
+    42,
+    56
+  ],
+  "extended_group": 336,
+  "generator_model": "translation, negative inversion, nonsquare dilation",
+  "positive_group": 168,
+  "possible_normal_orders": [
+    1,
+    168
+  ],
+  "status": "FINITE-EXACT"
+}
