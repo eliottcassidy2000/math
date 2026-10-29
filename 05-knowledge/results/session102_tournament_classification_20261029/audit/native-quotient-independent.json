@@ -1,0 +1,38 @@
+{
+  "census": [
+    {
+      "component_size_histogram": {
+        "4": 2
+      },
+      "edges": 6,
+      "n": 3,
+      "vertices": 8
+    },
+    {
+      "component_size_histogram": {
+        "64": 1
+      },
+      "edges": 96,
+      "n": 4,
+      "vertices": 64
+    },
+    {
+      "component_size_histogram": {
+        "512": 2
+      },
+      "edges": 3840,
+      "n": 5,
+      "vertices": 1024
+    },
+    {
+      "component_size_histogram": {
+        "16384": 2
+      },
+      "edges": 368640,
+      "n": 6,
+      "vertices": 32768
+    }
+  ],
+  "method": "all ordered paths, all free nonpath orientations; direct union-find",
+  "status": "FINITE-EXACT"
+}
