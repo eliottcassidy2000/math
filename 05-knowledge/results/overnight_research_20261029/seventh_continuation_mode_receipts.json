@@ -1,0 +1,52 @@
+[
+  {
+    "script": "ternary_form_strata.py",
+    "normal_optimized_byte_identical": true,
+    "canonical_sha256": "d61d2f0f2c1e1daa2c9dc09256931f90654ec81e99823757ec0be06266975de0",
+    "summary": {
+      "gates": 168036,
+      "radical_distribution": {
+        "8": 324,
+        "12": 324,
+        "14": 70,
+        "16": 10,
+        "18": 1
+      },
+      "optimal_representative_count": 20,
+      "optimal_orbit_sizes": [
+        9,
+        9,
+        9,
+        9,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18,
+        18
+      ]
+    }
+  },
+  {
+    "script": "periodic_precision_obstruction.py",
+    "normal_optimized_byte_identical": true,
+    "canonical_sha256": "ef569a92c68e10841c1a62071b2653be280e49181f5289758a2094a3b22be7af",
+    "summary": {
+      "gates": 177,
+      "image_log_formula": "12*h + 5*max(h-2,0) + max(h-2-2*r,0)",
+      "actual_initial_preperiod_formula": "ceil(max(h-4,0)/2)",
+      "source_line_valuation": 2,
+      "initial_line_valuation": 4
+    }
+  }
+]

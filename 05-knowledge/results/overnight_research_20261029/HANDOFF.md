@@ -200,8 +200,8 @@ runs agree. This is a same-agent alternative-path audit.
 
 Next: try a native index3^10 completion. Starting from a source form with
 radical3^8, it needs one radical-increasing and nine decreasing steps.
-Starting with radical3^10, it needs ten decreasing steps. BOTH branches
-matter for a complete exclusion. A cheap exploratory pass of13 canonical
+The seventh continuation below now excludes the other proposed branch:
+there are NO invariant forms with radical3^10. A cheap exploratory pass of13 canonical
 first carries with greedy continuations returned to radical3^8 and stopped;
 this is NOT a census or an obstruction. No successful3^10 chain is saved.
 The full paired minimum now has form2^40*3^a*11^6*79^3*5861^6*392809^3
@@ -238,6 +238,44 @@ normal/optimized receipts. This is NOT a constructed native attachment
 or vertex symmetry. The next test is realization in the native operation
 language with its selector transported. Do not identify the two ternary
 modules, or infer arithmetic Selmer compatibility from either lift.
+
+The seventh continuation closes the source-form census in
+[TERNARY_FORM_STRATA](TERNARY_FORM_STRATA.md). The full invariant-form group
+is C3^4+C9, exactly729 forms. Radical counts are324 at3^8,324 at3^12,
+70 at3^14,10 at3^16, and one at3^18. In particular the radical3^10 branch
+does not exist. Independent integer/local Smith calculations check every
+form. Explicit clock-intertwining source maps reduce the324 optimal forms
+to20 sufficient representatives (four orbits of9 and sixteen of18 under
+the certified subgroup). These are not claimed inequivalent under the
+entire centralizer. Keep the spanning-tree source maps and port projection.
+
+Any index3^10 completion has a necessary extra symplectic F3 plane
+P=V-perp/R. Its run cycle is trivial, its run swap is+I or-I, and its
+vertex clock is identity or one of two unipotent symplectic conjugacy
+classes. All18 literal actions and six classes are enumerated. The next
+test is120 sufficient source-form/plane-action cases, with the extension
+carries still unresolved: first construct L=R-perp of index9 over V,
+then a coisotropic completion of L of index3^8. No candidate chain is
+claimed complete. The overall lower bound3^10 has not increased.
+
+[PERIODIC_PRECISION_OBSTRUCTION](PERIODIC_PRECISION_OBSTRUCTION.md) gives
+an all-height, all-step recurrence for the single-selector weighted
+observer: log_3|T^r W_h|=12h+5(h-2)_+ +(h-2-2r)_+. A unique contracting
+Hensel root has valuation2; its source lattice amplitude has valuation2,
+while the actual initial prefix has amplitude valuation4. Thus the
+actual scalar sequence modulo3^h has exact preperiod ceil((h-4)_+/2)
+and eventual period726*3^(h-1). These are symbolic consequences of the
+literal projector and first-return valuations, not fits to finite data.
+
+The full weighted carrier has |T W_5|=3^76 and |T^487 W_5|=3^75, so no
+bijection can extend the clock conjugacy at modulus243. On the actual
+source orbit alone, y_r->y_(487r) gives compatible bijections through
+h=6 and fails from h=7 onward. At modulus2187, b_1=38 differs from
+b_529255=1496, but the reindexed response windows coincide. The35 literal
+boundary-state responses also cannot realize Frobenius by permutation:
+27 move outside the column set. Pure bulk words are excluded by the
+centralizer/normalizer distinction. The full operation-language question
+must be checked against newly supplied native generators.
 
 Incoming6b83fd8383 strengthens all396 native recovery certificates to
 strong targets whenever a second observation is needed; C3 needs zero
@@ -306,8 +344,9 @@ then their targeted proofs. Recent Session97 additions include:
    All2/3 clock matrices are NOW CLOSED, and the full dyadic injective
    minimum is index2^40. Ternary index3^8 is now excluded for all source
    forms. Next construct or exclude index3^10, with all joint clocks.
-   Use the two possible initial radical orders and step budgets in the
-   sixth-continuation note. The supplied common radical type(1,1,1,2,3),
+   Use the20 sufficient optimal source forms and six necessary extra-plane
+   actions in the seventh continuation; the radical3^10 source branch is
+   excluded. The supplied common radical type(1,1,1,2,3),
    nine-coordinate matrices, source maps and all-form first-step
    certificates must be retained. Separately classify
    pure full-clock completions. The root constructions do not retain

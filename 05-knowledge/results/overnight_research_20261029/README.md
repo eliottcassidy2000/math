@@ -13,6 +13,13 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Complete ternary form strata](TERNARY_FORM_STRATA.md): all729 invariant
+  forms, no radical3^10 branch,20 sufficient optimal source representatives,
+  and six necessary extra-plane clock types for an index3^10 completion.
+- [Precision recurrence and Frobenius boundary](PERIODIC_PRECISION_OBSTRUCTION.md):
+  exact all-height image sizes, actual preperiod ceil((h-4)_+/2) and period
+  726*3^(h-1). Full weighted conjugacy fails at243; the source-orbit lift
+  exists through3^6 and fails from3^7. Boundary permutations fail too.
 - [Compatible CRT Frobenius lift](PERIODIC_FROBENIUS_LIFT.md): incoming
   native periodic complements supply a degree-five F243 phase of order121
   and a12-dimensional ternary response. The explicit lift X->X^487

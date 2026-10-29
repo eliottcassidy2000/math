@@ -228,7 +228,9 @@ Failure of a greedy chain is not an exclusion: retain all carry,
 character, and source-form choices needed for a complete search or find
 a new invariant obstructing every chain. A complete index3^10 exclusion
 must ALSO consider invariant source forms with radical order3^10 and
-ten decreasing steps; the optimal-radical branch does not cover those.
+ten decreasing steps. **Subsequent closure:** the complete
+[729-form census](TERNARY_FORM_STRATA.md) now proves that no such forms
+exist, and reduces the324 optimal forms to20 sufficient representatives.
 The pure full-clock minimum and native attachment realization remain
 separate problems. Sha finiteness, Collatz, and LRC(14) remain open.
 

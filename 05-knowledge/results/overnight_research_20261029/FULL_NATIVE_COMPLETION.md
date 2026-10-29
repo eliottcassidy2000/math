@@ -339,8 +339,9 @@ or a consequence of the completion theorem.
 
 The index3^8 question is now closed negatively in the continuation above.
 Next test index3^10: with the saved optimal form, allow one radical-increasing
-step and nine decreasing steps. A complete exclusion must also consider
-source forms with radical3^10 and ten decreasing steps. The second
+step and nine decreasing steps. The later [complete form census](TERNARY_FORM_STRATA.md)
+excludes every radical3^10 source form, reduces the optimal forms to20
+sufficient representatives, and gives six necessary extra-plane actions. The second
 question is the pure
 full-clock minimum: neither N2 nor the root recurrence promises ordinary
 quotient compatibility. Native complement and arithmetic Selmer maps
