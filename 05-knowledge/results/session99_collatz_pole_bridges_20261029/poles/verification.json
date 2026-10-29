@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "arithmetic": "exact fractions",
+  "core_mass_max": 18,
+  "core_count": 46,
+  "inserted_lengths": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "Taylor_degree_max": 35,
+  "top_core_k_max": 10,
+  "general_lengths": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "general_k_max": 5,
+  "general_Taylor_degree_max": 55,
+  "pantograph_degree_max": 60,
+  "coefficient_equalities": 8425,
+  "hostile_same_labels": {
+    "cores": [
+      [
+        3,
+        7
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "k": 4,
+    "m": 10,
+    "h3": [
+      4,
+      2
+    ],
+    "response_ratio": 4
+  }
+}
