@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "normal_optimized_identical": true,
+      "receipt": "tournaments/verification.json",
+      "script": "tournaments/verify_tournament_controls.py",
+      "stdout_sha256": "4a23a0c48713a2c2b5ad174b58d3e35a36236dda6e98d62fbcb9187a3b12266b",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "spectra/checks.json",
+      "script": "spectra/check_spectra.py",
+      "stdout_sha256": "52334de2e1e9f98cdb197c774f136e5cc3dcbcb34b8ff85aa15a73a6e0635e3c",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "continuations/checks.json",
+      "script": "continuations/check_continuations.py",
+      "stdout_sha256": "cde33362d822953d0a0ed8ba1d980efccbffb13bd53f0ae3e26076f916779e51",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "symmetry/receipt.json",
+      "script": "symmetry/check_swap_observer.py",
+      "stdout_sha256": "a52a9150a8fc141adf95e708f634e9491e5e8832b9889d69d48dcc2ec912b34f",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "squarefree/checks.json",
+      "script": "squarefree/check_squarefree.py",
+      "stdout_sha256": "61b039d7af7f0dddd6c8510b4c305c5eef22cb2494f5bf254ee5cc8f86431c66",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "lattices/checks.json",
+      "script": "lattices/check_lattices.py",
+      "stdout_sha256": "229756312cc8c5f1602ab8df53353c980c5370f463b48a5b92cb22c4114cf166",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/results.json",
+      "script": "audit/independent_check.py",
+      "stdout_sha256": "387da1c57926307dc86bfc0891969f24f73b22d5243300a409b6a514f4c46fec",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/squarefree_results.json",
+      "script": "audit/squarefree_check.py",
+      "stdout_sha256": "608929fd877b8a27d9850d5b573f90621cc070b0cd46b9bab7885c18cfbaa90d",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/lattice_results.json",
+      "script": "audit/lattice_check.py",
+      "stdout_sha256": "493933835c9438ee091839289f92182b67ede6d9439b2904bc4a1ce3eae4f0f1",
+      "stored_receipt_matches": true
+    }
+  ],
+  "scope": "Nine mathematical scripts. No unrestricted Collatz conclusion or CI pass.",
+  "status": "VERIFIED"
+}
