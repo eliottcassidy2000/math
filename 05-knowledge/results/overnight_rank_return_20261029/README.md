@@ -4,6 +4,18 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+**13:00 UTC continuation.** [TERMINAL_SELECTOR S1--S6](TERMINAL_SELECTOR.md)
+closes the periodic weighted observer under all six terminal assignments.
+The same 35 component states and degree-18 clock now expose rank 24 over Q,
+with exact all-precision Smith factors. Four fixed selectors are necessary
+and sufficient integrally; two suffice over Q or F3. A nonnegative mass-two
+pair agrees under every old bulk observation but a terminal swap separates
+it. Modulo three the added memory is one F243 amplitude plus one F3
+amplitude, without changing period 726. The six physical count series have
+constant parity (0,0,0,1,1,1). Natural reflection has fixed covers already at
+eight, so it cannot serve as the proposed free pairing. General vertex
+re-marking, new actual complements and physical-law minimality remain open.
+
 **12:00 UTC continuation.** [DEFECT_TRANSFER D1--D8](DEFECT_TRANSFER.md)
 extends joint-port counting to actual complements. For a supplied order of
 backward-arc cutwidth c, an exact component-pairing transfer evaluates a

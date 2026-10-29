@@ -348,3 +348,42 @@ objects, not silently identified with this field or with Collatz paths.
 Normal and optimized replays agree. An exploratory variable-name collision
 was caught by JSON serialization before publication, renamed, and both
 replays rerun; it produced no accepted certificate.
+
+### 13:00 UTC: terminal-selector closure and exact fixed-bank minima
+
+TERMINAL_SELECTOR specifies six terminal assignments on the inherited
+actual periodic targets. It rebuilds all 35 reachable component states,
+their bulk transitions and the common S3 action. Each of the six terminal
+columns satisfies the entire old monic polynomial identity. Their stacked
+observation lattice consequently closes every interleaving of the specified
+name action and bulk insertion, without extrapolating to vertex re-marking
+or actual complement closure.
+
+Exact rational rank 24 is checked against a modular lower bound. Trivial,
+sign and standard sectors have dimensions 11,1,12 and explicit full-vector
+annihilators. FLINT Smith factors are independently checked by the existing
+pure-integer primary elimination at every prime in their support. All 32
+fixed banks containing the identity are tested by row Hermite lattices and
+modular ranks. A four-selector bank generates the entire integer lattice;
+every triple has binary rank below nine. Common transport removes the
+identity-inclusion restriction. Adaptive query complexity is not claimed.
+
+The equal-mass witness has two positive unit states on each side. All its
+old observations agree, while one terminal swap gives counts 1 and 2.
+Reachability of the states does not prove that the mixtures are the complete
+laws of unconditioned graph prefixes. This realization guard is explicit.
+The modular clock nullities certify binary blocks 4,2,2,1 and ternary
+modules of dimensions 12 and 6; the latter retains one additional independent
+F243 amplitude. Common clock period 726 does not identify these amplitudes.
+
+Forty-eight frontier queries and eighteen independent subset queries check
+the selected native entries. Direct cover enumeration supplies all six
+size-eight counts and reflection-fixed counts 2,6,26 at orders 8,10,12.
+The natural-reflection proposal failed because it has fixed covers; this
+is a recorded exploratory near miss, not a retraction of a published claim.
+Session24's reversal-fixed coordinate supplies the inherited mechanism.
+Incoming 44422c827a's separate Paley7 lower bound 3^10 is retained with its
+attainment question open. Both normal and optimized new replays pass.
+An initial checker call used the wrong subset_query signature; it failed
+before writing a receipt, was corrected to the independent subset table,
+and every verification was rerun.

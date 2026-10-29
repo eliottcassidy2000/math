@@ -191,3 +191,12 @@ Open next targets: find a path-level involution explaining the even counts;
 extend E3 to additional periodic run words and allowed complement operations;
 and determine when a realization-constrained family can discard nilpotent
 response coordinates that arbitrary weighted states demonstrably need.
+
+**13:00 UTC extension:** [TERMINAL_SELECTOR S1--S6](TERMINAL_SELECTOR.md)
+now closes E3 under the six terminal assignments, retaining the same 35
+states but increasing rational observation rank to 24. The sharp fixed
+bank has four selectors over all integers, two over Q or F3. Its exact
+Smith factors and unchanged degree-18 clock separate multiplicity memory
+from clock complexity. Three physical selectors have odd counts at every
+size. The natural reflection has fixed covers, so the free-involution
+proposal remains open even for the original even selector.
