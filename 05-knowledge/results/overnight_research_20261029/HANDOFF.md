@@ -73,6 +73,28 @@ Paley7 coefficient triples(15,12,12),(-11,2,2) to phases(3,0),(-13,0).
 Retain h and h-a+b=0 mod3 to invert the map; the clock is A^(-T).
 Its image count m^3/gcd(m,3) is NOT the nonlinear determinant count.
 
+The third continuation completes [THREE_RUN_GLUE](THREE_RUN_GLUE.md)
+and [CLOCK_MINIMAL_PAIRING](CLOCK_MINIMAL_PAIRING.md). The S3 coefficient
+lattice has index54 and an exact four-congruence inverse. T5's full
+three-run Smith form is1^52,3^2,6^2,0^4; the unglued split adds four
+spurious Z/6 factors. A complete order4 census proves the five-vertex
+boundary for this specified split. Paley7's full210-factor Smith form
+and six elementary odd-primary translation modules are certified.
+At11,79,5861,392809 the module has no reciprocal constituents, so every
+invariant bilinear form vanishes and hyperbolic doubling is optimal,
+even for the full source automorphism group. This includes the square-
+order, abstractly paired11-group: retaining clocks changes the minimum.
+The raw Paley7 cokernel has squarefree order part79*392809 and is ruled
+out as finite principally polarized Sha by cited Poonen--Stoll Corollary9.
+No arithmetic realization or finiteness theorem follows from doubling.
+
+Incoming e9e53cf3ed independently supplies the same S3 lattice and
+native2/3-primary layers, plus a stronger T5 complement test: all15
+Hamilton-path complements expose all four tetrahedron-boundary kernel
+directions in the named weight space. It also closes the prime-power
+Paley-pencil law in PRIME_POWER.md using a Jacobi carry recurrence.
+Credit those shared/stronger results, and do not restart either census.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -125,11 +147,15 @@ then their targeted proofs. Recent Session97 additions include:
    with original ports, integral gluing and complemented target relation
    retained. Keep branching experiments separate from a supplied single
    run that terminates at singularity. No native minimality follows yet.
-   Incoming TWO_RUN now supplies the native two-run matrices, sector
-   parity glue and a stronger81/27 separator. A concrete next test is
-   the three-run S3-sector lattice: its projector denominators suggest
-   testing both2 and3 for lost glue, while retaining the complemented
-   target relation. Check incoming work before duplicating this census.
+   The three-run S3 lattice and small native cases are now CLOSED in
+   our continuation and the simultaneous incoming THREE_RUN packet.
+   The next decisive pairing test is the actual clock action on every
+   2- and3-primary layer of Paley7, beyond G/pG, to decide the minimum
+   full compatible completion. At5 and17 zero added dimension is proved
+   for C7 only; test the extra affine/run clocks before generalizing it.
+   For native attachment minimality, extend the incoming T5 complement
+   reconstruction while retaining target relation and chosen-path phase;
+   its fully vertex-invariant12-dimensional language is different.
 2. Replace abstract paired-group realization by an actual source-fixed
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with

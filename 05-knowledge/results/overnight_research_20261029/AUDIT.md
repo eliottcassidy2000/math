@@ -205,3 +205,45 @@ cardinality and every fiber size. The two native coefficient triples
 are read from the replayed two_run.json, not generated from the desired
 norms. The map is a classical integral C3 decomposition with an explicit
 application; it is not a theorem of native attachment realizability.
+
+## Native three-run and minimum clocked pairing continuation
+
+`three_run_glue.py` passes100,190 active gates normally and optimized,
+with identical stdout. Native matrices on C3, the declared strong
+order4 source, T5 and Paley7 are computed by subset path products and
+complete permutations with two cuts. All64 labelled order4 tournaments
+reach four classes and have complete Smith agreement with the split.
+Every actual tournament automorphism and the named port order are retained.
+
+The S3 matrix/inverse and all36 representation products are checked.
+Complete source universes modulo2,3,4,6 and all46,656 targets modulo6
+verify the guard. Two direct general Smith runs supplied the saved
+reference. The fast replay uses exact Bareiss determinants, a certified
+prime bank and complete modular layers, rejecting any unaccounted factor.
+Local invertibility away from2,3 plus the actual exceptional layers
+reconstructs the full Paley7 Smith form. All496 nonsingular small
+matrices separately check hyperbolic duplication.
+
+The six odd exponent-one cokernels retain their entire projection from
+210 named coordinates and a literal translation intertwiner. Cyclotomic
+products, source dimensions and reciprocal partners are checked. At the
+four totally unpaired primes an independent bilinear linear system has
+zero-dimensional kernel; the doubled dual clock preserves the pairing.
+
+A preliminary SymPy modular factor call raised `nmods cannot be ordered`
+before writing a receipt. The final verifier uses explicit quadratic-
+period cubic factors, checking their product and exact Frobenius degree.
+The final normal/optimized outputs agree; no failed receipt is promoted.
+
+The81/27 controls retain equal67 cyclic triples and complete vertex
+orbits. All singleton-third-run deletion types have exact ranks at2,3,5
+and selected independent walk-inclusion-exclusion checks. This is not
+a full1320-dimensional Smith census. Poonen--Stoll Corollary9 was checked
+in the primary paper; its finite principally polarized Sha statement
+is a cited input, separate from our matrix and completion proofs.
+
+The META-PATTERNS card used was integralize after descent. THM-2785's
+common-atom boundary remains a warning against transferring Fourier
+data without the fully marked object. Incoming e9e53cf3ed independently
+supplies the shared S3/primary result and a stronger native complement
+reconstruction; those contributions are credited, not claimed anew.

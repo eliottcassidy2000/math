@@ -1,0 +1,7 @@
+{
+  "script": "three_run_glue.py",
+  "normal_optimized_identical": true,
+  "stdout_sha256": "b98d38f3eaea0393849d4721907e82440f2f43c701dff8a6206252ae9c59fd01",
+  "gates": 100190,
+  "direct_sector_reference_checked": true
+}

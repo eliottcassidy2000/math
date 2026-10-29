@@ -13,6 +13,19 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Native three-run lattice and pairing boundary](THREE_RUN_GLUE.md):
+  the S3 coefficient lattice has index54. T5 first exhibits a native
+  Smith discrepancy, with four spurious Z/6 factors in the unglued
+  calculation. Paley7's complete Smith form obstructs identifying its
+  cokernel with finite principally polarized Sha. Incoming e9e53cf3ed
+  independently confirms the shared S3/primary results and supplies
+  the stronger native complement test.
+- [Minimum pairing completion with clocks](CLOCK_MINIMAL_PAIRING.md):
+  actual named projections recover six odd-primary C7 modules. At11,
+  79,5861,392809 all invariant bilinear forms vanish, making hyperbolic
+  doubling optimal even with every source automorphism. The11 group
+  already has square order and paired abstract multiplicities; its
+  clock creates the obstruction.
 - [Actual cyclic coefficient bridge](CYCLIC_COEFFICIENT_GLUE.md):
   Paley7's(15,12,12) and(-11,2,2) coefficient sources map explicitly
   to Eisenstein phases(3,0) and(-13,0). Retaining the source sum and
@@ -113,6 +126,7 @@ Run from this directory, or give each file's repository-relative path:
     python -B dyadic_field_ports.py
     python -B marked_clock_ports.py
     python -B cyclic_coefficient_glue.py
+    python -X utf8 -B three_run_glue.py
 
 The producer has 634,725 active gates; the alternate audit has 33,082,
 and the weighted recurrence has 3,031. Exact universe and hostile details
@@ -143,3 +157,9 @@ metadata has been superseded by the all-order dyadic proof.
 The native coefficient bridge adds135,895 active gates and an identical
 normal/optimized receipt. It preserves the actual coefficient sources
 rather than inferring a connection from their norm values alone.
+
+The third continuation adds100,190 active gates with identical normal
+and optimized receipts. Its fast sector certificate agrees with two
+earlier direct Smith runs; `--direct-smith` reproduces that slower path.
+Native matrices, source projections, clocks and reciprocal constituents
+are retained in the receipt.
