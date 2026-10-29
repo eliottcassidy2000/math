@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "prime": 1000000007,
+  "interpretation": "Independent lower bounds; exact symbolic kernels supply upper bounds",
+  "ranks": [
+    {
+      "h": 0,
+      "evaluation_ranks_mod_prime": [
+        1,
+        1
+      ]
+    },
+    {
+      "h": 1,
+      "evaluation_ranks_mod_prime": [
+        2,
+        2
+      ]
+    },
+    {
+      "h": 2,
+      "evaluation_ranks_mod_prime": [
+        3,
+        3
+      ]
+    },
+    {
+      "h": 3,
+      "evaluation_ranks_mod_prime": [
+        5,
+        4
+      ]
+    },
+    {
+      "h": 4,
+      "evaluation_ranks_mod_prime": [
+        7,
+        6
+      ]
+    },
+    {
+      "h": 5,
+      "evaluation_ranks_mod_prime": [
+        10,
+        8
+      ]
+    },
+    {
+      "h": 6,
+      "evaluation_ranks_mod_prime": [
+        13,
+        10
+      ]
+    },
+    {
+      "h": 7,
+      "evaluation_ranks_mod_prime": [
+        18,
+        13
+      ]
+    },
+    {
+      "h": 8,
+      "evaluation_ranks_mod_prime": [
+        23,
+        16
+      ]
+    },
+    {
+      "h": 9,
+      "evaluation_ranks_mod_prime": [
+        30,
+        19
+      ]
+    },
+    {
+      "h": 10,
+      "evaluation_ranks_mod_prime": [
+        37,
+        23
+      ]
+    },
+    {
+      "h": 11,
+      "evaluation_ranks_mod_prime": [
+        47,
+        28
+      ]
+    },
+    {
+      "h": 12,
+      "evaluation_ranks_mod_prime": [
+        57,
+        33
+      ]
+    }
+  ]
+}
