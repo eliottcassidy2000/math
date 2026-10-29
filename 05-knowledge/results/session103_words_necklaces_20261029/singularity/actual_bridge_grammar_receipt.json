@@ -1,0 +1,82 @@
+{
+  "status": "FINITE-EXACT audit of separately proved combinatorial equivalence",
+  "pinned_commit": "d3132eafbfa9c43c6d9f1110566b1e9c3a3286e1",
+  "pinned_data_sha256": "399b14e9bcc004bfc7d29fde61b46f09198e1198a1825b0f5531ab32239c62e6",
+  "layers": [
+    {
+      "order": 4,
+      "words": 1,
+      "strong_bridge_words": 0
+    },
+    {
+      "order": 5,
+      "words": 3,
+      "strong_bridge_words": 0
+    },
+    {
+      "order": 6,
+      "words": 8,
+      "strong_bridge_words": 1
+    },
+    {
+      "order": 7,
+      "words": 21,
+      "strong_bridge_words": 5
+    },
+    {
+      "order": 8,
+      "words": 55,
+      "strong_bridge_words": 19
+    },
+    {
+      "order": 9,
+      "words": 144,
+      "strong_bridge_words": 63
+    },
+    {
+      "order": 10,
+      "words": 377,
+      "strong_bridge_words": 195
+    },
+    {
+      "order": 11,
+      "words": 987,
+      "strong_bridge_words": 578
+    },
+    {
+      "order": 12,
+      "words": 2584,
+      "strong_bridge_words": 1665
+    }
+  ],
+  "strong_bridge_cuts_checked": 4315,
+  "legal_cut_persistence_checks": 11569,
+  "last_forbidden_suffix_steps": 5509,
+  "kernel_nonpersistence_controls": [
+    {
+      "word": "ee",
+      "native_determinant": 0,
+      "plus_nullity": 0,
+      "minus_nullity": 4
+    },
+    {
+      "word": "eec",
+      "native_determinant": 0,
+      "plus_nullity": 0,
+      "minus_nullity": 2
+    },
+    {
+      "word": "eed",
+      "native_determinant": 0,
+      "plus_nullity": 0,
+      "minus_nullity": 4
+    },
+    {
+      "word": "eee",
+      "native_determinant": 0,
+      "plus_nullity": 0,
+      "minus_nullity": 3
+    }
+  ],
+  "all_order_observer_equivalence": "OPEN; this checker does not prove a spectral theorem"
+}
