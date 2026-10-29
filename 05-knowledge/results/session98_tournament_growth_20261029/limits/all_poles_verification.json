@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "coefficient_n_max": 35,
+  "core_count": 585,
+  "independent_orbit_count": "cyclic subgroup Burnside vs pairwise gcd",
+  "banks": [
+    {
+      "k": 0,
+      "pole": 1,
+      "order": 1,
+      "core_types": 1,
+      "leading_amplitude": "1"
+    },
+    {
+      "k": 1,
+      "pole": 4,
+      "order": 4,
+      "core_types": 1,
+      "leading_amplitude": "32"
+    },
+    {
+      "k": 2,
+      "pole": 16,
+      "order": 7,
+      "core_types": 2,
+      "leading_amplitude": "655360"
+    },
+    {
+      "k": 3,
+      "pole": 64,
+      "order": 10,
+      "core_types": 3,
+      "leading_amplitude": "2405181685760"
+    },
+    {
+      "k": 4,
+      "pole": 256,
+      "order": 13,
+      "core_types": 5,
+      "leading_amplitude": "1109686948184090214400"
+    },
+    {
+      "k": 5,
+      "pole": 1024,
+      "order": 16,
+      "core_types": 7,
+      "leading_amplitude": "54214036595454122413863521484800"
+    },
+    {
+      "k": 6,
+      "pole": 4096,
+      "order": 19,
+      "core_types": 11,
+      "leading_amplitude": "253338095407845430183085749141654984877670400"
+    },
+    {
+      "k": 7,
+      "pole": 16384,
+      "order": 22,
+      "core_types": 15,
+      "leading_amplitude": "105848309030629653425810878021705197547184177380748951552000"
+    },
+    {
+      "k": 8,
+      "pole": 65536,
+      "order": 25,
+      "core_types": 22,
+      "leading_amplitude": "3768896765386238309471782079568938841192824539085598254243463042766471168000"
+    },
+    {
+      "k": 9,
+      "pole": 262144,
+      "order": 28,
+      "core_types": 30,
+      "leading_amplitude": "11032841344324364849348199258030709528566963756235800560555249939307107944472509544608563200000"
+    },
+    {
+      "k": 10,
+      "pole": 1048576,
+      "order": 31,
+      "core_types": 42,
+      "leading_amplitude": "2582160008685776223466593800682244299724718726052917574368217805291485336912332124993335155944278985769851289600000"
+    }
+  ],
+  "claims_not_proved_by_finite_checks": [
+    "normal convergence",
+    "infinite pole set",
+    "non-P-recursiveness"
+  ]
+}
