@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "universe": "b in {3,5,7}; 1001 positive odd sources <=2001; first60 odd steps; 18 finite cylinder words; both stated5 cycles",
+  "affine_checks": 180180,
+  "barrier_checks": 63174,
+  "inverse_prefix_checks": 180180,
+  "cylinder_checks": 18,
+  "limitations": "finite checks supplement proofs; no global termination conclusion"
+}
