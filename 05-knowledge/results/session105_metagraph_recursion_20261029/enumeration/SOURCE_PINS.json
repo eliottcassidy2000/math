@@ -1,0 +1,10 @@
+{
+  "baseline98.py": {
+    "source": "session98_growth/recurrence/verify.py",
+    "sha256": "a0650bdc5042bdd369d94da79e89e3ebc8bd83e81916b0efb2ecd56bd4beafef"
+  },
+  "baseline87.py": {
+    "source": "session87-four-vertices/counting/fast_counts.py",
+    "sha256": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece"
+  }
+}
