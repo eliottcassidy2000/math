@@ -1,0 +1,17 @@
+{
+  "status": "FINITE-EXACT independent full kernel enumeration",
+  "records": [
+    {
+      "prime": 2,
+      "precision": 2,
+      "complete_2_by_2_matrices": 256,
+      "all_source_vectors_per_matrix": 16
+    },
+    {
+      "prime": 3,
+      "precision": 2,
+      "complete_2_by_2_matrices": 6561,
+      "all_source_vectors_per_matrix": 81
+    }
+  ]
+}

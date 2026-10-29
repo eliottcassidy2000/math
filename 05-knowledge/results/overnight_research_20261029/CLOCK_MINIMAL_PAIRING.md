@@ -8,8 +8,13 @@ where an abstract group repair did not yet retain its clock.
 now closes all primary exponents for the specified C7 action, proves an
 all-height minimum recurrence, and distinguishes injective completion
 from ordinary-quotient-compatible completion. Its P6 also verifies full
-vertex/run invariant forms at5 and17. The remaining full-clock gap is
-at the higher-primary2/3 pieces, not at the six elementary primes.
+vertex/run invariant forms at5 and17. The following continuation addresses
+the higher-primary pieces; the six elementary primes are complete.
+
+The next [full vertex/run continuation](FULL_NATIVE_COMPLETION.md) now
+closes the dyadic minimum at index2^40. At3 it proves the stronger lower
+bound3^8; joint-clock attainment and ordinary-quotient-compatible minima
+remain open. The original C7 formula retains its stated scope.
 
 ## C4. The clocked minimum is controlled by reciprocal constituents
 

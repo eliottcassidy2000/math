@@ -1,0 +1,34 @@
+[
+  {
+    "checker": "primary_native_clocks",
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "receipts_identical": true,
+    "sha256": "1d670b0b8d2c615d69ed0103b2b03284dc7f5b147b90ec915dc962b1d1344b0f",
+    "gates": 57738
+  },
+  {
+    "checker": "dyadic_joint_cycle",
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "receipts_identical": true,
+    "sha256": "ea066c81698e8920497cb2a954fea9b735955e643dc72afb92937dd272c1440c",
+    "gates": 222
+  },
+  {
+    "checker": "involution_root_extensions",
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "receipts_identical": true,
+    "sha256": "7e85024b07907fd05057432ae7c3fd67140cef9a82605184cc507fd82584350a",
+    "gates": 32774
+  },
+  {
+    "checker": "clock_kernel_audit",
+    "normal_exit": 0,
+    "optimized_exit": 0,
+    "receipts_identical": true,
+    "sha256": "a832eea2cf30d5f3282428d57355b12aa2a4b24f89faf27975f6b36104aa3640",
+    "gates": null
+  }
+]

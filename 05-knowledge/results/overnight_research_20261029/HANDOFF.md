@@ -142,6 +142,39 @@ The full incoming verifier replayed successfully after rebase, including
 all396 source classes and its four larger examples; its receipts were
 unchanged. The primary completion checkpoint is da03553dd0.
 
+The fifth continuation is [FULL_NATIVE_COMPLETION](FULL_NATIVE_COMPLETION.md).
+The2-primary arbitrary-injection minimum now retains ALL126 vertex/run
+clocks and is exactly index2^40. The full group has native generators
+C=translation*run-cycle and H=vertex-Frobenius*run-swap, with HCH^-1=C^2.
+The ten C21 source orbits give partitions(2,2,1^4),(1^3),(3),(4,1),
+(4,1),(1,1) in degrees1,2,3,3,6,6. Their full-clock minimum costs are
+4,0,18,18 bits across the four reciprocal/self-dual sectors.
+
+The first cost is a C4-squared block with involution[[3,2],[2,1]], whose
+determinant-minus-one obstruction rules out every order64 paired ambient.
+The cubic pair descends to C8 with involution3 and C2+C16 with involution
+[[1,1],[8,5]]. All four index-two extensions fail; an index-four extension
+C4+C32 with involution[[3,1],[8,5]] and character6x+y mod8 attains the
+minimum. The exact all-size extension recurrence retains2x=v, Sx=x+w,
+2w=(S-1)v, (S+1)w=0, with its character lift constraints. It enumerates
+marked presentations, not unlabelled group classes. Sextic source bases
+descend under actual Frobenius, giving a genuine F64 phase occurrence;
+F256 has no primitive21 root and is not the same chart.
+
+At3 the full invariant-form space has common radical(C3)^3+C9+C27,
+order3^8. An explicit form attains that radical, so the universal lower
+bound on a full-clock completion is3^8; the hyperbolic upper bound is3^18.
+The actual minimum remains OPEN. All six extra-C81 characters fail.
+The new Heisenberg hostile proves why an optimal restriction radical
+does not supply jointly compatible ambient clocks. The2-primary PURE
+minimum also remains open: the index2^40 construction adjoins roots.
+
+Named2/3 source projections, coordinate lifts and all four clock matrices are
+saved in primary_native_clocks.json. Normal and optimized receipts agree;
+an independent kernel audit checks every2x2 matrix over Z/4 and Z/9.
+The81/27 singleton slices are replayed. Do not repeat the completed C21
+or dyadic minimum calculation; use the explicit ternary radical next.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -196,14 +229,16 @@ then their targeted proofs. Recent Session97 additions include:
    run that terminates at singularity. No native minimality follows yet.
    The three-run S3 lattice and small native cases are now CLOSED in
    our continuation and the simultaneous incoming THREE_RUN packet.
-   All2/3 C7 layers are NOW CLOSED in PRIMARY_CLOCK_COMPLETION, as are
-   the extra clocks at5/17. Next induce multiplication-by2 and the run
-   generators on the actual2/3 quotient coordinates, then test whether
-   the minimum injective or pure C7 completion extends to them. Keep
-   these two completion problems distinct. Characteristic divides the
-   extra clock-group order, so the semisimple C7 proof cannot be reused
-   blindly. The receipt's U and inverse maps give a concrete starting
-   point; do not recompute the source classification from scratch.
+   All2/3 clock matrices are NOW CLOSED, and the full dyadic injective
+   minimum is index2^40. Next construct or exclude a ternary completion
+   of index3^8, preserving the entire joint action. Its actual common
+   radical type(1,1,1,2,3) and nine-coordinate matrices are supplied.
+   The displayed optimal form has paired quotient(1^6,2^2); test the
+   joint lift of the commuting vertex and run order-three clocks.
+   Sharpness of a radical bound is not attainment of a completion;
+   the Heisenberg hostile detects that implication. Separately classify
+   pure full-clock completions. The root constructions do not retain
+   ordinary quotient injectivity. Do not recompute the saved source maps.
    For native attachment minimality, extend the incoming strong-through7
    selected-complement theorem, or impose explicit realization equations
    on its arbitrary weight space. Retain target relation, chosen-path

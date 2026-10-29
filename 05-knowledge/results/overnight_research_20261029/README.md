@@ -13,6 +13,16 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Full vertex/run clocks and lawful root attachments](FULL_NATIVE_COMPLETION.md):
+  the actual126-element group is C21 semidirect C6 with Frobenius action.
+  The complete dyadic minimum is index2^40, compared with2^18 for C7
+  and2^24 for C21 alone. An exact index-two attachment recurrence retains
+  roots, carries and involutions; two steps solve the cubic obstruction.
+  At3 the sharp invariant radical has order3^8, giving a universal
+  completion lower bound; attaining it with all clocks remains open.
+  A small Heisenberg hostile proves that individual clock extensions
+  need not extend jointly. Pure completions and arithmetic realization
+  remain separate.
 - [Primary-depth completion and quotient compatibility](PRIMARY_CLOCK_COMPLETION.md):
   exact all-height recurrence for the smallest injective paired module
   with an odd cyclic clock, including p=2. Actual Paley7 needs index2^18

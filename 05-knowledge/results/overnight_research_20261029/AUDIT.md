@@ -313,3 +313,50 @@ counterpart to P5's split-inclusion requirement; the source objects are
 kept distinct in the integration note. The repository documentation
 check passed again after integration. The primary result checkpoint
 da03553dd0 was pushed before this integration close-out.
+
+## Full vertex/run completion and root-extension continuation
+
+`primary_native_clocks.py` verifies57,738 active gates. All four native
+clock matrices are induced on every2/3 cyclic coordinate, with exact
+orders, relations and intertwiners on all210 named ports. Its saved
+right inverses are coordinate lifts of quotient generators, not asserted
+homomorphic splittings into a free lattice. The form solver retains
+nonunit pivots and computes the complete solution module modulo81.
+
+At3 the common radical has invariant factors1^4,3^3,9,27 in its image
+cokernel; an explicit form attains the same radical order. Both the
+complete image and the attaining form were checked by independent
+integer Smith and local elimination. Every extra-C81 character is tested;
+all27 projected form combinations per character have rank at most4.
+The81/27 singleton-slice controls are replayed inside this checker.
+
+`clock_kernel_audit.py` independently enumerates EVERY source vector for
+all256 two-by-two matrices over Z/4 and all6,561 over Z/9. Their literal
+kernels equal the generated kernels and predicted sizes, including
+zero, singular, nonunit-pivot and invertible cases. This is a distinct
+exhaustive path for the modular engine used in negative statements.
+
+`dyadic_joint_cycle.py` verifies222 local gates, plus the imported
+source/form gates. Ten actual21-orbits, all100 native blocks, complete
+factor products and all primary layers are checked. Exact Galois-fixed
+bases have named inverse charts; they retain the residual involution.
+The full dyadic minimum combines lower bounds with explicit component
+constructions. The C4-squared order64 exclusion is a proof by the complete
+list of paired groups of that order, not a bounded matrix search.
+
+`involution_root_extensions.py` verifies32,774 gates. It excludes all
+four first-step marked extensions and gives a second-step witness.
+Every addition pair of the128-element witness verifies both the clock
+and primitive character; the entire original32-element source and
+clock are retained. Marked presentation counts are not labelled as
+isomorphism counts. The compact witness is independently expressed as
+C4+C32, involution[[3,1],[8,5]], injection diag(2,2), character6x+y mod8.
+
+The joint-clock hostile checks all p^2 choices at p=2,3,5,11,13. Each
+individual lift is an isometry of the right order; the common central
+discrepancy is2, nonzero precisely at the odd primes. This is distinct
+from the D8 model of the recovered THM-2779. The classical descent input
+was checked in Stacks Proposition35.3.9 on2026-10-29; finite unramified
+Galois data give the required module descent. No arithmetic realization
+is inferred. All four new checkers pass normally and optimized with
+identical receipts; source clocks and finite precision are retained.
