@@ -5,6 +5,14 @@ with explicit bounds on both native clocks. **PROVED with a finite exact
 certificate:** its return increases the source precisely on five stated residue
 classes. **OPEN:** convergence of repeated returns. This is not a Collatz proof.
 
+**Concurrent integration:** Session97 independently obtained the same entry and
+five-class statements and supplied a much shorter analytic exclusion using
+seven forbidden prefixes. Its [five-cylinder proof](../session97_overnight_arithmetic_carriers_20261029/controllers/FIVE_EXCEPTIONAL_CYLINDERS.md)
+is the preferred classification proof; sections 1–3 below preserve a separate
+integer-potential derivation and larger finite cross-check. Do not represent
+these as two different mathematical discoveries. The new weighted renewal
+formulas and the linear division-clock bound remain useful extensions.
+
 We inherit the `(d,r)=(3,3)` grammar and affine/source conventions from
 [MOMENTS](../affine_tree_recurrences_20261028/MOMENTS.md) and
 [REFINEMENT](../affine_tree_recurrences_20261028/REFINEMENT.md). No independent
@@ -58,6 +66,30 @@ Indeed, a nonterminal state has `W>=4`, whereas after `69K` steps (1) gives
 odd-step, division, and usual unaccelerated integer clocks respectively.
 For even initial integers, first remove their finite power of two; that
 initial division cost is additional and explicitly known.
+
+### Sharper clocks after merging the incoming branch certificate
+
+Session97's [integer termination proof](../session97_overnight_arithmetic_carriers_20261029/controllers/INTEGER_TERMINATION.md)
+uses `P=(n+1)(3/2)^Q`, preserved by valuation one and contracted by at most
+`27/28` at every branch. It defines the finite integer
+
+\[
+ M(n)=\max\{m\ge0:27^m(n+1)\ge2\,28^m\}
+\]
+
+and proves `J<=3M(n)+1`. Combining that stronger odd-step estimate with the
+telescoping inequality above improves its stated quadratic-log division bound:
+
+\[
+ \boxed{D\le6M(n)+2+\lfloor\log_2 n\rfloor,\qquad
+ J+D\le9M(n)+3+\lfloor\log_2 n\rfloor.}                \tag{2a}
+\]
+
+Both clocks are therefore logarithmic in the original integer. The shifted
+potential also shows that **every active input is at most the initial source**;
+an expanding endpoint can first cross that level only on the terminal step.
+Its restart costs `3/2`, whereas the integer potential used here costs four.
+These are two different accounting conventions for the same native return.
 
 This eliminates exceptional **positive integer non-entry sources for this
 auxiliary grammar**. It does not eliminate exceptions to Collatz convergence.
@@ -154,6 +186,8 @@ makes the issue explicit. The remaining target is a source-sensitive payment
 for these repeated resets and for intervening descending blocks. Section 5 of
 [RENEWAL](RENEWAL.md) states the surviving pointwise obligation.
 
-No claim of literature priority or independent-agent audit is made. The proof
-has two exact finite implementations and symbolic inequalities; formalization
-or an external audit would be a further check.
+No claim of literature priority is made. The proof here has two exact finite
+implementations and symbolic inequalities. The incoming analytic route has its
+own independent [audit](../session97_overnight_arithmetic_carriers_20261029/audit/CONTROLLER_AUDIT.md);
+that audit does not automatically cover the new renewal formulas or this clock
+extension.

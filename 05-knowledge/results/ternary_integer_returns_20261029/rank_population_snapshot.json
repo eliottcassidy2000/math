@@ -1,0 +1,2299 @@
+{
+  "acknowledgement": "Please acknowledge ICARM and NSF Grant DMS 2425401 in related publications, projects, or other scholarly work, for example: \"This research made use of the Elliptic Curve Rank Leaderboard, maintained by the Institute for Computer-Aided Reasoning in Mathematics (ICARM) under NSF Grant DMS 2425401.\" See https://elliptic-rank.icarm.cloud/acknowledge.",
+  "at_least_22": [
+    {
+      "id": 4239,
+      "rank_lower_bound": 32
+    },
+    {
+      "id": 846,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 848,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3900,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3842,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3856,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 752,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3926,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3857,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 4029,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 751,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 5980,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 845,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 5981,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3845,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 5982,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 5988,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 724,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 302,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3545,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 5983,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 5984,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3587,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3593,
+      "rank_lower_bound": 31
+    },
+    {
+      "id": 3897,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3422,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 4606,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5538,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5539,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3792,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5540,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3868,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3898,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3869,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 4031,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 819,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3870,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 4032,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3871,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3899,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5985,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3432,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5986,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5987,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 1765,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3837,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3872,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 5990,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3567,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3568,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3841,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 4209,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3772,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 398,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3873,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3579,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3773,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 715,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 717,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 1766,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 1845,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 3874,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 4034,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 273,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 582,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 684,
+      "rank_lower_bound": 30
+    },
+    {
+      "id": 4088,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3864,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3895,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3866,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 4030,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 4028,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3768,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 4036,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3551,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 4044,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 4033,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3896,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3840,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3577,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3588,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3578,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 1842,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3769,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3835,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3867,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3770,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3557,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 847,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3739,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3720,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 1392,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3431,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 1388,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 728,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 1843,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 827,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 3771,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 857,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 1844,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 692,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 818,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 1385,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 731,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 817,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 356,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 809,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 816,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 543,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 808,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 693,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 399,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 579,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 12,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 385,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 719,
+      "rank_lower_bound": 29
+    },
+    {
+      "id": 4089,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3762,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3763,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 4024,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3849,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 4035,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3850,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3919,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3893,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3860,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3861,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3561,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3862,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3851,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3852,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3853,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3838,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3602,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1393,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3789,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3572,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 4268,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3764,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3839,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3854,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3765,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3790,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3855,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3863,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3766,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 729,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3573,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3732,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3574,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3575,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 613,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3576,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3733,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 689,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3556,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1389,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3894,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1837,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3429,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3818,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1838,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1839,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3430,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1391,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 726,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1840,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1394,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1764,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3791,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1390,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1387,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 400,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 722,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1841,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 531,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 3767,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 615,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 1386,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 364,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 723,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 635,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 617,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 395,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 403,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 11,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 545,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 536,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 391,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 423,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 633,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 544,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 618,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 581,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 580,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 619,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 620,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 534,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 636,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 616,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 535,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 638,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 634,
+      "rank_lower_bound": 28
+    },
+    {
+      "id": 4090,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1675,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3560,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4227,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3836,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3820,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4641,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4191,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4196,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4232,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4576,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4129,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1821,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4170,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 401,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3821,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1822,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4214,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4609,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1676,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1677,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1823,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 4043,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1678,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1679,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1824,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1825,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1680,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1681,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1683,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 1682,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 363,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 630,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 814,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 725,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3819,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3428,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 614,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 402,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 628,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 67,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 627,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 629,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 585,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 404,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 537,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 416,
+      "rank_lower_bound": 27
+    },
+    {
+      "id": 3549,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 5857,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4132,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4595,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4130,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4190,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4131,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4188,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1895,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4539,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4260,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1896,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1989,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3425,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1990,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 727,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4221,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1898,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1991,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3522,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3426,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1899,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4203,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1900,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4204,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4151,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3824,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4584,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 390,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1901,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 815,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 1902,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 542,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4195,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4228,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 716,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 66,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3822,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 690,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4275,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 393,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3427,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4201,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 807,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 417,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 813,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 3823,
+      "rank_lower_bound": 26
+    },
+    {
+      "id": 4538,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4540,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4597,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4266,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3722,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1879,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 6011,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4265,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3902,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 5962,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4276,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4594,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 6010,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4277,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4223,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4271,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4253,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4187,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4236,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1985,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3829,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4555,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4213,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4207,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4208,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4238,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 691,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4273,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1986,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4128,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4229,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3825,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1880,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4133,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3826,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1881,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3880,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4215,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 622,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1882,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1883,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4267,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1987,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 540,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 721,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3827,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1884,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1885,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4171,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1886,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 749,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 396,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1888,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4205,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 541,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 351,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1889,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3828,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 5967,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 748,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 688,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 810,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4264,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4152,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 65,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4219,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 4217,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1891,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1988,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1892,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 1893,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3830,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 414,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 546,
+      "rank_lower_bound": 25
+    },
+    {
+      "id": 3581,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5940,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5978,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5676,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4037,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 3540,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4230,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4577,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 6007,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4278,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5663,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5969,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5966,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5490,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 3903,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4585,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4279,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4263,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 720,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4216,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4233,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1948,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4284,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4640,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4280,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5554,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4274,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4224,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4192,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5977,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5160,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4134,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4270,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1949,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 413,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4262,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 3831,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4237,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4557,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1950,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 548,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1983,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4596,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1865,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 750,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4607,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4220,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1984,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1866,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 623,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4234,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 3832,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 10,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1867,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1868,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1869,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4189,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1870,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 389,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 4202,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 3833,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1871,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 378,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 583,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 602,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1872,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 603,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 3817,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 605,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1873,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1874,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1875,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1876,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 1877,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 612,
+      "rank_lower_bound": 24
+    },
+    {
+      "id": 5491,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 3550,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5856,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4598,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5971,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5536,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1854,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1944,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5330,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 3541,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5665,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5105,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4180,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4306,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4226,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1945,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 574,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4225,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1981,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 3882,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1855,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 3881,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 3815,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4272,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1946,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 747,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 3816,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 498,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1982,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1947,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 624,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 6004,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4218,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1856,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1857,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1858,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1859,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1860,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 746,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 740,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 4206,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 539,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 745,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 9,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 741,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 599,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 377,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 478,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 600,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1862,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1863,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 601,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 1864,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 604,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 606,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 607,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 608,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 609,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 611,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 610,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 441,
+      "rank_lower_bound": 23
+    },
+    {
+      "id": 5766,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3721,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5181,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5942,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 625,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5667,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1940,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 6076,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 6033,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3884,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3814,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3918,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5666,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5443,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4210,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1941,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3885,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1848,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5492,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5945,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3883,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4586,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1979,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 575,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1942,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1980,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4231,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 626,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1849,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 566,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 538,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1943,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 397,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 8,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 433,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 376,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5968,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 304,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4235,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5860,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4608,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 739,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 437,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4554,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5963,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 5979,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3813,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 3886,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1850,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4281,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1851,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1852,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 744,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 1853,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4118,
+      "rank_lower_bound": 22
+    },
+    {
+      "id": 4119,
+      "rank_lower_bound": 22
+    }
+  ],
+  "count": 6127,
+  "database_sha256": "0d3daea93c16565787b60c9120a349256a27152924f709bdf0c9f637f6adf827",
+  "documentation": "https://elliptic-rank.icarm.cloud/api",
+  "maintainer": "The Institute for Computer-Aided Reasoning in Mathematics (ICARM), supported by U.S. National Science Foundation Grant DMS 2425401",
+  "rank_lower_bound_counts": {
+    "0": 228,
+    "1": 701,
+    "2": 498,
+    "3": 434,
+    "4": 448,
+    "5": 397,
+    "6": 355,
+    "7": 365,
+    "8": 358,
+    "9": 273,
+    "10": 214,
+    "11": 200,
+    "12": 137,
+    "13": 132,
+    "14": 84,
+    "15": 90,
+    "16": 131,
+    "17": 136,
+    "18": 108,
+    "19": 93,
+    "20": 118,
+    "21": 64,
+    "22": 56,
+    "23": 61,
+    "24": 75,
+    "25": 74,
+    "26": 47,
+    "27": 47,
+    "28": 87,
+    "29": 50,
+    "30": 42,
+    "31": 23,
+    "32": 1
+  },
+  "retrieved_date": "2026-10-29",
+  "source": "Elliptic Curve Rank Leaderboard",
+  "url": "https://elliptic-rank.icarm.cloud/database.json"
+}

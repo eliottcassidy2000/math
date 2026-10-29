@@ -4,6 +4,16 @@ Status: **PROVED** for the `(d,r)=(3,3)` auxiliary first-extinction rule of
 MOMENTS.md. It is a bound on a specified source measure, not a pointwise
 Collatz descent theorem.
 
+**2026-10-29 scope update:** the auxiliary positive-integer entry obstruction
+left open below is now closed by an arithmetic potential; expanding first
+returns have an exact five-cylinder classification. See the incoming
+[analytic proof](../session97_overnight_arithmetic_carriers_20261029/controllers/FIVE_EXCEPTIONAL_CYLINDERS.md)
+and the [independent integer potential, linear clocks, and source-preserving
+renewal extension](../ternary_integer_returns_20261029/README.md). Repeated
+returns reaching one, and pointwise payment of their reset debt, remain OPEN.
+The measure-only limitation in section 3 is still correct; it is not the proof
+used for the new integer entry theorem.
+
 ## 1. Rational supersolutions give an exponential carry tail
 
 Here `p=1/7`, `q=1/21`, so

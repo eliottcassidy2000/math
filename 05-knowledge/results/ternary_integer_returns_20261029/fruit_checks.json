@@ -1,0 +1,130 @@
+{
+  "explicit_checks": 879,
+  "quotient_circle": {
+    "boundary_digest": "b5407973d627a35fa2b03b30a2f59667fbb6293f27ab66cb7ecbb7626045e87e",
+    "distinct_boundaries": 28,
+    "minimum_coverage": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 1
+    },
+    "return_cells": {
+      "13:boundary": 2,
+      "13:cell": 1,
+      "4:boundary": 2,
+      "4:cell": 3,
+      "9:cell": 1
+    }
+  },
+  "rational_witnesses": [
+    {
+      "clock": 4,
+      "source": [
+        9,
+        0
+      ],
+      "target": [
+        17,
+        0
+      ]
+    },
+    {
+      "clock": 13,
+      "source": [
+        17,
+        0
+      ],
+      "target": [
+        43,
+        0
+      ]
+    },
+    {
+      "clock": 9,
+      "source": [
+        21,
+        1
+      ],
+      "target": [
+        39,
+        1
+      ]
+    }
+  ],
+  "scope": "sharp uniform clock 13; first positive return clocks 4,9,13; no Collatz implication",
+  "source_circle": {
+    "boundary_digest": "7d40b3de790093ec48cdebd5f0b6d93565d41b581900fd56a0ec6675c409826f",
+    "distinct_boundaries": 84,
+    "minimum_coverage": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 1
+    },
+    "return_cells": {
+      "13:boundary": 6,
+      "13:cell": 3,
+      "4:boundary": 6,
+      "4:cell": 9,
+      "9:cell": 3
+    }
+  },
+  "source_sha256": "a9c78f3c13fe36735aaab7d44269bf79343b69941df8ec2be6f3634d7d702f55",
+  "status": "PASS; all real bounded-component phases covered",
+  "steering_witnesses": [
+    {
+      "clock": 4,
+      "correction": 2,
+      "lift_coefficient": 9,
+      "source": 1,
+      "target": 27
+    },
+    {
+      "clock": 4,
+      "correction": 0,
+      "lift_coefficient": 9,
+      "source": 3,
+      "target": 27
+    },
+    {
+      "clock": 3,
+      "correction": 4,
+      "lift_coefficient": 9,
+      "source": 5,
+      "target": 27
+    },
+    {
+      "clock": 2,
+      "correction": 4,
+      "lift_coefficient": 17,
+      "source": 35,
+      "target": 51
+    },
+    {
+      "clock": 12,
+      "correction": 4,
+      "lift_coefficient": 43,
+      "source": 53,
+      "target": 129
+    }
+  ]
+}
