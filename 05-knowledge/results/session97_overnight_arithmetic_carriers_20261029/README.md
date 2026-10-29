@@ -95,18 +95,123 @@ local obstruction, not a claimed Sha class. The [second-checkpoint audit](audit/
 independently checks the isogeny arithmetic and discharges infinite order by
 a nonintegral point on an integral short model and Nagell–Lutz.
 
+## Checkpoint 3: retain the source through failures
+
+[Source-preserving retries](controllers/SOURCE_PRESERVING_RETRIES.md) repair
+four half-rays and a separate3 mod16 class below their **original** inputs.
+The exact compressed valuation-one run keeps its unbounded integer clock.
+For sources2^t-1 its first compressed return descends only at t=2,4,8;
+this is an all-t theorem, not a finite cutoff inference.
+
+The [25-chart failure transducer](controllers/FAILURE_TRANSDUCER.md) keeps
+congruence pullbacks, full carries and both clocks. Its rank-one Haar
+quotient describes random sources, not resampled deterministic integers.
+An [all-period certificate](controllers/PERIODIC_EXCEPTION_CERTIFICATE.md)
+shows that-1 is its only integer periodic failure cycle, and-1,-3 are its
+only eventually periodic integer failure sources. This does not classify
+all native Collatz cycles.
+
+The residual [exceptional Cantor set](controllers/EXCEPTIONAL_CANTOR_RECURRENCE.md)
+has exact dyadic-cell recurrence
+
+    N_L=N_(L-1)+N_(L-6)+3N_(L-11).
+
+Its dimension s satisfies2^(-s)+2^(-6s)+3*2^(-11s)=1, with s about0.441171.
+The number of positive integers at most X whose cheap returns expand
+forever is at most(17/8)X^s. This is neither an emptiness theorem nor a
+bound for all nonconvergent Collatz trajectories. The exceptional set is
+specified by this particular failure language.
+
+## Checkpoint 4: changing moduli and retaining generic sections
+
+[Rank phase2](ranks/phase2/README.md) supplies compact source records and
+certificates for every one of the66 rank-at-least30 point lists in the
+selected snapshot:64 work with binary characters; two require a ternary
+finite-group certificate. Altogether2005 named independent point directions
+are verified. Failure of a sufficient binary certificate was not mistaken
+for dependence. This is a certificate for the listed curves, not a census
+of all high-rank curves or a proof of an exact upper rank.
+
+The classical Elkies948 K3 model has17 independently reconstructed sections
+with exact positive height Gram determinant948. Fifteen secant choices
+can be flipped by unimodular changes of the generated subgroup basis;
+these bits can be forgotten for independence but not for named-point
+reconstruction. Saturation in the full Mordell–Weil group is not reproved.
+
+The three supplied record fibrations have distinct good-reduction point
+counts at233:58509,58404,58374. They are therefore pairwise non-isomorphic
+**over Q**, not necessarily over its algebraic closure. Nevertheless all
+three retain the same verified [A3(2) three-section sublattice](ranks/phase2/COMMON_A3_CARRIER.md),
+with determinant32. That small carrier does not determine the ambient K3
+surface. [Separate audit](audit-k3/REPORT.md) reconstructs the arithmetic
+from independently transcribed mathematical inputs, without copying a paper.
+
+## Checkpoint 5: cyclic kernels, four ports and arithmetic image guards
+
+The [cyclic-kernel recurrence](supersingular/CYCLIC_KERNEL_RECURRENCE.md)
+classifies Frobenius cycle type(1,n), n odd: invariant Lagrangians exist
+exactly when every prime p dividing n has odd ord_p(2). Reciprocal factors
+are paired and one is chosen from each pair. Reflection exchanges these
+choices rather than preserving them. The7-case gives the Fano/Hamming
+carriers, the23-case the Golay carrier. Among the15 Ogg primes, the exact
+intersection is7,23,31,47,71; [explicit finite-field models](supersingular/OGG_INTERSECTION_MODELS.md)
+retain branch count and characteristic as separate quantities.
+
+At n=31, eight kernels share their complete weight enumerator and all named
+one-, two- and three-port minimum-word counts. [Four-port data](supersingular/REVERSAL_AND_FOUR_PORT_HOSTILE.md)
+distinguishes every marked kernel and separates two coordinate-isomorphism
+classes. In six cases it [reconstructs the entire affine F2^5 geometry](supersingular/AFFINE_RECONSTRUCTION_AND_ISOSPECTRAL_LATTICES.md).
+Construction A then gives two nonisometric rank32 even unimodular lattices
+with identical full theta series. This lattice rank32 is not identified
+with elliptic Mordell–Weil rank32. Plain Golay Construction A gives
+Niemeier A1^24, not the Leech lattice without further gluing data.
+
+For the fruit curve, [full rational image](fractions/FULL_IMAGE.md), using
+the explicitly cited source-generator theorem, yields a constant-size
+arithmetic guard. For a **rational point on the quotient cover**, q=a/d
+in lowest terms lifts rationally iff3 divides d or a+d. The rational-cover
+condition and forbidden fruit denominators remain essential. The
+[positive-real lift density](fractions/DENSITY.md) is exactly one third
+under source-index or canonical-height ordering; its proof uses irrational
+circle rotation, not a finite sample or an effective return-time bound.
+
+## Checkpoint 6: an all-size reconstruction theorem and the Leech guard
+
+[Affine port reconstruction](supersingular/ALL_M_AFFINE_PORT_RECONSTRUCTION.md)
+works uniformly on F2^m for m>=4. For affine codimension-two flats, the
+number containing a named set S depends exactly on its affine-span dimension:
+R(S)=[m-d choose2]_2. All one-, two- and three-port responses are constant,
+while four ports reconstruct the entire affine geometry after a named origin
+is chosen. The number of labelled geometries forces26 and90 bits at m=4,5.
+At m=3 the blocks are merely all pairs, so even the complete incidence bank
+cannot distinguish the30 affine structures. The self-dual code/lattice
+application remains special to m=5, not all dimensions.
+
+The classical [Golay-to-Leech construction](leech/GOLAY_LEECH_SUM_GUARD.md)
+then retains a genuinely additional arithmetic condition: a modulo-eight
+sum guard plus the odd glue coset. Keeping only the code and common parity
+reintroduces short vectors. With all guards present, exact enumeration gives
+196560 minimal vectors in three families1104+97152+98304, and the lattice
+has minimum norm4 and is even unimodular. This recovers the actual Leech
+lattice rather than misidentifying the A1^24 lattice from plain Construction A.
+The route from the Ogg prime23 to its cyclic binary code and then the
+classical guarded lattice is explicit; it does not prove Ogg's classification
+or construct the Monster from an arbitrary fifteen-element set.
+
 ## Ongoing work after these checkpoints
 
-The active extensions concern source-preserving failure retries and their
-periodic versus aperiodic boundary; cyclic Frobenius kernels and higher-port
-code invariants; and exact high-rank K3 section/family certificates. These
-are not automatically included in the completed claims above. New results
+The current bounded extensions investigate the two binary-certificate gaps
+through exact rational halving, and an older primary source on tournament
+solutions. They are not automatically included in the completed claims above.
+The aperiodic positive-integer failure boundary and the missing generic
+section banks for newer rank-record fibrations remain open here. New results
 are published only after their own proof and computational audits.
 
 ## Reproduction
 
 Each published script states its own finite universe and uses exact arithmetic.
-Standard-library checkers remain active under `python -O`. Mathematical JSON
+Checks remain active under `python -O`. Most use the standard library;
+six rank-phase2 symbolic checks and one separate K3 audit declare SymPy1.14.0. Mathematical JSON
 inputs are adjacent to their consumers and use stable file-relative paths.
 The first controller/Frobenius checkpoint was replayed from its committed
 checkout in both modes with identical output. Further checkpoint replay
