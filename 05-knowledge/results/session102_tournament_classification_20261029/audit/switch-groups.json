@@ -1,0 +1,32 @@
+{
+  "sharp_four_vertex_groups": [
+    "A4",
+    "S4"
+  ],
+  "status": "FINITE-EXACT",
+  "universe": [
+    {
+      "labelled_tournaments": 8,
+      "n": 3,
+      "order_histogram": {
+        "(3, 6)": 8
+      }
+    },
+    {
+      "labelled_tournaments": 64,
+      "n": 4,
+      "order_histogram": {
+        "(12, 24)": 16,
+        "(4, 8)": 48
+      }
+    },
+    {
+      "labelled_tournaments": 1024,
+      "n": 5,
+      "order_histogram": {
+        "(3, 6)": 640,
+        "(5, 10)": 384
+      }
+    }
+  ]
+}
