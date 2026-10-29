@@ -1,0 +1,108 @@
+{
+  "checkers": 7,
+  "fresh_runs": 14,
+  "input_hashes": {
+    "audit_algebra/check_independent.py": "569430a542324aae8e724a054716a72128b8a1512889d03fcd6a34c46774ddf9",
+    "audit_algebra/receipt.normal.json": "8b848af3613d847941589cefe021796c16f6942ebcee97b21fb4f71ece89e467",
+    "audit_descent/check_independent.py": "aa70dd15e6dc8deabab460d9a712017e01d6da75b65a93322de344ced8acb128",
+    "audit_descent/receipt.json": "215832be59617882535b02dcc14376d26d9c718c32d2f062068af43a151294e9",
+    "descent/check_descent.py": "741acc9bb0241798bd2006ddca44d148348c664d849b15efa5ea9afe08319f48",
+    "descent/checks.json": "072b51a12865ef4a4918a909a4659c56d01e59539a7a51545a80a1be7b3eb696",
+    "exterior/check_exterior.py": "b314514863923ed7367e301827d3700930a2815bfe9d0f18212c21b5a3c2b8eb",
+    "exterior/results.json": "88afedc3e09b1613f9e630525c8f62b539aefec6580ce9b41d9d009c727b362d",
+    "positive/check_positive.py": "e469209ef6320f88bed0c1e5a0871c08f3d1b35a0b9a2a251142dbc40dc555cd",
+    "positive/results.json": "3263d4d95160a3ab46af290caf17e2661a4b15cc665984f683a88bd37a7b01ad",
+    "summands/check_summands.py": "17d343d8911a30dcbcd4625deecfa76ef63bd95d733539ac7747aa2fe71ad2cd",
+    "summands/check_three_chains.py": "28d3bd8452bbab8b8cb2c4a538f16211112a703c5af1d0d279ed8a0e720bdf91",
+    "summands/three_chains_verification.json": "cef355effac25ee04ac3bc7bb5040ae703ff334c14307ca0ee5375b82976d24b",
+    "summands/verification.json": "1da46b9660f0669271d533fa2f921d9273a0eb04d94215029e0d734a49897224"
+  },
+  "original_files_unchanged": true,
+  "runs": [
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "exterior/check_exterior.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "exterior/check_exterior.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "descent/check_descent.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "descent/check_descent.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "positive/check_positive.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "positive/check_positive.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "summands/check_summands.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "summands/check_summands.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "summands/check_three_chains.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "summands/check_three_chains.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "audit_algebra/check_independent.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "audit_algebra/check_independent.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "audit_descent/check_independent.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "audit_descent/check_independent.py"
+    }
+  ],
+  "status": "PASS"
+}
