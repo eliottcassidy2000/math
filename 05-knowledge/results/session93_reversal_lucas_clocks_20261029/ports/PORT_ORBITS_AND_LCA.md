@@ -73,3 +73,12 @@ At order27, the triangle group has order243 and three minimal group generators, 
 The tuple invariant and base bound use the full recursive tournament structure and a specified anti-involution. They do not make arbitrary LCA summaries complete, nor restore a forgotten alignment for an unrelated module grammar. In the blue quotient, the companion metagraph note proves that centralizer loops disappear on unmarked path presentations, while joint path-and-port observations can still detect relative positions.
 
 `check_ports.py` uses no producer imports. It enumerates the literal groups through C_3 (order243), compares tuple invariants with their full orbits, verifies the port counts and optimal base, and checks compact transporters on larger recursive tournaments without enumerating their groups. All arithmetic and permutation tests are exact; normal and optimized runs must agree.
+
+## Concurrent provenance at publication
+
+The incoming packet `lucas_prime_reflection_towers_20261028` at commit
+`4368e3847072d9a5d88ddb7d80470f9861c97b93` supplies overlapping reflection/holonomy
+results and a general port-moment recurrence. See the parent
+[incoming comparison](../incoming/CONCURRENT_COMPARISON.md) for credited overlap,
+distinct refinements and independently replayed finite controls. This note
+retains its initial source pin and direct proof; no priority claim is implied.
