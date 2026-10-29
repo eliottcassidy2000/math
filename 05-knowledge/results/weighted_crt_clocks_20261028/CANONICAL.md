@@ -1,4 +1,4 @@
-# A complete recursive attachment carrier, with an explicit complement bit
+# A complete recursive attachment carrier, with an explicit global-converse bit
 
 **PROVED** K1-K3 for the recursive ternary family; **FINITE-EXACT** verification
 through depth2 by [check_canonical.py](check_canonical.py) and [JSON](check_canonical.json).
@@ -42,7 +42,15 @@ apply it to a reconstructed representative and recanonicalize. If different
 maps are specified on the immutable C_k single-port strata, they also descend.
 An arbitrary vertex-specific operation need not descend.
 
-## K2. Native complement has a one-bit selector
+## K2. Global converse has a one-bit selector
+
+**Operation-name correction, 2026-10-28:** this section previously called
+the displayed operation native complement. Its formula reverses every arc,
+so it is global converse. Path-native complement C_P instead keeps every
+Hamilton-path arc. The selector proof and counts below survive with this
+corrected operation name. A four-vertex strong extension whose parent leaves
+the ternary family under C_P is recorded in
+[CLOSURE C5](../complement_port_crt_20261028/CLOSURE.md).
 
 Use a binary colouring f(v) to specify the arc new_vertex->v when f(v)=1.
 Reversing all arcs, then using alpha to identify the parent with W_k again,
@@ -55,11 +63,11 @@ It is an involution and has no fixed orbit. Indeed the all-zero word o is
 fixed by every C_k element and by alpha, while S flips f(o). This proves
 that every complement-pair contains exactly one orbit with f(o)=0.
 
-Consequently the exact complement/marking representation can be stored as
+Consequently the exact global-converse/marking representation can be stored as
 
     (canonical complement-pair represented with root bit0, original root bit).
 
-Native complement toggles the last bit. The pair key is unchanged. The
+Global converse toggles the last bit. The pair key is unchanged. The
 additional selector needs exactly one bit, because both orientations occur
 and differ on the observed arc to the distinguished fixed vertex. This is
 a scoped selector theorem for this parent family, **not** a solution to

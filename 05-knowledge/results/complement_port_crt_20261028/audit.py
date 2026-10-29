@@ -46,6 +46,16 @@ def convolution(a,b):
 def main(write=True):
  global CHECKS
  CHECKS=0
+ # Global converse preserves the C3 parent; actual complement need not do so.
+ S4=(2,12,9,1);P4=(3,0,1,2);C4=ports.core.complement(S4,P4)
+ need(ports.core.is_strong(S4) and all(S4[a]>>b&1 for a,b in zip(P4,P4[1:])),'strong four-vertex native control')
+ child4=tuple(row&7 for row in C4[:3]);op=ports.core.converse(S4)
+ need(not ports.core.is_strong(child4) and ports.core.is_strong(tuple(row&7 for row in op[:3])),'native complement differs from global converse')
+ left=ports.frames.p.controls.build_hostile(False);right=ports.frames.p.controls.build_hostile(True)
+ def cycles(T):
+  return [(a,b,c) for a in range(12) for b in range(a+1,12) for c in range(b+1,12)
+          if ((T[a]>>b)&1)==((T[b]>>c)&1)==((T[c]>>a)&1)]
+ need(cycles(left)==cycles(right),'literal 81/27 labelled cyclic triples')
  for T in (ports.tournament(1),ports.endpoint_tournament(5),paley.atom(7)):
   brute=sum(all(T[a]>>b&1 for a,b in zip(P,P[1:])) for P in permutations(range(len(T))))
   need(meet_hamilton(T)==brute,'middle-split paths versus literal paths')
@@ -87,6 +97,7 @@ def main(write=True):
   Y=convolution(Y,{2*x:q for x,q in X.items()})
   q=convolution(convolution(X,X),X);X={x:p/3 for x,p in q.items()};X[0]=X.get(0,0)+Q(2,3)
  out={'status':'PASS; same-agent alternate implementation, not an independent researcher audit','checks':CHECKS,
+      'native_vs_converse':{'source':S4,'path':P4,'native_partner':C4,'native_parent':child4,'labelled_cyclic_triples_81_27':len(cycles(left))},
       'sixteen_vertex_H':hs,'Paley7_depth2':{'order':total,'character_fibres':[[list(k),v] for k,v in sorted(chars.items())],
                                             'fixed_counts':sorted(fixed.items())},
       'ring8_periods':sorted(local.items()),'spines':spines}

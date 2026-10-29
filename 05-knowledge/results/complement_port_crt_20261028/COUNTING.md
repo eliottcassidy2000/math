@@ -59,6 +59,25 @@ session adds a reproducible weighted-port specialization, not a larger class
 bank. It recovers the June kernel as the reusable computational object,
 rather than rerunning a historical approximation as exact enumeration.
 
+**Incoming broader compiler.** Session94's
+[observation jets](../session94_recursive_ports_crt_clocks_20261029/enumeration/RECURSIVE_OBSERVATION_JETS.md)
+gives the stronger multi-layer, multi-attribute version, extracts the number
+of occupied strong components, and differentiates named prime-root child
+slots without constructing their entire cycle index. Its ordered-port table
+at11/12 agrees exactly with ours. For ordinary tournament series A and ordered
+port series R_j it proves
+
+    same-component ordered pairs = R_2 - 2 R_1^2/A,
+    different-component ordered pairs = 2 R_1^2/A.
+
+The products here are formal-series convolutions, not products of coefficients
+at one fixed size. That packet also routes the already existing ordinary and
+strong-count prefix through350 in
+[singleton_pair_reconstruction](../singleton_pair_reconstruction_20261028/README.md).
+Our n60 marked channels remain a corroborating specialization, not the current
+scalar frontier. The cycle-index and canonical product-palette advances are
+credited in RECOVERY's incoming integration.
+
 ## How this fits actual metagraph composition
 
 The formula counts all ported isotypes. A native complement still needs a

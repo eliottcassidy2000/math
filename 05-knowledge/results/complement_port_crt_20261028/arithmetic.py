@@ -66,8 +66,14 @@ def main(write=True):
   cycles.append({'sheet':b,'states':states,'odd_steps':len(word),'shortcut_steps':A,'denominator':den})
  need(step(3,1)[0]==step(7,-1)[0]==5,'same endpoint control')
  need(step(5,1)[0]==1 and step(5,-1)[0]==7,'sheet needed after shared endpoint')
+ offspring=[((0,0),Q(1,3)),((0,3),Q(1,3)),((3,0),Q(1,3))]
+ need(Q(1,4)/(1-Q(1,4))==Q(1,3),'even-valuation probability')
+ need(sum(a*p for (a,b),p in offspring)==sum(b*p for (a,b),p in offspring)==1,'critical signed marginal offspring')
+ need(sum(a*b*p for (a,b),p in offspring)-1==-1,'shared-source offspring covariance')
  out={'status':'FINITE-EXACT; Haar cylinder law, not a positive-integer orbit law',
-      'joint_first_step':rows,'word_cylinders':cylinders,'supplied_cycles':cycles,'checks':CHECKS}
+      'joint_first_step':rows,'word_cylinders':cylinders,'supplied_cycles':cycles,
+      'joint_signed_offspring':{'states':[s for s,p in offspring],'probabilities':[str(p) for s,p in offspring],
+                                'covariance':-1,'scope':'same-source first step; not a coupled native tree theorem'},'checks':CHECKS}
  if write:(HERE/'arithmetic.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
  print(json.dumps({'checks':CHECKS,'cycles':cycles,'last_covariance':rows[-1]}))
  return out

@@ -68,6 +68,42 @@ The recent [Syracuse finite-section packet](../syracuse_transfer_finite_section_
 likewise separates Haar/Ulam averaging from deterministic integer representatives.
 That is why CLOCKS retains the signed source and both clock conventions.
 
+## Incoming integration after the first checkpoint
+
+The first local checkpoint was rebased onto origin/main1925bc3385. The incoming
+32 commits were inspected by file and mathematical topic, including the three
+changed pinned inputs. ENDPOINTS E2 and the eight-vertex witness were unchanged;
+its new E6 supplies the two-sheet intersection now integrated in CLOSURE C1.
+The holonomy input now routes a strictly shorter ternary loop construction.
+
+- [Session94](../session94_recursive_ports_crt_clocks_20261029/README.md) supplies
+  cycle-index and subset recurrences, marked component and prime-slot jets,
+  the linear loop bound, exact valuation/tree coding, and sparse CRT certificates
+  through period55. Its all-order port formula subsumes our counting channel.
+- [Weighted CRT clocks](../weighted_crt_clocks_20261028/README.md) supplies a
+  complete recursive product-palette key, full colored Burnside channels,
+  smaller-menu CRT closure tests, and the signed affine/standard-clock bridge.
+- [CRT weighted ports](../crt_weighted_ports_20261028/README.md) proves the
+  all-size proper-clock obstruction: a proper nonzero clock quotient carrying
+  word reflection must be F4. Its defect witness is -2 phi^-1. It also supplies
+  source-dependent energy laws and independently reaches the shorter loop bound.
+
+These overlap and extend parts of this packet. The CRT enumeration is therefore
+alternate-path corroboration, not a new frontier record. The Paley holonomy
+kernel, cut-closed fixed-pair theorem, off-diagonal transporter hostile and
+same-source signed offspring coupling retain their separate stated scopes.
+
+The imported canonicalizer's one-bit formula had been named native complement
+despite reversing every arc. CLOSURE C5 gives a four-vertex test and repairs
+the operation name to global converse in its theorem and summaries. Its proof
+and counts survive. This correction is recorded in the mistakes ledger.
+
+The incoming arithmetic factor also changes the synthesis constructively:
+valuation parity really does generate the critical ternary genealogy under
+Haar source measure. CLOCKS S5 combines it with our two-sign joint law, giving
+offspring pairs (3,0),(0,3),(0,0), each of probability1/3. This is a source-bound
+root coupling, with covariance-1; it is not two independent native trees.
+
 ## A concrete unifying composition statement
 
 **PROVED elementary, standard mechanism; proposed organizing language.**

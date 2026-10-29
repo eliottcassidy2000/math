@@ -106,3 +106,50 @@ periods count one common rotation. A Collatz valuation sum counts divisions
 by2 under the stated shortcut convention. Comparing all three is useful only
 after declaring a map that transports the target and charges its clock. No
 dynamical conjugacy between the three systems is claimed here.
+
+## S5. Incoming exact tree factor, and its signed shared-source coupling
+
+Incoming [Session94 valuation trees](../session94_recursive_ports_crt_clocks_20261029/dynamics/VALUATION_TREE_CLOCKS.md)
+constructs a stronger, precisely typed bridge. On odd 2-adics with the poles
+and all their finite preimages removed, a single sign's successive valuation
+digits are iid with P(a=j)=2^-j. Put
+
+    b=1[a is even], G=floor((a-1)/2), a=1+b+2G.
+
+Then b has Bernoulli parameter1/3, G has probabilities (3/4)(1/4)^g, and they
+are independent. Breadth-first offspring xi=3b therefore gives exactly the
+critical ternary fixed-point genealogy. Recovering the original arithmetic
+source still needs the ordered residual G marks and unused valuation tail.
+This is an exact factor of a source law, not a conjugacy of Collatz iteration
+with tournament re-marking. The result and its tree-size/clock recursion are
+credited to that incoming packet.
+
+Our S1 law specifies how the **two signs at the same source** couple this
+factor. Set xi_+=3*1[a_+ even] and xi_-=3*1[a_- even]. Then exactly
+
+    P((xi_+,xi_-)=(3,0))=1/3,
+    P((xi_+,xi_-)=(0,3))=1/3,
+    P((xi_+,xi_-)=(0,0))=1/3.
+
+Proof: sum 2^-j over even j>=2 to get1/3 on either signed arm of S1. The
+remaining event has the larger valuation odd. The two coordinates cannot
+both be3 because one original valuation is1. Thus the joint offspring PGF is
+
+    (1+s^3+t^3)/3,
+    E xi_+=E xi_-=1, Var(xi_+)=Var(xi_-)=2,
+    Cov(xi_+,xi_-)=-1.
+
+This preserves the critical marginal law while making shared-source dependence
+explicit. It is a first-step joint law. After applying U_+ and U_-, the two
+sources differ; no independent or identically coupled all-generation pair of
+native trees follows without another construction.
+
+Incoming [AFFINE A2](../weighted_crt_clocks_20261028/AFFINE.md) also supplies
+the exact periodic Lucas bridge with the correct clock. Negate the positive
+3n-1 seven-state cycle to get a negative 3n+1 cycle. Its standard clock is
+7+11=18, and phi^18-1=76 phi^9 gives R_18=O/(76), of cardinality76^2=5776.
+The quotient to R_9 has76-element fibres; it is not the76-state carrier itself.
+Likewise the5<->7 minus-cycle has standard period5 after negation and belongs
+to the inherited eleven-state rational-cycle dictionary. These are maps of
+specified periodic sources, with sign and clock retained, not convergence
+results for arbitrary positive integers.

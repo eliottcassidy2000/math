@@ -1,6 +1,32 @@
 {
   "status": "PASS; same-agent alternate implementation, not an independent researcher audit",
-  "checks": 83371,
+  "checks": 83374,
+  "native_vs_converse": {
+    "source": [
+      2,
+      12,
+      9,
+      1
+    ],
+    "path": [
+      3,
+      0,
+      1,
+      2
+    ],
+    "native_partner": [
+      6,
+      4,
+      0,
+      7
+    ],
+    "native_parent": [
+      6,
+      4,
+      0
+    ],
+    "labelled_cyclic_triples_81_27": 67
+  },
   "sixteen_vertex_H": [
     629677591,
     634905785

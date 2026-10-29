@@ -37,6 +37,12 @@ agrees. But the transporter (3,6)->(4,7) has size 1 for the first group and
 Both are genuine subgroups of the tournament automorphism group; they are
 not claimed to be two full centralizers of that same marking.
 
+Their ordinary cycle indices also agree, namely
+(p_1^9+2 p_1^3 p_3^2)/3. Thus every ordinary finite-palette orbit count agrees
+as well. Incoming Session94 correctly distinguishes cycle inventories from
+fixed-point moments for subset and palette queries; this example identifies
+the next boundary, from complete inventory to realized labelled transport.
+
 The missing data are the joint action and the realization equation gt=tg.
 This is stronger than a failure of bounded moments: even all fixed-set
 moments lose off-diagonal transport. `ports.py` checks this literally.
@@ -136,6 +142,13 @@ is indecomposable. The intrinsic modular-decomposition mechanism then gives
 the full wreath actions at every depth for those three bases. For other p,
 the theorem is stated for the specified affine wreath action.
 
+More explicitly, for an indecomposable strong quotient the substituted copies
+are its maximal proper strong modules. Every automorphism permutes those
+intrinsic modules through Aut(Q), and its restrictions are independent child
+automorphisms. Conversely all such maps preserve substitution. This gives the
+wreath equality inductively, using the inherited modular-decomposition theorem,
+rather than extrapolating a large-group census from the small bases.
+
 Its root fixed-count law is
 
     P(N=0)=2/p,
@@ -223,6 +236,15 @@ For p=3, h=1 and the inherited theorem instead gives L=A_k and Hol=C_k.
 Its constructive bound 3[1+(k-1)3^k] remains valid in that family. It cannot
 be exported as a repair bound for arbitrary centralizer elements of the
 larger Paley families: h^k classes of corrections are unreachable by loops.
+
+**Incoming improvement credited.** Session94's
+[portrait protocol](../session94_recursive_ports_crt_clocks_20261029/loop_protocol/LINEAR_LOOP_PROTOCOL.md)
+and the concurrent
+[linear repair](../crt_weighted_ports_20261028/LINEAR_REPAIR.md) lower the
+ternary bound to 3(3^k-2k-1)/4 legal re-marking edges: at27 vertices,15 rather
+than165. They construct endpoints of conjugated individual triangles while
+retaining full port permutations. This improves the reachable C3 case; it
+does not remove the Paley multiplier obstruction proved above.
 
 ## P6. A mirrored spine, with the probability law kept explicit
 

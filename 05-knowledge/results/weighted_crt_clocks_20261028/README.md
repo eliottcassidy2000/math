@@ -43,7 +43,7 @@ in the map table in [SYNTHESIS](SYNTHESIS.md).
   agrees with the older independent partition implementation. This is a
   counting recurrence, not an order20 isomorphism-class generation census.
 - [CANONICAL](CANONICAL.md), K1-K3: a complete recursive carrier for joint
-  finite-palette attachments in this family. Native complement has a one-bit
+  finite-palette attachments in this family. Global converse has a one-bit
   fixed-root selector; independently canonicalized ports still lose alignment.
 - [CRT](CRT.md), C1-C3: the ring chart for every odd period, synchronized phase
   classes, and the exact future-equivalence algorithm. Exhaustive reflection

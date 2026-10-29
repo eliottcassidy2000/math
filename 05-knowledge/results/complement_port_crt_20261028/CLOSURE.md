@@ -1,7 +1,7 @@
 # Run refinement and closure under actual native complements
 
 2026-10-28. **PROVED, scoped / FINITE-EXACT controls; same-agent audit.**
-Local statements C1-C4 belong to this file. No universal smallest carrier for
+Local statements C1-C5 belong to this file. No universal smallest carrier for
 every possible strong-atom operation is asserted.
 
 ## C1. The smallest supplied-run carrier once cuts are legal
@@ -31,6 +31,17 @@ fixing every directed path setwise fixes its vertices pointwise. QED.
 This uses the inherited E2 decoder, rather than claiming a new arbitrary-port
 reconstruction theorem. The menu explicitly allows named run positions;
 unnamed cuts without a recoverable choice require their own observer analysis.
+
+**Concurrent intermediate quotient.** Incoming ENDPOINTS E6 permits a
+forest-native complement before assembly, without cutting the runs. It proves
+the exact two-sheet group J=Hbar_A intersect Hbar_B, on the same component
+names. Thus G<=J<=Hbar_B, and the corresponding state counts lie between the
+one-stage endpoint quotient and C1's cut-closed minimum. Maps on the two sheets
+need not agree on interiors, which is why their abstract intersection is not
+automatically G. The incoming examples all give J=G, but this is not proved
+universally. Its strict-strong-child caveat matters here: the eight-vertex B
+has a source and sink, so switching it into the source slot would leave that
+restricted menu. C2 below instead uses an actual all-strong assembly source.
 
 ## C2. One intrinsic cut restores a trit; sixteen vertices realize the loss
 
@@ -127,3 +138,28 @@ maps by cyclic triples, stabilizer orders, or unrelated marginal kernels.
 Next decisive question: for a fixed number of cuts and attachments, how much
 of C1's full ordered word can be omitted? The unbounded cut theorem gives the
 limiting answer; it does not settle the bounded-depth rate.
+
+## C5. Global converse is not the actual native-complement operation
+
+Incoming [CANONICAL K2](../weighted_crt_clocks_20261028/CANONICAL.md) proves a
+one-bit selector for the transformation f(v)->1-f(alpha(v)). This is global
+arc reversal, followed by identifying the reversed parent with its original
+copy. Its earlier label "native complement" was incorrect and has been
+repaired in the theorem, summary, audit and index. Its proof and counts remain
+valid for global converse.
+
+Here is a literal separating source. Give parent vertices0,1,2 their C3 arcs
+0->1->2->0 and attach vertex3 with 3->0, 1->3, 2->3. The resulting tournament
+
+    S=(2,12,9,1),     P=(3,0,1,2)
+
+is strong and P is Hamilton. Actual C_P(S) retains 0->1 and1->2 but reverses
+2->0 into0->2. Its induced parent is transitive. Global converse instead
+retains a cyclic parent. Thus the fixed-parent selector cannot implement this
+native move: the parent even leaves the recursive family. Four vertices are
+a verified witness, not a general minimum claim. `audit.py` checks it.
+
+The strongest survivor is the incoming complete joint-colour canonicalizer
+plus its global-converse selector. Closing actual C_P still requires the path
+and target decomposition, as in C3. The operation-type repair is logged in
+`01-canon/MISTAKES.md` under this packet's slug, without reserving a numeric ID.

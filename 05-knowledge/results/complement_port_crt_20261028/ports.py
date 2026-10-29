@@ -99,7 +99,19 @@ def controls():
  plus=[tuple(range(3))+tuple(3+(j+a)%3 for j in range(3))+tuple(6+(j+a)%3 for j in range(3)) for a in range(3)]
  minus=central(2);T=tournament(2);t=tuple(neg(v,2) for v in range(9))
  def masks(G):return Counter(tuple(v for v in range(9) if g[v]==v) for g in G)
+ def cycle_types(G):
+  out=Counter()
+  for g in G:
+   seen=set();lengths=[]
+   for v in range(len(g)):
+    if v in seen:continue
+    w=v;length=0
+    while w not in seen:seen.add(w);length+=1;w=g[w]
+    lengths.append(length)
+   out[tuple(sorted(lengths))]+=1
+  return out
  need(masks(plus)==masks(minus),'all weighted fixed-set observations coincide')
+ need(cycle_types(plus)==cycle_types(minus),'entire ordinary cycle indices also coincide')
  need(all(permute(T,g)==T for g in plus+minus),'both are actual tournament subgroups')
  target=(4,7);source=(3,6)
  need(sum(tuple(g[x] for x in source)==target for g in plus)==1,'parallel transport exists')
@@ -118,7 +130,8 @@ def controls():
    need(core.complement(permute(T,g),tuple(g[v] for v in P))==permute(B,g),'native complement common-source covariance')
    need((permute(B,g)==B)==(g==tuple(range(9))),'aligned full native pair is rigid')
  return {'weighted_controls':report,'fixed_set_hostile':{'source':source,'target':target,'transporter_counts':[1,0],
-          'common_fixed_set_distribution':[[list(k),v] for k,v in masks(plus).items()]},'native_paths_tested':len(selected)}
+          'common_fixed_set_distribution':[[list(k),v] for k,v in masks(plus).items()],
+          'common_cycle_inventory':[[list(k),v] for k,v in cycle_types(plus).items()]},'native_paths_tested':len(selected)}
 
 def partner(A,runs):
  B=list(core.converse(tuple(A)))

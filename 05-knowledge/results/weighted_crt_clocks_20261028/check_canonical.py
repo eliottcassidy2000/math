@@ -1,4 +1,4 @@
-"""Complete recursive colouring carriers; native complement and joint ports."""
+"""Complete recursive colouring carriers; global converse and joint ports."""
 from collections import Counter
 from functools import lru_cache
 from itertools import product

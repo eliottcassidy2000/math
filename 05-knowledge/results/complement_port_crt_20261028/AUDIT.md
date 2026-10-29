@@ -8,14 +8,14 @@ PROVED have arguments in their named files; finite tests have the scopes below.
 
 | Receipt | Universe and controls | Explicit guards |
 |---|---|---:|
-| ports.json | Literal A1,A2,C1,C2,C3 groups; six signed weight assignments each; all ordered two-port source/target tuples through depth2; sampled triples at depth3; all24 run orders and all4 internal cuts in the inherited eight-vertex hostile; actual16/18-vertex complement contexts; twelve W2 Hamilton paths with all81 source automorphisms;81/27 and normal-basis orientation guards | 16042 |
+| ports.json | Literal A1,A2,C1,C2,C3 groups; six signed weight assignments each; all ordered two-port source/target tuples through depth2; sampled triples at depth3; all24 run orders and all4 internal cuts in the inherited eight-vertex hostile; actual16/18-vertex complement contexts; twelve W2 Hamilton paths with all81 source automorphisms; equal cycle-index hostile;81/27 and normal-basis orientation guards | 16043 |
 | paley.json | Full automorphism searches and all candidate proper nontrivial modules for Paley3,7,11; every base marking triangle; seeded depth1..3 character/control maps; exact moment recurrences through depth8 and order6 | 3555 |
 | counting.json | Unit-tail kernel through n60; ordered ports r0..8, all distinct-port channels; separate direct odd-partition evaluation through26; published A000568 prefix through19 | 839 |
-| arithmetic.json | All positive odd residues modulo2^K for K2..14; both signed sheets; every valuation word of length1..4 over1..3 with three integer lifts; four supplied cycles | 36445 |
+| arithmetic.json | All positive odd residues modulo2^K for K2..14; both signed sheets; every valuation word of length1..4 over1..3 with three integer lifts; four supplied cycles; same-source signed offspring law | 36448 |
 | crt.json | Every legal cyclic word at n9,12,15,21,27; actual reader, rotation, reflection and projection fibres; local roots and unit-clock formula | 1431212 |
-| audit.json | Separate meet-in-the-middle Hamilton counts with brute-permutation controls; all83349 literal Paley7 depth-two centralizer permutations; independent divisor-Burnside chart counts; all64 O/(8) elements; full rational distributions for two spine laws through depth3 | 83371 |
+| audit.json | Separate meet-in-the-middle Hamilton counts with brute-permutation controls; all83349 literal Paley7 depth-two centralizer permutations; independent divisor-Burnside chart counts; all64 O/(8) elements; full rational distributions for two spine laws through depth3; four-vertex operation-type and literal81/27 triple controls | 83374 |
 
-The total 1571464 counts explicit guard executions, not independent theorems
+The total 1571471 counts explicit guard executions, not independent theorems
 or independent samples. The 81/27 structural definitions and oracle are
 inherited; they were not rewritten and silently renamed as new work.
 
@@ -68,8 +68,16 @@ formula, not a twelve-billion-element enumeration.
 
 The all-period golden-reader theorem and its earlier single-toggle repair are
 credited in CRT. The March tribonacci priority correction MISTAKE-645 and the
-October n11/n12 refutations are preserved in RECOVERY. No demonstrated error
-in current canon was found requiring a new retraction entry.
+October n11/n12 refutations are preserved in RECOVERY. The incoming selector's
+global-converse/native-complement operation-name error was repaired in place
+and logged in MISTAKES under this packet's slug. Its correctly typed proof and
+counts survive; the four-vertex witness is now part of the alternate audit.
+
+After rebase onto1925bc3385, the hash check correctly flagged three changed
+inputs: ENDPOINTS, endpoint_kernel.json, and FULL_HOLONOMY. Their diffs were
+read. E2 and the eight-vertex data were unchanged; E6 and the improved ternary
+bound were integrated. The full optimized replay was repeated before resealing.
+The corrected incoming canonical checker also passed its2619 checks.
 
 ## Reproduce and pin
 

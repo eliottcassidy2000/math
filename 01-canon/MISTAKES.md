@@ -21309,3 +21309,14 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     the instrument on a labelled sample first.
   - When a parametrised family is identified with a modular curve, check the degree of the map to the named curve and
     look for a family member outside the image.
+
+
+## 2026-10-28 — Global converse versus path-native complement (`complement_port_crt_20261028`)
+
+- **Location:** `05-knowledge/results/weighted_crt_clocks_20261028/CANONICAL.md`, K2, with its README, audit table, checker docstring and results-index summary.
+- **Error:** the operation `f(v) -> 1-f(alpha(v))` was called native complement. Its construction reverses every arc, so it is global converse. Actual Hamilton-path-native complement keeps the path arcs.
+- **First failed implication:** a selector for all-arc reversal does not implement a path-dependent complement or prove closure of a fixed-parent attachment family.
+- **Literal witness:** the strong tournament S=(2,12,9,1), P=(3,0,1,2), with parent C3 on0,1,2. The native partner's induced parent is transitive; the global converse's parent is cyclic. Reproduction: `05-knowledge/results/complement_port_crt_20261028/audit.py`.
+- **Repair / strongest survivor:** K1's joint-colour canonicalizer and K2's one-bit selector remain proved for global converse. The operation name is corrected in the theorem and summaries, with a correction note linking CLOSURE C5. No counts or selector proof were retracted.
+- **Missing coordinate / next question:** retain the actual Hamilton path and recompute the target's module decomposition. General smallest unnamed native-complement closure remains open.
+- **Mechanism:** audit operations by the arcs they change, not by a shared informal word such as complement. This entry uses a packet-qualified slug; no numeric mistake ID was reserved.
