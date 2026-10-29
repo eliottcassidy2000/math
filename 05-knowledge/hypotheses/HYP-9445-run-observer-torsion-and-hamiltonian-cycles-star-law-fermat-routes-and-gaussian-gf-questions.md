@@ -24,9 +24,20 @@ invariant factor of `M_k(T)` equals 1.
    - **Evidence for `k = 2`.** All strong classes with at least two Hamiltonian cycles:
      3 (order 5), 27 (order 6), 332 (order 7) and 5953 (order 8), 6315 in all.
    - **Evidence for `k = 3`.** All such classes through order 7: 3, 27 and 332, 362 in all.
-   - **Further evidence.** It also holds for `k = 4` at order 6 (27 classes).
+   - **Further evidence.**
+     - It holds for `k = 4` at order 6 (27 classes).
+     - It holds for `k = 3` at order 8 on the delicate classes: all 60 with exactly 2 Hamiltonian cycles and all 124
+       with exactly 3 (`out/hc_small_k3_n8.out`).
+     - The unique-cycle classes there split 36 torsion-free and 19 with torsion, as at `k = 2`.
    - **False for the one-arc observer `k = n − 1`.** One class at order 5 and two at order 6 have singular,
      torsion-free `M_{n−1}`. Each has exactly two Hamiltonian cycles.
+   - **Beyond the census.** Random labelled tournaments and low-cycle tournaments (2 or 3 Hamiltonian cycles,
+     found by a random walk of arc flips) were tested with `k = 2`. There were 116 + 584 strong samples at order 9
+     (360 of them low-cycle) and 344 at order 10 (200 low-cycle). Every one has torsion (`out/random_torsion.out`;
+     sampling evidence only).
+   - **Not a mod-2 statement.** The torsion is not always 2-primary. Among strong classes with at least two
+     Hamiltonian cycles, 8 at order 7 and 225 at order 8 have only odd invariant factors above 1. So a proof cannot
+     work over `F_2` alone.
    - **A first test of any proof.** Explain why the coarser one-arc observer, an orientation of the star graph
      (THM-4846 (A)), escapes the law.
 2. **Which unique-cycle tournaments are torsion-free?**

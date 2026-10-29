@@ -1,0 +1,6 @@
+n=9 seed=2 samples=584 (strong): [(('lowcycle', 'HC>=2', 'torsion'), 300), (('random', 'HC>=2', 'torsion'), 284)]
+counterexamples to HYP-9445 (1) at k=2: none
+n=10 seed=3 samples=344 (strong): [(('lowcycle', 'HC>=2', 'torsion'), 200), (('random', 'HC>=2', 'torsion'), 144)]
+counterexamples to HYP-9445 (1) at k=2: none
+n=9 seed=1 samples=116 (strong): [(('lowcycle', 'HC>=2', 'torsion'), 60), (('random', 'HC>=2', 'torsion'), 56)]
+counterexamples to HYP-9445 (1) at k=2: none

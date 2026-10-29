@@ -17,6 +17,19 @@ status: >
   18, 18, 24, 18) and THREE_RUN_GLUE.md (R2)-(R8) (the index-54 chart, the T5 Smith forms, the gcd(m,6)^4 image law).
   CITED: Douglas 1970 (tournaments with exactly one Hamiltonian cycle; the Fibonacci count F(2n-6), recalled and
   attributed to Garey 1972, reproduced here for n = 4..8). The conjectural parts are in HYP-9445.
+  CONCURRENT, WITH PRIORITY ELSEWHERE: the research packet
+  05-knowledge/results/four_vertex_glue_fermat_20261029/README.md was pushed 2026-10-29 09:00, before this session's
+  checkpoint, and read only after it.
+  - Its section 1 has (A)'s identification of the one-arc observer with a directed vacancy walk on the
+    star-transposition graph. Priority is theirs. The Nauru name, the trivial and sign blocks and the Schur
+    determinant factorization are additions here.
+  - For T5 it gives the sharp form of (D): the kernel lattice Lambda cap K = 6K and the exact sequence
+    0 -> coker(M^r) -> coker(A^r) -> (Z/6)^4 -> 0 for every r >= 1. The quotient is one irreducible 4-dimensional
+    module with an order-five clock, Phi_5 irreducible over F_2 and F_3.
+  - Our (D) is a different statement: a rank formula valid for every class and both k = 2 and 3, consistent with
+    theirs at T5.
+  NEW HERE: (B), the vertex-star proof and the S4 description in (C), (D) as a general lemma with its census, (E), and
+  the Hamiltonian-cycle/torsion data.
 session: mac-mini-2026-10-29-growth
 source: 05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md
 depends_on:
@@ -190,6 +203,15 @@ For T5, `rank_F2 P = 6`. The star indicators have mod-2 rank 4, so they span `ke
 are in HYP-9445.
 
 ## 3. Relation to the 4-vertex tournament (the owner's question)
+
+*Concurrent.* The research packet `four_vertex_glue_fermat_20261029` answers the same question through lattices
+(§2–§4 there).
+- The four tetrahedral kernel directions have Gram matrix `5I − J`.
+- The native lattice meets the kernel in `6K`, which is "four independent tetrahedron relations, each repeated on six
+  named orders".
+- The exact sequence with quotient `(Z/6)^4` carries an order-five clock.
+
+The account below is the complementary combinatorial one, through the stars and the strong 4-tournament.
 
 - **The tetrahedron.** Each of the four spurious `Z/6` factors is the mod-2 and mod-3 shadow of one T5 kernel
   direction. The kernel directions are the stars `v_w`, one for each deleted vertex `w`, minus one relation. Each star

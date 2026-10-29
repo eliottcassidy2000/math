@@ -154,6 +154,32 @@ def main():
         og.append(tot)
     assert og == OEIS_A001174[:NO + 1], og
     out.append('(3b) oriented graphs A001174 n<=%d from the base-3 field (covariance ln3 gcd)' % NO)
+    # (3c) session98's palette family (q pair colours, t of them fixed by endpoint reversal): direct Burnside
+    #      sum_lambda q^u t^v / z with u = non-antipodal pair orbits, v = #even cycles, against the Gaussian field
+    #      with covariance ln q gcd, W_j = q^(-1/2) e^X_j (j odd), (t/q) e^X_j (j even): E prod W^m = q^((m^T G m - m_odd)/2) (t/q)^v
+    from math import floor
+    NQ = 9
+    checked_qt = []
+    for q, t in ((2, 0), (2, 2), (3, 1), (3, 3), (4, 0), (4, 2), (4, 4), (5, 1), (5, 3)):
+        for n in range(NQ + 1):
+            direct = Fraction(0)
+            for m in partitions(n, range(1, n + 1)):
+                parts = [j for j, k in m.items() for _ in range(k)]
+                u = sum((l - 1) // 2 for l in parts) + sum(gcd(parts[i], parts[j]) for i in range(len(parts)) for j in range(i + 1, len(parts)))
+                v = sum(1 for l in parts if l % 2 == 0)
+                direct += Fraction(q ** u * t ** v, zee(m))
+            gauss = Fraction(0)
+            for mono, c in Zall[n].items() if n <= NH else []:
+                mm = dict(mono)
+                e2 = Fraction(quad(mm) - sum(k for j, k in mm.items() if j % 2), 2)
+                vv = sum(k for j, k in mm.items() if j % 2 == 0)
+                assert e2.denominator == 1
+                gauss += c * Fraction(q) ** int(e2) * Fraction(t, q) ** vv
+            if n <= NH:
+                assert gauss == direct, (q, t, n, gauss, direct)
+            assert direct.denominator == 1
+        checked_qt.append((q, t))
+    out.append('(3c) palette family (q,t) in %s: Gaussian field (cov ln q gcd) = direct Burnside, n <= %d' % (checked_qt, min(NQ, NH)))
     # (4) Cameron-Martin = cycle-insertion PDE, coefficientwise on F(y;2) = sum_m 2^t(m) prod y^m/(j^m m!):
     #     d/dy_p F = 2^((p-1)/2)/p * F(2^gcd(p,j) y_j)
     NP = 21

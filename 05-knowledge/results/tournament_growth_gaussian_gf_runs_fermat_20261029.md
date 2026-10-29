@@ -10,9 +10,31 @@ on 4 vertices with 6 edges relates to the following: dropping T5's integral cons
 \(\mathbb Z/6\) factors. think about ways of proving that there are exactly 5 fermat primes. continue looking for
 recurrences and exact formulas for structure yo can spot"
 
-**Concurrent work.** session98 ("tournament growth", same day) found the fixed-degree projective quotient of the
-inherited A000568 recurrence. This session claimed its lanes by message (MSG-3286) and builds on that work; it does
-not replace it.
+**Concurrent work, same day, credited throughout.** This session claimed its lanes by message (MSG-3286). Two other
+agents worked the same directive and pushed first; their packets were read only after this session's checkpoint
+a37e12900d.
+- **session98** (`session98_tournament_growth_20261029`, 08:43) has:
+  - the fixed-degree projective recurrence;
+  - the meromorphic continuation of `Σ n! a_n 2^(−C(n,2)) z^n` with poles exactly at `4^k` of order `3k + 1`;
+  - non-P-recursiveness;
+  - a palette generalization;
+  - partial-construction classifications.
+
+  Priority for the pole theorem is theirs. Our §1 pole statements are an independent derivation that agrees exactly.
+- **The research packet** `four_vertex_glue_fermat_20261029` (09:00) has:
+  - the vacancy-walk / star-graph form of the one-arc observer;
+  - the sharp explanation of the four `Z/6`, through the kernel lattice `6K` and the exact sequence with quotient
+    `(Z/6)^4` and an order-five clock;
+  - Fermat squaring dynamics.
+
+  Priority for those is theirs. Our §3 account is the complementary combinatorial one.
+- **New here:**
+  - the Gaussian generating function and its unification of the palette family;
+  - the permanental compound;
+  - the T5 star proof;
+  - the general ghost lemma and the all-class censuses by order;
+  - the Hamiltonian-cycle/torsion conjecture;
+  - the function-field analogue and the tournament counting forms of Pépin.
 
 ## 0. Prior work merged
 
@@ -25,7 +47,8 @@ not replace it.
 | the metagraph | definitions.md tiling model; THM-643/644; THM-1430; THM-4729/4730/4731 (closed/open tilings, pure-blue alphabet, self-lines); THM-4739 (Kirchhoff laws); THM-588/589 |
 | run observers, ports, T5's Z/6 | `overnight_rank_return_20261029/THREE_RUN.md` (T5 kernel = tetrahedron boundaries), `TWO_RUN.md`, `COMPLEMENT_KERNEL.md`; `overnight_research_20261029/THREE_RUN_GLUE.md` (index-54 chart; T5 Smith forms (R7); four spurious Z/6) |
 | the four 4-vertex tournaments | THM-4823; `trees5_tournaments4_converse_20261005.md`; reflection "the triangular number is the n = 4 metagraph" |
-| Fermat primes | THM-4644 and THM-871 (Fermat primes = rigid circulants); THM-4793/4800 (Pépin as Collatz dynamics); THM-4801 (constructible polygons); HYP-9410 (calibrated heuristic); THM-4746/4747 (Camion tests) |
+| Fermat primes | THM-4644 and THM-871 (Fermat primes = rigid circulants); THM-4793/4800 (Pépin as Collatz dynamics); THM-4801 (constructible polygons); S58 §1.2 (covering, algebraic and Aurifeuillean no-go); HYP-9410 (calibrated heuristic); THM-4746/4747 (Camion tests) |
+| concurrent (2026-10-29) | session98 `limits/ALL_POLES_CORE_EXPANSION.md`, `PALETTE_POLE_CLASSIFICATION.md`, `GROWTH_THEORY.md`; `four_vertex_glue_fermat_20261029/README.md` and `FERMAT.md` |
 
 ## 1. A recursion for A000568 that gives the generating function (THM-4845)
 
@@ -46,11 +69,13 @@ has generating function `exp(Σ W_p x^p/p)`. The tournament numbers are its aver
   product over part sizes sits inside the expectation, and the cross-coupling `½ Σ φ(d) M_d²` is carried by the
   shared field.
 - **The family.** The same field on all integers gives graphs, and tournaments are graphs with the even power sums
-  switched off. Doubling the covariance gives digraphs. Base 3 gives oriented graphs.
+  switched off. Doubling the covariance gives digraphs, and base 3 gives oriented graphs. In general, session98's
+  palette family with `q` colours, `t` of them reversal-fixed, is the field with covariance `ln q · gcd`, odd weights
+  `q^(−1/2) e^X` and even weights `(t/q) e^X`.
 - **The inherited PDE.** It is the Cameron–Martin formula for this field. Inserting a `p`-cycle shifts the field by
   `ln 2 · gcd(p, ·)`, and session98's projective state is that shift taken modulo the dilation direction.
-- **The normalized series is meromorphic.** `F(y)` extends to all of `C`, with poles exactly at `4^k`, of order
-  `3k + 1`. Hence the exact expansion
+- **The normalized series is meromorphic** (session98 first; found independently here). `F(y)` extends to all of
+  `C`, with poles exactly at `4^k`, of order `3k + 1`. Hence the exact expansion
 
       a_n = (2^(C(n,2)) / n!) · (1 + 32 C(n,3)/4^n + (98304 C(n,5) + 655360 C(n,6))/16^n + …),
 
@@ -81,8 +106,9 @@ observers `M_k`. They are the natural partial structures of the tiling.
 
 **The conjectures (HYP-9445 (1), (2)).**
 - *Two Hamiltonian cycles force torsion.* Two or more Hamiltonian cycles force torsion in the two- and three-run
-  observers. This holds in all 6315 strong cases checked for `k = 2` (orders up to 8). It is false for the one-arc
-  observer.
+  observers. This holds in all 6315 strong cases checked for `k = 2` (orders up to 8), and in 1044 random or
+  low-cycle samples at orders 9 and 10. It is false for the one-arc observer, and the torsion is not always
+  2-primary.
 - *Unique cycles.* The unique-cycle classes are Douglas's `F(2n−6)` = 1, 3, 8, 21, 55 (orders 4 to 8). Their
   torsion-free members number 1, 3, 8, 16, 36.
 
@@ -117,7 +143,8 @@ arcs is the coincidence `3! = C(4,2)`, typed NUMEROLOGY. The structural bridge i
 problem that infinitely many Fermat numbers are composite. The Fermat numbers `F_5`–`F_32` are known composite;
 `F_33` is the first of unknown character.
 
-**Proved barriers.** Four natural routes are ruled out:
+**Proved barriers.** Four natural routes are ruled out. The first and third are S58 §1.2's no-go list, restated;
+the concurrent FERMAT.md has the dynamical twin of the fourth (the source 2 is blind).
 - covering congruences, because a prime divides at most one Fermat number;
 - fixed-modulus certificates, because `F_n mod M` is eventually periodic and coprime to `M` except at `ω(M)` indices;
 - polynomial or Aurifeuillean algebra, because `X^(2^n) + 1` is irreducible over `Q`;
@@ -160,6 +187,7 @@ python3 compound_kernel.py 6       # n = 4..8 -> out/compound_n*.out
 python3 fast_runs.py 8             # two-run census with Hamiltonian cycles -> out/fast_m2_n8.out
 python3 torsion_vs_hc2.py          # HYP-9445 (1), (2) tables
 python3 fermat_camion.py           # THM-4847 (C) -> out/fermat_camion.out
+python3 random_torsion.py 9 300 300 2   # HYP-9445 (1) sampling at orders 9, 10 -> out/random_torsion.out
 ```
 
 The scripts need `gentourng` (nauty), PARI/gp, numpy, sympy and networkx.

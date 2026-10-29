@@ -1,6 +1,6 @@
 ---
 id: THM-4845
-title: "A000568 as a Gaussian average, and the meromorphic normalized series. (A) Let X be the centred Gaussian process on the odd integers with E[X_p X_q] = ln2 gcd(p,q) (realised by X_p = sqrt(ln2) sum_{d|p} sqrt(phi(d)) xi_d, xi_d i.i.d. N(0,1), because sum_{d|g} phi(d) = g) and W_p = 2^(-1/2) e^(X_p). Then, coefficientwise, sum_n a_n x^n = E[exp(sum_{p odd} W_p x^p / p)], i.e. a_n = E[Z_n(W)] with the Newton recursion n Z_n = sum_{p odd <= n} W_p Z_{n-p}, Z_0 = 1: the Davis/Burnside quadratic exponent is diagonalised by one independent Gaussian per odd divisor, and the core kernel B[m,t] of THM-514/516 is E[exp(v sum_{p>=3 odd} W_p x^p/p)], answering OPEN-Q-105(a) / HYP-2538 in this form. (B) The same field on all integers gives graphs (A000088) with W_j = 2^(-[j odd]/2) e^(X_j); tournaments are graphs with the even power sums switched off; doubling the covariance gives digraphs (A000273). (C) The Cameron-Martin formula E[e^(X_p) Phi(X)] = 2^(p/2) E[Phi(X + ln2 gcd(p,.))] is the inherited cycle-insertion PDE. (D) f_n = n! a_n / 2^C(n,2) has F(y) = sum f_n y^n = sum over permutations mu of {3,5,7,...}-cycles of (|mu|!/z_mu) 2^(e(mu) - C(|mu|,2)) y^|mu| / (1 - y 4^(-k(mu)))^(|mu|+1), k(mu) = (|mu| - #cycles)/2: F is meromorphic on C with poles exactly at 4^k (k >= 0) of order exactly 3k+1, and f_n = sum_k 4^(-kn) P_k(n) with explicit polynomials P_k of degree 3k (P_1 = 32 C(n,3), P_2 = 98304 C(n,5) + 655360 C(n,6)); for graphs the poles are at every 2^d, of order 2d+1 (Q_1 = 4 C(n,2), Polya's correction). (E) Neither (a_n) nor (f_n) is P-recursive; F is not D-finite. So no linear recurrence with polynomial coefficients in n alone exists, and the Gaussian-conditional Newton recursion (A) is the recursion that does give the generating function."
+title: "A000568 as a Gaussian average, and the meromorphic normalized series. (A) Let X be the centred Gaussian process on the odd integers with E[X_p X_q] = ln2 gcd(p,q) (realised by X_p = sqrt(ln2) sum_{d|p} sqrt(phi(d)) xi_d, xi_d i.i.d. N(0,1), because sum_{d|g} phi(d) = g) and W_p = 2^(-1/2) e^(X_p). Then, coefficientwise, sum_n a_n x^n = E[exp(sum_{p odd} W_p x^p / p)], i.e. a_n = E[Z_n(W)] with the Newton recursion n Z_n = sum_{p odd <= n} W_p Z_{n-p}, Z_0 = 1: the Davis/Burnside quadratic exponent is diagonalised by one independent Gaussian per odd divisor, and the core kernel B[m,t] of THM-514/516 is E[exp(v sum_{p>=3 odd} W_p x^p/p)], answering OPEN-Q-105(a) / HYP-2538 in this form. (B) The same field on all integers gives graphs (A000088) with W_j = 2^(-[j odd]/2) e^(X_j); tournaments are graphs with the even power sums switched off; doubling the covariance gives digraphs (A000273). (C) The Cameron-Martin formula E[e^(X_p) Phi(X)] = 2^(p/2) E[Phi(X + ln2 gcd(p,.))] is the inherited cycle-insertion PDE. (D) [concurrent with session98's ALL_POLES_CORE_EXPANSION, which has priority for (D)-(E)] f_n = n! a_n / 2^C(n,2) has F(y) = sum f_n y^n = sum over permutations mu of {3,5,7,...}-cycles of (|mu|!/z_mu) 2^(e(mu) - C(|mu|,2)) y^|mu| / (1 - y 4^(-k(mu)))^(|mu|+1), k(mu) = (|mu| - #cycles)/2: F is meromorphic on C with poles exactly at 4^k (k >= 0) of order exactly 3k+1, and f_n = sum_k 4^(-kn) P_k(n) with explicit polynomials P_k of degree 3k (P_1 = 32 C(n,3), P_2 = 98304 C(n,5) + 655360 C(n,6)); for graphs the poles are at every 2^d, of order 2d+1 (Q_1 = 4 C(n,2), Polya's correction). (E) Neither (a_n) nor (f_n) is P-recursive; F is not D-finite. So no linear recurrence with polynomial coefficients in n alone exists, and the Gaussian-conditional Newton recursion (A) is the recursion that does give the generating function."
 status: >
   PROVED (elementary; mac-mini-2026-10-29-growth; pre-audit). (A)-(C) are exact identities between formal power
   series (each coefficient a finite expectation of lognormal monomials); (D) is THM-514's core-kernel factorization
@@ -14,8 +14,15 @@ status: >
   D-finite function has finitely many singular points. INHERITED: THM-514 (unit tail, core kernel K[m,t]), THM-516
   (e = C(t,2) + 1/2 sum phi(d) M_d^2), the cycle-insertion PDE and normalized recursion recorded by session98
   (05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md, concurrent).
-  NOVELTY: not found in the repository; the one-variable labelled analogue (2^C(n,2) as a lognormal moment) is folklore,
-  and no literature search for the unlabelled gcd-field form was made.
+  CONCURRENT, WITH PRIORITY ELSEWHERE: (D) and (E) were derived and published first by session98
+  (05-knowledge/results/session98_tournament_growth_20261029/limits/ALL_POLES_CORE_EXPANSION.md, pushed 2026-10-29
+  08:43, read only after this session's checkpoint). Their (1) is our (5), with the same exact pole set and orders and
+  the same two non-P-recursiveness arguments. Their PALETTE_POLE_CLASSIFICATION (q pair colours, t fixed by reversal)
+  contains our graph statement as q = t = 2. The derivation here is independent and agrees exactly; priority for (D)
+  and (E) is theirs.
+  NEW HERE: (A)-(C), and the Gaussian form of session98's whole palette family (B). Not found in the repository; the
+  one-variable labelled analogue (2^C(n,2) as a lognormal moment) is folklore, and no literature search for the
+  unlabelled gcd-field form was made.
 session: mac-mini-2026-10-29-growth
 source: 05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md
 depends_on:
@@ -85,6 +92,14 @@ so **tournaments are graphs with the even power sums switched off**. Two more me
 - *Oriented graphs (A001174).* The base-3 field: covariance `ln 3 · gcd`, with `W_j = 3^(−1/2) e^(X_j)` for odd `j`
   and `W_j = 3^(−1) e^(X_j)` for even `j`. A non-reversing pair orbit has 3 states and the one antipodal orbit of each
   even cycle has 1 state.
+- *Session98's palette family.* This has `q` pair colours, `t` of them fixed by endpoint reversal. The field has
+  covariance `ln q · gcd`, with `W_j = q^(−1/2) e^(X_j)` for odd `j` and `W_j = (t/q) e^(X_j)` for even `j`. Then
+  `E[Π W_j^(m_j)] = q^(u(m)) t^(v(m))`, where `u` counts the non-antipodal pair orbits and `v` the even cycles, which is
+  their Burnside count.
+  - The special cases are tournaments `(2,0)`, graphs `(2,2)`, oriented and semicomplete graphs `(3,1)` and
+    digraphs `(4,2)`.
+  - `t = 0` switches the even power sums off.
+  - Checked for nine `(q,t)` through order 9.
 
 **(C) Cameron–Martin is the inherited PDE.** Put `F(y) = E[exp(Σ_p y_p W_p / p)]`, the multivariate form whose
 specialisation `y_p = x^p` is (1). Since `E[e^(X_p) Φ(X)] = e^(Var X_p / 2) E[Φ(X + Cov(X_p, X))]`,
@@ -194,8 +209,13 @@ with a positive coefficient, so it does not cancel. For `μ = (3^k)`, `e = (3k²
 `2km − C(m,2) = (3k² + 3k)/2` at `m = 3k`, which gives the stated leading coefficient.
 
 *Graphs.* Repeat the argument with THM-514's peel for graphs: fixed points interact with every cycle through
-`gcd(1,ℓ) = 1`. Cores are now fixed-point-free permutations; `d = m − t` can be odd (even cycles), and all-2-cycle
-cores give the top order `2d + 1`.
+`gcd(1,ℓ) = 1`.
+- Cores are now fixed-point-free permutations, and `d = m − t` can be odd (even cycles).
+- Each cycle of length `ℓ ≥ 2` contributes `ℓ − 1 ≥ ℓ/2` to `d`, so `m ≤ 2d`. Only all-2-cycle cores reach
+  `m = 2d`, and they give the top order `2d + 1`.
+- For convergence: a pair orbit of a fixed-point-free permutation has size at least 2, except the fixed pair of each
+  2-cycle. So `e(μ) ≤ (C(m,2) + m)/2`, and `Σ_{|μ| = m} κ_μ ≤ m! 2^(−C(m,2)/2 + m/2)`, which is still summable against
+  `(2R)^m`.
 
 **(E).** For the growth bound on P-recursive sequences, see Stanley, *Enumerative Combinatorics II*, Ch. 6: the
 solutions of a linear recurrence of order `r` with polynomial coefficients of degree at most `s` satisfy
@@ -213,6 +233,7 @@ of the leading coefficient. By (D), `F` has infinitely many poles.
 - `a_n = E[Z_n(W)]` through `n = 30`, computed as polynomials in `W` from (2), then the moment rule.
 - Graphs `g_n` through 12, digraphs through 8 and oriented graphs through 9 from the same functional, agreeing with
   OEIS A000088, A000273 and A001174.
+- The palette family: nine `(q,t)` through order 9 against the direct Burnside sum `Σ q^u t^v / z`.
 - (4) checked as 1066 coefficient identities through degree 21.
 - (6) exact through `n = 80`. After the poles `k ≤ K` (`K = 0, 1, 2`), the remainder divided by the next term is
   `1.0000007`, `1.000014`, `1.0003` at `n = 20`, and `1` to twelve digits at `n = 40`.
@@ -224,6 +245,9 @@ of the leading coefficient. By (D), `F` has infinitely many poles.
   supplies the projective fixed-degree recurrence and the formal PDE/hierarchy, inherited from weighted_core_transport
   and tournament_future_boundary. This theorem does not replace those recurrences. (A) is their explicit solution,
   (C) their mechanism, and (E) explains why nothing finite-dimensional can replace them.
+- **Concurrent, with priority to session98.** The meromorphic continuation, its exact poles and the
+  non-P-recursiveness, (D)-(E), are session98's ALL_POLES_CORE_EXPANSION, found independently here. Their palette
+  theorem generalizes our graph remark.
 - **Not claimed.**
   - A closed form for `B[m,t]` beyond the Gaussian average.
   - A faster algorithm. Evaluating (1) still sums over cycle types, and the 200-term computations of

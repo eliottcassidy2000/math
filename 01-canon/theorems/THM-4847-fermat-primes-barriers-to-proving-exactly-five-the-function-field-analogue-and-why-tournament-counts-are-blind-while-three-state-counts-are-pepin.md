@@ -18,6 +18,17 @@ status: >
     about 2^-30. HYP-9410 has the repo's calibrated heuristic (about 7e-9 beyond F_32).
   INHERITED: THM-4644, THM-871 (circulant rigidity), THM-4746 (Camion tests, the semicomplete law), THM-4793/4800
   (Pepin as Collatz dynamics), THM-4801 (constructible polygons, initial-segment principle).
+  - (A1) and (A3) restate S58's section 1.2 (05-knowledge/results/s58_fermat_pepin_collatz_20261026/README.md):
+    covering congruences, algebraic and Aurifeuillean no-go, assembled there from classical facts.
+  - The status facts and the Boklan-Conway figure are also in S58 section 1.1.
+  CONCURRENT: the research packet 05-knowledge/results/four_vertex_glue_fermat_20261029/FERMAT.md (pushed 09:00 the
+  same day, read after this checkpoint) has three parallel results:
+  - (F6): the source 2 is blind, S^n(2) = -1 and S^(n+1)(2) = 1 mod F_n, prime or composite. This is the dynamical
+    twin of our (C1).
+  - The odd-order-unit certificate of compositeness, with an explicit F_5 witness x^3 = 1.
+  - Exact squaring-digraph formulas.
+  NEW HERE: (A2) as stated, (A4), the function-field theorem (B), the counting forms (C1)-(C3), the F_5 Camion
+  computations and the routes table.
   NOT PROVED, and believed far beyond current methods: that there are exactly five Fermat primes.
 session: mac-mini-2026-10-29-growth
 source: 05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md
@@ -163,6 +174,7 @@ So `F_5` is neither a Camion pseudoprime nor a "semicomplete Camion pseudoprime"
 | heuristic | finitely many expected; at most about `2^-30` new Fermat primes (Boklan–Conway), about `7·10^-9` beyond `F_32` (HYP-9410) |
 | function-field analogue | a theorem (B), by a mechanism that is absent over `Q` |
 | tournaments | counting is blind (C1); symmetry is exact (D); three-state counting is Pépin (C2) |
+| odd-order units | `F_n` is composite iff some unit `x ≠ 1` has odd order (concurrent FERMAT.md); a uniform construction of such a witness for all `n ≥ 5` would suffice and is not known |
 
 The honest verdict is that "exactly five Fermat primes" is a `Π⁰₁` statement that no known method can approach. Any
 proof would have to produce, for each `n ≥ 5`, a structure not visible to congruences of bounded modulus, to
