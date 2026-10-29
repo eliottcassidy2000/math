@@ -1,0 +1,6 @@
+{
+  "script": "finite_clock_ports.py",
+  "normal_optimized_identical": true,
+  "stdout_sha256": "c9abf9e3ac3c0cac65a4939e7279ccf049aaa4de2fffd2ed65a70a4d2dd584dc",
+  "gates": 22951
+}

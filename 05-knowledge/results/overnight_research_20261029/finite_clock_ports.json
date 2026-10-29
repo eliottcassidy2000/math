@@ -1,0 +1,308 @@
+{
+  "status": "FINITE-EXACT supporting scoped proof",
+  "gates": 22951,
+  "finite_states": [
+    {
+      "name": "C3_star_-2_triangle_-2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 5
+    },
+    {
+      "name": "C3_star_-2_triangle_-1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 5
+    },
+    {
+      "name": "C3_star_-2_triangle_1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 4
+    },
+    {
+      "name": "C3_star_-2_triangle_2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 4
+    },
+    {
+      "name": "C3_star_-1_triangle_-2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 5
+    },
+    {
+      "name": "C3_star_-1_triangle_-1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 5
+    },
+    {
+      "name": "C3_star_-1_triangle_1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 4
+    },
+    {
+      "name": "C3_star_-1_triangle_2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 4
+    },
+    {
+      "name": "C3_star_1_triangle_-2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 2
+    },
+    {
+      "name": "C3_star_1_triangle_-1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 2
+    },
+    {
+      "name": "C3_star_1_triangle_1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 1
+    },
+    {
+      "name": "C3_star_1_triangle_2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 1
+    },
+    {
+      "name": "C3_star_2_triangle_-2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 2
+    },
+    {
+      "name": "C3_star_2_triangle_-1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 2
+    },
+    {
+      "name": "C3_star_2_triangle_1",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 1
+    },
+    {
+      "name": "C3_star_2_triangle_2",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 1
+    },
+    {
+      "name": "two_C3_blocks",
+      "ports": 8,
+      "clock_order": 3,
+      "invariant_dimension": 10,
+      "determinant_queries": 252,
+      "singular_queries": 4
+    },
+    {
+      "name": "nonorthogonal_C3",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 2
+    },
+    {
+      "name": "dependent_fifth_port",
+      "ports": 5,
+      "clock_order": 3,
+      "invariant_dimension": 4,
+      "determinant_queries": 60,
+      "singular_queries": 5
+    },
+    {
+      "name": "independent_isotropic_ports",
+      "ports": 4,
+      "clock_order": 3,
+      "invariant_dimension": 2,
+      "determinant_queries": 30,
+      "singular_queries": 0
+    },
+    {
+      "name": "plane_order_3",
+      "ports": 2,
+      "clock_order": 3,
+      "invariant_dimension": 1,
+      "determinant_queries": 3,
+      "singular_queries": 0
+    },
+    {
+      "name": "plane_order_4",
+      "ports": 2,
+      "clock_order": 4,
+      "invariant_dimension": 1,
+      "determinant_queries": 3,
+      "singular_queries": 0
+    },
+    {
+      "name": "plane_order_6",
+      "ports": 2,
+      "clock_order": 6,
+      "invariant_dimension": 1,
+      "determinant_queries": 3,
+      "singular_queries": 0
+    },
+    {
+      "name": "noncommutative_S3_weighted_form",
+      "ports": 6,
+      "clock_order": 6,
+      "invariant_dimension": 2,
+      "determinant_queries": 105,
+      "singular_queries": 6
+    }
+  ],
+  "cycle_partitions_through_14": 507,
+  "named_cycle_dimensions": [
+    {
+      "cycles": [
+        5
+      ],
+      "dimension": 2
+    },
+    {
+      "cycles": [
+        1,
+        5
+      ],
+      "dimension": 3
+    },
+    {
+      "cycles": [
+        7
+      ],
+      "dimension": 3
+    },
+    {
+      "cycles": [
+        1,
+        7
+      ],
+      "dimension": 4
+    },
+    {
+      "cycles": [
+        11
+      ],
+      "dimension": 5
+    },
+    {
+      "cycles": [
+        1,
+        11
+      ],
+      "dimension": 6
+    },
+    {
+      "cycles": [
+        13
+      ],
+      "dimension": 6
+    },
+    {
+      "cycles": [
+        1,
+        13
+      ],
+      "dimension": 7
+    },
+    {
+      "cycles": [
+        25
+      ],
+      "dimension": 12
+    },
+    {
+      "cycles": [
+        1,
+        25
+      ],
+      "dimension": 13
+    },
+    {
+      "cycles": [
+        27
+      ],
+      "dimension": 13
+    },
+    {
+      "cycles": [
+        1,
+        27
+      ],
+      "dimension": 14
+    },
+    {
+      "cycles": [
+        57
+      ],
+      "dimension": 28
+    },
+    {
+      "cycles": [
+        1,
+        57
+      ],
+      "dimension": 29
+    }
+  ],
+  "unipotent_specializations": 6250,
+  "unipotent_box": {
+    "d": [
+      -2,
+      2
+    ],
+    "a_b_u_v": [
+      -2,
+      2
+    ],
+    "signs": [
+      -1,
+      1
+    ]
+  },
+  "scope": "all integer invariant couplings; not native sign-cut closure or integral cokernel"
+}

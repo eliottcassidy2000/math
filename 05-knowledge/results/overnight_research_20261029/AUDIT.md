@@ -92,3 +92,25 @@ independent arithmetic certificates and is integrated separately.
   local-character coverage check with140,334 gates,64 binary banks and
   two ternary repairs, certifying2,005 listed point directions. These are
   replays of incoming work, not additional curve or code discoveries.
+
+## Finite-clock continuation
+
+`finite_clock_ports.py` passes22,951 active gates normally and with -O,
+with identical stdout hashes in finite_clock_receipt.json. It checks24
+states: sixteen C3 star/triangle sources, a two-block source, a genuinely
+nonorthogonal clock, dependent and independent-isotropic ports, three
+plane clocks and a noncommutative finite group on a weighted form. The
+last example is not asserted to be a tournament automorphism group.
+
+Each actual query is evaluated by rational elimination and independently
+by matching Pfaffians. Fixed-space linear equations, orbit-span rank and
+the exterior-square character formula agree. The cycle formula agrees
+with signed pair orbits for507 partitions through14 and fourteen named
+longer cases. There are6,250 specializations of the all-word unipotent
+hostile. Literal re-marking/update/sign words, terminal singular queries
+and an illegal unaveraged pair probe exercise the boundaries.
+
+The proof uses finite order and the full invariant integer coupling space.
+The old Reynolds physicality hostile is explicitly addressed by retaining
+invariance of the unknown and legality of the orbit sum. No new arithmetic
+Selmer map, native-complement operation, or Sha bound is inferred.

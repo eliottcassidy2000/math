@@ -88,6 +88,12 @@ a concrete example of fewer legal observations. Determining its smallest
 carrier under the full intended re-marking operations remains a separate
 problem.
 
+**Continuation:** [FINITE_CLOCK_PORTS](FINITE_CLOCK_PORTS.md) closes the
+finite-group case when every integer invariant coupling is permitted.
+Orbit sums legalize the probes and recover the whole invariant G. The
+restricted cross-block/native languages and the infinite-clock case cannot
+be inferred from that result; the latter has an explicit counterexample.
+
 The bridge to Selmer computations is precise but limited: local
 character matrices also retain only what their future tests see. The
 August rank30 certificate is sufficient for independence, but it loses

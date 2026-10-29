@@ -61,9 +61,15 @@ then their targeted proofs. Recent Session97 additions include:
 
 ## Next bounded obligations, in priority order
 
-1. Determine the smallest response quotient when all future couplings
-   must preserve a specified clock. Our two separating probes can be
-   illegal there. Preserve port dependencies and test the81/27 hostile.
+1. The finite-clock unrestricted-integer subproblem is now closed in
+   [FINITE_CLOCK_PORTS](FINITE_CLOCK_PORTS.md): orbit sums of pair probes
+   are legal and recover every invariant Gram entry. A unipotent infinite
+   clock is an all-word hostile. Next restrict the operation set to actual
+   cross-block or native cuts; the orbit sums need not belong to it.
+   A promising exact next case uses A=[[0,-1],[1,-1]] on each two-port
+   block. Solving A^T B A=B gives B=[[a,b],[-a-b,a]], whose determinant is
+   the Eisenstein norm a^2+ab+b^2. Retain phase(a,b), source product de
+   and primitive content; norm alone changes under a marked translation.
 2. Replace abstract paired-group realization by an actual source-fixed
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with
