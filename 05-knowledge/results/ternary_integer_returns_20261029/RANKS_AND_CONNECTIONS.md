@@ -147,6 +147,18 @@ This is the elementary general form of the imported proof, not an additional
 rank discovery. It requires actual lifts and a terminal full-rank bank;
 vanishing observations alone supply neither.
 
+The latest [integer response-carrier certificate](../overnight_rank_return_20261029/PRECISION.md)
+provides a useful comparison with a different source: its ten-by-fifteen
+observation matrix has Smith factors `(1,1,1,1,1,2,2,2,2,4)`. Binary rank
+five becomes rational rank ten, with successive precision costs `5,9,10,...`
+bits. The elliptic saturation certificate concerns an inclusion of point
+lattices; this Smith certificate concerns the image of a weighted incidence
+map. They share an exact integral mechanism for exposing information hidden
+modulo two, but neither identifies the objects or their kernels. Retaining
+the integral transport is what makes refinement auditable in both cases.
+Collatz still needs such a certificate for its own source-dependent carries;
+a low-precision analogy alone supplies none.
+
 ## 3. A genuine 7-to-21 map for the cheaper controller
 
 There is an exact projective interpretation of the controller's probabilities

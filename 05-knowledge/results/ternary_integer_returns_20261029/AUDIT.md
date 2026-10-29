@@ -35,6 +35,9 @@ were read and integrated with their actual scopes; the earlier binary-bank
 failure is no longer left as an unexplained hypothetical index defect for
 the two named inputs. The abstract ell-saturation lemma in RANKS is a direct
 algebraic restatement of that mechanism, not a new empirical extrapolation.
+The subsequent synchronization through `db09317738` also supplied the
+integer response-carrier Smith certificate; its precision filtration is
+compared with the elliptic inclusion without identifying their source maps.
 
 ## Exact verification universes
 
