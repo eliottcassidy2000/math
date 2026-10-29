@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "checks": 5645,
+  "charts": [
+    {
+      "b": 3,
+      "contrast": "3/2",
+      "charts": [
+        {
+          "word": [
+            1,
+            1,
+            2
+          ],
+          "carry": 19,
+          "source_residue": 7,
+          "modulus": 32
+        },
+        {
+          "word": [
+            1,
+            2,
+            1
+          ],
+          "carry": 23,
+          "source_residue": 27,
+          "modulus": 32
+        },
+        {
+          "word": [
+            2,
+            1,
+            1
+          ],
+          "carry": 29,
+          "source_residue": 9,
+          "modulus": 32
+        }
+      ]
+    },
+    {
+      "b": 5,
+      "contrast": "5/2",
+      "charts": [
+        {
+          "word": [
+            1,
+            1,
+            2
+          ],
+          "carry": 39,
+          "source_residue": 29,
+          "modulus": 32
+        },
+        {
+          "word": [
+            1,
+            2,
+            1
+          ],
+          "carry": 43,
+          "source_residue": 9,
+          "modulus": 32
+        },
+        {
+          "word": [
+            2,
+            1,
+            1
+          ],
+          "carry": 53,
+          "source_residue": 23,
+          "modulus": 32
+        }
+      ]
+    }
+  ],
+  "scope": "Finite controls accompany the rational-function proof; no convergence claim."
+}
