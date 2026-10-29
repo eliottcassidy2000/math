@@ -1,0 +1,246 @@
+{
+  "status": "PASS",
+  "bank_bound": 15,
+  "horizon_checks": 81,
+  "triangular_reconstruction": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056,
+    903753248,
+    154108311168,
+    48542114686912,
+    28401423719122304,
+    31021002160355166848
+  ],
+  "dimension_by_h": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    10,
+    14,
+    19,
+    25
+  ],
+  "prime_inflations": [
+    {
+      "arity": 3,
+      "surplus_coefficients": [
+        1,
+        1,
+        3,
+        9,
+        26,
+        104,
+        664,
+        8248,
+        208568
+      ],
+      "jet_coordinates": 5
+    },
+    {
+      "arity": 4,
+      "surplus_coefficients": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "jet_coordinates": 0
+    },
+    {
+      "arity": 5,
+      "surplus_coefficients": [
+        3,
+        11,
+        44,
+        154,
+        539,
+        2115,
+        11374,
+        113828,
+        2528900
+      ],
+      "jet_coordinates": 7
+    },
+    {
+      "arity": 6,
+      "surplus_coefficients": [
+        15,
+        86,
+        387,
+        1492,
+        5547,
+        22102,
+        112907,
+        1016692,
+        20888540
+      ],
+      "jet_coordinates": 9
+    },
+    {
+      "arity": 7,
+      "surplus_coefficients": [
+        197,
+        1355,
+        6767,
+        28415,
+        112281,
+        458601,
+        2266409,
+        18529357,
+        349372518
+      ],
+      "jet_coordinates": 13
+    },
+    {
+      "arity": 8,
+      "surplus_coefficients": [
+        4008,
+        32016,
+        176040,
+        800112,
+        3352320,
+        14113296,
+        68472936,
+        513752592
+      ],
+      "jet_coordinates": 13
+    },
+    {
+      "arity": 9,
+      "surplus_coefficients": [
+        136655,
+        1229423,
+        7376106,
+        36060204,
+        159810302,
+        695787754,
+        3353571348
+      ],
+      "jet_coordinates": 12
+    },
+    {
+      "arity": 10,
+      "surplus_coefficients": [
+        7906161,
+        79057618,
+        513868365,
+        2687913700,
+        12569918198,
+        56698982636
+      ],
+      "jet_coordinates": 10
+    },
+    {
+      "arity": 11,
+      "surplus_coefficients": [
+        796876429,
+        8765589343,
+        61359009305,
+        341857042009,
+        1682987769680
+      ],
+      "jet_coordinates": 7
+    },
+    {
+      "arity": 12,
+      "surplus_coefficients": [
+        142980435791,
+        1715764045356,
+        12868226991098,
+        76065509728924
+      ],
+      "jet_coordinates": 5
+    },
+    {
+      "arity": 13,
+      "surplus_coefficients": [
+        46453867277461,
+        603900228904513,
+        4831201674577464
+      ],
+      "jet_coordinates": 3
+    },
+    {
+      "arity": 14,
+      "surplus_coefficients": [
+        27687212017612715,
+        387620965165748730
+      ],
+      "jet_coordinates": 2
+    },
+    {
+      "arity": 15,
+      "surplus_coefficients": [
+        30571668704134867685
+      ],
+      "jet_coordinates": 1
+    }
+  ],
+  "independent_palette_orbits": [
+    {
+      "root_action": "C3",
+      "counts": [
+        1,
+        1,
+        2,
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "root_action": "C5",
+      "counts": [
+        1,
+        1,
+        3,
+        6,
+        9,
+        11,
+        9,
+        6,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "root_action": "C7",
+      "counts": [
+        1,
+        1,
+        4,
+        11,
+        23,
+        38,
+        51,
+        57,
+        51,
+        38,
+        23,
+        11,
+        4,
+        1,
+        1
+      ]
+    }
+  ],
+  "c3_missing_three_cycle_error": "2/3"
+}
