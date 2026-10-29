@@ -1,0 +1,111 @@
+{
+  "cut_tests": [
+    {
+      "n": 2,
+      "proper_cut_checks": 4,
+      "switch_normal_checks": 4,
+      "tournaments": 2
+    },
+    {
+      "n": 3,
+      "proper_cut_checks": 48,
+      "switch_normal_checks": 32,
+      "tournaments": 8
+    },
+    {
+      "n": 4,
+      "proper_cut_checks": 896,
+      "switch_normal_checks": 512,
+      "tournaments": 64
+    },
+    {
+      "n": 5,
+      "proper_cut_checks": 30720,
+      "switch_normal_checks": 16384,
+      "tournaments": 1024
+    }
+  ],
+  "operation_masks": [
+    {
+      "n": 1,
+      "native_is_converse_switch": true,
+      "native_is_switch": true
+    },
+    {
+      "n": 2,
+      "native_is_converse_switch": true,
+      "native_is_switch": true
+    },
+    {
+      "n": 3,
+      "native_is_converse_switch": true,
+      "native_is_switch": false
+    },
+    {
+      "n": 4,
+      "native_is_converse_switch": false,
+      "native_is_switch": false
+    },
+    {
+      "n": 5,
+      "native_is_converse_switch": false,
+      "native_is_switch": false
+    },
+    {
+      "n": 6,
+      "native_is_converse_switch": false,
+      "native_is_switch": false
+    },
+    {
+      "n": 7,
+      "native_is_converse_switch": false,
+      "native_is_switch": false
+    },
+    {
+      "n": 8,
+      "native_is_converse_switch": false,
+      "native_is_switch": false
+    }
+  ],
+  "rankone_nonmodule_hostile": {
+    "S": [
+      0,
+      3
+    ],
+    "bits": 0,
+    "matrix": [
+      [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        0,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        0,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ]
+    ],
+    "n": 4,
+    "switch": [
+      -1,
+      1,
+      1,
+      1
+    ]
+  },
+  "status": "FINITE-EXACT"
+}
