@@ -1,0 +1,2 @@
+n=8 strong classes: [(('HC=1', 'S tf', 'S nonsingular'), 36), (('HC=1', 'S tf', 'S singular'), 18), (('HC=1', 'S torsion', 'S singular'), 1), (('HC>=2', 'S torsion', 'S nonsingular'), 5822), (('HC>=2', 'S torsion', 'S singular'), 131)]
+violations of [S_2 torsion-free <=> unique Hamiltonian cycle]: [('1010111111111111111101111101', 1, '[0, 0, 0, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]')] 1

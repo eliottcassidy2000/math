@@ -46,6 +46,7 @@ scripts:
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/star_orientation.py, block_checks.py
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/compound_kernel.py, ghost_lemma.py
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/fast_runs.py, torsion_vs_hc.py, torsion_vs_hc2.py
+  - 04-computation/experiments/growth_gf_runs_fermat_20261029/jacobi_sign_sector.py, p2_vs_hc.py, s2_vs_hc_n8.py, stream_m2.py, random_torsion.py, hc_small_k3_n8.py
 outputs:
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/out/ (census_n*_k*.out, compound_n*.out, fast_m2_n7.out, fast_m2_n8.out)
 ---
@@ -133,6 +134,23 @@ and this is the excess of the number of invariant factors of `N` divisible by 2 
 
 So dropping the glue adds `4 × Z/2` and `4 × Z/3`, the four spurious `Z/6`. The rational rank (56) and the free
 rank (4) cannot see them (R7).
+
+**(F) Plus and sign sectors are the permanental and determinantal compounds of the path matrix.** Added after the
+audit was launched. In `R = Z[x_v]/(x_v²)` put `X = diag(x)`, `B = I − A X` and `P = X B⁻¹`, so that `P_st` is the sum
+of `x^(V(π))` over directed `s`–`t` paths `π` (THREE_RUN_GLUE (R1)). For every `k`:
+- the plus sector of `M_k` is `[x_V] per P[α, β]`;
+- the sign sector is `[x_V] det P[α, β]`, with `α`, `β` the start and end `k`-sets in increasing order.
+
+`det B = 1 + (nilpotent)` is a unit, so Jacobi's complementary-minor theorem gives
+
+    S_k[α, β] = (−1)^(Σα + Σβ) [x_V] ( x^α · det B[V − β, V − α] / det B ).
+
+Every minor of `B` expands over permutations whose non-fixed cycles are directed cycles of `T`, because `A` has zero
+diagonal and no 2-cycles. So the sign sector is a ratio of signed path-and-cycle-cover counts, and the Hamiltonian
+cycles of subtournaments enter it directly. This is the structural reason to expect the cycle–torsion link of
+HYP-9445. The plus sector instead has `per`, for which there is no Jacobi identity.
+
+Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign_sector.py`).
 
 **(E) What changes as the order grows (FINITE-EXACT).**
 

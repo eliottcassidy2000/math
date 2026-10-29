@@ -1,0 +1,4 @@
+n=7 classes=456
+SUMMARY: [(('HC=0', 'skipped'), 103), (('HC=1', 'torsion'), 5), (('HC=1', 'torsion-free'), 16), (('HC>=2', 'torsion'), 332)]
+unique-HC classes: 21, torsion-free: 16
+counterexamples to HYP-9445 (1) at k = 2: none

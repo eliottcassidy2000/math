@@ -93,6 +93,9 @@ observers `M_k`. They are the natural partial structures of the tiling.
   `n = 4`. Its run-symmetric block is `Aᵀ`, its sign block is a signed `Aᵀ`, and its determinant is a product of
   powers whose exponents are combinations of `S_{n−1}`-dimensions.
 - **Two arcs** (`k = n − 2`): the unordered observer is the second permanental compound of `A`.
+- **Sectors as compounds.** For every `k`, the plus and sign sectors are the multilinear parts of the permanental and
+  determinantal compounds of the path matrix `P = X(I − AX)⁻¹`. By Jacobi, the sign sector is a ratio of
+  cycle-cover minors of `I − AX`, which is where Hamiltonian cycles enter.
 
 **Thresholds as the order grows.**
 
@@ -111,6 +114,9 @@ observers `M_k`. They are the natural partial structures of the tiling.
   2-primary.
 - *Unique cycles.* The unique-cycle classes are Douglas's `F(2n−6)` = 1, 3, 8, 21, 55 (orders 4 to 8). Their
   torsion-free members number 1, 3, 8, 16, 36.
+- *The sign sector alone.* The signed two-run sector already shows the effect: it has torsion for every class with
+  two or more Hamiltonian cycles through order 8. For unique-cycle classes it is torsion-free except one class at
+  order 8.
 
 ## 3. The tournament on 4 vertices and T5's four spurious Z/6 (THM-4846 (C), (D))
 
