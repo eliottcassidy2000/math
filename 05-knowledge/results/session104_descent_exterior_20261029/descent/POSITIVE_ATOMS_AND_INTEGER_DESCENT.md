@@ -97,6 +97,28 @@ because the sum F(n)-F(n') includes B(n')+1 and all other terms are nonnegative.
 
 For positive odd Collatz sources use the ordered labels j=(n+1)/2, with B(j)=R(2j-1,1) from (3). An episode's exact local controller rank is bounded by its initial B(j), since internal edges decrease. **If** every completed return from a nonterminal source n>1 had endpoint n'<n, these local ranks would compile by (6). But this missing premise is false for the raw controller: starting (n,Q)=(3,1), the exact valuation is1, so the first return is (3,1)->(5,0). Its endpoint is larger than its immutable source. The original-source payment in (4) is L_1=2(3-5)=-4, not positive. Resetting at5 cannot be declared paid. The repaired compiler therefore applies only to an independently authenticated family of source-decreasing macro episodes (possibly grouping several returns with their own termination account), not automatically to every (3,3) return.
 
+**Explicit logarithmic native-time bound and closed reset offset.** For a positive odd source n let L=bit_length(n), so n+1<=2^L. At fresh queue Q=1,
+
+    P(n,1)=(3/2)(n+1)<=3*2^(L-1).
+
+The exact integer inequality `2*27^20 < 28^20` says rho^20<1/2. Consequently, after 20(L-1)+1 contractions, the product rho^(20(L-1)+1)P is strictly below3 (including L=1). Therefore
+
+    B(P(n,1)) <= 20(L-1)+1,
+    R(n,1) <= 60L-56.                                    (7)
+
+Every single auxiliary return from Q=1 takes at most 60*bit_length(n)-56 accelerated native steps. At n=1 this bound is4, equal to the initial rank, though the return itself takes only one step. At n=13 the bound184 exceeds the exact rank163. This is an explicit bound for one return, not for all successive returns or for the sum of the valuations.
+
+For the same **paid** macro reset conditions, now label the immutable macro by its actual positive odd source n. Replace the finite-sum offset in (6) by the closed computable envelope
+
+    F_env(n)=60*n*bit_length(n),   G_env(n,r)=F_env(n)+r.   (8)
+
+For any positive integer m, monotonicity of bit length gives F_env(m+1)-F_env(m)>=60*bit_length(m). Hence for positive odd n'<n,
+
+    F_env(n)-F_env(n') >= 60*bit_length(n')
+                              > R(n',1) >= r'.
+
+Thus a paid reset from local rank0 still strictly lowers (8), while internal edges decrease r. Its initial value is at most 60*(n+1)*bit_length(n)-56. This is an explicit bound on native edges plus bookkeeping resets **conditional on every reset being authenticated source-decreasing and every nonterminal obligation having an authorized continuation**. It does not authorize the unpaid3->5 reset, supply missing macro coverage, or bound total unaccelerated divisions. The source and local rank bounds have precisely the same semantics as (6).
+
 This supplies a precise engineering target for the analogy: establish a bounded local completion rank, retain immutable source and carry through the whole macro, and prove positive source payment before every reset. The arithmetic source-payment requirement is not removed by the finite sum F.
 
 ## 5. Rounding and weighting obstructions
