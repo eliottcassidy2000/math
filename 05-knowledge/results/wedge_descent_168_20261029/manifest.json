@@ -37,7 +37,7 @@
     "README.md": "7f22799770568b494a37e5a029fd6faf9df1ce895f55f0674b400cc424bd1413",
     "RECOVERY.md": "bd6d4cba944553374896ca38af3ea7fd69a55ccb1890499170c7be197068ddbc",
     "seal.py": "2a4cc527668587106b82bcb471b1755e0af512fbf2d7a17e1958cde5a2e818de",
-    "THEORY.md": "8ad508a845b73fcb03c6a0c85b40f821566d5bb8e3193d9e4927aca91114607d",
+    "THEORY.md": "14ca926aa22d47df688f951c8201710b28858c75f4f0e576b6ea1b2d2e03d8e6",
     "verify.py": "9755542d9fcdc064b3ecba40d6f409db4f2da999a5c32f20c37462cc265eea7c"
   },
   "audit_scope": "same-agent proof and independent algorithms; no independent referee"

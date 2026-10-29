@@ -10,7 +10,8 @@ identified as such; no literature-first claim is made.
 
 Let T be a loopless finite digraph on n vertices with a marked directed
 Hamilton cycle C and successor s. Define D_C by putting s(u)->v for every
-T arc u->v outside C. Suppose D_C is acyclic. Let M_k count spanning covers
+T arc u->v outside C. Suppose D_C is acyclic and fix 1<=k<=n.
+Let M_k count spanning covers
 by k ordered nonempty vertex-disjoint directed paths, with rows their ordered
 starts and columns their ordered ends. Singleton paths are permitted.
 
