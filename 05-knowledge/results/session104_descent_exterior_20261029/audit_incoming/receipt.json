@@ -1,0 +1,18 @@
+{
+  "N_nilpotence_index": 3,
+  "all_vertex_remarkings": 24,
+  "checks": 251,
+  "cyclic_union_with_trace12": 7,
+  "native_ordered_covers": 22,
+  "port_dimension": 12,
+  "producer_imports": false,
+  "scope": "K4 W1/W2 only; no n6 k3 sharpness claim",
+  "status": "PASS",
+  "swap_1_3_trace": 22,
+  "trace_histogram": {
+    "12": 17,
+    "16": 6,
+    "22": 1
+  },
+  "uses_assert": false
+}
