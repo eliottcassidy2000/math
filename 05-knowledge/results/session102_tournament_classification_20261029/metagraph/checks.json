@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "checks": 409799,
+  "universe": "all labelled tournaments n=1..5; every directed Hamilton path; switches modulo complementary subsets; all legal two-step words n<=4; selected chains",
+  "sharp_two_step_switch": {
+    "n": 7,
+    "canonical_Q_skeletons": [
+      [
+        2,
+        5,
+        0,
+        3,
+        6,
+        1,
+        4
+      ],
+      [
+        4,
+        1,
+        6,
+        3,
+        0,
+        5,
+        2
+      ]
+    ],
+    "within_part_fillings": 512,
+    "colour_counts": {
+      "blue-blue": 64,
+      "black-black": 448
+    },
+    "black_black_witness": {
+      "adjacency": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "P": [
+        0,
+        4,
+        1,
+        5,
+        2,
+        6,
+        3
+      ],
+      "Q": [
+        1,
+        6,
+        0,
+        5,
+        3,
+        4,
+        2
+      ],
+      "S": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "census": [
+    {
+      "n": 1,
+      "tournaments": 1,
+      "paths": 1
+    },
+    {
+      "n": 2,
+      "tournaments": 2,
+      "paths": 2
+    },
+    {
+      "n": 3,
+      "tournaments": 8,
+      "paths": 12
+    },
+    {
+      "n": 4,
+      "tournaments": 64,
+      "paths": 192
+    },
+    {
+      "n": 5,
+      "tournaments": 1024,
+      "paths": 7680
+    }
+  ],
+  "two_step_switch_witness": {
+    "n": 3,
+    "mask": 0,
+    "P": [
+      2,
+      1,
+      0
+    ],
+    "Q": [
+      0,
+      2,
+      1
+    ],
+    "S": [
+      0
+    ]
+  },
+  "controls": [
+    {
+      "name": "C3>C3",
+      "n": 6,
+      "H": 9,
+      "fibre": 1,
+      "blue": 1,
+      "black": 0
+    },
+    {
+      "name": "C3>1>C3",
+      "n": 7,
+      "H": 9,
+      "fibre": 1,
+      "blue": 1,
+      "black": 0
+    },
+    {
+      "name": "T5>T5",
+      "n": 10,
+      "H": 225,
+      "fibre": 9,
+      "blue": 3,
+      "black": 6
+    },
+    {
+      "name": "C3>T5>C3",
+      "n": 11,
+      "H": 135,
+      "fibre": 3,
+      "blue": 3,
+      "black": 0
+    }
+  ]
+}
