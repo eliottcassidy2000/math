@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/syndrome-independent.json",
+      "script": "audit/check_syndrome_independent.py",
+      "stdout_sha256": "beac00a7d2684b4d23c7b070afc633263983740abd05d1f8cc17d43a238dc9e0",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/native-quotient-independent.json",
+      "script": "audit/check_native_quotient_independent.py",
+      "stdout_sha256": "743bc4c9bf797f108648255d699e83fc2dfbcf87a9c5700f662550fcb8e676cb",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "grammar/results.json",
+      "script": "grammar/check.py",
+      "stdout_sha256": "a9599c255f54d55e0ab769476ec8912d64650be1fec0f708cbdb8756da4b86ed",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "switching/results.json",
+      "script": "switching/check_signed_cuts.py",
+      "stdout_sha256": "68d19f29010a2394c1102f30bd1e5963104f322478d1aeb3f5c30f462a73072b",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "pfaffian/results.json",
+      "script": "pfaffian/check_pfaffian.py",
+      "stdout_sha256": "784bef31f9edcb611a0bfbabab58237a86ba175d5bf486a84ebda3f77e2c64e2",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "metagraph/checks.json",
+      "script": "metagraph/check_sign_grammar.py",
+      "stdout_sha256": "086dc715d4e7d12c42a51c6587674b725324e85203e9de41a6e750ab28cdd865",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "metagraph/syndrome_checks.json",
+      "script": "metagraph/check_extremal_syndrome.py",
+      "stdout_sha256": "69b818f761367a945b8b0130125bb32c5d8cab6c193581bffe39e7a37f2101e8",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "metagraph/cayley_checks.json",
+      "script": "metagraph/check_cayley_quotient.py",
+      "stdout_sha256": "f9e2da6e31cc3b8ef61a0f8d599e642fbbb63f1f7f1e79db8a2b9528ae24a796",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/signed-cuts.json",
+      "script": "audit/check_signed_cuts_independent.py",
+      "stdout_sha256": "a4729a9174a50612f5b3a6835b7be96933722670a8732582be0ae9662e6a3eff",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/switch-groups.json",
+      "script": "audit/check_switch_groups_independent.py",
+      "stdout_sha256": "ce2f8aa4fbb43e343f082eb9359c38642962ddb6a90c03bffaaa0d833782c7c0",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/historical-hostiles.json",
+      "script": "audit/check_historical_hostiles_independent.py",
+      "stdout_sha256": "a7e95455bc766b1e06cf65f672b55b31123ec8f4e8f367f471df2099834c442d",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/two-move.json",
+      "script": "audit/check_two_move_boundary_independent.py",
+      "stdout_sha256": "f89c7fc625b5294a7de0c87bd238e2a7c2a9e0132733677975a5dac86d63699c",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/pfaffian-independent.json",
+      "script": "audit/check_pfaffian_independent.py",
+      "stdout_sha256": "a0960dce276dbd3d516102566dea0ecdc6ad70bb8d49d57cece7d5d62a24223b",
+      "stored_receipt_matches": true
+    },
+    {
+      "normal_optimized_identical": true,
+      "receipt": "audit/projective-independent.json",
+      "script": "audit/check_projective_group_independent.py",
+      "stdout_sha256": "200a422938fca001e47bea8f14f55a018fa8a91694961a996e080147c8577525",
+      "stored_receipt_matches": true
+    }
+  ],
+  "scope": "Fourteen mathematical scripts, with explicit finite universes and separate all-order proofs. No full prime atlas or CI-pass claim.",
+  "status": "VERIFIED"
+}
