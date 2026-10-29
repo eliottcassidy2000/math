@@ -1,0 +1,79 @@
+{
+  "chain_first_16": [
+    1,
+    5,
+    13,
+    17,
+    181,
+    241,
+    1285,
+    6853,
+    9137,
+    24365,
+    64973,
+    173261,
+    462029,
+    1232077,
+    1642769,
+    17522869
+  ],
+  "inverse_exponents_first_15": [
+    4,
+    3,
+    2,
+    5,
+    2,
+    4,
+    4,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    5
+  ],
+  "long_survival_controls": 40,
+  "max_chain_digits": 38,
+  "rank_rows": [
+    {
+      "horizon": 1,
+      "largest_witness": "5",
+      "rank": 1
+    },
+    {
+      "horizon": 2,
+      "largest_witness": "13",
+      "rank": 2
+    },
+    {
+      "horizon": 3,
+      "largest_witness": "17",
+      "rank": 3
+    },
+    {
+      "horizon": 5,
+      "largest_witness": "241",
+      "rank": 5
+    },
+    {
+      "horizon": 10,
+      "largest_witness": "64973",
+      "rank": 10
+    },
+    {
+      "horizon": 20,
+      "largest_witness": "2362919173",
+      "rank": 20
+    },
+    {
+      "horizon": 40,
+      "largest_witness": "12500963706587313973",
+      "rank": 40
+    }
+  ],
+  "scope": "Exact inverse chain through80; independent survival matrices through40; proofs all-order in note",
+  "source_sha256": "6f331b02987bce3a7b8ca77602dc6f106e07e7585ede5c274bff93f0cef8a52f",
+  "status": "PASS"
+}

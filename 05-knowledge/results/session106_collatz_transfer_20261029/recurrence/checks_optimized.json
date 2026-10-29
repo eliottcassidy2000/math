@@ -1,0 +1,294 @@
+{
+  "bounded_sieves": {
+    "3": [
+      {
+        "cells": 1,
+        "depth": 1,
+        "survivors": 1024
+      },
+      {
+        "cells": 2,
+        "depth": 2,
+        "survivors": 768
+      },
+      {
+        "cells": 3,
+        "depth": 3,
+        "survivors": 512
+      },
+      {
+        "cells": 7,
+        "depth": 4,
+        "survivors": 416
+      },
+      {
+        "cells": 12,
+        "depth": 5,
+        "survivors": 304
+      },
+      {
+        "cells": 30,
+        "depth": 6,
+        "survivors": 256
+      },
+      {
+        "cells": 85,
+        "depth": 7,
+        "survivors": 226
+      },
+      {
+        "cells": 132,
+        "depth": 8,
+        "survivors": 185
+      },
+      {
+        "cells": 148,
+        "depth": 9,
+        "survivors": 159
+      },
+      {
+        "cells": 132,
+        "depth": 10,
+        "survivors": 133
+      },
+      {
+        "cells": 116,
+        "depth": 11,
+        "survivors": 116
+      },
+      {
+        "cells": 101,
+        "depth": 12,
+        "survivors": 101
+      },
+      {
+        "cells": 89,
+        "depth": 13,
+        "survivors": 89
+      },
+      {
+        "cells": 81,
+        "depth": 14,
+        "survivors": 81
+      },
+      {
+        "cells": 68,
+        "depth": 15,
+        "survivors": 68
+      },
+      {
+        "cells": 60,
+        "depth": 16,
+        "survivors": 60
+      },
+      {
+        "cells": 53,
+        "depth": 17,
+        "survivors": 53
+      },
+      {
+        "cells": 49,
+        "depth": 18,
+        "survivors": 49
+      }
+    ],
+    "5": [
+      {
+        "cells": 2,
+        "depth": 1,
+        "survivors": 1535
+      },
+      {
+        "cells": 5,
+        "depth": 2,
+        "survivors": 1280
+      },
+      {
+        "cells": 16,
+        "depth": 3,
+        "survivors": 1122
+      },
+      {
+        "cells": 58,
+        "depth": 4,
+        "survivors": 1066
+      },
+      {
+        "cells": 204,
+        "depth": 5,
+        "survivors": 1010
+      },
+      {
+        "cells": 462,
+        "depth": 6,
+        "survivors": 957
+      },
+      {
+        "cells": 713,
+        "depth": 7,
+        "survivors": 933
+      },
+      {
+        "cells": 843,
+        "depth": 8,
+        "survivors": 909
+      },
+      {
+        "cells": 875,
+        "depth": 9,
+        "survivors": 887
+      },
+      {
+        "cells": 868,
+        "depth": 10,
+        "survivors": 869
+      },
+      {
+        "cells": 854,
+        "depth": 11,
+        "survivors": 854
+      },
+      {
+        "cells": 842,
+        "depth": 12,
+        "survivors": 842
+      },
+      {
+        "cells": 835,
+        "depth": 13,
+        "survivors": 835
+      },
+      {
+        "cells": 828,
+        "depth": 14,
+        "survivors": 828
+      },
+      {
+        "cells": 820,
+        "depth": 15,
+        "survivors": 820
+      },
+      {
+        "cells": 812,
+        "depth": 16,
+        "survivors": 812
+      },
+      {
+        "cells": 803,
+        "depth": 17,
+        "survivors": 803
+      },
+      {
+        "cells": 794,
+        "depth": 18,
+        "survivors": 794
+      }
+    ],
+    "7": [
+      {
+        "cells": 2,
+        "depth": 1,
+        "survivors": 1536
+      },
+      {
+        "cells": 7,
+        "depth": 2,
+        "survivors": 1408
+      },
+      {
+        "cells": 30,
+        "depth": 3,
+        "survivors": 1352
+      },
+      {
+        "cells": 143,
+        "depth": 4,
+        "survivors": 1322
+      },
+      {
+        "cells": 414,
+        "depth": 5,
+        "survivors": 1294
+      },
+      {
+        "cells": 759,
+        "depth": 6,
+        "survivors": 1273
+      },
+      {
+        "cells": 1035,
+        "depth": 7,
+        "survivors": 1257
+      },
+      {
+        "cells": 1183,
+        "depth": 8,
+        "survivors": 1249
+      },
+      {
+        "cells": 1229,
+        "depth": 9,
+        "survivors": 1241
+      },
+      {
+        "cells": 1235,
+        "depth": 10,
+        "survivors": 1236
+      },
+      {
+        "cells": 1230,
+        "depth": 11,
+        "survivors": 1230
+      },
+      {
+        "cells": 1228,
+        "depth": 12,
+        "survivors": 1228
+      },
+      {
+        "cells": 1227,
+        "depth": 13,
+        "survivors": 1227
+      },
+      {
+        "cells": 1226,
+        "depth": 14,
+        "survivors": 1226
+      },
+      {
+        "cells": 1226,
+        "depth": 15,
+        "survivors": 1226
+      },
+      {
+        "cells": 1225,
+        "depth": 16,
+        "survivors": 1225
+      },
+      {
+        "cells": 1225,
+        "depth": 17,
+        "survivors": 1225
+      },
+      {
+        "cells": 1225,
+        "depth": 18,
+        "survivors": 1225
+      }
+    ]
+  },
+  "hostiles": {
+    "five_cycle": [
+      13,
+      33,
+      83
+    ],
+    "same_denominator_then_reclose": [
+      101,
+      35,
+      175
+    ]
+  },
+  "status": "PASS",
+  "word_states": 1020
+}

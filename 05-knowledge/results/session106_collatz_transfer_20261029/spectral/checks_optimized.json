@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "abel_identity": 192,
+    "atom_excludes_infinite": 75,
+    "averaging_changes_survival": 10,
+    "exact_valuation_one": 3240,
+    "finite_head_abel_atom_crossing": 1,
+    "finite_head_resolved": 1,
+    "lazy_clock_identity": 576,
+    "mixed_entrywise_domination": 20480,
+    "native_aggregation_survivor": 11,
+    "noncommuting_witness": 1,
+    "norm_one_source_formula": 3240,
+    "norm_one_survival": 80,
+    "rational_hitting_bound": 75,
+    "refresh_threshold_sharp": 15,
+    "resolvent_positive": 192,
+    "source_three_bound": 1,
+    "supersolution_equality": 192,
+    "survival_tail_not_discarded": 1,
+    "telescoping_exact_mass": 1
+  },
+  "finite_head": {
+    "abel_upper_denominator": 36982822951164360219950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    "abel_upper_numerator": 651019388280876696673302207610530841510740505005082385845168532956651369893947633858949617784233665807630059658553247584918708932417840832612483385151,
+    "certified_source_3_lifetime_strictly_below": 112,
+    "horizon": 200,
+    "largest_lifetime": 43,
+    "odd_sources": 64,
+    "tail_mass": "1/65",
+    "z": "999/1000"
+  },
+  "scope": "finite exact controls only; infinite statements proved in Markdown",
+  "status": "PASS",
+  "total_checks": 28384
+}
