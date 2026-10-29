@@ -92,6 +92,19 @@ ODD_ARITIES.md uses those stronger mechanisms explicitly. It adds the
 base-four tilt and the finite-variance/infinite-carry separation; it does
 not claim the incoming clock compiler as our result.
 
+A final incoming review through `c11e3b87d2` read the
+[golden cokernel tower](../stabilizer_necklace_kernels_20261028/COKERNELS.md)
+and [Selmer stopping criterion](../session96_sha_pairing_growth_20261029/selmer/SELMER_TOWER_FINITE_CERTIFICATES.md).
+The former retains a twisted cyclic shift in addition to its scalar Lucas
+recurrence, reinforcing our requirement to retain clocks. The latter has
+an actual absorbing plateau supplied by injections of torsion-layer
+quotients. Our decaying source-measure tail has no such injection or
+integral plateau, so it does not inherit that termination argument. A
+useful next question is whether an independently defined arithmetic
+granularity or absorbing-zero condition can turn a paid residual bound
+into emptiness. This is a proposed proof mechanism, not a claimed map
+between Collatz and Sha.
+
 ## Reproduction and next tests
 
 From this directory run `python3 -B reproduce.py`. It compares normal and
