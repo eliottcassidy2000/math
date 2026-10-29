@@ -27,6 +27,9 @@ Jacobian, or six-colour theorem is claimed.
    including the nonabelian order243 group at27 vertices. Every correction
    has a constructive loop of at most3[1+(k-1)3^k] square-root transport
    edges. This counts the stated re-marking moves, not tournament complements.
+   The subsequent [linear repair](../crt_weighted_ports_20261028/LINEAR_REPAIR.md),
+   independently agreeing with concurrent Session94, sharpens this valid
+   upper bound to3(3^k-2k-1)/4 using conjugated individual triangles.
 4. [All-order joint-port recurrence](PORT_MOMENTS.md). At fixed r, the
    number of centralizer orbits on ordered r-tuples is a degree-r polynomial
    in k with leading coefficient2^r r!. One/two-port counts are2k+1 and

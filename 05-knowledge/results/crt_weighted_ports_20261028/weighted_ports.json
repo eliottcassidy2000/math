@@ -1,0 +1,57 @@
+{
+  "active_checks": 3651,
+  "rows": [
+    {
+      "centralizer": 1,
+      "hypotenuse_fixed_moments": [
+        "1",
+        "59",
+        "3481",
+        "205379",
+        "12117361"
+      ],
+      "joint_orbit_counts": [
+        3,
+        9,
+        27
+      ],
+      "k": 1,
+      "vertices": 3
+    },
+    {
+      "centralizer": 3,
+      "hypotenuse_fixed_moments": [
+        "1",
+        "1379/3",
+        "715547/3",
+        "413519771/3",
+        "258321676403/3"
+      ],
+      "joint_orbit_counts": [
+        5,
+        33,
+        261
+      ],
+      "k": 2,
+      "vertices": 9
+    },
+    {
+      "centralizer": 243,
+      "hypotenuse_fixed_moments": [
+        "1",
+        "9397/3",
+        "104613137/9",
+        "150481818109/3",
+        "2199752373351385/9"
+      ],
+      "joint_orbit_counts": [
+        7,
+        73,
+        991
+      ],
+      "k": 3,
+      "vertices": 27
+    }
+  ],
+  "scope": "uniform group moments; separate product-source orbit masses"
+}

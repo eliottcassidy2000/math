@@ -1,0 +1,918 @@
+{
+  "active_checks": 833500,
+  "decoders": [
+    {
+      "candidate_count": 47,
+      "field": 11,
+      "n": 15,
+      "status": "FINITE-EXACT feasible decoder; no optimality claim",
+      "steps": [
+        {
+          "cells": 111,
+          "shift": [
+            0,
+            0,
+            0
+          ],
+          "unresolved_pairs": 9501
+        },
+        {
+          "cells": 754,
+          "shift": [
+            1,
+            5,
+            5
+          ],
+          "unresolved_pairs": 954
+        },
+        {
+          "cells": 1270,
+          "shift": [
+            2,
+            5,
+            20
+          ],
+          "unresolved_pairs": 96
+        },
+        {
+          "cells": 1358,
+          "shift": [
+            0,
+            5,
+            12
+          ],
+          "unresolved_pairs": 6
+        },
+        {
+          "cells": 1364,
+          "shift": [
+            0,
+            2,
+            2
+          ],
+          "unresolved_pairs": 0
+        }
+      ]
+    },
+    {
+      "candidate_count": 46,
+      "field": 31,
+      "n": 15,
+      "status": "FINITE-EXACT feasible decoder; no optimality claim",
+      "steps": [
+        {
+          "cells": 751,
+          "shift": [
+            0,
+            0,
+            0
+          ],
+          "unresolved_pairs": 1036
+        },
+        {
+          "cells": 1338,
+          "shift": [
+            3,
+            2,
+            23
+          ],
+          "unresolved_pairs": 26
+        },
+        {
+          "cells": 1364,
+          "shift": [
+            0,
+            2,
+            2
+          ],
+          "unresolved_pairs": 0
+        }
+      ]
+    },
+    {
+      "candidate_count": 48,
+      "field": 29,
+      "n": 21,
+      "status": "FINITE-EXACT feasible decoder; no optimality claim",
+      "steps": [
+        {
+          "cells": 785,
+          "shift": [
+            0,
+            0,
+            0
+          ],
+          "unresolved_pairs": 502242
+        },
+        {
+          "cells": 11827,
+          "shift": [
+            2,
+            14,
+            176
+          ],
+          "unresolved_pairs": 25465
+        },
+        {
+          "cells": 23011,
+          "shift": [
+            2,
+            2,
+            157
+          ],
+          "unresolved_pairs": 1563
+        },
+        {
+          "cells": 24393,
+          "shift": [
+            1,
+            1,
+            176
+          ],
+          "unresolved_pairs": 83
+        },
+        {
+          "cells": 24476,
+          "shift": [
+            3,
+            2,
+            68
+          ],
+          "unresolved_pairs": 0
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "fibre_histogram": {
+        "1": 72,
+        "4": 1
+      },
+      "integer_shifts": [
+        0
+      ],
+      "n": 9,
+      "observed_field": 19,
+      "signature_count": 73
+    },
+    {
+      "fibre_histogram": {
+        "1": 76
+      },
+      "integer_shifts": [
+        0,
+        1
+      ],
+      "n": 9,
+      "observed_field": 19,
+      "signature_count": 76
+    },
+    {
+      "fibre_histogram": {
+        "1": 76
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2
+      ],
+      "n": 9,
+      "observed_field": 19,
+      "signature_count": 76
+    },
+    {
+      "fibre_histogram": {
+        "1": 76
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 9,
+      "observed_field": 19,
+      "signature_count": 76
+    },
+    {
+      "fibre_histogram": {
+        "3": 10,
+        "6": 10,
+        "9": 20,
+        "12": 35,
+        "15": 10,
+        "16": 5,
+        "18": 10,
+        "21": 5,
+        "25": 5,
+        "34": 1
+      },
+      "integer_shifts": [
+        0
+      ],
+      "n": 15,
+      "observed_field": 11,
+      "signature_count": 111
+    },
+    {
+      "fibre_histogram": {
+        "1": 214,
+        "2": 153,
+        "3": 69,
+        "4": 50,
+        "5": 17,
+        "6": 26,
+        "7": 12,
+        "8": 3,
+        "9": 6,
+        "11": 2,
+        "12": 1
+      },
+      "integer_shifts": [
+        0,
+        1
+      ],
+      "n": 15,
+      "observed_field": 11,
+      "signature_count": 553
+    },
+    {
+      "fibre_histogram": {
+        "1": 659,
+        "2": 229,
+        "3": 37,
+        "4": 25,
+        "5": 6,
+        "6": 1
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2
+      ],
+      "n": 15,
+      "observed_field": 11,
+      "signature_count": 957
+    },
+    {
+      "fibre_histogram": {
+        "1": 1002,
+        "2": 159,
+        "3": 4,
+        "4": 8
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 15,
+      "observed_field": 11,
+      "signature_count": 1173
+    },
+    {
+      "fibre_histogram": {
+        "1": 405,
+        "2": 180,
+        "3": 75,
+        "4": 90,
+        "14": 1
+      },
+      "integer_shifts": [
+        0
+      ],
+      "n": 15,
+      "observed_field": 31,
+      "signature_count": 751
+    },
+    {
+      "fibre_histogram": {
+        "1": 1167,
+        "2": 77,
+        "3": 13,
+        "4": 1
+      },
+      "integer_shifts": [
+        0,
+        1
+      ],
+      "n": 15,
+      "observed_field": 31,
+      "signature_count": 1258
+    },
+    {
+      "fibre_histogram": {
+        "1": 1342,
+        "2": 11
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2
+      ],
+      "n": 15,
+      "observed_field": 31,
+      "signature_count": 1353
+    },
+    {
+      "fibre_histogram": {
+        "1": 1362,
+        "2": 1
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 15,
+      "observed_field": 31,
+      "signature_count": 1363
+    },
+    {
+      "fibre_histogram": {
+        "3": 14,
+        "6": 35,
+        "9": 70,
+        "12": 63,
+        "18": 35,
+        "21": 14,
+        "24": 77,
+        "25": 7,
+        "27": 91,
+        "28": 7,
+        "30": 14,
+        "33": 28,
+        "36": 56,
+        "39": 63,
+        "42": 56,
+        "45": 28,
+        "48": 35,
+        "54": 21,
+        "57": 28,
+        "67": 7,
+        "72": 7,
+        "73": 7,
+        "78": 7,
+        "81": 7,
+        "96": 7,
+        "130": 1
+      },
+      "integer_shifts": [
+        0
+      ],
+      "n": 21,
+      "observed_field": 29,
+      "signature_count": 785
+    },
+    {
+      "fibre_histogram": {
+        "1": 1385,
+        "2": 1524,
+        "3": 338,
+        "4": 860,
+        "5": 143,
+        "6": 390,
+        "7": 84,
+        "8": 283,
+        "9": 78,
+        "10": 55,
+        "11": 44,
+        "12": 162,
+        "13": 41,
+        "14": 25,
+        "15": 28,
+        "16": 62,
+        "17": 18,
+        "18": 54,
+        "19": 9,
+        "20": 9,
+        "21": 4,
+        "22": 8,
+        "23": 4,
+        "24": 19,
+        "25": 11,
+        "26": 6,
+        "27": 6,
+        "28": 2,
+        "30": 1,
+        "32": 9,
+        "33": 1,
+        "34": 1,
+        "36": 4,
+        "43": 1,
+        "49": 1
+      },
+      "integer_shifts": [
+        0,
+        1
+      ],
+      "n": 21,
+      "observed_field": 29,
+      "signature_count": 5670
+    },
+    {
+      "fibre_histogram": {
+        "1": 4175,
+        "2": 3522,
+        "3": 402,
+        "4": 1432,
+        "5": 177,
+        "6": 279,
+        "7": 47,
+        "8": 218,
+        "9": 32,
+        "10": 20,
+        "11": 17,
+        "12": 45,
+        "13": 9,
+        "14": 5,
+        "15": 1,
+        "16": 12,
+        "17": 1,
+        "18": 1,
+        "22": 1,
+        "25": 1
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2
+      ],
+      "n": 21,
+      "observed_field": 29,
+      "signature_count": 10397
+    },
+    {
+      "fibre_histogram": {
+        "1": 7878,
+        "2": 4276,
+        "3": 241,
+        "4": 1203,
+        "5": 96,
+        "6": 110,
+        "7": 14,
+        "8": 119,
+        "9": 7,
+        "10": 7,
+        "12": 13,
+        "16": 2
+      },
+      "integer_shifts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "n": 21,
+      "observed_field": 29,
+      "signature_count": 13966
+    }
+  ],
+  "rows": [
+    {
+      "dependency_edges": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          19,
+          19
+        ]
+      ],
+      "factor_output_ambiguities": [
+        {
+          "field": 4,
+          "output_ambiguity_histogram": {
+            "1": 4
+          }
+        },
+        {
+          "field": 19,
+          "output_ambiguity_histogram": {
+            "1": 1,
+            "4": 18
+          }
+        }
+      ],
+      "fields": [
+        4,
+        19
+      ],
+      "n": 9,
+      "stable_factor_projections": [
+        [
+          4
+        ],
+        [
+          4,
+          19
+        ]
+      ],
+      "states": 76
+    },
+    {
+      "dependency_edges": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          31
+        ],
+        [
+          31,
+          11
+        ],
+        [
+          31,
+          31
+        ]
+      ],
+      "factor_output_ambiguities": [
+        {
+          "field": 4,
+          "output_ambiguity_histogram": {
+            "1": 4
+          }
+        },
+        {
+          "field": 11,
+          "output_ambiguity_histogram": {
+            "10": 10,
+            "11": 1
+          }
+        },
+        {
+          "field": 31,
+          "output_ambiguity_histogram": {
+            "24": 30,
+            "31": 1
+          }
+        }
+      ],
+      "fields": [
+        4,
+        11,
+        31
+      ],
+      "n": 15,
+      "stable_factor_projections": [
+        [
+          4
+        ],
+        [
+          4,
+          11,
+          31
+        ]
+      ],
+      "states": 1364
+    },
+    {
+      "dependency_edges": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          29
+        ],
+        [
+          4,
+          211
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          29,
+          211
+        ],
+        [
+          211,
+          29
+        ],
+        [
+          211,
+          211
+        ]
+      ],
+      "factor_output_ambiguities": [
+        {
+          "field": 4,
+          "output_ambiguity_histogram": {
+            "1": 4
+          }
+        },
+        {
+          "field": 29,
+          "output_ambiguity_histogram": {
+            "26": 7,
+            "27": 14,
+            "28": 7,
+            "29": 1
+          }
+        },
+        {
+          "field": 211,
+          "output_ambiguity_histogram": {
+            "75": 21,
+            "76": 21,
+            "79": 42,
+            "81": 63,
+            "82": 21,
+            "83": 21,
+            "84": 21,
+            "85": 1
+          }
+        }
+      ],
+      "fields": [
+        4,
+        29,
+        211
+      ],
+      "n": 21,
+      "stable_factor_projections": [
+        [
+          4
+        ],
+        [
+          4,
+          29,
+          211
+        ]
+      ],
+      "states": 24476
+    },
+    {
+      "dependency_edges": [
+        [
+          139,
+          139
+        ],
+        [
+          139,
+          461
+        ],
+        [
+          461,
+          139
+        ],
+        [
+          461,
+          461
+        ]
+      ],
+      "factor_output_ambiguities": [
+        {
+          "field": 139,
+          "output_ambiguity_histogram": {
+            "131": 23,
+            "134": 23,
+            "135": 46,
+            "136": 46,
+            "139": 1
+          }
+        },
+        {
+          "field": 461,
+          "output_ambiguity_histogram": {
+            "104": 23,
+            "110": 46,
+            "111": 46,
+            "112": 23,
+            "113": 46,
+            "114": 69,
+            "115": 23,
+            "116": 24,
+            "117": 46,
+            "118": 23,
+            "119": 23,
+            "120": 23,
+            "121": 23,
+            "124": 23
+          }
+        }
+      ],
+      "fields": [
+        139,
+        461
+      ],
+      "n": 23,
+      "stable_factor_projections": [
+        [
+          139,
+          461
+        ]
+      ],
+      "states": 64079
+    },
+    {
+      "dependency_edges": [
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          101
+        ],
+        [
+          11,
+          151
+        ],
+        [
+          101,
+          11
+        ],
+        [
+          101,
+          101
+        ],
+        [
+          101,
+          151
+        ],
+        [
+          151,
+          11
+        ],
+        [
+          151,
+          101
+        ],
+        [
+          151,
+          151
+        ]
+      ],
+      "factor_output_ambiguities": [
+        {
+          "field": 11,
+          "output_ambiguity_histogram": {
+            "11": 11
+          }
+        },
+        {
+          "field": 101,
+          "output_ambiguity_histogram": {
+            "101": 101
+          }
+        },
+        {
+          "field": 151,
+          "output_ambiguity_histogram": {
+            "149": 50,
+            "150": 50,
+            "151": 51
+          }
+        }
+      ],
+      "fields": [
+        11,
+        101,
+        151
+      ],
+      "n": 25,
+      "stable_factor_projections": [
+        [
+          11,
+          101,
+          151
+        ]
+      ],
+      "states": 167761
+    },
+    {
+      "dependency_edges": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          4,
+          5779
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          19,
+          5779
+        ],
+        [
+          5779,
+          19
+        ],
+        [
+          5779,
+          5779
+        ]
+      ],
+      "factor_output_ambiguities": [
+        {
+          "field": 4,
+          "output_ambiguity_histogram": {
+            "1": 4
+          }
+        },
+        {
+          "field": 19,
+          "output_ambiguity_histogram": {
+            "19": 19
+          }
+        },
+        {
+          "field": 5779,
+          "output_ambiguity_histogram": {
+            "1": 1,
+            "22": 54,
+            "37": 54,
+            "38": 54,
+            "39": 27,
+            "40": 27,
+            "41": 27,
+            "42": 27,
+            "43": 27,
+            "45": 81,
+            "46": 54,
+            "47": 81,
+            "48": 135,
+            "49": 108,
+            "50": 108,
+            "53": 54,
+            "54": 27,
+            "55": 54,
+            "56": 108,
+            "57": 270,
+            "58": 135,
+            "59": 108,
+            "60": 351,
+            "61": 135,
+            "62": 243,
+            "63": 243,
+            "64": 297,
+            "65": 189,
+            "66": 351,
+            "67": 405,
+            "68": 297,
+            "69": 324,
+            "70": 351,
+            "71": 297,
+            "72": 270,
+            "73": 189,
+            "74": 189,
+            "75": 27
+          }
+        }
+      ],
+      "fields": [
+        4,
+        19,
+        5779
+      ],
+      "n": 27,
+      "stable_factor_projections": [
+        [
+          4
+        ],
+        [
+          4,
+          19,
+          5779
+        ]
+      ],
+      "states": 439204
+    }
+  ],
+  "scope": "all legal cyclic words at the listed odd lengths; factors exactly as listed"
+}

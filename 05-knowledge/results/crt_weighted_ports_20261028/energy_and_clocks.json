@@ -1,0 +1,156 @@
+{
+  "active_checks": 8465,
+  "arithmetic_flow_second_moment": "94313488726729347622681504083159/12124448252471820073158711719281",
+  "clock_hostiles": [
+    {
+      "carry": 331,
+      "division_clock": 7,
+      "frontier": 0,
+      "modulus": 256,
+      "path": [
+        165,
+        31,
+        47,
+        71,
+        107
+      ],
+      "source": 165,
+      "word": [
+        4,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "carry": 175,
+      "division_clock": 7,
+      "frontier": 6,
+      "modulus": 256,
+      "path": [
+        129,
+        97,
+        73,
+        55,
+        83
+      ],
+      "source": 129,
+      "word": [
+        2,
+        2,
+        2,
+        1
+      ]
+    }
+  ],
+  "clock_regression": [
+    {
+      "coefficient": "1/3",
+      "depth": 1,
+      "residual_variance": "16/9"
+    },
+    {
+      "coefficient": "7/27",
+      "depth": 3,
+      "residual_variance": "64/27"
+    },
+    {
+      "coefficient": "16/123",
+      "depth": 6,
+      "residual_variance": "452/123"
+    },
+    {
+      "coefficient": "34/531",
+      "depth": 12,
+      "residual_variance": "3496/531"
+    }
+  ],
+  "energy": [
+    {
+      "depth": 3,
+      "law": "uniform",
+      "second_moment": "7"
+    },
+    {
+      "depth": 6,
+      "law": "uniform",
+      "second_moment": "13"
+    },
+    {
+      "depth": 3,
+      "law": "biased",
+      "second_moment": "145/18"
+    },
+    {
+      "depth": 6,
+      "law": "biased",
+      "second_moment": "74881/3888"
+    },
+    {
+      "depth": 3,
+      "law": "atomic",
+      "second_moment": "27"
+    },
+    {
+      "depth": 6,
+      "law": "atomic",
+      "second_moment": "729"
+    }
+  ],
+  "pressure": [
+    {
+      "mean_drift": "211/352",
+      "n": 5,
+      "noncontracting": 5,
+      "words": 11
+    },
+    {
+      "mean_drift": "1009/2048",
+      "n": 9,
+      "noncontracting": 9,
+      "words": 76
+    },
+    {
+      "mean_drift": "14316139/44695552",
+      "n": 15,
+      "noncontracting": 155,
+      "words": 1364
+    },
+    {
+      "mean_drift": "387682633/1514668032",
+      "n": 18,
+      "noncontracting": 623,
+      "words": 5778
+    }
+  ],
+  "proper_clock_defects": [
+    {
+      "base_period": 5,
+      "extended_period": 15,
+      "hidden_fibre": 124,
+      "mirror_defect": 5,
+      "prime": 11
+    },
+    {
+      "base_period": 7,
+      "extended_period": 21,
+      "hidden_fibre": 844,
+      "mirror_defect": 12,
+      "prime": 29
+    },
+    {
+      "base_period": 11,
+      "extended_period": 33,
+      "hidden_fibre": 39604,
+      "mirror_defect": 77,
+      "prime": 199
+    },
+    {
+      "base_period": 13,
+      "extended_period": 39,
+      "hidden_fibre": 271444,
+      "mirror_defect": 200,
+      "prime": 521
+    }
+  ]
+}

@@ -81,6 +81,11 @@ construction does give a uniform scale-dependent length bound.
 
 ## 2A. A constructive loop bound with the transport clock charged
 
+**Subsequent refinement:** the bound below remains valid. The
+[linear repair construction](../crt_weighted_ports_20261028/LINEAR_REPAIR.md)
+and concurrent Session94 improve it to3(3^k-2k-1)/4 legal re-marking edges,
+using conjugated individual triangles and retaining full port permutations.
+
 Put N=3^k, k>=1, and retain the zero-prefix generators g_0,...,g_(k-1)
 used above, with their inverses. Every element of A_k is a product of at most
 

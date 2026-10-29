@@ -1,0 +1,41 @@
+{
+  "active_checks": 769762,
+  "rows": [
+    {
+      "edge_bound": 3,
+      "k": 2,
+      "maximum_triangles": 1,
+      "tested": 3,
+      "triangle_bound": 1,
+      "universe": "complete",
+      "vertices": 9
+    },
+    {
+      "edge_bound": 15,
+      "k": 3,
+      "maximum_triangles": 5,
+      "tested": 243,
+      "triangle_bound": 5,
+      "universe": "complete",
+      "vertices": 27
+    },
+    {
+      "edge_bound": 54,
+      "k": 4,
+      "maximum_triangles": 15,
+      "tested": 24,
+      "triangle_bound": 18,
+      "universe": "24 seeded controls",
+      "vertices": 81
+    },
+    {
+      "edge_bound": 174,
+      "k": 5,
+      "maximum_triangles": 45,
+      "tested": 24,
+      "triangle_bound": 58,
+      "universe": "24 seeded controls",
+      "vertices": 243
+    }
+  ]
+}

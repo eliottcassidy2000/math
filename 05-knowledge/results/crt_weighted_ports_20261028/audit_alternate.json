@@ -1,0 +1,24 @@
+{
+  "active_checks": 574599,
+  "crt": [
+    {
+      "n": 9,
+      "words": 76
+    },
+    {
+      "n": 15,
+      "words": 1364
+    }
+  ],
+  "loops": [
+    {
+      "full_centralizer": 3,
+      "k": 2
+    },
+    {
+      "full_centralizer": 243,
+      "k": 3
+    }
+  ],
+  "nonproduct_second_moment": "14313/2500"
+}
