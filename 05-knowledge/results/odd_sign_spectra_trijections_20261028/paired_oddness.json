@@ -1,0 +1,121 @@
+{
+  "status": "FINITE-EXACT",
+  "rows": [
+    {
+      "core_order": 2,
+      "self_converse_target_order": 5,
+      "labelled_inputs": 16,
+      "paired_classes": 8,
+      "joint_sign_even_modes": 8,
+      "separately_positive_modes": 6,
+      "cancellation_only_modes": 2,
+      "cancellation_witness": {
+        "support_I": 1,
+        "support_J": 1,
+        "mask_support": 0,
+        "stabilizer_signs": [
+          0,
+          1
+        ]
+      },
+      "walsh_T_and_mask_parity_sector_counts": {
+        "(0, 0)": 2,
+        "(0, 1)": 2,
+        "(1, 0)": 2,
+        "(1, 1)": 2
+      },
+      "fixed_classes_by_flip_bits_T_W_mask": [
+        8,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        4
+      ],
+      "full_flip_orbit_sizes": {
+        "4": 2
+      }
+    },
+    {
+      "core_order": 3,
+      "self_converse_target_order": 7,
+      "labelled_inputs": 512,
+      "paired_classes": 88,
+      "joint_sign_even_modes": 88,
+      "separately_positive_modes": 72,
+      "cancellation_only_modes": 16,
+      "cancellation_witness": {
+        "support_I": 1,
+        "support_J": 1,
+        "mask_support": 0,
+        "stabilizer_signs": [
+          0,
+          1
+        ]
+      },
+      "walsh_T_and_mask_parity_sector_counts": {
+        "(0, 0)": 22,
+        "(0, 1)": 22,
+        "(1, 0)": 22,
+        "(1, 1)": 22
+      },
+      "fixed_classes_by_flip_bits_T_W_mask": [
+        88,
+        0,
+        0,
+        32,
+        0,
+        0,
+        0,
+        0
+      ],
+      "full_flip_orbit_sizes": {
+        "4": 8,
+        "8": 7
+      }
+    },
+    {
+      "core_order": 4,
+      "self_converse_target_order": 9,
+      "labelled_inputs": 65536,
+      "paired_classes": 2752,
+      "joint_sign_even_modes": 2752,
+      "separately_positive_modes": 2452,
+      "cancellation_only_modes": 300,
+      "cancellation_witness": {
+        "support_I": 1,
+        "support_J": 1,
+        "mask_support": 0,
+        "stabilizer_signs": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "walsh_T_and_mask_parity_sector_counts": {
+        "(0, 0)": 688,
+        "(0, 1)": 688,
+        "(1, 0)": 688,
+        "(1, 1)": 688
+      },
+      "fixed_classes_by_flip_bits_T_W_mask": [
+        2752,
+        0,
+        0,
+        128,
+        0,
+        0,
+        0,
+        128
+      ],
+      "full_flip_orbit_sizes": {
+        "4": 64,
+        "8": 312
+      }
+    }
+  ],
+  "checks": 25
+}
