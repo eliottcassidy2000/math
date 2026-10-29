@@ -2,6 +2,8 @@
 
 **2026-10-29: same-agent proof review and exact verification.** This is not
 an independent audit. Base checkout: `2cc2ce454a`; no theorem ID reserved.
+Final clean integration: `c49370cdbf`. Its concurrent exterior and native
+modulo-seven results are credited explicitly and do not alter P1--P7.
 
 ## Passed checks
 
@@ -21,6 +23,8 @@ factorization, eigenvalue or near-integer test is used.
   at sufficient modular precision, rank-four tensor Gram and mixed
   witness, pure clocks through degree24 plus their all-degree quadratic
   proof, and six complete Bernoulli selectors.
+- Incoming modulo-seven control: native nilpotent boundary moments1,0,-2
+  and84 direct count terms agree with the concurrent all-degree formula.
 - Repository `agents/check_docs.py`: PASS, including maintained correction
   sentinels and bounded startup. `git diff --check`: PASS. Every relative
   Markdown link within the new packet resolves.

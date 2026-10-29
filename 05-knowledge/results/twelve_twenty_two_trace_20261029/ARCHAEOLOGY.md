@@ -167,6 +167,17 @@ independent quadratic factor.
 
 ## Incoming October29: native ports remain part of the source
 
+The final clean fetch to `c49370cdbf` adds the
+[atomic-descent wedge synthesis](../atomic_descent_wedge_20261029/WEDGE.md).
+It proves the same integer exterior conjugacy with a second matrix and
+the all-degree native modulo-seven law. These are inherited, not new
+claims of this packet. P3's new comparison exposes why that binomial
+count retains a nilpotent moment which the arithmetic trace misses.
+The accompanying Session104 clarification also distinguishes neutral
+diagonal stays from paid clock descent: polynomial growth of powers is
+not termination of an arbitrary operation sequence. This agrees with
+P4's separation of observability and legal reachability.
+
 The [Session104 common-rank audit](../session104_descent_exterior_20261029/audit_incoming/INCOMING_COMMON_RANK_AUDIT.md)
 distinguishes12 ordered ports and22 native two-run covers at four vertices.
 An aligned native matrix has B=I+N with N^3=0; re-marking can destroy the

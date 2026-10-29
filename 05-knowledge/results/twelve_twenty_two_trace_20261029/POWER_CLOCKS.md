@@ -89,6 +89,17 @@ after **every** primitive clock power. Frobenius/Galois transport cannot
 make a trace see this ideal. This loss is a property of the readout,
 absent from O_count, rather than a property of C alone.
 
+**Incoming confirmation, credited separately.** The concurrent
+[atomic-descent wedge note](../atomic_descent_wedge_20261029/WEDGE.md)
+proves the native count law
+`v_n = 3^n (1-binomial(n,2)) modulo7`. In our column convention,
+N=C-3I has boundary moments ell N^j x equal to1,0,-2 for j=0,1,2,
+which gives exactly that formula. Its nonconstant binomial term is a
+literal nilpotent amplitude that arithmetic trace discards. We verify
+the boundary identity and84 terms without claiming this incoming law
+as a new result. Native counter zeros and trace zeros are different
+observations even on this same ramified clock.
+
 The exact three-reading decimations have the following Smith data.
 `Index` is [A:Z[u^e]], computed as a lattice index.
 

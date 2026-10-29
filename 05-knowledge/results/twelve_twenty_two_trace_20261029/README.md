@@ -61,6 +61,13 @@ not the whole even eigenspace. **Least-used relevant sidecars:** March's
 complete divisor-prime selector and August's folded C7/K4 common-drift
 obstruction.
 
+The final clean fetch also recovered the concurrent
+[atomic-descent wedge packet](../atomic_descent_wedge_20261029/WEDGE.md),
+which independently proves the same exterior conjugacy and the native
+modulo-seven binomial count law. Both exterior certificates are credited
+as one inherited result; P3 now compares its visible nilpotent moment
+with the arithmetic trace's blind kernel.
+
 The live board has five concepts: integer clock lattices; Frobenius phase;
 joint versus separate observations; port realization; divisor-prime
 selection. The anchor is clock recovery, the niche is historical selector

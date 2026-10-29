@@ -203,6 +203,14 @@ def run():
     nil = (-3,1,0)
     need(power(nil,3,7) == (0,0,0) and power(nil,2,7) != (0,0,0), 'ramified cubic nilpotent')
     need(all(tr(mul(nil,power(U,j))) % 7 == 0 for j in range(12)), 'trace blind direction survives every primitive clock')
+    N = C-3*eye(3)
+    need(N**3 % 7 == Matrix.zeros(3) and C**7 % 7 == 3*eye(3),
+         'incoming ramified-clock control')
+    need([int((ell*N**j*start)[0]) for j in range(3)] == [1,0,-2],
+         'native boundary sees the nilpotent second moment')
+    for n in range(84):
+        need(int((ell*C**n*start)[0]) % 7 == (pow(3,n,7)*(1-n*(n-1)//2)) % 7,
+             'incoming all-degree binomial law, independent native boundary check')
     need(power(U,13,3) == (2,0,0) and power(U,26,3) == ONE, 'legal even steps omit odd clock phase')
 
     # The quadratic u=1+sqrt(2), represented in the basis (1,u).
