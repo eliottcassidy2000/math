@@ -135,7 +135,7 @@ def main():
             records.append(rec)
         uni=sum(abs(t['det'])==1 for t in records)
         output['layers'][str(n)]={'classes':len(layer),'unimodular':uni,'records':records}
-        args.output.write_text(json.dumps(output,indent=2)+'\n',encoding='utf-8')
+        args.output.write_text(json.dumps(output,indent=2)+'\n',encoding='utf-8',newline='\n')
         print(f'n={n} classes={len(layer)} unimodular={uni}',flush=True)
         if n < args.max_n:
             nxt={}

@@ -34,7 +34,7 @@ for p in [
     sources.append({'revision':git('rev-parse',INCOMING).decode().strip(),'path':p,'sha256':digest(b),'bytes':len(b),
                     'scope':'incoming status/change inspected; not a proved dependency'})
 replay={}
-for p,q in [('tournament_results.json','operation_closed_tournaments_optimized.json'),('audit_results.json','operation_closed_audit_normal.json')]:
+for p,q in [('tournament_results.json','operation_closed_tournaments_optimized.json'),('audit_results.json','operation_closed_audit_optimized.json')]:
     a=(HERE/p).read_bytes();b=(Path(tempfile.gettempdir())/q).read_bytes()
     if a!=b:raise RuntimeError('normal/optimized mismatch '+p+'; ensure both jobs finished')
     replay[p]={'sha256':digest(a),'bytes':len(a),'normal_optimized_identical':True}
@@ -45,7 +45,7 @@ out={'source_revision':START,'sources':sources,'replay':replay,'primary_literatu
  {'authors':'Gutin, Rafiey, Yeo','title':'On n-partite tournaments with unique n-cycle',
   'url':'https://www.cs.rhul.ac.uk/~gutin/paperstsp/ucycle22.pdf',
   'inspected':'introduction and references; Garey attribution confirmation, not a new imported theorem'}]}
-(HERE/'source_manifest.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
+(HERE/'source_manifest.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
 files=[p for p in HERE.iterdir() if p.is_file() and p.name!='MANIFEST.sha256']
-(HERE/'MANIFEST.sha256').write_text(''.join(digest(p.read_bytes())+'  '+p.name+'\n' for p in sorted(files)),encoding='utf-8')
+(HERE/'MANIFEST.sha256').write_text(''.join(digest(p.read_bytes())+'  '+p.name+'\n' for p in sorted(files)),encoding='utf-8',newline='\n')
 print(json.dumps({'pinned_documents':len(sources),'replay':replay},indent=2))

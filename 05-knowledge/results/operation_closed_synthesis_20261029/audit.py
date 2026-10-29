@@ -134,5 +134,5 @@ audit['controls']['35_175']=[str(x) for x in pair]
 
 audit['checks']=checks
 audit['tournament_data_sha256']=hashlib.sha256((HERE/'tournament_results.json').read_bytes()).hexdigest()
-(HERE/'audit_results.json').write_text(json.dumps(audit,indent=2)+'\n',encoding='utf-8')
+(HERE/'audit_results.json').write_text(json.dumps(audit,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({'checks':checks,'matrix_comparisons':sum(audit['independent_matrices'].values()),'lrc_good':{k:len(v['good_endpoints']) for k,v in audit['lrc'].items()}},indent=2))

@@ -88,4 +88,3 @@ These maps constitute the synthesis. No actual isomorphism is asserted between
 LRC endpoint spaces, Collatz cycles, tournament Smith modules, or Selmer groups.
 The common test is whether a proposed quotient commutes with the operation
 and evaluation that the target problem will use next.
-

@@ -259,4 +259,3 @@ The LRC and Collatz measures are not identified: one is a finite endpoint
 measure constructed from a speed row, the other a countable measure on
 arithmetic inputs. The transferred principle is the positive atom criterion
 for the actual target quantifier, with the relevant source maps retained.
-

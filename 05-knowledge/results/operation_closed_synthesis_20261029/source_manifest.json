@@ -165,13 +165,13 @@
   ],
   "replay": {
     "tournament_results.json": {
-      "sha256": "e3c88c6de6ca81c2e82d7462a15552cea68e407a2972802746f14ac6818b4b75",
-      "bytes": 998408,
+      "sha256": "399b14e9bcc004bfc7d29fde61b46f09198e1198a1825b0f5531ab32239c62e6",
+      "bytes": 964909,
       "normal_optimized_identical": true
     },
     "audit_results.json": {
-      "sha256": "c564391c0bc5450c7182bd7ac5aea1e779a923b5f1ebcbbf94f829c3fe691e9a",
-      "bytes": 16897,
+      "sha256": "e78c7c08a7d47bbbd5a641a57857d09ca44159aec103de9ee9a2a716bc116af4",
+      "bytes": 16051,
       "normal_optimized_identical": true
     }
   },

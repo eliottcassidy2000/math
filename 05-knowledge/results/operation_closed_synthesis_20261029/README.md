@@ -150,6 +150,9 @@ order 6, checks native determinants against the sign-sector product, and checks
 converse closure on all 4,180 classes. Normal and optimized replay receipts
 are recorded in the manifest. Source snapshots have hashes and exact Git
 revisions; incoming work under audit is not silently used as a proved input.
+Packet text is pinned to LF, including JSON and hash manifests. This repairs
+the first checkpoint's prose hashes taken before Git normalized Windows
+line endings; mathematical data are unchanged.
 
 Next tests, in order of value:
 
@@ -165,4 +168,3 @@ Next tests, in order of value:
 4. In LRC, use the endpoint functional to formulate a source-located positive
    certificate for one of the actual open entry strata. Do not replace that
    obligation by full algebra rank, a topology computation, or positive mean.
-

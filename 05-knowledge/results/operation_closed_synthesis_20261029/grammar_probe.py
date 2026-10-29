@@ -53,5 +53,5 @@ out['count_recurrence']={
     'next_prediction':2065,
     'prediction_order':13,
     'status':'PROVED for pattern-avoiding grammar words; CONDITIONAL for unimodular observers at arbitrary order'}
-(HERE/'grammar_results.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
+(HERE/'grammar_results.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps({k:out[k] for k in ['max_word_length','forbidden_word_criterion','count_recurrence']},indent=2))
