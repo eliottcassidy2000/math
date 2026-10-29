@@ -1,0 +1,539 @@
+[
+  {
+    "full_group_checks": [
+      {
+        "pair_checks": 324,
+        "prime": 11,
+        "root_count": 1
+      },
+      {
+        "pair_checks": 3136,
+        "prime": 43,
+        "root_count": 3
+      }
+    ],
+    "id": 273,
+    "largest_prime": 257,
+    "no_rational_two_torsion_prime": 59,
+    "rank_lower_bound": 30,
+    "retained_rows": [
+      {
+        "prime": 11,
+        "root": 3,
+        "row": 608131145
+      },
+      {
+        "prime": 17,
+        "root": 10,
+        "row": 763229813
+      },
+      {
+        "prime": 19,
+        "root": 16,
+        "row": 829888455
+      },
+      {
+        "prime": 29,
+        "root": 4,
+        "row": 511425925
+      },
+      {
+        "prime": 43,
+        "root": 17,
+        "row": 847922294
+      },
+      {
+        "prime": 43,
+        "root": 27,
+        "row": 309120120
+      },
+      {
+        "prime": 61,
+        "root": 38,
+        "row": 102170695
+      },
+      {
+        "prime": 61,
+        "root": 41,
+        "row": 130476756
+      },
+      {
+        "prime": 73,
+        "root": 6,
+        "row": 487677911
+      },
+      {
+        "prime": 79,
+        "root": 68,
+        "row": 125631013
+      },
+      {
+        "prime": 89,
+        "root": 64,
+        "row": 387247507
+      },
+      {
+        "prime": 101,
+        "root": 11,
+        "row": 86657846
+      },
+      {
+        "prime": 101,
+        "root": 22,
+        "row": 7980240
+      },
+      {
+        "prime": 103,
+        "root": 18,
+        "row": 5269672
+      },
+      {
+        "prime": 113,
+        "root": 14,
+        "row": 448108159
+      },
+      {
+        "prime": 127,
+        "root": 70,
+        "row": 638188776
+      },
+      {
+        "prime": 131,
+        "root": 89,
+        "row": 98096110
+      },
+      {
+        "prime": 137,
+        "root": 64,
+        "row": 1023139760
+      },
+      {
+        "prime": 151,
+        "root": 42,
+        "row": 174247795
+      },
+      {
+        "prime": 173,
+        "root": 135,
+        "row": 115374302
+      },
+      {
+        "prime": 193,
+        "root": 59,
+        "row": 713611082
+      },
+      {
+        "prime": 197,
+        "root": 42,
+        "row": 569475817
+      },
+      {
+        "prime": 211,
+        "root": 17,
+        "row": 209639580
+      },
+      {
+        "prime": 211,
+        "root": 18,
+        "row": 912655867
+      },
+      {
+        "prime": 223,
+        "root": 35,
+        "row": 94844528
+      },
+      {
+        "prime": 223,
+        "root": 134,
+        "row": 393714973
+      },
+      {
+        "prime": 227,
+        "root": 85,
+        "row": 224653902
+      },
+      {
+        "prime": 229,
+        "root": 4,
+        "row": 828884661
+      },
+      {
+        "prime": 241,
+        "root": 128,
+        "row": 847457978
+      },
+      {
+        "prime": 257,
+        "root": 121,
+        "row": 605604060
+      }
+    ],
+    "source": "https://elliptic-rank.icarm.cloud/curve/273.json",
+    "source_sha256": "47e8c0a66a7d37ffc9ab5352ac5f35f24a0899cf2134289098d191a860990f57",
+    "status": "FINITE-EXACT rank lower bound using classical character lemma",
+    "three_root_parity_checks": 6
+  },
+  {
+    "full_group_checks": [
+      {
+        "pair_checks": 676,
+        "prime": 17,
+        "root_count": 1
+      },
+      {
+        "pair_checks": 14400,
+        "prime": 113,
+        "root_count": 3
+      }
+    ],
+    "id": 302,
+    "largest_prime": 311,
+    "no_rational_two_torsion_prime": 59,
+    "rank_lower_bound": 31,
+    "retained_rows": [
+      {
+        "prime": 17,
+        "root": 1,
+        "row": 83619367
+      },
+      {
+        "prime": 47,
+        "root": 19,
+        "row": 1503018218
+      },
+      {
+        "prime": 53,
+        "root": 0,
+        "row": 927494035
+      },
+      {
+        "prime": 61,
+        "root": 6,
+        "row": 1918411108
+      },
+      {
+        "prime": 67,
+        "root": 60,
+        "row": 487830069
+      },
+      {
+        "prime": 71,
+        "root": 23,
+        "row": 1319882983
+      },
+      {
+        "prime": 79,
+        "root": 52,
+        "row": 1295959762
+      },
+      {
+        "prime": 83,
+        "root": 40,
+        "row": 1867127592
+      },
+      {
+        "prime": 89,
+        "root": 66,
+        "row": 2104143606
+      },
+      {
+        "prime": 101,
+        "root": 69,
+        "row": 740105656
+      },
+      {
+        "prime": 107,
+        "root": 54,
+        "row": 1463325324
+      },
+      {
+        "prime": 113,
+        "root": 38,
+        "row": 1011809609
+      },
+      {
+        "prime": 113,
+        "root": 39,
+        "row": 108536410
+      },
+      {
+        "prime": 127,
+        "root": 10,
+        "row": 1203317729
+      },
+      {
+        "prime": 137,
+        "root": 49,
+        "row": 51509337
+      },
+      {
+        "prime": 149,
+        "root": 97,
+        "row": 583744200
+      },
+      {
+        "prime": 179,
+        "root": 132,
+        "row": 749544425
+      },
+      {
+        "prime": 191,
+        "root": 47,
+        "row": 1547970010
+      },
+      {
+        "prime": 197,
+        "root": 156,
+        "row": 1460670320
+      },
+      {
+        "prime": 211,
+        "root": 144,
+        "row": 733806112
+      },
+      {
+        "prime": 233,
+        "root": 69,
+        "row": 1246768758
+      },
+      {
+        "prime": 241,
+        "root": 147,
+        "row": 2028556687
+      },
+      {
+        "prime": 241,
+        "root": 155,
+        "row": 551569160
+      },
+      {
+        "prime": 263,
+        "root": 29,
+        "row": 747835821
+      },
+      {
+        "prime": 263,
+        "root": 202,
+        "row": 1658607686
+      },
+      {
+        "prime": 269,
+        "root": 75,
+        "row": 652012280
+      },
+      {
+        "prime": 281,
+        "root": 20,
+        "row": 145554825
+      },
+      {
+        "prime": 281,
+        "root": 58,
+        "row": 115725808
+      },
+      {
+        "prime": 283,
+        "root": 11,
+        "row": 1910749886
+      },
+      {
+        "prime": 293,
+        "root": 141,
+        "row": 1731878452
+      },
+      {
+        "prime": 311,
+        "root": 24,
+        "row": 723695384
+      }
+    ],
+    "source": "https://elliptic-rank.icarm.cloud/curve/302.json",
+    "source_sha256": "c2d3b23686e518bf20cfbb3f2b473cf152df6be6693852b07cc64465d7d78178",
+    "status": "FINITE-EXACT rank lower bound using classical character lemma",
+    "three_root_parity_checks": 5
+  },
+  {
+    "full_group_checks": [
+      {
+        "pair_checks": 1600,
+        "prime": 29,
+        "root_count": 3
+      },
+      {
+        "pair_checks": 3364,
+        "prime": 47,
+        "root_count": 1
+      }
+    ],
+    "id": 4239,
+    "largest_prime": 199,
+    "no_rational_two_torsion_prime": 7,
+    "rank_lower_bound": 32,
+    "retained_rows": [
+      {
+        "prime": 29,
+        "root": 12,
+        "row": 1065482566
+      },
+      {
+        "prime": 29,
+        "root": 25,
+        "row": 3754858807
+      },
+      {
+        "prime": 47,
+        "root": 14,
+        "row": 414456816
+      },
+      {
+        "prime": 61,
+        "root": 4,
+        "row": 1296485249
+      },
+      {
+        "prime": 61,
+        "root": 31,
+        "row": 2104706649
+      },
+      {
+        "prime": 67,
+        "root": 2,
+        "row": 877452869
+      },
+      {
+        "prime": 67,
+        "root": 7,
+        "row": 3404316291
+      },
+      {
+        "prime": 71,
+        "root": 24,
+        "row": 2069221883
+      },
+      {
+        "prime": 71,
+        "root": 48,
+        "row": 1548208116
+      },
+      {
+        "prime": 83,
+        "root": 9,
+        "row": 3775671520
+      },
+      {
+        "prime": 97,
+        "root": 39,
+        "row": 2811225754
+      },
+      {
+        "prime": 101,
+        "root": 63,
+        "row": 742866402
+      },
+      {
+        "prime": 107,
+        "root": 70,
+        "row": 3057232290
+      },
+      {
+        "prime": 109,
+        "root": 68,
+        "row": 2750315254
+      },
+      {
+        "prime": 113,
+        "root": 2,
+        "row": 1962853157
+      },
+      {
+        "prime": 113,
+        "root": 69,
+        "row": 96329554
+      },
+      {
+        "prime": 127,
+        "root": 123,
+        "row": 467219687
+      },
+      {
+        "prime": 137,
+        "root": 6,
+        "row": 2645284287
+      },
+      {
+        "prime": 137,
+        "root": 81,
+        "row": 711861601
+      },
+      {
+        "prime": 149,
+        "root": 4,
+        "row": 3470624593
+      },
+      {
+        "prime": 151,
+        "root": 18,
+        "row": 3826240659
+      },
+      {
+        "prime": 151,
+        "root": 29,
+        "row": 4235218073
+      },
+      {
+        "prime": 157,
+        "root": 26,
+        "row": 2299123316
+      },
+      {
+        "prime": 167,
+        "root": 29,
+        "row": 2614440451
+      },
+      {
+        "prime": 173,
+        "root": 99,
+        "row": 3275320667
+      },
+      {
+        "prime": 179,
+        "root": 169,
+        "row": 4059813932
+      },
+      {
+        "prime": 181,
+        "root": 16,
+        "row": 1144127248
+      },
+      {
+        "prime": 181,
+        "root": 99,
+        "row": 1927258541
+      },
+      {
+        "prime": 191,
+        "root": 37,
+        "row": 1246152682
+      },
+      {
+        "prime": 193,
+        "root": 27,
+        "row": 2015867168
+      },
+      {
+        "prime": 197,
+        "root": 154,
+        "row": 1781184878
+      },
+      {
+        "prime": 199,
+        "root": 174,
+        "row": 3884564734
+      }
+    ],
+    "source": "https://elliptic-rank.icarm.cloud/curve/4239.json",
+    "source_sha256": "50f5bc587076d5d5cdc7729b3633e6d3e610b5229d4080c783ca877ce885271e",
+    "status": "FINITE-EXACT rank lower bound using classical character lemma",
+    "three_root_parity_checks": 9
+  }
+]
