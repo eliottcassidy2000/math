@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "count": 5,
+  "scripts": [
+    {
+      "script": "bijections/check_valuation_transfer.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "1f498dd1f9c2068c53cbf163ca9bf7b26522120bab4ec88f236027a32ffffad5"
+    },
+    {
+      "script": "controllers/check_return_controller_trap.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "373d4e488241f3fd53cb61e8ded3b9476a0e45572bb05ac0a2a4f2dd0527edb7"
+    },
+    {
+      "script": "drift/check_drift.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "a2872a1aef37c9d15775aca3fa5d1c90a3ac7a55ee4e36efdccab7e11a322623"
+    },
+    {
+      "script": "atlas/check_affine_atlas.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "f171f4e9dba53ce788085422c7db92e502774b9b63add3eb18a52c1ca161509d"
+    },
+    {
+      "script": "audit/check_independent.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "e1881e4d4e429eb92f8d5e31d4a68c4818f73fc945c94f1069cb5f15428087b9"
+    }
+  ]
+}
