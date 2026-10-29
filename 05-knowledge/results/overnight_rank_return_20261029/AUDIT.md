@@ -13,6 +13,8 @@ No claim of independent human review, Lean verification or external priority.
 | atom_precision.py | native endpoint DP through12; full permutations through7; selected independent walk inclusion-exclusion; full81/27 automorphism census; compact unimodular Smith witnesses | endpoint modules, not arbitrary multiple-run closure; q19 counts inherited |
 | paley_pencil.py | 556 exact signed/scaled pencils at prime orders3,7,11,19,23,31; independent modular elimination of every characteristic-primary layer; three actual F27 hostiles | full algebraic pencil theorem at prime order; only rank law and finite Smith examples for prime powers |
 | two_run.py | all ordered covers by independent DP and permutation cuts through7; walk-pair inclusion-exclusion probes through12; every81/27 transporter; all determinant-prime Smith layers on small atoms; full3-primary layers on controls | joint endpoint modules retain neither every complemented target relation nor black/blue reflection colour |
+| prime_power_pencil.py | all556 prime specializations; full Smith90 F27 pencils; complete characteristic-primary layers of six actual F243 and six F343 pencils;604 direct Teichmuller Jacobi sums; source-Frobenius orbits; recurrence through degree101 | directed all-prime-power theorem uses CITED classical Jacobi valuations; large native matrix checks cover the characteristic-primary part only |
+| three_run.py | complete ordered covers on C3,T5,Paley7 by two independent algorithms; all run and vertex actions; full2/3-primary layers;54-index Fourier map and finite realization guards; every15 legal T5 complement | named port-weight reconstruction; fully vertex-unnamed law space distinguished; no1320-order three-run81/27 census |
 
 Every script uses active exceptions rather than Python assertions, so its
 checks also execute under `python -O`. Receipts are parsed and compared with
@@ -60,7 +62,7 @@ crossing-mode expansion and precision budget; the full recursive complexity
 argument and Lean projects were not rebuilt. ALGORITHMS preserves that
 scope. No ETH consequence is used as an unconditional dependency here.
 
-Run each of the eight scripts without `--write` to replay its stored receipt,
+Run each of the ten scripts without `--write` to replay its stored receipt,
 and repeat with `-O` when changing check code. The repository documentation
 validator should be run after edits to these notes. Normal script replays
 do not fetch network data or mutate receipts.
@@ -94,6 +96,47 @@ independent local layers certify the discrepancy. The three-dimensional
 affine representation calculation is cross-checked by a seven-point
 integer determinant and the full21-point convolution determinant.
 
-Remaining limitations: no absolute smallest carrier for all metagraph
-operations, no all-prime-power Smith classification, no A000568 extension,
-and no theorem transferring the number21 to elliptic rank distributions.
+Remaining limitations from this checkpoint: no absolute smallest carrier
+for all metagraph operations, no A000568 extension, and no theorem
+transferring the number21 to elliptic rank distributions. The prime-power
+Smith obligation was subsequently closed in the09:00 UTC extension below.
+
+## 09:00 UTC extension audit
+
+PRIME_POWER imports the classical Jacobi valuation and carry generating
+denominator, not the undirected graph theorem. It recomputes the directed
+sign: paired Jacobi products are -q and J(chi,chi)=1. The complete integral
+multiplicative character basis is allowed because q-1 is a p-adic unit.
+Both the two-dimensional blocks and exceptional three-dimensional block
+are retained. Odd field degree is essential to v_p(N)=min(2t,m), excluding
+an equal-valuation cancellation boundary. Common content is removed first.
+
+The four exceptional carry records belong to three excluded digit words;
+words0 andq-1 represent the same residue. Subtracting these records before
+reinserting the exceptional character
+block avoids double counting. Zero Smith entries are recorded as free
+factors and never assigned finite valuations. All604 Jacobi sums are
+computed in explicit unramified quotient rings at precision m+1; their
+pair products and Frobenius orbit equalities are tested separately from
+the digit formula. The recurrence is classical; the directed pencil
+extension and its exact controls are the local contribution.
+
+THREE_RUN's Fourier map is an integral source embedding with determinant54,
+not a unimodular change of coordinates. Its ambient split operator has
+integer entries but acts on a larger lattice unless the guards are retained.
+The native/split primary distributions have equal determinant valuations
+on full-rank Paley7 but different response images. T5 is singular of
+rank56; its four tetrahedron-boundary directions give an exact upper bound,
+and a good-prime rank gives the matching lower bound.
+
+The native complement probe preserves endpoint names and changes the
+tournament relation along a chosen legal Hamilton path. All15 choices
+give strong targets and stacked rank60. Global converse only gives56.
+The nonnegative witness is run-symmetric but not vertex-automorphism
+invariant; the separate vertex-invariant space has dimension12 and no
+original hidden directions. Therefore the counterexample must not be
+reported as a theorem about every unnamed re-marking language.
+
+Both new checkers pass normal and optimized replay. The existing two-run
+checker retains the81/27 and six-vertex complement hostiles. Same-agent
+audit is not an independent external review or proof-assistant build.

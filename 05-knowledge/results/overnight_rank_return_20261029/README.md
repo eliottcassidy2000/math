@@ -4,6 +4,23 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+**09:00 UTC continuation.** [PRIME_POWER Q1--Q7](PRIME_POWER.md) extends
+the complete pencil classification to every Paley field order p^m=3 mod4.
+It uses the classical Jacobi carry recurrence with its exceptional source
+correction, derives the directed character blocks, and retains Frobenius
+orbits. Actual F27,F243,F343 matrices and604 independently evaluated
+Jacobi sums certify the calculation; all556 earlier prime cases specialize
+correctly. The recurrence, not a q-by-q matrix, computes every primary layer.
+
+[THREE_RUN T1--T5](THREE_RUN.md) gives the exact S3 integral realization
+guard of index54, visible at both primes2 and3 in actual Paley7 covers.
+T5 has four response-kernel directions given by tetrahedron boundaries.
+They survive global converse, but every one of its15 actual Hamilton-path
+complements exposes all four: the stacked named-port weight observer has
+rank60 instead of56. A positive equal-mass witness changes from counts1/1
+to2/0. Fully vertex-unnamed invariant laws have a different, injective
+12-dimensional source space; that distinction remains explicit.
+
 **08:00 UTC continuation.** [PALEY_PENCIL P4--P9](PALEY_PENCIL.md)
 completes the integer Smith formula for every signed prime-Paley pencil,
 including common content, ramification and the singular skew case.
@@ -105,12 +122,12 @@ The requested hourly continuation runs through 08:00 America/Denver on
 repeat the completed single-block derivation. Preserve clean Git checkpoints.
 
 Completed targets include the three independence certificates and the
-fifteen-object transport/query distinction above, the full prime-Paley
-pencil and the exact two-run modules. Next targets are three-run integral
-gluing at primes2 and3, a carry recurrence for prime-power Paley Smith
-layers, and retention of actual complemented relations alongside these
-weighted modules. Primary algorithm manuscripts behind Big O Speedrun
-remain a separate lane.
+fifteen-object transport/query distinction above, the full prime-power
+Paley pencil and the exact two- and three-run modules. Next targets are
+complement-stable kernels for other strong atoms, the vertex-unnamed
+operation with its selected-path phase retained, and the full complemented
+relation alongside these weighted modules. Primary algorithm manuscripts
+behind Big O Speedrun remain a separate lane.
 Treat reported algorithm breakthroughs as source claims
 until their actual statements, models and proofs have been audited. The
 existing rank-21 heuristic is not a proved rank cap.
@@ -127,3 +144,10 @@ the source forms and legal operations remain distinct. The recovered
 Session35/37 square-zero and signed-sector work is credited before the
 new integral-gluing experiment. Meta-patterns used: audit the consumer's
 integral quotient; pay algebraic rank before claiming physical compression.
+
+Incoming `6afdaee974` independently replays the previous joint-run and
+prime-pencil certificates and adds the exact source-preserving C3
+coefficient guard. Its results are inherited, not repeated as discoveries.
+The October19 integral-lifting audit supplies the fixed-class lift
+interpretation of the new prime-power Smith layers. The classical carry
+generating function and valuation theorem are explicitly credited.

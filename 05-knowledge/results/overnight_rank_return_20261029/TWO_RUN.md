@@ -266,7 +266,9 @@ The resulting research direction is concrete: retain the integral gluing
 of symmetry sectors alongside their individual responses. Denominator
 primes of the symmetry projectors are the first places to look for lost
 alignment. Here they are2 for run exchange andq for the constant/augmentation
-split in [PALEY_PENCIL](PALEY_PENCIL.md). The proposed next test is a
+split in [PALEY_PENCIL](PALEY_PENCIL.md). The proposed next test was a
 three-run attachment, where S3 introduces both2 and3 as gluing primes.
-That prediction concerns where an integral split can fail; it is not
-yet a computed three-run classification or full metagraph minimality.
+[THREE_RUN T1--T5](THREE_RUN.md) now verifies both primes on actual
+Paley7 responses, gives the exact index54 source guard, and exhibits
+T5's four hidden directions destroyed by every legal one-step complement.
+The full metagraph minimality question remains open.

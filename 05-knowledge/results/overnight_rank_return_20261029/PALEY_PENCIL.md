@@ -173,6 +173,9 @@ python -X utf8 -B 05-knowledge/results/overnight_rank_return_20261029/paley_penc
 python -X utf8 -B -O 05-knowledge/results/overnight_rank_return_20261029/paley_pencil.py
 ```
 
-The complete prime-power Smith law remains open in this packet. The
-all-prime pencil formula classifies a linear response, not the entire
-actual complement/re-marking carrier.
+**Subsequent closure.** [PRIME_POWER Q1--Q7](PRIME_POWER.md) now proves
+the complete prime-power law using the cited classical Jacobi valuation
+and cyclic carry recurrence, with actual F27,F243,F343 checks. The prime
+formula here is its m=1 specialization; the failure of substituting a
+prime power directly into (P4) remains a valid hostile. These pencil
+formulas classify linear responses, not the entire complement carrier.
