@@ -1,0 +1,18 @@
+{
+  "all_k_DAG": {
+    "digraphs": 110,
+    "all_k_observers": 433,
+    "orders": [
+      3,
+      4
+    ]
+  },
+  "bridge_sink_boundary": {
+    "Q_size": 2,
+    "R_sizes": [
+      3,
+      4
+    ],
+    "cases": 20
+  }
+}
