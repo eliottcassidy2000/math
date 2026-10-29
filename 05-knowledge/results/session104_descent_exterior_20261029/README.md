@@ -35,7 +35,7 @@ The [concurrent fixed-port packet](https://github.com/eliottcassidy2000/math/blo
     N^(k(n-k)+1)=0,
     B^d=Σ_(j=0)^(k(n-k)) binom(d,j) N^j.
 
-Thus repeated multiplication of this specified table has bounded polynomial depth. This is not an assertion that arbitrary tournament substitution equals table multiplication.
+Thus repeated multiplication of this specified table has bounded polynomial depth. This is not an assertion that arbitrary tournament substitution equals table multiplication. Diagonal choices are neutral stays, so polynomial composition depth does not prove termination of an arbitrary infinite operator sequence; a native clock must pay for those stays separately.
 
 For a finite menu of nonnegative matrices with diagonal one on the same labelled carrier, every product is unipotent exactly when their off-diagonal support union is acyclic. This is the same positive-cycle/common-potential alternative as above. It gives either a common integer grading or an explicit short failing word.
 
