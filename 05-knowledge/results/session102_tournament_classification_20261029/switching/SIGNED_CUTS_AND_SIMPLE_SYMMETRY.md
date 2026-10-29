@@ -2,6 +2,8 @@
 
 **Status:** elementary PROVED identities and finite exact group certificates. The bijoin/switching framework and abstract switching-group classification are **CLASSICAL**, not discoveries of this session. This is a partial classification layer, not an atlas of every prime tournament.
 
+All cut-matrix ranks in this report are over Q (equivalently R). They are not binary ranks: modulo2 every ±1 cut becomes an all-ones matrix, erasing the signed-cut distinction.
+
 ## 1. There is more than one meaning of an atom
 
 Use a skew adjacency matrix S, with S_ij=1 for i→j, S_ji=-S_ij. Vertex switching is S↦DSD for a diagonal sign matrix D. Global converse is S↦-S. Neither operation is the native Hamilton-path complement move.
