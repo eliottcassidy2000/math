@@ -2,8 +2,11 @@
 
 **Status:** finite-exact, independently reconstructed and executable. All claims
 below concern the specified 64-state carrier, not arbitrary tournament sizes.
-The 16/35 targets were supplied by the user; their original latest packet was
-not located by this lane. The 64/24 construction is inherited from
+The16/35 targets were supplied by the user and independently reconstructed
+before their original packet arrived. That source is now identified as
+`moving_selector_atoms_20261028` at commit
+`eea15f5d968c8e493a809862bbfec3989d09c436`; its observer results are credited as
+inherited targets, while the quadratic and menu analyses below are separate. The 64/24 construction is inherited from
 `session90_even_graphs_odd_descent_20261029/oddness/CENTRALIZER_ORBIT_PATH_DP.md`
 and its checker. Source snapshot inspected: `b07ec51b204`.
 
