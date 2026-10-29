@@ -4,6 +4,27 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-29 — a failed Hamilton-count heuristic is not an impossibility theorem
+
+- **Source:** THM-1390 / `theorems/THM-1390-leverage-audit-five-threads.md`, part(I).
+- **Failed implication:** finite nonmonotonicity of tr versus H rules out every bound tr>=phi(n,H), hence every Erdős–Hajnal approach using H. The examples only refute the proposed monotone proxy.
+- **Concrete survivor:** the inherited odd-cycle formula gives H>=1+2c3 and triangle deletion gives tr>=n-c3, so tr>=n-(H-1)/2. The bound can be vacuous and is not an EH theorem.
+- **Repair / evidence:** headline, status and part(I) narrowed; the new packet `05-knowledge/results/tournament_open_problem_routes_20261029/PROOFS.md` P3 proves the bound and weighted substitution interface. Its independent implementation checks the inequalities on all33867 labelled tournaments through six. Other THM-1390 sections are outside this audit.
+- **Missing coordinate / new question:** retain weighted transitive subsets of each quotient; ask for a uniform prime-atom certificate, not an unexplained scalar correlation.
+
+## 2026-10-29 — a general eleven-host bound does not imply an eight-host census
+
+- **Source:** `05-knowledge/results/sumner_t5_petersen_collatz_20261005.md`, Theorem1.1 and verdict table.
+- **Witness / failed implication:** its displayed Dross–Havet bound21n/8-47/16 is163/16 at n=5, rounding to11; it cannot imply the claimed8-host statement.
+- **Repair / survivor:** remove that attribution while retaining the explicitly exhaustive6880-host by27-guest computation. No rerun, priority claim or change to the finite result. See the open-problem packet's audit.
+
+## 2026-10-29 — local minima do not make a scalar improvement graph cyclic
+
+- **Sources:** HYP-3099 App A and `07-reflections/tournaments-as-proof-engines-a-generative-catalog.md`, June27; producer `04-computation/lrc_cap_optimality_exchange_macmini_S65.py` already states the scalar-order acyclicity.
+- **First failed implications:** several sinks imply a directed3-cycle; allowed single swaps compare every pair; unchanged minima in boxes13,16,20 prove that larger speeds cannot help. None is valid.
+- **Minimal logical witnesses:** a two-vertex graph with no legal moves has two sinks and no cycle; for any directed cycle of strict improvements f(x0)>f(x1)>...>f(x0) is impossible. A function can be constant through20 and decrease at21.
+- **Repair / strongest survivor:** correction banners and hypothesis status withdraw those deductions while preserving the historical finite objective comparisons. No new LRC bound or global optimality claim. The new open-problem packet records these as rejected encodings, not failures of tournament theory.
+
 ## 2026-10-29 — propagate the March odd-cycle repair to the older purported A000568 benchmark
 
 - **Affected source:** `04-computation/fast_a000568_v2_s90di.py`, March16 S90di. Both grouped partition routines include even cycles and return2,4 at n=2,3 instead of the tournament counts1,2. Their all-partition orbit formula counts simple graphs.

@@ -1,7 +1,7 @@
 ---
 id: HYP-3099
-title: Applying the tournament-as-proof catalog to three targets — cap-optimality is a NON-transitive improvement tournament (bounded finite check); baby-Hodge holes are c5-spectral NOT forbidden-H (α₂) instances; apex-7 ↔ forbidden-H=7 is a numerical coincidence, the genuine lever being the order-2 antipodal obstruction
-status: VERIFIED (three applications, each with an independent verification script; two correct seductive over-claims). Diagnostic, not new bounds.
+title: "Corrected tournament application audit: cap exchanges form an acyclic partial digraph; baby-Hodge and apex comparisons retain their stated scopes"
+status: "REPAIRED 2026-10-29: App A's cycles and global boundedness inference are REFUTED. Historical finite objective comparisons survive; no all-speed optimality theorem. Other applications are not freshly reaudited."
 source: mac-mini-2026-06-27-S65
 reflections:
   - tournaments-as-proof-engines-a-generative-catalog
@@ -21,6 +21,13 @@ related:
 ---
 
 # HYP-3099 — Three applications of the tournament-as-proof catalog
+
+> **Correction 2026-10-29:** App A's historical interpretation below is
+> withdrawn. Strict scalar-decreasing edges cannot form a directed cycle;
+> single swaps give a partial digraph, not a tournament. Multiple sinks do
+> not imply cycles. Agreement of minima in three finite boxes does not bound
+> the unbounded search. The original producer already notes scalar acyclicity.
+> See the [audit](../results/tournament_open_problem_routes_20261029/AUDIT.md).
 
 Generated the catalog (`tournaments-as-proof-engines-a-generative-catalog`, 12 techniques, 4 novel) and
 applied three of its techniques to three targets. Each application carries an independent verification

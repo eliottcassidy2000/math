@@ -7,8 +7,10 @@ status: >
   enumeration of the code agreeing on every subset.
   (B) Upper bound PROVED (counting); lower bound PROVED by explicit construction, with an
   n = 8, VC = 3 witness exhibited (code 202356).
-  (C) VERIFIED-EXACT n = 4,5,6,7 (exactly two classes, identified); the strong-component
-  reduction is PROVED; ONE residual gap remains — see Honest scope. NOT tested at n = 8.
+  (C) PROVED at every order, closed 2026-10-29 by the triangle/outside-vertex
+  argument in tournament_open_problem_routes_20261029/PROOFS.md P2. Historical
+  n=4..7 census survives; an independent implementation checks all33867 labelled
+  tournaments at orders1..6. Same-agent proof audit, no literature-priority claim.
   (D) VERIFIED-EXACT n = 4..7 by applying all 2^{n−1} switchings to every iso class.
 source: mac-mini-2026-07-20-S131 (owner: "think vapnik-chervonenkis and chase the high
   leverage question, see the relation between odd valued functions and tournament adjacent
@@ -24,6 +26,13 @@ script: 04-computation/vc_dimension_odd_even_macmini_S131.py,
 ---
 
 # THM-1450 — linearity trivialises VC, and the VC=1 locus is two tournaments
+
+> **2026-10-29 completion:** [P2](../../05-knowledge/results/tournament_open_problem_routes_20261029/PROOFS.md)
+> closes the residual lemma in part(C): outside a cyclic triangle, a vertex
+> beating one, two or three of its vertices forces a shattered pair. Without
+> such a pair the triangle dominates an acyclic remainder. Thus the two
+> families below are exhaustive at every n>=3, with4n!/3 labelled members.
+> The historical "Honest scope" gap below is superseded only for part(C).
 
 **One line.** The repo's odd/even axis is, for VC theory, exactly the nonlinear/linear axis:
 on the even side VC collapses to the dimension and shattering becomes matroid independence;

@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Cap-minimizer OPTIMALITY via an exchange / improvement-tournament argument (S65).
 
+CORRECTION 2026-10-29: historical experiment only. Strict scalar-decreasing
+single swaps form an acyclic partial digraph, not a cyclic tournament.
+Agreement in the displayed finite boxes does not prove a global speed bound.
+See HYP-3099's repaired status and tournament_open_problem_routes_20261029/AUDIT.md.
+The original numerical computation is preserved below.
+
 THM-576/577: cap_k = min_{|P|=j} meas(lonely(P)), j=13-k; the VALUE is symbolic (S64) but the OPTIMALITY
 (that the named top-cluster attains the min) was only by search. Tournament technique applied: the
 "improvement tournament" on configs -- orient P -> P' if a single speed-swap strictly lowers lonely. If

@@ -52,9 +52,11 @@ Embedding = subdigraph (not necessarily induced), by bitmask backtracking. `f(S)
 `N`-tournament contains `S` (monotone in `N`).
 
 **Theorem 1.1 (Sumner at `n = 5`).** Every tournament on 8 vertices contains every oriented tree on 5 vertices
-(185,760 host–guest pairs at `N = 8`, no failure; 203,242 checks in all). CITED: this is also the `n = 5` case of
-Dross–Havet's `(21n/8 - 47/16)`-unavoidability (arXiv:1812.05167; `21·5/8 - 47/16 = 10.19`... their bound in
-`n` vertices gives order 11; the sharper bound here is the exhaustive one).
+(185,760 host–guest pairs at `N = 8`, no failure; 203,242 checks in all).
+**Attribution correction 2026-10-29:** the displayed Dross–Havet general
+bound `(21n/8 - 47/16)` rounds up to11 at n=5, so that bound does not imply
+the8-host assertion. The assertion here is supported by the stated exhaustive
+calculation; no literature-priority claim is made.
 
 **Theorem 1.2 (the unavoidability spectrum at `n = 5`).**
 
@@ -202,7 +204,7 @@ smaller descendant.
 
 | claim / question | verdict | carrier |
 |---|---|---|
-| Sumner at `n = 5` | FINITE-EXACT (holds); CITED consequence of Dross–Havet | all 6880 hosts × 27 guests |
+| Sumner at `n = 5` | FINITE-EXACT (holds); not a consequence of the displayed Dross–Havet bound | all 6880 hosts × 27 guests |
 | the `2n-3` obstruction | FINITE-EXACT: exactly the 3 regular 7-tournaments, exactly the two pure stars | degree wall `⌈(N-1)/2⌉` |
 | trees on 5 vertices vs Petersen | PROVED dictionary (Prop. 2.1), stars = EKR independent sets | `K(5,2)` |
 | `K_{3,3}`, Petersen vs the three trees | PROVED: star-free cubic Erdős–Sós witnesses | degree 3 |

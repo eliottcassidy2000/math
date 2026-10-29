@@ -3,6 +3,15 @@
 > order seven, and global no-intermediate conflict girth is OPEN.  See
 > MISTAKE-507 and the repaired THM-264.
 
+> **CORRECTION (2026-10-29):** the historical cap-optimality application and
+> technique6 below misinterpret a partial improvement digraph as a tournament.
+> Strictly decreasing scalar moves are acyclic, even with several local minima.
+> The three tested speed boxes give no global boundedness theorem. These
+> claims are withdrawn in HYP-3099; retain the finite objective comparisons
+> only. The other proposed encodings are proposals requiring an actual map,
+> not a collection of established transfers. See
+> [the open-problem audit](../05-knowledge/results/tournament_open_problem_routes_20261029/AUDIT.md).
+
 # Tournaments as proof engines: a generative catalog of techniques
 
 *mac-mini-2026-06-27-S65. Owner: starting from the forbidden-H={7,21} proof-by-contradiction (encode a

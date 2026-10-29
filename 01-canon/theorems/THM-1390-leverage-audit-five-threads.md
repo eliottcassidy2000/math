@@ -1,6 +1,6 @@
 ---
 id: THM-1390
-title: "LEVERAGE AUDIT OF FIVE UNFAMILIAR THREADS — what the repo's novel machinery can and cannot reach, with four decisive computations. (0) THE BIG ONE, filed as a court case: the path-homology corpus uses a NON-GLMY regularity convention (distinct vertices, where GLMY requires only consecutive distinctness), so every degree->=3 result is computed in the wrong complex — beta_4(T_7) = 0 under GLMY, not 6, and chi(T_p) = p is not merely wrong but UNDEFINED since dim Omega_p does not terminate. Independently verified from the definitions with a calibrated control. THM-103 (beta_1 <= 1) and THM-108 (beta_2 = 0) are CONVENTION-SAFE and survive, by a subspace argument. (I) ERDOS-HAJNAL IS UNREACHABLE from the repo's central invariant: hp (Hamiltonian-path count) does NOT control tr (largest transitive subtournament) — explicit n=6 violations in BOTH directions. The invariant that does control it is the feedback arc set, via the elementary tight bound tr >= n - fas, but that is vacuous exactly in the EH regime since fas ~ n^2/4. (II) THE hp-SPECTRUM STABILISATION LEMMA, which makes the {7,21} gap question well-posed: a dominant vertex preserves hp, so the spectra are NESTED and 'the spectrum' is a single increasing union rather than an n-indexed family. Exhaustive n<=6 plus fas<=4 search at n<=9 reproduces 7 and 21 as the only missing odd values <= 60, with 35 and 39 filling in at n=7. (III) THM-488's rigidity certificate stopped at |S| <= 6 because that is where its INSTRUMENT stopped, not the mathematics: |z_min(S_j)| leaves the truncation-safe zone at exactly j = 7. Replacing the truncated series by the Euler PRODUCT removes the artifact and extends the certificate to j = 14, where |z_min| SATURATES at ~0.9723 rather than approaching 1"
+title: "LEVERAGE AUDIT OF FIVE UNFAMILIAR THREADS — what the repo's novel machinery can and cannot reach, with four decisive computations. (0) THE BIG ONE, filed as a court case: the path-homology corpus uses a NON-GLMY regularity convention (distinct vertices, where GLMY requires only consecutive distinctness), so every degree->=3 result is computed in the wrong complex — beta_4(T_7) = 0 under GLMY, not 6, and chi(T_p) = p is not merely wrong but UNDEFINED since dim Omega_p does not terminate. Independently verified from the definitions with a calibrated control. THM-103 (beta_1 <= 1) and THM-108 (beta_2 = 0) are CONVENTION-SAFE and survive, by a subspace argument. (I) CORRECTED 2026-10-29: explicit n=6 examples refute a monotone hp proxy, not every bound or every Erdos-Hajnal route; tr >= n-(hp-1)/2 remains valid. The invariant that does control it is the feedback arc set, via the elementary tight bound tr >= n - fas, but that is vacuous exactly in the EH regime since fas ~ n^2/4. (II) THE hp-SPECTRUM STABILISATION LEMMA, which makes the {7,21} gap question well-posed: a dominant vertex preserves hp, so the spectra are NESTED and 'the spectrum' is a single increasing union rather than an n-indexed family. Exhaustive n<=6 plus fas<=4 search at n<=9 reproduces 7 and 21 as the only missing odd values <= 60, with 35 and 39 filling in at n=7. (III) THM-488's rigidity certificate stopped at |S| <= 6 because that is where its INSTRUMENT stopped, not the mathematics: |z_min(S_j)| leaves the truncation-safe zone at exactly j = 7. Replacing the truncated series by the Euler PRODUCT removes the artifact and extends the certificate to j = 14, where |z_min| SATURATES at ~0.9723 rather than approaching 1"
 status: >
   (0) VERIFIED-EXACT and filed as 02-court/active/CASE-path-homology-regularity-convention.md.
   Written from the GLMY definitions independently of repo code, exact linear algebra
@@ -10,7 +10,9 @@ status: >
   rather than an override.
   (I) PROVED (the lemma tr >= n - fas, three lines) + VERIFIED-EXHAUSTIVE (n <= 6, all
   2^C(n,2) labelled tournaments; 0 violations; tight 100/74/37% at n = 4/5/6).  The
-  non-control of hp is established by EXPLICIT WITNESSES, not by failure to find a bound.
+  failure of the proposed monotone hp proxy is established by explicit witnesses.
+  CORRECTION 2026-10-29: this does not rule out all hp-based bounds or EH routes;
+  tr >= n-(hp-1)/2 follows from the odd-cycle formula and triangle deletion.
   (II) The stabilisation lemma is PROVED (elementary).  The spectrum claim is
   VERIFIED-EXHAUSTIVE at n <= 6 and a SEARCH at n = 7..9 — searches establish attainment,
   never non-attainment, and the detection floor is stated.  {7,21} non-attainment itself
@@ -18,8 +20,8 @@ status: >
   (III) VERIFIED, with a stated numerical caveat: the bare Euler product's winding is
   unreliable above r = 0.95 (underflow to ~1e-72), though F_S is perturbation-dominated
   there.  The saturation is the substantive finding and it is robust across j = 12,13,14.
-  NOTHING here proves a famous open problem.  Two lines are CLOSED as unreachable, which
-  is the point.
+  NOTHING here proves a famous open problem. The hp monotonicity heuristic fails;
+  an impossibility theorem for all EH routes was not established.
 source: kind-pasteur-2026-07-20-S128c106 (owner: explore the repo's novel math in unfamiliar areas and see what it can leverage toward open problems)
 depends_on:
   - THM-103     # beta_1 <= 1 -- shown convention-safe here
@@ -33,9 +35,11 @@ script: 04-computation/glmy_convention_audit_kps_S128c106.py, hp_vs_trans_stabil
 
 # THM-1390 — leverage audit: what reaches an open problem, and what does not
 
-Five threads I had never worked were surveyed for leverage toward *named* open
-problems. Most of the value is negative — two plausible bridges are closed — and
-the largest single item is a convention error in canon.
+Five threads were surveyed for leverage toward named open problems.
+**Correction 2026-10-29:** the finite examples in part(I) refute a monotonicity
+heuristic, not every possible lower bound or every Erdős–Hajnal approach.
+See [P3 and its exact controls](../../05-knowledge/results/tournament_open_problem_routes_20261029/PROOFS.md).
+Other sections retain their stated scope and are not reaudited here.
 
 ## 0. The path-homology convention (filed as a court case)
 
@@ -62,14 +66,14 @@ textbook, both conventions):
 Full charge, relief sought, and the calibration protocol for anyone reversing this:
 `02-court/active/CASE-path-homology-regularity-convention.md`.
 
-## I. Erdős–Hajnal is not reachable from `hp`
+## I. The proposed monotone `hp` proxy fails; broader reach is unproved
 
 The repo's central invariant is `hp(T)`, the Hamiltonian-path count (Rédei: odd;
 `hp = 1` iff transitive). The Erdős–Hajnal quantity is `tr(T)`, the largest
 transitive subtournament. Both measure distance from transitivity from opposite
 ends, and the extremes agree, so a stability bound `tr ≥ φ(n, hp)` looks plausible.
 
-**It is false.** Exhaustively at `n = 6`, `min tr` and `max tr` are both
+**This monotonicity heuristic fails.** Exhaustively at `n = 6`, `min tr` and `max tr` are both
 non-monotone in `hp`, with explicit witnesses:
 
 > `min`: `(hp,tr) = (9,4) → (11,5)` and `(17,4) → (19,5)`  ·  `max`: `(13,4) → (15,5)`
@@ -84,10 +88,12 @@ is instead the feedback arc set:
 
 Exhaustive `n ≤ 6`: 0 violations; tight for 100% / 74% / 37% of tournaments at
 `n = 4/5/6`. But `fas ~ n²/4` for a random tournament, so `n − fas < 0` exactly in
-the regime EH cares about. **Both invariants are dead ends for EH**, one by
-counterexample and one by vacuity. Recording this so the bridge is not rebuilt:
-`hp` is a *global count*, `tr` a *local extremal* quantity, and the flip experiment
-shows `hp` moving by an order of magnitude while `tr` does not move at all.
+the dense regime relevant to EH. Neither displayed bound proves an EH power
+bound. This does not show that every use of either invariant is a dead end.
+For example `hp>=1+2c3` and `tr>=n-c3` give the valid bound
+`tr>=n-(hp-1)/2`; weighted transitive-subset responses also compose exactly.
+The flip experiment only demonstrates that `hp` can change substantially
+without changing `tr`.
 
 ## II. The `hp`-spectrum stabilisation lemma
 

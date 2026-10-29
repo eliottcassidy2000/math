@@ -1,5 +1,10 @@
 # The Legendre tournament on primes congruent to 3 modulo 4
 
+> **Status update 2026-10-29:** HYP-9375 is now PROVED from the classical
+> quadratic large sieve and a direct counting lemma; see
+> [P1](../tournament_open_problem_routes_20261029/PROOFS.md).
+> The OPEN labels below record the October25 state, not the current status.
+
 2026-10-25, klein. **EXACT** definition (quadratic reciprocity); **FINITE-EXACT** census
 (`qr_tournament.py`, receipts `qr-normal.jsonl` = `qr-optimized.jsonl`); quasirandomness is
 **HYP-9375** (OPEN). Inheritance: Paley tournaments THM-640 (prime scope only, MISTAKE-232), the
