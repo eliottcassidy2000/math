@@ -35,6 +35,17 @@ invariant factor of `M_k(T)` equals 1.
      found by a random walk of arc flips) were tested with `k = 2`. There were 116 + 584 strong samples at order 9
      (360 of them low-cycle) and 344 at order 10 (200 low-cycle). Every one has torsion (`out/random_torsion.out`;
      sampling evidence only).
+   - **The sign sector already carries it.** The two-run sign sector `S_2` (signed covers; THM-4846 (F), a Jacobi
+     ratio of cycle-cover minors) has torsion for every strong class with at least two Hamiltonian cycles: 3, 27,
+     332 and 5953 classes at orders 5 to 8.
+     - For unique-cycle classes `S_2` is torsion-free through order 7 (32 of 32).
+     - At order 8 it is torsion-free for 54 of 55. The exception is `1010111111111111111101111101`, with Smith form
+       `1^21 2^4 0^3`.
+     - The plus sector `P_2` (unordered covers) has torsion for both kinds of class (`p2_vs_hc.py`,
+       `out/s2_vs_hc_n8.out`).
+     - So the sharper conjecture is that **`S_2(T)` has torsion whenever `T` has at least two Hamiltonian cycles.**
+     - A natural route is a sign-reversing involution on the cycle covers in the Jacobi expansion, with the two
+       Hamiltonian cycles as the non-cancelling pair.
    - **Not a mod-2 statement.** The torsion is not always 2-primary. Among strong classes with at least two
      Hamiltonian cycles, 8 at order 7 and 225 at order 8 have only odd invariant factors above 1. So a proof cannot
      work over `F_2` alone.
@@ -48,6 +59,17 @@ invariant factor of `M_k(T)` equals 1.
    - **Data at `k = 3`.** The same counts hold through order 7.
    - **Where it breaks.** The first torsion among unique-cycle classes appears at order 7, in 5 classes, with
      invariant factors such as `3·12³` and `2·6²`.
+   - **Singular or unimodular.** For `k = 2` at orders 7 and 8, a unique-cycle class carries torsion exactly when
+     `M_2` is singular, and every nonsingular one is unimodular. Through order 8, `det M_2 ∈ {0, ±1}` for every
+     unique-cycle tournament. At order 6 the one singular class is torsion-free.
+   - **The nonsingular counts.** These are `1, 1, 3, 7, 16, 36` for orders 3 to 8, which fits `(n + 1) · 2^(n−6)` for
+     `5 ≤ n ≤ 8`. Several OEIS sequences share these terms (A045891 among them).
+   - **PRE-REGISTERED PREDICTION** (written 2026-10-29 before the order-9 exhaustive run `stream_m2.py 9` reported):
+     - at order 9, the 144 unique-cycle classes split into exactly 80 with unimodular `M_2` and 64 with torsion;
+     - every class with at least two Hamiltonian cycles has torsion.
+
+     The run records the torsion-free count, which equals the unimodular count unless a singular torsion-free class
+     occurs, as at order 6.
    - **Question.** Express the criterion through Douglas's structural decomposition of these tournaments.
 3. **The non-star kernel of the second permanental compound.**
    - **Background.** The two-arc unordered observer is `per A[β, α]` on pairs (THM-4846 (B)). Through order 5 its
