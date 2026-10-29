@@ -1,0 +1,123 @@
+{
+  "status": "FINITE-EXACT",
+  "input_sha256": "ec3892b5f14125d31cb50fcd965e8e285de3228b0e1030b538d573b16f40070c",
+  "bounded_relay_family": [
+    {
+      "transitive_relay_vertices": 0,
+      "order": 6,
+      "hamilton_cycles": 1,
+      "determinant": 0
+    },
+    {
+      "transitive_relay_vertices": 1,
+      "order": 7,
+      "hamilton_cycles": 1,
+      "determinant": -1
+    },
+    {
+      "transitive_relay_vertices": 2,
+      "order": 8,
+      "hamilton_cycles": 1,
+      "determinant": -1
+    },
+    {
+      "transitive_relay_vertices": 3,
+      "order": 9,
+      "hamilton_cycles": 1,
+      "determinant": 1
+    }
+  ],
+  "old_order": 6,
+  "old_determinant": 0,
+  "new_order": 7,
+  "new_vertex_outneighbours": [
+    0,
+    1,
+    5
+  ],
+  "new_vertex_inneighbours": [
+    2,
+    3,
+    4
+  ],
+  "new_adjacency": [
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ]
+  ],
+  "new_unique_hamilton_cycle": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    5
+  ],
+  "new_determinant": -1,
+  "new_nullity": 0,
+  "new_smith_form": {
+    "1": 42
+  },
+  "scope": "Singularity is not hereditary under arbitrary vertex extensions retaining unique Hamilton cycle. No identification or refutation of missing b/e append grammar."
+}
