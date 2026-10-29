@@ -1,8 +1,8 @@
-# Overnight arithmetic carriers: verified checkpoints, research continuing
+# Overnight arithmetic carriers: eight verified research checkpoints
 
 2026-10-29. Initial source pin `5d6eb91dd76eee86b91e04d856daa32c32b3d61d`.
-**Status: ACTIVE overnight session.** This index records published checkpoints;
-continued investigations use separate files until independently reviewed.
+**Status: completed extensive research round.** This index records the
+verified checkpoints and the exact boundaries left open.
 No general Collatz, rank-boundedness, Sha-finiteness, or moonshine theorem is
 claimed. Classical inputs and existing curve discoveries are credited.
 
@@ -179,7 +179,7 @@ circle rotation, not a finite sample or an effective return-time bound.
 
 [Affine port reconstruction](supersingular/ALL_M_AFFINE_PORT_RECONSTRUCTION.md)
 works uniformly on F2^m for m>=4. For affine codimension-two flats, the
-number containing a named set S depends exactly on its affine-span dimension:
+number containing a named set S depends only on its affine-span dimension:
 R(S)=[m-d choose2]_2. All one-, two- and three-port responses are constant,
 while four ports reconstruct the entire affine geometry after a named origin
 is chosen. The number of labelled geometries forces26 and90 bits at m=4,5.
@@ -198,22 +198,88 @@ The route from the Ogg prime23 to its cyclic binary code and then the
 classical guarded lattice is explicit; it does not prove Ogg's classification
 or construct the Monster from an arbitrary fifteen-element set.
 
-## Ongoing work after these checkpoints
+## Checkpoint 7: distinct curves and genuinely joint divisibility
 
-The current bounded extensions investigate the two binary-certificate gaps
-through exact rational halving, and an older primary source on tournament
-solutions. They are not automatically included in the completed claims above.
-The aperiodic positive-integer failure boundary and the missing generic
-section banks for newer rank-record fibrations remain open here. New results
-are published only after their own proof and computational audits.
+[Isogeny separation](isogeny/README.md) proves that all66 high-rank snapshot
+curves lie in different Q-isogeny classes. Every one of2145 pairs has a
+common-good-prime trace witness at p<=71. Eleven primes form the unique
+minimum witness bank **among the tested odd primes at most71**; no globally minimal
+prime bank or unbiased population sample is inferred.
+
+The two inputs whose binary character banks had rank17 reveal a deeper
+source defect. [Joint halving](halving/README.md) proves that no original
+individual point is a rational double, while selected sums of five or six
+points are. The [completed exact enlargement](halving/phase2/README.md)
+performs13 certified index-two steps on each curve, giving index8192 and
+quotient(C2)^13. The final full binary rank30 and absence of rational
+2-torsion prove that the enlarged rank30 subgroup is **2-saturated in E(Q)**.
+Its original13-dimensional binary kernel now represents actual global
+joint divisibility, not merely a finite prime-bank failure.
+
+This proves neither exact Mordell–Weil rank30 nor saturation at odd primes.
+The index belongs to a chosen rational-point lattice, **not Sha**. All point
+identities and forward/inverse basis transports are retained. The
+[phase7 independent audit](audit/PHASE7_RELEASE_AUDIT.md) verifies both the
+arithmetic and the distinction between these claims.
+
+A recovered [tournament-solution recursion](solutions/NEIGHBOURHOOD_RECURSION.md)
+provides another precise carrier boundary. Proper-neighbourhood descent
+makes the recursively defined solution independent of its arbitrary seed,
+with dependency-depth bound at most n-1. It does not make attachment names
+irrelevant: two equivariant rules on the same rigid five-vertex host have
+identical singleton child banks but winner sets of sizes3 and5. This is not
+a TEQ ambiguity or an unrestricted enumeration speedup.
+
+## Checkpoint 8: completing the field, and rejecting the wrong rank model
+
+[Four ports plus a linear Singer clock](supersingular/SINGER_CLOCK_FIELD_COMPLETION.md)
+complete the reconstructed binary affine geometry to an actual finite field
+once a multiplicative identity is marked. For nonzero elements sigma^i(e),
+define their product by addition of the clock exponents. Distributivity
+follows because every multiplication map is a power of the retained linear
+clock. All six F32 carriers are checked; a nonlinear31-cycle shows why cycle
+order alone is insufficient. A Frobenius action from a characteristic-five
+branch construction is not identified with squaring in this auxiliary
+characteristic-two field.
+
+The [rank-model boundary](ranks/ORIENTATION_AND_CORANK_BOUNDARY.md) is sharp:
+every ordinary tournament dominance matrix, indeed every integral skew
+matrix with odd off-diagonal entries, has rational corank exactly n mod2.
+It cannot be the raw PPVW matrix responsible for arithmetic ranks at least2.
+Conversely, one fixed transitive orientation admits positive integer weights
+realizing every positive even matrix rank, by an explicit Vandermonde
+construction. Forgetting those weights loses the kernel. The shared number21
+therefore supplies no direct curve-to-tournament corank identification.
+
+## What remains open, and what has actually been achieved
+
+The round supplies elementary all-order controller/reconstruction proofs,
+exact arithmetic and geometric certificates, and recovered classical
+mechanisms. It claims no external priority for classical codes, Leech,
+isogeny theory, or the original high-rank curve discoveries.
+
+The remaining boundaries are substantive:
+
+- The positive-integer part of the forever-expanding failure Cantor set is
+  not proved empty; the full original-source retry problem remains open.
+- Generic rank17 for the newer record fibrations needs section/Picard input
+  beyond the supplied three-section carrier; classic948 is separately verified.
+- PPVW21 remains a heuristic threshold, not a proved bound or a maximum.
+- No canonical bijection between the15 Ogg primes and15 Lagrangians is
+  asserted. The actual Frobenius, code and isogeny maps are documented instead.
+- No general Collatz, Sha-finiteness, or unrestricted tournament-enumeration
+  theorem follows from these scoped constructions.
 
 ## Reproduction
 
 Each published script states its own finite universe and uses exact arithmetic.
 Checks remain active under `python -O`. Most use the standard library;
-six rank-phase2 symbolic checks and one separate K3 audit declare SymPy1.14.0. Mathematical JSON
+six rank-phase2 symbolic checks, one separate K3 audit, and the individual
+halving-quartic checker declare SymPy1.14.0. Mathematical JSON
 inputs are adjacent to their consumers and use stable file-relative paths.
-The first controller/Frobenius checkpoint was replayed from its committed
-checkout in both modes with identical output. Further checkpoint replay
-receipts are recorded as publication proceeds. A script pass is not a proof
+The assembled published packet is replayed from a clean committed checkout
+in both modes with identical output, and every published file and relative
+link is checked. `named_family.py` is a helper, not a runnable checker.
+The raw leaderboard snapshot, paper PDFs/HTML and exploratory regenerators
+are deliberately excluded. Compact mathematical inputs are retained. A script pass is not a proof
 of an unstated open conjecture or an untested larger universe.
