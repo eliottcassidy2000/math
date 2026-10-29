@@ -1,0 +1,10 @@
+{
+  "checks": {
+    "even_transfer": 120,
+    "mixed_root": 300,
+    "odd_pivots": 640
+  },
+  "oracle": "fractional two-by-two skew elimination, not recursive matching expansion",
+  "seed": 20261029,
+  "status": "FINITE-EXACT"
+}
