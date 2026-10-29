@@ -1,0 +1,28 @@
+{
+  "cut_audit": {
+    "rank_two_cuts": 6272,
+    "group_histogram": {
+      "1": 576,
+      "3": 768,
+      "5": 1152,
+      "7": 576,
+      "9": 64,
+      "11": 576,
+      "13": 1152,
+      "15": 384,
+      "17": 576,
+      "21": 384,
+      "27": 64
+    },
+    "clock_histogram": {
+      "9": 4,
+      "27": 4
+    }
+  },
+  "ordinary_smith_cases": 9520,
+  "controller": {
+    "large_source_queue_cases": 36,
+    "max_steps": 62
+  },
+  "gates": 33082
+}

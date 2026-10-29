@@ -134,7 +134,9 @@ four-vertex block on each side:
         [-1  1  0 -1 ]
         [-1 -1  1  0 ].
 
-It has Pfaffian 3 and coker M=C_3^2. Put e=(1,1,1,1),
+It has Pfaffian -3 in this displayed order and coker M=C_3^2.
+(Sign corrected 2026-10-29; Pf(M)^2=9 and both eight-vertex examples
+below are unchanged.) Put e=(1,1,1,1),
 w=(-2,0,-2,-2), and B=e e^T+w v^T. Every entry of B below is +/-1:
 
 | v | rows of B | alpha=e^TM^-1w | beta=e^TM^-1v | new group |

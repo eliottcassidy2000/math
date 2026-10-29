@@ -21329,3 +21329,12 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Repair / strongest survivor:** K1's joint-colour canonicalizer and K2's one-bit selector remain proved for global converse. The operation name is corrected in the theorem and summaries, with a correction note linking CLOSURE C5. No counts or selector proof were retracted.
 - **Missing coordinate / next question:** retain the actual Hamilton path and recompute the target's module decomposition. General smallest unnamed native-complement closure remains open.
 - **Mechanism:** audit operations by the arcs they change, not by a shared informal word such as complement. This entry uses a packet-qualified slug; no numeric mistake ID was reserved.
+
+
+## 2026-10-29 — Oriented Pfaffian sign in the marked Sha join block
+
+- **Location:** `05-knowledge/results/sha_marked_join_f1_20261029/JOIN_RECURRENCES.md`, J3.
+- **Error:** the displayed four-vertex matrix was assigned Pfaffian +3. In its displayed order the three signed matching terms are all -1, giving -3.
+- **First failed implication:** copying +3 into the Schur Pfaffian prefactor changes the signed eight-vertex Pfaffian. A direct matching expansion in `overnight_research_20261029/check.py` caught this immediately.
+- **Repair and survivor:** corrected the original sign and new Schur prefactor; determinant9, paired group H3, product of the two base Pfaffians9, and the prior H5/H11 examples are unchanged. The alternative audit checks the signed base and every rank-two cut directly.
+- **Missing coordinate:** an ordered vertex basis fixes the Pfaffian sign; the determinant forgets it. Retain that order in signed recurrences. No numeric mistake ID is reserved.

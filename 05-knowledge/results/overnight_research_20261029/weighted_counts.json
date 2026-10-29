@@ -1,0 +1,44 @@
+{
+  "direct_nonsingular_attachments": 109080,
+  "gates": 3031,
+  "special_counts_by_L_0_through_7": {
+    "25": [
+      0,
+      0,
+      0,
+      0,
+      132,
+      260,
+      548,
+      900
+    ],
+    "27": [
+      0,
+      0,
+      0,
+      0,
+      48,
+      160,
+      704,
+      1056
+    ],
+    "57": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      96,
+      232
+    ]
+  },
+  "minimum_L_for_Hm_from_H3_H3": {
+    "25": 4,
+    "27": 4,
+    "57": 6
+  },
+  "L50_total_matrices": 104060401,
+  "L50_determinants_in_support": 9047,
+  "method": "Kronecker polynomial squaring, followed by content Mobius inversion; labelled weighted cuts, no clock constraint."
+}

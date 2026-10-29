@@ -1,0 +1,17 @@
+[
+  {
+    "script": "check.py",
+    "normal_optimized_identical": true,
+    "sha256": "57ce4d85daa7fdceb39c13de95f098f98052528b56acea35e055568fe5316eba"
+  },
+  {
+    "script": "audit.py",
+    "normal_optimized_identical": true,
+    "sha256": "520e1752995d314c73093926f9afb6bd4834ea040c98c341533b1213680c8524"
+  },
+  {
+    "script": "weighted_counts.py",
+    "normal_optimized_identical": true,
+    "sha256": "079763e794d2105539cff6544453448eb10a8a86ab8acdd49bb4048cd1e60e55"
+  }
+]
