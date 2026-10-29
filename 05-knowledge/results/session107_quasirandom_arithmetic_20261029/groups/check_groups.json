@@ -1,0 +1,63 @@
+{
+  "N": 39046339332000,
+  "Paley7_ordinary_order": 21,
+  "Paley7_signed_order": 42,
+  "all_assertions_passed": true,
+  "bernoulli_denominator_chain": [
+    6,
+    42,
+    1806,
+    1806
+  ],
+  "centralizer_index": 97239461142009186000,
+  "degree_ratio": "4189/93",
+  "degrees": {
+    "B": 4371,
+    "M": 196883
+  },
+  "increased_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "integer_orbit": [
+    2,
+    3,
+    7,
+    43,
+    1807
+  ],
+  "mod19_orbit": [
+    2,
+    3,
+    7,
+    5,
+    2
+  ],
+  "new_primes": [
+    29,
+    41,
+    59,
+    71
+  ],
+  "order_ratio": 194478922284018372000,
+  "orders_of_43": {
+    "13": 6,
+    "139": 6
+  },
+  "productfree_density_bounds_approx": {
+    "196883": 0.017189527029988733,
+    "4371": 0.061160786907980734
+  },
+  "scope": "Elementary arithmetic and exhaustive Paley7 permutation checks; cited character degrees not recomputed",
+  "unchanged_primes": [
+    17,
+    19,
+    23,
+    31,
+    47
+  ]
+}

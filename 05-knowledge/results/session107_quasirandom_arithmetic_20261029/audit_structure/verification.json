@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "CRT": [
+    {
+      "bases": [
+        -1,
+        2,
+        -2
+      ],
+      "modulus": 8,
+      "attainable": 2,
+      "classes_per_signature": 1
+    },
+    {
+      "bases": [
+        2,
+        3,
+        6
+      ],
+      "modulus": 24,
+      "attainable": 4,
+      "classes_per_signature": 1
+    },
+    {
+      "bases": [
+        4,
+        2,
+        5,
+        3,
+        7,
+        13
+      ],
+      "modulus": 10920,
+      "attainable": 32,
+      "classes_per_signature": 36
+    },
+    {
+      "bases": [
+        2,
+        3,
+        7,
+        5,
+        2
+      ],
+      "modulus": 840,
+      "attainable": 16,
+      "classes_per_signature": 6
+    },
+    {
+      "bases": [
+        -12,
+        18,
+        8,
+        -1,
+        1,
+        4
+      ],
+      "modulus": 24,
+      "attainable": 4,
+      "classes_per_signature": 1
+    }
+  ],
+  "odd_primes_checked": 94,
+  "Paley_ordinary": 21,
+  "Paley_reversers": 21,
+  "Sylvester_prime_terms_tested": [
+    3,
+    7,
+    43,
+    3263443
+  ],
+  "proof_scope": "Finite guards only; no infinite Sylvester-prime assertion."
+}

@@ -1,0 +1,141 @@
+{
+  "order_gate_checks": 8212,
+  "wieferich_examples": [
+    {
+      "p": 1093,
+      "order_2": 364,
+      "character_2": -1,
+      "fermat_residue_mod_p_squared": 1
+    },
+    {
+      "p": 3511,
+      "order_2": 1755,
+      "character_2": 1,
+      "fermat_residue_mod_p_squared": 1
+    }
+  ],
+  "codes": [
+    {
+      "bases": [
+        2,
+        3,
+        6
+      ],
+      "allowed_colors": 4,
+      "crt_exact": {
+        "modulus": 24,
+        "classes_per_color": 1
+      },
+      "prime_bound": 100000,
+      "prime_count_min": 1194,
+      "prime_count_max": 1205
+    },
+    {
+      "bases": [
+        4,
+        2,
+        5,
+        3,
+        7,
+        13
+      ],
+      "allowed_colors": 32,
+      "crt_exact": {
+        "modulus": 10920,
+        "classes_per_color": 36
+      },
+      "prime_bound": 100000,
+      "prime_count_min": 143,
+      "prime_count_max": 161
+    },
+    {
+      "bases": [
+        2,
+        3,
+        7,
+        5,
+        2
+      ],
+      "allowed_colors": 16,
+      "crt_exact": {
+        "modulus": 840,
+        "classes_per_color": 6
+      },
+      "prime_bound": 100000,
+      "prime_count_min": 292,
+      "prime_count_max": 309
+    },
+    {
+      "bases": [
+        -1,
+        2,
+        -2
+      ],
+      "allowed_colors": 2,
+      "crt_exact": {
+        "modulus": 8,
+        "classes_per_color": 1
+      },
+      "prime_bound": 100000,
+      "prime_count_min": 2399,
+      "prime_count_max": 2409
+    },
+    {
+      "bases": [
+        1093,
+        3511,
+        13,
+        139,
+        19
+      ],
+      "allowed_colors": 32,
+      "crt_exact": null,
+      "prime_bound": 100000,
+      "prime_count_min": 124,
+      "prime_count_max": 174
+    }
+  ],
+  "additive_quotient_hostile": {
+    "p": 7,
+    "n": [
+      1,
+      4
+    ],
+    "chi_n": [
+      1,
+      1
+    ],
+    "chi_3n_plus_1": [
+      1,
+      -1
+    ]
+  },
+  "labelled_three_vertex_universe": {
+    "transitive": 6,
+    "cycle": 2
+  },
+  "sylvester_split_port_checks": [
+    {
+      "root": 3,
+      "incoming_13": 1,
+      "incoming_139": 1,
+      "outgoing_13": 1,
+      "outgoing_139": -1
+    },
+    {
+      "root": 7,
+      "incoming_13": -1,
+      "incoming_139": -1,
+      "outgoing_13": -1,
+      "outgoing_139": 1
+    },
+    {
+      "root": 43,
+      "incoming_13": 1,
+      "incoming_139": 1,
+      "outgoing_13": 1,
+      "outgoing_139": -1
+    }
+  ],
+  "status": "all exact assertions passed; prime sample counts are diagnostics only"
+}

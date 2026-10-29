@@ -1,0 +1,8 @@
+{
+  "characters/CHARACTER_STRUCTURE.md": "56018a34a043f87a85aa7c3d84bb9060e1ea1a562ee64f2030e5f14bdb57d578",
+  "groups/GROUPS_AND_RECOVERED_PRIMES.md": "52ff2a7a24d12e1022b13005943925933ce26fb5048961a01a210668583f851e",
+  "conditioning/EUCLID_OFFSET_SYNDROMES.md": "c56447fbf3f905ffb4f79f5cb4ca110da3b586a34bbd19315ea6228eb98ad80b",
+  "audit_structure/check_independent.py": "0dedcee98bfa92dedfe93fa2487e9e81e7e064bdfef89440365b0b5faca82f02",
+  "audit_structure/verification.json": "f07ddf241e198321b093597253474b87ce1285597d33199ccc28b4fb89a0236b",
+  "audit_structure/AUDIT.md": "2c713c1ab10953d3f95fc2c426330a98eedb8fdc01e1a0f14b8214fdc50f4d2b"
+}
