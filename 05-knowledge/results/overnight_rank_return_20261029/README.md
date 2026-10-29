@@ -4,6 +4,17 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+**11:00 UTC continuation.** [RUN_RECURRENCE R1--R7](RUN_RECURRENCE.md)
+strengthens the 396-class certificate: every source needing a probe has an
+integrally successful actual complement that remains strong. The March
+tribonacci source, with its October run/port refinement explicitly credited,
+now supplies an all-size ordered-k-cover recurrence of minimal order 3k and
+a joint-port evaluator using 3^k local coordinates plus the last colour.
+It computes one specified native entry in O(k^2 3^k n^2) arithmetic operations,
+without forming the full matrix. Its recurrence clock has exact Smith
+factors (1,1,j^r) after r steps. A literal strong six-vertex complement with
+the same H=17 exits the family, so the full target relation remains required.
+
 **10:00 UTC continuation.** [COMPLEMENT_KERNEL K1--K6](COMPLEMENT_KERNEL.md)
 certifies an integer left inverse after at most one selected actual path
 complement for all396 strong classes through seven. Coprime minors retain
@@ -139,7 +150,8 @@ repeat the completed single-block derivation. Preserve clean Git checkpoints.
 Completed targets include the three independence certificates and the
 fifteen-object transport/query distinction above, the full prime-power
 Paley pencil and the exact two- and three-run modules. Next targets are
-the all-size integral selected-path conjecture, the strong-target variant,
+the all-size integral selected-path conjecture and strong-target variant
+(both now certified through seven, allowing zero moves),
 and the full complemented relation with physically realizable port laws.
 The path-framed weighted unnamed observer is now closed through seven;
 free class-valued reset remains a different operation. Primary algorithm manuscripts

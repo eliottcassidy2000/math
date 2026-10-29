@@ -273,7 +273,8 @@ audit, not an external review or formal proof-assistant verification.
 **OPEN selected-path conjecture:** for every strong T of order n>=3, some
 legal P makes the three-run operator O_(T,P) integrally left-invertible.
 The census and larger probes support it; they do not prove it. Its strong-
-target variant is a separate question. A counterexample may force more
+target variant allows zero moves for sources already integrally recoverable;
+it is a separate all-size question. A counterexample may force more
 path orbits, more complement depth, or a different run arity.
 
 The general composition frontier still needs physically realizable joint
@@ -288,3 +289,11 @@ clock-preserving pairing completion law. Those results are inherited, not
 recomputed as discoveries. Meta-patterns used: distinguish representations
 from carriers; compose witness fibres before taking scalar observations;
 test the actual integral target rather than an intermediate rank.
+
+**11:00 UTC continuation:** [RUN_RECURRENCE R1--R7](RUN_RECURRENCE.md)
+certifies the strong-target variant through seven. Zero moves are essential:
+all Hamilton complements of C3 are transitive, but its source response is
+already invertible. The inherited March interval family supplies new all-size
+ordered-cover recurrences and a joint-port query compiler. Its actual strong
+complements can leave that family. The general selected-path conjecture and
+realization-constrained closure remain open.

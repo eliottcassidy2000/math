@@ -193,3 +193,55 @@ Incoming0b1eb8940d andc2943c341d were inspected: their complete Paley7 groups
 and clocked pairing completion are inherited. No existing result or
 correction was overwritten. Normal and optimized end-to-end replay cover
 the current certificates, with no external independent audit claimed.
+
+## 11:00 UTC: strong targets, inherited interval paths and exact run clocks
+
+RUN_RECURRENCE R1 uses exactly the preceding 396-source bank, whose labelled
+orbit masses independently prove exhaustiveness. The new checker requires
+the same ordered sources, literal legal complements, target strong
+connectivity, complement involution and coprime exact integer minors. It
+does not substitute a rational rank for an integral certificate. The already
+invertible cases use zero moves: all three Hamilton complements of C3 are
+transitive, an explicit boundary to the stronger positive-length assertion.
+The all-size existential theorem is still OPEN.
+
+The March tribonacci path bijection, October run/port formulas and
+MISTAKE-645 correction lineage are credited before new derivations. Only
+propositions 3--4 of the future-boundary packet are used. R4's scalar
+minimality is an all-size coprime-denominator proof over Q, not a fit or a
+claim of minimality in every characteristic. The j=0 constant explains the
+eventual recurrence's initial offset.
+
+R5 retains the first interval's joint E entry. Multiplying separate start
+and end marginals there would be wrong. A later higher interval replaces
+the initial endpoint but preserves the terminal response; the last colour
+prevents counting a single monochromatic interval twice. Singleton boundary
+guards are present in the exact endpoint kernel. The 3^k construction is a
+sufficient evaluator for one specified ordered-port query, not a minimum
+state encoding every arbitrary joint response. Its complexity counts integer
+arithmetic operations, with O(n) endpoint-statistics preprocessing. The
+O(n^3) endpoint bank in the verifier is not used by the query evaluator.
+
+The independent endpoint subset DP covers sizes 1--11. Permutation/cut
+enumeration checks all cover arities through eight. Every native three-run
+entry is checked through five, with 96 fixed-seed entry pairs per size six
+through nine, and 32 two-run pairs per size two through seven. Whole-matrix
+three-run mass agrees with the scalar recurrence. Evaluations at sizes
+20,40,100 are consequences of the proved algorithm, not independent direct
+enumerations. A literal strong six-vertex complement preserves H=17 and the
+degree multiset but changes the degree/neighbour-degree profile, certifying
+nonclosure under the actual operation.
+
+R7 proves the Smith powers for all j>=1,r>=0 by local ranks and determinant.
+Exact 3-by-3 Smith calculations check j=1..12,r=0..12; a separate full image
+census checks j=1..6,r=1..4 modulo 2..8. The loss formula concerns arbitrary
+three-coordinate boundary states at finite precision. A prescribed counting
+sequence is only one initial state, and an integer nonunit matrix remains
+invertible on its image when exact outputs and divisibility guards are
+supplied. This recurrence operator is not Frobenius or a run-name action.
+
+Normal and optimized replays retain explicit exception checks. The existing
+two-run verifier rechecks the twelve-vertex 81/27 hostile without changing
+its scope. Incoming 78adba0b08 and its primary-clock dependency are inherited;
+no claim about Collatz trajectories, general attachment closure, new A000568
+terms or rank-distribution bounds follows from these interval recurrences.
