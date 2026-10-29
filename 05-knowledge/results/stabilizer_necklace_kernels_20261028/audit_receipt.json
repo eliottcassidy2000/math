@@ -1,0 +1,73 @@
+{
+  "audit": "same-agent, alternate exact computations; no independent referee or Lean claim",
+  "runs": [
+    {
+      "script": "check_stabilizers",
+      "optimized": false,
+      "checks": 845
+    },
+    {
+      "script": "check_stabilizers",
+      "optimized": true,
+      "checks": 845
+    },
+    {
+      "script": "check_kernels",
+      "optimized": false,
+      "checks": 198721
+    },
+    {
+      "script": "check_kernels",
+      "optimized": true,
+      "checks": 198721
+    },
+    {
+      "script": "check_cokernels",
+      "optimized": false,
+      "checks": 18
+    },
+    {
+      "script": "check_cokernels",
+      "optimized": true,
+      "checks": 18
+    }
+  ],
+  "cross_checks": "Smith/determinant/rank/minimum regular-set depth sums agree",
+  "hostile_81_27": {
+    "automorphism_orders": [
+      81,
+      27
+    ],
+    "cyclic_triples": 67,
+    "Hamilton_paths": [
+      462915,
+      462915
+    ],
+    "binary_orbits_by_stabilizer_order": [
+      {
+        "1": 20,
+        "3": 68,
+        "9": 64,
+        "27": 20,
+        "81": 4
+      },
+      {
+        "1": 64,
+        "3": 192,
+        "9": 192,
+        "27": 64
+      }
+    ]
+  },
+  "hashes": {
+    "05-knowledge\\results\\stabilizer_necklace_kernels_20261028\\check_cokernels.py": "38172d61b624f0fd17c712fa37e6a679bf16c447ba48a76a79b0a22fd4d2e93a",
+    "05-knowledge\\results\\stabilizer_necklace_kernels_20261028\\check_kernels.py": "d1fa0e2d005b7c5ea54acaa59cf9ad71aaa534b29eed1fe5b7ebb1f0e877e0aa",
+    "05-knowledge\\results\\stabilizer_necklace_kernels_20261028\\check_stabilizers.py": "a190cb2af45036eadf655000e2d500b16909db8f1f959c5b69f2e932df33c1bc",
+    "05-knowledge\\results\\stabilizer_necklace_kernels_20261028\\check_cokernels.json": "81959a491d0f8634994eed3ede13a911dd404066c9da184676b7d976bd8c035e",
+    "05-knowledge\\results\\stabilizer_necklace_kernels_20261028\\check_kernels.json": "17c61e60cbc2a8f35e82d3090e8559541328f1ba17bfafac927077ae39b5a267",
+    "05-knowledge\\results\\stabilizer_necklace_kernels_20261028\\check_stabilizers.json": "eda2e4db6036cdb3ca9caf5d9eeb1bb3c23d0a38d292b787870bfa6c74efc7e4",
+    "05-knowledge\\results\\relation_tower_frobenius_ports_20261028\\check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+    "01-canon\\theorems\\THM-2172-frobenius-collapse-of-mahler-and-twisted-cyclic-packets.md": "e23c84c6a8aed2514ea8fe278f4f20c10a1ad1ef6742cb2c14a94eab17854a57",
+    "05-knowledge\\results\\session68_tournament_composition_classification_20261026\\session68-classification\\CLASSIFICATION.md": "9296178069145fccd220a0868a1478d81195a4f96ca0fa2ba1d1d1307949e46f"
+  }
+}

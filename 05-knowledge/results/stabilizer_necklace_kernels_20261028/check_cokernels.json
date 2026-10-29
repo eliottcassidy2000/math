@@ -1,0 +1,81 @@
+{
+  "status": "FINITE-EXACT independent integer checks for proved cokernel decomposition",
+  "rows": [
+    {
+      "depth": 0,
+      "N": 1,
+      "odd_Smith_factors": 0,
+      "Smith_factor_multiplicities": {
+        "1": 1
+      },
+      "determinant": "1",
+      "integer_Smith_computed": true
+    },
+    {
+      "depth": 1,
+      "N": 3,
+      "odd_Smith_factors": 0,
+      "Smith_factor_multiplicities": {
+        "1": 1,
+        "2": 2
+      },
+      "determinant": "4",
+      "integer_Smith_computed": true
+    },
+    {
+      "depth": 2,
+      "N": 9,
+      "odd_Smith_factors": 1,
+      "Smith_factor_multiplicities": {
+        "1": 1,
+        "2": 7,
+        "38": 1
+      },
+      "determinant": "4864",
+      "integer_Smith_computed": true
+    },
+    {
+      "depth": 3,
+      "N": 27,
+      "odd_Smith_factors": 4,
+      "Smith_factor_multiplicities": {
+        "1": 1,
+        "2": 22,
+        "38": 3,
+        "219602": 1
+      },
+      "determinant": "50541367159422976",
+      "integer_Smith_computed": true
+    },
+    {
+      "depth": 4,
+      "N": 81,
+      "odd_Smith_factors": 13,
+      "Smith_factor_multiplicities": {
+        "1": 1,
+        "2": 67,
+        "38": 9,
+        "219602": 3,
+        "42361259535039638": 1
+      },
+      "determinant": "10938047798318237557556774559547135362787320971349313672072004632576",
+      "integer_Smith_computed": false
+    },
+    {
+      "depth": 5,
+      "N": 243,
+      "odd_Smith_factors": 40,
+      "Smith_factor_multiplicities": {
+        "1": 1,
+        "2": 202,
+        "38": 27,
+        "219602": 9,
+        "42361259535039638": 3,
+        "304065106687044470607373702908860471063745396487202": 1
+      },
+      "determinant": "795822165993591353126352117689557615094945078355056741826998730082185530106862962374123065714820803232953576175337047864224132268464938313786639245135709365912989676982666883829070522585581215692539434044092589962833576467748319784639311360403443810304",
+      "integer_Smith_computed": false
+    }
+  ],
+  "checks": 18
+}

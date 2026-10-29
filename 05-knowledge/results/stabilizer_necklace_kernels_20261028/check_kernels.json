@@ -1,0 +1,195 @@
+{
+  "status": "FINITE-EXACT controls for supplied all-depth proofs",
+  "rows": [
+    {
+      "depth": 0,
+      "N": 1,
+      "prefix_min": 0,
+      "prefix_max": 1,
+      "weight_minus_signs": 0,
+      "value_at_i": [
+        1,
+        0
+      ],
+      "determinant": "1",
+      "finite_field_ranks": {
+        "2": 1,
+        "3": 1,
+        "19": 1
+      }
+    },
+    {
+      "depth": 1,
+      "N": 3,
+      "prefix_min": 0,
+      "prefix_max": 2,
+      "weight_minus_signs": 1,
+      "value_at_i": [
+        2,
+        1
+      ],
+      "determinant": "4",
+      "finite_field_ranks": {
+        "2": 1,
+        "3": 3,
+        "19": 3
+      }
+    },
+    {
+      "depth": 2,
+      "N": 9,
+      "prefix_min": 0,
+      "prefix_max": 3,
+      "weight_minus_signs": 4,
+      "value_at_i": [
+        5,
+        0
+      ],
+      "determinant": "4864",
+      "finite_field_ranks": {
+        "2": 1,
+        "3": 9,
+        "19": 8
+      }
+    },
+    {
+      "depth": 3,
+      "N": 27,
+      "prefix_min": -1,
+      "prefix_max": 4,
+      "weight_minus_signs": 13,
+      "value_at_i": [
+        10,
+        5
+      ],
+      "determinant": "50541367159422976",
+      "finite_field_ranks": {
+        "2": 1,
+        "3": 27,
+        "19": 23
+      }
+    },
+    {
+      "depth": 4,
+      "N": 81,
+      "prefix_min": -2,
+      "prefix_max": 5,
+      "weight_minus_signs": 40,
+      "value_at_i": [
+        25,
+        0
+      ],
+      "determinant": "10938047798318237557556774559547135362787320971349313672072004632576",
+      "finite_field_ranks": {
+        "2": 1,
+        "3": 81,
+        "19": 68
+      }
+    },
+    {
+      "depth": 5,
+      "N": 243,
+      "prefix_min": -3,
+      "prefix_max": 6,
+      "weight_minus_signs": 121,
+      "value_at_i": [
+        50,
+        25
+      ],
+      "determinant": "795822165993591353126352117689557615094945078355056741826998730082185530106862962374123065714820803232953576175337047864224132268464938313786639245135709365912989676982666883829070522585581215692539434044092589962833576467748319784639311360403443810304",
+      "finite_field_ranks": {
+        "2": 1,
+        "3": 243,
+        "19": 203
+      }
+    },
+    {
+      "depth": 6,
+      "N": 729,
+      "prefix_min": -4,
+      "prefix_max": 7,
+      "weight_minus_signs": 364,
+      "value_at_i": [
+        125,
+        0
+      ]
+    },
+    {
+      "depth": 7,
+      "N": 2187,
+      "prefix_min": -5,
+      "prefix_max": 8,
+      "weight_minus_signs": 1093,
+      "value_at_i": [
+        250,
+        125
+      ]
+    },
+    {
+      "depth": 8,
+      "N": 6561,
+      "prefix_min": -6,
+      "prefix_max": 9,
+      "weight_minus_signs": 3280,
+      "value_at_i": [
+        625,
+        0
+      ]
+    },
+    {
+      "depth": 9,
+      "N": 19683,
+      "prefix_min": -7,
+      "prefix_max": 10,
+      "weight_minus_signs": 9841,
+      "value_at_i": [
+        1250,
+        625
+      ]
+    },
+    {
+      "depth": 10,
+      "N": 59049,
+      "prefix_min": -8,
+      "prefix_max": 11,
+      "weight_minus_signs": 29524,
+      "value_at_i": [
+        3125,
+        0
+      ]
+    }
+  ],
+  "global_primitive_length9": 56,
+  "hierarchically_rigid_orbits": 2,
+  "fixed_cyclic_clock_hostile": {
+    "A2_orbit_determinants": {
+      "4864": 30,
+      "1792": 18,
+      "256": 15,
+      "1024": 18
+    },
+    "C2_determinants": [
+      4864,
+      1024,
+      1024
+    ],
+    "C2_future_profiles": [
+      [
+        4864,
+        1024,
+        1024
+      ],
+      [
+        1024,
+        1024,
+        4864
+      ],
+      [
+        1024,
+        4864,
+        1024
+      ]
+    ]
+  },
+  "checks": 198721
+}
