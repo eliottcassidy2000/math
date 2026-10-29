@@ -1,0 +1,12 @@
+{
+  "snapshot": "6ae3239e1a89628fa9203a864202ddf79069b515",
+  "scope": "self-checked; see VALIDATION.md",
+  "files": {
+    "ATLAS.md": "ad91b6d8ee42745b7d2287e7b10731d72a59938da01a7bb01ed20deee08f3ecf",
+    "PROOFS.md": "39dc05eae1c090ff7e482d9b97edfb903641f82fc30970479bee512369b10fb6",
+    "README.md": "b2106ab1c88981b38eb9917b9cec201537ef772a22c135aabd62a4c0d32dd8df",
+    "VALIDATION.md": "05d6633b720e04713835e5a666cc633439c1c9e9d42614f790ac7687d24d13b8",
+    "check.py": "aee0f84cf3487cdb495d5eea0f79a94270bd28de07fcc72639bcfcc4f86fc71d",
+    "receipt.json": "70d28fc50ea5f02066e0688ff0e0da59b5a56d5d8a3b082d641427d73c3a2b5e"
+  }
+}

@@ -56,3 +56,14 @@ Method cards actually applied: `00-navigation/META-PATTERNS.md`, “Retain the
 product and shared labels before taking scalar totals” and “Controlled
 forgetting and unlabeled quotients require a sidecar.” No broad analogy is
 being treated as a transfer theorem.
+
+## Follow-up: 57,27,16 and the signed triangle
+
+[The number-bridge packet](../number_bridges_57_27_16_20261028/README.md)
+recovers the same norm57 element in the earlier cyclotomic and conductor
+work, relates9/−7 to a marked cyclic-matrix elimination, and explicitly
+computes the source amplification lost by determinant-only compression.
+It also develops the owner's square-sum P4/P3/P2 comparison and a compatible
+golden/Eisenstein generator lift with an exact growing binary clock.
+These are typed auxiliary constructions; the multilevel ROOT bound above
+remains open.
