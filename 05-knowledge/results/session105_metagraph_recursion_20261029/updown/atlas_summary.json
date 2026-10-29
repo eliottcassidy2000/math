@@ -1,0 +1,62 @@
+{
+  "atlas": [
+    {
+      "bound": 5,
+      "largest_invariant_factor": "10",
+      "n": 5,
+      "rank_decimal_digits": 1,
+      "rank_sha256_decimal": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "runs": 2,
+      "torsion_factorization_sha256": "b842a750068bdda6092c46395fe3f1c46b41e90c950bbee40c30e8a5d05a11d0"
+    },
+    {
+      "bound": 8,
+      "largest_invariant_factor": "420",
+      "n": 10,
+      "rank_decimal_digits": 6,
+      "rank_sha256_decimal": "999e22064f3e1658012748db68450a62d4ba0861ca0fd39125639f9cb3fc6432",
+      "runs": 6,
+      "torsion_factorization_sha256": "18b2cfb5540b9ade1a305aaab01230ee262d8cab2b24c6be59b779f08ec3ff29"
+    },
+    {
+      "bound": 15,
+      "largest_invariant_factor": "1163962800",
+      "n": 25,
+      "rank_decimal_digits": 60,
+      "rank_sha256_decimal": "052b9d8969b72af1ac83545a1b942278d46ed494efd0bf3a663c990d0f6d038b",
+      "runs": 14,
+      "torsion_factorization_sha256": "86bad3b463b786b1b8b6d1e58a85572fda731391af4aff43c7c672e0652c3b47"
+    },
+    {
+      "bound": 24,
+      "largest_invariant_factor": "442720643463713815200",
+      "n": 50,
+      "rank_decimal_digits": 292,
+      "rank_sha256_decimal": "5f681b205796147187f36d78c7ee56e98c2b4d61bec6654ab11e1367b5ee93f3",
+      "runs": 23,
+      "torsion_factorization_sha256": "98da95cea4a862dc36d21eda5de6f9be12358ef2e4179e4621fcf5c1da6866cb"
+    },
+    {
+      "bound": 36,
+      "largest_invariant_factor": "69720375229712477164533808935312303556800",
+      "n": 100,
+      "rank_decimal_digits": 1305,
+      "rank_sha256_decimal": "5ae1e08839150b1e72a99709e45a4859ae77519867c88200cad16067f74c9e01",
+      "runs": 36,
+      "torsion_factorization_sha256": "6a6953684f0225c44cd75aac68e4e6c1636eef4139879585ecb8c311aa30b2d5"
+    },
+    {
+      "bound": 61,
+      "largest_invariant_factor": "1694942657451890777082742546707745765991931571784709719742949858880572955078780854608000",
+      "n": 200,
+      "rank_decimal_digits": 5558,
+      "rank_sha256_decimal": "7706c4bb8e8acdb541b41183a89c4d25f22cdf18f1e34a1468593ed8ebc0625b",
+      "runs": 60,
+      "torsion_factorization_sha256": "bece507f7eaf59f91d89129b2cef9a0242b0913aa92b3029b86cb8909bcf96f3"
+    }
+  ],
+  "classification": "Inherited PADDING_FROBENIUS_PROOF.md section 5; compressed algorithmic realization only",
+  "count_prefix_sha256": "4ceacf1748cd8587bc03c1930b2f64ec731370260a8935e5422a95cd8fcb8583",
+  "full_atlas_sha256": "ed10627689ba204dfd0a3ca58270d76224f28a773c7448911ff5353adcc8b262",
+  "status": "PASS"
+}

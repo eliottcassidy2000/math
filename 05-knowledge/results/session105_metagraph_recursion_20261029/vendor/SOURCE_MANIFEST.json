@@ -1,0 +1,26 @@
+{
+  "source": "Session88 verified repository recovery",
+  "Session87_source_pin": "7a0bab9bfa7bb87c5a10c7ba239592d90cfafd51",
+  "files": [
+    {
+      "repository_path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/check_generation.py",
+      "sha256": "f5d3da961f34dc1a32eaa0c1b69fad9bda983154578ea0187c5fd6b2e2d10fae",
+      "bytes": 14763
+    },
+    {
+      "repository_path": "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/baseline_sources.py",
+      "sha256": "684368faaf908d9d28b966bfa8f9642d0ba1f3848e1083e6531c86bd3cc8bdbc",
+      "bytes": 1802
+    },
+    {
+      "repository_path": "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/check_blockfill.py",
+      "sha256": "cb246f280786f6a7f8b1f829d9d9b9e0993cb2298eb399783809bedb27780bdb",
+      "bytes": 13099
+    },
+    {
+      "repository_path": "05-knowledge/results/session88_symmetry_certificates_20261028/blockfill/check_adaptive.py",
+      "sha256": "103b1b0e9e1929f2b71885901ae2f5c84ea01fc3f63bd60d216fa9ba6042adf7",
+      "bytes": 5151
+    }
+  ]
+}

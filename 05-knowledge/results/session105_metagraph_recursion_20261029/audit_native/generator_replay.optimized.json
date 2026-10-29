@@ -1,0 +1,820 @@
+{
+  "baseline": "Session88 adaptive with unchanged full-port output",
+  "hostile_81_27": {
+    "attachments": [
+      {
+        "binary_attachment_orbits": 176,
+        "group_order": 81,
+        "single_marked_port_orbits": 2,
+        "transporter_0_to_4_size": 27
+      },
+      {
+        "binary_attachment_orbits": 512,
+        "group_order": 27,
+        "single_marked_port_orbits": 6,
+        "transporter_0_to_4_size": 0
+      }
+    ],
+    "literal_point_stabilizers_equal": true,
+    "same_all_subset_H_entries": 4096,
+    "same_labelled_cyclic_triples": 67,
+    "whole_H": 462915
+  },
+  "results": [
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 3,
+        "classified_roots": 0,
+        "inferred_roots": 0,
+        "known_original_root": 1,
+        "order": 1,
+        "ordinary_classes": 1,
+        "parent_preparation_requests": 2,
+        "pointed_states": 1,
+        "preparation_orders_tested": 1,
+        "preparation_searches": 1,
+        "preparation_seconds": 2.3454005713574588e-05,
+        "preparation_total_requests": 3,
+        "raw_state_classification_requests": 1,
+        "seconds": 8.284699288196862e-05,
+        "subgroup_enlargements": 0,
+        "total_orders_tested": 1,
+        "total_searches": 1
+      },
+      "equal_complete_output_sha256": {
+        "Q": "72a90294911315762e59d57ba06eac8429dad1cff02afdd569c827330d15d650",
+        "automorphisms": "75ad937b8bc4d5315c6c674a3c960c09126896aadd93408b79c8a45449677b67",
+        "bank": "efd70b49446e8be6bedf3dfe219a88a352831f684dce5d48505e29b260989f2b",
+        "parent_data": "255f97f7684a3b89d939e11f52236f62880f8f0e170f28b263529b9a7917f13f",
+        "root_transports": "6e2c0b03b904a4b390a5cda1798e25971ea79b8045fbf4e13cfff93a4297eb00",
+        "states": "4ca8861bea3980127889cc69ab5b8d8c2ec2d6cc04325fb74869de7477efb4ac"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 1
+        },
+        "independent_full_child_classes": 1,
+        "labelled_universe": {
+          "class_count": 1,
+          "labelled_orbit_size_histogram": {
+            "1": 1
+          },
+          "labelled_universe": 1,
+          "order": 1
+        },
+        "orbit_weight_profiles": [
+          {
+            "classes": 1,
+            "weights": [
+              1
+            ]
+          }
+        ]
+      },
+      "median_seconds": {},
+      "orbit_transport": {
+        "all_canonicalizer_requests": 1,
+        "classified_roots": 0,
+        "inferred_roots": 0,
+        "known_original_root": 1,
+        "mask_orbit_size_histogram": {
+          "1": 1
+        },
+        "order": 1,
+        "ordinary_classes": 1,
+        "parent_preparation_requests": 1,
+        "pointed_states": 1,
+        "preparation_orders_tested": 1,
+        "preparation_searches": 1,
+        "preparation_seconds": 2.2307009203359485e-05,
+        "preparation_total_requests": 1,
+        "raw_masks_covered": 1,
+        "raw_state_classification_requests": 0,
+        "seconds": 5.432199395727366e-05,
+        "subgroup_enlargements": 0,
+        "total_orders_tested": 1,
+        "total_searches": 1,
+        "transport_seeded_cache_entries": 0
+      },
+      "order": 1,
+      "timings": {
+        "baseline": [],
+        "orbit_transport": []
+      },
+      "weighted": {
+        "blocks": 1,
+        "labelled_child_mass": "1",
+        "weighted_deletion_mass": "1",
+        "weighted_extension_mass": "1"
+      }
+    },
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 5,
+        "classified_roots": 1,
+        "inferred_roots": 0,
+        "known_original_root": 1,
+        "order": 2,
+        "ordinary_classes": 1,
+        "parent_preparation_requests": 2,
+        "pointed_states": 2,
+        "preparation_orders_tested": 1,
+        "preparation_searches": 1,
+        "preparation_seconds": 1.904400414787233e-05,
+        "preparation_total_requests": 4,
+        "raw_state_classification_requests": 2,
+        "seconds": 6.717500218655914e-05,
+        "subgroup_enlargements": 0,
+        "total_orders_tested": 1,
+        "total_searches": 1
+      },
+      "equal_complete_output_sha256": {
+        "Q": "e07a93e6211e56c8cdcb2359e8d26ed615e9b3a996820c3d250eac8a0ef5e6b9",
+        "automorphisms": "b6e0e459dc9b96cfa8e6812300db9f481cf5838b0e6a09d555accd73aac3a7dd",
+        "bank": "c3d11f560c7a855afbc411ebd701c5be78719fa51d5c15f078b2bca0cbf205d3",
+        "parent_data": "bbb2e3ca648370d9d0fd88c40128e361c279d78452b5ace14fd4003c21f12a04",
+        "root_transports": "1d84b8688f24f9535964113d0faed43b44ae95fa0fc6fb9ca3f9b4602052e032",
+        "states": "2193504653489ad8418a3dce55d5d774d28556e7728e95dae7c5e57e7f5a613b"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 1
+        },
+        "independent_full_child_classes": 1,
+        "labelled_universe": {
+          "class_count": 1,
+          "labelled_orbit_size_histogram": {
+            "2": 1
+          },
+          "labelled_universe": 2,
+          "order": 2
+        },
+        "orbit_weight_profiles": [
+          {
+            "classes": 1,
+            "weights": [
+              1,
+              1
+            ]
+          }
+        ]
+      },
+      "median_seconds": {},
+      "orbit_transport": {
+        "all_canonicalizer_requests": 2,
+        "classified_roots": 1,
+        "inferred_roots": 0,
+        "known_original_root": 1,
+        "mask_orbit_size_histogram": {
+          "1": 2
+        },
+        "order": 2,
+        "ordinary_classes": 1,
+        "parent_preparation_requests": 1,
+        "pointed_states": 2,
+        "preparation_orders_tested": 1,
+        "preparation_searches": 1,
+        "preparation_seconds": 2.4160995963029563e-05,
+        "preparation_total_requests": 1,
+        "raw_masks_covered": 2,
+        "raw_state_classification_requests": 0,
+        "seconds": 6.571800622623414e-05,
+        "subgroup_enlargements": 0,
+        "total_orders_tested": 1,
+        "total_searches": 1,
+        "transport_seeded_cache_entries": 0
+      },
+      "order": 2,
+      "timings": {
+        "baseline": [],
+        "orbit_transport": []
+      },
+      "weighted": {
+        "blocks": 1,
+        "labelled_child_mass": "2",
+        "weighted_deletion_mass": "2",
+        "weighted_extension_mass": "2"
+      }
+    },
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 9,
+        "classified_roots": 3,
+        "inferred_roots": 1,
+        "known_original_root": 2,
+        "order": 3,
+        "ordinary_classes": 2,
+        "parent_preparation_requests": 2,
+        "pointed_states": 4,
+        "preparation_orders_tested": 2,
+        "preparation_searches": 2,
+        "preparation_seconds": 2.464601129759103e-05,
+        "preparation_total_requests": 6,
+        "raw_state_classification_requests": 4,
+        "seconds": 0.0001125699927797541,
+        "subgroup_enlargements": 1,
+        "total_orders_tested": 2,
+        "total_searches": 2
+      },
+      "equal_complete_output_sha256": {
+        "Q": "56aa83a9477c1f1fddae48a5e96d32782684ea2d003f4229f087fc6448a17405",
+        "automorphisms": "36cad5e305a2a5ad855f048cb464bf962997d51d88a54c1f8ea258b0f418cb8e",
+        "bank": "eb84358622cfb5f75d1a3d06c864b6baac407a3b097519cf4adf9ec6bcc48278",
+        "parent_data": "4548c2ba49a1932ce76a5ca1cdf444f32b9393f55fde5adcf07f9ef2a8291193",
+        "root_transports": "816466df6fa83e8eaba4024d7bf385bcecbe2f491a3b9b69fc6dcd9e4422e1f4",
+        "states": "d25e7975d221696823abc444fa688de2cfbe31e516d68a81f8023c79faf89e59"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 1,
+          "3": 1
+        },
+        "independent_full_child_classes": 2,
+        "labelled_universe": {
+          "class_count": 2,
+          "labelled_orbit_size_histogram": {
+            "2": 1,
+            "6": 1
+          },
+          "labelled_universe": 8,
+          "order": 3
+        },
+        "orbit_weight_profiles": [
+          {
+            "classes": 1,
+            "weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "classes": 1,
+            "weights": [
+              3
+            ]
+          }
+        ]
+      },
+      "median_seconds": {},
+      "orbit_transport": {
+        "all_canonicalizer_requests": 4,
+        "classified_roots": 3,
+        "inferred_roots": 1,
+        "known_original_root": 2,
+        "mask_orbit_size_histogram": {
+          "1": 4
+        },
+        "order": 3,
+        "ordinary_classes": 2,
+        "parent_preparation_requests": 1,
+        "pointed_states": 4,
+        "preparation_orders_tested": 1,
+        "preparation_searches": 1,
+        "preparation_seconds": 2.5496003217995167e-05,
+        "preparation_total_requests": 1,
+        "raw_masks_covered": 4,
+        "raw_state_classification_requests": 0,
+        "seconds": 0.0001025870005832985,
+        "subgroup_enlargements": 1,
+        "total_orders_tested": 1,
+        "total_searches": 1,
+        "transport_seeded_cache_entries": 1
+      },
+      "order": 3,
+      "timings": {
+        "baseline": [],
+        "orbit_transport": []
+      },
+      "weighted": {
+        "blocks": 2,
+        "labelled_child_mass": "8",
+        "weighted_deletion_mass": "4",
+        "weighted_extension_mass": "4"
+      }
+    },
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 29,
+        "classified_roots": 9,
+        "inferred_roots": 3,
+        "known_original_root": 4,
+        "order": 4,
+        "ordinary_classes": 4,
+        "parent_preparation_requests": 4,
+        "pointed_states": 12,
+        "preparation_orders_tested": 8,
+        "preparation_searches": 3,
+        "preparation_seconds": 7.161400571931154e-05,
+        "preparation_total_requests": 20,
+        "raw_state_classification_requests": 16,
+        "seconds": 0.00029995500517543405,
+        "subgroup_enlargements": 2,
+        "total_orders_tested": 9,
+        "total_searches": 4
+      },
+      "equal_complete_output_sha256": {
+        "Q": "56f0d19b74fe90fb7edd63c2ac62d7e89e34cd8cf7db8c7e11a947ef2bbb53cd",
+        "automorphisms": "b1093e300e0d18524e2087bcd553213b39af38c3677a13653e1081808e0b418a",
+        "bank": "6b76eabed1685c68700e9d29fc1ca51c68cc4b53adadc26cc074b61b06e35c8f",
+        "parent_data": "2f222b3e6bac6ec2c85ee1f4c0104405418d1729106b6bf8d3b315d4c0e9e073",
+        "root_transports": "99a56a7ae497124af582cc934c28b8867aa815c9ec2135bda7606a7db6ba562c",
+        "states": "13ed51a3eb2b25761321e2ae39f618aca235095bc16d2982d1b0d1cc414945b1"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 2,
+          "3": 2
+        },
+        "independent_full_child_classes": 4,
+        "labelled_universe": {
+          "class_count": 4,
+          "labelled_orbit_size_histogram": {
+            "8": 2,
+            "24": 2
+          },
+          "labelled_universe": 64,
+          "order": 4
+        },
+        "orbit_weight_profiles": [
+          {
+            "classes": 2,
+            "weights": [
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "classes": 2,
+            "weights": [
+              1,
+              3
+            ]
+          }
+        ]
+      },
+      "median_seconds": {},
+      "orbit_transport": {
+        "all_canonicalizer_requests": 11,
+        "classified_roots": 9,
+        "inferred_roots": 3,
+        "known_original_root": 4,
+        "mask_orbit_size_histogram": {
+          "1": 10,
+          "3": 2
+        },
+        "order": 4,
+        "ordinary_classes": 4,
+        "parent_preparation_requests": 2,
+        "pointed_states": 12,
+        "preparation_orders_tested": 7,
+        "preparation_searches": 2,
+        "preparation_seconds": 7.298099808394909e-05,
+        "preparation_total_requests": 2,
+        "raw_masks_covered": 16,
+        "raw_state_classification_requests": 0,
+        "seconds": 0.0003272019966971129,
+        "subgroup_enlargements": 2,
+        "total_orders_tested": 8,
+        "total_searches": 3,
+        "transport_seeded_cache_entries": 1
+      },
+      "order": 4,
+      "timings": {
+        "baseline": [],
+        "orbit_transport": []
+      },
+      "weighted": {
+        "blocks": 4,
+        "labelled_child_mass": "64",
+        "weighted_deletion_mass": "32/3",
+        "weighted_extension_mass": "32/3"
+      }
+    },
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 110,
+        "classified_roots": 38,
+        "inferred_roots": 10,
+        "known_original_root": 12,
+        "order": 5,
+        "ordinary_classes": 12,
+        "parent_preparation_requests": 8,
+        "pointed_states": 48,
+        "preparation_orders_tested": 28,
+        "preparation_searches": 7,
+        "preparation_seconds": 0.00026831700233742595,
+        "preparation_total_requests": 72,
+        "raw_state_classification_requests": 64,
+        "seconds": 0.001271108994842507,
+        "subgroup_enlargements": 4,
+        "total_orders_tested": 43,
+        "total_searches": 11
+      },
+      "equal_complete_output_sha256": {
+        "Q": "cbd0e35e1714df2b41f4f02d2b1d814951744f0b45aa272b39c2223727ee132f",
+        "automorphisms": "74ac03eec62afd1329ce9f7352d46a0ae978a4ea6f5564f0bc17694a3c61dbf3",
+        "bank": "e7804240f5ffef54177d5db97f9daf40cea127c1da76af0788d25a39d079bbe0",
+        "parent_data": "0d8c1fe856f2f00dccc96d9db03cfca0707970dac3651d5451be45c7719edb2b",
+        "root_transports": "634eb39cdf8206ba593b5e335d26e657ebc17e0a9d99c86e95aedf3f2d241a45",
+        "states": "e240b72353e1ccaa1ebc733b2ad2386f90a32094c99c78d8063f8b35b371599a"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 7,
+          "3": 4,
+          "5": 1
+        },
+        "independent_full_child_classes": 12,
+        "labelled_universe": {
+          "class_count": 12,
+          "labelled_orbit_size_histogram": {
+            "24": 1,
+            "40": 4,
+            "120": 7
+          },
+          "labelled_universe": 1024,
+          "order": 5
+        },
+        "orbit_weight_profiles": [
+          {
+            "classes": 7,
+            "weights": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "classes": 4,
+            "weights": [
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "classes": 1,
+            "weights": [
+              5
+            ]
+          }
+        ]
+      },
+      "median_seconds": {},
+      "orbit_transport": {
+        "all_canonicalizer_requests": 42,
+        "classified_roots": 38,
+        "inferred_roots": 10,
+        "known_original_root": 12,
+        "mask_orbit_size_histogram": {
+          "1": 40,
+          "3": 8
+        },
+        "order": 5,
+        "ordinary_classes": 12,
+        "parent_preparation_requests": 4,
+        "pointed_states": 48,
+        "preparation_orders_tested": 17,
+        "preparation_searches": 4,
+        "preparation_seconds": 0.0002368949935771525,
+        "preparation_total_requests": 4,
+        "raw_masks_covered": 64,
+        "raw_state_classification_requests": 0,
+        "seconds": 0.001280715994653292,
+        "subgroup_enlargements": 4,
+        "total_orders_tested": 32,
+        "total_searches": 8,
+        "transport_seeded_cache_entries": 3
+      },
+      "order": 5,
+      "timings": {
+        "baseline": [],
+        "orbit_transport": []
+      },
+      "weighted": {
+        "blocks": 12,
+        "labelled_child_mass": "1024",
+        "weighted_deletion_mass": "128/3",
+        "weighted_extension_mass": "128/3"
+      }
+    },
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 652,
+        "classified_roots": 244,
+        "inferred_roots": 36,
+        "known_original_root": 56,
+        "order": 6,
+        "ordinary_classes": 56,
+        "parent_preparation_requests": 24,
+        "pointed_states": 296,
+        "preparation_orders_tested": 220,
+        "preparation_searches": 22,
+        "preparation_seconds": 0.0021067180059617385,
+        "preparation_total_requests": 408,
+        "raw_state_classification_requests": 384,
+        "seconds": 0.010306227006367408,
+        "subgroup_enlargements": 10,
+        "total_orders_tested": 496,
+        "total_searches": 56
+      },
+      "equal_complete_output_sha256": {
+        "Q": "0cbbdbbc06ccc23932485f0d8ab43d17dd2fd1af4cb661edc6807664f0dd5244",
+        "automorphisms": "771c9314baa6abb9e8d897a176608015bb6054bb53d4cbc50a6360434b3d8989",
+        "bank": "dbb701385961861c7128c19f566a4b613b26eca6dc49b887123ad8188b729f41",
+        "parent_data": "ab08e6bee4a1ccfc1fa750c55dd7750725bfa3de9618a0b6dd55ae8469094a8a",
+        "root_transports": "a3920f4fd28731dd96a66280ab32e04550f13fe3bebcc504054118f48ceee7fc",
+        "states": "0b7297dbc53f4ab63a573ae3f18e3c786b166b67f7939c2f4bbe44cdffb515f4"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 41,
+          "3": 12,
+          "5": 2,
+          "9": 1
+        },
+        "independent_full_child_classes": 56,
+        "labelled_universe": {
+          "class_count": 56,
+          "labelled_orbit_size_histogram": {
+            "80": 1,
+            "144": 2,
+            "240": 12,
+            "720": 41
+          },
+          "labelled_universe": 32768,
+          "order": 6
+        },
+        "orbit_weight_profiles": [
+          {
+            "classes": 41,
+            "weights": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "classes": 10,
+            "weights": [
+              1,
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "classes": 2,
+            "weights": [
+              1,
+              5
+            ]
+          },
+          {
+            "classes": 3,
+            "weights": [
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.009796629994525574,
+        "orbit_transport": 0.009458037005970255
+      },
+      "orbit_transport": {
+        "all_canonicalizer_requests": 256,
+        "classified_roots": 244,
+        "inferred_roots": 36,
+        "known_original_root": 56,
+        "mask_orbit_size_histogram": {
+          "1": 258,
+          "3": 32,
+          "5": 6
+        },
+        "order": 6,
+        "ordinary_classes": 56,
+        "parent_preparation_requests": 12,
+        "pointed_states": 296,
+        "preparation_orders_tested": 173,
+        "preparation_searches": 12,
+        "preparation_seconds": 0.0013953549932921305,
+        "preparation_total_requests": 12,
+        "raw_masks_covered": 384,
+        "raw_state_classification_requests": 0,
+        "seconds": 0.008663575004902668,
+        "subgroup_enlargements": 10,
+        "total_orders_tested": 449,
+        "total_searches": 46,
+        "transport_seeded_cache_entries": 10
+      },
+      "order": 6,
+      "timings": {
+        "baseline": [
+          0.009796629994525574
+        ],
+        "orbit_transport": [
+          0.009458037005970255
+        ]
+      },
+      "weighted": {
+        "blocks": 56,
+        "labelled_child_mass": "32768",
+        "weighted_deletion_mass": "4096/15",
+        "weighted_extension_mass": "4096/15"
+      }
+    },
+    {
+      "baseline": {
+        "all_canonicalizer_requests": 6289,
+        "classified_roots": 2593,
+        "inferred_roots": 143,
+        "known_original_root": 456,
+        "order": 7,
+        "ordinary_classes": 456,
+        "parent_preparation_requests": 112,
+        "pointed_states": 3040,
+        "preparation_orders_tested": 1524,
+        "preparation_searches": 107,
+        "preparation_seconds": 0.020767153007909656,
+        "preparation_total_requests": 3696,
+        "raw_state_classification_requests": 3584,
+        "seconds": 0.11902114900294691,
+        "subgroup_enlargements": 27,
+        "total_orders_tested": 8053,
+        "total_searches": 576
+      },
+      "equal_complete_output_sha256": {
+        "Q": "fdfb465156d76f7965f69141b70a3c331ba3071a8b4e5c07b30725f99f02fee1",
+        "automorphisms": "aa6cc54e4be29757c0e32d65622430464d9a134458ae5cddbbb1618b204c6324",
+        "bank": "46078a219f3848e2f4ad23feb9f3cbcb9996d31c63111a19ad797d9f8724d832",
+        "parent_data": "c38c64968a491e9e433d5eefad31b46087af67f4e29c6a4f071d1232a892be1b",
+        "root_transports": "d71d033dce154c0fb39b2b6eb96330784015be2a6b1445802b9cff127455b8a7",
+        "states": "d595af1100ee7242d213c82822a7a8441f678facde6674ca6d8d6af412e5b030"
+      },
+      "independent_audit": {
+        "automorphism_order_histogram": {
+          "1": 399,
+          "3": 47,
+          "5": 4,
+          "7": 1,
+          "9": 4,
+          "21": 1
+        },
+        "independent_full_child_classes": 456,
+        "labelled_universe": null,
+        "orbit_weight_profiles": [
+          {
+            "classes": 399,
+            "weights": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "classes": 40,
+            "weights": [
+              1,
+              1,
+              1,
+              1,
+              3
+            ]
+          },
+          {
+            "classes": 4,
+            "weights": [
+              1,
+              1,
+              5
+            ]
+          },
+          {
+            "classes": 11,
+            "weights": [
+              1,
+              3,
+              3
+            ]
+          },
+          {
+            "classes": 2,
+            "weights": [
+              7
+            ]
+          }
+        ]
+      },
+      "median_seconds": {
+        "baseline": 0.12166354699002113,
+        "orbit_transport": 0.12701684700732585
+      },
+      "orbit_transport": {
+        "all_canonicalizer_requests": 2649,
+        "classified_roots": 2593,
+        "inferred_roots": 143,
+        "known_original_root": 456,
+        "mask_orbit_size_histogram": {
+          "1": 2804,
+          "3": 208,
+          "5": 24,
+          "9": 4
+        },
+        "order": 7,
+        "ordinary_classes": 456,
+        "parent_preparation_requests": 56,
+        "pointed_states": 3040,
+        "preparation_orders_tested": 873,
+        "preparation_searches": 56,
+        "preparation_seconds": 0.013162032002583146,
+        "preparation_total_requests": 56,
+        "raw_masks_covered": 3584,
+        "raw_state_classification_requests": 0,
+        "seconds": 0.11193609499605373,
+        "subgroup_enlargements": 27,
+        "total_orders_tested": 7402,
+        "total_searches": 525,
+        "transport_seeded_cache_entries": 51
+      },
+      "order": 7,
+      "timings": {
+        "baseline": [
+          0.12166354699002113
+        ],
+        "orbit_transport": [
+          0.12701684700732585
+        ]
+      },
+      "weighted": {
+        "blocks": 456,
+        "labelled_child_mass": "2097152",
+        "weighted_deletion_mass": "131072/45",
+        "weighted_extension_mass": "131072/45"
+      }
+    }
+  ],
+  "row_guards": {
+    "absent_port_rejected": true,
+    "actual_tournament_profile": [
+      1,
+      3
+    ],
+    "partial_row_rejected": true,
+    "renormalized_missing_support_can_pass_Q_square": [
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        3
+      ]
+    ],
+    "repair": "Enumerate every lawful root exactly once and preserve joint parent-mask transports; algebraic identities alone are insufficient.",
+    "wrong_odd_weights_pass_row_sum_and_Q_square": {
+      "false": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "true": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    }
+  },
+  "status": "FINITE-EXACT",
+  "universe": "All ordinary tournament isomorphism classes; no converse merging or filters"
+}

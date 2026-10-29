@@ -1,0 +1,24 @@
+{
+  "final_frozen_packet_replay": true,
+  "generator_full_output_hashes_equal_to_historical_replay_orders": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "independent_checks": 1649,
+  "isolation": "Packet copied beneath fresh /tmp directory; cwd=/tmp; no sister checkout or baseline argument for generator",
+  "normal_optimized_mathematical_receipts_equal": true,
+  "source_sha256": {
+    "generator/TRANSPORT_SEEDED_BANK.md": "c26892cbbc6a49189eb5bf746119e2038820d6ad96cf35c61729effadfff464f",
+    "generator/check_preparation.py": "752d8b8a3e485ab710949d09eae2888445a7b30e4c573a2bcbbfc93438eb6307",
+    "metagraph/WEIGHTED_NATIVE_RECURSION.md": "d3aa196082d95bca0a25a800828fdcd8e5fe305f94d19eb4d4a329dc385383be",
+    "metagraph/check_weighted_transport.py": "bccd4811727dcaccb963d9185ba61b9a600fb7697c25d2ad468bdbbdbf116f6a",
+    "updown/UPDOWN_HARMONIC_AUDIT.md": "3af1fae579521bca009033a903af2e8ab1f0079dde3fc30025c67310dc836761",
+    "vendor/SOURCE_MANIFEST.json": "5665afe96b01eab2b3fcfa597763ad880aa16adb07aba81f38fbfbef3a077fb8"
+  },
+  "status": "PASS"
+}

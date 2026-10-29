@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "oracle": "literal unordered-pair orbit counts per odd partition",
+  "partition_through": 30,
+  "partitions": 2035,
+  "gauge_history_through": 22,
+  "gauge_checks": 8590,
+  "negative_history_transitions": 148,
+  "packed_field_checks": 4295,
+  "large": [
+    {
+      "n": 40,
+      "sha256_decimal": "77b87d205058ee13ebdb615b502fb8df4f0a04006655b53ed6d137e91745f979"
+    },
+    {
+      "n": 60,
+      "sha256_decimal": "e8087b0ab4e1157c7bb58ec6a53358b7c27f00aa73166b4927d4707d349d1f8f"
+    },
+    {
+      "n": 100,
+      "sha256_decimal": "1d290d31b74fb08a9e73a6de3e842fc4a1d5bca8c1657107e7f14c0a0471e9c4"
+    },
+    {
+      "n": 150,
+      "sha256_decimal": "94537f9062d8bbfe950982ef2b124bca66407c5d89c26ef925e02d7795b0314c"
+    },
+    {
+      "n": 200,
+      "sha256_decimal": "f3b799a195877c94345f682c46fb0a70435c709002e80c6e7198fedde662013d"
+    }
+  ],
+  "harmonic_coefficient_through": 30,
+  "cores": 296,
+  "smith_all_degrees_through": 200,
+  "smith_summary": [
+    {
+      "n": 5,
+      "intervals": 2,
+      "bound": 5,
+      "rank_digits": 1
+    },
+    {
+      "n": 10,
+      "intervals": 6,
+      "bound": 8,
+      "rank_digits": 6
+    },
+    {
+      "n": 25,
+      "intervals": 14,
+      "bound": 15,
+      "rank_digits": 60
+    },
+    {
+      "n": 50,
+      "intervals": 23,
+      "bound": 24,
+      "rank_digits": 292
+    },
+    {
+      "n": 100,
+      "intervals": 36,
+      "bound": 36,
+      "rank_digits": 1305
+    },
+    {
+      "n": 200,
+      "intervals": 60,
+      "bound": 61,
+      "rank_digits": 5558
+    }
+  ],
+  "sourcefree_class_counts": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    8,
+    44
+  ],
+  "values": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456,
+    6880,
+    191536,
+    9733056,
+    903753248,
+    154108311168,
+    48542114686912,
+    28401423719122304,
+    31021002160355166848,
+    63530415842308265100288,
+    244912778438520759443245824,
+    1783398846284777975419600287232,
+    24605641171260376770598003978281472,
+    645022068557873570931850526424042500096,
+    32207364031661175384456332260036660040346624,
+    3070169883150468336193188889176239554269865953280,
+    559879382429394075397997876821117309031348506639435776,
+    195692027657521876084316842660833482785173437775365039898624,
+    131326696677895002131450257709457767457170027052967027982788816896,
+    169484335125246268100514597385576342667201246238506672327765919863947264,
+    421255599848131447082003884098323929861369544621589389269735693986231100612608,
+    2019284625667208265086928694043799677058780746074756618649807453554008410636526845952,
+    18691296182213712407784892577100643237772159079535345610331272616359410643727554822061146112,
+    334493774260141796028606267674709437232608940215918926763659414050175507824571200950884097540096000
+  ],
+  "source_hashes": {
+    "enumeration/integer_response.py": "4585674b8ee21758f2ad89e835ea09ae82114af48c110d8aa31a6d38fe6e7f46",
+    "enumeration/INTEGER_PROJECTIVE.md": "5102ea38ef2a9e87348f8da92829c13846c410c3354d5ebd886fde66b52ee494",
+    "enumeration/SOURCE_PINS.json": "4e7d8e9354396ffae883b2f55ea1413a6a9380c3e08e9d206745ba529e9612da",
+    "harmonic/HARMONIC_GF.md": "6b5c9e106f24f16dc166e783680f74ba5a50279d512950e691d9d6713288f4af",
+    "updown/UPDOWN_HARMONIC_AUDIT.md": "3af1fae579521bca009033a903af2e8ab1f0079dde3fc30025c67310dc836761",
+    "updown/compressed_smith.py": "f4a0abf5dc8ffc2d5282551010640441ee126d134ab7a52b24caf55b581917bd",
+    "updown/smith_atlas_200.json": "ed10627689ba204dfd0a3ca58270d76224f28a773c7448911ff5353adcc8b262"
+  }
+}

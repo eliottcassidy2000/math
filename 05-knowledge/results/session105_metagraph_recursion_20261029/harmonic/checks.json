@@ -1,0 +1,36 @@
+{
+  "checks": 187,
+  "harmonic_dimensions_first11": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    8,
+    44,
+    400,
+    6424,
+    184656,
+    9541520
+  ],
+  "orders_checked": [
+    0,
+    26
+  ],
+  "pole_orders_at_2_power_r": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    17
+  ],
+  "scope": "Exact coefficients and core identities; global continuation inherited, not inferred from samples",
+  "status": "PASS"
+}

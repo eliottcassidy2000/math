@@ -1,0 +1,167 @@
+{
+  "checks": 1649,
+  "generator": {
+    "full_output_orders": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "independent_smallbank": [
+      {
+        "parent_order": 0,
+        "pointed_states": 1,
+        "raw_parents": 1
+      },
+      {
+        "parent_order": 1,
+        "pointed_states": 2,
+        "raw_parents": 1
+      },
+      {
+        "parent_order": 2,
+        "pointed_states": 4,
+        "raw_parents": 2
+      },
+      {
+        "parent_order": 3,
+        "pointed_states": 12,
+        "raw_parents": 8
+      },
+      {
+        "parent_order": 4,
+        "pointed_states": 48,
+        "raw_parents": 64
+      }
+    ],
+    "inherited_81_27_replay": {
+      "attachments": [
+        {
+          "binary_attachment_orbits": 176,
+          "group_order": 81,
+          "single_marked_port_orbits": 2,
+          "transporter_0_to_4_size": 27
+        },
+        {
+          "binary_attachment_orbits": 512,
+          "group_order": 27,
+          "single_marked_port_orbits": 6,
+          "transporter_0_to_4_size": 0
+        }
+      ],
+      "literal_point_stabilizers_equal": true,
+      "same_all_subset_H_entries": 4096,
+      "same_labelled_cyclic_triples": 67,
+      "whole_H": 462915
+    },
+    "inherited_row_guards": {
+      "absent_port_rejected": true,
+      "actual_tournament_profile": [
+        1,
+        3
+      ],
+      "partial_row_rejected": true,
+      "renormalized_missing_support_can_pass_Q_square": [
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ],
+      "repair": "Enumerate every lawful root exactly once and preserve joint parent-mask transports; algebraic identities alone are insufficient.",
+      "wrong_odd_weights_pass_row_sum_and_Q_square": {
+        "false": [
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "true": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      }
+    }
+  },
+  "native": {
+    "2": {
+      "blue_mass": 1,
+      "classes": 1,
+      "mass": 1,
+      "proposal_mix": {
+        "acceptance": "1/2",
+        "mixed_gap_alphas": []
+      }
+    },
+    "3": {
+      "blue_mass": 2,
+      "classes": 2,
+      "mass": 2,
+      "proposal_mix": {
+        "acceptance": "1/4",
+        "mixed_gap_alphas": [
+          "1/4",
+          "1/2",
+          "1"
+        ]
+      }
+    },
+    "4": {
+      "blue_mass": 4,
+      "classes": 4,
+      "mass": 8,
+      "proposal_mix": {
+        "acceptance": "1/8",
+        "mixed_gap_alphas": [
+          "1/4",
+          "1/2",
+          "1"
+        ]
+      }
+    },
+    "5": {
+      "blue_mass": 16,
+      "classes": 12,
+      "mass": 64,
+      "proposal_mix": {
+        "acceptance": "1/16",
+        "mixed_gap_alphas": [
+          "1/4",
+          "1/2",
+          "1"
+        ]
+      }
+    }
+  },
+  "python_optimized": false,
+  "source_sha256": {
+    "generator/TRANSPORT_SEEDED_BANK.md": "c26892cbbc6a49189eb5bf746119e2038820d6ad96cf35c61729effadfff464f",
+    "generator/check_preparation.py": "752d8b8a3e485ab710949d09eae2888445a7b30e4c573a2bcbbfc93438eb6307",
+    "metagraph/WEIGHTED_NATIVE_RECURSION.md": "d3aa196082d95bca0a25a800828fdcd8e5fe305f94d19eb4d4a329dc385383be",
+    "metagraph/check_weighted_transport.py": "bccd4811727dcaccb963d9185ba61b9a600fb7697c25d2ad468bdbbdbf116f6a",
+    "updown/UPDOWN_HARMONIC_AUDIT.md": "3af1fae579521bca009033a903af2e8ab1f0079dde3fc30025c67310dc836761",
+    "vendor/SOURCE_MANIFEST.json": "5665afe96b01eab2b3fcfa597763ad880aa16adb07aba81f38fbfbef3a077fb8"
+  },
+  "status": "PASS"
+}

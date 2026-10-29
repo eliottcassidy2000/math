@@ -1,0 +1,9 @@
+{
+  "normal_optimized_structural_equality": true,
+  "max_child_order": 7,
+  "guard_mode": "RuntimeError, active under -O",
+  "six_complete_output_fields_equal_at_every_level": true,
+  "self_contained_vendor": true,
+  "producer_sha256": "752d8b8a3e485ab710949d09eae2888445a7b30e4c573a2bcbbfc93438eb6307",
+  "vendor_manifest_sha256": "5665afe96b01eab2b3fcfa597763ad880aa16adb07aba81f38fbfbef3a077fb8"
+}

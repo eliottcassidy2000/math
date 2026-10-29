@@ -1,0 +1,105 @@
+{
+  "class_counts": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12
+  ],
+  "harmonic_dimensions": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    8
+  ],
+  "smith_deletion": {
+    "1": [
+      1
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      1,
+      4
+    ],
+    "5": [
+      1,
+      1,
+      1,
+      10
+    ]
+  },
+  "sourcefree_counts": [
+    1,
+    0,
+    0,
+    1,
+    2,
+    8
+  ],
+  "levels": [
+    {
+      "n": 1,
+      "spectrum": {
+        "1": 1
+      },
+      "projector_rank": 0
+    },
+    {
+      "n": 2,
+      "spectrum": {
+        "1": 1
+      },
+      "projector_rank": 0
+    },
+    {
+      "n": 3,
+      "spectrum": {
+        "1": 1,
+        "0": 1
+      },
+      "projector_rank": 1
+    },
+    {
+      "n": 4,
+      "spectrum": {
+        "1": 1,
+        "1/4": 1,
+        "0": 2
+      },
+      "projector_rank": 2
+    },
+    {
+      "n": 5,
+      "spectrum": {
+        "1": 1,
+        "2/5": 1,
+        "1/5": 2,
+        "0": 8
+      },
+      "projector_rank": 8
+    }
+  ],
+  "degree5_mod2_left_kernel": [
+    [
+      0,
+      1,
+      0,
+      1
+    ]
+  ],
+  "degree4_canonical_codes": [
+    0,
+    2,
+    4,
+    5
+  ],
+  "status": "PASS: exhaustive isoclasses, ranks, commutators, projections, direct sums, direct labeled refresh, stationary law, detailed balance, exact spectra"
+}
