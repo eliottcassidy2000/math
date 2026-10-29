@@ -1,0 +1,55 @@
+{
+  "all_strong_run_order": [
+    {
+      "H": 2899675,
+      "path": [
+        3,
+        5,
+        9,
+        0,
+        6,
+        10,
+        1,
+        7,
+        11,
+        2,
+        8,
+        12,
+        4
+      ]
+    },
+    {
+      "H": 2906091,
+      "path": [
+        3,
+        5,
+        9,
+        0,
+        6,
+        10,
+        2,
+        7,
+        11,
+        1,
+        8,
+        12,
+        4
+      ]
+    }
+  ],
+  "decorated_triangle": {
+    "H": 462915,
+    "attachment_orbits": [
+      176,
+      512
+    ],
+    "aut_orders": [
+      81,
+      27
+    ],
+    "cyclic_triples": 67,
+    "point_stabilizers": "literally equal on all 12 labels",
+    "subsets": 4096
+  },
+  "status": "FINITE-EXACT"
+}
