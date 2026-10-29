@@ -1,0 +1,11 @@
+{
+  "affine_native_steps": 3232,
+  "checks": 27383,
+  "compiled_reset_edges": 4169,
+  "controller_complete_runs": 404,
+  "controller_edges": 1505,
+  "malformed_rejections": 9,
+  "max_observed_return_steps": 16,
+  "scope": "finite exact controls; infinite statements depend on proofs; Collatz OPEN",
+  "status": "pass"
+}
