@@ -150,6 +150,24 @@ for B in ([0,0,0,0,0,0], [0,9,0,8,1,7], [0,1,4,9,16,25]):
             for nn in range(n):
                 for rr in range(B[nn]+1):need(prefix[nn]+rr<prefix[n]+r,'compiled_paid_resets')
 need(native(3,3)==(5,1),'return_without_source_descent')
+# Final quantitative specialization: integer arithmetic at bit boundaries,
+# exact rank checks on small native sources, and all small paid reset pairs.
+need(2*27**20<28**20,'twenty_contraction_halving')
+for L in range(1,65):
+    for n in sorted({max(1,2**(L-1)+1),2**L-1}):
+        actual_L=n.bit_length();K=20*(actual_L-1)+1
+        need(n+1<=2**actual_L,'bitlength_potential_envelope')
+        # rho^K * 3(n+1)/2 < 3, without fractions or logs.
+        need(27**K*(n+1)<2*28**K,'strict_threshold_envelope')
+for n in range(1,2048,2):
+    need(energy_rank(n,1)<=60*n.bit_length()-56,'linear_bitlength_rank_bound')
+def envelope(n):return 60*n*n.bit_length()
+for n in range(1,4096):
+    need(envelope(n+1)-envelope(n)>=60*n.bit_length(),'closed_offset_adjacent_increment')
+for n in range(1,128,2):
+    for smaller in range(1,n,2):
+        need(envelope(n)>envelope(smaller)+energy_rank(smaller,1),'closed_offset_paid_reset')
+    need(envelope(n)+energy_rank(n,1)<=60*(n+1)*n.bit_length()-56,'closed_offset_initial_bound')
 # malformed-input checks remain enabled with python -O
 for fn,args in [(native,(3,0)),(native,(4,3)),(native,(3,2)),(native,(3,True)),(energy_rank,(3,-1)),(word_data,(3,(0,))), (tags,((),F(1,4))),(tags,((0,),F(1,4))),(tags,((1,1),F(1,4))),(tags,((1,),F(1,2)))]:
     try: fn(*args)
