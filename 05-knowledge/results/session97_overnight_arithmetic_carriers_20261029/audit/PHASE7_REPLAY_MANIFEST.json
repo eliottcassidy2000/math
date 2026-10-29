@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "producer_imports": false,
+  "raw_database_required": false,
+  "checks": [
+    {
+      "script": "audit/check_isogeny_independent.py",
+      "script_sha256": "cebba053ef828def9ceb635527ef955207747119e4d8569888ad5e6ee0712bab",
+      "output_sha256": "d93b0562e1c25d71295c60fd9d45798fcc1140837490eb5ed58da3f181931aed",
+      "normal_optimized_identical": true,
+      "dependencies": {
+        "ranks/phase2/highrank_inputs.json": "8dffce8a9c53ee3a757c18ef4e7449d972d4eaf96139ea4a89bd519ed586903d",
+        "isogeny/certificate.json": "5b0307b09560b1f5dd3301c7ad57d40f85215e60469d32e5ec3038a0ca2c0887",
+        "isogeny/minimum_prime_bank.json": "170c89aec48fdc0e28748f2ef675d328b18a3c5db27d90e2ee7e6909476f2540"
+      }
+    },
+    {
+      "script": "audit/check_joint_halving_independent.py",
+      "script_sha256": "d3589ac50a34ab8e9bc7349ffb969f054b82d1b717002de1b5c74a4fb01b98ab",
+      "output_sha256": "3d834f6bddd2c114180103da5184eacd5ab057e2cbea16fab66179199786dc9e",
+      "normal_optimized_identical": true,
+      "dependencies": {
+        "halving/halving_certificate.json": "66cce357883ee99a5ccd92ff54fef1a3ab04701b75d633971d2f581c6d3747bc",
+        "halving/binary_kernel_certificate.json": "d1a11bb7b1622ffe784d166380a23b95e32f7c497ea9324cea3b1c07281c9a44",
+        "halving/joint_candidate_3567.json": "acc7bd118b5d5ada50b6535710ec24ceb476721bf7622648c3ff0c52513fa36c",
+        "halving/joint_candidate_3568.json": "edd94db2262c1c32d3c0b0b42bee2fab523a35152bf3349411b0d1e6766f8821"
+      }
+    },
+    {
+      "script": "audit/check_two_saturation_independent.py",
+      "script_sha256": "5a175be5856f0d3a1a8c6836888b45b9b737f340b0902a0cb24827170c1664ab",
+      "output_sha256": "b360d82aca55304e25f303fb44af98d3d530192575b4341c487014f9fce9d7e2",
+      "normal_optimized_identical": true,
+      "dependencies": {
+        "halving/halving_certificate.json": "66cce357883ee99a5ccd92ff54fef1a3ab04701b75d633971d2f581c6d3747bc",
+        "halving/phase2/extension_3567.json": "1f299bd33661e57f5714fdb00563b3ea9168baf2ec259327ebeec70f3e583afc",
+        "halving/phase2/extension_3568.json": "789c29dbc6c88cd35583a6e1d27d7f03bba38e48ea5d385db4630d19bb3bdbfe",
+        "halving/phase2/inverse_transport_3567.json": "4fe1eb280014e5ff4e5a6eda0e6ec6fa5b54c730db960b2235772fcd9a790087",
+        "halving/phase2/inverse_transport_3568.json": "b2a4aecc66cebd79fab67f2c019b0e917573e5af2767d7758d4fc30389408a3a"
+      }
+    },
+    {
+      "script": "audit/check_tournament_solution_independent.py",
+      "script_sha256": "d7474fe93068b5baa618bf7495dec1ab2379463ff1b8fd47ce803e00fbd5f594",
+      "output_sha256": "25c5486b72aa7e4b0ec4da4684279606d5a441141f3a47acaf26b4d0c3d033ca",
+      "normal_optimized_identical": true,
+      "dependencies": {}
+    }
+  ]
+}
