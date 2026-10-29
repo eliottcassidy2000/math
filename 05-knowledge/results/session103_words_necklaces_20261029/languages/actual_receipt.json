@@ -1,0 +1,250 @@
+{
+  "scope": "Actual classical grammar, not an all-order matrix nonsingularity proof",
+  "rows": [
+    {
+      "length": 0,
+      "total": 1,
+      "occurrences": {
+        "0": 1
+      },
+      "first_hit_end": {}
+    },
+    {
+      "length": 1,
+      "total": 3,
+      "occurrences": {
+        "0": 3
+      },
+      "first_hit_end": {}
+    },
+    {
+      "length": 2,
+      "total": 8,
+      "occurrences": {
+        "0": 7,
+        "1": 1
+      },
+      "first_hit_end": {
+        "2": 1
+      }
+    },
+    {
+      "length": 3,
+      "total": 21,
+      "occurrences": {
+        "0": 16,
+        "1": 4,
+        "2": 1
+      },
+      "first_hit_end": {
+        "2": 3,
+        "3": 2
+      }
+    },
+    {
+      "length": 4,
+      "total": 55,
+      "occurrences": {
+        "0": 36,
+        "1": 14,
+        "2": 4,
+        "3": 1
+      },
+      "first_hit_end": {
+        "2": 8,
+        "3": 6,
+        "4": 5
+      }
+    },
+    {
+      "length": 5,
+      "total": 144,
+      "occurrences": {
+        "0": 81,
+        "1": 42,
+        "2": 16,
+        "3": 4,
+        "4": 1
+      },
+      "first_hit_end": {
+        "2": 21,
+        "3": 16,
+        "4": 15,
+        "5": 11
+      }
+    },
+    {
+      "length": 6,
+      "total": 377,
+      "occurrences": {
+        "0": 182,
+        "1": 119,
+        "2": 53,
+        "3": 18,
+        "4": 4,
+        "5": 1
+      },
+      "first_hit_end": {
+        "2": 55,
+        "3": 42,
+        "4": 40,
+        "5": 33,
+        "6": 25
+      }
+    },
+    {
+      "length": 7,
+      "total": 987,
+      "occurrences": {
+        "0": 409,
+        "1": 322,
+        "2": 167,
+        "3": 64,
+        "4": 20,
+        "5": 4,
+        "6": 1
+      },
+      "first_hit_end": {
+        "2": 144,
+        "3": 110,
+        "4": 105,
+        "5": 88,
+        "6": 75,
+        "7": 56
+      }
+    },
+    {
+      "length": 8,
+      "total": 2584,
+      "occurrences": {
+        "0": 919,
+        "1": 847,
+        "2": 497,
+        "3": 219,
+        "4": 75,
+        "5": 22,
+        "6": 4,
+        "7": 1
+      },
+      "first_hit_end": {
+        "2": 377,
+        "3": 288,
+        "4": 275,
+        "5": 231,
+        "6": 200,
+        "7": 168,
+        "8": 126
+      }
+    },
+    {
+      "length": 9,
+      "total": 6765,
+      "occurrences": {
+        "0": 2065,
+        "1": 2180,
+        "2": 1430,
+        "3": 700,
+        "4": 275,
+        "5": 86,
+        "6": 24,
+        "7": 4,
+        "8": 1
+      },
+      "first_hit_end": {
+        "2": 987,
+        "3": 754,
+        "4": 720,
+        "5": 605,
+        "6": 525,
+        "7": 448,
+        "8": 378,
+        "9": 283
+      }
+    },
+    {
+      "length": 10,
+      "total": 17711,
+      "occurrences": {
+        "0": 4640,
+        "1": 5521,
+        "2": 3998,
+        "3": 2158,
+        "4": 931,
+        "5": 335,
+        "6": 97,
+        "7": 26,
+        "8": 4,
+        "9": 1
+      },
+      "first_hit_end": {
+        "2": 2584,
+        "3": 1974,
+        "4": 1885,
+        "5": 1584,
+        "6": 1375,
+        "7": 1176,
+        "8": 1008,
+        "9": 849,
+        "10": 636
+      }
+    }
+  ],
+  "cyclic_grammar": [
+    {
+      "length": 1,
+      "rooted": 2,
+      "necklaces": 2
+    },
+    {
+      "length": 2,
+      "rooted": 6,
+      "necklaces": 4
+    },
+    {
+      "length": 3,
+      "rooted": 11,
+      "necklaces": 5
+    },
+    {
+      "length": 4,
+      "rooted": 26,
+      "necklaces": 9
+    },
+    {
+      "length": 5,
+      "rooted": 57,
+      "necklaces": 13
+    },
+    {
+      "length": 6,
+      "rooted": 129,
+      "necklaces": 26
+    },
+    {
+      "length": 7,
+      "rooted": 289,
+      "necklaces": 43
+    },
+    {
+      "length": 8,
+      "rooted": 650,
+      "necklaces": 87
+    }
+  ],
+  "hostiles": [
+    {
+      "left": "ecb",
+      "right": "cbe",
+      "operation": "rotation",
+      "isomorphic": false,
+      "order": 7
+    },
+    {
+      "left": "de",
+      "right": "ed",
+      "operation": "reversal",
+      "isomorphic": false,
+      "order": 6
+    }
+  ]
+}
