@@ -1,0 +1,707 @@
+{
+  "status": "PROVED recurrences; FINITE-EXACT literal base and character controls",
+  "rows": [
+    {
+      "prime": 3,
+      "atom": [
+        2,
+        4,
+        1
+      ],
+      "full_base_aut_order": 3,
+      "base_centralizer_order": 1,
+      "base_triangle_errors": 1,
+      "fixed_count_distribution": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "proved_holonomy_index_depth_1_to_8": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "proved_holonomy_orders_depth_1_to_3": [
+        1,
+        3,
+        243
+      ],
+      "moments": [
+        {
+          "depth": 0,
+          "automorphism_moments": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "centralizer_moments": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "depth": 1,
+          "automorphism_moments": [
+            1,
+            1,
+            3,
+            9,
+            27,
+            81,
+            243
+          ],
+          "centralizer_moments": [
+            1,
+            3,
+            9,
+            27,
+            81,
+            243,
+            729
+          ]
+        },
+        {
+          "depth": 2,
+          "automorphism_moments": [
+            1,
+            1,
+            5,
+            29,
+            189,
+            1341,
+            10125
+          ],
+          "centralizer_moments": [
+            1,
+            5,
+            33,
+            261,
+            2241,
+            19845,
+            177633
+          ]
+        },
+        {
+          "depth": 3,
+          "automorphism_moments": [
+            1,
+            1,
+            7,
+            61,
+            631,
+            7461,
+            98207
+          ],
+          "centralizer_moments": [
+            1,
+            7,
+            73,
+            991,
+            15953,
+            289527,
+            5731353
+          ]
+        },
+        {
+          "depth": 4,
+          "automorphism_moments": [
+            1,
+            1,
+            9,
+            105,
+            1497,
+            25001,
+            475129
+          ],
+          "centralizer_moments": [
+            1,
+            9,
+            129,
+            2505,
+            59905,
+            1674889,
+            52946049
+          ]
+        },
+        {
+          "depth": 5,
+          "automorphism_moments": [
+            1,
+            1,
+            11,
+            161,
+            2931,
+            63401,
+            1580011
+          ],
+          "centralizer_moments": [
+            1,
+            11,
+            201,
+            5091,
+            162001,
+            6137211,
+            267434521
+          ]
+        },
+        {
+          "depth": 6,
+          "automorphism_moments": [
+            1,
+            1,
+            13,
+            229,
+            5077,
+            134981,
+            4166853
+          ],
+          "centralizer_moments": [
+            1,
+            13,
+            289,
+            9037,
+            359361,
+            17194253,
+            955560929
+          ]
+        },
+        {
+          "depth": 7,
+          "automorphism_moments": [
+            1,
+            1,
+            15,
+            309,
+            8079,
+            254941,
+            9390935
+          ],
+          "centralizer_moments": [
+            1,
+            15,
+            393,
+            14631,
+            698321,
+            40381055,
+            2729041113
+          ]
+        },
+        {
+          "depth": 8,
+          "automorphism_moments": [
+            1,
+            1,
+            17,
+            401,
+            12081,
+            441361,
+            18895217
+          ],
+          "centralizer_moments": [
+            1,
+            17,
+            513,
+            22161,
+            1234433,
+            83710737,
+            6662720513
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 7,
+      "atom": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "full_base_aut_order": 21,
+      "base_centralizer_order": 3,
+      "base_triangle_errors": 1,
+      "fixed_count_distribution": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "proved_holonomy_index_depth_1_to_8": [
+        3,
+        9,
+        27,
+        81,
+        243,
+        729,
+        2187,
+        6561
+      ],
+      "proved_holonomy_orders_depth_1_to_3": [
+        1,
+        9261,
+        501096025171921401632658604207540941
+      ],
+      "moments": [
+        {
+          "depth": 0,
+          "automorphism_moments": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "centralizer_moments": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "depth": 1,
+          "automorphism_moments": [
+            1,
+            1,
+            3,
+            17,
+            115,
+            801,
+            5603
+          ],
+          "centralizer_moments": [
+            1,
+            3,
+            17,
+            115,
+            801,
+            5603,
+            39217
+          ]
+        },
+        {
+          "depth": 2,
+          "automorphism_moments": [
+            1,
+            1,
+            5,
+            45,
+            525,
+            7341,
+            118685
+          ],
+          "centralizer_moments": [
+            1,
+            5,
+            49,
+            693,
+            12769,
+            283365,
+            7151889
+          ]
+        },
+        {
+          "depth": 3,
+          "automorphism_moments": [
+            1,
+            1,
+            7,
+            85,
+            1375,
+            27461,
+            648767
+          ],
+          "centralizer_moments": [
+            1,
+            7,
+            97,
+            2023,
+            56385,
+            1944647,
+            79163297
+          ]
+        },
+        {
+          "depth": 4,
+          "automorphism_moments": [
+            1,
+            1,
+            9,
+            137,
+            2809,
+            71881,
+            2195289
+          ],
+          "centralizer_moments": [
+            1,
+            9,
+            161,
+            4393,
+            161345,
+            7401289,
+            405190881
+          ]
+        },
+        {
+          "depth": 5,
+          "automorphism_moments": [
+            1,
+            1,
+            11,
+            201,
+            4971,
+            154201,
+            5734011
+          ],
+          "centralizer_moments": [
+            1,
+            11,
+            241,
+            8091,
+            366561,
+            20826411,
+            1418816721
+          ]
+        },
+        {
+          "depth": 6,
+          "automorphism_moments": [
+            1,
+            1,
+            13,
+            277,
+            8005,
+            290901,
+            12703413
+          ],
+          "centralizer_moments": [
+            1,
+            13,
+            337,
+            13405,
+            720161,
+            48615213,
+            3944437617
+          ]
+        },
+        {
+          "depth": 7,
+          "automorphism_moments": [
+            1,
+            1,
+            15,
+            365,
+            12055,
+            501341,
+            25091095
+          ],
+          "centralizer_moments": [
+            1,
+            15,
+            449,
+            20623,
+            1279489,
+            99845775,
+            9376792769
+          ]
+        },
+        {
+          "depth": 8,
+          "automorphism_moments": [
+            1,
+            1,
+            17,
+            465,
+            17265,
+            807761,
+            45520177
+          ],
+          "centralizer_moments": [
+            1,
+            17,
+            577,
+            30033,
+            2111105,
+            186739857,
+            19893669057
+          ]
+        }
+      ]
+    },
+    {
+      "prime": 11,
+      "atom": [
+        570,
+        1140,
+        233,
+        466,
+        932,
+        1864,
+        1681,
+        1315,
+        583,
+        1166,
+        285
+      ],
+      "full_base_aut_order": 55,
+      "base_centralizer_order": 5,
+      "base_triangle_errors": 1,
+      "fixed_count_distribution": [
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          44
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "proved_holonomy_index_depth_1_to_8": [
+        5,
+        25,
+        125,
+        625,
+        3125,
+        15625,
+        78125,
+        390625
+      ],
+      "proved_holonomy_orders_depth_1_to_3": [
+        1,
+        503284375,
+        132915251422805169976086650169233140568436547901265523367347461864586949907562907213787184446118772029876708984375
+      ],
+      "moments": [
+        {
+          "depth": 0,
+          "automorphism_moments": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "centralizer_moments": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "depth": 1,
+          "automorphism_moments": [
+            1,
+            1,
+            3,
+            25,
+            267,
+            2929,
+            32211
+          ],
+          "centralizer_moments": [
+            1,
+            3,
+            25,
+            267,
+            2929,
+            32211,
+            354313
+          ]
+        },
+        {
+          "depth": 2,
+          "automorphism_moments": [
+            1,
+            1,
+            5,
+            61,
+            989,
+            19357,
+            445997
+          ],
+          "centralizer_moments": [
+            1,
+            5,
+            65,
+            1253,
+            32513,
+            1058117,
+            40298561
+          ]
+        },
+        {
+          "depth": 3,
+          "automorphism_moments": [
+            1,
+            1,
+            7,
+            109,
+            2311,
+            61285,
+            1950559
+          ],
+          "centralizer_moments": [
+            1,
+            7,
+            121,
+            3247,
+            120241,
+            5645719,
+            317742505
+          ]
+        },
+        {
+          "depth": 4,
+          "automorphism_moments": [
+            1,
+            1,
+            9,
+            169,
+            4377,
+            143593,
+            5692857
+          ],
+          "centralizer_moments": [
+            1,
+            9,
+            193,
+            6537,
+            306817,
+            18329097,
+            1322881345
+          ]
+        },
+        {
+          "depth": 5,
+          "automorphism_moments": [
+            1,
+            1,
+            11,
+            241,
+            7331,
+            284041,
+            13344011
+          ],
+          "centralizer_moments": [
+            1,
+            11,
+            281,
+            11411,
+            642161,
+            46069211,
+            4006295561
+          ]
+        },
+        {
+          "depth": 6,
+          "automorphism_moments": [
+            1,
+            1,
+            13,
+            325,
+            11317,
+            503269,
+            27185701
+          ],
+          "centralizer_moments": [
+            1,
+            13,
+            385,
+            18157,
+            1185409,
+            98714701,
+            9980228353
+          ]
+        },
+        {
+          "depth": 7,
+          "automorphism_moments": [
+            1,
+            1,
+            15,
+            421,
+            16479,
+            824797,
+            50196567
+          ],
+          "centralizer_moments": [
+            1,
+            15,
+            505,
+            27063,
+            2004913,
+            189462687,
+            21753040681
+          ]
+        },
+        {
+          "depth": 8,
+          "automorphism_moments": [
+            1,
+            1,
+            17,
+            529,
+            22961,
+            1275025,
+            86138609
+          ],
+          "centralizer_moments": [
+            1,
+            17,
+            641,
+            38417,
+            3178241,
+            335319569,
+            42996843905
+          ]
+        }
+      ]
+    }
+  ],
+  "checks": 3555
+}
