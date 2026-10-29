@@ -113,7 +113,7 @@ One can always build a geometric realization once its non-canonicity is declared
 
     C = [[1,0,1],[1,1,1],[1,1,0]],
 
-take V=Qt⊕H and L=1⊕C. Then
+take V=Qt⊕H and L=1⊕C. For integral statements choose t=e0 and h_i=e_i−e0 (i=1,2,3); this is a unimodular vertex basis. The orthogonal choice t=(e0+e1+e2+e3)/4 in §2 is only for the metric cut/cycle discussion, not an unrecorded integral lattice replacement. Then
 
     Λ²L = C ⊕ Λ²C
 
