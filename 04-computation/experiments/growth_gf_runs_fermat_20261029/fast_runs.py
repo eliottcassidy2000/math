@@ -2,7 +2,9 @@
 
 hp[S][s,t] = number of Hamiltonian paths of T[S] from s to t;  M_2[(s1,s2),(t1,t2)] = sum_{S1} hp[S1][s1,t1] hp[V-S1][s2,t2].
 Cross-checked against the permutation-cutting construction of runs.py for every class with n <= 6.
-Records, per class: strong?, number of Hamiltonian cycles, Smith form of M_2 (PARI), unglued (S_2-split) Smith form.
+Records, per class: strong?, number of Hamiltonian cycles, Smith form of M_2 (PARI), and the field "unglued=", which
+is the concatenation of the Smith forms of the plus and minus sectors P, S (not re-sorted into a Smith form of N;
+spur_2 is unaffected) -- audit data-file note.
 usage: python3 fast_runs.py n [--check]
 """
 import sys

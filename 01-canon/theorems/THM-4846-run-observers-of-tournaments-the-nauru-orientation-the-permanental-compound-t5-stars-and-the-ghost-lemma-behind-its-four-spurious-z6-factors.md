@@ -1,8 +1,13 @@
 ---
 id: THM-4846
-title: "Run observers of tournaments, the partial structures of the metagraph's base path. M_k(T) counts ordered spanning covers by k directed paths with prescribed starts and ends (overnight_rank_return THREE_RUN T1). (A) One arc, k = n-1: M_{n-1}(T) is an orientation of the star-transposition Cayley graph Cay(S_n, {(i n)}) (the Nauru graph at n = 4), each arc of T orienting (n-1)! of its edges. Its run-symmetric block is A^T, its sign block is (-1)^(|x-y|-1) A[x][y], and det M_{n-1} = prod_lambda det(M_lambda)^(f^lambda). The strong 4-tournament gives a unimodular orientation; each non-strong one loses exactly one free S_3-orbit. (B) Two arcs, k = n-2: the unordered observer is the second permanental compound, P[V-alpha, V-beta] = per A[beta, alpha]. (C) T5's four kernel directions are the vertex stars, the Hodge duals of the tetrahedron boundaries. Each lives on a copy T5 - w of the strong 4-tournament S4 (4 vertices, 6 arcs = a Hamiltonian 4-cycle plus two diagonals) as +1 on the ends of one diagonal and -1 on the ends of the other. The proof is the alternating in-neighbourhood identity, and T5 is the only class of order 5, 6 or 7 whose plus sector kills the boundaries. (D) Ghost lemma: with sectors P (plus), S (minus), B = (S-P)/2, the number of spurious 2-factors created by forgetting the S_3 (or S_2) glue equals rank(B: ker P -> coker P) over F_2. For T5, ker P over F_2 is the cut space of K5 and B maps it isomorphically onto coker P, which gives the four spurious Z/2. With the four spurious Z/3 of the mod-3 glue (R3) these are the four spurious Z/6. (E) Census thresholds as n grows: order 4 has no torsion and no glue loss; order 5 has the first torsion, and 4 of 12 classes lose to the glue; at order 6 the star law fails (12 of 56) and boundary killers vanish; at order 7 unique-Hamiltonian-cycle classes first carry torsion (5 of 21). Through order 8 every strong class with at least two Hamiltonian cycles has torsion in M_2."
+title: "Run observers of tournaments, the partial structures of the metagraph's base path. M_k(T) counts ordered spanning covers by k directed paths with prescribed starts and ends (overnight_rank_return THREE_RUN T1). (A) One arc, k = n-1: M_{n-1}(T) is an orientation of the star-transposition Cayley graph Cay(S_n, {(i n)}) (the Nauru graph at n = 4), each arc of T orienting (n-1)! of its edges. Its run-symmetric block is A^T, its sign block is (-1)^(|x-y|-1) A[x][y], and det M_{n-1} = prod_lambda det(M_lambda)^(f^lambda). The strong 4-tournament gives a unimodular orientation; each non-strong one loses exactly one free S_3-orbit. (B) Two arcs, k = n-2: the unordered observer is the second permanental compound, P[V-alpha, V-beta] = per A[beta, alpha]. (C) T5's four kernel directions are the vertex stars, the Hodge duals of the tetrahedron boundaries. Each lives on a copy T5 - w of the strong 4-tournament S4 (4 vertices, 6 arcs = a Hamiltonian 4-cycle plus two diagonals) as +1 on the ends of one diagonal and -1 on the ends of the other. The proof is the alternating in-neighbourhood identity, and T5 is the only class of order 5, 6 or 7 whose plus sector kills the boundaries. (D) Ghost lemma: with sectors P (plus), S (minus), B = (S-P)/2, the number of spurious 2-factors created by forgetting the S_3 (or S_2) glue equals rank(B: ker P -> coker P) over F_2. For T5, ker P over F_2 is the cut space of K5 and B maps it isomorphically onto coker P, which gives the four spurious Z/2. With the four spurious Z/3 of the mod-3 glue (R3) these are the four spurious Z/6. They correspond to the 4-dimensional star span as a whole: the rotation of Z/5 acts on that span through Phi_5, irreducible over F_2 and F_3, so no single factor belongs to a single star. (E) Census thresholds as n grows: order 4 has no torsion and no glue loss; order 5 has the first torsion and the first Smith discrepancies (4 of 12 classes at k = 3, 1 at k = 2); at order 6 the star law fails (12 of 56) and boundary killers vanish; at order 7 unique-Hamiltonian-cycle classes first carry torsion (5 of 21). Through order 9 every strong class with at least two Hamiltonian cycles has torsion in M_2."
 status: >
-  PROVED (elementary; mac-mini-2026-10-29-growth; pre-audit): (A) the orientation statement, the trivial and sign
+  Independently audited 2026-10-29, corrections applied (04-computation/experiments/growth_gf_runs_fermat_20261029/
+  audit/REPORT.md, MISTAKE-695). The audit corrected two things:
+  - the glue-loss counts now distinguish first-level losses (spur_p > 0) from full Smith discrepancies;
+  - the Fibonacci count is Garey's.
+  (D') and (F), added after the audit launched, were checked by it too.
+  PROVED (elementary; mac-mini-2026-10-29-growth): (A) the orientation statement, the trivial and sign
   blocks and the Schur factorization of det M_{n-1}; (B) the compound law; (C) the T5 identity, hence the kernel,
   together with its identification with the inherited tetrahedron-boundary kernel; (D) the ghost lemma at p = 2.
   FINITE-EXACT (scripts in 04-computation/experiments/growth_gf_runs_fermat_20261029, every class from gentourng):
@@ -15,8 +20,13 @@ status: >
   - the Hamiltonian-cycle/torsion tables: k = 2 through n = 8, k = 3 through n = 7, k = 4, 5 at n = 5, 6.
   INHERITED: THREE_RUN.md T4 (the T5 kernel is spanned by the lifted tetrahedron boundaries; the order-4 ranks
   18, 18, 24, 18) and THREE_RUN_GLUE.md (R2)-(R8) (the index-54 chart, the T5 Smith forms, the gcd(m,6)^4 image law).
-  CITED: Douglas 1970 (tournaments with exactly one Hamiltonian cycle; the Fibonacci count F(2n-6), recalled and
-  attributed to Garey 1972, reproduced here for n = 4..8). The conjectural parts are in HYP-9445.
+  CITED:
+  - Douglas 1970 (Proc. London Math. Soc. 21, 716-730) characterised the tournaments with exactly one Hamiltonian
+    cycle;
+  - their count is the Fibonacci number F(2n-6), by Garey (J. Combin. Theory Ser. B 13 (1972) 266-269), reproduced
+    here for n = 4..9;
+  - the Nauru graph is classically the Cayley graph of S_4 on the star transpositions.
+  The conjectural parts are in HYP-9445.
   CONCURRENT, WITH PRIORITY ELSEWHERE: the research packet
   05-knowledge/results/four_vertex_glue_fermat_20261029/README.md was pushed 2026-10-29 09:00, before this session's
   checkpoint, and read only after it.
@@ -81,7 +91,8 @@ is the direct sum of the sectors, and "spurious factors" are the invariant facto
   `ST_n = Cay(S_n, {(1 n), …, (n−1 n)})`, and `M_{n−1}(T)` orients each edge `{π, π(j n)}` by the arc between
   `π(j)` and `π(n)`.
 - *Edge count.* Every unordered pair of vertices labels `(n−1)!` edges of `ST_n`. At `n = 4` this is 6 per pair, and
-  `ST_4` is the Nauru graph: 24 vertices, 36 edges.
+  `ST_4` is the Nauru graph: 24 vertices, 36 edges. That the Nauru graph is the Cayley graph of `S_4` on the star
+  transpositions is classical.
 - *The run-symmetric and sign blocks.* In complement coordinates the run-symmetric block is `Aᵀ`: the cover with arc
   `x → y` has start set `V − y` and end set `V − x`. The sign block is `(−1)^(|x−y|−1) A[x][y]` in the natural vertex
   order.
@@ -95,7 +106,6 @@ is the direct sum of the sectors, and "spurious factors" are the invariant facto
   - At `n = 6`, 33 of the 56 classes are singular. The nonzero determinants are `1` (eight classes, seven of them
     strong), `2^8`, `2^24 3^28 5^10`, `2^8 3^12 5^10 7^10`, `7^10` (twice), `23^10`, `3^30` (twice), `2^42` (twice),
     `2^36 11^10` and `2^40 13^10` (four classes).
-  - Every exponent is a combination of the `S_5`-dimensions 1, 4, 5, 6.
 
 **(B) Two arcs: the second permanental compound.** For `k = n − 2` a cover has two arcs, which match the two non-end
 vertices bijectively onto the two non-start vertices. Two arcs cannot close a cycle in a tournament. Hence
@@ -135,6 +145,10 @@ and this is the excess of the number of invariant factors of `N` divisible by 2 
 So dropping the glue adds `4 × Z/2` and `4 × Z/3`, the four spurious `Z/6`. The rational rank (56) and the free
 rank (4) cannot see them (R7).
 
+The correspondence is with the 4-dimensional span of the stars as a whole. The rotation `i → i+1` permutes the
+stars and acts on their span through `Φ_5`, which is irreducible over `F_2` and `F_3` (concurrent
+four_vertex_glue_fermat §4). So no individual spurious factor is canonically attached to an individual star.
+
 **(F) Plus and sign sectors are the permanental and determinantal compounds of the path matrix.** Added after the
 audit was launched. In `R = Z[x_v]/(x_v²)` put `X = diag(x)`, `B = I − A X` and `P = X B⁻¹`, so that `P_st` is the sum
 of `x^(V(π))` over directed `s`–`t` paths `π` (THREE_RUN_GLUE (R1)). For every `k`:
@@ -145,12 +159,14 @@ of `x^(V(π))` over directed `s`–`t` paths `π` (THREE_RUN_GLUE (R1)). For eve
 
     S_k[α, β] = (−1)^(Σα + Σβ) [x_V] ( x^α · det B[V − β, V − α] / det B ).
 
-Every minor of `B` expands over permutations whose non-fixed cycles are directed cycles of `T`, because `A` has zero
-diagonal and no 2-cycles. So the sign sector is a ratio of signed path-and-cycle-cover counts, and the Hamiltonian
+`det B` and the principal minors of `B` expand over permutations whose non-fixed cycles are directed cycles of `T`,
+because `A` has zero diagonal and no 2-cycles. The non-principal minors `det B[V − β, V − α]` expand over
+path-and-cycle systems. So the sign sector is a ratio of signed path-and-cycle-cover counts, and the Hamiltonian
 cycles of subtournaments enter it directly. This is the structural reason to expect the cycle–torsion link of
 HYP-9445. The plus sector instead has `per`, for which there is no Jacobi identity.
 
-Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign_sector.py`).
+Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign_sector.py`). The audit verified
+`k = 2, 3, 4` independently, in 13 944 + 23 664 + 12 600 entries.
 
 **(D′) The mod-3 ghost lemma.** Added after the audit was launched; this answers HYP-9445 (4).
 - *The 3-local image.* With `Q = [[1,1],[1,0]]` (columns `e = (1,1)`, the invariant line mod 3, and `f = (1,0)`),
@@ -179,12 +195,21 @@ Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign
 | order | three-run observer (k = 3) | two-arc star law (k = n−2) | torsion vs Hamiltonian cycles |
 |---|---|---|---|
 | 4 | strong `S4` unimodular, non-strong lose one free orbit, no torsion, no glue loss | universal | the unique-HC class is torsion-free |
-| 5 | first torsion; glue loss in 4 of 12 classes, `(spur_2, spur_3) = (4,4)` T5, `(2,0)` 12223/H13, `(0,5)` 12223/H15, `(3,3)` source→C3→sink; T5 the unique boundary killer | universal | unique-HC classes (3) torsion-free; HC ≥ 2 classes have torsion |
-| 6 | glue loss in 30 of 56 (k = 3) and 18 of 56 (k = 2, the first `S_2` losses); no boundary killer | fails for 12 of 56 classes | unique-HC (8) torsion-free; HC ≥ 2 (27) all torsion for k = 2, 3, 4 |
-| 7 | glue loss in 360 of 456 (k = 3); no boundary killer | fails for 168 of 456 | unique-HC: 5 of 21 carry torsion (k = 2, 3); HC ≥ 2 (332) all torsion |
-| 8 | — | fails for 2808 of 6880 | k = 2: unique-HC 19 of 55 carry torsion; HC ≥ 2 (5953) all torsion |
+| 5 | first torsion. First-level glue loss (`spur_2 + spur_3 > 0`) in 4 of 12 classes: `(spur_2, spur_3) = (4,4)` T5, `(2,0)` 12223/H13, `(0,5)` 12223/H15, `(3,3)` source→C3→sink. Full Smith discrepancy: the same 4 at k = 3, plus 1 at k = 2 (12223/H13: `1^16 2^2 48 0` against `1^16 2^2 96 0`). T5 the unique boundary killer | universal | unique-HC classes (3) torsion-free; HC ≥ 2 classes have torsion |
+| 6 | first-level loss in 30 of 56 (k = 3) and 18 (k = 2); full Smith discrepancy in 31 (k = 3) and 24 (k = 2); no boundary killer | fails for 12 of 56 classes | unique-HC (8) torsion-free; HC ≥ 2 (27) all torsion for k = 2, 3, 4 |
+| 7 | first-level 360 of 456 (k = 3) and 192 (k = 2); full discrepancy 373 (k = 3) and 273 (k = 2); no boundary killer | fails for 168 of 456 | unique-HC: 5 of 21 carry torsion (k = 2, 3); HC ≥ 2 (332) all torsion |
+| 8 | first-level 4224 of 6880 and full discrepancy 5255 (k = 2) | fails for 2808 of 6880 | k = 2: unique-HC 19 of 55 carry torsion; HC ≥ 2 (5953) all torsion |
+| 9 | — | — | k = 2, exhaustive: unique-HC 63 of 144 carry torsion, all singular; HC ≥ 2 (177 989) all torsion |
 
-The unique-Hamiltonian-cycle counts `1, 3, 8, 21, 55` (n = 4..8) are Douglas's Fibonacci numbers `F(2n−6)`. A
+*Two notions of loss.* "First-level glue loss" means `spur_2 + spur_3 > 0`, the excess of invariant factors
+divisible by 2 or 3 that the ghost lemmas count. A "full Smith discrepancy" means the Smith forms of `M` and `N`
+differ. The second can occur without the first, through higher `p`-adic levels.
+- At order 6, `k = 2`, the nonsingular class `111011110111111` has `M = 1^24 2^2 4^2 48 12288` and
+  `N = 1^24 2^2 4^2 96 6144`, with the same determinant.
+- The full-discrepancy counts are the audit's (`audit/REPORT.md`).
+
+The unique-Hamiltonian-cycle counts `1, 3, 8, 21, 55, 144` (n = 4..9) are Garey's Fibonacci numbers `F(2n−6)`;
+Douglas characterised the class. A
 unimodular observer of a strong tournament has occurred only with a unique Hamiltonian cycle. The one-arc observer
 `k = n − 1` is too coarse for the torsion law: at `n = 5` (one class) and `n = 6` (two classes), strong classes with
 exactly two Hamiltonian cycles have singular but torsion-free `M_{n−1}`.
@@ -253,9 +278,10 @@ are in HYP-9445.
 
 The account below is the complementary combinatorial one, through the stars and the strong 4-tournament.
 
-- **The tetrahedron.** Each of the four spurious `Z/6` factors is the mod-2 and mod-3 shadow of one T5 kernel
-  direction. The kernel directions are the stars `v_w`, one for each deleted vertex `w`, minus one relation. Each star
-  is carried by a tetrahedron `T5 − w`, which is the strong 4-tournament `S4` on 4 vertices with 6 arcs. The arcs
+- **The tetrahedron.** The four spurious `Z/6` factors are together the mod-2 and mod-3 shadow of T5's
+  4-dimensional kernel. The kernel is spanned by the stars `v_w`, one for each deleted vertex `w`, with one relation.
+  The correspondence is between whole 4-dimensional spaces, not factor by factor; see (D). Each star is carried by a
+  tetrahedron `T5 − w`, which is the strong 4-tournament `S4` on 4 vertices with 6 arcs. The arcs
   enter as the Hamiltonian 4-cycle, which fixes the alternating signs, and the two diagonals, whose endpoint pairs
   are the `+` and `−` classes.
 - **The 4-vertex tournament on its own.** `S4` is exactly the 4-vertex class whose three-run observer is unimodular:

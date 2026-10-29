@@ -1,0 +1,57 @@
+111111111111111 012345 nonstr H=1 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111111111101 111345 nonstr H=3 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111011111111111 022344 nonstr H=9 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111001111111111 122334 strong H=23 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111011110111111 122334 strong H=33 HC=4 M=1^24 2^2 4^2 48^1 12288^1 N=1^24 2^2 4^2 96^1 6144^1 spur2=0 spur3=0 conn2=0 gluediff=True kills=False
+111011111110111 122244 strong H=23 HC=2 M=1^22 2^6 12^1 0^1 N=1^22 2^6 24^1 0^1 spur2=0 spur3=0 conn2=0 gluediff=True kills=False
+111011111111101 112344 strong H=15 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111011111111110 112344 strong H=17 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111101111111 022335 nonstr H=5 HC=0 M=1^8 2^1 7470^1 0^20 N=1^8 2^1 7470^1 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111101101111111 122334 strong H=37 HC=5 M=1^26 2^1 6^1 60^1 2012400^1 N=1^24 2^3 6^1 30^1 1006200^1 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+111111100111111 122235 nonstr H=11 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111101110111 122235 nonstr H=13 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111101111101 112335 nonstr H=9 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111101111110 112335 nonstr H=9 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111100110111 222225 nonstr H=15 HC=0 M=1^9 3^1 0^20 N=1^9 3^1 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111111101111 022245 nonstr H=3 HC=0 M=1^6 6^4 0^20 N=1^6 6^4 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111101111101111 122244 strong H=27 HC=3 M=1^20 2^4 6^5 78^1 N=1^20 2^4 6^5 78^1 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111110101111 122235 nonstr H=15 HC=0 M=1^9 3^1 0^20 N=1^9 3^1 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111111111100111 112245 nonstr H=5 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110111111111111 013344 nonstr H=5 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110011111111111 023334 nonstr H=11 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110001111111111 122334 strong H=23 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110011110111111 123333 strong H=37 HC=4 M=1^25 2^1 4^1 16^1 32^1 2944^1 N=1^24 2^2 8^1 16^2 1472^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+110011111110111 122334 strong H=29 HC=3 M=1^27 3^1 9^1 1080^1 N=1^27 3^1 18^1 540^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+110011111111101 122334 strong H=25 HC=2 M=1^22 2^4 8^2 16^1 0^1 N=1^22 2^4 8^2 32^1 0^1 spur2=0 spur3=0 conn2=0 gluediff=True kills=False
+110011111111110 113334 strong H=19 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110001111110111 222234 strong H=37 HC=4 M=1^25 2^1 4^1 16^1 32^1 2944^1 N=1^24 2^2 8^1 16^2 1472^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+110011110110111 222333 strong H=45 HC=5 M=1^28 4^1 2238860^1 N=1^26 2^3 1119430^1 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+110001111111101 222234 strong H=33 HC=3 M=1^23 3^5 18^1 702^1 N=1^23 3^5 18^1 702^1 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110011110111101 222333 strong H=43 HC=5 M=1^28 4^1 1531545840^1 N=1^26 2^3 765772920^1 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+110111101111111 023334 nonstr H=13 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110101101111111 123333 strong H=37 HC=4 M=1^22 2^4 4^2 120^1 6480^1 N=1^20 2^7 4^1 120^1 3240^1 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+110111100111111 122334 strong H=25 HC=2 M=1^22 2^4 8^2 16^1 0^1 N=1^22 2^4 8^2 32^1 0^1 spur2=0 spur3=0 conn2=0 gluediff=True kills=False
+110111101110111 122334 strong H=29 HC=2 M=1^28 1376^1 0^1 N=1^28 2752^1 0^1 spur2=0 spur3=0 conn2=0 gluediff=True kills=False
+110111101111101 122334 strong H=29 HC=3 M=1^25 2^1 6^1 12^1 72^1 936^1 N=1^24 2^2 6^2 72^1 936^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+110111101111110 113334 strong H=23 HC=2 M=1^22 2^6 12^1 0^1 N=1^22 2^6 24^1 0^1 spur2=0 spur3=0 conn2=0 gluediff=True kills=False
+110101101110111 222333 strong H=45 HC=5 M=1^26 8^2 760^1 1520^1 N=1^22 2^4 4^2 380^1 760^1 spur2=4 spur3=0 conn2=4 gluediff=True kills=False
+110111100110111 222234 strong H=33 HC=3 M=1^25 2^2 6^1 18^1 11448^1 N=1^24 2^3 6^1 18^1 5724^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+110111100111101 222234 strong H=37 HC=4 M=1^22 2^4 4^2 120^1 6480^1 N=1^20 2^7 4^1 120^1 3240^1 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+110011101111111 033333 nonstr H=15 HC=0 M=1^9 3^1 0^20 N=1^9 3^1 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110001101111111 123333 strong H=33 HC=3 M=1^25 2^2 6^1 18^1 11448^1 N=1^24 2^3 6^1 18^1 5724^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+110001100111111 222333 strong H=41 HC=4 M=1^28 8^1 41078952^1 N=1^28 8^1 41078952^1 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+110001101110111 222333 strong H=43 HC=5 M=1^28 4^1 1531545840^1 N=1^26 2^3 765772920^1 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+111111011111111 013335 nonstr H=3 HC=0 M=1^6 6^4 0^20 N=1^6 6^4 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111011011111111 023334 nonstr H=15 HC=0 M=1^9 3^1 0^20 N=1^9 3^1 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111001011111111 123333 strong H=33 HC=3 M=1^23 3^5 18^1 702^1 N=1^23 3^5 18^1 702^1 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111011010111111 122334 strong H=31 HC=3 M=1^27 12^2 3672^1 N=1^26 2^1 12^2 1836^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+111011011111110 113334 strong H=27 HC=3 M=1^20 2^4 6^5 78^1 N=1^20 2^4 6^5 78^1 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+101111111111111 012444 nonstr H=3 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+101111111111101 111444 nonstr H=9 HC=0 M=1^19 0^11 N=1^18 2^1 0^11 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+101011111111111 022344 nonstr H=9 HC=0 M=1^10 0^20 N=1^10 0^20 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+101001111111111 122244 strong H=19 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+101011110111111 122334 strong H=29 HC=3 M=1^25 2^1 6^1 12^1 72^1 936^1 N=1^24 2^2 6^2 72^1 936^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+101011111110111 122334 strong H=31 HC=3 M=1^27 12^2 3672^1 N=1^26 2^1 12^2 1836^1 spur2=1 spur3=0 conn2=1 gluediff=True kills=False
+101011111111101 112344 strong H=17 HC=1 M=1^26 0^4 N=1^22 2^4 0^4 spur2=4 spur3=0 conn2=4 gluediff=True kills=False
+101011111111110 112344 strong H=15 HC=1 M=1^30 N=1^30 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+SUMMARY n=6 k=2 classes=56 [('loss', 24), ('oddonly', 4), ('spur>0', 18), (('nonstr', 'HC=0', 'tf'), 14), (('nonstr', 'HC=0', 'torsion'), 7), (('strong', 'HC=1', 'tf'), 8), (('strong', 'HC>=2', 'torsion'), 27)]

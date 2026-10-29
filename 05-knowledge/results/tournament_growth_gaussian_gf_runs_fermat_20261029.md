@@ -1,6 +1,8 @@
 # Tournament growth: a generating function for A000568, partial structures of the metagraph, T5's four spurious Z/6, and Fermat primes
 
-*mac-mini-2026-10-29-growth, 2026-10-29. Pre-audit. Theorems: THM-4845, THM-4846, THM-4847. Open problems: HYP-9445.*
+*mac-mini-2026-10-29-growth, 2026-10-29. Independently audited, corrections applied
+([audit report](../../04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md), MISTAKE-694,
+MISTAKE-695). Theorems: THM-4845, THM-4846, THM-4847. Open problems: HYP-9445.*
 *Experiments: [`04-computation/experiments/growth_gf_runs_fermat_20261029/`](../../04-computation/experiments/growth_gf_runs_fermat_20261029/).*
 
 **The owner's directive (verbatim).** "also merge in tournament related past work and aiming to find a recursive
@@ -34,7 +36,7 @@ a37e12900d.
   - the T5 star proof;
   - the general ghost lemma and the all-class censuses by order;
   - the Hamiltonian-cycle/torsion conjecture;
-  - the function-field analogue and the tournament counting forms of Pépin.
+  - the tournament counting forms of Pépin (the function-field analogue in THM-4847 is classical).
 
 ## 0. Prior work merged
 
@@ -44,7 +46,7 @@ a37e12900d.
 | core kernel and quadratic form | THM-514 (unit tail; integer kernel `K[m,t]`); THM-516 (`e = C(t,2) + ½ Σ φ(d) M_d²`, Smith); OPEN-Q-105 / HYP-2538 (closed θ-product?) |
 | PDE, hierarchy, quotients | `weighted_core_transport_20261020`; session98 `PROJECTIVE_RESPONSE.md` (concurrent) |
 | strong components, modular tree | Wright's recurrence `T = Σ C(m,k) s(k) T(m−k)` (THM-4746); THM-4803 (A000568 from the prime cycle-index census) |
-| the metagraph | definitions.md tiling model; THM-643/644; THM-1430; THM-4729/4730/4731 (closed/open tilings, pure-blue alphabet, self-lines); THM-4739 (Kirchhoff laws); THM-588/589 |
+| the metagraph | definitions.md tiling model; THM-643/644; THM-1430 (`the-tiling-class-metagraph-dictionary-and-which-tricks-pay`); THM-4729/4730/4731 (closed/open tilings, pure-blue alphabet, self-lines); THM-4739 (Kirchhoff laws); THM-588 (`metagraph-laplacian-algebraic-connectivity-four`); THM-589 (`metagraph-H-variance-closed-form-nud-succession`) |
 | run observers, ports, T5's Z/6 | `overnight_rank_return_20261029/THREE_RUN.md` (T5 kernel = tetrahedron boundaries), `TWO_RUN.md`, `COMPLEMENT_KERNEL.md`; `overnight_research_20261029/THREE_RUN_GLUE.md` (index-54 chart; T5 Smith forms (R7); four spurious Z/6) |
 | the four 4-vertex tournaments | THM-4823; `trees5_tournaments4_converse_20261005.md`; reflection "the triangular number is the n = 4 metagraph" |
 | Fermat primes | THM-4644 and THM-871 (Fermat primes = rigid circulants); THM-4793/4800 (Pépin as Collatz dynamics); THM-4801 (constructible polygons); S58 §1.2 (covering, algebraic and Aurifeuillean no-go); HYP-9410 (calibrated heuristic); THM-4746/4747 (Camion tests) |
@@ -65,9 +67,10 @@ has generating function `exp(Σ W_p x^p/p)`. The tournament numbers are its aver
 
     Σ a_n x^n = E[ exp( Σ_{p odd} W_p x^p / p ) ],        a_n = E[Z_n(W)].
 
-- **The core kernel.** For THM-516's kernel the same formula holds with parts ≥ 3. This answers OPEN-Q-105(a): the
-  product over part sizes sits inside the expectation, and the cross-coupling `½ Σ φ(d) M_d²` is carried by the
-  shared field.
+- **The core kernel.** For THM-516's kernel the same formula holds with parts ≥ 3. This is the classical
+  Hubbard–Stratonovich linearisation applied to THM-516's quadratic form. It reformulates OPEN-Q-105(a) without
+  closing it: the product over part sizes sits inside the expectation, and the cross-coupling `½ Σ φ(d) M_d²` is
+  carried by the shared field. But the averaged series has radius 0, and no closed evaluation is given.
 - **The family.** The same field on all integers gives graphs, and tournaments are graphs with the even power sums
   switched off. Doubling the covariance gives digraphs, and base 3 gives oriented graphs. In general, session98's
   palette family with `q` colours, `t` of them reversal-fixed, is the field with covariance `ln q · gcd`, odd weights
@@ -103,8 +106,8 @@ observers `M_k`. They are the natural partial structures of the tiling.
 | order | what happens |
 |---|---|
 | 4 | The strong tournament has unimodular observers; each non-strong one loses one free run orbit; no torsion and no glue loss. |
-| 5 | The first torsion appears. Four of the twelve classes lose information to the `S_3` glue, T5 among them. T5 is the only boundary killer. Every two-arc kernel is spanned by vertex stars. |
-| 6 | The star law fails (12 of 56 classes). No boundary killer exists. The first `S_2` glue losses appear (18 classes). |
+| 5 | The first torsion appears. Four of the twelve classes lose information to the `S_3` glue, T5 among them; at `k = 2` one class has a Smith discrepancy that the mod-`p` ghost counts miss. T5 is the only boundary killer. Every two-arc kernel is spanned by vertex stars. |
+| 6 | The star law fails (12 of 56 classes). No boundary killer exists. The first-level `S_2` losses (`spur_2 > 0`) appear (18 classes; full Smith discrepancies 24). |
 | 7 | Unique-Hamiltonian-cycle classes first carry torsion (5 of 21). |
 | 8 | Star law: 2808 of 6880 classes fail. Every strong class with at least two Hamiltonian cycles still has torsion in `M_2` (5953 of 5953). |
 
@@ -113,7 +116,8 @@ observers `M_k`. They are the natural partial structures of the tiling.
   observers. For `k = 2` it holds in all 184 304 strong cases through order 9; order 9 was checked exhaustively, all
   177 989 classes. It also holds in 1044 random or low-cycle samples at orders 9 and 10. It is false for the one-arc observer, and the torsion is not always
   2-primary.
-- *Unique cycles.* The unique-cycle classes are Douglas's `F(2n−6)` = 1, 3, 8, 21, 55, 144 (orders 4 to 9).
+- *Unique cycles.* The unique-cycle classes are Douglas's, counted by Garey as `F(2n−6)` = 1, 3, 8, 21, 55, 144
+  (orders 4 to 9).
   - For these classes `det M_2 ∈ {0, ±1}` through order 9, and torsion occurs exactly when `M_2` is singular.
   - The unimodular ones number 1, 3, 7, 16, 36, 81.
   - A pre-registered prediction of 80 at order 9 (formula `(n + 1)·2^(n−6)`) FAILED. The six terms coincide with
@@ -140,7 +144,9 @@ in-neighbourhoods. It works because T5's in-neighbourhoods are cyclic intervals 
   formula: two block-triangular pieces in the basis adapted to the invariant flag, and one connecting rank when the
   sign sector is invertible mod 3, as for T5.
 
-Together these are the four spurious `Z/6`, one for each independent star.
+Together these are the four spurious `Z/6`. They correspond to the 4-dimensional span of the stars as a whole. The
+rotation of `Z/5` acts on that span irreducibly mod 2 and mod 3 (through `Φ_5`), so no single factor belongs to a
+single star.
 
 **The tetrahedron on its own hides nothing.** The strong 4-tournament orients the Nauru graph with determinant 1.
 The hidden directions, and their ghosts, need five overlapping copies of it inside T5.
@@ -166,9 +172,12 @@ the concurrent FERMAT.md has the dynamical twin of the fourth (the source 2 is b
 - *Symmetry.* Fermat primes are exactly the primes all of whose circulant tournaments are rigid (THM-4644).
 - *Three-state counting.* `3^(C(N,2)) ≡ −1 (mod F_n)` holds iff `F_n` is prime. This is Pépin's test, counting
   labelled oriented graphs.
-- *The function-field analogue.* In `F_q[T]` the statement "only finitely many Fermat primes" is a theorem, with no
-  Fermat primes beyond `n = 1` at any base. The reason is that `(Z/2^(n+1))^*` is not cyclic; over `Q` this
-  mechanism is absent.
+- *The function-field analogue* (classical; Lidl–Niederreiter Thm 2.47; typed ANALOGY). In `F_q[T]` the statement
+  "only finitely many Fermat primes" is a theorem, with no Fermat primes beyond `n = 1` at any base. The reason is
+  that `(Z/2^(n+1))^*` is not cyclic; over `Q` this mechanism is absent.
+- *Strong counts at Fermat primes.* The strong semicomplete count is `−1` mod every Fermat prime `p ≥ 5`. The strong
+  tournament count is `(2/p)`, which is `−1` at 5 and `+1` from 17 on (audit correction).
+- *Compositeness certificates.* `F_5`, `F_6`, `F_9` and `F_11` fail both strong rotation tests at known factors.
 
 **Heuristics.** Boklan–Conway bound the expected number of new Fermat primes by about `2^(−30)`. HYP-9410's
 calibrated model gives about `7·10^(−9)`.

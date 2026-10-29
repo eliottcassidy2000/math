@@ -1,0 +1,8 @@
+p=3 b=2: s_b(p) mod p = 2 (-1)
+p=3 b=3: s_b(p) mod p = 0 (0)
+p=5 b=2: s_b(p) mod p = 4 (-1)
+p=5 b=3: s_b(p) mod p = 4 (-1)
+p=17 b=2: s_b(p) mod p = 1 (+1)
+p=17 b=3: s_b(p) mod p = 16 (-1)
+p=257 b=2: s_b(p) mod p = 1 (+1)
+p=257 b=3: s_b(p) mod p = 256 (-1)

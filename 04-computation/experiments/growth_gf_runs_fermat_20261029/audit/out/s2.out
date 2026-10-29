@@ -1,0 +1,8 @@
+n=5 strong classes: [(('HC=1', 'S tf', 'S nonsing', 'P tf'), 3), (('HC>=2', 'S torsion', 'S nonsing', 'P torsion'), 3)]
+   violations of [S_2 torsion-free <=> unique HC]: 0 []
+n=6 strong classes: [(('HC=1', 'S tf', 'S nonsing', 'P tf'), 7), (('HC=1', 'S tf', 'S singular', 'P torsion'), 1), (('HC>=2', 'S torsion', 'S nonsing', 'P torsion'), 27)]
+   violations of [S_2 torsion-free <=> unique HC]: 0 []
+n=7 strong classes: [(('HC=1', 'S tf', 'S nonsing', 'P tf'), 16), (('HC=1', 'S tf', 'S singular', 'P torsion'), 5), (('HC>=2', 'S torsion', 'S nonsing', 'P torsion'), 322), (('HC>=2', 'S torsion', 'S singular', 'P torsion'), 10)]
+   violations of [S_2 torsion-free <=> unique HC]: 0 []
+n=8 strong classes: [(('HC=1', 'S tf', 'S nonsing', 'P tf'), 36), (('HC=1', 'S tf', 'S singular', 'P torsion'), 18), (('HC=1', 'S torsion', 'S singular', 'P torsion'), 1), (('HC>=2', 'S torsion', 'S nonsing', 'P torsion'), 5822), (('HC>=2', 'S torsion', 'S singular', 'P torsion'), 131)]
+   violations of [S_2 torsion-free <=> unique HC]: 1 [('1010111111111111111101111101', 1, [(0, 3), (1, 21), (2, 4)])]

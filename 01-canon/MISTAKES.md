@@ -21370,3 +21370,40 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   `git log --since=<session start> --stat origin/main` and grep the new files for the result's key words (here
   "meromorphic", "poles", "star-transposition", "vacancy"). A directory listing taken at the start of the session is
   not evidence that nobody has the result.
+
+## 2026-10-29 — MISTAKE-695: audit corrections to THM-4845/4846/4847 and HYP-9445 (`mac-mini-2026-10-29-growth`)
+
+- **Location:** THM-4845, THM-4846, THM-4847, HYP-9445 and the results note
+  `tournament_growth_gaussian_gf_runs_fermat_20261029.md`. The independent audit is
+  `04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md`.
+- **Errors:**
+  1. *A wrong sign.* THM-4847 (C3) said every Fermat prime `p ≥ 5` has strong tournament count `s_2(p) ≡ +1`. In
+     fact `s_2(p) ≡ (2/p)`, and `s(5) = 544 ≡ −1 (mod 5)`. Its "FINITE-EXACT semicomplete Pépin form at 5, 17, 257"
+     only evaluated `3^(C(p,2))`, which is circular.
+  2. *Two definitions of loss.* THM-4846 (E) counted "glue loss" as `spur_2 + spur_3 > 0`. That sees only the first
+     `p`-adic level, while §0 defines spurious factors as any Smith difference between `N` and `M`. Under the stated
+     definition the counts are larger: at `k = 2`, 1, 24, 273 and 5255 classes at orders 5 to 8, against 0, 18, 192
+     and 4224. "The first `S_2` losses appear at order 6" was false (order-5 class `1101110111`).
+  3. *A wrong polynomial.* HYP-9445 (2) named the cubic `y³ − y² − 2y + 1` (largest root 1.80194) for the growth
+     constant 2.24698. The right cubic is `y³ − 2y² − y + 1`, with largest root `1 + 2cos(2π/7)`.
+  4. *Attribution and novelty.*
+     - The count `F(2n − 6)` is Garey's (1972); Douglas (1970) characterised the class.
+     - The Gaussian step is the Hubbard–Stratonovich identity.
+     - The correction terms are classical (Pólya, Oberschelp, Harary–Palmer, Moon, Wright).
+     - The function-field analogue is classical (Lidl–Niederreiter Thm 2.47).
+     - OEIS A002785 already carries the self-converse formula.
+  5. *Overclaims and gaps.*
+     - "answers OPEN-Q-105(a)" should read "reformulates".
+     - "one spurious `Z/6` per star" is basis-dependent, because the `Z/5` rotation acts irreducibly through `Φ_5`.
+     - "`F_n` is not the value of a nontrivially factored polynomial" is false as worded.
+     - "every exponent is a combination of 1, 4, 5, 6" is vacuous.
+     - "permutations" should be "cycle types" in the core sum.
+     - Two steps lacked proofs: the remainder estimate and the almost-sure radius (the latter needs Pringsheim).
+  6. *Code.* `compound_kernel.py` imposed constraints at a sink. This was harmless: no failure count changed.
+- **Repair:** all of the above are corrected in the files, using the audit's evidence and proofs. The audit's
+  upgrades are recorded: `F_6`, `F_9` and `F_11` fail both strong rotation tests, (D′) holds through order 7, and the
+  order-9 unique-cycle split. No result was withdrawn.
+- **Lessons:**
+  - A "check" that evaluates the claimed closed form is not a check. Compute the object by its definition.
+  - When a section defines a notion, count with that definition, or rename what is being counted.
+  - Before naming a polynomial for a numerical constant, evaluate it there.

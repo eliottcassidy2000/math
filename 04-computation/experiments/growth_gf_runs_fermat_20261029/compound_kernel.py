@@ -87,6 +87,8 @@ def star_kernel_dim(A, w):
     n = len(A)
     others = [y for y in range(n) if y != w]
     N = [u for u in range(n) if A[w][u]]
+    if not N:
+        return len(others)          # at a sink A[w, .] = 0, so every star vector is in the kernel (audit fix)
     eqs = []
     for u in range(n):
         if u not in N:
@@ -96,8 +98,6 @@ def star_kernel_dim(A, w):
     elif len(N) >= 3:
         for u in N:
             eqs.append([A[y][u] for y in others])
-    if not eqs:
-        return len(others)
     return len(others) - rank_Q(eqs)
 
 
@@ -108,14 +108,15 @@ def star_vectors(A, w, pairs):
     others = [y for y in range(n) if y != w]
     N = [u for u in range(n) if A[w][u]]
     eqs = []
-    for u in range(n):
-        if u not in N:
-            eqs.append([A[y][u] for y in others])
-    if len(N) == 2:
-        eqs.append([A[y][N[0]] + A[y][N[1]] for y in others])
-    elif len(N) >= 3:
-        for u in N:
-            eqs.append([A[y][u] for y in others])
+    if N:                           # at a sink there is no constraint (audit fix)
+        for u in range(n):
+            if u not in N:
+                eqs.append([A[y][u] for y in others])
+        if len(N) == 2:
+            eqs.append([A[y][N[0]] + A[y][N[1]] for y in others])
+        elif len(N) >= 3:
+            for u in N:
+                eqs.append([A[y][u] for y in others])
     if eqs:
         basis = sympy.Matrix(eqs).nullspace()
     else:

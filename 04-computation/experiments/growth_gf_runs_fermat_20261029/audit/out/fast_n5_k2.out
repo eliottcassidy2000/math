@@ -1,0 +1,13 @@
+1111111111 nonstr HC=0 rank=8/20 spur2=0 spur3=0 torsion=False (unit maximal minor)
+1111111101 nonstr HC=0 rank=8/20 spur2=0 spur3=0 torsion=False (unit maximal minor)
+1101111111 nonstr HC=0 rank=8/20 spur2=0 spur3=0 torsion=False (unit maximal minor)
+1100111111 strong HC=1 rank=20/20 spur2=0 spur3=0 torsion=False (det=1)
+1101110111 strong HC=2 rank=19/20 spur2=0 spur3=0 torsion=True (rank drop mod 2)
+1101111101 strong HC=1 rank=20/20 spur2=0 spur3=0 torsion=False (det=1)
+1101111110 strong HC=1 rank=20/20 spur2=0 spur3=0 torsion=False (det=1)
+1100110111 strong HC=2 rank=20/20 spur2=0 spur3=0 torsion=True (rank drop mod 2)
+1111101111 nonstr HC=0 rank=8/20 spur2=0 spur3=0 torsion=True (rank drop mod 2)
+1110101111 strong HC=3 rank=20/20 spur2=0 spur3=0 torsion=True (rank drop mod 2)
+1111100111 nonstr HC=0 rank=8/20 spur2=0 spur3=0 torsion=False (unit maximal minor)
+1011111111 nonstr HC=0 rank=8/20 spur2=0 spur3=0 torsion=False (unit maximal minor)
+SUMMARY n=5 k=2 [(('HC=0', 'tf'), 5), (('HC=0', 'torsion'), 1), (('HC=1', 'tf'), 3), (('HC=2', 'torsion'), 2), (('HC=3', 'torsion'), 1), (('nonstr', 'HC=0', 'tf'), 5), (('nonstr', 'HC=0', 'torsion'), 1), (('strong', 'HC=1', 'tf'), 3), (('strong', 'HC>=2', 'torsion'), 3)]

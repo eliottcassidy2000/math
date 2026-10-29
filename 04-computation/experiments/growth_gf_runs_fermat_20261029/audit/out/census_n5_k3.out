@@ -1,0 +1,13 @@
+1111111111 01234 nonstr H=1 HC=0 M=1^36 0^24 N=1^36 0^24 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1111111101 11134 nonstr H=3 HC=0 M=1^36 0^24 N=1^36 0^24 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1101111111 02233 nonstr H=5 HC=0 M=1^36 0^24 N=1^36 0^24 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1100111111 12223 strong H=11 HC=1 M=1^60 N=1^60 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1101110111 12223 strong H=13 HC=2 M=1^50 2^4 0^6 N=1^48 2^6 0^6 spur2=2 spur3=0 conn2=2 gluediff=True kills=False
+1101111101 11233 strong H=9 HC=1 M=1^60 N=1^60 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1101111110 11233 strong H=9 HC=1 M=1^60 N=1^60 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1100110111 22222 strong H=15 HC=2 M=1^52 3^2 6^2 0^4 N=1^48 3^2 6^6 0^4 spur2=4 spur3=4 conn2=4 gluediff=True kills=True
+1111101111 02224 nonstr H=3 HC=0 M=1^29 2^1 6^3 0^27 N=1^26 2^1 6^6 0^27 spur2=3 spur3=3 conn2=3 gluediff=True kills=False
+1110101111 12223 strong H=15 HC=3 M=1^50 3^2 9^2 0^6 N=1^45 3^9 0^6 spur2=0 spur3=5 conn2=0 gluediff=True kills=False
+1111100111 11224 nonstr H=5 HC=0 M=1^36 0^24 N=1^36 0^24 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+1011111111 01333 nonstr H=3 HC=0 M=1^36 0^24 N=1^36 0^24 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+SUMMARY n=5 k=3 classes=12 [('HC>=2 odd-only torsion', 1), ('kills', 1), ('loss', 4), ('oddonly', 1), ('spur>0', 4), (('nonstr', 'HC=0', 'tf'), 5), (('nonstr', 'HC=0', 'torsion'), 1), (('strong', 'HC=1', 'tf'), 3), (('strong', 'HC>=2', 'torsion'), 3)]

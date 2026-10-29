@@ -1,0 +1,2 @@
+144 distinct recorded classes, each with exactly one Hamiltonian cycle (F(12) = 144, Garey)
+split: [(('tf', 'nonsingular'), 81), (('torsion', 'singular'), 63)] ; torsion flags agree with the producer on 144 of 144

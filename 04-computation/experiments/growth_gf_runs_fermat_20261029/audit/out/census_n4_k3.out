@@ -1,0 +1,5 @@
+111111 0123 nonstr H=1 HC=0 M=1^18 0^6 N=1^18 0^6 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+111101 1113 nonstr H=3 HC=0 M=1^18 0^6 N=1^18 0^6 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+101111 0222 nonstr H=3 HC=0 M=1^18 0^6 N=1^18 0^6 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+100111 1122 strong H=5 HC=1 M=1^24 N=1^24 spur2=0 spur3=0 conn2=0 gluediff=False kills=False
+SUMMARY n=4 k=3 classes=4 [(('nonstr', 'HC=0', 'tf'), 3), (('strong', 'HC=1', 'tf'), 1)]

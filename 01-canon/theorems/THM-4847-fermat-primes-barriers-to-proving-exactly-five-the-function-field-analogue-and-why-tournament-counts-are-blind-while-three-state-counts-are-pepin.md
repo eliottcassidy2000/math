@@ -1,16 +1,24 @@
 ---
 id: THM-4847
-title: "Fermat primes: what a proof of 'exactly five' must get past, and what tournaments can and cannot see. (A) Barriers. (1) Coprimality: a prime divides at most one Fermat number, so no finite set of primes covers {F_n : n >= 5}, and no covering-congruence proof exists. (2) Periodicity: for every modulus M the sequence F_n mod M is eventually periodic and is a non-unit for at most omega(M) indices, so no fixed-modulus certificate exists. (3) Algebra: X^(2^n)+1 = Phi_(2^(n+1))(X) is irreducible over Q, and the Aurifeuillean identity for 2^m+1 needs m = 2 (mod 4), i.e. n = 1. (4) Logic: 'exactly five' is the Pi^0_1 sentence 'for all n >= 5, F_n is composite', and it implies the open statement that infinitely many Fermat numbers are composite. (B) In the function-field analogue the statement is a theorem. Over F_q with q odd, f^(2^n)+1 = Phi_(2^(n+1))(f) is reducible for every nonconstant f in F_q[T] and every n >= 2, because (Z/2^(n+1))^* is not cyclic. In characteristic 2 this holds for n >= 1. The mechanism has no counterpart over Q. (C) Tournament counts are blind; three-state counts are Pepin's test. For n >= 2 and N = F_n, the number of labelled tournaments 2^C(N,2) and the number of circulant tournaments 2^((N-1)/2) are both 1 (mod N), whether F_n is prime or not. So every Fermat number passes THM-4746's tournament-count test. For n >= 1, the number 3^C(N,2) of labelled semicomplete digraphs (equivalently oriented graphs) on F_n vertices is -1 (mod F_n) iff F_n is prime. At a prime p the strong count is congruent to the total count (binomial vanishing in Wright's recurrence), so a Fermat prime has s_3(p) = -1 and s(p) = +1. F_5 fails both strong rotation tests at both of its factors 641 and 6700417. (D) With THM-4644 (Fermat primes are exactly the primes all of whose circulant tournaments are rigid): tournament symmetry sees Fermat primality, tournament counting modulo N does not."
+title: "Fermat primes: what a proof of 'exactly five' must get past, and what tournaments can and cannot see. (A) Barriers. (1) Coprimality: a prime divides at most one Fermat number, so no finite set of primes covers {F_n : n >= 5}, and no covering-congruence proof exists. (2) Periodicity: for every modulus M the sequence F_n mod M is eventually periodic and is a non-unit for at most omega(M) indices, so no fixed-modulus certificate exists. (3) Algebra: X^(2^n)+1 = Phi_(2^(n+1))(X) is irreducible over Q, and the Aurifeuillean identity for 2^m+1 needs m = 2 (mod 4), i.e. n = 1. (4) Logic: 'exactly five' is the Pi^0_1 sentence 'for all n >= 5, F_n is composite', and it implies the open statement that infinitely many Fermat numbers are composite. (B) In the function-field analogue the statement is a classical theorem (Lidl-Niederreiter Thm 2.47; typed ANALOGY with the integer problem). Over F_q with q odd, f^(2^n)+1 = Phi_(2^(n+1))(f) is reducible for every nonconstant f in F_q[T] and every n >= 2, because (Z/2^(n+1))^* is not cyclic. In characteristic 2 this holds for n >= 1. The mechanism has no counterpart over Q. (C) Tournament counts are blind; three-state counts are Pepin's test. For n >= 2 and N = F_n, the number of labelled tournaments 2^C(N,2) and the number of circulant tournaments 2^((N-1)/2) are both 1 (mod N), whether F_n is prime or not. So every Fermat number passes THM-4746's tournament-count test. For n >= 1, the number 3^C(N,2) of labelled semicomplete digraphs (equivalently oriented graphs) on F_n vertices is -1 (mod F_n) iff F_n is prime. At a prime p the strong count is congruent to the total count (binomial vanishing in Wright's recurrence), so s_b(p) = (b/p): every Fermat prime p >= 5 has s_3(p) = -1, while s(p) = (2/p) is -1 at p = 5 and +1 at 17, 257, 65537 (audit correction). F_5, F_6, F_9 and F_11 fail both strong rotation tests at known prime factors (F_6, F_9, F_11 by the audit). (D) With THM-4644 (Fermat primes are exactly the primes all of whose circulant tournaments are rigid): tournament symmetry sees Fermat primality, tournament counting modulo N does not."
 status: >
-  PROVED (elementary; mac-mini-2026-10-29-growth; pre-audit): (A1)-(A3), (B), and the counting forms in (C).
+  PROVED (elementary; mac-mini-2026-10-29-growth): (A1)-(A4) and the counting forms in (C). Independently audited
+  2026-10-29, corrections applied (04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md,
+  MISTAKE-695). Two of those corrections: the strong-count sign in (C3) is (2/p), which is -1 at p = 5; and (B) is
+  CLASSICAL (Lidl-Niederreiter, Finite Fields, Thm 2.47), typed ANALOGY.
   Classical inputs:
   - Goldbach's pairwise coprimality;
   - Euler-Lucas (every prime factor of F_n, n >= 2, is 1 mod 2^(n+2));
   - Pepin's test, with 3^((F_n - 1)/2) = (3/F_n) by quadratic reciprocity;
   - irreducibility of cyclotomic polynomials over Q, and the factorisation of Phi_m over F_q into factors of degree
     ord_m(q).
-  FINITE-EXACT (fermat_camion.py): the count test for F_2..F_11; the F_5 strong tests at 641 (residue r = 257) and
-  6700417 (r = 641); the semicomplete Pepin form at 5, 17, 257.
+  FINITE-EXACT (fermat_camion.py; audit/fermat_primes_direct.py, fermat_extend.py):
+  - the count test for F_2..F_11;
+  - the F_5 strong tests at 641 (residue r = 257) and 6700417 (r = 641);
+  - direct strong counts mod p (Wright's recurrence with exact binomials mod p^2):
+    s_2(p) = -1, -1, +1, +1 and s_3(p) = 0, -1, -1, -1 at p = 3, 5, 17, 257;
+  - F_6 at 274177 and 67280421310721, F_9 at 2424833 and F_11 at 319489 and 974849 all fail both strong tests
+    (audit).
   CITED STATUS (checked 2026-10-29):
   - F_n is composite for 5 <= n <= 32 and F_33 is the smallest of unknown character (Wikipedia, Fermat number).
   - It is open whether infinitely many Fermat numbers are composite, and whether all of them are squarefree.
@@ -27,8 +35,8 @@ status: >
     twin of our (C1).
   - The odd-order-unit certificate of compositeness, with an explicit F_5 witness x^3 = 1.
   - Exact squaring-digraph formulas.
-  NEW HERE: (A2) as stated, (A4), the function-field theorem (B), the counting forms (C1)-(C3), the F_5 Camion
-  computations and the routes table.
+  NEW HERE: (A2) as stated, (A4), the counting forms (C1)-(C3), the Camion computations and the routes table.
+  (B) is classical.
   NOT PROVED, and believed far beyond current methods: that there are exactly five Fermat primes.
 session: mac-mini-2026-10-29-growth
 source: 05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md
@@ -64,11 +72,12 @@ outputs:
    - By Euler–Lucas, a composite `F_n` (`n ≥ 2`) has a prime factor `p` with `2^(n+2) + 1 ≤ p ≤ √F_n` and
      `p ≡ 1 (mod 2^(n+2))`. Such witnesses are pairwise distinct and unbounded.
 2. *Periodicity.* For any `M`, the sequence `x_{n+1} = x_n² mod M` is eventually periodic, so `F_n mod M` is
-   eventually periodic. By (1), `gcd(F_n, M) > 1` for at most `ω(M)` indices. A congruence certificate modulo a fixed
-   `M` therefore decides compositeness for only finitely many `n`.
+   eventually periodic. By (1), `gcd(F_n, M) > 1` for at most `ω(M)` indices. A certificate of the form "`F_n` shares
+   a prime factor with the fixed modulus `M`" therefore decides compositeness for only finitely many `n`.
 3. *Algebra.*
-   - `X^(2^n) + 1 = Φ_(2^(n+1))(X)` is irreducible over `Q`, so `F_n` is not the value of a nontrivially factored
-     polynomial in `X = 2`.
+   - `X^(2^n) + 1 = Φ_(2^(n+1))(X)` is irreducible over `Q`, so the family `X^(2^n) + 1` has no algebraic
+     factorisation. Any single composite number is of course the value at `X = 2` of some product of polynomials, so
+     the barrier concerns uniform factorisations of the family.
    - The Aurifeuillean factorisation of `2^m + 1`, namely `4y⁴ + 1 = (2y² + 2y + 1)(2y² − 2y + 1)`, needs
      `m ≡ 2 (mod 4)`, and among Fermat exponents `m = 2^n` only `n = 1` qualifies (`F_1 = 5 = 1·5`).
    - HYP-9410 records that genuine Fermat lines carry no such factorisation.
@@ -77,7 +86,9 @@ outputs:
    - If it is false, a single computation refutes it: Pépin's test at the new prime.
    - If it is true, it implies "infinitely many Fermat numbers are composite", which is open.
 
-**(B) The function-field analogue is a theorem.** Let `q` be odd and `f ∈ F_q[T]` nonconstant.
+**(B) The function-field analogue is a classical theorem** (Lidl–Niederreiter, *Finite Fields*, Thm 2.47, on the
+factorisation of cyclotomic polynomials over `F_q`; that `X⁴ + 1` is reducible modulo every prime is a textbook
+example). It is typed ANALOGY with the integer problem. Let `q` be odd and `f ∈ F_q[T]` nonconstant.
 - For every `n ≥ 2`, `f^(2^n) + 1` is reducible in `F_q[T]`.
 - For `n = 1`, `T² + 1` is irreducible iff `q ≡ 3 (mod 4)`.
 - In characteristic 2, `f^(2^n) + 1 = (f + 1)^(2^n)` is reducible for every `n ≥ 1` whenever `f + 1` is nonconstant.
@@ -101,8 +112,10 @@ Bunyakovsky–Schinzel–Bateman–Horn, which fix the polynomial and vary the a
 3. *Strong counts at a prime.* In Wright's recurrence `T(p) = Σ_{k=1}^{p} C(p,k) s(k) T(p−k)`, every `0 < k < p` term
    vanishes mod `p`. So `s(p) ≡ T(p) = b^(C(p,2)) ≡ (b/p) (mod p)` for any family with `b` states per pair and a
    linear condensation.
-   - At a Fermat prime `p ≥ 5` this gives `s_2(p) ≡ 1` (strong tournaments) and `s_3(p) ≡ −1` (strong semicomplete
-     digraphs).
+   - At a Fermat prime `p ≥ 5` this gives `s_3(p) ≡ −1` for strong semicomplete digraphs. For strong tournaments it
+     gives `s_2(p) ≡ (2/p)`, which is `−1` at `p = 5` and `+1` at `17, 257, 65537`. At `p = 3`, `s_2(3) = 2 ≡ −1`,
+     and `s_3(3) ≡ 0` (the semicomplete law needs `p ≥ 5`). Corrected in the audit; the draft said `s_2(p) ≡ 1` for
+     every Fermat prime `p ≥ 5`.
    - The converse for the strong counts is not claimed. `F_5` fails both strong tests at both factors (§3).
 
 **(D) Symmetry versus counting.** THM-4644: an odd prime `p` is a Fermat prime iff every circulant tournament on
@@ -158,9 +171,21 @@ stronger statement needed for composite orders.
 
 So `F_5` is neither a Camion pseudoprime nor a "semicomplete Camion pseudoprime".
 
-**`F_6`.** At its factor 274177 the residue is `r = 65537 = F_4`. The `O(r²)` recurrence was not run there.
+**Direct strong counts at the Fermat primes** (audit, `audit/fermat_primes_direct.py`). These use Wright's
+recurrence with exact binomials mod `p²`, without assuming the binomial vanishing, and reduce mod `p`:
+`s_2(p) ≡ −1, −1, +1, +1` and `s_3(p) ≡ 0, −1, −1, −1` at `p = 3, 5, 17, 257`. An earlier draft listed
+"`s_3(p) ≡ −1` at 5, 17, 257" from `3^(C(p,2))` alone, which is circular. `fermat_camion.py` now computes the
+recurrence directly.
 
-**The semicomplete Pépin form.** `s_3(p) ≡ −1` at `p = 5, 17, 257`.
+**`F_6`, `F_9` and `F_11`** (audit upgrade, `audit/fermat_extend.py`) also fail both strong rotation tests:
+- `F_6` at 274177 (`r = 65537`: `D ≡ 215736`, `s_3 ≡ 123651`);
+- `F_6` at 67280421310721 (`r = 274177`: `D ≡ 32409983229131`, `s_3 ≡ 35318451187950`);
+- `F_9` at 2424833 (`r = 786433`: `D ≡ 522107`, `s_3 ≡ 623467`);
+- `F_11` at 319489 (`r = 90113`: `D ≡ 61029`, `s_3 ≡ 273957`) and at 974849 (`r = 761857`: `D ≡ 350016`,
+  `s_3 ≡ 751119`).
+
+A single failing prime factor already decides each test. These are compositeness certificates; they prove nothing
+about the remaining Fermat numbers.
 
 ## 4. Routes to "exactly five", and where each stands
 
@@ -172,7 +197,7 @@ So `F_5` is neither a Camion pseudoprime nor a "semicomplete Camion pseudoprime"
 | reformulations: circulant rigidity (THM-4644), Pépin dynamics (THM-4800), constructible polygons (THM-4801), (C2) | equivalent restatements; they move the problem, they do not shrink it |
 | analytic: sieve and prime-number methods | no current method reaches doubly exponential sequences; even infinitely many composite `F_n` is open |
 | heuristic | finitely many expected; at most about `2^-30` new Fermat primes (Boklan–Conway), about `7·10^-9` beyond `F_32` (HYP-9410) |
-| function-field analogue | a theorem (B), by a mechanism that is absent over `Q` |
+| function-field analogue | a classical theorem (B), by a mechanism that is absent over `Q` (ANALOGY) |
 | tournaments | counting is blind (C1); symmetry is exact (D); three-state counting is Pépin (C2) |
 | odd-order units | `F_n` is composite iff some unit `x ≠ 1` has odd order (concurrent FERMAT.md); a uniform construction of such a witness for all `n ≥ 5` would suffice and is not known |
 

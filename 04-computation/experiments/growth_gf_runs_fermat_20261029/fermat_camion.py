@@ -3,7 +3,8 @@
 (a) tournament-count test: 2^C(N,2) = c(N) = 2^((N-1)/2) (mod N) iff ord_N(2) | (N-1)^2/2 -- every F_n, n >= 2, passes.
 (b) strong tournament test: s(N) = c(N) (mod N); Korselt form: p | D(r_p), r_p = N mod (p-1) in 1..p-1.
 (c) strong semicomplete test (3 states per pair, total 3^C(m,2)): at a prime p >= 5, s3(p) = (3/p) (mod p)
-    (THM-4746 (8) with m = 1); for p = F_n (n >= 1) this is -1: the strong-semicomplete form of Pepin's test.
+    (THM-4746 (8) with m = 1); for a Fermat prime p >= 5 this is -1. For tournaments s(p) = (2/p), which is -1 at
+    p = 5 and +1 at 17, 257 (audit correction).
 For a composite N the residue modulo each prime factor p is eps^q * s(r) with N = q(p-1) + r (Theorem 1 and its
 semicomplete analogue); it is evaluated here at the small known factors of F_5 and F_6.
 """
@@ -60,14 +61,20 @@ for n, p in ((5, 641), (5, 6700417), (6, 274177)):
     else:
         line += '; r too large for the O(r^2) recurrence here'
     out.append(line)
-# primes: the semicomplete Pepin form at the five Fermat primes > 3 (direct, r = 1 so s3(p) = (3/p))
-for p in (5, 17, 257):
-    s3 = strong_counts_mod(p - 1 + 1 if p < 300 else 2, p, 3) if p < 300 else None
-for p in (5, 17, 257):
-    # direct check s3(p) mod p by the recurrence needs binomials C(p,k) mod p: use Lucas -> C(p,k) = 0 for 0<k<p
-    T = [pow(3, comb(m, 2), p) for m in range(p + 1)]
-    sm = strong_counts_mod(p - 1, p, 3)
-    acc = T[p]
-    # C(p,k) = 0 mod p for 0<k<p, so s3(p) = 3^C(p,2) mod p
-    out.append('p=%d: s3(p) mod p = 3^C(p,2) mod p = %d (expected p-1 = %d, i.e. -1)' % (p, acc % p, p - 1))
+# primes: strong counts s_b(p) mod p computed DIRECTLY by Wright's recurrence modulo p^2 with exact binomials
+# (no binomial-vanishing assumption; the earlier draft only evaluated 3^C(p,2), which was circular -- audit).
+def strong_direct(p, b):
+    mod = p * p
+    s = [0] * (p + 1)
+    T = [pow(b, comb(m, 2), mod) for m in range(p + 1)]
+    for m in range(1, p + 1):
+        acc = T[m]
+        for k in range(1, m):
+            acc -= comb(m, k) % mod * s[k] % mod * T[m - k]
+        s[m] = acc % mod
+    v = s[p] % p
+    return -1 if v == p - 1 else v
+for p in (3, 5, 17, 257):
+    out.append('p=%d: s_2(p) mod p = %d, (2/p) = %d; s_3(p) mod p = %d, (3/p) = %d (direct Wright mod p^2)'
+               % (p, strong_direct(p, 2), legendre(2, p), strong_direct(p, 3), legendre(3, p)))
 print('\n'.join(out))

@@ -2,8 +2,13 @@
 id: HYP-9445
 title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 9, exhaustively, 184 304 classes; k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments have a unimodular two-run observer (det M_2 in {0, +-1} through order 9; unimodular counts 1, 1, 3, 7, 16, 36, 81 for orders 3..9; the pre-registered 80 at order 9 FAILED); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
 status: >
-  OPEN (mac-mini-2026-10-29-growth, 2026-10-29; pre-audit). Every evidence statement below is FINITE-EXACT, over
-  all isomorphism classes from gentourng with exact Smith forms (PARI matsnf) unless marked otherwise.
+  OPEN (mac-mini-2026-10-29-growth, 2026-10-29).
+  - Independently audited 2026-10-29, with corrections applied
+    (04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md, MISTAKE-695).
+  - The audit recomputed every count through order 8 with independent code, and the order-9 unique-cycle split.
+  - It did not re-check the order-9 claim for classes with at least two Hamiltonian cycles, or the random samples.
+  - Every evidence statement below is FINITE-EXACT, over all isomorphism classes from gentourng with exact Smith
+    forms (PARI matsnf), unless marked otherwise.
   (4) RESOLVED by THM-4846 (D'). In (2) a pre-registered prediction FAILED at order 9; see (2).
 session: mac-mini-2026-10-29-growth
 source: 05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md
@@ -54,13 +59,14 @@ invariant factor of `M_k(T)` equals 1.
    - **A first test of any proof.** Explain why the coarser one-arc observer, an orientation of the star graph
      (THM-4846 (A)), escapes the law.
 2. **Which unique-cycle tournaments are torsion-free?**
-   - **Data at `k = 2`.** The unique-Hamiltonian-cycle classes number `1, 1, 3, 8, 21, 55` (orders 3 to 8; Douglas
-     1970, the Fibonacci numbers `F(2n − 6)` from order 4, Garey 1972). Their torsion-free members number
-     `1, 1, 3, 8, 16, 36`.
+   - **Data at `k = 2`.** The unique-Hamiltonian-cycle classes number `1, 1, 3, 8, 21, 55` (orders 3 to 8).
+     Douglas (1970) characterised them, and Garey (1972) counted them as the Fibonacci numbers `F(2n − 6)` from
+     order 4. Their torsion-free members number `1, 1, 3, 8, 16, 36`.
    - **OEIS.** A search for `1,3,8,16,36` gave one unrelated hit on 2026-10-29.
    - **Data at `k = 3`.** The same counts hold through order 7.
-   - **Where it breaks.** The first torsion among unique-cycle classes appears at order 7, in 5 classes, with
-     invariant factors such as `3·12³` and `2·6²`.
+   - **Where it breaks.** The first torsion among unique-cycle classes appears at order 7, in 5 classes. Their
+     non-unit invariant factors are `2²` (twice), `3³·6` and `4²` (twice) at `k = 2`, and include `3·12³` and `2·6²`
+     at `k = 3`.
    - **Singular or unimodular.** For `k = 2` at orders 7 and 8, a unique-cycle class carries torsion exactly when
      `M_2` is singular, and every nonsingular one is unimodular. Through order 8, `det M_2 ∈ {0, ±1}` for every
      unique-cycle tournament. At order 6 the one singular class is torsion-free.
@@ -82,9 +88,11 @@ invariant factor of `M_k(T)` equals 1.
        `det M_2 ∈ {0, ±1}` (orders 3 to 9).
      - *The corrected counts* are `1, 1, 3, 7, 16, 36, 81` for orders 3 to 9.
        - From order 4 these coincide with A033303, the expansion of `(1 + x)/(1 − 2x − x² + x³)`, whose recurrence is
-         `a(n) = 2a(n−1) + a(n−2) − a(n−3)`. The growth constant is the largest root, about 2.247, of a cubic of the
-         heptagon (`y³ − y² − 2y + 1`, roots `2cos(kπ/7)`). The Douglas total grows like `φ²`.
-       - The match is an EXACT FIT, not evidence: an order-3 recurrence is determined by six terms.
+         `a(n) = 2a(n−1) + a(n−2) − a(n−3)`. Its growth constant is `1 + 2cos(2π/7) ≈ 2.24698`, the largest root of
+         `y³ − 2y² − y + 1`. The audit corrected an earlier statement naming `y³ − y² − 2y + 1`, whose largest root
+         is 1.80194. The Garey total grows like `φ²`.
+       - Both fits, `(n + 1)·2^(n−6)` and A033303, are NUMEROLOGY, exact fits with no spare data point. The first is
+         already refuted.
        - **New prediction for order 10:** 182 unimodular among the 377 unique-cycle classes. The test needs a direct
          generator of unique-cycle tournaments, since the full order-10 census has 9 733 056 classes.
    - **Question.** Express the criterion through Douglas's structural decomposition of these tournaments.
@@ -105,7 +113,8 @@ invariant factor of `M_k(T)` equals 1.
      they are for T5.
 5. **Is T5 the only boundary killer?**
    - **The property.** T5's plus sector annihilates every lifted `(k+1)`-set boundary for `k = 3`.
-   - **Data.** No other class of order 5, 6 or 7 does this for `k = 3`.
+   - **Data.** No other class of order 5, 6 or 7 does this for `k = 3`. The audit found none for
+     `(n, k) = (4–8, 2)`, `(6, 4)`, `(7, 4)` or `(7, 5)` either.
    - **Conjecture.** For every `n` and every `2 ≤ k ≤ n − 2`, T5 (with `k = 3`) is the only boundary-killing pair.
    - **A constraint from the star criterion.** For `k = n − 2` and a vertex `w` with `|N⁺(w)| ≥ 3`, a star kernel
      vector needs its coefficient vector in the left kernel of `A[V − w, V]`.
@@ -121,9 +130,14 @@ invariant factor of `M_k(T)` equals 1.
    - **A closed form?** Is there a closed form for the core GF `E[exp(v Σ_{p≥3} W_p x^p/p)]` beyond the average,
      for example through product identities for the divisor field?
 8. **Fermat.**
-   - **(a) A primality criterion?** At a Fermat prime, `s_3(F_n) ≡ −1 (mod F_n)` (THM-4847 (C3)). Is the converse
-     true for Fermat numbers? `F_5` fails at both factors. The next tests need `s_3(r) mod p` at the known factors of
-     `F_6, …, F_11`, with `r` up to about `10^7`. That needs EGF inversion mod `p`.
+   - **(a) A primality criterion?** At a Fermat prime `p ≥ 5`, `s_3(p) ≡ −1 (mod p)` (THM-4847 (C3)). Is the
+     converse true for Fermat numbers?
+     - A single failing prime factor decides the test.
+     - `F_5`, `F_6`, `F_9` and `F_11` fail at known factors (`F_6`, `F_9`, `F_11` by the audit, using series
+       inversion mod `p`).
+     - For `F_7` and `F_8` the smallest known factors give residues `r ≈ 4.1·10^16` and `2.3·10^14`. That is far
+       beyond direct recurrence or series inversion, so those tests need a new idea, such as quasi-periodicity at a
+       second modulus.
    - **(b) A tournament-native invariant?** Is there one that detects compositeness of `F_n` uniformly?
      - Counting modulo `F_n` is blind (THM-4847 (C1)).
      - The rigidity characterization (THM-4644) applies only at primes.

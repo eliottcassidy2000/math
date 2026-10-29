@@ -1,0 +1,3 @@
+F_9 at p=2424833: r=786433, q parity 0; D(r) mod p = 522107 (strong test passes iff 0); (3/p)=-1; s_3(N) mod p = 623467 (Pepin-type pass iff 2424832)
+F_11 at p=319489: r=90113, q parity 1; D(r) mod p = 61029 (strong test passes iff 0); (3/p)=1; s_3(N) mod p = 273957 (Pepin-type pass iff 319488)
+F_11 at p=974849: r=761857, q parity 1; D(r) mod p = 350016 (strong test passes iff 0); (3/p)=-1; s_3(N) mod p = 751119 (Pepin-type pass iff 974848)

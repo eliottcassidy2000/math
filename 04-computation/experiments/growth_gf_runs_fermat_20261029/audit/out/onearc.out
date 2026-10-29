@@ -1,0 +1,10 @@
+n=4: ST_n has 24 vertices, 36 edges, each pair labels 6 edges; every class orients it; S_{n-1}-equivariant; trivial block = A^T, sign block = (-1)^(|x-y|-1)A[x][y]
+   singular classes: 3 of 4; nonzero |det| (factorised) with strong flag: [(((), True), 1)]
+   strong classes with exactly 2 Hamiltonian cycles, Smith form of M_{n-1}: []
+   ST_4 isomorphic to the generalized Petersen graph G(12,5) (Nauru): True; G(12,5): 24 vertices, 36 edges
+n=5: ST_n has 120 vertices, 240 edges, each pair labels 24 edges; every class orients it; S_{n-1}-equivariant; trivial block = A^T, sign block = (-1)^(|x-y|-1)A[x][y]
+   singular classes: 7 of 12; nonzero |det| (factorised) with strong flag: [(((), True), 3), ((((2, 8),), True), 1), ((((3, 6),), True), 1)]
+   strong classes with exactly 2 Hamiltonian cycles, Smith form of M_{n-1}: [('1101110111', 2, '1^108 0^12'), ('1100110111', 2, '1^112 2^8')]
+n=6: ST_n has 720 vertices, 1800 edges, each pair labels 120 edges; every class orients it; S_{n-1}-equivariant; trivial block = A^T, sign block = (-1)^(|x-y|-1)A[x][y]
+   singular classes: 33 of 56; nonzero |det| (factorised) with strong flag: [(((), False), 1), (((), True), 7), ((((2, 8),), True), 1), ((((2, 8), (3, 12), (5, 10), (7, 10)), True), 1), ((((2, 24), (3, 28), (5, 10)), True), 1), ((((2, 36), (11, 10)), True), 1), ((((2, 40), (13, 10)), True), 4), ((((2, 42),), True), 2), ((((3, 30),), True), 2), ((((7, 10),), True), 2), ((((23, 10),), True), 1)]
+   strong classes with exactly 2 Hamiltonian cycles, Smith form of M_{n-1}: [('111011111110111', 2, '1^710 7^10'), ('110011111111101', 2, '1^660 0^60'), ('110111100111111', 2, '1^660 0^60'), ('110111101110111', 2, '1^712 2^8'), ('110111101111110', 2, '1^710 7^10')]

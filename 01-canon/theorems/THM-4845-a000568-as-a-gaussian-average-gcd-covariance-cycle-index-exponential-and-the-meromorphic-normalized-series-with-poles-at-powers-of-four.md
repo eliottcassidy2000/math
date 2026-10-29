@@ -1,8 +1,15 @@
 ---
 id: THM-4845
-title: "A000568 as a Gaussian average, and the meromorphic normalized series. (A) Let X be the centred Gaussian process on the odd integers with E[X_p X_q] = ln2 gcd(p,q) (realised by X_p = sqrt(ln2) sum_{d|p} sqrt(phi(d)) xi_d, xi_d i.i.d. N(0,1), because sum_{d|g} phi(d) = g) and W_p = 2^(-1/2) e^(X_p). Then, coefficientwise, sum_n a_n x^n = E[exp(sum_{p odd} W_p x^p / p)], i.e. a_n = E[Z_n(W)] with the Newton recursion n Z_n = sum_{p odd <= n} W_p Z_{n-p}, Z_0 = 1: the Davis/Burnside quadratic exponent is diagonalised by one independent Gaussian per odd divisor, and the core kernel B[m,t] of THM-514/516 is E[exp(v sum_{p>=3 odd} W_p x^p/p)], answering OPEN-Q-105(a) / HYP-2538 in this form. (B) The same field on all integers gives graphs (A000088) with W_j = 2^(-[j odd]/2) e^(X_j); tournaments are graphs with the even power sums switched off; doubling the covariance gives digraphs (A000273). (C) The Cameron-Martin formula E[e^(X_p) Phi(X)] = 2^(p/2) E[Phi(X + ln2 gcd(p,.))] is the inherited cycle-insertion PDE. (D) [concurrent with session98's ALL_POLES_CORE_EXPANSION, which has priority for (D)-(E)] f_n = n! a_n / 2^C(n,2) has F(y) = sum f_n y^n = sum over permutations mu of {3,5,7,...}-cycles of (|mu|!/z_mu) 2^(e(mu) - C(|mu|,2)) y^|mu| / (1 - y 4^(-k(mu)))^(|mu|+1), k(mu) = (|mu| - #cycles)/2: F is meromorphic on C with poles exactly at 4^k (k >= 0) of order exactly 3k+1, and f_n = sum_k 4^(-kn) P_k(n) with explicit polynomials P_k of degree 3k (P_1 = 32 C(n,3), P_2 = 98304 C(n,5) + 655360 C(n,6)); for graphs the poles are at every 2^d, of order 2d+1 (Q_1 = 4 C(n,2), Polya's correction). (E) Neither (a_n) nor (f_n) is P-recursive; F is not D-finite. So no linear recurrence with polynomial coefficients in n alone exists, and the Gaussian-conditional Newton recursion (A) is the recursion that does give the generating function."
+title: "A000568 as a Gaussian average, and the meromorphic normalized series. (A) Let X be the centred Gaussian process on the odd integers with E[X_p X_q] = ln2 gcd(p,q) (realised by X_p = sqrt(ln2) sum_{d|p} sqrt(phi(d)) xi_d, xi_d i.i.d. N(0,1), because sum_{d|g} phi(d) = g) and W_p = 2^(-1/2) e^(X_p). Then, coefficientwise, sum_n a_n x^n = E[exp(sum_{p odd} W_p x^p / p)], i.e. a_n = E[Z_n(W)] with the Newton recursion n Z_n = sum_{p odd <= n} W_p Z_{n-p}, Z_0 = 1: the Davis/Burnside quadratic exponent is diagonalised (Hubbard-Stratonovich) by one independent Gaussian per odd divisor, and the core kernel of THM-514/516 has sum_{m,t} B[m,t] x^m v^t = E[exp(v sum_{p>=3 odd} W_p x^p/p)]. This reformulates OPEN-Q-105(a) / HYP-2538, which stays open for a closed evaluation. (B) The same field on all integers gives graphs (A000088) with W_j = 2^(-[j odd]/2) e^(X_j); tournaments are graphs with the even power sums switched off; doubling the covariance gives digraphs (A000273). (C) The Cameron-Martin formula E[e^(X_p) Phi(X)] = 2^(p/2) E[Phi(X + ln2 gcd(p,.))] is the inherited cycle-insertion PDE. (D) [concurrent with session98's ALL_POLES_CORE_EXPANSION, which has priority for (D)-(E)] f_n = n! a_n / 2^C(n,2) has F(y) = sum f_n y^n = sum over cycle types mu with all parts odd and >= 3 of (|mu|!/z_mu) 2^(e(mu) - C(|mu|,2)) y^|mu| / (1 - y 4^(-k(mu)))^(|mu|+1), k(mu) = (|mu| - #cycles)/2: F is meromorphic on C with poles exactly at 4^k (k >= 0) of order exactly 3k+1, and f_n = sum_k 4^(-kn) P_k(n) with explicit polynomials P_k of degree 3k (P_1 = 32 C(n,3), P_2 = 98304 C(n,5) + 655360 C(n,6)); for graphs the poles are at every 2^d, of order 2d+1 (Q_1 = 4 C(n,2), Polya's correction). (E) Neither (a_n) nor (f_n) is P-recursive; F is not D-finite. So no linear recurrence with polynomial coefficients in n alone exists. The Gaussian-conditional Newton recursion (A) is a recursion whose random generating function is explicit; averaging it is the Burnside sum."
 status: >
-  PROVED (elementary; mac-mini-2026-10-29-growth; pre-audit). (A)-(C) are exact identities between formal power
+  Independently audited 2026-10-29, corrections applied (04-computation/experiments/growth_gf_runs_fermat_20261029/
+  audit/REPORT.md, MISTAKE-695). The audit's corrections:
+  - the Gaussian step is named (Hubbard-Stratonovich);
+  - OPEN-Q-105(a) is reformulated, not answered;
+  - cores are cycle types;
+  - the remainder and the almost-sure radius now have proofs;
+  - the classical correction terms are credited.
+  PROVED (elementary; mac-mini-2026-10-29-growth). (A)-(C) are exact identities between formal power
   series (each coefficient a finite expectation of lognormal monomials); (D) is THM-514's core-kernel factorization
   resummed, with a convergence argument for the meromorphic continuation; (E) follows from growth (a_n) and from the
   infinitely many poles of F (f_n). FINITE-EXACT verification (gf_gaussian.out): Davis a_n through n = 80; the
@@ -10,7 +17,10 @@ status: >
   through 9 against OEIS; 1066
   coefficient identities of the PDE through degree 21; the exponential-polynomial expansion exact through n = 80 and
   for graphs through 30. CITED: Davis 1953/54 and Polya (Burnside counts), Smith 1875 (gcd matrix = Z^T Phi Z),
-  the Cameron-Martin formula, the classical facts that P-recursive sequences grow at most like (n!)^r K^n and that a
+  the Hubbard-Stratonovich (Gaussian linearisation) identity, the Cameron-Martin formula. CLASSICAL, the correction
+  terms: graphs (Polya; Oberschelp, Math. Ann. 174 (1967); Harary-Palmer, Graphical Enumeration, section 9.1) and
+  tournaments (Moon 1968; Wright, Glasgow Math. J. 11 (1970) 97-101). OEIS A002785 already notes the self-converse
+  tournaments (McKay) and an equivalent explicit formula (Pab Ter, 2005). The rest of the classical inputs: the classical facts that P-recursive sequences grow at most like (n!)^r K^n and that a
   D-finite function has finitely many singular points. INHERITED: THM-514 (unit tail, core kernel K[m,t]), THM-516
   (e = C(t,2) + 1/2 sum phi(d) M_d^2), the cycle-insertion PDE and normalized recursion recorded by session98
   (05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md, concurrent).
@@ -71,12 +81,15 @@ Equivalently `a_n = E[Z_n(W)]`, where `Z_n` is the cycle index of `S_n` with the
 Conditionally on the Gaussian field, (2) is the classical Newton recursion and its generating function is the
 exponential in (1). The tournament count is the average.
 
-*Core kernel.* With THM-514's core kernel `B[m,t]` (cores = permutations all of whose cycles are odd and ≥ 3),
+*Core kernel.* With THM-514's core kernel `B[m,t]` (cores = cycle types with all parts odd and ≥ 3),
 
     Σ_{m,t} B[m,t] x^m v^t = E[ exp( v Σ_{p ≥ 3 odd} W_p x^p / p ) ].                              (3)
 
-This is the "Euler-product-like form over part sizes, modulated by the cross-terms" that OPEN-Q-105(a) and HYP-2538
-asked for. The product over part sizes `p` sits inside the expectation. The coupling `½ Σ φ(d) M_d²` is carried
+This is the Hubbard–Stratonovich (Gaussian linearisation) identity applied to THM-516's quadratic form. It gives
+the "Euler-product-like form over part sizes, modulated by the cross-terms" of OPEN-Q-105(a) and HYP-2538, but only
+inside an expectation that exists coefficientwise. The averaged series has radius 0, and no closed evaluation is given.
+So this *reformulates* OPEN-Q-105(a); it does not close it. The product over part sizes `p` sits inside the
+expectation. The coupling `½ Σ φ(d) M_d²` is carried
 entirely by the shared field: one independent Gaussian per odd divisor `d`, with variance `φ(d) ln 2`. In other words
 `log W` is the divisor sum of independent Gaussians, `log W = 1 ∗ g` (Dirichlet convolution, `g(d) = √(φ(d) ln2) ξ_d`),
 shifted by `−½ ln 2`.
@@ -111,7 +124,9 @@ so **tournaments are graphs with the even power sums switched off**. Two more me
 
       Σ SC(n) x^n = E[ (1 + W_1 x) · exp( Σ_{j ≡ 2 (mod 4)} e^(X_j) x^j / j ) ].
 
-  This reproduces OEIS A002785 for `n = 1..16`: `1, 1, 2, 2, 8, 12, 88, 176, 2752, …`.
+  This reproduces OEIS A002785 for `n = 1..16`: `1, 1, 2, 2, 8, 12, 88, 176, 2752, …`. The audit's direct twisted
+  Burnside count agrees for `n ≤ 8`. The OEIS entry already notes that these are also the self-converse tournaments
+  (McKay) and gives an equivalent explicit formula (Pab Ter, 2005); the Gaussian version is a rewrite of it.
 
 **(C) Cameron–Martin is the inherited PDE.** Put `F(y) = E[exp(Σ_p y_p W_p / p)]`, the multivariate form whose
 specialisation `y_p = x^p` is (1). Since `E[e^(X_p) Φ(X)] = e^(Var X_p / 2) E[Φ(X + Cov(X_p, X))]`,
@@ -124,7 +139,8 @@ weighted_core_transport). The Gaussian field is therefore an explicit solution o
 deterministic shift `X_j → X_j + t j ln 2`. Session98's projective state `s_j = h_j − j h_1` is the accumulated
 shift modulo this dilation direction (interpretation, not used in any proof).
 
-**(D) The meromorphic normalized series.** Let `f_n = n! a_n / 2^(C(n,2))`, so `f_n → 1`. For a core `μ`, write
+**(D) The meromorphic normalized series.** Let `f_n = n! a_n / 2^(C(n,2))`, so `f_n → 1`. For a core `μ` (a cycle
+type with all parts odd and ≥ 3; summing over types, the weight `|μ|!/z_μ` counts its permutations), write
 `c = |μ|` for its size, `ℓ` for its number of cycles, and `k(μ) = (c − ℓ)/2` (an integer, since all cycles are odd).
 Put `κ_μ = (c!/z_μ) 2^(e(μ) − C(c,2))`. Then
 
@@ -149,6 +165,13 @@ so that
     a_n = (2^(C(n,2)) / n!) · (1 + 32 C(n,3)/4^n + (98304 C(n,5) + 655360 C(n,6))/16^n + ...).
 
 The expansion is exact, not asymptotic. The remainder after the poles `k ≤ K` is `4^(−(K+1)n) P_{K+1}(n)(1 + o(1))`.
+Proof: let `H_k` be the sum of the terms of (5) with `k(μ) = k`. Then `F − Σ_{k ≤ K+1} H_k` is holomorphic on
+`|y| < 4^(K+2)`, so its coefficients are `O(R^(−n))` for every `R < 4^(K+2)`. The `(K+1)`-st term is
+`4^(−(K+1)n)` times a polynomial of degree `3(K+1)`, so it dominates.
+
+*Classical content.* The individual correction terms are classical. For tournaments they go back to Moon 1968 and
+Wright 1970. For graphs they go back to Pólya, Oberschelp (1967) and Harary–Palmer §9.1. What is new here is the
+global meromorphy with exact pole orders, which session98 found first.
 
 *Graphs.* The same resummation gives `n! g_n / 2^(C(n,2)) = Σ_d 2^(−dn) Q_d(n)`, with cores the fixed-point-free
 permutations. The poles are at every `2^d`, of order `2d + 1`, and `Q_1(n) = 4 C(n,2)`. This is Pólya's correction
@@ -163,9 +186,14 @@ function. What does exist:
 - the exponential-polynomial sum (6), which says that truncating to `K` poles gives a constant-coefficient linear
   recurrence `Π_{k ≤ K} (E − 4^(−k))^(3k+1) f ≡ 0` up to `O(4^(−(K+1)n) n^(3K+3))`.
 
-**(F) Remark: the divergence is a large deviation of the field.** For almost every realisation, `|X_p| = O(√(p log p))`
-by Borel–Cantelli. So `W_p^(1/p) → 1` and the random series `exp(Σ W_p x^p/p)` has radius of convergence exactly 1,
-while its coefficientwise mean has radius 0. The dominant term `2^(C(n,2))/n!` is the contribution of atypically
+**(F) Remark: the divergence is a large deviation of the field.** For almost every realisation,
+`|X_p| = O(√(p log p))` by Borel–Cantelli, so `W_p^(1/p) → 1`. Then `f(x) = Σ W_p x^p/p` has radius 1, and the
+random series `exp(f)` has radius exactly 1, while its coefficientwise mean has radius 0.
+- *Why the radius is exactly 1.* `exp(f)` has nonnegative coefficients, so by Pringsheim its radius is the first
+  positive singularity. That point is 1 as soon as `Σ W_p/p = ∞`.
+- *Why `Σ W_p/p = ∞` almost surely.* Along the primes,
+  `X_p = √(ln 2) (ξ_1 + √(p−1) ξ_p) ≥ ln p` infinitely often, by the conditional second Borel–Cantelli lemma. That
+  gives infinitely many terms `W_p/p ≥ 2^(−1/2)`. This argument is the audit's. The dominant term `2^(C(n,2))/n!` is the contribution of atypically
 large `ξ_1`, the direction that counts the cycles.
 
 ## 2. Proofs
@@ -236,7 +264,7 @@ series satisfies a linear ODE with polynomial coefficients, whose singular point
 of the leading coefficient. By (D), `F` has infinitely many poles.
 
 **(F).** `X_p ~ N(0, p ln 2)`. By Borel–Cantelli, almost surely `|X_p| ≤ 2√(p ln 2 · ln p)` eventually, so
-`W_p^(1/p) → 1`.
+`W_p^(1/p) → 1`. The radius of `exp(f)` is then exactly 1, by Pringsheim and the divergence of `Σ W_p/p` (statement).
 
 ## 3. Verification (FINITE-EXACT, `out/gf_gaussian.out`)
 
@@ -265,6 +293,8 @@ of the leading coefficient. By (D), `F` has infinitely many poles.
   - A faster algorithm. Evaluating (1) still sums over cycle types, and the 200-term computations of
     tournament_future_boundary remain the computational state of the art in the repo.
   - Any asymptotic statement beyond Moon's classical leading term, except as the exact expansion (6).
-- **Novelty.** The formulas are elementary rearrangements of Davis and Pólya. What appears new to the repository is
-  the gcd-covariance field, its identification with the PDE, the shared field for graphs and tournaments, and the
-  meromorphic continuation with its exact pole orders. No literature search beyond OEIS was made.
+- **Novelty.** The formulas are elementary rearrangements of Davis and Pólya, combined with the classical
+  Hubbard–Stratonovich identity. Two things appear new to the repository: the gcd-covariance field, with its
+  identification as the explicit solution of the inherited PDE, and the shared field for the whole palette family and
+  for self-converse counts. The meromorphic continuation with exact pole orders is session98's. No literature search
+  beyond OEIS was made.

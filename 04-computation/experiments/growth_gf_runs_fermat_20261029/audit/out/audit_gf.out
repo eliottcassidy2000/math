@@ -1,0 +1,20 @@
+(1) direct Burnside over S_n (explicit pair orbits) = OEIS A000568, A000088, A000273, A001174 for n <= 8
+(2) Gaussian functional via the divisor realisation X_j = sqrt(c) sum_{d|j} sqrt(phi d) xi_d reproduces all four families for n <= 8
+    and for n = 9..12 against the OEIS terms held here (tournaments to 12, graphs to 10, oriented to 9)
+(2b) tournaments: Gaussian functional = Davis orbit formula for n <= 30
+(2c) Gauss-Hermite numerical E[Z_n(W)], n=0..6: 1.000000000, 1.000000000, 1.000000000, 2.000000000, 4.000000000, 12.000000000, 56.000000000
+(3) PDE (4) exponent identity (all q): 2364 checks, degree <= 25
+(4a) K[m,t] brute force over labelled permutations (m <= 9) = partition formula: [((0, 0), 1), ((3, 1), 4), ((5, 1), 96), ((6, 2), 1280), ((7, 1), 5760), ((8, 2), 43008), ((9, 1), 645120), ((9, 3), 9175040)]
+    P_1 coefficients of C(n,m): {3: '32'}
+    P_2 coefficients of C(n,m): {5: '98304', 6: '655360'}
+    P_3 coefficients of C(n,m): {7: '12079595520', 8: '45097156608', 9: '2405181685760'}
+    P_4 coefficients of C(n,m): {9: '44332308831928320', 10: '1466766103639228416', 11: '1950621588604846080', 12: '1109686948184090214400'}
+    leading coefficient ((3k)!/(3^k k!)) 2^(3k^2+k) at C(n,3k) confirmed for k = 1..7
+(4b) f_n = n! a_n / 2^C(n,2) = sum_k 4^(-kn) P_k(n) exactly for n <= 60 (orbit-formula a_n)
+(4c) remainder / next term: K=0 n=12:1.0061068078 n=20:1.0000006713 n=30:1.0000000000 n=40:1.0000000000 n=60:1.0000000000 | K=1 n=12:1.0554212937 n=20:1.0000138732 n=30:1.0000000001 n=40:1.0000000000 n=60:1.0000000000 | K=2 n=12:1.1326385616 n=20:1.0003127653 n=30:1.0000000024 n=40:1.0000000000 n=60:1.0000000000 | K=3 n=12:1.0071063882 n=20:1.0057313560 n=30:1.0000000759 n=40:1.0000000000 n=60:1.0000000000
+(4d) F(0.3): power series 1.447300039618993, core sum (5) 1.447300039618993
+     (1 - y/4)^4 F(y) at y = 4(1-0.01): 31.049585570 (pole coefficient of the single 3-cycle core: 32)
+     (1 - y/4)^4 F(y) at y = 4(1-0.001): 31.904095970 (pole coefficient of the single 3-cycle core: 32)
+     (1 - y/4)^4 F(y) at y = 4(1-0.0001): 31.990400960 (pole coefficient of the single 3-cycle core: 32)
+(5) graphs: n! g_n/2^C(n,2) = sum_d 2^(-dn) Q_d(n) exact for n <= 30; brute-force fpf kernel m <= 8 agrees; Q_1 coefficients {2: '4'}, Q_2 coefficients {3: '32', 4: '192'}
+(6) max e(mu)/C(m,2) over tournament cores m <= 40: 1/3 (bound 1/3)

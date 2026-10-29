@@ -1,0 +1,8 @@
+T5: rank Pc = 6 (kernel 4); the five stars are in the kernel, span 4; relation sum (-1)^w v_w = 0: True; each T5-w is S4 with unique HC w+1..w+4, diagonals w+1->w+3, w+2->w+4, and c_w = +-1 on the diagonal ends
+T5: M_3 kills every lifted tetrahedron boundary: True; rank M_3 = 56; Smith M_3 = 1^52 3^2 6^2 0^4
+T5 mod 2: rank P = 6, dim ker P = 4, star indicators in ker: True, their rank 4; B(ker) has rank 4 modulo im P (dim coker = 4)
+T5: Smith N = 1^48 3^2 6^6 0^4; spur_2 = 4, spur_3 = 4 (factor counts)
+boundary killers at n=6, k=4: 0 classes
+boundary killers at n=7, k=4: 0 classes
+boundary killers at n=7, k=5: 0 classes
+boundary killers at n=8, k=2: 0 classes
