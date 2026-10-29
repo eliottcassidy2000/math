@@ -232,3 +232,10 @@ complements; whether an analogous small chain kernel occurs in other
 atoms; and how the fully unnamed operation averages or retains the phase
 of the chosen path. The number56 here is a matrix rank; no identification
 with the56 unlabelled six-vertex tournaments has been established.
+
+**10:00 UTC continuation:** [COMPLEMENT_KERNEL K1--K6](COMPLEMENT_KERNEL.md)
+answers these weighted questions through seven: one selected complement
+has an integer left inverse for every strong source, and a paired path-frame
+multiset gives the corresponding unnamed orbit observer. Arbitrary paths
+can fail; B5 has a different, vertex-invariant standard-run kernel. The
+all-size assertion and other unnamed observation languages remain open.

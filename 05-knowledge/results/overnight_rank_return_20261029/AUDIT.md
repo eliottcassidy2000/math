@@ -140,3 +140,56 @@ reported as a theorem about every unnamed re-marking language.
 Both new checkers pass normal and optimized replay. The existing two-run
 checker retains the81/27 and six-vertex complement hostiles. Same-agent
 audit is not an independent external review or proof-assistant build.
+
+## 10:00 UTC complement and unnamed-weight audit
+
+COMPLEMENT_KERNEL supplies complete integer minor certificates on396 strong
+classes through seven. The verifier independently checks nonisomorphism,
+automorphism orbit masses, and the first-strong-component labelled recurrence.
+Thus completeness does not rest on a matching list length. Modular-prime
+status is recomputed separately from strong connectivity. Native responses
+retain ordered runs, singleton runs and actual target relations. Targets
+are allowed to leave the strong locus; stored witnesses often do.
+
+The rational source ranks use exact integer null vectors and matching
+modular lower bounds. Integer recovery uses coprime maximal minors and the
+adjugate/Bezout identity, not only ranks at selected small primes. Matrix
+entries are reduced before conversion to NumPy int64; null-vector checks
+use arbitrary-precision object arithmetic. An initial exploratory conversion
+overflow on a large exact kernel was caught and repaired before publication.
+It did not produce or validate a false receipt. Every check uses explicit
+exceptions and remains active under Python -O.
+
+Minimum depth zero over all moduli is independently obstructed at a bad
+prime for each excluded source. A nonunit but nonzero Smith factor still
+permits recovery from exact integer outputs on the image; the obstruction
+concerns finite precision or an integer-linear inverse over all rings.
+The five-vertex path classifications use complete exact Smith forms, and
+the B5 nonnegative witness is vertex-invariant. Its hidden standard S3
+plane is not T5's run-symmetric tetrahedron-boundary kernel.
+
+The unnamed observer retains two paired response vectors in the SAME path
+frame and takes their multiset over a selected path orbit. It is not an
+arithmetic average, an invariant-vector restriction, or free class-valued
+reset. Its injectivity is an elementary consequence of the integer left
+inverse. Burnside counts therefore describe a minimal carrier only for
+this declared arbitrary-weight observer, with the tournament supplied.
+Realization-constrained actual attachments may occupy a smaller state set.
+
+F8 squaring is checked in an explicit field and its21 maps are compared
+with the full actual Paley automorphism group. The recurrence uses those
+port permutation cycles, not equality of unrelated cardinalities. The81/27
+port-cycle histograms and subgroup relation are checked, but no three-run
+minimality or full1320-by1320 response is inferred at order twelve. The
+existing two-run checker replays its9011898 mass and24/22 ternary ranks.
+
+Three order-eight examples and the recursive nine-vertex source have
+separate literal-substitution checks and integer minor certificates. They
+are examples, not complete censuses. The nine-vertex two-bit loss is only
+the default path's parity observation; its alternate path has an integer
+left inverse. This does not settle the reversal-marking language.
+
+Incoming0b1eb8940d andc2943c341d were inspected: their complete Paley7 groups
+and clocked pairing completion are inherited. No existing result or
+correction was overwritten. Normal and optimized end-to-end replay cover
+the current certificates, with no external independent audit claimed.

@@ -4,6 +4,21 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+**10:00 UTC continuation.** [COMPLEMENT_KERNEL K1--K6](COMPLEMENT_KERNEL.md)
+certifies an integer left inverse after at most one selected actual path
+complement for all396 strong classes through seven. Coprime minors retain
+every modulus, not just rational rank. The smallest arbitrary-path failures
+occur at five, and at six for modular-prime sources. T5's15 paths split
+into10 integral successes and5 parity-defective choices. A different
+five-vertex source has a vertex-invariant hidden plane carrying the standard
+S3 run representation. Paired responses in a common path frame descend to
+an exact unnamed path-orbit observer, yielding Burnside precision recurrences
+with a literal Frobenius term14m^70 for Paley7. Three order-eight examples
+and recursive C3[C3,C3,C3] also have integer certificates: on the latter,
+moving the selector removes the standard path's two missing binary directions.
+The all-size selected-path conjecture and full realization-constrained
+attachment classification remain open.
+
 **09:00 UTC continuation.** [PRIME_POWER Q1--Q7](PRIME_POWER.md) extends
 the complete pencil classification to every Paley field order p^m=3 mod4.
 It uses the classical Jacobi carry recurrence with its exceptional source
@@ -124,9 +139,10 @@ repeat the completed single-block derivation. Preserve clean Git checkpoints.
 Completed targets include the three independence certificates and the
 fifteen-object transport/query distinction above, the full prime-power
 Paley pencil and the exact two- and three-run modules. Next targets are
-complement-stable kernels for other strong atoms, the vertex-unnamed
-operation with its selected-path phase retained, and the full complemented
-relation alongside these weighted modules. Primary algorithm manuscripts
+the all-size integral selected-path conjecture, the strong-target variant,
+and the full complemented relation with physically realizable port laws.
+The path-framed weighted unnamed observer is now closed through seven;
+free class-valued reset remains a different operation. Primary algorithm manuscripts
 behind Big O Speedrun remain a separate lane.
 Treat reported algorithm breakthroughs as source claims
 until their actual statements, models and proofs have been audited. The
