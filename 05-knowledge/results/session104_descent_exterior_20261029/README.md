@@ -8,6 +8,8 @@ K4 has six edge coordinates, naturally the basis of Λ²Q⁴. Its incidence boun
 
 The actual tournament language has a different hierarchy: three linear counting dimensions, four acceptance states, and six states when legality must also be reported. Its six-state `ee` transition has rank **two**. Exterior squares of four-dimensional linear maps have ranks only **0,1,3,6**. Thus no change of basis can identify this legality machine with an exterior-square representation of four-dimensional letter operators. The coincidence 3/4/6 is not a transition-preserving isomorphism.
 
+There is nevertheless a genuine tournament wedge carrier: at four vertices the native two-run observer has twelve ordered-pair ports. Its antisymmetric run-swap sector is exactly Λ²Q⁴, with six dimensions, and vertex re-markings act by exterior squares. This is distinct from the six legality states. The rational symmetric/antisymmetric split also retains a nontrivial integral gluing issue. As vertices are inserted the wedge space grows, and preserving a kernel vector requires the separate guarded transport proof.
+
 There is an honest alternative: lift the three-state counting matrix C to 1⊕C and take its exterior square. This gives C⊕Λ²C, an explicitly chosen six-dimensional linear model. It is not the legality automaton. Moreover an explicit determinant-one integer change of basis identifies Λ²C with C−I. The dual cubic is the real seventh-cyclotomic polynomial: on its roots, the transformation x→−1/(x+1) equals x→x²−2. This is angle doubling on seventh-root traces, returning after three doublings because 2³≡1 modulo7. It is an exact squaring/doubling bridge, with the counting growth connection to seven inherited from the earlier recurrence work.
 
 The [exterior note](exterior/K4_EXTERIOR_BOUNDARY.md) states the exact boundary, distinguishes cross products from wedges and Hodge stars, and provides reproducible matrix checks.
@@ -26,6 +28,19 @@ This gives a scalar positivity certificate, not a faithful representation for ar
 
 The [positive-interface note](positive/POSITIVE_INCIDENCE_AND_ATOMS.md) also implements owner-tagged endpoint insertion for LRC. Adding a runner filters old accepted tags **and births new endpoint tags**. Forgetting the birth term is a false descent argument: accepted tag count can increase from 2 to 6 even though the safe set shrinks. For speeds 1,...,13 at threshold 1/14, the inherited endpoint certificate has six safe locations and twelve accepted owner tags among 182 candidates, while ordinary measure is zero.
 
+### Concurrent work: common ranks survive only compatible port operations
+
+The [concurrent fixed-port packet](https://github.com/eliottcassidy2000/math/blob/ba6481180a0c988e8ed8a11e08dd42155eb0dbf9/05-knowledge/results/wedge_descent_168_20261029/THEORY.md) derives a concrete recurrence from Session103. For the canonically port-matched ordered-k observer B=I+N on n vertices,
+
+    N^(k(n-k)+1)=0,
+    B^d=Σ_(j=0)^(k(n-k)) binom(d,j) N^j.
+
+Thus repeated multiplication of this specified table has bounded polynomial depth. This is not an assertion that arbitrary tournament substitution equals table multiplication.
+
+For a finite menu of nonnegative matrices with diagonal one on the same labelled carrier, every product is unipotent exactly when their off-diagonal support union is acyclic. This is the same positive-cycle/common-potential alternative as above. It gives either a common integer grading or an explicit short failing word.
+
+Our [independent narrow audit](audit_incoming/INCOMING_COMMON_RANK_AUDIT.md) verifies these two incoming proofs and reconstructs the native K4 control. Re-marking vertices1 and3 makes a product of two individually unipotent twelve-port tables have trace22. Even trace12 is insufficient: seven re-markings with that trace still have cyclic support unions, and the checker constructs failing longer words. Re-marking is therefore a real loss of common rank, analogous to an unpaid reset, not an innocuous change of names at an unrecorded seam. Other claims in the concurrent packet are outside this audit's scope.
+
 ## 3. A literal decreasing sequence of natural numbers
 
 The elementary termination principle is sound: a natural-number rank that strictly decreases on every nonterminal transition proves termination. On an infinite arithmetic graph, acyclicity alone is weaker; n→n+1 has no cycle but runs forever. A decreasing real potential can also run forever if its decrements approach zero.
@@ -43,7 +58,7 @@ Every active step decreases R. The actual run
 
     (13,1) → (5,3) → (1,2) → (1,1) → (1,0)
 
-has ranks **163 → 162 → 38 → 4 → 0**. This proves each auxiliary return finishes. It does not prove Collatz: a completed return can increase the original number, as **3→5** does, and restarting the queue incurs a reset cost.
+has ranks **163 → 162 → 38 → 4 → 0**. For a queue starting at one, the proof also gives an explicit bound of **60 times the binary length of n, minus56**, on its native return time. This proves each auxiliary return finishes. It does not prove Collatz: a completed return can increase the original number, as **3→5** does, and restarting the queue incurs a reset cost.
 
 ### A precise compiler for paid resets
 
@@ -51,7 +66,7 @@ Suppose a block retains immutable source n, has local rank 0≤r≤B(n), and low
 
     G(n,r)=Σ_(m<n)(B(m)+1)+r
 
-is one ordinary natural-number rank for the entire process. It decreases both internally and across resets. This converts local termination plus genuine source descent into global termination without hiding a lexicographic or clock reset. What remains open for the Collatz application is exactly the source-payment obligation, not the impossibility of infinite integer descent.
+is one ordinary natural-number rank for the entire process. It decreases both internally and across resets. For this controller the budget envelope even permits the closed formula **60n·bit_length(n)+r** instead of the prefix sum. This converts local termination plus genuine source descent into global termination without hiding a lexicographic or clock reset. What remains open for the Collatz application is exactly the source-payment obligation, not the impossibility of infinite integer descent.
 
 The [descent note](descent/POSITIVE_ATOMS_AND_INTEGER_DESCENT.md) retains exact carries and guards. Its source debt
 
