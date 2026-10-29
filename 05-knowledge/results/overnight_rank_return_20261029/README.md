@@ -13,6 +13,13 @@ to characteristic-two fields and connects the transport to the classical
 exceptional isogeny whose square is Frobenius. Exact F64/F256 witnesses have
 phase periods 12/16; no Frobenius twist makes either an involution.
 
+[PRECISION P1--P3](PRECISION.md) computes the exact integer image:
+Smith factors 1,1,1,1,1,2,2,2,2,4. The cumulative response cost modulo
+2^k is 5k+4max(k-1,0)+max(k-2,0) bits, giving the all-precision recurrence
+C_(k+1)=1024 C_k for k>=2. [ALGORITHMS](ALGORITHMS.md) connects this concrete
+lifting obstruction to the source and precision bookkeeping in the primary
+Big O Speedrun manuscripts, with their cost models and audit limits retained.
+
 [CONTROLLER C1--C3](CONTROLLER.md) proves that the cheaper ternary parser
 terminates on every positive odd integer and identifies exactly five
 non-descending source cylinders. Its exact finite certificate checks 53

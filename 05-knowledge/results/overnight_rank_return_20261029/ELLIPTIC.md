@@ -40,7 +40,8 @@ The homomorphism follows from the chord identity: for the monic cubic
 f=g/4 and a line through P,Q,-(P+Q), evaluating f-line^2 at r shows that
 the product of the three x-r values is a square. The derivative gives the
 limiting value at the two-torsion point. This is the standard 2-descent
-character used by the [ICARM verification method](https://elliptic-rank.icarm.cloud/).
+character in [Cremona's primary description, section 2](https://johncremona.github.io/papers/filter.pdf),
+also used by the [ICARM verification method](https://elliptic-rank.icarm.cloud/).
 
 A prime at which g has no root excludes rational two-torsion: good
 reduction at an odd prime injects rational two-torsion. By Mordell--Weil,
