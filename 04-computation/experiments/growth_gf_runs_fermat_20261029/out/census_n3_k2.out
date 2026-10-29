@@ -1,0 +1,3 @@
+n=3 k=2 classes=2  (plus sector = unordered start-set x end-set covers; boundary space dim C(2,2)=1)
+111                    012      nonstr H=1    rankP=2    killsBdry=False M=1^4 0^2 unglued=1^4 0^2 spur2=0 spur3=0
+101                    111      strong H=3    rankP=3    killsBdry=False M=1^6 unglued=1^6 spur2=0 spur3=0

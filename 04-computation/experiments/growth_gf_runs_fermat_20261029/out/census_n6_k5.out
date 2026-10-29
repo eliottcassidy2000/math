@@ -1,0 +1,57 @@
+n=6 k=5 classes=56  (plus sector = unordered start-set x end-set covers; boundary space dim C(5,5)=1)
+111111111111111        012345   nonstr H=1    rankP=5    killsBdry=False M=1^600 0^120
+111111111111101        111345   nonstr H=3    rankP=5    killsBdry=False M=1^600 0^120
+111011111111111        022344   nonstr H=9    rankP=5    killsBdry=False M=1^600 0^120
+111001111111111        122334   strong H=23   rankP=6    killsBdry=False M=1^720
+111011110111111        122334   strong H=33   rankP=6    killsBdry=False M=1^696 2^14 90^2 270^8
+111011111110111        122244   strong H=23   rankP=6    killsBdry=False M=1^710 7^10
+111011111111101        112344   strong H=15   rankP=6    killsBdry=False M=1^720
+111011111111110        112344   strong H=17   rankP=6    killsBdry=False M=1^720
+111111101111111        022335   nonstr H=5    rankP=5    killsBdry=False M=1^580 4^8 8^2 232^2 464^8 0^120
+111101101111111        122334   strong H=37   rankP=6    killsBdry=False M=1^710 105^2 210^6 630^2
+111111100111111        122235   nonstr H=11   rankP=5    killsBdry=False M=1^600 0^120
+111111101110111        122235   nonstr H=13   rankP=5    killsBdry=False M=1^598 2^2 0^120
+111111101111101        112335   nonstr H=9    rankP=5    killsBdry=False M=1^600 0^120
+111111101111110        112335   nonstr H=9    rankP=5    killsBdry=False M=1^600 0^120
+111111100110111        222225   nonstr H=15   rankP=5    killsBdry=False M=1^584 2^16 0^120
+111111111101111        022245   nonstr H=3    rankP=5    killsBdry=False M=1^570 2^20 52^10 0^120
+111101111101111        122244   strong H=27   rankP=6    killsBdry=False M=1^690 2^20 52^10
+111111110101111        122235   nonstr H=15   rankP=5    killsBdry=False M=1^600 0^120
+111111111100111        112245   nonstr H=5    rankP=5    killsBdry=False M=1^600 0^120
+110111111111111        013344   nonstr H=5    rankP=5    killsBdry=False M=1^600 0^120
+110011111111111        023334   nonstr H=11   rankP=5    killsBdry=False M=1^600 0^120
+110001111111111        122334   strong H=23   rankP=6    killsBdry=False M=1^720
+110011110111111        123333   strong H=37   rankP=6    killsBdry=False M=1^690 5^2 10^6 30^2 0^20
+110011111110111        122334   strong H=29   rankP=6    killsBdry=False M=1^710 23^10
+110011111111101        122334   strong H=25   rankP=6    killsBdry=False M=1^660 0^60
+110011111111110        113334   strong H=19   rankP=6    killsBdry=False M=1^720
+110001111110111        222234   strong H=37   rankP=6    killsBdry=False M=1^690 5^2 10^6 30^2 0^20
+110011110110111        222333   strong H=45   rankP=6    killsBdry=False M=1^702 39^4 741^4 2223^2 0^8
+110001111111101        222234   strong H=33   rankP=6    killsBdry=False M=1^690 3^30
+110011110111101        222333   strong H=43   rankP=6    killsBdry=False M=1^696 5^2 0^22
+110111101111111        023334   nonstr H=13   rankP=5    killsBdry=False M=1^598 2^2 0^120
+110101101111111        123333   strong H=37   rankP=6    killsBdry=False M=1^698 9^2 0^20
+110111100111111        122334   strong H=25   rankP=6    killsBdry=False M=1^660 0^60
+110111101110111        122334   strong H=29   rankP=6    killsBdry=False M=1^712 2^8
+110111101111101        122334   strong H=29   rankP=6    killsBdry=False M=1^690 2^20 52^10
+110111101111110        113334   strong H=23   rankP=6    killsBdry=False M=1^710 7^10
+110101101110111        222333   strong H=45   rankP=6    killsBdry=False M=1^672 5^24 0^24
+110111100110111        222234   strong H=33   rankP=6    killsBdry=False M=1^700 2^8 4^2 8^10
+110111100111101        222234   strong H=37   rankP=6    killsBdry=False M=1^698 9^2 0^20
+110011101111111        033333   nonstr H=15   rankP=5    killsBdry=False M=1^584 2^16 0^120
+110001101111111        123333   strong H=33   rankP=6    killsBdry=False M=1^700 2^8 4^2 8^10
+110001100111111        222333   strong H=41   rankP=6    killsBdry=False M=1^708 8^2 88^10
+110001101110111        222333   strong H=43   rankP=6    killsBdry=False M=1^696 5^2 0^22
+111111011111111        013335   nonstr H=3    rankP=5    killsBdry=False M=1^570 2^20 52^10 0^120
+111011011111111        023334   nonstr H=15   rankP=5    killsBdry=False M=1^600 0^120
+111001011111111        123333   strong H=33   rankP=6    killsBdry=False M=1^690 3^30
+111011010111111        122334   strong H=31   rankP=6    killsBdry=False M=1^690 3^8 9^2 0^20
+111011011111110        113334   strong H=27   rankP=6    killsBdry=False M=1^690 2^20 52^10
+101111111111111        012444   nonstr H=3    rankP=5    killsBdry=False M=1^600 0^120
+101111111111101        111444   nonstr H=9    rankP=6    killsBdry=False M=1^720
+101011111111111        022344   nonstr H=9    rankP=5    killsBdry=False M=1^600 0^120
+101001111111111        122244   strong H=19   rankP=6    killsBdry=False M=1^720
+101011110111111        122334   strong H=29   rankP=6    killsBdry=False M=1^690 2^20 52^10
+101011111110111        122334   strong H=31   rankP=6    killsBdry=False M=1^690 3^8 9^2 0^20
+101011111111101        112344   strong H=17   rankP=5    killsBdry=False M=1^680 0^40
+101011111111110        112344   strong H=15   rankP=6    killsBdry=False M=1^720

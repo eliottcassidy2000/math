@@ -1,0 +1,26 @@
+n=6 classes=56  (compound order C(n,2)=15; checked against direct enumeration: True)
+  nonstrong singular=False starkernel=False stars_span_kernel=True  : 1
+  nonstrong singular=True  starkernel=True  stars_span_kernel=False : 6
+  nonstrong singular=True  starkernel=True  stars_span_kernel=True  : 14
+  strong    singular=False starkernel=False stars_span_kernel=True  : 18
+  strong    singular=True  starkernel=False stars_span_kernel=False : 2
+  strong    singular=True  starkernel=True  stars_span_kernel=False : 4
+  strong    singular=True  starkernel=True  stars_span_kernel=True  : 11
+strong classes with singular compound (bits, scores, kernel dim, span of stars, star-kernel dims by vertex):
+   ('111011110111111', '122334', 1, 1, [0, 0, 0, 1, 0, 0])
+   ('111101111101111', '122244', 3, 3, [0, 0, 1, 1, 1, 0])
+   ('110011110111111', '123333', 2, 0, [0, 0, 0, 0, 0, 0])
+   ('110011111111101', '122334', 2, 2, [0, 0, 0, 1, 1, 0])
+   ('110001111110111', '222234', 2, 2, [0, 0, 0, 0, 1, 1])
+   ('110011110111101', '222333', 1, 1, [0, 0, 0, 0, 0, 1])
+   ('110111100111111', '122334', 2, 1, [0, 1, 0, 0, 0, 0])
+   ('110111101111101', '122334', 3, 1, [0, 0, 0, 0, 1, 0])
+   ('110111100110111', '222234', 3, 3, [0, 1, 1, 0, 1, 0])
+   ('110001101111111', '123333', 3, 1, [1, 0, 0, 0, 0, 0])
+   ('110001100111111', '222333', 3, 3, [1, 1, 0, 0, 0, 1])
+   ('110001101110111', '222333', 1, 1, [1, 0, 0, 0, 0, 0])
+   ('111011010111111', '122334', 1, 1, [0, 1, 0, 0, 0, 0])
+   ('111011011111110', '113334', 3, 0, [0, 0, 0, 0, 0, 0])
+   ('101011110111111', '122334', 3, 2, [0, 0, 0, 1, 1, 0])
+   ('101011111110111', '122334', 1, 1, [0, 0, 0, 0, 1, 0])
+   ('101011111111101', '112344', 4, 4, [1, 1, 0, 1, 0, 1])

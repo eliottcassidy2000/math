@@ -1,0 +1,13 @@
+n=5 k=4 classes=12  (plus sector = unordered start-set x end-set covers; boundary space dim C(4,4)=1)
+1111111111             01234    nonstr H=1    rankP=4    killsBdry=False M=1^96 0^24
+1111111101             11134    nonstr H=3    rankP=4    killsBdry=False M=1^96 0^24
+1101111111             02233    nonstr H=5    rankP=4    killsBdry=False M=1^96 0^24
+1100111111             12223    strong H=11   rankP=5    killsBdry=False M=1^120
+1101110111             12223    strong H=13   rankP=5    killsBdry=False M=1^108 0^12
+1101111101             11233    strong H=9    rankP=5    killsBdry=False M=1^120
+1101111110             11233    strong H=9    rankP=5    killsBdry=False M=1^120
+1100110111             22222    strong H=15   rankP=5    killsBdry=False M=1^112 2^8
+1111101111             02224    nonstr H=3    rankP=4    killsBdry=False M=1^90 2^4 52^2 0^24
+1110101111             12223    strong H=15   rankP=5    killsBdry=False M=1^114 3^6
+1111100111             11224    nonstr H=5    rankP=4    killsBdry=False M=1^96 0^24
+1011111111             01333    nonstr H=3    rankP=4    killsBdry=False M=1^96 0^24

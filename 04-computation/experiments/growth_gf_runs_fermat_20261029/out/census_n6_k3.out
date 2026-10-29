@@ -1,0 +1,57 @@
+n=6 k=3 classes=56  (plus sector = unordered start-set x end-set covers; boundary space dim C(5,3)=10)
+111111111111111        012345   nonstr H=1    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111111111111101        111345   nonstr H=3    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111011111111111        022344   nonstr H=9    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111001111111111        122334   strong H=23   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40
+111011110111111        122334   strong H=33   rankP=18   killsBdry=False M=1^106 2^8 4^1 96^1 9504^1 228096^1 0^2 unglued=1^104 2^10 6^1 96^1 28512^1 456192^1 0^2 spur2=2 spur3=1 P=1^16 2^2 0^2 S=1^16 2^3 512^1 L=1^36 2^2 6^1 28512^1
+111011111110111        122244   strong H=23   rankP=20   killsBdry=False M=1^104 2^12 8^1 24^3 unglued=1^104 2^12 8^1 24^3 spur2=0 spur3=0 P=1^18 2^1 6^1 S=1^18 2^2 L=1^34 2^4 8^1 24^1
+111011111111101        112344   strong H=15   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40
+111011111111110        112344   strong H=17   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40
+111111101111111        022335   nonstr H=5    rankP=9    killsBdry=False M=1^46 2^8 4^2 36^1 3024^2 0^61 unglued=1^44 2^9 6^2 12^1 36^1 1008^2 0^61 spur2=2 spur3=3 P=1^6 2^2 6^1 0^11 S=1^6 2^3 18^1 0^10 L=1^16 2^2 12^1 1008^1 0^20
+111101101111111        122334   strong H=37   rankP=20   killsBdry=False M=1^111 3^4 24^2 360^1 133200^1 187412400^1 unglued=1^108 3^6 6^1 12^1 24^1 120^1 44400^1 62470800^1 spur2=1 spur3=3 P=1^19 28^1 S=1^16 3^3 6030^1 L=1^36 3^2 24^1 44400^1
+111111100111111        122235   nonstr H=11   rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111111101110111        122235   nonstr H=13   rankP=10   killsBdry=False M=1^56 2^4 0^60 unglued=1^54 2^6 0^60 spur2=2 spur3=0 P=1^8 2^2 0^10 S=1^8 2^2 0^10 L=1^19 2^1 0^20
+111111101111101        112335   nonstr H=9    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111111101111110        112335   nonstr H=9    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111111100110111        222225   nonstr H=15   rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111111111101111        022245   nonstr H=3    rankP=7    killsBdry=False M=1^41 2^7 6^9 0^63 unglued=1^38 2^7 6^12 0^63 spur2=3 spur3=3 P=1^5 2^1 6^1 0^13 S=1^5 2^4 6^1 0^10 L=1^14 2^1 6^5 0^20
+111101111101111        122244   strong H=27   rankP=14   killsBdry=False M=1^90 2^9 6^11 0^10 unglued=1^84 2^11 6^15 0^10 spur2=6 spur3=4 P=1^12 2^1 6^1 0^6 S=1^12 2^6 6^2 L=1^30 2^2 6^6 0^2
+111111110101111        122235   nonstr H=15   rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111111111100111        112245   nonstr H=5    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+110111111111111        013344   nonstr H=5    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+110011111111111        023334   nonstr H=11   rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+110001111111111        122334   strong H=23   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40
+110011110111111        123333   strong H=37   rankP=19   killsBdry=False M=1^104 2^5 4^7 1280^1 0^3 unglued=1^102 2^8 4^6 1280^1 0^3 spur2=2 spur3=0 P=1^16 2^2 20^1 0^1 S=1^16 2^2 4^1 256^1 L=1^35 2^2 4^2 0^1
+110011111110111        122334   strong H=29   rankP=20   killsBdry=False M=1^114 2^1 6^2 18^1 1008^1 3024^1 unglued=1^113 3^1 6^4 1008^2 spur2=0 spur3=2 P=1^19 3^1 S=1^18 3^2 L=1^37 2^1 6^1 1008^1
+110011111111101        122334   strong H=25   rankP=17   killsBdry=False M=1^102 2^4 4^1 8^2 16^2 0^9 unglued=1^100 2^5 4^2 8^2 16^2 0^9 spur2=2 spur3=0 P=1^15 2^1 4^1 0^3 S=1^15 2^2 4^1 8^2 L=1^35 2^1 16^1 0^3
+110011111111110        113334   strong H=19   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40
+110001111110111        222234   strong H=37   rankP=19   killsBdry=False M=1^104 2^5 4^7 1280^1 0^3 unglued=1^102 2^8 4^6 1280^1 0^3 spur2=2 spur3=0 P=1^16 2^2 20^1 0^1 S=1^16 2^2 4^1 256^1 L=1^35 2^2 4^2 0^1
+110011110110111        222333   strong H=45   rankP=20   killsBdry=False M=1^112 2^4 4^2 2056808^1 532713272^1 unglued=1^112 2^4 4^2 2056808^1 532713272^1 spur2=0 spur3=0 P=1^19 2072^1 S=1^19 8^1 L=1^37 2^2 1028404^1
+110001111111101        222234   strong H=33   rankP=20   killsBdry=False M=1^102 3^7 9^3 36^1 108^1 0^6 unglued=1^99 3^9 9^4 36^1 108^1 0^6 spur2=0 spur3=3 P=1^18 3^2 S=1^15 3^1 9^3 27^1 L=1^33 3^3 36^1 0^3
+110011110111101        222333   strong H=43   rankP=20   killsBdry=False M=1^113 2^3 4^2 556136^1 5615353019696^1 unglued=1^112 2^3 4^3 278068^1 2807676509848^1 spur2=1 spur3=0 P=1^18 2^1 488^1 S=1^18 4^1 331052^1 L=1^38 2^1 278068^1
+110111101111111        023334   nonstr H=13   rankP=10   killsBdry=False M=1^56 2^4 0^60 unglued=1^54 2^6 0^60 spur2=2 spur3=0 P=1^8 2^2 0^10 S=1^8 2^2 0^10 L=1^19 2^1 0^20
+110101101111111        123333   strong H=37   rankP=19   killsBdry=False M=1^106 2^4 6^4 36^1 108^1 21384^1 0^3 unglued=1^106 2^1 6^7 12^1 36^1 14256^1 0^3 spur2=0 spur3=3 P=1^18 11^1 0^1 S=1^16 3^2 9^1 1296^1 L=1^34 2^2 6^2 12^1 0^1
+110111100111111        122334   strong H=25   rankP=17   killsBdry=False M=1^102 2^4 4^1 8^2 16^2 0^9 unglued=1^100 2^5 4^2 8^2 16^2 0^9 spur2=2 spur3=0 P=1^15 2^1 4^1 0^3 S=1^15 2^2 4^1 8^2 L=1^35 2^1 16^1 0^3
+110111101110111        122334   strong H=29   rankP=19   killsBdry=False M=1^112 2^4 6^1 30^1 720^1 0^1 unglued=1^110 2^4 6^3 30^1 120^1 0^1 spur2=2 spur3=2 P=1^18 24^1 0^1 S=1^18 2^2 L=1^37 2^1 6^1 30^1
+110111101111101        122334   strong H=29   rankP=17   killsBdry=False M=1^98 2^5 6^8 18^1 126^1 0^7 unglued=1^98 2^4 6^8 12^1 36^1 252^1 0^7 spur2=0 spur3=1 P=1^15 2^1 42^1 0^3 S=1^15 2^2 4^1 12^2 L=1^34 6^3 18^1 0^2
+110111101111110        113334   strong H=23   rankP=20   killsBdry=False M=1^104 2^12 8^1 24^3 unglued=1^104 2^12 8^1 24^3 spur2=0 spur3=0 P=1^18 2^1 6^1 S=1^18 2^2 L=1^34 2^4 8^1 24^1
+110101101110111        222333   strong H=45   rankP=20   killsBdry=False M=1^108 2^8 19420^2 271880^1 11690840^1 unglued=1^104 2^12 9710^2 135940^1 5845420^1 spur2=4 spur3=0 P=1^12 2^8 S=1^12 2^6 20^1 860^1 L=1^38 971^1 33985^1
+110111100110111        222234   strong H=33   rankP=18   killsBdry=False M=1^105 2^8 4^1 12^1 72^1 0^4 unglued=1^104 2^7 6^2 12^1 24^1 72^1 0^4 spur2=1 spur3=3 P=1^16 2^1 4^1 0^2 S=1^16 2^2 8^1 72^1 L=1^36 2^1 6^2 0^1
+110111100111101        222234   strong H=37   rankP=19   killsBdry=False M=1^106 2^4 6^4 36^1 108^1 21384^1 0^3 unglued=1^105 3^1 6^8 12^1 36^1 14256^1 0^3 spur2=0 spur3=5 P=1^18 11^1 0^1 S=1^16 3^2 9^1 1296^1 L=1^34 2^1 6^3 12^1 0^1
+110011101111111        033333   nonstr H=15   rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+110001101111111        123333   strong H=33   rankP=18   killsBdry=False M=1^105 2^8 4^1 12^1 72^1 0^4 unglued=1^104 2^9 12^1 24^1 72^1 0^4 spur2=1 spur3=1 P=1^16 2^1 4^1 0^2 S=1^16 2^2 8^1 72^1 L=1^36 2^2 6^1 0^1
+110001100111111        222333   strong H=41   rankP=19   killsBdry=False M=1^108 2^2 4^7 8460^1 91571040^1 0^1 unglued=1^108 2^2 4^7 25380^1 183142080^1 0^1 spur2=0 spur3=0 P=1^18 22^1 0^1 S=1^18 2^1 2624^1 L=1^36 4^3 25380^1
+110001101110111        222333   strong H=43   rankP=20   killsBdry=False M=1^113 2^3 4^2 556136^1 5615353019696^1 unglued=1^112 2^3 4^3 278068^1 2807676509848^1 spur2=1 spur3=0 P=1^18 2^1 488^1 S=1^18 4^1 331052^1 L=1^38 2^1 278068^1
+111111011111111        013335   nonstr H=3    rankP=7    killsBdry=False M=1^41 2^7 6^9 0^63 unglued=1^38 2^7 6^12 0^63 spur2=3 spur3=3 P=1^5 2^1 6^1 0^13 S=1^5 2^4 6^1 0^10 L=1^14 2^1 6^5 0^20
+111011011111111        023334   nonstr H=15   rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+111001011111111        123333   strong H=33   rankP=20   killsBdry=False M=1^102 3^7 9^3 36^1 108^1 0^6 unglued=1^101 3^7 9^4 36^1 108^1 0^6 spur2=0 spur3=1 P=1^18 3^2 S=1^15 3^1 9^3 27^1 L=1^34 3^2 36^1 0^3
+111011010111111        122334   strong H=31   rankP=18   killsBdry=False M=1^110 2^1 4^1 12^3 72^1 0^4 unglued=1^108 2^3 6^1 12^3 144^1 0^4 spur2=2 spur3=1 P=1^16 2^2 0^2 S=1^16 2^2 4^1 144^1 L=1^37 3^1 12^1 0^1
+111011011111110        113334   strong H=27   rankP=14   killsBdry=False M=1^90 2^9 6^11 0^10 unglued=1^84 2^9 6^17 0^10 spur2=6 spur3=6 P=1^12 2^1 6^1 0^6 S=1^12 2^6 6^2 L=1^30 2^1 6^7 0^2
+101111111111111        012444   nonstr H=3    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+101111111111101        111444   nonstr H=9    rankP=19   killsBdry=False M=1^109 0^11 unglued=1^108 6^1 0^11 spur2=1 spur3=1 P=1^18 6^1 0^1 S=1^18 0^2 L=1^36 0^4
+101011111111111        022344   nonstr H=9    rankP=10   killsBdry=False M=1^60 0^60 unglued=1^60 0^60 spur2=0 spur3=0 P=1^10 0^10 S=1^10 0^10 L=1^20 0^20
+101001111111111        122244   strong H=19   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40
+101011110111111        122334   strong H=29   rankP=17   killsBdry=False M=1^98 2^5 6^8 18^1 126^1 0^7 unglued=1^98 2^4 6^8 12^1 36^1 252^1 0^7 spur2=0 spur3=1 P=1^15 2^1 42^1 0^3 S=1^15 2^2 4^1 12^2 L=1^34 6^3 18^1 0^2
+101011111110111        122334   strong H=31   rankP=18   killsBdry=False M=1^110 2^1 4^1 12^3 72^1 0^4 unglued=1^108 2^3 6^1 12^1 36^2 144^1 0^4 spur2=2 spur3=1 P=1^16 2^2 0^2 S=1^16 2^2 4^1 144^1 L=1^37 3^1 36^1 0^1
+101011111111101        112344   strong H=17   rankP=16   killsBdry=False M=1^100 0^20 unglued=1^92 3^4 6^4 0^20 spur2=4 spur3=8 P=1^12 2^4 0^4 S=1^12 0^8 L=1^32 3^4 0^4
+101011111111110        112344   strong H=15   rankP=20   killsBdry=False M=1^120 unglued=1^120 spur2=0 spur3=0 P=1^20 S=1^20 L=1^40

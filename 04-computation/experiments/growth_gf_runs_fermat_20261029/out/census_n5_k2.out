@@ -1,0 +1,13 @@
+n=5 k=2 classes=12  (plus sector = unordered start-set x end-set covers; boundary space dim C(4,2)=6)
+1111111111             01234    nonstr H=1    rankP=4    killsBdry=False M=1^8 0^12 unglued=1^8 0^12 spur2=0 spur3=0
+1111111101             11134    nonstr H=3    rankP=4    killsBdry=False M=1^8 0^12 unglued=1^8 0^12 spur2=0 spur3=0
+1101111111             02233    nonstr H=5    rankP=4    killsBdry=False M=1^8 0^12 unglued=1^8 0^12 spur2=0 spur3=0
+1100111111             12223    strong H=11   rankP=10   killsBdry=False M=1^20 unglued=1^20 spur2=0 spur3=0
+1101110111             12223    strong H=13   rankP=9    killsBdry=False M=1^16 2^2 48^1 0^1 unglued=1^16 2^2 96^1 0^1 spur2=0 spur3=0
+1101111101             11233    strong H=9    rankP=10   killsBdry=False M=1^20 unglued=1^20 spur2=0 spur3=0
+1101111110             11233    strong H=9    rankP=10   killsBdry=False M=1^20 unglued=1^20 spur2=0 spur3=0
+1100110111             22222    strong H=15   rankP=10   killsBdry=False M=1^18 82^2 unglued=1^18 82^2 spur2=0 spur3=0
+1111101111             02224    nonstr H=3    rankP=4    killsBdry=False M=1^4 2^2 6^2 0^12 unglued=1^4 2^2 6^2 0^12 spur2=0 spur3=0
+1110101111             12223    strong H=15   rankP=10   killsBdry=False M=1^17 3^1 6^1 234^1 unglued=1^17 3^1 6^1 234^1 spur2=0 spur3=0
+1111100111             11224    nonstr H=5    rankP=4    killsBdry=False M=1^8 0^12 unglued=1^8 0^12 spur2=0 spur3=0
+1011111111             01333    nonstr H=3    rankP=4    killsBdry=False M=1^8 0^12 unglued=1^8 0^12 spur2=0 spur3=0

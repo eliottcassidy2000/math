@@ -1,0 +1,4 @@
+n=4 classes=4  (compound order C(n,2)=6; checked against direct enumeration: True)
+  nonstrong singular=True  starkernel=True  stars_span_kernel=True  : 3
+  strong    singular=False starkernel=False stars_span_kernel=True  : 1
+strong classes with singular compound (bits, scores, kernel dim, span of stars, star-kernel dims by vertex):

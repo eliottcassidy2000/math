@@ -1,0 +1,15 @@
+(1) Davis a_n n<=80; first 16 agree with OEIS A000568
+(2a) sum_{d|p,d|q} phi(d) = gcd(p,q) for p,q < 60 (covariance of X_p = sqrt(ln2) sum sqrt(phi d) xi_d)
+(2) a_n = E[Z_n(W)] with the odd cycle-index recursion, n<=30 (exact)
+(3) graphs A000088 n<=12 and digraphs A000273 n<=8 from the same Gaussian functional
+(3b) oriented graphs A001174 n<=9 from the base-3 field (covariance ln3 gcd)
+(4) Cameron-Martin shift = inherited PDE: 1066 coefficient identities, degree <= 21
+(5) f_n = n! a_n / 2^C(n,2) = sum_k 4^(-kn) P_k(n) exactly for n <= 80
+    P_1(n) = 32*C(n,3)
+    P_2(n) = 98304*C(n,5) + 655360*C(n,6)
+    P_3(n) = 12079595520*C(n,7) + 45097156608*C(n,8) + 2405181685760*C(n,9)
+    P_4(n) = 44332308831928320*C(n,9) + 1466766103639228416*C(n,10) + 1950621588604846080*C(n,11) + 1109686948184090214400*C(n,12)
+    after poles k<=0: n=20 rem/lead=1.000000671307; n=30 rem/lead=1.000000000003; n=40 rem/lead=1.000000000000
+    after poles k<=1: n=20 rem/lead=1.000013873195; n=30 rem/lead=1.000000000075; n=40 rem/lead=1.000000000000
+    after poles k<=2: n=20 rem/lead=1.000312765302; n=30 rem/lead=1.000000002403; n=40 rem/lead=1.000000000000
+(6) graphs: g_n n!/2^C(n,2) = sum_d 2^(-dn) Q_d(n) exactly for n <= 30 (poles at 2^d of order 2d+1); Q_1(n) = 4*C(n,2)
