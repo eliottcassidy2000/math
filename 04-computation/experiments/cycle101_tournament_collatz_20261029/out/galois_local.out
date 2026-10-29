@@ -1,0 +1,5 @@
+P7 k=4, p=71 (p mod 7 = 1): coker M_4 {1: 15} ; trivial block {} ; nontrivial part {1: 15} ; multiplicities divisible by 3: True
+P7 k=4, p=2843 (p mod 7 = 1): coker M_4 {1: 9} ; trivial block {} ; nontrivial part {1: 9} ; multiplicities divisible by 3: True
+P7 k=4, p=79 (p mod 7 = 2): coker M_4 {2: 3} ; trivial block {} ; nontrivial part {2: 3} ; multiplicities divisible by 3: True
+P7 k=4, p=151 (p mod 7 = 4): coker M_4 {1: 9} ; trivial block {} ; nontrivial part {1: 9} ; multiplicities divisible by 3: True
+P7 k=4, p=7529 (p mod 7 = 4): coker M_4 {1: 6} ; trivial block {} ; nontrivial part {1: 6} ; multiplicities divisible by 3: True

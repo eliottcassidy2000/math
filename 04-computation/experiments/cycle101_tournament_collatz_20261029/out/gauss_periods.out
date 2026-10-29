@@ -1,0 +1,17 @@
+q=7  Gauss-period identity mod 2^q - 1: True
+q=11  Gauss-period identity mod 2^q - 1: True
+q=19  Gauss-period identity mod 2^q - 1: True
+q=23  Gauss-period identity mod 2^q - 1: True
+q=31  Gauss-period identity mod 2^q - 1: True
+q=43  Gauss-period identity mod 2^q - 1: True
+q=47  Gauss-period identity mod 2^q - 1: True
+q=59  Gauss-period identity mod 2^q - 1: True
+q=67  Gauss-period identity mod 2^q - 1: True
+q=71  Gauss-period identity mod 2^q - 1: True
+q=79  Gauss-period identity mod 2^q - 1: True
+q=83  Gauss-period identity mod 2^q - 1: True
+cycle of 19/101: T-length 7, T-trace 837/101, U-trace 267/101, 2*U-trace + k = 837/101
+cycle of 23/101: T-length 7, T-trace 697/101, U-trace 197/101, 2*U-trace + k = 697/101
+cycle of 29/101: T-length 7, T-trace 697/101, U-trace 197/101, 2*U-trace + k = 697/101
+cycle of 31/101: T-length 7, T-trace 657/101, U-trace 177/101, 2*U-trace + k = 657/101
+cycle of 37/101: T-length 7, T-trace 613/101, U-trace 155/101, 2*U-trace + k = 613/101

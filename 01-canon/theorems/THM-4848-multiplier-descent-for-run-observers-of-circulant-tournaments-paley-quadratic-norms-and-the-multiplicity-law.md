@@ -11,6 +11,8 @@ status: >
     the four labellings of the <3>-cyclotomic class on Z_13 (k = 2);
   - the invariance in (ii) and the ninth-power law for P19 (k = 2), with a partial factorisation of the 310-digit
     quadratic norm;
+  - P7 with k = 4 (840 x 840): beta, its content, and the local Smith data at the split primes 71, 79, 151, 2843 and
+    7529 (PARI mathnfmodid; galois_local.py), with non-trivial instances of (iii) at 71 and 2843;
   - full Smith forms of M_k and B_0 and the multiplicity law (iii) for all of these, with the controls R7 and R11
     (H = 1). Large elementary divisors are tested through a gcd-free basis, primes below 10^7 split off.
   INHERITED, priority elsewhere: CLOCK_MINIMAL_PAIRING C5-C6 (overnight_research_20261029) certified the p-primary
@@ -33,7 +35,8 @@ scripts:
   - 04-computation/experiments/cycle101_tournament_collatz_20261029/paley_fourier.py (P7, P11, k = 2)
   - 04-computation/experiments/cycle101_tournament_collatz_20261029/paley_fourier2.py, p19_norm.py (P19, k = 2)
   - 04-computation/experiments/cycle101_tournament_collatz_20261029/galois_smith.py (Smith forms, multiplicity law, controls)
-  - 04-computation/experiments/cycle101_tournament_collatz_20261029/chirality.py, converse_conjugate.py (sides, (v))
+  - 04-computation/experiments/cycle101_tournament_collatz_20261029/chirality.py, chirality_more.py, converse_conjugate.py (sides, (v))
+  - 04-computation/experiments/cycle101_tournament_collatz_20261029/galois_local.py (P7, k = 4, local Smith data)
   - helpers from 04-computation/experiments/growth_gf_runs_fermat_20261029 (runs.py, fast_runs.py)
 outputs:
   - 04-computation/experiments/cycle101_tournament_collatz_20261029/out/ (p7_fourier.json, paley_fourier.out/.json, paley_fourier2.json, p19_norm.out, galois_smith.out/.json)
@@ -148,6 +151,7 @@ Hence `det B_1(T^op) = det B_(−1)(T) = σ_(−1)(det B_1(T))`, and `T^op = T(�
 |---|---:|---|---|---|
 | P7, k = 2 | 42 | `3^3·7·13^3` | `2^14·3^2·7·1451` (`1451 ≡ 2`, split) | none possible at the primes present |
 | P7, k = 3 | 210 | `−2^14·3^18·17^4` | `2^22·5^4·11^2·79·5861^2·392809` | none (C5–C6's modules) |
+| P7, k = 4 | 840 | (local data only) | `β = a + bη` with `gcd(a, b) = 2^41·5^3·7^3·71^2`; split odd primes 71, 79, 151, 2843, 7529 | **71, 2843 ≡ 1 (mod 7): `X_p = (Z/71)^15`, `(Z/2843)^9`**, i.e. blocks of 3 as forced; also `(Z/79²)^3`, `(Z/151)^9`, `(Z/7529)^6` |
 | P11, k = 2 | 110 | `3·11^2·19^3·23·43·241^2·22291^2` | `2^12·5^2·11^2·31·53·89·62987·665251·35096521·2871099599·4780984157` | **89, 62987 ≡ 1 (mod 11): `X_p = (Z/p)^5`** |
 | P19, k = 2 | 342 | `−3^12·5^2·17^2·23^2·41^2·43·1097^2·8941·9661·14843·19421·104659^2·c51^2` | `2^8·5^2·11·47·61·263·c299` | (Smith form not computed) |
 | `Z_13`, `H = ⟨3⟩`, k = 2 | 156 | (4 labellings, identical data) | quartic `K_H`; nontrivial primes 3, 1907, 2011 and a 170-digit coprime block | none (all have `3 | f`) |

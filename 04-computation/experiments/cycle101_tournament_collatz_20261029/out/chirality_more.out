@@ -1,0 +1,8 @@
+P7, k=4: beta = 4586613209427402393995389904877518848000 + (-3427348182276905332040646159100805120000) eta ; gcd(a,b) = {2: 41, 5: 3, 7: 3, 71: 2} ; unfactored part > 10^7: []
+   p=2 split, exponent 109: (v_P, v_Pbar) = (68, 41) -> TWO-SIDED
+   p=5 inert, exponent 6 in N(beta), v_p(gcd(a,b)) = 3
+   p=71 split, exponent 5: (v_P, v_Pbar) = (2, 3) -> TWO-SIDED
+   p=79 split, exponent 2: (v_P, v_Pbar) = (2, 0) -> one-sided
+   p=151 split, exponent 3: (v_P, v_Pbar) = (0, 3) -> one-sided
+   p=2843 split, exponent 3: (v_P, v_Pbar) = (0, 3) -> one-sided
+   p=7529 split, exponent 2: (v_P, v_Pbar) = (2, 0) -> one-sided

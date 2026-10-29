@@ -14,7 +14,8 @@ identical clocks acquire denominators \(35\) and \(175\) after the same appended
   - THM-4848: multiplier descent, multiplicity law, converse conjugation.
 - *FINITE-EXACT:* every table here (scripts in `04-computation/experiments/cycle101_tournament_collatz_20261029/`).
 - *CITED:* Böhm–Sontacchi, Lagarias, Turner/Babai, Dvoretzky–Motzkin, Ailon–Rudnick, Bugeaud–Corvaja–Zannier.
-- *OPEN:* HYP-9446. One pre-registered prediction FAILED (HYP-9446 (1)) and one passed (HYP-9446 (3)).
+- *OPEN:* HYP-9446. Two pre-registered predictions FAILED: HYP-9446 (1), and (3), the latter after passing eight
+  instances.
 - *Audit.* PRE-AUDIT checkpoint; independent audit pending (section 8).
 
 ---
@@ -234,8 +235,9 @@ rotational" held for `q ≤ 19` and FAILED at `q = 23`, where 14 of 18 locked cy
 **Chirality.**
 - *The converse conjugates.* `β(T(NQR)) = β̄(T(QR))` (THM-4848 (v)), so the occupied prime of `Q(√−q)` flips under
   the converse. The overnight packet's "one cubic, zero of its dual" (C5) is therefore an orientation invariant.
-- *Odd primes look one-sided.* At every split odd prime tested, `β` is one-sided (HYP-9446 (3), pre-registered,
-  passed four non-automatic instances).
+- *Odd primes are usually one-sided, not always.* Eight of the nine non-automatic split odd instances are one-sided.
+  P7 with `k = 4` is two-sided at 71: `(v_𝔭, v_𝔭̄) = (2, 3)` and `71² | gcd(a, b)`. So the pre-registered HYP-9446
+  (3) is REFUTED. The pair of valuations is still swapped by the converse.
 - *The prime 2 is two-sided.* 2 is two-sided in P7.
 
 ## 5. Higher-order connections, typed
@@ -281,7 +283,7 @@ rotational" held for `q ≤ 19` and FAILED at `q = 23`, where 14 of 18 locked cy
 
 1. REFUTED: locked tournament cycles are rotational.
 2. Ailon–Rudnick type: infinitely many primes `q` with no interval-locked prime.
-3. Paley one-sidedness at split odd primes (pre-registered, passed so far; P23 next).
+3. REFUTED: Paley one-sidedness at split odd primes (pre-registered; fails at P7, `k = 4`, `p = 71`).
 4. At most two base points for every odd `q`.
 
 ## 8. Reproduction
@@ -298,7 +300,9 @@ rotational" held for `q ≤ 19` and FAILED at `q = 23`, where 14 of 18 locked cy
 | Paley Fourier, P7 and P11 k = 2 | `python3 paley_fourier.py` | `out/paley_fourier.out`, `.json` |
 | P19 | `python3 paley_fourier2.py 19; python3 p19_norm.py` | `out/paley_fourier2*.json/.out`, `out/p19_norm.out` |
 | Smith multiplicity law | `python3 galois_smith.py` | `out/galois_smith.out`, `.json`, `.log` |
-| chirality, converse | `python3 chirality.py; python3 converse_conjugate.py` | `out/chirality.out`, `.json`; `out/converse_conjugate.out` |
+| chirality, converse | `python3 chirality.py; python3 chirality_more.py 7:4; python3 converse_conjugate.py` | `out/chirality.out`, `.json`; `out/chirality_more.out`; `out/converse_conjugate.out` |
+| local Smith data, P7 k = 4 | `python3 galois_local.py` | `out/galois_local.out`, `.json` |
+| Gauss periods, traces | `python3 gauss_periods.py` | `out/gauss_periods.out` |
 | Camion tests | `python3 camion_cycle.py` | `out/camion_cycle.out` |
 | cycle spectra | `cc -O2 -o cycles_3xb cycles_3xb.c; ./cycles_3xb b 20000000` | `out/cycles_3xb.out` |
 | inversion pairs | `cc -O2 -o inversion_pairs inversion_pairs.c; ./inversion_pairs 401 2000000 401` | `out/periodic_rationals.txt` |

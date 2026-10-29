@@ -1,11 +1,11 @@
 ---
 id: HYP-9446
-title: "After THM-4848/4849. (1) REFUTED (pre-registered): locked tournament cycles are rotational. It holds for q <= 19 and fails at q = 23, where 14 of the 18 locked cycles are not rotational. (2) OPEN, Ailon-Rudnick type: infinitely many primes q have an interval cycle locked at no prime, i.e. gcd(2^((q+1)/2)-1, 3^((q+1)/2)-1) = 1; this holds for 299 of the 782 primes below 6000. Locking at p happens iff lcm(ord_p 2, ord_p 3) | (q+1)/2, e.g. at 5 iff q = 7 (mod 8), which is the owner's 35. (3) OPEN, pre-registered and passed so far: the Paley determinant beta_k(P_q) in Q(sqrt(-q)) has no split odd prime in its rational content, i.e. it is one-sided at every split odd prime. Passed at P7 (11, 5861), P11 (5) and P19 (5); 2 is two-sided. (4) OPEN: at most two tournament base points per cycle for every odd q (holds for q <= 27)."
+title: "After THM-4848/4849. (1) REFUTED (pre-registered): locked tournament cycles are rotational. It holds for q <= 19 and fails at q = 23, where 14 of the 18 locked cycles are not rotational. (2) OPEN, Ailon-Rudnick type: infinitely many primes q have an interval cycle locked at no prime, i.e. gcd(2^((q+1)/2)-1, 3^((q+1)/2)-1) = 1; this holds for 299 of the 782 primes below 6000. Locking at p happens iff lcm(ord_p 2, ord_p 3) | (q+1)/2, e.g. at 5 iff q = 7 (mod 8), which is the owner's 35. (3) REFUTED (pre-registered): the Paley determinant beta_k(P_q) in Q(sqrt(-q)) has no split odd prime in its rational content, i.e. it is one-sided at every split odd prime. It passed at P7 k = 3 (11, 5861), P11 (5), P19 (5) and P7 k = 4 (79, 151, 2843, 7529), and failed at P7 k = 4, p = 71, where (v_P, v_Pbar) = (2, 3); 2 is two-sided. (4) OPEN: at most two tournament base points per cycle for every odd q (holds for q <= 27)."
 status: >
-  OPEN (mac-mini-2026-10-29-cycle101, 2026-10-29), apart from (1), which is REFUTED, and the proved parts marked
-  PROVED. PRE-AUDIT checkpoint: independent audit pending. Evidence is FINITE-EXACT unless marked otherwise.
+  OPEN (mac-mini-2026-10-29-cycle101, 2026-10-29), apart from (1) and (3), which are REFUTED, and the proved parts
+  marked PROVED. PRE-AUDIT checkpoint: independent audit pending. Evidence is FINITE-EXACT unless marked otherwise.
   Scripts: 04-computation/experiments/cycle101_tournament_collatz_20261029/ (locked_tournaments.py, chirality.py,
-  composite_basepoints.py, locking_iff.py).
+  chirality_more.py, galois_local.py, composite_basepoints.py, locking_iff.py).
 session: mac-mini-2026-10-29-cycle101
 source: 05-knowledge/results/cycle101_tournament_collatz_dictionary_20261029.md
 related:
@@ -64,30 +64,41 @@ locked at no prime.
   Ailon–Rudnick, Acta Arith. 113 (2004) 31–38, prove the function-field analogue. Bugeaud–Corvaja–Zannier (Math. Z.
   243 (2003)) bound the gcd by `exp(εn)`.
 
-## 3. Paley one-sidedness (OPEN; pre-registered, passed so far)
+## 3. Paley one-sidedness — REFUTED (pre-registered)
 
 **Setting.** For Paley `P_q` (`q ≡ 3 mod 4`) write `β_k = det B_1(M_k(P_q)) = a + bη` in `Z[η]`, where
 `η = (−1 + √−q)/2` (THM-4848 (iv)). Then `min(v_𝔭(β), v_𝔭̄(β)) = v_p(gcd(a, b))` at a split prime `p`.
 
-**Conjecture**, written into `chirality.py` before computing it. `gcd(a, b)` has no odd prime factor that splits in
-`Q(√−q)`. Equivalently, at every split odd prime the nontrivial part of the run-observer cokernel lives over a
-single prime of `Q(√−q)`. This is CLOCK_MINIMAL_PAIRING C5's "one cubic, zero of its dual".
+**The prediction**, written into `chirality.py` before computing it. `gcd(a, b)` has no odd prime factor that
+splits in `Q(√−q)`. Equivalently, at every split odd prime the nontrivial part of the run-observer cokernel lives
+over a single prime of `Q(√−q)`, as in CLOCK_MINIMAL_PAIRING C5's "one cubic, zero of its dual".
 
-**Evidence** (`chirality.out`).
+**Evidence** (`chirality.out`, `chirality_more.out`).
 
-| case | `gcd(a, b)` | split odd primes with exponent ≥ 2 in `N(β)` |
+| case | `gcd(a, b)` | split odd primes with exponent ≥ 2 in `N(β)`: `(v_𝔭, v_𝔭̄)` |
 |---|---|---|
 | P7, k = 2 | `2^6·3` (3 inert) | none |
 | P7, k = 3 | `2^9·5^2` (5 inert) | 11: `(0, 2)`; 5861: `(2, 0)` |
 | P11, k = 2 | `2^6·11` (11 ramified) | 5: `(2, 0)` |
 | P19, k = 2 | `2^4` | 5: `(0, 2)` |
+| P7, k = 4 | `2^41·5^3·7^3·71^2` | 79: `(2, 0)`; 151: `(0, 3)`; 2843: `(0, 3)`; 7529: `(2, 0)`; **71: `(2, 3)`** |
 
-- *Strength.* All four non-automatic instances are one-sided. Primes with exponent 1 are automatically one-sided.
-  Heuristically, one-sidedness at an exponent-2 prime has probability about 2/3, so four passes are weak evidence:
-  about `(2/3)^4 ≈ 0.2` by chance.
-- *The exception at 2.* 2 splits in `Q(√−7)` and is two-sided there: `(8, 6)` for `k = 2`, `(9, 13)` for `k = 3`,
-  because `2^6` and `2^9` divide `gcd(a, b)`.
-- *Next test.* P23 (`k = 2`, a 506 × 506 observer, 22 × 22 blocks over `Q(ζ_23)`), and P7, P11 with `k = 3, 4`.
+**Outcome.**
+- *The failure.* P7 with `k = 4` (the 840 × 840 four-run observer, computed after the checkpoint) **refutes the
+  prediction** at `p = 71`. 71 splits in `Q(√−7)` (`71 ≡ 1 mod 7`), and `71² | gcd(a, b)`.
+- *The passes.* The other eight non-automatic instances are one-sided. Primes with exponent 1 are automatically
+  one-sided.
+- *The prime 2.* 2 is two-sided at every `q = 7` case: `(8, 6)`, `(9, 13)`, `(68, 41)` for `k = 2, 3, 4`.
+
+**What survives.**
+- *Converse conjugation* (THM-4848 (v), PROVED). The converse labelling swaps `𝔭` and `𝔭̄` exactly. So the pair
+  `(v_𝔭, v_𝔭̄)`, e.g. `(2, 3)` at 71, is an orientation invariant, and "one cubic, zero of its dual" is the special
+  case of a zero.
+- *The multiplicity law.* It is tested at the new non-trivial primes 71 and 2843 (≡ 1 mod 7, `f = 1`, blocks of 3
+  forced) in `galois_local.out`.
+
+**Open residue.** Is the content `gcd(a, b)` of `β_k(P_q)` always divisible only by 2, `q`, inert primes and a
+bounded set of split primes?
 
 ## 4. At most two base points for every odd `q` (OPEN)
 
