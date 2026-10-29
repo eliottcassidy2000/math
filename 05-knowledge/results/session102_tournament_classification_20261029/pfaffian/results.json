@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "universe": {
+    "rank_one_even_total": 75938,
+    "mixed_rooted": 41024,
+    "multiport_even": 150,
+    "multiport_odd": 800,
+    "determinant_crosschecks": 350,
+    "weighted_singular_controls": 300,
+    "cofactor_covariance": 67714
+  },
+  "hostile": [
+    {
+      "x": [
+        1,
+        1
+      ],
+      "matrix": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "pfaffian": 1,
+      "determinant": 1,
+      "individual_normalized_root_energy": "1",
+      "mixed_response_u_Ainv_x": "0"
+    },
+    {
+      "x": [
+        1,
+        -1
+      ],
+      "matrix": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          0,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          1,
+          -1,
+          0
+        ]
+      ],
+      "pfaffian": 3,
+      "determinant": 9,
+      "individual_normalized_root_energy": "1",
+      "mixed_response_u_Ainv_x": "2"
+    }
+  ],
+  "claims": "bounded exhaustive rank-one and mixed rooted checks; seeded multiport checks; all-size proofs separate",
+  "seed": 102
+}
