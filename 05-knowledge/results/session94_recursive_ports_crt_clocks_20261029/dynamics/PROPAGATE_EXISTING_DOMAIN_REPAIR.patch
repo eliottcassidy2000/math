@@ -1,0 +1,45 @@
+--- a/05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/antihydra/ANTIHYDRA.md
++++ b/05-knowledge/results/fixed_twists_conductors_reverse_potential_20261025/antihydra/ANTIHYDRA.md
+@@ -36,16 +36,32 @@
+ 
+ ## A3. Valuation sequences are a full shift, and cylinders are 2-adic balls
+ 
+-**Theorem.** `Phi_A : a -> (v_1, v_2, ...)`, `v_{k+1} = v_2(3 A^k(a) - 1)`, is a homeomorphism from
+-the odd 2-adic integers onto `(Z_{>=1})^N` (product topology) with `Phi_A ∘ A = shift ∘ Phi_A`. The
+-set of `a` with prescribed `(v_1,...,v_k)` is one residue class modulo `2^{1 + v_1 + ... + v_k}`.
+-*Proof.* `v_2(3a-1) = v` fixes `a` modulo `2^{v+1}`. Writing `a = a_0 + 2^{v+1} s`, `s in Z_2`,
+-`A(a) = A(a_0) + 2·3^v s`; as `s` runs over `Z_2`, `A(a)` runs over all odd 2-adic integers (`3^v` is a
+-unit), bijectively and isometrically up to the factor `2`. Induct: `(v_1,...,v_k)` determines `a`
+-modulo `2^{1+v_1+...+v_k}` and every sequence occurs; a bijective continuous map of compact
+-Hausdorff spaces is a homeomorphism. QED. The same proof gives the classical statement for `S` and
+-`S^-` (the repo has the cylinder formula for `S` in
+-[collatz_renewal_source R1](../../collatz_renewal_source_20261011.md)).
++**Domain clarification (Session64, propagated in Session94).** Let `O = 1 + 2 Z_2`,
++`h_v(y) = 1/3 + (2/3)^v y`, and remove `E_A = {h_w(1/3): w a finite positive
++valuation word}`, including the empty word. Put `Omega_A = O \ E_A`. These are
++precisely the sources whose odd-return numerator never vanishes. The excluded
++set is countable and Haar-null; already `a = 1/3` has infinite, not finite,
++first valuation. This correction is proved in
++[Session64's exact-domain theorem](../../session64_lca_reverse_valuation_20261026/session64-reverse-valuation/REPORT.md#2-exact-domains-of-full-shift-coding-proved)
++and its [independent audit, section 2](../../session64_lca_reverse_valuation_20261026/session64-audit-dynamics/REPORT.md).
++
++**Theorem.** `Phi_A : a -> (v_1, v_2, ...)`, `v_{k+1} = v_2(3 A^k(a) - 1)`, is a
++homeomorphism from `Omega_A` onto `(Z_{>=1})^N` (product topology), with
++`Phi_A ∘ A = shift ∘ Phi_A`. A prescribed finite valuation word occupies one
++residue class modulo `2^{1 + v_1 + ... + v_k}`; its infinite-itinerary cylinder
++is this class intersected with `Omega_A`.
++
++*Proof.* The inverse branch `h_v` maps O bijectively onto the exact-first-letter
++cylinder and contracts 2-adic distances by `2^-v`. Successive inverse branches
++of an infinite word therefore determine one odd source. Applying the same
++construction to every tail shows that no numerator vanishes and that each
++prescribed valuation is exact. Conversely every source in `Omega_A` recovers
++its unique word. The cylinder bases establish continuity in both directions;
++no compactness claim about the countable-alphabet sequence space is needed.
++QED. The same proof gives the statements for `S` and `S^-` after removing the
++complete finite preimage trees of `-1/3` and `+1/3`, respectively. The finite
++cylinder formula and odd-Haar weights remain unchanged; see
++[collatz_renewal_source R1](../../collatz_renewal_source_20261011.md).
+ 
+ **LCA reading** (merge with [Session56's valuation-LCA carrier](../../session56_rmq_lca_connections_20261025/valuation-lca/REPORT.md)):
+ two odd 2-adic integers share the first `k` valuations iff their lowest-digit-first trie has
