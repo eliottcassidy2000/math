@@ -1,0 +1,174 @@
+{
+  "source_revision": "7c707a4ca50f8e875753e8d67269fcc86b4dff1f",
+  "source_count": 28,
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-2312-sparse-root-bispectrum-positive-word-current.md",
+      "sha256": "1f06e56908b7d7cee7359697e8c2cdcd8fe70a722b1e32d7e701612f496ef53a",
+      "bytes": 12318,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "01-canon/theorems/THM-2319-crt-unit-bispectrum-needle-and-mixed-polarization-no-go.md",
+      "sha256": "886dfba3191cdaccbfaf9a0c97a50014c4bd9020836e2e976919698e46a09e48",
+      "bytes": 21665,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "01-canon/theorems/THM-4532-tournament-clocks-two-sheet-clocks-all-odd-tournaments-and-the-syracuse-clock.md",
+      "sha256": "977e67060bb1813e6c6db2f8b1d7c66be5768392eb7cf0293d5b23fe64c0afd9",
+      "bytes": 7723,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "01-canon/theorems/THM-4690-first-arrival-ladder-port-and-integer-clock-decompositions-and-the-nineteen-adic-copy-obstruction.md",
+      "sha256": "083eef4977d1d7ea0a9336b7a9b933318433960691d518460b6c676843ddb3aa",
+      "bytes": 29317,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_catalan_ramsey_20260927.md",
+      "sha256": "4b9597509316920bcad1c9e3c17f553edcc59c6074ee74161c8ab3aeab157775",
+      "bytes": 18088,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_completion_synthesis_20261007b.md",
+      "sha256": "9f75d86c6914e11c253351f0cec5c2de931c0345249eb145f73b1892e78685be",
+      "bytes": 17462,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_fermat_reframes_20261029/README.md",
+      "sha256": "80f669fc1234408e7ae43d53c8883da9fbb5db550a4554ca93113ad80edbf0ae",
+      "bytes": 15716,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_guards_20260921_squarefree.md",
+      "sha256": "a7727f346a5ff53d34c94d1a788c0810b28c0a203c1645f7d80be0753000df0f",
+      "bytes": 20367,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mediant_tree_K_20260930.md",
+      "sha256": "905e3ed4159c52214e34bc041d58828997f80ea7701f4833e7c73a0ae82bab03",
+      "bytes": 18323,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_pythagorean_semicircle.md",
+      "sha256": "0f81b86d453dcff50a1ac708801481d7d4d5aa3842d5f1477d6ff6d7c655f867",
+      "bytes": 23822,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "sha256": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939",
+      "bytes": 38182,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md",
+      "sha256": "e9d91f6ffb53d702b2e242089ca57b46ca65475e6c441c5cab8d4da414c85220",
+      "bytes": 29716,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_necklace_20260929_audit.md",
+      "sha256": "b193976a89211aa5ee22b388bf1b1cd3cc7e98bdf86cb510f8c8b85140b8ceaf",
+      "bytes": 24059,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_necklace_20260929_fair_splits_power_clocks_basins.md",
+      "sha256": "74a6542afcf56b8d9370602fa928e3bf77d17b9ca8ad9df57027eff149574038",
+      "bytes": 32418,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_odd_adjacent_return_20261019.md",
+      "sha256": "931c375410a4c8e08a51c36efe2de03567de8b0148361076c7c12a4a7d6df4c1",
+      "bytes": 14908,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_return_rank_obstruction_20261019.md",
+      "sha256": "a908e9cb0faff887474ca3d98c77c7be81b3383c0d35e4026b70fb64037cc4f7",
+      "bytes": 14404,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/collatz_successor_holonomy_20261014b.md",
+      "sha256": "4820f768e1deac04e1fb0d22ff0bc6b2d62363fd01b42bacb93264c3f24d4a27",
+      "bytes": 12956,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/five_manuscripts_chowla_collatz_residue_bsd_20261013.md",
+      "sha256": "0e82c50c3d220fe5611fdf42b366dc1ab513c3adfb59469638265cd9c36bce3d",
+      "bytes": 46045,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/logic_lenses_jc2_collatz_hn_20261012.md",
+      "sha256": "92309b975c51a6518029ac44450b07209bb89fdeed6aa7f4a8206408325abe27",
+      "bytes": 25427,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/procgen_sporadic_20260926_free_and_sporadic_cycles.md",
+      "sha256": "504e285e23dc92e85612bd4d968ec464ee9ccb65edc1ab78eb7b89c2c8d8970d",
+      "bytes": 34167,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/session100_selective_collatz_targets_20261029/bijections/VALUATION_CONJUGACY_AND_INTEGER_SIDECAR.md",
+      "sha256": "aed3aded377809c620968eeae2f568ef654c9371e2d0bb6cd1f72a955d1b1765",
+      "bytes": 8731,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/session101_denominator_connections_20261029/history/PROVENANCE_MAP.md",
+      "sha256": "b5f1ca9dadf76cfdc93a2ff62fb02c0dcb1c22b957ce9514df8c5b4d03d3e861",
+      "bytes": 27370,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/session101_denominator_connections_20261029/squarefree/README.md",
+      "sha256": "d0b600b82ca8c40baa1ccf5b1fedc58fc244e64ed1e5194a6af06590bef7ea7e",
+      "bytes": 12242,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/special_primes_curling_genus_zero_langlands_20261015.md",
+      "sha256": "a27c0be1a39f73a427c0ffc6219ffe960c4412ebf6633fcef5a1ce9f2f8cffa4",
+      "bytes": 15398,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026.md",
+      "sha256": "684ad99c91c218caa1262f045a22e82be1519aa481476e7176d579d78c805ff8",
+      "bytes": 41155,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/three_quantities_fortyfour_five_dudeney_fermat_clock_arrows_20261026_audit.md",
+      "sha256": "b226cd7dd293a828254a6241a382ded5260b12123e03f37dd4836af7eec8c988",
+      "bytes": 21591,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/tournament_pseudoprimes_audit_20261021.md",
+      "sha256": "1f1236f7ee8be623c1bce97b640038c8f5108efe0bfc280c6e45f8d13282fc35",
+      "bytes": 32085,
+      "inspection": "targeted passages; not a full independent audit"
+    },
+    {
+      "path": "05-knowledge/results/tournament_pseudoprimes_camion_fermat_20261021.md",
+      "sha256": "d1be8736907ba3a9c5932c289f3c4a10f5b725f4c1689edbc70661b209f96178",
+      "bytes": 35775,
+      "inspection": "targeted passages; not a full independent audit"
+    }
+  ]
+}

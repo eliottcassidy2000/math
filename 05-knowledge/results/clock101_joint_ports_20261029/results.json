@@ -1,0 +1,2926 @@
+{
+  "controls": {
+    "append_fractions": [
+      "37/35",
+      "221/175"
+    ],
+    "hostile_81_27": {
+      "automorphisms": [
+        81,
+        27
+      ],
+      "common_labelled_cyclic_triples": 67,
+      "two_run_mod3_ranks": [
+        24,
+        22
+      ]
+    },
+    "ring_vs_field": [
+      {
+        "alpha": 8687,
+        "beta": 4224,
+        "field_number_of_cycles": 101,
+        "field_return_period": 101,
+        "p": 101,
+        "ring_return_period": 10201,
+        "word": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "alpha": 8687,
+        "beta": 5818,
+        "field_number_of_cycles": 101,
+        "field_return_period": 101,
+        "p": 101,
+        "ring_return_period": 10201,
+        "word": [
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "alpha": 1,
+        "beta": 151,
+        "field_number_of_cycles": 13,
+        "field_return_period": 13,
+        "p": 13,
+        "ring_return_period": 169,
+        "word": [
+          1,
+          3,
+          5
+        ]
+      }
+    ]
+  },
+  "gates": {
+    "115 cube-free phase limits": 1,
+    "133 cube-free phase limits": 1,
+    "all nonresonant numerator valuations at most two": 9,
+    "all six joint-clock differences distinct": 36,
+    "all-length survival vs literal native clock": 62376,
+    "append 35 versus 175 retained": 1,
+    "compatible Hensel prefix": 2808,
+    "composite clock full-rank hostile": 1,
+    "composite obstruction exact cyclotomic factors": 1,
+    "exceptional repair terminates finite orbit": 17,
+    "exceptional square-prime repair all phases": 60,
+    "field translation order exactly prime": 3,
+    "finite full block rank mod two": 6,
+    "finite joint rank exactly M minus two mod two": 6,
+    "fourth-free ranking reversal": 1,
+    "geometric exact division": 2808,
+    "historical Eisenstein square clock": 1,
+    "historical Pell hypotenuse": 1,
+    "historical conjugation Frobenius clocks": 1,
+    "historical power-tournament distinction": 1,
+    "independent geometric hit": 2808,
+    "independent rotated-word capacities": 108,
+    "inherited squarefree limits": 1,
+    "joint Fourier zeros only primitive thirds": 36,
+    "joint clock closes with all states": 6,
+    "joint clock does not repeat early": 62358,
+    "lifted clock hits root": 2808,
+    "native orbit vs lifted roots": 6,
+    "native phase limits differ at most one": 36,
+    "pair deck candidates exactly mirror pair in specified examples": 8,
+    "pair deck reflection blindness": 8,
+    "prime steps do not close ring clock": 3,
+    "recovered 79 over 169 bound": 1,
+    "sharp local boundary": 108,
+    "small prime-power observer rank census": 343,
+    "small three-deck uniqueness census": 343,
+    "third deck loses absolute address": 8,
+    "third port separates reflection": 8,
+    "three distinct roots": 36,
+    "two ports already distinguish 115 and 133": 1,
+    "two timed ports isolate named zero state": 36,
+    "two-digit carry skew product": 20571,
+    "unit-carry resonance": 3
+  },
+  "ports": {
+    "115/1": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        5,
+        43
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "115/2": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        1419,
+        6406
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "115/3": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        18983,
+        453831
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "115/4": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        5132522,
+        69465015
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "133/1": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        7,
+        23
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "133/2": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        179,
+        1600
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "133/3": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        8780,
+        987897
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "133/4": {
+      "pair_deck_candidate_orbits": 2,
+      "third_port_witness": [
+        28806024,
+        58735937
+      ],
+      "values": [
+        1,
+        0
+      ]
+    },
+    "composite_hostile": {
+      "N": 105,
+      "Q_rank": 49,
+      "deterministic_states": 105,
+      "mask": [
+        0,
+        1,
+        22,
+        35,
+        43,
+        64,
+        70,
+        85
+      ],
+      "missing_factors": [
+        15,
+        105
+      ]
+    }
+  },
+  "total_gates": 157783,
+  "towers": {
+    "115": {
+      "A_C_D": [
+        27,
+        19,
+        128
+      ],
+      "multiplier": 3,
+      "prime": 101,
+      "rational_phases": [
+        "19/101",
+        "79/101",
+        "169/101"
+      ],
+      "rows": [
+        {
+          "block_Q_rank": 101,
+          "clock_digits": [
+            [
+              0
+            ],
+            [
+              58
+            ],
+            [
+              63
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 1,
+          "joint_Q_rank": 301,
+          "joint_deterministic_states": 303,
+          "joint_zero_times": [
+            0,
+            175,
+            191
+          ],
+          "last_possible_blocks_by_phase": [
+            57,
+            57,
+            57
+          ],
+          "modulus": 101,
+          "named_block_indices": [
+            0,
+            58,
+            63
+          ],
+          "phase_capacities": [
+            [
+              58,
+              5,
+              37
+            ],
+            [
+              58,
+              5,
+              37
+            ],
+            [
+              58,
+              5,
+              37
+            ]
+          ],
+          "roots": [
+            0,
+            67,
+            78
+          ],
+          "two_port_delta_offset": 175
+        },
+        {
+          "block_Q_rank": 10201,
+          "clock_digits": [
+            [
+              0,
+              0
+            ],
+            [
+              58,
+              37
+            ],
+            [
+              63,
+              51
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 2,
+          "joint_Q_rank": 30601,
+          "joint_deterministic_states": 30603,
+          "joint_zero_times": [
+            0,
+            11386,
+            15644
+          ],
+          "last_possible_blocks_by_phase": [
+            4985,
+            4985,
+            4985
+          ],
+          "modulus": 10201,
+          "named_block_indices": [
+            0,
+            3795,
+            5214
+          ],
+          "phase_capacities": [
+            [
+              3795,
+              1419,
+              4986
+            ],
+            [
+              3795,
+              1419,
+              4986
+            ],
+            [
+              3795,
+              1419,
+              4986
+            ]
+          ],
+          "roots": [
+            0,
+            3400,
+            9067
+          ],
+          "two_port_delta_offset": 11386
+        },
+        {
+          "block_Q_rank": 1030301,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58
+            ],
+            [
+              63,
+              51,
+              56
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 3,
+          "joint_Q_rank": 3090901,
+          "joint_deterministic_states": 3090903,
+          "joint_zero_times": [
+            0,
+            1729412,
+            1786360
+          ],
+          "last_possible_blocks_by_phase": [
+            576469,
+            576470,
+            576469
+          ],
+          "modulus": 1030301,
+          "named_block_indices": [
+            0,
+            595453,
+            576470
+          ],
+          "phase_capacities": [
+            [
+              576470,
+              18983,
+              434847
+            ],
+            [
+              576471,
+              18982,
+              434847
+            ],
+            [
+              576470,
+              18982,
+              434848
+            ]
+          ],
+          "roots": [
+            0,
+            686867,
+            457911
+          ],
+          "two_port_delta_offset": 1786360
+        },
+        {
+          "block_Q_rank": 104060401,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33
+            ],
+            [
+              63,
+              51,
+              56,
+              38
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 4,
+          "joint_Q_rank": 312181201,
+          "joint_deterministic_states": 312181203,
+          "joint_zero_times": [
+            0,
+            103786159,
+            119183726
+          ],
+          "last_possible_blocks_by_phase": [
+            64332491,
+            64332491,
+            64332491
+          ],
+          "modulus": 104060401,
+          "named_block_indices": [
+            0,
+            34595386,
+            39727908
+          ],
+          "phase_capacities": [
+            [
+              34595386,
+              5132522,
+              64332492
+            ],
+            [
+              34595386,
+              5132522,
+              64332492
+            ],
+            [
+              34595386,
+              5132522,
+              64332492
+            ]
+          ],
+          "roots": [
+            0,
+            34686800,
+            23124533
+          ],
+          "two_port_delta_offset": 103786159
+        },
+        {
+          "block_Q_rank": 10510100501,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 5,
+          "joint_Q_rank": 31530301501,
+          "joint_deterministic_states": 31530301503,
+          "joint_zero_times": [
+            0,
+            21332107963,
+            22908411545
+          ],
+          "last_possible_blocks_by_phase": [
+            7110702653,
+            7110702653,
+            7110702653
+          ],
+          "modulus": 10510100501,
+          "named_block_indices": [
+            0,
+            7110702654,
+            7636137181
+          ],
+          "phase_capacities": [
+            [
+              7110702654,
+              525434527,
+              2873963319
+            ],
+            [
+              7110702654,
+              525434527,
+              2873963319
+            ],
+            [
+              7110702654,
+              525434527,
+              2873963319
+            ]
+          ],
+          "roots": [
+            0,
+            7006733667,
+            1167788944
+          ],
+          "two_port_delta_offset": 21332107963
+        },
+        {
+          "block_Q_rank": 1061520150601,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 6,
+          "joint_Q_rank": 3184560451801,
+          "joint_deterministic_states": 3184560451803,
+          "joint_zero_times": [
+            0,
+            210513916981,
+            2986756752827
+          ],
+          "last_possible_blocks_by_phase": [
+            925414278614,
+            925414278614,
+            925414278614
+          ],
+          "modulus": 1061520150601,
+          "named_block_indices": [
+            0,
+            70171305660,
+            995585584275
+          ],
+          "phase_capacities": [
+            [
+              70171305660,
+              925414278615,
+              65934566325
+            ],
+            [
+              70171305660,
+              925414278615,
+              65934566325
+            ],
+            [
+              70171305660,
+              925414278615,
+              65934566325
+            ]
+          ],
+          "roots": [
+            0,
+            353840050200,
+            589733417000
+          ],
+          "two_port_delta_offset": 210513916981
+        },
+        {
+          "block_Q_rank": 107213535210701,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6,
+              60
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94,
+              37
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 7,
+          "joint_Q_rank": 321640605632101,
+          "joint_deterministic_states": 321640605632103,
+          "joint_zero_times": [
+            0,
+            120815493469538,
+            191284141025161
+          ],
+          "last_possible_blocks_by_phase": [
+            43452154868979,
+            43452154868979,
+            43452154868980
+          ],
+          "modulus": 107213535210701,
+          "named_block_indices": [
+            0,
+            63761380341720,
+            40271831156512
+          ],
+          "phase_capacities": [
+            [
+              40271831156512,
+              23489549185208,
+              43452154868980
+            ],
+            [
+              40271831156513,
+              23489549185207,
+              43452154868980
+            ],
+            [
+              40271831156512,
+              23489549185207,
+              43452154868981
+            ]
+          ],
+          "roots": [
+            0,
+            71475690140467,
+            83388305163878
+          ],
+          "two_port_delta_offset": 191284141025161
+        },
+        {
+          "block_Q_rank": 10828567056280801,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6,
+              60,
+              92
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94,
+              37,
+              62
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 8,
+          "joint_Q_rank": 32485701168842401,
+          "joint_deterministic_states": 32485701168842403,
+          "joint_zero_times": [
+            0,
+            20062533042659924,
+            29782219859178637
+          ],
+          "last_possible_blocks_by_phase": [
+            6687511014219973,
+            6687511014219974,
+            6687511014219973
+          ],
+          "modulus": 10828567056280801,
+          "named_block_indices": [
+            0,
+            9927406619726212,
+            6687511014219974
+          ],
+          "phase_capacities": [
+            [
+              6687511014219974,
+              3239895605506238,
+              901160436554588
+            ],
+            [
+              6687511014219975,
+              3239895605506237,
+              901160436554588
+            ],
+            [
+              6687511014219974,
+              3239895605506237,
+              901160436554589
+            ]
+          ],
+          "roots": [
+            0,
+            3609522352093600,
+            9625392938916267
+          ],
+          "two_port_delta_offset": 29782219859178637
+        },
+        {
+          "block_Q_rank": 1093685272684360901,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6,
+              60,
+              92,
+              37
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94,
+              37,
+              62,
+              30
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 9,
+          "joint_Q_rank": 3281055818053082701,
+          "joint_deterministic_states": 3281055818053082703,
+          "joint_zero_times": [
+            0,
+            994633568107932014,
+            1231753163106347548
+          ],
+          "last_possible_blocks_by_phase": [
+            683100884982245050,
+            683100884982245050,
+            683100884982245051
+          ],
+          "modulus": 1093685272684360901,
+          "named_block_indices": [
+            0,
+            410584387702115849,
+            331544522702644004
+          ],
+          "phase_capacities": [
+            [
+              331544522702644004,
+              79039864999471845,
+              683100884982245051
+            ],
+            [
+              331544522702644005,
+              79039864999471844,
+              683100884982245051
+            ],
+            [
+              331544522702644004,
+              79039864999471844,
+              683100884982245052
+            ]
+          ],
+          "roots": [
+            0,
+            729123515122907267,
+            486082343415271511
+          ],
+          "two_port_delta_offset": 1231753163106347548
+        },
+        {
+          "block_Q_rank": 110462212541120451001,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6,
+              60,
+              92,
+              37,
+              92
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94,
+              37,
+              62,
+              30,
+              43
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 10,
+          "joint_Q_rank": 331386637623361353001,
+          "joint_deterministic_states": 331386637623361353003,
+          "joint_zero_times": [
+            0,
+            142080033744390488243,
+            303088888423989956224
+          ],
+          "last_possible_blocks_by_phase": [
+            53669618226533155993,
+            53669618226533155992,
+            53669618226533155992
+          ],
+          "modulus": 110462212541120451001,
+          "named_block_indices": [
+            0,
+            101029629474663318741,
+            47360011248130162747
+          ],
+          "phase_capacities": [
+            [
+              47360011248130162747,
+              53669618226533155994,
+              9432583066457132259
+            ],
+            [
+              47360011248130162748,
+              53669618226533155993,
+              9432583066457132259
+            ],
+            [
+              47360011248130162747,
+              53669618226533155993,
+              9432583066457132260
+            ]
+          ],
+          "roots": [
+            0,
+            36820737513706817000,
+            24547158342471211333
+          ],
+          "two_port_delta_offset": 303088888423989956224
+        },
+        {
+          "block_Q_rank": 11156683466653165551101,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6,
+              60,
+              92,
+              37,
+              92,
+              12
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94,
+              37,
+              62,
+              30,
+              43,
+              48
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 11,
+          "joint_Q_rank": 33470050399959496653301,
+          "joint_deterministic_states": 33470050399959496653303,
+          "joint_zero_times": [
+            0,
+            4279728539904326192260,
+            16048638639665735432387
+          ],
+          "last_possible_blocks_by_phase": [
+            5807137253431253740304,
+            5807137253431253740304,
+            5807137253431253740304
+          ],
+          "modulus": 11156683466653165551101,
+          "named_block_indices": [
+            0,
+            1426576179968108730753,
+            5349546213221911810795
+          ],
+          "phase_capacities": [
+            [
+              1426576179968108730753,
+              3922970033253803080042,
+              5807137253431253740305
+            ],
+            [
+              1426576179968108730753,
+              3922970033253803080042,
+              5807137253431253740305
+            ],
+            [
+              1426576179968108730753,
+              3922970033253803080042,
+              5807137253431253740305
+            ]
+          ],
+          "roots": [
+            0,
+            7437788977768777034067,
+            1239631496294796172344
+          ],
+          "two_port_delta_offset": 4279728539904326192260
+        },
+        {
+          "block_Q_rank": 1126825030131969720661201,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              58,
+              37,
+              58,
+              33,
+              68,
+              6,
+              60,
+              92,
+              37,
+              92,
+              12,
+              0
+            ],
+            [
+              63,
+              51,
+              56,
+              38,
+              73,
+              94,
+              37,
+              62,
+              30,
+              43,
+              48,
+              33
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 12,
+          "joint_Q_rank": 3380475090395909161983601,
+          "joint_deterministic_states": 3380475090395909161983603,
+          "joint_zero_times": [
+            0,
+            4279728539904326192260,
+            1120560301838329124991386
+          ],
+          "last_possible_blocks_by_phase": [
+            753304929519193345664071,
+            753304929519193345664071,
+            753304929519193345664071
+          ],
+          "modulus": 1126825030131969720661201,
+          "named_block_indices": [
+            0,
+            1426576179968108730753,
+            373520100612776374997128
+          ],
+          "phase_capacities": [
+            [
+              1426576179968108730753,
+              372093524432808266266375,
+              753304929519193345664072
+            ],
+            [
+              1426576179968108730753,
+              372093524432808266266375,
+              753304929519193345664072
+            ],
+            [
+              1426576179968108730753,
+              372093524432808266266375,
+              753304929519193345664072
+            ]
+          ],
+          "roots": [
+            0,
+            375608343377323240220400,
+            626013905628872067034000
+          ],
+          "two_port_delta_offset": 4279728539904326192260
+        }
+      ],
+      "word": [
+        1,
+        1,
+        5
+      ]
+    },
+    "133": {
+      "A_C_D": [
+        27,
+        31,
+        128
+      ],
+      "multiplier": 3,
+      "prime": 101,
+      "rational_phases": [
+        "31/101",
+        "97/101",
+        "49/101"
+      ],
+      "rows": [
+        {
+          "block_Q_rank": 101,
+          "clock_digits": [
+            [
+              0
+            ],
+            [
+              16
+            ],
+            [
+              94
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 1,
+          "joint_Q_rank": 301,
+          "joint_deterministic_states": 303,
+          "joint_zero_times": [
+            0,
+            49,
+            284
+          ],
+          "last_possible_blocks_by_phase": [
+            77,
+            77,
+            77
+          ],
+          "modulus": 101,
+          "named_block_indices": [
+            0,
+            16,
+            94
+          ],
+          "phase_capacities": [
+            [
+              16,
+              78,
+              6
+            ],
+            [
+              16,
+              78,
+              6
+            ],
+            [
+              16,
+              78,
+              6
+            ]
+          ],
+          "roots": [
+            0,
+            67,
+            78
+          ],
+          "two_port_delta_offset": 49
+        },
+        {
+          "block_Q_rank": 10201,
+          "clock_digits": [
+            [
+              0,
+              0
+            ],
+            [
+              16,
+              85
+            ],
+            [
+              94,
+              86
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 2,
+          "joint_Q_rank": 30601,
+          "joint_deterministic_states": 30603,
+          "joint_zero_times": [
+            0,
+            25804,
+            26342
+          ],
+          "last_possible_blocks_by_phase": [
+            8600,
+            8600,
+            8600
+          ],
+          "modulus": 10201,
+          "named_block_indices": [
+            0,
+            8601,
+            8780
+          ],
+          "phase_capacities": [
+            [
+              8601,
+              179,
+              1420
+            ],
+            [
+              8601,
+              179,
+              1420
+            ],
+            [
+              8601,
+              179,
+              1420
+            ]
+          ],
+          "roots": [
+            0,
+            3400,
+            9067
+          ],
+          "two_port_delta_offset": 25804
+        },
+        {
+          "block_Q_rank": 1030301,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96
+            ],
+            [
+              94,
+              86,
+              0
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 3,
+          "joint_Q_rank": 3090901,
+          "joint_deterministic_states": 3090903,
+          "joint_zero_times": [
+            0,
+            26342,
+            2963692
+          ],
+          "last_possible_blocks_by_phase": [
+            979116,
+            979115,
+            979115
+          ],
+          "modulus": 1030301,
+          "named_block_indices": [
+            0,
+            987897,
+            8780
+          ],
+          "phase_capacities": [
+            [
+              8780,
+              979117,
+              42403
+            ],
+            [
+              8781,
+              979116,
+              42403
+            ],
+            [
+              8780,
+              979116,
+              42404
+            ]
+          ],
+          "roots": [
+            0,
+            686867,
+            457911
+          ],
+          "two_port_delta_offset": 2963692
+        },
+        {
+          "block_Q_rank": 104060401,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27
+            ],
+            [
+              94,
+              86,
+              0,
+              57
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 4,
+          "joint_Q_rank": 312181201,
+          "joint_deterministic_states": 312181203,
+          "joint_zero_times": [
+            0,
+            86418073,
+            176207813
+          ],
+          "last_possible_blocks_by_phase": [
+            45324462,
+            45324462,
+            45324462
+          ],
+          "modulus": 104060401,
+          "named_block_indices": [
+            0,
+            28806024,
+            58735937
+          ],
+          "phase_capacities": [
+            [
+              28806024,
+              29929913,
+              45324463
+            ],
+            [
+              28806024,
+              29929913,
+              45324463
+            ],
+            [
+              28806024,
+              29929913,
+              45324463
+            ]
+          ],
+          "roots": [
+            0,
+            34686800,
+            23124533
+          ],
+          "two_port_delta_offset": 86418073
+        },
+        {
+          "block_Q_rank": 10510100501,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 5,
+          "joint_Q_rank": 31530301501,
+          "joint_deterministic_states": 31530301503,
+          "joint_zero_times": [
+            0,
+            16097449166,
+            22251283486
+          ],
+          "last_possible_blocks_by_phase": [
+            5365816387,
+            5365816388,
+            5365816387
+          ],
+          "modulus": 10510100501,
+          "named_block_indices": [
+            0,
+            7417094495,
+            5365816388
+          ],
+          "phase_capacities": [
+            [
+              5365816388,
+              2051278107,
+              3093006005
+            ],
+            [
+              5365816389,
+              2051278106,
+              3093006005
+            ],
+            [
+              5365816388,
+              2051278106,
+              3093006006
+            ]
+          ],
+          "roots": [
+            0,
+            7006733667,
+            1167788944
+          ],
+          "two_port_delta_offset": 22251283486
+        },
+        {
+          "block_Q_rank": 1061520150601,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 6,
+          "joint_Q_rank": 3184560451801,
+          "joint_deterministic_states": 3184560451803,
+          "joint_zero_times": [
+            0,
+            1056597398765,
+            1378054248115
+          ],
+          "last_possible_blocks_by_phase": [
+            602168734561,
+            602168734561,
+            602168734562
+          ],
+          "modulus": 1061520150601,
+          "named_block_indices": [
+            0,
+            459351416038,
+            352199132921
+          ],
+          "phase_capacities": [
+            [
+              352199132921,
+              107152283117,
+              602168734562
+            ],
+            [
+              352199132922,
+              107152283116,
+              602168734562
+            ],
+            [
+              352199132921,
+              107152283116,
+              602168734563
+            ]
+          ],
+          "roots": [
+            0,
+            353840050200,
+            589733417000
+          ],
+          "two_port_delta_offset": 1378054248115
+        },
+        {
+          "block_Q_rank": 107213535210701,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43,
+              3
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33,
+              56
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 7,
+          "joint_Q_rank": 321640605632101,
+          "joint_deterministic_states": 321640605632103,
+          "joint_zero_times": [
+            0,
+            10931735603524,
+            179391982699733
+          ],
+          "last_possible_blocks_by_phase": [
+            56153415698735,
+            56153415698735,
+            56153415698735
+          ],
+          "modulus": 107213535210701,
+          "named_block_indices": [
+            0,
+            3643911867841,
+            59797327566577
+          ],
+          "phase_capacities": [
+            [
+              3643911867841,
+              56153415698736,
+              47416207644123
+            ],
+            [
+              3643911867841,
+              56153415698736,
+              47416207644123
+            ],
+            [
+              3643911867841,
+              56153415698736,
+              47416207644123
+            ]
+          ],
+          "roots": [
+            0,
+            71475690140467,
+            83388305163878
+          ],
+          "two_port_delta_offset": 10931735603524
+        },
+        {
+          "block_Q_rank": 10828567056280801,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43,
+              3,
+              88
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33,
+              56,
+              39
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 8,
+          "joint_Q_rank": 32485701168842401,
+          "joint_deterministic_states": 32485701168842403,
+          "joint_zero_times": [
+            0,
+            12723375602351750,
+            28315305031228588
+          ],
+          "last_possible_blocks_by_phase": [
+            5197309809625612,
+            5197309809625611,
+            5197309809625611
+          ],
+          "modulus": 10828567056280801,
+          "named_block_indices": [
+            0,
+            9438435010409529,
+            4241125200783916
+          ],
+          "phase_capacities": [
+            [
+              4241125200783916,
+              5197309809625613,
+              1390132045871271
+            ],
+            [
+              4241125200783917,
+              5197309809625612,
+              1390132045871271
+            ],
+            [
+              4241125200783916,
+              5197309809625612,
+              1390132045871272
+            ]
+          ],
+          "roots": [
+            0,
+            3609522352093600,
+            9625392938916267
+          ],
+          "two_port_delta_offset": 28315305031228588
+        },
+        {
+          "block_Q_rank": 1093685272684360901,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43,
+              3,
+              88,
+              20
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33,
+              56,
+              39,
+              0
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 9,
+          "joint_Q_rank": 3281055818053082701,
+          "joint_deterministic_states": 3281055818053082703,
+          "joint_zero_times": [
+            0,
+            12723375602351750,
+            678029328408076648
+          ],
+          "last_possible_blocks_by_phase": [
+            867675496548335350,
+            867675496548335350,
+            867675496548335351
+          ],
+          "modulus": 1093685272684360901,
+          "named_block_indices": [
+            0,
+            226009776136025549,
+            4241125200783916
+          ],
+          "phase_capacities": [
+            [
+              4241125200783916,
+              221768650935241633,
+              867675496548335351
+            ],
+            [
+              4241125200783917,
+              221768650935241632,
+              867675496548335351
+            ],
+            [
+              4241125200783916,
+              221768650935241632,
+              867675496548335352
+            ]
+          ],
+          "roots": [
+            0,
+            729123515122907267,
+            486082343415271511
+          ],
+          "two_port_delta_offset": 678029328408076648
+        },
+        {
+          "block_Q_rank": 110462212541120451001,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43,
+              3,
+              88,
+              20,
+              22
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33,
+              56,
+              39,
+              0,
+              98
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 10,
+          "joint_Q_rank": 331386637623361353001,
+          "joint_deterministic_states": 331386637623361353003,
+          "joint_zero_times": [
+            0,
+            72861257325575896114,
+            321556193544804456644
+          ],
+          "last_possible_blocks_by_phase": [
+            82898312073076186842,
+            82898312073076186842,
+            82898312073076186842
+          ],
+          "modulus": 110462212541120451001,
+          "named_block_indices": [
+            0,
+            24287085775191965371,
+            107185397848268152214
+          ],
+          "phase_capacities": [
+            [
+              24287085775191965371,
+              82898312073076186843,
+              3276814692852298786
+            ],
+            [
+              24287085775191965371,
+              82898312073076186843,
+              3276814692852298786
+            ],
+            [
+              24287085775191965371,
+              82898312073076186843,
+              3276814692852298786
+            ]
+          ],
+          "roots": [
+            0,
+            36820737513706817000,
+            24547158342471211333
+          ],
+          "two_port_delta_offset": 72861257325575896114
+        },
+        {
+          "block_Q_rank": 11156683466653165551101,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43,
+              3,
+              88,
+              20,
+              22,
+              63
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33,
+              56,
+              39,
+              0,
+              98,
+              21
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 11,
+          "joint_Q_rank": 33470050399959496653301,
+          "joint_deterministic_states": 33470050399959496653303,
+          "joint_zero_times": [
+            0,
+            7280675583635392869707,
+            20950219427597341135303
+          ],
+          "last_possible_blocks_by_phase": [
+            4556514614653982755198,
+            4556514614653982755197,
+            4556514614653982755197
+          ],
+          "modulus": 11156683466653165551101,
+          "named_block_indices": [
+            0,
+            6983406475865780378434,
+            2426891861211797623235
+          ],
+          "phase_capacities": [
+            [
+              2426891861211797623235,
+              4556514614653982755199,
+              4173276990787385172666
+            ],
+            [
+              2426891861211797623236,
+              4556514614653982755198,
+              4173276990787385172666
+            ],
+            [
+              2426891861211797623235,
+              4556514614653982755198,
+              4173276990787385172667
+            ]
+          ],
+          "roots": [
+            0,
+            7437788977768777034067,
+            1239631496294796172344
+          ],
+          "two_port_delta_offset": 20950219427597341135303
+        },
+        {
+          "block_Q_rank": 1126825030131969720661201,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              16,
+              85,
+              96,
+              27,
+              71,
+              43,
+              3,
+              88,
+              20,
+              22,
+              63,
+              26
+            ],
+            [
+              94,
+              86,
+              0,
+              57,
+              51,
+              33,
+              56,
+              39,
+              0,
+              98,
+              21,
+              50
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 12,
+          "joint_Q_rank": 3380475090395909161983601,
+          "joint_deterministic_states": 3380475090395909161983603,
+          "joint_zero_times": [
+            0,
+            891171529826544254121181,
+            1680783195581610225534857
+          ],
+          "last_possible_blocks_by_phase": [
+            566563964938099645482914,
+            566563964938099645482914,
+            566563964938099645482914
+          ],
+          "modulus": 1126825030131969720661201,
+          "named_block_indices": [
+            0,
+            297057176608848084707060,
+            560261065193870075178285
+          ],
+          "phase_capacities": [
+            [
+              297057176608848084707060,
+              263203888585021990471225,
+              566563964938099645482915
+            ],
+            [
+              297057176608848084707060,
+              263203888585021990471225,
+              566563964938099645482915
+            ],
+            [
+              297057176608848084707060,
+              263203888585021990471225,
+              566563964938099645482915
+            ]
+          ],
+          "roots": [
+            0,
+            375608343377323240220400,
+            626013905628872067034000
+          ],
+          "two_port_delta_offset": 891171529826544254121181
+        }
+      ],
+      "word": [
+        1,
+        3,
+        3
+      ]
+    },
+    "7x1_135": {
+      "A_C_D": [
+        343,
+        79,
+        512
+      ],
+      "multiplier": 7,
+      "prime": 13,
+      "rational_phases": [
+        "79/169",
+        "361/169",
+        "337/169"
+      ],
+      "rows": [
+        {
+          "block_Q_rank": 13,
+          "clock_digits": [
+            [
+              0
+            ],
+            [
+              3
+            ],
+            [
+              2
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 1,
+          "joint_Q_rank": 37,
+          "joint_deterministic_states": 39,
+          "joint_zero_times": [
+            0,
+            8,
+            10
+          ],
+          "last_possible_blocks_by_phase": [
+            8,
+            8,
+            9
+          ],
+          "modulus": 13,
+          "named_block_indices": [
+            0,
+            3,
+            2
+          ],
+          "phase_capacities": [
+            [
+              2,
+              1,
+              9
+            ],
+            [
+              3,
+              0,
+              9
+            ],
+            [
+              2,
+              0,
+              10
+            ]
+          ],
+          "roots": [
+            0,
+            11,
+            3
+          ],
+          "two_port_delta_offset": 10
+        },
+        {
+          "block_Q_rank": 169,
+          "clock_digits": [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              2,
+              9
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 2,
+          "joint_Q_rank": 505,
+          "joint_deterministic_states": 507,
+          "joint_zero_times": [
+            0,
+            166,
+            359
+          ],
+          "last_possible_blocks_by_phase": [
+            63,
+            63,
+            63
+          ],
+          "modulus": 169,
+          "named_block_indices": [
+            0,
+            55,
+            119
+          ],
+          "phase_capacities": [
+            [
+              55,
+              64,
+              49
+            ],
+            [
+              55,
+              64,
+              49
+            ],
+            [
+              55,
+              64,
+              49
+            ]
+          ],
+          "roots": [
+            0,
+            24,
+            55
+          ],
+          "two_port_delta_offset": 166
+        },
+        {
+          "block_Q_rank": 2197,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9
+            ],
+            [
+              2,
+              9,
+              7
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 3,
+          "joint_Q_rank": 6589,
+          "joint_deterministic_states": 6591,
+          "joint_zero_times": [
+            0,
+            3908,
+            4729
+          ],
+          "last_possible_blocks_by_phase": [
+            1301,
+            1302,
+            1301
+          ],
+          "modulus": 2197,
+          "named_block_indices": [
+            0,
+            1576,
+            1302
+          ],
+          "phase_capacities": [
+            [
+              1302,
+              274,
+              620
+            ],
+            [
+              1303,
+              273,
+              620
+            ],
+            [
+              1302,
+              273,
+              621
+            ]
+          ],
+          "roots": [
+            0,
+            1883,
+            224
+          ],
+          "two_port_delta_offset": 4729
+        },
+        {
+          "block_Q_rank": 28561,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8
+            ],
+            [
+              2,
+              9,
+              7,
+              12
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 4,
+          "joint_Q_rank": 85681,
+          "joint_deterministic_states": 85683,
+          "joint_zero_times": [
+            0,
+            57457,
+            83000
+          ],
+          "last_possible_blocks_by_phase": [
+            19151,
+            19151,
+            19151
+          ],
+          "modulus": 28561,
+          "named_block_indices": [
+            0,
+            19152,
+            27666
+          ],
+          "phase_capacities": [
+            [
+              19152,
+              8514,
+              894
+            ],
+            [
+              19152,
+              8514,
+              894
+            ],
+            [
+              19152,
+              8514,
+              894
+            ]
+          ],
+          "roots": [
+            0,
+            4080,
+            13406
+          ],
+          "two_port_delta_offset": 57457
+        },
+        {
+          "block_Q_rank": 371293,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 5,
+          "joint_Q_rank": 1113877,
+          "joint_deterministic_states": 1113879,
+          "joint_zero_times": [
+            0,
+            83000,
+            143140
+          ],
+          "last_possible_blocks_by_phase": [
+            323578,
+            323578,
+            323579
+          ],
+          "modulus": 371293,
+          "named_block_indices": [
+            0,
+            47713,
+            27666
+          ],
+          "phase_capacities": [
+            [
+              27666,
+              20047,
+              323579
+            ],
+            [
+              27667,
+              20046,
+              323579
+            ],
+            [
+              27666,
+              20046,
+              323580
+            ]
+          ],
+          "roots": [
+            0,
+            318251,
+            356138
+          ],
+          "two_port_delta_offset": 143140
+        },
+        {
+          "block_Q_rank": 4826809,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 6,
+          "joint_Q_rank": 14480425,
+          "joint_deterministic_states": 14480427,
+          "joint_zero_times": [
+            0,
+            143140,
+            7880153
+          ],
+          "last_possible_blocks_by_phase": [
+            2579003,
+            2579003,
+            2579003
+          ],
+          "modulus": 4826809,
+          "named_block_indices": [
+            0,
+            47713,
+            2626717
+          ],
+          "phase_capacities": [
+            [
+              47713,
+              2579004,
+              2200091
+            ],
+            [
+              47713,
+              2579004,
+              2200091
+            ],
+            [
+              47713,
+              2579004,
+              2200091
+            ]
+          ],
+          "roots": [
+            0,
+            689544,
+            2955189
+          ],
+          "two_port_delta_offset": 143140
+        },
+        {
+          "block_Q_rank": 62748517,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0,
+              12
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7,
+              9
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 7,
+          "joint_Q_rank": 188245549,
+          "joint_deterministic_states": 188245551,
+          "joint_zero_times": [
+            0,
+            138203996,
+            173908264
+          ],
+          "last_possible_blocks_by_phase": [
+            46067997,
+            46067998,
+            46067997
+          ],
+          "modulus": 62748517,
+          "named_block_indices": [
+            0,
+            57969421,
+            46067998
+          ],
+          "phase_capacities": [
+            [
+              46067998,
+              11901423,
+              4779095
+            ],
+            [
+              46067999,
+              11901422,
+              4779095
+            ],
+            [
+              46067998,
+              11901422,
+              4779096
+            ]
+          ],
+          "roots": [
+            0,
+            53784443,
+            51223279
+          ],
+          "two_port_delta_offset": 173908264
+        },
+        {
+          "block_Q_rank": 815730721,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0,
+              12,
+              10
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7,
+              9,
+              6
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 8,
+          "joint_Q_rank": 2447192161,
+          "joint_deterministic_states": 2447192163,
+          "joint_zero_times": [
+            0,
+            1267677302,
+            2056363774
+          ],
+          "last_possible_blocks_by_phase": [
+            422559099,
+            422559100,
+            422559099
+          ],
+          "modulus": 815730721,
+          "named_block_indices": [
+            0,
+            685454591,
+            422559100
+          ],
+          "phase_capacities": [
+            [
+              422559100,
+              262895491,
+              130276129
+            ],
+            [
+              422559101,
+              262895490,
+              130276129
+            ],
+            [
+              422559100,
+              262895490,
+              130276130
+            ]
+          ],
+          "roots": [
+            0,
+            116532960,
+            615959932
+          ],
+          "two_port_delta_offset": 2056363774
+        },
+        {
+          "block_Q_rank": 10604499373,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0,
+              12,
+              10,
+              8
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7,
+              9,
+              6,
+              4
+            ]
+          ],
+          "cyclic_root_triple": true,
+          "exponent": 9,
+          "joint_Q_rank": 31813498117,
+          "joint_deterministic_states": 31813498119,
+          "joint_zero_times": [
+            0,
+            11056445954,
+            21633901078
+          ],
+          "last_possible_blocks_by_phase": [
+            3685481983,
+            3685481984,
+            3685481983
+          ],
+          "modulus": 10604499373,
+          "named_block_indices": [
+            0,
+            7211300359,
+            3685481984
+          ],
+          "phase_capacities": [
+            [
+              3685481984,
+              3525818375,
+              3393199013
+            ],
+            [
+              3685481985,
+              3525818374,
+              3393199013
+            ],
+            [
+              3685481984,
+              3525818374,
+              3393199014
+            ]
+          ],
+          "roots": [
+            0,
+            9089570891,
+            7141805700
+          ],
+          "two_port_delta_offset": 21633901078
+        },
+        {
+          "block_Q_rank": 137858491849,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0,
+              12,
+              10,
+              8,
+              9
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7,
+              9,
+              6,
+              4,
+              8
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 10,
+          "joint_Q_rank": 413575475545,
+          "joint_deterministic_states": 413575475547,
+          "joint_zero_times": [
+            0,
+            265564430906,
+            307955384149
+          ],
+          "last_possible_blocks_by_phase": [
+            88521476967,
+            88521476968,
+            88521476967
+          ],
+          "modulus": 137858491849,
+          "named_block_indices": [
+            0,
+            102651794716,
+            88521476968
+          ],
+          "phase_capacities": [
+            [
+              88521476968,
+              14130317748,
+              35206697132
+            ],
+            [
+              88521476969,
+              14130317747,
+              35206697132
+            ],
+            [
+              88521476968,
+              14130317747,
+              35206697133
+            ]
+          ],
+          "roots": [
+            0,
+            19694070264,
+            123791298803
+          ],
+          "two_port_delta_offset": 307955384149
+        },
+        {
+          "block_Q_rank": 1792160394037,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0,
+              12,
+              10,
+              8,
+              9,
+              3
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7,
+              9,
+              6,
+              4,
+              8,
+              4
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 11,
+          "joint_Q_rank": 5376481182109,
+          "joint_deterministic_states": 5376481182111,
+          "joint_zero_times": [
+            0,
+            1548681810790,
+            1919866333094
+          ],
+          "last_possible_blocks_by_phase": [
+            1152204949671,
+            1152204949671,
+            1152204949671
+          ],
+          "modulus": 1792160394037,
+          "named_block_indices": [
+            0,
+            516227270263,
+            639955444364
+          ],
+          "phase_capacities": [
+            [
+              516227270263,
+              123728174101,
+              1152204949672
+            ],
+            [
+              516227270263,
+              123728174101,
+              1152204949672
+            ],
+            [
+              516227270263,
+              123728174101,
+              1152204949672
+            ]
+          ],
+          "roots": [
+            0,
+            1536137480603,
+            950942249897
+          ],
+          "two_port_delta_offset": 1548681810790
+        },
+        {
+          "block_Q_rank": 23298085122481,
+          "clock_digits": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              3,
+              4,
+              9,
+              8,
+              1,
+              0,
+              12,
+              10,
+              8,
+              9,
+              3,
+              1
+            ],
+            [
+              2,
+              9,
+              7,
+              12,
+              0,
+              7,
+              9,
+              6,
+              4,
+              8,
+              4,
+              5
+            ]
+          ],
+          "cyclic_root_triple": false,
+          "exponent": 12,
+          "joint_Q_rank": 69894255367441,
+          "joint_deterministic_states": 69894255367443,
+          "joint_zero_times": [
+            0,
+            6925162992901,
+            28802272243649
+          ],
+          "last_possible_blocks_by_phase": [
+            13697327707930,
+            13697327707930,
+            13697327707930
+          ],
+          "modulus": 23298085122481,
+          "named_block_indices": [
+            0,
+            2308387664300,
+            9600757414549
+          ],
+          "phase_capacities": [
+            [
+              2308387664300,
+              7292369750249,
+              13697327707931
+            ],
+            [
+              2308387664300,
+              7292369750249,
+              13697327707931
+            ],
+            [
+              2308387664300,
+              7292369750249,
+              13697327707931
+            ]
+          ],
+          "roots": [
+            0,
+            3328297874640,
+            950942249897
+          ],
+          "two_port_delta_offset": 6925162992901
+        }
+      ],
+      "word": [
+        1,
+        3,
+        5
+      ]
+    }
+  }
+}
