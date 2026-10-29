@@ -100,6 +100,18 @@ so **tournaments are graphs with the even power sums switched off**. Two more me
     digraphs `(4,2)`.
   - `t = 0` switches the even power sums off.
   - Checked for nine `(q,t)` through order 9.
+- *Self-converse tournaments (A002785, the repo's SC(n)).* Added after the audit was launched. A permutation `σ` maps
+  a labelled tournament to its converse, `σ·T = T^op`, only if `σ` has at most one fixed point and every other cycle
+  has length `≡ 2 (mod 4)`. In that case there are `2^((mᵀGm − m_1)/2)` such tournaments:
+  - each pair orbit must flip orientation at every step;
+  - a non-reversing orbit therefore needs even length;
+  - the antipodal orbit of a `2r`-cycle needs odd length `r`.
+
+  Twisted Burnside then gives, with the same field,
+
+      Σ SC(n) x^n = E[ (1 + W_1 x) · exp( Σ_{j ≡ 2 (mod 4)} e^(X_j) x^j / j ) ].
+
+  This reproduces OEIS A002785 for `n = 1..16`: `1, 1, 2, 2, 8, 12, 88, 176, 2752, …`.
 
 **(C) Cameron–Martin is the inherited PDE.** Put `F(y) = E[exp(Σ_p y_p W_p / p)]`, the multivariate form whose
 specialisation `y_p = x^p` is (1). Since `E[e^(X_p) Φ(X)] = e^(Var X_p / 2) E[Φ(X + Cov(X_p, X))]`,

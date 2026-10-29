@@ -71,7 +71,8 @@ has generating function `exp(Σ W_p x^p/p)`. The tournament numbers are its aver
 - **The family.** The same field on all integers gives graphs, and tournaments are graphs with the even power sums
   switched off. Doubling the covariance gives digraphs, and base 3 gives oriented graphs. In general, session98's
   palette family with `q` colours, `t` of them reversal-fixed, is the field with covariance `ln q · gcd`, odd weights
-  `q^(−1/2) e^X` and even weights `(t/q) e^X`.
+  `q^(−1/2) e^X` and even weights `(t/q) e^X`. The self-converse tournaments (A002785) are the twisted version
+  `E[(1 + W_1 x) exp(Σ_{j ≡ 2 (mod 4)} e^(X_j) x^j / j)]`, checked through order 16.
 - **The inherited PDE.** It is the Cameron–Martin formula for this field. Inserting a `p`-cycle shifts the field by
   `ln 2 · gcd(p, ·)`, and session98's projective state is that shift taken modulo the dilation direction.
 - **The normalized series is meromorphic** (session98 first; found independently here). `F(y)` extends to all of
@@ -132,7 +133,9 @@ in-neighbourhoods. It works because T5's in-neighbourhoods are cyclic intervals 
 - *The 2-part.* The number of spurious 2-factors equals the rank of the plus-minus connecting map
   `B = (S − P)/2` from the mod-2 kernel to the mod-2 cokernel of the plus sector. For T5 that kernel is the cut space
   of `K5`, which has dimension 4. `B` maps it isomorphically, giving four spurious `Z/2`.
-- *The 3-part.* The mod-3 glue of the index-54 chart gives four spurious `Z/3`.
+- *The 3-part.* The mod-3 glue of the index-54 chart gives four spurious `Z/3`. THM-4846 (D′) gives the general mod-3
+  formula: two block-triangular pieces in the basis adapted to the invariant flag, and one connecting rank when the
+  sign sector is invertible mod 3, as for T5.
 
 Together these are the four spurious `Z/6`, one for each independent star.
 
@@ -188,7 +191,8 @@ cd 04-computation/experiments/growth_gf_runs_fermat_20261029
 python3 gf_gaussian.py 80          # THM-4845 checks -> out/gf_gaussian.out
 python3 t5_check.py                # T5 Smith forms (reproduces THREE_RUN_GLUE (R7))
 python3 census_runs.py 5 3 --snf   # any n, k; outputs in out/census_n*_k*.out
-python3 star_orientation.py; python3 block_checks.py; python3 ghost_lemma.py
+python3 star_orientation.py; python3 block_checks.py; python3 ghost_lemma.py; python3 ghost3_lemma.py
+python3 jacobi_sign_sector.py      # THM-4846 (F)
 python3 compound_kernel.py 6       # n = 4..8 -> out/compound_n*.out
 python3 fast_runs.py 8             # two-run census with Hamiltonian cycles -> out/fast_m2_n8.out
 python3 torsion_vs_hc2.py          # HYP-9445 (1), (2) tables

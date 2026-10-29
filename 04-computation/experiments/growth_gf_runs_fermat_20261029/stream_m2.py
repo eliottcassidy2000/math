@@ -2,7 +2,7 @@
 
 For every strong class (gentourng), counts (number of Hamiltonian cycles, torsion in coker M_2) and lists every class
 with at least two Hamiltonian cycles and a torsion-free M_2 (a counterexample to HYP-9445 (1)), plus the unique-cycle
-classes.  usage: python3 stream_m2.py n out_path
+classes.  usage: python3 stream_m2.py n out_path [res/mod]   (res/mod: gentourng's split of the class list)
 """
 import sys
 import subprocess
@@ -13,8 +13,9 @@ from runs import tour_from_bits, gp_matrix, gp_batch, parse_vec
 def main():
     n = int(sys.argv[1])
     outp = sys.argv[2]
+    split = sys.argv[3:4]
     tup = tuples2(n)
-    proc = subprocess.Popen(['gentourng', '-q', str(n)], stdout=subprocess.PIPE, text=True)
+    proc = subprocess.Popen(['gentourng', '-q', str(n)] + split, stdout=subprocess.PIPE, text=True)
     stats = {}
     counter = []
     uniq = []
@@ -61,6 +62,7 @@ def main():
         f.write('n=%d classes=%d\n' % (n, total))
         f.write('SUMMARY: %s\n' % sorted(stats.items()))
         f.write('unique-HC classes: %d, torsion-free: %d\n' % (len(uniq), sum(1 for _, t in uniq if not t)))
+        f.write('unique-HC list (bits, torsion): %s\n' % uniq)
         f.write('counterexamples to HYP-9445 (1) at k = 2: %s\n' % (counter if counter else 'none'))
 
 

@@ -1,6 +1,6 @@
 ---
 id: HYP-9445
-title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 8, k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments are torsion-free (1, 1, 3, 8, 16, 36 of 1, 1, 3, 8, 21, 55 for orders 3..8, k = 2); (3) the non-star kernel of the second permanental compound from order 6; (4) the mod-3 ghost formula; (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
+title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 8, k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments are torsion-free (1, 1, 3, 8, 16, 36 of 1, 1, 3, 8, 21, 55 for orders 3..8, k = 2); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
 status: >
   OPEN (mac-mini-2026-10-29-growth, 2026-10-29; pre-audit). Every evidence statement below is FINITE-EXACT, over
   all isomorphism classes from gentourng with exact Smith forms (PARI matsnf) unless marked otherwise.
@@ -71,17 +71,21 @@ invariant factor of `M_k(T)` equals 1.
      The run records the torsion-free count, which equals the unimodular count unless a singular torsion-free class
      occurs, as at order 6.
    - **Question.** Express the criterion through Douglas's structural decomposition of these tournaments.
-3. **The non-star kernel of the second permanental compound.**
+3. **The non-star kernel of the second permanental compound.** (`out/nonstar_kernel_n6.out` lists the 12 order-6
+   classes. Two strong classes there have no star vector at all, with kernels of dimension 2 and 3.)
    - **Background.** The two-arc unordered observer is `per A[β, α]` on pairs (THM-4846 (B)). Through order 5 its
      kernel is always spanned by vertex stars, vectors supported on the pairs through one vertex.
    - **Failures.** This fails for 12 of 56 classes at order 6, 168 of 456 at order 7 and 2808 of 6880 at order 8.
    - **Question.** Describe the non-star kernel vectors. Candidates are signed 4-cycles of pairs, or relations
      coming from 2-element modules.
-4. **The mod-3 ghost formula.**
-   - THM-4846 (D) proves `spur_2 = rank(B̄ : ker P̄ → coker P̄)`.
-   - **Question.** Give the analogous formula for `spur_3` through the uniserial mod-3 structure of `Z_(3)[S_3]`. Here
-     the trivial and sign characters are glued to the invariant flag of the standard sector; see THREE_RUN_GLUE (R3).
-   - **Data.** The data for orders up to 7 are in `census_n*_k3.out`.
+4. **The mod-3 ghost formula — RESOLVED by THM-4846 (D′).**
+   - In the basis adapted to the invariant flag, the glued observer reduces mod 3 to two block-lower-triangular
+     pieces with diagonals `(P, S, P)` and `(S, P, S)`.
+   - Hence `spur_3 = rank I + rank II − rank P̄ − rank S̄ − 2 rank [[P̄, L̄12],[0, S̄]]`. This reduces to one connecting
+     rank when `S̄` is invertible.
+   - Verified on every class through order 6.
+   - **Still open.** A characterization of when the connecting maps are injective on the trivial-sector kernel, as
+     they are for T5.
 5. **Is T5 the only boundary killer?**
    - **The property.** T5's plus sector annihilates every lifted `(k+1)`-set boundary for `k = 3`.
    - **Data.** No other class of order 5, 6 or 7 does this for `k = 3`.
@@ -94,8 +98,9 @@ invariant factor of `M_k(T)` equals 1.
    - **Question.** Find the other blocks explicitly, for instance as matrices on pairs or flags.
 7. **The gcd Gaussian field and A000568.** By THM-4845, `Σ a_n x^n = E[exp(Σ W_p x^p/p)]`.
    - **New results?** Does the field give new congruences, or uniform asymptotics, for A000568 and its family? The
-     family includes the self-converse counts A002785 and the k-valued counts of THM-4720. The oriented graphs
-     A001174 already fit: the base-3 field reproduces them through order 9 (THM-4845 (B)).
+     family includes the k-valued counts of THM-4720. The oriented graphs A001174 already fit: the base-3 field
+     reproduces them through order 9. So do the self-converse counts A002785, through the twisted form through order
+     16 (THM-4845 (B)).
    - **A closed form?** Is there a closed form for the core GF `E[exp(v Σ_{p≥3} W_p x^p/p)]` beyond the average,
      for example through product identities for the divisor field?
 8. **Fermat.**

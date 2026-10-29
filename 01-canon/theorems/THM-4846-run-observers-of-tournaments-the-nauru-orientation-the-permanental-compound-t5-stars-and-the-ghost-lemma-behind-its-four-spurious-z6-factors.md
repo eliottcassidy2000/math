@@ -46,7 +46,7 @@ scripts:
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/star_orientation.py, block_checks.py
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/compound_kernel.py, ghost_lemma.py
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/fast_runs.py, torsion_vs_hc.py, torsion_vs_hc2.py
-  - 04-computation/experiments/growth_gf_runs_fermat_20261029/jacobi_sign_sector.py, p2_vs_hc.py, s2_vs_hc_n8.py, stream_m2.py, random_torsion.py, hc_small_k3_n8.py
+  - 04-computation/experiments/growth_gf_runs_fermat_20261029/jacobi_sign_sector.py, p2_vs_hc.py, s2_vs_hc_n8.py, stream_m2.py, random_torsion.py, hc_small_k3_n8.py, ghost3_lemma.py, nonstar_kernel.py
 outputs:
   - 04-computation/experiments/growth_gf_runs_fermat_20261029/out/ (census_n*_k*.out, compound_n*.out, fast_m2_n7.out, fast_m2_n8.out)
 ---
@@ -151,6 +151,28 @@ cycles of subtournaments enter it directly. This is the structural reason to exp
 HYP-9445. The plus sector instead has `per`, for which there is no Jacobi identity.
 
 Verified for `k = 2` on every class with `n ≤ 6`: 13 962 entries (`jacobi_sign_sector.py`).
+
+**(D′) The mod-3 ghost lemma.** Added after the audit was launched; this answers HYP-9445 (4).
+- *The 3-local image.* With `Q = [[1,1],[1,0]]` (columns `e = (1,1)`, the invariant line mod 3, and `f = (1,0)`),
+  the 3-local image of the chart is the set of `(u, v, W)` such that `W′ = Q⁻¹WQ` is congruent to `[[u, *],[0, v]]`
+  mod 3.
+- *The action.* `M` acts by `u → Pu`, `v → Sv` and `W′ → L′W′`, where `L′ = [[L11, L12],[L21, L22]]` satisfies
+  `L21 ≡ 0`, `L11 ≡ P` and `L22 ≡ S`.
+- *The two blocks.* In the `Z_(3)`-basis `(u, v, y11, w12, y21, y22)`, with `w11 = u + 3y11`, `w21 = 3y21` and
+  `w22 = v + 3y22`, `M` reduces mod 3 to two block-lower-triangular pieces. Put `D1 = (L11 − P)/3`, `D2 = L21/3` and
+  `D3 = (L22 − S)/3`. Then
+
+      I = [[P,0,0],[D2,S,0],[D1,L12,P]],   II = [[S,0,0],[L12,P,0],[D3,D2,S]],
+
+  so `rank_F3 M = rank I + rank II`. Since `rank_F3 N = rank P̄ + rank S̄ + 2 rank [[P,L12],[0,S]]`,
+
+      spur_3 = rank I + rank II − rank P̄ − rank S̄ − 2 rank [[P̄, L̄12],[0, S̄]].
+
+- *When `S̄` is invertible* (as for T5), eliminating with `S̄` reduces this to
+  `spur_3 = rank(Ē : ker P̄ → coker P̄)` with `E = D1 − L12 S⁻¹ D2`. For T5 that map is again an isomorphism on the
+  4-dimensional span of the stars mod 3, which gives the four spurious `Z/3`.
+- *Verification.* Checked on every class `n = 4, 5, 6` against direct mod-3 ranks (`ghost3_lemma.py`). The classes
+  with `spur_3 > 0` number 0, 3 and 21, as in the census.
 
 **(E) What changes as the order grows (FINITE-EXACT).**
 

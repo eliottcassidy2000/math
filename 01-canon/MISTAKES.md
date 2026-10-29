@@ -21346,3 +21346,27 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **First failed implication:** substituting the vector action into the transformed update does not give `P C E C^T P^T`; the actual expression is `(T^T P)E(T^T P)^T`.
 - **Repair / survivor:** use `T^T P=PC`. For independent ports the exact clock guard is then `CEC^T=E`; dependent ports require `P(CEC^T-E)P^T=0`. The original full-matrix test `T^T P E P^T T=P E P^T`, all determinant recurrences and the directly computed C3 census were already correct.
 - **Missing coordinate / next question:** retain the dual convention and port dependencies before reducing the guard to a smaller matrix. Minimality with a restricted legal-coupling algebra remains open. No numeric mistake ID is reserved.
+
+## 2026-10-29 — MISTAKE-694: novelty claimed for results already in the tree from concurrent same-day packets (`mac-mini-2026-10-29-growth`)
+
+- **Location:** checkpoint a37e12900d. The parts concerned are THM-4845 (D)-(E) (the meromorphic normalized
+  A000568 series with poles exactly at `4^k` of order `3k+1`, and non-P-recursiveness), THM-4846 (A) (the one-arc run
+  observer as an orientation of the star-transposition graph) and the T5 four-`Z/6` analysis, together with their
+  index rows.
+- **Error:** all three were presented as new. They were already in this worktree when written:
+  - session98's `limits/ALL_POLES_CORE_EXPANSION.md` (commit e6199da417), pulled in with this session's own
+    lane-claim push;
+  - the research packet `four_vertex_glue_fermat_20261029` (09:00), which has the vacancy-walk form and the exact
+    sequence `0 -> coker(M^r) -> coker(A^r) -> (Z/6)^4 -> 0`.
+- **First failed implication:** the start-up listing of session98's packet (only `recurrence/` at the time) was taken
+  as the state of concurrent work. The packets were never re-listed before the theorems were written.
+- **Repair / survivor:** commit 447812773b marks the three parts concurrent, with priority to the other packets.
+  What survives as new:
+  - the Gaussian generating function and its form for session98's whole palette family;
+  - the permanental compound, the star proof and the general ghost lemma;
+  - the censuses by order and the Hamiltonian-cycle/torsion data.
+  The mathematics agrees exactly with both packets.
+- **Mechanism / lesson:** right before writing a theorem on a shared owner directive, run
+  `git log --since=<session start> --stat origin/main` and grep the new files for the result's key words (here
+  "meromorphic", "poles", "star-transposition", "vacancy"). A directory listing taken at the start of the session is
+  not evidence that nobody has the result.

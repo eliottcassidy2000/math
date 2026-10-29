@@ -4,6 +4,7 @@
 (3) graphs A000088 n<=12 and digraphs A000273 n<=8 from the same Gaussian functional
 (3b) oriented graphs A001174 n<=9 from the base-3 field (covariance ln3 gcd)
 (3c) palette family (q,t) in [(2, 0), (2, 2), (3, 1), (3, 3), (4, 0), (4, 2), (4, 4), (5, 1), (5, 3)]: Gaussian field (cov ln q gcd) = direct Burnside, n <= 9
+(3d) self-converse tournaments = OEIS A002785 for n = 1..16 from the twisted Gaussian form
 (4) Cameron-Martin shift = inherited PDE: 1066 coefficient identities, degree <= 21
 (5) f_n = n! a_n / 2^C(n,2) = sum_k 4^(-kn) P_k(n) exactly for n <= 80
     P_1(n) = 32*C(n,3)

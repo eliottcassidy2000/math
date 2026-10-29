@@ -180,6 +180,22 @@ def main():
             assert direct.denominator == 1
         checked_qt.append((q, t))
     out.append('(3c) palette family (q,t) in %s: Gaussian field (cov ln q gcd) = direct Burnside, n <= %d' % (checked_qt, min(NQ, NH)))
+    # (3d) self-converse tournaments (twisted Burnside): sigma.converse fixes T iff m_1 <= 1 and every other cycle
+    #      length is 2 mod 4; then 2^((m^T G m - m_1)/2) fixed tournaments.  Gaussian form
+    #      E[(1 + W_1 x) exp(sum_{j = 2 mod 4} e^X_j x^j / j)], same field.
+    A002785 = [1, 1, 2, 2, 8, 12, 88, 176, 2752, 8784, 279968, 1492288, 95458560, 872687552, 111698291584, 1787154671104]
+    sc = []
+    for n in range(1, 17):
+        tot = Fraction(0)
+        for m in partitions(n, [1] + [j for j in range(2, n + 1) if j % 4 == 2]):
+            if m.get(1, 0) > 1:
+                continue
+            e = quad(m) - m.get(1, 0)
+            assert e % 2 == 0
+            tot += Fraction(2 ** (e // 2), zee(m))
+        sc.append(tot)
+    assert sc == A002785
+    out.append('(3d) self-converse tournaments = OEIS A002785 for n = 1..16 from the twisted Gaussian form')
     # (4) Cameron-Martin = cycle-insertion PDE, coefficientwise on F(y;2) = sum_m 2^t(m) prod y^m/(j^m m!):
     #     d/dy_p F = 2^((p-1)/2)/p * F(2^gcd(p,j) y_j)
     NP = 21
