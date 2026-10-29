@@ -1,0 +1,14 @@
+{
+  "normal_gates": 11628,
+  "optimized_gates": 11628,
+  "byte_identical": true,
+  "certificate_sha256": "ce41d0e9724d1126fbb45ad5dc012456715a7b441f99d39cd0bb3af83671ee41",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "lf_normalized_sources": {
+    "verify.py": "7c121144c5d2e86abb14713e05a45437609f937e11a9b4b6da60d49a45f62b40",
+    "README.md": "f4e7d103fa3a70c49e3c0b410c3c01bdd3a7602765a182b74fdb9432e2900023",
+    "FERMAT.md": "ec898fcb304e603fc32c8cb24100e604fd24a248cb1c3c0cd50a9ce756d48f7b"
+  },
+  "audit": "Same-agent verification, not an independent referee"
+}
