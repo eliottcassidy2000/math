@@ -153,6 +153,54 @@ This is a concrete reason to keep representation cost, query cost and
 weighted composition cost separate. A bit can be reconstructed for free on
 the realization locus and become necessary after taking superpositions.
 
+## G5 LCA incidence supplies exactly the missing parity bit
+
+Write q(u)=ad+bc for the four-coordinate realization equation and let
+B(u,v)=q(u+v)+q(u)+q(v) be its polar pairing. For a parity-weighted
+collection of realized objects u_i, retain
+
+\[
+U=\sum_i u_i,\quad T=\sum_i q(u_i),\quad Z=T+q(U).
+\]
+
+The extra bit Z measures failure of the aggregate to lie on the
+single-object realization equation. The exact merge law is
+
+\[
+\boxed{(U,Z)*(V,W)=(U+V,\ Z+W+B(U,V)).} \tag{6}
+\]
+
+This law is associative because B is bilinear. It is equivalent to
+ordinary addition of the five linear coordinates (U,T), with
+T=Z+q(U). For any binary composition tree whose leaves are individual
+objects, every leaf has Z=0 and
+
+\[
+Z_{\rm root}=\sum_{\text{internal nodes }v}
+B(U_{v,\rm left},U_{v,\rm right})
+=\sum_{i<j}B(u_i,u_j).
+\]
+
+Each leaf pair is charged once, at its lowest common ancestor. Thus
+the joint incidence can recover the extra bit without retaining all
+pairwise entries. It cannot be inferred from U alone: the two objects
+u=1 and v=8 have T=0 and aggregate U=9, whereas the single object9 has
+T=1. Guard v=15 reads T and distinguishes the two collections.
+
+Under a named symplectic transport g on the four-coordinate carrier,
+q(gU)+q(U) is a linear functional eta_g(U). Hence T transforms as
+T'=T+eta_g(U), while the defect Z is invariant. The checker verifies this
+for every one of the720 transported matrices and every U, and verifies
+the merge reassociation identity on all4096 triples of aggregate vectors.
+
+This supplies an all-tree closed parity carrier for the declared quadratic
+incidence problem. Its additional bit is both necessary and sufficient.
+Its32 states are minimal under parity addition and the ten guards: the
+binary incidence rank five proves that all32 responses occur and differ.
+Rational weights still require the ten-dimensional carrier of G4; the
+nonassociative re-marking transport in the nine-vertex tournament is a
+different operation and is not flattened by this associative law.
+
 ## The arithmetic connection and its boundary
 
 For a principally polarized abelian surface over a field of characteristic

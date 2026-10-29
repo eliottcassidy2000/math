@@ -10,6 +10,7 @@ No claim of independent human review, Lean verification or external priority.
 | fifteen.py | all15 Lagrangians,10 guards,720 symplectic matrices; complete fixed/adaptive query search | declared quadratic queries and symplectic transport only |
 | symplectic_frobenius.py | every field unit and square root in F2,F4,F8,F64,F256;129 deterministic matrix probes per field; full phase witness orbit | larger groups not exhaustively enumerated; square identity CITED classically |
 | precision.py | explicit integer Smith transformations; elementary-operation replay and dense matrix equality; independent images mod2 and mod4 | arbitrary integer mixtures and the named ten-guard response |
+| atom_precision.py | native endpoint DP through12; full permutations through7; selected independent walk inclusion-exclusion; full81/27 automorphism census; compact unimodular Smith witnesses | endpoint modules, not arbitrary multiple-run closure; q19 counts inherited |
 
 Every script uses active exceptions rather than Python assertions, so its
 checks also execute under `python -O`. Receipts are parsed and compared with
@@ -34,10 +35,11 @@ precision. F64 and F256 fail the specified involutive Frobenius correction.
 
 The existing 81/27 tournament pair and native-complement controls in
 [charged recurrence AUDIT](../charged_recurrence_memory_20261028/AUDIT.md)
-are inherited unchanged. No new experiment here claims to classify their
-full complement/re-marking carrier or to increase the enumerated A000568
-prefix. A map to a symplectic response would have to preserve those
-transporters before such a claim could be made.
+are inherited. The new endpoint experiment reconstructs the labelled pair,
+re-enumerates its full81/27 groups and verifies the new modulo9 separator.
+It does not classify the full complement/re-marking carrier or increase
+the enumerated A000568 prefix. A map to a symplectic response would have
+to preserve those transporters before such a claim could be made.
 
 ## Incoming work and audit limits
 
@@ -45,15 +47,18 @@ Session97 independently supplies the same five-cylinder theorem and point
 independence checks, plus stronger Cantor, genus-three, fruit-isogeny and
 K3-family results. Those are cited in the README and take precedence over
 rediscovering their statements. The distinctive local additions here are
-the exact observation minima, characteristic-sensitive weighted carrier,
-Smith precision recurrence and concrete exceptional transport tests.
+the exact observation minima, LCA realization-defect merge, characteristic-sensitive
+weighted carrier, Smith precision recurrence, guarded Paley cokernel formula,
+modulo9 hostile separator and concrete exceptional transport tests. The
+Paley endpoint norm and spectrum are inherited from the recovered Session54
+packet and its independent audit.
 
 The Big O Speedrun primary contraction appendix was inspected through its
 crossing-mode expansion and precision budget; the full recursive complexity
 argument and Lean projects were not rebuilt. ALGORITHMS preserves that
 scope. No ETH consequence is used as an unconditional dependency here.
 
-Run each of the five scripts without `--write` to replay its stored receipt,
+Run each of the six scripts without `--write` to replay its stored receipt,
 and repeat with `-O` when changing check code. The repository documentation
 validator should be run after edits to these notes. Normal script replays
 do not fetch network data or mutate receipts.

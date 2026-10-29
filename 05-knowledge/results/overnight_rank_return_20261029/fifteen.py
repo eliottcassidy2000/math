@@ -139,6 +139,24 @@ def census():
         phase_histogram[key] = phase_histogram.get(key, 0) + 1
     need(phase_histogram == {(15, 5, 5): 1, (7, 3, 3): 15, (3, 2, 2): 100,
                              (1, 0, 0): 300, (0, 0, 0): 304}, 'Frobenius query census')
+    def quadratic(x):
+        return ((x & 1)*(x >> 3 & 1)) ^ ((x >> 1 & 1)*(x >> 2 & 1))
+    def pairing(x, y):
+        return quadratic(x ^ y) ^ quadratic(x) ^ quadratic(y)
+    for x in range(16):
+        for y in range(16):
+            for z in range(16):
+                need(pairing(x ^ y, z) == pairing(x, z) ^ pairing(y, z), 'LCA bilinearity')
+                need(pairing(x, y) ^ pairing(x ^ y, z) ==
+                     pairing(y, z) ^ pairing(x, y ^ z), 'LCA tree reassociation')
+    for _, induced in group:
+        eta = sum((quadratic(apply(induced, e)) ^ quadratic(e)) << i
+                  for i, e in enumerate(standard))
+        for x in range(16):
+            need(quadratic(apply(induced, x)) ^ quadratic(x) == (eta & x).bit_count() % 2,
+                 'linear transport of the fifth parity coordinate')
+    need(quadratic(1) == quadratic(8) == 0 and quadratic(1 ^ 8) == 1,
+         'same aggregate vector but different joint response')
     # Save all matrices: a Frobenius matrix can be looked up exactly.
     return dict(lagrangians=[dict(nonzero_vectors=l, four_bit_code=c,
                                   fifth_bit=plucker(l)[1]) for l, c in zip(lagrangians, codes)],
@@ -147,6 +165,7 @@ def census():
                 number_of_five_query_separators=len(separators),
                 example_separator=[forms[j] for j in separators[0]],
                 binary_response_rank=5, rational_response_rank=10,
+                lca_merge_triples=4096, realization_defect_hostile=[1, 8, 9],
                 frobenius_query_census=[dict(fixed_kernels=k[0], fixed_queries=k[1],
                                              adaptive_queries=k[2], matrices=v)
                                         for k, v in sorted(phase_histogram.items())],

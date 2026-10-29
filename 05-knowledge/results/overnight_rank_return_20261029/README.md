@@ -4,11 +4,12 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
-The new composition comparison is [FIFTEEN G1--G4](FIFTEEN.md): one
+The new composition comparison is [FIFTEEN G1--G5](FIFTEEN.md): one
 Lagrangian needs four storage bits, natural quadratic guards require five
 queries even adaptively, and weighted response carriers have dimensions
 five over F2 and ten over Q. The carrier closes under named symplectic
-transport. [FROBENIUS S1--S4](FROBENIUS.md) extends its realization equation
+transport. One additional incidence bit closes parity composition; LCA
+pairing charges recover it exactly. [FROBENIUS S1--S4](FROBENIUS.md) extends its realization equation
 to characteristic-two fields and connects the transport to the classical
 exceptional isogeny whose square is Frobenius. Exact F64/F256 witnesses have
 phase periods 12/16; no Frobenius twist makes either an involution.
@@ -19,6 +20,13 @@ Smith factors 1,1,1,1,1,2,2,2,2,4. The cumulative response cost modulo
 C_(k+1)=1024 C_k for k>=2. [ALGORITHMS](ALGORITHMS.md) connects this concrete
 lifting obstruction to the source and precision bookkeeping in the primary
 Big O Speedrun manuscripts, with their cost models and audit limits retained.
+
+[ATOM_PRECISION A1--A5](ATOM_PRECISION.md) applies the method to actual
+tournament endpoint responses. It proves a full prime-Paley cokernel formula
+under explicit coprimality guards, connects Paley7 endpoint parity literally
+to the seven-prime Hamming bank, and separates the81/27 control modulo9
+although its cyclic triples and total Hamilton counts agree. Session54's
+endpoint spectrum and quadratic order are recovered and credited.
 
 [CONTROLLER C1--C3](CONTROLLER.md) proves that the cheaper ternary parser
 terminates on every positive odd integer and identifies exactly five

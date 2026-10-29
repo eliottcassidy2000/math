@@ -202,6 +202,7 @@
       ]
     }
   ],
+  "lca_merge_triples": 4096,
   "linear_response_coefficients": [
     31,
     19,
@@ -216,6 +217,11 @@
   ],
   "number_of_five_query_separators": 162,
   "rational_response_rank": 10,
+  "realization_defect_hostile": [
+    1,
+    8,
+    9
+  ],
   "symplectic_transport": [
     {
       "input_columns": [
