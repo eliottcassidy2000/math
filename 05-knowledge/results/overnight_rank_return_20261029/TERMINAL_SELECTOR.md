@@ -200,6 +200,17 @@ amplitudes. A common field clock cannot supply their missing joint
 alignment for free. Cubing still kills the old nilpotent layer and is
 not an automorphism of the whole local algebra.
 
+Incoming 6aefbd1f0e now supplies a DIFFERENT invertible lift on the old
+cyclic twelve-dimensional module: [PERIODIC_FROBENIUS_LIFT F1--F2](../overnight_research_20261029/PERIODIC_FROBENIUS_LIFT.md)
+uses X->X^487, retaining the nilpotent layers and transporting the scalar
+selector. This repairs clock transport, not the six missing amplitudes.
+[JOINT_PHASE](JOINT_PHASE.md) constructs a direct-sum extension in an
+explicit eighteen-dimensional chart. It conjugates the clock correctly,
+but changes the physical source functional and fails to commute with
+every nonidentity native name operation in that chart. Conjugating all
+operations preserves responses algebraically; native realization and
+existence of a different name-compatible lift remain open.
+
 For the particular physical prefix a, all six scalar series obey the old
 degree-twelve ternary recurrence. Their joint trajectory has period 726
 with no transient. That physical trajectory is much smaller than the
@@ -238,6 +249,12 @@ odd-order unique-fixed-vertex argument cannot be imported to these even
 sources with three paths. A different path-level involution explaining
 the identity-selector evenness remains an open target; S11 only refutes
 the natural reflection as a free pairing.
+
+[REFLECTION_QUERY J1--J4](REFLECTION_QUERY.md) now supplies a source- and
+port-preserving recurrence for these fixed covers. For any guarded even
+tournament with a supplied anti-involution, it uses subsets of the m-3
+free involution pairs in O(2^(m-3)m^2) arithmetic operations. It explains
+the fixed counts by a bijection, without claiming a new parity involution.
 
 ## S7. Verification and next boundary
 

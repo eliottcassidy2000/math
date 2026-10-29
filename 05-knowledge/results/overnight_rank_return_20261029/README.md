@@ -4,6 +4,10 @@
 external arithmetic. Same-agent review; no independent audit or external
 priority claim. Universal Collatz and LRC(14) remain OPEN.**
 
+[Morning consolidation and remaining targets](MORNING_REPORT.md) collect
+the results for the October29 08:00 Denver cutoff, with their source and
+operation scopes.
+
 **13:00 UTC continuation.** [TERMINAL_SELECTOR S1--S6](TERMINAL_SELECTOR.md)
 closes the periodic weighted observer under all six terminal assignments.
 The same 35 component states and degree-18 clock now expose rank 24 over Q,
@@ -15,6 +19,20 @@ amplitude, without changing period 726. The six physical count series have
 constant parity (0,0,0,1,1,1). Natural reflection has fixed covers already at
 eight, so it cannot serve as the proposed free pairing. General vertex
 re-marking, new actual complements and physical-law minimality remain open.
+
+[REFLECTION_QUERY J1--J4](REFLECTION_QUERY.md) gives an all-size recurrence
+for reflection-fixed three-path responses on any even tournament with a
+supplied anti-involution and three paired source orbits. It reduces the
+subset parameter to m-3 free involution pairs for n=2m, preserving the
+middle-edge guard. Periodic fixed counts are evaluated through 32; a
+transitive six-vertex hostile and both 81/27 source guards delimit scope.
+Incoming [the compatible Frobenius lift](../overnight_research_20261029/PERIODIC_FROBENIUS_LIFT.md)
+repairs the old scalar clock by X->X^487 with selector transport. It does
+not remove the additional joint amplitudes found here.
+[JOINT_PHASE](JOINT_PHASE.md) supplies an explicit joint chart: its lift
+conjugates the clock but changes the source functional and fails to commute
+with native names. This is a limitation of the chosen lift, not a proof
+against every possible compatible lift.
 
 **12:00 UTC continuation.** [DEFECT_TRANSFER D1--D8](DEFECT_TRANSFER.md)
 extends joint-port counting to actual complements. For a supplied order of

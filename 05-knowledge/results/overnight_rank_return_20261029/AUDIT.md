@@ -387,3 +387,31 @@ attainment question open. Both normal and optimized new replays pass.
 An initial checker call used the wrong subset_query signature; it failed
 before writing a receipt, was corrected to the independent subset table,
 and every verification was rerun.
+
+### Reflection recurrence and incoming clock repair
+
+REFLECTION_QUERY proves a bijection from fixed ordered covers to a pair
+of half-orbit paths with complementary free-orbit masks. The six source
+and target ports, the anti-involution and the central-edge test are
+explicit hypotheses. Its O(2^(m-3)m^2) arithmetic bound is for fixed
+responses on arbitrary guarded even sources; it does not supersede the
+periodic linear transfer or enumerate all covers. Forty-eight random
+guarded sources with varied ports agree with full enumeration through
+twelve, and the periodic values through 32 agree at the three previously
+enumerated sizes. Transitive order six has one fixed cover, excluding a
+universal evenness claim. Both 81/27 sources have asymmetric converse
+score multisets; neither is forced into this symmetry reduction.
+
+Incoming 6aefbd1f0e supplies the explicit CRT lift X->X^487 on the old
+twelve-dimensional cyclic response. It is compatible with our warning
+about literal cubing: it is a different map which preserves nilpotents
+and transports the observation selector. The new eighteen-dimensional
+module has an abstract extension on its extra squarefree summand. The
+subsequent JOINT_PHASE check makes it explicit: a rank-eighteen chart,
+order-five clock conjugacy, and all six native S3 matrices in the same
+chart. The chosen lift has nonzero name commutators of ranks 5 or 10 and
+changes the physical source functional. Its identity selector is fixed,
+unlike the dual incoming chart; source transport remains required. This
+does not exclude a different compatible lift or construct a vertex
+operation. Normal and optimized reflection and joint-phase checks use
+explicit exceptions as validity gates.
