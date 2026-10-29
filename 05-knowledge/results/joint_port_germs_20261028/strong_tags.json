@@ -1,0 +1,38 @@
+{
+  "status": "FINITE-EXACT",
+  "rows": [
+    {
+      "order": 2,
+      "presentations": 1,
+      "port_pairs": 2,
+      "tests": 2,
+      "final_order": 8,
+      "scope": "complete"
+    },
+    {
+      "order": 3,
+      "presentations": 2,
+      "port_pairs": 6,
+      "tests": 12,
+      "final_order": 13,
+      "scope": "complete"
+    },
+    {
+      "order": 4,
+      "presentations": 8,
+      "port_pairs": 12,
+      "tests": 96,
+      "final_order": 16,
+      "scope": "complete"
+    },
+    {
+      "order": 5,
+      "presentations": 4,
+      "port_pairs": 2,
+      "tests": 8,
+      "final_order": 21,
+      "scope": "four chosen presentations and two ordered pairs"
+    }
+  ],
+  "checks": 944
+}

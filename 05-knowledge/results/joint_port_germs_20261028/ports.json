@@ -1,0 +1,916 @@
+{
+  "status": "FINITE-EXACT",
+  "census": [
+    {
+      "order": 1,
+      "Hamilton_presentations": 1,
+      "registered_tuples": 2,
+      "arity": 2
+    },
+    {
+      "order": 2,
+      "Hamilton_presentations": 1,
+      "registered_tuples": 6,
+      "arity": 2
+    },
+    {
+      "order": 3,
+      "Hamilton_presentations": 2,
+      "registered_tuples": 24,
+      "arity": 2
+    },
+    {
+      "order": 4,
+      "Hamilton_presentations": 8,
+      "registered_tuples": 160,
+      "arity": 2
+    },
+    {
+      "order": 5,
+      "Hamilton_presentations": 64,
+      "registered_tuples": 1920,
+      "arity": 2
+    },
+    {
+      "order": 6,
+      "Hamilton_presentations": 1024,
+      "registered_tuples": 43008,
+      "arity": 2
+    },
+    {
+      "order": 7,
+      "Hamilton_presentations": 32768,
+      "registered_tuples": 229376,
+      "arity": 1
+    }
+  ],
+  "seven_pair": [
+    {
+      "native_complement": false,
+      "spectra": [
+        {
+          "ports": 1,
+          "coefficients": [
+            1,
+            7,
+            21,
+            35,
+            35,
+            21,
+            7,
+            1
+          ]
+        },
+        {
+          "ports": 2,
+          "coefficients": [
+            1,
+            14,
+            91,
+            364,
+            1001,
+            2002,
+            3003,
+            3432,
+            3003,
+            2002,
+            1001,
+            364,
+            91,
+            14,
+            1
+          ]
+        },
+        {
+          "ports": 3,
+          "coefficients": [
+            1,
+            21,
+            210,
+            1330,
+            5985,
+            20349,
+            54264,
+            116280,
+            203490,
+            293930,
+            352716,
+            352716,
+            293930,
+            203490,
+            116280,
+            54264,
+            20349,
+            5985,
+            1330,
+            210,
+            21,
+            1
+          ]
+        }
+      ],
+      "C3": [
+        {
+          "port": 0,
+          "C3_isomorphic": true,
+          "C3_H": [
+            1479,
+            1479
+          ]
+        },
+        {
+          "port": 1,
+          "C3_isomorphic": true,
+          "C3_H": [
+            1335,
+            1335
+          ]
+        },
+        {
+          "port": 2,
+          "C3_isomorphic": false,
+          "C3_H": [
+            1983,
+            1611
+          ]
+        },
+        {
+          "port": 3,
+          "C3_isomorphic": false,
+          "C3_H": [
+            1611,
+            1611
+          ]
+        },
+        {
+          "port": 4,
+          "C3_isomorphic": false,
+          "C3_H": [
+            1611,
+            1983
+          ]
+        },
+        {
+          "port": 5,
+          "C3_isomorphic": true,
+          "C3_H": [
+            1335,
+            1335
+          ]
+        },
+        {
+          "port": 6,
+          "C3_isomorphic": true,
+          "C3_H": [
+            1479,
+            1479
+          ]
+        }
+      ],
+      "successor_dent_H": [
+        259,
+        259
+      ]
+    },
+    {
+      "native_complement": true,
+      "spectra": [
+        {
+          "ports": 1,
+          "coefficients": [
+            1,
+            7,
+            21,
+            35,
+            35,
+            21,
+            7,
+            1
+          ]
+        },
+        {
+          "ports": 2,
+          "coefficients": [
+            1,
+            14,
+            91,
+            364,
+            1001,
+            2002,
+            3003,
+            3432,
+            3003,
+            2002,
+            1001,
+            364,
+            91,
+            14,
+            1
+          ]
+        },
+        {
+          "ports": 3,
+          "coefficients": [
+            1,
+            21,
+            210,
+            1330,
+            5985,
+            20349,
+            54264,
+            116280,
+            203490,
+            293930,
+            352716,
+            352716,
+            293930,
+            203490,
+            116280,
+            54264,
+            20349,
+            5985,
+            1330,
+            210,
+            21,
+            1
+          ]
+        }
+      ],
+      "C3": [
+        {
+          "port": 0,
+          "C3_isomorphic": true,
+          "C3_H": [
+            729,
+            729
+          ]
+        },
+        {
+          "port": 1,
+          "C3_isomorphic": false,
+          "C3_H": [
+            777,
+            981
+          ]
+        },
+        {
+          "port": 2,
+          "C3_isomorphic": false,
+          "C3_H": [
+            1383,
+            777
+          ]
+        },
+        {
+          "port": 3,
+          "C3_isomorphic": false,
+          "C3_H": [
+            981,
+            981
+          ]
+        },
+        {
+          "port": 4,
+          "C3_isomorphic": false,
+          "C3_H": [
+            777,
+            1383
+          ]
+        },
+        {
+          "port": 5,
+          "C3_isomorphic": false,
+          "C3_H": [
+            981,
+            777
+          ]
+        },
+        {
+          "port": 6,
+          "C3_isomorphic": true,
+          "C3_H": [
+            729,
+            729
+          ]
+        }
+      ],
+      "successor_dent_H": [
+        307,
+        293
+      ]
+    }
+  ],
+  "hostile_81_27": [
+    {
+      "group_order": 81,
+      "binary_attachment_spectrum": [
+        1,
+        2,
+        6,
+        14,
+        21,
+        28,
+        32,
+        28,
+        21,
+        14,
+        6,
+        2,
+        1
+      ],
+      "orbits": 176
+    },
+    {
+      "group_order": 27,
+      "binary_attachment_spectrum": [
+        1,
+        6,
+        18,
+        38,
+        63,
+        84,
+        92,
+        84,
+        63,
+        38,
+        18,
+        6,
+        1
+      ],
+      "orbits": 512
+    }
+  ],
+  "long_register_controls": [
+    {
+      "order": 1,
+      "ports": [
+        0
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 1,
+      "ports": [
+        0
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 1,
+      "ports": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 2,
+      "ports": [
+        1
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 2,
+      "ports": [
+        0
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 2,
+      "ports": [
+        1,
+        1
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 2,
+      "ports": [
+        0,
+        1
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 2,
+      "ports": [
+        1,
+        1,
+        1
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 2,
+      "ports": [
+        0,
+        1,
+        0
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 2,
+      "ports": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 2,
+      "ports": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 2,
+      "ports": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 2,
+      "ports": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 2,
+      "ports": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 2,
+      "ports": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 3,
+      "ports": [
+        2
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 3,
+      "ports": [
+        0
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 3,
+      "ports": [
+        2,
+        2
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 3,
+      "ports": [
+        0,
+        1
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 3,
+      "ports": [
+        2,
+        2,
+        2
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 3,
+      "ports": [
+        0,
+        1,
+        2
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 3,
+      "ports": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 3,
+      "ports": [
+        0,
+        1,
+        2,
+        0
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 3,
+      "ports": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 3,
+      "ports": [
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 3,
+      "ports": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 3,
+      "ports": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 4,
+      "ports": [
+        3
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 4,
+      "ports": [
+        0
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 4,
+      "ports": [
+        3,
+        3
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 4,
+      "ports": [
+        0,
+        1
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 4,
+      "ports": [
+        3,
+        3,
+        3
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 4,
+      "ports": [
+        0,
+        1,
+        2
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 4,
+      "ports": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 4,
+      "ports": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 4,
+      "ports": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 4,
+      "ports": [
+        0,
+        1,
+        2,
+        3,
+        0
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 4,
+      "ports": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 4,
+      "ports": [
+        0,
+        1,
+        2,
+        3,
+        0,
+        1
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 5,
+      "ports": [
+        4
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 5,
+      "ports": [
+        0
+      ],
+      "added_vertices": 2
+    },
+    {
+      "order": 5,
+      "ports": [
+        4,
+        4
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 5,
+      "ports": [
+        0,
+        1
+      ],
+      "added_vertices": 3
+    },
+    {
+      "order": 5,
+      "ports": [
+        4,
+        4,
+        4
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 5,
+      "ports": [
+        0,
+        1,
+        2
+      ],
+      "added_vertices": 4
+    },
+    {
+      "order": 5,
+      "ports": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 5,
+      "ports": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "added_vertices": 5
+    },
+    {
+      "order": 5,
+      "ports": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 5,
+      "ports": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "added_vertices": 6
+    },
+    {
+      "order": 5,
+      "ports": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "added_vertices": 7
+    },
+    {
+      "order": 5,
+      "ports": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        0
+      ],
+      "added_vertices": 7
+    }
+  ],
+  "checks": 1374187
+}
