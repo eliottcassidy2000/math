@@ -1,0 +1,86 @@
+{
+  "base": "10fdf80636",
+  "incoming": "966ab75d90",
+  "inherited_linked_sources": [
+    {
+      "path": "01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md",
+      "sha256": "499f703c003504d31c1bc393b1788677ddbc505d64c6f37d95af70879998a552"
+    },
+    {
+      "path": "01-canon/theorems/THM-4793-the-fermat-line-under-collatz-valuation-two-descent-exact-merge-of-consecutive-lines-and-pepin-as-an-affine-cycle-type.md",
+      "sha256": "04b4065ca0201558276a47e4bd75ac511549605e891fe0d3b564b5cddb70e5d7"
+    },
+    {
+      "path": "05-knowledge/hypotheses/HYP-3724-phi6-is-the-sylvester-map-egyptian-fraction-tower.md",
+      "sha256": "b61c0ce5a82eca3208d82fb5e8c0a981838839d281897674f30990a66e40ccf7"
+    },
+    {
+      "path": "05-knowledge/results/collatz_local_prime_power_gates_20261020/LOCAL_CARRY_AND_PRIME_POWER_GATES.md",
+      "sha256": "526f318af2fde233683b4412514d8cda00c5b39a1b2d2d1589cca78924298240"
+    },
+    {
+      "path": "05-knowledge/results/constants_atlas_20260926_recurrent_numbers.md",
+      "sha256": "29bd19af07e652a9e4cfb70c2928c5e2eecf164c6c79e27e164eab842e7547b0"
+    },
+    {
+      "path": "05-knowledge/results/cycle101_tournament_collatz_dictionary_20261029.md",
+      "sha256": "5e6d79ddbfbcc913830e9f7967a4e6e53e50cfda9b396cd221fb79c47474d328"
+    },
+    {
+      "path": "05-knowledge/results/cyclic_attachment_lattices_20261023/MONSTER.md",
+      "sha256": "af9a31a5028cd68525e293600a5a88703bbb359b36d7ac2c7fb07d4af70df9dd"
+    },
+    {
+      "path": "05-knowledge/results/fermat_wieferich_order_20261014e.md",
+      "sha256": "ebe1427b0d8f2d04c3353db66b9edc698dcf8cb5039b46a837d856444ef5060f"
+    },
+    {
+      "path": "05-knowledge/results/incidence_attractors_20261028/THEORY.md",
+      "sha256": "20c35ab4fab0784ecc0cf7791fe4529c2b3ed6861e076b7eed711a396eab42c6"
+    },
+    {
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "path": "05-knowledge/results/natural_number_roles_20261004.md",
+      "sha256": "d909b5b6b0489cfcc1bd1d0a0ced0fcf726f782c1d2b83446044b45ad1fbfa3a"
+    },
+    {
+      "path": "05-knowledge/results/session106_collatz_transfer_20261029/README.md",
+      "sha256": "75ac4619e095ea9302e5e030d23d7cbe035cfbc2ef086dde5dcdf33081d22c28"
+    },
+    {
+      "path": "05-knowledge/results/session107_quasirandom_arithmetic_20261029/characters/CHARACTER_STRUCTURE.md",
+      "sha256": "56018a34a043f87a85aa7c3d84bb9060e1ea1a562ee64f2030e5f14bdb57d578"
+    },
+    {
+      "path": "05-knowledge/results/session107_quasirandom_arithmetic_20261029/conditioning/EUCLID_OFFSET_SYNDROMES.md",
+      "sha256": "c56447fbf3f905ffb4f79f5cb4ca110da3b586a34bbd19315ea6228eb98ad80b"
+    },
+    {
+      "path": "05-knowledge/results/session107_quasirandom_arithmetic_20261029/groups/GROUPS_AND_RECOVERED_PRIMES.md",
+      "sha256": "52ff2a7a24d12e1022b13005943925933ce26fb5048961a01a210668583f851e"
+    },
+    {
+      "path": "05-knowledge/results/session32_square_monster_20261023/VALUATION_CYCLE_AND_QUOTIENT.md",
+      "sha256": "27af626ac2abcc372ec664ce82c73c660ee63555a95246ddd629339175d3b3a3"
+    },
+    {
+      "path": "05-knowledge/results/tournament_open_problem_routes_20261029/PROOFS.md",
+      "sha256": "d2c30f48bd1eed907b3e7fa73418c3be5db8f266025dabcedfabcc410a743f8a"
+    },
+    {
+      "path": "05-knowledge/results/tournament_open_problem_routes_20261029/SOURCES.md",
+      "sha256": "0ce9b41639e502da6e4d7f04b944cf8e0b895667c56d0d6494de0bc7f9f84e4d"
+    },
+    {
+      "path": "07-reflections/bernoulli-fixed-point.md",
+      "sha256": "b492baee2787ad59b10a09bf8683bb067d180a5f12967712a62d7becf8423354"
+    },
+    {
+      "path": "07-reflections/sylvester-mersenne-lossless.md",
+      "sha256": "b9cf5ca0d2894bfd60f265b662a328c15a300ae0bfe999d48268c1ac0e311b71"
+    }
+  ]
+}
