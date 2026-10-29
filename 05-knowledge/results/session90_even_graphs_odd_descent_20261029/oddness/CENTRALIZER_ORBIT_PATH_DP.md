@@ -4,7 +4,7 @@ Session90, 2026-10-29. **PROVED equitable-partition recurrence, FINITE-EXACT imp
 
 ## Input contract
 
-Input is an odd tournament W, a supplied anti-involution tau, and the **actual permutation subgroup** C=C_Aut(W)(tau). The recurrence also works for any supplied subgroup of C, giving possibly weaker compression. An abstract group order is insufficient. Computing C is a separate cost; Session89's aligned pair generator already returns it as the pair automorphism group.
+Input is an odd tournament W, a supplied anti-involution tau, and the **actual permutation subgroup** C=C_Aut(W)(tau). The recurrence also works for any supplied subgroup H of C, giving possibly weaker compression. Its output is still h_tau; obtaining the blue count requires division by the full |C|, not |H|. Dividing by |H| instead counts H-orbits of the fixed paths. An abstract group order is insufficient. Computing C is a separate cost; Session89's aligned pair generator already returns it as the pair automorphism group.
 
 Tau fixes one root r and exchanges n mirror pairs. The inherited labelled recurrence has states `(S,v)`, where S is the set of used pairs and v is a member of one of those pairs. A transition appends w from an unused pair when v→w. Its terminal predicate is v→r. This counts tau-fixed Hamiltonian paths, not all Hamiltonian paths.
 
