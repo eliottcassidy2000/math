@@ -4,6 +4,13 @@
 native source modules.** This extends [THREE_RUN_GLUE R6](THREE_RUN_GLUE.md),
 where an abstract group repair did not yet retain its clock.
 
+**Continuation:** [PRIMARY_CLOCK_COMPLETION](PRIMARY_CLOCK_COMPLETION.md)
+now closes all primary exponents for the specified C7 action, proves an
+all-height minimum recurrence, and distinguishes injective completion
+from ordinary-quotient-compatible completion. Its P6 also verifies full
+vertex/run invariant forms at5 and17. The remaining full-clock gap is
+at the higher-primary2/3 pieces, not at the six elementary primes.
+
 ## C4. The clocked minimum is controlled by reciprocal constituents
 
 Let p be odd, p not7, and V an elementary abelian p-group with a specified
@@ -82,10 +89,10 @@ solution space has dimension0, without relying on a factor-count formula.
 The explicit doubled clock diag(C,C^(-T)) preserves the standard
 hyperbolic pairing. Thus doubling is the minimum pairing completion
 for these four primary pieces, even while preserving ALL original
-source clocks and names. For the5 and17 rows the displayed zero repair
-is proved for C7 only; compatibility with additional clocks has not been
-asserted. The2- and3-primary groups have higher exponents and remain a
-separate problem.
+source clocks and names. For the5 and17 rows, the continuation above
+now supplies literal perfect forms for the full vertex/run clock group.
+The2- and3-primary groups have higher exponents; their C7 completion is
+also resolved there, with the extra clocks still separate.
 
 The11 row is the strongest warning: its underlying group(F11)^6 already
 has even dimension and square order. Neither test reveals that the
@@ -144,8 +151,9 @@ C^7=I, cyclotomic factor products, complete nullities and invariant-form
 linear systems then certify the clock obstruction. The source projections
 make the calculation reproducible without losing names under a basis change.
 
-Next compute the clock action on every2- and3-primary layer, not merely
-G/pG, before attempting a minimum full paired completion. The canonical
-hyperbolic double is already available. An abstract summand repair, a
-count recurrence and a spectral factorization do not justify a smaller
-clock-preserving carrier without that layer data.
+The continuation now computes every2/3 C7 layer with reversible source
+charts. Next extend the minimum or pure completion to the remaining
+affine/run clocks at those primes. The canonical hyperbolic double is
+already available. An abstract summand repair, a count recurrence and
+a spectral factorization do not justify a smaller carrier without the
+actual action and the required transition maps.

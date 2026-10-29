@@ -13,6 +13,15 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Primary-depth completion and quotient compatibility](PRIMARY_CLOCK_COMPLETION.md):
+  exact all-height recurrence for the smallest injective paired module
+  with an odd cyclic clock, including p=2. Actual Paley7 needs index2^18
+  with C7, versus2^2 without its clock. Requiring an injective ordinary
+  quotient tower forces a direct summand and raises the C7 cost to2^30.
+  Source charts and inverse maps certify every2/3 layer. Actual full
+  vertex/run invariant forms close the remaining elementary5/17 cases;
+  higher-primary full-clock compatibility and arithmetic realization
+  remain open.
 - [Native three-run lattice and pairing boundary](THREE_RUN_GLUE.md):
   the S3 coefficient lattice has index54. T5 first exhibits a native
   Smith discrepancy, with four spurious Z/6 factors in the unglued

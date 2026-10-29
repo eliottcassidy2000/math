@@ -311,8 +311,11 @@ T5's four hidden directions are tetrahedron boundaries, and every one of
 its15 Hamilton-path complements exposes all four in the named weight
 language. The fully vertex-invariant source instead has dimension12
 and is already injectively observed. Preserve these distinct scopes.
-Next classify the higher-exponent2/3 pairing repair with all clock layers,
-and extend the native complemented-relation test beyond this source.
+The [primary-clock continuation](PRIMARY_CLOCK_COMPLETION.md) now
+classifies the higher-exponent2/3 repair for C7 and the exact difference
+between adjoining roots and adding independent summands. Next extend
+the remaining2/3 affine/run clocks and the native complemented-relation
+test beyond this source.
 A sector-image count alone cannot replace that relation or recreate
 A000568.
 

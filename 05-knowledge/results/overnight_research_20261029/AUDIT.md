@@ -256,3 +256,49 @@ incoming receipt was rewritten. The repository documentation check passed.
 The new completion formula also has a displayed all-odd-cyclic-order
 extension; its proof uses the same semisimple reciprocal factors. No
 higher-exponent or characteristic-dividing-clock case is included.
+
+## Primary-depth and quotient-compatibility continuation
+
+`primary_clock_layers.py` passes8,502 active gates. It independently
+constructs the complete native three-run matrix, partitions all210
+ports into30 named translation orbits, and verifies every900 circulant
+block after a reversible local Fourier chart. At2 the two Hensel cubic
+factors multiply to Phi7 modulo64; at3 Frobenius order proves the
+degree6 factor irreducible. All charts have explicit modular inverses.
+
+O-linear local Smith elimination retains U and U inverse. Every original
+relation maps to zero at its proper exponent, and independent expanded
+integer elimination verifies all sector layers. All30 pivots per sector
+are found before precision6. Summing the sectors recovers the entire
+previously certified integer Smith profiles, not just their mod-p ranks.
+The source-row index and multiplication by p^(E-e) specify every
+root-adjoining embedding. Literal trace matrices certify the reciprocal
+pairing, including the dyadic zero-diagonal requirement.
+
+The minimum-order formulas were independently checked by enumerating
+126 source partitions and1,225 ordered reciprocal partition pairs,
+with part sizes at most4 and length bounds stated in the code. The
+source Z/2+Z/4 has minimum embedding index2 and direct-sum index8;
+every order-two element in its minimum ambient group reduces to zero
+modulo2. This verifies the minimal tower hostile without relying on
+one poorly chosen embedding. The general purity/splitting argument is
+proved separately in P5 of PRIMARY_CLOCK_COMPLETION.md.
+
+`full_clock_forms.py` passes35 active gates, retaining the named
+projections and four actual clock intertwiners at5 and17. The generators
+cover the full126-element vertex/run group. Solving the entire invariant
+alternating-form linear system gives dimension1 in both cases; the
+first nonzero candidate is full rank. Its literal invariance verifies
+existence independently of the dimension calculation. Input hashes use
+canonical JSON rather than checkout-dependent line endings.
+
+Both checkers pass normally and under Python -O with byte-identical
+receipts. The inherited81/27 singleton-slice rank decks are replayed
+inside the primary checker. New proof scope: odd cyclic clocks with
+p not dividing their order, all exponents, arbitrary injective versus
+pure completions. Additional2/3 affine/run actions, complement, arithmetic
+realization and Sha finiteness remain outside the established result.
+The exact source saturation analogy was checked against the current
+Session97 phase2 README; no isomorphism of its arithmetic objects to
+our finite modules is asserted. No historical novelty claim is made
+for the elementary unramified-module arguments.

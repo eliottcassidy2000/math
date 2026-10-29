@@ -1,0 +1,16 @@
+[
+  {
+    "checker": "primary_clock_layers",
+    "optimized_exit": 0,
+    "normal_optimized_identical": true,
+    "gates": 8502,
+    "receipt_sha256": "d7003fdde01be4c39460e38b04925859aa3e363bfb74b6cd776750bddff809fc"
+  },
+  {
+    "checker": "full_clock_forms",
+    "optimized_exit": 0,
+    "normal_optimized_identical": true,
+    "gates": 35,
+    "receipt_sha256": "0cc21dba8999dd1700bc427f139889c182f0bce6cc8c1c222e92aafabc51da3c"
+  }
+]

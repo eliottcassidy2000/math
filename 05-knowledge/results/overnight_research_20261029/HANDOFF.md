@@ -100,6 +100,33 @@ replayed their stored receipts unchanged. The latter verifies556 prime
 specializations, actual F27/F243/F343 pencils and604 Jacobi sums.
 Our documentation check and all100,190 normal/optimized gates pass.
 
+The fourth continuation completes
+[PRIMARY_CLOCK_COMPLETION](PRIMARY_CLOCK_COMPLETION.md). All2/3-primary
+C7 isotypes now have reversible source charts and O-linear quotient
+maps. At2 the partitions are trivial(2,2,1^10), cubic+(4,4,3,1,1),
+cubic-(4,1^5). At3 the entire group has trivial C7 action, with partition
+(4,2^6,1^2). The all-height minimum index recurrence is P2 of that note.
+For Paley7 the C7 dyadic minimum is2^18, versus2^2 without a clock.
+The direct-sum C7 minimum is2^30. This distinction is NOT a correction
+of the earlier explicitly direct-sum statement: adjoining roots can
+be cheaper than adding independent summands.
+
+The next significant obstruction is now proved: an embedding that stays
+injective under EVERY ordinary quotient reduction must be a direct
+summand. Thus the cheaper finite-level minima cannot silently replace a
+compatible quotient tower. Z/2+Z/4 inside(Z/4)^2 is the minimal hostile.
+At2 the successive minimum log-index increments are3,6,6,3; at3 they
+are1,1,1,1. Their numerical recurrence is not a transition-map theorem.
+
+The same continuation also closes the extra clocks at5 and17. Literal
+forms invariant under all126 elements of Aut(Paley7) x S3 are obtained
+from one-dimensional alternating-form spaces, nondegenerate away from
+zero. All six elementary odd-primary minima therefore retain the full
+native vertex/run group: no addition at5/17; doubling at the other four.
+Only the higher-primary2/3 extra clock actions remain open. Both new
+checkers pass normally and optimized, with identical receipts and all
+source maps retained; the81/27 slice controls are unchanged.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -154,10 +181,14 @@ then their targeted proofs. Recent Session97 additions include:
    run that terminates at singularity. No native minimality follows yet.
    The three-run S3 lattice and small native cases are now CLOSED in
    our continuation and the simultaneous incoming THREE_RUN packet.
-   The next decisive pairing test is the actual clock action on every
-   2- and3-primary layer of Paley7, beyond G/pG, to decide the minimum
-   full compatible completion. At5 and17 zero added dimension is proved
-   for C7 only; test the extra affine/run clocks before generalizing it.
+   All2/3 C7 layers are NOW CLOSED in PRIMARY_CLOCK_COMPLETION, as are
+   the extra clocks at5/17. Next induce multiplication-by2 and the run
+   generators on the actual2/3 quotient coordinates, then test whether
+   the minimum injective or pure C7 completion extends to them. Keep
+   these two completion problems distinct. Characteristic divides the
+   extra clock-group order, so the semisimple C7 proof cannot be reused
+   blindly. The receipt's U and inverse maps give a concrete starting
+   point; do not recompute the source classification from scratch.
    For native attachment minimality, extend the incoming T5 complement
    reconstruction while retaining target relation and chosen-path phase;
    its fully vertex-invariant12-dimensional language is different.
@@ -165,6 +196,10 @@ then their targeted proofs. Recent Session97 additions include:
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with
    all Selmer levels compatible. A square-order count supplies neither.
+   Specify the arithmetic transition maps before using a completion
+   tower: ordinary quotients, torsion inclusions and actual Selmer maps
+   are different. P5 now supplies a direct-sum obstruction for ordinary
+   quotient injectivity, even when every finite-level minimum exists.
 3. Develop adaptive local-character certificates: select cheap primes
    and observation moduli while keeping root labels, generators, curve
    transport and torsion guards. The two F2 gaps are now explained by
