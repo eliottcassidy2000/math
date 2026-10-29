@@ -12,6 +12,16 @@ of a numerical label. The same orbit constraints can permit quasirandom
 tournaments and strongly biased tournaments. A prime-adic order delay tells
 us precisely how long one useful correlation identity survives refinement.
 
+**Concurrent credit.** During the push, commits966ab75d90 (Session107) and
+6ce7838d11 arrived. The latter independently proves exactly the19-adic
+period law P5, including the same return-defect calculation; that result
+is shared concurrent work, not an exclusive contribution of this packet.
+Both incoming proofs, their audits, the character-fibre theorem, the Euclid
+syndromes and the group boundaries were read. Section10 integrates their
+stronger comparisons. The orbit-ensemble theorem P1–P4 and deterministic
+Sylvester-indexed construction P3b concern different carriers from their
+tournament on the Sylvester terms themselves.
+
 ## 1. Inheritance and research board
 
 **Anchor:** explain quasirandomness while keeping the actual arithmetic action.
@@ -418,7 +428,8 @@ are stronger recovered bridges: the latter identifies the 7A normalizer
 quotient action with AGL(1,7), retaining orientation and converse. We do not
 replace them by a new numerical analogy. Group orders and modular matrices
 alone do not determine the least complex representation degree needed for
-Gowers' quantitative bound; no numerical degree estimate is imported here.
+Gowers' quantitative bound. The subsequent incoming primary character-table
+verification supplies the stronger representation comparison in §10.
 
 Concurrent prime-Legendre quasirandomness uses a third mechanism, a quadratic
 large-sieve bound. Its retained prime/squarefree labels and height cutoff are
@@ -488,3 +499,63 @@ nonzero rather than just unit differences; imprimitive characters; fixed
 versus changing generators; exact periods rather than return multiples;
 source division by3; expectation versus individual matrices; and unchanged
 status of universal coverage. No independent-agent audit is claimed.
+
+## 10. Integration of the two incoming packets
+
+The [concurrent arithmetic-structure proofs](../quasirandom_arithmetic_structure_20261029/PROOFS.md),
+§3, give an especially important opposite reading of Sylvester. If the
+vertices are the odd terms themselves and the pairwise observable is their
+Jacobi symbol, then for i<j, (s_j/s_i)=1 and (s_i/s_j)=−1. The tournament
+is transitive at every size, including composite terms. This is an exact
+hostile, not a contradiction to P3b: our vertices are residues modulo one
+term, with a different pairwise observable. Thus the SAME sequence indexes
+a deterministic quasirandom family while its terms form a completely
+ordered family under reciprocity. Object, observer and asymptotic scale
+must all be specified before saying that arithmetic is quasirandom.
+
+Their §4 proves P5 independently and also identifies the unique compatible
+19-adic four-periodic point above2. Its representative modulo19³ is5417,
+whereas the fixed integer source2 has period12 there. Our proof concerns
+the latter source. The affine digit map t↦7t+5 fixes15, giving
+5417=2+15·19², and the Hensel derivative7−1 is invertible. An infinite
+compatible periodic lift is therefore not the marked integer we started
+with. This is an exact analogue of the source-retention obligation.
+
+[Session107's audited character theorem](../session107_quasirandom_arithmetic_20261029/characters/CHARACTER_STRUCTURE.md)
+adds a second useful way to preserve structure: fixed square-class tests
+produce an affine binary code, while moving prime edges are quasirandom
+inside its attainable colour fibres. Its unequal-fibre bound is
+(B_X/2) Σ_(i<j)(|S_i||S_j|)^(−1/2), plus an explicit collision term.
+This retains named ports but requires sufficiently large fibres. The
+companion arithmetic packet identifies the earlier seven-prime Hamming
+bank's character code with its simplex dual: pairwise independent bits
+still obey exact Fano triple relations. Neither result permits a growing
+bank without new uniform estimates. P2's pinned-packet spectral budget
+is a complementary completion criterion, not a replacement for those
+arithmetic fibre-density hypotheses.
+
+The [incoming group note](../session107_quasirandom_arithmetic_20261029/groups/GROUPS_AND_RECOVERED_PRIMES.md)
+correctly separates group quasirandomness from a single Paley symbol.
+The local groups7:3 and7:6 have cyclic quotients and minimum nontrivial
+complex degree1. Hence the actual Monster-local-to-Paley map does not
+transport the Monster's quasirandomness parameter. The whole Monster and
+Baby Monster cannot act nontrivially as finite-tournament automorphisms:
+an involution would reverse an arc, and simplicity would make a nontrivial
+action faithful. Ordinary graphs or bipartite incidence operators remain
+valid carriers.
+
+A primary-source check, prompted by that incoming note, verifies the
+representation restriction
+
+    196883 ↓_(2.B) = 1 + 4371 + 96255 + 96256
+
+as a decomposition into the specified irreducible constituents, not just
+an equality of dimensions. See Breuer–Magaard–Wilson,
+[computational supplement, §2, printed p.3](https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/doc/ctblm.pdf).
+The96256 constituent sees the central involution; the other three do not.
+The same low-degree list certifies the Baby minimum4371. This is a concrete
+reason restriction can create fixed vectors and smaller correlation modes.
+The [verified Monster table](https://arxiv.org/html/2412.12182v1) and the
+incoming audit supply the ordinary-character context; no table was
+recomputed in this session. This representation map is much more informative
+than identifying the valuation-cycle labels with group dimensions.
