@@ -10,7 +10,8 @@ CASES=[
  ('summands/check_summands.py','summands/verification.json'),
  ('summands/check_three_chains.py','summands/three_chains_verification.json'),
  ('audit_algebra/check_independent.py','audit_algebra/receipt.normal.json'),
- ('audit_descent/check_independent.py','audit_descent/receipt.json')]
+ ('audit_descent/check_independent.py','audit_descent/receipt.json'),
+ ('audit_incoming/check_common_rank.py','audit_incoming/receipt.json')]
 def need(ok,msg):
  if not ok:raise RuntimeError(msg)
 def normalized(d):
