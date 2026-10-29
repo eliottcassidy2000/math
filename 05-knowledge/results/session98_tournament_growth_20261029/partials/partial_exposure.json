@@ -1,0 +1,100 @@
+{
+  "status": "FINITE-EXACT",
+  "base_orders": "0..6, all isomorphism classes; all ternary star states; every completion",
+  "results": [
+    {
+      "base_order": 0,
+      "tournament_classes": 1,
+      "partial_layers": [
+        1
+      ],
+      "partial_states_with_forgetting_collision": 0
+    },
+    {
+      "base_order": 1,
+      "tournament_classes": 1,
+      "partial_layers": [
+        1,
+        2
+      ],
+      "partial_states_with_forgetting_collision": 0
+    },
+    {
+      "base_order": 2,
+      "tournament_classes": 1,
+      "partial_layers": [
+        1,
+        4,
+        4
+      ],
+      "partial_states_with_forgetting_collision": 0
+    },
+    {
+      "base_order": 3,
+      "tournament_classes": 2,
+      "partial_layers": [
+        2,
+        8,
+        16,
+        12
+      ],
+      "partial_states_with_forgetting_collision": 2
+    },
+    {
+      "base_order": 4,
+      "tournament_classes": 4,
+      "partial_layers": [
+        4,
+        24,
+        64,
+        88,
+        48
+      ],
+      "partial_states_with_forgetting_collision": 12
+    },
+    {
+      "base_order": 5,
+      "tournament_classes": 12,
+      "partial_layers": [
+        12,
+        96,
+        352,
+        688,
+        704,
+        296
+      ],
+      "partial_states_with_forgetting_collision": 90
+    },
+    {
+      "base_order": 6,
+      "tournament_classes": 56,
+      "partial_layers": [
+        56,
+        592,
+        2816,
+        7360,
+        11008,
+        8912,
+        3040
+      ],
+      "partial_states_with_forgetting_collision": 792
+    }
+  ],
+  "hostile": {
+    "parent_rows": [
+      2,
+      4,
+      1
+    ],
+    "partial": [
+      2,
+      0,
+      0
+    ],
+    "group_order": 3,
+    "stabilizer_order": 1,
+    "flagged_completions": 4,
+    "unflagged_completions": 3
+  },
+  "checks": 253215
+}
