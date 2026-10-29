@@ -1,0 +1,439 @@
+{
+  "status": "FINITE-EXACT independent literal enumeration",
+  "universe": "Every avoiding grammar word through order6, every k from1 to n",
+  "tournaments": 11,
+  "results": [
+    {
+      "word": "",
+      "order": 4,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 4,
+          "nonzero_entries": 5,
+          "ordered_covers": 5
+        },
+        {
+          "k": 2,
+          "dimension": 12,
+          "nonzero_entries": 22,
+          "ordered_covers": 22
+        },
+        {
+          "k": 3,
+          "dimension": 24,
+          "nonzero_entries": 36,
+          "ordered_covers": 36
+        },
+        {
+          "k": 4,
+          "dimension": 24,
+          "nonzero_entries": 24,
+          "ordered_covers": 24
+        }
+      ]
+    },
+    {
+      "word": "e",
+      "order": 5,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 5,
+          "nonzero_entries": 9,
+          "ordered_covers": 9
+        },
+        {
+          "k": 2,
+          "dimension": 20,
+          "nonzero_entries": 66,
+          "ordered_covers": 66
+        },
+        {
+          "k": 3,
+          "dimension": 60,
+          "nonzero_entries": 186,
+          "ordered_covers": 186
+        },
+        {
+          "k": 4,
+          "dimension": 120,
+          "nonzero_entries": 240,
+          "ordered_covers": 240
+        },
+        {
+          "k": 5,
+          "dimension": 120,
+          "nonzero_entries": 120,
+          "ordered_covers": 120
+        }
+      ]
+    },
+    {
+      "word": "d",
+      "order": 5,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 5,
+          "nonzero_entries": 8,
+          "ordered_covers": 9
+        },
+        {
+          "k": 2,
+          "dimension": 20,
+          "nonzero_entries": 64,
+          "ordered_covers": 66
+        },
+        {
+          "k": 3,
+          "dimension": 60,
+          "nonzero_entries": 186,
+          "ordered_covers": 186
+        },
+        {
+          "k": 4,
+          "dimension": 120,
+          "nonzero_entries": 240,
+          "ordered_covers": 240
+        },
+        {
+          "k": 5,
+          "dimension": 120,
+          "nonzero_entries": 120,
+          "ordered_covers": 120
+        }
+      ]
+    },
+    {
+      "word": "c",
+      "order": 5,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 5,
+          "nonzero_entries": 11,
+          "ordered_covers": 11
+        },
+        {
+          "k": 2,
+          "dimension": 20,
+          "nonzero_entries": 78,
+          "ordered_covers": 78
+        },
+        {
+          "k": 3,
+          "dimension": 60,
+          "nonzero_entries": 198,
+          "ordered_covers": 198
+        },
+        {
+          "k": 4,
+          "dimension": 120,
+          "nonzero_entries": 240,
+          "ordered_covers": 240
+        },
+        {
+          "k": 5,
+          "dimension": 120,
+          "nonzero_entries": 120,
+          "ordered_covers": 120
+        }
+      ]
+    },
+    {
+      "word": "ed",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 13,
+          "ordered_covers": 15
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 166,
+          "ordered_covers": 186
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 804,
+          "ordered_covers": 828
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1752,
+          "ordered_covers": 1752
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    },
+    {
+      "word": "de",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 13,
+          "ordered_covers": 15
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 166,
+          "ordered_covers": 186
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 804,
+          "ordered_covers": 828
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1752,
+          "ordered_covers": 1752
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    },
+    {
+      "word": "ec",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 15,
+          "ordered_covers": 19
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 192,
+          "ordered_covers": 218
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 876,
+          "ordered_covers": 900
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    },
+    {
+      "word": "dd",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 12,
+          "ordered_covers": 17
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 150,
+          "ordered_covers": 190
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 780,
+          "ordered_covers": 828
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1752,
+          "ordered_covers": 1752
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    },
+    {
+      "word": "cb",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 15,
+          "ordered_covers": 19
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 192,
+          "ordered_covers": 218
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 876,
+          "ordered_covers": 900
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    },
+    {
+      "word": "dc",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 16,
+          "ordered_covers": 23
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 220,
+          "ordered_covers": 250
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 948,
+          "ordered_covers": 972
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1848,
+          "ordered_covers": 1848
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    },
+    {
+      "word": "ca",
+      "order": 6,
+      "checks": [
+        {
+          "k": 1,
+          "dimension": 6,
+          "nonzero_entries": 16,
+          "ordered_covers": 23
+        },
+        {
+          "k": 2,
+          "dimension": 30,
+          "nonzero_entries": 220,
+          "ordered_covers": 250
+        },
+        {
+          "k": 3,
+          "dimension": 120,
+          "nonzero_entries": 948,
+          "ordered_covers": 972
+        },
+        {
+          "k": 4,
+          "dimension": 360,
+          "nonzero_entries": 1848,
+          "ordered_covers": 1848
+        },
+        {
+          "k": 5,
+          "dimension": 720,
+          "nonzero_entries": 1800,
+          "ordered_covers": 1800
+        },
+        {
+          "k": 6,
+          "dimension": 720,
+          "nonzero_entries": 720,
+          "ordered_covers": 720
+        }
+      ]
+    }
+  ]
+}
