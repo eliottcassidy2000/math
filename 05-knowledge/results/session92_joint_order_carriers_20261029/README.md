@@ -6,13 +6,14 @@ observers, divisor fibres, LCA regrouping, signed operators, simplicial
 complexes, Fano incidence, and LRC phase controls. Classical mechanisms are
 credited. No external-priority or major-conjecture closure is claimed.
 
-**Provenance boundary:** the supplied64→24→16 and named-vertex35 counts are
-independently reproduced. The four supplied Hamilton counts
-2,483,993 / 2,491,877 and2,899,675 / 2,906,091 remain **unreplayed**: their
-actual child rows, run lists, cursor queries and partner operation were not
-found in the inspected sources. They are neither certified nor refuted here.
-The independently constructed and inherited controls below are not substitutes
-purporting to reproduce those instances.
+**Original witnesses recovered and verified.** The source arrived during this
+session in commit `eea15f5d968c8e493a809862bbfec3989d09c436`, followed by the
+selector-scope clarification `c72bf26e15e362bc3f53872698ff396369ea6d80`.
+The supplied64→24→16 and named-vertex35 counts are independently reproduced.
+All four Hamilton counts, 2,483,993 / 2,491,877 and2,899,675 / 2,906,091,
+are now verified with two subset recurrences and a separate meet-in-the-middle
+implementation. See [the exact recovered inputs and guards](runs/RECOVERED_RUN_WITNESS.md).
+Earlier independent substitute controls remain explicitly separate.
 
 ## 1. A native quadratic query detects what linear continuation misses
 
@@ -64,6 +65,16 @@ intersecting their partitions once.
 
 ## 3. Exact tournament seams and arbitrary-order dependence
 
+The [recovered strong-child witness](runs/RECOVERED_RUN_WITNESS.md) uses
+A=C3[C3,1,1] with fixed outer vertices3,4 and middle orders(0,1,2) and(0,2,1).
+All individual rooted cursor responses agree, including on the converse sheet,
+because the middle vertices lie in one C3 orbit. But no single automorphism
+implements their transposition. Along the same13-vertex C3 quotient walk,
+native complementation detects exactly the two relative-parity classes.
+All six middle orders were replayed, for both the transitive-four control and
+the all-three-children-strong construction, recovering every quoted count.
+The one-bit claim concerns this fixed fibre, not every run-cover interface.
+
 [The seam carrier](runs/SEAM_CARRIER.md) first protects the inherited ordinary
 substitution theorem: for fixed children and quotient, reordering descriptive
 runs cannot change the underlying substituted tournament. A changed Hamilton
@@ -82,8 +93,10 @@ This is not a minimum-information theorem for H alone.
 An independent strong five-vertex seed has partner counts11 and15. A shared-start
 padding construction preserves those counts at every larger order while
 keeping the original tournaments strong. The padded partners have a universal
-source, so this is not an all-partners-strong or equal-cursor reconstruction of
-the supplied examples.
+source, so this is not an all-partners-strong or equal-cursor extension theorem.
+After recovery, both original quoted pairs also satisfy the shared-start
+hypothesis: the same padding gives strong-source families preserving all four
+counts at every larger order, with exactly these limitations.
 
 A separate all-order result enlarges the operation menu to independent edge
 restorations. The Hamilton-count multilinear polynomial has exact degree n−1
@@ -149,6 +162,12 @@ is not linear and is not identified with the folded64-state carrier. The rank
 follows from the proved theorem and checked sectors, not a dense2187-by-2187
 elimination.
 
+Face count is not homotopy type. At four modules, the full simplex and the
+independent-set complex of P4 are both contractible, yet have16 and8 faces,
+respectively, and therefore different leakage nullities. This is the precise
+boundary when comparing the incoming `lucas_mirror_gap_spaces_20261028` gap
+topology with this operator construction.
+
 This realizes a broad family of high-order composition failures without
 claiming a fast counting algorithm: the matrices are exponentially large.
 No actual tournament-to-quantum-model or LRC-allocation equivalence is asserted.
@@ -183,6 +202,6 @@ normally and with `python3 -O`; active exceptions remain in both modes.
 
 The session supplies precise closure criteria, infinite hostile constructions,
 a native nonlinear observer witness, and an associative arithmetic repair.
-The original large-count run witnesses still need their exact source data.
-Unrestricted tournament classification, LRC(14), positive Collatz convergence,
+The original large-count run witnesses are now independently certified in
+their precise read-only-cursor/native-partner scope. Unrestricted tournament classification, LRC(14), positive Collatz convergence,
 and other major conjectures remain open in the scopes considered here.
