@@ -175,6 +175,23 @@ for j in range(2,11):
         require(actual_offset[h-1]+actual_budget[h]<actual_offset[j-1],
                 'controller budget reset compiler conditional on source decrease')
 
+# Closed logarithmic entry-rank bound and explicit paid-reset offset.
+require(2*27**20<28**20,'exact twenty-contraction inequality')
+for n in range(1,1002,2):
+    L=n.bit_length()
+    p=potential(n,1)
+    require(p<=3*2**(L-1),'bit-length initial potential envelope')
+    require(F(27,28)**(20*(L-1)+1)*p<3,'geometric budget witness')
+    require(rank(n,1)<=60*L-56,'logarithmic native return bound')
+for m in range(1,1001):
+    f=lambda n:60*n*n.bit_length()
+    require(f(m+1)-f(m)>=60*m.bit_length(),'closed offset adjacent gap')
+for source in range(3,202,2):
+    for child in range(1,source,2):
+        require(f(source)-f(child)>60*child.bit_length()-56,
+                'closed offset dominates refreshed rank envelope')
+require(rank(1,1)==4 and rank(13,1)==163<=184,'displayed quantitative cases')
+
 # Malformed domains must reject even under python -O.
 rejections=0
 for f,args in [(step,(0,)),(step,(2,)),(step,(True,)),(step,(3,4)),
