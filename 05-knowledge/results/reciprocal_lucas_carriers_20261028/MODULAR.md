@@ -47,8 +47,9 @@ factor. Inverting the series supplies4096q because64²=4096. Consequently
     64(g_n^24+g_n^(-24))=q^(-1)-24+4372q+96256q²+O(q³),
     64(G_n^24+G_n^(-24))=q^(-1)+24+4372q-96256q²+O(q³).
 
-The constants therefore have an explicit product/trace origin. No Monster,
-dimension, or tournament inference follows from the isolated number276.
+The constants therefore have an explicit product/trace origin. No dimension
+or tournament inference follows from the isolated number 276. There is,
+however, an actual modular-function identification, as recorded next.
 
 The checker evaluates the products separately from the surds at120-digit
 working precision. It obtains
@@ -60,6 +61,34 @@ The errors below their respective integer targets are about0.00174257553
 and0.0000219534481. These decimal strings are numerical checks, not interval
 certificates. The exact integer targets and recurrence identities do not
 depend on floating-point arithmetic.
+
+### M1a. The level-two Fricke connection, including the nome phase
+
+The concurrent [CM-series calculation](../cursor_cm_phase_20261028/README.md)
+identifies the whole series, not just its first coefficient. For
+q=exp(2 pi i z), put h(z)=(eta(z)/eta(2z))^24. The classical normalized
+McKay–Thompson function is
+
+    T_2A(z)=h(z)+24+4096/h(z)
+           =q^(-1)+4372q+96256q²+... .
+
+This formula and its normalization are given in the introduction of
+[Matsusaka (2017)](https://link.springer.com/article/10.1007/s40993-017-0090-x).
+We cite the modular-function identification; elementary product cancellation
+proves h=q^(-1) product_(j odd)(1-q^j)^24. Hence our conventions give exactly
+
+    T_2A(i sqrt(n)/2)=64(g_n^24+g_n^(-24))+24,
+    -T_2A((1+i sqrt(n))/2)=64(G_n^24+G_n^(-24))-24.
+
+The second equality uses q->-q. The half-period phase and minus sign cannot
+be dropped. The nome here is exp(2 pi i z), whereas the original Weber point
+below is tau=i sqrt(n); the displayed arguments specify the change of
+coordinate. This supplies a genuine moonshine-series connection without
+identifying a tournament automorphism group with a sporadic group.
+
+The incoming packet also supplies certified exponential intervals at 22,
+37,58 and 130. Our own Decimal receipt remains labelled numerical; the
+stronger interval claims retain that separate source and implementation.
 
 ## M2. Simple nested square roots do not imply a near-integer exponential
 

@@ -62,6 +62,14 @@ c=-1, whereas phi² has norm+1. Erasing norm parity confuses ordinary Lucas
 traces with reciprocal traces at odd indices. P1 is stated for norm+1 to
 avoid that change of type.
 
+The field hypothesis also matters. The concurrent
+[trace-clock theorem](../session93_reversal_lucas_clocks_20261029/arithmetic/TRACE_CLOCK_CARRIERS.md)
+has four norm-one preimages of trace 3 modulo 33, from independent local
+inversions. Modulo 5 an entire trace history can hide a five-state nilpotent
+fiber. Neither is a counterexample to P1 over a field; both prevent extending
+its two-branch statement to arbitrary quadratic rings without CRT and
+ramification guards.
+
 Finite control: both path and heap tree charts, all2^k lifts for k=1..8,
 plus49 rational pair-polynomial checks. The proof is not restricted to these
 examples or to characteristic zero.
@@ -349,6 +357,17 @@ all729 based triangles. Their three holonomy frequencies are297,216,216.
 The all-size flatness and Bruck-loop construction remain credited to the
 [prior transport proof](../session90_even_graphs_odd_descent_20261029/carriers/TRANSPORT_AND_HOLONOMY.md).
 The twelve-vertex81/27 pair remains a distinct hostile, not this W.
+
+**Current all-size refinement, credited.** The incoming
+[recursive centralizer proof](../session93_reversal_lucas_clocks_20261029/holonomy/FULL_CENTRALIZER_GENERATION.md)
+and [independent full-holonomy packet](../lucas_prime_reflection_towers_20261028/FULL_HOLONOMY.md)
+now establish full centralizer holonomy throughout W_k. The
+[joint folded-LCA theorem](../session93_reversal_lucas_clocks_20261029/ports/PORT_ORBITS_AND_LCA.md)
+gives 2k+1 vertex orbits, 8k²+1 ordered two-port orbits, and the exact minimum
+(3^(k-1)-1)/2 named anchors. P5 is the k=2 vertex specialization. Thus it
+does not leave recursive-family generation or tuple classification open;
+the remaining attachment question concerns other atoms and operation menus,
+particularly native complement which changes the underlying adjacency.
 
 ## P6. A precise common theorem, with a free-action boundary
 

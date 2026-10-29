@@ -40,6 +40,12 @@ The 5,13 conjugation choices also give an explicit marked correspondence
 with the two primitive Pythagorean triples of hypotenuse 65. The shared
 allocation bits are exact; a field or metric isomorphism is not claimed.
 
+Concurrent all-size holonomy and folded-LCA results are incorporated with
+credit, as is the prime-Lucas alternating/symmetric reflection classification.
+The residual port questions now explicitly exclude those solved recursive
+cases. The coefficient 4372 also belongs to a literal level-two Fricke
+function; [M1a](MODULAR.md) retains the exact nome phase and normalization.
+
 Read:
 
 - [THEORY.md](THEORY.md): proofs P1–P6, sharp scope and counterexamples.

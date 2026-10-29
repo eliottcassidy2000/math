@@ -24,6 +24,37 @@ connection below is tested against all six. A count can preserve the first
 while losing the next four; a finite congruence observer can preserve all its
 declared predicates while losing the height-dependent primality target.
 
+### Current refinements incorporated from concurrent work
+
+The integrated snapshot at 47496ea2be contains three advances that narrow
+the questions below. They are credited results, not discoveries of this packet.
+
+- [Session93](../session93_reversal_lucas_clocks_20261029/README.md) and
+  [Lucas-prime reflection towers](../lucas_prime_reflection_towers_20261028/README.md)
+  prove full centralizer holonomy for every iterated C3 tournament. The
+  folded LCA depths **and cyclic directions** classify all ordered tuples
+  for that action. The exact one/two-port orbit counts are 2k+1 and 8k²+1;
+  four named anchors are necessary at order 27. Recursive tuple reconstruction
+  is therefore already closed; arbitrary strong atoms remain a different target.
+- The same packets classify the odd prime-Lucas reflection closure:
+  for prime p=L_n, odd n>=7, it is S_p when n=11 modulo 12 and A_p otherwise.
+  Their all-size proof credits primitive-group classification; short finite
+  certificates cover selected degrees. Eleven's small group is exceptional.
+  This is conditional on the value L_n being prime, not a prime-value test.
+- [The endpoint/CM packet](../cursor_cm_phase_20261028/README.md) supplies the
+  exact one-stage supplied-run endpoint response, a cursor census through
+  nine, and certified CM exponential intervals. It separates k!/|Hbar|
+  endpoint responses from k!/|G| faithful component orders. Arbitrary later
+  run splitting is outside that endpoint theorem. Its Fricke-series recovery
+  also strengthens the interpretation of 4372; M1a gives the exact nome-phase
+  conversion and an independently checked primary source.
+
+Session93's sampled-trace theorem and our named-divisor theorem concern
+different sources: an arbitrary quadratic-ring state x versus the index n
+of a fixed Lucas sequence. The former minimum is m²/gcd(m,5F_(2d)); the
+latter is an LCM of active divisor periods. Shared-source constraints explain
+both savings, but their state counts cannot be substituted for one another.
+
 ## Four discovery waves, followed by targeted recovery
 
 [recover.py](recover.py) records four differently seeded searches and ten
@@ -194,13 +225,15 @@ finite presentation of that quotient is the substantive problem.
 
 ## Next problems and cheapest decisive probes
 
-**O1 — Residual holonomy of actual joint ports. OPEN.** For each tested strong
-atom and port menu, compute the image of its loop group on joint responses,
-not only its action on vertices. Compare its kernel with the folded counting
-kernel. The nine-vertex moved port already requires a trit; the twelve-vertex
-81/27 pair must retain the unequal transporters. A first decisive probe is
-a pair of loops that agree on every singleton observation but disagree on
-an ordered two-port response. A free-frame theorem cannot settle this case.
+**O1 — Residual holonomy beyond the recursive family. OPEN.** For general
+strong atoms and specified attachment menus, compute the image of the loop
+group on joint responses and compare it with the folded counting kernel.
+The recursive C3 tuple problem is solved by the credited folded-LCA theorem;
+it already has the two-port hostile (3,6) versus (3,8) at order nine.
+The next probe must therefore use another atom or compose with an actual
+adjacency-changing complement. The twelve-vertex 81/27 pair must retain
+unequal transporters. Test whether a proposed quotient survives that operation,
+not merely whether it handles every loop in a fixed underlying tournament.
 
 **O2 — First-hit factor atlas for Lucas candidates. OPEN research target.**
 Organize divisors by exact order, split type, valuation and size relative to
@@ -217,9 +250,11 @@ the hostile and retain the C4/C8 genus fibers. Separately certify upper
 bounds on every unwanted conjugate in an integer-trace approximation.
 The 130 example prevents accepting radical length as an error bound.
 
-**O4 — Flat parts of non-flat observers. OPEN.** Classify which attachment
-menus factor through the holonomy-orbit quotient and which require a phase
-register. Compare them with eigen-observers of the star Gram. Five vertex
+**O4 — Flat parts of attachment observers. OPEN beyond the known quotients.**
+The credited blue-presentation quotient already has path-independent marking
+transport, while a named full path does not. Classify additional attachment
+menus that factor through holonomy or require a phase register after native
+operations. Compare them with eigen-observers of the star Gram. Five vertex
 cells, three spectral values, and exponentially many Gram directions are
 different minima; the target must be declared before optimizing any of them.
 

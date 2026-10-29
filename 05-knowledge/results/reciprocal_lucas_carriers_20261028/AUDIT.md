@@ -89,6 +89,9 @@ merely from matching a decimal value.
 - [Bilu–Hanrot–Voutier, Existence of primitive divisors of Lucas and Lehmer numbers, Theorem 1.4](https://www.researchgate.net/profile/Paul_Voutier/publication/2397582_Existence_of_Primitive_Divisors_of_Lucas_and_Lehmer_Numbers/links/559999c308ae99aa62cc6983/Existence-of-Primitive-Divisors-of-Lucas-and-Lehmer-Numbers.pdf?origin=publication_detail):
   used for the U-sequence F_(2n), giving a new divisor of L_n for n>15.
   It is not a prime-value theorem for the sequence L_n.
+- [Matsusaka, The Fourier coefficients of the McKay–Thompson series and the traces of CM values (2017)](https://link.springer.com/article/10.1007/s40993-017-0090-x):
+  the introduction's normalized level-two eta formula. Our M1a spells out
+  the different nome convention when evaluating Ramanujan's G and g.
 
 Classical trace, finite-torus, gauge and gcd mechanisms are explicitly
 attributed as such; their assembly and controls are the local contribution.

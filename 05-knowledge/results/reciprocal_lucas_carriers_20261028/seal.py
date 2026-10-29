@@ -26,7 +26,15 @@ def main():
         'session29_framed_profiles_20261022/session29-dehn/REPORT.md',
         'halfperiod_twin_classes_cm_log_law_20261018.md',
         'two_grids_ring_or_ideal_class_13_37_20261027.md',
-        'session27_repunits_lattices_20261022/session27-recurrence/RECIPROCAL_POWER_THEOREM.md']
+        'session27_repunits_lattices_20261022/session27-recurrence/RECIPROCAL_POWER_THEOREM.md',
+        'session93_reversal_lucas_clocks_20261029/README.md',
+        'session93_reversal_lucas_clocks_20261029/holonomy/FULL_CENTRALIZER_GENERATION.md',
+        'session93_reversal_lucas_clocks_20261029/ports/PORT_ORBITS_AND_LCA.md',
+        'session93_reversal_lucas_clocks_20261029/arithmetic/TRACE_CLOCK_CARRIERS.md',
+        'lucas_prime_reflection_towers_20261028/README.md',
+        'lucas_prime_reflection_towers_20261028/FULL_HOLONOMY.md',
+        'cursor_cm_phase_20261028/README.md',
+        'cursor_cm_phase_20261028/cm_series.py']
     names=sorted(set(runtime)|{'05-knowledge/results/'+p for p in texts})
     pins={name:digest(ROOT/name) for name in names}
     (HERE/'sources.json').write_text(json.dumps(pins,indent=2)+'\n',encoding='utf-8')
