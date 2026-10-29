@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "path": "ranks/phase2",
+  "runtime": {
+    "python": "3.12",
+    "sympy": "1.14.0 (six symbolic scripts only)"
+  },
+  "runnable_checks": [
+    "check_common_a3_carrier.py",
+    "check_elkies_948.py",
+    "check_fibration_geometry.py",
+    "check_named_sections.py",
+    "check_odd_primary_certificates.py",
+    "check_secant_bit_quotient.py",
+    "count_k3_reductions.py",
+    "verify_highrank_snapshot.py",
+    "verify_k3_counts.py",
+    "verify_odd_primary_certificates.py",
+    "verify_all_rank_coverage.py"
+  ],
+  "helper_modules": [
+    "named_family.py"
+  ],
+  "essential_mathematical_inputs": [
+    "highrank_inputs.json",
+    "all_highrank_character_certificates.json",
+    "odd_primary_certificates.json",
+    "elkies_948_mathdata.json",
+    "k3_reduction_counts.json"
+  ],
+  "reports": [
+    "README.md",
+    "COMMON_A3_CARRIER.md"
+  ],
+  "existing_parent_dependencies": [
+    "check_characters.py",
+    "curve273.json",
+    "curve302.json",
+    "curve4239.json",
+    "specialization_certificates.json"
+  ],
+  "sympy_scripts": [
+    "check_common_a3_carrier.py",
+    "check_elkies_948.py",
+    "check_fibration_geometry.py",
+    "check_secant_bit_quotient.py",
+    "count_k3_reductions.py",
+    "verify_k3_counts.py"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9807,
+      "sha256": "24c5784962d1c51656fb85a8a50f994da7ba06368967cc42e82d17b34abc65d8"
+    },
+    {
+      "path": "COMMON_A3_CARRIER.md",
+      "bytes": 2595,
+      "sha256": "a2406829f177b7bb4caddd69226e0587769806c2de5c95c75649da6c1504fb10"
+    },
+    {
+      "path": "check_common_a3_carrier.py",
+      "bytes": 929,
+      "sha256": "aef98489a71266dd21dc184485b2e0a1d244f4ad5194563e1de7531e9e9b55fd"
+    },
+    {
+      "path": "check_elkies_948.py",
+      "bytes": 1589,
+      "sha256": "7c5d8e6946fbad4c6e99df1957db8c1720c9f70469a720970ddb1f91532cbc9a"
+    },
+    {
+      "path": "check_fibration_geometry.py",
+      "bytes": 836,
+      "sha256": "6b2884ba67e63f174537c27a208f8dcfb8c17721f76176c024e8b27f16b99a13"
+    },
+    {
+      "path": "check_named_sections.py",
+      "bytes": 910,
+      "sha256": "7755e5fb918902b502590c663c0e2e4f30cab104f23a3abe3a5650b066ee2409"
+    },
+    {
+      "path": "check_odd_primary_certificates.py",
+      "bytes": 2209,
+      "sha256": "8de7147804d53443ea70aeb144e0db112b61e0809a744bd3ab0074f9dd11d4d9"
+    },
+    {
+      "path": "check_secant_bit_quotient.py",
+      "bytes": 1829,
+      "sha256": "ba87ba8e20e3729f78a81712fee011bc4ddb610193b2efe4f010adaf89818ea4"
+    },
+    {
+      "path": "count_k3_reductions.py",
+      "bytes": 1155,
+      "sha256": "d852b8206b749f2b81c677b693a16b2443446a8aacbd8d7c3932c3bc33eb79a9"
+    },
+    {
+      "path": "verify_highrank_snapshot.py",
+      "bytes": 1721,
+      "sha256": "28be6b2b5cdbbcddf18ba5a57400e37a41bca03b1daac9e5cea8283bf5e34b93"
+    },
+    {
+      "path": "verify_k3_counts.py",
+      "bytes": 953,
+      "sha256": "4f5494042cd3dcbdcebf6304a5cbcb3f458198ac40765275db43e22ffe095ef7"
+    },
+    {
+      "path": "verify_odd_primary_certificates.py",
+      "bytes": 3176,
+      "sha256": "4772438e9c4df34525da711db61de3ff65efa324149a70162ab3e7c8e24d0139"
+    },
+    {
+      "path": "verify_all_rank_coverage.py",
+      "bytes": 1271,
+      "sha256": "1badc04ac1c023be73e44639e7922fbae9600336363edb0a49cc9ed34da5ca28"
+    },
+    {
+      "path": "named_family.py",
+      "bytes": 1066,
+      "sha256": "5b8569a38393501941826fa4e578c08c903d4cdaf7074654f11ee38046845af7"
+    },
+    {
+      "path": "highrank_inputs.json",
+      "bytes": 502174,
+      "sha256": "8dffce8a9c53ee3a757c18ef4e7449d972d4eaf96139ea4a89bd519ed586903d"
+    },
+    {
+      "path": "all_highrank_character_certificates.json",
+      "bytes": 172881,
+      "sha256": "ac9eac92bf623c8a3c7d6e699947b4f6c752f65f4bf4dc664b10669cb55ec75a"
+    },
+    {
+      "path": "odd_primary_certificates.json",
+      "bytes": 32374,
+      "sha256": "49b1fbf62bd187f2ae2c03f33e10cc58218f9244ffe85c30ed81b6a7b9b64938"
+    },
+    {
+      "path": "elkies_948_mathdata.json",
+      "bytes": 7550,
+      "sha256": "984492921eb6885266a12b3964ba68808a3bc5a4023f93cc37dcd91b5bb64d28"
+    },
+    {
+      "path": "k3_reduction_counts.json",
+      "bytes": 528,
+      "sha256": "264246ac80889f2df8e6c1d12109456938657b2120d3396ff50d96528625ee96"
+    }
+  ],
+  "total_bytes": 745553,
+  "isolated_test": {
+    "cwd": "/tmp",
+    "result": "ALL11_NORMAL_OPTIMIZED_IDENTICAL",
+    "results": [
+      {
+        "script": "check_common_a3_carrier.py",
+        "stdout_bytes": 1828,
+        "stdout_sha256": "6362e2ebd1835008dc70317b291b54752e5cbce6f7d3cd2ffcbed3a13d676ab6"
+      },
+      {
+        "script": "check_elkies_948.py",
+        "stdout_bytes": 338,
+        "stdout_sha256": "7221a56035b7a298a757e517ad4c1fb149059985ce975fc1e7094d5ff19655a5"
+      },
+      {
+        "script": "check_fibration_geometry.py",
+        "stdout_bytes": 6862,
+        "stdout_sha256": "143dc7dcb34939feee54c8c5f8cd2ba4cabc9c73858a356667bb79cb4e459670"
+      },
+      {
+        "script": "check_named_sections.py",
+        "stdout_bytes": 2659,
+        "stdout_sha256": "81a3def6979a91a72b4e03a6630f91a453e496556925e05e61b045c3f6607dd9"
+      },
+      {
+        "script": "check_odd_primary_certificates.py",
+        "stdout_bytes": 32374,
+        "stdout_sha256": "49b1fbf62bd187f2ae2c03f33e10cc58218f9244ffe85c30ed81b6a7b9b64938"
+      },
+      {
+        "script": "check_secant_bit_quotient.py",
+        "stdout_bytes": 186,
+        "stdout_sha256": "552da2b965479596700cb414419c1cbc069accaa53601ac9489368b1671e3f11"
+      },
+      {
+        "script": "count_k3_reductions.py",
+        "stdout_bytes": 528,
+        "stdout_sha256": "264246ac80889f2df8e6c1d12109456938657b2120d3396ff50d96528625ee96"
+      },
+      {
+        "script": "verify_highrank_snapshot.py",
+        "stdout_bytes": 206,
+        "stdout_sha256": "924dbe835ad57a80707844a52c54212f99938e6dc2f21cd707d536c14c954acb"
+      },
+      {
+        "script": "verify_k3_counts.py",
+        "stdout_bytes": 685,
+        "stdout_sha256": "33f3fa21586c0c7818df3c3b527c8336a5ce0521a33d2fa4c5b77d592b143f85"
+      },
+      {
+        "script": "verify_odd_primary_certificates.py",
+        "stdout_bytes": 81,
+        "stdout_sha256": "333ea21b8c6a17b625a34975e21f69ec72a7b69c5717af1de9c20edaca5cfea5"
+      },
+      {
+        "script": "verify_all_rank_coverage.py",
+        "stdout_bytes": 121,
+        "stdout_sha256": "2da2e0054dc912cd119707ef6501c10eecbc91f544582ffd2b8fb44939538246"
+      }
+    ]
+  }
+}
