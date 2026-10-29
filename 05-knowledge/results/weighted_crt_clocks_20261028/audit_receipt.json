@@ -1,0 +1,75 @@
+{
+  "audit": "same-agent; alternate arithmetic paths; no formal or independent referee claim",
+  "runs": [
+    {
+      "script": "check_crt",
+      "optimized": false,
+      "checks": 801408
+    },
+    {
+      "script": "check_crt",
+      "optimized": true,
+      "checks": 801408
+    },
+    {
+      "script": "check_weighted",
+      "optimized": false,
+      "checks": 61
+    },
+    {
+      "script": "check_weighted",
+      "optimized": true,
+      "checks": 61
+    },
+    {
+      "script": "check_affine",
+      "optimized": false,
+      "checks": 5205
+    },
+    {
+      "script": "check_affine",
+      "optimized": true,
+      "checks": 5205
+    },
+    {
+      "script": "check_eta",
+      "optimized": false,
+      "checks": 426
+    },
+    {
+      "script": "check_eta",
+      "optimized": true,
+      "checks": 426
+    }
+  ],
+  "odd_ring_algebra_checks": 450,
+  "period55_algebra_only": {
+    "states": 312119004989,
+    "factors": [
+      121,
+      199,
+      331,
+      39161
+    ],
+    "root": 252509579304,
+    "order_mod_121": 55
+  },
+  "weighted_variance_literal_group": true,
+  "necklace_cross_check": true,
+  "local_links": "all resolve",
+  "hashes": {
+    "05-knowledge\\results\\relation_tower_frobenius_ports_20261028\\check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+    "04-computation\\a000568_exact_burnside.py": "30cb5c5eb3728a345b2f2a093fb6306f3741374dc2059d0d157d4aaeacbef66c",
+    "05-knowledge\\results\\lucas_prime_reflection_towers_20261028\\FULL_HOLONOMY.md": "2900cf63e881de93b852d1eb56904f75d487f6be19dbc707a0548584dab11837",
+    "05-knowledge\\results\\lucas_prime_reflection_towers_20261028\\PORT_MOMENTS.md": "45cb5269c55a7ff88711eb78572e806c52e15827d33d90635d7184852c39ac81",
+    "05-knowledge\\results\\cursor_cm_phase_20261028\\TRACE_CARRIER.md": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
+    "check_affine.json": "77138cd26938bec2ddd0cf64fd73c0a84d5671552574d31a01554823c20f9684",
+    "check_affine.py": "1ba2b64876422dc91585f0ba9ee9c66f48eba4d00851df37b3ba0b4cb376c55d",
+    "check_crt.json": "54596b4d4f7a65f0a25cda2a095994e7d1755472d3ef3e1f366f7e5ed21beaad",
+    "check_crt.py": "b050f05995654a1eeb4849c7491d083e00133291e36d4883461eb4293d86c8aa",
+    "check_eta.json": "fa304a0cf7e99031c564e5d973479c78e1eaff94a097b2770aaf75ad57e06426",
+    "check_eta.py": "1a22fd9befaf457e2f2ce530d654588f6a1299a9c117c954e1f92432fdfc6cf4",
+    "check_weighted.json": "0ef94e614866b84b8fa2321e9f4ac8fe2ef7a0ba9fdecc354e96c181f0488b37",
+    "check_weighted.py": "ada25f6fee3b29505f7cbbad8fc7028078d74350a2d032b37b2e5f238562906c"
+  }
+}

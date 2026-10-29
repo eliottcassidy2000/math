@@ -1,0 +1,94 @@
+{
+  "status": "FINITE-EXACT controls for proved identities",
+  "valuation_words": 1585,
+  "literal_odd_residue_tests": 70612,
+  "cycles": [
+    {
+      "sign": 1,
+      "nodes": [
+        1
+      ],
+      "ordered_valuations": [
+        2
+      ],
+      "total_binary_clock": 2,
+      "ternary_clock": 1,
+      "carry": 1,
+      "denominator": 1,
+      "affine_slope": "3/4"
+    },
+    {
+      "sign": -1,
+      "nodes": [
+        1
+      ],
+      "ordered_valuations": [
+        1
+      ],
+      "total_binary_clock": 1,
+      "ternary_clock": 1,
+      "carry": 1,
+      "denominator": -1,
+      "affine_slope": "3/2"
+    },
+    {
+      "sign": -1,
+      "nodes": [
+        5,
+        7
+      ],
+      "ordered_valuations": [
+        1,
+        2
+      ],
+      "total_binary_clock": 3,
+      "ternary_clock": 2,
+      "carry": 5,
+      "denominator": -1,
+      "affine_slope": "9/8"
+    },
+    {
+      "sign": -1,
+      "nodes": [
+        17,
+        25,
+        37,
+        55,
+        41,
+        61,
+        91
+      ],
+      "ordered_valuations": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "total_binary_clock": 11,
+      "ternary_clock": 7,
+      "carry": 2363,
+      "denominator": -139,
+      "affine_slope": "2187/2048"
+    }
+  ],
+  "same_clock_different_carry": {
+    "words": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "carries": [
+      5,
+      7
+    ]
+  },
+  "checks": 5205
+}
