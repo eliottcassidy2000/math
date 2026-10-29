@@ -1,0 +1,21 @@
+{
+  "edge_inputs": 200002,
+  "exceptional_initial_queues": 100,
+  "first_return_replay": {
+    "3": {
+      "sources": 10001,
+      "stops": 10001,
+      "traps": 0
+    },
+    "5": {
+      "sources": 10001,
+      "stops": 9998,
+      "traps": 3
+    }
+  },
+  "max_block_repetitions": 40,
+  "repeated_block_sources": 320,
+  "status": "PASS",
+  "threshold_checks": 11615,
+  "uses_assert": false
+}
