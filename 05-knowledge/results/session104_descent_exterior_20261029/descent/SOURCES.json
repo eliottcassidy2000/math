@@ -1,0 +1,64 @@
+{
+  "scope": "Local bytes actually inspected; no claim these historical snapshots are latest remote main",
+  "sources": [
+    {
+      "path": "math/05-knowledge/results/collatz_effective_prefix_mass_20261005.md",
+      "sha256": "046e6dd22597832e959e3b713f287fd15188f09ec6149c9669718154bd019d65",
+      "bytes": 28820
+    },
+    {
+      "path": "math/05-knowledge/results/collatz_atomic_rank_interface_20261011.md",
+      "sha256": "3012842ae3160eb3f6d7e5aca9de4c59c7609fad5f0c0c0d8ec4fc7ba9e4cc1a",
+      "bytes": 11080
+    },
+    {
+      "path": "math/05-knowledge/results/collatz_atomic_run_bridge_20261011b.md",
+      "sha256": "c84ebc503b6db207a591372df79eb9cf2adf353d65bad6c23e03796348f2a20d",
+      "bytes": 14337
+    },
+    {
+      "path": "math/05-knowledge/results/collatz_composed_weight_floor_20261011.md",
+      "sha256": "d207b41f961d1f8417fd3aace90d17b8f0f694330f0d206db9537a7406fecb42",
+      "bytes": 11106
+    },
+    {
+      "path": "session100_reframes/controllers/RETURN_CONTROLLER_TRAP.md",
+      "sha256": "61d45a6c1936d70d30e565355f83129adfd59996b2ccce88932152453acf472a",
+      "bytes": 8792
+    },
+    {
+      "path": "session100_reframes/drift/DRIFT_TARGET.md",
+      "sha256": "a2bf1e614942bc505bde4147a78a94659ef67b4c0a0d65caadbc2413970bd74f",
+      "bytes": 7960
+    },
+    {
+      "path": "session100_reframes/bijections/VALUATION_CONJUGACY_AND_INTEGER_SIDECAR.md",
+      "sha256": "aed3aded377809c620968eeae2f568ef654c9371e2d0bb6cd1f72a955d1b1765",
+      "bytes": 8731
+    },
+    {
+      "path": "session99_collatz_poles/transfer/CARRY_CLOCK_POLES.md",
+      "sha256": "0bcda142ad8b4c379bc06f2ea4262341565b7f26f3c4ba583ac0a83c0caf29f0",
+      "bytes": 7523
+    },
+    {
+      "path": "session101_denominator_connections/continuations/CONTINUATION_STATE_AND_SYMMETRY.md",
+      "sha256": "ecf6220661a521f5ec05b1fff5ea512dec4846669506ada42eaff441544370e3",
+      "bytes": 12013
+    }
+  ],
+  "external": [
+    {
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2010/01/ckrw10.pdf",
+      "title": "Ranking Function Synthesis for Bit-Vector Relations",
+      "authors": [
+        "Byron Cook",
+        "Daniel Kroening",
+        "Philipp Rummer",
+        "Christoph M. Wintersteiger"
+      ],
+      "location": "section2.2, Definition1 and Lemma2, printed page4",
+      "accessed": "2026-10-29"
+    }
+  ]
+}
