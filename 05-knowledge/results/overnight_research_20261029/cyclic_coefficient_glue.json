@@ -1,0 +1,98 @@
+{
+  "gates": 135895,
+  "integer_sources": 21952,
+  "modular_censuses": [
+    {
+      "modulus": 1,
+      "source_states": 1,
+      "image_states": 1,
+      "fiber_size": 1
+    },
+    {
+      "modulus": 2,
+      "source_states": 8,
+      "image_states": 8,
+      "fiber_size": 1
+    },
+    {
+      "modulus": 3,
+      "source_states": 27,
+      "image_states": 9,
+      "fiber_size": 3
+    },
+    {
+      "modulus": 4,
+      "source_states": 64,
+      "image_states": 64,
+      "fiber_size": 1
+    },
+    {
+      "modulus": 7,
+      "source_states": 343,
+      "image_states": 343,
+      "fiber_size": 1
+    },
+    {
+      "modulus": 9,
+      "source_states": 729,
+      "image_states": 243,
+      "fiber_size": 3
+    },
+    {
+      "modulus": 11,
+      "source_states": 1331,
+      "image_states": 1331,
+      "fiber_size": 1
+    },
+    {
+      "modulus": 12,
+      "source_states": 1728,
+      "image_states": 576,
+      "fiber_size": 3
+    },
+    {
+      "modulus": 13,
+      "source_states": 2197,
+      "image_states": 2197,
+      "fiber_size": 1
+    },
+    {
+      "modulus": 27,
+      "source_states": 19683,
+      "image_states": 6561,
+      "fiber_size": 3
+    }
+  ],
+  "actual_paley7_sources": [
+    {
+      "sector": "symmetric",
+      "coefficients": [
+        15,
+        12,
+        12
+      ],
+      "source_sum": 39,
+      "phase": [
+        3,
+        0
+      ],
+      "norm": 9
+    },
+    {
+      "sector": "antisymmetric",
+      "coefficients": [
+        -11,
+        2,
+        2
+      ],
+      "source_sum": -7,
+      "phase": [
+        -13,
+        0
+      ],
+      "norm": 169
+    }
+  ],
+  "source_packet_commit": "4ff64c524c",
+  "scope": "integer C3 coefficient lattice; not native attachment realizability"
+}

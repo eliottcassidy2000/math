@@ -234,6 +234,9 @@ and the integral realization guard. The incoming sum/difference sectors
 are glued modulo2, so their rational spectral factors alone do not
 determine the integer response. No isomorphism of their operation sets
 with our arbitrary cross-attachment language is inferred.
+The [cyclic coefficient bridge](CYCLIC_COEFFICIENT_GLUE.md) now spells
+out the exact index-three guard h-a+b=0 modulo3, its source inverse,
+its dual C3 clock and its all-modulus recurrence.
 
 ## Reproduction
 

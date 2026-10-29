@@ -190,3 +190,18 @@ Both checkers pass normally and with -O with identical outputs. These
 are same-agent alternative-path audits, not an independent referee.
 The older modular checker was rerun in both modes after its status
 metadata changed from OPEN to the proved dyadic continuation.
+
+After rebase onto incoming4ff64c524c, both `two_run.py` and
+`paley_pencil.py` replayed their saved receipts unchanged. The former
+retains the equal total9,011,898 two-run covers but separates81/27
+modulo3 by ranks24/22; the latter passes all556 signed/scaled cases.
+These are inherited results, credited to their own packet.
+
+`cyclic_coefficient_glue.py` passes135,895 active gates normally and
+optimized. Its21,952 full integer triples check the source inverse,
+congruence guard, literal clock, norm and source-sum identity. Complete
+modular universes at1,2,3,4,7,9,11,12,13,27 verify image membership,
+cardinality and every fiber size. The two native coefficient triples
+are read from the replayed two_run.json, not generated from the desired
+norms. The map is a classical integral C3 decomposition with an explicit
+application; it is not a theorem of native attachment realizability.

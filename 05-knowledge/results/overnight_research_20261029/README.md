@@ -13,6 +13,13 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Actual cyclic coefficient bridge](CYCLIC_COEFFICIENT_GLUE.md):
+  Paley7's(15,12,12) and(-11,2,2) coefficient sources map explicitly
+  to Eisenstein phases(3,0) and(-13,0). Retaining the source sum and
+  index-three congruence recovers all coefficients and their dual C3
+  clock. The linear modular image count is m^3/gcd(m,3), distinct from
+  the nonlinear response count below. Incoming joint-run81/27 ranks
+  24/22 modulo3 and all556 Paley-pencil cases replayed successfully.
 - [All-modulus and finite-field carriers](DYADIC_AND_FIELD_PORTS.md):
   K(2^k)=5*2^(3k-6) for k>=3 completes the CRT formula at every modulus.
   Explicit parent maps show unequal branching at8-to16, then uniform
@@ -105,6 +112,7 @@ Run from this directory, or give each file's repository-relative path:
     python -B clock_join_precision.py
     python -B dyadic_field_ports.py
     python -B marked_clock_ports.py
+    python -B cyclic_coefficient_glue.py
 
 The producer has 634,725 active gates; the alternate audit has 33,082,
 and the weighted recurrence has 3,031. Exact universe and hostile details
@@ -132,3 +140,6 @@ The second continuation adds17,803,214 active gates for dyadic and field
 responses and66,732 for fully named pairings. Both pass normally and
 optimized with identical receipts. The previous modular checker's OPEN
 metadata has been superseded by the all-order dyadic proof.
+The native coefficient bridge adds135,895 active gates and an identical
+normal/optimized receipt. It preserves the actual coefficient sources
+rather than inferring a connection from their norm values alone.

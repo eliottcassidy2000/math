@@ -61,6 +61,18 @@ observations suffice; there is no single-run survival claim at singular
 probes. The induced clock on cokernel classes is T^(-T). These are exact
 formal matrix-family results, not an arithmetic Selmer realization.
 
+After integrating incoming4ff64c524c, both `two_run.py` and
+`paley_pencil.py` replayed successfully without rewriting their receipts.
+The joint-run81/27 separator is now modulo3 (ranks24/22), while the
+single-run separator remains modulo9. Preserve both scopes. The all-prime
+Paley-pencil Smith formula now includes ramified and singular weights;
+the prime-power full Smith law remains open. Its F27 rank8 hostile
+rejects blindly substituting27 into the prime-only rank formula.
+[CYCLIC_COEFFICIENT_GLUE](CYCLIC_COEFFICIENT_GLUE.md) connects the actual
+Paley7 coefficient triples(15,12,12),(-11,2,2) to phases(3,0),(-13,0).
+Retain h and h-a+b=0 mod3 to invert the map; the clock is A^(-T).
+Its image count m^3/gcd(m,3) is NOT the nonlinear determinant count.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -113,6 +125,11 @@ then their targeted proofs. Recent Session97 additions include:
    with original ports, integral gluing and complemented target relation
    retained. Keep branching experiments separate from a supplied single
    run that terminates at singularity. No native minimality follows yet.
+   Incoming TWO_RUN now supplies the native two-run matrices, sector
+   parity glue and a stronger81/27 separator. A concrete next test is
+   the three-run S3-sector lattice: its projector denominators suggest
+   testing both2 and3 for lost glue, while retaining the complemented
+   target relation. Check incoming work before duplicating this census.
 2. Replace abstract paired-group realization by an actual source-fixed
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with
