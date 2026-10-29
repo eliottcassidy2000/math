@@ -1,0 +1,199 @@
+{
+  "status": "PASS",
+  "scope": "Key proof checks; finite corroboration, not a replacement for all-order proofs",
+  "checks": 9,
+  "runs": 18,
+  "normal_and_optimized": true,
+  "fresh_receipts": true,
+  "original_manifest_unchanged": true,
+  "manifest_sha256": {
+    "audit/all_k_dag_sink_receipt.json": "6cc58e8e7795e1daa6e21daf8afd933cf69809f7ace6fabfc3e93d545d74a6a9",
+    "audit/check_all_k_dag_and_sink.py": "85c3fb91313a8d977c0b1273bf4100446110b374b08c34622bc2437e840ab857",
+    "audit/check_final_additions.py": "4a93daeb7e8a95d6c51cedb4b7990bc54aa33ecc974c3f21c425403f41e7aefa",
+    "audit/check_independent.py": "302ba9a7858aba4880a78082afb7d0aab9a1159b197330d932467be6d704ca3b",
+    "audit/final_additions_receipt.json": "85171137c3f48e2aace47fef7a5b8679d7619d20aa2c3bd3cce635cd07730a36",
+    "audit/receipt.json": "eb2c0cc17ad9576ee2edc8397a7f8a4026c2146ee778d0ec43bde1778b32cbc0",
+    "audit2/check_independent.py": "1fa22bb8e3d9cc20e7fc4d1e3d3c76929fb3320ee144d6f20a84795dd8ce61d5",
+    "audit2/receipt.json": "4e80069c3adbbd5ddcc1ca1762107b5bfa343caaf5035a4cee645255e84a71d9",
+    "bridge/check_last_birth_certificate.py": "cbc01d5f3cd30066df8333edbf6d74589b4043e7e1bbf95dd7b46e12e09d9a36",
+    "bridge/last_birth_receipt.json": "97ef41690e38947e1d24eb89b9c0a48293bb19df79c33fe28a20da3abe3b92e2",
+    "bridge/star_probe.py": "11a2b3f2606a260964e59888dd4e4acf86b7e75ad1165bc28a5cdaece706a949",
+    "languages/actual_receipt.json": "80364db909d66f228ca19fd3d79790da244d9524e466e1d8f581e1b14726e086",
+    "languages/check_actual.py": "758253c702dbdcd136b4dba4ea77302ff1511ab845a0876b1276d3c02570f01d",
+    "languages/source_rotation_witness.json": "5e173e8bee317d3f1e5f2f49f74b34f4ba5b9e0c1025c59d76cbaddc73d5df77",
+    "necklaces/check_chord_necklaces.py": "0cc200df559bd67b5bf4ca7e3b2bf1479b87a3217080b633cc20a2341157c4d6",
+    "necklaces/results.json": "ec3892b5f14125d31cb50fcd965e8e285de3228b0e1030b538d573b16f40070c",
+    "singularity/actual_grammar.py": "5acddbf7cee0b75bb4287c883f55be89602b9f31952654e01f61b136baac6714",
+    "singularity/native_kernel.py": "74ee7e9d5ba188830bf3b661cfeb9e99db25bb6715c5851b703c4902972a682d",
+    "singularity/pinned/tournament_results.json": "399b14e9bcc004bfc7d29fde61b46f09198e1198a1825b0f5531ab32239c62e6",
+    "triangularity/all_k_sparse_receipt.json": "93c5284616df9ee04273c2ece3856c8aff4fe12c6d2c505cf865fb6483440946",
+    "triangularity/avoiding_dag_receipt.json": "477cbfaa97bc1ef53d3fb785e57ff8a1d274378dce11421b64316e45f8eef989",
+    "triangularity/check_all_k_sparse.py": "c8c1032c27b27f8c6e57f8cac4af015e8d7dfeb27a638dc0ed480bc0c51624f7",
+    "triangularity/check_avoiding_dag.py": "ec10c6cf950e8b54060614f59d05c7cfac5b4e5c918968da86edd8adc4b42f08"
+  },
+  "results": [
+    {
+      "check": "actual_language",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "languages/actual_receipt.json",
+      "baseline_sha256": "80364db909d66f228ca19fd3d79790da244d9524e466e1d8f581e1b14726e086",
+      "elapsed_seconds": 0.086
+    },
+    {
+      "check": "actual_language",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "languages/actual_receipt.json",
+      "baseline_sha256": "80364db909d66f228ca19fd3d79790da244d9524e466e1d8f581e1b14726e086",
+      "elapsed_seconds": 0.151
+    },
+    {
+      "check": "vertex_dag",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "triangularity/avoiding_dag_receipt.json",
+      "baseline_sha256": "477cbfaa97bc1ef53d3fb785e57ff8a1d274378dce11421b64316e45f8eef989",
+      "elapsed_seconds": 0.449
+    },
+    {
+      "check": "vertex_dag",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "triangularity/avoiding_dag_receipt.json",
+      "baseline_sha256": "477cbfaa97bc1ef53d3fb785e57ff8a1d274378dce11421b64316e45f8eef989",
+      "elapsed_seconds": 0.518
+    },
+    {
+      "check": "all_k_sparse",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "triangularity/all_k_sparse_receipt.json",
+      "baseline_sha256": "93c5284616df9ee04273c2ece3856c8aff4fe12c6d2c505cf865fb6483440946",
+      "elapsed_seconds": 0.271
+    },
+    {
+      "check": "all_k_sparse",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "triangularity/all_k_sparse_receipt.json",
+      "baseline_sha256": "93c5284616df9ee04273c2ece3856c8aff4fe12c6d2c505cf865fb6483440946",
+      "elapsed_seconds": 0.316
+    },
+    {
+      "check": "last_birth",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "bridge/last_birth_receipt.json",
+      "baseline_sha256": "97ef41690e38947e1d24eb89b9c0a48293bb19df79c33fe28a20da3abe3b92e2",
+      "elapsed_seconds": 58.416
+    },
+    {
+      "check": "last_birth",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "bridge/last_birth_receipt.json",
+      "baseline_sha256": "97ef41690e38947e1d24eb89b9c0a48293bb19df79c33fe28a20da3abe3b92e2",
+      "elapsed_seconds": 58.388
+    },
+    {
+      "check": "audit1",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit/receipt.json",
+      "baseline_sha256": "eb2c0cc17ad9576ee2edc8397a7f8a4026c2146ee778d0ec43bde1778b32cbc0",
+      "elapsed_seconds": 2.62
+    },
+    {
+      "check": "audit1",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit/receipt.json",
+      "baseline_sha256": "eb2c0cc17ad9576ee2edc8397a7f8a4026c2146ee778d0ec43bde1778b32cbc0",
+      "elapsed_seconds": 2.587
+    },
+    {
+      "check": "audit1_all_k_sink",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit/all_k_dag_sink_receipt.json",
+      "baseline_sha256": "6cc58e8e7795e1daa6e21daf8afd933cf69809f7ace6fabfc3e93d545d74a6a9",
+      "elapsed_seconds": 0.086
+    },
+    {
+      "check": "audit1_all_k_sink",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit/all_k_dag_sink_receipt.json",
+      "baseline_sha256": "6cc58e8e7795e1daa6e21daf8afd933cf69809f7ace6fabfc3e93d545d74a6a9",
+      "elapsed_seconds": 0.157
+    },
+    {
+      "check": "audit2",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit2/receipt.json",
+      "baseline_sha256": "4e80069c3adbbd5ddcc1ca1762107b5bfa343caaf5035a4cee645255e84a71d9",
+      "elapsed_seconds": 0.642
+    },
+    {
+      "check": "audit2",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit2/receipt.json",
+      "baseline_sha256": "4e80069c3adbbd5ddcc1ca1762107b5bfa343caaf5035a4cee645255e84a71d9",
+      "elapsed_seconds": 0.774
+    },
+    {
+      "check": "necklaces",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "necklaces/results.json",
+      "baseline_sha256": "ec3892b5f14125d31cb50fcd965e8e285de3228b0e1030b538d573b16f40070c",
+      "elapsed_seconds": 0.309
+    },
+    {
+      "check": "necklaces",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "necklaces/results.json",
+      "baseline_sha256": "ec3892b5f14125d31cb50fcd965e8e285de3228b0e1030b538d573b16f40070c",
+      "elapsed_seconds": 0.354
+    },
+    {
+      "check": "audit1_final_additions",
+      "optimized": false,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit/final_additions_receipt.json",
+      "baseline_sha256": "85171137c3f48e2aace47fef7a5b8679d7619d20aa2c3bd3cce635cd07730a36",
+      "elapsed_seconds": 0.088
+    },
+    {
+      "check": "audit1_final_additions",
+      "optimized": true,
+      "status": "PASS",
+      "fresh_json_equal": true,
+      "receipt": "audit/final_additions_receipt.json",
+      "baseline_sha256": "85171137c3f48e2aace47fef7a5b8679d7619d20aa2c3bd3cce635cd07730a36",
+      "elapsed_seconds": 0.157
+    }
+  ]
+}
+
