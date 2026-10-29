@@ -1,0 +1,376 @@
+{
+  "census": [
+    {
+      "det_histogram": {
+        "-1": 1
+      },
+      "forced_cycle_candidates": 1,
+      "isotypes": 1,
+      "n": 3,
+      "rooted_unique_cycle_tournaments": 1,
+      "rotation_orbit_sizes": {
+        "1": 1
+      },
+      "self_converse_isotypes": 1
+    },
+    {
+      "det_histogram": {
+        "-1": 1
+      },
+      "forced_cycle_candidates": 4,
+      "isotypes": 1,
+      "n": 4,
+      "rooted_unique_cycle_tournaments": 4,
+      "rotation_orbit_sizes": {
+        "4": 1
+      },
+      "self_converse_isotypes": 1
+    },
+    {
+      "det_histogram": {
+        "1": 3
+      },
+      "forced_cycle_candidates": 32,
+      "isotypes": 3,
+      "n": 5,
+      "rooted_unique_cycle_tournaments": 15,
+      "rotation_orbit_sizes": {
+        "5": 3
+      },
+      "self_converse_isotypes": 3
+    },
+    {
+      "det_histogram": {
+        "0": 1,
+        "1": 7
+      },
+      "forced_cycle_candidates": 512,
+      "isotypes": 8,
+      "n": 6,
+      "rooted_unique_cycle_tournaments": 48,
+      "rotation_orbit_sizes": {
+        "6": 8
+      },
+      "self_converse_isotypes": 2
+    },
+    {
+      "det_histogram": {
+        "-1": 16,
+        "0": 5
+      },
+      "forced_cycle_candidates": 16384,
+      "isotypes": 21,
+      "n": 7,
+      "rooted_unique_cycle_tournaments": 147,
+      "rotation_orbit_sizes": {
+        "7": 21
+      },
+      "self_converse_isotypes": 7
+    }
+  ],
+  "checks": 119,
+  "hostile": {
+    "child_determinants": [
+      0,
+      1
+    ],
+    "orientation_bits": 0,
+    "parent_canonical_keys": [
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "parent_determinants": [
+      1,
+      1
+    ],
+    "repair_child": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "repair_determinant": -1,
+    "repair_rule": "adjoin vertex6 with6->0,1,5 and2,3,4->6; existing6-vertex child retained",
+    "rule": "append vertex5 after4 before0; bit(j-1)=1 means5->j forj1..3",
+    "singular_child": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "singular_parent": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "unimodular_child": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "unimodular_parent": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "nonunique_marking_hostile": {
+    "constant_chord_rows": [
+      "1100",
+      "1010"
+    ],
+    "first_cycle": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "necklaces_distinct": true,
+    "second_cycle": [
+      0,
+      2,
+      4,
+      1,
+      3
+    ],
+    "tournament": "cyclic R5 differences1,2",
+    "unmarked_tournament_same": true
+  },
+  "scope": "Faithful chord-row necklace model; no identification of missing b/e insertion semantics.",
+  "status": "FINITE-EXACT"
+}
