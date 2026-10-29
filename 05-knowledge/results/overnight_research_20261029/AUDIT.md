@@ -360,3 +360,15 @@ was checked in Stacks Proposition35.3.9 on2026-10-29; finite unramified
 Galois data give the required module descent. No arithmetic realization
 is inferred. All four new checkers pass normally and optimized with
 identical receipts; source clocks and finite precision are retained.
+
+After rebase onto6b83fd8383, `run_recurrence.py` passed its endpoint
+sizes1..11, all cover arities through8, joint entries through9 and the
+specified20/40/100 queries. `strong_target.py` passed every one of the396
+stored strong-target recovery cases without modifying either receipt.
+This strengthens the earlier supplied-target census; it is inherited
+work. The full-clock checkpoint6c45d7f245 was pushed before this final
+integration. The source operators remain distinct: the incoming integer
+recurrence can lose p-adic precision, whereas our Gamma clocks are
+actual automorphisms. A separate exact image-filtration check on the
+displayed ternary optimal form gives logarithmic orders10,2,0, hence
+paired quotient(C3)^6+(C9)^2; no splitting of that quotient is inferred.

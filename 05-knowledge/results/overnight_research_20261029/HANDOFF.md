@@ -175,6 +175,16 @@ an independent kernel audit checks every2x2 matrix over Z/4 and Z/9.
 The81/27 singleton slices are replayed. Do not repeat the completed C21
 or dyadic minimum calculation; use the explicit ternary radical next.
 
+Incoming6b83fd8383 strengthens all396 native recovery certificates to
+strong targets whenever a second observation is needed; C3 needs zero
+moves. Its recovered March interval family has exact ordered-k-cover
+recurrence of minimal order3k and a joint-port compiler, with a literal
+strong complement that exits the family. The recurrence clock has
+Smith(1,1,j^r), a precision-losing endomorphism distinct from our finite
+group automorphisms. Both incoming `strong_target.py` and
+`run_recurrence.py` replayed successfully after rebase. The core full-clock
+completion checkpoint is6c45d7f245.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,

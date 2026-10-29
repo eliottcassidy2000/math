@@ -128,6 +128,10 @@ and residual involutions:
     A=Z/8,        S_A=3;
     B=Z/2+Z/16,  S_B=[[1,1],[8,5]].                 (N4)
 
+The first row of S_B is reduced modulo2 and the second modulo16.
+It is not a uniform-modulus GL2(Z/16) matrix. The literal heterogeneous
+group relations, including S_B^2=1, are part of the certificate.
+
 The receipt constructs fixed generators, their complete unramified bases
 and inverse charts. Thus these are the marked source modules, not just
 abstract groups with equal sizes. To pair the two reciprocal cubic
@@ -312,6 +316,24 @@ of size2-by2, checking every source vector. New source clocks satisfy
 literal intertwiners on all210 named ports, their heterogeneous cyclic
 orders, and the full group relations. The81/27 singleton-slice controls
 are replayed. Normal/optimized receipts agree; exceptions stay active.
+
+Incoming6b83fd8383 supplies a complementary kind of recursion in
+[RUN_RECURRENCE](../overnight_rank_return_20261029/RUN_RECURRENCE.md).
+The recovered March interval family has ordered-k-cover recurrence of
+minimal order3k and a joint-port evaluator with three local coordinates
+per colour. Its integer recurrence matrix has Smith factors(1,1,j^r)
+after r steps. That clock can lose precision when a prime divides j;
+our supplied Gamma clocks are automorphisms. The two results therefore
+describe different operations. Both retain joint sources and give exact
+inverse/image or extension guards, rather than replacing them with a
+scalar count. The incoming full target relation still exits its interval
+family under an explicit strong complement.
+
+The same incoming checkpoint strengthens native recovery through7:
+every source needing a second observation has a successful complement
+that stays strong. Zero steps are necessary at C3. Both new incoming
+checkers replayed successfully; this is inherited work, not a new census
+or a consequence of the completion theorem.
 
 Next: construct or exclude a3-primary completion of index3^8, retaining
 the full joint action, rather than only its optimal restriction form.
