@@ -1,0 +1,10 @@
+{
+  "dag_tournaments": {
+    "3": 1,
+    "4": 4,
+    "5": 15
+  },
+  "all_k_observers": 94,
+  "bridge_cases": 44,
+  "status": "PASS"
+}
