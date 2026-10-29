@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "scripts": [
+    {
+      "script": "recurrence/verify.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "a2d99692bca42bed68131ee3fb999f687732160e60f8f5670369918889eeb242"
+    },
+    {
+      "script": "composition/inherited_recreate.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "73ab496ee5b1c9e5ed12dc6a0ba46142a671680c63aeb161b3e5c4b4fa07bb2d"
+    },
+    {
+      "script": "composition/verify_surplus_jets.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "119fd5c240751f9c2f60beb347f91c3bd33b4dfda6418f912afc6a45dc4b8e54"
+    },
+    {
+      "script": "composition/observable_quotient.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "765e25355c6baffa2efd6f2368454293a309f853712d8964dd85106a253c4685"
+    },
+    {
+      "script": "composition/search_reachable.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "c6233ac6674b22fb426885be484e76f67a33d0a82c8042c0717dd3829f3f3b0d"
+    },
+    {
+      "script": "partials/check_partial_exposure.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "716e2c0e0d29bc0046e5f6765b9f9239aaa025be6fb5f4afc62039bf7435f55a"
+    },
+    {
+      "script": "defects/check_defects.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "ba9481e3517dfa1a66d52f05c525aed66c646dd5f84ae1f7e25d27c740c97243"
+    },
+    {
+      "script": "defects/check_recursive_grammar.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "9d1196f667612bb96df4752ec646c80376ec622f843e4a044e5256f7f6990e68"
+    },
+    {
+      "script": "limits/verify_limits.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "081230ce11c82c1ed676afeaca45eaa432298239131145c023a0c33ba6014d21"
+    },
+    {
+      "script": "limits/verify_all_poles.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "48621a2a9fe4bf8ea037a0e4d41184339c41d84864f1a284853395a50043927c"
+    },
+    {
+      "script": "limits/verify_palette_poles.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "2066ba9e1a082eb8421f5f976157e25e0981587f6686b5846828f783bf53346e"
+    },
+    {
+      "script": "audit/independent_audit.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "ed9ebf463d4e95a865740fd2c33f0ca2a12df4ce1e6ca88cd7e449b35e3c493f"
+    },
+    {
+      "script": "audit/check_observation_independent.py",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "62fe560d9ecbcce034e38d838d95a31574cd6b612b760a221217f7e39bc40f32"
+    }
+  ],
+  "count": 13
+}
