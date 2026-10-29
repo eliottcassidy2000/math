@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "checks": 14850,
+  "free_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "syndrome_equations": [
+    "x01 XOR x23",
+    "x02 XOR x13",
+    "x45 XOR x56"
+  ],
+  "fibres": {
+    "000": 64,
+    "001": 64,
+    "010": 64,
+    "011": 64,
+    "100": 64,
+    "101": 64,
+    "110": 64,
+    "111": 64
+  },
+  "skeleton_group": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      0,
+      3,
+      2,
+      6,
+      5,
+      4
+    ],
+    [
+      2,
+      3,
+      0,
+      1,
+      4,
+      5,
+      6
+    ],
+    [
+      3,
+      2,
+      1,
+      0,
+      6,
+      5,
+      4
+    ]
+  ],
+  "syndrome_action": "identity for every element, after explicit cross-cut normalization",
+  "normalization_records": [
+    {
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "switch_L_needed": false,
+      "tested_fillings": 512
+    },
+    {
+      "permutation": [
+        1,
+        0,
+        3,
+        2,
+        6,
+        5,
+        4
+      ],
+      "switch_L_needed": true,
+      "tested_fillings": 512
+    },
+    {
+      "permutation": [
+        2,
+        3,
+        0,
+        1,
+        4,
+        5,
+        6
+      ],
+      "switch_L_needed": false,
+      "tested_fillings": 512
+    },
+    {
+      "permutation": [
+        3,
+        2,
+        1,
+        0,
+        6,
+        5,
+        4
+      ],
+      "switch_L_needed": true,
+      "tested_fillings": 512
+    }
+  ],
+  "fixed_fillings": {
+    "(0, 1, 2, 3, 4, 5, 6)": 512
+  }
+}
