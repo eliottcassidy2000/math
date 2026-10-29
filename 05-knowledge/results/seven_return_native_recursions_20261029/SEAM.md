@@ -171,3 +171,20 @@ marked-path response under complement. The cheapest next extension is to
 retain both M_X and M_(K_P X) with the actual path P; the next decisive test
 is closure after re-marking or attaching a new block and complementing again.
 No finite-dimensional closure of that enlarged operation family is proved.
+
+## Late incoming native weights
+
+Commit `2a81e9c29d` supplies the independently audited
+[weighted native recursion](../session105_metagraph_recursion_20261029/metagraph/WEIGHTED_NATIVE_RECURSION.md).
+It already gives an all-order path-word strip intertwining and a smaller
+order-four obstruction to using only source/target class pairs. Our
+five-vertex hostile concerns a different representation: the entire seam
+response matrix. Neither obstruction replaces the other or proves a lower
+bound for computing A000568.
+
+The incoming symmetric incidence operator has a genuine Hilbert-space
+compression of the complement involution and a normalized spectral bound.
+Our three-coordinate J-adjoint instead concerns unnormalized path-count
+transfers with an indefinite form. These are different operators and
+weights; (6) alone does not supply the Markov bound. The full path-word
+recursion remains the stronger faithful structural fallback.

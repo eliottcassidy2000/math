@@ -91,6 +91,27 @@ order401 eight-bit request by about6.3-fold in matched trials. The incoming
 March graph/tournament correction was read: the historical all-partition
 functions count graphs; their repaired odd-cycle filter is retained here.
 
+During checkpoint rebase, `2a81e9c29d` added the audited Session105 native
+operator and deletion/refresh work. Its README, full
+[weighted native proof](../session105_metagraph_recursion_20261029/metagraph/WEIGHTED_NATIVE_RECURSION.md),
+and relevant proof/audit sections were read. The exact strip recursion
+retains more structural information than our seam observer. Its order-four
+class-pair obstruction and our five-vertex full-matrix obstruction apply
+to different proposed quotients. We keep both boundaries.
+
+The incoming clock correction is directly useful for the Collatz lane:
+conditioning on a legal Hamilton path has class measure H/Aut, whereas
+proposing every permutation and staying on a failed guard preserves
+1/Aut, matching uniform vertex refresh. At order3 these are respectively
+(1/2,1/2) and (3/4,1/4). Thus one cannot import a refresh gap into a
+conditioned native clock without changing the measure. Correspondingly,
+our atomic Collatz weights stay attached to the original source; reverse
+suffix decoding or a fresh endpoint law cannot silently replace them.
+This is a precise measure/clock warning, not a transfer of the tournament
+gap theorem to Collatz. The incoming compressed Smith atlas and recovered
+older deletion theorem are retained as stronger available sidecars;
+we do not re-enumerate or claim their torsion classification here.
+
 The board is **marked source / permitted continuation / path-cover capacity /
 valuation unit / dormant coordinate / integer clock**. Each successful
 compression has a corresponding operation that would invalidate it if

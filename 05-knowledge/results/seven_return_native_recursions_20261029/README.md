@@ -1,6 +1,7 @@
 # Seven-return bounds, native seam recursion and delayed activation
 
-2026-10-29; inherited `201fa96604d5`, with incoming `f8846701cd` read and integrated.
+2026-10-29; inherited `201fa96604d5`, with incoming `f8846701cd` and the
+relevant native-operator results of `2a81e9c29d` read and integrated.
 **PROVED scoped elementary results / FINITE-EXACT / CONDITIONAL / OPEN.**
 Same-agent proof review with independent algorithms; no independent-agent
 proof audit or literature-wide novelty claim. No new scarce theorem ID is
