@@ -21338,3 +21338,11 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **First failed implication:** copying +3 into the Schur Pfaffian prefactor changes the signed eight-vertex Pfaffian. A direct matching expansion in `overnight_research_20261029/check.py` caught this immediately.
 - **Repair and survivor:** corrected the original sign and new Schur prefactor; determinant9, paired group H3, product of the two base Pfaffians9, and the prior H5/H11 examples are unchanged. The alternative audit checks the signed base and every rank-two cut directly.
 - **Missing coordinate:** an ordered vertex basis fixes the Pfaffian sign; the determinant forgets it. Retain that order in signed recurrences. No numeric mistake ID is reserved.
+
+## 2026-10-29 — Dual-port clock convention in the rational join carrier
+
+- **Location:** `05-knowledge/results/overnight_research_20261029/TWO_PORTS.md`, P3 clock paragraph; repaired and expanded in `MINIMAL_RATIONAL_PORTS.md`.
+- **Error:** the port action was written `TP=PC` although the update is a covariant form `M+PEP^T` and the clock acts by `T^T M T`. Its columns represent functionals, whose transformation is `T^T P`, not `TP`.
+- **First failed implication:** substituting the vector action into the transformed update does not give `P C E C^T P^T`; the actual expression is `(T^T P)E(T^T P)^T`.
+- **Repair / survivor:** use `T^T P=PC`. For independent ports the exact clock guard is then `CEC^T=E`; dependent ports require `P(CEC^T-E)P^T=0`. The original full-matrix test `T^T P E P^T T=P E P^T`, all determinant recurrences and the directly computed C3 census were already correct.
+- **Missing coordinate / next question:** retain the dual convention and port dependencies before reducing the guard to a smaller matrix. Minimality with a restricted legal-coupling algebra remains open. No numeric mistake ID is reserved.

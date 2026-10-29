@@ -1,0 +1,13 @@
+{
+  "all_lagrangians": 15,
+  "quadratic_refinement_kept_counts": {
+    "0": 6,
+    "6": 10
+  },
+  "distinct_refinements": 16,
+  "faithful_S6_actions": 720,
+  "family_coprimality_over_Q": true,
+  "curve4239_specialization_invariants_match": true,
+  "sympy_version": "1.14.0",
+  "scope": "The rational gcd is an independent arithmetic path; no generic rank or section independence claim."
+}

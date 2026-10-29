@@ -81,7 +81,7 @@ to be invertible.
 The recurrence saves work on future rational pairing queries. It does
 not reconstruct the full integral cokernel: lattice indices, named
 vectors, and their embedding remain a sidecar for that task. With a
-clock T on the lattice and port action C satisfying `TP=PC` and
+clock T on the lattice and dual port action C satisfying `T^T P=PC` and
 `T^T M T=M`, an attachment preserves that clock precisely when
 `T^T P E P^T T=P E P^T`. It is safest to test this equality on the
 actual matrices; covariance of port vectors must not be confused with

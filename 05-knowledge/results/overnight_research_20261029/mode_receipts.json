@@ -13,5 +13,20 @@
     "script": "weighted_counts.py",
     "normal_optimized_identical": true,
     "sha256": "079763e794d2105539cff6544453448eb10a8a86ab8acdd49bb4048cd1e60e55"
+  },
+  {
+    "script": "port_queries.py",
+    "normal_optimized_identical": true,
+    "sha256": "9c670d7deb8da080865cad9246127e05285e2c9c6e0f7011b41a0430946a8ac2"
+  },
+  {
+    "script": "fibration_height.py",
+    "normal_optimized_identical": true,
+    "sha256": "3eea978091644e42f409181b08b2cfa55780d6617eb50e7eeeb2a4345d93c639"
+  },
+  {
+    "script": "geometry_and_family_audit.py",
+    "normal_optimized_identical": true,
+    "sha256": "6397f7d5437bc47773247b946d9286206e07e239a8a51dca6c758dcda44d017e"
   }
 ]

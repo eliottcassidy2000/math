@@ -1,0 +1,104 @@
+{
+  "source": "https://elliptic-rank.icarm.cloud/curve/4239",
+  "polynomials_ascending": {
+    "L": [
+      32416,
+      -828066,
+      466548
+    ],
+    "p": [
+      103008,
+      -1076788,
+      -478380
+    ],
+    "q": [
+      81622,
+      -180205,
+      82612
+    ],
+    "D": [
+      -53374213248,
+      239872553168,
+      11566653808,
+      -91335649060,
+      -26666192028
+    ],
+    "E": [
+      -24372268764,
+      76235905664,
+      -104259187849,
+      118525002574,
+      -47423161625
+    ],
+    "c4": [
+      39957049814767202365696,
+      -501133989540685360927744,
+      2012111451216678072781312,
+      -2187212352566776311691776,
+      1045422333052288742501120,
+      189537970685396945747456,
+      -619127844115690642124928,
+      88228409617107433456704,
+      97720497380953279909456
+    ],
+    "c6": [
+      -10646081258413744834042751500718080,
+      161388160517716510053258211221233664,
+      -971417724184642342017822893844713472,
+      3165264905033648730532428767150673920,
+      -6020914465575895199159599991354671104,
+      3773254763159149616886948329526878208,
+      1863163630925559594378644983901426688,
+      -2024550668398234340753770259354439168,
+      -610782908513639159923305718938547584,
+      492587606421935689268369140995436800,
+      210315608862799883053288779192405888,
+      -61106601434159356054999523827784064,
+      -28633019170344064161350692532271040
+    ]
+  },
+  "degrees": [
+    8,
+    12,
+    24,
+    24
+  ],
+  "coprimality_mod_prime": 101,
+  "gcd_mod_prime": [
+    1
+  ],
+  "leading_coefficients_nonzero_mod_prime": true,
+  "section_identity": true,
+  "finite_parameter_census": [
+    {
+      "parameter_height": 5,
+      "primitive_parameters": 39,
+      "singular": 0,
+      "distinct_j": 39,
+      "max_observed_fiber": 1
+    },
+    {
+      "parameter_height": 10,
+      "primitive_parameters": 127,
+      "singular": 0,
+      "distinct_j": 127,
+      "max_observed_fiber": 1
+    },
+    {
+      "parameter_height": 20,
+      "primitive_parameters": 511,
+      "singular": 0,
+      "distinct_j": 511,
+      "max_observed_fiber": 1
+    },
+    {
+      "parameter_height": 40,
+      "primitive_parameters": 1959,
+      "singular": 0,
+      "distinct_j": 1959,
+      "max_observed_fiber": 1
+    }
+  ],
+  "proved_height_count_exponent": "1/12",
+  "scope": "Geometric degree and standard height-count consequence. No generic-rank computation or rank-jump tail law."
+}
