@@ -21,7 +21,7 @@
   "bridge/last_birth_receipt.json": "97ef41690e38947e1d24eb89b9c0a48293bb19df79c33fe28a20da3abe3b92e2",
   "bridge/star_probe.py": "11a2b3f2606a260964e59888dd4e4acf86b7e75ad1165bc28a5cdaece706a949",
   "bridge/star_receipt.json": "938fba46342848caf51866bc9e66f8ec906e5719005d7bb17764c81653dbdca2",
-  "check_publication.py": "443c35ab858717231bc1e9cea61b2cbb6bc0168ba98d0e3053de12ef92002d19",
+  "check_publication.py": "605e30ea9379be6efc9dddf3972d11ee7f16584f5da07c5ede7548e77bcd0807",
   "languages/ACTUAL_GRAMMAR_REFINEMENTS.md": "09eda7e80af7faa0726adda9032289ef449dc68a2cb91e5a1350d53487004a02",
   "languages/LANGUAGE_BOUNDARIES.md": "f349e45c1d75b836696f6a97696783a959969e63450bcea8085ab71359dbd10d",
   "languages/actual_receipt.json": "80364db909d66f228ca19fd3d79790da244d9524e466e1d8f581e1b14726e086",
