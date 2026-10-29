@@ -1,0 +1,10 @@
+{
+  "all_order_proof": "Nontrivial cut sides each at most4; n8 requires degree4 at every vertex, impossible at any path endpoint.",
+  "blue_pair_counts": {
+    "(False, False)": 448,
+    "(True, True)": 64
+  },
+  "fillings": 512,
+  "status": "FINITE-EXACT",
+  "witness_order": 7
+}
