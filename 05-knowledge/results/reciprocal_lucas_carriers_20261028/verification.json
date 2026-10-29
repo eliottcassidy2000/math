@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "optimized": false,
+  "native_checks": 72051,
+  "named_clock_minima": [
+    60,
+    24,
+    24,
+    2520
+  ],
+  "hostile_groups": [
+    81,
+    27
+  ],
+  "holonomy_orbit_sizes": [
+    1,
+    1,
+    1,
+    3,
+    3
+  ],
+  "local_links": 35,
+  "scope": "exact finite replay plus explicitly numerical Decimal controls; same-agent review"
+}

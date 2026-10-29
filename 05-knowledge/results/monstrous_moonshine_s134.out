@@ -1,3 +1,11 @@
+HISTORICAL OUTPUT - maintained correction, 2026-10-28.
+Ramanujan tau(n) are coefficients/normalized Hecke eigenvalues of the weight-12
+cusp form Delta, not of the weight-zero j-function. A transitive tournament
+has exactly one directed Hamilton path, not n!. The two identifications
+below are repaired; matching numbers elsewhere are historical analogies,
+not maps or established cross-domain theorems. See the 2026-10-28 correction
+in 01-canon/MISTAKES.md and reciprocal_lucas_carriers_20261028/CONNECTIONS.md.
+
 ========================================================================
   MONSTROUS MOONSHINE AND TOURNAMENT THEORY
   opus-2026-03-21-S134
@@ -92,8 +100,8 @@ PART 3: E₈ AND TOURNAMENTS
     a_6 =  60480
 
   240 = 10 × 24 = C(5,2) × 4!
-      = (arcs at n=5) × (Hamiltonian paths of transitive T₄)
-  This connects E₈ to the boundary tournament!
+      = (arcs at n=5) times (permutations of four labels)
+  A transitive T4 has one directed Hamilton path; this equality alone gives no E8 map.
 
 
 PART 4: THE MOONSHINE MODULE V♮ AND TOURNAMENTS
@@ -316,7 +324,7 @@ PART 10: HECKE OPERATORS AND THE OCR
   The residual 4/(7×19) is the "cusp contribution."
 
   MOONSHINE CONNECTION:
-  The Hecke eigenvalues for j(τ) are the Ramanujan τ(n) values:
+  CORRECTED: the normalized Hecke eigenvalues of Delta are Ramanujan tau(n), not those of j:
     τ(2) = -24, τ(3) = 252, τ(5) = 4830, τ(7) = -16744, ...
 
   The tournament "Hecke eigenvalues" are E[H|score] for each score class.

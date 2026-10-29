@@ -1,3 +1,12 @@
+HISTORICAL OUTPUT - maintained correction, 2026-10-28.
+The old table headed F_p actually uses F_(p+1), and its prime-2 splitting
+label is wrong: 2 is inert in Q(sqrt5). The claim that every prime p divides
+F_p is false (F_3=2). Correctly F_p=(5/p) modulo p for odd p, including
+the ramified p=5 case. This is not the Wall-Sun-Sun condition, which concerns
+exceptional lifting modulo p^2. See reciprocal_lucas_carriers_20261028/THEORY.md
+and the 2026-10-28 corrections in 01-canon/MISTAKES.md. Other historical
+analogy claims below are not promoted to proved results by this correction.
+
 ========================================================================
 PART 1: FIBONACCI AND THE FIELD Q(√5)
 ========================================================================
@@ -41,8 +50,8 @@ Splitting of (p) in Q(√5) and relation to F_p:
     43     -1        inert    701408733          0      YES
     47     -1        inert   4807526976          0      YES
 
-KNOWN RESULT: p | F_p for ALL primes p.
-This is the "Wall-Sun-Sun" property. More precisely:
+CORRECTED: the former claim p | F_p for all primes was false.
+The standard prime-index congruence, distinct from Wall-Sun-Sun lifting, is:
   F_p ≡ (5/p) mod p  (Fibonacci's theorem)
   where (5/p) is the Legendre symbol.
 

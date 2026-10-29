@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — recovered Lucas/modular prose confused indices, forgotten structure, and modular weights
+
+- **Sources:** historical `05-knowledge/results/fibonacci_lfunctions.out`, `dihedral_fibonacci_bridge.out`, and `monstrous_moonshine_s134.out`; recovered during four bounded corpus-search waves, not accepted as current truth.
+- **Minimal witnesses / failed implications:** the first file's column labelled F_p is F_(p+1), and its claim p divides F_p for all primes fails at p=3, F_3=2. Its p=2 splitting label is also wrong. In the second, forgetting the oriented tournament pair produces K_p, whose full automorphism group is S_p rather than the displayed dihedral subgroup. In the third, j and Delta have different weights and Fourier expansions; tau(n) are Delta's eigenvalues. Transitive T4 has one directed Hamilton path, not4!.
+- **Repairs:** maintained warnings and the false prose are corrected in place while preserving historical output. The surviving arithmetic mechanism is the quadratic-algebra/Frobenius order law, proved with its exceptional primes in [P2](../05-knowledge/results/reciprocal_lucas_carriers_20261028/THEORY.md). The valid dihedral action retains the oriented pair; no uncoloured full-symmetry equality is inferred. Scalar coincidences are not an operator identification.
+- **New hostile guards:** the F11 frame involution6/x has no fixed points, whereas M^5 has two, so they are not conjugate. Class number2 at discriminant-72 does not make raw g18 a quadratic radical: its square has degree6. The simple quadratic surds for g130 also leave a large cross-conjugate trace term. See [the modular audit](../05-knowledge/results/reciprocal_lucas_carriers_20261028/MODULAR.md).
+- **Missing coordinates / next tests:** retain the actual index, observer, action, modular function/level, and conjugate frame. Test the smallest excluded prime, the full forgotten-structure automorphism group, and the off-branch conjugates before transferring a pattern.
+
 ## 2026-10-28 — visiting every port separately does not retain their joint order
 
 - **Candidate and scope:** a read-only moving selector defeats the earlier fixed-boundary nine-pair, but its individual child-run responses are not sufficient for general composition. This resolves a proposed extension, not a retraction of the minimal singleton theorem or a counterexample to all-size Hamilton-presentation scanning.

@@ -1,3 +1,10 @@
+HISTORICAL OUTPUT - maintained correction, 2026-10-28.
+For an interval circulant tournament the displayed dihedral action preserves
+the unordered oriented pair {T,T^op}. Forgetting orientation and taking their
+union gives K_p, whose full graph automorphism group is S_p, not D_p for p>=5.
+The union's symmetry claim below is repaired. Spectral and Galois analogies
+elsewhere in this historical output require their own audits.
+
 ========================================================================
 PART 1: DIHEDRAL ACTION ON CIRCULANT TOURNAMENTS
 ========================================================================
@@ -12,7 +19,8 @@ So s maps T to T^{comp} (the complementary tournament).
 
 Under this action:
   Aut(T) = Z_p  (only rotations preserve T)
-  Aut(T ∪ T^{comp}) = D_p  (the underlying undirected graph)
+  Aut(T union T^{comp}) = S_p  (the underlying undirected graph K_p)
+  D_p is the displayed action on the unordered pair of oriented tournaments.
 
 KEY INSIGHT: H(T) = H(T^{comp}) by OCF invariance.
 So the SCALAR function H is D_p-invariant:

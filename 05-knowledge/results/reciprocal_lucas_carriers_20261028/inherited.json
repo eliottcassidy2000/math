@@ -1,0 +1,108 @@
+{
+  "status": "FINITE-EXACT inherited implementation replay",
+  "controls": {
+    "atoms": [
+      {
+        "object": "five",
+        "order": 5,
+        "group": 3,
+        "base": [
+          0
+        ],
+        "all_singleton_order_orbits": 40
+      },
+      {
+        "object": "Paley7",
+        "order": 7,
+        "group": 21,
+        "base": [
+          0,
+          1
+        ],
+        "all_singleton_order_orbits": 240
+      },
+      {
+        "object": "wreath9",
+        "order": 9,
+        "group": 81,
+        "base": [
+          0,
+          3,
+          6
+        ],
+        "all_singleton_order_orbits": 4480
+      },
+      {
+        "object": "81",
+        "order": 12,
+        "group": 81,
+        "base": [
+          1,
+          5,
+          9
+        ],
+        "all_singleton_order_orbits": 5913600
+      },
+      {
+        "object": "27",
+        "order": 12,
+        "group": 27,
+        "base": [
+          1,
+          5,
+          9
+        ],
+        "all_singleton_order_orbits": 17740800
+      }
+    ],
+    "hostile": [
+      {
+        "object": "81",
+        "automorphisms": 81,
+        "canon_leaves": 81,
+        "binary_attachment_orbits": 176,
+        "transporter_0_to_4": 27
+      },
+      {
+        "object": "27",
+        "automorphisms": 27,
+        "canon_leaves": 27,
+        "binary_attachment_orbits": 512,
+        "transporter_0_to_4": 0
+      }
+    ],
+    "holonomy": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3,
+      8,
+      6,
+      7
+    ],
+    "holonomy_parity": 0,
+    "F64_shifts": [
+      0,
+      2,
+      4
+    ],
+    "F256_shifts": [
+      0
+    ]
+  },
+  "runtime_sources": [
+    "05-knowledge/results/minimal_blue_selectors_20261028/blue_minimum.py",
+    "05-knowledge/results/moving_selector_atoms_20261028/frames.py",
+    "05-knowledge/results/moving_selector_atoms_20261028/probes.py",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py",
+    "05-knowledge/results/root_ports_closed_carriers_20261028/check_carriers.py",
+    "05-knowledge/results/session87_four_vertices_enumeration_20261028/check_generation.py",
+    "05-knowledge/results/session90_even_graphs_odd_descent_20261029/carriers/check_transport.py",
+    "05-knowledge/results/singleton_pair_reconstruction_20261028/boundary_profile.py",
+    "05-knowledge/results/singleton_pair_reconstruction_20261028/reconstruct.py",
+    "05-knowledge/results/strong_atom_continuation_vitali_20261026/core.py",
+    "05-knowledge/results/strong_attachment_tail_compiler_20261028/native.py"
+  ]
+}

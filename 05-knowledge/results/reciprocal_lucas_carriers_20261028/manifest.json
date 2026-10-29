@@ -1,0 +1,16 @@
+{
+  "AUDIT.md": "0dcb82279b6388167a728474589ebb8151c715a0b458e46abb99faa30a850cc4",
+  "check.py": "e3c6722c6e106ce84f4fa8c72803c2aca70a75d7f8b23c014ac10eb091c6e290",
+  "CONNECTIONS.md": "fdab5539ab78b2d84e43e0baf2b18bea66b0508cdc1f492f4be32e1ab4a89401",
+  "inherited.json": "fdfcd71e089bab7aa6ae47f2d5e69edd56fff44e1eb16ab2bf89f4c665e5be6c",
+  "MODULAR.md": "53b0aecb027ee32ec1b15407b01f3f9610972ae3c9c86028bb1184caf7c2ab62",
+  "README.md": "af094ffe5cf38df5ddc2369d2919810dcaeb6bf71b4e03b47f58eb9a023d586d",
+  "receipt.json": "5fe8202a3d00d80e3ecb246ae3c70d9c737215a72cda15506426a4c331b8990d",
+  "recover.py": "6dbc6c956b64eaec082df290edc3ea3ea3a2cf4107abef8e8a6f03804334cb3c",
+  "recovery.json": "8f05e2241910f44ebd49a2dc76c2f710450ab38901cb54dfd1c15934eaf76f71",
+  "replay_inherited.py": "9fa3d2313d7652fb6d299430711c8ba8f6f74874b740d266126a9761449dcdda",
+  "seal.py": "4cf95a169216e2cfdc3944f7654d1059596c31e2abfe38fcf22749430880ff06",
+  "sources.json": "a4037b5c0033bec83eae5ac9cda3ed8c1d0712712b8d1b0a578546e34b4afa63",
+  "THEORY.md": "b1badcc4da2af0068b4ebaa3ef6dc2d1990d22ef871b5f9ca3e9ed594234b073",
+  "verify.py": "69878e5faace30dd1e1b773653cac62e3403652fae80fee3b408916a7aab633e"
+}
