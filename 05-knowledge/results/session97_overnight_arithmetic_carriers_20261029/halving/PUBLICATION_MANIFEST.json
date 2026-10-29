@@ -1,0 +1,227 @@
+{
+  "scope": "Minimal self-contained halving and exact 2-primary saturation packet; zero-based source point indices",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7840,
+      "sha256": "22613af72366cf6cf8a1ce7fd7e28f29997d5925905ef6e8d28e0fe1c88582a8"
+    },
+    {
+      "path": "halving_certificate.json",
+      "bytes": 65061,
+      "sha256": "66cce357883ee99a5ccd92ff54fef1a3ab04701b75d633971d2f581c6d3747bc"
+    },
+    {
+      "path": "binary_kernel_certificate.json",
+      "bytes": 2022,
+      "sha256": "d1a11bb7b1622ffe784d166380a23b95e32f7c497ea9324cea3b1c07281c9a44"
+    },
+    {
+      "path": "joint_candidate_3567.json",
+      "bytes": 2826,
+      "sha256": "acc7bd118b5d5ada50b6535710ec24ceb476721bf7622648c3ff0c52513fa36c"
+    },
+    {
+      "path": "joint_candidate_3568.json",
+      "bytes": 3297,
+      "sha256": "edd94db2262c1c32d3c0b0b42bee2fab523a35152bf3349411b0d1e6766f8821"
+    },
+    {
+      "path": "check_halving.py",
+      "bytes": 3771,
+      "sha256": "fbdeee720611e904741cca345e64b7a04736d9d6818f24d354bf69f3315580d8"
+    },
+    {
+      "path": "check_kernel.py",
+      "bytes": 2231,
+      "sha256": "1de070a384ebc79fcf08f77d30e77a11016ff2ce734d8b719f59938acbf5ced2"
+    },
+    {
+      "path": "check_joint_halves.py",
+      "bytes": 2193,
+      "sha256": "5e99b5d6248e469904bf90151d82ef6e3f104497b2671c1ddd73e7233cac8695"
+    },
+    {
+      "path": "phase2/README.md",
+      "bytes": 6349,
+      "sha256": "f57d1f2b63a23d98d2042f61068a591a68039e2c3446f10c04366712777bf99c"
+    },
+    {
+      "path": "phase2/extension_3567.json",
+      "bytes": 81060,
+      "sha256": "1f299bd33661e57f5714fdb00563b3ea9168baf2ec259327ebeec70f3e583afc"
+    },
+    {
+      "path": "phase2/extension_3568.json",
+      "bytes": 83922,
+      "sha256": "789c29dbc6c88cd35583a6e1d27d7f03bba38e48ea5d385db4630d19bb3bdbfe"
+    },
+    {
+      "path": "phase2/inverse_transport_3567.json",
+      "bytes": 10398,
+      "sha256": "4fe1eb280014e5ff4e5a6eda0e6ec6fa5b54c730db960b2235772fcd9a790087"
+    },
+    {
+      "path": "phase2/inverse_transport_3568.json",
+      "bytes": 10408,
+      "sha256": "b2a4aecc66cebd79fab67f2c019b0e917573e5af2767d7758d4fc30389408a3a"
+    },
+    {
+      "path": "phase2/verify_extension.py",
+      "bytes": 5532,
+      "sha256": "3d3d44ab056b2654e12334d1c509c1235177693d9d03dab9559267fcea9dd547"
+    }
+  ],
+  "isolated_tests": [
+    {
+      "file": "check_halving.py",
+      "runtime": "Python 3 + SymPy 1.14.0",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "82c31fac22ec669ca60a1024d1f2ee2b2445f9bf5ddf05f42f7bcd95babca747",
+      "result": {
+        "checks": 66625,
+        "curves": [
+          {
+            "excluded_support_counts": {
+              "1": 30,
+              "2": 435,
+              "3": 4060,
+              "4": 27405
+            },
+            "id": 3567,
+            "irreducible_quartics": 30,
+            "no_individual_halves": 30
+          },
+          {
+            "excluded_support_counts": {
+              "1": 30,
+              "2": 435,
+              "3": 4060,
+              "4": 27405
+            },
+            "id": 3568,
+            "irreducible_quartics": 30,
+            "no_individual_halves": 30
+          }
+        ],
+        "hostiles_rejected": 4,
+        "scope": "Individual halves and signed distinct-point supports <=4 only; no saturation conclusion"
+      }
+    },
+    {
+      "file": "check_kernel.py",
+      "runtime": "Python 3 standard library",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "179c7252fa0a89b79a894db2e08a2ef8a55b159436b21a1be776c2e7f48fe195",
+      "result": {
+        "checks": 921,
+        "hostiles_rejected": 3,
+        "results": [
+          {
+            "curve": 3567,
+            "dimension": 13,
+            "minimum_support_count": 4,
+            "minimum_weight": 6
+          },
+          {
+            "curve": 3568,
+            "dimension": 13,
+            "minimum_support_count": 1,
+            "minimum_weight": 5
+          }
+        ],
+        "warning": "Finite-bank kernels are NOT certified rational halving kernels"
+      }
+    },
+    {
+      "file": "check_joint_halves.py",
+      "runtime": "Python 3 standard library",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "f78cccafd5a602af59d6bd1675e965905ae387b9f523f58f60ca68fd23f0277c",
+      "result": {
+        "checks": 203,
+        "hostiles_rejected": 6,
+        "results": [
+          {
+            "curve": 3567,
+            "exact_rational_half": true,
+            "native_half": [
+              "-12396959288636139943255735309047663361511790157819333/943683244293443469248689",
+              "-1886260951389836771424693480152725643938863420621825155182112841798625096682602/916725613733278296044684809574219113"
+            ],
+            "support": [
+              1,
+              14,
+              16,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "curve": 3568,
+            "exact_rational_half": true,
+            "native_half": [
+              "21828477549059636032782350041819359886837439346549761497936857789/1518723565026102639835542472626510769",
+              "-651151468049828861866717040661722473429304228273818843316663808998710615071010099602803915455665/1871621810455977475862827598205169189141082325041646103"
+            ],
+            "support": [
+              19,
+              20,
+              21,
+              23,
+              28
+            ]
+          }
+        ],
+        "scope": "One certified joint half per curve; not full 2-saturation"
+      }
+    },
+    {
+      "file": "phase2/verify_extension.py",
+      "runtime": "Python 3 standard library",
+      "normal_optimized_identical": true,
+      "stdout_sha256": "f9b2df55b293e8d3884169e7f6f47acfe1df0badc1d332a4222c225cd4495970",
+      "result": {
+        "checks": 125459,
+        "hostiles_rejected": 6,
+        "results": [
+          {
+            "binary_rank": 30,
+            "curve": 3567,
+            "index": 8192,
+            "max_final_prime": 223,
+            "quotient": "(Z/2Z)^13",
+            "steps": 13,
+            "two_saturated": true
+          },
+          {
+            "binary_rank": 30,
+            "curve": 3568,
+            "index": 8192,
+            "max_final_prime": 251,
+            "quotient": "(Z/2Z)^13",
+            "steps": 13,
+            "two_saturated": true
+          }
+        ],
+        "scope": "2-saturation of these subgroups only, not global rank or odd-primary saturation",
+        "special_character_evaluations_including_hostile_replays": {
+          "O": 305,
+          "T": 546
+        }
+      }
+    }
+  ],
+  "excluded": [
+    "produce_halving.py",
+    "inspect_kernel.py",
+    "factorization.log",
+    "phase2/extend_saturation.py",
+    "phase2/progress.log",
+    "__pycache__/",
+    "phase2/__pycache__/"
+  ],
+  "external_source_banks_required": false,
+  "proof_audit": "Third-agent independent audit PASS reported 2026-10-29 for all 26 half identities, full binary ranks, special O/T values, exact matrices and 2-saturation theorem; auditor file separately supplied by parent."
+}
