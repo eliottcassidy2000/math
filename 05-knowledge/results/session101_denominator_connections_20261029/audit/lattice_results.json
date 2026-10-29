@@ -1,0 +1,15 @@
+{
+  "checks": 9,
+  "independent_method": "permutation determinants; exact integer-square tests; quotient-map index",
+  "smith_focal": [
+    1,
+    1,
+    1
+  ],
+  "smith_inherited": [
+    1,
+    1,
+    4
+  ],
+  "status": "PASS"
+}
