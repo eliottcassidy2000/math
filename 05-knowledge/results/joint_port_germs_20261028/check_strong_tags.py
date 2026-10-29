@@ -76,6 +76,9 @@ def main():
                 need([ids[k] for k in marks]==[i,j],'ordered ports intrinsically decoded')
                 need(actual==c.relabel(t,ids),'all old arcs recovered')
                 need(len(encoded)==4*n+n%2,'explicit C3 context horizon')
+                if n<=3:
+                    rooted=sum(g[i]==i and g[j]==j for g in c.oracle.isomorphisms(t,t,True))
+                    need(len(c.oracle.isomorphisms(encoded,encoded,True))==9*rooted,'two C3-chain automorphism kernels')
                 tested+=1
         rows.append({'order':n,'presentations':len(masks),'port_pairs':len(pairs),'tests':tested,
                      'final_order':4*n+n%2,'scope':'complete' if n<=4 else 'four chosen presentations and two ordered pairs'})

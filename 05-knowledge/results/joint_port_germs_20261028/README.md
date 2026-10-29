@@ -39,7 +39,12 @@ replacement for the relation acted upon.
    At rational delta=a/q, M=max(V), epsilon=1/(4qM) gives the exact identity
    length(G_(delta-epsilon))=L+epsilon D. It is positive iff G_delta is
    nonempty, with positive mass at least1/(2qM^2). The germ is dilation-invariant.
-6. **Joint phase remains essential.** {1,3,6} and {2,3,6} at delta=1/3 have
+6. **One effective Gibbs test for weak witnesses.** At the relaxed threshold,
+   let H count violated runner constraints and Z(z)=integral z^H.
+   With z=1/(4qM^2), the original weak good set is nonempty iff Z(z)>z;
+   indeed the nonempty branch has Z>=2z. This uses the full correlated
+   depth distribution and keeps the velocity-height dependence.
+7. **Joint phase remains essential.** {1,3,6} and {2,3,6} at delta=1/3 have
    the same complete local threshold-volume germ and matching endpoint-owner
    types, but adding the new speed7 kills only the first. The active phases
    are {4/9,5/9} versus {2/9,7/9}. On the isolated-witness stratum, retaining
@@ -88,19 +93,31 @@ but a second hostile recovered the indispensable phase sidecar.
 
 ## Artifacts
 
+Read [port proofs J1-J6](PORTS.md), [LRC proofs L1-L6](LRC.md),
+[Borwein/even-graph/trijection/oddness connections](BRIDGES.md), and the
+[validity gate and exact scopes](AUDIT.md). The register's possible C3
+automorphism kernel and the strong tags' two C3 factors are explicit.
+
 - port_core.py and check_ports.py: full one-port decoder census through7,
   ordered two-port tuples through6, exceptional-sink path identity, seven-pair
   selectors and81/27 controls.
 - check_strong_tags.py: full Hamilton presentations and ordered pairs through4;
   four selected order5 presentations with two pairs each; actual module search.
 - check_lrc_germs.py:1243 primitive bounded rows/thresholds,2994 directional
-  probes,9240 tight-stratum additions, and the AP13 / height339 controls.
+  probes,9240 tight-stratum additions,429 Gibbs cases, and the AP13 / height339
+  controls.
 - probe_owner_collision.py: reproducible bounded discovery of the phase hostile.
-- JSON receipts accompany the checkers.
+- JSON receipts accompany the checkers. [reproduce.py](reproduce.py) verifies
+  source pins and regenerates all three receipts in a temporary directory,
+  both normally and with python -O:1406870 explicit checks per replay.
+
+From the repository root:
+
+    python -B 05-knowledge/results/joint_port_germs_20261028/reproduce.py
 
 Primary inheritance for the original even-graph equinumerosity:
 [Royle et al.](https://arxiv.org/abs/2204.01947).
 For the published Borwein first-contact formulas, see
 [Bäsel–Baillie](https://arxiv.org/html/1510.03200) and the corrected
-THM-4837 account in the repository. The new comparison will keep convolution
+THM-4837 account in the repository. The comparison keeps convolution
 dimension and one-dimensional LRC intersection geometry distinct.

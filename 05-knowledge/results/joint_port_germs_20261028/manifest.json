@@ -1,0 +1,30 @@
+{
+  "normalization": "CRLF to LF; no other changes",
+  "sha256_lf": {
+    "01-canon/theorems/THM-2050-period14-top-germs-do-not-determine-global-loneliness.md": "349b3af6dcb7e3761835132a5e18e030651a6d8c38d38876fb52ba7c8428c5c5",
+    "01-canon/theorems/THM-2143-artanh-riesz-gibbs-certificate-soundness-boundary.md": "679b8827e7db81bda0dd2bf6f89ecf7f513ffe7e5c98619a394e3c391ab60a47",
+    "01-canon/theorems/THM-4835-euler-characteristic-criterion-for-marked-excess-minus-one-carriers-in-tournaments.md": "03ebfae6f06a397b36ce9b29bbf2f61e16276a2c087ad82d5b10e2e40dd9173e",
+    "01-canon/theorems/THM-4837-the-owners-borwein-ladder-first-nonvanishing-of-the-odd-sinc-cosine-transform-at-2-3-and-2pi-closed-form-first-failure.md": "6832ba26fd4f391eeac0b0993c9292f6513ac712b051e1fe69fd4a8dcb362a46",
+    "05-knowledge/results/joint_port_germs_20261028/AUDIT.md": "5a6711bec654557f120067a536f97f06d02fb3ba0e22e06343cf88e634e9e4c0",
+    "05-knowledge/results/joint_port_germs_20261028/BRIDGES.md": "2a82b6e5452954ddd00e9fc824d7a7237cecb3bcaa46d9b14c489ce84c2900bf",
+    "05-knowledge/results/joint_port_germs_20261028/LRC.md": "e230a1ff8cedb493a0f47d03a4cee0b7aac9f821bda73df9fa558a2ca5f276ba",
+    "05-knowledge/results/joint_port_germs_20261028/PORTS.md": "1ee945dc53c2dd4e09a8f64c94a5f963dbde57326b9b1974fc1c041369b19cd5",
+    "05-knowledge/results/joint_port_germs_20261028/README.md": "0336f6d126833718855ae55a2550c5e3cce74b70bd2678034260cc0491c823c9",
+    "05-knowledge/results/joint_port_germs_20261028/check_lrc_germs.py": "5dfb8cdf6a6fba2e15abc8fac2daa9300f6f93dbe10bc46bbdcf62525529f6a2",
+    "05-knowledge/results/joint_port_germs_20261028/check_ports.py": "e14375ad9d51c1a1f9f9ef3c5f9eb2106374313bd5c5004747b8850e490bd2e4",
+    "05-knowledge/results/joint_port_germs_20261028/check_strong_tags.py": "4f19ac90e0010e8610e3648da5775ad32a503f65e087ac1ef442a82048bff3ce",
+    "05-knowledge/results/joint_port_germs_20261028/lrc_germs.json": "570b9cdf08f07831716bcac6dbece614646b8f9e2302630ab9a6c1e92503dba0",
+    "05-knowledge/results/joint_port_germs_20261028/port_core.py": "8aaed7ba902230f29e17f70c6b54cfbf202d0adc9ced108f8c0a7d04eda5df3e",
+    "05-knowledge/results/joint_port_germs_20261028/ports.json": "cf38c37469cad80b30c3a961fca16cb34532c85b50bdc86ed9d5dbc1efbc6212",
+    "05-knowledge/results/joint_port_germs_20261028/probe_owner_collision.py": "9a1161b4ef4a501c62f1b5526ea1b9793405923ba5245041b165422ece8f8e5d",
+    "05-knowledge/results/joint_port_germs_20261028/reproduce.py": "16e6ec4020b67e3be4ae5ee335e33c9833b3288d716f312ad3eac82a830bae15",
+    "05-knowledge/results/joint_port_germs_20261028/strong_tags.json": "9dbd6dc41d7ea1f097227020e3f208106b74f2a996fecd8456c0a95da11298c6",
+    "05-knowledge/results/minimal_blue_selectors_20261028/THEORY.md": "c8657bfd83326d21d10c5c6a07b7ee79654efde16c98ad0eb8537759d563538d",
+    "05-knowledge/results/minimal_blue_selectors_20261028/bridge-receipt.json": "966437189ce5bff1f4b43f0555ab173adf61f9e5572761fae8d1a4264685c9a5",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/THEORY.md": "7f63a55dfb7a69c244de669aeb5acf9345b5f9e8d991bdbedc3fd7ed9b8c4d61",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+    "05-knowledge/results/session90_even_graphs_odd_descent_20261029/even/DECORATED_EVEN_GRAPH_DUALITY.md": "faf80030cf5285355261d12c9f4a0be92a4efeff0dc8a6c50ff3f1199363e436",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/README.md": "deab2f9c207cf07215ac96614fd59d401ede22a905a9241f6e3b7c2c9735070f",
+    "05-knowledge/results/session91_packing_golden_carriers_20261029/geometry/LRC_REFLECTION_AND_GOLDEN_GAP.md": "37138423af889af4ab3c17700effcb98304b6683d1ab014afdc3a6bd7632c65c"
+  }
+}

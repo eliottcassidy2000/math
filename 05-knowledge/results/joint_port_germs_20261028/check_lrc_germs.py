@@ -1,7 +1,7 @@
 """Exact relaxed-threshold volume germs and owner-sensitive continuation."""
 from pathlib import Path
 from fractions import Fraction as F
-from itertools import combinations
+from itertools import combinations,product
 from functools import reduce
 from math import gcd
 import json
@@ -61,8 +61,26 @@ def tight_records(V,delta):
     pieces=components(V,[delta]*len(V))
     if any(a!=b for a,b in pieces):return None
     return [(a,max(V[i] for i in owners(V,a,delta)[0]),max(V[i] for i in owners(V,a,delta)[1])) for a,b in pieces]
+def depth_histogram(V,delta):
+    events={F(0),F(1)}
+    for v in V:
+        for k in range(v):events.update(((F(k)+delta)/v,(F(k+1)-delta)/v))
+    events=sorted(events);hist=[F(0)]*(len(V)+1)
+    for a,b in zip(events,events[1:]):
+        t=(a+b)/2;depth=sum(distance(v*t)<delta for v in V);hist[depth]+=b-a
+    need(sum(hist)==1,'independent event depth mass')
+    return hist
+def gibbs_control(V,delta):
+    q=delta.denominator;M=max(V);epsilon=F(1,4*q*M);z=F(1,4*q*M*M)
+    hist=depth_histogram(V,delta-epsilon);Z=sum(a*z**j for j,a in enumerate(hist))
+    good=bool(components(V,[delta]*len(V)))
+    need(hist[0]==measure(components(V,[delta-epsilon]*len(V))),'event depth versus interval measure')
+    need((Z>z)==good,'single height-adapted Gibbs certificate for weak witnesses')
+    need(Z>=2*z if good else Z<=z,'Gibbs quantitative separation margin')
+    return {'epsilon':str(epsilon),'fugacity':str(z),'Z':str(Z),'good':good,
+            'depth_masses':[str(v) for v in hist]}
 def main():
-    cases=0;tight_cases=0;direction_cases=0;seen={};collision=None
+    cases=0;tight_cases=0;direction_cases=0;gibbs_cases=0;seen={};collision=None
     for n in range(1,5):
         for V in combinations(range(1,11),n):
             if reduce(gcd,V)!=1:continue
@@ -74,6 +92,7 @@ def main():
                 need(bool(pieces)==(relaxed>0),'weak witness iff positive relaxed volume')
                 need(not pieces or relaxed>=F(1,2*q*M*M),'quantitative positive-volume gap')
                 if n<=3:
+                    gibbs_control(V,delta);gibbs_cases+=1
                     small=F(1,4*q*M*M)
                     observed=[]
                     for S in range(1<<n):
@@ -123,7 +142,9 @@ def main():
         epsilon=F(1,4*delta.denominator*max(V))
         need(measure(components(V,[delta-epsilon]*len(V)))==L+epsilon*D,'large explicit control jet')
         examples.append({'speeds':V,'delta':str(delta),'bulk':str(L),'slope':str(D),
-                         'epsilon':str(epsilon),'components':[[str(a),str(b)] for a,b in pieces],'owners':ends})
+                         'epsilon':str(epsilon),'components':[[str(a),str(b)] for a,b in pieces],
+                         'owners':ends,'gibbs':gibbs_control(V,delta)})
+        gibbs_cases+=1
     need(collision is not None,'scalar-germ continuation hostile found')
     # Even the complete local directional germ loses the phase of its atoms.
     left,right=(1,3,6),(2,3,6);delta=F(1,3)
@@ -132,6 +153,11 @@ def main():
     for mask in range(8):
         rates=[F((mask>>i)&1) for i in range(3)]
         need(germ(left,delta,rates)[:2]==germ(right,delta,rates)[:2],'all Boolean directional germs agree')
+    for rates in product((-1,0,1),repeat=3):
+        h=F(1,10000);thresholds=[delta-h*x for x in rates]
+        expected=2*max(F(0),h*F(rates[1],3)+h*F(rates[2],6))
+        need(measure(components(left,thresholds))==measure(components(right,thresholds))==expected,
+             'full signed local threshold-volume germ formula')
     need(not components(left+(7,),[delta]*4) and bool(components(right+(7,),[delta]*4)),
          'new speed seven separates phase-blind tight owners')
     phase_hostile={'V':left,'W':right,'delta':str(delta),'jet':['0','1'],'added_speed':7,
@@ -144,6 +170,7 @@ def main():
             need(germ(tuple(scale*v for v in V),delta)[:2]==reference,'uniform germ dilation invariance')
     out={'status':'FINITE-EXACT','primitive_speed_bound':10,'sizes':[1,2,3,4],
          'base_cases':cases,'direction_cases':direction_cases,'tight_attachment_cases':tight_cases,
+         'gibbs_cases':gibbs_cases,
          'scalar_germ_collision':collision,'phase_blind_owner_collision':phase_hostile,
          'examples':examples,'checks':CHECKS}
     (HERE/'lrc_germs.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')

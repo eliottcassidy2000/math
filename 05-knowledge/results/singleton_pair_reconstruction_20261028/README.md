@@ -1,5 +1,13 @@
 # Closed singleton carriers, consecutive pairs, and exact enumeration
 
+**Subsequent minimum resolved.** The
+[minimal-blue theorem M1-M5](../minimal_blue_selectors_20261028/THEORY.md)
+proves the exact singleton/native-complement/fresh-reset minimum, including
+32272 cells at order7. The open minimum and interval bounds below record this
+packet's earlier stage. [Joint-port J2-J3](../joint_port_germs_20261028/PORTS.md)
+proves a discrete minimum for the larger arbitrary-position dent/C3 menus;
+those menus do not contradict the singleton compression.
+
 2026-10-28. **PROVED:** an all-size sufficient closed carrier for the specified
 singleton/complement/fresh re-marking language, and a sharp obstruction to
 reconstructing the entire Hamilton presentation. **FINITE-EXACT:** explicit

@@ -4,6 +4,12 @@
 means the elementary arguments below, not a global theorem reservation or an
 independent-agent review. Computational statements are separately **FINITE-EXACT**.
 
+**Later resolution:** the minimum left open here is proved in
+[minimal-blue M1-M5](../minimal_blue_selectors_20261028/THEORY.md).
+Its order7 value is32272. The historical lower/upper bounds below remain valid
+but are no longer the frontier. The larger movable-selector menus have a
+different, discrete minimum by [joint-port J2-J3](../joint_port_germs_20261028/PORTS.md).
+
 ## S1. Declare the operation language
 
 Use exactly [N4 of the inherited compiler](../strong_attachment_tail_compiler_20261028/THEORY.md):

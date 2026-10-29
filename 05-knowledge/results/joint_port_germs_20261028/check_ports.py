@@ -40,6 +40,11 @@ def polynomial_unsigned(group,n,ports):
         for i,a in enumerate(poly):out[i]+=a
     need(all(x%len(group)==0 for x in out),'spectrum integrality')
     return [x//len(group) for x in out]
+def automorphism_audit(t,ports):
+    rooted=sum(all(g[p]==p for p in ports) for g in c.oracle.isomorphisms(t,t,True))
+    factor=3 if t[ports[0]]==0 and ports[0] not in ports[1:] else 1
+    actual=len(c.oracle.isomorphisms(c.register(t,ports),c.register(t,ports),True))
+    need(actual==factor*rooted,'exact ternary kernel of the unlabelled register')
 def path_counts(t):
     n=len(t);dp=[[0]*n for _ in range(1<<n)]
     for v in range(n):dp[1<<v][v]=1
@@ -67,9 +72,11 @@ def main():
             t=c.presentation(n,mask)
             for p in range(n):
                 check_decode(t,(p,),mask+p);registers+=1
+                if n<=4:automorphism_audit(t,(p,))
             if n<=6:
                 for p,q in product(range(n),repeat=2):
                     check_decode(t,(p,q),mask+p+q);registers+=1
+                    if n<=4:automorphism_audit(t,(p,q))
             if n<=5:
                 for p in range(n):
                     need(dent_identity(t,p)==c.oracle.hamilton(c.dent(t,p)),'two-path dent identity')
