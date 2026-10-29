@@ -17,7 +17,7 @@ for path,sha in manifest.items():
   for line in remote.decode().splitlines():
    if line.lstrip().startswith('```'):in_code=not in_code;continue
    if not in_code and not line.startswith('    '):kept.append(line)
-  for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)','\n'.join(kept)):
+  for target in re.findall(r'\[[^\]]+\]\(([^)]+)\)',re.sub(r'`[^`]*`', '', '\n'.join(kept))):
    if '://' in target or target.startswith('#'):continue
    target=target.split('#',1)[0]
    resolved=posixpath.normpath(posixpath.join(PFX,posixpath.dirname(path),target))
