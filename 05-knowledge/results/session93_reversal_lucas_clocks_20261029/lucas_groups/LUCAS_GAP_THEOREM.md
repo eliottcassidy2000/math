@@ -120,3 +120,12 @@ The mechanism is useful beyond Lucas words: an even symmetry group can act on un
 At n=5 the minimum nonempty finite equivariant tournament-decoder carrier has **exactly twelve states**. Indeed G=PSL2(11) is simple of order660. Every decoder-state stabilizer is odd. The only odd divisor of660 larger than55 is165. A subgroup of order165 would have index4; its coset action would map the simple group G injectively into S4 (the action is nontrivial), impossible since660>24. Thus every decoder orbit has at least660/55=12 states.
 
 This is attained by the **actual orbit of the labelled Paley11 tournament**, not merely a putative matching-frame orbit. The checker enumerates ⟨T,R⟩ as660 point permutations, applies all of them to the55 directed Paley arcs, and obtains exactly12 distinct tournaments with stabilizer55. This independently verifies the carrier represented by the twelve inherited matching frames. The lower bound uses the classical simplicity of PSL2(11), whereas the orbit and stabilizer counts are finite-exact. No sharper general minimum for A29, S199 or A521 is asserted.
+
+## Concurrent provenance at publication
+
+The incoming packet `lucas_prime_reflection_towers_20261028` at commit
+`4368e3847072d9a5d88ddb7d80470f9861c97b93` supplies overlapping reflection/holonomy
+results and a general port-moment recurrence. See the parent
+[incoming comparison](../incoming/CONCURRENT_COMPARISON.md) for credited overlap,
+distinct refinements and independently replayed finite controls. This note
+retains its initial source pin and direct proof; no priority claim is implied.
