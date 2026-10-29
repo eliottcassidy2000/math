@@ -121,3 +121,8 @@ sources linked in [BRIDGES.md](BRIDGES.md), after reading CORE-PAPERS.
 The corrected THM-4835 and THM-4837 lineages take precedence over older drafts.
 Concurrent Session90 and Session91 work is credited as inherited or parallel
 work, not silently claimed as this session's discovery.
+
+The later [incoming integration](INCOMING.md) records Session92's separately
+implemented49-check audit of four attachment counts and the uniform phase
+example, replayed normally and under python -O. Its narrower scope does not
+upgrade the general proofs here to independently refereed theorems.

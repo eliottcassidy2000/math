@@ -4,6 +4,11 @@
 Same-agent review and alternate checks; no independent referee or external
 priority claim. LRC(14) remains open.
 
+[Incoming work](INCOMING.md) now adds a separately implemented49-check replay
+of the four selected-attachment counts and the uniform LRC phase example.
+It also supplies an exact read-only cursor minimum, with a different
+operation menu from the persistent attachments below.
+
 The session finds a sharp boundary for minimizing K: **arbitrarily movable
 selectors can force complete presentation memory even when each individual
 attachment is tiny.** The signed spectrum is an obstruction tool, not a

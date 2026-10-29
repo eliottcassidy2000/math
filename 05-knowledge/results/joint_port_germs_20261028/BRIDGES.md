@@ -169,3 +169,8 @@ bounded substitution depth, and phase quotients for a restricted future-speed
 alphabet. Proving LRC(14) still requires a uniform positive inequality for
 all thirteen-speed rows. The height-adapted Gibbs equivalence in L3 supplies
 an exact target, not that missing inequality.
+
+At close-out, incoming work resolved the read-only moving-cursor minimum
+and supplied a native nonlinear-observation hostile. See
+[the integration note](INCOMING.md) for the precise menus, remaining
+faithfulness question and bounded independent replay of our examples.
