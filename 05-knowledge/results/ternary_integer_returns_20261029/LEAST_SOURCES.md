@@ -70,6 +70,31 @@ survivor is the Mersenne **upper bound**, not its equality. Through forty, all
 minimizing witness words use only the first two letters; this observation is
 not used as a filter and is not asserted beyond the finite computation.
 
+## Compare with the incoming all-precision recurrence
+
+The concurrent [exceptional Cantor recurrence](../session97_overnight_arithmetic_carriers_20261029/controllers/EXCEPTIONAL_CANTOR_RECURRENCE.md)
+proves an all-level counting theorem for the same exact inverse charts:
+
+\[
+ N_L=N_{L-1}+N_{L-6}+3N_{L-11}\quad(L\ge11),
+ \qquad 2^{-s}+2^{-6s}+3\,2^{-11s}=1.
+\]
+
+Its initial values are `(1,2,3,4,6,9,13,18,24,31,40)`, and
+`0.441<s<0.442`. It bounds possible forever-expanding positive sources below
+`X` by `(17/8)X^s`. This is stronger than a qualitative zero-measure claim,
+but does not prove that any such positive source exists or that none exists.
+The `N_L` count uses division-clock precision, whereas `mu_k` uses completed
+return blocks and actual least positive representatives. Their different
+clocks and quantifiers must not be identified.
+
+In ordinary 2-adic binary coordinates, a positive integer has an eventually
+zero digit tail. The remaining arithmetic problem is therefore to exclude
+such tails from this twisted inverse-chart attractor. Its address coding
+includes odd-unit multiplication and full affine carries; it is not ordinary
+concatenation of five fixed binary strings. The source-lift recurrence above
+retains precisely those operations when testing the least-integer boundary.
+
 ## A precise pointwise helper question
 
 The following are equivalent:

@@ -1,5 +1,79 @@
 {
-  "explicit_checks": 879,
+  "explicit_checks": 999,
+  "index_free_steering_controls": [
+    {
+      "clock": 5,
+      "correction": 2,
+      "source_index": -5,
+      "torsion": 0
+    },
+    {
+      "clock": 7,
+      "correction": 2,
+      "source_index": -5,
+      "torsion": 1
+    },
+    {
+      "clock": 4,
+      "correction": 2,
+      "source_index": 1,
+      "torsion": 0
+    },
+    {
+      "clock": 6,
+      "correction": 2,
+      "source_index": 1,
+      "torsion": 1
+    },
+    {
+      "clock": 4,
+      "correction": 0,
+      "source_index": 3,
+      "torsion": 0
+    },
+    {
+      "clock": 6,
+      "correction": 0,
+      "source_index": 3,
+      "torsion": 1
+    },
+    {
+      "clock": 3,
+      "correction": 4,
+      "source_index": 5,
+      "torsion": 0
+    },
+    {
+      "clock": 5,
+      "correction": 4,
+      "source_index": 5,
+      "torsion": 1
+    },
+    {
+      "clock": 2,
+      "correction": 4,
+      "source_index": 35,
+      "torsion": 0
+    },
+    {
+      "clock": 0,
+      "correction": 4,
+      "source_index": 35,
+      "torsion": 1
+    },
+    {
+      "clock": 12,
+      "correction": 4,
+      "source_index": 53,
+      "torsion": 0
+    },
+    {
+      "clock": 1,
+      "correction": 4,
+      "source_index": 53,
+      "torsion": 1
+    }
+  ],
   "quotient_circle": {
     "boundary_digest": "b5407973d627a35fa2b03b30a2f59667fbb6293f27ab66cb7ecbb7626045e87e",
     "distinct_boundaries": 28,
@@ -88,7 +162,7 @@
       "9:cell": 3
     }
   },
-  "source_sha256": "a9c78f3c13fe36735aaab7d44269bf79343b69941df8ec2be6f3634d7d702f55",
+  "source_sha256": "99ab381b55849a827db0da36854712025809586e39768badcc13b11c99ab778f",
   "status": "PASS; all real bounded-component phases covered",
   "steering_witnesses": [
     {

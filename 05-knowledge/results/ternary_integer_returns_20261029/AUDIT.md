@@ -9,8 +9,9 @@ check relies on Python `assert`.
 
 The session began at the preceding affine-tree packet, synchronized with
 `18d449f9281e`, and subsequently integrated the incoming Session97 material
-through `6f1235ca8e`. The first new checkpoint was rebased and pushed as
-`2c4e29a5bc`. The incoming work independently proves the same auxiliary
+through `6f1235ca8e`, then the phase-two additions at `4d9c3ad1ce`. The first
+two new checkpoints were rebased and pushed as `2c4e29a5bc` and `33a6a79e33`.
+The incoming work independently proves the same auxiliary
 integer entry and five-class statements with a shorter analytic route;
 INTEGER_RETURNS explicitly gives that route precedence. We do not count the
 overlap twice or substitute our finite replay for its stronger seven-prefix
@@ -22,6 +23,11 @@ torsion and inverse-tripling analyses, and the corrected large integer triple.
 Current tournament context uses THM-4812's **all-order** exclusion, not the
 older through-eleven precursor. Current rank context uses the incoming exact
 local-character proofs and isogeny transport, not merely point membership.
+The last integration also retains the stronger all-period failure exclusion,
+the exact exceptional-cell recurrence, the full rational isogeny-image test,
+and the source-preserving change from binary to ternary rank observations.
+Those imported results are attributed to their source packets; the 66-list
+and K3 proofs were read and integrated, not independently replayed here.
 
 ## Exact verification universes
 
@@ -30,7 +36,7 @@ local-character proofs and isogeny transport, not merely point membership.
 | Integer returns | All 89,085 odd sources through178169 after the proved unbounded reduction; bit-valuation versus repeated-division execution; tree enumeration through8 branches against the max-carry recurrence | 1,702,484 explicit checks including larger and hostile controls; PASS |
 | Failure renewal | Every five-letter prefix through5 blocks; original-source guards and full affine endpoints; coefficient sums against the closed formulas | PASS, included above |
 | Least sources | All five continuations at every visited prefix, horizons1–40; affine congruence search versus canonical source/endpoint lift search; monotone-cylinder pruning proved in text | Identical minima and native witnesses; PASS |
-| Fruit returns | Every open cell and boundary point cut by84 original or28 quotient endpoints; event sweep checked against literal translated-point membership | 879 explicit checks; sharp cover13 and displacement76; PASS |
+| Fruit returns | Every open cell and boundary point cut by84 original or28 quotient endpoints; event sweep checked against literal translated-point membership; 12 index-free rational controls with both torsion phases | 999 explicit checks; sharp cover13 and displacement76; PASS |
 | Rank banks | All93 named rational points and every chosen local character; high-bit row elimination versus low-column elimination; prime-deletion and duplicate-column hostiles | 210 explicit checks; optimal witness-bank sizes15,16,16; PASS |
 | Projective bridge | Every nonzero element of explicit F64; F4/F8 subfields; all projective pair-lines in each norm fibre | Three Fano subplanes and exact branch laws; PASS |
 
@@ -57,8 +63,12 @@ model.
   and hence their entry/exit orientations. Strict boundary membership is
   evaluated separately, so a gap reduced to a single endpoint cannot be missed.
 - The source and quotient circle calculations keep the same integer clock
-  through `phi(P+2G)=phi(P)+6H`. The coefficient76 result is restricted to
-  the labelled cyclic subgroup and pays for changing the original point.
+  through `phi(P+2G)=phi(P)+6H`. The coefficient76 result pays for changing
+  the original point. Its extension from the named subgroup to every rational
+  bounded-component input explicitly depends on the incoming full-image
+  theorem and its cited generator classification. The controller receives
+  coordinates, not an assumed discrete-log index; exact reverse subtraction
+  is checked, and the chosen kernel owner must remain part of a lift.
 - In the projective bridge, the norm is well-defined after scalar quotient,
   and the Fano incidence proof uses the coprime-degree base extension. It is
   a distributional realization; the leading-zero clock and scalar data are

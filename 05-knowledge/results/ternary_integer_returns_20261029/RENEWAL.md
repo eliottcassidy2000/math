@@ -49,6 +49,11 @@ cylinders, not a probabilistic replacement of the marked integer. The checker
 enumerates all `5^k` word sequences through `k=5`, recomputes their guards and
 affine maps, and realizes each on an integer in its original source cylinder.
 
+The incoming [exact failure transducer](../session97_overnight_arithmetic_carriers_20261029/controllers/FAILURE_TRANSDUCER.md)
+independently gives the product mass `p^k` and the guarded 25 two-block charts.
+The additional quantities here are the slope and carry moments `s^k,b_k`;
+the unweighted mass law is not counted as a separate discovery.
+
 ## 3. Source refinement pays three failure blocks per retained bit
 
 For any fixed odd cylinder `I_K` modulo `2^(K+1)`, and any nonnegative quantity
@@ -80,6 +85,15 @@ More generally a periodic concatenation of failure words has slope greater
 than one and positive real carry; its affine fixed point is negative rational.
 This excludes periodic all-failure histories for positive integers. It does
 not exclude a nonperiodic infinite failure history.
+
+The newer [all-period arithmetic certificate](../session97_overnight_arithmetic_carriers_20261029/controllers/PERIODIC_EXCEPTION_CERTIFICATE.md)
+is stronger: fixed points of compositions lie in the convex hull of the five
+individual fixed points, `[-16177/139,-1]`. Exact source guards on its 58 odd
+integers leave only the periodic integer `-1`; the only integer sources with
+eventually periodic infinite failure histories are `-1,-3`. Thus a positive
+exception must have an aperiodic, strictly increasing, unbounded return
+history. This is a genuine arithmetic exclusion, with the aperiodic case
+still open.
 
 ## 5. The remaining sufficient targets
 

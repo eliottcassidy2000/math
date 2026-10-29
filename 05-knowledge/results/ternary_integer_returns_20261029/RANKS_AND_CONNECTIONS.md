@@ -39,6 +39,25 @@ counts distinct specializations by height and a shifted rank-tail law is
 assumed. We reuse those results rather than replacing them by point incidence
 or an uncalibrated regression against leaderboard rows.
 
+The later [phase-two audit](../session97_overnight_arithmetic_carriers_20261029/ranks/phase2/README.md)
+also distinguishes the three ambient K3 surfaces over `Q`: their good
+reductions at 233 have respectively 58509, 58404 and 58374 points. Yet all
+three contain the same explicitly marked
+[A3(2) section lattice](../session97_overnight_arithmetic_carriers_20261029/ranks/phase2/COMMON_A3_CARRIER.md),
+with Gram matrix `[[4,-2,0],[-2,4,2],[0,2,4]]` and determinant 32. This is a
+verified common substructure, with the ambient Frobenius information lost
+under that lattice projection. It proves neither geometric non-isomorphism
+over `Qbar` nor generic rank 17 for all three fibrations. The common named
+triple proves generic rank at least three; the source's rank-17 provenance
+for the 4239 fibration is a separate cited input.
+
+The [Elkies construction](https://arxiv.org/html/2608.25406v1) supplies a
+different, fully replayed rank-17 fibration with height determinant 948,
+and base changes producing rank 18 and 19. These are mechanisms for raising
+generic rank and obtaining specializations, not a statistical law inferred
+from a record table. The determinant-948 certificate is not transported to
+the discriminant-1152 surface without a map.
+
 ## 2. Extend the forgotten August optimal-observer result
 
 The [August rank-30 certificate](../elliptic_rank30_optimal_local_observer_certificate_codex_20260821.out)
@@ -75,6 +94,16 @@ See [check_rank_banks.py](check_rank_banks.py) and
 invisible to these mod-two probes; the exact point labels and transported
 roots remain necessary for subsequent operations.
 
+The incoming phase-two audit certifies all 66 rank-at-least-30 lists, totaling
+2005 independent point directions. Its two hostile lists, 3567 and 3568,
+only yielded rank 17 to the tested mod-two probes; mod-three reduction maps
+instead prove full independence of their 30 points. This is a concrete
+reason to vary the observing prime while preserving point labels and
+torsion guards. Our optimal binary banks are existence statements for the
+three named records, not a theorem that every independent point list admits
+such a direct binary certificate. Failure of those probes is not dependence
+and does not establish an even-index subgroup without a saturation proof.
+
 ## 3. A genuine 7-to-21 map for the cheaper controller
 
 There is an exact projective interpretation of the controller's probabilities
@@ -82,6 +111,9 @@ There is an exact projective interpretation of the controller's probabilities
 an elliptic-rank theorem or a conjugacy of integer Collatz orbits.
 
 Take independent uniform digits in a finite field `F_b`, with `b=2` or `4`.
+Discard the measure-zero all-zero stream, on which the first nonzero digit
+does not exist. This construction is almost sure, not a pointwise coverage
+claim for every digit stream or every integer source.
 Let `A` be the index of the first nonzero digit; then
 `P(A=a)=(b-1)b^(-a)`. Group the digits into triples and keep the first nonzero
 triple `V`. It is uniform on `F_b^3\{0}`. Its projective class is therefore

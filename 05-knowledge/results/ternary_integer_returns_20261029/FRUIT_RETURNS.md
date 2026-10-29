@@ -141,6 +141,41 @@ Nor are these translations native Collatz operations. The number 76 here has
 a specific derivation from a phase repair and a certified cover, rather than
 being evidence for an identification with an unrelated 76-state carrier.
 
+### Full rational inputs without recovering a subgroup index
+
+The next incoming checkpoint, [FULL_IMAGE](../session97_overnight_arithmetic_carriers_20261029/fractions/FULL_IMAGE.md),
+proves, using the explicitly cited source-generator theorem,
+`E'(Q)=Z H + Z/2 U`, `U=(0,0)`, with rational image `3Z H + Z/2 U`.
+For an **actual rational point on E'**, write `q=-Z/196-1=a/d` in lowest
+terms with `d>0`. Its exact image test is
+
+\[
+ 3\mid d\quad\text{or}\quad 3\mid(a+d).                \tag{14a}
+\]
+
+Therefore the controller extends to **every rational point of the bounded
+component**, without computing its discrete subgroup coordinate:
+test the three points `Q,Q+2H,Q+4H` by (14a), choose the unique passing one,
+then test its next thirteen points at times `j=0,...,12` under translation
+by `6H` for the inequality `Z<-686/3`. The endpoint is both positive-real
+and rationally liftable. Rationally factoring its split fruit cubic supplies
+the three cyclic lifts; choose and retain the named owner and orientation.
+No complexity bound for that reconstruction is asserted.
+
+The same budget `e+6j<=76` holds. The original point is recovered exactly by
+subtracting `(e+6j)H`, independently of whether its integer coefficient is
+known. The torsion bit is preserved by these translations, and any existing
+kernel marking is transported rather than averaged. The input must be a
+rational point on the quotient curve; a passing residue of an arbitrary
+rational number `q` is not sufficient. This full-group extension uses the
+cited generator input; the real cover and the earlier named-subgroup theorem
+do not need that classification.
+
+The incoming [one-third density law](../session97_overnight_arithmetic_carriers_20261029/fractions/DENSITY.md)
+is complementary: it describes asymptotic lifting frequency, whereas the
+present cover supplies an effective bounded return and an explicit charged
+phase repair. Neither replaces the other's quantifiers.
+
 ## 5. What actually transfers to the controller research
 
 Source: a marked arithmetic state. Target: a state satisfying both a real

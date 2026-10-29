@@ -148,6 +148,29 @@ def chamber(p):
     return p is not None and p[0] < F(-686, 3)
 
 
+def rational_image_guard(p):
+    require(p is not None and p[0].b == 0 and p[1].b == 0, 'rational affine input')
+    q = -p[0].a/196-1
+    return q.denominator % 3 == 0 or (q.numerator+q.denominator) % 3 == 0
+
+
+def steer_quotient(p, H):
+    require(on_curve(p, 421, 43904) and p[0] < 0, 'bounded rational quotient input')
+    candidates = [(e, add(p, mul(e, H, 421, 43904), 421, 43904)) for e in (0, 2, 4)]
+    accepted = [(e, q) for e, q in candidates if rational_image_guard(q)]
+    require(len(accepted) == 1, 'unique rational lifting phase')
+    e, q = accepted[0]
+    step = mul(6, H, 421, 43904)
+    for j in range(13):
+        if chamber(q):
+            break
+        q = add(q, step, 421, 43904)
+    require(chamber(q) and rational_image_guard(q), 'positive rational image')
+    require(add(q, neg(mul(e+6*j, H, 421, 43904)), 421, 43904) == p,
+            'recover exact input without a subgroup index')
+    return e, j, q
+
+
 def fruit(a, b, c):
     z = 6*(a+b)-c
     return -28*(a+b+2*c)/z, 364*(a-b)/z
@@ -275,11 +298,25 @@ def main():
     require(steering[-1] == dict(source=53, correction=4, clock=12,
                                 target=129, lift_coefficient=43), 'sharp 76 witness')
 
+    full_steering = []
+    for n in (-5, 1, 3, 5, 35, 53):
+        for torsion in (0, 1):
+            p = add(mul(n, Hprime, 421, 43904),
+                    point(0, 0) if torsion else None, 421, 43904)
+            # The controller receives p, not n or its torsion label.
+            e, j, q = steer_quotient(p, Hprime)
+            require((n+e) % 3 == 0 and e+6*j <= 76, 'full-group coefficient audit')
+            lift = add(mul((n+e+6*j)//3, G), mul(torsion, T))
+            require(positive(lift) and isogeny(lift) == q, 'authenticated named lift')
+            full_steering.append(dict(source_index=n, torsion=torsion,
+                                      correction=e, clock=j))
+
     result = dict(status='PASS; all real bounded-component phases covered',
                   source_sha256=sha256(Path(__file__).read_bytes()).hexdigest(),
                   explicit_checks=CHECKS, source_circle=source,
                   quotient_circle=quotient, rational_witnesses=witnesses,
                   steering_witnesses=steering,
+                  index_free_steering_controls=full_steering,
                   scope='sharp uniform clock 13; first positive return clocks 4,9,13; no Collatz implication')
     print(json.dumps(result, indent=2, sort_keys=True))
 

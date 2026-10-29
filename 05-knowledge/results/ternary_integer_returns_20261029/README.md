@@ -14,7 +14,9 @@ no major open conjecture is claimed solved.
   of the Mersenne-only candidate at fifteen blocks.
 - [FRUIT_RETURNS](FRUIT_RETURNS.md): a sharp thirteen-shift real-circle cover,
   first-return clocks `4,9,13`, and a rational-lifting/positivity steering rule
-  with sharp coefficient budget `76=4+6*12` on the named cyclic subgroup.
+  with sharp coefficient budget `76=4+6*12`. The incoming full-image theorem
+  extends it to rational bounded-component inputs without computing their
+  subgroup indices.
 - [RANKS_AND_CONNECTIONS](RANKS_AND_CONNECTIONS.md): rank21's heuristic scope,
   optimal fifteen/sixteen/sixteen-prime witness banks, and a genuine Fano/F4
   projective map explaining the controller probabilities `1/7` and `1/21`.
@@ -26,7 +28,11 @@ is preferred over this packet's larger finite proof of the same five classes.
 Its exact rank/isogeny certificates are also retained as dependencies. The
 new extensions are linear division clocks, weighted failure renewals, least
 source recurrences, effective elliptic returns, and the observer/projective
-bridges; overlapping results are not counted twice.
+bridges; overlapping results are not counted twice. The later incoming
+all-period arithmetic exclusion and all-precision Cantor recurrence are
+integrated into RENEWAL and LEAST_SOURCES. The full rational image test and
+the high-rank audit's change from binary to ternary observations strengthen
+the same theme: preserve the source while changing the admissible observer.
 
 ## Inheritance and live concepts
 
