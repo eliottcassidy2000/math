@@ -100,3 +100,28 @@ extension whose failure return satisfies a strict weighted contraction
 on these same conditional source measures, with a pointwise arithmetic
 certificate eliminating the possible null set? Neither part is supplied
 by the exponential tail of the auxiliary grammar alone.
+
+## 4. Why this coarse argument pays three branches per bit
+
+The exact coefficient ratio in (13) for `(3,3)` tends to `243/343`, so
+the mass generating function has convergence radius `R=343/243`. This
+ratio follows directly by cancelling factorials in consecutive coefficients.
+Any exponential-moment proof based only on (24) and `M(t)<infinity` needs
+`2/t^b<=1` for a uniform bound after paying `b` branching nodes per
+retained bit (and strict inequality for decay with refinement depth).
+
+But
+
+\[
+ R^2={117649\over59049}<2,
+ \qquad 2\cdot243^2-343^2=449>0.
+\]
+
+Thus no allowed `t` in this particular coarse proof can pay only two
+branches per bit, whereas `t=4/3` pays three. This proves minimality of
+the **integer budget within this exponential-moment/conditioning argument**.
+It is not a lower bound for the actual conditional distributions: a
+source-sensitive improvement to (24) could do better. The appearance of
+`243=3^5` and `343=7^3` comes from the ternary shape count and the `1/7`
+branch probability, not from an identification with another 243-object
+carrier.

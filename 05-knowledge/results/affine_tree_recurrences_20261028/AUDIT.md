@@ -46,6 +46,7 @@ mechanisms, not claims of never-rediscovered results.
 | [THM-3051, Stieltjes multiplier/Gamma flow](../../../01-canon/theorems/THM-3051-stieltjes-multiplier-gamma-flow-and-moving-lower-hankel-boundary.md) | retain one measure when taking moments; name its slope tilt explicitly | positivity under an actual positive pushforward | a family of good marginal laws is not one common source law | original mean clock infinite, tilted mean finite |
 | [THM-1770, corrected first-return renewal](../../../01-canon/theorems/THM-1770-the-localisation-lemma-as-first-return-renewal-and-the-pair-only-closure.md) | word-language factorization, with all contributions retained | exact free-word grammar | scalar cancellations do not isolate atoms | use signed two-atom cancellation as hostile |
 | [September Catalan/Ramsey note](../collatz_catalan_ramsey_20260927.md) | binary first passage generalized to ordered `d`-ary first extinction | unique first-return parsing | its orbit tournament was an invalid carrier; keep two orders as inversion graph | `(1,3,2)` |
+| [THM-2966, July critical-run fair extractor](../../../01-canon/theorems/THM-2966-spine-normal-form-for-critical-run-fair-extractors.md) | explicit conditional prefix shares and retained boundary terms | exact source probabilities under refinement | its unknown-bias fairness and pathwise deadline are not our fixed Haar law or averaged budget | a null infinite ray survives decreasing cylinder mass |
 
 THM-3192 is stronger than the bare continuant recurrence for its own
 coefficient-degree problem: it already supplies a moving reciprocal gauge,
@@ -72,6 +73,15 @@ letter-gap sum exactly. This checks the mass, slope **and normalized
 carry** coefficients of (10)–(13), through branch count 5 for `d<=3` and
 through 3 for larger arities. Tested rules are `(3,2),(3,3),(7,3),(2,2),
 (1,2),(15,4)`. These checks are independent of the bivariate jet algebra.
+
+The incoming extension checks all odd arities 3 through 101: exact least
+residue clock, original probability `1/d`, base-four tilted probability,
+and the strict bounds (27). Ordered-shape integration checks the new
+five- and nine-child carry recurrences through branch count 3; direct
+valuation-word enumeration through `D=16` checks their clock grammars
+and native integer guards. The plus-one arity identity is checked for
+`r=1,...,8`. The five-child second-moment supersolution and the coarse
+two-branch budget obstruction are exact rational/integer checks.
 
 Exact rational supersolutions check the refinement constants. Native
 source-cylinder intersections through `K=6`, with all words `D<=16` for
@@ -106,4 +116,5 @@ of the unrelated Ramsey computations is implied.
 compares both JSON objects with `checks.json`, and reproduces the affected
 historical sections. No symbolic package, network or random seed is needed.
 All-size proofs and open directions are in RECURRENCES.md, MOMENTS.md and
-REFINEMENT.md. A finite receipt is never used to establish an all-size claim.
+REFINEMENT.md, with the incoming-work extension in ODD_ARITIES.md. A finite
+receipt is never used to establish an all-size claim.

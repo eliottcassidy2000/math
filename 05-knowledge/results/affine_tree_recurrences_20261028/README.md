@@ -18,6 +18,10 @@ by a cheaper stopping grammar whose carry tail can actually be paid.
   `d`-child rules branching at valuations divisible by `r` gives exact
   clock, slope and carry recurrences. Its critical arities are
   `3,7,15,31,...` for an explicit probability reason.
+- [Odd-arity extension](ODD_ARITIES.md): the stronger incoming clock
+  compiler extends the carry law to every odd arity. The slope tilt reads
+  the binary selector in base four. A five-child rule has finite slope
+  variance and infinite mean carry, separating these two obstructions.
 - [Refinement budget](REFINEMENT.md): the `(d,r)=(3,3)` rule has
   `EJ=7/4`, `ED=7/2`, `EB=7/12`, and an exponential carry-tail bound.
   For any odd source cylinder `I_K` of mass `2^{-K}`,
@@ -30,6 +34,9 @@ by a cheaper stopping grammar whose carry tail can actually be paid.
   This bound preserves the conditioned source while paying for refinement
   with an increasing size budget. It does not eliminate a measure-zero
   exceptional integer or certify descent on a first stop.
+  Three is the smallest integer branch-per-bit budget in this particular
+  exponential-moment conditioning argument; actual conditional laws may
+  permit a better bound.
 - [Audit and recovery](AUDIT.md): independent ordered-shape sums, direct
   native integer checks, exact historical repairs, and the limits of the
   analogy with older continuant and moment work.
@@ -74,6 +81,16 @@ already proves the LCA energy obstruction for arbitrary source weights.
 We do not reprove a weaker energy statement: this packet changes the
 stopping grammar, keeps the affine extension coordinate, and states the
 new source-measure budget with its exact pointwise limitation.
+
+The mid-session pull through `d92d6c0d74` supplied
+[Session95](../session95_niche_recurrences_20261029/README.md). Its odd-arity
+compiler supersedes a singleton-only view of critical trees. Its sharp
+finite-support moment reconstruction strengthens our known-support jet
+statement, and its joint Schur boundaries explain why a scalar circulation
+recurrence misses a real degree-12 attachment response. The new
+ODD_ARITIES.md uses those stronger mechanisms explicitly. It adds the
+base-four tilt and the finite-variance/infinite-carry separation; it does
+not claim the incoming clock compiler as our result.
 
 ## Reproduction and next tests
 

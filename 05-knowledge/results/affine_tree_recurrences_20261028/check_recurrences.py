@@ -88,14 +88,15 @@ def triple(F, r, mixed=False):
     return out
 
 
-def trees(d=3, r=2):
+def trees(d=3, r=2, selected=None):
     """All chronological first-hit words with valuation clock <= LIMIT."""
     def visit(word, queue, clock, carry):
         if queue == 0:
             yield word, clock, carry
             return
         for a in range(1, LIMIT-clock+1):
-            nextq = queue-1+(d if a % r == 0 else 0)
+            branch=(a%r==0) if selected is None else ((a-1)%r+1 in selected)
+            nextq = queue-1+(d if branch else 0)
             # Every pending vertex costs at least one more unit of clock.
             if nextq > LIMIT-clock-a:
                 continue
@@ -103,13 +104,14 @@ def trees(d=3, r=2):
     yield from visit((), 1, 0, 0)
 
 
-def parse(word, d=3, r=2):
+def parse(word, d=3, r=2, selected=None):
     def take(i):
         start = i
         a = word[i]
         i += 1
         children = []
-        if a % r == 0:
+        branch=(a%r==0) if selected is None else ((a-1)%r+1 in selected)
+        if branch:
             for _ in range(d):
                 i, child = take(i)
                 children.append(child)
@@ -154,8 +156,8 @@ def univariate_pow(a,d,n):
     return out
 
 
-def coefficients(d,r,n=12):
-    p, q = Q(1,2**r-1), Q(3,4**r-1)
+def coefficients(d,r,n=12,probs=None):
+    p, q = (Q(1,2**r-1), Q(3,4**r-1)) if probs is None else probs
     M, L = [1-p], [1-q]
     for m in range(1,n+1):
         M.append(p*univariate_pow(M,d,m-1)[m-1])
@@ -174,9 +176,9 @@ def coefficients(d,r,n=12):
     return M,L,B
 
 
-def shape_moments(d,r,m):
+def shape_moments(d,r,m,probs=None):
     """Independent ordered-shape sum; each infinite letter-gap sum is exact."""
-    p,q = Q(1,2**r-1),Q(3,4**r-1)
+    p,q = (Q(1,2**r-1),Q(3,4**r-1)) if probs is None else probs
     mass,slope,carry = Q(0),Q(0),Q(0)
     size=d*m+1
     for chosen in combinations(range(size),m):
@@ -241,6 +243,45 @@ def main():
     eq(1-t*(ls*ls+ls*ms+ms*ms)/7,Q(193,700),'carry denominator')
     eq((ls/3)/Q(193,700),Q(245,193),'carry exponential budget')
     eq(2*Q(3,4)**3,Q(27,32),'source refinement factor')
+    eq(2*243**2-343**2,449,'two-branch coarse budget hostile')
+    odd_arities={}
+    for d in range(3,102,2):
+        h=1
+        while pow(2,h,d)!=1:
+            h+=1
+        numerator=(2**h-1)//d
+        selected={j for j in range(1,h+1) if numerator & (1<<(h-j))}
+        p=Q(sum(2**(h-j) for j in selected),2**h-1)
+        q=Q(3*sum(4**(h-j) for j in selected),4**h-1)
+        eq(p,Q(1,d),'critical selector source mass')
+        eq(p*p<q<3*p*p,True,'base-four tilt bounds')
+        eq(d*q<Q(3,4),True,'all odd tilted subcriticality')
+        odd_arities[str(d)]={'period':h,'selector':sorted(selected),'q':str(q)}
+        if d in (5,9):
+            M,L,B=coefficients(d,h,3,(p,q))
+            for m in range(4):
+                eq(shape_moments(d,h,m,(p,q)),(M[m],L[m],B[m]),'multiresidue carry recurrence')
+            counts=defaultdict(int)
+            for word,clock,carry in trees(d,h,selected):
+                parse(word,d,h,selected); native_guard(word,clock,carry)
+                counts[len(word),clock]+=1
+            lp={(1,a):1 for a in range(1,LIMIT+1) if (a-1)%h+1 not in selected}
+            ep={(1,a):1 for a in range(1,LIMIT+1) if (a-1)%h+1 in selected}
+            z={}
+            while True:
+                nz=add(lp,mul(ep,power(z,d)))
+                if nz==z:
+                    break
+                z=nz
+            eq(z,dict(counts),'multiresidue full clock grammar')
+    for r in range(1,9):
+        d=2**r+1; h=2*r
+        q=Q(3*sum(4**(h-j) for j in range(r+1,h+1)),4**h-1)
+        eq(q,Q(1,4**r+1),'plus-one arity tilt')
+    b=Q(9*(8+1),8**4-1); a=Q(9,7)-b
+    eq((a,b),(Q(576,455),Q(9,455)),'five-child square-slope weights')
+    eq(a+b*2**5,Q(864,455),'five-child square-slope supersolution')
+    eq(a+b*2**5<2,True,'finite slope second moment control')
     leaf = {(1,a):1 for a in range(1,LIMIT+1,2)}
     branch = {(1,a):1 for a in range(2,LIMIT+1,2)}
     f0 = {}
@@ -361,7 +402,8 @@ def main():
     abelian=abelian_probes()
     print(json.dumps({'status':'FINITE-EXACT (Decimal Abelian probes are VERIFIED)','clock_limit':LIMIT,'jet_orders':list(range(5)),
         'critical_words':word_count,'checks':CHECKS,'permutation_controls':tournament_tests,
-        'carry_collision':examples,'size_coefficients':coefficient_rows,'abelian_probes':abelian},indent=2))
+        'carry_collision':examples,'size_coefficients':coefficient_rows,'abelian_probes':abelian,
+        'odd_arity_selectors':odd_arities},indent=2))
 
 
 if __name__ == '__main__':
