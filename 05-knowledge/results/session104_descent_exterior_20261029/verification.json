@@ -1,13 +1,15 @@
 {
-  "checkers": 7,
-  "fresh_runs": 14,
+  "checkers": 8,
+  "fresh_runs": 16,
   "input_hashes": {
     "audit_algebra/check_independent.py": "569430a542324aae8e724a054716a72128b8a1512889d03fcd6a34c46774ddf9",
     "audit_algebra/receipt.normal.json": "8b848af3613d847941589cefe021796c16f6942ebcee97b21fb4f71ece89e467",
-    "audit_descent/check_independent.py": "aa70dd15e6dc8deabab460d9a712017e01d6da75b65a93322de344ced8acb128",
-    "audit_descent/receipt.json": "215832be59617882535b02dcc14376d26d9c718c32d2f062068af43a151294e9",
-    "descent/check_descent.py": "741acc9bb0241798bd2006ddca44d148348c664d849b15efa5ea9afe08319f48",
-    "descent/checks.json": "072b51a12865ef4a4918a909a4659c56d01e59539a7a51545a80a1be7b3eb696",
+    "audit_descent/check_independent.py": "0288c9c2aa199ddeec423d6b006b5e8cbe20285e74b8a60caaff741a5a54453b",
+    "audit_descent/receipt.json": "caffdee68773bca71b55711fba9858e5cc3342eec5ce2e58698ebfa0ba0e0f5e",
+    "audit_incoming/check_common_rank.py": "725734314c7d5d564b83dfa42daa099448be2439c2b9672fb09adb29ca5bea7a",
+    "audit_incoming/receipt.json": "e804aa07ad1480d99ab782e9853a34a05f2e9416aa42fd25863e6477c22821ef",
+    "descent/check_descent.py": "5127701af7f0738803582b805f47db27abf603f7c1cdc09c6f0efcc6804c0bc6",
+    "descent/checks.json": "bdf894427034f0ebac551ccbdcd2372424b8fbd16a3c0d6222360aca697eff8a",
     "exterior/check_exterior.py": "b314514863923ed7367e301827d3700930a2815bfe9d0f18212c21b5a3c2b8eb",
     "exterior/results.json": "88afedc3e09b1613f9e630525c8f62b539aefec6580ce9b41d9d009c727b362d",
     "positive/check_positive.py": "e469209ef6320f88bed0c1e5a0871c08f3d1b35a0b9a2a251142dbc40dc555cd",
@@ -102,6 +104,18 @@
       "fresh_stdout": true,
       "optimized": true,
       "script": "audit_descent/check_independent.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": false,
+      "script": "audit_incoming/check_common_rank.py"
+    },
+    {
+      "baseline_equal": true,
+      "fresh_stdout": true,
+      "optimized": true,
+      "script": "audit_incoming/check_common_rank.py"
     }
   ],
   "status": "PASS"
