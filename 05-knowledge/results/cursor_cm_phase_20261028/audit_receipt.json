@@ -1,0 +1,68 @@
+{
+  "status": "FINITE-EXACT replay",
+  "python": "3.13.14",
+  "source_sha256_LF": {
+    "05-knowledge/results/cursor_cm_phase_20261028/cm_series.py": "4cfeee6c1e6d442d84865707bbf6c2fac2d916dad3e03effada3fbbceb4a7809",
+    "05-knowledge/results/cursor_cm_phase_20261028/cursor_probe.py": "c531d322c35960c106c99c71fad8d079771d7a1a3effd4bd0d22cca8d642ae20",
+    "05-knowledge/results/cursor_cm_phase_20261028/cursor_symmetry.py": "3591f933ef71b27b2a79b86a912099bf2a7dd8a39bb88b27ab73a19e81827b8d",
+    "05-knowledge/results/cursor_cm_phase_20261028/endpoint_kernel.py": "0a703890953e8862faed5247e3c1ccfef2a1ab2fd505fab80265312d7d3b77fc",
+    "05-knowledge/results/cursor_cm_phase_20261028/mine_waves.py": "85d5c4522e387bb30719ecc75ecaa696727d9bbaaec22623107be6baf209ba94",
+    "05-knowledge/results/cursor_cm_phase_20261028/reproduce.py": "9446faa8e3f25278cbd436903ab20a9cfbe87e5cf5b44e4fa376f2946703813b",
+    "05-knowledge/results/cursor_cm_phase_20261028/run_probe.py": "ac9a6fedfac3ac504b684a414bfef5ae9d4d826164249a7d7fc42ce31e658167",
+    "05-knowledge/results/cursor_cm_phase_20261028/unit_clocks.py": "d924284f5c826e0e77c4da937a5b4eb7fd32eb4264bb04b74de3cdc7dc9d2511",
+    "05-knowledge/results/joint_port_germs_20261028/port_core.py": "8aaed7ba902230f29e17f70c6b54cfbf202d0adc9ced108f8c0a7d04eda5df3e",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259"
+  },
+  "runs": [
+    {
+      "script": "endpoint_kernel.py",
+      "optimized": false,
+      "receipt_sha256_LF": "92a66a73d33e2f7706f9d8ffde49333bd522b09e311061eef636762a6c80ee97"
+    },
+    {
+      "script": "endpoint_kernel.py",
+      "optimized": true,
+      "receipt_sha256_LF": "92a66a73d33e2f7706f9d8ffde49333bd522b09e311061eef636762a6c80ee97"
+    },
+    {
+      "script": "cm_series.py",
+      "optimized": false,
+      "receipt_sha256_LF": "6f9ec3ee0e812345b2e7411a1f9e45e0754cd52f81f978c1b981e08ce437046a"
+    },
+    {
+      "script": "cm_series.py",
+      "optimized": true,
+      "receipt_sha256_LF": "6f9ec3ee0e812345b2e7411a1f9e45e0754cd52f81f978c1b981e08ce437046a"
+    },
+    {
+      "script": "unit_clocks.py",
+      "optimized": false,
+      "receipt_sha256_LF": "240ba717953792d5c9e998e0ae1b9a5ca286f58ab2de6eda891e3e8772b256ea"
+    },
+    {
+      "script": "unit_clocks.py",
+      "optimized": true,
+      "receipt_sha256_LF": "240ba717953792d5c9e998e0ae1b9a5ca286f58ab2de6eda891e3e8772b256ea"
+    },
+    {
+      "script": "run_probe.py",
+      "optimized": false,
+      "receipt_sha256_LF": "19495d5ca7e084fa095abc4718b5f078db3c4def8e7c199cc40c522db7c7b33e"
+    },
+    {
+      "script": "run_probe.py",
+      "optimized": true,
+      "receipt_sha256_LF": "19495d5ca7e084fa095abc4718b5f078db3c4def8e7c199cc40c522db7c7b33e"
+    },
+    {
+      "script": "cursor_symmetry.py",
+      "optimized": false,
+      "receipt_sha256_LF": "46bf200dde846e5f1f158e104efeac75cb34c006ee70c6abfbfa6a49938e839f"
+    },
+    {
+      "script": "cursor_symmetry.py",
+      "optimized": true,
+      "receipt_sha256_LF": "46bf200dde846e5f1f158e104efeac75cb34c006ee70c6abfbfa6a49938e839f"
+    }
+  ]
+}

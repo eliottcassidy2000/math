@@ -8,22 +8,33 @@ source/forest-complement pair is the partner tournament with its ordered
 run endpoints. This response can be strictly smaller than the faithful
 component-order carrier, even when ordered lengths remain visible.
 
-- [ENDPOINTS.md](ENDPOINTS.md), E1-E5: an explicit strong-auxiliary C3
+- [ENDPOINTS.md](ENDPOINTS.md), E1-E6: an explicit strong-auxiliary C3
   context intrinsically decodes every ordered endpoint pair. Its order is
   n+k(n+4)+2. The exact response fiber has k!/|Hbar| cells, against k!/|G|
   faithful component orders. The first loss is at seven for class-only
   observations and at eight with length observations. Infinite families
   expose the missing common phase. Arbitrary later run splitting, internal
   cursors and blue flags are outside this theorem's menu.
+  Allowing forest complement before attachment gives the exact two-sheet
+  group intersection J; all seven tested losses are repaired in that menu.
 - [CURSOR.md](CURSOR.md), C1: read-only native-complement scans are faithful
   through nine. A prime-order symmetry cover makes the order-nine check
   complete without scanning all 268435456 presentations individually.
-- [cm_series.py](cm_series.py) and its [receipt](cm_series.json): exact
+- [RAMANUJAN.md](RAMANUJAN.md), [cm_series.py](cm_series.py) and its [receipt](cm_series.json): exact
   eta-series, CM class numbers, Paley ranking excesses, quadratic-unit
   traces, and certified exponential intervals. The coefficient 4372 belongs
   to the classical level-two Fricke series, linking the quoted formulas to
   earlier Monster/Baby Monster work. At 130, simple radicals do not produce
   a near integer: the missing reciprocal trace remains quadratic irrational.
+- [TRACE_CARRIER.md](TRACE_CARRIER.md), Q1-Q3: an exact smallest carrier for
+  arbitrary selected power clocks, their inverses and conjugation on a
+  quadratic ring modulo m. Smith factors quantify phase loss for the actual
+  22,37,58 units; a twelfth-power clock modulo13 loses a factor13, restored
+  by a primitive clock. The finite checker makes763611 exact checks.
+- [SYNTHESIS.md](SYNTHESIS.md) and [SEARCH.md](SEARCH.md): explicit maps to
+  weighted gap topology, signed Lucas copies, Frobenius/LCA ports and four
+  archaeology waves through13461 documents. The return-Gram lower bound
+  remains separate from homotopy; major conjectures are not promoted.
 
 The 81/27 hostile is retained in [endpoint_kernel.json](endpoint_kernel.json):
 the identical labelled cyclic triples do not identify the endpoint actions
@@ -54,9 +65,13 @@ Core reproduction:
 python -B 05-knowledge/results/cursor_cm_phase_20261028/endpoint_kernel.py
 python -B 05-knowledge/results/cursor_cm_phase_20261028/cm_series.py
 python -B 05-knowledge/results/cursor_cm_phase_20261028/cursor_symmetry.py
+python -B 05-knowledge/results/cursor_cm_phase_20261028/reproduce.py
 ```
 
 The cheap exploratory [run_probe.py](run_probe.py) shows that a short
 unmarked C3 context alone can miss distinctions. Its26 small context
 failures are not counterexamples to all-context separation; the degree
 construction repairs that experiment.
+
+[AUDIT.md](AUDIT.md) records universes, alternate paths, phase and
+strongness boundaries, and the correction to the raw candidate-test label.

@@ -12,6 +12,13 @@ a historical synthesis or promoting computational evidence.
 - **New hostile guards:** the F11 frame involution6/x has no fixed points, whereas M^5 has two, so they are not conjugate. Class number2 at discriminant-72 does not make raw g18 a quadratic radical: its square has degree6. The simple quadratic surds for g130 also leave a large cross-conjugate trace term. See [the modular audit](../05-knowledge/results/reciprocal_lucas_carriers_20261028/MODULAR.md).
 - **Missing coordinates / next tests:** retain the actual index, observer, action, modular function/level, and conjugate frame. Test the smallest excluded prime, the full forgotten-structure automorphism group, and the off-branch conjugates before transferring a pattern.
 
+## 2026-10-28 — cursor candidate permutations are not distinct presentations
+
+- **Source and error:** the first checkpoint547025d2ff of [CURSOR.md](../05-knowledge/results/cursor_cm_phase_20261028/CURSOR.md) labelled the counters20/160/2256 as distinct legal candidates. The producer's candidate_paths field counts legal nonidentity orbit-preserving relabellings with multiplicity.
+- **Concrete witness:** at order7, rows(62,100,88,82,98,76,1) produce10 legal relabelling tests but only2 distinct competing presentations. Automorphisms identify several permutations giving the same rows.
+- **First failed implication:** distinct permutations imply distinct relabelled objects. The missing coordinate is the quotient by the source automorphism action.
+- **Repair / strongest survivor:** the table and audit now call them test counts with multiplicity. Complete coverage, the zero-collision result through9, the source-state counts and all saved receipts are unchanged. No timing or distinct-output speedup is inferred from these counters.
+
 ## 2026-10-28 — visiting every port separately does not retain their joint order
 
 - **Candidate and scope:** a read-only moving selector defeats the earlier fixed-boundary nine-pair, but its individual child-run responses are not sufficient for general composition. This resolves a proposed extension, not a retraction of the minimal singleton theorem or a counterexample to all-size Hamilton-presentation scanning.

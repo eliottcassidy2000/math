@@ -174,6 +174,15 @@ classes are observable. This is not an openness claim for every richer
 operation menu: incoming arbitrary-position C3 substitutions force complete
 Hamilton-presentation memory, as audited in CONNECTIONS.md.
 
+**Later scoped progress:** [cursor/endpoint results C1 and E1-E6](../cursor_cm_phase_20261028/README.md)
+prove read-only scan faithfulness through9 (all sizes remain open), and
+identify the exact one-stage ordinary supplied-run response as the partner
+with ordered endpoint pairs. The faithful component-order quotient can be
+strictly finer: first loss at7 without observed lengths, at8 with them.
+Allowing forest complement before attachment gives the intersection of
+the two endpoint permutation images on the same component set. This does
+not yet prove a minimum closed under every later run operation or re-marking.
+
 **Theorem C3b (PROVED).** Suppose some component anchors are retained, with
 pointwise stabilizer H<=G. The sequence of individual anchored-component
 orbit responses classifies every complete ordering of the remaining

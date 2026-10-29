@@ -58,7 +58,7 @@ partitions always meet discretely' proves the all-size conjecture.
 automorphisms and transporters use the inherited exact backtracking oracle,
 without a probabilistic isomorphism hash.
 
-| n | All path presentations | Both endpoint groups nontrivial | Distinct legal candidates tested | Collisions |
+| n | All path presentations | Both endpoint groups nontrivial | Legal relabelling tests (with multiplicity) | Collisions |
 |---|---:|---:|---:|---:|
 |1..6|1, 1, 2, 8, 64, 1024|0|0|0|
 |7|32768|4|20|0|
@@ -88,6 +88,9 @@ settled by the rigidity argument.
 The two methods agree on the dual-nontrivial counts and tested candidates
 at seven and eight. They share the GI oracle; this is an alternate coverage
 path, not an independent implementation of graph isomorphism.
+Different orbit-preserving permutations can yield the same competing
+presentation. The receipt's candidate_paths counter counts those tests
+with multiplicity; it is not a count of distinct competing presentations.
 
 ## What is and is not settled
 

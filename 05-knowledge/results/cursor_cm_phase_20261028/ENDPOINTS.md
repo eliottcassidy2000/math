@@ -1,6 +1,6 @@
 # The exact quotient-walk endpoint response, and its closure boundary
 
-**PROVED elementary, scoped; same-agent audit.** Local results E1-E5 belong
+**PROVED elementary, scoped; same-agent audit.** Local results E1-E6 belong
 to this file. These concern ordinary unlabelled source/partner observations
 of supplied-run assembly. They do not claim that the resulting response
 quotient closes every later operation on a retained Hamilton presentation.
@@ -209,6 +209,16 @@ At m=3 the literal data are
 There are24 faithful order classes and8 response classes. Keeping the long
 run first already gives6 versus2, with the same length list on both sides.
 
+**Equal lengths do not prevent loss either.** At nine, let B have three
+blocks X,V,Y around C3, with X and Y cyclic triples and V a transitive triple.
+Use the three runs (x_i,v_i,y_i). The endpoint action is the diagonal C3 on
+X,Y; V is rigid. Thus G=1, Hbar=C3, and six orders give two responses, although
+every run has length3. The forest-complement source A is strong: X and Y are
+strong, all X->Y arcs are present, and each V vertex has both an incoming
+Y arc and an outgoing X arc. The literal rows and transporters are saved
+in endpoint_kernel.json. This is an additional control, not a new minimal
+order claim.
+
 ## E5. What Frobenius/LCA transport must retain
 
 The lost coordinate here is an actual rotation. A target-side endpoint
@@ -228,3 +238,40 @@ limit. The smallest carrier CLOSED under all intended future run operations
 still requires that operation menu to be fixed; E2 settles the one-stage
 ordinary response and supplies both a decoder and sharp counterexamples to
 faithful component-order recovery from that response alone.
+
+## E6. The exact two-sheet improvement
+
+Permit forest-native complement BEFORE the supplied-run assembly, retaining
+the same runs. Their arcs are legal on both sheets. Write Hbar_A,Hbar_B for
+the two endpoint permutation images on the SAME component set, with the
+same chosen length-colour convention. Then the exact response group is
+
+    J = Hbar_A intersect Hbar_B,
+    number of response cells = k!/|J|.
+
+Proof: a comparison must preserve the endpoint record on both sheets by E2.
+The corresponding permutation of components must therefore lie in both
+images; conversely membership supplies the two required maps. They need not
+be the same map on hidden interior vertices. G embeds in J, as before.
+
+This statement permits general tournament children on either sheet. If a
+stricter menu requires every supplied child to be strong, first check that
+the complemented child is still permitted. In the length-aware n=8 family,
+B has a source and sink, so its pre-complement repair is outside that
+stricter child menu. The class-only odd family has both A and B strong.
+
+This quotient is closed under swapping the two sheets and under permuting
+the component POSITIONS. It is not thereby closed under replacing the
+forest by a newly chosen path cover, retaining assembled internal positions,
+or nested composition with richer joint observations.
+
+FINITE-EXACT: all seven recorded phase-loss examples have Hbar_A=1, hence
+J=G=1. They are the two odd-rotation families at m=3,5,7 and the equal-length
+nine-vertex example. Complementing before the attachment repairs every one
+of these losses. This is useful positive evidence, not a proof that J=G
+for every aligned pair. That universal question remains OPEN here.
+
+The intersection must be taken after identifying the component names.
+Intersecting abstract groups of the same order, or counting them, does not
+perform the operation. This is the exact place where the inherited
+Frobenius/LCA common-frame requirement enters the minimized response.

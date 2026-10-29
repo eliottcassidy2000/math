@@ -112,6 +112,16 @@ def equal_coupled(m):
              for j in range(3*m) if i!=j) for i in range(3*m))
  F=tuple((i,m+i,2*m+i) for i in range(m))
  return reverse_forest(B,F),B,F
+
+def strong(t):
+ for v in range(len(t)):
+  seen=1<<v;old=0
+  while old!=seen:
+   old=seen
+   for i in range(len(t)):
+    if seen>>i&1:seen|=t[i]
+  if seen!=(1<<len(t))-1:return False
+ return True
 def main():
  rows=[];mergers=[]
  for n in range(2,6):
@@ -136,9 +146,13 @@ def main():
   a,b,F={'class_only':short_coupled,'length_aware':coupled,'equal_length':equal_coupled}[kind](m)
   autA=c.o.isomorphisms(a,a,True);autB=c.o.isomorphisms(b,b,True)
   H,images=endpoint_group(b,F,lengths=kind!='class_only')
+  HA,source_images=endpoint_group(a,F,lengths=kind!='class_only')
+  both_images=source_images & images
   G=[g for g in autB if tuple(sorted(r.act_cover(F,g)))==tuple(sorted(F))]
   need(len(G)==1 and len(images)==m,'coupled odd rotation family')
   need(len(autB)==(m*m if kind=='equal_length' else m),'target automorphism group')
+  need(len(both_images)==1,'native complement restores the lost order phase in this family')
+  need(strong(a),'hostile source child is strong')
   if kind=='class_only':need(all(row.bit_count()==m for row in a),'regular strong source family')
   Q=(F[:1]+F[2:]+F[1:2]) if kind=='length_aware' else F[1:]+F[:1]
   if kind!='class_only':need(tuple(map(len,F))==tuple(map(len,Q)),'identical ordered lengths')
@@ -149,6 +163,7 @@ def main():
   check(a,F);check(a,Q,3)
   family.append({'kind':kind,'m':m,'A':a,'B':b,'F':F,'second_order':Q,'AutA':len(autA),'AutB':len(autB),
                  'joint_group':len(G),'endpoint_image':len(images),'transporter':p,'context_order':len(left)})
+  family[-1].update({'source_endpoint_image':len(source_images),'two_sheet_image':len(both_images),'strong_source':True})
  hostile=c.o.hostile()
  for a in (tuple(hostile['rows_AAA']),tuple(hostile['rows_BAA'])):
   F=tuple((i,) for i in range(len(a)));B=reverse_forest(a,F)
