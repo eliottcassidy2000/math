@@ -115,6 +115,7 @@ def spectral_checks():
     ae = [[int(j == target) for j in range(4)] for target in (3, 2, 3, 3)]
     le = [[int(j == target) for j in range(6)] for target in (5, 2, 4, 5, 4, 5)]
     require(len({tuple(row) for row in le}) == 3, 'three independent legality images')
+    require(len({tuple(row) for row in mm(le, le)}) == 2, 'rank-two ee excludes every four-dimensional exterior representation')
     we = wedge(ae)
     nonzero = [row for row in we if any(row)]
     require(nonzero and all(row == nonzero[0] or row == [-x for x in nonzero[0]] for row in nonzero), 'rank-one exterior acceptance e')
@@ -127,7 +128,7 @@ def spectral_checks():
     return dict(C=c, exterior=w, intertwiner=s, counts_order4_to17=counts[:14],
                 mod7_zero_orders=[3, 6], mod13_period_divisor=12,
                 source_discriminant=49, field_jacobi_defect=1,
-                letter_e_ranks=dict(exterior_acceptance=1, legality=3))
+                letter_e_ranks=dict(exterior_acceptance=1, legality=3), legality_ee_rank=2)
 
 
 def mul27(a, b):

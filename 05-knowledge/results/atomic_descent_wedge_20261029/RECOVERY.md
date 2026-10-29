@@ -46,16 +46,36 @@ The earlier LRC hostile `26*{1,...,12} union {339}` has first good period27
 [THM-764, signed-pair deck](../../../01-canon/theorems/THM-764-covering-small-period-signed-pair-deck-and-q25-refutation.md)).
 This is a period-existence obstruction, not a field-size consequence.
 
-## 3. A three-piece growth partition with its convention stated
+## 3. Recover the three chains before choosing another partition
+
+Incoming Session104 recovered the matching historical source in
+[its three-chain note](../session104_descent_exterior_20261029/summands/THREE_CHAINS_RECOVERED.md).
+The September [square-filter result](../collatz_mod6_20260922_w6_summand_closure_square_filter.md),
+S4–S9, proves the square-sum graph on 1..12 has paths
+
+    10--6--3--1--8;    2--7--9;    11--5--4--12.
+
+These are founded at {1,2,4}. Vertex 13 touches 3 and 12 and merges the
+first and third components; vertex 14 touches 2 and 11 and completes
+connectivity. Every n>=6 has an earlier neighbour because a square lies
+strictly between n and 2n. Connectivity therefore persists after 14.
+The strict-summand holes {1,4,6} are a different object. This recovered
+source supersedes our initial ambiguity about which three-piece history
+was intended; the operation-table partition below remains a separate model.
+
+The deleted self-pair in this graph occurs exactly at vertex `2k^2`, since
+twice that vertex is `(2k)^2`. This is exactly the starting term of the
+even balance rows below. It is a repeating diagonal exclusion, not a
+repeating leaf pattern: vertex 32 already has earlier neighbours 4 and 17.
 
 For a precise operation-table model, adjoining label N+1 to the ordered
 pair square [N]^2 adds three disjoint pieces:
 
     {(N+1,j):j<=N}, {(i,N+1):i<=N}, {(N+1,N+1)}.
 
-Their sizes N,N,1 give `(N+1)^2-N^2=2N+1`. This is an explicit compatible
-formalization of three-piece growth, not an assertion that an ambiguously
-named historical partition had exactly this definition. Swapping the two
+Their sizes N,N,1 give `(N+1)^2-N^2=2N+1`. This is a separate explicit
+operation-table growth rule, not the recovered three square-sum paths.
+Swapping the two
 parents exchanges the first two pieces and fixes the corner. After the
 commutative quotient there are N new off-diagonal pairs and one diagonal.
 

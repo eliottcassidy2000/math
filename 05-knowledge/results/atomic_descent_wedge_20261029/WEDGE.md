@@ -65,6 +65,10 @@ not just agreement of eigenvalues. In three dimensions the general identity
 is `Lambda^2 C ~= det(C) C^-T` under volume duality. Here det C=-1;
 equation (7) explains why its reciprocal spectrum is the shifted spectrum.
 
+Concurrent Session104 independently supplies another unimodular S and the
+same conjugacy in its [exterior note](../session104_descent_exterior_20261029/exterior/K4_EXTERIOR_BOUNDARY.md), §5.
+These are two certificates of one result, not separate discoveries.
+
 Now take the explicitly defined lift `G=diag(1,C)` on four coordinates.
 Its exterior square has six coordinates, naturally indexed by K4's edges:
 
@@ -91,6 +95,27 @@ Counting, acceptance and legality have different future observations.
 The inherited minima 3,4,6 remain valid, but the numerical pattern alone
 does not commute with the named letter operations. The scalar lift (8)
 is useful precisely with this boundary stated.
+
+### The stronger incoming obstruction and an actual native carrier
+
+Session104's exterior note, §1, proves more: the legality transition `ee`
+has rank two. An exterior square has rank `binomial(r,2)` when its source
+operator has rank r; for a four-dimensional operator the possible ranks
+are only 0,1,3,6. Functoriality therefore excludes **any** four-dimensional
+letter representation whose exterior square is this legality machine,
+not just the four acceptance-state operators. The checker independently
+recomputes the rank-two `ee` image from the displayed e transition.
+
+Its §3 supplies the positive native alternative. At four vertices the
+ordered-two-path observer has twelve ordered-pair ports. Simultaneously
+swapping the two runs in source and target preserves all cover counts.
+The antisymmetric sector is thus invariant and has basis
+`e_(i,j)-e_(j,i)`, identified with `e_i wedge e_j`. Vertex re-markings act
+by genuine exterior squares. This is a different operation menu from the
+construction letters, which insert vertices and increase the dimension.
+The integral symmetric/antisymmetric split has index `2^6`, so its rational
+projectors cannot erase binary gluing in an integral calculation. Retaining
+this native carrier is more informative than a six-state/six-edge bijection.
 
 ## 4. Edge signs, Hodge stars, and fields of bivectors
 

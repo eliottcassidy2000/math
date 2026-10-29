@@ -15,6 +15,9 @@ Same-agent review with alternate computations, not an independent audit.
 * [RECOVERY](RECOVERY.md): the prior 13/2065/10/26/27/28 work, corrected
   summand ancestry, signed-versus-unsigned K4 edges, balanced sums and
   squares, and a normalized additive-square map used in an ABC reduction.
+* [INCOMING](INCOMING.md): concurrent Session104 and fixed-port recurrences,
+  the stronger exterior obstruction, native wedge repair, recovered three
+  chains, and the explicit local integer rank with its unpaid reset.
 * [check.py](check.py), [checks.json](checks.json): reproducible standard
   library controls, exact integers/Fractions and source digest.
 
@@ -41,7 +44,7 @@ No new universal meta-pattern is promoted from these examples.
 
 The all-order tournament observer criterion and the three/four/six minima
 are inherited. So are the summand frontier, the two power-balance identities,
-the atomic cylinder formula and the existence of the 5x+1 cycle. New here:
+the atomic cylinder formula and the existence of the 5x+1 cycle. Developed here:
 
 1. Their exact application to growing-return atomic mass `q^k+A_k` and the
    identification of A_k as the remaining arithmetic escape term.
@@ -50,6 +53,11 @@ the atomic cylinder formula and the existence of the 5x+1 cycle. New here:
 3. The explicit unimodular conjugacy `Lambda^2 C ~= C-I`, its modulo-seven
    count law, and the one-letter obstruction to equating two six-dimensional
    representations.
+
+The clean late fetch found the same exterior conjugacy independently proved
+in Session104; it is one concurrent result, not two discoveries. Its stronger
+`ee` obstruction, native antisymmetric carrier, sharper integer rank and
+historical three-chain recovery are now incorporated and credited.
 
 These are local research extensions, not claims of literature-first results.
 The projective 13/26/27/28 and ABC maps are elementary/cited mechanisms used
@@ -62,7 +70,7 @@ Run from this directory:
     python3 check.py
     python3 -O check.py
 
-Both recorded runs passed 10,449 explicit checks, with identical output.
+Both recorded runs passed 10,450 explicit checks, with identical output.
 The two outputs must agree byte for byte with checks.json. No truth-bearing
 check uses Python assert. The exact universe includes:
 

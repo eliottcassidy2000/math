@@ -227,7 +227,7 @@
       "1/65536"
     ]
   },
-  "explicit_checks": 10449,
+  "explicit_checks": 10450,
   "projective": {
     "line_sizes": 4,
     "nonzero_count": 26,
@@ -236,7 +236,7 @@
     "projective_points": 13,
     "vector_count": 27
   },
-  "source_sha256": "f4cddf5d90e18e95d1ec9e6f4b88a2e710f8816228f3e4028fd0d5d7ed834f12",
+  "source_sha256": "66234c68314ccfb37232caaca6e1065b424a4c5cf94811389ec3d272e2e6d253",
   "spectral": {
     "C": [
       [
@@ -306,6 +306,7 @@
         -1
       ]
     ],
+    "legality_ee_rank": 2,
     "letter_e_ranks": {
       "exterior_acceptance": 1,
       "legality": 3
