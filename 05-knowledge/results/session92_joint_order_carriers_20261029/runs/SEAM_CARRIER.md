@@ -2,9 +2,11 @@
 
 **PROVED (elementary, scoped); FINITE-EXACT controls.** This is an independent
 mechanism, not a recovered replay of the user's four quoted Hamilton counts.
-The exact ordered run lists and definition of each individual cursor response
-have not yet been located. In particular, no equality of cursor responses is
-claimed for the independent example below.
+At the initial source snapshot the exact ordered run lists and cursor
+responses had not been located. The incoming source was subsequently recovered
+and independently replayed in [RECOVERED_RUN_WITNESS.md](RECOVERED_RUN_WITNESS.md).
+The smaller independent example below remains separate: no equality of cursor
+responses is claimed for it.
 
 ## Inheritance and the crucial distinction
 
@@ -104,13 +106,17 @@ The subset dynamic program counts all directed Hamilton paths, with arbitrary
 initial vertex, and uses explicit failures rather than optimized-away asserts.
 No comparison here divides H by an automorphism order.
 
-## 4. What is still needed for the quoted obstruction
+## 4. Recovery checklist for the quoted obstruction
 
-For each quoted pair, recover: all child adjacency rows; the quotient and
+This checklist was an open provenance item at the initial snapshot. It is now
+fully discharged in [RECOVERED_RUN_WITNESS.md](RECOVERED_RUN_WITNESS.md), including
+all four counts, all six middle orders and separate cursor/group checks.
+The required data were: all child adjacency rows; the quotient and
 its precise walk; both ordered run lists; the definition and range of each
 cursor query; the assembly and partner operation; and whether H counts paths
-or automorphism-orbits. Only then can 2483993/2491877 and2899675/2906091 be
-independently replayed or the padding theorem specialized to them. A numerical
+or automorphism-orbits. These data permit the independent replay of2483993/2491877 and2899675/2906091.
+Specializing the padding theorem still requires its separate shared-start and
+cursor-language hypotheses. A numerical
 match alone would not certify the claimed equality of all cursor responses.
 
 ## 5. Arbitrarily high correlation order under independent restorations
