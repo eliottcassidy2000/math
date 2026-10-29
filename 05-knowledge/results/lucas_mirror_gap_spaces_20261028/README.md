@@ -42,7 +42,7 @@ python3 05-knowledge/results/lucas_mirror_gap_spaces_20261028/check_bridges.py
 python3 -O 05-knowledge/results/lucas_mirror_gap_spaces_20261028/check_bridges.py
 ```
 
-Both runs perform2439 active checks, using only the Python standard library.
+Both runs perform2509 active checks, using only the Python standard library.
 The universe includes every pair of the11 geometric points, every element
 of the660-element generated group, all12 transported frames, a direct29-point
 Jordan witness, rational threshold controls and cyclic word counts through17.

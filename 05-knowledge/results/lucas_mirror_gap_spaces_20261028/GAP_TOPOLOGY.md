@@ -153,7 +153,47 @@ chain complex of the different marked success sets with collision transport,
 tested first on the known AP13 boundary and the mixed-parity empty/point/
 interval controls. A nonzero global Euler characteristic is insufficient.
 
+The late incoming [joint-port/germ packet](../joint_port_germs_20261028/README.md)
+sharpens this next target: its positive threshold-growth detector distinguishes
+isolated witnesses from emptiness, but the rows{1,3,6} and{2,3,6} at1/3 have
+matching local germs and owner types while adding speed7 kills only the first.
+Their surviving phases differ. That is a concrete reason for retaining actual
+phase in the proposed chain model, beyond merely asking for a positive statistic.
+
 `check_bridges.py` tests330 rational cyclic-gap sources and their selected
 homotopy points; additional tests use nonuniform thresholds, equality cases,
 zero gaps and the marked-target complex. Those checks supplement the
 all-parameter proof of G1. They do not establish a velocity-bound or convergence.
+
+## 6. Fixed topology can hide exponentially growing return information
+
+The concurrent [guarded-flip theorem](../session91_packing_golden_carriers_20261029/operators/GUARDED_FLIP_LEAKAGE.md)
+computes the forbidden-return Gram D=PB(1-P)BP, where B sums named bit flips
+and P projects onto independent supports. Its rank depends on the legal
+operator, not just on the homotopy type of Ind(H).
+
+Here is an explicit all-size separation, also proved directly. Take the
+constraint graph H=K_(1,m), m>=1. Its independence complex is the disjoint
+union of a point(the centre) and the simplex of all leaves; hence it is
+homotopy equivalent to S0 for every m. Theorem G1 gives the same fixed
+homotopy type for all associated threshold spaces.
+
+Nevertheless
+
+    rank_Q D = 2^m-1.
+
+Indeed the empty state contributes zero. The singleton exchange block is
+the signless Laplacian of the star, of rank m: its quadratic form is the
+sum over leaves of(x_c+x_i)², with a one-dimensional kernel. Every leaf subset
+of size at least2 has one forbidden insertion(the centre), with no other
+legal predecessor of that forbidden state. It therefore contributes an
+independent diagonal pin. There are2^m-m-1 such subsets. Summing the ranks
+gives2^m-1. The checker constructs the full native Gram and row-reduces it
+over Q for1<=m<=5.
+
+This is a uniform obstruction to bounding an exact real linear return
+interface by the homotopy type of the threshold space. The topology stays
+S0 while the required Gram-factor rank grows exponentially. It does not
+preclude succinct symbolic formulas or nonlinear encodings. In particular,
+the S4 description at fourteen gaps does not supply a small source-weighted
+Gram controller merely by being a low-dimensional homotopy model.

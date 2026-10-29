@@ -3,7 +3,7 @@
 **PROVED elementary observations / INHERITED / CITED / OPEN**, separated below.
 This is a source-and-operation atlas, not a claimed equivalence of major open
 problems. Source baseline90e704a8f356; concurrent work incorporated through
-d5375dbd4a. No universal Collatz, LRC(14), planar Jacobian, or six-colour result.
+b07ec51b20. No universal Collatz, LRC(14), planar Jacobian, or six-colour result.
 
 ## 1. The concept board and inheritance pass
 
@@ -186,6 +186,15 @@ sphere. This is the exact cuboid/simplex/sphere relation used by G1. It does
 not require regarding a triangle and a circle as metrically interchangeable.
 
 ## 6. Concurrent synthesis and three next problems
+
+The final incoming operator packet also shares the15-arc Lucas/Paley reader
+derived here. Its contribution is credited explicitly in LUCAS_MIRRORS.
+Combining its singleton Gram with our two cyclotomic plane embeddings gives
+the precise eigen-coordinate equations Bz=phi²z and Bz'=phi^(-2)z'. A separate
+star family in GAP_TOPOLOGY now proves that constant threshold-space homotopy
+type can coexist with return-Gram rank2^m-1. The final joint-port/germ packet's
+phase hostile strengthens OPEN B below: a positive local germ alone need not
+survive adding a new velocity.
 
 The incoming Session91 work sharpened three boundaries used here:
 

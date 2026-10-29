@@ -8,7 +8,7 @@ reserved and no unreviewed stub was promoted into canon.
 
 `check_bridges.py` runs with the Python standard library both normally and
 under `python3 -O`; explicit runtime checks are not disabled by optimization.
-Both runs give2439 checks and identical JSON. The script rewrites its own
+Both runs give2509 checks and identical JSON. The script rewrites its own
 `receipt.json` deterministically.
 
 - Every one of55 geometric point pairs is checked in Z[zeta5]. An independent
@@ -31,6 +31,10 @@ Both runs give2439 checks and identical JSON. The script rewrites its own
   coordinates. They are controls, not the proof of the all-parameter theorem.
 - Word counts and their signed six-period law are checked for3<=n<=17.
   The15-object symmetry hostile uses reflection fixed counts1 versus3.
+- Late integration through b07ec51b20 adds exact checks of both cyclotomic
+  plane drawings and their golden Gram eigen-equations. A native star Gram
+  is constructed and rationally row-reduced for1<=m<=5, supporting the direct
+  all-size proof that fixed homotopy type does not bound return rank.
 
 ## Independent conceptual check of the gap topology
 

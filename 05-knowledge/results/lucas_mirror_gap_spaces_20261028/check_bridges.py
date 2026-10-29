@@ -94,6 +94,26 @@ def square_distance(a, b):
     return mul5(d, conjugate5(d))
 
 
+def rational_rank(matrix):
+    a = [list(map(Q, row)) for row in matrix]
+    r = 0
+    for c in range(len(a[0])):
+        pivot = next((i for i in range(r, len(a)) if a[i][c]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        scale = a[r][c]
+        a[r] = [x/scale for x in a[r]]
+        for i in range(r+1, len(a)):
+            if a[i][c]:
+                scale = a[i][c]
+                a[i] = [x-scale*y for x, y in zip(a[i], a[r])]
+        r += 1
+        if r == len(a):
+            break
+    return r
+
+
 def main():
     W = words(5)
     label = {b: reader(b, 5, 11, 4) for b in W}
@@ -112,6 +132,22 @@ def main():
         coeff[0] -= 1
         require((len(set(coeff)) == 1) == (frozenset((a, b)) in edges),
                 'independent cyclic-autocorrelation unit check')
+    # Galois-conjugate drawing, and the incoming singleton leakage block.
+    points2 = {b: reduce5([(b >> ((3*i) % 5)) & 1 for i in range(5)]) for b in W}
+    for a, b in combinations(W, 2):
+        require((square_distance(points2[a], points2[b]) == (1, 0, 0, 0))
+                == (frozenset((a, b)) in edges), 'conjugate unit relation')
+    for drawing, eigenvalue in [(points, (1, 0, -1, -1)), (points2, (2, 0, 1, 1))]:
+        for i in range(5):
+            lhs = tuple(2*drawing[1 << i][k]+drawing[1 << ((i-1) % 5)][k]
+                        +drawing[1 << ((i+1) % 5)][k] for k in range(4))
+            require(lhs == mul5(eigenvalue, drawing[1 << i]), 'geometric golden eigensector')
+    for m in range(1, 6):
+        feasible = [b for b in range(1 << (m+1)) if not (b & 1) or b == 1]
+        forbidden = [b for b in range(1 << (m+1)) if b not in feasible]
+        boundary = [[int((a ^ b).bit_count() == 1) for b in forbidden] for a in feasible]
+        gram = [[sum(x*y for x, y in zip(a, b)) for b in boundary] for a in boundary]
+        require(rational_rank(gram) == 2**m-1, 'star fixed-topology growing-rank hostile')
     degrees = Counter(sum(b in e for e in edges) for b in W)
     require(degrees == {5: 1, 3: 5, 2: 5}, 'degree strata')
     nonzero_edges = [e for e in edges if 0 not in e]

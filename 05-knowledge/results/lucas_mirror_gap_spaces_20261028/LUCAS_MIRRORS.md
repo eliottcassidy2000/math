@@ -3,7 +3,7 @@
 2026-10-28. **PROVED elementary constructions**, with explicitly finite tables
 checked by `check_bridges.py`; **CITED** identification of the classical biplane
 group and Jordan's theorem. Same-agent audit; no external-priority claim.
-The new work here is the assembled Lucas/metric/frame interface and its exact
+The work here is the assembled Lucas/metric/frame interface and its exact
 failure boundary. Neither PSL(2,11) nor its pentagonal reflection is new.
 
 ## 1. Inherited mechanisms and the source object
@@ -82,6 +82,12 @@ difference in H. Its closure under all arithmetic translations x->x+t is
 exactly the Paley tournament x->y iff y-x is in H: containment is immediate,
 and the five empty-to-singleton arcs already supply every difference in H.
 The undirected translation closure is K11.
+
+The late incoming Session91
+[Lucas operator note](../session91_packing_golden_carriers_20261029/operators/LUCAS_FIVE_GOLDEN_OPERATOR.md)
+independently publishes this same guarded fifteen-arc reader and closure
+distinction. Those overlaps are acknowledged; our continuation supplies the
+exact plane realization, mirror, matching-space decoder and next-period hostile.
 
 The literal operation changed. Arbitrary arithmetic translation is not a
 Euclidean translation of these eleven fixed points. In particular the closure
@@ -207,3 +213,31 @@ Thus the period-five compact biplane closure does not extend unchanged even
 to the next odd Lucas prime. The strongest survivor is the faithful finite
 word reader and its guarded moves; unrestricted translations plus mirrors
 can enlarge the symmetry group dramatically.
+
+## 7. Late incoming operator work identifies the two geometric sectors
+
+The Session91 operator note proves that the singleton sector of the forbidden
+two-step return Gram is B=2I+Adj(C5), with original bit positions in cyclic
+order. For the coordinate vector z_i=zeta^i,
+
+    (Bz)_i=(2+zeta+zeta^(-1))z_i=phi² z_i.
+
+For its Galois conjugate z'_i=zeta^(2i), the same calculation gives
+
+    (Bz')_i=(2+zeta²+zeta^(-2))z'_i=phi^(-2) z'_i.
+
+Thus the two actual planar coordinate maps select the two golden real
+eigenspaces. Both give faithful unit-distance realizations of the entire
+Lucas graph: the field automorphism zeta->zeta² commutes with complex
+conjugation, so d*conjugate(d)=1 iff its image equals1. Distinctness is also
+preserved by the field embedding. In the second drawing the pair layer has
+radius phi rather than phi^(-1). This supplies the explicit map from
+the golden Gram eigenvalues to these two particular geometric realizations.
+
+The concurrent [integral five-cycle frame](../session91_packing_golden_carriers_20261029/zeckendorf/GOLDEN_FIVE_CYCLE_FRAME.md)
+retains both golden sectors on the four-dimensional integer augmentation
+lattice. Projecting real amplitude vectors onto one geometric plane forgets
+the other eigenspace, although the eleven discrete vertex images stay distinct.
+Neither Gram multiplication nor its scalar expansion is a unit-distance
+isometry. The three operators—rotation, guarded return and geometric
+reflection—remain distinguished.
