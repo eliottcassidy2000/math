@@ -1,6 +1,6 @@
 {
   "status": "FINITE-EXACT checks; all-size proofs in PROOFS.md",
-  "checks": 80520,
+  "checks": 80603,
   "square_sum_edges": [
     [
       1,
@@ -76,6 +76,25 @@
     6
   ],
   "native_toggle_edges_on_eight_states": 10,
+  "endpoint_gluing_cases": 25,
+  "P3_P2_boundary_counts": [
+    [
+      3,
+      2
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "P3_P2_agree_disagree": [
+    8,
+    7
+  ],
+  "three_marked_edges_parity_split": [
+    14,
+    13
+  ],
   "all_graph_edge_deletion_cases_through_five_vertices": 5325,
   "double_star_controls_r_s_1_to_5": [
     [

@@ -143,6 +143,34 @@ def main():
     toggle_edges = sum(len(a ^ b) == 1 for a, b in combinations(p4, 2))
     require(toggle_edges == 10 and toggle_edges != 12, "eight states do not form a cube under native toggles")
 
+    glue_cases = 0
+    for m, n in product(range(2, 7), repeat=2):
+        left = independent_sets(range(m), [(i, i+1) for i in range(m-1)])
+        right = independent_sets(range(n), [(i, i+1) for i in range(n-1)])
+        aa = sum(m-1 not in s for s in left)
+        bb = len(left) - aa
+        cc = sum(0 not in s for s in right)
+        dd = len(right) - cc
+        joined = set()
+        agree = disagree = 0
+        for sl, sr in product(left, right):
+            if (m-1 in sl) == (0 in sr):
+                agree += 1
+                joined.add(sl | frozenset(m-1+j for j in sr))
+            else:
+                disagree += 1
+        expected = set(independent_sets(range(m+n-1), [(i, i+1) for i in range(m+n-2)]))
+        require(joined == expected and len(joined) == agree, "literal shared-port gluing")
+        require((agree, disagree) == (aa*cc+bb*dd, aa*dd+bb*cc), "agreement channels")
+        require(agree-disagree == (aa-bb)*(cc-dd), "boundary imbalance product")
+        if (m, n) == (3, 2):
+            require((aa, bb, cc, dd, agree, disagree) == (3, 2, 2, 1, 8, 7), "owner triple from components")
+        glue_cases += 1
+    for r in range(1, 8):
+        states = independent_sets(range(2*r), [(2*j, 2*j+1) for j in range(r)])
+        even = sum(sum(2*j in s for j in range(r)) % 2 == 0 for s in states)
+        require((even, len(states)-even) == ((3**r+1)//2, (3**r-1)//2), "marked-edge parity law")
+
     # All graphs through five vertices, all edges: the edge-deletion identity.
     edge_cases = 0
     for n in range(2, 6):
@@ -313,6 +341,10 @@ def main():
         "components": rows,
         "whole_independence_polynomial": polynomial(all_sets),
         "native_toggle_edges_on_eight_states": toggle_edges,
+        "endpoint_gluing_cases": glue_cases,
+        "P3_P2_boundary_counts": [[3, 2], [2, 1]],
+        "P3_P2_agree_disagree": [8, 7],
+        "three_marked_edges_parity_split": [14, 13],
         "all_graph_edge_deletion_cases_through_five_vertices": edge_cases,
         "double_star_controls_r_s_1_to_5": double_stars,
         "cyclic_determinant_controls": determinants,

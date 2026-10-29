@@ -96,6 +96,58 @@ This is a model for port-preserving grammar, not a Hamiltonian-path or
 six-colour extension certificate. Those problems have different boundary
 states, as the inherited square-sum port work already emphasizes.
 
+### Endpoint identification recovers the owner's 5/7/8 triple
+
+There is also a literal abstract gluing: identify an endpoint of P3 with
+an endpoint of P2, producing P4. For the original components take the
+ports2 in(9,7,2) and4 in(4,5). After identification, relabel the resulting
+path(9,7,[2=4],5) as(8,1,3,6). This is a graph construction; the relabelling
+does not preserve the original arithmetic labels or square targets.
+
+The independent-set boundary counts, excluding/including each port, are
+
+    P3: (A,B)=(3,2),       P2: (C,D)=(2,1).
+
+An independent set on the glued graph corresponds to a pair agreeing on
+membership of the identified vertex. Hence among all5·3=15 pairs:
+
+    agree = AC+BD = 6+2 = 8,
+    disagree = AD+BC = 3+4 = 7.
+
+This supplies an exact graph interpretation of(5,7,8): total states on P3,
+incompatible pairs, compatible pairs. It is a proposed reconstruction of
+the intended context, not evidence that this was the historical definition.
+The sum–difference map of section3 then gives
+
+    (5,7,8)→(6,10,−4)=2(A,A+B,−B).
+
+Thus it exposes the original endpoint counts, rather than merely matching
+an unrelated triple. For any boundary pair(A,B), attachment to the(2,1)
+control has agreement/disagreement operator
+
+    [[2,1],[1,2]],
+
+whose sum and difference channels have eigenvalues3 and1. Here the total
+is multiplied from5 to15 while the signed imbalance remains3−2=1.
+
+More generally, for ANY two rooted graphs with boundary counts(A,B),(C,D),
+the agreement minus disagreement is exactly(A−B)(C−D). The gluing formula
+therefore retains the quantity scalar totals would erase.
+
+For r disjoint edges, each with a marked endpoint, the parity of the number
+of selected marked endpoints has counts(3^r+1)/2 and(3^r−1)/2. This is
+the same two-channel operator iterated, since a single edge has counts(2,1).
+At r3 there are27 configurations, divided14/13. These are precisely defined
+parity classes, not an asserted interpretation of the unresolved longer lists.
+
+The fresh Session90 tree-edge compression gives a second eight-state set
+on P4: tournament completions of a prescribed orientation of its three
+edges. Its three free arcs form a Boolean cube with12 single-arc-flip edges.
+Our independent-set toggle graph has10. Therefore no bijection between
+these eight-state sets intertwines those native single-coordinate moves.
+This is a small explicit counterpart of the incoming signed flip-spectrum
+obstruction: specify operations as well as cardinality.
+
 ## 2. Signed triangles, 16, and the 57/27 cubic clock
 
 Let P_m have entry1 in position(i,i+1 mod m). For odd m,

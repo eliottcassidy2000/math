@@ -13,7 +13,7 @@ cmp /tmp/bridge-normal.json /tmp/bridge-optimized.json
 cmp /tmp/bridge-normal.json 05-knowledge/results/number_bridges_57_27_16_20261028/receipt.json
 ```
 
-Both modes passed and produced byte-identical output: **80,520 active
+Both modes passed and produced byte-identical output: **80,603 active
 checks**, including arithmetic/elimination checks. The script uses explicit
 exceptions, so optimization removes no test. Python standard library only.
 
@@ -22,6 +22,10 @@ Declared universes and independent computational paths:
 * All512 subsets of the labelled square-sum graph Q9; literal component
   and conditional-branch bijections. Full polynomial multiplication agrees
   with enumeration. The eight-state toggle graph has10 edges, not12.
+* All25 endpoint identifications P_m/P_n with2≤m,n≤6: literal independent
+  set pairs agree with the labelled glued path and the two boundary
+  channels. Seven marked disjoint-edge parity controls recover the
+  (3^r±1)/2 formula, including27=14+13.
 * Every simple graph through five vertices and every edge in each graph:
   5,325 edge-deletion cases. Direct set differences agree with the
   closed-neighbourhood bijection, including the dominating-edge iff.

@@ -26,6 +26,10 @@ P4 has a power-of-two surviving count.
 
 The signed sum–difference map takes(5,7,8) exactly to(6,10,−4), and takes
 (0,2,10) to(8,12,8), with an explicit inverse and an index-four parity guard.
+Endpoint identification of P3 and P2 supplies the first triple directly:
+their boundary counts are(3,2) and(2,1); among15 pairs,8 agree and7 disagree.
+The transform then recovers2(3,5,−2). The same two-channel transfer gives
+27 configurations of three marked edges, split14/13 by endpoint parity.
 The two longer lists have not yet been assigned a verified meaning.
 
 The corrected valuation five-cycle has a precise golden linear transfer.

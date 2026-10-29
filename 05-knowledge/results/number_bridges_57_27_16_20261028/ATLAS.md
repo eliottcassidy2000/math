@@ -97,6 +97,14 @@ The signed sum–difference transform does send(5,7,8) to(6,10,−4) exactly;
 the transform and inverse guards are established without presuming that
 context. The same transform recovers8/12 from(0,2,10).
 
+A stronger proposed reconstruction emerged from the original graph
+components: P3 has5 independent sets; P3/P2 endpoint identification has
+8 compatible and7 incompatible pairs. Their(3,2)/(2,1) boundary counts
+are recovered by the transform as(6,10,−4)=2(3,5,−2). This is an explicit
+new connection within the objects named in the request, rather than a
+claim to have recovered the historical definition. Iterating the edge
+parity transfer also gives27=14+13 with a specified parity operation.
+
 **The longer lists remain semantically unresolved.** Exact comma/space and
 Unicode-minus searches did not locate the supplied full tuples. Their
 lengths are10 and9, sums28 and72, and sums of squares84 and658. The fact
@@ -121,6 +129,26 @@ The iterated triangle family supplies an all-size version of the need to
 retain an anti-involution frame, even after its fixed node is marked. This
 supports using explicit state/port maps for the new bridges instead of
 claiming a graph isomorphism from matching counts.
+
+A second clean rebase read incoming work through `e602dcebc1`:
+
+* [Session90 tree compression](../session90_even_graphs_odd_descent_20261029/trijection/TREE_COMPRESSION.md)
+  bijects oriented-tree tournament completions with tournaments on the tree
+  edges, retaining the marked automorphism action. On P4 this gives an
+  eight-state Boolean completion cube. Our eight independent sets have a
+  different single-toggle graph, furnishing the explicit10-versus12-edge
+  operation obstruction recorded in PROOFS.
+* [Odd signed spectra](../odd_sign_spectra_trijections_20261028/THEORY.md), S1–S2,
+  strengthens that distinction to weighted flip spectra on whole families.
+  Its P1 also retains the JOINT stabilizer sign instead of imposing separate
+  positivity. This supports keeping the signed agreement channel in our
+  shared-port calculation; it does not identify the two state spaces.
+* [Minimal selector connections](../minimal_blue_selectors_20261028/CONNECTIONS.md)
+  separates odd-fibre averaging, where odd denominators are invertible
+  modulo2, from Walsh inversion, where2 is inverted. Our half-Hadamard
+  inverse needs its integral parity guard; reducing first modulo2 would
+  erase that recovery information. The incoming geometric degree
+  correction in MISTAKES was read; no kissing-number degree bound is used.
 
 ## Literature boundary
 
