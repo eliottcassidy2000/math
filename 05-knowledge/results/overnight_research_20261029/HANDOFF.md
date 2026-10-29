@@ -275,7 +275,34 @@ b_529255=1496, but the reindexed response windows coincide. The35 literal
 boundary-state responses also cannot realize Frobenius by permutation:
 27 move outside the column set. Pure bulk words are excluded by the
 centralizer/normalizer distinction. The full operation-language question
-must be checked against newly supplied native generators.
+is now closed negatively for the incoming bulk/name language below;
+further actual complements and general vertex operations remain open.
+
+Incomingbad77c3c2f closes the periodic observer under all six terminal
+assignments: rational rank24, ternary rank18, and a sharp integral bank
+of four selectors (two over Q or F3). A positive mass-two witness
+separates under a terminal swap despite equality of all old observations.
+Its full checker replayed here. The earlier single-selector precision
+formula is explicitly scoped to the old language; do not silently apply
+its12-dimensional formula to this larger arbitrary-weight carrier.
+
+Incoming9c876584a1 gives reflection-fixed path recurrences and a joint
+Frobenius chart. The reflection result is INHERITED. The joint chart
+checker replayed normally and optimized. Its chosen lift changes names;
+[JOINT_FROBENIUS_OBSTRUCTION](JOINT_FROBENIUS_OBSTRUCTION.md) now proves
+that EVERY invertible F3-linear lift conjugating T to T^487 must change
+the native name three-cycle. The native norm N=I+R+R^2 equals a recorded
+degree11 polynomial f(T), while f(T^487)-f(T) has rank5. Any linear map
+commuting with R would have to fix N, giving a contradiction. This is
+a universal LINEAR obstruction, not a universal nonlinear residue claim.
+The incoming positive lift remains valid with transported names/source.
+All native name operations commute with bulk, so their entire word
+language cannot realize the noncentral Frobenius clock exponent either.
+
+[MORNING_REPORT](MORNING_REPORT.md) consolidates the overnight results,
+evidence and remaining obligations. Resume only from these current
+boundaries; no full completion at3^10, new A000568 term, or arithmetic
+Sha finiteness claim has been made.
 
 Incoming6b83fd8383 strengthens all396 native recovery certificates to
 strong targets whenever a second observation is needed; C3 needs zero

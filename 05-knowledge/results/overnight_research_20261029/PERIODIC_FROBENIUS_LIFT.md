@@ -5,6 +5,12 @@ to an inherited native scalar response.** Same-agent alternative-path
 verification. This does not supply a vertex automorphism, an attachment
 operation, or a Selmer map.
 
+**Continuations:** [integer precision](PERIODIC_PRECISION_OBSTRUCTION.md)
+gives exact image/preperiod/period formulas and excludes a full lift at243.
+[Joint native names](JOINT_FROBENIUS_OBSTRUCTION.md) excludes every invertible
+linear lift with the name three-cycle fixed. The transported-name lift
+proved here and in the incoming joint chart remains valid.
+
 Incoming078be2b84d proves an actual periodic family of first complements
 of the interval tournament has a35-state joint-port evaluator and a
 minimal scalar recurrence of order18 over Q. Its ternary scalar response

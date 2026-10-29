@@ -13,6 +13,11 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Morning synthesis](MORNING_REPORT.md) separates completed scoped results,
+  inherited arithmetic certificates and the remaining open targets.
+- [Universal linear joint Frobenius obstruction](JOINT_FROBENIUS_OBSTRUCTION.md):
+  a native norm polynomial excludes EVERY invertible linear clock lift
+  that keeps the native name three-cycle fixed; the discrepancy has rank5.
 - [Complete ternary form strata](TERNARY_FORM_STRATA.md): all729 invariant
   forms, no radical3^10 branch,20 sufficient optimal source representatives,
   and six necessary extra-plane clock types for an index3^10 completion.

@@ -141,6 +141,15 @@ that centralizes a supplied clock cannot realize a normalizing map
 with a different clock exponent. This criterion can be applied once the
 actual generators and their commutation identities have been supplied.
 
+**Incoming closure:** [TERMINAL_SELECTOR S1](../overnight_rank_return_20261029/TERMINAL_SELECTOR.md)
+supplies those identities for all native name permutations. Thus their
+entire bulk/name word language is excluded, as formalized in
+[JOINT_FROBENIUS_OBSTRUCTION](JOINT_FROBENIUS_OBSTRUCTION.md). That note
+also uses a native norm polynomial to exclude EVERY invertible linear
+fixed-name lift on the larger ternary joint observer. The old single-
+selector precision formula P1 is not silently assigned to that larger
+weighted carrier.
+
 ## Consequences and limits
 
 The source is an actual periodic tournament-complement family. The map

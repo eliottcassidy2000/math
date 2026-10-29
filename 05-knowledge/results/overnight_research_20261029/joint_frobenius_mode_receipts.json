@@ -1,0 +1,26 @@
+{
+  "script": "joint_frobenius_obstruction.py",
+  "normal_optimized_byte_identical": true,
+  "canonical_sha256": "71b75486310a877dfaaff20f49777371d953bc2dadad3a1f5d6b49b8b2b8f45a",
+  "summary": {
+    "gates": 12,
+    "obstruction_rank": 5,
+    "witness": [
+      0,
+      0,
+      2
+    ],
+    "scope": "S*T=T^487*S and S*R=R*S with S invertible and F3-linear are incompatible"
+  },
+  "incoming_joint_phase_replay": [
+    {
+      "optimized": false,
+      "output": "PASS explicit joint Frobenius lift and native-name/source obstruction"
+    },
+    {
+      "optimized": true,
+      "output": "PASS explicit joint Frobenius lift and native-name/source obstruction"
+    }
+  ],
+  "incoming_terminal_selector_replay": "PASS full normal replay; no output changed"
+}
