@@ -1,15 +1,17 @@
 ---
 id: HYP-9445
-title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 9, exhaustively, 184 304 classes; k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments have a unimodular two-run observer (det M_2 in {0, +-1} through order 9; unimodular counts 1, 1, 3, 7, 16, 36, 81 for orders 3..9; the pre-registered 80 at order 9 FAILED); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
+title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 9, exhaustively, 184 304 classes; k = 3 through order 7; false for the one-arc observer k = n-1); (2) RESOLVED: which unique-Hamiltonian-cycle (Douglas) tournaments have a unimodular two-run observer (det M_2 in {0, +-1} through order 9; unimodular counts 1, 1, 3, 7, 16, 36, 81 for orders 3..9; the pre-registered 80 at order 9 FAILED); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
 status: >
-  OPEN (mac-mini-2026-10-29-growth, 2026-10-29).
+  OPEN in the remaining questions (mac-mini-2026-10-29-growth, 2026-10-29).
+  - Item (2), unimodularity/singularity classification, is PROVED in session103_words_necklaces_20261029,
+    independently audited twice. The full singular Smith-torsion classification remains open.
   - Independently audited twice on 2026-10-29, with corrections applied
     (04-computation/experiments/growth_gf_runs_fermat_20261029/audit/REPORT.md and audit2/REPORT.md, MISTAKE-695).
   - The second audit certified every verdict in (1) and (2) through order 8 without trusting Smith forms
     (determinants, ranks mod p and gcds of maximal minors).
   - The audit recomputed every count through order 8 with independent code, and the order-9 unique-cycle split.
   - It did not re-check the order-9 claim for classes with at least two Hamiltonian cycles, or the random samples.
-  - Every evidence statement below is FINITE-EXACT, over all isomorphism classes from gentourng with exact Smith
+  - Except for the explicitly marked later PROVED classification in (2), evidence below is FINITE-EXACT, over all isomorphism classes from gentourng with exact Smith
     forms (PARI matsnf), unless marked otherwise.
   (4) RESOLVED by THM-4846 (D'). In (2) a pre-registered prediction FAILED at order 9; see (2).
 session: mac-mini-2026-10-29-growth
@@ -22,19 +24,24 @@ related:
 
 # HYP-9445 — run-observer torsion and Hamiltonian cycles, the star law, Fermat routes, Gaussian-GF questions
 
-**2026-10-29 continuation, FINITE-EXACT:**
-[operation-closed synthesis](../results/operation_closed_synthesis_20261029/README.md)
-implements the classical unique-cycle insertion grammar and checks all 4,180
-classes at orders 4--12. The order 10 prediction 182 is confirmed; orders 11 and12
-give 409 and919. Every determinant remains 0 or+/-1. In the packet's five-letter
-grammar, unimodularity is exactly avoidance of `be` and `ee` throughout this
-range. That language has a proved three-state productive transfer and the
-candidate recurrence below; its equivalence with the actual observer at
-arbitrary order is **OPEN**. The next forecast is 2,065 at order 13. These are
-determinant counts, not a new complete Smith-torsion census. In particular
-the order 6 singular torsion-free exception is retained. This does not extend
-the HC>=2 census or prove item(1). The older failed 80 and then182 forecasts
-below remain as provenance;182 is no longer an untested prediction.
+**2026-10-29 continuation, PROVED and independently audited twice:**
+[Session 103 all-order classification](../results/session103_words_necklaces_20261029/README.md)
+resolves the unimodularity part of item (2). In the actual five-letter classical
+unique-cycle grammar, M_2 is singular exactly when the word contains `be` or `ee`.
+Avoidance makes every ordered-k path observer permutation-equivalent to a unit
+upper-triangular matrix. The forbidden direction has an explicit antisymmetric
+star kernel transported from the last forbidden pair. Equivalently, avoiding
+classes have their Hamilton cycle as their only directed cycle cover.
+
+The previously proved language series (1+x)/(1-2x-x²+x³) therefore counts
+unimodular M_2 classes at every order n>=4 (x marks n-4); 2,065 at order 13 is
+now a theorem consequence. The earlier [operation-closed census](../results/operation_closed_synthesis_20261029/README.md)
+checked all 4,180 classes through order 12, including counts 182,409,919.
+Session 103 includes two mathematical audits and 18 fresh normal/optimized replay
+checks. This does not classify all singular Smith forms, remove the singular
+torsion-free order-six exception, extend the HC>=2 census, or prove item (1).
+The failed 80 forecast and subsequent numerology/predictions below are retained
+as historical provenance, not current status.
 
 `M_k(T)` is the ordered `k`-run observer (THM-4846 §0): spanning covers of `T` by `k` directed paths with prescribed
 starts and ends, which are the base path of a metagraph tiling cut into `k` runs. "Torsion-free" means every nonzero
@@ -76,6 +83,7 @@ invariant factor of `M_k(T)` equals 1.
    - **A first test of any proof.** Explain why the coarser one-arc observer, an orientation of the star graph
      (THM-4846 (A)), escapes the law.
 2. **Which unique-cycle tournaments are torsion-free?**
+   - **RESOLVED subquestion:** the all-order unimodularity/singularity criterion and recurrence are proved in the continuation above. Torsion-freeness is different: singular torsion-free cases exist. The following records the earlier finite evidence and prediction history; it is not a complete all-order Smith classification.
    - **Data at `k = 2`.** The unique-Hamiltonian-cycle classes number `1, 1, 3, 8, 21, 55` (orders 3 to 8).
      Douglas (1970) characterised them, and Garey (1972) counted them as the Fibonacci numbers `F(2n − 6)` from
      order 4. Their torsion-free members number `1, 1, 3, 8, 16, 36`.
