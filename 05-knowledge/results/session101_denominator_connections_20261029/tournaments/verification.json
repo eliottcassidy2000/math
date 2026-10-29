@@ -1,0 +1,95 @@
+{
+  "KG_7_3": {
+    "addressed_additive_field_round_trip": true,
+    "checked_product_entries_each_direction": 1225,
+    "dimension": 35,
+    "inverse_by_intersection": [
+      "1/4",
+      "-1/12",
+      "1/12",
+      "-1/4"
+    ],
+    "row_sum": [
+      4
+    ]
+  },
+  "Paley7": {
+    "Hamiltonian_paths": 189,
+    "automorphism_order": 21,
+    "differences": [
+      1,
+      2,
+      4
+    ],
+    "per_start": [
+      27,
+      27,
+      27,
+      27,
+      27,
+      27,
+      27
+    ],
+    "reflection_anti": true,
+    "skew_coefficients_descending": [
+      1,
+      0,
+      21,
+      0,
+      147,
+      0,
+      343,
+      0
+    ],
+    "skew_power_traces_1_to_7": [
+      0,
+      -42,
+      0,
+      294,
+      0,
+      -2058,
+      0
+    ]
+  },
+  "R7": {
+    "Hamiltonian_paths": 175,
+    "automorphism_order": 7,
+    "differences": [
+      1,
+      2,
+      3
+    ],
+    "per_start": [
+      25,
+      25,
+      25,
+      25,
+      25,
+      25,
+      25
+    ],
+    "reflection_anti": true,
+    "skew_coefficients_descending": [
+      1,
+      0,
+      21,
+      0,
+      35,
+      0,
+      7,
+      0
+    ],
+    "skew_power_traces_1_to_7": [
+      0,
+      -42,
+      0,
+      742,
+      0,
+      -14154,
+      0
+    ]
+  },
+  "scope": "No full order-seven tournament census; no unlabelled deck reconstruction; no Collatz-denominator equivalence.",
+  "status": "FINITE-EXACT",
+  "universe": "Two explicit labelled order-seven tournaments, all 7! vertex permutations each; all 35 addressed triples"
+}
