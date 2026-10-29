@@ -2,7 +2,7 @@
   "checks": 23181,
   "normal_optimized_identical": true,
   "prime_power_precision": 3,
-  "producer_checks": 31060,
+  "producer_checks": 31063,
   "smith_rows": [
     {
       "copies": 1,
@@ -223,7 +223,7 @@
   ],
   "source_sha256": {
     "audit.py": "2538c839446049f417807774c45c2470a80b8badf674b730b9ef831866ed3beb",
-    "check.py": "177ab80e345029046131acdb197115c0b371a7f53ac079740301ae27cb09bb89"
+    "check.py": "76474cadc6cca761527d8312194a48698e73aa905eeed1ea65895f09199f56ba"
   },
   "status": "PASS"
 }

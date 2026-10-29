@@ -212,9 +212,28 @@ def run():
         arithmetic.append({'n':n,'Monsky':monsky,'kernel':kernel,'pure_dimension':nul})
     x,y=F(25,4),F(75,8)
     need(y*y==x*x*x-25*x and x.denominator!=1,'E5 nontorsion point input to Nagell-Lutz')
+    # Incoming clocked cokernel: hyperbolization is a classical paired repair.
+    def digit_sign(n):
+        value=1
+        while n:
+            if n%3==2:value=-value
+            n//=3
+        return value
+    word=[digit_sign(i) for i in range(9)]
+    c=[[word[(j-i)%9] for j in range(9)] for i in range(9)]
+    hyper=[[0]*9+row for row in c]+[[-c[j][i] for j in range(9)]+[0]*9 for i in range(9)]
+    need(det(c)==4864 and det(hyper)==4864**2,'clocked hyperbolization order')
+    hi=inverse(hyper)
+    need(all(hi[i][j]==-hi[j][i] for i in range(18) for j in range(18)),'hyperbolic alternating pairing')
+    clock=[[int(j==(i-1)%9) for j in range(9)] for i in range(9)]
+    lift=[clock[i]+[0]*9 for i in range(9)]+[[0]*9+clock[i] for i in range(9)]
+    need(mul(list(map(list,zip(*lift))),mul(hyper,lift))==hyper,'paired cyclic clock')
     return {'status':'PASS','checks':CHECKS,'seeds':seeds,'joins':rows,
             'general_ports':model_rows,'two_channel_attachments':attachments,
-            'geometry':geometry,'golden':golden,'arithmetic':arithmetic}
+            'geometry':geometry,'golden':golden,'arithmetic':arithmetic,
+            'clock_hyperbolization':{'word':word,'original_order':4864,
+                'paired_order':4864**2,'original_odd_19_valuation':1,
+                'paired_odd_19_valuation':2}}
 
 if __name__=='__main__':
     print(json.dumps(run(),indent=2,sort_keys=True))

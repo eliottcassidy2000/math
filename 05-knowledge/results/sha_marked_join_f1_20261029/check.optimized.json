@@ -45,7 +45,24 @@
       "pure_dimension": 0
     }
   ],
-  "checks": 31060,
+  "checks": 31063,
+  "clock_hyperbolization": {
+    "original_odd_19_valuation": 1,
+    "original_order": 4864,
+    "paired_odd_19_valuation": 2,
+    "paired_order": 23658496,
+    "word": [
+      1,
+      1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1
+    ]
+  },
   "general_ports": [
     {
       "d": 2,

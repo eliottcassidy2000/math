@@ -129,6 +129,45 @@ part therefore has hyperbolic paired factors and square order.
 | E_5,E_11 -> binary kernel | Cited Monsky theorem / full 2-Selmer dimension | Kernel without source equation/local theorem is not a Selmer group |
 | Golden matrix -> modular clock | Exact reduction / matrix order | Splitting type does not encode Sha or tournament composition |
 
+## Incoming comparison: a pairing repair retains the old clock
+
+Incoming commit f41b1d1bfd supplies a decisive control from our previous
+[Lucas cokernel tower](../stabilizer_necklace_kernels_20261028/COKERNELS.md).
+Its depth-two group G has Smith factors 1, seven 2s, and 38. The order
+4864=2^8*19 has an odd 19-valuation, so G cannot carry a perfect
+antisymmetric Q/Z pairing. A clocked cokernel alone is not a Sha carrier.
+
+There is a **classical**, explicit paired construction which preserves G
+as a named half rather than pretending the old pairing exists. Define
+
+    H(G)=G + G^dual,
+    b((x,chi),(y,psi))=psi(x)-chi(y).
+
+This is perfect alternating, has order |G|^2, and contains G as a specified
+Lagrangian. An automorphism t of G extends canonically to
+(t,(t^-1)^dual). Thus the old cyclic clock survives along with its dual
+phase. For any nonsingular integral presentation C, the block matrix
+
+    [[0,C],[-C^T,0]]
+
+presents this hyperbolic paired group, up to the harmless overall sign of
+the pairing. In the nine-coordinate circulant example, simultaneous
+cyclic translation on both halves preserves the matrix. The resulting
+Smith factors are two 1s, fourteen 2s, and two 38s, with order 4864^2.
+
+This gives a precise doubling/squaring operation: double the presentation
+dimension, square its discriminant order, and **retain the original half
+and dual clock**. Unlike self order join it is a direct hyperbolization.
+It repairs the finite pairing obstruction but supplies no arithmetic
+realization or Sha finiteness theorem; it also produces no nonalternating
+characteristic defect. This comparison is classical algebra applied to
+the specific incoming object, not a new theorem about hyperbolization.
+
+The other incoming recurrence packets concern charged observation arity
+and source-conditioned affine carries. Their lesson here is consistent:
+arity, copy count, Fourier phase and p-power torsion depth are different
+clocks. None of those new results is used as an arithmetic premise.
+
 The used protocol card is `Canonicalize mechanics; retain the predicate`.
 Its counterindication is visible here: matching thin counts do not preserve
 quadratic isotropy. The niche recovery card motivated checking the older

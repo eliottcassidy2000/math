@@ -24,7 +24,7 @@ binary kernels. Monsky's local-solubility theorem, finite Kummer exactness
 and Nagell--Lutz remain cited inputs; brute-force matrix checks do not
 re-prove them. No unverified supplied BSD theorem is used.
 
-`check.json` and `check.optimized.json` record identical exact data (31,060
+`check.json` and `check.optimized.json` record identical exact data (31,063
 producer gates; 23,181 audit gates, many of them pivot-divisibility checks).
 These counts are implementation checks, not counts of independent theorems. The
 audit receipt replays both modes, checks those saved receipts, and then
@@ -36,6 +36,9 @@ unexpected valuation at least 3 rather than silently truncating to 2.
 Controls include trivial and nonprimitive ports, coefficient prime two
 in the abstract lattice tests, the C_3^2 self-join hostile, literal
 five/eleven attachments, and the characteristic-two diagonal graph.
+The incoming hyperbolization check verifies the depth-two order 4864,
+its square after doubling, alternation, and preservation of the cyclic
+clock on the explicit eighteen-coordinate lattice.
 The 81/27 pair remains the inherited hostile for cyclic-triple carriers;
 this packet makes no new cyclic-triple/class-separation claim and does not
 reinterpret that pair's previously checked counts.

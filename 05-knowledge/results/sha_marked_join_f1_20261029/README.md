@@ -28,6 +28,10 @@ law retaining the port, followed by a sharp two-port escape from it.
   on E_n:y^2=x^3-n^2x proves the **2-primary Sha vanishes for n=5 and 11**,
   with ranks 1 and 0 respectively, using cited inputs. This is a real
   arithmetic calibration, not a new general finiteness result.
+* The final incoming comparison retains the previous golden circulant's
+  cyclic clock by classical hyperbolization G+G^dual. It doubles matrix
+  dimension and squares the order, while preserving G as a named
+  Lagrangian. The original order 4864 itself fails the pairing test.
 
 The finite-pairing model of Sha via alternating matrix cokernels is
 classical (BKLPR); the new synthesis is the marked composition law and its
