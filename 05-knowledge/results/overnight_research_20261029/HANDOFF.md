@@ -66,7 +66,8 @@ After integrating incoming4ff64c524c, both `two_run.py` and
 The joint-run81/27 separator is now modulo3 (ranks24/22), while the
 single-run separator remains modulo9. Preserve both scopes. The all-prime
 Paley-pencil Smith formula now includes ramified and singular weights;
-the prime-power full Smith law remains open. Its F27 rank8 hostile
+the prime-power full Smith law was then open and is now closed by the
+incoming PRIME_POWER packet recorded below. Its F27 rank8 hostile still
 rejects blindly substituting27 into the prime-only rank formula.
 [CYCLIC_COEFFICIENT_GLUE](CYCLIC_COEFFICIENT_GLUE.md) connects the actual
 Paley7 coefficient triples(15,12,12),(-11,2,2) to phases(3,0),(-13,0).
@@ -94,6 +95,10 @@ Hamilton-path complements expose all four tetrahedron-boundary kernel
 directions in the named weight space. It also closes the prime-power
 Paley-pencil law in PRIME_POWER.md using a Jacobi carry recurrence.
 Credit those shared/stronger results, and do not restart either census.
+After rebase, both incoming `three_run.py` and `prime_power_pencil.py`
+replayed their stored receipts unchanged. The latter verifies556 prime
+specializations, actual F27/F243/F343 pencils and604 Jacobi sums.
+Our documentation check and all100,190 normal/optimized gates pass.
 
 ## Incoming results to inherit with their own scopes
 

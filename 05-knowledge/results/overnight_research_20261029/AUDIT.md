@@ -247,3 +247,12 @@ common-atom boundary remains a warning against transferring Fourier
 data without the fully marked object. Incoming e9e53cf3ed independently
 supplies the shared S3/primary result and a stronger native complement
 reconstruction; those contributions are credited, not claimed anew.
+
+After rebase, the incoming three-run verifier passed on all three
+declared native atoms, including its complete15-complement test. The
+prime-power verifier passed556 prime specializations,90 native F27
+pencils, six each at F243/F343, and24+240+340=604 Jacobi sums. Neither
+incoming receipt was rewritten. The repository documentation check passed.
+The new completion formula also has a displayed all-odd-cyclic-order
+extension; its proof uses the same semisimple reciprocal factors. No
+higher-exponent or characteristic-dividing-clock case is included.

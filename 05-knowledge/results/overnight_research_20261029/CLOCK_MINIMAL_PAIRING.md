@@ -34,6 +34,12 @@ Choose nonzero c with bar(c)=-c. Then Tr(c*x*bar(y)) is a nondegenerate
 alternating form preserved by the clock. This supplies the sufficiency
 claimed for that case without assuming a chosen matrix basis is orthogonal.
 
+The same formula and proof hold for EVERY odd cyclic clock order n with
+p not dividing n: use all nontrivial irreducible factors of X^n-1 in
+place of those of Phi7. Thus(C6) is an all-order classification of
+elementary abelian pairing completions with a supplied odd cyclic clock.
+The native calculation below specializes it to the actual order7 action.
+
 An especially sharp case is V with no constituent isomorphic to any
 constituent of V*. Every invariant bilinear form on V then vanishes.
 In ANY paired finite p-group W containing V equivariantly, V is isotropic,
@@ -84,6 +90,15 @@ separate problem.
 The11 row is the strongest warning: its underlying group(F11)^6 already
 has even dimension and square order. Neither test reveals that the
 supplied clock forbids every nonzero invariant bilinear pairing.
+
+The same reciprocal-orbit mechanism appears in Session97's
+[cyclic Frobenius Lagrangian count](../session97_overnight_arithmetic_carriers_20261029/supersingular/CYCLIC_KERNEL_RECURRENCE.md).
+That problem starts with a symplectic binary module and chooses one
+side of each reciprocal pair for an invariant Lagrangian. Here the
+source may occupy only one side and the task is to add the missing dual.
+The maps are different. In particular(characteristic,clock length)=(11,7)
+has Frobenius degree3, whereas(2,11) has degree10. Keeping those two
+parameters prevents turning the repeated11 into a false identification.
 
 ## C6. Frobenius phase explains the5/11 distinction
 
