@@ -1,0 +1,35 @@
+{
+  "status": "FINITE-EXACT n=3..5 fixed-path presentations, recovered classical inclusion-exclusion",
+  "checks": 149,
+  "rows": [
+    {
+      "vertices": 3,
+      "presentations": 2,
+      "sum_partner_H": 4
+    },
+    {
+      "vertices": 4,
+      "presentations": 8,
+      "sum_partner_H": 32
+    },
+    {
+      "vertices": 5,
+      "presentations": 64,
+      "sum_partner_H": 632
+    }
+  ],
+  "triangle_rooks": [
+    1,
+    3,
+    3,
+    1
+  ],
+  "triangle_cycle_free_rooks": [
+    1,
+    3,
+    3,
+    0
+  ],
+  "triangle_naive_H": 2,
+  "triangle_actual_H": 3
+}

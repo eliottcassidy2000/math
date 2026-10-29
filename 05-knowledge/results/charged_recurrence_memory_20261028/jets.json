@@ -1,0 +1,266 @@
+{
+  "status": "FINITE-EXACT jets of PROVED recurrences; same-agent alternate representation",
+  "checks": 455,
+  "rows": [
+    {
+      "prime": 7,
+      "depth": 1,
+      "holonomy_ports_0_to_4": [
+        1,
+        7,
+        49,
+        343,
+        2401
+      ],
+      "first_deeper_charge_gap_at_p": null
+    },
+    {
+      "prime": 7,
+      "depth": 2,
+      "holonomy_ports_0_to_4": [
+        1,
+        9,
+        113,
+        1849,
+        36705
+      ],
+      "first_deeper_charge_gap_at_p": 1290240
+    },
+    {
+      "prime": 7,
+      "depth": 3,
+      "holonomy_ports_0_to_4": [
+        1,
+        11,
+        193,
+        4683,
+        143617
+      ],
+      "first_deeper_charge_gap_at_p": 1290240
+    },
+    {
+      "prime": 7,
+      "depth": 4,
+      "holonomy_ports_0_to_4": [
+        1,
+        13,
+        289,
+        9133,
+        371265
+      ],
+      "first_deeper_charge_gap_at_p": 1290240
+    },
+    {
+      "prime": 7,
+      "depth": 5,
+      "holonomy_ports_0_to_4": [
+        1,
+        15,
+        401,
+        15487,
+        776993
+      ],
+      "first_deeper_charge_gap_at_p": 1290240
+    },
+    {
+      "prime": 7,
+      "depth": 6,
+      "holonomy_ports_0_to_4": [
+        1,
+        17,
+        529,
+        24033,
+        1427361
+      ],
+      "first_deeper_charge_gap_at_p": 1290240
+    },
+    {
+      "prime": 11,
+      "depth": 1,
+      "holonomy_ports_0_to_4": [
+        1,
+        11,
+        121,
+        1331,
+        14641
+      ],
+      "first_deeper_charge_gap_at_p": null
+    },
+    {
+      "prime": 11,
+      "depth": 2,
+      "holonomy_ports_0_to_4": [
+        1,
+        13,
+        225,
+        5197,
+        150849
+      ],
+      "first_deeper_charge_gap_at_p": 326998425600
+    },
+    {
+      "prime": 11,
+      "depth": 3,
+      "holonomy_ports_0_to_4": [
+        1,
+        15,
+        345,
+        11223,
+        471153
+      ],
+      "first_deeper_charge_gap_at_p": 326998425600
+    },
+    {
+      "prime": 11,
+      "depth": 4,
+      "holonomy_ports_0_to_4": [
+        1,
+        17,
+        481,
+        19697,
+        1053121
+      ],
+      "first_deeper_charge_gap_at_p": 326998425600
+    },
+    {
+      "prime": 11,
+      "depth": 5,
+      "holonomy_ports_0_to_4": [
+        1,
+        19,
+        633,
+        30907,
+        1983537
+      ],
+      "first_deeper_charge_gap_at_p": 326998425600
+    },
+    {
+      "prime": 11,
+      "depth": 6,
+      "holonomy_ports_0_to_4": [
+        1,
+        21,
+        801,
+        45141,
+        3358401
+      ],
+      "first_deeper_charge_gap_at_p": 326998425600
+    },
+    {
+      "prime": 19,
+      "depth": 1,
+      "holonomy_ports_0_to_4": [
+        1,
+        19,
+        361,
+        6859,
+        130321
+      ],
+      "first_deeper_charge_gap_at_p": null
+    },
+    {
+      "prime": 19,
+      "depth": 2,
+      "holonomy_ports_0_to_4": [
+        1,
+        21,
+        545,
+        18709,
+        836289
+      ],
+      "first_deeper_charge_gap_at_p": 510216531225165692928000
+    },
+    {
+      "prime": 19,
+      "depth": 3,
+      "holonomy_ports_0_to_4": [
+        1,
+        23,
+        745,
+        34383,
+        2100625
+      ],
+      "first_deeper_charge_gap_at_p": 510216531225165692928000
+    },
+    {
+      "prime": 19,
+      "depth": 4,
+      "holonomy_ports_0_to_4": [
+        1,
+        25,
+        961,
+        54169,
+        4059777
+      ],
+      "first_deeper_charge_gap_at_p": 510216531225165692928000
+    },
+    {
+      "prime": 19,
+      "depth": 5,
+      "holonomy_ports_0_to_4": [
+        1,
+        27,
+        1193,
+        78355,
+        6859409
+      ],
+      "first_deeper_charge_gap_at_p": 510216531225165692928000
+    },
+    {
+      "prime": 19,
+      "depth": 6,
+      "holonomy_ports_0_to_4": [
+        1,
+        29,
+        1441,
+        107229,
+        10654401
+      ],
+      "first_deeper_charge_gap_at_p": 510216531225165692928000
+    }
+  ],
+  "thresholds": [
+    {
+      "prime": 7,
+      "depth": 3,
+      "charge_depth": 0,
+      "first_visible_arity": 1,
+      "first_orbit_gap": 4
+    },
+    {
+      "prime": 7,
+      "depth": 3,
+      "charge_depth": 1,
+      "first_visible_arity": 7,
+      "first_orbit_gap": 1290240
+    },
+    {
+      "prime": 7,
+      "depth": 3,
+      "charge_depth": 2,
+      "first_visible_arity": 49,
+      "first_orbit_gap": 73951462482479162613640930558704645232952543037942336309071708160000000000
+    },
+    {
+      "prime": 7,
+      "depth": 4,
+      "charge_depth": 0,
+      "first_visible_arity": 1,
+      "first_orbit_gap": 4
+    },
+    {
+      "prime": 7,
+      "depth": 4,
+      "charge_depth": 1,
+      "first_visible_arity": 7,
+      "first_orbit_gap": 1290240
+    },
+    {
+      "prime": 7,
+      "depth": 4,
+      "charge_depth": 2,
+      "first_visible_arity": 49,
+      "first_orbit_gap": 73951462482479162613640930558704645232952543037942336309071708160000000000
+    }
+  ]
+}
