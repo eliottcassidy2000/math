@@ -7,6 +7,14 @@ connects both to black/blue presentations and arithmetic observation kernels.
 Classical classification and source theorems are credited; no external-priority
 or prime-infinitude claim is made.
 
+**Concurrent provenance:** during publication, commit
+`4368e3847072d9a5d88ddb7d80470f9861c97b93` independently supplied overlapping
+reflection/full-holonomy theorems and broader port moments. We credit that
+packet explicitly in [the comparison and finite replay](incoming/CONCURRENT_COMPARISON.md).
+The exact minimal triangle basis, tuple/LCA transport and anchor bounds,
+blue-quotient distinction, decoder minimum and trace-clock results below retain
+their own proofs and scopes; no first-discovery claim is implied.
+
 ## 1. The prime-degree gap is strict, and its exception is degree eleven
 
 The [reflection-gap theorem](lucas_groups/LUCAS_GAP_THEOREM.md) states:
@@ -183,6 +191,27 @@ The common map is genuine quadratic trace/norm; no identification of those
 Jacobian cofactors with tournament ports, or Jacobian-conjecture consequence,
 is asserted. The unspecified recent surd family was not identified, so the
 explicit golden model is not silently claimed as a replay of that family.
+
+## 7. Composite clocks and joint-port moments
+
+The incoming comparison independently reconstructs the period-nine ring
+F4×F19. Addition by1 has order38, not76. Projecting to F19 loses a four-valued
+tag: current projection, reflected projection, and reflection after one
+translation distinguish all76 states. Thus the full two-bit tag is necessary
+for this operation menu, even though the arithmetic projection alone has19
+values.
+
+Uniform centralizer elements supply a different exact probability law. Their
+fixed-vertex variance is4k(k−1), exactly the excess of joint two-port orbit
+count over the product of marginal orbit counts. The source's all-r branching
+moment theorem is credited; small moments are independently replayed here.
+No random Collatz-source distribution is identified with this group law.
+
+The prime atlas uses the projective clock−phi² rather than our norm-one
+clock phi². A short exact order-conversion formula explains the difference.
+The cited2/3 density concerns primes dividing some Lucas term, not indices
+producing prime values. It is an established theorem, not a new density
+claim from this session.
 
 ## Verification and limits
 
