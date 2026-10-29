@@ -177,3 +177,12 @@ SymPy (tested1.14.0). Both ordinary and `python3 -O` modes pass 950,272 checks.
 |5|243|10|4710128697246244834921603689|
 
 The all-k result rests on the proofs above, not extrapolation from this table.
+
+## Concurrent provenance at publication
+
+The incoming packet `lucas_prime_reflection_towers_20261028` at commit
+`4368e3847072d9a5d88ddb7d80470f9861c97b93` supplies overlapping reflection/holonomy
+results and a general port-moment recurrence. See the parent
+[incoming comparison](../incoming/CONCURRENT_COMPARISON.md) for credited overlap,
+distinct refinements and independently replayed finite controls. This note
+retains its initial source pin and direct proof; no priority claim is implied.
