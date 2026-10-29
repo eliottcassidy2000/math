@@ -302,3 +302,14 @@ The exact source saturation analogy was checked against the current
 Session97 phase2 README; no isomorphism of its arithmetic objects to
 our finite modules is asserted. No historical novelty claim is made
 for the elementary unramified-module arguments.
+
+After rebasing onto incoming ef06067902, the entire new
+`complement_verify.py` passed without modifying its receipts. It checked
+all396 strong classes through7, the labelled masses2,24,544,22320,1677488,
+the integral depth-zero counts1,1,3,7,16, the coprime-minor reconstruction
+certificates, the B5 and81/27 controls, and the four specified larger
+sources. Its supplied integral left inverses give a native free-lattice
+counterpart to P5's split-inclusion requirement; the source objects are
+kept distinct in the integration note. The repository documentation
+check passed again after integration. The primary result checkpoint
+da03553dd0 was pushed before this integration close-out.

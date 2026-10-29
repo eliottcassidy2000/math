@@ -265,6 +265,34 @@ groups or Sha has been constructed. The arithmetic certificate contains
 the rational points, local characters and torsion exclusions that the
 finite-module formula lacks.
 
+Incoming ef06067902 supplies a distinct native bridge in
+[COMPLEMENT_KERNEL K1--K5](../overnight_rank_return_20261029/COMPLEMENT_KERNEL.md).
+For every strong source through seven, a selected Hamilton-path complement
+makes the paired weight observer integrally left-invertible. Coprime full
+minors give a Bezout left inverse, so this weight inclusion remains
+injective over EVERY coefficient ring. This is the free-lattice analogue
+of the splitting requirement in P5. The objects differ: incoming work
+embeds arbitrary port weights into two responses; here we embed a finite
+response cokernel into a paired group. No cokernel-to-weight identification
+or transfer of the pairing is implied.
+
+The incoming B5 bad-path plane is fixed by vertex automorphisms but has
+nontrivial standard S3 run action. Thus extra vertex phase cannot recover
+its amplitudes, just as retaining C7 alone does not settle our extra
+run-clock problem. Its selected successful path DOES recover them; its
+bad fixed path does not improve by repetition. This sharpens the next
+native test beyond the earlier T5 example, without claiming that all
+physically realizable attachment laws fill the arbitrary-weight space.
+
+Incoming K5 also proves the minimum unnamed weight count
+(m^210+14m^70+6m^30)/21 for its successful Paley7 observer. Its precision
+recurrence has characteristic roots p^210,p^70,p^30. That recurrence
+counts orbit states of the retained paired path frames; P2 instead
+counts the minimum index of a finite paired completion. In both cases
+the recurrence is legitimate because the actual source and operation
+were specified, but only the incoming construction supplies the stated
+native complement reconstruction. Neither sequence is A000568.
+
 Reproduce with `python -B primary_clock_layers.py` from this directory.
 The checker independently enumerates all three-run covers, verifies
 every900 native7-by7 translation block, and supplies the reversible7-by7

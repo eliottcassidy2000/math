@@ -127,6 +127,21 @@ Only the higher-primary2/3 extra clock actions remain open. Both new
 checkers pass normally and optimized, with identical receipts and all
 source maps retained; the81/27 slice controls are unchanged.
 
+Incoming ef06067902 further closes SELECTED native complement recovery
+for arbitrary three-port weights at every strong source through7.
+COMPLEMENT_KERNEL.md supplies integral left inverses from coprime
+minors, full396-class coverage, a B5 bad-path plane that survives vertex
+invariance, and minimum unnamed orbit-count recurrences. These are not
+the same objects as our paired cokernels. Its integral left inverse
+is a useful comparison with P5's quotient-compatible splitting. The
+remaining native question starts beyond this proved finite universe
+or imposes actual attachment-realizability constraints; do not restart
+the T5 or strong-through7 census. The larger8/9 examples are not complete
+censuses. The incoming Paley count retains the Frobenius term14m^70.
+The full incoming verifier replayed successfully after rebase, including
+all396 source classes and its four larger examples; its receipts were
+unchanged. The primary completion checkpoint is da03553dd0.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -189,9 +204,11 @@ then their targeted proofs. Recent Session97 additions include:
    extra clock-group order, so the semisimple C7 proof cannot be reused
    blindly. The receipt's U and inverse maps give a concrete starting
    point; do not recompute the source classification from scratch.
-   For native attachment minimality, extend the incoming T5 complement
-   reconstruction while retaining target relation and chosen-path phase;
-   its fully vertex-invariant12-dimensional language is different.
+   For native attachment minimality, extend the incoming strong-through7
+   selected-complement theorem, or impose explicit realization equations
+   on its arbitrary weight space. Retain target relation, chosen-path
+   frame and paired responses. The B5 bad-path plane survives vertex
+   invariance, so a vertex-phase or LCA-only repair cannot determine it.
 2. Replace abstract paired-group realization by an actual source-fixed
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with
