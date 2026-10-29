@@ -1,0 +1,39 @@
+{
+  "19": {
+    "anchors": [
+      0,
+      3795,
+      5214
+    ],
+    "gap_formula_terms": [
+      3795,
+      1419,
+      4986
+    ],
+    "last_possible_blocks": 4985,
+    "unique_last_source": 7332
+  },
+  "31": {
+    "anchors": [
+      0,
+      8601,
+      8780
+    ],
+    "gap_formula_terms": [
+      8601,
+      179,
+      1420
+    ],
+    "last_possible_blocks": 8600,
+    "unique_last_source": 5818
+  },
+  "checks": 40877,
+  "seven_repair_cycle": [
+    1,
+    15,
+    8,
+    36,
+    22,
+    29
+  ]
+}
