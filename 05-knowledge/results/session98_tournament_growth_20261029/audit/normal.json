@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "literal_burnside": [
+    1,
+    1,
+    1,
+    2,
+    4,
+    12,
+    56,
+    456
+  ],
+  "partial_graph_histograms": {
+    "0": {
+      "0": 1
+    },
+    "1": {
+      "0": 1
+    },
+    "2": {
+      "0": 1,
+      "1": 1
+    },
+    "3": {
+      "0": 2,
+      "1": 3,
+      "2": 1,
+      "3": 1
+    },
+    "4": {
+      "0": 4,
+      "1": 10,
+      "2": 12,
+      "3": 10,
+      "4": 4,
+      "5": 1,
+      "6": 1
+    }
+  },
+  "marked_pair_vertex_counts": {
+    "1": [
+      0,
+      1
+    ],
+    "2": [
+      1,
+      2
+    ],
+    "3": [
+      4,
+      4
+    ],
+    "4": [
+      16,
+      12
+    ],
+    "5": [
+      88,
+      48
+    ]
+  },
+  "unmarked_non_twin_loop": {
+    "n": 4,
+    "state": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ],
+    "flipped_pair": [
+      1,
+      3
+    ]
+  },
+  "five_vertex_primes": [
+    {
+      "state": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "group_order": 1,
+      "surplus_one": 5
+    },
+    {
+      "state": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "group_order": 1,
+      "surplus_one": 5
+    },
+    {
+      "state": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "group_order": 5,
+      "surplus_one": 1
+    }
+  ],
+  "hostiles": {
+    "equal_prime_count_different_surplus_one": [
+      1,
+      5
+    ],
+    "marked_vs_unmarked_completions": [
+      4,
+      3
+    ],
+    "two_tagged_singletons_C3_orbits": 4
+  }
+}
