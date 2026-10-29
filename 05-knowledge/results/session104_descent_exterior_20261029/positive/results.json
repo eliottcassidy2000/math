@@ -1,0 +1,18 @@
+{
+  "K4_orientations": 64,
+  "endpoint_rows": 486,
+  "incremental_steps": 1536,
+  "nonmonotone_atom_counts": [
+    2,
+    6
+  ],
+  "positive_incidence_faithful": 24,
+  "positive_triangle_erasure": 40,
+  "require_checks": 4241,
+  "status": "PASS",
+  "tight_AP": {
+    "accepted_tags": 12,
+    "locations": 6,
+    "tags": 182
+  }
+}
