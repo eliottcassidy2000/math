@@ -1,5 +1,13 @@
 # Operation-closed synthesis: a recurrence becomes a falsifiable grammar
 
+**Current-status update (2026-10-29):** Session103 has since proved and
+independently audited the all-order `be`/`ee` criterion and the stronger
+all-k triangularity result. See its [current proof](../session103_words_necklaces_20261029/README.md).
+The finite-only qualifications below describe this packet's original
+checkpoint. The follow-up [fixed-port recurrence and re-marking test](../wedge_descent_168_20261029/README.md)
+derive bounded-degree composition and an explicit native failure when
+re-marking destroys the common port order.
+
 Session `operation_closed_synthesis_20261029`, starting revision
 `4f53ff2859d8c79ec417d441b74777d9e6f3b8bc`.
 

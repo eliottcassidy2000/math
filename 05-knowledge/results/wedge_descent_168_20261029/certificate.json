@@ -1,0 +1,10032 @@
+{
+  "tournaments": {
+    "native_observers": [
+      {
+        "word": "",
+        "n": 4,
+        "k": 1,
+        "dimension": 4,
+        "degree_bound": 3,
+        "actual_nilpotence_index": 2
+      },
+      {
+        "word": "",
+        "n": 4,
+        "k": 2,
+        "dimension": 12,
+        "degree_bound": 4,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "",
+        "n": 4,
+        "k": 3,
+        "dimension": 24,
+        "degree_bound": 3,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "",
+        "n": 4,
+        "k": 4,
+        "dimension": 24,
+        "degree_bound": 0,
+        "actual_nilpotence_index": 1
+      },
+      {
+        "word": "c",
+        "n": 5,
+        "k": 1,
+        "dimension": 5,
+        "degree_bound": 4,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "c",
+        "n": 5,
+        "k": 2,
+        "dimension": 20,
+        "degree_bound": 6,
+        "actual_nilpotence_index": 7
+      },
+      {
+        "word": "c",
+        "n": 5,
+        "k": 3,
+        "dimension": 60,
+        "degree_bound": 6,
+        "actual_nilpotence_index": 7
+      },
+      {
+        "word": "d",
+        "n": 5,
+        "k": 1,
+        "dimension": 5,
+        "degree_bound": 4,
+        "actual_nilpotence_index": 2
+      },
+      {
+        "word": "d",
+        "n": 5,
+        "k": 2,
+        "dimension": 20,
+        "degree_bound": 6,
+        "actual_nilpotence_index": 5
+      },
+      {
+        "word": "d",
+        "n": 5,
+        "k": 3,
+        "dimension": 60,
+        "degree_bound": 6,
+        "actual_nilpotence_index": 5
+      },
+      {
+        "word": "e",
+        "n": 5,
+        "k": 1,
+        "dimension": 5,
+        "degree_bound": 4,
+        "actual_nilpotence_index": 2
+      },
+      {
+        "word": "e",
+        "n": 5,
+        "k": 2,
+        "dimension": 20,
+        "degree_bound": 6,
+        "actual_nilpotence_index": 5
+      },
+      {
+        "word": "e",
+        "n": 5,
+        "k": 3,
+        "dimension": 60,
+        "degree_bound": 6,
+        "actual_nilpotence_index": 5
+      },
+      {
+        "word": "ca",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "ca",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 9
+      },
+      {
+        "word": "ca",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 10
+      },
+      {
+        "word": "cb",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "cb",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 8
+      },
+      {
+        "word": "cb",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 9
+      },
+      {
+        "word": "dc",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "dc",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 9
+      },
+      {
+        "word": "dc",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 10
+      },
+      {
+        "word": "dd",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "dd",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 7
+      },
+      {
+        "word": "dd",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 7
+      },
+      {
+        "word": "de",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 2
+      },
+      {
+        "word": "de",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 6
+      },
+      {
+        "word": "de",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 7
+      },
+      {
+        "word": "ec",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 3
+      },
+      {
+        "word": "ec",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 8
+      },
+      {
+        "word": "ec",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 9
+      },
+      {
+        "word": "ed",
+        "n": 6,
+        "k": 1,
+        "dimension": 6,
+        "degree_bound": 5,
+        "actual_nilpotence_index": 2
+      },
+      {
+        "word": "ed",
+        "n": 6,
+        "k": 2,
+        "dimension": 30,
+        "degree_bound": 8,
+        "actual_nilpotence_index": 6
+      },
+      {
+        "word": "ed",
+        "n": 6,
+        "k": 3,
+        "dimension": 120,
+        "degree_bound": 9,
+        "actual_nilpotence_index": 7
+      },
+      {
+        "word": "ded",
+        "n": 7,
+        "k": 2,
+        "dimension": 42,
+        "degree_bound": 10,
+        "actual_nilpotence_index": 7
+      }
+    ],
+    "remarking_hostile": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "native_remarking_hostile": {
+      "word": "",
+      "k": 2,
+      "vertex_swap": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "dimension": 12,
+      "product_trace": 22,
+      "all_24_trace_histogram": {
+        "12": 17,
+        "16": 6,
+        "22": 1
+      }
+    },
+    "ee_wedge_witness": [
+      0,
+      2,
+      1
+    ],
+    "ee_wedge_witness_count": 8
+  },
+  "menus": {
+    "universe": "all 4096 ordered pairs of 3x3 binary off-diagonal supports",
+    "acyclic_menus": 289,
+    "cyclic_menus": 3807,
+    "maximum_witness_length": 3
+  },
+  "symmetry": {
+    "GL3F2_order": 168,
+    "distinguished_point_stabilizer": 24,
+    "opposition_pairs": [
+      [
+        3,
+        12
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        9
+      ]
+    ],
+    "oriented_cut_cycle_smith": [
+      1,
+      1,
+      1,
+      1,
+      4,
+      4
+    ],
+    "six_state_port_automorphism_order": 1,
+    "letter_image_sizes": {
+      "a": 3,
+      "b": 3,
+      "c": 3,
+      "d": 3,
+      "e": 3
+    }
+  },
+  "field_clocks": {
+    "field_size": 169,
+    "primitive_element": [
+      1,
+      2
+    ],
+    "nonzero_clock": 168,
+    "norm_values": 12,
+    "ratio_values": 14,
+    "compatible_pairs": 84,
+    "each_fibre_size": 2
+  },
+  "arithmetic": {
+    "reflection_checked_k": [
+      1,
+      300
+    ],
+    "rows": [
+      {
+        "k": 1,
+        "center": 4,
+        "linear_start": 2,
+        "square_base_start": 3,
+        "square_total": 25
+      },
+      {
+        "k": 2,
+        "center": 12,
+        "linear_start": 8,
+        "square_base_start": 10,
+        "square_total": 365
+      },
+      {
+        "k": 3,
+        "center": 24,
+        "linear_start": 18,
+        "square_base_start": 21,
+        "square_total": 2030
+      },
+      {
+        "k": 4,
+        "center": 40,
+        "linear_start": 32,
+        "square_base_start": 36,
+        "square_total": 7230
+      },
+      {
+        "k": 5,
+        "center": 60,
+        "linear_start": 50,
+        "square_base_start": 55,
+        "square_total": 19855
+      },
+      {
+        "k": 6,
+        "center": 84,
+        "linear_start": 72,
+        "square_base_start": 78,
+        "square_total": 45955
+      }
+    ],
+    "arbitrary_offset_cases": 125,
+    "abc_universe": "1<=a<b<=60, gcd(a,b)=1",
+    "abc_examples": [
+      {
+        "source": [
+          1,
+          2,
+          3
+        ],
+        "lift": [
+          1,
+          8,
+          9
+        ],
+        "radicals": [
+          6,
+          6
+        ]
+      },
+      {
+        "source": [
+          1,
+          3,
+          4
+        ],
+        "lift": [
+          1,
+          3,
+          4
+        ],
+        "radicals": [
+          6,
+          6
+        ]
+      },
+      {
+        "source": [
+          1,
+          8,
+          9
+        ],
+        "lift": [
+          49,
+          32,
+          81
+        ],
+        "radicals": [
+          6,
+          42
+        ]
+      }
+    ]
+  },
+  "descent": {
+    "expanding_prefix_lengths": [
+      1,
+      80
+    ],
+    "five_x_plus_one_cycle": [
+      13,
+      33,
+      83
+    ],
+    "scope": "FINITE-EXACT for odd sources 3..1999; no all-source coverage theorem",
+    "max_first_descent_steps": 51,
+    "receipts": [
+      {
+        "n": 3,
+        "target": 1,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 5,
+        "target": 1,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 7,
+        "target": 5,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 9,
+        "target": 7,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 11,
+        "target": 5,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 13,
+        "target": 5,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 15,
+        "target": 5,
+        "exponents": [
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 17,
+        "target": 13,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 19,
+        "target": 11,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 21,
+        "target": 1,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 23,
+        "target": 5,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 25,
+        "target": 19,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 27,
+        "target": 23,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 29,
+        "target": 11,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 31,
+        "target": 23,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 33,
+        "target": 25,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 35,
+        "target": 5,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 37,
+        "target": 7,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 39,
+        "target": 19,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 41,
+        "target": 31,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 43,
+        "target": 37,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 45,
+        "target": 17,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 47,
+        "target": 23,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 49,
+        "target": 37,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 51,
+        "target": 29,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 53,
+        "target": 5,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 55,
+        "target": 47,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 57,
+        "target": 43,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 59,
+        "target": 19,
+        "exponents": [
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 61,
+        "target": 23,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 63,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 65,
+        "target": 49,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 67,
+        "target": 19,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 69,
+        "target": 13,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 71,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 73,
+        "target": 55,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 75,
+        "target": 1,
+        "exponents": [
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "n": 77,
+        "target": 29,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 79,
+        "target": 19,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 81,
+        "target": 61,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 83,
+        "target": 47,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 85,
+        "target": 1,
+        "exponents": [
+          8
+        ]
+      },
+      {
+        "n": 87,
+        "target": 37,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 89,
+        "target": 67,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 91,
+        "target": 61,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 93,
+        "target": 35,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 95,
+        "target": 91,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 97,
+        "target": 73,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 99,
+        "target": 7,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 101,
+        "target": 19,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 103,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 105,
+        "target": 79,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 107,
+        "target": 91,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 109,
+        "target": 41,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 111,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 113,
+        "target": 85,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 115,
+        "target": 65,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 117,
+        "target": 11,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 119,
+        "target": 101,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 121,
+        "target": 91,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 123,
+        "target": 59,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 125,
+        "target": 47,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 127,
+        "target": 77,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 129,
+        "target": 97,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 131,
+        "target": 37,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 133,
+        "target": 25,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 135,
+        "target": 43,
+        "exponents": [
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 137,
+        "target": 103,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 139,
+        "target": 59,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 141,
+        "target": 53,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 143,
+        "target": 91,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 145,
+        "target": 109,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 147,
+        "target": 83,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 149,
+        "target": 7,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 151,
+        "target": 1,
+        "exponents": [
+          1,
+          1,
+          10
+        ]
+      },
+      {
+        "n": 153,
+        "target": 115,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 155,
+        "target": 61,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 157,
+        "target": 59,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 159,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 161,
+        "target": 121,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 163,
+        "target": 23,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 165,
+        "target": 31,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 167,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 169,
+        "target": 127,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 171,
+        "target": 145,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 173,
+        "target": 65,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 175,
+        "target": 167,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 177,
+        "target": 133,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 179,
+        "target": 101,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 181,
+        "target": 17,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 183,
+        "target": 155,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 185,
+        "target": 139,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 187,
+        "target": 119,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 189,
+        "target": 71,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 191,
+        "target": 77,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 193,
+        "target": 145,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 195,
+        "target": 55,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 197,
+        "target": 37,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 199,
+        "target": 95,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 201,
+        "target": 151,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 203,
+        "target": 43,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 205,
+        "target": 77,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 207,
+        "target": 167,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 209,
+        "target": 157,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 211,
+        "target": 119,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 213,
+        "target": 5,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 215,
+        "target": 91,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 217,
+        "target": 163,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 219,
+        "target": 209,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 221,
+        "target": 83,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 223,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 225,
+        "target": 169,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 227,
+        "target": 1,
+        "exponents": [
+          1,
+          10
+        ]
+      },
+      {
+        "n": 229,
+        "target": 43,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 231,
+        "target": 31,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 233,
+        "target": 175,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 235,
+        "target": 199,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 237,
+        "target": 89,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 239,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 241,
+        "target": 181,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 243,
+        "target": 137,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 245,
+        "target": 23,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 247,
+        "target": 209,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 249,
+        "target": 187,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 251,
+        "target": 61,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 253,
+        "target": 95,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 255,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 257,
+        "target": 193,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 259,
+        "target": 73,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 261,
+        "target": 49,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 263,
+        "target": 167,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 265,
+        "target": 199,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 267,
+        "target": 113,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 269,
+        "target": 101,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 271,
+        "target": 43,
+        "exponents": [
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 273,
+        "target": 205,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 275,
+        "target": 155,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 277,
+        "target": 13,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 279,
+        "target": 59,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 281,
+        "target": 211,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 283,
+        "target": 61,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 285,
+        "target": 107,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 287,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 289,
+        "target": 217,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 291,
+        "target": 41,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 293,
+        "target": 55,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 295,
+        "target": 281,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 297,
+        "target": 223,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 299,
+        "target": 253,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 301,
+        "target": 113,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 303,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 305,
+        "target": 229,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 307,
+        "target": 173,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 309,
+        "target": 29,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 311,
+        "target": 263,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 313,
+        "target": 235,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 315,
+        "target": 25,
+        "exponents": [
+          1,
+          2,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 317,
+        "target": 119,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 319,
+        "target": 61,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 321,
+        "target": 241,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 323,
+        "target": 91,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 325,
+        "target": 61,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 327,
+        "target": 125,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 329,
+        "target": 247,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 331,
+        "target": 35,
+        "exponents": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 333,
+        "target": 125,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 335,
+        "target": 319,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 337,
+        "target": 253,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 339,
+        "target": 191,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 341,
+        "target": 1,
+        "exponents": [
+          10
+        ]
+      },
+      {
+        "n": 343,
+        "target": 145,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 345,
+        "target": 259,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 347,
+        "target": 31,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 349,
+        "target": 131,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 351,
+        "target": 167,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 353,
+        "target": 265,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 355,
+        "target": 25,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 357,
+        "target": 67,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 359,
+        "target": 325,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 361,
+        "target": 271,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 363,
+        "target": 307,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 365,
+        "target": 137,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 367,
+        "target": 131,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 369,
+        "target": 277,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 371,
+        "target": 209,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 373,
+        "target": 35,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 375,
+        "target": 317,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 377,
+        "target": 283,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 379,
+        "target": 361,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 381,
+        "target": 143,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 383,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 385,
+        "target": 289,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 387,
+        "target": 109,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 389,
+        "target": 73,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 391,
+        "target": 31,
+        "exponents": [
+          1,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 393,
+        "target": 295,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 395,
+        "target": 167,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 397,
+        "target": 149,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 399,
+        "target": 253,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 401,
+        "target": 301,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 403,
+        "target": 227,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 405,
+        "target": 19,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 407,
+        "target": 43,
+        "exponents": [
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 409,
+        "target": 307,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 411,
+        "target": 31,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 413,
+        "target": 155,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 415,
+        "target": 125,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 417,
+        "target": 313,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 419,
+        "target": 59,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 421,
+        "target": 79,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 423,
+        "target": 151,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 425,
+        "target": 319,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 427,
+        "target": 361,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 429,
+        "target": 161,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 431,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 433,
+        "target": 325,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 435,
+        "target": 245,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 437,
+        "target": 41,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 439,
+        "target": 371,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 441,
+        "target": 331,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 443,
+        "target": 281,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 445,
+        "target": 167,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 447,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 449,
+        "target": 337,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 451,
+        "target": 127,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 453,
+        "target": 85,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 455,
+        "target": 433,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 457,
+        "target": 343,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 459,
+        "target": 97,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 461,
+        "target": 173,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 463,
+        "target": 31,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 465,
+        "target": 349,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 467,
+        "target": 263,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 469,
+        "target": 11,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 471,
+        "target": 199,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 473,
+        "target": 355,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 475,
+        "target": 113,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 477,
+        "target": 179,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 479,
+        "target": 433,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4,
+          2
+        ]
+      },
+      {
+        "n": 481,
+        "target": 361,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 483,
+        "target": 17,
+        "exponents": [
+          1,
+          7
+        ]
+      },
+      {
+        "n": 485,
+        "target": 91,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 487,
+        "target": 31,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          1,
+          1,
+          3,
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 489,
+        "target": 367,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 491,
+        "target": 415,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 493,
+        "target": 185,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 495,
+        "target": 239,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 497,
+        "target": 373,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 499,
+        "target": 281,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 501,
+        "target": 47,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 503,
+        "target": 425,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 505,
+        "target": 379,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 507,
+        "target": 181,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 509,
+        "target": 191,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 511,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 513,
+        "target": 385,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 515,
+        "target": 145,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 517,
+        "target": 97,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 519,
+        "target": 329,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 521,
+        "target": 391,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 523,
+        "target": 221,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 525,
+        "target": 197,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 527,
+        "target": 167,
+        "exponents": [
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 529,
+        "target": 397,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 531,
+        "target": 299,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 533,
+        "target": 25,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 535,
+        "target": 113,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 537,
+        "target": 403,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 539,
+        "target": 433,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2
+        ]
+      },
+      {
+        "n": 541,
+        "target": 203,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 543,
+        "target": 109,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 545,
+        "target": 409,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 547,
+        "target": 77,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 549,
+        "target": 103,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 551,
+        "target": 131,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 553,
+        "target": 415,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 555,
+        "target": 469,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 557,
+        "target": 209,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 559,
+        "target": 505,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 561,
+        "target": 421,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 563,
+        "target": 317,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 565,
+        "target": 53,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 567,
+        "target": 479,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 569,
+        "target": 427,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 571,
+        "target": 181,
+        "exponents": [
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 573,
+        "target": 215,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 575,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 577,
+        "target": 433,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 579,
+        "target": 163,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 581,
+        "target": 109,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 583,
+        "target": 13,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          8
+        ]
+      },
+      {
+        "n": 585,
+        "target": 439,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 587,
+        "target": 31,
+        "exponents": [
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 589,
+        "target": 221,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 591,
+        "target": 281,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 593,
+        "target": 445,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 595,
+        "target": 335,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 597,
+        "target": 7,
+        "exponents": [
+          8
+        ]
+      },
+      {
+        "n": 599,
+        "target": 253,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 601,
+        "target": 451,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 603,
+        "target": 545,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 605,
+        "target": 227,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 607,
+        "target": 577,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 609,
+        "target": 457,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 611,
+        "target": 43,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 613,
+        "target": 115,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 615,
+        "target": 329,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 617,
+        "target": 463,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 619,
+        "target": 523,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 621,
+        "target": 233,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 623,
+        "target": 125,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 625,
+        "target": 469,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 627,
+        "target": 353,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 629,
+        "target": 59,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 631,
+        "target": 533,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 633,
+        "target": 475,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 635,
+        "target": 151,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 637,
+        "target": 239,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 639,
+        "target": 365,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 641,
+        "target": 481,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 643,
+        "target": 181,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 645,
+        "target": 121,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 647,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 649,
+        "target": 487,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 651,
+        "target": 275,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 653,
+        "target": 245,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 655,
+        "target": 415,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 657,
+        "target": 493,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 659,
+        "target": 371,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 661,
+        "target": 31,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 663,
+        "target": 35,
+        "exponents": [
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 665,
+        "target": 499,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 667,
+        "target": 143,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 669,
+        "target": 251,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 671,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 673,
+        "target": 505,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 675,
+        "target": 95,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 677,
+        "target": 127,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 679,
+        "target": 545,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 681,
+        "target": 511,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 683,
+        "target": 577,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 685,
+        "target": 257,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 687,
+        "target": 653,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 689,
+        "target": 517,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 691,
+        "target": 389,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 693,
+        "target": 65,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 695,
+        "target": 587,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 697,
+        "target": 523,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 699,
+        "target": 443,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 701,
+        "target": 263,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 703,
+        "target": 157,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 705,
+        "target": 529,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 707,
+        "target": 199,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 709,
+        "target": 133,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 711,
+        "target": 169,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 713,
+        "target": 535,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 715,
+        "target": 151,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 717,
+        "target": 269,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 719,
+        "target": 577,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 721,
+        "target": 541,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 723,
+        "target": 407,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 725,
+        "target": 17,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 727,
+        "target": 307,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 729,
+        "target": 547,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 731,
+        "target": 695,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 733,
+        "target": 275,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 735,
+        "target": 131,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 737,
+        "target": 553,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 739,
+        "target": 13,
+        "exponents": [
+          1,
+          8
+        ]
+      },
+      {
+        "n": 741,
+        "target": 139,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 743,
+        "target": 637,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 745,
+        "target": 559,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 747,
+        "target": 631,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 749,
+        "target": 281,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 751,
+        "target": 143,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 753,
+        "target": 565,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 755,
+        "target": 425,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 757,
+        "target": 71,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 759,
+        "target": 641,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 761,
+        "target": 571,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 763,
+        "target": 97,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 765,
+        "target": 287,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 767,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 769,
+        "target": 577,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 771,
+        "target": 217,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 773,
+        "target": 145,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 775,
+        "target": 491,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 777,
+        "target": 583,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 779,
+        "target": 329,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 781,
+        "target": 293,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 783,
+        "target": 31,
+        "exponents": [
+          1,
+          1,
+          1,
+          8
+        ]
+      },
+      {
+        "n": 785,
+        "target": 589,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 787,
+        "target": 443,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 789,
+        "target": 37,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 791,
+        "target": 167,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 793,
+        "target": 595,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 795,
+        "target": 767,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 797,
+        "target": 299,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 799,
+        "target": 641,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 801,
+        "target": 601,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 803,
+        "target": 113,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 805,
+        "target": 151,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 807,
+        "target": 767,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 809,
+        "target": 607,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 811,
+        "target": 685,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 813,
+        "target": 305,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 815,
+        "target": 581,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 817,
+        "target": 613,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 819,
+        "target": 461,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 821,
+        "target": 77,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 823,
+        "target": 695,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 825,
+        "target": 619,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 827,
+        "target": 131,
+        "exponents": [
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 829,
+        "target": 311,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 831,
+        "target": 125,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 833,
+        "target": 625,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 835,
+        "target": 235,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 837,
+        "target": 157,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 839,
+        "target": 505,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 841,
+        "target": 631,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 843,
+        "target": 89,
+        "exponents": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 845,
+        "target": 317,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 847,
+        "target": 805,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 849,
+        "target": 637,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 851,
+        "target": 479,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 853,
+        "target": 5,
+        "exponents": [
+          9
+        ]
+      },
+      {
+        "n": 855,
+        "target": 361,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 857,
+        "target": 643,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 859,
+        "target": 97,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 861,
+        "target": 323,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 863,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 865,
+        "target": 649,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 867,
+        "target": 61,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 869,
+        "target": 163,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 871,
+        "target": 797,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          2,
+          1,
+          2,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 873,
+        "target": 655,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 875,
+        "target": 739,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 877,
+        "target": 329,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 879,
+        "target": 235,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 881,
+        "target": 661,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 883,
+        "target": 497,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 885,
+        "target": 83,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 887,
+        "target": 749,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 889,
+        "target": 667,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 891,
+        "target": 847,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 893,
+        "target": 335,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 895,
+        "target": 767,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 897,
+        "target": 673,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 899,
+        "target": 253,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 901,
+        "target": 169,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 903,
+        "target": 143,
+        "exponents": [
+          1,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 905,
+        "target": 679,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 907,
+        "target": 383,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 909,
+        "target": 341,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 911,
+        "target": 577,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 913,
+        "target": 685,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 915,
+        "target": 515,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 917,
+        "target": 43,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 919,
+        "target": 97,
+        "exponents": [
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 921,
+        "target": 691,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 923,
+        "target": 329,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 925,
+        "target": 347,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 927,
+        "target": 637,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 929,
+        "target": 697,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 931,
+        "target": 131,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 933,
+        "target": 175,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 935,
+        "target": 125,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 937,
+        "target": 703,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 939,
+        "target": 793,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 941,
+        "target": 353,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 943,
+        "target": 7,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          10
+        ]
+      },
+      {
+        "n": 945,
+        "target": 709,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 947,
+        "target": 533,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 949,
+        "target": 89,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 951,
+        "target": 803,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 953,
+        "target": 715,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 955,
+        "target": 605,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 957,
+        "target": 359,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 959,
+        "target": 365,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 961,
+        "target": 721,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 963,
+        "target": 271,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 965,
+        "target": 181,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 967,
+        "target": 919,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 969,
+        "target": 727,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 971,
+        "target": 205,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 973,
+        "target": 365,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 975,
+        "target": 695,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 977,
+        "target": 733,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 979,
+        "target": 551,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 981,
+        "target": 23,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 983,
+        "target": 415,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 985,
+        "target": 739,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 987,
+        "target": 469,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 989,
+        "target": 371,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 991,
+        "target": 637,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 993,
+        "target": 745,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 995,
+        "target": 35,
+        "exponents": [
+          1,
+          7
+        ]
+      },
+      {
+        "n": 997,
+        "target": 187,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 999,
+        "target": 89,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1001,
+        "target": 751,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1003,
+        "target": 847,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1005,
+        "target": 377,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1007,
+        "target": 767,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1009,
+        "target": 757,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1011,
+        "target": 569,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1013,
+        "target": 95,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1015,
+        "target": 857,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1017,
+        "target": 763,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1019,
+        "target": 545,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1021,
+        "target": 383,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1023,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "n": 1025,
+        "target": 769,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1027,
+        "target": 289,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1029,
+        "target": 193,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1031,
+        "target": 653,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1033,
+        "target": 775,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1035,
+        "target": 437,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1037,
+        "target": 389,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1039,
+        "target": 329,
+        "exponents": [
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1041,
+        "target": 781,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1043,
+        "target": 587,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1045,
+        "target": 49,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1047,
+        "target": 221,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1049,
+        "target": 787,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1051,
+        "target": 901,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          4,
+          3,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1053,
+        "target": 395,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1055,
+        "target": 157,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 1057,
+        "target": 793,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1059,
+        "target": 149,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1061,
+        "target": 199,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1063,
+        "target": 505,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1065,
+        "target": 799,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1067,
+        "target": 901,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1069,
+        "target": 401,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1071,
+        "target": 859,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 1073,
+        "target": 805,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1075,
+        "target": 605,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1077,
+        "target": 101,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1079,
+        "target": 911,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1081,
+        "target": 811,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1083,
+        "target": 343,
+        "exponents": [
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1085,
+        "target": 407,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1087,
+        "target": 581,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 1089,
+        "target": 817,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1091,
+        "target": 307,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1093,
+        "target": 205,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1095,
+        "target": 659,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1097,
+        "target": 823,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1099,
+        "target": 29,
+        "exponents": [
+          1,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 1101,
+        "target": 413,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1103,
+        "target": 131,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 1105,
+        "target": 829,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1107,
+        "target": 623,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1109,
+        "target": 13,
+        "exponents": [
+          8
+        ]
+      },
+      {
+        "n": 1111,
+        "target": 469,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1113,
+        "target": 835,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1115,
+        "target": 637,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1117,
+        "target": 419,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1119,
+        "target": 1063,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1121,
+        "target": 841,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1123,
+        "target": 79,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1125,
+        "target": 211,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1127,
+        "target": 143,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1129,
+        "target": 847,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1131,
+        "target": 955,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1133,
+        "target": 425,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1135,
+        "target": 455,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1137,
+        "target": 853,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1139,
+        "target": 641,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1141,
+        "target": 107,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1143,
+        "target": 965,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1145,
+        "target": 859,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1147,
+        "target": 545,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1149,
+        "target": 431,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1151,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 1153,
+        "target": 865,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1155,
+        "target": 325,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1157,
+        "target": 217,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1159,
+        "target": 367,
+        "exponents": [
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1161,
+        "target": 871,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1163,
+        "target": 491,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1165,
+        "target": 437,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1167,
+        "target": 739,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1169,
+        "target": 877,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1171,
+        "target": 659,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1173,
+        "target": 55,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1175,
+        "target": 31,
+        "exponents": [
+          1,
+          1,
+          8
+        ]
+      },
+      {
+        "n": 1177,
+        "target": 883,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1179,
+        "target": 133,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1181,
+        "target": 443,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1183,
+        "target": 1067,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 1185,
+        "target": 889,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1187,
+        "target": 167,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1189,
+        "target": 223,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1191,
+        "target": 955,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1193,
+        "target": 895,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1195,
+        "target": 1009,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1197,
+        "target": 449,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1199,
+        "target": 1139,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1201,
+        "target": 901,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1203,
+        "target": 677,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1205,
+        "target": 113,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1207,
+        "target": 1019,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1209,
+        "target": 907,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1211,
+        "target": 767,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1213,
+        "target": 455,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1215,
+        "target": 487,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 1217,
+        "target": 913,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1219,
+        "target": 343,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1221,
+        "target": 229,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1223,
+        "target": 581,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1225,
+        "target": 919,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1227,
+        "target": 259,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1229,
+        "target": 461,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1231,
+        "target": 329,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1233,
+        "target": 925,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1235,
+        "target": 695,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1237,
+        "target": 29,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 1239,
+        "target": 523,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1241,
+        "target": 931,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1243,
+        "target": 1181,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1245,
+        "target": 467,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1247,
+        "target": 125,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1249,
+        "target": 937,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1251,
+        "target": 11,
+        "exponents": [
+          1,
+          9
+        ]
+      },
+      {
+        "n": 1253,
+        "target": 235,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1255,
+        "target": 637,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1257,
+        "target": 943,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1259,
+        "target": 1063,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1261,
+        "target": 473,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1263,
+        "target": 811,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          5,
+          4
+        ]
+      },
+      {
+        "n": 1265,
+        "target": 949,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1267,
+        "target": 713,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1269,
+        "target": 119,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1271,
+        "target": 1073,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1273,
+        "target": 955,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1275,
+        "target": 767,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1277,
+        "target": 479,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1279,
+        "target": 365,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 1281,
+        "target": 961,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1283,
+        "target": 361,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1285,
+        "target": 241,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1287,
+        "target": 815,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1289,
+        "target": 967,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1291,
+        "target": 545,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1293,
+        "target": 485,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1295,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1297,
+        "target": 973,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1299,
+        "target": 731,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1301,
+        "target": 61,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1303,
+        "target": 275,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1305,
+        "target": 979,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1307,
+        "target": 797,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          2,
+          1,
+          2,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 1309,
+        "target": 491,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1311,
+        "target": 467,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1313,
+        "target": 985,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1315,
+        "target": 185,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1317,
+        "target": 247,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1319,
+        "target": 1253,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1321,
+        "target": 991,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1323,
+        "target": 1117,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1325,
+        "target": 497,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1327,
+        "target": 133,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1329,
+        "target": 997,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1331,
+        "target": 749,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1333,
+        "target": 125,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1335,
+        "target": 1127,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1337,
+        "target": 1003,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1339,
+        "target": 53,
+        "exponents": [
+          1,
+          2,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1341,
+        "target": 503,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1343,
+        "target": 767,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1345,
+        "target": 1009,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1347,
+        "target": 379,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1349,
+        "target": 253,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1351,
+        "target": 1219,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 1353,
+        "target": 1015,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1355,
+        "target": 143,
+        "exponents": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1357,
+        "target": 509,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1359,
+        "target": 1291,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 1361,
+        "target": 1021,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1363,
+        "target": 767,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1365,
+        "target": 1,
+        "exponents": [
+          12
+        ]
+      },
+      {
+        "n": 1367,
+        "target": 577,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1369,
+        "target": 1027,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1371,
+        "target": 977,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1373,
+        "target": 515,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1375,
+        "target": 653,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1377,
+        "target": 1033,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1379,
+        "target": 97,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1381,
+        "target": 259,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1383,
+        "target": 89,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          5,
+          2,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1385,
+        "target": 1039,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1387,
+        "target": 1171,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1389,
+        "target": 521,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1391,
+        "target": 991,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1393,
+        "target": 1045,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1395,
+        "target": 785,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1397,
+        "target": 131,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1399,
+        "target": 1181,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1401,
+        "target": 1051,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1403,
+        "target": 1333,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1405,
+        "target": 527,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1407,
+        "target": 157,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 1409,
+        "target": 1057,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1411,
+        "target": 397,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1413,
+        "target": 265,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1415,
+        "target": 7,
+        "exponents": [
+          1,
+          1,
+          2,
+          10
+        ]
+      },
+      {
+        "n": 1417,
+        "target": 1063,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1419,
+        "target": 599,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1421,
+        "target": 533,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1423,
+        "target": 901,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1425,
+        "target": 1069,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1427,
+        "target": 803,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1429,
+        "target": 67,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1431,
+        "target": 151,
+        "exponents": [
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1433,
+        "target": 1075,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1435,
+        "target": 767,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1437,
+        "target": 539,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1439,
+        "target": 365,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 1441,
+        "target": 1081,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1443,
+        "target": 203,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1445,
+        "target": 271,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1447,
+        "target": 1031,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1449,
+        "target": 1087,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1451,
+        "target": 1225,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1453,
+        "target": 545,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1455,
+        "target": 691,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1457,
+        "target": 1093,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1459,
+        "target": 821,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1461,
+        "target": 137,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1463,
+        "target": 1235,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1465,
+        "target": 1099,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1467,
+        "target": 929,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1469,
+        "target": 551,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1471,
+        "target": 797,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          2,
+          1,
+          2,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 1473,
+        "target": 1105,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1475,
+        "target": 415,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1477,
+        "target": 277,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1479,
+        "target": 1405,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1481,
+        "target": 1111,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1483,
+        "target": 313,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1485,
+        "target": 557,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1487,
+        "target": 637,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1489,
+        "target": 1117,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1491,
+        "target": 839,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1493,
+        "target": 35,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 1495,
+        "target": 631,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1497,
+        "target": 1123,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1499,
+        "target": 89,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1501,
+        "target": 563,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1503,
+        "target": 143,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1505,
+        "target": 1129,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1507,
+        "target": 53,
+        "exponents": [
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1509,
+        "target": 283,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1511,
+        "target": 767,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1513,
+        "target": 1135,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1515,
+        "target": 1279,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1517,
+        "target": 569,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1519,
+        "target": 685,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          3,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1521,
+        "target": 1141,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1523,
+        "target": 857,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1525,
+        "target": 143,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1527,
+        "target": 1289,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1529,
+        "target": 1147,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1531,
+        "target": 1091,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1533,
+        "target": 575,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1535,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "n": 1537,
+        "target": 1153,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1539,
+        "target": 433,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1541,
+        "target": 289,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1543,
+        "target": 977,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1545,
+        "target": 1159,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1547,
+        "target": 653,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1549,
+        "target": 581,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1551,
+        "target": 491,
+        "exponents": [
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1553,
+        "target": 1165,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1555,
+        "target": 875,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1557,
+        "target": 73,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1559,
+        "target": 329,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1561,
+        "target": 1171,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1563,
+        "target": 1253,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1565,
+        "target": 587,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1567,
+        "target": 157,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 1569,
+        "target": 1177,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1571,
+        "target": 221,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1573,
+        "target": 295,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1575,
+        "target": 187,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1577,
+        "target": 1183,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1579,
+        "target": 1333,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1581,
+        "target": 593,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1583,
+        "target": 157,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          3,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          4,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 1585,
+        "target": 1189,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1587,
+        "target": 893,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1589,
+        "target": 149,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1591,
+        "target": 1343,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1593,
+        "target": 1195,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1595,
+        "target": 505,
+        "exponents": [
+          1,
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1597,
+        "target": 599,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1599,
+        "target": 1139,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1601,
+        "target": 1201,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1603,
+        "target": 451,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1605,
+        "target": 301,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1607,
+        "target": 1145,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1609,
+        "target": 1207,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1611,
+        "target": 85,
+        "exponents": [
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 1613,
+        "target": 605,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1615,
+        "target": 767,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1617,
+        "target": 1213,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1619,
+        "target": 911,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1621,
+        "target": 19,
+        "exponents": [
+          8
+        ]
+      },
+      {
+        "n": 1623,
+        "target": 685,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1625,
+        "target": 1219,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1627,
+        "target": 367,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1629,
+        "target": 611,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1631,
+        "target": 1549,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1633,
+        "target": 1225,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1635,
+        "target": 115,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1637,
+        "target": 307,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1639,
+        "target": 89,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          2,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          5,
+          2,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1641,
+        "target": 1231,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1643,
+        "target": 1387,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1645,
+        "target": 617,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1647,
+        "target": 55,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "n": 1649,
+        "target": 1237,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1651,
+        "target": 929,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1653,
+        "target": 155,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1655,
+        "target": 1397,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1657,
+        "target": 1243,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1659,
+        "target": 197,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1661,
+        "target": 623,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1663,
+        "target": 89,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          5,
+          2,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1665,
+        "target": 1249,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1667,
+        "target": 469,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1669,
+        "target": 313,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1671,
+        "target": 529,
+        "exponents": [
+          1,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1673,
+        "target": 1255,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1675,
+        "target": 707,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1677,
+        "target": 629,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1679,
+        "target": 1063,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1681,
+        "target": 1261,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1683,
+        "target": 947,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1685,
+        "target": 79,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1687,
+        "target": 89,
+        "exponents": [
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1689,
+        "target": 1267,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1691,
+        "target": 143,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1693,
+        "target": 635,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1695,
+        "target": 689,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          4,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1697,
+        "target": 1273,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1699,
+        "target": 239,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1701,
+        "target": 319,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1703,
+        "target": 455,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1705,
+        "target": 1279,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1707,
+        "target": 1441,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1709,
+        "target": 641,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1711,
+        "target": 1625,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1713,
+        "target": 1285,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1715,
+        "target": 965,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1717,
+        "target": 161,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1719,
+        "target": 1451,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1721,
+        "target": 1291,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1723,
+        "target": 1091,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1725,
+        "target": 647,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1727,
+        "target": 173,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          7
+        ]
+      },
+      {
+        "n": 1729,
+        "target": 1297,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1731,
+        "target": 487,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1733,
+        "target": 325,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1735,
+        "target": 103,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          6
+        ]
+      },
+      {
+        "n": 1737,
+        "target": 1303,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1739,
+        "target": 367,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1741,
+        "target": 653,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1743,
+        "target": 797,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          4,
+          2,
+          1,
+          2,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 1745,
+        "target": 1309,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1747,
+        "target": 983,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1749,
+        "target": 41,
+        "exponents": [
+          7
+        ]
+      },
+      {
+        "n": 1751,
+        "target": 739,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1753,
+        "target": 1315,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1755,
+        "target": 1667,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1757,
+        "target": 659,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1759,
+        "target": 1253,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1761,
+        "target": 1321,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1763,
+        "target": 31,
+        "exponents": [
+          1,
+          8
+        ]
+      },
+      {
+        "n": 1765,
+        "target": 331,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1767,
+        "target": 1345,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 1769,
+        "target": 1327,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1771,
+        "target": 1495,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1773,
+        "target": 665,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1775,
+        "target": 1067,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "n": 1777,
+        "target": 1333,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1779,
+        "target": 1001,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1781,
+        "target": 167,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1783,
+        "target": 1505,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1785,
+        "target": 1339,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1787,
+        "target": 955,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1789,
+        "target": 671,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1791,
+        "target": 1211,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 1793,
+        "target": 1345,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1795,
+        "target": 505,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1797,
+        "target": 337,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1799,
+        "target": 1139,
+        "exponents": [
+          1,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1801,
+        "target": 1351,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1803,
+        "target": 761,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1805,
+        "target": 677,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1807,
+        "target": 143,
+        "exponents": [
+          1,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1809,
+        "target": 1357,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1811,
+        "target": 1019,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1813,
+        "target": 85,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1815,
+        "target": 383,
+        "exponents": [
+          1,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1817,
+        "target": 1363,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1819,
+        "target": 1067,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          2,
+          2,
+          2,
+          1,
+          2,
+          3,
+          2,
+          1,
+          2,
+          1,
+          5,
+          1,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1821,
+        "target": 683,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1823,
+        "target": 487,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 1825,
+        "target": 1369,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1827,
+        "target": 257,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1829,
+        "target": 343,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1831,
+        "target": 1739,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1833,
+        "target": 1375,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1835,
+        "target": 1549,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1837,
+        "target": 689,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1839,
+        "target": 655,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1841,
+        "target": 1381,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1843,
+        "target": 1037,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1845,
+        "target": 173,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1847,
+        "target": 1559,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1849,
+        "target": 1387,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1851,
+        "target": 293,
+        "exponents": [
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1853,
+        "target": 695,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1855,
+        "target": 991,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "n": 1857,
+        "target": 1393,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1859,
+        "target": 523,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1861,
+        "target": 349,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1863,
+        "target": 133,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1865,
+        "target": 1399,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1867,
+        "target": 197,
+        "exponents": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1869,
+        "target": 701,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1871,
+        "target": 1777,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "n": 1873,
+        "target": 1405,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1875,
+        "target": 1055,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1877,
+        "target": 11,
+        "exponents": [
+          9
+        ]
+      },
+      {
+        "n": 1879,
+        "target": 793,
+        "exponents": [
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1881,
+        "target": 1411,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1883,
+        "target": 637,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1885,
+        "target": 707,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1887,
+        "target": 7,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          12
+        ]
+      },
+      {
+        "n": 1889,
+        "target": 1417,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1891,
+        "target": 133,
+        "exponents": [
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1893,
+        "target": 355,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1895,
+        "target": 811,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          5,
+          4
+        ]
+      },
+      {
+        "n": 1897,
+        "target": 1423,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1899,
+        "target": 1603,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1901,
+        "target": 713,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1903,
+        "target": 143,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1905,
+        "target": 1429,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1907,
+        "target": 1073,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1909,
+        "target": 179,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1911,
+        "target": 1613,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1913,
+        "target": 1435,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1915,
+        "target": 1819,
+        "exponents": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1917,
+        "target": 719,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1919,
+        "target": 365,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          1,
+          1,
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "n": 1921,
+        "target": 1441,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1923,
+        "target": 541,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1925,
+        "target": 361,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1927,
+        "target": 305,
+        "exponents": [
+          1,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1929,
+        "target": 1447,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1931,
+        "target": 815,
+        "exponents": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "n": 1933,
+        "target": 725,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1935,
+        "target": 1225,
+        "exponents": [
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1937,
+        "target": 1453,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1939,
+        "target": 1091,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1941,
+        "target": 91,
+        "exponents": [
+          6
+        ]
+      },
+      {
+        "n": 1943,
+        "target": 205,
+        "exponents": [
+          1,
+          1,
+          6
+        ]
+      },
+      {
+        "n": 1945,
+        "target": 1459,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1947,
+        "target": 1387,
+        "exponents": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1949,
+        "target": 731,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1951,
+        "target": 1253,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          3,
+          2,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          3,
+          3
+        ]
+      },
+      {
+        "n": 1953,
+        "target": 1465,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1955,
+        "target": 275,
+        "exponents": [
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1957,
+        "target": 367,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1959,
+        "target": 629,
+        "exponents": [
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 1961,
+        "target": 1471,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1963,
+        "target": 1657,
+        "exponents": [
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1965,
+        "target": 737,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1967,
+        "target": 467,
+        "exponents": [
+          1,
+          1,
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "n": 1969,
+        "target": 1477,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1971,
+        "target": 1109,
+        "exponents": [
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1973,
+        "target": 185,
+        "exponents": [
+          5
+        ]
+      },
+      {
+        "n": 1975,
+        "target": 1667,
+        "exponents": [
+          1,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1977,
+        "target": 1483,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1979,
+        "target": 1253,
+        "exponents": [
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "n": 1981,
+        "target": 743,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1983,
+        "target": 1589,
+        "exponents": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          5
+        ]
+      },
+      {
+        "n": 1985,
+        "target": 1489,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1987,
+        "target": 559,
+        "exponents": [
+          1,
+          4
+        ]
+      },
+      {
+        "n": 1989,
+        "target": 373,
+        "exponents": [
+          4
+        ]
+      },
+      {
+        "n": 1991,
+        "target": 1891,
+        "exponents": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "n": 1993,
+        "target": 1495,
+        "exponents": [
+          2
+        ]
+      },
+      {
+        "n": 1995,
+        "target": 421,
+        "exponents": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "n": 1997,
+        "target": 749,
+        "exponents": [
+          3
+        ]
+      },
+      {
+        "n": 1999,
+        "target": 89,
+        "exponents": [
+          1,
+          1,
+          1,
+          3,
+          1,
+          7
+        ]
+      }
+    ]
+  },
+  "hostile_81_27": {
+    "automorphisms": [
+      81,
+      27
+    ],
+    "common_labelled_cyclic_triples": 67,
+    "two_run_mod3_ranks": [
+      24,
+      22
+    ]
+  },
+  "gates": 25658
+}
