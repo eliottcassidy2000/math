@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "lift_support": [
+    0,
+    5,
+    10,
+    15,
+    20
+  ],
+  "affine_graph_support": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      5
+    ]
+  ],
+  "arithmetic": "exact integer coefficient counts"
+}

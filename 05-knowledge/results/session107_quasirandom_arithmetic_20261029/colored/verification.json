@@ -1,0 +1,101 @@
+{
+  "arithmetic": "exact SymPy rational",
+  "checks": [
+    {
+      "commutator_max_input_degree": 3,
+      "counts": [
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "harmonic_dimensions": [
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "max_level": 4,
+      "q": 1,
+      "source_free_counts": [
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "spectra": {
+        "1": {
+          "1": 1
+        },
+        "2": {
+          "1": 1
+        },
+        "3": {
+          "0": 1,
+          "1": 1
+        },
+        "4": {
+          "0": 2,
+          "1": 1,
+          "1/4": 1
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "commutator_max_input_degree": 3,
+      "counts": [
+        1,
+        2,
+        4,
+        12,
+        48
+      ],
+      "harmonic_dimensions": [
+        1,
+        1,
+        2,
+        8,
+        36
+      ],
+      "max_level": 4,
+      "q": 2,
+      "source_free_counts": [
+        1,
+        0,
+        0,
+        4,
+        24
+      ],
+      "spectra": {
+        "1": {
+          "0": 1,
+          "1": 1
+        },
+        "2": {
+          "0": 2,
+          "1": 1,
+          "1/2": 1
+        },
+        "3": {
+          "0": 8,
+          "1": 1,
+          "1/3": 2,
+          "2/3": 1
+        },
+        "4": {
+          "0": 36,
+          "1": 1,
+          "1/2": 2,
+          "1/4": 8,
+          "3/4": 1
+        }
+      },
+      "status": "PASS"
+    }
+  ],
+  "sympy_version": "1.14.0"
+}

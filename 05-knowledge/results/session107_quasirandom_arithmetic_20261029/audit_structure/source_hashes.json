@@ -1,8 +1,22 @@
 {
-  "characters/CHARACTER_STRUCTURE.md": "56018a34a043f87a85aa7c3d84bb9060e1ea1a562ee64f2030e5f14bdb57d578",
-  "groups/GROUPS_AND_RECOVERED_PRIMES.md": "52ff2a7a24d12e1022b13005943925933ce26fb5048961a01a210668583f851e",
-  "conditioning/EUCLID_OFFSET_SYNDROMES.md": "c56447fbf3f905ffb4f79f5cb4ca110da3b586a34bbd19315ea6228eb98ad80b",
+  "CONDITIONAL_CANCELLATION.md": "abda35b49c15bbe43e62a3dfa2a2f76f2ff4b05305ed50e078610d71b37cc499",
+  "audit_structure/AUDIT.md": "803611ee446206616fdb5ee664bdbf20fc62a523ac42ba2253169853177b755e",
+  "audit_structure/check_colored.py": "2a4fe9550c5837ebd53b5f92e1c19d8bf7f5614274e5aa2f60f47418ac5cd5f8",
+  "audit_structure/check_concurrent.py": "7ef0a2504d7579ba1050773b77b0b7e36128c043f11f5e0327f69cf520cc6a53",
+  "audit_structure/check_fourier.py": "fb231e978924391ae15451d303baa105d5439c9709982358a000ac4744da2f64",
   "audit_structure/check_independent.py": "0dedcee98bfa92dedfe93fa2487e9e81e7e064bdfef89440365b0b5faca82f02",
+  "audit_structure/colored_verification.json": "2b51447784c1b6a083d5208977948530e1db21c79d136f2a2e8b0ba87ffd498b",
+  "audit_structure/concurrent_verification.json": "76ab931e5cc58333f204d7c350e14479a41e6beeb54a70fdf5fa8642dc8530c5",
+  "audit_structure/fourier_verification.json": "4f31634a38a0b777c2020b781e534925f866e0bad3596862333fee7b6653ac0a",
   "audit_structure/verification.json": "f07ddf241e198321b093597253474b87ce1285597d33199ccc28b4fb89a0236b",
-  "audit_structure/AUDIT.md": "2c713c1ab10953d3f95fc2c426330a98eedb8fdc01e1a0f14b8214fdc50f4d2b"
+  "characters/CHARACTER_STRUCTURE.md": "56018a34a043f87a85aa7c3d84bb9060e1ea1a562ee64f2030e5f14bdb57d578",
+  "colored/COLORED_RECURRENCE.md": "0357a5b34f4ace8b8a317d2313bd913d3e4401f6b07d5e02a6393a71d61721b7",
+  "colored/verification.json": "636014ce1a1a654df0ba6b910a13a0b754facd9579c69e6eee34c4abecec79e1",
+  "colored/verification.optimized.json": "636014ce1a1a654df0ba6b910a13a0b754facd9579c69e6eee34c4abecec79e1",
+  "colored/verify_colored.py": "f4c6a70d8f47cdb73c16a885a8d0227b90d1a03c4ce264b84e02db43394e2499",
+  "conditioning/EUCLID_OFFSET_SYNDROMES.md": "c56447fbf3f905ffb4f79f5cb4ca110da3b586a34bbd19315ea6228eb98ad80b",
+  "groups/GROUPS_AND_RECOVERED_PRIMES.md": "52ff2a7a24d12e1022b13005943925933ce26fb5048961a01a210668583f851e",
+  "incoming/CONCURRENT_EXTENSIONS.md": "a4b882463a37426b3204f565d3c0ec008c96ba01706058d786ebde5423b13bab",
+  "incoming/check_concurrent_extensions.py": "010cb52d7f9b1591ee63a87be7ae435b2181f2d5a5aa9b7e4f54b324c93967be",
+  "incoming/concurrent_extensions_receipt.json": "472fbdcf64c8c25ff2ce37f4649532fa77a50520d36c0b11f31a4c109a9b9961"
 }

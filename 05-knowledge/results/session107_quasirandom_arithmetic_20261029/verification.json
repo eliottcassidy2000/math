@@ -1,0 +1,81 @@
+{
+  "isolated_runs": 24,
+  "jobs": [
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "c00d6b47462c313eb4802f2e78e62283c32f7560dc1532acf7389c5a1fb4fbd6",
+      "script": "characters/verify_characters.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "711bd3b8ba8f4f4e50e357b57eaa383cd788d435c1cde7796047df4e6d412f6b",
+      "script": "conditioning/check_conditioning.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "4fd1d4b95603638671fb8eb1e41a94308278fbf61e42dee4eac60fba55e7f3b9",
+      "script": "groups/check_groups.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "ab451c112cf4e8a7e8f19a46fde442cfa45dc862ad1228292509334fb1204620",
+      "script": "orders/check_orders.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "f8593829ad8f1e75db313bed04ac1a57347ae56fa232ddd3b37c5a4344b020c2",
+      "script": "recursions/verify_recursions.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "8da993e9eec41cc840b5010bbb741174052860f28ecb9dbf10fefa9ba6666091",
+      "script": "audit_arithmetic/check_independent.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "f07ddf241e198321b093597253474b87ce1285597d33199ccc28b4fb89a0236b",
+      "script": "audit_structure/check_independent.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "4f31634a38a0b777c2020b781e534925f866e0bad3596862333fee7b6653ac0a",
+      "script": "audit_structure/check_fourier.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "472fbdcf64c8c25ff2ce37f4649532fa77a50520d36c0b11f31a4c109a9b9961",
+      "script": "incoming/check_concurrent_extensions.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "76ab931e5cc58333f204d7c350e14479a41e6beeb54a70fdf5fa8642dc8530c5",
+      "script": "audit_structure/check_concurrent.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "636014ce1a1a654df0ba6b910a13a0b754facd9579c69e6eee34c4abecec79e1",
+      "script": "colored/verify_colored.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "2b51447784c1b6a083d5208977948530e1db21c79d136f2a2e8b0ba87ffd498b",
+      "script": "audit_structure/check_colored.py"
+    }
+  ],
+  "manifest_entries": 40,
+  "relative_links": 15,
+  "scope": "Exact finite replays and hash verification; infinite claims rely on audited proofs and qualified cited inputs. No CI or Collatz convergence assertion.",
+  "status": "PASS"
+}

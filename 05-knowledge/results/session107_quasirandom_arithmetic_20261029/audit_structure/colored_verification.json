@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "q": 2,
+  "a_0_to_2": [
+    1,
+    2,
+    4
+  ],
+  "rank1_spectrum": [
+    1,
+    0
+  ],
+  "rank2_spectrum": [
+    1,
+    "1/2",
+    0,
+    0
+  ],
+  "rank2_source_free": 0,
+  "rank2_kernel_D_dimension": 2
+}

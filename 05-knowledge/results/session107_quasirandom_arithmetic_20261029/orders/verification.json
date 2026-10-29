@@ -1,0 +1,56 @@
+{
+  "affine_point_checks": 3107,
+  "clock_checks": 2366,
+  "complete_period_checks": 12,
+  "joint_subgroups": [
+    {
+      "level_one": 364,
+      "level_two": 397852,
+      "p": 1093
+    },
+    {
+      "level_one": 3510,
+      "level_two": 12323610,
+      "p": 3511
+    }
+  ],
+  "native_sources": 2880,
+  "numerical_rows": [
+    {
+      "base": 2,
+      "defect": 2,
+      "order": 364,
+      "p": 1093,
+      "quotient": 0,
+      "square_order": 364
+    },
+    {
+      "base": 3,
+      "defect": 1,
+      "order": 7,
+      "p": 1093,
+      "quotient": 312,
+      "square_order": 7651
+    },
+    {
+      "base": 2,
+      "defect": 2,
+      "order": 1755,
+      "p": 3511,
+      "quotient": 0,
+      "square_order": 1755
+    },
+    {
+      "base": 3,
+      "defect": 1,
+      "order": 270,
+      "p": 3511,
+      "quotient": 7,
+      "square_order": 947970
+    }
+  ],
+  "order_lift_checks": 172,
+  "scope": "finite checks only; all-parameter proofs in ORDERS_CARRIES_AND_CRT.md",
+  "signed_exact_words": 240,
+  "status": "PASS"
+}

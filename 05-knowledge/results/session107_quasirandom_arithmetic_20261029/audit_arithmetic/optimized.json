@@ -1,0 +1,92 @@
+{
+  "actual_word_identity_lift_checks": 16,
+  "clock_rows": [
+    [
+      1093,
+      2,
+      364,
+      364,
+      2,
+      0
+    ],
+    [
+      1093,
+      3,
+      7,
+      7651,
+      1,
+      312
+    ],
+    [
+      3511,
+      2,
+      1755,
+      1755,
+      2,
+      0
+    ],
+    [
+      3511,
+      3,
+      270,
+      947970,
+      1,
+      7
+    ]
+  ],
+  "exact_signed_words": 168,
+  "exhaustive_odd_sources": 55860,
+  "fiber_counts": [
+    [
+      3,
+      12,
+      1
+    ],
+    [
+      4,
+      12,
+      19
+    ],
+    [
+      5,
+      12,
+      361
+    ],
+    [
+      6,
+      12,
+      6859
+    ]
+  ],
+  "fourier_nonzero_checks": 6859,
+  "full_affine_checks": 83,
+  "joint_subgroups": [
+    [
+      1093,
+      364,
+      397852
+    ],
+    [
+      3511,
+      3510,
+      12323610
+    ]
+  ],
+  "periods19": [
+    4,
+    4,
+    12,
+    228,
+    4332,
+    82308
+  ],
+  "scope": "Independent finite controls; proof audit in AUDIT.md. No producer imports.",
+  "signed_clock_checks": 2023,
+  "source_sha256": {
+    "orders/ORDERS_CARRIES_AND_CRT.md": "ba5745b0c31fa9061907379e9cd577da9f306e057a5fcec2858c9694a3723b46",
+    "orders/check_orders.py": "c7d5662caf2f1452ead792333ae5a3398b46423917e6a3716d15496b265c59c2",
+    "recursions/RECURSIONS_AND_19.md": "ae3dde6b4ccbac6a63590321b3e5382115522c1053711c658866a8225e2b9211",
+    "recursions/verify_recursions.py": "e74fe366c597dee8bc0155b1c4b9b52d2c13056c65f3379eef36c3c0ce1171d2"
+  },
+  "status": "PASS"
+}

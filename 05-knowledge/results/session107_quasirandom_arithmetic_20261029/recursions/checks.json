@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "Sylvester": [
+    2,
+    3,
+    7,
+    43,
+    1807,
+    3263443,
+    10650056950807
+  ],
+  "selector": [
+    2,
+    3,
+    7,
+    43
+  ],
+  "cycle19": [
+    [
+      2,
+      3,
+      7,
+      5
+    ],
+    0
+  ],
+  "periods19_k1_to6": [
+    4,
+    4,
+    12,
+    228,
+    4332,
+    82308
+  ],
+  "low_digit_Fourier_frequencies_exactly_nonzero": 6859,
+  "g_derivative": 16575,
+  "h_defect_mod19power4": 116603,
+  "Fermat": [
+    3,
+    5,
+    17,
+    257,
+    65537,
+    4294967297
+  ],
+  "hostiles": [
+    "19 admissible mod6 but never divisor",
+    "19 dynamical square delay but not base2 Wieferich",
+    "1807 composite followed by3263443 prime",
+    "all divisors needed for selector fixed point"
+  ]
+}

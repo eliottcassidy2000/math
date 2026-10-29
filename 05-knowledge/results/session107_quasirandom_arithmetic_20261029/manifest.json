@@ -1,0 +1,106 @@
+{
+  "relative_links": [
+    [
+      "CONDITIONAL_CANCELLATION.md",
+      "characters/CHARACTER_STRUCTURE.md"
+    ],
+    [
+      "CONDITIONAL_CANCELLATION.md",
+      "recursions/RECURSIONS_AND_19.md"
+    ],
+    [
+      "CONDITIONAL_CANCELLATION.md",
+      "orders/ORDERS_CARRIES_AND_CRT.md"
+    ],
+    [
+      "CONDITIONAL_CANCELLATION.md",
+      "conditioning/EUCLID_OFFSET_SYNDROMES.md"
+    ],
+    [
+      "CONDITIONAL_CANCELLATION.md",
+      "groups/GROUPS_AND_RECOVERED_PRIMES.md"
+    ],
+    [
+      "README.md",
+      "CONDITIONAL_CANCELLATION.md"
+    ],
+    [
+      "README.md",
+      "recursions/RECURSIONS_AND_19.md"
+    ],
+    [
+      "README.md",
+      "orders/ORDERS_CARRIES_AND_CRT.md"
+    ],
+    [
+      "README.md",
+      "conditioning/EUCLID_OFFSET_SYNDROMES.md"
+    ],
+    [
+      "README.md",
+      "characters/CHARACTER_STRUCTURE.md"
+    ],
+    [
+      "README.md",
+      "groups/GROUPS_AND_RECOVERED_PRIMES.md"
+    ],
+    [
+      "README.md",
+      "colored/COLORED_RECURRENCE.md"
+    ],
+    [
+      "README.md",
+      "incoming/CONCURRENT_EXTENSIONS.md"
+    ],
+    [
+      "README.md",
+      "audit_arithmetic/AUDIT.md"
+    ],
+    [
+      "README.md",
+      "audit_structure/AUDIT.md"
+    ]
+  ],
+  "sha256": {
+    "CONDITIONAL_CANCELLATION.md": "abda35b49c15bbe43e62a3dfa2a2f76f2ff4b05305ed50e078610d71b37cc499",
+    "README.md": "d99e8bbd58913ed95470471f46b28a89b33f7fd399996f6243f6fd831a78c3da",
+    "audit_arithmetic/AUDIT.md": "061389b7134d401b946832d9974f140e8e2568fe741bb5415eafd4c4ff96faec",
+    "audit_arithmetic/check_independent.py": "84b6ae22ee0f1de9ba09fa132db25ee470b08439346a5a8bbdd6bb4675e6af7d",
+    "audit_arithmetic/normal.json": "8da993e9eec41cc840b5010bbb741174052860f28ecb9dbf10fefa9ba6666091",
+    "audit_arithmetic/optimized.json": "8da993e9eec41cc840b5010bbb741174052860f28ecb9dbf10fefa9ba6666091",
+    "audit_structure/AUDIT.md": "803611ee446206616fdb5ee664bdbf20fc62a523ac42ba2253169853177b755e",
+    "audit_structure/check_colored.py": "2a4fe9550c5837ebd53b5f92e1c19d8bf7f5614274e5aa2f60f47418ac5cd5f8",
+    "audit_structure/check_concurrent.py": "7ef0a2504d7579ba1050773b77b0b7e36128c043f11f5e0327f69cf520cc6a53",
+    "audit_structure/check_fourier.py": "fb231e978924391ae15451d303baa105d5439c9709982358a000ac4744da2f64",
+    "audit_structure/check_independent.py": "0dedcee98bfa92dedfe93fa2487e9e81e7e064bdfef89440365b0b5faca82f02",
+    "audit_structure/colored_verification.json": "2b51447784c1b6a083d5208977948530e1db21c79d136f2a2e8b0ba87ffd498b",
+    "audit_structure/concurrent_verification.json": "76ab931e5cc58333f204d7c350e14479a41e6beeb54a70fdf5fa8642dc8530c5",
+    "audit_structure/fourier_verification.json": "4f31634a38a0b777c2020b781e534925f866e0bad3596862333fee7b6653ac0a",
+    "audit_structure/source_hashes.json": "150507e9c1c559222c4e4d13de259f9f57367e01dbae3cf09ba97ec55666151e",
+    "audit_structure/verification.json": "f07ddf241e198321b093597253474b87ce1285597d33199ccc28b4fb89a0236b",
+    "characters/CHARACTER_STRUCTURE.md": "56018a34a043f87a85aa7c3d84bb9060e1ea1a562ee64f2030e5f14bdb57d578",
+    "characters/verification.json": "c00d6b47462c313eb4802f2e78e62283c32f7560dc1532acf7389c5a1fb4fbd6",
+    "characters/verify_characters.py": "ac2c30859ea0b08243a4bc1aeb9be432d49e33f206a29c7c78051f5c5ba5eb96",
+    "colored/COLORED_RECURRENCE.md": "0357a5b34f4ace8b8a317d2313bd913d3e4401f6b07d5e02a6393a71d61721b7",
+    "colored/verification.json": "636014ce1a1a654df0ba6b910a13a0b754facd9579c69e6eee34c4abecec79e1",
+    "colored/verification.optimized.json": "636014ce1a1a654df0ba6b910a13a0b754facd9579c69e6eee34c4abecec79e1",
+    "colored/verify_colored.py": "f4c6a70d8f47cdb73c16a885a8d0227b90d1a03c4ce264b84e02db43394e2499",
+    "conditioning/EUCLID_OFFSET_SYNDROMES.md": "c56447fbf3f905ffb4f79f5cb4ca110da3b586a34bbd19315ea6228eb98ad80b",
+    "conditioning/check_conditioning.py": "fd1060b1aa30aa6da4df2477771aa89683cae12ee4529dd61d69af5ee386ba60",
+    "conditioning/normal.json": "711bd3b8ba8f4f4e50e357b57eaa383cd788d435c1cde7796047df4e6d412f6b",
+    "conditioning/optimized.json": "711bd3b8ba8f4f4e50e357b57eaa383cd788d435c1cde7796047df4e6d412f6b",
+    "groups/GROUPS_AND_RECOVERED_PRIMES.md": "52ff2a7a24d12e1022b13005943925933ce26fb5048961a01a210668583f851e",
+    "groups/check_groups.json": "4fd1d4b95603638671fb8eb1e41a94308278fbf61e42dee4eac60fba55e7f3b9",
+    "groups/check_groups.py": "648e263494c3b983e5db5360d505cc59c2520e5837dcc10247e3844ad19cf571",
+    "incoming/CONCURRENT_EXTENSIONS.md": "a4b882463a37426b3204f565d3c0ec008c96ba01706058d786ebde5423b13bab",
+    "incoming/check_concurrent_extensions.py": "010cb52d7f9b1591ee63a87be7ae435b2181f2d5a5aa9b7e4f54b324c93967be",
+    "incoming/concurrent_extensions_receipt.json": "472fbdcf64c8c25ff2ce37f4649532fa77a50520d36c0b11f31a4c109a9b9961",
+    "orders/ORDERS_CARRIES_AND_CRT.md": "ba5745b0c31fa9061907379e9cd577da9f306e057a5fcec2858c9694a3723b46",
+    "orders/check_orders.py": "c7d5662caf2f1452ead792333ae5a3398b46423917e6a3716d15496b265c59c2",
+    "orders/verification.json": "ab451c112cf4e8a7e8f19a46fde442cfa45dc862ad1228292509334fb1204620",
+    "recursions/RECURSIONS_AND_19.md": "ae3dde6b4ccbac6a63590321b3e5382115522c1053711c658866a8225e2b9211",
+    "recursions/checks.json": "f8593829ad8f1e75db313bed04ac1a57347ae56fa232ddd3b37c5a4344b020c2",
+    "recursions/verify_recursions.py": "e74fe366c597dee8bc0155b1c4b9b52d2c13056c65f3379eef36c3c0ce1171d2",
+    "verify_packet.py": "57b0781c2d83a5d72b3dddf179e25a6ab41e79f2ae842f9fd6e4d574ed9d3a03"
+  }
+}

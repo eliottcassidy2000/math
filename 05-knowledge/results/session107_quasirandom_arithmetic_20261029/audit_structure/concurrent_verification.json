@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "odd_Sylvester_terms": 8,
+  "sigma_colors": 8,
+  "simplex_words": 8,
+  "Hamming_words": 16,
+  "composite_base_maps": "both verified"
+}
