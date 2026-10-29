@@ -33,7 +33,8 @@ reaches the new vertex and is reached through the old shared start.
 
 **Scope:** this substitute does not claim identical individual cursor replies,
 nor does it replay the user's 2483993/2491877 or 2899675/2906091 examples.
-Their exact witness data has not been recovered at this audit checkpoint.
+Their exact witness data was not recovered at the first audit checkpoint;
+the recovered-source audit below now verifies all four original counts.
 
 ### Arithmetic source multiplicities under regrouping
 
@@ -65,7 +66,7 @@ state-dependent couplings, not unchanged on-site physical drives.
 
 ## Reproduction
 
-Run each of the following eight scripts normally and with `python3 -O`:
+Run each of the following nine scripts normally and with `python3 -O`:
 
 1. `check_folded_independent.py`: W9 64-state recurrence, 16/35 quotients,
    rational observer ranks and all 256 named-vertex menus; **requires SymPy**.
@@ -82,16 +83,20 @@ Run each of the following eight scripts normally and with `python3 -O`:
    importing the audit flux checker and consequently repeating its 75 graphs.
 8. `check_fano_independent.py`: all 128 active subsets and the simplex-code
    distinction; standard library.
+9. `check_recovered_runs_independent.py`: all six interior orders in both
+   13-vertex contexts, all four original H counts; standard library.
 
-All eight pass both modes. Checks use explicit exceptions, not assertions.
+All nine pass both modes. Checks use explicit exceptions, not assertions.
 The current `normal.jsonl` and `optimized.jsonl` streams agree byte-for-byte.
 The scopes above use different units and are not summed into one check count.
 
-## Outstanding provenance boundary
+## Provenance boundary — resolved by later source
 
-The cited `joint_port_germs_20261028/README.md` concerns movable selector
-registers and LRC germs; it does not contain the quoted large Hamilton counts.
-A missing witness is an unverified inheritance item, not a refutation.
+The initially cited `joint_port_germs_20261028/README.md` concerns movable
+selector registers and LRC germs; it does not contain the quoted large counts.
+The subsequently available `moving_selector_atoms_20261028` packet at commit
+`eea15f5d968c8e493a809862bbfec3989d09c436` supplies the missing witness.
+The independent replay below closes this specific provenance gap.
 
 ## Additional closure audits
 
@@ -120,7 +125,7 @@ A missing witness is an unverified inheritance item, not a refutation.
   subsets have the same parity kernel as before. A full-set hyperedge changes
   one boundary coefficient and is invisible in proper occupied restrictions.
 
-These additional controls are included in the eight-script reproduction
+These additional controls are included in the nine-script reproduction
 inventory above. The hyperflux import repeats 75 graph cases; they are not
 additional independent graph instances.
 - Independent backward signatures now also replay all 256 named-vertex menus;
@@ -153,3 +158,49 @@ Normal and optimized enumeration agree.
 The current `runs/SEAM_CARRIER.md` now explicitly restricts the four-traversal
 even lower-bound argument to n≥4 and treats n2 separately as H=1, degree0.
 The previously flagged boundary issue is repaired.
+
+
+## Recovered exact ordered-run witness — FINITE-EXACT independent replay
+
+Source: `moving_selector_atoms_20261028/THEORY.md` C2, `frames.py` function
+`parity_fiber`, and `probes.py` function `singleton_run_hostile`, at commit
+`eea15f5d968c8e493a809862bbfec3989d09c436`. The receipt supplies expected values,
+but the independent checker constructs relations from the displayed children
+and recomputes the counts without importing any producer code.
+
+The strong five-vertex child is A=(10,12,9,16,7). The two singleton-run orders
+are U=(3,0,1,2,4), V=(3,0,2,1,4). Exhausting all120 vertex permutations verifies
+Aut(A)=C3 acting on0,1,2 and fixing3,4. At each of the five cursor positions,
+an automorphism fixing the two outer marks maps the U cursor to the V cursor;
+the same holds on the forest complement A^op. No single automorphism maps the
+entire ordered lists. This verifies the read-only marginal interface, not a
+language with retained extra bookmarks or arbitrary new joint queries.
+
+The quotient is C3 and its children are A,T4,T4 or A,D,D, with
+T4=(14,12,8,0), D=(2,4,9,3). For every permutation W of the middle0,1,2,
+framed by3 and4, the assembled path is
+(W0,5,9,W1,6,10,W2,7,11,W3,8,12,W4).
+The checker verifies this is a legal Hamilton path of the substituted source.
+Its native partner reverses exactly the source arcs outside the consecutive
+path seams. Strongness is checked directly by reachability for A,D, both
+sources and all12 partners. All three children are strong only in the D case.
+
+A separate 6/7 meet-in-the-middle Hamilton recurrence sums over every six-set
+S, left endpoint u and right start v with u→v; it multiplies the number of
+paths onS ending at u by paths on its complement starting at v. Each full
+Hamilton path occurs exactly once at its sixth/seventh-vertex cut. This is a
+separate assembly/counting implementation from the producer's full forward
+and backward counts.
+
+All six middle orders in both contexts agree with the supplied parity split:
+
+| context | even middle order | odd middle order |
+|---|---:|---:|
+| A,T4,T4 |2483993|2491877|
+| A,D,D |2899675|2906091|
+
+Thus the exact four user values, their legality, and their marginal/joint
+information distinction are now independently certified. The single parity
+bit is complete on this six-order fibre only, not a universal joint-carrier
+bound. `recovered_runs.normal.json` and `recovered_runs.optimized.json` match
+byte-for-byte, as do the updated combined nine-script receipts.
