@@ -1,0 +1,306 @@
+{
+  "anchor": [
+    {
+      "C": 19,
+      "append_denominator": 35,
+      "append_one": "37/35",
+      "source": "19/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "C": 31,
+      "append_denominator": 175,
+      "append_one": "221/175",
+      "source": "31/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        3,
+        3
+      ]
+    }
+  ],
+  "append_one_spectrum": {
+    "7": 1,
+    "25": 1,
+    "35": 5,
+    "175": 8
+  },
+  "checks": 73064,
+  "clock_3_7_fibre": [
+    {
+      "C": 19,
+      "append_denominator": 35,
+      "append_one": "37/35",
+      "source": "19/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        1,
+        5
+      ]
+    },
+    {
+      "C": 23,
+      "append_denominator": 175,
+      "append_one": "197/175",
+      "source": "23/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "C": 31,
+      "append_denominator": 175,
+      "append_one": "221/175",
+      "source": "31/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "C": 47,
+      "append_denominator": 175,
+      "append_one": "269/175",
+      "source": "47/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "C": 79,
+      "append_denominator": 35,
+      "append_one": "73/35",
+      "source": "79/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        5,
+        1
+      ]
+    },
+    {
+      "C": 29,
+      "append_denominator": 35,
+      "append_one": "43/35",
+      "source": "29/101",
+      "source_denominator": 101,
+      "word": [
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "C": 37,
+      "append_denominator": 175,
+      "append_one": "239/175",
+      "source": "37/101",
+      "source_denominator": 101,
+      "word": [
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "C": 53,
+      "append_denominator": 25,
+      "append_one": "41/25",
+      "source": "53/101",
+      "source_denominator": 101,
+      "word": [
+        2,
+        3,
+        2
+      ]
+    },
+    {
+      "C": 85,
+      "append_denominator": 175,
+      "append_one": "383/175",
+      "source": "85/101",
+      "source_denominator": 101,
+      "word": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "C": 49,
+      "append_denominator": 7,
+      "append_one": "11/7",
+      "source": "49/101",
+      "source_denominator": 101,
+      "word": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "C": 65,
+      "append_denominator": 175,
+      "append_one": "323/175",
+      "source": "65/101",
+      "source_denominator": 101,
+      "word": [
+        3,
+        2,
+        2
+      ]
+    },
+    {
+      "C": 97,
+      "append_denominator": 175,
+      "append_one": "419/175",
+      "source": "97/101",
+      "source_denominator": 101,
+      "word": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "C": 89,
+      "append_denominator": 35,
+      "append_one": "79/35",
+      "source": "89/101",
+      "source_denominator": 101,
+      "word": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "C": 121,
+      "append_denominator": 175,
+      "append_one": "491/175",
+      "source": "121/101",
+      "source_denominator": 101,
+      "word": [
+        4,
+        2,
+        1
+      ]
+    },
+    {
+      "C": 169,
+      "append_denominator": 35,
+      "append_one": "127/35",
+      "source": "169/101",
+      "source_denominator": 101,
+      "word": [
+        5,
+        1,
+        1
+      ]
+    }
+  ],
+  "composition_comparisons": 13260,
+  "finite_menu": {
+    "lcm": 58906925,
+    "moduli": [
+      175,
+      431,
+      781
+    ],
+    "suffixes": [
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "limitations": [
+    "No claim of minimal denominator-only state",
+    "No integer Collatz convergence or cycle exclusion theorem"
+  ],
+  "necklace_hostile": [
+    {
+      "C": 31,
+      "append_denominator": 175,
+      "append_one": "221/175",
+      "source": "31/101",
+      "source_denominator": 101,
+      "word": [
+        1,
+        3,
+        3
+      ]
+    },
+    {
+      "C": 97,
+      "append_denominator": 175,
+      "append_one": "419/175",
+      "source": "97/101",
+      "source_denominator": 101,
+      "word": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "C": 49,
+      "append_denominator": 7,
+      "append_one": "11/7",
+      "source": "49/101",
+      "source_denominator": 101,
+      "word": [
+        3,
+        1,
+        3
+      ]
+    }
+  ],
+  "prefix_count": 340,
+  "status": "FINITE-EXACT",
+  "suffix_count": 13,
+  "universe": {
+    "multipliers": [
+      3,
+      5,
+      7
+    ],
+    "prefix_lengths": [
+      1,
+      4
+    ],
+    "prefix_letters": [
+      1,
+      4
+    ],
+    "suffix_lengths": [
+      0,
+      2
+    ],
+    "suffix_letters": [
+      1,
+      3
+    ]
+  }
+}
