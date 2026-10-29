@@ -1,0 +1,10 @@
+{
+  "checks": 8596,
+  "recurrence_f_max": 30,
+  "recurrence_k_max": 20,
+  "source_pin": "d9d7e33349653b6b65dbad477841c9ed518c081a",
+  "stabilizer_k_max": 2,
+  "status": "PASS",
+  "support_f_max": 4,
+  "support_k_max": 3
+}
