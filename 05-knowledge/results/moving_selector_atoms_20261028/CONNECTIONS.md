@@ -19,6 +19,51 @@ including the six-vertex15/23 hostile. C3 does not rediscover that composition
 law: it extracts the induced component action, its exact order fiber and
 the base criterion for replacing joint order by marginal probes.
 
+### Concurrent result: a selector that writes C3 tags forces reconstruction
+
+The incoming [joint-port packet](../joint_port_germs_20261028/README.md)
+distinguishes a read-only cursor from arbitrary-position C3 substitution.
+Its latter menu already forces a discrete behavioral quotient on Hamilton
+presentations. Here is an all-size audit of the tag mechanism, credited to
+that packet rather than presented as a separate discovery.
+
+For an n-vertex presentation, choose distinct old positions i,j. Repeated
+C3 substitution builds a strongly connected tournament of any odd order
+at a selected vertex. Replace i by such a module P of order
+p=n+1+(n mod2), and j by a module Q of order q=2n+1. The final order is
+4n+(n mod2); every substitution preserves a Hamilton presentation by using
+the internal identity Hamilton path. Only the allowed C3 atom is needed.
+
+A strongly connected module cannot overlap another module without one
+containing the other. Indeed, if M overlaps Q, a vertex of M outside Q
+sees all of Q uniformly. The module condition on M then forces every
+vertex of Q outside M to see M intersect Q in one common direction. This
+is a directed cut in Q, contradicting strong connectivity.
+
+There are only n-2+p < q vertices outside Q. Thus any other module of size
+q cannot be disjoint from Q, cannot overlap it, and cannot strictly contain
+or be contained in it. Q is the unique module of that size. Contract it;
+there are then n-1 < p vertices outside P, so P is likewise the unique
+module of size p. Both modules and their order are intrinsically decoded
+from the unlabelled final tournament. Their contraction recovers
+(T;i,j), hence the direction of the chosen old arc.
+
+Any unequal identity-Hamilton presentations disagree on some old arc.
+Applying the same two-port construction exposes that disagreement, so the
+behavioral quotient for this richer language has exactly
+2^((n-1)(n-2)/2) states. Sufficiency is literal presentation storage;
+necessity is the distinguishing construction. This counts presentations,
+not A000568 isomorphism classes, and gives no new enumeration complexity
+bound. The context order is a sufficient bound, not an optimal one.
+
+We replayed its checker in ordinary and optimized Python:118 tag contexts,
+all ordered pairs and Hamilton presentations at orders2..4, plus four
+selected presentations with two pairs each at order5;944 active checks.
+This finite check supports the implementation; the preceding argument
+supplies the unbounded quantifiers. The module argument also explains why
+calling this operation a mere moving observation would lose information:
+the tournament itself has become a persistent register.
+
 The [frame theorem N1](../strong_attachment_tail_compiler_20261028/THEORY.md)
 already proves LCA transport on free frames. The new requirement is operational:
 the chosen anchors must kill the component stabilizer before individual
@@ -121,11 +166,14 @@ of Paley27 with the wreath tournament or its Bruck loop.
    sources for which both endpoint stabilizers are nontrivial; triviality
    on either complement sheet already implies reconstruction. A general
    ordered-run counterexample does not answer this narrower question.
-2. **OPEN: minimum behavioral order information for arbitrary uncoloured
-   composition.** The component-order orbit is faithfully sufficient, and
-   C2 shows its two classes are observable in one fiber. Determine whether
-   every distinct fiber class admits an uncoloured quotient-walk context
-   that distinguishes it, or find a genuine behavioral merger.
+2. **OPEN: minimum behavioral order information under supplied-run
+   quotient-walk contexts.** The component-order orbit is faithfully
+   sufficient, and C2 shows its two classes are observable in one fiber.
+   Determine whether every distinct fiber class admits such an uncoloured
+   assembly/complement context that distinguishes it, without freely
+   inserting persistent selected tags, or find a genuine behavioral merger.
+   For the richer arbitrary-position C3 language, the incoming reconstruction
+   theorem already settles the presentation minimum.
 3. **OPEN: selective frame refinement.** When an attachment requests a
    port, refine only by its stabilizer; retain common witnesses at each
    LCA. Compare this with full-base storage on the13-vertex hostile and

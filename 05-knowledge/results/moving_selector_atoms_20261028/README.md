@@ -2,9 +2,13 @@
 
 2026-10-28. **PROVED:** the scoped C1--C6 statements in [THEORY.md](THEORY.md).
 **FINITE-EXACT:** the explicit counts and declared computational universes.
-The smallest behavioral carrier for the full uncoloured strong-atom
-composition language remains OPEN; this packet proves several exact
-subproblems and an actual composition obstruction.
+The minimum depends on the allowed selector operations. Incoming
+[joint-port work](../joint_port_germs_20261028/README.md) proves full
+presentation reconstruction when arbitrary-position C3 substitutions can
+leave persistent marks. For contexts restricted to assembling supplied
+ordered runs, behavioral minimality of the faithful carrier remains OPEN.
+The distinction and the all-size tag argument are audited in
+[CONNECTIONS.md](CONNECTIONS.md).
 
 **One moving selector defeats the old nine-vertex pair.** Starting at the
 first path vertex, it separates at position2 after complement, one step
@@ -21,6 +25,11 @@ walk, using three strong children, produces strong partners with Hamilton
 counts2,899,675 and2,906,091. This is a genuine uncoloured target difference.
 The missing information is exactly one relative parity bit in this fiber.
 A persistent interior bookmark also exposes it; that is additional memory.
+Repeated selected C3 substitutions can themselves supply such memory:
+two intrinsically recognizable modules expose any chosen old arc. Thus
+the richer selector language has exactly 2^((n-1)(n-2)/2) behavioral states
+on identity-Hamilton presentations, by the incoming result. This does not
+settle the narrower read-only K_scan question.
 
 **The exact residual over an aligned pair is component ordering.** Agreement
 of the source and target reconstructs the directed linear forest. If it has

@@ -166,10 +166,13 @@ component action. Assembly expands the chosen ordered runs and adds the
 quotient hinges with multiplicity. These are the inherited exact operations.
 
 This is a sufficient closed carrier and an exact minimum for **faithful
-ordered-cover classification over a fixed aligned pair**. We have not proved
-that every distinct such class is distinguished by unrestricted uncoloured
-metagraph contexts; the coarsest behavioral quotient for that entire language
-remains OPEN. C2 shows a concrete fiber where both classes are observable.
+ordered-cover classification over a fixed aligned pair**. For contexts
+restricted to quotient-walk assembly of supplied runs and complement, we
+have not proved that every distinct such class is behaviorally distinguished.
+That restricted minimum remains OPEN. C2 shows a concrete fiber where both
+classes are observable. This is not an openness claim for every richer
+operation menu: incoming arbitrary-position C3 substitutions force complete
+Hamilton-presentation memory, as audited in CONNECTIONS.md.
 
 **Theorem C3b (PROVED).** Suppose some component anchors are retained, with
 pointwise stabilizer H<=G. The sequence of individual anchored-component

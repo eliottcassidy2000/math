@@ -22,7 +22,10 @@ def main():
            'session90_even_graphs_odd_descent_20261029/oddness/check_centralizer_path_dp.py',
            'session90_even_graphs_odd_descent_20261029/oddness/check_fixed_orbit_descent.py',
            'session90_even_graphs_odd_descent_20261029/trijection/check_tree_compression.py',
-           'session90_even_graphs_odd_descent_20261029/trijection/SPARSE_EVEN_CARRIERS.md']
+           'session90_even_graphs_odd_descent_20261029/trijection/SPARSE_EVEN_CARRIERS.md',
+           'joint_port_germs_20261028/README.md','joint_port_germs_20261028/port_core.py',
+           'joint_port_germs_20261028/check_strong_tags.py','joint_port_germs_20261028/strong_tags.json',
+           'relation_tower_frobenius_ports_20261028/check_root_switch.py']
     for name in extra:
         path=HERE.parent/name;pins[path.relative_to(ROOT).as_posix()]=digest(path)
     (HERE/'sources.json').write_text(json.dumps(dict(sorted(pins.items())),indent=2)+'\n',encoding='utf-8')

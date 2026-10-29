@@ -26,7 +26,9 @@ The action on complete component orders is free. Oddness makes all these
 component permutations even, but the choice of parity zero requires a
 reference. The base criterion quantifies over every complete ordering,
 including the transposition hostile. Faithful classification is distinct
-from the unresolved full uncoloured behavioral minimum.
+from the unresolved behavioral minimum under supplied-run quotient-walk
+contexts. Incoming persistent C3 tags settle the richer selected-substitution
+menu on Hamilton presentations; CONNECTIONS.md audits the all-size proof.
 
 C4's base lower bound uses independently rotating bottom triangles; its
 upper bound uses the full wreath-group theorem and one vertex per triangle.
@@ -70,6 +72,11 @@ translation between the two parity sheets.
 * tree_actions.py: every18248 labelled tree at orders2..7, and all1050
   tournament/tree pairs through4 for operation conjugacy. Gaussian
   elimination checks the proved ranks; this is not a Hamilton-legality census.
+* Incoming check_strong_tags.py: separately replayed118 contexts and944
+  active checks in normal and optimized Python. This is the incoming
+  implementation, not an independent algorithm. Its universe is exhaustive
+  through order4, with four chosen presentations and two ordered pairs each
+  at order5. The all-size strong-module argument is audited in CONNECTIONS.md.
 
 The atlas, field primitives, canonicalizer and DP routines have disclosed
 shared ancestry. Replaying an inherited routine is not described as an
@@ -82,6 +89,8 @@ From the repository root, standard-library Python3 suffices:
 ```text
 python -B 05-knowledge/results/moving_selector_atoms_20261028/verify.py
 python -B -O 05-knowledge/results/moving_selector_atoms_20261028/verify.py
+python -B 05-knowledge/results/joint_port_germs_20261028/check_strong_tags.py
+python -B -O 05-knowledge/results/joint_port_germs_20261028/check_strong_tags.py
 ```
 
 The verifier checks source/artifact seals, reruns every producer, compares
