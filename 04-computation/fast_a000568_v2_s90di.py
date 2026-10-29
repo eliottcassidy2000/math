@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+HISTORICAL CORRECTION (2026-10-29): both routines below sum ALL cycle types
+and therefore count simple graphs (A000088), not tournaments (A000568).
+Already at n=2 they return2 instead of1. The odd-cycle correction was present
+in the next day's a000568_turbo.py; it had not been propagated to this file.
+Preserved as an old experiment, not a current tournament implementation.
+See 05-knowledge/results/metagraph_scheduled_recursion_20261029/RECOVERY.md.
+
 fast_a000568_v2_s90di.py — Faster A000568 using {2,3,6} structure
 opus-2026-03-16-S90di
 
@@ -33,7 +40,7 @@ def partitions_grouped(n):
     yield from _gen(n, n)
 
 def T_fast(n):
-    """Fast tournament count using grouped partitions."""
+    """Historical grouped all-partition count: graphs, not tournaments."""
     if n <= 1:
         return 1
 

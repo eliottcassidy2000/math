@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-29 — propagate the March odd-cycle repair to the older purported A000568 benchmark
+
+- **Affected source:** `04-computation/fast_a000568_v2_s90di.py`, March16 S90di. Both grouped partition routines include even cycles and return2,4 at n=2,3 instead of the tournament counts1,2. Their all-partition orbit formula counts simple graphs.
+- **Precedence / repair:** the next-day `04-computation/a000568_turbo.py` already states the correct odd-cycle filter. This session adds a maintained warning to the still-unqualified older script, preserving its historical computation and crediting that existing repair. No current counting result is retracted.
+- **Failed implication / missing guard:** grouping cycle multiplicities speeds up the wrong sum unless the admissible group actions are retained. An even cycle has a power reversing an unordered pair and cannot fix a tournament.
+- **Evidence / survivor:** AST-extracted original routines reproduce the minimal witness in `05-knowledge/results/metagraph_scheduled_recursion_20261029/verify.py`; no historical top-level long benchmark is executed. Grouped gcd evaluation and integer arithmetic remain useful after the odd-cycle restriction. Historical timing ratios are not revalidated.
+
 ## 2026-10-29 — a March Bernoulli reflection omitted a divisor-prime and overgeneralized a Sylvester coincidence
 
 - **Source:** `07-reflections/bernoulli-fixed-point.md`, kind-pasteur March16 S116n32, recovered while searching earlier uses of12 and22.

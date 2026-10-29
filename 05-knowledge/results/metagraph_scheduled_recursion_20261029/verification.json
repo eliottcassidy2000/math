@@ -1,0 +1,217 @@
+{
+  "precision_comparisons": 3402,
+  "term_checks": 10367,
+  "channels": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "scheduled": [
+    {
+      "bound": 0,
+      "transitions": 1,
+      "reference_transitions": 0,
+      "hash": "a03279d346f550999209e77159c3bc678a1e3c9455e2815280078b65d671dfe3"
+    },
+    {
+      "bound": 1,
+      "transitions": 2,
+      "reference_transitions": 2,
+      "hash": "e54dd181aad67a0da39c83782db08b8814ddf0dd80cf7789f7206cbf793ddabd"
+    },
+    {
+      "bound": 2,
+      "transitions": 3,
+      "reference_transitions": 3,
+      "hash": "0b82a5a662fb81e2548942a1b7662356d12fd60fd92a936dde552c31e4ec5555"
+    },
+    {
+      "bound": 3,
+      "transitions": 7,
+      "reference_transitions": 7,
+      "hash": "69e16106044837876ab4313dc5b3df705f1382c73fca7d3bdc7998ab63e4a93d"
+    },
+    {
+      "bound": 10,
+      "transitions": 57,
+      "reference_transitions": 62,
+      "hash": "fc2a89838c66628316c0a716f75037916591933b6b1427b91ba68d96453e8cd9"
+    },
+    {
+      "bound": 30,
+      "transitions": 1190,
+      "reference_transitions": 1271,
+      "hash": "9764a97e2811e201cb89facd72ee3eab34465afe039b1f497c6ff2ed01be1737"
+    },
+    {
+      "bound": 60,
+      "transitions": 11927,
+      "reference_transitions": 12468,
+      "hash": "e09e23bae87826fd596996f7185422d7bcd5ec8dd62b0e2a035e70a03330a6af"
+    },
+    {
+      "bound": 100,
+      "transitions": 87000,
+      "reference_transitions": 90219,
+      "hash": "7eb4f8f773a21ac6d27d5f7ac8388b39b702a1b5ffcb8fa9ce6132e6c70b8dcf"
+    },
+    {
+      "bound": 150,
+      "transitions": 582239,
+      "reference_transitions": 601461,
+      "hash": "5c4c6abecf768584bae32da37212b4b7baab0802f26533479ec341fbd5e06adb"
+    },
+    {
+      "bound": 200,
+      "transitions": 2905899,
+      "reference_transitions": 2994814,
+      "hash": "9af268c41ca0ac8eb1407ae98654f7998b37ca2fa7d8ab94ef26653a7c6c663e"
+    }
+  ],
+  "literal_root_resets": [
+    {
+      "n": 1,
+      "classes": 1,
+      "pointed": 1,
+      "trace": 1
+    },
+    {
+      "n": 2,
+      "classes": 1,
+      "pointed": 2,
+      "trace": 2
+    },
+    {
+      "n": 3,
+      "classes": 2,
+      "pointed": 4,
+      "trace": 6
+    },
+    {
+      "n": 4,
+      "classes": 4,
+      "pointed": 12,
+      "trace": 16
+    },
+    {
+      "n": 5,
+      "classes": 12,
+      "pointed": 48,
+      "trace": 60
+    }
+  ],
+  "bank_orders_checked": 10,
+  "hostile": {
+    "orders": [
+      81,
+      27
+    ],
+    "transport": [
+      27,
+      0
+    ],
+    "cyclic_triples": 67
+  },
+  "large_partial_outputs": [
+    {
+      "n": 1001,
+      "bits": 5,
+      "r": 1,
+      "s": 0,
+      "residue": 11,
+      "stats": {
+        "base": 500,
+        "cycle_cap": 3,
+        "visited": 21001,
+        "retained": 16229,
+        "by_cycles": {
+          "1": {
+            "visited": 1,
+            "retained": 1
+          },
+          "3": {
+            "visited": 21000,
+            "retained": 16228
+          }
+        },
+        "shortcut": null
+      }
+    },
+    {
+      "n": 1001,
+      "bits": 6,
+      "r": 2,
+      "s": 1,
+      "residue": 57,
+      "stats": {
+        "base": 1001,
+        "cycle_cap": 3,
+        "visited": 0,
+        "retained": 0,
+        "shortcut": "sharp_first_correction"
+      }
+    },
+    {
+      "n": 1000001,
+      "bits": 2,
+      "r": 1,
+      "s": 0,
+      "residue": 3,
+      "stats": {
+        "base": 500000,
+        "cycle_cap": 3,
+        "visited": 0,
+        "retained": 0,
+        "shortcut": "sharp_first_correction"
+      }
+    },
+    {
+      "n": 1000001,
+      "bits": 6,
+      "r": 2,
+      "s": 1,
+      "residue": 33,
+      "stats": {
+        "base": 1000001,
+        "cycle_cap": 3,
+        "visited": 0,
+        "retained": 0,
+        "shortcut": "sharp_first_correction"
+      }
+    }
+  ],
+  "historical_wrong_counts": [
+    2,
+    4
+  ],
+  "sources": {
+    "05-knowledge/results/session105_metagraph_recursion_20261029/enumeration/baseline87.py": "3844a4a590daaf01410cf99d3584441bfa2f8e5e95371ccaafe534fd152b0ece",
+    "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/counting/channels.py": "38e7c86cb3c9405cd1661ed3cd4463067e5a6a6a288d5145a26761aaac6c1bb9",
+    "05-knowledge/results/consecutive_flags_order10_20261028/generation.json": "bd57327c0b9640a7a13b5038bed1c63d8dfe7edbcf9348e6f428e2177c2b2d3c"
+  }
+}
