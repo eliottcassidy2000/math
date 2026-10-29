@@ -1,0 +1,202 @@
+{
+  "amplitude_checks_through": 50,
+  "checks": 1754,
+  "factorial_checks_through": 300,
+  "finite_orbits": {
+    "1": {
+      "first_edges": [
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "odd_edges": 1,
+      "ordinary_clock": 3
+    },
+    "11": {
+      "first_edges": [
+        [
+          11,
+          1,
+          17
+        ],
+        [
+          17,
+          2,
+          13
+        ],
+        [
+          13,
+          3,
+          5
+        ],
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "odd_edges": 4,
+      "ordinary_clock": 14
+    },
+    "27": {
+      "first_edges": [
+        [
+          27,
+          1,
+          41
+        ],
+        [
+          41,
+          2,
+          31
+        ],
+        [
+          31,
+          1,
+          47
+        ],
+        [
+          47,
+          1,
+          71
+        ],
+        [
+          71,
+          1,
+          107
+        ]
+      ],
+      "odd_edges": 41,
+      "ordinary_clock": 111
+    },
+    "3": {
+      "first_edges": [
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "odd_edges": 2,
+      "ordinary_clock": 7
+    },
+    "5": {
+      "first_edges": [
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "odd_edges": 1,
+      "ordinary_clock": 5
+    },
+    "7": {
+      "first_edges": [
+        [
+          7,
+          1,
+          11
+        ],
+        [
+          11,
+          1,
+          17
+        ],
+        [
+          17,
+          2,
+          13
+        ],
+        [
+          13,
+          3,
+          5
+        ],
+        [
+          5,
+          4,
+          1
+        ]
+      ],
+      "odd_edges": 5,
+      "ordinary_clock": 16
+    },
+    "871": {
+      "first_edges": [
+        [
+          871,
+          1,
+          1307
+        ],
+        [
+          1307,
+          1,
+          1961
+        ],
+        [
+          1961,
+          2,
+          1471
+        ],
+        [
+          1471,
+          1,
+          2207
+        ],
+        [
+          2207,
+          1,
+          3311
+        ]
+      ],
+      "odd_edges": 65,
+      "ordinary_clock": 178
+    },
+    "97": {
+      "first_edges": [
+        [
+          97,
+          2,
+          73
+        ],
+        [
+          73,
+          2,
+          55
+        ],
+        [
+          55,
+          1,
+          83
+        ],
+        [
+          83,
+          1,
+          125
+        ],
+        [
+          125,
+          3,
+          47
+        ]
+      ],
+      "odd_edges": 43,
+      "ordinary_clock": 118
+    }
+  },
+  "five_x_plus_one_cycle": [
+    13,
+    33,
+    83
+  ],
+  "no_claim": "Finite controls and readout conjugacy do not prove Collatz convergence.",
+  "status": "PASS"
+}
