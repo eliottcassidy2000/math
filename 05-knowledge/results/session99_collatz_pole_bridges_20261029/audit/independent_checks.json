@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "source_cylinders": 1020,
+  "coefficient_comparisons": 180,
+  "banks": [
+    {
+      "k": 0,
+      "cores": 1,
+      "order": 1
+    },
+    {
+      "k": 1,
+      "cores": 1,
+      "order": 4
+    },
+    {
+      "k": 2,
+      "cores": 2,
+      "order": 7
+    },
+    {
+      "k": 3,
+      "cores": 3,
+      "order": 10
+    },
+    {
+      "k": 4,
+      "cores": 5,
+      "order": 13
+    },
+    {
+      "k": 5,
+      "cores": 7,
+      "order": 16
+    },
+    {
+      "k": 6,
+      "cores": 11,
+      "order": 19
+    },
+    {
+      "k": 7,
+      "cores": 15,
+      "order": 22
+    },
+    {
+      "k": 8,
+      "cores": 22,
+      "order": 25
+    },
+    {
+      "k": 9,
+      "cores": 30,
+      "order": 28
+    },
+    {
+      "k": 10,
+      "cores": 42,
+      "order": 31
+    }
+  ],
+  "hostile_5x_plus_1": {
+    "cycle": [
+      13,
+      33,
+      83
+    ],
+    "digits": [
+      1,
+      1,
+      5
+    ],
+    "unit_cycle": [
+      1,
+      3
+    ]
+  }
+}
