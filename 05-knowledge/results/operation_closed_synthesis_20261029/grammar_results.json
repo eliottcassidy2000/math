@@ -1,0 +1,361 @@
+{
+  "max_word_length": 8,
+  "right_context_classes": [
+    {
+      "depth": 1,
+      "eligible_prefixes": 1596,
+      "classes": 5,
+      "representatives": [
+        {
+          "representative": "",
+          "count": 183,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 1
+          }
+        },
+        {
+          "representative": "c",
+          "count": 326,
+          "type": "A",
+          "unimodular": true,
+          "one_step": {
+            "a": 1,
+            "b": 1,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        },
+        {
+          "representative": "e",
+          "count": 226,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 0
+          }
+        },
+        {
+          "representative": "ee",
+          "count": 578,
+          "type": "B",
+          "unimodular": false,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 0,
+            "d": 0,
+            "e": 0
+          }
+        },
+        {
+          "representative": "eec",
+          "count": 283,
+          "type": "A",
+          "unimodular": false,
+          "one_step": {
+            "a": 0,
+            "b": 0,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        }
+      ]
+    },
+    {
+      "depth": 2,
+      "eligible_prefixes": 609,
+      "classes": 5,
+      "representatives": [
+        {
+          "representative": "",
+          "count": 82,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 1
+          }
+        },
+        {
+          "representative": "c",
+          "count": 144,
+          "type": "A",
+          "unimodular": true,
+          "one_step": {
+            "a": 1,
+            "b": 1,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        },
+        {
+          "representative": "e",
+          "count": 100,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 0
+          }
+        },
+        {
+          "representative": "ee",
+          "count": 195,
+          "type": "B",
+          "unimodular": false,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 0,
+            "d": 0,
+            "e": 0
+          }
+        },
+        {
+          "representative": "eec",
+          "count": 88,
+          "type": "A",
+          "unimodular": false,
+          "one_step": {
+            "a": 0,
+            "b": 0,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        }
+      ]
+    },
+    {
+      "depth": 3,
+      "eligible_prefixes": 232,
+      "classes": 5,
+      "representatives": [
+        {
+          "representative": "",
+          "count": 37,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 1
+          }
+        },
+        {
+          "representative": "c",
+          "count": 63,
+          "type": "A",
+          "unimodular": true,
+          "one_step": {
+            "a": 1,
+            "b": 1,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        },
+        {
+          "representative": "e",
+          "count": 44,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 0
+          }
+        },
+        {
+          "representative": "ee",
+          "count": 63,
+          "type": "B",
+          "unimodular": false,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 0,
+            "d": 0,
+            "e": 0
+          }
+        },
+        {
+          "representative": "eec",
+          "count": 25,
+          "type": "A",
+          "unimodular": false,
+          "one_step": {
+            "a": 0,
+            "b": 0,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        }
+      ]
+    },
+    {
+      "depth": 4,
+      "eligible_prefixes": 88,
+      "classes": 5,
+      "representatives": [
+        {
+          "representative": "",
+          "count": 17,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 1
+          }
+        },
+        {
+          "representative": "c",
+          "count": 27,
+          "type": "A",
+          "unimodular": true,
+          "one_step": {
+            "a": 1,
+            "b": 1,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        },
+        {
+          "representative": "e",
+          "count": 19,
+          "type": "B",
+          "unimodular": true,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 1,
+            "d": 1,
+            "e": 0
+          }
+        },
+        {
+          "representative": "ee",
+          "count": 19,
+          "type": "B",
+          "unimodular": false,
+          "one_step": {
+            "a": -1,
+            "b": -1,
+            "c": 0,
+            "d": 0,
+            "e": 0
+          }
+        },
+        {
+          "representative": "eec",
+          "count": 6,
+          "type": "A",
+          "unimodular": false,
+          "one_step": {
+            "a": 0,
+            "b": 0,
+            "c": -1,
+            "d": -1,
+            "e": -1
+          }
+        }
+      ]
+    }
+  ],
+  "coarse_state_hostile": {
+    "order": 5,
+    "left": {
+      "bits": "1000100101",
+      "word": "e",
+      "type": "B",
+      "det_plus": 1,
+      "det_minus": 1,
+      "det": 1
+    },
+    "right": {
+      "bits": "1000100111",
+      "word": "d",
+      "type": "B",
+      "det_plus": 1,
+      "det_minus": 1,
+      "det": 1
+    },
+    "append": "e",
+    "left_child": {
+      "bits": "100001000100101",
+      "word": "ee",
+      "type": "B",
+      "det_plus": 16,
+      "det_minus": 0,
+      "det": 0
+    },
+    "right_child": {
+      "bits": "100001000101111",
+      "word": "de",
+      "type": "B",
+      "det_plus": 1,
+      "det_minus": 1,
+      "det": 1
+    }
+  },
+  "singular_to_unimodular": [],
+  "forbidden_word_criterion": {
+    "scope": "all 4180 grammar words through length 8",
+    "forbidden_subwords": [
+      "be",
+      "ee"
+    ],
+    "violations": [],
+    "status": "FINITE-EXACT; arbitrary lengths OPEN"
+  },
+  "count_recurrence": {
+    "formula": "u_n=2*u_(n-1)+u_(n-2)-u_(n-3)",
+    "initial": {
+      "4": 1,
+      "5": 3,
+      "6": 7
+    },
+    "tested": {
+      "4": 1,
+      "5": 3,
+      "6": 7,
+      "7": 16,
+      "8": 36,
+      "9": 81,
+      "10": 182,
+      "11": 409,
+      "12": 919
+    },
+    "next_prediction": 2065,
+    "prediction_order": 13,
+    "status": "PROVED for pattern-avoiding grammar words; CONDITIONAL for unimodular observers at arbitrary order"
+  }
+}

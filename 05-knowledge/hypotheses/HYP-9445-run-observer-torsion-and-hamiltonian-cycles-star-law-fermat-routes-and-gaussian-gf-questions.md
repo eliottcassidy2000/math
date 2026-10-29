@@ -22,6 +22,20 @@ related:
 
 # HYP-9445 — run-observer torsion and Hamiltonian cycles, the star law, Fermat routes, Gaussian-GF questions
 
+**2026-10-29 continuation, FINITE-EXACT:**
+[operation-closed synthesis](../results/operation_closed_synthesis_20261029/README.md)
+implements the classical unique-cycle insertion grammar and checks all 4,180
+classes at orders 4--12. The order 10 prediction 182 is confirmed; orders 11 and12
+give 409 and919. Every determinant remains 0 or+/-1. In the packet's five-letter
+grammar, unimodularity is exactly avoidance of `be` and `ee` throughout this
+range. That language has a proved three-state productive transfer and the
+candidate recurrence below; its equivalence with the actual observer at
+arbitrary order is **OPEN**. The next forecast is 2,065 at order 13. These are
+determinant counts, not a new complete Smith-torsion census. In particular
+the order 6 singular torsion-free exception is retained. This does not extend
+the HC>=2 census or prove item(1). The older failed 80 and then182 forecasts
+below remain as provenance;182 is no longer an untested prediction.
+
 `M_k(T)` is the ordered `k`-run observer (THM-4846 §0): spanning covers of `T` by `k` directed paths with prescribed
 starts and ends, which are the base path of a metagraph tiling cut into `k` runs. "Torsion-free" means every nonzero
 invariant factor of `M_k(T)` equals 1.

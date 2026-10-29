@@ -1,0 +1,193 @@
+{
+  "source_revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+  "sources": [
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "01-canon/theorems/THM-1185-delsarte-lp-impossible.md",
+      "sha256": "e38eda0c57b9708216e3c92deeaee730fc5e518c6de76ce247cc44b0be6e383f",
+      "bytes": 4619,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "01-canon/theorems/THM-1825-lrc-as-a-moment-nullcone.md",
+      "sha256": "b0a92a98589c32073c5c6107eada2d38f135b3efda9d95c376fe6627d9885749",
+      "bytes": 7050,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "01-canon/theorems/THM-2058-primitive-phase-packets-and-deck-fan-intervals.md",
+      "sha256": "d0dc88577a740dd3e62b1342f03b925d265b795f284c9bbb87d4fc68ad464981",
+      "bytes": 19379,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "01-canon/theorems/THM-4846-run-observers-of-tournaments-the-nauru-orientation-the-permanental-compound-t5-stars-and-the-ghost-lemma-behind-its-four-spurious-z6-factors.md",
+      "sha256": "217d05f51d1ca54f83fabfbc134cc66a41361f81077bd157150426a8dc6580db",
+      "bytes": 24834,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "04-computation/experiments/growth_gf_runs_fermat_20261029/audit2/alib.py",
+      "sha256": "c9af2a31078d3105399699f5d44f7f0f31a48ac69a3cc6b2ec334de90e93b408",
+      "bytes": 8847,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "04-computation/experiments/growth_gf_runs_fermat_20261029/runs.py",
+      "sha256": "ee34b1ea9965b525e65c9d7221ef89e26fe634d0f3bba4a7974c5defd9c69484",
+      "bytes": 7092,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/hypotheses/HYP-9445-run-observer-torsion-and-hamiltonian-cycles-star-law-fermat-routes-and-gaussian-gf-questions.md",
+      "sha256": "801ac7ba7acbbed73172a3f66e8ca9fcc2108307abd3cf35c479b6980c13fd6e",
+      "bytes": 13150,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/algorithmic_collatz_measure_20261005.md",
+      "sha256": "7d0a0b5ccbb49325272bfe508da49f8f3ed31b1715c569b3ae28460b15288551",
+      "bytes": 19137,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/clock101_joint_ports_20261029/README.md",
+      "sha256": "af8dfa706aeb9d1ce5cb0d62e8d6b27847e4a1e16b0853bb12c0428e50658baf",
+      "bytes": 20932,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/cursor_cm_phase_20261028/SYNTHESIS.md",
+      "sha256": "5280171e1c19c3dbcba052bc9108d45753ffaec7c241aa717fd6ecbe8f155190",
+      "bytes": 8078,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/four_vertex_glue_fermat_20261029/README.md",
+      "sha256": "f4e7d103fa3a70c49e3c0b410c3c01bdd3a7602765a182b74fdb9432e2900023",
+      "bytes": 16749,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/four_vertex_glue_fermat_20261029/verify.py",
+      "sha256": "7c121144c5d2e86abb14713e05a45437609f937e11a9b4b6da60d49a45f62b40",
+      "bytes": 16386,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/lucas_mirror_gap_spaces_20261028/GAP_TOPOLOGY.md",
+      "sha256": "e514bd072a6473da7f6639b3951cf7adb3d6964fdf9fb9767d9148accd67ecca",
+      "bytes": 9862,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/overnight_rank_return_20261029/two_run.json",
+      "sha256": "9ffafb8bd24517f782d392107d0bb0975639622bd1e20a698a9fceb83c1e4f0f",
+      "bytes": 592034,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/session102_tournament_classification_20261029/grammar/RESULT.md",
+      "sha256": "b685f5e2dd29fcfb3af20d327a27b0c86949479dd25b893b5ccfc95eefe176cb",
+      "bytes": 12114,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/session102_tournament_classification_20261029/metagraph/CAYLEY_QUOTIENT.md",
+      "sha256": "b7880e1a8d3c8696d53da488f76884469e32d904a619e361331032061066c0e4",
+      "bytes": 10547,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/session102_tournament_classification_20261029/metagraph/SIGN_GRAMMAR.md",
+      "sha256": "4047f6056f2a6b48c24efc731e7622b11ef53f23aa6864fbe05e46567dbe50b7",
+      "bytes": 17946,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/session94_recursive_ports_crt_clocks_20261029/README.md",
+      "sha256": "0743481f29f78a0f5949fa458d55eb20c19febb9274a5f2ace18f0265c8a18a6",
+      "bytes": 10870,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/composition/QUOTIENT_EXTENSION.md",
+      "sha256": "3e14234d46e0c410ef72f5a85c3e27023d5fe14cdf792e1c239135b7b242d46f",
+      "bytes": 7437,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "4f53ff2859d8c79ec417d441b74777d9e6f3b8bc",
+      "path": "05-knowledge/results/unifying_binary_dependence_free_bits_7_15_56_20261028/README.md",
+      "sha256": "e2c788b7809ddf6fd1901a545ee82bd66df0c4aa8827f28b3499b8719b2a7d9f",
+      "bytes": 35534,
+      "scope": "targeted passages inspected; not a full independent audit"
+    },
+    {
+      "revision": "75bd8b27b6dd17875ab6c06b563aaef9c88c7a9f",
+      "path": "05-knowledge/results/cycle101_tournament_collatz_dictionary_20261029.md",
+      "sha256": "1600329309a7f92b6213f29f26dc23760d1d8dfa7e74cef893e1cc846a7bc605",
+      "bytes": 20856,
+      "scope": "incoming status/change inspected; not a proved dependency"
+    },
+    {
+      "revision": "75bd8b27b6dd17875ab6c06b563aaef9c88c7a9f",
+      "path": "05-knowledge/hypotheses/HYP-9446-circulant-collatz-dictionary-and-multiplier-descent-open-questions.md",
+      "sha256": "05c4f8656cc5dd1f8787d6d27488b7b5b7beb13d766efe8b1e36d060a91e48bc",
+      "bytes": 8117,
+      "scope": "incoming status/change inspected; not a proved dependency"
+    },
+    {
+      "revision": "75bd8b27b6dd17875ab6c06b563aaef9c88c7a9f",
+      "path": "05-knowledge/results/session102_tournament_classification_20261029/switching/SIGNED_CUTS_AND_SIMPLE_SYMMETRY.md",
+      "sha256": "60fe8c43973587e35a6f23a1eabd53e8f5049300919e531947f2590bce49ca17",
+      "bytes": 9075,
+      "scope": "incoming status/change inspected; not a proved dependency"
+    }
+  ],
+  "replay": {
+    "tournament_results.json": {
+      "sha256": "e3c88c6de6ca81c2e82d7462a15552cea68e407a2972802746f14ac6818b4b75",
+      "bytes": 998408,
+      "normal_optimized_identical": true
+    },
+    "audit_results.json": {
+      "sha256": "c564391c0bc5450c7182bd7ac5aea1e779a923b5f1ebcbbf94f829c3fe691e9a",
+      "bytes": 16897,
+      "normal_optimized_identical": true
+    }
+  },
+  "primary_literature": [
+    {
+      "author": "Michael R. Shelor",
+      "title": "On Tournaments Having A Unique Hamiltonian Circuit",
+      "date": "May 1977",
+      "url": "https://paperzz.com/doc/7419910/shelor--m.r.%3B--1977-.on-tournaments-having-a-unique-hamil...",
+      "inspected": "primary manuscript text mirror, sections2--5 and Theorem4; PDF access attempts failed"
+    },
+    {
+      "authors": "Gutin, Rafiey, Yeo",
+      "title": "On n-partite tournaments with unique n-cycle",
+      "url": "https://www.cs.rhul.ac.uk/~gutin/paperstsp/ucycle22.pdf",
+      "inspected": "introduction and references; Garey attribution confirmation, not a new imported theorem"
+    }
+  ]
+}
