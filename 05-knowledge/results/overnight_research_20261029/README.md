@@ -13,12 +13,23 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [All-modulus and finite-field carriers](DYADIC_AND_FIELD_PORTS.md):
+  K(2^k)=5*2^(3k-6) for k>=3 completes the CRT formula at every modulus.
+  Explicit parent maps show unequal branching at8-to16, then uniform
+  eight-branching. Two extra observation bits suffice sharply for full
+  dyadic source recovery. Over F64 and F256, three queries instead
+  recover every state; all262,144 and16,777,216 states were decoded.
+- [Fully named paired ports](MARKED_CLOCK_PORTS.md): retaining four
+  named generator classes and the pairing gives minimal carrier(d,e,a,b),
+  including both source signs. Legal cross probes recover the factors;
+  the induced clock is T^(-T). This is a formal matrix-family theorem,
+  not a Selmer or Sha realization.
 - [Eisenstein clock joins](EISENSTEIN_CLOCK_JOINS.md): matched irreducible
   ternary clocks force the cross determinant a^2+ab+b^2. A divisor/Mobius
   formula classifies every attainable paired type; from d=e=3, H5 occurs
   while H11,H25,H27,H57 do not. Closed response carriers are (de,a,b) for
   determinants and (de,gcd(d,e),a,b) for UNMARKED paired-group outputs.
-  Named cokernel ports require more information. Complete modular response
+  Named cokernel ports require the information recovered above. Complete modular response
   counts satisfy K(3^k)=7*27^(k-1) and compatible CRT, including K(76)=54872.
 - [Finite-clock recovery](FINITE_CLOCK_PORTS.md): for all integer invariant
   couplings, legal orbit sums recover every invariant Gram coordinate.
@@ -92,6 +103,8 @@ Run from this directory, or give each file's repository-relative path:
     python -B finite_clock_ports.py
     python -B eisenstein_clock_joins.py
     python -B clock_join_precision.py
+    python -B dyadic_field_ports.py
+    python -B marked_clock_ports.py
 
 The producer has 634,725 active gates; the alternate audit has 33,082,
 and the weighted recurrence has 3,031. Exact universe and hostile details
@@ -114,3 +127,8 @@ guard intact; it passes125,459 checks and rejects six hostile mutations.
 
 Continue from [HANDOFF](HANDOFF.md). Sources, completed tests and remaining
 arithmetic obligations are preserved there for the overnight continuations.
+
+The second continuation adds17,803,214 active gates for dyadic and field
+responses and66,732 for fully named pairings. Both pass normally and
+optimized with identical receipts. The previous modular checker's OPEN
+metadata has been superseded by the all-order dyadic proof.

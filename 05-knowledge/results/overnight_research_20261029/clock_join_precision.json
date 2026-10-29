@@ -162,5 +162,5 @@
   ],
   "crt_proved_count_228": 384104,
   "scope": "complete modular determinant functions; no exact singularity flag",
-  "dyadic_all_order_status": "OPEN beyond the stated finite census"
+  "dyadic_all_order_status": "PROVED in DYADIC_AND_FIELD_PORTS.md; this script retains the original finite census"
 }

@@ -1,0 +1,6 @@
+{
+  "script": "dyadic_field_ports.py",
+  "normal_optimized_identical": true,
+  "stdout_sha256": "bddff2c227bad09cbee6c19131cee07819af5c550b50a4dfa1b8e9d9802b225e",
+  "gates": 17803214
+}

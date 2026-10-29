@@ -1,0 +1,6 @@
+{
+  "script": "marked_clock_ports.py",
+  "normal_optimized_identical": true,
+  "stdout_sha256": "e81543aeae15d47550927cea47271122b02482595ed47fe88ea52f1e01fdf843",
+  "gates": 66732
+}

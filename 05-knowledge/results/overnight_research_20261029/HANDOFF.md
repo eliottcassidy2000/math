@@ -47,6 +47,20 @@ law K(3^k)=7*27^(k-1). It also explains exactly which extra internal probe
 reads the forgotten source factors. These are scoped weighted-form results.
 The 81/27 and A000568-through20 controls were replayed unchanged.
 
+The second hourly continuation closes two more obligations:
+[DYADIC_AND_FIELD_PORTS](DYADIC_AND_FIELD_PORTS.md) proves the complete
+all-modulus response count, including K(2^k)=5*2^(3k-6) for k>=3.
+It supplies coordinate equivalence, exact refinement branching and the
+sharp two-extra-bit reconstruction bound. Do not repeat the now-closed
+dyadic census as an open search. Over F64/F256 three field queries recover
+all states, unlike the integer rings of the same sizes; the checker
+decodes all262,144 and16,777,216 field triples.
+[MARKED_CLOCK_PORTS](MARKED_CLOCK_PORTS.md) proves that the fully named
+paired-group carrier is(d,e,a,b), including source signs. Eleven branch
+observations suffice; there is no single-run survival claim at singular
+probes. The induced clock on cokernel classes is T^(-T). These are exact
+formal matrix-family results, not an arithmetic Selmer realization.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -92,11 +106,13 @@ then their targeted proofs. Recent Session97 additions include:
    The matched irreducible-C3 cross-block case is also closed for the
    stated determinant and UNMARKED paired-group outputs: retain phase(a,b),
    source product de and gcd(d,e) as specified in EISENSTEIN_CLOCK_JOINS.
-   Next audit named cokernel classes and induced finite-group clock action;
-   the example(1,36) versus(4,9) separates them immediately by port order.
-   For modular determinant observations the ternary recurrence is proved.
-   The dyadic census K(2),K(4),K(8),K(16)=8,8,40,320 is FINITE-EXACT;
-   prove or refute its all-order pattern before using it in CRT counts.
+   Named cokernel classes, induced clocks and every integer observation
+   modulus are NOW CLOSED for the explicit matched C3 family; see the
+   two second-continuation notes above. The next test is whether a native
+   strong-atom attachment language realizes a separating probe family,
+   with original ports, integral gluing and complemented target relation
+   retained. Keep branching experiments separate from a supplied single
+   run that terminates at singularity. No native minimality follows yet.
 2. Replace abstract paired-group realization by an actual source-fixed
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with

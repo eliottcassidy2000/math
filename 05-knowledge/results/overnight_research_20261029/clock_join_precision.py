@@ -79,7 +79,7 @@ def main():
     need(counts[3] != 3**3 and counts[9] != 9**3, 'ternary faithfulness hostile')
     out = {'gates':GATES,'rows':rows,'crt_proved_count_228':8*7*19**3,
            'scope':'complete modular determinant functions; no exact singularity flag',
-           'dyadic_all_order_status':'OPEN beyond the stated finite census'}
+           'dyadic_all_order_status':'PROVED in DYADIC_AND_FIELD_PORTS.md; this script retains the original finite census'}
     Path(__file__).with_suffix('.json').write_text(json.dumps(out,indent=2)+'\n')
     print(json.dumps(out,indent=2))
 

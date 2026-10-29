@@ -1,0 +1,14 @@
+{
+  "gates": 66732,
+  "nonsingular_sources_decoded": 3512,
+  "source_range": "d,e=-6..6 nonzero; a,b=-2..2",
+  "singular_branch_probe_values": 376,
+  "wrong_primal_clock_pairing_failures": 2472,
+  "minimal_carrier": [
+    "d",
+    "e",
+    "a",
+    "b"
+  ],
+  "scope": "four named generators, exact pairing, known induced dual clock; branching experiments"
+}

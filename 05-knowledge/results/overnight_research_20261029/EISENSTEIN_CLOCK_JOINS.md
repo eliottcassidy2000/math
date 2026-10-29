@@ -265,9 +265,12 @@ eight states in each fiber. It follows, for example, that
     K(228)=8*7*19^3=384104.
 
 These are exact complete-response counts for this arithmetic attachment
-language, not the earlier125 tournament chart choices. At moduli8 and16,
-the new finite census gives40 and320 classes; an all-order dyadic formula
-is deliberately left OPEN here.
+language, not the earlier125 tournament chart choices. The original
+finite census gives40 and320 classes at8 and16. The subsequent
+[dyadic proof and field comparison](DYADIC_AND_FIELD_PORTS.md) now closes
+the all-order formula: K(2^k)=5*2^(3k-6) for k>=3, with explicit
+coordinate classes, exceptional refinement branches and the complete
+CRT formula at every integer modulus.
 
 The5-by5 grid is sufficient for comparing complete functions over any
 modulus, even when it does not recover polynomial coefficients: fifth
@@ -298,10 +301,13 @@ does not bound the prime support of Sha for a fixed arithmetic source.
 An actual compatible descent/isogeny map is still required. No Sha-finiteness,
 native tournament complement, moonshine or Collatz claim follows.
 
-Next: prove or refute the dyadic precision pattern and supply a cross-source
-arithmetic map. The internal-block probe above already reads d,e; named
-cokernel classes and their induced clock action must be audited separately
-before claiming a fully marked arithmetic carrier.
+The dyadic precision pattern is now proved in the linked continuation.
+[Fully named paired ports](MARKED_CLOCK_PORTS.md) also closes the labelled
+cokernel question in this explicit matrix family: the minimal carrier is
+(d,e,a,b), including signs. Cross probes suffice, without an internal
+block operation. The induced cokernel clock is T^(-T). An actual
+cross-source arithmetic map is still required before claiming a Selmer
+or Sha realization.
 For native tournaments, repeat the legality test before transporting the
 orbit-sum or Eisenstein coupling formulas.
 

@@ -141,7 +141,8 @@ the small grid with every residue query through modulus9. At76 all438,976
 states yield54,872 complete response functions. The modulo228 count is
 proved via CRT, not a claimed11,852,352-state census. The new all-size
 3-adic proof uses finite differences and one precise lift step; the
-dyadic pattern remains only a finite census.
+dyadic pattern was then only a finite census; the continuation below
+now supplies its all-order proof.
 
 The incoming two-saturation verifier initially rejected the checkout's
 CRLF bytes. Their LF normalization equals the exact committed blob and
@@ -158,3 +159,34 @@ the actual endpoint Smith forms, the seven-prime Hamming map and the81/27
 modulo9 separator. These are credited incoming results. Our nonlinear
 norm-response precision recurrence is a separate operator and does not
 replace the endpoint or ordered multi-run carrier.
+
+## Dyadic, field and fully named continuation
+
+`dyadic_field_ports.py` passes17,803,214 active gates. Its complete
+dyadic universes are all triples modulo1,2,4,8,16,32,64, with exact
+coordinate-class bijections, fiber sizes and parent branching. Complete
+query banks through8 check the finite-difference certificate separately.
+Selected entire lift fibers through2^18 and the opposite source-parity
+strata at8 and16 exercise the proof's exceptional step.
+
+All64 F4 states,262,144 F64 states and16,777,216 F256 states are decoded
+from three direct field outputs. Irreducibility and every multiplication
+pair are independently checked by polynomial gcd and long division.
+The C3 clock splits over the two even-degree fields, and Frobenius
+exchanges its two roots; this is explicitly checked, not silently
+inherited from the rational irreducible representation.
+The larger ring/CRT counts are theorem evaluations, not full censuses.
+`DYADIC_AND_FIELD_PORTS.md` proves the arbitrary-precision statement.
+
+`marked_clock_ports.py` passes66,732 active gates on3,512 nonsingular
+signed source states. Direct Gaussian elimination evaluates every axis
+probe and both named pairing residues. There are376 singular branch
+observations, correctly treated as terminal symbols. Named port orders
+recover absolute source factors; a large legal cross probe recovers
+their signs. Exactly2,472 tested sources reject using the primal T
+as the clock on dual cokernel classes. The correct action is T^(-T).
+
+Both checkers pass normally and with -O with identical outputs. These
+are same-agent alternative-path audits, not an independent referee.
+The older modular checker was rerun in both modes after its status
+metadata changed from OPEN to the proved dyadic continuation.

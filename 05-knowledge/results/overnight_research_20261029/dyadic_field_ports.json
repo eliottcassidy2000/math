@@ -1,0 +1,155 @@
+{
+  "scope": "modular determinant functions, no exact singularity flag",
+  "gates": 17803214,
+  "dyadic_censuses": [
+    {
+      "modulus": 1,
+      "states": 1,
+      "classes": 1,
+      "fibers": {
+        "1": 1
+      },
+      "fixed_z9_classes": 1,
+      "children_per_parent_histogram": {},
+      "all_residue_queries": true
+    },
+    {
+      "modulus": 2,
+      "states": 8,
+      "classes": 8,
+      "fibers": {
+        "1": 8
+      },
+      "fixed_z9_classes": 4,
+      "children_per_parent_histogram": {
+        "8": 1
+      },
+      "all_residue_queries": true
+    },
+    {
+      "modulus": 4,
+      "states": 64,
+      "classes": 8,
+      "fibers": {
+        "8": 8
+      },
+      "fixed_z9_classes": 4,
+      "children_per_parent_histogram": {
+        "1": 8
+      },
+      "all_residue_queries": true
+    },
+    {
+      "modulus": 8,
+      "states": 512,
+      "classes": 40,
+      "fibers": {
+        "8": 32,
+        "32": 8
+      },
+      "fixed_z9_classes": 16,
+      "children_per_parent_histogram": {
+        "2": 4,
+        "8": 4
+      },
+      "all_residue_queries": true
+    },
+    {
+      "modulus": 16,
+      "states": 4096,
+      "classes": 320,
+      "fibers": {
+        "8": 256,
+        "32": 64
+      },
+      "fixed_z9_classes": 16,
+      "children_per_parent_histogram": {
+        "2": 32,
+        "32": 8
+      },
+      "all_residue_queries": false
+    },
+    {
+      "modulus": 32,
+      "states": 32768,
+      "classes": 2560,
+      "fibers": {
+        "8": 2048,
+        "32": 512
+      },
+      "fixed_z9_classes": 64,
+      "children_per_parent_histogram": {
+        "8": 320
+      },
+      "all_residue_queries": false
+    },
+    {
+      "modulus": 64,
+      "states": 262144,
+      "classes": 20480,
+      "fibers": {
+        "8": 16384,
+        "32": 4096
+      },
+      "fixed_z9_classes": 256,
+      "children_per_parent_histogram": {
+        "8": 2560
+      },
+      "all_residue_queries": false
+    }
+  ],
+  "selected_lift_checks": 19200,
+  "fields": [
+    {
+      "field_size": 4,
+      "polynomial_binary": "0x7",
+      "nontrivial_cube_roots": [
+        2,
+        3
+      ],
+      "Frobenius_swaps_clock_roots": true,
+      "complete_states_decoded": 64,
+      "classes": 64,
+      "ring_of_same_size_classes": 8
+    },
+    {
+      "field_size": 64,
+      "polynomial_binary": "0x43",
+      "nontrivial_cube_roots": [
+        58,
+        59
+      ],
+      "Frobenius_swaps_clock_roots": true,
+      "complete_states_decoded": 262144,
+      "classes": 262144,
+      "ring_of_same_size_classes": 20480
+    },
+    {
+      "field_size": 256,
+      "polynomial_binary": "0x11b",
+      "nontrivial_cube_roots": [
+        188,
+        189
+      ],
+      "Frobenius_swaps_clock_roots": true,
+      "complete_states_decoded": 16777216,
+      "classes": 16777216,
+      "ring_of_same_size_classes": 1310720
+    }
+  ],
+  "crt_theorem_values_not_full_censuses": {
+    "5": 125,
+    "10": 1000,
+    "11": 1331,
+    "12": 56,
+    "13": 2197,
+    "25": 15625,
+    "50": 125000,
+    "76": 54872,
+    "100": 125000,
+    "228": 384104,
+    "256": 1310720,
+    "768": 9175040
+  },
+  "dyadic_all_order_status": "PROVED in DYADIC_AND_FIELD_PORTS.md"
+}
