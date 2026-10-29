@@ -1,0 +1,11 @@
+{
+  "Gaussian_iterates": 7,
+  "all_k_status": "proved algebraically in SUMMAND_SQUARES.md",
+  "closure_n_max": 1000,
+  "explicit_require_calls": 9139,
+  "historical_three_piece_partition": "recovered separately in THREE_CHAINS_RECOVERED.md",
+  "invalid_input_controls": 6,
+  "pair_fibres_n_max": 400,
+  "square_and_even_family_k_max": 100,
+  "status": "PASS"
+}
