@@ -1,0 +1,65 @@
+{
+  "status": "FINITE-EXACT audits, with separate all-order proof candidate",
+  "source": "d3132eaf actual grammar",
+  "layers": [
+    {
+      "order": 4,
+      "words": 1,
+      "avoiding": 1,
+      "observer_potential_checks": 1
+    },
+    {
+      "order": 5,
+      "words": 3,
+      "avoiding": 3,
+      "insertion_checks": 3,
+      "observer_potential_checks": 3
+    },
+    {
+      "order": 6,
+      "words": 8,
+      "avoiding": 7,
+      "insertion_checks": 7,
+      "observer_potential_checks": 7
+    },
+    {
+      "order": 7,
+      "words": 21,
+      "avoiding": 16,
+      "insertion_checks": 16,
+      "observer_potential_checks": 16
+    },
+    {
+      "order": 8,
+      "words": 55,
+      "avoiding": 36,
+      "insertion_checks": 36,
+      "observer_potential_checks": 36
+    },
+    {
+      "order": 9,
+      "words": 144,
+      "avoiding": 81,
+      "insertion_checks": 81
+    },
+    {
+      "order": 10,
+      "words": 377,
+      "avoiding": 182,
+      "insertion_checks": 182
+    },
+    {
+      "order": 11,
+      "words": 987,
+      "avoiding": 409,
+      "insertion_checks": 409
+    },
+    {
+      "order": 12,
+      "words": 2584,
+      "avoiding": 919,
+      "insertion_checks": 919
+    }
+  ],
+  "controls": "All forbidden words through12 are cyclic; all avoiding words satisfy insertion hypotheses. Native observer computed independently through8, all entries checked against vertex-pair potential."
+}
