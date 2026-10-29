@@ -1,0 +1,501 @@
+{
+  "status": "FINITE-EXACT",
+  "universes": [
+    {
+      "n": 1,
+      "presentations": 1,
+      "blue_states": 1,
+      "representatives": [
+        {
+          "state": [
+            "tiny",
+            1
+          ],
+          "mask": 0
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "presentations": 1,
+      "blue_states": 1,
+      "representatives": [
+        {
+          "state": [
+            "tiny",
+            2
+          ],
+          "mask": 0
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "presentations": 2,
+      "blue_states": 2,
+      "representatives": [
+        {
+          "state": [
+            "flat",
+            0
+          ],
+          "mask": 0
+        },
+        {
+          "state": [
+            "flat",
+            1
+          ],
+          "mask": 1
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "presentations": 8,
+      "blue_states": 7,
+      "representatives": [
+        {
+          "state": [
+            "flat",
+            0
+          ],
+          "mask": 0
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            0
+          ],
+          "mask": 1
+        },
+        {
+          "state": [
+            "center"
+          ],
+          "mask": 2
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            1
+          ],
+          "mask": 3
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            0
+          ],
+          "mask": 4
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            1
+          ],
+          "mask": 6
+        },
+        {
+          "state": [
+            "flat",
+            1
+          ],
+          "mask": 7
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "presentations": 64,
+      "blue_states": 12,
+      "representatives": [
+        {
+          "state": [
+            "flat",
+            0
+          ],
+          "mask": 0
+        },
+        {
+          "state": [
+            "shift",
+            -2,
+            0
+          ],
+          "mask": 1
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            0
+          ],
+          "mask": 2
+        },
+        {
+          "state": [
+            "dead"
+          ],
+          "mask": 3
+        },
+        {
+          "state": [
+            "center"
+          ],
+          "mask": 4
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            1
+          ],
+          "mask": 7
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            0
+          ],
+          "mask": 16
+        },
+        {
+          "state": [
+            "shift",
+            2,
+            1
+          ],
+          "mask": 31
+        },
+        {
+          "state": [
+            "shift",
+            2,
+            0
+          ],
+          "mask": 32
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            1
+          ],
+          "mask": 52
+        },
+        {
+          "state": [
+            "shift",
+            -2,
+            1
+          ],
+          "mask": 62
+        },
+        {
+          "state": [
+            "flat",
+            1
+          ],
+          "mask": 63
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "presentations": 1024,
+      "blue_states": 16,
+      "representatives": [
+        {
+          "state": [
+            "flat",
+            0
+          ],
+          "mask": 0
+        },
+        {
+          "state": [
+            "shift",
+            -3,
+            0
+          ],
+          "mask": 1
+        },
+        {
+          "state": [
+            "shift",
+            -2,
+            0
+          ],
+          "mask": 2
+        },
+        {
+          "state": [
+            "dead"
+          ],
+          "mask": 3
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            0
+          ],
+          "mask": 4
+        },
+        {
+          "state": [
+            "center"
+          ],
+          "mask": 8
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            1
+          ],
+          "mask": 15
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            0
+          ],
+          "mask": 64
+        },
+        {
+          "state": [
+            "shift",
+            2,
+            1
+          ],
+          "mask": 127
+        },
+        {
+          "state": [
+            "shift",
+            2,
+            0
+          ],
+          "mask": 256
+        },
+        {
+          "state": [
+            "shift",
+            3,
+            1
+          ],
+          "mask": 511
+        },
+        {
+          "state": [
+            "shift",
+            3,
+            0
+          ],
+          "mask": 512
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            1
+          ],
+          "mask": 840
+        },
+        {
+          "state": [
+            "shift",
+            -2,
+            1
+          ],
+          "mask": 1004
+        },
+        {
+          "state": [
+            "shift",
+            -3,
+            1
+          ],
+          "mask": 1022
+        },
+        {
+          "state": [
+            "flat",
+            1
+          ],
+          "mask": 1023
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "presentations": 32768,
+      "blue_states": 20,
+      "representatives": [
+        {
+          "state": [
+            "flat",
+            0
+          ],
+          "mask": 0
+        },
+        {
+          "state": [
+            "shift",
+            -4,
+            0
+          ],
+          "mask": 1
+        },
+        {
+          "state": [
+            "shift",
+            -3,
+            0
+          ],
+          "mask": 2
+        },
+        {
+          "state": [
+            "dead"
+          ],
+          "mask": 3
+        },
+        {
+          "state": [
+            "shift",
+            -2,
+            0
+          ],
+          "mask": 4
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            0
+          ],
+          "mask": 8
+        },
+        {
+          "state": [
+            "center"
+          ],
+          "mask": 16
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            1
+          ],
+          "mask": 31
+        },
+        {
+          "state": [
+            "shift",
+            1,
+            0
+          ],
+          "mask": 256
+        },
+        {
+          "state": [
+            "shift",
+            2,
+            1
+          ],
+          "mask": 511
+        },
+        {
+          "state": [
+            "shift",
+            2,
+            0
+          ],
+          "mask": 2048
+        },
+        {
+          "state": [
+            "shift",
+            3,
+            1
+          ],
+          "mask": 4095
+        },
+        {
+          "state": [
+            "shift",
+            3,
+            0
+          ],
+          "mask": 8192
+        },
+        {
+          "state": [
+            "shift",
+            4,
+            1
+          ],
+          "mask": 16383
+        },
+        {
+          "state": [
+            "shift",
+            4,
+            0
+          ],
+          "mask": 16384
+        },
+        {
+          "state": [
+            "shift",
+            -1,
+            1
+          ],
+          "mask": 26896
+        },
+        {
+          "state": [
+            "shift",
+            -2,
+            1
+          ],
+          "mask": 32152
+        },
+        {
+          "state": [
+            "shift",
+            -3,
+            1
+          ],
+          "mask": 32732
+        },
+        {
+          "state": [
+            "shift",
+            -4,
+            1
+          ],
+          "mask": 32766
+        },
+        {
+          "state": [
+            "flat",
+            1
+          ],
+          "mask": 32767
+        }
+      ]
+    }
+  ],
+  "scope": "Deterministic tau/J_L/J_R and blue observation; no reset in this standalone minimality claim."
+}

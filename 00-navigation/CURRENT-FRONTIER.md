@@ -197,7 +197,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 
 - [67](S67.md);[68](S68.md);[69](S69.md);[70](S70.md);[71](S71.md);[72](S72.md);[73](S73.md);[74](S74.md);[HN](HN.md);[Twists](../05-knowledge/results/twist_conductor_reverse_20261025/README.md);[Unnamed](../05-knowledge/results/unnamed_carrier_dissection_20261026/README.md).
 - [Six/seven routes](START-HERE.md); [Divisor/F1](../05-knowledge/results/reflection_bridge_20261025/README.md); [Arithmetic/F1](../05-knowledge/results/normseven_arithmetic_f1_20261026/README.md): Gale twists, THM-4773 repaired to 0/8/infinite, conic norms, prime3 inertia. Integer squares OPEN.
-- [Classification/closure](../05-knowledge/results/singleton_pair_reconstruction_20261028/README.md): all-size sufficient K; singleton/fresh-reset presentation reconstruction fails first at7. Minimality OPEN; counts350, lazy roots9. Prior4p/chart/port routes retained there.
+- [Classification/closure](../05-knowledge/results/minimal_blue_selectors_20261028/README.md): exact minimal singleton K; blue4n-8 states. One port separates all7, fails at9. Prior4p/chart/port/count routes retained there.
 - THM-1805: triangle Vandermonde cancellation. THM-1862/1936: joins multiply `H` and signed Rédei; `c3` adds.
 - [THM-2183](../01-canon/theorems/THM-2183-order-join-is-an-exact-tournament-metric-product.md): `d_iso=l1` on fixed order-join patches by uncrossing; ambient triangles persist.
 - [THM-2195](../01-canon/theorems/THM-2195-transitive-quotients-exactly-control-universal-substitution-products.md) gives the scalar iff-transitive boundary; THM-2242/2249/2256 give its response, envelope, and scale limit.

@@ -1,0 +1,846 @@
+{
+  "status": "FINITE-EXACT",
+  "decoder": [
+    {
+      "order": 1,
+      "presentations": 1,
+      "context_order": 5
+    },
+    {
+      "order": 2,
+      "presentations": 1,
+      "context_order": 6
+    },
+    {
+      "order": 3,
+      "presentations": 2,
+      "context_order": 7
+    },
+    {
+      "order": 4,
+      "presentations": 8,
+      "context_order": 8
+    },
+    {
+      "order": 5,
+      "presentations": 64,
+      "context_order": 9
+    },
+    {
+      "order": 6,
+      "presentations": 1024,
+      "context_order": 10
+    },
+    {
+      "order": 7,
+      "presentations": 32768,
+      "context_order": 11
+    }
+  ],
+  "selectors": {
+    "added_mark_tests": [
+      {
+        "position": 0,
+        "separates_before": false,
+        "separates_after_tau": false
+      },
+      {
+        "position": 1,
+        "separates_before": false,
+        "separates_after_tau": true
+      },
+      {
+        "position": 2,
+        "separates_before": true,
+        "separates_after_tau": true
+      },
+      {
+        "position": 3,
+        "separates_before": true,
+        "separates_after_tau": true
+      },
+      {
+        "position": 4,
+        "separates_before": true,
+        "separates_after_tau": true
+      },
+      {
+        "position": 5,
+        "separates_before": false,
+        "separates_after_tau": true
+      },
+      {
+        "position": 6,
+        "separates_before": false,
+        "separates_after_tau": false
+      }
+    ],
+    "all_guard_count": 178,
+    "minimum_guard": [
+      3,
+      3,
+      [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        4
+      ],
+      false,
+      true
+    ],
+    "minimum_endpoint_preserving_guard": [
+      3,
+      3,
+      [
+        0,
+        1,
+        3,
+        4,
+        2,
+        5,
+        6
+      ],
+      true,
+      false
+    ],
+    "successor_start_reset": [
+      {
+        "before_tau": false,
+        "legal_path_counts": [
+          13,
+          13
+        ],
+        "separating_partner_cells": [],
+        "full_rows": [
+          [
+            [
+              9,
+              false,
+              2
+            ],
+            [
+              49,
+              false,
+              1
+            ],
+            [
+              60,
+              false,
+              1
+            ],
+            [
+              81,
+              false,
+              1
+            ],
+            [
+              89,
+              false,
+              1
+            ],
+            [
+              237,
+              false,
+              2
+            ],
+            [
+              311,
+              false,
+              2
+            ],
+            [
+              332,
+              false,
+              1
+            ],
+            [
+              401,
+              false,
+              1
+            ],
+            [
+              411,
+              false,
+              1
+            ]
+          ],
+          [
+            [
+              9,
+              false,
+              2
+            ],
+            [
+              49,
+              false,
+              1
+            ],
+            [
+              60,
+              false,
+              1
+            ],
+            [
+              81,
+              false,
+              1
+            ],
+            [
+              89,
+              false,
+              1
+            ],
+            [
+              237,
+              false,
+              2
+            ],
+            [
+              311,
+              false,
+              2
+            ],
+            [
+              332,
+              false,
+              1
+            ],
+            [
+              401,
+              false,
+              1
+            ],
+            [
+              411,
+              false,
+              1
+            ]
+          ]
+        ],
+        "partner_hamilton_histograms": [
+          {
+            "47": 1,
+            "59": 3,
+            "65": 2,
+            "69": 3,
+            "83": 1,
+            "89": 3
+          },
+          {
+            "47": 1,
+            "59": 3,
+            "65": 2,
+            "69": 3,
+            "83": 1,
+            "89": 3
+          }
+        ]
+      },
+      {
+        "before_tau": true,
+        "legal_path_counts": [
+          23,
+          21
+        ],
+        "separating_partner_cells": [
+          {
+            "class_id": 3,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 9,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 28,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 36,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 49,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 60,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 146,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 147,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 154,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 157,
+            "blue": false,
+            "probabilities": [
+              "2/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 166,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 170,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 177,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 178,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 179,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 184,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 185,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 186,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 236,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 237,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 247,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 283,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 289,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 296,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 326,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 327,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 333,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 336,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 338,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 357,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 362,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "0"
+            ]
+          },
+          {
+            "class_id": 399,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 419,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 422,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 440,
+            "blue": false,
+            "probabilities": [
+              "1/23",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 448,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          },
+          {
+            "class_id": 450,
+            "blue": false,
+            "probabilities": [
+              "0",
+              "1/21"
+            ]
+          }
+        ],
+        "full_rows": [
+          [
+            [
+              3,
+              false,
+              1
+            ],
+            [
+              28,
+              false,
+              1
+            ],
+            [
+              36,
+              false,
+              1
+            ],
+            [
+              146,
+              false,
+              1
+            ],
+            [
+              147,
+              false,
+              1
+            ],
+            [
+              154,
+              false,
+              1
+            ],
+            [
+              157,
+              false,
+              2
+            ],
+            [
+              178,
+              false,
+              1
+            ],
+            [
+              179,
+              false,
+              1
+            ],
+            [
+              186,
+              false,
+              1
+            ],
+            [
+              237,
+              false,
+              1
+            ],
+            [
+              247,
+              false,
+              1
+            ],
+            [
+              283,
+              false,
+              1
+            ],
+            [
+              289,
+              false,
+              1
+            ],
+            [
+              326,
+              false,
+              1
+            ],
+            [
+              333,
+              false,
+              1
+            ],
+            [
+              336,
+              false,
+              1
+            ],
+            [
+              338,
+              false,
+              1
+            ],
+            [
+              357,
+              false,
+              1
+            ],
+            [
+              362,
+              false,
+              1
+            ],
+            [
+              399,
+              false,
+              1
+            ],
+            [
+              440,
+              false,
+              1
+            ]
+          ],
+          [
+            [
+              9,
+              false,
+              1
+            ],
+            [
+              28,
+              false,
+              1
+            ],
+            [
+              49,
+              false,
+              1
+            ],
+            [
+              60,
+              false,
+              1
+            ],
+            [
+              147,
+              false,
+              1
+            ],
+            [
+              166,
+              false,
+              1
+            ],
+            [
+              170,
+              false,
+              1
+            ],
+            [
+              177,
+              false,
+              1
+            ],
+            [
+              184,
+              false,
+              1
+            ],
+            [
+              185,
+              false,
+              1
+            ],
+            [
+              236,
+              false,
+              1
+            ],
+            [
+              289,
+              false,
+              1
+            ],
+            [
+              296,
+              false,
+              1
+            ],
+            [
+              327,
+              false,
+              1
+            ],
+            [
+              336,
+              false,
+              1
+            ],
+            [
+              399,
+              false,
+              1
+            ],
+            [
+              419,
+              false,
+              1
+            ],
+            [
+              422,
+              false,
+              1
+            ],
+            [
+              440,
+              false,
+              1
+            ],
+            [
+              448,
+              false,
+              1
+            ],
+            [
+              450,
+              false,
+              1
+            ]
+          ]
+        ],
+        "partner_hamilton_histograms": [
+          {
+            "29": 1,
+            "31": 1,
+            "37": 1,
+            "43": 1,
+            "49": 3,
+            "55": 1,
+            "59": 1,
+            "67": 1,
+            "69": 1,
+            "71": 1,
+            "73": 2,
+            "77": 2,
+            "81": 3,
+            "91": 1,
+            "99": 2,
+            "111": 1
+          },
+          {
+            "25": 1,
+            "31": 1,
+            "33": 1,
+            "51": 1,
+            "53": 1,
+            "59": 2,
+            "65": 1,
+            "67": 1,
+            "71": 1,
+            "73": 5,
+            "81": 1,
+            "85": 1,
+            "91": 3,
+            "111": 1
+          }
+        ]
+      }
+    ]
+  },
+  "carrier": {
+    "order": 7,
+    "minimal_cells": 32272,
+    "literal_states": 32768,
+    "successor_port_cells": 32768,
+    "remaining": [],
+    "scope": "Both endpoint-rooted relations and B, then additionally mark current position 1 in both relations."
+  },
+  "buffered": [
+    {
+      "boundary_width": 1,
+      "order": 7,
+      "contexts": 85
+    },
+    {
+      "boundary_width": 2,
+      "order": 9,
+      "contexts": 85
+    },
+    {
+      "boundary_width": 3,
+      "order": 11,
+      "contexts": 85
+    },
+    {
+      "boundary_width": 4,
+      "order": 13,
+      "contexts": 85
+    },
+    {
+      "boundary_width": 5,
+      "order": 15,
+      "contexts": 85
+    },
+    {
+      "boundary_width": 6,
+      "order": 17,
+      "contexts": 85
+    }
+  ]
+}

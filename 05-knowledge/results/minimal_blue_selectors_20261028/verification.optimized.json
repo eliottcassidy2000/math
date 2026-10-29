@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "optimized": true,
+  "all_presentations": 33868,
+  "minimal_blue_counts": [
+    1,
+    1,
+    2,
+    7,
+    12,
+    16,
+    20
+  ],
+  "exact_minimal_cells_at7": 32272,
+  "successor_port_cells_at7": 32768,
+  "successor_counterexample_order": 9,
+  "hostile_groups": [
+    81,
+    27
+  ],
+  "borwein_denominators": [
+    15,
+    113,
+    80499
+  ]
+}
