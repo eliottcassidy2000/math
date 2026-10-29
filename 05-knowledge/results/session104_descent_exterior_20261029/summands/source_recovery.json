@@ -1,0 +1,39 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "date": "2026-10-29",
+  "live_connector_reads": [
+    {
+      "path": "01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md",
+      "blob_sha": "1daae13394e4b772a78068c3bb7aae65f3d7002e",
+      "result": "success; distinct/weak fibre definitions and startup closure recovered"
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_summand.md",
+      "blob_sha": "5d180a5eae4ada2db7c358f2bd645941d41ca7d0",
+      "result": "success; strict shadow and doubling/squaring forests recovered"
+    },
+    {
+      "path": "04-computation/summand_graph_investigation.py",
+      "blob_sha": "6f5fb807f7d1f85c22197c2218f2ec4c3033b01e",
+      "result": "success; historical graph construction recovered; exact three-piece label not located"
+    },
+    {
+      "path": "05-knowledge/reference/COLLATZ-SQUARE-SUM-LADDER-2026-09-22-SOURCE.md",
+      "blob_sha": "107a957d7ac912e8cf0ba8138132251fb4bac36f",
+      "result": "success; preserved earlier user framing directly matches one-node-at-time three-chain question"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.md",
+      "blob_sha": "26e7917ef9d8a08a28aada131798cb857731b65e",
+      "result": "success; exact three Q_12 chains recovered, distinct from closure holes"
+    }
+  ],
+  "unresolved": "The documented earlier three-chain discussion is recovered. A different intended partition would need user clarification; no substitute is asserted.",
+  "failed_tool_setup": "Initial search call and initial fetch call had argument-schema errors; corrected fetch repository_full_name succeeded. No authorization denial occurred.",
+  "publication": "not published by this lane",
+  "search_queries": [
+    "\"summand\" \"one vertex\"",
+    "\"summand\" \"three chains\"",
+    "\"summand\" \"three-piece\""
+  ]
+}
