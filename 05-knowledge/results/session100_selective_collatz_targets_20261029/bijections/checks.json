@@ -1,0 +1,47 @@
+{
+  "checks": 151570,
+  "hostile_3_residues_first_12_repetitions": [
+    23,
+    11031,
+    207639,
+    398666519,
+    9525472023,
+    696720239383,
+    211802952772375,
+    118431293171247895,
+    6027154004281338647,
+    2127402722480879774487,
+    155604313415744349219607,
+    27960898164552215367461655
+  ],
+  "integer_sources": "odd 1..499, 20 valuations each",
+  "no_claim": "No all-source convergence or aperiodic exclusion.",
+  "preperiod_universe": "length 0..4, digits 1..4, all three hostile rotations",
+  "status": "PASS",
+  "transported_3_cycle": [
+    "19/101",
+    "79/101",
+    "169/101"
+  ],
+  "word_universe": {
+    "count": 780,
+    "digits": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "lengths": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "parameters": [
+      3,
+      5,
+      7
+    ]
+  }
+}
