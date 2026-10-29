@@ -1,0 +1,511 @@
+{
+  "status": "FINITE-EXACT independent certificate",
+  "input_sha256": "ec3892b5f14125d31cb50fcd965e8e285de3228b0e1030b538d573b16f40070c",
+  "scope": "Explicit common marked insertion, not an identification with missing b/e grammar",
+  "records": {
+    "singular_parent": {
+      "determinant": 1,
+      "hamilton_cycles": 1,
+      "scores": [
+        1,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    "singular_child": {
+      "determinant": 0,
+      "hamilton_cycles": 1,
+      "scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+      ]
+    },
+    "unimodular_parent": {
+      "determinant": 1,
+      "hamilton_cycles": 1,
+      "scores": [
+        1,
+        1,
+        2,
+        3,
+        3
+      ]
+    },
+    "unimodular_child": {
+      "determinant": 1,
+      "hamilton_cycles": 1,
+      "scores": [
+        1,
+        1,
+        2,
+        3,
+        4,
+        4
+      ]
+    }
+  },
+  "native_dimension": 30,
+  "rank": 26,
+  "nullity": 4,
+  "kernel_basis": [
+    [
+      {
+        "port": [
+          0,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          1,
+          2
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          2,
+          0
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          2,
+          1
+        ],
+        "coefficient": 1
+      }
+    ],
+    [
+      {
+        "port": [
+          0,
+          3
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          1,
+          3
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          3,
+          0
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          3,
+          1
+        ],
+        "coefficient": 1
+      }
+    ],
+    [
+      {
+        "port": [
+          0,
+          2
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          2,
+          0
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          2,
+          5
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          5,
+          2
+        ],
+        "coefficient": -1
+      }
+    ],
+    [
+      {
+        "port": [
+          0,
+          3
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          2,
+          3
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          3,
+          0
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          3,
+          2
+        ],
+        "coefficient": -1
+      },
+      {
+        "port": [
+          3,
+          5
+        ],
+        "coefficient": 1
+      },
+      {
+        "port": [
+          5,
+          3
+        ],
+        "coefficient": -1
+      }
+    ]
+  ],
+  "kernel_coordinate_convention": "right kernel, ordered END-pair columns; q_ij=e_(i,j)-e_(j,i)",
+  "sector": {
+    "plus_determinant": 16,
+    "plus_nullity": 0,
+    "minus_nullity": 4
+  },
+  "schur_lifts": [
+    {
+      "residual": [
+        {
+          "port": [
+            0,
+            2
+          ],
+          "coefficient": -1
+        },
+        {
+          "port": [
+            2,
+            0
+          ],
+          "coefficient": 1
+        }
+      ],
+      "new_port_correction": [
+        {
+          "port": [
+            5,
+            2
+          ],
+          "coefficient": 1
+        },
+        {
+          "port": [
+            2,
+            5
+          ],
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "residual": [
+        {
+          "port": [
+            1,
+            2
+          ],
+          "coefficient": -1
+        },
+        {
+          "port": [
+            2,
+            1
+          ],
+          "coefficient": 1
+        }
+      ],
+      "new_port_correction": [
+        {
+          "port": [
+            5,
+            2
+          ],
+          "coefficient": 1
+        },
+        {
+          "port": [
+            2,
+            5
+          ],
+          "coefficient": -1
+        }
+      ]
+    },
+    {
+      "residual": [
+        {
+          "port": [
+            0,
+            3
+          ],
+          "coefficient": 1
+        },
+        {
+          "port": [
+            1,
+            3
+          ],
+          "coefficient": -1
+        },
+        {
+          "port": [
+            3,
+            0
+          ],
+          "coefficient": -1
+        },
+        {
+          "port": [
+            3,
+            1
+          ],
+          "coefficient": 1
+        }
+      ],
+      "new_port_correction": []
+    },
+    {
+      "residual": [
+        {
+          "port": [
+            0,
+            3
+          ],
+          "coefficient": -1
+        },
+        {
+          "port": [
+            2,
+            3
+          ],
+          "coefficient": -1
+        },
+        {
+          "port": [
+            3,
+            0
+          ],
+          "coefficient": 1
+        },
+        {
+          "port": [
+            3,
+            2
+          ],
+          "coefficient": 1
+        }
+      ],
+      "new_port_correction": [
+        {
+          "port": [
+            5,
+            3
+          ],
+          "coefficient": 1
+        },
+        {
+          "port": [
+            3,
+            5
+          ],
+          "coefficient": -1
+        }
+      ]
+    }
+  ],
+  "native_smith_form": {
+    "1": 26,
+    "0": 4
+  },
+  "unit_pivot_trace": [
+    [
+      0,
+      0,
+      4,
+      1
+    ],
+    [
+      1,
+      1,
+      9,
+      1
+    ],
+    [
+      2,
+      2,
+      14,
+      1
+    ],
+    [
+      3,
+      3,
+      19,
+      1
+    ],
+    [
+      4,
+      4,
+      24,
+      1
+    ],
+    [
+      5,
+      5,
+      25,
+      1
+    ],
+    [
+      6,
+      6,
+      19,
+      1
+    ],
+    [
+      7,
+      7,
+      9,
+      1
+    ],
+    [
+      8,
+      8,
+      14,
+      1
+    ],
+    [
+      9,
+      9,
+      20,
+      1
+    ],
+    [
+      10,
+      10,
+      26,
+      1
+    ],
+    [
+      11,
+      11,
+      24,
+      1
+    ],
+    [
+      12,
+      12,
+      14,
+      1
+    ],
+    [
+      13,
+      13,
+      15,
+      1
+    ],
+    [
+      14,
+      14,
+      21,
+      1
+    ],
+    [
+      15,
+      17,
+      19,
+      1
+    ],
+    [
+      16,
+      18,
+      17,
+      1
+    ],
+    [
+      17,
+      19,
+      22,
+      1
+    ],
+    [
+      18,
+      22,
+      20,
+      1
+    ],
+    [
+      19,
+      23,
+      21,
+      1
+    ],
+    [
+      20,
+      24,
+      23,
+      1
+    ],
+    [
+      21,
+      25,
+      29,
+      1
+    ],
+    [
+      22,
+      26,
+      25,
+      -1
+    ],
+    [
+      23,
+      27,
+      24,
+      -1
+    ],
+    [
+      24,
+      28,
+      29,
+      1
+    ],
+    [
+      25,
+      29,
+      29,
+      1
+    ]
+  ]
+}
