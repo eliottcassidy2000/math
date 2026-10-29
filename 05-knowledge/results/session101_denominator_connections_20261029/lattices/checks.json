@@ -1,0 +1,50 @@
+{
+  "checks": 2913,
+  "focal_matrix": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "focal_smith": [
+    1,
+    1,
+    1
+  ],
+  "orbit_triangle_matrix": [
+    [
+      0,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1
+    ]
+  ],
+  "orbit_triangle_smith": [
+    1,
+    1,
+    4
+  ],
+  "scope": "valuation lattices, not Collatz convergence or tournament isomorphism",
+  "status": "FINITE-EXACT",
+  "triangle_square_product": 5175625
+}
