@@ -1,0 +1,160 @@
+{
+  "status": "VERIFIED read-only certificate replay and hostile mutations",
+  "gates": 979,
+  "rejected_mutations": [
+    "root_annihilator",
+    "character_row"
+  ],
+  "hostile_81_27": [
+    {
+      "control": 81,
+      "automorphism_order": 81,
+      "two_run_baseline_ranks": {
+        "2": 54,
+        "3": 24,
+        "5": 132
+      },
+      "singleton_run_slices": [
+        {
+          "vertices": [
+            0,
+            4,
+            8
+          ],
+          "representative": 0,
+          "slice_order": 110,
+          "total_slice_covers": 1268622,
+          "ranks": {
+            "2": 56,
+            "3": 22,
+            "5": 106
+          },
+          "matrix_sha256": "2ca9fdeaf5ffd1a5b797a8414476a91d67c4d128b36be0ef337deb1322c9a365"
+        },
+        {
+          "vertices": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "representative": 1,
+          "slice_order": 110,
+          "total_slice_covers": 1243890,
+          "ranks": {
+            "2": 58,
+            "3": 28,
+            "5": 106
+          },
+          "matrix_sha256": "415279f38ac91c9ab5fafa4df0767a21bf224d957155a5f7d5f829fb2a0b5b6f"
+        }
+      ]
+    },
+    {
+      "control": 27,
+      "automorphism_order": 27,
+      "two_run_baseline_ranks": {
+        "2": 54,
+        "3": 22,
+        "5": 130
+      },
+      "singleton_run_slices": [
+        {
+          "vertices": [
+            0
+          ],
+          "representative": 0,
+          "slice_order": 110,
+          "total_slice_covers": 1268622,
+          "ranks": {
+            "2": 56,
+            "3": 22,
+            "5": 105
+          },
+          "matrix_sha256": "e93cdf692e05314df4a19fbd414bc018c8ca9e2778f49a2acac8f28ece9c9e78"
+        },
+        {
+          "vertices": [
+            1,
+            2,
+            3
+          ],
+          "representative": 1,
+          "slice_order": 110,
+          "total_slice_covers": 1243890,
+          "ranks": {
+            "2": 58,
+            "3": 34,
+            "5": 106
+          },
+          "matrix_sha256": "6b52682564d75f68ddc7a50683fd357a82a0a3f5aba5ecafc93ec3a80abe88c0"
+        },
+        {
+          "vertices": [
+            4
+          ],
+          "representative": 4,
+          "slice_order": 110,
+          "total_slice_covers": 1268622,
+          "ranks": {
+            "2": 56,
+            "3": 22,
+            "5": 106
+          },
+          "matrix_sha256": "cf0821fceeec59642b35511e5c6378476ad3025adb376e3b5130dacbb81ba71d"
+        },
+        {
+          "vertices": [
+            5,
+            6,
+            7
+          ],
+          "representative": 5,
+          "slice_order": 110,
+          "total_slice_covers": 1243890,
+          "ranks": {
+            "2": 58,
+            "3": 32,
+            "5": 106
+          },
+          "matrix_sha256": "32e6d6a66a8b2b349e063ba42a333086bada89919b453cbe8520943c277c9238"
+        },
+        {
+          "vertices": [
+            8
+          ],
+          "representative": 8,
+          "slice_order": 110,
+          "total_slice_covers": 1268622,
+          "ranks": {
+            "2": 56,
+            "3": 22,
+            "5": 106
+          },
+          "matrix_sha256": "5737ca9f08fd8cca6415f8e4beb36e9f1c83c0e6c161f676dccb7e08adedcfc2"
+        },
+        {
+          "vertices": [
+            9,
+            10,
+            11
+          ],
+          "representative": 9,
+          "slice_order": 110,
+          "total_slice_covers": 1243890,
+          "ranks": {
+            "2": 58,
+            "3": 28,
+            "5": 106
+          },
+          "matrix_sha256": "c9b614a7aa0a193612f193a8455da7e946310af5aef045732f985d4a7a47b040"
+        }
+      ]
+    }
+  ]
+}

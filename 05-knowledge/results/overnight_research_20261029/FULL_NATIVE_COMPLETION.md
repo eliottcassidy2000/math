@@ -10,9 +10,10 @@ Gamma-equivariant injection into a finite abelian group with a perfect
 alternating Q/Z-valued pairing and a Gamma action by isometries. A pairing
 on V is not prescribed. Ordinary-quotient injectivity is NOT required.
 
-The exact minimum dyadic index is **2^40**. At3 every such completion has
-index at least **3^8**, but attainment of that ternary bound is OPEN.
-Canonical hyperbolic doubling gives the ternary upper bound3^18.
+The exact minimum dyadic index is **2^40**. The subsequent
+[ternary root obstruction](TERNARY_EXTENSION_OBSTRUCTION.md) excludes
+index3^8 and raises the universal lower bound to **3^10**. Its attainment
+is OPEN. Canonical hyperbolic doubling gives the ternary upper bound3^18.
 
 Inheritance: [PRIMARY_CLOCK_COMPLETION P1--P5](PRIMARY_CLOCK_COMPLETION.md)
 gives the C7 minima and the purity boundary. The81/27 pair remains the
@@ -257,10 +258,11 @@ chosen direct-sum decomposition of V_3.
 In any perfect paired ambient W containing V, its restriction b has
 rad(b)=V intersect V-perp. Since |V-perp|=|W|/|V|, every completion has
 index at least |rad(b)|. Hence N9 gives the universal full-clock bound
-3^8, stronger than the old C7-only minimum3^4. Whether3^8 is attainable
-with the entire clock action remains OPEN. Hyperbolic doubling gives
-3^18. The obstruction below explains why sharpness of a radical bound
-is not itself a completion theorem.
+3^8, stronger than the old C7-only minimum3^4. The later
+[T1--T3 first-step certificate](TERNARY_EXTENSION_OBSTRUCTION.md) now
+EXCLUDES attainment of3^8 for every invariant source form. Square order
+raises the lower bound to3^10; hyperbolic doubling gives3^18. N9 remains
+the sharp radical bound, distinct from the strict completion bound.
 
 All six possible one-dimensional Gamma actions on an additional Z/81
 were also tested: F acts by1,28 or55, S by+1 or-1, and R,T trivially.
@@ -335,12 +337,11 @@ that stays strong. Zero steps are necessary at C3. Both new incoming
 checkers replayed successfully; this is inherited work, not a new census
 or a consequence of the completion theorem.
 
-Next: construct or exclude a3-primary completion of index3^8, retaining
-the full joint action, rather than only its optimal restriction form.
-Its common radical type(1,1,1,2,3), paired quotient(1^6,2^2), and explicit
-nine-coordinate matrices give a concrete finite starting point. Test
-the joint lift of the commuting vertex/run order-three clocks. The
-second question is the pure
+The index3^8 question is now closed negatively in the continuation above.
+Next test index3^10: with the saved optimal form, allow one radical-increasing
+step and nine decreasing steps. A complete exclusion must also consider
+source forms with radical3^10 and ten decreasing steps. The second
+question is the pure
 full-clock minimum: neither N2 nor the root recurrence promises ordinary
 quotient compatibility. Native complement and arithmetic Selmer maps
 remain separate operations requiring their own source diagrams. Sha

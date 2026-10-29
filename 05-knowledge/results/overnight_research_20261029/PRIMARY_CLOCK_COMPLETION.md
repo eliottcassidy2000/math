@@ -7,7 +7,9 @@ the extra affine/run clocks at2/3 or provide an arithmetic Sha realization.
 
 **Continuation:** [FULL_NATIVE_COMPLETION](FULL_NATIVE_COMPLETION.md)
 now gives the full126-element vertex/run minimum at2, index2^40, and a
-universal index3^8 lower bound at3. The formulas below still concern
+universal index3^10 lower bound at3, after the
+[root-extension obstruction](TERNARY_EXTENSION_OBSTRUCTION.md) excludes3^8.
+The formulas below still concern
 their specified cyclic clocks. Root attachment and pure completion
 remain different operation sets.
 
@@ -317,7 +319,7 @@ receipts; no proof gate depends on `assert`. This is a same-agent
 alternative-path audit, not an independent human or agent review.
 
 The dyadic injective problem is now closed in the continuation above.
-Next test the ternary index3^8 bound and the pure full-clock problem. For an
+Next test ternary index3^10 attainment and the pure full-clock problem. For an
 arithmetic bridge, first specify whether its transition maps are ordinary
 quotients, torsion inclusions or genuinely different Selmer maps, then
 supply a commuting source diagram. P5 rules out silently substituting

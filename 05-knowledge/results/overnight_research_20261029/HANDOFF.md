@@ -162,9 +162,10 @@ descend under actual Frobenius, giving a genuine F64 phase occurrence;
 F256 has no primitive21 root and is not the same chart.
 
 At3 the full invariant-form space has common radical(C3)^3+C9+C27,
-order3^8. An explicit form attains that radical, so the universal lower
-bound on a full-clock completion is3^8; the hyperbolic upper bound is3^18.
-The actual minimum remains OPEN. All six extra-C81 characters fail.
+order3^8. An explicit form attains that radical. The sixth continuation
+below excludes completing at that index and raises the lower bound to
+3^10; the hyperbolic upper bound is3^18. The actual minimum remains OPEN.
+All six extra-C81 characters fail.
 The new Heisenberg hostile proves why an optimal restriction radical
 does not supply jointly compatible ambient clocks. The2-primary PURE
 minimum also remains open: the index2^40 construction adjoins roots.
@@ -173,7 +174,38 @@ Named2/3 source projections, coordinate lifts and all four clock matrices are
 saved in primary_native_clocks.json. Normal and optimized receipts agree;
 an independent kernel audit checks every2x2 matrix over Z/4 and Z/9.
 The81/27 singleton slices are replayed. Do not repeat the completed C21
-or dyadic minimum calculation; use the explicit ternary radical next.
+or dyadic minimum calculation; use the strict ternary obstruction below.
+
+The sixth continuation is
+[TERNARY_EXTENSION_OBSTRUCTION](TERNARY_EXTENSION_OBSTRUCTION.md).
+The index3^8 completion question is CLOSED NEGATIVELY, for ALL invariant
+source forms, not only the stored optimal form. The complete first-step
+recurrence retains3x=v, Fx=x+w_F, Rx=x+w_R, Sx=epsilon*x, all group
+relations, and z(a)=b'(a,x). Sixteen of the18 sign-marked root classes
+fail the group equations. With zero root there are81 carry/gauge classes
+per sign. Every invariant source form forces z to vanish on the common
+radical in all162 cases; an independent row-rank path checks all2916
+literal carry pairs. No minimal coisotropic first step is possible.
+Square order therefore raises the lower bound to3^10. The five possible
+minimum indices are3^10,3^12,3^14,3^16,3^18.
+
+ternary_root_extensions.json retains the literal source hash,16 left
+annihilators and162 character-row certificates. Its checker also audits
+all4825 affine systems of size2x2 with every RHS over Z/3 and Z/4,
+and constructs the nonsplit positive chain C3^2 -> C3+C9 -> C9^2.
+The separate ternary_obstruction_verify.py imports no extension solver,
+re-enumerates all root classes, checks every literal certificate, rejects
+two damaged certificates, and replays81/27. Both normal and optimized
+runs agree. This is a same-agent alternative-path audit.
+
+Next: try a native index3^10 completion. Starting from a source form with
+radical3^8, it needs one radical-increasing and nine decreasing steps.
+Starting with radical3^10, it needs ten decreasing steps. BOTH branches
+matter for a complete exclusion. A cheap exploratory pass of13 canonical
+first carries with greedy continuations returned to radical3^8 and stopped;
+this is NOT a census or an obstruction. No successful3^10 chain is saved.
+The full paired minimum now has form2^40*3^a*11^6*79^3*5861^6*392809^3
+with a in{10,12,14,16,18}. Keep original port projections and all clocks.
 
 Incoming6b83fd8383 strengthens all396 native recovery certificates to
 strong targets whenever a second observation is needed; C3 needs zero
@@ -240,13 +272,12 @@ then their targeted proofs. Recent Session97 additions include:
    The three-run S3 lattice and small native cases are now CLOSED in
    our continuation and the simultaneous incoming THREE_RUN packet.
    All2/3 clock matrices are NOW CLOSED, and the full dyadic injective
-   minimum is index2^40. Next construct or exclude a ternary completion
-   of index3^8, preserving the entire joint action. Its actual common
-   radical type(1,1,1,2,3) and nine-coordinate matrices are supplied.
-   The displayed optimal form has paired quotient(1^6,2^2); test the
-   joint lift of the commuting vertex and run order-three clocks.
-   Sharpness of a radical bound is not attainment of a completion;
-   the Heisenberg hostile detects that implication. Separately classify
+   minimum is index2^40. Ternary index3^8 is now excluded for all source
+   forms. Next construct or exclude index3^10, with all joint clocks.
+   Use the two possible initial radical orders and step budgets in the
+   sixth-continuation note. The supplied common radical type(1,1,1,2,3),
+   nine-coordinate matrices, source maps and all-form first-step
+   certificates must be retained. Separately classify
    pure full-clock completions. The root constructions do not retain
    ordinary quotient injectivity. Do not recompute the saved source maps.
    For native attachment minimality, extend the incoming strong-through7

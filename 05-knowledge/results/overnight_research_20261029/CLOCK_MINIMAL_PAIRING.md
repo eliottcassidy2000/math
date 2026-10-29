@@ -13,7 +13,8 @@ the higher-primary pieces; the six elementary primes are complete.
 
 The next [full vertex/run continuation](FULL_NATIVE_COMPLETION.md) now
 closes the dyadic minimum at index2^40. At3 it proves the stronger lower
-bound3^8; joint-clock attainment and ordinary-quotient-compatible minima
+bound3^10 after the [root obstruction](TERNARY_EXTENSION_OBSTRUCTION.md)
+excludes3^8; joint-clock attainment and ordinary-quotient-compatible minima
 remain open. The original C7 formula retains its stated scope.
 
 ## C4. The clocked minimum is controlled by reciprocal constituents

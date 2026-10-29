@@ -13,13 +13,20 @@ a new closure of a problem already solved in the incoming work.
 
 ## Completed mathematics
 
+- [Ternary root recurrence and strict completion obstruction](TERNARY_EXTENSION_OBSTRUCTION.md):
+  all-size source-fixed index-three attachments preserve both order-three
+  clocks, the involution, carries, and the new pairing character. All18
+  native first root classes and all2916 carry pairs exclude a coisotropic
+  first step for EVERY invariant source form. Thus index3^8 is impossible;
+  the minimum is one of3^10,3^12,3^14,3^16,3^18. The receipt has literal
+  incompatibility/row certificates and a separate read-only verifier.
 - [Full vertex/run clocks and lawful root attachments](FULL_NATIVE_COMPLETION.md):
   the actual126-element group is C21 semidirect C6 with Frobenius action.
   The complete dyadic minimum is index2^40, compared with2^18 for C7
   and2^24 for C21 alone. An exact index-two attachment recurrence retains
   roots, carries and involutions; two steps solve the cubic obstruction.
-  At3 the sharp invariant radical has order3^8, giving a universal
-  completion lower bound; attaining it with all clocks remains open.
+  At3 the sharp invariant radical has order3^8; the continuation above
+  proves that no full-clock completion attains that radical bound.
   A small Heisenberg hostile proves that individual clock extensions
   need not extend jointly. Pure completions and arithmetic realization
   remain separate.

@@ -1,0 +1,82 @@
+[
+  {
+    "script": "ternary_root_extensions.py",
+    "receipt": "ternary_root_extensions.json",
+    "byte_identical": true,
+    "canonical_sha256": "91f6d3a2dd440a41b38a229a7d250783da7d5ef86d029ebd41347f4e00da8f68",
+    "runs": [
+      {
+        "optimized": false,
+        "summary": {
+          "gates": 119542,
+          "native_root_classes": 18,
+          "all_carry_pairs": 2916,
+          "ternary_index_lower_exponent": 10,
+          "affine_audit": [
+            {
+              "modulus": 3,
+              "all_2_by_2_matrices": 81,
+              "all_rhs_checked": 729
+            },
+            {
+              "modulus": 4,
+              "all_2_by_2_matrices": 256,
+              "all_rhs_checked": 4096
+            }
+          ]
+        }
+      },
+      {
+        "optimized": true,
+        "summary": {
+          "gates": 119542,
+          "native_root_classes": 18,
+          "all_carry_pairs": 2916,
+          "ternary_index_lower_exponent": 10,
+          "affine_audit": [
+            {
+              "modulus": 3,
+              "all_2_by_2_matrices": 81,
+              "all_rhs_checked": 729
+            },
+            {
+              "modulus": 4,
+              "all_2_by_2_matrices": 256,
+              "all_rhs_checked": 4096
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "script": "ternary_obstruction_verify.py",
+    "receipt": "ternary_obstruction_verify.json",
+    "byte_identical": true,
+    "canonical_sha256": "b5ddefa4f8ee02b2e1634c85a2d5eef0b09782cd8841f65b16a6888b0c15cf48",
+    "runs": [
+      {
+        "optimized": false,
+        "summary": {
+          "gates": 979,
+          "rejected_mutations": [
+            "root_annihilator",
+            "character_row"
+          ],
+          "hostile_81_27": "passed"
+        }
+      },
+      {
+        "optimized": true,
+        "summary": {
+          "gates": 979,
+          "rejected_mutations": [
+            "root_annihilator",
+            "character_row"
+          ],
+          "hostile_81_27": "passed"
+        }
+      }
+    ]
+  }
+]
