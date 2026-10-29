@@ -221,6 +221,40 @@ carriers decoding tournaments on the named eleven-point domain, not arbitrary
 guarded carriers or compressed certificates. No new independent tests were
 added for this editorial check; the count remains62,872.
 
+### Concurrent-source integration: bounded final review
+
+Parent's incoming comparison credits source commit
+`4368e3847072d9a5d88ddb7d80470f9861c97b93` for independently overlapping
+reflection classification/full holonomy and for additional all-r moments and
+prime-atlas work. Those latter general extensions are not promoted to results
+independently proved by this lane.
+
+The period-nine CRT control is accepted: `phi^9−1=20+34phi` has norm−76.
+The maps to O/(2)=F4 and to F19 via phi↦5 kill this ideal; their combined map
+is surjective by coprime ideals, and its index76 equals the norm, proving the
+quotient is F4×F19. Its additive group is C2×C38; addition by1 has exact
+order38, not76. The prime-degree full-cycle theorem is therefore inapplicable.
+Word reflection's F4 Frobenius action and nonzero-F19-fibre four-way
+separation are finite statements checked on all76 words, not assumptions of
+field-linearity for reflection. The profile
+`(pi19(x),pi19(Rx),pi19(RTx))` then separates all states: its second entry
+separates nonzero fibres; at zero the translation takes tags to the fibre1,
+where the third entry separates. Thus the claimed full future-observation
+carrier follows from explicit permitted observations, without a universal
+claim that arbitrary scalar projections always reconstruct their sources.
+
+The fixed-count moment mechanism is also accepted: a uniform wreath-group
+element has root rotation zero with probability1/3; conditional on that, its
+three children are independent uniform group elements. Separate centralizer
+factors give independent variables in `Y_k=1+2 sum X_j`. Burnside converts
+fixed-count raw moments to ordered-tuple orbit counts. These probability laws
+must remain uniform-group laws, not a claim about arithmetic trajectories.
+The first three moment polynomials were compared with literal centralizers
+through k3 in the parent's incoming checker. This lane read the checker and
+replayed it normally and under `-O`: both reports PASS183 checks. These are
+additional reviewed-source replay checks, not added to the62,872 independently
+authored checks above. No all-r proof or prime-density census was reproduced.
+
 ## 5. Independent executable evidence and exclusions
 
 `check_independent.py` uses only the Python standard library, with checks
@@ -241,3 +275,9 @@ all-S_n automorphism exhaustion. Source Session90 supplies that separate check.
 No access or permission blocker occurred. No source/remote edits were made by
 this lane. Parent publication remains separate. No CI, full prime-distribution,
 all-tournament holonomy, or major-conjecture closure is claimed.
+
+The incoming core replay reviewed above had183 checks. Its final version adds
+23 direct order-conversion controls for theta=−phi² versus phi² at odd
+unramified primes through100, giving206 checks. The elementary cyclic-group
+order formula and these additional controls were checked by the parent; they
+are not added to this audit script's independently authored62,872 count.
