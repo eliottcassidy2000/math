@@ -42,6 +42,36 @@ guards remain active under optimization. No publication was performed.
   `1⊕C` is exactly `C⊕Λ²C` in the chosen ordered basis. This is synthetic,
   not the actual legality or acceptance representation.
 
+### Proof audit: the native observer's genuine wedge carrier
+
+The final §3 addition is approved independently against the native definition
+in Session103's README: entries count spanning covers by two ordered,
+nonempty, disjoint directed paths, with singleton paths allowed. Simultaneously
+swapping path labels swaps both ordered start and end ports and is an
+involution of covers. Consequently `R M2 R=M2`, equivalently `M2 R=R M2`.
+
+For n=4 the twelve ports comprise six transposed pairs. Each pair contributes
+one rational +1 eigenvector and one −1 eigenvector; hence two invariant
+six-dimensional rational sectors. The map
+`ei∧ej ↦ e_(i,j)−e_(j,i)` identifies the antisymmetric sector with Λ²Q⁴.
+It intertwines vertex re-marking with Λ²Pπ, including the correct sign when
+the order of a pair reverses. On each integral two-port block, the sum/difference
+basis matrix has determinant −2, so its full twelve-port lattice index is
+`2^6`, exactly as stated. The integer antisymmetric lattice itself has the
+printed difference basis; the index warning concerns combining both sectors.
+
+The expanded bridge vector `(ea−es)∧er` agrees termwise with the native
+ordered-pair certificate stated in Session103. At general n the dimension is
+`binomial(n,2)`, and injections of labelled vertex sets induce injective wedge
+maps. These maps alone supply no intertwining equation with the new observer
+and therefore no automatic kernel persistence. The additional last-forbidden
+bridge/sink proof is essential. This native observer sector is a real wedge
+carrier, **not** the six-state Moore machine, and run-swap commutation does
+not imply that its restricted operator is Λ² of a vertex operator. No new
+computation was needed: this addition is certified by the explicit bijection,
+two-by-two lattice calculation, and functorial definition, while the existing
+101 coded checks and receipts remain unchanged.
+
 ### Independently audited integral dual / seventh-cyclotomic addition
 
 The subsequently added §5 is correct. The checker independently verifies the
@@ -138,11 +168,11 @@ claimed.
 
 ## Reproduction and receipts
 
-From the repository root:
+From this packet directory:
 
 ```
-python3 session104_descent_exterior/audit_algebra/check_independent.py
-python3 -O session104_descent_exterior/audit_algebra/check_independent.py
+python3 audit_algebra/check_independent.py
+python3 -O audit_algebra/check_independent.py
 ```
 
 Both PASS with 101 explicit labeled checks. Receipts are
