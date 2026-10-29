@@ -1,0 +1,188 @@
+{
+  "source_commit": "3b6e3ef82382da222fc59aa02914eea72d5a105b",
+  "scope": "bounded read and blob validation; no mathematical checker replay",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "bytes": 6823,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "bytes": 23418,
+      "git_blob_validated": true
+    },
+    {
+      "path": "00-navigation/START-HERE.md",
+      "blob": "21d7ca583bce461dbcd219f84a2ec0d8446ba007",
+      "sha256": "cc2013267c65a1c7b282b34d5dbc2933284a6b356d2cd6e5b49ebef5f923f0cb",
+      "bytes": 9132,
+      "git_blob_validated": true
+    },
+    {
+      "path": "00-navigation/CURRENT-FRONTIER.md",
+      "blob": "9d26ed83bcf64bcd69c7421d1ab69df66ec249ae",
+      "sha256": "c3fdac041b482562998eff2f107d7b25bb3b59e772dc356fec8fbfe3cd157609",
+      "bytes": 35173,
+      "git_blob_validated": true
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "bytes": 10465,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/reference/CORE-PAPERS.md",
+      "blob": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+      "sha256": "6ddf888a51f37c73cc038b89fc2e4bd607e24077036600f73b1b002b2518a4a2",
+      "bytes": 42860,
+      "git_blob_validated": true
+    },
+    {
+      "path": "00-navigation/HN.md",
+      "blob": "7d18efc83bd6cf76fa2bbf98e0b4f00083a75681",
+      "sha256": "342436a21dca8f01cc035256f6106621729df71cc72bb983d015d1bf8300ec2c",
+      "bytes": 1778,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/theorems/THM-1936-signed-redei-join-multiplicative.md",
+      "blob": "c07bcb74f76504b18d94181208da08ba4a973f39",
+      "sha256": "c2a11b164fa6d4082d303c8f8a992e97f80f5e6d38e0b9569f8f53dc4b2f1357",
+      "bytes": 5272,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/theorems/THM-1966-signed-redei-count-independent-invariant-n7.md",
+      "blob": "73ce9d1c85694da1aa22708f8232c3c88194c57a",
+      "sha256": "2af3f0d49178e47bb955d525cd0918a83ac3782505f95bc08f8dbbdab278d5c1",
+      "bytes": 4409,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md",
+      "blob": "969760304ed00573cfbd98b5a0722d616d8d04ae",
+      "sha256": "539aba979c8e705b38a110bd552669c140453aeae391c4f15b08926d04cf5a54",
+      "bytes": 16212,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md",
+      "blob": "c51224b2eff703f476e06a8817963b8939419338",
+      "sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502",
+      "bytes": 16797,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/CLASSIFICATION.md",
+      "blob": "63ead76e66bf475ee7c5a09ffecba4aab45298c4",
+      "sha256": "71792ecd38d25f5923d6a13e2fb8561150be7e7306f4df2fe8d4b9164dd49ca6",
+      "bytes": 8936,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/hn_metagraph_information_20261026/README.md",
+      "blob": "df3570b1283f392e76b8f35d07d07057ab55c4d1",
+      "sha256": "1ba7f05675be792dab1fdf8138a2fdfeab61593b68f3cb1aa735120160e56c83",
+      "bytes": 1769,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/minimal_blue_selectors_20261028/README.md",
+      "blob": "97a1faa1f3943dbbd76fdc7cb42cd03e734de50d",
+      "sha256": "629540350d42ad373b9bee155f659057f926daee3238e033851f79fb31251c24",
+      "bytes": 4731,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/moving_selector_atoms_20261028/README.md",
+      "blob": "91a7d3dab265aef6ed4dee18a561acfa37bfc7ec",
+      "sha256": "6d04f976958e7574b47d2307d1aa27275babd1b2e739c75c26a3d9241f41dbf8",
+      "bytes": 5691,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/session94_recursive_ports_crt_clocks_20261029/README.md",
+      "blob": "a6b7ed3bd9f93470062b8eb736476167e8e6d62d",
+      "sha256": "0743481f29f78a0f5949fa458d55eb20c19febb9274a5f2ace18f0265c8a18a6",
+      "bytes": 10870,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/session95_niche_recurrences_20261029/README.md",
+      "blob": "515691a7be114cd1cff8abac877f80d71879cb60",
+      "sha256": "2f6788a6385529582ecdb65315277b3b09415195553b9c5481d7fba6ff787a14",
+      "bytes": 10804,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/README.md",
+      "blob": "73e6cb91afc0c36300c11fcc9d8c6dcd776e73d3",
+      "sha256": "0419a2eca7f11057a69ca19adb272df2800357543b475ceee1c29242881f1040",
+      "bytes": 6095,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/composition/QUOTIENT_EXTENSION.md",
+      "blob": "90b9427d8f9fc83c165d9274ac24908c30e6605d",
+      "sha256": "3e14234d46e0c410ef72f5a85c3e27023d5fe14cdf792e1c239135b7b242d46f",
+      "bytes": 7437,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/overnight_research_20261029/THREE_RUN_GLUE.md",
+      "blob": "12e05c50a7b40f31f5c70a7b0fd6248163fbe8e8",
+      "sha256": "e17273c52f4b4c25a81b227c55f75ff5aa46d502356ebbadb7bd833546cd4109",
+      "bytes": 15872,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/four_vertex_glue_fermat_20261029/README.md",
+      "blob": "bc1f08305ae11caf6d2b81cedba605189aad3e9f",
+      "sha256": "f4e7d103fa3a70c49e3c0b410c3c01bdd3a7602765a182b74fdb9432e2900023",
+      "bytes": 16749,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/metagraph_classification_20261021a/README.md",
+      "blob": "34c94061358e9583527d0e8e92644f69b129f4b9",
+      "sha256": "a8fd5875952710217d4398eabcead0868899a335da9d7ff1feabb989487beb62",
+      "bytes": 15805,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/tournament_contradiction_grammar_codex_s260.out",
+      "blob": "c816e0eda135c5fc1d655a73802f7fc4be0a3e60",
+      "sha256": "079efc9bb4719f862811e8235fb4b4fa80a3b48bc8b220f53016c647faf3c8f2",
+      "bytes": 11758,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/theorems/THM-4531-twisted-mallows-sloane-principle-and-no-natural-bijection-for-switching-classes.md",
+      "blob": "baba12d404ae9263b77b78bb4f0b079d2b723edd",
+      "sha256": "aec06c7678167ca0b0d684cca83e90ce0064dcf18be4a4434489fd91f87fd12b",
+      "bytes": 10100,
+      "git_blob_validated": true
+    },
+    {
+      "path": "01-canon/theorems/THM-1460-babai-cameron-zero-at-all-odd-n.md",
+      "blob": "d91f7cfc6afbfe560fc4315ddd50dbc6d2ed227f",
+      "sha256": "84077a168bd336666b94cf3022ee6525dbb0a4f37ad2c4384df0d3c4308ec165",
+      "bytes": 8080,
+      "git_blob_validated": true
+    },
+    {
+      "path": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "blob": "2eef2ae0b43a023aa275a9c3760081acf5de9ccd",
+      "sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7",
+      "bytes": 32272,
+      "git_blob_validated": true
+    }
+  ]
+}
