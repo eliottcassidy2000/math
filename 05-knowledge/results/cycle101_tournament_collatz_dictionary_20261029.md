@@ -16,7 +16,7 @@ identical clocks acquire denominators \(35\) and \(175\) after the same appended
 - *CITED:* Böhm–Sontacchi, Lagarias, Turner/Babai, Dvoretzky–Motzkin, Ailon–Rudnick, Bugeaud–Corvaja–Zannier.
 - *OPEN:* HYP-9446. Two pre-registered predictions FAILED: HYP-9446 (1), and (3), the latter after passing eight
   instances.
-- *Audit.* PRE-AUDIT checkpoint; independent audit pending (section 8).
+- *Audit.* Independently audited 2026-10-29: SOUND WITH CORRECTIONS, all applied (section 9; MISTAKE-696).
 
 ---
 
@@ -40,9 +40,11 @@ identical clocks acquire denominators \(35\) and \(175\) after the same appended
      ≡ −1 (mod 5). Hence 35 at every marking. The ×3 labelling is unlocked, and 31/101 ≡ 1 (mod 5): 175.
    - The locking theorem is an iff (THM-4849 (E)). In general the interval cycle of `R_q` is locked under (1)
      exactly at the primes of `gcd(2^m − 1, 3^m − 1)`, `m = (q+1)/2`; at `q = 7` this is `gcd(15, 80) = 5`.
-4. **The same pair is the pair of positive 5x+1 three-cycles.** The positive 5x+1 cycles {13,33,83} and {17,43,27}
-   have exactly these two words (collatz_fermat_reframes C1). On the (3,7) shape, a word gives an integral 5x+1
-   cycle iff all its letters are odd.
+4. **The same pair is, by construction, the pair of positive 5x+1 three-cycles.**
+   - reframes took C3's words from its C1 table: the positive 5x+1 cycles {13,33,83} and {17,43,27} have exactly
+     these words.
+   - New here: both are R7, since an all-odd (3,7) word repeats a letter and is achiral.
+   - New here: on the (3,7) shape a word gives an integral 5x+1 cycle iff all its letters are odd.
 5. **Symmetry on the run-observer side (THM-4848).**
    - The multiplier group of a circulant tournament, which acts by decimation on the Collatz side, acts on run
      observers by Galois descent.
@@ -67,7 +69,8 @@ items used or typed here are kept.
     13 is the one exceptional prime because `169 = 13²`.
   - **This is where the owner's four numbers first appear together, and 35 is on the path.**
 - **Free shapes (THM-4484, procgen sporadic 2026-09-26).** The shift criterion forces all five (3,7) necklaces to be
-  3x+101 cycles, but 101 is never named there. THM-4849 (C) is that statement, with the tournament reading added.
+  3x+101 cycles, but the clock `101 = 2^7 − 3^3` is never named there; 101 appears only as an unrelated least
+  element, of the `d = 14303` cycle. THM-4849 (C) is that statement, with the tournament reading added.
 - **The 5x+1 transport (Session100 and collatz_fermat_reframes, today).** The 5x+1 cycle 13 → 33 → 83 decodes to
   19/101, and denominator 101 excludes its basin. The C1 table adds (1,3,3) ↔ 17, 43, 27 and (1,4) ↔ 1, 3.
 - **Two roles of 101 in one algebra.** 101 is the denominator `2^7 − 3^3` and also the carry `C(1,2,2,·)`, with reset
@@ -146,6 +149,11 @@ items used or typed here are kept.
   witness and the R7/Paley7 tournament controls.
 - **Coincidences.** `H(R7) = 175 = 2^8 − 3^4` was already flagged by session101 as not identified with the appended
   denominator. 35 is a coefficient of R7's characteristic polynomial (session101 controls), also not identified.
+- **The concurrent clock101 packet** (`clock101_joint_ports_20261029`, committed 11:49, before this checkpoint). It
+  works on the same numbers. It extends the squarefree limits 4985/8600 to every power-free exponent, proves a
+  timed-port closure for the 101 clock, and lists the 35/175 pair among its hostiles. Its RECOVERY.md maps older
+  sources on each number, and its P1 has the 7x+169 cycle 79/169, 361/169, 337/169. It does not overlap THM-4848/4849.
+  It was missed until the audit (MISTAKE-696).
 - **The 3x+35 cycle.** 13/35 lies on the same 3x+35 cycle {13, 37, 73, 127} as 37/35 (101-sweep): the shape (4,8),
   denominator `2^8 − 3^4 = 175` reduced. GENERIC.
 
@@ -163,10 +171,10 @@ points and denominator dividing `2^q − 3^k`.
 | translation `v ↦ v − 1` | the Collatz map `T` |
 | the in-neighbours of a vertex | the odd points (the `U`-cycle) |
 | gaps of `S` | the valuation word |
-| multiplier `x ↦ mx` (isomorphism) | decimation of the word (moves between cycles with the same denominator) |
+| multiplier `x ↦ mx` (isomorphism) | decimation of the word (moves between cycles with the same `D_q`; reduced denominators can differ, e.g. P11's QR and NQR cycles, 361 and 1805) |
 | converse `T(−S)` | word reversal (preserves the trace, five-mirrors Prop. 6) |
 | connection set of `T(S)` | tournament base point: backwards = complement of forwards |
-| rotational `R_q` | the only cycles with two base points = the achiral ones |
+| rotational `R_q` | the only tournament cycles with two base points = the achiral tournament cycles (cycles with no base point can also be achiral from `q = 11` on) |
 
 **The two readings.**
 - *The bridge note's reading* (2026-10-01) reads a word as a binary fraction. There `×2` is the Collatz shift and
@@ -185,7 +193,8 @@ points and denominator dividing `2^q − 3^k`.
 | 13 | 7463 = 17·439 | 58 | 132 | R13 (6), four of 12, the ⟨3⟩-cyclotomic class (4) |
 
 **At composite `q`.** For `q = 9, …, 27`, doubly-based cycles are lexicographic products `C[R_(q/g)]` (THM-4849
-(B')). No cycle with three base points was found (HYP-9446 (4)).
+(B')). No cycle has three base points, for any odd `q`. This is THM-4849 (B''), proved by the audit, which settles
+HYP-9446 (4).
 
 ## 3. The 35 and the 175 (THM-4849 (D), (E))
 
@@ -202,8 +211,10 @@ so `p^e` cancels iff `x ≡ ξ_v = 1/(2^v − 3) (mod p^e)`.
 - The one marking ≡ −1 (mod 7) is 53, giving 25.
 - This reproduces session101's fibre exactly.
 
-**Locking theorem** (iff; 26665 tests, all agree). Every marking is ≡ `ξ_v (mod p^e)` iff every letter is
-≡ `v` (mod `ord_(p^e)(2)`).
+**Locking theorem** (iff; 26665 tests here and 12003 in the audit, all agree).
+- *Statement.* For `p^e | D(wv)` with `p ∤ 6(2^v − 3)`, every marking is ≡ `ξ_v (mod p^e)` iff every letter is
+  ≡ `v` (mod `ord_(p^e)(2)`).
+- *The hypothesis is needed:* `w = (3)`, `v = 3`, `p = 5`.
 
 **The interval cycle.** For `R_q`'s interval cycle under (1) the locked primes are those of `gcd(2^m − 1, 3^m − 1)`,
 equivalently `lcm(ord_p 2, ord_p 3) | m`.
@@ -248,7 +259,7 @@ rotational" held for `q ≤ 19` and FAILED at `q = 23`, where 14 of 18 locked cy
 | all five 101-cycles = all circulant tournaments on Z_7; 7 is the last such prime | STRUCTURAL | (B): `2^k − k = Cat_k` iff `k ≤ 3` |
 | C3 pair = two labellings of R7 | STRUCTURAL | decimation ×3 |
 | 35 at every marking of {19,79,169} | STRUCTURAL | locking at 5, `gcd(2^4 − 1, 3^4 − 1) = 5` |
-| C3 pair = the two positive 5x+1 three-cycles | STRUCTURAL (cited transport plus a new criterion) | reframes C1, plus all letters odd ⟺ `3 \| C_5` |
+| C3 pair = the two positive 5x+1 three-cycles | INHERITED (C3 used C1's 5x+1 words); the criterion is new and STRUCTURAL | reframes built C3 from its C1 table; all letters odd ⟺ `3 \| C_5`; both R7 since an all-odd (3,7) word is achiral |
 | T5's interval cycle {5, 19} of 3x+23 = the 5x+1 cycle {1, 3} | STRUCTURAL (cited) | reframes C1 table |
 | Paley pair = the chiral pair, equal traces 197/101 | STRUCTURAL | reversal = converse; five-mirrors Prop. 6 |
 | "one cubic, zero of its dual" flips under the converse | STRUCTURAL | THM-4848 (v) |
@@ -258,7 +269,7 @@ rotational" held for `q ≤ 19` and FAILED at `q = 23`, where 14 of 18 locked cy
 | 169 = 13², a Camion pseudoprime | NUMEROLOGY for the cycle | a 13-adic fact (THM-4746) |
 | `H(R7) = 175` = appended denominator | NUMEROLOGY | flagged by session101 |
 | minima 19, 23, 29, 31, 37 consecutive primes | NUMEROLOGY | — |
-| `19² \| D_11`; P11's cycle has reduced denominator 361; the cycle {5,7,17,31,35} of 3x+19 is a Z_11 tournament cycle | GENERIC | divisibility of `C` by `19²` only |
+| `19² \| D_11`; P11's cycle has reduced denominator 361; the cycle {5,7,17,31,35} of 3x+19 is a Z_11 tournament cycle | GENERIC | residues of `C` modulo 5 and `19²` (i.e. modulo `D_11`) only |
 | Paley pair's 5-integrality at q = 11 (QR) and 19 (NQR) | GENERIC | consistent with a 1/5 chance per cycle |
 | interlocks: 101 periodic for 3x+79 and 3x+169; 175's cycles through 101 and 169; 7x+169 through `19²`; the plain orbit of 79 through 101, 19, 13 | GENERIC / NUMEROLOGY | small integers on small cycles (`cycles_3xb.out`) |
 | inversion pairs `p/q`, `q/p` both periodic | GENERIC | 192 mutual pairs among 2805 periodic reduced rationals with `p, q ≤ 401`, every odd `b ≤ 401`, starts `≤ 2·10^6` (`periodic_rationals.txt`) |
@@ -284,7 +295,7 @@ rotational" held for `q ≤ 19` and FAILED at `q = 23`, where 14 of 18 locked cy
 1. REFUTED: locked tournament cycles are rotational.
 2. Ailon–Rudnick type: infinitely many primes `q` with no interval-locked prime.
 3. REFUTED: Paley one-sidedness at split odd primes (pre-registered; fails at P7, `k = 4`, `p = 71`).
-4. At most two base points for every odd `q`.
+4. PROVED (audit): at most two base points for every odd `q` (THM-4849 (B'')).
 
 ## 8. Reproduction
 
@@ -311,4 +322,24 @@ The binaries are not committed. The scripts import helpers from `../growth_gf_ru
 
 ## 9. Audit
 
-PRE-AUDIT checkpoint. An independent audit follows.
+An independent audit (2026-10-29) recomputed everything with its own code: `audit/`, report `audit/REPORT.md`.
+That covered every table; every β, norm and Smith form, including P19 and the 840 × 840 four-run observer of P7;
+the locking and interval tables; the HYP-9446 counts; the cycle spectra (its own C search to `2·10^7`); and the
+inversion pairs. Verdict: **SOUND WITH CORRECTIONS**, all applied, recorded as MISTAKE-696.
+
+1. **ERROR.** "Two base points ⟺ achiral" holds only for tournament cycles. `(1,1,1,4,4)` at `q = 11` is achiral
+   with no base point.
+2. **GAP.** The stabiliser step of (B) skipped `k < m ≤ 2k`. That case is trivial.
+3. **PROVED by the audit.** HYP-9446 (4), at most two base points for every odd `q`, with the closed count. It is now
+   THM-4849 (B'').
+4. **Wording.** The locking theorem needs `p ∤ 2^v − 3` in its title and summary.
+5. **OVERCLAIM.** The C3 pair is the 5x+1 pair *by construction* (reframes built C3 from its C1 table). New are the
+   all-odd criterion and the R7 identification.
+6. **CREDIT.** reframes C2 and THM-4484 already have the five (3,7) cycles of 3x+101.
+7. **CREDIT.** five-mirrors Proposition 5 already has reversal on rational cycles, its fixed points and the
+   genuine pairs.
+8. **CREDIT.** The concurrent `clock101_joint_ports_20261029` packet, and ramanujan_heegner7 Proposition 1 for the
+   `q = 7` Gauss period.
+9. **Minor.** Two missing signs on `det B_0`, a column reference, the unfactored `Z_13` block, and the controls note
+   (singletons force `f = 1`). Also "7 is the last prime `q`", the 19²-only typing, the decimation row, the THM-4484
+   wording, "782 odd primes", the HYP-9446 (1) test wording, the ill-posed open residue, and the PROVED list.

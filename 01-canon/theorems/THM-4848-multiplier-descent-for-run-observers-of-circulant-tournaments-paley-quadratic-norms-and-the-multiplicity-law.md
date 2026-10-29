@@ -2,7 +2,10 @@
 id: THM-4848
 title: "Multiplier descent for run observers of circulant tournaments. Let T(S) be a circulant tournament on Z_q, q an odd prime, with multiplier stabiliser H = {m : mS = S}. Every run observer M_k(T) splits over the characters of Z_q into blocks B_j. (i) det M_k = det B_0 * N(det B_1). (ii) Each multiplier m in H conjugates B_1 to its Galois image by a monomial matrix, so det B_1 lies exactly in the fixed field K_H (no unit ambiguity) and det M_k = det B_0 * N_{K_H/Q}(det B_1)^|H|. (iii) Away from q, the nontrivial part of coker M_k is a Z[zeta_q]-module whose elementary divisors are constant on H-orbits of primes, so every Z/p^e occurs with multiplicity divisible by |H<p>|. For Paley P_q, K_H = Q(sqrt(-q)): odd-exponent primes of the quadratic norm split or ramify, and primes p = 1 (mod q) come in blocks of (q-1)/2. In P11, 89 and 62987 occur as (Z/p)^5, while in the controls R7 and R11 (H = 1) such primes occur once. Checked for P7 (k = 2, 3), P11, P19 (k = 2) and the <3>-cyclotomic class on Z_13. The local P7 three-run modules of CLOCK_MINIMAL_PAIRING C5-C6 are the case q = 7, k = 3."
 status: >
-  PRE-AUDIT checkpoint: independent audit pending.
+  Independently audited 2026-10-29: SOUND WITH CORRECTIONS, all applied
+  (04-computation/experiments/cycle101_tournament_collatz_20261029/audit/REPORT.md, MISTAKE-696). The audit
+  recomputed every observer, beta, norm and Smith form from scratch, including P19 and the 840 x 840 four-run observer
+  of P7. It corrected two signs and the wording of the Z_13 and control notes.
   PROVED (elementary; mac-mini-2026-10-29-cycle101): (i)-(iii) and the Paley specialisation. The method (circulant
   block diagonalisation, then Galois descent through a group of automorphisms) is standard; the statement for run
   observers of every circulant tournament, every k, is assembled here.
@@ -149,18 +152,18 @@ Hence `det B_1(T^op) = det B_(−1)(T) = σ_(−1)(det B_1(T))`, and `T^op = T(�
 
 | case | size | det `B_0` | quadratic (or `K_H`) norm of `β` | non-trivial instances of (iii) |
 |---|---:|---|---|---|
-| P7, k = 2 | 42 | `3^3·7·13^3` | `2^14·3^2·7·1451` (`1451 ≡ 2`, split) | none possible at the primes present |
+| P7, k = 2 | 42 | `−3^3·7·13^3` | `2^14·3^2·7·1451` (`1451 ≡ 2`, split) | none possible at the primes present |
 | P7, k = 3 | 210 | `−2^14·3^18·17^4` | `2^22·5^4·11^2·79·5861^2·392809` | none (C5–C6's modules) |
 | P7, k = 4 | 840 | (local data only) | `β = a + bη` with `gcd(a, b) = 2^41·5^3·7^3·71^2`; split odd primes 71, 79, 151, 2843, 7529 | **71, 2843 ≡ 1 (mod 7): `X_p = (Z/71)^15`, `(Z/2843)^9`**, i.e. blocks of 3 as forced; also `(Z/79²)^3`, `(Z/151)^9`, `(Z/7529)^6` |
-| P11, k = 2 | 110 | `3·11^2·19^3·23·43·241^2·22291^2` | `2^12·5^2·11^2·31·53·89·62987·665251·35096521·2871099599·4780984157` | **89, 62987 ≡ 1 (mod 11): `X_p = (Z/p)^5`** |
+| P11, k = 2 | 110 | `−3·11^2·19^3·23·43·241^2·22291^2` | `2^12·5^2·11^2·31·53·89·62987·665251·35096521·2871099599·4780984157` | **89, 62987 ≡ 1 (mod 11): `X_p = (Z/p)^5`** |
 | P19, k = 2 | 342 | `−3^12·5^2·17^2·23^2·41^2·43·1097^2·8941·9661·14843·19421·104659^2·c51^2` | `2^8·5^2·11·47·61·263·c299` | (Smith form not computed) |
-| `Z_13`, `H = ⟨3⟩`, k = 2 | 156 | (4 labellings, identical data) | quartic `K_H`; nontrivial primes 3, 1907, 2011 and a 170-digit coprime block | none (all have `3 | f`) |
+| `Z_13`, `H = ⟨3⟩`, k = 2 | 156 | (4 labellings, identical data) | quartic `K_H`; nontrivial primes 3, 1907, 2011 and a 170-digit coprime block | none at 3, 1907, 2011 (`f = 3`); the 170-digit block is unfactored, so its residue degree (1 or 3) is unknown |
 | R7 control, `H = 1` | 42 | — | — | 29, 71, 337, 303073, 2277647 ≡ 1 (mod 7) each occur **once** |
 | R11 control, `H = 1` | 110 | — | — | nine primes ≡ 1 (mod 11) each occur **once** |
 
 Notes on the table:
 - **P7, k = 3.** `β = 3257463411200 − 12008276134400 η` with `η = ζ + ζ² + ζ⁴ = (−1 + √−7)/2`. Its norm
-  `a² − ab + 2b²` is the second column's entry, so `N(det B_1) = 2^66 5^12 11^6 79^3 5861^6 392809^3`.
+  `a² − ab + 2b²` is the entry in the column "quadratic norm of `β`", so `N(det B_1) = 2^66 5^12 11^6 79^3 5861^6 392809^3`.
 - **The 2-part of P7, k = 3.** The nontrivial 2-part is `(Z/2)^21 ⊕ (Z/8)^3 ⊕ (Z/16)^9`, with multiplicities
   divisible by 3.
 - **P11, 2-part.** 2 is inert in `Q(√−11)` and has even exponent. Its nontrivial 2-part `(Z/2)^30 ⊕ (Z/8)^10` has
@@ -170,5 +173,8 @@ Notes on the table:
   norm. The primes 11, 47, 61 and 263 have `(−19/p) = 1`, and 2 is inert with exponent 8. `c299` is a composite
   299-digit cofactor of the quadratic norm, and `c51` a composite 51-digit cofactor of `det B_0` (gp `isprime` = 0).
 - **The controls.** They show that the repetition in P11 comes from `H`. Without multipliers, primes `≡ 1 (mod q)`
-  enter `X_p` singly. That every odd prime in the controls' `X_p` is `≡ 1 (mod q)` is the generic behaviour of
-  norms from `Q(ζ_q)`: a degree-`f` prime costs `p^f`. It is not a theorem here.
+  enter `X_p` singly.
+- **What the controls' singletons force.** Each odd prime of the controls' `X_p` occurs exactly once. By (iii) every
+  multiplicity is a multiple of `f`, so this forces `f = 1`, i.e. `p ≡ 1 (mod q)`. That also covers the prime
+  factors of R11's unfactored 196-digit block (audit).
+- **What is generic, not a theorem,** is that the odd part of `N(det B_1)` is squarefree there.

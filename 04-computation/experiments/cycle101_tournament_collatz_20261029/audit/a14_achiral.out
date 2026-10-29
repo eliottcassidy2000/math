@@ -1,0 +1,6 @@
+q=5: (base points, achiral) -> necklaces {(2, True): 2}; first achiral word with no base point: None
+q=7: (base points, achiral) -> necklaces {(1, False): 2, (2, True): 3}; first achiral word with no base point: None
+q=11: (base points, achiral) -> necklaces {(0, False): 10, (0, True): 5, (1, False): 22, (2, True): 5}; first achiral word with no base point: (1, 1, 1, 4, 4)
+q=13: (base points, achiral) -> necklaces {(0, False): 60, (0, True): 14, (1, False): 52, (2, True): 6}; first achiral word with no base point: (1, 1, 1, 2, 6, 2)
+q=17: (base points, achiral) -> necklaces {(0, False): 1120, (0, True): 62, (1, False): 240, (2, True): 8}; first achiral word with no base point: (1, 1, 1, 1, 1, 2, 8, 2)
+q=19: (base points, achiral) -> necklaces {(0, False): 4242, (0, True): 117, (1, False): 494, (2, True): 9}; first achiral word with no base point: (1, 1, 1, 1, 1, 1, 1, 6, 6)

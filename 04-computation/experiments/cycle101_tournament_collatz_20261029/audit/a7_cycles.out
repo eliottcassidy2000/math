@@ -1,0 +1,72 @@
+== b=19
+cycle min=5 k=5 H=11 points: 5 17 35 31 7
+cycle min=19 k=1 H=2 points: 19
+b=19 N=20000000 cycles=2 escapes=0
+== b=23
+cycle min=41 k=26 H=43 points: 41 73 121 193 301 463 353 541 823 623 473 721 1093 1651 311 239 185 289 445 679 515 49 85 139 55 47
+cycle min=5 k=2 H=5 points: 5 19
+cycle min=7 k=2 H=5 points: 7 11
+cycle min=23 k=1 H=2 points: 23
+b=23 N=20000000 cycles=4 escapes=0
+== b=35
+cycle min=13 k=4 H=8 points: 13 37 73 127
+cycle min=17 k=4 H=8 points: 17 43 41 79
+cycle min=25 k=2 H=4 points: 25 55
+cycle min=7 k=1 H=3 points: 7
+cycle min=133 k=3 H=5 points: 133 217 343
+cycle min=35 k=1 H=2 points: 35
+cycle min=161 k=3 H=5 points: 161 259 203
+cycle min=1309 k=17 H=27 points: 1309 1981 2989 4501 6769 10171 7637 11473 17227 12929 19411 14567 5467 4109 6181 9289 13951
+cycle min=2429 k=17 H=27 points: 2429 3661 5509 8281 12439 4669 7021 10549 15841 23779 17843 13391 2513 3787 2849 4291 3227
+b=35 N=20000000 cycles=9 escapes=0
+== b=79
+cycle min=1 k=20 H=44 points: 1 41 101 191 163 71 73 149 263 217 365 587 115 53 119 109 203 43 13 59
+cycle min=7 k=20 H=44 points: 7 25 77 155 17 65 137 245 407 325 527 415 331 67 35 23 37 95 91 11
+cycle min=79 k=1 H=2 points: 79
+cycle min=233 k=14 H=23 points: 233 389 623 487 385 617 965 1487 1135 871 673 1049 1613 2459
+cycle min=265 k=14 H=23 points: 265 437 695 541 851 329 533 839 649 1013 1559 1189 1823 1387
+b=79 N=20000000 cycles=5 escapes=0
+== b=101
+cycle min=11 k=6 H=14 points: 11 67 151 277 233 25
+cycle min=29 k=3 H=7 points: 29 47 121
+cycle min=7 k=6 H=14 points: 7 61 71 157 143 265
+cycle min=19 k=3 H=7 points: 19 79 169
+cycle min=23 k=3 H=7 points: 23 85 89
+cycle min=31 k=3 H=7 points: 31 97 49
+cycle min=37 k=3 H=7 points: 37 53 65
+cycle min=101 k=1 H=2 points: 101
+b=101 N=20000000 cycles=8 escapes=0
+== b=169
+cycle min=11 k=9 H=24 points: 11 101 59 173 43 149 77 25 61
+cycle min=17 k=23 H=44 points: 17 55 167 335 587 965 383 659 1073 847 1355 2117 815 1307 2045 197 95 227 425 361 313 277 125
+cycle min=13 k=1 H=4 points: 13
+cycle min=169 k=1 H=2 points: 169
+cycle min=1703 k=15 H=24 points: 1703 2639 4043 6149 2327 3575 5447 8255 12467 18785 14131 21281 16003 24089 18109
+cycle min=2743 k=5 H=8 points: 2743 4199 6383 9659 14573
+cycle min=3367 k=5 H=8 points: 3367 5135 7787 11765 4433
+cycle min=2951 k=5 H=8 points: 2951 4511 6851 10361 7813
+cycle min=3731 k=5 H=8 points: 3731 5681 4303 6539 9893
+cycle min=3263 k=5 H=8 points: 3263 4979 7553 5707 8645
+cycle min=3679 k=5 H=8 points: 3679 5603 8489 6409 4849
+cycle min=4147 k=5 H=8 points: 4147 6305 4771 7241 5473
+b=169 N=20000000 cycles=12 escapes=0
+== b=175
+cycle min=89 k=4 H=8 points: 89 221 419 179
+cycle min=65 k=4 H=8 points: 65 185 365 635
+cycle min=49 k=8 H=16 points: 49 161 329 581 959 763 77 203
+cycle min=101 k=4 H=8 points: 101 239 223 211
+cycle min=103 k=4 H=8 points: 103 121 269 491
+cycle min=85 k=4 H=8 points: 85 215 205 395
+cycle min=29 k=12 H=24 points: 29 131 71 97 233 437 743 601 989 1571 611 251
+cycle min=119 k=4 H=8 points: 119 133 287 259
+cycle min=125 k=2 H=4 points: 125 275
+cycle min=35 k=1 H=3 points: 35
+cycle min=143 k=4 H=8 points: 143 151 157 323
+cycle min=73 k=4 H=8 points: 73 197 383 331
+cycle min=53 k=8 H=16 points: 53 167 169 341 599 493 827 83
+cycle min=665 k=3 H=5 points: 665 1085 1715
+cycle min=175 k=1 H=2 points: 175
+cycle min=805 k=3 H=5 points: 805 1295 1015
+cycle min=6545 k=17 H=27 points: 6545 9905 14945 22505 33845 50855 38185 57365 86135 64645 97055 72835 27335 20545 30905 46445 69755
+cycle min=12145 k=17 H=27 points: 12145 18305 27545 41405 62195 23345 35105 52745 79205 118895 89215 66955 12565 18935 14245 21455 16135
+b=175 N=20000000 cycles=18 escapes=0

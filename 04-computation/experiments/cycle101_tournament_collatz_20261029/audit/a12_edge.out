@@ -1,0 +1,1 @@
+cases with p | 2^v-3, p | D(wv), letters = v mod ord_p(2): 110; first ones where not every marking cancels p: [((3,), 3, 5, False), ((3,), 7, 5, False), ((3,), 11, 5, False), ((4,), 4, 13, False), ((5,), 5, 29, False)]

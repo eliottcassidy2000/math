@@ -21411,3 +21411,45 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - A "check" that evaluates the claimed closed form is not a check. Compute the object by its definition.
   - When a section defines a notion, count with that definition, or rename what is being counted.
   - Before naming a polynomial for a numerical constant, evaluate it there.
+
+## 2026-10-29 — MISTAKE-696: audit corrections to THM-4848/4849 and HYP-9446 (`mac-mini-2026-10-29-cycle101`)
+
+- **Location:** THM-4848, THM-4849, HYP-9446 and the results note
+  `cycle101_tournament_collatz_dictionary_20261029.md`. The independent audit is
+  `04-computation/experiments/cycle101_tournament_collatz_20261029/audit/REPORT.md` (SOUND WITH CORRECTIONS).
+- **Errors:**
+  1. *A lemma stated beyond its scope.* THM-4849 (B) said that a shape-`(k, q)` cycle has two base points iff it is
+     reversal-symmetric (achiral). This was stated for every cycle, in the title, the lemma and the results-note
+     table. The proof only covers cycles that already have a base point. From `q = 11` on there are achiral cycles
+     with none, e.g. `(1,1,1,4,4)`: 5 necklaces at `q = 11`, 14 at `q = 13`.
+  2. *A proof step skipped.* The stabiliser argument in (B) treated `2 ≤ m ≤ k` but not `k < m ≤ 2k`, where trivially
+     `m·1 ∉ I`.
+  3. *Inheritance presented as discovery.* "The owner's C3 pair is exactly the pair of positive 5x+1 three-cycles."
+     collatz_fermat_reframes built C3 from its own C1 table of positive 5x+1 cycles, so this holds by construction.
+     Only the all-odd criterion and the R7 identification are new.
+  4. *Missing credits.*
+     - reframes C2 and THM-4484 already had the five (3,7) cycles of 3x+101.
+     - five-mirrors Proposition 5 already had reversal as an involution on rational cycles, its fixed points and the
+       genuine pairs.
+     - ramanujan_heegner7 Proposition 1 had the `q = 7` Gauss period.
+     - The concurrent `clock101_joint_ports_20261029` packet, on the same four numbers and committed 11:49 before
+       the 12:04 checkpoint, was not read or cited. This is MISTAKE-694's failure mode again.
+  5. *A hypothesis left open that had a short proof.* HYP-9446 (4), at most two base points for every odd `q`, was
+     posed as OPEN. The audit proved it in a few lines from (B'), with a closed count. It is now THM-4849 (B'').
+  6. *Minor.*
+     - The locking theorem's title omitted `p ∤ 2^v − 3`; the counterexample is `w = (3)`, `v = 3`, `p = 5`.
+     - Two signs were missing on `det B_0` in THM-4848.
+     - The `Z_13` row claimed `3 | f` for an unfactored block.
+     - The controls note called forced behaviour generic: singletons force `f = 1`.
+     - "782 primes" should be "782 odd primes"; also several wording fixes.
+- **Repair:** all of the above are corrected in the files, using the audit's evidence and proofs. No numerical claim
+  failed re-computation, and no result was withdrawn. Separately, after the checkpoint the session's own P7 `k = 4`
+  computation refuted the pre-registered HYP-9446 (3), recorded there.
+- **Lessons:**
+  - When a lemma is proved for a subclass (here, cycles with a base point), carry the subclass into every title and
+    summary that quotes it.
+  - Before calling two objects "the same", look up how the source built its examples. A shared origin is not a
+    discovery.
+  - Re-grep origin for packets on the directive's own numbers immediately before the checkpoint, not only at session
+    start.
+  - Before leaving a "≤ 2" statement open, try to extend the lemma that proved "= 2" one more step.

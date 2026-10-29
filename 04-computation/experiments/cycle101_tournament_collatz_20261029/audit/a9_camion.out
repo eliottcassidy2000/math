@@ -1,0 +1,7 @@
+s(1..8) = [1, 0, 2, 24, 544, 22320, 1677488, 236522496] (A054946: 1, 0, 2, 24, 544, 22320, 1677488, 236522496)
+s(19) - 2^9 mod 101 = 0
+n = 169: s(n) mod n = 105, c(n) mod n = 105, strong Camion test passes: True
+n = 1313: s(n) mod n = 1146, c(n) mod n = 542, strong Camion test passes: False
+n = 1501: s(n) mod n = 1029, c(n) mod n = 828, strong Camion test passes: False
+n = 1919: s(n) mod n = 1205, c(n) mod n = 1609, strong Camion test passes: False
+n = 3211: s(n) mod n = 3113, c(n) mod n = 1604, strong Camion test passes: False

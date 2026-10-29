@@ -1,0 +1,11 @@
+det B_0 = -24015568911150996649468274588866786941613565244058063711526576323510186981527800163026126798678483771570598956783058690424198804859961025564801798773525 = {3: 12, 5: 2, 17: 2, 23: 2, 41: 2, 43: 1, 1097: 2, 8941: 1, 9661: 1, 14843: 1, 19421: 1, 104659: 2, 'c51': 2, -1: 1}
+CRT primes used: 11 ; fixed by sigma_4: True ; fixed by all of QR: True ; moved by sigma_2: True
+N(det B_1) == quadratic norm^9: True ; quadratic norm digits: 310
+content gcd(a,b) = {2: 4}
+quadratic norm partial factorisation: {2: 8, 5: 2, 11: 1, 47: 1, 61: 1, 263: 1, 'c299': 1}
+   p=2: inert, exponent 8
+   p=5: split, exponent 2, (v_P, v_Pbar) = (0, 2)
+   p=11: split, exponent 1, (v_P, v_Pbar) = (1, 0)
+   p=47: split, exponent 1, (v_P, v_Pbar) = (0, 1)
+   p=61: split, exponent 1, (v_P, v_Pbar) = (1, 0)
+   p=263: split, exponent 1, (v_P, v_Pbar) = (1, 0)

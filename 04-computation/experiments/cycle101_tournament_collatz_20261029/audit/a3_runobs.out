@@ -1,0 +1,119 @@
+== P7_k2: q=7, S=[1, 2, 4], k=2, M_k is 42x42, |R| = 6, total mass 1638
+   det B_0 = -415233 = {3: 3, 7: 1, 13: 3, -1: 1}
+   det B_1 power-basis coefficients (CRT over 3 primes l = 1 mod 7): [11904, -23232, -23232, 0, -23232, 0]
+   sigma_m(det B_1) = det B_1 for all m in H = [1, 2, 4]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 3359570070250779202119794688 = {2: 42, 3: 6, 7: 3, 1451: 3}
+   beta = a + b eta: a = 11904, b = -23232
+   quadratic norm a^2 - ab + 2 b^2 = 1497710592 = {2: 14, 3: 2, 7: 1, 1451: 1}
+   N(det B_1) == quadratic norm^3: True
+   content gcd(a,b) = 192 = {2: 6, 3: 1}
+     p = 2: exponent 14 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (8, 6), sum 14, TWO-SIDED
+     p = 3: exponent 2 in quadratic norm, inert, p mod q = 3
+     p = 7: exponent 1 in quadratic norm, ramified, p mod q = 0
+     p = 1451: exponent 1 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+== NQR7_k2: q=7, S=[3, 5, 6], k=2, M_k is 42x42, |R| = 6, total mass 1638
+   det B_0 = -415233 = {3: 3, 7: 1, 13: 3, -1: 1}
+   det B_1 power-basis coefficients (CRT over 3 primes l = 1 mod 7): [35136, 23232, 23232, 0, 23232, 0]
+   sigma_m(det B_1) = det B_1 for all m in H = [1, 2, 4]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 3359570070250779202119794688 = {2: 42, 3: 6, 7: 3, 1451: 3}
+   beta = a + b eta: a = 35136, b = 23232
+   quadratic norm a^2 - ab + 2 b^2 = 1497710592 = {2: 14, 3: 2, 7: 1, 1451: 1}
+   N(det B_1) == quadratic norm^3: True
+   content gcd(a,b) = 192 = {2: 6, 3: 1}
+     p = 2: exponent 14 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (6, 8), sum 14, TWO-SIDED
+     p = 3: exponent 2 in quadratic norm, inert, p mod q = 3
+     p = 7: exponent 1 in quadratic norm, ramified, p mod q = 0
+     p = 1451: exponent 1 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+== R7_k2: q=7, S=[1, 2, 3], k=2, M_k is 42x42, |R| = 6, total mass 1638
+   det B_0 = 3072 = {2: 10, 3: 1}
+   det B_1 power-basis coefficients (CRT over 3 primes l = 1 mod 7): [1648, 3196, 3296, 1140, 3584, 4796]
+   sigma_m(det B_1) = det B_1 for all m in H = [1]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 1961913517216292753408 = {2: 12, 29: 1, 71: 1, 337: 1, 303073: 1, 2277647: 1}
+== P7_k3: q=7, S=[1, 2, 4], k=3, M_k is 210x210, |R| = 30, total mass 6678
+   det B_0 = -530149321306423296 = {2: 14, 3: 18, 17: 4, -1: 1}
+   det B_1 power-basis coefficients (CRT over 3 primes l = 1 mod 7): [3257463411200, -12008276134400, -12008276134400, 0, -12008276134400, 0]
+   sigma_m(det B_1) = det B_1 for all m in H = [1, 2, 4]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 38657322298963326728749501624223759836898123900562857966063042166784000000000000 = {2: 66, 5: 12, 11: 6, 79: 3, 5861: 6, 392809: 3}
+   beta = a + b eta: a = 3257463411200, b = -12008276134400
+   quadratic norm a^2 - ab + 2 b^2 = 338124979454702127677440000 = {2: 22, 5: 4, 11: 2, 79: 1, 5861: 2, 392809: 1}
+   N(det B_1) == quadratic norm^3: True
+   content gcd(a,b) = 12800 = {2: 9, 5: 2}
+     p = 2: exponent 22 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (9, 13), sum 22, TWO-SIDED
+     p = 5: exponent 4 in quadratic norm, inert, p mod q = 5
+     p = 11: exponent 2 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (0, 2), sum 2, one-sided
+     p = 79: exponent 1 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 5861: exponent 2 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (2, 0), sum 2, one-sided
+     p = 392809: exponent 1 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+== NQR7_k3: q=7, S=[3, 5, 6], k=3, M_k is 210x210, |R| = 30, total mass 6678
+   det B_0 = -530149321306423296 = {2: 14, 3: 18, 17: 4, -1: 1}
+   det B_1 power-basis coefficients (CRT over 3 primes l = 1 mod 7): [15265739545600, 12008276134400, 12008276134400, 0, 12008276134400, 0]
+   sigma_m(det B_1) = det B_1 for all m in H = [1, 2, 4]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 38657322298963326728749501624223759836898123900562857966063042166784000000000000 = {2: 66, 5: 12, 11: 6, 79: 3, 5861: 6, 392809: 3}
+   beta = a + b eta: a = 15265739545600, b = 12008276134400
+   quadratic norm a^2 - ab + 2 b^2 = 338124979454702127677440000 = {2: 22, 5: 4, 11: 2, 79: 1, 5861: 2, 392809: 1}
+   N(det B_1) == quadratic norm^3: True
+   content gcd(a,b) = 12800 = {2: 9, 5: 2}
+     p = 2: exponent 22 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (13, 9), sum 22, TWO-SIDED
+     p = 5: exponent 4 in quadratic norm, inert, p mod q = 5
+     p = 11: exponent 2 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (2, 0), sum 2, one-sided
+     p = 79: exponent 1 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 5861: exponent 2 in quadratic norm, split, p mod q = 2 (v_P, v_Pbar) = (0, 2), sum 2, one-sided
+     p = 392809: exponent 1 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+== P11_k2: q=11, S=[1, 3, 4, 5, 9], k=2, M_k is 110x110, |R| = 10, total mass 1586310
+   det B_0 = -71065187852341089324093 = {3: 1, 11: 2, 19: 3, 23: 1, 43: 1, 241: 2, 22291: 2, -1: 1}
+   det B_1 power-basis coefficients (CRT over 4 primes l = 1 mod 11): [-3277268084602821875221568, 2438700943997336799818048, 0, 2438700943997336799818048, 2438700943997336799818048, 2438700943997336799818048, 0, 0, 0, 2438700943997336799818048]
+   sigma_m(det B_1) = det B_1 for all m in H = [1, 3, 4, 5, 9]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 65447783416485550903761197917486430631115946220760298143369674526218391371892179409662936877717864171841096091302309365828923476872217182204140264995356871236141765138644487943720307056658767663782952337350038938585958311269062143566151680000000000 = {2: 60, 5: 10, 11: 10, 31: 5, 53: 5, 89: 5, 62987: 5, 665251: 5, 35096521: 5, 4780984157: 5, 2871099599: 5}
+   beta = a + b eta: a = -3277268084602821875221568, b = 2438700943997336799818048
+   quadratic norm a^2 - ab + 3 b^2 = 36574549752769999306785510448859020421208897228800 = {2: 12, 5: 2, 11: 2, 31: 1, 53: 1, 89: 1, 62987: 1, 665251: 1, 35096521: 1, 4780984157: 1, 2871099599: 1}
+   N(det B_1) == quadratic norm^5: True
+   content gcd(a,b) = 704 = {2: 6, 11: 1}
+     p = 2: exponent 12 in quadratic norm, inert, p mod q = 2
+     p = 5: exponent 2 in quadratic norm, split, p mod q = 5 (v_P, v_Pbar) = (2, 0), sum 2, one-sided
+     p = 11: exponent 2 in quadratic norm, ramified, p mod q = 0
+     p = 31: exponent 1 in quadratic norm, split, p mod q = 9 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 53: exponent 1 in quadratic norm, split, p mod q = 9 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 89: exponent 1 in quadratic norm, split, p mod q = 1 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 62987: exponent 1 in quadratic norm, split, p mod q = 1 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 665251: exponent 1 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 35096521: exponent 1 in quadratic norm, split, p mod q = 9 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 2871099599: exponent 1 in quadratic norm, split, p mod q = 5 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 4780984157: exponent 1 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+== NQR11_k2: q=11, S=[2, 6, 7, 8, 10], k=2, M_k is 110x110, |R| = 10, total mass 1586310
+   det B_0 = -71065187852341089324093 = {3: 1, 11: 2, 19: 3, 23: 1, 43: 1, 241: 2, 22291: 2, -1: 1}
+   det B_1 power-basis coefficients (CRT over 4 primes l = 1 mod 11): [-5715969028600158675039616, -2438700943997336799818048, 0, -2438700943997336799818048, -2438700943997336799818048, -2438700943997336799818048, 0, 0, 0, -2438700943997336799818048]
+   sigma_m(det B_1) = det B_1 for all m in H = [1, 3, 4, 5, 9]: True
+   moved by some sigma outside H: True
+   N(det B_1) = 65447783416485550903761197917486430631115946220760298143369674526218391371892179409662936877717864171841096091302309365828923476872217182204140264995356871236141765138644487943720307056658767663782952337350038938585958311269062143566151680000000000 = {2: 60, 5: 10, 11: 10, 31: 5, 53: 5, 89: 5, 62987: 5, 665251: 5, 35096521: 5, 4780984157: 5, 2871099599: 5}
+   beta = a + b eta: a = -5715969028600158675039616, b = -2438700943997336799818048
+   quadratic norm a^2 - ab + 3 b^2 = 36574549752769999306785510448859020421208897228800 = {2: 12, 5: 2, 11: 2, 31: 1, 53: 1, 89: 1, 62987: 1, 665251: 1, 35096521: 1, 4780984157: 1, 2871099599: 1}
+   N(det B_1) == quadratic norm^5: True
+   content gcd(a,b) = 704 = {2: 6, 11: 1}
+     p = 2: exponent 12 in quadratic norm, inert, p mod q = 2
+     p = 5: exponent 2 in quadratic norm, split, p mod q = 5 (v_P, v_Pbar) = (0, 2), sum 2, one-sided
+     p = 11: exponent 2 in quadratic norm, ramified, p mod q = 0
+     p = 31: exponent 1 in quadratic norm, split, p mod q = 9 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 53: exponent 1 in quadratic norm, split, p mod q = 9 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 89: exponent 1 in quadratic norm, split, p mod q = 1 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 62987: exponent 1 in quadratic norm, split, p mod q = 1 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 665251: exponent 1 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+     p = 35096521: exponent 1 in quadratic norm, split, p mod q = 9 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 2871099599: exponent 1 in quadratic norm, split, p mod q = 5 (v_P, v_Pbar) = (0, 1), sum 1, one-sided
+     p = 4780984157: exponent 1 in quadratic norm, split, p mod q = 4 (v_P, v_Pbar) = (1, 0), sum 1, one-sided
+converse: beta(NQR7_2) = (35136, 23232); conj(beta(P7_2)) = (35136, 23232); equal: True
+converse: beta(NQR7_3) = (15265739545600, 12008276134400); conj(beta(P7_3)) = (15265739545600, 12008276134400); equal: True
+converse: beta(NQR11_2) = (-5715969028600158675039616, -2438700943997336799818048); conj(beta(P11_2)) = (-5715969028600158675039616, -2438700943997336799818048); equal: True
+P7_2: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+NQR7_2: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+R7_2: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+P7_3: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+NQR7_3: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+P11_2: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+NQR11_2: det M_k = det B_0 * N(det B_1) modulo three 31-bit primes: True
+rc=0

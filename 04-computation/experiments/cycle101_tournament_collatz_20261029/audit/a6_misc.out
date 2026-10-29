@@ -1,0 +1,14 @@
+(F) Gauss-period identity c_QR + c_NQR = -1, c_QR c_NQR = (q+1)/4, c^2 + c + (q+1)/4 = 0 mod 2^q - 1 for all 31 primes q = 3 mod 4, 7 <= q < 300: True
+    q = 7: c_QR = 22, c_NQR = 104, product mod 127 = 2
+(F) T-trace = 2 U-trace + k on 500 random rational cycles (signed denominators included): OK
+HYP-9446 (5): 5 | D_q iff q = 3 mod 8 for primes q < 2000: True
+   q=11: D_q = 1805; QR cycle reduced denominator D/5; NQR cycle D/1
+   q=19: D_q = 504605; QR cycle reduced denominator D/1; NQR cycle D/5
+   q=43: D_q = 8785632669005; QR cycle reduced denominator D/1; NQR cycle D/1
+   q=59: D_q = 576392121926058605; QR cycle reduced denominator D/5; NQR cycle D/1
+   q=67: D_q = 147568393529109857405; QR cycle reduced denominator D/1; NQR cycle D/1
+   q=83: D_q = 9671370083920656226863005; QR cycle reduced denominator D/1; NQR cycle D/1
+H(R7) = 175, H(P7) = 189, 2^8 - 3^4 = 175
+THM-4848 (v): P7 QR {1,2,4}, k = 3, p = 79: dim of coker M_3 tensor F_79 = 3; B R_tau = C B verified: True; charpoly of the translation clock C = X^3 + 13 X^2 + 12 X + 78 (mod 79)
+THM-4848 (v): P7 NQR {3,5,6}, k = 3, p = 79: dim of coker M_3 tensor F_79 = 3; B R_tau = C B verified: True; charpoly of the translation clock C = X^3 + 67 X^2 + 66 X + 78 (mod 79)
+rc=0

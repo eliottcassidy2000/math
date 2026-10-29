@@ -1,0 +1,3 @@
+tournament cycles compared: 90 ; session entries: 90 ; reduced denominators and U-traces agree: True
+q=11: reduced denominators {1805: 22, 361: 3, 95: 1, 19: 1}
+q=13: reduced denominators {7463: 54, 439: 4}

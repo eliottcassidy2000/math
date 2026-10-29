@@ -1,0 +1,3 @@
+Z_13 S=[1, 2, 3, 5, 6, 9]: H=[1, 3, 9]; det B_0 = {3: 11, 7: 4, 13: 2, 23: 2, 73: 2, 107: 1, 277: 2, 5783: 1, 9871: 1, 437677: 2}; det B_1 fixed by H: True; N(det B_1) partial factorisation: {3: 15, 13: 6, 1907: 3, 2011: 3, 'c170': 3}; residues mod 13 of its primes: {p: p % 13 for p in pf if isinstance(p, int)}
+Z_13 S=[4, 7, 8, 10, 11, 12]: H=[1, 3, 9]; det B_0 = {3: 11, 7: 4, 13: 2, 23: 2, 73: 2, 107: 1, 277: 2, 5783: 1, 9871: 1, 437677: 2}; det B_1 fixed by H: True; N(det B_1) partial factorisation: {3: 15, 13: 6, 1907: 3, 2011: 3, 'c170': 3}; residues mod 13 of its primes: {p: p % 13 for p in pf if isinstance(p, int)}
+rc=0

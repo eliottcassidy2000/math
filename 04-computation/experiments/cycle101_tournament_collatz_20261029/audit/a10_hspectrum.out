@@ -1,0 +1,3 @@
+n = 7: 456 classes; 169 among H values: False; H range 1..189
+n = 8: 6880 classes; 169 among H values: True; H range 1..661
+det(xI - (A - A^T)) for R7 = x*(x**6 + 21*x**4 + 35*x**2 + 7)
