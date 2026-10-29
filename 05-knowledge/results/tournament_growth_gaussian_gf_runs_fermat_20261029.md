@@ -110,11 +110,14 @@ observers `M_k`. They are the natural partial structures of the tiling.
 
 **The conjectures (HYP-9445 (1), (2)).**
 - *Two Hamiltonian cycles force torsion.* Two or more Hamiltonian cycles force torsion in the two- and three-run
-  observers. This holds in all 6315 strong cases checked for `k = 2` (orders up to 8), and in 1044 random or
-  low-cycle samples at orders 9 and 10. It is false for the one-arc observer, and the torsion is not always
+  observers. For `k = 2` it holds in all 184 304 strong cases through order 9; order 9 was checked exhaustively, all
+  177 989 classes. It also holds in 1044 random or low-cycle samples at orders 9 and 10. It is false for the one-arc observer, and the torsion is not always
   2-primary.
-- *Unique cycles.* The unique-cycle classes are Douglas's `F(2n−6)` = 1, 3, 8, 21, 55 (orders 4 to 8). Their
-  torsion-free members number 1, 3, 8, 16, 36.
+- *Unique cycles.* The unique-cycle classes are Douglas's `F(2n−6)` = 1, 3, 8, 21, 55, 144 (orders 4 to 9).
+  - For these classes `det M_2 ∈ {0, ±1}` through order 9, and torsion occurs exactly when `M_2` is singular.
+  - The unimodular ones number 1, 3, 7, 16, 36, 81.
+  - A pre-registered prediction of 80 at order 9 (formula `(n + 1)·2^(n−6)`) FAILED. The six terms coincide with
+    OEIS A033303, which is an exact fit only; it predicts 182 at order 10.
 - *The sign sector alone.* The signed two-run sector already shows the effect: it has torsion for every class with
   two or more Hamiltonian cycles through order 8. For unique-cycle classes it is torsion-free except one class at
   order 8.

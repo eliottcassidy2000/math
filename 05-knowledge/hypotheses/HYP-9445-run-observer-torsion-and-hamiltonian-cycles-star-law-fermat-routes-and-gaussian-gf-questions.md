@@ -1,9 +1,10 @@
 ---
 id: HYP-9445
-title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 8, k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments are torsion-free (1, 1, 3, 8, 16, 36 of 1, 1, 3, 8, 21, 55 for orders 3..8, k = 2); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
+title: "After THM-4845/4846/4847: (1) a strong tournament with at least two Hamiltonian cycles has torsion in the cokernel of its two- and three-run observers (FINITE-EXACT: k = 2 through order 9, exhaustively, 184 304 classes; k = 3 through order 7; false for the one-arc observer k = n-1); (2) which unique-Hamiltonian-cycle (Douglas) tournaments have a unimodular two-run observer (det M_2 in {0, +-1} through order 9; unimodular counts 1, 1, 3, 7, 16, 36, 81 for orders 3..9; the pre-registered 80 at order 9 FAILED); (3) the non-star kernel of the second permanental compound from order 6; (4) RESOLVED: the mod-3 ghost formula (THM-4846 (D')); (5) T5 as the only boundary-killing class; (6) the irreducible blocks of the one-arc determinant; (7) consequences of the gcd Gaussian field for A000568; (8) Fermat: is the strong semicomplete test a primality criterion for Fermat numbers, and is there a tournament-native invariant that sees their compositeness"
 status: >
   OPEN (mac-mini-2026-10-29-growth, 2026-10-29; pre-audit). Every evidence statement below is FINITE-EXACT, over
   all isomorphism classes from gentourng with exact Smith forms (PARI matsnf) unless marked otherwise.
+  (4) RESOLVED by THM-4846 (D'). In (2) a pre-registered prediction FAILED at order 9; see (2).
 session: mac-mini-2026-10-29-growth
 source: 05-knowledge/results/tournament_growth_gaussian_gf_runs_fermat_20261029.md
 related:
@@ -22,7 +23,8 @@ invariant factor of `M_k(T)` equals 1.
    `coker M_k(T)` has nontrivial torsion, for `k = 2` and `k = 3`. Consequently a unimodular `M_2` or `M_3` forces a
    unique Hamiltonian cycle.
    - **Evidence for `k = 2`.** All strong classes with at least two Hamiltonian cycles:
-     3 (order 5), 27 (order 6), 332 (order 7) and 5953 (order 8), 6315 in all.
+     3 (order 5), 27 (order 6), 332 (order 7), 5953 (order 8) and **177 989 (order 9, exhaustive)**, 184 304 in all.
+     The order-9 run (`stream_m2.py 9`, four gentourng slices, `out/stream_m2_n9_part*.out`) found no counterexample.
    - **Evidence for `k = 3`.** All such classes through order 7: 3, 27 and 332, 362 in all.
    - **Further evidence.**
      - It holds for `k = 4` at order 6 (27 classes).
@@ -64,12 +66,27 @@ invariant factor of `M_k(T)` equals 1.
      unique-cycle tournament. At order 6 the one singular class is torsion-free.
    - **The nonsingular counts.** These are `1, 1, 3, 7, 16, 36` for orders 3 to 8, which fits `(n + 1) · 2^(n−6)` for
      `5 ≤ n ≤ 8`. Several OEIS sequences share these terms (A045891 among them).
-   - **PRE-REGISTERED PREDICTION** (written 2026-10-29 before the order-9 exhaustive run `stream_m2.py 9` reported):
+   - **PRE-REGISTERED PREDICTION** (written 2026-10-29 before the order-9 exhaustive run `stream_m2.py 9` reported,
+     commit 5047208384):
      - at order 9, the 144 unique-cycle classes split into exactly 80 with unimodular `M_2` and 64 with torsion;
      - every class with at least two Hamiltonian cycles has torsion.
 
      The run records the torsion-free count, which equals the unimodular count unless a singular torsion-free class
      occurs, as at order 6.
+   - **OUTCOME (order 9, exhaustive):**
+     - *The prediction FAILED.* The 144 unique-cycle classes (Douglas's `F(12) = 144`, confirmed) split into 81
+       unimodular, 0 singular torsion-free and 63 with torsion. All 63 torsion classes are singular
+       (`out/n9_unique_hc_split.out`). So `(n + 1)·2^(n−6)` is REFUTED at order 9.
+     - *The second clause held:* every one of the 177 989 classes with at least two Hamiltonian cycles has torsion.
+     - *What survives.* For a unique-cycle tournament, `M_2` has torsion iff it is singular (orders 7, 8 and 9), and
+       `det M_2 ∈ {0, ±1}` (orders 3 to 9).
+     - *The corrected counts* are `1, 1, 3, 7, 16, 36, 81` for orders 3 to 9.
+       - From order 4 these coincide with A033303, the expansion of `(1 + x)/(1 − 2x − x² + x³)`, whose recurrence is
+         `a(n) = 2a(n−1) + a(n−2) − a(n−3)`. The growth constant is the largest root, about 2.247, of a cubic of the
+         heptagon (`y³ − y² − 2y + 1`, roots `2cos(kπ/7)`). The Douglas total grows like `φ²`.
+       - The match is an EXACT FIT, not evidence: an order-3 recurrence is determined by six terms.
+       - **New prediction for order 10:** 182 unimodular among the 377 unique-cycle classes. The test needs a direct
+         generator of unique-cycle tournaments, since the full order-10 census has 9 733 056 classes.
    - **Question.** Express the criterion through Douglas's structural decomposition of these tournaments.
 3. **The non-star kernel of the second permanental compound.** (`out/nonstar_kernel_n6.out` lists the 12 order-6
    classes. Two strong classes there have no star vector at all, with kernels of dimension 2 and 3.)
