@@ -1,0 +1,20 @@
+{
+  "status": "FINITE-EXACT verification of proved universal boundary update",
+  "extension_checks": [
+    {
+      "old_order": 2,
+      "all_labelled_extensions": 8
+    },
+    {
+      "old_order": 3,
+      "all_labelled_extensions": 64
+    },
+    {
+      "old_order": 4,
+      "all_labelled_extensions": 1024
+    }
+  ],
+  "total_extensions": 1096,
+  "order4_sector_and_kernel_checks": 64,
+  "insertion_word_criterion": "OPEN: exact b/e semantics unavailable; no criterion assumed"
+}
