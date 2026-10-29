@@ -140,3 +140,21 @@ for all odd periods under this operation menu. The finite positive results
 do not establish it, especially at odd prime powers not exhausted here.
 Nor is the minimal quotient of one specified observer a universal minimal
 carrier for every arithmetic or tournament operation.
+
+### Incoming extension: sparse certificates beyond full enumeration
+
+[Session94's composite-chart proof](../session94_recursive_ports_crt_clocks_20261029/crt/COMPATIBLE_CRT_CARRIERS.md)
+independently gives(C1) and agrees with the overlapping finite partitions.
+It also proves that the minimal rotation/reflection carrier is just the
+realized image of `(pi(x),pi(Rx))`: rotation multiplies the two coordinates
+by phi and phi^-1, and reflection swaps them. Our additional operation T
+is why that smaller image fails to remain closed here.
+
+Its [nine-carry decoder and sparse certificates](../session94_recursive_ports_crt_clocks_20261029/crt/NINE_CARRIES_AND_ALTERNATING_GROUPS.md)
+extend full-carrier faithfulness to n=55 without enumerating312119004989
+states. This includes the nonreduced factor121; our algebra-only audit
+separately confirms its root order55. The elementary certificate excludes
+every divisor block of the full translation cycle. The stronger alternating
+group identification in that source additionally uses the cited Jones
+classification; full future faithfulness itself needs only primitivity.
+The general all-period statement remains OPEN.

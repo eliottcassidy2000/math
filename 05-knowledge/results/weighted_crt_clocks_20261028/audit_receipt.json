@@ -40,6 +40,16 @@
       "script": "check_eta",
       "optimized": true,
       "checks": 426
+    },
+    {
+      "script": "check_canonical",
+      "optimized": false,
+      "checks": 2619
+    },
+    {
+      "script": "check_canonical",
+      "optimized": true,
+      "checks": 2619
     }
   ],
   "odd_ring_algebra_checks": 450,
@@ -65,6 +75,8 @@
     "05-knowledge\\results\\cursor_cm_phase_20261028\\TRACE_CARRIER.md": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
     "check_affine.json": "77138cd26938bec2ddd0cf64fd73c0a84d5671552574d31a01554823c20f9684",
     "check_affine.py": "1ba2b64876422dc91585f0ba9ee9c66f48eba4d00851df37b3ba0b4cb376c55d",
+    "check_canonical.json": "d9fafb7074457d69658f333e72c7e30bb531683a44c22e31682ac1d7f2bfda05",
+    "check_canonical.py": "6919ccf607749763401c7b8a5d780e28bb683bbbf660977072e454ddb1b98182",
     "check_crt.json": "54596b4d4f7a65f0a25cda2a095994e7d1755472d3ef3e1f366f7e5ed21beaad",
     "check_crt.py": "b050f05995654a1eeb4849c7491d083e00133291e36d4883461eb4293d86c8aa",
     "check_eta.json": "fa304a0cf7e99031c564e5d973479c78e1eaff94a097b2770aaf75ad57e06426",

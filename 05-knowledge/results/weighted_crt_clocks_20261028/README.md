@@ -11,6 +11,8 @@ holonomy in [FULL_HOLONOMY](../lucas_prime_reflection_towers_20261028/FULL_HOLON
 for the depth-k iterated C3 tournament, every centralizer correction is a
 legal re-marking loop of length at most `3[1+(k-1)3^k]`. This is an upper
 bound for that marking graph, not a bound on arbitrary native-complement moves.
+Incoming [Session94](../session94_recursive_ports_crt_clocks_20261029/loop_protocol/LINEAR_LOOP_PROTOCOL.md)
+now improves it to `3(3^k-2k-1)/4`; both use the same named re-marking edges.
 The [port-moment law](../lucas_prime_reflection_towers_20261028/PORT_MOMENTS.md)
 and [folded LCA classifier](../session93_reversal_lucas_clocks_20261029/ports/PORT_ORBITS_AND_LCA.md)
 are inherited, not re-proved as new results here.
@@ -40,6 +42,9 @@ in the map table in [SYNTHESIS](SYNTHESIS.md).
   a closed weighted second-moment formula. Exact regeneration through order20
   agrees with the older independent partition implementation. This is a
   counting recurrence, not an order20 isomorphism-class generation census.
+- [CANONICAL](CANONICAL.md), K1-K3: a complete recursive carrier for joint
+  finite-palette attachments in this family. Native complement has a one-bit
+  fixed-root selector; independently canonicalized ports still lose alignment.
 - [CRT](CRT.md), C1-C3: the ring chart for every odd period, synchronized phase
   classes, and the exact future-equivalence algorithm. Exhaustive reflection
   plus addition-of-one tests at periods9,15,21,23,25 force every individual odd
@@ -58,6 +63,13 @@ in the map table in [SYNTHESIS](SYNTHESIS.md).
 The scripts use only Python's standard library and explicit checks that remain
 active under `-O`. Reproduction and same-agent audit: [AUDIT](AUDIT.md).
 Search lineage and primary literature: [SOURCES](SOURCES.md).
+
+Concurrent integration: the independently audited
+[Session94 packet](../session94_recursive_ports_crt_clocks_20261029/README.md)
+overlaps and extends the weighted/CRT mechanisms, adds odd cyclic alphabets,
+and proves a sparse full-carrier certificate at period55. The comparison in
+[SOURCES](SOURCES.md) credits those stronger results; our enumerated counts
+are alternate-path corroboration, not a priority claim.
 
 ## What remains open
 

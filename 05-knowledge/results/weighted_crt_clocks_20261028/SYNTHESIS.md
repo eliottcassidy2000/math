@@ -41,9 +41,11 @@ For the original smallest-carrier question the next useful tests are explicit:
    included only when their typed transitions are defined.
 2. Extend the CRT universe to repeated odd prime factors; prime fields alone
    do not test higher-adic phase. The theorem(C1) already supplies the chart.
-3. Refine(W1) by stabilizers of named port tuples before treating it as an
-   attachment carrier. Aggregate cycle indices can count while losing the
-   incidence required to compose two independently supplied attachments.
+3. Extend the complete family-specific [canonical carrier](CANONICAL.md)
+   to stabilizer actions of general strong atoms. Aggregate cycle indices
+   can count while losing the incidence required to compose two independently
+   supplied attachments; the explicit paired-colour recursion repairs that
+   loss for the ternary family only.
 
 These are OPEN tasks. No new blanket meta-pattern is promoted from a single
 thread. The present evidence strengthens the existing operation-sensitive

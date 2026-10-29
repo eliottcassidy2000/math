@@ -4,6 +4,12 @@
 checks are in [check_weighted.py](check_weighted.py) and [its JSON](check_weighted.json).
 IDs are local to this file, not global canon theorem IDs.
 
+Concurrent provenance: [Session94's weighted cycle carriers](../session94_recursive_ports_crt_clocks_20261029/ports/WEIGHTED_CYCLE_CARRIERS.md)
+arrived during this session with the same cycle-index mechanism, an extension
+to all odd cyclic alphabets, and an unordered-subset polynomial hierarchy.
+We credit that independent, broader development; the calculations here are
+an alternate-path check and feed the canonical attachment carrier below.
+
 ## W1. The full recursive inventory
 
 Let W_k be the depth-k iterated C3 tournament (3^k vertices), A_k=Aut(W_k),

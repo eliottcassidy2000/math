@@ -18,7 +18,7 @@ def mod(name):
 
 def main():
     runs=[]
-    for name in ['check_crt','check_weighted','check_affine','check_eta']:
+    for name in ['check_crt','check_weighted','check_affine','check_eta','check_canonical']:
         script=HERE/(name+'.py'); result=script.with_suffix('.json')
         expected=result.read_bytes()
         for flags in [[],['-O']]:

@@ -58,3 +58,28 @@ cycle census is silently upgraded to all positive integers.
 No literature-priority claim or major-open-problem solution is inferred from
 these connections. The scripts pin inherited computational sources by hash
 in the audit receipt; file paths and local theorem labels disambiguate claims.
+
+## Concurrent integration after the first checkpoint
+
+Rebase integrated Session94 through d6f4c6ad8d before checkpoint fb3aad7bb2.
+Its [weighted-cycle note](../session94_recursive_ports_crt_clocks_20261029/ports/WEIGHTED_CYCLE_CARRIERS.md)
+contains the same ternary recursions plus the broader odd-alphabet and
+fixed-subset polynomial theorems. Its
+[loop protocol](../session94_recursive_ports_crt_clocks_20261029/loop_protocol/LINEAR_LOOP_PROTOCOL.md)
+improves the inherited bound to3(3^k-2k-1)/4 using one triangle per paired
+portrait rotation. The full proof and
+[independent audit](../session94_recursive_ports_crt_clocks_20261029/audit/AUDIT.md)
+were read; neither is attributed to this packet.
+
+The [CRT note](../session94_recursive_ports_crt_clocks_20261029/crt/COMPATIBLE_CRT_CARRIERS.md)
+independently agrees with our exhaustive overlap and distinguishes the
+minimal dihedral reflected double from the larger translation closure.
+The [period55 certificate](../session94_recursive_ports_crt_clocks_20261029/crt/NINE_CARRIES_AND_ALTERNATING_GROUPS.md)
+was replayed here with its standalone `verify_period55.py`:22 proper divisor
+blocks excluded using44 legal-word occurrences, without importing the decoder
+or enumerating the312119004989-state source. This is stronger than our
+algebra-only period55 regression. The general all-period claim is still open.
+
+The first checkpoint push encountered rapid remote updates. The local commit
+was preserved, rebased on the incoming work, and pushed successfully as
+fb3aad7bb2. No force-push or overwrite of another session was used.
