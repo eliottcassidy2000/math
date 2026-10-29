@@ -1,8 +1,23 @@
 ---
 source: opus-2026-06-03-S587 (remote-control)
-status: SYNTHESIS — three tournament parities (Rédei odd H; flip changes even; self-converse odd / chiral even) encode odd/even & add/mult; addition (flip, GF(2)) CERTIFIES multiplication (H odd); the LRC worry-set = the ODD (self-converse) sector
+status: HISTORICAL SYNTHESIS WITH QUALIFICATION (2026-10-28) — the tournament parity facts survive; the identification of the LRC worry-set with a self-converse sector is not established by this note. See the maintained qualification below.
 tags: [LRC, parity, redei, hamiltonian-path, arc-flip, self-converse, chiral, worry-set, odd-even, add-mult, n14]
 ---
+
+> **Maintained qualification, 2026-10-28.** The body is historical provenance.
+> All tournaments have odd Hamilton-path count, so that statistic alone does
+> not separate self-converse and chiral individual classes. Adding the two odd
+> counts of a chiral pair gives an even aggregate, a different observation.
+> No proved witness-preserving equivalence between an LRC residual set and the
+> stated self-converse sector is supplied here. Ordinary tournament orientations
+> have binom(n,2) free bits; binom(n-1,2) instead fixes a marked path.
+> The precise natural-reflection comparison is
+> [L1-L2](../05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md):
+> good-time component parity is odd exactly for all-odd integer speeds, and is
+> zero for mixed-parity examples with empty, isolated, or interval good sets.
+> This limits that particular parity strategy; it does not rule out a different
+> weighted witness invariant or prove the LRC residual identification false
+> under some future precise definition.
 
 # Tournaments encode odd/even and add/mult — and the worry-set is the odd sector
 

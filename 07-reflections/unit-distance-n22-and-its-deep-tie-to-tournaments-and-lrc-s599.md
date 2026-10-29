@@ -1,8 +1,21 @@
 ---
 source: opus-2026-06-03-S599m/n/o (remote-control)
-status: RESULT + DEEP BRIDGE — n=22 max unit distances = 49 (Harborth triangular-lattice optimum, achieved: a triangulated disk of 22 Eisenstein integers). It and the LRC/tournament world are ONE species: extremal ADDITIVE-ENERGY problems on cyclotomic Cayley graphs, solved by the lattice/AP, isostatic+isoperimetric, with the same prime-3 (ζ3) coloring and the same odd-triangle/Rédei core.
+status: HISTORICAL SYNTHESIS WITH CORRECTIONS (2026-10-28) — the recorded 49-point-pair construction is lattice-scoped evidence; no unrestricted planar optimum or equivalence with LRC/tournaments is established here. See the maintained qualification below.
 tags: [unit-distance, erdos, harborth, triangular-lattice, eisenstein, cayley-graph, additive-energy, cyclotomic, isostatic, rigidity, prime-3, redei, OCR, chromatic, LRC, tournaments]
 ---
+
+> **Maintained correction, 2026-10-28.** The body below preserves the original
+> synthesis, not current theorem status. Its degree-six argument requires a
+> separated point set or triangular-lattice restriction: seven distinct points
+> on one unit circle give a vertex of degree seven. The recorded 49 distances
+> are an achieved lattice construction, not a certificate for the unrestricted
+> 22-point maximum; the claimed global conjecture is not sourced here. The
+> displayed pair count is a difference-set correlation, not the standard
+> quadruple-count additive energy. An oriented triangle can be transitive.
+> No map establishing that LRC and unit-distance optimization are the same
+> extremal problem is supplied. The exact replacement comparisons, including
+> geometric/trijection independence, are in
+> [L1-L2 and G1-G4](../05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md).
 
 # Unit distances at n=22, and why it is the same problem as LRC + tournaments
 

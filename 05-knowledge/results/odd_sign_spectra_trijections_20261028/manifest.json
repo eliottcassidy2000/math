@@ -1,0 +1,26 @@
+{
+  "normalization": "SHA256 after CRLF -> LF; no other normalization",
+  "source_snapshot_before_concurrent_integration": "3eb49fa63d7ff4e58742b1ae84944f832e87a118",
+  "sha256_lf": {
+    "01-canon/theorems/THM-4835-euler-characteristic-criterion-for-marked-excess-minus-one-carriers-in-tournaments.md": "03ebfae6f06a397b36ce9b29bbf2f61e16276a2c087ad82d5b10e2e40dd9173e",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/AUDIT.md": "a0c12abe5e6627a5f4edcf069d6a3b76eb3884d03aa19fa89071ca78fd2814e5",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/HISTORY.md": "b841567165a883f1229de822272d6d0eaac8731c9ed02a73b5cec81a08f4fad4",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/lrc_reflection.json": "d617d9a3c3fa0897f9b4d3cbf630f80ee4d4a63300dea0ab434d3f4c37a5e88f",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/lrc_reflection.py": "3c6a33be918f7e79d61b34fcb32d458b26cc1ac99481d5f6949a0c256a1e95f5",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md": "ecb2ec84c71d41026bf9cd7633ecba9efc14a68ee276220384e4d06df205c55a",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/make_manifest.py": "731cc2db8a452ff0ef609d6c44d039fe457ce604a2a45daff9fc323d91abf99c",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/paired_oddness.json": "36af959e42fa55fde08b9454b9ae764ea8086ea3810d78d0e714dce2b4502ec3",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/paired_oddness.py": "dfdf18c91ee6758fd5b006a0ffb525e5ebad036e058e5491a9a9c5605a565e06",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/README.md": "11ce043675640d891cc88251853ec20e32e3768b8124cf71da22538f79926ca2",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/reproduce.py": "612a16cf2ff269517f6da49c6a609fff56ed4013baa27b3470787a48639d708f",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/sign_spectrum.json": "9e578c988f32c21daf4930019557b82cd6c04ac7e93841f5430aef28b791cd95",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/sign_spectrum.py": "e632956677ff559f4ea7d49b7a81aefe15b4573387ec4eb35f9decd053a375ba",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/THEORY.md": "7f63a55dfb7a69c244de669aeb5acf9345b5f9e8d991bdbedc3fd7ed9b8c4d61",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/unit_distance.json": "e15cfc616576441bc70bae80556ca6201ccf61c4aff0ce319d9afb255954d13e",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/unit_distance.py": "918438b10c389e7f7d642cc4c892cf312927a85b309e933334d1b276aa8b38eb",
+    "05-knowledge/results/relation_tower_frobenius_ports_20261028/check_root_switch.py": "895fa7ad12efffef465ffc2b0776d82656c474b16f1f1aacbf63158d6dcfe259",
+    "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/counting/LOW_BITS.md": "0ade859bd4bdb78976a1e6607eabe8cc8a815b478c89dbcaa10192bbb15e2591",
+    "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/encoding/ODD_SELF_CONVERSE_LIFT.md": "5beff4bf90aacb9053bf0cb49ade09a19d189b35131c993305bdfbdf38fae306",
+    "05-knowledge/results/session90_even_graphs_odd_descent_20261029/even/DECORATED_EVEN_GRAPH_DUALITY.md": "faf80030cf5285355261d12c9f4a0be92a4efeff0dc8a6c50ff3f1199363e436"
+  }
+}

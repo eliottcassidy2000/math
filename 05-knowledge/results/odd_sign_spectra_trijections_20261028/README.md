@@ -62,6 +62,13 @@ orbits has been established.
   The current two-endpoint singleton carrier also stops reconstructing at seven;
   no conclusion here upgrades its weaker observation language.
 
+An incoming checkpoint subsequently settled that language's own minimum:
+[M1-M3, minimal blue selectors](../minimal_blue_selectors_20261028/THEORY.md)
+give two endpoint-rooted types plus a 4n-8-state blue interface for n>=5,
+and exactly32272 behavioral cells at order7. This is credited concurrent
+work. General joint-port or strong-atom attachment closure is still a different
+question; the spectral tests here do not supersede that exact minimum.
+
 The live concept board was: **signed stabilizers; E=V-1 fixed-subgraph marks;
 paired converse actions; good-time reflection; geometric realizability**.
 The first pull unified counts and flips but exposed the relative/global sign distinction.
@@ -101,4 +108,3 @@ their counting bounds, see
 [Alon and Kupavskii, *Two notions of unit distance graphs*](https://www.tau.ac.il/~nogaa/PDFS/ramsey10.pdf).
 No priority claim is made for standard representation theory, reflection pairing,
 two-circle geometry, or these cited correspondences.
-

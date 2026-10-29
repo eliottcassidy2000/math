@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-28 — geometric degree restrictions and unsupported parity transfers
+
+- **Sources:** the June3 reflections `unit-distance-n22-and-its-deep-tie-to-tournaments-and-lrc-s599.md` and `lrc-tournament-parity-sectors-worry-is-the-odd-sector-s587.md` in `07-reflections/`.
+- **Demonstrated error and witness:** a unit-distance vertex need not have degree at most six. The origin plus seven distinct rational points on its unit circle gives degree seven. A degree bound from kissing numbers requires separation of the neighboring points. A triangular-lattice construction does not certify an unrestricted planar optimum; an arbitrary orientation of a triangle can also be transitive.
+- **Unsupported implication, separately typed:** the old notes did not supply a witness-preserving equivalence between LRC residual configurations and self-converse tournament classes, nor between their extremal objectives. This is a qualification of an unproved transfer, not a proof that every possible formalization of it is false. All individual tournaments have odd Hamilton-path count; aggregating a chiral pair is a different observation.
+- **Strongest survivors / repair:** retain the lattice construction, its difference-set correlation, and the actual tournament parity facts. Maintained warnings now distinguish those from the historical synthesis. [L1-L2 and G1-G4](../05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md) prove the natural-reflection trace boundary and explicit independence of geometric realization and marked trijectivity. Mixed-parity speeds (1,2) have empty, isolated, or interval good sets at different thresholds, all with trace zero.
+- **Missing coordinate / next question:** retain metric separation, exact joint actions, and the predicate transported by any claimed map. A useful LRC parity object must distinguish those three controls and the AP13 six-point boundary; a shared oddness vocabulary is insufficient.
+
 ## 2026-10-28 — fixed-spine dimension agreement is not counting-space agreement
 
 - **Source:** `07-reflections/two-models-staircase-recursion.md`, May 5, called the fixed-Hamilton-path and unrestricted tournament spaces “asymptotically identical.”
