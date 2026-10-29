@@ -1,0 +1,61 @@
+{
+  "checks": 127068,
+  "pair_cases": 28224,
+  "triple_permutation_cases": 6912,
+  "multipliers": [
+    3,
+    5,
+    7,
+    9
+  ],
+  "word_digits": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "word_lengths": [
+    1,
+    2,
+    3
+  ],
+  "focal": [
+    {
+      "word": [
+        1,
+        1,
+        5
+      ],
+      "rank": "-101/19",
+      "cycle": "19/101",
+      "appended_cycle": "37/35",
+      "appended_denominator": 35
+    },
+    {
+      "word": [
+        1,
+        3,
+        3
+      ],
+      "rank": "-101/31",
+      "cycle": "31/101",
+      "appended_cycle": "221/175",
+      "appended_denominator": 175
+    }
+  ],
+  "nonadjacent_tie": {
+    "left": [
+      "81/128",
+      "119/128"
+    ],
+    "right": [
+      "81/128",
+      "143/128"
+    ],
+    "cycle_left": "119/47",
+    "cycle_right": "143/47",
+    "append4_left": "97/361",
+    "append4_right": "557/1805"
+  },
+  "status": "PASS"
+}
