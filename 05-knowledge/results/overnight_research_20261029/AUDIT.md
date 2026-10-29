@@ -114,3 +114,47 @@ The proof uses finite order and the full invariant integer coupling space.
 The old Reynolds physicality hostile is explicitly addressed by retaining
 invariance of the unknown and legality of the orbit sum. No new arithmetic
 Selmer map, native-complement operation, or Sha bound is inferred.
+
+## Matched ternary-clock and precision continuation
+
+`eisenstein_clock_joins.py` passes567,405 active gates in identical normal
+and optimized runs. It exhausts norm shells through4096 (14,845 labelled
+points), verifies factor and divisor-character counts independently, and
+checks10,800 paired-group count queries for d,e=1..6 and n=1..50 against
+534,420 source/coupling pairs. That norm universe contains every possible
+required shell: de+s^2 n<=36+36*50=1836. It does not impose an accidental
+weight cutoff on the supposedly complete group counts.
+
+The chart test exhausts625 arbitrary small cross matrices. Direct rational
+determinants decode856 nonsingular source states, including188 singular
+probe values, and900 unit re-markings preserve the chart and content.
+The paired-group observation is explicitly UNMARKED: first-port orders1
+and4 refute a fully marked reading of the same carrier. A single internal
+block direction restores the source factors. A Fraction/integer gcd type
+error in the first checker run was repaired before filing by verifying
+integrality before conversion; no mathematical statement changed.
+
+`clock_join_precision.py` passes553,697 gates normally and with -O. It
+exhausts all residue triples for the fifteen moduli listed in its JSON,
+checks the exact ternary equivalence relation through81, and compares
+the small grid with every residue query through modulus9. At76 all438,976
+states yield54,872 complete response functions. The modulo228 count is
+proved via CRT, not a claimed11,852,352-state census. The new all-size
+3-adic proof uses finite differences and one precise lift step; the
+dyadic pattern remains only a finite census.
+
+The incoming two-saturation verifier initially rejected the checkout's
+CRLF bytes. Their LF normalization equals the exact committed blob and
+the stored source SHA256. `replay_incoming_saturation.py` instead extracts
+the six pinned ORIGINAL Git blobs and runs the UNCHANGED verifier, both
+normally and optimized. It passes125,459 checks, rejects six hostiles and
+certifies the two index8192, quotient(C2)^13 extensions. Its source hash
+guard is not bypassed or weakened. This is an inherited arithmetic replay,
+not a new rank, whole Mordell-Weil group or Sha-finiteness theorem.
+
+After incoming d87e5a8292, `overnight_rank_return_20261029/atom_precision.py`
+also replayed successfully without regenerating its receipt. It verifies
+the actual endpoint Smith forms, the seven-prime Hamming map and the81/27
+modulo9 separator. These are credited incoming results. Our nonlinear
+norm-response precision recurrence is a separate operator and does not
+replace the endpoint or ordered multi-run carrier.

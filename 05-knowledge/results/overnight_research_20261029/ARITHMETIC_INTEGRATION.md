@@ -123,6 +123,20 @@ repairing the certificate. This full-bank verification is credited to
 that packet; after integration we also replayed its complete coverage
 checker, passing140,334 gates for2,005 listed point directions.
 
+The later [joint-halving continuation](../session97_overnight_arithmetic_carriers_20261029/halving/phase2/README.md)
+now resolves the two binary gaps by actual rational halves. Each named
+rank30 subgroup has a 2-saturated enlargement of index8192 and quotient
+(C2)^13. The pinned unchanged verifier was replayed here from exact Git
+blobs, passing125,459 checks and rejecting six hostiles. The thirteen
+directions are genuine global joint divisibility for those source banks;
+that conclusion required exact lifts and a final full-rank local bank.
+It did not follow from the original finite-character kernel alone.
+
+This is an arithmetic counterpart to retaining content in the
+[matched-clock carrier](EISENSTEIN_CLOCK_JOINS.md), but not an identification
+of its single gcd coordinate with thirteen elliptic directions. Their
+source groups, maps, output predicates and saturation questions differ.
+
 The [PPVW paper](https://math.mit.edu/~poonen/papers/bounded-ranks.pdf)
 predicts finitely many curves of rank greater than21, rather than none.
 The balance is `5/6-(r-1)/24`, so21 is the vanishing-exponent threshold.

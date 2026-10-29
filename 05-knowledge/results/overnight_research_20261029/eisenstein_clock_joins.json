@@ -1,0 +1,87 @@
+{
+  "counts": {
+    "norm_limit": 4096,
+    "coordinate_box": [
+      -73,
+      73
+    ],
+    "norm_pairs": 14845,
+    "source_d_e": [
+      1,
+      6
+    ],
+    "labelled_pairs_examined": 534420,
+    "nonsingular_pairs_examined": 534336,
+    "complete_group_queries": 10800,
+    "group_parameter_n": [
+      1,
+      50
+    ],
+    "primes_through": 2000,
+    "admitted_primes": [
+      2,
+      3,
+      5,
+      7,
+      19,
+      43,
+      67,
+      103,
+      139,
+      163,
+      199,
+      283,
+      307,
+      379,
+      439,
+      487,
+      499,
+      523,
+      547,
+      619,
+      643,
+      691,
+      787,
+      823,
+      859,
+      883,
+      907,
+      967,
+      1063,
+      1123,
+      1291,
+      1447,
+      1459,
+      1483,
+      1543,
+      1579,
+      1627,
+      1699,
+      1723,
+      1747,
+      1783,
+      1867,
+      1987
+    ],
+    "special_Hn_counts": {
+      "5": 6,
+      "9": 0,
+      "11": 0,
+      "25": 0,
+      "27": 0,
+      "57": 0
+    },
+    "H3_plus_H9_count": 6
+  },
+  "carriers": {
+    "arbitrary_cross_matrices": 625,
+    "legal_in_box": 19,
+    "nonsingular_states_decoded": 856,
+    "singular_query_values": 188,
+    "clock_unit_remark_checks": 900,
+    "phase_and_content_hostiles": true
+  },
+  "gates": 567405,
+  "scope": "matched irreducible C3 clocks; labelled integer cross couplings",
+  "classical_norm_source": "https://categorified.net/23Winter3032/HW6.pdf"
+}

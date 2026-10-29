@@ -1,0 +1,42 @@
+{
+  "incoming_commit": "1128ee8635775e21277560e0902cf615cc4f2015",
+  "git_blob_sha256": {
+    "halving_certificate.json": "66cce357883ee99a5ccd92ff54fef1a3ab04701b75d633971d2f581c6d3747bc",
+    "phase2/verify_extension.py": "3d3d44ab056b2654e12334d1c509c1235177693d9d03dab9559267fcea9dd547",
+    "phase2/extension_3567.json": "1f299bd33661e57f5714fdb00563b3ea9168baf2ec259327ebeec70f3e583afc",
+    "phase2/extension_3568.json": "789c29dbc6c88cd35583a6e1d27d7f03bba38e48ea5d385db4630d19bb3bdbfe",
+    "phase2/inverse_transport_3567.json": "4fe1eb280014e5ff4e5a6eda0e6ec6fa5b54c730db960b2235772fcd9a790087",
+    "phase2/inverse_transport_3568.json": "b2a4aecc66cebd79fab67f2c019b0e917573e5af2767d7758d4fc30389408a3a"
+  },
+  "normal_optimized_identical": true,
+  "verifier_result": {
+    "checks": 125459,
+    "hostiles_rejected": 6,
+    "results": [
+      {
+        "binary_rank": 30,
+        "curve": 3567,
+        "index": 8192,
+        "max_final_prime": 223,
+        "quotient": "(Z/2Z)^13",
+        "steps": 13,
+        "two_saturated": true
+      },
+      {
+        "binary_rank": 30,
+        "curve": 3568,
+        "index": 8192,
+        "max_final_prime": 251,
+        "quotient": "(Z/2Z)^13",
+        "steps": 13,
+        "two_saturated": true
+      }
+    ],
+    "scope": "2-saturation of these subgroups only, not global rank or odd-primary saturation",
+    "special_character_evaluations_including_hostile_replays": {
+      "O": 305,
+      "T": 546
+    }
+  },
+  "checkout_boundary": "raw CRLF bytes differ; original Git-blob guard retained unchanged"
+}

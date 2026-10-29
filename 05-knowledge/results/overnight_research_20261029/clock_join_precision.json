@@ -1,0 +1,166 @@
+{
+  "gates": 553697,
+  "rows": [
+    {
+      "modulus": 1,
+      "source_states": 1,
+      "response_classes": 1,
+      "fiber_histogram": {
+        "1": 1
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 2,
+      "source_states": 8,
+      "response_classes": 8,
+      "fiber_histogram": {
+        "1": 8
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 3,
+      "source_states": 27,
+      "response_classes": 7,
+      "fiber_histogram": {
+        "3": 6,
+        "9": 1
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 4,
+      "source_states": 64,
+      "response_classes": 8,
+      "fiber_histogram": {
+        "8": 8
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 5,
+      "source_states": 125,
+      "response_classes": 125,
+      "fiber_histogram": {
+        "1": 125
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 7,
+      "source_states": 343,
+      "response_classes": 343,
+      "fiber_histogram": {
+        "1": 343
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 8,
+      "source_states": 512,
+      "response_classes": 40,
+      "fiber_histogram": {
+        "8": 32,
+        "32": 8
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 9,
+      "source_states": 729,
+      "response_classes": 189,
+      "fiber_histogram": {
+        "3": 162,
+        "9": 27
+      },
+      "full_residue_queries_compared": true,
+      "ternary_coordinate_classification_checked": true
+    },
+    {
+      "modulus": 12,
+      "source_states": 1728,
+      "response_classes": 56,
+      "fiber_histogram": {
+        "24": 48,
+        "72": 8
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 15,
+      "source_states": 3375,
+      "response_classes": 875,
+      "fiber_histogram": {
+        "3": 750,
+        "9": 125
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 16,
+      "source_states": 4096,
+      "response_classes": 320,
+      "fiber_histogram": {
+        "8": 256,
+        "32": 64
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 20,
+      "source_states": 8000,
+      "response_classes": 1000,
+      "fiber_histogram": {
+        "8": 1000
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 27,
+      "source_states": 19683,
+      "response_classes": 5103,
+      "fiber_histogram": {
+        "3": 4374,
+        "9": 729
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": true
+    },
+    {
+      "modulus": 76,
+      "source_states": 438976,
+      "response_classes": 54872,
+      "fiber_histogram": {
+        "8": 54872
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": false
+    },
+    {
+      "modulus": 81,
+      "source_states": 531441,
+      "response_classes": 137781,
+      "fiber_histogram": {
+        "3": 118098,
+        "9": 19683
+      },
+      "full_residue_queries_compared": false,
+      "ternary_coordinate_classification_checked": true
+    }
+  ],
+  "crt_proved_count_228": 384104,
+  "scope": "complete modular determinant functions; no exact singularity flag",
+  "dyadic_all_order_status": "OPEN beyond the stated finite census"
+}

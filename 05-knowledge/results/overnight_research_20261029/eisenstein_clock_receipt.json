@@ -1,0 +1,6 @@
+{
+  "script": "eisenstein_clock_joins.py",
+  "normal_optimized_identical": true,
+  "stdout_sha256": "b8e578fcdbdca0d50a87d8ddaa8fb86f128b8a86ae20c1bc439cf9d40ee81c15",
+  "gates": 567405
+}

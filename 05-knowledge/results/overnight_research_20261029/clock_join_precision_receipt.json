@@ -1,0 +1,6 @@
+{
+  "script": "clock_join_precision.py",
+  "normal_optimized_identical": true,
+  "stdout_sha256": "6793c6dca3a38a69dd90079805f1456f826ce42807b0f1d6e159fedadca1a135",
+  "gates": 553697
+}

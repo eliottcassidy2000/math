@@ -38,6 +38,15 @@ August rank30 certificate and weighted81/27/A000568 controls were replayed.
 After integrating incoming commit4d9c3ad1ce, the cyclic-kernel, exceptional
 cell and all66 high-rank coverage checkers were also replayed successfully.
 
+The first hourly continuation additionally completed
+[FINITE_CLOCK_PORTS](FINITE_CLOCK_PORTS.md) and
+[EISENSTEIN_CLOCK_JOINS](EISENSTEIN_CLOCK_JOINS.md). The latter includes the
+minimal determinant/unmarked-group carriers for matched C3 cross joins,
+the all-order norm/Mobius classification, and the full ternary precision
+law K(3^k)=7*27^(k-1). It also explains exactly which extra internal probe
+reads the forgotten source factors. These are scoped weighted-form results.
+The 81/27 and A000568-through20 controls were replayed unchanged.
+
 ## Incoming results to inherit with their own scopes
 
 Read the current Session97 README and the current ternary-integer packet,
@@ -55,6 +64,20 @@ then their targeted proofs. Recent Session97 additions include:
   local certificates; two require F3 instead of F2. Three named sections
   and a common A3(2) lattice are proved for the newer families. The full
   classical rank17 certificate belongs to determinant948, not1152.
+- halving/phase2/README.md: the two original binary gaps now have exact
+  2-primary saturation quotients(C2)^13, index8192. We replayed125,459
+  checks from the exact Git blobs at1128ee8635, preserving the original
+  source hash and rejecting six hostiles. The raw verifier rejects a
+  CRLF checkout; use replay_incoming_saturation.py without weakening it.
+- overnight_rank_return_20261029/PRECISION.md has a separate integral
+  Smith filtration for the fifteen-Lagrangian incidence map. Do not
+  identify its precision counts with our nonlinear determinant quotient.
+- overnight_rank_return_20261029/ATOM_PRECISION.md now gives actual Paley
+  endpoint cokernels and an explicit Hamming/prime-bank map. Its checker
+  was replayed here after incoming d87e5a8292. The81/27 pair first separates
+  in its3-power endpoint channel at modulus9: the81 matrix is zero there,
+  while the27 matrix has E[9,1]=3171=3 mod9. This is a sharper control to
+  retain in future multi-run integer response experiments.
 - fractions/FULL_IMAGE.md and DENSITY.md: an arithmetic rational-cover
   guard and one-third lift density, conditional on the explicitly cited
   source-generator theorem. Real positivity alone remains insufficient.
@@ -66,18 +89,24 @@ then their targeted proofs. Recent Session97 additions include:
    are legal and recover every invariant Gram entry. A unipotent infinite
    clock is an all-word hostile. Next restrict the operation set to actual
    cross-block or native cuts; the orbit sums need not belong to it.
-   A promising exact next case uses A=[[0,-1],[1,-1]] on each two-port
-   block. Solving A^T B A=B gives B=[[a,b],[-a-b,a]], whose determinant is
-   the Eisenstein norm a^2+ab+b^2. Retain phase(a,b), source product de
-   and primitive content; norm alone changes under a marked translation.
+   The matched irreducible-C3 cross-block case is also closed for the
+   stated determinant and UNMARKED paired-group outputs: retain phase(a,b),
+   source product de and gcd(d,e) as specified in EISENSTEIN_CLOCK_JOINS.
+   Next audit named cokernel classes and induced finite-group clock action;
+   the example(1,36) versus(4,9) separates them immediately by port order.
+   For modular determinant observations the ternary recurrence is proved.
+   The dyadic census K(2),K(4),K(8),K(16)=8,8,40,320 is FINITE-EXACT;
+   prove or refute its all-order pattern before using it in CRT counts.
 2. Replace abstract paired-group realization by an actual source-fixed
    arithmetic map. For Sha finiteness one still needs finite prime support
    and bounded primary exponent (or another sufficient argument), with
    all Selmer levels compatible. A square-order count supplies neither.
 3. Develop adaptive local-character certificates: select cheap primes
    and observation moduli while keeping root labels, generators, curve
-   transport and torsion guards. Compare the two F2 failures repaired
-   over F3 before assuming missing information requires full reconstruction.
+   transport and torsion guards. The two F2 gaps are now explained by
+   actual joint halving and complete 2-saturation, in addition to the F3
+   certificates. Use those exact source maps as the arithmetic anchor;
+   do not infer a Sha class or bound from their subgroup index alone.
 4. For the cheap controller, retain the ORIGINAL source, full carry and
    both clocks through resets. Try a decisive arithmetic exclusion of
    aperiodic positive points in the exact failure attractor; if it fails,
