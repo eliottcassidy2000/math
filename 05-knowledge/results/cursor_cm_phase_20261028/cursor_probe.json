@@ -1,0 +1,840 @@
+{
+  "status": "FINITE-EXACT",
+  "rows": [
+    {
+      "n": 1,
+      "states": 1,
+      "both_endpoint_groups_nontrivial": 0,
+      "overlapping_orbits": 0,
+      "candidate_paths": 0
+    },
+    {
+      "n": 2,
+      "states": 1,
+      "both_endpoint_groups_nontrivial": 0,
+      "overlapping_orbits": 0,
+      "candidate_paths": 0
+    },
+    {
+      "n": 3,
+      "states": 2,
+      "both_endpoint_groups_nontrivial": 0,
+      "overlapping_orbits": 0,
+      "candidate_paths": 0
+    },
+    {
+      "n": 4,
+      "states": 8,
+      "both_endpoint_groups_nontrivial": 0,
+      "overlapping_orbits": 0,
+      "candidate_paths": 0
+    },
+    {
+      "n": 5,
+      "states": 64,
+      "both_endpoint_groups_nontrivial": 0,
+      "overlapping_orbits": 0,
+      "candidate_paths": 0
+    },
+    {
+      "n": 6,
+      "states": 1024,
+      "both_endpoint_groups_nontrivial": 0,
+      "overlapping_orbits": 0,
+      "candidate_paths": 0
+    },
+    {
+      "n": 7,
+      "states": 32768,
+      "both_endpoint_groups_nontrivial": 4,
+      "overlapping_orbits": 4,
+      "candidate_paths": 20
+    },
+    {
+      "n": 8,
+      "states": 2097152,
+      "both_endpoint_groups_nontrivial": 32,
+      "overlapping_orbits": 32,
+      "candidate_paths": 160
+    }
+  ],
+  "examples": [
+    {
+      "rows": [
+        2,
+        28,
+        41,
+        49,
+        37,
+        67,
+        31
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        66,
+        28,
+        41,
+        49,
+        37,
+        67,
+        30
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        62,
+        100,
+        88,
+        82,
+        98,
+        76,
+        1
+      ],
+      "groups": [
+        5,
+        3
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 10,
+      "collision": null
+    },
+    {
+      "rows": [
+        126,
+        100,
+        88,
+        82,
+        98,
+        76,
+        0
+      ],
+      "groups": [
+        5,
+        3
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 10,
+      "collision": null
+    },
+    {
+      "rows": [
+        2,
+        28,
+        41,
+        49,
+        37,
+        67,
+        159,
+        63
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        66,
+        28,
+        41,
+        49,
+        37,
+        67,
+        158,
+        63
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        130,
+        28,
+        41,
+        49,
+        37,
+        67,
+        159,
+        62
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        194,
+        28,
+        41,
+        49,
+        37,
+        67,
+        158,
+        62
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        2,
+        4,
+        57,
+        83,
+        99,
+        75,
+        135,
+        63
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        126,
+        4,
+        56,
+        82,
+        98,
+        74,
+        134,
+        63
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        130,
+        4,
+        57,
+        83,
+        99,
+        75,
+        135,
+        62
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    },
+    {
+      "rows": [
+        254,
+        4,
+        56,
+        82,
+        98,
+        74,
+        134,
+        62
+      ],
+      "groups": [
+        3,
+        5
+      ],
+      "orbits": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ]
+        ]
+      ],
+      "nontrivial_intersections": [
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      "candidate_paths": 0,
+      "collision": null
+    }
+  ],
+  "collisions": []
+}
