@@ -70,6 +70,20 @@ duality: the boundary attachment can change extension data. The note gives
 a sufficient marked-port condition for direct-sum preservation and an exact
 exponent bound. No arithmetic realization of these groups as Sha is asserted.
 
+### A fresh adjacent cokernel supplies a useful negative control
+
+The incoming [golden circulant cokernel tower](../stabilizer_necklace_kernels_20261028/COKERNELS.md),
+published at05c5d4362e4, retains a cyclic clock and has depth-two order4864,
+with Smith factors1, seven copies of2, and38. Its19-primary valuation is
+one:4864=2^8*19. Therefore that particular finite group cannot carry any
+perfect antisymmetric Q/Z pairing. Its order is neither a square nor twice
+a square. This does not contradict the tournament construction above: the
+clocked sign-word circulant is a different matrix, not an even tournament
+skew dominance matrix. An exact additive cokernel and a preserved clock
+still do not supply the required paired arithmetic structure. The incoming
+source's general tower proof is credited; this packet uses only its explicit
+depth-two group and the proved finite-pairing obstruction.
+
 ## 3. F1 gives a paired skeleton, but hides coupled sectors
 
 [Symplectic skeleton and gluing](f1/SYMPLECTIC_SKELETON_AND_GLUE.md) uses
