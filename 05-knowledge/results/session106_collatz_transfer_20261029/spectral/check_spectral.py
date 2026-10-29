@@ -95,6 +95,57 @@ for k in range(1,81):
         require(a==1, 'exact_valuation_one')
     require(x==2*3**k-1 and x>1, 'norm_one_survival')
 
+# Infinite inverse-chain theorem: exact finite native residual controls.
+chain=[1]
+for j in range(1,81):
+    y=chain[-1]
+    choices=[4] if y==1 else ([2,4] if y%3==1 else [3,5])
+    candidates=[((2**a*y-1)//3,a) for a in choices if (2**a*y-1)%3==0]
+    x,a=next((x,a) for x,a in candidates if x%3 and x>y)
+    require(collatz(x)==(y,a), 'inverse_chain_exact_native_guard')
+    require(x%2==1 and x%3!=0 and x>y, 'inverse_chain_distinct')
+    chain.append(x)
+
+def cadd(u,v): return (u[0]+v[0],u[1]+v[1])
+def cmul(u,v): return (u[0]*v[0]-u[1]*v[1],u[0]*v[1]+u[1]*v[0])
+def cneg(u): return (-u[0],-u[1])
+zero=(F(0),F(0)); one=(F(1),F(0))
+for lam in [(F(0),F(0)),(F(1,2),F(0)),(F(-2,3),F(0)),
+            (F(1,3),F(1,2)),(F(0),F(1)),(F(-1),F(0))]:
+    for N in [1,2,7,23,80]:
+        v={}; power=one
+        for x in chain[1:N+1]:
+            v[x]=power; power=cmul(power,lam)
+        qv={}
+        for x,c in v.items():
+            y,_=collatz(x)
+            if y!=1: qv[y]=cadd(qv.get(y,zero),c)
+        for x in v:
+            residual=cadd(qv.get(x,zero),cneg(cmul(lam,v[x])))
+            expected=cneg(power) if x==chain[N] else zero
+            require(residual==expected, 'complex_exact_eigen_residual')
+        if lam in [(F(0),F(1)),(F(-1),F(0))]:
+            require(sum(abs(c[0])+abs(c[1]) for c in v.values())==N,
+                    'unit_circle_truncation_norm')
+            require(abs(power[0])+abs(power[1])==1,
+                    'unit_circle_residual_norm')
+for N in [1,2,7,23,80]:
+    x=chain[N]
+    for k in range(N):
+        require(x==chain[N-k] and x!=1, 'finite_shift_survives_until_N')
+        x,_=collatz(x)
+    require(x==1, 'finite_shift_nilpotent_at_N')
+# Prescribed tail: telescoping law on the known terminating inverse chain.
+for k in range(40):
+    for N in [40,80]:
+        mass=sum(F(1,j*(j+1)) for j in range(k+1,N+1))
+        require(mass+F(1,N+1)==F(1,k+1), 'prescribed_harmonic_survival_tail')
+for lam in [F(1,3),F(3,4),F(9,10)]:
+    for k in range(30):
+        N=80
+        mass=sum((1-lam)*lam**(j-1) for j in range(k+1,N+1))
+        require(mass+lam**N==lam**k, 'prescribed_geometric_survival_tail')
+
 # Exact finite-source mass certificate, preserving the omitted tail.
 J=64; K=200; z=F(999,1000); d=F(1,J+1); survivor=F(1,J+1)
 resolved=[]

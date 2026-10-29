@@ -1,0 +1,35 @@
+{
+  "micro_clock_hostile": [
+    7,
+    11,
+    17,
+    26,
+    13,
+    20,
+    10,
+    5,
+    8
+  ],
+  "native_cutoff_replays": 4092,
+  "source_search": {
+    "crossings": 49965,
+    "horizon": 50,
+    "maximum_source": 100001,
+    "not_crossed_within_horizon": 35,
+    "odd_sources": 50000,
+    "unpaid_crossings": []
+  },
+  "status": "PASS",
+  "word_search": {
+    "alphabet": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "max_length": 8,
+    "multiplier": 3,
+    "nonterminal_finite_survivors": [],
+    "words": 87380
+  }
+}

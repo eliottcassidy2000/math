@@ -3,22 +3,31 @@
     "abel_identity": 192,
     "atom_excludes_infinite": 75,
     "averaging_changes_survival": 10,
+    "complex_exact_eigen_residual": 678,
     "exact_valuation_one": 3240,
     "finite_head_abel_atom_crossing": 1,
     "finite_head_resolved": 1,
+    "finite_shift_nilpotent_at_N": 5,
+    "finite_shift_survives_until_N": 113,
+    "inverse_chain_distinct": 80,
+    "inverse_chain_exact_native_guard": 80,
     "lazy_clock_identity": 576,
     "mixed_entrywise_domination": 20480,
     "native_aggregation_survivor": 11,
     "noncommuting_witness": 1,
     "norm_one_source_formula": 3240,
     "norm_one_survival": 80,
+    "prescribed_geometric_survival_tail": 90,
+    "prescribed_harmonic_survival_tail": 80,
     "rational_hitting_bound": 75,
     "refresh_threshold_sharp": 15,
     "resolvent_positive": 192,
     "source_three_bound": 1,
     "supersolution_equality": 192,
     "survival_tail_not_discarded": 1,
-    "telescoping_exact_mass": 1
+    "telescoping_exact_mass": 1,
+    "unit_circle_residual_norm": 10,
+    "unit_circle_truncation_norm": 10
   },
   "finite_head": {
     "abel_upper_denominator": 36982822951164360219950000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
@@ -32,5 +41,5 @@
   },
   "scope": "finite exact controls only; infinite statements proved in Markdown",
   "status": "PASS",
-  "total_checks": 28384
+  "total_checks": 29530
 }

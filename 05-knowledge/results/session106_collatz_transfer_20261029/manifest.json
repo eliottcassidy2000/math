@@ -1,0 +1,98 @@
+{
+  "relative_links": [
+    [
+      "README.md",
+      "recurrence/SOURCE_INTERVAL_TRANSFER.md"
+    ],
+    [
+      "README.md",
+      "recurrence/GUARDED_MACRO_INTERVALS.md"
+    ],
+    [
+      "README.md",
+      "recurrence/NATIVE_UPPER_CUTOFF.md"
+    ],
+    [
+      "README.md",
+      "reverse/REVERSE_FOREST.md"
+    ],
+    [
+      "README.md",
+      "descent/SOURCE_PAID_ATLAS_AND_STATE_BARRIER.md"
+    ],
+    [
+      "README.md",
+      "spectral/NATIVE_SPECTRAL_BOUNDARY.md"
+    ],
+    [
+      "README.md",
+      "observability/SOURCE_RESPONSE_RANK.md"
+    ],
+    [
+      "README.md",
+      "audit_transfer/REPORT.md"
+    ],
+    [
+      "README.md",
+      "audit_reverse/REPORT.md"
+    ],
+    [
+      "README.md",
+      "history/source_pins.json"
+    ],
+    [
+      "README.md",
+      "history/ATOMIC_INCOMING.md"
+    ],
+    [
+      "README.md",
+      "history/SEVEN_INCOMING.md"
+    ],
+    [
+      "spectral/NATIVE_SPECTRAL_BOUNDARY.md",
+      "../observability/SOURCE_RESPONSE_RANK.md"
+    ]
+  ],
+  "sha256": {
+    "README.md": "75ac4619e095ea9302e5e030d23d7cbe035cfbc2ef086dde5dcdf33081d22c28",
+    "SESSION_PLAN.md": "0d48bf8f560f8b1664ad3f58ce8371d3c1daf2bf36c3294df5e9628e1030ccd3",
+    "audit_reverse/REPORT.md": "35a538f05761f6aae056bf1170525620a5504c2d4af78e29bea757baebcbc6ec",
+    "audit_reverse/check_independent.py": "1b023afdb6734cf6da5212a4eeaec8928e721156dad935e0cc788e30f0e2dc5b",
+    "audit_reverse/normal.json": "7f22cc62616735e090712f9af9efd3fcb1e44636b2102b18e3ae9856c0783a1b",
+    "audit_reverse/optimized.json": "7f22cc62616735e090712f9af9efd3fcb1e44636b2102b18e3ae9856c0783a1b",
+    "audit_transfer/REPORT.md": "8d1a013e831439190a80ce87ee726ee65136e0b8f02a6c3d3ca28d903ec211fd",
+    "audit_transfer/check_independent.py": "fb12262bf35e095eda7b351b06d160dd213f176314162d0599f6d2b9680ee4a9",
+    "audit_transfer/checks.normal.json": "d85266fcb6d79a792d40738dbe00ada6493473b055ef918772013b7bb7104425",
+    "audit_transfer/checks.optimized.json": "d85266fcb6d79a792d40738dbe00ada6493473b055ef918772013b7bb7104425",
+    "descent/SOURCE_PAID_ATLAS_AND_STATE_BARRIER.md": "52081bb9acd4f1cfa4d23a3fab089f4a7b6cb1780aa75ac7d1146f45e8fb586d",
+    "descent/atlas16.json": "d12c67083ce4b7e7c7a597329d0263de90ac80342dec2a50d53ca16ac0d59ebe",
+    "descent/check_descent_transfer.py": "967a4146a368ce51e6086ac08c84012ff3019c314c762ecc481b11c2f7a70e28",
+    "descent/checks.normal.json": "d8c10409cf2f027366a6c51bbf0001d9dcfd71b782621f57bc9e4efcc4baf807",
+    "descent/checks.optimized.json": "d8c10409cf2f027366a6c51bbf0001d9dcfd71b782621f57bc9e4efcc4baf807",
+    "history/ATOMIC_INCOMING.md": "f81b094ac4e6a8988cbcf9659d2e462242c2f60ee15ff027e4134b8f60aa142c",
+    "history/SEVEN_INCOMING.md": "35fd933bb1a29f3ac0d9853a2b823a8859a11d8a07223578dfe10ae252a99cc7",
+    "history/source_pins.json": "055222ad7587833caf2456eafd5cdd8730f92b681013c18377d933ca574d78a2",
+    "observability/SOURCE_RESPONSE_RANK.md": "cf276a23f387802c74dc9c6234a962400fcebcf2ace9b7522ad95710709a4e72",
+    "observability/check_observability.py": "6f331b02987bce3a7b8ca77602dc6f106e07e7585ede5c274bff93f0cef8a52f",
+    "observability/checks.json": "f9a167b4339bd8e75c2aa47d0ee91f6f6051fba56b5304570e899c856e9e450d",
+    "observability/checks.optimized.json": "f9a167b4339bd8e75c2aa47d0ee91f6f6051fba56b5304570e899c856e9e450d",
+    "recurrence/GUARDED_MACRO_INTERVALS.md": "35febdb3753bd1e66847c7b2f9fd0b955ad61a6cd5d1ee2b8ce52026f46b45d8",
+    "recurrence/NATIVE_UPPER_CUTOFF.md": "fe56a82fdc700e4533e3073d40a1da78b276b5b905a1b3910a59e91c94203f0f",
+    "recurrence/SOURCE_INTERVAL_TRANSFER.md": "6b4b583f52675a20fe98d5610713d83ece131999826c660e014541baa97975b9",
+    "recurrence/check_recurrence.py": "8f3501aef71107b43d870c54336a8c82052e921baa991d84f974c7325fd0164e",
+    "recurrence/check_upper_cutoff.py": "f8392f84360fd4e1ee34537fbb64bf89c471023f3b3265c5c00e327e6292cf04",
+    "recurrence/checks.json": "9e593685201d61f755851b5b5890216ec65b2b6ee7c23fd9bb5f75c52143c26f",
+    "recurrence/checks_optimized.json": "9e593685201d61f755851b5b5890216ec65b2b6ee7c23fd9bb5f75c52143c26f",
+    "recurrence/upper_normal.json": "bb12f6d0f694d9a910bade7c78b1f05c357cd6c6aba16283f5b465ac09dd2638",
+    "recurrence/upper_optimized.json": "bb12f6d0f694d9a910bade7c78b1f05c357cd6c6aba16283f5b465ac09dd2638",
+    "reverse/REVERSE_FOREST.md": "bedd37c4b084560d7d1a26051b078b2dde0ed2f4a5976e6456418d705485d5f7",
+    "reverse/check_reverse.py": "c973ea45ac0ed46b2b185890349a7558598dd44853f132fc8ccc1130e984d752",
+    "reverse/checks.json": "80992e5ed12c76e7ff18db190a4cd9f2380ffb357d6e22378982d3c5dc7dcd35",
+    "reverse/checks_optimized.json": "80992e5ed12c76e7ff18db190a4cd9f2380ffb357d6e22378982d3c5dc7dcd35",
+    "spectral/NATIVE_SPECTRAL_BOUNDARY.md": "6194fdc9539e7680643022edc696a15c349b63c2c15ac198a7907dffda45aaf9",
+    "spectral/check_spectral.py": "4a9103eaab1be2b3f11eacacfd1c87fa780e5382fc92fff0c2a8f2ef7c2ba245",
+    "spectral/checks.json": "ca248c67dd46e9c4e29ae11a7fbe46164c21068b0ad4cf8cac68083fb65dda1b",
+    "spectral/checks_optimized.json": "ca248c67dd46e9c4e29ae11a7fbe46164c21068b0ad4cf8cac68083fb65dda1b",
+    "verify_packet.py": "013144cb872b671567a83811ba5b6727568442cc85ec3c335d2783371b00fde7"
+  }
+}

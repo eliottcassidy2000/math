@@ -1,0 +1,12 @@
+{
+  "atlas_bits": 16,
+  "atlas_certificates": 751,
+  "atlas_unresolved": 2904,
+  "macro_checks": 60,
+  "native_incoming_edges": 1286,
+  "native_return_sources": 3703,
+  "reverse_depth": 15,
+  "reverse_endpoints": 3703,
+  "reverse_nodes": 1962,
+  "status": "PASS"
+}

@@ -43,11 +43,15 @@ for b in (3,5,9):
             residues=[n for n in range(1,M,2) if trace(n,b,k)[0]==word]
             check(len(residues)==1,'unique_exact_residue')
             r=residues[0]; t=(A*r+C)//B
+            caps=[cp//(bp-ap) for ap,bp,cp in prefixes if ap<bp]
+            cap=min(caps) if caps else None
+            check(all(cp>0 for ap,bp,cp in prefixes),'native_positive_carries')
             check(r==((B-C)*pow(A,-1,M))%M,'affine_residue_formula')
             check((A*r+C)%B==0 and t%2==1,'integer_odd_endpoint')
             for q in (0,1,3,10):
                 got,ends=trace(r+M*q,b,k)
                 check(got==word and ends[-1]==t+2*A*q,'periodic_cylinder_exactness')
+                check(all(y>=r+M*q for y in ends)==(cap is None or r+M*q<=cap),'native_upper_cutoff')
             # Intersect ALL chronological source inequalities at once in final
             # word coordinates, independently of the recursive filter.
             for L,U in ((0,0),(0,11),(2,9),(8,8)):
@@ -185,5 +189,38 @@ for k in range(1,65):
         n,a=step(n)
         check(a==1,'norm_one_exact_guard')
     check(n>1,'norm_one_final_survival')
+
+# Exact Gaussian-rational finite truncations, computed by native action on the
+# source support (not by presuming a shift matrix). Complex ell1 boundary cases
+# have unit-modulus coefficients and normalized residual exactly 1/N.
+def cmul(z,w):
+    a,b=z; c,d=w
+    return (a*c-b*d,a*d+b*c)
+def csub(z,w):
+    return (z[0]-w[0],z[1]-w[1])
+zero=(F(0),F(0))
+for lam in ((F(0),F(0)),(F(1,2),F(0)),(F(-2,3),F(0)),
+            (F(1,3),F(1,4)),(F(0),F(1,2)),(F(1),F(0)),
+            (F(0),F(1)),(F(3,5),F(4,5))):
+    for N in (1,2,7,31,100):
+        power=(F(1),F(0)); v={}
+        for x in xs[1:N+1]:
+            v[x]=power; power=cmul(power,lam)
+        image={}
+        for x,coef in v.items():
+            dest=step(x)[0]
+            if dest!=1:
+                old=image.get(dest,zero)
+                image[dest]=(old[0]+coef[0],old[1]+coef[1])
+        residual={x:csub(image.get(x,zero),cmul(lam,coef)) for x,coef in v.items()}
+        check(all(residual[x]==zero for x in xs[1:N]),'complex_truncation_interior')
+        check(residual[xs[N]]==(-power[0],-power[1]),'complex_truncation_terminal_residual')
+        if lam[0]**2+lam[1]**2==1:
+            check(all(a*a+b*b==1 for a,b in v.values()),'boundary_truncation_unit_coefficients')
+            a,b=residual[xs[N]]
+            check(a*a+b*b==1,'boundary_residual_unit_norm')
+        if lam[1]==0 and 0<lam[0]<1:
+            r=lam[0]
+            check(sum(a for a,b in v.values())==(1-r**N)/(1-r),'positive_eigenlaw_partial_mass')
 
 print(json.dumps({'status':'PASS','checks':counts,'total_checks':sum(counts.values()),'source_sha256':sha256(Path(__file__).read_bytes()).hexdigest(),'inverse_rank_GF2':rank,'scope':'finite independent controls only; proof audit in REPORT.md'},indent=2,sort_keys=True))

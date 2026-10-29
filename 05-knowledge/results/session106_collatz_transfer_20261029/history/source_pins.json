@@ -1,0 +1,18 @@
+[
+  {
+    "local": "ATOMIC_INCOMING.md",
+    "source_url": "https://github.com/eliottcassidy2000/math/blob/201fa96604d51171909318cc482220e00df54c38/05-knowledge/results/atomic_tail_reset_20261029/ATOMIC.md",
+    "commit": "201fa96604d51171909318cc482220e00df54c38",
+    "original_content_sha256": "f8eafc911f64c9ec565610453640f507dacb040889233b6cfa9337f0790e8358",
+    "source_blob_sha": "1c9817faad53e2c4cfa0cd896cb084ed66e87358",
+    "transformation": "Added archival notice and resolved relative Markdown links; no mathematical changes."
+  },
+  {
+    "local": "SEVEN_INCOMING.md",
+    "source_url": "https://github.com/eliottcassidy2000/math/blob/63ef3ca1172665f7100d06d405a3aa34c42efa57/05-knowledge/results/seven_return_native_recursions_20261029/COLLATZ.md",
+    "commit": "63ef3ca1172665f7100d06d405a3aa34c42efa57",
+    "original_content_sha256": "b86517dff64790a4832af84e17e79c199a7580c1c6483f5ad8c3880e3eb50897",
+    "source_blob_sha": "d60357f2c96816800972c94c332c60c553c622a6",
+    "transformation": "Added archival notice and resolved relative Markdown links; no mathematical changes."
+  }
+]

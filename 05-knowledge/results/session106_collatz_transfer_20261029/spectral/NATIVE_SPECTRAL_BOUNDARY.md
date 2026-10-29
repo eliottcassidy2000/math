@@ -33,6 +33,44 @@ For i<k, 3n_i+1=2(2^{k−i}3^{i+1}−1), with the bracket odd, so the exact valu
 
 Thus a bound ||Q^k||≤Cρ^k with finite C and ρ<1 is impossible on ordinary ℓ¹, even if every orbit eventually stops. A weighted norm or source-specific estimate may evade this theorem, but its weights and atom comparison must be proved. The ordinary countdown map T(j)=j−1, H={0}, already shows strong stability coexisting with spectral radius 1.
 
+## 2a. The entire closed unit disk is already forced by terminating sources
+
+The [source-response construction](../observability/SOURCE_RESPONSE_RANK.md), §1, supplies a strictly increasing inverse chain x₀=1,x₁=5,x₂=13,... with T(x_j)=x_(j−1) and exact τ(x_j)=j. For completeness, given odd y not divisible by3, choose x=(2^a y−1)/3, using a=4 at y=1; otherwise choose a from {2,4} if y≡1 mod3 or {3,5} if y≡2 mod3, rejecting a candidate divisible by3. Both candidate numerators cannot vanish mod9, since multiplication by4 sends residue1 to4. The chosen x is integral, odd, greater than y, not divisible by3, and has exact valuation a. Thus the chain exists without a convergence assumption.
+
+Complexify ℓ¹(Y). For every complex |λ|<1, the nonzero vector
+
+    v_λ = sum_{j≥1} λ^(j−1) δ_(x_j)
+
+belongs to ℓ¹, with norm 1/(1−|λ|). Boundedness of Q permits termwise application. The first basis vector is killed and all later ones shift down the chain, so
+
+    Q v_λ = sum_{j≥2} λ^(j−1) δ_(x_(j−1)) = λ v_λ.
+
+This includes λ=0, for which v₀=δ₅. Therefore the open unit disk is contained in the point spectrum. The spectrum is closed and is contained in the closed unit disk by ||Q||≤1 (outside it the Neumann resolvent converges). Hence **the spectrum of native killed accelerated Collatz on complex ℓ¹ is exactly the closed unit disk**. No assertion is needed about which boundary points are eigenvalues. This entire spectral obstruction already occurs on the closed invariant subspace supported on the displayed, individually proven-terminating chain.
+
+For real 0<λ<1, normalize to the probability p_λ=(1−λ)v_λ. Then
+
+    ||Q^k p_λ||₁ = λ^k,
+    E_(p_λ) τ = 1/(1−λ),
+    (1−z)||(I−zQ)^{−1}p_λ||₁ = (1−z)/(1−zλ).
+
+Thus arbitrary rates approaching1 occur for source laws supported entirely on known finite trajectories. These laws are NOT full support on all positive odd integers, and no failure of universal convergence follows. For a finite truncation v_(λ,N), the exact residual is
+
+    Q v_(λ,N) − λ v_(λ,N) = −λ^N δ_(x_N).
+
+The checker verifies this using exact rational real/imaginary parts, independently reconstructing the inverse chain and native valuations. The infinite eigenvector theorem follows from absolute summability, not finite residual numerics. This strengthens the norm-one obstruction and complements the unbounded source-response rank; it does not rule out source-specific weighted certificates.
+
+### Finite cutoff spectra can be maximally misleading
+
+On span{δ_(x₁),...,δ_(x_N)}, Q is the nilpotent backward shift: Q^N=0 but Q^(N−1)δ_(x_N)=δ_(x₁)≠0. Every finite restriction therefore has spectrum {0}, whereas their invariant infinite-ray limit has spectrum the entire closed unit disk. Finite cutoff eigenvalues cannot certify a global native spectral gap. Even for a fixed cutoff, ||Q^k||=1 through k=N−1. At any |λ|=1, the truncated eigenvector above has norm N and residual norm1, so normalization gives approximate boundary eigenvectors of residual norm1/N. These observations do not invalidate genuine finite-source hitting certificates; they identify the missing uniform control in a spectral-limit argument.
+
+### Arbitrary vanishing survival tails on the same terminating support
+
+More generally let 1=a₀≥a₁≥a₂≥...→0. Put mass p_j=a_(j−1)−a_j at x_j. These nonnegative masses telescope to1, and since τ(x_j)=j,
+
+    Pr_p(τ>k)=sum_{j>k}p_j=a_k.
+
+Thus every such prescribed survival tail is realized by a source law on this explicit terminating chain. Zero p_j are allowed. In particular p_j=1/[j(j+1)] gives A_k=1/(k+1) and infinite mean lifetime, although every supporting source has its complete finite trajectory supplied. This weight law uses the chain index j, NOT the earlier law w(2j−1)=1/[j(j+1)] on all positive odd integers. Arbitrarily slow decay for arbitrary chain-supported priors does not settle decay for that fixed, full-support original-source prior. It rules out a uniform decay class across arbitrary priors, not a specific scalar generating function claim for the chosen Collatz source law.
+
 ## 3. Refresh can manufacture convergence; its cost is exact
 
 Let R be any positive substochastic kernel on the SAME active carrier, and 0<α<1. Set L=(1−α)Q+αR. Repeated positivity gives

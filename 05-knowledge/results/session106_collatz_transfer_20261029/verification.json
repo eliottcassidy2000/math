@@ -1,0 +1,57 @@
+{
+  "atlas_regenerated_both_modes": true,
+  "isolated_runs": 16,
+  "jobs": [
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "9e593685201d61f755851b5b5890216ec65b2b6ee7c23fd9bb5f75c52143c26f",
+      "script": "recurrence/check_recurrence.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "bb12f6d0f694d9a910bade7c78b1f05c357cd6c6aba16283f5b465ac09dd2638",
+      "script": "recurrence/check_upper_cutoff.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "ca248c67dd46e9c4e29ae11a7fbe46164c21068b0ad4cf8cac68083fb65dda1b",
+      "script": "spectral/check_spectral.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "f9a167b4339bd8e75c2aa47d0ee91f6f6051fba56b5304570e899c856e9e450d",
+      "script": "observability/check_observability.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "d8c10409cf2f027366a6c51bbf0001d9dcfd71b782621f57bc9e4efcc4baf807",
+      "script": "descent/check_descent_transfer.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "80992e5ed12c76e7ff18db190a4cd9f2380ffb357d6e22378982d3c5dc7dcd35",
+      "script": "reverse/check_reverse.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "d85266fcb6d79a792d40738dbe00ada6493473b055ef918772013b7bb7104425",
+      "script": "audit_transfer/check_independent.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "7f22cc62616735e090712f9af9efd3fcb1e44636b2102b18e3ae9856c0783a1b",
+      "script": "audit_reverse/check_independent.py"
+    }
+  ],
+  "manifest_entries": 40,
+  "scope": "Byte checks and finite exact replays; all-order claims depend on proofs and audits; no Collatz solution or CI assertion.",
+  "status": "PASS"
+}

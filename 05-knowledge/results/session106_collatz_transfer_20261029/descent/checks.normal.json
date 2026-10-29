@@ -1,0 +1,43 @@
+{
+  "atlas_sha256": "d12c67083ce4b7e7c7a597329d0263de90ac80342dec2a50d53ca16ac0d59ebe",
+  "atlas_summaries": [
+    {
+      "bits": 8,
+      "certificate_count": 19,
+      "covered_residue_count": 95,
+      "max_word_length": 4,
+      "odd_residue_count": 128,
+      "unresolved_residue_count": 33
+    },
+    {
+      "bits": 12,
+      "certificate_count": 99,
+      "covered_residue_count": 1766,
+      "max_word_length": 6,
+      "odd_residue_count": 2048,
+      "unresolved_residue_count": 282
+    },
+    {
+      "bits": 16,
+      "certificate_count": 751,
+      "covered_residue_count": 29864,
+      "max_word_length": 9,
+      "odd_residue_count": 32768,
+      "unresolved_residue_count": 2904
+    }
+  ],
+  "finite_descent": {
+    "first_maximizer": 35655,
+    "max_first_descent_steps": 85,
+    "maximum_source": 100001,
+    "odd_sources_checked": 50000,
+    "work_cap_per_source": 10000
+  },
+  "hostiles": {
+    "five_cycles_checked": 2,
+    "ones_lengths_checked": 256,
+    "rejections_checked": 5
+  },
+  "scope": "Infinite arithmetic cylinders proved; finite exhaustive atlas and bounded orbit checks only. No universal descent claim.",
+  "status": "PASS"
+}
