@@ -1,0 +1,229 @@
+{
+  "checks": 23181,
+  "normal_optimized_identical": true,
+  "prime_power_precision": 3,
+  "producer_checks": 31060,
+  "smith_rows": [
+    {
+      "copies": 1,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 2,
+        "1": 2,
+        "2": 0
+      }
+    },
+    {
+      "copies": 2,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 6,
+        "1": 0,
+        "2": 2
+      }
+    },
+    {
+      "copies": 3,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 8,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "copies": 4,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 12,
+        "1": 0,
+        "2": 4
+      }
+    },
+    {
+      "copies": 5,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 14,
+        "1": 2,
+        "2": 4
+      }
+    },
+    {
+      "copies": 6,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 18,
+        "1": 0,
+        "2": 6
+      }
+    },
+    {
+      "copies": 7,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 20,
+        "1": 2,
+        "2": 6
+      }
+    },
+    {
+      "copies": 8,
+      "p": 3,
+      "valuation_multiplicities": {
+        "0": 24,
+        "1": 0,
+        "2": 8
+      }
+    },
+    {
+      "copies": 1,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 4,
+        "1": 2,
+        "2": 0
+      }
+    },
+    {
+      "copies": 2,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 10,
+        "1": 0,
+        "2": 2
+      }
+    },
+    {
+      "copies": 3,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 14,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "copies": 4,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 20,
+        "1": 0,
+        "2": 4
+      }
+    },
+    {
+      "copies": 5,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 24,
+        "1": 2,
+        "2": 4
+      }
+    },
+    {
+      "copies": 6,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 30,
+        "1": 0,
+        "2": 6
+      }
+    },
+    {
+      "copies": 7,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 34,
+        "1": 2,
+        "2": 6
+      }
+    },
+    {
+      "copies": 8,
+      "p": 5,
+      "valuation_multiplicities": {
+        "0": 40,
+        "1": 0,
+        "2": 8
+      }
+    },
+    {
+      "copies": 1,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 6,
+        "1": 2,
+        "2": 0
+      }
+    },
+    {
+      "copies": 2,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 14,
+        "1": 0,
+        "2": 2
+      }
+    },
+    {
+      "copies": 3,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 20,
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "copies": 4,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 28,
+        "1": 0,
+        "2": 4
+      }
+    },
+    {
+      "copies": 5,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 34,
+        "1": 2,
+        "2": 4
+      }
+    },
+    {
+      "copies": 6,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 42,
+        "1": 0,
+        "2": 6
+      }
+    },
+    {
+      "copies": 7,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 48,
+        "1": 2,
+        "2": 6
+      }
+    },
+    {
+      "copies": 8,
+      "p": 11,
+      "valuation_multiplicities": {
+        "0": 56,
+        "1": 0,
+        "2": 8
+      }
+    }
+  ],
+  "source_sha256": {
+    "audit.py": "2538c839446049f417807774c45c2470a80b8badf674b730b9ef831866ed3beb",
+    "check.py": "177ab80e345029046131acdb197115c0b371a7f53ac079740301ae27cb09bb89"
+  },
+  "status": "PASS"
+}

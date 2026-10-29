@@ -1,0 +1,901 @@
+{
+  "arithmetic": [
+    {
+      "Monsky": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "kernel": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "n": 5,
+      "pure_dimension": 1
+    },
+    {
+      "Monsky": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "kernel": [
+        [
+          0,
+          0
+        ]
+      ],
+      "n": 11,
+      "pure_dimension": 0
+    }
+  ],
+  "checks": 31060,
+  "general_ports": [
+    {
+      "d": 2,
+      "h": 1,
+      "join_exponent": 2,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 2,
+      "h": 2,
+      "join_exponent": 4,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 2,
+      "h": 1,
+      "join_exponent": 2,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 2,
+      "h": 2,
+      "join_exponent": 4,
+      "port": [
+        3,
+        5
+      ]
+    },
+    {
+      "d": 3,
+      "h": 1,
+      "join_exponent": 3,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 3,
+      "h": 3,
+      "join_exponent": 9,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 3,
+      "h": 3,
+      "join_exponent": 9,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 3,
+      "h": 3,
+      "join_exponent": 9,
+      "port": [
+        3,
+        5
+      ]
+    },
+    {
+      "d": 4,
+      "h": 1,
+      "join_exponent": 4,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 4,
+      "h": 4,
+      "join_exponent": 16,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 4,
+      "h": 2,
+      "join_exponent": 4,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 4,
+      "h": 4,
+      "join_exponent": 16,
+      "port": [
+        3,
+        5
+      ]
+    },
+    {
+      "d": 5,
+      "h": 1,
+      "join_exponent": 5,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 5,
+      "h": 5,
+      "join_exponent": 25,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 5,
+      "h": 5,
+      "join_exponent": 25,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 5,
+      "h": 5,
+      "join_exponent": 25,
+      "port": [
+        3,
+        5
+      ]
+    },
+    {
+      "d": 9,
+      "h": 1,
+      "join_exponent": 9,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 9,
+      "h": 9,
+      "join_exponent": 81,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 9,
+      "h": 9,
+      "join_exponent": 81,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 9,
+      "h": 9,
+      "join_exponent": 81,
+      "port": [
+        3,
+        5
+      ]
+    },
+    {
+      "d": 11,
+      "h": 1,
+      "join_exponent": 11,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 11,
+      "h": 11,
+      "join_exponent": 121,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 11,
+      "h": 11,
+      "join_exponent": 121,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 11,
+      "h": 11,
+      "join_exponent": 121,
+      "port": [
+        3,
+        5
+      ]
+    },
+    {
+      "d": 25,
+      "h": 1,
+      "join_exponent": 25,
+      "port": [
+        0,
+        0
+      ]
+    },
+    {
+      "d": 25,
+      "h": 25,
+      "join_exponent": 625,
+      "port": [
+        1,
+        0
+      ]
+    },
+    {
+      "d": 25,
+      "h": 25,
+      "join_exponent": 625,
+      "port": [
+        2,
+        0
+      ]
+    },
+    {
+      "d": 25,
+      "h": 25,
+      "join_exponent": 625,
+      "port": [
+        3,
+        5
+      ]
+    }
+  ],
+  "geometry": [
+    {
+      "all_planes": 35,
+      "q": 2,
+      "quadratic": 6,
+      "quadratic_graphs": 2,
+      "symplectic": 15,
+      "symplectic_graphs": 8
+    },
+    {
+      "all_planes": 130,
+      "q": 3,
+      "quadratic": 8,
+      "quadratic_graphs": 3,
+      "symplectic": 40,
+      "symplectic_graphs": 27
+    },
+    {
+      "all_planes": 806,
+      "q": 5,
+      "quadratic": 12,
+      "quadratic_graphs": 5,
+      "symplectic": 156,
+      "symplectic_graphs": 125
+    },
+    {
+      "all_planes": 16226,
+      "q": 11,
+      "quadratic": 24,
+      "quadratic_graphs": 11,
+      "symplectic": 1464,
+      "symplectic_graphs": 1331
+    }
+  ],
+  "golden": [
+    {
+      "matrix_period": 20,
+      "p": 5,
+      "roots": [
+        3
+      ]
+    },
+    {
+      "matrix_period": 10,
+      "p": 11,
+      "roots": [
+        4,
+        8
+      ]
+    }
+  ],
+  "joins": [
+    {
+      "C_p2_factors": 0,
+      "C_p_factors": 2,
+      "copies": 1,
+      "exponent": 3,
+      "order": 9,
+      "p": 3,
+      "p_rank": 2,
+      "vertices": 4
+    },
+    {
+      "C_p2_factors": 2,
+      "C_p_factors": 0,
+      "copies": 2,
+      "exponent": 9,
+      "order": 81,
+      "p": 3,
+      "p_rank": 2,
+      "vertices": 8
+    },
+    {
+      "C_p2_factors": 2,
+      "C_p_factors": 2,
+      "copies": 3,
+      "exponent": 9,
+      "order": 729,
+      "p": 3,
+      "p_rank": 4,
+      "vertices": 12
+    },
+    {
+      "C_p2_factors": 4,
+      "C_p_factors": 0,
+      "copies": 4,
+      "exponent": 9,
+      "order": 6561,
+      "p": 3,
+      "p_rank": 4,
+      "vertices": 16
+    },
+    {
+      "C_p2_factors": 4,
+      "C_p_factors": 2,
+      "copies": 5,
+      "exponent": 9,
+      "order": 59049,
+      "p": 3,
+      "p_rank": 6,
+      "vertices": 20
+    },
+    {
+      "C_p2_factors": 6,
+      "C_p_factors": 0,
+      "copies": 6,
+      "exponent": 9,
+      "order": 531441,
+      "p": 3,
+      "p_rank": 6,
+      "vertices": 24
+    },
+    {
+      "C_p2_factors": 6,
+      "C_p_factors": 2,
+      "copies": 7,
+      "exponent": 9,
+      "order": 4782969,
+      "p": 3,
+      "p_rank": 8,
+      "vertices": 28
+    },
+    {
+      "C_p2_factors": 8,
+      "C_p_factors": 0,
+      "copies": 8,
+      "exponent": 9,
+      "order": 43046721,
+      "p": 3,
+      "p_rank": 8,
+      "vertices": 32
+    },
+    {
+      "C_p2_factors": 0,
+      "C_p_factors": 2,
+      "copies": 1,
+      "exponent": 5,
+      "order": 25,
+      "p": 5,
+      "p_rank": 2,
+      "vertices": 6
+    },
+    {
+      "C_p2_factors": 2,
+      "C_p_factors": 0,
+      "copies": 2,
+      "exponent": 25,
+      "order": 625,
+      "p": 5,
+      "p_rank": 2,
+      "vertices": 12
+    },
+    {
+      "C_p2_factors": 2,
+      "C_p_factors": 2,
+      "copies": 3,
+      "exponent": 25,
+      "order": 15625,
+      "p": 5,
+      "p_rank": 4,
+      "vertices": 18
+    },
+    {
+      "C_p2_factors": 4,
+      "C_p_factors": 0,
+      "copies": 4,
+      "exponent": 25,
+      "order": 390625,
+      "p": 5,
+      "p_rank": 4,
+      "vertices": 24
+    },
+    {
+      "C_p2_factors": 4,
+      "C_p_factors": 2,
+      "copies": 5,
+      "exponent": 25,
+      "order": 9765625,
+      "p": 5,
+      "p_rank": 6,
+      "vertices": 30
+    },
+    {
+      "C_p2_factors": 6,
+      "C_p_factors": 0,
+      "copies": 6,
+      "exponent": 25,
+      "order": 244140625,
+      "p": 5,
+      "p_rank": 6,
+      "vertices": 36
+    },
+    {
+      "C_p2_factors": 6,
+      "C_p_factors": 2,
+      "copies": 7,
+      "exponent": 25,
+      "order": 6103515625,
+      "p": 5,
+      "p_rank": 8,
+      "vertices": 42
+    },
+    {
+      "C_p2_factors": 8,
+      "C_p_factors": 0,
+      "copies": 8,
+      "exponent": 25,
+      "order": 152587890625,
+      "p": 5,
+      "p_rank": 8,
+      "vertices": 48
+    },
+    {
+      "C_p2_factors": 0,
+      "C_p_factors": 2,
+      "copies": 1,
+      "exponent": 11,
+      "order": 121,
+      "p": 11,
+      "p_rank": 2,
+      "vertices": 8
+    },
+    {
+      "C_p2_factors": 2,
+      "C_p_factors": 0,
+      "copies": 2,
+      "exponent": 121,
+      "order": 14641,
+      "p": 11,
+      "p_rank": 2,
+      "vertices": 16
+    },
+    {
+      "C_p2_factors": 2,
+      "C_p_factors": 2,
+      "copies": 3,
+      "exponent": 121,
+      "order": 1771561,
+      "p": 11,
+      "p_rank": 4,
+      "vertices": 24
+    },
+    {
+      "C_p2_factors": 4,
+      "C_p_factors": 0,
+      "copies": 4,
+      "exponent": 121,
+      "order": 214358881,
+      "p": 11,
+      "p_rank": 4,
+      "vertices": 32
+    },
+    {
+      "C_p2_factors": 4,
+      "C_p_factors": 2,
+      "copies": 5,
+      "exponent": 121,
+      "order": 25937424601,
+      "p": 11,
+      "p_rank": 6,
+      "vertices": 40
+    },
+    {
+      "C_p2_factors": 6,
+      "C_p_factors": 0,
+      "copies": 6,
+      "exponent": 121,
+      "order": 3138428376721,
+      "p": 11,
+      "p_rank": 6,
+      "vertices": 48
+    },
+    {
+      "C_p2_factors": 6,
+      "C_p_factors": 2,
+      "copies": 7,
+      "exponent": 121,
+      "order": 379749833583241,
+      "p": 11,
+      "p_rank": 8,
+      "vertices": 56
+    },
+    {
+      "C_p2_factors": 8,
+      "C_p_factors": 0,
+      "copies": 8,
+      "exponent": 121,
+      "order": 45949729863572161,
+      "p": 11,
+      "p_rank": 8,
+      "vertices": 64
+    }
+  ],
+  "seeds": [
+    {
+      "mask": 61,
+      "matrix": [
+        [
+          0,
+          1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "n": 4,
+      "p": 3,
+      "trial": 2
+    },
+    {
+      "mask": 24806,
+      "matrix": [
+        [
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          0,
+          1,
+          1,
+          1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "n": 6,
+      "p": 5,
+      "trial": 9
+    },
+    {
+      "mask": 259995210,
+      "matrix": [
+        [
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0
+        ]
+      ],
+      "n": 8,
+      "p": 11,
+      "trial": 8
+    }
+  ],
+  "status": "PASS",
+  "two_channel_attachments": [
+    {
+      "alpha": "-2/3",
+      "base_matrix": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "beta": "-2/3",
+      "column_mask": 6,
+      "cut": [
+        [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "group_cyclic_factors": [
+        5,
+        5
+      ],
+      "pfaffian": 5
+    },
+    {
+      "alpha": "-2/3",
+      "base_matrix": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          0,
+          -1,
+          1
+        ],
+        [
+          -1,
+          1,
+          0,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1,
+          0
+        ]
+      ],
+      "beta": "1/3",
+      "column_mask": 7,
+      "cut": [
+        [
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "group_cyclic_factors": [
+        11,
+        11
+      ],
+      "pfaffian": 11
+    }
+  ]
+}
