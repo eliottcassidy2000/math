@@ -1,8 +1,26 @@
 # Overnight paired arithmetic research handoff
 
-Status: active research on 2026-10-29. This file is the continuation point
-for the eight hourly follow-ups requested by the user. Preserve proof
-status and resume from completed checkpoints rather than restarting.
+Status: the scheduled overnight sequence is complete on 2026-10-29.
+The [morning synthesis](MORNING_REPORT.md) records the completed scoped
+results and the remaining open obligations. The eight-run overnight
+automation was deleted during the09:03 Denver close-out after the report
+and the subsequent explicit user-requested checkpoint were published.
+This file remains a continuation map for future requested research;
+preserve proof status and do not restart completed work.
+
+Latest explicit user follow-up: commit b39949c673,
+[four-vertex gluing and Fermat clocks](../four_vertex_glue_fermat_20261029/README.md),
+proves complete Smith forms for every positive power of the fixed T5
+three-run response, the exact gluing sequence with its C5 clock, and the
+composition-depth/precision threshold. Its normal and optimized checkers
+agree on11628 gates, including81/27. Fixed-source matrix powers do not
+establish native-complement closure. The next decisive test in that lane
+is a mixed response word M_U M_T for an actual legal complement, retaining
+the original named ports. Its [Fermat note](../four_vertex_glue_fermat_20261029/FERMAT.md)
+supplies exact CRT squaring recurrences and an odd-order witness for F5;
+Fermat-prime completeness remains OPEN. These results supplement the
+overnight obligations below rather than discharging the unresolved
+Selmer realization, ternary index3^10, or exceptional-integer problems.
 
 Current worktree: `codex/session-sha_pairing_f1_20261029`, based on the
 clean pushed prior packet `sha_marked_join_f1_20261029`.
