@@ -1,0 +1,116 @@
+{
+  "ramified": {
+    "base_vertices": 25,
+    "lift_vertices": 625,
+    "literal_tensor_identity": true,
+    "orbit_pairs": 4,
+    "p": 5,
+    "perpendicular_fibre_identity": true,
+    "quotient_mode_multiplier": 25
+  },
+  "words": {
+    "all_cutoff_envelope_constant_lower_bound": "13/6",
+    "bounded_bank_words": 819,
+    "coefficients": [
+      {
+        "all_word_lower_coefficient": "1",
+        "blocks": 1,
+        "finite_bank_coefficient": "2331/4096",
+        "z": "1"
+      },
+      {
+        "all_word_lower_coefficient": "3/7",
+        "blocks": 1,
+        "finite_bank_coefficient": "90909/262144",
+        "z": "3/4"
+      },
+      {
+        "all_word_lower_coefficient": "1",
+        "blocks": 2,
+        "finite_bank_coefficient": "5433561/16777216",
+        "z": "1"
+      },
+      {
+        "all_word_lower_coefficient": "9/49",
+        "blocks": 2,
+        "finite_bank_coefficient": "8264446281/68719476736",
+        "z": "3/4"
+      },
+      {
+        "all_word_lower_coefficient": "1",
+        "blocks": 3,
+        "finite_bank_coefficient": "12665630691/68719476736",
+        "z": "1"
+      },
+      {
+        "all_word_lower_coefficient": "27/343",
+        "blocks": 3,
+        "finite_bank_coefficient": "751312546959429/18014398509481984",
+        "z": "3/4"
+      }
+    ],
+    "native_block_prefixes": 39832,
+    "source27_receipt": [
+      {
+        "a": 2,
+        "block": 1,
+        "endpoint_j": 16,
+        "k": 1
+      },
+      {
+        "a": 2,
+        "block": 2,
+        "endpoint_j": 61,
+        "k": 4
+      },
+      {
+        "a": 2,
+        "block": 3,
+        "endpoint_j": 46,
+        "k": 0
+      },
+      {
+        "a": 2,
+        "block": 4,
+        "endpoint_j": 52,
+        "k": 1
+      },
+      {
+        "a": 2,
+        "block": 5,
+        "endpoint_j": 88,
+        "k": 2
+      },
+      {
+        "a": 2,
+        "block": 6,
+        "endpoint_j": 223,
+        "k": 3
+      },
+      {
+        "a": 3,
+        "block": 7,
+        "endpoint_j": 84,
+        "k": 0
+      },
+      {
+        "a": 2,
+        "block": 8,
+        "endpoint_j": 142,
+        "k": 2
+      },
+      {
+        "a": 2,
+        "block": 9,
+        "endpoint_j": 160,
+        "k": 1
+      },
+      {
+        "a": 3,
+        "block": 10,
+        "endpoint_j": 456,
+        "k": 5
+      }
+    ]
+  }
+}

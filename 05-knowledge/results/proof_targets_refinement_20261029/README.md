@@ -6,6 +6,14 @@ and `exact.json`. Self-audited with independent computational paths where
 specified, not an independent-agent audit and not a literature-priority claim.
 Universal Collatz, JC(2), LRC(14), and six-colour plane forcing are not proved.
 
+**Continuation, 2026-10-29:** [fractional pin barriers and reset tails](../pinned_discrepancy_reset_tails_20261029/README.md)
+closes the bounded-orbit-size logarithm-free existence target using the
+Lovett–Meka lemma and an explicit fractional pin criterion. It supplies an
+independent first-reset residual-tail bound; its finite-depth continuation
+shows why the undiscounted critical coefficient cannot decrease. Uniform
+depth control and a new deterministic logarithm-free constructor remain
+open. The earlier deterministic moment construction below is retained.
+
 ## Inheritance, portfolio and concept board
 
 The anchor is constructive quasirandomness with prescribed orbit choices.
