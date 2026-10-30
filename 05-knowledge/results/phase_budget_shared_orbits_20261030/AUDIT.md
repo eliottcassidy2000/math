@@ -17,6 +17,8 @@ python3 D/tournament_audit.py
 python3 D/palette_audit.py
 python3 D/jacobian_audit.py
 python3 D/ledger_audit.py
+python3 D/macro_profile.py
+python3 D/dilation_722.py
 ```
 
 Replace D by the displayed directory. C++17, Python3, NumPy and SymPy are
@@ -90,3 +92,26 @@ justify the no-cancellation step. All original two-shear maps remain invertible.
 Canonical corrections are recorded in `01-canon/MISTAKES.md`. The predecessor
 budget status and results index are updated; earlier finite receipts remain
 historical evidence with their original, bounded universes.
+
+## Post-pull synthesis audit
+
+After integrating commits596f0d4397,c641df44c2,4565150008, the incoming E9
+proof, independent auditor and receipt were read. Their525,000,000-edge run
+is credited and not claimed as a new local rerun. Our earlier nonsharp E<=8
+estimates are explicitly superseded as a content frontier.
+
+The new marked single-ones-loop theorem proves affine periodicity for arbitrary
+fixed reset-containing entry u and fixed exit v. All-one entries are an explicit
+failure boundary: their successive charges are unbounded. For the two supplied
+macrofamilies,782500 complete phase values agree between the address formula
+and a C++ program that advances the actual modular affine map and every suffix
+letter. Every entry-preserving divisor is independently recomposed from the
+full integer words. The maxima are unique in their displayed periods; the
+periodic identity proves the optimal constants for every L>=0. Normal and -O
+runs agree exactly. No giant positive Collatz trajectory is simulated or
+asserted to terminate by these content bounds.
+
+The722 response check uses four matrices, including the changed-prime hostile.
+Every determinantal divisor is computed by enumerating all square minors of
+the direct aliquot-response matrix. Normal and -O outputs agree. The general
+two-prime formula is proved from the incoming all-arity Smith classification.

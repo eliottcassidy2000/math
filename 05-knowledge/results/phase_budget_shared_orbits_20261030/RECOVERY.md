@@ -110,3 +110,51 @@ The old LRC deep-well hostile also prevents promoting a mean chain mass to a
 universal maximum guarantee. Correspondingly, our attained-return envelope
 has a proved inequality but no universal payment theorem. The requested research
 target remains a uniform source-preserving argument, not a promising finite fit.
+
+## 6. The later incoming work changes the frontier
+
+Commits c641df44c2 and4565150008 from Session113 arrived during this session.
+They independently audit the clock271 hostile, add a distinct resonant-doubling
+word, and prove the sharp repaired E9 bound with a pending first-return flag.
+The coefficient488281/781250 and two-clock reset gap are inherited from
+`session113_symmetry_consumers_20261030/uniform_content/REPAIRED_CERTIFICATE.md`.
+This supersedes the weaker E<=8 content bounds of our initial experiment.
+Our full first-arrival formula is compared with their bounded online F_r
+envelope in COLLATZ.md§5; neither establishes universal all-layer feasibility.
+
+The real additional synthesis is COLLATZ.md§6. Their larger hostile lies in
+W 1^L W, whose actual content height is uniformly<=9 by our retained-entry
+divisors. The completed profile calculation gives optimal all-L constants,
+with an independent check of every one of781250 phases. The counterexamples
+therefore lead to exact certified families, rather than simply closing a route.
+
+Commit596f0d4397 supplies the incoming
+[joint prime-dilation response theorem](../prime_dilation_response_20261030/PROOFS.md),
+especially D1–D5. For n=p^a q^b with distinct primes p,q and a,b>=0, its
+two-prime response matrix has the particularly transparent Smith form
+
+    (1,1,n,p q n(p+q-1)).                                (3)
+
+Indeed the outside core has divisor sum C=1, and the incoming determinant
+parameter is Gamma=n(p+q-1). The primary formulas D4 give two zero valuation
+layers, the valuations of n, and those of p q n(p+q-1), at every prime.
+Combining them proves(3). This is a corollary of that stronger all-arity
+theorem, not an independent discovery of the Smith classification.
+
+At n=722,p=2,q=19 the exact factors are
+
+    (1,1,722,548720).
+
+This supplies a genuine meaning for722 as an integral response invariant:
+the map is n -> H[e,h]=s(n p^(e1+h1) q^(e2+h2)), with e,h in{0,1}^2.
+It preserves all linear prime-dilation continuations. The positive control
+n=22,p=2,q=11 gives(1,1,22,5808). With the SAME source722 but alphabet{2,5},
+the outside core is361 and the factors become(1,381,762,18028920). Thus the
+source alone does not determine the invariant; the permitted operations are
+part of its type. `dilation_722.py` constructs the matrix from direct divisor
+sums and computes gcds of ALL minors, independently of the incoming formula.
+
+This arithmetic example parallels the chart and palette distinctions at a
+precise level: exact continuation pairings retain information that a scalar
+count omits. No map equating this Smith factor with the696-vertex graph's722
+edges or the identifier THM-722 is claimed.

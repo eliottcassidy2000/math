@@ -10,9 +10,13 @@ content target survives. With U=(3,1,3,1^6,3,1,3), the word U 1^231 U has
 budget deficit769/5000 but actual charge154<1355/8. An exact first-arrival
 ledger explains the missing coordinate. More positively, **every** U 1^L U
 has content height at most5; the previously proved sharp five-layer theorem
-therefore controls this entire infinite family. Independent integer potentials
-certify the old *truncated* budget through E=8; E=9 supplies the hostile.
-See [COLLATZ.md](COLLATZ.md).
+therefore controls this entire infinite family. Incoming Session113 then
+supplied the stronger sharp repaired E9 certificate. Combining the entry
+divisors with exact arrival addresses now proves **optimal all-length budgets
+for two hostile macrofamilies**, with periods1250 and781250 and precisely
+known equality phases. Independent implementations agree on all782500 phase
+values. Our weaker old-budget certificates through E=8 remain boundary
+controls. See [COLLATZ.md](COLLATZ.md), especially sections5–6.
 
 For the incoming two-parameter composite family on rm vertices, the old shared
 path leaves 2^((r+m-4)/2) tournaments in the intersection. A constructive
@@ -33,6 +37,12 @@ wr+1 dividing s+w. See [GEOMETRY_JC.md](GEOMETRY_JC.md).
 [RECOVERY.md](RECOVERY.md) separates the distinct uses of722, credits incoming
 and older mechanisms, and gives the connection maps and boundaries.
 [AUDIT.md](AUDIT.md) records reproduction and hostile tests.
+
+The incoming prime-dilation Smith theorem also gives an exact arithmetic
+722 bridge: for n=p^a q^b, the two-prime response has Smith factors
+(1,1,n,pqn(p+q-1)). Thus722 is literally the third invariant for its{2,19}
+response; changing the allowed primes to{2,5} changes that invariant to762.
+The operation alphabet is essential.
 
 The concept board is **first-arrival address / integer clock / entry word /
 shared orbit variable / palette incidence / signed determinant channel**.

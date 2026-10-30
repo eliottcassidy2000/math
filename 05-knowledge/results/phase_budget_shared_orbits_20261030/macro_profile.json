@@ -1,0 +1,47 @@
+[
+  {
+    "name": "U3",
+    "entry_length": 12,
+    "entry_clock": 20,
+    "entry_charge": 5,
+    "entry_height": 5,
+    "K": 5,
+    "phase_cap_histogram": {
+      "0": 4,
+      "2": 7,
+      "5": 2
+    },
+    "period": 1250,
+    "gain": 781,
+    "slope": "781/1250",
+    "optimal_additive_constant": "8714/625",
+    "optimal_clock_saving": "6906/625",
+    "first_maximizer": 962,
+    "maximizers": 1,
+    "profile_sha256": "c71e9be389c7c376210cc4ed7a3cf6096567bbe2c59cfbfa9e146fb2d8921c72",
+    "checked_residues": 1250
+  },
+  {
+    "name": "W5",
+    "entry_length": 253,
+    "entry_clock": 269,
+    "entry_charge": 155,
+    "entry_height": 8,
+    "K": 9,
+    "phase_cap_histogram": {
+      "1": 18,
+      "4": 234,
+      "8": 1,
+      "9": 1
+    },
+    "period": 781250,
+    "gain": 488280,
+    "slope": "48828/78125",
+    "optimal_additive_constant": "24807527/78125",
+    "optimal_clock_saving": "1461937/78125",
+    "first_maximizer": 491466,
+    "maximizers": 1,
+    "profile_sha256": "d8525b4a0d3369fde10e84a2e4c201704d7e20c7f2eae8422c9199ba28fc2e7b",
+    "checked_residues": 781250
+  }
+]

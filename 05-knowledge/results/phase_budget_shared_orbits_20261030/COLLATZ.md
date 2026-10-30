@@ -6,6 +6,10 @@ to the existing sharp five-layer theorem. **PROVED by finite certificates:**
 the truncated budget at E=1,...,8, for every finite positive word.
 The all-layer charge target and universal Collatz entry remain **OPEN**.
 
+**Incoming frontier update:** Session113 subsequently supplied the sharp
+repaired E9 certificate. Section5 credits that stronger result; section6
+uses the combined mechanisms to obtain exact infinite-family budgets.
+
 ## 1. Inheritance and the exact failure
 
 Use [the preceding COLLATZ.md](../layer_lifts_cyclic_intersections_20261030/COLLATZ.md)
@@ -177,3 +181,122 @@ heights are all<=9, so its positive truncated deficit is the actual deficit.
 The small quotient is sufficient for this budget consumer but insufficient
 for the stronger future-return observer of the preceding packet; there is
 no contradiction with that observer's larger state lower bound.
+
+## 5. Merge the stronger incoming phase certificate
+
+Concurrent Session113's
+[one-digit repair](../session113_symmetry_consumers_20261030/uniform_content/REPAIRED_CERTIFICATE.md)
+retains m modulo5 and a pending first-arrival flag. Its independently checked
+certificate gives, with lambda9=488281/781250,
+
+    S_9(w)<=lambda9 A,
+    S_9(w)<=lambda9(A-2) if w contains a non-one letter.    (14)
+
+The receipt checks525,000,000 transitions,126 entries, valid-domain closure
+and infinite-letter tails. Both bounds are sharp in their declared domains.
+The proof and auditor were read here; that full certificate was not redundantly
+rerun. It supersedes our weaker E<=8 content estimates as the current finite
+precision frontier. Our old-budget certificates remain useful independent
+boundary controls, not the strongest current content theorem.
+
+Its low-phase envelope F_r counts levels<=r exactly and postpones the higher
+startup cost until the first possible low-phase return. This gives an online
+bounded-mode implementation, unlike an arbitrary completed-epoch formula.
+The all-E feasibility of that envelope remains OPEN. Our full addresses in
+section2 identify every individual arrival, but are not claimed to yield a
+smaller or universally paid online controller.
+
+Session113 also supplies R=(5,1^8,5), W=R 1^233 R, whose word W 1^8 W has
+clock546, defect height11 and actual content317. It refutes the old budget
+by479371/312500. The next section controls the *whole* W 1^L W family.
+
+## 6. Exact periodic charge with a fixed entry and exit
+
+**Theorem (marked single-ones-loop profile).** Fix words u,v, with at least
+one non-one letter in u. For every L>=0 the complete untruncated charge
+S(u 1^L v) is an affine-periodic function of L, with explicitly computable
+period and gain. This assertion concerns the finite word with its literal
+entry and exit, not one integer orbit realizing all choices of L.
+
+Let h=v5(Z_u), and for each nonempty prefix V of v put
+
+    c_V=v5(Z_(Vu)),  t_e=2*5^(e-1).
+
+Every Z_(Vu)>0. Let K=max(h,all c_V); if v is empty only h is needed.
+For K=0 use T=1 and gain0; otherwise use T=t_K. Write chi_u=1 if m_u is
+square modulo5 and0 otherwise. Then
+
+    S(u 1^(L+T) v)-S(u 1^L v)=chi_u lambda_h T.           (15)
+
+The right side is an integer. Fixed initial-prefix charges do not affect
+the period. The claimed period need not be minimal.
+
+The reset assumption is essential. With an all-ones entry and no exit, the
+successive charges v5(3^n-2^n) are unbounded; a finite affine period for their
+partial sums would make those increments periodic and bounded. The initial
+zero-defect stratum therefore requires its own density ledger.
+
+**Proof and exact formula.** The fixed prefix u contributes S(u). At its
+endpoint, ones have charge at level e<=h precisely at positive indices i
+with m_u(3/2)^i=1 modulo5^e. This is a single residue class if chi_u=1,
+and empty otherwise. Next, at the endpoint after the additional prefix V,
+
+    m'=m_V m_u(3/2)^L,
+    z'=(Z_u/P_u)m'+z_V.
+
+Conditional on m'=1 modulo5^e, z'=0 modulo5^e is equivalent to
+
+    Z_u/P_u+z_V=0 modulo5^e,
+
+whose valuation is exactly c_V: its numerator over the unit denominator
+P_u Q_V is P_u Z_V+Q_V Z_u=Z_(Vu). Thus that suffix prefix contributes
+
+    sum_(e<=c_V) [m_V m_u(3/2)^L=1 modulo5^e].            (16)
+
+The terms are either one explicitly lifted residue class modulo t_e or
+empty, according to the multiplier's quadratic coset. This formula preserves
+every suffix prefix, including phases with no possible charge. Shifting L by
+T leaves every suffix indicator unchanged and adds exactly T/t_e returns
+in each active middle level. Sum them to obtain(15). QED.
+
+The formula reduces an unbounded-length question to a declared finite
+phase bank. It does not give a uniform bound on K or on the number of
+controllers needed for changing-word coverage.
+
+### Two exact optimal macrofamily budgets
+
+For U from section1 and W from section5, the phase caps are:
+
+* U: entry height5; thirteen divisors including the empty suffix have
+  heights0 four times,2 seven times,5 twice. K=5.
+* W: entry height8;254 divisors including the empty suffix have heights
+  1 eighteen times,4 234 times,8 once and9 once. K=9; only the full suffix
+  attains9. Every initial prefix also has content height at most9.
+
+Consequently the incoming theorem(14) already certifies W 1^L W for every L,
+including cases with arbitrarily high final defect. The exact periodic
+profile gives still stronger bounds, without needing that global E9 theorem:
+
+| family | clock A | period T | gain per period | optimal uniform bound |
+|---|---|---:|---:|---|
+| U 1^L U |40+L|1250|781| S<=781 A/1250-6906/625 |
+| W 1^L W |538+L|781250|488280| S<=48828 A/78125-1461937/78125 |
+
+Equality holds precisely at L=962 modulo1250 in the first row and
+L=491466 modulo781250 in the second. Thus the constants are optimal for
+these families and slopes. The second slope is lambda8, even though a
+suffix can reach content height9: the ninth level contributes a periodic
+terminal correction rather than a continuing density.
+
+The finite maximum checks are exact certificates for these all-L statements.
+`macro_profile.py` builds the whole phase profile using(16) and arithmetic
+progression counts; a separately implemented C++ program follows the modular
+affine trajectory and every suffix letter. All782500 phase values agree.
+Literal unbounded-integer gcd checks cover short positive controls, both
+known hostiles and the entry words. The hash, unique maximizers and integer
+cap histograms are in `macro_profile.json`; no floating point is used.
+
+This is a useful source-preserving return-controller theorem, rather than
+another conjecture justified only by a search cutoff. The remaining universal
+obligation is payment when entries and exits themselves change without a
+bounded, independently certified phase bank.
