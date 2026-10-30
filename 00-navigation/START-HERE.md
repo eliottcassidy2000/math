@@ -16,7 +16,7 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [S111](../05-knowledge/results/session111_scale_connections_20261030/README.md).
 [S112](S112.md)
-[S113](S113.md); [S114](S114.md)
+[S113](S113.md); [S114](S114.md); [S115](S115.md)
 
 ## Orientation
 

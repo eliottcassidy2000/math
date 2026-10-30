@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "checks": 1136,
+  "all16_weight_transports": [
+    {
+      "q_mod8": 1,
+      "p_mod8": 1,
+      "positive": true,
+      "fixed": true
+    },
+    {
+      "q_mod8": 1,
+      "p_mod8": 3,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 1,
+      "p_mod8": 5,
+      "positive": true,
+      "fixed": false
+    },
+    {
+      "q_mod8": 1,
+      "p_mod8": 7,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 3,
+      "p_mod8": 1,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 3,
+      "p_mod8": 3,
+      "positive": true,
+      "fixed": true
+    },
+    {
+      "q_mod8": 3,
+      "p_mod8": 5,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 3,
+      "p_mod8": 7,
+      "positive": true,
+      "fixed": false
+    },
+    {
+      "q_mod8": 5,
+      "p_mod8": 1,
+      "positive": true,
+      "fixed": false
+    },
+    {
+      "q_mod8": 5,
+      "p_mod8": 3,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 5,
+      "p_mod8": 5,
+      "positive": true,
+      "fixed": true
+    },
+    {
+      "q_mod8": 5,
+      "p_mod8": 7,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 7,
+      "p_mod8": 1,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 7,
+      "p_mod8": 3,
+      "positive": true,
+      "fixed": false
+    },
+    {
+      "q_mod8": 7,
+      "p_mod8": 5,
+      "positive": false,
+      "fixed": false
+    },
+    {
+      "q_mod8": 7,
+      "p_mod8": 7,
+      "positive": true,
+      "fixed": true
+    }
+  ],
+  "cyclotomic_transport": [
+    {
+      "j": 1,
+      "chi2": 1,
+      "chi_minus2": 1,
+      "weight": "8/7",
+      "image_constant": "88/105",
+      "image_i_coefficient": "-32/105"
+    },
+    {
+      "j": 3,
+      "chi2": -1,
+      "chi_minus2": 1,
+      "weight": "8/15",
+      "image_constant": "88/105",
+      "image_i_coefficient": "-32/105"
+    },
+    {
+      "j": 5,
+      "chi2": -1,
+      "chi_minus2": -1,
+      "weight": "8/15",
+      "image_constant": "88/105",
+      "image_i_coefficient": "32/105"
+    },
+    {
+      "j": 7,
+      "chi2": 1,
+      "chi_minus2": -1,
+      "weight": "8/7",
+      "image_constant": "88/105",
+      "image_i_coefficient": "32/105"
+    }
+  ],
+  "odd_matrix_phase_profiles": [
+    {
+      "matrix_order": 1,
+      "negative_reading_numerator": 7,
+      "matrices": 1
+    },
+    {
+      "matrix_order": 3,
+      "negative_reading_numerator": 4,
+      "matrices": 56
+    },
+    {
+      "matrix_order": 7,
+      "negative_reading_numerator": 0,
+      "matrices": 48
+    }
+  ],
+  "group_mixtures": [
+    {
+      "complement_order": 1,
+      "even_mass": "7/8"
+    },
+    {
+      "complement_order": 3,
+      "even_mass": "5/8"
+    },
+    {
+      "complement_order": 7,
+      "even_mass": "1/8"
+    },
+    {
+      "complement_order": 21,
+      "even_mass": "3/8"
+    }
+  ]
+}

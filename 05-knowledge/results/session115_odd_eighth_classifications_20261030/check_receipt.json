@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "scripts": 16,
+  "runs": 32,
+  "checks": [
+    {
+      "script": "quadratic/check_odd_eighths.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "4fb2e1ec55311339006e2fb8c039e9f1008b1a95d901667dc0a5ac43c688bc93"
+    },
+    {
+      "script": "audit_phases/check_boolean_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "393971c0282d330afd6b393d578cd845782a3d2745b95a763e126fa729117334"
+    },
+    {
+      "script": "unitary/check_word_unitary.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "462d1f53d416961611becb40fe0bd82d6c94cbb73721cc4673d3113ef5c354fa"
+    },
+    {
+      "script": "audit_phases/check_unitary_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "9f9def0932b9593c040786cd1d2a03a81d5dbb0f6fa7942f711148295c29bc09"
+    },
+    {
+      "script": "switching/check_eighth_groups.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "5e6e1c08befbd074d1eabb666669ca58b99c48e4ea59a407124d9f57934253cb"
+    },
+    {
+      "script": "audit_groups/check_group_weights.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "be9ab4a1fb2e6a3d0d8b4d63903693083f1bafbc2756454f917398c20b29d7dc"
+    },
+    {
+      "script": "lrc/check_harmonic.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "120c61a8b357822059fe26d48539fce01faba4beb54a7c72175e0eb98c3f15fc"
+    },
+    {
+      "script": "audit_lrc/independent_harmonic.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "e7fcb0ca2b2e7a3e4826726f7d40b5e752f29e7c15e42854530b232ddb44ac6c"
+    },
+    {
+      "script": "collatz/check_one_reset.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "ac069f08c27dfe8a9f86efccb8e06e415973493154a403c93dcac3a02e94ce2d"
+    },
+    {
+      "script": "collatz/check_constant.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "932079dd4984d239be12434a2a4e24f4514f2fce25e45564feceaf0bcbdc7295"
+    },
+    {
+      "script": "collatz/check_general_reset.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "c009737f91542a6d244513e1f93f3d75363a2e3d88b7e1fc5b2e1c0d1187aefd"
+    },
+    {
+      "script": "audit_collatz/check_classes_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "928307e73fd7282855fd2ce99cdf852bf782571559a33467c6c96f55938ed27b"
+    },
+    {
+      "script": "audit_collatz/check_general_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "12362a999427d837a53c6dac12ad45685754f744a8a8b033c41bde313af0fae1"
+    },
+    {
+      "script": "check_synthesis.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "058aa77a7b4020d186e94de01a7bfc0cdf2ab0dbe25d7f321000a61faab8cae0"
+    },
+    {
+      "script": "audit_synthesis/check_cross_maps.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "fbf8fe8b5fa4859fdf9c3652b6bf42dd4773d4c9ad005a66a1d1775612f3d4e2"
+    },
+    {
+      "script": "audit_incoming/check_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "ab2cb56673f577143d2ab1566d958e0b3182d44f97091361f9737ee862f354ae"
+    }
+  ]
+}

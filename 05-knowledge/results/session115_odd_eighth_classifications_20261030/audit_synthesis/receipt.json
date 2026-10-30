@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "gates": 5923,
+  "odd_GL_matrices": 105,
+  "Boolean_profiles": [
+    {
+      "matrix_order": 1,
+      "truth_weight": 7,
+      "matrices": 1
+    },
+    {
+      "matrix_order": 3,
+      "truth_weight": 4,
+      "matrices": 56
+    },
+    {
+      "matrix_order": 7,
+      "truth_weight": 0,
+      "matrices": 48
+    }
+  ],
+  "group_masses": [
+    {
+      "complement_order": 1,
+      "even_mass": "7/8"
+    },
+    {
+      "complement_order": 3,
+      "even_mass": "5/8"
+    },
+    {
+      "complement_order": 7,
+      "even_mass": "1/8"
+    },
+    {
+      "complement_order": 21,
+      "even_mass": "3/8"
+    }
+  ],
+  "Haar_controls": [
+    {
+      "precision": 1,
+      "truncated_extended_mean": "5/16"
+    },
+    {
+      "precision": 2,
+      "truncated_extended_mean": "29/80"
+    },
+    {
+      "precision": 3,
+      "truncated_extended_mean": "149/400"
+    },
+    {
+      "precision": 4,
+      "truncated_extended_mean": "749/2000"
+    },
+    {
+      "precision": 5,
+      "truncated_extended_mean": "3749/10000"
+    }
+  ]
+}

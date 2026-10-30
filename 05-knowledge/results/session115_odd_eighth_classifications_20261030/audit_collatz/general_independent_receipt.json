@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "gates": 82904,
+  "counts": {
+    "divisibility_chain": 688,
+    "mixed_radix_count": 688,
+    "mixed_radix_predicate": 5848,
+    "literal_intersection_modulus": 2752,
+    "literal_affine_order": 2752,
+    "all_entry_layer_cap": 44032,
+    "empty_entry_layer_max": 2752,
+    "completion_entry_count": 23392
+  },
+  "universe": {
+    "L": "0..15",
+    "a": "2..41 plus101,501,2501",
+    "depth": "1..4",
+    "entry_clock_max": 4,
+    "digit_depth": 14
+  }
+}

@@ -1,27 +1,31 @@
-# Odd eighths: uniform formulas with their carriers retained
+# Odd eighths: uniform formulas and complete family classifications
 
-**Session 115, 30 October 2026. In progress.** Scoped proofs and exact checks; no major conjecture closure or literature-priority claim.
+**Session 115, 30 October 2026. PROVED scoped results, with independent audits.** The major conjectures remain open. Classical Walsh, Lucas, finite-field and transfer mechanisms retain their credit; no literature-priority or formal-certification claim is made.
 
-## Verified phase classifications
+Read [the synthesis and formula atlas](SYNTHESIS.md) for the explicit maps, observer shifts and transport boundaries. [Checks](CHECKS.md) give reproduction commands and finite universes.
 
-[The phase classification](quadratic/ODD_EIGHTH_PHASES.md) gives all sixteen relative Fano gauges, with linear-coordinate orbit sizes1,7,7,1. Their eight cubic classes yield exactly the odd-eighth Walsh measurement profiles. The profile is relative to a chosen base table and is not an invariant of abstract octonion isomorphism.
+## Complete classifications and uniform formulas
 
-The uniform extension characterizes, in every binary dimension d>=3, precisely the Boolean phases with a Walsh coefficient of magnitude2^d−2: they are single-point defects of affine phases. Their character-twisted probabilities lie in {1/2^d,1−1/2^d,1/2−1/2^d,1/2+1/2^d}. Exhaustion of all odd-weight phases is special to dimension3; dimension4 supplies a hostile.
+1. **[Norm gauges and Boolean phases](quadratic/ODD_EIGHTH_PHASES.md).** All sixteen coherent relative Fano gauges have linear-coordinate orbit sizes 1,7,7,1. Their cubic sector gives the odd-eighth Walsh profiles. In every binary dimension d>=3, a Walsh coefficient of magnitude 2^d−2 characterizes exactly a single-point defect of an affine phase. The chosen base table and character label matter; this is not an invariant of abstract octonion isomorphism.
 
-The producer passes11,796 explicit gates in normal and optimized modes. Independent proof review and a separate fast Walsh transform checker exhaust all256 dimension3 and all65,536 dimension4 Boolean functions, with66,103 gates and matching normal/optimized output. Scripts and receipts are included.
+2. **[Affine groups and centralizer weights](switching/ODD_EIGHTH_GROUPS.md).** Every odd linear complement H in GL₃(2) has order 1,3,7 or21. The even-order proportions of F₂³⋊H are respectively 7/8,5/8,1/8 and3/8: all four fractions are values of one observable on one completely classified family. In every binary dimension the odd-order proportion is the average of 2^(−dim Fix(h)). A second theorem covers every finite group with Sylow D₈: its even-order proportion is (2c+1)/8, where c counts involution classes. No arbitrary switching-group realization is assumed.
 
-[Word-address transport](unitary/WORD_UNITARY_CLASSIFICATION.md) gives an exact all-depth classification. The multiplier change q→p preserves products, real values, positivity and pullback structure on depth-A character algebras iff p≡q modulo2^(A−1). Distinct multipliers first fail at depth v₂(p−q)+2. The signed half-character defect explains why3→5 first fails at the odd eighths.
+3. **[Word-address transport](unitary/WORD_UNITARY_CLASSIFICATION.md).** At depth A, changing an odd multiplier q to p preserves products, real values, positivity and permutation-pullback structure iff p≡q modulo 2^(A−1). The first failure for distinct multipliers is v₂(p−q)+2, with an exact signed half-character defect. Thus 3→5 first fails at the odd eighths, even though linear unitarity survives.
 
-The unitary producer passes89,001 gates; the separate literal-decoder audit passes44,313, normally and optimized. [Independent proof review](audit_phases/AUDIT.md) covers both packets. Unitary equivalence is not a positivity-preserving probability transport outside the precise congruence gate.
+4. **[Harmonic-tail families](lrc/HARMONIC_COMPLETION.md).** For the almost-AP core C_q={1,...,q−1,q+1}, harmonic completion has a complete optimum-preservation threshold, complete maximizing-point census, Möbius floor counts and physical boundary weights. The high-chamber spectrum is exact; the lower chamber is not claimed classified. At q=7 the weight is w₈(j)=88/105+(32/105)χ₂(j), retaining the quadratic character modulo8. The critical owner change gives 8/49, not the old two-owner prediction 8/7.
 
-## Verified group and harmonic-tail classifications
+5. **[Every one-reset Collatz controller](collatz/GENERAL_RESET.md).** For every a>1 and L>=0, w=1^L a has an explicit maximal ordinary all-layer mean over all positive entry words, including all lifting stalls. Every maximizing entry is classified by a cyclic-intersection modulus and a complete mixed-radix no-borrow rule. Lucas binomial support is an exact special case, not a description of every radix. [The a=2 family](collatz/ONE_RESET_CLASSIFICATION.md) has a uniform strict clock bound below1/2. [Constant-letter controllers](collatz/CONSTANT_CONTROLLERS.md) have the sharp clock bound 5/8, with equality precisely at the all-one controller and all-one entries. No universal bound for arbitrary controllers is claimed.
 
-[Affine-cube groups](switching/ODD_EIGHTH_GROUPS.md) give all four odd eighths as the **same** observable. Every odd-order linear complement H in GL₃(2) has order1,3,7 or21, with even-order mass of F₂³⋊H respectively7/8,5/8,1/8 or3/8. In every binary dimension the mass is one minus the average of2^(−dim Fix(h)). Separately, every finite group with Sylow D₈ has even-order mass(2c+1)/8, where c is its number of involution classes. Centralizer weights, rather than group order alone, drive the proof.
+## Explicit cross-field maps and a non-transfer theorem
 
-[Harmonic completion](lrc/HARMONIC_COMPLETION.md) classifies exactly when an almost-AP core with a complete harmonic tail block attains the tail block's optimum, and gives all maximizing points, Möbius floor counts and physical boundary weights. Its high-chamber spectrum is exact; the lower chamber is explicitly outside the classification. For the seven-tail case, the four odd-eighth phases have weight correction w₈(j)=88/105+(32/105)χ₂(j), where χ₂ is the quadratic character modulo8. This is a literal quadratic-character sidecar, not an unweighted phase count.
+**Group order to a Boolean measurement.** For odd-order h, let N_h be its binary norm operator and set f_h(v)=1[N_hv≠0]. This is exactly the even-order indicator of the affine element (v,h). Group even-order mass is therefore an average of named zero-character Boolean readings. Identity h supplies the OR phase, in the unique 7/8 cubic relative-gauge class. Normalizing that gauge shifts the observer from character0 to111; forgetting this shift changes the reading.
 
-Independent [group](audit_groups/AUDIT.md) and [LRC](audit_lrc/AUDIT.md) audits passed. The critical harmonic-owner hostile gives8/49 rather than the obsolete two-owner value8/7.
+**A sharp obstruction to transporting physical weights.** On odd eighths, χ₂(j)=√2 cos(2πj/8). The word-address unitary U₍₃→₅₎ sends it to −iχ₋₂(j), so a positive LRC endpoint weight becomes nonreal. Positivity-preserving transport requires p≡q modulo4; fixing this particular weight requires the stronger congruence modulo8. Shared phase labels or Hilbert norms alone cannot transfer the weighted conclusion.
 
-## Remaining session work
+A [concurrent conditional-energy decoder](../odd_eighths_uniform_families_20261030/PHASE_BRIDGE.md), preserved and credited in the final merge, gives a different valid route from a phase-conditioned Collatz energy ensemble to the LRC weight. It retains clock parity and physical point multiplicities; it is not the failed multiplier-changing unitary. See the [synthesis addendum](SYNTHESIS.md#7-concurrent-merge-a-valid-conditional-energy-decoder).
 
-The remaining work classifies Collatz entry phases and assembles explicit cross-field maps. It will be added after independent audits. The same fractions are not automatically the same invariant: each connection must retain its source, map, predicate and lost information.
+The Collatz connection to Lucas/Frobenius is separately exact: maximizing every return layer becomes a no-borrow digit predicate, with completion-word data retained. Its parameter-Haar 3/8, orbit means, clock rates and LRC point weights are different measures and are never silently identified.
+
+## Honest frontier
+
+The packet does not settle Collatz convergence, general LRC, unrestricted switching enumeration or a general cross-field equivalence. It closes the named families and specifies precisely where their quotients lose information. [Independent audits](CHECKS.md) distinguish written all-parameter proofs from finite computation.

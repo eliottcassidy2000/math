@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "gates": {
+    "elementary_stall_bound": 5001,
+    "uniform_mean_bound": 5001,
+    "strict_clock_half": 5001,
+    "general_rate_formula": 41,
+    "cyclic_closure": 490,
+    "trivial_intersection": 164,
+    "all_one_order": 164,
+    "all_small_entries_bounded": 6656,
+    "all_small_entry_equality": 6656,
+    "lucas_equivalence": 125250,
+    "lucas_count": 500,
+    "literal_empty_mean": 27,
+    "literal_completed_entry_mean": 135,
+    "unique_stall_lift": 8
+  },
+  "total_gates": 155094,
+  "L_max_rate_scan": 5000,
+  "maximum_scanned_clock_rate": "9/32",
+  "maximizer_L": 0,
+  "examples": [
+    {
+      "L": 0,
+      "stall_depth": 2,
+      "max_mean": "9/16",
+      "max_clock_rate": "9/32"
+    },
+    {
+      "L": 1,
+      "stall_depth": 1,
+      "max_mean": "5/16",
+      "max_clock_rate": "5/48"
+    },
+    {
+      "L": 2,
+      "stall_depth": 1,
+      "max_mean": "9/16",
+      "max_clock_rate": "9/64"
+    },
+    {
+      "L": 3,
+      "stall_depth": 1,
+      "max_mean": "9/16",
+      "max_clock_rate": "9/80"
+    },
+    {
+      "L": 4,
+      "stall_depth": 1,
+      "max_mean": "13/16",
+      "max_clock_rate": "13/96"
+    },
+    {
+      "L": 5,
+      "stall_depth": 2,
+      "max_mean": "17/16",
+      "max_clock_rate": "17/112"
+    },
+    {
+      "L": 6,
+      "stall_depth": 1,
+      "max_mean": "17/16",
+      "max_clock_rate": "17/128"
+    },
+    {
+      "L": 7,
+      "stall_depth": 1,
+      "max_mean": "17/16",
+      "max_clock_rate": "17/144"
+    },
+    {
+      "L": 8,
+      "stall_depth": 1,
+      "max_mean": "21/16",
+      "max_clock_rate": "21/160"
+    },
+    {
+      "L": 9,
+      "stall_depth": 1,
+      "max_mean": "21/16",
+      "max_clock_rate": "21/176"
+    },
+    {
+      "L": 10,
+      "stall_depth": 2,
+      "max_mean": "33/16",
+      "max_clock_rate": "11/64"
+    },
+    {
+      "L": 11,
+      "stall_depth": 1,
+      "max_mean": "129/80",
+      "max_clock_rate": "129/1040"
+    },
+    {
+      "L": 12,
+      "stall_depth": 1,
+      "max_mean": "149/80",
+      "max_clock_rate": "149/1120"
+    },
+    {
+      "L": 13,
+      "stall_depth": 1,
+      "max_mean": "149/80",
+      "max_clock_rate": "149/1200"
+    },
+    {
+      "L": 14,
+      "stall_depth": 1,
+      "max_mean": "169/80",
+      "max_clock_rate": "169/1280"
+    },
+    {
+      "L": 15,
+      "stall_depth": 2,
+      "max_mean": "41/16",
+      "max_clock_rate": "41/272"
+    },
+    {
+      "L": 16,
+      "stall_depth": 1,
+      "max_mean": "189/80",
+      "max_clock_rate": "21/160"
+    },
+    {
+      "L": 17,
+      "stall_depth": 1,
+      "max_mean": "189/80",
+      "max_clock_rate": "189/1520"
+    },
+    {
+      "L": 18,
+      "stall_depth": 1,
+      "max_mean": "209/80",
+      "max_clock_rate": "209/1600"
+    },
+    {
+      "L": 19,
+      "stall_depth": 1,
+      "max_mean": "209/80",
+      "max_clock_rate": "209/1680"
+    },
+    {
+      "L": 20,
+      "stall_depth": 3,
+      "max_mean": "61/16",
+      "max_clock_rate": "61/352"
+    },
+    {
+      "L": 21,
+      "stall_depth": 1,
+      "max_mean": "233/80",
+      "max_clock_rate": "233/1840"
+    },
+    {
+      "L": 22,
+      "stall_depth": 1,
+      "max_mean": "253/80",
+      "max_clock_rate": "253/1920"
+    },
+    {
+      "L": 23,
+      "stall_depth": 1,
+      "max_mean": "253/80",
+      "max_clock_rate": "253/2000"
+    },
+    {
+      "L": 24,
+      "stall_depth": 1,
+      "max_mean": "273/80",
+      "max_clock_rate": "21/160"
+    },
+    {
+      "L": 25,
+      "stall_depth": 2,
+      "max_mean": "65/16",
+      "max_clock_rate": "65/432"
+    }
+  ],
+  "stall_lifts": [
+    {
+      "depth": 1,
+      "modulus": 1,
+      "residue": 0
+    },
+    {
+      "depth": 2,
+      "modulus": 5,
+      "residue": 0
+    },
+    {
+      "depth": 3,
+      "modulus": 25,
+      "residue": 20
+    },
+    {
+      "depth": 4,
+      "modulus": 125,
+      "residue": 45
+    },
+    {
+      "depth": 5,
+      "modulus": 625,
+      "residue": 295
+    },
+    {
+      "depth": 6,
+      "modulus": 3125,
+      "residue": 920
+    },
+    {
+      "depth": 7,
+      "modulus": 15625,
+      "residue": 13420
+    },
+    {
+      "depth": 8,
+      "modulus": 78125,
+      "residue": 44670
+    }
+  ]
+}

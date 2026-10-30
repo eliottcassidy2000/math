@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "finite_gram_universes": 93,
+  "finite_gram_entries": 7914,
+  "h_range": [
+    1,
+    5
+  ],
+  "q": [
+    3,
+    5,
+    7
+  ],
+  "cost_cutoff": "h+5",
+  "max_absolute_error": 1.1102235540206224e-16,
+  "remainder_and_decoder_controls": 48,
+  "scope": "Floating point independent finite controls; symbolic all-depth proof audited separately. Not a convergence or novelty certificate."
+}

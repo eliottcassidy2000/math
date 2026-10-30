@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "total_gates": 50894,
+  "counts": {
+    "constant_clock_bound": 100,
+    "constant_clock_equality": 100,
+    "constant_entry_cap": 6400,
+    "constant_entry_equality": 6400,
+    "literal_constant_membership": 3840,
+    "literal_constant_order": 60,
+    "literal_layer_cap": 4032,
+    "literal_reset_memberships": 4032,
+    "literal_reset_order": 63,
+    "literal_trivial_intersection": 63,
+    "lucas_phase_count": 201,
+    "lucas_residue_equivalence": 20301,
+    "parameter_haar_layers": 12,
+    "reset_clock_bound": 21,
+    "reset_empty_mean": 21,
+    "reset_entry_cap": 1344,
+    "reset_entry_equality": 1344,
+    "unit_translation": 2560
+  },
+  "universes": {
+    "reset_L": "0..20",
+    "entries_clock_at_most": 6,
+    "lucas_L": "0..200",
+    "constant_a": "1..100",
+    "literal_depth": "1..3",
+    "finite_parameter_precision": 3
+  }
+}
