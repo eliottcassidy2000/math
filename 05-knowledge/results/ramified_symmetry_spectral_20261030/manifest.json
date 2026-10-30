@@ -1,0 +1,108 @@
+{
+  "artifacts_lf_sha256": {
+    "AUDIT.md": "9b2ca5cb067854a8d56434adf6afd35aab0bf1c636382b548132c9aafc62ef68",
+    "PROOFS.md": "cd4afb167a96fda6dfdca7901e1ec402f7902cdabe620ac76f8b4286af6b4c78",
+    "README.md": "c0a6537fa3c6f14eba4d84556cd0012a4bc8e82afbf150f124ee9a1df5f2cf72",
+    "certificate.json": "c661d672a096d1892e0f98e812bd57b9a45c6f727e7ec8178e7f05f1fba51f20",
+    "check.py": "58e905b968d9fd62d33c6350cbb1cbde01d77046a90cd689cbe2667098adcc14",
+    "seal.py": "7038119287cd2e0bd641faa49fa738305b6048fd09b913586e183d83fdeff715"
+  },
+  "runtime_inputs_checked": [
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py",
+    "05-knowledge/results/pinned_discrepancy_reset_tails_20261029/check_pins.py",
+    "05-knowledge/results/source_cutoffs_balanced_lifts_20261029/lifts.json"
+  ],
+  "sources": [
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "e948999109d6888e6256c65f66ce06fa0996479e",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "f9a4072a46c7b5416ec5ee3f3fe09b780e7a3a42",
+      "lf_sha256": "9121ab273881c8f1d123c417e92838de757e193c64c50aa3107334f39bcdd282",
+      "path": "05-knowledge/results/pinned_discrepancy_reset_tails_20261029/check_pins.py"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "d39811a596ed1b491f409d8b47e9dafcfdeee53c",
+      "lf_sha256": "e34b98b8f173d2dd4c25721e7d6543c5120d407a9798e6100829375c783e9538",
+      "path": "05-knowledge/results/source_cutoffs_balanced_lifts_20261029/lifts.json"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "725d3b24fcbe7c11763c2d52dbd587c17c91d1b4",
+      "lf_sha256": "4068f73bc985240c4458b21c8c739d36a81ff1222ef76660fe132bd93279662f",
+      "path": "05-knowledge/results/session110_overnight_20261030/LOGFREE_PRIME_TOURNAMENTS.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "e494da4e91bcf56c8e1a5c79b191ab086e1074b9",
+      "lf_sha256": "5c72f2fbf99ffae0d9026fd701086d534da1bc2dfe4769d90eacc351162d3d86",
+      "path": "05-knowledge/results/session110_overnight_20261030/CHECKPOINT_02.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "515f50cc995ff0760580b441e8dbac61ae89e778",
+      "lf_sha256": "9c4af179d67f2c1d1ec7cc3ac1f78d156e4cce7f2b448e8ffce667e080d99474",
+      "path": "05-knowledge/results/session110_overnight_20261030/MODULE_ENUMERATION.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "eb95c7146487f371fe09f74d32714f6798cd1554",
+      "lf_sha256": "f771323448d26f1ccce0b8a639b33c2052e27f12d862c6afb09b8f5ce4a3a596",
+      "path": "05-knowledge/results/session110_overnight_20261030/QUINARY_CARRIERS.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "70af47b947c522eb585174c914fc022eac06d51c",
+      "lf_sha256": "271a150eb5ee3d10d86037c0101b4eb23f750dce6ea6dd44027010ac48aec29a",
+      "path": "05-knowledge/results/source_cutoffs_balanced_lifts_20261029/LIFTS.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "d44c7d297c96aa20b8fc4f82186c6b6744679805",
+      "lf_sha256": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/PROOFS.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "4b71d2aa83b939fba1506588ee6bff800640aa4d",
+      "lf_sha256": "5586ff7dd8a5e11623e7eccce69b2762f07d476264b1f8c1fad48e0ddd307fc0",
+      "path": "05-knowledge/results/prime_power_plus_one_symmetry_20261030/PROOFS.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "9a8d67a1b3ef7cb97046a4980cc8113a778f579d",
+      "lf_sha256": "f06ae98f24284db8452d6f424b28bbbe280ba962cb7658346b3f8eac887457f3",
+      "path": "05-knowledge/results/overnight_rank_return_20261029/COMPLEMENT_KERNEL.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "f3250e1e83d48816aaff29eed9f9e58a31f0c753",
+      "lf_sha256": "bef47a2fb25731afe6a086769ee3f9112343c54579e26e339a2f8ceefed59419",
+      "path": "01-canon/theorems/THM-1920-the-spectral-insertion-response.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "969760304ed00573cfbd98b5a0722d616d8d04ae",
+      "lf_sha256": "539aba979c8e705b38a110bd552669c140453aeae391c4f15b08926d04cf5a54",
+      "path": "01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "c51224b2eff703f476e06a8817963b8939419338",
+      "lf_sha256": "82f907f6d43f971de80e75b43b727a0b90d09906cc4dbc34b89ed2c88a13d502",
+      "path": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md"
+    },
+    {
+      "commit": "5d01b430aac7b862919639df5981064c081228f6",
+      "git_blob": "0ec93d3306db1f8bc65fd5adf559e9aa02c93afa",
+      "lf_sha256": "cc279e60dc6742dd1e5a769a8d9f5d17ab8ddf5743b13d1c67b791715a0c6b6e",
+      "path": "05-knowledge/results/session110_overnight_20261030/README.md"
+    }
+  ],
+  "status": "Artifact/source integrity, not independent proof review"
+}
