@@ -1,0 +1,18 @@
+{
+  "lines_by_top_level": {
+    ".scratch": 6,
+    "00-navigation": 75,
+    "01-canon": 424,
+    "03-artifacts": 23,
+    "04-computation": 80,
+    "05-knowledge": 1278,
+    "06-writeups": 2,
+    "07-reflections": 165,
+    "agents": 2336
+  },
+  "matching_files": 3006,
+  "matching_lines": 4389,
+  "query": "git grep -z -n -I -w 200 REV -- *.md",
+  "scope": "Discovery inventory only. Selected mechanisms read in TWO_HUNDRED.md; no claim to have audited all matching files.",
+  "source_commit": "f31384340adb9f957ca4299a8cab4f7755807072"
+}

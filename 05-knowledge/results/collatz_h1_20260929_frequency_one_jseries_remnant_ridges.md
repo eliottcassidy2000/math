@@ -1,6 +1,17 @@
+> **Maintained evidence correction (2026-10-30):** The complex Fourier
+> calculations below use binary floating-point phases and truncated valuation
+> sums. Their agreement across truncations is **VERIFIED numerical evidence**,
+> not a FINITE-EXACT error certificate. Integer ridge-seed inventories are a
+> separate finite-exact computation. H1, asymptotic limits inferred from finite
+> tables, and the proposed cutoff near Q=200 remain **OPEN / EMPIRICAL**.
+> Unbounded-looking ranges in the historical numerical discussion refer only
+> to the stated computed windows. The exact renewal identity and its conditional
+> implication are unchanged. See
+> [the scope audit](endpoint_shadows_path_corrections_20261030/AUDIT.md).
+
 # The frequency-one coefficient carries the renewal series: an exact J-series `c_J = 2^-s mu_hat_J(1) W_{h,J}(s)` (Theorem C needs only `|mu_hat_n(1)|`), the resonant prefactor drifting from `h^-1` toward `h^-3/2`, the growing remnant as a random-walk excursion of ridge transport that exits through frequency one, and the ridge inventory by the 3-adic depth `v_3(u 2^Q -+ 1)`
 
-**Status: PROVED — Lemma R'' (the exact identity), Theorem C' (Theorem C of the five-mirrors note §2d under the weaker hypothesis H1), the Gauss-sum structure of the level phases, the energy-weighted transport slope `4/3` under random phases, the residue-class arithmetic of the ridge seeds; FINITE-EXACT — the J-series to `h = 2000` (exact identity checked to `4 10^-14` at every level), `mu_hat_n(1)` to `n = 1200`, the negative family to `n = 420` on `m <= 80` and to `n = 140` on `m <= 160`, the seed inventory to `u <= 200, Q <= 700`; EMPIRICAL — the prefactor law, the H1 constants, the transport statistics; OPEN — H1 itself. Collatz OPEN. Single session (collatz-necklace-20260929, part 2, mac-mini), not independently audited; audit OWED.**
+**Status: PROVED — Lemma R'' (the exact identity), Theorem C' (Theorem C of the five-mirrors note §2d under the weaker hypothesis H1), the Gauss-sum structure of the level phases, the energy-weighted transport slope `4/3` under random phases, the residue-class arithmetic of the ridge seeds; VERIFIED numerical — the J-series to `h = 2000` (exact identity checked to `4 10^-14` at every level), `mu_hat_n(1)` to `n = 1200`, the negative family to `n = 420` on `m <= 80` and to `n = 140` on `m <= 160`, the seed inventory to `u <= 200, Q <= 700`; EMPIRICAL — the prefactor law, the H1 constants, the transport statistics; OPEN — H1 itself. Collatz OPEN. Single session (collatz-necklace-20260929, part 2, mac-mini), not independently audited; audit OWED.**
 
 Directive (owner, 2026-09-29): "prove H in any form with rate below 0.585; explain the growing remnant; the J-term limits at larger h; the ridge inventory by `v_3(u 2^Q -+ 1)`" — the four obligations left by opus S22 in [`collatz_five_mirrors_20260929.md` §2d](collatz_five_mirrors_20260929.md). Scripts `04-computation/experiments/collatz_h1_20260929_{jseries, mu1_track, remnant, arrivals, ridge_inventory}.py`; outputs `05-knowledge/results/collatz_h1_20260929_*.out`. Conventions as in S22: `T_j = a_j + ... + a_h`, `kappa_j = s - T_j`, `omega_j(k) = e((2^k mod 3^j)/3^j)`, `mu_hat_h(2^s) = E prod_j omega_j(kappa_j)`, `m = log_2 3`, `I = 0.054979`, `e^-I = 3^(h*-1)`, `J(w) = #{j : kappa_j < 0}`, `c_J = E[1_{J(w)=J} prod_j omega_j(kappa_j)]`, `mass_h(J) = P(T_{J+1} <= s < T_J) = 2^-s binom(s, h-J)`.
 
@@ -20,7 +31,7 @@ So the bottom factor of every renewal term is the Fourier coefficient of the lev
 
 **The level phases are a Gauss sum (PROVED, standard).** On `Z/L_n`, `L_n = 2 3^{n-1} = |(Z/3^n)^x|` (`2` a primitive root), the function `omega_n(k) = e(2^k/3^n)` has Fourier transform `hat omega_n(xi) = sum_k omega_n(k) e(-k xi/L_n) = tau(bar psi_xi)`, the Gauss sum of the multiplicative character `psi_xi(2^k) = e(k xi/L_n)`; hence `|hat omega_n(xi)| = 3^{n/2}` when `3 ∤ xi` (primitive) and `hat omega_n(xi) = 0` when `3 | xi`, `n >= 2` (the Ramanujan sum). The frequency recursion `f_n = G * (omega_n lift f_{n-1})` (with `G(a) = 2^-a 1_{a>=1}`) is therefore a fixed geometric convolution composed with a spectrally flat multiplier; `mu_hat_n(1) = f_n(0)`. H1 is the statement that the entry `0` of this product of "convolution times Gauss-sum multiplier" operators decays at the Parseval rate up to `1.3%` per level; it is a square-root-cancellation statement of the `x2 x3` kind (the 3-adic digits of `2^-T` against the 2-adic digits of `3^-n`, S22 §2d) and is **not proved here**. What is proved is that nothing else is needed.
 
-## 2. H1: the data (FINITE-EXACT to `n = 1200`)
+## 2. H1: the data (VERIFIED numerical to `n = 1200`)
 
 `3^{n/2} |mu_hat_n(1)|` (`..._mu1_track_n1200.out`): `1.000, 0.666, 0.811, 1.062, 1.341, 0.411, 0.993, 0.889, 0.545, 0.405, 0.107, 0.608` for `n = 1..12`; the only local maxima above `2.5` are `3.9, 7.2, 10.4, 2.6` at `n = 127, 129, 131, 135`; median over `n <= 1200` about `0.05`.
 

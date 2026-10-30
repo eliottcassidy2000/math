@@ -1,35 +1,18 @@
 ---
 id: THM-4519
-title: "The frequency-one coefficient carries the renewal series of the resonant Syracuse Fourier coefficient: exactly c_J = 2^-s mu_hat_J(1) W_{h,J}(s) with W the unweighted top-part phase sum over compositions (|W| <= C(s,h-J)), so Theorem C of the five-mirrors note holds under the single-sequence hypothesis H1: |mu_hat_n(1)| <= C rho^n, rho < log_2 3 - 1; the level phases omega_n(k) = e(2^k/3^n) on Z/(2 3^(n-1)) have a flat Gauss-sum spectrum on the primitive characters; FINITE-EXACT: the identity to h = 2000, |mu_hat_n(1)| <= 0.03 (0.58)^n for 200 <= n <= 1200 with sup_n |mu_hat_n(1)|/0.585^n = 1.87 at n = 131, the resonant coefficient 0.32 h^-1 e^-hI on 200 <= h <= 600 bending toward h^-3/2, the growing remnant explained as a near-neutral multiplicative random walk of ridge transport (energy-weighted slope 4/3) exiting through frequency one, and the ridge inventory by depth v_3(u 2^Q -+ 1) matching the residue-class count (2/3) W/(2 3^(k-1)) per multiplier"
+title: "The frequency-one coefficient carries the renewal series of the resonant Syracuse Fourier coefficient: exactly c_J = 2^-s mu_hat_J(1) W_{h,J}(s) with W the unweighted top-part phase sum over compositions (|W| <= C(s,h-J)), so Theorem C of the five-mirrors note holds under the single-sequence hypothesis H1: |mu_hat_n(1)| <= C rho^n, rho < log_2 3 - 1; the level phases omega_n(k) = e(2^k/3^n) on Z/(2 3^(n-1)) have a flat Gauss-sum spectrum on the primitive characters; VERIFIED numerical: the identity checks to h = 2000, |mu_hat_n(1)| <= 0.03 (0.58)^n for 200 <= n <= 1200 with sup_n |mu_hat_n(1)|/0.585^n = 1.87 at n = 131, the resonant coefficient 0.32 h^-1 e^-hI on 200 <= h <= 600 bending toward h^-3/2, the growing remnant explained as a near-neutral multiplicative random walk of ridge transport (energy-weighted slope 4/3) exiting through frequency one, and the ridge inventory by depth v_3(u 2^Q -+ 1) matching the residue-class count (2/3) W/(2 3^(k-1)) per multiplier"
 status: >
-  PROVED: Lemma R'' (exact identity), Theorem C' (conditional on H1), the
-  Gauss-sum spectrum of the level phases (standard, CITED), the energy-weighted
-  transport slope 4/3 under random phases, the residue-class arithmetic of the
-  seeds (2 a primitive root mod 3^k; LTE for u = 1). FINITE-EXACT: J-series and
-  identity check (relative 10^-13..4 10^-14) at h = 40..2000 with valuation
-  truncation A = 40..190; mu_hat_n(1) to n = 1200; the negative family to n = 420
-  (m <= 80) and n = 140 (m <= 160); seed inventory u <= 200, Q <= 700. Truncation
-  control: mu_hat_n(1) from A = 60 and A = 120 agree to 6e-14 relative for all
-  n <= 600 (A = 100 vs 120: identical), so the truncated words cancel like the
-  rest; the rescaled recursion v_n = 3^(n/2) f_n (no underflow) gives mu_hat_n(1) to
-  n = 2500: block rates 0.5721, 0.5668, 0.5703, 0.5683 over 200..600, .., 1800..2500,
-  3^(n/2)|mu_hat_n(1)| median 9e-2 -> 3e-15 across the ten 250-blocks, no value above
-  0.078 past n = 200: exponentially below the Parseval rate.
-  EMPIRICAL: the prefactor law R(h) = |mu_hat_h(2^s*)| h^(3/2) e^(hI) = 4.53,
-  5.62, 6.44, 7.84, 8.79, 9.87, 10.42, 10.72 at h = 200, 300, 400, 600, 800, 1200,
-  1600, 2000 (R/sqrt h = 0.320, 0.324, 0.322, 0.320, 0.311, 0.285, 0.261, 0.240;
-  local prefactor exponent 0.97 -> 1.37 drifting toward 3/2); H1 constants; the transport
-  statistics (per-level log-gain std 0.35, geometric mean 0.984 over the wave).
-  OPEN: H1. NOT independently audited. Consequences for S22: H -> H1 (the ridges
-  of the negative family matter only at exponent 0); the gamma_J limits exist
-  for fixed J (gamma_5 = 2.05 e^(-0.29 i), gamma_7 = 2.60 e^(1.06 i), ...) but
-  grow like J 0.987^J, so the constant of (T2) is a quantity of h >> 10^4 and
-  M(h) is 0.32 h^-1 e^-hI in the accessible range (M/P_h ~ sqrt h, S21's rise);
-  the growing remnant is a +1.1 sigma excursion of a driftless transport whose
-  only one-step-coherent level is n = 128 (3^128 = 1 mod 2^9), exiting at n =
-  131 as the sup of the H1 ratio; the small-exponent negative family is 100x
-  below the Parseval scale for 140 <= n <= 420; arrivals of seeds farther than
-  Q ~ 200 are dead on arrival.
+  PROVED: exact renewal identity; conditional implication under H1; the
+  stated Gauss-sum and residue-class identities. VERIFIED numerical:
+  floating-point truncated Fourier computations and comparisons through
+  their specified finite windows, not exact error certificates.
+  FINITE-EXACT: integer ridge-seed inventory in its declared finite box.
+  EMPIRICAL: fitted rates, limiting prefactors, transport statistics and
+  the proposed dead-arrival cutoff near Q=200. OPEN: H1, universal
+  cancellation, and Collatz. No independent full mathematical audit.
+  Evidence typing repaired 2026-10-30; no numerical values are revalidated
+  by that repair and no exact identity is withdrawn.
+
 source: collatz-necklace-20260929 session (mac-mini), part 2, 2026-09-29; owner directive: prove H in any form with rate below 0.585, explain the growing remnant, the J-term limits at larger h, the ridge inventory by v_3(u 2^Q -+ 1)
 depends_on:
   - 05-knowledge/results/collatz_five_mirrors_20260929.md (section 2d: Lemma R', the mass law, Theorem C; the closed frequency recursion)
@@ -53,7 +36,7 @@ audit: NOT independently audited; internal controls: the h = 40 tables reproduce
 
 # THM-4519 -- the frequency-one coefficient carries the renewal series
 
-**PROVED (identity, Theorem C', structure) + FINITE-EXACT + EMPIRICAL; not independently audited.** Full note: [collatz_h1_20260929_frequency_one_jseries_remnant_ridges](../../05-knowledge/results/collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md).
+**PROVED identity and CONDITIONAL implication; VERIFIED numerical Fourier data; FINITE-EXACT integer inventory; EMPIRICAL rates; H1 OPEN. Not independently audited.** Full note: [collatz_h1_20260929_frequency_one_jseries_remnant_ridges](../../05-knowledge/results/collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md).
 
 ## 1. Lemma R'' and Theorem C'
 
@@ -66,6 +49,14 @@ because the crossing step `a_J = kappa + b` and the bottom word combine into `2^
 **Gauss-sum structure.** On `Z/L_n`, `L_n = 2 3^{n-1}`, `hat omega_n(xi) = tau(bar psi_xi)` with `psi_xi(2^k) = e(k xi/L_n)`; `|hat omega_n(xi)| = 3^{n/2}` for `3 ∤ xi`, `0` for `3 | xi` (`n >= 2`). The frequency recursion is `f_n = G * (omega_n lift f_{n-1})`: a fixed geometric convolution composed with a spectrally flat multiplier, and H1 concerns the entry `f_n(0)`.
 
 ## 2. The data
+
+**Evidence boundary (2026-10-30).** All Fourier values below are numerical
+observations over the displayed finite windows. Truncation agreement does
+not bound roundoff or the omitted infinite tail. Statements about limits,
+indefinite decay or all arrivals beyond Q≈200 are empirical interpretations,
+not proved consequences. The producer uses NumPy complex128 and finitely
+many valuation letters; an interval/error certificate is not supplied.
+The integer residue inventory is a separate exact calculation.
 
 * H1 (`n <= 1200`, and to `n = 2500` by the rescaled recursion): `sup_n |mu_hat_n(1)|/0.585^n = 1.87`, `/0.58^n = 5.7`, `/3^{-n/2} = 10.3`, all at `n = 131`; over `n >= 200` the three suprema are `< 0.02`, `0.028`, `0.076`. Least-squares rates `0.5685` (`20..1200`), `0.5576` (`900..1200`); block rates `0.567–0.572` on `200..2500`, i.e. `|mu_hat_n(1)|` decays at about `0.569` per level, below the Parseval rate, with `3^{n/2}|mu_hat_n(1)| ~ 3 10^-15` by `n = 2500`. The normalised energy of the coefficients at `2^-m`, `m <= 80`, is `0.0–0.5` for all `140 <= n <= 420` against a Parseval value `56`: the small-exponent negative family empties out.
 * The resonant coefficient at `s* = round(h log_2 3) - 6`: `R(h) = |mu_hat_h(2^{s*})| h^{3/2} e^{hI} = 3.16, 3.71, 3.97, 4.53, 5.62, 6.44, 7.84, 8.79, 9.87, 10.42, 10.72` at `h = 40, 80, 120, 200, 300, 400, 600, 800, 1200, 1600, 2000`; `R/sqrt h = 0.320 ± 0.004` on `200..600`, then `0.311, 0.285, 0.261, 0.240`. So `M(h) = 0.32 h^{-1} e^{-hI}` on `200 <= h <= 600` and the prefactor exponent drifts `1.0 -> 1.37` toward the fixed-`J` value `3/2`; `M/P_h ≍ sqrt h` in this range is S21's observed rise. Each `gamma_J = lim c_J/(h^{-3/2} e^{-hI})` exists (moduli and phases fixed to `1%` between `h = 600` and `800` for `J <= 10`), the terms behave like `J (0.987)^J` (mass `(m-1)^{-J}` against `|mu_hat_J(1)| ≍ 3^{-J/2}` against top coherence `≈ 3J/h`), and the Gaussian `J`-window of width `0.6 sqrt h` truncates the series far below its peak at `J ≈ 77` for every `h <= 10^4`.

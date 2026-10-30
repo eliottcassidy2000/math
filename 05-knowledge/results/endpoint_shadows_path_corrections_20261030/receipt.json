@@ -1,0 +1,234 @@
+{
+  "archaeology": {
+    "depth_census": [
+      1,
+      8,
+      33,
+      93,
+      200,
+      348,
+      507,
+      631,
+      678,
+      631,
+      507,
+      348,
+      200,
+      93,
+      33,
+      8,
+      1
+    ],
+    "physical_bank_size": 4319,
+    "regular_binary_orbits": 200
+  },
+  "carrier": {
+    "all_two_move_histories_orders_3_4": 792
+  },
+  "collatz": {
+    "anchors": [
+      {
+        "P": 3,
+        "Q": 2,
+        "anchor": "-1/1",
+        "first_phases": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "phase_period": 1,
+        "word": [
+          1
+        ]
+      },
+      {
+        "P": 9,
+        "Q": 8,
+        "anchor": "-5/1",
+        "first_phases": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "phase_period": 1,
+        "word": [
+          1,
+          2
+        ]
+      },
+      {
+        "P": 27,
+        "Q": 16,
+        "anchor": "-19/11",
+        "first_phases": [
+          3,
+          5,
+          1,
+          9,
+          4,
+          3,
+          5,
+          1
+        ],
+        "phase_period": 5,
+        "word": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "P": 81,
+        "Q": 32,
+        "anchor": "-65/49",
+        "first_phases": [
+          18,
+          22,
+          16,
+          25,
+          36,
+          44,
+          32
+        ],
+        "phase_period": 21,
+        "word": [
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "P": 2187,
+        "Q": 2048,
+        "anchor": "-17/1",
+        "first_phases": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "phase_period": 1,
+        "word": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          4
+        ]
+      }
+    ],
+    "literal_instances": 1440,
+    "reduction_controls": [
+      {
+        "length": 3,
+        "reduced_D": 1,
+        "unreduced_D": 19
+      },
+      {
+        "length": 7,
+        "reduced_D": 1,
+        "unreduced_D": 2059
+      },
+      {
+        "length": 15,
+        "reduced_D": 1,
+        "unreduced_D": 14316139
+      },
+      {
+        "length": 31,
+        "reduced_D": 1,
+        "unreduced_D": 617671248800299
+      }
+    ],
+    "words": 45
+  },
+  "gates": 73281,
+  "path_programs": {
+    "inconsistent": 516,
+    "literal_universes": "all labelled sources n3 and n4; depths1..3 at n3,1..2 at n4",
+    "programs": 858
+  },
+  "prime_samples": [
+    {
+      "N": 81,
+      "all_three_prime": true,
+      "attempt": 0,
+      "gram_row_bound": 770,
+      "seed": 281,
+      "source_sha256": "4f13152c0e422c0ae88030dd4d62c7062002f37cdfbbd43f1a9a14b96d610c54"
+    },
+    {
+      "N": 121,
+      "all_three_prime": true,
+      "attempt": 0,
+      "gram_row_bound": 1328,
+      "seed": 321,
+      "source_sha256": "d14930796027b4b1be03bd73d2f8425af026a009904cbef476b0b3fbe1e38acd"
+    }
+  ],
+  "scope": "FINITE-EXACT; proofs and open boundaries in companion notes",
+  "tournaments": {
+    "grids": [
+      {
+        "N": 9,
+        "interior_rank": 0,
+        "m": 3,
+        "toggles": 8
+      },
+      {
+        "N": 25,
+        "interior_rank": 6,
+        "m": 5,
+        "toggles": 32
+      },
+      {
+        "N": 49,
+        "interior_rank": 20,
+        "m": 7,
+        "toggles": 72
+      },
+      {
+        "N": 81,
+        "interior_rank": 42,
+        "m": 9,
+        "toggles": 128
+      },
+      {
+        "N": 121,
+        "interior_rank": 72,
+        "m": 11,
+        "toggles": 200
+      },
+      {
+        "N": 289,
+        "interior_rank": 210,
+        "m": 17,
+        "toggles": 512
+      },
+      {
+        "N": 625,
+        "interior_rank": 506,
+        "m": 25,
+        "toggles": 1152
+      }
+    ],
+    "three_module_failure_bound": "524527/41942960"
+  }
+}

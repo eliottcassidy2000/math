@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — Fourier truncation agreement is not an exact or all-depth cancellation certificate
+
+- **Sources:** THM-4519 / `theorems/THM-4519-frequency-one-coefficient-carries-the-renewal-series.md` and `05-knowledge/results/collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md`.
+- **Evidence / first failed implication:** the producer `collatz_h1_20260929_mu1_track.py` uses NumPy complex128, finite valuation cutoff A, and floating-point phase evaluation. Agreement to4e-14 or agreement of two truncations does not certify the infinite Fourier coefficient or an all-depth rate. A finite ridge window does not establish a universal Q≈200 cutoff.
+- **Repair / strongest survivor:** canonical status, result warning and index distinguish VERIFIED numerical Fourier observations from the FINITE-EXACT integer seed inventory. The exact renewal identity and conditional implication under H1 are retained; fitted limits, rates and dead-arrival extrapolations remain EMPIRICAL / OPEN. No numerical values are falsified or newly certified by this audit.
+- **Missing coordinate / new question:** retain a rigorous tail-plus-roundoff enclosure and the quantified horizon. Seek such an enclosure or a proof of H1; do not import a finite-window fit as an independent endpoint bound. This is the same evidence-typing mechanism as MISTAKE-591, applied here to a different source after inspecting its actual producer.
+
 ## 2026-10-29 — a common fixed point and a reciprocal telescope do not imply universal attraction
 
 - **Source:** `07-reflections/the-recursive-mindset-phi6-iteration-is-sylvester-the-observers-one-is-the-apex-egyptian-fraction-opus-20260630.md`, June30, title, universal-flow section and old status.
