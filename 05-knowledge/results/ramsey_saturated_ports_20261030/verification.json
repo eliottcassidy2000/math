@@ -1,0 +1,495 @@
+{
+  "GF16": {
+    "all_colors_aut_order": 160,
+    "color_classes_of_differences": [
+      [
+        1,
+        8,
+        10,
+        12,
+        15
+      ],
+      [
+        2,
+        3,
+        7,
+        11,
+        13
+      ],
+      [
+        4,
+        5,
+        6,
+        9,
+        14
+      ]
+    ],
+    "n": 16,
+    "single_color_aut_order": 1920,
+    "third_port_edge_counts": [
+      5,
+      5,
+      0
+    ]
+  },
+  "balanced_local_witness": {
+    "forbidden_counts": [
+      0,
+      0,
+      0
+    ],
+    "green_column_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "green_row_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "n": 27,
+    "red_column_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "red_row_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "scope": "local witness only; not extendibility to 56"
+  },
+  "banks": {
+    "H13_structure": {
+      "arrows": [
+        [
+          1,
+          8
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "double": {
+        "4": [
+          5,
+          12
+        ],
+        "6": [
+          1,
+          5
+        ],
+        "7": [
+          8,
+          12
+        ],
+        "9": [
+          1,
+          8
+        ]
+      },
+      "edge_deletion_witness_histogram": {
+        "3": 26
+      },
+      "independent_sets": {
+        "1": 13,
+        "2": 52,
+        "3": 78,
+        "4": 39,
+        "5": 0
+      },
+      "nonedge_addition_witness_histogram": {
+        "1": 26,
+        "2": 26
+      },
+      "private": {
+        "1": 2,
+        "5": 10,
+        "8": 3,
+        "12": 11
+      }
+    },
+    "r35_13.g6": {
+      "entries": [
+        {
+          "aut_order": 52,
+          "degrees": {
+            "4": 13
+          },
+          "edges": 26,
+          "index": 0,
+          "n": 13,
+          "ordered_pair_orbits": 4,
+          "root_orbits": [
+            13
+          ]
+        }
+      ],
+      "sha256": "eb4d3f787f07ed14c0a82a83bee170ed096c24b6a7e971fded185ca1a760798f"
+    },
+    "r36_17.g6": {
+      "entries": [
+        {
+          "aut_order": 1,
+          "degrees": {
+            "4": 3,
+            "5": 14
+          },
+          "edges": 41,
+          "index": 0,
+          "n": 17,
+          "ordered_pair_orbits": 289,
+          "root_orbits": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "aut_order": 2,
+          "degrees": {
+            "4": 3,
+            "5": 14
+          },
+          "edges": 41,
+          "index": 1,
+          "n": 17,
+          "ordered_pair_orbits": 145,
+          "root_orbits": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "aut_order": 2,
+          "degrees": {
+            "4": 5,
+            "5": 12
+          },
+          "edges": 40,
+          "index": 2,
+          "n": 17,
+          "ordered_pair_orbits": 145,
+          "root_orbits": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "aut_order": 2,
+          "degrees": {
+            "4": 3,
+            "5": 14
+          },
+          "edges": 41,
+          "index": 3,
+          "n": 17,
+          "ordered_pair_orbits": 149,
+          "root_orbits": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "aut_order": 2,
+          "degrees": {
+            "4": 5,
+            "5": 12
+          },
+          "edges": 40,
+          "index": 4,
+          "n": 17,
+          "ordered_pair_orbits": 145,
+          "root_orbits": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "aut_order": 8,
+          "degrees": {
+            "4": 1,
+            "5": 16
+          },
+          "edges": 42,
+          "index": 5,
+          "n": 17,
+          "ordered_pair_orbits": 47,
+          "root_orbits": [
+            1,
+            4,
+            4,
+            8
+          ]
+        },
+        {
+          "aut_order": 2,
+          "degrees": {
+            "4": 1,
+            "5": 16
+          },
+          "edges": 42,
+          "index": 6,
+          "n": 17,
+          "ordered_pair_orbits": 145,
+          "root_orbits": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "sha256": "3286c5366ddc70f349c3f7e798d7acbc79dc026c7abe0c8f406cad41ca990361"
+    },
+    "r44_17.g6": {
+      "entries": [
+        {
+          "aut_order": 136,
+          "degrees": {
+            "8": 17
+          },
+          "edges": 68,
+          "index": 0,
+          "n": 17,
+          "ordered_pair_orbits": 3,
+          "root_orbits": [
+            17
+          ]
+        }
+      ],
+      "sha256": "23f8802eed6281e1b40c7ec157f687d67624c6a327a513b003bce93e33e9214c"
+    }
+  },
+  "hostile_81_27": {
+    "common_cyclic_triples": 67,
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ]
+  },
+  "identities": {
+    "29_port_deficit_totals": [
+      24,
+      24,
+      68
+    ],
+    "29_port_edge_counts": [
+      104,
+      104,
+      198
+    ],
+    "56_degree_profile": [
+      13,
+      13,
+      29
+    ],
+    "90_degree_profiles": [
+      [
+        16,
+        17,
+        56
+      ],
+      [
+        17,
+        16,
+        56
+      ],
+      [
+        17,
+        17,
+        55
+      ]
+    ],
+    "blue_edge_codegree_mean": "396/29",
+    "blue_triangle_count": 3696,
+    "even_profile_population_triples": 1081,
+    "red_edge_variable_range": [
+      0,
+      9
+    ],
+    "symmetry_proof_numbers": {
+      "faithful_neighborhoods_required": 1,
+      "full_color_preserving_aut_divides": 224,
+      "local_aut": 52,
+      "point_stabilizer_divides": 4
+    }
+  },
+  "native_gates": 1193,
+  "nonuniform_local_witness": {
+    "forbidden_counts": [
+      0,
+      0,
+      0
+    ],
+    "green_column_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "green_row_counts": [
+      3,
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      4,
+      3,
+      4,
+      4,
+      5,
+      4
+    ],
+    "n": 27,
+    "red_column_counts": [
+      4,
+      4,
+      5,
+      5,
+      4,
+      4,
+      5,
+      4,
+      3,
+      4,
+      3,
+      3,
+      4
+    ],
+    "red_row_counts": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "scope": "local witness only; not extendibility to 56"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "source_revision": "98f961a7aa142a739403de1ba343720371d6125c",
+  "sources": {
+    "05-knowledge/results/collatz_catalan_ramsey_20260927.md": "4b9597509316920bcad1c9e3c17f553edcc59c6074ee74161c8ab3aeab157775",
+    "05-knowledge/results/affine_tree_recurrences_20261028/AUDIT.md": "116fc7aa34e5261830f570cece09189c9fa0d1be5c5a856d8a10959764531cd4",
+    "05-knowledge/results/unifying_binary_dependence_free_bits_7_15_56_20261028/README.md": "e2c788b7809ddf6fd1901a545ee82bd66df0c4aa8827f28b3499b8719b2a7d9f",
+    "05-knowledge/results/number_bridges_57_27_16_20261028/ATLAS.md": "373db403c61ebaa8b2d38b263d6912c0ce5988795586dbbc352b692b52f30c0c",
+    "05-knowledge/results/session35_dimensions_dualities_20261023/SINGER_HEISENBERG_E7_OBSTRUCTION.md": "377096e575dd62395aaa8842231417eb9576d4fb1526fa084c2650781deb334a",
+    "01-canon/theorems/THM-4624-finite-beckman-quarles-for-unit-circle-cayley-graphs-affine-rigidity-except-clebsch-hamming-and-ternary-frame.md": "c48755447abb4bddf643f0625f911fadd7c67db9a4f874ac5847b1a6ae750959",
+    "01-canon/theorems/THM-4701-kuratowski-graphs-the-petersen-graph-and-the-finite-unit-circle-graphs.md": "c685b5fa2a92f394cd0ae16d8fad446d43aa80299d9dbd4378b343a56381da1a",
+    "05-knowledge/results/regular_parent_symmetry_20261029/PROOFS.md": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/odd_eighth_owner_families_20261030/PROOFS.md": "32a1588f9a62744b83d031079cc8d3434bb48a6a0eb5c9002c9474adb19a0e02",
+    "07-reflections/criterion-C-formalized-part-A-reduced-to-realization-plus-paley-QR-resonance-klein-S204.md": "289902c6488b093393c871f685ef75d5a62edd0a4b1266e589607e996bee3ebe"
+  },
+  "incoming_sources": {
+    "05-knowledge/results/cayley_dickson_integral_20261030/README.md": {
+      "revision": "7f70dcd601",
+      "sha256": "80ed53bb12d498b76556bcc13ca94bec7e9079ec4495f737f34d6176a3815d33"
+    },
+    "05-knowledge/results/return_kernel_core_transplants_20261030/README.md": {
+      "revision": "043b760966",
+      "sha256": "2e81588930c4d3f0ac307da9da85ed0f0940b37d08a3610abd9615f444f2d64d"
+    }
+  },
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "e67fdffc136ef691374b9bb9739da98bd81ebbf3924cc8105c2844e7bf630ec9",
+    "balanced_ports.cnf": "288797ea0402d575599838f6c1ef75660ff98e75ef0cc514e33d801837d0ef95",
+    "balanced_ports.json": "ac84b3d0943c38b2994c328d86312a7644b1d44c9464d54a427f61f922725542",
+    "HANDOFF.md": "e5183d3235704dff2c009a47c57ed07b9888fa11d25efb44041857f619b946d8",
+    "independent_audit.json": "4a57a03eaac07aee59210291507c2594ed0ab179e1d8010c3b553d725a056fe0",
+    "independent_audit.py": "e4b26d7cbcf2920a1abd24ebaa21977c5cf905bb7b609075eddae3f35f721391",
+    "inputs/r35_13.g6": "eb4d3f787f07ed14c0a82a83bee170ed096c24b6a7e971fded185ca1a760798f",
+    "inputs/r36_17.g6": "3286c5366ddc70f349c3f7e798d7acbc79dc026c7abe0c8f406cad41ca990361",
+    "inputs/r44_17.g6": "23f8802eed6281e1b40c7ec157f687d67624c6a327a513b003bce93e33e9214c",
+    "port_probe.py": "878620e82cf84240783e88114994f1cee180a8f917027bbee390e9f06ec8b347",
+    "PROOFS.md": "aef0c3e3a27fcafa988716ccd1059f9939821da2270e173a6da4aeeb4f98c598",
+    "README.md": "67e5bf88bf981a4f3fe32cf55e0381304d48f8ae4163b0a91ef00f018b296a44",
+    "recurrences.json": "9fd01831b2ed03447bf986a4a126cddea8a2ab6dc560722b37d6f7292378becc",
+    "RECURRENCES.md": "b29e13357dddba68943fe3df96ffeb8793217f439415946a9d146e8945d61d4e",
+    "recurrences.py": "56e2dc39e6acf1aa37dadca5f29681b7e2168705139bb78f296f33229ee6ee96",
+    "seal.py": "d8ebcb3aac78b3b4b87fcc9162def73663fe6bb5848b22edbbc83824fc04fa57",
+    "SOURCES.md": "4a253849ac82686fff6f5e5485a0290db269a02f51cd89a2a2378c93ccdf6e16",
+    "unequal_ports.cnf": "eeb887c56519e4ce654f487792a1dd4b549ee4a12475bad625a1b260591fded4",
+    "unequal_ports.json": "bd4d2d96936bd5c0aefe1fc77b00f6100050911e27549e15dd94f7f20e37a9a8",
+    "verification.json": "138f15518f787c1887f43295907e84573cde1d7c29aaf1bbd22cc78f940c2458",
+    "verify.py": "653623a8cbc2b28546dbf7a8344d040b8f7382ef8f45690ca9b32ede6d9e689e"
+  },
+  "hash_basis": "Exact Git source blobs and exact LF artifact bytes.",
+  "runtime": "Native verifiers: Python standard library. Independent audit: NetworkX. Discovery only: python-sat.",
+  "proof_scope": "Same-agent proof audit; independent finite algorithms; no formal proof build.",
+  "cited_dependency": "Completeness of McKay graph banks and the named small Ramsey bounds."
+}

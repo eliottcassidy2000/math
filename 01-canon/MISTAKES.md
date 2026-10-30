@@ -11,6 +11,14 @@ a historical synthesis or promoting computational evidence.
 - **Repair:** keep the actual complete chamber and impose K_j>=ceil((Qm+s)/(Qs)) in the half-clearance case. The resulting geometric tail puts every old phase strictly below1/2. Arbitrary positive multipliers remain valid for cores below1/2.
 - **Related implementation guard:** the first-return producer initially reduced letters modulo their affine period without separating letter1 from a larger congruent non-one. The final auditor preserves that flag and proves an all-letter tail bound. No incorrect all-alphabet minimum was published; {1,1+period} supplies the type hostile.
 
+## 2026-10-30 — Ramsey port averages are not pointwise intersection parameters
+
+- **Source / status:** pre-promotion discovery model in `05-knowledge/results/ramsey_saturated_ports_20261030/port_probe.py`; no earlier canonized theorem is retracted.
+- **Witness:** `unequal_ports.json` in that packet is an exact27-vertex coloring with the two required H13 neighborhoods, no red/green triangles and no blue K5. Its red row sums and green column sums are four, but its green row sums include3 and5. Native exhaustive subset checks and an independent maximal-clique audit agree.
+- **First failed implication:** local degree regularity was used at an endpoint outside the relevant induced neighborhood. The genuine red-row/green-column identities imply average four for the opposite margins, not pointwise four. On a red edge the common-green count remains a variable t.
+- **Repair / strongest survivor:** retain t in the edge-intersection table, and treat all-four-margin equitability as an optional stronger search ansatz. The repaired necessary model and the stronger model are both locally satisfiable. Exact global edge budgets and faithful single-port symmetry restriction are proved separately in the packet's `PROOFS.md`.
+- **Missing coordinate / scope:** keep the shared vertex incidence, not just averages. The27-vertex witness refutes the local implication only; it is not a56-vertex counterexample. The next test attaches the29-vertex third port with all cross incidences retained.
+
 ## 2026-10-30 — local balance needs a whole-core horizon and joint-tail folds
 
 - **Source:** THM-724 / `theorems/THM-724-single-killer-covering-min-rigidity.md`, old Lemma1 and E4. Both unrestricted displayed lower bounds are REFUTED; this does not refute the covering-min conjecture.

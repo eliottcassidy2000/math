@@ -1,0 +1,68 @@
+{
+  "3": {
+    "child_group_mass_n4": "75/4",
+    "labelled_counts_n0_to_n5": [
+      1,
+      1,
+      3,
+      24,
+      450,
+      17136
+    ],
+    "parent_weighted_attachment_mass": "75",
+    "rooted_child_orbits_n4": 90,
+    "targets": [
+      3,
+      3,
+      3
+    ],
+    "unlabelled_n3_n4": [
+      7,
+      36
+    ]
+  },
+  "5": {
+    "child_group_mass_n4": "181/8",
+    "labelled_counts_n0_to_n5": [
+      1,
+      1,
+      3,
+      25,
+      543,
+      29196
+    ],
+    "parent_weighted_attachment_mass": "181/2",
+    "rooted_child_orbits_n4": 115,
+    "targets": [
+      3,
+      3,
+      5
+    ],
+    "unlabelled_n3_n4": [
+      8,
+      46
+    ]
+  },
+  "6": {
+    "child_group_mass_n4": "181/8",
+    "labelled_counts_n0_to_n5": [
+      1,
+      1,
+      3,
+      25,
+      543,
+      29197
+    ],
+    "parent_weighted_attachment_mass": "181/2",
+    "rooted_child_orbits_n4": 115,
+    "targets": [
+      3,
+      3,
+      6
+    ],
+    "unlabelled_n3_n4": [
+      8,
+      46
+    ]
+  }
+}

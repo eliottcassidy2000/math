@@ -1,0 +1,187 @@
+{
+  "H13_saturation": {
+    "addition": {
+      "1": 26,
+      "2": 26
+    },
+    "deletion": {
+      "3": 26
+    }
+  },
+  "banks": {
+    "r35_13.g6": [
+      {
+        "alpha": 4,
+        "aut_order": 52,
+        "omega": 2,
+        "ordered_pair_orbits": 4,
+        "root_orbits": [
+          13
+        ]
+      }
+    ],
+    "r36_17.g6": [
+      {
+        "alpha": 5,
+        "aut_order": 1,
+        "omega": 2,
+        "ordered_pair_orbits": 289,
+        "root_orbits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "alpha": 5,
+        "aut_order": 2,
+        "omega": 2,
+        "ordered_pair_orbits": 145,
+        "root_orbits": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "alpha": 5,
+        "aut_order": 2,
+        "omega": 2,
+        "ordered_pair_orbits": 145,
+        "root_orbits": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "alpha": 5,
+        "aut_order": 2,
+        "omega": 2,
+        "ordered_pair_orbits": 149,
+        "root_orbits": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "alpha": 5,
+        "aut_order": 2,
+        "omega": 2,
+        "ordered_pair_orbits": 145,
+        "root_orbits": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "alpha": 5,
+        "aut_order": 8,
+        "omega": 2,
+        "ordered_pair_orbits": 47,
+        "root_orbits": [
+          1,
+          4,
+          4,
+          8
+        ]
+      },
+      {
+        "alpha": 5,
+        "aut_order": 2,
+        "omega": 2,
+        "ordered_pair_orbits": 145,
+        "root_orbits": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "r44_17.g6": [
+      {
+        "alpha": 3,
+        "aut_order": 136,
+        "omega": 3,
+        "ordered_pair_orbits": 3,
+        "root_orbits": [
+          17
+        ]
+      }
+    ]
+  },
+  "networkx_version": "3.5",
+  "witnesses": {
+    "balanced_ports": {
+      "edges": [
+        91,
+        91,
+        169
+      ],
+      "max_clique_sizes": [
+        2,
+        2,
+        4
+      ]
+    },
+    "unequal_ports": {
+      "edges": [
+        91,
+        91,
+        169
+      ],
+      "max_clique_sizes": [
+        2,
+        2,
+        4
+      ]
+    }
+  }
+}
