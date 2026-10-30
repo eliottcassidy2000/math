@@ -431,6 +431,25 @@ right side and the collision bound tend to zero. That is *absolute*
 error: it does not prove relative asymptotics or existence of every
 pattern when `2^(-binom(k,2))` is smaller than the error.
 
+**Concurrent integration.** Incoming `aa5cbaaace`, read during the push,
+independently proves exactly the growing-conductor colour law above in
+[growing attachment families, P4](../growing_attachment_families_20261029/PROOFS.md#p4-prime-attachments-with-a-growing-conductor).
+That result is shared concurrent work, not an exclusive contribution here.
+Its proof and same-agent audit were read, including the separate polynomial
+bank, Apollonius and fixed-word Collatz applications. It additionally
+records the stronger *relative* pattern window: with M=binom(k,2),
+
+    2^(r+M) k^2 log(X) X^(-1/2+epsilon) -> 0              (9a)
+
+implies conditional probability `(1+o(1))2^(-M)`, uniformly. The proof
+is to retain `n_min >> X/(2^r log X)` in the same spectral estimate,
+then divide the absolute error by2^(-M); the collision term is smaller.
+For any fixed eta>0 this includes `k<=(1-eta)sqrt(log_2 X)` under our
+conductor cap, choosing epsilon sufficiently small. Nonempty Boolean
+unions of colour classes satisfy the same bounds, since summing (8)
+does not increase its relative error and cannot reduce the minimum size.
+Thus the live target is beyond (9a), not the already closed fixed-k case.
+
 **What changed.** The previous theorem held for each fixed bank separately.
 This version quantifies simultaneously over a growing bank and all its
 feasible colours. Taking successively longer prime banks subject to the
@@ -514,6 +533,23 @@ supersolution: allow a small positive defect, and retain negative defect
 where a lower lifetime bound earns it. The required tail estimate remains
 OPEN. No new previously uncertified Collatz source is claimed in this
 packet, and simulated finite prefixes are not used as a universal bound.
+
+The incoming [arithmetic attachment P7](../growing_attachment_families_20261029/PROOFS.md#p7-all-finite-collatz-valuation-words-supply-guarded-linear-banks)
+gives a useful, sharply scoped supply of candidate residual partitions.
+On a fixed legal valuation cylinder every intermediate state is an affine
+function A_j t+B_j of the same source parameter. Outside the explicit
+prime divisors of `6 product_(i<j)(A_i B_j-A_j B_i)`, their quadratic
+sign patterns satisfy a uniform character estimate across the source
+ensemble t=0,...,p-1. Their full values remain perfectly affinely coupled.
+
+This is compatible with (11), but cannot be substituted directly into it:
+(11) weights the actual residual e(y), whereas the character estimate
+uses uniform cylinder parameters and loses value information. A concrete
+new helper obligation is to bound the **signed residual mass in each
+guarded character cell**, including excluded source parameters, without
+changing w or the word clock. The determinant certificate authenticates
+the cells; a source-weighted discrepancy estimate must still pay for
+their use. An individual atom cannot be removed by a low-density claim.
 
 ## 5. Transfer ledger and exact checks
 
