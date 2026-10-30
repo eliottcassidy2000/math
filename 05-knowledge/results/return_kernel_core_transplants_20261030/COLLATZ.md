@@ -113,6 +113,34 @@ assumed in this identity. The digit-sum remainder
 is favorable for exact repetitions; arbitrary switching is handled by the
 paid kernel instead of pretending to share this factorial formula.
 
+### Concurrent completion grammar: a usable bound with its missing term retained
+
+Incoming Session116, commit `b435f833bc`, proves the complete maximizing-entry
+language for each primitive controller and reduces the nonprimitive case to
+its primitive root. See its [phase-completion theorem](../session116_dimension_owner_towers_20261030/collatz/PHASE_COMPLETION_THEOREM.md),
+which credits the earlier completion/rotation result in our predecessor.
+For any native e-excursion b, its finite row-score algorithm gives an exact
+R_max(b)>=R(empty,b). Therefore(3a) immediately supplies the valid lower bound
+
+    delta_e(b)>=lambda_(e+1) A_b-R_max(b)+(r-e)+1/4.    (3b)
+
+This is a concrete bridge between the fixed-controller classifier and the
+switching kernel. It preserves the original word, its clock, and its actual
+endpoint height r; entry optimization is used only as an upper bound on the
+subtracted quantity. It never replaces the source or inserts a maximizing
+entry into the actual path.
+
+The bridge does not yet settle the nine families below. The controller b
+still ranges over unbounded native words, and even a hypothetical universal
+periodic estimate R_max(b)<=5A_b/8 would yield only
+
+    delta_e(b)>=(r-e)+1/4-A_b/(8*5^e),                 (3c)
+
+not a uniform one-unit fee. The missing clock-dependent term identifies
+exactly why a periodic-mean bound alone is insufficient here. The fixed-
+controller optimizer grammar can help certify selected excursion families;
+the paid finite-word kernel is still needed for unrestricted switching.
+
 ## 3. A five-position potential that permits arbitrary switching — PROVED
 
 On the25 boundary states set

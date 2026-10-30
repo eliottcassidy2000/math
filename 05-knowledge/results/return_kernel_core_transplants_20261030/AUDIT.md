@@ -52,6 +52,18 @@ illustrate the same valid requirement to keep the first coordinate lost at
 an operation change. Our conclusions use the concrete maps below, not an
 analogy between equal dimensions.
 
+During publication, incoming `b435f833bc` added Session116's full primitive
+maximizing-entry grammar, nonprimitive reduction, and independently audited
+phase-completion proof. Both theorem and audit were read in full, together
+with its synthesis. The completion/rotation overlap is explicitly credited
+to our preceding packet. Its new all-controller *classification for each
+fixed controller* gives the exact lower-price bridge(C3b) in COLLATZ.md.
+The remaining term `-A/(8*5^e)` in(C3c) prevents treating a hypothetical
+periodic mean bound as a uniform one-unit excursion fee. This integration
+preserves the source and clock instead of importing a maximizing entry as
+an actual replacement path. The incoming parity/annihilator and dimension
+synthesis supplies no additional bound on that term.
+
 The load-bearing E9 input is the independently audited actual-content and
 two-clock theorem in Session113 `uniform_content/REPAIRED_CERTIFICATE.md`.
 The new analytic E10 theorem controls actual content. It does NOT establish
