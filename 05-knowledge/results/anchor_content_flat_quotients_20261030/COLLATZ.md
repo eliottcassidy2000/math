@@ -215,6 +215,26 @@ including the carry in each transition. In unreduced units, the potential
 equations scale by5 while the cost numerator gains4; this isolates a concrete
 lift obligation rather than an extrapolation of a table.
 
+More precisely take `D_E=8*5^(E-1)`, `N_E=5^E-1`, rescaling the checked
+potentials to these units, and let pi be reduction modulo `5^E`. Retain the
+nonnegative *old edge slack*
+
+    sigma_E(s,a)=H_E(T_a s)-H_E(s)-D_E R_E(T_a s)+N_E a.
+
+An ansatz `H_(E+1)=5 H_E o pi+K_E` satisfies the next Bellman inequalities
+if and only if, on every lifted transition,
+
+    K_E(T_a s)-K_E(s)
+      >= 5D_E [T_a s=identity mod5^(E+1)]
+         -4a-5 sigma_E(pi(s),a).                    (11)
+
+The combined potential must still be maximized at identity. Formula(11)
+retains paid slack rather than throwing it away: old inequalities that were
+strict can fund a new high-valuation return. Each source fibre has25 possible
+coefficient lifts, but the same letter transports their two coordinates
+together. This is the proposed local induction problem; feasibility at
+arbitrary E has not been proved.
+
 Even this hypothesis controls only the prime5 part. A universal Collatz
 argument still needs the other primes, actual endpoints, and the existing
 fixed-source anchor-height bill. Constant words `(1)^t` and `(2)^t` have

@@ -29,6 +29,11 @@ formalization, novel-priority claim, or universal Collatz proof is asserted.
   A direct arrow-based module oracle audits the rank-based prime filter.
   The normalizer/full-action discrepancy and the retained-port count are
   hostile and positive quotient controls, respectively.
+- Incoming `sign_forgetting.js` was read and replayed with Node. The saved
+  `incoming_sign_receipt.json` checks200 effective signed actions on all24
+  coordinates,50 unsigned images and the rank-two forgetful kernel. The
+  universal closure proof U6–U7 was read; its separate all-size theorem was
+  inherited, not reaudited by this small normalizer replay.
 
 Python normal and `-O` receipts match byte-for-byte for both main scripts.
 No check uses a Python assertion that optimization could remove.

@@ -136,3 +136,11 @@ intersection formula supplies the exact overlap correction and module filter.
 The unresolved target is a bounded-size description of the resulting
 intersection arrangement, or an exact transporter theorem that avoids that
 arrangement. Neither is supplied by the experiment at n=5.
+
+The later incoming [universal closure U6–U7](../universal_ramified_closure_20261030/PROOFS.md)
+now computes the universal directed-color kernel and its two-bit unsigned
+extension at depths k>=2. It does not classify every individual bank's full
+automorphism group or preserve the carrier under arbitrary complements.
+Our affine relabeling retains the signed edge action explicitly, so its
+path-equation test does not discard those phases. At depth1 the independent
+fibre-reflection hostile rules out reusing the two-bit statement unchanged.

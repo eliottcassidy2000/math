@@ -5,6 +5,43 @@ occurrence of these numbers in the repository. Bare numeral hits and theorem
 IDs were not treated as mathematical connections. Current proofs and repairs
 take precedence over the historical sources linked below.
 
+## One exact diagram contains all four numbers
+
+The concurrent [signed/unsigned quotient](../session111_scale_connections_20261030/SIGN_QUOTIENT.md)
+now supplies the strongest literal connection. The same5000-element additive
+normalizer acts on the24 orientation coordinates in two ways:
+
+| action retained | kernel | image |
+|---|---:|---:|
+| coordinate permutation **and** orientation flips | 25 | 200 |
+| coordinate permutation only | 100 | 50 |
+
+Thus `5000=25*200=100*50`. The extra kernel has two independent phase bits:
+global negation and conjugation, the latter flipping odd-valuation layers.
+Signs on the orbits of1 and delta distinguish the four lifts of each unsigned
+action. This is an exact two-bit recovery theorem for an *action*, not a claim
+that two bits classify the resulting tournament. The published producer was
+replayed; [incoming_sign_receipt.json](incoming_sign_receipt.json) verifies all
+200 effective signed actions,50 unsigned images and rank-two sign kernel.
+
+The concurrently proved [universal closure, U6–U7](../universal_ramified_closure_20261030/PROOFS.md)
+strengthens the boundary: at ramified depth k>=2, even allowing all unsigned
+color-preserving vertex permutations adds exactly these two phases to the
+universal directed-color group. At k=1 there are independent fibre reflections
+instead. It also separates the universal kernel, fixed by every bank, from
+possible extra automorphisms of an individual tournament. We inherit these
+scoped claims; we do not extend them through arbitrary native complements.
+
+For our compiler this dictates an exact interface. A relabeling is a signed
+affine action on edge bits. Dropping its translation loses legality of the
+Hamilton-edge equations. Restore the two global phases while still inside
+this ramified colored carrier, or carry the literal signed edge map once
+native complements leave it. The Collatz counterpart is the elementary
+hostile `(m,b)=(1,0)` versus `(1,1)`: identical multipliers but only the first
+is the identity. The transferable rule is to restore the action kernel before
+testing a return or legal continuation; the two underlying groups are not
+being identified.
+
 ## A useful older connection that is not a clock
 
 [THM-781, Hamilton-path inverse metagraph fibre](../../../01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md)

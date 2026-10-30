@@ -35,6 +35,9 @@ bound is claimed; stronger existing reset/root-switch methods are inherited.
 [CONNECTIONS.md](CONNECTIONS.md) records the historical and concurrent links,
 including the q=50 LRC failure-atom deck, the25-presentation heptagon, Gaussian
 doubling, full versus trace clocks, and the new shared-quotient bank recurrence.
+The latest signed/unsigned action gives the exact common diagram
+`5000=25*200=100*50`, with a two-bit orientation kernel; its finite producer
+was replayed and its scope retained.
 [AUDIT.md](AUDIT.md) gives reproduction and evidence boundaries.
 
 The remaining independent Collatz endpoint bound, all-prime anchor debt, and

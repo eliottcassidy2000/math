@@ -73,5 +73,26 @@
       "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/EXACT_GENERATION.md",
       "blob": "b7fabc9dee72a4376d1fb81cf062a10f2b131b9f"
     }
-  ]
+  ],
+  "late_incoming": {
+    "read_against_commit": "dce33fb05c2486d2da36a6fbc8051e546c8639d4",
+    "sources": [
+      {
+        "path": "05-knowledge/results/session111_scale_connections_20261030/SIGN_QUOTIENT.md",
+        "blob": "2771ca55128cf2c7212bb509bc0514bd98ebae59"
+      },
+      {
+        "path": "05-knowledge/results/session111_scale_connections_20261030/sign_forgetting.js",
+        "blob": "f24005051e4cfb47cbf3c4bad0c20fcf0258c7ef"
+      },
+      {
+        "path": "05-knowledge/results/universal_ramified_closure_20261030/PROOFS.md",
+        "blob": "e7598f366b7add5093d189eb365dd4db5160764b"
+      },
+      {
+        "path": "05-knowledge/results/universal_ramified_closure_20261030/README.md",
+        "blob": "4ec338abbaaff473804e0d3d1559a3e4ae067f86"
+      }
+    ]
+  }
 }
