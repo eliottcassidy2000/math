@@ -1,0 +1,75 @@
+{
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "139106e88a040c5bd156410fa98c441400f7e4fad82295e1747956ca5a6b2bd9",
+    "CIRCULAR.md": "4303e670c6488238d4edeae5d0611a1a9323e67eb92a2af2e60515c899502f38",
+    "GRAPH_CAPACITY.md": "ba14539ffc17b3e8d72b47acf6b6fb01ba70bbffb72681e3c5c1177ced06397b",
+    "NEIGHBOURHOODS.md": "f99ee85dabcfdaeb5de311a420e4eb33f027575e46fe55c618a8d556859f33ee",
+    "README.md": "da12940b9653c39bc78fbf373a4714f9d2335d233bbb34fc76d702b188a9f5bc",
+    "RECOVERY.md": "99be845b56fe8070a6b10f04abe884a4126424929c1782a0a6f788173c7d71c8",
+    "audit.py": "90fc32c085978b81b042deb5614c03f124342c078b539548656b53fa6bcbba33",
+    "carousel.py": "16abbabb29c88c34db0bc120c69d579246d28b53e3fe1b0cbf7a20ed80c68652",
+    "check.py": "067cf533f029a57af0006682742b31e8acaeb6980aeb67c4b63a356cd34a9cd8",
+    "external_receipt.json": "3c0d92e643bc644538123f0789401b91c93f75283943a88095b6f152a5e8563e",
+    "external_replay.py": "c2103c16112e6f206fed3e033c75c5bc3e8cb3d2e4d1ab441004a24ef0852f0a",
+    "seal.py": "c2aa358c0fadfbf39ab92d07a6d5bdabd99c40b5b60221604e299c471644d32f",
+    "verification.json": "d9e0764e647354126895c151d4865025bcfc011e45145026c649be232d885435"
+  },
+  "live_runtime_inputs": [
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py",
+    "05-knowledge/results/ramsey_saturated_ports_20261030/verification.json"
+  ],
+  "scope": "Integrity only; same-agent proof review; no formalization",
+  "source_pins": [
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "138f15518f787c1887f43295907e84573cde1d7c29aaf1bbd22cc78f940c2458",
+      "path": "05-knowledge/results/ramsey_saturated_ports_20261030/verification.json"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "8f6cc91a42f9bf3c0d25d77a6e1d8fa5b1ed0c4c14a20d0f890db3b4b7c4039d",
+      "path": "05-knowledge/results/ramsey_circuit_interfaces_20261030/RAMSEY.md"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "b29e13357dddba68943fe3df96ffeb8793217f439415946a9d146e8945d61d4e",
+      "path": "05-knowledge/results/ramsey_saturated_ports_20261030/RECURRENCES.md"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "77e9a472c413071a2c428c7f6af828591b8d7d4966c00665df2317626c1772c8",
+      "path": "05-knowledge/results/odd_descent_local_relaxations_20261030/README.md"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "b1c84425ef762641ca467a5ad3458752543bfee2b3faa0b60da45f7d27c9162c",
+      "path": "05-knowledge/results/session118_shared_gate_deletions_20261030/README.md"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "52af9be3cceedcbf50a8c3f5bd03b06775c1089aed0508fdd75c417204709e76",
+      "path": "05-knowledge/results/session119_odd_transport_classifications_20261030/README.md"
+    },
+    {
+      "commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "lf_sha256": "389d47d2a85f33bb60ff4eb58b82eea80b77c86ea8ccb653367eea32bb741a8d",
+      "path": "01-canon/theorems/THM-455-trans-subtournament-doubling-and-tower.md"
+    },
+    {
+      "commit": "1df129222580b245f914b366726a97030301d609",
+      "lf_sha256": "6e922635d2203dcb76a2359b5060dcd1e6ae9da2d952041d03d1366e5e7846b9",
+      "path": "05-knowledge/results/session120_major_frontier_interfaces_20261030/README.md"
+    },
+    {
+      "commit": "1df129222580b245f914b366726a97030301d609",
+      "lf_sha256": "c4c3c2c57c084e90a83364918407eb141c1f4260142ab64b445f3fce0f89b65f",
+      "path": "05-knowledge/results/session120_major_frontier_interfaces_20261030/ramsey/SPECTRAL_COMPILER.md"
+    }
+  ]
+}

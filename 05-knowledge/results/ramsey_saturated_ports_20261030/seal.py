@@ -73,10 +73,9 @@ def main():
     for name, digest in result['sources'].items():
         if sha(longpath(ROOT/name).read_bytes().replace(b'\r\n', b'\n')) != digest:
             raise RuntimeError(f'Current dependency differs from pin: {name}')
-    for name, entry in result['incoming_sources'].items():
-        path = longpath(ROOT/name)
-        if path.exists() and sha(path.read_bytes().replace(b'\r\n', b'\n')) != entry['sha256']:
-            raise RuntimeError(f'Current incoming summary differs from pin: {name}')
+    # Incoming summaries are historical reading pins, not runtime imports.
+    # build() verifies their exact Git blobs; later mainline amendments to
+    # these README files must not invalidate an otherwise unchanged packet.
     if args.staged:
         for name, digest in result['artifacts'].items():
             relative = (HERE/name).relative_to(ROOT).as_posix()

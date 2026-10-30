@@ -1,0 +1,42 @@
+{
+  "commit": "5770baac746878a3a63b9720fdda97726fe02851",
+  "input_pdf": {
+    "bytes": 538939,
+    "filename": "Ramsey_Neighbourhood_Counting.pdf",
+    "sha256": "923f5ea139c5ddaf5cee08768288d31c2919525f70776365a98129be2c911241"
+  },
+  "runs": {
+    "flag_chain": {
+      "arguments": [
+        "check_r33k5.py",
+        "certificates/five/k6/excl_86.json",
+        "certificates/five/k7/excl_125.json",
+        "certificates/five/k8/excl_174.json"
+      ],
+      "directory": "ancillary/flag_r33k",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "R(3,3,6) <= 86 [five-vertex]: D = [17, 17, 56]; 64 rows, 121 squares\n  (1) max Sym Phi over 193 orbits (29197 labelled K5 colourings) = 0.0000e+00 -> OK\n  (2) min J over 21 profiles = 1.915685875115461e-07 -> OK\ncertificates/five/k6/excl_86.json: VALID\nR(3,3,7) <= 125 [five-vertex]: D = [22, 22, 85]; 37 rows, 144 squares\n  (1) max Sym Phi over 193 orbits (29197 labelled K5 colourings) = 0.0000e+00 -> OK\n  (2) min J over 21 profiles = 3.110430534195051e-08 -> OK\ncertificates/five/k7/excl_125.json: VALID\nR(3,3,8) <= 174 [five-vertex]: D = [27, 27, 124]; 71 rows, 106 squares\n  (1) max Sym Phi over 193 orbits (29197 labelled K5 colourings) = 0.0000e+00 -> OK\n  (2) min J over 21 profiles = 1.5222304576079264e-08 -> OK\ncertificates/five/k8/excl_174.json: VALID\nALL VALID\n"
+    },
+    "hand": {
+      "arguments": [
+        "verify_hand_proofs.py"
+      ],
+      "directory": "ancillary",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout": "all 17985 checks passed\n"
+    }
+  },
+  "scope": "Author checkers in normal Python; not a Lean build, not an independent reimplementation. R338<=174 replayed; 173 is cited only.",
+  "source_sha256": {
+    "ancillary/flag_r33k/certificates/five/k6/excl_86.json": "58a49053bc11ae116442e3710799582dd32e90cdec36b3f2f087870d4add919d",
+    "ancillary/flag_r33k/certificates/five/k7/excl_125.json": "266ae3c0a25a307185646a9b48b41bb81e5757ac8c023142f6e26c7456233840",
+    "ancillary/flag_r33k/certificates/five/k8/excl_174.json": "846d1fc0a38e4cf8efe3ee98c4d024cbc173e535406db65f898d4f7936d3a235",
+    "ancillary/flag_r33k/check_r33k.py": "76961b59c23ff1b287ab3f31495027a0876d19178ee74211ce7f87f129eb0c50",
+    "ancillary/flag_r33k/check_r33k5.py": "980588cfee3bd50423bc925483597148840aadbd3fe302ad6f28707c483403b3",
+    "ancillary/verify_hand_proofs.py": "219a97891110ee7e4617f2e4da2112917eb6708589bd801b3908588dcc0e8c43",
+    "paper/neighbourhood_counting.tex": "833b39f26952df4f9c3f9d455f7c0bbb0b8f85c521d12ab6fdef9813e1bd4887"
+  },
+  "source_url": "https://github.com/Lachy-Dauth/ramsey-neighbourhood-counting"
+}

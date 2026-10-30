@@ -13,8 +13,13 @@ The bounds in the checked 2026 revision of
     45 <= R(3,3,5) <= 57,
     61 <= R(3,3,6) <= 91.
 
-Both exact values remain OPEN. The upper91 is credited to
-[Boza](https://arxiv.org/html/2603.10851v1). No new Ramsey bound is claimed.
+Both exact values remain OPEN. The survey upper91 is credited to
+[Boza](https://arxiv.org/html/2603.10851v1). **Update2026-10-30:** Dauth's
+new preprint gives R(3,3,6)<=86; its exact certificate was replayed in
+[N1 of the follow-up source audit](../ramsey_neighbourhood_lifts_20261030/NEIGHBOURHOODS.md).
+The old91 boundary is superseded; conditional structures near that
+boundary are not current existence targets. No Ramsey improvement is
+claimed on behalf of this repository.
 
 ## Results and certificates
 

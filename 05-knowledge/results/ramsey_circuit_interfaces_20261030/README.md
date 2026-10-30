@@ -80,7 +80,9 @@ importing producer code. [AUDIT.md](AUDIT.md) specifies universes and
 limitations; [RECOVERY.md](RECOVERY.md) records inheritance, incoming
 work, source pins and the live research portfolio.
 
-Next decisive targets are a uniform parity rule for every odd carousel,
-the integer U5-free extension, and a replacement recurrence after adding
-Paley7. Actual complement closure and Circuit Breaker's gate-sharing
-obligation remain separate open problems.
+**Extension completed2026-10-30:** the uniform rule for every odd carousel
+and the exact integer capacity for ALL U5-free tournaments are proved in
+[C1-C3 of the follow-up packet](../ramsey_neighbourhood_lifts_20261030/CIRCULAR.md).
+Its graph companion also gives every C5-composition slope and four complete
+capacity rows. A replacement recurrence after adding Paley7, actual
+complement closure and Circuit Breaker's gate-sharing obligation remain open.
