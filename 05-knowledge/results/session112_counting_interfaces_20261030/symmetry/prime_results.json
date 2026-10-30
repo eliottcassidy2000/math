@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "checks": 796,
+  "literal_families": [
+    {
+      "p": 5,
+      "k": 2,
+      "D": 5,
+      "bank_bits": 24,
+      "prime_orbits": "665856",
+      "fixed_prime_histogram": {
+        "0": 24,
+        "16646400": 1
+      },
+      "grouped_rows": [
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": true,
+          "multiplicity": 1,
+          "prime_fixed": "16646400"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": false,
+          "multiplicity": 4,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": true,
+          "multiplicity": 4,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": false,
+          "multiplicity": 16,
+          "prime_fixed": "0"
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "k": 2,
+      "D": 10,
+      "bank_bits": 24,
+      "prime_orbits": "665856",
+      "fixed_prime_histogram": {
+        "0": 24,
+        "16646400": 1
+      },
+      "grouped_rows": [
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": true,
+          "multiplicity": 1,
+          "prime_fixed": "16646400"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": false,
+          "multiplicity": 4,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": true,
+          "multiplicity": 4,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": false,
+          "multiplicity": 16,
+          "prime_fixed": "0"
+        }
+      ]
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "D": 7,
+      "bank_bits": 48,
+      "prime_orbits": "5744343453696",
+      "fixed_prime_histogram": {
+        "0": 48,
+        "281472829231104": 1
+      },
+      "grouped_rows": [
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": true,
+          "multiplicity": 1,
+          "prime_fixed": "281472829231104"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": false,
+          "multiplicity": 6,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": true,
+          "multiplicity": 6,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": false,
+          "multiplicity": 36,
+          "prime_fixed": "0"
+        }
+      ]
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "D": 5,
+      "bank_bits": 124,
+      "prime_orbits": "170141183461701127141876840654909440",
+      "fixed_prime_histogram": {
+        "0": 100,
+        "17454749184000": 16,
+        "19267255250108083754496000": 8,
+        "21267647932558502850733461135840768000": 1
+      },
+      "grouped_rows": [
+        {
+          "type": "valuation",
+          "v": 0,
+          "multiplicity": 100,
+          "prime_fixed": "0"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": true,
+          "multiplicity": 1,
+          "prime_fixed": "21267647932558502850733461135840768000"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": true,
+          "shifted_zero": false,
+          "multiplicity": 4,
+          "prime_fixed": "19267255250108083754496000"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": true,
+          "multiplicity": 4,
+          "prime_fixed": "19267255250108083754496000"
+        },
+        {
+          "type": "top_pair",
+          "a_zero": false,
+          "shifted_zero": false,
+          "multiplicity": 16,
+          "prime_fixed": "17454749184000"
+        }
+      ]
+    }
+  ],
+  "formula_families": [
+    {
+      "p": 5,
+      "k": 2,
+      "prime_orbit_bits": 20,
+      "prime_orbits": "665856"
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "prime_orbit_bits": 118,
+      "prime_orbits": "170141183461701127141876840654909440"
+    },
+    {
+      "p": 5,
+      "k": 4,
+      "prime_orbit_bits": 615,
+      "prime_orbits": null
+    },
+    {
+      "p": 5,
+      "k": 5,
+      "prime_orbit_bits": 3113,
+      "prime_orbits": null
+    },
+    {
+      "p": 5,
+      "k": 6,
+      "prime_orbit_bits": 15611,
+      "prime_orbits": null
+    },
+    {
+      "p": 5,
+      "k": 7,
+      "prime_orbit_bits": 78108,
+      "prime_orbits": null
+    },
+    {
+      "p": 5,
+      "k": 8,
+      "prime_orbit_bits": 390606,
+      "prime_orbits": null
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "prime_orbit_bits": 43,
+      "prime_orbits": "5744343453696"
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "prime_orbit_bits": 334,
+      "prime_orbits": "26119472211986054933614487236949787503645259080694255024807604487439911016101578843600904384676102144"
+    },
+    {
+      "p": 7,
+      "k": 4,
+      "prime_orbit_bits": 2389,
+      "prime_orbits": null
+    },
+    {
+      "p": 7,
+      "k": 5,
+      "prime_orbit_bits": 16792,
+      "prime_orbits": null
+    },
+    {
+      "p": 7,
+      "k": 6,
+      "prime_orbit_bits": 117632,
+      "prime_orbits": null
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "prime_orbit_bits": 161,
+      "prime_orbits": "2213872302702432822840147105623313161874151833600"
+    },
+    {
+      "p": 13,
+      "k": 3,
+      "prime_orbit_bits": 2185,
+      "prime_orbits": "5248563080387247649795525939979879296740107765323344956004534651223864566305185157947653536958740930042204239913434799148274866432778573025057121093146440958185029305279323213837036633723153114543009412783345932005943827478603036273180053177338900457028663523377793191823496696132756296843657812771907993663141504957307608841195674367349863485608666942153755687489246280377806182686844857112361350460886822868418026527084844025665314934540895892050594010402441744123492365462059256585777201349747609686225075644203993301551071143686245684939426265164338907517469679464414767532169081690009673072846750677800337080195827479783864772763216069278820513244774400"
+    },
+    {
+      "p": 13,
+      "k": 4,
+      "prime_orbit_bits": 28546,
+      "prime_orbits": null
+    }
+  ]
+}

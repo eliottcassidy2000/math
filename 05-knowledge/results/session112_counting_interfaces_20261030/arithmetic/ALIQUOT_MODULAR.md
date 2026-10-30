@@ -1,6 +1,6 @@
 # Two aliquot residues are a reversible p-adic coordinate system
 
-**Status: PROVED**, with independent finite divisor-sum and residue-permutation checks in `verify_aliquot_modular.py`. This extends Session 110's exact integer reconstruction theorem; it does not provide a fast method for evaluating divisor sums or factoring an integer.
+**Status: PROVED**, with independent finite divisor-sum and residue-permutation checks in `verify_aliquot_modular.py`. This refines the inherited exact reconstruction and retained-core dynamics with a reversible finite-residue coordinate system. It does not provide a fast method for evaluating divisor sums or factoring an integer.
 
 ## 1. Inherited exact inverse and the apparent missing coordinate
 
@@ -8,13 +8,15 @@ Write `s(n)=sigma(n)−n`. Fix a prime `p` and an integer `t≥1`. Put
 
     S_j = 1+p+...+p^(j−1),    j≥1.
 
-Session 110, `CHECKPOINT_01.md`, Section 1 proves: if `a=s(n)`, `b=s(p^t n)`, and `n=p^e u` with `p∤u`, then
+The prime-dilation inverse and retained-core affine doubling update already appear in [Session 78](../../session78_fourth_power_aliquot_20261027/ALIQUOT.md); [Session 81](../../session81_counterexample_families_20261028/ALIQUOT_OBSERVERS.md) extends reconstruction to prime-power dilations. [Session 110](../../session110_overnight_20261030/CHECKPOINT_01.md), Section 1, gives the recent presentation used here: if `a=s(n)`, `b=s(p^t n)`, and `n=p^e u` with `p∤u`, then
 
     b−p^t a = S_t sigma(u),
     v_p(b−a) = e,
     n = S_(e+1) (b−p^t a)/S_t − a.                 (1)
 
 Its proof uses `b−a=p^e S_t [u+p s(u)]`, with bracket and `S_t` units modulo `p`. At first sight, reducing the observations modulo `p^k` loses the full exponent `e`, so (1) might seem unusable when `e≥k`. The correction is that `S_(e+1)` has already stabilized modulo `p^k` once `e≥k−1`. The missing valuation is then irrelevant to the target residue.
+
+The retained-core idea itself is inherited: Session 78 already uses `(s(n),sigma(oddpart(n))) -> (2s(n)+sigma(oddpart(n)),sigma(oddpart(n)))` on a doubling ray. Our refinement below is the universal residue-plane decoder, its Latin/isometry structure, and the finite conjugacy and precision boundaries. The earlier modular-trace collisions `27,35 mod 8` and `3,7 mod 4` are compatible: each pair has the same source residue. Recovering a source residue does not distinguish all unbounded integer sources.
 
 ## 2. Universal residue decoder
 

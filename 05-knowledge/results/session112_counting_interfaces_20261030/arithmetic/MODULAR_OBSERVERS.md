@@ -100,3 +100,9 @@ The same width argument applies to any binary prefix search on an actual finite 
 ## Scope and provenance
 
 The effective-modulus and robust-code arguments are elementary CRT/Hamming-distance deductions, not claims of literature priority. The new synthesis is to make the paper's scale factor explicit as a quotient, remove only its prime support, and apply the same interface to stabilizer-sensitive orbit counts. The paper's subexponential counting engine and Lean build are not dependencies. No runtime speedup follows until the cost of evaluating the required residues is separately established.
+
+**Formal-engine boundary:** the incoming [source audit](../../scaled_count_fft_carriers_20261030/SOURCE_AUDIT.md)
+reports a generic Lean multiplier `(t+1)^A * 2^(t*R)`. The dyadic corollary
+requires its stated purely dyadic scale. Applying the general theorem to
+the full multiplier must retain the prime support and effective-modulus
+loss of the additional factor; no engine speedup is inferred here.

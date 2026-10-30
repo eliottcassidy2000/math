@@ -23,3 +23,16 @@ There is an elementary obstruction to dropping signs. In the two-dimensional sub
 Conversely, coherent basis-sign changes preserve norm composition. For any orthogonal diagonal sign matrix D with D(1)=1, transport multiplication by x*y=D^{-1}((Dx)(Dy)). Then ||x*y||^2=||Dx Dy||^2=||Dx||^2||Dy||^2=||x||^2||y||^2. This is a gauge transformation, not arbitrary sign deletion. It explains why some changed orientations preserve the algebra while unsigned quotients can lose crucial information.
 
 No 11/12 exponent saving follows merely from the old Paley construction. That saving needs the precise crossing decomposition, tensor interfaces, grouping overhead and recursion from the counting engine. Nor does any of this establish a new general factoring algorithm or a Collatz theorem. The usable session principle is narrower: retain the signs, shared interfaces, normalization and positivity conditions required by each observation-to-search step.
+
+## Incoming formal-engine scale caveat
+
+The later [source audit](../../scaled_count_fft_carriers_20261030/SOURCE_AUDIT.md)
+and [theory C2](../../scaled_count_fft_carriers_20261030/THEORY.md), inspected
+at commit 05b452976f450d06a705c11b30718f35173e11a8, report that the generic
+Lean counting interface has multiplier `(t+1)^A * 2^(t*R)`, not a purely
+dyadic scale. Our odd-modulus corollary applies to its explicitly promised
+`2^E` normalization; it is not automatically a speedup of that full engine.
+The additional factor must be retained in the general effective-modulus
+analysis. The incoming packet also reports a local Lean build at a later
+source revision; that is distinct from our inspected revision above, and
+we did not independently rerun its build.

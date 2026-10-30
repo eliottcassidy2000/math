@@ -1,118 +1,129 @@
-# Session 112: loss-aware counting interfaces
+# Session 112: exact counting interfaces and constructive bank ranking
 
-30 October 2026. **ACTIVE research session; third verified checkpoint.**
+30 October 2026. **Final research packet: proved statements, explicit dependencies and finite checks.**
 
-This session uses Rudich–Rousseau's *Deterministic Factoring in Time N^{o(1)}*
-as inspiration for continuing the repository's symmetry, enumeration, modular
-clock and arithmetic work. [Source scope](paper/PAPER_SCOPE.md) separates the
-paper's theorem, conjectured stronger rate, inspected formal source and
-external registry-reported checks. We have not independently built its Lean
-proof or reproduced the general counting engine. No new factoring complexity
-result is claimed in this packet.
+The inspiration was Rudich–Rousseau's [*Deterministic Factoring in Time
+N^{o(1)}*](https://hexagonmath.org/pdf/2610.00600v1). The useful transferable
+pipeline is precise: construct a count with honest witness multiplicity,
+retain the information needed by scaled modular observations, then turn exact
+counts into search. In symmetry problems, stabilizers, shared residues and
+canonical ordering must survive every step.
 
-## First proved interface
+[Paper scope](paper/PAPER_SCOPE.md) distinguishes its stated theorem from a
+stronger conjectured rate and reports inspected formal source and external
+registry checks. We did not independently build its Lean proof or reproduce
+its general counting engine. None of the following results imports a new
+factoring complexity bound.
 
-[Modular observers](arithmetic/MODULAR_OBSERVERS.md) identify exactly what is
-retained by observations of a scaled count sD: the count modulo
-lcm(m_i)/gcd(lcm(m_i),s). The note derives an elementary cutoff avoiding the
-prime support of the scale, an exact error/erasure correction criterion, and
-prefix-sensitive observation budgets. Burnside's fixed-point numerator gives
-a direct bridge to stabilizer-sensitive symmetry counts. Equal group orders
-or equal prime supports do not identify the groups or their actions.
+## 1. A constructive rank/unrank algorithm for the shared-residue bank
 
-The [checker](arithmetic/verify_modular.py) supplies exhaustive bounded
-kernel and coding tests, cutoff checks and a nonfree Burnside control.
-[Its output](arithmetic/modular_checks.json) records those finite universes.
-Run from this directory:
+[Bank ranking](counting/BANK_RANKING.md) turns the previous total-count
+recurrence into an implemented canonical selection algorithm. At completed
+cycle blocks only k+2 stabilizer states are needed. A finite threshold
+automaton counts primitive necklaces below each value; exact continuation
+weights then rank and unrank whole bank states in polynomial time in the
+number of bank coordinates D and log Q.
 
-    python3 arithmetic/verify_modular.py
+The implementation retains the named cycle order, cycle bases and fixed
+orientation origin. It recovers 692,224 orbits at 24 binary coordinates and
+the earlier 124-coordinate count, now with canonical selection. Its input
+rank operation requires a canonical tuple and checks that promise.
+The bound is in D=p^k-1, not in k. This is a specified bank action, not a full
+tournament-isomorphism algorithm.
 
-The elementary proofs, rather than finite checks alone, support the stated
-all-integer interfaces. Cheap modular observations do not imply that computing
-the observed counts is cheap.
+[The general reduction](counting/README.md) explains why ordinary prefix
+orbit counts are not additive: an orbit can meet both children. Saturated
+cumulative cuts repair rank semantics, but their overlap arrangement can be
+huge. The specialized bank algorithm avoids that unrestricted arrangement
+through its actual stabilizer structure; it does not make every such
+arrangement compact.
 
-## Signed constraints, selectors and canonical counts
+## 2. Prime-bank counts retain one essential inner twist
 
-[Norm signs](norms/NORM_SIGNS.md) give a necessary and sufficient binary
-rectangle condition for Euclidean norm composition in a normalized signed-XOR
-basis. Four named probes recover the promised-valid eight-square table; a
-five-equation contradiction excludes dimension sixteen in this model. An
-explicit coordinate map transports the old divisor-sum Hamming bank to these
-16 valid tables, with squareclass 30 selecting the composing orientations.
-This retains multiplication signs rather than only unsigned Fano support.
+[Prime-bank convolution](symmetry/PRIMENESS_INTERFACE.md) applies the inherited
+canonical ideal-module decomposition before averaging over the acting group.
+The same element acts on quotient and inner bank, with an exceptional twist
+at the first ideal layer. Dropping it produces a negative false count.
+Keeping it gives exact all-depth prime-bank orbit counts using k+2 action
+types and polynomial bit cost in the explicit bank dimension.
+
+At p=5, depth 2 has 665,856 prime orbits for the specified order-25 action.
+At depth 3 some nonidentity actions fix prime banks, so filtering only free
+orbits is invalid. A short rational recurrence explains these scalar-fixed
+prime banks at arbitrary depth and yields prime banks with unbounded extra
+scalar symmetries. The complete universal group is the intersection over all
+banks; individual prime banks can exceed it by an unbounded factor. The
+displayed subgroups do not determine their full automorphism groups. Prime counts are not yet a prime rank/unrank algorithm,
+and these are not full-normalizer or graph-isomorphism counts.
+
+## 3. Modular observations and reversible arithmetic coordinates
+
+[Scaled modular observers](arithmetic/MODULAR_OBSERVERS.md) identify exactly
+what readings of sD retain: D modulo lcm(m_i)/gcd(lcm(m_i),s). Avoiding the
+scale's prime support gives a small-modulus zero test whose cutoff depends
+on the bound for D, not the exponent of the scale. An exact deletion criterion
+handles corrupted readings. Burnside's numerator supplies a genuine
+stabilizer-sensitive application. Computing the observed residues still has
+its own cost.
+
+[Paired aliquot residues](arithmetic/ALIQUOT_MODULAR.md) recover n modulo p^k
+from s(n) and s(p^t n) modulo p^k, even when a large valuation cannot be read
+fully. The decoder is a Latin-square coordinate map. Retaining the scaled
+divisor sum of the p-free core conjugates every prime-ray update to simple
+scaling of the source coordinate. Shifted probes incur a sharp precision
+debt that arbitrarily many later readings cannot repair.
+
+[Weighted observers](arithmetic/POWER_OBSERVERS.md) recover n^w instead.
+Their exact root fibres expose genuine ambiguities, including four prime
+sources with identical square-weighted dyadic readings along the whole ray.
+Two coprime weights recover n on units. These are exact information and
+dynamics results, not cheap methods for evaluating divisor sums.
+
+## 4. Signed norms meet the old divisor-sum code
+
+[Norm signs](norms/NORM_SIGNS.md) express Euclidean norm composition in the
+normalized signed-XOR model as binary rectangle equations. Four probes
+recover a promised-valid eight-square table. Five explicit equations give
+a contradiction in dimension sixteen, within this model.
+
+An exact coordinate map identifies the 16 valid tables with one affine
+syndrome class in the old divisor-sum Hamming bank: squareclass 30 selects
+the composing orientations. This is an explicit finite correspondence, not
+an identification of integers with octonions. [Norm defects](norms/NORM_DEFECT.md)
+show that every invalid promised line table fails exactly 24 of 112 rectangle
+tests and has mean-square defect 384 for independent centered variance-one
+inputs. Unsigned support loses the relevant information; coherent sign-gauge
+changes preserve it.
+
+## 5. One pin move repairs the remaining reflection phase
 
 [Random selectors](symmetry/PROOFS.md), conditional on the inherited universal
-ramified-group classification, separate residue coverage from the remaining
+colored-group classification, separate residue coverage from the remaining
 reflection phase. At 625 vertices exactly 1/125 of random minimal transversals
-retain that phase; one pin move repairs every bad transversal. Exact sampling
-probabilities and expected stopping times retain the depth-one exception.
-These are colored-carrier base counts, not a classification of every single
-tournament's automorphism group.
+retain that phase. Moving any one pin by delta repairs every bad transversal
+without adding pins. Exact probabilities and stopping-time formulas preserve
+the separate depth-one boundary. These are colored-carrier base results,
+not automorphism classifications for arbitrary individual tournaments.
 
-[Canonical ranking](counting/README.md) turns cumulative saturated cuts into
-an exact rank/unrank oracle for tournament orbits. Ordinary prefix orbit
-counts are not additive. Saturation and exact union indicators repair the
-semantics, but may have enormous representation cost. All cuts through five
-vertices and selected affine-rank implementations are finite controls; no
-fast unrestricted enumeration algorithm follows.
+## Incoming synthesis
 
-The three lanes have independently replayed normal and optimized checkers:
-[norm checks](norms/checks.json), [selector checks](symmetry/results.json), and
-[counting checks](counting/results.json). Their proofs and inherited
-classification assumptions remain explicit in the corresponding notes.
+The adjacent [pinned-attachment packet](../pinned_ramified_counts_20261030/README.md)
+combines the random-axis theorem with attachment rigidity. At 625 vertices,
+a random minimal transversal followed by independent fair binary colors
+retains an unsigned reflection with probability exactly 2^(-300)/125:
+the exceptional transversal has probability 1/125, and its unique reflection
+exchanges 300 vertex pairs. This credited elementary deduction was reviewed
+against its source; it is separate from this packet's nine checker receipts.
 
-## Reversible arithmetic and quantitative defects
+## Reproduce and continue
 
-[Paired aliquot residues](arithmetic/ALIQUOT_MODULAR.md) recover the source
-modulo p^k even when its p-adic valuation is too large to read directly.
-The decoder is a Latin-square coordinate map. A retained divisor-sum core
-conjugates every prime-ray step to simple scaling of the source residue.
-Later shifted probes incur a sharp precision debt; the source semigroup
-remains meaningful without the core, but reconstruction of its aliquot
-observation does not.
+Run `python3 verify_session.py` for all nine mathematical checkers, normally
+and with optimization. It compares all 18 parsed outputs with the finite
+receipts. [Verification scope](CHECKS.md) records their universes, proof
+dependencies and external-source limits. No CI success or historical priority
+is inferred from these local checks.
 
-[Weighted observers](arithmetic/POWER_OBSERVERS.md) instead recover n^w.
-Their exact root fibres expose a genuine root-selection ambiguity, including
-four prime-source residues with identical square-weighted dyadic observations.
-Two coprime weights restore the source on units. These are information
-identities, not fast methods for evaluating divisor sums or factoring.
-
-[Norm defects](norms/NORM_DEFECT.md) quantify the same three-bit syndrome
-used by the eight-square signs: every invalid promised Fano-line table fails
-exactly 24 of 112 rectangle tests and has mean-square defect 384 under
-independent centered variance-one inputs. The result preserves a precise
-syndrome and defect statistic, not individual coefficients or numeric divisor
-sums. [Checks](norms/defect_checks.json) enumerate the complete finite model.
-
-## A constructive bank rank/unrank algorithm
-
-[Shared-residue bank ranking](counting/BANK_RANKING.md) advances beyond the
-initial saturated-cut reduction for one specified action. At completed cycle
-blocks, only k+2 stabilizer states are needed. A finite threshold automaton
-counts primitive necklaces below each requested value; exact continuation
-weights then rank and unrank whole bank states in polynomial time in the
-number of coordinates D and log Q. The named cycle order and fixed orientation
-origin are retained.
-
-[The implementation](counting/bank_rank.py) has literal-group and exhaustive
-small-necklace controls recorded in [its results](counting/bank_results.json).
-It recovers the earlier 692,224 orbits at 24 binary coordinates and the
-specified 124-coordinate count while supporting selection, not only totals.
-The polynomial bound is in D=p^k-1, not in k. This is neither unrestricted
-tournament isomorphism nor prime-bank counting, and it does not import the
-factoring paper's counting engine.
-
-## Continuing lanes
-
-- Counting/search: preserve unique auxiliary completion, positivity and the
-  cost of actual residue evaluation.
-- Symmetry/enumeration: integrate shared-residue bank actions, universal
-  ramified vertex kernels and the loss of marked bases.
-- Norms/signs: use the exact syndrome transport to test further coherent
-  arithmetic/algebraic interfaces, retaining signs and validity promises.
-- Arithmetic clocks: pursue loss-aware modular and valuation interfaces while
-  retaining the integer clock and source data.
-
-These are active research directions, not announced theorems. The remaining
-unrestricted tournament classification and Collatz convergence questions stay
-open.
+Remaining targets are prime-prefix counting/ranking, full graph transporters
+beyond the specified bank actions, and further lawful observation interfaces.
+General factoring speedups, unrestricted tournament classification and Collatz
+convergence are not established here.
