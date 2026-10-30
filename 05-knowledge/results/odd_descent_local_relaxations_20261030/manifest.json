@@ -1,0 +1,110 @@
+{
+  "sources": {
+    "01-canon/theorems/LEM-004-tournaments-are-odd-functions.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "ab12939ad1c8f18b69cb192ef902b4bfbfe4696a91b6a9645bd85756f829b4d2"
+    },
+    "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c"
+    },
+    "01-canon/theorems/THM-1380-free-Z2-but-no-odd-map.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "d51078f2f3d010f036e58ae22975bc6315875bc364ad683b46776bd86ecc1b05"
+    },
+    "05-knowledge/results/odd_prime_function_cycle_20261018d.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "1cbc5e5afba49628ec0100c697881c332e18a0ee3042b72521b05e205f67c540"
+    },
+    "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/SHARED_CLOCKS.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "14ca21b4287fbae93e19d37d004755b7a2e45bc272517e4ca281929fec38057f"
+    },
+    "05-knowledge/results/aliquot_66_five_fifteen_20261028/PROOFS.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "11624023b5d0145eebbfef2e75b1727f2fbf45bbd75c048a36edd16557a80d60"
+    },
+    "05-knowledge/results/collatz_mod6_20260917_floor_sums_odd_functions.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "ee87b5978606745942d726f4d2f221d65f7e95c7f9cdc711503578daea8fae52"
+    },
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "ecb2ec84c71d41026bf9cd7633ecba9efc14a68ee276220384e4d06df205c55a"
+    },
+    "05-knowledge/results/lucas_mirror_gap_spaces_20261028/SYNTHESIS.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "634c5a6ac06aa645896377a32e40c605bc4a1099a8e52c2984fb5684cbbdd60c"
+    },
+    "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9"
+    },
+    "05-knowledge/results/liouville_mobius_11_13_20261026/RECOVERY.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "85b63a3fba90ec609d652a5a4a1e96b8f3da284a39ca53d013a53d67ee6981b4"
+    },
+    "05-knowledge/results/session27_repunits_lattices_20261022/session27-response/ODD_CYCLE_FAITHFULNESS.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "89fce379cd4c47b2b87866bc9af7d82a5b82746b924299f78adf533cb0e46950"
+    },
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
+    },
+    "05-knowledge/results/terminal_fees_phase_covers_20261030/README.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "202ba13549dd10507ed4fcb3f5258ef5e4f4dd0ce3f786ffb477e40e556d02aa"
+    },
+    "05-knowledge/results/terminal_fees_phase_covers_20261030/ADAPTIVE.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "0075db5cecd1c605d1af708a68f017d79b98d5e23899ccbcd4e7e355f14638c9"
+    },
+    "05-knowledge/results/rectangular_counting_compiler_20261030/README.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "193e5457ed0ec9dbda9761cf02908fe08a1c3ba91d916c027288007ee222a014"
+    },
+    "05-knowledge/results/scaled_count_fft_carriers_20261030/THEORY.md": {
+      "revision": "cd6d98ba58a2418fb81054659bc37962676c8dd0",
+      "sha256": "e06c3f75ab9794e9f1ce3fd0725d7223e5a92372ca2582bead414b9e66265e86"
+    },
+    "05-knowledge/results/session118_shared_gate_deletions_20261030/README.md": {
+      "revision": "db3daffd7c4999cc931595731b65e9d983d784d5",
+      "sha256": "b1c84425ef762641ca467a5ad3458752543bfee2b3faa0b60da45f7d27c9162c"
+    },
+    "05-knowledge/results/session118_shared_gate_deletions_20261030/frontier/FRONTIER.md": {
+      "revision": "db3daffd7c4999cc931595731b65e9d983d784d5",
+      "sha256": "255d1a9ee1befa4a46780128600de5144611b77f38a1d414fc2474c09f8f36f9"
+    },
+    "05-knowledge/results/session119_odd_transport_classifications_20261030/README.md": {
+      "revision": "4b423e24b840c674881d6965f27004624318115b",
+      "sha256": "b30e794f18d81a5ea600fb0c7c7a07da2845adb3a523d69799c318e0b0fb1f7b"
+    },
+    "05-knowledge/results/session119_odd_transport_classifications_20261030/cycles/SIGNED_GRAPH_INHOMOGENEOUS.md": {
+      "revision": "4b423e24b840c674881d6965f27004624318115b",
+      "sha256": "178c35edeaa81d244129c838047b3691762d990ea34be256960ce27d30fadfd2"
+    },
+    "05-knowledge/results/session119_odd_transport_classifications_20261030/arithmetic/WEIGHTED_CYCLE_OBSTRUCTIONS.md": {
+      "revision": "4b423e24b840c674881d6965f27004624318115b",
+      "sha256": "9a25fc10b4b29654686907691e57ed0ffb03488003b824a3be36ab0b1c76fa54"
+    }
+  },
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "e9eb14eab323b5de6c59df39340155e26b3bcd2ddc08e7a7917ac37129120a63",
+    "certificate.json": "9a07d9b761a9f9a5240136f6be68d4dd80f0d9711b21a09dae93e83880c187b8",
+    "certificate.optimized.json": "9a07d9b761a9f9a5240136f6be68d4dd80f0d9711b21a09dae93e83880c187b8",
+    "HANDOFF.md": "4fb859f2f31447bfd5935e951ffd44de292872a629060c710ceb5c5076dc34f8",
+    "PROOFS.md": "0e9143c36e4929491fee0f38eded2e40e6d6cf5d33674e0aa5a9e5ae50b26af8",
+    "PROPOSALS.md": "64bdc79de63d84ceafe606c49dadf1d74a749f9b03e126006697eeb5a581c26e",
+    "README.md": "77e9a472c413071a2c428c7f6af828591b8d7d4966c00665df2317626c1772c8",
+    "RECOVERY.md": "8e4345fa5e2a000028c7f7f4c29cf2fb3c4ca91cdb7330f4ceac3e378eb1f645",
+    "seal.py": "4f95ecbf6f05af2d298dfce7fa7366ae4db85a36d56884ab3224ba58147d3561",
+    "SOURCES.md": "662c875bf4d67a30a48560d875269f2fcb6465c1847be6469ef6a3cf2a9cb90c",
+    "verify.py": "0ed7444ca34457d4a0c638882468f068a417f71c8b14273a0aa1435625fb054c"
+  },
+  "basis": "Exact Git source blobs and exact LF packet bytes.",
+  "status": "PROVED scoped synthesis / FINITE-EXACT / OPEN major applications.",
+  "review": "Same-agent review; separate exact algorithms; no formal build.",
+  "runtime": "Python standard library and pinned inherited native 81/27 helper."
+}
