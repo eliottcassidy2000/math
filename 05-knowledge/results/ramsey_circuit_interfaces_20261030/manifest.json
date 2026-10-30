@@ -1,0 +1,93 @@
+{
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "6e935725be1f3a7354073104388bc78e3c843d95820b97dee29dce2332ad5b94",
+    "CIRCUITS.md": "079e3334f7954f987bcde9cc19d3a83924b43d29b557de1a660435a9ca2a4904",
+    "RAMSEY.md": "8f6cc91a42f9bf3c0d25d77a6e1d8fa5b1ed0c4c14a20d0f890db3b4b7c4039d",
+    "README.md": "0b679e3ee3fac9cf67062707c6c25702da612ea822f82d4c584a71a1891ecb19",
+    "RECOVERY.md": "12255e53599474875fec4389e12c8b155c1744b196c467308a53d945d5e56c76",
+    "audit.py": "3e329d356b352ae10c9147bfa101c889ac0e3f30e8de05e7e12f75c69cfd2465",
+    "check.py": "b1f0751402f5047bd321bef12c42ce6c89482eb1fc7ac7831bf1ef24cd2f5089",
+    "explore.py": "954a043900bab2da9fa4f89e5632bd4fba0e7da23fbfe263e3349a528d6810fd",
+    "receipt.json": "7c28d16430fdcaec5bdb05b0b007b2db0a0d3b94bc118a17c901bbf8d45eb092",
+    "seal.py": "26e1de9ae68a34a2afde0bfbfe72a50a17aceed77b887cfb8752a10932776ad6"
+  },
+  "external_pdf_sha256": "e57f24481d2474a6f2c342d86312572f024710835ca583beb31e2bb1f9ceae40",
+  "external_rules_revision": "2cd3a17f3f296b7f0ac248a63a9b54a0fabdf851",
+  "live_runtime_inputs": [
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+  ],
+  "source_pins": [
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "d2c30f48bd1eed907b3e7fa73418c3be5db8f266025dabcedfabcc410a743f8a",
+      "path": "05-knowledge/results/tournament_open_problem_routes_20261029/PROOFS.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "c7a85e26c53ff58dea76f4869ca6f356d86dd3b8caa39aedf7b7abb114301956",
+      "path": "05-knowledge/results/tournament_open_problem_routes_20261029/ATLAS.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "389d47d2a85f33bb60ff4eb58b82eea80b77c86ea8ccb653367eea32bb741a8d",
+      "path": "01-canon/theorems/THM-455-trans-subtournament-doubling-and-tower.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "7f74a7585cc456ad07625fb84521a4333d5ecc11588c2f7e2be97eefb6049e56",
+      "path": "01-canon/theorems/THM-3489-rule30-packed-restart-and-pointed-pascal-face.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "4b9597509316920bcad1c9e3c17f553edcc59c6074ee74161c8ab3aeab157775",
+      "path": "05-knowledge/results/collatz_catalan_ramsey_20260927.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "1f2bd1ca1680c4a98ea31b51aa30720bc8140e02fe9d81f34624ee649f6b7d4a",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/counting/README.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "2fd5d4b542f1258190ddad625caa900a0d8a01653bcb7d60eb89b7d63863339c",
+      "path": "05-knowledge/results/scaled_count_fft_carriers_20261030/SOURCE_AUDIT.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "b0e81e1659c085dd5fb6eb2d1523fe967e6ce8f27f1db6335fd0b0cfc90d5cbe",
+      "path": "05-knowledge/results/scaled_count_fft_carriers_20261030/source_receipt.json"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "518f299bb22deca3041259fb4fcebf01806bec117f0f313c7055f0b19acccfb5",
+      "path": "05-knowledge/results/cayley_dickson_integral_20261030/PROOFS.md"
+    },
+    {
+      "commit": "b435f833bc4c5b9d2c5c04f764c2160fabd6a792",
+      "lf_sha256": "84c8269d1ccb3b9872c311912c2f861befbb57963cf0730c204ecb4d4995cfd5",
+      "path": "05-knowledge/results/session116_dimension_owner_towers_20261030/README.md"
+    },
+    {
+      "commit": "25626f02207500a2abb897049456d82bb63f1ece",
+      "lf_sha256": "aef0c3e3a27fcafa988716ccd1059f9939821da2270e173a6da4aeeb4f98c598",
+      "path": "05-knowledge/results/ramsey_saturated_ports_20261030/PROOFS.md"
+    },
+    {
+      "commit": "25626f02207500a2abb897049456d82bb63f1ece",
+      "lf_sha256": "b29e13357dddba68943fe3df96ffeb8793217f439415946a9d146e8945d61d4e",
+      "path": "05-knowledge/results/ramsey_saturated_ports_20261030/RECURRENCES.md"
+    },
+    {
+      "commit": "25626f02207500a2abb897049456d82bb63f1ece",
+      "lf_sha256": "2e81588930c4d3f0ac307da9da85ed0f0940b37d08a3610abd9615f444f2d64d",
+      "path": "05-knowledge/results/return_kernel_core_transplants_20261030/README.md"
+    }
+  ],
+  "status": "Integrity only; same-agent proof review"
+}

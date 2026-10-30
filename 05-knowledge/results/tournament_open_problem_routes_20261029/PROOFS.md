@@ -228,7 +228,12 @@ the newer bounded-VC theorem are credited in SOURCES.md.
 The resulting rational polytope is compact (singletons give w_i<=1).
 Since sum_i w_i^p is convex, checking it at every vertex suffices for(13).
 Completeness of the vertex list must be certified; floating samples alone
-do not suffice. We have not enumerated that polytope here.
+do not suffice. This packet did not enumerate that polytope. The successor
+[R1-R3 / Ramsey circuit interfaces](../ramsey_circuit_interfaces_20261030/RAMSEY.md)
+classifies all12 vertices for regular T5, credits Liu's already-known
+sharp exponent, and proves the stronger all-size integer capacity
+F(k)=A006046(k) for the T5/T7/T9 hereditary substitution palette by
+complete joint parity charts. Its scope is not arbitrary tournaments.
 
 **Cheap hostile.** For the regular five-tournament Q, tr(Q)=3. The uniform
 vector suggests p=log(5)/log(3), but an induced C3 with weights1,1,1 and
