@@ -1,0 +1,82 @@
+{
+  "status": "FINITE-EXACT semantics controls",
+  "alphabet": "1..4",
+  "lengths": "1..7",
+  "words": 21844,
+  "precision": 6,
+  "hostile_U_E9": {
+    "length": 514,
+    "clock": 546,
+    "content": 317,
+    "F1": "26291796/78125",
+    "F2": "5094453/15625",
+    "endpoint_multiplier_mod25": 21,
+    "endpoint_defect_height": 9
+  },
+  "initial_phase_controls": [
+    {
+      "length": 5,
+      "clock": 14,
+      "content": 1,
+      "F1": "1",
+      "F2": "1",
+      "endpoint_multiplier_mod25": 2,
+      "endpoint_defect_height": 0
+    },
+    {
+      "length": 6,
+      "clock": 15,
+      "content": 1,
+      "F1": "1",
+      "F2": "1",
+      "endpoint_multiplier_mod25": 3,
+      "endpoint_defect_height": 0
+    },
+    {
+      "length": 14,
+      "clock": 23,
+      "content": 5,
+      "F1": "5",
+      "F2": "5",
+      "endpoint_multiplier_mod25": 18,
+      "endpoint_defect_height": 0
+    },
+    {
+      "length": 15,
+      "clock": 24,
+      "content": 7,
+      "F1": "7",
+      "F2": "7",
+      "endpoint_multiplier_mod25": 2,
+      "endpoint_defect_height": 0
+    },
+    {
+      "length": 54,
+      "clock": 63,
+      "content": 29,
+      "F1": "29",
+      "F2": "29",
+      "endpoint_multiplier_mod25": 18,
+      "endpoint_defect_height": 0
+    },
+    {
+      "length": 55,
+      "clock": 64,
+      "content": 32,
+      "F1": "32",
+      "F2": "32",
+      "endpoint_multiplier_mod25": 2,
+      "endpoint_defect_height": 0
+    },
+    {
+      "length": 276,
+      "clock": 285,
+      "content": 169,
+      "F1": "169",
+      "F2": "169",
+      "endpoint_multiplier_mod25": 3,
+      "endpoint_defect_height": 0
+    }
+  ],
+  "sharp_initial_clock": 781250
+}

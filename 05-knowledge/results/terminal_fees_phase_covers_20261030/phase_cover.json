@@ -1,0 +1,51 @@
+{
+  "status": "FINITE-EXACT controls for proved parametric attachment compiler",
+  "primitive_triple_cores": 196,
+  "literal_queries": 50176,
+  "radii": [
+    "1/5",
+    "1/4",
+    "1/3",
+    "1/2"
+  ],
+  "attached_speeds": "1..64",
+  "large_core": [
+    26,
+    52,
+    78,
+    104,
+    130,
+    156,
+    182,
+    208,
+    234,
+    260,
+    286,
+    312
+  ],
+  "radius": "1/14",
+  "components": 416,
+  "phase_period": 10090080,
+  "large_inputs": [
+    {
+      "speed_digits": 3,
+      "speed_suffix": "339",
+      "witness": "3/364",
+      "minimum_distance": "1/14"
+    },
+    {
+      "speed_digits": 101,
+      "speed_suffix": "00000000000000000039",
+      "witness": "1/364",
+      "minimum_distance": "1/14"
+    },
+    {
+      "speed_digits": 1001,
+      "speed_suffix": "00000000000000000123",
+      "witness": "1/364",
+      "minimum_distance": "1/14"
+    }
+  ],
+  "hostile_germ": "(1,6)+7: 4/13, not 3/8",
+  "hostile_independent_arrivals": "(1,2)+3+12: 3/13, not 1/4"
+}
