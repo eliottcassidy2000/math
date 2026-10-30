@@ -1,0 +1,273 @@
+{
+  "status": "PASS",
+  "gates": 152,
+  "D8_controls": [
+    {
+      "group": "D8",
+      "size": 8,
+      "orders": {
+        "1": 1,
+        "2": 5,
+        "4": 2
+      },
+      "involution_classes": 3,
+      "even_mass": "7/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 2,
+          "centralizer_size": 4
+        },
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 2,
+          "centralizer_size": 4
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 2,
+          "centralizer_size": 4
+        },
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 1,
+          "centralizer_size": 8
+        }
+      ]
+    },
+    {
+      "group": "S4",
+      "size": 24,
+      "orders": {
+        "1": 1,
+        "2": 9,
+        "3": 8,
+        "4": 6
+      },
+      "involution_classes": 2,
+      "even_mass": "5/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 6,
+          "centralizer_size": 4
+        },
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 3,
+          "centralizer_size": 8
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 6,
+          "centralizer_size": 4
+        }
+      ]
+    },
+    {
+      "group": "GL3(2)",
+      "size": 168,
+      "orders": {
+        "1": 1,
+        "2": 21,
+        "3": 56,
+        "4": 42,
+        "7": 48
+      },
+      "involution_classes": 1,
+      "even_mass": "3/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 21,
+          "centralizer_size": 8
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 42,
+          "centralizer_size": 4
+        }
+      ]
+    },
+    {
+      "group": "A6",
+      "size": 360,
+      "orders": {
+        "1": 1,
+        "2": 45,
+        "3": 80,
+        "4": 90,
+        "5": 144
+      },
+      "involution_classes": 1,
+      "even_mass": "3/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 45,
+          "centralizer_size": 8
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 90,
+          "centralizer_size": 4
+        }
+      ]
+    },
+    {
+      "group": "A7",
+      "size": 2520,
+      "orders": {
+        "1": 1,
+        "2": 105,
+        "3": 350,
+        "4": 630,
+        "5": 504,
+        "6": 210,
+        "7": 720
+      },
+      "involution_classes": 1,
+      "even_mass": "3/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 105,
+          "centralizer_size": 24
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 630,
+          "centralizer_size": 4
+        }
+      ]
+    },
+    {
+      "group": "D8xC3",
+      "size": 24,
+      "orders": {
+        "1": 1,
+        "2": 5,
+        "3": 2,
+        "4": 2,
+        "6": 10,
+        "12": 4
+      },
+      "involution_classes": 3,
+      "even_mass": "7/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 2,
+          "centralizer_size": 12
+        },
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 2,
+          "centralizer_size": 12
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 2,
+          "centralizer_size": 12
+        },
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 1,
+          "centralizer_size": 24
+        }
+      ]
+    },
+    {
+      "group": "S4xC3",
+      "size": 72,
+      "orders": {
+        "1": 1,
+        "2": 9,
+        "3": 26,
+        "4": 6,
+        "6": 18,
+        "12": 12
+      },
+      "involution_classes": 2,
+      "even_mass": "5/8",
+      "decorations": [
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 6,
+          "centralizer_size": 12
+        },
+        {
+          "order": 2,
+          "odd_centralizer_mass": "1/8",
+          "class_size": 3,
+          "centralizer_size": 24
+        },
+        {
+          "order": 4,
+          "odd_centralizer_mass": "1/4",
+          "class_size": 6,
+          "centralizer_size": 12
+        }
+      ]
+    }
+  ],
+  "odd_subgroup_census": {
+    "1": 1,
+    "3": 28,
+    "7": 8,
+    "21": 8
+  },
+  "affine_groups_checked": 45,
+  "affine_decorations": [
+    {
+      "H_order": 1,
+      "weights": [
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "H_order": 3,
+      "weights": [
+        "1/8",
+        "1/8",
+        "3/8"
+      ]
+    },
+    {
+      "H_order": 7,
+      "weights": [
+        "1/8"
+      ]
+    },
+    {
+      "H_order": 21,
+      "weights": [
+        "3/8"
+      ]
+    }
+  ]
+}

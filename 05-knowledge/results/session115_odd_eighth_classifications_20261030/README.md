@@ -14,6 +14,14 @@ The producer passes11,796 explicit gates in normal and optimized modes. Independ
 
 The unitary producer passes89,001 gates; the separate literal-decoder audit passes44,313, normally and optimized. [Independent proof review](audit_phases/AUDIT.md) covers both packets. Unitary equivalence is not a positivity-preserving probability transport outside the precise congruence gate.
 
+## Verified group and harmonic-tail classifications
+
+[Affine-cube groups](switching/ODD_EIGHTH_GROUPS.md) give all four odd eighths as the **same** observable. Every odd-order linear complement H in GL₃(2) has order1,3,7 or21, with even-order mass of F₂³⋊H respectively7/8,5/8,1/8 or3/8. In every binary dimension the mass is one minus the average of2^(−dim Fix(h)). Separately, every finite group with Sylow D₈ has even-order mass(2c+1)/8, where c is its number of involution classes. Centralizer weights, rather than group order alone, drive the proof.
+
+[Harmonic completion](lrc/HARMONIC_COMPLETION.md) classifies exactly when an almost-AP core with a complete harmonic tail block attains the tail block's optimum, and gives all maximizing points, Möbius floor counts and physical boundary weights. Its high-chamber spectrum is exact; the lower chamber is explicitly outside the classification. For the seven-tail case, the four odd-eighth phases have weight correction w₈(j)=88/105+(32/105)χ₂(j), where χ₂ is the quadratic character modulo8. This is a literal quadratic-character sidecar, not an unweighted phase count.
+
+Independent [group](audit_groups/AUDIT.md) and [LRC](audit_lrc/AUDIT.md) audits passed. The critical harmonic-owner hostile gives8/49 rather than the obsolete two-owner value8/7.
+
 ## Remaining session work
 
-Other lanes classify affine-group even-order probabilities, harmonic-tail LRC families and Collatz one-reset entry phases. They will be added after independent audits. The same fractions are not automatically the same invariant: each connection must retain its source, map, predicate and lost information.
+The remaining work classifies Collatz entry phases and assembles explicit cross-field maps. It will be added after independent audits. The same fractions are not automatically the same invariant: each connection must retain its source, map, predicate and lost information.
