@@ -1,0 +1,29 @@
+{
+  "source_revision": "5ab37f308003e8634d13ea4c0dfe8f1558c11054",
+  "hash_basis": "Inherited sources: exact Git blobs. Packet artifacts: exact LF bytes.",
+  "sources": {
+    "01-canon/theorems/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md": "3cccf2aa70bb198d239f91845a3b1805a90562e4d9384995503d0ef2cfed85ab",
+    "05-knowledge/results/exception_palette_dynamics_20261021/session24-palette-dynamics/PALETTE_DYNAMICS.md": "1a6b679bf8900c38baa8377cff39ca86931dd9ecc02a2ecb73f25bba53150ae3",
+    "05-knowledge/results/growing_attachment_families_20261029/README.md": "354a98f96cf0f86510b5fdfe1096fa34db656b2e7690b236ea261c8a3682f9ce",
+    "05-knowledge/results/overnight_rank_return_20261029/atom_precision.py": "6913ca90dc6a1dcd8f572073d7b517288a3a65c4d9840c48cc75719563ccde6d",
+    "05-knowledge/results/session107_quasirandom_arithmetic_20261029/colored/COLORED_RECURRENCE.md": "0357a5b34f4ace8b8a317d2313bd913d3e4401f6b07d5e02a6393a71d61721b7",
+    "05-knowledge/results/session108_sigma_symmetry_20261030/tournaments/PALETTE_SYMMETRY.md": "1a50254eb3af48dbe0971aefb9c250805c0f3edb81d353d9683374b0e0dd0f5c",
+    "05-knowledge/results/session109_pisano_symmetry_20261030/README.md": "c8851da6e025aaf4cc3b59c8a91ccb1ab63be45a7bfa102abd43dc55d19329a8",
+    "05-knowledge/results/session68_tournament_composition_classification_20261026/session68-classification/CLASSIFICATION.md": "9296178069145fccd220a0868a1478d81195a4f96ca0fa2ba1d1d1307949e46f",
+    "05-knowledge/results/stabilizer_necklace_kernels_20261028/STABILIZERS.md": "1b8cbbe1c0e3473826f5b65e39e09ccd182ca507fec53f3981d3388ab73de8f6",
+    "05-knowledge/results/tournament_open_problem_routes_20261029/PROOFS.md": "d2c30f48bd1eed907b3e7fa73418c3be5db8f266025dabcedfabcc410a743f8a",
+    "05-knowledge/results/wedge_descent_168_20261029/THEORY.md": "14ca926aa22d47df688f951c8201710b28858c75f4f0e576b6ea1b2d2e03d8e6"
+  },
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "certificate.json": "529de9a1140c37670442565d7072ad9b1c7063c62e3aa56eb1ed3ac9f6077b30",
+    "HANDOFF.md": "de50365143a71a9807d0e4fa85888bfae1bd93e6d27ed36ebb260b55e18e1155",
+    "PROOFS.md": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+    "README.md": "445568ea36f02935300b51e58ddceb2a386831f06c66616abe1358a8c3f2820b",
+    "RECOVERY.md": "d77bf1112c870be2d250486906dccf7cfc1b05f8bd0529b5dd2f5ac5cd6db994",
+    "seal.py": "ba1be5ea7832da0afa4a004080cb6410ba4cf5578938a816a491f2fa9e731931",
+    "verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
+  },
+  "scope": "Same-agent proof audit; independent native algorithms; no independent referee.",
+  "runtime": "Python standard library only; verify.py imports no local research modules."
+}

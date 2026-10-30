@@ -1,0 +1,2016 @@
+{
+  "extensions": {
+    "all_even_labelled_through_6": {
+      "2": {
+        "2": 2
+      },
+      "4": {
+        "0": 24,
+        "1": 16,
+        "2": 24
+      },
+      "6": {
+        "0": 28880,
+        "1": 3168,
+        "2": 720
+      }
+    },
+    "parents": [
+      {
+        "n": 1,
+        "parent_rows": [
+          0
+        ],
+        "parent_aut_order": 1,
+        "regular_labelled_universe": 1,
+        "subset_orbits": 2,
+        "vertex_orbits": 1,
+        "child_classes": 1,
+        "child_group_order_inventory": {
+          "1": 1
+        },
+        "rigid_attachment_masks": 2,
+        "canonical_child_masks": [
+          0
+        ]
+      },
+      {
+        "n": 3,
+        "parent_rows": [
+          2,
+          4,
+          1
+        ],
+        "parent_aut_order": 3,
+        "regular_labelled_universe": 2,
+        "subset_orbits": 4,
+        "vertex_orbits": 1,
+        "child_classes": 3,
+        "child_group_order_inventory": {
+          "1": 1,
+          "3": 2
+        },
+        "rigid_attachment_masks": 6,
+        "canonical_child_masks": [
+          0,
+          1,
+          7
+        ]
+      },
+      {
+        "n": 5,
+        "parent_rows": [
+          6,
+          12,
+          24,
+          17,
+          3
+        ],
+        "parent_aut_order": 5,
+        "regular_labelled_universe": 24,
+        "subset_orbits": 8,
+        "vertex_orbits": 1,
+        "child_classes": 7,
+        "child_group_order_inventory": {
+          "1": 5,
+          "5": 2
+        },
+        "rigid_attachment_masks": 30,
+        "canonical_child_masks": [
+          0,
+          1,
+          3,
+          5,
+          11,
+          15,
+          31
+        ]
+      },
+      {
+        "n": 7,
+        "parent_rows": [
+          14,
+          28,
+          56,
+          112,
+          97,
+          67,
+          7
+        ],
+        "parent_aut_order": 7,
+        "regular_labelled_universe": 2640,
+        "subset_orbits": 20,
+        "vertex_orbits": 1,
+        "child_classes": 19,
+        "child_group_order_inventory": {
+          "1": 17,
+          "7": 2
+        },
+        "rigid_attachment_masks": 126,
+        "canonical_child_masks": [
+          0,
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          19,
+          21,
+          23,
+          27,
+          29,
+          31,
+          43,
+          47,
+          55,
+          63,
+          127
+        ]
+      },
+      {
+        "n": 7,
+        "parent_rows": [
+          14,
+          28,
+          104,
+          112,
+          37,
+          67,
+          19
+        ],
+        "parent_aut_order": 3,
+        "regular_labelled_universe": 2640,
+        "subset_orbits": 48,
+        "vertex_orbits": 3,
+        "child_classes": 45,
+        "child_group_order_inventory": {
+          "1": 38,
+          "3": 7
+        },
+        "rigid_attachment_masks": 120,
+        "canonical_child_masks": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          18,
+          19,
+          21,
+          22,
+          23,
+          25,
+          26,
+          27,
+          29,
+          31,
+          37,
+          38,
+          39,
+          42,
+          43,
+          46,
+          47,
+          54,
+          55,
+          58,
+          59,
+          62,
+          63,
+          74,
+          75,
+          79,
+          90,
+          91,
+          95,
+          111,
+          127
+        ]
+      },
+      {
+        "n": 7,
+        "parent_rows": [
+          14,
+          52,
+          88,
+          98,
+          41,
+          69,
+          19
+        ],
+        "parent_aut_order": 21,
+        "regular_labelled_universe": 2640,
+        "subset_orbits": 12,
+        "vertex_orbits": 1,
+        "child_classes": 11,
+        "child_group_order_inventory": {
+          "1": 4,
+          "3": 5,
+          "21": 2
+        },
+        "rigid_attachment_masks": 84,
+        "canonical_child_masks": [
+          0,
+          1,
+          3,
+          7,
+          14,
+          21,
+          23,
+          29,
+          31,
+          63,
+          127
+        ]
+      },
+      {
+        "n": 9,
+        "parent_rows": [
+          58,
+          60,
+          57,
+          464,
+          480,
+          456,
+          135,
+          263,
+          71
+        ],
+        "parent_aut_order": 81,
+        "regular_labelled_universe": null,
+        "subset_orbits": 24,
+        "vertex_orbits": 1,
+        "child_classes": 23,
+        "child_group_order_inventory": {
+          "1": 2,
+          "3": 10,
+          "9": 7,
+          "27": 2,
+          "81": 2
+        },
+        "rigid_attachment_masks": 162,
+        "canonical_child_masks": [
+          0,
+          1,
+          3,
+          7,
+          9,
+          11,
+          15,
+          25,
+          27,
+          31,
+          57,
+          63,
+          73,
+          75,
+          79,
+          91,
+          95,
+          123,
+          127,
+          219,
+          223,
+          255,
+          511
+        ]
+      }
+    ],
+    "regular_card_subclass": [
+      {
+        "child_n": 2,
+        "classes": 1,
+        "group_order_inventory": {
+          "1": 1
+        },
+        "labelled_mass": 2,
+        "exactly_one_regular_card": 0,
+        "exactly_two_regular_cards": 2
+      },
+      {
+        "child_n": 4,
+        "classes": 3,
+        "group_order_inventory": {
+          "1": 1,
+          "3": 2
+        },
+        "labelled_mass": 40,
+        "exactly_one_regular_card": 16,
+        "exactly_two_regular_cards": 24
+      },
+      {
+        "child_n": 6,
+        "classes": 7,
+        "group_order_inventory": {
+          "1": 5,
+          "5": 2
+        },
+        "labelled_mass": 3888,
+        "exactly_one_regular_card": 3168,
+        "exactly_two_regular_cards": 720
+      },
+      {
+        "child_n": 8,
+        "classes": 75,
+        "group_order_inventory": {
+          "1": 59,
+          "3": 12,
+          "7": 2,
+          "21": 2
+        },
+        "labelled_mass": 2555520,
+        "exactly_one_regular_card": 2407680,
+        "exactly_two_regular_cards": 147840
+      }
+    ]
+  },
+  "seeds": [
+    {
+      "seed": "C3",
+      "b": 3,
+      "h": 3,
+      "d": 2,
+      "minimal_partition_groups": {
+        "3": 1
+      },
+      "max_transitive": 2,
+      "coloring_census": {
+        "2": {
+          "1": 6,
+          "3": 2
+        },
+        "3": {
+          "1": 24,
+          "3": 3
+        },
+        "4": {
+          "1": 60,
+          "3": 4
+        }
+      }
+    },
+    {
+      "seed": "R5",
+      "b": 5,
+      "h": 5,
+      "d": 4,
+      "minimal_partition_groups": {
+        "5": 1
+      },
+      "max_transitive": 3,
+      "coloring_census": {
+        "2": {
+          "1": 30,
+          "5": 2
+        },
+        "3": {
+          "1": 240,
+          "5": 3
+        },
+        "4": {
+          "1": 1020,
+          "5": 4
+        }
+      }
+    },
+    {
+      "seed": "P7",
+      "b": 7,
+      "h": 21,
+      "d": 4,
+      "minimal_partition_groups": {
+        "3": 7
+      },
+      "max_transitive": 3,
+      "coloring_census": {
+        "2": {
+          "1": 84,
+          "3": 42,
+          "21": 2
+        },
+        "3": {
+          "1": 2016,
+          "3": 168,
+          "21": 3
+        },
+        "4": {
+          "1": 15960,
+          "3": 420,
+          "21": 4
+        }
+      }
+    }
+  ],
+  "threshold_controls": [
+    {
+      "seed": "C3",
+      "q": 2,
+      "depth": 1,
+      "n": 3,
+      "critical_parameter_n_over_qd": "3/4",
+      "rigidity_probability_interval": {
+        "lower": 750000000000,
+        "upper": 750000000001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 750000000000,
+        "upper": 750000000001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 2,
+      "depth": 2,
+      "n": 9,
+      "critical_parameter_n_over_qd": "9/4",
+      "rigidity_probability_interval": {
+        "lower": 316406250000,
+        "upper": 316406250001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 421875000000,
+        "upper": 421875000001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 281250000000,
+        "upper": 281250000001,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 2,
+      "depth": 3,
+      "n": 27,
+      "critical_parameter_n_over_qd": "27/4",
+      "rigidity_probability_interval": {
+        "lower": 23757264018,
+        "upper": 23757264019,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 75084686279,
+        "upper": 75084686280,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 893806457519,
+        "upper": 893806457520,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 2,
+      "depth": 4,
+      "n": 81,
+      "critical_parameter_n_over_qd": "81/4",
+      "rigidity_probability_interval": {
+        "lower": 10056585,
+        "upper": 10056586,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 423305695,
+        "upper": 423305696,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 1000000000000,
+        "upper": 1000000000001,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 4,
+      "depth": 1,
+      "n": 3,
+      "critical_parameter_n_over_qd": "3/16",
+      "rigidity_probability_interval": {
+        "lower": 937500000000,
+        "upper": 937500000001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 937500000000,
+        "upper": 937500000001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 4,
+      "depth": 2,
+      "n": 9,
+      "critical_parameter_n_over_qd": "9/16",
+      "rigidity_probability_interval": {
+        "lower": 821914672851,
+        "upper": 821914672852,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 823974609375,
+        "upper": 823974609376,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 4394531250,
+        "upper": 4394531251,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 4,
+      "depth": 3,
+      "n": 27,
+      "critical_parameter_n_over_qd": "27/16",
+      "rigidity_probability_interval": {
+        "lower": 555239224914,
+        "upper": 555239224915,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 559424506718,
+        "upper": 559424506719,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 13183784700,
+        "upper": 13183784701,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 4,
+      "depth": 4,
+      "n": 81,
+      "critical_parameter_n_over_qd": "81/16",
+      "rigidity_probability_interval": {
+        "lower": 171175032061,
+        "upper": 171175032062,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 175075132133,
+        "upper": 175075132134,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 39551354100,
+        "upper": 39551354101,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 8,
+      "depth": 1,
+      "n": 3,
+      "critical_parameter_n_over_qd": "3/64",
+      "rigidity_probability_interval": {
+        "lower": 984375000000,
+        "upper": 984375000001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 984375000000,
+        "upper": 984375000001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 8,
+      "depth": 2,
+      "n": 9,
+      "critical_parameter_n_over_qd": "9/64",
+      "rigidity_probability_interval": {
+        "lower": 953819811344,
+        "upper": 953819811345,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 953853607177,
+        "upper": 953853607178,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 68664550,
+        "upper": 68664551,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 8,
+      "depth": 3,
+      "n": 27,
+      "critical_parameter_n_over_qd": "27/64",
+      "rigidity_probability_interval": {
+        "lower": 867758779180,
+        "upper": 867758779181,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 867851021982,
+        "upper": 867851021983,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 205993653,
+        "upper": 205993654,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 8,
+      "depth": 4,
+      "n": 81,
+      "critical_parameter_n_over_qd": "81/64",
+      "rigidity_probability_interval": {
+        "lower": 653426958843,
+        "upper": 653426958844,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 653635358949,
+        "upper": 653635358950,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 617980959,
+        "upper": 617980960,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 16,
+      "depth": 1,
+      "n": 3,
+      "critical_parameter_n_over_qd": "3/256",
+      "rigidity_probability_interval": {
+        "lower": 996093750000,
+        "upper": 996093750001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 996093750000,
+        "upper": 996093750001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 16,
+      "depth": 2,
+      "n": 9,
+      "critical_parameter_n_over_qd": "9/256",
+      "rigidity_probability_interval": {
+        "lower": 988326432416,
+        "upper": 988326432417,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 988326966762,
+        "upper": 988326966763,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 1072883,
+        "upper": 1072884,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 16,
+      "depth": 3,
+      "n": 27,
+      "critical_parameter_n_over_qd": "27/256",
+      "rigidity_probability_interval": {
+        "lower": 965386523006,
+        "upper": 965386523007,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 965388088838,
+        "upper": 965388088839,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 3218650,
+        "upper": 3218651,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 16,
+      "depth": 4,
+      "n": 81,
+      "critical_parameter_n_over_qd": "81/256",
+      "rigidity_probability_interval": {
+        "lower": 899712377231,
+        "upper": 899712377232,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 899716755168,
+        "upper": 899716755169,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 9655952,
+        "upper": 9655953,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 32,
+      "depth": 1,
+      "n": 3,
+      "critical_parameter_n_over_qd": "3/1024",
+      "rigidity_probability_interval": {
+        "lower": 999023437500,
+        "upper": 999023437501,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999023437500,
+        "upper": 999023437501,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 32,
+      "depth": 2,
+      "n": 9,
+      "critical_parameter_n_over_qd": "9/1024",
+      "rigidity_probability_interval": {
+        "lower": 997073164217,
+        "upper": 997073164218,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 997073172591,
+        "upper": 997073172592,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 16763,
+        "upper": 16764,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 32,
+      "depth": 3,
+      "n": 27,
+      "critical_parameter_n_over_qd": "27/1024",
+      "rigidity_probability_interval": {
+        "lower": 991245166684,
+        "upper": 991245166685,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 991245191658,
+        "upper": 991245191659,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 50291,
+        "upper": 50292,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "C3",
+      "q": 32,
+      "depth": 4,
+      "n": 81,
+      "critical_parameter_n_over_qd": "81/1024",
+      "rigidity_probability_interval": {
+        "lower": 973964770339,
+        "upper": 973964770340,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 973964843956,
+        "upper": 973964843957,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 150874,
+        "upper": 150875,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 2,
+      "depth": 1,
+      "n": 5,
+      "critical_parameter_n_over_qd": "5/16",
+      "rigidity_probability_interval": {
+        "lower": 937500000000,
+        "upper": 937500000001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 937500000000,
+        "upper": 937500000001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 2,
+      "depth": 2,
+      "n": 25,
+      "critical_parameter_n_over_qd": "25/16",
+      "rigidity_probability_interval": {
+        "lower": 723637640476,
+        "upper": 723637640477,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 724196434020,
+        "upper": 724196434021,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 2384185791,
+        "upper": 2384185792,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 2,
+      "depth": 3,
+      "n": 125,
+      "critical_parameter_n_over_qd": "125/16",
+      "rigidity_probability_interval": {
+        "lower": 198429274452,
+        "upper": 198429274453,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 199196594783,
+        "upper": 199196594784,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 11920928955,
+        "upper": 11920928956,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 2,
+      "depth": 4,
+      "n": 625,
+      "critical_parameter_n_over_qd": "625/16",
+      "rigidity_probability_interval": {
+        "lower": 307630025,
+        "upper": 307630026,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 313624188,
+        "upper": 313624189,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 59604644776,
+        "upper": 59604644777,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 4,
+      "depth": 1,
+      "n": 5,
+      "critical_parameter_n_over_qd": "5/256",
+      "rigidity_probability_interval": {
+        "lower": 996093750000,
+        "upper": 996093750001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 996093750000,
+        "upper": 996093750001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 4,
+      "depth": 2,
+      "n": 25,
+      "critical_parameter_n_over_qd": "25/256",
+      "rigidity_probability_interval": {
+        "lower": 980620742441,
+        "upper": 980620742442,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 980620743007,
+        "upper": 980620743008,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 2273,
+        "upper": 2274,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 4,
+      "depth": 3,
+      "n": 125,
+      "critical_parameter_n_over_qd": "125/256",
+      "rigidity_probability_interval": {
+        "lower": 906787191026,
+        "upper": 906787191027,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 906787193644,
+        "upper": 906787193645,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 11368,
+        "upper": 11369,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 4,
+      "depth": 4,
+      "n": 625,
+      "critical_parameter_n_over_qd": "625/256",
+      "rigidity_probability_interval": {
+        "lower": 613093743123,
+        "upper": 613093743124,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 613093751973,
+        "upper": 613093751974,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 56843,
+        "upper": 56844,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 8,
+      "depth": 1,
+      "n": 5,
+      "critical_parameter_n_over_qd": "5/4096",
+      "rigidity_probability_interval": {
+        "lower": 999755859375,
+        "upper": 999755859376,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999755859375,
+        "upper": 999755859376,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 8,
+      "depth": 2,
+      "n": 25,
+      "critical_parameter_n_over_qd": "25/4096",
+      "rigidity_probability_interval": {
+        "lower": 998779892775,
+        "upper": 998779892776,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 998779892775,
+        "upper": 998779892776,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 8,
+      "depth": 3,
+      "n": 125,
+      "critical_parameter_n_over_qd": "125/4096",
+      "rigidity_probability_interval": {
+        "lower": 993914332343,
+        "upper": 993914332344,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 993914332343,
+        "upper": 993914332344,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 8,
+      "depth": 4,
+      "n": 625,
+      "critical_parameter_n_over_qd": "625/4096",
+      "rigidity_probability_interval": {
+        "lower": 969939768229,
+        "upper": 969939768230,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 969939768229,
+        "upper": 969939768230,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 16,
+      "depth": 1,
+      "n": 5,
+      "critical_parameter_n_over_qd": "5/65536",
+      "rigidity_probability_interval": {
+        "lower": 999984741210,
+        "upper": 999984741211,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999984741210,
+        "upper": 999984741211,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 16,
+      "depth": 2,
+      "n": 25,
+      "critical_parameter_n_over_qd": "25/65536",
+      "rigidity_probability_interval": {
+        "lower": 999923708382,
+        "upper": 999923708383,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999923708382,
+        "upper": 999923708383,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 16,
+      "depth": 3,
+      "n": 125,
+      "critical_parameter_n_over_qd": "125/65536",
+      "rigidity_probability_interval": {
+        "lower": 999618600114,
+        "upper": 999618600115,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999618600114,
+        "upper": 999618600115,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 16,
+      "depth": 4,
+      "n": 625,
+      "critical_parameter_n_over_qd": "625/65536",
+      "rigidity_probability_interval": {
+        "lower": 998094454676,
+        "upper": 998094454677,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 998094454676,
+        "upper": 998094454677,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 32,
+      "depth": 1,
+      "n": 5,
+      "critical_parameter_n_over_qd": "5/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999999046325,
+        "upper": 999999046326,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999999046325,
+        "upper": 999999046326,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 32,
+      "depth": 2,
+      "n": 25,
+      "critical_parameter_n_over_qd": "25/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999995231637,
+        "upper": 999995231638,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999995231637,
+        "upper": 999995231638,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 32,
+      "depth": 3,
+      "n": 125,
+      "critical_parameter_n_over_qd": "125/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999976158414,
+        "upper": 999976158415,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999976158414,
+        "upper": 999976158415,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "R5",
+      "q": 32,
+      "depth": 4,
+      "n": 625,
+      "critical_parameter_n_over_qd": "625/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999880797758,
+        "upper": 999880797759,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999880797758,
+        "upper": 999880797759,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 2,
+      "depth": 1,
+      "n": 7,
+      "critical_parameter_n_over_qd": "7/16",
+      "rigidity_probability_interval": {
+        "lower": 656250000000,
+        "upper": 656250000001,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 656250000000,
+        "upper": 656250000001,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 2,
+      "depth": 2,
+      "n": 49,
+      "critical_parameter_n_over_qd": "49/16",
+      "rigidity_probability_interval": {
+        "lower": 51062040132,
+        "upper": 51062040133,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 52418575534,
+        "upper": 52418575535,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 14489963650,
+        "upper": 14489963651,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 2,
+      "depth": 3,
+      "n": 343,
+      "critical_parameter_n_over_qd": "343/16",
+      "rigidity_probability_interval": {
+        "lower": 905,
+        "upper": 906,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 1087,
+        "upper": 1088,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 101429745554,
+        "upper": 101429745555,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 2,
+      "depth": 4,
+      "n": 2401,
+      "critical_parameter_n_over_qd": "2401/16",
+      "rigidity_probability_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 710008218884,
+        "upper": 710008218885,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 4,
+      "depth": 1,
+      "n": 7,
+      "critical_parameter_n_over_qd": "7/256",
+      "rigidity_probability_interval": {
+        "lower": 974121093750,
+        "upper": 974121093751,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 974121093750,
+        "upper": 974121093751,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 4,
+      "depth": 2,
+      "n": 49,
+      "critical_parameter_n_over_qd": "49/256",
+      "rigidity_probability_interval": {
+        "lower": 832320581669,
+        "upper": 832320581670,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 832320581686,
+        "upper": 832320581687,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 53,
+        "upper": 54,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 4,
+      "depth": 3,
+      "n": 343,
+      "critical_parameter_n_over_qd": "343/256",
+      "rigidity_probability_interval": {
+        "lower": 276716106375,
+        "upper": 276716106376,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 276716106415,
+        "upper": 276716106416,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 377,
+        "upper": 378,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 4,
+      "depth": 4,
+      "n": 2401,
+      "critical_parameter_n_over_qd": "2401/256",
+      "rigidity_probability_interval": {
+        "lower": 124234171,
+        "upper": 124234172,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 124234171,
+        "upper": 124234172,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 2644,
+        "upper": 2645,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 8,
+      "depth": 1,
+      "n": 7,
+      "critical_parameter_n_over_qd": "7/4096",
+      "rigidity_probability_interval": {
+        "lower": 998313903808,
+        "upper": 998313903809,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 998313903808,
+        "upper": 998313903809,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 8,
+      "depth": 2,
+      "n": 49,
+      "critical_parameter_n_over_qd": "49/4096",
+      "rigidity_probability_interval": {
+        "lower": 988256860500,
+        "upper": 988256860501,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 988256860500,
+        "upper": 988256860501,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 8,
+      "depth": 3,
+      "n": 343,
+      "critical_parameter_n_over_qd": "343/4096",
+      "rigidity_probability_interval": {
+        "lower": 920637933440,
+        "upper": 920637933441,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 920637933440,
+        "upper": 920637933441,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 8,
+      "depth": 4,
+      "n": 2401,
+      "critical_parameter_n_over_qd": "2401/4096",
+      "rigidity_probability_interval": {
+        "lower": 560559939280,
+        "upper": 560559939281,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 560559939280,
+        "upper": 560559939281,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 16,
+      "depth": 1,
+      "n": 7,
+      "critical_parameter_n_over_qd": "7/65536",
+      "rigidity_probability_interval": {
+        "lower": 999893546104,
+        "upper": 999893546105,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999893546104,
+        "upper": 999893546105,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 16,
+      "depth": 2,
+      "n": 49,
+      "critical_parameter_n_over_qd": "49/65536",
+      "rigidity_probability_interval": {
+        "lower": 999255060669,
+        "upper": 999255060670,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999255060669,
+        "upper": 999255060670,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 16,
+      "depth": 3,
+      "n": 343,
+      "critical_parameter_n_over_qd": "343/65536",
+      "rigidity_probability_interval": {
+        "lower": 994797063857,
+        "upper": 994797063858,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 994797063857,
+        "upper": 994797063858,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 16,
+      "depth": 4,
+      "n": 2401,
+      "critical_parameter_n_over_qd": "2401/65536",
+      "rigidity_probability_interval": {
+        "lower": 964143024386,
+        "upper": 964143024387,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 964143024386,
+        "upper": 964143024387,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 32,
+      "depth": 1,
+      "n": 7,
+      "critical_parameter_n_over_qd": "7/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999993329867,
+        "upper": 999993329868,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999993329867,
+        "upper": 999993329868,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 32,
+      "depth": 2,
+      "n": 49,
+      "critical_parameter_n_over_qd": "49/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999953310008,
+        "upper": 999953310009,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999953310008,
+        "upper": 999953310009,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 32,
+      "depth": 3,
+      "n": 343,
+      "critical_parameter_n_over_qd": "343/1048576",
+      "rigidity_probability_interval": {
+        "lower": 999673215833,
+        "upper": 999673215834,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 999673215833,
+        "upper": 999673215834,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    },
+    {
+      "seed": "P7",
+      "q": 32,
+      "depth": 4,
+      "n": 2401,
+      "critical_parameter_n_over_qd": "2401/1048576",
+      "rigidity_probability_interval": {
+        "lower": 997714752161,
+        "upper": 997714752162,
+        "denominator": 1000000000000
+      },
+      "bottom_probability_interval": {
+        "lower": 997714752161,
+        "upper": 997714752162,
+        "denominator": 1000000000000
+      },
+      "higher_symmetry_bound_interval": {
+        "lower": 0,
+        "upper": 1,
+        "denominator": 1000000000000
+      }
+    }
+  ],
+  "hostile": {
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ],
+    "common_cyclic_triples": 67
+  },
+  "ternary_unmarked_children": [
+    {
+      "depth": 0,
+      "parent_n": 1,
+      "subset_orbits": 2,
+      "child_classes": 1,
+      "point_stabilizer_exponent": 0,
+      "child_stabilizer_exponent_inventory": {
+        "0": 1
+      }
+    },
+    {
+      "depth": 1,
+      "parent_n": 3,
+      "subset_orbits": 4,
+      "child_classes": 3,
+      "point_stabilizer_exponent": 0,
+      "child_stabilizer_exponent_inventory": {
+        "0": 1,
+        "1": 2
+      }
+    },
+    {
+      "depth": 2,
+      "parent_n": 9,
+      "subset_orbits": 24,
+      "child_classes": 23,
+      "point_stabilizer_exponent": 2,
+      "child_stabilizer_exponent_inventory": {
+        "0": 2,
+        "1": 10,
+        "2": 7,
+        "3": 2,
+        "4": 2
+      }
+    },
+    {
+      "depth": 3,
+      "parent_n": 27,
+      "subset_orbits": 4624,
+      "child_classes": 4623,
+      "point_stabilizer_exponent": 10,
+      "child_stabilizer_exponent_inventory": {
+        "0": 2,
+        "1": 42,
+        "2": 232,
+        "3": 658,
+        "4": 1026,
+        "5": 984,
+        "6": 760,
+        "7": 512,
+        "8": 248,
+        "9": 106,
+        "10": 41,
+        "11": 8,
+        "12": 2,
+        "13": 2
+      }
+    },
+    {
+      "depth": 4,
+      "parent_n": 81,
+      "subset_orbits": 32955830624,
+      "child_classes": 32955830623,
+      "point_stabilizer_exponent": 36,
+      "child_stabilizer_exponent_inventory": {
+        "0": 2,
+        "1": 170,
+        "2": 4456,
+        "3": 66290,
+        "4": 631586,
+        "5": 4208248,
+        "6": 20781688,
+        "7": 79074688,
+        "8": 238384504,
+        "9": 582046114,
+        "10": 1173654162,
+        "11": 1992076032,
+        "12": 2901091746,
+        "13": 3690683722,
+        "14": 4163457352,
+        "15": 4213188040,
+        "16": 3859376544,
+        "17": 3223883016,
+        "18": 2469813088,
+        "19": 1743041704,
+        "20": 1137711568,
+        "21": 689074248,
+        "22": 388343336,
+        "23": 204301992,
+        "24": 100642216,
+        "25": 46547904,
+        "26": 20292392,
+        "27": 8364202,
+        "28": 3260650,
+        "29": 1205824,
+        "30": 422810,
+        "31": 139266,
+        "32": 43480,
+        "33": 12888,
+        "34": 3488,
+        "35": 920,
+        "36": 233,
+        "37": 42,
+        "38": 8,
+        "39": 2,
+        "40": 2
+      }
+    }
+  ],
+  "forbidden_prime_guard": {
+    "P11_rows": [
+      570,
+      1140,
+      233,
+      466,
+      932,
+      1864,
+      1681,
+      1315,
+      583,
+      1166,
+      285
+    ],
+    "P11_nontrivial_modules": 0,
+    "P11_cards": [
+      {
+        "deleted": 0,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 1,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 2,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 3,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 4,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 5,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 6,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 7,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 8,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 9,
+        "nontrivial_modules": 0
+      },
+      {
+        "deleted": 10,
+        "nontrivial_modules": 0
+      }
+    ],
+    "P7_card_nontrivial_module_counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "rigid_P7_free_construction": [
+      {
+        "depth": 1,
+        "child_n": 6,
+        "cut_weight": 1,
+        "child_max_transitive": 4
+      },
+      {
+        "depth": 2,
+        "child_n": 26,
+        "cut_weight": 8,
+        "child_max_transitive": 10
+      },
+      {
+        "depth": 3,
+        "child_n": 126,
+        "cut_weight": 49,
+        "child_max_transitive": 28
+      },
+      {
+        "depth": 4,
+        "child_n": 626,
+        "cut_weight": 272,
+        "child_max_transitive": 82
+      }
+    ],
+    "failed_guard_hostile": {
+      "child_rows": [
+        570,
+        60,
+        57,
+        464,
+        992,
+        968,
+        135,
+        775,
+        583,
+        78
+      ],
+      "induced_R5_vertices": [
+        0,
+        2,
+        4,
+        6,
+        9
+      ]
+    },
+    "unprotected_two_step_growth_orders": [
+      3,
+      1,
+      5
+    ],
+    "rigid_P11_free_construction": [
+      {
+        "depth": 1,
+        "parent_n": 7,
+        "cut_weight": 2,
+        "complement_weight": 5,
+        "child_max_transitive": 4
+      },
+      {
+        "depth": 2,
+        "parent_n": 49,
+        "cut_weight": 20,
+        "complement_weight": 29,
+        "child_max_transitive": 10
+      },
+      {
+        "depth": 3,
+        "parent_n": 343,
+        "cut_weight": 158,
+        "complement_weight": 185,
+        "child_max_transitive": 28
+      },
+      {
+        "depth": 4,
+        "parent_n": 2401,
+        "cut_weight": 1160,
+        "complement_weight": 1241,
+        "child_max_transitive": 82
+      }
+    ]
+  },
+  "gates": 35661
+}
