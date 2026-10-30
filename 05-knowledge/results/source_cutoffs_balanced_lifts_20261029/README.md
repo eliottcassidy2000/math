@@ -45,6 +45,11 @@ the new ordinary-class recurrence. Chronological checkpoints provide
 provenance; every needed algebraic implication is proved in this packet
 or linked to a specific proved mechanism.
 
+The final rebase also integrated `0ad8de0355` and `51cd593a3e`.
+[INCOMING.md](INCOMING.md) gives the exact common norm-conic chart,
+its ramified versus finite-field boundary, the obstruction to importing
+a doubly-regular deletion margin, and the replayed named-port count.
+
 ## Results and actual boundaries
 
 | Result | Exact content | Boundary |

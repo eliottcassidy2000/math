@@ -99,3 +99,10 @@ Read incoming revisions: `ffb722baad` and, mid-session, `3dea39a85d`.
 In particular Session110's prime-affine classes are not substituted for
 full graph types, and its nilpotent extra-symmetry hostile is retained.
 The primary checkout and all unrelated work remain untouched.
+
+Final-pull review additionally covered `0ad8de0355` and `51cd593a3e`;
+see INCOMING.md. The first commit's portable binary-module checker was
+replayed with Node:280 termwise palette comparisons and the order12
+uncolored control pass. The second packet's growth proofs and arithmetic
+sections A1--A4 were read for the specific comparisons recorded there;
+its complete million-gate verifier was not rerun in this session.
