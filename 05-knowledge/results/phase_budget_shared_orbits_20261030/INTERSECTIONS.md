@@ -82,6 +82,11 @@ copies. Arbitrary nonfactorizing source measures require their actual pullback
 or explicit summation; this formula is not permission to replace them by product
 or uniform measures.
 
+If two charts retain different source histories, the same target tournament
+can carry different pulled-back weights. Keep owner-indexed measures in that
+case. Deduplicating targets is a separate consumer and is valid for a single
+target measure only after agreement of those weights is established.
+
 ## 2. The inherited large composite overlap
 
 Let r,m>=3 be odd, n=rm, x=i+rj. Put a(x)=x+1 modulo n and
