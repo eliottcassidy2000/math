@@ -1,0 +1,470 @@
+{
+  "character_cases": 220,
+  "exact_unit_stabilizer_cases": 166,
+  "hostile": {
+    "N": 15,
+    "character_value": -1,
+    "conductor": 3,
+    "fixed_residue": 3,
+    "multiplier": 11
+  },
+  "literal_valid_symbols_counted_N_le_15": 40,
+  "moduli_count": 75,
+  "odd_moduli": [
+    3,
+    151
+  ],
+  "rows": [
+    {
+      "N": 3,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 5,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 7,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 9,
+      "characters": 2,
+      "full_tournament_symbols": 4,
+      "odd_characters": 1
+    },
+    {
+      "N": 11,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 13,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 15,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 17,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 19,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 21,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 23,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 25,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 27,
+      "characters": 2,
+      "full_tournament_symbols": 8,
+      "odd_characters": 1
+    },
+    {
+      "N": 29,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 31,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 33,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 35,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 37,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 39,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 41,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 43,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 45,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 47,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 49,
+      "characters": 2,
+      "full_tournament_symbols": 4,
+      "odd_characters": 1
+    },
+    {
+      "N": 51,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 53,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 55,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 57,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 59,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 61,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 63,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 65,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 67,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 69,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 71,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 73,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 75,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 77,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 79,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 81,
+      "characters": 2,
+      "full_tournament_symbols": 16,
+      "odd_characters": 1
+    },
+    {
+      "N": 83,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 85,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 87,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 89,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 91,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 93,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 95,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 97,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 99,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 101,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 103,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 105,
+      "characters": 8,
+      "full_tournament_symbols": 0,
+      "odd_characters": 4
+    },
+    {
+      "N": 107,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 109,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 111,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 113,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 115,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 117,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 119,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 121,
+      "characters": 2,
+      "full_tournament_symbols": 4,
+      "odd_characters": 1
+    },
+    {
+      "N": 123,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 125,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 127,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 129,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 131,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 133,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 135,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 137,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 139,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    },
+    {
+      "N": 141,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 143,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 145,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 147,
+      "characters": 4,
+      "full_tournament_symbols": 0,
+      "odd_characters": 2
+    },
+    {
+      "N": 149,
+      "characters": 2,
+      "full_tournament_symbols": 0,
+      "odd_characters": 0
+    },
+    {
+      "N": 151,
+      "characters": 2,
+      "full_tournament_symbols": 2,
+      "odd_characters": 1
+    }
+  ],
+  "status": "PASS"
+}

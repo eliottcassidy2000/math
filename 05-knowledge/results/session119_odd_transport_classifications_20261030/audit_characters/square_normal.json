@@ -1,0 +1,28 @@
+{
+  "N231": {
+    "covariance_checks": 3465,
+    "local_character_exponent": 12,
+    "locally_character_symbols": 4096,
+    "noncharacter_witness": {
+      "sigma_u": 1,
+      "sigma_uv": -1,
+      "sigma_v": 1,
+      "u": 23,
+      "uv_mod_N": 20,
+      "v": 31
+    },
+    "square_class_exponent": 13,
+    "square_invariant_symbols": 8192,
+    "tournament_pairs": 26565,
+    "unit_squares": 15
+  },
+  "eligible_moduli": 66,
+  "first_strict_modulus": 231,
+  "odd_moduli_tested": 150,
+  "status": "PASS",
+  "three_bit_antipodal_tables": 16,
+  "three_bit_classes": {
+    "majority_quadratic": 8,
+    "odd_affine": 8
+  }
+}

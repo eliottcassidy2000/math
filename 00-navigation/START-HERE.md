@@ -14,9 +14,7 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md); [S75](S75.md).
 
-[S111](S111.md).
-[S112](S112.md)
-[S113](S113.md); [S114](S114.md); [S115](S115.md); [S116](S116.md); [S117](S117.md); [S118](S118.md)
+[Sessions 111-119](S111-119.md)
 
 ## Orientation
 

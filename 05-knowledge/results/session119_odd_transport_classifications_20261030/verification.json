@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "normal_and_optimized": "PASS",
+      "script": "arithmetic/check_weighted_cycles.py",
+      "stdout_sha256": "dbbd5d2681834d18e5cdca96d1f3c0cf24e03a6c1c501a03194fd2f001a731a5"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_arithmetic/check_independent.py",
+      "stdout_sha256": "18286fc50de58e7d14bd0df9de13c8afbd1663aa862c56c394952323ec6df267"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_characters/check_independent.py",
+      "stdout_sha256": "32973eb1da6bcb5cfbbb97e9533a243e56c53fef14a83800eec37ac31953ed00"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_characters/check_square_lift.py",
+      "stdout_sha256": "652c26210f06a8bdcb335961e55a485d69842ed5709ca7347f1625fa8fe416b0"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_operators/check_independent.py",
+      "stdout_sha256": "3690ddfec638dcb8e611613495e1c57818e27280dee2271f897496d5f080d2ff"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "characters/check_characters.py",
+      "stdout_sha256": "0a0abfd2dda1671c1a7f153b70ac411e40ea9392c7043a21b357554116fe4021"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "characters/check_frames.py",
+      "stdout_sha256": "d6079643dc2740976b336dec2a3af07f5679ded2c4fb425c8811f8c57d51aa24"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "characters/check_local_characters.py",
+      "stdout_sha256": "db65c1aecf06c70d0e9c8da0f351714729f230eaa4778f0f1b19584e4913e942"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "characters/check_square_symbols.py",
+      "stdout_sha256": "30d925dbbb0fc275c2594e052a6a8ccfc8c0682e1cdc564f136583adacf5685d"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "cycles/check_signed_integral.py",
+      "stdout_sha256": "a4ea9c082ab3ea11f0d9e280b933800511b3e3dd57355d9acd782c6a95063087"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "odd_functions/check_odd_lattice.py",
+      "stdout_sha256": "e92e81b51b743f099759beebf15bea74bb96d576bc34cfc5f2a191f5f35891bf"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "synthesis/check_transport_eighths.py",
+      "stdout_sha256": "0269cbfca743bfcb5b6794df89a8f5d9d56a5695ae74e4a9b788a9d9010b9d86"
+    }
+  ],
+  "scope": "finite certificates corroborating the separately stated uniform proofs",
+  "status": "PASS"
+}

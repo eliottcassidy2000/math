@@ -1,0 +1,88 @@
+{
+  "literal_frame_isomorphisms": 384,
+  "literal_node_automorphisms": 240,
+  "rows": [
+    {
+      "Hamiltonian_paths": 3,
+      "a": 1,
+      "certified_subgroup_order": 3,
+      "isomorphism_classes": 1,
+      "labelled_frames": 2,
+      "p": 3,
+      "quotient_by_subgroup_order": 1,
+      "vertices": 3
+    },
+    {
+      "Hamiltonian_paths": 3159,
+      "a": 2,
+      "certified_subgroup_order": 81,
+      "isomorphism_classes": 1,
+      "labelled_frames": 4,
+      "p": 3,
+      "quotient_by_subgroup_order": 39,
+      "vertices": 9
+    },
+    {
+      "a": 3,
+      "certified_subgroup_order": 1594323,
+      "isomorphism_classes": 1,
+      "labelled_frames": 8,
+      "p": 3,
+      "vertices": 27
+    },
+    {
+      "a": 4,
+      "certified_subgroup_order": 12157665459056928801,
+      "isomorphism_classes": 1,
+      "labelled_frames": 16,
+      "p": 3,
+      "vertices": 81
+    },
+    {
+      "Hamiltonian_paths": 189,
+      "a": 1,
+      "certified_subgroup_order": 21,
+      "isomorphism_classes": 1,
+      "labelled_frames": 2,
+      "p": 7,
+      "quotient_by_subgroup_order": 9,
+      "vertices": 7
+    },
+    {
+      "a": 2,
+      "certified_subgroup_order": 37822859361,
+      "isomorphism_classes": 1,
+      "labelled_frames": 4,
+      "p": 7,
+      "vertices": 49
+    },
+    {
+      "Hamiltonian_paths": 95095,
+      "a": 1,
+      "certified_subgroup_order": 55,
+      "isomorphism_classes": 1,
+      "labelled_frames": 2,
+      "p": 11,
+      "quotient_by_subgroup_order": 1729,
+      "vertices": 11
+    },
+    {
+      "a": 2,
+      "certified_subgroup_order": 766217865410400390625,
+      "isomorphism_classes": 1,
+      "labelled_frames": 4,
+      "p": 11,
+      "vertices": 121
+    },
+    {
+      "a": 1,
+      "certified_subgroup_order": 171,
+      "isomorphism_classes": 1,
+      "labelled_frames": 2,
+      "p": 19,
+      "vertices": 19
+    }
+  ],
+  "scope": "explicit subgroup only; no full automorphism or new Ramsey-number claim",
+  "status": "PASS"
+}

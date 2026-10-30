@@ -26,7 +26,37 @@ Classical mechanisms and previously established homogeneous formulas are credite
 not presented as new discoveries. No Collatz convergence, positive-cycle exclusion,
 Ramsey record, LRC closure or unrestricted circuit lower-bound record is claimed.
 
-This first checkpoint precedes the independent audit and completion of the
-character-covariant tournament family lane. It is not used as a proved dependency
-here. Every current checker is standard-library Python and has matching normal
-and optimized outputs; the separate all-parameter proofs state their exact scope.
+## Complete arithmetic tournament families
+
+- [One fixed character](characters/CHARACTER_STRATA.md): conductor-divisibility
+  classifies all allowed strata and their signs. Full support forces a prime power
+  p^a with p=3 mod4. [All valuation frames](characters/FRAME_ISOMORPHISM.md) form
+  one tournament isomorphism class; an explicit wreath subgroup gives Hamiltonian
+  divisibility. Ring residues and finite-field Paley constructions are kept distinct.
+- [Different characters by stratum](characters/LOCAL_CHARACTER_ESCAPE.md): full
+  support exists exactly when every prime factor is3 mod4, with a uniform count.
+  At N=21, all sixteen members form exactly four isomorphism classes within this
+  family, separated by spectral moments and checked cycle counts.
+- [All square-invariant odd symbols](characters/SQUARE_QUOTIENT_CLASSIFICATION.md):
+  a complete quotient-function parametrization gives 2^C symbols, where
+  C=(product_p(1+2a_p)-1)/2 for N=product_p p^a_p with all p=3 mod4.
+  Character formulas suffice exactly up to two distinct prime factors. Three
+  factors admit genuinely nonlinear odd quotient functions. The first eligible
+  modulus231 has8192 symbols versus4096 locally-character symbols, with a literal
+  majority-type example. These are labelled counts, not8192 isomorphism classes.
+- [Independent character audit](audit_characters/AUDIT.md) and
+  [square-class audit](audit_characters/SQUARE_LIFT_AUDIT.md) verify these boundaries.
+
+[Research synthesis](RESEARCH_SYNTHESIS.md) identifies precise routes toward
+extremal and algorithmic advances, and the counterexamples that constrain them.
+The extra square-class symbols have not been shown to improve a Ramsey bound.
+
+## Reproduction
+
+Run `python3 verify.py` in this directory or by its repository-relative path.
+It checks the sealed file hashes and runs all twelve standard-library Python
+checkers normally and with -O, requiring identical outputs and expected receipts.
+All twenty-four runs passed during publication. Finite universes are stated in
+individual proofs and audits. They corroborate the uniform arguments; they are
+not Lean builds or independent human reviews. No external theorem submission or
+unrequested external communication was made.

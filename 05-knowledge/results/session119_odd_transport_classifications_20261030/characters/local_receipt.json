@@ -1,0 +1,235 @@
+{
+  "N21_exact_isomorphism_classes_within_family": 4,
+  "N21_profiles": [
+    {
+      "directed_5cycles": 19530,
+      "multiplicity": 4,
+      "positive_differences": [
+        5,
+        9,
+        10,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20
+      ],
+      "trace_S4": 15876
+    },
+    {
+      "directed_5cycles": 19278,
+      "multiplicity": 4,
+      "positive_differences": [
+        3,
+        5,
+        6,
+        10,
+        12,
+        13,
+        14,
+        17,
+        19,
+        20
+      ],
+      "trace_S4": 23940
+    },
+    {
+      "directed_5cycles": 18648,
+      "multiplicity": 4,
+      "positive_differences": [
+        2,
+        5,
+        8,
+        9,
+        11,
+        14,
+        15,
+        17,
+        18,
+        20
+      ],
+      "trace_S4": 44100
+    },
+    {
+      "directed_5cycles": 19404,
+      "multiplicity": 4,
+      "positive_differences": [
+        2,
+        5,
+        7,
+        8,
+        9,
+        11,
+        15,
+        17,
+        18,
+        20
+      ],
+      "trace_S4": 19908
+    }
+  ],
+  "N21_unit_orbits": [
+    {
+      "directed_5cycles": 19530,
+      "size": 4,
+      "trace_S4": 15876
+    },
+    {
+      "directed_5cycles": 19278,
+      "size": 4,
+      "trace_S4": 23940
+    },
+    {
+      "directed_5cycles": 18648,
+      "size": 4,
+      "trace_S4": 44100
+    },
+    {
+      "directed_5cycles": 19404,
+      "size": 4,
+      "trace_S4": 19908
+    }
+  ],
+  "larger_constructed_controls": [
+    {
+      "N": 27,
+      "constructed_and_checked": 8
+    },
+    {
+      "N": 49,
+      "constructed_and_checked": 4
+    },
+    {
+      "N": 63,
+      "constructed_and_checked": 128
+    },
+    {
+      "N": 77,
+      "constructed_and_checked": 16
+    },
+    {
+      "N": 99,
+      "constructed_and_checked": 128
+    },
+    {
+      "N": 147,
+      "constructed_and_checked": 128
+    }
+  ],
+  "literal_census": [
+    {
+      "N": 3,
+      "all_odd_symbols_examined": 2,
+      "local_character_symbols": 2
+    },
+    {
+      "N": 5,
+      "all_odd_symbols_examined": 4,
+      "local_character_symbols": 0
+    },
+    {
+      "N": 7,
+      "all_odd_symbols_examined": 8,
+      "local_character_symbols": 2
+    },
+    {
+      "N": 9,
+      "all_odd_symbols_examined": 16,
+      "local_character_symbols": 4
+    },
+    {
+      "N": 11,
+      "all_odd_symbols_examined": 32,
+      "local_character_symbols": 2
+    },
+    {
+      "N": 13,
+      "all_odd_symbols_examined": 64,
+      "local_character_symbols": 0
+    },
+    {
+      "N": 15,
+      "all_odd_symbols_examined": 128,
+      "local_character_symbols": 0
+    },
+    {
+      "N": 17,
+      "all_odd_symbols_examined": 256,
+      "local_character_symbols": 0
+    },
+    {
+      "N": 19,
+      "all_odd_symbols_examined": 512,
+      "local_character_symbols": 2
+    },
+    {
+      "N": 21,
+      "all_odd_symbols_examined": 1024,
+      "local_character_symbols": 16
+    }
+  ],
+  "partial_literal_census": [
+    {
+      "N": 3,
+      "partial_symbols": 3,
+      "support_polynomial": {
+        "0": 1,
+        "2": 2
+      }
+    },
+    {
+      "N": 5,
+      "partial_symbols": 1,
+      "support_polynomial": {
+        "0": 1
+      }
+    },
+    {
+      "N": 7,
+      "partial_symbols": 3,
+      "support_polynomial": {
+        "0": 1,
+        "6": 2
+      }
+    },
+    {
+      "N": 9,
+      "partial_symbols": 9,
+      "support_polynomial": {
+        "0": 1,
+        "2": 2,
+        "6": 2,
+        "8": 4
+      }
+    },
+    {
+      "N": 11,
+      "partial_symbols": 3,
+      "support_polynomial": {
+        "0": 1,
+        "10": 2
+      }
+    },
+    {
+      "N": 13,
+      "partial_symbols": 1,
+      "support_polynomial": {
+        "0": 1
+      }
+    },
+    {
+      "N": 15,
+      "partial_symbols": 15,
+      "support_polynomial": {
+        "0": 1,
+        "2": 2,
+        "8": 4,
+        "10": 8
+      }
+    }
+  ],
+  "scope": "specified stratumwise-character family; four literal unit orbits have different profiles, giving exact within-family isomorphism classes",
+  "status": "PASS"
+}

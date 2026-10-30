@@ -1,0 +1,59 @@
+{
+  "boolean_derivative_checks": 492440,
+  "characters": 150,
+  "explicit_ternary_subgroup_elements": 81,
+  "frame_arc_tests": 87084,
+  "frame_pairs": 108,
+  "hamiltonian_controls": [
+    {
+      "a": 1,
+      "p": 3,
+      "paths": 3,
+      "subgroup_order": 3,
+      "vertices": 3
+    },
+    {
+      "a": 1,
+      "p": 7,
+      "paths": 189,
+      "subgroup_order": 21,
+      "vertices": 7
+    },
+    {
+      "a": 2,
+      "p": 3,
+      "paths": 3159,
+      "subgroup_order": 81,
+      "vertices": 9
+    },
+    {
+      "a": 1,
+      "p": 11,
+      "paths": 95095,
+      "subgroup_order": 55,
+      "vertices": 11
+    }
+  ],
+  "literal_partial_words": 726,
+  "odd_moduli": 52,
+  "producer_imports": false,
+  "separate_character_N21": {
+    "isomorphism_classes_within_family": 4,
+    "orbit_trace_four_values": [
+      15876,
+      19908,
+      23940,
+      44100
+    ],
+    "symbols": 16,
+    "trace_four_distribution": {
+      "15876": 4,
+      "19908": 4,
+      "23940": 4,
+      "44100": 4
+    },
+    "unit_orbits": 4
+  },
+  "signed_action_components": 406,
+  "status": "PASS"
+}
