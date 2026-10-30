@@ -1,0 +1,47 @@
+{
+  "cpp_four_input": "PASS",
+  "python_checks": [
+    {
+      "normal_and_optimized": "PASS",
+      "script": "circuits/check_point_defect.py",
+      "stdout_sha256": "508f4ff7b3214f4ee29077097f8a0d183594f52e8ee81a7debd583abbde4f25a"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_circuits/independent_checks.py",
+      "stdout_sha256": "520af648c4492664f3e5cf4ac367cdadc672f53918e497af1c6caba947b7f79b"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "affine_ramsey/check_affine_flats.py",
+      "stdout_sha256": "ac94b6ab25ebbaa35a108f5f17194ab78cba0dd41fed0b0c2fb4fb4aa43aa579"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_affine/check_independent.py",
+      "stdout_sha256": "687f98ab1da3a22da37ecd5535af8331ddf203dc5be936220fb80fc6f2d6fa4f"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "ramsey/check_ramsey_twins.py",
+      "stdout_sha256": "4ba1ec3f66bb799f48346c46099d72426d8a3d9f2db64c796e5165706af1651d"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_ramsey/check_independent.py",
+      "stdout_sha256": "dab01a71dfcfadb6211f6479ee69f595a01152fd42a736ab33f6937fafeb528d"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "challenge_audit/check_potential_frontier.py",
+      "stdout_sha256": "9443dcb981c8681c7685fbb174b4f3c2a342945f415314c66b491779afc86d24"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "bilinear/check_bilinear.py",
+      "stdout_sha256": "37e57de4571d8d0fb90d13a61846430756c619df29d59074a85d421470d9261c"
+    }
+  ],
+  "scope": "finite regression certificates; see separate uniform proofs",
+  "status": "PASS"
+}

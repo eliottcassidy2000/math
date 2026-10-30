@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "all_labeled_tournaments_n1_to5": 1099,
+  "alternating_rows": [
+    {
+      "l": 1,
+      "maximum": 3,
+      "multiplicity": 12
+    },
+    {
+      "l": 2,
+      "maximum": 5,
+      "multiplicity": 1
+    },
+    {
+      "l": 3,
+      "maximum": 7,
+      "multiplicity": 1
+    },
+    {
+      "l": 4,
+      "maximum": 9,
+      "multiplicity": 1
+    }
+  ],
+  "full_support_counts_l1_to8": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "method": "independent triangle scans; no imports from producer; explicit exception gates"
+}

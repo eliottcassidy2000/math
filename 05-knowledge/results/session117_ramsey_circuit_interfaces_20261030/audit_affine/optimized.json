@@ -1,0 +1,36 @@
+{
+  "dimensions": [
+    {
+      "GL_maps_checked": 1,
+      "flats": 1,
+      "n": 0,
+      "parameter_triples": 2
+    },
+    {
+      "GL_maps_checked": 1,
+      "flats": 3,
+      "n": 1,
+      "parameter_triples": 8
+    },
+    {
+      "GL_maps_checked": 6,
+      "flats": 11,
+      "n": 2,
+      "parameter_triples": 32
+    },
+    {
+      "GL_maps_checked": 168,
+      "flats": 51,
+      "n": 3,
+      "parameter_triples": 128
+    },
+    {
+      "GL_maps_checked": 0,
+      "flats": 307,
+      "n": 4,
+      "parameter_triples": 512
+    }
+  ],
+  "literal_flat_classifications": 164090,
+  "status": "PASS"
+}

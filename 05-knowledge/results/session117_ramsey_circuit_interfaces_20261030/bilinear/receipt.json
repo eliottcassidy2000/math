@@ -1,0 +1,70 @@
+{
+  "range": [
+    1,
+    2,
+    3
+  ],
+  "results": [
+    {
+      "affine_flats": 11,
+      "gate_count": 1,
+      "linear_subspaces": 5,
+      "m": 1,
+      "maximum_constant_dimensions": [
+        1,
+        0
+      ],
+      "maximum_rectangles": [
+        2,
+        1
+      ],
+      "maximum_zero_flats": 3,
+      "monochromatic_rectangles": [
+        5,
+        1
+      ],
+      "rectangle_pairs": 9
+    },
+    {
+      "affine_flats": 307,
+      "gate_count": 3,
+      "linear_subspaces": 67,
+      "m": 2,
+      "maximum_constant_dimensions": [
+        2,
+        1
+      ],
+      "maximum_rectangles": [
+        5,
+        6
+      ],
+      "maximum_zero_flats": 15,
+      "monochromatic_rectangles": [
+        41,
+        12
+      ],
+      "rectangle_pairs": 225
+    },
+    {
+      "affine_flats": 26387,
+      "gate_count": 5,
+      "linear_subspaces": 2825,
+      "m": 3,
+      "maximum_constant_dimensions": [
+        3,
+        2
+      ],
+      "maximum_rectangles": [
+        16,
+        35
+      ],
+      "maximum_zero_flats": 135,
+      "monochromatic_rectangles": [
+        817,
+        203
+      ],
+      "rectangle_pairs": 65025
+    }
+  ],
+  "status": "PASS"
+}

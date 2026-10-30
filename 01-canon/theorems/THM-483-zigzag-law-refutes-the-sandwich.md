@@ -12,6 +12,12 @@ dispatch's d⁺/pair-doubling dictionary is the mechanism's coding avatar).
 H = I+S): (u,0)→(v,0) iff u→v; (u,1)→(v,1) iff v→u; cross arcs FOLLOW T in both
 directions ((u,0)→(v,1) iff u→v or u=v — twins 0→1; (u,1)→(v,0) iff u→v, u≠v).
 
+**2026-10-30 proved completion:** [Session 117 twin-projection theorem](../../05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/ramsey/ramsey_twin_projection.md)
+closes the historical one-unit gap: trans(D(A_l))=2l+1 for every l>=1, with a unique
+maximum vertex subset for l>=2 and twelve at l=1. It also gives the exact twin-lift
+enumerator and a 3^n-state algorithm relative to naive doubled-subset enumeration.
+The original finite-evidence boundary below is retained as historical provenance.
+
 ## A. The alternating family A_l (REFUTES HYP-2360)
 
 A_l on 2l+1 vertices: chains u_1→…→u_l and w_{l+1}→w_l→…→w_1 (i.e. w_j→w_i for

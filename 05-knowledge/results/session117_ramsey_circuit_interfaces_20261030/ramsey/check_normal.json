@@ -1,0 +1,36 @@
+{
+  "all_labeled_tournaments_n1_to5": 1099,
+  "alternating_rows": [
+    {
+      "l": 1,
+      "vertices": 3,
+      "trans_base": 2,
+      "trans_double": 3,
+      "maximizers": 12
+    },
+    {
+      "l": 2,
+      "vertices": 5,
+      "trans_base": 3,
+      "trans_double": 5,
+      "maximizers": 1
+    },
+    {
+      "l": 3,
+      "vertices": 7,
+      "trans_base": 4,
+      "trans_double": 7,
+      "maximizers": 1
+    },
+    {
+      "l": 4,
+      "vertices": 9,
+      "trans_base": 5,
+      "trans_double": 9,
+      "maximizers": 1
+    }
+  ],
+  "full_support_assignment_l_max": 8,
+  "optimized_mode_safe": true,
+  "copy_3cnf_checked": true
+}

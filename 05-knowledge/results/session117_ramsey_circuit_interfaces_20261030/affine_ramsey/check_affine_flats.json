@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "method": "exhaustive affine sets; all linear forms; defect points 0,1,2^n-1; both output signs",
+  "results": [
+    {
+      "n": 3,
+      "linear_subspaces": 16,
+      "affine_flats": 51,
+      "literal_classifications": 2448
+    },
+    {
+      "n": 4,
+      "linear_subspaces": 67,
+      "affine_flats": 307,
+      "literal_classifications": 29472
+    },
+    {
+      "n": 5,
+      "linear_subspaces": 374,
+      "affine_flats": 2451,
+      "literal_classifications": 470592
+    }
+  ]
+}

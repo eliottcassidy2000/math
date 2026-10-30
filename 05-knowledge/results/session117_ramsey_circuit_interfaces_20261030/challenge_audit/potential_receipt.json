@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "exact_gates": 58826,
+  "projection_grid": "c=0..5 and b=0..13, both in steps of1/20",
+  "boundary": "81 rational points, c0..4",
+  "scope": "rowwise potential cone, not certification of circuit theorem"
+}
