@@ -9,11 +9,11 @@ Related older result folders are clone_depth_modular_twist_average_20261025, unp
 
 Use R=Cay(F5²,S), with
 S={(0,1),(0,2),(1,0),(1,1),(1,2),(1,3),(1,4),(2,0),(2,1),(2,2),(2,3),(3,1)}.
-Our independent checker exhausts the stabilizer of0:106 search nodes and one automorphism. Translation transitivity proves Aut(R)=C5². It also checks that no pair of vertices is homogeneous.
+Our independent checker exhausts the stabilizer of 0:106 search nodes and one automorphism. Translation transitivity proves Aut(R)=C5². It also checks that no pair of vertices is homogeneous.
 
-For r≥1 set T_r=R[TT_(r+1)]. Inside each rigid transitive child, exactly consecutive vertices form homogeneous pairs. Across children, an outside witness from R rules out homogeneity. The homogeneous-pair graph therefore has25 path components, and every automorphism permutes these rigid directed paths. It follows that Aut(T_r)=Aut(R), of order25.
+For r≥1 set T_r=R[TT_(r+1)]. Inside each rigid transitive child, exactly consecutive vertices form homogeneous pairs. Across children, an outside witness from R rules out homogeneity. The homogeneous-pair graph therefore has25 path components, and every automorphism permutes these rigid directed paths. It follows that Aut(T_r)=Aut(R), of order 25.
 
-The canonical gaps are F5²×{1,...,r}, with diagonal translations. There are r gap orbits, so r independent symmetry-respecting toggles. Identity has25r singleton cycles; every nonidentity translation has5r cycles of length5. Burnside gives the subset-orbit polynomial
+The canonical gaps are F5²×{1,...,r}, with diagonal translations. There are r gap orbits, so r independent symmetry-respecting toggles. Identity has25r singleton cycles; every nonidentity translation has5r cycles of length 5. Burnside gives the subset-orbit polynomial
 P_r(t)=[(1+t)^(25r)+24(1+t^5)^(5r)]/25.
 The same group acts on all copies. Replacing this by P_1(t)^r would discard the diagonal coupling.
 
@@ -42,7 +42,7 @@ The hypotheses exclude p=2 and the trivial group. They concern this specified pe
 
 ## Requested sizes and the hostile next phase
 
-For the25-point seed:
+For the 25-point seed:
 | vertices | gaps | toggle rank | Q depth | F5 depth | F2/F3 depth |
 |---:|---:|---:|---:|---:|---:|
 |50|25|1|5|21|25|
@@ -60,12 +60,12 @@ The ordinary generating function is
 Σ_(j≥1) d_j z^j = 50z/(1−2z) −29z/(1−z) +4z^4/(1−z^4).
 Consequently
 d_(j+5)=2d_(j+4)+d_(j+1)−2d_j, j≥1.
-The characteristic polynomial is (x−2)(x^4−1). All five poles survive, so the rational linear recurrence has minimal order5.
+The characteristic polynomial is (x−2)(x^4−1). All five poles survive, so the rational linear recurrence has minimal order 5.
 
 The Q-depth generating function is10z/(1−2z)−5z/(1−z). The F2/F3-depth generating function is50z/(1−2z)−25z/(1−z). These are depth sequences for an explicit family, not a generating function for A000568.
 
 ## What is merged, and what is not
 
-This recovers the older50-vertex phenomenon and extends it through literal clone dilation. The four-phase correction comes from multiplication by2 in F5*, not from a resemblance to a spectral constant. The number200 can be a vertex count here and a group order elsewhere without identifying the objects.
+This recovers the older50-vertex phenomenon and extends it through literal clone dilation. The four-phase correction comes from multiplication by 2 in F5*, not from a resemblance to a spectral constant. The number200 can be a vertex count here and a group order elsewhere without identifying the objects.
 
-[cancellation.js](cancellation.js) compares two exact expansions in44 parameter cases, including r=15,31,63 in the5² family, checks the recurrence for20 formula-generated terms, and certifies the seed group and homogeneous-pair condition.
+[cancellation.js](cancellation.js) compares two exact expansions in 44 parameter cases, including r=15,31,63 in the 5² family, checks the recurrence for 20 formula-generated terms, and certifies the seed group and homogeneous-pair condition.
