@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "observer_choices_checked": 256,
+  "attachment_checks": [
+    {
+      "p": 5,
+      "a": 1,
+      "k": 2,
+      "parents": 8,
+      "children_each": 5,
+      "kernel_pairs": 4
+    },
+    {
+      "p": 5,
+      "a": 1,
+      "k": 3,
+      "parents": 48,
+      "children_each": 5,
+      "kernel_pairs": 4
+    },
+    {
+      "p": 13,
+      "a": 3,
+      "k": 2,
+      "parents": 24,
+      "children_each": 13,
+      "kernel_pairs": 12
+    }
+  ],
+  "signed_constraint_cases": 728,
+  "examples": [
+    {
+      "n": 3,
+      "period": 8,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": null
+    },
+    {
+      "n": 5,
+      "period": 20,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": 4
+    },
+    {
+      "n": 7,
+      "period": 16,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": null
+    },
+    {
+      "n": 9,
+      "period": 24,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": null
+    },
+    {
+      "n": 11,
+      "period": 10,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": 12,
+      "Q2_reversing": null
+    },
+    {
+      "n": 13,
+      "period": 28,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": 12
+    },
+    {
+      "n": 15,
+      "period": 40,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": null
+    },
+    {
+      "n": 17,
+      "period": 36,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": 16
+    },
+    {
+      "n": 19,
+      "period": 18,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": 20,
+      "Q2_reversing": null
+    },
+    {
+      "n": 21,
+      "period": 16,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": null
+    },
+    {
+      "n": 23,
+      "period": 48,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": null
+    },
+    {
+      "n": 25,
+      "period": 100,
+      "Q_invariant": null,
+      "Q_reversing": null,
+      "Q2_invariant": null,
+      "Q2_reversing": 24
+    }
+  ],
+  "ramified_checks": [
+    {
+      "k": 1,
+      "exponent": 4
+    },
+    {
+      "k": 2,
+      "exponent": 24
+    },
+    {
+      "k": 3,
+      "exponent": 124
+    }
+  ],
+  "hostile_mixed_involution": "PASS",
+  "split_observer_exponent": 8
+}

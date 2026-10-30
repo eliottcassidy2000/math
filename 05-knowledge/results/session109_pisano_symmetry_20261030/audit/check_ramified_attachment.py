@@ -94,6 +94,31 @@ def attach(lower, upper):
     for i in kernel:
         signs[i] = i < upper['antipode'][i]
     require(all(signs[i] != signs[j] for i,j in upper['antipode'].items()), 'valid signs')
+    product_edges_checked = 0
+    if upper['k'] == 2:
+        # Exhaust every ordered distinct pair, comparing the actual upper
+        # orbit-sign tournament against the product through a section.
+        N = upper['n']
+        vertices = [(a,b) for a in range(N) for b in range(N)]
+        for x in vertices:
+            u = (x[0] % n, x[1] % n)
+            tx = ((x[0]-u[0])//n, (x[1]-u[1])//n)
+            for y in vertices:
+                if x == y:
+                    continue
+                v = (y[0] % n, y[1] % n)
+                ty = ((y[0]-v[0])//n, (y[1]-v[1])//n)
+                delta = ((y[0]-x[0]) % N, (y[1]-x[1]) % N)
+                actual = signs[upper['orbit_id'][delta]]
+                if u != v:
+                    d = ((v[0]-u[0]) % n, (v[1]-u[1]) % n)
+                    t = lower['orbit_id'][d]
+                    expected = t < lower['antipode'][t]
+                else:
+                    d = (n*((ty[0]-tx[0]) % 5), n*((ty[1]-tx[1]) % 5))
+                    expected = signs[upper['orbit_id'][d]]
+                require(actual == expected, 'lexicographic product adjacency')
+                product_edges_checked += 1
     j = next(j for j in above if j < lower['antipode'][j])
     changed = above[j][0]
     signs[changed] = not signs[changed]
@@ -120,6 +145,7 @@ def attach(lower, upper):
             ks[t] = not ks[i]
         require(len(ks) == 8 and all(ks[i] != ks[t] for i,t in kernel_pairs), 'kernel assignment')
     return {'lower_k': lower['k'], 'upper_k': upper['k'],
+            'lexicographic_product_ordered_edges_checked': product_edges_checked,
             'orbits_above_each_nonzero_orbit': 5, 'kernel_antipodal_pairs': 4,
             'fixed_downstairs_compatible_lifts': 16,
             'relative_bits_discarded_by_coherence': 4*B,

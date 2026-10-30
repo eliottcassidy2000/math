@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "checks": 151516,
+  "metallic_exhaustive": [
+    {
+      "p": 5,
+      "a": 1,
+      "k": 1,
+      "states": 25,
+      "nonzero_orbits": 8
+    },
+    {
+      "p": 5,
+      "a": 1,
+      "k": 2,
+      "states": 625,
+      "nonzero_orbits": 48
+    },
+    {
+      "p": 5,
+      "a": 4,
+      "k": 1,
+      "states": 25,
+      "nonzero_orbits": 8
+    },
+    {
+      "p": 5,
+      "a": 4,
+      "k": 2,
+      "states": 625,
+      "nonzero_orbits": 48
+    },
+    {
+      "p": 13,
+      "a": 3,
+      "k": 1,
+      "states": 169,
+      "nonzero_orbits": 24
+    },
+    {
+      "p": 13,
+      "a": 3,
+      "k": 2,
+      "states": 28561,
+      "nonzero_orbits": 336
+    },
+    {
+      "p": 17,
+      "a": 8,
+      "k": 1,
+      "states": 289,
+      "nonzero_orbits": 32
+    },
+    {
+      "p": 17,
+      "a": 8,
+      "k": 2,
+      "states": 83521,
+      "nonzero_orbits": 576
+    }
+  ],
+  "clock_moduli": "2..100, Q and A",
+  "full_algebra_sidecar_moduli": "2..40, Q and A",
+  "affine_moduli": "2..11, strides 1..10, every carry",
+  "smith_strides": 300,
+  "affine_cases": 5050,
+  "hostiles": {
+    "N5_r4_b1,0": {
+      "linear": 5,
+      "affine": 5,
+      "removable": false
+    },
+    "N11_r5_b1,3": {
+      "linear": 2,
+      "affine": 22,
+      "removable": false
+    }
+  },
+  "algorithms": [
+    "Fibonacci pair recurrence",
+    "KMP trace word period",
+    "full permutation cycle-lcm affine order",
+    "exhaustive algebra trace-sidecar injectivity and radical products"
+  ],
+  "optimization_safe": true
+}

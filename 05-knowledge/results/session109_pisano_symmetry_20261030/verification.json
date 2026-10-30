@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "isolated_replays": 14,
+  "manifest_entries": 24,
+  "checks_remain_active_under_optimization": true,
+  "cases": [
+    {
+      "script": "affine/check.py",
+      "recorded": "affine/results.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "0f757caa64d5b2eb28af0fe76e3fde9d5b8b5c54639e212cd9d9dd1c88898c78"
+    },
+    {
+      "script": "clocks/check_clocks.py",
+      "recorded": "clocks/results.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "0ded99c212116a590a837a6ae16bfc0bb48186bc123796fd779e4021299fbfda"
+    },
+    {
+      "script": "clocks/check_metallic.py",
+      "recorded": "clocks/metallic_results.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "9eab2421d0696f9097079e38d0abc193083b908a54d298e414f6982db7248fff"
+    },
+    {
+      "script": "tournaments/check.py",
+      "recorded": "tournaments/check.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "3a23bc844813f4fa4a7eda209a31e6a9e36194dc6e9ba20e8657ae16d92855e9"
+    },
+    {
+      "script": "audit/check_ramified_attachment.py",
+      "recorded": "audit/ramified_attachment_audit.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "217aae38dd723ff24c3de7657dfed2afbc6031529ce9700ddd07a0dd34c8c9c5"
+    },
+    {
+      "script": "audit_clocks/check_independent.py",
+      "recorded": "audit_clocks/results.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "4e374ee829021d250f841d7e47d456f38a36c792691438cf2157472f64e83aaf"
+    },
+    {
+      "script": "synthesis/check.py",
+      "recorded": "synthesis/results.json",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "output_sha256": "a88077573a79ef7c76cc4ca77625b4e00200badecf7aa2bdb67a4d84395c64d7"
+    }
+  ],
+  "scope": "Exact finite tests plus independent proof reviews; no CI claim"
+}

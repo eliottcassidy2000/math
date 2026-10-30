@@ -47,6 +47,7 @@
     {
       "lower_k": 1,
       "upper_k": 2,
+      "lexicographic_product_ordered_edges_checked": 390000,
       "orbits_above_each_nonzero_orbit": 5,
       "kernel_antipodal_pairs": 4,
       "fixed_downstairs_compatible_lifts": 16,
@@ -79,6 +80,7 @@
     {
       "lower_k": 2,
       "upper_k": 3,
+      "lexicographic_product_ordered_edges_checked": 0,
       "orbits_above_each_nonzero_orbit": 5,
       "kernel_antipodal_pairs": 4,
       "fixed_downstairs_compatible_lifts": 16,

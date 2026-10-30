@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "sidecar_algebra_cases": 44250,
+  "ramified_all_element_cases": 16272,
+  "moduli_full_sweep": "2..400 for Q and A",
+  "count_sweep_plus_CRT_cases": 1790,
+  "prime_power_examples": [
+    {
+      "matrix": "Q",
+      "modulus": 5,
+      "matrix_clock": 20,
+      "scalar_clock": 5,
+      "trace_clock": 4,
+      "marked_clock": 20
+    },
+    {
+      "matrix": "Q",
+      "modulus": 25,
+      "matrix_clock": 100,
+      "scalar_clock": 25,
+      "trace_clock": 20,
+      "marked_clock": 100
+    },
+    {
+      "matrix": "Q",
+      "modulus": 125,
+      "matrix_clock": 500,
+      "scalar_clock": 125,
+      "trace_clock": 100,
+      "marked_clock": 500
+    },
+    {
+      "matrix": "Q",
+      "modulus": 625,
+      "matrix_clock": 2500,
+      "scalar_clock": 625,
+      "trace_clock": 500,
+      "marked_clock": 2500
+    },
+    {
+      "matrix": "Q",
+      "modulus": 3125,
+      "matrix_clock": 12500,
+      "scalar_clock": 3125,
+      "trace_clock": 2500,
+      "marked_clock": 12500
+    },
+    {
+      "matrix": "A",
+      "modulus": 5,
+      "matrix_clock": 10,
+      "scalar_clock": 5,
+      "trace_clock": 2,
+      "marked_clock": 10
+    },
+    {
+      "matrix": "A",
+      "modulus": 25,
+      "matrix_clock": 50,
+      "scalar_clock": 25,
+      "trace_clock": 10,
+      "marked_clock": 50
+    },
+    {
+      "matrix": "A",
+      "modulus": 125,
+      "matrix_clock": 250,
+      "scalar_clock": 125,
+      "trace_clock": 50,
+      "marked_clock": 250
+    },
+    {
+      "matrix": "A",
+      "modulus": 625,
+      "matrix_clock": 1250,
+      "scalar_clock": 625,
+      "trace_clock": 250,
+      "marked_clock": 1250
+    },
+    {
+      "matrix": "A",
+      "modulus": 3125,
+      "matrix_clock": 6250,
+      "scalar_clock": 3125,
+      "trace_clock": 1250,
+      "marked_clock": 6250
+    }
+  ],
+  "hostile_equal_trace": "A versus -I mod 5: all traces agree, orders 10 versus 2",
+  "crt_sign_mismatch": "A^10=11I mod15; scalar clock10, \u00b1I clock20",
+  "masked_example": {
+    "matrix": 10,
+    "scalar": 5,
+    "trace": 10,
+    "marked": 10
+  }
+}

@@ -1,5 +1,18 @@
 # THM-491 — The LRC shell ramification tower, its Pisano signature, and the freed-clock formula
 
+> **Pisano scope correction (2026-10-30, Session109).** The displayed generic
+> equality `pi(p^k)=p^(k-1) pi(p)` below is conditional on absence of a lift
+> delay; it is not established for every prime. For odd p, let
+> `h=min_ij v_p((Q^pi(p)-I)_ij)`, with `Q=[[1,1],[1,0]]`. The unconditional
+> order-lifting formula is `pi(p^k)=pi(p) p^max(0,k-h)`. Thus the displayed
+> equality at every depth requires h=1. The explicit p=3 tower remains
+> valid. No Wall–Sun–Sun prime counterexample is asserted here: the error is
+> promoting a formula with a missing hypothesis to an unconditional one.
+> See [the prior all-depth lifting proof](../../05-knowledge/results/unit_lift_clock_20261015a.md)
+> and [Session109's correction record](../../05-knowledge/results/session109_pisano_symmetry_20261030/history/PISANO_LIFT_CORRECTION.md).
+> This warning concerns the Pisano assertion only; it does not promote or
+> independently audit the unrelated LRC claims in this historical theorem.
+
 **Status:** PROVED (structural descent + freed-clock formula) + VERIFIED (exact ℚ, n=14,19 and
 catalog to n=200). claudebox-2026-06-11-S6.
 **Provenance:** user dispatch (LRC n=14 ↔ n=19, recursive reframes, formula-predictable sub-aspects,

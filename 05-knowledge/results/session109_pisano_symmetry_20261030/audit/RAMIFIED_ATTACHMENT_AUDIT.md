@@ -125,3 +125,50 @@ cmp session109_pisano_symmetry/audit/ramified_attachment_audit.json \
 ```
 
 No publication or external mutation was performed by this audit.
+
+## Structural addendum: ordinary lexicographic composition
+
+A coherent lift is (abstractly) the ordinary lexicographic product
+
+    T_k ≅ T_(k−1)[H_k],
+
+where H_k is the Cayley tournament on the reduction kernel K, with
+connection set S_k∩K. To prove this, choose any set-theoretic section
+sigma:R_(k−1)→R_k. The bijection (u,z)↦sigma(u)+z identifies the vertex
+set with R_(k−1)×K. If u≠v, coherence makes the orientation between
+(sigma(u)+z) and (sigma(v)+w) depend only on v−u, hence on the edge
+u→v in T_(k−1), independently of z,w. If u=v, the difference is w−z,
+so the induced tournament is H_k in every fibre. This is exactly the
+lexicographic product definition. An additive section need not exist and
+is not required. Each fibre is a module (all outside vertices have uniform
+orientation to the entire fibre); translation identifies its internal
+orientation with the same H_k.
+
+The additive bijection R_1→K, x↦5^(k−1)x, intertwines multiplication
+by g. Thus H_k has exactly 16 labelled invariant Cayley possibilities.
+Conversely any lower tournament and any such H_k define a unique coherent
+connection set: pull back the nonzero lower connection set and adjoin
+its specified kernel connection set. The product assertion therefore
+expresses both necessary structure and sufficiency.
+
+Starting from 16 possibilities at level 1, fully coherent towers through
+level k number 16^k=2^(4k). Their top tournaments uniquely determine every
+lower tournament by descent and every kernel restriction, so this also
+counts the labelled top tournaments satisfying coherence at every stage.
+The unrestricted top count is 2^(5^k−1). These are counts on fixed labelled
+rings with the specified symmetry and reductions, not isomorphism counts;
+possible isomorphisms between products do not invalidate these counts.
+Iteration gives an abstract iterated product of k invariant 25-vertex
+kernel tournaments.
+
+The notation 2^(k(p−1)) versus 2^(p^k−1) is valid conditionally in an
+analogous setting where the established kernel bit count is p−1 and
+the unrestricted bit count is p^k−1. Here p=5; this audit alone does not
+establish such hypotheses at arbitrary primes.
+
+The checker now also verifies all 625·624=390000 ordered distinct vertex
+pairs at k=2 against the lexicographic product adjacency rule, using the
+actual independently enumerated upper orbit-sign tournament and a
+coordinate section. Normal and optimized reruns pass identically. The
+all-depth argument above applies to every sign choice, not only the
+particular exhaustive adjacency example.

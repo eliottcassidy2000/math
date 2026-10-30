@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "prime_table": [
+    {
+      "prime": 3,
+      "pisano_period": 8,
+      "preserving_stride": 8,
+      "vertices": 9,
+      "orientation_bits": 4,
+      "tournaments": 16
+    },
+    {
+      "prime": 5,
+      "pisano_period": 20,
+      "preserving_stride": 4,
+      "vertices": 25,
+      "orientation_bits": 4,
+      "tournaments": 16
+    },
+    {
+      "prime": 11,
+      "pisano_period": 10,
+      "preserving_stride": 2,
+      "vertices": 121,
+      "orientation_bits": 12,
+      "tournaments": 4096
+    },
+    {
+      "prime": 19,
+      "pisano_period": 18,
+      "preserving_stride": 2,
+      "vertices": 361,
+      "orientation_bits": 20,
+      "tournaments": 1048576
+    }
+  ],
+  "binary_word": [
+    0,
+    0,
+    0,
+    1,
+    1
+  ],
+  "three_sample_windows": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "actual_Q_mod5_fibres": 4,
+  "sample_stride": 4,
+  "interpretation": "snapshot alphabet and temporal history are different information budgets"
+}

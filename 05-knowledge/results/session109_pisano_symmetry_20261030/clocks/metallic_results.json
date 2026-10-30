@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "cases": 240,
+  "rows": [
+    {
+      "prime": 5,
+      "metallic_parameter": 1,
+      "k": 1,
+      "cases": 8
+    },
+    {
+      "prime": 5,
+      "metallic_parameter": 1,
+      "k": 2,
+      "cases": 16
+    },
+    {
+      "prime": 5,
+      "metallic_parameter": 1,
+      "k": 3,
+      "cases": 24
+    },
+    {
+      "prime": 13,
+      "metallic_parameter": 3,
+      "k": 1,
+      "cases": 8
+    },
+    {
+      "prime": 13,
+      "metallic_parameter": 3,
+      "k": 2,
+      "cases": 16
+    },
+    {
+      "prime": 13,
+      "metallic_parameter": 3,
+      "k": 3,
+      "cases": 24
+    },
+    {
+      "prime": 17,
+      "metallic_parameter": 8,
+      "k": 1,
+      "cases": 8
+    },
+    {
+      "prime": 17,
+      "metallic_parameter": 8,
+      "k": 2,
+      "cases": 16
+    },
+    {
+      "prime": 17,
+      "metallic_parameter": 8,
+      "k": 3,
+      "cases": 24
+    },
+    {
+      "prime": 29,
+      "metallic_parameter": 5,
+      "k": 1,
+      "cases": 8
+    },
+    {
+      "prime": 29,
+      "metallic_parameter": 5,
+      "k": 2,
+      "cases": 16
+    },
+    {
+      "prime": 29,
+      "metallic_parameter": 5,
+      "k": 3,
+      "cases": 24
+    },
+    {
+      "prime": 41,
+      "metallic_parameter": 18,
+      "k": 1,
+      "cases": 8
+    },
+    {
+      "prime": 41,
+      "metallic_parameter": 18,
+      "k": 2,
+      "cases": 16
+    },
+    {
+      "prime": 41,
+      "metallic_parameter": 18,
+      "k": 3,
+      "cases": 24
+    }
+  ]
+}

@@ -21498,3 +21498,9 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Re-grep origin for packets on the directive's own numbers immediately before the checkpoint, not only at session
     start.
   - Before leaving a "≤ 2" statement open, try to extend the lemma that proved "= 2" one more step.
+
+### Session109 — Pisano tower missing a lift-delay hypothesis (2026-10-30)
+
+**Source:** THM-491, `01-canon/theorems/THM-491-lrc-ramification-tower-pisano-signature.md`, Parts 1 and 3. The generic display `pi(p^k)=p^(k-1)pi(p)` was promoted from explicit examples to an unconditional prime-power law. For odd p the correct formula retains `h=min_ij v_p((Q^pi(p)-I)_ij)`: `pi(p^k)=pi(p)p^max(0,k-h)`. The displayed no-delay formula needs h=1. The concrete p=3 tower survives. This is a missing-hypothesis correction, not a claimed Wall–Sun–Sun counterexample or a re-audit of unrelated LRC statements.
+
+**Mechanism and repair:** a scalar period modulo p forgets the depth of its matrix return. Retain that depth before lifting. A narrow warning below the source title preserves the original historical text. Prior all-depth lifting is already proved in `05-knowledge/results/unit_lift_clock_20261015a.md`; the correction record and independent scope review are in `05-knowledge/results/session109_pisano_symmetry_20261030/history/PISANO_LIFT_CORRECTION.md`. No new general Fibonacci exceptional-prime result is claimed.
