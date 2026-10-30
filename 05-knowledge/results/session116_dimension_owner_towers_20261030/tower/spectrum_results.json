@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "gates": 109028,
+  "matrix_cases": 90,
+  "primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13
+  ],
+  "method": "recursive16D multiplication -> Bareiss determinant, Gram cubic and traces, independent modular row reduction"
+}

@@ -1,0 +1,26 @@
+{
+  "all_dim8_parity_pairs": 65536,
+  "checks": 367866,
+  "dim8_line_tables": 128,
+  "normalized_dim4_defect_ideals": {
+    "0": 2,
+    "4": 510
+  },
+  "phase_group_d3": {
+    "index_in_units": 1,
+    "pair_products": 16384,
+    "size": 128
+  },
+  "phase_group_d4": {
+    "index_in_units": 64,
+    "pair_products": 262144,
+    "size": 512
+  },
+  "status": "PASS",
+  "unit_weight_defect_gcd": {
+    "0": 0,
+    "1": 0,
+    "2": 8,
+    "3": 4
+  }
+}

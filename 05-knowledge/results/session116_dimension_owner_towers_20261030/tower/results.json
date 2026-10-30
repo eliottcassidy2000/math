@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "gates": 102990,
+  "signed_basis_nontrivial_zero_products": 192,
+  "integer_cone_pairs": 2064,
+  "embedding_dimensions": [
+    16,
+    32,
+    64,
+    128
+  ],
+  "sparse_defects": [
+    -4,
+    0,
+    4
+  ],
+  "proof_scope": "all-real theorem proved in TOWER_DEFECT.md; tests finite-exact"
+}

@@ -1,0 +1,37 @@
+{
+  "all_pair_counts": {
+    "0": 4,
+    "1": 16,
+    "2": 256,
+    "3": 65536
+  },
+  "checks": 105410,
+  "dim4_ideal_census": {
+    "0": 2,
+    "4": 510
+  },
+  "status": "PASS",
+  "subgroups": {
+    "3": {
+      "generators": 7,
+      "index": 1,
+      "size": 128
+    },
+    "4": {
+      "generators": 9,
+      "index": 64,
+      "size": 512
+    },
+    "5": {
+      "generators": 11,
+      "index": 1048576,
+      "size": 2048
+    }
+  },
+  "unit_defect_gcd": {
+    "0": 0,
+    "1": 0,
+    "2": 8,
+    "3": 4
+  }
+}
