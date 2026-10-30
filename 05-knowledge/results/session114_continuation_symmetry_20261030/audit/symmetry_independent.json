@@ -1,0 +1,54 @@
+{
+  "jacobian_exact_gates": 3130,
+  "parent_cases": [
+    {
+      "full_cycles": 36,
+      "m": 3,
+      "natural_common_sources": 2,
+      "parents": 6,
+      "parents_per_slope": 3,
+      "phase_slopes": [
+        1,
+        2
+      ],
+      "r": 3,
+      "selector_common_sources": 1
+    },
+    {
+      "full_cycles": 200,
+      "m": 5,
+      "natural_common_sources": 4,
+      "parents": 25,
+      "parents_per_slope": 25,
+      "phase_slopes": [
+        0
+      ],
+      "r": 3,
+      "selector_common_sources": 1
+    },
+    {
+      "full_cycles": 648,
+      "m": 3,
+      "natural_common_sources": 4,
+      "parents": 81,
+      "parents_per_slope": 81,
+      "phase_slopes": [
+        0
+      ],
+      "r": 5,
+      "selector_common_sources": 1
+    },
+    {
+      "full_cycles": 588,
+      "m": 7,
+      "natural_common_sources": 8,
+      "parents": 49,
+      "parents_per_slope": 49,
+      "phase_slopes": [
+        0
+      ],
+      "r": 3,
+      "selector_common_sources": 1
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "checks": 38707,
+  "rows": [
+    {
+      "r": 3,
+      "m": 3,
+      "parents": 6,
+      "slope_classes": 2,
+      "parents_per_slope": 3,
+      "natural_intersection": 2,
+      "selector_intersection": 1
+    },
+    {
+      "r": 3,
+      "m": 5,
+      "parents": 25,
+      "slope_classes": 1,
+      "parents_per_slope": 25,
+      "natural_intersection": 4,
+      "selector_intersection": 1
+    },
+    {
+      "r": 3,
+      "m": 7,
+      "parents": 49,
+      "slope_classes": 1,
+      "parents_per_slope": 49,
+      "natural_intersection": 8,
+      "selector_intersection": 1
+    },
+    {
+      "r": 5,
+      "m": 3,
+      "parents": 81,
+      "slope_classes": 1,
+      "parents_per_slope": 81,
+      "natural_intersection": 4,
+      "selector_intersection": 1
+    },
+    {
+      "r": 3,
+      "m": 9,
+      "parents": 54,
+      "slope_classes": 2,
+      "parents_per_slope": 27,
+      "natural_intersection": 16,
+      "selector_intersection": 1
+    },
+    {
+      "r": 5,
+      "m": 5,
+      "parents": 500,
+      "slope_classes": 4,
+      "parents_per_slope": 125,
+      "natural_intersection": 8,
+      "selector_intersection": 1
+    }
+  ]
+}
