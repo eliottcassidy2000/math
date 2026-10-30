@@ -1,0 +1,11178 @@
+{
+  "deletion": [
+    {
+      "q": 7,
+      "field_modulus": [
+        0,
+        1
+      ],
+      "constructor": "Paley",
+      "candidate_modules": 35,
+      "deletion_minimum_by_module_size": {
+        "2": 3,
+        "3": 3
+      },
+      "sharp_deletion_count": 35,
+      "pair_cuts": 21,
+      "cone_cuts": 14,
+      "direct_decomposable_threshold_count": 35
+    },
+    {
+      "q": 11,
+      "field_modulus": [
+        0,
+        1
+      ],
+      "constructor": "Paley",
+      "candidate_modules": 352,
+      "deletion_minimum_by_module_size": {
+        "2": 5,
+        "3": 6,
+        "4": 6,
+        "5": 5
+      },
+      "sharp_deletion_count": 77,
+      "pair_cuts": 55,
+      "cone_cuts": 22,
+      "direct_decomposable_threshold_count": 77
+    },
+    {
+      "q": 19,
+      "field_modulus": [
+        0,
+        1
+      ],
+      "constructor": "Paley",
+      "candidate_modules": 14117,
+      "deletion_minimum_by_module_size": {
+        "2": 9,
+        "3": 12,
+        "4": 13,
+        "5": 12,
+        "6": 12,
+        "7": 11,
+        "8": 10,
+        "9": 9
+      },
+      "sharp_deletion_count": 209,
+      "pair_cuts": 171,
+      "cone_cuts": 38,
+      "direct_decomposable_threshold_count": null
+    },
+    {
+      "q": 23,
+      "field_modulus": [
+        0,
+        1
+      ],
+      "constructor": "Paley",
+      "candidate_modules": 76452,
+      "deletion_minimum_by_module_size": {
+        "2": 11,
+        "3": 15,
+        "4": 16,
+        "5": 16,
+        "6": 15,
+        "7": 15,
+        "8": 14,
+        "9": 13,
+        "10": 12,
+        "11": 11
+      },
+      "sharp_deletion_count": 299,
+      "pair_cuts": 253,
+      "cone_cuts": 46,
+      "direct_decomposable_threshold_count": null
+    },
+    {
+      "q": 27,
+      "field_modulus": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "constructor": "Paley",
+      "candidate_modules": 386622,
+      "deletion_minimum_by_module_size": {
+        "2": 13,
+        "3": 18,
+        "4": 20,
+        "5": 20,
+        "6": 19,
+        "7": 18,
+        "8": 18,
+        "9": 17,
+        "10": 16,
+        "11": 15,
+        "12": 14,
+        "13": 13
+      },
+      "sharp_deletion_count": 405,
+      "pair_cuts": 351,
+      "cone_cuts": 54,
+      "direct_decomposable_threshold_count": null
+    },
+    {
+      "q": 15,
+      "field_modulus": null,
+      "constructor": "skew-Hadamard doubling",
+      "candidate_modules": 2375,
+      "deletion_minimum_by_module_size": {
+        "2": 7,
+        "3": 9,
+        "4": 9,
+        "5": 9,
+        "6": 8,
+        "7": 7
+      },
+      "sharp_deletion_count": 135,
+      "pair_cuts": 105,
+      "cone_cuts": 30,
+      "direct_decomposable_threshold_count": null
+    }
+  ],
+  "recursive": {
+    "carousel_families": [
+      {
+        "p": 3,
+        "depth": 1,
+        "child_n": 4,
+        "cut_weight": 1,
+        "imbalance": 1,
+        "child_transitive_max": 3,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 3,
+        "depth": 2,
+        "child_n": 10,
+        "cut_weight": 4,
+        "imbalance": 1,
+        "child_transitive_max": 5,
+        "parent_group_exponent": 4
+      },
+      {
+        "p": 3,
+        "depth": 3,
+        "child_n": 28,
+        "cut_weight": 13,
+        "imbalance": 1,
+        "child_transitive_max": 9,
+        "parent_group_exponent": 13
+      },
+      {
+        "p": 3,
+        "depth": 4,
+        "child_n": 82,
+        "cut_weight": 40,
+        "imbalance": 1,
+        "child_transitive_max": 17,
+        "parent_group_exponent": 40
+      },
+      {
+        "p": 3,
+        "depth": 5,
+        "child_n": 244,
+        "cut_weight": 121,
+        "imbalance": 1,
+        "child_transitive_max": 33,
+        "parent_group_exponent": 121
+      },
+      {
+        "p": 5,
+        "depth": 1,
+        "child_n": 6,
+        "cut_weight": 1,
+        "imbalance": 3,
+        "child_transitive_max": 4,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 5,
+        "depth": 2,
+        "child_n": 26,
+        "cut_weight": 8,
+        "imbalance": 9,
+        "child_transitive_max": 10,
+        "parent_group_exponent": 6
+      },
+      {
+        "p": 5,
+        "depth": 3,
+        "child_n": 126,
+        "cut_weight": 49,
+        "imbalance": 27,
+        "child_transitive_max": 28,
+        "parent_group_exponent": 31
+      },
+      {
+        "p": 5,
+        "depth": 4,
+        "child_n": 626,
+        "cut_weight": 272,
+        "imbalance": 81,
+        "child_transitive_max": 82,
+        "parent_group_exponent": 156
+      },
+      {
+        "p": 5,
+        "depth": 5,
+        "child_n": 3126,
+        "cut_weight": 1441,
+        "imbalance": 243,
+        "child_transitive_max": 244,
+        "parent_group_exponent": 781
+      },
+      {
+        "p": 7,
+        "depth": 1,
+        "child_n": 8,
+        "cut_weight": 1,
+        "imbalance": 5,
+        "child_transitive_max": 5,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 7,
+        "depth": 2,
+        "child_n": 50,
+        "cut_weight": 12,
+        "imbalance": 25,
+        "child_transitive_max": 17,
+        "parent_group_exponent": 8
+      },
+      {
+        "p": 7,
+        "depth": 3,
+        "child_n": 344,
+        "cut_weight": 109,
+        "imbalance": 125,
+        "child_transitive_max": 65,
+        "parent_group_exponent": 57
+      },
+      {
+        "p": 7,
+        "depth": 4,
+        "child_n": 2402,
+        "cut_weight": 888,
+        "imbalance": 625,
+        "child_transitive_max": 257,
+        "parent_group_exponent": 400
+      },
+      {
+        "p": 7,
+        "depth": 5,
+        "child_n": 16808,
+        "cut_weight": 6841,
+        "imbalance": 3125,
+        "child_transitive_max": 1025,
+        "parent_group_exponent": 2801
+      },
+      {
+        "p": 11,
+        "depth": 1,
+        "child_n": 12,
+        "cut_weight": 1,
+        "imbalance": 9,
+        "child_transitive_max": 7,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 11,
+        "depth": 2,
+        "child_n": 122,
+        "cut_weight": 20,
+        "imbalance": 81,
+        "child_transitive_max": 37,
+        "parent_group_exponent": 12
+      },
+      {
+        "p": 11,
+        "depth": 3,
+        "child_n": 1332,
+        "cut_weight": 301,
+        "imbalance": 729,
+        "child_transitive_max": 217,
+        "parent_group_exponent": 133
+      },
+      {
+        "p": 11,
+        "depth": 4,
+        "child_n": 14642,
+        "cut_weight": 4040,
+        "imbalance": 6561,
+        "child_transitive_max": 1297,
+        "parent_group_exponent": 1464
+      },
+      {
+        "p": 11,
+        "depth": 5,
+        "child_n": 161052,
+        "cut_weight": 51001,
+        "imbalance": 59049,
+        "child_transitive_max": 7777,
+        "parent_group_exponent": 16105
+      },
+      {
+        "p": 13,
+        "depth": 1,
+        "child_n": 14,
+        "cut_weight": 1,
+        "imbalance": 11,
+        "child_transitive_max": 8,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 13,
+        "depth": 2,
+        "child_n": 170,
+        "cut_weight": 24,
+        "imbalance": 121,
+        "child_transitive_max": 50,
+        "parent_group_exponent": 14
+      },
+      {
+        "p": 13,
+        "depth": 3,
+        "child_n": 2198,
+        "cut_weight": 433,
+        "imbalance": 1331,
+        "child_transitive_max": 344,
+        "parent_group_exponent": 183
+      },
+      {
+        "p": 13,
+        "depth": 4,
+        "child_n": 28562,
+        "cut_weight": 6960,
+        "imbalance": 14641,
+        "child_transitive_max": 2402,
+        "parent_group_exponent": 2380
+      },
+      {
+        "p": 13,
+        "depth": 5,
+        "child_n": 371294,
+        "cut_weight": 105121,
+        "imbalance": 161051,
+        "child_transitive_max": 16808,
+        "parent_group_exponent": 30941
+      },
+      {
+        "p": 17,
+        "depth": 1,
+        "child_n": 18,
+        "cut_weight": 1,
+        "imbalance": 15,
+        "child_transitive_max": 10,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 17,
+        "depth": 2,
+        "child_n": 290,
+        "cut_weight": 32,
+        "imbalance": 225,
+        "child_transitive_max": 82,
+        "parent_group_exponent": 18
+      },
+      {
+        "p": 17,
+        "depth": 3,
+        "child_n": 4914,
+        "cut_weight": 769,
+        "imbalance": 3375,
+        "child_transitive_max": 730,
+        "parent_group_exponent": 307
+      },
+      {
+        "p": 17,
+        "depth": 4,
+        "child_n": 83522,
+        "cut_weight": 16448,
+        "imbalance": 50625,
+        "child_transitive_max": 6562,
+        "parent_group_exponent": 5220
+      },
+      {
+        "p": 17,
+        "depth": 5,
+        "child_n": 1419858,
+        "cut_weight": 330241,
+        "imbalance": 759375,
+        "child_transitive_max": 59050,
+        "parent_group_exponent": 88741
+      },
+      {
+        "p": 19,
+        "depth": 1,
+        "child_n": 20,
+        "cut_weight": 1,
+        "imbalance": 17,
+        "child_transitive_max": 11,
+        "parent_group_exponent": 1
+      },
+      {
+        "p": 19,
+        "depth": 2,
+        "child_n": 362,
+        "cut_weight": 36,
+        "imbalance": 289,
+        "child_transitive_max": 101,
+        "parent_group_exponent": 20
+      },
+      {
+        "p": 19,
+        "depth": 3,
+        "child_n": 6860,
+        "cut_weight": 973,
+        "imbalance": 4913,
+        "child_transitive_max": 1001,
+        "parent_group_exponent": 381
+      },
+      {
+        "p": 19,
+        "depth": 4,
+        "child_n": 130322,
+        "cut_weight": 23400,
+        "imbalance": 83521,
+        "child_transitive_max": 10001,
+        "parent_group_exponent": 7240
+      },
+      {
+        "p": 19,
+        "depth": 5,
+        "child_n": 2476100,
+        "cut_weight": 528121,
+        "imbalance": 1419857,
+        "child_transitive_max": 100001,
+        "parent_group_exponent": 137561
+      }
+    ],
+    "mixed_order_hostile": [
+      {
+        "outer_to_inner": [
+          3,
+          5
+        ],
+        "parent_group_order": 375,
+        "parent_n": 15,
+        "cut_weight": 6,
+        "child_transitive_max": 7
+      },
+      {
+        "outer_to_inner": [
+          5,
+          3
+        ],
+        "parent_group_order": 1215,
+        "parent_n": 15,
+        "cut_weight": 6,
+        "child_transitive_max": 7
+      }
+    ]
+  },
+  "norm_clocks": [
+    {
+      "p": 3,
+      "k": 1,
+      "q": 3,
+      "N": 4,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        0,
+        1
+      ],
+      "primitive_parameter": 1,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 2,
+      "quadratic_relation": "tournament"
+    },
+    {
+      "p": 3,
+      "k": 2,
+      "q": 9,
+      "N": 10,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "delta": 4,
+      "primitive_z": [
+        7,
+        5
+      ],
+      "primitive_parameter": 3,
+      "frobenius_degree": 4,
+      "trace_degree": 2,
+      "square_clock": 5,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 3,
+      "k": 3,
+      "q": 27,
+      "N": 28,
+      "modulus": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        13,
+        10
+      ],
+      "primitive_parameter": 3,
+      "frobenius_degree": 6,
+      "trace_degree": 3,
+      "square_clock": 14,
+      "quadratic_relation": "tournament"
+    },
+    {
+      "p": 3,
+      "k": 4,
+      "q": 81,
+      "N": 82,
+      "modulus": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "delta": 4,
+      "primitive_z": [
+        40,
+        39
+      ],
+      "primitive_parameter": 4,
+      "frobenius_degree": 8,
+      "trace_degree": 4,
+      "square_clock": 41,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 5,
+      "k": 1,
+      "q": 5,
+      "N": 6,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        3,
+        2
+      ],
+      "primitive_parameter": 2,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 3,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 5,
+      "k": 2,
+      "q": 25,
+      "N": 26,
+      "modulus": [
+        1,
+        1,
+        1
+      ],
+      "delta": 7,
+      "primitive_z": [
+        21,
+        11
+      ],
+      "primitive_parameter": 2,
+      "frobenius_degree": 4,
+      "trace_degree": 2,
+      "square_clock": 13,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "q": 125,
+      "N": 126,
+      "modulus": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        46,
+        42
+      ],
+      "primitive_parameter": 9,
+      "frobenius_degree": 6,
+      "trace_degree": 3,
+      "square_clock": 63,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 7,
+      "k": 1,
+      "q": 7,
+      "N": 8,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 3,
+      "primitive_z": [
+        5,
+        6
+      ],
+      "primitive_parameter": 1,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 4,
+      "quadratic_relation": "tournament"
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "q": 49,
+      "N": 50,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "delta": 9,
+      "primitive_z": [
+        26,
+        38
+      ],
+      "primitive_parameter": 2,
+      "frobenius_degree": 4,
+      "trace_degree": 2,
+      "square_clock": 25,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 11,
+      "k": 1,
+      "q": 11,
+      "N": 12,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        8,
+        9
+      ],
+      "primitive_parameter": 1,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 6,
+      "quadratic_relation": "tournament"
+    },
+    {
+      "p": 11,
+      "k": 2,
+      "q": 121,
+      "N": 122,
+      "modulus": [
+        1,
+        0,
+        1
+      ],
+      "delta": 12,
+      "primitive_z": [
+        41,
+        87
+      ],
+      "primitive_parameter": 2,
+      "frobenius_degree": 4,
+      "trace_degree": 2,
+      "square_clock": 61,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 13,
+      "k": 1,
+      "q": 13,
+      "N": 14,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        3,
+        2
+      ],
+      "primitive_parameter": 2,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 7,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "q": 169,
+      "N": 170,
+      "modulus": [
+        1,
+        3,
+        1
+      ],
+      "delta": 17,
+      "primitive_z": [
+        123,
+        50
+      ],
+      "primitive_parameter": 3,
+      "frobenius_degree": 4,
+      "trace_degree": 2,
+      "square_clock": 85,
+      "quadratic_relation": "symmetric"
+    },
+    {
+      "p": 19,
+      "k": 1,
+      "q": 19,
+      "N": 20,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        16,
+        17
+      ],
+      "primitive_parameter": 1,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 10,
+      "quadratic_relation": "tournament"
+    },
+    {
+      "p": 23,
+      "k": 1,
+      "q": 23,
+      "N": 24,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 5,
+      "primitive_z": [
+        10,
+        11
+      ],
+      "primitive_parameter": 1,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 12,
+      "quadratic_relation": "tournament"
+    },
+    {
+      "p": 59,
+      "k": 1,
+      "q": 59,
+      "N": 60,
+      "modulus": [
+        0,
+        1
+      ],
+      "delta": 2,
+      "primitive_z": [
+        14,
+        3
+      ],
+      "primitive_parameter": 5,
+      "frobenius_degree": 2,
+      "trace_degree": 1,
+      "square_clock": 30,
+      "quadratic_relation": "tournament"
+    }
+  ],
+  "arithmetic": [
+    {
+      "p": 3,
+      "k": 1,
+      "N": 4,
+      "factors": {
+        "2": 2
+      },
+      "prime_orders": {},
+      "primitive_divisors": []
+    },
+    {
+      "p": 3,
+      "k": 2,
+      "N": 10,
+      "factors": {
+        "2": 1,
+        "5": 1
+      },
+      "prime_orders": {
+        "5": 4
+      },
+      "primitive_divisors": [
+        5
+      ]
+    },
+    {
+      "p": 3,
+      "k": 3,
+      "N": 28,
+      "factors": {
+        "2": 2,
+        "7": 1
+      },
+      "prime_orders": {
+        "7": 6
+      },
+      "primitive_divisors": [
+        7
+      ]
+    },
+    {
+      "p": 3,
+      "k": 4,
+      "N": 82,
+      "factors": {
+        "2": 1,
+        "41": 1
+      },
+      "prime_orders": {
+        "41": 8
+      },
+      "primitive_divisors": [
+        41
+      ]
+    },
+    {
+      "p": 3,
+      "k": 5,
+      "N": 244,
+      "factors": {
+        "2": 2,
+        "61": 1
+      },
+      "prime_orders": {
+        "61": 10
+      },
+      "primitive_divisors": [
+        61
+      ]
+    },
+    {
+      "p": 3,
+      "k": 6,
+      "N": 730,
+      "factors": {
+        "2": 1,
+        "5": 1,
+        "73": 1
+      },
+      "prime_orders": {
+        "5": 4,
+        "73": 12
+      },
+      "primitive_divisors": [
+        73
+      ]
+    },
+    {
+      "p": 3,
+      "k": 7,
+      "N": 2188,
+      "factors": {
+        "2": 2,
+        "547": 1
+      },
+      "prime_orders": {
+        "547": 14
+      },
+      "primitive_divisors": [
+        547
+      ]
+    },
+    {
+      "p": 3,
+      "k": 8,
+      "N": 6562,
+      "factors": {
+        "2": 1,
+        "17": 1,
+        "193": 1
+      },
+      "prime_orders": {
+        "17": 16,
+        "193": 16
+      },
+      "primitive_divisors": [
+        17,
+        193
+      ]
+    },
+    {
+      "p": 5,
+      "k": 1,
+      "N": 6,
+      "factors": {
+        "2": 1,
+        "3": 1
+      },
+      "prime_orders": {
+        "3": 2
+      },
+      "primitive_divisors": [
+        3
+      ]
+    },
+    {
+      "p": 5,
+      "k": 2,
+      "N": 26,
+      "factors": {
+        "2": 1,
+        "13": 1
+      },
+      "prime_orders": {
+        "13": 4
+      },
+      "primitive_divisors": [
+        13
+      ]
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "N": 126,
+      "factors": {
+        "2": 1,
+        "3": 2,
+        "7": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "7": 6
+      },
+      "primitive_divisors": [
+        7
+      ]
+    },
+    {
+      "p": 5,
+      "k": 4,
+      "N": 626,
+      "factors": {
+        "2": 1,
+        "313": 1
+      },
+      "prime_orders": {
+        "313": 8
+      },
+      "primitive_divisors": [
+        313
+      ]
+    },
+    {
+      "p": 5,
+      "k": 5,
+      "N": 3126,
+      "factors": {
+        "2": 1,
+        "3": 1,
+        "521": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "521": 10
+      },
+      "primitive_divisors": [
+        521
+      ]
+    },
+    {
+      "p": 5,
+      "k": 6,
+      "N": 15626,
+      "factors": {
+        "2": 1,
+        "13": 1,
+        "601": 1
+      },
+      "prime_orders": {
+        "13": 4,
+        "601": 12
+      },
+      "primitive_divisors": [
+        601
+      ]
+    },
+    {
+      "p": 5,
+      "k": 7,
+      "N": 78126,
+      "factors": {
+        "2": 1,
+        "3": 1,
+        "29": 1,
+        "449": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "29": 14,
+        "449": 14
+      },
+      "primitive_divisors": [
+        29,
+        449
+      ]
+    },
+    {
+      "p": 5,
+      "k": 8,
+      "N": 390626,
+      "factors": {
+        "2": 1,
+        "17": 1,
+        "11489": 1
+      },
+      "prime_orders": {
+        "17": 16,
+        "11489": 16
+      },
+      "primitive_divisors": [
+        17,
+        11489
+      ]
+    },
+    {
+      "p": 7,
+      "k": 1,
+      "N": 8,
+      "factors": {
+        "2": 3
+      },
+      "prime_orders": {},
+      "primitive_divisors": []
+    },
+    {
+      "p": 7,
+      "k": 2,
+      "N": 50,
+      "factors": {
+        "2": 1,
+        "5": 2
+      },
+      "prime_orders": {
+        "5": 4
+      },
+      "primitive_divisors": [
+        5
+      ]
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "N": 344,
+      "factors": {
+        "2": 3,
+        "43": 1
+      },
+      "prime_orders": {
+        "43": 6
+      },
+      "primitive_divisors": [
+        43
+      ]
+    },
+    {
+      "p": 7,
+      "k": 4,
+      "N": 2402,
+      "factors": {
+        "2": 1,
+        "1201": 1
+      },
+      "prime_orders": {
+        "1201": 8
+      },
+      "primitive_divisors": [
+        1201
+      ]
+    },
+    {
+      "p": 7,
+      "k": 5,
+      "N": 16808,
+      "factors": {
+        "2": 3,
+        "11": 1,
+        "191": 1
+      },
+      "prime_orders": {
+        "11": 10,
+        "191": 10
+      },
+      "primitive_divisors": [
+        11,
+        191
+      ]
+    },
+    {
+      "p": 7,
+      "k": 6,
+      "N": 117650,
+      "factors": {
+        "2": 1,
+        "5": 2,
+        "13": 1,
+        "181": 1
+      },
+      "prime_orders": {
+        "5": 4,
+        "13": 12,
+        "181": 12
+      },
+      "primitive_divisors": [
+        13,
+        181
+      ]
+    },
+    {
+      "p": 7,
+      "k": 7,
+      "N": 823544,
+      "factors": {
+        "2": 3,
+        "113": 1,
+        "911": 1
+      },
+      "prime_orders": {
+        "113": 14,
+        "911": 14
+      },
+      "primitive_divisors": [
+        113,
+        911
+      ]
+    },
+    {
+      "p": 7,
+      "k": 8,
+      "N": 5764802,
+      "factors": {
+        "2": 1,
+        "17": 1,
+        "169553": 1
+      },
+      "prime_orders": {
+        "17": 16,
+        "169553": 16
+      },
+      "primitive_divisors": [
+        17,
+        169553
+      ]
+    },
+    {
+      "p": 11,
+      "k": 1,
+      "N": 12,
+      "factors": {
+        "2": 2,
+        "3": 1
+      },
+      "prime_orders": {
+        "3": 2
+      },
+      "primitive_divisors": [
+        3
+      ]
+    },
+    {
+      "p": 11,
+      "k": 2,
+      "N": 122,
+      "factors": {
+        "2": 1,
+        "61": 1
+      },
+      "prime_orders": {
+        "61": 4
+      },
+      "primitive_divisors": [
+        61
+      ]
+    },
+    {
+      "p": 11,
+      "k": 3,
+      "N": 1332,
+      "factors": {
+        "2": 2,
+        "3": 2,
+        "37": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "37": 6
+      },
+      "primitive_divisors": [
+        37
+      ]
+    },
+    {
+      "p": 11,
+      "k": 4,
+      "N": 14642,
+      "factors": {
+        "2": 1,
+        "7321": 1
+      },
+      "prime_orders": {
+        "7321": 8
+      },
+      "primitive_divisors": [
+        7321
+      ]
+    },
+    {
+      "p": 11,
+      "k": 5,
+      "N": 161052,
+      "factors": {
+        "2": 2,
+        "3": 1,
+        "13421": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "13421": 10
+      },
+      "primitive_divisors": [
+        13421
+      ]
+    },
+    {
+      "p": 11,
+      "k": 6,
+      "N": 1771562,
+      "factors": {
+        "2": 1,
+        "13": 1,
+        "61": 1,
+        "1117": 1
+      },
+      "prime_orders": {
+        "13": 12,
+        "61": 4,
+        "1117": 12
+      },
+      "primitive_divisors": [
+        13,
+        1117
+      ]
+    },
+    {
+      "p": 11,
+      "k": 7,
+      "N": 19487172,
+      "factors": {
+        "2": 2,
+        "3": 1,
+        "1623931": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "1623931": 14
+      },
+      "primitive_divisors": [
+        1623931
+      ]
+    },
+    {
+      "p": 11,
+      "k": 8,
+      "N": 214358882,
+      "factors": {
+        "2": 1,
+        "17": 1,
+        "6304673": 1
+      },
+      "prime_orders": {
+        "17": 16,
+        "6304673": 16
+      },
+      "primitive_divisors": [
+        17,
+        6304673
+      ]
+    },
+    {
+      "p": 13,
+      "k": 1,
+      "N": 14,
+      "factors": {
+        "2": 1,
+        "7": 1
+      },
+      "prime_orders": {
+        "7": 2
+      },
+      "primitive_divisors": [
+        7
+      ]
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "N": 170,
+      "factors": {
+        "2": 1,
+        "5": 1,
+        "17": 1
+      },
+      "prime_orders": {
+        "5": 4,
+        "17": 4
+      },
+      "primitive_divisors": [
+        5,
+        17
+      ]
+    },
+    {
+      "p": 13,
+      "k": 3,
+      "N": 2198,
+      "factors": {
+        "2": 1,
+        "7": 1,
+        "157": 1
+      },
+      "prime_orders": {
+        "7": 2,
+        "157": 6
+      },
+      "primitive_divisors": [
+        157
+      ]
+    },
+    {
+      "p": 13,
+      "k": 4,
+      "N": 28562,
+      "factors": {
+        "2": 1,
+        "14281": 1
+      },
+      "prime_orders": {
+        "14281": 8
+      },
+      "primitive_divisors": [
+        14281
+      ]
+    },
+    {
+      "p": 13,
+      "k": 5,
+      "N": 371294,
+      "factors": {
+        "2": 1,
+        "7": 1,
+        "11": 1,
+        "2411": 1
+      },
+      "prime_orders": {
+        "7": 2,
+        "11": 10,
+        "2411": 10
+      },
+      "primitive_divisors": [
+        11,
+        2411
+      ]
+    },
+    {
+      "p": 13,
+      "k": 6,
+      "N": 4826810,
+      "factors": {
+        "2": 1,
+        "5": 1,
+        "17": 1,
+        "28393": 1
+      },
+      "prime_orders": {
+        "5": 4,
+        "17": 4,
+        "28393": 12
+      },
+      "primitive_divisors": [
+        28393
+      ]
+    },
+    {
+      "p": 13,
+      "k": 7,
+      "N": 62748518,
+      "factors": {
+        "2": 1,
+        "7": 2,
+        "29": 1,
+        "22079": 1
+      },
+      "prime_orders": {
+        "7": 2,
+        "29": 14,
+        "22079": 14
+      },
+      "primitive_divisors": [
+        29,
+        22079
+      ]
+    },
+    {
+      "p": 13,
+      "k": 8,
+      "N": 815730722,
+      "factors": {
+        "2": 1,
+        "407865361": 1
+      },
+      "prime_orders": {
+        "407865361": 16
+      },
+      "primitive_divisors": [
+        407865361
+      ]
+    },
+    {
+      "p": 17,
+      "k": 1,
+      "N": 18,
+      "factors": {
+        "2": 1,
+        "3": 2
+      },
+      "prime_orders": {
+        "3": 2
+      },
+      "primitive_divisors": [
+        3
+      ]
+    },
+    {
+      "p": 17,
+      "k": 2,
+      "N": 290,
+      "factors": {
+        "2": 1,
+        "5": 1,
+        "29": 1
+      },
+      "prime_orders": {
+        "5": 4,
+        "29": 4
+      },
+      "primitive_divisors": [
+        5,
+        29
+      ]
+    },
+    {
+      "p": 17,
+      "k": 3,
+      "N": 4914,
+      "factors": {
+        "2": 1,
+        "3": 3,
+        "7": 1,
+        "13": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "7": 6,
+        "13": 6
+      },
+      "primitive_divisors": [
+        7,
+        13
+      ]
+    },
+    {
+      "p": 17,
+      "k": 4,
+      "N": 83522,
+      "factors": {
+        "2": 1,
+        "41761": 1
+      },
+      "prime_orders": {
+        "41761": 8
+      },
+      "primitive_divisors": [
+        41761
+      ]
+    },
+    {
+      "p": 17,
+      "k": 5,
+      "N": 1419858,
+      "factors": {
+        "2": 1,
+        "3": 2,
+        "11": 1,
+        "71": 1,
+        "101": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "11": 10,
+        "71": 10,
+        "101": 10
+      },
+      "primitive_divisors": [
+        11,
+        71,
+        101
+      ]
+    },
+    {
+      "p": 17,
+      "k": 6,
+      "N": 24137570,
+      "factors": {
+        "2": 1,
+        "5": 1,
+        "29": 1,
+        "83233": 1
+      },
+      "prime_orders": {
+        "5": 4,
+        "29": 4,
+        "83233": 12
+      },
+      "primitive_divisors": [
+        83233
+      ]
+    },
+    {
+      "p": 17,
+      "k": 7,
+      "N": 410338674,
+      "factors": {
+        "2": 1,
+        "3": 2,
+        "22796593": 1
+      },
+      "prime_orders": {
+        "3": 2,
+        "22796593": 14
+      },
+      "primitive_divisors": [
+        22796593
+      ]
+    },
+    {
+      "p": 17,
+      "k": 8,
+      "N": 6975757442,
+      "factors": {
+        "2": 1,
+        "18913": 1,
+        "184417": 1
+      },
+      "prime_orders": {
+        "18913": 16,
+        "184417": 16
+      },
+      "primitive_divisors": [
+        18913,
+        184417
+      ]
+    },
+    {
+      "p": 19,
+      "k": 1,
+      "N": 20,
+      "factors": {
+        "2": 2,
+        "5": 1
+      },
+      "prime_orders": {
+        "5": 2
+      },
+      "primitive_divisors": [
+        5
+      ]
+    },
+    {
+      "p": 19,
+      "k": 2,
+      "N": 362,
+      "factors": {
+        "2": 1,
+        "181": 1
+      },
+      "prime_orders": {
+        "181": 4
+      },
+      "primitive_divisors": [
+        181
+      ]
+    },
+    {
+      "p": 19,
+      "k": 3,
+      "N": 6860,
+      "factors": {
+        "2": 2,
+        "5": 1,
+        "7": 3
+      },
+      "prime_orders": {
+        "5": 2,
+        "7": 6
+      },
+      "primitive_divisors": [
+        7
+      ]
+    },
+    {
+      "p": 19,
+      "k": 4,
+      "N": 130322,
+      "factors": {
+        "2": 1,
+        "17": 1,
+        "3833": 1
+      },
+      "prime_orders": {
+        "17": 8,
+        "3833": 8
+      },
+      "primitive_divisors": [
+        17,
+        3833
+      ]
+    },
+    {
+      "p": 19,
+      "k": 5,
+      "N": 2476100,
+      "factors": {
+        "2": 2,
+        "5": 2,
+        "11": 1,
+        "2251": 1
+      },
+      "prime_orders": {
+        "5": 2,
+        "11": 10,
+        "2251": 10
+      },
+      "primitive_divisors": [
+        11,
+        2251
+      ]
+    },
+    {
+      "p": 19,
+      "k": 6,
+      "N": 47045882,
+      "factors": {
+        "2": 1,
+        "13": 2,
+        "181": 1,
+        "769": 1
+      },
+      "prime_orders": {
+        "13": 12,
+        "181": 4,
+        "769": 12
+      },
+      "primitive_divisors": [
+        13,
+        769
+      ]
+    },
+    {
+      "p": 19,
+      "k": 7,
+      "N": 893871740,
+      "factors": {
+        "2": 2,
+        "5": 1,
+        "197": 1,
+        "226871": 1
+      },
+      "prime_orders": {
+        "5": 2,
+        "197": 14,
+        "226871": 14
+      },
+      "primitive_divisors": [
+        197,
+        226871
+      ]
+    },
+    {
+      "p": 19,
+      "k": 8,
+      "N": 16983563042,
+      "factors": {
+        "2": 1,
+        "15073": 1,
+        "563377": 1
+      },
+      "prime_orders": {
+        "15073": 16,
+        "563377": 16
+      },
+      "primitive_divisors": [
+        15073,
+        563377
+      ]
+    }
+  ],
+  "field_vs_tower_27": {
+    "field_modulus": [
+      1,
+      0,
+      2,
+      1
+    ],
+    "core_group_order": 1053,
+    "two_point_group": 3,
+    "rigid_three_set": [
+      0,
+      1,
+      3
+    ],
+    "core_transitive_max": 5,
+    "triangle_tower_same_size_group": 1594323,
+    "triangle_tower_same_size_transitive_max": 8
+  },
+  "local_bases": [
+    {
+      "ambient_q": 7,
+      "base_n": 3,
+      "base_rows": [
+        2,
+        4,
+        1
+      ],
+      "base_group_order": 3,
+      "tau": 2,
+      "cut": [
+        0
+      ],
+      "imbalance_base": 1,
+      "family": [
+        {
+          "depth": 1,
+          "child_n": 4,
+          "cut_weight": 1,
+          "child_transitive_max": 3
+        },
+        {
+          "depth": 2,
+          "child_n": 10,
+          "cut_weight": 4,
+          "child_transitive_max": 5
+        },
+        {
+          "depth": 3,
+          "child_n": 28,
+          "cut_weight": 13,
+          "child_transitive_max": 9
+        },
+        {
+          "depth": 4,
+          "child_n": 82,
+          "cut_weight": 40,
+          "child_transitive_max": 17
+        }
+      ]
+    },
+    {
+      "ambient_q": 11,
+      "base_n": 5,
+      "base_rows": [
+        12,
+        5,
+        24,
+        18,
+        3
+      ],
+      "base_group_order": 5,
+      "tau": 3,
+      "cut": [
+        0
+      ],
+      "imbalance_base": 3,
+      "family": [
+        {
+          "depth": 1,
+          "child_n": 6,
+          "cut_weight": 1,
+          "child_transitive_max": 4
+        },
+        {
+          "depth": 2,
+          "child_n": 26,
+          "cut_weight": 8,
+          "child_transitive_max": 10
+        },
+        {
+          "depth": 3,
+          "child_n": 126,
+          "cut_weight": 49,
+          "child_transitive_max": 28
+        },
+        {
+          "depth": 4,
+          "child_n": 626,
+          "cut_weight": 272,
+          "child_transitive_max": 82
+        }
+      ]
+    },
+    {
+      "ambient_q": 19,
+      "base_n": 9,
+      "base_rows": [
+        284,
+        101,
+        232,
+        338,
+        198,
+        153,
+        417,
+        267,
+        54
+      ],
+      "base_group_order": 9,
+      "tau": 4,
+      "cut": [
+        0
+      ],
+      "imbalance_base": 7,
+      "family": [
+        {
+          "depth": 1,
+          "child_n": 10,
+          "cut_weight": 1,
+          "child_transitive_max": 5
+        },
+        {
+          "depth": 2,
+          "child_n": 82,
+          "cut_weight": 16,
+          "child_transitive_max": 17
+        },
+        {
+          "depth": 3,
+          "child_n": 730,
+          "cut_weight": 193,
+          "child_transitive_max": 65
+        },
+        {
+          "depth": 4,
+          "child_n": 6562,
+          "cut_weight": 2080,
+          "child_transitive_max": 257
+        }
+      ]
+    },
+    {
+      "ambient_q": 23,
+      "base_n": 11,
+      "base_rows": [
+        334,
+        1084,
+        728,
+        944,
+        1249,
+        709,
+        1418,
+        1795,
+        566,
+        1107,
+        301
+      ],
+      "base_group_order": 11,
+      "tau": 4,
+      "cut": [
+        0
+      ],
+      "imbalance_base": 9,
+      "family": [
+        {
+          "depth": 1,
+          "child_n": 12,
+          "cut_weight": 1,
+          "child_transitive_max": 5
+        },
+        {
+          "depth": 2,
+          "child_n": 122,
+          "cut_weight": 20,
+          "child_transitive_max": 17
+        },
+        {
+          "depth": 3,
+          "child_n": 1332,
+          "cut_weight": 301,
+          "child_transitive_max": 65
+        },
+        {
+          "depth": 4,
+          "child_n": 14642,
+          "cut_weight": 4040,
+          "child_transitive_max": 257
+        }
+      ]
+    },
+    {
+      "ambient_q": 27,
+      "base_n": 13,
+      "base_rows": [
+        3016,
+        1713,
+        235,
+        4466,
+        4517,
+        7745,
+        7314,
+        7464,
+        2662,
+        1244,
+        2333,
+        4638,
+        1799
+      ],
+      "base_group_order": 39,
+      "tau": 4,
+      "cut": [
+        0,
+        1
+      ],
+      "imbalance_base": 9,
+      "family": [
+        {
+          "depth": 1,
+          "child_n": 14,
+          "cut_weight": 2,
+          "child_transitive_max": 5
+        },
+        {
+          "depth": 2,
+          "child_n": 170,
+          "cut_weight": 44,
+          "child_transitive_max": 17
+        },
+        {
+          "depth": 3,
+          "child_n": 2198,
+          "cut_weight": 734,
+          "child_transitive_max": 65
+        },
+        {
+          "depth": 4,
+          "child_n": 28562,
+          "cut_weight": 11000,
+          "child_transitive_max": 257
+        }
+      ]
+    },
+    {
+      "ambient_q": 59,
+      "base_n": 29,
+      "base_rows": [
+        43498252,
+        117861589,
+        440720696,
+        211941986,
+        153068873,
+        274649427,
+        421992325,
+        70855997,
+        343563786,
+        148158646,
+        33204777,
+        66932848,
+        330491026,
+        388352356,
+        216434385,
+        233638338,
+        194139942,
+        458009228,
+        401675656,
+        336949839,
+        493019214,
+        432734775,
+        327758043,
+        236593654,
+        512246701,
+        137938936,
+        40050293,
+        340540835,
+        109170331
+      ],
+      "base_group_order": 29,
+      "tau": 8,
+      "cut": [
+        0
+      ],
+      "imbalance_base": 27,
+      "family": [
+        {
+          "depth": 1,
+          "child_n": 30,
+          "cut_weight": 1,
+          "child_transitive_max": 9
+        },
+        {
+          "depth": 2,
+          "child_n": 842,
+          "cut_weight": 56,
+          "child_transitive_max": 65
+        },
+        {
+          "depth": 3,
+          "child_n": 24390,
+          "cut_weight": 2353,
+          "child_transitive_max": 513
+        },
+        {
+          "depth": 4,
+          "child_n": 707282,
+          "cut_weight": 87920,
+          "child_transitive_max": 4097
+        }
+      ]
+    }
+  ],
+  "prime_necklaces": [
+    {
+      "p": 3,
+      "depth": 1,
+      "parent_n": 3,
+      "subset_orbits": 4,
+      "unmarked_children": 3,
+      "rigid_children": 1
+    },
+    {
+      "p": 3,
+      "depth": 2,
+      "parent_n": 9,
+      "subset_orbits": 24,
+      "unmarked_children": 23,
+      "rigid_children": 2
+    },
+    {
+      "p": 3,
+      "depth": 3,
+      "parent_n": 27,
+      "subset_orbits": 4624,
+      "unmarked_children": 4623,
+      "rigid_children": 2
+    },
+    {
+      "p": 5,
+      "depth": 1,
+      "parent_n": 5,
+      "subset_orbits": 8,
+      "unmarked_children": 7,
+      "rigid_children": 5
+    },
+    {
+      "p": 5,
+      "depth": 2,
+      "parent_n": 25,
+      "subset_orbits": 6560,
+      "unmarked_children": 6559,
+      "rigid_children": 1554
+    },
+    {
+      "p": 5,
+      "depth": 3,
+      "parent_n": 125,
+      "subset_orbits": 2429680636395525248,
+      "unmarked_children": 2429680636395525247,
+      "rigid_children": 1812529434416694
+    },
+    {
+      "p": 7,
+      "depth": 1,
+      "parent_n": 7,
+      "subset_orbits": 20,
+      "unmarked_children": 19,
+      "rigid_children": 17
+    },
+    {
+      "p": 7,
+      "depth": 2,
+      "parent_n": 49,
+      "subset_orbits": 182857160,
+      "unmarked_children": 182857159,
+      "rigid_children": 87460002
+    },
+    {
+      "p": 7,
+      "depth": 3,
+      "parent_n": 343,
+      "subset_orbits": 976530365674934549520546866927252339038478385362808163280,
+      "unmarked_children": 976530365674934549520546866927252339038478385362808163279,
+      "rigid_children": 5592015165811018768247097612971609872443493873470660018
+    },
+    {
+      "p": 11,
+      "depth": 1,
+      "parent_n": 11,
+      "subset_orbits": 188,
+      "unmarked_children": 187,
+      "rigid_children": 185
+    },
+    {
+      "p": 11,
+      "depth": 2,
+      "parent_n": 121,
+      "subset_orbits": 942635207678521194411272,
+      "unmarked_children": 942635207678521194411271,
+      "rigid_children": 838010965041789970088850
+    },
+    {
+      "p": 11,
+      "depth": 3,
+      "parent_n": 1331,
+      "subset_orbits": 47466535995276883914219561309012339794507813846530709232499107302131925904114410367044756531994692914354414280696339123722377735117935516607781422930311111761607188104786255625312628880176371160926899019644775089198426442575793185812336866115671609706942251440368,
+      "unmarked_children": 47466535995276883914219561309012339794507813846530709232499107302131925904114410367044756531994692914354414280696339123722377735117935516607781422930311111761607188104786255625312628880176371160926899019644775089198426442575793185812336866115671609706942251440367,
+      "rigid_children": 13012298832597734361955519739146005048151506460644944114958258728521791410556350319685502862780722642661116699287406730681506765293223135087404920596031192078101762876942522563649864703372299785944110831017210218665170371353843592792078640875642912979155457264650
+    },
+    {
+      "p": 13,
+      "depth": 1,
+      "parent_n": 13,
+      "subset_orbits": 632,
+      "unmarked_children": 631,
+      "rigid_children": 629
+    },
+    {
+      "p": 13,
+      "depth": 2,
+      "parent_n": 169,
+      "subset_orbits": 197414325965083894185751392097766432,
+      "unmarked_children": 197414325965083894185751392097766431,
+      "rigid_children": 189445280533973966476848461538461490
+    },
+    {
+      "p": 13,
+      "depth": 3,
+      "parent_n": 2197,
+      "subset_orbits": 53208289457119368271965596832317656609305071497149379910042977672538345950814953581591708636680257435554509967672587505169575411175311935708051756435329942201570793494285975336041432420585394511449790422700301969760212666098504894978570127192850548915526848604023264763552780942040439464025752755258771784385586938524490500122400337929324895361587567024490769294376726106619344106034668399093830178044880047597954520757773847643793527033444398864312533186432,
+      "unmarked_children": 53208289457119368271965596832317656609305071497149379910042977672538345950814953581591708636680257435554509967672587505169575411175311935708051756435329942201570793494285975336041432420585394511449790422700301969760212666098504894978570127192850548915526848604023264763552780942040439464025752755258771784385586938524490500122400337929324895361587567024490769294376726106619344106034668399093830178044880047597954520757773847643793527033444398864312533186431,
+      "rigid_children": 31141958767931029770121565804009101809770467129954070381291046984438368623492593591114757217122936979197016810387838730521680298953637890898633160597333016574786799453567200641125803161138786287292383669860318383331262300577947754613913528182833190288855862632220687840554316781860081991268435471256908423496005380124752130187434342443598510503849014282804134752430272789468908472732862794894643997875476766439141946506885202863437601006958613280118343195270
+    }
+  ],
+  "composite_necklaces": [
+    {
+      "b": 9,
+      "all_orbits": 60,
+      "regular_orbits": 56
+    },
+    {
+      "b": 15,
+      "all_orbits": 2192,
+      "regular_orbits": 2182
+    }
+  ],
+  "frobenius_seeds": [
+    {
+      "base": "P7",
+      "p": 7,
+      "ell": 3,
+      "fixed_cycle_count": 3,
+      "minimum_index": 4,
+      "binary_regular_orbits": 4,
+      "binary_regular_masks": 84,
+      "binary_unmarked_children": 11
+    },
+    {
+      "base": "P11",
+      "p": 11,
+      "ell": 5,
+      "fixed_cycle_count": 3,
+      "minimum_index": 8,
+      "binary_regular_orbits": 36,
+      "binary_regular_masks": 1980,
+      "binary_unmarked_children": 43
+    },
+    {
+      "base": "local13",
+      "p": 13,
+      "ell": 3,
+      "fixed_cycle_count": 5,
+      "minimum_index": 8,
+      "binary_regular_orbits": 200,
+      "binary_regular_masks": 7800,
+      "binary_unmarked_children": 231
+    }
+  ],
+  "exact_attachment_radii": [
+    {
+      "base_n": 5,
+      "forbidden_n": 7,
+      "max_old_intersection": 4,
+      "minimum_new_vertices": 3,
+      "embedding_witness": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "upper_witnesses": [
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "base_n": 7,
+      "forbidden_n": 11,
+      "max_old_intersection": 5,
+      "minimum_new_vertices": 6,
+      "embedding_witness": [
+        [
+          0,
+          1,
+          2,
+          3,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          3,
+          0,
+          2,
+          4
+        ]
+      ],
+      "upper_witnesses": [
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            3,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            3,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            4,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            2,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            2,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            4,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            3,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            3,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            4,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            4,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            1,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            1,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            4,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            3,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            3,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            4,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            4,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            2,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            2,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            5,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            4,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            4,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            3,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            3,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            4,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            4,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            5,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            5,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            5,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            5,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            0,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            0,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            6
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            3,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            3,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            4,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            2,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            2,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            4,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            4,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            3,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            3,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            4,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            4,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            5,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            1,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            5,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            5,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            1,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            1,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            7
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            4,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            4,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            6,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            3,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            3,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            5,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            4,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            4,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            5,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            5,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            5,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            2,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            2,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            6,
+            8
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            6,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            6,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            6,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            4,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            4,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            3,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "subset": [
+            3,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            5,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            5,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            5,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            3,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            3,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prime_obstruction": [
+            4,
+            5,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "subset": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ],
+          "prime_obstruction": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            10
+          ]
+        },
+        {
+          "subset": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            4,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        {
+          "subset": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "prime_obstruction": [
+            5,
+            6,
+            7,
+            8,
+            10
+          ]
+        }
+      ]
+    }
+  ],
+  "hostile": {
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ],
+    "common_cyclic_triples": 67
+  },
+  "integral_lattices": [
+    {
+      "q": 3,
+      "C": 1,
+      "r": 1,
+      "smith_diagonal": [
+        1,
+        1
+      ],
+      "single_cokernel_order": 1,
+      "paired_group_order": 1,
+      "lagrangians_if_C_prime": null
+    },
+    {
+      "q": 7,
+      "C": 2,
+      "r": 3,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "single_cokernel_order": 8,
+      "paired_group_order": 64,
+      "lagrangians_if_C_prime": 135
+    },
+    {
+      "q": 11,
+      "C": 3,
+      "r": 5,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "single_cokernel_order": 243,
+      "paired_group_order": 59049,
+      "lagrangians_if_C_prime": 22408960
+    },
+    {
+      "q": 19,
+      "C": 5,
+      "r": 9,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "single_cokernel_order": 1953125,
+      "paired_group_order": 3814697265625,
+      "lagrangians_if_C_prime": 35825583079429790232410750854656
+    },
+    {
+      "q": 23,
+      "C": 6,
+      "r": 11,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "single_cokernel_order": 362797056,
+      "paired_group_order": 131621703842267136,
+      "lagrangians_if_C_prime": null
+    },
+    {
+      "q": 27,
+      "C": 7,
+      "r": 13,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "single_cokernel_order": 96889010407,
+      "paired_group_order": 9387480337647754305649,
+      "lagrangians_if_C_prime": 93791358017763423548245834063433074463512128165528640325726267726888960000000
+    },
+    {
+      "q": 59,
+      "C": 15,
+      "r": 29,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "single_cokernel_order": 12783403948858939111232757568359375,
+      "paired_group_order": 163415416519702317955986664889389547994369422667659819126129150390625,
+      "lagrangians_if_C_prime": null
+    },
+    {
+      "q": 15,
+      "C": 4,
+      "r": 7,
+      "smith_diagonal": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "single_cokernel_order": 16384,
+      "paired_group_order": 268435456,
+      "lagrangians_if_C_prime": null
+    }
+  ],
+  "lagrangian_rank_two": [
+    {
+      "p": 2,
+      "dimension": 4,
+      "all_planes": 35,
+      "lagrangians": 15
+    },
+    {
+      "p": 3,
+      "dimension": 4,
+      "all_planes": 130,
+      "lagrangians": 40
+    },
+    {
+      "p": 5,
+      "dimension": 4,
+      "all_planes": 806,
+      "lagrangians": 156
+    },
+    {
+      "p": 7,
+      "dimension": 4,
+      "all_planes": 2850,
+      "lagrangians": 400
+    }
+  ],
+  "nonfield_15": {
+    "rows": [
+      5910,
+      11820,
+      23640,
+      14641,
+      29282,
+      25925,
+      19211,
+      127,
+      26774,
+      20908,
+      9176,
+      18097,
+      3554,
+      6853,
+      13451
+    ],
+    "group_order": 21,
+    "transitive_max": 5
+  },
+  "gates": 1077498
+}

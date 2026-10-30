@@ -1,0 +1,32 @@
+{
+  "source_revision": "ffb722baadb4b9adc420240125518f2237f37623",
+  "hash_basis": "Inherited sources: exact Git blobs. Packet artifacts: exact LF bytes.",
+  "sources": {
+    "01-canon/theorems/THM-4557-doubling-a-doubly-regular-tournament-keeps-its-automorphism-group-hyp-9162.md": "d198b1a6eeb891a280529902e077b047798b75c52e1c58628c3e5fb04f38266c",
+    "01-canon/theorems/THM-4814-order-ten-prime-cycle-index-types-order-eleven-ledger-skew-hadamard-nuclear-norm-extremality-and-black-core-distance-of-regular-tournaments.md": "e2de7e36b3f7009e2cf69c62b6b19d2ecfc55cb9a80cd4093c4a2a247be1dcbe",
+    "05-knowledge/results/collatz_mod6_20260917_zsigmondy_triad.md": "51399f510b102f3a804517d714613974d358d59d48f04ab4e09fb838b61e136e",
+    "05-knowledge/results/cycle101_tournament_collatz_dictionary_20261029.md": "5e6d79ddbfbcc913830e9f7967a4e6e53e50cfda9b396cd221fb79c47474d328",
+    "05-knowledge/results/exception_palette_dynamics_20261021/session24-palette-dynamics/PALETTE_DYNAMICS.md": "1a6b679bf8900c38baa8377cff39ca86931dd9ecc02a2ecb73f25bba53150ae3",
+    "05-knowledge/results/order10_prime_types_n11_ledger_spectral_blackcore_20261027/README.md": "3fec410a01cea7ef6bb91b7750bdaf4847abde9c970c3447bde93246c633b159",
+    "05-knowledge/results/pinned_discrepancy_reset_tails_20261029/FINITE_DEPTH.md": "c5096a8d5ed871dc1bf68ad4cf4053cc2fb3093fb84b8ea0f2bb7ed995c23d7a",
+    "05-knowledge/results/reciprocal_lucas_carriers_20261028/THEORY.md": "6993264e792613c5a36130c2e297e38b3bcd1d39ea9ef06ac1887829832ee0e8",
+    "05-knowledge/results/regular_parent_symmetry_20261029/PROOFS.md": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/session110_overnight_20261030/CHECKPOINT_01.md": "a92d26396e102b7e1ec82c87c8f1120d5cd443b5e619aba1542269061cc01bec",
+    "05-knowledge/results/session68_tournament_composition_classification_20261026/session68-classification/CLASSIFICATION.md": "9296178069145fccd220a0868a1478d81195a4f96ca0fa2ba1d1d1307949e46f",
+    "05-knowledge/results/stabilizer_necklace_kernels_20261028/STABILIZERS.md": "1b8cbbe1c0e3473826f5b65e39e09ccd182ca507fec53f3981d3388ab73de8f6"
+  },
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "ARITHMETIC.md": "8c56974b78513592279a6a01b475b2a4e98f8f94f3c4f090ae33d1112c964833",
+    "certificate.json": "ddd23b5271c72ec5a314795345bb5aad11fe0ee8df8de1e18952d969075f67c9",
+    "GROWTH.md": "c916cb0590682da06dd572897722166f30120feb97dde5f7aa8beb6d21c4c821",
+    "HANDOFF.md": "da600bb55440dfb0a487990f6118c7bb0009f5d2b210417228f78bad9c651cb6",
+    "README.md": "98b9fabf0477b4c23c569a734be88a8e096cb81501e0242b5baa2db76efbcd9e",
+    "RECOVERY.md": "ab3de8509e7206d3f0bc75ad3456a62b3d0eebe000c1ff43e4b2af9d9eb7781f",
+    "seal.py": "bc6cdba6a38b088430332eec3437a09d5d36845261f79dd9ee1420a0334aede1",
+    "verify.py": "39b24298fd2efb4e93419d6b1ea13443eea5e93ab45a6ae163860a2574bda624"
+  },
+  "scope": "Same-agent proof audit; independent native algorithms; no independent referee.",
+  "runtime": "Python plus SymPy for Smith forms; verify.py imports the pinned regular_parent_symmetry verifier for native algorithms."
+}
