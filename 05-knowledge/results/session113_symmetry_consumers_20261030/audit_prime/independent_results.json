@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "all_orbits_explicit": 692224,
+  "prime_orbits_literal": 665856,
+  "independent_rank_controls": 46,
+  "invalid_rank_controls": 6,
+  "hidden_original_period_thresholds": 36
+}

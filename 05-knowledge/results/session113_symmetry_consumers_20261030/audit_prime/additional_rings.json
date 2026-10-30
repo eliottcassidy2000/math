@@ -1,0 +1,29 @@
+[
+  {
+    "p": 7,
+    "k": 2,
+    "discriminant": 14,
+    "coordinates": 48,
+    "prime_orbits": "5744343453696",
+    "rank_controls": 13,
+    "literal_cuts": 3
+  },
+  {
+    "p": 11,
+    "k": 2,
+    "discriminant": 22,
+    "coordinates": 120,
+    "prime_orbits": "10985355337065400923310459714535424",
+    "rank_controls": 13,
+    "literal_cuts": 3
+  },
+  {
+    "p": 5,
+    "k": 3,
+    "discriminant": 15,
+    "coordinates": 124,
+    "prime_orbits": "170141183461701127141876840654909440",
+    "rank_controls": 13,
+    "literal_cuts": 5
+  }
+]

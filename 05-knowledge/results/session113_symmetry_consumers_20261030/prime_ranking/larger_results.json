@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "scope": "DP totals versus independent convolution; no raw-ring test in these larger cases",
+  "families": [
+    {
+      "p": 5,
+      "k": 4,
+      "dimension": 624,
+      "prime_orbit_bits": 615,
+      "table_entries": 13056
+    },
+    {
+      "p": 5,
+      "k": 5,
+      "dimension": 3124,
+      "prime_orbit_bits": 3113,
+      "table_entries": 75264
+    },
+    {
+      "p": 7,
+      "k": 3,
+      "dimension": 342,
+      "prime_orbit_bits": 334,
+      "table_entries": 3040
+    },
+    {
+      "p": 13,
+      "k": 2,
+      "dimension": 168,
+      "prime_orbit_bits": 161,
+      "table_entries": 800
+    }
+  ]
+}
