@@ -1,0 +1,9 @@
+{
+  "arithmetic_unit_actions": 1966,
+  "cycle_matrices": 510,
+  "cycle_modular_rhs": 17684,
+  "graph_modular_rhs": 134000,
+  "scope": "literal minors, complete modular fibers in stated finite universes; general proofs separate",
+  "signed_graph_matrices": 766,
+  "status": "PASS"
+}

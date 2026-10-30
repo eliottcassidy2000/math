@@ -1,0 +1,41 @@
+{
+  "character_table": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      -1,
+      -1
+    ]
+  ],
+  "moduli": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "n1_exception": "f(x)=x has constant derivative1",
+  "nonzero_translation_tests": 492440,
+  "odd_weight_functions": 32904,
+  "scope": "exact finite controls for stated uniform elementary proofs",
+  "status": "PASS",
+  "unit_graph_edges": 1364
+}

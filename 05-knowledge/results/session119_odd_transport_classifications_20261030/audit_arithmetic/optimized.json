@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "collatz_words": 1092,
+    "fraction_solutions": 1040,
+    "integral_collatz_words": 18,
+    "minor_matrices": 570,
+    "modular_rhs": 30750,
+    "modular_systems": 1050
+  },
+  "hostile_cycle": [
+    -17,
+    -25,
+    -37,
+    -55,
+    -41,
+    -61,
+    -91
+  ],
+  "producer_imported": false,
+  "scope": "exact finite checks plus independent proofs; no Collatz convergence result",
+  "status": "PASS"
+}

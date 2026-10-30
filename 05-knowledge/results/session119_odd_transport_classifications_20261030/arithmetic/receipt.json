@@ -1,0 +1,62 @@
+{
+  "collatz_words": 21844,
+  "coprime_minor_cases": 2340,
+  "integral_collatz_words": 27,
+  "integral_rhs_cases": 1064,
+  "matrix_cases": 2418,
+  "modular_rhs_cases": 38250,
+  "modular_systems": 585,
+  "negative_words": 20,
+  "numerator_identity_cases": 7770,
+  "ordered_multiset_hostile": {
+    "D": -139,
+    "numerators": [
+      2363,
+      2123
+    ],
+    "words": [
+      [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4
+      ]
+    ]
+  },
+  "positive_words": 7,
+  "primitive_integer_cycles_in_bounded_scan": [
+    [
+      -91,
+      -17,
+      -25,
+      -37,
+      -55,
+      -41,
+      -61
+    ],
+    [
+      -7,
+      -5
+    ],
+    [
+      -1
+    ],
+    [
+      1
+    ]
+  ],
+  "scope": "exact bounded checks; no positive Collatz cycle exclusion beyond this word box",
+  "status": "PASS"
+}

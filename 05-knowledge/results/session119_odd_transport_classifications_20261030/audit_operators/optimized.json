@@ -1,0 +1,34 @@
+{
+  "determinantal_minor_crosschecks": 56,
+  "hostile_N15_u2": {
+    "minus": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      0
+    ],
+    "plus": [
+      1,
+      1,
+      1,
+      1,
+      2,
+      0,
+      0
+    ]
+  },
+  "literal_sign_words": 4552,
+  "modular_vectors": 5692,
+  "odd_residue_matrices": 1744,
+  "producer_imports": false,
+  "range_odd_N": [
+    3,
+    65
+  ],
+  "scope": "independent finite matrix and sign controls; uniform proofs in audit",
+  "signed_cycle_matrices": 508,
+  "status": "PASS"
+}
