@@ -7,6 +7,12 @@ No priority claim for the general Fourier/probabilistic methods. No universal
 Collatz, LRC, or A000568 enumeration consequence is asserted. This is a result
 packet, not a new audited canon theorem or a promotion of an open hypothesis.
 
+**Constructive extension, Oct29:** [proof-target refinement, §1](../proof_targets_refinement_20261029/README.md)
+turns P1's exact covariance into an integer-arithmetic conditional-moment
+algorithm with `||K||<=2 sqrt(N ceil(log_2(N-1)))`. It retains prescribed
+orbit signs with their actual conditional budget. The fast quartic variant
+is checked through1807. The logarithm-free pinned bound remains open.
+
 The central connection is an exact correlation identity, not the recurrence
 of a numerical label. The same orbit constraints can permit quasirandom
 tournaments and strongly biased tournaments. A prime-adic order delay tells

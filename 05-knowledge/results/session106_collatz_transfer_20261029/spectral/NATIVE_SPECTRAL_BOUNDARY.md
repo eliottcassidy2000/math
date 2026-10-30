@@ -2,6 +2,13 @@
 
 Session106, 2026-10-29. **PROVED elementary transfer/obstruction theorems; finite exact checks.** No claim of Collatz convergence or literature priority. The main new synthesis is a sharp refresh-rate threshold, a native ℓ¹ spectral obstruction, and a fully source-weighted resolvent interface.
 
+**Signed-residual extension, Oct29:** [proof-target refinement, §4](../../proof_targets_refinement_20261029/README.md)
+allows a summable signed trial flow with a quantified residual in place of
+an exact positive supersolution. It retains negative residual credit and
+proves monotonicity under paid native refinement, with the original source
+atoms and integer clock unchanged. Independent arithmetic tail bounds,
+and hence universal Collatz entry, remain open.
+
 ## 1. Fix the operator before using its spectrum
 
 Let X be countable, H the genuine terminal set, and T deterministic on X\H. Set Y=X\H and define the column substochastic killed operator

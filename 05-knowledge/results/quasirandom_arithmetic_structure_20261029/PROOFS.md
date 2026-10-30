@@ -3,6 +3,12 @@
 2026-10-29. **PROVED elementary deductions from CITED classical inputs;
 FINITE-EXACT controls; OPEN extensions.** No literature-priority claim.
 
+**Uniform extension, Oct29:** [proof-target refinement, §3](../proof_targets_refinement_20261029/README.md)
+allows growing banks under `Q<=(log X)^A`, uniformly over every feasible
+colour. It combines the shared unequal-fibre estimate with Siegel–Walfisz;
+the onset is not asserted effective. Arbitrary growing conductors and thin
+recursive subsequences remain outside this result.
+
 ## 1. Fixed square-class decorations preserve prime-prefix quasirandomness
 
 Let a_1,...,a_m be fixed positive integers. Let Q(a) be the vector of prime

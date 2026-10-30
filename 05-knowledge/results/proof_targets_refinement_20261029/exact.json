@@ -1,0 +1,557 @@
+{
+  "crt": [
+    {
+      "Q": 8,
+      "bank": [
+        2
+      ],
+      "classes_per_colour": 1,
+      "feasible_colours": 2,
+      "rank": 1
+    },
+    {
+      "Q": 24,
+      "bank": [
+        2,
+        3
+      ],
+      "classes_per_colour": 1,
+      "feasible_colours": 4,
+      "rank": 2
+    },
+    {
+      "Q": 120,
+      "bank": [
+        2,
+        3,
+        5
+      ],
+      "classes_per_colour": 2,
+      "feasible_colours": 8,
+      "rank": 3
+    },
+    {
+      "Q": 10920,
+      "bank": [
+        4,
+        2,
+        5,
+        3,
+        7,
+        13
+      ],
+      "classes_per_colour": 36,
+      "feasible_colours": 32,
+      "rank": 5
+    },
+    {
+      "Q": 168,
+      "bank": [
+        7,
+        3,
+        6,
+        4,
+        8,
+        14
+      ],
+      "classes_per_colour": 3,
+      "feasible_colours": 8,
+      "rank": 3
+    },
+    {
+      "Q": 8,
+      "bank": [
+        -1,
+        2,
+        8,
+        -2
+      ],
+      "classes_per_colour": 1,
+      "feasible_colours": 2,
+      "rank": 1
+    },
+    {
+      "Q": 9240,
+      "bank": [
+        2,
+        3,
+        5,
+        7,
+        11
+      ],
+      "classes_per_colour": 30,
+      "feasible_colours": 32,
+      "rank": 5
+    }
+  ],
+  "global_ideal": {
+    "F": "x**2*(x - 1)",
+    "predicted_product_generators": 9,
+    "reduced_basis": [
+      "p**2*x**2 - 2*p**2*x/3 - p**2/3",
+      "p*x**4 - 4*p*x**3/3 + p*x**2/9 + 2*p*x/9",
+      "x**6 - 2*x**5 + x**4 + 4*x**3/27 - 4*x**2/27"
+    ],
+    "source_generators": 3
+  },
+  "high_moments": [
+    {
+      "final": 2058,
+      "gaussian_bound": 30870,
+      "initial": 2058,
+      "m": 3,
+      "n": 7,
+      "sign_word": "-"
+    },
+    {
+      "final": 1007916,
+      "gaussian_bound": 35986860,
+      "initial": 1007916,
+      "m": 4,
+      "n": 13,
+      "sign_word": "--"
+    },
+    {
+      "final": 44569782,
+      "gaussian_bound": 42118443990,
+      "initial": 378826902,
+      "m": 5,
+      "n": 19,
+      "sign_word": "-+-"
+    },
+    {
+      "final": 265497248058,
+      "gaussian_bound": 2759843893562910,
+      "initial": 96276640478634,
+      "m": 6,
+      "n": 43,
+      "sign_word": "-++-+--"
+    }
+  ],
+  "jacobian": {
+    "invariant_monomial_pairs": 15543,
+    "sharp_examples": [
+      {
+        "F": "x**2",
+        "critical_point": 0,
+        "critical_value_polynomial": "u",
+        "ramification_index": 2,
+        "sharp_order": 2
+      },
+      {
+        "F": "x**4",
+        "critical_point": 0,
+        "critical_value_polynomial": "u",
+        "ramification_index": 4,
+        "sharp_order": 4
+      },
+      {
+        "F": "x**4 + x**3",
+        "critical_point": 0,
+        "critical_value_polynomial": "u**2 + 27*u/256",
+        "ramification_index": 3,
+        "sharp_order": 3
+      },
+      {
+        "F": "(x**2 - 1)**2",
+        "critical_point": 1,
+        "critical_value_polynomial": "u**2 - u",
+        "ramification_index": 2,
+        "sharp_order": 2
+      },
+      {
+        "F": "x**6*(x - 1)**2",
+        "critical_point": 0,
+        "critical_value_polynomial": "u**2 - 729*u/65536",
+        "ramification_index": 6,
+        "sharp_order": 6
+      },
+      {
+        "F": "(x**2 - 1)**3",
+        "critical_point": 1,
+        "critical_value_polynomial": "u**2 + u",
+        "ramification_index": 3,
+        "sharp_order": 3
+      }
+    ]
+  },
+  "moments": [
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 1,
+      "final_trace_fourth": 294,
+      "fourth_defect": 0,
+      "generator": 2,
+      "n": 7,
+      "packets": 1,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 294,
+      "pins": [],
+      "sign_word": "+",
+      "unconditional_fourth_budget": 294
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 2,
+      "final_trace_fourth": 2652,
+      "fourth_defect": 624,
+      "generator": 3,
+      "n": 13,
+      "packets": 2,
+      "parity_defect_floor": 624,
+      "pinned_fourth_budget": 2652,
+      "pins": [],
+      "sign_word": "++",
+      "unconditional_fourth_budget": 2652
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 3,
+      "final_trace_fourth": 6498,
+      "fourth_defect": 0,
+      "generator": 7,
+      "n": 19,
+      "packets": 3,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 9234,
+      "pins": [],
+      "sign_word": "+-+",
+      "unconditional_fourth_budget": 9234
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 0,
+      "final_trace_fourth": 77658,
+      "fourth_defect": 0,
+      "generator": 36,
+      "n": 43,
+      "packets": 7,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 178794,
+      "pins": [],
+      "sign_word": "+--+-++",
+      "unconditional_fourth_budget": 178794
+    },
+    {
+      "attains_regular_tournament_floor": false,
+      "conditional_checks": 0,
+      "final_trace_fourth": 3860724,
+      "fourth_defect": 1525776,
+      "generator": 11,
+      "n": 133,
+      "packets": 22,
+      "parity_defect_floor": 70224,
+      "pinned_fourth_budget": 6490932,
+      "pins": [],
+      "sign_word": "+--+-+----+++-+--++---",
+      "unconditional_fourth_budget": 6490932
+    },
+    {
+      "attains_regular_tournament_floor": false,
+      "conditional_checks": 0,
+      "final_trace_fourth": 10188736974,
+      "fourth_defect": 4291697280,
+      "generator": 1764,
+      "n": 1807,
+      "packets": 301,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 17593389294,
+      "pins": [],
+      "sign_word": "+--++++-+-+----++--+-----+++----++---+-+++++-+--+--+-+--+++--+-+--+++++-+-++++---++--+++-+-+--+--+++-++++-+--++-++----++------++----++--+++-++--+---+--++---+++-+-----+++--------+-+----+-+++-++--++---+---+---++++-+-+-++++-+-+++++--++--+---+---+-++---++++-+--+++-+++-+---+-+---++--------+-+---+++--+-+--",
+      "unconditional_fourth_budget": 17593389294
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 4,
+      "final_trace_fourth": 936,
+      "fourth_defect": 288,
+      "generator": 1,
+      "n": 9,
+      "packets": 4,
+      "parity_defect_floor": 288,
+      "pinned_fourth_budget": 1512,
+      "pins": [],
+      "sign_word": "+++-",
+      "unconditional_fourth_budget": 1512
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 1,
+      "final_trace_fourth": 1210,
+      "fourth_defect": 0,
+      "generator": 3,
+      "n": 11,
+      "packets": 1,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 1210,
+      "pins": [],
+      "sign_word": "+",
+      "unconditional_fourth_budget": 1210
+    },
+    {
+      "attains_regular_tournament_floor": false,
+      "conditional_checks": 0,
+      "final_trace_fourth": 2860440,
+      "fourth_defect": 1103520,
+      "generator": 3,
+      "n": 121,
+      "packets": 12,
+      "parity_defect_floor": 58080,
+      "pinned_fourth_budget": 4631880,
+      "pins": [],
+      "sign_word": "++++-++---+-",
+      "unconditional_fourth_budget": 4631880
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 1,
+      "final_trace_fourth": 294,
+      "fourth_defect": 0,
+      "generator": 2,
+      "n": 7,
+      "packets": 1,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 294,
+      "pins": [
+        -1
+      ],
+      "sign_word": "-",
+      "unconditional_fourth_budget": 294
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 1,
+      "final_trace_fourth": 294,
+      "fourth_defect": 0,
+      "generator": 2,
+      "n": 7,
+      "packets": 1,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 294,
+      "pins": [
+        1
+      ],
+      "sign_word": "+",
+      "unconditional_fourth_budget": 294
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 2,
+      "final_trace_fourth": 2652,
+      "fourth_defect": 624,
+      "generator": 3,
+      "n": 13,
+      "packets": 2,
+      "parity_defect_floor": 624,
+      "pinned_fourth_budget": 2652,
+      "pins": [
+        -1,
+        -1
+      ],
+      "sign_word": "--",
+      "unconditional_fourth_budget": 2652
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 2,
+      "final_trace_fourth": 2652,
+      "fourth_defect": 624,
+      "generator": 3,
+      "n": 13,
+      "packets": 2,
+      "parity_defect_floor": 624,
+      "pinned_fourth_budget": 2652,
+      "pins": [
+        -1,
+        1
+      ],
+      "sign_word": "-+",
+      "unconditional_fourth_budget": 2652
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 2,
+      "final_trace_fourth": 2652,
+      "fourth_defect": 624,
+      "generator": 3,
+      "n": 13,
+      "packets": 2,
+      "parity_defect_floor": 624,
+      "pinned_fourth_budget": 2652,
+      "pins": [
+        1,
+        -1
+      ],
+      "sign_word": "+-",
+      "unconditional_fourth_budget": 2652
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 2,
+      "final_trace_fourth": 2652,
+      "fourth_defect": 624,
+      "generator": 3,
+      "n": 13,
+      "packets": 2,
+      "parity_defect_floor": 624,
+      "pinned_fourth_budget": 2652,
+      "pins": [
+        1,
+        1
+      ],
+      "sign_word": "++",
+      "unconditional_fourth_budget": 2652
+    },
+    {
+      "attains_regular_tournament_floor": false,
+      "conditional_checks": 3,
+      "final_trace_fourth": 10146,
+      "fourth_defect": 3648,
+      "generator": 7,
+      "n": 19,
+      "packets": 3,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 10146,
+      "pins": [
+        -1,
+        -1
+      ],
+      "sign_word": "--+",
+      "unconditional_fourth_budget": 9234
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 3,
+      "final_trace_fourth": 6498,
+      "fourth_defect": 0,
+      "generator": 7,
+      "n": 19,
+      "packets": 3,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 8322,
+      "pins": [
+        -1,
+        1
+      ],
+      "sign_word": "-+-",
+      "unconditional_fourth_budget": 9234
+    },
+    {
+      "attains_regular_tournament_floor": true,
+      "conditional_checks": 3,
+      "final_trace_fourth": 6498,
+      "fourth_defect": 0,
+      "generator": 7,
+      "n": 19,
+      "packets": 3,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 8322,
+      "pins": [
+        1,
+        -1
+      ],
+      "sign_word": "+-+",
+      "unconditional_fourth_budget": 9234
+    },
+    {
+      "attains_regular_tournament_floor": false,
+      "conditional_checks": 3,
+      "final_trace_fourth": 10146,
+      "fourth_defect": 3648,
+      "generator": 7,
+      "n": 19,
+      "packets": 3,
+      "parity_defect_floor": 0,
+      "pinned_fourth_budget": 10146,
+      "pins": [
+        1,
+        1
+      ],
+      "sign_word": "+++",
+      "unconditional_fourth_budget": 9234
+    }
+  ],
+  "residual": {
+    "finite_maps": 64,
+    "largest_credit": "10/27",
+    "native_collatz_controls": [
+      {
+        "odd_steps": 2,
+        "source": 3,
+        "valuation_sum": 5
+      },
+      {
+        "odd_steps": 41,
+        "source": 27,
+        "valuation_sum": 70
+      },
+      {
+        "odd_steps": 3,
+        "source": 75,
+        "valuation_sum": 11
+      },
+      {
+        "odd_steps": 15,
+        "source": 127,
+        "valuation_sum": 31
+      }
+    ],
+    "paid_moves": 3791,
+    "signed_trials": 1728,
+    "strict_negative_credit_trials": 770
+  },
+  "shared_sheets": [
+    {
+      "F": "x**6*(x - 1)**2",
+      "generator_pairs": 20,
+      "local_index": 6,
+      "maximum_same_value_index": 6,
+      "period_L": 6,
+      "sharp_x_orders": [
+        6,
+        0,
+        5
+      ],
+      "sheet": 0
+    },
+    {
+      "F": "x**6*(x - 1)**2",
+      "generator_pairs": 20,
+      "local_index": 2,
+      "maximum_same_value_index": 6,
+      "period_L": 6,
+      "sharp_x_orders": [
+        2,
+        4,
+        5
+      ],
+      "sheet": 1
+    },
+    {
+      "F": "x**3*(x - 1)**2",
+      "generator_pairs": 21,
+      "local_index": 2,
+      "maximum_same_value_index": 3,
+      "period_L": 6,
+      "sharp_x_orders": [
+        2,
+        1,
+        2
+      ],
+      "sheet": 1
+    },
+    {
+      "F": "x**2*(x - 1)",
+      "generator_pairs": 3,
+      "local_index": 1,
+      "maximum_same_value_index": 2,
+      "period_L": 2,
+      "sharp_x_orders": [
+        1,
+        1,
+        1
+      ],
+      "sheet": 1
+    }
+  ]
+}
