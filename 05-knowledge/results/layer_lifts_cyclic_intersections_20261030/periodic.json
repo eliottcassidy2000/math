@@ -5,7 +5,7 @@
     3,
     4
   ],
-  "checks": 367923,
+  "checks": 370035,
   "examples": [
     {
       "base_content": 1,
@@ -54,6 +54,7 @@
   ],
   "marked_entry_cases": 2520,
   "max_length": 5,
+  "primitive_entry_phase_classifications": 1320,
   "primitive_words": 1336,
   "proper_phases": 4932,
   "repetitions_checked": [
@@ -80,6 +81,7 @@
     20
   ],
   "resonant_marked_entries": 96,
+  "resonant_primitive_entry_pairs": 132,
   "scope": "full-integer theorem is proved in COLLATZ.md; these are bounded exact controls",
   "valuation_primes": [
     5,

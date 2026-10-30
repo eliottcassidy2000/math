@@ -59,10 +59,26 @@ def main():
                     need((v+u)+w==w+(v+u),'zero commutator is word resonance')
                 else:
                     for k in range(6):need(C%content(u+w*k+v)==0,'entry-preserving phase divisor')
+    phase_classifications=phase_resonances=0
+    for u in entries:
+        for w in controllers:
+            if not primitive(w):continue
+            phase_classifications+=1;P,Q,B=coeff(w);zero_phases=[]
+            for j in range(len(w)):
+                v=w[:j];p,q,b=coeff(v+u);C=b*(P-Q)-B*(p-q)
+                if C==0:
+                    zero_phases.append(j);r=(len(u)+j)//len(w)
+                    need(v+u==w*r,'resonance iff exact controller power')
+                    rotated=w[j:]+v
+                    for k in range(1,6):
+                        need(u+w*k+v==rotated*(k+r),'literal cyclic-power phase')
+            need(len(zero_phases)<=1,'at most one unbounded phase')
+            phase_resonances+=len(zero_phases)
     # The excluded nonprimitive boundary really has a commuting proper prefix.
     P,Q,B=coeff((1,1));p,q,b=coeff((1,));need(b*(P-Q)-B*(p-q)==0,'nonprimitive hostile')
     return dict(checks=checks,primitive_words=words,proper_phases=phases,marked_entry_cases=marked_cases,
-                resonant_marked_entries=resonant,alphabet=[1,2,3,4],max_length=5,
+                resonant_marked_entries=resonant,primitive_entry_phase_classifications=phase_classifications,
+                resonant_primitive_entry_pairs=phase_resonances,alphabet=[1,2,3,4],max_length=5,
                 repetitions_checked=list(range(21)),valuation_primes=[5,7,11],examples=examples,
                 scope='full-integer theorem is proved in COLLATZ.md; these are bounded exact controls')
 if __name__=='__main__':

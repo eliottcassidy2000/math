@@ -15,6 +15,8 @@ The main completed results are:
   bounds all prime valuations independently of repetition. For primitive
   controllers it is nonzero at every proper interior phase. Retaining u
   exposes exactly why changing controllers still incur entry-dependent debt.
+  For any fixed entry and primitive controller, at most one phase has
+  unbounded content; this occurs exactly at a literal rotated-power word.
 - **PROVED using classical Burnside prime-degree input:** native charts on
   p prime vertices with distinct transported cyclic parents intersect in at
   most one tournament. Internal subcube intersections plus point corrections

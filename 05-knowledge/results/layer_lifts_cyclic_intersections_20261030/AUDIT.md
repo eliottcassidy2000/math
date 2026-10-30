@@ -69,7 +69,9 @@ cmp observer.json /tmp/observer-O.json
 - Periodic controls: all1,336 primitive words of lengths1–5 over{1,2,3,4},
   all4,932 proper phases, repeats0–20, and boundary valuations at5,7,11.
   In addition2,520 marked-entry cases include96 exact resonances; repeats
-  through5 test the nonresonant divisibility. There are367,923 checks.
+  through5 test the nonresonant divisibility. A further1,320 primitive-controller
+  entry pairs have132 resonant phases, each checked as a literal rotated
+  power; no pair has two resonant phases. There are370,035 checks in total.
   Full direct integer iteration supplies the comparator for the symbolic
   geometric-sum and commutator formulas.
 - Tournament controls: every cyclic subgroup at3,5,7, all constant-step

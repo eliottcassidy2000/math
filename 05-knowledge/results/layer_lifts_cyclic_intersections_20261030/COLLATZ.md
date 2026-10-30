@@ -265,6 +265,33 @@ retained entry u. A uniform estimate on that entry-dependent valuation is
 still required before chaining arbitrarily changing controllers. Replacing
 u by the empty word would assert a different, unjustified bound.
 
+**Exact one-phase classification.** Fix any entry u and primitive controller
+w of length d. As v ranges over its prefixes of lengths0,...,d-1, at most
+one phase can have unbounded content g(u w^k v) as k grows. Such a phase
+exists exactly when
+
+    vu=w^r for some integer r>=0.                    (15)
+
+At every other phase the fixed nonzero C(w,vu) bounds the full integer
+content. At the exceptional phase write w=vt. Then for all k>=1,
+
+    u w^k v=(tv)^(k+r),                              (16)
+
+so (12) gives the exact content there and it is unbounded with k.
+
+**Proof.** By faithfulness and the commuting-word lemma, C=0 iff vu is a
+power of the primitive word w. Its length fixes |v| modulo d, leaving at
+most one candidate in the stated range. If r>=1, cancelling v from
+vu=w^r gives u=t w^(r-1), which proves(16); r=0 is just u=v=empty.
+The geometric sum in(12) tends to infinity, since both P and Q are positive
+and at least2. Every nonexceptional phase is bounded by(10). This proves
+both directions, not merely a necessary resonance test.
+
+Thus a nonresonant entry can make **all** phases uniformly bounded for one
+fixed controller; an exact suffix match instead moves one true period
+boundary. These are statements about the family of finite valuation words,
+not existence of an infinite positive-integer orbit following that controller.
+
 The [periodic checker](periodic_controls.py) tests complete integer content,
 not just its support, against independent direct coefficient iteration.
 The existing two-outward-swap mechanical-word content bound remains stronger
