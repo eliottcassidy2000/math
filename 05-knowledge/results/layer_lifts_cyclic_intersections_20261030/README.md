@@ -21,6 +21,11 @@ The main completed results are:
   give a support bound `3^((p-1)/2)M+binom(M,2)` for M such charts. An explicit
   common-port composite family on3m vertices has intersections of size
   `2^((m-1)/2)`, including16 at order27.
+- **PROVED exact-observer boundary:** the formal letters1,2 generate every
+  affine state modulo5^E, and future identity queries distinguish all of
+  them. A fixed-operator linear recognizer therefore needs dimension
+  `4*5^(2E-1)`. Symbolic inequalities and source-specific legal futures are
+  explicitly outside that lower-bound claim.
 
 [COLLATZ.md](COLLATZ.md) contains the proofs, the bounded correction profile
 through five layers, the untruncated defect-epoch decomposition, and the
@@ -53,6 +58,12 @@ Incoming Session112 changes the last two lanes: canonical ranking needs
 saturated cuts and exact union mass, while paired aliquot readings admit a
 compatible residue decoder with a retained core. Neither supplies a Collatz
 contraction by analogy alone.
+
+The later incoming Fourier, pinned-cycle-index and prime-bank convolution
+results are integrated in CONNECTIONS.md§5. The Fourier consumer distinction
+produced the exact-observer theorem above. A concurrent source packet also
+supplies a successful local Lean build/axiom-audit receipt for the factoring
+paper, recorded with its pinned scope; it is not a Collatz dependency.
 
 The all-layer5/8 estimate, independent ROOT endpoint control, all-prime
 changing-word anchor debt, and an efficient unrestricted A000568 recurrence

@@ -48,14 +48,17 @@ python3 defect_controls.py
 python3 periodic_controls.py
 python3 cyclic_intersections.py
 python3 epoch_budget.py
+python3 observer_controls.py
 python3 -O defect_controls.py --output /tmp/defects-O.json
 python3 -O periodic_controls.py --output /tmp/periodic-O.json
 python3 -O cyclic_intersections.py --output /tmp/intersections-O.json
 python3 -O epoch_budget.py --output /tmp/epoch-budget-O.json
+python3 -O observer_controls.py --output /tmp/observer-O.json
 cmp defects.json /tmp/defects-O.json
 cmp periodic.json /tmp/periodic-O.json
 cmp intersections.json /tmp/intersections-O.json
 cmp epoch_budget.json /tmp/epoch-budget-O.json
+cmp observer.json /tmp/observer-O.json
 ```
 
 - Defect controls: every nonempty positive composition with total clock<=16,
@@ -80,6 +83,10 @@ cmp epoch_budget.json /tmp/epoch-budget-O.json
   result. This is evidence for an OPEN sufficient target, not an unbounded
   certificate. Explicit runtime guards raise errors rather than certify
   interrupted searches.
+- Observer controls: full reachability by letters1,2 and actual positive
+  inverse words on20,500,12500 states, plus all400 state pairs modulo5.
+  There are26,449 checks. Algebraic generation and the identity Hankel
+  submatrix prove the all-E result, with the formal-future scope retained.
 
 Python checks use explicit exceptions, so optimization does not erase them.
 No floating-point estimates occur. The mathematical review checked the
@@ -101,6 +108,16 @@ The known unsupported equivalence in the previous Collatz packet was repaired
 in place and logged in01-canon/MISTAKES.md. No finite certificate was retracted.
 The broad number connections are classified in CONNECTIONS.md, with stronger
 older results cited before the weaker new specializations.
+
+The first checkpoint rebased over d32897c777,05b452976f and b7f628ea63.
+We then read the incoming pinned-count summary, Fourier F1–F2 proof,
+source-build audit and literal build receipt, and the prime-bank convolution
+proof through its exceptional inner twist. The verified external1949-job
+Lean build belongs to that concurrent packet and was not rerun here.
+Its PDF has the same427078 bytes and SHA256 as the source read this session.
+The Fourier result motivated the newly proved exact-future-observer boundary;
+the other incoming results sharpen its scope without supplying a descent
+bound. Normal and optimized observer checks agree exactly.
 
 ## 4. Remaining obligations
 

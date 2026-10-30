@@ -1,0 +1,24 @@
+{
+  "checks": 26449,
+  "levels": [
+    {
+      "E": 1,
+      "exhaustive_distinguishing_pairs": 400,
+      "max_positive_witness_length": 5,
+      "states": 20
+    },
+    {
+      "E": 2,
+      "exhaustive_distinguishing_pairs": 0,
+      "max_positive_witness_length": 13,
+      "states": 500
+    },
+    {
+      "E": 3,
+      "exhaustive_distinguishing_pairs": 0,
+      "max_positive_witness_length": 28,
+      "states": 12500
+    }
+  ],
+  "scope": "finite controls for the all-E group-generation and observer lower-bound proof"
+}

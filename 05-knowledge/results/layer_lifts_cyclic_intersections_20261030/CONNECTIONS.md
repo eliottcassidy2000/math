@@ -2,9 +2,9 @@
 
 **PROVED** here: the elementary residue-bank capacities and the stated
 interfaces to the new results. **INHERITED PROVED:** the specified lattice
-and aliquot results. **CITED CLAIM, not independently validated here:** the
-factoring paper's general complexity theorem. Numerical resemblance alone
-is never a dependency.
+and aliquot results. The factoring paper has a concurrent **VERIFIED local
+Lean build and axiom-audit receipt**, cited below and not rerun in this
+session. Numerical resemblance alone is never a dependency.
 
 ## 1. What the supplied paper contributes
 
@@ -18,6 +18,14 @@ or audited here. The stronger explicit runtime in its conjecture is not a
 proved dependency. Incoming Session112 separately inspected the formal
 statement and solution and records that scope in
 [PAPER_SCOPE.md](../session112_counting_interfaces_20261030/paper/PAPER_SCOPE.md).
+
+The subsequent incoming
+[SOURCE_AUDIT.md](../scaled_count_fft_carriers_20261030/SOURCE_AUDIT.md)
+records a successful local1949-job Lean build at pinned revision
+c91cc3f4947caca8977e81a5d14244f73b5ae2b1, with only propext,
+Classical.choice and Quot.sound in the theorem's axiom report. We inspected
+that receipt; we did not rerun the build. It does not establish the stronger
+conjectured rate or a practical benchmark.
 
 For this session the transfer is elementary: a residue-zero observation is
 useful only with a known integer range, just as a modular Collatz identity
@@ -145,6 +153,32 @@ monoid/carry cocycle, THM-4604, rather than another trace invariant. It yields
 the marked-entry divisor in COLLATZ.md(10). The corresponding tournament
 improvement came from applying an old group theorem to orientation
 **differences**, not by assuming complements preserve automorphism groups.
+
+### Later incoming work changes the next compression test
+
+The [Fourier packet, F1–F2](../scaled_count_fft_carriers_20261030/THEORY.md)
+proves that an odd-base transform of length T=2^(a+1) modulo b^(2^a)+1
+loses exactly T-1 parity bits. Repeated Fourier readings cannot recover them;
+one named-coordinate reading after shifts can. We used that distinction to
+prove COLLATZ.md§5: letters1,2 reach the full affine group modulo5^E, and
+future identity queries distinguish all4*5^(2E-1) states. This is an exact
+state/linear-dimension lower bound for that consumer. It does not preclude
+a symbolic inequality certificate or exploiting actual source legality.
+
+The [pinned cycle-index result](../pinned_ramified_counts_20261030/PROOFS.md)
+gives the complementary example: LCA depth can be dropped for its rigidity
+predicate but is indispensable for its orbit counts. Its specified group is
+not the full isomorphism group of every individual bank. The new
+[prime-bank convolution](../session112_counting_interfaces_20261030/symmetry/PRIMENESS_INTERFACE.md)
+preserves the same acting element on quotient and inner bank, including one
+exceptional inner twist. Omitting that twist gives a negative pseudo-count
+at p=5,k=2. These results reinforce the appropriate split for the next work:
+keep full shared state when the target can query it; compress only after
+proving that the particular predicate is insensitive to what is removed.
+
+There is no asserted conjugacy among the Fourier transform, aliquot scaling,
+Collatz dynamics and ramified-bank action. The exact maps and different
+consumer predicates above explain both the analogy and its boundary.
 
 ## 6. Specific next targets
 

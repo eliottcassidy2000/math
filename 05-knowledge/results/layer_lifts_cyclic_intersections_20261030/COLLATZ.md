@@ -270,3 +270,51 @@ not just its support, against independent direct coefficient iteration.
 The existing two-outward-swap mechanical-word content bound remains stronger
 on its own specialized family; it is not replaced by this different
 periodic/marked-entry quantifier pattern.
+
+## 5. Exact future-return observers cannot quotient away affine states
+
+The incoming Fourier result
+[F1–F2](../scaled_count_fft_carriers_20261030/THEORY.md) distinguishes a
+closed quotient for one observable from the extra data required by future
+named-coordinate queries. Here is the corresponding precise Collatz claim.
+
+**PROVED.** For q=5^E, the positive letters1 and2 generate the whole affine
+group AGL_1(Z/q), of size q phi(q)=4*5^(2E-1). Any deterministic state
+representation that answers, for every possible future word, whether the
+resulting affine map is identity modulo q must distinguish every one of
+these states. Any linear weighted representation of this exact indicator
+over a field, with fixed letter operators, needs dimension at least q phi(q).
+
+**Proof.** Let T_1(x)=(3x+1)/2, T_2(x)=(3x+1)/4. Their generated group
+contains D=T_1 T_2^-1, where D(x)=2x. The two maps DT_1 and T_1D both have
+multiplier3 and translations1 and1/2. Their quotient is translation by1/2,
+which generates all translations modulo q. The element2 generates every
+unit modulo5^E: its order is4 modulo5 and v_5(2^4-1)=1, so LTE gives order
+4*5^(E-1). Hence D and the translations generate the whole affine group.
+Because the group is finite, inverse generators are positive powers of
+generators; positive words in1,2 already reach every state.
+
+For states s!=t, a positive future word for s^-1 sends s to identity and
+does not send t to identity. Thus merging them breaks a permitted future
+query. For the linear statement, choose one positive prefix for each group
+element and one future word for each inverse. The matrix of acceptance
+values is the identity matrix of order q phi(q). A d-dimensional linear
+representation factors this matrix through dimension d, so d is at least
+that order. This is the elementary distinguishing-suffix/Hankel-rank
+argument, not a novel general automata theorem.
+
+This has exactly the same factor25 from level E to E+1 as the affine-state
+lift. It explains why a lossless return-recognizer cannot replace the pair
+of coefficient digits by one digit with no compensating side information.
+For example, retained word length and integer clock can already determine
+the multiplier; the theorem does not require duplicating that information.
+It does **not** prove that an inequality
+certificate must list every state, or rule out symbolic potentials or
+one-sided overestimates. The pair itself takes only O(E) bits in modular
+arithmetic. Also, these are formal valuation-word futures: they are not
+all simultaneously legal from one fixed positive integer. A source-specific
+controller can exploit its further restrictions, but must state them.
+
+[observer_controls.py](observer_controls.py) independently checks full
+reachability and positive inverse words through E=3, plus all distinguishing
+pairs at E=1. The all-E result is the algebraic proof above.
