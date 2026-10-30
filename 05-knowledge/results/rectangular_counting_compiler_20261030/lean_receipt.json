@@ -1,0 +1,37 @@
+{
+  "external_commit": "c91cc3f4947caca8977e81a5d14244f73b5ae2b1",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "toolchain": "leanprover/lean4:v4.35.0",
+  "lean_version": "Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "command": "lake env lean <this-packet>/ReducedEngine.lean",
+  "working_directory": "clean pinned external checkout with cached imports",
+  "exit_code": 0,
+  "source_sha256": "17bd712e841db9e6b9fc78fb8830093c31836db8b3a0a4a8f4a133f23355ae6a",
+  "output_sha256": "d6bd70c18e85fa26085c66ca0c5978e153535cfad11cf7af25428155e563c094",
+  "checked_theorems": [
+    "Factoring.Aux.RectangleOnly.nextT_same_on_fibres",
+    "Factoring.Aux.RectangleOnly.choiceCode_injective",
+    "Factoring.Aux.RectangleOnly.sum_next",
+    "Factoring.Aux.RectangleOnly.choice_card",
+    "Factoring.Aux.RectangleOnly.value_eq",
+    "Factoring.Aux.RectangleOnly.old_value_eq_padding",
+    "Factoring.Aux.RectangleOnly.boundary_values",
+    "Factoring.Aux.RectangleOnly.leaves_eq_padding"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "scope": "Packet root module imports external EngineGroup. No revised TM2 compiler or time theorem.",
+  "dependencies": {
+    "FactoringAux/Level.lean": "90c6f34d505f769f3ad8a87fef23f5805d515f3ed5d65c94cd41b51ff712b178",
+    "FactoringAux/EngineGrid.lean": "68064d5ab858fec0d063bf3bc456e7751baf3e0cf66f8e61387aafbf05e8e1c0",
+    "FactoringAux/EngineGroup.lean": "f190262f74b1e92dd2abab68c9d7c3fc48972e78c72cfac6baf2ceea13f83ebe",
+    "FactoringAux/EngineTop.lean": "4060c002fc924a87ae9dbf98942c8bf98a6f315ab92c6b09ee35cd08b5942f8d",
+    "FactoringAux/UniParams.lean": "f9e9fb5978d1168b8eb8d356d0e2a6c768cc03564a0b358b85047187d4763736",
+    "FactoringAux/Transform.lean": "c62e78903c6ab7c9ca26e201dbcd5c5928a4d2128d0eb47af22c2be0629e7e68",
+    "FactoringAux/Cluster.lean": "71f41e01205b0323aaf7b5996f9ebe4648dcdda9136e2d054e3fc50f32ecc079",
+    "FactoringAux/MulNet.lean": "5f01187574f1bc08a442a6c9f8fde654a15d25224f95f410f1c3cd85c9df0b67"
+  }
+}

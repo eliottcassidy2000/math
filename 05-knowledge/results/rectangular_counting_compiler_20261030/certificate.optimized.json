@@ -1,0 +1,412 @@
+{
+  "actual_uniform_schedules": [
+    {
+      "depth": 1,
+      "full_scale_residues": {
+        "3": 0,
+        "5": 1,
+        "7": 1,
+        "9": 0,
+        "11": 3,
+        "13": 1,
+        "15": 6,
+        "17": 0,
+        "19": 1,
+        "21": 15,
+        "23": 13,
+        "25": 16,
+        "27": 0,
+        "29": 25,
+        "31": 16,
+        "33": 3,
+        "35": 1,
+        "37": 1,
+        "39": 27
+      },
+      "information_gain_factor": 459,
+      "input_bit_length_n": {
+        "bit_length": 3702,
+        "low64": 0,
+        "sha256_unsigned_big_endian": "83234011553f1fcb898096a05c58c878f1b0ceb8b36c1021778c2a007d020d5d"
+      },
+      "levels": [
+        {
+          "G": {
+            "bit_length": 47,
+            "decimal": "84537841287168",
+            "low64": 84537841287168,
+            "sha256_unsigned_big_endian": "82b38071ecdec4f013c0535acef1f4095e5ccc579bf82188705dc825209ccf74"
+          },
+          "K": {
+            "bit_length": 6,
+            "decimal": "48",
+            "low64": 48,
+            "sha256_unsigned_big_endian": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+          },
+          "d": 0,
+          "full_branch_exponent_G4": {
+            "bit_length": 186,
+            "decimal": "51074557760997896398314247714452411204046364838174130176",
+            "low64": 0,
+            "sha256_unsigned_big_endian": "9aadd03e70607e68b3d8f226a96307fc5133bc3aa40522f18da3dcce2fd5e594"
+          },
+          "lambda": {
+            "bit_length": 3524,
+            "low64": 5127647212328337225,
+            "sha256_unsigned_big_endian": "29b2f49f481d6305613083c38cf54ac6c9e7a4c3e226a415a2d8ca351608f4d0"
+          },
+          "odd_part_q": {
+            "bit_length": 3520,
+            "low64": 14262361989642858481,
+            "sha256_unsigned_big_endian": "5cb7d2ba53ba884c27fc5ffd3c55b39c3db4bb4500a06cb4c7f04437b944d965"
+          },
+          "padding_exponent": {
+            "bit_length": 185,
+            "decimal": "38305918320748724379774090241774279667792937221087035392",
+            "low64": 13835058055282163712,
+            "sha256_unsigned_big_endian": "e1d80ee7d72dc700815ce5cf3f6ec2160f634c4cab31dcde060f10f00197b2c9"
+          },
+          "q": {
+            "bit_length": 3522,
+            "low64": 1709215737442779076,
+            "sha256_unsigned_big_endian": "070c92de2c2027d27556edb7a4a21197c00baf72576a7231b7cdd5853256976c"
+          },
+          "q_divisors_in_odd_bank": [
+            3,
+            17
+          ],
+          "reduced_branch_exponent_R": {
+            "bit_length": 184,
+            "decimal": "12768639440249172018540157472678131536253427617087094784",
+            "low64": 4611686018427387904,
+            "sha256_unsigned_big_endian": "7feeee89742f7fb646da5777b7af37c8866120db40d61fe191d8cca9e2e06717"
+          },
+          "v2_q": 2
+        }
+      ],
+      "new_effective_modulus": 166966608033225,
+      "odd_bank": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39
+      ],
+      "old_effective_modulus": 363761673275,
+      "reduced_scale_residues": {
+        "3": 1,
+        "5": 1,
+        "7": 1,
+        "9": 1,
+        "11": 3,
+        "13": 1,
+        "15": 1,
+        "17": 1,
+        "19": 1,
+        "21": 1,
+        "23": 1,
+        "25": 6,
+        "27": 1,
+        "29": 24,
+        "31": 8,
+        "33": 25,
+        "35": 1,
+        "37": 1,
+        "39": 1
+      },
+      "sOf": 925,
+      "scope": "Exact schedule arithmetic only; no tables, leaf counts, or input integer N materialized."
+    },
+    {
+      "depth": 2,
+      "full_scale_residues": {
+        "3": 0,
+        "5": 1,
+        "7": 1,
+        "9": 0,
+        "11": 9,
+        "13": 1,
+        "15": 6,
+        "17": 1,
+        "19": 0,
+        "21": 15,
+        "23": 16,
+        "25": 11,
+        "27": 0,
+        "29": 20,
+        "31": 8,
+        "33": 9,
+        "35": 1,
+        "37": 1,
+        "39": 27
+      },
+      "information_gain_factor": 513,
+      "input_bit_length_n": {
+        "bit_length": 59346,
+        "low64": 0,
+        "sha256_unsigned_big_endian": "164180dee006db7227d00e857973bf465e18245f06af8c072de00bd8aa435688"
+      },
+      "levels": [
+        {
+          "G": {
+            "bit_length": 742,
+            "low64": 0,
+            "sha256_unsigned_big_endian": "eb1e061f452433959efe0b362c24d50d2447fcc10c2029825d3bea28d62b0e36"
+          },
+          "K": {
+            "bit_length": 93,
+            "decimal": "7146646609494406531041460224",
+            "low64": 0,
+            "sha256_unsigned_big_endian": "e3204aea3b914014064d712631558d0ad7af35bc3f773d98d0c8568db8a7378b"
+          },
+          "d": 1,
+          "full_branch_exponent_G4": {
+            "bit_length": 2968,
+            "low64": 0,
+            "sha256_unsigned_big_endian": "6c0b4db462b1fe810d8b010a15cd7603f448a4c67b2d2e9a933f3f49ae569f3b"
+          },
+          "lambda": {
+            "bit_length": 56386,
+            "low64": 14554863545415349689,
+            "sha256_unsigned_big_endian": "31b73bebb64738ca6c54d4b626c261f5a1e7428de4c739c02bafb97907fece66"
+          },
+          "odd_part_q": {
+            "bit_length": 56382,
+            "low64": 5824591313878667045,
+            "sha256_unsigned_big_endian": "2d7f283aac083b2dbcd537daca898cff369452c30bbf7e902b0e21422d023c4e"
+          },
+          "padding_exponent": {
+            "bit_length": 2967,
+            "low64": 0,
+            "sha256_unsigned_big_endian": "118ae3c780e501b6928dad3fef5dd66b982237fef75d5738b5a3203228d59c73"
+          },
+          "q": {
+            "bit_length": 56384,
+            "low64": 4851621181805116564,
+            "sha256_unsigned_big_endian": "1b8d12a3f8be522944a2419b3de77861759445b1bdeaadb3353ce5406ec4d55e"
+          },
+          "q_divisors_in_odd_bank": [
+            3,
+            19
+          ],
+          "reduced_branch_exponent_R": {
+            "bit_length": 2966,
+            "low64": 0,
+            "sha256_unsigned_big_endian": "5c7ee747eb81e45e8d7dc7223e6af564ca78ebaf8a841d05218f472d41460749"
+          },
+          "v2_q": 2
+        },
+        {
+          "G": {
+            "bit_length": 47,
+            "decimal": "84537841287168",
+            "low64": 84537841287168,
+            "sha256_unsigned_big_endian": "82b38071ecdec4f013c0535acef1f4095e5ccc579bf82188705dc825209ccf74"
+          },
+          "K": {
+            "bit_length": 6,
+            "decimal": "48",
+            "low64": 48,
+            "sha256_unsigned_big_endian": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+          },
+          "d": 0,
+          "full_branch_exponent_G4": {
+            "bit_length": 186,
+            "decimal": "51074557760997896398314247714452411204046364838174130176",
+            "low64": 0,
+            "sha256_unsigned_big_endian": "9aadd03e70607e68b3d8f226a96307fc5133bc3aa40522f18da3dcce2fd5e594"
+          },
+          "lambda": {
+            "bit_length": 59168,
+            "low64": 0,
+            "sha256_unsigned_big_endian": "fcd9dc4caf5628d60188e5a31beeb6bcb9b041f0d6c02ba7db1372b380416afa"
+          },
+          "odd_part_q": {
+            "bit_length": 59166,
+            "low64": 1,
+            "sha256_unsigned_big_endian": "0a9757d34ef47d01913e9fb792ff847692e94121d5c57db9d469af1ba0f190dc"
+          },
+          "padding_exponent": {
+            "bit_length": 185,
+            "decimal": "38305918320748724379774090241774279667792937221087035392",
+            "low64": 13835058055282163712,
+            "sha256_unsigned_big_endian": "e1d80ee7d72dc700815ce5cf3f6ec2160f634c4cab31dcde060f10f00197b2c9"
+          },
+          "q": {
+            "bit_length": 59166,
+            "low64": 1,
+            "sha256_unsigned_big_endian": "0a9757d34ef47d01913e9fb792ff847692e94121d5c57db9d469af1ba0f190dc"
+          },
+          "q_divisors_in_odd_bank": [],
+          "reduced_branch_exponent_R": {
+            "bit_length": 184,
+            "decimal": "12768639440249172018540157472678131536253427617087094784",
+            "low64": 4611686018427387904,
+            "sha256_unsigned_big_endian": "7feeee89742f7fb646da5777b7af37c8866120db40d61fe191d8cca9e2e06717"
+          },
+          "v2_q": 0
+        }
+      ],
+      "new_effective_modulus": 166966608033225,
+      "odd_bank": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39
+      ],
+      "old_effective_modulus": 325470970825,
+      "reduced_scale_residues": {
+        "3": 1,
+        "5": 1,
+        "7": 1,
+        "9": 1,
+        "11": 9,
+        "13": 1,
+        "15": 1,
+        "17": 1,
+        "19": 1,
+        "21": 1,
+        "23": 4,
+        "25": 11,
+        "27": 1,
+        "29": 20,
+        "31": 2,
+        "33": 31,
+        "35": 1,
+        "37": 1,
+        "39": 1
+      },
+      "sOf": 14836,
+      "scope": "Exact schedule arithmetic only; no tables, leaf counts, or input integer N materialized."
+    }
+  ],
+  "encodings": {
+    "ambient_binary_codes": 65536,
+    "coding": [
+      {
+        "codes_checked": 1,
+        "exhaustive": true,
+        "g": 0,
+        "q": 2,
+        "universe": "1"
+      },
+      {
+        "codes_checked": 1,
+        "exhaustive": true,
+        "g": 1,
+        "q": 3,
+        "universe": "1"
+      },
+      {
+        "codes_checked": 2,
+        "exhaustive": true,
+        "g": 2,
+        "q": 2,
+        "universe": "2"
+      },
+      {
+        "codes_checked": 3,
+        "exhaustive": true,
+        "g": 2,
+        "q": 3,
+        "universe": "3"
+      },
+      {
+        "codes_checked": 512,
+        "exhaustive": true,
+        "g": 3,
+        "q": 2,
+        "universe": "512"
+      },
+      {
+        "codes_checked": 19683,
+        "exhaustive": true,
+        "g": 3,
+        "q": 3,
+        "universe": "19683"
+      },
+      {
+        "codes_checked": 514,
+        "exhaustive": false,
+        "g": 4,
+        "q": 2,
+        "universe": "68719476736"
+      },
+      {
+        "codes_checked": 514,
+        "exhaustive": false,
+        "g": 4,
+        "q": 5,
+        "universe": "14551915228366851806640625"
+      }
+    ],
+    "fibres": [
+      32768,
+      32768
+    ],
+    "signed_response_sum": [
+      -163840,
+      262144,
+      -262144
+    ]
+  },
+  "inherited_81_27": {
+    "common_cyclic_triples": 67,
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ]
+  },
+  "local_checks": 1106254,
+  "observers": {
+    "dyadic_bounds_b": [
+      0,
+      24
+    ],
+    "effective_modulus_cases": 72,
+    "generic_g2_lambda4": {
+      "new_mod3": 1,
+      "new_scale": 4,
+      "old_mod3": 0,
+      "old_scale": 57395628
+    }
+  },
+  "scope": "FINITE-EXACT. Native controls complement, not replace, ReducedEngine.lean."
+}

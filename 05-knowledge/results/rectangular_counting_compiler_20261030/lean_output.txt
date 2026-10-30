@@ -1,0 +1,8 @@
+'Factoring.Aux.RectangleOnly.nextT_same_on_fibres' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.choiceCode_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.sum_next' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.choice_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.value_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.old_value_eq_padding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.boundary_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Factoring.Aux.RectangleOnly.leaves_eq_padding' depends on axioms: [propext, Classical.choice, Quot.sound]

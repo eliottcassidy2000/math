@@ -1,0 +1,73 @@
+{
+  "sources": {
+    "05-knowledge/results/session112_counting_interfaces_20261030/arithmetic/MODULAR_OBSERVERS.md": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "9c5cca1d77005264c325eb5ea1fd8e35d820a461207fee2df15ed49ee0cadda5"
+    },
+    "05-knowledge/results/scaled_count_fft_carriers_20261030/SOURCE_AUDIT.md": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "2fd5d4b542f1258190ddad625caa900a0d8a01653bcb7d60eb89b7d63863339c"
+    },
+    "05-knowledge/results/scaled_count_fft_carriers_20261030/source_receipt.json": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "b0e81e1659c085dd5fb6eb2d1523fe967e6ce8f27f1db6335fd0b0cfc90d5cbe"
+    },
+    "05-knowledge/results/scaled_count_fft_carriers_20261030/THEORY.md": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "e06c3f75ab9794e9f1ce3fd0725d7223e5a92372ca2582bead414b9e66265e86"
+    },
+    "05-knowledge/results/scaled_count_fft_carriers_20261030/HANDOFF.md": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "2288961bf2d9c2decc9f64b17056370a6d7239a3b349325bf759dba62b7a9780"
+    },
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
+    },
+    "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/circuits/POINT_DEFECT_CIRCUITS.md": {
+      "revision": "9beb1921510af39d30ec91d31090ad90afdadb78",
+      "sha256": "fd28523999cbdec60509baa5bd9a41b9a1429a888eded8559f9b82f9bf63f264"
+    },
+    "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/challenge_audit/POTENTIAL_FRONTIER.md": {
+      "revision": "34b61472cc3193930575f43cedbf9f2ef390bd40",
+      "sha256": "a5da3d0ce8bdf050c3b4e345b94d9714fa8208e5a54e7a4a434181f18de95256"
+    },
+    "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/affine_ramsey/AFFINE_RAMSEY_GATE_GAP.md": {
+      "revision": "34b61472cc3193930575f43cedbf9f2ef390bd40",
+      "sha256": "3ffeb49609ae588b2df05b2d8745e5e1295b82c738f0723a43a6d518b50ae494"
+    },
+    "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/SOURCE_MODELS.md": {
+      "revision": "34b61472cc3193930575f43cedbf9f2ef390bd40",
+      "sha256": "a45841a22cf18dea35a17a3d42228c940eb6ab5a5409d91502c044f4bcfee53a"
+    },
+    "05-knowledge/results/ramsey_circuit_interfaces_20261030/CIRCUITS.md": {
+      "revision": "34b61472cc3193930575f43cedbf9f2ef390bd40",
+      "sha256": "303a1be381b942273a439c82ab7b84a216b6de0c71c0818316d3c89f69a93818"
+    },
+    "05-knowledge/results/terminal_fees_phase_covers_20261030/LRC.md": {
+      "revision": "3c1180551a9a4d986f8858c5b4b5b2fddde68b3c",
+      "sha256": "54adf657844d6b4634409e5aa83cd386b8fdee8902e2d8ef0771eca3c46eeef8"
+    }
+  },
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "98073ae7fea500a6280e6631e8ea16c9e05facc9445e98168b41eda7b2f265a7",
+    "certificate.json": "96f43e4704aaceeb9f8adc99574b8f549ab0603d9115b6be274758db24044e72",
+    "certificate.optimized.json": "96f43e4704aaceeb9f8adc99574b8f549ab0603d9115b6be274758db24044e72",
+    "check_lean.py": "1869cd8db9826d96557abc61bb48280c3b0971017e64ab717ace757c136fbc36",
+    "HANDOFF.md": "183a4863ac4dab59437841451d7aadd4e1da7a2a142df27feb097e44c5e54048",
+    "lean_output.txt": "d6bd70c18e85fa26085c66ca0c5978e153535cfad11cf7af25428155e563c094",
+    "lean_receipt.json": "d30b6a3acef138221b7923d402920f1f88c23e7a2d1c185be600c1d8d829f879",
+    "PROOFS.md": "95803795b25d8832686136d6bc17cc8398c6a462c5545faded2ee780177c790a",
+    "README.md": "193e5457ed0ec9dbda9761cf02908fe08a1c3ba91d916c027288007ee222a014",
+    "ReducedEngine.lean": "17bd712e841db9e6b9fc78fb8830093c31836db8b3a0a4a8f4a133f23355ae6a",
+    "seal.py": "edb84013a8cb1653c8b48bb11b3dedc50a804c9414002b2fc7c200087c3267de",
+    "SOURCES.md": "e0c76792fa036cfbf131d5afe451c54db2b8fed14dfd767d0b0a54231e33c5ec",
+    "SYNTHESIS.md": "d61bb3fc2163e9e71e432bccb05082315eff5cdce2f76b36969e6802aea7486d",
+    "verify.py": "affba13bfc86771fd0b258f43560deb588623c7350887c43f92525bf5d548bb7"
+  },
+  "basis": "Exact Git source blobs and exact LF packet bytes.",
+  "native_runtime": "Python standard library; inherited native 81/27 helper.",
+  "formal_scope": "Pinned external EngineGroup imports plus packet-local root ReducedEngine.lean.",
+  "status": "VERIFIED formal semantics / FINITE-EXACT controls; new TM2 time bound OPEN."
+}
