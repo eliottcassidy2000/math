@@ -1,0 +1,14 @@
+{
+  "E": 7,
+  "states": 156250,
+  "edges": 10000000,
+  "minimum_slack": 0,
+  "minimum_V": -6392860,
+  "maximum_V": -781240,
+  "entry_tail_margin": 14622440,
+  "edge_tail_margin": 15403680,
+  "exact_positive_words": 262143,
+  "maximum_word_clock": 18,
+  "sha256": "5a1cba0fe3445262fd3d0a0ccd146ca5b88b132b856a87bb870975eb35d8bb80",
+  "seconds": 13.383739471435547
+}

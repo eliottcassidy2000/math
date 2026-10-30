@@ -1,0 +1,54 @@
+{
+  "positive_source": 6537198392667893173797290377067938802645724031708804543608452260244002396445833437,
+  "positive_endpoint": 79833063260352465315121419214035527564622617117759582529327203884446231925070229936081339066258547927702203899217718394441,
+  "word": "V 1^231 V, V=(3,1,3,1^6,3,1,3)",
+  "length": 255,
+  "clock": 271,
+  "epochs_a_h_L": [
+    [
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      2,
+      6
+    ],
+    [
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      5,
+      231
+    ],
+    [
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      2,
+      6
+    ],
+    [
+      3,
+      0,
+      1
+    ],
+    [
+      3,
+      9,
+      0
+    ]
+  ],
+  "actual_untruncated_content": 154,
+  "original_budget_excess": "769/5000",
+  "E9_envelope_excess": "60112/390625",
+  "E9_content_bound": "132324151/781250",
+  "status": "REFUTES universal epoch budget, including tighter h-only version; NOT a counterexample to sharp content bound or Collatz"
+}

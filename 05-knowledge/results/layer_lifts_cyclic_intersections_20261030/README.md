@@ -31,7 +31,7 @@ The main completed results are:
 
 [COLLATZ.md](COLLATZ.md) contains the proofs, the bounded correction profile
 through five layers, the untruncated defect-epoch decomposition, and the
-source-preserving marked-controller theorem. A refined **OPEN** budget keeps
+source-preserving marked-controller theorem. A refined budget (now **REFUTED** by [Session 113](../session113_symmetry_consumers_20261030/collatz/THEORY.md#6-exact-boundary-the-epoch-budget-fails-already-at-layer9)) keeps
 the multiplier's quadratic phase and discounts unused clock by the defect
 height. It passes every positive word of binary clock at most18, while
 remaining logically stronger than the desired content estimate.

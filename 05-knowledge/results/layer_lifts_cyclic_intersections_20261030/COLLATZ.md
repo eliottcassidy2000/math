@@ -195,7 +195,10 @@ retains unused time in low-height runs, discounted by their actual height.
 It is nonnegative before the comparison with J: each kappa is paid by its
 own non-one letter. Every dark-height word w_r above has J=0 and is accepted.
 
-**OPEN hypothesis:** J<=B for every positive word. This would imply(5),
+**REFUTED hypothesis (Session 113, 2026-10-30):** J<=B for every positive word.
+The [exact clock-271 counterexample](../session113_symmetry_consumers_20261030/collatz/THEORY.md#6-exact-boundary-the-epoch-budget-fails-already-at-layer9) has J-B=769/5000>0 and actual content 154<5A/8. A second independently audited word and a retained-first-return refinement are in the [new packet](../session113_symmetry_consumers_20261030/uniform_content/THEORY.md). The valid fifth-layer certificates and all-word envelope (14) are unchanged; the actual-content conjecture remains open.
+
+Historically, this hypothesis would imply(5),
 but it is a sufficient target, not an established equivalence. Exact tests
 accept all262143 nonempty words of binary clock at most18. A distinct search
 finds no positive debt path in the finite truncated-height graphs E=1,2,3

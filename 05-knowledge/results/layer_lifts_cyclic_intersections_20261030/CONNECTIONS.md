@@ -182,9 +182,7 @@ consumer predicates above explain both the analogy and its boundary.
 
 ## 6. Specific next targets
 
-1. Prove or refute the phase-aware discounted epoch budget, preserving its
-   initial word and unused low-height clock. A refutation must exhibit the
-   exact word and distinguish budget failure from content-bound failure.
+1. **Discharged by refutation:** [Session 113](../session113_symmetry_consumers_20261030/collatz/THEORY.md#6-exact-boundary-the-epoch-budget-fails-already-at-layer9) supplies a clock-271 word with budget excess 769/5000 but actual content 154 below the target. The next target is the [retained-first-return refinement](../session113_symmetry_consumers_20261030/uniform_content/THEORY.md), not a new potential for the refuted envelope.
 2. Construct corrections in the observed bounded K interval at every layer,
    using old edge slack. A local digit rule must transport the pair(m,b)
    together, not independently select two favourable lifts.

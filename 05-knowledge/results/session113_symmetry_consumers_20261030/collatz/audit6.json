@@ -1,0 +1,15 @@
+{
+  "E": 6,
+  "states": 31250,
+  "denominator": 125000,
+  "numerator": 78120,
+  "minimum": -1206060,
+  "maximum": -156240,
+  "letters_checked": 64,
+  "edge_inequalities": 2000000,
+  "tail_upper": -4484040,
+  "entry_tail_upper": -4327800,
+  "sha256": "9478c12b2300fe7a7e1170897428d1a8bba979879b2004b1bc9f193aa1e03d2b",
+  "sharp": true,
+  "scope": "all finite positive valuation words at this fixed E; not all E or convergence"
+}

@@ -13,8 +13,13 @@ The organizing rule is to specify **the action, the consumer, and the retained s
 
 - [Prime-bank rank/unrank](prime_ranking/PRIME_RANKING.md): the named shared-residue action admits constructive indexing after retaining surviving ideal cuts and original block periods. Polynomial bit cost is in explicit bank dimension, not its logarithm; this is not full tournament-isomorphism ranking.
 
+- [Collatz quotient certificates](collatz/THEORY.md): the closed state retains defect and square phase for an upper-bound consumer, proving sharp fixed layers E=6,7,8 after exact finite audits and an infinite-letter tail. It intentionally does not recognize exact future returns.
+- [Envelope obstruction and repair](uniform_content/THEORY.md): explicit source-realizable words refute the old universal phase-gated budget, not the actual-content target. Retaining the multiplier's first-return offset gives a valid finer epoch upper bound; a universal payment certificate remains open.
+
 ## Verification and limits
 
 Each lane includes a checker and its output. Publication reruns use normal Python and `python -O`; checks remain active in both modes. [Independent review and checker](audit/README.md) additionally check the LRC germ using endpoint/midpoint reconstruction and the composite group using generated permutations and an exhaustive order-nine two-closure control. These finite audits support, but do not replace, the displayed all-parameter proofs.
 
-LRC(14), the planar Jacobian conjecture, Collatz convergence, and efficient unrestricted tournament enumeration remain open. Further audited lanes will be added at separate checkpoints.
+LRC(14), the planar Jacobian conjecture, Collatz convergence, and efficient unrestricted tournament enumeration remain open. The session remains active; further audited work is recorded at separate checkpoints.
+
+[Collatz independent audit](audit_collatz/AUDIT.md) checks 62 million edges plus entry and infinite-letter tails, and independently verifies both budget counterexamples and the refined phase bound. See [reproduction notes](CHECKS.md).

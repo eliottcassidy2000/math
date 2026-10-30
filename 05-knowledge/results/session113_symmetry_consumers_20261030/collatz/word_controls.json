@@ -1,0 +1,14 @@
+{
+  "exhaustive_words": 16383,
+  "maximum_clock": 14,
+  "precisions": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8
+  ],
+  "equality_controls_through_E": 8,
+  "status": "PASS; direct integer words are controls, not proof of all words"
+}
