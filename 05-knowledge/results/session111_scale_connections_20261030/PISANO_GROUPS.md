@@ -85,6 +85,9 @@ where D50 denotes the dihedral group of order 50. This group is nonabelian, has 
 
 Thus two natural objects both numbered200 are not isomorphic. The distinction between cyclic C25 and elementary C5² links directly to the old regular-action cancellation story: equal group orders do not determine cycle inventories.
 
+
+Neither order-200 group can be the automorphism group of a single finite tournament. Such an automorphism group has odd order: an involution would exchange some two vertices and reverse their arc. These groups act on arithmetic frames or on the family of orientation assignments; a particular tournament retains only its stabilizer.
+
 ## Compare the scale laws, not just one equality
 
 The one-fibre information rank from PORT_INFORMATION is
