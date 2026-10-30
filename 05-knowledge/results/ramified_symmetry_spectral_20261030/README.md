@@ -7,7 +7,9 @@ referee or claim of literature priority.
 The ramified prime-tournament norm theorem now connects to actual
 vertex attachments and Hamilton-path complements. We obtain rigid prime
 children at the same spectral scale, an all-depth affine cycle inventory,
-and a quantitative obstruction to short metagraph routes.
+and a composition budget for metagraph routes. A late full-group
+calculation also exposes a universal family of nonlinear residue-fibre
+shifts and gives an exact625-to626 augmentation count.
 
 ## Rigidity can be selected within a uniform spectral budget
 
@@ -83,9 +85,41 @@ previous wreath towers, where local symmetries remain in small blocks.
 
 The full-group guard is essential. At the25-vertex base, the named
 arithmetic group has order125, but the full tournament group has
-order15625. Session110's higher-depth prime scalar hostile remains
-in force. The probability statement concerns A_k; the separate Gluck
-argument and explicit626 certificate concern full graph rigidity.
+order15625. More strongly, EVERY bank in this tower contains the
+independent residue-fibre shifts
+
+    x -> x+eta*h(rho(x)),  eta=g^(p^(k-1))-1,
+
+where h is any function F_p -> F_p. Here eta is a nonzero square-zero
+element at the last ramification layer. Differences within a fibre stay
+fixed; differences between fibres stay in their original clock orbit.
+These shifts enlarge A_k to a certified H_k of order p^(3k+p-2).
+They do not require modules, and hence survive in the PRIME banks.
+
+For the pinned625-vertex prime source we certify the FULL group:
+**Aut(T)=H_2, of order1953125=5^9.** Its pointwise0,1 stabilizer is
+C5^3, found by a complete125-leaf refinement tree and literal arc checks.
+Its smallest nonidentity permutation index is100; the named affine
+group's minimum is400. Thus local symmetry corrections can be much
+larger than the affine recurrence alone predicts.
+
+There is nevertheless a closed correction, valid at every k>=2:
+
+    D_0=N(p-1)/p^2,
+    I_k(Q)=Q^N+p(p-1)Q^(N-(p-1)D_0)+(p-1)Q^(N-p D_0),
+    Psi_k(Q)=p^(p-2)[Phi_k(Q)-I_k(Q)]
+                 +[Q^(N/p)+(p-1)Q^(N/p^2)]^p.
+
+This is the cycle sum of H_k, proved from its actual residue-clock
+action in [S3b](PROOFS.md). The exact unmarked prime-child count of
+our625 source is **Psi_2(2)/1953125-4**. The full joint Q-color counts
+and prime-child integer are in [parent_group.json](parent_group.json).
+This counts one actual parent branch, not the whole A000568 sequence.
+The depth guard is necessary: at k=1 a nonlinear shift can turn a
+five-cycle translation pattern into a single25-cycle.
+
+The subgroup probability statements retain their named groups; the
+separate Gluck argument and explicit626 certificate concern full rigidity.
 
 ## An operation law for the actual metagraph
 
@@ -94,6 +128,10 @@ actual relation T^P=T^op xor E(P). Its skew matrix satisfies
 
     K_(T^P)=-K_T+2J_P,
     | ||K_(T^P)||-||K_T|| | <=4 cos(pi/(N+1))<4.
+
+This precise tariff is INHERITED from THM-4813(C), with Session75's
+earlier matrix/trace-norm work credited there; THM-4815 gives the dipole
+and potential framework. It is not a new theorem of this packet.
 
 Re-marking by vertex permutation costs zero. More generally, a word
 with r insertions and c legal complements, starting at size N and
@@ -104,10 +142,12 @@ norm M, obeys
 
 This is a genuine composition bound for those operations. It neither
 reconstructs their joint-port responses nor preserves primeness.
-At fixed size it gives a linear asymptotic lower bound on complement
-distance from the ramified quasirandom sources to transitive tournaments.
-For the certified625-vertex source, **at least81 actual complements**
-are required along any such route. Existence of a route is not assumed.
+At fixed size the spectral bound gives81 complements for the625 source.
+The older score potential is MUCH stronger here: regularity already
+requires **at least48828 actual complements** on any route to a
+transitive tournament (THM-4810, Theorem L). The81 is a control, not an
+improved distance bound. The new use is composing the inherited tariff
+with the insertion budget. Existence of a route is not assumed.
 
 ## Evidence and continuation
 
@@ -118,15 +158,22 @@ the native626 example, three further literal626-vertex complements,
 and replays the81/27 hostile with equal67 labelled cyclic triples but
 1620/1728 regular binary masks. Normal and optimized runs are compared;
 see [AUDIT.md](AUDIT.md) for counts, exactness and source pins.
+The additional parent-group checker exhausts the125 refinement leaves,
+all3125 fibre maps, and all624 nonidentity quotient cosets with three
+nonlinear probes each. Six literal ring controls test the socle mechanism.
 
 From the repository root:
 
     python -X utf8 -B 05-knowledge/results/ramified_symmetry_spectral_20261030/check.py
     python -X utf8 -O -B 05-knowledge/results/ramified_symmetry_spectral_20261030/check.py --output /path/to/separate-receipt.json
+    python -X utf8 -B 05-knowledge/results/ramified_symmetry_spectral_20261030/parent_group.py
     python -X utf8 -B 05-knowledge/results/ramified_symmetry_spectral_20261030/seal.py
 
 The next targets are compatible distinguishing cuts under the real ring
-reductions; full graph groups beyond the named affine subgroup; and
+reductions; full graph groups beyond H_k for other balanced sources; and
 joint response carriers that retain the selected paths while respecting
 the spectral budget. General complement/re-marking closure and new full
 A000568 terms remain OPEN.
+The incoming endpoint-shadow packet also shows why a small spectral
+budget cannot replace incidence: two moves can produce an almost
+full-rank correction while retaining the scores and endpoint ports.

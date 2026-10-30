@@ -1,11 +1,13 @@
 {
   "artifacts_lf_sha256": {
-    "AUDIT.md": "9b2ca5cb067854a8d56434adf6afd35aab0bf1c636382b548132c9aafc62ef68",
-    "PROOFS.md": "cd4afb167a96fda6dfdca7901e1ec402f7902cdabe620ac76f8b4286af6b4c78",
-    "README.md": "c0a6537fa3c6f14eba4d84556cd0012a4bc8e82afbf150f124ee9a1df5f2cf72",
+    "AUDIT.md": "0c69ef2cca9e8afca51dc228e8c88e51413b6087177739401cfde0d096bdbd78",
+    "PROOFS.md": "70dd8192501a260ebc75b26459b21cb314803a492269cc824d820ccd120e1ca4",
+    "README.md": "ccf17b81ec5e2210aa1607862af239d31b8c3d386aecb64e720c17de541e4e36",
     "certificate.json": "c661d672a096d1892e0f98e812bd57b9a45c6f727e7ec8178e7f05f1fba51f20",
     "check.py": "58e905b968d9fd62d33c6350cbb1cbde01d77046a90cd689cbe2667098adcc14",
-    "seal.py": "7038119287cd2e0bd641faa49fa738305b6048fd09b913586e183d83fdeff715"
+    "parent_group.json": "6103a13ef612560878679cd92178d193da6570959492eb5d75e70b992c95831e",
+    "parent_group.py": "372d39abe431da25a3f873fff825c39e0a85947ce0624d1036d8505e5c7ace15",
+    "seal.py": "89a09de37d253854ff0f9b1252ce36293539138d29986c6f768a2f41f9fcefa3"
   },
   "runtime_inputs_checked": [
     "05-knowledge/results/regular_parent_symmetry_20261029/verify.py",
@@ -98,10 +100,34 @@
       "path": "01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md"
     },
     {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "b649ea79ec4ce5b109bee91fbedfe15ba7f97224",
+      "lf_sha256": "5c5aaf3cd87f5887d836ba5346bccdf0f184e258288f3fa79227d41213917a1b",
+      "path": "01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "d49ef119de7a40513529dc3996bb7f77537037be",
+      "lf_sha256": "5965e58fde6f829e62cb0a0393336d0df8d9e7811b63f4afec6c83b9769d59d3",
+      "path": "01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md"
+    },
+    {
+      "commit": "f31384340adb9f957ca4299a8cab4f7755807072",
+      "git_blob": "eaba1f8d1ab8bbb3d1b61bf33c3ee002f4c6d25b",
+      "lf_sha256": "b8aa170b54ea3f5882f16a725af7e9f93d2cd40e3aa91a176c8f3de00fd36c0a",
+      "path": "01-canon/theorems/THM-4815-dipole-principle-native-move-distance-bounds-endpoint-relation-cut-or-colour-exactness-and-the-p7-parity-correction.md"
+    },
+    {
       "commit": "5d01b430aac7b862919639df5981064c081228f6",
       "git_blob": "0ec93d3306db1f8bc65fd5adf559e9aa02c93afa",
       "lf_sha256": "cc279e60dc6742dd1e5a769a8d9f5d17ab8ddf5743b13d1c67b791715a0c6b6e",
       "path": "05-knowledge/results/session110_overnight_20261030/README.md"
+    },
+    {
+      "commit": "de77c39fe547cd5f27b2a42972c9d9013c7ad417",
+      "git_blob": "b74f3d3818c12a2760afd26ae37863d7a7beba26",
+      "lf_sha256": "d79c0295c0d2299987349fab223955f2a64c93ec026ac186e5a18e7023dcea07",
+      "path": "05-knowledge/results/endpoint_shadows_path_corrections_20261030/TOURNAMENTS.md"
     }
   ],
   "status": "Artifact/source integrity, not independent proof review"

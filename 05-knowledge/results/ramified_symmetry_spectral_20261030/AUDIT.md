@@ -13,6 +13,14 @@ peek were read. Incoming Session110 module enumeration and quinary
 carrier work was recovered before deriving a new recurrence. A later
 fetch recovered5d01b430aa, including its final synthesis and explicit
 distinction between the affine625 census and open full graph census.
+A final fetch recovered de77c39fe5. Its endpoint-shadow README and
+TOURNAMENTS.md led directly to the older THM-4813(C), THM-4815(A), and
+THM-4810 Theorem L. These were then read before publication. The exact
+complement tariff is inherited, and the625 spectral lower bound81 is
+dominated by the inherited score bound48828. The packet was revised
+to state both facts explicitly; no improvement on that distance bound
+is claimed. The incoming Fourier precision correction was also read;
+this packet's source Fourier enclosures use outward rationals instead.
 
 Anchor: combine the ramified spectral theorem with actual attachment
 and complement operations. Niche: the exact affine cycle inventory and
@@ -25,6 +33,10 @@ intrinsic regular root**. Each result changes a different operation:
 S2 counts named affine orbits; S3 samples subsequent IID vertex colors;
 S4 selects actual full-rigid children; S5 constrains literal metagraph
 paths. None is treated as an equivalence between these operations.
+The late S3b lane overtook the subgroup-only counting target: exhaustive
+root refinement exposed actual independent residue-fibre shifts. Their
+square-zero formula then gave an all-bank theorem and a corrected cycle
+sum, while the full625 graph calculation supplied one exact parent branch.
 
 ## Recovered mechanisms and correction precedence
 
@@ -52,6 +64,13 @@ paths. None is treated as an equivalence between these operations.
 - The native complement definition and common path frame come from
   overnight_rank_return_20261029/COMPLEMENT_KERNEL.md and the retained
   path-memory work. S5 uses that literal relation, not global converse.
+- THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md(C)
+  already proves the exact operator-norm tariff, crediting Session75's
+  earlier matrix and trace-norm work. THM-4815-dipole-principle-native-move-distance-bounds-endpoint-relation-cut-or-colour-exactness-and-the-p7-parity-correction.md(A)
+  supplies the potential framework. THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md,
+  Theorem L, gives the stronger quadratic distance bound for our regular
+  source. S5's new use is the mixed insertion/complement budget, not
+  another claim to either old theorem.
 - The 625 example and its chosen signs are pinned from
   source_cutoffs_balanced_lifts_20261029/lifts.json. Its prior optimum
   is credited; the new626 child, intrinsic root, rigidity certificate,
@@ -72,6 +91,12 @@ also replayed. The corrected near miss is concluding full graph rigidity
 from a trivial stabilizer in one named subgroup. The least-used sidecars
 were the July bordered-polynomial formula and the prime-parent forbidden
 cut list, rather than another necklace census.
+Before deriving the fibre law, targeted searches recovered Session110's
+nilpotent ideal/module discussion and older fibrewise response references
+(including THM-2398, THM-2790 and THM-2356). The latter concern different
+operators and are not asserted as maps into these tournament actions.
+The literal connection is to the preceding wreath action: the socle
+gives disjoint cyclic shifts even when the tournament has no modules.
 
 ## Literature source check
 
@@ -125,6 +150,24 @@ explicit proofs/calculations in PROOFS.md, without priority claims.
    not for every later complement. Spectral quasirandomness does not
    itself reconstruct joint ports. Coherent distinguishing cuts across
    ring reductions, all-size integral recovery and A000568 remain open.
+8. **Universal extra group:** eta has valuation2k-1 and annihilator
+   delta R_k. The difference between two distinct residue fibres is
+   a unit, allowing division by its residue; same-fibre differences
+   do not change. These are the two exhaustive cases preserving arcs.
+   Affine intersection has dimension2, not1: both constant and linear
+   fibre laws are already affine. The larger group has order p^(3k+p-2).
+9. **Enlarged cycle sum:** constancy on nonidentity fibre-group cosets
+   follows from the p-power iterate formula and fixed-point counts.
+   The nonzero residue-translation branch needs k>=2. Its k=1 hostile
+   is retained rather than silently included in the recurrence.
+10. **Full625 completeness:** stable cells give upper bounds on orbits;
+    the clock supplies the matching25-element orbit of vertex1 after
+    rooting0. The complete individualization tree then has125 leaves,
+    every leaf yields an actual automorphism, and every root-pair-fixing
+    automorphism maps the baseline leaf to one of them. The ordered
+    refinement/cell-selection rule is equivariant. Orbit-stabilizer
+    gives1953125; equality with the universal subgroup fixes the full
+    group, without assuming affine normality or a full bank census.
 
 ## Finite universes and independent formulations
 
@@ -169,16 +212,37 @@ mathematical proof or make the review independent.
 Both runs passed1,284,166 local gates plus seven inherited hostile gates,
 with identical receipt SHA256
 `c661d672a096d1892e0f98e812bd57b9a45c6f727e7ec8178e7f05f1fba51f20`.
-The seal verifies six local artifacts, fifteen immutable source blobs,
+The seal verifies eight local artifacts, nineteen immutable source blobs,
 and equality of the three live runtime inputs to their pinned versions.
+
+The additional `parent_group.py` receipt contains all125 pointwise
+stabilizer permutations and all125 leaf addresses. Every accepted map
+is checked on all195000 unordered source pairs; five independent
+single-fibre generators are also checked directly. A separate closed
+formula reconstructs exactly the same125 maps. The6 literal socle
+universes are(p,k,a)=(5,1,1),(5,2,1),(5,3,1),(13,1,3),(13,2,3),(17,1,8),
+testing every ring element and every unit's full top-clock orbit.
+The full3125-element fibre inventory is enumerated. All624 nonidentity
+cosets of H_2/F_2 receive three explicit nonlinear laws (1872 probes);
+these are not called a1,953,125-element enumeration. The proof gives
+coset constancy. Its weighted complete inventory has the correct group
+mass and exact Burnside divisibility for Q=2,3,4. Both normal and -O
+receipts are compared. The k=1 single25-cycle supplies the boundary test.
+Ten further nonlinear coset controls at(p,k,a)=(5,3,1),(13,2,3) retain
+their actual ring elements and cycle types. Normal and optimized runs
+pass883,258 gates with byte-identical SHA256
+`6103a13ef612560878679cd92178d193da6570959492eb5d75e70b992c95831e`.
+Together the two local checkers pass2,167,424 gates, plus the seven
+inherited81/27 gates. Exhaustive coverage is exactly as stated above;
+the two implementations are same-agent checks, not independent review.
 
 ## Further targets
 
 - Find a source-compatible sequence of distinguishing cuts, preserving
   its genuine reduction and named-port guards while exploiting(11).
-- Determine the full graph group of the fixed625 source and then larger
-  balanced strata. The S2 subgroup recurrence is already complete;
-  another subgroup-only count does not close that question.
+- Determine when H_k is the full graph group beyond the now-certified
+  fixed625 source. The cycle correction(10e) is already complete for H_k;
+  a larger scalar or nonlinear group still needs its own quotient.
 - Seek matching upper routes for the spectral complement-distance
   obstruction, retaining actual path choices and target connectivity.
 - Extend a joint response carrier with the root/parity guard. Test the

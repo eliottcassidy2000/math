@@ -33,8 +33,9 @@ Every source is regular and contains the actual affine group
     |A_k|=p^(3k).                                      (2)
 
 This is a CERTIFIED SUBGROUP of the full graph group. Prime tournament
-structure does not make (2) the full group: keep Session110's extra
-scalar at depth five. The first-level product also has extra symmetries.
+structure does not make (2) the full group: S3b below proves a universal
+larger group, and Session110 retains additional scalar hostiles in its
+other depth conventions. The first-level product also has extra symmetries.
 The new attachment choices below are made AFTER selecting a fixed
 spectrally controlled source; the bank signs themselves are not replaced
 by independent random bits.
@@ -106,8 +107,8 @@ joint bit words, without introducing independent palette gauges.
 The number of prime one-vertex attachment orbits under A_k is
 B_k(2)-4 when k>=2: the two constant cuts and the two clone orbits
 are precisely the forbidden types. This is a FRAME count. It becomes
-the unmarked graph count only if A_k is the full group, or after a
-separate full transporter quotient. Formula(6) is not A000568.
+the unmarked graph count only after a separate full transporter quotient.
+S3b proves that A_k is always a proper subgroup here. Formula(6) is not A000568.
 
 ## S3. Symmetry left by a random attachment: two different regimes
 
@@ -161,8 +162,175 @@ specified permutation actions, not an inference from the spectral norm.
 But the all-positive base bank is R5[R5], whose full group has order15625.
 Its binary rigid-cut probability is1554*15625/2^25, about0.724.
 The affine bound therefore cannot be advertised as the probability of
-FULL graph rigidity. The finite prime-group agreements at small ramified
-depths likewise do not eliminate Session110's deeper extra-scalar hostile.
+FULL graph rigidity. The next theorem makes this guard compulsory for
+every bank in the present even-valuation-depth tower, including prime banks.
+
+## S3b. Universal socle shifts and the actual full625 group
+
+Let rho:R_k -> F_p be reduction modulo delta, and put
+
+    eta=g^(p^(k-1))-1.
+
+Then eta is nonzero of delta-valuation2k-1, eta^2=0, p eta=0,
+and eta*x=eta*rho(x). For EVERY function h:F_p -> F_p define
+
+    sigma_h(x)=x+eta*h(rho(x)).                        (10a)
+
+These permutations form F_k isomorphic to the additive group C_p^p.
+They preserve EVERY g-invariant Cayley tournament bank, regardless
+of balance or the particular choices of orbit signs.
+
+**Proof.** The residue is unchanged by sigma_h, so composition adds
+the functions and inversion negates them. For two vertices with equal
+residue their difference is unchanged. Otherwise their difference v
+is a unit and its changed difference is v+eta*d for some d in F_p.
+Choose s=d/rho(v). Square-zero binomial expansion gives
+
+    g^(s p^(k-1))*v=(1+s eta)*v=v+eta*d.
+
+Thus the ordered difference stays in its actual clock orbit and the
+arc is unchanged. This proves preservation of the literal relation,
+not just its spectrum or a quotient statistic. QED.
+
+The affine group A_k normalizes F_k. Translations shift the argument
+of h; the clock fixes both rho and eta and therefore commutes with F_k.
+Moreover F_k intersect A_k consists precisely of h(z)=u+v*z, so
+
+    H_k=F_k A_k,  |H_k|=p^(3k+p-2).                 (10b)
+
+For the intersection claim, evaluate an affine map at0 to obtain
+b in eta F_p. Its linear part minus1 must have image in eta F_p,
+forcing t divisible by p^(k-1); the converse is immediate. Thus
+H_k is a certified subgroup of every bank and A_k has index p^(p-2)
+in it. These independent shifts do not require tournament modules:
+they remain present in the prime balanced banks at k>=2.
+
+There is an exact smaller-support symmetry law. Put
+
+    D_0=N(p-1)/p^2.
+
+A nonzero shift on one residue fibre moves N/p vertices in p-cycles,
+so its permutation index is D_0. For uniform IID Q-colors,
+
+    E|Stab_(F_k)|=(1+(p-1)Q^(-D_0))^p,
+    P(Stab_(F_k)=1)=(1-Q^(-D_0))^p.                 (10c)
+
+The p fibres have disjoint coordinates. On each fibre every nonidentity
+shift has the same cycle partition because p is prime; its coloring
+is fixed with probability Q^(-D_0). This proves both formulas.
+In particular(10c) gives a lower bound on the mean residual FULL group
+order and an upper bound on the probability of FULL rigidity.
+
+In fact the least nonidentity index in H_k is exactly D_0, attained
+by its p(p-1) single-fibre nonzero shifts. To check that no element
+outside F_k competes, write it as g^t*x+b+eta*h(rho(x)). If t is
+divisible by p^(k-1), it is in F_k when b is in eta F_p, and otherwise
+has no fixed points. For other t, r=v_delta(g^t-1)<=2k-3. The fixed
+equation, reduced modulo delta^(r+1), pins the residue of x; inside
+that fibre it has at most p^r<=N/p^3 solutions. Since H_k is a p-group,
+every moved cycle has length at least p. Its index is therefore at
+least (N-N/p^3)(1-1/p)>D_0. The branch with other t is absent at k=1.
+Two active fibre shifts already have index at least2D_0.
+The IID event/moment bounds in(10) consequently hold for H_k after
+replacing p^(3k) by p^(3k+p-2) and D by D_0. In particular all fixed
+positive moments tend to1 at fixed p as k grows. This larger action
+has a genuinely different leading exponent from A_k.
+
+### A corrected all-depth cycle recurrence for the enlarged action
+
+For k>=2 let Psi_k(Q)=sum_(f in H_k) Q^(number of cycles of f),
+and let Phi_k be the S2 recurrence. Then exactly
+
+    I_k(Q)=Q^N+p(p-1)Q^(N-(p-1)D_0)+(p-1)Q^(N-p D_0),
+    F_k(Q)=[Q^(N/p)+(p-1)Q^(N/p^2)]^p,
+    Psi_k(Q)=p^(p-2)[Phi_k(Q)-I_k(Q)]+F_k(Q).         (10e)
+
+Here I_k is the cycle sum of A_k intersect F_k, and F_k(Q) the cycle
+sum of the fibre group (the function and group are distinguished by
+the argument Q). Thus S2 plus(10e) is an all-depth closed formula,
+without enumerating H_k. Divide by p^(3k+p-2) for its Q-color orbits.
+
+**Proof of the coset step.** Every element has form
+f(x)=a(x)+eta*h(rho(x)), where a(x)=g^t*x+b. Put beta=rho(b).
+Since the clock fixes eta and rho, iteration gives
+
+    f^n(x)=a^n(x)+eta*sum_(j=0..n-1) h(rho(x)+j beta).
+
+If beta=0, then f^(p^j)=a^(p^j) for every j>=1. For a outside F_k,
+the fixed-point argument above also proves that f and a have the same
+number of fixed points: when r<=2k-3, solve (g^t-1)y=-eta*h(z)
+inside delta R_k in each residue z, giving a bijection of their fixed
+sets; the remaining outside-F_k cases have no fixed points.
+
+If beta is nonzero, a has all cycles of length p^k. For j>=2 the
+extra sum vanishes in F_p, so f^(p^j)=a^(p^j). At n=p the extra
+translation has delta-valuation at least2k-1>=3, whereas the
+translation of a^p has valuation2 and its linear part minus1 has
+valuation at least3. Hence f^p has no fixed points; f itself also
+has none because it moves the residue. Thus f also has all cycles
+of length p^k. This is where k>=2 is used.
+
+The counts of fixed points of all p-power iterates determine the full
+cycle inventory in a p-group. Consequently every nonidentity F_k
+coset has a constant cycle type, and its A_k intersection has p^2
+elements while the whole coset has p^p. Replace the identity coset's
+I_k by its independent fibre sum F_k(Q) to obtain(10e). QED.
+
+At k=1 the assertion is false: on the25-point ring the permutation
+x -> x+1+eta*1_(rho(x)=0) is a single25-cycle, while the corresponding
+translation has five5-cycles. The checker retains this minimal-depth
+hostile. The socle-shift theorem(10a--c) itself still holds at k=1.
+
+### FINITE-EXACT full group of the pinned625 source
+
+For the particular balanced prime source from lifts.json, complete
+individualization/refinement and literal arc checks give
+
+    Aut(T_625)=H_2,  |Aut(T_625)|=5^9=1953125.        (10d)
+
+Here vertices are (x,y) mod25, indexed25x+y. With ell=2x+y mod5
+and d=(5,15), the full pointwise stabilizer of vertices0 and1 is
+
+    (x,y) -> (x,y)+d*h(ell),  h(0)=h(1)=0,
+
+an explicit C5^3 of order125. This d generates the same socle line
+as eta. All125 maps are retained and separately checked against every
+unordered pair in the actual tournament.
+
+**Completeness certificate.** Rooted equitable refinement from0 has
+five singleton cells,24 cells of size5 and20 of size25. The cell of
+vertex1 is exactly its known25-element clock orbit. Thus the FULL
+root stabilizer has orbit25 on1. After fixing1, canonical refinement
+has250 singletons and75 size-five cells. Branching on every vertex
+of the first smallest nonsingleton cell gives profiles
+
+    (singletons, size-five cells; number of nodes):
+    (250,75;1), (375,50;5), (500,25;25), (625,0;125).
+
+Every leaf map relative to the first discrete leaf preserves all arcs;
+no leaf is rejected. Conversely every automorphism fixing0 and1 maps
+the first leaf's successive selections to one of these branches,
+because the ordered refinement and cell-selection rules are invariant.
+It therefore occurs among these125 distinct maps. Translation
+transitivity and orbit-stabilizer give625*25*125=5^9. Formula(10b)
+already supplies a subgroup of that size, so equality follows.
+This completes ONE full graph group, not a census of all625 bank states.
+For this source(10e) is therefore the FULL coloring-orbit formula:
+
+    Psi_2(Q)=125[Phi_2(Q)-Q^625-20Q^225-4Q^125]
+              +[Q^125+4Q^25]^5.
+
+Its exact unmarked prime-child count is Psi_2(2)/1953125-4, by S4's
+regular-parent theorem. This is a literal625-to626 branch of tournament
+augmentation, not a new full A000568 term. The Q=2,3,4 orbit counts
+and exact prime-child count are retained in parent_group.json.
+
+At this prime source D_0=100 whereas A_2 has D=400. Even a highly
+quasirandom prime source can therefore retain local shifts whose
+color-stabilizer correction is exponentially larger than the affine
+calculation predicts. The explicit626 child in S4 nevertheless destroys
+this ENTIRE larger group. The literal socle operation, rather than a
+coincidence of group orders, is the bridge to the earlier wreath theme.
 
 ## S4. A sharp universal budget for adjoining vertices
 
@@ -265,6 +433,14 @@ extension, or every re-marked/complemented target, has a free sign bit.
 
 ## S5. Actual Hamilton-path complements have bounded spectral cost
 
+**INHERITED tariff, new composition/application.** The precise bound
+below is already THM-4813(C),
+[spectral exception budgets](../../../01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md),
+with the earlier Session75 matrix/trace-norm work credited there.
+[THM-4815(A1--A3), dipole principle](../../../01-canon/theorems/THM-4815-dipole-principle-native-move-distance-bounds-endpoint-relation-cut-or-colour-exactness-and-the-p7-parity-correction.md)
+already organizes the same identity and potential method. The short
+derivation is retained for the growth-word bound, not as a new tariff.
+
 For a legal Hamilton path P of T let J_P be its skew adjacency matrix,
 zero off the consecutive path edges. The ACTUAL complement retained in
 the native port work is T^P=T^op xor E(P), so in the common named frame
@@ -318,6 +494,17 @@ Thus ANY fixed-size native complement/re-marking route from this source
 to the transitive tournament uses at least81 complements. The lower
 bound does not presume connectivity or give a shortest path.
 
+This81 is only a spectral control and is NOT an improvement on known
+distance bounds. For any regular odd-order source,
+[THM-4810, Theorem L](../../../01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md)
+already gives the stronger lower bound(N^2-1)/8. Indeed sorted scores
+define L=(1/2)sum_i |s_(i)-i|; converse preserves L and restoring a
+Hamilton path changes only two scores by one, so each move changes L
+by at most1. Regularity gives L=(N^2-1)/8 and a transitive target has
+L=0. At625 the inherited bound is48828. The spectral coordinate is
+useful for mixed insertions and irregular targets, where it composes
+with(11), but not as a replacement for this stronger score obstruction.
+
 ## S6. What remains uncompressed
 
 S2 retains whole permutation cycle types for joint named colors. S4
@@ -333,3 +520,13 @@ smallest complement/re-marking carrier remain OPEN. The present new
 operation bound supplies a genuine invariant constraint on their legal
 paths. It does not turn the affine Burnside recurrence into a full
 A000568 reconstruction.
+
+The incoming [endpoint-shadow packet, G1--G5](../endpoint_shadows_path_corrections_20261030/TOURNAMENTS.md)
+at de77c39fe5 supplies a decisive additional boundary: two legal moves
+with the same endpoint ports can preserve all scores, have norm
+correction below8, and still produce rank at least N-5sqrt(N)+6.
+Its consistent path-program prime completions are not completions of
+our fixed ramified source. Thus the small spectral budget cannot
+license dropping full edge incidence, source marking or transporter
+data. The two results compose as constraints, not interchangeable
+representation theorems.

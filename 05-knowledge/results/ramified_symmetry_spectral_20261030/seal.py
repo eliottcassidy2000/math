@@ -7,7 +7,8 @@ import subprocess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-ARTIFACTS = ('README.md', 'PROOFS.md', 'AUDIT.md', 'check.py', 'certificate.json', 'seal.py')
+ARTIFACTS = ('README.md', 'PROOFS.md', 'AUDIT.md', 'check.py', 'certificate.json',
+             'parent_group.py', 'parent_group.json', 'seal.py')
 RUNTIME = (
     '05-knowledge/results/regular_parent_symmetry_20261029/verify.py',
     '05-knowledge/results/pinned_discrepancy_reset_tails_20261029/check_pins.py',
@@ -27,8 +28,12 @@ SOURCES = {
         '01-canon/theorems/THM-1920-the-spectral-insertion-response.md',
         '01-canon/theorems/THM-4169-prime-parent-one-vertex-augmentation-and-quartic-johnson-transfer.md',
         '01-canon/theorems/THM-4743-converse-extended-gluck-for-tournaments-primitive-classification-paley-tournaments-and-c3-towers.md',
+        '01-canon/theorems/THM-4810-h-spectrum-atlas-strong-fibres-exact-low-spectra-complement-parity-invariant-score-monotonicity-paley-budgets.md',
+        '01-canon/theorems/THM-4813-collatz-numerator-coordinate-forcing-cocycle-gauss-sum-intertwiner-and-sharp-spectral-exception-budgets.md',
+        '01-canon/theorems/THM-4815-dipole-principle-native-move-distance-bounds-endpoint-relation-cut-or-colour-exactness-and-the-p7-parity-correction.md',
     ),
     '5d01b430aa': ('05-knowledge/results/session110_overnight_20261030/README.md',),
+    'de77c39fe5': ('05-knowledge/results/endpoint_shadows_path_corrections_20261030/TOURNAMENTS.md',),
 }
 
 
