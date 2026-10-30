@@ -67,6 +67,15 @@ def residue_threshold(intervals, radius, residue):
 def period(intervals):
     return lcm(*(left.denominator for left, _ in intervals))
 
+def finite_rejections(intervals, radius):
+    """All rejected positive speeds; valid only if a positive-width component exists."""
+    width = max((right-left for left,right in intervals), default=F(0))
+    need(width > 0, 'positive width required for a finite global conductor')
+    # Every phase gap is <= 2r. Equality is accepted.
+    cutoff = ceil(2*radius/width)
+    rejected = [v for v in range(1,cutoff) if attachment(intervals,radius,v) is None]
+    return cutoff,rejected
+
 def direct_pair_maximum(speeds):
     """Independent small-input maximum: all zero, cusp and pair-crossing clocks."""
     speeds = tuple(sorted(set(speeds)))
@@ -79,10 +88,14 @@ def direct_pair_maximum(speeds):
 def run():
     queries = 0
     cores = 0
+    infinite_banks = []
     for core in combinations(range(1, 13), 3):
         if gcd(*core) != 1:
             continue
         cores += 1
+        cutoff,rejected=finite_rejections(safe_intervals(core,F(1,5)),F(1,5))
+        need(not rejected, ('infinite-speed extension bank',core,rejected))
+        infinite_banks.append(dict(core=core,tail_starts=cutoff))
         for radius in (F(1, 5), F(1, 4), F(1, 3), F(1, 2)):
             intervals = safe_intervals(core, radius)
             Q = period(intervals)
@@ -127,10 +140,12 @@ def run():
                radii=['1/5','1/4','1/3','1/2'], attached_speeds='1..64',
                large_core=list(core), radius=str(radius), components=len(intervals),
                phase_period=period(intervals), large_inputs=rows,
+               all_speed_core_banks=infinite_banks,
                hostile_germ='(1,6)+7: 4/13, not 3/8',
                hostile_independent_arrivals='(1,2)+3+12: 3/13, not 1/4')
     Path(__file__).with_suffix('.json').write_text(json.dumps(out, indent=2)+'\n')
-    print(json.dumps({k:v for k,v in out.items() if k!='large_inputs'}, indent=2))
+    print(json.dumps({k:v for k,v in out.items() if k not in ('large_inputs','all_speed_core_banks')}, indent=2))
+    print('Verified all positive attached speeds for',len(infinite_banks),'fixed cores at radius 1/5')
 
 if __name__ == '__main__':
     run()

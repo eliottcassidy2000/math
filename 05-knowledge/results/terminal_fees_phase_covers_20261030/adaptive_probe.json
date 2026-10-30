@@ -1,0 +1,60 @@
+{
+  "status": "VERIFIED finite-precision abstract certificates; uniform E remains OPEN",
+  "levels": [
+    {
+      "E": 1,
+      "states": 20,
+      "edges": 1280,
+      "minimum": -120,
+      "maximum": 0,
+      "D": 40,
+      "N": 20,
+      "tail": true,
+      "status": "PASS: all-word abstract enclosure at this precision"
+    },
+    {
+      "E": 2,
+      "states": 116,
+      "edges": 8384,
+      "minimum": -1080,
+      "maximum": 0,
+      "D": 200,
+      "N": 120,
+      "tail": true,
+      "status": "PASS: all-word abstract enclosure at this precision"
+    },
+    {
+      "E": 3,
+      "states": 660,
+      "edges": 52080,
+      "minimum": -7440,
+      "maximum": 0,
+      "D": 1000,
+      "N": 620,
+      "tail": true,
+      "status": "PASS: all-word abstract enclosure at this precision"
+    },
+    {
+      "E": 4,
+      "states": 3700,
+      "edges": 311200,
+      "minimum": -43680,
+      "maximum": 0,
+      "D": 5000,
+      "N": 3120,
+      "tail": true,
+      "status": "PASS: all-word abstract enclosure at this precision"
+    },
+    {
+      "E": 5,
+      "states": 20500,
+      "edges": 1810000,
+      "minimum": -249880,
+      "maximum": 0,
+      "D": 25000,
+      "N": 15620,
+      "tail": true,
+      "status": "PASS: all-word abstract enclosure at this precision"
+    }
+  ]
+}

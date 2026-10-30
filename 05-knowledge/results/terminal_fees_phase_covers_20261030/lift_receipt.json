@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "certificate": "epoch2_9_audit.json",
+  "eta": "44941347/19531250",
+  "nonone_10_excursion_price": "25410097/19531250",
+  "lambda11": "12207031/19531250",
+  "nonone_S11_margin": "5878847/19531250",
+  "global_F2_margin": "12207031/9765625",
+  "boundary_inequalities": 650,
+  "closed_E11_families": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "sharp_word_clock": 19531250,
+  "sharp_word_content": 12207031,
+  "remaining_E12_families": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "all_layer_content": "OPEN",
+  "universal_collatz": "OPEN"
+}

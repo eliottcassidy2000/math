@@ -5,21 +5,29 @@ CITED mechanisms / OPEN universal targets.** Same-agent mathematical review
 with independent certificate algorithms; no independent human or agent audit
 is claimed.
 
-* [Collatz](COLLATZ.md): a terminal margin of2 at the retained endpoint would
-  pay every non-one tenth-layer excursion, settling all nine eleventh-layer
-  families at once. Merely retaining m mod25 under the old F1 charges leaves
-  the margin at about1.571. The F2 enclosure counts the first two layers
-  exactly and delays higher payments to the actual low-phase return. Its E6
-  control is independently verified; the E9 target is open at this checkpoint.
+* [Collatz](COLLATZ.md): **all nine E11 families are closed.** A terminal
+  margin44941347/19531250>2 pays every non-one tenth-layer excursion and proves
+  the sharp all-word bound S11<=12207031*A/19531250. The independent F2 audit
+  checks2,509,000,000 edges and all-letter tails. A positive non-one margin
+  reduces E12 to seven native price families, still open. The successful
+  change delays high-layer payments until a genuine return modulo25;
+  retaining the extra multiplier digit under unchanged charges had failed.
 * [Lonely runner](LRC.md): the complete core safe intervals give an exact
   forward-phase test for every positive integer added speed, with explicit
   thresholds on every residue class. After core preprocessing this uses O(k)
   rational operations for k intervals, with no loop proportional to the new
-  speed. It preserves endpoints, actual time, and point components.
+  speed. It preserves endpoints, actual time, and point components. A proved
+  tail cutoff certifies every positive thirteenth speed for28 declared
+  twelve-speed cores at radius1/14; arbitrary cores remain open.
 * [Algorithmic sources and transfers](SOURCES-AND-TRANSFERS.md): Circuit
   Breaker's unchanged-LP barrier, Big O Speedrun's fixed computational model,
   and the cited quasi-Riemann proof's replicated targets, Möbius inversion and
   controlled scale ratio identify concrete improvements and non-transfers.
+* [Adaptive next route](ADAPTIVE.md): a source-preserving nondeterministic
+  observer retains multiplier precision only where the current content needs
+  it, with exactly(16E+84)*5^E/25 states. Five low-precision all-word certificates
+  pass. Uniform feasibility is open; unequal future responses are handled by
+  explicit branching, not an unjustified exact quotient.
 
 Universal Collatz and arbitrary-input LRC(14) remain **OPEN**. A fixed-layer
 content theorem is not a convergence proof. A correct exact coverage algorithm

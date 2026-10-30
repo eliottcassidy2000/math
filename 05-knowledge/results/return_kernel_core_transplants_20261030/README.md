@@ -13,11 +13,14 @@ then checked when the native problems meet those structures' hypotheses.
   5^e retain a25-state next-digit boundary; a five-position potential pays
   arbitrary changes of excursion. This avoids summing entry-dependent
   controller errors. Equality is attained by3,906,250 consecutive ones.
-- **The next precise obligation:** the remaining eleventh-layer bound is
+- **Successor closes the former next obligation:** the eleventh-layer bound is
   equivalent to nine short price families, involving at most three non-one
   excursions. Their words can still be arbitrarily long. Complete exact
   excursion prices at levels1–4 pass independent Bellman, endpoint-witness
   and infinite-alphabet audits; those computations do not verify level10.
+  The later[two-layer terminal-fee certificate](../terminal_fees_phase_covers_20261030/COLLATZ.md)
+  closes all nine families and proves sharp E11, with seven E12 families
+  remaining open. The reduction here remains valid.
 - **Arbitrary-core LRC recursion:** [the transplant theorem](LRC.md) constructs
   exact recursive spectra from any finite positive integer core using its
   actual complete top chamber. It handles changes of binding owner and

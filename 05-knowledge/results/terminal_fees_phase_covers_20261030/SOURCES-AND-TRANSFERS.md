@@ -33,6 +33,20 @@ searching harder cannot repair an impossible system of potential inequalities.
 The useful operation is to retain another multiplier digit, not to interpret
 an unsuccessful optimization as evidence against actual Collatz content.
 
+More precisely, retaining that digit with unchanged F1 charges still failed
+our sufficient terminal target. Only changing to the inherited F2 delayed
+charging rule produced the audited margin above2. Thus storage and its
+mathematical use are two separate obligations.
+
+Concurrent commit000f58fbcb sharpens the circuit comparison: its
+[complete potential frontier](../session117_ramsey_circuit_interfaces_20261030/challenge_audit/POTENTIAL_FRONTIER.md)
+proves that a specified provisional elimination row table has coefficient
+ceiling4 and dimension penalty at least9 there. It explicitly does not
+certify the external circuit theorem or record. We read the complete algebra
+and preserve that status. Its proposed escape is a richer joint state or
+proved incompatibility of worst rows, exactly the distinction our F2 probe
+tests in a different mathematical system.
+
 Incoming Session117 supplies a more concrete local model:
 [point-defect circuits](../session117_ramsey_circuit_interfaces_20261030/circuits/POINT_DEFECT_CIRCUITS.md)
 have exact B2 costs controlled by support and branching contexts. The proof
@@ -72,6 +86,15 @@ then validate the resulting weighted transitions independently. Our multiplier
 experiment implements one fully specified refinement of this kind. A general
 polynomial bound on how many splits suffice is **OPEN**, not implicit in the
 procedure. The previous exponential exact-observer lower bounds still apply.
+
+The concurrent[Ramsey parity compiler](../ramsey_circuit_interfaces_20261030/RAMSEY.md)
+provides a successful finite-to-uniform example: complete joint odd-slot
+charts split every integer weighted attachment into three lower-budget
+attachments, preserving the exact objective. Its capacity becomes
+sum_(j<k)2^popcount(j), computable by a binary recurrence. We read the chart
+inequalities and all-size induction, not just its finite search results.
+This shows what a sufficient reusable refinement rule looks like; it supplies
+no corresponding rule for arbitrary Collatz words or LRC cores by itself.
 
 ## Quasi-Riemann: retained scale ratios and genuinely replicated targets
 
@@ -136,3 +159,21 @@ for each controller change. A uniform proof of those fees is still required.
 These are connections between proof mechanisms, not isomorphisms between
 Collatz, circuit complexity, L-functions and lonely runner. Their value is to
 specify which extra coordinate or inverse would make a proposed transport valid.
+
+## Final incoming connection: normalize the producer, retain the actual clock
+
+Commit32044be577 arrived during the final audit. We read the complete proofs
+and handoff of the[rectangle-only counting compiler](../rectangular_counting_compiler_20261030/README.md).
+It removes unused choice coordinates only after proving equality of actual
+child tables, and records exact normalization and leaf recurrences. Its
+claimed Lean overlay was not rebuilt here; its compiler/runtime extension
+remains open in that packet.
+
+The useful distinction is that artificial enumeration multiplicity can be
+removed at the producer, while a physical counted operation cannot be deleted
+from its intended problem. Our F2 improvement changes an upper-bound charge,
+not the Collatz word or its integer clock. The LRC compiler avoids enumerating
+new teeth but retains the entire actual safe set. The new[adaptive observer](ADAPTIVE.md)
+has unequal future responses on some merged states, so it branches over every
+compatible lift rather than pretending to have the rectangle engine's exact
+child-table equality. These three operations have different proof contracts.

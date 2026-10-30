@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "corrupt_terminal_rejected": 1,
+  "diagnostic": "FAIL: edge or entry inequality"
+}

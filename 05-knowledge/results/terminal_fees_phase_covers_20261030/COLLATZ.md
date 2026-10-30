@@ -1,10 +1,21 @@
 # Terminal fees with a two-layer epoch clock
 
-**PROVED:** the terminal-certificate lifting implication below and the exact
-two-layer epoch enclosure. **VERIFIED:** a sixth-layer F2 certificate and a
-ninth-layer F1 certificate with an extra multiplier digit. **OPEN at this
-checkpoint:** ninth-layer F2 terminal margin, the nine eleventh-layer price
-families, the all-layer inequality, and universal Collatz.
+**PROVED relative to the independently checked certificates and inherited E10:**
+all nine eleventh-layer excursion-price families hold. For every finite positive
+valuation word w with its original integer clock A,
+
+    S11(w) <= (12207031/19531250) A,                     (E11)
+
+and this coefficient is sharp. If w has any non-one letter,
+
+    S11(w) <= (12207031/19531250) A-5878847/19531250.     (E11+)
+
+The independent E9 F2 certificate checks2,509,000,000 edges,630 entries,
+valid-domain closure and all positive-letter tails. **PROVED reduction:**
+the next layer is equivalent to seven native price families in section5.
+**OPEN:** those seven E12 families, the all-layer inequality, and universal
+Collatz. No independent human/subagent audit is claimed; the producer and
+certificate checker are separate algorithms, with a same-agent proof review.
 
 The closest proved mechanism is the
 [preceding paid first-return lift](../return_kernel_core_transplants_20261030/COLLATZ.md),
@@ -40,6 +51,8 @@ No source, block clock or tangent boundary is changed. QED.
 
 The margin2 is a sufficient target; failure of this particular certificate
 does not refute the nine necessary-and-sufficient native price conditions.
+The certificate in section5 now supplies eta>2, so this implication has been
+consumed, not left conditional.
 
 ## 2. A failed refinement, and why a richer observer is not enough
 
@@ -154,3 +167,89 @@ charges on21,844 words and the514-letter resonant hostile.
 all-layer bound and the additional source-specific convergence obligations
 remain separate; neither a finite certificate nor the prospective all-layer
 content inequality alone is called a proof of universal Collatz here.
+
+## 5. Audited E11 closure, positive slack, and seven next families
+
+The complete E9 F2 vector passes the independent checker with
+
+    valid states = 39,203,125,
+    excluded pending slots = 17,437,500,
+    finite edges = 2,509,000,000, entries = 630,
+    min V = -5419921740, max V = -488281240,
+    V(1,0) = -898826940, D = 390625000.
+
+Thus
+
+    eta = 44941347/19531250 = 2.3009969664,
+    beta = -max(V)/D = 2 lambda11,
+    gamma = eta-2 = 5878847/19531250 = 0.3009969664.
+
+The vector's453,125,000-byte SHA256 is
+`dda483a908a059526c385c70b6b1af80bee9c1acedfa4c7197f390a465a263a8`.
+See[epoch2_9_audit.json](epoch2_9_audit.json),
+[binary_receipts.json](binary_receipts.json) and
+[corruption_control.json](corruption_control.json). A corrupted E6 terminal
+value is rejected by an edge inequality. Assertions are not used for checks.
+
+The terminal lemma gives the uniform bound on all25 native tangent classes
+
+    g10(X) >= eta-1 = 25410097/19531250 > 1.             (C2)
+
+An empty class has infinite price and also satisfies(C2). Therefore all nine
+families from the previous packet hold; the paid boundary potential proves
+(E11) for arbitrary changes of native excursion controller. Its all-ones
+extremizer has clock19,531,250 and charge12,207,031, establishing sharpness.
+
+### The unfinished suffix also has to be paid
+
+For a word cut at actual returns modulo5^10, each complete non-one excursion
+has fee at least1+gamma. The boundary potential consumes at most1, leaving
+gamma. All-ones excursions pay their exact1/5 fees.
+
+The remaining suffix has no return modulo5^10, hence no tenth- or eleventh-
+layer charge: its S11 equals its S9. If it contains a non-one letter, the
+audited global bound max V=-2 lambda11 D leaves slack beta=2 lambda11.
+If it consists only of ones, its cost is nonnegative by the initial run bound.
+Consequently every word with a non-one has slack at least
+min(gamma,beta)=gamma, proving(E11+). This suffix argument uses the new
+certificate, rather than incorrectly recycling the weaker E10 global margin.
+The actual entering map is identity modulo5^10, so all lower-layer counts
+on these blocks agree with their native counts; the next tangent is retained
+by the boundary potential throughout.
+
+### The exact next target is seven families
+
+For a primitive11-excursion let
+delta11=lambda12*A-S11 and let g11(X) be its minimum over non-one words
+with next tangent X. Equation(E11+) gives g11(X)>=gamma+Delta*A>gamma,
+where Delta=lambda12-lambda11=1/(2*5^11)>0. The all-ones excursion still
+has price1/5 and increment v=(4,4).
+
+The exact kernel criterion inherited from the preceding packet reduces E12 to
+
+    sum_(i=1)^b g11(X_i) >= 1-a/5,
+    sum_i X_i = -a(4,4),
+
+for exactly these seven pairs:
+
+    b=1: a=0,1,2,3;
+    b=2: a=0,1;
+    b=3: a=0.                                         (C3)
+
+Indeed4gamma>1, 3gamma+1/5>1, 2gamma+2/5>1 and
+gamma+4/5>1. Every omitted mixed sequence is already paid; pure all-ones
+zero sums need at least five terms and cost at least1. Conversely each
+remaining family is part of the necessary native zero-sum criterion.
+These seven families remain **OPEN**. The finite boundary does not bound
+the lengths of the native words defining its edge prices.
+
+[lift_receipt.py](lift_receipt.py) separately checks all650 boundary-potential
+inequalities, the nine closed families, the new slack constants and sharp
+all-ones clock, and the seven-family reduction using exact fractions.
+
+The next efficient target is a terminal-conditioned refinement that raises
+the native11-excursion fee, rather than a larger unconditional clock margin.
+The observer-only negative control shows why a new digit must change the
+charge or exclude an actual extremal continuation. A three-layer epoch
+enclosure or a certified correction to the existing potential are candidates;
+neither has been proved feasible at the next precision here.

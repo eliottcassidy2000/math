@@ -86,6 +86,22 @@ most2r/W, recovering the older long-arc sufficient test.
 The implementation evaluates only the residue of the actual input. Computing
 every one of the Q entries could be wasteful; Q is not presumed small.
 
+### A complete finite certificate for an infinite attached-speed bank
+
+If a core interval has maximal positive width W, let B=ceil(2r/W). All v>=B
+are accepted, including equality. Therefore testing1<=v<B by(L1) gives the
+**entire** finite rejection set. This is a proved stopping condition, not an
+arbitrary search cutoff. Point-only safe sets require the residue test instead;
+their rejection set need not be finite.
+
+The checker applies this to each of the196 primitive triple cores through12
+at radius1/5. Every rejection set is empty. Thus for each core in this declared
+finite bank, **every** positive integer fourth speed is certified. The report
+stores each core and its individual tail threshold. This is an infinite-input
+extension of a finite core bank, not an unrestricted LRC(14) result or a new
+low-runner theorem. It demonstrates how exact compilation can support a
+proof-level coverage claim once the missing tail quantifier is supplied.
+
 ## Algorithm and complexity boundary
 
 Once the k complete core intervals are available, (L1) needs O(k) rational
@@ -111,6 +127,23 @@ The result is [phase_cover.json](phase_cover.json). A huge *specified* input is
 now inexpensive after core compilation; infinitely many *arbitrary* cores are
 still the missing quantifier. That distinction prevents an algorithmic speedup
 from being misreported as universal LRC coverage.
+
+### Thirteen-speed checks at the actual LRC(14) radius
+
+[lrc14_banks.py](lrc14_banks.py) applies the proved finite stopping condition
+to28 explicitly listed twelve-speed cores at r=1/14. These include the13
+twelve-element subsets of1..13, the prior26*(1,..,12) hostile, the first12
+primes, odd speeds, a Fibonacci-adjacent core, a dilated irregular core and
+ten deterministically seeded mixed cores. Each core's safe intervals and
+maximal width supply its own tail cutoff.
+
+All1,458 remaining finite input queries pass both the new compiler and a
+literal complete-comb intersection. Native witnesses are checked against
+every actual speed. Together with the analytic tail this proves coverage
+for **every positive thirteenth speed** attached to each of these28 cores.
+The complete universe and individual cutoffs are in[lrc14_banks.json](lrc14_banks.json).
+This is a finite bank of infinite one-parameter families. It neither exhausts
+arbitrary twelve-speed cores nor claims a new unrestricted runner threshold.
 
 ## Next questions with decisive tests
 

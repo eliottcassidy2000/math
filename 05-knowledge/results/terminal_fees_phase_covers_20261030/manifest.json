@@ -1,0 +1,118 @@
+{
+  "status": "exact source/receipt manifest; no hash alone certifies mathematics",
+  "E11": "PROVED with independent certificate checker",
+  "universal_collatz": "OPEN",
+  "arbitrary_input_LRC14": "OPEN",
+  "files": [
+    {
+      "path": "adaptive_probe.json",
+      "bytes": 1298,
+      "sha256": "9de42de77071ec6d66197b5bad9200a92aae9473c85c6e40f0fd5011632c44f7"
+    },
+    {
+      "path": "adaptive_probe.py",
+      "bytes": 2606,
+      "sha256": "6cab4468d5f21103e1cb0ceb474dd600335638afb41d08ce8e84de31b3cd4fd3"
+    },
+    {
+      "path": "audit_epoch2.cpp",
+      "bytes": 3946,
+      "sha256": "c60bdb9aa1ce53a7c05f4153774b874db56448f352a908a90024cc9f7cf88636"
+    },
+    {
+      "path": "audit_multiplier.cpp",
+      "bytes": 3720,
+      "sha256": "05c0e50595e5dc16666916d9ffcd5e7fa4790cf2cc96d56234e7952d7aba434f"
+    },
+    {
+      "path": "binary_receipts.json",
+      "bytes": 609,
+      "sha256": "3c2c4bb6cca8a4aee2a36a39747aa33714310d44ef44fc6f527f17f83b886977"
+    },
+    {
+      "path": "corruption_control.json",
+      "bytes": 107,
+      "sha256": "bd27f4bb5da34bbb98e5edae3e7c5845b398876569707eea88209a679cecd30e"
+    },
+    {
+      "path": "delay_credit.json",
+      "bytes": 183,
+      "sha256": "cf30567babf4c1478c02f46e491c205a5f8aacd04047d369f301b623ec64bc4f"
+    },
+    {
+      "path": "delay_credit.py",
+      "bytes": 1072,
+      "sha256": "95a1702d3372c12e3e64617e8315755776fbf20bb15fe7724fe2727d381ef2f5"
+    },
+    {
+      "path": "epoch2.cpp",
+      "bytes": 2229,
+      "sha256": "b68548bfd9f4cc2b7081dbf25de8566e3cb119f6b815bb8c5bf83006f19eb2fb"
+    },
+    {
+      "path": "epoch2_6_audit.json",
+      "bytes": 242,
+      "sha256": "953c33065d5d518e952ce5159141571a196094bb25a3221b99210b7a6c282251"
+    },
+    {
+      "path": "epoch2_9_audit.json",
+      "bytes": 255,
+      "sha256": "1dc49861e0be427c73d5c7c383e4d2c80b649751669e980d5480b57e1bcaeb17"
+    },
+    {
+      "path": "epoch_semantics.json",
+      "bytes": 1662,
+      "sha256": "bd2a7d46357f84912e9ed38bad6fb04bafd5180fabe931addbc1742278351c5a"
+    },
+    {
+      "path": "epoch_semantics.py",
+      "bytes": 3173,
+      "sha256": "d8ad2392ce9507692258c81b19dc63de2d4febc53bf573faffc6c518fd919f81"
+    },
+    {
+      "path": "lift_receipt.json",
+      "bytes": 970,
+      "sha256": "b4af055d6d6bc5e1cfccc1aa2acc801d27eac632c0e581f2c57a2958f0fcfc84"
+    },
+    {
+      "path": "lift_receipt.py",
+      "bytes": 1780,
+      "sha256": "6fb81e24cc73fcdd09097b984b476d86db827f1673b72dce4fac08ba4c2da6d7"
+    },
+    {
+      "path": "lrc14_banks.json",
+      "bytes": 8992,
+      "sha256": "aa6d810bc7a1c696660c795097a8fb77ecc3c8c8d3937205fa12cacbc512eee5"
+    },
+    {
+      "path": "lrc14_banks.py",
+      "bytes": 1701,
+      "sha256": "567082acc01e14be9123543750736fed928c34158d5c0bf3f16c1a63dbb51a25"
+    },
+    {
+      "path": "multiplier.cpp",
+      "bytes": 2259,
+      "sha256": "cea00b3248c9d446d2bc6a44543eed9d2563c238344c48bd83b6d6f505b9acb2"
+    },
+    {
+      "path": "multiplier9_audit.json",
+      "bytes": 255,
+      "sha256": "0fc947e3a814b83f8373a2c3f69e004fcce5619a243e0bbb2dca764ed929fc03"
+    },
+    {
+      "path": "phase_cover.json",
+      "bytes": 19428,
+      "sha256": "e15bbe0d2e08dfe20615b0b0226b079f8ba86f2d185de88581b37f9552cfc8dc"
+    },
+    {
+      "path": "phase_cover.py",
+      "bytes": 7135,
+      "sha256": "0f5f0c305e5501d922b2ff2882908b6aed111516476b6dbab1a908cbcfee499d"
+    },
+    {
+      "path": "tilted.cpp",
+      "bytes": 2462,
+      "sha256": "dac6a06450d0b118526ab0e413be223ba2b52fb8fa937a79faa69081f121f08d"
+    }
+  ]
+}

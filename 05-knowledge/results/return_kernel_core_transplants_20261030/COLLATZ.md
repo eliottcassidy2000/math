@@ -14,8 +14,11 @@ weaker-than-two-clock, but positive, extra margin also holds:
 families of short native excursion-price inequalities described below.
 **FINITE-EXACT:** complete non-one first-return prices at levels1–4, for all
 word lengths and all positive letters, via independently checked potentials
-and literal upper-bound witnesses. **OPEN:** those nine unbounded-word
-families at level10, the all-layer content bound and universal Collatz.
+and literal upper-bound witnesses. **SUPERSEDED frontier:** the nine
+unbounded-word families at level10 are now closed by the successor below.
+The all-layer content bound and universal Collatz remain **OPEN**.
+
+**Successor,2026-10-30:** [terminal fees with two-layer epoch clocks](../terminal_fees_phase_covers_20261030/COLLATZ.md) closes all nine E11 families by an independently checked F2 certificate. It proves the sharp E11 bound and positive non-one slack, then reduces E12 to seven open families. The OPEN E11 statements below describe this packet's former frontier and are superseded by that proof; its E10 theorem and exact-kernel criterion remain in force.
 
 No new certificate for Session113's *overcounting envelope* is claimed.
 This proof controls actual content through a different, source-preserving

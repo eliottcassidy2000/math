@@ -1,0 +1,22 @@
+[
+  {
+    "artifact": "math-multiplier9-2.bin",
+    "bytes": 390625000,
+    "sha256": "902424fa3f415bc8b031d403080d100386d515915eea99e4bfe6ee46d78c911c"
+  },
+  {
+    "artifact": "math-epoch2-6.bin",
+    "bytes": 3625000,
+    "sha256": "8d7d4d33351111982851be954529a89b10c941814754acfda4dc60d87ac5f116"
+  },
+  {
+    "artifact": "math-tiltedV9.bin",
+    "bytes": 78125000,
+    "sha256": "dade3b250ee56bbec532626f9581e1288f73cfb441b2b4c244644c1f66088833"
+  },
+  {
+    "artifact": "math-epoch2-9.bin",
+    "bytes": 453125000,
+    "sha256": "dda483a908a059526c385c70b6b1af80bee9c1acedfa4c7197f390a465a263a8"
+  }
+]
