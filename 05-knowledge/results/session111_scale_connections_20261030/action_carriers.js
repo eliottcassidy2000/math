@@ -21,4 +21,10 @@ const nontrivial=joint.filter(x=>x.size===5),kernels={};for(const x of nontrivia
 // A joint fixed signed assignment exists by orbit averaging over an odd group.
 let gauge=Array(24).fill(0);for(const m of maps)for(let i=0;i<24;i++)gauge[m[i][0]]^=m[i][1];
 for(const m of maps)for(let i=0;i<24;i++)need((gauge[i]^m[i][1])===gauge[m[i][0]],"simultaneous sign gauge");
-console.log(JSON.stringify({status:"PASS",group:"C5 x C5",bits:24,jointOrbits:joint,fixedHist,bankOrbits:(total/25n).toString(),factorization:"16 * ((2^10 + 4*2^2)/5)^2",signGauge:gauge,scope:"Actual signed normalizer subgroup action; graph classes are not counted."},null,2));
+function binrow(n){const a=[1n];for(let k=1;k<=n;k++)a.push(a[k-1]*BigInt(n-k+1)/BigInt(k));return a;}
+function polymul(a,b){const c=Array(a.length+b.length-1).fill(0n);for(let i=0;i<a.length;i++)for(let j=0;j<b.length;j++)c[i+j]+=a[i]*b[j];return c;}
+const B=binrow(10).map((x,k)=>(x+(k%5===0?4n*binrow(2)[k/5]:0n))/5n),F=polymul(binrow(4),polymul(B,B));
+let Q=[F.at(-1)];for(let k=F.length-2;k>=0;k--){const R=Array(Q.length+1).fill(0n);Q.forEach((x,j)=>{R[j]-=x;R[j+1]+=x;});R[0]+=F[k];Q=R;}
+const depths=[Q.findIndex(x=>x!==0n),Q.findIndex(x=>x%5n!==0n),Q.findIndex(x=>x%2n!==0n)];
+need(depths.join()==="8,16,24","weighted depths");need(F.reduce((a,b)=>a+b,0n)===692224n,"weighted sum");
+console.log(JSON.stringify({weightedPolynomial:F.map(String),depths_Q_5_2:depths,status:"PASS",group:"C5 x C5",bits:24,jointOrbits:joint,fixedHist,bankOrbits:(total/25n).toString(),factorization:"16 * ((2^10 + 4*2^2)/5)^2",signGauge:gauge,scope:"Actual signed normalizer subgroup action; graph classes are not counted."},null,2));
