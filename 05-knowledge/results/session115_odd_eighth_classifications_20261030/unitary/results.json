@@ -1,0 +1,65 @@
+{
+  "counts": {
+    "address_partition": 255,
+    "eighth_permutation": 1,
+    "first_defect": 504,
+    "full_product_table": 341,
+    "independent_decoder": 21845,
+    "large_first_failure": 8,
+    "last_good_depth": 8,
+    "nonreal_cosine": 504,
+    "odd_coset_pairing": 21845,
+    "real_iff": 21845,
+    "scalar_iff": 21845
+  },
+  "eighth_map": {
+    "1/8": "7/8",
+    "3/8": "1/8",
+    "5/8": "3/8",
+    "7/8": "5/8"
+  },
+  "status": "PASS",
+  "total_gates": 89001,
+  "universes": [
+    {
+      "depth": 1,
+      "modulus": 2,
+      "multiplier_pairs": 1
+    },
+    {
+      "depth": 2,
+      "modulus": 4,
+      "multiplier_pairs": 4
+    },
+    {
+      "depth": 3,
+      "modulus": 8,
+      "multiplier_pairs": 16
+    },
+    {
+      "depth": 4,
+      "modulus": 16,
+      "multiplier_pairs": 64
+    },
+    {
+      "depth": 5,
+      "modulus": 32,
+      "multiplier_pairs": 256
+    },
+    {
+      "depth": 6,
+      "modulus": 64,
+      "multiplier_pairs": 1024
+    },
+    {
+      "depth": 7,
+      "modulus": 128,
+      "multiplier_pairs": 4096
+    },
+    {
+      "depth": 8,
+      "modulus": 256,
+      "multiplier_pairs": 16384
+    }
+  ]
+}

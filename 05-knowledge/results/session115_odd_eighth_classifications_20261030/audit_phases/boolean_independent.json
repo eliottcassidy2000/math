@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "gates": 66103,
+  "normalized_classes": 16,
+  "profiles": {
+    "((0, 7), (8, 1))": 1,
+    "((-2, 3), (2, 4), (6, 1))": 7,
+    "((-4, 1), (0, 4), (4, 3))": 7,
+    "((-6, 1), (2, 7))": 1
+  },
+  "relative_GL_orbits": [
+    1,
+    1,
+    7,
+    7
+  ],
+  "exhaustive_boolean_rows": [
+    {
+      "dimension": 3,
+      "all_functions": 256,
+      "defects": 128,
+      "extremal_functions": 128
+    },
+    {
+      "dimension": 4,
+      "all_functions": 65536,
+      "defects": 512,
+      "extremal_functions": 512
+    }
+  ]
+}

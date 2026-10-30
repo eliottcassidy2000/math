@@ -1,0 +1,345 @@
+{
+  "status": "PASS",
+  "checks": 11796,
+  "normalized_tables": 16,
+  "all_zero_constant_gauges": 128,
+  "all_dimension3_boolean_functions": 256,
+  "odd_functions": 128,
+  "single_defect_functions": 128,
+  "GL3_order": 168,
+  "GL3_relative_gauge_orbit_sizes": [
+    1,
+    1,
+    7,
+    7
+  ],
+  "uniform_literal_controls": 320,
+  "walsh_profiles": {
+    "((0, 7), (8, 1))": 1,
+    "((-4, 1), (0, 4), (4, 3))": 7,
+    "((-2, 3), (2, 4), (6, 1))": 7,
+    "((-6, 1), (2, 7))": 1
+  },
+  "tables": [
+    {
+      "ABCD": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "kappa": 0,
+      "walsh": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "arithmetic_source": 3115
+    },
+    {
+      "ABCD": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "kappa": 0,
+      "walsh": [
+        4,
+        0,
+        4,
+        0,
+        4,
+        0,
+        -4,
+        0
+      ],
+      "arithmetic_source": 29
+    },
+    {
+      "ABCD": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "kappa": 1,
+      "walsh": [
+        6,
+        2,
+        2,
+        -2,
+        2,
+        -2,
+        -2,
+        2
+      ],
+      "arithmetic_source": 413
+    },
+    {
+      "ABCD": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "kappa": 1,
+      "walsh": [
+        6,
+        -2,
+        2,
+        2,
+        2,
+        2,
+        -2,
+        -2
+      ],
+      "arithmetic_source": 761395
+    },
+    {
+      "ABCD": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "kappa": 1,
+      "walsh": [
+        6,
+        2,
+        -2,
+        2,
+        2,
+        -2,
+        2,
+        -2
+      ],
+      "arithmetic_source": 178
+    },
+    {
+      "ABCD": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "kappa": 1,
+      "walsh": [
+        2,
+        2,
+        2,
+        2,
+        6,
+        -2,
+        -2,
+        -2
+      ],
+      "arithmetic_source": 2030
+    },
+    {
+      "ABCD": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "kappa": 0,
+      "walsh": [
+        4,
+        4,
+        0,
+        0,
+        4,
+        -4,
+        0,
+        0
+      ],
+      "arithmetic_source": 590
+    },
+    {
+      "ABCD": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "kappa": 0,
+      "walsh": [
+        4,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0,
+        -4
+      ],
+      "arithmetic_source": 2131906
+    },
+    {
+      "ABCD": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "kappa": 1,
+      "walsh": [
+        6,
+        2,
+        2,
+        -2,
+        -2,
+        2,
+        2,
+        -2
+      ],
+      "arithmetic_source": 95
+    },
+    {
+      "ABCD": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "kappa": 1,
+      "walsh": [
+        2,
+        2,
+        6,
+        -2,
+        2,
+        2,
+        -2,
+        -2
+      ],
+      "arithmetic_source": 343273
+    },
+    {
+      "ABCD": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "kappa": 0,
+      "walsh": [
+        4,
+        4,
+        4,
+        -4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "arithmetic_source": 99769
+    },
+    {
+      "ABCD": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "kappa": 0,
+      "walsh": [
+        4,
+        0,
+        4,
+        0,
+        0,
+        4,
+        0,
+        -4
+      ],
+      "arithmetic_source": 1137815
+    },
+    {
+      "ABCD": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "kappa": 0,
+      "walsh": [
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        4,
+        -4
+      ],
+      "arithmetic_source": 266
+    },
+    {
+      "ABCD": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "kappa": 0,
+      "walsh": [
+        0,
+        4,
+        4,
+        0,
+        4,
+        0,
+        0,
+        -4
+      ],
+      "arithmetic_source": 490390
+    },
+    {
+      "ABCD": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "kappa": 1,
+      "walsh": [
+        2,
+        6,
+        2,
+        -2,
+        2,
+        -2,
+        2,
+        -2
+      ],
+      "arithmetic_source": 6983830
+    },
+    {
+      "ABCD": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "kappa": 1,
+      "walsh": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        -6
+      ],
+      "arithmetic_source": 65018
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "gates": 44313,
+  "decoder": "literal shortcut valuation stopping clock",
+  "rows": [
+    {
+      "depth": 1,
+      "all_odd_residue_pairs": 1,
+      "multiplicative_pairs": 1,
+      "first_failure_pairs": 0
+    },
+    {
+      "depth": 2,
+      "all_odd_residue_pairs": 4,
+      "multiplicative_pairs": 4,
+      "first_failure_pairs": 0
+    },
+    {
+      "depth": 3,
+      "all_odd_residue_pairs": 16,
+      "multiplicative_pairs": 8,
+      "first_failure_pairs": 8
+    },
+    {
+      "depth": 4,
+      "all_odd_residue_pairs": 64,
+      "multiplicative_pairs": 16,
+      "first_failure_pairs": 16
+    },
+    {
+      "depth": 5,
+      "all_odd_residue_pairs": 256,
+      "multiplicative_pairs": 32,
+      "first_failure_pairs": 32
+    },
+    {
+      "depth": 6,
+      "all_odd_residue_pairs": 1024,
+      "multiplicative_pairs": 64,
+      "first_failure_pairs": 64
+    },
+    {
+      "depth": 7,
+      "all_odd_residue_pairs": 4096,
+      "multiplicative_pairs": 128,
+      "first_failure_pairs": 128
+    }
+  ],
+  "three_to_five_eighth_permutation": [
+    0,
+    7,
+    6,
+    1,
+    4,
+    3,
+    2,
+    5
+  ]
+}
