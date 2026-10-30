@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "gates": 35153,
+  "formula_universe": {
+    "n": 250,
+    "m": 120
+  },
+  "pair_universe": 100,
+  "fixed_alphabet_counts": [
+    {
+      "r": 0,
+      "functions": 2
+    },
+    {
+      "r": 1,
+      "functions": 4
+    },
+    {
+      "r": 2,
+      "functions": 10
+    },
+    {
+      "r": 3,
+      "functions": 18
+    },
+    {
+      "r": 4,
+      "functions": 34
+    }
+  ],
+  "witnesses": [
+    {
+      "p": 3,
+      "source": 8,
+      "successor": 7,
+      "kernel": 7
+    },
+    {
+      "p": 5,
+      "source": 32,
+      "successor": 31,
+      "kernel": 31
+    },
+    {
+      "p": 7,
+      "source": 128,
+      "successor": 127,
+      "kernel": 127
+    },
+    {
+      "p": 11,
+      "source": 2048,
+      "successor": 2047,
+      "kernel": 2047
+    },
+    {
+      "p": 13,
+      "source": 8192,
+      "successor": 8191,
+      "kernel": 8191
+    },
+    {
+      "p": 17,
+      "source": 131072,
+      "successor": 131071,
+      "kernel": 131071
+    },
+    {
+      "p": 19,
+      "source": 524288,
+      "successor": 524287,
+      "kernel": 524287
+    }
+  ]
+}
