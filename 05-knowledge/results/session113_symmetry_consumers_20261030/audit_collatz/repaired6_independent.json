@@ -1,0 +1,17 @@
+{
+  "E": 6,
+  "q": 15625,
+  "valid_states": 65625,
+  "excluded_pending_height_zero_states": 12500,
+  "edge_inequalities": 4200000,
+  "entry_inequalities": 126,
+  "letters_checked": 64,
+  "minimum_V": -1343640,
+  "maximum_V": -156240,
+  "minimum_edge_slack": 0,
+  "entry_tail_margin": 2984160,
+  "transition_tail_margin": 3140400,
+  "sha256": "a3a93b3a462a1e22a4d59def0d1cee6c527c460cc6ba2d73ac5e19015dac9a80",
+  "seconds": 0.1223905086517334,
+  "scope": "all finite positive words at this fixed E via repaired one-digit epoch envelope; not all E or convergence"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "producer receipt; independently verified by ../audit_collatz/repaired9_independent.json",
+  "E": 9,
+  "q": 1953125,
+  "states_valid": 8203125,
+  "states_serialized": 9765625,
+  "excluded_pending_height_zero": 1562500,
+  "minimum": -199232020,
+  "maximum": -19531240,
+  "pops": 72701823,
+  "cap": 64,
+  "bytes": 78125000,
+  "sha256": "83e016db40ab86a1ae8d7e6aef605a4710c0d1279f23f1741e11f617a187670f"
+}

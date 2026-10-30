@@ -66,3 +66,37 @@ The independent checker constructs d_e by successive5-adic lifting rather than t
 All are above actual content and below5A/8. A further24,800-case sweep checks every unit multiplier modulo125, h=0,...,3, r=1,2 and L=0,...,30, including inactive phases. All upper bounds pass.
 
 Reproduction: `python check_new_boundaries.py`. Exact receipts, first offsets and independent positive sources: `new_boundaries_independent.json`. This closes the requested audit; no universal feasibility claim is inferred from the repaired examples or sweep.
+
+## Third audit: repaired one-digit E9 certificate
+
+**Approved:** the repaired consumer now independently proves the sharp E9 bound
+
+    S_9(w) <= (488281/781250) A
+
+for every finite positive valuation word. This is a fixed-precision result, not all-E feasibility or convergence. It does not retract either counterexample to the older, different envelope.
+
+The valid state domain is all four ordinary u modes with z moduloq, and pending-u4 states only with z divisible by5:4q+q/5 states. After a non-one, u1 charges h immediately; u4 with positive h defers the first charge until the next one; nonsquares and height0 charge0. Pending-u4 followed by one charges h and clears the flag. Other active one-steps charge the exact level1 return plus the high-level geometric density. This reproduces the previously audited F_1 formula, including L=0 epochs and words ending before a pending first hit. Initial all-one runs end at u1 oru4,z0; giving either entry phase zero residual deficit is a safe overestimate since those runs were already bounded bylambda_E times their original clock. Each non-one resets epoch logic without changing the original source or clock.
+
+The independently derived array checker uses modular inverses from direct Python powers, obtains h by divisibility tests, and computes high-density weights as a sum of reciprocal periods, rather than the producer's closed formula. It checks the full valid domain and excluded sentinel slots, destinations and closure, every a=1,...,64 edge, both entry phases for every a=2,...,64, nonpositive maximum, and both infinite-letter tails. Closure for omitted non-one letters is also structural: a pending destination is created only if its new z is divisible by5. Gross non-one rewards never exceed E, so both tails apply to every omitted letter.
+
+All gates are explicit `if not ...: raise`, active under python -O. For the supported E≤9 and chunked signed64 arrays, q≤1,953,125 and transition products are below4q²; reward and clock terms are below10^9. Potential magnitudes are explicitly gated below2^50, leaving all additions/subtractions strictly inside signed64 range. Thus the array inequalities use exact integers, not floating point or overflow arithmetic.
+
+| precision | valid states | checked edges | minV | maxV |
+|---|---:|---:|---:|---:|
+|6|65,625|4,200,000|−1,343,640|−156,240|
+|9|8,203,125|525,000,000|−199,232,020|−19,531,240|
+
+At E9 the126 entry inequalities pass. All valid values are finite; the1,562,500 excluded pending-height0 slots have precisely the sentinel. Minimum edge slack is0. Entry-tail margin is294,908,280, transition-tail margin314,439,520. Vector SHA256:
+
+    83e016db40ab86a1ae8d7e6aef605a4710c0d1279f23f1741e11f617a187670f
+
+A separate standard-library scalar Fraction checker independently tested all41,664 valid edges at E1,E2,E3. A corrupted certificate was rejected under python -O. The earlier exact-word and refined-epoch semantic controls continue to support the mathematical bridge, independently of these array tests.
+
+Since maxV9=−2N9, the stronger sharp inequality `S_9<=lambda_9(A−2)` holds for every word containing a non-one. Equality follows from t=2*5^8 ones then a2. This corollary uses the new E9 certificate; it must not be attributed to the old E8 certificate whose maximum did not establish that gap.
+
+Reproduce:
+
+    python -O audit_repaired.py 9 /tmp/repairedV9.bin --output repaired9_independent.json
+    python -O check_repaired_scalar.py
+
+The receipt and scalar controls are `repaired9_independent.json` and `repaired_scalar_controls.json`. No E10 experiment was undertaken in this audit.

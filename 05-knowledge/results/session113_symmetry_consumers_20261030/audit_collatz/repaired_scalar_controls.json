@@ -1,0 +1,17 @@
+{
+  "scalar_checks": [
+    {
+      "E": 1,
+      "scalar_edges": 1344
+    },
+    {
+      "E": 2,
+      "scalar_edges": 6720
+    },
+    {
+      "E": 3,
+      "scalar_edges": 33600
+    }
+  ],
+  "corrupted_vector_rejected_under_optimization": true
+}
