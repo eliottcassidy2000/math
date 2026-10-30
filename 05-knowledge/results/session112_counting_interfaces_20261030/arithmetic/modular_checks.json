@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "kernel_pair_checks": 1487200,
+  "robust_checks": 10080,
+  "odd_cutoff_n_through": 100,
+  "burnside_square": {
+    "group_order": 8,
+    "points": 16,
+    "orbits": 6,
+    "numerator": 48
+  },
+  "scaled_hostile": {
+    "s": 100,
+    "moduli": [
+      25,
+      50,
+      100,
+      200
+    ],
+    "effective_modulus": 2
+  }
+}
