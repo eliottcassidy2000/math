@@ -1,0 +1,299 @@
+{
+  "status": "PASS",
+  "method": "Portable JavaScript replay in independent parent execution isolate",
+  "group21": {
+    "status": "PASS",
+    "method": "Direct arcs and smallest-module closure; no subgroup recurrence",
+    "cases": [
+      {
+        "group": "C21",
+        "labelledStates": 1024,
+        "prime": 992,
+        "composite": 32,
+        "properModuleSizes": {
+          "3": 16,
+          "7": 16
+        }
+      },
+      {
+        "group": "C7 semidirect C3",
+        "labelledStates": 1024,
+        "prime": 980,
+        "composite": 44,
+        "properModuleSizes": {
+          "3": 28,
+          "7": 16
+        }
+      }
+    ]
+  },
+  "normalizer625": {
+    "order": 5000,
+    "effectiveOrder": 200,
+    "fixedHistogram": {
+      "0": 175,
+      "256": 16,
+      "65536": 8,
+      "16777216": 1
+    },
+    "primeFixedHistogram": {
+      "0": 199,
+      "16646400": 1
+    },
+    "totalNormalizerClasses": 86528,
+    "primeFullAffineClasses": 83232,
+    "primeAffineAutOrder": 15625
+  },
+  "composite125": {
+    "status": "PASS",
+    "universe": "64 orientation triples on characteristic flag pR subset R[5] subset R",
+    "full_additive_group_order": 2000,
+    "normalizer_order": 200,
+    "composite_full_affine_classes": 4,
+    "composite_normalizer_classes": 8,
+    "composite_additive_stabilizer": 125,
+    "composite_affine_aut_order": 15625,
+    "full_affine_orbits": [
+      {
+        "representative": 0,
+        "size": 16,
+        "masks": [
+          0,
+          4,
+          8,
+          12,
+          17,
+          21,
+          25,
+          29,
+          34,
+          38,
+          42,
+          46,
+          51,
+          55,
+          59,
+          63
+        ]
+      },
+      {
+        "representative": 1,
+        "size": 16,
+        "masks": [
+          1,
+          5,
+          9,
+          13,
+          19,
+          23,
+          27,
+          31,
+          32,
+          36,
+          40,
+          44,
+          50,
+          54,
+          58,
+          62
+        ]
+      },
+      {
+        "representative": 2,
+        "size": 16,
+        "masks": [
+          2,
+          6,
+          10,
+          14,
+          16,
+          20,
+          24,
+          28,
+          35,
+          39,
+          43,
+          47,
+          49,
+          53,
+          57,
+          61
+        ]
+      },
+      {
+        "representative": 3,
+        "size": 16,
+        "masks": [
+          3,
+          7,
+          11,
+          15,
+          18,
+          22,
+          26,
+          30,
+          33,
+          37,
+          41,
+          45,
+          48,
+          52,
+          56,
+          60
+        ]
+      }
+    ],
+    "normalizer_orbits": [
+      {
+        "representative": 0,
+        "size": 8,
+        "masks": [
+          0,
+          12,
+          21,
+          25,
+          38,
+          42,
+          51,
+          63
+        ]
+      },
+      {
+        "representative": 1,
+        "size": 8,
+        "masks": [
+          1,
+          13,
+          23,
+          27,
+          36,
+          40,
+          50,
+          62
+        ]
+      },
+      {
+        "representative": 2,
+        "size": 8,
+        "masks": [
+          2,
+          14,
+          20,
+          24,
+          39,
+          43,
+          49,
+          61
+        ]
+      },
+      {
+        "representative": 3,
+        "size": 8,
+        "masks": [
+          3,
+          15,
+          22,
+          26,
+          37,
+          41,
+          48,
+          60
+        ]
+      },
+      {
+        "representative": 4,
+        "size": 8,
+        "masks": [
+          4,
+          8,
+          17,
+          29,
+          34,
+          46,
+          55,
+          59
+        ]
+      },
+      {
+        "representative": 5,
+        "size": 8,
+        "masks": [
+          5,
+          9,
+          19,
+          31,
+          32,
+          44,
+          54,
+          58
+        ]
+      },
+      {
+        "representative": 6,
+        "size": 8,
+        "masks": [
+          6,
+          10,
+          16,
+          28,
+          35,
+          47,
+          53,
+          57
+        ]
+      },
+      {
+        "representative": 7,
+        "size": 8,
+        "masks": [
+          7,
+          11,
+          18,
+          30,
+          33,
+          45,
+          52,
+          56
+        ]
+      }
+    ]
+  },
+  "graphs125": {
+    "primeGraphTypes": 408,
+    "totalGraphTypes": 409,
+    "primeAutOrder": 625,
+    "fullAdjacencyKeysCompared": 408,
+    "compositeNegativeControlRejected": true
+  },
+  "depth5": {
+    "status": "PASS",
+    "uniformizer_depth": 5,
+    "vertices": 3125,
+    "bank_bits": 74,
+    "extra_scalar": 26,
+    "extra_scalar_order": 5,
+    "all_scalar_fixed_states": "17179869184",
+    "prime_scalar_fixed_states": "17045913600",
+    "fixed_cut_intersections": [
+      "17179869184",
+      "67108864",
+      "262144",
+      "262144",
+      "262144",
+      "1024",
+      "1024",
+      "1024",
+      "67108864",
+      "262144",
+      "1024",
+      "1024",
+      "262144",
+      "1024",
+      "1024",
+      "1024"
+    ],
+    "prime_witness_mask_hex": "80000801000",
+    "prime_witness_cuts": [],
+    "meaning": "Extra odd normalizer elements can fix prime banks beyond depth4; do not extrapolate stabilizer H."
+  }
+}
