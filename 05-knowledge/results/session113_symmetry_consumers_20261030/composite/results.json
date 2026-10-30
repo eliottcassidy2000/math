@@ -1,0 +1,206 @@
+{
+  "banks": [
+    {
+      "common_dimension": 2,
+      "m": 3,
+      "native_dimension": 1,
+      "r": 3
+    },
+    {
+      "common_dimension": 3,
+      "m": 5,
+      "native_dimension": 2,
+      "r": 3
+    },
+    {
+      "common_dimension": 4,
+      "m": 7,
+      "native_dimension": 3,
+      "r": 3
+    },
+    {
+      "common_dimension": 3,
+      "m": 3,
+      "native_dimension": 2,
+      "r": 5
+    },
+    {
+      "common_dimension": 4,
+      "m": 5,
+      "native_dimension": 3,
+      "r": 5
+    },
+    {
+      "common_dimension": 5,
+      "m": 7,
+      "native_dimension": 4,
+      "r": 5
+    },
+    {
+      "common_dimension": 6,
+      "m": 7,
+      "native_dimension": 5,
+      "r": 7
+    },
+    {
+      "common_dimension": 5,
+      "m": 3,
+      "native_dimension": 4,
+      "r": 9
+    },
+    {
+      "common_dimension": 8,
+      "m": 9,
+      "native_dimension": 7,
+      "r": 9
+    }
+  ],
+  "checks": 102052,
+  "groups": [
+    {
+      "G_order": 27,
+      "W_order": 81,
+      "m": 3,
+      "r": 3,
+      "tuple_counts_W_G": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          29,
+          33
+        ],
+        [
+          189,
+          261
+        ],
+        [
+          1341,
+          2241
+        ]
+      ]
+    },
+    {
+      "G_order": 375,
+      "W_order": 375,
+      "m": 5,
+      "r": 3,
+      "tuple_counts_W_G": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          57,
+          57
+        ],
+        [
+          535,
+          535
+        ],
+        [
+          5625,
+          5625
+        ]
+      ]
+    },
+    {
+      "G_order": 1215,
+      "W_order": 1215,
+      "m": 3,
+      "r": 5,
+      "tuple_counts_W_G": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          57,
+          57
+        ],
+        [
+          519,
+          519
+        ],
+        [
+          5145,
+          5145
+        ],
+        [
+          54567,
+          54567
+        ],
+        [
+          611577,
+          611577
+        ]
+      ]
+    },
+    {
+      "G_order": 3125,
+      "W_order": 15625,
+      "m": 5,
+      "r": 5,
+      "tuple_counts_W_G": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          97,
+          97
+        ],
+        [
+          1209,
+          1209
+        ],
+        [
+          16849,
+          16945
+        ],
+        [
+          256425,
+          263625
+        ],
+        [
+          4194625,
+          4530625
+        ]
+      ]
+    }
+  ],
+  "status": "PASS"
+}
