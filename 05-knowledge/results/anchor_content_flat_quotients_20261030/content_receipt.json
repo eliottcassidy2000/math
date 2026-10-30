@@ -1,0 +1,539 @@
+{
+  "actual_sources": 5001,
+  "checks": 506587,
+  "debt_control_words": 5096,
+  "hostile": "constant words (2)^t and (1)^t have unbounded raw content at fixed reduced anchor",
+  "native_steps_per_source": 24,
+  "orders": [
+    {
+      "letters": [
+        1,
+        2,
+        3
+      ],
+      "orders": [
+        2,
+        4,
+        5
+      ],
+      "q": 5
+    },
+    {
+      "letters": [
+        1,
+        2,
+        3
+      ],
+      "orders": [
+        10,
+        4,
+        25
+      ],
+      "q": 25
+    },
+    {
+      "letters": [
+        1,
+        2,
+        3
+      ],
+      "orders": [
+        50,
+        20,
+        125
+      ],
+      "q": 125
+    },
+    {
+      "letters": [
+        1,
+        2,
+        3
+      ],
+      "orders": [
+        250,
+        100,
+        625
+      ],
+      "q": 625
+    }
+  ],
+  "phases": [
+    {
+      "modulus": 4,
+      "phase": 1,
+      "q": 5
+    },
+    {
+      "modulus": 20,
+      "phase": 17,
+      "q": 25
+    },
+    {
+      "modulus": 100,
+      "phase": 57,
+      "q": 125
+    },
+    {
+      "modulus": 500,
+      "phase": 357,
+      "q": 625
+    }
+  ],
+  "returns": [
+    {
+      "alphabet": [
+        1,
+        2
+      ],
+      "binary_clock": {
+        "cost": 2,
+        "states_settled_below_cost": 2,
+        "word": [
+          1,
+          1
+        ]
+      },
+      "odd_steps": {
+        "cost": 2,
+        "states_settled_below_cost": 3,
+        "word": [
+          1,
+          1
+        ]
+      },
+      "q": 5
+    },
+    {
+      "alphabet": [
+        1,
+        2,
+        3
+      ],
+      "binary_clock": {
+        "cost": 2,
+        "states_settled_below_cost": 2,
+        "word": [
+          1,
+          1
+        ]
+      },
+      "odd_steps": {
+        "cost": 2,
+        "states_settled_below_cost": 4,
+        "word": [
+          1,
+          1
+        ]
+      },
+      "q": 5
+    },
+    {
+      "alphabet": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "binary_clock": {
+        "cost": 2,
+        "states_settled_below_cost": 2,
+        "word": [
+          1,
+          1
+        ]
+      },
+      "odd_steps": {
+        "cost": 2,
+        "states_settled_below_cost": 5,
+        "word": [
+          1,
+          1
+        ]
+      },
+      "q": 5
+    },
+    {
+      "alphabet": [
+        1,
+        2
+      ],
+      "binary_clock": {
+        "cost": 8,
+        "states_settled_below_cost": 54,
+        "word": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "odd_steps": {
+        "cost": 4,
+        "states_settled_below_cost": 15,
+        "word": [
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "q": 25
+    },
+    {
+      "alphabet": [
+        1,
+        2,
+        3
+      ],
+      "binary_clock": {
+        "cost": 8,
+        "states_settled_below_cost": 91,
+        "word": [
+          1,
+          3,
+          1,
+          3
+        ]
+      },
+      "odd_steps": {
+        "cost": 4,
+        "states_settled_below_cost": 40,
+        "word": [
+          3,
+          1,
+          3,
+          1
+        ]
+      },
+      "q": 25
+    },
+    {
+      "alphabet": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "binary_clock": {
+        "cost": 8,
+        "states_settled_below_cost": 109,
+        "word": [
+          1,
+          3,
+          1,
+          3
+        ]
+      },
+      "odd_steps": {
+        "cost": 4,
+        "states_settled_below_cost": 77,
+        "word": [
+          3,
+          1,
+          3,
+          1
+        ]
+      },
+      "q": 25
+    },
+    {
+      "alphabet": [
+        1,
+        2
+      ],
+      "binary_clock": {
+        "cost": 26,
+        "states_settled_below_cost": 9130,
+        "word": [
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "odd_steps": {
+        "cost": 18,
+        "states_settled_below_cost": 6639,
+        "word": [
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "q": 125
+    },
+    {
+      "alphabet": [
+        1,
+        2,
+        3
+      ],
+      "binary_clock": {
+        "cost": 26,
+        "states_settled_below_cost": 11427,
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          3,
+          2,
+          3,
+          3
+        ]
+      },
+      "odd_steps": {
+        "cost": 18,
+        "states_settled_below_cost": 9347,
+        "word": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          3,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      "q": 125
+    },
+    {
+      "alphabet": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "binary_clock": {
+        "cost": 26,
+        "states_settled_below_cost": 11985,
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          4,
+          4
+        ]
+      },
+      "odd_steps": {
+        "cost": 18,
+        "states_settled_below_cost": 10383,
+        "word": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          3,
+          1,
+          1,
+          4,
+          2
+        ]
+      },
+      "q": 125
+    }
+  ],
+  "status": "FINITE-EXACT controls for the proved algebra; no universal Collatz bound",
+  "unrestricted_cost_certificates": [
+    {
+      "endpoint": 17,
+      "literal_lower_words": 0,
+      "lower_clock_candidates": [],
+      "minimum_binary_clock": 2,
+      "q": 5,
+      "source": 7,
+      "source_weight": [
+        1,
+        20
+      ],
+      "word": [
+        1,
+        1
+      ]
+    },
+    {
+      "endpoint": 47,
+      "literal_lower_words": 1,
+      "lower_clock_candidates": [
+        {
+          "binary_clock": 7,
+          "odd_steps": 1,
+          "words": 1
+        }
+      ],
+      "minimum_binary_clock": 8,
+      "q": 25,
+      "source": 147,
+      "source_weight": [
+        1,
+        5550
+      ],
+      "word": [
+        1,
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "endpoint": 250823285,
+      "literal_lower_words": 357,
+      "lower_clock_candidates": [
+        {
+          "binary_clock": 7,
+          "odd_steps": 1,
+          "words": 1
+        },
+        {
+          "binary_clock": 14,
+          "odd_steps": 2,
+          "words": 13
+        },
+        {
+          "binary_clock": 19,
+          "odd_steps": 17,
+          "words": 153
+        },
+        {
+          "binary_clock": 21,
+          "odd_steps": 3,
+          "words": 190
+        }
+      ],
+      "minimum_binary_clock": 26,
+      "q": 125,
+      "source": 43447535,
+      "source_weight": [
+        1,
+        471922117841592
+      ],
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        7
+      ]
+    },
+    {
+      "endpoint": 995085827,
+      "literal_lower_words": 0,
+      "lower_clock_candidates": [],
+      "minimum_binary_clock": 33,
+      "q": 625,
+      "source": 7354388327,
+      "source_weight": [
+        1,
+        13521756923432853060
+      ],
+      "word": [
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        11
+      ]
+    }
+  ],
+  "word_universe": "all positive valuation words in {1,2,3,4} of lengths 1..7"
+}

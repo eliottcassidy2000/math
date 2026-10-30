@@ -1,0 +1,6 @@
+[
+  {"E":1,"q":5,"states":20,"numerator":1,"denominator":2,"maximum":1,"checked_letters":6,"inequalities":120,"rounds":2,"equality_period":2},
+  {"E":2,"q":25,"states":500,"numerator":3,"denominator":5,"maximum":7,"checked_letters":8,"inequalities":4000,"rounds":7,"equality_period":10},
+  {"E":3,"q":125,"states":12500,"numerator":31,"denominator":50,"maximum":119,"checked_letters":10,"inequalities":125000,"rounds":26,"equality_period":50},
+  {"E":4,"q":625,"states":312500,"numerator":78,"denominator":125,"maximum":422,"checked_letters":12,"inequalities":3750000,"rounds":125,"equality_period":250}
+]

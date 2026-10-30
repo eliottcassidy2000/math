@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — the divide-by-four affine clock has an exceptional five-adic seed
+
+- **Source:** discovery candidate in `05-knowledge/results/anchor_content_flat_quotients_20261030/content_renewal.py`; not a previously canonized theorem.
+- **Minimal witness / first failed implication:** the proposed order `4*5^(e-1)` for `(3x+1)/4` modulo `5^e` fails already at e=2: its order is4, not20. The arithmetic seed `4^4-3^4=175` has five-adic valuation two, not one.
+- **Repair / strongest survivor:** the exact order is `4*5^max(e-2,0)`, proved by lifting the seed valuation and checked independently by direct affine iteration. The other constant-letter clocks in the packet retain their distinct hypotheses and fixed points.
+- **Missing coordinate / next question:** retain the initial valuation and the translation, not only the residual multiplier order. Test the shared-residue potential lift without assuming generic order growth.
+
 ## 2026-10-30 — Fourier truncation agreement is not an exact or all-depth cancellation certificate
 
 - **Sources:** THM-4519 / `theorems/THM-4519-frequency-one-coefficient-carries-the-renewal-series.md` and `05-knowledge/results/collatz_h1_20260929_frequency_one_jseries_remnant_ridges.md`.

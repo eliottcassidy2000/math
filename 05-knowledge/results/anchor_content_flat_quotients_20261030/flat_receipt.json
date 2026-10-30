@@ -1,0 +1,72 @@
+{
+  "gates": 5428,
+  "rows": [
+    {
+      "N": 3,
+      "all_classes": 2,
+      "composite_intersections": 6,
+      "prime_classes": 1
+    },
+    {
+      "N": 4,
+      "all_classes": 4,
+      "composite_intersections": 37,
+      "prime_classes": 0
+    },
+    {
+      "N": 5,
+      "depth": 0,
+      "flats": 6,
+      "flats_before_compact": 6,
+      "intersection_terms": 6,
+      "labelled": 24,
+      "ordinary": 1,
+      "prime_labelled": 24,
+      "prime_ordinary": 1
+    },
+    {
+      "N": 5,
+      "depth": 1,
+      "flats": 37,
+      "flats_before_compact": 160,
+      "intersection_terms": 37,
+      "labelled": 280,
+      "ordinary": 3,
+      "prime_labelled": 120,
+      "prime_ordinary": 1
+    },
+    {
+      "N": 5,
+      "depth": 2,
+      "flats": 148,
+      "flats_before_compact": 740,
+      "intersection_terms": 374,
+      "labelled": 784,
+      "ordinary": 8,
+      "prime_labelled": 264,
+      "prime_ordinary": 3
+    },
+    {
+      "N": 5,
+      "depth": 3,
+      "flats": 1,
+      "flats_before_compact": 2185,
+      "intersection_terms": 1,
+      "labelled": 1024,
+      "ordinary": 12,
+      "prime_labelled": 264,
+      "prime_ordinary": 3
+    },
+    {
+      "N": 5,
+      "normalizer_orbits_full_cube": 52,
+      "normalizer_order": 20,
+      "ordinary_orbits_full_cube": 12
+    },
+    {
+      "N": 5,
+      "one_named_port_classes": 48
+    }
+  ],
+  "status": "FINITE-EXACT, no timing or new scalar recurrence claim"
+}

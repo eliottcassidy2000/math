@@ -4,6 +4,8 @@
 credited / universal targets OPEN.** This packet continues independent
 Collatz endpoint bounds and complement-closed tournament compositions.
 
+**Continuation:** [changing-word content and unmarked family unions](../anchor_content_flat_quotients_20261030/README.md) gives a sharp first-four-five-adic-layer debt bound, an all-prime-by-prime logarithmic bound, and an exact affine-flat forgetting interface. Uniform endpoint control and a compact unrestricted grammar remain open.
+
 ## Results
 
 - [Collatz](COLLATZ.md): for each fixed expanding valuation word, its reduced

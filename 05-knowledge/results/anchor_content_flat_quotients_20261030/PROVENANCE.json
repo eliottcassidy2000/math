@@ -1,0 +1,77 @@
+{
+  "read_against_commit": "3bfd37ac3182436894ad820b4d58f9e9d1a420b7",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-3457-four-point-line-metric-turnpike-preorder-atlas.md",
+      "blob": "e8dee604c8638da562fba6628e34e54af5b1b673"
+    },
+    {
+      "path": "01-canon/theorems/THM-4178-q50-divisor-complete-anchor-triple-exchange.md",
+      "blob": "0852c247c0ce12591b9da3ca85fe699b0b659f75"
+    },
+    {
+      "path": "01-canon/theorems/THM-781-hamiltonian-path-inverse-metagraph-fibre.md",
+      "blob": "b90be2b48c1d02ac090d2118c80ff865d15168dc"
+    },
+    {
+      "path": "05-knowledge/results/collatz_local_prime_power_gates_20261020/LOCAL_CARRY_AND_PRIME_POWER_GATES.md",
+      "blob": "62db5a379515175d977f02313cc68599abbfc11b"
+    },
+    {
+      "path": "05-knowledge/results/endpoint_shadows_path_corrections_20261030/TOURNAMENTS.md",
+      "blob": "b74f3d3818c12a2760afd26ae37863d7a7beba26"
+    },
+    {
+      "path": "05-knowledge/results/endpoint_shadows_path_corrections_20261030/TWO_HUNDRED.md",
+      "blob": "1e0ec66a0b5b119f171b6837a14642417abc2a94"
+    },
+    {
+      "path": "05-knowledge/results/frobenius_lca_metagraph_20261028/THEORY.md",
+      "blob": "40f908e449b53ea1c04f8f2eb7791285ab16ae50"
+    },
+    {
+      "path": "05-knowledge/results/hamilton_path_relocation_connectivity_20261020/THEOREM.txt",
+      "blob": "8eea31ba0fd1b00475ab6bd405368a12c1d06caa"
+    },
+    {
+      "path": "05-knowledge/results/ramified_symmetry_spectral_20261030/README.md",
+      "blob": "c65840e01a4b4f970d404c6bd457d78f5dc1ee8b"
+    },
+    {
+      "path": "05-knowledge/results/session101_denominator_connections_20261029/continuations/CONTINUATION_STATE_AND_SYMMETRY.md",
+      "blob": "eb8e0cd6fbcbbfcb608c9ec0cbb402a15e9bb33c"
+    },
+    {
+      "path": "05-knowledge/results/session111_scale_connections_20261030/ARITHMETIC.md",
+      "blob": "20db4bff5b2597976099ba388ef5b3cdad4eb526"
+    },
+    {
+      "path": "05-knowledge/results/session111_scale_connections_20261030/BANK_RECURRENCE.md",
+      "blob": "f8223506fdd49703d14c549f0bb68e1965a031c5"
+    },
+    {
+      "path": "05-knowledge/results/session111_scale_connections_20261030/CANCELLATION.md",
+      "blob": "c7f74429f1379558a67b1e3fe16b283e2ef04222"
+    },
+    {
+      "path": "05-knowledge/results/session111_scale_connections_20261030/PISANO_GROUPS.md",
+      "blob": "23e794ea0766bfbdb3c6279cdaaf7a8b7204e2da"
+    },
+    {
+      "path": "05-knowledge/results/session111_scale_connections_20261030/PORT_INFORMATION.md",
+      "blob": "2f8a193d823f0f8e5fba1dd7eaef7d68a1fd3352"
+    },
+    {
+      "path": "05-knowledge/results/session111_scale_connections_20261030/README.md",
+      "blob": "c4f1630d1cf2784af07d80285fd8d2fa17a40734"
+    },
+    {
+      "path": "05-knowledge/results/session79_tournament_enumeration_20261027/ROOT_SWITCH.md",
+      "blob": "54206575a9af266c1d1d8729e459da6659d586bc"
+    },
+    {
+      "path": "05-knowledge/results/session87_four_vertices_enumeration_20261028/EXACT_GENERATION.md",
+      "blob": "b7fabc9dee72a4376d1fb81cf062a10f2b131b9f"
+    }
+  ]
+}
