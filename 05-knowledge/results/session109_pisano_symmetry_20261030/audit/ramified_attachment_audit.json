@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "implementation": "independent integral-coordinate permutation and ideal-image census",
+  "checks_use_assert": false,
+  "levels": [
+    {
+      "k": 1,
+      "points": 25,
+      "nonzero_orbits": 8,
+      "sign_bits": 4,
+      "shell_sizes": {
+        "1": 4,
+        "2": 20
+      },
+      "Q2_reverses_every_orbit_pair": true
+    },
+    {
+      "k": 2,
+      "points": 625,
+      "nonzero_orbits": 48,
+      "sign_bits": 24,
+      "shell_sizes": {
+        "1": 4,
+        "2": 20,
+        "3": 100,
+        "4": 500
+      },
+      "Q2_reverses_every_orbit_pair": true
+    },
+    {
+      "k": 3,
+      "points": 15625,
+      "nonzero_orbits": 248,
+      "sign_bits": 124,
+      "shell_sizes": {
+        "1": 4,
+        "2": 20,
+        "3": 100,
+        "4": 500,
+        "5": 2500,
+        "6": 12500
+      },
+      "Q2_reverses_every_orbit_pair": true
+    }
+  ],
+  "attachments": [
+    {
+      "lower_k": 1,
+      "upper_k": 2,
+      "orbits_above_each_nonzero_orbit": 5,
+      "kernel_antipodal_pairs": 4,
+      "fixed_downstairs_compatible_lifts": 16,
+      "relative_bits_discarded_by_coherence": 16,
+      "local_patterns": 32,
+      "coherent_local_patterns": 2,
+      "incoherent_counterexample": {
+        "downstairs_difference": [
+          0,
+          1
+        ],
+        "lifts": [
+          {
+            "difference": [
+              0,
+              1
+            ],
+            "sign": false
+          },
+          {
+            "difference": [
+              0,
+              6
+            ],
+            "sign": true
+          }
+        ]
+      }
+    },
+    {
+      "lower_k": 2,
+      "upper_k": 3,
+      "orbits_above_each_nonzero_orbit": 5,
+      "kernel_antipodal_pairs": 4,
+      "fixed_downstairs_compatible_lifts": 16,
+      "relative_bits_discarded_by_coherence": 96,
+      "local_patterns": 32,
+      "coherent_local_patterns": 2,
+      "incoherent_counterexample": {
+        "downstairs_difference": [
+          0,
+          1
+        ],
+        "lifts": [
+          {
+            "difference": [
+              0,
+              1
+            ],
+            "sign": false
+          },
+          {
+            "difference": [
+              0,
+              26
+            ],
+            "sign": true
+          }
+        ]
+      }
+    }
+  ]
+}
