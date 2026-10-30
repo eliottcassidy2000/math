@@ -1,0 +1,1 @@
+{"GL4_charts_per_case": 20160, "all_first_leaf_choices": 5716, "assignments": 330948, "chart_min_essential_inputs": [4, 2, 4, 3], "forests": 1819, "max_vertices": 6, "status": "PASS"}

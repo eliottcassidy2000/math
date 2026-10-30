@@ -1,0 +1,14 @@
+{
+  "source_commit": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+  "status": "PASS; same-agent proof review; two independent computational formulations; normal/-O byte-identical",
+  "files_sha256": {
+    "LRC.md": "25ccd70f83aec854bac26fe5ad8a01711bcb5d3932203cc2e6865afe59b0cd13",
+    "bank.normal.json": "7ba60e6366a7f54971dcbe9925127d0918120e0abda515eaa7de8a170f009e40",
+    "bank.optimized.json": "7ba60e6366a7f54971dcbe9925127d0918120e0abda515eaa7de8a170f009e40",
+    "check.normal.json": "83c000334e90cd6bfb12d31af5f2ecb8b815a750eca08016f6af78f7e02010e0",
+    "check.optimized.json": "83c000334e90cd6bfb12d31af5f2ecb8b815a750eca08016f6af78f7e02010e0",
+    "fibre_transfer.py": "8c7480afaa3883873b1cd7872bad5000b39d777b621bba0bea5c3672432ece4e",
+    "recheck_bank.py": "d803de4c1293c296a895118f968a98571cca075976b35763e772fad6a84bfe69",
+    "source_bank.json": "aa6d810bc7a1c696660c795097a8fb77ecc3c8c8d3937205fa12cacbc512eee5"
+  }
+}

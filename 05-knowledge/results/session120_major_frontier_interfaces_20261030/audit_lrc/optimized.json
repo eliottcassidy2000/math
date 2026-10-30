@@ -1,0 +1,517 @@
+{
+  "bank": [
+    {
+      "components": 16,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "derived_cutoff": 24
+    },
+    {
+      "components": 10,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
+      ],
+      "derived_cutoff": 35
+    },
+    {
+      "components": 14,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "derived_cutoff": 16
+    },
+    {
+      "components": 10,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 23
+    },
+    {
+      "components": 10,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 13
+    },
+    {
+      "components": 10,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 11
+    },
+    {
+      "components": 12,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 10
+    },
+    {
+      "components": 10,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 53
+    },
+    {
+      "components": 12,
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 20
+    },
+    {
+      "components": 10,
+      "core": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 20
+    },
+    {
+      "components": 8,
+      "core": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 12
+    },
+    {
+      "components": 8,
+      "core": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 10
+    },
+    {
+      "components": 6,
+      "core": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "derived_cutoff": 4
+    },
+    {
+      "components": 416,
+      "core": [
+        26,
+        52,
+        78,
+        104,
+        130,
+        156,
+        182,
+        208,
+        234,
+        260,
+        286,
+        312
+      ],
+      "derived_cutoff": 624
+    },
+    {
+      "components": 32,
+      "core": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37
+      ],
+      "derived_cutoff": 14
+    },
+    {
+      "components": 23,
+      "core": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "derived_cutoff": 4
+    },
+    {
+      "components": 78,
+      "core": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21,
+        34,
+        55,
+        89,
+        97,
+        101
+      ],
+      "derived_cutoff": 29
+    },
+    {
+      "components": 360,
+      "core": [
+        15,
+        30,
+        60,
+        75,
+        105,
+        135,
+        165,
+        180,
+        210,
+        240,
+        285,
+        345
+      ],
+      "derived_cutoff": 343
+    },
+    {
+      "components": 86,
+      "core": [
+        5,
+        16,
+        29,
+        34,
+        35,
+        37,
+        43,
+        44,
+        53,
+        67,
+        70,
+        72
+      ],
+      "derived_cutoff": 23
+    },
+    {
+      "components": 102,
+      "core": [
+        4,
+        11,
+        19,
+        21,
+        37,
+        45,
+        53,
+        54,
+        57,
+        70,
+        78,
+        79
+      ],
+      "derived_cutoff": 28
+    },
+    {
+      "components": 90,
+      "core": [
+        8,
+        12,
+        20,
+        24,
+        31,
+        39,
+        42,
+        44,
+        49,
+        51,
+        62,
+        64
+      ],
+      "derived_cutoff": 19
+    },
+    {
+      "components": 70,
+      "core": [
+        1,
+        10,
+        11,
+        13,
+        17,
+        24,
+        26,
+        34,
+        59,
+        62,
+        73,
+        80
+      ],
+      "derived_cutoff": 17
+    },
+    {
+      "components": 80,
+      "core": [
+        7,
+        10,
+        11,
+        12,
+        20,
+        31,
+        32,
+        51,
+        54,
+        62,
+        64,
+        77
+      ],
+      "derived_cutoff": 19
+    },
+    {
+      "components": 76,
+      "core": [
+        10,
+        13,
+        14,
+        27,
+        29,
+        33,
+        35,
+        41,
+        48,
+        56,
+        67,
+        75
+      ],
+      "derived_cutoff": 17
+    },
+    {
+      "components": 90,
+      "core": [
+        6,
+        11,
+        19,
+        26,
+        34,
+        35,
+        46,
+        48,
+        61,
+        67,
+        69,
+        76
+      ],
+      "derived_cutoff": 27
+    },
+    {
+      "components": 84,
+      "core": [
+        2,
+        6,
+        12,
+        20,
+        38,
+        41,
+        43,
+        47,
+        49,
+        55,
+        59,
+        73
+      ],
+      "derived_cutoff": 23
+    },
+    {
+      "components": 56,
+      "core": [
+        9,
+        11,
+        17,
+        23,
+        24,
+        25,
+        26,
+        38,
+        39,
+        49,
+        53,
+        73
+      ],
+      "derived_cutoff": 20
+    },
+    {
+      "components": 88,
+      "core": [
+        5,
+        16,
+        24,
+        31,
+        32,
+        34,
+        37,
+        38,
+        44,
+        47,
+        64,
+        66
+      ],
+      "derived_cutoff": 28
+    }
+  ],
+  "counts": {
+    "bank_finite_queries": 1458,
+    "grid_formula_and_native_witness": 12036,
+    "literal_comb_transfer": 9000,
+    "rejection_identity": 4836
+  },
+  "method": "independent standard-library Fraction literal closed combs; no producer imports",
+  "scope": "28 inherited core shapes and their dilations only; arbitrary-core LRC14 remains OPEN",
+  "status": "PASS"
+}

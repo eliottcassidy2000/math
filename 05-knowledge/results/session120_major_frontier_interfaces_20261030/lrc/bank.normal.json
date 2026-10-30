@@ -1,0 +1,512 @@
+{
+  "cores": [
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "finite_queries": 23,
+      "tail_cutoff": 24
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
+      ],
+      "finite_queries": 34,
+      "tail_cutoff": 35
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        13
+      ],
+      "finite_queries": 15,
+      "tail_cutoff": 16
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 22,
+      "tail_cutoff": 23
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 12,
+      "tail_cutoff": 13
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 10,
+      "tail_cutoff": 11
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 9,
+      "tail_cutoff": 10
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 52,
+      "tail_cutoff": 53
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 19,
+      "tail_cutoff": 20
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 19,
+      "tail_cutoff": 20
+    },
+    {
+      "core": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 11,
+      "tail_cutoff": 12
+    },
+    {
+      "core": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 9,
+      "tail_cutoff": 10
+    },
+    {
+      "core": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "finite_queries": 3,
+      "tail_cutoff": 4
+    },
+    {
+      "core": [
+        26,
+        52,
+        78,
+        104,
+        130,
+        156,
+        182,
+        208,
+        234,
+        260,
+        286,
+        312
+      ],
+      "finite_queries": 623,
+      "tail_cutoff": 624
+    },
+    {
+      "core": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37
+      ],
+      "finite_queries": 13,
+      "tail_cutoff": 14
+    },
+    {
+      "core": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23
+      ],
+      "finite_queries": 3,
+      "tail_cutoff": 4
+    },
+    {
+      "core": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21,
+        34,
+        55,
+        89,
+        97,
+        101
+      ],
+      "finite_queries": 28,
+      "tail_cutoff": 29
+    },
+    {
+      "core": [
+        15,
+        30,
+        60,
+        75,
+        105,
+        135,
+        165,
+        180,
+        210,
+        240,
+        285,
+        345
+      ],
+      "finite_queries": 342,
+      "tail_cutoff": 343
+    },
+    {
+      "core": [
+        5,
+        16,
+        29,
+        34,
+        35,
+        37,
+        43,
+        44,
+        53,
+        67,
+        70,
+        72
+      ],
+      "finite_queries": 22,
+      "tail_cutoff": 23
+    },
+    {
+      "core": [
+        4,
+        11,
+        19,
+        21,
+        37,
+        45,
+        53,
+        54,
+        57,
+        70,
+        78,
+        79
+      ],
+      "finite_queries": 27,
+      "tail_cutoff": 28
+    },
+    {
+      "core": [
+        8,
+        12,
+        20,
+        24,
+        31,
+        39,
+        42,
+        44,
+        49,
+        51,
+        62,
+        64
+      ],
+      "finite_queries": 18,
+      "tail_cutoff": 19
+    },
+    {
+      "core": [
+        1,
+        10,
+        11,
+        13,
+        17,
+        24,
+        26,
+        34,
+        59,
+        62,
+        73,
+        80
+      ],
+      "finite_queries": 16,
+      "tail_cutoff": 17
+    },
+    {
+      "core": [
+        7,
+        10,
+        11,
+        12,
+        20,
+        31,
+        32,
+        51,
+        54,
+        62,
+        64,
+        77
+      ],
+      "finite_queries": 18,
+      "tail_cutoff": 19
+    },
+    {
+      "core": [
+        10,
+        13,
+        14,
+        27,
+        29,
+        33,
+        35,
+        41,
+        48,
+        56,
+        67,
+        75
+      ],
+      "finite_queries": 16,
+      "tail_cutoff": 17
+    },
+    {
+      "core": [
+        6,
+        11,
+        19,
+        26,
+        34,
+        35,
+        46,
+        48,
+        61,
+        67,
+        69,
+        76
+      ],
+      "finite_queries": 26,
+      "tail_cutoff": 27
+    },
+    {
+      "core": [
+        2,
+        6,
+        12,
+        20,
+        38,
+        41,
+        43,
+        47,
+        49,
+        55,
+        59,
+        73
+      ],
+      "finite_queries": 22,
+      "tail_cutoff": 23
+    },
+    {
+      "core": [
+        9,
+        11,
+        17,
+        23,
+        24,
+        25,
+        26,
+        38,
+        39,
+        49,
+        53,
+        73
+      ],
+      "finite_queries": 19,
+      "tail_cutoff": 20
+    },
+    {
+      "core": [
+        5,
+        16,
+        24,
+        31,
+        32,
+        34,
+        37,
+        38,
+        44,
+        47,
+        64,
+        66
+      ],
+      "finite_queries": 27,
+      "tail_cutoff": 28
+    }
+  ],
+  "finite_queries": 1458,
+  "infinite_tail": "For v >= ceil(2r/W), a width-W interval crosses the safe phase arc.",
+  "scope": "28 inherited core shapes; all dilations follow analytically, no new primitive shapes.",
+  "status": "PASS"
+}

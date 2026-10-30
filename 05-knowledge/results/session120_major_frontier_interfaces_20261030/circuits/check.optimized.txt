@@ -1,0 +1,1 @@
+{"assignments": 330948, "cycle_control_assignments": 24, "forests": 1819, "max_vertices": 6, "star_forests": 217, "status": "PASS"}
