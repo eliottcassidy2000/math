@@ -1,0 +1,98 @@
+{
+  "artifacts": {
+    "AUDIT.md": "dd97d96857cb7bb59d1044b1a4bde8372c4c89d9e25dd27018a258266e198447",
+    "PROOFS.md": "518f299bb22deca3041259fb4fcebf01806bec117f0f313c7055f0b19acccfb5",
+    "README.md": "80ed53bb12d498b76556bcc13ca94bec7e9079ec4495f737f34d6176a3815d33",
+    "RECOVERY.md": "232d3d061bf2bbdd048dd15d39a145c3a545360271754a05ad1c0faebe71488a",
+    "check.py": "1274ac5ebe65768f92f57825af7a2193d02ee212f92a24f1395178fc4073f0de",
+    "explore.py": "a0076f3b3ae425c0ace16030b52f3c5bb12c1166c12a68d97ab7311207e8b9d9",
+    "receipt.json": "1d40f23c8284a8e13c3132bf4390483e8495d2d61e23d2dbd65aa3cb573f09a0",
+    "seal.py": "c3e936dd07f2bf5a9bb096c33c8f52c98c3f251e26dcd87d492e38c52d9b6ff0"
+  },
+  "live_runtime_inputs": [
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+  ],
+  "source_pins": [
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "bfdb81fb4f80f4108cf9bd2dbf23ea917ba66d50b19e85e870bc355d24f884a5",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/norms/NORM_SIGNS.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "23780f1687038e05fdc6ab4484d9a137537bf533e4780733fcfd239a3cc94752",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/norms/NORM_DEFECT.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939",
+      "path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "9d7281a888a3c89f24c5a7dcb452d89aa236f19957abbc14b44451c641743dc5",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/quadratic/ODD_EIGHTH_PHASES.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "4854aedbaff1bcdc35c0db4e62a2f3204ee07cd42bcd691ba554dff5e1b5482b",
+      "path": "05-knowledge/results/prime_dilation_response_20261030/PROOFS.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "6fc2450098d5aae886bc777e39965f1027464617cdcaac73d5186ad14be7face",
+      "path": "05-knowledge/results/cd_tower_verify_s20dn.out"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "a4f3b57dc0388c59dbc8ee10a4c8f7055eae61ad8b350a2bf940029c130fc6a0",
+      "path": "05-knowledge/results/lrc_sixteen_sedenion_proof_search_s390.out"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "206a0c4dacef16b1712c503314a45e1f67349d995c311e779dad6e56e8698fa6",
+      "path": "01-canon/theorems/THM-869-milgram-corona-sedenion.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "983bcc10359d23ee7a5df7220417160f1bdc3e1716202f9d340192ecf0bf5f39",
+      "path": "07-reflections/cd-tower-architecture.md"
+    },
+    {
+      "commit": "f128982d824452a919602687554ffea9ef33155c",
+      "lf_sha256": "ec039f8ee55fa59ed4d1ef3af6ab33d1fa7e9d1f0c7edcf3c7c1d700431662fb",
+      "path": "07-reflections/two-towers-cayley-dickson-and-hyperoperation-meet-at-apex7-but-the-octonion-structure-is-only-numerical.md"
+    },
+    {
+      "commit": "dcf45496b490e10e68baeb7c01623218a30d1a54",
+      "lf_sha256": "898c1eb29eb1a48c914cc596e4b919c7cccc19a133784e446f5eec058ef5efc9",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/collatz/GENERAL_RESET.md"
+    },
+    {
+      "commit": "dcf45496b490e10e68baeb7c01623218a30d1a54",
+      "lf_sha256": "3921277afd929de0e0dbc2f2bd4975a02d66c1da947361ac36134b02ddb512d6",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/SYNTHESIS.md"
+    },
+    {
+      "commit": "effbfd26fd34566e494df1474a5541e552ed148c",
+      "lf_sha256": "3a4bf408b62dec8801d92271de3bd664df757bf70a557e1e8e5d5b2be8ed760a",
+      "path": "05-knowledge/results/odd_eighth_owner_families_20261030/README.md"
+    },
+    {
+      "commit": "effbfd26fd34566e494df1474a5541e552ed148c",
+      "lf_sha256": "b2a5db97036e5b5c7f344bd24034c2e0e5af834d0f951bc6f91f481bff5e32fd",
+      "path": "05-knowledge/results/entry_cosets_resonant_echoes_20261030/README.md"
+    },
+    {
+      "commit": "effbfd26fd34566e494df1474a5541e552ed148c",
+      "lf_sha256": "1399b9948e38d870830b888fa99f70780d9008747deb84033e9d236e6d41bfec",
+      "path": "01-canon/theorems/THM-724-single-killer-covering-min-rigidity.md"
+    }
+  ],
+  "status": "Integrity only; same-agent proof review"
+}

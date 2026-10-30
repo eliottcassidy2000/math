@@ -82,7 +82,7 @@ The research on non-associative octonion networks (2025 survey) confirms: "parti
 
 But sedenions are PATHOLOGICAL (zero divisors). The architectural challenge is: how do you use the sedenion structure's parameter efficiency while AVOIDING the zero divisors?
 
-**Architectural improvement, CD-informed:** Design the layer's head composition to be sedenion-valued but CONSTRAINED to avoid zero divisors. The set of invertible sedenions forms an open subset of S. Constraining the sedenion parameters to this subset preserves the 16x parameter savings while avoiding rank collapse.
+**Correction (2026-10-30; supersedes the original inverse-based proposal):** A nonzero standard real sedenion has a two-sided element inverse even when its left-multiplication matrix is singular. Requiring an element inverse therefore does NOT exclude zero divisors. The valid local constraint is nonsingularity of the actual multiplication operator (and an appropriate lower singular-value bound for stable cancellation). In the repo's convention, x=e_1+e_10 has x conjugate(x)=2 but x(e_4-e_15)=0. See [C1/C4 and the exact witness](../05-knowledge/results/cayley_dickson_integral_20261030/PROOFS.md). This supplies no general neural-network rank-collapse or optimality guarantee; the architecture correspondence remains a proposal.
 
 This is analogous to how we constrain weight matrices to avoid vanishing gradients (via careful initialization, normalization, etc.) — but here the constraint comes from the algebraic structure of the sedenion division failure.
 
@@ -90,9 +90,9 @@ This is analogous to how we constrain weight matrices to avoid vanishing gradien
 
 **Transformer:** The residual stream connecting consecutive layers.
 
-At this level, all nice algebraic properties are gone. The structure is "just" a vector space with no natural multiplication. This is where the CD tower terminates in the transformer: the inter-layer coupling has no hypercomplex structure to exploit.
+**Correction (2026-10-30):** The Cayley--Dickson multiplication continues at dimension32 and every higher doubling. Bilinearity, the identity, conjugation and a positive quadratic norm survive; general norm composition and alternativity do not. It is false that the object becomes a vector space with no multiplication. The [all-size integral block and transfer laws C1--C8](../05-knowledge/results/cayley_dickson_integral_20261030/PROOFS.md) give explicit surviving structure.
 
-**Architectural insight:** This explains why LAYER-LEVEL innovations (residual connections, LayerNorm, learning rate scheduling) are more "engineering" than "algebraic" — the mathematics runs out at the layer boundary. Within a layer, the CD tower provides structure (quaternion for heads, octonion for head pairs, sedenion for the full layer). Between layers, you're on your own.
+The historical proposed correspondence between doubling levels and neural-network layers does not establish an architectural boundary or explain empirical performance. No map from ordinary head composition to Cayley--Dickson multiplication has been established in this note.
 
 ---
 

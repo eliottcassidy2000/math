@@ -12,6 +12,13 @@ a historical synthesis or promoting computational evidence.
 - **Strongest survivor / repair:** a certified whole-core horizon eta gives `M>=v min(eta,mu/(v+s))`; the unconditional global-Lipschitz version uses `s=max(core)`. Several tails additionally require epsilon<=1/(2 vmax). The interval-core and shallow-witness arguments survive; prime-13 tightness and the generic residual remain open/conditional, not proved.
 - **Missing coordinate / next question:** retain the first owner change and the joint arrival set. The successor `entry_cosets_resonant_echoes_20261030/LRC.md` gives an exact joint-arrival reduction and all-length recursive resonant spectra. Its verifier uses two independent exact algorithms. No minimal-counterexample claim is made.
 
+## 2026-10-30 — a Cayley--Dickson element inverse is not a cancellation certificate
+
+- **Source:** `07-reflections/cd-tower-architecture.md`, levels4--5. The historical proposal treated existence of an inverse as excluding sedenion zero divisors, then said dimension32 has no natural multiplication.
+- **Witness / first failed implication:** in the repo's doubling convention, x=e_1+e_10 satisfies x conjugate(x)=conjugate(x)x=2, yet x(e_4-e_15)=0. Multiplication by the element inverse cannot be reassociated into an inverse linear operator. This is a dimension16 witness, not a claim of a globally minimal support theorem beyond the stated basis.
+- **Repair / strongest survivor:** constrain the actual left-multiplication operator to be nonsingular when left cancellation is needed. Bilinear multiplication, identity, conjugation and the positive quadratic norm continue at every doubling. General norm composition and alternativity fail at16. Neither fact establishes a neural-network optimality or rank-collapse theorem.
+- **Missing coordinate / next question:** retain the multiplication operator and its integral blocks, not only x conjugate(x). `05-knowledge/results/cayley_dickson_integral_20261030/PROOFS.md`, C1--C9, supplies exact cancellation, prime-power guards and joint-sign realizability, with a portable normal/optimized checker. The historical paragraphs carry local corrections and the analogy's remaining scope.
+
 ## 2026-10-30 — leader-ledger parity needs the primitive core
 
 - **Source:** THM-722 / `theorems/THM-722-leader-ledger-conservation-law.md` and `04-computation/lrc14_leader_ledger_boxeph_S21.py`.
