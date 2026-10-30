@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "bank": [
+    2,
+    5,
+    7,
+    19,
+    29,
+    59,
+    89
+  ],
+  "columns": [
+    2,
+    3,
+    1,
+    4,
+    7,
+    6,
+    5
+  ],
+  "Hamming_weights": {
+    "0": 1,
+    "3": 7,
+    "4": 7,
+    "7": 1
+  },
+  "simplex_weights": {
+    "0": 1,
+    "4": 7
+  },
+  "zero_extended_kernel_weights": {
+    "0": 1,
+    "1": 1,
+    "3": 7,
+    "4": 14,
+    "5": 7,
+    "7": 1,
+    "8": 1
+  },
+  "zero_extended_image_weights": {
+    "0": 1,
+    "4": 7
+  },
+  "GL3_order": 168,
+  "pointed19_stabilizer": 24,
+  "pointed19_pairs": [
+    [
+      2,
+      59
+    ],
+    [
+      5,
+      29
+    ],
+    [
+      7,
+      89
+    ]
+  ],
+  "Fano_lines": 7,
+  "Fano_flags": 21,
+  "RM_weights": {
+    "0": 1,
+    "4": 14,
+    "8": 1
+  },
+  "AGL3_order": 1344,
+  "permutation_searches": [
+    5040,
+    40320
+  ],
+  "checks_use_assert": false,
+  "arithmetic_selections": 256,
+  "affine_syndrome_checks": 344064,
+  "parity_completion_weights": {
+    "0": 1,
+    "4": 14,
+    "8": 1
+  },
+  "joint_parity_sigma_fibers": 16
+}

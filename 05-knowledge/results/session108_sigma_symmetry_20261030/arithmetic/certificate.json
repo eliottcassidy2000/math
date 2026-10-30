@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "explicit_checks": 38447,
+  "prime_power_scan": {
+    "prime_bound": 200,
+    "exponent_bound": 16,
+    "square_hits": [
+      [
+        3,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        11
+      ],
+      [
+        7,
+        3,
+        20
+      ]
+    ]
+  },
+  "requested_cube": [
+    {
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "n": 1,
+      "sigma": 1,
+      "class": []
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "n": 19,
+      "sigma": 20,
+      "class": [
+        5
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "n": 5,
+      "sigma": 6,
+      "class": [
+        2,
+        3
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "n": 95,
+      "sigma": 120,
+      "class": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0,
+        0
+      ],
+      "n": 3,
+      "sigma": 4,
+      "class": []
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "n": 57,
+      "sigma": 80,
+      "class": [
+        5
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "n": 15,
+      "sigma": 24,
+      "class": [
+        2,
+        3
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "n": 285,
+      "sigma": 480,
+      "class": [
+        2,
+        3,
+        5
+      ]
+    }
+  ],
+  "six_state_group_order": 12,
+  "classification_scope": "Infinite statement uses cited square-case theorem; scan is finite only."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "independent": true,
+  "parity_completion_checks": 344064,
+  "joint_fibers": 16,
+  "code_groups": [
+    168,
+    168,
+    1344
+  ],
+  "point_stabilizer": 24,
+  "fano_lines": 7,
+  "flags": 21,
+  "prime_power_scan": [
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      7,
+      3
+    ]
+  ],
+  "classification_basis": "Bennett-Levin 2015 Proposition 1 plus exponent-one elementary argument"
+}
