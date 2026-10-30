@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Test a phase-aware, height-discounted sufficient debt budget."""
+"""Bounded controls for the phase budget, refuted universally by the successor packet."""
 from collections import deque
 from fractions import Fraction
 from pathlib import Path
@@ -67,5 +67,5 @@ if __name__=='__main__':
         if debt>paid:raise RuntimeError('phase-aware dark family control')
         dark.append(dict(r=r,debt=debt,budget=str(paid)))
     report=dict(exact_words=total,max_clock=18,dark_controls=dark,finite_searches=[finite_search(E) for E in (1,2,3)],
-                status='FINITE-EXACT evidence for an OPEN sufficient budget; not universal coverage')
+                status='FINITE-EXACT bounded controls; universal budget REFUTED in phase_budget_shared_orbits_20261030; no universal coverage')
     text=json.dumps(report,indent=2,sort_keys=True)+'\n';a.output.write_text(text);print(text,end='')

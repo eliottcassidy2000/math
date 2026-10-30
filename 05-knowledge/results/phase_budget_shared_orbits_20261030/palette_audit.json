@@ -1,0 +1,11 @@
+{
+  "status": "FINITE-EXACT independent controls for elementary classification",
+  "options": 90,
+  "blocker_types": 45,
+  "search_nodes": 124,
+  "tight_covers": 9,
+  "row_covers": 3,
+  "star_covers": 6,
+  "independent_binary_graphs": 32768,
+  "hostile": "15 independent blockers obstruct the pair method but admit a proper extension"
+}

@@ -1,0 +1,35 @@
+{
+  "status": "exact symbolic controls; elementary all-parameter proof in GEOMETRY_JC.md",
+  "torus_cases": 140,
+  "cyclic_cases": 1897,
+  "examples": [
+    {
+      "w": 1,
+      "r": 2,
+      "s": 2,
+      "projection": "2*x*y**2 + y",
+      "determinant": "4*x*y + 1"
+    },
+    {
+      "w": 1,
+      "r": 2,
+      "s": 3,
+      "projection": "y",
+      "determinant": "1"
+    },
+    {
+      "w": 1,
+      "r": 2,
+      "s": 5,
+      "projection": "10*x**3*y**4 + y",
+      "determinant": "40*x**3*y**3 + 1"
+    },
+    {
+      "w": 2,
+      "r": 2,
+      "s": 3,
+      "projection": "3*x**2*y**2 + y",
+      "determinant": "6*x**2*y + 1"
+    }
+  ]
+}

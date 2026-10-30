@@ -5,7 +5,9 @@ lrc14_leader_ledger_boxeph_S21.py  —  THE LEADER LEDGER (THM-722 verifier)
 boxeph-2026-07-12-S21.  Pure Python (fractions.Fraction), exact everywhere.
 
 THE OBJECT.  For a speed set S = {v_1 < ... < v_n} of distinct positive integers,
-not all odd (so M(S) < 1/2), define on the time circle R/Z:
+with at least one even speed AFTER dividing by gcd(S) (equivalently M(S)<1/2),
+define on the time circle R/Z. Corrected 2026-10-30: {2,6} invalidates the
+earlier unnormalized parity guard; its leader wraps at height1/2.
 
     p_i(t) = signed phase of v_i t  in (-1/2, 1/2]
     f(t)   = min_i |p_i(t)|                      (distance-to-loneliness)
@@ -68,8 +70,9 @@ def leader_ledger(speeds, verbose=False):
     n = len(speeds)
     assert len(set(speeds)) == n, "speeds must be distinct"
     assert all(v > 0 for v in speeds)
-    assert any(v % 2 == 0 for v in speeds), \
-        "all-odd family: M = 1/2 via t = 1/2, ledger wraps; excluded"
+    common = reduce(gcd, speeds)
+    if not any((v // common) % 2 == 0 for v in speeds):
+        raise ValueError("all-odd primitive core: M=1/2 via t=1/(2*gcd), leader wraps; excluded")
 
     # 1. events: all sum- and difference-ruler points in [0,1)
     evset = set()

@@ -31,10 +31,11 @@ The main completed results are:
 
 [COLLATZ.md](COLLATZ.md) contains the proofs, the bounded correction profile
 through five layers, the untruncated defect-epoch decomposition, and the
-source-preserving marked-controller theorem. A refined budget (now **REFUTED** by [Session 113](../session113_symmetry_consumers_20261030/collatz/THEORY.md#6-exact-boundary-the-epoch-budget-fails-already-at-layer9)) keeps
-the multiplier's quadratic phase and discounts unused clock by the defect
-height. It passes every positive word of binary clock at most18, while
-remaining logically stronger than the desired content estimate.
+source-preserving marked-controller theorem. A refined **REFUTED** budget kept
+the multiplier's quadratic phase and discounted unused clock by the defect
+height. It passes every positive word of binary clock at most18, but fails
+on U 1^231 U, U=(3,1,3,1^6,3,1,3). The actual content estimate survives.
+See [the correction and first-arrival repair](../phase_budget_shared_orbits_20261030/COLLATZ.md) and concurrent [Session113 sharp repaired E9 certificate](../session113_symmetry_consumers_20261030/uniform_content/REPAIRED_CERTIFICATE.md).
 
 [INTERSECTIONS.md](INTERSECTIONS.md) proves the all-prime chart theorem,
 the all-size composite obstruction, and the exact owner-multiplicity formula.

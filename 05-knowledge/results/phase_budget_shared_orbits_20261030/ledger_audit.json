@@ -1,0 +1,97 @@
+{
+  "status": "regression of corrected assumption, not new LRC coverage",
+  "accepted": [
+    {
+      "speeds": [
+        1,
+        2
+      ],
+      "M": "1/3",
+      "Hplus": 2
+    },
+    {
+      "speeds": [
+        2,
+        4
+      ],
+      "M": "1/3",
+      "Hplus": 4
+    },
+    {
+      "speeds": [
+        2,
+        3
+      ],
+      "M": "2/5",
+      "Hplus": 4
+    },
+    {
+      "speeds": [
+        4,
+        6
+      ],
+      "M": "2/5",
+      "Hplus": 8
+    },
+    {
+      "speeds": [
+        2,
+        4,
+        6
+      ],
+      "M": "1/4",
+      "Hplus": 8
+    },
+    {
+      "speeds": [
+        3,
+        6,
+        9
+      ],
+      "M": "1/4",
+      "Hplus": 12
+    },
+    {
+      "speeds": [
+        4,
+        8,
+        12
+      ],
+      "M": "1/4",
+      "Hplus": 16
+    },
+    {
+      "speeds": [
+        2,
+        5,
+        8
+      ],
+      "M": "2/5",
+      "Hplus": 12
+    }
+  ],
+  "rejected": [
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      6,
+      10
+    ]
+  ],
+  "sigma722": 1143,
+  "aliquot722": 421
+}

@@ -8,8 +8,16 @@ related: [THM-668, THM-373, THM-381, HYP-6240, HYP-6250, HYP-6280, LEM-025, MIST
 
 # THM-722 — The Leader-Ledger Conservation Law
 
-**Setting.** Let S = {v_1 < … < v_n} be distinct positive integers, **not all odd** (so
-M(S) < 1/2; every covering family qualifies since it has an even element). On the time
+**Correction, 2026-10-30:** the original phrase “not all odd” required gcd
+normalization. The unnormalized set {2,6} has M=1/2 and a leader self-wrap,
+which the stated handoff ledger omits. The assumption and verifier are repaired;
+the primitive covering-family applications are unchanged. See
+`05-knowledge/results/phase_budget_shared_orbits_20261030/RECOVERY.md`.
+
+**Setting.** Let S = {v_1 < … < v_n} be distinct positive integers, and put
+g=gcd(S). Assume **some v_i/g is even**, equivalently M(S)<1/2. For a primitive
+set this is exactly “not all odd”; every primitive covering family qualifies.
+On the time
 circle R/Z define
 
 - the **signed phase** p_i(t) = v_i t − round(v_i t) ∈ (−1/2, 1/2],
@@ -67,7 +75,8 @@ a change of argmin at t₀ forces a tie |p_i(t₀)| = |p_j(t₀)| between the ol
 leader, i.e. p_i = p_j (so (v_j − v_i)t₀ ∈ Z) or p_i = −p_j (so (v_i + v_j)t₀ ∈ Z). At a
 multi-way tie all tied phases have the same modulus x, hence lie in {+x, −x}, and the
 old→new transition is still of one of the two types. The leader's own phase never wraps:
-|φ| = f ≤ M < 1/2 (this is where "not all odd" is used: an all-odd family has f(1/2) = 1/2).
+|φ| = f ≤ M < 1/2 (this is where the normalized parity condition is used:
+if every v_i/g is odd, then f(1/(2g))=1/2).
 So on a maximal interval of constant leader, φ = p_λ is linear with slope v_λ, and the
 only possible discontinuities of φ are at leader changes with p_old = −p_new ≠ 0.
 

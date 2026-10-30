@@ -195,18 +195,25 @@ retains unused time in low-height runs, discounted by their actual height.
 It is nonnegative before the comparison with J: each kappa is paid by its
 own non-one letter. Every dark-height word w_r above has J=0 and is accepted.
 
-**REFUTED hypothesis (Session 113, 2026-10-30):** J<=B for every positive word.
-The [exact clock-271 counterexample](../session113_symmetry_consumers_20261030/collatz/THEORY.md#6-exact-boundary-the-epoch-budget-fails-already-at-layer9) has J-B=769/5000>0 and actual content 154<5A/8. A second independently audited word and a retained-first-return refinement are in the [new packet](../session113_symmetry_consumers_20261030/uniform_content/THEORY.md). The valid fifth-layer certificates and all-word envelope (14) are unchanged; the actual-content conjecture remains open.
-
-Historically, this hypothesis would imply(5),
-but it is a sufficient target, not an established equivalence. Exact tests
+**REFUTED (2026-10-30):** the hypothesis J<=B for every positive word fails.
+Let U=(3,1,3,1^6,3,1,3) and w=U 1^231 U. Then A=271,
+J=18 and B=89231/5000, so J-B=769/5000>0. Its actual content charge
+is154<1355/8. Thus neither(14) nor the underlying content target(5) is
+refuted. The final height-nine epoch has multiplier4 modulo5 and no
+following ones: none of its nine possible return levels is actually visited.
+The exact word and first-arrival ledger are in
+[the successor packet](../phase_budget_shared_orbits_20261030/COLLATZ.md).
+Concurrent [Session113](../session113_symmetry_consumers_20261030/collatz/THEORY.md#6-exact-boundary-the-epoch-budget-fails-already-at-layer9)
+independently audits this boundary, gives a second resonant-doubling hostile,
+and supplies a [sharp repaired E9 certificate](../session113_symmetry_consumers_20261030/uniform_content/REPAIRED_CERTIFICATE.md).
+This was a sufficient target, not an established equivalence. Earlier exact tests
 accept all262143 nonempty words of binary clock at most18. A distinct search
 finds no positive debt path in the finite truncated-height graphs E=1,2,3
 with letters1,...,12. Those graphs do not certify the untruncated budget.
 Their states, precision and receipt are in [epoch_budget.json](epoch_budget.json).
-The phase gate and discounted clock are proved refinements even if this
-universal hypothesis later fails. Retain and test the first failed word
-rather than weakening the original content target to fit the budget.
+The phase gate, discounted clock and inequality(14) remain proved refinements.
+The finite checks remain valid in their declared universes; they did not
+control higher levels. Retain the failed word as a regression test.
 
 ## 4. A fixed-controller theorem at every prime, with the entry retained
 

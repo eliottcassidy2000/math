@@ -4,6 +4,21 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — leader-ledger parity needs the primitive core
+
+- **Source:** THM-722 / `theorems/THM-722-leader-ledger-conservation-law.md` and `04-computation/lrc14_leader_ledger_boxeph_S21.py`.
+- **Witness / first failed implication:** “not all speeds odd” does not imply M(S)<1/2: S={2,6} has f(1/4)=1/2. The leader can wrap without changing identity, so the stated sum-handoff ledger omits a jump. The original verifier admits this input, then fails `M mismatch: handoff-max 1/4 vs event-max 1/2`.
+- **Repair / survivor:** assume some v/gcd(S) is even, equivalently M(S)<1/2. The existing no-wrap proof and primitive covering-family applications then apply unchanged. The executable guard uses this normalized condition and remains effective under Python -O.
+- **Missing coordinate / extension:** retained gcd and self-wrap events. An unrestricted ledger must add every actual phase-wrap jump; ordinary pairwise leadership changes alone do not suffice. The successor packet records the elementary equivalence and regression controls.
+
+## 2026-10-30 — quadratic phase alone overpays possible Collatz returns
+
+- **Source / status:** the OPEN sufficient budget J<=B in `05-knowledge/results/layer_lifts_cyclic_intersections_20261030/COLLATZ.md`, section3. This is a refuted research hypothesis, not a retraction of the proved epoch inequality.
+- **Exact witness:** U=(3,1,3,1^6,3,1,3), w=U 1^231 U. Its clock is271, J=18, B=89231/5000, and J-B=769/5000>0. No global minimality is claimed. The actual content charge is154<1355/8.
+- **First failed implication:** membership of the multiplier in the quadratic subgroup allows future returns but does not place them inside the current epoch. The final height-nine epoch has multiplier4 modulo5 and no following ones; all nine startup charges are unrealized.
+- **Strongest survivor / repair:** retain the exact first-arrival offset at every active level. The earlier inequality and all clock<=18 tests survive. The full family U 1^L U has actual content height at most5, by the entry-preserving controller divisors; the already proved sharp five-layer bound therefore controls it for every L.
+- **Reproduction / new question:** `05-knowledge/results/phase_budget_shared_orbits_20261030/collatz_audit.py` independently compares integer gcd charges with lifted return addresses. Does a paid first-arrival estimate admit a uniform all-layer potential? This remains OPEN.
+
 ## 2026-10-30 — sharp layer bounds were called equivalent to their weaker limit
 
 - **Source:** `05-knowledge/results/anchor_content_flat_quotients_20261030/COLLATZ.md`, section5, the phrase “or equivalently”.

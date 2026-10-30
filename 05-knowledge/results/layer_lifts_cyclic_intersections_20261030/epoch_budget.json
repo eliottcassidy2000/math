@@ -57,5 +57,5 @@
     }
   ],
   "max_clock": 18,
-  "status": "FINITE-EXACT evidence for an OPEN sufficient budget; not universal coverage"
+  "status": "FINITE-EXACT bounded controls; universal budget REFUTED in phase_budget_shared_orbits_20261030; no universal coverage"
 }

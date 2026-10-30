@@ -1,0 +1,219 @@
+{
+  "status": "REFUTED old universal budget; PROVED arrival identity and bounded-controller reduction",
+  "witness": {
+    "length": 255,
+    "clock": 271,
+    "charge": 154,
+    "old_deficit": "769/5000",
+    "arrival_deficit": "-60951/5000",
+    "epochs": [
+      {
+        "a": 3,
+        "h": 0,
+        "k": 0,
+        "active": true,
+        "L": 1,
+        "offsets": [],
+        "direct": 0,
+        "startup": "0"
+      },
+      {
+        "a": 3,
+        "h": 2,
+        "k": 0,
+        "active": true,
+        "L": 6,
+        "offsets": [
+          1,
+          1
+        ],
+        "direct": 4,
+        "startup": "7/5"
+      },
+      {
+        "a": 3,
+        "h": 0,
+        "k": 0,
+        "active": true,
+        "L": 1,
+        "offsets": [],
+        "direct": 0,
+        "startup": "0"
+      },
+      {
+        "a": 3,
+        "h": 5,
+        "k": 0,
+        "active": true,
+        "L": 231,
+        "offsets": [
+          0,
+          6,
+          6,
+          106,
+          1106
+        ],
+        "direct": 145,
+        "startup": "357/125"
+      },
+      {
+        "a": 3,
+        "h": 0,
+        "k": 0,
+        "active": true,
+        "L": 1,
+        "offsets": [],
+        "direct": 0,
+        "startup": "0"
+      },
+      {
+        "a": 3,
+        "h": 2,
+        "k": 0,
+        "active": true,
+        "L": 6,
+        "offsets": [
+          0,
+          6
+        ],
+        "direct": 5,
+        "startup": "7/5"
+      },
+      {
+        "a": 3,
+        "h": 0,
+        "k": 0,
+        "active": true,
+        "L": 1,
+        "offsets": [],
+        "direct": 0,
+        "startup": "0"
+      },
+      {
+        "a": 3,
+        "h": 9,
+        "k": 0,
+        "active": true,
+        "L": 0,
+        "offsets": [
+          1,
+          1,
+          31,
+          231,
+          731,
+          1981,
+          26981,
+          89481,
+          245731
+        ],
+        "direct": 0,
+        "startup": "0"
+      }
+    ]
+  },
+  "runs": [
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      231
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      6
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "controller_phase_bounds": [
+    5,
+    0,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    0,
+    5
+  ],
+  "composition_controls": 32767,
+  "arrival_rejections_in_controls": 0,
+  "family_controls": [
+    {
+      "L": 0,
+      "charge": 9,
+      "old_deficit": "-19/5",
+      "arrival_deficit": "-139/10"
+    },
+    {
+      "L": 1,
+      "charge": 10,
+      "old_deficit": "-9001/5000",
+      "arrival_deficit": "-70001/5000"
+    },
+    {
+      "L": 231,
+      "charge": 154,
+      "old_deficit": "769/5000",
+      "arrival_deficit": "-60951/5000"
+    },
+    {
+      "L": 1249,
+      "charge": 789,
+      "old_deficit": "-15249/5000",
+      "arrival_deficit": "-63393/5000"
+    }
+  ]
+}

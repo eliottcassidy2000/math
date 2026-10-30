@@ -82,8 +82,9 @@ cmp observer.json /tmp/observer-O.json
 - The refined epoch-budget hypothesis is tested on all262,143 nonempty
   positive words with clock<=18. The separate finite searches truncate
   height at E=1,2,3 and allow letters<=12; their precision is part of the
-  result. This is evidence for an OPEN sufficient target, not an unbounded
-  certificate. Explicit runtime guards raise errors rather than certify
+  result. These bounded checks survive, but the universal sufficient target
+  is REFUTED by U 1^231 U in the successor `phase_budget_shared_orbits_20261030`
+  packet. They were not an unbounded certificate. Explicit runtime guards raise errors rather than certify
   interrupted searches.
 - Observer controls: full reachability by letters1,2 and actual positive
   inverse words on20,500,12500 states, plus all400 state pairs modulo5.
