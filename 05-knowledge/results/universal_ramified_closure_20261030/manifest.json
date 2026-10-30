@@ -1,0 +1,54 @@
+{
+  "artifacts": {
+    "AUDIT.md": "cf25044263fe6abf4fcc015486b0c48a0f9748e35ae9836d78ab88905c7a653b",
+    "PROOFS.md": "29edcfe5b95667858adc5f6073b0fbb66fc8033395192acd47a73bede38e9304",
+    "README.md": "5ce0ddc66c3dd344ad6438fcad3abc2bd79d4dc7f862213a2a4a93256a87146f",
+    "check.py": "0da8df8b66630ce830c0d7f9bcaa8905b081d04f1f92d90872e4ddedf139aa3f",
+    "receipt.json": "b8241b36d29746b4eef567da2b185b0f2a153800699279d52101522e0666c4d7",
+    "seal.py": "99c5f614a8e410b56cdab1d8512864793efd31cebfbc42fa33f34dc970d4d4a2"
+  },
+  "primary_literature": {
+    "sections_read": [
+      "1",
+      "3.2"
+    ],
+    "url": "https://arxiv.org/abs/math/0608469",
+    "version": "v1"
+  },
+  "runtime_inputs_checked": [
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+  ],
+  "sources": [
+    {
+      "commit": "5a6d7be9b8b1e7939bb6a016f93b0fb07620ed13",
+      "lf_sha256": "70dd8192501a260ebc75b26459b21cb314803a492269cc824d820ccd120e1ca4",
+      "path": "05-knowledge/results/ramified_symmetry_spectral_20261030/PROOFS.md"
+    },
+    {
+      "commit": "5a6d7be9b8b1e7939bb6a016f93b0fb07620ed13",
+      "lf_sha256": "6103a13ef612560878679cd92178d193da6570959492eb5d75e70b992c95831e",
+      "path": "05-knowledge/results/ramified_symmetry_spectral_20261030/parent_group.json"
+    },
+    {
+      "commit": "5a6d7be9b8b1e7939bb6a016f93b0fb07620ed13",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "3bfd37ac3182436894ad820b4d58f9e9d1a420b7",
+      "lf_sha256": "0292efaef9f0c930b1712f3939fb1ca2cc1f34f9d08c733314076c6d26842f12",
+      "path": "05-knowledge/results/session111_scale_connections_20261030/PORT_INFORMATION.md"
+    },
+    {
+      "commit": "3bfd37ac3182436894ad820b4d58f9e9d1a420b7",
+      "lf_sha256": "a452b48e00c1b736d1e9e159c4e0c21fdd4419943bf540ccb5a076cd43303cda",
+      "path": "05-knowledge/results/session111_scale_connections_20261030/ACTION_CARRIERS.md"
+    },
+    {
+      "commit": "3bfd37ac3182436894ad820b4d58f9e9d1a420b7",
+      "lf_sha256": "03eefd9ff9a823fe37545fd5e465987e70c5c52482d205aef903ade90ccf84f1",
+      "path": "05-knowledge/results/session111_scale_connections_20261030/BANK_RECURRENCE.md"
+    }
+  ],
+  "status": "Integrity, not independent mathematical review"
+}
