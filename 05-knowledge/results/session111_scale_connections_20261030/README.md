@@ -2,6 +2,13 @@
 
 30 October2026. This packet recovers older square/doubling, Berggren, aliquot, Pisano and tournament work, then derives new action-level recurrences. Equal numbers are treated as prompts to find maps, not evidence of an isomorphism.
 
+## One action explains all four numbers
+
+The same 5000-element normalizer has signed kernel 25 and image 200. Forgetting orientation signs enlarges its kernel to 100 and reduces its image to 50:
+5000=25·200=100·50.
+
+The forgotten information is exactly two bits: global orientation reversal and reversal on odd-valuation layers. Two named probes restore them. This is an explicit quotient diagram, not numerology. See [SIGN_QUOTIENT](SIGN_QUOTIENT.md).
+
 ## Main advance: an all-depth symmetry recurrence
 
 The useful new object is the actual action on the ramified tournament bank's orientation coordinates. At the first nontrivial level it splits into independent quotient actions; later levels retain a shared residue.
@@ -80,7 +87,7 @@ These are explicit mathematical carriers, not a proposed identification of all u
 
 ## Verification and limitations
 
-Eight dependency-free JavaScript checks were fetched from immutable published commits and replayed successfully. [RESULTS.json](RESULTS.json) records blob hashes, complete outputs and scopes. Run each .js file separately with a runtime supporting BigInt.
+Nine dependency-free JavaScript checks were fetched from immutable published commits and replayed successfully. [RESULTS.json](RESULTS.json) records blob hashes, complete outputs and scopes. Run each .js file separately with a runtime supporting BigInt.
 
 Independent proof review covered the generalized cancellation law and the common-residue recurrence; independent finite implementations checked the seed and ramified action. The parent replay also checks the complete343 fibre by both a sieve and direct divisor-pair sums.
 
