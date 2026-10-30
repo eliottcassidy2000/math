@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "superseding_per_j_caps": [
+    0,
+    0,
+    1,
+    1,
+    2,
+    2,
+    3
+  ],
+  "core_price_bound": "66415986/48828125",
+  "tier_increment": "6/25",
+  "family_tiers": [
+    {
+      "a12": 0,
+      "b11": 1,
+      "max_internal_K_for_unpaid_candidate": 2,
+      "next_tier_excess": "3915986/48828125"
+    },
+    {
+      "a12": 1,
+      "b11": 1,
+      "max_internal_K_for_unpaid_candidate": 1,
+      "next_tier_excess": "1962861/48828125"
+    },
+    {
+      "a12": 2,
+      "b11": 1,
+      "max_internal_K_for_unpaid_candidate": 0,
+      "next_tier_excess": "9736/48828125"
+    },
+    {
+      "a12": 3,
+      "b11": 1,
+      "max_internal_K_for_unpaid_candidate": 0,
+      "next_tier_excess": "9775361/48828125"
+    },
+    {
+      "a12": 0,
+      "b11": 2,
+      "max_internal_K_for_unpaid_candidate": 1,
+      "next_tier_excess": "9785097/48828125"
+    },
+    {
+      "a12": 1,
+      "b11": 2,
+      "max_internal_K_for_unpaid_candidate": 0,
+      "next_tier_excess": "7831972/48828125"
+    }
+  ],
+  "additional_families_closed": 0
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "two_heavy_margin_over_9_over_8": "37265151/78125000",
+  "native_cut_semantics": "proved in AUDIT.md under inherited assumptions",
+  "bounds": [
+    {
+      "j": 3,
+      "maximum_allones_10_blocks": 0
+    },
+    {
+      "j": 4,
+      "maximum_allones_10_blocks": 0
+    },
+    {
+      "j": 5,
+      "maximum_allones_10_blocks": 1
+    },
+    {
+      "j": 6,
+      "maximum_allones_10_blocks": 2
+    },
+    {
+      "j": 7,
+      "maximum_allones_10_blocks": 2
+    },
+    {
+      "j": 8,
+      "maximum_allones_10_blocks": 3
+    },
+    {
+      "j": 9,
+      "maximum_allones_10_blocks": 4
+    }
+  ],
+  "additional_E12_families_closed": 0
+}

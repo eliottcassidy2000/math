@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "native10_nonone_fee": "25410097/19531250",
+  "candidate_grammar": [
+    {
+      "j11": 3,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 0,
+      "possible_j10_core": [
+        11
+      ]
+    },
+    {
+      "j11": 4,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 0,
+      "possible_j10_core": [
+        12
+      ]
+    },
+    {
+      "j11": 5,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 1,
+      "possible_j10_core": [
+        13,
+        11
+      ]
+    },
+    {
+      "j11": 6,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 1,
+      "possible_j10_core": [
+        14,
+        12
+      ]
+    },
+    {
+      "j11": 7,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 2,
+      "possible_j10_core": [
+        15,
+        13,
+        11
+      ]
+    },
+    {
+      "j11": 8,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 2,
+      "possible_j10_core": [
+        16,
+        14,
+        12
+      ]
+    },
+    {
+      "j11": 9,
+      "nonone10_blocks": 1,
+      "max_allone10_blocks": 3,
+      "possible_j10_core": [
+        17,
+        15,
+        13,
+        11
+      ]
+    }
+  ],
+  "family_internal_allone_caps": [
+    {
+      "a12": 0,
+      "b11": 1,
+      "max_internal_allone10_blocks_total": 2
+    },
+    {
+      "a12": 1,
+      "b11": 1,
+      "max_internal_allone10_blocks_total": 1
+    },
+    {
+      "a12": 2,
+      "b11": 1,
+      "max_internal_allone10_blocks_total": 0
+    },
+    {
+      "a12": 3,
+      "b11": 1,
+      "max_internal_allone10_blocks_total": 0
+    },
+    {
+      "a12": 0,
+      "b11": 2,
+      "max_internal_allone10_blocks_total": 1
+    },
+    {
+      "a12": 1,
+      "b11": 2,
+      "max_internal_allone10_blocks_total": 0
+    }
+  ],
+  "fee_per_internal_allone10": "6/25",
+  "allones10_clock": 3906250,
+  "allones10_two_digit_tangent_mod25": [
+    4,
+    4
+  ],
+  "modular_composition_checks": 3125,
+  "E12": "OPEN",
+  "universal_Collatz": "OPEN"
+}

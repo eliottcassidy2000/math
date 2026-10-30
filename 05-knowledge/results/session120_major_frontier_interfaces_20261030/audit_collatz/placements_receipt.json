@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "allones_two_digit_pair": [
+    4,
+    4
+  ],
+  "all_pair_placement_checks": 9375,
+  "admissible_pair_placement_checks": 375,
+  "native_internal_prefix_semantics": "proved in AUDIT.md",
+  "actual_core_existence_claimed": false
+}

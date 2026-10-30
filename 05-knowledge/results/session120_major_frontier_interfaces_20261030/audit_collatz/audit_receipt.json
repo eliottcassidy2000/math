@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "conditional_dependency": "pinned E11+ and native return-kernel criterion",
+  "D": 78125000,
+  "gamma": "5878847/19531250",
+  "coarse_fee": "17587861/48828125",
+  "sharp_scalar_fee": "17587861/48828125",
+  "scalar_pair_only": {
+    "A": 5781487,
+    "S11": 3613429,
+    "native_word_attainment_claimed": false
+  },
+  "three_fee_excess": "3935458/48828125",
+  "regression_j_count": 10000,
+  "remaining_families_b_a": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "E12": "OPEN",
+  "universal_Collatz": "OPEN"
+}

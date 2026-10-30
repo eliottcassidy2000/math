@@ -1,0 +1,413 @@
+{
+  "status": "PASS",
+  "inherited_gamma": "5878847/19531250",
+  "uniform_nonone_fee": "17587861/48828125",
+  "arithmetic_envelope_equality_only": {
+    "clock": 5781487,
+    "integer_score": 3613429,
+    "actual_word_known": false
+  },
+  "closed_family": {
+    "a": 0,
+    "b": 3,
+    "excess_payment": "3935458/48828125"
+  },
+  "remaining_family_count": 6,
+  "remaining_defect_partition_count": 21,
+  "families": [
+    {
+      "a": 0,
+      "b": 1,
+      "defect_partitions": [
+        {
+          "j_multiset": [
+            3
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-244140625",
+          "sum_nonone_clocks_upper": 5781487
+        },
+        {
+          "j_multiset": [
+            4
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 4,
+              "clock_residue_mod8": 4,
+              "first_clock": 4,
+              "last_clock": 15547108
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-195312500",
+          "sum_nonone_clocks_upper": 15547108
+        },
+        {
+          "j_multiset": [
+            5
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 5,
+              "clock_residue_mod8": 1,
+              "first_clock": 9,
+              "last_clock": 25312737
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-146484375",
+          "sum_nonone_clocks_upper": 25312737
+        },
+        {
+          "j_multiset": [
+            6
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 6,
+              "clock_residue_mod8": 6,
+              "first_clock": 6,
+              "last_clock": 35078358
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-97656250",
+          "sum_nonone_clocks_upper": 35078358
+        },
+        {
+          "j_multiset": [
+            7
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 7,
+              "clock_residue_mod8": 3,
+              "first_clock": 3,
+              "last_clock": 44843987
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-48828125",
+          "sum_nonone_clocks_upper": 44843987
+        },
+        {
+          "j_multiset": [
+            8
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 8,
+              "clock_residue_mod8": 0,
+              "first_clock": 8,
+              "last_clock": 54609608
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "0",
+          "sum_nonone_clocks_upper": 54609608
+        },
+        {
+          "j_multiset": [
+            9
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 9,
+              "clock_residue_mod8": 5,
+              "first_clock": 5,
+              "last_clock": 64375237
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "48828125",
+          "sum_nonone_clocks_upper": 64375237
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "defect_partitions": [
+        {
+          "j_multiset": [
+            3
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-166015625",
+          "sum_nonone_clocks_upper": 5781487
+        },
+        {
+          "j_multiset": [
+            4
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 4,
+              "clock_residue_mod8": 4,
+              "first_clock": 4,
+              "last_clock": 15547108
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-117187500",
+          "sum_nonone_clocks_upper": 15547108
+        },
+        {
+          "j_multiset": [
+            5
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 5,
+              "clock_residue_mod8": 1,
+              "first_clock": 9,
+              "last_clock": 25312737
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-68359375",
+          "sum_nonone_clocks_upper": 25312737
+        },
+        {
+          "j_multiset": [
+            6
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 6,
+              "clock_residue_mod8": 6,
+              "first_clock": 6,
+              "last_clock": 35078358
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-19531250",
+          "sum_nonone_clocks_upper": 35078358
+        },
+        {
+          "j_multiset": [
+            7
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 7,
+              "clock_residue_mod8": 3,
+              "first_clock": 3,
+              "last_clock": 44843987
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "29296875",
+          "sum_nonone_clocks_upper": 44843987
+        }
+      ]
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "defect_partitions": [
+        {
+          "j_multiset": [
+            3
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-87890625",
+          "sum_nonone_clocks_upper": 5781487
+        },
+        {
+          "j_multiset": [
+            4
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 4,
+              "clock_residue_mod8": 4,
+              "first_clock": 4,
+              "last_clock": 15547108
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-39062500",
+          "sum_nonone_clocks_upper": 15547108
+        },
+        {
+          "j_multiset": [
+            5
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 5,
+              "clock_residue_mod8": 1,
+              "first_clock": 9,
+              "last_clock": 25312737
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "9765625",
+          "sum_nonone_clocks_upper": 25312737
+        }
+      ]
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "defect_partitions": [
+        {
+          "j_multiset": [
+            3
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-9765625",
+          "sum_nonone_clocks_upper": 5781487
+        }
+      ]
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "defect_partitions": [
+        {
+          "j_multiset": [
+            3,
+            3
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            },
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-97656250",
+          "sum_nonone_clocks_upper": 11562974
+        },
+        {
+          "j_multiset": [
+            3,
+            4
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            },
+            {
+              "j": 4,
+              "clock_residue_mod8": 4,
+              "first_clock": 4,
+              "last_clock": 15547108
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-48828125",
+          "sum_nonone_clocks_upper": 21328595
+        },
+        {
+          "j_multiset": [
+            3,
+            5
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            },
+            {
+              "j": 5,
+              "clock_residue_mod8": 1,
+              "first_clock": 9,
+              "last_clock": 25312737
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "0",
+          "sum_nonone_clocks_upper": 31094224
+        },
+        {
+          "j_multiset": [
+            4,
+            4
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 4,
+              "clock_residue_mod8": 4,
+              "first_clock": 4,
+              "last_clock": 15547108
+            },
+            {
+              "j": 4,
+              "clock_residue_mod8": 4,
+              "first_clock": 4,
+              "last_clock": 15547108
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "0",
+          "sum_nonone_clocks_upper": 31094216
+        }
+      ]
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "defect_partitions": [
+        {
+          "j_multiset": [
+            3,
+            3
+          ],
+          "individual_clock_bands": [
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            },
+            {
+              "j": 3,
+              "clock_residue_mod8": 7,
+              "first_clock": 7,
+              "last_clock": 5781487
+            }
+          ],
+          "sum_nonone_clocks_strict_lower": "-19531250",
+          "sum_nonone_clocks_upper": 11562974
+        }
+      ]
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "defect_partitions": []
+    }
+  ],
+  "E12": "OPEN",
+  "all_layer_content": "OPEN",
+  "universal_Collatz": "OPEN"
+}

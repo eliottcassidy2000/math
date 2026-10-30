@@ -1,0 +1,238 @@
+{
+  "status": "PASS",
+  "gamma": "5878847/19531250",
+  "lambda12": "30517578/48828125",
+  "delta": "1/97656250",
+  "D": 78125000,
+  "T11": 19531250,
+  "exhaustive_floor_cells": 37,
+  "families": [
+    {
+      "a": 0,
+      "b": 1,
+      "total_clock_bands": [
+        {
+          "residue": 0,
+          "band": "late",
+          "first": 8,
+          "last": 54609608,
+          "count": 6826201
+        },
+        {
+          "residue": 1,
+          "band": "early",
+          "first": 9,
+          "last": 25312737,
+          "count": 3164092
+        },
+        {
+          "residue": 3,
+          "band": "early",
+          "first": 3,
+          "last": 44843987,
+          "count": 5605499
+        },
+        {
+          "residue": 4,
+          "band": "early",
+          "first": 4,
+          "last": 15547108,
+          "count": 1943389
+        },
+        {
+          "residue": 5,
+          "band": "late",
+          "first": 48828133,
+          "last": 64375237,
+          "count": 1943389
+        },
+        {
+          "residue": 6,
+          "band": "early",
+          "first": 6,
+          "last": 35078358,
+          "count": 4384795
+        },
+        {
+          "residue": 7,
+          "band": "early",
+          "first": 7,
+          "last": 5781487,
+          "count": 722686
+        }
+      ],
+      "candidate_clocks": 24590051,
+      "max_total_clock": 64375237,
+      "max_nonone_clock_sum": 64375237
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "total_clock_bands": [
+        {
+          "residue": 0,
+          "band": "late",
+          "first": 19531256,
+          "last": 54609608,
+          "count": 4384795
+        },
+        {
+          "residue": 1,
+          "band": "early",
+          "first": 19531257,
+          "last": 25312737,
+          "count": 722686
+        },
+        {
+          "residue": 3,
+          "band": "early",
+          "first": 19531259,
+          "last": 44843987,
+          "count": 3164092
+        },
+        {
+          "residue": 5,
+          "band": "late",
+          "first": 48828133,
+          "last": 64375237,
+          "count": 1943389
+        },
+        {
+          "residue": 6,
+          "band": "early",
+          "first": 19531254,
+          "last": 35078358,
+          "count": 1943389
+        }
+      ],
+      "candidate_clocks": 12158351,
+      "max_total_clock": 64375237,
+      "max_nonone_clock_sum": 44843987
+    },
+    {
+      "a": 2,
+      "b": 1,
+      "total_clock_bands": [
+        {
+          "residue": 0,
+          "band": "late",
+          "first": 39062504,
+          "last": 54609608,
+          "count": 1943389
+        },
+        {
+          "residue": 3,
+          "band": "early",
+          "first": 39062507,
+          "last": 44843987,
+          "count": 722686
+        },
+        {
+          "residue": 5,
+          "band": "late",
+          "first": 48828133,
+          "last": 64375237,
+          "count": 1943389
+        }
+      ],
+      "candidate_clocks": 4609464,
+      "max_total_clock": 64375237,
+      "max_nonone_clock_sum": 25312737
+    },
+    {
+      "a": 3,
+      "b": 1,
+      "total_clock_bands": [
+        {
+          "residue": 5,
+          "band": "late",
+          "first": 58593757,
+          "last": 64375237,
+          "count": 722686
+        }
+      ],
+      "candidate_clocks": 722686,
+      "max_total_clock": 64375237,
+      "max_nonone_clock_sum": 5781487
+    },
+    {
+      "a": 0,
+      "b": 2,
+      "total_clock_bands": [
+        {
+          "residue": 0,
+          "band": "late",
+          "first": 8,
+          "last": 31094224,
+          "count": 3886778
+        },
+        {
+          "residue": 1,
+          "band": "early",
+          "first": 9,
+          "last": 1797345,
+          "count": 224668
+        },
+        {
+          "residue": 3,
+          "band": "early",
+          "first": 11,
+          "last": 21328595,
+          "count": 2666074
+        },
+        {
+          "residue": 6,
+          "band": "early",
+          "first": 6,
+          "last": 11562974,
+          "count": 1445372
+        }
+      ],
+      "candidate_clocks": 8222892,
+      "max_total_clock": 31094224,
+      "max_nonone_clock_sum": 31094224
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "total_clock_bands": [
+        {
+          "residue": 0,
+          "band": "late",
+          "first": 19531256,
+          "last": 31094224,
+          "count": 1445372
+        },
+        {
+          "residue": 3,
+          "band": "early",
+          "first": 19531259,
+          "last": 21328595,
+          "count": 224668
+        }
+      ],
+      "candidate_clocks": 1670040,
+      "max_total_clock": 31094224,
+      "max_nonone_clock_sum": 11562974
+    },
+    {
+      "a": 0,
+      "b": 3,
+      "total_clock_bands": [
+        {
+          "residue": 0,
+          "band": "late",
+          "first": 16,
+          "last": 7578832,
+          "count": 947353
+        }
+      ],
+      "candidate_clocks": 947353,
+      "max_total_clock": 7578832,
+      "max_nonone_clock_sum": 7578832
+    }
+  ],
+  "all_layer_content": "OPEN",
+  "E12": "OPEN",
+  "universal_Collatz": "OPEN"
+}
