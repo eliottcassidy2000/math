@@ -1,0 +1,9 @@
+{
+  "arithmetic": "exact Fraction; explicit gates; complete subsets q=3..9",
+  "atlas_rows": 1270,
+  "checks": 10533,
+  "global_maximum_rows": 222,
+  "harmonic_rows": 1185,
+  "scope": "explicit second-band family, open top chamber; no general LRC closure",
+  "status": "PASS"
+}
