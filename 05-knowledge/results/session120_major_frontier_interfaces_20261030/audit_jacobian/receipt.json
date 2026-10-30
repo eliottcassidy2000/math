@@ -1,0 +1,116 @@
+{
+  "arithmetic": "fractions.Fraction only",
+  "identities": 501,
+  "matrix_universe": [
+    {
+      "case": "pure_2_1",
+      "derivation_rank": 40,
+      "domain_columns": 44,
+      "intersection_dimension": 3,
+      "target_rank": 4
+    },
+    {
+      "case": "pure_3_1",
+      "derivation_rank": 40,
+      "domain_columns": 44,
+      "intersection_dimension": 2,
+      "target_rank": 4
+    },
+    {
+      "case": "pure_4_1",
+      "derivation_rank": 41,
+      "domain_columns": 44,
+      "intersection_dimension": 1,
+      "target_rank": 4
+    },
+    {
+      "case": "pure_4_2",
+      "derivation_rank": 41,
+      "domain_columns": 44,
+      "intersection_dimension": 2,
+      "target_rank": 4
+    },
+    {
+      "case": "pure_4_4",
+      "derivation_rank": 41,
+      "domain_columns": 44,
+      "intersection_dimension": 3,
+      "target_rank": 4
+    },
+    {
+      "case": "pure_4_None",
+      "derivation_rank": 41,
+      "domain_columns": 44,
+      "intersection_dimension": 3,
+      "target_rank": 4
+    },
+    {
+      "case": "constant",
+      "derivation_rank": 40,
+      "domain_columns": 44,
+      "intersection_dimension": 4,
+      "target_rank": 4
+    },
+    {
+      "case": "linear",
+      "derivation_rank": 40,
+      "domain_columns": 44,
+      "intersection_dimension": 0,
+      "target_rank": 4
+    },
+    {
+      "case": "two_simple",
+      "derivation_rank": 40,
+      "domain_columns": 44,
+      "intersection_dimension": 0,
+      "target_rank": 4
+    },
+    {
+      "case": "two_double",
+      "derivation_rank": 41,
+      "domain_columns": 44,
+      "intersection_dimension": 0,
+      "target_rank": 4
+    },
+    {
+      "case": "irreducible_Q",
+      "derivation_rank": 40,
+      "domain_columns": 44,
+      "intersection_dimension": 0,
+      "target_rank": 4
+    },
+    {
+      "case": "A_zero_linear",
+      "derivation_rank": 33,
+      "domain_columns": 44,
+      "intersection_dimension": 4,
+      "target_rank": 4
+    },
+    {
+      "case": "A_zero_monomial",
+      "derivation_rank": 33,
+      "domain_columns": 44,
+      "intersection_dimension": 3,
+      "target_rank": 4
+    },
+    {
+      "case": "A_zero_repeated_value",
+      "derivation_rank": 33,
+      "domain_columns": 44,
+      "intersection_dimension": 2,
+      "target_rank": 4
+    },
+    {
+      "case": "A_zero_irr_critical",
+      "derivation_rank": 33,
+      "domain_columns": 44,
+      "intersection_dimension": 2,
+      "target_rank": 4
+    }
+  ],
+  "parameter_family_laurent_identities": 2,
+  "producer_imports": false,
+  "status": "PASS",
+  "threshold_cases": 729,
+  "two_pole_primitive_cases": 80
+}

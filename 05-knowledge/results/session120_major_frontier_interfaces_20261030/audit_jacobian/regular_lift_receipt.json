@@ -1,0 +1,8 @@
+{
+  "arithmetic": "fractions.Fraction",
+  "composition_admitted": 96,
+  "composition_cases": 1920,
+  "producer_imports": false,
+  "regular_lift_identities": 165,
+  "status": "PASS"
+}

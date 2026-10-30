@@ -1,0 +1,203 @@
+{
+  "assert_gates": false,
+  "direct_matrix_tests": [
+    {
+      "A": "2",
+      "B": "y**3 + 1",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "constant",
+      "image_intersection_dimension": 3,
+      "joint_rank": 36,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y",
+      "B": "y",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "simple root",
+      "image_intersection_dimension": 0,
+      "joint_rank": 39,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**2",
+      "B": "y",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "one root m2",
+      "image_intersection_dimension": 2,
+      "joint_rank": 37,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**3",
+      "B": "y",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "one root m3 sharp",
+      "image_intersection_dimension": 1,
+      "joint_rank": 38,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**5",
+      "B": "y",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "one root m5 missing powers",
+      "image_intersection_dimension": 0,
+      "joint_rank": 39,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**5",
+      "B": "y**2",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "one root m5 B order2",
+      "image_intersection_dimension": 1,
+      "joint_rank": 38,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**5",
+      "B": "y**4",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "one root m5 B order4",
+      "image_intersection_dimension": 2,
+      "joint_rank": 37,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**5",
+      "B": "7",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "constant B",
+      "image_intersection_dimension": 2,
+      "joint_rank": 37,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**2*(y - 1)**2",
+      "B": "y",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "two double roots",
+      "image_intersection_dimension": 0,
+      "joint_rank": 39,
+      "matrix_rank": 36
+    },
+    {
+      "A": "y**2*(y - 1)**3",
+      "B": "y**2",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "mixed multiple roots",
+      "image_intersection_dimension": 0,
+      "joint_rank": 39,
+      "matrix_rank": 36
+    },
+    {
+      "A": "(y - 2)**3",
+      "B": "(y - 2)**2 + 5",
+      "Q_box": [
+        2,
+        12
+      ],
+      "case": "translated value",
+      "image_intersection_dimension": 2,
+      "joint_rank": 37,
+      "matrix_rank": 36
+    }
+  ],
+  "multiple_root_residue_controls": [
+    {
+      "A": "y**2*(y - 1)**2",
+      "residues": [
+        "2",
+        "-2"
+      ],
+      "roots": [
+        0,
+        1
+      ]
+    },
+    {
+      "A": "y**3*(y - 1)**3",
+      "residues": [
+        "-6",
+        "6"
+      ],
+      "roots": [
+        0,
+        1
+      ]
+    },
+    {
+      "A": "y**2*(y - 1)**2*(y + 1)**2",
+      "residues": [
+        "3/4",
+        "0",
+        "-3/4"
+      ],
+      "roots": [
+        -1,
+        0,
+        1
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT; all-parameter theorem proved separately",
+  "symbolic_identity_checks": 145,
+  "zero_coefficient_boundary": [
+    {
+      "B": "y**2",
+      "companion": "-x*y/2",
+      "image_generator": "T"
+    },
+    {
+      "B": "y**5",
+      "companion": "-x*y/5",
+      "image_generator": "T"
+    },
+    {
+      "B": "(y**2 - 1)**2",
+      "companion": "-x*y**5/4 + 3*x*y**3/4 - x*y/2",
+      "image_generator": "T*(T - 1)"
+    },
+    {
+      "B": "y**3 - 3*y",
+      "companion": "-x*y**4/3 + 5*x*y**2/3 - 4*x/3",
+      "image_generator": "(T - 2)*(T + 2)"
+    },
+    {
+      "B": "2*y + 3",
+      "companion": "-x/2",
+      "image_generator": "1"
+    }
+  ]
+}

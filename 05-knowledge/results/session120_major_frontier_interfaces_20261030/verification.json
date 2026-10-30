@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_circuits/check_independent.py",
+      "stdout_sha256": "b72cc6b09a8b67c4a7c1708ccf593fe5dcdcac49c05b8e1ba7a915825b0d5a78"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_collatz/check_audit.py",
+      "stdout_sha256": "89681fbb29e060febc0e3892c8400f4f77b7311dd1dfc879fe77e095cb220130"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_collatz/check_final_tiers.py",
+      "stdout_sha256": "fbcc264b955b33ed1207355ace12574a6d492de101db7452e556019baa5fc3f8"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_collatz/check_placements.py",
+      "stdout_sha256": "50cb7a87c5b0f3dfbdd83af9705cbbf9e6c024e98a7e26e0a82c8a6fb627730d"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_collatz/check_structure.py",
+      "stdout_sha256": "eedd46c8fb0c84f2c17f146de45ef2aef25a671bf90d8fa241a45ee13b6fbe96"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_jacobian/check_independent.py",
+      "stdout_sha256": "1952f995bf818374e06bfefe09ad249e27e0fc359b575fd572d1cbe85ea4a04e"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_jacobian/check_regular_lift.py",
+      "stdout_sha256": "e61587eab8cb7069dd584dfc310948b4b8da5bb273b10631d188b451a54de6dd"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_lrc/check_independent.py",
+      "stdout_sha256": "72d76cdb497e0d2ef586224634804c793546f7c03b397027d04da3c0a6061515"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_ramsey/check_independent.py",
+      "stdout_sha256": "cea2dc9e4e8c88ec0a7c82b30ec789686ae9b00ebbf736635e8d7ec44de13522"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "circuits/check_forest_cones.py",
+      "stdout_sha256": "fdf48c25bc5b2adc7bd846f90597816dddd49cbe7372c3ffdff6b3f96bebf53a"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "collatz/check_clock_bands.py",
+      "stdout_sha256": "7a1863fc5310e92114b9bb9821513223deda5e1bcc2ad498a357ee965678c77e"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "collatz/check_eighth_defects.py",
+      "stdout_sha256": "80fb212f6a7c427ef3274264f21b4a1d401c0f43b43eac49950da5e18d254a0e"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "collatz/check_ten_return_grammar.py",
+      "stdout_sha256": "b837c94a3ca7f1f5c0ff8213cebf3cb774d8118622d2107706f91afa71bea09f"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "jacobian/check_image.py",
+      "stdout_sha256": "e5b5bd03b96368a7f7286e95823fc1f8e7ef7fee7cc472016e92729f98c4a9d5"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "jacobian/check_lifting.py",
+      "stdout_sha256": "e7deae04ac924c891f0fc4c1b24d56a186b027ec29c75bba88b2a83cddb5fa18"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "lrc/fibre_transfer.py",
+      "stdout_sha256": "83c000334e90cd6bfb12d31af5f2ecb8b815a750eca08016f6af78f7e02010e0"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "lrc/recheck_bank.py",
+      "stdout_sha256": "7ba60e6366a7f54971dcbe9925127d0918120e0abda515eaa7de8a170f009e40"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "ramsey/check_spectral.py",
+      "stdout_sha256": "93b048b0131435781a974ec853fadbaf29c130d2dd2799a6c0a302f15be95d2a"
+    }
+  ],
+  "scope": "finite certificates corroborating the separately stated uniform proofs",
+  "status": "PASS"
+}

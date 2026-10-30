@@ -1,0 +1,11 @@
+{
+  "forbidden_subring": "K[y^3]",
+  "generic_image_generator": "(T - 1)**2",
+  "generic_rational_companion_identity": true,
+  "image_ideals_incomparable": true,
+  "nonzero_and_zero_fibres_checked": 15,
+  "pole_coefficient": "-y^2/4",
+  "positive_regular_lift_control": "B=y^2",
+  "special_image_generator": "T*(T - 1)",
+  "status": "FINITE-EXACT; no-lift theorem has Laurent proof"
+}
