@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "balanced_moduli": 78,
+  "weighted_no_alias_tests": 204,
+  "averaging_moduli": 25,
+  "exact_defect": "4*x*y",
+  "scope": "finite controls support the accompanying proofs; not a JC proof"
+}

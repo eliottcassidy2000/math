@@ -1,0 +1,7 @@
+LRC independent endpoint-midpoint checks: 500
+Composite exact closure/Burnside PASS 3 3 27 81
+Composite exact closure/Burnside PASS 3 5 375 375
+Composite exact closure/Burnside PASS 5 3 1215 1215
+Composite exact closure/Burnside PASS 3 7 1029 1029
+Composite exact closure/Burnside PASS 3 9 729 2187
+Composite exact closure/Burnside PASS 5 5 3125 15625
