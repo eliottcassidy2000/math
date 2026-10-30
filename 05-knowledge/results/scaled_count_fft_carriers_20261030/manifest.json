@@ -1,0 +1,49 @@
+{
+  "source_revision": "b51ef5cd739375e6475ceafd42e36e86858c70ca",
+  "hash_basis": "Inherited sources: exact Git blobs. Packet text: exact LF bytes. PDF: exact binary bytes.",
+  "sources": {
+    "05-knowledge/results/anchor_content_flat_quotients_20261030/COLLATZ.md": "15cc097aacf9be08f577285ad33d8f451b746ed6bbeb3b6f4ece667eaca7bd26",
+    "05-knowledge/results/anchor_content_flat_quotients_20261030/README.md": "c37c1a874d72b3eb940a8750112087dbb946c8a6a0f8517ccad916756ba2cc88",
+    "05-knowledge/results/anchor_content_flat_quotients_20261030/TOURNAMENTS.md": "8f8222232608c68a59f57409348ff502c324af4acdbf80baeae000f3abf46e65",
+    "05-knowledge/results/arithmetic_braids2_20260917_fano_code.md": "8e8d8b508eb0df90451af85d7de9bebddcd8d1b36da151da38a2b41ed3c34a31",
+    "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939",
+    "05-knowledge/results/cursor_cm_phase_20261028/RAMANUJAN.md": "93b249a19a470b397ca3f7c7e202657023a93abbe8e6b4fa4dd9eacb04e42dd1",
+    "05-knowledge/results/cursor_cm_phase_20261028/TRACE_CARRIER.md": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
+    "05-knowledge/results/external_preprints_mub6_local_smoothing_eth_merge_20261027.md": "e19acf59c426ffe968df3b8e0f99c5348f1df1b30df7f19571cb91e503511ec8",
+    "05-knowledge/results/four_vertex_glue_fermat_20261029/README.md": "f4e7d103fa3a70c49e3c0b410c3c01bdd3a7602765a182b74fdb9432e2900023",
+    "05-knowledge/results/metagraph_scheduled_recursion_20261029/README.md": "ac1407a162d212de5948bd8ff2a10636c69a463e925acde0e27915048be53388",
+    "05-knowledge/results/pinned_discrepancy_reset_tails_20261029/FINITE_DEPTH.md": "c5096a8d5ed871dc1bf68ad4cf4053cc2fb3093fb84b8ea0f2bb7ed995c23d7a",
+    "05-knowledge/results/prime_power_plus_one_20261029/ARITHMETIC.md": "8c56974b78513592279a6a01b475b2a4e98f8f94f3c4f090ae33d1112c964833",
+    "05-knowledge/results/prime_power_plus_one_20261029/GROWTH.md": "c916cb0590682da06dd572897722166f30120feb97dde5f7aa8beb6d21c4c821",
+    "05-knowledge/results/prime_power_plus_one_20261029/README.md": "98b9fabf0477b4c23c569a734be88a8e096cb81501e0242b5baa2db76efbcd9e",
+    "05-knowledge/results/regular_parent_symmetry_20261029/PROOFS.md": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/session111_scale_connections_20261030/README.md": "2e99c0751911d521067e6356fe4ca6695b97e4a0ff28c69eb244b2f90c3b0279"
+  },
+  "incoming_revision": "d32897c77717c6d8a5f4fa332082feb26a256e0b",
+  "incoming_nonruntime_sources": {
+    "05-knowledge/results/pinned_ramified_counts_20261030/ARITHMETIC_AND_SOURCE.md": "4c6c8a53c4726b270c92b03047f28ae9f59e0c444c4c6303885bdfd63cfd1477",
+    "05-knowledge/results/pinned_ramified_counts_20261030/README.md": "cef738b6e872930f374bce6d2840ee88d6b1d757203f4b5fa74fdefdc97d1e30",
+    "05-knowledge/results/session112_counting_interfaces_20261030/arithmetic/MODULAR_OBSERVERS.md": "a9214e2076e4c765f8d8a92968d0f59715dfe917e235b1e16fddd38b74c05841",
+    "05-knowledge/results/session112_counting_interfaces_20261030/arithmetic/POWER_OBSERVERS.md": "f556862b854e583a4c16599bf14b375a776cb00fcb5207804df597d1a85256c0",
+    "05-knowledge/results/session112_counting_interfaces_20261030/norms/NORM_DEFECT.md": "23780f1687038e05fdc6ab4484d9a137537bf533e4780733fcfd239a3cc94752",
+    "05-knowledge/results/session112_counting_interfaces_20261030/norms/NORM_SIGNS.md": "bfdb81fb4f80f4108cf9bd2dbf23ea917ba66d50b19e85e870bc355d24f884a5"
+  },
+  "artifacts": {
+    ".gitattributes": "07a2f41719cd55762e837e3598cd3ba067bc207a7ec63a46b2d86f609dc50acd",
+    "audit_external.py": "dd954eef207c14bcbf74f2bb4fbdc24f12bd5fe9c2dfbda03e8c3d869f765fe4",
+    "certificate.json": "25dd508b9454a56fdccd76270f687c0d7ce9ed6075379a4347a7e38acdb1634f",
+    "HANDOFF.md": "2288961bf2d9c2decc9f64b17056370a6d7239a3b349325bf759dba62b7a9780",
+    "lean_build_receipt.txt": "edeb5ae77e75a3f7e1332c94fb50e2b86c02b095428e04b2d4037f7dd35aacef",
+    "README.md": "a9e8ab55d27512a5c7ed38388aa15b861f9ab08df676b7b2d0a4a3c681cb965d",
+    "RECOVERY.md": "10601405adf6b66d180608b692ff105adffcf03b30b5e2c8c9850bc3a38a7f93",
+    "seal.py": "35dd6d49b386653232f1b5f41972fe3029a5ab20277a255721d625adcecb95b3",
+    "SOURCE_AUDIT.md": "2fd5d4b542f1258190ddad625caa900a0d8a01653bcb7d60eb89b7d63863339c",
+    "source_receipt.json": "b0e81e1659c085dd5fb6eb2d1523fe967e6ce8f27f1db6335fd0b0cfc90d5cbe",
+    "sources/hexagon2610.00600v1.pdf": "e57f24481d2474a6f2c342d86312572f024710835ca583beb31e2bb1f9ceae40",
+    "THEORY.md": "e06c3f75ab9794e9f1ce3fd0725d7223e5a92372ca2582bead414b9e66265e86",
+    "verify.py": "c3ce7b43cb8be48c3fc7d33bb6f71cce73f2c54c71f6926e66a4efeec4f378a8"
+  },
+  "scope": "Same-agent proof audit and alternative native calculations; separate pinned external Lean build.",
+  "runtime": "Python standard library; native regular_parent_symmetry verifier is the sole inherited runtime import."
+}

@@ -1,0 +1,10 @@
+Pinned local build receipt; complete original log hash is in source_receipt.json.
+Commands: lake exe cache get; lake build
+External commit: c91cc3f4947caca8977e81a5d14244f73b5ae2b1
+Toolchain: leanprover/lean4:v4.35.0
+Challenge is the separate statement target and contains an intentional sorry.
+It is not imported by Solution; the proof axiom output below excludes sorryAx.
+warning: Challenge.lean:63:8: declaration uses `sorry`
+ℹ [1948/1949] Built Solution (7.6s)
+info: Solution.lean:30:0: 'Factoring.subexponentialRate' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (1949 jobs).
