@@ -1,0 +1,189 @@
+{
+  "membership_gates": 12192,
+  "synthetic_affine_membership_gates": 13936,
+  "finite_mean_checks": 372,
+  "controllers_clock_at_most_12": 4095,
+  "root_order_growth_accepted": 3299,
+  "root_order_growth_uncovered": 796,
+  "first_uncovered": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      4
+    ]
+  ],
+  "maximum_clock_rate": "5/8",
+  "equality_controllers": 12,
+  "equality_only_all_ones": true,
+  "examples": [
+    {
+      "controller": [
+        1
+      ],
+      "entry": [],
+      "rate_per_period": "5/8",
+      "rate_per_clock": "5/8",
+      "phase_depths": [
+        "inf"
+      ]
+    },
+    {
+      "controller": [
+        1,
+        2
+      ],
+      "entry": [],
+      "rate_per_period": "5/16",
+      "rate_per_clock": "5/48",
+      "phase_depths": [
+        "0",
+        "inf"
+      ]
+    },
+    {
+      "controller": [
+        1,
+        2
+      ],
+      "entry": [
+        1
+      ],
+      "rate_per_period": "1/4",
+      "rate_per_clock": "1/12",
+      "phase_depths": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "controller": [
+        1,
+        2
+      ],
+      "entry": [
+        2
+      ],
+      "rate_per_period": "5/16",
+      "rate_per_clock": "5/48",
+      "phase_depths": [
+        "inf",
+        "0"
+      ]
+    },
+    {
+      "controller": [
+        3,
+        1,
+        3
+      ],
+      "entry": [],
+      "rate_per_period": "5/8",
+      "rate_per_clock": "5/56",
+      "phase_depths": [
+        "0",
+        "0",
+        "inf"
+      ]
+    },
+    {
+      "controller": [
+        5,
+        5
+      ],
+      "entry": [],
+      "rate_per_period": "5/4",
+      "rate_per_clock": "1/8",
+      "phase_depths": [
+        "0",
+        "inf"
+      ]
+    },
+    {
+      "controller": [
+        1,
+        1
+      ],
+      "entry": [],
+      "rate_per_period": "5/4",
+      "rate_per_clock": "5/8",
+      "phase_depths": [
+        "0",
+        "inf"
+      ]
+    },
+    {
+      "controller": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "entry": [],
+      "rate_per_period": "5/8",
+      "rate_per_clock": "5/48",
+      "phase_depths": [
+        "0",
+        "0",
+        "0",
+        "inf"
+      ]
+    }
+  ]
+}

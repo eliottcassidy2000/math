@@ -1,0 +1,84 @@
+{
+  "candidate_clock_visits": 367976,
+  "checks": 1364,
+  "core_window_q": "3..40 at five exact radii",
+  "global_maxima": "q3..24,m1..8 plus four nonmultiple tails",
+  "global_rows": 261,
+  "large_structural_controls": [
+    {
+      "M": "1/32",
+      "m": 3,
+      "q": 30,
+      "s": 7,
+      "tight": true,
+      "witness": "1/32"
+    },
+    {
+      "M": "4/127",
+      "m": 4,
+      "q": 30,
+      "s": 7,
+      "tight": false,
+      "witness": "55/127"
+    },
+    {
+      "M": "1/212",
+      "m": 5,
+      "q": 210,
+      "s": 11,
+      "tight": true,
+      "witness": "1/212"
+    },
+    {
+      "M": "6/1271",
+      "m": 6,
+      "q": 210,
+      "s": 11,
+      "tight": false,
+      "witness": "1156/1271"
+    },
+    {
+      "M": "1/2312",
+      "m": 6,
+      "q": 2310,
+      "s": 13,
+      "tight": true,
+      "witness": "1/2312"
+    },
+    {
+      "M": "7/16183",
+      "m": 7,
+      "q": 2310,
+      "s": 13,
+      "tight": false,
+      "witness": "12449/16183"
+    },
+    {
+      "M": "1/30032",
+      "m": 8,
+      "q": 30030,
+      "s": 17,
+      "tight": true,
+      "witness": "1/30032"
+    },
+    {
+      "M": "9/270287",
+      "m": 9,
+      "q": 30030,
+      "s": 17,
+      "tight": false,
+      "witness": "31799/270287"
+    },
+    {
+      "M": "1000000000000000000000000000007/12000000000000000000000000000089",
+      "m": 1000000000000000000000000000007,
+      "q": 12,
+      "s": 5,
+      "tight": false,
+      "witness": "5000000000000000000000000000037/12000000000000000000000000000089"
+    }
+  ],
+  "proof": "GENERAL_CORE.md",
+  "status": "passed",
+  "unrestricted_LRC": "OPEN"
+}

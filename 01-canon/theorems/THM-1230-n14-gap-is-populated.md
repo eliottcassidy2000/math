@@ -1,7 +1,7 @@
 ---
 id: THM-1230
 title: THE n=14 STABILITY GAP IS NOT EMPTY — {1,…,11,13,36} REALISES 3/41 — transferring boxeph-S123's determinant stratification from the n=12 gap (1/13,2/25) to n=14 gives the gap (1/14, 2/27) (Farey neighbours, 1·27−2·14 = −1) with mediant 3/41 = the depth-minimal target (41 = 3·14−1, matching their 38 = 3·13−1). Conditional on LRC(14) the same two lines exclude numerator ≤ 2, so a gap family needs D ≥ 3. **A D = 3 witness exists**: V = {1,…,11,13,36} has M = 3/41 exactly at t* = 17/41, active pair (5,36), D = 3, s = 41 — verified by exhaustive brute force over all q ≤ 200. Its LRC(14) margin is s ≤ 14D reading **41 ≤ 42, slack 1** — the tightest non-extremal family found. It sits on the exact ladder M({1,…,11,13,12m}) = m/(12m+5), active pair (5,12m), D = m, slack 2m−5, which starts at the extremal 1/14 (m=2), enters the gap at 3/41 (m=3), and accumulates at **1/12**
-status: the 3/41 witness is verified exactly (pinch-set maximiser agrees with independent brute force over q ≤ 200; active pair and determinant confirmed). The ladder formula m/(12m+5) is verified exactly for m = 3…10 and is a conjecture beyond. The numerator ≤ 2 exclusion is CONDITIONAL on LRC(14), which is open — unlike boxeph's n=12 version, which rests on the proved LRC(13)
+status: the 3/41 witness is verified exactly (pinch-set maximiser agrees with independent brute force over q ≤ 200; active pair and determinant confirmed). The ladder formula m/(12m+5) is now PROVED for every m>=3 by Session 114 (2026-10-30); m=1,2 have value 1/14. See the current proof pointer below. Other historical gap claims are not promoted. The numerator ≤ 2 exclusion is CONDITIONAL on LRC(14), which is open — unlike boxeph's n=12 version, which rests on the proved LRC(13)
 source: opus-2026-07-19-S395 (owner: continue and integrate incoming ideas from other agents)
 depends_on: [boxeph-S123 / HYP-7782 (the determinant stratification this transfers), THM-1205/1210/1215 (the D-coordinate and the sieve/high-D split), THM-1220 (n=14 is the unique non-rigid case — sharpened here), HYP-2059/THM-401 (pinch lemma), THM-633 (the n=12 d=1 ladder this parallels)]
 scripts: 04-computation/n14_gap_strata_opus_S395.py -> 05-knowledge/results/n14_gap_strata_opus_S395.out
@@ -10,6 +10,10 @@ scripts: 04-computation/n14_gap_strata_opus_S395.py -> 05-knowledge/results/n14_
 # THM-1230 — the gap above 1/14 is populated
 
 > **GAP EDGE CORRECTED (opus-S396), see THM-1235.** Calling (1/14, 2/27) 'the stability gap' below reads the wrong interval: 2/27 is the FAREY NEIGHBOUR of 1/14, not the attained edge. A 1552-family scan over four natural shapes (x <= 400) finds NOTHING strictly inside (1/14, 3/41), so the attained gap is (1/14, 3/41) with 3/41 its right endpoint. The 3/41 witness and the ladder below are unaffected; only the interval's naming changes. Also proved there: slack = 0 <=> extremal, so slack 1 (which 3/41 attains) is MINIMAL for non-extremal families and cannot be beaten.
+
+## Current ladder status (30 October 2026)
+
+The [Session 114 proof](../../05-knowledge/results/session114_continuation_symmetry_20261030/lrc/RESONANT_TAIL.md) establishes the ladder for **every m>=3**, and the exceptional values **m=1,2 give 1/14**. The [all-q extension](../../05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md) classifies the entire almost-AP tail family. These proofs close the old beyond-m=10 obligation. They do not establish unrestricted LRC(14) or inherit this historical note's global stability-gap rhetoric. Older computational/conjectural descriptions below remain as provenance.
 
 ## The transfer from boxeph-S123
 

@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scripts": 12,
+  "runs": 24,
+  "checks": [
+    {
+      "script": "aliquot/check_aliquot.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "72e12132b7cdee705239252668e12b61e02799e6dfd6f2ec92ce5cc285d9cb58"
+    },
+    {
+      "script": "audit/check_aliquot_quotient.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "7b9d9fc384389aa264c9b6be1d91c1a9101a1300ddf5a9122233dd30827465f5"
+    },
+    {
+      "script": "jacobian/check_one_coordinate.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "bb55fd2ce080b0e74093d30ce940041938cb0b5c8f2cd64f17af4d52994798c8"
+    },
+    {
+      "script": "charts/check_parent_multiplicity.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "f7cc681f53c7cb821477f3a8afa2d6545b618f34054ac6bcb50f5e9364b8d6dc"
+    },
+    {
+      "script": "audit/check_symmetry_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "e6ec7f909e9b4aa01b2a87713e0848406cd6a0baff9bd19f9cb3b942c573ef6d"
+    },
+    {
+      "script": "lrc/check_resonant_tail.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "e9ea4d65ac275425cd5f759548ef30b04c1da6e94cb6039ce6150716eec4b956"
+    },
+    {
+      "script": "lrc/check_general.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "603cb419df572e9e57322385c186ce7e31c3cb533618476e716ef051a75e0953"
+    },
+    {
+      "script": "lrc_audit/independent_core.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "080d7309dae492b27979627f2aa26984c7ec572ae35d8bc32bdd3f2a25c76ff5"
+    },
+    {
+      "script": "lrc_audit/independent_general.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "b5f14a0df11a5ca7040eb9b5c393f744dce10ee9e328c3627ed075c2f765ed03"
+    },
+    {
+      "script": "collatz/check_periodic_rates.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "af631107ffb6442a1c89f652915553b99abd538125c027ffc0631ea336c7c917"
+    },
+    {
+      "script": "collatz_audit/check_periodic_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "fb28e9806613cddc6f173b91bf19adc3be1bd19d4392c83b3025baf49de0d548"
+    },
+    {
+      "script": "collatz_audit/check_literal_means.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "a664f71ee962f21dee3a78d8b72d1ab616731f15cccb2bd876f767a4c85c4840"
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "status": "PASS",
+  "checks": 1308,
+  "cores": "q=3..80",
+  "radii_per_core": 4,
+  "method": "independent exact interval intersection versus inverse-residue owner windows",
+  "rows": [
+    {
+      "q": 3,
+      "s": 2,
+      "primitive_centers": 2
+    },
+    {
+      "q": 4,
+      "s": 3,
+      "primitive_centers": 2
+    },
+    {
+      "q": 5,
+      "s": 2,
+      "primitive_centers": 4
+    },
+    {
+      "q": 6,
+      "s": 5,
+      "primitive_centers": 2
+    },
+    {
+      "q": 7,
+      "s": 2,
+      "primitive_centers": 6
+    },
+    {
+      "q": 8,
+      "s": 3,
+      "primitive_centers": 4
+    },
+    {
+      "q": 9,
+      "s": 2,
+      "primitive_centers": 6
+    },
+    {
+      "q": 10,
+      "s": 3,
+      "primitive_centers": 4
+    },
+    {
+      "q": 11,
+      "s": 2,
+      "primitive_centers": 10
+    },
+    {
+      "q": 12,
+      "s": 5,
+      "primitive_centers": 4
+    },
+    {
+      "q": 13,
+      "s": 2,
+      "primitive_centers": 12
+    },
+    {
+      "q": 14,
+      "s": 3,
+      "primitive_centers": 6
+    },
+    {
+      "q": 15,
+      "s": 2,
+      "primitive_centers": 8
+    },
+    {
+      "q": 16,
+      "s": 3,
+      "primitive_centers": 8
+    },
+    {
+      "q": 17,
+      "s": 2,
+      "primitive_centers": 16
+    },
+    {
+      "q": 18,
+      "s": 5,
+      "primitive_centers": 6
+    },
+    {
+      "q": 19,
+      "s": 2,
+      "primitive_centers": 18
+    },
+    {
+      "q": 20,
+      "s": 3,
+      "primitive_centers": 8
+    },
+    {
+      "q": 21,
+      "s": 2,
+      "primitive_centers": 12
+    },
+    {
+      "q": 22,
+      "s": 3,
+      "primitive_centers": 10
+    },
+    {
+      "q": 23,
+      "s": 2,
+      "primitive_centers": 22
+    },
+    {
+      "q": 24,
+      "s": 5,
+      "primitive_centers": 8
+    },
+    {
+      "q": 25,
+      "s": 2,
+      "primitive_centers": 20
+    },
+    {
+      "q": 26,
+      "s": 3,
+      "primitive_centers": 12
+    },
+    {
+      "q": 27,
+      "s": 2,
+      "primitive_centers": 18
+    },
+    {
+      "q": 28,
+      "s": 3,
+      "primitive_centers": 12
+    },
+    {
+      "q": 29,
+      "s": 2,
+      "primitive_centers": 28
+    },
+    {
+      "q": 30,
+      "s": 7,
+      "primitive_centers": 8
+    },
+    {
+      "q": 31,
+      "s": 2,
+      "primitive_centers": 30
+    },
+    {
+      "q": 32,
+      "s": 3,
+      "primitive_centers": 16
+    },
+    {
+      "q": 33,
+      "s": 2,
+      "primitive_centers": 20
+    },
+    {
+      "q": 34,
+      "s": 3,
+      "primitive_centers": 16
+    },
+    {
+      "q": 35,
+      "s": 2,
+      "primitive_centers": 24
+    },
+    {
+      "q": 36,
+      "s": 5,
+      "primitive_centers": 12
+    },
+    {
+      "q": 37,
+      "s": 2,
+      "primitive_centers": 36
+    },
+    {
+      "q": 38,
+      "s": 3,
+      "primitive_centers": 18
+    },
+    {
+      "q": 39,
+      "s": 2,
+      "primitive_centers": 24
+    },
+    {
+      "q": 40,
+      "s": 3,
+      "primitive_centers": 16
+    },
+    {
+      "q": 41,
+      "s": 2,
+      "primitive_centers": 40
+    },
+    {
+      "q": 42,
+      "s": 5,
+      "primitive_centers": 12
+    },
+    {
+      "q": 43,
+      "s": 2,
+      "primitive_centers": 42
+    },
+    {
+      "q": 44,
+      "s": 3,
+      "primitive_centers": 20
+    },
+    {
+      "q": 45,
+      "s": 2,
+      "primitive_centers": 24
+    },
+    {
+      "q": 46,
+      "s": 3,
+      "primitive_centers": 22
+    },
+    {
+      "q": 47,
+      "s": 2,
+      "primitive_centers": 46
+    },
+    {
+      "q": 48,
+      "s": 5,
+      "primitive_centers": 16
+    },
+    {
+      "q": 49,
+      "s": 2,
+      "primitive_centers": 42
+    },
+    {
+      "q": 50,
+      "s": 3,
+      "primitive_centers": 20
+    },
+    {
+      "q": 51,
+      "s": 2,
+      "primitive_centers": 32
+    },
+    {
+      "q": 52,
+      "s": 3,
+      "primitive_centers": 24
+    },
+    {
+      "q": 53,
+      "s": 2,
+      "primitive_centers": 52
+    },
+    {
+      "q": 54,
+      "s": 5,
+      "primitive_centers": 18
+    },
+    {
+      "q": 55,
+      "s": 2,
+      "primitive_centers": 40
+    },
+    {
+      "q": 56,
+      "s": 3,
+      "primitive_centers": 24
+    },
+    {
+      "q": 57,
+      "s": 2,
+      "primitive_centers": 36
+    },
+    {
+      "q": 58,
+      "s": 3,
+      "primitive_centers": 28
+    },
+    {
+      "q": 59,
+      "s": 2,
+      "primitive_centers": 58
+    },
+    {
+      "q": 60,
+      "s": 7,
+      "primitive_centers": 16
+    },
+    {
+      "q": 61,
+      "s": 2,
+      "primitive_centers": 60
+    },
+    {
+      "q": 62,
+      "s": 3,
+      "primitive_centers": 30
+    },
+    {
+      "q": 63,
+      "s": 2,
+      "primitive_centers": 36
+    },
+    {
+      "q": 64,
+      "s": 3,
+      "primitive_centers": 32
+    },
+    {
+      "q": 65,
+      "s": 2,
+      "primitive_centers": 48
+    },
+    {
+      "q": 66,
+      "s": 5,
+      "primitive_centers": 20
+    },
+    {
+      "q": 67,
+      "s": 2,
+      "primitive_centers": 66
+    },
+    {
+      "q": 68,
+      "s": 3,
+      "primitive_centers": 32
+    },
+    {
+      "q": 69,
+      "s": 2,
+      "primitive_centers": 44
+    },
+    {
+      "q": 70,
+      "s": 3,
+      "primitive_centers": 24
+    },
+    {
+      "q": 71,
+      "s": 2,
+      "primitive_centers": 70
+    },
+    {
+      "q": 72,
+      "s": 5,
+      "primitive_centers": 24
+    },
+    {
+      "q": 73,
+      "s": 2,
+      "primitive_centers": 72
+    },
+    {
+      "q": 74,
+      "s": 3,
+      "primitive_centers": 36
+    },
+    {
+      "q": 75,
+      "s": 2,
+      "primitive_centers": 40
+    },
+    {
+      "q": 76,
+      "s": 3,
+      "primitive_centers": 36
+    },
+    {
+      "q": 77,
+      "s": 2,
+      "primitive_centers": 60
+    },
+    {
+      "q": 78,
+      "s": 5,
+      "primitive_centers": 24
+    },
+    {
+      "q": 79,
+      "s": 2,
+      "primitive_centers": 78
+    },
+    {
+      "q": 80,
+      "s": 3,
+      "primitive_centers": 32
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "arbitrary_affine_membership_checks": 548000,
+  "order_checks": 1016,
+  "scope": "All affine residue pairs mod25 at depths1/2, plus stalled-pivot families at depths3/4; positive integer lifts."
+}

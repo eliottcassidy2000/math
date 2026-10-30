@@ -2,6 +2,8 @@
 id: THM-1271
 title: Gate completeness, three-quarters proved — the RUNG-FLOOR LEMMA (closed-form witness a = D·p⁻¹, unique danger slot = the deleted N−1, so M(F_D(N)) ≥ D/((N+1)D−1) whenever gcd(2D−1, Q) = 1), the SMALL-MODULI SEAL (every candidate at q′ ≤ 2N has value ≤ 1/(N+1), N odd), and the PACKING SEAL (any candidate with e ≥ c has value ≤ 1/(N+1)) — jointly: the (N−1)-slot e-channel at pair-sum moduli > 2N is the SOLE escape, collapsing exact M(F_D(N)) to a ~10⁵-op computation; the pruned proof-backed evaluator reproduces the full table and decides the D=7 rung at N=2311.
 status: >
+  UPDATE 2026-10-30: PROVED uniform canonical-family gate by the Session 114 Farey
+  proof linked below. The remaining lines record historical evidence and scope.
   PROVED — Lemmas 1, 2, 3 (elementary; full proofs in this file), and the resulting
   reduction of M(F_D(N)) to the e-channel maximum (given THM-1002). VERIFIED-EXACT —
   the closed-form witness on every (D,N) in {3..7}×[3D−1,100] with gcd(p,Q)=1 (zero
@@ -20,6 +22,11 @@ scripts:
 ---
 
 # THM-1271 — the rung floor, the two seals, and the e-channel reduction
+
+## Current uniform gate status (30 October 2026)
+
+[Session 114, §6](../../05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md#6-inheritance-what-is-recovered-and-what-is-closed) proves the exact all-q spectrum and hence the uniform canonical-family gate, without a per-N candidate scan. With q=N−1, D=m, the slack-one value occurs exactly when the least prime not dividing q is 2D−1. This closes the family-level gate-completeness obligation recorded below. Existing finite rungs and Goddyn–Wong tightness retain their prior credit. Arbitrary source families and unrestricted LRC remain open; historical descriptions below are not the current status of this scoped gate.
+
 
 Throughout: `D ≥ 3`, `p = 2D−1`, `N > 3D−2`, `Q = (N+1)D−1`, `x = D(N−1)`,
 `F = F_D(N) = {1..N}∖{N−1} ∪ {x}`, base `B = {1..N}∖{N−1}`, and `|y|_q` the distance

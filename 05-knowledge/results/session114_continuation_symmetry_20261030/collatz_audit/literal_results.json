@@ -1,0 +1,564 @@
+{
+  "status": "PASS",
+  "literal_prefix_checks": 160,
+  "rows": [
+    {
+      "w": [
+        1
+      ],
+      "u": [],
+      "mean": "5/8",
+      "sum200": 124,
+      "maximum_observed_height": 3,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        1
+      ],
+      "u": [
+        1
+      ],
+      "mean": "5/8",
+      "sum200": 124,
+      "maximum_observed_height": 3,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        1
+      ],
+      "u": [
+        2
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        2
+      ],
+      "u": [],
+      "mean": "9/16",
+      "sum200": 112,
+      "maximum_observed_height": 4,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        2
+      ],
+      "u": [
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        2
+      ],
+      "u": [
+        2
+      ],
+      "mean": "9/16",
+      "sum200": 112,
+      "maximum_observed_height": 4,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        2
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        5
+      ],
+      "u": [],
+      "mean": "5/8",
+      "sum200": 124,
+      "maximum_observed_height": 3,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        5
+      ],
+      "u": [
+        1
+      ],
+      "mean": "1/2",
+      "sum200": 100,
+      "maximum_observed_height": 1,
+      "error200": "0"
+    },
+    {
+      "w": [
+        5
+      ],
+      "u": [
+        2
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        5
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        2
+      ],
+      "u": [],
+      "mean": "5/16",
+      "sum200": 62,
+      "maximum_observed_height": 3,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        1,
+        2
+      ],
+      "u": [
+        1
+      ],
+      "mean": "1/4",
+      "sum200": 50,
+      "maximum_observed_height": 1,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        2
+      ],
+      "u": [
+        2
+      ],
+      "mean": "5/16",
+      "sum200": 62,
+      "maximum_observed_height": 3,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        1,
+        2
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        2,
+        1
+      ],
+      "u": [],
+      "mean": "5/16",
+      "sum200": 62,
+      "maximum_observed_height": 3,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        2,
+        1
+      ],
+      "u": [
+        1
+      ],
+      "mean": "5/16",
+      "sum200": 62,
+      "maximum_observed_height": 3,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        2,
+        1
+      ],
+      "u": [
+        2
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        2,
+        1
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "1/4",
+      "sum200": 50,
+      "maximum_observed_height": 1,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "u": [],
+      "mean": "25/8",
+      "sum200": 624,
+      "maximum_observed_height": 4,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "u": [
+        1
+      ],
+      "mean": "25/8",
+      "sum200": 624,
+      "maximum_observed_height": 4,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "u": [
+        2
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "u": [],
+      "mean": "33/16",
+      "sum200": 412,
+      "maximum_observed_height": 4,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "u": [
+        1
+      ],
+      "mean": "3/2",
+      "sum200": 300,
+      "maximum_observed_height": 2,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "u": [
+        2
+      ],
+      "mean": "33/16",
+      "sum200": 412,
+      "maximum_observed_height": 4,
+      "error200": "-1/2"
+    },
+    {
+      "w": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        5,
+        5
+      ],
+      "u": [],
+      "mean": "5/4",
+      "sum200": 249,
+      "maximum_observed_height": 4,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        5,
+        5
+      ],
+      "u": [
+        1
+      ],
+      "mean": "1",
+      "sum200": 200,
+      "maximum_observed_height": 1,
+      "error200": "0"
+    },
+    {
+      "w": [
+        5,
+        5
+      ],
+      "u": [
+        2
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        5,
+        5
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        3,
+        1,
+        3
+      ],
+      "u": [],
+      "mean": "5/8",
+      "sum200": 124,
+      "maximum_observed_height": 3,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        3,
+        1,
+        3
+      ],
+      "u": [
+        1
+      ],
+      "mean": "3/5",
+      "sum200": 120,
+      "maximum_observed_height": 2,
+      "error200": "0"
+    },
+    {
+      "w": [
+        3,
+        1,
+        3
+      ],
+      "u": [
+        2
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    },
+    {
+      "w": [
+        3,
+        1,
+        3
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "3/5",
+      "sum200": 120,
+      "maximum_observed_height": 2,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "u": [],
+      "mean": "5/8",
+      "sum200": 124,
+      "maximum_observed_height": 3,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "u": [
+        1
+      ],
+      "mean": "1/2",
+      "sum200": 100,
+      "maximum_observed_height": 1,
+      "error200": "0"
+    },
+    {
+      "w": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "u": [
+        2
+      ],
+      "mean": "5/8",
+      "sum200": 124,
+      "maximum_observed_height": 3,
+      "error200": "-1"
+    },
+    {
+      "w": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "u": [
+        3,
+        1
+      ],
+      "mean": "0",
+      "sum200": 0,
+      "maximum_observed_height": 0,
+      "error200": "0"
+    }
+  ]
+}

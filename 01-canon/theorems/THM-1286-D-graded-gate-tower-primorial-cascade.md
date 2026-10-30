@@ -3,6 +3,8 @@ id: THM-1286
 renumbered: was THM-1257; moved to THM-1286 during the 2026-07-19 collision repair because the first-pushed carrier-42 theorem retains THM-1257
 title: The D-GRADED GATE TOWER is a PRIMORIAL CASCADE — F_D(N) = {1..N}\{N−1} ∪ {D(N−1)} attains the slack-1 rung D/((N+1)D−1) iff N ≡ 1 (mod L_D) and N ≢ 1 (mod 2D−1), where L_D = 2·3·5···(largest prime < 2D−1) and 2D−1 must be PRIME; verified exactly for D=3 (N ≤ 100, extending HYP-4516's ≤ 37), D=4 (members exactly {31, 61, 91} in [8,100] — including the out-of-sample confirmations 4/247 at N=61 and the new 4/367 at N=91), D=5 (binder 9 = 3² composite: NEVER attains; F_5(211) degrades to the floor 1/212), and D=6 (opens at N=211: 6/1271, in a window of width 10⁻⁵). Each level's rung-killer (N ≡ 1 mod 2D−1) is the next level's enabler: L_{D'} = L_D·(2D−1). The N=61 single-far stratum is COMPLETELY classified (unique member 4/247).
 status: >
+  UPDATE 2026-10-30: PROVED uniform canonical-family gate by the Session 114 Farey
+  proof linked below. The remaining lines record historical evidence and scope.
   VERIFIED-EXACT (the gate law): exact M with witnesses for all 4 × 93 canonical
   families (D = 3..6, N = 8..100) matching the fitted gate with ZERO exceptions, plus
   the N=211 probes; member witnesses independently re-verified by residue checks.
@@ -30,6 +32,11 @@ scripts:
 ---
 
 # THM-1286 — the gate tower
+
+## Current uniform gate status (30 October 2026)
+
+[Session 114, §6](../../05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md#6-inheritance-what-is-recovered-and-what-is-closed) proves the exact all-q spectrum and hence the uniform canonical-family gate, without a per-N candidate scan. With q=N−1, D=m, the slack-one value occurs exactly when the least prime not dividing q is 2D−1. This closes the family-level gate-completeness obligation recorded below. Existing finite rungs and Goddyn–Wong tightness retain their prior credit. Arbitrary source families and unrestricted LRC remain open; historical descriptions below are not the current status of this scoped gate.
+
 
 ## 1. The law
 

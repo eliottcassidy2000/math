@@ -1,9 +1,10 @@
 ---
 id: THM-539
 title: The LRC max-min second-point spectrum — Stern-Brocot mediants, the denominator lemma, and the a=3,4 below-mediant dips
-status: MIXED — Lemma A PROVED; generic a=2 + dips a=3,4 VERIFIED exact (infinite families);
-        a>=5 OPEN (the natural family collapses to the floor at a=5 — MISTAKE-079 corrected my
-        earlier "a_max unbounded" overclaim). Whether g(k)=Theta(1/k^2) uniformly is OPEN.
+status: MIXED — see the current scope notice. Historical a<=4 saturation was superseded
+        by later exact rungs; Session 114 proves the uniform all-prime cascade and
+        arbitrarily small normalized positive excess. Finite-box scans do not certify
+        the claimed global second spectrum points.
 source: kind-pasteur-2026-06-19-S9
 related:
   - HYP-2052   # oracle-S552 spectral gap (original "gap = 2/(2n-1)" claim, here corrected)
@@ -17,6 +18,13 @@ related:
 ---
 
 # THM-539: The LRC max-min second-point spectrum
+
+## Current scope notice (30 October 2026)
+
+The assertions below that the F-family stops at level4 are **superseded**, already by the later exact rungs in THM-1286/1271/1276. [Session 114](../../05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md#6-inheritance-what-is-recovered-and-what-is-closed) now supplies the uniform all-prime proof and exact family spectrum. It exhibits attained positive excesses with k² times the excess tending to zero. The old F(211,5)=1/212 tight example remains correct; it did not justify an all-level saturation conclusion. This is not a new discovery of the previously checked higher rungs.
+
+The finite-box scans quoted below do not establish a global second minimum over unbounded speed sets. The current conclusion uses explicit above-floor families and does not assume that a positive-side spectral infimum is attained, or prove unrestricted LRC. Historical prose below is retained as provenance and must not override this notice.
+
 
 ## Setup
 
