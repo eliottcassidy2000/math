@@ -1,0 +1,18 @@
+{
+  "status": "exact finite controls for the proved recursive attachment corollary",
+  "residue_checks": 3556,
+  "terminal_mass_checks": 12,
+  "hostiles": [
+    {
+      "q": 3,
+      "j": 1,
+      "D": 26,
+      "K": 16,
+      "c": 6,
+      "g": 2,
+      "admissible_mod_reduced": 8,
+      "admissible_mod_original": 16,
+      "mass": "13/126"
+    }
+  ]
+}

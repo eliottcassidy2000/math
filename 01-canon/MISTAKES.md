@@ -4,6 +4,14 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — local balance needs a whole-core horizon and joint-tail folds
+
+- **Source:** THM-724 / `theorems/THM-724-single-killer-covering-min-rigidity.md`, old Lemma1 and E4. Both unrestricted displayed lower bounds are REFUTED; this does not refute the covering-min conjecture.
+- **Exact witnesses:** core `{1,6}` has M=3/7 and better binding slope1; adding resonant7 gives M=4/13, below the claimed3/8. The true linear horizon1/35 is shorter than the proposed displacement3/56. Separately, core `{1,2}` with resonant additions3,12 gives M=3/13, below the claimed1/4.
+- **First failed implications:** “for sufficiently small epsilon” was optimized at an unchecked epsilon; several individually rising tails were treated as still rising after the fastest had folded. The late addendum also changed the definition of single-killer, so it cannot repair the original quantifier.
+- **Strongest survivor / repair:** a certified whole-core horizon eta gives `M>=v min(eta,mu/(v+s))`; the unconditional global-Lipschitz version uses `s=max(core)`. Several tails additionally require epsilon<=1/(2 vmax). The interval-core and shallow-witness arguments survive; prime-13 tightness and the generic residual remain open/conditional, not proved.
+- **Missing coordinate / next question:** retain the first owner change and the joint arrival set. The successor `entry_cosets_resonant_echoes_20261030/LRC.md` gives an exact joint-arrival reduction and all-length recursive resonant spectra. Its verifier uses two independent exact algorithms. No minimal-counterexample claim is made.
+
 ## 2026-10-30 — leader-ledger parity needs the primitive core
 
 - **Source:** THM-722 / `theorems/THM-722-leader-ledger-conservation-law.md` and `04-computation/lrc14_leader_ledger_boxeph_S21.py`.

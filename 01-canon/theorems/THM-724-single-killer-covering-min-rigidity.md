@@ -1,17 +1,103 @@
 ---
 id: THM-724
-title: Single-killer covering-min rigidity — a rigorous proof that every primitive covering single-killer 13-set has M ≥ 14/183, with the deep well {1..12,182} the unique minimizer; via the balance lemma (perturbation), the shallow-witness lemma (counting), and prime-13 tightness. Closes opus-S253's large-s trade as a THEOREM (the interval-core, dilated-core, and killer-safe cases are unconditional; the near-tight large-s residual is delineated and empirically closed)
-status: PROVED (three of four cases unconditional; residual = near-tight non-dilated large-s cores, reduced to a structural/finite question and empirically closed over 2336+3234 configs). Lemma 1 (balance) and Lemma 2 (shallow witness) are unconditional. The interval-core floor M ≥ 14/183 (equality iff deep well) is unconditional.
-source: mac-mini-2026-07-12-S69 (rigorous proof of the S68 computational closure of opus-S253's large-s trade)
-depends_on:
-  - THM-523    # covering-min target M ≥ n/Φ6 = 14/183
-  - HYP-6265   # opus-S253 slow-fast balance M = M_core·v_f/(v_f+s), single-killer interval-core proof
-  - HYP-6290   # mac-mini-S68 large-s trade closed computationally (the census this file proves)
-  - HYP-4382   # mac-mini-S12 prime-13 tight-locus pinning: M(C)=1/13 for |C|=12 ⟺ C = c·{1..12}
-external: LRC(≤13) SETTLED (owner directive); Steinhaus three-gap; Dirichlet/counting.
+title: Guarded resonant balance and interval-core single-killer bounds
+status: PROVED scoped repair; former unconditional binding-speed lemma and multi-killer extension REFUTED; general covering-min claim OPEN
+source: mac-mini-2026-07-12-S69; corrected 2026-10-30 in entry_cosets_resonant_echoes_20261030
+depends_on: []
 ---
 
-# THM-724 — Single-killer covering-min rigidity
+# THM-724 — Guarded resonant balance
+
+**Maintained correction, 2026-10-30.** The old Lemma 1 silently extended a
+local linear germ to its proposed optimizer. It is false without a horizon.
+The old E4 also forgot that a faster added speed can fold before the slowest
+one reaches the proposed balance. Neither error refutes the covering-min
+conjecture. The current claims are precisely those below; the original text
+is retained as **SUPERSEDED historical provenance**, not as proved canon.
+The original definition `v_f > 13 max(C)` and the addendum's definition
+`#{v>=13}=1` are different and must not be interchanged. A hypothesis about
+prime-13 tightness is not a proved dependency.
+
+## 1. Definitions and guarded balance — PROVED
+
+Let `M(A)=max_t min_{a in A} ||at||`, let `mu=M(A)`, and let `t0` attain it.
+Suppose `v t0` is integral. Choose a direction `sigma` and numbers `s>=0`,
+`eta>=0` for which the **actual whole-core inequality**
+
+    min_{a in A} ||a(t0+sigma epsilon)|| >= mu-s epsilon
+
+holds for every `0<=epsilon<=eta`. Then
+
+    M(A union {v}) >= v min(eta, mu/(v+s)).
+
+**Proof.** Put `epsilon=min(eta,mu/(v+s))`. The core lower bound is at
+least `v epsilon`, and `v epsilon<=mu<=1/2`, so the resonant added speed
+has clearance exactly `v epsilon`. This proves the bound. In particular,
+with `H=max(A)`, the global Lipschitz estimate gives the unconditional
+bound `M(A union {v})>=mu v/(v+H)`.
+
+A fastest descending binding speed may supply `s` locally; it does not
+supply a value of `eta`. Equality of local slopes is not a global balance
+certificate.
+
+## 2. Exact hostile and failure boundary — FINITE-EXACT / PROVED
+
+For `A={1,6}`, the exact maximum is `mu=3/7`, attained at `t0=3/7,4/7`.
+At `t0=3/7`, the better descending binding speed is `s=1`. Add `v=7`.
+The former formula predicts `3/8`, whereas
+
+    M({1,6,7})=4/13 < 3/8,
+
+with maximizing times `5/13,8/13`. Along the proposed left direction the
+core bound `3/7-epsilon` is valid through `eta=1/35`; the proposed
+optimizer `epsilon=3/56` lies beyond it. At the proposed time `3/8`,
+runner6 has clearance `1/4`.
+
+The packet's `lrc_audit.py` verifies these maxima both by complete rational
+safe-window intersection and independent opposite-slope clock enumeration.
+No minimality among all counterexamples is claimed.
+
+## 3. Several resonant speeds — PROVED repair / REFUTED old E4
+
+Under the same whole-core horizon, let all `v_i t0` be integral and put
+`vmin=min v_i`, `vmax=max v_i`. The valid bound is
+
+    epsilon=min(eta,1/(2 vmax),mu/(vmin+s)),
+    M(A union {v_i}) >= vmin epsilon.
+
+Every added speed is still on its initial rising segment, and the core
+bound pays the slowest. The unrestricted old formula fails for the core
+`{1,2}` at `t0=1/3` with added speeds3 and12: it predicts `1/4`, while
+`M({1,2,3,12})=3/13`. Joint first arrival, rather than the minimum of
+individual speeds, gives a sharper exact replacement for the near-interval
+cores in the successor packet.
+
+## 4. Survivors and open scope
+
+- **PROVED:** for `C={1,...,12}`, the left core clearance at `t0=1/13`
+  is exactly `t` throughout `0<=t<=1/13`. Thus the horizon is sufficient,
+  and if `13|v`, `M(C union {v})>=v/(13(v+1))`. In the covering family
+  `v=182k`, this is at least `14/183`, strictly greater when `k>1`.
+- **PROVED:** the original shallow-witness counting Lemma2 below remains
+  valid for `C=c{1,...,12}`, `c>=2`, `gcd(c,v)=1`; it gives `M>=1/13`.
+- **PROVED:** evaluating at any killer-safe core witness gives its stated
+  lower bound. No local continuation is needed in that case.
+- **OPEN / not supplied here:** the general near-tight non-interval case,
+  the old E3 implication from a large binding speed to a useful shallow
+  witness, and the global multi-killer assertion in the historical addendum.
+  The finite census and HYP-4382 are not universal proofs.
+
+Successor: `05-knowledge/results/entry_cosets_resonant_echoes_20261030/LRC.md`.
+Correction mechanism: `01-canon/MISTAKES.md`, 2026-10-30, local balance horizon.
+
+---
+
+## SUPERSEDED historical text — do not cite as current proof
+
+The following retains the original assertions and correction lineage.
+The maintained correction above takes precedence over every conflicting
+status or implication below, including the addendum's “fully closed” text.
+
 
 **One line.** Every primitive covering *single-killer* 13-set `S` has `M(S) ≥ 14/183`, and the
 **deep well `{1,…,12,182}` is the unique minimizer**. This turns opus-S253's slow-fast balance
