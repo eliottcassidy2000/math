@@ -1828,6 +1828,76 @@
     "The source proofs establish all-order conclusions; finite checks are not extrapolation proofs.",
     "Shell commands and some local scratch writes stalled. No unconfirmed Python batch or local scratch artifact is represented as a completed root replay.",
     "Only corrected published sources are included. In particular the signed clock at modulus100 is300, with Q^150=49I retained as a hostile.",
-    "Bank orbit counts are under the specified effective odd subgroup, not full graph isomorphism counts."
-  ]
+    "Bank orbit counts are under the specified effective odd subgroup, not full graph isomorphism counts.",
+    "A later root shell probe explicitly returned exec-server transport disconnected; this did not affect the recorded JavaScript isolate replays."
+  ],
+  "additional_published_source_replay": {
+    "ref": "458da344cd41d0babb289b48efad31bc8255a54c",
+    "file": "general_bank_tower.js",
+    "blob_sha": "340e7830b0c42b4a78e6a9e3143ac4c266bc8de4",
+    "result": {
+      "status": "PASS",
+      "cases": [
+        {
+          "p": 5,
+          "metal": 1,
+          "k": 2,
+          "vertices": 625,
+          "bankBits": 24,
+          "oddEffectiveGroup": 25,
+          "cycleHistogram": {
+            "8": 16,
+            "16": 8,
+            "24": 1
+          },
+          "binaryBankOrbits": "692224"
+        },
+        {
+          "p": 5,
+          "metal": 1,
+          "k": 3,
+          "vertices": 15625,
+          "bankBits": 124,
+          "oddEffectiveGroup": 125,
+          "cycleHistogram": {
+            "12": 100,
+            "44": 16,
+            "84": 8,
+            "124": 1
+          },
+          "binaryBankOrbits": "170141183461707171770974935790600192"
+        },
+        {
+          "p": 13,
+          "metal": 3,
+          "k": 2,
+          "vertices": 28561,
+          "bankBits": 168,
+          "oddEffectiveGroup": 169,
+          "cycleHistogram": {
+            "24": 144,
+            "96": 24,
+            "168": 1
+          },
+          "binaryBankOrbits": "2213872302702432822852336053702430752273172791296"
+        },
+        {
+          "p": 17,
+          "metal": 8,
+          "k": 2,
+          "vertices": 83521,
+          "bankBits": 288,
+          "oddEffectiveGroup": 289,
+          "cycleHistogram": {
+            "32": 256,
+            "160": 32,
+            "288": 1
+          },
+          "binaryBankOrbits": "1720841648476770388080907433033982145838146031806009033989556718131766621600770686976"
+        }
+      ],
+      "recurrence": "B_(k+1)(Q)=(Q^(p-1) B_k(Q^p)+(p-1)Q^((p-1)(k+1)))/p",
+      "scope": "Exhaustive actual signed action in four specified simple-ramification cases; general result is proved separately."
+    }
+  }
 }
