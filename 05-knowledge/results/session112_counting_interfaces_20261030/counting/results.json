@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "checks": 3812,
+  "results": [
+    {
+      "n": 3,
+      "labelled": 8,
+      "ordinary_classes": 2,
+      "canonical_minima": [
+        0,
+        2
+      ],
+      "cuts_verified": 8,
+      "affine_indicator_terms": {
+        "0": 6,
+        "1": 6,
+        "2": 5,
+        "3": 5,
+        "4": 26,
+        "6": 26,
+        "7": 26
+      }
+    },
+    {
+      "n": 4,
+      "labelled": 64,
+      "ordinary_classes": 4,
+      "canonical_minima": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "cuts_verified": 64,
+      "affine_indicator_terms": {
+        "0": 24,
+        "1": 24,
+        "16": 66,
+        "31": 170,
+        "32": 728,
+        "62": 728,
+        "63": 728
+      }
+    },
+    {
+      "n": 5,
+      "labelled": 1024,
+      "ordinary_classes": 12,
+      "canonical_minima": [
+        0,
+        2,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        40,
+        41,
+        76
+      ],
+      "cuts_verified": 1024,
+      "affine_indicator_terms": {}
+    }
+  ],
+  "hostiles": {
+    "prefix_children": "1 parent orbit; 1+1 child-intersecting orbit counts",
+    "prefix_stabilizer": "C3 on weight-one length3; prefix0 gives 2 stabilizer classes but 1 global orbit"
+  }
+}
