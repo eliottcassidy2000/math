@@ -3,6 +3,12 @@
 30 October 2026. Portfolio: Collatz content debt (anchor), unmarked tournament
 family compilation (niche), and the older25/50/100/200 maps (wildcard).
 
+**Current extension:** the [next packet](../layer_lifts_cyclic_intersections_20261030/README.md)
+proves the sharp fifth truncation781/1250, supplies untruncated marked-controller
+divisors, and bounds intersections between distinct prime cyclic-parent charts
+by a point. Its composite hostile and open all-layer targets retain the
+boundaries below.
+
 The principal advance is an exact, uniform bound on a specified part of
 changing-word cancellation. For prefix contents
 `g_i=gcd(|3^i-2^(a_1+...+a_i)|,B_i)`,

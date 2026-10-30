@@ -1,0 +1,89 @@
+{
+  "alphabet": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "checks": 367923,
+  "examples": [
+    {
+      "base_content": 1,
+      "commutator_constants": [
+        -4
+      ],
+      "word": [
+        1,
+        2
+      ]
+    },
+    {
+      "base_content": 1,
+      "commutator_constants": [
+        -12
+      ],
+      "word": [
+        1,
+        3
+      ]
+    },
+    {
+      "base_content": 1,
+      "commutator_constants": [
+        -60,
+        -208
+      ],
+      "word": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "base_content": 1,
+      "commutator_constants": [
+        16,
+        960
+      ],
+      "word": [
+        2,
+        3,
+        1
+      ]
+    }
+  ],
+  "marked_entry_cases": 2520,
+  "max_length": 5,
+  "primitive_words": 1336,
+  "proper_phases": 4932,
+  "repetitions_checked": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "resonant_marked_entries": 96,
+  "scope": "full-integer theorem is proved in COLLATZ.md; these are bounded exact controls",
+  "valuation_primes": [
+    5,
+    7,
+    11
+  ]
+}

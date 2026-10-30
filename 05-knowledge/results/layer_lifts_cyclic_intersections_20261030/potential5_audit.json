@@ -1,0 +1,18 @@
+{
+  "E": 5,
+  "arithmetic": "exact int64; no floating point",
+  "checked_inequalities": 156250000,
+  "denominator": 1250,
+  "equality_reward": 781,
+  "equality_word_length": 1250,
+  "maximum": 5469,
+  "minimum": 0,
+  "minimum_slack": 0,
+  "nonzero": 500671,
+  "numerator": 781,
+  "q": 3125,
+  "sha256": "f2522660b63908ee3b9fe414d2930efcba2c0c1cb7dd9a54c1d8314c6806dcca",
+  "states": 7812500,
+  "tail_slack": 4682,
+  "tight_inequalities": 500672
+}

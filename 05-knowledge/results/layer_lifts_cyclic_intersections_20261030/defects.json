@@ -1,0 +1,131 @@
+{
+  "checks": 1148392,
+  "dark_defects": [
+    {
+      "charge": 0,
+      "clock": 5,
+      "jump_debt": 1,
+      "kappa_sum": 0,
+      "multiplier_mod5": 2,
+      "nonone_cost": 5,
+      "r": 0,
+      "required_height": 1,
+      "scalar_truncated_charge": 0
+    },
+    {
+      "charge": 0,
+      "clock": 7,
+      "jump_debt": 2,
+      "kappa_sum": 0,
+      "multiplier_mod5": 2,
+      "nonone_cost": 5,
+      "r": 1,
+      "required_height": 2,
+      "scalar_truncated_charge": 0
+    },
+    {
+      "charge": 0,
+      "clock": 47,
+      "jump_debt": 3,
+      "kappa_sum": 0,
+      "multiplier_mod5": 2,
+      "nonone_cost": 5,
+      "r": 21,
+      "required_height": 3,
+      "scalar_truncated_charge": 0
+    },
+    {
+      "charge": 0,
+      "clock": 97,
+      "jump_debt": 4,
+      "kappa_sum": 0,
+      "multiplier_mod5": 2,
+      "nonone_cost": 5,
+      "r": 46,
+      "required_height": 4,
+      "scalar_truncated_charge": 0
+    },
+    {
+      "charge": 0,
+      "clock": 597,
+      "jump_debt": 5,
+      "kappa_sum": 0,
+      "multiplier_mod5": 2,
+      "nonone_cost": 5,
+      "r": 296,
+      "required_height": 5,
+      "scalar_truncated_charge": 0
+    },
+    {
+      "clock": 1847,
+      "multiplier_mod5": 2,
+      "r": 921,
+      "required_height": 6
+    },
+    {
+      "clock": 26847,
+      "multiplier_mod5": 2,
+      "r": 13421,
+      "required_height": 7
+    }
+  ],
+  "positive_compositions_through_clock": 16,
+  "residue_banks": [
+    {
+      "last_full_cube_order": 4,
+      "lcm": 105,
+      "moduli": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "last_full_cube_order": 5,
+      "lcm": 5643,
+      "moduli": [
+        11,
+        19,
+        27
+      ]
+    },
+    {
+      "last_full_cube_order": 7,
+      "lcm": 2795793,
+      "moduli": [
+        1001,
+        343,
+        57
+      ]
+    }
+  ],
+  "scalar_hostile": {
+    "charge": 0,
+    "clock": 19,
+    "jump_debt": 0,
+    "kappa_sum": 0,
+    "nonone_cost": 3,
+    "scalar_truncated_charge": 12,
+    "word": [
+      3,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "scope": "finite checks support the written all-word proof; no universal Collatz conclusion",
+  "words": 65535
+}

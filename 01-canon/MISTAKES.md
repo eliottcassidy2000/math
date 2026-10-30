@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — sharp layer bounds were called equivalent to their weaker limit
+
+- **Source:** `05-knowledge/results/anchor_content_flat_quotients_20261030/COLLATZ.md`, section5, the phrase “or equivalently”.
+- **First unsupported implication:** bounds `S_E<=(5/8)(1-5^-E)A` for every E imply the untruncated `S_infinity<=5A/8`; the reverse implication does not follow merely by truncating the latter, because that loses the strict E-dependent improvement. No converse was proved.
+- **Repair / strongest survivor:** replace the equivalence with the proved sufficient implication. The exact certificates for E<=4 remain unchanged; the next packet proves E=5 by an independently implemented finite audit. Neither open universal inequality is refuted here.
+- **Missing coordinate / new question:** a converse would need a separate argument recovering finite-layer slack, not a limiting notation. The new lift retains that slack explicitly. This logs an unjustified equivalence, not a known counterexample to either conjecture.
+
 ## 2026-10-30 — the divide-by-four affine clock has an exceptional five-adic seed
 
 - **Source:** discovery candidate in `05-knowledge/results/anchor_content_flat_quotients_20261030/content_renewal.py`; not a previously canonized theorem.

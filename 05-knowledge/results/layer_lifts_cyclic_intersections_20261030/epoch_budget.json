@@ -1,0 +1,61 @@
+{
+  "dark_controls": [
+    {
+      "budget": "25/8",
+      "debt": 0,
+      "r": 0
+    },
+    {
+      "budget": "35/8",
+      "debt": 0,
+      "r": 1
+    },
+    {
+      "budget": "235/8",
+      "debt": 0,
+      "r": 21
+    },
+    {
+      "budget": "485/8",
+      "debt": 0,
+      "r": 46
+    },
+    {
+      "budget": "2985/8",
+      "debt": 0,
+      "r": 296
+    }
+  ],
+  "exact_words": 262143,
+  "finite_searches": [
+    {
+      "E": 1,
+      "letters_through": 12,
+      "maximum_scaled_debt": -50,
+      "popped": 20,
+      "scale": 40,
+      "scope": "finite truncated-height graph only; no unbounded-letter or layer claim",
+      "states": 20
+    },
+    {
+      "E": 2,
+      "letters_through": 12,
+      "maximum_scaled_debt": -250,
+      "popped": 775,
+      "scale": 200,
+      "scope": "finite truncated-height graph only; no unbounded-letter or layer claim",
+      "states": 500
+    },
+    {
+      "E": 3,
+      "letters_through": 12,
+      "maximum_scaled_debt": -1250,
+      "popped": 22898,
+      "scale": 1000,
+      "scope": "finite truncated-height graph only; no unbounded-letter or layer claim",
+      "states": 12500
+    }
+  ],
+  "max_clock": 18,
+  "status": "FINITE-EXACT evidence for an OPEN sufficient budget; not universal coverage"
+}

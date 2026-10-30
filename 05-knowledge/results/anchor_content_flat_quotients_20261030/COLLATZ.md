@@ -203,11 +203,15 @@ the positive source `2^(t+1)-1`; no positive infinite all-ones orbit is claimed.
 
 ## 5. Precise next target and boundaries
 
-**OPEN hypothesis:** (9) holds for every E, or equivalently
+**OPEN hypothesis:** (9) holds for every E. This would imply
 
     sum_i v_5(g(w_i)) <= (5/8) A
 
-for every finite positive word. The four audited levels do not prove it.
+for every finite positive word. No converse from this weaker untruncated
+bound to the sharp bounds(9) has been proved. The four audited levels do not
+prove either universal assertion. The [next packet](../layer_lifts_cyclic_intersections_20261030/COLLATZ.md)
+adds the fifth exact level, a phase-aware discounted epoch target, and a
+marked-entry divisor theorem; the all-layer obligation remains open.
 Reduction of affine states from `5^(E+1)` to `5^E` has fibres of size25.
 Both coefficient lifts belong to the same word: independently mixing their
 marginals is forbidden. Seek an inductive potential on this 25-point fibre,

@@ -1,0 +1,69 @@
+{
+  "profiles": [
+    {
+      "distinct_values": 11,
+      "from_level": 1,
+      "identity_K": 36,
+      "max_K": 36,
+      "min_K": -4
+    },
+    {
+      "distinct_values": 59,
+      "from_level": 2,
+      "identity_K": 196,
+      "max_K": 196,
+      "min_K": -36
+    },
+    {
+      "distinct_values": 299,
+      "from_level": 3,
+      "identity_K": 996,
+      "max_K": 996,
+      "min_K": -196
+    },
+    {
+      "distinct_values": 1499,
+      "from_level": 4,
+      "identity_K": 4996,
+      "max_K": 4996,
+      "min_K": -996,
+      "omitted_slack_hostiles": [
+        {
+          "Ksource": 124,
+          "Ktarget": 0,
+          "a": 1,
+          "deficit_without_slack": 120,
+          "failures_without_slack": 38482,
+          "old_slack": 280,
+          "repaired_slack": 1280,
+          "source": [
+            2,
+            1564
+          ],
+          "target": [
+            3,
+            784
+          ]
+        },
+        {
+          "Ksource": 124,
+          "Ktarget": 0,
+          "a": 2,
+          "deficit_without_slack": 116,
+          "failures_without_slack": 134775,
+          "old_slack": 904,
+          "repaired_slack": 4404,
+          "source": [
+            2,
+            1564
+          ],
+          "target": [
+            1564,
+            392
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "FINITE-EXACT lift profile through E=5; no induction theorem"
+}
