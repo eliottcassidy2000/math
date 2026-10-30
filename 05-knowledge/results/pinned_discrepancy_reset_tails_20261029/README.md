@@ -5,6 +5,15 @@ FINITE-EXACT certificates / OPEN universal Collatz bounds.** Same-agent
 proof review, with independent computational checks; no literature-priority
 claim and no independent-agent audit. No new canon theorem ID is reserved.
 
+**Continuation (2026-10-30):** [balanced ramified lifts and source-dependent
+cutoffs](../source_cutoffs_balanced_lifts_20261029/README.md) now give an
+all-depth logarithm-free O_p(sqrt N) completion for the specified ramified
+majority-compatible tower, with every lift prime. This uses additional
+orbit Gauss-sum structure and legal-menu rounding; arbitrary growing-orbit
+pinning remains open. The same packet proves finite signed-residual duality
+and a source-index cutoff compiler without assuming a global excursion-
+height envelope. The independent universal Collatz estimate remains open.
+
 ## 0. Inheritance and the research board
 
 Anchor: source-weighted Collatz residual tails. Niche: logarithm-free

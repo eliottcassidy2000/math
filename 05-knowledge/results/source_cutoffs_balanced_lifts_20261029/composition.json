@@ -1,0 +1,90 @@
+{
+  "exact_kernel_cases": 3324,
+  "hostile_control": "Increasing only the first child size by two destroys regularity.",
+  "nonuniform_prime_witness": {
+    "binary_subset_orbits": 512,
+    "composite_automorphism_order": 9,
+    "prime_automorphism_order": 1,
+    "prime_order": 7,
+    "primitive_sizes": [
+      3,
+      1,
+      1,
+      3,
+      1,
+      1,
+      1
+    ],
+    "regular_composite_order": 11,
+    "regular_rows_verified": 11,
+    "sign_matrix": [
+      [
+        0,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        0,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        0,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        0,
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        1,
+        0,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        0
+      ]
+    ],
+    "triple_inflation_order": 33,
+    "unmarked_one_vertex_children": 505,
+    "vertex_orbits": 7
+  },
+  "positive_kernel_labelled_order5": 64
+}
