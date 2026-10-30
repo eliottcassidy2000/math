@@ -1,0 +1,736 @@
+{
+  "clocks": {
+    "source_comparison": [
+      {
+        "k": 1,
+        "linear_module_size": 256,
+        "n": 343,
+        "states": 8
+      },
+      {
+        "k": 1,
+        "linear_module_size": 256,
+        "n": 1001,
+        "states": 8
+      },
+      {
+        "k": 1,
+        "linear_module_size": 2,
+        "n": 57,
+        "states": 1
+      },
+      {
+        "k": 1,
+        "linear_module_size": 1,
+        "n": 6,
+        "states": 1
+      },
+      {
+        "k": 2,
+        "linear_module_size": 65536,
+        "n": 343,
+        "states": 16
+      },
+      {
+        "k": 2,
+        "linear_module_size": 65536,
+        "n": 1001,
+        "states": 16
+      },
+      {
+        "k": 2,
+        "linear_module_size": 4,
+        "n": 57,
+        "states": 2
+      },
+      {
+        "k": 2,
+        "linear_module_size": 2,
+        "n": 6,
+        "states": 1
+      },
+      {
+        "k": 3,
+        "linear_module_size": 16777216,
+        "n": 343,
+        "states": 64
+      },
+      {
+        "k": 3,
+        "linear_module_size": 16777216,
+        "n": 1001,
+        "states": 64
+      },
+      {
+        "k": 3,
+        "linear_module_size": 8,
+        "n": 57,
+        "states": 4
+      },
+      {
+        "k": 3,
+        "linear_module_size": 256,
+        "n": 6,
+        "states": 8
+      },
+      {
+        "k": 4,
+        "linear_module_size": 4294967296,
+        "n": 343,
+        "states": 512
+      },
+      {
+        "k": 4,
+        "linear_module_size": 4294967296,
+        "n": 1001,
+        "states": 512
+      },
+      {
+        "k": 4,
+        "linear_module_size": 16,
+        "n": 57,
+        "states": 8
+      },
+      {
+        "k": 4,
+        "linear_module_size": 65536,
+        "n": 6,
+        "states": 16
+      },
+      {
+        "k": 5,
+        "linear_module_size": 1099511627776,
+        "n": 343,
+        "states": 4096
+      },
+      {
+        "k": 5,
+        "linear_module_size": 1099511627776,
+        "n": 1001,
+        "states": 4096
+      },
+      {
+        "k": 5,
+        "linear_module_size": 2048,
+        "n": 57,
+        "states": 32
+      },
+      {
+        "k": 5,
+        "linear_module_size": 16777216,
+        "n": 6,
+        "states": 64
+      }
+    ],
+    "unit_core_cases": [
+      {
+        "ell": 2,
+        "k": 1,
+        "linear_module_size": "256",
+        "periods": [
+          2,
+          2,
+          2
+        ],
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "states": 8
+      },
+      {
+        "ell": 2,
+        "k": 2,
+        "linear_module_size": "65536",
+        "periods": [
+          2,
+          2,
+          4
+        ],
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "states": 16
+      },
+      {
+        "ell": 2,
+        "k": 3,
+        "linear_module_size": "16777216",
+        "periods": [
+          2,
+          4,
+          8
+        ],
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "states": 64
+      },
+      {
+        "ell": 2,
+        "k": 4,
+        "linear_module_size": "4294967296",
+        "periods": [
+          4,
+          8,
+          16
+        ],
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "states": 512
+      },
+      {
+        "ell": 2,
+        "k": 5,
+        "linear_module_size": "1099511627776",
+        "periods": [
+          8,
+          16,
+          32
+        ],
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "states": 4096
+      },
+      {
+        "ell": 3,
+        "k": 1,
+        "linear_module_size": "81",
+        "periods": [
+          3,
+          3
+        ],
+        "primes": [
+          7,
+          13
+        ],
+        "states": 9
+      },
+      {
+        "ell": 3,
+        "k": 2,
+        "linear_module_size": "6561",
+        "periods": [
+          9,
+          9
+        ],
+        "primes": [
+          7,
+          13
+        ],
+        "states": 81
+      },
+      {
+        "ell": 3,
+        "k": 3,
+        "linear_module_size": "531441",
+        "periods": [
+          27,
+          27
+        ],
+        "primes": [
+          7,
+          13
+        ],
+        "states": 729
+      },
+      {
+        "ell": 3,
+        "k": 2,
+        "linear_module_size": "43046721",
+        "periods": [
+          9,
+          9,
+          9
+        ],
+        "primes": [
+          7,
+          13,
+          19
+        ],
+        "states": 729
+      },
+      {
+        "ell": 5,
+        "k": 2,
+        "linear_module_size": "390625",
+        "periods": [
+          25,
+          25
+        ],
+        "primes": [
+          11,
+          31
+        ],
+        "states": 625
+      }
+    ]
+  },
+  "compiler": {
+    "compiled_queries": 7200,
+    "full_mixed_carries": 21
+  },
+  "hostile_81_27": {
+    "common_cyclic_triples": 67,
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ]
+  },
+  "hostiles": {
+    "all_order_joint_hostile_controls": [
+      {
+        "agreeing_proper_probes": 1,
+        "outside_source": 3,
+        "primes": [
+          7
+        ],
+        "source": 7
+      },
+      {
+        "agreeing_proper_probes": 3,
+        "outside_source": 3,
+        "primes": [
+          7,
+          11
+        ],
+        "source": 77
+      },
+      {
+        "agreeing_proper_probes": 7,
+        "outside_source": 3,
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "source": 1001
+      },
+      {
+        "agreeing_proper_probes": 15,
+        "outside_source": 3,
+        "primes": [
+          7,
+          11,
+          13,
+          17
+        ],
+        "source": 17017
+      },
+      {
+        "agreeing_proper_probes": 31,
+        "outside_source": 3,
+        "primes": [
+          7,
+          11,
+          13,
+          17,
+          19
+        ],
+        "source": 323323
+      },
+      {
+        "agreeing_proper_probes": 63,
+        "outside_source": 3,
+        "primes": [
+          7,
+          11,
+          13,
+          17,
+          19,
+          23
+        ],
+        "source": 7436429
+      }
+    ],
+    "chain": [
+      {
+        "aliquot": 343,
+        "binary_Hankel_rank": 8,
+        "binary_states": 8,
+        "n": 1001
+      },
+      {
+        "aliquot": 57,
+        "binary_Hankel_rank": 8,
+        "binary_states": 8,
+        "n": 343
+      },
+      {
+        "aliquot": 23,
+        "binary_Hankel_rank": 1,
+        "binary_states": 1,
+        "n": 57
+      }
+    ],
+    "new_operation_hostile": {
+      "aliquot_sources": [
+        6,
+        8
+      ],
+      "next_observation_parities": [
+        0,
+        1
+      ],
+      "sources": [
+        25,
+        49
+      ]
+    }
+  },
+  "inherited_tournament_gates": 7,
+  "local_gates": 30894,
+  "matrices": {
+    "small_example": {
+      "H": [
+        [
+          0,
+          1,
+          1,
+          6
+        ],
+        [
+          1,
+          3,
+          6,
+          16
+        ],
+        [
+          1,
+          6,
+          4,
+          21
+        ],
+        [
+          6,
+          16,
+          21,
+          55
+        ]
+      ],
+      "n": 1,
+      "primes": [
+        2,
+        3
+      ],
+      "smith": [
+        1,
+        1,
+        1,
+        24
+      ]
+    },
+    "three_port_examples": [
+      {
+        "determinant": 594000,
+        "n": 1,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          30,
+          30,
+          660
+        ]
+      },
+      {
+        "determinant": 1254113280000000000,
+        "n": 57,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "smith": [
+          1,
+          20,
+          20,
+          20,
+          60,
+          1800,
+          1800,
+          806400
+        ]
+      },
+      {
+        "determinant": 409455820800000000000000000,
+        "n": 343,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "smith": [
+          1,
+          400,
+          400,
+          400,
+          400,
+          12000,
+          12000,
+          111072000
+        ]
+      },
+      {
+        "determinant": 765906164800453680687648000,
+        "n": 578,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "smith": [
+          1,
+          307,
+          307,
+          307,
+          614,
+          18420,
+          18420,
+          127061160
+        ]
+      },
+      {
+        "determinant": 6910707082648583074989735936000,
+        "n": 1001,
+        "primes": [
+          2,
+          3,
+          5
+        ],
+        "smith": [
+          7,
+          1344,
+          1344,
+          1344,
+          1344,
+          40320,
+          40320,
+          186117120
+        ]
+      },
+      {
+        "determinant": 1368229401,
+        "n": 1,
+        "primes": [
+          3,
+          7,
+          11
+        ],
+        "smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          231,
+          231,
+          25641
+        ]
+      },
+      {
+        "determinant": 2990520512179200000000,
+        "n": 57,
+        "primes": [
+          3,
+          7,
+          11
+        ],
+        "smith": [
+          1,
+          20,
+          20,
+          20,
+          60,
+          13860,
+          13860,
+          32432400
+        ]
+      },
+      {
+        "determinant": 18938056096093196601,
+        "n": 343,
+        "primes": [
+          3,
+          7,
+          11
+        ],
+        "smith": [
+          1,
+          1,
+          1,
+          1,
+          343,
+          79233,
+          79233,
+          8794863
+        ]
+      },
+      {
+        "determinant": 993516867002386511771984001771921,
+        "n": 578,
+        "primes": [
+          3,
+          7,
+          11
+        ],
+        "smith": [
+          1,
+          921,
+          921,
+          921,
+          921,
+          212751,
+          212751,
+          30506578641
+        ]
+      },
+      {
+        "determinant": 76462860973476311584056576,
+        "n": 1001,
+        "primes": [
+          3,
+          7,
+          11
+        ],
+        "smith": [
+          7,
+          14,
+          14,
+          14,
+          154,
+          249018,
+          249018,
+          416856132
+        ]
+      },
+      {
+        "determinant": 281843843281,
+        "n": 1,
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "smith": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1001,
+          1001,
+          281281
+        ]
+      },
+      {
+        "determinant": 821186782225550540800000000,
+        "n": 57,
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "smith": [
+          1,
+          80,
+          80,
+          80,
+          80,
+          80080,
+          80080,
+          3126323200
+        ]
+      },
+      {
+        "determinant": 3901081580685955146481,
+        "n": 343,
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "smith": [
+          1,
+          1,
+          1,
+          1,
+          343,
+          343343,
+          343343,
+          96479383
+        ]
+      },
+      {
+        "determinant": 285144488102815179542220855945608001,
+        "n": 578,
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "smith": [
+          1,
+          921,
+          921,
+          921,
+          921,
+          921921,
+          921921,
+          466271686881
+        ]
+      },
+      {
+        "determinant": 282972910844840902967281,
+        "n": 1001,
+        "primes": [
+          7,
+          11,
+          13
+        ],
+        "smith": [
+          1,
+          1,
+          1,
+          1,
+          1001,
+          1002001,
+          1002001,
+          281562281
+        ]
+      }
+    ],
+    "universes": {
+      "r1": 400,
+      "r2": 480,
+      "r3": 15,
+      "r4_arrow_det_only": 8
+    }
+  }
+}

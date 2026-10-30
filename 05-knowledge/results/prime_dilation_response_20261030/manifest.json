@@ -1,0 +1,77 @@
+{
+  "artifacts": {
+    "AUDIT.md": "728ce3512ab6ccead95d13d61e9472b422a55a69c971af250a21ff55c394d4f9",
+    "CONNECTIONS.md": "c0dcdc540e781d377e764e8704723bf77584bac690ea60bab91f398dd227ff86",
+    "PROOFS.md": "4854aedbaff1bcdc35c0db4e62a2f3204ee07cd42bcd691ba554dff5e1b5482b",
+    "README.md": "33399d0331a4ade95da90948875b339be61432fd1f17ad977765b8f6928f17c2",
+    "check.py": "ff068c4e6859a7371f13da260b7b80f2cfa3511c6d204158bc82fcdea3ec21eb",
+    "receipt.json": "3f0df960a0ac5ce74191c78cdf9ab47d93885fde7ea5f97e32da468ca55059df",
+    "seal.py": "e145f7157d7e42e2f519766a3a0cbbdb1e960ee942d6ad699ebfe5fd3bdb5954"
+  },
+  "live_runtime_inputs": [
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+  ],
+  "source_pins": [
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "628b155529b97490630fcb2b5255bb070a11878c424e801f5a1f336817bdf437",
+      "path": "05-knowledge/results/session78_fourth_power_aliquot_20261027/ALIQUOT.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "02c95690272f18f2bd7ef5b288abd155596360a04f4ae3250628d6134db5b2bf",
+      "path": "05-knowledge/results/session81_counterexample_families_20261028/ALIQUOT_OBSERVERS.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "f57a15e103528790c4f8ad46eff7a7a9178a91b53676a0f8d784d17534da8d2c",
+      "path": "05-knowledge/results/session108_sigma_symmetry_20261030/arithmetic/ARITHMETIC.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "ee1e776107c7e8d37f37efddbeefc3f0e607a974b0028d8f469b3bb14c2f46e8",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/arithmetic/ALIQUOT_MODULAR.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "f556862b854e583a4c16599bf14b375a776cb00fcb5207804df597d1a85256c0",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/arithmetic/POWER_OBSERVERS.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "241d5e43c95a045138ce528fc405bd6ab2acf27d02335e2c75ed417a1fea3b6c",
+      "path": "05-knowledge/results/overnight_rank_return_20261029/PERIODIC_COMPLEMENT.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "e06c3f75ab9794e9f1ce3fd0725d7223e5a92372ca2582bead414b9e66265e86",
+      "path": "05-knowledge/results/scaled_count_fft_carriers_20261030/THEORY.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "26100bbb5fbb8dbc02048b1904d2fe4524afe90a0cdeff7a3ac3c38a5567ce69",
+      "path": "05-knowledge/results/layer_lifts_cyclic_intersections_20261030/COLLATZ.md"
+    },
+    {
+      "commit": "7107d2f1448db52e6ce111125dd0b7d033a3642a",
+      "lf_sha256": "b6e81168244a0ce50f014b71d72c77ad6f6e5aead5839241b5722e0aeb6a98db",
+      "path": "05-knowledge/results/pinned_ramified_counts_20261030/PROOFS.md"
+    },
+    {
+      "commit": "46677c32e4bd695da8fb12eb79eabc978bf723e8",
+      "lf_sha256": "eba5672e15604c7868e790c1848a3cbc661dad7c91969144f2f4513810c68d70",
+      "path": "05-knowledge/results/session113_symmetry_consumers_20261030/composite/COMPOSITE_PHASE.md"
+    },
+    {
+      "commit": "46677c32e4bd695da8fb12eb79eabc978bf723e8",
+      "lf_sha256": "891ae476dc0508d3a2b8780077aa063d9657c96381326776e881479d57ec7588",
+      "path": "05-knowledge/results/session113_symmetry_consumers_20261030/prime_ranking/PRIME_RANKING.md"
+    }
+  ],
+  "status": "Integrity only; same-agent proof review"
+}
