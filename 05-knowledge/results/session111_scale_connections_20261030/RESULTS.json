@@ -1,0 +1,1833 @@
+{
+  "status": "PASS",
+  "published_source_ref": "946a8643971c359bc10e0c56842e0efb0e3d96ac",
+  "method": "Fetch immutable published JavaScript sources and replay exact assertions in the parent JavaScript isolate.",
+  "checks": [
+    {
+      "file": "ports.js",
+      "blob_sha": "47a48b89b561c11a4fc17add3bb9d25dc7e2893c",
+      "result": {
+        "status": "PASS",
+        "ring": "(Z/25)[mu]/(mu^2-mu-1)",
+        "g": [
+          2,
+          3
+        ],
+        "eta": [
+          5,
+          15
+        ],
+        "vertices": 625,
+        "clockOrbitsIncludingZero": 49,
+        "generatorCount": 5,
+        "literalPairOrbitChecks": 975000,
+        "oneFibre": {
+          "moved": 125,
+          "fiveCycles": 25,
+          "index": 100
+        },
+        "binaryPortConstraintRanks": [
+          100,
+          200,
+          300
+        ],
+        "independentTwoPorts": {
+          "inputBits": 250,
+          "freeBits": 50,
+          "constraintBits": 200
+        },
+        "correlatedTwoPorts": {
+          "effectiveInputBits": 125,
+          "freeBits": 25,
+          "constraintBits": 100
+        },
+        "pairwiseIdenticalTripleControls": {
+          "independentExponent": 300,
+          "evenParityExponent": 200
+        },
+        "scope": "Verifies universal difference-orbit preservation and constraint ranks; does not enumerate full graph automorphisms."
+      }
+    },
+    {
+      "file": "arithmetic.js",
+      "blob_sha": "a93886af76246b48a3aee8ba03f3fa5a8b53bd2d",
+      "result": {
+        "status": "PASS",
+        "gaussianRange": 10000,
+        "eisensteinRange": 500,
+        "aliquotOddM": 49,
+        "aliquotMaximumK": 6,
+        "classicalSquareCountControls": 500,
+        "rows": [
+          {
+            "n": 25,
+            "representations": [
+              [
+                0,
+                5
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "aliquot": 6,
+            "eisensteinShell": 6
+          },
+          {
+            "n": 50,
+            "representations": [
+              [
+                1,
+                7
+              ],
+              [
+                5,
+                5
+              ]
+            ],
+            "aliquot": 43,
+            "eisensteinShell": 0
+          },
+          {
+            "n": 100,
+            "representations": [
+              [
+                0,
+                10
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "aliquot": 117,
+            "eisensteinShell": 6
+          },
+          {
+            "n": 200,
+            "representations": [
+              [
+                2,
+                14
+              ],
+              [
+                10,
+                10
+              ]
+            ],
+            "aliquot": 265,
+            "eisensteinShell": 0
+          },
+          {
+            "n": 169,
+            "representations": [
+              [
+                0,
+                13
+              ],
+              [
+                5,
+                12
+              ]
+            ],
+            "aliquot": 14,
+            "eisensteinShell": 18
+          },
+          {
+            "n": 338,
+            "representations": [
+              [
+                7,
+                17
+              ],
+              [
+                13,
+                13
+              ]
+            ],
+            "aliquot": 211,
+            "eisensteinShell": 0
+          },
+          {
+            "n": 289,
+            "representations": [
+              [
+                0,
+                17
+              ],
+              [
+                8,
+                15
+              ]
+            ],
+            "aliquot": 18,
+            "eisensteinShell": 6
+          },
+          {
+            "n": 578,
+            "representations": [
+              [
+                7,
+                23
+              ],
+              [
+                17,
+                17
+              ]
+            ],
+            "aliquot": 343,
+            "eisensteinShell": 0
+          },
+          {
+            "n": 9,
+            "representations": [
+              [
+                0,
+                3
+              ]
+            ],
+            "aliquot": 4,
+            "eisensteinShell": 6
+          },
+          {
+            "n": 18,
+            "representations": [
+              [
+                3,
+                3
+              ]
+            ],
+            "aliquot": 21,
+            "eisensteinShell": 0
+          }
+        ],
+        "scope": "Exact integer finite enumeration, separate from universal elementary proofs."
+      }
+    },
+    {
+      "file": "cancellation.js",
+      "blob_sha": "5a7364d31ecd8da776bf3bbc5a60da6928939008",
+      "result": {
+        "status": "PASS",
+        "cases": [
+          {
+            "p": 3,
+            "a": 1,
+            "r": 1,
+            "gaps": 3,
+            "rationalDepth": 1,
+            "characteristicPDepth": 1,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 1,
+            "r": 2,
+            "gaps": 6,
+            "rationalDepth": 2,
+            "characteristicPDepth": 4,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 1,
+            "r": 3,
+            "gaps": 9,
+            "rationalDepth": 3,
+            "characteristicPDepth": 9,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 1,
+            "r": 4,
+            "gaps": 12,
+            "rationalDepth": 4,
+            "characteristicPDepth": 10,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 2,
+            "r": 1,
+            "gaps": 9,
+            "rationalDepth": 3,
+            "characteristicPDepth": 7,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 2,
+            "r": 2,
+            "gaps": 18,
+            "rationalDepth": 6,
+            "characteristicPDepth": 16,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 2,
+            "r": 3,
+            "gaps": 27,
+            "rationalDepth": 9,
+            "characteristicPDepth": 27,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 2,
+            "r": 4,
+            "gaps": 36,
+            "rationalDepth": 12,
+            "characteristicPDepth": 34,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 3,
+            "a": 3,
+            "r": 1,
+            "gaps": 27,
+            "rationalDepth": 9,
+            "characteristicPDepth": 25,
+            "fullDepthCharacteristics": [
+              2,
+              13
+            ]
+          },
+          {
+            "p": 3,
+            "a": 3,
+            "r": 2,
+            "gaps": 54,
+            "rationalDepth": 18,
+            "characteristicPDepth": 52,
+            "fullDepthCharacteristics": [
+              2,
+              13
+            ]
+          },
+          {
+            "p": 3,
+            "a": 3,
+            "r": 3,
+            "gaps": 81,
+            "rationalDepth": 27,
+            "characteristicPDepth": 81,
+            "fullDepthCharacteristics": [
+              2,
+              13
+            ]
+          },
+          {
+            "p": 3,
+            "a": 3,
+            "r": 4,
+            "gaps": 108,
+            "rationalDepth": 36,
+            "characteristicPDepth": 106,
+            "fullDepthCharacteristics": [
+              2,
+              13
+            ]
+          },
+          {
+            "p": 5,
+            "a": 1,
+            "r": 1,
+            "gaps": 5,
+            "rationalDepth": 1,
+            "characteristicPDepth": 1,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 5,
+            "a": 1,
+            "r": 2,
+            "gaps": 10,
+            "rationalDepth": 2,
+            "characteristicPDepth": 6,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 5,
+            "a": 1,
+            "r": 3,
+            "gaps": 15,
+            "rationalDepth": 3,
+            "characteristicPDepth": 11,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 5,
+            "a": 1,
+            "r": 4,
+            "gaps": 20,
+            "rationalDepth": 4,
+            "characteristicPDepth": 16,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 5,
+            "a": 1,
+            "r": 5,
+            "gaps": 25,
+            "rationalDepth": 5,
+            "characteristicPDepth": 25,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 5,
+            "a": 1,
+            "r": 6,
+            "gaps": 30,
+            "rationalDepth": 6,
+            "characteristicPDepth": 26,
+            "fullDepthCharacteristics": [
+              2
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 1,
+            "gaps": 25,
+            "rationalDepth": 5,
+            "characteristicPDepth": 21,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 2,
+            "gaps": 50,
+            "rationalDepth": 10,
+            "characteristicPDepth": 46,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 3,
+            "gaps": 75,
+            "rationalDepth": 15,
+            "characteristicPDepth": 71,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 4,
+            "gaps": 100,
+            "rationalDepth": 20,
+            "characteristicPDepth": 96,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 5,
+            "gaps": 125,
+            "rationalDepth": 25,
+            "characteristicPDepth": 125,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 6,
+            "gaps": 150,
+            "rationalDepth": 30,
+            "characteristicPDepth": 146,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 1,
+            "gaps": 7,
+            "rationalDepth": 1,
+            "characteristicPDepth": 1,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 2,
+            "gaps": 14,
+            "rationalDepth": 2,
+            "characteristicPDepth": 8,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 3,
+            "gaps": 21,
+            "rationalDepth": 3,
+            "characteristicPDepth": 15,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 4,
+            "gaps": 28,
+            "rationalDepth": 4,
+            "characteristicPDepth": 22,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 5,
+            "gaps": 35,
+            "rationalDepth": 5,
+            "characteristicPDepth": 29,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 6,
+            "gaps": 42,
+            "rationalDepth": 6,
+            "characteristicPDepth": 36,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 7,
+            "gaps": 49,
+            "rationalDepth": 7,
+            "characteristicPDepth": 49,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 1,
+            "r": 8,
+            "gaps": 56,
+            "rationalDepth": 8,
+            "characteristicPDepth": 50,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 1,
+            "gaps": 49,
+            "rationalDepth": 7,
+            "characteristicPDepth": 43,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 2,
+            "gaps": 98,
+            "rationalDepth": 14,
+            "characteristicPDepth": 92,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 3,
+            "gaps": 147,
+            "rationalDepth": 21,
+            "characteristicPDepth": 141,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 4,
+            "gaps": 196,
+            "rationalDepth": 28,
+            "characteristicPDepth": 190,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 5,
+            "gaps": 245,
+            "rationalDepth": 35,
+            "characteristicPDepth": 239,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 6,
+            "gaps": 294,
+            "rationalDepth": 42,
+            "characteristicPDepth": 288,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 7,
+            "gaps": 343,
+            "rationalDepth": 49,
+            "characteristicPDepth": 343,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 7,
+            "a": 2,
+            "r": 8,
+            "gaps": 392,
+            "rationalDepth": 56,
+            "characteristicPDepth": 386,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 7,
+            "gaps": 175,
+            "rationalDepth": 35,
+            "characteristicPDepth": 171,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 15,
+            "gaps": 375,
+            "rationalDepth": 75,
+            "characteristicPDepth": 375,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 31,
+            "gaps": 775,
+            "rationalDepth": 155,
+            "characteristicPDepth": 771,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          },
+          {
+            "p": 5,
+            "a": 2,
+            "r": 63,
+            "gaps": 1575,
+            "rationalDepth": 315,
+            "characteristicPDepth": 1571,
+            "fullDepthCharacteristics": [
+              2,
+              3
+            ]
+          }
+        ],
+        "doublingFirstEight": [
+          {
+            "j": 1,
+            "vertices": 50,
+            "depth": 21
+          },
+          {
+            "j": 2,
+            "vertices": 100,
+            "depth": 71
+          },
+          {
+            "j": 3,
+            "vertices": 200,
+            "depth": 171
+          },
+          {
+            "j": 4,
+            "vertices": 400,
+            "depth": 375
+          },
+          {
+            "j": 5,
+            "vertices": 800,
+            "depth": 771
+          },
+          {
+            "j": 6,
+            "vertices": 1600,
+            "depth": 1571
+          },
+          {
+            "j": 7,
+            "vertices": 3200,
+            "depth": 3171
+          },
+          {
+            "j": 8,
+            "vertices": 6400,
+            "depth": 6375
+          }
+        ],
+        "seed": {
+          "homogeneousPairs": 0,
+          "fixedZeroAutomorphisms": 1,
+          "dfsNodes": 106,
+          "fullAut": 25
+        },
+        "scope": "Exact coefficient expansions; first20 doubling recurrence terms from formula. Seed full group exhaustively verified; all-r tournament construction uses proof."
+      }
+    },
+    {
+      "file": "pisano.js",
+      "blob_sha": "133824ea9b268d93c32bd8bd95201918ffa81abe",
+      "result": {
+        "status": "PASS",
+        "chart": [
+          {
+            "modulus": 25,
+            "Q": 100,
+            "A": 50,
+            "g": 25,
+            "rank": 25,
+            "signed": 50,
+            "trace": 20
+          },
+          {
+            "modulus": 50,
+            "Q": 300,
+            "A": 150,
+            "g": 75,
+            "rank": 75,
+            "signed": 150,
+            "trace": 60
+          },
+          {
+            "modulus": 100,
+            "Q": 300,
+            "A": 150,
+            "g": 75,
+            "rank": 150,
+            "signed": 300,
+            "trace": 60
+          },
+          {
+            "modulus": 200,
+            "Q": 300,
+            "A": 150,
+            "g": 75,
+            "rank": 150,
+            "signed": 300,
+            "trace": 60
+          }
+        ],
+        "towers": [
+          {
+            "modulus": 5,
+            "Q": 20,
+            "A": 10,
+            "g": 5,
+            "rank": 5,
+            "signed": 10,
+            "trace": 4,
+            "units": 20,
+            "automorphisms": 4,
+            "normalizer": 80,
+            "effective": 16,
+            "faithfulKernelAutomorphisms": [
+              1
+            ]
+          },
+          {
+            "modulus": 25,
+            "Q": 100,
+            "A": 50,
+            "g": 25,
+            "rank": 25,
+            "signed": 50,
+            "trace": 20,
+            "units": 500,
+            "automorphisms": 10,
+            "normalizer": 5000,
+            "effective": 200,
+            "faithfulKernelAutomorphisms": [
+              1
+            ]
+          },
+          {
+            "modulus": 125,
+            "Q": 500,
+            "A": 250,
+            "g": 125,
+            "rank": 125,
+            "signed": 250,
+            "trace": 100,
+            "units": 12500,
+            "automorphisms": 10,
+            "normalizer": 125000,
+            "effective": 1000,
+            "faithfulKernelAutomorphisms": [
+              1
+            ]
+          }
+        ],
+        "muConjugationGroup": {
+          "order": 200,
+          "exponent": 100,
+          "derivedOrder": 25,
+          "abelianizationOrder": 8,
+          "Sylow5": "C25"
+        },
+        "effectiveMod25": {
+          "order": 200,
+          "exponent": 20,
+          "Sylow5": "C5 x C5"
+        },
+        "scope": "Exact finite checks k1..3; all-k conclusions require supplied proofs"
+      }
+    },
+    {
+      "file": "action_carriers.js",
+      "blob_sha": "dded55ba6d1b136ed4e3f219ab5d8648c29f15e6",
+      "result": {
+        "weightedPolynomial": [
+          "1",
+          "8",
+          "44",
+          "200",
+          "746",
+          "2344",
+          "6364",
+          "15016",
+          "30623",
+          "53584",
+          "80056",
+          "101904",
+          "110444",
+          "101904",
+          "80056",
+          "53584",
+          "30623",
+          "15016",
+          "6364",
+          "2344",
+          "746",
+          "200",
+          "44",
+          "8",
+          "1"
+        ],
+        "depths_Q_5_2": [
+          8,
+          16,
+          24
+        ],
+        "status": "PASS",
+        "group": "C5 x C5",
+        "bits": 24,
+        "jointOrbits": [
+          {
+            "size": 5,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          {
+            "size": 5,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ]
+            ]
+          },
+          {
+            "size": 1,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          {
+            "size": 1,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          {
+            "size": 5,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ]
+            ]
+          },
+          {
+            "size": 5,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                1
+              ]
+            ]
+          },
+          {
+            "size": 1,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          },
+          {
+            "size": 1,
+            "kernel": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                0,
+                3
+              ],
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          }
+        ],
+        "fixedHist": {
+          "256": 16,
+          "65536": 8,
+          "16777216": 1
+        },
+        "bankOrbits": "692224",
+        "factorization": "16 * ((2^10 + 4*2^2)/5)^2",
+        "signGauge": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "scope": "Actual signed normalizer subgroup action; graph classes are not counted."
+      }
+    },
+    {
+      "file": "aliquot_fibre.js",
+      "blob_sha": "6cbe85c9280eba78355ed980d33a7e48c8028d80",
+      "result": {
+        "status": "PASS",
+        "target": 343,
+        "completeBound": 116964,
+        "fibre": [
+          578,
+          1001,
+          1685,
+          3641,
+          9077,
+          9641,
+          16697,
+          17141,
+          19241,
+          19637,
+          20777,
+          24341,
+          24617,
+          25397,
+          25877,
+          27641,
+          28757,
+          28841,
+          29177
+        ],
+        "classified": [
+          {
+            "n": 578,
+            "factors": [
+              [
+                2,
+                1
+              ],
+              [
+                17,
+                2
+              ]
+            ]
+          },
+          {
+            "n": 1001,
+            "factors": [
+              [
+                7,
+                1
+              ],
+              [
+                11,
+                1
+              ],
+              [
+                13,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 1685,
+            "factors": [
+              [
+                5,
+                1
+              ],
+              [
+                337,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 3641,
+            "factors": [
+              [
+                11,
+                1
+              ],
+              [
+                331,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 9077,
+            "factors": [
+              [
+                29,
+                1
+              ],
+              [
+                313,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 9641,
+            "factors": [
+              [
+                31,
+                1
+              ],
+              [
+                311,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 16697,
+            "factors": [
+              [
+                59,
+                1
+              ],
+              [
+                283,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 17141,
+            "factors": [
+              [
+                61,
+                1
+              ],
+              [
+                281,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 19241,
+            "factors": [
+              [
+                71,
+                1
+              ],
+              [
+                271,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 19637,
+            "factors": [
+              [
+                73,
+                1
+              ],
+              [
+                269,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 20777,
+            "factors": [
+              [
+                79,
+                1
+              ],
+              [
+                263,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 24341,
+            "factors": [
+              [
+                101,
+                1
+              ],
+              [
+                241,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 24617,
+            "factors": [
+              [
+                103,
+                1
+              ],
+              [
+                239,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 25397,
+            "factors": [
+              [
+                109,
+                1
+              ],
+              [
+                233,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 25877,
+            "factors": [
+              [
+                113,
+                1
+              ],
+              [
+                229,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 27641,
+            "factors": [
+              [
+                131,
+                1
+              ],
+              [
+                211,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 28757,
+            "factors": [
+              [
+                149,
+                1
+              ],
+              [
+                193,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 28841,
+            "factors": [
+              [
+                151,
+                1
+              ],
+              [
+                191,
+                1
+              ]
+            ]
+          },
+          {
+            "n": 29177,
+            "factors": [
+              [
+                163,
+                1
+              ],
+              [
+                179,
+                1
+              ]
+            ]
+          }
+        ],
+        "uniqueEvenSource": 578,
+        "semiprimeCount": 17,
+        "orbitMerge": [
+          {
+            "source": 578,
+            "path": [
+              578,
+              343,
+              57
+            ]
+          },
+          {
+            "source": 1001,
+            "path": [
+              1001,
+              343,
+              57
+            ]
+          }
+        ],
+        "scope": "Complete finite fibre from proved elementary bound; global perfect-power uniqueness is a cited theorem, not this computation."
+      }
+    },
+    {
+      "file": "bank_tower.js",
+      "blob_sha": "aa34004de1444cd4c9c8590f36a778a397ea74b8",
+      "result": {
+        "status": "PASS",
+        "cases": [
+          {
+            "k": 2,
+            "vertices": 625,
+            "bankBits": 24,
+            "oddEffectiveGroup": 25,
+            "cycleHistogram": {
+              "8": 16,
+              "16": 8,
+              "24": 1
+            },
+            "binaryBankOrbits": "692224"
+          },
+          {
+            "k": 3,
+            "vertices": 15625,
+            "bankBits": 124,
+            "oddEffectiveGroup": 125,
+            "cycleHistogram": {
+              "12": 100,
+              "44": 16,
+              "84": 8,
+              "124": 1
+            },
+            "binaryBankOrbits": "170141183461707171770974935790600192"
+          }
+        ],
+        "recurrence": "B_(k+1)(Q)=(Q^4 B_k(Q^5)+4Q^(4k+4))/5 for k>=2",
+        "base": "B_2(Q)=(Q^24+8Q^16+16Q^8)/25",
+        "scope": "Actual signed actions exhausted at k2,k3. Formal recurrence mass and integrality checked k2..8; all-k result requires proof."
+      }
+    }
+  ],
+  "verification_boundaries": [
+    "The source proofs establish all-order conclusions; finite checks are not extrapolation proofs.",
+    "Shell commands and some local scratch writes stalled. No unconfirmed Python batch or local scratch artifact is represented as a completed root replay.",
+    "Only corrected published sources are included. In particular the signed clock at modulus100 is300, with Q^150=49I retained as a hostile.",
+    "Bank orbit counts are under the specified effective odd subgroup, not full graph isomorphism counts."
+  ]
+}
