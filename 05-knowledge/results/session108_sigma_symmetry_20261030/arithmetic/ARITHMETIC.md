@@ -94,6 +94,40 @@ Aliquot sums do not obey the same multiplicativity: for gcd(m,n)=1,
 
 Example s(3)=1 and s(5)=1 but s(15)=9, not 1. Moreover s(3)=1 is square whereas s(81)=40 is not: the σ-neutral 3→81 replacement fails for s. No aliquot/Collatz convergence statement follows.
 
-## 6. Verification boundary
+## 6. A typed selection of 19 through the sixth cyclotomic polynomial
+
+Historical recovery: the June30 reflection `07-reflections/the-covering-min-as-a-function-of-n-one-transition-at-7-razor-margin-1-over-n-squared-opus-20260630.md`, section “Phi6 abnormalities”, already records Φ₆(19)=7³. We inherit that arithmetic identity, not the reflection’s obsolete covering-minimum claim (see the MISTAKE-087 correction retained in Session107). The present addition is the divisor-sum classification and guarded return proof below, not discovery of the numerical identity.
+
+Put Φ₆(x)=x²−x+1. Then Φ₆(19)=343=7³ and σ(343)=400=20². The displayed known Nagell–Ljunggren solutions in the Bennett–Levin paper also include
+
+    (18³−1)/(18−1) = ((−19)³−1)/((−19)−1) = 343 = 7³.
+
+These are evaluations of t²+t+1, whose elementary symmetry t↦−1−t exchanges 18 and −19. This is not σ(18²): 18 is composite, and σ(324)=847. Also the exponent 5 in the cited square solution (3⁵−1)/(3−1)=11² is an exponent parameter, not the input prime 5 used elsewhere.
+
+**Proved, conditional only on the cited complete prime-power square-σ classification.** For an integer x>1, Φ₆(x) is a prime power and σ(Φ₆(x)) is a square if and only if x∈{2,19}.
+
+Indeed Φ₆(x)>1, so the classification forces n=Φ₆(x)∈{3,81,343}. Completing the square gives (2x−1)²=4n−3. The three right sides are 9,321,1369. The middle is not square since 17²<321<18²; the other two are 3² and 37², giving x=2 and x=19. Both satisfy the conditions directly. This is a complete classification for the stated two-condition family, not for all square-σ integers or all prime-power cyclotomic values.
+
+The chain 19 —Φ₆→ 343 —s→ 57 consequently has an exact arithmetic meaning: its first arrow is a polynomial evaluation, not an aliquot edge; the second is an aliquot edge with endpoint sum 343+57=400. It does not assert an aliquot edge 19→343 or a universal iteration law.
+
+### A unique guarded three-operation return
+
+For every integer x>1, the identity Φ₆(x)+3x=(x+1)² proves
+
+    s(Φ₆(x))=3x ⇔ σ(Φ₆(x))=(x+1)².
+
+If Φ₆(x) is additionally a prime power, this square condition forces x∈{2,19} by the preceding theorem. At x=2, s(Φ₆(2))=s(3)=1≠6, whereas at x=19 the equality is s(343)=57=3·19. Thus **19 is the unique integer x>1 with prime-power Φ₆(x) satisfying this return equation**.
+
+The resulting closed sequence is 19 —Φ₆→ 343 —s→ 57 —divide by 3→ 19. Its arrows are three distinct specified operations, and the final division is integral here. This is not an ordinary aliquot cycle, a Collatz cycle, or an isomorphism of either dynamical system; the prime-power restriction is indispensable to the classification argument.
+
+### Elementary proof in the prime-cube subdomain
+
+If Φ₆(x)=p³ for a prime p and s(p³)=3x, then s(p³)=p²+p+1 gives x=(p²+p+1)/3. Polynomial expansion and factorization give
+
+    9[Φ₆((p²+p+1)/3)−p³]=(p−7)(p³−1).
+
+The left side is zero; p>1 makes p³−1 nonzero, so p=7 and x=19. Conversely these values satisfy both equations. This prime-cube uniqueness proof is elementary and does not use Ljunggren; the larger prime-power-domain uniqueness above still uses the cited classification. The positive coefficient 3 in the return relation is explained here by the exact square completion Φ₆(x)+3x=(x+1)², not by a derivation of the Collatz multiplier.
+
+## 7. Verification boundary
 
 `verify.py` uses only exact Python integer arithmetic and explicit checks (works under `-O`). It independently checks σ by direct divisor enumeration up to 2000; all pairs m,n≤100 for the shared-port formula; all triples l,m,n≤20 for the cocycle identity; bounded prime-power square searches p≤200,a≤16 by integer square root; all eight requested bits; the six-state action and hostile examples. The finite scan verifies examples and implementation, not the infinite classification, which depends on the cited theorem. No novelty claim or universal dynamics claim is made.

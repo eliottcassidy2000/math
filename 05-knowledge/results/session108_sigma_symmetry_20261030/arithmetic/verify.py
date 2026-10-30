@@ -105,4 +105,22 @@ check(Q(9)==frozenset((13,)) and Q(243)==frozenset((7,13)), 'shared-port differi
 check(pow(13,2,5)==4 and pow(91,2,5)==1, 'quadratic character at 5')
 check(Q(3)==Q(81)==frozenset(), 'same global squareclass before raw observer')
 check(pow(sigma(3),5,11)==1 and pow(sigma(81),5,11)==0, 'raw Legendre observer at 11 distinguishes unit from zero')
+phi6=lambda x:x*x-x+1
+check(phi6(19)==343 and sigma(phi6(19))==400, 'typed 19 cyclotomic bridge')
+check((18**3-1)//17==((-19)**3-1)//(-20)==343, 'signed NL polynomial symmetry')
+check(sigma(18**2)==847, 'composite-base geometric sum is not sigma')
+check([4*n-3 for n in (3,81,343)]==[9,321,1369], 'classification discriminants')
+check(not square(321) and isqrt(1369)==37, 'discriminant exclusions')
+check([x for x in range(2,1001) if len(factor(phi6(x)))==1 and square(sigma(phi6(x)))]==[2,19], 'bounded typed selection control')
+check(phi6(2)==3 and sigma(phi6(2))==4, 'small typed selection endpoint')
+check(sigma(phi6(2))-phi6(2)==1 and 1!=3*2, 'x2 is not a guarded return')
+check(sigma(phi6(19))-phi6(19)==57==3*19, 'unique candidate x19 return')
+check(phi6(19)+3*19==(19+1)**2 and 57//3==19 and 57%3==0, 'typed return and square identity')
+# Coefficients in increasing degree: A=p^2+p+1.
+A=[1,1,1]
+A2=[sum(A[i]*A[k-i] for i in range(3) if 0<=k-i<3) for k in range(5)]
+lhs=[A2[k]-(3*A[k] if k<3 else 0)+(9 if k==0 else 0)-(9 if k==3 else 0) for k in range(5)]
+# (p-7)(p^3-1) = 7-p-7p^3+p^4.
+check(lhs==[7,-1,0,-7,1], 'formal polynomial cube uniqueness factorization')
+check(Fraction(7**2+7+1,3)==19, 'cube return candidate')
 print(json.dumps({'status':'PASS','explicit_checks':checks,'prime_power_scan':{'prime_bound':200,'exponent_bound':16,'square_hits':hits},'requested_cube':rows,'six_state_group_order':12,'classification_scope':'Infinite statement uses cited square-case theorem; scan is finite only.'},indent=2))

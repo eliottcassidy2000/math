@@ -1,0 +1,57 @@
+{
+  "isolated_runs": 16,
+  "jobs": [
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "3c2a0ee36199f10ffd96f9bf500bc834e41de4006ea65241896979dcb226639d",
+      "script": "codes/verify_codes.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "ffeb1d77f349e1fe0d66cb3f45c3f3b010a3a10742304d21b60c4d2cb2da5e85",
+      "script": "arithmetic/verify.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "cebb14d124baa4cd027834ffd8b48167883833219a2d37be9027358cd7bf43f4",
+      "script": "operations/verify_operations.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "014152dfc4324cee542ad9c4385e3a6a938b56ef4e569f6c6367e1f2614c55e8",
+      "script": "tournaments/verify_palette.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "2c7b65af9a6d962e7b78522be2109f3bd4314c7e999afd48d7f21f48d8789adc",
+      "script": "tournaments/verify_relations.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "538dbe44c4fe9b2d5f471fb20a16ce23cfc0a925199d750c4fea3d5956b94b72",
+      "script": "audit_arithmetic_codes/check.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "341ce7a3bc561784a5d590309378b7e62d06a328eb79bec05195bdaaf22d9f3c",
+      "script": "audit_operations/check_independent.py"
+    },
+    {
+      "normal": "PASS",
+      "optimized": "PASS",
+      "receipt_sha256": "a57758207016f08b075c149852ac86b9fa7c3e6ec37c4d64d279c548057a5bef",
+      "script": "history/check_covering_boundary.py"
+    }
+  ],
+  "manifest_entries": 30,
+  "relative_links": 7,
+  "scope": "Exact finite replays; universal claims rely on audited proofs and qualified cited classification. No global sigma-square classification, Collatz proof, or CI assertion.",
+  "status": "PASS"
+}

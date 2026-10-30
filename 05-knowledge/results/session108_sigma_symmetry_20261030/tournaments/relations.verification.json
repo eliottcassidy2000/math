@@ -1,0 +1,20 @@
+{
+  "1": {
+    "AGL_transitive": 1,
+    "GL_transitive": 2,
+    "marked_transitive": 3
+  },
+  "2": {
+    "AGL_transitive": 2,
+    "GL_transitive": 5,
+    "marked_transitive": 11
+  },
+  "3": {
+    "AGL_cyclic": 3,
+    "AGL_transitive": 5,
+    "GL_cyclic": 8,
+    "GL_transitive": 16,
+    "marked_cyclic": 20,
+    "marked_transitive": 50
+  }
+}

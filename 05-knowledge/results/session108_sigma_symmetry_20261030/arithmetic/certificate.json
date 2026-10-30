@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "explicit_checks": 38447,
+  "explicit_checks": 38459,
   "prime_power_scan": {
     "prime_bound": 200,
     "exponent_bound": 16,

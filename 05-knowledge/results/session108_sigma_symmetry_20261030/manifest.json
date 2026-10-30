@@ -1,0 +1,64 @@
+{
+  "relative_links": [
+    [
+      "README.md",
+      "codes/SYMMETRY.md"
+    ],
+    [
+      "README.md",
+      "arithmetic/ARITHMETIC.md"
+    ],
+    [
+      "README.md",
+      "history/COVERING_BOUNDARY.md"
+    ],
+    [
+      "README.md",
+      "operations/OPERATIONS_AND_OBSERVERS.md"
+    ],
+    [
+      "README.md",
+      "tournaments/PALETTE_SYMMETRY.md"
+    ],
+    [
+      "README.md",
+      "audit_arithmetic_codes/AUDIT.md"
+    ],
+    [
+      "README.md",
+      "audit_operations/AUDIT.md"
+    ]
+  ],
+  "sha256": {
+    "README.md": "eb8296e74e1eb5c85bc27fefa83d41d2f16f46d59f59f5ff5182fe0a239772a6",
+    "arithmetic/ARITHMETIC.md": "f57a15e103528790c4f8ad46eff7a7a9178a91b53676a0f8d784d17534da8d2c",
+    "arithmetic/certificate.json": "ffeb1d77f349e1fe0d66cb3f45c3f3b010a3a10742304d21b60c4d2cb2da5e85",
+    "arithmetic/verify.py": "17f7cedbb1cefc0d1a40ba42eb056603a7233e5b4f28cb40518738fd3de80a07",
+    "audit_arithmetic_codes/AUDIT.md": "ce16c295fca00eab1cb5c01fe2de75f31f715ae8969f7d96804b522eccb27af8",
+    "audit_arithmetic_codes/check.py": "36d5da28a18fed518b4e944da1e9f4f0988a7f8a994978fb52d802234e51e55b",
+    "audit_arithmetic_codes/normal.json": "538dbe44c4fe9b2d5f471fb20a16ce23cfc0a925199d750c4fea3d5956b94b72",
+    "audit_arithmetic_codes/optimized.json": "538dbe44c4fe9b2d5f471fb20a16ce23cfc0a925199d750c4fea3d5956b94b72",
+    "audit_operations/AUDIT.md": "88af1eda9e3bacdb33295ff3c76c5e43d52eb538818cbf8d117c3cff3564fe66",
+    "audit_operations/check_independent.py": "64bf8d8577971c1c8588eacdd6daf78426bea7136171bfa8415ec5d1c8a3adb3",
+    "audit_operations/normal.json": "341ce7a3bc561784a5d590309378b7e62d06a328eb79bec05195bdaaf22d9f3c",
+    "audit_operations/optimized.json": "341ce7a3bc561784a5d590309378b7e62d06a328eb79bec05195bdaaf22d9f3c",
+    "codes/SYMMETRY.md": "799b8d472af787d0e3d3eeae20998097bb760b153654898cb1aa31d0a0e34c2e",
+    "codes/verification.json": "3c2a0ee36199f10ffd96f9bf500bc834e41de4006ea65241896979dcb226639d",
+    "codes/verify_codes.py": "8250938ff51c94ca2e99de0d67664cad38df6b627c9f68461da7020851225a9b",
+    "history/COVERING_BOUNDARY.md": "a956d7d35941d5c18abafd2e45bc729d6b67b5819a89c25a882bf9055d1cb4b3",
+    "history/check_covering_boundary.py": "0f13f9c1410ca2fc7a8c481f2f8eab0ba5ea226716be86ffd6d2d06a298fdda4",
+    "history/verification.json": "a57758207016f08b075c149852ac86b9fa7c3e6ec37c4d64d279c548057a5bef",
+    "operations/OPERATIONS_AND_OBSERVERS.md": "0043d9d1992264fa3b4ad9628b6527aa02ec5edbd0d2b8961fa61c6e85e0b0a1",
+    "operations/normal.json": "cebb14d124baa4cd027834ffd8b48167883833219a2d37be9027358cd7bf43f4",
+    "operations/optimized.json": "cebb14d124baa4cd027834ffd8b48167883833219a2d37be9027358cd7bf43f4",
+    "operations/verify_operations.py": "bc27f65af4f3b7556a8b3c02fecb4e799638e6aeb17d91261405e1de81ec840b",
+    "tournaments/PALETTE_SYMMETRY.md": "1a50254eb3af48dbe0971aefb9c250805c0f3edb81d353d9683374b0e0dd0f5c",
+    "tournaments/relations.verification.json": "2c7b65af9a6d962e7b78522be2109f3bd4314c7e999afd48d7f21f48d8789adc",
+    "tournaments/relations.verification.optimized.json": "2c7b65af9a6d962e7b78522be2109f3bd4314c7e999afd48d7f21f48d8789adc",
+    "tournaments/verification.json": "014152dfc4324cee542ad9c4385e3a6a938b56ef4e569f6c6367e1f2614c55e8",
+    "tournaments/verification.optimized.json": "014152dfc4324cee542ad9c4385e3a6a938b56ef4e569f6c6367e1f2614c55e8",
+    "tournaments/verify_palette.py": "2c32f44ac004db6991066fff38fffd85aac80ea0efa75022bf3120e6bf2e7c31",
+    "tournaments/verify_relations.py": "f5993e40ca2ba4d091bc5b6519a7b5e6f0ec392b5108c738eb52e35e06d151bc",
+    "verify_packet.py": "b6bb125e3e284e458283edb8d6579a2e21a3fb951ee9d8c28ea3e10a18aaa95b"
+  }
+}

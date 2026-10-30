@@ -1,0 +1,140 @@
+{
+  "coprime_probes": 3485,
+  "counts": {
+    "AGL": [
+      1,
+      1,
+      2,
+      8,
+      48
+    ],
+    "GL": [
+      1,
+      2,
+      5,
+      24,
+      188
+    ],
+    "marked": [
+      1,
+      3,
+      11,
+      70,
+      756
+    ]
+  },
+  "degree2_refresh_eigenspace_dimensions": {
+    "AGL": {
+      "0": 1,
+      "1": 1,
+      "1/2": 0
+    },
+    "GL": {
+      "0": 3,
+      "1": 1,
+      "1/2": 1
+    },
+    "marked": {
+      "0": 8,
+      "1": 1,
+      "1/2": 2
+    }
+  },
+  "degree3_splits_autorder_count_source": {
+    "AGL": [
+      [
+        1,
+        5,
+        true
+      ],
+      [
+        3,
+        3,
+        false
+      ]
+    ],
+    "GL": [
+      [
+        1,
+        16,
+        true
+      ],
+      [
+        3,
+        8,
+        false
+      ]
+    ],
+    "marked": [
+      [
+        1,
+        50,
+        true
+      ],
+      [
+        3,
+        20,
+        false
+      ]
+    ]
+  },
+  "h_GL": [
+    1,
+    3,
+    19,
+    164
+  ],
+  "method": "relation-subspace decorations over tournament automorphism groups; independent fiber flips; divisor incidence sieve; direct refresh matrices",
+  "neutral_grid_order": 12,
+  "operational_orders": [
+    16,
+    8,
+    2
+  ],
+  "rank_projection_dimensions": {
+    "AGL": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "GL": [
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ]
+  },
+  "source_counts": {
+    "AGL": [
+      0,
+      1,
+      2,
+      5,
+      24
+    ],
+    "GL": [
+      0,
+      2,
+      5,
+      16,
+      94
+    ],
+    "marked": [
+      0,
+      3,
+      11,
+      50,
+      378
+    ]
+  },
+  "status": "PASS"
+}

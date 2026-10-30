@@ -1,0 +1,37 @@
+{
+  "affine_observer_symmetry_order": 8,
+  "coprime_probe_checks": 11496,
+  "free3_controls": 333,
+  "integers": [
+    1,
+    3,
+    5,
+    15,
+    19,
+    57,
+    95,
+    285
+  ],
+  "named_update_symmetry_order": 2,
+  "neutral_grid_observer_symmetry_order": 720,
+  "neutral_grid_prime_port_symmetry_order": 12,
+  "observer_symmetry_order": 16,
+  "prime_bank": [
+    3,
+    5,
+    19
+  ],
+  "scope": "Exact finite controls; general statements proved in OPERATIONS_AND_OBSERVERS.md",
+  "sigma_squareclasses": [
+    1,
+    1,
+    6,
+    6,
+    5,
+    5,
+    30,
+    30
+  ],
+  "source_sha256": "bc27f65af4f3b7556a8b3c02fecb4e799638e6aeb17d91261405e1de81ec840b",
+  "status": "PASS"
+}

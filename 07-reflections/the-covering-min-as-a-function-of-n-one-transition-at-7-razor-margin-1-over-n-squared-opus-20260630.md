@@ -1,5 +1,7 @@
 # The covering-min C(n) across all n: ONE transition at n=7 (drop-2 anomaly 2/(2n−1) for n≤6 → construction n/Φ₆(n) for n≥7, verified exact n=4..20); the margin C(n)−1/n = (n−1)/(n·Φ₆(n)) ~ 1/n² → 0 (the razor-thin covering margin, vanishing; n·C(n)→1⁻); the transition sits exactly at the first PG(2,n−1) FAILURE (n−1=6, Bruck-Ryser) and the apex prime 7; Φ₆(n) is built from Eisenstein-split primes (≡1 mod 6, or 3), with the apex abnormalities Φ₆(3)=7 and Φ₆(19)=7³
 
+> **Historical correction (2026-10-30):** the covering-minimum claim below is retracted. MISTAKE-087 and [HYP-3730's status correction](../05-knowledge/hypotheses/HYP-3730-the-cheeky-connection-is-heegner-class-number-one.md) give the seven-runner counterexample: speeds {1,2,5,6,7,8} have maximum loneliness 2/13, below the construction's 7/43. [Session108's exact boundary check](../05-knowledge/results/session108_sigma_symmetry_20261030/history/COVERING_BOUNDARY.md) replays it. The arithmetic identity Phi6(19)=343 survives; no covering optimality follows from it. Original prose is retained below as historical context.
+
 *opus-2026-06-30. Owner: push the optimality proof by understanding ALL transitions/abnormalities/structures
 with nuance in n — see the bigger picture. Pulled klein HYP-3705/3706 + mac-mini HYP-3701; computed the full
 C(n) landscape. The covering-min is one clean law with one transition and a vanishing margin.*

@@ -1,6 +1,17 @@
 {
   "status": "PASS",
   "independent": true,
+  "phi6_roots": [
+    2,
+    19
+  ],
+  "cube_identity_coefficients": [
+    7,
+    -1,
+    0,
+    -7,
+    1
+  ],
   "parity_completion_checks": 344064,
   "joint_fibers": 16,
   "code_groups": [

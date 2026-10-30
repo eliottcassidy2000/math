@@ -120,4 +120,36 @@ need(checks==344064,'transport check count')
 need(syn(1)==0 and syn(1<<bank.index(7))==1,'odd translation hostile')
 # Character values require common units despite equal rational squareclass.
 need(pow(sigma(3)%11,5,11)==1 and pow(sigma(81)%11,5,11)==0,'raw Legendre support hostile')
-print(json.dumps({'status':'PASS','independent':True,'parity_completion_checks':checks,'joint_fibers':len(fibers),'code_groups':[len(auto7),count0,countA], 'point_stabilizer':len(stab),'fano_lines':len(lines),'flags':len(flags),'prime_power_scan':scan,'classification_basis':'Bennett-Levin 2015 Proposition 1 plus exponent-one elementary argument'},indent=2))
+# Final focused Phi6 audit: exact finite reduction plus formal coefficients.
+phi=lambda x:x*x-x+1
+neutral=(3,81,343)
+discriminants=[4*n-3 for n in neutral]
+need(discriminants==[9,321,1369],'Phi6 discriminants')
+roots=[]
+for n,d in zip(neutral,discriminants):
+    r=isqrt(d)
+    if r*r==d:
+        for numerator in (1+r,1-r):
+            if numerator%2==0 and numerator//2>1:
+                roots.append(numerator//2)
+need(roots==[2,19],'complete reduction using cited neutral classification')
+need([x for x in roots if sigma(phi(x))-phi(x)==3*x]==[19],'guarded return reduction')
+need((phi(19),sigma(phi(19))-phi(19),57//3)==(343,57,19),'typed return')
+need(sigma(19)-19==1 and sigma(57)-57==23,'not an aliquot cycle')
+need(18*18+18+1==(-19)**2+(-19)+1==343,'signed NL polynomial')
+need(sigma(324)==847 and sigma(324)!=343,'composite base hostile')
+# Ascending coefficient vectors, exact polynomial convolution.
+def mul(a,b):
+    c=[0]*(len(a)+len(b)-1)
+    for i,x in enumerate(a):
+        for j,y in enumerate(b): c[i+j]+=x*y
+    return c
+v=[1,1,1]
+lhs=mul(v,v)
+for i,c in enumerate(v): lhs[i]-=3*c
+lhs[0]+=9
+lhs[3]-=9
+rhs=mul([-7,1],[-1,0,0,1])
+need(lhs==rhs==[7,-1,0,-7,1],'formal prime-cube polynomial identity')
+need([1, -1+3, 1]==[1,2,1],'formal square completion')
+print(json.dumps({'status':'PASS','independent':True,'phi6_roots':roots,'cube_identity_coefficients':lhs,'parity_completion_checks':checks,'joint_fibers':len(fibers),'code_groups':[len(auto7),count0,countA], 'point_stabilizer':len(stab),'fano_lines':len(lines),'flags':len(flags),'prime_power_scan':scan,'classification_basis':'Bennett-Levin 2015 Proposition 1 plus exponent-one elementary argument'},indent=2))
