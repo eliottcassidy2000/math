@@ -18,7 +18,7 @@ MISTAKE-675 and MISTAKE-690 qualify prior-art and interpretation around the latt
 
 Let R(n)={(a,b):0≤a≤b, a²+b²=n}. The map
 D(a,b)=(b−a,b+a)
-is a bijection R(n)→R(2n), with D²=2I. The inverse on (u,v) is ((v−u)/2,(v+u)/2); equal parity follows from u²+v² being even. This is Gaussian multiplication by1+i followed by a lattice symmetry.
+is a bijection R(n)→R(2n), with D²=2I. The inverse on (u,v) is ((v−u)/2,(v+u)/2); equal parity follows from u²+v² being even. This is Gaussian multiplication by 1+i followed by a lattice symmetry.
 
 The complete shells are:
 - 25: (0,5),(3,4).
@@ -34,9 +34,9 @@ Axis and diagonal solutions interchange. Positive unequal solutions are preserve
 
 A classical exact count sharpens the boundary. Unique factorization in Z[i] gives
 r_2(2^k m²)=4 Π_(p≡1 mod4)(2v_p(m)+1)
-for ordered signed representations. The ramified prime2 has no splitting choice; each split prime contributes its exponent choices. There is one special four-element axis or diagonal orbit and all other sign/order orbits have size8. Consequently the number of positive unequal representations is
+for ordered signed representations. The ramified prime2 has no splitting choice; each split prime contributes its exponent choices. There is one special four-element axis or diagonal orbit and all other sign/order orbits have size 8. Consequently the number of positive unequal representations is
 [Π_(p≡1 mod4)(2v_p(m)+1)−1]/2,
-independent of k. Such a representation exists exactly when m has a prime divisor congruent to1 modulo4.
+independent of k. Such a representation exists exactly when m has a prime divisor congruent to 1 modulo 4.
 
 ## Euclid and Berggren: preserve shape, retain scale
 
@@ -64,10 +64,10 @@ The missing coordinate is the divisor sum of the odd part, not merely dyadic dep
 
 For Q(a,b)=a²−ab+b², parity gives Q even iff a,b are both even. Therefore E(4n)=2E(n), but E(n) is empty whenever v_2(n) is odd.
 
-Modulo5, Q=0 forces a=b=0 because the discriminant −3=2 is not a square. Hence E(25) consists of the six multiples by5 of the units: (±5,0),(0,±5),(5,5),(−5,−5). The shell sizes along25,50,100,200 are6,0,6,0.
+Modulo5, Q=0 forces a=b=0 because the discriminant −3=2 is not a square. Hence E(25) consists of the six multiples by 5 of the units: (±5,0),(0,±5),(5,5),(−5,−5). The shell sizes along25,50,100,200 are6,0,6,0.
 
 Gaussian doubling works because2 ramifies; the Eisenstein obstruction occurs because2 is inert. Coordinate dimension alone does not transfer the theorem.
 
 ## Verification
 
-[arithmetic.js](arithmetic.js) independently enumerates Gaussian shells through n=10000, Eisenstein scaling through n=500, the aliquot law for odd m≤49 and k≤6, and500 instances of the classical square-shell count. The universal conclusions rest on the proofs above, not finite extrapolation. No tournament enumeration or Collatz convergence follows from the norm identities.
+[arithmetic.js](arithmetic.js) independently enumerates Gaussian shells through n=10000, Eisenstein scaling through n=500, the aliquot law for odd m≤49 and k≤6, and 500 instances of the classical square-shell count. The universal conclusions rest on the proofs above, not finite extrapolation. No tournament enumeration or Collatz convergence follows from the norm identities.
