@@ -1,0 +1,59 @@
+{
+  "status": "exact algebraic controls; written universal lifting proof supplies quantifiers",
+  "paid_potential_edges": 650,
+  "all_ones_digits": 15,
+  "abstract_kernels": 96,
+  "accepted_kernels": 22,
+  "eleventh_short_families": [
+    {
+      "ones": 0,
+      "other": 1,
+      "cost": "1"
+    },
+    {
+      "ones": 1,
+      "other": 1,
+      "cost": "6/5"
+    },
+    {
+      "ones": 2,
+      "other": 1,
+      "cost": "7/5"
+    },
+    {
+      "ones": 3,
+      "other": 1,
+      "cost": "8/5"
+    },
+    {
+      "ones": 0,
+      "other": 2,
+      "cost": "2"
+    },
+    {
+      "ones": 1,
+      "other": 2,
+      "cost": "11/5"
+    },
+    {
+      "ones": 2,
+      "other": 2,
+      "cost": "12/5"
+    },
+    {
+      "ones": 0,
+      "other": 3,
+      "cost": "3"
+    },
+    {
+      "ones": 1,
+      "other": 3,
+      "cost": "16/5"
+    }
+  ],
+  "lambda9": "488281/781250",
+  "lambda10": "1220703/1953125",
+  "gamma10": "488281/1953125",
+  "sharp_clock": 3906250,
+  "sharp_charge": 2441406
+}

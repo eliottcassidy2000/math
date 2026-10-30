@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — a half-clearance core needs a separate recursive spacing guard
+
+- **Source/status:** unpublished generalization tested in `return_kernel_core_transplants_20261030/LRC.md`. The predecessor echo theorem assumed core maximum strictly below1/2; that proved theorem is unchanged.
+- **Witness / first failed implication:** starting from core{1}, m=3 and unrestricted multipliers1,1 predicts12/31 for{1,6,14,30}, but its exact maximum is1/3. The old estimate p/(Q-1)<=1/2 uses2p<=Q-1, which fails when2p=Q; an old tail folds past the required safe interval.
+- **Repair:** keep the actual complete chamber and impose K_j>=ceil((Qm+s)/(Qs)) in the half-clearance case. The resulting geometric tail puts every old phase strictly below1/2. Arbitrary positive multipliers remain valid for cores below1/2.
+- **Related implementation guard:** the first-return producer initially reduced letters modulo their affine period without separating letter1 from a larger congruent non-one. The final auditor preserves that flag and proves an all-letter tail bound. No incorrect all-alphabet minimum was published; {1,1+period} supplies the type hostile.
+
 ## 2026-10-30 — local balance needs a whole-core horizon and joint-tail folds
 
 - **Source:** THM-724 / `theorems/THM-724-single-killer-covering-min-rigidity.md`, old Lemma1 and E4. Both unrestricted displayed lower bounds are REFUTED; this does not refute the covering-min conjecture.

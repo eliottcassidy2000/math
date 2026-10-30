@@ -6,6 +6,11 @@ valid-domain closure, finite values, maximum sign, and both infinite-letter
 tails. The certificate hash is recorded in
 `../audit_collatz/repaired9_independent.json`. All-E feasibility remains OPEN.
 
+**Successor, 2026-10-30:** the [paid first-return lift](../../return_kernel_core_transplants_20261030/COLLATZ.md)
+uses the two-clock E9 margin below to prove the sharp **actual-content E10**
+bound for every word. It does not produce an E10 certificate for this
+particular overcounting envelope; all-E envelope feasibility remains open.
+
 Use q=5^E,D=8q,N=5q−5. Store u=m modulo5 and z moduloq. Four ordinary modes
 have u=1,2,3,4; a fifth mode means u=4 with a pending high-layer bonus.
 The pending mode is allowed only when h=min(v5(z),E)>0. There are therefore
@@ -100,4 +105,5 @@ ones. The terminal multiplier becomes nonsquare, so that last letter adds
 no five-adic content. The word has A=781252 and S9=488281=λ9(A−2).
 The same positive source2^781251−1 realizes it: after the initial k=781250
 ones the value is2*3^k−1, and the next numerator2(3^(k+1)−1) has exact
-2-adic valuation2 because k+1 is odd. E10 remains unattempted and OPEN.
+2-adic valuation2 because k+1 is odd. E10 envelope-certificate feasibility remains unattempted here; the successor
+proves the actual-content E10 bound by a different first-return argument.
