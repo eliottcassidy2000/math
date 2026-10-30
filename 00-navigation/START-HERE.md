@@ -14,6 +14,8 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md); [S75](S75.md).
 
+**Oct 30: [Session111 scale connections](../05-knowledge/results/session111_scale_connections_20261030/README.md).** Exact signed/unsigned kernels25/100 and images200/50; all-depth shared-quotient bank recurrence. These are action-level counts, not a full graph census.
+
 ## Orientation
 
 1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
