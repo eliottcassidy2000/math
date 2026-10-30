@@ -1,0 +1,14 @@
+{
+  "defect_histogram": {
+    "0": 16,
+    "24": 112
+  },
+  "invalid_mean_square": 384,
+  "multiplicity_each": 6,
+  "nonzero_syndrome_functionals": 7,
+  "normalized_rademacher_mean_square": "3/32",
+  "status": "PASS",
+  "symbolic_rectangles": 112,
+  "tables": 128,
+  "tautologies": 70
+}

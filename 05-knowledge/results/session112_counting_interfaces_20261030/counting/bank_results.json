@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": 4694,
+  "automaton_thresholds": 73,
+  "banks": [
+    {
+      "p": 3,
+      "k": 2,
+      "coordinates": 8,
+      "subgroup_states": 4,
+      "orbits": 64,
+      "rank_controls": 64
+    },
+    {
+      "p": 5,
+      "k": 2,
+      "coordinates": 24,
+      "subgroup_states": 4,
+      "orbits": 692224,
+      "rank_controls": 34
+    },
+    {
+      "p": 5,
+      "k": 3,
+      "coordinates": 124,
+      "subgroup_states": 5,
+      "orbits": 170141183461707171770974935790600192,
+      "rank_controls": 18
+    }
+  ],
+  "note": "p=3 is a finite permutation-model control only, not a ramified-ring claim"
+}

@@ -1,6 +1,6 @@
 # Session 112: loss-aware counting interfaces
 
-30 October 2026. **ACTIVE research session; second verified checkpoint.**
+30 October 2026. **ACTIVE research session; third verified checkpoint.**
 
 This session uses Rudich–Rousseau's *Deterministic Factoring in Time N^{o(1)}*
 as inspiration for continuing the repository's symmetry, enumeration, modular
@@ -60,6 +60,47 @@ The three lanes have independently replayed normal and optimized checkers:
 [norm checks](norms/checks.json), [selector checks](symmetry/results.json), and
 [counting checks](counting/results.json). Their proofs and inherited
 classification assumptions remain explicit in the corresponding notes.
+
+## Reversible arithmetic and quantitative defects
+
+[Paired aliquot residues](arithmetic/ALIQUOT_MODULAR.md) recover the source
+modulo p^k even when its p-adic valuation is too large to read directly.
+The decoder is a Latin-square coordinate map. A retained divisor-sum core
+conjugates every prime-ray step to simple scaling of the source residue.
+Later shifted probes incur a sharp precision debt; the source semigroup
+remains meaningful without the core, but reconstruction of its aliquot
+observation does not.
+
+[Weighted observers](arithmetic/POWER_OBSERVERS.md) instead recover n^w.
+Their exact root fibres expose a genuine root-selection ambiguity, including
+four prime-source residues with identical square-weighted dyadic observations.
+Two coprime weights restore the source on units. These are information
+identities, not fast methods for evaluating divisor sums or factoring.
+
+[Norm defects](norms/NORM_DEFECT.md) quantify the same three-bit syndrome
+used by the eight-square signs: every invalid promised Fano-line table fails
+exactly 24 of 112 rectangle tests and has mean-square defect 384 under
+independent centered variance-one inputs. The result preserves a precise
+syndrome and defect statistic, not individual coefficients or numeric divisor
+sums. [Checks](norms/defect_checks.json) enumerate the complete finite model.
+
+## A constructive bank rank/unrank algorithm
+
+[Shared-residue bank ranking](counting/BANK_RANKING.md) advances beyond the
+initial saturated-cut reduction for one specified action. At completed cycle
+blocks, only k+2 stabilizer states are needed. A finite threshold automaton
+counts primitive necklaces below each requested value; exact continuation
+weights then rank and unrank whole bank states in polynomial time in the
+number of coordinates D and log Q. The named cycle order and fixed orientation
+origin are retained.
+
+[The implementation](counting/bank_rank.py) has literal-group and exhaustive
+small-necklace controls recorded in [its results](counting/bank_results.json).
+It recovers the earlier 692,224 orbits at 24 binary coordinates and the
+specified 124-coordinate count while supporting selection, not only totals.
+The polynomial bound is in D=p^k-1, not in k. This is neither unrestricted
+tournament isomorphism nor prime-bank counting, and it does not import the
+factoring paper's counting engine.
 
 ## Continuing lanes
 

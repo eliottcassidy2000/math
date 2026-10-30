@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "direct_divisor_checks": 24000,
+  "vertical_permutations": 897,
+  "state_inverse_and_stabilization_checks": 64233,
+  "precision_compatibility_checks": 63972,
+  "metric_pair_checks": 209652,
+  "Latin_columns": 345,
+  "joint_metric_checks": 34905,
+  "conjugacy_and_basin_checks": 7731,
+  "shifted_precision_hostiles": 300,
+  "semigroup_checks": 4830,
+  "scope": "Universal claims proved in ALIQUOT_MODULAR.md; these finite checks use direct divisor enumeration and exhaustive residue planes."
+}

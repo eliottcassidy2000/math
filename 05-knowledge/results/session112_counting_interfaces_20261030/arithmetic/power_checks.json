@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "direct_weighted_divisor_checks": 7680,
+  "exact_power_fibres": 1053,
+  "formal_conjugacy_checks": 41232,
+  "square_cube_unit_recoveries": 179,
+  "all_future_witness_positions": 16
+}
