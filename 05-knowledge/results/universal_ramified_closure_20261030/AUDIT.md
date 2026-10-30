@@ -12,6 +12,12 @@ the mathematical protocol, core-paper routes and targeted messages were
 read. The broad startup query returned many unrelated routes; no old
 chronological log was treated as current truth. Later incoming work
 through3bfd37ac31 was inspected without changing the live runtime input.
+A final incoming pass through0751bba7c9 recovered SIGN_QUOTIENT.md and
+the reviewed Sylow-p scope correction. Its two normalizer sign probes
+motivated U7's full-permutation extension and the sharp k=1 failure.
+The new START-HERE route made the existing startup byte budget exceed
+its cap by198 bytes; its route and duplicate orientation prose were
+shortened without removing the link or changing mathematical status.
 
 Anchor: classify the group common to EVERY ramified bank, not just a
 subgroup of one source. Niche: the stabilizer geometry of finite point
@@ -101,6 +107,13 @@ dependency of U1--U6.
 8. **Coding:** opposite colors receive complementary bit words, ensuring
    every layer is an actual tournament. The bit lower bound is for
    preserving ALL colors, not minimal graph-group realization.
+9. **Unsigned phase:** for k>=2, norm polarization gives one global
+   conjugation choice. A negative clock orbit changes a valuation-one
+   difference at valuation1, so it cannot masquerade as a top-socle
+   change. This eliminates independent local signs. At k=1 this
+   inequality disappears, and independent dihedral fibre actions are
+   real. H need not be normal in that larger wreath group. The tilted
+   base kills the global conjugation with its existing third pin.
 
 ## Exact computation universes
 
@@ -114,6 +127,11 @@ exceptions and remain active under -O.
   determined by the color of the reversed difference. The two-stage
   signature search supplies the upper bound, independently of simply
   generating the predicted group.
+- The complete unsigned counterparts at25 and625 have4000 and250
+  accepted two-point maps, giving group orders1000000 and7812500.
+  All4000 local sign choices survive at25. At625,3750 are rejected by
+  joint landmark colors before full pair validation. Integer, tilted
+  and two-layer base stabilizers are checked on every accepted map.
 - All15625 normal-form group elements at25 are enumerated, with unique
   permutations, complete cycle and fixed-point inventories. All2625
   singleton/pair/triple subsets are checked against those literal fixed
@@ -137,10 +155,11 @@ exceptions and remain active under -O.
   labelled cyclic triples and1620/1728 regular binary masks. Its gates
   are reported separately from the new local checks.
 
-Normal and optimized runs passed2,057,599 local gates plus seven
+Normal and optimized final runs passed2,063,175 local gates plus seven
 inherited81/27 gates, with byte-identical receipt SHA256
-`b8241b36d29746b4eef567da2b185b0f2a153800699279d52101522e0666c4d7`.
-The seal checks six local artifacts, six immutable source pins and
+`8bc30b0f2bad251dee628c329e292f95cb9c92948819e1d84bcef53266284cd1`.
+The preceding2,057,599-gate receipt is superseded by the expanded checker.
+The seal checks six local artifacts, seven immutable source pins and
 one live runtime input. Source pins authenticate dependencies, not
 independent review.
 

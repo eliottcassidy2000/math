@@ -79,11 +79,13 @@ class Ring:
         return ans
 
 
-def colored_group_certificate(ring):
+def colored_group_certificate(ring, unsigned=False):
     # Any automorphism fixing 0 and 1 must preserve these two color labels.
     p, n, q = ring.p, ring.n, ring.q
     landmarks = [j*q for j in range(p)]
     colors = [[ring.color(i, j) for j in range(n)] for i in range(n)]
+    if unsigned:
+        colors = [[min(colors[i][j],colors[j][i]) for j in range(n)] for i in range(n)]
     domains = [[v for v in range(n) if (colors[0][v], colors[q][v]) ==
                 (colors[0][a], colors[q][a])] for a in landmarks[2:]]
     profiles = list(map(len, domains))
@@ -93,40 +95,64 @@ def colored_group_certificate(ring):
     original_signatures = [tuple(colors[a][v] for a in full_landmarks) for v in range(n)]
     need(len(set(original_signatures)) == n, 'two-stage landmark colors separate every vertex')
     accepted, rejected, maps_digest = 0, 0, hashlib.sha256()
+    base_survivors = Counter()
+    tilted = [0,q,2*q+1]+[j*q for j in range(3,p)]
+    signature_rejections = 0
     for choices in product(*domains):
-        images = [0, q, *choices]
+        base_images = [0, q, *choices]
+        extra_domains = []
         for a in extras:
             signature = tuple(colors[b][a] for b in landmarks)
-            candidates = [v for v in range(n) if tuple(colors[b][v] for b in images[:p]) == signature]
-            need(len(candidates) == 1, 'auxiliary landmark reconstructed without another selector')
-            images.append(candidates[0])
-        reverse = {tuple(colors[a][v] for a in images): v for v in range(n)}
-        if len(reverse) != n or any(sig not in reverse for sig in original_signatures):
-            rejected += 1
-            continue
-        perm = [reverse[sig] for sig in original_signatures]
-        need(len(set(perm)) == n, 'candidate permutation bijective')
-        valid = all(colors[x][y] == colors[perm[x]][perm[y]]
-                    for x in range(n) for y in range(x+1, n))
-        if not valid:
-            rejected += 1
-            continue
-        h = {}
-        for i, j in enumerate(perm):
-            v, w = ring.points[i], ring.points[j]
-            shift = ((w[0]-v[0]) % q, (w[1]-v[1]) % q)
-            possible = [s for s in range(p) if shift == tuple(s*a % q for a in ring.eta)]
-            need(len(possible) == 1, 'map lies on exact socle line')
-            residue = v[0] % p
-            need(residue not in h or h[residue] == possible[0], 'shift constant on entire residue fibre')
-            h[residue] = possible[0]
-        need(h[0] == h[1] == 0, 'root and unit selector retained')
-        accepted += 1
-        maps_digest.update(json.dumps(perm, separators=(',', ':')).encode())
-    need(accepted == p**(p-2) and rejected == 0, 'exhaustive full two-point stabilizer')
-    return {'p': p, 'k': ring.k, 'D': ring.D, 'landmark_domains': profiles,
+            candidates = [v for v in range(n) if tuple(colors[b][v] for b in base_images) == signature]
+            need(len(candidates) == (2 if unsigned else 1), 'auxiliary landmark domain matches retained orientation')
+            extra_domains.append(candidates)
+        for extra_images in product(*extra_domains):
+            images = base_images+list(extra_images)
+            # A cheap necessary joint check rejects incompatible local reflections.
+            if any(colors[a][b] != colors[c][d] for a,c in zip(full_landmarks,images)
+                   for b,d in zip(full_landmarks,images)):
+                rejected += 1
+                continue
+            reverse = {tuple(colors[a][v] for a in images): v for v in range(n)}
+            if len(reverse) != n or any(sig not in reverse for sig in original_signatures):
+                rejected += 1
+                signature_rejections += 1
+                continue
+            perm = [reverse[sig] for sig in original_signatures]
+            need(len(set(perm)) == n, 'candidate permutation bijective')
+            valid = all(colors[x][y] == colors[perm[x]][perm[y]]
+                        for x in range(n) for y in range(x+1, n))
+            if not valid:
+                rejected += 1
+                continue
+            if not unsigned:
+                h = {}
+                for i, j in enumerate(perm):
+                    v, w = ring.points[i], ring.points[j]
+                    shift = ((w[0]-v[0]) % q, (w[1]-v[1]) % q)
+                    possible = [s for s in range(p) if shift == tuple(s*a % q for a in ring.eta)]
+                    need(len(possible) == 1, 'map lies on exact socle line')
+                    residue = v[0] % p
+                    need(residue not in h or h[residue] == possible[0], 'shift constant on entire residue fibre')
+                    h[residue] = possible[0]
+                need(h[0] == h[1] == 0, 'root and unit selector retained')
+            accepted += 1
+            base_survivors['integer'] += all(perm[v]==v for v in landmarks)
+            base_survivors['tilted'] += all(perm[v]==v for v in tilted)
+            base_survivors['two_layer'] += all(perm[v]==v for v in full_landmarks)
+            maps_digest.update(json.dumps(perm, separators=(',', ':')).encode())
+    expected = p**(p-2)*(2**p if unsigned and ring.k==1 else 2 if unsigned else 1)
+    need(accepted == expected, 'exhaustive full two-point stabilizer')
+    if not unsigned:
+        need(rejected == 0, 'every directed candidate extends')
+    expected_bases = {'integer':2**p if unsigned and ring.k==1 else 2 if unsigned else 1,
+                      'tilted':2**p if unsigned and ring.k==1 else 1,'two_layer':1}
+    need(dict(base_survivors)==expected_bases,'sharp directed and unsigned base controls')
+    return {'p': p, 'k': ring.k, 'D': ring.D, 'unsigned':unsigned,'landmark_domains': profiles,
             'accepted': accepted, 'rejected': rejected,
-            'full_universal_order': n*ring.q*accepted,
+            'signature_rejections':signature_rejections,
+            'base_stabilizers':dict(base_survivors),
+            'full_universal_order': n*ring.q*accepted*(2 if unsigned else 1),
             'all_maps_sha256': maps_digest.hexdigest()}
 
 
@@ -330,6 +356,7 @@ def main():
     reports = [colored_group_certificate(Ring(p, k)) for p, k in ((5, 1), (5, 2), (7, 1))]
     result = {'status': 'FINITE-EXACT stated colored universes, not every bank group',
               'colored_groups': reports,'selectors':selector_checks(),
+              'unsigned_groups':[colored_group_certificate(Ring(5,k),unsigned=True) for k in (1,2)],
               'full_small_group':full_small_group(),'counts':counting_checks(),
               'bank_kernel':bank_kernel_checks(),
               'hostiles':hostiles_and_packets(),'gates': GATES}

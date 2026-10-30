@@ -1,11 +1,11 @@
 {
   "artifacts": {
-    "AUDIT.md": "cf25044263fe6abf4fcc015486b0c48a0f9748e35ae9836d78ab88905c7a653b",
-    "PROOFS.md": "29edcfe5b95667858adc5f6073b0fbb66fc8033395192acd47a73bede38e9304",
-    "README.md": "5ce0ddc66c3dd344ad6438fcad3abc2bd79d4dc7f862213a2a4a93256a87146f",
-    "check.py": "0da8df8b66630ce830c0d7f9bcaa8905b081d04f1f92d90872e4ddedf139aa3f",
-    "receipt.json": "b8241b36d29746b4eef567da2b185b0f2a153800699279d52101522e0666c4d7",
-    "seal.py": "99c5f614a8e410b56cdab1d8512864793efd31cebfbc42fa33f34dc970d4d4a2"
+    "AUDIT.md": "f93e00e21811fb746cb774fc60e0e4b98167422ac6114da55ef749498eb221f2",
+    "PROOFS.md": "9dff1fe572bf469dd67b70b4302bf01451f0c12c8c755cef68a8206aff779471",
+    "README.md": "eba46d669e04065e37dbcef94028147691fda2f5feff295077b3bd660468ac4d",
+    "check.py": "5329385bb2ff542c06cf1cb0ee146030b508f24684148520285a477d74fb94fc",
+    "receipt.json": "8bc30b0f2bad251dee628c329e292f95cb9c92948819e1d84bcef53266284cd1",
+    "seal.py": "07cd307ac881b10129d9cbafc1bb794e36febb6ec761f2b8379f4792526072d5"
   },
   "primary_literature": {
     "sections_read": [
@@ -45,9 +45,14 @@
       "path": "05-knowledge/results/session111_scale_connections_20261030/ACTION_CARRIERS.md"
     },
     {
-      "commit": "3bfd37ac3182436894ad820b4d58f9e9d1a420b7",
-      "lf_sha256": "03eefd9ff9a823fe37545fd5e465987e70c5c52482d205aef903ade90ccf84f1",
+      "commit": "0751bba7c9cc10449327ab6b24402c4ba4323204",
+      "lf_sha256": "f5621687c9fc07c00c5113dc3ee8146b2a01472b5e72fa0ef379392b74b39734",
       "path": "05-knowledge/results/session111_scale_connections_20261030/BANK_RECURRENCE.md"
+    },
+    {
+      "commit": "0751bba7c9cc10449327ab6b24402c4ba4323204",
+      "lf_sha256": "0b49211823cc2a0eea4239a409953cc5d4e6f8dbfc0794ebe62898c23e881ab1",
+      "path": "05-knowledge/results/session111_scale_connections_20261030/SIGN_QUOTIENT.md"
     }
   ],
   "status": "Integrity, not independent mathematical review"

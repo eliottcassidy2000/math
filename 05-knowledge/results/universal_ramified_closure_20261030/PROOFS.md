@@ -304,7 +304,71 @@ as r jointly named bank assignments in the inherited fixed-origin gauge.
 These strata give certified subgroup stabilizers, not an all-bank
 classification of full tournament automorphism groups.
 
-## U7. Generality, literature, and stopping boundaries
+## U7. Full unsigned closure: a two-bit phase and its sharp depth boundary
+
+Now color a difference only by its opposite pair v*(C union -C),
+and let W preserve every such unsigned color. Let c be ring conjugation
+delta -> -delta. At EVERY k>=2,
+
+    W=H semidirect <-1,c>,  W/H=C2^2, |W|=4|H|.     (U7.1)
+
+This extends the incoming [SIGN_QUOTIENT](../session111_scale_connections_20261030/SIGN_QUOTIENT.md)
+from the additive normalizer to ALL permutations preserving these
+unsigned colors. Its two orientation probes are inherited, not newly
+claimed for that narrower normalizer. W is an even-order symmetry
+group of an unsigned colored relation, not of an individual tournament.
+
+**Proof.** An unsigned-color automorphism preserves Q. Translate0 and
+use a multiplier in C union -C to fix1. Polarization fixes the first
+coordinate as in U1. The image of delta has second coordinate congruent
+to either1 or-1 modulo p^(k-1); use c if necessary to choose1. The
+remaining map has form z -> z+eta*h_z. For a difference v of valuation1,
+membership in a NEGATIVE clock orbit would change it by
+-(g^t+1)v, of valuation1. This cannot equal a nonzero socle displacement
+of valuation2k-1>=3. Only the positive clock orbit remains, so U1's
+odd/even argument forces h to depend solely on the residue. This proves
+the upper bound. Both -1 and c preserve unsigned colors and normalize H;
+their four-element group intersects the odd group H trivially. QED.
+
+Conjugation sends delta^d*u into(-1)^d times its directed clock orbit:
+the quotient of the conjugated unit by u has norm1 and residue1. Thus
+-1 reverses every directed color, and c reverses just the odd-valuation
+colors. The directions of1 and delta distinguish the four cosets in
+W/H. Exactly two bits recover this GLOBAL orientation phase after
+factoring out H; they do not identify an arbitrary vertex permutation.
+
+At depth k=1 the conclusion is false. Unit colors record only the
+nonzero residue difference, while within each residue fibre the colors
+are the signed difference pairs of a p-cycle. Therefore
+
+    W=(D_(2p)) wr D_(2p),  |W|=(2p)^(p+1),          (U7.2)
+
+in its imprimitive action on p fibres of size p; D_(2p) has order2p.
+Each fibre can reflect independently. H has index2^(p+1) here and is
+not in general normal in W; a quotient C2^(p+1) is NOT asserted.
+The p-cycle color already forces each component's dihedral group, so
+the displayed wreath group is an upper as well as a lower bound.
+
+**Free phase by selector placement.** For k>=2, W still has minimal
+point-base size p. Use the transversal
+
+    {0,1,2+delta,3,...,p-1}.
+
+After fixing0 and1 a W element is a fibre shift followed possibly by c.
+The pin2+delta excludes c, because its displacement2delta cannot be
+cancelled in the top socle when k>=2. The occupied fibres then kill F.
+The earlier unoccupied-fibre lower bound proves minimality. Thus tilting
+one of the existing p pins removes the global phase without another pin.
+The integer transversal instead leaves c. At k=1, each fibre's dihedral
+action requires two pins, so the sharp unsigned base size is2p.
+
+The finite checks exhaust W's two-point stabilizer at25 and625. Their
+orders are4000 and250, giving full unsigned orders1000000 and7812500.
+At625,3750 of4000 initially possible local reflection choices are
+rejected by joint landmark colors: only the two global phases remain.
+This is a literal alignment constraint, not independent sign averaging.
+
+## U8. Generality, literature, and stopping boundaries
 
 The standard ambient language is a cyclotomic association scheme,
 Cyc(C,R), whose color-preserving group is the two-closure of A.

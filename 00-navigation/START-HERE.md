@@ -14,15 +14,15 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [S62](../05-knowledge/results/session62_agent_theme_bridges_20261025/README.md); [S63](S63.md): modular depth/root stacks. [S64](S64.md); [S65](S65.md); [S66](S66.md); [S67](S67.md); [S75](S75.md).
 
-**Oct 30: [Session111 scale connections](../05-knowledge/results/session111_scale_connections_20261030/README.md).** Exact signed/unsigned kernels25/100 and images200/50; all-depth shared-quotient bank recurrence. These are action-level counts, not a full graph census.
+[S111](../05-knowledge/results/session111_scale_connections_20261030/README.md): kernels and bank recurrence.
 
 ## Orientation
 
-1. **Main prize:** LRC(14), with 13 relative speeds: repository proof **OPEN**; external claims are qualified in CORE-PAPERS.
+1. **Main prize:** LRC(14) is **OPEN**; external claims: CORE-PAPERS.
 2. **Old shortcuts:** no uniform good period `q <= 25`; twelve-speed sporadic emptiness remains **OPEN**.
 3. **Major closures:** THM-2022 proves NC2/GMC(2), and THM-2801 makes the Special Image boundary true at one pair and false from two; neither settles the restricted planar-JC sectors.
 4. **Truth discipline:** corrected canon outranks canon, exact computation, hypothesis, synthesis, and historical prose.
-5. **Research posture:** Anchor / Niche / Wildcard; require mechanisms, hostiles, and preserved/lost coordinates.
+5. **Posture:** Anchor / Niche / Wildcard; retain mechanisms, hostiles and lost coordinates.
 
 Start with:
 

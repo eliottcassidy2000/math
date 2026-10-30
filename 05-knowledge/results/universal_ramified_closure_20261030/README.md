@@ -47,6 +47,15 @@ the two-stage reconstruction are both retained in [U3](PROOFS.md).
 These statements require the fully colored relation, not a single
 unlabelled tournament or an arbitrary later complement.
 
+There is a further phase theorem. At k>=2, forgetting every orbit's
+orientation enlarges the COMPLETE symmetry group by exactly C2^2:
+global reversal and odd-valuation reversal. This extends the incoming
+normalizer result to every unsigned-color-preserving permutation.
+Tilting one existing pin from2 to2+delta removes the remaining global
+phase, so p pins still suffice. At k=1 independent fibre reflections
+survive instead, and the unsigned minimum is2p pins. [U7](PROOFS.md)
+proves the sharp depth boundary and retains exact25/625 controls.
+
 ## Exact counts for every number of jointly named vertices
 
 For ordered r-tuples, allowing repetition, Burnside now reduces to
@@ -92,6 +101,7 @@ task of realizing H alone; one625 tournament already does the latter.
 ## Evidence, sources and remaining work
 
 The checker exhausts the universal two-point stabilizers at25,49 and625;
+also exhausts the unsigned two-point stabilizers at25 and625;
 enumerates the full15625-element group at25; checks all its singleton,
 pair and triple pin sets; and tests every anchored pair in six larger
 ring universes. It compares the two joint-count formulas and recurrence

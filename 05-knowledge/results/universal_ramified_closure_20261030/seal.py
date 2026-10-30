@@ -16,8 +16,10 @@ SOURCES={
         RUNTIME),
     '3bfd37ac31':(
         '05-knowledge/results/session111_scale_connections_20261030/PORT_INFORMATION.md',
-        '05-knowledge/results/session111_scale_connections_20261030/ACTION_CARRIERS.md',
-        '05-knowledge/results/session111_scale_connections_20261030/BANK_RECURRENCE.md')}
+        '05-knowledge/results/session111_scale_connections_20261030/ACTION_CARRIERS.md'),
+    '0751bba7c9':(
+        '05-knowledge/results/session111_scale_connections_20261030/BANK_RECURRENCE.md',
+        '05-knowledge/results/session111_scale_connections_20261030/SIGN_QUOTIENT.md')}
 
 
 def git(*args):

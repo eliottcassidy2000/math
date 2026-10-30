@@ -114,6 +114,11 @@
       "D": 5,
       "accepted": 125,
       "all_maps_sha256": "50ff552070afc36c37945e2256a2621f4b21e1db1f56ec471671515b12a320a5",
+      "base_stabilizers": {
+        "integer": 1,
+        "tilted": 1,
+        "two_layer": 1
+      },
       "full_universal_order": 15625,
       "k": 1,
       "landmark_domains": [
@@ -122,12 +127,19 @@
         5
       ],
       "p": 5,
-      "rejected": 0
+      "rejected": 0,
+      "signature_rejections": 0,
+      "unsigned": false
     },
     {
       "D": 5,
       "accepted": 125,
       "all_maps_sha256": "f74ba5c90a75af8a358a7114f3c68b8be9a21d7328feb2e19fb72a2eae9d8f93",
+      "base_stabilizers": {
+        "integer": 1,
+        "tilted": 1,
+        "two_layer": 1
+      },
       "full_universal_order": 1953125,
       "k": 2,
       "landmark_domains": [
@@ -136,12 +148,19 @@
         5
       ],
       "p": 5,
-      "rejected": 0
+      "rejected": 0,
+      "signature_rejections": 0,
+      "unsigned": false
     },
     {
       "D": 7,
       "accepted": 16807,
       "all_maps_sha256": "eb840719ce006e8cd8fe694d70ba85818ea5299eea009eb0271c803837ba698d",
+      "base_stabilizers": {
+        "integer": 1,
+        "tilted": 1,
+        "two_layer": 1
+      },
       "full_universal_order": 5764801,
       "k": 1,
       "landmark_domains": [
@@ -152,7 +171,9 @@
         7
       ],
       "p": 7,
-      "rejected": 0
+      "rejected": 0,
+      "signature_rejections": 0,
+      "unsigned": false
     }
   ],
   "counts": [
@@ -724,7 +745,7 @@
     ],
     "group_elements": 15625
   },
-  "gates": 2057599,
+  "gates": 2063175,
   "hostiles": {
     "control81_27": {
       "common_cyclic_triples": 67,
@@ -939,5 +960,49 @@
       "random_joint_sets": 120
     }
   ],
-  "status": "FINITE-EXACT stated colored universes, not every bank group"
+  "status": "FINITE-EXACT stated colored universes, not every bank group",
+  "unsigned_groups": [
+    {
+      "D": 5,
+      "accepted": 4000,
+      "all_maps_sha256": "af5dc44d82921212dddfc97e3b8cd1fde6d4adfc754c2cb4e8cb6ab776bdb07a",
+      "base_stabilizers": {
+        "integer": 32,
+        "tilted": 32,
+        "two_layer": 1
+      },
+      "full_universal_order": 1000000,
+      "k": 1,
+      "landmark_domains": [
+        5,
+        5,
+        5
+      ],
+      "p": 5,
+      "rejected": 0,
+      "signature_rejections": 0,
+      "unsigned": true
+    },
+    {
+      "D": 5,
+      "accepted": 250,
+      "all_maps_sha256": "57380b78f616247d3f2787158439db09fc9e60ffda09154db43273b6472ec69c",
+      "base_stabilizers": {
+        "integer": 2,
+        "tilted": 1,
+        "two_layer": 1
+      },
+      "full_universal_order": 7812500,
+      "k": 2,
+      "landmark_domains": [
+        5,
+        5,
+        5
+      ],
+      "p": 5,
+      "rejected": 3750,
+      "signature_rejections": 0,
+      "unsigned": true
+    }
+  ]
 }
