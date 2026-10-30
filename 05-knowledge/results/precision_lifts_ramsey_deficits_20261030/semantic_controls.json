@@ -1,0 +1,161 @@
+{
+  "status": "FINITE-EXACT semantic controls; next clock bound is necessary only",
+  "words_clock_at_most_16": 65535,
+  "adaptive_transition_checks": 262140,
+  "initial_phase_checks": 7956,
+  "boundary_checks": 650,
+  "closed_E12_families": [
+    {
+      "ones": 0,
+      "nonone": 1
+    },
+    {
+      "ones": 1,
+      "nonone": 1
+    },
+    {
+      "ones": 2,
+      "nonone": 1
+    },
+    {
+      "ones": 3,
+      "nonone": 1
+    },
+    {
+      "ones": 0,
+      "nonone": 2
+    },
+    {
+      "ones": 1,
+      "nonone": 2
+    },
+    {
+      "ones": 0,
+      "nonone": 3
+    }
+  ],
+  "critical_artificial_lift": {
+    "word": [
+      2,
+      2,
+      3,
+      1,
+      2,
+      2,
+      1,
+      1,
+      2,
+      1,
+      4
+    ],
+    "P": 177147,
+    "B": 1986245,
+    "Q": 2097152,
+    "actual_charges": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "actual_total": 2,
+    "actual_terminal_content": 1,
+    "artificial_total": 10,
+    "price": "61035151/19531250"
+  },
+  "first_multiplier12_return_clock": 11235,
+  "corresponding_length": 5105,
+  "resulting_E13_native_price_floor": "6104626/48828125",
+  "remaining_E13_families": [
+    {
+      "nonone": 1,
+      "ones": 0
+    },
+    {
+      "nonone": 1,
+      "ones": 1
+    },
+    {
+      "nonone": 1,
+      "ones": 2
+    },
+    {
+      "nonone": 1,
+      "ones": 3
+    },
+    {
+      "nonone": 1,
+      "ones": 4
+    },
+    {
+      "nonone": 2,
+      "ones": 0
+    },
+    {
+      "nonone": 2,
+      "ones": 1
+    },
+    {
+      "nonone": 2,
+      "ones": 2
+    },
+    {
+      "nonone": 2,
+      "ones": 3
+    },
+    {
+      "nonone": 3,
+      "ones": 0
+    },
+    {
+      "nonone": 3,
+      "ones": 1
+    },
+    {
+      "nonone": 3,
+      "ones": 2
+    },
+    {
+      "nonone": 3,
+      "ones": 3
+    },
+    {
+      "nonone": 4,
+      "ones": 0
+    },
+    {
+      "nonone": 4,
+      "ones": 1
+    },
+    {
+      "nonone": 4,
+      "ones": 2
+    },
+    {
+      "nonone": 5,
+      "ones": 0
+    },
+    {
+      "nonone": 5,
+      "ones": 1
+    },
+    {
+      "nonone": 6,
+      "ones": 0
+    },
+    {
+      "nonone": 6,
+      "ones": 1
+    },
+    {
+      "nonone": 7,
+      "ones": 0
+    }
+  ]
+}

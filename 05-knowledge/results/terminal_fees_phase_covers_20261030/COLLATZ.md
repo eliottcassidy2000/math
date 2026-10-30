@@ -1,5 +1,9 @@
 # Terminal fees with a two-layer epoch clock
 
+**Successor correction of status:** the seven E12 families described as OPEN
+below are now proved in [precision_lifts_ramsey_deficits_20261030/COLLATZ.md](../precision_lifts_ramsey_deficits_20261030/COLLATZ.md).
+The historical E11 proofs and reduction remain valid.
+
 **PROVED relative to the independently checked certificates and inherited E10:**
 all nine eleventh-layer excursion-price families hold. For every finite positive
 valuation word w with its original integer clock A,

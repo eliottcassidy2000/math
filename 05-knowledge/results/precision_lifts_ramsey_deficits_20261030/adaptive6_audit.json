@@ -1,0 +1,13 @@
+{
+  "E": 6,
+  "states": 112500,
+  "edges": 10320000,
+  "entries": 150,
+  "D": 3125000,
+  "N": 1953120,
+  "min": -34765440,
+  "max": -3906240,
+  "terminal": -10937400,
+  "all_positive_letters": true,
+  "pass": true
+}

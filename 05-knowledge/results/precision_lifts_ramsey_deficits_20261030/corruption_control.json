@@ -1,0 +1,5 @@
+{
+  "mutation": "replace terminal potential by zero",
+  "exit_code": 5,
+  "stderr": "edge failure 0 1 1 7814\n"
+}

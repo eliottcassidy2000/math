@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-30 — median closure belongs to the coupled relation, not its unary shadow
+
+- **Source/status:** pre-promotion draft of `05-knowledge/results/precision_lifts_ramsey_deficits_20261030/LRC.md`; corrected before its first commit. No prior canonized theorem is retracted.
+- **First failed implication:** attributing a failure of coordinatewise median closure to a union of intervals on a single line. Every unary subset of a total order is closed under odd medians, because the median is one of its inputs.
+- **Minimal mechanism witness / repair:** the coupled relation y={2t} contains (1/8,1/4),(3/8,3/4),(5/8,1/4), but not their coordinatewise median(3/8,1/4). The lost coordinate is the integer wrap label. Each fixed-tooth increasing affine relation is median closed; its coupled wrapped union need not be.
+- **Strongest survivor / next question:** the joint tooth-pair compiler and its counts are unchanged. Separate successful runner attachments do not supply a common time marginal. A transfer from odd-denominator descent must retain that common marginal or the original integer tooth labels.
+
 ## 2026-10-30 — a half-clearance core needs a separate recursive spacing guard
 
 - **Source/status:** unpublished generalization tested in `return_kernel_core_transplants_20261030/LRC.md`. The predecessor echo theorem assumed core maximum strictly below1/2; that proved theorem is unchanged.

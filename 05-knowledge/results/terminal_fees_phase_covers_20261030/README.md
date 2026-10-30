@@ -5,6 +5,11 @@ CITED mechanisms / OPEN universal targets.** Same-agent mathematical review
 with independent certificate algorithms; no independent human or agent audit
 is claimed.
 
+**Successor update:** [precision_lifts_ramsey_deficits_20261030](../precision_lifts_ramsey_deficits_20261030/README.md)
+closes the seven E12 families and adds an exact joint two-tail LRC compiler.
+The E12 OPEN statements below describe this packet's earlier frontier and
+are superseded by that checked result; universal targets remain open.
+
 * [Collatz](COLLATZ.md): **all nine E11 families are closed.** A terminal
   margin44941347/19531250>2 pays every non-one tenth-layer excursion and proves
   the sharp all-word bound S11<=12207031*A/19531250. The independent F2 audit

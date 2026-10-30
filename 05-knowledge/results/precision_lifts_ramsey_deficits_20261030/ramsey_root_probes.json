@@ -1,0 +1,162 @@
+[
+  {
+    "case": 0,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      15,
+      29,
+      29
+    ],
+    "model_rounds": 1,
+    "added_native_K4_clauses": 14383,
+    "last_model_K4_count": 14383,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 39,
+      "conflicts": 6807,
+      "decisions": 62036,
+      "propagations": 429521
+    }
+  },
+  {
+    "case": 1,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      15,
+      29,
+      29
+    ],
+    "model_rounds": 1,
+    "added_native_K4_clauses": 17114,
+    "last_model_K4_count": 17114,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 34,
+      "conflicts": 5829,
+      "decisions": 55730,
+      "propagations": 376012
+    }
+  },
+  {
+    "case": 640,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      16,
+      29,
+      29
+    ],
+    "model_rounds": 2,
+    "added_native_K4_clauses": 24243,
+    "last_model_K4_count": 8258,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 38,
+      "conflicts": 6248,
+      "decisions": 66528,
+      "propagations": 422620
+    }
+  },
+  {
+    "case": 641,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      16,
+      29,
+      29
+    ],
+    "model_rounds": 1,
+    "added_native_K4_clauses": 14513,
+    "last_model_K4_count": 14513,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 34,
+      "conflicts": 5900,
+      "decisions": 61279,
+      "propagations": 383598
+    }
+  },
+  {
+    "case": 642,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      16,
+      29,
+      29
+    ],
+    "model_rounds": 2,
+    "added_native_K4_clauses": 24384,
+    "last_model_K4_count": 8439,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 36,
+      "conflicts": 6016,
+      "decisions": 65596,
+      "propagations": 399755
+    }
+  },
+  {
+    "case": 643,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      16,
+      29,
+      29
+    ],
+    "model_rounds": 2,
+    "added_native_K4_clauses": 22716,
+    "last_model_K4_count": 8215,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 35,
+      "conflicts": 5998,
+      "decisions": 61674,
+      "propagations": 383320
+    }
+  },
+  {
+    "case": 644,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      17,
+      29,
+      29
+    ],
+    "model_rounds": 2,
+    "added_native_K4_clauses": 25399,
+    "last_model_K4_count": 8589,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 38,
+      "conflicts": 6312,
+      "decisions": 66868,
+      "propagations": 473615
+    }
+  },
+  {
+    "case": 645,
+    "status": "UNKNOWN",
+    "degree_caps": [
+      17,
+      29,
+      29
+    ],
+    "model_rounds": 2,
+    "added_native_K4_clauses": 24510,
+    "last_model_K4_count": 8145,
+    "seconds_budget": 25,
+    "conflicts_per_solve": 5000,
+    "solver_stats": {
+      "restarts": 52,
+      "conflicts": 9315,
+      "decisions": 89981,
+      "propagations": 637750
+    }
+  }
+]
