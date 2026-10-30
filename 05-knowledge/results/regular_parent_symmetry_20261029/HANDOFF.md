@@ -41,12 +41,17 @@ Completed:
    two-parent/C3 child is the compulsory hostile.
 
 3. **Nonuniform palettes and arithmetic ports.**
-   Replace uniform Q colors by a measured feasible palette. The upper
-   proof uses the probability of child-orbit coincidences, not merely
-   entropy or rank. Derive the relevant collision moments with source and
-   clock retained, then combine with an actual simultaneous finite-window
-   arithmetic bound. Do not infer a growing-n theorem from fixed-pattern
-   equidistribution.
+   The IID measured-palette part is now proved in
+   [G3, prime-power-plus-one symmetry](../prime_power_plus_one_symmetry_20261030/PROOFS.md),
+   including all fixed positive symmetry-order moments. Cyclic prime
+   towers use c_p; prime-complement affine towers use c_l^((p-1)/l).
+   The actual growing arithmetic realization and weighted-error transfer
+   remain open; retain G6's explicit whole-state transfer guard.
+
+   For arithmetic ports, combine the proved measured-palette collision
+   law with an actual simultaneous finite-window arithmetic bound, with
+   source and clock retained. Do not infer a growing-n theorem from
+   fixed-pattern equidistribution or from palette rank alone.
 
 4. **Weighted EH prime-atom certificate.**
    R6 shows that removing automorphisms cannot remove the upper exponent
@@ -58,10 +63,16 @@ Completed:
    support is the hostile).
 
 5. **Full tails rather than a bounded-observable Poisson limit.**
-   Establish whether expected residual group order, or a specified
-   return-weight functional, is uniformly integrable at the critical
-   scale. Rare upper symmetries can carry large weight. Preserve the
-   81/27 control and the inherited LRC star-family Gram-rank obstruction.
+   For residual GROUP ORDER, G3 in the linked completion now proves
+   convergence and uniform integrability of every fixed positive moment
+   at the stated critical scales. An arbitrary return-weight functional
+   is still outside that theorem. Do not restart the completed group-order
+   tail question or regard its completion as the arithmetic return bound.
+
+   Establish uniform integrability or an appropriate stronger estimate
+   for a specified return-weight functional. Its dependence on joint
+   ports is not supplied by the group-order bound. Preserve the81/27
+   control and the inherited LRC star-family Gram-rank obstruction.
 
    Incoming commit `11f85d93cc` adds
    [source-weighted finite-depth reset tails](../pinned_discrepancy_reset_tails_20261029/FINITE_DEPTH.md).

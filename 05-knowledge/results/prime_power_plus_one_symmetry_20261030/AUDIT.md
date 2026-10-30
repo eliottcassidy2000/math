@@ -12,6 +12,10 @@ and read the protocol, active guardrails, current frontier and core-paper
 routes. A mid-session fetch found1f52ab41e6 and the concurrent packet
 prime_power_plus_one_20261029. Its scalar recurrence and rigid counts
 take explicit shared-result credit in README.md and PROOFS.md.
+The clean rebase also integratedc58d16e3cc, whose ramified prime-tournament
+norm theorem uses balanced legal menus and a new-conductor period bound.
+It was read as incoming mathematical signal; it is not a proof input or
+a quasirandomness claim for every orientation in our different G5 bank.
 
 Closest proved mechanisms and their exact roles:
 
