@@ -1,0 +1,14 @@
+{
+  "boundary_points": 81,
+  "coefficient_four_minimum_penalty": 8,
+  "feasible_pairs": 16661,
+  "optimal_weights": [
+    1,
+    4,
+    2,
+    8
+  ],
+  "projection_points": 26361,
+  "scope": "strengthened row constraints, not external theorem certification",
+  "status": "PASS"
+}

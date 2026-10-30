@@ -1,0 +1,42 @@
+{
+  "cases": [
+    {
+      "a_values": [
+        15,
+        14,
+        13,
+        12
+      ],
+      "core_essential_inputs": 15,
+      "deleted": [
+        [
+          "B",
+          "C"
+        ],
+        [
+          "D",
+          "E"
+        ],
+        [
+          "G",
+          "Hr",
+          "Hh",
+          "K"
+        ]
+      ],
+      "disperser_dimension_upper_bound": 11,
+      "full_truth_table_assignments": 32768,
+      "gate_counts": [
+        18,
+        16,
+        14,
+        10
+      ],
+      "input_bits": 15,
+      "m": 4,
+      "residual_essential_inputs": 11
+    }
+  ],
+  "scope": "literal reachable minimum-core AP2 sharpness; general lemma proved separately",
+  "status": "PASS"
+}

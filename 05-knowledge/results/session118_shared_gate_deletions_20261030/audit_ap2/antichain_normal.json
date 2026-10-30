@@ -1,0 +1,37 @@
+{
+  "cases": [
+    {
+      "eligible_antichains": 0,
+      "gates": 1,
+      "live_topologies": 1
+    },
+    {
+      "eligible_antichains": 2,
+      "gates": 2,
+      "live_topologies": 2
+    },
+    {
+      "eligible_antichains": 14,
+      "gates": 3,
+      "live_topologies": 7
+    },
+    {
+      "eligible_antichains": 122,
+      "gates": 4,
+      "live_topologies": 38
+    },
+    {
+      "eligible_antichains": 1406,
+      "gates": 5,
+      "live_topologies": 295
+    }
+  ],
+  "comparable_seed_hostile": {
+    "deletions": 3,
+    "seed_count": 2
+  },
+  "eligible_antichain_cases": 1544,
+  "scope": "all binary distinct-pin gate topologies through5gates over2 external inputs, one output, live DAGs; symbolic seed constancy only",
+  "status": "PASS",
+  "topologies": 343
+}

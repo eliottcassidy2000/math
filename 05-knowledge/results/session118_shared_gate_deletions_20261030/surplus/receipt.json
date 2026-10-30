@@ -1,0 +1,130 @@
+{
+  "shape_universe": [
+    {
+      "all_live_shapes": 1,
+      "exactly_four_deleted": 0,
+      "gates": 3,
+      "generated_shapes": 12,
+      "shared_partner_child": false,
+      "weakly_nonconstant_survivors": 0
+    },
+    {
+      "all_live_shapes": 18,
+      "exactly_four_deleted": 14,
+      "gates": 4,
+      "generated_shapes": 270,
+      "shared_partner_child": false,
+      "weakly_nonconstant_survivors": 14
+    },
+    {
+      "all_live_shapes": 270,
+      "exactly_four_deleted": 75,
+      "gates": 5,
+      "generated_shapes": 6390,
+      "shared_partner_child": false,
+      "weakly_nonconstant_survivors": 251
+    },
+    {
+      "all_live_shapes": 4376,
+      "exactly_four_deleted": 1084,
+      "gates": 6,
+      "generated_shapes": 182700,
+      "shared_partner_child": false,
+      "weakly_nonconstant_survivors": 4253
+    },
+    {
+      "all_live_shapes": 1,
+      "exactly_four_deleted": 0,
+      "gates": 3,
+      "generated_shapes": 9,
+      "shared_partner_child": true,
+      "weakly_nonconstant_survivors": 0
+    },
+    {
+      "all_live_shapes": 10,
+      "exactly_four_deleted": 8,
+      "gates": 4,
+      "generated_shapes": 108,
+      "shared_partner_child": true,
+      "weakly_nonconstant_survivors": 8
+    },
+    {
+      "all_live_shapes": 105,
+      "exactly_four_deleted": 30,
+      "gates": 5,
+      "generated_shapes": 1800,
+      "shared_partner_child": true,
+      "weakly_nonconstant_survivors": 98
+    },
+    {
+      "all_live_shapes": 1328,
+      "exactly_four_deleted": 298,
+      "gates": 6,
+      "generated_shapes": 40500,
+      "shared_partner_child": true,
+      "weakly_nonconstant_survivors": 1290
+    }
+  ],
+  "sharp_legal_state": {
+    "deleted_gates": 4,
+    "delta_s_I_q_a": [
+      -4,
+      0,
+      -2,
+      -1
+    ],
+    "initial_gates": 7,
+    "initial_m_q_a_d": [
+      8,
+      2,
+      6,
+      4
+    ],
+    "marked_domain_essential_fiber_witnesses": [
+      [
+        0,
+        6,
+        7
+      ],
+      [
+        1,
+        17,
+        19
+      ],
+      [
+        2,
+        11,
+        15
+      ],
+      [
+        3,
+        6,
+        14
+      ],
+      [
+        4,
+        35,
+        51
+      ],
+      [
+        5,
+        17,
+        49
+      ],
+      [
+        6,
+        131,
+        195
+      ],
+      [
+        7,
+        67,
+        195
+      ]
+    ],
+    "polar_rank": 8,
+    "surviving_gates": 3,
+    "truth_table_evaluations": 256
+  },
+  "status": "PASS"
+}
