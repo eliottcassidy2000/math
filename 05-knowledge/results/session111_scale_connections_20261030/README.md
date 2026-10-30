@@ -87,7 +87,7 @@ These are explicit mathematical carriers, not a proposed identification of all u
 
 ## Verification and limitations
 
-Nine dependency-free JavaScript checks were fetched from immutable published commits and replayed successfully. [RESULTS.json](RESULTS.json) records blob hashes, complete outputs and scopes. Run each .js file separately with a runtime supporting BigInt.
+Nine dependency-free JavaScript checks were fetched from immutable published commits and replayed successfully. [RESULTS.json](RESULTS.json) records blob hashes, complete outputs and scopes. [AUDIT.md](AUDIT.md) separates independent proof reviews from finite computations and records the corrections. Run each .js file separately with a runtime supporting BigInt.
 
 Independent proof review covered the generalized cancellation law and the common-residue recurrence; independent finite implementations checked the seed and ramified action. The parent replay also checks the complete343 fibre by both a sieve and direct divisor-pair sums.
 
