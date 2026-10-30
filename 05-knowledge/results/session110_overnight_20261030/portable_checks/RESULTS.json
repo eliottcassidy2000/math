@@ -295,5 +295,750 @@
     "prime_witness_mask_hex": "80000801000",
     "prime_witness_cuts": [],
     "meaning": "Extra odd normalizer elements can fix prime banks beyond depth4; do not extrapolate stabilizer H."
-  }
+  },
+  "final_published_source_replay": {
+    "ref": "f31384340adb9f957ca4299a8cab4f7755807072",
+    "method": "Fetch immutable published JavaScript and execute in parent JavaScript isolate; exact integer assertions",
+    "checks": [
+      {
+        "name": "binary_module_counts",
+        "blob_sha": "4edd3ff80ce6bd1a9a45cb723d03349145091f75",
+        "result": {
+          "status": "PASS",
+          "field": 2,
+          "rankLimit": 3,
+          "method": "Semisimple invariant subspaces, independently compared with complete palette groups",
+          "explicitPaletteOrders": {
+            "GL3": 168,
+            "AGL3": 1344,
+            "PORT1": 24,
+            "NAMED3": 1
+          },
+          "termwiseComparisons": 280,
+          "total": [
+            {
+              "n": 0,
+              "UNCOLORED": "1",
+              "GL3": "1",
+              "AGL3": "1",
+              "PORT1": "1",
+              "NAMED3": "1"
+            },
+            {
+              "n": 1,
+              "UNCOLORED": "1",
+              "GL3": "2",
+              "AGL3": "1",
+              "PORT1": "3",
+              "NAMED3": "8"
+            },
+            {
+              "n": 2,
+              "UNCOLORED": "1",
+              "GL3": "5",
+              "AGL3": "2",
+              "PORT1": "11",
+              "NAMED3": "64"
+            },
+            {
+              "n": 3,
+              "UNCOLORED": "2",
+              "GL3": "24",
+              "AGL3": "8",
+              "PORT1": "70",
+              "NAMED3": "688"
+            },
+            {
+              "n": 4,
+              "UNCOLORED": "4",
+              "GL3": "188",
+              "AGL3": "48",
+              "PORT1": "756",
+              "NAMED3": "11008"
+            },
+            {
+              "n": 5,
+              "UNCOLORED": "12",
+              "GL3": "2984",
+              "AGL3": "588",
+              "PORT1": "15244",
+              "NAMED3": "280992"
+            },
+            {
+              "n": 6,
+              "UNCOLORED": "56",
+              "GL3": "96664",
+              "AGL3": "15760",
+              "PORT1": "570856",
+              "NAMED3": "11959808"
+            },
+            {
+              "n": 7,
+              "UNCOLORED": "456",
+              "GL3": "6088672",
+              "AGL3": "880504",
+              "PORT1": "38999112",
+              "NAMED3": "873565632"
+            },
+            {
+              "n": 8,
+              "UNCOLORED": "6880",
+              "GL3": "720795520",
+              "AGL3": "97311104",
+              "PORT1": "4820928480",
+              "NAMED3": "111744292864"
+            },
+            {
+              "n": 9,
+              "UNCOLORED": "191536",
+              "GL3": "157583177728",
+              "AGL3": "20495484160",
+              "PORT1": "1077902521104",
+              "NAMED3": "25421219126400"
+            },
+            {
+              "n": 10,
+              "UNCOLORED": "9733056",
+              "GL3": "63249916003072",
+              "AGL3": "8067312979520",
+              "PORT1": "437629958512704",
+              "NAMED3": "10411456943484928"
+            },
+            {
+              "n": 11,
+              "UNCOLORED": "903753248",
+              "GL3": "46625555271479232",
+              "AGL3": "5887756625642784",
+              "PORT1": "324479376806914720",
+              "NAMED3": "7753404550080832256"
+            },
+            {
+              "n": 12,
+              "UNCOLORED": "154108311168",
+              "GL3": "63334398034831654400",
+              "AGL3": "7957320435463812224",
+              "PORT1": "442046334369230515072",
+              "NAMED3": "10585842822614634438656"
+            }
+          ],
+          "strong": [
+            {
+              "n": 0,
+              "UNCOLORED": "0",
+              "GL3": "0",
+              "AGL3": "0",
+              "PORT1": "0",
+              "NAMED3": "0"
+            },
+            {
+              "n": 1,
+              "UNCOLORED": "1",
+              "GL3": "2",
+              "AGL3": "1",
+              "PORT1": "3",
+              "NAMED3": "8"
+            },
+            {
+              "n": 2,
+              "UNCOLORED": "0",
+              "GL3": "0",
+              "AGL3": "0",
+              "PORT1": "0",
+              "NAMED3": "0"
+            },
+            {
+              "n": 3,
+              "UNCOLORED": "1",
+              "GL3": "8",
+              "AGL3": "3",
+              "PORT1": "20",
+              "NAMED3": "176"
+            },
+            {
+              "n": 4,
+              "UNCOLORED": "1",
+              "GL3": "66",
+              "AGL3": "16",
+              "PORT1": "276",
+              "NAMED3": "4096"
+            },
+            {
+              "n": 5,
+              "UNCOLORED": "6",
+              "GL3": "1568",
+              "AGL3": "306",
+              "PORT1": "8056",
+              "NAMED3": "148896"
+            },
+            {
+              "n": 6,
+              "UNCOLORED": "35",
+              "GL3": "65662",
+              "AGL3": "10682",
+              "PORT1": "388196",
+              "NAMED3": "8137472"
+            },
+            {
+              "n": 7,
+              "UNCOLORED": "353",
+              "GL3": "4867230",
+              "AGL3": "703606",
+              "PORT1": "31180872",
+              "NAMED3": "698502592"
+            },
+            {
+              "n": 8,
+              "UNCOLORED": "6008",
+              "GL3": "635022752",
+              "AGL3": "85727992",
+              "PORT1": "4247330064",
+              "NAMED3": "98449965056"
+            },
+            {
+              "n": 9,
+              "UNCOLORED": "178133",
+              "GL3": "146816796438",
+              "AGL3": "19095123862",
+              "PORT1": "1004260061840",
+              "NAMED3": "23684467399808"
+            },
+            {
+              "n": 10,
+              "UNCOLORED": "9355949",
+              "GL3": "60820121802662",
+              "AGL3": "7757398309526",
+              "PORT1": "420818143644496",
+              "NAMED3": "10011495932926976"
+            },
+            {
+              "n": 11,
+              "UNCOLORED": "884464590",
+              "GL3": "45633303669987492",
+              "AGL3": "5762457435533844",
+              "PORT1": "317574045088261184",
+              "NAMED3": "7588402386010981120"
+            },
+            {
+              "n": 12,
+              "UNCOLORED": "152310149735",
+              "GL3": "62596116229047114594",
+              "AGL3": "7864562842597208546",
+              "PORT1": "436893451699822766144",
+              "NAMED3": "10462444897229544984576"
+            }
+          ],
+          "scope": "Labelled palette action quotients combined with tournament isomorphism; no timing claim"
+        }
+      },
+      {
+        "name": "ramified_periods",
+        "blob_sha": "7dda0d1fa9c5ec340ce7988de236df600ee58513",
+        "result": {
+          "status": "PASS",
+          "method": "Integer cyclic autocorrelation modulo the prime-power cyclotomic polynomial; no floating tolerance",
+          "characters": "Coefficient-of-delta character and its delta multiple, representing the two new conductor types",
+          "scope": "Finite controls for the analytic all-depth proof",
+          "reports": [
+            {
+              "p": 5,
+              "a": 1,
+              "k": 1,
+              "vertices": 25,
+              "nonzeroOrbits": 8,
+              "exactCyclotomicIdentities": 16,
+              "maximumPeriodNormSquared": [
+                1,
+                25
+              ],
+              "upperBound": 25
+            },
+            {
+              "p": 5,
+              "a": 1,
+              "k": 2,
+              "vertices": 625,
+              "nonzeroOrbits": 48,
+              "exactCyclotomicIdentities": 96,
+              "maximumPeriodNormSquared": [
+                5,
+                125
+              ],
+              "upperBound": 125
+            },
+            {
+              "p": 5,
+              "a": 1,
+              "k": 3,
+              "vertices": 15625,
+              "nonzeroOrbits": 248,
+              "exactCyclotomicIdentities": 496,
+              "maximumPeriodNormSquared": [
+                25,
+                625
+              ],
+              "upperBound": 625
+            },
+            {
+              "p": 13,
+              "a": 3,
+              "k": 1,
+              "vertices": 169,
+              "nonzeroOrbits": 24,
+              "exactCyclotomicIdentities": 48,
+              "maximumPeriodNormSquared": [
+                1,
+                169
+              ],
+              "upperBound": 169
+            },
+            {
+              "p": 13,
+              "a": 3,
+              "k": 2,
+              "vertices": 28561,
+              "nonzeroOrbits": 336,
+              "exactCyclotomicIdentities": 672,
+              "maximumPeriodNormSquared": [
+                13,
+                2197
+              ],
+              "upperBound": 2197
+            },
+            {
+              "p": 17,
+              "a": 8,
+              "k": 1,
+              "vertices": 289,
+              "nonzeroOrbits": 32,
+              "exactCyclotomicIdentities": 64,
+              "maximumPeriodNormSquared": [
+                1,
+                289
+              ],
+              "upperBound": 289
+            },
+            {
+              "p": 17,
+              "a": 8,
+              "k": 2,
+              "vertices": 83521,
+              "nonzeroOrbits": 576,
+              "exactCyclotomicIdentities": 1152,
+              "maximumPeriodNormSquared": [
+                17,
+                4913
+              ],
+              "upperBound": 4913
+            }
+          ]
+        }
+      },
+      {
+        "name": "dual_number_primes",
+        "blob_sha": "c3c8c8d7956d2c585307804f5881f1d5905cfa18",
+        "result": {
+          "status": "PASS",
+          "ring": "(Z/p^2)[epsilon]/epsilon^2",
+          "clock": "1+epsilon",
+          "formula": "P=D-2tC-B^2+3t^2B-t^4; t=2^((p-1)/2), B=2^((p^2-1)/2), C=2^((2p^2-p-1)/2), D=2^((3p^2-2p-1)/2)",
+          "cases": [
+            {
+              "p": 3,
+              "vertices": 81,
+              "additive_subgroups": 23,
+              "proper_ideals": 6,
+              "orbit_pair_bits": 10,
+              "all_states": "1024",
+              "prime_states": "432",
+              "composite_states": "592",
+              "ideal_subsets_checked": 64
+            },
+            {
+              "p": 5,
+              "vertices": 625,
+              "additive_subgroups": 45,
+              "proper_ideals": 8,
+              "orbit_pair_bits": 32,
+              "all_states": "4294967296",
+              "prime_states": "4244832000",
+              "composite_states": "50135296",
+              "ideal_subsets_checked": 256
+            },
+            {
+              "p": 7,
+              "vertices": 2401,
+              "additive_subgroups": 75,
+              "proper_ideals": 10,
+              "orbit_pair_bits": 66,
+              "all_states": "73786976294838206464",
+              "prime_states": "73786131873129295872",
+              "composite_states": "844421708910592",
+              "ideal_subsets_checked": 1024
+            }
+          ]
+        }
+      },
+      {
+        "name": "quinary_paths",
+        "blob_sha": "5b1efbba9afd488c81886a2a5fe71c88e45d5fdf",
+        "result": {
+          "status": "PASS",
+          "cases": [
+            {
+              "p": 3,
+              "vertices": 9,
+              "H": "3159",
+              "pointedOrbitStates": 64,
+              "reachableStates": 48,
+              "coarsestFullWeightedLevelPartition": 57,
+              "coarsestReachableWeightedLevelPartition": 42,
+              "rawTransitionControls": 2304,
+              "independentRawHamiltonCount": "3159",
+              "acceptanceOnlyLinearRank": 9,
+              "completionSupportSizesFromTop": [
+                1,
+                2,
+                4,
+                7,
+                10,
+                11,
+                8,
+                4,
+                1
+              ]
+            },
+            {
+              "p": 5,
+              "vertices": 25,
+              "H": "2398512090439546875",
+              "pointedOrbitStates": 65536,
+              "reachableStates": 63488,
+              "coarsestFullWeightedLevelPartition": 25437,
+              "coarsestReachableWeightedLevelPartition": 24297,
+              "rawTransitionControls": 1000,
+              "independentRawHamiltonCount": null,
+              "acceptanceOnlyLinearRank": 25,
+              "completionSupportSizesFromTop": [
+                1,
+                4,
+                16,
+                58,
+                186,
+                500,
+                1114,
+                2116,
+                3487,
+                5060,
+                6552,
+                7634,
+                8052,
+                7716,
+                6726,
+                5328,
+                3823,
+                2472,
+                1428,
+                728,
+                322,
+                120,
+                36,
+                8,
+                1
+              ]
+            }
+          ],
+          "attribution": "The25-vertex Hamilton count is inherited from lattice_bridges_20261021/circ25_H.txt; the orbit quotient and partition counts are the current contribution.",
+          "boundary": "These64 ternary states are not the earlier tau-pair folded64 carrier. Acceptance-only linear rank does not retain explicit levels on dead states."
+        }
+      },
+      {
+        "name": "arithmetic_probes",
+        "blob_sha": "06d3306519afc11a29e8c3750e5acce83e935713",
+        "result": {
+          "status": "PASS",
+          "reconstructionChecks": 12000,
+          "compositePositiveControls": 240,
+          "witnesses": [
+            {
+              "m": 10,
+              "a": 362986,
+              "b": 5275324,
+              "sources": [
+                387152,
+                437510
+              ],
+              "signatures": 160
+            },
+            {
+              "m": 15,
+              "a": 1422512,
+              "b": 28212240,
+              "sources": [
+                563472,
+                759888
+              ],
+              "signatures": 126
+            }
+          ],
+          "falseFano": {
+            "primes": [
+              7,
+              2,
+              41,
+              19,
+              109,
+              1019,
+              389
+            ],
+            "support": [
+              2,
+              3,
+              5,
+              7,
+              11,
+              13,
+              17
+            ],
+            "fullRank": 7,
+            "observedRank": 3,
+            "projectedSquareSelections": 16,
+            "actualSquareSelections": 1
+          },
+          "genuineFano": {
+            "primes": [
+              7,
+              2,
+              19,
+              5,
+              89,
+              59,
+              29
+            ],
+            "support": [
+              2,
+              3,
+              5
+            ],
+            "fullRank": 3,
+            "observedRank": 3,
+            "projectedSquareSelections": 16,
+            "actualSquareSelections": 16
+          },
+          "scope": "Exact finite controls for the proved universal inverse and projection theorems; no minimal-collision claim"
+        }
+      },
+      {
+        "name": "regular_augmentation",
+        "blob_sha": "d5b080408601cfbcfcbffb548b697f274e8c5209",
+        "result": {
+          "status": "PASS",
+          "baseSubsetRepresentatives": [
+            {
+              "mask": 0,
+              "e": 1
+            },
+            {
+              "mask": 1,
+              "e": 0
+            },
+            {
+              "mask": 3,
+              "e": 0
+            },
+            {
+              "mask": 5,
+              "e": 0
+            },
+            {
+              "mask": 7,
+              "e": 0
+            },
+            {
+              "mask": 11,
+              "e": 0
+            },
+            {
+              "mask": 15,
+              "e": 0
+            },
+            {
+              "mask": 31,
+              "e": 1
+            }
+          ],
+          "subsetStabilizerPolynomial": [
+            1554,
+            2598,
+            1728,
+            576,
+            96,
+            6,
+            2
+          ],
+          "marked26": 6560,
+          "unmarked26": 6559,
+          "rigid26": 1554,
+          "unmarked6": 7,
+          "automorphismOrders6": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            5,
+            5
+          ],
+          "scope": "Extensions of the specified regular parent, not all26-vertex tournaments"
+        }
+      },
+      {
+        "name": "abelian_existence",
+        "blob_sha": "64fc80ad60c55d66214da6bb98b6a1567ad2f7a8",
+        "result": {
+          "status": "PASS",
+          "cases": [
+            {
+              "cyclicFactors": [
+                9
+              ],
+              "subgroupCounts": {
+                "3": 1
+              },
+              "compositeUnionBound": "4",
+              "allStates": "16",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                15
+              ],
+              "subgroupCounts": {
+                "3": 1,
+                "5": 1
+              },
+              "compositeUnionBound": "16",
+              "allStates": "128",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                21
+              ],
+              "subgroupCounts": {
+                "3": 1,
+                "7": 1
+              },
+              "compositeUnionBound": "32",
+              "allStates": "1024",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                25
+              ],
+              "subgroupCounts": {
+                "5": 1
+              },
+              "compositeUnionBound": "16",
+              "allStates": "4096",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                5,
+                5
+              ],
+              "subgroupCounts": {
+                "5": 6
+              },
+              "compositeUnionBound": "96",
+              "allStates": "4096",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                27
+              ],
+              "subgroupCounts": {
+                "3": 1,
+                "9": 1
+              },
+              "compositeUnionBound": "64",
+              "allStates": "8192",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                9,
+                3
+              ],
+              "subgroupCounts": {
+                "3": 4,
+                "9": 4
+              },
+              "compositeUnionBound": "256",
+              "allStates": "8192",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                3,
+                3,
+                3
+              ],
+              "subgroupCounts": {
+                "3": 13,
+                "9": 13
+              },
+              "compositeUnionBound": "832",
+              "allStates": "8192",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                33
+              ],
+              "subgroupCounts": {
+                "3": 1,
+                "11": 1
+              },
+              "compositeUnionBound": "128",
+              "allStates": "65536",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                35
+              ],
+              "subgroupCounts": {
+                "5": 1,
+                "7": 1
+              },
+              "compositeUnionBound": "64",
+              "allStates": "131072",
+              "exceptionMasks": null
+            },
+            {
+              "cyclicFactors": [
+                3,
+                3
+              ],
+              "subgroupCounts": {
+                "3": 4
+              },
+              "compositeUnionBound": "16",
+              "allStates": "16",
+              "exceptionMasks": 16
+            }
+          ],
+          "boundaryCertificate": {
+            "left": "2565726409",
+            "right": "17179869184"
+          },
+          "scope": "Exact subgroup-count union bounds, not exact prime counts except the separately checked exceptional coverage"
+        }
+      }
+    ]
+  },
+  "python_replay_boundary": "The consolidated parent Python replay terminated with a 240-second timeout on its first script during execution-service disruption. It is not a passing 14-run receipt. Earlier individual producer/auditor receipts are separate."
 }
