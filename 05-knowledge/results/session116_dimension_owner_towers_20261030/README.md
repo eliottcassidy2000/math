@@ -1,31 +1,48 @@
 # Dimension changes, arithmetic shadows, and owner-window families
 
-**Session 116, 30 October 2026. In progress.** Scoped proofs and independent audits; no major conjecture closure or literature-priority claim.
+**Session 116, 30 October 2026. Scoped proofs with independent audits.** Major conjectures remain open. Classical and concurrent results retain their credit; no literature-priority or formal-certification claim is made.
 
-## Verified first checkpoint: the user's owner-window extension
+Read the [synthesis](SYNTHESIS.md), [lineage and corrections](LINEAGE.md), and [reproduction guide](CHECKS.md).
 
-[Second-band cores](lrc/SECOND_BAND.md) are defined explicitly as
+## 1. What actually changes in the Cayley–Dickson tower
 
- C(q,A)={1,...,q−1} union {q+b:b in A}, with1 in A subset{1,...,q−1}.
+[The tower packet](tower/TOWER_DEFECT.md) fixes the multiplication convention. At the octonion-to-sedenion doubling, an octonion associator becomes the exact norm defect. Two-sided conjugation inverses and power-associativity survive at every stage; cancellation fails because reassociation fails.
 
-The complete open-chamber atlas is independently proved for every such core, with the overlapping concurrent owner-family result explicitly credited. A unit owner u is promoted to q+u exactly when u belongs to A; nonunit additions are invisible in that chamber. This classifies all atlases and their minimum owners. The minimum can be composite, so the old least-missing-prime rule does not transfer unchanged.
+A quaternion decomposition proves the complete real16D singular spectrum and determinant:
 
-All harmonic optimum-preservation, maximizing-point census, reciprocal-owner mass and period formulas transfer with the actual promoted owner set. Exact surgery laws quantify what each added wall removes while preserving harmonic clearance. For q=7 the odd-eighth character signature survives every promotion, but its threshold and multiplicities change. The chamber endpoint and lower floor have explicit counterexamples.
+ det L_x=N⁴(N²−4Δ)²,
+ Δ=|Im a|²|Im b|²−<Im a,Im b>²,  x=(a,b).
 
-Producer checks pass10,533 gates normally and under optimization. The [independent audit](audit_lrc/AUDIT.md) passes1,152 exact gates, with literal interval, count, owner, surgery and period checks. Written proofs cover all parameters; the finite universes are controls.
+Nonzero singular elements have pure, equal-norm, orthogonal halves and a four-dimensional annihilator. The integer determinant gives the exact bad-prime criterion, including characteristic2. The real cone is classical; its proof, arithmetic consequence and scope are made explicit here.
 
-## Verified dimension and arithmetic packets
+## 2. A concrete connection to sums of squares
 
-[Doubling defects](tower/TOWER_DEFECT.md) quantify the octonion-to-sedenion transition through its associator. A quaternion block decomposition gives the complete real16D singularity criterion, all annihilators, and the determinant
+A noncanonical eight-dimensional subalgebra W has exact integral zero-divisor shell count r₃(m)r₄(m) at squared norm2m. Its existence test is Legendre's three-square obstruction, and Jacobi supplies a divisor-sum counting formula.
 
- det L_x=N⁴(N²−4Δ)².
+By contrast, in the **full integral sedenions every positive even squared norm occurs**. A four-square representation gives an explicit orthogonal pair and an integral annihilator. Thus norm14 is absent inside W but present in the full algebra. Canonical octonions have no zero divisors at all: dimension alone does not determine the multiplication or arithmetic.
 
-Its integer polynomial gives the exact bad-prime criterion. A fixed eight-dimensional noncanonical subalgebra has zero-divisor shell counts r₃(m)r₄(m), connecting the algebra to the classical three- and four-square theorems. Two-sided inverses and power-associativity survive all standard doublings; cancellation does not. These distinctions repair misleading historical tower summaries without claiming discovery of the classical real zero-divisor cone.
+## 3. The characteristic-four shadow and a genuine subgroup transition
 
-[Arithmetic shadows](arithmetic/ARITHMETIC_SHADOW.md) classify the integral norm-defect ideal: zero for composing signed-XOR tables, exactly(4) otherwise. Thus characteristic four hides the real obstruction, while characteristic eight detects it. The previous extreme-Walsh phases now form an actual convolution subgroup H_d≅F₂^(2d+1), with index2^(2^d−2d−2) among all binary group-algebra units. It exhausts the units at dimension8 but has index64 at dimension16. This multiplication is explicitly distinguished from octonion multiplication.
+[Arithmetic shadows](arithmetic/ARITHMETIC_SHADOW.md) classify the norm-defect ideal of every signed-XOR table: zero if it composes the norm, exactly(4) otherwise. An incoherent table therefore composes this norm over a commutative coefficient ring exactly when4=0. Modulo8 detects a sparse nonzero defect; modulo4 hides it.
 
-Independent [tower](audit_tower/AUDIT.md) and [arithmetic](audit_arithmetic/AUDIT.md) proof audits passed, with separate exact implementations and dimension-boundary controls.
+The previous extreme-Walsh phases form a convolution subgroup H_d≅F₂^(2d+1) in the binary group algebra, with exact index2^(2^d−2d−2). It exhausts all units at dimension8 and has index64 at dimension16. This is not octonion multiplication. The parity map makes the distinction sharper: integral real sedenion zero divisors reduce to nonunits, while H₄ and all the other binary unit cosets lift to odd-norm, real-nonsingular elements.
 
-## Remaining synthesis
+## 4. The requested owner-window extension
 
-The fixed-controller entry optimization and the full arithmetic/spectral synthesis are being assembled for the final checkpoint. Concurrent owner and controller results are preserved and credited; no major open conjecture is claimed solved.
+[Second-band cores](lrc/SECOND_BAND.md) mean exactly
+
+ C(q,A)={1,...,q−1} union {q+b:b∈A},  1∈A⊆{1,...,q−1}.
+
+Every unit owner u becomes u+q precisely when u∈A. This gives every complete open-chamber atlas and minimum owner, which can now be composite. All harmonic optimum-preservation, maximizing-point, weight and period formulas transfer with the actual owner set. Exact promotion surgery changes counts and mass while retaining clearance. Boundary counterexamples prevent extending the chamber or the old lower floor without proof.
+
+The overlapping concurrent owner-family theorem is prominently credited; the local proof and independent audit are a verified recovery/refinement.
+
+## 5. Fixed-controller entry optimization is finite
+
+[The controller packet](collatz/PHASE_COMPLETION_THEOREM.md) gives an independently audited presentation of the concurrent suffix theorem: every entry is layerwise dominated by a suffix completion, so maximum ordinary all-layer mean over all entries equals a finite maximum over cyclic rotations. The local packet makes the general maximizing-entry language explicit, handles primitive roots, and records small two-reset hostiles to empty-entry maximization. This is not the arbitrary-controller5/8 bound or Collatz convergence.
+
+## 6. Uniform sparse growth versus typical dense behavior
+
+The preserved [incoming sparse-tower companion](../cayley_dickson_integral_20261030/PROOFS.md) supplies all-dimensional two-support integral recurrences. Its C1–C5 were independently audited here: every odd prime can obstruct modular cancellation from dimension16, while the exact norm variance for two independent dense random-sign inputs tends to zero like2/N. Sparse worst cases and typical dense observations use different measures; neither gives a uniform operator bound.
+
+All classifications retain their stated multiplication, coefficient ring, phase or owner data. General LRC, Collatz convergence, arbitrary higher-stage dense zero-divisor classification, and unaudited extensions remain open.

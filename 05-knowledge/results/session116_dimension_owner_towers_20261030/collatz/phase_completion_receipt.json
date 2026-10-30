@@ -1,0 +1,112 @@
+{
+  "status": "pass",
+  "word_clock_bound": 7,
+  "entry_clock_bound": 7,
+  "controllers": 127,
+  "entries_per_controller": 128,
+  "exact_gates": 121797,
+  "independent_modular_gates": 2016,
+  "counterexamples": [
+    {
+      "word": [
+        3,
+        1,
+        2
+      ],
+      "coefficients": [
+        27,
+        64,
+        49
+      ],
+      "parameters": [
+        4,
+        2
+      ],
+      "empty_rate": "9/16",
+      "maximum_rate": "13/16",
+      "winning_phases": [
+        1,
+        2
+      ],
+      "depth_matrix": [
+        [
+          "infinity",
+          1,
+          0
+        ],
+        [
+          1,
+          "infinity",
+          0
+        ],
+        [
+          0,
+          0,
+          "infinity"
+        ]
+      ]
+    },
+    {
+      "word": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "coefficients": [
+        243,
+        128,
+        287
+      ],
+      "parameters": [
+        1,
+        0
+      ],
+      "empty_rate": "1/4",
+      "maximum_rate": "9/20",
+      "winning_phases": [
+        2,
+        4
+      ],
+      "depth_matrix": [
+        [
+          "infinity",
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          "infinity",
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          "infinity",
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          "infinity",
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          "infinity"
+        ]
+      ]
+    }
+  ],
+  "scope": "Finite tests support the separate proof; no orbit convergence claim."
+}

@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "scripts": 13,
+  "runs": 26,
+  "checks": [
+    {
+      "script": "lrc/check_second_band.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "753ff5da92a2a2d275ac10f26b5b9c38550b0b0f16994b55dde8e08539568ab7"
+    },
+    {
+      "script": "audit_lrc/check_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "ed7f63241bdb41000d44a5ba27bea8d58e627568de21afef0ad99791b754f96b"
+    },
+    {
+      "script": "tower/check_tower.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "d4484f1298d517a83888841ed921bf6c847aa883c1f1ac2666c90123b1025f31"
+    },
+    {
+      "script": "tower/check_spectrum.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "223286d529425a64c64437a5ed24f6586c29e9dea6b550d7f85157907a3235cf"
+    },
+    {
+      "script": "tower/check_integer_shells.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "ec143a34f0d4c843fca15232b58476f366ce49dfd252cb307dcaca5f089a4584"
+    },
+    {
+      "script": "audit_tower/check_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "7e1da51647a32d7d148f2db5c4675ff9ea293b1c1618d42179c3205690756301"
+    },
+    {
+      "script": "audit_tower/check_integer_controls.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "73b6a03adc3231fd8a754e711b273a170d36d8f79013e5f9fd8146c6e15b82b8"
+    },
+    {
+      "script": "arithmetic/check_arithmetic.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "4439f0e07fddc5912a243c836b790fab962e87901b30d5d548ea104a5add116e"
+    },
+    {
+      "script": "audit_arithmetic/check_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "fef7013fc01ddb9c6990399bc7c574fce89dd317761e4200bbe5812e6ba8a3a4"
+    },
+    {
+      "script": "collatz/check_phase_completion.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "d032db02ba30dc10d13f62a0131acf51b88e85ecd90611e75c6824fcd0456d23"
+    },
+    {
+      "script": "audit_collatz/check_independent.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "f5617ec769955d2d13b46944c3405923f15a0f5064bbf427aa3727b682c0d056"
+    },
+    {
+      "script": "check_synthesis.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "23310b77b61bc653b49a3457c9a75dfa2f1608bd6ff63dd42535b6d6de7689a3"
+    },
+    {
+      "script": "audit_sparse_merge/check.py",
+      "normal_optimized": "identical",
+      "stdout_sha256": "7d34a812b29ff07a36a7a2ec9507b90f595b70da6184fc2d35877b7b4fe2ec73"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "scope": "Pinned incoming C1-C5 only; Baez multiplication explicitly implemented",
+  "source_commit": "7f70dcd6012439b7cf75fb43f26850f3807126b9",
+  "dimensions": [
+    {
+      "dimension": 2,
+      "pairs": 1,
+      "census": {
+        "0": 1
+      },
+      "violated_rectangles": 0,
+      "sign_norm_variance": "0"
+    },
+    {
+      "dimension": 4,
+      "pairs": 6,
+      "census": {
+        "0": 6
+      },
+      "violated_rectangles": 0,
+      "sign_norm_variance": "0"
+    },
+    {
+      "dimension": 8,
+      "pairs": 28,
+      "census": {
+        "0": 28
+      },
+      "violated_rectangles": 0,
+      "sign_norm_variance": "0"
+    },
+    {
+      "dimension": 16,
+      "pairs": 120,
+      "census": {
+        "0": 78,
+        "4": 42
+      },
+      "violated_rectangles": 168,
+      "sign_norm_variance": "21/512"
+    },
+    {
+      "dimension": 32,
+      "pairs": 496,
+      "census": {
+        "0": 202,
+        "4": 84,
+        "8": 84,
+        "12": 126
+      },
+      "violated_rectangles": 2520,
+      "sign_norm_variance": "315/8192"
+    },
+    {
+      "dimension": 64,
+      "pairs": 2016,
+      "census": {
+        "0": 498,
+        "4": 252,
+        "8": 168,
+        "12": 168,
+        "16": 168,
+        "20": 168,
+        "24": 252,
+        "28": 342
+      },
+      "violated_rectangles": 26040,
+      "sign_norm_variance": "3255/131072"
+    },
+    {
+      "dimension": 128,
+      "pairs": 8128,
+      "census": {
+        "0": 1186,
+        "4": 684,
+        "8": 504,
+        "12": 504,
+        "16": 336,
+        "20": 336,
+        "24": 336,
+        "28": 336,
+        "32": 336,
+        "36": 336,
+        "40": 336,
+        "44": 336,
+        "48": 504,
+        "52": 504,
+        "56": 684,
+        "60": 870
+      },
+      "violated_rectangles": 234360,
+      "sign_norm_variance": "29295/2097152"
+    }
+  ],
+  "modular_ranks_N_p_rank": [
+    [
+      16,
+      3,
+      12
+    ],
+    [
+      16,
+      5,
+      12
+    ],
+    [
+      16,
+      7,
+      12
+    ],
+    [
+      16,
+      11,
+      12
+    ],
+    [
+      32,
+      3,
+      24
+    ],
+    [
+      32,
+      5,
+      24
+    ],
+    [
+      32,
+      7,
+      24
+    ],
+    [
+      32,
+      11,
+      24
+    ],
+    [
+      64,
+      3,
+      48
+    ],
+    [
+      64,
+      5,
+      48
+    ],
+    [
+      64,
+      7,
+      48
+    ],
+    [
+      64,
+      11,
+      48
+    ]
+  ],
+  "exhaustive_block_kernel_tests": 336,
+  "checker_sha256": "b4b64c7e1a38279314f1da8cc704ab20dfc909c97bce6a33f5825e552a731516"
+}

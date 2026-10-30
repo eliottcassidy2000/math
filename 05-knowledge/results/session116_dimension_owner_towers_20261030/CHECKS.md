@@ -1,0 +1,22 @@
+# Verification and reproduction
+
+Run `python run_checks.py` from the packet. It executes thirteen scripts normally and under `python -O`, requires successful exits and compares output bytes. The checkers use exact integer/rational arithmetic and explicit exception gates. Python3 standard-library implementations are sufficient. `check_receipt.json` records the actual combined replay and output hashes.
+
+## Proof audits and declared finite universes
+
+- **Second-band owners:** 10,533 producer gates, including every actual subset for q=3..9, 1,270 full-atlas comparisons, 1,185 harmonic rows and222 global-max controls. The [independent audit](audit_lrc/AUDIT.md) adds1,152 gates with literal intervals, atlas fibers, minima, fully promoted owners, counts, slopes, surgery and periods. The open chamber is not silently closed at its lower endpoint.
+- **Tower defects and spectrum:** 102,990 producer gates for coefficients, signed sparse factors, the entire9⁴ W bank, integral pairs and embedded witnesses;109,028 matrix gates over90 cases;258 ordered signed shell checks. The [independent tower audit](audit_tower/AUDIT.md) adds14,227 gates using separately implemented multiplication, rational Gaussian determinants rather than Bareiss,75 matrix cases, six primes including2, full kernel coordinates and quadratic/inverse controls through64 dimensions. Its integer addendum adds388 checks, including full versus W norm14 and classical square-representation formulas.
+- **Arithmetic shadow and convolution subgroup:** 367,866 producer gates. The [independent audit](audit_arithmetic/AUDIT.md) adds105,410 symbolic-expansion/convolution gates, including all512 normalized dimension4 tables,128 dimension8 bank tables, reconstruction of the inherited16D rectangle contradiction, convolution pairs through dimension8, exact unit-weight ideals and subgroup generation through H₅. Algebraic proofs give the all-ring and all-dimension statements.
+- **Controller completion:** 121,797 producer exact gates and2,016 modular controls. The [independent audit](audit_collatz/PROOF_AUDIT.md) adds48,736 gates over63 controllers and32 entries each,24,576 literal modular memberships and1,716 direct chronological period counts. It checks actual coset orientation, finite/infinite depth, strict improvement, optimizer language, primitive-root scaling, rotations and ultrametric structure. Ordinary all-layer limits use the inherited theorem, not numerical extrapolation.
+- **Synthesis:** 652 exact controls independently construct full-sedenion even-norm witnesses and integral annihilators, check the norm14 slice distinction, higher-stage embeddings and parity-map scope. Classical three-/four-square theorems remain cited dependencies; finite shell checks are not new proofs of them.
+- **Concurrent sparse tower:** [C1–C5 audit](audit_sparse_merge/AUDIT.md) covers every unordered basis pair and violated rectangle through dimension128, direct odd-prime ranks at dimensions16/32/64 and336 composite-modulus block kernels. It uses the incoming Baez convention explicitly and checks the all-dimensional recurrence proof. C6+ automaton/minimality claims are not audited here.
+
+## Scope safeguards
+
+The full real16D cone, its four-dimensional annihilator and its determinant formula are not an arbitrary-dimensional dense classification. W has an internal two-dimensional annihilator and a narrower integer shell spectrum. Every standard tower element still satisfies the quadratic identity and nonzero elements retain two-sided conjugation inverses; these do not license reassociation or cancellation.
+
+Modulo-four norm composition is not real division or associativity. Modulo-eight failure of binary unit weights begins at dimension8, separately from the real norm-composition obstruction at16. The extreme-Walsh convolution subgroup is not an octonion multiplication family or a zero-divisor stratum.
+
+The sparse-tower random-sign formula concerns two independent fixed-length inputs. Its extension to non-fixed-length centered coordinates is a composition-defect moment, not the same centered product-norm variance. Neither result is an operator bound uniform over every vector.
+
+No Lean build, CI pass, literature priority or major conjecture closure is claimed. Concurrent owner, controller and sparse-tower sources are explicitly credited and preserved in the final ancestry; independently replaying them is not counted as discovering them anew.

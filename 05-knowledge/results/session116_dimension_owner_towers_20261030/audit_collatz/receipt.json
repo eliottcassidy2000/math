@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "all maximizer language": 2016,
+    "counterexample empty": 2,
+    "counterexample maximum": 2,
+    "direct chronological period count": 1716,
+    "exact completion domination": 2016,
+    "finite-depth strictness": 1777,
+    "infinite diagonal": 192,
+    "literal membership": 24576,
+    "literal order": 252,
+    "matrix symmetry": 672,
+    "one completion layer domination": 8064,
+    "orbit closure": 441,
+    "primitive root scaling": 2016,
+    "primitive separation": 533,
+    "rotation rate": 192,
+    "same lower-layer hits": 1677,
+    "ultrametric": 2592
+  },
+  "controllers": 63,
+  "entries_per_controller": 32,
+  "moduli": [
+    5,
+    25,
+    125,
+    625
+  ],
+  "production_imports": false,
+  "status": "PASS",
+  "total_checks": 48736
+}
