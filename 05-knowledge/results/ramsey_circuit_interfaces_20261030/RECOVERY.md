@@ -1,7 +1,7 @@
 # Recovery, source ledger, and operation maps
 
 **Current mathematical inputs recovered at b435f833bc; incoming work read
-through25626f0220.** Historical records identify ideas; corrections,
+through000f58fbcb.** Historical records identify ideas; corrections,
 audited theorems and reproducible computations determine their status.
 
 ## Portfolio and inheritance pass
@@ -86,6 +86,20 @@ universe, together with induction, gives the all-size proof.
   Faithfulness of a symmetry action does not reconstruct the whole
   coloring; R5 gives the corresponding query-versus-structure boundary.
   That packet supplies no new exact Ramsey value, and neither does ours.
+- `9beb192151` and `000f58fbcb`,
+  `session117_ramsey_circuit_interfaces_20261030/README.md` and
+  `SYNTHESIS.md`: new twin-projection enumeration, exact point-defect
+  circuit costs and affine geometry, and a complete local-potential
+  frontier. We read the affine-gap and potential proofs; their full
+  computational suite was not rerun here. Their invariant input-affine
+  geometry can have different gate costs because arbitrary GL input
+  maps are not free wiring. This strengthens B3's distinct streaming
+  versus circuit counterexample. The potential frontier already rules
+  out merely retuning the specified three weights; a new joint state
+  would have to rule out simultaneous worst-case transition histories.
+  Our parity charts demonstrate such joint feasibility in a tournament
+  problem, without asserting a circuit transition theorem. The exact
+  rowwise ceiling four is not a certified circuit record.
 
 ## Primary external source ledger
 

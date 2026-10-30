@@ -2,15 +2,15 @@
   "artifacts": {
     ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
     "AUDIT.md": "6e935725be1f3a7354073104388bc78e3c843d95820b97dee29dce2332ad5b94",
-    "CIRCUITS.md": "079e3334f7954f987bcde9cc19d3a83924b43d29b557de1a660435a9ca2a4904",
+    "CIRCUITS.md": "303a1be381b942273a439c82ab7b84a216b6de0c71c0818316d3c89f69a93818",
     "RAMSEY.md": "8f6cc91a42f9bf3c0d25d77a6e1d8fa5b1ed0c4c14a20d0f890db3b4b7c4039d",
     "README.md": "0b679e3ee3fac9cf67062707c6c25702da612ea822f82d4c584a71a1891ecb19",
-    "RECOVERY.md": "12255e53599474875fec4389e12c8b155c1744b196c467308a53d945d5e56c76",
+    "RECOVERY.md": "0e5e83e7292c5504936cd7327f5ba830a36e19611b13a9f7dd4a9820fb69a5db",
     "audit.py": "3e329d356b352ae10c9147bfa101c889ac0e3f30e8de05e7e12f75c69cfd2465",
     "check.py": "b1f0751402f5047bd321bef12c42ce6c89482eb1fc7ac7831bf1ef24cd2f5089",
     "explore.py": "954a043900bab2da9fa4f89e5632bd4fba0e7da23fbfe263e3349a528d6810fd",
     "receipt.json": "7c28d16430fdcaec5bdb05b0b007b2db0a0d3b94bc118a17c901bbf8d45eb092",
-    "seal.py": "26e1de9ae68a34a2afde0bfbfe72a50a17aceed77b887cfb8752a10932776ad6"
+    "seal.py": "efbbfa0c76d7ae48c98199acae974cdee8b529f2a9a76db7975fa3398da0418c"
   },
   "external_pdf_sha256": "e57f24481d2474a6f2c342d86312572f024710835ca583beb31e2bb1f9ceae40",
   "external_rules_revision": "2cd3a17f3f296b7f0ac248a63a9b54a0fabdf851",
@@ -87,6 +87,26 @@
       "commit": "25626f02207500a2abb897049456d82bb63f1ece",
       "lf_sha256": "2e81588930c4d3f0ac307da9da85ed0f0940b37d08a3610abd9615f444f2d64d",
       "path": "05-knowledge/results/return_kernel_core_transplants_20261030/README.md"
+    },
+    {
+      "commit": "000f58fbcb9783af0061548de1ca082c9a44feb4",
+      "lf_sha256": "a930f91fc1104985341a08c5aab1cd29dfea277e5f373664ddd36fd22f472201",
+      "path": "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/README.md"
+    },
+    {
+      "commit": "000f58fbcb9783af0061548de1ca082c9a44feb4",
+      "lf_sha256": "848885e7f3b0b8e11b733a38ee1c856ccdc86dc466fbbbad66ba058a7dd923bd",
+      "path": "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/SYNTHESIS.md"
+    },
+    {
+      "commit": "000f58fbcb9783af0061548de1ca082c9a44feb4",
+      "lf_sha256": "a5da3d0ce8bdf050c3b4e345b94d9714fa8208e5a54e7a4a434181f18de95256",
+      "path": "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/challenge_audit/POTENTIAL_FRONTIER.md"
+    },
+    {
+      "commit": "000f58fbcb9783af0061548de1ca082c9a44feb4",
+      "lf_sha256": "3ffeb49609ae588b2df05b2d8745e5e1295b82c738f0723a43a6d518b50ae494",
+      "path": "05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/affine_ramsey/AFFINE_RAMSEY_GATE_GAP.md"
     }
   ],
   "status": "Integrity only; same-agent proof review"

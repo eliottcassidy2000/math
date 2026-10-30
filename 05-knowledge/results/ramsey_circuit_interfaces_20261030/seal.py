@@ -26,7 +26,12 @@ PINS={
     '25626f0220':(
         '05-knowledge/results/ramsey_saturated_ports_20261030/PROOFS.md',
         '05-knowledge/results/ramsey_saturated_ports_20261030/RECURRENCES.md',
-        '05-knowledge/results/return_kernel_core_transplants_20261030/README.md')}
+        '05-knowledge/results/return_kernel_core_transplants_20261030/README.md'),
+    '000f58fbcb':(
+        '05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/README.md',
+        '05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/SYNTHESIS.md',
+        '05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/challenge_audit/POTENTIAL_FRONTIER.md',
+        '05-knowledge/results/session117_ramsey_circuit_interfaces_20261030/affine_ramsey/AFFINE_RAMSEY_GATE_GAP.md')}
 
 def digest(blob):return hashlib.sha256(blob.replace(b'\r\n',b'\n')).hexdigest()
 def git(*args):return subprocess.check_output(['git',*args],cwd=ROOT)

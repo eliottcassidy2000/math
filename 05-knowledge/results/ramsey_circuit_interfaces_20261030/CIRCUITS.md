@@ -155,3 +155,16 @@ It does not imply minimality in Circuit Breaker's more powerful model.
 These are precise proposed targets. No new unrestricted B2 lower bound,
 NP separation, universal complement closure, or practical factoring
 benchmark is claimed.
+
+**Incoming refinement.** Session117's
+[potential frontier](../session117_ramsey_circuit_interfaces_20261030/challenge_audit/POTENTIAL_FRONTIER.md)
+has since classified the specific provisional three-weight template:
+0<=c<=4 and b>=max(c,2c-2,4c-7). This is an algebraic restriction on
+that rowwise certificate, not a verified coefficient-four circuit bound.
+It rules out a proposed next step of merely retuning those weights.
+The useful next obligation is a sound actual-DAG state system exposing
+joint incompatibility of worst cleanup histories. Its
+[affine geometry gap](../session117_ramsey_circuit_interfaces_20261030/affine_ramsey/AFFINE_RAMSEY_GATE_GAP.md)
+also shows why quotienting by arbitrary input GL transformations can
+discard coordinate implementation cost. These incoming results receive
+their own attribution and are not included in this packet's test counts.
