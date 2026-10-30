@@ -53,11 +53,13 @@ function countTower(p) {
     need(sort(expected)===sort(transitions[rawNormalize(mask,last)]),"Raw transition versus orbit quotient");
   }
   let rawChecks=0;
-  if(p===3)for(let mask=1;mask<(1<<vertices);mask++)for(let last=0;last<vertices;last++)if(mask&(1<<last)){checkRaw(mask,last);rawChecks++;}
-  else {
+  if(p===3) {
+    for(let mask=1;mask<(1<<vertices);mask++)for(let last=0;last<vertices;last++)if(mask&(1<<last)){checkRaw(mask,last);rawChecks++;}
+  } else {
     let seed=110;const random=()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return seed>>>0;};
     for(let i=0;i<1000;i++){const last=random()%vertices,mask=(random()&((1<<vertices)-1))|(1<<last);checkRaw(mask,last);rawChecks++;}
   }
+  need(rawChecks===(p===3?2304:1000),"Exact raw-validation coverage");
   let rawH=null;
   if(p===3) {
     const dp=Array.from({length:1<<vertices},()=>Array(vertices).fill(0n));
