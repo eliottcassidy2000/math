@@ -106,3 +106,11 @@ replayed with Node:280 termwise palette comparisons and the order12
 uncolored control pass. The second packet's growth proofs and arithmetic
 sections A1--A4 were read for the specific comparisons recorded there;
 its complete million-gate verifier was not rerun in this session.
+
+The next incoming commit `1bd2d9b9b9` supplies an independently implemented
+[orbit-period checker](../session110_overnight_20261030/portable_checks/ramified_periods.js).
+Its Node replay also passes. It uses coefficient-of-delta characters and
+cyclic autocorrelations in the delta basis, including (p,a,k)=(17,8,2),
+and agrees with LOGFREE.md's exact period-norm formula. This is a further
+computational cross-check, not an independent review of the all-depth
+partial-colouring proof.
