@@ -1,0 +1,1710 @@
+{
+  "revision": "b1c353a48c7062c6900a622c761c4700de74706b",
+  "tracked_markdown_inventory": 62264,
+  "eligible_documents": 13490,
+  "read_documents": 13490,
+  "read_failures": [],
+  "matched_documents": 93,
+  "matches": [
+    {
+      "path": "01-canon/theorems/LEM-034-adjacent-sign-law-class0-lattice.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 3,
+          "text": "title: THE ADJACENT-CLASS SIGN LAW AND THE CLASS-0 LATTICE (LEM-033's N\u2080 named check RESOLVED \u2014 structural, by ATTRIBUTION, not full blocking). (A) SIGN LAW (universal, any cluster, any s): an endpoint whose attributed owner has boundary class c \u2261 s (mod 7) is ALWAYS an exit (sign \u22121: just after it "
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-080-transfer-matrix-odd-walsh.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 54,
+          "text": "- Degree 3: 24 nonzero, amplitude 1/8 = 0!/2^3, all s=0"
+        },
+        {
+          "line": 59,
+          "text": "- Degree 3: 360 nonzero: 240 with s=0 (amp 1/16), **120 with s=1 (amp 1/8)**"
+        },
+        {
+          "line": 65,
+          "text": "- Degree 2: 48 nonzero: s=0 (amp 1/8) and s=1 (amp 1/4)"
+        },
+        {
+          "line": 159,
+          "text": "| 5 | 1/4         | 1/8         | \u2014           | \u2014           | \u2014     |"
+        },
+        {
+          "line": 160,
+          "text": "| 7 | 3/4         | 1/16        | 1/8         | 1/32        | \u2014     |"
+        },
+        {
+          "line": 161,
+          "text": "| 9 | 45/8        | 3/16        | 3/8         | 1/64        | 1/128 |"
+        },
+        {
+          "line": 163,
+          "text": "**Correction (opus-2026-03-16-S73):** The n=9 row was previously wrong (had 3/2, 3/8, 3/4, 1/16, 1/128). The d=3 and d=5 entries had s-labels shifted by 1-2 (unrooted component miscounting at n=9). The d=1 entry (3/2) had no valid interpretation. See amplitude_table_check.py, amplitude_glitch_analys"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-1154-two-carrier-owner-chart-closure.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 115,
+          "text": "as the crossed boundary owners fit in the multiplier budget.  In particular:"
+        },
+        {
+          "line": 277,
+          "text": "core boundary owner marks one vertex, while each noncarrier adds a hyperedge"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-1169-three-four-carrier-owner-window-closure.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 280,
+          "text": "length, the boundary owner, and the existence of the exact chart (4).  A"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-1214-five-killer-carrier-owner-window-closure.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 393,
+          "text": "graph without boundary owners cannot recover `d`.  Candidate vertices"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-1246-resonant-needle-bank-corridor.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 157,
+          "text": "component with two labelled boundary owners `(14a,14Ha)`, not the number of"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-1277-pure-k-fastest-wall-bank-quotient.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 4,
+          "text": "status: PROVED (exact pure-K wall-bank extraction; sharp alternating-wall count; first-wall private fastest tooth; complete-tooth selected/unselected dichotomy; two distinct boundary-owner seams for every selected tooth; arbitrary prefix/suffix whole-tooth floods layered pointwise with the full chro"
+        },
+        {
+          "line": 82,
+          "text": "two boundary owners of selected complete tooth `r`, the exact weighted bank"
+        },
+        {
+          "line": 332,
+          "text": "digits, correlate the distinct boundary-owner pairs across several teeth,"
+        },
+        {
+          "line": 392,
+          "text": "The selected vertices carry an additional ordered boundary-owner edge"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-1279-complementary-near-top-cluster-closure.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 14,
+          "text": "exact positive lcm invoice, but after forgetting gcd and boundary ownership"
+        },
+        {
+          "line": 22,
+          "text": "(gcd(h,j_q), boundary-owner pair, tooth chronology)_q,"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2056-kelvin-polar-farey-defect-certificate.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 235,
+          "text": "boundary owner word. Thus the natural proof vertices are reciprocal lattice"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 516,
+          "text": "discriminant: it is a normalization and boundary-owner calculation testing"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2621-planar-degree-four-inverse-spectral-keller-congruence-and-sheet-defect-pole-ledger.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 870,
+          "text": "boundary ownership.  Those invoices remain useful hostiles, not a live"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2628-d4-opposite-pair-escape-and-deck-pole-census.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 216,
+          "text": "This is a boundary-ownership gate, not a `D_4` exclusion: all three types in"
+        },
+        {
+          "line": 346,
+          "text": "       + opposite-pair boundary ownership.                (21)"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2864-quartic-edge-orientation-sextic-resolvents-and-d8-radicand-product.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 411,
+          "text": "normalization, or boundary-owner data, then `(18)` separates the odd"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2907-paircap-exception-h4-heavy-link-child-census.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 212,
+          "text": "equality-boundary owners              2,26"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-2923-complete-seven-body-six-slot-recursive-pair-hunter-closure.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 325,
+          "text": "boundary owners={2,26}.                                   (26)"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-3038-split-monogenic-order-cross-resultant-conductor-and-affine-owner-boundary.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 394,
+          "text": "| finite normalization section | affine source via (11) | rational inverse coordinates | boundary ownership | source-coordinate regularity |"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-3043-lrc-tight-instances-are-not-only-APs-and-what-FC2-does-not-transfer.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 98,
+          "text": "(1,2,3,4,5,6,7) thr 1/8 :  t = 1/8, 3/8, 5/8, 7/8"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-3201-c3-local-resolvent-splitting-and-matching-newton-gate.md",
+      "fraction_numerators": [
+        1,
+        3,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 19,
+          "text": "  is c_m A_X^3 tau^m, where c_m is -1 off 3|m and 1/8 on 3|m.  In THM-3081's"
+        },
+        {
+          "line": 407,
+          "text": "q=(1/8)A_X^3 pi^(-3m)+O(pi^(-3m+1)).                   (28)"
+        },
+        {
+          "line": 418,
+          "text": "c_m=1/8 if 3 divides m.                                (29)"
+        },
+        {
+          "line": 458,
+          "text": "q=a_1-a_2a_3/2+a_3^3/8"
+        },
+        {
+          "line": 464,
+          "text": "leading constants `-1`, `9/2`, and `-27/8`, whose sum is `1/8`.  This is the"
+        },
+        {
+          "line": 535,
+          "text": "   `q=-t^(-1)-u^3/8`, both graph leading constants in `(29)`, normal-gauge"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-3325-composite-even-flat-boundary-blindness-and-interior-collapse.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 220,
+          "text": "shift.  For vectors with active odd indices, the right-boundary owner"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-4088-order-tournament-arithmetic-type-blindness-and-lrc-margin-density.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 352,
+          "text": "| strict LRC witness | open interval via `(18)` | loneliness above threshold | boundary owner/equality and denominator shell |"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-4349-lrc14-adaptive-owner-clock-completeness-and-twelve-height-tail-cutoff.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 423,
+          "text": "[exact audit](../../07-reflections/lrc14-owner-escape-fixed-bank-boundary-owner_escape_arbitrary_entry_20260902.md)."
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-4724-affine-fixed-point-criterion-restricted-twisted-burnside-for-every-submodule-even-n-switching-half-and-the-dc-obstruction-to-uniform-circulant-rules.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "eighth roots"
+      ],
+      "snippets": [
+        {
+          "line": 3,
+          "text": "title: \"The affine fixed-point criterion: for every S_n-submodule U of the edge space, every odd-order P <= S_n and every h in N(P), the number of <P,h>-fixed classes of tournaments modulo U equals the h-signed count of <P,h>-invariant graphs in U-perp. Hence the restricted twisted Burnside principl"
+        },
+        {
+          "line": 24,
+          "text": "  (pi(x) - pi(x/2) >= 2 for x >= 11); Dirichlet's theorem and quadratic reciprocity; Chebotarev's density theorem (for the residual eighth-power cases of Theorem W)."
+        },
+        {
+          "line": 83,
+          "text": "*Proof.* (i) `K_max`-invariant `S` means `1_S(cx) = 1_S(x)` for `c \u2208 K_max`, and `1_S(cx) = 1_S(-x) = 1 - 1_S(x)` for `c \u2208 -K_max`. (ii) Case `c` not a square (including `c = -m^2`): for `p \u2261 3 (mod 4)`, `K_max = QR_p` and `c \u2261 -1 (mod K_max)` iff `(c/p) = -1`; the characters `(c/\u00b7)` and `(-1/\u00b7)` ar"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-4726-level-branch-as-a-weighted-count-over-two-element-decorations-and-the-decorated-flip.md",
+      "fraction_numerators": [
+        1,
+        3,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 3,
+          "text": "title: \"HYP-9172 (b), what a pairing proof of the level-branch integrality must carry: for every n, THM-479's level branch is N_lev(n) = sum over S_n-orbits of pairs (C, x), C a switching class of tournaments and x a nontrivial 2-element of Aut C, of rho(C_{Aut C}(x)), the odd-order proportion of th"
+        },
+        {
+          "line": 11,
+          "text": "  arithmetically in the 2026-10-20 switching_branch_integrality packet, CITED). The exact carrier weights are rho(C_Aut(C)(x)); these are reciprocal Sylow-2 orders when the centralizers have normal 2-complements, as in the stated finite census. The V_4 stratum has total 3/4 + 1/4 = 1. A weight-prese"
+        },
+        {
+          "line": 43,
+          "text": "Indeed `C_H(x)` maps onto `C_P(x)` under `H -> H/K = P`, with odd-order kernel `C_K(x)`. Conjugacy of elements of `P` in `H` is the same as their conjugacy in `P`. Summing over nonidentity `P`-conjugacy classes gives `sum 1/|C_P(x)| = sum |[x]_P|/|P| = (|P|-1)/|P|`. Equivalently one can sum `1/|P|` "
+        },
+        {
+          "line": 55,
+          "text": "| 8 | 27 | 31 | 7 | 1/2 \u00d7 19, 1/4 \u00d7 14, 1/8 \u00d7 16 | 15 |"
+        },
+        {
+          "line": 57,
+          "text": "At `n = 8` the Sylow-type strata contribute `C_2: 19/2`, `C_4: 2 x 3/4`, `V_4: 3/4 (Aut = V_4) + 1/4 (Aut = A_4) = 1`, `C_8: 2 x 7/8`, `D_8: 7/8 (Aut = D_8) + 3/8 (the order-168 group)`. These totals reproduce."
+        },
+        {
+          "line": 61,
+          "text": "The marked stabilizer `C_Aut(C)(g)` is unchanged by this flip, so its weight is preserved. At n=8 the 31 involution decorations have mass 12, the seven fixed ones have mass 5/2, and the noninvolution 2-element decorations contribute the remaining mass 3. This does not produce the required integer-pa"
+        }
+      ]
+    },
+    {
+      "path": "01-canon/theorems/THM-541-lrc14-ap-window-single-hole-collar.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 201,
+          "text": "Switch/gauge: retain `R/L` boundary-owner addresses before scalarizing to"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/INDEX.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner",
+        "boundary_owner"
+      ],
+      "snippets": [
+        {
+          "line": 116,
+          "text": "- [The owner's Borwein ladder and von Staudt-Clausen: 15, 113 and 7, 56, 418 are the Borwein breaks and crossing indices at 2, 3, 4; 80499 is the Baillie-Borwein-Borwein 2 pi break; {4,2,5,3,7,13}, {2,3,11}, {2,5,7} as von Staudt-Clausen reciprocal-sum thresholds](borwein_ladder_owner_numbers_vsc_tw"
+        },
+        {
+          "line": 231,
+          "text": "- [Regular endcaps, a deficiency-three recurrence and Fibonacci matchings](rotation_owners_spectrum_20261020e/README.md): **PROVED scoped / CITED / FINITE-EXACT.** Every regular outer endcap of order at least5 has a three-black bypass; an elementary circulant proof retains the exact marked target. F"
+        },
+        {
+          "line": 250,
+          "text": "- [jcweb_20261020_uniform_rules_branch_integrality_jacobian_web](jcweb_20261020_uniform_rules_branch_integrality_jacobian_web.md) \u2014 mac-mini-2026-10-20-jcweb (pre-audit): THM-4725 uniform circulant rules resolved (dilation rules collapse at the eighth-power-residue primes p = 9 mod 16, Chebotarev; s"
+        },
+        {
+          "line": 259,
+          "text": "- [Enumerative geometry from the repository side: Apollonius, Ford-Descartes, 3-smooth windows, the Carmichael transfer](apollonius_enumerative_20261019_galois_parity_cube_ford_descartes_windows.md) (2026-10-19, mac-mini-2026-10-19-apollonius; PRE-AUDIT): **PROVED THM-4718 (the Galois group of the p"
+        },
+        {
+          "line": 375,
+          "text": "- [Collatz through irrationality measures: the parity-number dictionary and the convergent budget](collatz_irrationality_measures_20261014.md): **PROVED (THM-4634 dictionary, THM-4633 budget theorem) + FINITE-EXACT (ledger at 2^71, cycle-word checks) + CITED (Lagarias, Terras, Jarnik, Eliahou, Herch"
+        },
+        {
+          "line": 387,
+          "text": "- [The positive integers as irrationality measures: the boundary growth exponent of the Collatz transfer function is 2(mu(log2 3) - 1), Jarnik laws realise every integer, the trivial cycle is the only pole on the line, and the owner's sources](collatz_integers_as_irrationality_measures_20261014.md):"
+        },
+        {
+          "line": 415,
+          "text": "- [Fixed-source charge and changing terminal controllers](collatz_shadow_charge_20261011.md): **PROVED scoped, self-audited + FINITE-EXACT:** Z>(3/4)(3/8)^o controls the full carry loss using odd charge alone; the optimal rooted-shadow score at binary precision d is exactly 2^-o_d(n). A bounded fixe"
+        },
+        {
+          "line": 478,
+          "text": "- [The expense is Diophantine: weak resets are the upper convergents of log2 3; exact segment-level tail; what a bank buys](collatz_expense_diophantine_20261005.md): **PROVED (elementary + CITED one-sided best approximation) + FINITE-EXACT + VERIFIED census; universal entry OPEN.** Theorem Q: the le"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/REPORT.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 183,
+          "text": "every frozen boundary owner, and extends to a proper coloring of `Q_35` by"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/chess_proof_system_20261012.md",
+      "fraction_numerators": [
+        1,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 55,
+          "text": "**KPvK by strata (FINITE-EXACT, `solve_small.py`).** The class has 331,352 legal states and 2,125,630 internal moves; 1,968,490 of them are king moves inside a stratum and 157,140 are pawn pushes between strata, every one of which advances the pawn (checked). The 48 strata have between 6,886 and 6,9"
+        },
+        {
+          "line": 91,
+          "text": "**5.3 KRvKB: the safe corner and the wrong corner.** Black bishop on dark squares; the light corner a8 is the \"safe\" corner of the textbooks, the dark corner a1 the \"wrong\" one. `R` = all legal states with the Black king within Chebyshev distance 2 of the corner (9 king squares, 32 bishop squares, 6"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260917_zsigmondy_triad.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 30,
+          "text": "`P(x)=x^3+x^2/2-9x/4-1/8` with `Phi_3=P^2` and multiplier `1` at `-7/4`, its section 2 proves that the reversed"
+        },
+        {
+          "line": 36,
+          "text": "(`PrePer(x^2-29/16,Q)` (2)-(3), marked chart (13), the multiplier `35/8` in (32), `Psi_6` of squaring (36)-(38)),"
+        },
+        {
+          "line": 99,
+          "text": "| 1 | 13 | `c=+-1/b`: `1, +-1/2, +-1/4, +-1/8, +-1/16, +-1/32, +-1/64` |"
+        },
+        {
+          "line": 100,
+          "text": "| 2 | 12 | `c=-1+-1/b`: `-3/2, -1/2, -5/4, -3/4, -9/8, -7/8, -17/16, -15/16, -33/32, -31/32, -65/64, -63/64` |"
+        },
+        {
+          "line": 188,
+          "text": "`Phi_3=(8x^3+4x^2-18x-1)^2/64` and the collided cycle has multiplier `8*prod x_i=8*(1/8)=1` (Vieta): a parabolic"
+        },
+        {
+          "line": 194,
+          "text": "a rational square. `-29/16=-7/4-(1/4)^2`: `s=-1/4` is the rational AP cycle (`lambda=35/8`, the value displayed in"
+        },
+        {
+          "line": 195,
+          "text": "THM-4139 (32)), `s=+1/4` the cycle `64X^3+16X^2-164X+23` (`lambda=-23/8`). `-2=-7/4-(1/2)^2`: `s=-1/2,+1/2` give"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_counterexample_portrait.md",
+      "fraction_numerators": [
+        1,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 66,
+          "text": "Chain, both sheets. (i) `|Delta|/3^L <= e^{L/(3N)} - 1` (plus) or `<= L/(3N)` (minus, Bernoulli). (ii) If this is `<= 1/(4L)`, tier A gives `|log_2 3 - K/L| < 1/(2L^2)`, so reduced `K/L = p_n/q_n` is a convergent (Legendre, CITED via pillai S3) and `L = m q_n`. (iii) `|K - L log_2 3| = m|q_n log_2 3"
+        },
+        {
+          "line": 104,
+          "text": "These are densities of the coefficient stopping time (`2^{K_j} > 3^j` for some `j <= J`), which equals the true stopping time for all `n > B/(2^{K_j} - 3^j)` at `b = +1` and for all `n` at `b = -1`. Odd-step convention (`J` accelerated steps, density among odd starts, exact rationals; the audit reco"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/collatz_procgen_20260922_synthesis.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 392,
+          "text": "  * A P\u00f3lya-capacity argument on the `p <-> 1-p` quotient proves the first uniform gap, **`C* >= 11/8`**. Pure interval arithmetic gives `27/20`, and the method reaches `1.3775`. So a constant `1+eps` is impossible for `eps <= 3/8`."
+        },
+        {
+          "line": 751,
+          "text": "  * *Refuted in the same work.* (i) The conditioned energy, since `E Q^2 >= 1/8` via a Bernoulli(3/4) martingale. (ii) Fixed-slope injectivity: `N = 2^153 u - 1` and `N - 4` merge at time 233 with 153 odd steps, shadowing `-1` and the `-5` cycle. Injectivity does hold for every `k <= 31`."
+        },
+        {
+          "line": 781,
+          "text": "  * `7/11` is the mediant of `2/3` (the `-5` cycle) and `5/8` (the critical Christoffel density of `sigma_k`)."
+        },
+        {
+          "line": 939,
+          "text": "* **7n\u00b11.** It has no provable sign strategy at any level `k <= 30`; `rho*(7,29) = 13/35`. The guessed limit `3/8` is REFUTED, and the true limit against `log_7 2` is OPEN."
+        },
+        {
+          "line": 1369,
+          "text": "* **Ninth note, same session ([`collatz_aliquot_lehmer_five_20260927.md`](collatz_aliquot_lehmer_five_20260927.md)): the Lehmer five (aliquot sequences) against Collatz; D21, D22 closed; the eighth note's \"Lehmer 5\" corrected (MISTAKES).** PROVED + FINITE-EXACT: both maps are multiplicative steps st"
+        },
+        {
+          "line": 1370,
+          "text": "* **Eighth note, same session ([`collatz_doubling_tower_brocard_20260927.md`](collatz_doubling_tower_brocard_20260927.md)): D18, the Lehmer quintic, the Brocard triple.** FINITE-EXACT: the graph tower `D^k(P_5)` has `(omega, alpha) = (2,2), (3,3), (4,4), (5,6), (7,8)` at orders `5, 10, 20, 40, 80`; "
+        },
+        {
+          "line": 1542,
+          "text": "  `D(-1/2) = 1/2`, `D(-1/4) = D(1/8) = D(11/16) = 3/4`, `D(-1/8) = 3/8`,"
+        },
+        {
+          "line": 2015,
+          "text": "   classes mod `3^(t+1)`, but a loop ratio below `27/8` (or `81/8`)"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/congruent_square_gap_classes_20261019.md",
+      "fraction_numerators": [
+        1,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 153,
+          "text": "This replaces `r` by `1/r`. Thus the admissible locus is exactly the punctured union of the radius-`delta` arcs around `0` and `1/2` in `R/Z`. We now show the strict bound `delta>1/8`."
+        },
+        {
+          "line": 163,
+          "text": "Because `beta>1+sqrt(2)`, monotonicity gives `delta<1/4`. Hence `0<2delta<1/2`, so the x-coordinate comparison at the doubled boundary is on the same monotone half-circle. Since `u(2delta)=2<1+sqrt(2)=u(1/4)`, we have `2delta>1/4`, or `delta>1/8`."
+        },
+        {
+          "line": 175,
+          "text": "It follows that `q t` has circle distance at most `1/8` from `{0,1/2}`. Since `1/8<delta`, `qP` is strictly inside the admissible locus unless it is exactly `O` or `T`. For rational `P` with nonzero y-coordinate this exception is impossible by Section 3."
+        },
+        {
+          "line": 187,
+          "text": "The same argument guarantees more than positivity. At circle distance `1/8` from `O` or `T`, duplication gives a quarter-period, and therefore the larger-to-smaller leg ratio is"
+        },
+        {
+          "line": 191,
+          "text": "The selected rational point cannot have circle coordinate an odd multiple of `1/8`, since that would give order-8 torsion. Its distance to `{0,1/2}` is therefore strictly less than `1/8`, and its unordered leg ratio is strictly greater than `kappa`."
+        },
+        {
+          "line": 210,
+          "text": "- `2P=(169/4,\u22121547/8)`: primitive triangle `(14161,40560,42961)`; `42961\u00b2<4*14161*40560`."
+        },
+        {
+          "line": 219,
+          "text": "`P=(25/4,75/8)` on `E_5`."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/diagonal_palette_holonomy_20261011g.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 84,
+          "text": "the other two phase orbits. Half-open boundary ownership is unchanged by"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/level11_short_20260922.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "eighth-root"
+      ],
+      "snippets": [
+        {
+          "line": 64,
+          "text": "have order8; their ratio has order4. Thus a precise eighth-root phenomenon"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/metagraph_owned_boundary_frontier_20261023.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 114,
+          "text": "named boundary cells, the relation of compatible boundary-owner assignments"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/farey/AUDIT_NATIVE_MOVES.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 44,
+          "text": "predecessors and send to both existing successors, with boundary owners"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/native_guard_moves_farey_20261023/native_moves/NATIVE_GUARDED_MOVES.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 89,
+          "text": "`(4,2,6,5) <-> (5,2,6,4)`, and the external boundary owners are `0,3`."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 42,
+          "text": "| 1/4 | [1/4,3/8] union [5/8,3/4] | 0 |"
+        },
+        {
+          "line": 211,
+          "text": "    m >= (1/8-o(1)) n^2/log2(n)."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/pentagon_flow_generating_functions_20261021/README.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 5,
+          "text": "A certified25-cone unimodular triangulation proves the raw R5 flow formula. A separate five-case lattice decomposition proves the anti-fixed formula. Independent fan coverage, intersections, half-open boundary ownership, and polynomial identities are certified. Minimal recurrence orders for raw, ord"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/pentagon_flow_generating_functions_20261021/session23b-pentagon/PROOF.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "eighth root"
+      ],
+      "snippets": [
+        {
+          "line": 150,
+          "text": "The pole at 1 has order 4; the poles at -1 and at primitive cube roots have order 2; all remaining poles are simple. Partial fractions therefore show that k_n is an exact quasipolynomial in n>=0 of degree 3 and period dividing 120. Its minimal quasiperiod is 120: a quasipolynomial of period L can ha"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/procgen_cdiff_20261001_drop_multiplicities.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 292,
+          "text": "  `c(0) = \u22121/8`, `c(1) = \u22125/8`, `c(\u22122) = 1/8`, `c(\u22121) = \u22123/8`."
+        },
+        {
+          "line": 302,
+          "text": "- The range in (d) follows from `max c = 1/8`, `min c = \u22125/8` and `\u03a3 4^{\u2212i} = 4/3`. \u220e"
+        },
+        {
+          "line": 305,
+          "text": "valuation class, with slope `(2^v \u2212 3)/2^{v\u22121}`. So the slopes are `1/2, 5/4, 13/8, 29/16, \u2026 \u2192 2`, and the"
+        },
+        {
+          "line": 475,
+          "text": "`(2^V \u2212 3)/2^{V+1}` with `P(V = j) = 2^{\u2212j}`. The values are `\u22121/4, 1/8, 5/16, 13/32, \u2026 \u2192 1/2`, with mean 0"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/procgen_mykk_20260926_expanding_cycle_feedback.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 279,
+          "text": "| 7 | `[0,1/4)`:19 `[1/4,1/3)`:18 `[1/3,2/5)`:17 `[2/5,1/2)`:15 `[1/2,5/9)`:11 `[5/9,3/5)`:10 `[3/5,5/8)`:9 `[5/8,7/11)`:8 `[7/11,2/3)`:7 `[2/3,3/4)`:5 `[3/4,7/9)`:3 `[7/9,6/7)`:2 `[6/7,1)`:1 | `[0,1/7) \u222a [1/4,2/7) \u222a [2/5,3/7) \u222a [5/9,4/7) \u222a [2/3,5/7) \u222a [7/9,1)` | 0.493 |"
+        },
+        {
+          "line": 280,
+          "text": "| 8 | `[0,1/5)`:35 `[1/5,1/4)`:34 `[1/4,1/3)`:33 `[1/3,5/13)`:30 `[5/13,2/5)`:29 `[2/5,3/7)`:28 `[3/7,4/9)`:27 `[4/9,5/11)`:26 `[5/11,1/2)`:25 `[1/2,5/9)`:20 `[5/9,4/7)`:18 `[4/7,3/5)`:16 `[3/5,5/8)`:13 `[5/8,2/3)`:12 `[2/3,7/10)`:8 `[7/10,5/7)`:7 `[5/7,3/4)`:6 `[3/4,7/9)`:5 `[7/9,4/5)`:3 `[4/5,7/8)"
+        },
+        {
+          "line": 281,
+          "text": "| 9 | `[0,1/5)`:59 `[1/5,1/4)`:58 `[1/4,2/7)`:57 `[2/7,3/10)`:56 `[3/10,1/3)`:55 `[1/3,2/5)`:52 `[2/5,5/12)`:49 `[5/12,3/7)`:48 `[3/7,5/11)`:45 `[5/11,10/21)`:43 `[10/21,1/2)`:42 `[1/2,7/13)`:34 `[7/13,6/11)`:33 `[6/11,5/9)`:32 `[5/9,9/16)`:31 `[9/16,4/7)`:30 `[4/7,3/5)`:28 `[3/5,8/13)`:23 `[8/13,5/"
+        },
+        {
+          "line": 286,
+          "text": "* On each necklace interval `[j/k, (j+1)/k)`, `N_c` is constant. `FVS_c` starts high just above `j/k` and falls through breakpoints at the densities of short non-necklace cycles (`1/4, 1/3, 2/5, 1/2, 5/9, 3/5, 5/8, 7/11, 2/3, 3/4, 7/9, ...`)."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/procgen_seven_20260926_seven_n_plus_one_provability.md",
+      "fraction_numerators": [
+        1,
+        3,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 1,
+          "text": "# Is 7n\u00b11 ever bounded-lookahead provable? Exact min-max densities to level 29 (a 3/8 plateau at k = 24\u201326, then 35/94 and 13/35), a lean exact solver, the rational relaxation, and all-level floors 5/16 (q = 9) and 2/7 (q = 11)"
+        },
+        {
+          "line": 6,
+          "text": "  - `rho*(7,k)` for `k = 19..29`: `13/34, 34/89, 8/21, 14/37, 14/37, 3/8, 3/8, 3/8, 35/94, 13/35, 13/35`. The values for `k <= 22` reproduce THM-4486; **`k = 23..29` are new**."
+        },
+        {
+          "line": 11,
+          "text": "  - `rho*(9,k)`, `k = 17..24`: `12/31, 5/13, 8/21, 17/45, 3/8, 19/51, 27/73, 18/49`; `rho*(11,k)`, `k = 17..24`: `29/77, 41/110, 7/19, 4/11, 71/197, 29/81, 11/31, 31/88`. **No provable 9n\u00b11 or 11n\u00b11 strategy at `k <= 24`.**"
+        },
+        {
+          "line": 20,
+          "text": "  - **The 3/8 plateau** (`k = 24, 25, 26`). At `k = 24` (runner \u00a7C) the certified optimal sign strategy keeps the rational 7x+1 cycle `(-169, -548, -274, -137, -436, -218, -109, -338)/87`: shape `(8,3)`, and `2^8 - 7^3 = -87`, so it is an integer cycle of 7x+87 of the free shape `(8,3)` (THM-4484). "
+        },
+        {
+          "line": 23,
+          "text": "- **REFUTED:** \"`lim rho*(7,k) = 3/8`\". It is the natural guess from the plateau, as `2/5` was final for q = 5, but `rho*(7,27) = 35/94 < 3/8`."
+        },
+        {
+          "line": 40,
+          "text": "| (B) does `rho*(7,k)` go below `log_7 2`? | Not up to `k = 30`: `rho*(7,27) = 35/94`, `rho*(7,28) = rho*(7,29) = 13/35`, `rho*(7,30) >= 7/19`. The sequence plateaus at exactly `3/8` for `k = 24..26`, then drops. | FINITE-EXACT; limit OPEN |"
+        },
+        {
+          "line": 41,
+          "text": "| the Fibonacci-like denominators `34, 89` and the break at `k = 22` | Not structural. The later values `14/37, 3/8, 35/94, 13/35` are not Fibonacci ratios. The values for `k <= 23` lie in `(3/8, 2/5)` and approach `3/8`, which is attained for `k = 24..26`; then the sequence moves below it (\u00a73). | E"
+        },
+        {
+          "line": 104,
+          "text": "| 7 | 0.35621 | 3/7 (7), 2/5 (10), 15/38 (14), 7/18 (16), 19/49 (18), 13/34 (19), 34/89 (20), 8/21 (21), 14/37 (22, **23**), **3/8 (24, 25, 26)**, **35/94 (27)**, **13/35 (28, 29)**; **`rho*(7,30) >= 7/19`** | 29 |"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session37_statistics_parity_cuts_20261023/SYNTHESIS.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "eighth-root"
+      ],
+      "snippets": [
+        {
+          "line": 97,
+          "text": "The arithmetic types do not pair naively. At order4, irrational energies3\u00b12\u221a2 give eighth-root phases and rational normalized angles. At order5, the rational energy7 gives charge22 and a transcendental normalized angle \u03b8/\u03c0. Five is the sharp first order for this normalized-angle phenomenon. The raw "
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session37_statistics_parity_cuts_20261023/arithmetic-audit/REPORT.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "primitive eighth"
+      ],
+      "snippets": [
+        {
+          "line": 41,
+          "text": "For rational positive \u03bc, root-of-unity t makes t+t\u207b\u00b9 a rational algebraic integer in (-2,2), hence one of -1,0,1. Solving gives \u03bc=3,1,1/3; conversely these do give roots of unity. For rational tournament energies only \u03bc=1,3 survive integrality. This classification must not be extended to irrational "
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session37_statistics_parity_cuts_20261023/arithmetic/ARITHMETIC_CUT_COMPLETION.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "eighth roots"
+      ],
+      "snippets": [
+        {
+          "line": 103,
+          "text": "Its positive-energy charges are 13\u00b16\u221a2, and its CM field is Q(\u221a2,i)=Q(\u03b6\u2088). Here the parameters t are eighth roots of unity, so their normalized angles are rational despite irrational charges. This supplies both directions of the rational-charge/angle non-equivalence."
+        },
+        {
+          "line": 134,
+          "text": "Thus the energies are either 3 repeated four times, or 3\u00b12\u221a2 each twice. Their Cayley modes are respectively third roots or eighth roots of unity. These analytic formulas prove the lower bound independently of the enumeration."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/audit-fourth/FOURTH_AUDIT.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 19,
+          "text": "The connected affine-F3 three-boundary section count is structurally correct: one empty relation,27 singleton triples,36 full affine three-point graphs. A first boundary owner fixes its entire connected completion. Empty section relations can conceal different holonomy centralizers, so the inherited"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session51_structural_errors_relational_packets_20261024/audit-blue-defect-wiring/REPORT.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 116,
+          "text": "loops counted only once, a wrong actual target path, a wrong boundary owner,"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/CONCEPT_BOARD.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 9,
+          "text": "| Anchor: dual A2 flower and primal Voronoi cell | Explicit Eisenstein coordinates, two norm-seven ideals, exact strict cell separation, classical seven-colouring | Projective labels alone lose metric and boundary ownership; primal E=0 is infinity |"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/hexagonal/RESULTS.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 246,
+          "text": "| Seven cell colors \u2192 plane coloring | Assign entire Voronoi cells | Requires strict diameter/separation and boundary ownership |"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/session74_eleven_mechanisms_20261027/session74-inheritance/FOURTH_AUDIT.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 19,
+          "text": "The connected affine-F3 three-boundary section count is structurally correct: one empty relation,27 singleton triples,36 full affine three-point graphs. A first boundary owner fixes its entire connected completion. Empty section relations can conceal different holonomy centralizers, so the inherited"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/source_address_two_clocks_20261004.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 166,
+          "text": "at q=3 the words (3) and (2,1) have addresses 5/8 and 1/8, and their"
+        },
+        {
+          "line": 210,
+          "text": "| (2,1) | 1/8 | 7/8 |"
+        },
+        {
+          "line": 212,
+          "text": "| (1,2) | 3/8 | 1/8 |"
+        },
+        {
+          "line": 216,
+          "text": "    U(chi_(1/8)*chi_(1/4)) = chi_(1/8),"
+        },
+        {
+          "line": 217,
+          "text": "    U(chi_(1/8))*U(chi_(1/4)) = chi_(5/8)."
+        },
+        {
+          "line": 221,
+          "text": "F=chi_(1/8)+chi_(1/4)+chi_(3/8). Its squared norm and that of U(F)"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/square_cell_conflicts_20261011g.md",
+      "fraction_numerators": [
+        1
+      ],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 105,
+          "text": "At $a^2=1/8$, regard the small squares in each odd macroblock as groups of four, temporarily making all coarse squares have side $2a$. If such a coarse square has indices $(p,q)\\in\\mathbf Z^2$, give all its points colour"
+        },
+        {
+          "line": 126,
+          "text": "The same exact source-owned checker applies, now with a different conflict graph for each colour. **verify_period_colouring** keeps all these thresholds rather than silently replacing them by one. For example the vector $(1,1,1,1,1/2,1/2)$ gives $(8,8,8,8,2,2)$ at $a^2=1/8$. The ordinary unit-distan"
+        },
+        {
+          "line": 130,
+          "text": "The useful next choices are explicit: enlarge the colour period (a genuine three-cycle rule can require this), split cells with a declared boundary owner, or retain position-dependent phases. Every choice must recompute actual region conflicts. Centre-distance checks, diagonal colour names, and an a"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/stechkin_refined_conflict_graph_20261012a.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "Boundary owner",
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 102,
+          "text": "**The lower bound has no period hypothesis.** Any assignment of at most seven colours constant on all original tile interiors fails on this one finite patch. It applies even if its colour pattern is nonperiodic or its boundary ownership is altered arbitrarily."
+        },
+        {
+          "line": 148,
+          "text": "| Open interior colouring | Full-plane colouring | Boundary ownership must be proved separately |"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/stechkin_whole_plane_obstructions_20261011g.md",
+      "fraction_numerators": [
+        1
+      ],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 30,
+          "text": "explicitly and uses the same boundary ownership: triangle interiors are"
+        },
+        {
+          "line": 113,
+          "text": "Each has coordinate area \\(1/8\\). In the common period \\([0,2]^2\\),"
+        },
+        {
+          "line": 125,
+          "text": "intersections: two have area \\(1/8\\), the other fourteen area 0."
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/switching_branch_integrality_20261020/PAIRING_BOUNDARY.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 28,
+          "text": "- 2 with Sylow C_8, both rho = 1/8;"
+        },
+        {
+          "line": 29,
+          "text": "- 2 with Sylow D_8, having rho = 1/8 and 5/8."
+        },
+        {
+          "line": 33,
+          "text": "    N_lev(8) = 19(1/2) + 3(3/4) + 1/4 + 3(7/8) + 3/8 = 15,"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/thirtysix_bridge_20260925.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "eighth-root"
+      ],
+      "snippets": [
+        {
+          "line": 32,
+          "text": "note also contains a real eighth-root recurrence, recovered separately in"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/three_problems_marked_defects_20261012a.md",
+      "fraction_numerators": [
+        5
+      ],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 53,
+          "text": "parity colours, with an explicit boundary ownership rule. Neither bound"
+        },
+        {
+          "line": 87,
+          "text": "split, with all new unit-distance conflicts and boundary ownership retained,"
+        },
+        {
+          "line": 251,
+          "text": "| Rational three-cycle at c=-29/16 | Returns after three steps | Multiplier(35/8)^m prevents even first-order identity |"
+        }
+      ]
+    },
+    {
+      "path": "05-knowledge/results/weighted_branch_carrier_audit_20261020/WEIGHTED_BRANCH_AUDIT.md",
+      "fraction_numerators": [
+        1,
+        3,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 32,
+          "text": "The smallest relevant hostile is H=P=D8, of order 8. Its nonidentity 2-element conjugacy classes have weights 1/4, 1/4, 1/4, 1/8, summing to 7/8. A reflection has centralizer V4 and weight 1/4, not 1/8. The independent controls also check C3 x D8, so the correction is not confined to a trivial odd c"
+        },
+        {
+          "line": 36,
+          "text": "For an arbitrary finite group, rho(C_H(x)) need not be the reciprocal of a 2-power: for the central involution in C2 x A5 it is 3/8. This example is a boundary for the unrestricted finite-group identity, **not** a claim that C2 x A5 occurs as a switching-class automorphism group. A reciprocal-centra"
+        },
+        {
+          "line": 51,
+          "text": "    19 at 1/2, 14 at 1/4, 16 at 1/8,"
+        },
+        {
+          "line": 96,
+          "text": "This probe remains FINITE-EXACT. It does not show that fixed mass or transposition mass is integral in general and does not yield the open integral-packet construction. Even a fixed-point-free, weight-preserving involution would not by itself prove integer total: a 2-cycle of weight 1/4 per element "
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/all-ref-archaeology-chain-enriched-context-and-operation-defects-root-20260815.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 25,
+          "text": "nonzero, which boundary owner binds, or whether the first global event is a"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/cofinal-pair-plane-owner-descent-and-multiplicity-window-synthesis-20260826.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 176,
+          "text": "joint phase erased by both ray bounds. The boundary owner moving from `744`"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc-dyadic-fibre-grid-ternary-carry-and-boolean-quartet-codex-20260815.md",
+      "fraction_numerators": [
+        1
+      ],
+      "word_matches": [
+        "Boolean quartet"
+      ],
+      "snippets": [
+        {
+          "line": 34,
+          "text": "Boolean quartet | eight-branch overlap | affine start"
+        },
+        {
+          "line": 129,
+          "text": "Eight coefficient preimages are spaced by eighths in phase.  Their arcs have"
+        },
+        {
+          "line": 130,
+          "text": "length `1/7>1/8`, so overlap begins exactly here.  Nevertheless the grid"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc-invariant-stack-codex-20260619.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 34,
+          "text": "  -> safe-component boundary-owner geometry"
+        },
+        {
+          "line": 62,
+          "text": "`1/14`: number of components, boundary owner pairs, lengths, and owner-pair"
+        },
+        {
+          "line": 64,
+          "text": "exact boundary-owner geometry is close to determinative because it is almost the"
+        },
+        {
+          "line": 94,
+          "text": "I tested a tournament on safe-component boundary owner pairs.  It is useful as a"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc-n14-certificate-calculus-formalization-s580.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 87,
+          "text": "G5 fixed-boundary owner functor"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc-n17-dyadic-residual-packet-surprise-s566.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 120,
+          "text": "boundary owners, dyadic depth events, and proof-obligation packet states.  The"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc-paper-sieve-vs-certificate-compression-s580.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 160,
+          "text": "   constraints.  A component of `G(S\\{v})` has two boundary owners; forcing it"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-adversarial-counterexample-gauntlet-codex-s148.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 119,
+          "text": "boundary-owner rigidity evidence: only AP/GW are boundary-only in the tested"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-anharmonic-s3-robust-body-orbit-scout-2026-08-01.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 166,
+          "text": "    unique boundary owner e_* = 2."
+        },
+        {
+          "line": 202,
+          "text": "ruler, upper-median cell, and boundary owner."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-ap-window-single-hole-collar-codex-s34.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 55,
+          "text": "the measure table follows only after the boundary-owner ledger is kept."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-apex-opening-modes-s678b.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 20,
+          "text": "positive safe interval has two boundary owners; recording whether those owners"
+        },
+        {
+          "line": 56,
+          "text": "address; here a collapsed `p_0` scalar loses the interval boundary owner."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-boundary-moment-adjunction-missing-picture-codex.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 241,
+          "text": "A -> B when A preserves strictly more boundary ownership before the first"
+        },
+        {
+          "line": 250,
+          "text": "> boundary-owner/C27-unital packet"
+        },
+        {
+          "line": 292,
+          "text": "boundary-owner skeleton,"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-component-erosion-divisor-comb-frontier-root-20260824.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 26,
+          "text": "| body-safe component `J` | connected source, two boundary owners | two-flank and top-balance lower bounds | full endpoint word |"
+        },
+        {
+          "line": 214,
+          "text": "sidecar:    two boundary owners / pair-height cap"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-danger-count-moment-dual-gate-codex-s158.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 40,
+          "text": "  boundary owners, proof obligations."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-dihedral-mouth-exchange-codex.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 144,
+          "text": "history away from the two boundary owners.  That is the right trade for this"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-fixed-margin-labelled-packet-theorem-codex-s150.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 20,
+          "text": "the LRC split between scalar qdiv/q-cover data and non-scalar boundary owner,"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-haar-baire-taut-boundary-finite-check-codex-s146.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 34,
+          "text": "The next lemma I would try to prove is boundary-owner skeleton rigidity.  A"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-holistic-history-and-current-proof-structure-codex-s160.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 166,
+          "text": "The C27/unital/K33 layer explains why Haar/Baire boundary owners still do not"
+        },
+        {
+          "line": 167,
+          "text": "separate AP from GW.  AP and GW share the same six boundary owner pairs, so the"
+        },
+        {
+          "line": 307,
+          "text": "  boundary owners, C27/unital labels, K33/state-lift debt,"
+        },
+        {
+          "line": 419,
+          "text": "Haar/Baire boundary owners alone:"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-labelled-packet-classification-theorem-codex-s151.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner",
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 38,
+          "text": "  boundary owners, C27 shells, unital chart addresses, K33/state-lift debt"
+        },
+        {
+          "line": 51,
+          "text": "   lenses: q-clock coverage, denominator-14 boundary owner, C27 shell,"
+        },
+        {
+          "line": 84,
+          "text": "vertices.  I considered runners, gaps, denominator-14 sections, boundary-owner"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-labelled-packet-counterexample-classifier-codex.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 84,
+          "text": "harmonic sector     C27 owner, boundary owners, K33 incidence"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-missing-picture-bridge-codex-s149.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 26,
+          "text": "  | strict-open Haar mass and boundary owner skeleton"
+        },
+        {
+          "line": 54,
+          "text": "The creative part is the vertex choice.  For the tournament method here, vertices can be boundary owner pairs, C27 transfers, unital chart points, K33 incidence obligations, Haar-Baire fronts, covering comb teeth, exact-period packet states, support-six relation packets, or proof obligations.  The b"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-packet-migration-gauntlet-codex-s150.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 12,
+          "text": "finite boundary owner skeleton"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-private-stalk-two-seam-and-oriented-germ-frontier-codex-20260719.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 108,
+          "text": "| Resonant needle-bank corridor | nested component with boundary owners `(14a,14Ha)` | the global transverse interval, projective band, and reciprocal endpoint decrement | arbitrary external blocker words and owner handoffs outside the harmonic bank | Toothpick self-similarity is boundary descent, n"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 16,
+          "text": "supplies the carry law: transport owners emit first, branch-boundary owners"
+        },
+        {
+          "line": 54,
+          "text": "and both branch sheets have the same boundary owner word `(23,93,147,169)`"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-random031-owner-boundary-filtration-codex-20260629.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 24,
+          "text": "bypass.  `(45,173)` is the true residue: one dead-island boundary owner and"
+        },
+        {
+          "line": 25,
+          "text": "one apex-boundary owner."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-random031-recursion-flow-comparator-codex-20260629.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary-owner"
+      ],
+      "snippets": [
+        {
+          "line": 29,
+          "text": "boundary-owner debt.  It just is not the phase-flow route."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-seven-sector-net-cap-codex.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 33,
+          "text": "sector.  It loses cyclic adjacency and boundary ownership, so it is probably a"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-skeleton-gate-missing-picture-codex-s149.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 26,
+          "text": "boundary owner skeleton, so this lens is intentionally blind to the"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-source-spectrum-pullback-kernel-protocol-codex-s149.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 41,
+          "text": "+ Haar/Baire boundary owner"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-the-object-is-a-scale-residue-packet-not-a-speed-box-codex-S1.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 85,
+          "text": "What it destroyed when used naively: location, signs, and boundary ownership."
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/lrc14-twelve-core-rescues-are-four-cyclic-collar-atoms-codex-20260814.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 101,
+          "text": "| preserved | local endpoints, boundary owners `8` and `11`, radial width |"
+        },
+        {
+          "line": 162,
+          "text": "predicate while forgetting which non-boundary owner certifies an interior"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/puzzle-atlas-adaptive-prime-spectral-quantum-endpoint-cocycle-opus-20260724.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 154,
+          "text": "| Ramanujan sums | endpoint cocycle | group owner endpoints by exact period after integrating | signed harmonic current | individual boundary owner unless retained | **LIVE**, exact finite form is THM-2162; arbitrary-body form THM-884 |"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/the-artanh-puzzle-is-a-carrier-test-not-a-constant-codex-20260724.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 184,
+          "text": "| LRC defect `>=7` | six residual combs | exact union mask | all overlap cancellation | boundary ownership | labelled `6+7` covariance/relation spectrum |"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/the-gw-trichotomy-and-the-theta-band-opus-S409.md",
+      "fraction_numerators": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "word_matches": [],
+      "snippets": [
+        {
+          "line": 32,
+          "text": "at \u03b8 \u2208 {0, 1/8, 1/4} and again at {7/8, 1}, but SEPARATE throughout the middle band"
+        },
+        {
+          "line": 33,
+          "text": "\u03b8 \u2208 {3/8, 1/2, 5/8, 3/4}**. Combined with S407 (c3 separates them at \u03b8 = 0: 112 vs 108)"
+        },
+        {
+          "line": 37,
+          "text": "(13,34)** \u2014 it exits the denominator-14 Farey cell between \u03b8 = 1/8 and 1/4 and enters"
+        },
+        {
+          "line": 38,
+          "text": "Fibonacci-land at \u03b8 = 7/8 (21/55 and 13/34 are consecutive-Fibonacci fractions). Two"
+        },
+        {
+          "line": 39,
+          "text": "named phase marks: the **Farey exit \u2248 1/4** and the **golden entry \u2248 7/8**; the middle"
+        }
+      ]
+    },
+    {
+      "path": "07-reflections/the-nc2-proof-transfers-to-lrc-only-after-a-frobenius-safe-certificate-is-built-codex-20260721.md",
+      "fraction_numerators": [],
+      "word_matches": [
+        "boundary owner"
+      ],
+      "snippets": [
+        {
+          "line": 90,
+          "text": "endpoint/open-boundary owner"
+        }
+      ]
+    }
+  ]
+}

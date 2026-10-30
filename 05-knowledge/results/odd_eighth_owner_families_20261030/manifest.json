@@ -1,0 +1,52 @@
+{
+  "source_revision": "b1c353a48c7062c6900a622c761c4700de74706b",
+  "incoming_revision": "bdbe68566e8c56d08cdc9032229f6e50cccb47fc",
+  "hash_basis": "Exact Git source blobs; exact LF bytes for owned artifacts.",
+  "sources": {
+    "01-canon/theorems/THM-080-transfer-matrix-odd-walsh.md": "2b4cb6fd3afc28beb610060c751210486b78766c6415e25ad5fe0b504e4966e1",
+    "01-canon/theorems/THM-1415-switching-is-the-canonical-star-quotient.md": "17523b0b32bcc6871541b5c112ab58b27fc61a73d31755acf90cb30fd72cc03c",
+    "01-canon/theorems/THM-2598-quartic-v4-resolvent-torsor-and-universal-cusp-boundary.md": "df104f0898ebb5f2de003d783fc3f27b7dfe1178da318ac1f4c656eeceb1f53c",
+    "01-canon/theorems/THM-3043-lrc-tight-instances-are-not-only-APs-and-what-FC2-does-not-transfer.md": "2c8cb0ae2ba36f244c17a288778b86cd9a9781f9fb4011c8147c3b9115457d5b",
+    "01-canon/theorems/THM-3435-dyadic-fibre-grid-decomposition-for-literal-half-twists.md": "e2d202f97b1f39af032597767633c55f1abc4da261662824058b05b70724bb52",
+    "01-canon/theorems/THM-468-tournament-determinant-floor.md": "4b74ce36baac3c86da899db094305cfe7c270da8e84d1139350de587fa3e1591",
+    "05-knowledge/results/diagonal_palette_holonomy_20261011g.md": "751ee2e428f85c03411ec55f05f05935b3e7e270ff073cdda8fbc0ab294d82c1",
+    "05-knowledge/results/odd_sign_spectra_trijections_20261028/LRC_UNIT_DISTANCE.md": "ecb2ec84c71d41026bf9cd7633ecba9efc14a68ee276220384e4d06df205c55a",
+    "05-knowledge/results/regular_parent_symmetry_20261029/PROOFS.md": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md": "f8bec1a3d529a256fce78dd51137d8ecd4d3618b174e4bb6814e5605778504d7",
+    "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/RESONANT_TAIL.md": "7662d8b92756730c00f16254ce44c5255760179d01febabcd11f10257fd26f01",
+    "05-knowledge/results/session114_continuation_symmetry_20261030/lrc_audit/GENERAL_AUDIT.md": "380a167d35822f8e4feeb11e224dc69cf308c67d70fe02cc981763e52a96fde3",
+    "05-knowledge/results/session37_statistics_parity_cuts_20261023/arithmetic/ARITHMETIC_CUT_COMPLETION.md": "5318cc2a27c43587287b783982e1d81858c28ebdc3225eb5cca3762c522ec196",
+    "05-knowledge/results/switching_branch_integrality_20261020/PAIRING_BOUNDARY.md": "a0b76d94b5f36cfdd420a0f29bc6af6eeb83fc3a970827495f725cde0a40636c",
+    "07-reflections/lrc-dyadic-fibre-grid-ternary-carry-and-boolean-quartet-codex-20260815.md": "35fc24195d6fd29146d12505c148323d5af389affaa234def4d2653a568a5e58"
+  },
+  "incoming_sources": {
+    "05-knowledge/results/entry_cosets_resonant_echoes_20261030/LRC.md": "0a24b2281808aa0d1c8c65343a6bbefc4aa150f81c6d31ba43066515d7e476bd",
+    "05-knowledge/results/odd_eighths_uniform_families_20261030/LRC.md": "49fe1b680f7016150d584d978f23fbc46d0fe1074001101c14aeeca91410f027",
+    "05-knowledge/results/odd_eighths_uniform_families_20261030/PHASE_BRIDGE.md": "c9fab1ecceb9d91239ef5d76b46a68457d60fe31091511f8f964d3be23af13fb",
+    "05-knowledge/results/session115_odd_eighth_classifications_20261030/SYNTHESIS.md": "3921277afd929de0e0dbc2f2bd4975a02d66c1da947361ac36134b02ddb512d6",
+    "05-knowledge/results/session115_odd_eighth_classifications_20261030/lrc/HARMONIC_COMPLETION.md": "4a09da8961951bfba9f403989cb63df7cb135c3ee8928924f069852708b38c6b",
+    "05-knowledge/results/session115_odd_eighth_classifications_20261030/quadratic/ODD_EIGHTH_PHASES.md": "9d7281a888a3c89f24c5a7dcb452d89aa236f19957abbc14b44451c641743dc5",
+    "05-knowledge/results/session115_odd_eighth_classifications_20261030/switching/ODD_EIGHTH_GROUPS.md": "b0cc60909dcc564cc6098b55fa01d97707fe8f62dfc232ad0a30bbc8f5f9a152"
+  },
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "27fa9bfe76ce2843a8d8784a468edf68ec5a3b39b89d99c5f9c02c5b2530d45f",
+    "audit_receipt.json": "eea942d68d3e944610a66aed1bf9b75788cc2e832e81343c1881be96f3dd3b4e",
+    "certificate.json": "9caa4c65287e7068e08abc152597e99fbcdb512d90f1a26d25ef3ca630c189d3",
+    "CLASSIFICATION.md": "59e902c12b4e2af2f20c56503d4a743ae6cf1b48e2b2b883b8ae62e0f8a40042",
+    "HANDOFF.md": "13f12afb0ad7341f0b2135930ac5aeaa91b861a99678104cf651dc04066e234b",
+    "PROOFS.md": "32a1588f9a62744b83d031079cc8d3434bb48a6a0eb5c9002c9474adb19a0e02",
+    "README.md": "3a4bf408b62dec8801d92271de3bd664df757bf70a557e1e8e5d5b2be8ed760a",
+    "recover.py": "bbaa9fd3dfa03a207c62aa3522f921caa9f95023046bbd57f94e25a3a18a8884",
+    "recovery.json": "e9d73ee93434c8917723abcfc5a4ca5cb23ad550bade416de7575546fc191800",
+    "RECOVERY.md": "1604bc84b4fafe7fb32deb6f02e2c43515e507f95fb00cc3362716c4f84dde2e",
+    "render_table.py": "ca9c0ae63adf5e2456bb0c6ddcd6f413fd630e25da654f0c46499f3625dfbfbd",
+    "scout.py": "d649fb33db57d2f143c7432545477d26acee833bee8bef8eaabc8948232c7e53",
+    "seal.py": "795d7e228e82fa5de1006615686dbc90f56b65669b77a722d74834bd63289b16",
+    "SYNTHESIS.md": "755ff730d15095a339ad5dd82a8b410b70f12a6c0c6affd10767eff489874958",
+    "verify.py": "afd50d9b908b14fdc2e5ee7e02bc19260deed71310fb46f6646e6a32fecdb7ec"
+  },
+  "scope": "Same-agent proof audit and separate exact native algorithms; no formal proof build.",
+  "runtime": "Python standard library; regular_parent_symmetry/verify.py is the sole inherited runtime import."
+}

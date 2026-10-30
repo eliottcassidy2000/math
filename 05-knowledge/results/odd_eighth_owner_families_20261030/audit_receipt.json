@@ -1,0 +1,95 @@
+{
+  "status": "VERIFIED exact normal and optimized replay",
+  "gates": 97461,
+  "sha256": "9caa4c65287e7068e08abc152597e99fbcdb512d90f1a26d25ef3ca630c189d3",
+  "python": "3.13.14",
+  "finite_head_cases": 512,
+  "q8_native_maximum_cases": 1280,
+  "general_native_maximum_probes": 1270,
+  "general_window_checks": 1016,
+  "harmonic": {
+    "native_cases": 504,
+    "exact_period_cases": 378,
+    "samples": [
+      {
+        "q": 8,
+        "mask": 1,
+        "m": 3,
+        "count": 2,
+        "slope": "3/32",
+        "period": 2835
+      },
+      {
+        "q": 8,
+        "mask": 1,
+        "m": 4,
+        "count": 2,
+        "slope": "9/128",
+        "period": 2835
+      },
+      {
+        "q": 8,
+        "mask": 1,
+        "m": 7,
+        "count": 8,
+        "slope": "153/1120",
+        "period": 2835
+      },
+      {
+        "q": 8,
+        "mask": 127,
+        "m": 9,
+        "count": 2,
+        "slope": "1/32",
+        "period": 57915
+      },
+      {
+        "q": 8,
+        "mask": 127,
+        "m": 10,
+        "count": 2,
+        "slope": "9/320",
+        "period": 57915
+      },
+      {
+        "q": 8,
+        "mask": 127,
+        "m": 19,
+        "count": 10,
+        "slope": "99/1520",
+        "period": 57915
+      }
+    ]
+  },
+  "tournament_orders_exhausted": [
+    1,
+    6
+  ],
+  "cayley_and_native_insertion_orders_exhausted": [
+    1,
+    5
+  ],
+  "review_scope": "Same-agent proof audit; distinct exact algorithms, not an independent referee.",
+  "incoming_horizon_controls": [
+    {
+      "speeds": [
+        1,
+        6,
+        7
+      ],
+      "maximum": "4/13",
+      "refuted_lower_bound": "3/8"
+    },
+    {
+      "speeds": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "maximum": "3/13",
+      "refuted_lower_bound": "1/4"
+    }
+  ],
+  "incoming_word_phase_checks": 4
+}
