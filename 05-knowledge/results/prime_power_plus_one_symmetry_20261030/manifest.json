@@ -1,0 +1,85 @@
+{
+  "artifacts_lf_sha256": {
+    "AUDIT.md": "d9defae03e1ef73f8bd449b0e3c7739d3b70c596da34cfbbf6b7895aeea9a32a",
+    "PROOFS.md": "5586ff7dd8a5e11623e7eccce69b2762f07d476264b1f8c1fad48e0ddd307fc0",
+    "README.md": "20264af9a736c4a8a41009bc043e287ff43cd0b88ef92541a5890dc8c1367dff",
+    "certificate.json": "ea7ff747f0d75697d8acb98b9ee781655af34283a2587b000c1544156122fa8f",
+    "check.py": "49e5f85e53870ddd6df3c4a78eebe13cf938f86cf34fbc7335683f696d4f8e4c",
+    "seal.py": "47207481dec4e0617d3458de69f69499f60aee99114cf1e8c53d4a1f1d8c4703"
+  },
+  "sources": [
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "d44c7d297c96aa20b8fc4f82186c6b6744679805",
+      "lf_sha256": "3aa00962eb7025199c23ceea1c62949203479ff50370a34664619b2de7ba7ae3",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/PROOFS.md"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "cbd8c2b2f757e3d30167033a1adeb65ba116d330",
+      "lf_sha256": "de50365143a71a9807d0e4fa85888bfae1bd93e6d27ed36ebb260b55e18e1155",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/HANDOFF.md"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "e948999109d6888e6256c65f66ce06fa0996479e",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "061f268b7f6cd2f2d603c1318909d139bc5a8111",
+      "lf_sha256": "1b8cbbe1c0e3473826f5b65e39e09ccd182ca507fec53f3981d3388ab73de8f6",
+      "path": "05-knowledge/results/stabilizer_necklace_kernels_20261028/STABILIZERS.md"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "a698f066f6681b421f62a37f88ba4ed73b511b49",
+      "lf_sha256": "ebe1427b0d8f2d04c3353db66b9edc698dcf8cb5039b46a837d856444ef5060f",
+      "path": "05-knowledge/results/fermat_wieferich_order_20261014e.md"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "f923df8fd570004d58efe8f4c1336dd1dcdde676",
+      "lf_sha256": "f9338c11a4ef8d296fd9f079bd31ec173ecde307a4ae9919eddd7688c3601e1c",
+      "path": "05-knowledge/results/charged_recurrence_memory_20261028/FROBENIUS.md"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "1be65af256ea9019cab9ae6adb30ce3410f13c74",
+      "lf_sha256": "2c15ac68e9b49b4c189ac62fd5dc51c9e15440b294c21266af0554706282e8b1",
+      "path": "05-knowledge/results/growing_attachment_families_20261029/PROOFS.md"
+    },
+    {
+      "commit": "0ad8de03557e1102b94bc838d40b81b527bde502",
+      "git_blob": "e494da4e91bcf56c8e1a5c79b191ab086e1074b9",
+      "lf_sha256": "5c72f2fbf99ffae0d9026fd701086d534da1bc2dfe4769d90eacc351162d3d86",
+      "path": "05-knowledge/results/session110_overnight_20261030/CHECKPOINT_02.md"
+    },
+    {
+      "commit": "1f52ab41e6e5dc1a6ecf550e88045af3e99f028b",
+      "git_blob": "3ad14647cebdad6ec85894ddffe54654521e3d4c",
+      "lf_sha256": "c916cb0590682da06dd572897722166f30120feb97dde5f7aa8beb6d21c4c821",
+      "path": "05-knowledge/results/prime_power_plus_one_20261029/GROWTH.md"
+    },
+    {
+      "commit": "1f52ab41e6e5dc1a6ecf550e88045af3e99f028b",
+      "git_blob": "4dc81c66c298032a723c42b67fd6c96292181ad0",
+      "lf_sha256": "8c56974b78513592279a6a01b475b2a4e98f8f94f3c4f090ae33d1112c964833",
+      "path": "05-knowledge/results/prime_power_plus_one_20261029/ARITHMETIC.md"
+    },
+    {
+      "commit": "1f52ab41e6e5dc1a6ecf550e88045af3e99f028b",
+      "git_blob": "a6b6d9f7ff750eba38b297eeb88028a406528080",
+      "lf_sha256": "da600bb55440dfb0a487990f6118c7bb0009f5d2b210417228f78bad9c651cb6",
+      "path": "05-knowledge/results/prime_power_plus_one_20261029/HANDOFF.md"
+    },
+    {
+      "commit": "1f52ab41e6e5dc1a6ecf550e88045af3e99f028b",
+      "git_blob": "ffc7286832799db591a46ca7450e77334711bf97",
+      "lf_sha256": "c1cd23a1931ab561475c1ec2d77d1b259975e492bbca56ce05f323ff64cc43f7",
+      "path": "05-knowledge/results/source_cutoffs_balanced_lifts_20261029/README.md"
+    }
+  ],
+  "status": "Immutable provenance and artifact integrity, not independent proof review"
+}
