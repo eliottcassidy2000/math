@@ -1,0 +1,91 @@
+{
+  "artifacts": {
+    "ARITHMETIC_AND_SOURCE.md": "4c6c8a53c4726b270c92b03047f28ae9f59e0c444c4c6303885bdfd63cfd1477",
+    "AUDIT.md": "b3c9547b82850bd5c8deff279a35535044315a4371ad2db4e04b24daabaca485",
+    "PROOFS.md": "b6e81168244a0ce50f014b71d72c77ad6f6e5aead5839241b5722e0aeb6a98db",
+    "README.md": "cef738b6e872930f374bce6d2840ee88d6b1d757203f4b5fa74fdefdc97d1e30",
+    "check.py": "ef6b95fb44803065651eeb6beb95f99d7774bc324a252cc91dd99aa97af6289a",
+    "receipt.json": "5e020acd6670035483b59541a5109cdc8049de9bd47f940802ba81b230d4e5e9",
+    "seal.py": "bf7d7080dfbcefd43437521367b50b4a90413fe697e15eabd20550b630b98fff"
+  },
+  "external_source": {
+    "date_checked": "2026-10-30",
+    "pages_text_read": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "status": "Preprint claim; no local Lean build or PDF visual inspection",
+    "url": "https://hexagonmath.org/pdf/2610.00600v1"
+  },
+  "live_runtime_inputs": [
+    "05-knowledge/results/universal_ramified_closure_20261030/check.py",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+  ],
+  "source_pins": [
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "9dff1fe572bf469dd67b70b4302bf01451f0c12c8c755cef68a8206aff779471",
+      "path": "05-knowledge/results/universal_ramified_closure_20261030/PROOFS.md"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "5329385bb2ff542c06cf1cb0ee146030b508f24684148520285a477d74fb94fc",
+      "path": "05-knowledge/results/universal_ramified_closure_20261030/check.py"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "628b155529b97490630fcb2b5255bb070a11878c424e801f5a1f336817bdf437",
+      "path": "05-knowledge/results/session78_fourth_power_aliquot_20261027/ALIQUOT.md"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "02c95690272f18f2bd7ef5b288abd155596360a04f4ae3250628d6134db5b2bf",
+      "path": "05-knowledge/results/session81_counterexample_families_20261028/ALIQUOT_OBSERVERS.md"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "4ff8e6ff99976d85960e182e9aa9e6734a39bfce1ec4737d16468e25a2809af3",
+      "path": "05-knowledge/results/session82_decimal_aliquot_square_sum_20261028/ANCHOR_CHARACTERIZATION.md"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "f57a15e103528790c4f8ad46eff7a7a9178a91b53676a0f8d784d17534da8d2c",
+      "path": "05-knowledge/results/session108_sigma_symmetry_20261030/arithmetic/ARITHMETIC.md"
+    },
+    {
+      "commit": "c830320f1699095806ab8cdf7f4909806dc837b9",
+      "lf_sha256": "131a325323208175a0c216780f199864bcbdce55f05ac752950f7b22cb841154",
+      "path": "05-knowledge/results/session111_scale_connections_20261030/ALIQUOT_MERGE.md"
+    },
+    {
+      "commit": "b51ef5cd739375e6475ceafd42e36e86858c70ca",
+      "lf_sha256": "8f8222232608c68a59f57409348ff502c324af4acdbf80baeae000f3abf46e65",
+      "path": "05-knowledge/results/anchor_content_flat_quotients_20261030/TOURNAMENTS.md"
+    },
+    {
+      "commit": "fea3b0754215c996a51851346652c998f0865006",
+      "lf_sha256": "a9214e2076e4c765f8d8a92968d0f59715dfe917e235b1e16fddd38b74c05841",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/arithmetic/MODULAR_OBSERVERS.md"
+    },
+    {
+      "commit": "ecd0185d344011491cf6a3c8f81dc5aa6f4ff243",
+      "lf_sha256": "b32df62052f49092cef9e7018f116a8e1c6dc35f50f1c10321e14bc9b7594e94",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/symmetry/PROOFS.md"
+    },
+    {
+      "commit": "ecd0185d344011491cf6a3c8f81dc5aa6f4ff243",
+      "lf_sha256": "1f2bd1ca1680c4a98ea31b51aa30720bc8140e02fe9d81f34624ee649f6b7d4a",
+      "path": "05-knowledge/results/session112_counting_interfaces_20261030/counting/README.md"
+    }
+  ],
+  "status": "Integrity only; same-agent proof review"
+}
