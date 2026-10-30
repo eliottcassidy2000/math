@@ -1,0 +1,24 @@
+{
+  "basis": "all 16 binary Boolean gates",
+  "construction_evaluations_n3_through_n10": 20464,
+  "independent_enumerators_agree": true,
+  "normalized_functions_through_three_gates": 116,
+  "normalized_state_counts": [
+    15,
+    180,
+    2168
+  ],
+  "raw_functions_through_three_gates": 232,
+  "raw_ordered_state_counts": [
+    38,
+    1744,
+    null
+  ],
+  "status": "FINITE-EXACT",
+  "three_variable_costs_by_affine_support": [
+    2,
+    2,
+    3,
+    4
+  ]
+}

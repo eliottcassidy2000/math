@@ -1,0 +1,22 @@
+{
+  "base": {
+    "canonical_costs": [
+      2,
+      2,
+      3,
+      4
+    ],
+    "ordered_states": [
+      38,
+      1744,
+      null
+    ],
+    "reachable_truth_tables": 232
+  },
+  "explicit_gate_evaluations": 20464,
+  "potential": {
+    "integer_feasible_weight_triples": 619,
+    "rational_frontier_points": 251,
+    "scope": "archived local row inequalities only"
+  }
+}

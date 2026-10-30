@@ -1,0 +1,6 @@
+available_gates=0 states=1 target_reachable_with_next_gate=0
+available_gates=1 states=30 target_reachable_with_next_gate=0
+available_gates=2 states=735 target_reachable_with_next_gate=0
+available_gates=3 states=18037 target_reachable_with_next_gate=0
+available_gates=4 states=473767 target_reachable_with_next_gate=0
+FINITE-EXACT: four-input parity plus point defect requires six B2 gates.
