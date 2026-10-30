@@ -72,9 +72,9 @@ This does not yet count prime bank orbits or full graph classes. Those require r
 
 ## General simply ramified metallic family
 
-The mechanism is not special to 5. Let p≥5 be prime, μ²=aμ+1, v_p(a²+4)=1, δ=2μ−a and g=μ⁴. Such metallic ramification forces p≡1 modulo4. Work in R_k=O/(p^k), k≥2, with the inherited valuation law v_δ(g^j−1)=1+2v_p(j).
+The mechanism is not special to 5. Let p≥5 be prime, μ²=cμ+1, v_p(c²+4)=1, δ=2μ−c and g=μ⁴. Such metallic ramification forces p≡1 modulo4. Work in R_k=O/(p^k), k≥2, with the inherited valuation law v_δ(g^j−1)=1+2v_p(j).
 
-Use scalar 1+p and α:δ↦(1+p^(k−1))δ. Their effective odd action is C_(p^(k−1))×Cp. Put n=p^(k−1) and h=(p−1)/2.
+Use scalar 1+p and α:δ↦(1+p^(k−1))δ. They generate the effective Sylow-p subgroup C_(p^(k−1))×Cp. This need not be the full odd-order subgroup: at p=13, scalar units also have a C3 factor. Only the specified Sylow-p action is counted. Put n=p^(k−1) and h=(p−1)/2.
 
 The valuation-layer proof above changes only multiplicities: there are p−1 lower quotient orbits at each length p^j, and h copies of each of the two top quotient orbits. Their exact cycle count is
 C_(p,k)(a,b)=(p−1) Σ_(j=0)^(k−2) gcd(a,p^j)
@@ -88,7 +88,7 @@ B_(p,k+1)(Q)=[Q^(p−1)B_(p,k)(Q^p)+(p−1)Q^((p−1)(k+1))]/p.
 
 The proof splits a into multiples of p and units exactly as above. Multiples give p−1+p C_(p,k); units give (p−1)(k+1) cycles and occur in (p−1)p^k group elements. All counts are for the named odd action; no full graph quotient is silently substituted.
 
-[general_bank_tower.js](general_bank_tower.js) checks literal signed actions for (p,a,k)=(5,1,2),(5,1,3),(13,3,2),(17,8,2). The last two histograms are:
+[general_bank_tower.js](general_bank_tower.js) checks literal signed actions for (p,c,k)=(5,1,2),(5,1,3),(13,3,2),(17,8,2). The last two histograms are:
 - p=13: cycle counts168,96,24 with multiplicities1,24,144.
 - p=17: cycle counts288,160,32 with multiplicities1,32,256.
 
