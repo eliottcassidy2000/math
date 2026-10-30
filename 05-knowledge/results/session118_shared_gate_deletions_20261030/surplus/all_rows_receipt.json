@@ -1,0 +1,137 @@
+{
+  "checks": [
+    {
+      "M": 1,
+      "case": "AP1",
+      "d": 3,
+      "deleted_gate_indices": [
+        0,
+        1,
+        2
+      ],
+      "gate_count": 5,
+      "inputs": 6,
+      "polar_rank": 6,
+      "restricted_evaluations": 16,
+      "safe_core": 5,
+      "surviving_gates": 2,
+      "truth_table_evaluations": 64
+    },
+    {
+      "M": 2,
+      "case": "AP1",
+      "d": 4,
+      "deleted_gate_indices": [
+        0,
+        1,
+        2
+      ],
+      "gate_count": 7,
+      "inputs": 8,
+      "polar_rank": 8,
+      "restricted_evaluations": 64,
+      "safe_core": 7,
+      "surviving_gates": 4,
+      "truth_table_evaluations": 256
+    },
+    {
+      "M": 3,
+      "case": "AP1",
+      "d": 5,
+      "deleted_gate_indices": [
+        0,
+        1,
+        2
+      ],
+      "gate_count": 9,
+      "inputs": 10,
+      "polar_rank": 10,
+      "restricted_evaluations": 256,
+      "safe_core": 9,
+      "surviving_gates": 6,
+      "truth_table_evaluations": 1024
+    },
+    {
+      "M": 4,
+      "case": "AP1",
+      "d": 6,
+      "deleted_gate_indices": [
+        0,
+        1,
+        2
+      ],
+      "gate_count": 11,
+      "inputs": 12,
+      "polar_rank": 12,
+      "restricted_evaluations": 1024,
+      "safe_core": 11,
+      "surviving_gates": 8,
+      "truth_table_evaluations": 4096
+    },
+    {
+      "M": 1,
+      "case": "GP",
+      "d": 2,
+      "deleted_gate_indices": [
+        0,
+        1
+      ],
+      "gate_count": 4,
+      "inputs": 5,
+      "polar_rank": 4,
+      "restricted_evaluations": 24,
+      "safe_core": 5,
+      "surviving_gates": 2,
+      "truth_table_evaluations": 32
+    },
+    {
+      "M": 2,
+      "case": "GP",
+      "d": 3,
+      "deleted_gate_indices": [
+        0,
+        1
+      ],
+      "gate_count": 6,
+      "inputs": 7,
+      "polar_rank": 6,
+      "restricted_evaluations": 96,
+      "safe_core": 7,
+      "surviving_gates": 4,
+      "truth_table_evaluations": 128
+    },
+    {
+      "M": 3,
+      "case": "GP",
+      "d": 4,
+      "deleted_gate_indices": [
+        0,
+        1
+      ],
+      "gate_count": 8,
+      "inputs": 9,
+      "polar_rank": 8,
+      "restricted_evaluations": 384,
+      "safe_core": 9,
+      "surviving_gates": 6,
+      "truth_table_evaluations": 512
+    },
+    {
+      "M": 4,
+      "case": "GP",
+      "d": 5,
+      "deleted_gate_indices": [
+        0,
+        1
+      ],
+      "gate_count": 10,
+      "inputs": 11,
+      "polar_rank": 10,
+      "restricted_evaluations": 1536,
+      "safe_core": 11,
+      "surviving_gates": 8,
+      "truth_table_evaluations": 2048
+    }
+  ],
+  "status": "PASS"
+}

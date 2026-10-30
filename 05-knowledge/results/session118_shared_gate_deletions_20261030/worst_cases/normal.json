@@ -1,0 +1,354 @@
+{
+  "cycles": [
+    {
+      "blocks": 1,
+      "exact_tight_cycles": 1,
+      "final": [
+        6,
+        5,
+        0,
+        5
+      ],
+      "initial": [
+        10,
+        6,
+        0,
+        6
+      ],
+      "max_constant_affine_dimension": 3
+    },
+    {
+      "blocks": 2,
+      "exact_tight_cycles": 2,
+      "final": [
+        13,
+        10,
+        0,
+        10
+      ],
+      "initial": [
+        21,
+        12,
+        0,
+        12
+      ],
+      "max_constant_affine_dimension": 7
+    },
+    {
+      "blocks": 3,
+      "exact_tight_cycles": 3,
+      "final": [
+        20,
+        15,
+        0,
+        15
+      ],
+      "initial": [
+        32,
+        18,
+        0,
+        18
+      ],
+      "max_constant_affine_dimension": 11
+    },
+    {
+      "blocks": 4,
+      "exact_tight_cycles": 4,
+      "final": [
+        27,
+        20,
+        0,
+        20
+      ],
+      "initial": [
+        43,
+        24,
+        0,
+        24
+      ],
+      "max_constant_affine_dimension": 15
+    },
+    {
+      "blocks": 5,
+      "exact_tight_cycles": 5,
+      "final": [
+        34,
+        25,
+        0,
+        25
+      ],
+      "initial": [
+        54,
+        30,
+        0,
+        30
+      ],
+      "max_constant_affine_dimension": 19
+    },
+    {
+      "blocks": 6,
+      "exact_tight_cycles": 6,
+      "final": [
+        41,
+        30,
+        0,
+        30
+      ],
+      "initial": [
+        65,
+        36,
+        0,
+        36
+      ],
+      "max_constant_affine_dimension": 23
+    },
+    {
+      "blocks": 7,
+      "exact_tight_cycles": 7,
+      "final": [
+        48,
+        35,
+        0,
+        35
+      ],
+      "initial": [
+        76,
+        42,
+        0,
+        42
+      ],
+      "max_constant_affine_dimension": 27
+    },
+    {
+      "blocks": 8,
+      "exact_tight_cycles": 8,
+      "final": [
+        55,
+        40,
+        0,
+        40
+      ],
+      "initial": [
+        87,
+        48,
+        0,
+        48
+      ],
+      "max_constant_affine_dimension": 31
+    },
+    {
+      "blocks": 9,
+      "exact_tight_cycles": 9,
+      "final": [
+        62,
+        45,
+        0,
+        45
+      ],
+      "initial": [
+        98,
+        54,
+        0,
+        54
+      ],
+      "max_constant_affine_dimension": 35
+    },
+    {
+      "blocks": 10,
+      "exact_tight_cycles": 10,
+      "final": [
+        69,
+        50,
+        0,
+        50
+      ],
+      "initial": [
+        109,
+        60,
+        0,
+        60
+      ],
+      "max_constant_affine_dimension": 39
+    },
+    {
+      "blocks": 11,
+      "exact_tight_cycles": 11,
+      "final": [
+        76,
+        55,
+        0,
+        55
+      ],
+      "initial": [
+        120,
+        66,
+        0,
+        66
+      ],
+      "max_constant_affine_dimension": 43
+    },
+    {
+      "blocks": 12,
+      "exact_tight_cycles": 12,
+      "final": [
+        83,
+        60,
+        0,
+        60
+      ],
+      "initial": [
+        131,
+        72,
+        0,
+        72
+      ],
+      "max_constant_affine_dimension": 47
+    },
+    {
+      "blocks": 13,
+      "exact_tight_cycles": 13,
+      "final": [
+        90,
+        65,
+        0,
+        65
+      ],
+      "initial": [
+        142,
+        78,
+        0,
+        78
+      ],
+      "max_constant_affine_dimension": 51
+    },
+    {
+      "blocks": 14,
+      "exact_tight_cycles": 14,
+      "final": [
+        97,
+        70,
+        0,
+        70
+      ],
+      "initial": [
+        153,
+        84,
+        0,
+        84
+      ],
+      "max_constant_affine_dimension": 55
+    },
+    {
+      "blocks": 15,
+      "exact_tight_cycles": 15,
+      "final": [
+        104,
+        75,
+        0,
+        75
+      ],
+      "initial": [
+        164,
+        90,
+        0,
+        90
+      ],
+      "max_constant_affine_dimension": 59
+    },
+    {
+      "blocks": 16,
+      "exact_tight_cycles": 16,
+      "final": [
+        111,
+        80,
+        0,
+        80
+      ],
+      "initial": [
+        175,
+        96,
+        0,
+        96
+      ],
+      "max_constant_affine_dimension": 63
+    },
+    {
+      "blocks": 17,
+      "exact_tight_cycles": 17,
+      "final": [
+        118,
+        85,
+        0,
+        85
+      ],
+      "initial": [
+        186,
+        102,
+        0,
+        102
+      ],
+      "max_constant_affine_dimension": 67
+    },
+    {
+      "blocks": 18,
+      "exact_tight_cycles": 18,
+      "final": [
+        125,
+        90,
+        0,
+        90
+      ],
+      "initial": [
+        197,
+        108,
+        0,
+        108
+      ],
+      "max_constant_affine_dimension": 71
+    },
+    {
+      "blocks": 19,
+      "exact_tight_cycles": 19,
+      "final": [
+        132,
+        95,
+        0,
+        95
+      ],
+      "initial": [
+        208,
+        114,
+        0,
+        114
+      ],
+      "max_constant_affine_dimension": 75
+    },
+    {
+      "blocks": 20,
+      "exact_tight_cycles": 20,
+      "final": [
+        139,
+        100,
+        0,
+        100
+      ],
+      "initial": [
+        219,
+        120,
+        0,
+        120
+      ],
+      "max_constant_affine_dimension": 79
+    }
+  ],
+  "one_block_affine_flats": 26387,
+  "radical": [
+    0,
+    11,
+    32,
+    43
+  ],
+  "scope": "syntactically reduced, loop-eligible, NOT minimum circuits",
+  "semantic_evaluations": 1056,
+  "status": "PASS"
+}

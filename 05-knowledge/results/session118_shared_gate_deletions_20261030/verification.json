@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "normal_and_optimized": "PASS",
+      "script": "accounting/check_sequence_accounting.py",
+      "stdout_sha256": "91f7518136f3e42488956e83f7c6907bbafa2e064b370cf8e943a0d080b7a738"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_accounting/check_independent.py",
+      "stdout_sha256": "8ad59ded1d406a44de50237c19d2322ea86f685b86ca9ba00bde11cfa2161a19"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_ap2/check_antichain.py",
+      "stdout_sha256": "daf3553c52178b82cdfb0486c9e4cdd627c9a045e13acd6e0f82a91f4331ed00"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_ap2/check_ap2.py",
+      "stdout_sha256": "29669582ea58811ceb28042112e675b1946f70bd13c221f55e50a1639f221c54"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "audit_cycles/check_independent.py",
+      "stdout_sha256": "d681ff07afe826706cd07296d150ab8934db6e2983388d590e12c6c91137096c"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "frontier/check_frontier.py",
+      "stdout_sha256": "a75ed162b36b17f139ab9169146222a7e487dbebc3a9947baa199b2df660fb9a"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "surplus/check_all_and_rows.py",
+      "stdout_sha256": "50748c9b8a2c83cb12fdb88ba01d6d8e0e0701fbc99fbd188aeef39910f5c0e8"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "surplus/check_ap2_surplus.py",
+      "stdout_sha256": "8fd60db3d778fbedcbfcbdbf8140ac9e8007638141d35ec437cf1eef1ad2d67d"
+    },
+    {
+      "normal_and_optimized": "PASS",
+      "script": "worst_cases/check_tight_cycles.py",
+      "stdout_sha256": "40b331196f084e1b4bd443e7dfd7845797acc44ec0a21d8304394a4fd9da7df2"
+    }
+  ],
+  "scope": "finite certificates corroborating separate all-size proofs; no full external theorem certification",
+  "status": "PASS"
+}

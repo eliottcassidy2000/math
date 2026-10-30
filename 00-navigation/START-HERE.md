@@ -16,7 +16,7 @@ Quartic/sextic exclusion, Collatz refill, weighted endpoints and repaired pure-b
 
 [S111](S111.md).
 [S112](S112.md)
-[S113](S113.md); [S114](S114.md); [S115](S115.md); [S116](S116.md); [S117](S117.md)
+[S113](S113.md); [S114](S114.md); [S115](S115.md); [S116](S116.md); [S117](S117.md); [S118](S118.md)
 
 ## Orientation
 
