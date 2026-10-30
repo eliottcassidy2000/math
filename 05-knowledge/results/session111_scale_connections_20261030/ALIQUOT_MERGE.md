@@ -31,3 +31,14 @@ The classical theorem of Nagell says x²+x+1=y^e, x,y positive and e≥2, has th
 Consequently, **using that cited theorem**, 578=2·17² is the unique member of the odd-prime2p² subfamily whose aliquot sum is a nontrivial perfect power. This classification is not proved anew here and says nothing comparable about all composite sources. The full19-element fibre above is established independently of that citation.
 
 [aliquot_fibre.js](aliquot_fibre.js) gives the complete finite certificate, factors every source, checks the17 semiprime cases and verifies both merging branches and the square-total edge.
+
+## Independent fifteen-case even-source proof
+
+Write an even source with odd divisor sum as n=2^a u², a≥1 and u odd. For u>1, σ(u²)≥u²+u+1, so
+s(n)≥(2^a−1)u²+(2^(a+1)−1)(u+1).
+At target343 this leaves only the following candidates; the exact outputs are shown in matching order:
+- a=1, u=3,5,7,9,11,13,15,17: 21,43,73,201,157,211,759,343.
+- a=2, u=3,5,7,9: 55,117,203,523.
+- a=3, u=3,5: 123,265.
+- a=4, u=3: 259.
+For a≥5 and u≥3 the lower bound already exceeds343. For u=1, s(2^a)=2^a−1 is never343. Hence578 is the unique even source independently of the full sieve. Composite u=9 and15 use σ(81)=121 and σ(225)=403; the other rows use the prime-square divisor formula.
