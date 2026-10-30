@@ -1,0 +1,110 @@
+{
+  "artifacts": {
+    "AUDIT.md": "1f70d6349415061ab0bba370b6ecf98efa7af51d91d34259b5b03ca2d9fece5c",
+    "COLLATZ.md": "1cacca58f7c7f71d3af9799f3b6f47581d134015ad3c14309619bac41de9a72b",
+    "LRC.md": "49fe1b680f7016150d584d978f23fbc46d0fe1074001101c14aeeca91410f027",
+    "PHASE_BRIDGE.md": "c9fab1ecceb9d91239ef5d76b46a68457d60fe31091511f8f964d3be23af13fb",
+    "README.md": "789274bbf3a06a86bf7d41bb49d21a0fb13b7f6b68155af6fa4bb58eed025367",
+    "RECOVERY.md": "3210008619bbd2b347dde2c24b75ca5ac91378ebf5e7fdccd5015b3fb32c5e32",
+    "check.py": "b2f2d05f28c159bd61327553ec6462986f679f11f24b6148845ca18a49b805d1",
+    "receipt.json": "2e30fc643299eb489051b525c7ddc463eb226f20e27ebd2d1f2a7eafe6cb40b2",
+    "seal.py": "cf78b22f9c0c99dca9c4b0a702a7822c0bf0f2f497f30701d2f39c6d25301fee"
+  },
+  "live_runtime_inputs": [
+    "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/check_resonant_tail.py",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+  ],
+  "source_pins": [
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "9811e9645f73cceb2a7bd5ec7da94cc9820a302acd7c147737134e77861b0052",
+      "path": "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/check_resonant_tail.py"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "f8bec1a3d529a256fce78dd51137d8ecd4d3618b174e4bb6814e5605778504d7",
+      "path": "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "7662d8b92756730c00f16254ce44c5255760179d01febabcd11f10257fd26f01",
+      "path": "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/RESONANT_TAIL.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "743a32a85cbd0bdd15b65ed7ec13f00f82bb6001993c280090743c99baaecb76",
+      "path": "05-knowledge/results/session114_continuation_symmetry_20261030/collatz/PERIODIC_CONTENT_RATES.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "9eab60cbc8f8751a07bdd6411afc5a27ddb6de5a812cf41a8c4df737d47d38b7",
+      "path": "05-knowledge/results/phase_budget_shared_orbits_20261030/COLLATZ.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "c77ae6a6b972ae2fac452f86509f4bed8d42727b41bedaee3a7c54c1c0521f78",
+      "path": "05-knowledge/results/source_address_two_clocks_20261004.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "fb672a282d9c8ed5e141fceebd3fefee5daf9795fa3c333884b4a8be98983804",
+      "path": "05-knowledge/results/affine_tree_recurrences_20261028/REFINEMENT.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "970d4604d4f172141053a4b7d12b15bb5b5ff6979923d8b60de10e2530db9ed5",
+      "path": "05-knowledge/results/chessboard_weave_20261006.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "d8ace1588802352c47fe660b53c363b7fd3e2be985647b4724b447ee554612aa",
+      "path": "07-reflections/reduced-fraction-harmonic-k4-fibonacci-cassini-codex-20260816.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "b30efa8aa8e361d80f029b95620b8e869a43dd6044a22202be7d169419634d9b",
+      "path": "05-knowledge/results/analogy_reduction_atlas_20261025/QR_TOURNAMENT.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "0ac54dd81f4d79e77c2e0b3aee426a760747e35c3a77b312b588d7f1db332abe",
+      "path": "01-canon/theorems/THM-3012-central-binomial-quarter-series-and-the-spherical-euclidean-wall.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "003bcadd6e139fe2f2a23a8b9cd9f695ca4103d6b37448ae418e26f499ff8e50",
+      "path": "05-knowledge/results/amm12592_procgen_20260923_uniform_frontier.md"
+    },
+    {
+      "commit": "b1c353a48c7062c6900a622c761c4700de74706b",
+      "lf_sha256": "4854aedbaff1bcdc35c0db4e62a2f3204ee07cd42bcd691ba554dff5e1b5482b",
+      "path": "05-knowledge/results/prime_dilation_response_20261030/PROOFS.md"
+    },
+    {
+      "commit": "893f84da216e4b2f14f198981ec554ad58d8c20a",
+      "lf_sha256": "8d7d6c30426c9756174353d2fe817df0dc231395aac07c289a6be022b90b4fb9",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/unitary/WORD_UNITARY_CLASSIFICATION.md"
+    },
+    {
+      "commit": "893f84da216e4b2f14f198981ec554ad58d8c20a",
+      "lf_sha256": "4a09da8961951bfba9f403989cb63df7cb135c3ee8928924f069852708b38c6b",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/lrc/HARMONIC_COMPLETION.md"
+    },
+    {
+      "commit": "893f84da216e4b2f14f198981ec554ad58d8c20a",
+      "lf_sha256": "9d7281a888a3c89f24c5a7dcb452d89aa236f19957abbc14b44451c641743dc5",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/quadratic/ODD_EIGHTH_PHASES.md"
+    },
+    {
+      "commit": "893f84da216e4b2f14f198981ec554ad58d8c20a",
+      "lf_sha256": "b0cc60909dcc564cc6098b55fa01d97707fe8f62dfc232ad0a30bbc8f5f9a152",
+      "path": "05-knowledge/results/session115_odd_eighth_classifications_20261030/switching/ODD_EIGHTH_GROUPS.md"
+    }
+  ],
+  "status": "Integrity only; same-agent proof review"
+}

@@ -1,0 +1,969 @@
+{
+  "collatz": {
+    "finite_Gram_universes": [
+      {
+        "c": 1,
+        "h": 1,
+        "q": 3
+      },
+      {
+        "c": 1,
+        "h": 2,
+        "q": 3
+      },
+      {
+        "c": 3,
+        "h": 2,
+        "q": 3
+      },
+      {
+        "c": 1,
+        "h": 3,
+        "q": 3
+      },
+      {
+        "c": 3,
+        "h": 3,
+        "q": 3
+      },
+      {
+        "c": 5,
+        "h": 3,
+        "q": 3
+      },
+      {
+        "c": 7,
+        "h": 3,
+        "q": 3
+      },
+      {
+        "c": 1,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 3,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 5,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 7,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 9,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 11,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 13,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 15,
+        "h": 4,
+        "q": 3
+      },
+      {
+        "c": 1,
+        "h": 1,
+        "q": 5
+      },
+      {
+        "c": 1,
+        "h": 2,
+        "q": 5
+      },
+      {
+        "c": 3,
+        "h": 2,
+        "q": 5
+      },
+      {
+        "c": 1,
+        "h": 3,
+        "q": 5
+      },
+      {
+        "c": 3,
+        "h": 3,
+        "q": 5
+      },
+      {
+        "c": 5,
+        "h": 3,
+        "q": 5
+      },
+      {
+        "c": 7,
+        "h": 3,
+        "q": 5
+      },
+      {
+        "c": 1,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 3,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 5,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 7,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 9,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 11,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 13,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 15,
+        "h": 4,
+        "q": 5
+      },
+      {
+        "c": 1,
+        "h": 1,
+        "q": 7
+      },
+      {
+        "c": 1,
+        "h": 2,
+        "q": 7
+      },
+      {
+        "c": 3,
+        "h": 2,
+        "q": 7
+      },
+      {
+        "c": 1,
+        "h": 3,
+        "q": 7
+      },
+      {
+        "c": 3,
+        "h": 3,
+        "q": 7
+      },
+      {
+        "c": 5,
+        "h": 3,
+        "q": 7
+      },
+      {
+        "c": 7,
+        "h": 3,
+        "q": 7
+      },
+      {
+        "c": 1,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 3,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 5,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 7,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 9,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 11,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 13,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 15,
+        "h": 4,
+        "q": 7
+      },
+      {
+        "c": 1,
+        "h": 1,
+        "q": 9
+      },
+      {
+        "c": 1,
+        "h": 2,
+        "q": 9
+      },
+      {
+        "c": 3,
+        "h": 2,
+        "q": 9
+      },
+      {
+        "c": 1,
+        "h": 3,
+        "q": 9
+      },
+      {
+        "c": 3,
+        "h": 3,
+        "q": 9
+      },
+      {
+        "c": 5,
+        "h": 3,
+        "q": 9
+      },
+      {
+        "c": 7,
+        "h": 3,
+        "q": 9
+      },
+      {
+        "c": 1,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 3,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 5,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 7,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 9,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 11,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 13,
+        "h": 4,
+        "q": 9
+      },
+      {
+        "c": 15,
+        "h": 4,
+        "q": 9
+      }
+    ],
+    "q3_h3_remainder": [
+      {
+        "M_parity": 1,
+        "c": 1,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "-3/64",
+          "0",
+          "3/64"
+        ]
+      },
+      {
+        "M_parity": 0,
+        "c": 1,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "3/64",
+          "0",
+          "-3/64"
+        ]
+      },
+      {
+        "M_parity": 1,
+        "c": 3,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "3/64",
+          "0",
+          "-3/64"
+        ]
+      },
+      {
+        "M_parity": 0,
+        "c": 3,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "-3/64",
+          "0",
+          "3/64"
+        ]
+      },
+      {
+        "M_parity": 1,
+        "c": 5,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "3/64",
+          "0",
+          "-3/64"
+        ]
+      },
+      {
+        "M_parity": 0,
+        "c": 5,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "-3/64",
+          "0",
+          "3/64"
+        ]
+      },
+      {
+        "M_parity": 1,
+        "c": 7,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "-3/64",
+          "0",
+          "3/64"
+        ]
+      },
+      {
+        "M_parity": 0,
+        "c": 7,
+        "coefficient_of_3_to_minus_M": [
+          "1/4",
+          "3/64",
+          "0",
+          "-3/64"
+        ]
+      }
+    ],
+    "q3_h3_suffix_polynomials": [
+      {
+        "A_ell": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "-1",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "-1",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "-1"
+          ]
+        ],
+        "c": 1
+      },
+      {
+        "A_ell": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "0",
+            "-1",
+            "-1"
+          ],
+          [
+            "0",
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "0",
+            "-1",
+            "0",
+            "0"
+          ]
+        ],
+        "c": 3
+      },
+      {
+        "A_ell": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "1",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "-1",
+            "-1",
+            "-1"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "1"
+          ]
+        ],
+        "c": 5
+      },
+      {
+        "A_ell": [
+          [
+            "1",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "0",
+            "-1",
+            "1"
+          ],
+          [
+            "0",
+            "-1",
+            "1",
+            "-1"
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            "0"
+          ]
+        ],
+        "c": 7
+      }
+    ]
+  },
+  "gates": {
+    "all maximizing points": 1144,
+    "all-depth multiplicativity classification": 252,
+    "all-tail first-arrival equivalence": 320,
+    "bandwidth": 60,
+    "complete arbitrary-tail equality classification": 1432,
+    "conditional finite energy identity": 60,
+    "exact periodic conditional remainder": 180,
+    "exact physical terminal mass slope": 84,
+    "explicit eighth-root remainder": 8,
+    "first failed product is antipodal": 30,
+    "full character permutation": 252,
+    "incoming harmonic literal maximizers": 4,
+    "independent additive-pair test": 180,
+    "independent global maximum control": 12,
+    "inherited odd Haar adjacent": 12,
+    "inherited odd Haar diagonal": 12,
+    "inherited tournament eighth counts": 1,
+    "literal LRC mass from conditional Collatz energy": 8,
+    "literal maximizing tail phase": 4,
+    "literal strong four-vertex control": 96,
+    "odd offset transport classification": 405,
+    "primitive maximum clock": 28,
+    "sharp bandwidth and source decoder": 164,
+    "source product relation": 30
+  },
+  "incoming_phase_bridge": [
+    {
+      "M": 3,
+      "m": 2,
+      "mass_slope": "8/49",
+      "maximizer_count": 2,
+      "scaled_average_energy": [
+        "1/4",
+        "-3/64",
+        "0",
+        "3/64"
+      ]
+    },
+    {
+      "M": 4,
+      "m": 2,
+      "mass_slope": "8/49",
+      "maximizer_count": 2,
+      "scaled_average_energy": [
+        "1/4",
+        "3/64",
+        "0",
+        "-3/64"
+      ]
+    },
+    {
+      "M": 3,
+      "m": 3,
+      "mass_slope": "32/147",
+      "maximizer_count": 4,
+      "scaled_average_energy": [
+        "1/4",
+        "-3/64",
+        "0",
+        "3/64"
+      ]
+    },
+    {
+      "M": 4,
+      "m": 3,
+      "mass_slope": "32/147",
+      "maximizer_count": 4,
+      "scaled_average_energy": [
+        "1/4",
+        "3/64",
+        "0",
+        "-3/64"
+      ]
+    },
+    {
+      "M": 3,
+      "m": 6,
+      "mass_slope": "656/2205",
+      "maximizer_count": 12,
+      "scaled_average_energy": [
+        "1/4",
+        "-1/32",
+        "0",
+        "1/32"
+      ]
+    },
+    {
+      "M": 4,
+      "m": 6,
+      "mass_slope": "656/2205",
+      "maximizer_count": 12,
+      "scaled_average_energy": [
+        "1/4",
+        "1/32",
+        "0",
+        "-1/32"
+      ]
+    },
+    {
+      "M": 3,
+      "m": 10,
+      "mass_slope": "296/1225",
+      "maximizer_count": 18,
+      "scaled_average_energy": [
+        "1/4",
+        "-1/64",
+        "0",
+        "1/64"
+      ]
+    },
+    {
+      "M": 4,
+      "m": 10,
+      "mass_slope": "296/1225",
+      "maximizer_count": 18,
+      "scaled_average_energy": [
+        "1/4",
+        "1/64",
+        "0",
+        "-1/64"
+      ]
+    }
+  ],
+  "inherited_controls": {
+    "control_81_27": {
+      "common_cyclic_triples": 67,
+      "tournaments": [
+        {
+          "flip": false,
+          "group_order": 81,
+          "regular_binary_masks": 1620
+        },
+        {
+          "flip": true,
+          "group_order": 27,
+          "regular_binary_masks": 1728
+        }
+      ]
+    },
+    "four_vertex_counts": {
+      "cycle_plus_sink": 8,
+      "source_plus_cycle": 8,
+      "strong": 24,
+      "transitive": 24
+    },
+    "inherited_gates": 7
+  },
+  "lrc": {
+    "examples": [
+      {
+        "M": "2/19",
+        "forbidden_residues": [
+          0,
+          8,
+          11
+        ],
+        "m": 2,
+        "modulus": 19,
+        "q": 8,
+        "t": "7/19"
+      },
+      {
+        "M": "1/9",
+        "forbidden_residues": [
+          0,
+          8,
+          11,
+          16,
+          19
+        ],
+        "m": 3,
+        "modulus": 27,
+        "q": 8,
+        "t": "10/27"
+      },
+      {
+        "M": "4/35",
+        "forbidden_residues": [
+          0,
+          8,
+          11,
+          16,
+          19,
+          24,
+          27
+        ],
+        "m": 4,
+        "modulus": 35,
+        "q": 8,
+        "t": "13/35"
+      },
+      {
+        "M": "3/41",
+        "forbidden_residues": [
+          0,
+          12,
+          17,
+          24,
+          29
+        ],
+        "m": 3,
+        "modulus": 41,
+        "q": 12,
+        "t": "17/41"
+      },
+      {
+        "M": "4/53",
+        "forbidden_residues": [
+          0,
+          12,
+          17,
+          24,
+          29,
+          36,
+          41
+        ],
+        "m": 4,
+        "modulus": 53,
+        "q": 12,
+        "t": "22/53"
+      }
+    ],
+    "multi_tail_slope_banks": 84,
+    "q8_core_owners": [
+      [
+        1,
+        9,
+        7
+      ],
+      [
+        3,
+        3,
+        5
+      ],
+      [
+        5,
+        5,
+        3
+      ],
+      [
+        7,
+        7,
+        9
+      ]
+    ],
+    "total_tail_decisions": 1752
+  },
+  "total_gates": 4778,
+  "transport": {
+    "first_failures": [
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 5,
+        "q": 3
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 7,
+        "q": 3
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 9,
+        "q": 3
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 5,
+        "p": 11,
+        "q": 3
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 13,
+        "q": 3
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 3,
+        "q": 5
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 7,
+        "q": 5
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 9,
+        "q": 5
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 11,
+        "q": 5
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 5,
+        "p": 13,
+        "q": 5
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 3,
+        "q": 7
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 5,
+        "q": 7
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 9,
+        "q": 7
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 11,
+        "q": 7
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 13,
+        "q": 7
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 3,
+        "q": 9
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 5,
+        "q": 9
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 7,
+        "q": 9
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 11,
+        "q": 9
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 13,
+        "q": 9
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 5,
+        "p": 3,
+        "q": 11
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 5,
+        "q": 11
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 7,
+        "q": 11
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 9,
+        "q": 11
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 13,
+        "q": 11
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 3,
+        "q": 13
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 5,
+        "p": 5,
+        "q": 13
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 7,
+        "q": 13
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 4,
+        "p": 9,
+        "q": 13
+      },
+      {
+        "defect": "1/2",
+        "first_failed_depth": 3,
+        "p": 11,
+        "q": 13
+      }
+    ],
+    "q3_cost3": [
+      {
+        "address": "5/8",
+        "word": [
+          3
+        ]
+      },
+      {
+        "address": "3/8",
+        "word": [
+          1,
+          2
+        ]
+      },
+      {
+        "address": "1/8",
+        "word": [
+          2,
+          1
+        ]
+      },
+      {
+        "address": "7/8",
+        "word": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}
