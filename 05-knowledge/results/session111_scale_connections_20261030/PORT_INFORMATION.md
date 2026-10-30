@@ -1,4 +1,4 @@
-# Session111 checkpoint: 25 cycles, 50 free bits, 100 and200 constraints
+# Session111 checkpoint: 25 cycles, 50 free bits, 100 and 200 constraints
 
 **PROVED conditional on the inherited socle-shift construction; FINITE-EXACT literal control.** No literature-priority claim.
 
@@ -15,7 +15,7 @@ A nonzero shift on one residue fibre has p^(2k−1) moved vertices, grouped in L
 
 For r binary named ports, each equality between a vertex word and its shifted word is a linear constraint over F2. The full constraint operator is (I−sigma)⊗I_r. Its rank is rD, because each p-cycle contributes p−1 independent equality constraints per bit.
 
-At p=5,k=2, the active fibre has125 vertices and25 cycles. One port has125 input bits and25 free bits:100 constraints. Two independent ports have250 input bits and50 free bits:200 constraints. Here25,50,100,200 refer to dimensions of explicitly related spaces. They are not interchangeable with vertex counts, group orders or the conservative constant200 in Session110's spectral theorem.
+At p=5,k=2, the active fibre has125 vertices and 25 cycles. One port has125 input bits and 25 free bits:100 constraints. Two independent ports have250 input bits and 50 free bits:200 constraints. Here25,50,100,200 refer to dimensions of explicitly related spaces. They are not interchangeable with vertex counts, group orders or the conservative constant200 in Session110's spectral theorem.
 
 The fixed coloring space on a cycle is the repetition code. The quotient by it is the difference-information space. Thus the apparent missing information is an exact linear rank, not a heuristic entropy analogy.
 
@@ -29,9 +29,9 @@ P(Stab_(C_p^p)=1)=(1−u)^p.
 More generally for every real s,
 E |Stab_(C_p^p)|^s=(1+(p^s−1)u)^p.
 
-For uniform independent binary ports, u=2^(−rD). For two identical fair bits, the support has size2 rather than4 and u=2^(−D). The second named port adds no independent constraint.
+For uniform independent binary ports, u=2^(−rD). For two identical fair bits, the support has size 2 rather than 4 and u=2^(−D). The second named port adds no independent constraint.
 
-A sharper hostile: three independent fair bits and the uniform even-parity distribution on {000,011,101,110} have identical one- and two-port marginals. Nevertheless, at p=5,k=2 their fixation probabilities are2^(−300) and2^(−200), respectively. Pairwise summaries miss a full100-constraint distinction.
+A sharper hostile: three independent fair bits and the uniform even-parity distribution on {000,011,101,110} have identical one- and two-port marginals. Nevertheless, at p=5,k=2 their fixation probabilities are2^(−300) and 2^(−200), respectively. Pairwise summaries miss a full100-constraint distinction.
 
 These formulas count stabilizers in the specified fibre subgroup. They do not automatically equal full graph-stabilizer probabilities. S3b identifies the full group for one pinned625 source, and its larger group includes additional permutations.
 
@@ -47,6 +47,6 @@ The independence assumption is across vertices. If words at different vertices a
 
 [ports.js](ports.js) builds R=(Z/25)[mu]/(mu²−mu−1), g=mu⁴=(2,3), eta=g⁵−1=(5,15). For all five fibre-shift generators it verifies the ordered difference stays in the same literal g-orbit for every unordered pair:975,000 checks. This proves those generators preserve every choice of bank orientation without enumerating all bank states.
 
-It independently computes binary matrix ranks100,200,300 and compares the triple laws' pairwise marginals. It does not enumerate all625-vertex graph automorphisms.
+It independently computes binary matrix ranks100,200,300 and compares the triple laws' pairwise marginals. It does not enumerate all 625-vertex graph automorphisms.
 
 Reproduce with a JavaScript runtime supporting BigInt: node ports.js.
