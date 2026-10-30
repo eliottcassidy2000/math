@@ -1,0 +1,60 @@
+{
+  "baseline": "f8bc2099e755907559e297f7ff19da440045256c",
+  "local": [
+    {
+      "path": "05-knowledge/results/session107_quasirandom_arithmetic_20261029/characters/CHARACTER_STRUCTURE.md",
+      "sha256": "56018a34a043f87a85aa7c3d84bb9060e1ea1a562ee64f2030e5f14bdb57d578"
+    },
+    {
+      "path": "05-knowledge/results/session107_quasirandom_arithmetic_20261029/colored/COLORED_RECURRENCE.md",
+      "sha256": "0357a5b34f4ace8b8a317d2313bd913d3e4401f6b07d5e02a6393a71d61721b7"
+    },
+    {
+      "path": "05-knowledge/results/session107_quasirandom_arithmetic_20261029/orders/ORDERS_CARRIES_AND_CRT.md",
+      "sha256": "ba5745b0c31fa9061907379e9cd577da9f306e057a5fcec2858c9694a3723b46"
+    },
+    {
+      "path": "05-knowledge/results/apollonius_squareclass_code_20261019/APOLLONIUS_SQUARECLASS_CODE.md",
+      "sha256": "c0ced50c383f6e576a254ae9b5bd9dba5aa1fcfa434aac2397b1bb1086c65519"
+    },
+    {
+      "path": "05-knowledge/results/overnight_rank_return_20261029/DEFECT_TRANSFER.md",
+      "sha256": "8568e40f76396e9c1bd5441db30adca588cd0ef8d06009eff88d4a1b102b254e"
+    },
+    {
+      "path": "05-knowledge/results/root27_machine_bridges_20261026/anchor/LEGENDRE_SIDECAR.md",
+      "sha256": "bc9819db1268be57b5f414ea011300896efdd373fd63b5421996a5a8b7cbe505"
+    },
+    {
+      "path": "05-knowledge/results/quasirandom_arithmetic_structure_20261029/PROOFS.md",
+      "sha256": "2ec9a9db221839f5c88b459d43e7c2b569be9c7a17272ae07bd7d0640cdfd081"
+    }
+  ],
+  "primary": [
+    {
+      "author": "Gareth A. Jones",
+      "title": "Infinite Paley graphs",
+      "url": "https://arxiv.org/html/1912.02709v1",
+      "locator": "Section6 Remarks1-4; Section2 odd-extension embeddings",
+      "used": "Weil bound (3), classical mixed-sign extension estimate and tournament scope; same explicit constant in PROOFS (7) is classical."
+    },
+    {
+      "author": "R. L. Graham and J. H. Spencer",
+      "title": "A Constructive Solution to a Tournament Problem",
+      "year": 1971,
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/S0008439500057842",
+      "doi": "10.4153/CMB-1971-007-1",
+      "locator": "Printed pages45-47, theorem and equations7-14",
+      "used": "Historical Paley tournament construction and character-product method; not credited as our new result."
+    },
+    {
+      "author": "Terence Tao",
+      "title": "254A, Notes2: Complex-analytic multiplicative number theory",
+      "url": "https://terrytao.wordpress.com/2014/12/09/254a-notes-2-complex-analytic-multiplicative-number-theory/",
+      "locator": "Exercise64, equation57",
+      "used": "Siegel-Walfisz with modulus at most a fixed power of log X and ineffective constants; pi form by partial summation."
+    }
+  ],
+  "checked_on": "2026-10-29",
+  "status": "Read source locators; source digests preserve provenance, not an isolated replay bundle."
+}
