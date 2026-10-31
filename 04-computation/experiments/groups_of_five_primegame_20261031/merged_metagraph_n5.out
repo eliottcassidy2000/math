@@ -1,0 +1,103 @@
+CENSUS CHECK against the THM-643 table (classes, SC, PB, MX, PK, gridsym, blue lines, black lines, blue self-loops)
+  n=3: (2, 2, 2, 0, 0, 2, 1, 0, 0)  merged nodes 2  THM-643 row (2, 2, 2, 0, 0, 2, 1, 0, 0)  match=True
+  n=4: (4, 2, 1, 1, 2, 4, 2, 2, 1)  merged nodes 3  THM-643 row (4, 2, 1, 1, 2, 4, 2, 2, 1)  match=True
+  n=5: (12, 8, 3, 5, 4, 16, 8, 24, 0)  merged nodes 10  THM-643 row (12, 8, 3, 5, 4, 16, 8, 24, 0)  match=True
+  n=6: (56, 12, 2, 10, 44, 64, 32, 480, 2)  merged nodes 34  THM-643 row (56, 12, 2, 10, 44, 64, 32, 480, 2)  match=True
+
+n = 5, owner gauge: tiles (bit order) = [(5, 1), (4, 1), (3, 1), (5, 2), (4, 2), (5, 3)]  transpose map = [0, 3, 5, 1, 4, 2]
+
+CLASS TABLE (#ci = the owner explorer label)
+  ci  scores       fibre  H   |Aut| SC  T(ci) blue type c3 c4 c5 scc      masks
+  #0  [0, 1, 2, 3, 4]    1    1    1  Y  #0     1  PB   0  0  0 [1, 1, 1, 1, 1] [0]
+  #1  [0, 1, 3, 3, 3]    1    3    3  n  #7     0  PK   1  0  0 [3, 1, 1] [32]
+  #2  [0, 2, 2, 3, 3]    5    5    1  n  #5     0  PK   2  1  0 [4, 1]   [8, 24, 40, 48, 56]
+  #3  [0, 2, 2, 2, 4]    1    3    3  Y  #3     1  PB   1  0  0 [1, 3, 1] [16]
+  #4  [1, 1, 2, 3, 3]    9    9    1  Y  #4     1  MX   3  3  1 [5]      [1, 7, 28, 30, 31, 41, 50, 58, 59]
+  #5  [1, 1, 2, 2, 4]    5    5    1  n  #2     0  PK   2  1  0 [1, 4]   [2, 6, 18, 20, 22]
+  #6  [1, 1, 2, 3, 3]    9    9    1  Y  #6     3  MX   3  2  1 [5]      [5, 12, 23, 26, 33, 34, 36, 57, 63]
+  #7  [1, 1, 1, 3, 4]    1    3    3  n  #1     0  PK   1  0  0 [1, 1, 3] [4]
+  #8  [1, 2, 2, 2, 3]   11   11    1  Y  #8     3  MX   4  4  1 [5]      [3, 9, 14, 15, 27, 42, 43, 52, 54, 60, 62]
+  #9  [1, 2, 2, 2, 3]    5   15    3  Y  #9     1  MX   4  3  3 [5]      [17, 29, 39, 45, 51]
+  #10 [1, 2, 2, 2, 3]   13   13    1  Y  #10    3  MX   4  3  2 [5]      [10, 13, 19, 21, 25, 35, 37, 38, 44, 47, 49, 55, 61]
+  #11 [2, 2, 2, 2, 2]    3   15    5  Y  #11    3  PB   5  5  2 [5]      [11, 46, 53]
+
+LINES (flip pairs {t, 63-t}); colour blue iff t is grid-symmetric
+   0 -- 63   #0 -- #6   BLUE
+   1 -- 62   #4 -- #8   BLUE
+   2 -- 61   #5 -- #10   black
+   3 -- 60   #8 -- #8   black
+   4 -- 59   #7 -- #4   black
+   5 -- 58   #6 -- #4   black
+   6 -- 57   #5 -- #6   black
+   7 -- 56   #4 -- #2   black
+   8 -- 55   #2 -- #10   black
+   9 -- 54   #8 -- #8   black
+  10 -- 53   #10 -- #11   BLUE
+  11 -- 52   #11 -- #8   BLUE
+  12 -- 51   #6 -- #9   black
+  13 -- 50   #10 -- #4   black
+  14 -- 49   #8 -- #10   black
+  15 -- 48   #8 -- #2   black
+  16 -- 47   #3 -- #10   BLUE
+  17 -- 46   #9 -- #11   BLUE
+  18 -- 45   #5 -- #9   black
+  19 -- 44   #10 -- #10   black
+  20 -- 43   #5 -- #8   black
+  21 -- 42   #10 -- #8   black
+  22 -- 41   #5 -- #4   black
+  23 -- 40   #6 -- #2   black
+  24 -- 39   #2 -- #9   black
+  25 -- 38   #10 -- #10   black
+  26 -- 37   #6 -- #10   BLUE
+  27 -- 36   #8 -- #6   BLUE
+  28 -- 35   #4 -- #10   black
+  29 -- 34   #9 -- #6   black
+  30 -- 33   #4 -- #6   black
+  31 -- 32   #4 -- #1   black
+
+MERGED NODES (explorer display order)
+  node 0: classes ['#0']  type PB  scores [[0, 1, 2, 3, 4]]
+  node 1: classes ['#1', '#7']  type PK/PK  scores [[0, 1, 3, 3, 3], [1, 1, 1, 3, 4]]
+  node 2: classes ['#2', '#5']  type PK/PK  scores [[0, 2, 2, 3, 3], [1, 1, 2, 2, 4]]
+  node 3: classes ['#3']  type PB  scores [[0, 2, 2, 2, 4]]
+  node 4: classes ['#4']  type MX  scores [[1, 1, 2, 3, 3]]
+  node 5: classes ['#6']  type MX  scores [[1, 1, 2, 3, 3]]
+  node 6: classes ['#8']  type MX  scores [[1, 2, 2, 2, 3]]
+  node 7: classes ['#9']  type MX  scores [[1, 2, 2, 2, 3]]
+  node 8: classes ['#10']  type MX  scores [[1, 2, 2, 2, 3]]
+  node 9: classes ['#11']  type PB  scores [[2, 2, 2, 2, 2]]
+
+MERGED MULTIGRAPH (node, node, colour): multiplicity
+  (0, 5, 'blue'): 1
+  (1, 4, 'black'): 2
+  (2, 4, 'black'): 2
+  (2, 5, 'black'): 2
+  (2, 6, 'black'): 2
+  (2, 7, 'black'): 2
+  (2, 8, 'black'): 2
+  (3, 8, 'blue'): 1
+  (4, 5, 'black'): 2
+  (4, 6, 'blue'): 1
+  (4, 8, 'black'): 2
+  (5, 6, 'blue'): 1
+  (5, 7, 'black'): 2
+  (5, 8, 'blue'): 1
+  (6, 6, 'black'): 2
+  (6, 8, 'black'): 2
+  (6, 9, 'blue'): 1
+  (7, 9, 'blue'): 1
+  (8, 8, 'black'): 2
+  (8, 9, 'blue'): 1
+
+POINTS OF SYMMETRY (pure-blue classes):
+  #0 scores [0, 1, 2, 3, 4] scc [1, 1, 1, 1, 1] H=1 |Aut|=1 fibre=1 c3=0 blue masks [0]
+  #3 scores [0, 2, 2, 2, 4] scc [1, 3, 1] H=3 |Aut|=3 fibre=1 c3=1 blue masks [16]
+  #11 scores [2, 2, 2, 2, 2] scc [5] H=15 |Aut|=5 fibre=3 c3=5 blue masks [11, 46, 53]
+
+THE OWNER'S {7, 17, 55} READ AS TILING MASKS IN THIS GAUGE:
+  mask  7 bits [1, 1, 1, 0, 0, 0] tiles on [(5, 1), (4, 1), (3, 1)]: class #4 (MX, scores [1, 1, 2, 3, 3]), grid-symmetric=False, flip partner 56 in #2
+  mask 17 bits [1, 0, 0, 0, 1, 0] tiles on [(5, 1), (4, 2)]: class #9 (MX, scores [1, 2, 2, 2, 3]), grid-symmetric=True, flip partner 46 in #11
+  mask 55 bits [1, 1, 1, 0, 1, 1] tiles on [(5, 1), (4, 1), (3, 1), (4, 2), (5, 3)]: class #10 (MX, scores [1, 2, 2, 2, 3]), grid-symmetric=False, flip partner 8 in #2
+
+wrote merged_metagraph_n5.json
+ALL CHECKS PASSED
