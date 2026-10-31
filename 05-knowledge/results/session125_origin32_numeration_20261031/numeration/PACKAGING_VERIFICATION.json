@@ -1,0 +1,111 @@
+{
+  "integrity_controls": [
+    {
+      "control": "relocated_bundle_verifier",
+      "file_count": 39,
+      "optimized_python": false,
+      "status": "PASS"
+    },
+    {
+      "control": "relocated_bundle_verifier",
+      "file_count": 39,
+      "optimized_python": true,
+      "status": "PASS"
+    },
+    {
+      "control": "modified_copied_file_rejected",
+      "status": "PASS"
+    },
+    {
+      "control": "extra_copied_file_rejected",
+      "status": "PASS"
+    }
+  ],
+  "local_producer_replays": [
+    {
+      "explicit_checks": 1359569,
+      "matches_original": true,
+      "mode": "normal",
+      "status": "PASS",
+      "suite": "producer"
+    },
+    {
+      "explicit_checks": 1359569,
+      "matches_original": true,
+      "mode": "optimized",
+      "status": "PASS",
+      "suite": "producer"
+    },
+    {
+      "explicit_checks": 1983501,
+      "matches_original": true,
+      "mode": "normal",
+      "status": "PASS",
+      "suite": "beatty"
+    },
+    {
+      "explicit_checks": 1983501,
+      "matches_original": true,
+      "mode": "optimized",
+      "status": "PASS",
+      "suite": "beatty"
+    }
+  ],
+  "optimization_sensitive_asserts": 0,
+  "path_hygiene": "source-relative inputs; no execution-location literals; no bytecode or duplicate .out files",
+  "portable_independent_audits": [
+    {
+      "directory": "audit_port_numeration",
+      "evidence": "portability_verification.json",
+      "evidence_sha256": "c1a93030a171907b0bbab0cdd75f8698c7335142cc5ae9a44f88dee4a943e3cb",
+      "manifest_sha256": "db698b48247dd57f773219320e0a8b269537cd3558149b911c36576252cceee7",
+      "status": "PASS"
+    },
+    {
+      "directory": "audit_beatty_bridge",
+      "evidence": "portability_verification.json",
+      "evidence_sha256": "1339666e74770e23f8c1c2507aac14961502437f0c1397fdf2266d3733f0039b",
+      "manifest_sha256": "7dea0f28e3f0f7d1b098cbd76899b5e6600868b4851b4132037868eda323fdc0",
+      "status": "PASS"
+    }
+  ],
+  "producer_files_byte_identical": 12,
+  "producer_relocation": {
+    "arbitrary_directory_name": true,
+    "producer_files_copied_byte_for_byte": 12,
+    "runs": [
+      {
+        "explicit_checks": 1359569,
+        "optimized_python": false,
+        "report_matches_original": true,
+        "status": "PASS",
+        "suite": "producer"
+      },
+      {
+        "explicit_checks": 1359569,
+        "optimized_python": true,
+        "report_matches_original": true,
+        "status": "PASS",
+        "suite": "producer"
+      },
+      {
+        "explicit_checks": 1983501,
+        "optimized_python": false,
+        "report_matches_original": true,
+        "status": "PASS",
+        "suite": "beatty"
+      },
+      {
+        "explicit_checks": 1983501,
+        "optimized_python": true,
+        "report_matches_original": true,
+        "status": "PASS",
+        "suite": "beatty"
+      }
+    ],
+    "status": "PASS",
+    "unrelated_working_directory": true
+  },
+  "scope": "publication preparation only; no source worktree or remote edits",
+  "status": "PASS"
+}

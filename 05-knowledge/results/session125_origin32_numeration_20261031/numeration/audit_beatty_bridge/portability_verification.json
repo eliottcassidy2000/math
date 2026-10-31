@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "entry_point": "audit_beatty_bridge/independent_beatty_audit.py",
+  "producer_module": "beatty_bridge.py",
+  "entry_point_sha256": "5be633a3db78595ded08ee07b1824e18897ddf2e94558c0b5ec24f13426dbb34",
+  "producer_sha256": "125bf43db526570cdd75d65ad21eed9ff7b8d637ea4a5e90ac5618bcff9cbb57",
+  "layout": "Newly materialized numeration directory with producer modules in parent of audit directory.",
+  "invocation_cwd": "Separate empty temporary directory, unrelated to either source or materialized package.",
+  "absolute_execution_paths_retained": false,
+  "modes": [
+    {
+      "mode": "normal",
+      "exit_code": 0,
+      "status": "PASS",
+      "explicit_checks": 4676438,
+      "matches_packaged_report_byte_for_byte": true,
+      "report_sha256": "67c8f7d3bed8beed008c1cfa12141a07bd8ff41b50cb72f9572f4dfd37911c69"
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "status": "PASS",
+      "explicit_checks": 4676438,
+      "matches_packaged_report_byte_for_byte": true,
+      "report_sha256": "a996f22e35e0a55dd69aaaae117aea82f87cd3086cdb9c23cce59f73721c3a01"
+    }
+  ]
+}

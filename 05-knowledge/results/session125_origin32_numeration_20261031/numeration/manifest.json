@@ -1,0 +1,38 @@
+{
+  "files": {
+    "PROOFS.md": {
+      "bytes": 16523,
+      "sha256": "40f9790062b84639899f880a32f0b580d05d907d677292b97a494e3c154263e4"
+    },
+    "port_numeration.py": {
+      "bytes": 7046,
+      "sha256": "fe80cc136bebe1179f746b5a3d77ee5eaec95c10c224e6638eae6efefe40fee8"
+    },
+    "test_port_numeration.py": {
+      "bytes": 7308,
+      "sha256": "caffcb1e1fabf7af11aa0f11e0d0b2eff0a81bc4fd0e0db2ded02a2090964808"
+    },
+    "verification.normal.json": {
+      "bytes": 566,
+      "sha256": "b52692c8f4f93d872265b9b81b32305944459964b0a6b8b6468b3e499667a950"
+    },
+    "verification.optimized.json": {
+      "bytes": 565,
+      "sha256": "fd3b038474b3343172a89e24e2e52eb9280d49b9cbc6b4f08488ba32b6c19d20"
+    }
+  },
+  "lane": "port_numeration",
+  "no_claims": [
+    "novel numeral system",
+    "Hamiltonicity from arithmetic representation",
+    "3+8 is a square"
+  ],
+  "publication": "scratch only; no source worktree or remote edits",
+  "session": 125,
+  "verification": {
+    "assert_statements_in_Python_AST": 0,
+    "explicit_checks_each": 1359569,
+    "normal": "PASS",
+    "optimized": "PASS"
+  }
+}

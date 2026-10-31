@@ -1,0 +1,6 @@
+28520746e00327fa88433c4ff1c6269c3e05df960029e784b8b025dc32bdb0b8  ../BEATTY_BRIDGE.md
+125bf43db526570cdd75d65ad21eed9ff7b8d637ea4a5e90ac5618bcff9cbb57  ../beatty_bridge.py
+6b9088cb86c37968876777786801c12781e6e47330fb2d0fb902c23e0c21f4d5  ../test_beatty_bridge.py
+b641cbcc3a48bd3ba60d0330f3550f769b2da564d44c080714abdfc1a4119eb7  ../verification.beatty.normal.json
+2cf672b2fea7329965724936459a5398ba720439836f25dc21718ae557e6a8b2  ../verification.beatty.optimized.json
+14f714e5b1c1ebe8068077e79a60750195be9af9eaf06e9366845f4c90adb0b2  ../manifest.beatty.json

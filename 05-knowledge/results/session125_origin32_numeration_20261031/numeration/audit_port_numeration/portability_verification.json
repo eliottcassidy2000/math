@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "entry_point": "audit_port_numeration/independent_audit.py",
+  "producer_module": "port_numeration.py",
+  "entry_point_sha256": "513e353124b529745d4c00c51bcb90d0416c45b17830c968320c0d9f544a8ebd",
+  "producer_sha256": "fe80cc136bebe1179f746b5a3d77ee5eaec95c10c224e6638eae6efefe40fee8",
+  "layout": "Newly materialized numeration directory with producer modules in parent of audit directory.",
+  "invocation_cwd": "Separate empty temporary directory, unrelated to either source or materialized package.",
+  "absolute_execution_paths_retained": false,
+  "modes": [
+    {
+      "mode": "normal",
+      "exit_code": 0,
+      "status": "PASS",
+      "explicit_checks": 3639641,
+      "matches_packaged_report_byte_for_byte": true,
+      "report_sha256": "fe3fcb9b2163963d484343fe509f25753c82e8d7d7ea47fc18475f0855768a6e"
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "status": "PASS",
+      "explicit_checks": 3639641,
+      "matches_packaged_report_byte_for_byte": true,
+      "report_sha256": "96b358b08060f4731452a9a957416512160f14e52c7ed8aff110e917f97fcd2c"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "D1_triples_checked": 1000,
+  "all_ternary_words_through_length": 10,
+  "consecutive_integer_roundtrips": 100001,
+  "explicit_checks": 1359569,
+  "independent_minimum_summand_DP_cases": 100001,
+  "legal_words_including_leading_zeros_enumerated": 28656,
+  "live_legality_parity_states": 8,
+  "local_normalizations": 10841,
+  "local_rewrite_steps": 118646,
+  "optimized_python": false,
+  "proof_boundary": "finite tests supplement universal proofs; no Hamiltonicity claim",
+  "random_512_bit_cases": 1000,
+  "status": "PASS",
+  "ternary_words_enumerated": 88573
+}

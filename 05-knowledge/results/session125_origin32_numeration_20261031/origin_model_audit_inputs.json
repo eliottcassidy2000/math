@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "files": {
+    "origin_model/ORIGIN_MODEL.md": "71b736420817de7329b812ec7d5120a24ed8b33ab89c4629e24186a0b424ce1b",
+    "origin_model/check_model.py": "604b7ae8d6c527f6e3307ec67bc504e4841f74a14daa1fcdda09f121ae20f715",
+    "origin_model/normal.json": "162cdebd74d0f8a0a981712111a74959fb1c23b2348afd28f0208afb2030e219",
+    "origin_model/optimized.json": "162cdebd74d0f8a0a981712111a74959fb1c23b2348afd28f0208afb2030e219"
+  },
+  "producer_checks_per_run": 221649,
+  "normal_optimized_identical": true,
+  "independent_checker": "independent_audit.py"
+}

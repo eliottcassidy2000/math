@@ -29,3 +29,5 @@ individual session routes preserve scope and remaining open obligations.
 - [Pointwise coverage on the105-state boundary kernel](../05-knowledge/results/square_sum_spectrum_overnight_20261031k/README.md): **FINITE-EXACT matrix / PROVED finite-state all-time bounds.** Every marked source-target pair has at least20 two-step routes; the full integer spectral certificate gives normalized contraction1/6. No transfer to universal tournament counts or geometric realization is asserted. [Latest overnight handoff](../05-knowledge/results/square_sum_spectrum_overnight_20261031k/HANDOFF.md).
 
 - **[Scope correction and latest handoff](../05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md):** packet j's cyclic formula is exact for sewn local-cycle products, not necessarily all graph Hamiltonian cycles. A ten-vertex hostile has3 global cycles versus2 such products. Full graph coverage requires the inherited linear-forest boundary states. Tree products and packet k's finite kernel are unchanged.
+
+[Session125](S125.md): origin32, original nice-pair phases, Chung–Graham/Beatty numeration and typed graph interfaces.

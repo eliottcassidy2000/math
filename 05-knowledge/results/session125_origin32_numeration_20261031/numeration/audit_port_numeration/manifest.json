@@ -1,0 +1,25 @@
+{
+  "audit_status": "PASS",
+  "claims_reviewed": "interval/greedy, positive normalization, unique minimum coefficient sum, successor, parity, D1 triples, Zeckendorf bridge, coordinate/parity conventions",
+  "strengthening": "Minimal complete DFA has 9 states (8 live plus rejecting sink) for legal even-value compressed MSD words with leading zeros allowed.",
+  "producer_files_unchanged": true,
+  "independent_normal_and_optimized_reports_match_except_mode": true,
+  "publication_performed": false,
+  "packaging": "Portable audit copy; mathematical proof content and producer modules unchanged.",
+  "source_layout": "Audit directory is an immediate child of numeration; producer modules are in its parent.",
+  "producer_replay_reports": "Preserved from the matching original producer snapshot.",
+  "copied_producer_independent_replays": "PASS in normal and optimized Python.",
+  "relocated_independent_replays": "PASS in normal and optimized Python from a separate unrelated cwd; reports match byte for byte.",
+  "original_audit_preserved": true,
+  "files": {
+    "PROOF_REVIEW.md": "72315867867f75e575e2eb400341c71e1db6aae7bf5058443b18ee8af1788821",
+    "independent.normal.json": "fe3fcb9b2163963d484343fe509f25753c82e8d7d7ea47fc18475f0855768a6e",
+    "independent.optimized.json": "96b358b08060f4731452a9a957416512160f14e52c7ed8aff110e917f97fcd2c",
+    "independent_audit.py": "513e353124b529745d4c00c51bcb90d0416c45b17830c968320c0d9f544a8ebd",
+    "minimal_dfa_certificate.json": "ccf7f6172ebf7138a2914a0b91f19f322ebeaee6586bb5ee367b7f5849fe8ee1",
+    "portability_verification.json": "c1a93030a171907b0bbab0cdd75f8698c7335142cc5ae9a44f88dee4a943e3cb",
+    "producer_input.sha256": "2743cb327ea65772ba63e9ddf44982785d5b37e108f81f7608c243e5184ffcaa",
+    "producer_replay.normal.json": "b52692c8f4f93d872265b9b81b32305944459964b0a6b8b6468b3e499667a950",
+    "producer_replay.optimized.json": "fd3b038474b3343172a89e24e2e52eb9280d49b9cbc6b4f08488ba32b6c19d20"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "files": {
+    "BEATTY_BRIDGE.md": {
+      "bytes": 14195,
+      "sha256": "28520746e00327fa88433c4ff1c6269c3e05df960029e784b8b025dc32bdb0b8"
+    },
+    "beatty_bridge.py": {
+      "bytes": 2476,
+      "sha256": "125bf43db526570cdd75d65ad21eed9ff7b8d637ea4a5e90ac5618bcff9cbb57"
+    },
+    "test_beatty_bridge.py": {
+      "bytes": 8591,
+      "sha256": "6b9088cb86c37968876777786801c12781e6e47330fb2d0fb902c23e0c21f4d5"
+    },
+    "verification.beatty.normal.json": {
+      "bytes": 596,
+      "sha256": "b641cbcc3a48bd3ba60d0330f3550f769b2da564d44c080714abdfc1a4119eb7"
+    },
+    "verification.beatty.optimized.json": {
+      "bytes": 595,
+      "sha256": "2cf672b2fea7329965724936459a5398ba720439836f25dc21718ae557e6a8b2"
+    }
+  },
+  "immutable_base_manifest": {
+    "filename": "manifest.json",
+    "sha256": "cfd59b6e867ab95523e9bb99b37e829e56536725f6591582dbc9a0bdc0641aae"
+  },
+  "important_boundaries": [
+    "ceiling shift requires canonical words",
+    "raw shift and normalization do not commute",
+    "iterated ceiling is not ceiling of powers",
+    "mechanical dynamics is numeral branching, not graph Hamiltonicity",
+    "norm invariant does not classify distinct primitive orbits",
+    "general parent need not preserve norm",
+    "zero core-depth assignment is a convention"
+  ],
+  "lane": "port_numeration_beatty_supplement",
+  "publication": "scratch only; no source worktree or remote edits",
+  "session": 125,
+  "verification": {
+    "assert_statements_in_Python_AST": 0,
+    "explicit_checks_each": 1983501,
+    "normal": "PASS",
+    "optimized": "PASS"
+  }
+}

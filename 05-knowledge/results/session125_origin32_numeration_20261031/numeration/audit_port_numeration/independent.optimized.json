@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "optimized_python": true,
+  "explicit_checks": 3639641,
+  "producer_source_sha256": "fe80cc136bebe1179f746b5a3d77ee5eaec95c10c224e6638eae6efefe40fee8",
+  "ternary_words_through_length": 11,
+  "ternary_words_enumerated": 265720,
+  "independent_unordered_coin_minimum_and_unique_minimizer_cases": 250001,
+  "direct_coefficient_array_enumeration_value_limit": 500,
+  "all_rewrite_orders_inputs": 1365,
+  "rewrite_DAG_states": 2556,
+  "random_rewrite_strategy_cases": 1000,
+  "random_rewrite_steps": 103679,
+  "Zeckendorf_bridge_cases": 100001,
+  "D1_triples": 1000,
+  "complete_DFA_states": 9,
+  "Myhill_Nerode_distinguished_pairs": 36,
+  "scope": "Arithmetic/automata audit only; no graph Hamiltonicity inference; no source/remote edits."
+}

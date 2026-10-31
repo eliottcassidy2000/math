@@ -1,0 +1,287 @@
+{
+  "states": [
+    {
+      "state": "F00",
+      "access_word": "",
+      "accepting": true,
+      "transitions": {
+        "0": "F00",
+        "1": "F11",
+        "2": "L00"
+      }
+    },
+    {
+      "state": "F11",
+      "access_word": "1",
+      "accepting": false,
+      "transitions": {
+        "0": "F10",
+        "1": "F01",
+        "2": "L10"
+      }
+    },
+    {
+      "state": "L00",
+      "access_word": "2",
+      "accepting": true,
+      "transitions": {
+        "0": "F00",
+        "1": "L11",
+        "2": "sink"
+      }
+    },
+    {
+      "state": "F10",
+      "access_word": "10",
+      "accepting": false,
+      "transitions": {
+        "0": "F01",
+        "1": "F10",
+        "2": "L01"
+      }
+    },
+    {
+      "state": "F01",
+      "access_word": "11",
+      "accepting": true,
+      "transitions": {
+        "0": "F11",
+        "1": "F00",
+        "2": "L11"
+      }
+    },
+    {
+      "state": "L10",
+      "access_word": "12",
+      "accepting": false,
+      "transitions": {
+        "0": "F01",
+        "1": "L10",
+        "2": "sink"
+      }
+    },
+    {
+      "state": "L11",
+      "access_word": "21",
+      "accepting": false,
+      "transitions": {
+        "0": "F10",
+        "1": "L01",
+        "2": "sink"
+      }
+    },
+    {
+      "state": "sink",
+      "access_word": "22",
+      "accepting": false,
+      "transitions": {
+        "0": "sink",
+        "1": "sink",
+        "2": "sink"
+      }
+    },
+    {
+      "state": "L01",
+      "access_word": "102",
+      "accepting": true,
+      "transitions": {
+        "0": "F11",
+        "1": "L00",
+        "2": "sink"
+      }
+    }
+  ],
+  "partition_refinement_class_counts": [
+    2,
+    7,
+    9,
+    9
+  ],
+  "pairwise_distinguishing_suffixes": [
+    {
+      "left": "F00",
+      "right": "F11",
+      "suffix": ""
+    },
+    {
+      "left": "F00",
+      "right": "L00",
+      "suffix": "2"
+    },
+    {
+      "left": "F00",
+      "right": "F10",
+      "suffix": ""
+    },
+    {
+      "left": "F00",
+      "right": "F01",
+      "suffix": "0"
+    },
+    {
+      "left": "F00",
+      "right": "L10",
+      "suffix": ""
+    },
+    {
+      "left": "F00",
+      "right": "L11",
+      "suffix": ""
+    },
+    {
+      "left": "F00",
+      "right": "sink",
+      "suffix": ""
+    },
+    {
+      "left": "F00",
+      "right": "L01",
+      "suffix": "0"
+    },
+    {
+      "left": "F11",
+      "right": "L00",
+      "suffix": ""
+    },
+    {
+      "left": "F11",
+      "right": "F10",
+      "suffix": "0"
+    },
+    {
+      "left": "F11",
+      "right": "F01",
+      "suffix": ""
+    },
+    {
+      "left": "F11",
+      "right": "L10",
+      "suffix": "0"
+    },
+    {
+      "left": "F11",
+      "right": "L11",
+      "suffix": "20"
+    },
+    {
+      "left": "F11",
+      "right": "sink",
+      "suffix": "1"
+    },
+    {
+      "left": "F11",
+      "right": "L01",
+      "suffix": ""
+    },
+    {
+      "left": "L00",
+      "right": "F10",
+      "suffix": ""
+    },
+    {
+      "left": "L00",
+      "right": "F01",
+      "suffix": "0"
+    },
+    {
+      "left": "L00",
+      "right": "L10",
+      "suffix": ""
+    },
+    {
+      "left": "L00",
+      "right": "L11",
+      "suffix": ""
+    },
+    {
+      "left": "L00",
+      "right": "sink",
+      "suffix": ""
+    },
+    {
+      "left": "L00",
+      "right": "L01",
+      "suffix": "0"
+    },
+    {
+      "left": "F10",
+      "right": "F01",
+      "suffix": ""
+    },
+    {
+      "left": "F10",
+      "right": "L10",
+      "suffix": "2"
+    },
+    {
+      "left": "F10",
+      "right": "L11",
+      "suffix": "0"
+    },
+    {
+      "left": "F10",
+      "right": "sink",
+      "suffix": "0"
+    },
+    {
+      "left": "F10",
+      "right": "L01",
+      "suffix": ""
+    },
+    {
+      "left": "F01",
+      "right": "L10",
+      "suffix": ""
+    },
+    {
+      "left": "F01",
+      "right": "L11",
+      "suffix": ""
+    },
+    {
+      "left": "F01",
+      "right": "sink",
+      "suffix": ""
+    },
+    {
+      "left": "F01",
+      "right": "L01",
+      "suffix": "12"
+    },
+    {
+      "left": "L10",
+      "right": "L11",
+      "suffix": "0"
+    },
+    {
+      "left": "L10",
+      "right": "sink",
+      "suffix": "0"
+    },
+    {
+      "left": "L10",
+      "right": "L01",
+      "suffix": ""
+    },
+    {
+      "left": "L11",
+      "right": "sink",
+      "suffix": "1"
+    },
+    {
+      "left": "L11",
+      "right": "L01",
+      "suffix": ""
+    },
+    {
+      "left": "sink",
+      "right": "L01",
+      "suffix": ""
+    }
+  ],
+  "minimal_complete_state_count": 9,
+  "minimal_live_state_count": 8,
+  "alphabet": "012",
+  "leading_zeros_allowed": true,
+  "empty_word_accepted": true
+}

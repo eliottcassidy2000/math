@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "optimized_python": true,
+  "explicit_checks": 4676438,
+  "source_sha256": "125bf43db526570cdd75d65ad21eed9ff7b8d637ea4a5e90ac5618bcff9cbb57",
+  "exact_field_integer_cases": 250001,
+  "legal_fractional_words_through_length": 10,
+  "legal_fractional_words_checked": 28656,
+  "large_integer_cases": 118,
+  "largest_bit_width": 16384,
+  "random_balanced_intervals": 10000,
+  "orbit_norm_core_cases": 100000,
+  "legal_child_norm_cases": 261804,
+  "oracle": "Exact Q(sqrt(5)) rational sign comparisons and independent Fibonacci weights; no isqrt in oracle, no floats.",
+  "scope": "Canonical arithmetic only, no graph existence inference; no source or remote edits."
+}

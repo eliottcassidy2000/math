@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "frozen_producer_manifest_sha256": "14f714e5b1c1ebe8068077e79a60750195be9af9eaf06e9366845f4c90adb0b2",
+  "independent_checks_per_mode": 4676438,
+  "producer_replay_checks_per_mode": 1983501,
+  "normal_and_optimized_reports_match_except_mode": true,
+  "no_assert_statements": true,
+  "original_and_supplement_files_unchanged": true,
+  "findings": "All Beatty/phase/division/strip/norm/orbit/Pell claims reviewed are correct with stated boundaries. No correction needed.",
+  "publication_performed": false,
+  "packaging": "Portable audit copy; mathematical proof content and producer modules unchanged.",
+  "source_layout": "Audit directory is an immediate child of numeration; producer modules are in its parent.",
+  "producer_replay_reports": "Preserved from the matching original producer snapshot.",
+  "copied_producer_independent_replays": "PASS in normal and optimized Python.",
+  "relocated_independent_replays": "PASS in normal and optimized Python from a separate unrelated cwd; reports match byte for byte.",
+  "original_audit_preserved": true,
+  "files": {
+    "PROOF_REVIEW.md": "1676e63a1fc59320c3761d3bacdb99cf1f6d58d644642f49ba3ff112bda2dde4",
+    "independent.normal.json": "67c8f7d3bed8beed008c1cfa12141a07bd8ff41b50cb72f9572f4dfd37911c69",
+    "independent.optimized.json": "a996f22e35e0a55dd69aaaae117aea82f87cd3086cdb9c23cce59f73721c3a01",
+    "independent_beatty_audit.py": "5be633a3db78595ded08ee07b1824e18897ddf2e94558c0b5ec24f13426dbb34",
+    "portability_verification.json": "1339666e74770e23f8c1c2507aac14961502437f0c1397fdf2266d3733f0039b",
+    "producer_input.sha256": "9ba1a063aa644f6975f1d657ac1c7937e9290dfc40e8cb0c950dcba1b8f29878",
+    "producer_replay.normal.json": "b641cbcc3a48bd3ba60d0330f3550f769b2da564d44c080714abdfc1a4119eb7",
+    "producer_replay.optimized.json": "2cf672b2fea7329965724936459a5398ba720439836f25dc21718ae557e6a8b2"
+  }
+}

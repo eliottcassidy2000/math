@@ -1,0 +1,16 @@
+{
+  "D_C_orbit_classification_cases": 25000,
+  "arithmetic": "integer isqrt, independent squared-inequality certificates; no floats",
+  "balanced_word_interval_cases": 10201,
+  "boundary": "canonical numeral dynamics only, no graph Hamiltonicity inference",
+  "consecutive_integers": 100001,
+  "explicit_checks": 1983501,
+  "large_weight_boundary_cases": 3000,
+  "legal_child_norm_cases": 65451,
+  "legal_words_through_length_8": 4180,
+  "optimized_python": false,
+  "original_manifest_files_unchanged": 5,
+  "random_4096_bit_integers": 32,
+  "random_512_bit_integers": 512,
+  "status": "PASS"
+}
