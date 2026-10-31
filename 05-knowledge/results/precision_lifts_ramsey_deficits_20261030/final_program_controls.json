@@ -1,0 +1,30 @@
+{
+  "capacity_rejections": [
+    {
+      "executable": "/tmp/adaptive-fees-final",
+      "returncode": 7,
+      "stderr": "state count exceeds index type"
+    },
+    {
+      "executable": "/tmp/audit-adaptive-final",
+      "returncode": 8,
+      "stderr": "state count exceeds index type"
+    }
+  ],
+  "E6_sha256": "73355795c824ce5727ac3f41b74f728aabfe8f23d0d7ef7eee9d67f1cd05c292",
+  "E6_audit": {
+    "E": 6,
+    "R": 1,
+    "states": 112500,
+    "edges": 10320000,
+    "entries": 150,
+    "D": 3125000,
+    "N": 1953120,
+    "min": -34765440,
+    "max": -3906240,
+    "terminal": -10937400,
+    "all_positive_letters": true,
+    "pass": true
+  },
+  "pass": true
+}

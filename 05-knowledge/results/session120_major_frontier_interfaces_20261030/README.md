@@ -6,6 +6,12 @@ constructions, unrestricted B2 circuits, and restricted Jacobian image/lifting
 problems. None of those major conjectures is claimed solved. No literature-priority
 claim is made for the elementary and classical mechanisms used here.
 
+**Later status update:** [precision_lifts_ramsey_deficits_20261030](../precision_lifts_ramsey_deficits_20261030/README.md)
+closes E12 and E13 using new independently checked potentials; two E14 fees remain.
+The six-family frontier below is superseded; its quantized transfer and native
+grammar remain valid and reusable. The same successor gives joint two-tail
+dilation descent, complementing this packet's single-tail fibre theorem.
+
 ## 1. Collatz: one E12 family closed; six remain
 
 [Eighth-defect transfer](collatz/EIGHTH_DEFECT_TRANSFER.md) raises every non-one

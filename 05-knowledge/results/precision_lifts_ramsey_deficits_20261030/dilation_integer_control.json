@@ -1,0 +1,5 @@
+{
+  "orders": "3..100000",
+  "exact_fraction_grid_bound": true,
+  "bank_algorithm_unchanged": true
+}

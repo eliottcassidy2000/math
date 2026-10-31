@@ -17,7 +17,7 @@ def run():
                 for s in (F(1,7),F(7,50),F(1,3),F(2,5),F(1,2)):
                     good=[j for j in range(d) if min(old.dist(u*(s+j)/d),old.dist(v*(s+j)/d))>=F(1,8)]
                     if (h,k)!=(2,2):
-                        need(ceil(h/4)/h+ceil(k/4)/k<1,'grid bound')
+                        need(F((h+3)//4,h)+F((k+3)//4,k)<1,'grid bound')
                         need(good,('joint fibre lifting',d,u,v,s))
                     elif not good:exceptions+=1
                     cases+=1

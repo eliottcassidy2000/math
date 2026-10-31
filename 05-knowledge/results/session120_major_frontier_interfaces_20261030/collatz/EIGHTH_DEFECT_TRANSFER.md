@@ -7,6 +7,11 @@ three-non-one E12 price family, and reduces the remaining six families to 21
 unordered eighth-defect partitions. E12 itself, all-layer content, and Collatz
 convergence remain OPEN.
 
+**Successor status:** E12 is now proved in
+[precision_lifts_ramsey_deficits_20261030/COLLATZ.md](../../precision_lifts_ramsey_deficits_20261030/COLLATZ.md).
+The conditional deductions below retain their original hypotheses; their
+remaining-family status is superseded, not their arithmetic transfer lemma.
+
 ## Provenance and definitions
 
 Read from repository HEAD `16a4cdb898c71d54dcb2c6cf58784c8e13692d22`:

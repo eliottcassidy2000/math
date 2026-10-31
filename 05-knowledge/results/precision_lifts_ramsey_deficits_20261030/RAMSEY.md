@@ -4,8 +4,57 @@
 R(3,4,4)<=73 is equivalent to exclusion of646 specified rooted cases below.
 **FINITE-EXACT:** every supplied local graph passes its forbidden-clique tests;
 an explicit aggregate-inventory model survives the first count relaxation.
-**OPEN:** all four requested upper targets73,137,86,198. No new numerical
-upper bound is claimed. The fourth tuple is R(3,3,6), as clarified by the user.
+**CITED / VERIFIED external certificates:** the newly received Dauth preprint
+establishes the four requested upper targets73,137,86,198. Our own earlier
+local-port attempt below is a valid reduction, superseded as the route to
+those bounds. No new numerical upper bound is claimed. The fourth tuple is
+R(3,3,6), as clarified by the user. Exact values remain open.
+
+## R0. Incoming evidence changes the target
+
+Commit4eb3c4555d identifies Lachlan Dauth's26 October2026 preprint,
+[Neighbourhood counting and new bounds for small three-colour Ramsey numbers](https://github.com/Lachy-Dauth/ramsey-neighbourhood-counting),
+pinned at5770baac746878a3a63b9720fdda97726fe02851. It states exactly the
+four requested bounds. The author labels it a preprint not yet peer reviewed.
+Our incoming[neighbourhood packet](../ramsey_neighbourhood_lifts_20261030/NEIGHBOURHOODS.md)
+had replayed86 and cited the other three. This session additionally reads
+the local-cap and flag-certificate proofs, inspects the executable checkers,
+and replays all four certificates in normal Python with assertions
+enabled. All four pass in exact rational arithmetic. Their printed margins
+are decimal summaries; the sign decisions are exact.
+
+The73 and137 certificates cover respectively273 and551 valid K5 orbits,
+and all10 and231 degree profiles. The198 certificate covers133 K5 orbits
+and all528 degree profiles. It uses1581 cap rows and233 squares. These
+bounds are Dauth's results, not discoveries of this session. The separate
+author-written K6 checker for198 also passes:3929 valid orbits and528 degree
+profiles. Its1581 cap rows and233 squares expand over six labelled vertices.
+Running it is not an independent rewrite of the source by us.
+
+[external_ramsey_receipt.json](external_ramsey_receipt.json) records these
+replays, and [external_ramsey_manifest.json](external_ramsey_manifest.json)
+pins the exact code and certificate hashes. The wrapper
+[external_ramsey_audit.py](external_ramsey_audit.py) repeats any check from
+that revision. The checks validate the finite certificate against the
+stated local-cap and overlap identities; these identities and the cited
+small Ramsey inputs are the mathematical dependencies.
+
+**FINITE-EXACT negative controls:** correctly repricing the same witnesses
+at72,136,197 fails. For136 and197 we also use the now proved input R344<=73.
+The respective signed margins are approximately-1.86993e-4,-3.98671e-5,
+and+1.014e-5; the last checker requires a nonpositive maximum, whereas
+the first two require a positive gap. Degree-profile counts are15,171,231.
+All neighborhood caps and overlap denominators were recomputed. These
+are failures of fixed witness reuse, not lower bounds and not obstructions
+to reoptimizing coefficients in the same certificate family.
+
+The decisive additional constraints are rooted common-neighborhood clique
+caps and exact overlap corrections in squared conditional extension counts.
+They apply to one common labelled coloring. Thus they are not the invalid
+operation of combining independent port marginals. This explains why the
+aggregate survivor in R3 does not challenge the certificates. The paper
+already notes that the basic recurrence with73 gives only218 for R444,
+agreeing with our preliminary dependency calculation.
 
 ## Source check and inheritance
 
@@ -45,8 +94,8 @@ their shared-edge realization. The present target budgets are:
 | R336,86 | (17,17,56) | 5 |
 | R444,198 | (76,76,76) | 31 |
 
-If R344<=73 were proved first, the R345 deficit becomes16 and the R444
-deficit becomes19. It would still not establish either requested target.
+Using R344<=73, the R345 deficit becomes16 and the R444
+deficit becomes19. This alone does not establish either requested target.
 Even combining R344<=73 with the hypothetical optimal lower endpoint
 R335=45 only makes the basic R345 recurrence142, before any small modular
 correction. A joint-neighborhood argument is needed for137. Likewise the
@@ -134,16 +183,15 @@ nonresidue exchanges the two internal colors. Hence R366>=203. This is a
 classical-type construction and a typed-target correction, not a new record;
 the current survey already records a stronger lower bound338.
 
-## Next obligations
+## Revised next obligations
 
-1. Exclude actual shared-edge extensions in the646 cases, beginning with
-   the three high-order port graphs. Degree-profile equality is not enough.
-2. For R336, retain the17/17/56 degree-budget structure and apply the
-   existing H13/R36 port machinery to vertices with small deficits; prove
-   compatibility constraints rather than assuming saturation at order86.
-3. For R345 and R444, seek local certificate inequalities that pay their
-   respective20- and31-unit deficits. First closing R344 would reduce these
-   to16 and19, still nonzero and still requiring a proof.
+The four numerical targets are no longer treated as missing theorems in
+this research plan. The K6 expansion and fixed-multiplier repricing checks
+are complete. The useful continuation is to reoptimize at the smaller orders
+and identify which overlap-localized terms exclude the inventory survivor.
+The646-case native compiler remains available for a
+different local proof or for extracting structural consequences. Bounded
+UNKNOWN solver runs do not add evidence against the external certificates.
 
 The common lesson with Collatz and LRC is exact: compatible local objects
 must use the same source edge, multiplier lift or time label. It is not an

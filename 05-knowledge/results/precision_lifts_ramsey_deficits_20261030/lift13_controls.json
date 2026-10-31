@@ -1,0 +1,28 @@
+{
+  "status": "FINITE-EXACT proof arithmetic and semantic controls; not enumeration of all native13 words",
+  "eta10": "183105426/48828125",
+  "gamma12": "61035156/48828125",
+  "E13_coefficient": "305175781/488281250",
+  "E13_nonone_margin": "12207031/48828125",
+  "native13_floor": "36621051/48828125",
+  "remaining_E14": [
+    {
+      "ones": 0,
+      "nonone": 1
+    },
+    {
+      "ones": 1,
+      "nonone": 1
+    }
+  ],
+  "E13_ones_clock": 488281250,
+  "E13_ones_charge": 305175781,
+  "words_clock_at_most_16": 65535,
+  "all_minimum_precision_transition_checks": 655350,
+  "literal_native_cut_checks": {
+    "2": 318,
+    "3": 0,
+    "4": 0
+  },
+  "pass_checks": true
+}

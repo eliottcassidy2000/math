@@ -1,0 +1,7 @@
+{
+  "E": 10,
+  "R": 1,
+  "bytes": 762500000,
+  "sha256": "0caca68e1642daba04e84ba10a58bc8183523a31e57c3fc5613fde35ff970fd7",
+  "status": "separate checker passed every transition, entry and all-letter tail"
+}

@@ -1,4 +1,15 @@
-# Height-adaptive prices close the twelfth layer
+# Height-adaptive prices close the twelfth and thirteenth layers
+
+**Latest PROVED result:** the independently checked E10 certificate in C5
+proves, for every finite positive valuation word with original clock A,
+
+    S13(w) <= (305175781/488281250) A,
+
+with additional slack12207031/48828125 whenever w has a non-one letter.
+The coefficient is sharp. C6 reduces the next E14 layer exactly to two
+native price inequalities. The E12 proof below remains valid and explains
+the smaller certificate and its artificial-lift boundary. Neither result
+proves an all-layer bound or universal Collatz convergence.
 
 **PROVED, using the finite certificate independently checked below:** for every
 finite word of positive valuation letters, with its original integer clock A,
@@ -130,6 +141,27 @@ independent checker. See the audit JSON files, corruption control and binary
 hash receipts. The142,500,000-byte E9 potential is a reproducible build
 artifact, not a committed data file.
 
+### The terminal margin is optimal for this abstraction
+
+The word (2,2,3,1,2,2,1,1,2,1,4) has clock21 and coefficients
+
+    P=177147, B=1986245, Q=2097152, B-P+Q=2*5^9.
+
+Its actual S9 is2, with terminal content1. Immediately before its last
+letter, z is a unit, so only m mod5 is retained. The last step may choose
+the artificial multiplier lift m=1 mod5^9, keeping z=0. This abstract path
+has charge10, and price21 lambda11-10=eta exactly. Every potential valid
+on all paths in this state graph must admit it. Thus changing weights
+alone cannot improve this terminal bound at this E and slope. The actual
+integer word is not a counterexample: its multiplier is not identity mod25.
+
+`critical_lift.cpp` finds it among2,097,151 words of clock at most21;
+`semantic_controls.py` independently checks its literal coefficients.
+The targeted repair is to retain m mod25 also at low heights, which rejects
+this last lift, or retain a compatible clock/length condition using
+m=3^(word length)/2^A. Neither proposal is claimed to give an all-depth
+certificate. This explicitly identifies what the next refinement must fix.
+
 ## C4. From terminal debt to all seven families
 
 A primitive10-excursion b has S10(b)=S9(b)+1: its only level-ten return
@@ -181,3 +213,132 @@ advance. Neither success at E9 nor the smaller adaptive state count implies
 feasibility at every E. The next useful obstruction is an artificial path
 that gains a high multiplier lift after earlier digits were forgotten. A
 repair must constrain that lift while still admitting every actual source.
+
+## C5. The E10 certificate and the sharp thirteenth layer
+
+The same construction at E=10, R=1 passes its separate checker:
+
+    states = 95,312,500; edges = 9,625,000,000; entries = 150;
+    D = 1,953,125,000; N = 1,220,703,120;
+    min V = -29,052,734,040; max V = -2,441,406,240;
+    V(z=0,m=1 mod5^10) = -7,324,217,040.
+
+See[adaptive10_audit.json](adaptive10_audit.json). Both all-letter tails
+pass. The binary is762,500,000 bytes and its hash is recorded separately;
+it is a reproducible build artifact, not committed data. Replace9 by10 in
+the reproduction commands above.
+
+Thus the non-one terminal fee at slope lambda12 is
+
+    eta10=183105426/48828125 = 3.74999912448,
+
+and the global non-one slack is beta10=61035156/48828125=2 lambda12.
+A primitive11 non-one excursion pays at least eta10-1. Applying exactly
+the C4 boundary argument one level higher, with the actual tangent retained,
+gives global non-one E12 slack
+
+    gamma12=min(eta10-2,beta10)=61035156/48828125>1.
+
+The one-fee lift now proves the displayed S13 bound and non-one margin
+gamma12-1=12207031/48828125. This deliberately drops a further positive
+clock contribution. The unfinished suffix is paid by gamma12, exactly as in
+C4, and is never omitted. Sharpness follows at T13=488,281,250 consecutive
+ones, whose S13 charge is305,175,781.
+
+## C6. Retaining native fees leaves only two fourteenth-layer obligations
+
+Do not replace a native excursion fee by the weaker global non-one slack.
+Cut a non-one primitive12 excursion b into complete11 excursions.
+There is exactly one level12 return, at its end. At least one constituent
+is non-one and pays eta10-1 at slope lambda12; all other constituents have
+nonnegative fee. Therefore
+
+    delta12(b) >= eta10-2 + (lambda13-lambda12) A_b.
+
+Next cut a non-one primitive13 excursion into complete12 excursions.
+Every non-one constituent has the preceding positive fee, and an all-one
+constituent has fee1/5. Subtract its single terminal level13 charge. This
+gives the deliberately weaker uniform bound
+
+    delta13(b) >= eta10-3 + (lambda14-lambda13) A_b
+               > 36621051/48828125 > 7/10.              (10)
+
+These cuts preserve the lower identity tests because their entering maps
+are identity in the appropriate quotient. Native non-one excursions
+necessarily contain at least one non-one subexcursion; their cuts have no
+unfinished suffix. Every original letter and clock unit is counted once.
+
+Let g13(X) be the minimum native non-one13-excursion fee at tangent
+X in F5^2, or infinity if the class is empty; v=(4,4) is the all-one tangent.
+The inherited exact kernel criterion now says that E14 is equivalent to
+just
+
+    g13(0,0) >= 1,                 g13(-v) >= 4/5.       (11)
+
+Indeed two non-one excursions cost more than1 by(10). One non-one plus
+two or more all-one excursions also costs more than1. Pure all-one zero
+sums require at least five steps and cost at least1. The only remaining
+possible underpaid zero sums are a single non-one, with zero or one all-one
+step. Conversely the native witnesses for either strict failure in(11)
+concatenate to an actual violating word. Minima exist by the inherited
+positive clock bound and finite branching below any fixed price.
+
+**OPEN:** both inequalities in(11), all-layer content control, and the
+additional arithmetic argument needed for universal Collatz. This is an
+exact reduction to two unbounded-word questions, not a finite two-case
+check. Source-specific ROOT positivity is not asserted by these content
+estimates.
+
+## C7. Minimum multiplier precision as a targeted refinement
+
+The programs also allow an optional minimum precision R,1<=R<=E. Set
+ell=max(R,h) in C1 and C2. The same compatible-lift proof and paid-entry
+reduction apply unchanged. The state count is
+
+    4*5^(R-1)*5^E + 16(E-R)*5^E/25.
+
+The first term counts all states with h<R together with h=E; each
+intermediate h=R,...,E-1 contributes16*5^E/25. The C3 inequalities and
+all-letter tails are unchanged. Both executables reject configurations
+whose state count exceeds their integer index type instead of overflowing.
+
+At E6,R2, the independent check passes25,080,000 transitions on352,500
+states, with630 paid entries and terminal fee3.9999616. The default-R1
+regression reproduces the earlier E6 binary byte for byte. R2 excludes the
+C3 fake endpoint because it retains m mod25 even while z is a unit.
+Equivalently, m mod25 retains the congruence7*len(w)-A mod20, since3=2^7
+mod25. This is exact clock/length memory, not an independent random digit.
+Finite R2 success does not assert a uniform all-depth refinement theorem.
+
+At E9,R2, the independent checker passes3,611,250,000 edges on47,812,500
+states, with630 paid entries. Its terminal fee is2832031/781250=3.62499968.
+This improves the R1 fee but is again **optimal for this abstraction**.
+The new extremizer is simply four ones followed by the earlier eleven-letter
+suffix. Its clock is25, actual charge5, and compatible artificial terminal
+lift raises its abstract charge to12. Its integer coefficients are
+
+    P=14348907, B=43294475, Q=33554432.
+
+The actual terminal content is2; before its last letter the retained
+precision is2. Thus25 lambda11-12 equals the certified terminal fee exactly.
+The exhaustive fixed-length probe checks all binomial(24,14)=1,961,256
+compositions of25 into15 positive letters and finds exactly this witness
+under its stated single-final-lift conditions. It is not a classification
+of every abstract optimizer.
+
+This is a paid-entry version of the cyclic phase arithmetic in
+[Session116's phase-completion theorem](../session116_dimension_owner_towers_20261030/collatz/PHASE_COMPLETION_THEOREM.md),
+not a new all-entry optimization theorem. Prefixing ones keeps z=0 until
+the suffix begins, so the suffix's z trajectory is unchanged. It rotates the
+multiplier by(3/2)^k. The least alignment phases for R=1,...,9 are
+
+    0,4,24,74,1074,6074,24824,56074,56074.
+
+[precision_phase.py](precision_phase.py) charges each prefix by its exact
+floor sum, verifies every terminal lift, and checks the first two witnesses
+again by literal integer coefficients. At R=8 and9 this suffix already has
+actual terminal content9; the witness is no longer an artificial terminal
+lift. These explicit prices are upper bounds on the optimal endpoint fee
+for their respective abstractions. Only R1 and R2 have matching lower
+certificates here. Improving precision repairs one missing digit, but a paid
+phase shift can recreate the obstruction at the next precision.

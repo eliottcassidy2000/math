@@ -4,19 +4,30 @@
 OPEN universal targets.** Producer/checker separation and same-agent proof
 review; no independent human or subagent audit is claimed.
 
-* [Collatz](COLLATZ.md): all seven E12 price families close. The adaptive
-  certificate checks1,766,250,000 edges and both all-letter tails. Its terminal
-  margin61035151/19531250>3 proves the sharp S12 bound, with positive non-one
-  slack. The current abstraction also has an explicit artificial extremizer;
-  it is not an exact quotient of actual words.
+* [Collatz](COLLATZ.md): all seven E12 price families close, followed by the
+  sharp E13 bound. The larger certificate checks9,625,000,000 edges and both
+  all-letter tails. Its terminal margin183105426/48828125>3 proves S13 with
+  positive non-one slack. Only two native E14 price inequalities remain.
+  The abstraction has an explicit artificial extremizer at E9; it is not
+  an exact quotient of actual words.
 * [Lonely runner](LRC.md): an exact two-tail compiler counts joint tooth
   intersections with Euclidean floor sums. Four explicit eleven-speed cores
   accept every pair of positive integer attached speeds at1/14, certified by
-  finite checks and analytic tails. Arbitrary primitive core shapes remain open.
+  finite checks and analytic tails. [Joint fibre descent](DILATIONS.md)
+  extends these banks across every dilation, with one shared lift label.
+  Applying it to incoming373661611e's78-core extension and checking all
+  doubled cores gives80 primitive core shapes with complete dilation closure.
+  Distinct nontrivial orbit orders admit a direct two-inverse decoder at
+  radius1/4; a strict lcm flag extends it to more tails. Arbitrary primitive
+  core shapes remain open.
 * [Ramsey](RAMSEY.md): R344<=73 reduces exactly to646 rooted port cases, using
   a cited complete local graph bank. Native bounded search and an explicit
-  aggregate-relaxation survivor identify the shared-edge compatibility still
-  missing. Targets R345<=137, R336<=86 and R444<=198 also remain open.
+  aggregate-relaxation survivor identify the shared-edge compatibility that
+  counts alone miss. Newly pulled work identifies Dauth's preprint proving
+  all four requested targets;73,137,86,198 pass its exact checkers here,
+  including the separate six-vertex198 expansion. Correct repricing of the
+  fixed witnesses at72,136,197 fails. These are attributed external results,
+  not new bounds of this session.
   The original R366<=86 tuple was corrected by the user to R336<=86.
 
 ## Inheritance and concept board
@@ -45,5 +56,10 @@ Those are precise constraints on a transfer, not proofs of another problem.
 The packet is the successor of
 [terminal_fees_phase_covers_20261030](../terminal_fees_phase_covers_20261030/README.md).
 It supersedes that packet's OPEN status for the seven E12 families; the old
-theorems remain valid. Universal Collatz, arbitrary-core LRC(14), and the four
-requested Ramsey upper bounds are not claimed solved.
+theorems remain valid. Universal Collatz and arbitrary-core LRC(14) remain
+open. The four Ramsey upper targets have external certificates; the actual
+Ramsey values remain open.
+
+[Audit and scope](AUDIT.md) records the producer/checker boundaries and
+[typed bridges](BRIDGES.md) compare the kernel flags, exact overlap squares,
+paid phases and incoming integer-palette obstruction.

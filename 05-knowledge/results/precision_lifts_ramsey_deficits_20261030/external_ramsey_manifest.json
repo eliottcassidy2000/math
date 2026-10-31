@@ -1,0 +1,37 @@
+{
+  "revision": "5770baac746878a3a63b9720fdda97726fe02851",
+  "files": {
+    "mixed_checker": {
+      "path": "ancillary/flag5_r34k/check/check_flag5_mix.py",
+      "sha256": "435884100ccc2affe9c966409914f5550dc868733b2827c029ef3087708cd3d7"
+    },
+    "344": {
+      "path": "ancillary/flag5_r34k/certificates/R344_73.json",
+      "sha256": "19af6a311444ed4f94b9c879cf70ca6b1473b714727b5a3a331faf11f15a96c4"
+    },
+    "345": {
+      "path": "ancillary/flag5_r34k/certificates/R345_137.json",
+      "sha256": "3799ea9a15514cacadeb93fc25652c7bd548bac4161de1dfb3e9ff2715f9f8f9"
+    },
+    "336_checker": {
+      "path": "ancillary/flag_r33k/check_r33k5.py",
+      "sha256": "d020990c92ca6fcc0d682e2d79c904d3bf2fd7ab2a57c6ffb7fe8c0122505f62"
+    },
+    "336": {
+      "path": "ancillary/flag_r33k/certificates/five/k6/excl_86.json",
+      "sha256": "66e4a24c821acd855445e176ed500c97dd5e34596ad60c731ed6bf0cbed1327e"
+    },
+    "444_checker5": {
+      "path": "ancillary/flag5_r444/checkers/check5.py",
+      "sha256": "a85b9071166fcf7a959fe95aa9562b5f22a32eae135b2abf57d539400abc44fb"
+    },
+    "444_checker6": {
+      "path": "ancillary/flag5_r444/checkers/check6.py",
+      "sha256": "fbee7f6626c8be988a3793140643cc3d70240a61d1cbdc669e9c7243855aa2bc"
+    },
+    "444": {
+      "path": "ancillary/flag5_r444/certificates/cert5x_198.txt",
+      "sha256": "9eac2d68f38bf69df3e9be65ac97e217ef12acf2fbb9e816f0a494ab23cbf352"
+    }
+  }
+}

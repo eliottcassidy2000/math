@@ -1,0 +1,175 @@
+{
+  "status": "CITED / VERIFIED external certificates, not new bounds",
+  "author": "Lachlan Dauth",
+  "source": "https://github.com/Lachy-Dauth/ramsey-neighbourhood-counting",
+  "revision": "5770baac746878a3a63b9720fdda97726fe02851",
+  "publication_status": "26 October 2026 preprint, not peer reviewed",
+  "arithmetic": "Exact Fraction decisions. Margins below are printed decimal summaries only.",
+  "independence": "Author-written checkers replayed and inspected here, not independently rewritten here.",
+  "positive_replays": [
+    {
+      "mode": "344",
+      "target": [
+        3,
+        4,
+        4
+      ],
+      "upper_bound": 73,
+      "exit_code": 0,
+      "valid": true,
+      "degree_caps": [
+        17,
+        29,
+        29
+      ],
+      "profiles": 10,
+      "valid_labelled_K5": 42406,
+      "orbits": 273,
+      "stars": 81,
+      "rows": 154,
+      "squares": 50,
+      "square_blocks": 8,
+      "printed_min_symF_minus_maxJ": "2.1769032980440205e-05"
+    },
+    {
+      "mode": "345",
+      "target": [
+        3,
+        4,
+        5
+      ],
+      "upper_bound": 137,
+      "exit_code": 0,
+      "valid": true,
+      "degree_caps": [
+        24,
+        56,
+        76
+      ],
+      "profiles": 231,
+      "valid_labelled_K5": 42786,
+      "orbits": 551,
+      "stars": 81,
+      "rows": 300,
+      "squares": 101,
+      "square_blocks": 11,
+      "printed_min_symF_minus_maxJ": "5.405378594515651e-07"
+    },
+    {
+      "mode": "336",
+      "target": [
+        3,
+        3,
+        6
+      ],
+      "upper_bound": 86,
+      "exit_code": 0,
+      "valid": true,
+      "degree_caps": [
+        17,
+        17,
+        56
+      ],
+      "profiles": 21,
+      "valid_labelled_K5": 29197,
+      "orbits": 193,
+      "rows": 64,
+      "squares": 121,
+      "printed_max_symPhi": "0",
+      "printed_min_J": "1.915685875115461e-07"
+    },
+    {
+      "mode": "444-5",
+      "target": [
+        4,
+        4,
+        4
+      ],
+      "upper_bound": 198,
+      "exit_code": 0,
+      "valid": true,
+      "profiles": 528,
+      "orbits": 133,
+      "caps": 1581,
+      "squares": 233,
+      "printed_max_F": "-3.050e-09",
+      "printed_min_J": "3.046e-09"
+    },
+    {
+      "mode": "444-6",
+      "target": [
+        4,
+        4,
+        4
+      ],
+      "upper_bound": 198,
+      "exit_code": 0,
+      "valid": true,
+      "profiles": 528,
+      "orbits": 3929,
+      "caps": 1581,
+      "squares": 233,
+      "square_groups": 17,
+      "printed_max_F": "-3.050e-09",
+      "printed_min_J": "3.046e-09"
+    }
+  ],
+  "fixed_witness_repricing_controls": [
+    {
+      "mode": "72",
+      "target": [
+        3,
+        4,
+        4
+      ],
+      "attempted_bound": 72,
+      "degree_caps": [
+        17,
+        29,
+        29
+      ],
+      "profiles": 15,
+      "valid": false,
+      "printed_min_symF_minus_maxJ": "-0.00018699321073883935"
+    },
+    {
+      "mode": "136",
+      "target": [
+        3,
+        4,
+        5
+      ],
+      "attempted_bound": 136,
+      "extra_input": "R(3,4,4)<=73",
+      "degree_caps": [
+        24,
+        56,
+        72
+      ],
+      "profiles": 171,
+      "valid": false,
+      "printed_min_symF_minus_maxJ": "-3.9867127157956503e-05"
+    },
+    {
+      "mode": "197",
+      "target": [
+        4,
+        4,
+        4
+      ],
+      "attempted_bound": 197,
+      "extra_input": "R(3,4,4)<=73",
+      "degree_caps": [
+        72,
+        72,
+        72
+      ],
+      "profiles": 231,
+      "valid": false,
+      "printed_max_F": "1.014e-05",
+      "printed_min_J": "2.980e-09"
+    }
+  ],
+  "control_scope": "All cap constants, overlap denominators and profiles are recomputed; square vectors and multipliers held fixed. Failures refute only reuse of these fixed witnesses, not stronger bounds or all certificates in the model.",
+  "reproduction": "python3 -B external_ramsey_audit.py /path/to/pinned/checkout MODE"
+}

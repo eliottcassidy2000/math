@@ -1,0 +1,223 @@
+{
+  "status": "FINITE-EXACT witnesses; optimality only for R1 and R2 with audited potentials",
+  "suffix": [
+    2,
+    2,
+    3,
+    1,
+    2,
+    2,
+    1,
+    1,
+    2,
+    1,
+    4
+  ],
+  "rows": [
+    {
+      "R": 1,
+      "ones_prefix": 0,
+      "clock": 21,
+      "initial_charge": 0,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "abstract_total": 10,
+      "endpoint_price": "61035151/19531250",
+      "actual_terminal_content": 1
+    },
+    {
+      "R": 2,
+      "ones_prefix": 4,
+      "clock": 25,
+      "initial_charge": 2,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "abstract_total": 12,
+      "endpoint_price": "2832031/781250",
+      "actual_terminal_content": 2
+    },
+    {
+      "R": 3,
+      "ones_prefix": 24,
+      "clock": 45,
+      "initial_charge": 14,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ],
+      "abstract_total": 24,
+      "endpoint_price": "16113279/3906250",
+      "actual_terminal_content": 3
+    },
+    {
+      "R": 4,
+      "ones_prefix": 74,
+      "clock": 95,
+      "initial_charge": 45,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        4
+      ],
+      "abstract_total": 55,
+      "endpoint_price": "17089839/3906250",
+      "actual_terminal_content": 4
+    },
+    {
+      "R": 5,
+      "ones_prefix": 1074,
+      "clock": 1095,
+      "initial_charge": 669,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        5
+      ],
+      "abstract_total": 679,
+      "endpoint_price": "20996039/3906250",
+      "actual_terminal_content": 5
+    },
+    {
+      "R": 6,
+      "ones_prefix": 6074,
+      "clock": 6095,
+      "initial_charge": 3793,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        6
+      ],
+      "abstract_total": 3803,
+      "endpoint_price": "24902039/3906250",
+      "actual_terminal_content": 6
+    },
+    {
+      "R": 7,
+      "ones_prefix": 24824,
+      "clock": 24845,
+      "initial_charge": 15511,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        7
+      ],
+      "abstract_total": 15521,
+      "endpoint_price": "27830789/3906250",
+      "actual_terminal_content": 7
+    },
+    {
+      "R": 8,
+      "ones_prefix": 56074,
+      "clock": 56095,
+      "initial_charge": 35042,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        9
+      ],
+      "abstract_total": 35052,
+      "endpoint_price": "28805789/3906250",
+      "actual_terminal_content": 9
+    },
+    {
+      "R": 9,
+      "ones_prefix": 56074,
+      "clock": 56095,
+      "initial_charge": 35042,
+      "suffix_actual_charges": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        9
+      ],
+      "abstract_total": 35052,
+      "endpoint_price": "28805789/3906250",
+      "actual_terminal_content": 9
+    }
+  ],
+  "R2_fixed_length_universe": 1961256,
+  "R2_unique_last_lift_witness": {
+    "ones_prefix": 4,
+    "actual_total": 5,
+    "abstract_total": 12
+  },
+  "pass_checks": true
+}

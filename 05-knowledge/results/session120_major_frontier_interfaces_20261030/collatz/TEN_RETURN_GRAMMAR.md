@@ -6,6 +6,10 @@ structural consequence, not another E12 family closure. The source already
 uses return decomposition and the fee below; the explicit small-defect
 one-core grammar is the additional deduction here.
 
+**Successor status:** the E12 obstruction classes below are now excluded by
+[precision_lifts_ramsey_deficits_20261030/COLLATZ.md](../../precision_lifts_ramsey_deficits_20261030/COLLATZ.md).
+The native grammar remains a valid conditional structural statement.
+
 Write gamma=5878847/19531250. Section5, equation(C2), of
 `terminal_fees_phase_covers_20261030/COLLATZ.md` proves that every non-one
 native10 excursion has price at slope lambda11 at least
