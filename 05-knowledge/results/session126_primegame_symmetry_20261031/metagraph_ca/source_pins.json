@@ -1,0 +1,12 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "snapshot": "8f76b84d2960f9e14ad62a154b8533c77593702f",
+  "sources": [
+    {
+      "bytes": 4242,
+      "local": "reference_n5_atlas.json",
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n5.json",
+      "sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c"
+    }
+  ]
+}

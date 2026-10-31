@@ -1,0 +1,161 @@
+{
+  "artifact_sha256": {
+    "observer_quotients.json": "c7dcd235b31a731df038b471ccc120960f24f6975daa32243e858b8223e99a28",
+    "ring_ca_results.json": "6d9610adaf0d7f7b94b668ffc4a2f73d544266de8e5bcf42ab2c5003c3bd9a90",
+    "transitions.tsv": "ebf728aa39e202c54383defec45a591e1ab1dff4dcdb26d50a4e25f3ed472706"
+  },
+  "checks": 67571,
+  "independent_methods": [
+    "pairwise directed arc-set isomorphism with degree filtering",
+    "cyclic integer rotation for CA",
+    "pair-removal continuation indistinguishability"
+  ],
+  "inherited_pin_comparisons": [
+    {
+      "relative_path": "reference_n5_atlas.json",
+      "sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c"
+    }
+  ],
+  "normal_and_optimized_safe": true,
+  "quotient_audits": {
+    "pi": {
+      "A": {
+        "maximum_shortest_distinguishing_word_length": 2,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 172,
+          "2": 20
+        },
+        "states": 29
+      },
+      "AB": {
+        "maximum_shortest_distinguishing_word_length": 2,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 226,
+          "2": 5
+        },
+        "states": 37
+      },
+      "ABCR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 240
+        },
+        "states": 40
+      },
+      "ACR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 232
+        },
+        "states": 38
+      },
+      "B": {
+        "maximum_shortest_distinguishing_word_length": 2,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 202,
+          "2": 9
+        },
+        "states": 30
+      },
+      "BCR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 240
+        },
+        "states": 40
+      },
+      "CR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 232
+        },
+        "states": 38
+      },
+      "coordinate_flips": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1752,
+          "1": 264
+        },
+        "states": 64
+      }
+    },
+    "pi_blue": {
+      "A": {
+        "maximum_shortest_distinguishing_word_length": 2,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 96,
+          "2": 12
+        },
+        "states": 29
+      },
+      "AB": {
+        "maximum_shortest_distinguishing_word_length": 2,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 146,
+          "2": 1
+        },
+        "states": 37
+      },
+      "ABCR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 156
+        },
+        "states": 40
+      },
+      "ACR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 148
+        },
+        "states": 38
+      },
+      "B": {
+        "maximum_shortest_distinguishing_word_length": 2,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 142,
+          "2": 1
+        },
+        "states": 36
+      },
+      "BCR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 156
+        },
+        "states": 40
+      },
+      "CR": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 148
+        },
+        "states": 38
+      },
+      "coordinate_flips": {
+        "maximum_shortest_distinguishing_word_length": 1,
+        "separated_pair_depth_histogram": {
+          "0": 1836,
+          "1": 180
+        },
+        "states": 64
+      }
+    }
+  },
+  "status": "PASS"
+}

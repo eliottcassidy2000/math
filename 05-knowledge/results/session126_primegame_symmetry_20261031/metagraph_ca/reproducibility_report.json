@@ -1,0 +1,36 @@
+{
+  "local_markdown_links_verified": true,
+  "manifest_complete": true,
+  "manifest_verified": true,
+  "modes": {
+    "normal": {
+      "artifact_byte_matches": [
+        "ring_ca_results.json",
+        "observer_quotients.json",
+        "transitions.tsv"
+      ],
+      "audit_output_byte_match": true,
+      "independent_audit_gates": 67571,
+      "producer_output_byte_match": true,
+      "python_isolated_mode": true,
+      "relocated": true,
+      "status": "PASS"
+    },
+    "optimized": {
+      "artifact_byte_matches": [
+        "ring_ca_results.json",
+        "observer_quotients.json",
+        "transitions.tsv"
+      ],
+      "audit_output_byte_match": true,
+      "independent_audit_gates": 67571,
+      "producer_output_byte_match": true,
+      "python_isolated_mode": true,
+      "relocated": true,
+      "status": "PASS"
+    }
+  },
+  "scratch_sibling_dependencies": false,
+  "standard_library_only": true,
+  "status": "PASS"
+}
