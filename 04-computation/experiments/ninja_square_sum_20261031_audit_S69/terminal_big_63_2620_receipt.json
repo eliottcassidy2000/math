@@ -1,0 +1,20 @@
+{
+ "status": "passed",
+ "range": [
+  63,
+  2620
+ ],
+ "verified_cycles": 2558,
+ "odd_N_verified": 1279,
+ "even_N_verified": 1279,
+ "max_nodes_last_attempt": {
+  "nodes": 32130,
+  "N": 76
+ },
+ "attempts_histogram": {
+  "1": 2556,
+  "2": 2
+ },
+ "certificate_file_sha256": "97a7de778abd659f94216b06675e88940e9aa6745f6e5eedade519d57e2175be",
+ "certificate_generator": "ss_terminal_big.exe 63 2620  (default budget 200000, 40 attempts)"
+}

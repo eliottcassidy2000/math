@@ -1,0 +1,16 @@
+m=42: 20 compatible pairs (20 printed); replayed 21 inputs (20 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=43: 13 compatible pairs (13 printed); replayed 14 inputs (13 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=44: 221 compatible pairs (221 printed); replayed 41 inputs (40 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=45: 3 compatible pairs (3 printed); replayed 4 inputs (3 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=46: 11 compatible pairs (11 printed); replayed 12 inputs (11 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=47: 17 compatible pairs (17 printed); replayed 18 inputs (17 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=48: 3384 compatible pairs (3384 printed); replayed 41 inputs (40 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=49: 276 compatible pairs (276 printed); replayed 41 inputs (40 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=50: 1090 compatible pairs (1090 printed); replayed 41 inputs (40 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=51: 1351 compatible pairs (1351 printed); replayed 41 inputs (40 own + threshold42 base) x 49 digits; all outputs pass both checkers
+m=52: 106235 compatible pairs (20000 printed); replayed 41 inputs (40 own + threshold42 base) x 49 digits; all outputs pass both checkers
+ALL 15435 operator outputs verified by the independent checker and by session124 check_pair (session124 checks = 185294810); 79 s
+
+real	1m19.110s
+user	0m0.000s
+sys	0m0.047s

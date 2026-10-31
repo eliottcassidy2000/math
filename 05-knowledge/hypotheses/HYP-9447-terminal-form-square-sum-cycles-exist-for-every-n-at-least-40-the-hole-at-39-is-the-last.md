@@ -25,8 +25,9 @@ N is odd. These are session124's closing forms: 1+3 = 4, 1+8 = 9, 1+15 = 16.
   **N = 39**: Q_39 has 50 Hamiltonian cycles, none through 8-1-3 or 15-1-3; the complete search terminates.
 - **Even N >= 42 is PROVED.** Every ninja (weak B) pair at n >= 42 (THM-4850) has an even-order member that starts 1,3
   and ends at 8, and closing it by 8+1 = 9 gives a terminal cycle.
-- **Odd N >= 2621** is session124's terminal-cycle theorem.
-- **Open window:** odd N in [63, 2619].
+- **Odd N >= 2621** is session124's terminal-cycle theorem. (Audit: `session124_square_prefix_threshold42_20261031`, the
+  same morning, already gave every N >= 2082, so the true open window was odd N in [63, 2081].)
+- **Open window**, as stated at registration: odd N in [63, 2619].
 
 ## Pre-registered predictions (confirmatory run, budget 10^9 search nodes per N)
 
@@ -42,7 +43,9 @@ Command: `terminal_cycles_large 63 1000 1 1000000000`.
 - An UNDECIDED (budget exhausted) N is reported as such. P1 or P2 then counts as NOT CONFIRMED for that N, and is not
   refuted.
 - An EXHAUSTED N refutes P3 and the conjecture.
-- Every FOUND cycle is re-verified by the program's independent checker: vertex set, square sums and the closing edge.
+- Every FOUND cycle is re-verified by the program's built-in checker: vertex set, square sums and the closing edge.
+  (Audit: the 2558 cycles were not stored; the audit re-found them with a different program and re-verified them in
+  Python.)
 
 ## Results (confirmatory run, 2026-10-31, after the pre-registration commit 07c2eac4ba)
 
@@ -55,5 +58,5 @@ search used 47,453 nodes, and the run took 1.8 s.
 
 **Completion (exploratory, after the confirmatory run).** `terminal_cycles_large 1001 2620 1 1000000000`
 (`terminal_cycles_large_20261031_window.out`) found and verified all 1620 values, with at most 581,172 nodes. Together
-with session124's terminal-cycle theorem for N >= 2621, the conjecture is PROVED: terminal cycles exist exactly for
+with the threshold42 terminal-cycle theorem for N >= 2082, the conjecture is PROVED: terminal cycles exist exactly for
 N in {34, ..., 38} u [40, oo) (THM-4851 (c)).

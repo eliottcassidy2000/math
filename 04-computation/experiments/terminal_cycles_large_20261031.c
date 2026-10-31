@@ -1,4 +1,4 @@
-/* opus-2026-10-31-S69: terminal-form Hamiltonian cycles of the square-sum graph for large N (HYP-9438).
+/* opus-2026-10-31-S69: terminal-form Hamiltonian cycles of the square-sum graph for large N (HYP-9447).
 
    Terminal form (session124): a Hamiltonian cycle of Q_N containing 8-1-3 (N even) or 15-1-3 (N odd), i.e. a
    Hamiltonian path of Q_N starting 1,3 and ending at 8 (N even) or 15 (N odd).

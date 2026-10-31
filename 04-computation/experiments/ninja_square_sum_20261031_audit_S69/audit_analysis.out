@@ -1,0 +1,181 @@
+
+====================================================================================================
+A. Census of Q_N (own enumerator; paths rooted at every start, cycles rooted at the largest vertex) vs OEIS
+====================================================================================================
+  N=1 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=2 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=3 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=4 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=5 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=6 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=7 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=8 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=9 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=10 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=11 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=12 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=13 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=14 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=15 paths=1 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=16 paths=1 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=17 paths=1 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=18 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=19 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=20 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=21 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=22 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=23 paths=3 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=24 paths=0 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=25 paths=10 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=26 paths=12 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=27 paths=35 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=28 paths=52 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=29 paths=19 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=30 paths=20 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=31 paths=349 cycles=0 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=0
+  N=32 paths=392 cycles=1 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=1
+  N=33 paths=669 cycles=1 p13_8=0 p13_15=0 p13_10=0 p1_3=0 p1_8=1
+  N=34 paths=4041 cycles=11 p13_8=7 p13_15=2 p13_10=0 p1_3=10 p1_8=8
+  N=35 paths=17175 cycles=57 p13_8=5 p13_15=3 p13_10=0 p1_3=13 p1_8=39
+  N=36 paths=12960 cycles=31 p13_8=4 p13_15=0 p13_10=1 p1_3=7 p1_8=28
+  N=37 paths=14026 cycles=20 p13_8=2 p13_15=1 p13_10=0 p1_3=3 p1_8=12
+  N=38 paths=11889 cycles=25 p13_8=2 p13_15=1 p13_10=0 p1_3=4 p1_8=23
+  N=39 paths=29123 cycles=50 p13_8=0 p13_15=0 p13_10=0 p1_3=2 p1_8=35
+  N=40 paths=39550 cycles=64 p13_8=11 p13_15=2 p13_10=1 p1_3=16 p1_8=56
+  N=41 paths=219968 cycles=464 p13_8=38 p13_15=17 p13_10=1 p1_3=101 p1_8=269
+  N=42 paths=553694 cycles=1062 p13_8=139 p13_15=77 p13_10=48 p1_3=366 p1_8=664
+  OK: paths = A071983 for 15..42 (reversal identified), cycles = A071984 for 32..42 (rotation+reversal),
+      no cycle below 32; Hamiltonian paths for N in {15,16,17,23} u [25,42] (N = 1 trivial)
+
+====================================================================================================
+B. Weak B ("ninja") pairs, exhaustive for 2 <= n <= 53 (own enumerator, kind B)
+====================================================================================================
+  n=30: S=0 L=0 L_masks=0 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=31: S=0 L=0 L_masks=0 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=32: S=0 L=0 L_masks=0 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=33: S=0 L=7 L_masks=5 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=34: S=7 L=0 L_masks=0 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=35: S=0 L=4 L_masks=1 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=36: S=4 L=0 L_masks=0 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=37: S=0 L=2 L_masks=2 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=38: S=2 L=0 L_masks=0 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=39: S=0 L=11 L_masks=5 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=40: S=11 L=1 L_masks=1 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=41: S=1 L=139 L_masks=74 S_ok=0 L_ok=0 pairs=0 exists=no
+  n=42: S=139 L=136 L_masks=53 S_ok=10 L_ok=10 pairs=20 exists=YES
+  n=43: S=136 L=946 L_masks=403 S_ok=4 L_ok=7 pairs=13 exists=YES
+  n=44: S=946 L=1129 L_masks=650 S_ok=45 L_ok=75 pairs=221 exists=YES
+  n=45: S=1129 L=3864 L_masks=1567 S_ok=3 L_ok=2 pairs=3 exists=YES
+  n=46: S=3864 L=6083 L_masks=3212 S_ok=5 L_ok=11 pairs=11 exists=YES
+  n=47: S=6083 L=8212 L_masks=4258 S_ok=11 L_ok=13 pairs=17 exists=YES
+  n=48: S=8212 L=19615 L_masks=10393 S_ok=859 L_ok=1135 pairs=3384 exists=YES
+  n=49: S=19615 L=8591 L_masks=4899 S_ok=108 L_ok=71 pairs=276 exists=YES
+  n=50: S=8591 L=24777 L_masks=12006 S_ok=153 L_ok=182 pairs=1090 exists=YES
+  n=51: S=24777 L=153594 L_masks=56545 S_ok=230 L_ok=318 pairs=1351 exists=YES
+  n=52: S=153594 L=302246 L_masks=103504 S_ok=10710 L_ok=12840 pairs=106235 exists=YES
+  n=53: S=302246 L=481425 L_masks=138483 S_ok=32242 L_ok=43753 pairs=470586 exists=YES
+  OK: no weak B pair for n <= 41; pairs for every 42 <= n <= 53; all Shorter/Longer/compatible/pair counts of the
+      session table reproduced; pair counts for 50..53 (blank in the note): 50: 1090, 51: 1351, 52: 106235, 53: 470586
+
+====================================================================================================
+B2. Other normalisations of a "nice pair" (same parity condition), for comparison
+====================================================================================================
+  kind G: pairs exist for n in [41, 42, 43, 44, 45, 46, 47, 48, 49, 50]  (range 14..50)
+    G = Gerbicz 2018 normalisation (both start 1; odd order ends 3, even order ends 8): first pair at n = 41,
+    exactly the lower end of his base block 41..2032 (session124_gerbicz_reconstruction_20261031)
+    witness at n = 41 (checked):  S = 1,8,41,40,9,27,37,12,24,25,39,10,15,21,28,36,13,23,26,38,11,5,4,32,17,19,6,30,34,2,7,18,31,33,16,20,29,35,14,22,3
+                                  L = 1,35,29,20,16,33,3,22,14,2,34,30,6,19,17,32,4,5,31,18,7,42,39,10,15,21,28,36,13,12,37,27,9,40,24,25,11,38,26,23,41,8
+  kind F: pairs exist for n in [15, 16, 25, 26, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]  (range 14..41)
+    F = no prefix / end condition (the "nice pair" of square_sum_B_base_interval_20261019, line 5):
+    pairs at n = 15, 16, 25, 26, 27 and every 29..41 (28 has none); every weak B pair is one, so with
+    THM-4850 free nice pairs exist exactly for n in {15,16,25,26,27} u [29, oo)
+    witness at n = 15 (checked):  S = 8,1,15,10,6,3,13,12,4,5,11,14,2,7,9   L = 8,1,15,10,6,3,13,12,4,5,11,14,2,7,9,16
+
+====================================================================================================
+C. The gate: odd-order Hamiltonian paths 1,3 -> 10
+====================================================================================================
+  {15: 0, 17: 0, 19: 0, 21: 0, 23: 0, 25: 0, 27: 0, 29: 0, 31: 0, 33: 0, 35: 0, 37: 0, 39: 0, 41: 1}
+  OK: the unique Q_41 path equals the one printed in THM-4850 (2); none at odd N in 15..39
+  even-order 1,3 -> 8 first at N = 34
+
+====================================================================================================
+D. Hamiltonian cycles of Q_32..Q_42, the unique 32- and 33-cycles
+====================================================================================================
+  Q_32: 1,8,28,21,4,32,17,19,30,6,3,13,12,24,25,11,5,31,18,7,29,20,16,9,27,22,14,2,23,26,10,15
+  Q_33: 1,8,28,21,4,32,17,19,30,6,3,13,12,24,25,11,5,20,29,7,18,31,33,16,9,27,22,14,2,23,26,10,15
+  deleted [(5, 31), (16, 20)], added [(5, 20), (16, 33), (31, 33)]
+  OK: reversal of 31,18,7,29,20 + insertion of 33; 33 has neighbours 3,16,31, pairwise non-adjacent on the 32-cycle;
+      both cycles pass 8-1-15
+  PRIOR ART: square_sum_spectrum_overnight_20261030/square_bridge.json.gz step 32->33 = {'insert': 15, 'reverse': [[10, 16]]} reproduces the
+      unique 33-cycle (one insertion + one reversal).
+      bridge steps 33..42 that are direct insertions (no reversal): []
+
+====================================================================================================
+E. Terminal-form cycles (8-1-3 for even N, 15-1-3 for odd N)
+====================================================================================================
+  exact counts N = 34..46: {34: 7, 35: 3, 36: 4, 37: 1, 38: 2, 39: 0, 40: 11, 41: 17, 42: 139, 43: 369, 44: 946, 45: 2699, 46: 3864}
+  OK: exists exactly for N in {34..38} u [40,62] (two own programs; complete searches at 30..33 and 39)
+  63..2620: all 2558 N re-found by ss_terminal_big and re-verified in Python (receipt terminal_big_63_2620_receipt.json; max nodes {'nodes': 32130, 'N': 76})
+  Q_39: 50 Hamiltonian cycles; through 8-1-3 or 15-1-3: 0
+
+====================================================================================================
+F. Insertion cost: min over cycles C of Q_N of |E(C) - E(C' - (N+1))|, per cycle C' of Q_(N+1)
+====================================================================================================
+  32 -> 33: 1 -> 1 cycles; min 2; histogram {2: 1}
+  33 -> 34: 1 -> 11 cycles; min 3; histogram {3: 1, 5: 1, 6: 3, 8: 5, 10: 1}
+  34 -> 35: 11 -> 57 cycles; min 2; histogram {2: 10, 3: 9, 4: 6, 5: 19, 6: 6, 7: 4, 8: 3}
+  35 -> 36: 57 -> 31 cycles; min 3; histogram {3: 7, 4: 15, 5: 4, 6: 5}
+  36 -> 37: 31 -> 20 cycles; min 3; histogram {3: 4, 4: 3, 5: 5, 6: 2, 7: 2, 8: 2, 9: 1, 10: 1}
+  37 -> 38: 20 -> 25 cycles; min 4; histogram {4: 3, 5: 6, 6: 10, 7: 6}
+  38 -> 39: 25 -> 50 cycles; min 4; histogram {4: 8, 5: 14, 6: 11, 7: 14, 8: 2, 9: 1}
+  39 -> 40: 50 -> 64 cycles; min 3; histogram {3: 12, 4: 9, 5: 25, 6: 14, 7: 4}
+  40 -> 41: 64 -> 464 cycles; min 2; histogram {2: 13, 3: 35, 4: 99, 5: 149, 6: 91, 7: 61, 8: 14, 9: 2}
+  41 -> 42: 464 -> 1062 cycles; min 2; histogram {2: 112, 3: 231, 4: 256, 5: 263, 6: 153, 7: 42, 8: 5}
+  OK: minima 2,3,2,3,3,4,4,3,2,2 (histograms identical to the session .out)
+
+====================================================================================================
+G. Third vertex and the 24-25 edge: ninja-pair members vs ALL paths with the same prefix/end (baseline)
+====================================================================================================
+  n=42: members 20 (S 10, L 10); third vertex {13: 4, 22: 11, 33: 5}; 22/33 16/20 = 80%; 24-25 17/20 = 85%
+        baseline all 275 paths: third vertex {6: 49, 13: 48, 22: 73, 33: 105}; 22/33 178/275 = 65%; 24-25 217/275 = 79%
+  n=43: members 11 (S 4, L 7); third vertex {22: 7, 33: 4}; 22/33 11/11 = 100%; 24-25 11/11 = 100%
+        baseline all 1082 paths: third vertex {6: 239, 13: 177, 22: 264, 33: 402}; 22/33 666/1082 = 62%; 24-25 778/1082 = 72%
+  n=44: members 120 (S 45, L 75); third vertex {6: 11, 13: 41, 22: 30, 33: 38}; 22/33 68/120 = 57%; 24-25 99/120 = 82%
+        baseline all 2075 paths: third vertex {6: 384, 13: 533, 22: 441, 33: 717}; 22/33 1158/2075 = 56%; 24-25 1425/2075 = 69%
+  n=45: members 5 (S 3, L 2); third vertex {13: 1, 22: 3, 33: 1}; 22/33 4/5 = 80%; 24-25 5/5 = 100%
+        baseline all 4993 paths: third vertex {6: 658, 13: 1639, 22: 688, 33: 1242, 46: 766}; 22/33 1930/4993 = 39%; 24-25 3860/4993 = 77%
+  n=46: members 16 (S 5, L 11); third vertex {13: 9, 22: 1, 46: 6}; 22/33 1/16 = 6%; 24-25 15/16 = 94%
+        baseline all 9947 paths: third vertex {6: 1377, 13: 2557, 22: 1375, 33: 2274, 46: 2364}; 22/33 3649/9947 = 37%; 24-25 7206/9947 = 72%
+  n=47: members 24 (S 11, L 13); third vertex {6: 10, 13: 2, 22: 1, 33: 11}; 22/33 12/24 = 50%; 24-25 5/24 = 21%
+        baseline all 14295 paths: third vertex {6: 2158, 13: 3671, 22: 2124, 33: 2476, 46: 3866}; 22/33 4600/14295 = 32%; 24-25 10472/14295 = 73%
+  n=48: members 1994 (S 859, L 1135); third vertex {6: 437, 13: 654, 22: 300, 33: 196, 46: 407}; 22/33 496/1994 = 25%; 24-25 1607/1994 = 81%
+        baseline all 27827 paths: third vertex {6: 4919, 13: 6823, 22: 4337, 33: 3674, 46: 8074}; 22/33 8011/27827 = 29%; 24-25 20176/27827 = 73%
+  n=49: members 179 (S 108, L 71); third vertex {6: 26, 13: 19, 22: 30, 33: 75, 46: 29}; 22/33 105/179 = 59%; 24-25 141/179 = 79%
+        baseline all 28206 paths: third vertex {6: 4728, 13: 6508, 22: 4459, 33: 6202, 46: 6309}; 22/33 10661/28206 = 38%; 24-25 20446/28206 = 72%
+
+====================================================================================================
+H. Numeration n = 49^k b + sum d_i 49^i (b in [B0, 49 B0 + 23], d_i in [24, 72])
+====================================================================================================
+  base block [42, 2081]: every n in [42, 400000] has exactly one numeral: True
+  base block [41, 2032]: every n in [41, 400000] has exactly one numeral: True
+  base block [53, 2620]: every n in [53, 400000] has exactly one numeral: True
+  2082 = (42, [24])
+  2130 = (42, [72])
+  2131 = (43, [24])
+  102102 = (42, [25, 35])
+  128453 = (53, [24, 24])
+  6294221 = (53, [24, 24, 24])
+  threshold42 packet: S_l = (85*49^l - 1)/2 = [42; 24,...,24] = 42, 2082, 102042, 5000082 (first l-digit numerals)
+  session124 core:    T_l = (107*49^l - 1)/2 = [53; 24,...,24];  Gerbicz base 41: (83*49^l - 1)/2 = [41; 24,...,24]
+
+====================================================================================================
+I. Prior art in the repository: threshold42 SMALL_BASES.json (2026-10-31 00:44) checked with the own checker
+====================================================================================================
+  OK: the eleven threshold42 base pairs at n = 42..52 are weak B pairs (independent checker)
+
+====================================================================================================
+J. Zeckendorf / Fibonacci arithmetic quoted in the note (numerology table)
+====================================================================================================
+  OK: all quoted Zeckendorf forms; 1,3,8 = F_2,F_4,F_6; 34 = F_9; {1,3,8} is a Diophantine triple
+
+ALL AUDIT ASSERTIONS PASSED (24.3 s)

@@ -1,0 +1,5 @@
+kind=G n=46 S_paths=24140 L_paths=37322 L_distinct_masks=16315 S_compatible=938 L_compatible=641 pairs=3206 exists=YES
+kind=G n=47 S_paths=37322 L_paths=74386 L_distinct_masks=31583 S_compatible=5542 L_compatible=6019 pairs=45935 exists=YES
+kind=G n=48 S_paths=74386 L_paths=119033 L_distinct_masks=51378 S_compatible=5368 L_compatible=7698 pairs=37038 exists=YES
+kind=G n=49 S_paths=119033 L_paths=90480 L_distinct_masks=41063 S_compatible=6191 L_compatible=5349 pairs=21632 exists=YES
+kind=G n=50 S_paths=90480 L_paths=205584 L_distinct_masks=85506 S_compatible=5848 L_compatible=6517 pairs=27046 exists=YES

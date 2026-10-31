@@ -21641,3 +21641,46 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 **Stronger hostile retained.** At ramified depth5, scalar26 fixes prime bank states, including mask0x80000801000. Thus the small-order statement that the prime additive stabilizer is exactly the named clock does not extend automatically. Its computed fixed-prime count is17045913600; full graph automorphism order is not inferred.
 
 **Records:** `05-knowledge/results/session110_overnight_20261030/CHECKPOINT_02.md`, `QUINARY_CARRIERS.md`, and the exact portable checkers `normalizers.js`, `depth5_hostile.js`, `graphs125.js`, `quinary_paths.js`. The earlier folded64-state carrier and the new unrestricted64-state ternary orbit carrier are different objects, despite equal cardinality.
+
+## MISTAKE-694 (2026-10-31, opus-2026-10-31-S69, THM-4850, THM-4851, HYP-9447 and the note `05-knowledge/results/ninja_pairs_square_sum_number_system_20261031.md` at the pre-audit commit 918129c522; found by the independent audit `04-computation/experiments/ninja_square_sum_20261031_audit_S69/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a same-morning packet with the main construction was missed because a directory listing was truncated, the attested source of the owner's term was missed, and the statistics had no baseline
+
+- **What was wrong.**
+  - **(1)** THM-4850 claimed as new: the start of the weak-B numeration at 42, the base block [42, 2081] and the replay of
+    session124's operators on the bases 42..52. `session124_square_prefix_threshold42_20261031` (commit 727bfdf464,
+    00:44 the same day, independently audited) already had:
+    - the weak B bases 42..52;
+    - the validity of the operators at m = 42;
+    - the thresholds S_l = (85*49^l - 1)/2;
+    - terminal cycles for every N >= 2082.
+
+    The packets the note itself cited consume these bases. The session had listed `05-knowledge/results` with
+    `| head -30`, which cut off the threshold42 folder. THM-4851 (c) and HYP-9447 also cited N >= 2621 where N >= 2082
+    was available.
+  - **(2)** The owner's "ninja pair" was decoded only as session124's weak B pair. The attested term is Gerbicz's
+    "nice pair" (mersenneforum 2018; the repository's B-base packet title), and the threshold depends on the
+    normalisation: free {15,16,25,26,27} u [29, oo); Gerbicz 41; weak B 42. The note presented 42 as "the" start.
+  - **(3)** The "3 with 22 and 33" and "24-25" statistics were reported for the n that fit (42, 43, 45), with no
+    baseline over all paths of the same prefix and end. "3's two largest neighbours" is false from order 46.
+  - **(4)** Minor:
+    - (-1)^(n+1) for (-1)^(m+1);
+    - a loose "low/high digits" description of the operators;
+    - "verified independently" for a built-in checker, with no stored certificates;
+    - an empty replay output (a `git stash -u` ran while the background job was writing it);
+    - a stale reference HYP-9438 in the search program.
+- **Repair.**
+  - THM-4850: threshold42 credited; new only the sharpness (no weak B pair for n <= 41), the unique gate, the counts
+    and the normalisation table.
+  - THM-4851 (c) and HYP-9447 cite N >= 2082, and (b) cites the 10-30 bridge certificate.
+  - Note rewritten: the nice-pair reading, the baseline table typed as a weak observation, the correct operator
+    description.
+  - Replay output recorded; reference fixed.
+- **How it was caught.** The auditor grepped every square-sum packet of 10-19..10-31 for the threshold, the bases and
+  the bridge. It recomputed all counts with its own enumerator, re-found the 2558 terminal cycles with a different
+  program, and recomputed the statistics against all paths with the same prefix and end.
+- **Lesson / reusable rule.**
+  - Never truncate a listing of a fast-moving results directory when sweeping for concurrent work (`head -N`). Use a
+    full listing or a targeted grep for the decisive numbers (here: 42, 2081, threshold).
+  - When an owner coins a term, search the literature the repository already cites for the nearest attested term
+    (here: "nice pair").
+  - Report structural statistics only against the matching baseline population, and for every n in the range.
+  - Never run `git stash` while a background job writes into the worktree.

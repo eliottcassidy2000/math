@@ -1,0 +1,12 @@
+m=42: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2082..2130
+m=43: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2131..2179
+m=44: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2180..2228
+m=45: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2229..2277
+m=46: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2278..2326
+m=47: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2327..2375
+m=48: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2376..2424
+m=49: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2425..2473
+m=50: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2474..2522
+m=51: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2523..2571
+m=52: input pair checked; all 49 digit operators produce verified weak B pairs at n = 2572..2620
+ALL 539 outputs verified (checks=6340180); the ninja numeration n = 49 m + d (d in 24..72) runs from the base block [42, 2081]
