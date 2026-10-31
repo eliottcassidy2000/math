@@ -1,0 +1,122 @@
+## 1. PRIMEGAME: factorizations, registers, flags, blocks
+  17/91  = 17/91: {17: 1} / {7: 1, 13: 1}; data change {7: -1}; flag [13] -> [17]
+  78/85  = 78/85: {2: 1, 3: 1, 13: 1} / {5: 1, 17: 1}; data change {2: 1, 3: 1, 5: -1}; flag [17] -> [13]
+  19/51  = 19/51: {19: 1} / {3: 1, 17: 1}; data change {3: -1}; flag [17] -> [19]
+  23/38  = 23/38: {23: 1} / {2: 1, 19: 1}; data change {2: -1}; flag [19] -> [23]
+  29/33  = 29/33: {29: 1} / {3: 1, 11: 1}; data change {3: -1}; flag [11] -> [29]
+  77/29  = 77/29: {7: 1, 11: 1} / {29: 1}; data change {7: 1}; flag [29] -> [11]
+  95/23  = 95/23: {5: 1, 19: 1} / {23: 1}; data change {5: 1}; flag [23] -> [19]
+  77/19  = 77/19: {7: 1, 11: 1} / {19: 1}; data change {7: 1}; flag [19] -> [11]
+  1/17   = 1/17: {} / {17: 1}; data change {}; flag [17] -> [1]
+  11/13  = 11/13: {11: 1} / {13: 1}; data change {}; flag [13] -> [11]
+  13/11  = 13/11: {13: 1} / {11: 1}; data change {}; flag [11] -> [13]
+  15/2   = 15/2: {3: 1, 5: 1} / {2: 1}; data change {2: -1, 3: 1, 5: 1}; flag [1] -> [1]
+  1/7    = 1/7: {} / {7: 1}; data change {7: -1}; flag [1] -> [1]
+  55/1   = 55/1: {5: 1, 11: 1} / {}; data change {5: 1}; flag [1] -> [11]
+  block B1: fractions ['11/13', '13/11']; data registers touched []; flags [11, 13]
+  block B2: fractions ['55/1', '1/7', '1/17', '17/91']; data registers touched [5, 7]; flags [11, 13, 17]
+  block B3: fractions ['19/51', '77/19', '77/29', '29/33']; data registers touched [3, 7]; flags [11, 17, 19, 29]
+  block B4: fractions ['78/85', '23/38', '95/23', '15/2']; data registers touched [2, 3, 5]; flags [13, 17, 19, 23]
+  reciprocal pairs in the program: [('11/13', '13/11')]
+  flag digraph arcs (from, to, fraction): [(13, 17, '17/91'), (17, 13, '78/85'), (17, 19, '19/51'), (19, 23, '23/38'), (11, 29, '29/33'), (29, 11, '77/29'), (23, 19, '95/23'), (19, 11, '77/19'), (17, 1, '1/17'), (13, 11, '11/13'), (11, 13, '13/11'), (1, 1, '15/2'), (1, 1, '1/7'), (1, 11, '55/1')]
+
+## 2. Products of fractions equal to a fraction or to 1
+  ordered products of 2 fractions equal to a fraction or 1: 2
+    11/13 * 13/11 = 1
+    13/11 * 11/13 = 1
+  ordered products of 3 fractions equal to a fraction or 1: 78
+    17/91 * 11/13 * 13/11 = 17/91
+    17/91 * 13/11 * 11/13 = 17/91
+    78/85 * 11/13 * 13/11 = 78/85
+    78/85 * 13/11 * 11/13 = 78/85
+    19/51 * 11/13 * 13/11 = 19/51
+    19/51 * 13/11 * 11/13 = 19/51
+    23/38 * 11/13 * 13/11 = 23/38
+    23/38 * 13/11 * 11/13 = 23/38
+    29/33 * 11/13 * 13/11 = 29/33
+    29/33 * 13/11 * 11/13 = 29/33
+    77/29 * 11/13 * 13/11 = 77/29
+    77/29 * 13/11 * 11/13 = 77/29
+    95/23 * 11/13 * 13/11 = 95/23
+    95/23 * 13/11 * 11/13 = 95/23
+    77/19 * 11/13 * 13/11 = 77/19
+    77/19 * 13/11 * 11/13 = 77/19
+    1/17 * 11/13 * 13/11 = 1/17
+    1/17 * 13/11 * 11/13 = 1/17
+    11/13 * 17/91 * 13/11 = 17/91
+    11/13 * 78/85 * 13/11 = 78/85
+    11/13 * 19/51 * 13/11 = 19/51
+    11/13 * 23/38 * 13/11 = 23/38
+    11/13 * 29/33 * 13/11 = 29/33
+    11/13 * 77/29 * 13/11 = 77/29
+    11/13 * 95/23 * 13/11 = 95/23
+    11/13 * 77/19 * 13/11 = 77/19
+    11/13 * 1/17 * 13/11 = 1/17
+    11/13 * 11/13 * 13/11 = 11/13
+    11/13 * 13/11 * 17/91 = 17/91
+    11/13 * 13/11 * 78/85 = 78/85
+    11/13 * 13/11 * 19/51 = 19/51
+    11/13 * 13/11 * 23/38 = 23/38
+    11/13 * 13/11 * 29/33 = 29/33
+    11/13 * 13/11 * 77/29 = 77/29
+    11/13 * 13/11 * 95/23 = 95/23
+    11/13 * 13/11 * 77/19 = 77/19
+    11/13 * 13/11 * 1/17 = 1/17
+    11/13 * 13/11 * 11/13 = 11/13
+    11/13 * 13/11 * 13/11 = 13/11
+    11/13 * 13/11 * 15/2 = 15/2
+    ... (38 more)
+  ordered products of 4 fractions equal to a fraction or 1: 6
+    11/13 * 11/13 * 13/11 * 13/11 = 1
+    11/13 * 13/11 * 11/13 * 13/11 = 1
+    11/13 * 13/11 * 13/11 * 11/13 = 1
+    13/11 * 11/13 * 11/13 * 13/11 = 1
+    13/11 * 11/13 * 13/11 * 11/13 = 1
+    13/11 * 13/11 * 11/13 * 11/13 = 1
+  one factor from each of B2, B3, B4 (any order) with product equal to a fraction or 1:
+    none
+
+## 3. Triangular and Fibonacci numbers in the program
+  distinct numerators and denominators: [1, 2, 7, 11, 13, 15, 17, 19, 23, 29, 33, 38, 51, 55, 77, 78, 85, 91, 95]
+  triangular among them: [1, 15, 55, 78, 91] (T_k: {1: 1, 15: 5, 55: 10, 78: 12, 91: 13} )
+  Fibonacci among them: [1, 2, 13, 55]
+  composite entries: [15, 33, 38, 51, 55, 77, 78, 85, 91, 95] (count 10 )
+  semiprime lemma (pq triangular iff q = 2p +- 1) below 10^5: 0 violations; triangular semiprimes: [(2, 3, 6), (2, 5, 10), (3, 5, 15), (3, 7, 21), (5, 11, 55), (7, 13, 91), (11, 23, 253), (19, 37, 703), (23, 47, 1081), (29, 59, 1711), (31, 61, 1891), (37, 73, 2701)] ...
+  Ming 1989: the triangular Fibonacci numbers are exactly 1, 3, 21, 55 (CITED); in the program: 1 and 55; 3 = H(C_3), 21 = the forbidden path count (THM-1370).
+
+## 4. Merged metagraphs at orders 3, 4, 5
+  order 3: 2 tilings, 2 classes, 2 merged nodes, 1 lines (1 blue, 0 black); pure-blue nodes [0, 1]
+    node 0: H = 1, |Aut| = 1, tilings = 1
+    node 1: H = 3, |Aut| = 3, tilings = 1
+    lines: 0-1 blue
+  order 4: 8 tilings, 4 classes, 3 merged nodes, 4 lines (2 blue, 2 black); pure-blue nodes [0]
+    node 0: H = 1, |Aut| = 1, tilings = 1
+    node 1: H = 3, |Aut| = 3, tilings = 2 (merged converse pair)
+    node 2: H = 5, |Aut| = 1, tilings = 5
+    lines: 0-2 blue, 1-2 black x2, 2-2 blue
+  order 5: 64 tilings, 12 classes, 10 merged nodes, 32 lines (8 blue, 24 black); pure-blue nodes [0, 2, 9]
+    node 0: H = 1, |Aut| = 1, tilings = 1
+    node 1: H = 3, |Aut| = 3, tilings = 2 (merged converse pair)
+    node 2: H = 3, |Aut| = 3, tilings = 1
+    node 3: H = 5, |Aut| = 1, tilings = 10 (merged converse pair)
+    node 4: H = 9, |Aut| = 1, tilings = 9
+    node 5: H = 9, |Aut| = 1, tilings = 9
+    node 6: H = 13, |Aut| = 1, tilings = 13
+    node 7: H = 11, |Aut| = 1, tilings = 11
+    node 8: H = 15, |Aut| = 3, tilings = 5
+    node 9: H = 15, |Aut| = 5, tilings = 3
+    lines: 0-4 blue, 1-5 black x2, 2-6 blue, 3-4 black x2, 3-5 black x2, 3-6 black x2, 3-7 black x2, 3-8 black x2, 4-5 black x2, 4-6 blue, 4-7 blue, 4-8 black x2, 5-6 black x2, 5-7 blue, 6-6 black x2, 6-7 black x2, 6-9 blue, 7-7 black x2, 7-9 blue, 8-9 blue
+
+## 5. Calibrated labelling tests
+  ten composites: [15, 33, 38, 51, 55, 77, 78, 85, 91, 95] with factorizations {15: [3, 5], 33: [3, 11], 38: [2, 19], 51: [3, 17], 55: [5, 11], 77: [7, 11], 78: [2, 3, 13], 85: [5, 17], 91: [7, 13], 95: [5, 19]}
+  composite-sharing graph: 20 edges on 10 vertices; order-5 merged metagraph: 18 distinct non-loop adjacencies on 10 nodes (plus loops at [6, 7])
+  maximum preserved adjacencies over all 10! bijections: 15 of 20 (attained by 40 bijections)
+  calibration: for 20 random graphs with 20 edges the maximum preserved adjacency is [14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 17] (mean 15.25)
+  block flag sets: {'B1': [11, 13], 'B2': [11, 13, 17], 'B3': [11, 17, 19, 29], 'B4': [13, 17, 19, 23]}
+  shared flags between the three blocks of four: {'B2-B3': [11, 17], 'B2-B4': [13, 17], 'B3-B4': [17, 19]} (a triangle)
+  order-4 merged metagraph lines: Counter({(1, 2, 'black'): 2, (0, 2, 'blue'): 1, (2, 2, 'blue'): 1}) (a star at the strong node with one loop: not a triangle)
+  verdict: the block graph (K_3 by shared flags) and the order-4 line graph (star plus loop at the strong node) are not isomorphic in any labelling; the only exact match is the involution pair B1 against the single order-3 line.
+
+real	3m8.413s
+user	0m0.015s
+sys	0m0.046s
