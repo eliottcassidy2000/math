@@ -1,0 +1,289 @@
+{
+  "conditional_terminal_fee_if_33": "5017089801/1220703125",
+  "grammar_forms": 34,
+  "inherited_certificates_rerun": false,
+  "insufficient_fee_if_32": "4870605426/1220703125",
+  "multiplier_pairs_without_placement": 423868,
+  "patterns": [
+    {
+      "all_one10_blocks": 0,
+      "core_clock_cap": 48828467,
+      "core_clock_mod8": 3,
+      "first_pair": [
+        280875,
+        127625
+      ],
+      "j10": 31,
+      "j11": 23,
+      "last_pair": [
+        48828043,
+        734449
+      ],
+      "pairs": 30518,
+      "prefix_block_counts": [
+        0
+      ],
+      "required_core_map": [
+        1,
+        0
+      ]
+    },
+    {
+      "all_one10_blocks": 1,
+      "core_clock_cap": 44922217,
+      "core_clock_mod8": 1,
+      "first_pair": [
+        31281,
+        3783
+      ],
+      "j10": 29,
+      "j11": 23,
+      "last_pair": [
+        44921473,
+        23512939
+      ],
+      "pairs": 25829,
+      "prefix_block_counts": [
+        0,
+        1
+      ],
+      "required_core_map": [
+        2890625001,
+        2890625000
+      ]
+    },
+    {
+      "all_one10_blocks": 2,
+      "core_clock_cap": 41015967,
+      "core_clock_mod8": 7,
+      "first_pair": [
+        219375,
+        183125
+      ],
+      "j10": 27,
+      "j11": 23,
+      "last_pair": [
+        41015223,
+        19606689
+      ],
+      "pairs": 21531,
+      "prefix_block_counts": [
+        0,
+        1,
+        2
+      ],
+      "required_core_map": [
+        5781250001,
+        5781250000
+      ]
+    },
+    {
+      "all_one10_blocks": 3,
+      "core_clock_cap": 37109717,
+      "core_clock_mod8": 5,
+      "first_pair": [
+        271333,
+        178919
+      ],
+      "j10": 25,
+      "j11": 23,
+      "last_pair": [
+        37108973,
+        15700439
+      ],
+      "pairs": 17626,
+      "prefix_block_counts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "required_core_map": [
+        2568359376,
+        2568359375
+      ]
+    },
+    {
+      "all_one10_blocks": 4,
+      "core_clock_cap": 19531275,
+      "core_clock_mod8": 3,
+      "first_pair": [
+        323291,
+        174713
+      ],
+      "j10": 23,
+      "j11": 23,
+      "last_pair": [
+        19527539,
+        1964477
+      ],
+      "pairs": 4881,
+      "prefix_block_counts": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "required_core_map": [
+        5458984376,
+        5458984375
+      ]
+    },
+    {
+      "all_one10_blocks": 0,
+      "core_clock_cap": 97656592,
+      "core_clock_mod8": 0,
+      "first_pair": [
+        301552,
+        119636
+      ],
+      "j10": 32,
+      "j11": 24,
+      "last_pair": [
+        97656384,
+        7136312
+      ],
+      "pairs": 122071,
+      "prefix_block_counts": [
+        0
+      ],
+      "required_core_map": [
+        1,
+        0
+      ]
+    },
+    {
+      "all_one10_blocks": 1,
+      "core_clock_cap": 87890650,
+      "core_clock_mod8": 6,
+      "first_pair": [
+        188094,
+        179342
+      ],
+      "j10": 30,
+      "j11": 24,
+      "last_pair": [
+        87890238,
+        11397834
+      ],
+      "pairs": 98875,
+      "prefix_block_counts": [
+        0,
+        1
+      ],
+      "required_core_map": [
+        2890625001,
+        2890625000
+      ]
+    },
+    {
+      "all_one10_blocks": 2,
+      "core_clock_cap": 68359400,
+      "core_clock_mod8": 4,
+      "first_pair": [
+        240052,
+        175136
+      ],
+      "j10": 28,
+      "j11": 24,
+      "last_pair": [
+        68358820,
+        8805760
+      ],
+      "pairs": 59814,
+      "prefix_block_counts": [
+        0,
+        1,
+        2
+      ],
+      "required_core_map": [
+        5781250001,
+        5781250000
+      ]
+    },
+    {
+      "all_one10_blocks": 3,
+      "core_clock_cap": 48828150,
+      "core_clock_mod8": 2,
+      "first_pair": [
+        292010,
+        170930
+      ],
+      "j10": 26,
+      "j11": 24,
+      "last_pair": [
+        48827402,
+        6213686
+      ],
+      "pairs": 30517,
+      "prefix_block_counts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "required_core_map": [
+        2568359376,
+        2568359375
+      ]
+    },
+    {
+      "all_one10_blocks": 4,
+      "core_clock_cap": 29296900,
+      "core_clock_mod8": 0,
+      "first_pair": [
+        343968,
+        166724
+      ],
+      "j10": 24,
+      "j11": 24,
+      "last_pair": [
+        29295984,
+        3621612
+      ],
+      "pairs": 10984,
+      "prefix_block_counts": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "required_core_map": [
+        5458984376,
+        5458984375
+      ]
+    },
+    {
+      "all_one10_blocks": 5,
+      "core_clock_cap": 9765650,
+      "core_clock_mod8": 6,
+      "first_pair": [
+        94374,
+        42882
+      ],
+      "j10": 22,
+      "j11": 24,
+      "last_pair": [
+        9764566,
+        1029538
+      ],
+      "pairs": 1222,
+      "prefix_block_counts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "required_core_map": [
+        2246093751,
+        2246093750
+      ]
+    }
+  ],
+  "scope": "conditional necessary grammar; heavy certificate not assumed",
+  "signed_floor_controls": 17100,
+  "small_clock_pairs": 300,
+  "status": "PASS"
+}

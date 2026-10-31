@@ -1,0 +1,19 @@
+{
+  "Collatz_convergence": "OPEN",
+  "actual_identity10_H_lower_bound": "33/8",
+  "all_layer_bound": "OPEN",
+  "boundary_tangent_controls": 625,
+  "endpoint_pairs_excluded": 12,
+  "eta14": "5017089801/1220703125",
+  "inherited_E10_R1_certificate_rerun": false,
+  "multiplier_height_census": {
+    "2": 10,
+    "3": 2
+  },
+  "nonone_margin": "134277301/1220703125",
+  "phase_identity_controls": 20952,
+  "scope": "arithmetic and complete-pair-list controls; full potential and graph replays are separate",
+  "sharp_S14_coefficient": "762939453/1220703125",
+  "sharp_all_one_clock": 2441406250,
+  "status": "PASS"
+}

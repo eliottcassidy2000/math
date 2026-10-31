@@ -7,3 +7,5 @@
 
 This compact index keeps the mandatory startup page within its size budget;
 individual session routes preserve scope and remaining open obligations.
+
+[Session122](S122.md).

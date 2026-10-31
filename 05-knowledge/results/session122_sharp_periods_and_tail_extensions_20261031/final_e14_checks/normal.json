@@ -1,0 +1,8 @@
+{
+  "direct_affine_words": 87380,
+  "nonone_words": 87372,
+  "potential_imports": 0,
+  "scope": "finite hostile/implementation control, not replacement for all-word proof",
+  "status": "PASS",
+  "universe": "every nonempty word of length<=8 over letters1..4"
+}

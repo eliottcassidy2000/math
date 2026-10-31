@@ -1,0 +1,199 @@
+{
+  "models": [
+    {
+      "E": 5,
+      "graph_edges": 1406,
+      "graph_nodes": 1396,
+      "potential_sha256": "716d658df261477daa29bc81f1d8cd6e9c8b2212f83329b1f81815a00edeab52",
+      "records": [
+        {
+          "abstract_paths": 4,
+          "multiplier_survivors": [],
+          "pairs": [
+            [
+              26,
+              18
+            ]
+          ],
+          "score": 34,
+          "slack": 0
+        },
+        {
+          "abstract_paths": 0,
+          "multiplier_survivors": [],
+          "pairs": [],
+          "score": 35,
+          "slack": 1
+        },
+        {
+          "abstract_paths": 32,
+          "multiplier_survivors": [],
+          "pairs": [
+            [
+              36,
+              28
+            ],
+            [
+              76,
+              68
+            ],
+            [
+              276,
+              268
+            ],
+            [
+              1276,
+              1268
+            ]
+          ],
+          "score": 36,
+          "slack": 2
+        }
+      ]
+    },
+    {
+      "E": 6,
+      "graph_edges": 6283,
+      "graph_nodes": 6281,
+      "potential_sha256": "fb1d060ebc0e73a8b4e0611cb6023abf991c57bb2bb1e65059ff9a1533b058fc",
+      "records": [
+        {
+          "abstract_paths": 1,
+          "multiplier_survivors": [],
+          "pairs": [
+            [
+              24,
+              12
+            ]
+          ],
+          "score": 32,
+          "slack": 0
+        },
+        {
+          "abstract_paths": 0,
+          "multiplier_survivors": [],
+          "pairs": [],
+          "score": 33,
+          "slack": 1
+        },
+        {
+          "abstract_paths": 10,
+          "multiplier_survivors": [],
+          "pairs": [
+            [
+              34,
+              22
+            ],
+            [
+              74,
+              62
+            ],
+            [
+              274,
+              262
+            ],
+            [
+              1274,
+              1262
+            ],
+            [
+              6274,
+              6262
+            ]
+          ],
+          "score": 34,
+          "slack": 2
+        }
+      ]
+    },
+    {
+      "E": 7,
+      "graph_edges": 32111,
+      "graph_nodes": 32079,
+      "potential_sha256": "04dafa22053fc5ad88d8de3cacb18859e6bb22a3a7bd5d0047e8598e577f3088",
+      "records": [
+        {
+          "abstract_paths": 5,
+          "multiplier_survivors": [],
+          "pairs": [
+            [
+              26,
+              18
+            ],
+            [
+              42,
+              26
+            ]
+          ],
+          "score": 42,
+          "slack": 0
+        },
+        {
+          "abstract_paths": 0,
+          "multiplier_survivors": [],
+          "pairs": [],
+          "score": 43,
+          "slack": 1
+        },
+        {
+          "abstract_paths": 70,
+          "multiplier_survivors": [],
+          "pairs": [
+            [
+              36,
+              28
+            ],
+            [
+              52,
+              36
+            ],
+            [
+              76,
+              68
+            ],
+            [
+              92,
+              76
+            ],
+            [
+              276,
+              268
+            ],
+            [
+              292,
+              276
+            ],
+            [
+              1276,
+              1268
+            ],
+            [
+              1292,
+              1276
+            ],
+            [
+              6276,
+              6268
+            ],
+            [
+              6292,
+              6276
+            ],
+            [
+              31276,
+              31268
+            ],
+            [
+              31292,
+              31276
+            ]
+          ],
+          "score": 44,
+          "slack": 2
+        }
+      ]
+    }
+  ],
+  "scope": "E5,E6,E7 independent scheduling and language controls; full E10 audit is separate",
+  "status": "PASS"
+}

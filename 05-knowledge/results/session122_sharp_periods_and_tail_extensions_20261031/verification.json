@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "script": "conductor/check_conductor.py",
+      "status": "PASS",
+      "stdout_sha256": "c60528100f896aaf6c1b35d984c253638257c4858b20eb467aeac1e422055c14"
+    },
+    {
+      "script": "audit_conductor/check.py",
+      "status": "PASS",
+      "stdout_sha256": "3b53b6b78d27fc3a815f6e71785aba392e7887fcddef531600e50e7a1869f985"
+    },
+    {
+      "script": "audit_ramsey/check.py",
+      "status": "PASS",
+      "stdout_sha256": "b5426a86997fac70944a799601336b55ee7349c2f17289a6f462fcebdee29bf7"
+    },
+    {
+      "script": "ramsey/check_rows.py",
+      "status": "PASS",
+      "stdout_sha256": "bc4d4fd441379572415ee30d3c13e17d7e7d6df2113140e3b5f3ccae87c386db"
+    },
+    {
+      "script": "audit_ramsey/check_rows.py",
+      "status": "PASS",
+      "stdout_sha256": "51bfd8a4f83642d51300440fb0c8e42761ee8eeaab50ae4243b82fcdb0a329eb"
+    },
+    {
+      "script": "audit_ramsey/mutations.py",
+      "status": "PASS",
+      "stdout_sha256": "155999b929643bd96a9217fe1c2bb5d1d390e9350bbd0c7624ab48963af796af"
+    },
+    {
+      "script": "ramsey/check_generators.py",
+      "status": "PASS",
+      "stdout_sha256": "3cfdbab3b368f06daae90f8bb4095caf253277776ac6bdcb0563d4b2c9ee40d4"
+    },
+    {
+      "script": "audit_ramsey/check_generators.py",
+      "status": "PASS",
+      "stdout_sha256": "5a5075a1e9928bc06c73dfee2ec87973d170b5f54c1c5b17778e20de2f54cc7a"
+    },
+    {
+      "script": "collatz/check_e14_closure.py",
+      "status": "PASS",
+      "stdout_sha256": "3269164984c3db71aca2b7b73df527625b8f1faf84bacb1a2ef75c5967a69746"
+    },
+    {
+      "script": "collatz/check_small_models.py",
+      "status": "PASS",
+      "stdout_sha256": "b6540df1d6d745355bc0cfef4e5aba279a880b5fa0f3b51c44401acf88fb647e"
+    },
+    {
+      "script": "audit_collatz/check_closure.py",
+      "status": "PASS",
+      "stdout_sha256": "cf75e01800cf3e45eba6e80662139f0950c1760b85bb59fa7a448892f5fafa8b"
+    },
+    {
+      "script": "collatz/check_nested_clock.py",
+      "status": "PASS",
+      "stdout_sha256": "885ee35f2cf2d7f950286c3188615f31bb86cc227b26492ddfbd755c0eaf28e8"
+    },
+    {
+      "script": "audit_collatz/check_nested.py",
+      "status": "PASS",
+      "stdout_sha256": "fe2d06af442f694a513b875fe91abeb51412128521390af2db53dedcbed347c0"
+    },
+    {
+      "script": "audit_lrc/check.py",
+      "status": "PASS",
+      "stdout_sha256": "d6a203e9d2941fe3504826f679339a25bf4276d41279d36f255ae5233fa4bd09"
+    },
+    {
+      "script": "audit_lrc/controls.py",
+      "status": "PASS",
+      "stdout_sha256": "7e40ce61f812233ca4a35ebdc0cb8e0ecf4ecc9bdbe2f8d055ae1ded6c7cefb6"
+    },
+    {
+      "script": "audit_lrc5/check.py",
+      "status": "PASS",
+      "stdout_sha256": "7c9ed4f7d44d38bae78e54b52ef11866587ae09dfe9b92ff8dda669c1a50de39"
+    },
+    {
+      "script": "audit_lrc5/controls.py",
+      "status": "PASS",
+      "stdout_sha256": "8300e19bf6a0ee2a08d194775fcc9dae1fedc77677263030fdf8afd49f5ec2bf"
+    }
+  ],
+  "lrc_replays": [
+    {
+      "core_count": 715,
+      "receipt_sha256": "dca3d9be25f87c8e9cf60417f823efc526defe65b8ef003f276f12636da1d920",
+      "status": "PASS",
+      "tails": 4
+    },
+    {
+      "core_count": 1287,
+      "receipt_sha256": "2dfbc2cb3e7e2969ffa8dedb5283637e4cd1db7bbe939d158dfed570770130cd",
+      "status": "PASS",
+      "tails": 5
+    }
+  ],
+  "normal_and_optimized": "identical",
+  "replay_continuation": "Both normal/optimized producers completed before an environment restart interrupted the final audits. Their exact regenerated receipts were retained and validated; all light checks and both complete independent audits were then rerun to completion with durable stage receipts.",
+  "scope": "All declared new finite certificates and controls passed. Large C++ evidence is separate in large_verification.json. Inherited rational Collatz and prior Session121 LRC certificates are not rerun here.",
+  "status": "PASS"
+}

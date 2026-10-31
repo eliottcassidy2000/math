@@ -1,0 +1,15 @@
+{
+  "dependencies": [
+    "LRC.md P3 nine-core/four-tail",
+    "FIVE_TAILS.md F1 general conductor",
+    "FIVE_TAILS.md F2 padding"
+  ],
+  "five_tail_status": "PASS",
+  "independent_audit": "../audit_lrc5/AUDIT.md",
+  "normal_optimized_identical": true,
+  "sha256": {
+    "five_tail_certificate.py": "5dc485dd52ffe4c1339557c43649b5d6357c4cb22983ab125e7700eb1482bff4",
+    "five_tail_pruned_receipt.json": "2dfbc2cb3e7e2969ffa8dedb5283637e4cd1db7bbe939d158dfed570770130cd",
+    "source_lrc_banks.py": "4789a715e13314547f34c6061886b0c0133aad57e583e447a3f0953b5ce13c40"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "inherited_rational_certificate_rerun": false,
+  "potential": {
+    "E": 10,
+    "R": 2,
+    "binary_committed": false,
+    "bytes": 1962500000,
+    "format": "signed int64 little endian",
+    "independent_edges_verified": 18850000000,
+    "independent_entries_verified": 630,
+    "maximum": -10,
+    "minimum": -128,
+    "normal_ndebug_receipts_match": true,
+    "producer_coarse40_tail_pass": false,
+    "producer_letter_cap": 40,
+    "required_checker_letter_cap": 64,
+    "sha256": "9afc878aaaf0ff11b075678493f6ef935c1735afe4f81bdcd9a2e1282c652c31",
+    "states": 245312500,
+    "terminal": -30
+  },
+  "source_sha256": {
+    "check_e14_closure.py": "4edb35d4a600e947269f4a15eb2734fd88d54e36991eefc7b3abc5d465845ea7",
+    "check_small_models.py": "13e40bc4dc409918497a7a44129f76fa96c1997752d150c593f2f1cf79470053",
+    "fifo_control.cpp": "c7711a338f62b124bab95da3d8f6121964450098655ab9b1b8c37a43e9b2ac1f",
+    "integer_probe_intrusive.cpp": "73626508ed9727656136bd6283a3bd097b096245ef005f51729d8ee1a17f59e6",
+    "near_tight_corridor.cpp": "4d5b52a372cb95d5263d25d8ee6636b1bae453745313dbdd352070b3af26cdad",
+    "near_tight_corridor.py": "22d56e18aeb6a1005cc7424e21a4ad5058c645ca1c1ab8b0a22f80476c090ea0"
+  },
+  "status": "PASS: independently verified full potential and independently reconstructed near-tight graph"
+}

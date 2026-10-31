@@ -1,4 +1,9 @@
 {
+  "lrc/five_tail_pruned_receipt.json": {
+    "archive": "lrc/five_tail_pruned_receipt.json.gz.b64",
+    "bytes": 849448,
+    "sha256": "2dfbc2cb3e7e2969ffa8dedb5283637e4cd1db7bbe939d158dfed570770130cd"
+  },
   "lrc/four_tail_receipt.json": {
     "archive": "lrc/four_tail_receipt.json.gz.b64",
     "bytes": 450065,

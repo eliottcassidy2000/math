@@ -1,0 +1,206 @@
+{
+  "checks": [
+    {
+      "args": [],
+      "receipt": "conductor/normal.json",
+      "script": "conductor/check_conductor.py"
+    },
+    {
+      "args": [],
+      "receipt": "audit_conductor/normal.json",
+      "script": "audit_conductor/check.py"
+    },
+    {
+      "args": [],
+      "receipt": "audit_ramsey/result.json",
+      "script": "audit_ramsey/check.py"
+    },
+    {
+      "args": [],
+      "receipt": "ramsey/rows.normal.json",
+      "script": "ramsey/check_rows.py"
+    },
+    {
+      "args": [
+        "ramsey/rows.normal.json"
+      ],
+      "receipt": "audit_ramsey/rows.result.json",
+      "script": "audit_ramsey/check_rows.py"
+    },
+    {
+      "args": [
+        "ramsey/rows.normal.json"
+      ],
+      "receipt": "audit_ramsey/mutations.json",
+      "script": "audit_ramsey/mutations.py"
+    },
+    {
+      "args": [],
+      "receipt": "ramsey/generators.normal.json",
+      "script": "ramsey/check_generators.py"
+    },
+    {
+      "args": [
+        "ramsey/generators.normal.json"
+      ],
+      "receipt": "audit_ramsey/generators.result.json",
+      "script": "audit_ramsey/check_generators.py"
+    },
+    {
+      "args": [],
+      "receipt": "collatz/e14_controls.json",
+      "script": "collatz/check_e14_closure.py"
+    },
+    {
+      "args": [],
+      "receipt": "collatz/small_models.json",
+      "script": "collatz/check_small_models.py"
+    },
+    {
+      "args": [],
+      "receipt": "audit_collatz/closure.json",
+      "script": "audit_collatz/check_closure.py"
+    },
+    {
+      "args": [],
+      "receipt": "collatz/nested_clock.json",
+      "script": "collatz/check_nested_clock.py"
+    },
+    {
+      "args": [],
+      "receipt": "audit_collatz/normal.json",
+      "script": "audit_collatz/check_nested.py"
+    }
+  ],
+  "lrc_replays": [
+    {
+      "audit_receipt": "audit_lrc/result.json",
+      "auditor": "audit_lrc/check.py",
+      "controls": "audit_lrc/controls.py",
+      "controls_receipt": "audit_lrc/controls.json",
+      "producer": "lrc/four_tail_certificate.py",
+      "receipt": "lrc/four_tail_receipt.json",
+      "tails": 4
+    },
+    {
+      "audit_receipt": "audit_lrc5/result.json",
+      "auditor": "audit_lrc5/check.py",
+      "controls": "audit_lrc5/controls.py",
+      "controls_receipt": "audit_lrc5/controls.json",
+      "producer": "lrc/five_tail_certificate.py",
+      "receipt": "lrc/five_tail_pruned_receipt.json",
+      "tails": 5
+    }
+  ],
+  "sha256": {
+    ".gitignore": "df485b3911a24fc0986b53c940fc6ea67ac5dc9d2e57992d9b01cede34c9d820",
+    "README.md": "f703f2fc1d9f5554deefadb061cf0fef77bb147cf24ccdd2ff811e69a91a317e",
+    "SYNTHESIS.md": "ddd678bb2469e6e2244eeba22d88073faacbcaac9d263e1a3481c73d456b18d5",
+    "audit_collatz/AUDIT.md": "d765dcd2424d2e612d27b84d1141848ab6b0fd9a3361d11c13f268c6271e0742",
+    "audit_collatz/E14_AUDIT.md": "a37fe90ac64871c732a321dfe7f973ed5f0ce490d4b2fa7c0246f21c7a6ad879",
+    "audit_collatz/audit_integer.cpp": "8a89e16ebea140f723e0f787d9d338cdc3b539daecebf2be4469eb257bd59b3b",
+    "audit_collatz/check_closure.py": "c94ef1c985734c3bc6f1a753af9b6844f2b13f9ae1f545e2568c39c762afc0c9",
+    "audit_collatz/check_nested.py": "1216dcd8b038651c63f5a98c1c12ca99dac0891a1f78370c25b56988b3a19c8a",
+    "audit_collatz/closure.json": "cf75e01800cf3e45eba6e80662139f0950c1760b85bb59fa7a448892f5fafa8b",
+    "audit_collatz/closure.optimized.json": "cf75e01800cf3e45eba6e80662139f0950c1760b85bb59fa7a448892f5fafa8b",
+    "audit_collatz/corridor_E10.json": "819c471f74024241ab0cddb9938800ceb4f2f84cf600cdbfd6a3d6a5be2468a4",
+    "audit_collatz/corridor_E10.ndebug.json": "819c471f74024241ab0cddb9938800ceb4f2f84cf600cdbfd6a3d6a5be2468a4",
+    "audit_collatz/corridor_E7.json": "c60223c853c0c1631f2a6acc689e63b772257dce2ea80604181b607bf96aed86",
+    "audit_collatz/independent_corridor.cpp": "512ac9b20a84f9006ca4b61fa688e904ebeac6110b482cccb6f523821cc683fa",
+    "audit_collatz/integer_E10.json": "3e8696b2b441ee34c09234966f3784c29c6fa10435bfdc0e31dde3a3b240b29e",
+    "audit_collatz/integer_E10.ndebug.json": "3e8696b2b441ee34c09234966f3784c29c6fa10435bfdc0e31dde3a3b240b29e",
+    "audit_collatz/integer_E7.json": "72527955a7a33882c0a0fba29302d0367d0fa37b0561341661df905a27b06bcc",
+    "audit_collatz/mutation_E7.json": "8b4b2214ed75b788893efc6f65c32722da54dc4901c2215538dfbbec075883f4",
+    "audit_collatz/normal.json": "fe2d06af442f694a513b875fe91abeb51412128521390af2db53dedcbed347c0",
+    "audit_collatz/optimized.json": "fe2d06af442f694a513b875fe91abeb51412128521390af2db53dedcbed347c0",
+    "audit_collatz/verification.json": "0483c80423d9e25e277f97f7517f1f18977f05fef6e7ba9229b6a7a897e95825",
+    "audit_conductor/AUDIT.md": "a5e766c52cbcff977139b4c243f0454f32ffc030d72bf999e976d7f1b9166daa",
+    "audit_conductor/check.py": "46b16a0ed2a867871cf3c85d7f275be4c0457d678d935067b921b7092793ed2a",
+    "audit_conductor/normal.json": "3b53b6b78d27fc3a815f6e71785aba392e7887fcddef531600e50e7a1869f985",
+    "audit_conductor/optimized.json": "3b53b6b78d27fc3a815f6e71785aba392e7887fcddef531600e50e7a1869f985",
+    "audit_lrc/AUDIT.md": "c7e33e3c844f2da01f42d3815d590a8fad627dd70949b225e36dbf61d62c7e2f",
+    "audit_lrc/check.py": "dcf7eb6f614cb021e2ef54da4422b9bae9c1a5dc7905c2a8c9124802b9a17b7a",
+    "audit_lrc/controls.json": "7e40ce61f812233ca4a35ebdc0cb8e0ecf4ecc9bdbe2f8d055ae1ded6c7cefb6",
+    "audit_lrc/controls.optimized.json": "7e40ce61f812233ca4a35ebdc0cb8e0ecf4ecc9bdbe2f8d055ae1ded6c7cefb6",
+    "audit_lrc/controls.py": "1a730a39b4d334683d8020efc9c1ad8e47ff8956c28eee90ae506ef7250fb264",
+    "audit_lrc/geometry.py": "65a7fadf544334f7e18dc175a06f6947cf3821ac1e6857af0408d89cfa60c9bf",
+    "audit_lrc/result.json": "d6a203e9d2941fe3504826f679339a25bf4276d41279d36f255ae5233fa4bd09",
+    "audit_lrc/result.optimized.json": "d6a203e9d2941fe3504826f679339a25bf4276d41279d36f255ae5233fa4bd09",
+    "audit_lrc5/AUDIT.md": "3332e6a4ea7fbdb47bb286126f1bffd50e131e157728b1283b6107724ce95e1d",
+    "audit_lrc5/bind_rebuilt.py": "fed574564dd07fe3ca0e14048eeb30537e129e516a8cd8ca9f2db26cecfe8cca",
+    "audit_lrc5/check.py": "f4d0417d8e8697fc4f42721b771e31eab86984e6094132b1e2e0504eb9a434a9",
+    "audit_lrc5/controls.json": "8300e19bf6a0ee2a08d194775fcc9dae1fedc77677263030fdf8afd49f5ec2bf",
+    "audit_lrc5/controls.optimized.json": "8300e19bf6a0ee2a08d194775fcc9dae1fedc77677263030fdf8afd49f5ec2bf",
+    "audit_lrc5/controls.py": "a5b2560b13486dccb1d5e608a6d13a607bdd232551009eb9b6db24e920c8ad88",
+    "audit_lrc5/geometry.py": "65a7fadf544334f7e18dc175a06f6947cf3821ac1e6857af0408d89cfa60c9bf",
+    "audit_lrc5/rebuild.py": "a1aeac8caf130042dd592a973516e44e4da37d3418bdb1f344e1809cab931485",
+    "audit_lrc5/result.json": "7c9ed4f7d44d38bae78e54b52ef11866587ae09dfe9b92ff8dda669c1a50de39",
+    "audit_lrc5/result.optimized.json": "7c9ed4f7d44d38bae78e54b52ef11866587ae09dfe9b92ff8dda669c1a50de39",
+    "audit_ramsey/AUDIT.md": "542b30b6b8ffae70aaec4f5e02e7d4c9b5ed5df32f3f3ab3c376996aa657cd00",
+    "audit_ramsey/FINITE_GENERATORS_AUDIT.md": "addce8b844ef63f04862021f670e78481067ef5c8a298481f2a46b203e0ccdb7",
+    "audit_ramsey/check.py": "5dbb5046d5d0d624bbb9f5a08f8b90d2a6c859b2dc7d15a31fea83fb87e1e723",
+    "audit_ramsey/check_generators.py": "b6d22e845f7d29951d22455c70cae8014912a8969e469ce6400a33fcf71dd452",
+    "audit_ramsey/check_rows.py": "d2f2c99832d4c6b34ee318b2ed5194393391a3280c4dec0e8afd0d5510fc500b",
+    "audit_ramsey/generators.result.json": "5a5075a1e9928bc06c73dfee2ec87973d170b5f54c1c5b17778e20de2f54cc7a",
+    "audit_ramsey/generators.result.optimized.json": "5a5075a1e9928bc06c73dfee2ec87973d170b5f54c1c5b17778e20de2f54cc7a",
+    "audit_ramsey/mutations.json": "155999b929643bd96a9217fe1c2bb5d1d390e9350bbd0c7624ab48963af796af",
+    "audit_ramsey/mutations.optimized.json": "155999b929643bd96a9217fe1c2bb5d1d390e9350bbd0c7624ab48963af796af",
+    "audit_ramsey/mutations.py": "2c170a4db85463cbbb96f8bbb2f26817f5942cdf3cd92ab8723e82d994888350",
+    "audit_ramsey/result.json": "b5426a86997fac70944a799601336b55ee7349c2f17289a6f462fcebdee29bf7",
+    "audit_ramsey/result.optimized.json": "b5426a86997fac70944a799601336b55ee7349c2f17289a6f462fcebdee29bf7",
+    "audit_ramsey/rows.result.json": "51bfd8a4f83642d51300440fb0c8e42761ee8eeaab50ae4243b82fcdb0a329eb",
+    "audit_ramsey/rows.result.optimized.json": "51bfd8a4f83642d51300440fb0c8e42761ee8eeaab50ae4243b82fcdb0a329eb",
+    "collatz/CRITICAL_CLOCK_THEOREM.md": "51d1082a139cf874f97c78ff7a8a62bea70470a41771070043ff589224037b4e",
+    "collatz/E14_CLOSURE.md": "fa97f2e8dd3f19e42762866351061df19fb0d3750ccbbd686fb0590ea4854a9a",
+    "collatz/NEAR_TIGHT_CLOCK_THEOREM.md": "678ef91c6d7499157d6d9b5dd3581f1635c2e918bc2cb20d35de4310f5aaed37",
+    "collatz/NESTED_NATIVE_GRAMMAR.md": "0ff35e472da4fd08607caeb8de4d8351caf190643155c6569058c2f9184d8adc",
+    "collatz/PRODUCER_NOTES.md": "daf15c4fa1dbd6fa2cce896b0608e9fac009f6c9ae83875164963ec02449674b",
+    "collatz/REPRODUCE.md": "0e0348569357078b1c917634b55976b8a8d5aee84a1bfdea46b4100064138e9e",
+    "collatz/certificate_metadata.json": "a68f61c6c7ca059b9774152c69e02676fc08524c451f33e35d9d540eefdd67db",
+    "collatz/check_e14_closure.py": "4edb35d4a600e947269f4a15eb2734fd88d54e36991eefc7b3abc5d465845ea7",
+    "collatz/check_nested_clock.py": "b0683429fff85dba4d1b2aec83f9255400860f9ac29ae386c315dfbc60ab9f8a",
+    "collatz/check_small_models.py": "13e40bc4dc409918497a7a44129f76fa96c1997752d150c593f2f1cf79470053",
+    "collatz/e14_controls.json": "3269164984c3db71aca2b7b73df527625b8f1faf84bacb1a2ef75c5967a69746",
+    "collatz/e14_controls.optimized.json": "3269164984c3db71aca2b7b73df527625b8f1faf84bacb1a2ef75c5967a69746",
+    "collatz/fifo_control.cpp": "c7711a338f62b124bab95da3d8f6121964450098655ab9b1b8c37a43e9b2ac1f",
+    "collatz/integer_probe_intrusive.cpp": "73626508ed9727656136bd6283a3bd097b096245ef005f51729d8ee1a17f59e6",
+    "collatz/near_tight10_cpp.json": "612ab131e391e2906f0c8d9854850cdb22b11468d3fe0d4d3e17f8a7d94f4a7a",
+    "collatz/near_tight10_cpp.ndebug.json": "612ab131e391e2906f0c8d9854850cdb22b11468d3fe0d4d3e17f8a7d94f4a7a",
+    "collatz/near_tight_corridor.cpp": "4d5b52a372cb95d5263d25d8ee6636b1bae453745313dbdd352070b3af26cdad",
+    "collatz/near_tight_corridor.py": "22d56e18aeb6a1005cc7424e21a4ad5058c645ca1c1ab8b0a22f80476c090ea0",
+    "collatz/nested_clock.json": "885ee35f2cf2d7f950286c3188615f31bb86cc227b26492ddfbd755c0eaf28e8",
+    "collatz/nested_clock.optimized.json": "885ee35f2cf2d7f950286c3188615f31bb86cc227b26492ddfbd755c0eaf28e8",
+    "collatz/small_models.json": "b6540df1d6d745355bc0cfef4e5aba279a880b5fa0f3b51c44401acf88fb647e",
+    "collatz/small_models.optimized.json": "b6540df1d6d745355bc0cfef4e5aba279a880b5fa0f3b51c44401acf88fb647e",
+    "conductor/INTERVAL_CONDUCTOR.md": "0ec5c8606ab01bba3ab69c8d5ea106c0c2130910abb6cbe15f5686a86a6b97f4",
+    "conductor/check_conductor.py": "0de2ca6407d1ebcd33d35296ba569f4b541ea6d10fa71a300a101f9b13e9b0b7",
+    "conductor/normal.json": "c60528100f896aaf6c1b35d984c253638257c4858b20eb467aeac1e422055c14",
+    "conductor/optimized.json": "c60528100f896aaf6c1b35d984c253638257c4858b20eb467aeac1e422055c14",
+    "final_e14_checks/check.py": "b76af2a20802388393abfd3f96c86cff1caba32db7d255b20cb31204be616b3c",
+    "final_e14_checks/normal.json": "3cea9a8cb56866ff411404eb4cc469b756af22bd7902e3223eb0df03326fa74d",
+    "final_e14_checks/optimized.json": "3cea9a8cb56866ff411404eb4cc469b756af22bd7902e3223eb0df03326fa74d",
+    "final_e14_review.md": "2d1b28f8b701a6c13ea96f97852d0bb20ac75f7415e29361e42d290474b50490",
+    "large_verification.json": "c4ef46c92bcd14f390ea31120560068c6716e9b226223d4b9fd093b497d7e68e",
+    "lrc/FIVE_TAILS.md": "75f19f692962e7a29a9f91ae1fde77eda3dc9565e6d09fc25097c25ae2eef529",
+    "lrc/LRC.md": "8f0715be9dcbe9284933849f154742154aa4ebd77ea2b520d340305e67de7c15",
+    "lrc/five_tail_certificate.py": "5dc485dd52ffe4c1339557c43649b5d6357c4cb22983ab125e7700eb1482bff4",
+    "lrc/five_tail_pruned_receipt.json.gz.b64": "25761a8fb76903c681e0ddfde7bb789b6887d50710a79c147f12ee1b3feefcf4",
+    "lrc/five_verification.json": "8e8528eeb4efdc3bceb375c18254b6c437ba17b9142dd727f51436c87ed12c81",
+    "lrc/four_tail_certificate.py": "81d03615162b552baac38d8685369581d837f4d5104fdf078314eb865c22ba49",
+    "lrc/four_tail_receipt.json.gz.b64": "ad8c5337798a08a247d524522b31babaee7884319b9931e9e503aa5e3f4a555c",
+    "lrc/source_lrc_banks.py": "4789a715e13314547f34c6061886b0c0133aad57e583e447a3f0953b5ce13c40",
+    "lrc/verification.json": "09ef81599f0c83451c5dc3884bcffd763de8191981bd64fd6fb9541aeccd59e3",
+    "materialize_receipts.py": "c9d2e9f36489cb3e25ebe167e71298ad64955aff5bcd8e4dba3284cf43000f19",
+    "ramsey/DYADIC_PERIOD.md": "57afc6c8e83f515bdc0265a124df2662ac95fe88a30c627fc555120b237cff75",
+    "ramsey/FINITE_GENERATORS.md": "a3b8587894fc2ddd566650b8500609069cfba3f331b8d747d31ee71143782258",
+    "ramsey/ROWS_5_TO_8.md": "8fbc83bcaf4a2d4b7a47f72dbf19b08447663fe019245d1ef4d92eb025198863",
+    "ramsey/check_generators.py": "eddcc19ba463520f830f21ed444893e32b42a50eace2cdd9da41bc5fc83453e7",
+    "ramsey/check_rows.py": "431016461a2d0a7bc1d56264c939ae712116fc48c03cc6293285c845ee9cca08",
+    "ramsey/generators.normal.json": "3cfdbab3b368f06daae90f8bb4095caf253277776ac6bdcb0563d4b2c9ee40d4",
+    "ramsey/generators.optimized.json": "3cfdbab3b368f06daae90f8bb4095caf253277776ac6bdcb0563d4b2c9ee40d4",
+    "ramsey/rows.normal.json": "bc4d4fd441379572415ee30d3c13e17d7e7d6df2113140e3b5f3ccae87c386db",
+    "ramsey/rows.optimized.json": "bc4d4fd441379572415ee30d3c13e17d7e7d6df2113140e3b5f3ccae87c386db",
+    "receipt_archives.json": "b06c0c27d08bb04ec57687c9b4d54672ec5b5775cba2c1c84a54e518c6d7ae43",
+    "verify.py": "a4976bda1a21bcc0a7c3638e233069c8a4c5e1750d73dfc5dedaae34a4ac16b6"
+  }
+}
