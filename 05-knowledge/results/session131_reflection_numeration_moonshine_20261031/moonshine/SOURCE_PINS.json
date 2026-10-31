@@ -1,0 +1,115 @@
+{
+  "observed_utc": "2026-10-31T20:47Z",
+  "repository_inputs": [
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "git_blob": "d4547e987ea2e2c6a57e990fe91f3adc22786da1",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/session32_square_monster_20261023/SYLOW_FIXED_POINT_PARTITION.md",
+      "git_blob": "616251a7215bcb5dc8621582f34f393a65a779c4",
+      "sha256": "3dc2a7db7869b4cd71d876554f6eb1592e2f26404762f675d1928aba2d274788"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/session32_square_monster_20261023/monster/MONSTER_BABY_PRIME_PARTITION.md",
+      "git_blob": "96d3d54acf73c933b1e623381b3232476652beae",
+      "sha256": "3225bf1b94ddda26c3c3d78fa0c2bf4865b29bf8a7723abc0208413a3a21f14a"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/session32_square_monster_20261023/FISCHER_SUPPORT_SHELLS.md",
+      "git_blob": "432a858f8ab725c1456f3b1e88f5aae427c2702c",
+      "sha256": "dc07a08481befedda81558d5c32896783241b6000aee028c847bd0b82a055d48"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/supersingular_divisor_shapes_qseries_20261022.md",
+      "git_blob": "2cd6c6b230d567f0790bd9c12219f9fdc3c7563f",
+      "sha256": "94e4627a69dc04b19400ded47c6be730b9d2f9df3e5229116e7c768015bed079"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/primegame_blocks_register_decomposition_metagraphs_20261031.md",
+      "git_blob": "39301d77449c4bd19767a0e22e01559e13d01b01",
+      "sha256": "aae0eb12f5d10edbd2d7cd39ac66e91d7ee84a9a107fc39ff98f6fb0ee89497a"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "41a9d96041ca6f970158450972c5295695387e53",
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/five_families/dependencies/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "git_blob": "0d685ce8f804afa1a336a69ac484103ee76e4bbe",
+      "sha256": "cd0456eb3049a13a78db67509435853b7ae64f1211ed80a63b597bf8882f1e70"
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "ATLAS-M",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/M",
+      "locator": "Order; Maximal subgroups row 2.B; conjugacy classes row 2A",
+      "use": "Monster order and 2A centralizer order"
+    },
+    {
+      "id": "ATLAS-B",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B",
+      "locator": "Order",
+      "use": "Baby Monster order"
+    },
+    {
+      "id": "ATLAS-Fi22",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/group/Fi22",
+      "locator": "Order",
+      "use": "Fischer Fi22 order"
+    },
+    {
+      "id": "Duncan-Ono",
+      "url": "https://arxiv.org/html/1411.5354v2",
+      "title": "The Jack Daniels Problem",
+      "version": "arXiv:1411.5354v2 (2015-07-07), JNT 161 (2016), 230-239",
+      "locator": "Introduction equation (1.1), genus-zero paragraph preceding Theorem 1.1",
+      "use": "Ogg prime list and exact definition"
+    },
+    {
+      "id": "Aricheta",
+      "url": "https://sigma-journal.com/2019/007/sigma19-007.pdf",
+      "title": "Supersingular Elliptic Curves and Moonshine",
+      "version": "SIGMA 15 (2019), 007",
+      "locator": "Theorem 1.1/3.1; Table 1; Appendix A (printed pp12-13)",
+      "use": "Genus difference Qp/2; level-two and full-level-six rationality lists; N+ means all Atkin-Lehner involutions"
+    },
+    {
+      "id": "Delfs-Galbraith",
+      "url": "https://arxiv.org/pdf/1310.7789",
+      "title": "Computing isogenies between supersingular elliptic curves over F_p",
+      "version": "arXiv:1310.7789v1 (2013-10-29)",
+      "locator": "printed pp1-2 (total count and equation (1)); pp5-6 for CM orders",
+      "use": "Supersingular total count, Fp rational class-number count; all j in Fp2"
+    },
+    {
+      "id": "Cummins-Matias",
+      "url": "https://arxiv.org/pdf/1710.01071",
+      "title": "(2+)-Replication and the Baby Monster",
+      "version": "arXiv:1710.01071v3; SIGMA 14 (2018), 060",
+      "locator": "printed p2 introduction; section5, printed p25",
+      "use": "C_M(2A) is double cover 2.B"
+    },
+    {
+      "id": "Conway",
+      "url": "https://gwern.net/doc/cs/computable/1987-conway.pdf",
+      "title": "FRACTRAN: A Simple Universal Programming Language for Arithmetic",
+      "version": "Springer 1987 chapter scan",
+      "locator": "Theorem 1, printed p4; Figure 2, printed p10",
+      "use": "Exact original 14-fraction PRIMEGAME list and prime-power output theorem"
+    }
+  ],
+  "limits": "Web sources were inspected by browser tools; hashes certify repository blobs, not externally downloaded PDF bytes."
+}

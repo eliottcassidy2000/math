@@ -1,0 +1,17 @@
+{
+  "commit": "41a9d96041ca6f970158450972c5295695387e53",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session130_blue_black_theorems_20261031/gain_cohomology/THEORY.md",
+      "sha256": "14673ba17b4d1ca43369bb869883743ea359d8ae2ec93411924bab54d2130eaa"
+    },
+    {
+      "path": "05-knowledge/results/session130_blue_black_theorems_20261031/gain_cohomology/check_lattice.py",
+      "sha256": "505bdf2c48fe89dc35aeb0087ce62fde5a4c8be89a47c3d9b308a976da08d385"
+    },
+    {
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/tournaments/census.json",
+      "sha256": "b1d10db13fd0564b5c550d2ba01172e9e1fb188a836a56405bec2571c32015ee"
+    }
+  ]
+}

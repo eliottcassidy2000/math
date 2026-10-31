@@ -1,0 +1,55 @@
+{
+  "commit": "41a9d96041ca6f970158450972c5295695387e53",
+  "sources": [
+    {
+      "repo_path": "01-canon/theorems/THM-002-ocf.md",
+      "local_path": "sources/00-THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+      "git_blob": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd"
+    },
+    {
+      "repo_path": "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md",
+      "local_path": "sources/01-THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md",
+      "sha256": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c",
+      "git_blob": "4bce85216d801937a007f9de903b4f5ca014205b"
+    },
+    {
+      "repo_path": "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md",
+      "local_path": "sources/02-TOURNAMENTS_124.md",
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9",
+      "git_blob": "777ec7b7cf5a2e58aab43bc599fb73d4e4c0d61f"
+    },
+    {
+      "repo_path": "04-computation/zeckendorf_tournament.py",
+      "local_path": "sources/03-zeckendorf_tournament.py",
+      "sha256": "93d16800b666302ffc372d8580d18a9fecbf94c3660eb0f6432b10edfa416688",
+      "git_blob": "b0117378d6adfa2084c866e0fd52a4d944d2e6b2"
+    },
+    {
+      "repo_path": "05-knowledge/results/zeckendorf_tournament.out",
+      "local_path": "sources/04-zeckendorf_tournament.out",
+      "sha256": "26d74914666d5755988fe53881c181d4d142eef13ffb2076975ce854ca0a0e5a",
+      "git_blob": "cf5339faba55d5b6e180476367ba0c45795d5f53"
+    },
+    {
+      "repo_path": "05-knowledge/results/session130_blue_black_theorems_20261031/hamiltonian/PROOFS.md",
+      "local_path": "sources/05-PROOFS.md",
+      "sha256": "5b1014479eea3883ca13c605bf60a4f5506dca62bf5430d7a812a87d3fbbc9f9",
+      "git_blob": "9ec6a8d132bd46684bd421db06ba4a08a4de9e6f"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://arxiv.org/abs/2307.05569",
+      "authors": "Darij Grinberg and Richard P. Stanley",
+      "role": "primary OCF attribution",
+      "accessed": "2026-10-31"
+    },
+    {
+      "url": "https://arxiv.org/html/2412.10572v3",
+      "authors": "John Irving and Mohamed Omar",
+      "role": "Corollary20 restatement",
+      "accessed": "2026-10-31"
+    }
+  ]
+}
