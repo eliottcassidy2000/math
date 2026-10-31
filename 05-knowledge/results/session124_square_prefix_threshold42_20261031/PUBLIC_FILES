@@ -1,0 +1,17 @@
+DEPENDENCIES.json
+DISCOVERY.md
+INDEPENDENT_AUDIT.md
+MANIFEST.json
+MODE_COMPARISON.json
+PUBLIC_FILES
+PUBLIC_FILES.json
+README.md
+SMALL_BASES.json
+audit_independent.py
+construct_cycle.py
+core42.py
+independent.normal.json
+independent.optimized.json
+normal.json
+optimized.json
+verify_extension.py

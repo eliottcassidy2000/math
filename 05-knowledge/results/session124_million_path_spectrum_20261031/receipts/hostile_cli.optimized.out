@@ -1,0 +1,1 @@
+PASS: 9 malformed/missing adjacency inputs; 6 out-of-scope constructor targets rejected

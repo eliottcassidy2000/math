@@ -1,0 +1,263 @@
+{
+  "hostile_controls": 4,
+  "status": "passed",
+  "base_report": {
+    "base_pairs": 2040,
+    "small_pairs": 11,
+    "checks": 10841613
+  },
+  "paired_states": 98,
+  "direct_states": 98,
+  "paired_checks": 92275,
+  "direct_checks": 32167,
+  "cycle_controls": [
+    {
+      "status": "passed",
+      "N": 2082,
+      "depth": 1,
+      "threshold": 2082,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ],
+      "closing_vertex": 8,
+      "cycle_decimal_lines_sha256": "e9d6bad9077d28b3ebfe6665efb684cb16ebf81cc64b9ed42e3c1fae8c10fb36",
+      "checks": 4398,
+      "used_base_chunks": [],
+      "used_new_pair_states": [],
+      "direct_state": [
+        0,
+        24
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 2083,
+      "depth": 1,
+      "threshold": 2082,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ],
+      "closing_vertex": 15,
+      "cycle_decimal_lines_sha256": "c76c8692f173c007533b441da86bf59918ed8887190c111cedd1d362881dd762",
+      "checks": 4400,
+      "used_base_chunks": [],
+      "used_new_pair_states": [],
+      "direct_state": [
+        0,
+        25
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 2620,
+      "depth": 1,
+      "threshold": 2082,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ],
+      "closing_vertex": 8,
+      "cycle_decimal_lines_sha256": "68e55b46cfb3d5cf405084d62b6c4112141109e4fe8cf6c32d4e664def9c1b47",
+      "checks": 5524,
+      "used_base_chunks": [],
+      "used_new_pair_states": [],
+      "direct_state": [
+        0,
+        72
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 2621,
+      "depth": 1,
+      "threshold": 2082,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ],
+      "closing_vertex": 15,
+      "cycle_decimal_lines_sha256": "e64ac0c802e489744e80fe6a1d603fc2080a1422d3bc6c659f162f3dd8334aaf",
+      "checks": 5538,
+      "used_base_chunks": [
+        "B_base_roots_0053_0308.bin.gz"
+      ],
+      "used_new_pair_states": [],
+      "direct_state": [
+        1,
+        24
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 102042,
+      "depth": 2,
+      "threshold": 102042,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ],
+      "closing_vertex": 8,
+      "cycle_decimal_lines_sha256": "9e779a3d639211749d0676dd3fd9f2df85dc777dd61fbf55b09d164d926c0579",
+      "checks": 214733,
+      "used_base_chunks": [],
+      "used_new_pair_states": [
+        [
+          0,
+          24
+        ]
+      ],
+      "direct_state": [
+        0,
+        24
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 102043,
+      "depth": 2,
+      "threshold": 102042,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ],
+      "closing_vertex": 15,
+      "cycle_decimal_lines_sha256": "f3171f90c51107fe6dae4975aacb54df3a090e5620667a788d548a4fcb8c62e7",
+      "checks": 214735,
+      "used_base_chunks": [],
+      "used_new_pair_states": [
+        [
+          0,
+          24
+        ]
+      ],
+      "direct_state": [
+        0,
+        25
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 5000082,
+      "depth": 3,
+      "threshold": 5000082,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403,
+        14206,
+        45819,
+        107845,
+        362751
+      ],
+      "closing_vertex": 8,
+      "cycle_decimal_lines_sha256": "e0039c26d8bbfeb679106247c948624ad817857e80823edef0f863cde7a68fde",
+      "checks": 10521028,
+      "used_base_chunks": [],
+      "used_new_pair_states": [
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          24
+        ]
+      ],
+      "direct_state": [
+        0,
+        24
+      ],
+      "cycle_stored": false
+    }
+  ],
+  "cutoff_controls": [
+    {
+      "n": 2081,
+      "depth": 0,
+      "checks": 20840
+    },
+    {
+      "n": 2082,
+      "depth": 1,
+      "checks": 21058
+    },
+    {
+      "n": 2083,
+      "depth": 1,
+      "checks": 21068
+    },
+    {
+      "n": 2620,
+      "depth": 1,
+      "checks": 26488
+    },
+    {
+      "n": 2621,
+      "depth": 1,
+      "checks": 26510
+    },
+    {
+      "n": 102042,
+      "depth": 2,
+      "checks": 1031073
+    },
+    {
+      "n": 102043,
+      "depth": 2,
+      "checks": 1031083
+    }
+  ],
+  "thresholds": [
+    42,
+    2082,
+    102042,
+    5000082
+  ]
+}

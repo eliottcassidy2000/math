@@ -1,0 +1,152 @@
+{
+  "base_interval": [
+    42,
+    2081
+  ],
+  "base_pairs": 2040,
+  "checks": 22149425,
+  "controls": [
+    {
+      "N": 2082,
+      "cycle_decimal_lines_sha256": "e9d6bad9077d28b3ebfe6665efb684cb16ebf81cc64b9ed42e3c1fae8c10fb36",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ]
+    },
+    {
+      "N": 2083,
+      "cycle_decimal_lines_sha256": "c76c8692f173c007533b441da86bf59918ed8887190c111cedd1d362881dd762",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ]
+    },
+    {
+      "N": 2523,
+      "cycle_decimal_lines_sha256": "3468fb296e3e51d4278faff5289b938ffb4cf2d14320277d1be4f5586a92bc60",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ]
+    },
+    {
+      "N": 2572,
+      "cycle_decimal_lines_sha256": "923294ea91d7e5e5736eef9d617763c7b3826f18fdfb5f1d9e64c3fe07a51bb5",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ]
+    },
+    {
+      "N": 102041,
+      "cycle_decimal_lines_sha256": "f0b08bea3c483415c8173297182d091bfe8419beed1540ac1236a04a29d528aa",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ]
+    },
+    {
+      "N": 102042,
+      "cycle_decimal_lines_sha256": "9e779a3d639211749d0676dd3fd9f2df85dc777dd61fbf55b09d164d926c0579",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ]
+    },
+    {
+      "N": 102043,
+      "cycle_decimal_lines_sha256": "f3171f90c51107fe6dae4975aacb54df3a090e5620667a788d548a4fcb8c62e7",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ]
+    },
+    {
+      "N": 5000082,
+      "cycle_decimal_lines_sha256": "e0039c26d8bbfeb679106247c948624ad817857e80823edef0f863cde7a68fde",
+      "depth": 3,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403,
+        14206,
+        45819,
+        107845,
+        362751
+      ]
+    }
+  ],
+  "direct_states": 98,
+  "old_chunks_used": 8,
+  "paired_states": 98,
+  "producer_imports": 0,
+  "recursive_cutoff": 2082,
+  "small_base_mutations": [
+    [
+      "repeated_vertex",
+      "concrete coverage"
+    ],
+    [
+      "changed_endpoint",
+      "concrete endpoints/prefix"
+    ],
+    [
+      "wrong_order",
+      "concrete endpoints/prefix"
+    ]
+  ],
+  "small_base_pairs": 11,
+  "small_catalog_sha256": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1",
+  "status": "passed"
+}

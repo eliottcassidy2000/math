@@ -1,0 +1,12 @@
+{
+  "proof_files": {
+    "README.md": "d4fa0eb4278dcc401d426e3911411bb9318ed96a378ca94e93a05cdd107ed8ba",
+    "core42.py": "88923e30cabe5a863808dc28ca5cf461dd43a933428a41d36e92b2904fc5d82d",
+    "construct_cycle.py": "690fb8ee24f94555994d8bcc3575de4cda2f389429539a9989f2f05a21cc43ac",
+    "verify_extension.py": "e8057cbe9bd9f2b88c7ca21cc1259c810460affdca37ce856a61c844fe457c97",
+    "DEPENDENCIES.json": "9694a5004fb67f5e8756154ff652f1278855de89f2f7ac0fb3dba88f5559f57e",
+    "SMALL_BASES.json": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1",
+    "audit_independent.py": "418e98d8b0e76920f80c559e4d93b4cb329430aabf739dca22cf1f86f8d1b88f",
+    "INDEPENDENT_AUDIT.md": "87e9e07a8db5466653ede8fb2371755c1c2f892110bc466c55e6685bf03b1304"
+  }
+}
