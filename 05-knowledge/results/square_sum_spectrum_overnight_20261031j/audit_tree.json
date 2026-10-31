@@ -1,0 +1,9 @@
+{
+  "all_pairing_contexts": 16,
+  "complete_output_cycles": 256,
+  "local_cycles": 2,
+  "scope": "Independent exhaustive graph-cycle audit for path and star incidence, including ports sharing vertices. Arithmetic seams are audited separately.",
+  "source_vertices": 7,
+  "status": "passed",
+  "tree_sources": 4
+}

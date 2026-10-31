@@ -1,0 +1,150 @@
+{
+  "atlas_component_table": [
+    {
+      "components": 2,
+      "count": 6,
+      "directions": 1
+    },
+    {
+      "components": 4,
+      "count": 1,
+      "directions": 1
+    },
+    {
+      "components": 1,
+      "count": 24,
+      "directions": 2
+    },
+    {
+      "components": 2,
+      "count": 6,
+      "directions": 2
+    },
+    {
+      "components": 3,
+      "count": 12,
+      "directions": 2
+    },
+    {
+      "components": 1,
+      "count": 24,
+      "directions": 4
+    },
+    {
+      "components": 2,
+      "count": 32,
+      "directions": 4
+    }
+  ],
+  "atlas_counts": {
+    "1": 7,
+    "2": 42,
+    "4": 56
+  },
+  "connected_atlas_counts": {
+    "1": 0,
+    "2": 24,
+    "4": 24
+  },
+  "cyclic_selector": [
+    {
+      "cycles": 1,
+      "pairing_bits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cycles": 2,
+      "pairing_bits": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "cycles": 2,
+      "pairing_bits": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "cycles": 1,
+      "pairing_bits": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "cycles": 2,
+      "pairing_bits": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "cycles": 1,
+      "pairing_bits": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "cycles": 1,
+      "pairing_bits": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "cycles": 2,
+      "pairing_bits": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "local_matching_counts": [
+    {
+      "all_matchings": 1,
+      "ports": 1,
+      "single_source_cycle_matchings": 1
+    },
+    {
+      "all_matchings": 3,
+      "ports": 2,
+      "single_source_cycle_matchings": 2
+    },
+    {
+      "all_matchings": 15,
+      "ports": 3,
+      "single_source_cycle_matchings": 8
+    },
+    {
+      "all_matchings": 105,
+      "ports": 4,
+      "single_source_cycle_matchings": 48
+    },
+    {
+      "all_matchings": 945,
+      "ports": 5,
+      "single_source_cycle_matchings": 384
+    },
+    {
+      "all_matchings": 10395,
+      "ports": 6,
+      "single_source_cycle_matchings": 3840
+    }
+  ],
+  "scope": "Exact boundary incidence matching and marked restriction of the prior105-atlas domain; repeated physical vertices have separate port slots and zero-length paths. No cyclic arithmetic or geometric-selector realization is asserted.",
+  "status": "passed",
+  "tree_center_states": 8
+}

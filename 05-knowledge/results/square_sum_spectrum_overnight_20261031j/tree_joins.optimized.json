@@ -1,0 +1,211 @@
+{
+  "cycle_edge_rejected": true,
+  "cyclic_abstract_hostiles": [
+    {
+      "component_sizes": [
+        9
+      ],
+      "pairing_bits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "component_sizes": [
+        4,
+        5
+      ],
+      "pairing_bits": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "component_sizes": [
+        4,
+        5
+      ],
+      "pairing_bits": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "component_sizes": [
+        9
+      ],
+      "pairing_bits": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "component_sizes": [
+        4,
+        5
+      ],
+      "pairing_bits": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "component_sizes": [
+        9
+      ],
+      "pairing_bits": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "component_sizes": [
+        9
+      ],
+      "pairing_bits": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "component_sizes": [
+        3,
+        6
+      ],
+      "pairing_bits": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "mixed_class_chain": [
+    {
+      "class": 1,
+      "method": "elliptic odd multiples",
+      "output_bits": 49,
+      "output_vertices": 5673,
+      "remaining_ports": 2,
+      "scale_root_bits": [
+        20,
+        15
+      ],
+      "spent_pairs": 1
+    },
+    {
+      "class": 5,
+      "method": "matched norm conic",
+      "output_bits": 73,
+      "output_vertices": 8485,
+      "remaining_ports": 3,
+      "scale_root_bits": [
+        29,
+        50
+      ],
+      "spent_pairs": 2
+    },
+    {
+      "class": 10,
+      "method": "matched norm conic",
+      "output_bits": 97,
+      "output_vertices": 11297,
+      "remaining_ports": 4,
+      "scale_root_bits": [
+        61,
+        112
+      ],
+      "spent_pairs": 3
+    }
+  ],
+  "native_cycle_sha256": [
+    "6c8deaa19ddafff1275020c257795d00d8a517a26d9d1a10ac96db8a561026c3",
+    "f462e7fe11f969c5eaa01daaac9e78a86589d2c66d2e48c1c1befffb92f79540",
+    "574c1044c88e650d9fbbca6a1cf5b667802f5bb89703afd39392b838d6efd652",
+    "941636a1c74b2040228c6729d242ddee9b19dde9e9446509cc8fa93fc5faf9e4",
+    "a3774a8bbdf1e814c727ccd9a7262e52711ae81f68463d731146d42bed5bc633",
+    "8ab0f6dde1ac5e421965cb95e8786689762fa7ec22383be3ce21ebdaf994d255",
+    "8051274b7569a4d11b11243e89efa5e734e01f24b3d9592e644fb5770b3ffa97",
+    "85868014b1e1ffa53161e828930b83abe6a19e7057f263ed99505e40cc17fb08"
+  ],
+  "native_owner_count": 4,
+  "native_source_condition": {
+    "free_source_bits": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      23,
+      24
+    ],
+    "pins": {
+      "22": 1
+    }
+  },
+  "reused_port_rejected": true,
+  "scope": "All-size tree product follows by exact two-edge-cut induction. Native mixed classes1,5,10 and a shared-vertex Euler-brick star are arithmetic controls. The cyclic countermodel is abstract incidence only; it makes no extra arithmetic claim.",
+  "shared_vertex_star": [
+    {
+      "class": 1,
+      "method": "elliptic odd multiples",
+      "output_bits": 0,
+      "output_vertices": 6,
+      "remaining_ports": 4,
+      "scale_root_bits": [
+        41,
+        39
+      ],
+      "spent_pairs": 1
+    },
+    {
+      "class": 1,
+      "method": "elliptic odd multiples",
+      "output_bits": 0,
+      "output_vertices": 9,
+      "remaining_ports": 5,
+      "scale_root_bits": [
+        50,
+        89
+      ],
+      "spent_pairs": 2
+    },
+    {
+      "class": 1,
+      "method": "elliptic odd multiples",
+      "output_bits": 0,
+      "output_vertices": 12,
+      "remaining_ports": 6,
+      "scale_root_bits": [
+        53,
+        145
+      ],
+      "spent_pairs": 3
+    }
+  ],
+  "star_cycle_sha256": "78dfe072a67a894602da7267c1aef2982f8c2626f631596771f224f11943ebf3",
+  "status": "passed"
+}

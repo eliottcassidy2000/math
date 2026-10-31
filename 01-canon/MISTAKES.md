@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — local cycle products require a tree or a retained connectivity selector
+
+- **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031j`; an attempted extension beyond tree incidence was treated as an open test, not promoted as an unconditional product theorem.
+- **Witness / failed implication:** three abstract triangles, each cut at two adjacent ports, have a cycle locally. Four of the eight cyclic endpoint-pairing words nevertheless yield two global cycles, of sizes4+5 or3+6, despite degree two everywhere. Local extension counts and degrees do not certify connectedness.
+- **Repair / inherited stronger mechanism:** retain the path matching on named incidence slots, including the zero-length path at a shared port vertex. Accept exactly when its union with the seam matching is connected. This specializes the already proved Session32 `ports/PORT_TRANSFER.md` theorem; it is not a new general transfer principle. Tree incidence makes the selector automatic. Arithmetic feasibility around cyclic incidence remains a separate obligation.
+
 ## 2026-10-31 — valid arithmetic seams can still identify the two source copies
 
 - **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031i`; the collision was retained as the starting obstruction, not accepted as a graph join.

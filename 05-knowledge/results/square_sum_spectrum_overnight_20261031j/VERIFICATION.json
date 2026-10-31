@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "review": "Same-agent proof audit with independent literal Hamiltonian-cycle enumeration and incidence-matching consumer; no subagent.",
+  "python": [
+    {
+      "script": "tree_joins.py",
+      "normal_equals_optimized": true,
+      "sha256": "f6b079dc89d7b5fd1bb669ca4ca7db947be1729da46fedafe09a00a177efe484"
+    },
+    {
+      "script": "audit_tree.py",
+      "normal_equals_optimized": true,
+      "sha256": "f0ec09f86c1e30f6348b59877c6e94b9e56dd077b71c4cd11f2cb869f238ac06"
+    },
+    {
+      "script": "boundary_matchings.py",
+      "normal_equals_optimized": true,
+      "sha256": "619895835261680889b90cdd3f06736cd3fcd960c78e6d94bdeb00094a9bfab6"
+    }
+  ],
+  "scope": "Mixed-square-class tree theorem; exact graph-level cyclic matching selector and48-of105 marked atlas restriction. Arithmetic cyclic feasibility and interval absorption remain open."
+}
