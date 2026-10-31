@@ -1,0 +1,1 @@
+{"actual_graph_vertex_limit": 16, "actual_graphs_enumerated": 43, "direct_grid": [0, 64], "huge_evaluation_decimal_digits": 234, "random_weighted_controls": 10000, "status": "PASS", "symbolic_witness_grid": [1, 64], "translation_grid": [64, 128]}

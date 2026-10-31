@@ -1,0 +1,9 @@
+{
+  "binomial_parity_controls": 4900,
+  "generator_split_controls": 296863,
+  "gram_sizes_checked": 24,
+  "scope": "finite exact controls for analytic all-parameter tensor/Gram/generator proofs",
+  "status": "PASS",
+  "subset_superadditivity_controls": 2097152,
+  "tensor_depths_checked": 7
+}
