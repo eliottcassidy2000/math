@@ -1,0 +1,2 @@
+{"common_triangular_letters": 4, "diagonal_multiplicities": {"0": 8, "1": 16, "2": 10, "3": 2}, "two_letter_products": 16}
+{"polynomial_mode_hostile": "H((01)^k)=(4^k+6k-1)/9 for k>=1", "cancelled2mode_hostile": "H(2330^k)=14*3^k-17 for k>=1"}

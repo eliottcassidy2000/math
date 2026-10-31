@@ -1,0 +1,182 @@
+{
+  "all_order_packing_free_spectrum_through73": [
+    1,
+    3,
+    5,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    31,
+    33,
+    37,
+    39,
+    45,
+    47,
+    49,
+    51,
+    53,
+    61,
+    63,
+    65,
+    69,
+    73
+  ],
+  "checks": 10878,
+  "globally_attainable_but_packing_free_impossible": [
+    29,
+    35,
+    41,
+    43,
+    55,
+    57,
+    59,
+    67,
+    71
+  ],
+  "rows": [
+    {
+      "max_feedback_number": 1,
+      "n": 3,
+      "packing_free_presentations": 1,
+      "presentations": 1,
+      "spectrum": [
+        3
+      ]
+    },
+    {
+      "max_feedback_number": 1,
+      "n": 4,
+      "packing_free_presentations": 8,
+      "presentations": 8,
+      "spectrum": [
+        3,
+        5
+      ]
+    },
+    {
+      "max_feedback_number": 2,
+      "n": 5,
+      "packing_free_presentations": 64,
+      "presentations": 64,
+      "spectrum": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "max_feedback_number": 2,
+      "n": 6,
+      "packing_free_presentations": 272,
+      "presentations": 512,
+      "spectrum": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        33
+      ]
+    },
+    {
+      "max_feedback_number": 2,
+      "n": 7,
+      "packing_free_presentations": 869,
+      "presentations": 4096,
+      "spectrum": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        31,
+        33,
+        37,
+        39,
+        45,
+        47,
+        49,
+        51,
+        69
+      ]
+    },
+    {
+      "max_feedback_number": 2,
+      "n": 8,
+      "packing_free_presentations": 2410,
+      "presentations": 32768,
+      "spectrum": [
+        3,
+        5,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        23,
+        25,
+        27,
+        31,
+        33,
+        37,
+        39,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61,
+        63,
+        65,
+        69,
+        73,
+        79,
+        81,
+        87,
+        95,
+        97,
+        107,
+        141
+      ]
+    }
+  ],
+  "scope": "All-order claims use the proved representation lemma, one nontrivial SCC, and cited Busch bound; finite computations independently enumerate actual graphs.",
+  "status": "PASS",
+  "total_presentations": 37449,
+  "witness29": {
+    "cycles": {
+      "3": 6,
+      "5": 4
+    },
+    "disjoint_odd_cycle_pairs": 2,
+    "out": [
+      50,
+      16,
+      3,
+      7,
+      12,
+      30
+    ]
+  }
+}

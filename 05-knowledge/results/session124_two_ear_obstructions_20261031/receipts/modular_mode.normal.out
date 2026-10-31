@@ -1,0 +1,1 @@
+{"complementary_words": 4, "integer_divisibility_checks": 144, "mod3_kernel_transition_checks": 448, "initial_value": -4, "universal_residue_mod3": 2, "annihilator_rows": 4, "forced_linear_mode": "D=-q(v)/9 != 0", "standard_library_only": true}

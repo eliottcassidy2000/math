@@ -1,0 +1,57 @@
+{
+  "executions": 8,
+  "normal_optimized_byte_identical": true,
+  "programs": 4,
+  "receipts": [
+    {
+      "baseline_identical": true,
+      "checks": 10878,
+      "receipt": "check.normal.json",
+      "sha256": "45bb40386a8926285999a4336f2bbd0f6ffab9eee4467fb6965b8f049b617a02"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 10878,
+      "receipt": "check.optimized.json",
+      "sha256": "45bb40386a8926285999a4336f2bbd0f6ffab9eee4467fb6965b8f049b617a02"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 41079,
+      "receipt": "pattern_check.normal.json",
+      "sha256": "d390ed4b85474c2bb2ede2e03192fc484e3cff264f323a65dcce7251ce4b3831"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 41079,
+      "receipt": "pattern_check.optimized.json",
+      "sha256": "d390ed4b85474c2bb2ede2e03192fc484e3cff264f323a65dcce7251ce4b3831"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 351,
+      "receipt": "check_witnesses.normal.json",
+      "sha256": "8d32ec9b4945141397360e6159dbba236a6e3e4759ececfca9eb6a78a1a6b4ba"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 351,
+      "receipt": "check_witnesses.optimized.json",
+      "sha256": "8d32ec9b4945141397360e6159dbba236a6e3e4759ececfca9eb6a78a1a6b4ba"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 38207,
+      "receipt": "independent_check.normal.json",
+      "sha256": "db3e0c3b0ec096f4ddd707896f164c65070c64c5168e7a4e28f060a08dfcb18f"
+    },
+    {
+      "baseline_identical": true,
+      "checks": 38207,
+      "receipt": "independent_check.optimized.json",
+      "sha256": "db3e0c3b0ec096f4ddd707896f164c65070c64c5168e7a4e28f060a08dfcb18f"
+    }
+  ],
+  "scope": "restricted spectrum, finite forbidden language, and word/isomorphism bounds only",
+  "status": "PASS"
+}

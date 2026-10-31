@@ -1,0 +1,9 @@
+{
+  "aggregate_byte_identical": true,
+  "aggregate_sha256": "e707bbe1ee3389258e85fece45a585237b229524a03506c2c70a6f8c7a27ce0f",
+  "checker_executions": 6,
+  "copied_package": true,
+  "runner_optimized": true,
+  "status": "PASS",
+  "working_directory_outside_package": true
+}

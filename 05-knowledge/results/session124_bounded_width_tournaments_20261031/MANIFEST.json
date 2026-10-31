@@ -1,0 +1,91 @@
+{
+  "files": [
+    {
+      "bytes": 2913,
+      "path": "AUDIT.md",
+      "sha256": "a1dd9a1f5314d97d82c9538d7af69cde12fa79ec865a09dc47e91c028f1fd371"
+    },
+    {
+      "bytes": 1263,
+      "path": "PROVENANCE.json",
+      "sha256": "59af23265cb912ce7c2e0e852a8e09377770f6ab94416e3b8edb8bb9e04ff6f9"
+    },
+    {
+      "bytes": 5718,
+      "path": "README.md",
+      "sha256": "77e2f9d26a1cf3fbb1f54e2b1550a0c95fddfcd4174e64898d329b8a3ff1106b"
+    },
+    {
+      "bytes": 5502,
+      "path": "independent_check.py",
+      "sha256": "3a018e791f3e26281d5758e62d95edbcb35f15bf8dca3441f4ae5b7188214540"
+    },
+    {
+      "bytes": 285,
+      "path": "receipt_hashes.json",
+      "sha256": "671dd7098a4400f16efa171897355400a68a5348c636a06b7c90762bfe525c9f"
+    },
+    {
+      "bytes": 812,
+      "path": "receipts/aggregate.json",
+      "sha256": "e707bbe1ee3389258e85fece45a585237b229524a03506c2c70a6f8c7a27ce0f"
+    },
+    {
+      "bytes": 607,
+      "path": "receipts/independent.normal.json",
+      "sha256": "9dc02d1b1379e7b601b7058a2e7cd93b24d96060e7078aeedac8e31c7b551412"
+    },
+    {
+      "bytes": 607,
+      "path": "receipts/independent.optimized.json",
+      "sha256": "9dc02d1b1379e7b601b7058a2e7cd93b24d96060e7078aeedac8e31c7b551412"
+    },
+    {
+      "bytes": 275,
+      "path": "receipts/portability.json",
+      "sha256": "a0d3cd70fbb1dbcda751ad2ca935549f622ff0767da751d89b5a263f775ebb28"
+    },
+    {
+      "bytes": 142,
+      "path": "receipts/transfer.normal.out",
+      "sha256": "af845b929e83fc354516a068de1f7d20fff47f936f02f24fcf7eb132c00ebc79"
+    },
+    {
+      "bytes": 142,
+      "path": "receipts/transfer.optimized.out",
+      "sha256": "af845b929e83fc354516a068de1f7d20fff47f936f02f24fcf7eb132c00ebc79"
+    },
+    {
+      "bytes": 131,
+      "path": "receipts/verify.normal.json",
+      "sha256": "ab15863df72f19ab177d696fe86ce3094e641b1cd2a7a43a62e834a86d114029"
+    },
+    {
+      "bytes": 131,
+      "path": "receipts/verify.optimized.json",
+      "sha256": "ab15863df72f19ab177d696fe86ce3094e641b1cd2a7a43a62e834a86d114029"
+    },
+    {
+      "bytes": 1440,
+      "path": "run_checks.py",
+      "sha256": "bc3ef08e4f17b56edf5d472ae9b4659e6ed3b4b36c317e8620da41ec4ee28704"
+    },
+    {
+      "bytes": 2974,
+      "path": "transfer.py",
+      "sha256": "f76506b7d0aff9106661f6f3e427ba5de88411ea9db85e4edadd5e94da280839"
+    },
+    {
+      "bytes": 784,
+      "path": "verify.py",
+      "sha256": "dbe2f4c6bcd9a72f3616d5216d6bdae9c8f2858520281ffb316176a312f50a40"
+    },
+    {
+      "bytes": 18413,
+      "path": "width3_witnesses.tsv",
+      "sha256": "7152ede556768c815588b4a9bf5b6bdb5a7bd5e840856a54e49017d22a796f1d"
+    }
+  ],
+  "schema": 1,
+  "scope": "Exact bounded-width transfer; all-order width2 H47 exclusion; finite width3 witnesses through1653."
+}

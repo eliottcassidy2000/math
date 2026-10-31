@@ -1,0 +1,123 @@
+{
+  "content_files": [
+    {
+      "bytes": 3649,
+      "path": "README.md",
+      "sha256": "e0025bb760a38001e1a5b5688d8aa1619555949af975b24873c4f0b602f551e2"
+    },
+    {
+      "bytes": 12749,
+      "path": "RESULTS.md",
+      "sha256": "a10a79608fc8f3d360537ab01365acddb886145152840af82b0ea1ea28915e90"
+    },
+    {
+      "bytes": 11135,
+      "path": "AUDIT.md",
+      "sha256": "bd9cc8f71033c4956a4b2958d7362825cbb91b5b2b90a4d6c0c6ae8681f0cc07"
+    },
+    {
+      "bytes": 1461,
+      "path": "CITATION_CORRECTION.md",
+      "sha256": "18a63811c88fc0d8efb85cd4d28794656062b47d993d9f65338c34210b1ff550"
+    },
+    {
+      "bytes": 2948,
+      "path": "PROVENANCE.json",
+      "sha256": "a9a32b4d4cb1a2f25a84058424a3b535c786b1453fb7ea96a683d51fb8d8731f"
+    },
+    {
+      "bytes": 955,
+      "path": "BASELINE_RECEIPTS.json",
+      "sha256": "a99e4c846d62808c48b9177a33302c3536178950ab04054a7d4ed779d1f0be05"
+    },
+    {
+      "bytes": 3871,
+      "path": "check.py",
+      "sha256": "7d1a64759a88fc559b74d01ea613355193f6a9059c332a987cf59d9517afd913"
+    },
+    {
+      "bytes": 3198,
+      "path": "pattern_check.py",
+      "sha256": "df9b3d0d67c03b209ff93f26e35454d86169ee0699a600384894721772c74f0a"
+    },
+    {
+      "bytes": 1084,
+      "path": "check_witnesses.py",
+      "sha256": "e81c816279f204eca88dce84dd8068c2fd6e965a9969afcb684b6cd912e72497"
+    },
+    {
+      "bytes": 7262,
+      "path": "independent_check.py",
+      "sha256": "338d180f851daca860322f074a0b9233ad331264f2e8e0cacba8005827400e51"
+    },
+    {
+      "bytes": 3124,
+      "path": "run_checks.py",
+      "sha256": "63d2c80dda23867e62046c7b32da158fd558c31b91df8feb1aa114a97b343b40"
+    },
+    {
+      "bytes": 14232,
+      "path": "patterns.json",
+      "sha256": "50d163aa5c213f5be0185fc009d9df0141cc7a499ec4e6b28c62500e6cba455e"
+    },
+    {
+      "bytes": 699,
+      "path": "global_witnesses.json",
+      "sha256": "539efec0d5751184f7898a734bd3c370b2e94061b384c965b688a32580b644ba"
+    },
+    {
+      "bytes": 2606,
+      "path": "receipts/check.normal.json",
+      "sha256": "45bb40386a8926285999a4336f2bbd0f6ffab9eee4467fb6965b8f049b617a02"
+    },
+    {
+      "bytes": 2606,
+      "path": "receipts/check.optimized.json",
+      "sha256": "45bb40386a8926285999a4336f2bbd0f6ffab9eee4467fb6965b8f049b617a02"
+    },
+    {
+      "bytes": 860,
+      "path": "receipts/pattern_check.normal.json",
+      "sha256": "d390ed4b85474c2bb2ede2e03192fc484e3cff264f323a65dcce7251ce4b3831"
+    },
+    {
+      "bytes": 860,
+      "path": "receipts/pattern_check.optimized.json",
+      "sha256": "d390ed4b85474c2bb2ede2e03192fc484e3cff264f323a65dcce7251ce4b3831"
+    },
+    {
+      "bytes": 1657,
+      "path": "receipts/check_witnesses.normal.json",
+      "sha256": "8d32ec9b4945141397360e6159dbba236a6e3e4759ececfca9eb6a78a1a6b4ba"
+    },
+    {
+      "bytes": 1657,
+      "path": "receipts/check_witnesses.optimized.json",
+      "sha256": "8d32ec9b4945141397360e6159dbba236a6e3e4759ececfca9eb6a78a1a6b4ba"
+    },
+    {
+      "bytes": 3942,
+      "path": "receipts/independent_check.normal.json",
+      "sha256": "db3e0c3b0ec096f4ddd707896f164c65070c64c5168e7a4e28f060a08dfcb18f"
+    },
+    {
+      "bytes": 3942,
+      "path": "receipts/independent_check.optimized.json",
+      "sha256": "db3e0c3b0ec096f4ddd707896f164c65070c64c5168e7a4e28f060a08dfcb18f"
+    },
+    {
+      "bytes": 1813,
+      "path": "receipts/verification.json",
+      "sha256": "f95ba616cea53f6831c874e84339ca82e765d22c9e729404d4c2bddbdbaeef3f"
+    },
+    {
+      "bytes": 410,
+      "path": "receipts/portability.json",
+      "sha256": "ecaa92bc11a57d8dc7e3199341a0bfae15e16376ed69c1b53f0fcf8a402edc29"
+    }
+  ],
+  "manifest_boundary": "This manifest lists mathematical content; SHA256SUMS additionally covers this manifest.",
+  "repository_target": "05-knowledge/results/session124_cycle_packing_obstructions_20261031",
+  "scope": "restricted spectrum and presentation/isomorphism upper bounds, not H-value density",
+  "status": "VERIFIED_LOCAL_PACKAGE"
+}

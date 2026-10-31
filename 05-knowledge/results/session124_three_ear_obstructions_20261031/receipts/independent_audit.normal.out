@@ -1,0 +1,63 @@
+{
+  "Farkas_certificates": 52,
+  "Farkas_coordinate_inequalities": 16848,
+  "certificate_sha256": {
+    "farkas_certificates.json": "d5b106ed278f86c4516a84fa9a3f845b83c86f6c39b088a655ca0ba6501ad768",
+    "farkas_occupancy_certificates.json": "c0ae1699ac91d5a4ed501f0f8823f6e1d3bc19376109e874d1fc3212d7186908"
+  },
+  "checks": 280608,
+  "complement_coordinate_equalities": 5184,
+  "complement_identities": 16,
+  "cross_order_relations": 80,
+  "excluded_nonzero_templates_per_core": 26,
+  "forced_cubic_coefficient": "4/27",
+  "growth_ineligible_templates": 37,
+  "occupancy_coordinate_equalities": 248832,
+  "prefix_invariance_row_identities": 48,
+  "rejected_certificate_mutations": [
+    [
+      0,
+      "zero",
+      "strict negative normalization constant"
+    ],
+    [
+      0,
+      "negate",
+      "strict negative normalization constant"
+    ],
+    [
+      0,
+      "zero_word",
+      "nonnegative separating coordinate"
+    ],
+    [
+      0,
+      "truncate",
+      "multiplier arity"
+    ],
+    [
+      1,
+      "zero",
+      "strict negative normalization constant"
+    ],
+    [
+      1,
+      "negate",
+      "strict negative normalization constant"
+    ],
+    [
+      1,
+      "zero_word",
+      "nonnegative separating coordinate"
+    ],
+    [
+      1,
+      "truncate",
+      "multiplier arity"
+    ]
+  ],
+  "rejected_identity_mutations": 2,
+  "states": 324,
+  "status": "passed",
+  "subset_DP_comparisons": 9362
+}

@@ -1,0 +1,1 @@
+{"exact_template_exclusions": 48, "coordinate_inequalities": 1728, "strict_negative_constants": 48, "rejected_mutations": 2, "remaining_eligible_template": [0, 0, 0], "standard_library_only": true, "digit_and_H_bound_multipliers_all_zero": true}

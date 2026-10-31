@@ -1,0 +1,56 @@
+{
+  "accepted": 3624,
+  "boundary": "Enumeration validates the finite basis; all-order equivalence follows because two disjoint triangles use at most four spine vertices. Phase count uses monotonicity, not a finite-length extrapolation.",
+  "checks": 41079,
+  "exhaustive_words_through_length5": 37449,
+  "global_proved_limits": {
+    "alphabet_size": 2,
+    "free_phases": 84,
+    "strict_updates": 83
+  },
+  "maximal_free_alphabets": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "maximum_observed_strict_updates": 5,
+  "minimal_basis_by_length": {
+    "3": 240,
+    "4": 35
+  },
+  "proper_prefixes": 84,
+  "status": "PASS"
+}

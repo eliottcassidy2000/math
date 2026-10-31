@@ -1,0 +1,34 @@
+{
+  "external_mathematical_dependency": {
+    "accessed_utc_date": "2026-10-31",
+    "author": "Arthur H. Busch",
+    "result": "Theorem1; use H^3>=5^(n-1)",
+    "title": "A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+    "year": 2006
+  },
+  "files": {
+    "README.md": {
+      "bytes": 6520,
+      "publication_treatment": "curated proof-only replacement",
+      "sha256": "dc7dd37f7d7ba31246f34bc8c07334885da1e800426917d2e6b823d708db2867"
+    },
+    "transfer.py": {
+      "bytes": 2974,
+      "publication_treatment": "exact copy",
+      "sha256": "f76506b7d0aff9106661f6f3e427ba5de88411ea9db85e4edadd5e94da280839"
+    },
+    "verify.py": {
+      "bytes": 784,
+      "publication_treatment": "exact copy",
+      "sha256": "dbe2f4c6bcd9a72f3616d5216d6bdae9c8f2858520281ffb316176a312f50a40"
+    },
+    "width3_witnesses.tsv": {
+      "bytes": 18413,
+      "publication_treatment": "exact copy",
+      "sha256": "7152ede556768c815588b4a9bf5b6bdb5a7bd5e840856a54e49017d22a796f1d"
+    }
+  },
+  "independent_checker": "Authored during audit; no discovery program or cached state counts imported.",
+  "source_directory": "session124_research/bandwidth"
+}

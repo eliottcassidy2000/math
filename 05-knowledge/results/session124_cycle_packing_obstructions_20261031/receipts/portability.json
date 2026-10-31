@@ -1,0 +1,10 @@
+{
+  "aggregate_stdout_sha256": "f95ba616cea53f6831c874e84339ca82e765d22c9e729404d4c2bddbdbaeef3f",
+  "all_baseline_receipts_identical": true,
+  "checker_executions": 8,
+  "relocated_package": true,
+  "runner_optimized": true,
+  "runtime_dependencies": "Only copied package files and Python standard library; no external census or executable.",
+  "status": "PASS",
+  "working_directory_outside_package": true
+}

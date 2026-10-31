@@ -1,0 +1,1 @@
+{"coordinate_inequalities": 9072, "exact_certificates": 28, "excluded_per_core": 14, "rejected_mutations": 4, "remaining_growth_eligible_per_core": 13, "required_distinct_templates": 16, "standard_library_only": true}

@@ -1,0 +1,5 @@
+k 0 states 2
+k 1 states 6
+k 2 states 25
+k 3 states 116
+{"checks": 3987, "k1_backward": [1, 1, 3, 5, 9, 17, 31, 57, 105, 193, 355, 653, 1201]}

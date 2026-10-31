@@ -1,0 +1,77 @@
+{
+  "exact_source_copies": [
+    "check.py",
+    "pattern_check.py",
+    "check_witnesses.py",
+    "patterns.json",
+    "global_witnesses.json"
+  ],
+  "no_external_census_dependency": true,
+  "original_audit_checks_per_mode": 38207,
+  "original_audit_source_manifest_status": "all six hashes matched",
+  "original_inputs": {
+    "audit_cycle/RESULTS.md": {
+      "bytes": 10935,
+      "sha256": "fdd3432877d44ee1771583b5ac87f80004bf4cc876c5da6396dae663c4b3fcff"
+    },
+    "audit_cycle/SHA256SUMS": {
+      "bytes": 1460,
+      "sha256": "d35650f092ff0eb7ee490f81e6e6f597685aa317bf4cc015fef1d6952604b98b"
+    },
+    "audit_cycle/independent_check.py": {
+      "bytes": 7291,
+      "sha256": "10a0dc2ae95b9fd44d989208c1c2d467b16fc33c2e4c06329a1376c643bd1c1d"
+    },
+    "audit_cycle/independent_normal.json": {
+      "bytes": 3942,
+      "sha256": "db3e0c3b0ec096f4ddd707896f164c65070c64c5168e7a4e28f060a08dfcb18f"
+    },
+    "audit_cycle/independent_optimized.json": {
+      "bytes": 3942,
+      "sha256": "db3e0c3b0ec096f4ddd707896f164c65070c64c5168e7a4e28f060a08dfcb18f"
+    },
+    "cycle_realization/RESULTS.md": {
+      "bytes": 12779,
+      "sha256": "f7ef4ba4b918f2dd6a3cb0c880403eca3975039a34ce4c464dff7994f07a5ac9"
+    },
+    "cycle_realization/SHA256SUMS": {
+      "bytes": 716,
+      "sha256": "a45e68ee9206b2b52675b00dca198cf0725feaa324f09e74f3006ff8f9d04c2c"
+    },
+    "cycle_realization/check.py": {
+      "bytes": 3871,
+      "sha256": "7d1a64759a88fc559b74d01ea613355193f6a9059c332a987cf59d9517afd913"
+    },
+    "cycle_realization/check_witnesses.py": {
+      "bytes": 1084,
+      "sha256": "e81c816279f204eca88dce84dd8068c2fd6e965a9969afcb684b6cd912e72497"
+    },
+    "cycle_realization/global_witnesses.json": {
+      "bytes": 699,
+      "sha256": "539efec0d5751184f7898a734bd3c370b2e94061b384c965b688a32580b644ba"
+    },
+    "cycle_realization/pattern_check.py": {
+      "bytes": 3198,
+      "sha256": "df9b3d0d67c03b209ff93f26e35454d86169ee0699a600384894721772c74f0a"
+    },
+    "cycle_realization/patterns.json": {
+      "bytes": 14232,
+      "sha256": "50d163aa5c213f5be0185fc009d9df0141cc7a499ec4e6b28c62500e6cba455e"
+    }
+  },
+  "portability_changes": {
+    "AUDIT.md": "Copied audit report with source-relative publication paths and explicit applied-correction status.",
+    "RESULTS.md": "Corollary20 changed to Corollary19 and illustrative reproduction directory changed to package.",
+    "independent_check.py": "SOURCE changed from HERE.parent / 'cycle_realization' to HERE; algorithm unchanged."
+  },
+  "publication_status": "prepared_local_only",
+  "runtime_dependencies": [
+    "Python standard library only",
+    "Local patterns.json",
+    "Local global_witnesses.json",
+    "Local BASELINE_RECEIPTS.json"
+  ],
+  "scope": "restricted spectrum and word/isomorphism entropy; not unrestricted H-spectrum completeness or density",
+  "source_audit_label": "audit_cycle",
+  "source_packet_label": "cycle_realization"
+}

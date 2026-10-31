@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": 175,
+  "local_flag_configurations": 32,
+  "per_order_multiplicities": [
+    8,
+    20,
+    18,
+    7,
+    1
+  ],
+  "full_multiplicities": [
+    48,
+    120,
+    108,
+    42,
+    6
+  ],
+  "example_counts": [
+    215,
+    3443,
+    55091,
+    878159
+  ],
+  "third_iterate_deficit": 3300
+}
