@@ -1,0 +1,432 @@
+{
+  "audit": "Same-agent proof review with independent endpoint DP, actual-port counting, backward adjacency DP and separate arithmetic consumers; no separate subagent audit claimed.",
+  "base_commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+  "dependency_policy": "Inherited manifest roots are transitive; input Git commits fix all referenced tables. Numerical counterexamples and program outputs are not universal coverage proofs.",
+  "files_sha256": {
+    "DD_profiles.json": "695e4e499481b7958e8aa3c87aee07c0a9f5f24879fd9ab4a18a7edcd4dad767",
+    "DD_profiles.tsv": "6ec7445715976fe695f8ff15a99b2fe956fc203ecbd4f23a5668730612bb42e1",
+    "DT1D_profiles.tsv": "534809a81c7cabc29b642f0cfe0701769adb5b6b84415e33b2f1be05ba62bd08",
+    "DT2D_profiles.tsv": "e90e8c867bb1ce66d17cbc56811d2486b5d5c8e46d1957330dd4f4db71b01c36",
+    "DT3D_profiles.tsv": "a8fca7d966a5009e529f4bbd49664d315200b2ed4d12e322c6827ff40cf3e765",
+    "DT4D_profiles.tsv": "7ce16c66738623fa7f68085ddd131208ddbace93db6ba63465e422cbb0eab7d4",
+    "DT5D_profiles.tsv": "61545a27abfdfd46fab685b571b2480d9b2b9030d5d8ba36cbc76c7d36326fd8",
+    "D_profiles.json": "d7bfe7c5eef3e4ee62d8b67bca8acfc6be671c415348e40622a55ff3daad3816",
+    "D_profiles.tsv": "0e9266779403a5b1401f74b75e8fa603e325517ffb9c3870e82bc5add7fd2447",
+    "HANDOFF.md": "4c75c6f04258e095386bdb037a7569a1d0813464c537d8f8964906e02b15d487",
+    "README.md": "0e0168986dadba716475072f9e3446cce75a88575b500760c881eee5ab3150c6",
+    "VERIFICATION.json": "37cb738fcd101a8de56a72b54332209701927d96d4de8b59e59aef9060ee0c9b",
+    "adjacency_audit.cpp": "06d70559a2265dd5025fa75011dc99a9462634c807a5a15aafa1392dc5845625",
+    "adjacency_receipt.out": "6b76ba808b5ce0b277771482d70605be0bef62d02606e0583fd0f3e4149a0b18",
+    "adjacent_DD_1000000.json": "fbec1a24d087b36927234efb673189baf25ce741efc0a7097571d726226b5ab6",
+    "arithmetic_support_agreement.json": "82f1e9a15c7a513a54741ae07c7680c2ea2b192c11cabc43e8b1d343d89a16d7",
+    "audit_arithmetic_10000000.json": "2cf1647f39eb2576f002a87ba1ce056cca4335f9f3f1f0eedbfbbaa7907d06df",
+    "audit_arithmetic_image.cpp": "40694bb7ca1765ae12e25fb4cc5b52865fbba4cd2f7a19a11468bbc48211868e",
+    "audit_block_profiles.json": "5cd889384669325db03f79b4715352b4ce687a6b33edf09d87d6f6471acd440d",
+    "audit_block_profiles.py": "8d352fa7b28ac07ebecfcf546bb097c45b7135d2d16acde3a28135757b1e26c6",
+    "audit_cap56_10000000.json": "b1ff1efc2e916cb86f6631da65b6f4336e30af2d0c1a0ac949a991ca1a1b7146",
+    "audit_channel_interfaces.json": "da289279b17b70f3417ee63b91f2e8ac8a068d7ebdbf447e011c94e3108ec6c7",
+    "audit_channel_interfaces.py": "2ce3dc21169ab970c1c8f00c517b434b70e97de8324a0825776e8a93bb58b338",
+    "audit_port_words.json": "cf44a9a5f534d5b417001fd30e67cfadd56c56f2b17740dbb363a6cfcf482320",
+    "audit_port_words.py": "37a0e0a52c1d55a11e3db36c7671254751b452d91e3d46ec163824e36f41a048",
+    "bounded_source_10000000.json": "5ad4bb9b7aece76da80454e98df3f6bd08251a4c9000c89ef24511063f832dc3",
+    "bounded_source_scan.cpp": "0fe1783a36cf60d296bed8e243c0d83710589e75adb1050a4c25031da235932b",
+    "diamond_height_100000.json": "f50ec11c0df4170372b16365dcca694bddf3214a8058fca99daee088e5310115",
+    "diamond_height_1000000.json": "73f4bda84b034285de36d9ad458f605fe5f92306b9b37871242ea47a2bcae4e5",
+    "diamond_height_audit.cpp": "d26067e447f80d5da22ad418ff129e50e909357978916f6bc51c911edf8cfb26",
+    "find_formula_witness.py": "ce0b5b2fdd42c9a4b92c4d4472899c26347f35d96a4c97b048a3fc1a1d052ec1",
+    "formula_witnesses.json": "3346dca1f458fdacee8b6ca4ca0b87825fa2ac6bfadf78d88e7976620af9d50d",
+    "formula_witnesses/H154711.txt": "bb55a231bfe87f9abb6947a95690753fe94727e9dd6489934e5ddf7a62172486",
+    "formula_witnesses/H9999991.txt": "10994cf534d46d857cbb0d39b0569e2ecee8f20cdaaf6c91fc8b3a2ccad0e071",
+    "formula_witnesses/H9999999.txt": "277da8af0ee00e574e2a6fa0d57abecf8820ac2dd89954c919aef9a776052f14",
+    "guarded_targets.json": "8089b433936fd88a49020cfd61b8df92f058580fde701439896e980d6de0603b",
+    "guarded_targets.py": "cfb067af58f9513a337e4d7832a426097dadce87f8f0fea7af52b2ef6f7e6a74",
+    "independent_ray_channels.json": "ab17ee0e0c4eced085960f8035ee75dc06e8985373d77cf0b64b0d2d92027432",
+    "independent_ray_channels.py": "8445671345f70d069ea29b5e4c9fcdea053f6fa331502c527e837499fe562866",
+    "one_D_1000000.json": "eb02a304dd9b0e31cd0a9f1434000d2f29ef6789b22397708a1daa0a3b35e1e8",
+    "one_block_formula.json": "cd52e0db7f97c9687e3f714daff41561604e4aa33387032ded47c18561920392",
+    "one_block_formula.py": "19e81bcea27951d23989de040d9f1c17454ab80087e6c2eae9aba14e41fe89a6",
+    "one_block_scan.cpp": "ae8006656e98a3d763a1035d240ebd1f307463faf567df23d87761e5ba7cd794",
+    "prefix_cap_boundary.json": "c9766c0b4a49c3f6313013a55894f51e19036e9dc61f25c0273185fe06ef7069",
+    "spacer1_DD_1000000.json": "305a34920eda765d8353151676da3d515873d23bfc4129bbc20ecaddeb0463ad",
+    "spacer2_DD_1000000.json": "1b44fba5f553af1aa9dd4ac5d5a0feefa5227f2bf4fe5f9bbc26d950c5fcc73d",
+    "spacer3_DD_1000000.json": "57ae5324bc800511743ba06fc7f48872fac4fe1fb3510602af75cf2a7e83d9dd",
+    "spacer4_DD_1000000.json": "c68c7a96149a4e92d505442e488baf984a25af3c8690f0baef934528ab96c38d",
+    "spacer5_DD_1000000.json": "676b1544fe7f2a2c95e3e5e995c06526e98404a3108e3b7fa770342467d6c978",
+    "spacer5_DD_10000000.json": "5fbbc99b1e1c10782e754d68db050413101e1e513eb9bead4b59f6716d5c4bfa",
+    "spacer_profiles.py": "8ae344d21137367a07a7c3e7a0953ba30c64a60ccf0e648775f6eb9ae8123676",
+    "spacer_profiles_1.json": "c77ddead639fdce6045e896817d9c78459f1007c17fc2718db7841291d507f75",
+    "spacer_profiles_2.json": "3231fbd6468fb25a80dd2babce4ffc27c4e0d6ec7743f8f9eb4a2beef6d279ec",
+    "spacer_profiles_3.json": "95afad4f0f02a530d2e0c4db63f41671a091658d69cdea41c221ac38f367e46b",
+    "spacer_profiles_4.json": "c23c0186faa24ff21ccdf965d57ac047d51b8f9bb1d0e3fcf048eb3d53c1c395",
+    "spacer_profiles_5.json": "4b851d5150e22c61561caf96d979a54b2012b50f862ee55e7235fa1e8e489600",
+    "spacer_support_agreement.json": "f4e642947502ace0a91dafe088b0598d5956bf1ea222289b5849580e856ebd47",
+    "static_repairs.json": "c240810c81b8756255dbeb2e08f697fc32baa5738fb5e208a504fdb67a165386",
+    "static_repairs.py": "70a07d85aa62641dc55c43e14a8c8dcffc214d2bde958812effdcf64e8536137",
+    "static_repairs_cpp.out": "6c4d9b1a5fa67455dbba2887817dcdd82ff93a8b2d46e2cf5065accb62c57155",
+    "ten_million_support_agreement.json": "d854ba435a2b827244f1259c7712b42b45f8256f86ee28f462bcce6100a2224e",
+    "verify_packet.py": "3a8d965a71913b2f72c456c2a5b7a5c7c5e9e81ea8bfda12e4b250e484fc5efe",
+    "witnesses.json": "883b2131b59c15841f290171cf6c41d3cbcd3e983a24da2d08613254c2816680",
+    "witnesses/H173.txt": "8bea8087047d68c5e854d4979b1f7198a8d1143093d9dd3a4668a7bd0d6acc9c",
+    "witnesses/H247.txt": "4274411316f72e7cd5da5e602375f9af957c538d007e5905e08ad1fcf83f1baa",
+    "witnesses/H43.txt": "d522c5db540c01f1c573f2767cc9a9f5e923b6e641ef5c14a6f1a18b23cd47ff",
+    "witnesses/H594793.txt": "5a8f6b74b3ef5b2f83277282ff9b24712aad15d7e58c429cf775341b8165c3c9",
+    "witnesses/H774073.txt": "acc858072f77c2abeae5e8a4a8608ad620578ae5fe09dd1252d8b9db8ee18670",
+    "witnesses/H93.txt": "9c6d036bed22dff59fe3f1017f3af4ed623158719a174dc4ed6cca078fcc79ba",
+    "witnesses/H949777.txt": "b4afe7006a91249bbfa7b623c39d1e9f5d30088b949256cd3e6f6c92f55e23ff",
+    "write_witnesses.py": "7f1703b752340149868d917b39c6702eb2d5fa8c458d3d50d00f100b1c5a1915"
+  },
+  "incoming_commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+  "inherited_proof_inputs": [
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/run_density.md",
+      "sha256": "e1388250fb899fd4e31ff7df34bc13ed56d4c08fac63c1272cf6bb7d1195bad0"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/seeded_eventual_cycle_theorem_20261019/SEEDED_INTERVAL_THEOREM.md",
+      "sha256": "ac08e9292ba1334166030842d3a400bce1f24f17b3a3b25b5947a968700f021e"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/seeded_eventual_cycle_theorem_20261019/certified_pair_transition_manifest.json",
+      "sha256": "11ddda9e9d0358cc4450f3fa3123282f2d6a3306396a18211bb671fc7c05ae3d"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_bounded_width_tournaments_20261031/README.md",
+      "sha256": "77e2f9d26a1cf3fbb1f54e2b1550a0c95fddfcd4174e64898d329b8a3ff1106b"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_cycle_packing_obstructions_20261031/README.md",
+      "sha256": "e0025bb760a38001e1a5b5688d8aa1619555949af975b24873c4f0b602f551e2"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/PROOF.md",
+      "sha256": "f8d8e9d669aa52e21f92693b9cd76b5bdc6801f80e3d2fa01bc37fc4e29e17b2"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/SHA256SUMS",
+      "sha256": "570dc45c3f7dbb7f6255f43b679f1b982202aa14e727dbb34e8f5943e836893f"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/audit/AUDIT.md",
+      "sha256": "35a3d2815d1116b4213618405b77a54398be43dcc2a176f50794a6e7275dc835"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/audit/adjacency_dp.cpp",
+      "sha256": "689282f834efa99fd8e3a5d7bf25058b2bcb0e8b4b1ceb42481ac061adf5f431"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/A/INDEPENDENT_AUDIT.md",
+      "sha256": "ac926912fa6e067b980ce4326c39ac96d39584e5b0abbded5317ca06f59049a9"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/B/INDEPENDENT_AUDIT.md",
+      "sha256": "9cde587fa23a457476478b1b0483876c656d30ddb7b6c1e06e9f9df575e46c62"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/HEAD_TAIL_RELAXATION.md",
+      "sha256": "8ea507f5607690a80bd0302e055e2bd710f0822b4188b36eadd0f2b9686e1a58"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/MANIFEST.json",
+      "sha256": "b6ee93e6dd645a7c888b781dbfd1e0cbfc2cb7d9a18e57e75059b959ebb9442b"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/README.md",
+      "sha256": "0b6aae1e16833be3804801bd58bd1835c312be2d5a174d72062e89efbbde26c2"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/TERNARY_SCHEDULE_THEOREM.md",
+      "sha256": "32d8232c417252f550c87f159e070ccd1721d66a27cef7acd55886b53298b065"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/core.py",
+      "sha256": "fa0099ff1b5e9a0b040cea3a268abf9195eba141051c3e19ff8cdf79ffd0e83e"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/ternary/AUDIT.md",
+      "sha256": "fa6e380cd0bc5b5f2883eab414da3a7ed7b8666ea4ac588592645c7ab9b5eaa8"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/BASE_DEPENDENCIES.json",
+      "sha256": "71a36ee304d7258dc2de4c10af6234a3c0cb8d5c880fc7dfc61d596e04618969"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/INDEPENDENT_AUDIT.md",
+      "sha256": "9c70139decbca51825181cdd2fe4a1716c6ed016ee1118db61582414d5e63ba6"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/MANIFEST.json",
+      "sha256": "22deb760b2d0510afbb89359eecda5c409a5cb9f35a9ca15fbdb00447848d303"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/README.md",
+      "sha256": "b6193cf83b3e622f4de5beee4666de65869dc247282cf82a07e8753218b12a7c"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/core.py",
+      "sha256": "702108f054ab288dfc8d83f1ee696be2b5aefb97a79b7bc8849a60077fdf66f0"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/verify_paired.py",
+      "sha256": "67f027b648f56c12ac3d9070cfc46587aea0b239f92815e97babd7fa14b78363"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/DEPENDENCIES.json",
+      "sha256": "9694a5004fb67f5e8756154ff652f1278855de89f2f7ac0fb3dba88f5559f57e"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/INDEPENDENT_AUDIT.md",
+      "sha256": "87e9e07a8db5466653ede8fb2371755c1c2f892110bc466c55e6685bf03b1304"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/MANIFEST.json",
+      "sha256": "f53519392b57af697e55dfa74606c1ef5f30f6f722782b05f0f465618eef2dbc"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/README.md",
+      "sha256": "d4fa0eb4278dcc401d426e3911411bb9318ed96a378ca94e93a05cdd107ed8ba"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/SMALL_BASES.json",
+      "sha256": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/core42.py",
+      "sha256": "88923e30cabe5a863808dc28ca5cf461dd43a933428a41d36e92b2904fc5d82d"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_three_ear_obstructions_20261031/README.md",
+      "sha256": "cd3d4d272ef8330fda9378a7fd04ca01ac0ddb1df7f3782c7cfbc09a7301915c"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/MANIFEST.json",
+      "sha256": "04baece851538b4e7e9212be7da6e306f8f3f83e1337314b4cba00a52cf167eb"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/audit/AUDIT.md",
+      "sha256": "3c235deeebd64bca33e71f7c367d6d6fe96f027158a988276289590f28d610bb"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/audit/SYMMETRY_AUDIT.md",
+      "sha256": "33be24634616de98687f30b5100a8e281f3a80c0328b1f9c88f6cadcae99f296"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_two_ear_obstructions_20261031/README.md",
+      "sha256": "5a4e1d567754423c6c4b619dc1c0e6d7cfc361f6a6867f395fd93a476c329efe"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_B_base_interval_20261019/B_base_chunks.json",
+      "sha256": "356ecf4ca3f6207a97db3f8b315278480709a2978f66821b6c3e030dbed3eae5"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_all_size_connected_paths_20261019/ALL_SIZE_CONNECTED_PATHS.md",
+      "sha256": "93d58bfd29fb32292598715a98d2b02b2a429207ebb67c013d36a30199b08ca3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/INHERITANCE.json",
+      "sha256": "b3afd278bfdf19f93bf678b9851354de70c977f9a99cf9d5a201e4bf0aa522fb"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/MANIFEST.json",
+      "sha256": "730652022116bcd070c166f47afa48335c2eaca3d7fb93b253261c59b52033a3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/audit_feedback.py",
+      "sha256": "20e5a7095b8c73ce361e38467205c5f9e8b1f27b7df0574a956ed883d8294682"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/integral_feedback.json",
+      "sha256": "1f633a2b93ac83a047f4dcdc28473bc20466a2fcd1f443394b54abf6580f4078"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/minimal_feedback.py",
+      "sha256": "11748ffbf5acce49fc1e7a8a03e7683b42c6c0867f6e1cee7c6a0078af663444"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/two_feedback_100000.json",
+      "sha256": "4b71f8c9dfc3e4a09e6f889e6148529c5cb4f6d0a3273866de9de973ab4fc1a1"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/MANIFEST.json",
+      "sha256": "b823149e12f72b2439eff8b70e93d46c03bd7aaa3b83f3f6805528d5000790b9"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/README.md",
+      "sha256": "ec3d6a2ec93438d1c031ae363c8de8fce7042929f56d24a8b7b4075cfba09552"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/binary_controller_rigidity.json",
+      "sha256": "3a3679b6a7a2bbf6726d1b18507b5ff87b321d9676299fe6e8889cbf050fffb3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/n24_forest_table.json",
+      "sha256": "0e842286110d3646f391d39da65ccfe8e8bf45f1932faf14e1242659b7faa003"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/verify_native_forest.py",
+      "sha256": "ad55ae5392beaec1fd4a6d65ec9b0a94e23e70aa0e26af195ab29c4283a7dec6"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/MANIFEST.json",
+      "sha256": "a729b63cd68d54e6ae8ef6a1326a9a615deb73dfaea6ceb6325604bfa64e1478"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+      "sha256": "70c63dba335d5372b607935b0c0e223a17659079b9467a2d3d1ef4cc2ede8c86"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/audit_inverse_witnesses.py",
+      "sha256": "6a9bc62df978a45bd4b3f7baf5d47dff34820b397e95a9114de54bf0148e6d90"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/diamond_inverse.py",
+      "sha256": "073fba65401fbf97d78338b400a024e9d4218f2832caf2cf71b8ed9b7775257b"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/diamond_profiles.py",
+      "sha256": "86df7654a9b4a4a8e70fb4a02729906bbe7832cfaffcc808fd239d587641b24e"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/PROOF.md",
+      "sha256": "0a6fb599633afdbc197f88b577faab521cd806f2777e99ba8a0fbcf15210df52"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/audit/AUDIT.md",
+      "sha256": "77a473076412a467c88576a3bddc1f4f3ec88e8b049385c7596b65f5a236f446"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/SHA256SUMS",
+      "sha256": "ba184e14ccaa731bf414a8f31666d9abb98d9db805f0b78152b1ee5fc624a768"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/global_reduction/README.md",
+      "sha256": "5c0682b6bd45edbc620ef8f1bdda1c0e5ea7fb2a861512d3670da96616ba1ec8"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/global_reduction/AUDIT.md",
+      "sha256": "645eab9f23420756d1e573e9dc63300cd3fc53e413f24de647a7b402161350c4"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/FINITE_BANK_PROOF.md",
+      "sha256": "7efe447d55786859450911302af901eff745056d8048b684c8cbd533b244ab8a"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/MANIFEST.json",
+      "sha256": "bc27533996ff138f382da9f589382015730abe993a0eb645ce7c5a8de72042a7"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/README.md",
+      "sha256": "7df42ed189b064b3a038f9d357b9d62ab08bd05c96d2931cf251a1f69f4dee09"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/README.md",
+      "sha256": "72229f397ba311eb73d401c3541079d504ea9fc996084958d9fe8431fdd7eb9d"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/AUDIT.md",
+      "sha256": "a0aee5c5e6544cc8f20bb0f75af3d8bab9243592c191df5c0b9bd3debf6b1ef4"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/SHA256SUMS",
+      "sha256": "f1dbaff83cf593384df14249856eddcdd114db2a2048d1ac54f447454d39aaed"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/parity_induction/PARITY_INDUCTION.md",
+      "sha256": "2a9e48d72f0304b006aeceffeaf9e2191b28f91829ae8155bb8711735a94f0a7"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/parity_induction/REVIEW.md",
+      "sha256": "5a15feda450049e6c762572f9a3f648dc8c24d72856f3dc7fdf10b391f8574e4"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/parity_induction/MANIFEST.json",
+      "sha256": "2ca143efa805bca58d2a51010d360ba923eb4cd316701670f4b1e5e4ac789f47"
+    }
+  ],
+  "status": "Frozen scoped proofs and finite-exact computations; universal raw spectrum remains OPEN."
+}

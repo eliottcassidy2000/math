@@ -1,0 +1,56 @@
+{
+  "parents": [
+    {
+      "E": 32,
+      "H": 5,
+      "cuts": 16,
+      "order": 4,
+      "parent": "D"
+    },
+    {
+      "E": 1024,
+      "H": 25,
+      "cuts": 256,
+      "order": 8,
+      "parent": "DD"
+    },
+    {
+      "E": 2048,
+      "H": 25,
+      "cuts": 512,
+      "order": 9,
+      "parent": "DT1D"
+    },
+    {
+      "E": 4096,
+      "H": 25,
+      "cuts": 1024,
+      "order": 10,
+      "parent": "DT2D"
+    },
+    {
+      "E": 8192,
+      "H": 25,
+      "cuts": 2048,
+      "order": 11,
+      "parent": "DT3D"
+    },
+    {
+      "E": 16384,
+      "H": 25,
+      "cuts": 4096,
+      "order": 12,
+      "parent": "DT4D"
+    },
+    {
+      "E": 32768,
+      "H": 25,
+      "cuts": 8192,
+      "order": 13,
+      "parent": "DT5D"
+    }
+  ],
+  "profiles": 16144,
+  "scope": "Every retained profile checked by independent full endpoint DP and weighted-cut identity; no producer or profile-composition import.",
+  "status": "passed"
+}

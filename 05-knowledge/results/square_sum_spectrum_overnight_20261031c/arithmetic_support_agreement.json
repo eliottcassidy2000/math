@@ -1,0 +1,9 @@
+{
+  "adjacent_DD_sha256": "18500a970ee6c207f6a931d62a2118cf4765a240ceabae4f165e28d7aff30d6f",
+  "adjacent_DD_subset_of_two_D": true,
+  "bytes_compared": 1000001,
+  "exact_one_D_agreement": true,
+  "height_sha256": "a310140c4d4847e6a919d45b4bba30c6dd11b198df72a640b8ac54c2a11eb1c3",
+  "one_D_sha256": "dcd514e6a7bda987de19ad3bbc10c01bf37e5a5c5d79c5241fd860679b8a8e1f",
+  "status": "passed"
+}

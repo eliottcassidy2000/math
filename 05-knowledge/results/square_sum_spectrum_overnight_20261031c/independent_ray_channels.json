@@ -1,0 +1,77 @@
+{
+  "checks": 30520100,
+  "controls": [
+    {
+      "N": 2551062,
+      "alphabet": "AB",
+      "assignments_sha256": "43f07489444afd5e1574dac3a7e2d6e6908a6e1aafef292692670c727d82dc04",
+      "base_checks": 17237,
+      "constructor_checks": 15,
+      "cycle_decimal_lines_sha256": "a04d33b5fe33f44a0c7fc44e2209f4030980f54b56de2c3845cbc61fe41ea85f",
+      "independent_channels": 600,
+      "length_histogram": {
+        "4": 1139,
+        "6": 1164
+      },
+      "prescribed_edges": 9248,
+      "rays": 2303,
+      "source_index": 1062,
+      "threshold": 2551062
+    },
+    {
+      "N": 2551063,
+      "alphabet": "AB",
+      "assignments_sha256": "43f07489444afd5e1574dac3a7e2d6e6908a6e1aafef292692670c727d82dc04",
+      "base_checks": 17237,
+      "constructor_checks": 15,
+      "cycle_decimal_lines_sha256": "5f42dbd7991164e023bd0aaca9f536cdc1321e40e89c1a634e6fd9a114866607",
+      "independent_channels": 600,
+      "length_histogram": {
+        "4": 1139,
+        "6": 1164
+      },
+      "prescribed_edges": 9248,
+      "rays": 2303,
+      "source_index": 1062,
+      "threshold": 2551062
+    },
+    {
+      "N": 5000082,
+      "alphabet": "ABC",
+      "assignments_sha256": "0b7141a3cc75f70e93b84161fc154039be18d9843d2c4010d548d933cd260843",
+      "base_checks": 44586,
+      "constructor_checks": 20,
+      "cycle_decimal_lines_sha256": "3362fdff7f30e010c79771c06e6770b62cf4989042d32634a575970a90407839",
+      "independent_channels": 600,
+      "length_histogram": {
+        "4": 718,
+        "6": 1585
+      },
+      "prescribed_edges": 10090,
+      "rays": 2303,
+      "source_index": 2082,
+      "threshold": 5000082
+    }
+  ],
+  "hostile": {
+    "codes": [
+      "A",
+      "B"
+    ],
+    "duplicated_lifted_label": 295,
+    "first_source_label": 6,
+    "missing_band_partner": 293,
+    "offsets": [
+      1,
+      -1
+    ],
+    "parity_disagreements": 298,
+    "source_index": 1062,
+    "zero_based_parities": [
+      1,
+      0
+    ]
+  },
+  "scope": "Uniform 600-channel theorem uses opposite-offset parity agreement and the inherited complete interfaces; these controls expand three complete cycles.",
+  "status": "passed"
+}

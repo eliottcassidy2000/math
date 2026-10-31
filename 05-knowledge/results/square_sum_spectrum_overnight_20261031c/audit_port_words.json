@@ -1,0 +1,64 @@
+{
+  "largest_count": 36893708471144335229,
+  "largest_order": 66,
+  "long_word_checks": 112,
+  "positive_targets": [
+    {
+      "actual": 594793,
+      "ports": [
+        1,
+        4
+      ],
+      "target": 594793,
+      "vertices": 21
+    },
+    {
+      "actual": 774073,
+      "ports": [
+        1,
+        4
+      ],
+      "target": 774073,
+      "vertices": 21
+    },
+    {
+      "actual": 949777,
+      "ports": [
+        1,
+        9
+      ],
+      "target": 949777,
+      "vertices": 22
+    },
+    {
+      "actual": 154711,
+      "ports": [
+        1,
+        8
+      ],
+      "target": 154711,
+      "vertices": 19
+    },
+    {
+      "actual": 9999991,
+      "ports": [
+        1,
+        2
+      ],
+      "target": 9999991,
+      "vertices": 25
+    },
+    {
+      "actual": 9999999,
+      "ports": [
+        1,
+        2
+      ],
+      "target": 9999999,
+      "vertices": 27
+    }
+  ],
+  "scope": "Counts actual adjacency using port permutations and chain-gap partitions, with no block-transfer or digital formula in the counting algorithm.",
+  "small_complete_parent_checks": 1099,
+  "status": "passed"
+}

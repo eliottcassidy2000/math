@@ -1,0 +1,12 @@
+{
+  "allowed_missing": [
+    43,
+    93,
+    173,
+    247
+  ],
+  "bytes_compared": 10000001,
+  "counts": 4999994,
+  "status": "passed",
+  "support_sha256": "9df18e9617157c43b3c78d80b86e792b71992a4523fe768db64360e181b94082"
+}

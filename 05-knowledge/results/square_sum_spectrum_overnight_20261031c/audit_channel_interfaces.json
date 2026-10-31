@@ -1,0 +1,6 @@
+{
+  "scope": "All complete A interface states; parity depends only on input-index parity, and named cut positions only on atom lengths, not source code.",
+  "separate_offset_profiles": 9604,
+  "states": 196,
+  "status": "passed"
+}

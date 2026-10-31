@@ -1,0 +1,12 @@
+{
+  "limit": 1000000,
+  "spacer5_equals_two_D_tree": true,
+  "spacer_support_hashes": {
+    "1": "7cd3e9b8a39b8614746741fc53036acba7d2fff52aeacbfc7988f64c8aa0c803",
+    "2": "08ec246440ad9a3cb9ea456dc026dd9be2864ade4191ade984f7edac895d88ac",
+    "3": "b0c7dd609f85af23b5aaabb48dbde7b077d134344fea1d5b81a60755557c54f2",
+    "4": "5611d6ec503092cd5d80cc4fe7571e654d287ef0daa74f0e4d97681b17f28e08",
+    "5": "fcf21847c69e3ed59ca02e996b5608298f0a82eb8269d289b8164c6292436276"
+  },
+  "status": "passed"
+}

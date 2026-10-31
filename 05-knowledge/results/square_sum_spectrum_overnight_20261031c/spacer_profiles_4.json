@@ -1,0 +1,7 @@
+{
+  "literal_checks": 64,
+  "profiles": 4096,
+  "scope": "Profile composition is exact; literal controls are exhaustive only for k<=1.",
+  "spacer": 4,
+  "status": "passed"
+}

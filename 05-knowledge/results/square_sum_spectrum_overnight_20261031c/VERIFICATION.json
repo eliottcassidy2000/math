@@ -1,0 +1,122 @@
+{
+  "actual_graph_audits": [
+    "adjacency_receipt.out",
+    "static_repairs_cpp.out",
+    "audit_port_words.json"
+  ],
+  "audit_mode": "Same-agent proof review; independent algorithms, not a separate subagent audit.",
+  "cap55_target": {
+    "evaluations": 184552,
+    "prefix_cap": 55,
+    "target": 154711,
+    "x": null
+  },
+  "independent_profile_audit": "All16144 profiles rebuilt from actual endpoint DP; see audit_block_profiles.json.",
+  "normal_optimized": [
+    {
+      "json_equal": true,
+      "normal_sha256": "8089b433936fd88a49020cfd61b8df92f058580fde701439896e980d6de0603b",
+      "optimized_sha256": "8089b433936fd88a49020cfd61b8df92f058580fde701439896e980d6de0603b",
+      "receipt": "guarded_targets.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "cd52e0db7f97c9687e3f714daff41561604e4aa33387032ded47c18561920392",
+      "optimized_sha256": "cd52e0db7f97c9687e3f714daff41561604e4aa33387032ded47c18561920392",
+      "receipt": "one_block_formula.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "c240810c81b8756255dbeb2e08f697fc32baa5738fb5e208a504fdb67a165386",
+      "optimized_sha256": "c240810c81b8756255dbeb2e08f697fc32baa5738fb5e208a504fdb67a165386",
+      "receipt": "static_repairs.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "5cd889384669325db03f79b4715352b4ce687a6b33edf09d87d6f6471acd440d",
+      "optimized_sha256": "5cd889384669325db03f79b4715352b4ce687a6b33edf09d87d6f6471acd440d",
+      "receipt": "audit_block_profiles.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "cf44a9a5f534d5b417001fd30e67cfadd56c56f2b17740dbb363a6cfcf482320",
+      "optimized_sha256": "cf44a9a5f534d5b417001fd30e67cfadd56c56f2b17740dbb363a6cfcf482320",
+      "receipt": "audit_port_words.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "da289279b17b70f3417ee63b91f2e8ac8a068d7ebdbf447e011c94e3108ec6c7",
+      "optimized_sha256": "da289279b17b70f3417ee63b91f2e8ac8a068d7ebdbf447e011c94e3108ec6c7",
+      "receipt": "audit_channel_interfaces.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "ab17ee0e0c4eced085960f8035ee75dc06e8985373d77cf0b64b0d2d92027432",
+      "optimized_sha256": "ab17ee0e0c4eced085960f8035ee75dc06e8985373d77cf0b64b0d2d92027432",
+      "receipt": "independent_ray_channels.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "c77ddead639fdce6045e896817d9c78459f1007c17fc2718db7841291d507f75",
+      "optimized_sha256": "c77ddead639fdce6045e896817d9c78459f1007c17fc2718db7841291d507f75",
+      "receipt": "spacer_profiles_1.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "3231fbd6468fb25a80dd2babce4ffc27c4e0d6ec7743f8f9eb4a2beef6d279ec",
+      "optimized_sha256": "3231fbd6468fb25a80dd2babce4ffc27c4e0d6ec7743f8f9eb4a2beef6d279ec",
+      "receipt": "spacer_profiles_2.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "95afad4f0f02a530d2e0c4db63f41671a091658d69cdea41c221ac38f367e46b",
+      "optimized_sha256": "95afad4f0f02a530d2e0c4db63f41671a091658d69cdea41c221ac38f367e46b",
+      "receipt": "spacer_profiles_3.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "c23c0186faa24ff21ccdf965d57ac047d51b8f9bb1d0e3fcf048eb3d53c1c395",
+      "optimized_sha256": "c23c0186faa24ff21ccdf965d57ac047d51b8f9bb1d0e3fcf048eb3d53c1c395",
+      "receipt": "spacer_profiles_4.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "4b851d5150e22c61561caf96d979a54b2012b50f862ee55e7235fa1e8e489600",
+      "optimized_sha256": "4b851d5150e22c61561caf96d979a54b2012b50f862ee55e7235fa1e8e489600",
+      "receipt": "spacer_profiles_5.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "3346dca1f458fdacee8b6ca4ca0b87825fa2ac6bfadf78d88e7976620af9d50d",
+      "note": "Current source replay after singleton fallback was added; selected positive branches unchanged.",
+      "optimized_sha256": "3346dca1f458fdacee8b6ca4ca0b87825fa2ac6bfadf78d88e7976620af9d50d",
+      "receipt": "formula_witnesses.json"
+    }
+  ],
+  "one_million_all_word_cross_check": [
+    "diamond_height_1000000.json",
+    "arithmetic_support_agreement.json",
+    "spacer_support_agreement.json"
+  ],
+  "reproduction": "README.md and HANDOFF.md; every optimized receipt is reproduced by adding -O to its Python command.",
+  "status": "passed",
+  "status_boundary": "Finite coverage through9,999,999 only. Uniform independent-ray construction and exact normal form are separately proved.",
+  "ten_million_support": {
+    "bytes": 10000001,
+    "compared_consumers": [
+      "digital quadratic form",
+      "source-state with binary-inversion f",
+      "source-state with prefix cap56",
+      "minimal-prefix quadratic form"
+    ],
+    "missing_positive_odds": [
+      7,
+      21,
+      43,
+      93,
+      173,
+      247
+    ],
+    "sha256": "9df18e9617157c43b3c78d80b86e792b71992a4523fe768db64360e181b94082"
+  }
+}

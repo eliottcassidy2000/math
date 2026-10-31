@@ -1,0 +1,8 @@
+{
+  "DD_profiles": 256,
+  "D_profiles": 16,
+  "D_recurrence": "D(0)=0; D(2a)=D(a)+ceil(a/2); D(2a+1)=D(a)",
+  "literal_D_controls": 256,
+  "scope": "Every fixed block with arbitrary singleton contexts; a terminal trailing singleton1 does not change F.",
+  "status": "passed"
+}

@@ -1,0 +1,25 @@
+{
+  "D56": 25,
+  "D85": 15,
+  "evaluations": 184552,
+  "prefix_cap": 55,
+  "scope": "Absent with x<=55 from the declared seven-parent bank, including all singleton-only words, at every suffix length.",
+  "sharp_witness": {
+    "mask": 5,
+    "parent": "D",
+    "profile": {
+      "E": 32,
+      "F": 15,
+      "H": 5,
+      "mask": 5,
+      "p": 14,
+      "q": 14,
+      "s": 3,
+      "t": 3
+    },
+    "x": 56,
+    "y": 85
+  },
+  "target": 154711,
+  "x": null
+}
