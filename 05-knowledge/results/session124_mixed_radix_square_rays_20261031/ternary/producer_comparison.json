@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "matching_producer_cycles": 27,
+  "additional_independent_odd_input_controls": [
+    [
+      "AB",
+      26587
+    ],
+    [
+      "BC",
+      52087
+    ],
+    [
+      "CA",
+      52111
+    ]
+  ]
+}

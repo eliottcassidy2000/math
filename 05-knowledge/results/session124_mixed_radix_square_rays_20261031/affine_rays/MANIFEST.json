@@ -1,0 +1,9 @@
+{
+  "scope": "arithmetic rays only; no Hamiltonian-extension claim supplied by these tests",
+  "proof_files": {
+    "AFFINE_RAY_LEMMAS.md": "60e4625ec6e23867d2b26d69260c15cdc5d62c1727857002e8668b07f30c9477",
+    "normal.json": "b189a9e06d3c09af7b5af10c76a55794cbf94b48084e54fbe584b128696bca2c",
+    "optimized.json": "b189a9e06d3c09af7b5af10c76a55794cbf94b48084e54fbe584b128696bca2c",
+    "test_identities.py": "61e298e535583a81c6056a291e097d1f25927b287dbbbdac6b4f3b9fe0792953"
+  }
+}

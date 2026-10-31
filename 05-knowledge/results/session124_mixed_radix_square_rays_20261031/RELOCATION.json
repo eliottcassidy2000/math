@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "relocated_constructor_controls": [
+    {
+      "status": "passed",
+      "N": 26562,
+      "word": "AB",
+      "threshold": 26562,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        413,
+        2087
+      ],
+      "cycle_decimal_lines_sha256": "fef547c8937cd82c437f4d5b3dc3da898c42e03c209b28bd44b244ac0c6d52f5",
+      "checks": 53134,
+      "base_checks": 5755,
+      "Q49_used": false,
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 52062,
+      "word": "BC",
+      "threshold": 52062,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        1117,
+        3783
+      ],
+      "cycle_decimal_lines_sha256": "d61729741cfcfc59fbf9b3f7bd6dd9b4523159e0197049a6168974837bef8bf8",
+      "checks": 104134,
+      "base_checks": 10855,
+      "Q49_used": true,
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 52062,
+      "word": "CA",
+      "threshold": 52062,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        633,
+        4267
+      ],
+      "cycle_decimal_lines_sha256": "024722a8eb7894e9c9338edc3840bb84a54d668f40c384512ed5b2de5be6078a",
+      "checks": 104134,
+      "base_checks": 5755,
+      "Q49_used": true,
+      "cycle_stored": false
+    }
+  ],
+  "independent_A_relocated_normal_matches": true,
+  "independent_B_relocated_optimized_matches": true,
+  "source_files_modified": false,
+  "remote_operations": false,
+  "overlap_replay_matches": true,
+  "affine_arithmetic_replay_matches": true,
+  "frontier_replay_matches": true
+}

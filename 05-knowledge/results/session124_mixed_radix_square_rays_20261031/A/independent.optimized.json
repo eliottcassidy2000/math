@@ -1,0 +1,1412 @@
+{
+  "base_interval": [
+    42,
+    1061
+  ],
+  "base_pairs": 1020,
+  "certificate_sha256": {
+    "B_p0_d12.json": "0231fa7e6888d92dbeb563e22711ff1da07681da4b228f25928f9af789311776",
+    "B_p0_d13.json": "6d4e839785eb8f05b043528e8a6d76b33dcaee18ee4aec9644526014e27f1515",
+    "B_p0_d14.json": "c7cca2396d7166971d6e25ddda15e5e7eda171046d18bff43fde79ca9ccd880c",
+    "B_p0_d15.json": "6547d7743e82a9a4950cc84d3a5a3bb0be21cf65a8f40aa02a1de6c98eafcf12",
+    "B_p0_d16.json": "24509c98055e29f628923f3265f372d2c70c2a23d76f361808e907eb89dae4a2",
+    "B_p0_d17.json": "cb3fa39186c3962a90e1d0224f04513822a00059b120d03a49bf56d73e3ff7a1",
+    "B_p0_d18.json": "34253542dbb04f3b9bb56c5c77046f9c91526c2a2a38b031cae00d35360abdd0",
+    "B_p0_d19.json": "35ed0e9868aafd7d6518eafc3199a46a24fd79de64cf01e45162aa37a07e100b",
+    "B_p0_d20.json": "9037c695a37f8124d981cf90d41b040f28c99c65132e391ae2150b3268b6629b",
+    "B_p0_d21.json": "fb8c031189e93e1323355171b5728c79c749feb4165147afbf68fc58c5d897ac",
+    "B_p0_d22.json": "414ab9e63a8ed4f2c0c680f2e88cc8ace07134c62ea6546c42295ca47bbb1036",
+    "B_p0_d23.json": "5906101d3d56f52c592f0c627e7e735c85ab6c49f8dcb910f4522cc4dcb34a7f",
+    "B_p0_d24.json": "51ade2463ed6744cd680266a4ce71bf66a8004e114139448228aabb5d9ca4b52",
+    "B_p0_d25.json": "3708b9e0ba0ed0dc7c66c395a30a4ac0e9338b177a46ff02710810d532f9f8e0",
+    "B_p0_d26.json": "661a5beacf82540f73da051b725ba6cc4405625c9a52a1387e1401327a5e402f",
+    "B_p0_d27.json": "9dcbbe86ff16c249f03df9e9fae22465f1922da7eb3712e44014250e4435367c",
+    "B_p0_d28.json": "fd8ced30b7916e7573fd96dd1d795c286863ca36337eae87aaacab79486c2582",
+    "B_p0_d29.json": "240bd67a1c921c478ff24129aad09888e46ca01e6de041ef86471a90b6300753",
+    "B_p0_d30.json": "4b6bcf91a6143007e945f1164bb947e3e430552763ed433d317577a424e0b629",
+    "B_p0_d31.json": "4d06c3d4b5a8e4e1e08895ae7ef82f83b9702ff98434f3f6c85f0d7ae79ec72b",
+    "B_p0_d32.json": "6ef1f3903d8c4dbbb7741ce1ed2c4be0880083a560e4f92061cd6dfb586f0550",
+    "B_p0_d33.json": "e69b0e3837cbf635f5b2a4a54ca5d96ae41eff19823caa72400b813812d17583",
+    "B_p0_d34.json": "d079ccd09cbec13cea48d5a87fc4fe885a6036b4d0390d677164ceeed55458d3",
+    "B_p0_d35.json": "2ddc64d250a6be0666b896f3a20baa800ee00dd8d5899b245b793955e47df8c6",
+    "B_p0_d36.json": "07bc5c714f3dc8d9d9b55a6258539c85fc542397108e4c67671dbaa491412404",
+    "B_p1_d12.json": "42bcc1baef9e6e361da359958a5842b7aa31cfa02c10e97b907d792cadeab9cf",
+    "B_p1_d13.json": "2b79ba7a49cb0308ae1e403621e9662563d284fc1245e4cd2d447c92f5b70216",
+    "B_p1_d14.json": "3f2bfe3155a05d52942abd3aa04069ee70341b41394620e27d3ccca5459a4734",
+    "B_p1_d15.json": "68c8035e1006004ebdd0b3d0ad3b69eb4c56aeb4c8ee839c3b20387084cffdbc",
+    "B_p1_d16.json": "89f9dc29efd6d7810539ef9b6c539464325b814e4093acced6569cb41baed30f",
+    "B_p1_d17.json": "72eb1376891b49159044bf8cee62a2fd0d1d74451f207a976219213751e7d512",
+    "B_p1_d18.json": "563f0c00c186d7d31b2aafac774ef57f2b0f08c1c379bf90d2515042f83a3b8c",
+    "B_p1_d19.json": "5460930c89cea10bd5c94f4c88040fb1762dc837b1500d77910c6dc6b1bc05c6",
+    "B_p1_d20.json": "52f385f33fdaeacc38838ce39053adc9e3d793b626d275ac8706f650d6d35b0f",
+    "B_p1_d21.json": "0dba578de1f43eee6e9e3e9e1f16cbe562172a8c1ba5e40e665d42a59af0bff4",
+    "B_p1_d22.json": "81f240fc777b2936298a0d669a5679d1b218a7e4eb118754bff94d87852435a0",
+    "B_p1_d23.json": "f257aeb36502c76b041063be6a3d78daeb85749512cb92cbf934b4f404e1d60c",
+    "B_p1_d24.json": "0223a1c98f6da14bf137469d21e3fbd4c59518faf9dde836535b42f293afc93e",
+    "B_p1_d25.json": "713fb5cdd7632950807274735e2f3420b9749769a14cb7c414a05c308488f38a",
+    "B_p1_d26.json": "062715325111e244786926bf101440e71a5745133f435a1a2ff4c4f5636241f9",
+    "B_p1_d27.json": "1e3bb9e73b6c9463ef131f469524ab20f9423a3b675bf6f26d407b0ce08fd3ae",
+    "B_p1_d28.json": "46121f6e85c2c17932b7a4ed7103a039a9fc8e1d22536125465ccb139b68d394",
+    "B_p1_d29.json": "c19c5eacc7e6acb10612d3b70b6c660cea7045b605d56020043b199dc02e2d74",
+    "B_p1_d30.json": "bf9d1472a452e1f7fbdd662335181ef12c83eb7845d344c17f2280fdc91bd3b8",
+    "B_p1_d31.json": "8d8dfb6db9f0588d6d28ead5eebc222d269015aa062982ab6c824aa323989e01",
+    "B_p1_d32.json": "d0a0124bb6a6bf23c2e9d670b4b534f806a785e2d6d09ad2c74cfe1083d0c798",
+    "B_p1_d33.json": "05b4eb0891178e758aee97065ce92a4d0db449181eade25f9d74a60e24331f05",
+    "B_p1_d34.json": "ce045938d663409ee403b6b22d980390a4bb2f5092b0269f62da796548dc822f",
+    "B_p1_d35.json": "5ed3e4b3d188de2c2bec1d5885be6942ec9633152a883b7285dee0ffef76ffa3",
+    "B_p1_d36.json": "4b4bbc8c840a9197ea699fedfde23f9024a10cad3683a9f8e064375ece2a1e68",
+    "C_p0_d12.json": "9e1a7324e7a1574832cfbfc75d46ccf2c5c10d9fb95feec575511f74a7a2c72f",
+    "C_p0_d13.json": "c5d39b9326ebde8ab0cd4f444ee780e809357f6d6b2274693dc827708a34c5cc",
+    "C_p0_d14.json": "0e35176e44a76081526e7e0cab89b4c5b4f07bf83eec5ca39835ecf30e2359d6",
+    "C_p0_d15.json": "37e3a24228857cb52da61c49eed30cabf0e1feeecb3c0dd47ec4bd42ba95fe23",
+    "C_p0_d16.json": "d77f352b68cba77fb747fd5447adb65cef4040f40a2f44350d7e22b47f28d00b",
+    "C_p0_d17.json": "07ebcb05b7b022243756d0c5aa15c09ab27557982edaffcdc680af283fdb3123",
+    "C_p0_d18.json": "e9d444e1a08fad77776139f2377108236a38b9e9c15aa76093f3b8afa67ab884",
+    "C_p0_d19.json": "c0e5f89edf6eb8ded319ead7e0120a0a69194140b3ee83dc91727fc2dff35e89",
+    "C_p0_d20.json": "16c4393d7afd8817c4d8ccc8b410f83955538b048069ed383882c8655cb516d0",
+    "C_p0_d21.json": "226b0d9bd67085ba56e9c73a8452a968f0005099d7e2aa5aa0f528abe016f5e0",
+    "C_p0_d22.json": "d18495b1a3b3cccdfcad33f4770cf3d71897b525ebc0d69b8749b390f53059d5",
+    "C_p0_d23.json": "bee12c29e71eaecfce19c11be7fec7815fbb31d2709fd14573ee7c38a6076942",
+    "C_p0_d24.json": "0f93cbcc592fc3d9689dc0797bdcb540f0cf646665acbc7e6bdb9be92668142b",
+    "C_p0_d25.json": "06df6170750c28cf325aef5254e444819ea7ef6d9c6989944a9b83ca7353258c",
+    "C_p0_d26.json": "ca3b666d99a3d4ce08d8f85af3c203310762c0f900d3c9112019e84c6ee08ee8",
+    "C_p0_d27.json": "6882e85f6d0d9ec97c5d4acf7dc364c6019ec669a4b1c1e73ae1a70fcfedb6a8",
+    "C_p0_d28.json": "bbd934e14115205f3b687b10e1121ac4b0c4a525249fbb6b6ef870d4df0945c2",
+    "C_p0_d29.json": "39b9366b7b5d71f75d2e75fc9569058dcb4e475203675623064735808ed8c358",
+    "C_p0_d30.json": "813a596b781e4ee1b88c971cb1787392279b4cad2d9f072bc14b0fdcca7c83d7",
+    "C_p0_d31.json": "2778067e538d02d5db2caa44911d708f4a265f8258e67776b0278697d986de72",
+    "C_p0_d32.json": "aee43fad52b0f2221a6c82afc76ec9e346294c239498b4310746ec674e0a900b",
+    "C_p0_d33.json": "dde5cb6aba28d55d407b8da8acdf38174ff6d8778ed26f2007fd9a701ba80ca6",
+    "C_p0_d34.json": "e02cd99222fd222e673eb19daae32b1d55fdd76626d15a3309a3fc2845b0e1b4",
+    "C_p0_d35.json": "2409b8900bf8d2498cdf2936fdf01bc49328ddc34ed77a4becaaf2d25719707e",
+    "C_p0_d36.json": "a2307443276b6efa32dee547b86c30f6d99be6411aa489025313ba249590bfc6",
+    "C_p1_d12.json": "d9d32c34e8b4d1fff6d4518cf7d7dc2ab3b8b4d0b64c8b7079c9f697ed32f074",
+    "C_p1_d13.json": "d3bcf9176555f58548952c84a29b9c0857e944e7cc4246b67060984d2747e78c",
+    "C_p1_d14.json": "318b9023f0b4727e2dcaf3abd943a27d39bdf02d95e26cae985760d639b27c1b",
+    "C_p1_d15.json": "3cce3d17354ca2f4f3c9b68636022d2d7dc9b0939414b5d26ea6a873c642939a",
+    "C_p1_d16.json": "216a4788a1eb6355230c0b710b5ef03f2a5e12053288c14cd08536b5c70bb3cc",
+    "C_p1_d17.json": "a34ea4b669884c4829743b05e6a968bb128dc0021138ef83b5e06a1c35b7d583",
+    "C_p1_d18.json": "950aa5deae56851decb8c432bdd149ae0ad5e0c8faef3750ca4481f9656a3d5e",
+    "C_p1_d19.json": "88374060511a8cac0455ce3d750e96d6e6a6360749cb25fe948a949f6dcdf25f",
+    "C_p1_d20.json": "47e43cbe0a262f3cfde0b6f43589ad1495a7557ce412e6bb8b128f451c7288e6",
+    "C_p1_d21.json": "75223373c6c11f70eaec6b7a90d89f04e761d8985a6f89322f654d7589eaacf8",
+    "C_p1_d22.json": "e079a33db769f42da9e4c17f5c6d7cd01e5a4cc148da5380d652931a5d8a9748",
+    "C_p1_d23.json": "894d38b233e075a08e03ae270ef91415b3c61431829763f142b864e09f139a85",
+    "C_p1_d24.json": "0d313c656defea6b4de3c1b54769c3460aea8d89a707d940f13d89ecd9291eff",
+    "C_p1_d25.json": "d205df4e6539a0a8ef7a012d1cfd2eda9f988cb7dd0dcb216d7b87f3cd1ac9c5",
+    "C_p1_d26.json": "3122d53a5aa7deeff10b59fed3c867f29877608e42ff9074c82c8bfd4c941847",
+    "C_p1_d27.json": "411741e629642423cc6704e5ae4c7fa06b5f6b1986da2092039c858856d942c8",
+    "C_p1_d28.json": "b8df3d6fdc792529c6a026b36ac4171afda0ccde8365aa951551a961b7c8a188",
+    "C_p1_d29.json": "27a20771b95b5b6bcc0f0606c16998c15cf700901d6cce18a5c174c03e98e4a8",
+    "C_p1_d30.json": "9c40bfbd5de282a25ed13a2c07533fa8e9ba61253ef5a21438900c2ebce31b88",
+    "C_p1_d31.json": "7ab081b59c3a6412e912c893038de9ecf9701364cfc808a1fa75d49281a40216",
+    "C_p1_d32.json": "98847a82dd6c5a07fcb977cf81e0ee506e0c5d2a9eceff14624f2971aa71a1f8",
+    "C_p1_d33.json": "911879ef06265ed3b8120692b2807a163aba879da04fa05d5ab4385173c04650",
+    "C_p1_d34.json": "3934d51e99b11dfb2baed441d857ee664578be65cc8c180538a139a938aec3d8",
+    "C_p1_d35.json": "8f96dffbd259622051dc09e30d06485acfc2946796f48c4527d4f1638e7b66ed",
+    "C_p1_d36.json": "d21e0fc4e2a895a51e20d3a47b80742065a53a38fc265eb6fd940787e4fa3eb5"
+  },
+  "checks": 51027430,
+  "cycle_controls": [
+    {
+      "N": 1062,
+      "cycle_decimal_lines_sha256": "dcb03a32a8fab4f1db643bf28283109c435647172983ab78d4020e09679bffa1",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1063,
+      "cycle_decimal_lines_sha256": "5f3e36a0be3e21a51ab3f2841ab37f618269f61952cda1ded0eceb24821275cd",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1064,
+      "cycle_decimal_lines_sha256": "350d172255c139173725fe6105263fa1972ae3115a2a09cc9be90a8405b8eda4",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1065,
+      "cycle_decimal_lines_sha256": "5391b07de39015916e2607adc121a4ace3aa663d18c3715db431f686222912d6",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1066,
+      "cycle_decimal_lines_sha256": "b0b733f1bfd1bf1c4c9ca799507a31e16fe8c130e819deff9b7a1a97831b33e9",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1067,
+      "cycle_decimal_lines_sha256": "0b57234abfc4563755d06fb051928baf504d73c01c5a43e4196a4e7cf6a1dad7",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1068,
+      "cycle_decimal_lines_sha256": "3744b13835766b2a249a4cdf62e40b8baff4f7345929354b144f6c9baa48db97",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1069,
+      "cycle_decimal_lines_sha256": "be8f36bc6630a81cecb5bcd476d55b88a652139b5b283cbb9860afedba0c6933",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1070,
+      "cycle_decimal_lines_sha256": "59d45b3d4ca4347d5bee0bf601b0c3887a6ad46038f245ea1fb7ff822f4fde38",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1071,
+      "cycle_decimal_lines_sha256": "7d546602e7d1e9003e04a769ff997739524f1128fcb1c7a3ece20b40b1ebff05",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1072,
+      "cycle_decimal_lines_sha256": "85ca955f1cafa9b41093e5886231fea7235b1d288b4a9dc50aa712856f51a3cf",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1073,
+      "cycle_decimal_lines_sha256": "195bce3a53c1911c2b5a74b380d6eff65e4774dd2365dd18861a6cf7836a75e9",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1074,
+      "cycle_decimal_lines_sha256": "0199b6e8abfb6065ebfe52173a5dae8953b5bd258f514278358566e316ebbe6b",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1075,
+      "cycle_decimal_lines_sha256": "e94295f0828d2588b1a9af5f52991526651a9873057ae40d2f089ce30a5ed8b9",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1076,
+      "cycle_decimal_lines_sha256": "efa54f8810c375cc78800c84762d4e24ebb7b037a26fcd99c9d5c9c9e11144da",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1077,
+      "cycle_decimal_lines_sha256": "d316e4d7b17aee36ec2268523245033368f5570f3a205fed7700a7f93bb105fc",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1078,
+      "cycle_decimal_lines_sha256": "45f06b987a64468f1f01c0b929bd7b57a83be56edae4264461da102c18e334da",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1079,
+      "cycle_decimal_lines_sha256": "216f01ad60d40c826fe6534c0362179ca7c562c317ff9243078dcfa71cd9fd5f",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1080,
+      "cycle_decimal_lines_sha256": "76db132e585605108a5ce3dea6206f67d25a753e9f4ec20e0a8bc941c0f35cb1",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1081,
+      "cycle_decimal_lines_sha256": "c1c0c050e12c074775092864aa9cca9a220d64412752c53f5714b4932b695227",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1082,
+      "cycle_decimal_lines_sha256": "d7e6b00c1f70b2ca9cde40b28e667ff9a71bfe955ee6adec0875fa112b1992eb",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1083,
+      "cycle_decimal_lines_sha256": "aa09de83f7098f4a29bc6d380e97687ed780574ab3d6d6be5a4306eea1f0e5c0",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1084,
+      "cycle_decimal_lines_sha256": "269d880857401fcb9d9c72e136e20147846dc26a5989de57e57580332ac4ac4e",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1085,
+      "cycle_decimal_lines_sha256": "3da84394e166916d37e6a2a071f7a7cb1c283eb3ee9236b177674f873e403202",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1086,
+      "cycle_decimal_lines_sha256": "2baefd2a78f4d030c66ba2bb137d9f4c0483ba1c714ad4f812b87c74d9cda326",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1087,
+      "cycle_decimal_lines_sha256": "3e419ab131354d38be08d93e4ec5f38b7da51ce4fb08b7d9c38a980a31305940",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1088,
+      "cycle_decimal_lines_sha256": "f64c5ff61469a4a8f1555743a24e5bc16be04643565ff00a2adf7879965a64d8",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1089,
+      "cycle_decimal_lines_sha256": "d11569f444691b0b3fc6db8a2a6fc3f3cca847aef836c7d82b9411cec34ec030",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1090,
+      "cycle_decimal_lines_sha256": "ed11bd05eb62d1f418e5ecb8eef7d162ac87cc761d61ebd0b072b14db9523e8b",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1091,
+      "cycle_decimal_lines_sha256": "acdce5c3613889d6328f7268dbf899edbdb7708f23017e33fb43cd8e4320736d",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1092,
+      "cycle_decimal_lines_sha256": "29b46a270c3106ea4f6390f62f9900e84f74a535ae0c08c09384e3f883d0cdee",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1093,
+      "cycle_decimal_lines_sha256": "4265315559826ca6345cf0cc098bd731a39f6df755d5391f77ff334126116af0",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1094,
+      "cycle_decimal_lines_sha256": "48afcdedde8c211dc6199c56f79ba59db0f94ba8addd5d1d628736e9fc0a1ee4",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1095,
+      "cycle_decimal_lines_sha256": "abef8ba58268ec106a1ac5e14a6f0bbc92739b852ed583702d84d3336e0fc7e5",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1096,
+      "cycle_decimal_lines_sha256": "a037ac1870249beb81f3f0e95ec81e459e3aae485b44123dde6a32dfc5b3b323",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1097,
+      "cycle_decimal_lines_sha256": "92d12cf5647067da93be3d09da01d56a3c1a8777a81f81b9bc34760cf0bb515c",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1098,
+      "cycle_decimal_lines_sha256": "bd0c87b5e7a807fa05de2c7e812dc408f4ec7e2054e9973371e3791de81e97a8",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1099,
+      "cycle_decimal_lines_sha256": "1fad5114aa69de43dc1059c403734f9d4b0116e5bc65c4367436582cf79ec652",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1100,
+      "cycle_decimal_lines_sha256": "cd4beea1504668d4485f3ab538bf195691736fac8f0efc5b7aa02ffcbcce0b7b",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1101,
+      "cycle_decimal_lines_sha256": "7e14acafa4d09e5cfee7488f1c69e8f7091b1b9acc79f4e9430a308745094ef8",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1102,
+      "cycle_decimal_lines_sha256": "78d5849348857205e9727b87276c83598f55448384faccfa4b01a6d50a2af51e",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1103,
+      "cycle_decimal_lines_sha256": "2e0016a7fb22823a0d304f86828a8a7304fb08f1172294c552625fb696e3f192",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1104,
+      "cycle_decimal_lines_sha256": "6a6144ac790b4420026a4249e051ca91ae3302076bc90b180307553fb2e3390b",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1105,
+      "cycle_decimal_lines_sha256": "c45dbcf62b2e92f4ea5f43d03be26d3b76a26be26cd575b7da831b3f86d65333",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1106,
+      "cycle_decimal_lines_sha256": "c7e5767b79de9c7e10ba0374f95f010519ba7879561b49d13ee6374e090a1571",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1107,
+      "cycle_decimal_lines_sha256": "a7af79d2cd2d0b1ff49c814f19e11de5869fedda9dde3b64e2f303f375a4efd5",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1108,
+      "cycle_decimal_lines_sha256": "c68e641e03fefb320d4376e56818044477b51d1d43f161c8b27692d917e3d2cb",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1109,
+      "cycle_decimal_lines_sha256": "3262d3d5f345c8cbfe7836a8c0221fec1429da1d308a3e7820a334c2d05e074e",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1110,
+      "cycle_decimal_lines_sha256": "56260d13d20aaf360198f90bf4b2e48e6a53d37cf7d60f07fe23dc4f5a7a82a5",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 1111,
+      "cycle_decimal_lines_sha256": "ca13c3fa8879beb7b99dcf7f568eb0d3c0d1b1ddbb194812b0e4ee8e927d8544",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 26562,
+      "cycle_decimal_lines_sha256": "596449a8e60e5c4e93c74f13e5f43c79b2c8002721e873ea2b4c843ff5b60f2a",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26563,
+      "cycle_decimal_lines_sha256": "e32cbef862eb65b4762be6afe44c27309a15daf41531ce222892106cf60c0053",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26564,
+      "cycle_decimal_lines_sha256": "7b2caf40306e7f211f131eec5601136c809709a95ec5f8806963dc831e3097db",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26565,
+      "cycle_decimal_lines_sha256": "0376806edf0045ea09015f3ad969eb52391dc91ef0a9478ad8b379397ff42f5c",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26566,
+      "cycle_decimal_lines_sha256": "b312155c2fe604d2d95f4a17988c7e51fe227d0c75adbff25bc2a96457ee6753",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26567,
+      "cycle_decimal_lines_sha256": "8fbd759912c12f48e012c2397e061b3580a6dc14dee903d7b49060beeea962aa",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26568,
+      "cycle_decimal_lines_sha256": "5e0003d9b3f4056e755d13600b8c688601611f319eb1d7432dfa3d597f8ff333",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26569,
+      "cycle_decimal_lines_sha256": "149a49dd3e41a92945b47286c51e1485b7676b3c636e00f9810009801ae16676",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26570,
+      "cycle_decimal_lines_sha256": "d961459f28abdbe481fbab45270c43f72adad4b394ffaef073bb57552df4cebf",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26571,
+      "cycle_decimal_lines_sha256": "d76e1623fab501d4281060aff89e33c02b80d072fe1f7e9c79dbef953bd743ed",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26572,
+      "cycle_decimal_lines_sha256": "df1977daf57803c8814911d985a1a001fced4807c0284f570ab1df8909a0de34",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26573,
+      "cycle_decimal_lines_sha256": "0db38e1a88762824eb62ec0d9f988e133fb483fd0dfe67b9d1931b6951107c70",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26574,
+      "cycle_decimal_lines_sha256": "a58f9297b4b8d602361d6a94dd9754adabb53fa60a6a1fa908ba95148ef691be",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26575,
+      "cycle_decimal_lines_sha256": "a2d63a6501f31bfd656f21fa469ea65cd5f3f5e4a54adf4451301e5e20e80e6d",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26576,
+      "cycle_decimal_lines_sha256": "877aa35ea15f9a0ca8c6e640639633aa7c4f2210e7f9667aaf26bec27b30e1d2",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26577,
+      "cycle_decimal_lines_sha256": "8afd2be2c488d912c4c8f686df4a01dceed3a37143ecd1c0c847a941f57285ad",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26578,
+      "cycle_decimal_lines_sha256": "2664dd985741dee963329c4215d49e97c93a8581da64a74b977965aa53460a16",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26579,
+      "cycle_decimal_lines_sha256": "41640bf0aff5b8a15c1f01489cced42bf3f5734b03f9799f4380d4ae93ad5529",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26580,
+      "cycle_decimal_lines_sha256": "26979de2663e860d6237a7a9d335f983d972ee6d9957eae78e99cd4cc8eccc18",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26581,
+      "cycle_decimal_lines_sha256": "ee584cf82eeac84c36f025aa9b6458c6ce93b36fc9dca87914d3db849251e15f",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26582,
+      "cycle_decimal_lines_sha256": "585da60547d77cc8ac6493cc78597db9fce5f589ca7e2b85e013a951f1074b34",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26583,
+      "cycle_decimal_lines_sha256": "4c1583e0fc980961abf1f5eadf42fb776df3c42fd4c1475ea2bed4d766064a8c",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26584,
+      "cycle_decimal_lines_sha256": "0a7a5fd910282027e00d6e270a3b73769082ae171dc8782e30d5be7216286391",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26585,
+      "cycle_decimal_lines_sha256": "9709f68a595772dc64b417e05021ee38971becad2d24f1ca1403b482617e59d8",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26586,
+      "cycle_decimal_lines_sha256": "b2cf29d52d8552e54f39934efffb5264b59c0bb650e42d60e563615a4a31ffde",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26587,
+      "cycle_decimal_lines_sha256": "b86e98ed6e1c6fbc615a250fc5fbd0805268b967a111f542f212814fdfe73781",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26588,
+      "cycle_decimal_lines_sha256": "270bf2ded283f87ab4313b011f53124fa47b77c269449af943339b5839a3af70",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26589,
+      "cycle_decimal_lines_sha256": "f48b8686820491bd3c5119582ca8e11dc8e07abdc44ec823102c09e4666c5a79",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26590,
+      "cycle_decimal_lines_sha256": "ce9cc7c4e0f0b9286c14887c14e07a83c20dd28af9d922579fc1e8751ac711b7",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26591,
+      "cycle_decimal_lines_sha256": "a84938e8c7d0e54601d4c1d50ba87fec7b6f79579e6a0f6de21b0fdc8796b4fe",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26592,
+      "cycle_decimal_lines_sha256": "b21ca720f9c8a64445dbd2658051d714afdee828f36ee04bd5592b76b06f55b9",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26593,
+      "cycle_decimal_lines_sha256": "8da876f2bf93de302b40c71254f96f3ff0de3cd5aacc104da626a3b4ab48b91e",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26594,
+      "cycle_decimal_lines_sha256": "23a6401966bbacccc3eb1496de2511012cb907bc39ed7910f9bfa0a3926f1543",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26595,
+      "cycle_decimal_lines_sha256": "8620c3f75f2e63061b6368eb25dd5d4b4c07e68c59a61984424075cb4b875e4f",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26596,
+      "cycle_decimal_lines_sha256": "1d93aeb58aa4aabd650b1fed22e1633e48efba5a53e3db90595999d2bcbb350c",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26597,
+      "cycle_decimal_lines_sha256": "b6d88b74f1f964c84d560270de29e5971b72ead659c2e78da923196a1de8c003",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26598,
+      "cycle_decimal_lines_sha256": "4764396e4bfeb33a8fe5b0acc25e232005839a9d3cd7db23c48aef4b73225cb1",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26599,
+      "cycle_decimal_lines_sha256": "4814dccb12fa25cf745d8321b98b020a0523a9f9a16b2819451425b2b6175498",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26600,
+      "cycle_decimal_lines_sha256": "6135a6392a3f1a1a7a647ae17f8b9816221b49c7a26f0ea4c13259469be59d1c",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26601,
+      "cycle_decimal_lines_sha256": "81c8ffbbe3e1e337abce4128505a21c5091c6c250bc2160f3a21b9e809c513bd",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26602,
+      "cycle_decimal_lines_sha256": "4286f5529670bea6fe13866bc8b9099aeb196b1356138c67b88341c075030f64",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26603,
+      "cycle_decimal_lines_sha256": "8d26c9183c00c8ad7931776b0b456d8e20b21f86108db803a9d0ce7484187529",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26604,
+      "cycle_decimal_lines_sha256": "8d92c7390faa76b84896d27db6327dd8445e83e24370e662017d6417be2f79ac",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26605,
+      "cycle_decimal_lines_sha256": "4467d25f70f233a7d634edbdf30e9696f1d33fbd08b9238129493a6e5a296e76",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26606,
+      "cycle_decimal_lines_sha256": "2527b0e48cd24dcb870f55d3a5091f4b44158780fa4c6d47b87afd2943de3864",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26607,
+      "cycle_decimal_lines_sha256": "c00c042c43ad497a0b3ff48a39315dd86394b13356770a219472f2b77851a5bc",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26608,
+      "cycle_decimal_lines_sha256": "a7e4e5fedef2c5182f2509a741473c48a36cf9f93db09a04061afbcbd9dc34fa",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26609,
+      "cycle_decimal_lines_sha256": "885608c0b659a0cc9308c40e8b1668c7273e300387bc2f3e2d499e69190d71a4",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26610,
+      "cycle_decimal_lines_sha256": "294ba75132b0f94f4e884096c5cb5ed8a9db256a88d217a65ca9a1e32b5bb973",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26611,
+      "cycle_decimal_lines_sha256": "5ca4feaef97c4fa4fd15c3b7d5a72d4d1086e876d25749cdff961cb186765b9c",
+      "depth": 2,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ]
+    },
+    {
+      "N": 26561,
+      "cycle_decimal_lines_sha256": "ca8b0296a486ecf2c39b3814fd62977ee6cfb1a6df14b03fab38ed2b82de526b",
+      "depth": 1,
+      "prefix": [
+        1,
+        3,
+        13,
+        87
+      ]
+    },
+    {
+      "N": 664062,
+      "cycle_decimal_lines_sha256": "00465ff40a4daf7f510744aef8cdee624a0c0156709639a164a004b0948e3057",
+      "depth": 3,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187,
+        7813,
+        54687
+      ]
+    },
+    {
+      "N": 16601562,
+      "cycle_decimal_lines_sha256": "4a3b1fa5c2bc9b9273cddbab8f2b40fad2c282af3eaa7104ecc273b5ead78ca5",
+      "depth": 4,
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187,
+        7813,
+        54687,
+        195313,
+        1367187
+      ]
+    }
+  ],
+  "hostile_mutations": [
+    [
+      false,
+      "protected_cut",
+      "Q25 cuts"
+    ],
+    [
+      false,
+      "wrong_choice",
+      "Q25 exact protected opening"
+    ],
+    [
+      false,
+      "missing_atom",
+      "Q25 symbolic interval length/ownership"
+    ],
+    [
+      false,
+      "reversed_prefix",
+      "Q25 exact protected opening"
+    ],
+    [
+      true,
+      "protected_cut",
+      "Q25 cuts"
+    ],
+    [
+      true,
+      "wrong_choice",
+      "Q25 exact protected opening"
+    ],
+    [
+      true,
+      "missing_atom",
+      "Q25 symbolic interval length/ownership"
+    ],
+    [
+      true,
+      "reversed_prefix",
+      "Q25 exact protected opening"
+    ]
+  ],
+  "old_chunks_used": 4,
+  "paired_expansions": 100,
+  "paired_states": 50,
+  "producer_imports": 0,
+  "recursive_cutoff": 1062,
+  "small_catalog_sha256": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1",
+  "status": "passed",
+  "terminal_states": 50,
+  "thresholds": [
+    42,
+    1062,
+    26562,
+    664062,
+    16601562
+  ]
+}

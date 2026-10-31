@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "unchanged_scripts_and_receipts": {
+    "A/audit_independent.py": "bc7b705ac5bab9c89903259635ac56a4eb237dc8924e2fc711ce2b62f4e7ee7e",
+    "A/independent.normal.json": "c416df37d6e426323f73054707991c9a103e3c2ccf895a9ddc574c1c71b75afa",
+    "A/independent.optimized.json": "c416df37d6e426323f73054707991c9a103e3c2ccf895a9ddc574c1c71b75afa",
+    "B/audit_independent.py": "aced3ed9045b6ea05f9fb18e56c783c5b7e369473d48af0cca59338205490232",
+    "B/independent.normal.json": "e36cf1fca5d847fa6275e8b44347434abb500fc3368bbef82f8741309727ebff",
+    "B/independent.optimized.json": "e36cf1fca5d847fa6275e8b44347434abb500fc3368bbef82f8741309727ebff"
+  },
+  "prose_artifact_names_portably_adapted": true
+}

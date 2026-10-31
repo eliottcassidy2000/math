@@ -49,7 +49,7 @@ int main(int argc,char**argv){
    seeds.insert({h,f,q,t});
   }
  }
- for(auto s:seeds){for(int x:s)sf<<x<<' ';sf<<'\n';walk(s);}
+ for(auto s:seeds){for(size_t i=0;i<s.size();++i){if(i)sf<<' ';sf<<s[i];}sf<<'\n';walk(s);}
  ofstream out(dst/"support.bin",ios::binary);
  if(!out)throw runtime_error("Cannot open support output");
  int count=0;for(int i=0;i<=LIMIT;++i){out.put(support[i]?1:0);count+=support[i];if(support[i]&&!(i%2))throw runtime_error("even support");}

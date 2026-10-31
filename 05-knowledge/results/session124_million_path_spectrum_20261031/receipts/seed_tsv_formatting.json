@@ -1,0 +1,21 @@
+{
+  "change": "Remove only trailing separator spaces from seed TSV rows; writer now emits separators only between fields.",
+  "rows": 273,
+  "integers_per_row": 4,
+  "ordered_numeric_rows_identical": true,
+  "unique_rows": 273,
+  "old_seed_sha256": "5975d75aff6d05c3dd654362c2de189a510fa689a79ad8f31714b0f613d463fd",
+  "new_seed_sha256": "9419aeef39eec40c3afad0dcca7c9679303e543d128da5bc3c2794ec75320f55",
+  "old_seed_bytes": 3016,
+  "new_seed_bytes": 2743,
+  "canonical_numeric_json_sha256": "eccfd6d218dd78ad22117a53037d2ee025e9bb574b5be933f7a7dcbefa5b0701",
+  "old_independent_cpp_sha256": "267e8db4148901fc08c83feceabda9db3a2d5c3b7798bcd98f3447645f8d129d",
+  "new_independent_cpp_sha256": "e502f8f8d913cc1e5e389f4098383e764adaefa93991f7c48f18695b2477f9cc",
+  "scope": "Whitespace and emission format only. All integer data, algorithms, support and mathematical conclusions preserved.",
+  "replayed_utc": "2026-10-31T07:12:37Z",
+  "all_40_checks_passed": true,
+  "unchanged_stdout_receipts": 40,
+  "normal_optimized_and_O0_O2_identical": true,
+  "support_sha256_unchanged": "5a72b3fe14b66b09ccb6ccd3b86c05213fd403bcf9f182c416c7180e29d167b4",
+  "all_other_generated_data_identical": true
+}

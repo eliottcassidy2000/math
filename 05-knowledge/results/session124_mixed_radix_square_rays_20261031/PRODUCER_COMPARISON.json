@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "controls": 27,
+  "normal_optimized_identical": true,
+  "reference_constructor_all_hashes_match": true,
+  "reference_receipt_sha256": "81ba3a44175b7b20f363489d0c457217b6b3bcdba45cb01f7b4dd6dd8ec06e80"
+}

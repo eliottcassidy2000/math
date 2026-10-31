@@ -1,119 +1,119 @@
 {
   "status": "PASS",
-  "started_utc": "2026-10-31T06:29:20Z",
-  "finished_utc": "2026-10-31T06:31:08Z",
+  "started_utc": "2026-10-31T07:10:47Z",
+  "finished_utc": "2026-10-31T07:12:37Z",
   "python": "3.12.14",
   "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
   "checks": [
     {
       "check": "seeded_words.normal",
       "returncode": 0,
-      "seconds": 22.042
+      "seconds": 22.747
     },
     {
       "check": "seeded_words.optimized",
       "returncode": 0,
-      "seconds": 22.313
+      "seconds": 21.281
     },
     {
       "check": "audit_seeded_words.normal",
       "returncode": 0,
-      "seconds": 3.462
+      "seconds": 3.713
     },
     {
       "check": "audit_seeded_words.optimized",
       "returncode": 0,
-      "seconds": 3.866
+      "seconds": 3.699
     },
     {
       "check": "check_target_witnesses.normal",
       "returncode": 0,
-      "seconds": 1.656
+      "seconds": 1.499
     },
     {
       "check": "check_target_witnesses.optimized",
       "returncode": 0,
-      "seconds": 1.583
+      "seconds": 2.172
     },
     {
       "check": "check_block_targets.normal",
       "returncode": 0,
-      "seconds": 18.039
+      "seconds": 18.692
     },
     {
       "check": "check_block_targets.optimized",
       "returncode": 0,
-      "seconds": 18.016
+      "seconds": 19.841
     },
     {
       "check": "check_mod3_and_products.normal",
       "returncode": 0,
-      "seconds": 0.026
+      "seconds": 0.024
     },
     {
       "check": "check_mod3_and_products.optimized",
       "returncode": 0,
-      "seconds": 0.088
+      "seconds": 0.086
     },
     {
       "check": "check_padic_filtration.normal",
       "returncode": 0,
-      "seconds": 0.412
+      "seconds": 0.402
     },
     {
       "check": "check_padic_filtration.optimized",
       "returncode": 0,
-      "seconds": 0.414
+      "seconds": 0.409
     },
     {
       "check": "compile.independent.O0",
       "returncode": 0,
-      "seconds": 0.594
+      "seconds": 0.601
     },
     {
       "check": "independent.O0",
       "returncode": 0,
-      "seconds": 3.392
+      "seconds": 3.403
     },
     {
       "check": "compile.independent.O2",
       "returncode": 0,
-      "seconds": 0.708
+      "seconds": 0.724
     },
     {
       "check": "independent.O2",
       "returncode": 0,
-      "seconds": 0.363
+      "seconds": 0.355
     },
     {
       "check": "independent_check.normal",
       "returncode": 0,
-      "seconds": 0.177
+      "seconds": 0.173
     },
     {
       "check": "independent_check.optimized",
       "returncode": 0,
-      "seconds": 0.289
+      "seconds": 0.269
     },
     {
       "check": "compile.adjacency.O0",
       "returncode": 0,
-      "seconds": 0.336
+      "seconds": 0.342
     },
     {
       "check": "adjacency.O0",
       "returncode": 0,
-      "seconds": 0.939
+      "seconds": 0.93
     },
     {
       "check": "compile.adjacency.O2",
       "returncode": 0,
-      "seconds": 0.396
+      "seconds": 0.416
     },
     {
       "check": "adjacency.O2",
       "returncode": 0,
-      "seconds": 0.293
+      "seconds": 0.272
     },
     {
       "check": "mod3.normal",
@@ -128,82 +128,82 @@
     {
       "check": "mutation.normal",
       "returncode": 0,
-      "seconds": 0.315
+      "seconds": 0.325
     },
     {
       "check": "mutation.optimized",
       "returncode": 0,
-      "seconds": 0.43
+      "seconds": 0.408
     },
     {
       "check": "construct.1.normal",
       "returncode": 0,
-      "seconds": 0.027
+      "seconds": 0.031
     },
     {
       "check": "construct.1.optimized",
       "returncode": 0,
-      "seconds": 0.115
+      "seconds": 0.105
     },
     {
       "check": "construct.49.normal",
       "returncode": 0,
-      "seconds": 0.026
+      "seconds": 0.027
     },
     {
       "check": "construct.49.optimized",
       "returncode": 0,
-      "seconds": 0.114
+      "seconds": 0.11
     },
     {
       "check": "construct.34869.normal",
       "returncode": 0,
-      "seconds": 0.026
+      "seconds": 0.029
     },
     {
       "check": "construct.34869.optimized",
       "returncode": 0,
-      "seconds": 0.117
+      "seconds": 0.115
     },
     {
       "check": "construct.103061.normal",
       "returncode": 0,
-      "seconds": 0.027
+      "seconds": 0.028
     },
     {
       "check": "construct.103061.optimized",
       "returncode": 0,
-      "seconds": 0.12
+      "seconds": 0.11
     },
     {
       "check": "construct.999999.normal",
       "returncode": 0,
-      "seconds": 0.593
+      "seconds": 0.504
     },
     {
       "check": "construct.999999.optimized",
       "returncode": 0,
-      "seconds": 0.579
+      "seconds": 0.613
     },
     {
       "check": "constructed_adjacency.O0",
       "returncode": 0,
-      "seconds": 3.662
+      "seconds": 3.684
     },
     {
       "check": "constructed_adjacency.O2",
       "returncode": 0,
-      "seconds": 1.026
+      "seconds": 1.06
     },
     {
       "check": "hostile_cli.normal",
       "returncode": 0,
-      "seconds": 0.215
+      "seconds": 0.212
     },
     {
       "check": "hostile_cli.optimized",
       "returncode": 0,
-      "seconds": 0.876
+      "seconds": 0.835
     }
   ],
   "generated_data": {
@@ -224,8 +224,8 @@
       "bytes": 430
     },
     "O0/seeds.tsv": {
-      "sha256": "5975d75aff6d05c3dd654362c2de189a510fa689a79ad8f31714b0f613d463fd",
-      "bytes": 3016
+      "sha256": "9419aeef39eec40c3afad0dcca7c9679303e543d128da5bc3c2794ec75320f55",
+      "bytes": 2743
     },
     "O0/support.bin": {
       "sha256": "5a72b3fe14b66b09ccb6ccd3b86c05213fd403bcf9f182c416c7180e29d167b4",
@@ -248,8 +248,8 @@
       "bytes": 430
     },
     "O2/seeds.tsv": {
-      "sha256": "5975d75aff6d05c3dd654362c2de189a510fa689a79ad8f31714b0f613d463fd",
-      "bytes": 3016
+      "sha256": "9419aeef39eec40c3afad0dcca7c9679303e543d128da5bc3c2794ec75320f55",
+      "bytes": 2743
     },
     "O2/support.bin": {
       "sha256": "5a72b3fe14b66b09ccb6ccd3b86c05213fd403bcf9f182c416c7180e29d167b4",
@@ -348,7 +348,7 @@
     "audit/adjacency_dp.cpp": "689282f834efa99fd8e3a5d7bf25058b2bcb0e8b4b1ceb42481ac061adf5f431",
     "audit/check.py": "8f38cd29138f7c850ac7759afd00e39e91d5aa7dc7b049cb194ca4fd5f2e01d6",
     "audit/hostile_cli.py": "b6092f217b03f16e608bb0c12e2ac1e8f1291216f715bb1e500f694c668f2959",
-    "audit/independent.cpp": "267e8db4148901fc08c83feceabda9db3a2d5c3b7798bcd98f3447645f8d129d",
+    "audit/independent.cpp": "e502f8f8d913cc1e5e389f4098383e764adaefa93991f7c48f18695b2477f9cc",
     "audit/mod3.py": "81b340bbc6e25310990e2b35fe7e07ba6a7cf2e0d09213061cf8789587629d72",
     "audit/mutation.py": "684d303562605511255cac8c2517dc2382f759f44a265e940bbeb032c978cf39",
     "construct_witness.py": "14e3ce3b8bc459ccfeaca93934df6e37b9d0b87d061f860d5cf852c8a9239e29",

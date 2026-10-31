@@ -1,0 +1,573 @@
+{
+  "certificate_sha256": {
+    "A/cycle/C_p0_d12.json": "9e1a7324e7a1574832cfbfc75d46ccf2c5c10d9fb95feec575511f74a7a2c72f",
+    "A/cycle/C_p0_d13.json": "c5d39b9326ebde8ab0cd4f444ee780e809357f6d6b2274693dc827708a34c5cc",
+    "A/cycle/C_p1_d12.json": "d9d32c34e8b4d1fff6d4518cf7d7dc2ab3b8b4d0b64c8b7079c9f697ed32f074",
+    "A/pair/B_p0_d12.json": "0231fa7e6888d92dbeb563e22711ff1da07681da4b228f25928f9af789311776",
+    "A/pair/B_p0_d13.json": "6d4e839785eb8f05b043528e8a6d76b33dcaee18ee4aec9644526014e27f1515",
+    "B/cycle/C_p0_d12.json": "18d018021041a1ad1635889e43911b1180a0026c9b7f4255c791a60ff471476c",
+    "B/cycle/C_p0_d13.json": "f10143edb8cef341f8c349ef03a8484703675de06a085d423b84cb84e5014b27",
+    "B/cycle/C_p1_d12.json": "452aad095346a265ace43ad6e0e155c4cc921dd7ca466cd6d78a7219927b6457",
+    "B/pair/B_p0_d12.json": "9faaf973650fc017875f93834631d8f330730485389c5239bf8927ababa173c7",
+    "B/pair/B_p0_d13.json": "22f4b43c0b40f541756bdf829e82fc9d270097c045688c12274236bb3d2e86c3",
+    "C/cycle/cycle_p0_d24.json": "a045a99b7f21c833d0b90ed0a2cc79746f3b1d11f20299efadda185526ac4eaf",
+    "C/cycle/cycle_p0_d25.json": "427ae98214c41373200276428d1820cf8fba7631b5ce550bd1583a7a5d09b684",
+    "C/cycle/cycle_p1_d24.json": "ec081cd5f0800098a7b57f671b0fb504cde5f1eb3c423a112ed6de16e40654ee",
+    "C/pair/B_p0_d24.json": "00d1d43953ebf46e4cdc6f071791ed5ace698526e531f0ef8448c4ebd6020b8a",
+    "C/pair/B_p0_d25.json": "5d3076b47807d4991fe8ac4ec93d4b1b2451fb4d4876b9efb427dc0df2edf222"
+  },
+  "checks": 31877061,
+  "decoding_max_depth": 7,
+  "decoding_words_checked": 3279,
+  "frontier_controls": [
+    {
+      "N": 1062,
+      "distinct_product_states": 2,
+      "maximum_coded_antichain": 2
+    },
+    {
+      "N": 2082,
+      "distinct_product_states": 3,
+      "maximum_coded_antichain": 3
+    },
+    {
+      "N": 26562,
+      "distinct_product_states": 4,
+      "maximum_coded_antichain": 5
+    },
+    {
+      "N": 52062,
+      "distinct_product_states": 5,
+      "maximum_coded_antichain": 8
+    },
+    {
+      "N": 102042,
+      "distinct_product_states": 6,
+      "maximum_coded_antichain": 9
+    },
+    {
+      "N": 664062,
+      "distinct_product_states": 7,
+      "maximum_coded_antichain": 13
+    },
+    {
+      "N": 16601562,
+      "distinct_product_states": 11,
+      "maximum_coded_antichain": 35
+    },
+    {
+      "N": 1000000000,
+      "distinct_product_states": 17,
+      "maximum_coded_antichain": 145
+    },
+    {
+      "N": 1000000000000,
+      "distinct_product_states": 31,
+      "maximum_coded_antichain": 1481
+    }
+  ],
+  "mixed_cycle_controls": [
+    {
+      "N": 26562,
+      "cycle_decimal_lines_sha256": "596449a8e60e5c4e93c74f13e5f43c79b2c8002721e873ea2b4c843ff5b60f2a",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ],
+      "word": "AA"
+    },
+    {
+      "N": 26563,
+      "cycle_decimal_lines_sha256": "e32cbef862eb65b4762be6afe44c27309a15daf41531ce222892106cf60c0053",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187
+      ],
+      "word": "AA"
+    },
+    {
+      "N": 26562,
+      "cycle_decimal_lines_sha256": "fef547c8937cd82c437f4d5b3dc3da898c42e03c209b28bd44b244ac0c6d52f5",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        413,
+        2087
+      ],
+      "word": "AB"
+    },
+    {
+      "N": 26563,
+      "cycle_decimal_lines_sha256": "05f0ec02993be85f0a12cbabd2353c96390a8140b584cacda1d04797a09b8255",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        413,
+        2087
+      ],
+      "word": "AB"
+    },
+    {
+      "N": 52062,
+      "cycle_decimal_lines_sha256": "aef4754ea872122796fa5c380f8bebc011013108ad3ef8998c66a28b6c85736d",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        1113,
+        3787
+      ],
+      "word": "AC"
+    },
+    {
+      "N": 52063,
+      "cycle_decimal_lines_sha256": "119d192c409d081f62c49430bf7eaaf0c478ed7272438b3db32bd1dd7301f2f4",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        1113,
+        3787
+      ],
+      "word": "AC"
+    },
+    {
+      "N": 26562,
+      "cycle_decimal_lines_sha256": "8dbea3d81c50c26d546dfd07f979edb8f187b5b0d4a6f1be5016a8df3a268e16",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        317,
+        2183
+      ],
+      "word": "BA"
+    },
+    {
+      "N": 26563,
+      "cycle_decimal_lines_sha256": "bff9458094eea461d53929748add8abd90c8987621d5993c97f1f9124ff840be",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        317,
+        2183
+      ],
+      "word": "BA"
+    },
+    {
+      "N": 26562,
+      "cycle_decimal_lines_sha256": "d662ef424e74bb8efb7e47673c2d189865b72a1db325b19c015e63d57e9647e8",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        417,
+        2083
+      ],
+      "word": "BB"
+    },
+    {
+      "N": 26563,
+      "cycle_decimal_lines_sha256": "2dae9c6480d4daad61f486a4f4a0d32f6423df76ef050905b1fe67f9fc67b483",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        417,
+        2083
+      ],
+      "word": "BB"
+    },
+    {
+      "N": 52062,
+      "cycle_decimal_lines_sha256": "d61729741cfcfc59fbf9b3f7bd6dd9b4523159e0197049a6168974837bef8bf8",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        1117,
+        3783
+      ],
+      "word": "BC"
+    },
+    {
+      "N": 52063,
+      "cycle_decimal_lines_sha256": "cd05c7f605cdb3e00b06008ca6f3078db0ccd0c576bac459850acf7f647f03d9",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        1117,
+        3783
+      ],
+      "word": "BC"
+    },
+    {
+      "N": 52062,
+      "cycle_decimal_lines_sha256": "024722a8eb7894e9c9338edc3840bb84a54d668f40c384512ed5b2de5be6078a",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        633,
+        4267
+      ],
+      "word": "CA"
+    },
+    {
+      "N": 52063,
+      "cycle_decimal_lines_sha256": "37955c5661e3562b7fe2b7ae9fe5e68289f72bfcac4087d7af2093761fbb620e",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        633,
+        4267
+      ],
+      "word": "CA"
+    },
+    {
+      "N": 52062,
+      "cycle_decimal_lines_sha256": "bb35efa3a750e62930cf80f7ea3a02e730997d4441440b9c2cc20353bde3975d",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        829,
+        4071
+      ],
+      "word": "CB"
+    },
+    {
+      "N": 52063,
+      "cycle_decimal_lines_sha256": "2c39277b746d171b00940adbf80576525f2af6a90d6fc3e3a0242e5d82c7d6df",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        829,
+        4071
+      ],
+      "word": "CB"
+    },
+    {
+      "N": 102042,
+      "cycle_decimal_lines_sha256": "9e779a3d639211749d0676dd3fd9f2df85dc777dd61fbf55b09d164d926c0579",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ],
+      "word": "CC"
+    },
+    {
+      "N": 102043,
+      "cycle_decimal_lines_sha256": "f3171f90c51107fe6dae4975aacb54df3a090e5620667a788d548a4fcb8c62e7",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ],
+      "word": "CC"
+    },
+    {
+      "N": 1301562,
+      "cycle_decimal_lines_sha256": "2552f30461d0e6afebb81b3d780f339f26db33151ca7524be81eda10a7ee7697",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        413,
+        2087,
+        3538,
+        12087,
+        27913,
+        94587
+      ],
+      "word": "ABC"
+    },
+    {
+      "N": 1301562,
+      "cycle_decimal_lines_sha256": "819e3f925ca503f2aa7dee21c1ef67e070422a26f6874b3a27e2b0ba6e6cbe78",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        1113,
+        3787,
+        7238,
+        23387,
+        20713,
+        101787
+      ],
+      "word": "ACB"
+    },
+    {
+      "N": 1301562,
+      "cycle_decimal_lines_sha256": "5173789cf0e3a46aa7c1694dce66e3eb29a90ed59cd540d33e7e07918d82ef0a",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        317,
+        2183,
+        3442,
+        12183,
+        27817,
+        94683
+      ],
+      "word": "BAC"
+    },
+    {
+      "N": 1301562,
+      "cycle_decimal_lines_sha256": "1bfd614c71c93b17d3d3a8826fd548beef3a35a0bba08ad8e1a5064450c38408",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        1117,
+        3783,
+        15817,
+        106683
+      ],
+      "word": "BCA"
+    },
+    {
+      "N": 1301562,
+      "cycle_decimal_lines_sha256": "e4bec2d2e159badafde0f63110a00c64379ccf6bd436dd1f9f7f467d28616384",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        633,
+        4267,
+        6758,
+        23867,
+        20233,
+        102267
+      ],
+      "word": "CAB"
+    },
+    {
+      "N": 1301562,
+      "cycle_decimal_lines_sha256": "e1848f7a80e245d5e55a20dee6959de6b8a8a6bf7180b3801df0d01e52e6f188",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        829,
+        4071,
+        15529,
+        106971
+      ],
+      "word": "CBA"
+    },
+    {
+      "N": 664062,
+      "cycle_decimal_lines_sha256": "00465ff40a4daf7f510744aef8cdee624a0c0156709639a164a004b0948e3057",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        313,
+        2187,
+        7813,
+        54687
+      ],
+      "word": "AAA"
+    },
+    {
+      "N": 664062,
+      "cycle_decimal_lines_sha256": "72bd6973f62f12f27fa92a2c1dde961054a06f9d59cf43cf4c54baf6815ddc7a",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        417,
+        2083,
+        3542,
+        12083,
+        10417,
+        52083
+      ],
+      "word": "BBB"
+    },
+    {
+      "N": 5000082,
+      "cycle_decimal_lines_sha256": "e0039c26d8bbfeb679106247c948624ad817857e80823edef0f863cde7a68fde",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403,
+        14206,
+        45819,
+        107845,
+        362751
+      ],
+      "word": "CCC"
+    },
+    {
+      "N": 26587,
+      "cycle_decimal_lines_sha256": "cd50027db8cb819e2b6c71cb02ee84fbd061c03cfeedf970ab9bcc37374101d5",
+      "prefix": [
+        1,
+        3,
+        13,
+        87,
+        138,
+        487,
+        413,
+        2087
+      ],
+      "word": "AB"
+    },
+    {
+      "N": 52087,
+      "cycle_decimal_lines_sha256": "b5f472ecc1db938a0d1bcfad46f1eb2843ace2e7bc41bbdca1d381839737b5b5",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        17,
+        83,
+        142,
+        483,
+        1117,
+        3783
+      ],
+      "word": "BC"
+    },
+    {
+      "N": 52111,
+      "cycle_decimal_lines_sha256": "67a61c9b3d1e862a3a36ce3c33349a6137ecbeab86c54a67adeb24f707e10a7f",
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        633,
+        4267
+      ],
+      "word": "CA"
+    }
+  ],
+  "producer_imports": 0,
+  "status": "passed"
+}

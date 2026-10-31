@@ -72,6 +72,7 @@
 05-knowledge/results/session124_million_path_spectrum_20261031/receipts/mod3.optimized.out
 05-knowledge/results/session124_million_path_spectrum_20261031/receipts/mutation.normal.out
 05-knowledge/results/session124_million_path_spectrum_20261031/receipts/mutation.optimized.out
+05-knowledge/results/session124_million_path_spectrum_20261031/receipts/seed_tsv_formatting.json
 05-knowledge/results/session124_million_path_spectrum_20261031/receipts/seeded_words.normal.out
 05-knowledge/results/session124_million_path_spectrum_20261031/receipts/seeded_words.optimized.out
 05-knowledge/results/session124_million_path_spectrum_20261031/receipts/verification.json

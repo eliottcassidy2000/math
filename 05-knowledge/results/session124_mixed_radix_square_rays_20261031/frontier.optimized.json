@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "checks": 23791,
+  "brute_controls": [
+    {
+      "N": 1062,
+      "tree_nodes": 3,
+      "maximum": 2
+    },
+    {
+      "N": 2082,
+      "tree_nodes": 4,
+      "maximum": 3
+    },
+    {
+      "N": 26562,
+      "tree_nodes": 8,
+      "maximum": 5
+    },
+    {
+      "N": 52062,
+      "tree_nodes": 12,
+      "maximum": 8
+    },
+    {
+      "N": 102042,
+      "tree_nodes": 13,
+      "maximum": 9
+    }
+  ],
+  "large_controls": [
+    {
+      "N": 16601562,
+      "leaves": 35
+    },
+    {
+      "N": 1000000000,
+      "leaves": 145
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "checks": 73658,
+  "exhaustive_overlap_diagrams": 1544,
+  "max_pieces_per_side": 3,
+  "max_shared_incidences": 3,
+  "head_tail_components": 2
+}
