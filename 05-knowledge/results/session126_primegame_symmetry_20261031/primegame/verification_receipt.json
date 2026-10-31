@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "location": "publication_packet",
+      "optimized": false,
+      "status": "PASS",
+      "scripts": 7,
+      "explicit_checks": 2992899,
+      "all_result_and_bulk_trace_hashes_match": true
+    },
+    {
+      "location": "publication_packet",
+      "optimized": true,
+      "status": "PASS",
+      "scripts": 7,
+      "explicit_checks": 2992899,
+      "all_result_and_bulk_trace_hashes_match": true
+    },
+    {
+      "location": "relocated_copy",
+      "optimized": false,
+      "status": "PASS",
+      "scripts": 7,
+      "explicit_checks": 2992899,
+      "all_result_and_bulk_trace_hashes_match": true,
+      "invoked_from_unrelated_cwd": true
+    },
+    {
+      "location": "relocated_copy",
+      "optimized": true,
+      "status": "PASS",
+      "scripts": 7,
+      "explicit_checks": 2992899,
+      "all_result_and_bulk_trace_hashes_match": true,
+      "invoked_from_unrelated_cwd": true
+    }
+  ],
+  "python_version": "3.12.14",
+  "total_counted_checks_per_full_run": 2992899,
+  "script_count_per_full_run": 7,
+  "result_and_trace_hashes": {
+    "fractran/primegame_results.json": "9fdfa8c33201a819347f49a093ace37cc3635a46fd6930096070844970ee2df0",
+    "fractran/input_seed_results.json": "58f10884724d6255a57addb6e3b8a72951c6a29f1c59e19e198037d90a9d221d",
+    "fractran/structural_audit_results.json": "8a082ddd7b4da69bd86ccd894beead4d79232c6945ac3a9cb733d522593128f7",
+    "fractran/independent_audit_results.json": "f462f722f04d76d79d5d609cce015878f26a5466fe13b31f614833a16958c7fd",
+    "fractran_ca/ca_results.json": "aba63b3ad442d803383e004ba0019e0c98e129b74b5d418006d6fdbba42b7f7f",
+    "fractran_ca/independent_ca_audit_results.json": "0599185dda1f25146b543a02bdf2bb90db0f8b34bf9d70c314aa408e0eb39c24",
+    "fractran_ca/seed2_first130_microsteps.jsonl": "a4455aadad19c9459b1bd240143eebffe097205dc90306fa13f0f38a6848d909",
+    "fractran/primegame_trace.tsv": "f1cc30acbc44364c68c337090dc66c06e81be1d85b62f32828e284e8d2a1f8af",
+    "fractran_ca/ready_trace.tsv": "05cfd6daac9efa58ece1d23e1ddecf26d01cc4804878df6a225ef190be4fc872"
+  },
+  "newly_generated_bulk_traces_cleaned": true,
+  "frozen_source_lanes_modified": false,
+  "source_worktree_or_remote_mutations": false
+}

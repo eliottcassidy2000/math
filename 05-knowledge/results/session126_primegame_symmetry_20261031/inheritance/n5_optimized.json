@@ -1,0 +1,64 @@
+{
+  "SC_classes": 8,
+  "classes": 12,
+  "line_counts": {
+    "black": 24,
+    "black_loops": 4,
+    "blue": 8
+  },
+  "merged_nodes": 10,
+  "pureblue_H_Aut": [
+    [
+      1,
+      1
+    ],
+    [
+      15,
+      5
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "pureblue_fibres": [
+    [
+      0
+    ],
+    [
+      11,
+      46,
+      53
+    ],
+    [
+      16
+    ]
+  ],
+  "pureblue_nodes": [
+    0,
+    7,
+    8
+  ],
+  "requested_masks": [
+    7,
+    17,
+    55
+  ],
+  "requested_nodes": [
+    1,
+    9,
+    6
+  ],
+  "requested_pairwise_Hamming_distances": [
+    3,
+    2,
+    3
+  ],
+  "signed_coordinate_gauge_can_select_three_PB_representatives": false,
+  "status": "PASS",
+  "universe": {
+    "fixed_path_tilings": 64,
+    "labelled_tournaments": 1024,
+    "permutations": 120
+  }
+}

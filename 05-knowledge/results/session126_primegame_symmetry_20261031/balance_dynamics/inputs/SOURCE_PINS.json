@@ -1,0 +1,46 @@
+{
+  "status": "Pinned compact inputs; source hashes identify full originals, local hashes identify bundled subsets/excerpts.",
+  "repository_snapshot": "8f76b84d2960f9e14ad62a154b8533c77593702f",
+  "inputs": [
+    {
+      "local": "ready_observations.tsv",
+      "sha256": "c0fd97cedc934257628014ac7f5b282e4f74b3be0d865dfe98a0abb3d6509209",
+      "bytes": 2613,
+      "source": "../primegame/fractran_ca/ready_trace.tsv",
+      "source_sha256": "05cfd6daac9efa58ece1d23e1ddecf26d01cc4804878df6a225ef190be4fc872",
+      "description": "Exact subset: FRACTRAN updates1 through145, plus281; rows retain original columns and values."
+    },
+    {
+      "local": "macro_source_excerpt.md",
+      "sha256": "0f70c9d1a436265396588cbf6439cd714cfff793b7bb0dab31070c69d5533f2f",
+      "bytes": 4069,
+      "source": "../primegame/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "source_sha256": "cd0456eb3049a13a78db67509435853b7ae64f1211ed80a63b597bf8882f1e70",
+      "description": "Unedited sections3\u20134 plus provenance header; includes finite-control interpretation, canonical macro words, endpoints, and prime theorem explanation."
+    },
+    {
+      "local": "ca_observer_excerpt.md",
+      "sha256": "d6954f84ec376a60ef820d4d1c83f6051ce36e6d28b2e78f7e5ba74ee7d73dc9",
+      "bytes": 2661,
+      "source": "../primegame/fractran_ca/ACTUAL_RADIUS_ONE_CA_REPORT.md",
+      "source_sha256": "fb9743ba95bc6734c5072888c5388d775f7e720520a9f9ce86d0c3d384c6281b",
+      "description": "Unedited observer theorem, proof, and exact timing section plus provenance header."
+    },
+    {
+      "local": "divisor_balance_excerpt.md",
+      "sha256": "a843a2f034c4f706ea7bfb5cbd2a47d00414e592d5bc2be8e1ee1488bbe7cff4",
+      "bytes": 1440,
+      "source": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "source_sha256": "2ed6f99a61bc8497a1cf79e91e3fee2df8a338fe9c8fa76e569ae445a26525cb",
+      "description": "Unedited definitions, inherited classification and elementary proof, and literal-notation warning, plus provenance header."
+    },
+    {
+      "local": "gerbicz_statement_excerpt.md",
+      "sha256": "db2d844efec294ff2a1261b31adaafb938b614921ee58684515509943e06e3af",
+      "bytes": 1179,
+      "source": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/GERBICZ_RECONSTRUCTION.md",
+      "source_sha256": "ebe147970b0869c47b126d10313fd9bf607ceaf68b21f607b5381e60b29b83a9",
+      "description": "Unedited opening classical theorem statement and scope, followed by provenance and dependency boundary."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "method": "Own Fraction arithmetic, canonical encoder/READY observer, dense min-to-max radius-one sweep; separate head/local oracle; no production macro-driver use",
+  "alphabet_size": 385025,
+  "head_states": 93,
+  "head_tape_pairs_exhausted": 380928,
+  "single_head_neighborhoods_checked": 1142784,
+  "seed2_events_prime_macro_micro": [
+    [
+      2,
+      19,
+      130
+    ],
+    [
+      3,
+      69,
+      537
+    ],
+    [
+      5,
+      281,
+      2677
+    ],
+    [
+      7,
+      710,
+      7942
+    ],
+    [
+      11,
+      2375,
+      34603
+    ]
+  ],
+  "cycle55_macro_durations": [
+    5,
+    5
+  ],
+  "literal_CA_microsteps_executed": 38675,
+  "special_seeds_checked": [
+    1,
+    7,
+    15,
+    16,
+    17,
+    23,
+    25,
+    55,
+    343,
+    60,
+    31,
+    37,
+    1147,
+    47697716
+  ],
+  "random_general_integer_seeds": 80,
+  "random_alphabet_triples": 10000,
+  "arbitrary_finite_support_configurations": 500,
+  "explicit_checks": 1613769,
+  "zero_key_representation_caveat_present": false,
+  "scope": "All-positive-integer theorem follows from guard selection and unary operation proof; finite checks cover each rule, multi-control seeds, spectators and shifts. No metagraph conjugacy is asserted."
+}

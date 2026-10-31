@@ -1,0 +1,226 @@
+{
+  "balanced_visit_count": 16,
+  "balanced_visits": [
+    {
+      "balanced": true,
+      "factors": "2",
+      "fus": [
+        0,
+        0,
+        0
+      ],
+      "n": 2,
+      "omega_total": 1,
+      "step": 0
+    },
+    {
+      "balanced": true,
+      "factors": "3*5^2*11",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 825,
+      "omega_total": 4,
+      "step": 2
+    },
+    {
+      "balanced": true,
+      "factors": "5^2*7*11",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 1925,
+      "omega_total": 4,
+      "step": 4
+    },
+    {
+      "balanced": true,
+      "factors": "5^2*7*13",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 2275,
+      "omega_total": 4,
+      "step": 5
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*3*13",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 156,
+      "omega_total": 4,
+      "step": 13
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*3*11",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 132,
+      "omega_total": 4,
+      "step": 14
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*7*11",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 308,
+      "omega_total": 4,
+      "step": 16
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*7*13",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 364,
+      "omega_total": 4,
+      "step": 17
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*5*19",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 380,
+      "omega_total": 4,
+      "step": 43
+    },
+    {
+      "balanced": true,
+      "factors": "2*5^2*19",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 950,
+      "omega_total": 4,
+      "step": 45
+    },
+    {
+      "balanced": true,
+      "factors": "2*5^2*29",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 1450,
+      "omega_total": 4,
+      "step": 53
+    },
+    {
+      "balanced": true,
+      "factors": "2*5^2*17",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 850,
+      "omega_total": 4,
+      "step": 56
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*5*29",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 580,
+      "omega_total": 4,
+      "step": 59
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*5*17",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 340,
+      "omega_total": 4,
+      "step": 62
+    },
+    {
+      "balanced": true,
+      "factors": "2^3",
+      "fus": [
+        2,
+        1,
+        1
+      ],
+      "n": 8,
+      "omega_total": 3,
+      "step": 69
+    },
+    {
+      "balanced": true,
+      "factors": "2^2*3*5",
+      "fus": [
+        10,
+        3,
+        7
+      ],
+      "n": 60,
+      "omega_total": 4,
+      "step": 70
+    }
+  ],
+  "boundary": {
+    "canonical_state": "C(5,4)",
+    "n": 97540625,
+    "step": 145
+  },
+  "checks": {
+    "census": 1,
+    "macro_endpoints": 1225,
+    "macro_minima": 2450,
+    "macro_steps": 267171,
+    "seed_trace": 293
+  },
+  "checks_total": 271140,
+  "last_balanced_visit": {
+    "balanced": true,
+    "factors": "2^2*3*5",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 60,
+    "omega_total": 4,
+    "step": 70
+  },
+  "macro_steps": 267171,
+  "macro_token_minimum": "n+d-1 if d divides n; n+d-2 otherwise",
+  "macro_trials": 1225,
+  "status": "FINITE-EXACT window; universal tail exclusion proved in README"
+}

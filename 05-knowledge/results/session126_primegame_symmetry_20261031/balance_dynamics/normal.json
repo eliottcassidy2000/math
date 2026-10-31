@@ -1,0 +1,1140 @@
+{
+  "balanced_preserving_representatives": [
+    {
+      "m": 60,
+      "n": 8,
+      "rule": 12
+    },
+    {
+      "m": 13,
+      "n": 11,
+      "rule": 11
+    },
+    {
+      "m": 11,
+      "n": 13,
+      "rule": 10
+    },
+    {
+      "m": 132,
+      "n": 156,
+      "rule": 10
+    },
+    {
+      "m": 260,
+      "n": 220,
+      "rule": 11
+    },
+    {
+      "m": 198,
+      "n": 234,
+      "rule": 10
+    },
+    {
+      "m": 220,
+      "n": 260,
+      "rule": 10
+    },
+    {
+      "m": 364,
+      "n": 308,
+      "rule": 11
+    },
+    {
+      "m": 650,
+      "n": 550,
+      "rule": 11
+    },
+    {
+      "m": 495,
+      "n": 585,
+      "rule": 10
+    },
+    {
+      "m": 550,
+      "n": 650,
+      "rule": 10
+    },
+    {
+      "m": 825,
+      "n": 975,
+      "rule": 10
+    },
+    {
+      "m": 1274,
+      "n": 1078,
+      "rule": 11
+    },
+    {
+      "m": 1612,
+      "n": 1364,
+      "rule": 11
+    },
+    {
+      "m": 1364,
+      "n": 1612,
+      "rule": 10
+    },
+    {
+      "m": 2275,
+      "n": 1925,
+      "rule": 11
+    },
+    {
+      "m": 3185,
+      "n": 2695,
+      "rule": 11
+    },
+    {
+      "m": 3069,
+      "n": 3627,
+      "rule": 10
+    },
+    {
+      "m": 3146,
+      "n": 3718,
+      "rule": 10
+    },
+    {
+      "m": 27797,
+      "n": 6859,
+      "rule": 8
+    },
+    {
+      "m": 10075,
+      "n": 8525,
+      "rule": 11
+    },
+    {
+      "m": 7865,
+      "n": 9295,
+      "rule": 10
+    },
+    {
+      "m": 8525,
+      "n": 10075,
+      "rule": 10
+    },
+    {
+      "m": 50255,
+      "n": 12167,
+      "rule": 7
+    },
+    {
+      "m": 19747,
+      "n": 16709,
+      "rule": 11
+    },
+    {
+      "m": 6859,
+      "n": 18411,
+      "rule": 3
+    },
+    {
+      "m": 12167,
+      "n": 20102,
+      "rule": 4
+    },
+    {
+      "m": 24986,
+      "n": 21142,
+      "rule": 11
+    },
+    {
+      "m": 64757,
+      "n": 24389,
+      "rule": 6
+    },
+    {
+      "m": 21142,
+      "n": 24986,
+      "rule": 10
+    },
+    {
+      "m": 4913,
+      "n": 26299,
+      "rule": 1
+    },
+    {
+      "m": 24389,
+      "n": 27753,
+      "rule": 5
+    },
+    {
+      "m": 31713,
+      "n": 37479,
+      "rule": 10
+    },
+    {
+      "m": 62465,
+      "n": 52855,
+      "rule": 11
+    },
+    {
+      "m": 48763,
+      "n": 57629,
+      "rule": 10
+    },
+    {
+      "m": 52855,
+      "n": 62465,
+      "rule": 10
+    },
+    {
+      "m": 87451,
+      "n": 73997,
+      "rule": 11
+    },
+    {
+      "m": 462241,
+      "n": 391127,
+      "rule": 11
+    },
+    {
+      "m": 391127,
+      "n": 462241,
+      "rule": 10
+    }
+  ],
+  "basis": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29
+  ],
+  "checks": {
+    "census": 8,
+    "direct_divisors": 1076,
+    "hostiles": 6,
+    "inputs": 538,
+    "outputs": 538,
+    "preserving_theorem": 538,
+    "renaming": 538,
+    "restricted_orbits": 538,
+    "rules": 28,
+    "spectators": 1076,
+    "step_equivalence": 538,
+    "valid_carrier": 362
+  },
+  "checks_total": 5784,
+  "independent_labelled_universe": 884,
+  "spectator_representatives": [
+    31,
+    37,
+    41
+  ],
+  "status": "FINITE-EXACT representatives; universal coverage proved in README",
+  "table_sha256": "02a2005bc2fc11ef8175311cff9f5b2ee5e3f0029398e886cfd81e84a9d22859",
+  "unit_boundary": [
+    {
+      "n": 7,
+      "rule": 13
+    },
+    {
+      "n": 17,
+      "rule": 9
+    }
+  ],
+  "universes": {
+    "active": {
+      "by_rule": [
+        {
+          "fraction": "17/91",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 23
+          },
+          "output_profiles": {
+            "1,1,1": 14,
+            "2,1": 9,
+            "3": 1
+          },
+          "rule": 1,
+          "total": 24
+        },
+        {
+          "fraction": "78/85",
+          "outcomes": {
+            "unbalanced": 24
+          },
+          "output_profiles": {
+            "1,1,1,1,1": 10,
+            "2,1,1,1": 11,
+            "3,1,1": 3
+          },
+          "rule": 2,
+          "total": 24
+        },
+        {
+          "fraction": "19/51",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 20
+          },
+          "output_profiles": {
+            "1,1,1": 12,
+            "2,1": 8,
+            "3": 1
+          },
+          "rule": 3,
+          "total": 21
+        },
+        {
+          "fraction": "23/38",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 23
+          },
+          "output_profiles": {
+            "1,1,1": 14,
+            "2,1": 9,
+            "3": 1
+          },
+          "rule": 4,
+          "total": 24
+        },
+        {
+          "fraction": "29/33",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 20
+          },
+          "output_profiles": {
+            "1,1,1": 12,
+            "2,1": 8,
+            "3": 1
+          },
+          "rule": 5,
+          "total": 21
+        },
+        {
+          "fraction": "77/29",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 94
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 18,
+            "2,1,1": 1,
+            "2,1,1,1": 48,
+            "2,2,1": 13,
+            "3,1,1": 12,
+            "3,2": 2
+          },
+          "rule": 6,
+          "total": 95
+        },
+        {
+          "fraction": "95/23",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 70
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 12,
+            "2,1,1": 1,
+            "2,1,1,1": 34,
+            "2,2,1": 11,
+            "3,1,1": 10,
+            "3,2": 2
+          },
+          "rule": 7,
+          "total": 71
+        },
+        {
+          "fraction": "77/19",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 34
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 4,
+            "2,1,1": 1,
+            "2,1,1,1": 14,
+            "2,2,1": 7,
+            "3,1,1": 6,
+            "3,2": 2
+          },
+          "rule": 8,
+          "total": 35
+        },
+        {
+          "fraction": "1/17",
+          "outcomes": {
+            "unbalanced": 16,
+            "unit": 1
+          },
+          "output_profiles": {
+            "1,1,1": 5,
+            "2": 1,
+            "2,1": 10,
+            "unit": 1
+          },
+          "rule": 9,
+          "total": 17
+        },
+        {
+          "fraction": "11/13",
+          "outcomes": {
+            "balanced": 9,
+            "unbalanced": 8
+          },
+          "output_profiles": {
+            "1": 1,
+            "1,1,1,1": 3,
+            "2,1": 1,
+            "2,1,1": 8,
+            "2,2": 2,
+            "3,1": 2
+          },
+          "rule": 10,
+          "total": 17
+        },
+        {
+          "fraction": "13/11",
+          "outcomes": {
+            "balanced": 7,
+            "unbalanced": 4
+          },
+          "output_profiles": {
+            "1": 1,
+            "1,1,1,1": 3,
+            "2,1": 1,
+            "2,1,1": 6
+          },
+          "rule": 11,
+          "total": 11
+        },
+        {
+          "fraction": "15/2",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 10
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1": 1,
+            "2,1,1,1": 2,
+            "2,2,1": 3,
+            "3,1,1": 2,
+            "3,2": 2
+          },
+          "rule": 12,
+          "total": 11
+        },
+        {
+          "fraction": "1/7",
+          "outcomes": {
+            "unbalanced": 4,
+            "unit": 1
+          },
+          "output_profiles": {
+            "1,1,1": 1,
+            "2": 1,
+            "2,1": 2,
+            "unit": 1
+          },
+          "rule": 13,
+          "total": 5
+        },
+        {
+          "fraction": "55/1",
+          "outcomes": {
+            "unbalanced": 4
+          },
+          "output_profiles": {
+            "1,1,1": 1,
+            "2,1": 1,
+            "3,1,1": 1,
+            "4,1": 1
+          },
+          "rule": 14,
+          "total": 4
+        }
+      ],
+      "input_profiles": {
+        "1": 10,
+        "2,1,1": 360,
+        "3": 10
+      },
+      "outcomes": {
+        "balanced": 24,
+        "unbalanced": 354,
+        "unit": 2
+      },
+      "restricted_orbits": {
+        "cycle_2": 6,
+        "exit_at_1": 356,
+        "exit_at_2": 15,
+        "exit_at_3": 3
+      },
+      "total": 380
+    },
+    "active_valid": {
+      "by_rule": [
+        {
+          "fraction": "17/91",
+          "outcomes": {
+            "unbalanced": 6
+          },
+          "output_profiles": {
+            "1,1,1": 3,
+            "2,1": 3
+          },
+          "rule": 1,
+          "total": 6
+        },
+        {
+          "fraction": "78/85",
+          "outcomes": {
+            "unbalanced": 6
+          },
+          "output_profiles": {
+            "1,1,1,1,1": 1,
+            "2,1,1,1": 3,
+            "3,1,1": 2
+          },
+          "rule": 2,
+          "total": 6
+        },
+        {
+          "fraction": "19/51",
+          "outcomes": {
+            "unbalanced": 4
+          },
+          "output_profiles": {
+            "1,1,1": 2,
+            "2,1": 2
+          },
+          "rule": 3,
+          "total": 4
+        },
+        {
+          "fraction": "23/38",
+          "outcomes": {
+            "unbalanced": 6
+          },
+          "output_profiles": {
+            "1,1,1": 3,
+            "2,1": 3
+          },
+          "rule": 4,
+          "total": 6
+        },
+        {
+          "fraction": "29/33",
+          "outcomes": {
+            "unbalanced": 6
+          },
+          "output_profiles": {
+            "1,1,1": 3,
+            "2,1": 3
+          },
+          "rule": 5,
+          "total": 6
+        },
+        {
+          "fraction": "77/29",
+          "outcomes": {
+            "unbalanced": 13
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1,1": 6,
+            "2,2,1": 3,
+            "3,1,1": 3
+          },
+          "rule": 6,
+          "total": 13
+        },
+        {
+          "fraction": "95/23",
+          "outcomes": {
+            "unbalanced": 13
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1,1": 6,
+            "2,2,1": 3,
+            "3,1,1": 3
+          },
+          "rule": 7,
+          "total": 13
+        },
+        {
+          "fraction": "77/19",
+          "outcomes": {
+            "unbalanced": 7
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1,1": 2,
+            "2,2,1": 2,
+            "3,1,1": 2
+          },
+          "rule": 8,
+          "total": 7
+        },
+        {
+          "fraction": "1/17",
+          "outcomes": {
+            "unbalanced": 2,
+            "unit": 1
+          },
+          "output_profiles": {
+            "2,1": 2,
+            "unit": 1
+          },
+          "rule": 9,
+          "total": 3
+        },
+        {
+          "fraction": "11/13",
+          "outcomes": {
+            "balanced": 7
+          },
+          "output_profiles": {
+            "1": 1,
+            "2,1,1": 6
+          },
+          "rule": 10,
+          "total": 7
+        },
+        {
+          "fraction": "13/11",
+          "outcomes": {
+            "balanced": 7
+          },
+          "output_profiles": {
+            "1": 1,
+            "2,1,1": 6
+          },
+          "rule": 11,
+          "total": 7
+        },
+        {
+          "fraction": "15/2",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 10
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1": 1,
+            "2,1,1,1": 2,
+            "2,2,1": 3,
+            "3,1,1": 2,
+            "3,2": 2
+          },
+          "rule": 12,
+          "total": 11
+        },
+        {
+          "fraction": "1/7",
+          "outcomes": {
+            "unbalanced": 4,
+            "unit": 1
+          },
+          "output_profiles": {
+            "1,1,1": 1,
+            "2": 1,
+            "2,1": 2,
+            "unit": 1
+          },
+          "rule": 13,
+          "total": 5
+        },
+        {
+          "fraction": "55/1",
+          "outcomes": {
+            "unbalanced": 4
+          },
+          "output_profiles": {
+            "1,1,1": 1,
+            "2,1": 1,
+            "3,1,1": 1,
+            "4,1": 1
+          },
+          "rule": 14,
+          "total": 4
+        }
+      ],
+      "input_profiles": {
+        "1": 10,
+        "2,1,1": 84,
+        "3": 4
+      },
+      "outcomes": {
+        "balanced": 15,
+        "unbalanced": 81,
+        "unit": 2
+      },
+      "restricted_orbits": {
+        "cycle_2": 6,
+        "exit_at_1": 83,
+        "exit_at_2": 9
+      },
+      "total": 98
+    },
+    "all_spectator_types": {
+      "by_rule": [
+        {
+          "fraction": "17/91",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 26
+          },
+          "output_profiles": {
+            "1,1,1": 16,
+            "2,1": 10,
+            "3": 1
+          },
+          "rule": 1,
+          "total": 27
+        },
+        {
+          "fraction": "78/85",
+          "outcomes": {
+            "unbalanced": 27
+          },
+          "output_profiles": {
+            "1,1,1,1,1": 12,
+            "2,1,1,1": 12,
+            "3,1,1": 3
+          },
+          "rule": 2,
+          "total": 27
+        },
+        {
+          "fraction": "19/51",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 23
+          },
+          "output_profiles": {
+            "1,1,1": 14,
+            "2,1": 9,
+            "3": 1
+          },
+          "rule": 3,
+          "total": 24
+        },
+        {
+          "fraction": "23/38",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 26
+          },
+          "output_profiles": {
+            "1,1,1": 16,
+            "2,1": 10,
+            "3": 1
+          },
+          "rule": 4,
+          "total": 27
+        },
+        {
+          "fraction": "29/33",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 23
+          },
+          "output_profiles": {
+            "1,1,1": 14,
+            "2,1": 9,
+            "3": 1
+          },
+          "rule": 5,
+          "total": 24
+        },
+        {
+          "fraction": "77/29",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 123
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 26,
+            "2,1,1": 1,
+            "2,1,1,1": 65,
+            "2,2,1": 15,
+            "3,1,1": 14,
+            "3,2": 2
+          },
+          "rule": 6,
+          "total": 124
+        },
+        {
+          "fraction": "95/23",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 96
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 19,
+            "2,1,1": 1,
+            "2,1,1,1": 49,
+            "2,2,1": 13,
+            "3,1,1": 12,
+            "3,2": 2
+          },
+          "rule": 7,
+          "total": 97
+        },
+        {
+          "fraction": "77/19",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 54
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 9,
+            "2,1,1": 1,
+            "2,1,1,1": 25,
+            "2,2,1": 9,
+            "3,1,1": 8,
+            "3,2": 2
+          },
+          "rule": 8,
+          "total": 55
+        },
+        {
+          "fraction": "1/17",
+          "outcomes": {
+            "unbalanced": 30,
+            "unit": 1
+          },
+          "output_profiles": {
+            "1,1,1": 10,
+            "2": 1,
+            "2,1": 19,
+            "unit": 1
+          },
+          "rule": 9,
+          "total": 31
+        },
+        {
+          "fraction": "11/13",
+          "outcomes": {
+            "balanced": 17,
+            "unbalanced": 14
+          },
+          "output_profiles": {
+            "1": 1,
+            "1,1,1,1": 7,
+            "2,1": 1,
+            "2,1,1": 16,
+            "2,2": 3,
+            "3,1": 3
+          },
+          "rule": 10,
+          "total": 31
+        },
+        {
+          "fraction": "13/11",
+          "outcomes": {
+            "balanced": 14,
+            "unbalanced": 8
+          },
+          "output_profiles": {
+            "1": 1,
+            "1,1,1,1": 7,
+            "2,1": 1,
+            "2,1,1": 13
+          },
+          "rule": 11,
+          "total": 22
+        },
+        {
+          "fraction": "15/2",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 21
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 2,
+            "2,1,1": 1,
+            "2,1,1,1": 7,
+            "2,2,1": 5,
+            "3,1,1": 4,
+            "3,2": 2
+          },
+          "rule": 12,
+          "total": 22
+        },
+        {
+          "fraction": "1/7",
+          "outcomes": {
+            "unbalanced": 12,
+            "unit": 1
+          },
+          "output_profiles": {
+            "1,1,1": 4,
+            "2": 1,
+            "2,1": 7,
+            "unit": 1
+          },
+          "rule": 13,
+          "total": 13
+        },
+        {
+          "fraction": "55/1",
+          "outcomes": {
+            "unbalanced": 14
+          },
+          "output_profiles": {
+            "1,1,1": 2,
+            "2,1": 1,
+            "2,1,1,1,1": 3,
+            "2,2,1,1": 3,
+            "3,1,1": 2,
+            "3,1,1,1": 2,
+            "4,1": 1
+          },
+          "rule": 14,
+          "total": 14
+        }
+      ],
+      "input_profiles": {
+        "1": 11,
+        "2,1,1": 516,
+        "3": 11
+      },
+      "outcomes": {
+        "balanced": 39,
+        "unbalanced": 497,
+        "unit": 2
+      },
+      "restricted_orbits": {
+        "cycle_2": 16,
+        "exit_at_1": 499,
+        "exit_at_2": 20,
+        "exit_at_3": 3
+      },
+      "total": 538
+    },
+    "all_valid_spectator_types": {
+      "by_rule": [
+        {
+          "fraction": "17/91",
+          "outcomes": {
+            "unbalanced": 8
+          },
+          "output_profiles": {
+            "1,1,1": 4,
+            "2,1": 4
+          },
+          "rule": 1,
+          "total": 8
+        },
+        {
+          "fraction": "78/85",
+          "outcomes": {
+            "unbalanced": 8
+          },
+          "output_profiles": {
+            "1,1,1,1,1": 2,
+            "2,1,1,1": 4,
+            "3,1,1": 2
+          },
+          "rule": 2,
+          "total": 8
+        },
+        {
+          "fraction": "19/51",
+          "outcomes": {
+            "unbalanced": 6
+          },
+          "output_profiles": {
+            "1,1,1": 3,
+            "2,1": 3
+          },
+          "rule": 3,
+          "total": 6
+        },
+        {
+          "fraction": "23/38",
+          "outcomes": {
+            "unbalanced": 8
+          },
+          "output_profiles": {
+            "1,1,1": 4,
+            "2,1": 4
+          },
+          "rule": 4,
+          "total": 8
+        },
+        {
+          "fraction": "29/33",
+          "outcomes": {
+            "unbalanced": 8
+          },
+          "output_profiles": {
+            "1,1,1": 4,
+            "2,1": 4
+          },
+          "rule": 5,
+          "total": 8
+        },
+        {
+          "fraction": "77/29",
+          "outcomes": {
+            "unbalanced": 22
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1,1": 13,
+            "2,2,1": 4,
+            "3,1,1": 4
+          },
+          "rule": 6,
+          "total": 22
+        },
+        {
+          "fraction": "95/23",
+          "outcomes": {
+            "unbalanced": 22
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1,1": 13,
+            "2,2,1": 4,
+            "3,1,1": 4
+          },
+          "rule": 7,
+          "total": 22
+        },
+        {
+          "fraction": "77/19",
+          "outcomes": {
+            "unbalanced": 14
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "2,1,1,1": 7,
+            "2,2,1": 3,
+            "3,1,1": 3
+          },
+          "rule": 8,
+          "total": 14
+        },
+        {
+          "fraction": "1/17",
+          "outcomes": {
+            "unbalanced": 7,
+            "unit": 1
+          },
+          "output_profiles": {
+            "2,1": 7,
+            "unit": 1
+          },
+          "rule": 9,
+          "total": 8
+        },
+        {
+          "fraction": "11/13",
+          "outcomes": {
+            "balanced": 14
+          },
+          "output_profiles": {
+            "1": 1,
+            "2,1,1": 13
+          },
+          "rule": 10,
+          "total": 14
+        },
+        {
+          "fraction": "13/11",
+          "outcomes": {
+            "balanced": 14
+          },
+          "output_profiles": {
+            "1": 1,
+            "2,1,1": 13
+          },
+          "rule": 11,
+          "total": 14
+        },
+        {
+          "fraction": "15/2",
+          "outcomes": {
+            "balanced": 1,
+            "unbalanced": 21
+          },
+          "output_profiles": {
+            "1,1": 1,
+            "1,1,1,1,1": 2,
+            "2,1,1": 1,
+            "2,1,1,1": 7,
+            "2,2,1": 5,
+            "3,1,1": 4,
+            "3,2": 2
+          },
+          "rule": 12,
+          "total": 22
+        },
+        {
+          "fraction": "1/7",
+          "outcomes": {
+            "unbalanced": 12,
+            "unit": 1
+          },
+          "output_profiles": {
+            "1,1,1": 4,
+            "2": 1,
+            "2,1": 7,
+            "unit": 1
+          },
+          "rule": 13,
+          "total": 13
+        },
+        {
+          "fraction": "55/1",
+          "outcomes": {
+            "unbalanced": 14
+          },
+          "output_profiles": {
+            "1,1,1": 2,
+            "2,1": 1,
+            "2,1,1,1,1": 3,
+            "2,2,1,1": 3,
+            "3,1,1": 2,
+            "3,1,1,1": 2,
+            "4,1": 1
+          },
+          "rule": 14,
+          "total": 14
+        }
+      ],
+      "input_profiles": {
+        "1": 11,
+        "2,1,1": 165,
+        "3": 5
+      },
+      "outcomes": {
+        "balanced": 29,
+        "unbalanced": 150,
+        "unit": 2
+      },
+      "restricted_orbits": {
+        "cycle_2": 16,
+        "exit_at_1": 152,
+        "exit_at_2": 13
+      },
+      "total": 181
+    }
+  }
+}

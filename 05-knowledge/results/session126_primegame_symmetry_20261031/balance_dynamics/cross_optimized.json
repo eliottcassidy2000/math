@@ -1,0 +1,109 @@
+{
+  "all_prefix_states_below_32": [
+    {
+      "n": 2,
+      "step": 0
+    },
+    {
+      "n": 15,
+      "step": 1
+    },
+    {
+      "n": 4,
+      "step": 19
+    },
+    {
+      "n": 30,
+      "step": 20
+    },
+    {
+      "n": 8,
+      "step": 69
+    }
+  ],
+  "all_time_minimum_after_step_70": {
+    "attained_at_step": 281,
+    "value": 32
+  },
+  "all_time_nonhamiltonian_graph_observation_steps": [
+    0,
+    1,
+    19,
+    20,
+    69
+  ],
+  "alternating_group_degree": 5,
+  "alternating_group_order": 60,
+  "checks": {
+    "graph": 5,
+    "group": 1,
+    "prefix": 147,
+    "ready": 147,
+    "threshold": 5
+  },
+  "checks_total": 305,
+  "eventual_hamiltonian_start_step": 70,
+  "minimum_on_steps_70_through_145": {
+    "n": 60,
+    "step": 70
+  },
+  "prefix_last_step": 145,
+  "ready_input_sha256": "c0fd97cedc934257628014ac7f5b282e4f74b3be0d865dfe98a0abb3d6509209",
+  "ready_observations": [
+    {
+      "CA_updates": 537,
+      "FRACTRAN_updates": 69,
+      "integer": 8
+    },
+    {
+      "CA_updates": 547,
+      "FRACTRAN_updates": 70,
+      "integer": 60
+    }
+  ],
+  "requested_five_set_all_time_visits": [
+    {
+      "n": 15,
+      "step": 1
+    }
+  ],
+  "small_graph_nonhamiltonicity_certificates": [
+    {
+      "neighbors": [],
+      "order": 2,
+      "step": 0,
+      "vertex": 1
+    },
+    {
+      "neighbors": [
+        1
+      ],
+      "order": 15,
+      "step": 1,
+      "vertex": 8
+    },
+    {
+      "neighbors": [],
+      "order": 4,
+      "step": 19,
+      "vertex": 2
+    },
+    {
+      "neighbors": [
+        7
+      ],
+      "order": 30,
+      "step": 20,
+      "vertex": 18
+    },
+    {
+      "neighbors": [
+        5
+      ],
+      "order": 8,
+      "step": 69,
+      "vertex": 4
+    }
+  ],
+  "status": "FINITE-EXACT certificates; universal and CITED dependencies in README 6b"
+}

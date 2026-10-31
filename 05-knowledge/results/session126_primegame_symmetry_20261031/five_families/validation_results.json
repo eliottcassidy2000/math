@@ -1,0 +1,14 @@
+{
+  "SHA256SUMS_verified_when_present": true,
+  "all_test_gates_survive_optimization": true,
+  "normal_optimized_byte_identical": true,
+  "relocated_replay_byte_identical": true,
+  "scripts": [
+    "check_five_families.py",
+    "check_inherited_metagraph.py",
+    "check_a5_balance_meeting.py"
+  ],
+  "source_pin_digests_verified": true,
+  "status": "PASS",
+  "working_directory_independent": true
+}

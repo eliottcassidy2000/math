@@ -1,0 +1,69 @@
+{
+  "concurrent_credit": {
+    "bytes": 2424,
+    "repository_path": "05-knowledge/hypotheses/HYP-9448-primegame-phase-law-2-to-the-n-times-7-to-the-largest-proper-divisor-minus-one.md",
+    "scope": "Overlapping original-tail/15-over-14-variant PRIMEGAME and phase-entry investigation; no all-n assertion or historical standard/variant naming imported.",
+    "sha256": "f52adc58ff2c4c2f6e7390cef178461e134861babc727de748f47deef06781bc",
+    "snapshot": "adfb2645207756de07a639e8632ac8264241026e",
+    "status": "OPEN (PRE-REGISTERED; confirmatory run follows this commit)",
+    "url": "https://github.com/eliottcassidy2000/math/blob/adfb2645207756de07a639e8632ac8264241026e/05-knowledge/hypotheses/HYP-9448-primegame-phase-law-2-to-the-n-times-7-to-the-largest-proper-divisor-minus-one.md"
+  },
+  "primary_program_source": {
+    "bibliographic_url": "https://link.springer.com/chapter/10.1007/978-1-4612-4808-8_2",
+    "checked": "2026-10-31",
+    "pages": "printed4 Theorem1 and printed9 A\u2013N table",
+    "supports": "Original1987 PRIMEGAME uses exact user tail15/2,1/7,55/1; source differs from S70 standard/variant terminology.",
+    "url": "https://gwern.net/doc/cs/computable/1987-conway.pdf"
+  },
+  "snapshot": "8f76b84d2960f9e14ad62a154b8533c77593702f",
+  "sources": [
+    {
+      "bytes": 11650,
+      "repository_path": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "sha256": "2ed6f99a61bc8497a1cf79e91e3fee2df8a338fe9c8fa76e569ae445a26525cb",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/05-knowledge/results/trijection_reset_20261020/arithmetic.md"
+    },
+    {
+      "bytes": 19229,
+      "repository_path": "05-knowledge/results/session84_guarded_unification_20261028/FUS_DIVISOR_FRONTIER.md",
+      "sha256": "fdd3821e8e91d03f0710dddbeee05b041546cb70c41d95300d225337634cafb5",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/05-knowledge/results/session84_guarded_unification_20261028/FUS_DIVISOR_FRONTIER.md"
+    },
+    {
+      "bytes": 4404,
+      "repository_path": "03-artifacts/explainers/09-metagraph.md",
+      "sha256": "4d37167f56dfa6a38ac2ce5df9ab6babfb6911cdead8fbae3802167551997552",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/03-artifacts/explainers/09-metagraph.md"
+    },
+    {
+      "bytes": 4242,
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n5.json",
+      "sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/census_n5.json"
+    },
+    {
+      "bytes": 11896,
+      "repository_path": "05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/README.md",
+      "sha256": "fdb525052c97b7f0dbf824e418d754df34d23e4df00e6881c1de3cdf1b85cf7a",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/05-knowledge/results/merged_metagraph_black_quotient_bridges_20261020/README.md"
+    },
+    {
+      "bytes": 11827,
+      "repository_path": "01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "sha256": "bb990b326f4dced3118a83ef240accb47ebf387c9586dcd67994507a64194098",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md"
+    },
+    {
+      "bytes": 21173,
+      "repository_path": "01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md",
+      "sha256": "55c62caff8871fc9a33051ad9848815b973c7ba00158561ca4c0bbb553962938",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md"
+    },
+    {
+      "bytes": 10708,
+      "repository_path": "01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md",
+      "sha256": "1afae3b3afadee521c3f4f0c7f619ff5f9619e1719ed6cb414b9e3d457a011f7",
+      "url": "https://github.com/eliottcassidy2000/math/blob/8f76b84d2960f9e14ad62a154b8533c77593702f/01-canon/theorems/THM-2454-pure-blue-alphabet-and-center-law.md"
+    }
+  ]
+}

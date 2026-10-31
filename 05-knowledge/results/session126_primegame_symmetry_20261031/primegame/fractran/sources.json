@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://link.springer.com/chapter/10.1007/978-1-4612-4808-8_2",
+    "type": "primary publisher bibliographic record",
+    "checked": "2026-10-31",
+    "supports": "Conway chapter identity, 1987, pp4\u201326, DOI"
+  },
+  {
+    "url": "https://gwern.net/doc/cs/computable/1987-conway.pdf",
+    "type": "scan of primary author chapter on third-party host",
+    "checked": "2026-10-31",
+    "supports": "exact ordered fractions, seed2 and Theorem1 printedp4; divisor-loop Figure2 and proof printedpp9\u201310; register interpretation printedp13",
+    "quote_words": 0
+  },
+  {
+    "url": "https://lmcs.episciences.org/9153",
+    "type": "primary peer-reviewed author paper",
+    "checked": "2026-10-31",
+    "supports": "general formal Minsky-machine/FRACTRAN compiler; not fixed PRIMEGAME universality"
+  },
+  {
+    "url": "https://arxiv.org/pdf/0903.4366",
+    "type": "primary author paper; alternate list only",
+    "checked": "2026-10-31",
+    "supports": "Endrullis\u2013Grabmayer\u2013Hendriks2009 printed/PDFp2 gives alternate tail15/14,15/2,55/1; not the exact rack audited here."
+  }
+]

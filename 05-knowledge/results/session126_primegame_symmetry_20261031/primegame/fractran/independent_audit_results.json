@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "independent_method": "Fraction arithmetic for all trace and macro transitions; separate finite-control table; Bareiss determinant",
+  "trace_sha256": "f1cc30acbc44364c68c337090dc66c06e81be1d85b62f32828e284e8d2a1f8af",
+  "trace_updates": 36981,
+  "controller_states_checked": 567,
+  "macro_pairs_checked": 1225,
+  "macro_updates": 267171,
+  "unimodular_minor_determinant": -1,
+  "explicit_checks": 385060,
+  "defects": [
+    "Minor wording only: replace at most one control prime occurs to exponent one by all six control exponents are zero except possibly one equal to one."
+  ],
+  "mathematical_review": [
+    "FUS at 2^ell: tau=ell+1,omega=1,nonprime and nonsquarefree for ell>=2, hence defect ell-3.",
+    "Simultaneous prime relabeling is conjugacy, not fixed-rack coordinate symmetry.",
+    "CA construction is valid as variable-time single-head tape simulation, not a direct one-step local interpretation or a tested explicit rule."
+  ]
+}

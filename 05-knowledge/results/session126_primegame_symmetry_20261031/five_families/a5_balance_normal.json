@@ -1,0 +1,372 @@
+{
+  "A5_conjugacy_class_sizes": [
+    1,
+    12,
+    12,
+    15,
+    20
+  ],
+  "A5_subgroup_order_histogram": {
+    "1": 1,
+    "2": 15,
+    "3": 10,
+    "4": 5,
+    "5": 6,
+    "6": 10,
+    "10": 6,
+    "12": 5,
+    "60": 1
+  },
+  "C3_normalizer_order": 6,
+  "D60_squarefree_divisors": [
+    2,
+    3,
+    5,
+    6,
+    10,
+    15,
+    30
+  ],
+  "S3_generators_zero_based": [
+    [
+      1,
+      2,
+      0,
+      3,
+      4
+    ],
+    [
+      1,
+      0,
+      2,
+      4,
+      3
+    ]
+  ],
+  "Sylow3_subgroup_count": 10,
+  "checks": 235,
+  "five_input_features": [
+    {
+      "FUS": [
+        2,
+        2,
+        2
+      ],
+      "N": 15,
+      "balanced": false,
+      "constructible_polygon": true,
+      "factors": {
+        "3": 1,
+        "5": 1
+      },
+      "joins_standard_primegame_orbit": true
+    },
+    {
+      "FUS": [
+        3,
+        1,
+        1
+      ],
+      "N": 16,
+      "balanced": false,
+      "constructible_polygon": true,
+      "factors": {
+        "2": 4
+      },
+      "joins_standard_primegame_orbit": true
+    },
+    {
+      "FUS": [
+        0,
+        0,
+        0
+      ],
+      "N": 17,
+      "balanced": true,
+      "constructible_polygon": true,
+      "factors": {
+        "17": 1
+      },
+      "joins_standard_primegame_orbit": false
+    },
+    {
+      "FUS": [
+        0,
+        0,
+        0
+      ],
+      "N": 23,
+      "balanced": true,
+      "constructible_polygon": false,
+      "factors": {
+        "23": 1
+      },
+      "joins_standard_primegame_orbit": true
+    },
+    {
+      "FUS": [
+        1,
+        1,
+        1
+      ],
+      "N": 25,
+      "balanced": false,
+      "constructible_polygon": false,
+      "factors": {
+        "5": 2
+      },
+      "joins_standard_primegame_orbit": false
+    }
+  ],
+  "full_symmetry_group_balance": [
+    {
+      "F": 6,
+      "N": 24,
+      "S": 3,
+      "U": 2,
+      "defect": 1,
+      "factors": {
+        "2": 3,
+        "3": 1
+      },
+      "prime_divisors": [
+        2,
+        3
+      ],
+      "proper_divisors": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        12
+      ],
+      "squarefree_divisors": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "F": 8,
+      "N": 48,
+      "S": 3,
+      "U": 2,
+      "defect": 3,
+      "factors": {
+        "2": 4,
+        "3": 1
+      },
+      "prime_divisors": [
+        2,
+        3
+      ],
+      "proper_divisors": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        12,
+        16,
+        24
+      ],
+      "squarefree_divisors": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "F": 14,
+      "N": 120,
+      "S": 7,
+      "U": 3,
+      "defect": 4,
+      "factors": {
+        "2": 3,
+        "3": 1,
+        "5": 1
+      },
+      "prime_divisors": [
+        2,
+        3,
+        5
+      ],
+      "proper_divisors": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        15,
+        20,
+        24,
+        30,
+        40,
+        60
+      ],
+      "squarefree_divisors": [
+        2,
+        3,
+        5,
+        6,
+        10,
+        15,
+        30
+      ]
+    }
+  ],
+  "missing_proper_divisor_orders": [
+    15,
+    20,
+    30
+  ],
+  "possible_normal_subgroup_orders": [
+    1,
+    60
+  ],
+  "proper_nontrivial_subgroup_order_values": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    10,
+    12
+  ],
+  "rotational_group_balance": [
+    {
+      "F": 4,
+      "N": 12,
+      "S": 3,
+      "U": 2,
+      "defect": -1,
+      "factors": {
+        "2": 2,
+        "3": 1
+      },
+      "prime_divisors": [
+        2,
+        3
+      ],
+      "proper_divisors": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "squarefree_divisors": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "F": 6,
+      "N": 24,
+      "S": 3,
+      "U": 2,
+      "defect": 1,
+      "factors": {
+        "2": 3,
+        "3": 1
+      },
+      "prime_divisors": [
+        2,
+        3
+      ],
+      "proper_divisors": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        12
+      ],
+      "squarefree_divisors": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "F": 10,
+      "N": 60,
+      "S": 7,
+      "U": 3,
+      "defect": 0,
+      "factors": {
+        "2": 2,
+        "3": 1,
+        "5": 1
+      },
+      "prime_divisors": [
+        2,
+        3,
+        5
+      ],
+      "proper_divisors": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        12,
+        15,
+        20,
+        30
+      ],
+      "squarefree_divisors": [
+        2,
+        3,
+        5,
+        6,
+        10,
+        15,
+        30
+      ]
+    }
+  ],
+  "seed2_last_balanced_state": {
+    "N": 60,
+    "status": "IMPORTED PROOF; exact prefix checked",
+    "update": 70
+  },
+  "seed_coalescence": {
+    "15": {
+      "seed2_update": 1
+    },
+    "16": {
+      "common_state": 97540625,
+      "seed2_update": 145,
+      "updates_to_common_state": 14
+    },
+    "23": {
+      "updates_to_seed2": 11
+    }
+  },
+  "source_pins": [
+    {
+      "path": "dependencies/balance_dynamics/README.md",
+      "sha256": "86dac32903ec6928f955f27d935967d615e5bdfd1124cc43d0ba7c0461e6f15b"
+    },
+    {
+      "path": "dependencies/balance_dynamics/seed_balance_window.json",
+      "sha256": "2dff6fe8b4eb35475eaf6ba4cb45451c006aae20c6976c4147b12ef406ca72e4"
+    },
+    {
+      "path": "dependencies/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "sha256": "cd0456eb3049a13a78db67509435853b7ae64f1211ed80a63b597bf8882f1e70"
+    },
+    {
+      "path": "dependencies/fractran/input_seed_results.json",
+      "sha256": "58f10884724d6255a57addb6e3b8a72951c6a29f1c59e19e198037d90a9d221d"
+    }
+  ],
+  "status": "PASS"
+}

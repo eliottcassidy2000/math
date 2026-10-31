@@ -1,0 +1,75 @@
+{
+  "source_commit": "8f76b84d2960f9e14ad62a154b8533c77593702f",
+  "files": [
+    {
+      "original_path": "session126_research/five_families/README.md",
+      "original_sha256": "1d22035db4b81a1f2e27edd423d75c543b57ddfa3b51ac738a5ca3a066b49ec5",
+      "published_path": "README.md",
+      "modified_for_publication": true,
+      "published_sha256": "1331ef9837de0db7186634e9ac5affeb72555028150fa15ba4155a9d10e3e03b"
+    },
+    {
+      "original_path": "session126_research/five_families/A5_FUS_MEETING_POINT.md",
+      "original_sha256": "7510614f504f792a666d9f94f2fa97b46832f6ea0ca2f3a284bf30f1d20c2e64",
+      "published_path": "A5_FUS_MEETING_POINT.md",
+      "modified_for_publication": true,
+      "published_sha256": "4688e9c6fffb772c772b7e67a96abd156e68cf19757a49dc54202723b19d0dee"
+    },
+    {
+      "original_path": "session126_research/five_families/check_five_families.py",
+      "original_sha256": "a7f8e8a25f83b93291e18d28bba36818517c16620dd6fbe3138366289c949b5c",
+      "published_path": "check_five_families.py",
+      "modified_for_publication": true,
+      "published_sha256": "0f6bf894e67329e820d24856a47dc404939c1fd7f72783b4835b307102aeabd1"
+    },
+    {
+      "original_path": "session126_research/five_families/check_inherited_metagraph.py",
+      "original_sha256": "ae791644fd7ca43cfd94626edd7dc5b655841e36456138c98cd7c7698cceb5d4",
+      "published_path": "check_inherited_metagraph.py",
+      "modified_for_publication": true,
+      "published_sha256": "8f9e181696c8b7ed73db11c1b7544a64468f3c4a8d68d20a6f8050012307b026"
+    },
+    {
+      "original_path": "session126_research/five_families/check_a5_balance_meeting.py",
+      "original_sha256": "3ddbb602c66ed8654eb0ed4032605ab64ea1c6c0ab34d68d8dc401a3ec112e02",
+      "published_path": "check_a5_balance_meeting.py",
+      "modified_for_publication": true,
+      "published_sha256": "92f92bb748b3be896e2898427b3718723b410e5ed7b8e55ae0bac59f5f97fafb"
+    },
+    {
+      "original_path": "session126_research/five_families/inherited_census_n5.json",
+      "original_sha256": "c5e68df205d8b9ce5de786e46352db83aebe93d954c9a0d5057bf862afdd143c",
+      "published_path": "inherited_census_n5.json",
+      "modified_for_publication": true,
+      "published_sha256": "e504c0f76b16e28befda8dfdcfceeeb1dfd74dc902fb916e059d9af0d7957ea1"
+    },
+    {
+      "original_path": "session126_research/balance_dynamics/README.md",
+      "original_sha256": "86dac32903ec6928f955f27d935967d615e5bdfd1124cc43d0ba7c0461e6f15b",
+      "published_path": "dependencies/balance_dynamics/README.md",
+      "modified_for_publication": false,
+      "published_sha256": "86dac32903ec6928f955f27d935967d615e5bdfd1124cc43d0ba7c0461e6f15b"
+    },
+    {
+      "original_path": "session126_research/balance_dynamics/seed_balance_window.json",
+      "original_sha256": "2dff6fe8b4eb35475eaf6ba4cb45451c006aae20c6976c4147b12ef406ca72e4",
+      "published_path": "dependencies/balance_dynamics/seed_balance_window.json",
+      "modified_for_publication": false,
+      "published_sha256": "2dff6fe8b4eb35475eaf6ba4cb45451c006aae20c6976c4147b12ef406ca72e4"
+    },
+    {
+      "original_path": "session126_research/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "original_sha256": "cd0456eb3049a13a78db67509435853b7ae64f1211ed80a63b597bf8882f1e70",
+      "published_path": "dependencies/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "modified_for_publication": false,
+      "published_sha256": "cd0456eb3049a13a78db67509435853b7ae64f1211ed80a63b597bf8882f1e70"
+    },
+    {
+      "original_path": "session126_research/fractran/input_seed_results.json",
+      "original_sha256": "58f10884724d6255a57addb6e3b8a72951c6a29f1c59e19e198037d90a9d221d",
+      "published_path": "dependencies/fractran/input_seed_results.json",
+      "modified_for_publication": false,
+      "published_sha256": "58f10884724d6255a57addb6e3b8a72951c6a29f1c59e19e198037d90a9d221d"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "scope": "Curated Session126 PRIMEGAME and actual CA packet; source-relative standard-library scripts; no source worktree or remote mutation.",
+  "reproducible_outputs": {
+    "fractran/primegame_results.json": "9fdfa8c33201a819347f49a093ace37cc3635a46fd6930096070844970ee2df0",
+    "fractran/input_seed_results.json": "58f10884724d6255a57addb6e3b8a72951c6a29f1c59e19e198037d90a9d221d",
+    "fractran/structural_audit_results.json": "8a082ddd7b4da69bd86ccd894beead4d79232c6945ac3a9cb733d522593128f7",
+    "fractran/independent_audit_results.json": "f462f722f04d76d79d5d609cce015878f26a5466fe13b31f614833a16958c7fd",
+    "fractran_ca/ca_results.json": "aba63b3ad442d803383e004ba0019e0c98e129b74b5d418006d6fdbba42b7f7f",
+    "fractran_ca/independent_ca_audit_results.json": "0599185dda1f25146b543a02bdf2bb90db0f8b34bf9d70c314aa408e0eb39c24",
+    "fractran_ca/seed2_first130_microsteps.jsonl": "a4455aadad19c9459b1bd240143eebffe097205dc90306fa13f0f38a6848d909"
+  },
+  "omitted_reproducible_artifacts": {
+    "fractran/primegame_trace.tsv": {
+      "bytes": 1910703,
+      "sha256": "f1cc30acbc44364c68c337090dc66c06e81be1d85b62f32828e284e8d2a1f8af"
+    },
+    "fractran_ca/ready_trace.tsv": {
+      "bytes": 59031,
+      "sha256": "05cfd6daac9efa58ece1d23e1ddecf26d01cc4804878df6a225ef190be4fc872"
+    }
+  },
+  "counted_explicit_checks": {
+    "fractran_main": 116924,
+    "fractran_structural": 4638,
+    "fractran_independent": 385060,
+    "CA_main": 872508,
+    "CA_independent": 1613769,
+    "total": 2992899
+  },
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2785,
+      "sha256": "a9c6b8e0a5f87d467590397ad395ed4acdf8267daa1b67485256abfdb63d4900"
+    },
+    {
+      "file": "SOURCE_ATTRIBUTION_CLARIFICATION.md",
+      "bytes": 2133,
+      "sha256": "f0bfe2bcbad7992afec1764636589c864c3251f16a8d28a41e1d4581b5c2170c"
+    },
+    {
+      "file": "fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "bytes": 15526,
+      "sha256": "be46fe74da6b05a17805a6373b56acda19c347b2e2cfb2bf33d2171fa8cd4d7b"
+    },
+    {
+      "file": "fractran/independent_audit.py",
+      "bytes": 5586,
+      "sha256": "1f2fcec85812533628a942025e7a754c447ff924cebc66f77732330ca56507d9"
+    },
+    {
+      "file": "fractran/independent_audit_results.json",
+      "bytes": 970,
+      "sha256": "f462f722f04d76d79d5d609cce015878f26a5466fe13b31f614833a16958c7fd"
+    },
+    {
+      "file": "fractran/input_seed_checks.py",
+      "bytes": 1728,
+      "sha256": "4542e963cc4ce379f783514f2ed2ee22ca122c8314e33ce07d11c371471e214f"
+    },
+    {
+      "file": "fractran/input_seed_results.json",
+      "bytes": 5077,
+      "sha256": "58f10884724d6255a57addb6e3b8a72951c6a29f1c59e19e198037d90a9d221d"
+    },
+    {
+      "file": "fractran/primegame_results.json",
+      "bytes": 38371,
+      "sha256": "9fdfa8c33201a819347f49a093ace37cc3635a46fd6930096070844970ee2df0"
+    },
+    {
+      "file": "fractran/sources.json",
+      "bytes": 1110,
+      "sha256": "c55ff9e8bc7349ffe692ec88b5ec94eaa843674b83b25c00f2e39afc5df3631d"
+    },
+    {
+      "file": "fractran/structural_audit.py",
+      "bytes": 3224,
+      "sha256": "e0722a860ae90634edc5142dc404562d4b798645a3364de223ae2d840ab4b843"
+    },
+    {
+      "file": "fractran/structural_audit_results.json",
+      "bytes": 3038,
+      "sha256": "8a082ddd7b4da69bd86ccd894beead4d79232c6945ac3a9cb733d522593128f7"
+    },
+    {
+      "file": "fractran/verify_primegame.py",
+      "bytes": 8192,
+      "sha256": "6fc3a4ca3b72f7658be848d7590a2eacf6e06c38672ebc75f52e123ab049cc18"
+    },
+    {
+      "file": "fractran_ca/ACTUAL_RADIUS_ONE_CA_REPORT.md",
+      "bytes": 14799,
+      "sha256": "9cccdc6e6fd54502ddf086f9f20f9d9278128db72e96655c508a366d6ead7f1f"
+    },
+    {
+      "file": "fractran_ca/ca_results.json",
+      "bytes": 4743,
+      "sha256": "aba63b3ad442d803383e004ba0019e0c98e129b74b5d418006d6fdbba42b7f7f"
+    },
+    {
+      "file": "fractran_ca/independent_ca_audit.py",
+      "bytes": 8669,
+      "sha256": "7aa940280db81bad9618ee1dd0c3c4d1b739e80575c0c811dd15e4bd33f2e94c"
+    },
+    {
+      "file": "fractran_ca/independent_ca_audit_results.json",
+      "bytes": 1246,
+      "sha256": "0599185dda1f25146b543a02bdf2bb90db0f8b34bf9d70c314aa408e0eb39c24"
+    },
+    {
+      "file": "fractran_ca/primegame_ca.py",
+      "bytes": 9328,
+      "sha256": "848e7c9ee2572a5190564287ea5b522c1eaaedf1371e8fa0369b701f22176797"
+    },
+    {
+      "file": "fractran_ca/seed2_first130_microsteps.jsonl",
+      "bytes": 14775,
+      "sha256": "a4455aadad19c9459b1bd240143eebffe097205dc90306fa13f0f38a6848d909"
+    },
+    {
+      "file": "fractran_ca/verify_ca.py",
+      "bytes": 10231,
+      "sha256": "749ecdc25c175ba743f11fd88de86c56af5911e650bcb754c13bc6111629fcef"
+    },
+    {
+      "file": "fractran_ca/write_sample_microtrace.py",
+      "bytes": 978,
+      "sha256": "54fb755ff55b7e0a131361fc9db3bc72ffc99e132928746b8a6661fc49a1fa3c"
+    },
+    {
+      "file": "run_all.py",
+      "bytes": 2393,
+      "sha256": "a55abdf0bd5e8346ebebf581139867d78eb7a2276dc61896f664d3db1db6d5b5"
+    },
+    {
+      "file": "verification_receipt.json",
+      "bytes": 2231,
+      "sha256": "8c17428cd58c488d5026b1004c71379f20fb9983044dc300d71fd8137f475e25"
+    }
+  ],
+  "verification": {
+    "normal": "PASS",
+    "optimized": "PASS",
+    "relocated_normal": "PASS",
+    "relocated_optimized": "PASS",
+    "reproducible_hashes_match": true,
+    "frozen_scratch_lanes_unchanged": true,
+    "receipt": "verification_receipt.json"
+  },
+  "source_attribution_clarification": "Conway1987 Theorem1 printedp4 matches user list; a distinct2009 published variant is documented in SOURCE_ATTRIBUTION_CLARIFICATION.md."
+}

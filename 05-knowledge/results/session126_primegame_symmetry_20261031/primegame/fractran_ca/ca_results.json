@@ -1,0 +1,236 @@
+{
+  "status": "PASS",
+  "alphabet": {
+    "tape_symbols": 4096,
+    "head_states": 93,
+    "plain_or_head_options": 94,
+    "error_symbols": 1,
+    "total_symbols": 385025,
+    "radius": 1,
+    "all_triples_materialized": false
+  },
+  "operation_counts": [
+    3,
+    5,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    1,
+    2,
+    2,
+    3,
+    1,
+    2
+  ],
+  "exact_macro_time": "1+k+2*sum(input exponent over touched coordinates)",
+  "uniform_macro_bound": "10*M+6",
+  "seed2_prime_outputs": {
+    "seed": 2,
+    "outputs": [
+      {
+        "prime_exponent": 2,
+        "integer": 4,
+        "FRACTRAN_updates": 19,
+        "CA_updates": 130
+      },
+      {
+        "prime_exponent": 3,
+        "integer": 8,
+        "FRACTRAN_updates": 69,
+        "CA_updates": 537
+      },
+      {
+        "prime_exponent": 5,
+        "integer": 32,
+        "FRACTRAN_updates": 281,
+        "CA_updates": 2677
+      },
+      {
+        "prime_exponent": 7,
+        "integer": 128,
+        "FRACTRAN_updates": 710,
+        "CA_updates": 7942
+      },
+      {
+        "prime_exponent": 11,
+        "integer": 2048,
+        "FRACTRAN_updates": 2375,
+        "CA_updates": 34603
+      }
+    ],
+    "FRACTRAN_updates": 2375,
+    "CA_updates": 34603,
+    "microconfiguration_sha256": "e303f8152d0b78e1f28ba3fd3b607508c48e5df19cff50597d93aa19056c479f"
+  },
+  "requested_seed_results": [
+    {
+      "seed": 7,
+      "sequence": [
+        7,
+        1,
+        55,
+        65,
+        55
+      ],
+      "outcome": "exact CA cycle",
+      "FRACTRAN_period": 2,
+      "CA_period": 10,
+      "FRACTRAN_transient": 2,
+      "CA_transient": 7
+    },
+    {
+      "seed": 17,
+      "sequence": [
+        17,
+        1,
+        55,
+        65,
+        55
+      ],
+      "outcome": "exact CA cycle",
+      "FRACTRAN_period": 2,
+      "CA_period": 10,
+      "FRACTRAN_transient": 2,
+      "CA_transient": 7
+    },
+    {
+      "seed": 55,
+      "sequence": [
+        55,
+        65,
+        55
+      ],
+      "outcome": "exact CA cycle",
+      "FRACTRAN_period": 2,
+      "CA_period": 10,
+      "FRACTRAN_transient": 0,
+      "CA_transient": 0
+    },
+    {
+      "seed": 25,
+      "sequence": [
+        25,
+        1375,
+        1625,
+        1375
+      ],
+      "outcome": "exact CA cycle",
+      "FRACTRAN_period": 2,
+      "CA_period": 10,
+      "FRACTRAN_transient": 1,
+      "CA_transient": 7
+    },
+    {
+      "seed": 15,
+      "sequence": [
+        15,
+        825,
+        725,
+        1925,
+        2275,
+        425,
+        390,
+        330,
+        290,
+        770,
+        910,
+        170,
+        156,
+        132,
+        116,
+        308,
+        364,
+        68,
+        4
+      ],
+      "outcome": "exact standard-orbit join",
+      "FRACTRAN_updates": 18,
+      "CA_updates": 124
+    },
+    {
+      "seed": 23,
+      "sequence": [
+        23,
+        95,
+        385,
+        455,
+        85,
+        78,
+        66,
+        58,
+        154,
+        182,
+        34,
+        2
+      ],
+      "outcome": "exact standard-orbit join",
+      "FRACTRAN_updates": 11,
+      "CA_updates": 71
+    },
+    {
+      "seed": 16,
+      "outputs": [
+        {
+          "prime_exponent": 5,
+          "integer": 32,
+          "FRACTRAN_updates": 150,
+          "CA_updates": 1543
+        },
+        {
+          "prime_exponent": 7,
+          "integer": 128,
+          "FRACTRAN_updates": 579,
+          "CA_updates": 6808
+        },
+        {
+          "prime_exponent": 11,
+          "integer": 2048,
+          "FRACTRAN_updates": 2244,
+          "CA_updates": 33469
+        }
+      ],
+      "FRACTRAN_updates": 2244,
+      "CA_updates": 33469,
+      "microconfiguration_sha256": "f5e3d1dd716842ee3905ed26cf4897382ed6263437e443c0f597a731dca83f7c"
+    }
+  ],
+  "instruction_witness_macro_durations": [
+    8,
+    10,
+    8,
+    8,
+    8,
+    6,
+    6,
+    6,
+    4,
+    5,
+    5,
+    6,
+    4,
+    3
+  ],
+  "balanced_inputs_checked": 380,
+  "balanced_multi_control_inputs": 282,
+  "random_general_inputs": 240,
+  "random_general_macro_updates": 720,
+  "all_head_tape_pairs_checked": 380928,
+  "locally_invalid_head_tape_pairs": 57344,
+  "random_alphabet_triples": 10000,
+  "arbitrary_sparse_configurations": 500,
+  "hostile_tests": [
+    "READY without origin",
+    "decrement zero at origin",
+    "DECLEFT without required1",
+    "adjacent heads",
+    "two heads distance2",
+    "absorbing error neighborhood"
+  ],
+  "micro_updates_executed": 86501,
+  "explicit_require_checks": 872508,
+  "ready_trace_sha256": "05cfd6daac9efa58ece1d23e1ddecf26d01cc4804878df6a225ef190be4fc872",
+  "scope": "Actual finite-alphabet homogeneous radius1 rule. Exact integer dynamics only at READY times; not one-step conjugacy, a ten-cell finite CA, or a tournament metagraph map."
+}

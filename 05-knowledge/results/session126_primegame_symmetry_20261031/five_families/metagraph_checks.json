@@ -1,0 +1,85 @@
+{
+  "inherited_input_sha256": "e504c0f76b16e28befda8dfdcfceeeb1dfd74dc902fb916e059d9af0d7957ea1",
+  "independently_reconstructed_from_64_path_normal_forms": true,
+  "nodes": 10,
+  "literal_blue_lines": 8,
+  "literal_black_lines": 24,
+  "literal_black_loops": 4,
+  "pure_blue_nodes": [
+    0,
+    7,
+    8
+  ],
+  "pure_blue_mask_fibers": [
+    [
+      0
+    ],
+    [
+      11,
+      46,
+      53
+    ],
+    [
+      16
+    ]
+  ],
+  "pure_blue_representative_distance_profiles": [
+    [
+      1,
+      3,
+      4
+    ],
+    [
+      1,
+      4,
+      5
+    ]
+  ],
+  "user_7_17_55_Hamming_distance_profile": [
+    2,
+    3,
+    3
+  ],
+  "signed_coordinate_gauge_can_identify_user_triple_with_PB": false,
+  "blue_degrees": [
+    1,
+    1,
+    0,
+    3,
+    0,
+    3,
+    3,
+    3,
+    1,
+    1
+  ],
+  "black_degrees": [
+    0,
+    8,
+    10,
+    8,
+    2,
+    6,
+    10,
+    0,
+    0,
+    4
+  ],
+  "color_and_multiplicity_preserving_vertex_automorphisms": [
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  ],
+  "degree_signature_compatible_permutations_tested": 2,
+  "not_Johnson_or_Petersen": "Literal loops already obstruct either simple-graph identification.",
+  "not_a_faithful_A5_action": "Colored weighted graph has trivial vertex automorphism group."
+}

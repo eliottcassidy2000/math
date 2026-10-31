@@ -1,0 +1,623 @@
+{
+  "square_sum_path_orders_2_through_26": [
+    15,
+    16,
+    17,
+    23,
+    25,
+    26
+  ],
+  "square_sum_path_checks": {
+    "2": {
+      "path": null,
+      "search_calls": 2
+    },
+    "3": {
+      "path": null,
+      "search_calls": 5
+    },
+    "4": {
+      "path": null,
+      "search_calls": 6
+    },
+    "5": {
+      "path": null,
+      "search_calls": 9
+    },
+    "6": {
+      "path": null,
+      "search_calls": 14
+    },
+    "7": {
+      "path": null,
+      "search_calls": 17
+    },
+    "8": {
+      "path": null,
+      "search_calls": 24
+    },
+    "9": {
+      "path": null,
+      "search_calls": 29
+    },
+    "10": {
+      "path": null,
+      "search_calls": 38
+    },
+    "11": {
+      "path": null,
+      "search_calls": 43
+    },
+    "12": {
+      "path": null,
+      "search_calls": 50
+    },
+    "13": {
+      "path": null,
+      "search_calls": 109
+    },
+    "14": {
+      "path": null,
+      "search_calls": 196
+    },
+    "15": {
+      "path": [
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9
+      ],
+      "search_calls": 15
+    },
+    "16": {
+      "path": [
+        8,
+        1,
+        15,
+        10,
+        6,
+        3,
+        13,
+        12,
+        4,
+        5,
+        11,
+        14,
+        2,
+        7,
+        9,
+        16
+      ],
+      "search_calls": 16
+    },
+    "17": {
+      "path": [
+        16,
+        9,
+        7,
+        2,
+        14,
+        11,
+        5,
+        4,
+        12,
+        13,
+        3,
+        6,
+        10,
+        15,
+        1,
+        8,
+        17
+      ],
+      "search_calls": 17
+    },
+    "18": {
+      "path": null,
+      "search_calls": 492
+    },
+    "19": {
+      "path": null,
+      "search_calls": 913
+    },
+    "20": {
+      "path": null,
+      "search_calls": 1540
+    },
+    "21": {
+      "path": null,
+      "search_calls": 3301
+    },
+    "22": {
+      "path": null,
+      "search_calls": 7192
+    },
+    "23": {
+      "path": [
+        18,
+        7,
+        9,
+        16,
+        20,
+        5,
+        11,
+        14,
+        2,
+        23,
+        13,
+        12,
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        3,
+        22
+      ],
+      "search_calls": 23
+    },
+    "24": {
+      "path": null,
+      "search_calls": 28722
+    },
+    "25": {
+      "path": [
+        18,
+        7,
+        9,
+        16,
+        20,
+        5,
+        4,
+        21,
+        15,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        3,
+        22,
+        14,
+        2,
+        23,
+        13,
+        12,
+        24,
+        25,
+        11
+      ],
+      "search_calls": 25
+    },
+    "26": {
+      "path": [
+        18,
+        7,
+        9,
+        16,
+        20,
+        5,
+        4,
+        21,
+        15,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        26,
+        23,
+        2,
+        14,
+        11,
+        25,
+        24,
+        12,
+        13,
+        3,
+        22
+      ],
+      "search_calls": 330
+    }
+  },
+  "constructible_orders_in_first_five": [
+    15,
+    16,
+    17
+  ],
+  "platonic_schlafli_pairs": [
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      3
+    ]
+  ],
+  "first_six_fermat_numbers": [
+    3,
+    5,
+    17,
+    257,
+    65537,
+    4294967297
+  ],
+  "F5_factorization": {
+    "641": 1,
+    "6700417": 1
+  },
+  "xor_kernel_first_64_verified": true,
+  "xor_convention": "Rule60 one-sided XOR; Rule90 only after position 2*j-t -> j compression",
+  "rule90_parity_compression_first_64_verified": true,
+  "rule90_time1_raw_rebased_integer": 5,
+  "rule60_time1_integer": 3,
+  "xor_kernel_first_33": [
+    1,
+    3,
+    5,
+    15,
+    17,
+    51,
+    85,
+    255,
+    257,
+    771,
+    1285,
+    3855,
+    4369,
+    13107,
+    21845,
+    65535,
+    65537,
+    196611,
+    327685,
+    983055,
+    1114129,
+    3342387,
+    5570645,
+    16711935,
+    16843009,
+    50529027,
+    84215045,
+    252645135,
+    286331153,
+    858993459,
+    1431655765,
+    4294967295,
+    4294967297
+  ],
+  "first_ten_prime_multiplier_checks_except_even_prime_2": [
+    {
+      "prime": 3,
+      "p_minus_one_factorization": {
+        "2": 1
+      },
+      "connection_set_count": 2,
+      "all_multiplier_stabilizers_trivial": true,
+      "nonidentity_multipliers_fixing_some_set": {}
+    },
+    {
+      "prime": 5,
+      "p_minus_one_factorization": {
+        "2": 2
+      },
+      "connection_set_count": 4,
+      "all_multiplier_stabilizers_trivial": true,
+      "nonidentity_multipliers_fixing_some_set": {}
+    },
+    {
+      "prime": 7,
+      "p_minus_one_factorization": {
+        "2": 1,
+        "3": 1
+      },
+      "connection_set_count": 8,
+      "all_multiplier_stabilizers_trivial": false,
+      "nonidentity_multipliers_fixing_some_set": {
+        "2": 2,
+        "4": 2
+      }
+    },
+    {
+      "prime": 11,
+      "p_minus_one_factorization": {
+        "2": 1,
+        "5": 1
+      },
+      "connection_set_count": 32,
+      "all_multiplier_stabilizers_trivial": false,
+      "nonidentity_multipliers_fixing_some_set": {
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "9": 2
+      }
+    },
+    {
+      "prime": 13,
+      "p_minus_one_factorization": {
+        "2": 2,
+        "3": 1
+      },
+      "connection_set_count": 64,
+      "all_multiplier_stabilizers_trivial": false,
+      "nonidentity_multipliers_fixing_some_set": {
+        "3": 4,
+        "9": 4
+      }
+    },
+    {
+      "prime": 17,
+      "p_minus_one_factorization": {
+        "2": 4
+      },
+      "connection_set_count": 256,
+      "all_multiplier_stabilizers_trivial": true,
+      "nonidentity_multipliers_fixing_some_set": {}
+    },
+    {
+      "prime": 19,
+      "p_minus_one_factorization": {
+        "2": 1,
+        "3": 2
+      },
+      "connection_set_count": 512,
+      "all_multiplier_stabilizers_trivial": false,
+      "nonidentity_multipliers_fixing_some_set": {
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 8,
+        "9": 2,
+        "11": 8,
+        "16": 2,
+        "17": 2
+      }
+    },
+    {
+      "prime": 23,
+      "p_minus_one_factorization": {
+        "2": 1,
+        "11": 1
+      },
+      "connection_set_count": 2048,
+      "all_multiplier_stabilizers_trivial": false,
+      "nonidentity_multipliers_fixing_some_set": {
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "6": 2,
+        "8": 2,
+        "9": 2,
+        "12": 2,
+        "13": 2,
+        "16": 2,
+        "18": 2
+      }
+    },
+    {
+      "prime": 29,
+      "p_minus_one_factorization": {
+        "2": 2,
+        "7": 1
+      },
+      "connection_set_count": 16384,
+      "all_multiplier_stabilizers_trivial": false,
+      "nonidentity_multipliers_fixing_some_set": {
+        "7": 4,
+        "16": 4,
+        "20": 4,
+        "23": 4,
+        "24": 4,
+        "25": 4
+      }
+    }
+  ],
+  "A5_geometry_bridge": {
+    "order": 60,
+    "prime_factorization": {
+      "2": 2,
+      "3": 1,
+      "5": 1
+    },
+    "conjugacy_class_sizes": [
+      1,
+      12,
+      12,
+      15,
+      20
+    ],
+    "pair_to_C3_subgroup_equivariance_checks": 600,
+    "C3_subgroups": 10
+  },
+  "pair_and_tournament_checks": {
+    "arc_positions": 10,
+    "pair_action_image_order": 120,
+    "isoclasses": 12,
+    "self_converse": 8,
+    "converse_merged": 10,
+    "induced_relabel_action_on_isoclasses": "trivial",
+    "johnson_J52": {
+      "vertices": 10,
+      "edges": 30,
+      "degree_multiset": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "petersen_KG52": {
+      "vertices": 10,
+      "edges": 15,
+      "degree_multiset": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "single_arc_flip_iso_graph": {
+      "vertices": 12,
+      "edges": 30,
+      "degree_multiset": [
+        2,
+        3,
+        3,
+        3,
+        4,
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7
+      ]
+    },
+    "single_arc_flip_converse_merged_graph": {
+      "vertices": 10,
+      "edges": 21,
+      "degree_multiset": [
+        2,
+        3,
+        3,
+        3,
+        4,
+        5,
+        5,
+        5,
+        5,
+        7
+      ]
+    },
+    "single_arc_flip_converse_merged_edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        4,
+        41
+      ],
+      [
+        5,
+        40
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        8,
+        40
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        10,
+        41
+      ],
+      [
+        12,
+        41
+      ],
+      [
+        12,
+        76
+      ],
+      [
+        40,
+        41
+      ],
+      [
+        41,
+        76
+      ]
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "balanced_two_cycle_types": 8,
+  "checks": {
+    "census": 541,
+    "factorization": 2106,
+    "graph": 1822,
+    "row": 4304,
+    "seed_window": 3
+  },
+  "checks_total": 8776,
+  "labelled_inputs": 884,
+  "last_seed_balance_visit": [
+    70,
+    60
+  ],
+  "outcomes": {
+    "active": {
+      "balanced": 24,
+      "unbalanced": 354,
+      "unit": 2
+    },
+    "active_valid": {
+      "balanced": 15,
+      "unbalanced": 81,
+      "unit": 2
+    },
+    "all": {
+      "balanced": 39,
+      "unbalanced": 497,
+      "unit": 2
+    },
+    "all_valid": {
+      "balanced": 29,
+      "unbalanced": 150,
+      "unit": 2
+    }
+  },
+  "restricted_orbits": {
+    "active": {
+      "cycle_2": 6,
+      "exit_at_1": 356,
+      "exit_at_2": 15,
+      "exit_at_3": 3
+    },
+    "active_valid": {
+      "cycle_2": 6,
+      "exit_at_1": 83,
+      "exit_at_2": 9
+    },
+    "all": {
+      "cycle_2": 16,
+      "exit_at_1": 499,
+      "exit_at_2": 20,
+      "exit_at_3": 3
+    },
+    "all_valid": {
+      "cycle_2": 16,
+      "exit_at_1": 152,
+      "exit_at_2": 13
+    }
+  },
+  "seed_balance_visits": 16,
+  "spectator_orbits": 538,
+  "status": "PASS",
+  "table_sha256": "02a2005bc2fc11ef8175311cff9f5b2ee5e3f0029398e886cfd81e84a9d22859"
+}

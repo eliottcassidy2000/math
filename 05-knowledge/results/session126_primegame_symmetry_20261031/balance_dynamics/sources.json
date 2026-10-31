@@ -1,0 +1,44 @@
+{
+  "snapshot": "8f76b84d2960f9e14ad62a154b8533c77593702f",
+  "inherited_status": "Definition and complete F=U+S shape classification are inherited, not claimed as session126 novelty.",
+  "sources": [
+    {
+      "repository_path": "05-knowledge/results/trijection_reset_20261020/arithmetic.md",
+      "sha256": "2ed6f99a61bc8497a1cf79e91e3fee2df8a338fe9c8fa76e569ae445a26525cb",
+      "bytes": 11650
+    },
+    {
+      "repository_path": "05-knowledge/results/session84_guarded_unification_20261028/FUS_DIVISOR_FRONTIER.md",
+      "sha256": "fdd3821e8e91d03f0710dddbeee05b041546cb70c41d95300d225337634cafb5",
+      "bytes": 19229
+    },
+    {
+      "repository_path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/GERBICZ_RECONSTRUCTION.md",
+      "sha256": "ebe147970b0869c47b126d10313fd9bf607ceaf68b21f607b5381e60b29b83a9",
+      "bytes": 6383,
+      "supports": "CITED Gerbicz existence of a square-sum Hamiltonian cycle at every order at least32; no small-order nonexistence imported."
+    }
+  ],
+  "session_dependencies": [
+    {
+      "relative_path": "../primegame/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "section": "4. Reconstructed divisor-loop proof and exact word lengths",
+      "supports": "Canonical trial macro words and endpoints used by the token-potential/finite-balance-window extension.",
+      "sha256": "cd0456eb3049a13a78db67509435853b7ae64f1211ed80a63b597bf8882f1e70",
+      "bytes": 15201
+    },
+    {
+      "relative_path": "../primegame/fractran_ca/ACTUAL_RADIUS_ONE_CA_REPORT.md",
+      "sha256": "fb9743ba95bc6734c5072888c5388d775f7e720520a9f9ce86d0c3d384c6281b",
+      "bytes": 14604,
+      "supports": "READY observer theorem and exact CA times537,547 corresponding to FRACTRAN states8,60; checked later output32 at update281."
+    },
+    {
+      "relative_path": "../primegame/fractran_ca/ready_trace.tsv",
+      "sha256": "05cfd6daac9efa58ece1d23e1ddecf26d01cc4804878df6a225ef190be4fc872",
+      "bytes": 59031,
+      "supports": "READY observer theorem and exact CA times537,547 corresponding to FRACTRAN states8,60; checked later output32 at update281."
+    }
+  ],
+  "portable_inputs_manifest": "inputs/SOURCE_PINS.json"
+}

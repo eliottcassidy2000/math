@@ -1,0 +1,46 @@
+{
+  "actual_relocation_performed": true,
+  "checks_per_mode": 286005,
+  "network_or_repository_required": false,
+  "normal_optimized_identical": true,
+  "relocated_outputs_identical": true,
+  "scripts": 4,
+  "status": "PASS",
+  "verification": {
+    "bundled_inputs_checked": 5,
+    "generated_sha256": {
+      "classification.json": "d49f84081c396c675243a9860b56862d53d365ad482e6b419479b77fb2539803",
+      "cross_observers.json": "594bf22d2e7daa59249eb38ca455fe516b500d5c3df60ff401944743b632237a",
+      "seed_balance_trace.json": "00f222bd2e73e5fa5b8f973170b5d53a8c544160900cbc03a7284ac83a1e05b3",
+      "seed_balance_window.json": "2dff6fe8b4eb35475eaf6ba4cb45451c006aae20c6976c4147b12ef406ca72e4",
+      "transitions.tsv": "02a2005bc2fc11ef8175311cff9f5b2ee5e3f0029398e886cfd81e84a9d22859"
+    },
+    "programs": [
+      {
+        "checks": 5784,
+        "normal_optimized_identical": true,
+        "program": "verify_balance_dynamics.py",
+        "stdout_sha256": "d49f84081c396c675243a9860b56862d53d365ad482e6b419479b77fb2539803"
+      },
+      {
+        "checks": 271140,
+        "normal_optimized_identical": true,
+        "program": "seed_balance_window.py",
+        "stdout_sha256": "2dff6fe8b4eb35475eaf6ba4cb45451c006aae20c6976c4147b12ef406ca72e4"
+      },
+      {
+        "checks": 8776,
+        "normal_optimized_identical": true,
+        "program": "independent_audit.py",
+        "stdout_sha256": "27787d161fd8e857763ecf3db5541549921ff65e56e61e479e13905184832758"
+      },
+      {
+        "checks": 305,
+        "normal_optimized_identical": true,
+        "program": "cross_observers.py",
+        "stdout_sha256": "594bf22d2e7daa59249eb38ca455fe516b500d5c3df60ff401944743b632237a"
+      }
+    ]
+  },
+  "working_directory_separate_from_package": true
+}

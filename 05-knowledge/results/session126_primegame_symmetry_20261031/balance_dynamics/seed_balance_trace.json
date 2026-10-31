@@ -1,0 +1,1754 @@
+[
+  {
+    "balanced": true,
+    "factors": "2",
+    "fus": [
+      0,
+      0,
+      0
+    ],
+    "n": 2,
+    "omega_total": 1,
+    "step": 0
+  },
+  {
+    "balanced": false,
+    "factors": "3*5",
+    "fus": [
+      2,
+      2,
+      2
+    ],
+    "n": 15,
+    "omega_total": 2,
+    "step": 1
+  },
+  {
+    "balanced": true,
+    "factors": "3*5^2*11",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 825,
+    "omega_total": 4,
+    "step": 2
+  },
+  {
+    "balanced": false,
+    "factors": "5^2*29",
+    "fus": [
+      4,
+      2,
+      3
+    ],
+    "n": 725,
+    "omega_total": 3,
+    "step": 3
+  },
+  {
+    "balanced": true,
+    "factors": "5^2*7*11",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 1925,
+    "omega_total": 4,
+    "step": 4
+  },
+  {
+    "balanced": true,
+    "factors": "5^2*7*13",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 2275,
+    "omega_total": 4,
+    "step": 5
+  },
+  {
+    "balanced": false,
+    "factors": "5^2*17",
+    "fus": [
+      4,
+      2,
+      3
+    ],
+    "n": 425,
+    "omega_total": 3,
+    "step": 6
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5*13",
+    "fus": [
+      14,
+      4,
+      14
+    ],
+    "n": 390,
+    "omega_total": 4,
+    "step": 7
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5*11",
+    "fus": [
+      14,
+      4,
+      14
+    ],
+    "n": 330,
+    "omega_total": 4,
+    "step": 8
+  },
+  {
+    "balanced": false,
+    "factors": "2*5*29",
+    "fus": [
+      6,
+      3,
+      6
+    ],
+    "n": 290,
+    "omega_total": 3,
+    "step": 9
+  },
+  {
+    "balanced": false,
+    "factors": "2*5*7*11",
+    "fus": [
+      14,
+      4,
+      14
+    ],
+    "n": 770,
+    "omega_total": 4,
+    "step": 10
+  },
+  {
+    "balanced": false,
+    "factors": "2*5*7*13",
+    "fus": [
+      14,
+      4,
+      14
+    ],
+    "n": 910,
+    "omega_total": 4,
+    "step": 11
+  },
+  {
+    "balanced": false,
+    "factors": "2*5*17",
+    "fus": [
+      6,
+      3,
+      6
+    ],
+    "n": 170,
+    "omega_total": 3,
+    "step": 12
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*3*13",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 156,
+    "omega_total": 4,
+    "step": 13
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*3*11",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 132,
+    "omega_total": 4,
+    "step": 14
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*29",
+    "fus": [
+      4,
+      2,
+      3
+    ],
+    "n": 116,
+    "omega_total": 3,
+    "step": 15
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*7*11",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 308,
+    "omega_total": 4,
+    "step": 16
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*7*13",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 364,
+    "omega_total": 4,
+    "step": 17
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*17",
+    "fus": [
+      4,
+      2,
+      3
+    ],
+    "n": 68,
+    "omega_total": 3,
+    "step": 18
+  },
+  {
+    "balanced": false,
+    "factors": "2^2",
+    "fus": [
+      1,
+      1,
+      1
+    ],
+    "n": 4,
+    "omega_total": 2,
+    "step": 19
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5",
+    "fus": [
+      6,
+      3,
+      6
+    ],
+    "n": 30,
+    "omega_total": 3,
+    "step": 20
+  },
+  {
+    "balanced": false,
+    "factors": "3^2*5^2",
+    "fus": [
+      7,
+      2,
+      3
+    ],
+    "n": 225,
+    "omega_total": 4,
+    "step": 21
+  },
+  {
+    "balanced": false,
+    "factors": "3^2*5^3*11",
+    "fus": [
+      22,
+      3,
+      7
+    ],
+    "n": 12375,
+    "omega_total": 6,
+    "step": 22
+  },
+  {
+    "balanced": false,
+    "factors": "3*5^3*29",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 10875,
+    "omega_total": 5,
+    "step": 23
+  },
+  {
+    "balanced": false,
+    "factors": "3*5^3*7*11",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 28875,
+    "omega_total": 6,
+    "step": 24
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7*29",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 25375,
+    "omega_total": 5,
+    "step": 25
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7^2*11",
+    "fus": [
+      22,
+      3,
+      7
+    ],
+    "n": 67375,
+    "omega_total": 6,
+    "step": 26
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7^2*13",
+    "fus": [
+      22,
+      3,
+      7
+    ],
+    "n": 79625,
+    "omega_total": 6,
+    "step": 27
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7*17",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 14875,
+    "omega_total": 5,
+    "step": 28
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^2*7*13",
+    "fus": [
+      46,
+      5,
+      31
+    ],
+    "n": 13650,
+    "omega_total": 6,
+    "step": 29
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^2*17",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 2550,
+    "omega_total": 5,
+    "step": 30
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5*13",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 2340,
+    "omega_total": 6,
+    "step": 31
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5*11",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 1980,
+    "omega_total": 6,
+    "step": 32
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3*5*29",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 1740,
+    "omega_total": 5,
+    "step": 33
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3*5*7*11",
+    "fus": [
+      46,
+      5,
+      31
+    ],
+    "n": 4620,
+    "omega_total": 6,
+    "step": 34
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7*29",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 4060,
+    "omega_total": 5,
+    "step": 35
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7^2*11",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 10780,
+    "omega_total": 6,
+    "step": 36
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7^2*13",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 12740,
+    "omega_total": 6,
+    "step": 37
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7*17",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 2380,
+    "omega_total": 5,
+    "step": 38
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*7*13",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 2184,
+    "omega_total": 6,
+    "step": 39
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*17",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 408,
+    "omega_total": 5,
+    "step": 40
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*19",
+    "fus": [
+      6,
+      2,
+      3
+    ],
+    "n": 152,
+    "omega_total": 4,
+    "step": 41
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*23",
+    "fus": [
+      4,
+      2,
+      3
+    ],
+    "n": 92,
+    "omega_total": 3,
+    "step": 42
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*5*19",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 380,
+    "omega_total": 4,
+    "step": 43
+  },
+  {
+    "balanced": false,
+    "factors": "2*5*23",
+    "fus": [
+      6,
+      3,
+      6
+    ],
+    "n": 230,
+    "omega_total": 3,
+    "step": 44
+  },
+  {
+    "balanced": true,
+    "factors": "2*5^2*19",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 950,
+    "omega_total": 4,
+    "step": 45
+  },
+  {
+    "balanced": false,
+    "factors": "5^2*23",
+    "fus": [
+      4,
+      2,
+      3
+    ],
+    "n": 575,
+    "omega_total": 3,
+    "step": 46
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*19",
+    "fus": [
+      6,
+      2,
+      3
+    ],
+    "n": 2375,
+    "omega_total": 4,
+    "step": 47
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7*11",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 9625,
+    "omega_total": 5,
+    "step": 48
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7*13",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 11375,
+    "omega_total": 5,
+    "step": 49
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*17",
+    "fus": [
+      6,
+      2,
+      3
+    ],
+    "n": 2125,
+    "omega_total": 4,
+    "step": 50
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^2*13",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 1950,
+    "omega_total": 5,
+    "step": 51
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^2*11",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 1650,
+    "omega_total": 5,
+    "step": 52
+  },
+  {
+    "balanced": true,
+    "factors": "2*5^2*29",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 1450,
+    "omega_total": 4,
+    "step": 53
+  },
+  {
+    "balanced": false,
+    "factors": "2*5^2*7*11",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 3850,
+    "omega_total": 5,
+    "step": 54
+  },
+  {
+    "balanced": false,
+    "factors": "2*5^2*7*13",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 4550,
+    "omega_total": 5,
+    "step": 55
+  },
+  {
+    "balanced": true,
+    "factors": "2*5^2*17",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 850,
+    "omega_total": 4,
+    "step": 56
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3*5*13",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 780,
+    "omega_total": 5,
+    "step": 57
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3*5*11",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 660,
+    "omega_total": 5,
+    "step": 58
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*5*29",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 580,
+    "omega_total": 4,
+    "step": 59
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7*11",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 1540,
+    "omega_total": 5,
+    "step": 60
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7*13",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 1820,
+    "omega_total": 5,
+    "step": 61
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*5*17",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 340,
+    "omega_total": 4,
+    "step": 62
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*13",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 312,
+    "omega_total": 5,
+    "step": 63
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*11",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 264,
+    "omega_total": 5,
+    "step": 64
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*29",
+    "fus": [
+      6,
+      2,
+      3
+    ],
+    "n": 232,
+    "omega_total": 4,
+    "step": 65
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*7*11",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 616,
+    "omega_total": 5,
+    "step": 66
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*7*13",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 728,
+    "omega_total": 5,
+    "step": 67
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*17",
+    "fus": [
+      6,
+      2,
+      3
+    ],
+    "n": 136,
+    "omega_total": 4,
+    "step": 68
+  },
+  {
+    "balanced": true,
+    "factors": "2^3",
+    "fus": [
+      2,
+      1,
+      1
+    ],
+    "n": 8,
+    "omega_total": 3,
+    "step": 69
+  },
+  {
+    "balanced": true,
+    "factors": "2^2*3*5",
+    "fus": [
+      10,
+      3,
+      7
+    ],
+    "n": 60,
+    "omega_total": 4,
+    "step": 70
+  },
+  {
+    "balanced": false,
+    "factors": "2*3^2*5^2",
+    "fus": [
+      16,
+      3,
+      7
+    ],
+    "n": 450,
+    "omega_total": 5,
+    "step": 71
+  },
+  {
+    "balanced": false,
+    "factors": "3^3*5^3",
+    "fus": [
+      14,
+      2,
+      3
+    ],
+    "n": 3375,
+    "omega_total": 6,
+    "step": 72
+  },
+  {
+    "balanced": false,
+    "factors": "3^3*5^4*11",
+    "fus": [
+      38,
+      3,
+      7
+    ],
+    "n": 185625,
+    "omega_total": 8,
+    "step": 73
+  },
+  {
+    "balanced": false,
+    "factors": "3^2*5^4*29",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 163125,
+    "omega_total": 7,
+    "step": 74
+  },
+  {
+    "balanced": false,
+    "factors": "3^2*5^4*7*11",
+    "fus": [
+      58,
+      4,
+      15
+    ],
+    "n": 433125,
+    "omega_total": 8,
+    "step": 75
+  },
+  {
+    "balanced": false,
+    "factors": "3*5^4*7*29",
+    "fus": [
+      38,
+      4,
+      15
+    ],
+    "n": 380625,
+    "omega_total": 7,
+    "step": 76
+  },
+  {
+    "balanced": false,
+    "factors": "3*5^4*7^2*11",
+    "fus": [
+      58,
+      4,
+      15
+    ],
+    "n": 1010625,
+    "omega_total": 8,
+    "step": 77
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7^2*29",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 888125,
+    "omega_total": 7,
+    "step": 78
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7^3*11",
+    "fus": [
+      38,
+      3,
+      7
+    ],
+    "n": 2358125,
+    "omega_total": 8,
+    "step": 79
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7^3*13",
+    "fus": [
+      38,
+      3,
+      7
+    ],
+    "n": 2786875,
+    "omega_total": 8,
+    "step": 80
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7^2*17",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 520625,
+    "omega_total": 7,
+    "step": 81
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^3*7^2*13",
+    "fus": [
+      94,
+      5,
+      31
+    ],
+    "n": 477750,
+    "omega_total": 8,
+    "step": 82
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^3*7*17",
+    "fus": [
+      62,
+      5,
+      31
+    ],
+    "n": 89250,
+    "omega_total": 7,
+    "step": 83
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5^2*7*13",
+    "fus": [
+      106,
+      5,
+      31
+    ],
+    "n": 81900,
+    "omega_total": 8,
+    "step": 84
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5^2*17",
+    "fus": [
+      52,
+      4,
+      15
+    ],
+    "n": 15300,
+    "omega_total": 7,
+    "step": 85
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3^3*5*13",
+    "fus": [
+      62,
+      4,
+      15
+    ],
+    "n": 14040,
+    "omega_total": 8,
+    "step": 86
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3^3*5*11",
+    "fus": [
+      62,
+      4,
+      15
+    ],
+    "n": 11880,
+    "omega_total": 8,
+    "step": 87
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3^2*5*29",
+    "fus": [
+      46,
+      4,
+      15
+    ],
+    "n": 10440,
+    "omega_total": 7,
+    "step": 88
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3^2*5*7*11",
+    "fus": [
+      94,
+      5,
+      31
+    ],
+    "n": 27720,
+    "omega_total": 8,
+    "step": 89
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*5*7*29",
+    "fus": [
+      62,
+      5,
+      31
+    ],
+    "n": 24360,
+    "omega_total": 7,
+    "step": 90
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*5*7^2*11",
+    "fus": [
+      94,
+      5,
+      31
+    ],
+    "n": 64680,
+    "omega_total": 8,
+    "step": 91
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*5*7^2*29",
+    "fus": [
+      46,
+      4,
+      15
+    ],
+    "n": 56840,
+    "omega_total": 7,
+    "step": 92
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*5*7^3*11",
+    "fus": [
+      62,
+      4,
+      15
+    ],
+    "n": 150920,
+    "omega_total": 8,
+    "step": 93
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*5*7^3*13",
+    "fus": [
+      62,
+      4,
+      15
+    ],
+    "n": 178360,
+    "omega_total": 8,
+    "step": 94
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*5*7^2*17",
+    "fus": [
+      46,
+      4,
+      15
+    ],
+    "n": 33320,
+    "omega_total": 7,
+    "step": 95
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*3*7^2*13",
+    "fus": [
+      58,
+      4,
+      15
+    ],
+    "n": 30576,
+    "omega_total": 8,
+    "step": 96
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*3*7*17",
+    "fus": [
+      38,
+      4,
+      15
+    ],
+    "n": 5712,
+    "omega_total": 7,
+    "step": 97
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*7*19",
+    "fus": [
+      18,
+      3,
+      7
+    ],
+    "n": 2128,
+    "omega_total": 6,
+    "step": 98
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*7*23",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 1288,
+    "omega_total": 5,
+    "step": 99
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*5*7*19",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 5320,
+    "omega_total": 6,
+    "step": 100
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5*7*23",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 3220,
+    "omega_total": 5,
+    "step": 101
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5^2*7*19",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 13300,
+    "omega_total": 6,
+    "step": 102
+  },
+  {
+    "balanced": false,
+    "factors": "2*5^2*7*23",
+    "fus": [
+      22,
+      4,
+      15
+    ],
+    "n": 8050,
+    "omega_total": 5,
+    "step": 103
+  },
+  {
+    "balanced": false,
+    "factors": "2*5^3*7*19",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 33250,
+    "omega_total": 6,
+    "step": 104
+  },
+  {
+    "balanced": false,
+    "factors": "5^3*7*23",
+    "fus": [
+      14,
+      3,
+      7
+    ],
+    "n": 20125,
+    "omega_total": 5,
+    "step": 105
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7*19",
+    "fus": [
+      18,
+      3,
+      7
+    ],
+    "n": 83125,
+    "omega_total": 6,
+    "step": 106
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7^2*11",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 336875,
+    "omega_total": 7,
+    "step": 107
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7^2*13",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 398125,
+    "omega_total": 7,
+    "step": 108
+  },
+  {
+    "balanced": false,
+    "factors": "5^4*7*17",
+    "fus": [
+      18,
+      3,
+      7
+    ],
+    "n": 74375,
+    "omega_total": 6,
+    "step": 109
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^3*7*13",
+    "fus": [
+      62,
+      5,
+      31
+    ],
+    "n": 68250,
+    "omega_total": 7,
+    "step": 110
+  },
+  {
+    "balanced": false,
+    "factors": "2*3*5^3*17",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 12750,
+    "omega_total": 6,
+    "step": 111
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5^2*13",
+    "fus": [
+      52,
+      4,
+      15
+    ],
+    "n": 11700,
+    "omega_total": 7,
+    "step": 112
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5^2*11",
+    "fus": [
+      52,
+      4,
+      15
+    ],
+    "n": 9900,
+    "omega_total": 7,
+    "step": 113
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3*5^2*29",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 8700,
+    "omega_total": 6,
+    "step": 114
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3*5^2*7*11",
+    "fus": [
+      70,
+      5,
+      31
+    ],
+    "n": 23100,
+    "omega_total": 7,
+    "step": 115
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5^2*7*29",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 20300,
+    "omega_total": 6,
+    "step": 116
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5^2*7^2*11",
+    "fus": [
+      52,
+      4,
+      15
+    ],
+    "n": 53900,
+    "omega_total": 7,
+    "step": 117
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5^2*7^2*13",
+    "fus": [
+      52,
+      4,
+      15
+    ],
+    "n": 63700,
+    "omega_total": 7,
+    "step": 118
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*5^2*7*17",
+    "fus": [
+      34,
+      4,
+      15
+    ],
+    "n": 11900,
+    "omega_total": 6,
+    "step": 119
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*5*7*13",
+    "fus": [
+      62,
+      5,
+      31
+    ],
+    "n": 10920,
+    "omega_total": 7,
+    "step": 120
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*5*17",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 2040,
+    "omega_total": 6,
+    "step": 121
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*3^2*13",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 1872,
+    "omega_total": 7,
+    "step": 122
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*3^2*11",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 1584,
+    "omega_total": 7,
+    "step": 123
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*3*29",
+    "fus": [
+      18,
+      3,
+      7
+    ],
+    "n": 1392,
+    "omega_total": 6,
+    "step": 124
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*3*7*11",
+    "fus": [
+      38,
+      4,
+      15
+    ],
+    "n": 3696,
+    "omega_total": 7,
+    "step": 125
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*7*29",
+    "fus": [
+      18,
+      3,
+      7
+    ],
+    "n": 3248,
+    "omega_total": 6,
+    "step": 126
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*7^2*11",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 8624,
+    "omega_total": 7,
+    "step": 127
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*7^2*13",
+    "fus": [
+      28,
+      3,
+      7
+    ],
+    "n": 10192,
+    "omega_total": 7,
+    "step": 128
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*7*17",
+    "fus": [
+      18,
+      3,
+      7
+    ],
+    "n": 1904,
+    "omega_total": 6,
+    "step": 129
+  },
+  {
+    "balanced": false,
+    "factors": "2^4*7",
+    "fus": [
+      8,
+      2,
+      3
+    ],
+    "n": 112,
+    "omega_total": 5,
+    "step": 130
+  },
+  {
+    "balanced": false,
+    "factors": "2^3*3*5*7",
+    "fus": [
+      30,
+      4,
+      15
+    ],
+    "n": 840,
+    "omega_total": 6,
+    "step": 131
+  },
+  {
+    "balanced": false,
+    "factors": "2^2*3^2*5^2*7",
+    "fus": [
+      52,
+      4,
+      15
+    ],
+    "n": 6300,
+    "omega_total": 7,
+    "step": 132
+  },
+  {
+    "balanced": false,
+    "factors": "2*3^3*5^3*7",
+    "fus": [
+      62,
+      4,
+      15
+    ],
+    "n": 47250,
+    "omega_total": 8,
+    "step": 133
+  },
+  {
+    "balanced": false,
+    "factors": "3^4*5^4*7",
+    "fus": [
+      48,
+      3,
+      7
+    ],
+    "n": 354375,
+    "omega_total": 9,
+    "step": 134
+  },
+  {
+    "balanced": false,
+    "factors": "3^4*5^4",
+    "fus": [
+      23,
+      2,
+      3
+    ],
+    "n": 50625,
+    "omega_total": 8,
+    "step": 135
+  },
+  {
+    "balanced": false,
+    "factors": "3^4*5^5*11",
+    "fus": [
+      58,
+      3,
+      7
+    ],
+    "n": 2784375,
+    "omega_total": 10,
+    "step": 136
+  },
+  {
+    "balanced": false,
+    "factors": "3^3*5^5*29",
+    "fus": [
+      46,
+      3,
+      7
+    ],
+    "n": 2446875,
+    "omega_total": 9,
+    "step": 137
+  },
+  {
+    "balanced": false,
+    "factors": "3^3*5^5*7*11",
+    "fus": [
+      94,
+      4,
+      15
+    ],
+    "n": 6496875,
+    "omega_total": 10,
+    "step": 138
+  },
+  {
+    "balanced": false,
+    "factors": "3^2*5^5*7*29",
+    "fus": [
+      70,
+      4,
+      15
+    ],
+    "n": 5709375,
+    "omega_total": 9,
+    "step": 139
+  },
+  {
+    "balanced": false,
+    "factors": "3^2*5^5*7^2*11",
+    "fus": [
+      106,
+      4,
+      15
+    ],
+    "n": 15159375,
+    "omega_total": 10,
+    "step": 140
+  },
+  {
+    "balanced": false,
+    "factors": "3*5^5*7^2*29",
+    "fus": [
+      70,
+      4,
+      15
+    ],
+    "n": 13321875,
+    "omega_total": 9,
+    "step": 141
+  },
+  {
+    "balanced": false,
+    "factors": "3*5^5*7^3*11",
+    "fus": [
+      94,
+      4,
+      15
+    ],
+    "n": 35371875,
+    "omega_total": 10,
+    "step": 142
+  },
+  {
+    "balanced": false,
+    "factors": "5^5*7^3*29",
+    "fus": [
+      46,
+      3,
+      7
+    ],
+    "n": 31084375,
+    "omega_total": 9,
+    "step": 143
+  },
+  {
+    "balanced": false,
+    "factors": "5^5*7^4*11",
+    "fus": [
+      58,
+      3,
+      7
+    ],
+    "n": 82534375,
+    "omega_total": 10,
+    "step": 144
+  },
+  {
+    "balanced": false,
+    "factors": "5^5*7^4*13",
+    "fus": [
+      58,
+      3,
+      7
+    ],
+    "n": 97540625,
+    "omega_total": 10,
+    "step": 145
+  }
+]
