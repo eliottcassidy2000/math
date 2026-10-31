@@ -1,0 +1,164 @@
+{
+  "complete_leaf_move_types": {
+    "exchange": 33,
+    "reverse": 5367
+  },
+  "exact_small_gadget_cycles": [
+    2,
+    2
+  ],
+  "local_exhaustive_cases": [
+    {
+      "feasible_degree_cases": [
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "edges": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "kind": "reverse"
+    },
+    {
+      "feasible_degree_cases": [
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "degrees": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "edges": [
+            [
+              1,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        {
+          "degrees": [
+            2,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        }
+      ],
+      "kind": "exchange"
+    }
+  ],
+  "minimum_exchange_block_length": 4,
+  "scope": "Fully refined union graph has exactly the independent-switch Hamiltonian cycles. Coarse synchronized codes are not closed under its local edge queries.",
+  "status": "passed",
+  "tie_erasure_hostile": {
+    "N": 70312,
+    "coarse_accepts": false,
+    "coarse_bits": 25,
+    "coarse_schedule": "A",
+    "queries": [
+      [
+        [
+          3462,
+          6538
+        ],
+        true
+      ],
+      [
+        [
+          3487,
+          36513
+        ],
+        true
+      ]
+    ],
+    "refined_accepts": true,
+    "refined_bits": 625,
+    "refined_free_bits": 623,
+    "refined_schedule": "AA",
+    "same_union_graph": true
+  }
+}

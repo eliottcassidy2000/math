@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — a power coefficient is not its exponent, and a code is not its union graph
+
+- **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031f`; no previously proved result retracted.
+- **Arithmetic repair:** the three-slope hostile losing at t,2t,3t has H=2^(3t-1)-2^(t-1)+1. A handwritten expected polynomial used coefficient-1 instead of-1/2 on X=2^t. The exact coefficient producer rejected it; the expected value and a draft orientation sentence were corrected before promotion, and literal adjacency checks pass. Keep the half coefficient when changing from2^(t-1) to X.
+- **Representation boundary:** the25-bit synchronized A family at N70312 and the625-bit refined AA family have the same union graph. Two local edge requirements can contradict the coarse code while admitting a Hamiltonian cycle in that graph. The code-relative compiler was valid; it was not a complete graph-relative solver until primitive switches were untied. `closed_edge_carrier.json` gives the exact two-edge witness and the repaired complete carrier.
+
 ## 2026-10-31 — schedule words and atom words are different decoder types
 
 - **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031e/native_phase_cycle.py`; fixed before commit, with no published mathematical result retracted.

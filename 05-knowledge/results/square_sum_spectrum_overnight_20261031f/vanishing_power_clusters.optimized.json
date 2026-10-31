@@ -1,0 +1,134 @@
+{
+  "deficit9_coarse_effective_bounds": [
+    {
+      "exponent_upper_bound": 88,
+      "max_apex_losses": 1,
+      "rhs_bound": 11,
+      "term_bound": 4
+    },
+    {
+      "exponent_upper_bound": 624,
+      "max_apex_losses": 2,
+      "rhs_bound": 13,
+      "term_bound": 6
+    },
+    {
+      "exponent_upper_bound": 6144,
+      "max_apex_losses": 3,
+      "rhs_bound": 16,
+      "term_bound": 9
+    },
+    {
+      "exponent_upper_bound": 76800,
+      "max_apex_losses": 4,
+      "rhs_bound": 20,
+      "term_bound": 13
+    },
+    {
+      "exponent_upper_bound": 1152000,
+      "max_apex_losses": 5,
+      "rhs_bound": 25,
+      "term_bound": 18
+    },
+    {
+      "exponent_upper_bound": 19998720,
+      "max_apex_losses": 6,
+      "rhs_bound": 31,
+      "term_bound": 24
+    },
+    {
+      "exponent_upper_bound": 392232960,
+      "max_apex_losses": 7,
+      "rhs_bound": 38,
+      "term_bound": 31
+    },
+    {
+      "exponent_upper_bound": 8546549760,
+      "max_apex_losses": 8,
+      "rhs_bound": 46,
+      "term_bound": 39
+    }
+  ],
+  "equal_signed_multisets": 2231,
+  "maximum_span_by_terms": {
+    "2": 0,
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 4,
+    "7": 5,
+    "8": 6
+  },
+  "minimal_vanishing_multisets": 143,
+  "scope": "Finite audit of the span lemma; the effective fan bound uses the all-size affine classification and the explicit polyhedral argument.",
+  "sharp_carry_chains": [
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      13,
+      11
+    ],
+    [
+      14,
+      12
+    ],
+    [
+      15,
+      13
+    ],
+    [
+      16,
+      14
+    ]
+  ],
+  "status": "passed",
+  "universe": {
+    "exponents": [
+      0,
+      6
+    ],
+    "maximum_terms": 8
+  }
+}

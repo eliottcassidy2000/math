@@ -1,0 +1,247 @@
+{
+  "accepted_by_slope": {
+    "1": 2,
+    "2": 6,
+    "3": 2,
+    "4": 6,
+    "5": 2
+  },
+  "accepted_examples": [
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 1,
+      "groups": {
+        "1": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": 0,
+      "exponent_slope": 1,
+      "groups": {
+        "1": [
+          1
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 2,
+      "groups": {
+        "2": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 2,
+      "groups": {
+        "1": [
+          0
+        ],
+        "2": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "1",
+      "exponent_offset": -1,
+      "exponent_slope": 2,
+      "groups": {
+        "1": [
+          -1,
+          1
+        ],
+        "2": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "5",
+      "exponent_offset": -1,
+      "exponent_slope": 2,
+      "groups": {
+        "1": [
+          -1,
+          0,
+          1
+        ],
+        "2": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": 0,
+      "exponent_slope": 2,
+      "groups": {
+        "2": [
+          1
+        ]
+      }
+    },
+    {
+      "deficit": "1",
+      "exponent_offset": 0,
+      "exponent_slope": 2,
+      "groups": {
+        "1": [
+          0,
+          1
+        ],
+        "2": [
+          1
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 3,
+      "groups": {
+        "3": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": 0,
+      "exponent_slope": 3,
+      "groups": {
+        "3": [
+          1
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 4,
+      "groups": {
+        "4": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 4,
+      "groups": {
+        "2": [
+          0
+        ],
+        "4": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "1",
+      "exponent_offset": -1,
+      "exponent_slope": 4,
+      "groups": {
+        "2": [
+          -1,
+          1
+        ],
+        "4": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "5",
+      "exponent_offset": -1,
+      "exponent_slope": 4,
+      "groups": {
+        "2": [
+          -1,
+          0,
+          1
+        ],
+        "4": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": 0,
+      "exponent_slope": 4,
+      "groups": {
+        "4": [
+          1
+        ]
+      }
+    },
+    {
+      "deficit": "1",
+      "exponent_offset": 0,
+      "exponent_slope": 4,
+      "groups": {
+        "2": [
+          0,
+          1
+        ],
+        "4": [
+          1
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": -1,
+      "exponent_slope": 5,
+      "groups": {
+        "5": [
+          0
+        ]
+      }
+    },
+    {
+      "deficit": "-1",
+      "exponent_offset": 0,
+      "exponent_slope": 5,
+      "groups": {
+        "5": [
+          1
+        ]
+      }
+    }
+  ],
+  "accepted_profiles": 18,
+  "actual_adjacency_controls": 39,
+  "complete_profiles": 9362,
+  "scope": "Finite coefficient census verifies the all-size support-difference and reflection proof; it is not a census of all one-apex tournaments.",
+  "status": "passed",
+  "three_slope_hostile": {
+    "groups": {
+      "1": [
+        0
+      ],
+      "2": [
+        0
+      ],
+      "3": [
+        0
+      ]
+    },
+    "polynomial_in_2_to_a": [
+      "1",
+      "-1/2",
+      "0",
+      "1/2"
+    ]
+  }
+}

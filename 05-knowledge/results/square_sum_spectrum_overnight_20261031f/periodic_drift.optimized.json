@@ -1,0 +1,204 @@
+{
+  "actual_adjacency_controls": 90,
+  "complete_binary_words": 32766,
+  "finite_minimum_drift": [
+    {
+      "examples": [],
+      "length": 1,
+      "minimizer_words": 0,
+      "minimum": "None"
+    },
+    {
+      "examples": [
+        "01",
+        "10"
+      ],
+      "length": 2,
+      "minimizer_words": 2,
+      "minimum": "2/3"
+    },
+    {
+      "examples": [
+        "001",
+        "010",
+        "011",
+        "100"
+      ],
+      "length": 3,
+      "minimizer_words": 6,
+      "minimum": "4/7"
+    },
+    {
+      "examples": [
+        "0011",
+        "0110",
+        "1001",
+        "1100"
+      ],
+      "length": 4,
+      "minimizer_words": 4,
+      "minimum": "2/5"
+    },
+    {
+      "examples": [
+        "00011",
+        "00110",
+        "00111",
+        "01100"
+      ],
+      "length": 5,
+      "minimizer_words": 10,
+      "minimum": "10/31"
+    },
+    {
+      "examples": [
+        "000111",
+        "001110",
+        "011100",
+        "100011"
+      ],
+      "length": 6,
+      "minimizer_words": 6,
+      "minimum": "2/9"
+    },
+    {
+      "examples": [
+        "0000111",
+        "0001110",
+        "0001111",
+        "0011100"
+      ],
+      "length": 7,
+      "minimizer_words": 14,
+      "minimum": "22/127"
+    },
+    {
+      "examples": [
+        "00001111",
+        "00011110",
+        "00111100",
+        "01111000"
+      ],
+      "length": 8,
+      "minimizer_words": 8,
+      "minimum": "2/17"
+    },
+    {
+      "examples": [
+        "000001111",
+        "000011110",
+        "000011111",
+        "000111100"
+      ],
+      "length": 9,
+      "minimizer_words": 18,
+      "minimum": "46/511"
+    },
+    {
+      "examples": [
+        "0000011111",
+        "0000111110",
+        "0001111100",
+        "0011111000"
+      ],
+      "length": 10,
+      "minimizer_words": 10,
+      "minimum": "2/33"
+    },
+    {
+      "examples": [
+        "00000011111",
+        "00000111110",
+        "00000111111",
+        "00001111100"
+      ],
+      "length": 11,
+      "minimizer_words": 22,
+      "minimum": "94/2047"
+    },
+    {
+      "examples": [
+        "000000111111",
+        "000001111110",
+        "000011111100",
+        "000111111000"
+      ],
+      "length": 12,
+      "minimizer_words": 12,
+      "minimum": "2/65"
+    },
+    {
+      "examples": [
+        "0000000111111",
+        "0000001111110",
+        "0000001111111",
+        "0000011111100"
+      ],
+      "length": 13,
+      "minimizer_words": 26,
+      "minimum": "190/8191"
+    },
+    {
+      "examples": [
+        "00000001111111",
+        "00000011111110",
+        "00000111111100",
+        "00001111111000"
+      ],
+      "length": 14,
+      "minimizer_words": 14,
+      "minimum": "2/129"
+    }
+  ],
+  "scope": "All-size positivity and the sharp minimum/equality cases follow the cyclic-correlation proof. Exact controls cover all binary words through14.",
+  "state_formula_controls": 2540,
+  "status": "passed",
+  "through_length": 14,
+  "tuned_native_family": [
+    {
+      "raw_H": 31,
+      "repetitions": 0,
+      "vertices": 7
+    },
+    {
+      "raw_H": 513,
+      "repetitions": 1,
+      "vertices": 11
+    },
+    {
+      "raw_H": 8195,
+      "repetitions": 2,
+      "vertices": 15
+    },
+    {
+      "raw_H": 131077,
+      "repetitions": 3,
+      "vertices": 19
+    },
+    {
+      "raw_H": 2097159,
+      "repetitions": 4,
+      "vertices": 23
+    },
+    {
+      "raw_H": 33554441,
+      "repetitions": 5,
+      "vertices": 27
+    },
+    {
+      "raw_H": 536870923,
+      "repetitions": 6,
+      "vertices": 31
+    },
+    {
+      "raw_H": 8589934605,
+      "repetitions": 7,
+      "vertices": 35
+    },
+    {
+      "raw_H": 137438953487,
+      "repetitions": 8,
+      "vertices": 39
+    }
+  ]
+}

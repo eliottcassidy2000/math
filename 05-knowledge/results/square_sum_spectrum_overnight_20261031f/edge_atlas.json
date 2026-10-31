@@ -1,0 +1,161 @@
+{
+  "complete_choice_cube": 64,
+  "complete_two_query_tests": 256,
+  "records": [
+    {
+      "N": 2812,
+      "bits": 25,
+      "changed_vertex_support": 100,
+      "cycle_sha256": "a8f8293321a65e51b55b3c3511447bdcbd0aa4fd36c7d277f5d036177cde4298",
+      "edge_hamming_weights": {
+        "4": 25
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        138,
+        139,
+        140,
+        141
+      ],
+      "word": "A"
+    },
+    {
+      "N": 5513,
+      "bits": 49,
+      "changed_vertex_support": 196,
+      "cycle_sha256": "c404cdcb76cdbd6dc339fc47fbd493ba8ae8f15a9875c469fe83c66db566aa87",
+      "edge_hamming_weights": {
+        "4": 49
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        270,
+        271,
+        272,
+        273
+      ],
+      "word": "C"
+    },
+    {
+      "N": 2837,
+      "bits": 25,
+      "changed_vertex_support": 100,
+      "cycle_sha256": "8f99f8aad311032fe2649b95a3c1eec441d4a7dc868ce6929df2facff206eaaa",
+      "edge_hamming_weights": {
+        "4": 25
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        187,
+        186,
+        185,
+        184
+      ],
+      "word": "A"
+    },
+    {
+      "N": 2861,
+      "bits": 25,
+      "changed_vertex_support": 148,
+      "cycle_sha256": "7993bce648689efc10fa65bb6598a5986ef13dd520b56a00cc84a6ebb51ecb27",
+      "edge_hamming_weights": {
+        "4": 1,
+        "6": 24
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        788,
+        789,
+        790,
+        791
+      ],
+      "word": "A"
+    },
+    {
+      "N": 70312,
+      "bits": 25,
+      "changed_vertex_support": 2500,
+      "cycle_sha256": "d4f9ec4cd0e98101f7c72f6ea38c07f99291def2d8f24943cea37830bdac43a6",
+      "edge_hamming_weights": {
+        "100": 25
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        3462,
+        3461,
+        3460,
+        3459
+      ],
+      "word": "A"
+    },
+    {
+      "N": 70312,
+      "bits": 625,
+      "changed_vertex_support": 2500,
+      "cycle_sha256": "fe5eb20cb0033b2f63ffc25ad7017a19e219fa6be438665f77f3104f3fed63e1",
+      "edge_hamming_weights": {
+        "4": 625
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        3462,
+        3487,
+        3512,
+        3513
+      ],
+      "word": "AA"
+    },
+    {
+      "N": 137813,
+      "bits": 1225,
+      "changed_vertex_support": 4900,
+      "cycle_sha256": "230cc9eaa4be3f2c34310e514f6e22dc255e91e8f8f42550d1eef014b883edba",
+      "edge_hamming_weights": {
+        "4": 1225
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        6738,
+        6763,
+        6812,
+        6813
+      ],
+      "word": "AC"
+    },
+    {
+      "N": 270112,
+      "bits": 2401,
+      "changed_vertex_support": 9604,
+      "cycle_sha256": "f8dc5fe24d20f363311d538448bd0aaaed44701703758ebbd46efc69f1c09656",
+      "edge_hamming_weights": {
+        "4": 2401
+      },
+      "paid_bits": 4,
+      "pinned_vertices": [
+        1,
+        3,
+        13206,
+        13255,
+        13352,
+        13353
+      ],
+      "word": "CC"
+    }
+  ],
+  "scope": "Exact extension relation inside the authenticated cycle family; arbitrary external forests are not asserted extendable.",
+  "status": "passed"
+}

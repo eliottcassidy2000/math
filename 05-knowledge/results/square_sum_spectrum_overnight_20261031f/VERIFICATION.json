@@ -1,0 +1,116 @@
+{
+  "commands": [
+    "python3 affine_cluster_fans.py",
+    "python3 closed_edge_carrier.py",
+    "python3 deficit_nine_queries.py",
+    "python3 edge_atlas.py",
+    "python3 native_edge_atlas.py",
+    "python3 periodic_drift.py",
+    "python3 three_region_fans.py",
+    "python3 vanishing_power_clusters.py",
+    "python3 verify_packet.py"
+  ],
+  "controls": {
+    "accepted_affine_profiles": 18,
+    "affine_adjacency_controls": 39,
+    "affine_profiles": 9362,
+    "binary_words_through_length14": 32766,
+    "coarse_fine_hostile_bits": [
+      25,
+      625
+    ],
+    "coarse_fine_same_union_graph": true,
+    "complete_leaf_moves": 5400,
+    "complete_square_sum_choice_cube": 64,
+    "complete_two_edge_queries": 256,
+    "deficit9_actual_adjacency_exponents": [
+      9,
+      36
+    ],
+    "exact_local_gadget_cycle_counts": [
+      2,
+      2
+    ],
+    "exchange_moves": 33,
+    "minimal_vanishing_multisets": 143,
+    "minimum_exchange_block_length": 4,
+    "native_atlas_cases": [
+      270112,
+      270113
+    ],
+    "native_bits": 2401,
+    "native_bits_after_four_changed_vertex_constraints": 2397,
+    "sharp_carry_chains_through_terms": 16,
+    "signed_power_equal_multiset_pairs": 2231,
+    "signed_power_exponents": [
+      0,
+      6
+    ],
+    "signed_power_max_terms": 8,
+    "singleton_actual_adjacency_controls": 90,
+    "standard_atlas_cases": 8,
+    "state_repetition_controls": 2540,
+    "three_region_adjacency_controls": 2560,
+    "three_region_leading_controls": 64,
+    "tuned_native_actual_adjacency_controls": 9
+  },
+  "normal_optimized": [
+    {
+      "json_equal": true,
+      "normal": "affine_cluster_fans.json",
+      "optimized": "affine_cluster_fans.optimized.json",
+      "sha256": "aaea31d01032f6bd768af6319cd9a54aa898abe77b3eff5805f97b6ee782abc6"
+    },
+    {
+      "json_equal": true,
+      "normal": "closed_edge_carrier.json",
+      "optimized": "closed_edge_carrier.optimized.json",
+      "sha256": "a5087b683fd928c0f53ad772c21945aa222a3de62e9e91e5e85150d81c60e15c"
+    },
+    {
+      "json_equal": true,
+      "normal": "deficit_nine_queries.json",
+      "optimized": "deficit_nine_queries.optimized.json",
+      "sha256": "d556a7ed31112b9e0e860a8277bd03f4411e965465a328c55d22f1eaff48b8f4"
+    },
+    {
+      "json_equal": true,
+      "normal": "edge_atlas.json",
+      "optimized": "edge_atlas.optimized.json",
+      "sha256": "0045c9188bdf8febf45f92025468a60db12f701e401d7e47c999e6d44a01575f"
+    },
+    {
+      "json_equal": true,
+      "normal": "native_edge_atlas.json",
+      "optimized": "native_edge_atlas.optimized.json",
+      "sha256": "0d5a7ba58d66a565b409523c1acc5840fe2d279416091cf66d7eabb93cff96e6"
+    },
+    {
+      "json_equal": true,
+      "normal": "periodic_drift.json",
+      "optimized": "periodic_drift.optimized.json",
+      "sha256": "34be788bd9eca180a56645a1ce2b0bbc6ba7f0c28883d689a9df653c9fa15552"
+    },
+    {
+      "json_equal": true,
+      "normal": "three_region_fans.json",
+      "optimized": "three_region_fans.optimized.json",
+      "sha256": "2df80b48187c78bb37e6a228cefd4e73888f30c6fb771e0eb2f077ff315510d2"
+    },
+    {
+      "json_equal": true,
+      "normal": "vanishing_power_clusters.json",
+      "optimized": "vanishing_power_clusters.optimized.json",
+      "sha256": "4c34ea4292408a4b2632eefd8324dea3129cd9e0af089db4e15908b3b7b1c06a"
+    }
+  ],
+  "pre_release_repairs": [
+    "Three-slope hostile coefficient of X=2^t corrected from -1 to -1/2 after exact producer rejection.",
+    "Coarse synchronized code distinguished from all Hamiltonian cycles of its union graph; primitive refinement makes the compiler graph-complete.",
+    "Affine-cluster theorem explicitly requires a positive top slope; constant presentations are outside its scope.",
+    "Edge queries normalized as unordered pairs, including reversed JSON lists."
+  ],
+  "review": "Same-agent mathematical proof review; independent computational paths, no second-person or subagent audit.",
+  "scope": "All-size results use the stated phase/gadget, coefficient/renewal, and signed-power/polyhedral proofs. Finite receipts neither prove universal raw-H coverage nor certify arbitrary prescribed forests in the full square-sum graph.",
+  "status": "passed"
+}

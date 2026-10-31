@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "N": 270112,
+      "bits": 2401,
+      "changed_vertex_support": 9604,
+      "cycle_sha256": "bb9abf79f9bade202141991949ad567bd3269fd0955823f57641542c17dac568",
+      "edge_controls": 9604,
+      "paid_bits": 4,
+      "pinned_vertices": [
+        13206,
+        13207,
+        14406,
+        15606
+      ],
+      "surviving_bits": 2397
+    },
+    {
+      "N": 270113,
+      "bits": 2401,
+      "changed_vertex_support": 9604,
+      "cycle_sha256": "8005333fdd89b6f8eeaf2f6cc1d6455f26a3469df1a393e913288a8d56b21857",
+      "edge_controls": 9604,
+      "paid_bits": 4,
+      "pinned_vertices": [
+        13206,
+        13207,
+        14406,
+        8403
+      ],
+      "surviving_bits": 2397
+    }
+  ],
+  "scope": "Native path and seed remain constant; exact query compilation applies to the full edge-cube family.",
+  "status": "passed"
+}

@@ -1,0 +1,89 @@
+{
+  "approximate_reciprocal_train": [
+    [
+      1,
+      "15/16",
+      "1/16"
+    ],
+    [
+      2,
+      "63/64",
+      "1/64"
+    ],
+    [
+      3,
+      "255/256",
+      "1/256"
+    ],
+    [
+      4,
+      "1023/1024",
+      "1/1024"
+    ],
+    [
+      5,
+      "4095/4096",
+      "1/4096"
+    ],
+    [
+      6,
+      "16383/16384",
+      "1/16384"
+    ],
+    [
+      7,
+      "65535/65536",
+      "1/65536"
+    ],
+    [
+      8,
+      "262143/262144",
+      "1/262144"
+    ]
+  ],
+  "examples": [
+    {
+      "D": 1,
+      "left": [
+        2
+      ],
+      "middle": [
+        0,
+        1
+      ],
+      "quadratic_coefficients": [
+        "3/4",
+        "-3/8",
+        "1"
+      ],
+      "relative_leading_factor": "3/4",
+      "right_offsets": [
+        0
+      ]
+    },
+    {
+      "D": 1,
+      "left": [
+        2
+      ],
+      "middle": [
+        0,
+        1
+      ],
+      "quadratic_coefficients": [
+        "15/16",
+        "-3/4",
+        "-1"
+      ],
+      "relative_leading_factor": "15/16",
+      "right_offsets": [
+        0,
+        2
+      ]
+    }
+  ],
+  "finite_leading_rigidity_controls": 64,
+  "native_adjacency_controls": 2560,
+  "scope": "Fixed separated three-region grammar; growing boundary trains leave this grammar and require fresh overlap control.",
+  "status": "passed"
+}
