@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "target": 10000001,
+      "order": 26,
+      "actual": 10000001
+    },
+    {
+      "target": 10000003,
+      "order": 26,
+      "actual": 10000003
+    },
+    {
+      "target": 10000019,
+      "order": 26,
+      "actual": 10000019
+    },
+    {
+      "target": 100000001,
+      "order": 30,
+      "actual": 100000001
+    },
+    {
+      "target": 999999999,
+      "order": 33,
+      "actual": 999999999
+    },
+    {
+      "target": 2147483647,
+      "order": 34,
+      "actual": 2147483647
+    },
+    {
+      "target": 1099511627775,
+      "order": 43,
+      "actual": 1099511627775
+    },
+    {
+      "target": 1099511627777,
+      "order": 43,
+      "actual": 1099511627777
+    },
+    {
+      "target": 999999999999,
+      "order": 43,
+      "actual": 999999999999
+    }
+  ],
+  "scope": "Actual adjacency and port partitions, independent of arithmetic inversion."
+}

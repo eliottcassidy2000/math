@@ -1,0 +1,7 @@
+{
+  "actual_prior_fan_checks": 125,
+  "fan_identity_through_exponent": 4096,
+  "reflection_checks": 131070,
+  "scope": "The Mersenne existence family is inherited THM-4748; this is its exact digital-address and source-padding identification.",
+  "status": "passed"
+}

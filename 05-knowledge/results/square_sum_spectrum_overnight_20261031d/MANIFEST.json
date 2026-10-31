@@ -1,0 +1,489 @@
+{
+  "audit": "Same-agent proof review plus independent permutation, atom-interface, actual-adjacency and arithmetic consumers.",
+  "base_commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+  "files_sha256": {
+    "HANDOFF.md": "608d477a483038f341333c9f423a44d543c2a9b540ddc6b5fb087928667678f8",
+    "POWER_TWO_SLOPES.md": "90b8efc50a6726f542037d16416e1e7a14bfcec0801c1b704f4dcaeac68f34e7",
+    "README.md": "626961a791a6e628db9f9a5df51690783743f66a09cc796ab943894fd8adce32",
+    "VERIFICATION.json": "60ceff0572834383a380c71415e61b1d3b21253cce35291b0bc1a7c070977f47",
+    "audit_cap56_100m.json": "699aec08deb1ed55d1ee0af013087e9d9269ce86b8ee2184da6d6830625c9246",
+    "audit_capped_scan.cpp": "9f52125670a02213b5203060e765ce1c2b7856b4a7b897aa90b7f3f01a4f39d8",
+    "audit_large_points.py": "61203e912c65a766ca4dd543b27a323d283ba15fa5797415cf7813929b523226",
+    "audit_leaf_switches.json": "68f0139a279c4bc49b8ac514b60aa3091d68ebdb09df93aaab9b235ffd5ca945",
+    "audit_leaf_switches.py": "11797109630b7ba4a556db3ff68cfe61e1095db2c9356471a97959971ba91b49",
+    "audit_native_readability.json": "467b4f3e6fc9d0e4137e35b6ac539d9044a4e804dd1c0fdb16491eb4f2ff5d87",
+    "audit_native_readability.py": "38535175a2d5bfff409cf31c0ba542977735ed2f897a97c2d29b622083ace7da",
+    "audit_tree_interfaces.json": "4d446384579ee38f04ea372b56eb5872966ce9397b9c830f2ce46b663a42f7fd",
+    "audit_tree_interfaces.py": "862b4cacc7141cc5791dae009a1acd6cee99a1db1fa9ebb355265b5f70523b63",
+    "bank_query.py": "6718c8fbf88ba4cccdc996d7610b0092eb02d2cc7af4c00171d712c430d54f55",
+    "cap56_100m.json": "1ea9a8aacf9101811cae552a7376392ae1d56c4a3d6b0abd713a496918c9d3a5",
+    "capped_scan.cpp": "8a66229aabd95fabdbc99b581241323a8b5dfd089f725d900a7775e6291491a4",
+    "digital_reflection.json": "364fd73be1aba7cfab709b79d4372d75d94b9053fc7b85d3fb7abfbf540a658f",
+    "digital_reflection.py": "579b8c4a04c8f80fdf547812ee443f0f92bfcb487c417f56b5cdd9b55202c586",
+    "large_point_adjacency_audit.json": "5db330c6c442e8ef7ce17592672fb507cc202a702a2ce15046c487e9926afd3b",
+    "large_point_queries.jsonl": "97a527d04e7193df369cea5f2fb6d0162e42420dbec92d79fae55fba24d26bc5",
+    "leaf_switches.json": "793f6c6b0b072f10d2c28bc736245e55605a320a078df3a0fa2a8d2fb78a3ffc",
+    "leaf_switches.py": "205cdc1d9efedceea01ae08652f9e99e0aef81ab42f5d860289587eec1307501",
+    "leaf_switches_receipt.json": "fc71f8fb2586bbc5a15300fba555f359ea9784af7a41ba131bd73ae79a4de6e8",
+    "local_switch_obstruction.json": "1ef150406f3f291721248e3ea6ffa796397fa7933a08714bd1352547e5b0d7cb",
+    "local_switch_obstruction.py": "7977c2808de9db380b86870952159548b1f71102c26cc04988b0a5d25e155ccb",
+    "native_tree_cycle.json": "64826fffc626b64890ebadbebdd696f582796f962845640e578e7506881cba2a",
+    "native_tree_cycle.py": "fda1e136268ef0b919b13a3703413e6579df5187b6e77664996a0fed5c11aff6",
+    "power_two_slopes.json": "313c53771507d2ebf807cd793488b0bcbbe947dcf6ee8848d6fbc0cc904bc43f",
+    "power_two_slopes.py": "9b1f4d6abf0da00721718797410303d8ec0973ca49e5692d1235cf56a0ba9037",
+    "sanitizer_receipt.json": "fde1dda70dfe562d598e61029ac53b388c7f4c6bb12f406ae0c2653e42ffe937",
+    "source_inverse.json": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4",
+    "source_inverse.py": "7eadc28fabd720064a4ae6b47513720786adf988d079623b7c201b11a08fd841",
+    "tree_pairs.json": "959ea056a8e4d776a7fe8642083a6e19a3a2d663bec490a6c61893627e4855d4",
+    "tree_pairs.py": "f913a8ad31da1c281aec72642bd8d1d7640d93c9512dc0bc0e3ffc91b507b107",
+    "verify_packet.py": "3a8d965a71913b2f72c456c2a5b7a5c7c5e9e81ea8bfda12e4b250e484fc5efe"
+  },
+  "inherited_proof_inputs": [
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/run_density.md",
+      "sha256": "e1388250fb899fd4e31ff7df34bc13ed56d4c08fac63c1272cf6bb7d1195bad0"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/seeded_eventual_cycle_theorem_20261019/SEEDED_INTERVAL_THEOREM.md",
+      "sha256": "ac08e9292ba1334166030842d3a400bce1f24f17b3a3b25b5947a968700f021e"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/seeded_eventual_cycle_theorem_20261019/certified_pair_transition_manifest.json",
+      "sha256": "11ddda9e9d0358cc4450f3fa3123282f2d6a3306396a18211bb671fc7c05ae3d"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_bounded_width_tournaments_20261031/README.md",
+      "sha256": "77e2f9d26a1cf3fbb1f54e2b1550a0c95fddfcd4174e64898d329b8a3ff1106b"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_cycle_packing_obstructions_20261031/README.md",
+      "sha256": "e0025bb760a38001e1a5b5688d8aa1619555949af975b24873c4f0b602f551e2"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/PROOF.md",
+      "sha256": "f8d8e9d669aa52e21f92693b9cd76b5bdc6801f80e3d2fa01bc37fc4e29e17b2"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/SHA256SUMS",
+      "sha256": "570dc45c3f7dbb7f6255f43b679f1b982202aa14e727dbb34e8f5943e836893f"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/audit/AUDIT.md",
+      "sha256": "35a3d2815d1116b4213618405b77a54398be43dcc2a176f50794a6e7275dc835"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/audit/adjacency_dp.cpp",
+      "sha256": "689282f834efa99fd8e3a5d7bf25058b2bcb0e8b4b1ceb42481ac061adf5f431"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/A/INDEPENDENT_AUDIT.md",
+      "sha256": "ac926912fa6e067b980ce4326c39ac96d39584e5b0abbded5317ca06f59049a9"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/B/INDEPENDENT_AUDIT.md",
+      "sha256": "9cde587fa23a457476478b1b0483876c656d30ddb7b6c1e06e9f9df575e46c62"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/HEAD_TAIL_RELAXATION.md",
+      "sha256": "8ea507f5607690a80bd0302e055e2bd710f0822b4188b36eadd0f2b9686e1a58"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/MANIFEST.json",
+      "sha256": "b6ee93e6dd645a7c888b781dbfd1e0cbfc2cb7d9a18e57e75059b959ebb9442b"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/README.md",
+      "sha256": "0b6aae1e16833be3804801bd58bd1835c312be2d5a174d72062e89efbbde26c2"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/TERNARY_SCHEDULE_THEOREM.md",
+      "sha256": "32d8232c417252f550c87f159e070ccd1721d66a27cef7acd55886b53298b065"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/core.py",
+      "sha256": "fa0099ff1b5e9a0b040cea3a268abf9195eba141051c3e19ff8cdf79ffd0e83e"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/ternary/AUDIT.md",
+      "sha256": "fa6e380cd0bc5b5f2883eab414da3a7ed7b8666ea4ac588592645c7ab9b5eaa8"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/BASE_DEPENDENCIES.json",
+      "sha256": "71a36ee304d7258dc2de4c10af6234a3c0cb8d5c880fc7dfc61d596e04618969"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/INDEPENDENT_AUDIT.md",
+      "sha256": "9c70139decbca51825181cdd2fe4a1716c6ed016ee1118db61582414d5e63ba6"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/MANIFEST.json",
+      "sha256": "22deb760b2d0510afbb89359eecda5c409a5cb9f35a9ca15fbdb00447848d303"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/README.md",
+      "sha256": "b6193cf83b3e622f4de5beee4666de65869dc247282cf82a07e8753218b12a7c"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/core.py",
+      "sha256": "702108f054ab288dfc8d83f1ee696be2b5aefb97a79b7bc8849a60077fdf66f0"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_recursive_square_prefix_20261031/verify_paired.py",
+      "sha256": "67f027b648f56c12ac3d9070cfc46587aea0b239f92815e97babd7fa14b78363"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/DEPENDENCIES.json",
+      "sha256": "9694a5004fb67f5e8756154ff652f1278855de89f2f7ac0fb3dba88f5559f57e"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/INDEPENDENT_AUDIT.md",
+      "sha256": "87e9e07a8db5466653ede8fb2371755c1c2f892110bc466c55e6685bf03b1304"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/MANIFEST.json",
+      "sha256": "f53519392b57af697e55dfa74606c1ef5f30f6f722782b05f0f465618eef2dbc"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/README.md",
+      "sha256": "d4fa0eb4278dcc401d426e3911411bb9318ed96a378ca94e93a05cdd107ed8ba"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/SMALL_BASES.json",
+      "sha256": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/core42.py",
+      "sha256": "88923e30cabe5a863808dc28ca5cf461dd43a933428a41d36e92b2904fc5d82d"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_three_ear_obstructions_20261031/README.md",
+      "sha256": "cd3d4d272ef8330fda9378a7fd04ca01ac0ddb1df7f3782c7cfbc09a7301915c"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/MANIFEST.json",
+      "sha256": "04baece851538b4e7e9212be7da6e306f8f3f83e1337314b4cba00a52cf167eb"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/audit/AUDIT.md",
+      "sha256": "3c235deeebd64bca33e71f7c367d6d6fe96f027158a988276289590f28d610bb"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/audit/SYMMETRY_AUDIT.md",
+      "sha256": "33be24634616de98687f30b5100a8e281f3a80c0328b1f9c88f6cadcae99f296"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/session124_two_ear_obstructions_20261031/README.md",
+      "sha256": "5a4e1d567754423c6c4b619dc1c0e6d7cfc361f6a6867f395fd93a476c329efe"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_B_base_interval_20261019/B_base_chunks.json",
+      "sha256": "356ecf4ca3f6207a97db3f8b315278480709a2978f66821b6c3e030dbed3eae5"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_all_size_connected_paths_20261019/ALL_SIZE_CONNECTED_PATHS.md",
+      "sha256": "93d58bfd29fb32292598715a98d2b02b2a429207ebb67c013d36a30199b08ca3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/INHERITANCE.json",
+      "sha256": "b3afd278bfdf19f93bf678b9851354de70c977f9a99cf9d5a201e4bf0aa522fb"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/MANIFEST.json",
+      "sha256": "730652022116bcd070c166f47afa48335c2eaca3d7fb93b253261c59b52033a3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/audit_feedback.py",
+      "sha256": "20e5a7095b8c73ce361e38467205c5f9e8b1f27b7df0574a956ed883d8294682"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/integral_feedback.json",
+      "sha256": "1f633a2b93ac83a047f4dcdc28473bc20466a2fcd1f443394b54abf6580f4078"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/minimal_feedback.py",
+      "sha256": "11748ffbf5acce49fc1e7a8a03e7683b42c6c0867f6e1cee7c6a0078af663444"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/two_feedback_100000.json",
+      "sha256": "4b71f8c9dfc3e4a09e6f889e6148529c5cb4f6d0a3273866de9de973ab4fc1a1"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/MANIFEST.json",
+      "sha256": "b823149e12f72b2439eff8b70e93d46c03bd7aaa3b83f3f6805528d5000790b9"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/README.md",
+      "sha256": "ec3d6a2ec93438d1c031ae363c8de8fce7042929f56d24a8b7b4075cfba09552"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/binary_controller_rigidity.json",
+      "sha256": "3a3679b6a7a2bbf6726d1b18507b5ff87b321d9676299fe6e8889cbf050fffb3"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/n24_forest_table.json",
+      "sha256": "0e842286110d3646f391d39da65ccfe8e8bf45f1932faf14e1242659b7faa003"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/verify_native_forest.py",
+      "sha256": "ad55ae5392beaec1fd4a6d65ec9b0a94e23e70aa0e26af195ab29c4283a7dec6"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/MANIFEST.json",
+      "sha256": "a729b63cd68d54e6ae8ef6a1326a9a615deb73dfaea6ceb6325604bfa64e1478"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+      "sha256": "70c63dba335d5372b607935b0c0e223a17659079b9467a2d3d1ef4cc2ede8c86"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/audit_inverse_witnesses.py",
+      "sha256": "6a9bc62df978a45bd4b3f7baf5d47dff34820b397e95a9114de54bf0148e6d90"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/diamond_inverse.py",
+      "sha256": "073fba65401fbf97d78338b400a024e9d4218f2832caf2cf71b8ed9b7775257b"
+    },
+    {
+      "commit": "befb8955251e2ad81407f3d792570a403b70f0f4",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/diamond_profiles.py",
+      "sha256": "86df7654a9b4a4a8e70fb4a02729906bbe7832cfaffcc808fd239d587641b24e"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/PROOF.md",
+      "sha256": "0a6fb599633afdbc197f88b577faab521cd806f2777e99ba8a0fbcf15210df52"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/audit/AUDIT.md",
+      "sha256": "77a473076412a467c88576a3bddc1f4f3ec88e8b049385c7596b65f5a236f446"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/SHA256SUMS",
+      "sha256": "ba184e14ccaa731bf414a8f31666d9abb98d9db805f0b78152b1ee5fc624a768"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/global_reduction/README.md",
+      "sha256": "5c0682b6bd45edbc620ef8f1bdda1c0e5ea7fb2a861512d3670da96616ba1ec8"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/global_reduction/AUDIT.md",
+      "sha256": "645eab9f23420756d1e573e9dc63300cd3fc53e413f24de647a7b402161350c4"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/FINITE_BANK_PROOF.md",
+      "sha256": "7efe447d55786859450911302af901eff745056d8048b684c8cbd533b244ab8a"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/MANIFEST.json",
+      "sha256": "bc27533996ff138f382da9f589382015730abe993a0eb645ce7c5a8de72042a7"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/README.md",
+      "sha256": "7df42ed189b064b3a038f9d357b9d62ab08bd05c96d2931cf251a1f69f4dee09"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/README.md",
+      "sha256": "72229f397ba311eb73d401c3541079d504ea9fc996084958d9fe8431fdd7eb9d"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/AUDIT.md",
+      "sha256": "a0aee5c5e6544cc8f20bb0f75af3d8bab9243592c191df5c0b9bd3debf6b1ef4"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_gerbicz_reconstruction_20261031/SHA256SUMS",
+      "sha256": "f1dbaff83cf593384df14249856eddcdd114db2a2048d1ac54f447454d39aaed"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/parity_induction/PARITY_INDUCTION.md",
+      "sha256": "2a9e48d72f0304b006aeceffeaf9e2191b28f91829ae8155bb8711735a94f0a7"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/parity_induction/REVIEW.md",
+      "sha256": "5a15feda450049e6c762572f9a3f648dc8c24d72856f3dc7fdf10b391f8574e4"
+    },
+    {
+      "commit": "cb81e1d9d668015fb1140ed4b09d8ad09e123185",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/parity_induction/MANIFEST.json",
+      "sha256": "2ca143efa805bca58d2a51010d360ba923eb4cd316701670f4b1e5e4ac789f47"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/MANIFEST.json",
+      "sha256": "870c431c38ea75d320283c69e475934cf2d09318b0f79fb5dff5add7cd48492a"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/README.md",
+      "sha256": "0e0168986dadba716475072f9e3446cce75a88575b500760c881eee5ab3150c6"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/independent_ray_channels.py",
+      "sha256": "8445671345f70d069ea29b5e4c9fcdea053f6fa331502c527e837499fe562866"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/audit_port_words.py",
+      "sha256": "37a0e0a52c1d55a11e3db36c7671254751b452d91e3d46ec163824e36f41a048"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/prefix_cap_boundary.json",
+      "sha256": "c9766c0b4a49c3f6313013a55894f51e19036e9dc61f25c0273185fe06ef7069"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/static_repairs.json",
+      "sha256": "c240810c81b8756255dbeb2e08f697fc32baa5738fb5e208a504fdb67a165386"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/D_profiles.tsv",
+      "sha256": "0e9266779403a5b1401f74b75e8fa603e325517ffb9c3870e82bc5add7fd2447"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DD_profiles.tsv",
+      "sha256": "6ec7445715976fe695f8ff15a99b2fe956fc203ecbd4f23a5668730612bb42e1"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT1D_profiles.tsv",
+      "sha256": "534809a81c7cabc29b642f0cfe0701769adb5b6b84415e33b2f1be05ba62bd08"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT2D_profiles.tsv",
+      "sha256": "e90e8c867bb1ce66d17cbc56811d2486b5d5c8e46d1957330dd4f4db71b01c36"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT3D_profiles.tsv",
+      "sha256": "a8fca7d966a5009e529f4bbd49664d315200b2ed4d12e322c6827ff40cf3e765"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT4D_profiles.tsv",
+      "sha256": "7ce16c66738623fa7f68085ddd131208ddbace93db6ba63465e422cbb0eab7d4"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT5D_profiles.tsv",
+      "sha256": "61545a27abfdfd46fab685b571b2480d9b2b9030d5d8ba36cbc76c7d36326fd8"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/core.py",
+      "sha256": "fa0099ff1b5e9a0b040cea3a268abf9195eba141051c3e19ff8cdf79ffd0e83e"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/bases.py",
+      "sha256": "c5fda89ac2775932adc18cc1fe2c8391193b399a88f236b38cf71041a5f66131"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/DEPENDENCIES.json",
+      "sha256": "cd410db2d6b25b2fb361c5d62326c148dd05870a7f03fbb3317c6a5a93c66e51"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/CERTIFICATES.json",
+      "sha256": "4705cc697be6a5162eee01925eb42f9bc4cde360edef82796df56be4f5476faf"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/BASE_DEPENDENCIES.json",
+      "sha256": "71a36ee304d7258dc2de4c10af6234a3c0cb8d5c880fc7dfc61d596e04618969"
+    },
+    {
+      "commit": "26ac2316ac3dd06cb407a1c1df3c34f7b8587602",
+      "path": "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md",
+      "sha256": "e83a80296e20d4ae93f24a64756a808368926d52ed08e31e2602c4f3905794fd"
+    }
+  ],
+  "status": "Scoped proofs and finite-exact coverage; universal raw spectrum remains OPEN."
+}

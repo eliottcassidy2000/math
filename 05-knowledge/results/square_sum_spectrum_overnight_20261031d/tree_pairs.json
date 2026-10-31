@@ -1,0 +1,58 @@
+{
+  "base": 112,
+  "certificate_checks": 230,
+  "cycles": [
+    {
+      "N": 5512,
+      "cycle_sha256": "56527f5cb0cd53c04537e5c15e453560d021281c8e6e66ef451381cd29a7bae0",
+      "depth": 1,
+      "leaf_choices": 25
+    },
+    {
+      "N": 5513,
+      "cycle_sha256": "f0b5ca37ebef56dda9439e70cbc3eae3c297022b79386099fa555ce7c19f9c52",
+      "depth": 1,
+      "leaf_choices": 25
+    },
+    {
+      "N": 270112,
+      "cycle_sha256": "e035b98e54a01490ce5b1b3dd8eceb6c61bdb26d2853f9e0523a6845e9f89795",
+      "depth": 2,
+      "leaf_choices": 625
+    }
+  ],
+  "decoded_child_channels": 3650,
+  "pair_checks": 5662898,
+  "records": [
+    {
+      "N": 5512,
+      "complete_tested_choice_cube": 32,
+      "depth": 1,
+      "distinct_each_member": [
+        32,
+        32
+      ]
+    },
+    {
+      "N": 5513,
+      "code_sha256": "6557236345a5230d49c3126520703aae201ebb1dd0cdabd76d1920de7d5dae0a",
+      "depth": 1,
+      "independent_leaf_choices": 25,
+      "member_sha256": [
+        "7da0e79fb0202b740336b611f20e94984e23a63678fd9d49c1f6cbc549cbcb4d",
+        "1ac73b32e4e0ce7718790da2241787a0b6af4738d317284f5516a3d9e4d4a834"
+      ]
+    },
+    {
+      "N": 270112,
+      "code_sha256": "ca1043d79302efdb6aa6710398a78fe39a4d50319ea6de2cb84871755405b8c5",
+      "depth": 2,
+      "independent_leaf_choices": 625,
+      "member_sha256": [
+        "b3c855aa01069f38632a32904450d2b3e85e9fd55926210b746ee542fb39b10a",
+        "fd072d02b79048745d6f1886bf5ec3c956b66506021341c5630a33792eb13614"
+      ]
+    }
+  ],
+  "status": "passed"
+}

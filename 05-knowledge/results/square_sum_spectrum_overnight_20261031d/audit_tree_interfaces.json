@@ -1,0 +1,7 @@
+{
+  "complete_states": 98,
+  "readable_member_channels": 4900,
+  "scope": "All98 Q49 weak-B pair states; symbolic parity and tail locations, without assuming equal colors in unrelated channels.",
+  "status": "passed",
+  "terminal_states": 98
+}
