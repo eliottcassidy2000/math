@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "review": "Same-agent exact arithmetic audit; no subagent.",
+  "normal_equals_optimized": true,
+  "receipt_sha256": "2b5b4832e470950604af260e5969ee73135ff559082d11c7b601ec77d8936d83",
+  "universe": "All105 perfect matchings, all11025 ordered matrix entries, full integer annihilator, exact spectral-projector traces.",
+  "scope": "Pointwise and all-time bounds only for this fixed marked matching graph."
+}

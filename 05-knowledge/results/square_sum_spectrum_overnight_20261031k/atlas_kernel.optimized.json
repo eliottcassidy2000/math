@@ -1,0 +1,49 @@
+{
+  "annihilator_roots": [
+    48,
+    4,
+    -2,
+    -6,
+    -8
+  ],
+  "degree": 48,
+  "l2_contraction_per_step": "1/6",
+  "multiplicities": {
+    "-8": 20,
+    "-6": 14,
+    "-2": 14,
+    "4": 56,
+    "48": 1
+  },
+  "normalized_two_step_floor": "5/576",
+  "power_traces": [
+    105,
+    0,
+    5040,
+    100800,
+    5423040
+  ],
+  "scope": "Exact105-state graph on marked matchings, not a geometric selector or tournament-H coverage proof. Every row and every two-step entry is checked; the full integer matrix satisfies the displayed annihilator.",
+  "states": 105,
+  "status": "passed",
+  "two_step_row_histogram": [
+    [
+      20,
+      60
+    ],
+    [
+      24,
+      44
+    ],
+    [
+      48,
+      1
+    ]
+  ],
+  "two_step_values": [
+    20,
+    24,
+    48
+  ],
+  "uniform_minorization": "175/192"
+}

@@ -1,0 +1,11 @@
+# Latest overnight handoff and cutoff
+
+This is the explicit successor to packet j at commit `730ba4281b`, in `/tmp/math-wt-square-sum-forbidden-paths-20261030`. The cutoff is **2026-10-31 13:00 UTC = 07:00 America/Denver**. At/after the cutoff begin no research; finish Git close-out, summarize the night and pause `overnight-square-sum-and-tournament-spectrum-research`. No chats or subagents were created.
+
+Read [packet j's complete handoff](../square_sum_spectrum_overnight_20261031j/HANDOFF.md) for the night's square-sum and tournament results and outstanding proof gaps. The last additional result here is an exact105-state source-specific coverage kernel: the graph of marked perfect matchings joined by alternating eight-cycles is48-regular; every source-target pair has at least20 two-step routes. The full integer-matrix audit proves spectrum48^1,4^56,(-2)^14,(-6)^14,(-8)^20. Its normalized walk has a uniform two-step floor5/576 and contracts mean-zero Euclidean norm by1/6 per step.
+
+These bounds are uniform in time **on this finite graph**. They do not give universal tournament-H coverage, geometric selector realization or Collatz convergence. The next decisive step is an actual arithmetic or tournament controller realizing these transitions while preserving the original source and boundary predicate. Merely finding105 objects or the same spectrum elsewhere is insufficient.
+
+The earlier results remain the principal progress: exponential initial-interval square-sum cycle families and complete subcubic carriers; a six-arc tournament family for every2^k-9 in its stated range; exact source-cost obstructions and an optimal dyadic slope512 for deficit nine; one-copy common-square-class seams; mixed-class port-tree products; and an exact cyclic matching selector inherited from the earlier general transfer theorem. Universal positive odd raw-H completeness except7,21 remains OPEN; finite coverage through99,999,999 is unchanged.
+
+`README.md`, `VERIFICATION.json` and `MANIFEST.json` contain the new exact certificate, its scope and pinned dependencies. Final required actions: commit/push only owned paths, fetch from a clean tree and inspect incoming changes, verify HEAD is not ahead of origin/main, and pause the heartbeat at the cutoff. Do not modify the frozen predecessor packets.
