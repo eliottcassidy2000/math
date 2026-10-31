@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — cyclic product completeness needs all path-cover states
+
+- **Correction source:** `05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md` restricts the interpretation of packet j's cyclic matching formula. It counts sewn products of local Hamiltonian cycles, not necessarily all cycles of the sewn graph. The tree theorem and finite105-state kernel remain valid.
+- **Witness:** a triangular prism and a four-cycle, joined through two port pairs, have three global Hamiltonian cycles but only two products from port-containing local Hamiltonian cycles. The extra cycle restores to two triangles in the prism. The exact ten-vertex graph and exhaustive checker are in packet l.
+- **Repair:** retain every spanning linear-forest boundary state, even if restoring the removed ports makes multiple local cycles. The stronger Session32 named-port transfer already does this. The48-state restriction remains exact for its selected cycle-product language; an extra reclosure hypothesis is required for graph completeness.
+
 ## 2026-10-31 — local cycle products require a tree or a retained connectivity selector
 
 - **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031j`; an attempted extension beyond tree incidence was treated as an open test, not promoted as an unconditional product theorem.

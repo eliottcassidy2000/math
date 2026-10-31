@@ -1,0 +1,76 @@
+{
+  "extra_global_cycle": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      8
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "global_cycles": 3,
+  "reclosed_local_edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "scope": "Exhaustive graph-only scope correction; no square-sum realization asserted.",
+  "selected_cycle_products": 2,
+  "source_A_port_cycles": 2,
+  "source_B_cycles": 1,
+  "status": "passed"
+}

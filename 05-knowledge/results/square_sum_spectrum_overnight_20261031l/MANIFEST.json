@@ -1,0 +1,27 @@
+{
+  "status": "frozen scope correction",
+  "files_sha256": {
+    "audit_scope.py": "122416cd085c5db017e87b2b545f354d1a22073d8198bebb791822e036ddc2bd",
+    "audit_scope.optimized.json": "0e970a6be3603775500bf768d58cefd7f4bfbc3e5b0ba3fb1e03e567713932a1",
+    "verify_packet.py": "3a8d965a71913b2f72c456c2a5b7a5c7c5e9e81ea8bfda12e4b250e484fc5efe",
+    "README.md": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5",
+    "audit_scope.json": "0e970a6be3603775500bf768d58cefd7f4bfbc3e5b0ba3fb1e03e567713932a1"
+  },
+  "inherited_proof_inputs": [
+    {
+      "commit": "861179a9f77464868f4f3ab227e69d43017d06c2",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031j/audit_tree.py",
+      "sha256": "b5935d1ed43315a730487e74c027f6b82398abcce3f24230f0205784fd6f811d"
+    },
+    {
+      "commit": "861179a9f77464868f4f3ab227e69d43017d06c2",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031j/README.md",
+      "sha256": "3edc971bb7eda8ad5de79afaa7780b741d7640fcd481654af2bd6e9c1357b36a"
+    },
+    {
+      "commit": "861179a9f77464868f4f3ab227e69d43017d06c2",
+      "path": "05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md",
+      "sha256": "128d084d32d3680a0d86a3ec881606268b4195ecf93fec00fdee92e092f751c1"
+    }
+  ]
+}
