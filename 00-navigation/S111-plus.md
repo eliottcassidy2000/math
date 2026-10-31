@@ -13,3 +13,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session123](S123.md).
 
 [Session124](S124.md): mixed-radix square-sum rays, canonical tournament cut law, exact constructor inverses and verified counts through999999; global completeness open.
+
+[Oct31 overnight continuation](../05-knowledge/results/square_sum_spectrum_overnight_20261031e/README.md): exponential square-sum families preserving native ports; exact centered-fan recurrences and a lossless marked energy decoder. Inherited raw-H coverage reaches99,999,999 except7,21; universal spectrum remains OPEN. [Current handoff](../05-knowledge/results/square_sum_spectrum_overnight_20261031e/HANDOFF.md).

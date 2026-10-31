@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — schedule words and atom words are different decoder types
+
+- **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031e/native_phase_cycle.py`; fixed before commit, with no published mathematical result retracted.
+- **Witness / failed step:** the first signed native-cycle consumer at N=270112 shadowed the radix schedule string with an atom-list variable. Passing that list to the child decoder raised `TypeError: unhashable type: list`; construction and edge checks had passed, but history recovery had not yet been established.
+- **Repair / survivor:** name the atom list separately, retain the original schedule, rerun both parity controls and the zero/zero-only change under normal and optimized Python. The final consumer also erases rotation and direction and restores the integer atom clock before recovering all2401 source choices. Successful construction alone was never accepted as a decoding certificate.
+
 ## 2026-10-30 — median closure belongs to the coupled relation, not its unary shadow
 
 - **Source/status:** pre-promotion draft of `05-knowledge/results/precision_lifts_ramsey_deficits_20261030/LRC.md`; corrected before its first commit. No prior canonized theorem is retracted.

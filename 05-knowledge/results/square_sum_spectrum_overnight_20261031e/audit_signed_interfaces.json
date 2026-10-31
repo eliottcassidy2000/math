@@ -1,0 +1,27 @@
+{
+  "cycles_receipt_sha256": "e0d5729c1804b01c5bf49467c7070cae09365c9c22dfe6d529389d39fa5235e4",
+  "hostile_different_phase": {
+    "codes": [
+      "A",
+      "B"
+    ],
+    "duplicated_lifted_label": 295,
+    "first_source_label": 6,
+    "missing_band_partner": 293,
+    "offsets": [
+      1,
+      -1
+    ],
+    "parity_disagreements": 298,
+    "source_index": 1062,
+    "zero_based_parities": [
+      1,
+      0
+    ]
+  },
+  "pair_states": 148,
+  "scope": "Complete A/C interface states; two members plus terminal per state; phase-fixed choices independently assigned to every signed offset.",
+  "signed_readable_channels": 18156,
+  "status": "passed",
+  "terminal_states": 148
+}

@@ -1,0 +1,151 @@
+{
+  "decoded_channels": 21830,
+  "deep": [
+    {
+      "bits": 25,
+      "cycle_sha256": "cd1db313f3850799c6d398d6e658389a17864347ad31d83fb5185dc7da90898e",
+      "n": 2813,
+      "pair_sha256": [
+        "b79f596d48c7a123ef687db0b0699de652d9eb634d6c01e4be9ed86def3f9e95",
+        "8b46647c7588334be2e4c40d7fe02bea2d046af82d4aaffc49b47b63f1a4c75b"
+      ],
+      "word": "A"
+    },
+    {
+      "bits": 49,
+      "cycle_sha256": "7b253ac10abec00fe0215b5acd14a0adc88c4c411834152763968193fdfcfabd",
+      "n": 5513,
+      "pair_sha256": [
+        "4b908cbcb8b9f7750e8ae532e9f1f5fd1f5a7232b2b11505f4b57344a1e90723",
+        "9846a7bc40f05ba2279eade4a97e9b15933f5350d285de4154c9ebf2dfe6849e"
+      ],
+      "word": "C"
+    },
+    {
+      "bits": 625,
+      "cycle_sha256": "76d31bd3f0e8f93199205ec2283fa13878998262e1d8b8b2da9c8b11dca977f0",
+      "n": 70312,
+      "pair_sha256": [
+        "0a833b7646424c9487a954ba6150db69c170384f917b78d241b2692e50ecd41c",
+        "b0e8676a8791ad3ef18c8054729b51c8dd2aa02d744524687cefb871a1ad9a08"
+      ],
+      "word": "AA"
+    },
+    {
+      "bits": 1225,
+      "cycle_sha256": "5b005843c1eff9ac12ba6bf15511bdbc8946a8923144372c44329382a8df6b14",
+      "n": 137812,
+      "pair_sha256": [
+        "a1cf877f4b86c2b9ad08c1483f49fabe8c94b52d1356eadcd9c2b500a7870439",
+        "83b8c524e57f8cb595dabfd64a5f8c3caadd624c7430210b7eb28b66a9de6fc5"
+      ],
+      "word": "AC"
+    },
+    {
+      "bits": 1225,
+      "cycle_sha256": "be8d1369294737929508246b228a2ca78a764272b3a6b665f565350b9d53c602",
+      "n": 137813,
+      "pair_sha256": [
+        "ba953eb27687538d25b68e416950e20ff4c19d7f90f93449072953b650721248",
+        "5ac0d93ef9e2142f65dcb6f8556f2d71d2065433c84d2e8c0283598f163ca576"
+      ],
+      "word": "CA"
+    },
+    {
+      "bits": 2401,
+      "cycle_sha256": "92b842d1a09850a1edc3c9df9d69b0e6e1f29ae306d6666f6b005b2782b6b3e2",
+      "n": 270112,
+      "pair_sha256": [
+        "1e89b9ef9a38bd0d0eaec690b33c7291e0fc1269235692a2576fa914b409c1d9",
+        "810bc08d9a39fb5ea598fb204c3cd9844673e2932982474335308c8fa5adac1a"
+      ],
+      "word": "CC"
+    }
+  ],
+  "signed_cubes": [
+    {
+      "channels": [
+        -12,
+        -1,
+        0,
+        1,
+        12
+      ],
+      "choices": 32,
+      "distinct_members": [
+        32,
+        32
+      ],
+      "n": 2812,
+      "word": "A"
+    },
+    {
+      "channels": [
+        -24,
+        -1,
+        0,
+        1,
+        24
+      ],
+      "choices": 32,
+      "distinct_members": [
+        32,
+        32
+      ],
+      "n": 5512,
+      "word": "C"
+    }
+  ],
+  "status": "passed",
+  "uniform_supply": [
+    {
+      "member_sha256": [
+        "66766d8300fdd20390fb0e374a4fc079159d20b29a7c22ecce2fab9c98cb2b0d",
+        "df37e4703320525d64557eb52f9ace260e1bf810ab4a2a700c54292d917ca111"
+      ],
+      "n": 112
+    },
+    {
+      "member_sha256": [
+        "e8429e64f604133f9443fd9a7a01cc2491a9240e11972831f2a6787fd28b0495",
+        "564069b96f43921693ef72c0dbdaaba0e61a23c2ab587777f850e329031af28a"
+      ],
+      "n": 1111
+    },
+    {
+      "member_sha256": [
+        "3562edaf350fed07c0a1afb19fa0c11cb39909ee017328732aa3df9aacddf6d6",
+        "e33ba698b209a7a1b42347df5fa327c2dad0a4f31c6bfeeab5d896aecf19e0b6"
+      ],
+      "n": 2811
+    },
+    {
+      "member_sha256": [
+        "91479f8f7f9ecb652c8e7b860b1b9a54335e5e9420f6a5edeabe11d1c04d5c9c",
+        "748285c634abebb215795cdbf72808064dd2bc7ef0a14c97d1ae28f8db0603a6"
+      ],
+      "n": 2812
+    },
+    {
+      "member_sha256": [
+        "14b28f8fceeee3d5553f71bef851f0b6bd40b35a6dc6c06077123cd8525b2671",
+        "49c61403276366bc0bbda94ccc6662d9dee91f1ec427f703484fb6f5285cf740"
+      ],
+      "n": 2813
+    },
+    {
+      "member_sha256": [
+        "43576ba8881354a9140377f3eaf736b4b90f33754100aaf22d64ce37ac1d4f1e",
+        "ce2d3dfb307404055d9c39fa7d29b3551e49641cb4aa051a692054134fac90d9"
+      ],
+      "n": 70312
+    },
+    {
+      "member_sha256": [
+        "7779c50bb78fe44fbd882af56abdb80fb3e378ff1ff17a278b815ad1f8fd2a60",
+        "5d488dffc1ea2dce5a6cacef5abf839ce11437cf0ae9ef389bd7d3be36c0f117"
+      ],
+      "n": 70313
+    }
+  ]
+}

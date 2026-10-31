@@ -1,0 +1,12 @@
+{
+  "failures": [],
+  "first": 112,
+  "last": 2811,
+  "move_types": {
+    "exchange": 33,
+    "reverse": 5367
+  },
+  "source": "Constructor.pair(n, empty word), including its A refinements above1061",
+  "status": "passed",
+  "vertices_checked": 7894800
+}

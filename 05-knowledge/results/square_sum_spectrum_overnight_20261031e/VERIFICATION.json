@@ -1,0 +1,89 @@
+{
+  "commands": [
+    "python3 phase_switches.py",
+    "python3 audit_phase_switches.py",
+    "python3 phase_trees.py",
+    "python3 audit_signed_interfaces.py",
+    "python3 audit_native_signed_readability.py",
+    "python3 native_phase_cycle.py",
+    "python3 centered_fans.py",
+    "python3 decode_fan_energy.py",
+    "python3 verify_packet.py"
+  ],
+  "controls": {
+    "A_C_pair_states": 148,
+    "A_C_terminal_states": 148,
+    "canonical_native_sizes": [
+      270112,
+      270113
+    ],
+    "changed_paths": 5400,
+    "changed_vertices": 7894800,
+    "complete_fan_deficit_ceiling": 1000000,
+    "fan_deficits": 2399,
+    "finite_phase_bases": [
+      112,
+      2811
+    ],
+    "marked_fan_pattern_roundtrips": 3069,
+    "native_final_states": 392,
+    "native_inner_states": 196,
+    "native_readable_bits": 2401,
+    "old_different_phase_hostile": [
+      295,
+      293
+    ],
+    "small_positive_negative_inverse_queries": 10010
+  },
+  "normal_optimized": [
+    {
+      "json_equal": true,
+      "normal": "audit_native_signed_readability.json",
+      "optimized": "audit_native_signed_readability.optimized.json",
+      "sha256": "ea3c1e503eaaa7cf3e4ac744db1b1fb571d5df57c42ccc676fda656fe3a8b7e0"
+    },
+    {
+      "json_equal": true,
+      "normal": "audit_phase_switches.json",
+      "optimized": "audit_phase_switches.optimized.json",
+      "sha256": "9ae2794f4d8b8b9a9b64db02d9b807b477c4a0847fc190f3d63a13415e53c994"
+    },
+    {
+      "json_equal": true,
+      "normal": "audit_signed_interfaces.json",
+      "optimized": "audit_signed_interfaces.optimized.json",
+      "sha256": "4a79dc0b4ef3494b3d5c422066021b90b28f5b9a88a3a4b06452e1546e3bf823"
+    },
+    {
+      "json_equal": true,
+      "normal": "centered_fans.json",
+      "optimized": "centered_fans.optimized.json",
+      "sha256": "4ba0a50f3de6f2951996723910fa29cec3507ebf53f8bb8fba6064c593b2d3a0"
+    },
+    {
+      "json_equal": true,
+      "normal": "decode_fan_energy.json",
+      "optimized": "decode_fan_energy.optimized.json",
+      "sha256": "e76ff6809797455101944bab219735f108a79c7524e4de7f59efc31d1cbf6873"
+    },
+    {
+      "json_equal": true,
+      "normal": "native_phase_cycle.json",
+      "optimized": "native_phase_cycle.optimized.json",
+      "sha256": "0698dc50f93da98c9c5f43ebb130ee4c59d45032d34682065f79c9d083c3f04c"
+    },
+    {
+      "json_equal": true,
+      "normal": "phase_trees.out.json",
+      "optimized": "phase_trees.optimized.json",
+      "sha256": "4259d961fd719a5f8fa337ffe998cf7265117304dde210b8c66cda7a924bc946"
+    }
+  ],
+  "pre_release_repairs": [
+    "Native decoder schedule/atom variable shadowing: TypeError before result emission; repaired and rerun.",
+    "Navigation route moved to existing recent-session index to retain the startup byte and line budgets."
+  ],
+  "review": "Same-agent mathematical proof review with separate permutation, interface, adjacency and subset-DP consumers; no subagent audit.",
+  "scope": "Uniform square-sum theorems follow phase invariance, complete finite interfaces and decoding induction. Finite fan counts do not prove universal raw-H coverage.",
+  "status": "passed"
+}

@@ -1,0 +1,12 @@
+{
+  "first": 112,
+  "last": 2811,
+  "move_types": {
+    "exchange": 33,
+    "reverse": 5367
+  },
+  "paths": 5400,
+  "scope": "All2700 base pairs; each changed member is distinct and preserves every source-label position parity.",
+  "status": "passed",
+  "vertices_checked": 7894800
+}

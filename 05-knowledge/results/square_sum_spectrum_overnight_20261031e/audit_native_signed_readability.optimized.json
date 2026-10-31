@@ -1,0 +1,9 @@
+{
+  "independent_native_channels": 2401,
+  "inner_states": 196,
+  "outer_states": 392,
+  "readable_inner_member_channels": 19208,
+  "readable_outer_channels": 19208,
+  "scope": "Fixed atom lengths and orientations recover each selected path; reconstructed label is nearest integer to lifted_label/49.",
+  "status": "passed"
+}

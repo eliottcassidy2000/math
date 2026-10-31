@@ -1,0 +1,39 @@
+{
+  "controls": [
+    {
+      "N": 270112,
+      "canonical_cycle_sha256": "20bcc52c78c727adc2c9197d5c7b0d5d018c00da08e5a4bf47044dd65a1ce04d",
+      "changed_zero_channel": false,
+      "cycle_sha256": "d0eb63920a112269f811b87f10282d04bb1ab9a589691cde7b38a5775d7a8816",
+      "decoded_from_canonical_undirected_cycle": true,
+      "leaf_choices": 2401,
+      "prescribed_edges": 2314,
+      "recovered_channels": 2401,
+      "word": ""
+    },
+    {
+      "N": 270113,
+      "canonical_cycle_sha256": "a5c9ecc72228a0fa958d59ce6dd98d4b51391e67525688502a3e7f567ee37dfa",
+      "changed_zero_channel": false,
+      "cycle_sha256": "85b40d3700e2c3e63d76faf2e64e4730b3f81f37779691034ecc8c29107fb165",
+      "decoded_from_canonical_undirected_cycle": true,
+      "leaf_choices": 2401,
+      "prescribed_edges": 2314,
+      "recovered_channels": 2401,
+      "word": ""
+    },
+    {
+      "N": 270112,
+      "canonical_cycle_sha256": "a1415f9ca9e46c21babe2c926dac930171b77e284bf1c60d463c0e766f28cde8",
+      "changed_zero_channel": true,
+      "cycle_sha256": "07e277436440830afdfb0278166346a0574c71848b7b8dfa23c916a098d8c27e",
+      "decoded_from_canonical_undirected_cycle": true,
+      "leaf_choices": 2401,
+      "prescribed_edges": 2314,
+      "recovered_channels": 2401,
+      "word": ""
+    }
+  ],
+  "scope": "Full native cycles at both boundary parities and a one-zero-channel change with the other2400 choices fixed; general depth uses the complete readable interfaces and the independently audited tree induction.",
+  "status": "passed"
+}

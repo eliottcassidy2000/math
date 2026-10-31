@@ -1,0 +1,50 @@
+{
+  "complete_pattern_roundtrips": 3069,
+  "complete_small_membership_queries": 10010,
+  "large_integer_roundtrips": [
+    {
+      "decode_steps": 64,
+      "diameter": 129,
+      "energy_bits": 129,
+      "width": 64
+    },
+    {
+      "decode_steps": 127,
+      "diameter": 257,
+      "energy_bits": 258,
+      "width": 128
+    },
+    {
+      "decode_steps": 256,
+      "diameter": 513,
+      "energy_bits": 514,
+      "width": 256
+    }
+  ],
+  "max_small_steps": 11,
+  "raw_count_bridge": [
+    {
+      "bits": "01010",
+      "decode_steps": 5,
+      "diameter": 11,
+      "raw_H": 14597,
+      "vertices": 16
+    },
+    {
+      "bits": "1011010",
+      "decode_steps": 7,
+      "diameter": 15,
+      "raw_H": 214469,
+      "vertices": 20
+    },
+    {
+      "bits": "001101100101",
+      "decode_steps": 11,
+      "diameter": 25,
+      "raw_H": 243777767,
+      "vertices": 30
+    }
+  ],
+  "scope": "Inverse is conditional on a marked diameter; absent energies return None. Large tests certify arithmetic, not all tournament-spectrum coverage.",
+  "status": "passed"
+}
