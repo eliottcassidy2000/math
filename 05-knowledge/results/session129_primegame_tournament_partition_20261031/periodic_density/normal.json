@@ -1,0 +1,36 @@
+{
+  "base_cycles": {
+    "period2": [
+      11,
+      13
+    ],
+    "period6": [
+      4301,
+      17765,
+      16302,
+      9867,
+      8671,
+      23023
+    ]
+  },
+  "checked_positive_integers": 100000,
+  "periodic_point_counts": {
+    "2": 7288,
+    "6": 28
+  },
+  "point_densities": {
+    "period2": "2654208/36409529",
+    "period6": "37396469504/151504041213525",
+    "total": "144064009693952/1969552535775825"
+  },
+  "scale_densities": {
+    "period2": "1216512/2800733",
+    "period6": "18944/46835"
+  },
+  "scale_moduli": {
+    "period2": 58815393,
+    "period6_coprime": 51765,
+    "period6_forbidden_divisor": 38
+  },
+  "status": "PASS"
+}

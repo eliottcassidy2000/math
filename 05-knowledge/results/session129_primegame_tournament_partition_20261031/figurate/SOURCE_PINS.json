@@ -1,0 +1,22 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "1bd2043bc6788d4b9c55d0d8397a9df2c6c0382b",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-3509-reduced-fraction-harmonic-k4-face-and-fibonacci-unit-cassini-ray.md",
+      "git_blob": "cd944320318d534a835384b9f575e582d3cdcb2f"
+    },
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/primegame/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "git_blob": "7ece0ae67598c0784b4d0500f5b484f623a71e6e"
+    },
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/inheritance/check_n5_independent.py",
+      "git_blob": "ae9dd6ffb83514cdafc42c3e30683d6e3d63bba4"
+    },
+    {
+      "path": "07-reflections/triangular-fixed-tournament-controls-s647.md",
+      "git_blob": "18e1651b728f94595864e3276a76be7e7fb9d426"
+    }
+  ]
+}

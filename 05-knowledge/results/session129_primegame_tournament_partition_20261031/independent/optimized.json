@@ -1,0 +1,1167 @@
+{
+  "arithmetic": {
+    "block_products": {
+      "P": "1",
+      "Q": "55/637",
+      "R": "539/153",
+      "S": "585/34"
+    },
+    "density": {
+      "direct_counts_to_100000": {
+        "2": 7288,
+        "6": 28
+      },
+      "period2": "2654208/36409529",
+      "period6": "37396469504/151504041213525",
+      "total": "144064009693952/1969552535775825"
+    },
+    "encoding": {
+      "all_positive_seeds_to_500": 500,
+      "permutation_conjugate_steps": 50000,
+      "renaming_extension": "swap P with Q; fix only primes outside P union Q",
+      "supported_seeds_to_500": 255
+    },
+    "harmonic_states_checked": 1000,
+    "partition": {
+      "block_codec_integral_left_inverse": true,
+      "block_increments": {
+        "P": [
+          0
+        ],
+        "Q": [
+          -2
+        ],
+        "R": [
+          1
+        ],
+        "S": [
+          0
+        ]
+      },
+      "character_constraint_rank": 9,
+      "cycle_family_samples": 252,
+      "full_increment_rank": 10,
+      "global_six_cycle": "4301 --GBDEFA-->4301",
+      "kernel_generators": [
+        "JK",
+        "ABDEFG",
+        "AABCEFHKL",
+        "ABEEFFLM"
+      ],
+      "positive_priority_macros": [
+        "637 --AIMN-->55",
+        "153 --CHEF-->539"
+      ],
+      "product_integral_but_no_permutation_seed": 34,
+      "saturated_six_cycle_words": {
+        "AGBDEF": 40,
+        "BDEFAG": 72,
+        "DEFAGB": 36,
+        "EFAGBD": 40,
+        "FAGBDE": 60,
+        "GBDEFA": 60
+      },
+      "six_cycle_capped_universe": 59049
+    }
+  },
+  "status": "passed",
+  "tournaments": {
+    "census": {
+      "3": [
+        2,
+        2,
+        2
+      ],
+      "4": [
+        4,
+        2,
+        3
+      ],
+      "5": [
+        12,
+        8,
+        10
+      ]
+    },
+    "hamiltonian_path_incidences": 7680,
+    "independent_labelled_graphs": 1024,
+    "independent_n6_labelled_universe": 32768,
+    "n5_profiles": [
+      {
+        "face_vector": [
+          1,
+          0,
+          0
+        ],
+        "independent_root": 0,
+        "label_7_17_55": 7,
+        "primitive_face_vector": [
+          1,
+          0,
+          0
+        ],
+        "pure_blue": true
+      },
+      {
+        "face_vector": [
+          1,
+          1,
+          0
+        ],
+        "independent_root": 2,
+        "label_7_17_55": 119,
+        "primitive_face_vector": [
+          1,
+          1,
+          0
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          2,
+          3,
+          5
+        ],
+        "independent_root": 4,
+        "label_7_17_55": 121159170584375,
+        "primitive_face_vector": [
+          2,
+          3,
+          5
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          0,
+          1,
+          0
+        ],
+        "independent_root": 5,
+        "label_7_17_55": 17,
+        "primitive_face_vector": [
+          0,
+          1,
+          0
+        ],
+        "pure_blue": true
+      },
+      {
+        "face_vector": [
+          2,
+          0,
+          7
+        ],
+        "independent_root": 8,
+        "label_7_17_55": 74599326484375,
+        "primitive_face_vector": [
+          2,
+          0,
+          7
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          1,
+          4,
+          4
+        ],
+        "independent_root": 10,
+        "label_7_17_55": 5349885454375,
+        "primitive_face_vector": [
+          1,
+          4,
+          4
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          1,
+          0,
+          10
+        ],
+        "independent_root": 12,
+        "label_7_17_55": 1773066134833984375,
+        "primitive_face_vector": [
+          1,
+          0,
+          10
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          0,
+          2,
+          3
+        ],
+        "independent_root": 40,
+        "label_7_17_55": 48082375,
+        "primitive_face_vector": [
+          0,
+          2,
+          3
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          0,
+          5,
+          8
+        ],
+        "independent_root": 41,
+        "label_7_17_55": 118890217851569140625,
+        "primitive_face_vector": [
+          0,
+          5,
+          8
+        ],
+        "pure_blue": false
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          3
+        ],
+        "independent_root": 76,
+        "label_7_17_55": 55,
+        "primitive_face_vector": [
+          0,
+          0,
+          1
+        ],
+        "pure_blue": true
+      }
+    ],
+    "n6_census": [
+      56,
+      12,
+      34
+    ],
+    "n6_profiles": [
+      {
+        "face_vector": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 0,
+        "primitive_face_vector": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 2,
+        "primitive_face_vector": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          2,
+          3,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 4,
+        "primitive_face_vector": [
+          2,
+          3,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 5,
+        "primitive_face_vector": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          2,
+          0,
+          7,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 8,
+        "primitive_face_vector": [
+          2,
+          0,
+          7,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 9,
+        "primitive_face_vector": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          1,
+          1,
+          4,
+          3,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 10,
+        "primitive_face_vector": [
+          1,
+          1,
+          4,
+          3,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          1,
+          0,
+          10,
+          0,
+          0,
+          0,
+          11,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 12,
+        "primitive_face_vector": [
+          1,
+          0,
+          10,
+          0,
+          0,
+          0,
+          11,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          2,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 16,
+        "primitive_face_vector": [
+          2,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          2,
+          4,
+          6,
+          0,
+          6,
+          12,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 18,
+        "primitive_face_vector": [
+          1,
+          2,
+          3,
+          0,
+          3,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          2,
+          0,
+          6,
+          0,
+          6,
+          16,
+          8,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 20,
+        "primitive_face_vector": [
+          1,
+          0,
+          3,
+          0,
+          3,
+          8,
+          4,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          2,
+          0,
+          0,
+          0,
+          18,
+          0,
+          26,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 24,
+        "primitive_face_vector": [
+          1,
+          0,
+          0,
+          0,
+          9,
+          0,
+          13,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        "independent_root": 72,
+        "primitive_face_vector": [
+          0,
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          2,
+          8,
+          3,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0
+        ],
+        "independent_root": 73,
+        "primitive_face_vector": [
+          0,
+          2,
+          8,
+          3,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          2,
+          0,
+          2,
+          9,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        "independent_root": 80,
+        "primitive_face_vector": [
+          0,
+          2,
+          0,
+          2,
+          9,
+          0,
+          0,
+          5,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          5,
+          14,
+          0,
+          9,
+          7,
+          0,
+          0,
+          11,
+          0
+        ],
+        "independent_root": 81,
+        "primitive_face_vector": [
+          0,
+          5,
+          14,
+          0,
+          9,
+          7,
+          0,
+          0,
+          11,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          4,
+          6,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 83,
+        "primitive_face_vector": [
+          0,
+          4,
+          6,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 87,
+        "primitive_face_vector": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          10,
+          10,
+          0,
+          0
+        ],
+        "independent_root": 88,
+        "primitive_face_vector": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          5,
+          5,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          5,
+          7,
+          0,
+          6,
+          0,
+          10,
+          0,
+          22,
+          0
+        ],
+        "independent_root": 89,
+        "primitive_face_vector": [
+          0,
+          5,
+          7,
+          0,
+          6,
+          0,
+          10,
+          0,
+          22,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "independent_root": 140,
+        "primitive_face_vector": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          10,
+          0,
+          12,
+          0,
+          0,
+          15,
+          0,
+          0
+        ],
+        "independent_root": 144,
+        "primitive_face_vector": [
+          0,
+          0,
+          10,
+          0,
+          12,
+          0,
+          0,
+          15,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          9,
+          0,
+          12,
+          0,
+          0,
+          0,
+          12,
+          0
+        ],
+        "independent_root": 145,
+        "primitive_face_vector": [
+          0,
+          0,
+          3,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          16,
+          0,
+          0,
+          20,
+          0,
+          15,
+          11,
+          0
+        ],
+        "independent_root": 146,
+        "primitive_face_vector": [
+          0,
+          0,
+          16,
+          0,
+          0,
+          20,
+          0,
+          15,
+          11,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          9,
+          0,
+          0,
+          11,
+          11,
+          15,
+          28,
+          0
+        ],
+        "independent_root": 148,
+        "primitive_face_vector": [
+          0,
+          0,
+          9,
+          0,
+          0,
+          11,
+          11,
+          15,
+          28,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          9,
+          0,
+          12,
+          0,
+          26,
+          0,
+          27,
+          0
+        ],
+        "independent_root": 152,
+        "primitive_face_vector": [
+          0,
+          0,
+          9,
+          0,
+          12,
+          0,
+          26,
+          0,
+          27,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          9,
+          12,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 153,
+        "primitive_face_vector": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          9,
+          12,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          9,
+          0,
+          0,
+          13,
+          0
+        ],
+        "independent_root": 154,
+        "primitive_face_vector": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          9,
+          0,
+          0,
+          13,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          8,
+          0,
+          9,
+          11,
+          11,
+          0,
+          12,
+          15
+        ],
+        "independent_root": 156,
+        "primitive_face_vector": [
+          0,
+          0,
+          8,
+          0,
+          9,
+          11,
+          11,
+          0,
+          12,
+          15
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          0,
+          6,
+          9,
+          20,
+          9,
+          0,
+          14,
+          0
+        ],
+        "independent_root": 177,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          6,
+          9,
+          20,
+          9,
+          0,
+          14,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          14,
+          0,
+          0,
+          15
+        ],
+        "independent_root": 280,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          14,
+          0,
+          0,
+          15
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          13,
+          15,
+          30,
+          15
+        ],
+        "independent_root": 344,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          13,
+          15,
+          30,
+          15
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0
+        ],
+        "independent_root": 408,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          0
+        ],
+        "independent_root": 1332,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      }
+    ]
+  }
+}

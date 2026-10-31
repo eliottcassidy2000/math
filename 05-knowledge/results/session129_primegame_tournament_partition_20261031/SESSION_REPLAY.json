@@ -1,0 +1,196 @@
+{
+  "figurate_mutation_release": {
+    "mutations": [
+      {
+        "exit_code": 1,
+        "last_error": "RuntimeError: antipodal Cassini defect",
+        "name": "wrong_Cassini_cross_term",
+        "status": "REJECTED"
+      },
+      {
+        "exit_code": 1,
+        "last_error": "RuntimeError: triangular edge slots",
+        "name": "wrong_triangular_index",
+        "status": "REJECTED"
+      },
+      {
+        "exit_code": 1,
+        "last_error": "RuntimeError: K5 toggle cocycle",
+        "name": "counter_presence_instead_of_parity",
+        "status": "REJECTED"
+      },
+      {
+        "exit_code": 1,
+        "last_error": "RuntimeError: smallest same-parity unequal update hostile",
+        "name": "replace_15_over2_by_15_over14",
+        "status": "REJECTED"
+      },
+      {
+        "exit_code": 1,
+        "last_error": "RuntimeError: census and Burnside counts",
+        "name": "omit_converse_quotient",
+        "status": "REJECTED"
+      },
+      {
+        "exit_code": 1,
+        "last_error": "RuntimeError: generalized Fibonacci recurrence window",
+        "name": "break_recurrence_window",
+        "status": "REJECTED"
+      }
+    ],
+    "replays": [
+      {
+        "explicit_checks": 25806,
+        "optimized": false,
+        "status": "PASS",
+        "stdout_sha256": "194814be522bccd2f1491e64fa8a5f2631a5d4a8f4d956415c0367ae0174c0c8"
+      },
+      {
+        "explicit_checks": 25806,
+        "optimized": true,
+        "status": "PASS",
+        "stdout_sha256": "194814be522bccd2f1491e64fa8a5f2631a5d4a8f4d956415c0367ae0174c0c8"
+      }
+    ],
+    "status": "PASS"
+  },
+  "manifests": [
+    {
+      "entries": 4,
+      "path": "bridge_audit/SHA256SUMS"
+    },
+    {
+      "entries": 4,
+      "path": "encoding/SHA256SUMS"
+    },
+    {
+      "entries": 7,
+      "path": "figurate/SHA256SUMS"
+    },
+    {
+      "entries": 4,
+      "path": "independent/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "partition/SHA256SUMS"
+    },
+    {
+      "entries": 4,
+      "path": "periodic_density/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "tournaments/SHA256SUMS"
+    }
+  ],
+  "negative_gates": [
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "bridge_audit/check_bridge.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "bridge_audit/check_bridge.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_independent.py"
+    }
+  ],
+  "replays": [
+    {
+      "optimized": false,
+      "script": "encoding/check_encoding.py",
+      "status": "PASS",
+      "stdout_sha256": "30cb1c53cb103886831ce81a671e00a919db259efd680059dd8ca4b77d3e8802"
+    },
+    {
+      "optimized": true,
+      "script": "encoding/check_encoding.py",
+      "status": "PASS",
+      "stdout_sha256": "30cb1c53cb103886831ce81a671e00a919db259efd680059dd8ca4b77d3e8802"
+    },
+    {
+      "optimized": false,
+      "script": "bridge_audit/check_bridge.py",
+      "status": "PASS",
+      "stdout_sha256": "2243cd047bda61c1fa305e8911eb9004544692d3780fef6ef77d3b5366132892"
+    },
+    {
+      "optimized": true,
+      "script": "bridge_audit/check_bridge.py",
+      "status": "PASS",
+      "stdout_sha256": "2243cd047bda61c1fa305e8911eb9004544692d3780fef6ef77d3b5366132892"
+    },
+    {
+      "optimized": false,
+      "script": "tournaments/check_tournaments.py",
+      "status": "PASS",
+      "stdout_sha256": "b1d10db13fd0564b5c550d2ba01172e9e1fb188a836a56405bec2571c32015ee"
+    },
+    {
+      "optimized": true,
+      "script": "tournaments/check_tournaments.py",
+      "status": "PASS",
+      "stdout_sha256": "b1d10db13fd0564b5c550d2ba01172e9e1fb188a836a56405bec2571c32015ee"
+    },
+    {
+      "optimized": false,
+      "script": "partition/check_partition.py",
+      "status": "PASS",
+      "stdout_sha256": "6e790d51f7811a46fcb0dbba1303b027b8ef9319407527c7148bad0c4c0d673e"
+    },
+    {
+      "optimized": true,
+      "script": "partition/check_partition.py",
+      "status": "PASS",
+      "stdout_sha256": "6e790d51f7811a46fcb0dbba1303b027b8ef9319407527c7148bad0c4c0d673e"
+    },
+    {
+      "optimized": false,
+      "script": "figurate/check_figurate.py",
+      "status": "PASS",
+      "stdout_sha256": "194814be522bccd2f1491e64fa8a5f2631a5d4a8f4d956415c0367ae0174c0c8"
+    },
+    {
+      "optimized": true,
+      "script": "figurate/check_figurate.py",
+      "status": "PASS",
+      "stdout_sha256": "194814be522bccd2f1491e64fa8a5f2631a5d4a8f4d956415c0367ae0174c0c8"
+    },
+    {
+      "optimized": false,
+      "script": "independent/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "024d53ff830a32043ae64e8dd1ee054683bfb6122929b5b7bf9583f911ccc29c"
+    },
+    {
+      "optimized": true,
+      "script": "independent/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "024d53ff830a32043ae64e8dd1ee054683bfb6122929b5b7bf9583f911ccc29c"
+    },
+    {
+      "optimized": false,
+      "script": "periodic_density/check_density.py",
+      "status": "PASS",
+      "stdout_sha256": "96ad6b26d9cd16bbd034b3c7a5c97c1e65f0232ffa69ac93c249a331b0698d8c"
+    },
+    {
+      "optimized": true,
+      "script": "periodic_density/check_density.py",
+      "status": "PASS",
+      "stdout_sha256": "96ad6b26d9cd16bbd034b3c7a5c97c1e65f0232ffa69ac93c249a331b0698d8c"
+    }
+  ],
+  "status": "PASS"
+}

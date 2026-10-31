@@ -1,0 +1,679 @@
+{
+  "Fibonacci_unit_conjugation_orbits_met": 13,
+  "absolute_norm_groups": {
+    "55": [
+      "1/7"
+    ],
+    "95": [
+      "13/11"
+    ],
+    "191": [
+      "11/13",
+      "15/2"
+    ],
+    "305": [
+      "1/17"
+    ],
+    "1205": [
+      "29/33"
+    ],
+    "1789": [
+      "23/38"
+    ],
+    "2855": [
+      "77/29"
+    ],
+    "2969": [
+      "55/1"
+    ],
+    "3209": [
+      "19/51"
+    ],
+    "4105": [
+      "77/19"
+    ],
+    "6311": [
+      "95/23"
+    ],
+    "7771": [
+      "78/85"
+    ],
+    "9539": [
+      "17/91"
+    ]
+  },
+  "census": [
+    {
+      "edge_slots": 3,
+      "fixed_path_free_slots": 1,
+      "isoclasses": 2,
+      "labelled": 8,
+      "merged": 2,
+      "n": 3,
+      "rows": [
+        {
+          "H": 1,
+          "labelled_size": 6,
+          "representative": 0
+        },
+        {
+          "H": 3,
+          "labelled_size": 2,
+          "representative": 2
+        }
+      ],
+      "self_converse": 2
+    },
+    {
+      "edge_slots": 6,
+      "fixed_path_free_slots": 3,
+      "isoclasses": 4,
+      "labelled": 64,
+      "merged": 3,
+      "n": 4,
+      "rows": [
+        {
+          "H": 1,
+          "labelled_size": 24,
+          "representative": 0
+        },
+        {
+          "H": 3,
+          "labelled_size": 16,
+          "representative": 2
+        },
+        {
+          "H": 5,
+          "labelled_size": 24,
+          "representative": 4
+        }
+      ],
+      "self_converse": 2
+    },
+    {
+      "edge_slots": 10,
+      "fixed_path_free_slots": 6,
+      "isoclasses": 12,
+      "labelled": 1024,
+      "merged": 10,
+      "n": 5,
+      "rows": [
+        {
+          "H": 1,
+          "labelled_size": 120,
+          "representative": 0
+        },
+        {
+          "H": 3,
+          "labelled_size": 80,
+          "representative": 2
+        },
+        {
+          "H": 5,
+          "labelled_size": 240,
+          "representative": 4
+        },
+        {
+          "H": 3,
+          "labelled_size": 40,
+          "representative": 5
+        },
+        {
+          "H": 9,
+          "labelled_size": 120,
+          "representative": 8
+        },
+        {
+          "H": 9,
+          "labelled_size": 120,
+          "representative": 10
+        },
+        {
+          "H": 11,
+          "labelled_size": 120,
+          "representative": 12
+        },
+        {
+          "H": 15,
+          "labelled_size": 40,
+          "representative": 40
+        },
+        {
+          "H": 13,
+          "labelled_size": 120,
+          "representative": 41
+        },
+        {
+          "H": 15,
+          "labelled_size": 24,
+          "representative": 76
+        }
+      ],
+      "self_converse": 8
+    }
+  ],
+  "explicit_checks": 25806,
+  "factor_toggle_masks": [
+    104,
+    103,
+    194,
+    385,
+    530,
+    536,
+    388,
+    152,
+    64,
+    48,
+    48,
+    7,
+    8,
+    20
+  ],
+  "fraction_compactification": [
+    {
+      "Cassini_norm": 9539,
+      "fraction": "17/91",
+      "harmonic_face": [
+        1547,
+        9828,
+        1836
+      ],
+      "seed": [
+        91,
+        17
+      ],
+      "window": [
+        91,
+        17,
+        108,
+        125
+      ]
+    },
+    {
+      "Cassini_norm": 7771,
+      "fraction": "78/85",
+      "harmonic_face": [
+        6630,
+        13855,
+        12714
+      ],
+      "seed": [
+        85,
+        78
+      ],
+      "window": [
+        85,
+        78,
+        163,
+        241
+      ]
+    },
+    {
+      "Cassini_norm": 3209,
+      "fraction": "19/51",
+      "harmonic_face": [
+        969,
+        3570,
+        1330
+      ],
+      "seed": [
+        51,
+        19
+      ],
+      "window": [
+        51,
+        19,
+        70,
+        89
+      ]
+    },
+    {
+      "Cassini_norm": 1789,
+      "fraction": "23/38",
+      "harmonic_face": [
+        874,
+        2318,
+        1403
+      ],
+      "seed": [
+        38,
+        23
+      ],
+      "window": [
+        38,
+        23,
+        61,
+        84
+      ]
+    },
+    {
+      "Cassini_norm": 1205,
+      "fraction": "29/33",
+      "harmonic_face": [
+        957,
+        2046,
+        1798
+      ],
+      "seed": [
+        33,
+        29
+      ],
+      "window": [
+        33,
+        29,
+        62,
+        91
+      ]
+    },
+    {
+      "Cassini_norm": -2855,
+      "fraction": "77/29",
+      "harmonic_face": [
+        2233,
+        3074,
+        8162
+      ],
+      "seed": [
+        29,
+        77
+      ],
+      "window": [
+        29,
+        77,
+        106,
+        183
+      ]
+    },
+    {
+      "Cassini_norm": -6311,
+      "fraction": "95/23",
+      "harmonic_face": [
+        2185,
+        2714,
+        11210
+      ],
+      "seed": [
+        23,
+        95
+      ],
+      "window": [
+        23,
+        95,
+        118,
+        213
+      ]
+    },
+    {
+      "Cassini_norm": -4105,
+      "fraction": "77/19",
+      "harmonic_face": [
+        1463,
+        1824,
+        7392
+      ],
+      "seed": [
+        19,
+        77
+      ],
+      "window": [
+        19,
+        77,
+        96,
+        173
+      ]
+    },
+    {
+      "Cassini_norm": 305,
+      "fraction": "1/17",
+      "harmonic_face": [
+        17,
+        306,
+        18
+      ],
+      "seed": [
+        17,
+        1
+      ],
+      "window": [
+        17,
+        1,
+        18,
+        19
+      ]
+    },
+    {
+      "Cassini_norm": 191,
+      "fraction": "11/13",
+      "harmonic_face": [
+        143,
+        312,
+        264
+      ],
+      "seed": [
+        13,
+        11
+      ],
+      "window": [
+        13,
+        11,
+        24,
+        35
+      ]
+    },
+    {
+      "Cassini_norm": 95,
+      "fraction": "13/11",
+      "harmonic_face": [
+        143,
+        264,
+        312
+      ],
+      "seed": [
+        11,
+        13
+      ],
+      "window": [
+        11,
+        13,
+        24,
+        37
+      ]
+    },
+    {
+      "Cassini_norm": -191,
+      "fraction": "15/2",
+      "harmonic_face": [
+        30,
+        34,
+        255
+      ],
+      "seed": [
+        2,
+        15
+      ],
+      "window": [
+        2,
+        15,
+        17,
+        32
+      ]
+    },
+    {
+      "Cassini_norm": 55,
+      "fraction": "1/7",
+      "harmonic_face": [
+        7,
+        56,
+        8
+      ],
+      "seed": [
+        7,
+        1
+      ],
+      "window": [
+        7,
+        1,
+        8,
+        9
+      ]
+    },
+    {
+      "Cassini_norm": -2969,
+      "fraction": "55/1",
+      "harmonic_face": [
+        55,
+        56,
+        3080
+      ],
+      "seed": [
+        1,
+        55
+      ],
+      "window": [
+        1,
+        55,
+        56,
+        111
+      ]
+    }
+  ],
+  "fractions": [
+    "17/91",
+    "78/85",
+    "19/51",
+    "23/38",
+    "29/33",
+    "77/29",
+    "95/23",
+    "77/19",
+    "1/17",
+    "11/13",
+    "13/11",
+    "15/2",
+    "1/7",
+    "55/1"
+  ],
+  "prime_edge_gauge": [
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "prime": 2,
+      "singleton_node": 0
+    },
+    {
+      "edge": [
+        0,
+        2
+      ],
+      "prime": 3,
+      "singleton_node": 2
+    },
+    {
+      "edge": [
+        0,
+        3
+      ],
+      "prime": 5,
+      "singleton_node": 4
+    },
+    {
+      "edge": [
+        0,
+        4
+      ],
+      "prime": 7,
+      "singleton_node": 8
+    },
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "prime": 11,
+      "singleton_node": 0
+    },
+    {
+      "edge": [
+        1,
+        3
+      ],
+      "prime": 13,
+      "singleton_node": 5
+    },
+    {
+      "edge": [
+        1,
+        4
+      ],
+      "prime": 17,
+      "singleton_node": 4
+    },
+    {
+      "edge": [
+        2,
+        3
+      ],
+      "prime": 19,
+      "singleton_node": 0
+    },
+    {
+      "edge": [
+        2,
+        4
+      ],
+      "prime": 23,
+      "singleton_node": 2
+    },
+    {
+      "edge": [
+        3,
+        4
+      ],
+      "prime": 29,
+      "singleton_node": 0
+    }
+  ],
+  "prime_renaming_numeric_hostile": {
+    "55_image": 1927,
+    "Fibonacci_index": null,
+    "is_triangular": false,
+    "norm_of_renamed_eraser7": 1891
+  },
+  "register_singleton_image_size": 5,
+  "scope": "Exact proofs in THEORY.md; finite replay supplements them. No intrinsic edge gauge, autonomous finite quotient, unit-Cassini dynamics, or fraction-block node determination asserted.",
+  "smallest_equal_merged_hostile": {
+    "merged_representative": 0,
+    "next_merged_representatives": [
+      4,
+      0
+    ],
+    "next_parities": [
+      20,
+      7
+    ],
+    "next_states": [
+      55,
+      30
+    ],
+    "parities": [
+      0,
+      0
+    ],
+    "rules": [
+      14,
+      12
+    ],
+    "states": [
+      1,
+      4
+    ]
+  },
+  "smallest_equal_parity_hostile": {
+    "next_merged_representatives": [
+      4,
+      0
+    ],
+    "next_parities": [
+      20,
+      7
+    ],
+    "next_states": [
+      55,
+      30
+    ],
+    "parity": 0,
+    "rules": [
+      14,
+      12
+    ],
+    "states": [
+      1,
+      4
+    ]
+  },
+  "state_lift_samples": [
+    {
+      "Cassini": 1,
+      "N": 1,
+      "face": [
+        1,
+        2,
+        2
+      ],
+      "triangular_number": 1,
+      "window": [
+        1,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "Cassini": -1,
+      "N": 2,
+      "face": [
+        2,
+        3,
+        6
+      ],
+      "triangular_number": 3,
+      "window": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "Cassini": -209,
+      "N": 15,
+      "face": [
+        15,
+        16,
+        240
+      ],
+      "triangular_number": 120,
+      "window": [
+        1,
+        15,
+        16,
+        31
+      ]
+    },
+    {
+      "Cassini": -2969,
+      "N": 55,
+      "face": [
+        55,
+        56,
+        3080
+      ],
+      "triangular_number": 1540,
+      "window": [
+        1,
+        55,
+        56,
+        111
+      ]
+    },
+    {
+      "Cassini": -4159,
+      "N": 65,
+      "face": [
+        65,
+        66,
+        4290
+      ],
+      "triangular_number": 2145,
+      "window": [
+        1,
+        65,
+        66,
+        131
+      ]
+    }
+  ],
+  "status": "PASS"
+}

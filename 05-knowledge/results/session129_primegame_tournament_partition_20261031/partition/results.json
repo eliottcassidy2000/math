@@ -1,0 +1,332 @@
+{
+  "blocks": {
+    "0": "JK",
+    "1": "AIMN",
+    "2": "CEFH",
+    "3": "BDGL"
+  },
+  "complete_onehot_threshold_universe": 567,
+  "complete_threshold_universe": 59049,
+  "countdown_family_checked": [
+    0,
+    50
+  ],
+  "explicit_checks": 122069,
+  "fraction_order": [
+    "17/91",
+    "78/85",
+    "19/51",
+    "23/38",
+    "29/33",
+    "77/29",
+    "95/23",
+    "77/19",
+    "1/17",
+    "11/13",
+    "13/11",
+    "15/2",
+    "1/7",
+    "55/1"
+  ],
+  "global_periodic_G_state_elimination_cases": {
+    "multiple17_forcesC": 60,
+    "no17_forcesH": 120,
+    "positive7_forcesC": 80,
+    "six_cycle": 60
+  },
+  "global_successor_graph": {
+    "0": [
+      0,
+      1,
+      2
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "2": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "3": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "global_witnesses": {
+    "0->0": {
+      "instructions": "KJ",
+      "integer": 11
+    },
+    "0->1": {
+      "instructions": "KA",
+      "integer": 77
+    },
+    "0->2": {
+      "instructions": "JE",
+      "integer": 39
+    },
+    "1->0": {
+      "instructions": "NK",
+      "integer": 1
+    },
+    "1->1": {
+      "instructions": "MN",
+      "integer": 7
+    },
+    "1->2": {
+      "instructions": "NE",
+      "integer": 3
+    },
+    "1->3": {
+      "instructions": "IL",
+      "integer": 34
+    },
+    "2->0": {
+      "instructions": "HK",
+      "integer": 19
+    },
+    "2->1": {
+      "instructions": "HA",
+      "integer": 247
+    },
+    "2->2": {
+      "instructions": "EF",
+      "integer": 33
+    },
+    "2->3": {
+      "instructions": "CD",
+      "integer": 102
+    },
+    "3->0": {
+      "instructions": "BJ",
+      "integer": 85
+    },
+    "3->1": {
+      "instructions": "LN",
+      "integer": 2
+    },
+    "3->2": {
+      "instructions": "GH",
+      "integer": 23
+    },
+    "3->3": {
+      "instructions": "LL",
+      "integer": 4
+    }
+  },
+  "grading_constraint_rank": 11,
+  "guarded_merge_witness": [
+    231,
+    273
+  ],
+  "height_changes": [
+    0,
+    -2,
+    1,
+    0
+  ],
+  "height_weights": {
+    "11": 2,
+    "13": 2,
+    "17": 2,
+    "19": 3,
+    "2": -4,
+    "23": -1,
+    "29": 3,
+    "3": 0,
+    "5": -4,
+    "7": 2
+  },
+  "increment_rank": 10,
+  "multimarker_edge_witness": [
+    247,
+    1001,
+    187
+  ],
+  "nonnegative_circulation_generators": {
+    "g": {
+      "A": 1,
+      "B": 1,
+      "D": 1,
+      "E": 1,
+      "F": 1,
+      "G": 1
+    },
+    "j": {
+      "J": 1,
+      "K": 1
+    },
+    "m": {
+      "A": 1,
+      "B": 1,
+      "E": 2,
+      "F": 2,
+      "L": 1,
+      "M": 1
+    },
+    "t": {
+      "A": 2,
+      "B": 1,
+      "C": 1,
+      "E": 1,
+      "F": 1,
+      "H": 1,
+      "K": 1,
+      "L": 1
+    }
+  },
+  "onehot_successor_graph": {
+    "0": [
+      0,
+      1,
+      2
+    ],
+    "1": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "2": [
+      0,
+      2,
+      3
+    ],
+    "3": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "onehot_witnesses": {
+    "0->0": {
+      "instructions": "KJ",
+      "integer": 11
+    },
+    "0->1": {
+      "instructions": "KA",
+      "integer": 77
+    },
+    "0->2": {
+      "instructions": "JE",
+      "integer": 39
+    },
+    "1->0": {
+      "instructions": "NK",
+      "integer": 1
+    },
+    "1->1": {
+      "instructions": "MN",
+      "integer": 7
+    },
+    "1->2": {
+      "instructions": "NE",
+      "integer": 3
+    },
+    "1->3": {
+      "instructions": "IL",
+      "integer": 34
+    },
+    "2->0": {
+      "instructions": "HK",
+      "integer": 19
+    },
+    "2->2": {
+      "instructions": "EF",
+      "integer": 33
+    },
+    "2->3": {
+      "instructions": "CD",
+      "integer": 102
+    },
+    "3->0": {
+      "instructions": "BJ",
+      "integer": 85
+    },
+    "3->1": {
+      "instructions": "LN",
+      "integer": 2
+    },
+    "3->2": {
+      "instructions": "GH",
+      "integer": 23
+    },
+    "3->3": {
+      "instructions": "LL",
+      "integer": 4
+    }
+  },
+  "primitive_six_cycle_base": [
+    4301,
+    17765,
+    16302,
+    9867,
+    8671,
+    23023
+  ],
+  "primitive_six_cycle_scale": "2^a 11^r 13^v 19^w 23^s times spectator factor; a*w=0",
+  "primitive_six_cycle_words_capped_counts": {
+    "AGBDEF": 40,
+    "BDEFAG": 72,
+    "DEFAGB": 36,
+    "EFAGBD": 40,
+    "FAGBDE": 60,
+    "GBDEFA": 60
+  },
+  "proved_global_period_set": [
+    2,
+    6
+  ],
+  "scope": "Finite checks verify complete two-step threshold universes; general grading, kernel, guarded merge and infinite-memory proofs are in README.md.",
+  "seed2_prime_events": [
+    [
+      19,
+      2
+    ],
+    [
+      69,
+      3
+    ],
+    [
+      281,
+      5
+    ],
+    [
+      710,
+      7
+    ],
+    [
+      2375,
+      11
+    ],
+    [
+      3893,
+      13
+    ],
+    [
+      8102,
+      17
+    ],
+    [
+      11361,
+      19
+    ],
+    [
+      19268,
+      23
+    ],
+    [
+      36981,
+      29
+    ]
+  ],
+  "status": "PASS"
+}

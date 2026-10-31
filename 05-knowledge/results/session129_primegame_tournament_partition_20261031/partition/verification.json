@@ -1,0 +1,31 @@
+{
+  "explicit_checks_per_run": 122069,
+  "files_required_for_replay": [
+    "check_partition.py"
+  ],
+  "isolated_relocated_replays": [
+    {
+      "exit_code": 0,
+      "flags": [
+        "-I",
+        "-B"
+      ],
+      "matches_retained_output": true,
+      "stdout_sha256": "6e790d51f7811a46fcb0dbba1303b027b8ef9319407527c7148bad0c4c0d673e"
+    },
+    {
+      "exit_code": 0,
+      "flags": [
+        "-I",
+        "-B",
+        "-O"
+      ],
+      "matches_retained_output": true,
+      "stdout_sha256": "6e790d51f7811a46fcb0dbba1303b027b8ef9319407527c7148bad0c4c0d673e"
+    }
+  ],
+  "normal_and_optimized_equal": true,
+  "python_version": "3.12.14",
+  "scope": "Integrity and exact computation receipt; general theorems also require README proofs.",
+  "status": "PASS"
+}

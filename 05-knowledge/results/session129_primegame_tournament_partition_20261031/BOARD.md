@@ -1,4 +1,4 @@
-# Session129 concept board and inheritance
+# Session129 initial concept board and inheritance
 
 Baseline: 1bd2043bc6788d4b9c55d0d8397a9df2c6c0382b. User request: PRIMEGAME partition 2+4+4+4, merged tournament levels, and triangular/Fibonacci arithmetic.
 
@@ -18,4 +18,8 @@ Corrected near miss: n3 has one literal complement line; n4 has three merged nod
 Least-used sidecars: boundary-control ports, primitive endpoint-face vectors, and prime-label covariance.
 Method cards: Type every analogy and every implication; Retain local incidence through counting; Correct the object before sharpening the technique; Search the statement before the method.
 
-No claimed universal tournament spectrum, circuit lower bound, or LRC consequence. Source claims and new derivations will be marked separately. Pending Session113 approval remains untouched.
+No claimed universal tournament spectrum, circuit lower bound, or LRC consequence. Source claims and new derivations will be marked separately.
+
+## Close-out comparison
+
+The strongest anchor became the exact block grading and complete2/6period classification. The niche supplied a faithful three-coordinate rational encoding of the ten order5nodes, while preserving the chosen-label boundary. The wildcard produced exact harmonic/triangular transport and a different golden-unit pairing. Prime-label covariance, transition guards, marked-path incidence and the order6axis hostile explain why these carriers cannot be identified indiscriminately. Periodic-point membership and density are closed; eventual basin classification and all-order tournament-profile completeness remain open here.

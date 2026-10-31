@@ -1,0 +1,22 @@
+{
+  "executable_dependencies": "Python3 standard library only; no inherited data or code read by checker.",
+  "inherited_report": {
+    "local_read_path": "/tmp/session126-final-source/05-knowledge/results/session126_primegame_symmetry_20261031/primegame/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+    "repository": "eliottcassidy2000/math",
+    "repository_path": "05-knowledge/results/session126_primegame_symmetry_20261031/primegame/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+    "sha256": "be46fe74da6b05a17805a6373b56acda19c347b2e2cfb2bf33d2171fa8cd4d7b",
+    "snapshot": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+    "used_for": [
+      "ordered instruction identification",
+      "one-hot controller inheritance",
+      "symbolic all-candidate divisor-loop proof for seed2 infinite-observer corollary"
+    ]
+  },
+  "primary_reference": {
+    "author": "J. H. Conway",
+    "scope": "Classical fraction order and AB,EF,DG products; source freshly checked by parent session.",
+    "title": "FRACTRAN: A Simple Universal Programming Language for Arithmetic",
+    "url": "https://gwern.net/doc/cs/computable/1987-conway.pdf",
+    "year": 1987
+  }
+}

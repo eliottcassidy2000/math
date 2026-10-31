@@ -1,0 +1,55 @@
+{
+  "mutations": [
+    {
+      "exit_code": 1,
+      "last_error": "RuntimeError: antipodal Cassini defect",
+      "name": "wrong_Cassini_cross_term",
+      "status": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "last_error": "RuntimeError: triangular edge slots",
+      "name": "wrong_triangular_index",
+      "status": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "last_error": "RuntimeError: K5 toggle cocycle",
+      "name": "counter_presence_instead_of_parity",
+      "status": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "last_error": "RuntimeError: smallest same-parity unequal update hostile",
+      "name": "replace_15_over2_by_15_over14",
+      "status": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "last_error": "RuntimeError: census and Burnside counts",
+      "name": "omit_converse_quotient",
+      "status": "REJECTED"
+    },
+    {
+      "exit_code": 1,
+      "last_error": "RuntimeError: generalized Fibonacci recurrence window",
+      "name": "break_recurrence_window",
+      "status": "REJECTED"
+    }
+  ],
+  "replays": [
+    {
+      "explicit_checks": 25806,
+      "optimized": false,
+      "status": "PASS",
+      "stdout_sha256": "194814be522bccd2f1491e64fa8a5f2631a5d4a8f4d956415c0367ae0174c0c8"
+    },
+    {
+      "explicit_checks": 25806,
+      "optimized": true,
+      "status": "PASS",
+      "stdout_sha256": "194814be522bccd2f1491e64fa8a5f2631a5d4a8f4d956415c0367ae0174c0c8"
+    }
+  ],
+  "status": "PASS"
+}
