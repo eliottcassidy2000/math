@@ -1,0 +1,40 @@
+{
+  "commit": "1bd2043bc6788d4b9c55d0d8397a9df2c6c0382b",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "bytes": 34249
+    },
+    {
+      "path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+      "bytes": 23768
+    },
+    {
+      "path": "05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md",
+      "sha256": "70ad0f50758bd68e1d1664302d2879276dd9a7b4cd5a2b18e645aeb1f4f218d5",
+      "bytes": 30123
+    },
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/inheritance/FRONTIER.md",
+      "sha256": "560543c2547cea087dafaba606950612489f134ddbb5935377331356be0b1eb9",
+      "bytes": 9185
+    },
+    {
+      "path": "05-knowledge/results/triangular_fibonacci_heron_boat_kps.out",
+      "sha256": "4ab550ff78071f8a53bed8a930dd96ff761b0c2d38e241506b5453fcd7710401",
+      "bytes": 1784
+    },
+    {
+      "path": "05-knowledge/results/triangular_composition_metagraph_kps.out",
+      "sha256": "750938c3043f4e0b5593ed87d150dd68f6a9e62bb46221427abe2458ca25fb8b",
+      "bytes": 1454
+    },
+    {
+      "path": "05-knowledge/results/triangular_fixed_tournament_controls_s647.out",
+      "sha256": "bd579f50572dc611f69a3af72ac883be6829c7fe334406bb802843bd4556df80",
+      "bytes": 4965
+    }
+  ]
+}

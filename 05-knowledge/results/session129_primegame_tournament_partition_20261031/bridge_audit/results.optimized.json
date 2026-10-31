@@ -1,0 +1,255 @@
+{
+  "status": "PASS",
+  "universe": "14 exact fractions; 10 prime valuations; four user blocks",
+  "program_order": {
+    "A": "17/91",
+    "B": "78/85",
+    "C": "19/51",
+    "D": "23/38",
+    "E": "29/33",
+    "F": "77/29",
+    "G": "95/23",
+    "H": "77/19",
+    "I": "1/17",
+    "J": "11/13",
+    "K": "13/11",
+    "L": "15/2",
+    "M": "1/7",
+    "N": "55"
+  },
+  "user_blocks_in_program_letters": {
+    "A": "JK",
+    "B": "NMIA",
+    "C": "CHFE",
+    "D": "BDGL"
+  },
+  "control_edges": [
+    {
+      "letter": "A",
+      "source": 13,
+      "target": 17,
+      "gain": "1/7"
+    },
+    {
+      "letter": "B",
+      "source": 17,
+      "target": 13,
+      "gain": "6/5"
+    },
+    {
+      "letter": "C",
+      "source": 17,
+      "target": 19,
+      "gain": "1/3"
+    },
+    {
+      "letter": "D",
+      "source": 19,
+      "target": 23,
+      "gain": "1/2"
+    },
+    {
+      "letter": "E",
+      "source": 11,
+      "target": 29,
+      "gain": "1/3"
+    },
+    {
+      "letter": "F",
+      "source": 29,
+      "target": 11,
+      "gain": "7"
+    },
+    {
+      "letter": "G",
+      "source": 23,
+      "target": 19,
+      "gain": "5"
+    },
+    {
+      "letter": "H",
+      "source": 19,
+      "target": 11,
+      "gain": "7"
+    },
+    {
+      "letter": "I",
+      "source": 17,
+      "target": 0,
+      "gain": "1"
+    },
+    {
+      "letter": "J",
+      "source": 13,
+      "target": 11,
+      "gain": "1"
+    },
+    {
+      "letter": "K",
+      "source": 11,
+      "target": 13,
+      "gain": "1"
+    },
+    {
+      "letter": "L",
+      "source": 0,
+      "target": 0,
+      "gain": "15/2"
+    },
+    {
+      "letter": "M",
+      "source": 0,
+      "target": 0,
+      "gain": "1/7"
+    },
+    {
+      "letter": "N",
+      "source": 0,
+      "target": 11,
+      "gain": "5"
+    }
+  ],
+  "group_products": {
+    "A": "1",
+    "B": "55/637",
+    "C": "539/153",
+    "D": "585/34"
+  },
+  "macro_boundary_rows_11_13_17": [
+    [
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      -1,
+      -1
+    ]
+  ],
+  "chain_map_verified": true,
+  "ranks": {
+    "control_incidence": 6,
+    "control_cycle": 8,
+    "full_valuation": 10,
+    "multiplicative_kernel": 4,
+    "macro_boundary": 2,
+    "macro_cycles": 2,
+    "macro_valuation": 3,
+    "macro_multiplicative_kernel": 1
+  },
+  "macro_cycle_basis": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      -1,
+      1
+    ]
+  ],
+  "triangle_holonomy": "2025/4802",
+  "block_product_codec": {
+    "encoding": "q = B^b C^c D^d",
+    "decoding": "b=T(q), c=nu_11(q)-T(q), d=nu_13(q)+T(q)",
+    "definition_T": "nu_2+nu_5+nu_23",
+    "selected_valuation_matrix": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        1
+      ]
+    ],
+    "exact_roundtrips_checked": 729,
+    "scope": "arbitrary integer exponent triples; proof uses integer left inverse"
+  },
+  "priority_positive_controls": {
+    "A": {
+      "program_word": "KJ",
+      "trajectory": [
+        11,
+        13,
+        11
+      ]
+    },
+    "B": {
+      "program_word": "AIMN",
+      "trajectory": [
+        637,
+        119,
+        7,
+        1,
+        55
+      ]
+    },
+    "C": {
+      "program_word": "CHEF",
+      "trajectory": [
+        153,
+        57,
+        231,
+        203,
+        539
+      ]
+    }
+  },
+  "D_hostile": {
+    "input": 34,
+    "formal_output": 585,
+    "executable_permutations": [],
+    "full_program_first_step": [
+      "I",
+      [
+        34,
+        2
+      ]
+    ]
+  },
+  "nonnegative_multiplicative_kernel_generators": [
+    "JK",
+    "ABDEFG",
+    "AABCEFHKL",
+    "ABEEFFLM"
+  ],
+  "kernel_parametrization_checked_inputs": 625,
+  "monotone_T_increment_by_program_letter": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 0,
+    "F": 0,
+    "G": 0,
+    "H": 0,
+    "I": 0,
+    "J": 0,
+    "K": 0,
+    "L": 0,
+    "M": 0,
+    "N": 1
+  },
+  "simple_graph_automorphisms": 2,
+  "directed_multigraph_automorphisms": 1
+}

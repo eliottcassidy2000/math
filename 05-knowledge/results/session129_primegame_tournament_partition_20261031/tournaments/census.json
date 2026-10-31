@@ -1,0 +1,2919 @@
+{
+  "3": {
+    "edges": [
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          0,
+          1
+        ]
+      }
+    ],
+    "lines": [
+      {
+        "color": "blue",
+        "masks": [
+          0,
+          1
+        ],
+        "nodes": [
+          0,
+          1
+        ]
+      }
+    ],
+    "merged_nodes": 2,
+    "n": 3,
+    "node_codes": {
+      "0": 0,
+      "2": 1
+    },
+    "nodes": [
+      {
+        "H": 1,
+        "aut": 1,
+        "blue_masks": [
+          0
+        ],
+        "classes": [
+          0
+        ],
+        "masks": [
+          0
+        ],
+        "node": 0,
+        "scores": [
+          0,
+          1,
+          2
+        ],
+        "type": "pure_blue"
+      },
+      {
+        "H": 3,
+        "aut": 3,
+        "blue_masks": [
+          1
+        ],
+        "classes": [
+          1
+        ],
+        "masks": [
+          1
+        ],
+        "node": 1,
+        "scores": [
+          1,
+          1,
+          1
+        ],
+        "type": "pure_blue"
+      }
+    ],
+    "ordinary_classes": 2,
+    "self_converse": 2,
+    "tiles": [
+      [
+        3,
+        1
+      ]
+    ]
+  },
+  "4": {
+    "edges": [
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          0,
+          2
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          1,
+          2
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          2,
+          2
+        ]
+      }
+    ],
+    "lines": [
+      {
+        "color": "blue",
+        "masks": [
+          0,
+          7
+        ],
+        "nodes": [
+          0,
+          2
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          1,
+          6
+        ],
+        "nodes": [
+          2,
+          2
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          2,
+          5
+        ],
+        "nodes": [
+          1,
+          2
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          3,
+          4
+        ],
+        "nodes": [
+          1,
+          2
+        ]
+      }
+    ],
+    "merged_nodes": 3,
+    "n": 4,
+    "node_codes": {
+      "0": 0,
+      "2": 1,
+      "8": 2
+    },
+    "nodes": [
+      {
+        "H": 1,
+        "aut": 1,
+        "blue_masks": [
+          0
+        ],
+        "classes": [
+          0
+        ],
+        "face_vector": [
+          1,
+          0
+        ],
+        "masks": [
+          0
+        ],
+        "node": 0,
+        "primitive_face_vector": [
+          1,
+          0
+        ],
+        "scores": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "pure_blue"
+      },
+      {
+        "H": 3,
+        "aut": 3,
+        "blue_masks": [],
+        "classes": [
+          1,
+          3
+        ],
+        "face_vector": [
+          1,
+          1
+        ],
+        "masks": [
+          2,
+          4
+        ],
+        "node": 1,
+        "primitive_face_vector": [
+          1,
+          1
+        ],
+        "scores": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 5,
+        "aut": 1,
+        "blue_masks": [
+          1,
+          6,
+          7
+        ],
+        "classes": [
+          2
+        ],
+        "face_vector": [
+          2,
+          3
+        ],
+        "masks": [
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "node": 2,
+        "primitive_face_vector": [
+          2,
+          3
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "type": "mixed"
+      }
+    ],
+    "ordinary_classes": 4,
+    "self_converse": 2,
+    "tiles": [
+      [
+        4,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "5": {
+    "edges": [
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          0,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          1,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          7
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          3,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          4,
+          5
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          4,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          4,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          5,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          5,
+          7
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          5,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          6,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          6,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          6,
+          9
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          7,
+          9
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          8,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          8,
+          9
+        ]
+      }
+    ],
+    "lines": [
+      {
+        "color": "blue",
+        "masks": [
+          0,
+          63
+        ],
+        "nodes": [
+          0,
+          5
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          1,
+          62
+        ],
+        "nodes": [
+          4,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          2,
+          61
+        ],
+        "nodes": [
+          2,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          3,
+          60
+        ],
+        "nodes": [
+          6,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          4,
+          59
+        ],
+        "nodes": [
+          1,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          5,
+          58
+        ],
+        "nodes": [
+          4,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          6,
+          57
+        ],
+        "nodes": [
+          2,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          7,
+          56
+        ],
+        "nodes": [
+          2,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          8,
+          55
+        ],
+        "nodes": [
+          2,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          9,
+          54
+        ],
+        "nodes": [
+          6,
+          6
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          10,
+          53
+        ],
+        "nodes": [
+          8,
+          9
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          11,
+          52
+        ],
+        "nodes": [
+          6,
+          9
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          12,
+          51
+        ],
+        "nodes": [
+          5,
+          7
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          13,
+          50
+        ],
+        "nodes": [
+          4,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          14,
+          49
+        ],
+        "nodes": [
+          6,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          15,
+          48
+        ],
+        "nodes": [
+          2,
+          6
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          16,
+          47
+        ],
+        "nodes": [
+          3,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          17,
+          46
+        ],
+        "nodes": [
+          7,
+          9
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          18,
+          45
+        ],
+        "nodes": [
+          2,
+          7
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          19,
+          44
+        ],
+        "nodes": [
+          8,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          20,
+          43
+        ],
+        "nodes": [
+          2,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          21,
+          42
+        ],
+        "nodes": [
+          6,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          22,
+          41
+        ],
+        "nodes": [
+          2,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          23,
+          40
+        ],
+        "nodes": [
+          2,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          24,
+          39
+        ],
+        "nodes": [
+          2,
+          7
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          25,
+          38
+        ],
+        "nodes": [
+          8,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          26,
+          37
+        ],
+        "nodes": [
+          5,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "masks": [
+          27,
+          36
+        ],
+        "nodes": [
+          5,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          28,
+          35
+        ],
+        "nodes": [
+          4,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          29,
+          34
+        ],
+        "nodes": [
+          5,
+          7
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          30,
+          33
+        ],
+        "nodes": [
+          4,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "masks": [
+          31,
+          32
+        ],
+        "nodes": [
+          1,
+          4
+        ]
+      }
+    ],
+    "merged_nodes": 10,
+    "n": 5,
+    "node_codes": {
+      "0": 0,
+      "2": 1,
+      "8": 2,
+      "9": 3,
+      "64": 4,
+      "66": 5,
+      "72": 6,
+      "80": 7,
+      "81": 8,
+      "200": 9
+    },
+    "nodes": [
+      {
+        "H": 1,
+        "aut": 1,
+        "blue_masks": [
+          0
+        ],
+        "classes": [
+          0
+        ],
+        "face_vector": [
+          1,
+          0,
+          0
+        ],
+        "formal_prime_code_2_3_5": 2,
+        "masks": [
+          0
+        ],
+        "node": 0,
+        "primitive_face_vector": [
+          1,
+          0,
+          0
+        ],
+        "scores": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "selected_code_7_17_55": 7,
+        "selected_code_factorization": {
+          "11": 0,
+          "17": 0,
+          "5": 0,
+          "7": 1
+        },
+        "type": "pure_blue"
+      },
+      {
+        "H": 3,
+        "aut": 3,
+        "blue_masks": [],
+        "classes": [
+          1,
+          7
+        ],
+        "face_vector": [
+          1,
+          1,
+          0
+        ],
+        "formal_prime_code_2_3_5": 6,
+        "masks": [
+          4,
+          32
+        ],
+        "node": 1,
+        "primitive_face_vector": [
+          1,
+          1,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          1,
+          3,
+          4
+        ],
+        "selected_code_7_17_55": 119,
+        "selected_code_factorization": {
+          "11": 0,
+          "17": 1,
+          "5": 0,
+          "7": 1
+        },
+        "type": "pure_black"
+      },
+      {
+        "H": 5,
+        "aut": 1,
+        "blue_masks": [],
+        "classes": [
+          2,
+          5
+        ],
+        "face_vector": [
+          2,
+          3,
+          5
+        ],
+        "formal_prime_code_2_3_5": 337500,
+        "masks": [
+          2,
+          6,
+          8,
+          18,
+          20,
+          22,
+          24,
+          40,
+          48,
+          56
+        ],
+        "node": 2,
+        "primitive_face_vector": [
+          2,
+          3,
+          5
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          2,
+          4
+        ],
+        "selected_code_7_17_55": 121159170584375,
+        "selected_code_factorization": {
+          "11": 5,
+          "17": 3,
+          "5": 5,
+          "7": 2
+        },
+        "type": "pure_black"
+      },
+      {
+        "H": 3,
+        "aut": 3,
+        "blue_masks": [
+          16
+        ],
+        "classes": [
+          3
+        ],
+        "face_vector": [
+          0,
+          1,
+          0
+        ],
+        "formal_prime_code_2_3_5": 3,
+        "masks": [
+          16
+        ],
+        "node": 3,
+        "primitive_face_vector": [
+          0,
+          1,
+          0
+        ],
+        "scores": [
+          0,
+          2,
+          2,
+          2,
+          4
+        ],
+        "selected_code_7_17_55": 17,
+        "selected_code_factorization": {
+          "11": 0,
+          "17": 1,
+          "5": 0,
+          "7": 0
+        },
+        "type": "pure_blue"
+      },
+      {
+        "H": 9,
+        "aut": 1,
+        "blue_masks": [
+          1
+        ],
+        "classes": [
+          4
+        ],
+        "face_vector": [
+          2,
+          0,
+          7
+        ],
+        "formal_prime_code_2_3_5": 312500,
+        "masks": [
+          1,
+          7,
+          28,
+          30,
+          31,
+          41,
+          50,
+          58,
+          59
+        ],
+        "node": 4,
+        "primitive_face_vector": [
+          2,
+          0,
+          7
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ],
+        "selected_code_7_17_55": 74599326484375,
+        "selected_code_factorization": {
+          "11": 7,
+          "17": 0,
+          "5": 7,
+          "7": 2
+        },
+        "type": "mixed"
+      },
+      {
+        "H": 9,
+        "aut": 1,
+        "blue_masks": [
+          26,
+          36,
+          63
+        ],
+        "classes": [
+          6
+        ],
+        "face_vector": [
+          1,
+          4,
+          4
+        ],
+        "formal_prime_code_2_3_5": 101250,
+        "masks": [
+          5,
+          12,
+          23,
+          26,
+          33,
+          34,
+          36,
+          57,
+          63
+        ],
+        "node": 5,
+        "primitive_face_vector": [
+          1,
+          4,
+          4
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ],
+        "selected_code_7_17_55": 5349885454375,
+        "selected_code_factorization": {
+          "11": 4,
+          "17": 4,
+          "5": 4,
+          "7": 1
+        },
+        "type": "mixed"
+      },
+      {
+        "H": 11,
+        "aut": 1,
+        "blue_masks": [
+          27,
+          52,
+          62
+        ],
+        "classes": [
+          8
+        ],
+        "face_vector": [
+          1,
+          0,
+          10
+        ],
+        "formal_prime_code_2_3_5": 19531250,
+        "masks": [
+          3,
+          9,
+          14,
+          15,
+          27,
+          42,
+          43,
+          52,
+          54,
+          60,
+          62
+        ],
+        "node": 6,
+        "primitive_face_vector": [
+          1,
+          0,
+          10
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "selected_code_7_17_55": 1773066134833984375,
+        "selected_code_factorization": {
+          "11": 10,
+          "17": 0,
+          "5": 10,
+          "7": 1
+        },
+        "type": "mixed"
+      },
+      {
+        "H": 15,
+        "aut": 3,
+        "blue_masks": [
+          17
+        ],
+        "classes": [
+          9
+        ],
+        "face_vector": [
+          0,
+          2,
+          3
+        ],
+        "formal_prime_code_2_3_5": 1125,
+        "masks": [
+          17,
+          29,
+          39,
+          45,
+          51
+        ],
+        "node": 7,
+        "primitive_face_vector": [
+          0,
+          2,
+          3
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "selected_code_7_17_55": 48082375,
+        "selected_code_factorization": {
+          "11": 3,
+          "17": 2,
+          "5": 3,
+          "7": 0
+        },
+        "type": "mixed"
+      },
+      {
+        "H": 13,
+        "aut": 1,
+        "blue_masks": [
+          10,
+          37,
+          47
+        ],
+        "classes": [
+          10
+        ],
+        "face_vector": [
+          0,
+          5,
+          8
+        ],
+        "formal_prime_code_2_3_5": 94921875,
+        "masks": [
+          10,
+          13,
+          19,
+          21,
+          25,
+          35,
+          37,
+          38,
+          44,
+          47,
+          49,
+          55,
+          61
+        ],
+        "node": 8,
+        "primitive_face_vector": [
+          0,
+          5,
+          8
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ],
+        "selected_code_7_17_55": 118890217851569140625,
+        "selected_code_factorization": {
+          "11": 8,
+          "17": 5,
+          "5": 8,
+          "7": 0
+        },
+        "type": "mixed"
+      },
+      {
+        "H": 15,
+        "aut": 5,
+        "blue_masks": [
+          11,
+          46,
+          53
+        ],
+        "classes": [
+          11
+        ],
+        "face_vector": [
+          0,
+          0,
+          3
+        ],
+        "formal_prime_code_2_3_5": 5,
+        "masks": [
+          11,
+          46,
+          53
+        ],
+        "node": 9,
+        "primitive_face_vector": [
+          0,
+          0,
+          1
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "selected_code_7_17_55": 55,
+        "selected_code_factorization": {
+          "11": 1,
+          "17": 0,
+          "5": 1,
+          "7": 0
+        },
+        "type": "pure_blue"
+      }
+    ],
+    "ordinary_classes": 12,
+    "self_converse": 8,
+    "tiles": [
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        3
+      ]
+    ]
+  },
+  "6": {
+    "merged_nodes": 34,
+    "n": 6,
+    "node_codes": {
+      "0": 0,
+      "2": 1,
+      "8": 2,
+      "9": 3,
+      "64": 4,
+      "65": 5,
+      "66": 6,
+      "72": 7,
+      "80": 8,
+      "81": 9,
+      "200": 10,
+      "1024": 11,
+      "1026": 12,
+      "1032": 13,
+      "1040": 14,
+      "1041": 15,
+      "1043": 16,
+      "1051": 17,
+      "1088": 18,
+      "1104": 19,
+      "1105": 20,
+      "1152": 21,
+      "1153": 22,
+      "1154": 23,
+      "1157": 24,
+      "1160": 25,
+      "1169": 26,
+      "1171": 27,
+      "1177": 28,
+      "1224": 29,
+      "3136": 30,
+      "3152": 31,
+      "3264": 32,
+      "3340": 33
+    },
+    "nodes": [
+      {
+        "H": 1,
+        "aut": 1,
+        "blue_fiber_size": 1,
+        "classes": [
+          0
+        ],
+        "face_vector": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 1,
+        "node": 0,
+        "primitive_face_vector": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "type": "pure_blue"
+      },
+      {
+        "H": 3,
+        "aut": 3,
+        "blue_fiber_size": 0,
+        "classes": [
+          1,
+          19
+        ],
+        "face_vector": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 2,
+        "node": 1,
+        "primitive_face_vector": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          1,
+          3,
+          4,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 5,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          2,
+          15
+        ],
+        "face_vector": [
+          2,
+          3,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 10,
+        "node": 2,
+        "primitive_face_vector": [
+          2,
+          3,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          2,
+          4,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 3,
+        "aut": 3,
+        "blue_fiber_size": 0,
+        "classes": [
+          3,
+          7
+        ],
+        "face_vector": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 2,
+        "node": 3,
+        "primitive_face_vector": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          0,
+          2,
+          2,
+          2,
+          4,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 9,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          4,
+          13
+        ],
+        "face_vector": [
+          2,
+          0,
+          7,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 18,
+        "node": 4,
+        "primitive_face_vector": [
+          2,
+          0,
+          7,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 5,
+        "aut": 1,
+        "blue_fiber_size": 3,
+        "classes": [
+          5
+        ],
+        "face_vector": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 5,
+        "node": 5,
+        "primitive_face_vector": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          0,
+          2,
+          2,
+          3,
+          3,
+          5
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 9,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          6,
+          17
+        ],
+        "face_vector": [
+          1,
+          1,
+          4,
+          3,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 18,
+        "node": 6,
+        "primitive_face_vector": [
+          1,
+          1,
+          4,
+          3,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          3,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 11,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          8,
+          25
+        ],
+        "face_vector": [
+          1,
+          0,
+          10,
+          0,
+          0,
+          0,
+          11,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 22,
+        "node": 7,
+        "primitive_face_vector": [
+          1,
+          0,
+          10,
+          0,
+          0,
+          0,
+          11,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 15,
+        "aut": 3,
+        "blue_fiber_size": 0,
+        "classes": [
+          9,
+          36
+        ],
+        "face_vector": [
+          0,
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        "fiber_size": 10,
+        "node": 8,
+        "primitive_face_vector": [
+          0,
+          1,
+          3,
+          1,
+          0,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 13,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          10,
+          37
+        ],
+        "face_vector": [
+          0,
+          2,
+          8,
+          3,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0
+        ],
+        "fiber_size": 26,
+        "node": 9,
+        "primitive_face_vector": [
+          0,
+          2,
+          8,
+          3,
+          0,
+          0,
+          0,
+          0,
+          13,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          3,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 15,
+        "aut": 5,
+        "blue_fiber_size": 0,
+        "classes": [
+          11,
+          50
+        ],
+        "face_vector": [
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "fiber_size": 6,
+        "node": 10,
+        "primitive_face_vector": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          5
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 17,
+        "aut": 1,
+        "blue_fiber_size": 5,
+        "classes": [
+          12
+        ],
+        "face_vector": [
+          2,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 17,
+        "node": 11,
+        "primitive_face_vector": [
+          2,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          4
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 15,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          14,
+          18
+        ],
+        "face_vector": [
+          2,
+          4,
+          6,
+          0,
+          6,
+          12,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 30,
+        "node": 12,
+        "primitive_face_vector": [
+          1,
+          2,
+          3,
+          0,
+          3,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 19,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          16,
+          26
+        ],
+        "face_vector": [
+          2,
+          0,
+          6,
+          0,
+          6,
+          16,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 38,
+        "node": 13,
+        "primitive_face_vector": [
+          1,
+          0,
+          3,
+          0,
+          3,
+          8,
+          4,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 27,
+        "aut": 3,
+        "blue_fiber_size": 0,
+        "classes": [
+          20,
+          34
+        ],
+        "face_vector": [
+          0,
+          2,
+          0,
+          2,
+          9,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        "fiber_size": 18,
+        "node": 14,
+        "primitive_face_vector": [
+          0,
+          2,
+          0,
+          2,
+          9,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 23,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          21,
+          33
+        ],
+        "face_vector": [
+          0,
+          5,
+          14,
+          0,
+          9,
+          7,
+          0,
+          0,
+          11,
+          0
+        ],
+        "fiber_size": 46,
+        "node": 15,
+        "primitive_face_vector": [
+          0,
+          5,
+          14,
+          0,
+          9,
+          7,
+          0,
+          0,
+          11,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          2,
+          4,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 17,
+        "aut": 1,
+        "blue_fiber_size": 5,
+        "classes": [
+          22
+        ],
+        "face_vector": [
+          0,
+          4,
+          6,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 17,
+        "node": 16,
+        "primitive_face_vector": [
+          0,
+          4,
+          6,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          4
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 9,
+        "aut": 9,
+        "blue_fiber_size": 1,
+        "classes": [
+          23
+        ],
+        "face_vector": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 1,
+        "node": 17,
+        "primitive_face_vector": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          1,
+          1,
+          4,
+          4,
+          4
+        ],
+        "type": "pure_blue"
+      },
+      {
+        "H": 23,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          24,
+          27
+        ],
+        "face_vector": [
+          2,
+          0,
+          0,
+          0,
+          18,
+          0,
+          26,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 46,
+        "node": 18,
+        "primitive_face_vector": [
+          1,
+          0,
+          0,
+          0,
+          9,
+          0,
+          13,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 33,
+        "aut": 3,
+        "blue_fiber_size": 0,
+        "classes": [
+          28,
+          53
+        ],
+        "face_vector": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          10,
+          10,
+          0,
+          0
+        ],
+        "fiber_size": 22,
+        "node": 19,
+        "primitive_face_vector": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          5,
+          5,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 25,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          29,
+          40
+        ],
+        "face_vector": [
+          0,
+          5,
+          7,
+          0,
+          6,
+          0,
+          10,
+          0,
+          22,
+          0
+        ],
+        "fiber_size": 50,
+        "node": 20,
+        "primitive_face_vector": [
+          0,
+          5,
+          7,
+          0,
+          6,
+          0,
+          10,
+          0,
+          22,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 37,
+        "aut": 1,
+        "blue_fiber_size": 7,
+        "classes": [
+          30
+        ],
+        "face_vector": [
+          0,
+          0,
+          10,
+          0,
+          12,
+          0,
+          0,
+          15,
+          0,
+          0
+        ],
+        "fiber_size": 37,
+        "node": 21,
+        "primitive_face_vector": [
+          0,
+          0,
+          10,
+          0,
+          12,
+          0,
+          0,
+          15,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 33,
+        "aut": 1,
+        "blue_fiber_size": 7,
+        "classes": [
+          31
+        ],
+        "face_vector": [
+          0,
+          0,
+          9,
+          0,
+          12,
+          0,
+          0,
+          0,
+          12,
+          0
+        ],
+        "fiber_size": 33,
+        "node": 22,
+        "primitive_face_vector": [
+          0,
+          0,
+          3,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 31,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          32,
+          39
+        ],
+        "face_vector": [
+          0,
+          0,
+          16,
+          0,
+          0,
+          20,
+          0,
+          15,
+          11,
+          0
+        ],
+        "fiber_size": 62,
+        "node": 23,
+        "primitive_face_vector": [
+          0,
+          0,
+          16,
+          0,
+          0,
+          20,
+          0,
+          15,
+          11,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 29,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          35,
+          41
+        ],
+        "face_vector": [
+          0,
+          0,
+          0,
+          6,
+          9,
+          20,
+          9,
+          0,
+          14,
+          0
+        ],
+        "fiber_size": 58,
+        "node": 24,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          6,
+          9,
+          20,
+          9,
+          0,
+          14,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 37,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          38,
+          49
+        ],
+        "face_vector": [
+          0,
+          0,
+          9,
+          0,
+          0,
+          11,
+          11,
+          15,
+          28,
+          0
+        ],
+        "fiber_size": 74,
+        "node": 25,
+        "primitive_face_vector": [
+          0,
+          0,
+          9,
+          0,
+          0,
+          11,
+          11,
+          15,
+          28,
+          0
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 37,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          42,
+          47
+        ],
+        "face_vector": [
+          0,
+          0,
+          9,
+          0,
+          12,
+          0,
+          26,
+          0,
+          27,
+          0
+        ],
+        "fiber_size": 74,
+        "node": 26,
+        "primitive_face_vector": [
+          0,
+          0,
+          9,
+          0,
+          12,
+          0,
+          26,
+          0,
+          27,
+          0
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 29,
+        "aut": 1,
+        "blue_fiber_size": 7,
+        "classes": [
+          43
+        ],
+        "face_vector": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          9,
+          12,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 29,
+        "node": 27,
+        "primitive_face_vector": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          9,
+          12,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 29,
+        "aut": 1,
+        "blue_fiber_size": 7,
+        "classes": [
+          44
+        ],
+        "face_vector": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          9,
+          0,
+          0,
+          13,
+          0
+        ],
+        "fiber_size": 29,
+        "node": 28,
+        "primitive_face_vector": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          9,
+          0,
+          0,
+          13,
+          0
+        ],
+        "scores": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 33,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          45,
+          48
+        ],
+        "face_vector": [
+          0,
+          0,
+          8,
+          0,
+          9,
+          11,
+          11,
+          0,
+          12,
+          15
+        ],
+        "fiber_size": 66,
+        "node": 29,
+        "primitive_face_vector": [
+          0,
+          0,
+          8,
+          0,
+          9,
+          11,
+          11,
+          0,
+          12,
+          15
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          4
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 41,
+        "aut": 1,
+        "blue_fiber_size": 9,
+        "classes": [
+          46
+        ],
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          14,
+          0,
+          0,
+          15
+        ],
+        "fiber_size": 41,
+        "node": 30,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          0,
+          14,
+          0,
+          0,
+          15
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 43,
+        "aut": 1,
+        "blue_fiber_size": 0,
+        "classes": [
+          51,
+          52
+        ],
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          13,
+          15,
+          30,
+          15
+        ],
+        "fiber_size": 86,
+        "node": 31,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          13,
+          15,
+          30,
+          15
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        "type": "pure_black"
+      },
+      {
+        "H": 45,
+        "aut": 3,
+        "blue_fiber_size": 9,
+        "classes": [
+          54
+        ],
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          0,
+          0,
+          0
+        ],
+        "fiber_size": 15,
+        "node": 32,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        "type": "mixed"
+      },
+      {
+        "H": 45,
+        "aut": 3,
+        "blue_fiber_size": 3,
+        "classes": [
+          55
+        ],
+        "face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15,
+          0
+        ],
+        "fiber_size": 15,
+        "node": 33,
+        "primitive_face_vector": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "scores": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ],
+        "type": "mixed"
+      }
+    ],
+    "ordinary_classes": 56,
+    "self_converse": 12,
+    "tiles": [
+      [
+        6,
+        1
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        6,
+        4
+      ]
+    ]
+  },
+  "checks": {
+    "coordinate_primes_are_external_labels": true,
+    "failure_gates_survive_optimization": true,
+    "full_labelled_n3_n5": true,
+    "primitive_profiles_injective_n4_n6": true
+  },
+  "mixed_axis_counterexample": {
+    "blue_fiber_size": 3,
+    "construction": "1 -> strong_order4 -> 1",
+    "fiber_size": 5,
+    "node": 5,
+    "order": 6,
+    "primitive_profile": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "raw_profile": [
+      0,
+      0,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "non_lumpability_witness": {
+    "individual_lift_counts": [
+      1,
+      0
+    ],
+    "lower_masks": [
+      2,
+      4
+    ],
+    "lower_merged_node": 1,
+    "upper_masks": [
+      16
+    ],
+    "upper_merged_node": 3
+  }
+}
