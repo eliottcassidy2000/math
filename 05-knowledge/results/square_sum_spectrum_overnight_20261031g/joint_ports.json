@@ -1,0 +1,33 @@
+{
+  "coarse_fine_order_hostile": {
+    "N": 70312,
+    "coarse_bits": 25,
+    "ordered_pairs": [
+      [
+        6562,
+        33438
+      ],
+      [
+        39088,
+        36537
+      ]
+    ],
+    "refined_bits": 625,
+    "refined_free_bits": 623
+  },
+  "minimum_signed_edge_cost": -28,
+  "mixed_edge_order_hostile": {
+    "order": [
+      1438,
+      1587
+    ],
+    "required_added_edge": [
+      162,
+      1438
+    ]
+  },
+  "scope": "Joint edge/rooted-order relation on the exact family; Hamilton-polynomial factorization and optimization are graph-complete after primitive refinement.",
+  "status": "passed",
+  "weighted_complete_fibre": 64,
+  "weighted_sum": 884736
+}

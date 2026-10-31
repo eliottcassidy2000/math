@@ -1,0 +1,155 @@
+{
+  "commands_from_packet_directory": [
+    "c++ -std=c++17 -O2 power_sources.cpp -o /tmp/power_sources",
+    "/tmp/power_sources 6 2000",
+    "/tmp/power_sources 6 0",
+    "/tmp/power_sources 7 0 fixed",
+    "/tmp/power_sources 8 0 fixed",
+    "c++ -std=c++17 -O0 power_sources.cpp -o /tmp/power_sources_O0",
+    "/tmp/power_sources_O0 6 2000",
+    "/tmp/power_sources_O0 7 0 fixed",
+    "c++ -std=c++17 -O2 target_sources.cpp -o /tmp/target_sources",
+    "/tmp/target_sources 50000",
+    "c++ -std=c++17 -O2 neighbor_source.cpp -o /tmp/neighbor_source",
+    "/tmp/neighbor_source",
+    "c++ -std=c++17 -O2 insertion_source.cpp -o /tmp/insertion_source",
+    "/tmp/insertion_source",
+    "python3 audit_power_sources.py power_sources.json",
+    "python3 audit_power_sources.py power_sources_complete7.json",
+    "python3 audit_power_sources.py power_sources_complete8.json",
+    "python3 audit_power_sources.py target_sources.json",
+    "python3 deficit_nine_family.py",
+    "python3 feedback_profile.py",
+    "python3 order_atlas.py",
+    "python3 joint_ports.py",
+    "python3 remark_probe.py",
+    "python3 window_certificate.py",
+    "python3 verify_packet.py"
+  ],
+  "controls": {
+    "all_labelled_order6_deficits": 14,
+    "all_labelled_parent_order6": 33867,
+    "deficit9_actual_exponents": [
+      5,
+      17
+    ],
+    "deficit9_exact_FAS": 6,
+    "deficit9_exact_FVS": 3,
+    "deficit9_minimum_source_parent_order": 7,
+    "feedback_DP_tail_lengths": [
+      1,
+      7
+    ],
+    "feedback_clone_slots_per_order": 9,
+    "feedback_core_orders_enumerated": 40320,
+    "fixed_path_order7_deficits": 80,
+    "fixed_path_order7_presentations": 33868,
+    "fixed_path_order8_cuts": 539001930,
+    "fixed_path_order8_deficits": 548,
+    "fixed_path_order8_presentations": 2131020,
+    "native_order_free_bits_after_extra_pair": 2400,
+    "native_order_source_bits": 2401,
+    "random_higher_order_discovery_sources": 365,
+    "remark_dyadic_survivors": 1,
+    "remark_tests": 96,
+    "rooted_order_complete_four_port_tests": 120,
+    "signed_cost_fibre_minimum": -28,
+    "target237_insertions_without_hit": 1536,
+    "target237_neighbors_without_hit": 1998,
+    "target_order9_sampled_parents": 50000,
+    "targeted_sources_audited": 3,
+    "uniform_common_scale_adjacency_checks": 236,
+    "uniform_window_deficits": [
+      1,
+      235
+    ],
+    "uniform_window_exponent_threshold": 14,
+    "uniform_window_vertex_overhead": 1,
+    "weighted_complete_cycle_fibre": 64,
+    "weighted_fibre_sum": 884736
+  },
+  "normal_optimized_pairs": [
+    {
+      "json_equal": true,
+      "normal": "audit_complete7.json",
+      "optimized": "audit_complete7.optimized.json",
+      "sha256": "ba0184c89aed6e8ca187f6570d58d7f70eff49c8f5a4de0633e17946d0a4d19f"
+    },
+    {
+      "json_equal": true,
+      "normal": "audit_complete8.json",
+      "optimized": "audit_complete8.optimized.json",
+      "sha256": "bbe55d4c541d59a89d6117e19ed05df64e5a950bbcc4ae20dea03038745bd399"
+    },
+    {
+      "json_equal": true,
+      "normal": "audit_power_sources.json",
+      "optimized": "audit_power_sources.optimized.json",
+      "sha256": "e6c2d278997c8cd18175ec03ecdebc994ba8af41a58667d7580bf3f3a21dee71"
+    },
+    {
+      "json_equal": true,
+      "normal": "audit_target_sources.json",
+      "optimized": "audit_target_sources.optimized.json",
+      "sha256": "c26aac86dc30a2c82cf9157ab86d15a6e3e45a0bfb631e07daafe8cac564071f"
+    },
+    {
+      "json_equal": true,
+      "normal": "deficit_nine_family.json",
+      "optimized": "deficit_nine_family.optimized.json",
+      "sha256": "7df297856bcc85eab8ed01ba119203457b390478b62ad3f167395ff896417768"
+    },
+    {
+      "json_equal": true,
+      "normal": "feedback_profile.json",
+      "optimized": "feedback_profile.optimized.json",
+      "sha256": "405fa4a4de9dc056f9eefe9706dd4a90c721b519996c95638013c4f8198323fa"
+    },
+    {
+      "json_equal": true,
+      "normal": "joint_ports.json",
+      "optimized": "joint_ports.optimized.json",
+      "sha256": "5f1fe52e7d66339d7305b6bc9b9d1cadbce926df15fa41e312698ff216defbb8"
+    },
+    {
+      "json_equal": true,
+      "normal": "order_atlas.json",
+      "optimized": "order_atlas.optimized.json",
+      "sha256": "7115f24d96a4cadbc32f69c34434834c98fcb5c6f5489535f31e9be97edbb71e"
+    },
+    {
+      "json_equal": true,
+      "normal": "remark_probe.json",
+      "optimized": "remark_probe.optimized.json",
+      "sha256": "311096a895fea8e5de9784cada356499515f0bf160c3932886fc303bff391570"
+    },
+    {
+      "json_equal": true,
+      "normal": "window_certificate.json",
+      "optimized": "window_certificate.optimized.json",
+      "sha256": "bc3001b6eebd9218b0e54a3f26e8949e76c938832dda808fd1e0b30e444f414d"
+    },
+    {
+      "json_equal": true,
+      "normal": "power_sources.json",
+      "optimized": "power_sources.O0.json",
+      "sha256": "dc4203b12b48de02ec4f52f401b248d3b179d2ede9fe60b59c3b01d38d7cc084"
+    },
+    {
+      "json_equal": true,
+      "normal": "power_sources_complete7.json",
+      "optimized": "power_sources_complete7.O0.json",
+      "sha256": "3b93938fc965a1a06a344942d7bb0ce85da021e62afda11b23f049d58354be38"
+    }
+  ],
+  "parent_commit": "b9aa14f16edd081f60485f53d416b3b2a55759eb",
+  "pre_release_repairs": [
+    "Normalize native undirected reference direction at1--8 before comparing rooted orders.",
+    "Write optimizer decisions by numeric bit address rather than template dictionary iteration order.",
+    "Keep the candidate method card local: adding it to META-PATTERNS exceeded the bounded startup byte budget.",
+    "Renamed C++ main helper given an explicit return to remove the unused-function compiler warning."
+  ],
+  "review": "Same-agent proof audit. Independent endpoint/adjacency DP for every retained source, independent feedback-arc DP, actual edge-union cycle walking, and complete small query/fibre checks. No independent subagent or second-person audit.",
+  "scope": "The six-arc and window theorems use finite actual sources plus an all-length recurrence. The exact order/weight solver is complete only for the fully refined constructed square-sum subgraph. The order-eight absence classification has one complete O2 producer; every retained witness has a separate adjacency audit. Sampled no-hits never become global exclusions. Universal raw-H completeness remains open.",
+  "status": "passed"
+}

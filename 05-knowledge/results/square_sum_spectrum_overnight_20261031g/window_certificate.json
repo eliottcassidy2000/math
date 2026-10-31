@@ -1,0 +1,3835 @@
+{
+  "common_scale_controls": [
+    {
+      "deficit": 1,
+      "k": 14,
+      "raw_H": 16383,
+      "vertices": 13
+    },
+    {
+      "deficit": 1,
+      "k": 15,
+      "raw_H": 32767,
+      "vertices": 14
+    },
+    {
+      "deficit": 3,
+      "k": 14,
+      "raw_H": 16381,
+      "vertices": 15
+    },
+    {
+      "deficit": 3,
+      "k": 15,
+      "raw_H": 32765,
+      "vertices": 16
+    },
+    {
+      "deficit": 5,
+      "k": 14,
+      "raw_H": 16379,
+      "vertices": 12
+    },
+    {
+      "deficit": 5,
+      "k": 15,
+      "raw_H": 32763,
+      "vertices": 13
+    },
+    {
+      "deficit": 7,
+      "k": 14,
+      "raw_H": 16377,
+      "vertices": 13
+    },
+    {
+      "deficit": 7,
+      "k": 15,
+      "raw_H": 32761,
+      "vertices": 14
+    },
+    {
+      "deficit": 9,
+      "k": 14,
+      "raw_H": 16375,
+      "vertices": 13
+    },
+    {
+      "deficit": 9,
+      "k": 15,
+      "raw_H": 32759,
+      "vertices": 14
+    },
+    {
+      "deficit": 11,
+      "k": 14,
+      "raw_H": 16373,
+      "vertices": 14
+    },
+    {
+      "deficit": 11,
+      "k": 15,
+      "raw_H": 32757,
+      "vertices": 15
+    },
+    {
+      "deficit": 13,
+      "k": 14,
+      "raw_H": 16371,
+      "vertices": 15
+    },
+    {
+      "deficit": 13,
+      "k": 15,
+      "raw_H": 32755,
+      "vertices": 16
+    },
+    {
+      "deficit": 15,
+      "k": 14,
+      "raw_H": 16369,
+      "vertices": 12
+    },
+    {
+      "deficit": 15,
+      "k": 15,
+      "raw_H": 32753,
+      "vertices": 13
+    },
+    {
+      "deficit": 17,
+      "k": 14,
+      "raw_H": 16367,
+      "vertices": 14
+    },
+    {
+      "deficit": 17,
+      "k": 15,
+      "raw_H": 32751,
+      "vertices": 15
+    },
+    {
+      "deficit": 19,
+      "k": 14,
+      "raw_H": 16365,
+      "vertices": 14
+    },
+    {
+      "deficit": 19,
+      "k": 15,
+      "raw_H": 32749,
+      "vertices": 15
+    },
+    {
+      "deficit": 21,
+      "k": 14,
+      "raw_H": 16363,
+      "vertices": 13
+    },
+    {
+      "deficit": 21,
+      "k": 15,
+      "raw_H": 32747,
+      "vertices": 14
+    },
+    {
+      "deficit": 23,
+      "k": 14,
+      "raw_H": 16361,
+      "vertices": 14
+    },
+    {
+      "deficit": 23,
+      "k": 15,
+      "raw_H": 32745,
+      "vertices": 15
+    },
+    {
+      "deficit": 25,
+      "k": 14,
+      "raw_H": 16359,
+      "vertices": 14
+    },
+    {
+      "deficit": 25,
+      "k": 15,
+      "raw_H": 32743,
+      "vertices": 15
+    },
+    {
+      "deficit": 27,
+      "k": 14,
+      "raw_H": 16357,
+      "vertices": 14
+    },
+    {
+      "deficit": 27,
+      "k": 15,
+      "raw_H": 32741,
+      "vertices": 15
+    },
+    {
+      "deficit": 29,
+      "k": 14,
+      "raw_H": 16355,
+      "vertices": 13
+    },
+    {
+      "deficit": 29,
+      "k": 15,
+      "raw_H": 32739,
+      "vertices": 14
+    },
+    {
+      "deficit": 31,
+      "k": 14,
+      "raw_H": 16353,
+      "vertices": 12
+    },
+    {
+      "deficit": 31,
+      "k": 15,
+      "raw_H": 32737,
+      "vertices": 13
+    },
+    {
+      "deficit": 33,
+      "k": 14,
+      "raw_H": 16351,
+      "vertices": 13
+    },
+    {
+      "deficit": 33,
+      "k": 15,
+      "raw_H": 32735,
+      "vertices": 14
+    },
+    {
+      "deficit": 35,
+      "k": 14,
+      "raw_H": 16349,
+      "vertices": 14
+    },
+    {
+      "deficit": 35,
+      "k": 15,
+      "raw_H": 32733,
+      "vertices": 15
+    },
+    {
+      "deficit": 37,
+      "k": 14,
+      "raw_H": 16347,
+      "vertices": 14
+    },
+    {
+      "deficit": 37,
+      "k": 15,
+      "raw_H": 32731,
+      "vertices": 15
+    },
+    {
+      "deficit": 39,
+      "k": 14,
+      "raw_H": 16345,
+      "vertices": 14
+    },
+    {
+      "deficit": 39,
+      "k": 15,
+      "raw_H": 32729,
+      "vertices": 15
+    },
+    {
+      "deficit": 41,
+      "k": 14,
+      "raw_H": 16343,
+      "vertices": 14
+    },
+    {
+      "deficit": 41,
+      "k": 15,
+      "raw_H": 32727,
+      "vertices": 15
+    },
+    {
+      "deficit": 43,
+      "k": 14,
+      "raw_H": 16341,
+      "vertices": 13
+    },
+    {
+      "deficit": 43,
+      "k": 15,
+      "raw_H": 32725,
+      "vertices": 14
+    },
+    {
+      "deficit": 45,
+      "k": 14,
+      "raw_H": 16339,
+      "vertices": 14
+    },
+    {
+      "deficit": 45,
+      "k": 15,
+      "raw_H": 32723,
+      "vertices": 15
+    },
+    {
+      "deficit": 47,
+      "k": 14,
+      "raw_H": 16337,
+      "vertices": 12
+    },
+    {
+      "deficit": 47,
+      "k": 15,
+      "raw_H": 32721,
+      "vertices": 13
+    },
+    {
+      "deficit": 49,
+      "k": 14,
+      "raw_H": 16335,
+      "vertices": 13
+    },
+    {
+      "deficit": 49,
+      "k": 15,
+      "raw_H": 32719,
+      "vertices": 14
+    },
+    {
+      "deficit": 51,
+      "k": 14,
+      "raw_H": 16333,
+      "vertices": 15
+    },
+    {
+      "deficit": 51,
+      "k": 15,
+      "raw_H": 32717,
+      "vertices": 16
+    },
+    {
+      "deficit": 53,
+      "k": 14,
+      "raw_H": 16331,
+      "vertices": 13
+    },
+    {
+      "deficit": 53,
+      "k": 15,
+      "raw_H": 32715,
+      "vertices": 14
+    },
+    {
+      "deficit": 55,
+      "k": 14,
+      "raw_H": 16329,
+      "vertices": 13
+    },
+    {
+      "deficit": 55,
+      "k": 15,
+      "raw_H": 32713,
+      "vertices": 14
+    },
+    {
+      "deficit": 57,
+      "k": 14,
+      "raw_H": 16327,
+      "vertices": 12
+    },
+    {
+      "deficit": 57,
+      "k": 15,
+      "raw_H": 32711,
+      "vertices": 13
+    },
+    {
+      "deficit": 59,
+      "k": 14,
+      "raw_H": 16325,
+      "vertices": 14
+    },
+    {
+      "deficit": 59,
+      "k": 15,
+      "raw_H": 32709,
+      "vertices": 15
+    },
+    {
+      "deficit": 61,
+      "k": 14,
+      "raw_H": 16323,
+      "vertices": 13
+    },
+    {
+      "deficit": 61,
+      "k": 15,
+      "raw_H": 32707,
+      "vertices": 14
+    },
+    {
+      "deficit": 63,
+      "k": 14,
+      "raw_H": 16321,
+      "vertices": 13
+    },
+    {
+      "deficit": 63,
+      "k": 15,
+      "raw_H": 32705,
+      "vertices": 14
+    },
+    {
+      "deficit": 65,
+      "k": 14,
+      "raw_H": 16319,
+      "vertices": 13
+    },
+    {
+      "deficit": 65,
+      "k": 15,
+      "raw_H": 32703,
+      "vertices": 14
+    },
+    {
+      "deficit": 67,
+      "k": 14,
+      "raw_H": 16317,
+      "vertices": 14
+    },
+    {
+      "deficit": 67,
+      "k": 15,
+      "raw_H": 32701,
+      "vertices": 15
+    },
+    {
+      "deficit": 69,
+      "k": 14,
+      "raw_H": 16315,
+      "vertices": 14
+    },
+    {
+      "deficit": 69,
+      "k": 15,
+      "raw_H": 32699,
+      "vertices": 15
+    },
+    {
+      "deficit": 71,
+      "k": 14,
+      "raw_H": 16313,
+      "vertices": 13
+    },
+    {
+      "deficit": 71,
+      "k": 15,
+      "raw_H": 32697,
+      "vertices": 14
+    },
+    {
+      "deficit": 73,
+      "k": 14,
+      "raw_H": 16311,
+      "vertices": 13
+    },
+    {
+      "deficit": 73,
+      "k": 15,
+      "raw_H": 32695,
+      "vertices": 14
+    },
+    {
+      "deficit": 75,
+      "k": 14,
+      "raw_H": 16309,
+      "vertices": 13
+    },
+    {
+      "deficit": 75,
+      "k": 15,
+      "raw_H": 32693,
+      "vertices": 14
+    },
+    {
+      "deficit": 77,
+      "k": 14,
+      "raw_H": 16307,
+      "vertices": 13
+    },
+    {
+      "deficit": 77,
+      "k": 15,
+      "raw_H": 32691,
+      "vertices": 14
+    },
+    {
+      "deficit": 79,
+      "k": 14,
+      "raw_H": 16305,
+      "vertices": 13
+    },
+    {
+      "deficit": 79,
+      "k": 15,
+      "raw_H": 32689,
+      "vertices": 14
+    },
+    {
+      "deficit": 81,
+      "k": 14,
+      "raw_H": 16303,
+      "vertices": 13
+    },
+    {
+      "deficit": 81,
+      "k": 15,
+      "raw_H": 32687,
+      "vertices": 14
+    },
+    {
+      "deficit": 83,
+      "k": 14,
+      "raw_H": 16301,
+      "vertices": 13
+    },
+    {
+      "deficit": 83,
+      "k": 15,
+      "raw_H": 32685,
+      "vertices": 14
+    },
+    {
+      "deficit": 85,
+      "k": 14,
+      "raw_H": 16299,
+      "vertices": 13
+    },
+    {
+      "deficit": 85,
+      "k": 15,
+      "raw_H": 32683,
+      "vertices": 14
+    },
+    {
+      "deficit": 87,
+      "k": 14,
+      "raw_H": 16297,
+      "vertices": 14
+    },
+    {
+      "deficit": 87,
+      "k": 15,
+      "raw_H": 32681,
+      "vertices": 15
+    },
+    {
+      "deficit": 89,
+      "k": 14,
+      "raw_H": 16295,
+      "vertices": 13
+    },
+    {
+      "deficit": 89,
+      "k": 15,
+      "raw_H": 32679,
+      "vertices": 14
+    },
+    {
+      "deficit": 91,
+      "k": 14,
+      "raw_H": 16293,
+      "vertices": 14
+    },
+    {
+      "deficit": 91,
+      "k": 15,
+      "raw_H": 32677,
+      "vertices": 15
+    },
+    {
+      "deficit": 93,
+      "k": 14,
+      "raw_H": 16291,
+      "vertices": 13
+    },
+    {
+      "deficit": 93,
+      "k": 15,
+      "raw_H": 32675,
+      "vertices": 14
+    },
+    {
+      "deficit": 95,
+      "k": 14,
+      "raw_H": 16289,
+      "vertices": 12
+    },
+    {
+      "deficit": 95,
+      "k": 15,
+      "raw_H": 32673,
+      "vertices": 13
+    },
+    {
+      "deficit": 97,
+      "k": 14,
+      "raw_H": 16287,
+      "vertices": 13
+    },
+    {
+      "deficit": 97,
+      "k": 15,
+      "raw_H": 32671,
+      "vertices": 14
+    },
+    {
+      "deficit": 99,
+      "k": 14,
+      "raw_H": 16285,
+      "vertices": 13
+    },
+    {
+      "deficit": 99,
+      "k": 15,
+      "raw_H": 32669,
+      "vertices": 14
+    },
+    {
+      "deficit": 101,
+      "k": 14,
+      "raw_H": 16283,
+      "vertices": 14
+    },
+    {
+      "deficit": 101,
+      "k": 15,
+      "raw_H": 32667,
+      "vertices": 15
+    },
+    {
+      "deficit": 103,
+      "k": 14,
+      "raw_H": 16281,
+      "vertices": 13
+    },
+    {
+      "deficit": 103,
+      "k": 15,
+      "raw_H": 32665,
+      "vertices": 14
+    },
+    {
+      "deficit": 105,
+      "k": 14,
+      "raw_H": 16279,
+      "vertices": 13
+    },
+    {
+      "deficit": 105,
+      "k": 15,
+      "raw_H": 32663,
+      "vertices": 14
+    },
+    {
+      "deficit": 107,
+      "k": 14,
+      "raw_H": 16277,
+      "vertices": 13
+    },
+    {
+      "deficit": 107,
+      "k": 15,
+      "raw_H": 32661,
+      "vertices": 14
+    },
+    {
+      "deficit": 109,
+      "k": 14,
+      "raw_H": 16275,
+      "vertices": 13
+    },
+    {
+      "deficit": 109,
+      "k": 15,
+      "raw_H": 32659,
+      "vertices": 14
+    },
+    {
+      "deficit": 111,
+      "k": 14,
+      "raw_H": 16273,
+      "vertices": 13
+    },
+    {
+      "deficit": 111,
+      "k": 15,
+      "raw_H": 32657,
+      "vertices": 14
+    },
+    {
+      "deficit": 113,
+      "k": 14,
+      "raw_H": 16271,
+      "vertices": 12
+    },
+    {
+      "deficit": 113,
+      "k": 15,
+      "raw_H": 32655,
+      "vertices": 13
+    },
+    {
+      "deficit": 115,
+      "k": 14,
+      "raw_H": 16269,
+      "vertices": 12
+    },
+    {
+      "deficit": 115,
+      "k": 15,
+      "raw_H": 32653,
+      "vertices": 13
+    },
+    {
+      "deficit": 117,
+      "k": 14,
+      "raw_H": 16267,
+      "vertices": 11
+    },
+    {
+      "deficit": 117,
+      "k": 15,
+      "raw_H": 32651,
+      "vertices": 12
+    },
+    {
+      "deficit": 119,
+      "k": 14,
+      "raw_H": 16265,
+      "vertices": 14
+    },
+    {
+      "deficit": 119,
+      "k": 15,
+      "raw_H": 32649,
+      "vertices": 15
+    },
+    {
+      "deficit": 121,
+      "k": 14,
+      "raw_H": 16263,
+      "vertices": 14
+    },
+    {
+      "deficit": 121,
+      "k": 15,
+      "raw_H": 32647,
+      "vertices": 15
+    },
+    {
+      "deficit": 123,
+      "k": 14,
+      "raw_H": 16261,
+      "vertices": 13
+    },
+    {
+      "deficit": 123,
+      "k": 15,
+      "raw_H": 32645,
+      "vertices": 14
+    },
+    {
+      "deficit": 125,
+      "k": 14,
+      "raw_H": 16259,
+      "vertices": 13
+    },
+    {
+      "deficit": 125,
+      "k": 15,
+      "raw_H": 32643,
+      "vertices": 14
+    },
+    {
+      "deficit": 127,
+      "k": 14,
+      "raw_H": 16257,
+      "vertices": 13
+    },
+    {
+      "deficit": 127,
+      "k": 15,
+      "raw_H": 32641,
+      "vertices": 14
+    },
+    {
+      "deficit": 129,
+      "k": 14,
+      "raw_H": 16255,
+      "vertices": 13
+    },
+    {
+      "deficit": 129,
+      "k": 15,
+      "raw_H": 32639,
+      "vertices": 14
+    },
+    {
+      "deficit": 131,
+      "k": 14,
+      "raw_H": 16253,
+      "vertices": 12
+    },
+    {
+      "deficit": 131,
+      "k": 15,
+      "raw_H": 32637,
+      "vertices": 13
+    },
+    {
+      "deficit": 133,
+      "k": 14,
+      "raw_H": 16251,
+      "vertices": 14
+    },
+    {
+      "deficit": 133,
+      "k": 15,
+      "raw_H": 32635,
+      "vertices": 15
+    },
+    {
+      "deficit": 135,
+      "k": 14,
+      "raw_H": 16249,
+      "vertices": 13
+    },
+    {
+      "deficit": 135,
+      "k": 15,
+      "raw_H": 32633,
+      "vertices": 14
+    },
+    {
+      "deficit": 137,
+      "k": 14,
+      "raw_H": 16247,
+      "vertices": 14
+    },
+    {
+      "deficit": 137,
+      "k": 15,
+      "raw_H": 32631,
+      "vertices": 15
+    },
+    {
+      "deficit": 139,
+      "k": 14,
+      "raw_H": 16245,
+      "vertices": 13
+    },
+    {
+      "deficit": 139,
+      "k": 15,
+      "raw_H": 32629,
+      "vertices": 14
+    },
+    {
+      "deficit": 141,
+      "k": 14,
+      "raw_H": 16243,
+      "vertices": 13
+    },
+    {
+      "deficit": 141,
+      "k": 15,
+      "raw_H": 32627,
+      "vertices": 14
+    },
+    {
+      "deficit": 143,
+      "k": 14,
+      "raw_H": 16241,
+      "vertices": 14
+    },
+    {
+      "deficit": 143,
+      "k": 15,
+      "raw_H": 32625,
+      "vertices": 15
+    },
+    {
+      "deficit": 145,
+      "k": 14,
+      "raw_H": 16239,
+      "vertices": 13
+    },
+    {
+      "deficit": 145,
+      "k": 15,
+      "raw_H": 32623,
+      "vertices": 14
+    },
+    {
+      "deficit": 147,
+      "k": 14,
+      "raw_H": 16237,
+      "vertices": 13
+    },
+    {
+      "deficit": 147,
+      "k": 15,
+      "raw_H": 32621,
+      "vertices": 14
+    },
+    {
+      "deficit": 149,
+      "k": 14,
+      "raw_H": 16235,
+      "vertices": 12
+    },
+    {
+      "deficit": 149,
+      "k": 15,
+      "raw_H": 32619,
+      "vertices": 13
+    },
+    {
+      "deficit": 151,
+      "k": 14,
+      "raw_H": 16233,
+      "vertices": 13
+    },
+    {
+      "deficit": 151,
+      "k": 15,
+      "raw_H": 32617,
+      "vertices": 14
+    },
+    {
+      "deficit": 153,
+      "k": 14,
+      "raw_H": 16231,
+      "vertices": 12
+    },
+    {
+      "deficit": 153,
+      "k": 15,
+      "raw_H": 32615,
+      "vertices": 13
+    },
+    {
+      "deficit": 155,
+      "k": 14,
+      "raw_H": 16229,
+      "vertices": 13
+    },
+    {
+      "deficit": 155,
+      "k": 15,
+      "raw_H": 32613,
+      "vertices": 14
+    },
+    {
+      "deficit": 157,
+      "k": 14,
+      "raw_H": 16227,
+      "vertices": 13
+    },
+    {
+      "deficit": 157,
+      "k": 15,
+      "raw_H": 32611,
+      "vertices": 14
+    },
+    {
+      "deficit": 159,
+      "k": 14,
+      "raw_H": 16225,
+      "vertices": 13
+    },
+    {
+      "deficit": 159,
+      "k": 15,
+      "raw_H": 32609,
+      "vertices": 14
+    },
+    {
+      "deficit": 161,
+      "k": 14,
+      "raw_H": 16223,
+      "vertices": 13
+    },
+    {
+      "deficit": 161,
+      "k": 15,
+      "raw_H": 32607,
+      "vertices": 14
+    },
+    {
+      "deficit": 163,
+      "k": 14,
+      "raw_H": 16221,
+      "vertices": 12
+    },
+    {
+      "deficit": 163,
+      "k": 15,
+      "raw_H": 32605,
+      "vertices": 13
+    },
+    {
+      "deficit": 165,
+      "k": 14,
+      "raw_H": 16219,
+      "vertices": 12
+    },
+    {
+      "deficit": 165,
+      "k": 15,
+      "raw_H": 32603,
+      "vertices": 13
+    },
+    {
+      "deficit": 167,
+      "k": 14,
+      "raw_H": 16217,
+      "vertices": 12
+    },
+    {
+      "deficit": 167,
+      "k": 15,
+      "raw_H": 32601,
+      "vertices": 13
+    },
+    {
+      "deficit": 169,
+      "k": 14,
+      "raw_H": 16215,
+      "vertices": 12
+    },
+    {
+      "deficit": 169,
+      "k": 15,
+      "raw_H": 32599,
+      "vertices": 13
+    },
+    {
+      "deficit": 171,
+      "k": 14,
+      "raw_H": 16213,
+      "vertices": 13
+    },
+    {
+      "deficit": 171,
+      "k": 15,
+      "raw_H": 32597,
+      "vertices": 14
+    },
+    {
+      "deficit": 173,
+      "k": 14,
+      "raw_H": 16211,
+      "vertices": 13
+    },
+    {
+      "deficit": 173,
+      "k": 15,
+      "raw_H": 32595,
+      "vertices": 14
+    },
+    {
+      "deficit": 175,
+      "k": 14,
+      "raw_H": 16209,
+      "vertices": 13
+    },
+    {
+      "deficit": 175,
+      "k": 15,
+      "raw_H": 32593,
+      "vertices": 14
+    },
+    {
+      "deficit": 177,
+      "k": 14,
+      "raw_H": 16207,
+      "vertices": 12
+    },
+    {
+      "deficit": 177,
+      "k": 15,
+      "raw_H": 32591,
+      "vertices": 13
+    },
+    {
+      "deficit": 179,
+      "k": 14,
+      "raw_H": 16205,
+      "vertices": 12
+    },
+    {
+      "deficit": 179,
+      "k": 15,
+      "raw_H": 32589,
+      "vertices": 13
+    },
+    {
+      "deficit": 181,
+      "k": 14,
+      "raw_H": 16203,
+      "vertices": 12
+    },
+    {
+      "deficit": 181,
+      "k": 15,
+      "raw_H": 32587,
+      "vertices": 13
+    },
+    {
+      "deficit": 183,
+      "k": 14,
+      "raw_H": 16201,
+      "vertices": 12
+    },
+    {
+      "deficit": 183,
+      "k": 15,
+      "raw_H": 32585,
+      "vertices": 13
+    },
+    {
+      "deficit": 185,
+      "k": 14,
+      "raw_H": 16199,
+      "vertices": 13
+    },
+    {
+      "deficit": 185,
+      "k": 15,
+      "raw_H": 32583,
+      "vertices": 14
+    },
+    {
+      "deficit": 187,
+      "k": 14,
+      "raw_H": 16197,
+      "vertices": 13
+    },
+    {
+      "deficit": 187,
+      "k": 15,
+      "raw_H": 32581,
+      "vertices": 14
+    },
+    {
+      "deficit": 189,
+      "k": 14,
+      "raw_H": 16195,
+      "vertices": 12
+    },
+    {
+      "deficit": 189,
+      "k": 15,
+      "raw_H": 32579,
+      "vertices": 13
+    },
+    {
+      "deficit": 191,
+      "k": 14,
+      "raw_H": 16193,
+      "vertices": 13
+    },
+    {
+      "deficit": 191,
+      "k": 15,
+      "raw_H": 32577,
+      "vertices": 14
+    },
+    {
+      "deficit": 193,
+      "k": 14,
+      "raw_H": 16191,
+      "vertices": 13
+    },
+    {
+      "deficit": 193,
+      "k": 15,
+      "raw_H": 32575,
+      "vertices": 14
+    },
+    {
+      "deficit": 195,
+      "k": 14,
+      "raw_H": 16189,
+      "vertices": 13
+    },
+    {
+      "deficit": 195,
+      "k": 15,
+      "raw_H": 32573,
+      "vertices": 14
+    },
+    {
+      "deficit": 197,
+      "k": 14,
+      "raw_H": 16187,
+      "vertices": 12
+    },
+    {
+      "deficit": 197,
+      "k": 15,
+      "raw_H": 32571,
+      "vertices": 13
+    },
+    {
+      "deficit": 199,
+      "k": 14,
+      "raw_H": 16185,
+      "vertices": 13
+    },
+    {
+      "deficit": 199,
+      "k": 15,
+      "raw_H": 32569,
+      "vertices": 14
+    },
+    {
+      "deficit": 201,
+      "k": 14,
+      "raw_H": 16183,
+      "vertices": 12
+    },
+    {
+      "deficit": 201,
+      "k": 15,
+      "raw_H": 32567,
+      "vertices": 13
+    },
+    {
+      "deficit": 203,
+      "k": 14,
+      "raw_H": 16181,
+      "vertices": 13
+    },
+    {
+      "deficit": 203,
+      "k": 15,
+      "raw_H": 32565,
+      "vertices": 14
+    },
+    {
+      "deficit": 205,
+      "k": 14,
+      "raw_H": 16179,
+      "vertices": 13
+    },
+    {
+      "deficit": 205,
+      "k": 15,
+      "raw_H": 32563,
+      "vertices": 14
+    },
+    {
+      "deficit": 207,
+      "k": 14,
+      "raw_H": 16177,
+      "vertices": 13
+    },
+    {
+      "deficit": 207,
+      "k": 15,
+      "raw_H": 32561,
+      "vertices": 14
+    },
+    {
+      "deficit": 209,
+      "k": 14,
+      "raw_H": 16175,
+      "vertices": 13
+    },
+    {
+      "deficit": 209,
+      "k": 15,
+      "raw_H": 32559,
+      "vertices": 14
+    },
+    {
+      "deficit": 211,
+      "k": 14,
+      "raw_H": 16173,
+      "vertices": 12
+    },
+    {
+      "deficit": 211,
+      "k": 15,
+      "raw_H": 32557,
+      "vertices": 13
+    },
+    {
+      "deficit": 213,
+      "k": 14,
+      "raw_H": 16171,
+      "vertices": 13
+    },
+    {
+      "deficit": 213,
+      "k": 15,
+      "raw_H": 32555,
+      "vertices": 14
+    },
+    {
+      "deficit": 215,
+      "k": 14,
+      "raw_H": 16169,
+      "vertices": 14
+    },
+    {
+      "deficit": 215,
+      "k": 15,
+      "raw_H": 32553,
+      "vertices": 15
+    },
+    {
+      "deficit": 217,
+      "k": 14,
+      "raw_H": 16167,
+      "vertices": 13
+    },
+    {
+      "deficit": 217,
+      "k": 15,
+      "raw_H": 32551,
+      "vertices": 14
+    },
+    {
+      "deficit": 219,
+      "k": 14,
+      "raw_H": 16165,
+      "vertices": 14
+    },
+    {
+      "deficit": 219,
+      "k": 15,
+      "raw_H": 32549,
+      "vertices": 15
+    },
+    {
+      "deficit": 221,
+      "k": 14,
+      "raw_H": 16163,
+      "vertices": 12
+    },
+    {
+      "deficit": 221,
+      "k": 15,
+      "raw_H": 32547,
+      "vertices": 13
+    },
+    {
+      "deficit": 223,
+      "k": 14,
+      "raw_H": 16161,
+      "vertices": 11
+    },
+    {
+      "deficit": 223,
+      "k": 15,
+      "raw_H": 32545,
+      "vertices": 12
+    },
+    {
+      "deficit": 225,
+      "k": 14,
+      "raw_H": 16159,
+      "vertices": 13
+    },
+    {
+      "deficit": 225,
+      "k": 15,
+      "raw_H": 32543,
+      "vertices": 14
+    },
+    {
+      "deficit": 227,
+      "k": 14,
+      "raw_H": 16157,
+      "vertices": 13
+    },
+    {
+      "deficit": 227,
+      "k": 15,
+      "raw_H": 32541,
+      "vertices": 14
+    },
+    {
+      "deficit": 229,
+      "k": 14,
+      "raw_H": 16155,
+      "vertices": 13
+    },
+    {
+      "deficit": 229,
+      "k": 15,
+      "raw_H": 32539,
+      "vertices": 14
+    },
+    {
+      "deficit": 231,
+      "k": 14,
+      "raw_H": 16153,
+      "vertices": 13
+    },
+    {
+      "deficit": 231,
+      "k": 15,
+      "raw_H": 32537,
+      "vertices": 14
+    },
+    {
+      "deficit": 233,
+      "k": 14,
+      "raw_H": 16151,
+      "vertices": 13
+    },
+    {
+      "deficit": 233,
+      "k": 15,
+      "raw_H": 32535,
+      "vertices": 14
+    },
+    {
+      "deficit": 235,
+      "k": 14,
+      "raw_H": 16149,
+      "vertices": 13
+    },
+    {
+      "deficit": 235,
+      "k": 15,
+      "raw_H": 32533,
+      "vertices": 14
+    }
+  ],
+  "complete_odd_deficits": [
+    1,
+    235
+  ],
+  "exponent_threshold": 14,
+  "first_missing_deficit": 237,
+  "scope": "For every k>=14, all118 odd counts in[2^k-235,2^k-1] are realized on at most k+1 vertices. Deficit237 is missing from this bank, not proved globally impossible.",
+  "source_count": 118,
+  "sources": [
+    {
+      "deficit": 1,
+      "mask": 41,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        166,
+        60,
+        8,
+        17,
+        37,
+        76,
+        159,
+        62
+      ],
+      "state": [
+        959,
+        1024,
+        64,
+        217
+      ]
+    },
+    {
+      "deficit": 3,
+      "mask": 5,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        14,
+        28,
+        8,
+        16,
+        37,
+        79,
+        31
+      ],
+      "state": [
+        111,
+        128,
+        14,
+        31
+      ]
+    },
+    {
+      "deficit": 5,
+      "mask": 97,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        166,
+        92,
+        56,
+        17,
+        33,
+        74,
+        157,
+        62
+      ],
+      "state": [
+        1953,
+        2048,
+        90,
+        375
+      ]
+    },
+    {
+      "deficit": 7,
+      "mask": 19,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        76,
+        25,
+        17,
+        34,
+        79,
+        28
+      ],
+      "state": [
+        461,
+        512,
+        44,
+        121
+      ]
+    },
+    {
+      "deficit": 9,
+      "mask": 35,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        20,
+        25,
+        19,
+        32,
+        79,
+        30
+      ],
+      "state": [
+        449,
+        512,
+        54,
+        117
+      ]
+    },
+    {
+      "deficit": 11,
+      "mask": 21,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        6,
+        20,
+        8,
+        19,
+        37,
+        15
+      ],
+      "state": [
+        99,
+        128,
+        18,
+        31
+      ]
+    },
+    {
+      "deficit": 13,
+      "mask": 6,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        142,
+        12,
+        8,
+        16,
+        39,
+        79,
+        159,
+        62
+      ],
+      "state": [
+        189,
+        256,
+        54,
+        85
+      ]
+    },
+    {
+      "deficit": 15,
+      "mask": 146,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        130,
+        196,
+        9,
+        19,
+        39,
+        79,
+        157,
+        60
+      ],
+      "state": [
+        1911,
+        2048,
+        122,
+        411
+      ]
+    },
+    {
+      "deficit": 17,
+      "mask": 25,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        18,
+        4,
+        9,
+        19,
+        6
+      ],
+      "state": [
+        41,
+        64,
+        6,
+        11
+      ]
+    },
+    {
+      "deficit": 19,
+      "mask": 13,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        18,
+        4,
+        9,
+        19,
+        38,
+        15
+      ],
+      "state": [
+        95,
+        128,
+        14,
+        29
+      ]
+    },
+    {
+      "deficit": 21,
+      "mask": 52,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        34,
+        44,
+        25,
+        17,
+        35,
+        76,
+        31
+      ],
+      "state": [
+        449,
+        512,
+        42,
+        109
+      ]
+    },
+    {
+      "deficit": 23,
+      "mask": 42,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        22,
+        4,
+        8,
+        19,
+        38,
+        15
+      ],
+      "state": [
+        91,
+        128,
+        14,
+        23
+      ]
+    },
+    {
+      "deficit": 25,
+      "mask": 49,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        62,
+        4,
+        8,
+        18,
+        38,
+        14
+      ],
+      "state": [
+        101,
+        128,
+        2,
+        9
+      ]
+    },
+    {
+      "deficit": 27,
+      "mask": 30,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "state": [
+        31,
+        64,
+        6,
+        9
+      ]
+    },
+    {
+      "deficit": 29,
+      "mask": 49,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        114,
+        60,
+        9,
+        17,
+        36,
+        76,
+        30
+      ],
+      "state": [
+        437,
+        512,
+        46,
+        117
+      ]
+    },
+    {
+      "deficit": 31,
+      "mask": 21,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        130,
+        84,
+        73,
+        19,
+        37,
+        79,
+        153,
+        62
+      ],
+      "state": [
+        1805,
+        2048,
+        212,
+        507
+      ]
+    },
+    {
+      "deficit": 33,
+      "mask": 49,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        46,
+        108,
+        40,
+        16,
+        39,
+        72,
+        157,
+        63
+      ],
+      "state": [
+        923,
+        1024,
+        68,
+        193
+      ]
+    },
+    {
+      "deficit": 35,
+      "mask": 19,
+      "provenance": "power_sources.json",
+      "rows": [
+        2,
+        44,
+        121,
+        113,
+        67,
+        17,
+        35
+      ],
+      "state": [
+        185,
+        256,
+        36,
+        65
+      ]
+    },
+    {
+      "deficit": 37,
+      "mask": 27,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        7
+      ],
+      "state": [
+        19,
+        64,
+        8,
+        9
+      ]
+    },
+    {
+      "deficit": 39,
+      "mask": 37,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        6,
+        12,
+        8,
+        17,
+        39,
+        15
+      ],
+      "state": [
+        77,
+        128,
+        12,
+        19
+      ]
+    },
+    {
+      "deficit": 41,
+      "mask": 73,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        6,
+        4,
+        8,
+        19,
+        39,
+        79,
+        31
+      ],
+      "state": [
+        205,
+        256,
+        10,
+        29
+      ]
+    },
+    {
+      "deficit": 43,
+      "mask": 41,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        106,
+        4,
+        9,
+        18,
+        39,
+        78,
+        30
+      ],
+      "state": [
+        445,
+        512,
+        24,
+        81
+      ]
+    },
+    {
+      "deficit": 45,
+      "mask": 37,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        30,
+        4,
+        8,
+        18,
+        38,
+        79,
+        31
+      ],
+      "state": [
+        199,
+        256,
+        12,
+        29
+      ]
+    },
+    {
+      "deficit": 47,
+      "mask": 19,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        202,
+        116,
+        25,
+        18,
+        33,
+        77,
+        156,
+        62
+      ],
+      "state": [
+        1825,
+        2048,
+        176,
+        469
+      ]
+    },
+    {
+      "deficit": 49,
+      "mask": 14,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        66,
+        36,
+        9,
+        19,
+        39,
+        77,
+        30
+      ],
+      "state": [
+        399,
+        512,
+        64,
+        127
+      ]
+    },
+    {
+      "deficit": 51,
+      "mask": 13,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        4,
+        9,
+        19,
+        39,
+        79,
+        159,
+        63
+      ],
+      "state": [
+        171,
+        256,
+        34,
+        57
+      ]
+    },
+    {
+      "deficit": 53,
+      "mask": 21,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        130,
+        60,
+        9,
+        17,
+        37,
+        77,
+        159,
+        62
+      ],
+      "state": [
+        847,
+        1024,
+        124,
+        269
+      ]
+    },
+    {
+      "deficit": 55,
+      "mask": 73,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        34,
+        12,
+        9,
+        17,
+        39,
+        78,
+        31
+      ],
+      "state": [
+        427,
+        512,
+        30,
+        83
+      ]
+    },
+    {
+      "deficit": 57,
+      "mask": 168,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        38,
+        196,
+        8,
+        19,
+        39,
+        78,
+        157,
+        61
+      ],
+      "state": [
+        1889,
+        2048,
+        102,
+        339
+      ]
+    },
+    {
+      "deficit": 59,
+      "mask": 14,
+      "provenance": "power_sources.json",
+      "rows": [
+        4,
+        33,
+        98,
+        119,
+        103,
+        65,
+        3
+      ],
+      "state": [
+        191,
+        256,
+        6,
+        15
+      ]
+    },
+    {
+      "deficit": 61,
+      "mask": 50,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        122,
+        84,
+        9,
+        18,
+        36,
+        78,
+        28
+      ],
+      "state": [
+        399,
+        512,
+        52,
+        117
+      ]
+    },
+    {
+      "deficit": 63,
+      "mask": 7,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        70,
+        52,
+        8,
+        19,
+        37,
+        77,
+        30
+      ],
+      "state": [
+        385,
+        512,
+        64,
+        115
+      ]
+    },
+    {
+      "deficit": 65,
+      "mask": 104,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        20,
+        9,
+        19,
+        37,
+        79,
+        31
+      ],
+      "state": [
+        435,
+        512,
+        12,
+        49
+      ]
+    },
+    {
+      "deficit": 67,
+      "mask": 45,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        62,
+        12,
+        8,
+        16,
+        38,
+        14
+      ],
+      "state": [
+        55,
+        128,
+        6,
+        9
+      ]
+    },
+    {
+      "deficit": 69,
+      "mask": 7,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        79,
+        31
+      ],
+      "state": [
+        173,
+        256,
+        14,
+        33
+      ]
+    },
+    {
+      "deficit": 71,
+      "mask": 26,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        78,
+        132,
+        8,
+        18,
+        39,
+        79,
+        158,
+        61
+      ],
+      "state": [
+        873,
+        1024,
+        80,
+        231
+      ]
+    },
+    {
+      "deficit": 73,
+      "mask": 11,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        122,
+        44,
+        9,
+        16,
+        38,
+        76,
+        30
+      ],
+      "state": [
+        387,
+        512,
+        52,
+        99
+      ]
+    },
+    {
+      "deficit": 75,
+      "mask": 73,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        116,
+        9,
+        19,
+        37,
+        77,
+        29
+      ],
+      "state": [
+        383,
+        512,
+        54,
+        101
+      ]
+    },
+    {
+      "deficit": 77,
+      "mask": 52,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        60,
+        9,
+        17,
+        36,
+        77,
+        30
+      ],
+      "state": [
+        379,
+        512,
+        56,
+        115
+      ]
+    },
+    {
+      "deficit": 79,
+      "mask": 37,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        22,
+        180,
+        8,
+        19,
+        36,
+        77,
+        159,
+        61
+      ],
+      "state": [
+        841,
+        1024,
+        104,
+        221
+      ]
+    },
+    {
+      "deficit": 81,
+      "mask": 97,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        36,
+        24,
+        18,
+        34,
+        76,
+        30
+      ],
+      "state": [
+        425,
+        512,
+        6,
+        33
+      ]
+    },
+    {
+      "deficit": 83,
+      "mask": 98,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        58,
+        60,
+        9,
+        16,
+        36,
+        76,
+        159,
+        63
+      ],
+      "state": [
+        919,
+        1024,
+        22,
+        123
+      ]
+    },
+    {
+      "deficit": 85,
+      "mask": 104,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        106,
+        60,
+        9,
+        16,
+        37,
+        76,
+        30
+      ],
+      "state": [
+        375,
+        512,
+        52,
+        101
+      ]
+    },
+    {
+      "deficit": 87,
+      "mask": 22,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        46,
+        60,
+        8,
+        16,
+        37,
+        76,
+        159,
+        63
+      ],
+      "state": [
+        373,
+        512,
+        52,
+        95
+      ]
+    },
+    {
+      "deficit": 89,
+      "mask": 29,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        50,
+        20,
+        9,
+        19,
+        36,
+        14
+      ],
+      "state": [
+        139,
+        256,
+        28,
+        43
+      ]
+    },
+    {
+      "deficit": 91,
+      "mask": 26,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        206,
+        28,
+        8,
+        16,
+        37,
+        79,
+        158,
+        62
+      ],
+      "state": [
+        367,
+        512,
+        54,
+        107
+      ]
+    },
+    {
+      "deficit": 93,
+      "mask": 11,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        116,
+        40,
+        18,
+        36,
+        72,
+        28
+      ],
+      "state": [
+        411,
+        512,
+        8,
+        37
+      ]
+    },
+    {
+      "deficit": 95,
+      "mask": 97,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        194,
+        12,
+        9,
+        17,
+        39,
+        79,
+        158,
+        62
+      ],
+      "state": [
+        1897,
+        2048,
+        56,
+        281
+      ]
+    },
+    {
+      "deficit": 97,
+      "mask": 97,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        78,
+        76,
+        72,
+        16,
+        39,
+        79,
+        24
+      ],
+      "state": [
+        397,
+        512,
+        18,
+        47
+      ]
+    },
+    {
+      "deficit": 99,
+      "mask": 69,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        102,
+        44,
+        8,
+        17,
+        39,
+        76,
+        30
+      ],
+      "state": [
+        361,
+        512,
+        52,
+        89
+      ]
+    },
+    {
+      "deficit": 101,
+      "mask": 50,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        62,
+        60,
+        88,
+        16,
+        32,
+        76,
+        155,
+        63
+      ],
+      "state": [
+        371,
+        512,
+        40,
+        89
+      ]
+    },
+    {
+      "deficit": 103,
+      "mask": 38,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        6,
+        116,
+        8,
+        19,
+        37,
+        77,
+        157,
+        63
+      ],
+      "state": [
+        823,
+        1024,
+        98,
+        213
+      ]
+    },
+    {
+      "deficit": 105,
+      "mask": 41,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        180,
+        9,
+        19,
+        37,
+        77,
+        159,
+        61
+      ],
+      "state": [
+        807,
+        1024,
+        112,
+        215
+      ]
+    },
+    {
+      "deficit": 107,
+      "mask": 7,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        116,
+        40,
+        18,
+        36,
+        72,
+        28
+      ],
+      "state": [
+        393,
+        512,
+        12,
+        37
+      ]
+    },
+    {
+      "deficit": 109,
+      "mask": 49,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        94,
+        36,
+        24,
+        18,
+        34,
+        77,
+        158,
+        63
+      ],
+      "state": [
+        867,
+        1024,
+        48,
+        155
+      ]
+    },
+    {
+      "deficit": 111,
+      "mask": 90,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        118,
+        76,
+        8,
+        17,
+        38,
+        78,
+        28
+      ],
+      "state": [
+        369,
+        512,
+        32,
+        77
+      ]
+    },
+    {
+      "deficit": 113,
+      "mask": 193,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        230,
+        28,
+        8,
+        17,
+        37,
+        78,
+        158,
+        62
+      ],
+      "state": [
+        1897,
+        2048,
+        38,
+        223
+      ]
+    },
+    {
+      "deficit": 115,
+      "mask": 168,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        18,
+        244,
+        9,
+        19,
+        36,
+        77,
+        157,
+        61
+      ],
+      "state": [
+        1829,
+        2048,
+        104,
+        325
+      ]
+    },
+    {
+      "deficit": 117,
+      "mask": 41,
+      "provenance": "target_sources.json",
+      "rows": [
+        284,
+        25,
+        154,
+        496,
+        128,
+        23,
+        311,
+        99,
+        182
+      ],
+      "state": [
+        7755,
+        8192,
+        320,
+        1363
+      ]
+    },
+    {
+      "deficit": 119,
+      "mask": 23,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        22,
+        4,
+        8,
+        19,
+        38,
+        79,
+        31
+      ],
+      "state": [
+        105,
+        256,
+        32,
+        41
+      ]
+    },
+    {
+      "deficit": 121,
+      "mask": 148,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        30,
+        12,
+        8,
+        16,
+        38,
+        79,
+        159,
+        63
+      ],
+      "state": [
+        369,
+        512,
+        22,
+        45
+      ]
+    },
+    {
+      "deficit": 123,
+      "mask": 74,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        36,
+        25,
+        19,
+        35,
+        77,
+        159,
+        63
+      ],
+      "state": [
+        869,
+        1024,
+        32,
+        113
+      ]
+    },
+    {
+      "deficit": 125,
+      "mask": 35,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        78,
+        20,
+        8,
+        18,
+        37,
+        79,
+        158,
+        63
+      ],
+      "state": [
+        855,
+        1024,
+        44,
+        139
+      ]
+    },
+    {
+      "deficit": 127,
+      "mask": 53,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        26,
+        44,
+        9,
+        16,
+        38,
+        77,
+        31
+      ],
+      "state": [
+        345,
+        512,
+        40,
+        77
+      ]
+    },
+    {
+      "deficit": 129,
+      "mask": 138,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        138,
+        140,
+        9,
+        16,
+        39,
+        79,
+        159,
+        60
+      ],
+      "state": [
+        787,
+        1024,
+        108,
+        221
+      ]
+    },
+    {
+      "deficit": 131,
+      "mask": 26,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        230,
+        52,
+        72,
+        19,
+        37,
+        76,
+        154,
+        62
+      ],
+      "state": [
+        1735,
+        2048,
+        182,
+        467
+      ]
+    },
+    {
+      "deficit": 133,
+      "mask": 105,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        124,
+        72,
+        16,
+        36,
+        76,
+        24
+      ],
+      "state": [
+        115,
+        256,
+        8,
+        11
+      ]
+    },
+    {
+      "deficit": 135,
+      "mask": 60,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        122,
+        20,
+        9,
+        18,
+        36,
+        78,
+        30
+      ],
+      "state": [
+        327,
+        512,
+        50,
+        89
+      ]
+    },
+    {
+      "deficit": 137,
+      "mask": 15,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        78,
+        4,
+        8,
+        18,
+        39,
+        79,
+        30
+      ],
+      "state": [
+        89,
+        256,
+        30,
+        35
+      ]
+    },
+    {
+      "deficit": 139,
+      "mask": 37,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        14,
+        84,
+        8,
+        18,
+        37,
+        79,
+        29
+      ],
+      "state": [
+        329,
+        512,
+        44,
+        75
+      ]
+    },
+    {
+      "deficit": 141,
+      "mask": 38,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        102,
+        124,
+        8,
+        17,
+        37,
+        76,
+        28
+      ],
+      "state": [
+        333,
+        512,
+        38,
+        67
+      ]
+    },
+    {
+      "deficit": 143,
+      "mask": 44,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        94,
+        92,
+        8,
+        16,
+        36,
+        79,
+        156,
+        63
+      ],
+      "state": [
+        297,
+        512,
+        72,
+        101
+      ]
+    },
+    {
+      "deficit": 145,
+      "mask": 57,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        58,
+        4,
+        9,
+        18,
+        38,
+        78,
+        31
+      ],
+      "state": [
+        337,
+        512,
+        30,
+        67
+      ]
+    },
+    {
+      "deficit": 147,
+      "mask": 67,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        42,
+        12,
+        9,
+        16,
+        39,
+        78,
+        159,
+        63
+      ],
+      "state": [
+        825,
+        1024,
+        52,
+        135
+      ]
+    },
+    {
+      "deficit": 149,
+      "mask": 14,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        162,
+        76,
+        41,
+        17,
+        39,
+        74,
+        157,
+        62
+      ],
+      "state": [
+        1669,
+        2048,
+        230,
+        489
+      ]
+    },
+    {
+      "deficit": 151,
+      "mask": 62,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        42,
+        12,
+        9,
+        16,
+        39,
+        14
+      ],
+      "state": [
+        73,
+        256,
+        32,
+        37
+      ]
+    },
+    {
+      "deficit": 153,
+      "mask": 208,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        214,
+        108,
+        8,
+        17,
+        38,
+        77,
+        156,
+        62
+      ],
+      "state": [
+        1827,
+        2048,
+        68,
+        289
+      ]
+    },
+    {
+      "deficit": 155,
+      "mask": 47,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        42,
+        12,
+        9,
+        16,
+        39,
+        14
+      ],
+      "state": [
+        69,
+        256,
+        32,
+        37
+      ]
+    },
+    {
+      "deficit": 157,
+      "mask": 59,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        18,
+        4,
+        9,
+        19,
+        38,
+        15
+      ],
+      "state": [
+        75,
+        256,
+        24,
+        29
+      ]
+    },
+    {
+      "deficit": 159,
+      "mask": 55,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        6,
+        20,
+        8,
+        19,
+        37,
+        15
+      ],
+      "state": [
+        71,
+        256,
+        26,
+        31
+      ]
+    },
+    {
+      "deficit": 161,
+      "mask": 148,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        46,
+        172,
+        8,
+        16,
+        39,
+        76,
+        159,
+        61
+      ],
+      "state": [
+        769,
+        1024,
+        94,
+        173
+      ]
+    },
+    {
+      "deficit": 163,
+      "mask": 193,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        46,
+        116,
+        8,
+        18,
+        37,
+        76,
+        157,
+        63
+      ],
+      "state": [
+        1849,
+        2048,
+        36,
+        195
+      ]
+    },
+    {
+      "deficit": 165,
+      "mask": 193,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        92,
+        57,
+        17,
+        32,
+        75,
+        156,
+        63
+      ],
+      "state": [
+        1831,
+        2048,
+        52,
+        251
+      ]
+    },
+    {
+      "deficit": 167,
+      "mask": 50,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        214,
+        196,
+        24,
+        19,
+        34,
+        79,
+        156,
+        60
+      ],
+      "state": [
+        1733,
+        2048,
+        148,
+        427
+      ]
+    },
+    {
+      "deficit": 169,
+      "mask": 104,
+      "provenance": "target_sources.json",
+      "rows": [
+        420,
+        389,
+        72,
+        451,
+        463,
+        478,
+        259,
+        68,
+        132
+      ],
+      "state": [
+        3821,
+        4096,
+        106,
+        469
+      ]
+    },
+    {
+      "deficit": 171,
+      "mask": 23,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        50,
+        28,
+        9,
+        17,
+        36,
+        78,
+        31
+      ],
+      "state": [
+        285,
+        512,
+        56,
+        89
+      ]
+    },
+    {
+      "deficit": 173,
+      "mask": 19,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        250,
+        4,
+        9,
+        18,
+        38,
+        78,
+        158,
+        62
+      ],
+      "state": [
+        747,
+        1024,
+        104,
+        175
+      ]
+    },
+    {
+      "deficit": 175,
+      "mask": 39,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        38,
+        20,
+        8,
+        19,
+        37,
+        78,
+        31
+      ],
+      "state": [
+        285,
+        512,
+        52,
+        81
+      ]
+    },
+    {
+      "deficit": 177,
+      "mask": 14,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        212,
+        25,
+        19,
+        32,
+        79,
+        156,
+        61
+      ],
+      "state": [
+        1707,
+        2048,
+        164,
+        421
+      ]
+    },
+    {
+      "deficit": 179,
+      "mask": 76,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        58,
+        164,
+        41,
+        18,
+        38,
+        72,
+        159,
+        61
+      ],
+      "state": [
+        1705,
+        2048,
+        164,
+        377
+      ]
+    },
+    {
+      "deficit": 181,
+      "mask": 208,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        92,
+        9,
+        17,
+        36,
+        79,
+        156,
+        63
+      ],
+      "state": [
+        1803,
+        2048,
+        64,
+        275
+      ]
+    },
+    {
+      "deficit": 183,
+      "mask": 112,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        42,
+        244,
+        9,
+        18,
+        37,
+        76,
+        157,
+        61
+      ],
+      "state": [
+        1753,
+        2048,
+        112,
+        353
+      ]
+    },
+    {
+      "deficit": 185,
+      "mask": 39,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        28,
+        40,
+        48,
+        36,
+        66,
+        30
+      ],
+      "state": [
+        311,
+        512,
+        16,
+        33
+      ]
+    },
+    {
+      "deficit": 187,
+      "mask": 75,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        22,
+        28,
+        8,
+        17,
+        36,
+        79,
+        31
+      ],
+      "state": [
+        297,
+        512,
+        28,
+        55
+      ]
+    },
+    {
+      "deficit": 189,
+      "mask": 56,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        74,
+        164,
+        9,
+        18,
+        39,
+        77,
+        158,
+        61
+      ],
+      "state": [
+        1695,
+        2048,
+        164,
+        417
+      ]
+    },
+    {
+      "deficit": 191,
+      "mask": 82,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        58,
+        20,
+        9,
+        18,
+        36,
+        78,
+        159,
+        63
+      ],
+      "state": [
+        771,
+        1024,
+        62,
+        137
+      ]
+    },
+    {
+      "deficit": 193,
+      "mask": 102,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        122,
+        4,
+        9,
+        18,
+        38,
+        78,
+        30
+      ],
+      "state": [
+        273,
+        512,
+        46,
+        71
+      ]
+    },
+    {
+      "deficit": 195,
+      "mask": 21,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        46,
+        68,
+        8,
+        18,
+        39,
+        78,
+        157,
+        63
+      ],
+      "state": [
+        735,
+        1024,
+        94,
+        173
+      ]
+    },
+    {
+      "deficit": 197,
+      "mask": 145,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        174,
+        212,
+        24,
+        18,
+        33,
+        78,
+        157,
+        60
+      ],
+      "state": [
+        1741,
+        2048,
+        110,
+        365
+      ]
+    },
+    {
+      "deficit": 199,
+      "mask": 86,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        70,
+        20,
+        8,
+        19,
+        37,
+        79,
+        30
+      ],
+      "state": [
+        257,
+        512,
+        56,
+        81
+      ]
+    },
+    {
+      "deficit": 201,
+      "mask": 70,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        46,
+        196,
+        24,
+        18,
+        35,
+        78,
+        157,
+        61
+      ],
+      "state": [
+        1703,
+        2048,
+        144,
+        375
+      ]
+    },
+    {
+      "deficit": 203,
+      "mask": 74,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        174,
+        20,
+        8,
+        18,
+        37,
+        78,
+        159,
+        62
+      ],
+      "state": [
+        755,
+        1024,
+        66,
+        143
+      ]
+    },
+    {
+      "deficit": 205,
+      "mask": 73,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        158,
+        92,
+        8,
+        16,
+        36,
+        79,
+        157,
+        62
+      ],
+      "state": [
+        773,
+        1024,
+        46,
+        115
+      ]
+    },
+    {
+      "deficit": 207,
+      "mask": 29,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        58,
+        44,
+        9,
+        16,
+        38,
+        76,
+        31
+      ],
+      "state": [
+        239,
+        512,
+        66,
+        91
+      ]
+    },
+    {
+      "deficit": 209,
+      "mask": 27,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        34,
+        60,
+        25,
+        17,
+        33,
+        76,
+        31
+      ],
+      "state": [
+        239,
+        512,
+        64,
+        89
+      ]
+    },
+    {
+      "deficit": 211,
+      "mask": 131,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        98,
+        28,
+        9,
+        17,
+        37,
+        78,
+        158,
+        63
+      ],
+      "state": [
+        1761,
+        2048,
+        76,
+        255
+      ]
+    },
+    {
+      "deficit": 213,
+      "mask": 102,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        14,
+        20,
+        8,
+        18,
+        37,
+        79,
+        31
+      ],
+      "state": [
+        273,
+        512,
+        26,
+        43
+      ]
+    },
+    {
+      "deficit": 215,
+      "mask": 46,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        62,
+        44,
+        24,
+        16,
+        34,
+        76,
+        159,
+        63
+      ],
+      "state": [
+        235,
+        512,
+        62,
+        79
+      ]
+    },
+    {
+      "deficit": 217,
+      "mask": 164,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        78,
+        4,
+        8,
+        18,
+        39,
+        79,
+        158,
+        63
+      ],
+      "state": [
+        771,
+        1024,
+        36,
+        91
+      ]
+    },
+    {
+      "deficit": 219,
+      "mask": 27,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        2,
+        20,
+        9,
+        19,
+        37,
+        79,
+        159,
+        63
+      ],
+      "state": [
+        223,
+        512,
+        70,
+        91
+      ]
+    },
+    {
+      "deficit": 221,
+      "mask": 38,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        82,
+        172,
+        9,
+        17,
+        38,
+        77,
+        158,
+        61
+      ],
+      "state": [
+        1675,
+        2048,
+        152,
+        371
+      ]
+    },
+    {
+      "deficit": 223,
+      "mask": 336,
+      "provenance": "target_sources.json",
+      "rows": [
+        228,
+        193,
+        394,
+        451,
+        143,
+        158,
+        52,
+        64,
+        243
+      ],
+      "state": [
+        7745,
+        8192,
+        224,
+        1153
+      ]
+    },
+    {
+      "deficit": 225,
+      "mask": 81,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        254,
+        156,
+        152,
+        16,
+        32,
+        78,
+        158,
+        56
+      ],
+      "state": [
+        789,
+        1024,
+        10,
+        39
+      ]
+    },
+    {
+      "deficit": 227,
+      "mask": 103,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        30,
+        28,
+        24,
+        16,
+        32,
+        79,
+        31
+      ],
+      "state": [
+        269,
+        512,
+        16,
+        33
+      ]
+    },
+    {
+      "deficit": 229,
+      "mask": 55,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        76,
+        72,
+        16,
+        38,
+        78,
+        24
+      ],
+      "state": [
+        275,
+        512,
+        8,
+        23
+      ]
+    },
+    {
+      "deficit": 231,
+      "mask": 77,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        84,
+        24,
+        18,
+        32,
+        78,
+        28
+      ],
+      "state": [
+        259,
+        512,
+        22,
+        37
+      ]
+    },
+    {
+      "deficit": 233,
+      "mask": 140,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        198,
+        12,
+        8,
+        17,
+        39,
+        79,
+        158,
+        62
+      ],
+      "state": [
+        691,
+        1024,
+        100,
+        175
+      ]
+    },
+    {
+      "deficit": 235,
+      "mask": 29,
+      "provenance": "power_sources_complete8.json",
+      "rows": [
+        126,
+        76,
+        40,
+        16,
+        38,
+        74,
+        28
+      ],
+      "state": [
+        255,
+        512,
+        22,
+        37
+      ]
+    }
+  ],
+  "status": "passed",
+  "vertex_overhead": 1
+}

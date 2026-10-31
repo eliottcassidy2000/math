@@ -1,0 +1,58 @@
+{
+  "deficit9_actual_adjacency": [
+    {
+      "actual_H": 1015,
+      "exponent": 10,
+      "r": 1,
+      "vertices": 9
+    },
+    {
+      "actual_H": 2039,
+      "exponent": 11,
+      "r": 2,
+      "vertices": 10
+    },
+    {
+      "actual_H": 4087,
+      "exponent": 12,
+      "r": 3,
+      "vertices": 11
+    },
+    {
+      "actual_H": 8183,
+      "exponent": 13,
+      "r": 4,
+      "vertices": 12
+    },
+    {
+      "actual_H": 16375,
+      "exponent": 14,
+      "r": 5,
+      "vertices": 13
+    },
+    {
+      "actual_H": 32759,
+      "exponent": 15,
+      "r": 6,
+      "vertices": 14
+    },
+    {
+      "actual_H": 65527,
+      "exponent": 16,
+      "r": 7,
+      "vertices": 15
+    },
+    {
+      "actual_H": 131063,
+      "exponent": 17,
+      "r": 8,
+      "vertices": 16
+    }
+  ],
+  "deficit9_parent_minimum_feedback_vertices": 3,
+  "input_file": "power_sources_complete7.json",
+  "method": "Literal endpoint subset DP on the parent, marked extension and first zero append; no cover-weight or transfer implementation imported.",
+  "scope": "Every accepted finite source yields its stated all-length pure-tail family by the proved recurrence; search completeness is reported only by the input census; sampled witnesses make no absence claim.",
+  "sources_checked": 80,
+  "status": "passed"
+}

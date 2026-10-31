@@ -1,0 +1,94 @@
+{
+  "complete_four_port_permutations": 120,
+  "native_case": {
+    "N": 270112,
+    "additional_pair": [
+      140220,
+      150301
+    ],
+    "bits": 2401,
+    "free_bits": 2400,
+    "prefix": [
+      1,
+      8,
+      17,
+      19,
+      6,
+      10,
+      15,
+      21,
+      4,
+      12,
+      24
+    ]
+  },
+  "scope": "Exact rooted order relation in the authenticated family, graph-complete only after primitive refinement. Any k reference ports cost at most floor(k/2) order bits.",
+  "standard_cases": [
+    {
+      "N": 2812,
+      "bits": 25,
+      "four_ports": [
+        1438,
+        1587,
+        262,
+        1338
+      ],
+      "free_bits": 23,
+      "primitive_regions": 25,
+      "schedule": "A"
+    },
+    {
+      "N": 2861,
+      "bits": 25,
+      "four_ports": [
+        1437,
+        1588,
+        2007,
+        1432
+      ],
+      "free_bits": 23,
+      "primitive_regions": 25,
+      "schedule": "A"
+    },
+    {
+      "N": 70312,
+      "bits": 25,
+      "four_ports": [
+        6562,
+        33438,
+        36538,
+        39087
+      ],
+      "free_bits": 23,
+      "primitive_regions": 625,
+      "schedule": "A"
+    },
+    {
+      "N": 70312,
+      "bits": 625,
+      "four_ports": [
+        35938,
+        39687,
+        6562,
+        33438
+      ],
+      "free_bits": 623,
+      "primitive_regions": 625,
+      "schedule": "AA"
+    },
+    {
+      "N": 137813,
+      "bits": 1225,
+      "four_ports": [
+        70938,
+        77287,
+        71337,
+        76888
+      ],
+      "free_bits": 1223,
+      "primitive_regions": 1225,
+      "schedule": "AC"
+    }
+  ],
+  "status": "passed"
+}

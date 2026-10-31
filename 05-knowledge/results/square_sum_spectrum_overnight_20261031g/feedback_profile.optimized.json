@@ -1,0 +1,390 @@
+{
+  "all_positive_tail_feedback_arc_number": 6,
+  "all_two_deletion_hostiles": [
+    {
+      "deleted": [
+        0,
+        1
+      ],
+      "surviving_directed_triangle": [
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "deleted": [
+        0,
+        2
+      ],
+      "surviving_directed_triangle": [
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "deleted": [
+        0,
+        3
+      ],
+      "surviving_directed_triangle": [
+        1,
+        4,
+        2
+      ]
+    },
+    {
+      "deleted": [
+        0,
+        4
+      ],
+      "surviving_directed_triangle": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "deleted": [
+        0,
+        5
+      ],
+      "surviving_directed_triangle": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "deleted": [
+        0,
+        6
+      ],
+      "surviving_directed_triangle": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "deleted": [
+        1,
+        2
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "deleted": [
+        1,
+        3
+      ],
+      "surviving_directed_triangle": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "deleted": [
+        1,
+        4
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "deleted": [
+        1,
+        5
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "deleted": [
+        1,
+        6
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "deleted": [
+        2,
+        3
+      ],
+      "surviving_directed_triangle": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "deleted": [
+        2,
+        4
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "deleted": [
+        2,
+        5
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        6
+      ]
+    },
+    {
+      "deleted": [
+        2,
+        6
+      ],
+      "surviving_directed_triangle": [
+        0,
+        3,
+        5
+      ]
+    },
+    {
+      "deleted": [
+        3,
+        4
+      ],
+      "surviving_directed_triangle": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "deleted": [
+        3,
+        5
+      ],
+      "surviving_directed_triangle": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "deleted": [
+        3,
+        6
+      ],
+      "surviving_directed_triangle": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "deleted": [
+        4,
+        5
+      ],
+      "surviving_directed_triangle": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "deleted": [
+        4,
+        6
+      ],
+      "surviving_directed_triangle": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "deleted": [
+        5,
+        6
+      ],
+      "surviving_directed_triangle": [
+        0,
+        2,
+        1
+      ]
+    }
+  ],
+  "clone_slot_intercepts": [
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    7
+  ],
+  "feedback_arc_formula": "min_m(B[m]+m*r) for every integer r>=1",
+  "feedback_vertex_number": 3,
+  "independent_FAS_controls": [
+    {
+      "actual_FAS": 6,
+      "tail_length": 1
+    },
+    {
+      "actual_FAS": 6,
+      "tail_length": 2
+    },
+    {
+      "actual_FAS": 6,
+      "tail_length": 3
+    },
+    {
+      "actual_FAS": 6,
+      "tail_length": 4
+    },
+    {
+      "actual_FAS": 6,
+      "tail_length": 5
+    },
+    {
+      "actual_FAS": 6,
+      "tail_length": 6
+    },
+    {
+      "actual_FAS": 6,
+      "tail_length": 7
+    }
+  ],
+  "marked_core_feedback_arc_number": 5,
+  "minimizing_orders": [
+    [
+      1,
+      4,
+      3,
+      5,
+      6,
+      0,
+      2,
+      "Y",
+      7
+    ],
+    [
+      1,
+      4,
+      3,
+      5,
+      7,
+      6,
+      0,
+      2,
+      "Y"
+    ],
+    [
+      1,
+      4,
+      3,
+      5,
+      7,
+      6,
+      0,
+      "Y",
+      2
+    ],
+    [
+      1,
+      4,
+      3,
+      5,
+      "Y",
+      7,
+      6,
+      0,
+      2
+    ],
+    [
+      1,
+      4,
+      3,
+      "Y",
+      5,
+      7,
+      6,
+      0,
+      2
+    ],
+    [
+      1,
+      4,
+      "Y",
+      3,
+      5,
+      7,
+      6,
+      0,
+      2
+    ],
+    [
+      1,
+      "Y",
+      4,
+      3,
+      5,
+      7,
+      6,
+      0,
+      2
+    ],
+    [
+      "Y",
+      1,
+      4,
+      3,
+      5,
+      7,
+      6,
+      0,
+      2
+    ],
+    [
+      7,
+      "Y",
+      1,
+      4,
+      3,
+      5,
+      6,
+      0,
+      2
+    ]
+  ],
+  "parent_feedback_arc_number": 3,
+  "scope": "All-r proof uses consecutive transitive-clone compression. FVS is exactly3 since the original parent is induced and deleting S suffices.",
+  "status": "passed",
+  "transitive_parent_order_after_deleting_S": [
+    4,
+    3,
+    5,
+    2
+  ]
+}

@@ -1,0 +1,1330 @@
+{
+  "actual_cut_tests": 96,
+  "dyadic_survivors": [
+    {
+      "cut_rule": "all_old",
+      "dyadic": true,
+      "new_deficit": 683,
+      "old_deficit": 19,
+      "old_mark_in_cut": 0,
+      "state": [
+        261,
+        1024,
+        80,
+        95
+      ]
+    }
+  ],
+  "records": [
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -959,
+          "old_deficit": 1,
+          "old_mark_in_cut": 0,
+          "state": [
+            959,
+            0,
+            0,
+            959
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -959,
+          "old_deficit": 1,
+          "old_mark_in_cut": 1,
+          "state": [
+            2047,
+            1241,
+            153,
+            959
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": -151,
+          "old_deficit": 1,
+          "old_mark_in_cut": 0,
+          "state": [
+            3847,
+            3981,
+            285,
+            959
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 937,
+          "old_deficit": 1,
+          "old_mark_in_cut": 1,
+          "state": [
+            3847,
+            5222,
+            438,
+            959
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 5009,
+          "old_deficit": 1,
+          "old_mark_in_cut": 0,
+          "state": [
+            7349,
+            12879,
+            521,
+            959
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 7619,
+          "old_deficit": 1,
+          "old_mark_in_cut": 1,
+          "state": [
+            5827,
+            14120,
+            674,
+            959
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 12485,
+          "old_deficit": 1,
+          "old_mark_in_cut": 0,
+          "state": [
+            3569,
+            16860,
+            806,
+            959
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 16183,
+          "old_deficit": 1,
+          "old_mark_in_cut": 1,
+          "state": [
+            959,
+            18101,
+            959,
+            959
+          ]
+        }
+      ],
+      "source_deficit": 1
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -111,
+          "old_deficit": 3,
+          "old_mark_in_cut": 0,
+          "state": [
+            111,
+            0,
+            0,
+            111
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -111,
+          "old_deficit": 3,
+          "old_mark_in_cut": 1,
+          "state": [
+            253,
+            159,
+            17,
+            111
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": -31,
+          "old_deficit": 3,
+          "old_mark_in_cut": 0,
+          "state": [
+            299,
+            322,
+            54,
+            111
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 111,
+          "old_deficit": 3,
+          "old_mark_in_cut": 1,
+          "state": [
+            299,
+            481,
+            71,
+            111
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 623,
+          "old_deficit": 3,
+          "old_mark_in_cut": 0,
+          "state": [
+            1241,
+            1904,
+            40,
+            111
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 1007,
+          "old_deficit": 3,
+          "old_mark_in_cut": 1,
+          "state": [
+            999,
+            2063,
+            57,
+            111
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 1637,
+          "old_deficit": 3,
+          "old_mark_in_cut": 0,
+          "state": [
+            495,
+            2226,
+            94,
+            111
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 2163,
+          "old_deficit": 3,
+          "old_mark_in_cut": 1,
+          "state": [
+            111,
+            2385,
+            111,
+            111
+          ]
+        }
+      ],
+      "source_deficit": 3
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -1953,
+          "old_deficit": 5,
+          "old_mark_in_cut": 0,
+          "state": [
+            1953,
+            0,
+            0,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -1953,
+          "old_deficit": 5,
+          "old_mark_in_cut": 1,
+          "state": [
+            4091,
+            2423,
+            285,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": -279,
+          "old_deficit": 5,
+          "old_mark_in_cut": 0,
+          "state": [
+            8945,
+            9173,
+            507,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 1859,
+          "old_deficit": 5,
+          "old_mark_in_cut": 1,
+          "state": [
+            8945,
+            11596,
+            792,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 8131,
+          "old_deficit": 5,
+          "old_mark_in_cut": 0,
+          "state": [
+            10723,
+            20015,
+            1161,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 12377,
+          "old_deficit": 5,
+          "old_mark_in_cut": 1,
+          "state": [
+            8615,
+            22438,
+            1446,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 21321,
+          "old_deficit": 5,
+          "old_mark_in_cut": 0,
+          "state": [
+            6199,
+            29188,
+            1668,
+            1953
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 27705,
+          "old_deficit": 5,
+          "old_mark_in_cut": 1,
+          "state": [
+            1953,
+            31611,
+            1953,
+            1953
+          ]
+        }
+      ],
+      "source_deficit": 5
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -461,
+          "old_deficit": 7,
+          "old_mark_in_cut": 0,
+          "state": [
+            461,
+            0,
+            0,
+            461
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -461,
+          "old_deficit": 7,
+          "old_mark_in_cut": 1,
+          "state": [
+            1017,
+            633,
+            77,
+            461
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": -29,
+          "old_deficit": 7,
+          "old_mark_in_cut": 0,
+          "state": [
+            1657,
+            1791,
+            163,
+            461
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 527,
+          "old_deficit": 7,
+          "old_mark_in_cut": 1,
+          "state": [
+            1657,
+            2424,
+            240,
+            461
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 855,
+          "old_deficit": 7,
+          "old_mark_in_cut": 0,
+          "state": [
+            2551,
+            3627,
+            221,
+            461
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 1755,
+          "old_deficit": 7,
+          "old_mark_in_cut": 1,
+          "state": [
+            2207,
+            4260,
+            298,
+            461
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 3673,
+          "old_deficit": 7,
+          "old_mark_in_cut": 0,
+          "state": [
+            1361,
+            5418,
+            384,
+            461
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 5129,
+          "old_deficit": 7,
+          "old_mark_in_cut": 1,
+          "state": [
+            461,
+            6051,
+            461,
+            461
+          ]
+        }
+      ],
+      "source_deficit": 7
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -449,
+          "old_deficit": 9,
+          "old_mark_in_cut": 0,
+          "state": [
+            449,
+            0,
+            0,
+            449
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -449,
+          "old_deficit": 9,
+          "old_mark_in_cut": 1,
+          "state": [
+            1015,
+            629,
+            63,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 57,
+          "old_deficit": 9,
+          "old_mark_in_cut": 0,
+          "state": [
+            1861,
+            2085,
+            167,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 623,
+          "old_deficit": 9,
+          "old_mark_in_cut": 1,
+          "state": [
+            1861,
+            2714,
+            230,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 777,
+          "old_deficit": 9,
+          "old_mark_in_cut": 0,
+          "state": [
+            2281,
+            3277,
+            219,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 1543,
+          "old_deficit": 9,
+          "old_mark_in_cut": 1,
+          "state": [
+            2081,
+            3906,
+            282,
+            449
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 3761,
+          "old_deficit": 9,
+          "old_mark_in_cut": 0,
+          "state": [
+            1215,
+            5362,
+            386,
+            449
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 5093,
+          "old_deficit": 9,
+          "old_mark_in_cut": 1,
+          "state": [
+            449,
+            5991,
+            449,
+            449
+          ]
+        }
+      ],
+      "source_deficit": 9
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -99,
+          "old_deficit": 11,
+          "old_mark_in_cut": 0,
+          "state": [
+            99,
+            0,
+            0,
+            99
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -99,
+          "old_deficit": 11,
+          "old_mark_in_cut": 1,
+          "state": [
+            245,
+            159,
+            13,
+            99
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 21,
+          "old_deficit": 11,
+          "old_mark_in_cut": 0,
+          "state": [
+            317,
+            388,
+            50,
+            99
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 167,
+          "old_deficit": 11,
+          "old_mark_in_cut": 1,
+          "state": [
+            317,
+            547,
+            63,
+            99
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 23,
+          "old_deficit": 11,
+          "old_mark_in_cut": 0,
+          "state": [
+            531,
+            590,
+            36,
+            99
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 173,
+          "old_deficit": 11,
+          "old_mark_in_cut": 1,
+          "state": [
+            527,
+            749,
+            49,
+            99
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 643,
+          "old_deficit": 11,
+          "old_mark_in_cut": 0,
+          "state": [
+            249,
+            978,
+            86,
+            99
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 939,
+          "old_deficit": 11,
+          "old_mark_in_cut": 1,
+          "state": [
+            99,
+            1137,
+            99,
+            99
+          ]
+        }
+      ],
+      "source_deficit": 11
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -189,
+          "old_deficit": 13,
+          "old_mark_in_cut": 0,
+          "state": [
+            189,
+            0,
+            0,
+            189
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -189,
+          "old_deficit": 13,
+          "old_mark_in_cut": 1,
+          "state": [
+            499,
+            341,
+            31,
+            189
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": -7,
+          "old_deficit": 13,
+          "old_mark_in_cut": 0,
+          "state": [
+            375,
+            495,
+            127,
+            189
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 303,
+          "old_deficit": 13,
+          "old_mark_in_cut": 1,
+          "state": [
+            375,
+            836,
+            158,
+            189
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 1507,
+          "old_deficit": 13,
+          "old_mark_in_cut": 0,
+          "state": [
+            3989,
+            5527,
+            31,
+            189
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 2595,
+          "old_deficit": 13,
+          "old_mark_in_cut": 1,
+          "state": [
+            3211,
+            5868,
+            62,
+            189
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 4587,
+          "old_deficit": 13,
+          "old_mark_in_cut": 0,
+          "state": [
+            1277,
+            6022,
+            158,
+            189
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 5985,
+          "old_deficit": 13,
+          "old_mark_in_cut": 1,
+          "state": [
+            189,
+            6363,
+            189,
+            189
+          ]
+        }
+      ],
+      "source_deficit": 13
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -1911,
+          "old_deficit": 15,
+          "old_mark_in_cut": 0,
+          "state": [
+            1911,
+            0,
+            0,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -1911,
+          "old_deficit": 15,
+          "old_mark_in_cut": 1,
+          "state": [
+            4081,
+            2459,
+            289,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": -311,
+          "old_deficit": 15,
+          "old_mark_in_cut": 0,
+          "state": [
+            8211,
+            8438,
+            538,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 1859,
+          "old_deficit": 15,
+          "old_mark_in_cut": 1,
+          "state": [
+            8211,
+            10897,
+            827,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 7439,
+          "old_deficit": 15,
+          "old_mark_in_cut": 0,
+          "state": [
+            10985,
+            19508,
+            1084,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 11641,
+          "old_deficit": 15,
+          "old_mark_in_cut": 1,
+          "state": [
+            8953,
+            21967,
+            1373,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 20211,
+          "old_deficit": 15,
+          "old_mark_in_cut": 0,
+          "state": [
+            6113,
+            27946,
+            1622,
+            1911
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 26583,
+          "old_deficit": 15,
+          "old_mark_in_cut": 1,
+          "state": [
+            1911,
+            30405,
+            1911,
+            1911
+          ]
+        }
+      ],
+      "source_deficit": 15
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -41,
+          "old_deficit": 17,
+          "old_mark_in_cut": 0,
+          "state": [
+            41,
+            0,
+            0,
+            41
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -41,
+          "old_deficit": 17,
+          "old_mark_in_cut": 1,
+          "state": [
+            111,
+            75,
+            5,
+            41
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 39,
+          "old_deficit": 17,
+          "old_mark_in_cut": 0,
+          "state": [
+            123,
+            186,
+            24,
+            41
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 109,
+          "old_deficit": 17,
+          "old_mark_in_cut": 1,
+          "state": [
+            123,
+            261,
+            29,
+            41
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": -21,
+          "old_deficit": 17,
+          "old_mark_in_cut": 0,
+          "state": [
+            123,
+            114,
+            12,
+            41
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 21,
+          "old_deficit": 17,
+          "old_mark_in_cut": 1,
+          "state": [
+            151,
+            189,
+            17,
+            41
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 181,
+          "old_deficit": 17,
+          "old_mark_in_cut": 0,
+          "state": [
+            83,
+            300,
+            36,
+            41
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 293,
+          "old_deficit": 17,
+          "old_mark_in_cut": 1,
+          "state": [
+            41,
+            375,
+            41,
+            41
+          ]
+        }
+      ],
+      "source_deficit": 17
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -95,
+          "old_deficit": 19,
+          "old_mark_in_cut": 0,
+          "state": [
+            95,
+            0,
+            0,
+            95
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -95,
+          "old_deficit": 19,
+          "old_mark_in_cut": 1,
+          "state": [
+            237,
+            157,
+            15,
+            95
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 45,
+          "old_deficit": 19,
+          "old_mark_in_cut": 0,
+          "state": [
+            275,
+            369,
+            49,
+            95
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 187,
+          "old_deficit": 19,
+          "old_mark_in_cut": 1,
+          "state": [
+            275,
+            526,
+            64,
+            95
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 83,
+          "old_deficit": 19,
+          "old_mark_in_cut": 0,
+          "state": [
+            541,
+            655,
+            31,
+            95
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 249,
+          "old_deficit": 19,
+          "old_mark_in_cut": 1,
+          "state": [
+            517,
+            812,
+            46,
+            95
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": true,
+          "new_deficit": 683,
+          "old_deficit": 19,
+          "old_mark_in_cut": 0,
+          "state": [
+            261,
+            1024,
+            80,
+            95
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 991,
+          "old_deficit": 19,
+          "old_mark_in_cut": 1,
+          "state": [
+            95,
+            1181,
+            95,
+            95
+          ]
+        }
+      ],
+      "source_deficit": 19
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -449,
+          "old_deficit": 21,
+          "old_mark_in_cut": 0,
+          "state": [
+            449,
+            0,
+            0,
+            449
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -449,
+          "old_deficit": 21,
+          "old_mark_in_cut": 1,
+          "state": [
+            1003,
+            621,
+            67,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 25,
+          "old_deficit": 21,
+          "old_mark_in_cut": 0,
+          "state": [
+            1717,
+            1906,
+            164,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 579,
+          "old_deficit": 21,
+          "old_mark_in_cut": 1,
+          "state": [
+            1717,
+            2527,
+            231,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 963,
+          "old_deficit": 21,
+          "old_mark_in_cut": 0,
+          "state": [
+            2499,
+            3680,
+            218,
+            449
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 1823,
+          "old_deficit": 21,
+          "old_mark_in_cut": 1,
+          "state": [
+            2193,
+            4301,
+            285,
+            449
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 3895,
+          "old_deficit": 21,
+          "old_mark_in_cut": 0,
+          "state": [
+            1309,
+            5586,
+            382,
+            449
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 5309,
+          "old_deficit": 21,
+          "old_mark_in_cut": 1,
+          "state": [
+            449,
+            6207,
+            449,
+            449
+          ]
+        }
+      ],
+      "source_deficit": 21
+    },
+    {
+      "rows": [
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -91,
+          "old_deficit": 23,
+          "old_mark_in_cut": 0,
+          "state": [
+            91,
+            0,
+            0,
+            91
+          ]
+        },
+        {
+          "cut_rule": "none",
+          "dyadic": false,
+          "new_deficit": -91,
+          "old_deficit": 23,
+          "old_mark_in_cut": 1,
+          "state": [
+            233,
+            151,
+            9,
+            91
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 73,
+          "old_deficit": 23,
+          "old_mark_in_cut": 0,
+          "state": [
+            339,
+            463,
+            51,
+            91
+          ]
+        },
+        {
+          "cut_rule": "old_out",
+          "dyadic": false,
+          "new_deficit": 215,
+          "old_deficit": 23,
+          "old_mark_in_cut": 1,
+          "state": [
+            339,
+            614,
+            60,
+            91
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 53,
+          "old_deficit": 23,
+          "old_mark_in_cut": 0,
+          "state": [
+            467,
+            551,
+            31,
+            91
+          ]
+        },
+        {
+          "cut_rule": "old_in",
+          "dyadic": false,
+          "new_deficit": 181,
+          "old_deficit": 23,
+          "old_mark_in_cut": 1,
+          "state": [
+            481,
+            702,
+            40,
+            91
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 713,
+          "old_deficit": 23,
+          "old_mark_in_cut": 0,
+          "state": [
+            219,
+            1014,
+            82,
+            91
+          ]
+        },
+        {
+          "cut_rule": "all_old",
+          "dyadic": false,
+          "new_deficit": 983,
+          "old_deficit": 23,
+          "old_mark_in_cut": 1,
+          "state": [
+            91,
+            1165,
+            91,
+            91
+          ]
+        }
+      ],
+      "source_deficit": 23
+    }
+  ],
+  "scope": "These eight uniform re-markings of twelve fixed sources are a probe, not an exclusion of general re-marking. Higher cover response remains missing from the scalar state.",
+  "status": "finite_exact"
+}

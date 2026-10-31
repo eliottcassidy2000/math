@@ -1,0 +1,9 @@
+{
+  "deficit9_actual_adjacency": [],
+  "deficit9_parent_minimum_feedback_vertices": null,
+  "input_file": "target_sources.json",
+  "method": "Literal endpoint subset DP on the parent, marked extension and first zero append; no cover-weight or transfer implementation imported.",
+  "scope": "Every accepted finite source yields its stated all-length pure-tail family by the proved recurrence; search completeness is reported only by the input census; sampled witnesses make no absence claim.",
+  "sources_checked": 3,
+  "status": "passed"
+}

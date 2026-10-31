@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — an edge set does not supply a rooted order or numeric bit addresses
+
+- **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031g`; both failures were caught by independent consequence consumers before promotion.
+- **Orientation repair:** the native square-sum template stores the cycle in the direction opposite to its invariant1--8 observation. Its edge theorem remained valid, but a first rooted-order comparison failed. Rotate to1 and orient toward8 before deriving local intervals or comparing orders; the rerun checks the actual cycle's labels.
+- **Address repair:** the first signed-cost optimizer appended choices in template dictionary iteration order, which differs from numeric source-bit order. Complete64-cycle enumeration rejected the reported minimum. Assign into the explicit bit address and retain that sidecar; weighted counting itself was unaffected. Normal/optimized replays now agree.
+- **Model boundary:** packet f's deficit9 obstructions concern one-apex/fixed-affine or singleton/D sources. A seven-vertex parent with h=117 lies outside those domains and gives a six-reversed-arc family for every2^k-9, k>=10. This is a lawful source-class extension, not a retraction of those scoped obstructions.
+
 ## 2026-10-31 — a power coefficient is not its exponent, and a code is not its union graph
 
 - **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031f`; no previously proved result retracted.
