@@ -7,7 +7,7 @@ This packet separates proved scoped theorems, finite exact certificates,
 conditional deductions, and unresolved frontier. It does not claim to settle
 unrestricted Ramsey numbers, Lonely Runner, or Collatz convergence.
 
-## First verified checkpoint
+## Verified results
 
 * [Exact dyadic period](ramsey/DYADIC_PERIOD.md): the restricted C5/join/union
   graph capacity is sharp precisely on multiples of the next power of two.
@@ -18,8 +18,15 @@ unrestricted Ramsey numbers, Lonely Runner, or Collatz convergence.
   handled by connectedness. The small-radius interval-only coefficient is
   optimal even for unshifted integer speeds. [Independent audit](audit_conductor/AUDIT.md).
 
-Further finite-family certificates and remaining-gap investigations are in
-progress at this checkpoint. Only listed completed artifacts are claimed here.
+* [Complete rows five through eight](ramsey/ROWS_5_TO_8.md): explicit
+  eight-residue formulas valid from independence budget1, certified with an
+  analytic finite cutoff rather than a fitted plateau.
+* [Four arbitrary tails](lrc/LRC.md): all715 nine-element subsets of
+  {1,...,13} support any four positive integer attachments at radius1/14.
+  [Complete independent replay](audit_lrc/AUDIT.md).
+
+Further five-tail and remaining-gap investigations are in progress at this
+checkpoint. Only listed completed artifacts are claimed here.
 
 ## Inheritance and concept board
 

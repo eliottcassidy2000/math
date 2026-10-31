@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+lrc/four_tail_receipt.json
+lrc/five_tail_pruned_receipt.json

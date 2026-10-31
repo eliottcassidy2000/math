@@ -1,0 +1,38 @@
+{
+  "clique_patterns": 157,
+  "finite_root_values": 63,
+  "rows": [
+    {
+      "a": 5,
+      "cutoff": 17,
+      "maximal_patterns": 20,
+      "period": 8,
+      "sharp_patterns": 10
+    },
+    {
+      "a": 6,
+      "cutoff": 18,
+      "maximal_patterns": 31,
+      "period": 8,
+      "sharp_patterns": 6
+    },
+    {
+      "a": 7,
+      "cutoff": 14,
+      "maximal_patterns": 45,
+      "period": 8,
+      "sharp_patterns": 5
+    },
+    {
+      "a": 8,
+      "cutoff": 14,
+      "maximal_patterns": 61,
+      "period": 8,
+      "sharp_patterns": 1
+    }
+  ],
+  "scope": "independent all-B cutoff-certificate replay for exact rows5..8",
+  "seed_constructions": 32,
+  "status": "PASS",
+  "union_residue_tests": 256
+}

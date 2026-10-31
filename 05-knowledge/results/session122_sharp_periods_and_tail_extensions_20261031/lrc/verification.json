@@ -1,0 +1,10 @@
+{
+  "four_tail_status": "PASS",
+  "independent_audit": "../audit_lrc/AUDIT.md",
+  "normal_optimized_identical": true,
+  "sha256": {
+    "four_tail_certificate.py": "81d03615162b552baac38d8685369581d837f4d5104fdf078314eb865c22ba49",
+    "four_tail_receipt.json": "dca3d9be25f87c8e9cf60417f823efc526defe65b8ef003f276f12636da1d920",
+    "source_lrc_banks.py": "4789a715e13314547f34c6061886b0c0133aad57e583e447a3f0953b5ce13c40"
+  }
+}

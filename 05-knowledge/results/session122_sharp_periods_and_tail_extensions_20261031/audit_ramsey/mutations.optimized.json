@@ -1,0 +1,29 @@
+{
+  "rejections": [
+    {
+      "mutation": "missing_row",
+      "rejected": "complete ordered row coverage"
+    },
+    {
+      "mutation": "missing_clique_pattern",
+      "rejected": "pattern completeness"
+    },
+    {
+      "mutation": "false_dual",
+      "rejected": "dual values"
+    },
+    {
+      "mutation": "false_cutoff",
+      "rejected": "maximum cutoff"
+    },
+    {
+      "mutation": "false_finite_root",
+      "rejected": "independent finite root values"
+    },
+    {
+      "mutation": "false_seed_order",
+      "rejected": "seed target"
+    }
+  ],
+  "status": "PASS"
+}

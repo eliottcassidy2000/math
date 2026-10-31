@@ -1,0 +1,16 @@
+{
+  "boundary_controls": 4428,
+  "hostile_endpoint_controls": 7,
+  "mutation_controls_rejected": [
+    "missing core",
+    "unproved cutoff coefficient",
+    "false width",
+    "false cutoff",
+    "false safe_intervals",
+    "false node_counts",
+    "omitted finite branch",
+    "false inherited promotion"
+  ],
+  "mutation_count": 8,
+  "status": "PASS"
+}

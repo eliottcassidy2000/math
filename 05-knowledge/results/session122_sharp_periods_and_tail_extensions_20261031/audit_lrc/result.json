@@ -1,0 +1,22 @@
+{
+  "core_count": 715,
+  "full_tree_bytes_reconstructed": 34077244,
+  "inherited_branches": 52347,
+  "max_cutoffs": [
+    0,
+    72,
+    94,
+    104,
+    92
+  ],
+  "node_counts": [
+    44133,
+    407207,
+    218081,
+    23281,
+    715
+  ],
+  "receipt_sha256": "dca3d9be25f87c8e9cf60417f823efc526defe65b8ef003f276f12636da1d920",
+  "status": "PASS",
+  "tree_commitments_checked": 715
+}

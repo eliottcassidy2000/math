@@ -100,3 +100,89 @@ Reproduce:
 
 The finite controls are evidence about the implementations and proof
 boundaries, not substitutes for the all-parameter argument above.
+
+### Completed dyadic controls
+
+Normal and optimized outputs are byte-identical. They certify 511 binary
+weight-recursion comparisons, 32,640 strict-superadditivity pairs, all 12
+polytope vertices (11 indicators), 51,661 positive feasible clique patterns,
+568,271 strict indicator tests, 71 sharp-pattern deep-child tests, 105,264
+maximal-DP candidates, 55,131 unpruned-DP candidates, and 192 exact sharp
+construction statistics. Integral-slope hostiles include F(3,2)=7<8 and
+F(6,4)=35<40.
+
+## Extension audit: complete rows five through eight
+
+**Mathematical audit and independent exact replay PASS** for
+`../ramsey/ROWS_5_TO_8.md` and `../ramsey/rows.normal.json`.
+For B=8t+r, the claimed rows are respectively
+
+- 62t + (0,5,12,19,29,35,43,51)[r];
+- 80t + (0,6,15,23,35,43,55,65)[r];
+- 98t + (0,7,17,27,41,51,65,79)[r];
+- 125t + (0,8,20,32,50,62,80,98)[r].
+
+They hold for every positive B, hence have threshold1 and least period8.
+
+### Infinite-tail reasoning checked
+
+1. Coordinatewise maximal positive clique patterns suffice because every
+   other pattern can be increased finitely and child capacities are
+   monotone in the clique budget. No positive child becomes empty.
+2. For a nonsharp pattern, the *entire* port-polytope vertex maximum is
+   strictly below w(A). The bound B<max_deficit/slope_gap correctly uses a
+   strict inequality for a hypothetical violation. The integer cutoff is
+   therefore ceil(max_deficit/slope_gap)-1. No positive dual is assumed for
+   such a pattern; this avoids an actual negative-dual boundary in row8.
+3. For a sharp pattern the independently solved dual is strictly positive.
+   The exact identity subtracts its weighted nonnegative integer port
+   slacks from w(A)B. A hypothetical violation has total slack at most
+   S=ceil(max_deficit/min_dual)-1. Solving the odd-cycle port system yields
+   2b_i=B-t_i with |t_i|<=S.
+4. The downward reduction chooses B' congruent to B modulo8 at or above
+   2+max t_i. The original B meets that bound because each b_i>=1. Thus
+   B'<=B, all reconstructed ports remain positive integers, and
+   B'<=S+9. Each sharp pattern's child translation law holds at *all positive
+   arguments*, with period dividing4. This stronger property, not merely
+   eventual periodicity, is required and is satisfied by the exact base
+   rows1..4. The downward move therefore preserves a violation exactly.
+5. Joins have a strictly positive slope gap. All 64 residue inequalities
+   per row prove superadditivity of the proposed H, so structural induction
+   covers union roots. The row is positive for all positive arguments and
+   bounds the singleton.
+6. Each of the eight finite seed constructions per row uses smaller clique
+   budgets or the same clique budget at a smaller positive independence
+   argument. Thus the construction recursion terminates. Actual child
+   budget formulas, not mere objective values, establish feasibility.
+   Disjoint unions with the B=8 seed establish every larger argument.
+
+The finite reduction is therefore a genuine proof of the infinite tail,
+not an observed-plateau rule. The explicit cutoff maxima are17,18,14,14.
+
+### Independent executable replay
+
+`check_rows.py` reads the producer receipt as untrusted data. It imports only
+this auditor's own `check.py`, never producer code. It independently rebuilds
+all maximal clique patterns, solves each sharp dual by Gaussian elimination,
+checks all gaps and cutoffs, and enumerates the complete maximal
+independence-port vectors. The producer instead optimizes with a max-plus
+path DP, so the finite objective calculation uses a different algorithm.
+
+All157 maximal clique patterns, all63 finite root-objective rows, all32 seed
+construction plans and256 union residue inequalities pass. Normal and
+optimized receipts are identical. `mutations.py` rejects six hostile edits:
+a missing row, missing clique pattern, false dual, false cutoff, false finite
+root value, and false seed order. Mutation results also agree under `-O`.
+
+Reproduce:
+
+    python3 -B check_rows.py ../ramsey/rows.normal.json > rows.result.json
+    python3 -B -O check_rows.py ../ramsey/rows.normal.json > rows.result.optimized.json
+    cmp rows.result.json rows.result.optimized.json
+    python3 -B mutations.py ../ramsey/rows.normal.json > mutations.json
+    python3 -B -O mutations.py ../ramsey/rows.normal.json > mutations.optimized.json
+    cmp mutations.json mutations.optimized.json
+
+The first four exact rows and slope theorem remain inherited dependencies.
+No general Presburger compiler, all-row nonzero-residue classification,
+unrestricted Ramsey improvement or graph-isomorphism classification follows.
