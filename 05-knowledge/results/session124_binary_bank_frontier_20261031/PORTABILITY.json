@@ -1,0 +1,57 @@
+{
+  "actual_directory_relocation": true,
+  "both_outer_commands_invoked_from_unrelated_working_directories": true,
+  "each_run_includes_normal_and_optimized_cpp_and_python_checks": true,
+  "external_representative_files_used": false,
+  "full_census_max_parent_order": 9,
+  "historical_optional_producer_bijection_separate": "PRODUCER_BIJECTION_RECEIPT.json",
+  "max_direct_DP_order": 11,
+  "no_external_input_dependencies": true,
+  "normal_optimized_and_relocated_stdout_byte_identical": true,
+  "processes": [
+    {
+      "exit": 0,
+      "external_producer_input": false,
+      "label": "publication",
+      "python_flags": [],
+      "seconds": 242.555
+    },
+    {
+      "exit": 0,
+      "external_producer_input": false,
+      "label": "relocated",
+      "python_flags": [
+        "-O"
+      ],
+      "seconds": 243.294
+    }
+  ],
+  "publication_command": "python3 run_audit.py",
+  "relocated_command": "python3 -O run_audit.py",
+  "relocated_copy_was_self_contained": true,
+  "relocated_full_run_receipt": "RELOCATED_AUDIT_RECEIPT.json",
+  "source_sha256": {
+    "check_automorphisms.py": "f3bce2ca46f4e2b78169de9d2959fbe93cfffb4956d8c27d6f987b2de78affe6",
+    "check_phase.py": "127a897805aa16916506e2516eacb2e004ed5b233150916d1eec139261676ee4",
+    "check_polynomial.py": "95714d5105c7292be371fc6d12b69f75cd981e328e004ab4d5fa6ad58b546cb1",
+    "independent_census.cpp": "067225d559ec52be5b372435e531a33d3a2e382b4c57b841c38893ce4684486c",
+    "phase_bank.json": "ab9fa9ec3c78b3e18dfaff656650a2f367257e26bc77bb817a098f865df70cd6",
+    "producer_snapshot/cut_polynomial.py": "a07303db73b6eb3b7a2e90cea51560a07e6c8938bbd1ba7294920d385756cf74",
+    "producer_snapshot/full_binary.py": "4e90c9b885ddb4ac7907d8a621e6a4ea98480e6a7b2d447211edf334dec9532f",
+    "run_audit.py": "9e84eb9a5e40afae367e5cf2cdba08a9ab5ae021e7d70446da9f7590f59318a4",
+    "small_representatives.json": "98eb90b3b98d3c947a9aabf6969e89dc6a4567ffbff1333519f2e1b088987ffa"
+  },
+  "status": "PASS",
+  "stdout_sha256": {
+    "automorphisms.normal.json": "7fd9dd4ee9f011597e7382f98e4713a047b14a439da6172a97083cf3e38794f6",
+    "automorphisms.optimized.json": "7fd9dd4ee9f011597e7382f98e4713a047b14a439da6172a97083cf3e38794f6",
+    "census.normal.json": "996866a940f1ae6093917d8a6890dc73ae054676030f769cea1179cc5127a07f",
+    "census.optimized.json": "996866a940f1ae6093917d8a6890dc73ae054676030f769cea1179cc5127a07f",
+    "phase.normal.json": "b38d9f7c7e0589bf21ba547bbd3b8dfa96b0dcd24511a24e250e51cc4b587856",
+    "phase.optimized.json": "b38d9f7c7e0589bf21ba547bbd3b8dfa96b0dcd24511a24e250e51cc4b587856",
+    "polynomial.normal.json": "5f29bd60d639ac0c840cc14e5be080a67a54257aa7dc8bdb5dd8c5d7acb4b429",
+    "polynomial.optimized.json": "5f29bd60d639ac0c840cc14e5be080a67a54257aa7dc8bdb5dd8c5d7acb4b429",
+    "portable_smoke.json": "ded74d9dd957856177bfbbfcdc3ea63070a09bba6d8abd191bd32a4947a55d54",
+    "run_audit.out": "35e035177615c07c592d4f4e0483be575b2f386eabe91d8acd38b80cefe429bb"
+  }
+}

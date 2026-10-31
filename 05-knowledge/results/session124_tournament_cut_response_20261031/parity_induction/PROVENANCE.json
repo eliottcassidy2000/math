@@ -1,0 +1,15 @@
+{
+  "frozen_checksum_entries_reverified_unchanged": 29,
+  "frozen_core_source_sha256": "99930b3155fec3444ebecec69b2c839a89139277909fc62a150dc2bf81e5280e",
+  "frozen_packet_manifest_sha256": "04baece851538b4e7e9212be7da6e306f8f3f83e1337314b4cba00a52cf167eb",
+  "independent_review_sha256": "5a15feda450049e6c762572f9a3f648dc8c24d72856f3dc7fdf10b391f8574e4",
+  "independent_reviewer": "audit_two_ear_obstructions",
+  "manifest_scope": "This addendum has its own manifest and checksums. It does not replace or rewrite the original 30-file packet manifest.",
+  "original_files_modified": [],
+  "parent_supplied_published_checkpoint": "f5076a605f36777c190499e26c00f9271795acc3",
+  "proof_lineage": "Parent supplied same-order edge-flip / next-order extension induction; cut-response lane checked and expanded its dependency ordering; independent reviewer audited boundaries and noncircularity.",
+  "remaining_external_dependency": "Optional triangle-packing corollary still invokes the cited odd-cycle collection formula.",
+  "remote_changes_by_this_lane": false,
+  "scope": "Self-contained dependency closure for classical parity and core cut-response theorem; no new spectrum or novelty claim",
+  "status": "PROVED; independent proof audit PASS"
+}

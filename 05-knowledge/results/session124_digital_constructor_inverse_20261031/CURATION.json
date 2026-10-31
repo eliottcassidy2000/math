@@ -1,0 +1,25 @@
+{
+  "status": "curated_from_independently_audited_sources",
+  "original_digital_sha256": "d3a1605eca5cf7b63b45093efc343c956f814d1430b3424fe9d69fd4c4af3159",
+  "curated_digital_sha256": "26e9807e0adb0b79282a82ff5e46827b6d340390f65b9b296354b836174b17d9",
+  "removed_unused_helper": "invert_singleton",
+  "removed_text_sha256": "36fbbdc4c8a21bcb228ed3f9a79b519bb8bfbe40e2331050b2ed52ecb0c25dce",
+  "core_forward_inverse_algorithms_unchanged": true,
+  "original_proof_sha256": "f36a4a631ce6e35714d4b99bd0f7e2c894bb7dad98db340ffe279392b962f9e5",
+  "original_independent_audit_sha256": {
+    "AUDIT.md": "30a97ec43532601f14133364f49d08ba1ef09cc41707c5916e08a6ab9bce9fe2",
+    "independent_check.py": "02152f2910e97a94f804f360e585d4c070df2a99882fe45aead7e8f667763ff4",
+    "structure_check.py": "8a3ede2fcd6bc37b02fc992c5b67dbfb15cce09195aeadacba07ed4e4a7780d4"
+  },
+  "actual_seed_data_sha256": "7c5a1df6186622dfe1790a9a26c7ec27b3468fc362bc9f17002a2b80f6492ad9",
+  "fiber_data_sha256": "767aec240cefd9c4d7b3bb2399dce29d74d89567549846f2f1af7586dfcb291e",
+  "frontier_recipe_sha256": "14be60a2a781a7c9a636476cb3b88938d03a7c120c0649dfd5569e21f244d6a0",
+  "curation_changes": [
+    "Remove only the unused legacy invert_singleton helper; no new theorem or checker called it.",
+    "Use rho_2(n) explicitly for radical inverse, never a 2-adic valuation.",
+    "Resolve audit inputs from this package; copy the four actual frontier recipes and complete adjacency matrices.",
+    "Require an explicit output path for regenerated fiber data.",
+    "Rerun all producer checks, independent audits, four frontier adjacency DPs, mutation controls, and a relocated full replay."
+  ],
+  "scope": "Decision/reconstruction completeness in the specified actual-seed language, not universal positive answers or unbounded tournament spectrum coverage."
+}

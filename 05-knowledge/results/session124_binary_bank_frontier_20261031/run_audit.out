@@ -1,0 +1,9 @@
+census.normal: PASS
+phase.normal: PASS
+polynomial.normal: PASS
+automorphisms.normal: PASS
+census.optimized: PASS
+phase.optimized: PASS
+polynomial.optimized: PASS
+automorphisms.optimized: PASS
+{"direct_child_DP_checks": 1565142, "grandchild_cuts_checked_by_direct_DP": 1113856, "normal_optimized_byte_identical": true, "qualifying_child_cuts": 1472, "status": "PASS"}

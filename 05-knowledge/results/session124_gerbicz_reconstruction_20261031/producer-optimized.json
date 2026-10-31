@@ -1,0 +1,19 @@
+{
+  "base_pairs": 1992,
+  "base_range": [
+    41,
+    2032
+  ],
+  "checks": 4205601,
+  "external_code_executed": false,
+  "induction_start": 2033,
+  "paired_transitions": 98,
+  "scope": "Inert integer table verification plus stated affine induction proves cycles for every n>=32; small paths15,16,17,23,25..31",
+  "small_cycle_range": [
+    32,
+    40
+  ],
+  "source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+  "status": "PASS",
+  "transition_words": 196
+}

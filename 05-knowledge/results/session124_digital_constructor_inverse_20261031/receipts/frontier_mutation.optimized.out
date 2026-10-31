@@ -1,0 +1,4 @@
+adjacency_103061.txt edge(0,1) flipped: correctly rejected; order 16 target 103061 actual 101247
+adjacency_594793.txt edge(0,1) flipped: correctly rejected; order 20 target 594793 actual 769467
+adjacency_774073.txt edge(0,1) flipped: correctly rejected; order 19 target 774073 actual 754839
+adjacency_949777.txt edge(0,1) flipped: correctly rejected; order 20 target 949777 actual 759405

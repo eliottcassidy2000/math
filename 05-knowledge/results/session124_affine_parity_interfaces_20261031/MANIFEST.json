@@ -1,0 +1,10 @@
+{
+  "status": "verified",
+  "scope": "standard affine parity-constraint category; no Hamiltonian-existence inference",
+  "files": {
+    "AFFINE_INTERFACES.md": "ea042cab59d0b2d2ba2f1423c8dedc7b1e7d2d9a36c85b8a0715f451a1dab3d8",
+    "test_affine_relations.py": "655828aee2f7b8e774e7acec7888e2b8ceda1abf596e1e0a9f8272e4d2f5e222",
+    "normal.json": "74884214391493fe9d9dabe9c79013e782bf6fc791da8591336d2418652556f3",
+    "optimized.json": "74884214391493fe9d9dabe9c79013e782bf6fc791da8591336d2418652556f3"
+  }
+}

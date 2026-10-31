@@ -1,0 +1,117 @@
+{
+  "all_full_runs_cwd": "audit-local _build (not the source directory)",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "direct_child_DP_checks": 1565142,
+  "grandchild_cuts_checked_by_direct_DP": 1113856,
+  "normal_cpp_flags": [
+    "-O2"
+  ],
+  "normal_optimized_byte_identical": true,
+  "optimized_cpp_flags": [
+    "-O3",
+    "-DNDEBUG"
+  ],
+  "portable_smoke_sha256": "ded74d9dd957856177bfbbfcdc3ea63070a09bba6d8abd191bd32a4947a55d54",
+  "producer_representative_bijection_checked": false,
+  "python": "3.12.14",
+  "qualifying_child_cuts": 1472,
+  "runs": [
+    {
+      "check": "census",
+      "exit": 0,
+      "mode": "normal",
+      "seconds": 116.714,
+      "sha256": "996866a940f1ae6093917d8a6890dc73ae054676030f769cea1179cc5127a07f"
+    },
+    {
+      "check": "phase",
+      "exit": 0,
+      "mode": "normal",
+      "seconds": 0.221,
+      "sha256": "b38d9f7c7e0589bf21ba547bbd3b8dfa96b0dcd24511a24e250e51cc4b587856"
+    },
+    {
+      "check": "polynomial",
+      "exit": 0,
+      "mode": "normal",
+      "seconds": 3.268,
+      "sha256": "5f29bd60d639ac0c840cc14e5be080a67a54257aa7dc8bdb5dd8c5d7acb4b429"
+    },
+    {
+      "check": "automorphisms",
+      "exit": 0,
+      "mode": "normal",
+      "seconds": 1.077,
+      "sha256": "7fd9dd4ee9f011597e7382f98e4713a047b14a439da6172a97083cf3e38794f6"
+    },
+    {
+      "check": "census",
+      "exit": 0,
+      "mode": "optimized",
+      "seconds": 112.618,
+      "sha256": "996866a940f1ae6093917d8a6890dc73ae054676030f769cea1179cc5127a07f"
+    },
+    {
+      "check": "phase",
+      "exit": 0,
+      "mode": "optimized",
+      "seconds": 0.301,
+      "sha256": "b38d9f7c7e0589bf21ba547bbd3b8dfa96b0dcd24511a24e250e51cc4b587856"
+    },
+    {
+      "check": "polynomial",
+      "exit": 0,
+      "mode": "optimized",
+      "seconds": 3.426,
+      "sha256": "5f29bd60d639ac0c840cc14e5be080a67a54257aa7dc8bdb5dd8c5d7acb4b429"
+    },
+    {
+      "check": "automorphisms",
+      "exit": 0,
+      "mode": "optimized",
+      "seconds": 1.203,
+      "sha256": "7fd9dd4ee9f011597e7382f98e4713a047b14a439da6172a97083cf3e38794f6"
+    }
+  ],
+  "scope": "all tournaments of orders 1..9; parent H>=9; arbitrary cuts; balanced depth2",
+  "sources": {
+    "check_automorphisms.py": {
+      "bytes": 2081,
+      "sha256": "f3bce2ca46f4e2b78169de9d2959fbe93cfffb4956d8c27d6f987b2de78affe6"
+    },
+    "check_phase.py": {
+      "bytes": 4151,
+      "sha256": "127a897805aa16916506e2516eacb2e004ed5b233150916d1eec139261676ee4"
+    },
+    "check_polynomial.py": {
+      "bytes": 2737,
+      "sha256": "95714d5105c7292be371fc6d12b69f75cd981e328e004ab4d5fa6ad58b546cb1"
+    },
+    "independent_census.cpp": {
+      "bytes": 10572,
+      "sha256": "067225d559ec52be5b372435e531a33d3a2e382b4c57b841c38893ce4684486c"
+    },
+    "phase_bank.json": {
+      "bytes": 297,
+      "sha256": "ab9fa9ec3c78b3e18dfaff656650a2f367257e26bc77bb817a098f865df70cd6"
+    },
+    "producer_snapshot/cut_polynomial.py": {
+      "bytes": 1272,
+      "sha256": "a07303db73b6eb3b7a2e90cea51560a07e6c8938bbd1ba7294920d385756cf74"
+    },
+    "producer_snapshot/full_binary.py": {
+      "bytes": 1290,
+      "sha256": "4e90c9b885ddb4ac7907d8a621e6a4ea98480e6a7b2d447211edf334dec9532f"
+    },
+    "run_audit.py": {
+      "bytes": 4774,
+      "sha256": "9e84eb9a5e40afae367e5cf2cdba08a9ab5ae021e7d70446da9f7590f59318a4"
+    },
+    "small_representatives.json": {
+      "bytes": 3717,
+      "sha256": "98eb90b3b98d3c947a9aabf6969e89dc6a4567ffbff1333519f2e1b088987ffa"
+    }
+  },
+  "standalone_no_representative_input_replay_max_order": 7,
+  "status": "PASS"
+}

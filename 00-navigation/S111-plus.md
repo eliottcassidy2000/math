@@ -12,4 +12,4 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session123](S123.md).
 
-[Session124](S124.md): explicit infinite square-sum ray prefixes and verified tournament counts through999999; global completeness open.
+[Session124](S124.md): mixed-radix square-sum rays, canonical tournament cut law, exact constructor inverses and verified counts through999999; global completeness open.

@@ -1,0 +1,28 @@
+{
+  "audit_sha256": {
+    "AUDIT.md": "30a97ec43532601f14133364f49d08ba1ef09cc41707c5916e08a6ab9bce9fe2",
+    "independent_check.py": "02152f2910e97a94f804f360e585d4c070df2a99882fe45aead7e8f667763ff4",
+    "structure_check.py": "8a3ede2fcd6bc37b02fc992c5b67dbfb15cce09195aeadacba07ed4e4a7780d4"
+  },
+  "hygiene": "Unused invert_singleton helper docstring is inaccurate; main theorem/inverse unaffected.",
+  "no_source_or_remote_changes": true,
+  "receipt_sha256": {
+    "normal.json": "67607c02504dbfe4ff2c46fd240b351b27c53ca576ab4f78e9ce50b1ad45b84d",
+    "optimized.json": "67607c02504dbfe4ff2c46fd240b351b27c53ca576ab4f78e9ce50b1ad45b84d",
+    "producer.check.normal.out": "50ba8085be478950527652a1f41f12f652a0fed23b665815e61ffadea97a4b92",
+    "producer.check.optimized.out": "50ba8085be478950527652a1f41f12f652a0fed23b665815e61ffadea97a4b92",
+    "producer.check_macro_inverse.normal.out": "7f6f9e4408f37311300d597fbb2078d1bf1f9ef71d9a2d974fe3934da82a6f93",
+    "producer.check_macro_inverse.optimized.out": "7f6f9e4408f37311300d597fbb2078d1bf1f9ef71d9a2d974fe3934da82a6f93",
+    "producer.fibers.normal.out": "7df16ffb4cbfd9395dddab8a8d09f784fe7ac945d1c54e4a9d4c39fa00703a6e",
+    "producer.fibers.optimized.out": "7df16ffb4cbfd9395dddab8a8d09f784fe7ac945d1c54e4a9d4c39fa00703a6e",
+    "structure.normal.json": "cc8c317b23f37ce029ac4109c8d680762febd6cb7633daf5024546c8ebbfd7d4",
+    "structure.optimized.json": "cc8c317b23f37ce029ac4109c8d680762febd6cb7633daf5024546c8ebbfd7d4"
+  },
+  "source_sha256": {
+    "README.md": "f36a4a631ce6e35714d4b99bd0f7e2c894bb7dad98db340ffe279392b962f9e5",
+    "actual_seed_roots.json": "7c5a1df6186622dfe1790a9a26c7ec27b3468fc362bc9f17002a2b80f6492ad9",
+    "digital.py": "d3a1605eca5cf7b63b45093efc343c956f814d1430b3424fe9d69fd4c4af3159",
+    "fiber_boundaries.json": "767aec240cefd9c4d7b3bb2399dce29d74d89567549846f2f1af7586dfcb291e"
+  },
+  "status": "PASS"
+}

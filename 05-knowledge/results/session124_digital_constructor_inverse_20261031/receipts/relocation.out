@@ -1,0 +1,17 @@
+producer.check.normal PASS
+producer.check.optimized PASS
+producer.check_macro_inverse.normal PASS
+producer.check_macro_inverse.optimized PASS
+producer.fibers.normal PASS
+producer.fibers.optimized PASS
+independent.normal PASS
+independent.optimized PASS
+structure.normal PASS
+structure.optimized PASS
+compile.frontier.O0 PASS
+frontier.O0 PASS
+compile.frontier.O2 PASS
+frontier.O2 PASS
+frontier_mutation.normal PASS
+frontier_mutation.optimized PASS
+ALL CHECKS PASS

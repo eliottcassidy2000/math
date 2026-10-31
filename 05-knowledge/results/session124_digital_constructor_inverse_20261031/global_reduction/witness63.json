@@ -1,0 +1,33 @@
+{
+  "blocks": [
+    "1",
+    "0",
+    "0",
+    "1",
+    "1",
+    "0",
+    "0"
+  ],
+  "seed": [
+    1,
+    0,
+    0
+  ],
+  "target": 63,
+  "order": 9,
+  "adjacency_rows": [
+    "011111111",
+    "001111110",
+    "000111111",
+    "000011111",
+    "000001110",
+    "000000110",
+    "000000011",
+    "000000001",
+    "010011000"
+  ],
+  "source": "Published million-prefix exact witness constructor, target 63.",
+  "source_constructor_sha256": "14e3ce3b8bc459ccfeaca93934df6e37b9d0b87d061f860d5cf852c8a9239e29",
+  "source_seed_data_sha256": "7c5a1df6186622dfe1790a9a26c7ec27b3468fc362bc9f17002a2b80f6492ad9",
+  "convention": "Seed (n,code,cut): lexicographic i<j edge bits 1 mean i->j; cut bit 1 means apex x->i. Append singleton blocks to the parent ordinally; block 1 means x beats that singleton. Apex is the last adjacency vertex."
+}

@@ -1,0 +1,60 @@
+{
+  "artifact_whitelist": [
+    "AUDIT.md",
+    "GERBICZ_RECONSTRUCTION.md",
+    "README.md",
+    "SHA256SUMS",
+    "SOURCE.json",
+    "audit-normal.json",
+    "audit-optimized.json",
+    "check_independent.py",
+    "construct_primary.py",
+    "expansion-normal.json",
+    "expansion-optimized.json",
+    "producer-normal.json",
+    "producer-optimized.json",
+    "release-check.json",
+    "verify_gerbicz_data.py"
+  ],
+  "external_C_ZIP_tables_included": false,
+  "normal_optimized_identical": [
+    "producer",
+    "audit",
+    "expansion"
+  ],
+  "source_rejection_controls": [
+    {
+      "mismatched_source_rejected": true,
+      "optimized": false,
+      "script": "verify_gerbicz_data.py"
+    },
+    {
+      "mismatched_source_rejected": true,
+      "optimized": true,
+      "script": "verify_gerbicz_data.py"
+    },
+    {
+      "mismatched_source_rejected": true,
+      "optimized": false,
+      "script": "check_independent.py"
+    },
+    {
+      "mismatched_source_rejected": true,
+      "optimized": true,
+      "script": "check_independent.py"
+    },
+    {
+      "mismatched_source_rejected": true,
+      "optimized": false,
+      "script": "construct_primary.py"
+    },
+    {
+      "mismatched_source_rejected": true,
+      "optimized": true,
+      "script": "construct_primary.py"
+    }
+  ],
+  "source_required_separately": true,
+  "status": "PASS",
+  "working_directory_for_replay": "/tmp"
+}

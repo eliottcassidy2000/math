@@ -1,0 +1,124 @@
+{
+  "files": {
+    "AUDIT_RECEIPT.json": {
+      "bytes": 3571,
+      "sha256": "c4d281f177539f413be368af8046116e01932a9d17714f3d558e71a9b5ac0ed7"
+    },
+    "FINITE_BANK_PROOF.md": {
+      "bytes": 12803,
+      "sha256": "7efe447d55786859450911302af901eff745056d8048b684c8cbd533b244ab8a"
+    },
+    "PORTABILITY.json": {
+      "bytes": 2963,
+      "sha256": "c3edc135824beb095fabe191ba98e0de9de454f5eaf08ad1af1af47d4c65b213"
+    },
+    "PRODUCER_BIJECTION_RECEIPT.json": {
+      "bytes": 3570,
+      "sha256": "f7b53072619e71803f6bf496fcdf111841e3b9da9e3840891c4fbdc07fa74d2e"
+    },
+    "PROVENANCE.json": {
+      "bytes": 1881,
+      "sha256": "d45c6a486eb7fcf1d83ddfce88beed1532ce7ac26a80e358fec76e9f0f5f84a6"
+    },
+    "PUBLIC_FILES.txt": {
+      "bytes": 662,
+      "sha256": "3b6693ab8dab777775803c0729f0d3433c5dbb6d675fe3194344339db6b6c31a"
+    },
+    "README.md": {
+      "bytes": 3902,
+      "sha256": "7df42ed189b064b3a038f9d357b9d62ab08bd05c96d2931cf251a1f69f4dee09"
+    },
+    "RELOCATED_AUDIT_RECEIPT.json": {
+      "bytes": 3571,
+      "sha256": "e30fbca69231c31e1d96421152054657cf236ed784913666a553f4e315d5d20f"
+    },
+    "SANITIZER_RECEIPT.json": {
+      "bytes": 1401,
+      "sha256": "c04b3de4bd326d9805e105a0f44ad5561abea6cea1d507faec42530d91f1d5ef"
+    },
+    "SUBMITTED_SOURCE_HASHES.json": {
+      "bytes": 2434,
+      "sha256": "d46aa375e71940538e7030688ddec8eddf2c5254c2efd5b9fe357f250e069830"
+    },
+    "automorphisms.normal.json": {
+      "bytes": 607,
+      "sha256": "7fd9dd4ee9f011597e7382f98e4713a047b14a439da6172a97083cf3e38794f6"
+    },
+    "automorphisms.optimized.json": {
+      "bytes": 607,
+      "sha256": "7fd9dd4ee9f011597e7382f98e4713a047b14a439da6172a97083cf3e38794f6"
+    },
+    "census.normal.json": {
+      "bytes": 2482,
+      "sha256": "996866a940f1ae6093917d8a6890dc73ae054676030f769cea1179cc5127a07f"
+    },
+    "census.optimized.json": {
+      "bytes": 2482,
+      "sha256": "996866a940f1ae6093917d8a6890dc73ae054676030f769cea1179cc5127a07f"
+    },
+    "check_automorphisms.py": {
+      "bytes": 2081,
+      "sha256": "f3bce2ca46f4e2b78169de9d2959fbe93cfffb4956d8c27d6f987b2de78affe6"
+    },
+    "check_phase.py": {
+      "bytes": 4151,
+      "sha256": "127a897805aa16916506e2516eacb2e004ed5b233150916d1eec139261676ee4"
+    },
+    "check_polynomial.py": {
+      "bytes": 2737,
+      "sha256": "95714d5105c7292be371fc6d12b69f75cd981e328e004ab4d5fa6ad58b546cb1"
+    },
+    "independent_census.cpp": {
+      "bytes": 10572,
+      "sha256": "067225d559ec52be5b372435e531a33d3a2e382b4c57b841c38893ce4684486c"
+    },
+    "phase.normal.json": {
+      "bytes": 321,
+      "sha256": "b38d9f7c7e0589bf21ba547bbd3b8dfa96b0dcd24511a24e250e51cc4b587856"
+    },
+    "phase.optimized.json": {
+      "bytes": 321,
+      "sha256": "b38d9f7c7e0589bf21ba547bbd3b8dfa96b0dcd24511a24e250e51cc4b587856"
+    },
+    "phase_bank.json": {
+      "bytes": 297,
+      "sha256": "ab9fa9ec3c78b3e18dfaff656650a2f367257e26bc77bb817a098f865df70cd6"
+    },
+    "polynomial.normal.json": {
+      "bytes": 850,
+      "sha256": "5f29bd60d639ac0c840cc14e5be080a67a54257aa7dc8bdb5dd8c5d7acb4b429"
+    },
+    "polynomial.optimized.json": {
+      "bytes": 850,
+      "sha256": "5f29bd60d639ac0c840cc14e5be080a67a54257aa7dc8bdb5dd8c5d7acb4b429"
+    },
+    "portable_smoke.json": {
+      "bytes": 1851,
+      "sha256": "ded74d9dd957856177bfbbfcdc3ea63070a09bba6d8abd191bd32a4947a55d54"
+    },
+    "producer_snapshot/cut_polynomial.py": {
+      "bytes": 1272,
+      "sha256": "a07303db73b6eb3b7a2e90cea51560a07e6c8938bbd1ba7294920d385756cf74"
+    },
+    "producer_snapshot/full_binary.py": {
+      "bytes": 1290,
+      "sha256": "4e90c9b885ddb4ac7907d8a621e6a4ea98480e6a7b2d447211edf334dec9532f"
+    },
+    "run_audit.out": {
+      "bytes": 367,
+      "sha256": "35e035177615c07c592d4f4e0483be575b2f386eabe91d8acd38b80cefe429bb"
+    },
+    "run_audit.py": {
+      "bytes": 4774,
+      "sha256": "9e84eb9a5e40afae367e5cf2cdba08a9ab5ae021e7d70446da9f7590f59318a4"
+    },
+    "small_representatives.json": {
+      "bytes": 3717,
+      "sha256": "98eb90b3b98d3c947a9aabf6969e89dc6a4567ffbff1333519f2e1b088987ffa"
+    }
+  },
+  "schema": 1,
+  "scope": "Independently verified standard balanced depth2 obstruction, parent n<=9 and H>=9; concrete 15-node positive phase bank only",
+  "self_hash_policy": "MANIFEST.json and SHA256SUMS excluded here; SHA256SUMS additionally covers MANIFEST.json",
+  "target_prefix": "05-knowledge/results/session124_binary_bank_frontier_20261031/"
+}

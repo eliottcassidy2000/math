@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "arguments": [
+        "--max-order",
+        "7"
+      ],
+      "exit": 0,
+      "output_sha256": "ded74d9dd957856177bfbbfcdc3ea63070a09bba6d8abd191bd32a4947a55d54",
+      "same_as_normal": true,
+      "stderr_empty": true
+    },
+    {
+      "arguments": [
+        "--graph-code",
+        "10",
+        "0"
+      ],
+      "exit": 0,
+      "output_sha256": "1f822c3ad42051b1273b8bf4ac03aabd55698d85af1c59ad3cac00243b2fb19d",
+      "same_as_normal": true,
+      "stderr_empty": true
+    },
+    {
+      "arguments": [
+        "--graph-code",
+        "10",
+        "35184372088831"
+      ],
+      "exit": 0,
+      "output_sha256": "2f37303ba91f1564da27a17cdd0bee80381a65898229d7baf442a888a805551e",
+      "same_as_normal": true,
+      "stderr_empty": true
+    },
+    {
+      "arguments": [
+        "--graph-code",
+        "10",
+        "23456789012345"
+      ],
+      "exit": 0,
+      "output_sha256": "83f8392f152e8032acdba93b675df3e51d3f1a99eb159acc0b61529036f23470",
+      "same_as_normal": true,
+      "stderr_empty": true
+    }
+  ],
+  "flags": [
+    "-O1",
+    "-g",
+    "-fsanitize=undefined,bounds",
+    "-fno-sanitize-recover=all"
+  ],
+  "scope": "full independent census through order 7; three full all-cut cases at parent order 10, reaching child order 11",
+  "source_sha256": "067225d559ec52be5b372435e531a33d3a2e382b4c57b841c38893ce4684486c",
+  "status": "PASS"
+}

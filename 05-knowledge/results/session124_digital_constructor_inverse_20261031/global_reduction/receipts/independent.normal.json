@@ -1,0 +1,1 @@
+{"adjacency_sha256": "c690e5c53f0efab1f011853207ac1d2ae4b53e2cc84a6872aabdfd283fb8a151", "factorization_controls": 5000, "independent_subset_dp_H": 63, "literal_permutation_H": 63, "order": 9, "outgoing_masks": [510, 252, 504, 496, 224, 192, 384, 256, 50], "status": "PASS"}

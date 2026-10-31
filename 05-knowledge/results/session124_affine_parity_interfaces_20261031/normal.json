@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": 364040,
+  "objects_tested_dimensions": [
+    0,
+    1,
+    2
+  ],
+  "composition_pairs": 143332,
+  "snake_equations": 6,
+  "currying_relations": 36042,
+  "associativity_triples_dimensions_at_most1": 3912,
+  "affine_set_counts_by_ambient_dimension": [
+    2,
+    4,
+    12,
+    52,
+    308,
+    2452,
+    26388
+  ],
+  "K4_Hamiltonian_cycle_edge_sets": 3
+}

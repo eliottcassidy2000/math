@@ -1,0 +1,21 @@
+{
+  "files": {
+    "PARITY_INDUCTION.md": {
+      "bytes": 7553,
+      "sha256": "2a9e48d72f0304b006aeceffeaf9e2191b28f91829ae8155bb8711735a94f0a7"
+    },
+    "PROVENANCE.json": {
+      "bytes": 1245,
+      "sha256": "0d5cbf5ec5c680e36020189635ea4eaca426dd93e5cd36131f54b6cd29529549"
+    },
+    "REVIEW.md": {
+      "bytes": 2729,
+      "sha256": "5a15feda450049e6c762572f9a3f648dc8c24d72856f3dc7fdf10b391f8574e4"
+    },
+    "STATUS.md": {
+      "bytes": 1053,
+      "sha256": "9bbd4f54a2b8ac1f005e9a2376faf3fd0d0b382f18851d13b9f645211bc2965a"
+    }
+  },
+  "status": "SEALED"
+}

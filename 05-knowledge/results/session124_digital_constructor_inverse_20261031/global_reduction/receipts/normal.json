@@ -1,0 +1,1 @@
+{"backward_endpoint_dp": 63, "literal_permutation_count": 63, "order": 9, "permutations_examined": 362880, "profile_or_digital_formula_used": false, "scope": "Actual H=63 and H=3 witnesses only; ordinal-product reduction is proved separately; no coverage census or new exclusion proof.", "status": "PASS", "target": 63, "triangle_path_count": 3}

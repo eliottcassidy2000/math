@@ -1,0 +1,32 @@
+{
+  "excluded_artifacts": [
+    "large representative lists",
+    "compiled binaries",
+    "caches",
+    "search/discovery matrices"
+  ],
+  "excluded_from_promotion": [
+    "constant-offset depth3 negative census",
+    "period-two-offset negative census",
+    "fourth-level stopping probes",
+    "all-order obstruction",
+    "complete forbidden-value classification"
+  ],
+  "external_producer_representatives_required": false,
+  "finite_scope": "Every tournament T, 1<=|T|<=9, H(T)>=9; all cuts; independent existential choices at every node; no standard balanced depth2 bank",
+  "formula_reference": "../session124_tournament_cut_response_20261031/README.md",
+  "historical_optional_bijection": "PRODUCER_BIJECTION_RECEIPT.json records the original extra comparison against producer reps1.txt..reps9.txt; these scratch files are neither shipped nor required",
+  "independent_universe": "Equitable refinement and individualization; exact canonical codes; automorphism orbit mass equals all labeled tournaments at every order",
+  "positive_scope": "The single supplied order5 seed admits offsets (3,-3,27), a full depth3 binary tree with 15 physical nodes",
+  "producer_snapshot": "Only cut_polynomial.py and its import helper full_binary.py are included for explicit cross-implementation comparison; the independent census does not import them",
+  "publication_performed": false,
+  "reproduction_dependencies": [
+    "C++17 g++",
+    "Python 3 standard library",
+    "files in PUBLIC_FILES.txt"
+  ],
+  "sanitizer_scope": "Supplementary full n<=7 census and three full all-cut parent-order10 cases only, not the full n<=9 census",
+  "source_input_hashes": "SUBMITTED_SOURCE_HASHES.json",
+  "status": "Independently VERIFIED finite standard balanced bank census and explicit positive phase tree",
+  "target_prefix": "05-knowledge/results/session124_binary_bank_frontier_20261031/"
+}

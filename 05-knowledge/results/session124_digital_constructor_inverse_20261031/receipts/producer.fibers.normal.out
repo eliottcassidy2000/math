@@ -1,0 +1,8 @@
+1 offsets 1 max_q 63 boundary 64 signatures 1 max_fiber 1 max_odd_interval 1
+3 offsets 12 max_q 93 boundary 32 signatures 12 max_fiber 4 max_odd_interval 2
+5 offsets 25 max_q 123 boundary 126 signatures 42 max_fiber 3 max_odd_interval 2
+9 offsets 38 max_q 159 boundary 158 signatures 52 max_fiber 5 max_odd_interval 3
+11 offsets 33 max_q 189 boundary 157 signatures 44 max_fiber 3 max_odd_interval 2
+13 offsets 28 max_q 195 boundary 123 signatures 36 max_fiber 3 max_odd_interval 2
+15 offsets 21 max_q 225 boundary 90 signatures 25 max_fiber 4 max_odd_interval 2
+EXACT_INFINITE_FIBERS_FROM_FINITE_ACTUAL_SEED_ANCESTRY_PASS

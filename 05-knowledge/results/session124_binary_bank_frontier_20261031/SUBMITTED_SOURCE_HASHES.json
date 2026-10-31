@@ -1,0 +1,74 @@
+{
+  "large_representatives": "scratch inputs only; not in publication allowlist",
+  "reviewed_inputs": {
+    "BINARY_BANK_FRONTIER.md": {
+      "bytes": 8285,
+      "sha256": "4656cf583ad142f815568fac108174a813713340ba57c4069117c36ebc8322d3"
+    },
+    "CENSUS_PROVENANCE.json": {
+      "bytes": 3080,
+      "sha256": "f08259bc8808289cbbb166fd936b7360d285016b378887820352b284463c4c2f"
+    },
+    "cut_polynomial.py": {
+      "bytes": 1272,
+      "sha256": "a07303db73b6eb3b7a2e90cea51560a07e6c8938bbd1ba7294920d385756cf74"
+    },
+    "full_binary.py": {
+      "bytes": 1290,
+      "sha256": "4e90c9b885ddb4ac7907d8a621e6a4ea98480e6a7b2d447211edf334dec9532f"
+    },
+    "isobank9.cpp": {
+      "bytes": 3085,
+      "sha256": "ccd184615826fe2baadca2d5dc80ea4c39cdd9abe8fa85a716efae80c360126d"
+    },
+    "isobank9.out": {
+      "bytes": 449,
+      "sha256": "5c6729d1015cfcf891922a4e4ef7ac06c329cc362392692e4c50bca4e39da5d6"
+    },
+    "phase_bank_verified.json": {
+      "bytes": 297,
+      "sha256": "ab9fa9ec3c78b3e18dfaff656650a2f367257e26bc77bb817a098f865df70cd6"
+    },
+    "reps1.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "reps2.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "reps3.txt": {
+      "bytes": 4,
+      "sha256": "409f9891ad678ea20e4b20e862d56f23c9b29ed02f40cbdd3a9257821638a85d"
+    },
+    "reps4.txt": {
+      "bytes": 9,
+      "sha256": "30dcb96ed50791f5c7a5cf863bf6c6cdd9e2b3bbf366d18d3f13a46f1300f472"
+    },
+    "reps5.txt": {
+      "bytes": 34,
+      "sha256": "68fb94038da9c151374aab3c87f9ae230516d1056d73194add1ac071c8caf049"
+    },
+    "reps6.txt": {
+      "bytes": 248,
+      "sha256": "a323a98ea1cd0b01cf7183b24780c09e5dc5faed73c0e7fe2ac2652a23503a8c"
+    },
+    "reps7.txt": {
+      "bytes": 2836,
+      "sha256": "712878e8a88995f0996773c497031ef2c95a5d7af77e3234e617fff68b167bb5"
+    },
+    "reps8.txt": {
+      "bytes": 58522,
+      "sha256": "d3867c13b08090ac140ae5c4aea01231abd4751218d603a082c2dcd232de8224"
+    },
+    "reps9.txt": {
+      "bytes": 2092743,
+      "sha256": "c5b921c9e27da21792064498c21f7c31973f05969e26f7696e01de48e504b72e"
+    },
+    "verify_phase_bank.py": {
+      "bytes": 1517,
+      "sha256": "c97143e6b462f521f188154b2d12f605c42c8cb7e8d3aea924f94f3cbfb7a94a"
+    }
+  },
+  "source_directory": "session124_research/bandwidth"
+}

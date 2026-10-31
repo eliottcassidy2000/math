@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-31T07:27:16.022124+00:00",
+  "theorem": "Unrestricted positive odd attainment outside {7,21} is equivalent, using H=63 and ordinal products, to unrestricted attainment of every positive odd m with 3 not dividing m and m!=7.",
+  "conditions": "Global exclusions 7 and 21 are treated as established, not reproved; no new general parity proof.",
+  "restricted_inverse": "Universal success would suffice; inverse decision completeness alone is not universal success, and unrestricted existence does not force membership in this chosen grammar.",
+  "witness_order": 9,
+  "witness_H": 63,
+  "actual_adjacency_independently_identical": true,
+  "both_normal_optimized_receipt_pairs_identical": true,
+  "source_sha256": {
+    "README.md": "5c0682b6bd45edbc620ef8f1bdda1c0e5ea7fb2a861512d3670da96616ba1ec8",
+    "AUDIT.md": "645eab9f23420756d1e573e9dc63300cd3fc53e413f24de647a7b402161350c4",
+    "verify.py": "900cfb17a2267e344f91395a1c1d8c56bc0dc78a269862d26779aef66102d8eb",
+    "independent_audit.py": "a22949dd655c68ab4914674288f6e86e9e7900cc072121bc3692eb622bc64e5f",
+    "witness63.json": "08693ea352348d48e9468737d958424ac48523984f898224378855e571e9c76d"
+  },
+  "sealed_digital_checksums_sha256": "ba184e14ccaa731bf414a8f31666d9abb98d9db805f0b78152b1ee5fc624a768",
+  "million_format_patch_sha256": "716dd2875c79a22de13c46e57c544ac2d37df21585a95107c23c6035bbd16a78",
+  "no_sealed_file_or_remote_changes": true
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+  "base_pairs": 1992,
+  "universal_words": 196,
+  "concrete_paths": 206,
+  "checks": 41275807,
+  "mutations_rejected": [
+    "missing_word",
+    "dispatch_swap",
+    "bad_offset",
+    "bad_member",
+    "bad_singleton"
+  ],
+  "external_code_executed": false
+}

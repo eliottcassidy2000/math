@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-31T07:18:18Z",
+  "finished_utc": "2026-10-31T07:18:52Z",
+  "python": "3.12.14",
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "checks": [
+    {
+      "check": "producer.check.normal",
+      "returncode": 0,
+      "seconds": 7.16
+    },
+    {
+      "check": "producer.check.optimized",
+      "returncode": 0,
+      "seconds": 7.306
+    },
+    {
+      "check": "producer.check_macro_inverse.normal",
+      "returncode": 0,
+      "seconds": 0.443
+    },
+    {
+      "check": "producer.check_macro_inverse.optimized",
+      "returncode": 0,
+      "seconds": 0.501
+    },
+    {
+      "check": "producer.fibers.normal",
+      "returncode": 0,
+      "seconds": 0.035
+    },
+    {
+      "check": "producer.fibers.optimized",
+      "returncode": 0,
+      "seconds": 0.124
+    },
+    {
+      "check": "independent.normal",
+      "returncode": 0,
+      "seconds": 1.897
+    },
+    {
+      "check": "independent.optimized",
+      "returncode": 0,
+      "seconds": 2.049
+    },
+    {
+      "check": "structure.normal",
+      "returncode": 0,
+      "seconds": 5.647
+    },
+    {
+      "check": "structure.optimized",
+      "returncode": 0,
+      "seconds": 5.758
+    },
+    {
+      "check": "compile.frontier.O0",
+      "returncode": 0,
+      "seconds": 0.344
+    },
+    {
+      "check": "frontier.O0",
+      "returncode": 0,
+      "seconds": 0.969
+    },
+    {
+      "check": "compile.frontier.O2",
+      "returncode": 0,
+      "seconds": 0.395
+    },
+    {
+      "check": "frontier.O2",
+      "returncode": 0,
+      "seconds": 0.283
+    },
+    {
+      "check": "frontier_mutation.normal",
+      "returncode": 0,
+      "seconds": 0.349
+    },
+    {
+      "check": "frontier_mutation.optimized",
+      "returncode": 0,
+      "seconds": 0.442
+    }
+  ],
+  "source_sha256": {
+    "audit/adjacency_dp.cpp": "689282f834efa99fd8e3a5d7bf25058b2bcb0e8b4b1ceb42481ac061adf5f431",
+    "audit/independent_check.py": "2e01d2ab7442336dd39692e947f8c7b9492a17a170867ebc3d21d014d5431a02",
+    "audit/mutation.py": "684d303562605511255cac8c2517dc2382f759f44a265e940bbeb032c978cf39",
+    "audit/structure_check.py": "e646d9eb237361d4da2c59a84f830de6d4dffcc22d2abecbe086889ff3222aae",
+    "check.py": "abc9c901b6f87de50b5986cc5f4cc339060ab75767d405f3e8733e58af93f34d",
+    "check_macro_inverse.py": "f127d32b1029d99d8d7198e2a71e33452a4f1e29d9110e43f2f178380cb2c3f4",
+    "digital.py": "26e9807e0adb0b79282a82ff5e46827b6d340390f65b9b296354b836174b17d9",
+    "fibers.py": "b99c78025ded80bfcb2568eb78ea824212fc427e105ecb5df6b4afe663eb50cc",
+    "run_checks.py": "dc4b825156d7bcd3a7d54c00b0729b5869b2a5b0f588296b11aec675c3d56292"
+  },
+  "input_sha256": {
+    "actual_seed_roots.json": "7c5a1df6186622dfe1790a9a26c7ec27b3468fc362bc9f17002a2b80f6492ad9",
+    "fiber_boundaries.json": "767aec240cefd9c4d7b3bb2399dce29d74d89567549846f2f1af7586dfcb291e",
+    "frontier_repairs.jsonl": "14be60a2a781a7c9a636476cb3b88938d03a7c120c0649dfd5569e21f244d6a0"
+  },
+  "relocation": null,
+  "scope": "Exact actual-seed language identities, fibers and finite inverse completeness. No universal positive-answer or infinite tournament spectrum theorem."
+}
