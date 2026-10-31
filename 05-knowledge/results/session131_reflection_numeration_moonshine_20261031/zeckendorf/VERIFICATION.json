@@ -1,0 +1,12 @@
+{
+  "explicit_checks_each_mode": 1800186,
+  "normal_failing_gate_exit": 1,
+  "normal_optimized_identical": true,
+  "optimized_failing_gate_exit": 1,
+  "output_sha256": "d0536b940abc35f611526646199179487bfc4230406d77416d2930f39e3a2c19",
+  "proof_status": "Universal derivations in PROOFS.md; implementation checks finite",
+  "publication": "Not performed by this lane",
+  "source_sha256": "7a2f008174c0f1fa5e94d9ef426b6ed37bcaebcef9dd3e0839867d05aa1e0aad",
+  "standalone_clean_directory_replay_identical": true,
+  "status": "PASS"
+}

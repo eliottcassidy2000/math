@@ -1,0 +1,45 @@
+{
+  "inputs": [
+    {
+      "path": "../integral_normal_form/THEORY.md",
+      "sha256": "4978b29fee86ed7c99f27e0e4e67d4349a3496307479cf696fb22b8b0b3d2105"
+    },
+    {
+      "path": "../integral_normal_form/check_normal_form.py",
+      "sha256": "bf3d127faede89b26f92c6740810fbf13b9ea67f8b08859a709f3ac9ff4fd538"
+    },
+    {
+      "path": "../binary_carries/PROOFS.md",
+      "sha256": "e09c8648085172171494cf5aef03c53db3c3b1ae415a93dbc31c4fbc06bbd14e"
+    },
+    {
+      "path": "../binary_carries/normal.json",
+      "sha256": "91a01d74614b982851e3be418e667cc4f0f300c62035e68efe3628cc35852a70"
+    },
+    {
+      "path": "../zeckendorf/PROOFS.md",
+      "sha256": "988f0d25d3fbf36d81727d11aa6a4ad4c47314cd666630d49a7dc6a572cbbd0a"
+    },
+    {
+      "path": "../zeckendorf/normal.json",
+      "sha256": "d0536b940abc35f611526646199179487bfc4230406d77416d2930f39e3a2c19"
+    },
+    {
+      "path": "../square_sum/PROOFS.md",
+      "sha256": "627659d13f616b0fb431d280d1af93304f41a532de8167a37a0c3982ec235e2b"
+    },
+    {
+      "path": "../square_sum/witnesses.json",
+      "sha256": "92ce8ab302e4e9512023aba1e1afc0a1f372d2f9840306a6f6a0815c1af0dec0"
+    },
+    {
+      "path": "../moonshine/README.md",
+      "sha256": "ee4daab42bbbb9cba1ecc82010c11d130dba5e9d2cee9c1191e9741a195a8d67"
+    },
+    {
+      "path": "../moonshine/results.json",
+      "sha256": "b24b109843c4f4319ea0e9319ff7a6a7126a616510538b680d5b5d5b528f9ba9"
+    }
+  ],
+  "status": "REVIEWED"
+}

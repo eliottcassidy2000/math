@@ -1,0 +1,355 @@
+{
+  "gates": 933,
+  "level_two": [
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 5,
+      "rational_points": [
+        3
+      ],
+      "squarefree_polynomial_low_first": [
+        2,
+        1
+      ],
+      "supersingular_j": [
+        0
+      ],
+      "total_points": 1
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 7,
+      "rational_points": [
+        2,
+        5
+      ],
+      "squarefree_polynomial_low_first": [
+        3,
+        0,
+        1
+      ],
+      "supersingular_j": [
+        6
+      ],
+      "total_points": 2
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 11,
+      "rational_points": [
+        3,
+        4
+      ],
+      "squarefree_polynomial_low_first": [
+        1,
+        4,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        1
+      ],
+      "total_points": 2
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 13,
+      "rational_points": [
+        5,
+        11
+      ],
+      "squarefree_polynomial_low_first": [
+        3,
+        10,
+        1
+      ],
+      "supersingular_j": [
+        5
+      ],
+      "total_points": 2
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 17,
+      "rational_points": [
+        0,
+        4
+      ],
+      "squarefree_polynomial_low_first": [
+        0,
+        13,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        8
+      ],
+      "total_points": 2
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 19,
+      "rational_points": [
+        5,
+        7,
+        10
+      ],
+      "squarefree_polynomial_low_first": [
+        11,
+        3,
+        16,
+        1
+      ],
+      "supersingular_j": [
+        7,
+        18
+      ],
+      "total_points": 3
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 23,
+      "rational_points": [
+        4,
+        10,
+        13,
+        14
+      ],
+      "squarefree_polynomial_low_first": [
+        12,
+        6,
+        2,
+        5,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        3,
+        19
+      ],
+      "total_points": 4
+    },
+    {
+      "minus_dimension": 1,
+      "nonrational_factor_low_first": [
+        16,
+        20,
+        1
+      ],
+      "p": 29,
+      "rational_points": [
+        12,
+        18
+      ],
+      "squarefree_polynomial_low_first": [
+        5,
+        12,
+        9,
+        19,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        2,
+        25
+      ],
+      "total_points": 4
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 31,
+      "rational_points": [
+        4,
+        15,
+        24,
+        26,
+        27
+      ],
+      "squarefree_polynomial_low_first": [
+        30,
+        26,
+        19,
+        25,
+        28,
+        1
+      ],
+      "supersingular_j": [
+        2,
+        4,
+        23
+      ],
+      "total_points": 5
+    },
+    {
+      "minus_dimension": 1,
+      "nonrational_factor_low_first": [
+        33,
+        8,
+        1
+      ],
+      "p": 41,
+      "rational_points": [
+        3,
+        15,
+        35
+      ],
+      "squarefree_polynomial_low_first": [
+        13,
+        40,
+        26,
+        38,
+        37,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        3,
+        28,
+        32
+      ],
+      "total_points": 5
+    },
+    {
+      "minus_dimension": 0,
+      "nonrational_factor_low_first": [
+        1
+      ],
+      "p": 47,
+      "rational_points": [
+        0,
+        3,
+        10,
+        13,
+        14,
+        34,
+        39
+      ],
+      "squarefree_polynomial_low_first": [
+        0,
+        33,
+        39,
+        42,
+        22,
+        15,
+        28,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        9,
+        10,
+        36,
+        44
+      ],
+      "total_points": 7
+    },
+    {
+      "minus_dimension": 1,
+      "nonrational_factor_low_first": [
+        53,
+        49,
+        1
+      ],
+      "p": 59,
+      "rational_points": [
+        12,
+        23,
+        28,
+        33,
+        48,
+        49
+      ],
+      "squarefree_polynomial_low_first": [
+        9,
+        8,
+        7,
+        40,
+        0,
+        58,
+        49,
+        33,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        15,
+        17,
+        28,
+        47,
+        48
+      ],
+      "total_points": 8
+    },
+    {
+      "minus_dimension": 1,
+      "nonrational_factor_low_first": [
+        53,
+        49,
+        1
+      ],
+      "p": 71,
+      "rational_points": [
+        9,
+        12,
+        14,
+        18,
+        23,
+        46,
+        55,
+        57
+      ],
+      "squarefree_polynomial_low_first": [
+        70,
+        12,
+        49,
+        30,
+        34,
+        20,
+        24,
+        52,
+        57,
+        28,
+        1
+      ],
+      "supersingular_j": [
+        0,
+        17,
+        24,
+        40,
+        41,
+        48,
+        66
+      ],
+      "total_points": 10
+    }
+  ],
+  "level_two_scope": "13 Ogg primes >= 5",
+  "method": "Hasse coefficients and squarefree polynomial resultant gcd; no Fp2 enumeration or class numbers",
+  "point_count_comparisons": 44,
+  "point_scope": "every prime 5 <= p <= 199",
+  "status": "PASS"
+}

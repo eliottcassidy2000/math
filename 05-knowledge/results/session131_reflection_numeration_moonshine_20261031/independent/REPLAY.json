@@ -1,0 +1,75 @@
+{
+  "runs": [
+    {
+      "failure_control_exit": 1,
+      "mode": "normal",
+      "receipt_sha256": "f8c492bb08e5429e53f16ec1b0530d8d3ed05ae92974133d8e827da53532b074",
+      "script": "check_module.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "optimized",
+      "receipt_sha256": "f8c492bb08e5429e53f16ec1b0530d8d3ed05ae92974133d8e827da53532b074",
+      "script": "check_module.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "normal",
+      "receipt_sha256": "610dcfa005b014b263d4a7198b8d7996b38b0859e14b63f46520765490547c42",
+      "script": "check_moonshine_polynomials.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "optimized",
+      "receipt_sha256": "610dcfa005b014b263d4a7198b8d7996b38b0859e14b63f46520765490547c42",
+      "script": "check_moonshine_polynomials.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "normal",
+      "receipt_sha256": "3b575ca2ad85ee5b5dc69f1552de8ad5f0737549246b165b25b2dbcf361f863f",
+      "script": "check_numeration_certificates.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "optimized",
+      "receipt_sha256": "3b575ca2ad85ee5b5dc69f1552de8ad5f0737549246b165b25b2dbcf361f863f",
+      "script": "check_numeration_certificates.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "normal",
+      "receipt_sha256": "2c6793d0f77f5bdd2fe09b35368f146b272083610c42240a0d94e5fbcbcafdc9",
+      "script": "check_tournament_carries.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "optimized",
+      "receipt_sha256": "2c6793d0f77f5bdd2fe09b35368f146b272083610c42240a0d94e5fbcbcafdc9",
+      "script": "check_tournament_carries.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "normal",
+      "receipt_sha256": "2d18bd4631ebd4abbb27d8438497471edf9a261716732b7813d2c940b8a099a5",
+      "script": "check_square_sum.py",
+      "status": "PASS"
+    },
+    {
+      "failure_control_exit": 1,
+      "mode": "optimized",
+      "receipt_sha256": "2d18bd4631ebd4abbb27d8438497471edf9a261716732b7813d2c940b8a099a5",
+      "script": "check_square_sum.py",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

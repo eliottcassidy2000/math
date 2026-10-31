@@ -1,0 +1,240 @@
+{
+  "manifests": [
+    {
+      "entries": 15,
+      "path": "binary_carries/SHA256SUMS"
+    },
+    {
+      "entries": 20,
+      "path": "independent/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "integral_normal_form/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "moonshine/SHA256SUMS"
+    },
+    {
+      "entries": 9,
+      "path": "zeckendorf/SHA256SUMS"
+    },
+    {
+      "entries": 9,
+      "path": "square_sum/MANIFEST.json"
+    }
+  ],
+  "negative_gates": [
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "integral_normal_form/check_normal_form.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "integral_normal_form/check_normal_form.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "zeckendorf/check_bridge.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "zeckendorf/check_bridge.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_module.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_module.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_moonshine_polynomials.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_moonshine_polynomials.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_numeration_certificates.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_numeration_certificates.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_tournament_carries.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_tournament_carries.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_square_sum.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_square_sum.py"
+    }
+  ],
+  "replays": [
+    {
+      "optimized": false,
+      "script": "integral_normal_form/check_normal_form.py",
+      "status": "PASS",
+      "stdout_sha256": "a542827bd3691a11d94e1c9c102784432146707cb52c92ce2a6b75ea4f82153a"
+    },
+    {
+      "optimized": true,
+      "script": "integral_normal_form/check_normal_form.py",
+      "status": "PASS",
+      "stdout_sha256": "a542827bd3691a11d94e1c9c102784432146707cb52c92ce2a6b75ea4f82153a"
+    },
+    {
+      "optimized": false,
+      "script": "moonshine/check.py",
+      "status": "PASS",
+      "stdout_sha256": "b24b109843c4f4319ea0e9319ff7a6a7126a616510538b680d5b5d5b528f9ba9"
+    },
+    {
+      "optimized": true,
+      "script": "moonshine/check.py",
+      "status": "PASS",
+      "stdout_sha256": "b24b109843c4f4319ea0e9319ff7a6a7126a616510538b680d5b5d5b528f9ba9"
+    },
+    {
+      "optimized": false,
+      "script": "binary_carries/check_binary_carries.py",
+      "status": "PASS",
+      "stdout_sha256": "91a01d74614b982851e3be418e667cc4f0f300c62035e68efe3628cc35852a70"
+    },
+    {
+      "optimized": true,
+      "script": "binary_carries/check_binary_carries.py",
+      "status": "PASS",
+      "stdout_sha256": "91a01d74614b982851e3be418e667cc4f0f300c62035e68efe3628cc35852a70"
+    },
+    {
+      "optimized": false,
+      "script": "binary_carries/verify_hostiles.py",
+      "status": "PASS",
+      "stdout_sha256": "0c365c5eca43a4e40fe04ebdb9a4b5ba0854e6744efceca4f36ad0df32788336"
+    },
+    {
+      "optimized": true,
+      "script": "binary_carries/verify_hostiles.py",
+      "status": "PASS",
+      "stdout_sha256": "0c365c5eca43a4e40fe04ebdb9a4b5ba0854e6744efceca4f36ad0df32788336"
+    },
+    {
+      "optimized": false,
+      "script": "zeckendorf/check_bridge.py",
+      "status": "PASS",
+      "stdout_sha256": "d0536b940abc35f611526646199179487bfc4230406d77416d2930f39e3a2c19"
+    },
+    {
+      "optimized": true,
+      "script": "zeckendorf/check_bridge.py",
+      "status": "PASS",
+      "stdout_sha256": "d0536b940abc35f611526646199179487bfc4230406d77416d2930f39e3a2c19"
+    },
+    {
+      "optimized": false,
+      "script": "square_sum/check.py",
+      "status": "PASS",
+      "stdout_sha256": "28f7ed940d977cf5c9fd171cef5e400b66112a29a78cf26d6ec17d3c9789b994"
+    },
+    {
+      "optimized": true,
+      "script": "square_sum/check.py",
+      "status": "PASS",
+      "stdout_sha256": "28f7ed940d977cf5c9fd171cef5e400b66112a29a78cf26d6ec17d3c9789b994"
+    },
+    {
+      "optimized": false,
+      "script": "independent/check_module.py",
+      "status": "PASS",
+      "stdout_sha256": "f8c492bb08e5429e53f16ec1b0530d8d3ed05ae92974133d8e827da53532b074"
+    },
+    {
+      "optimized": true,
+      "script": "independent/check_module.py",
+      "status": "PASS",
+      "stdout_sha256": "f8c492bb08e5429e53f16ec1b0530d8d3ed05ae92974133d8e827da53532b074"
+    },
+    {
+      "optimized": false,
+      "script": "independent/check_moonshine_polynomials.py",
+      "status": "PASS",
+      "stdout_sha256": "610dcfa005b014b263d4a7198b8d7996b38b0859e14b63f46520765490547c42"
+    },
+    {
+      "optimized": true,
+      "script": "independent/check_moonshine_polynomials.py",
+      "status": "PASS",
+      "stdout_sha256": "610dcfa005b014b263d4a7198b8d7996b38b0859e14b63f46520765490547c42"
+    },
+    {
+      "optimized": false,
+      "script": "independent/check_numeration_certificates.py",
+      "status": "PASS",
+      "stdout_sha256": "3b575ca2ad85ee5b5dc69f1552de8ad5f0737549246b165b25b2dbcf361f863f"
+    },
+    {
+      "optimized": true,
+      "script": "independent/check_numeration_certificates.py",
+      "status": "PASS",
+      "stdout_sha256": "3b575ca2ad85ee5b5dc69f1552de8ad5f0737549246b165b25b2dbcf361f863f"
+    },
+    {
+      "optimized": false,
+      "script": "independent/check_tournament_carries.py",
+      "status": "PASS",
+      "stdout_sha256": "2c6793d0f77f5bdd2fe09b35368f146b272083610c42240a0d94e5fbcbcafdc9"
+    },
+    {
+      "optimized": true,
+      "script": "independent/check_tournament_carries.py",
+      "status": "PASS",
+      "stdout_sha256": "2c6793d0f77f5bdd2fe09b35368f146b272083610c42240a0d94e5fbcbcafdc9"
+    },
+    {
+      "optimized": false,
+      "script": "independent/check_square_sum.py",
+      "status": "PASS",
+      "stdout_sha256": "2d18bd4631ebd4abbb27d8438497471edf9a261716732b7813d2c940b8a099a5"
+    },
+    {
+      "optimized": true,
+      "script": "independent/check_square_sum.py",
+      "status": "PASS",
+      "stdout_sha256": "2d18bd4631ebd4abbb27d8438497471edf9a261716732b7813d2c940b8a099a5"
+    }
+  ],
+  "square_sum_release": {
+    "checked_conditions": 1635735,
+    "release_files": 10,
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

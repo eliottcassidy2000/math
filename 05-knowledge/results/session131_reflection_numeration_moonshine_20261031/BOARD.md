@@ -18,3 +18,7 @@ Least-used sidecars: constructive module basis, explicit carry automata, residue
 Method cards: Audit saturation and basis covariance; Retain local incidence through counting; Search the statement before the method; Type every analogy and every implication.
 
 The incoming S71 audit c67240dc is preserved and source-qualified. Session129 priority/cycle results remain credited; no earlier pending operation is retried. No global forbidden-H-spectrum, LRC, or new moonshine classification is assumed.
+
+## Close-out comparison
+
+The reflection lattice now has a constructive integral module basis. Nonconsecutive numerals add explicit carry laws and an exact three-step parity return, rather than independent even/odd streams. The square-sum lane produces a sharp uniform residuewise seam bound with actual certificates. The Hamiltonian lane separates binary bits from coefficient counts; the prime lane recovers the existing sporadic-group filtration and proves the precise shared exchange-block/index mechanism, while sign blocks obstruct an identification. These are distinct preserved predicates and known failure boundaries.

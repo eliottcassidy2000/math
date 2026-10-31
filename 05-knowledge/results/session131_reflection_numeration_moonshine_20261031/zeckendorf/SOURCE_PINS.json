@@ -1,0 +1,31 @@
+{
+  "source_commit": "41a9d96041ca6f970158450972c5295695387e53",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session130_blue_black_theorems_20261031/gain_cohomology/THEORY.md",
+      "blob": "978a8c64755f12acf95367ce58272993abe3825e",
+      "sha256": "14673ba17b4d1ca43369bb869883743ea359d8ae2ec93411924bab54d2130eaa"
+    },
+    {
+      "path": "05-knowledge/results/session130_blue_black_theorems_20261031/gain_cohomology/check_lattice.py",
+      "blob": "b28d3c6c1b20c647567d3cb5661676f44c796e65",
+      "sha256": "505bdf2c48fe89dc35aeb0087ce62fde5a4c8be89a47c3d9b308a976da08d385"
+    },
+    {
+      "path": "05-knowledge/results/session125_origin32_numeration_20261031/numeration/PROOFS.md",
+      "blob": "1803c25883ab96230df446347e3b51a175b1896f",
+      "sha256": "40f9790062b84639899f880a32f0b580d05d907d677292b97a494e3c154263e4"
+    },
+    {
+      "path": "05-knowledge/results/session125_origin32_numeration_20261031/numeration/BEATTY_BRIDGE.md",
+      "blob": "a8ca5712b1e5d0ab0c8689afe1835c69fd328f86",
+      "sha256": "28520746e00327fa88433c4ff1c6269c3e05df960029e784b8b025dc32bdb0b8"
+    },
+    {
+      "path": "05-knowledge/results/session125_rooted_forest_numeration_20261031/PROOFS.md",
+      "blob": "85c2295475a8a409b44b9fcb0e24689e6e5d00b4",
+      "sha256": "afc71a11172e2ca4127c581ad13374a9640431551f0c9d90e54228b2e6184358"
+    }
+  ],
+  "runtime_dependencies": "Python standard library only; no source checkout needed"
+}

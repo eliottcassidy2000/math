@@ -1,0 +1,8 @@
+{
+  "all_five_checkers_both_modes": true,
+  "byte_identical_replay": true,
+  "producer_code_copied": false,
+  "replay_sha256": "3c6a0b1ed4dac2e482e56057d240aba880bf53e91d7bc3893bfadecdf9344769",
+  "standalone_comparison_fixtures": 4,
+  "status": "PASS"
+}

@@ -1,0 +1,197 @@
+{
+  "gates": 33019,
+  "nonsharp_singleton_control32": {
+    "endpoint_residues": [
+      4,
+      4,
+      3,
+      5,
+      4,
+      4,
+      5,
+      3
+    ],
+    "n": 32,
+    "path_counts": [
+      4,
+      3,
+      5,
+      4
+    ],
+    "seams": 16,
+    "singleton_paths": 3
+  },
+  "odd_component_scope": "H40 explicit base; every N=44..256; arrival13..2000",
+  "root_word_cases": 27200,
+  "sharp_cycles": [
+    {
+      "endpoint_residues": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "n": 80,
+      "path_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "seams": 4,
+      "singleton_paths": 0
+    },
+    {
+      "endpoint_residues": [
+        0,
+        2,
+        3,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "n": 81,
+      "path_counts": [
+        1,
+        3,
+        1,
+        2
+      ],
+      "seams": 7,
+      "singleton_paths": 0
+    },
+    {
+      "endpoint_residues": [
+        0,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 82,
+      "path_counts": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "seams": 8,
+      "singleton_paths": 1
+    },
+    {
+      "endpoint_residues": [
+        0,
+        2,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "n": 83,
+      "path_counts": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "seams": 7,
+      "singleton_paths": 0
+    },
+    {
+      "endpoint_residues": [
+        0,
+        2,
+        3,
+        3,
+        4,
+        2,
+        1,
+        1
+      ],
+      "n": 84,
+      "path_counts": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "seams": 8,
+      "singleton_paths": 1
+    },
+    {
+      "endpoint_residues": [
+        1,
+        3,
+        4,
+        2,
+        1,
+        1,
+        0,
+        2
+      ],
+      "n": 85,
+      "path_counts": [
+        2,
+        3,
+        1,
+        1
+      ],
+      "seams": 7,
+      "singleton_paths": 0
+    },
+    {
+      "endpoint_residues": [
+        1,
+        3,
+        3,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "n": 86,
+      "path_counts": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "seams": 8,
+      "singleton_paths": 0
+    },
+    {
+      "endpoint_residues": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 87,
+      "path_counts": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "seams": 7,
+      "singleton_paths": 0
+    }
+  ],
+  "status": "PASS"
+}

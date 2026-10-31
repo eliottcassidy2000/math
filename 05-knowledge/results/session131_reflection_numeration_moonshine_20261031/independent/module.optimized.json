@@ -1,0 +1,173 @@
+{
+  "controls": {
+    "black_bridge": {
+      "black_pairs": 1,
+      "blue_edges": 0,
+      "c_blue": 2,
+      "c_quotient": 1,
+      "cycle_rank": 1,
+      "eigen_index": 1,
+      "exchange": 0,
+      "sign": 1,
+      "trivial": 0,
+      "vertices": 2
+    },
+    "black_loop": {
+      "black_pairs": 1,
+      "blue_edges": 0,
+      "c_blue": 1,
+      "c_quotient": 1,
+      "cycle_rank": 2,
+      "eigen_index": 2,
+      "exchange": 1,
+      "sign": 0,
+      "trivial": 0,
+      "vertices": 1
+    },
+    "blue_black_parallel": {
+      "black_pairs": 1,
+      "blue_edges": 1,
+      "c_blue": 1,
+      "c_quotient": 1,
+      "cycle_rank": 2,
+      "eigen_index": 2,
+      "exchange": 1,
+      "sign": 0,
+      "trivial": 0,
+      "vertices": 2
+    },
+    "blue_loop": {
+      "black_pairs": 0,
+      "blue_edges": 1,
+      "c_blue": 1,
+      "c_quotient": 1,
+      "cycle_rank": 1,
+      "eigen_index": 1,
+      "exchange": 0,
+      "sign": 0,
+      "trivial": 1,
+      "vertices": 1
+    },
+    "disconnected_isolated": {
+      "black_pairs": 1,
+      "blue_edges": 1,
+      "c_blue": 3,
+      "c_quotient": 3,
+      "cycle_rank": 2,
+      "eigen_index": 2,
+      "exchange": 1,
+      "sign": 0,
+      "trivial": 0,
+      "vertices": 4
+    },
+    "parallel_blue": {
+      "black_pairs": 0,
+      "blue_edges": 2,
+      "c_blue": 1,
+      "c_quotient": 1,
+      "cycle_rank": 1,
+      "eigen_index": 1,
+      "exchange": 0,
+      "sign": 0,
+      "trivial": 1,
+      "vertices": 2
+    }
+  },
+  "exhaustive_counts": {
+    "0": 1,
+    "1": 4,
+    "2": 64,
+    "3": 4096
+  },
+  "gates": 1360477,
+  "order4": {
+    "literal_lines": [
+      {
+        "blue": true,
+        "endpoints": [
+          0,
+          2
+        ],
+        "masks": [
+          0,
+          7
+        ]
+      },
+      {
+        "blue": false,
+        "endpoints": [
+          1,
+          2
+        ],
+        "masks": [
+          1,
+          6
+        ]
+      },
+      {
+        "blue": true,
+        "endpoints": [
+          2,
+          2
+        ],
+        "masks": [
+          2,
+          5
+        ]
+      },
+      {
+        "blue": false,
+        "endpoints": [
+          1,
+          2
+        ],
+        "masks": [
+          3,
+          4
+        ]
+      }
+    ],
+    "module": {
+      "black_pairs": 1,
+      "blue_edges": 2,
+      "c_blue": 2,
+      "c_quotient": 1,
+      "cycle_rank": 2,
+      "eigen_index": 1,
+      "exchange": 0,
+      "sign": 1,
+      "trivial": 1,
+      "vertices": 3
+    },
+    "node_keys": [
+      0,
+      2,
+      4
+    ],
+    "tiling_class_keys": [
+      4,
+      4,
+      4,
+      2,
+      4,
+      4,
+      2,
+      0
+    ]
+  },
+  "order5": {
+    "black_pairs": 12,
+    "blue_edges": 8,
+    "c_blue": 3,
+    "c_quotient": 1,
+    "cycle_rank": 23,
+    "eigen_index": 1024,
+    "exchange": 10,
+    "sign": 2,
+    "trivial": 1,
+    "vertices": 10
+  },
+  "scope": "all n<=3 graphs with zero/one blue edge and zero/one black pair per unordered pair including loops; 360 seeded larger multigraphs",
+  "seeded_multigraphs": 360,
+  "status": "PASS"
+}

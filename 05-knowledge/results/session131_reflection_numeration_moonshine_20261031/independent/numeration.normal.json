@@ -1,0 +1,64 @@
+{
+  "CG_eight_digit_interval": 2584,
+  "dfa": {
+    "cg": {
+      "distinguished_pairs": 136,
+      "explicit_word_comparisons": 7381,
+      "states": 17
+    },
+    "z": {
+      "distinguished_pairs": 136,
+      "explicit_word_comparisons": 21845,
+      "states": 17
+    }
+  },
+  "gates": 93732,
+  "interwoven_16_digit_words": 2584,
+  "shift_returns": {
+    "cg": {
+      "equal_parity_pairs": 3281,
+      "minimality_witness": [
+        [
+          3,
+          1
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          21,
+          8
+        ],
+        [
+          55,
+          21
+        ]
+      ],
+      "signed_inputs": 201
+    },
+    "z": {
+      "equal_parity_pairs": 3281,
+      "minimality_witness": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          13,
+          5
+        ]
+      ],
+      "signed_inputs": 201
+    }
+  },
+  "status": "PASS"
+}

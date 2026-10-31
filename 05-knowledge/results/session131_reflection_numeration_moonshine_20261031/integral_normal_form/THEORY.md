@@ -56,7 +56,7 @@ This is a strictly increasing odd injection. No floating arithmetic is needed:
 
 `P(n)=(3n+floor(sqrt(5n^2)))//2+1` for n>0.
 
-The underlying numeral theorem is inherited from Session125. Ordinary Zeckendorf binary digits, which forbid adjacent1s, and this even-Fibonacci digit system are related but different canonical languages; the companion carry packet (being assembled) gives the explicit conversion.
+The underlying numeral theorem is inherited from Session125. Ordinary Zeckendorf binary digits, which forbid adjacent1s, and this even-Fibonacci digit system are related but different canonical languages; the companion [carry packet](../zeckendorf/PROOFS.md) gives the explicit conversion.
 
 **Theorem 2 (coherent equivariant growth).** Fix the integral normal-form basis from Theorem1. Apply K separately to every coefficient. The resulting map on Z_1(G) is injective, preserves zero boundary, and commutes with R.
 
@@ -73,7 +73,7 @@ In general the correct operation is
 
 The companion packet proves that its correction relative to independent K(s),K(d) is a pair of carries in{-1,0,1}; in the positive normalization case a strategy-independent bottom carry explains the defect. Thus the two strands are coupled by an explicit parity and carry law, not merely described as interwoven.
 
-This numeral map is not a square-sum graph embedding:1+3=4 is a square, butP(1)+P(3)=3+8=11 is not. The square-sum packet (being assembled) retains the actual edge-reflection and interval/injectivity constraints and classifies the uniform affine maps that preserve every square-sum edge.
+This numeral map is not a square-sum graph embedding:1+3=4 is a square, butP(1)+P(3)=3+8=11 is not. The [square-sum packet](../square_sum/README.md) retains the actual edge-reflection and interval/injectivity constraints and classifies the uniform affine maps that preserve every square-sum edge.
 
 ## 4. Frobenius: the same gluing mechanism, a different module
 

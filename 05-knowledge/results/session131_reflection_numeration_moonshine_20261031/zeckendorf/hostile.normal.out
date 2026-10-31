@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/session131_research/zeckendorf/check_bridge.py", line 466, in <module>
+    main()
+  File "/tmp/session131_research/zeckendorf/check_bridge.py", line 453, in main
+    req(False,'intentional hostile failing gate')
+  File "/tmp/session131_research/zeckendorf/check_bridge.py", line 18, in req
+    raise RuntimeError(message)
+RuntimeError: intentional hostile failing gate

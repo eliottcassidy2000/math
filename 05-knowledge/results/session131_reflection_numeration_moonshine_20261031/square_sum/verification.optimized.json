@@ -1,0 +1,515 @@
+{
+  "checked_conditions": 1635735,
+  "digit_interweaving": {
+    "all_binary_words": 524287,
+    "conjugated_reflections": 123504,
+    "legal_words": 17709,
+    "maximum_digit_length": 18
+  },
+  "inherited_G32_even_root_edges": 16,
+  "input_sha256": {
+    "check.py": "3be1db8a373724e41b826c0af8bbdbff21021e27a8ef3403122c2c87695ec0dd",
+    "source_pins.json": "f7d61c91ee6901a1bbdd8470dbe16042212dd302ddd451e65d588e3c42c48fb3",
+    "witnesses.json": "92ce8ab302e4e9512023aba1e1afc0a1f372d2f9840306a6f6a0815c1af0dec0"
+  },
+  "marked_path_cases": 668,
+  "odd_square_components": {
+    "component_count_changes": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        41,
+        7
+      ],
+      [
+        42,
+        6
+      ],
+      [
+        43,
+        5
+      ],
+      [
+        44,
+        4
+      ]
+    ],
+    "maximum_order": 2000
+  },
+  "optimal_witnesses": [
+    {
+      "bound": 4,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "even_root_seams": [
+        [
+          1,
+          15
+        ],
+        [
+          34,
+          30
+        ],
+        [
+          51,
+          13
+        ],
+        [
+          36,
+          64
+        ]
+      ],
+      "even_square_edges": 4,
+      "n": 80,
+      "odd_root_path_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "singleton_paths": 0
+    },
+    {
+      "bound": 7,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        0,
+        2,
+        3,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "even_root_seams": [
+        [
+          1,
+          15
+        ],
+        [
+          26,
+          38
+        ],
+        [
+          3,
+          61
+        ],
+        [
+          60,
+          4
+        ],
+        [
+          21,
+          79
+        ],
+        [
+          34,
+          2
+        ],
+        [
+          63,
+          81
+        ]
+      ],
+      "even_square_edges": 7,
+      "n": 81,
+      "odd_root_path_counts": [
+        1,
+        3,
+        1,
+        2
+      ],
+      "singleton_paths": 0
+    },
+    {
+      "bound": 8,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        0,
+        2,
+        4,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "even_root_seams": [
+        [
+          81,
+          63
+        ],
+        [
+          58,
+          6
+        ],
+        [
+          27,
+          37
+        ],
+        [
+          60,
+          4
+        ],
+        [
+          21,
+          79
+        ],
+        [
+          18,
+          82
+        ],
+        [
+          82,
+          62
+        ],
+        [
+          59,
+          41
+        ]
+      ],
+      "even_square_edges": 8,
+      "n": 82,
+      "odd_root_path_counts": [
+        1,
+        3,
+        2,
+        2
+      ],
+      "singleton_paths": 1
+    },
+    {
+      "bound": 7,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        0,
+        2,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ],
+      "even_root_seams": [
+        [
+          65,
+          35
+        ],
+        [
+          83,
+          61
+        ],
+        [
+          60,
+          4
+        ],
+        [
+          21,
+          79
+        ],
+        [
+          42,
+          58
+        ],
+        [
+          82,
+          62
+        ],
+        [
+          19,
+          81
+        ]
+      ],
+      "even_square_edges": 7,
+      "n": 83,
+      "odd_root_path_counts": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "singleton_paths": 0
+    },
+    {
+      "bound": 8,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        0,
+        2,
+        3,
+        3,
+        4,
+        2,
+        1,
+        1
+      ],
+      "even_root_seams": [
+        [
+          9,
+          27
+        ],
+        [
+          62,
+          82
+        ],
+        [
+          82,
+          18
+        ],
+        [
+          31,
+          5
+        ],
+        [
+          60,
+          84
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          61,
+          83
+        ],
+        [
+          19,
+          81
+        ]
+      ],
+      "even_square_edges": 8,
+      "n": 84,
+      "odd_root_path_counts": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "singleton_paths": 1
+    },
+    {
+      "bound": 7,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        1,
+        3,
+        4,
+        2,
+        1,
+        1,
+        0,
+        2
+      ],
+      "even_root_seams": [
+        [
+          64,
+          36
+        ],
+        [
+          61,
+          83
+        ],
+        [
+          75,
+          25
+        ],
+        [
+          73,
+          71
+        ],
+        [
+          18,
+          82
+        ],
+        [
+          10,
+          26
+        ],
+        [
+          63,
+          81
+        ]
+      ],
+      "even_square_edges": 7,
+      "n": 85,
+      "odd_root_path_counts": [
+        2,
+        3,
+        1,
+        1
+      ],
+      "singleton_paths": 0
+    },
+    {
+      "bound": 8,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        1,
+        3,
+        3,
+        3,
+        1,
+        1,
+        3,
+        1
+      ],
+      "even_root_seams": [
+        [
+          33,
+          3
+        ],
+        [
+          62,
+          82
+        ],
+        [
+          58,
+          86
+        ],
+        [
+          70,
+          74
+        ],
+        [
+          47,
+          17
+        ],
+        [
+          32,
+          4
+        ],
+        [
+          13,
+          51
+        ],
+        [
+          19,
+          81
+        ]
+      ],
+      "even_square_edges": 8,
+      "n": 86,
+      "odd_root_path_counts": [
+        2,
+        2,
+        3,
+        1
+      ],
+      "singleton_paths": 0
+    },
+    {
+      "bound": 7,
+      "boundary_components": 1,
+      "endpoint_counts_mod8": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "even_root_seams": [
+        [
+          65,
+          79
+        ],
+        [
+          2,
+          62
+        ],
+        [
+          59,
+          5
+        ],
+        [
+          36,
+          28
+        ],
+        [
+          21,
+          15
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          19,
+          81
+        ]
+      ],
+      "even_square_edges": 7,
+      "n": 87,
+      "odd_root_path_counts": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "singleton_paths": 0
+    }
+  ],
+  "reflection_compiler": {
+    "lengths": [
+      3,
+      6
+    ],
+    "max_graph_order": 16,
+    "root_words": 26568
+  },
+  "scope": "Universal elementary bounds plus finite exact verification; no all-order attainment claim.",
+  "status": "PASS",
+  "uniform_residue_floor": [
+    4,
+    7,
+    8,
+    7,
+    8,
+    7,
+    8,
+    7
+  ]
+}

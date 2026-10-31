@@ -1,0 +1,12 @@
+[
+  "README.md",
+  "PROOFS.md",
+  "check.py",
+  "witnesses.json",
+  "source_pins.json",
+  "verification.normal.json",
+  "verification.optimized.json",
+  "verify_packet.py",
+  "RELEASE_FILES.json",
+  "MANIFEST.json"
+]

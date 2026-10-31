@@ -1,0 +1,51 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "6683553ba8d5b291dbaedc700134b2ff784106fb",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session125_origin32_numeration_20261031/README.md",
+      "git_blob": "2a6d52361f13d5d1c5a3f083b2cbbc5157d25db3",
+      "sha256": "7fbb572c929f756bb037ac1aaf0770f14d5f64f4cc757875bfdd05d290581113"
+    },
+    {
+      "path": "05-knowledge/results/session125_origin32_numeration_20261031/numeration/PROOFS.md",
+      "git_blob": "1803c25883ab96230df446347e3b51a175b1896f",
+      "sha256": "40f9790062b84639899f880a32f0b580d05d907d677292b97a494e3c154263e4"
+    },
+    {
+      "path": "05-knowledge/results/session125_origin32_numeration_20261031/origin_pairs/README.md",
+      "git_blob": "6d1062b11483e842c2eed4cd2f12e76b35e37cd7",
+      "sha256": "02af5ada3d29025ba660adc881ee5d584bb0237588728a7f78748243b7548bcd"
+    },
+    {
+      "path": "05-knowledge/results/session125_successor_phase_carries_20261031/SUCCESSOR_PHASE_AND_CARRY.md",
+      "git_blob": "7cc52062f4955fe10e7219f06a318bda3425014a",
+      "sha256": "0addcdd0762cbb78fb8b551530b2d8e5e10701020f3c59393cbd45aed8b8810c"
+    },
+    {
+      "path": "05-knowledge/results/session125_rooted_forest_numeration_20261031/PROOFS.md",
+      "git_blob": "85c2295475a8a409b44b9fcb0e24689e6e5d00b4",
+      "sha256": "afc71a11172e2ca4127c581ad13374a9640431551f0c9d90e54228b2e6184358"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031i/README.md",
+      "git_blob": "de14cbec4fd9d4b41c8cc6839454ca8c2163f259",
+      "sha256": "8d26eb35f856ab99f028ec08b9b181ef2e9b0c9bd83dbde1b58a15dc98781978"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031j/README.md",
+      "git_blob": "eba2ab3fab02f0a42f01d00f6b03152fd4d64193",
+      "sha256": "3edc971bb7eda8ad5de79afaa7780b741d7640fcd481654af2bd6e9c1357b36a"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031k/README.md",
+      "git_blob": "4d96ca4da37aac7377b127595e98a8ada64806a1",
+      "sha256": "3feacc2b10ec22a4cbd8e1645d677fa5bde5af3319d28c4b8b489515a49cda49"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md",
+      "git_blob": "ad4b098ee0ec9e0552ac87f2be9289b94951cade",
+      "sha256": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5"
+    }
+  ]
+}
