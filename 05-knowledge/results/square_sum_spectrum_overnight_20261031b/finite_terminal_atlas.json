@@ -1,0 +1,221 @@
+{
+  "affine_edges": 2015,
+  "affine_source_dimension": 4,
+  "block_length_at_most": 2,
+  "independent_subset_dp_controls": 8060,
+  "nonempty_within_scc_edges": 450,
+  "nonunit_slope_examples": [
+    {
+      "a": "3",
+      "b": "0",
+      "inserted": [
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        1
+      ]
+    },
+    {
+      "a": "3",
+      "b": "0",
+      "inserted": [
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "a": "5",
+      "b": "0",
+      "inserted": [
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "a": "3",
+      "b": "0",
+      "inserted": [
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "a": "5",
+      "b": "0",
+      "inserted": [
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        3,
+        1
+      ]
+    },
+    {
+      "a": "3",
+      "b": "0",
+      "inserted": [
+        1,
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        1
+      ]
+    },
+    {
+      "a": "3",
+      "b": "0",
+      "inserted": [
+        1,
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "a": "5",
+      "b": "0",
+      "inserted": [
+        1,
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "a": "3",
+      "b": "0",
+      "inserted": [
+        1,
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        1,
+        3
+      ]
+    },
+    {
+      "a": "5",
+      "b": "0",
+      "inserted": [
+        1,
+        1
+      ],
+      "source_terminal": [],
+      "target_terminal": [
+        3,
+        3,
+        1
+      ]
+    }
+  ],
+  "prefix_basis": [
+    [],
+    [
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "reachable_H_values": [
+    1,
+    3,
+    5,
+    9,
+    11,
+    13,
+    15,
+    17,
+    23,
+    25,
+    27,
+    29,
+    33,
+    35,
+    45,
+    49,
+    51,
+    55,
+    59
+  ],
+  "reachable_chart_count_pairs": 265,
+  "scc_sizes": [
+    15,
+    8,
+    7,
+    7,
+    5,
+    4,
+    4,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "scope": "Complete only for this finite atlas; all-size no-pumping follows separately from the fixed-terminal rigidity theorem.",
+  "singleton_hostile_controls": 15,
+  "source_alphabet": [
+    0,
+    1
+  ],
+  "source_dimension": 4,
+  "status": "passed",
+  "terminal_charts": 85,
+  "terminal_length_at_most": 3,
+  "within_scc_edges": 957
+}

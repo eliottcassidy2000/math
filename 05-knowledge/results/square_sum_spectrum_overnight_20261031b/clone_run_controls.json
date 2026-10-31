@@ -1,0 +1,19 @@
+{
+  "acyclic_templates": 29,
+  "counts_checked": 700,
+  "cyclic_templates": 71,
+  "fixed_context_length_at_most": 1,
+  "independent_subset_dp_counts": 400,
+  "run_lengths": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "scope": "Finite controls; the all-run bound is proved by an explicit odd-cycle injection.",
+  "status": "passed",
+  "templates": 100
+}
