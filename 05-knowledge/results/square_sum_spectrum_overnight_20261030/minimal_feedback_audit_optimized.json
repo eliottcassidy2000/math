@@ -1,0 +1,9 @@
+{
+  "all_coordinate_word_controls": 341,
+  "independent_subset_dp_minor_entries": 289,
+  "minimal_dimension": 17,
+  "minor_determinant": "150994944",
+  "padding_hostile_controls": 504,
+  "scope": "Minor uses an independent vertex-subset algorithm; transfer controls complement the universal matrix identities.",
+  "status": "passed"
+}

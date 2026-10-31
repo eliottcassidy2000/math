@@ -1,0 +1,13 @@
+{
+  "checks": 19531376,
+  "direct_insertions": 925,
+  "first": 32,
+  "fully_checked_cycles": 6211,
+  "last": 6242,
+  "maximum_reversals": 136,
+  "reset_cycles": 0,
+  "reversals": 28834,
+  "scope": "Finite interval only; the all-size conclusion also uses the named inherited induction.",
+  "status": "passed",
+  "trace_sha256": "7956af8b1aa26da754f97c0166fc7fb7a97d4a0a0ff3bb791f25875a5889aa28"
+}

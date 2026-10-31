@@ -1,0 +1,111 @@
+{
+  "equal_H": 5,
+  "extra_prefix": [
+    2,
+    0,
+    3
+  ],
+  "final": [
+    [
+      8
+    ],
+    [
+      4
+    ],
+    [
+      4
+    ],
+    [
+      0
+    ],
+    [
+      6
+    ],
+    [
+      0
+    ],
+    [
+      2
+    ],
+    [
+      0
+    ],
+    [
+      6
+    ],
+    [
+      2
+    ],
+    [
+      4
+    ],
+    [
+      6
+    ],
+    [
+      0
+    ],
+    [
+      2
+    ],
+    [
+      6
+    ],
+    [
+      2
+    ],
+    [
+      1
+    ]
+  ],
+  "full_reachable_observation_lattice_index": 75497472,
+  "initial": [
+    [
+      12,
+      11,
+      2,
+      -6,
+      0,
+      0,
+      -5,
+      -5,
+      -7,
+      -7,
+      -5,
+      -6,
+      -7,
+      -5,
+      -3,
+      -6,
+      15
+    ]
+  ],
+  "old_index": 150994944,
+  "quotient_order": 2,
+  "same_order_same_H_old_coset_prefix": [
+    1,
+    0,
+    0
+  ],
+  "scope": "Z-span of all reachable observation rows, not the set of reachable words or a positivity cone.",
+  "smith_invariants": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    4,
+    4,
+    8,
+    144
+  ],
+  "status": "passed"
+}

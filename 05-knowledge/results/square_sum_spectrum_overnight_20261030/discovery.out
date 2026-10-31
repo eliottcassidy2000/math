@@ -1,0 +1,7 @@
+{"discovered_through": 1000, "reset_sizes": []}
+{"discovered_through": 2000, "reset_sizes": []}
+{"discovered_through": 3000, "reset_sizes": []}
+{"discovered_through": 4000, "reset_sizes": []}
+{"discovered_through": 5000, "reset_sizes": []}
+{"discovered_through": 6000, "reset_sizes": []}
+{"first": 32, "last": 6242, "reset_sizes": [], "trace_bytes": 480787, "status": "discovery complete"}

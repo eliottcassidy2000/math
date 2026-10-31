@@ -1,0 +1,109 @@
+{
+  "files": {
+    "HANDOFF.md": {
+      "bytes": 5195,
+      "sha256": "3f4481d87f1db2e56e55f4e3df46b50cff4e305808b2985a0eb95b3fbc18dce5"
+    },
+    "INHERITANCE.json": {
+      "bytes": 5340,
+      "sha256": "b3afd278bfdf19f93bf678b9851354de70c977f9a99cf9d5a201e4bf0aa522fb"
+    },
+    "README.md": {
+      "bytes": 16112,
+      "sha256": "b102b091596bd0f7dd412daf1e691616c4385f0b2f9debcd9a697076657985e5"
+    },
+    "audit_feedback.py": {
+      "bytes": 4387,
+      "sha256": "20e5a7095b8c73ce361e38467205c5f9e8b1f27b7df0574a956ed883d8294682"
+    },
+    "audit_minimal_feedback.py": {
+      "bytes": 2348,
+      "sha256": "6e9aa8c0df2b60e0c554e54eccd2c519e0c252c37c389f08d66b324da56676e4"
+    },
+    "discovery.out": {
+      "bytes": 390,
+      "sha256": "f5060d1aa0cc8126e0be494506fd89f2934a975f985dab1cfe013b70494a1c81"
+    },
+    "feedback_audit.json": {
+      "bytes": 290,
+      "sha256": "0fec13b029713dc0ed07c4c9d51d2ace26ddb424c0cdfa91b98c45a0f6be32a6"
+    },
+    "integral_feedback.json": {
+      "bytes": 19429,
+      "sha256": "1f633a2b93ac83a047f4dcdc28473bc20466a2fcd1f443394b54abf6580f4078"
+    },
+    "integral_feedback.out": {
+      "bytes": 1088,
+      "sha256": "373a99c8b16c857024df9d225e0a5b133cf8de5abffd40bdc47baeec83060760"
+    },
+    "integral_feedback.py": {
+      "bytes": 2584,
+      "sha256": "3cba97c4ea57f112f5d322f21085d03bdec14cce2801346fbb5ef304789e3146"
+    },
+    "minimal_feedback.json": {
+      "bytes": 22342,
+      "sha256": "a8781c7bfa2fdd2eb106159084ffad4e57eb5e059968d83c6610f964053f9e3c"
+    },
+    "minimal_feedback.out": {
+      "bytes": 1554,
+      "sha256": "f55997263571313ca7135f67e444e143b72eadcc16535a7157ea68fc8c3335ff"
+    },
+    "minimal_feedback.py": {
+      "bytes": 3485,
+      "sha256": "11748ffbf5acce49fc1e7a8a03e7683b42c6c0867f6e1cee7c6a0078af663444"
+    },
+    "minimal_feedback_audit.json": {
+      "bytes": 335,
+      "sha256": "781b99682c61c9ec4823b2324832247b5a60b40e93a88dee583382d203ca0ca5"
+    },
+    "minimal_feedback_audit_optimized.json": {
+      "bytes": 335,
+      "sha256": "781b99682c61c9ec4823b2324832247b5a60b40e93a88dee583382d203ca0ca5"
+    },
+    "modular_feedback.json": {
+      "bytes": 747,
+      "sha256": "ab204034fc2bfaa02ceff394978b944d8a3e3a2cba929fc8361a4466e4cf42a2"
+    },
+    "modular_feedback.py": {
+      "bytes": 1934,
+      "sha256": "add987d3242574791abf8d5d3bdee5fc397bc4dc7d7294dfb18cadc75909a145"
+    },
+    "square_bridge.json.gz": {
+      "bytes": 131825,
+      "sha256": "7956af8b1aa26da754f97c0166fc7fb7a97d4a0a0ff3bb791f25875a5889aa28"
+    },
+    "square_bridge.py": {
+      "bytes": 4420,
+      "sha256": "670576bb63f7530351f625d51850dc51204d9fcc56fad66340bbd5f431e4c03e"
+    },
+    "square_bridge_optimized.json": {
+      "bytes": 396,
+      "sha256": "37ee52aae831f0f259a171f2e2e08f479c562d18aab66f1909c52fac26052a8a"
+    },
+    "square_bridge_receipt.json": {
+      "bytes": 396,
+      "sha256": "37ee52aae831f0f259a171f2e2e08f479c562d18aab66f1909c52fac26052a8a"
+    },
+    "two_feedback_100000.json": {
+      "bytes": 1047788,
+      "sha256": "4b71f8c9dfc3e4a09e6f889e6148529c5cb4f6d0a3273866de9de973ab4fc1a1"
+    },
+    "two_feedback_5624.json": {
+      "bytes": 49452,
+      "sha256": "35e33afb8a3214ba48e85d78f37c6de9199bebf56d2170d85b0bf6ccc3611168"
+    },
+    "two_feedback_624.json": {
+      "bytes": 4452,
+      "sha256": "b472426b82ab1a17c73309826113370f962631eeba1f0ab878cef921bbb0ba2f"
+    },
+    "two_feedback_scan.cpp": {
+      "bytes": 2322,
+      "sha256": "e2070d596c86b0901444b86c414d8a16313c685650ea3c435290c2b51b528f01"
+    },
+    "verify_square_bridge.py": {
+      "bytes": 2649,
+      "sha256": "3f5aaadadc9d890d2d4c4d3ab720c87256fe455fc7e77597a2b3b78a8e7a77d3"
+    }
+  },
+  "scope": "All local packet files except this manifest; inherited bundles are identified in INHERITANCE.json."
+}

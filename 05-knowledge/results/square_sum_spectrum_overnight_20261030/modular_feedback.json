@@ -1,0 +1,35 @@
+{
+  "closed_finite_field_models": [
+    {
+      "characteristic": 2,
+      "minimal_dimension": 1,
+      "observable_dimension": 8,
+      "reachable_dimension": 15
+    },
+    {
+      "characteristic": 3,
+      "minimal_dimension": 17,
+      "observable_dimension": 20,
+      "reachable_dimension": 28
+    },
+    {
+      "characteristic": 5,
+      "minimal_dimension": 17,
+      "observable_dimension": 20,
+      "reachable_dimension": 28
+    },
+    {
+      "characteristic": 7,
+      "minimal_dimension": 17,
+      "observable_dimension": 20,
+      "reachable_dimension": 28
+    },
+    {
+      "characteristic": 11,
+      "minimal_dimension": 17,
+      "observable_dimension": 20,
+      "reachable_dimension": 28
+    }
+  ],
+  "status": "passed"
+}

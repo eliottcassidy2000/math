@@ -1,0 +1,12 @@
+{
+  "80557_subset_dp_checked": true,
+  "covered_through": 99999,
+  "excluded_values_from_inherited_theorem": [
+    7,
+    21
+  ],
+  "independent_small_controls": 341,
+  "positive_witnesses": 49998,
+  "scope": "All saved positive witnesses, not global completeness.",
+  "status": "passed"
+}
