@@ -4,7 +4,7 @@
 
 Audited all 23 pages of Ryan E. S. Charmley and Steve Konrad, *The Konrad backbone in an Amanda loop*, version 1.0, December 22, 2025, DOI [10.6084/m9.figshare.30934796](https://doi.org/10.6084/m9.figshare.30934796). Attachment filename: `2025-Konrads_Backbone_Amanda_Loop-Charmley-v1.0.pdf`; 1,213,371 bytes; SHA-256 `de4c94232203e09156ccd233ff0a374540ad1daeca0e1e31ac3f88dea21193a3`.
 
-Text was read through Library; actual rendered pixels were inspected for pp. 7, 15, 17, 18 and 23, resolving lost absolute-value bars and the genuine factor-two discrepancy. Page 23 is artwork, not a blank page or an additional mathematical theorem. The PDF is an input, not a republication deliverable. This note contains an original audit and derived mathematics, not an endorsement of the manuscript's ontology. The manuscript itself identifies its repository publication and lack of assured external peer review on p. 22.
+Text was extracted and actual rendered pixels were inspected for pp. 7, 15, 17, 18 and 23, resolving lost absolute-value bars and the genuine factor-two discrepancy. Page 23 is artwork, not a blank page or an additional mathematical theorem. The PDF is an input, not a republication deliverable. This note contains an original audit and derived mathematics, not an endorsement of the manuscript's ontology. The manuscript itself identifies its repository publication and lack of assured external peer review on p. 22.
 
 ## Immediate decisions
 

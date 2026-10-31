@@ -1,0 +1,92 @@
+{
+  "cases": [
+    {
+      "characteristic_polynomial_high_to_low": [
+        1,
+        -22,
+        -20,
+        -8
+      ],
+      "finite_place_Haar_multiplier": "1/8",
+      "incidence": [
+        [
+          14,
+          12,
+          8
+        ],
+        [
+          8,
+          6,
+          4
+        ],
+        [
+          4,
+          4,
+          2
+        ]
+      ],
+      "measure_balance_multiplier": 8,
+      "n": 4,
+      "nonzero_finite_area_disjoint_piece_system": "impossible",
+      "norm": 8,
+      "perron_power_basis": [
+        "2",
+        "4",
+        "4"
+      ],
+      "planar_determinant_power_basis": [
+        "-12",
+        "-8",
+        "8"
+      ],
+      "q": 2,
+      "rational_contraction_gap_(9/5)^n-q^2": "4061/625"
+    },
+    {
+      "characteristic_polynomial_high_to_low": [
+        1,
+        -3249959,
+        2875039,
+        -1092727
+      ],
+      "finite_place_Haar_multiplier": "1/1092727",
+      "incidence": [
+        [
+          2009839,
+          1686831,
+          1092727
+        ],
+        [
+          1092727,
+          917112,
+          594104
+        ],
+        [
+          594104,
+          498623,
+          323008
+        ]
+      ],
+      "measure_balance_multiplier": 1092727,
+      "n": 17,
+      "nonzero_finite_area_disjoint_piece_system": "impossible",
+      "norm": 1092727,
+      "perron_power_basis": [
+        "323008",
+        "498623",
+        "594104"
+      ],
+      "planar_determinant_power_basis": [
+        "1686831",
+        "1092727",
+        "-1092727"
+      ],
+      "q": 103,
+      "rational_contraction_gap_(9/5)^n-q^2": "8583157041463444/762939453125"
+    }
+  ],
+  "negative_case": "raw R=-103 C^17 is not a positive substitution incidence matrix; +103 C^17 is a separate signflip",
+  "resolvent_operator_identities": "(I-gamma C)R=C verified at gamma=0,1/2,56/103",
+  "scope": "No gigantic substituted words, planar area computation, tiling, or spectral-purity claim.",
+  "status": "FINITE-EXACT identities supporting the accompanying proof"
+}

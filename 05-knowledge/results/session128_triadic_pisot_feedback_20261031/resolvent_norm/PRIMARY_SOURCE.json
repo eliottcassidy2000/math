@@ -1,0 +1,31 @@
+{
+  "title": "Integral Values of Generating Functions of Recurrence Sequences",
+  "authors": [
+    "M. Knapp",
+    "A. Lemos",
+    "Victor G. L. Neumann"
+  ],
+  "url": "https://math.loyola.edu/~mknapp/papers/General%20Quadratic%20-%202-10-23.pdf",
+  "inspected_utc_date": "2026-10-31",
+  "source_type": "Primary author-hosted PDF; publication version not independently identified here",
+  "inspected_locations": [
+    "Lemma 2.4, printed page 7",
+    "Example 4.1, printed pages 10-11"
+  ],
+  "imported_claim": "Delone-Nagell bound makes the discriminant -44 cubic have at most four integer solutions to norm=1; Example4.1 supplies the four witnesses and exactly the rational GF inputs 0,1/2,56/103.",
+  "coordinate_conversion": "Source rational input p/q corresponds to this packet gamma=a/b; source denominator form g1(p,q) is F3(q,p).",
+  "not_imported": "No feedback theorem, order-index theorem, spectral-contraction theorem, or quartic/quintic solution classification is attributed to this source.",
+  "thue_mahler_finiteness": {
+    "title": "Efficient Resolution of Thue-Mahler Equations",
+    "authors": [
+      "Adela Gherga",
+      "Samir Siksek"
+    ],
+    "url": "https://arxiv.org/html/2207.14492v2",
+    "version": "arXiv:2207.14492v2",
+    "inspected_utc_date": "2026-10-31",
+    "inspected_location": "Introduction equation(2) and following paragraph",
+    "imported_claim": "For a fixed irreducible integral binary form of degree at least3, fixed nonzero coefficient and fixed finite rational prime set, primitive Thue-Mahler solutions are finite.",
+    "not_imported": "No explicit solution list, height bound, or feedback theorem."
+  }
+}

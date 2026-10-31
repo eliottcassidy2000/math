@@ -1,0 +1,231 @@
+{
+  "checks": 2436,
+  "cited_classification_gain_filter": [
+    0,
+    "1/2",
+    "56/103"
+  ],
+  "cubic_integral_gains": [
+    {
+      "C_gamma": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "F": 1,
+      "R_gamma": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "beta_gamma_power": "beta",
+      "coefficient_vector": [
+        0,
+        1,
+        0
+      ],
+      "gain": [
+        0,
+        1
+      ],
+      "minimal_polynomial_ascending": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "norm": 1,
+      "order_index": 1
+    },
+    {
+      "C_gamma": [
+        [
+          2,
+          4,
+          8
+        ],
+        [
+          4,
+          6,
+          12
+        ],
+        [
+          4,
+          8,
+          14
+        ]
+      ],
+      "F": 1,
+      "R_gamma": [
+        [
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          2,
+          4,
+          8
+        ]
+      ],
+      "beta_gamma_power": "2 beta^4",
+      "coefficient_vector": [
+        2,
+        4,
+        4
+      ],
+      "gain": [
+        1,
+        2
+      ],
+      "minimal_polynomial_ascending": [
+        -8,
+        -20,
+        -22,
+        1
+      ],
+      "norm": 8,
+      "order_index": 64
+    },
+    {
+      "C_gamma": [
+        [
+          -323008,
+          -594104,
+          -1092727
+        ],
+        [
+          -498623,
+          -917112,
+          -1686831
+        ],
+        [
+          -594104,
+          -1092727,
+          -2009839
+        ]
+      ],
+      "F": -1,
+      "R_gamma": [
+        [
+          -175615,
+          -323008,
+          -594104
+        ],
+        [
+          -271096,
+          -498623,
+          -917112
+        ],
+        [
+          -323008,
+          -594104,
+          -1092727
+        ]
+      ],
+      "beta_gamma_power": "-103 beta^17",
+      "coefficient_vector": [
+        -323008,
+        -498623,
+        -594104
+      ],
+      "gain": [
+        56,
+        103
+      ],
+      "minimal_polynomial_ascending": [
+        1092727,
+        2875039,
+        3249959,
+        1
+      ],
+      "norm": -1092727,
+      "order_index": 1194052296529
+    }
+  ],
+  "finite_universe": [
+    {
+      "a_range": [
+        -6,
+        6
+      ],
+      "b_range": [
+        1,
+        6
+      ],
+      "extra_gains": [
+        [
+          56,
+          103
+        ]
+      ],
+      "k": 3,
+      "primitive_gain_count": 48
+    },
+    {
+      "a_range": [
+        -6,
+        6
+      ],
+      "b_range": [
+        1,
+        6
+      ],
+      "extra_gains": [],
+      "k": 4,
+      "primitive_gain_count": 47
+    },
+    {
+      "a_range": [
+        -6,
+        6
+      ],
+      "b_range": [
+        1,
+        6
+      ],
+      "extra_gains": [],
+      "k": 5,
+      "primitive_gain_count": 47
+    }
+  ],
+  "pisot_bounds": {
+    "beta_lower": [
+      9,
+      5
+    ],
+    "exceptional_square_upper": "8094024658203125/16677181699666569",
+    "half_gain_modulus_upper": "50/81"
+  },
+  "scope": "Global cubic gain completeness uses cited Delone-Nagell classification; k4,k5 gain completeness not asserted.",
+  "status": "PASS"
+}

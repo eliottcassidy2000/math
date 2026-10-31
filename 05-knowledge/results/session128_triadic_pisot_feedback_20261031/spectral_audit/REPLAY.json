@@ -1,0 +1,73 @@
+{
+  "all_replays_equal_saved_bytes": true,
+  "author_exact_check_counts": {
+    "resolvent_norm": 2436,
+    "triadic": 4639
+  },
+  "author_relocated_replays": [
+    "triadic",
+    "pisot",
+    "resolvent_norm",
+    "nonunit_feedback"
+  ],
+  "author_sha256": {
+    "../nonunit_feedback/README.md": "7ca449639903191279893c15234ab64dcccfc2bbffaafba3d752e641b0a5bdd2",
+    "../nonunit_feedback/normal.json": "18898c0da8acc00848b8460b7ef80a222250ff9d0c01846d43ebf4de62f482c5",
+    "../nonunit_feedback/optimized.json": "18898c0da8acc00848b8460b7ef80a222250ff9d0c01846d43ebf4de62f482c5",
+    "../nonunit_feedback/verify.py": "2a8598ce6117c0d697deb16847558c734be70cff06b8061f5fee414e90b2f597",
+    "../pisot/README.md": "b2e9059b32c7097d41b19884e54468311646f39381f0e8dcab322c48fc8e1c50",
+    "../pisot/normal.json": "cda15582e3a98cbfaa801e6012aa151076dd3a82fded905c53cbcd664e5a8d95",
+    "../pisot/optimized.json": "cda15582e3a98cbfaa801e6012aa151076dd3a82fded905c53cbcd664e5a8d95",
+    "../pisot/verify.py": "677ca0a117326b0a00b2503cf3c86c0107f7688ae3d69edd53fe6bb72c18085f",
+    "../resolvent_norm/THEORY.md": "0ea1b94d4ad59a89852daf3f9dfbe991c0a68986dbb566415f1aaf21cadd051b",
+    "../resolvent_norm/check_resolvent.py": "48846c4950d6f8d3ea02a82d72b073b53822e59090a8d458886af6086ee2cfcb",
+    "../resolvent_norm/normal.json": "9e48887e504a276a66fc00bd616457d565a804bfd235e353f0ae4743563e69a7",
+    "../resolvent_norm/optimized.json": "9e48887e504a276a66fc00bd616457d565a804bfd235e353f0ae4743563e69a7",
+    "../triadic/THEORY.md": "bf7ccfd1e715a5477dd465a189ba81f8ecb886a19f23506ace8b130f067fea26",
+    "../triadic/check_triadic.py": "1d733c49afdb2b5249d496267c7adcab93b88d5165b1ddebd914a021ce8355a1",
+    "../triadic/normal.json": "f3336f5e9785075d8ed113c4b5d479e547e962e3cc7c05e22d4c0b6b8fa9cd62",
+    "../triadic/optimized.json": "f3336f5e9785075d8ed113c4b5d479e547e962e3cc7c05e22d4c0b6b8fa9cd62"
+  },
+  "external_source": {
+    "authors": [
+      "M. Knapp",
+      "A. Lemos",
+      "Victor G. L. Neumann"
+    ],
+    "checked": [
+      "Lemma 2.4 (page 7)",
+      "Example 4.1 (pages 10-11)"
+    ],
+    "claim": "Complete cubic norm-unit rational gains are 0, 1/2, 56/103; source coordinates (p,q) correspond to (a,b).",
+    "title": "Integral values of generating functions of recurrence sequences",
+    "url": "https://math.loyola.edu/~mknapp/papers/General%20Quadratic%20-%202-10-23.pdf"
+  },
+  "final_byte_corollary_audit": {
+    "checker_changed": false,
+    "reviewed": [
+      "fixed-S integrality and S-unimodularity boundary",
+      "rational operator-category change of generator"
+    ],
+    "status": "PASS"
+  },
+  "independent_checks": 1234,
+  "independent_relocated_replay": true,
+  "modes": [
+    "normal",
+    "optimized"
+  ],
+  "nonunit_external_source": {
+    "authors": [
+      "Milton Minervino",
+      "J\u00f6rg M. Thuswaldner"
+    ],
+    "checked": [
+      "Section 3",
+      "Lemma 3.1"
+    ],
+    "claim": "Complete internal Haar scaling is the reciprocal of the Perron expansion.",
+    "title": "The geometry of non-unit Pisot substitutions",
+    "url": "https://arxiv.org/pdf/1402.2002"
+  },
+  "status": "PASS"
+}

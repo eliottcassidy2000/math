@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "manifest_count": 8,
+  "manifest_entries": 63,
+  "runs": [
+    {
+      "script": "paper_audit/verify_persistent_bias.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "feedback/verify_feedback.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "feedback/independent_feedback.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "triadic/check_triadic.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "native_audit/check_native_controls.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "pisot/verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "resolvent_norm/check_resolvent.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "nonunit_feedback/verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "spectral_audit/verify_independent.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    }
+  ],
+  "dependencies": "Python3 and SymPy for the primary native-feedback checker",
+  "scope": "Exact packet checks and finite controls. Cited global theorems remain mathematical dependencies; no Lean build, general nonlinear convergence, tiling or pure-spectrum theorem is claimed."
+}

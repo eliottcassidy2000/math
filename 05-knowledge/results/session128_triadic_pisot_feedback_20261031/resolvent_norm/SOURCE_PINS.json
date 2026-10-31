@@ -1,0 +1,30 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "03a9a2c8839e62880cfe84c74ccfb0a2413d2f8d",
+  "files": [
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/tribonacci/REPORT.md",
+      "git_blob": "227e852f2d17ab1db397783160116323501bcf6a",
+      "sha256": "698d77d722f5f047252b49e4ecdc2a1378a5c0b1c7d368454788925d2e73af1e",
+      "bytes": 9427
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/gsma/INHERITANCE_AND_KERNEL.md",
+      "git_blob": "e4054329c9273b44769b760c0fce888420c2ba9f",
+      "sha256": "4c40261cb5de0eb7b543f923166df7b35b03806974762df84f9814dd9288e9d7",
+      "bytes": 13220
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/uniform_norm/UNIFORM_NORM_TO_CF.md",
+      "git_blob": "6c92d4590a225a147acc6172670c2ad46533f8b3",
+      "sha256": "c1db0f97e9d60a5fdde3398c4c5b9c980ea70c3aa9bc686c29aab00acd220df8",
+      "bytes": 10762
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/lucas47/README.md",
+      "git_blob": "80897b0f9b1ff536273d30d192871308bed6fde6",
+      "sha256": "00db9ab439027819b124b2f058993ab6d8b63febf2e23e612c0ae361099fdb01",
+      "bytes": 7848
+    }
+  ]
+}

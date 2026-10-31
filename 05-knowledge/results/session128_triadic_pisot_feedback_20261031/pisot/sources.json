@@ -1,0 +1,26 @@
+{
+  "checked_utc": "2026-10-31",
+  "sources": [
+    {
+      "authors": "Michael Baake and Uwe Grimm",
+      "title": "Fourier transform of Rauzy fractals and point spectrum of 1D Pisot inflation tilings",
+      "url": "https://arxiv.org/abs/1907.11012",
+      "version": "v2 (2021-01-10)",
+      "used_sections": [
+        "3",
+        "4",
+        "6",
+        "6.2"
+      ],
+      "scope": "Primary context for internal contraction, Fourier cocycles, Pisa substitutions, and standard/twisted Tribonacci. No universal spectral-purity conclusion imported."
+    },
+    {
+      "author": "Jorg M. Thuswaldner",
+      "title": "Unimodular Pisot substitutions and their associated tiles",
+      "url": "https://www.numdam.org/articles/10.5802/jtnb.556/",
+      "doi": "10.5802/jtnb.556",
+      "year": 2006,
+      "scope": "Primary context: contact graphs and additional coincidence assumptions for boundary constructions."
+    }
+  ]
+}

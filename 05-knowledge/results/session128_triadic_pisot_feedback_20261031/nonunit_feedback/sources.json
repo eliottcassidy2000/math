@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-10-31",
+  "primary": [
+    {
+      "authors": "Milton Minervino and Jorg M. Thuswaldner",
+      "title": "The geometry of non-unit Pisot substitutions",
+      "url": "https://arxiv.org/abs/1402.2002",
+      "pdf_read": "https://arxiv.org/pdf/1402.2002",
+      "published_doi": "10.5802/aif.2884",
+      "used_sections": [
+        "Section3",
+        "Lemma3.1"
+      ],
+      "scope": "Finite places dividing the inflation ideal and Haar scaling by inverse Perron value; no tiling theorem imported."
+    }
+  ],
+  "fetch_note": "Publisher PDF returned403; publicly available primary arXiv PDF was successfully read."
+}

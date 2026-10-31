@@ -1,0 +1,48 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "03a9a2c8839e62880cfe84c74ccfb0a2413d2f8d",
+  "sources": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "bytes": 6823
+    },
+    {
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "bytes": 10465
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/README.md",
+      "git_blob": "be12608129979ae51bbdc2ad9565d6ac9664c636",
+      "sha256": "ef2e27f41c56d53b9ab5cee2011183c1584cadc38809334df1b729bf354211e9",
+      "bytes": 8559
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/gsma/INHERITANCE_AND_KERNEL.md",
+      "git_blob": "e4054329c9273b44769b760c0fce888420c2ba9f",
+      "sha256": "4c40261cb5de0eb7b543f923166df7b35b03806974762df84f9814dd9288e9d7",
+      "bytes": 13220
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/tribonacci/REPORT.md",
+      "git_blob": "227e852f2d17ab1db397783160116323501bcf6a",
+      "sha256": "698d77d722f5f047252b49e4ecdc2a1378a5c0b1c7d368454788925d2e73af1e",
+      "bytes": 9427
+    },
+    {
+      "path": "01-canon/theorems/THM-227-knacci-mersenne.md",
+      "git_blob": "60549f44d69d8c8ef93ce926bb1c68957140b232",
+      "sha256": "10c453491199d14d95281790c1262752833da8347cf9926471692685f7993387",
+      "bytes": 3542
+    },
+    {
+      "path": "05-knowledge/results/session127_gsma_norm_collapse_20261031/lucas47/README.md",
+      "git_blob": "80897b0f9b1ff536273d30d192871308bed6fde6",
+      "sha256": "00db9ab439027819b124b2f058993ab6d8b63febf2e23e612c0ae361099fdb01",
+      "bytes": 7848
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "checks": 1234,
+  "gains": [
+    {
+      "gain": "0",
+      "indexed_path_counts": [
+        3,
+        5,
+        9,
+        17,
+        31,
+        57,
+        105
+      ]
+    },
+    {
+      "gain": "1",
+      "indexed_path_counts": [
+        3,
+        5,
+        9,
+        17,
+        31,
+        57,
+        105
+      ]
+    },
+    {
+      "gain": "-2",
+      "indexed_path_counts": [
+        3,
+        5,
+        9,
+        17,
+        31,
+        57,
+        105
+      ]
+    },
+    {
+      "gain": "10",
+      "indexed_path_counts": [
+        3,
+        5,
+        9,
+        17,
+        31,
+        57,
+        105
+      ]
+    },
+    {
+      "gain": "7/3",
+      "indexed_path_counts": [
+        3,
+        5,
+        9,
+        17,
+        31,
+        57,
+        105
+      ]
+    }
+  ],
+  "indexed_affine_paths_checked": 1135,
+  "irreducibility": [
+    {
+      "all_monic_divisors_checked": 3,
+      "degree": 3,
+      "prime": 3
+    },
+    {
+      "all_monic_divisors_checked": 6,
+      "degree": 4,
+      "prime": 2
+    },
+    {
+      "all_monic_divisors_checked": 30,
+      "degree": 5,
+      "prime": 5
+    }
+  ],
+  "metric_identity": "B^T Q_h B = beta^(-1) Q_h",
+  "nonunit_measure_controls": [
+    {
+      "finite_place_multiplier": "1/8",
+      "n": 4,
+      "planar_measure_multiplier": 8,
+      "q": 2
+    },
+    {
+      "finite_place_multiplier": "1/1092727",
+      "n": 17,
+      "planar_measure_multiplier": 1092727,
+      "q": 103
+    }
+  ],
+  "resolvent_controls": [
+    {
+      "a": 0,
+      "b": 1,
+      "integral": true,
+      "monic_polynomial_low_to_high": [
+        "-1",
+        "-1",
+        "-1",
+        "1"
+      ],
+      "norm": "1",
+      "power_basis": [
+        "0",
+        "1",
+        "0"
+      ],
+      "power_basis_determinant_absolute": "1"
+    },
+    {
+      "a": 1,
+      "b": 2,
+      "integral": true,
+      "monic_polynomial_low_to_high": [
+        "-8",
+        "-20",
+        "-22",
+        "1"
+      ],
+      "norm": "8",
+      "power_basis": [
+        "2",
+        "4",
+        "4"
+      ],
+      "power_basis_determinant_absolute": "64"
+    },
+    {
+      "a": 56,
+      "b": 103,
+      "integral": true,
+      "monic_polynomial_low_to_high": [
+        "1092727",
+        "2875039",
+        "3249959",
+        "1"
+      ],
+      "norm": "-1092727",
+      "power_basis": [
+        "-323008",
+        "-498623",
+        "-594104"
+      ],
+      "power_basis_determinant_absolute": "1194052296529"
+    },
+    {
+      "a": 1,
+      "b": 3,
+      "integral": false,
+      "monic_polynomial_low_to_high": [
+        "-27/14",
+        "-27/7",
+        "-27/7",
+        "1"
+      ],
+      "norm": "27/14",
+      "power_basis": [
+        "3/14",
+        "9/7",
+        "9/14"
+      ],
+      "power_basis_determinant_absolute": "729/196"
+    }
+  ],
+  "scope": "No symbolic dynamical conjugacy, Rauzy tiling, or pure-spectrum theorem.",
+  "status": "FINITE-EXACT independent corroboration",
+  "twisted_linear_system": {
+    "coefficient_rank": 8,
+    "equations": 10,
+    "inconsistent_zero_rows": 2,
+    "unknowns": 10
+  }
+}

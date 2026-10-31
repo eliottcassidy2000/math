@@ -1,0 +1,518 @@
+{
+  "bounds": {
+    "all_compact_components_radius_upper_bound": "4 (strict)",
+    "beta_isolating_interval": [
+      "183/100",
+      "184/100"
+    ],
+    "certified_contraction_upper_bound": "3/4 (strict)",
+    "depth12_hausdorff_error_strict_upper_bound": "531441/4194304",
+    "inverse16_power_basis": [
+      "-103",
+      "56",
+      "0"
+    ],
+    "inverse16_star_modulus": "beta^8 > (9/5)^8 > 100; outside all components",
+    "inverse16_substitution_basis": [
+      "-47",
+      "56",
+      "0"
+    ],
+    "polynomial_endpoint_values": [
+      "-50413/1000000",
+      "61/15625"
+    ]
+  },
+  "family": [
+    {
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "M": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "M_power_k_strictly_positive": true,
+      "U": [
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "charpoly_low_to_high": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "det_U": 1,
+      "k": 3
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "M": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "M_power_k_strictly_positive": true,
+      "U": [
+        [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "charpoly_low_to_high": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "det_U": 1,
+      "k": 4
+    },
+    {
+      "C": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "M": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "M_power_k_strictly_positive": true,
+      "U": [
+        [
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "charpoly_low_to_high": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "det_U": 1,
+      "k": 5
+    }
+  ],
+  "feedback": {
+    "all_checks_pass": true,
+    "exact_Gram_Lyapunov_identities": true,
+    "exact_shear_gains_tested": [
+      "0",
+      "1",
+      "-2",
+      "10",
+      "7/3"
+    ],
+    "scalar_additive_gain_hostile": "g=1/10 changes trace by 1/5",
+    "tested_points": 1705,
+    "twisted_affine_scale_requirements": [
+      [
+        "-1",
+        "-2",
+        "1"
+      ],
+      [
+        "-1",
+        "-1",
+        "1"
+      ]
+    ],
+    "twisted_scale_difference": [
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  "graph": {
+    "all_i_j_fourier_coefficient_dictionaries_equal": true,
+    "depths": [
+      {
+        "component_support_counts": [
+          1,
+          1,
+          1
+        ],
+        "depth": 0,
+        "word_lengths": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "component_support_counts": [
+          1,
+          1,
+          1
+        ],
+        "depth": 1,
+        "word_lengths": [
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "component_support_counts": [
+          2,
+          1,
+          1
+        ],
+        "depth": 2,
+        "word_lengths": [
+          4,
+          3,
+          2
+        ]
+      },
+      {
+        "component_support_counts": [
+          4,
+          2,
+          1
+        ],
+        "depth": 3,
+        "word_lengths": [
+          7,
+          6,
+          4
+        ]
+      },
+      {
+        "component_support_counts": [
+          7,
+          4,
+          2
+        ],
+        "depth": 4,
+        "word_lengths": [
+          13,
+          11,
+          7
+        ]
+      },
+      {
+        "component_support_counts": [
+          13,
+          7,
+          4
+        ],
+        "depth": 5,
+        "word_lengths": [
+          24,
+          20,
+          13
+        ]
+      },
+      {
+        "component_support_counts": [
+          24,
+          13,
+          7
+        ],
+        "depth": 6,
+        "word_lengths": [
+          44,
+          37,
+          24
+        ]
+      },
+      {
+        "component_support_counts": [
+          44,
+          24,
+          13
+        ],
+        "depth": 7,
+        "word_lengths": [
+          81,
+          68,
+          44
+        ]
+      },
+      {
+        "component_support_counts": [
+          81,
+          44,
+          24
+        ],
+        "depth": 8,
+        "word_lengths": [
+          149,
+          125,
+          81
+        ]
+      },
+      {
+        "component_support_counts": [
+          149,
+          81,
+          44
+        ],
+        "depth": 9,
+        "word_lengths": [
+          274,
+          230,
+          149
+        ]
+      },
+      {
+        "component_support_counts": [
+          274,
+          149,
+          81
+        ],
+        "depth": 10,
+        "word_lengths": [
+          504,
+          423,
+          274
+        ]
+      },
+      {
+        "component_support_counts": [
+          504,
+          274,
+          149
+        ],
+        "depth": 11,
+        "word_lengths": [
+          927,
+          778,
+          504
+        ]
+      },
+      {
+        "component_support_counts": [
+          927,
+          504,
+          274
+        ],
+        "depth": 12,
+        "word_lengths": [
+          1705,
+          1431,
+          927
+        ]
+      }
+    ],
+    "final_dictionary_sha256": "c1f422f0f3b3dce1c52cb22b3b581e6c54156c122bf984ceb13d2c062b88c8a9",
+    "universe": "All occurrences in sigma^n(j), j=1,2,3, 0<=n<=12; multiplicities retained per i,j."
+  },
+  "not_certified": [
+    "Rauzy tiling or disjointness",
+    "pure dynamical spectrum",
+    "Amanda threshold dynamics conjugate to substitution",
+    "field embeddings between degrees3,4,5",
+    "original arithmetic module preserved by nonzero shear"
+  ],
+  "status": "FINITE-EXACT checks; general claims require accompanying proofs"
+}
