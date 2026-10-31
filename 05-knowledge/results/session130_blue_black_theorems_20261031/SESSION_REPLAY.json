@@ -1,0 +1,181 @@
+{
+  "manifests": [
+    {
+      "entries": 4,
+      "path": "colored_incidence/SHA256SUMS"
+    },
+    {
+      "entries": 4,
+      "path": "gain_cohomology/SHA256SUMS"
+    },
+    {
+      "entries": 21,
+      "path": "hamiltonian/SHA256SUMS"
+    },
+    {
+      "entries": 7,
+      "path": "independent/SHA256SUMS"
+    },
+    {
+      "entries": 7,
+      "path": "inheritance/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "path": "primegame_lines/SHA256SUMS"
+    }
+  ],
+  "negative_gates": [
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "gain_cohomology/check_lattice.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "gain_cohomology/check_lattice.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_independent.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": false,
+      "script": "independent/check_structural.py"
+    },
+    {
+      "exit_code": 1,
+      "optimized": true,
+      "script": "independent/check_structural.py"
+    }
+  ],
+  "replays": [
+    {
+      "optimized": false,
+      "options": [],
+      "script": "gain_cohomology/check_lattice.py",
+      "status": "PASS",
+      "stdout_sha256": "3df8efdc6898d5559fd8611e80e9c8f3c8a0830b0bec7a5d1482165b02302b73"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "gain_cohomology/check_lattice.py",
+      "status": "PASS",
+      "stdout_sha256": "3df8efdc6898d5559fd8611e80e9c8f3c8a0830b0bec7a5d1482165b02302b73"
+    },
+    {
+      "optimized": false,
+      "options": [],
+      "script": "primegame_lines/check_primegame_lines.py",
+      "status": "PASS",
+      "stdout_sha256": "23ede9591ee11b85299ed910121b6f14ce7e7b6d76083a63c4114ccc093aceaf"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "primegame_lines/check_primegame_lines.py",
+      "status": "PASS",
+      "stdout_sha256": "23ede9591ee11b85299ed910121b6f14ce7e7b6d76083a63c4114ccc093aceaf"
+    },
+    {
+      "optimized": false,
+      "options": [],
+      "script": "colored_incidence/check_colored_incidence.py",
+      "status": "PASS",
+      "stdout_sha256": "fb0eb040fc29d6539f912284c162de68a0f88bc1a8196e863389bd68e6e6a193"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "colored_incidence/check_colored_incidence.py",
+      "status": "PASS",
+      "stdout_sha256": "fb0eb040fc29d6539f912284c162de68a0f88bc1a8196e863389bd68e6e6a193"
+    },
+    {
+      "optimized": false,
+      "options": [],
+      "script": "inheritance/check_equivariant_ocf.py",
+      "status": "PASS",
+      "stdout_sha256": "bbedb83b0f2c66973c1ed8ab891caada8084c925d22d0700a55f48046667899f"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "inheritance/check_equivariant_ocf.py",
+      "status": "PASS",
+      "stdout_sha256": "bbedb83b0f2c66973c1ed8ab891caada8084c925d22d0700a55f48046667899f"
+    },
+    {
+      "optimized": false,
+      "options": [
+        "--max-blue-n",
+        "8"
+      ],
+      "script": "hamiltonian/check_hamiltonian_bridges.py",
+      "status": "PASS",
+      "stdout_sha256": "2cda79e68057b8079ea4f37ed26f16b8eabcc3e2fb9be5cba9fa54e2a9772144"
+    },
+    {
+      "optimized": true,
+      "options": [
+        "--max-blue-n",
+        "8"
+      ],
+      "script": "hamiltonian/check_hamiltonian_bridges.py",
+      "status": "PASS",
+      "stdout_sha256": "2cda79e68057b8079ea4f37ed26f16b8eabcc3e2fb9be5cba9fa54e2a9772144"
+    },
+    {
+      "optimized": false,
+      "options": [],
+      "script": "hamiltonian/verify_hostile.py",
+      "status": "PASS",
+      "stdout_sha256": "c8dc9dbbac5e9e8f8ed3cc18e0089defbae0af37b37f04a6a9b04b8ab296154c"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "hamiltonian/verify_hostile.py",
+      "status": "PASS",
+      "stdout_sha256": "c8dc9dbbac5e9e8f8ed3cc18e0089defbae0af37b37f04a6a9b04b8ab296154c"
+    },
+    {
+      "optimized": false,
+      "options": [],
+      "script": "independent/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "f2f4b2471d18fb80b9e3d1801be3400606bbc42043a256c833530ea68e01aee0"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "independent/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "f2f4b2471d18fb80b9e3d1801be3400606bbc42043a256c833530ea68e01aee0"
+    },
+    {
+      "optimized": false,
+      "options": [],
+      "script": "independent/check_structural.py",
+      "status": "PASS",
+      "stdout_sha256": "a7fc7d99e35ceb607cbd1d350180b7ff5f1485c3da04f5d0179d16e84050becc"
+    },
+    {
+      "optimized": true,
+      "options": [],
+      "script": "independent/check_structural.py",
+      "status": "PASS",
+      "stdout_sha256": "a7fc7d99e35ceb607cbd1d350180b7ff5f1485c3da04f5d0179d16e84050becc"
+    }
+  ],
+  "status": "PASS"
+}

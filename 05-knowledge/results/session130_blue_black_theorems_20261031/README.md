@@ -1,11 +1,99 @@
-# Session130: blue/black lines, integral cycles and arithmetic reflection
+# Session130: blue/black theorem building from arithmetic symmetry to Hamiltonian paths
 
-Status: first verified checkpoint; Hamiltonian and deletion refinements under independent audit.
+**PROVED scoped theorems; FINITE-EXACT atlases; inherited results credited.** The session reconnects the PRIMEGAME relations to the original marked-path tournament structure. The common mechanism is to apply symmetry on the marked carrier before discarding incidence. No universal Hamiltonian-spectrum, LRC, or circuit lower-bound closure is claimed.
 
-[Integral cycle theorem](gain_cohomology/THEORY.md) separates the literal32-edge metagraph from its20-edge reflection quotient. Their integral cycle ranks are23 and11, with12 black-twin differences in the kernel. Reflection-even and reflection-odd cycles span over Q but have integral index1024; the residual quotient is exactly(Z/2)^10. The five mixed nodes supply four genuinely mixed-color cycle directions. Arithmetic node ratios telescope to1 around cycles and therefore cannot carry PRIMEGAME's nontrivial triangle holonomy without edge data.
+## 1. The original carrier, retained exactly
 
-[Periodic-phase arithmetic lift](primegame_lines/THEORY.md) constructs an explicit C/R-equivariant map from binary decorations of the actual six-cycle to all64 fixed-path tilings. The six physical states give a primitive valuation lattice and an integer decoder, uniformly over every allowed cycle scale. On the binary code set, a line is blue iff its reflection norm is a rational square. Raw periodic cycles cannot supply the needed orbit types; temporal phase rotation cannot descend to the ten merged nodes.
+At order5 fix the path5->4->3->2->1. Its six free arcs form64 tilings. Complement C flips the free bits, producing32 literal lines. Reflection R realizes full converse after vertex reversal. A line is blue iff its tilings are R-fixed; black lines occur in distinct R-twin pairs. The literal graph has10 merged tournament nodes,8 blue lines,24 black lines, and4 black loops.
 
-The scale decoder is an exact integral rank-one nilpotent absorption, connecting the prior feedback theme without a convergence assumption. The explicit gauge and the marked-path carrier are retained. Neither a quadratic-field norm nor an autonomous tournament-node computation is asserted.
+The graph obtained by merging black twins has20 edges, not32. Its vertices are the same, but its cycle lattice and incidence are different. Likewise a merged node is not a marked tiling, and the six physical PRIMEGAME states are not64 tilings. The [inheritance packet](inheritance/INHERITANCE_AND_THEORY.md) pins the corrected definitions, the earlier pairing theorem and the current pre-audit source boundaries.
 
-[Research board](BOARD.md) records the inherited mechanisms, hostiles and three research lanes. Further audited results will connect these structures to colored deletion, length-refined odd-cycle packings, modulo8 Hamiltonian counts and central insertion. No global forbidden-H-spectrum or LRC closure is claimed.
+## 2. A genuine arithmetic test for blue lines
+
+[The periodic-phase construction](primegame_lines/THEORY.md) starts from the actual six-cycle
+
+`b=(4301,17765,16302,9867,8671,23023)`.
+
+Decorate its six rooted phases with bitsx_j. The six integers are multiplicatively independent and admit the integral decoder
+
+`D(z)=(nu17-nu5, nu5, nu2, nu3-nu2, nu29, nu7)(z)`.
+
+Thus `z=product b_j^x_j` is a lossless arithmetic encoding of all64 decorations. An explicit coordinate gauge sends phase reflectionj->-j to tiling reflectionR, and bit complement to `z->K/z`, withK=product b_j. There are exactly16 reflection-compatible gauges; choosing one is part of the construction.
+
+Let rho interchange the corresponding phase generators. **On the binary code set**, a line is blue iff `z*rho(z)` is a rational square. This is a multiplicative involution norm, not a quadratic-number-field norm. On the full integer-exponent lattice, squareness detects only equality modulo2, so the binary scope is essential.
+
+The construction works uniformly on every admissibly scaled six-cycleb_jX. The scale-dependent decoder is an exact integral inverse of `I+w1^T`, where `(w1^T)^2=0`. This connects the earlier nonperturbative feedback theme through a real algebraic identity, without an analytic convergence assumption. The six instruction increments decode to the six edge differences of a cycle; their sole relation is their sum zero, explaining the earlier ABDEFG circulation.
+
+**Why the carrier repair is needed.** A raw two-cycle contributes one blue C/R orbit. A raw six-cycle contributes one blue orbit and one black pair. No disjoint union can supply8 blue orbits but12 black pairs. Binary decoration repairs this exact orbit-type obstruction. Temporal phase rotation still changes6 of8 blue lines to black, and cannot descend to any well-defined map on the ten merged nodes, in any coordinate gauge.
+
+## 3. Blue/black reflection has an integral obstruction
+
+[The integral cycle theorem](gain_cohomology/THEORY.md) gives a split exact sequence of metagraph cycle lattices:
+
+`0 -> Z^12 -> Z_1(G) -> Z_1(G/R) -> 0`.
+
+The kernel is generated by the12 black-twin differences. The full and quotient cycle ranks are23 and11. Reflection-even and reflection-odd cycles have ranks11 and12 and span overQ, but their sum has **integral index1024**. Precisely,
+
+`Z_1(G)/(L_+ + L_-) = (Z/2)^10`.
+
+The general exponent is `beta_1(G/R)-beta_1(blue spanning graph)`. At order5 the blue cycle rank is1, so it is11−1=10. The checker supplies integral bases and an exact determinant, while an independent method verifies the same lattice. A single black loop with its twin omitted already exhibits half-integral symmetry projections.
+
+The quotient's11 cycle directions split in rank as **1 blue +6 black +4 mixed**. Those four genuinely mixed directions arise from the five mixed tournament nodes, appearing as five parallel edges in the monochromatic-component incidence graph.
+
+This also sharpens the arithmetic-code boundary: gains formed from endpoint ratios telescope to1 around every cycle. They cannot carry the nontrivial PRIMEGAME triangle holonomy2025/4802. Edge gains, not more arbitrary node labels, are the required extra data.
+
+## 4. A new Hamiltonian modulo-eight refinement
+
+[The Hamiltonian packet](hamiltonian/PROOFS.md) uses the cited Grinberg–Stanley odd-cycle collection formula, with a version-specific Irving–Omar v3 Corollary20 reference. Directed cycles are literal cyclic words of odd length at least3, not just vertex supports.
+
+For a tournamentT with involutory anti-automorphismrho, letq count fixed odd cycles under reverse-rho, and leti count nonfixed mirror pairs whose supports intersect. Then
+
+**`H(T)=1+2q+4i (mod8)`.**
+
+The proof pairs cycle collections. Disjoint mirror pairs contribute to two consecutive coefficients and cancel modulo8. At even orderq=0, refining the inherited modulo4 theorem to `H=1+4i (mod8)`.
+
+For odd order, delete the unique fixed vertexz and letr_z count nonfixed mirror pairs containingz. Then
+
+`H(T)-H(T-z)=2q+4r_z (mod8)`.
+
+The canonical two-path-cover cut weights from the earlier insertion work give the exact identity `H(T)-H(T-z)=2K`. Therefore
+
+`K=q+2r_z (mod4)`,
+
+andq modulo2 is the sum of the selected opposite-pair mirror-arc weights modulo2. This is a direct bridge between odd-cycle symmetry and the original insertion/cut mechanism. It never uses the earlier false equality between insertion and orphan totals.
+
+For a self-converse node, retain automorphism ordera, blue tiling countb and fundamental-black degreed. The inherited relation `H/a=b+2d` yields
+
+`2ad+ab=1+2q+4i (mod8)`.
+
+The automorphism denominator is necessary. A chosen anti-involution's fixed-path count must be divided by its automorphism centralizer to obtainb.
+
+## 5. The length-refined packing theorem and the sharp loss boundary
+
+[The multivariate extension](inheritance/INHERITANCE_AND_THEORY.md) keeps a variablez_l for every odd cycle length. Modulo2, an invariant packing consists of admissible mirror pairs, plus at most one fixed cycle through the unique center. Hence its polynomial has the form
+
+`F_T(z)=A(z^2)+sum_(odd l) z_l B_l(z^2) (mod2)`.
+
+At even order everyB_l vanishes. Consequently every coefficient with at least two odd length-multiplicities is even for any self-converse tournament; at even order every nonsquare monomial coefficient is even. This is an all-order symbolic statement, not a bounded observed recurrence.
+
+But cycle data do not determine colored path incidence. Two order5 tournaments both haveH9, automorphism order1, identical scores and identical complete length-labelled, reflection-equivariant conflict graphK4. Nevertheless their blue fibres are1 and3 and their fundamental-black degrees4 and3. The packet gives every odd cycle, all nine paths, and the reflection actions. This is the smallest such self-converse collision by order.
+
+Thus even the equivariant odd-cycle conflict graph needs actual vertex/path incidence to reconstruct blue mass. The new congruences are genuine transfers; identifying the carriers wholesale would be false.
+
+## 6. Exact deletion laws and a minimal extra classifier
+
+[Colored deletion](colored_incidence/REPORT.md) commutes with complement lines. For n>=4, every lower line has2^(n−2) lifts. Exactly two are blue iff the lower line's central marked restriction is reflection-fixed; otherwise none are blue.
+
+At n5 that central restriction always passes, so each of the four lower lines has **2 blue +6 black lifts**. Every statistic of the deleted line has the same normalized distribution when sampled from upper blue or upper black lines. In particular, lower arithmetic endpoint ratios cannot predict upper color. This complete independence holds exactly at n4 andn5 among n>=4; fromn6 the central marked test is nontrivial.
+
+At each node the **raw** deletion vector decomposes as its blue-parent vector plus the degree vector of a black reflection-pair parent graph. This gives an exact arithmetic factorization of the raw code. Primitive gcd normalization can lose the degree mass and must not be used in this conservation identity.
+
+A useful finite positive repair is that **(H,blue tiling count) classifies all ten n5 merged nodes**. It already fails at n6 even if automorphism order and total fibre size are also retained. Explicit H17/blue5 andH29/blue7 collision pairs have different deletion profiles. Thus successive invariants have proved scopes and known boundaries rather than an asserted universal classifier.
+
+## 7. Verification and what remains open
+
+[Verification](VERIFICATION.md), [independent audit](independent/AUDIT.md), and `verify_session.py` retain exact computations and failure controls. The Hamiltonian producer checks every4,694 blue presentation throughn8 and all530 centered presentations throughn7. Independent methods rebuild the full labelled n5/n6 universes, cycle lattices, arithmetic codecs and structural identities, with their own explicitly stated smaller n8 sample. Those scopes are not conflated.
+
+Two verified publication checkpoints preserve source corrections and concurrent repository work. There is no novelty claim for inherited OCF, black pairing, or standard graph gain theory. The new transfers are the displayed scoped proofs and exact classifications.
+
+The original forbidden7/21 spectrum target is not closed: actualH15 andH5 occupy the same modulo8 residues as7 and21. All-order profile completeness, natural node dynamics and global spectrum realization remain separate obligations. The productive synthesis is precise: **symmetry on marked objects supplies arithmetic, parity and lattice laws; forgetting the marked incidence requires explicit extra data.**

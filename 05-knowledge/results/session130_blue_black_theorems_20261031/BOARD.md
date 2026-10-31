@@ -18,3 +18,7 @@ Least-used sidecars pursued: integral rather than rational cycles, marked centra
 Method cards: Retain local incidence through counting; Audit saturation and basis covariance before naming a lattice bridge; Type every analogy and every implication.
 
 Concurrent THM-4854 and the new register note are pre-audit sources with placeholder audit markers. They are preserved and credited as source context, not used to certify the new proofs. No universal H-spectrum, LRC, or circuit lower-bound closure is assumed.
+
+## Close-out comparison
+
+The marked symmetry carrier yields three compatible but distinct transfers: square reflection norms for arithmetic decorations, overlap charges for Hamiltonian residues, and integral parity obstructions for metagraph cycles. Colored deletion requires the central marked state; equivariant odd-cycle conflicts still omit blue path incidence. The finite(H,blue)classifier is exact atn5 and fails atn6. These boundaries justify the retained sidecars rather than merging the carriers by analogy.

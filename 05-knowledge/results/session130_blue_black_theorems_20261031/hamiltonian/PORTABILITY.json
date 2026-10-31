@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "copy of explicit bundle in fresh temporary directory; no source checkout path dependencies",
+  "checks": [
+    {
+      "check": "main_normal",
+      "status": "PASS",
+      "sha256": "2cda79e68057b8079ea4f37ed26f16b8eabcc3e2fb9be5cba9fa54e2a9772144"
+    },
+    {
+      "check": "main_optimized",
+      "status": "PASS",
+      "sha256": "2cda79e68057b8079ea4f37ed26f16b8eabcc3e2fb9be5cba9fa54e2a9772144"
+    },
+    {
+      "check": "hostile_normal",
+      "status": "PASS",
+      "sha256": "c8dc9dbbac5e9e8f8ed3cc18e0089defbae0af37b37f04a6a9b04b8ab296154c"
+    },
+    {
+      "check": "hostile_optimized",
+      "status": "PASS",
+      "sha256": "c8dc9dbbac5e9e8f8ed3cc18e0089defbae0af37b37f04a6a9b04b8ab296154c"
+    }
+  ]
+}

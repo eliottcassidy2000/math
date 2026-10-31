@@ -1,0 +1,4773 @@
+{
+  "checks": {
+    "black_loops_count_twice_in_degree": true,
+    "failure_gates_survive_python_optimization": true,
+    "full_polynomial_mod2_not_only_H": true,
+    "held_karp_vs_cycle_packings": true,
+    "literal_directed_cycles_not_supports": true,
+    "multivariate_packing_and_forbidden_parity_sectors": true
+  },
+  "equivariant_conflict_graph_hostile": {
+    "cycle_bijection": [
+      {
+        "source": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "target": [
+          0,
+          4,
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "source": [
+          0,
+          2,
+          4
+        ],
+        "target": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "source": [
+          0,
+          1,
+          4
+        ],
+        "target": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "source": [
+          0,
+          3,
+          4
+        ],
+        "target": [
+          1,
+          2,
+          4
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "adjacency_rows": [
+          [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "blue_paths": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "common_vertices_of_all_odd_cycles": [
+          0,
+          4
+        ],
+        "cycles": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            3,
+            4
+          ]
+        ],
+        "hamiltonian_paths": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            0
+          ],
+          [
+            1,
+            2,
+            4,
+            0,
+            3
+          ],
+          [
+            1,
+            3,
+            4,
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4,
+            0,
+            1
+          ],
+          [
+            2,
+            4,
+            0,
+            1,
+            3
+          ],
+          [
+            3,
+            4,
+            0,
+            1,
+            2
+          ],
+          [
+            4,
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "out_neighbor_bitmasks": [
+          14,
+          28,
+          24,
+          16,
+          1
+        ],
+        "word": 1
+      },
+      {
+        "adjacency_rows": [
+          [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "blue_paths": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            0,
+            2,
+            4,
+            1
+          ],
+          [
+            4,
+            1,
+            2,
+            3,
+            0
+          ]
+        ],
+        "common_vertices_of_all_odd_cycles": [
+          2
+        ],
+        "cycles": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            0,
+            4,
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ],
+        "hamiltonian_paths": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3,
+            4,
+            1
+          ],
+          [
+            0,
+            4,
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            3,
+            0,
+            4
+          ],
+          [
+            2,
+            3,
+            0,
+            4,
+            1
+          ],
+          [
+            3,
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            3,
+            0,
+            2,
+            4,
+            1
+          ],
+          [
+            3,
+            0,
+            4,
+            1,
+            2
+          ],
+          [
+            4,
+            1,
+            2,
+            3,
+            0
+          ]
+        ],
+        "out_neighbor_bitmasks": [
+          22,
+          4,
+          24,
+          19,
+          2
+        ],
+        "word": 26
+      }
+    ],
+    "loses": [
+      "actual vertex-incidence supports",
+      "blue Hamiltonian path count"
+    ],
+    "preserves": [
+      "cycle length",
+      "pairwise cycle intersection",
+      "anti-involution action"
+    ]
+  },
+  "metagraphs": {
+    "3": {
+      "black_line_count": 0,
+      "cut_tests": 4,
+      "merged_nodes": 2,
+      "n": 3,
+      "ordinary_classes": 2,
+      "quotient_black_edges": [],
+      "rows": [
+        {
+          "H": 1,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {},
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 1,
+          "node": 0,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0
+              ]
+            }
+          ],
+          "representative_word": 0,
+          "scores": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "H": 3,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 1
+          },
+          "fixed_by_length": {
+            "3": 1
+          },
+          "fixed_odd_cycles": 1,
+          "fixed_packing_polynomial": [
+            1,
+            1
+          ],
+          "mass": 1,
+          "node": 1,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                1
+              ]
+            }
+          ],
+          "representative_word": 1,
+          "scores": [
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    "4": {
+      "black_line_count": 2,
+      "cut_tests": 8,
+      "merged_nodes": 3,
+      "n": 4,
+      "ordinary_classes": 4,
+      "quotient_black_edges": [
+        {
+          "multiplicity": 1,
+          "nodes": [
+            1,
+            2
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "H": 1,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {},
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 1,
+          "node": 0,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0
+              ]
+            }
+          ],
+          "representative_word": 0,
+          "scores": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "H": 3,
+          "alpha": [
+            1,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 1
+          },
+          "mass": 2,
+          "node": 1,
+          "quotient_black_degree": 1,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                1
+              ]
+            }
+          ],
+          "representative_word": 2,
+          "scores": [
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        {
+          "H": 5,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 3,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 2
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 5,
+          "node": 2,
+          "quotient_black_degree": 1,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                1
+              ]
+            }
+          ],
+          "representative_word": 1,
+          "scores": [
+            1,
+            1,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    "5": {
+      "black_line_count": 24,
+      "cut_tests": 1024,
+      "merged_nodes": 10,
+      "n": 5,
+      "ordinary_classes": 12,
+      "quotient_black_edges": [
+        {
+          "multiplicity": 1,
+          "nodes": [
+            1,
+            4
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            4
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            5
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            6
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            7
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            8
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            5
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            8
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            5,
+            7
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            6
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            8
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            8,
+            8
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "H": 1,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {},
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 1,
+          "node": 0,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            }
+          ],
+          "representative_word": 0,
+          "scores": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 3,
+          "alpha": [
+            1,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 1
+          },
+          "mass": 2,
+          "node": 1,
+          "quotient_black_degree": 1,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 4,
+          "scores": [
+            1,
+            1,
+            1,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 5,
+          "alpha": [
+            1,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 2
+          },
+          "mass": 10,
+          "node": 2,
+          "quotient_black_degree": 5,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 2,
+          "scores": [
+            1,
+            1,
+            2,
+            2,
+            4
+          ]
+        },
+        {
+          "H": 3,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 1
+          },
+          "fixed_by_length": {
+            "3": 1
+          },
+          "fixed_odd_cycles": 1,
+          "fixed_packing_polynomial": [
+            1,
+            1
+          ],
+          "mass": 1,
+          "node": 3,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 16,
+          "scores": [
+            0,
+            2,
+            2,
+            2,
+            4
+          ]
+        },
+        {
+          "H": 9,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            4
+          ],
+          "aut": 1,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 3,
+            "5": 1
+          },
+          "fixed_by_length": {
+            "3": 1,
+            "5": 1
+          },
+          "fixed_odd_cycles": 2,
+          "fixed_packing_polynomial": [
+            1,
+            2
+          ],
+          "mass": 9,
+          "node": 4,
+          "quotient_black_degree": 4,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 1,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            3
+          ]
+        },
+        {
+          "H": 9,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            4
+          ],
+          "aut": 1,
+          "blue_degree": 3,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 3,
+            "5": 1
+          },
+          "fixed_by_length": {
+            "3": 1,
+            "5": 1
+          },
+          "fixed_odd_cycles": 2,
+          "fixed_packing_polynomial": [
+            1,
+            2
+          ],
+          "mass": 9,
+          "node": 5,
+          "quotient_black_degree": 3,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 26,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            3
+          ]
+        },
+        {
+          "H": 11,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            5
+          ],
+          "aut": 1,
+          "blue_degree": 3,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 4,
+            "5": 1
+          },
+          "fixed_by_length": {
+            "3": 2,
+            "5": 1
+          },
+          "fixed_odd_cycles": 3,
+          "fixed_packing_polynomial": [
+            1,
+            3
+          ],
+          "mass": 11,
+          "node": 6,
+          "quotient_black_degree": 4,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 27,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "H": 15,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            7
+          ],
+          "aut": 3,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 4,
+            "5": 3
+          },
+          "fixed_by_length": {
+            "3": 2,
+            "5": 1
+          },
+          "fixed_odd_cycles": 3,
+          "fixed_packing_polynomial": [
+            1,
+            3
+          ],
+          "mass": 5,
+          "node": 7,
+          "quotient_black_degree": 2,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 17,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "H": 13,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            6
+          ],
+          "aut": 1,
+          "blue_degree": 3,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 4,
+            "5": 2
+          },
+          "fixed_by_length": {
+            "5": 2
+          },
+          "fixed_odd_cycles": 2,
+          "fixed_packing_polynomial": [
+            1,
+            2
+          ],
+          "mass": 13,
+          "node": 8,
+          "quotient_black_degree": 5,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 10,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3
+          ]
+        },
+        {
+          "H": 15,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            7
+          ],
+          "aut": 5,
+          "blue_degree": 3,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 5,
+            "5": 2
+          },
+          "fixed_by_length": {
+            "3": 1,
+            "5": 2
+          },
+          "fixed_odd_cycles": 3,
+          "fixed_packing_polynomial": [
+            1,
+            3
+          ],
+          "mass": 3,
+          "node": 9,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 5,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 11,
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    "6": {
+      "black_line_count": 480,
+      "cut_tests": 36,
+      "merged_nodes": 34,
+      "n": 6,
+      "ordinary_classes": 56,
+      "quotient_black_edges": [
+        {
+          "multiplicity": 1,
+          "nodes": [
+            1,
+            12
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            11
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            12
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            13
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            14
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            2,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            3,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            12
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            13
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            14
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            16
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            21
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            4,
+            24
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            27
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            4,
+            28
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            5,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            11
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            12
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            22
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            6,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            6,
+            24
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            15
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            7,
+            18
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            24
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            25
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            7,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            27
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            7,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            8,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            8,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            8,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            8,
+            24
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            8,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            13
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            14
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            9,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            21
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            9,
+            22
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            24
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            9,
+            25
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            9,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            10,
+            19
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            10,
+            25
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            10,
+            26
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            11,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            11,
+            16
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            11,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            12
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            13
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            14
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            22
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            12,
+            23
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            12,
+            24
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            13
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            15
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            16
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            19
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            22
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            24
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            13,
+            25
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            13,
+            27
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            14,
+            16
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            14,
+            22
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            14,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            14,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            14,
+            28
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            15,
+            15
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            15,
+            18
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            15,
+            21
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            15,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            15,
+            24
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            15,
+            25
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            15,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            16,
+            18
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            16,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            18,
+            19
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            18,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            18,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            18,
+            24
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            18,
+            25
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            18,
+            26
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            18,
+            27
+          ]
+        },
+        {
+          "multiplicity": 4,
+          "nodes": [
+            18,
+            29
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            18,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            18,
+            33
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            19,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            19,
+            25
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            19,
+            28
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            19,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            19,
+            30
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            19,
+            31
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            20,
+            20
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            20,
+            21
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            20,
+            22
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            20,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            20,
+            24
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            20,
+            25
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            20,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            20,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            20,
+            30
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            20,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            21,
+            23
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            21,
+            27
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            21,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            22,
+            25
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            22,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            22,
+            28
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            22,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            23,
+            23
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            23,
+            24
+          ]
+        },
+        {
+          "multiplicity": 4,
+          "nodes": [
+            23,
+            25
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            23,
+            26
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            23,
+            27
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            23,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            23,
+            30
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            23,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            24,
+            24
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            24,
+            25
+          ]
+        },
+        {
+          "multiplicity": 4,
+          "nodes": [
+            24,
+            26
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            24,
+            28
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            24,
+            29
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            24,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            25,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            25,
+            27
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            25,
+            28
+          ]
+        },
+        {
+          "multiplicity": 4,
+          "nodes": [
+            25,
+            29
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            25,
+            30
+          ]
+        },
+        {
+          "multiplicity": 7,
+          "nodes": [
+            25,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            25,
+            32
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            26,
+            26
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            26,
+            27
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            26,
+            28
+          ]
+        },
+        {
+          "multiplicity": 2,
+          "nodes": [
+            26,
+            29
+          ]
+        },
+        {
+          "multiplicity": 4,
+          "nodes": [
+            26,
+            30
+          ]
+        },
+        {
+          "multiplicity": 4,
+          "nodes": [
+            26,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            26,
+            32
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            28,
+            29
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            28,
+            33
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            29,
+            30
+          ]
+        },
+        {
+          "multiplicity": 6,
+          "nodes": [
+            29,
+            31
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            29,
+            32
+          ]
+        },
+        {
+          "multiplicity": 1,
+          "nodes": [
+            29,
+            33
+          ]
+        },
+        {
+          "multiplicity": 6,
+          "nodes": [
+            30,
+            31
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            31,
+            31
+          ]
+        },
+        {
+          "multiplicity": 3,
+          "nodes": [
+            31,
+            33
+          ]
+        }
+      ],
+      "rows": [
+        {
+          "H": 1,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {},
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 1,
+          "node": 0,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            }
+          ],
+          "representative_word": 0,
+          "scores": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "H": 3,
+          "alpha": [
+            1,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 1
+          },
+          "mass": 2,
+          "node": 1,
+          "quotient_black_degree": 1,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 8,
+          "scores": [
+            1,
+            1,
+            1,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "H": 5,
+          "alpha": [
+            1,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 2
+          },
+          "mass": 10,
+          "node": 2,
+          "quotient_black_degree": 5,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 4,
+          "scores": [
+            1,
+            1,
+            2,
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "H": 3,
+          "alpha": [
+            1,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 1
+          },
+          "mass": 2,
+          "node": 3,
+          "quotient_black_degree": 1,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 64,
+          "scores": [
+            0,
+            2,
+            2,
+            2,
+            4,
+            5
+          ]
+        },
+        {
+          "H": 9,
+          "alpha": [
+            1,
+            4
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 3,
+            "5": 1
+          },
+          "mass": 18,
+          "node": 4,
+          "quotient_black_degree": 9,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 2,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            3,
+            5
+          ]
+        },
+        {
+          "H": 5,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 3,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 2
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 5,
+          "node": 5,
+          "quotient_black_degree": 1,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 32,
+          "scores": [
+            0,
+            2,
+            2,
+            3,
+            3,
+            5
+          ]
+        },
+        {
+          "H": 9,
+          "alpha": [
+            1,
+            4
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 3,
+            "5": 1
+          },
+          "mass": 18,
+          "node": 6,
+          "quotient_black_degree": 9,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 10,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            3,
+            5
+          ]
+        },
+        {
+          "H": 11,
+          "alpha": [
+            1,
+            5
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 4,
+            "5": 1
+          },
+          "mass": 22,
+          "node": 7,
+          "quotient_black_degree": 11,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 6,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "H": 15,
+          "alpha": [
+            1,
+            7
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 4,
+            "5": 3
+          },
+          "mass": 10,
+          "node": 8,
+          "quotient_black_degree": 5,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 66,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "H": 13,
+          "alpha": [
+            1,
+            6
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 4,
+            "5": 2
+          },
+          "mass": 26,
+          "node": 9,
+          "quotient_black_degree": 13,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 36,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            3,
+            5
+          ]
+        },
+        {
+          "H": 15,
+          "alpha": [
+            1,
+            7
+          ],
+          "aut": 5,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 5,
+            "5": 2
+          },
+          "mass": 6,
+          "node": 10,
+          "quotient_black_degree": 3,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 5,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 38,
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        {
+          "H": 17,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            8
+          ],
+          "aut": 1,
+          "blue_degree": 5,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 4,
+            "5": 4
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 17,
+          "node": 11,
+          "quotient_black_degree": 6,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 1,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 15,
+          "alpha": [
+            1,
+            7
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 4,
+            "5": 3
+          },
+          "mass": 30,
+          "node": 12,
+          "quotient_black_degree": 15,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 3,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 9,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 19,
+          "alpha": [
+            1,
+            9
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 5,
+            "5": 4
+          },
+          "mass": 38,
+          "node": 13,
+          "quotient_black_degree": 19,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 5,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 5,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 27,
+          "alpha": [
+            1,
+            11,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 5,
+            "5": 6
+          },
+          "mass": 18,
+          "node": 14,
+          "quotient_black_degree": 9,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 5,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 65,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 23,
+          "alpha": [
+            1,
+            9,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 5,
+            "5": 4
+          },
+          "mass": 46,
+          "node": 15,
+          "quotient_black_degree": 23,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 5,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 20,
+          "scores": [
+            1,
+            2,
+            2,
+            2,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 17,
+          "admissible_paired_cycle_orbits": 1,
+          "alpha": [
+            1,
+            6,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 5,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 4,
+            "5": 2
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            1
+          ],
+          "mass": 17,
+          "node": 16,
+          "quotient_black_degree": 6,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 132,
+          "scores": [
+            1,
+            1,
+            2,
+            3,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 9,
+          "admissible_paired_cycle_orbits": 1,
+          "alpha": [
+            1,
+            2,
+            1
+          ],
+          "aut": 9,
+          "blue_degree": 1,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 2
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            1
+          ],
+          "mass": 1,
+          "node": 17,
+          "quotient_black_degree": 0,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 520,
+          "scores": [
+            1,
+            1,
+            1,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "H": 23,
+          "alpha": [
+            1,
+            11
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 5
+          },
+          "mass": 46,
+          "node": 18,
+          "quotient_black_degree": 23,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 5,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 3,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 33,
+          "alpha": [
+            1,
+            16
+          ],
+          "aut": 3,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 7,
+            "5": 9
+          },
+          "mass": 22,
+          "node": 19,
+          "quotient_black_degree": 11,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 9,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 61,
+          "scores": [
+            1,
+            2,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "H": 25,
+          "alpha": [
+            1,
+            12
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 6
+          },
+          "mass": 50,
+          "node": 20,
+          "quotient_black_degree": 25,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            }
+          ],
+          "representative_word": 25,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 37,
+          "admissible_paired_cycle_orbits": 0,
+          "alpha": [
+            1,
+            14,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 7,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 8
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1
+          ],
+          "mass": 37,
+          "node": 21,
+          "quotient_black_degree": 15,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 8,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 33,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 33,
+          "admissible_paired_cycle_orbits": 2,
+          "alpha": [
+            1,
+            12,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 7,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 6
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            2
+          ],
+          "mass": 33,
+          "node": 22,
+          "quotient_black_degree": 13,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 18,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 31,
+          "alpha": [
+            1,
+            13,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 7
+          },
+          "mass": 62,
+          "node": 23,
+          "quotient_black_degree": 31,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 41,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 29,
+          "alpha": [
+            1,
+            12,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 6
+          },
+          "mass": 58,
+          "node": 24,
+          "quotient_black_degree": 29,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 26,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 37,
+          "alpha": [
+            1,
+            16,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 7,
+            "5": 9
+          },
+          "mass": 74,
+          "node": 25,
+          "quotient_black_degree": 37,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 9,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 37,
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 37,
+          "alpha": [
+            1,
+            14,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 7,
+            "5": 7
+          },
+          "mass": 74,
+          "node": 26,
+          "quotient_black_degree": 37,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 22,
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 29,
+          "admissible_paired_cycle_orbits": 2,
+          "alpha": [
+            1,
+            10,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 7,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 4
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            2
+          ],
+          "mass": 29,
+          "node": 27,
+          "quotient_black_degree": 11,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 50,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 29,
+          "admissible_paired_cycle_orbits": 1,
+          "alpha": [
+            1,
+            12,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 7,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 6,
+            "5": 6
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            1
+          ],
+          "mass": 29,
+          "node": 28,
+          "quotient_black_degree": 11,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 133,
+          "scores": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 33,
+          "alpha": [
+            1,
+            14,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 7,
+            "5": 7
+          },
+          "mass": 66,
+          "node": 29,
+          "quotient_black_degree": 33,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 7,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 21,
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "H": 41,
+          "admissible_paired_cycle_orbits": 2,
+          "alpha": [
+            1,
+            16,
+            2
+          ],
+          "aut": 1,
+          "blue_degree": 9,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 8,
+            "5": 8
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            2
+          ],
+          "mass": 41,
+          "node": 30,
+          "quotient_black_degree": 16,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 8,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 8,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 2,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 19,
+          "scores": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "H": 43,
+          "alpha": [
+            1,
+            19,
+            1
+          ],
+          "aut": 1,
+          "blue_degree": 0,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 8,
+            "5": 11
+          },
+          "mass": 86,
+          "node": 31,
+          "quotient_black_degree": 43,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 11,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 8,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 53,
+          "scores": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "H": 45,
+          "admissible_paired_cycle_orbits": 2,
+          "alpha": [
+            1,
+            14,
+            4
+          ],
+          "aut": 3,
+          "blue_degree": 9,
+          "charge": 1,
+          "counts_by_length": {
+            "3": 8,
+            "5": 6
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            2
+          ],
+          "mass": 15,
+          "node": 32,
+          "quotient_black_degree": 3,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 6,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 8,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 4,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 51,
+          "scores": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "H": 45,
+          "admissible_paired_cycle_orbits": 1,
+          "alpha": [
+            1,
+            20,
+            1
+          ],
+          "aut": 3,
+          "blue_degree": 3,
+          "charge": 0,
+          "counts_by_length": {
+            "3": 8,
+            "5": 12
+          },
+          "fixed_by_length": {},
+          "fixed_odd_cycles": 0,
+          "fixed_packing_polynomial": [
+            1,
+            0,
+            1
+          ],
+          "mass": 15,
+          "node": 33,
+          "quotient_black_degree": 6,
+          "refined_profile": [
+            {
+              "count": 1,
+              "multiplicities": [
+                0,
+                0
+              ]
+            },
+            {
+              "count": 12,
+              "multiplicities": [
+                0,
+                1
+              ]
+            },
+            {
+              "count": 8,
+              "multiplicities": [
+                1,
+                0
+              ]
+            },
+            {
+              "count": 1,
+              "multiplicities": [
+                2,
+                0
+              ]
+            }
+          ],
+          "representative_word": 165,
+          "scores": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        }
+      ]
+    }
+  },
+  "nonzero_mixed_length_even_control": {
+    "H": 149,
+    "admissible_paired_cycle_orbits": 4,
+    "alpha": [
+      1,
+      54,
+      10
+    ],
+    "counts_by_length": {
+      "3": 10,
+      "5": 24,
+      "7": 20
+    },
+    "fixed_by_length": {},
+    "fixed_odd_cycles": 0,
+    "fixed_packing_polynomial": [
+      1,
+      0,
+      4
+    ],
+    "n": 8,
+    "refined_profile": [
+      {
+        "count": 1,
+        "multiplicities": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 20,
+        "multiplicities": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "count": 24,
+        "multiplicities": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 10,
+        "multiplicities": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "count": 2,
+        "multiplicities": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "count": 8,
+        "multiplicities": [
+          2,
+          0,
+          0
+        ]
+      }
+    ],
+    "word": 1052960
+  },
+  "reflection_fixed_tests": [
+    {
+      "n": 3,
+      "scope": "exhaustive",
+      "symmetric_words_tested": 2
+    },
+    {
+      "n": 4,
+      "scope": "exhaustive",
+      "symmetric_words_tested": 4
+    },
+    {
+      "n": 5,
+      "scope": "exhaustive",
+      "symmetric_words_tested": 16
+    },
+    {
+      "n": 6,
+      "scope": "exhaustive",
+      "symmetric_words_tested": 64
+    },
+    {
+      "n": 7,
+      "scope": "exhaustive",
+      "symmetric_words_tested": 512
+    },
+    {
+      "n": 8,
+      "scope": "every32nd half-cube word",
+      "symmetric_words_tested": 128
+    }
+  ],
+  "same_score_hostile_n5": [
+    {
+      "H": 11,
+      "admissible_paired_cycle_orbits": 0,
+      "alpha": [
+        1,
+        5
+      ],
+      "aut": 1,
+      "blue_degree": 3,
+      "charge": 0,
+      "counts_by_length": {
+        "3": 4,
+        "5": 1
+      },
+      "fixed_by_length": {
+        "3": 2,
+        "5": 1
+      },
+      "fixed_odd_cycles": 3,
+      "fixed_packing_polynomial": [
+        1,
+        3
+      ],
+      "mass": 11,
+      "node": 6,
+      "quotient_black_degree": 4,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0
+          ]
+        },
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            1
+          ]
+        },
+        {
+          "count": 4,
+          "multiplicities": [
+            1,
+            0
+          ]
+        }
+      ],
+      "representative_word": 27,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "H": 15,
+      "admissible_paired_cycle_orbits": 0,
+      "alpha": [
+        1,
+        7
+      ],
+      "aut": 3,
+      "blue_degree": 1,
+      "charge": 0,
+      "counts_by_length": {
+        "3": 4,
+        "5": 3
+      },
+      "fixed_by_length": {
+        "3": 2,
+        "5": 1
+      },
+      "fixed_odd_cycles": 3,
+      "fixed_packing_polynomial": [
+        1,
+        3
+      ],
+      "mass": 5,
+      "node": 7,
+      "quotient_black_degree": 2,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0
+          ]
+        },
+        {
+          "count": 3,
+          "multiplicities": [
+            0,
+            1
+          ]
+        },
+        {
+          "count": 4,
+          "multiplicities": [
+            1,
+            0
+          ]
+        }
+      ],
+      "representative_word": 17,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "H": 13,
+      "admissible_paired_cycle_orbits": 0,
+      "alpha": [
+        1,
+        6
+      ],
+      "aut": 1,
+      "blue_degree": 3,
+      "charge": 1,
+      "counts_by_length": {
+        "3": 4,
+        "5": 2
+      },
+      "fixed_by_length": {
+        "5": 2
+      },
+      "fixed_odd_cycles": 2,
+      "fixed_packing_polynomial": [
+        1,
+        2
+      ],
+      "mass": 13,
+      "node": 8,
+      "quotient_black_degree": 5,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0
+          ]
+        },
+        {
+          "count": 2,
+          "multiplicities": [
+            0,
+            1
+          ]
+        },
+        {
+          "count": 4,
+          "multiplicities": [
+            1,
+            0
+          ]
+        }
+      ],
+      "representative_word": 10,
+      "scores": [
+        1,
+        2,
+        2,
+        2,
+        3
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT verification of general elementary theorem",
+  "triangle_stacks": [
+    {
+      "H": 3,
+      "admissible_paired_cycle_orbits": 0,
+      "alpha": [
+        1,
+        1
+      ],
+      "counts_by_length": {
+        "3": 1
+      },
+      "fixed_by_length": {
+        "3": 1
+      },
+      "fixed_odd_cycles": 1,
+      "fixed_packing_polynomial": [
+        1,
+        1
+      ],
+      "k": 1,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0
+          ]
+        },
+        {
+          "count": 1,
+          "multiplicities": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "H": 9,
+      "admissible_paired_cycle_orbits": 1,
+      "alpha": [
+        1,
+        2,
+        1
+      ],
+      "counts_by_length": {
+        "3": 2
+      },
+      "fixed_by_length": {},
+      "fixed_odd_cycles": 0,
+      "fixed_packing_polynomial": [
+        1,
+        0,
+        1
+      ],
+      "k": 2,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0
+          ]
+        },
+        {
+          "count": 2,
+          "multiplicities": [
+            1,
+            0
+          ]
+        },
+        {
+          "count": 1,
+          "multiplicities": [
+            2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "H": 27,
+      "admissible_paired_cycle_orbits": 1,
+      "alpha": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "counts_by_length": {
+        "3": 3
+      },
+      "fixed_by_length": {
+        "3": 1
+      },
+      "fixed_odd_cycles": 1,
+      "fixed_packing_polynomial": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "k": 3,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 3,
+          "multiplicities": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 3,
+          "multiplicities": [
+            2,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 1,
+          "multiplicities": [
+            3,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "H": 81,
+      "admissible_paired_cycle_orbits": 2,
+      "alpha": [
+        1,
+        4,
+        6,
+        4,
+        1
+      ],
+      "counts_by_length": {
+        "3": 4
+      },
+      "fixed_by_length": {},
+      "fixed_odd_cycles": 0,
+      "fixed_packing_polynomial": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "k": 4,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 4,
+          "multiplicities": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 6,
+          "multiplicities": [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 4,
+          "multiplicities": [
+            3,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 1,
+          "multiplicities": [
+            4,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "H": 243,
+      "admissible_paired_cycle_orbits": 2,
+      "alpha": [
+        1,
+        5,
+        10,
+        10,
+        5,
+        1
+      ],
+      "counts_by_length": {
+        "3": 5
+      },
+      "fixed_by_length": {
+        "3": 1
+      },
+      "fixed_odd_cycles": 1,
+      "fixed_packing_polynomial": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "k": 5,
+      "refined_profile": [
+        {
+          "count": 1,
+          "multiplicities": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 5,
+          "multiplicities": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 10,
+          "multiplicities": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 10,
+          "multiplicities": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 5,
+          "multiplicities": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "count": 1,
+          "multiplicities": [
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

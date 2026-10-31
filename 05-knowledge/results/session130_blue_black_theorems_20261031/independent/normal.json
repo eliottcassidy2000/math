@@ -1,0 +1,2589 @@
+{
+  "3": {
+    "components": [
+      [
+        0,
+        1
+      ]
+    ],
+    "cycle_rank": 0,
+    "edges": [
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          0,
+          1
+        ]
+      }
+    ],
+    "labelled": 8,
+    "line_counts": {
+      "blue": 1
+    },
+    "lines": [
+      {
+        "color": "blue",
+        "masks": [
+          0,
+          1
+        ],
+        "nodes": [
+          0,
+          1
+        ],
+        "reflected_line": 0
+      }
+    ],
+    "mask_count": 2,
+    "merged": 2,
+    "n": 3,
+    "nodes": [
+      {
+        "Aut": 1,
+        "H": 1,
+        "black_degree": 0,
+        "blue_degree": 1,
+        "canon": 0,
+        "classes": [
+          0
+        ],
+        "degree": 1,
+        "masks": [
+          0
+        ],
+        "node": 0,
+        "symmetric_H": 1,
+        "type": "pure_blue"
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "black_degree": 0,
+        "blue_degree": 1,
+        "canon": 2,
+        "classes": [
+          1
+        ],
+        "degree": 1,
+        "masks": [
+          1
+        ],
+        "node": 1,
+        "symmetric_H": 3,
+        "type": "pure_blue"
+      }
+    ],
+    "ordinary": 2,
+    "self_converse": 2
+  },
+  "4": {
+    "components": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "cycle_rank": 2,
+    "edges": [
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          0,
+          2
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          1,
+          2
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          2,
+          2
+        ]
+      }
+    ],
+    "labelled": 64,
+    "line_counts": {
+      "black": 2,
+      "blue": 2
+    },
+    "lines": [
+      {
+        "color": "blue",
+        "masks": [
+          0,
+          7
+        ],
+        "nodes": [
+          0,
+          2
+        ],
+        "reflected_line": 0
+      },
+      {
+        "color": "blue",
+        "masks": [
+          1,
+          6
+        ],
+        "nodes": [
+          2,
+          2
+        ],
+        "reflected_line": 1
+      },
+      {
+        "color": "black",
+        "masks": [
+          2,
+          5
+        ],
+        "nodes": [
+          1,
+          2
+        ],
+        "reflected_line": 3
+      },
+      {
+        "color": "black",
+        "masks": [
+          3,
+          4
+        ],
+        "nodes": [
+          1,
+          2
+        ],
+        "reflected_line": 2
+      }
+    ],
+    "mask_count": 8,
+    "merged": 3,
+    "n": 4,
+    "nodes": [
+      {
+        "Aut": 1,
+        "H": 1,
+        "black_degree": 0,
+        "black_deletion": [
+          0,
+          0
+        ],
+        "black_parent_pairs": [],
+        "blue_degree": 1,
+        "blue_deletion": [
+          1,
+          0
+        ],
+        "canon": 0,
+        "classes": [
+          0
+        ],
+        "degree": 1,
+        "deletion": [
+          1,
+          0
+        ],
+        "masks": [
+          0
+        ],
+        "node": 0,
+        "primitive": [
+          1,
+          0
+        ],
+        "symmetric_H": 1,
+        "type": "pure_blue"
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "black_degree": 2,
+        "black_deletion": [
+          1,
+          1
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              0,
+              1
+            ]
+          }
+        ],
+        "blue_degree": 0,
+        "blue_deletion": [
+          0,
+          0
+        ],
+        "canon": 2,
+        "classes": [
+          1,
+          3
+        ],
+        "degree": 2,
+        "deletion": [
+          1,
+          1
+        ],
+        "masks": [
+          2,
+          4
+        ],
+        "node": 1,
+        "primitive": [
+          1,
+          1
+        ],
+        "symmetric_H": 0,
+        "type": "pure_black"
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "black_degree": 2,
+        "black_deletion": [
+          1,
+          1
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              0,
+              1
+            ]
+          }
+        ],
+        "blue_degree": 3,
+        "blue_deletion": [
+          1,
+          2
+        ],
+        "canon": 8,
+        "classes": [
+          2
+        ],
+        "degree": 5,
+        "deletion": [
+          2,
+          3
+        ],
+        "masks": [
+          1,
+          3,
+          5,
+          6,
+          7
+        ],
+        "node": 2,
+        "primitive": [
+          2,
+          3
+        ],
+        "symmetric_H": 3,
+        "type": "mixed"
+      }
+    ],
+    "ordinary": 4,
+    "self_converse": 2
+  },
+  "5": {
+    "components": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    ],
+    "cycle_rank": 23,
+    "edges": [
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          0,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          1,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          4
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          5
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          7
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          2,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          3,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          4,
+          5
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          4,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          4,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          5,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          5,
+          7
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          5,
+          8
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          6,
+          6
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          6,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          6,
+          9
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          7,
+          9
+        ]
+      },
+      {
+        "color": "black",
+        "multiplicity": 2,
+        "nodes": [
+          8,
+          8
+        ]
+      },
+      {
+        "color": "blue",
+        "multiplicity": 1,
+        "nodes": [
+          8,
+          9
+        ]
+      }
+    ],
+    "labelled": 1024,
+    "line_counts": {
+      "black": 24,
+      "blue": 8
+    },
+    "lines": [
+      {
+        "color": "blue",
+        "masks": [
+          0,
+          63
+        ],
+        "nodes": [
+          0,
+          5
+        ],
+        "reflected_line": 0
+      },
+      {
+        "color": "blue",
+        "masks": [
+          1,
+          62
+        ],
+        "nodes": [
+          4,
+          6
+        ],
+        "reflected_line": 1
+      },
+      {
+        "color": "black",
+        "masks": [
+          2,
+          61
+        ],
+        "nodes": [
+          2,
+          8
+        ],
+        "reflected_line": 8
+      },
+      {
+        "color": "black",
+        "masks": [
+          3,
+          60
+        ],
+        "nodes": [
+          6,
+          6
+        ],
+        "reflected_line": 9
+      },
+      {
+        "color": "black",
+        "masks": [
+          4,
+          59
+        ],
+        "nodes": [
+          1,
+          4
+        ],
+        "reflected_line": 31
+      },
+      {
+        "color": "black",
+        "masks": [
+          5,
+          58
+        ],
+        "nodes": [
+          4,
+          5
+        ],
+        "reflected_line": 30
+      },
+      {
+        "color": "black",
+        "masks": [
+          6,
+          57
+        ],
+        "nodes": [
+          2,
+          5
+        ],
+        "reflected_line": 23
+      },
+      {
+        "color": "black",
+        "masks": [
+          7,
+          56
+        ],
+        "nodes": [
+          2,
+          4
+        ],
+        "reflected_line": 22
+      },
+      {
+        "color": "black",
+        "masks": [
+          8,
+          55
+        ],
+        "nodes": [
+          2,
+          8
+        ],
+        "reflected_line": 2
+      },
+      {
+        "color": "black",
+        "masks": [
+          9,
+          54
+        ],
+        "nodes": [
+          6,
+          6
+        ],
+        "reflected_line": 3
+      },
+      {
+        "color": "blue",
+        "masks": [
+          10,
+          53
+        ],
+        "nodes": [
+          8,
+          9
+        ],
+        "reflected_line": 10
+      },
+      {
+        "color": "blue",
+        "masks": [
+          11,
+          52
+        ],
+        "nodes": [
+          6,
+          9
+        ],
+        "reflected_line": 11
+      },
+      {
+        "color": "black",
+        "masks": [
+          12,
+          51
+        ],
+        "nodes": [
+          5,
+          7
+        ],
+        "reflected_line": 29
+      },
+      {
+        "color": "black",
+        "masks": [
+          13,
+          50
+        ],
+        "nodes": [
+          4,
+          8
+        ],
+        "reflected_line": 28
+      },
+      {
+        "color": "black",
+        "masks": [
+          14,
+          49
+        ],
+        "nodes": [
+          6,
+          8
+        ],
+        "reflected_line": 21
+      },
+      {
+        "color": "black",
+        "masks": [
+          15,
+          48
+        ],
+        "nodes": [
+          2,
+          6
+        ],
+        "reflected_line": 20
+      },
+      {
+        "color": "blue",
+        "masks": [
+          16,
+          47
+        ],
+        "nodes": [
+          3,
+          8
+        ],
+        "reflected_line": 16
+      },
+      {
+        "color": "blue",
+        "masks": [
+          17,
+          46
+        ],
+        "nodes": [
+          7,
+          9
+        ],
+        "reflected_line": 17
+      },
+      {
+        "color": "black",
+        "masks": [
+          18,
+          45
+        ],
+        "nodes": [
+          2,
+          7
+        ],
+        "reflected_line": 24
+      },
+      {
+        "color": "black",
+        "masks": [
+          19,
+          44
+        ],
+        "nodes": [
+          8,
+          8
+        ],
+        "reflected_line": 25
+      },
+      {
+        "color": "black",
+        "masks": [
+          20,
+          43
+        ],
+        "nodes": [
+          2,
+          6
+        ],
+        "reflected_line": 15
+      },
+      {
+        "color": "black",
+        "masks": [
+          21,
+          42
+        ],
+        "nodes": [
+          6,
+          8
+        ],
+        "reflected_line": 14
+      },
+      {
+        "color": "black",
+        "masks": [
+          22,
+          41
+        ],
+        "nodes": [
+          2,
+          4
+        ],
+        "reflected_line": 7
+      },
+      {
+        "color": "black",
+        "masks": [
+          23,
+          40
+        ],
+        "nodes": [
+          2,
+          5
+        ],
+        "reflected_line": 6
+      },
+      {
+        "color": "black",
+        "masks": [
+          24,
+          39
+        ],
+        "nodes": [
+          2,
+          7
+        ],
+        "reflected_line": 18
+      },
+      {
+        "color": "black",
+        "masks": [
+          25,
+          38
+        ],
+        "nodes": [
+          8,
+          8
+        ],
+        "reflected_line": 19
+      },
+      {
+        "color": "blue",
+        "masks": [
+          26,
+          37
+        ],
+        "nodes": [
+          5,
+          8
+        ],
+        "reflected_line": 26
+      },
+      {
+        "color": "blue",
+        "masks": [
+          27,
+          36
+        ],
+        "nodes": [
+          5,
+          6
+        ],
+        "reflected_line": 27
+      },
+      {
+        "color": "black",
+        "masks": [
+          28,
+          35
+        ],
+        "nodes": [
+          4,
+          8
+        ],
+        "reflected_line": 13
+      },
+      {
+        "color": "black",
+        "masks": [
+          29,
+          34
+        ],
+        "nodes": [
+          5,
+          7
+        ],
+        "reflected_line": 12
+      },
+      {
+        "color": "black",
+        "masks": [
+          30,
+          33
+        ],
+        "nodes": [
+          4,
+          5
+        ],
+        "reflected_line": 5
+      },
+      {
+        "color": "black",
+        "masks": [
+          31,
+          32
+        ],
+        "nodes": [
+          1,
+          4
+        ],
+        "reflected_line": 4
+      }
+    ],
+    "mask_count": 64,
+    "merged": 10,
+    "n": 5,
+    "nodes": [
+      {
+        "Aut": 1,
+        "H": 1,
+        "black_degree": 0,
+        "black_deletion": [
+          0,
+          0,
+          0
+        ],
+        "black_parent_pairs": [],
+        "blue_degree": 1,
+        "blue_deletion": [
+          1,
+          0,
+          0
+        ],
+        "canon": 0,
+        "classes": [
+          0
+        ],
+        "degree": 1,
+        "deletion": [
+          1,
+          0,
+          0
+        ],
+        "masks": [
+          0
+        ],
+        "node": 0,
+        "primitive": [
+          1,
+          0,
+          0
+        ],
+        "symmetric_H": 1,
+        "type": "pure_blue"
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "black_degree": 2,
+        "black_deletion": [
+          1,
+          1,
+          0
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              0,
+              1
+            ]
+          }
+        ],
+        "blue_degree": 0,
+        "blue_deletion": [
+          0,
+          0,
+          0
+        ],
+        "canon": 2,
+        "classes": [
+          1,
+          7
+        ],
+        "degree": 2,
+        "deletion": [
+          1,
+          1,
+          0
+        ],
+        "masks": [
+          4,
+          32
+        ],
+        "node": 1,
+        "primitive": [
+          1,
+          1,
+          0
+        ],
+        "symmetric_H": 0,
+        "type": "pure_black"
+      },
+      {
+        "Aut": 1,
+        "H": 5,
+        "black_degree": 10,
+        "black_deletion": [
+          2,
+          3,
+          5
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 2,
+            "parents": [
+              0,
+              2
+            ]
+          },
+          {
+            "multiplicity": 3,
+            "parents": [
+              1,
+              2
+            ]
+          }
+        ],
+        "blue_degree": 0,
+        "blue_deletion": [
+          0,
+          0,
+          0
+        ],
+        "canon": 8,
+        "classes": [
+          2,
+          5
+        ],
+        "degree": 10,
+        "deletion": [
+          2,
+          3,
+          5
+        ],
+        "masks": [
+          2,
+          6,
+          8,
+          18,
+          20,
+          22,
+          24,
+          40,
+          48,
+          56
+        ],
+        "node": 2,
+        "primitive": [
+          2,
+          3,
+          5
+        ],
+        "symmetric_H": 0,
+        "type": "pure_black"
+      },
+      {
+        "Aut": 3,
+        "H": 3,
+        "black_degree": 0,
+        "black_deletion": [
+          0,
+          0,
+          0
+        ],
+        "black_parent_pairs": [],
+        "blue_degree": 1,
+        "blue_deletion": [
+          0,
+          1,
+          0
+        ],
+        "canon": 9,
+        "classes": [
+          3
+        ],
+        "degree": 1,
+        "deletion": [
+          0,
+          1,
+          0
+        ],
+        "masks": [
+          16
+        ],
+        "node": 3,
+        "primitive": [
+          0,
+          1,
+          0
+        ],
+        "symmetric_H": 3,
+        "type": "pure_blue"
+      },
+      {
+        "Aut": 1,
+        "H": 9,
+        "black_degree": 8,
+        "black_deletion": [
+          1,
+          0,
+          7
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              0,
+              2
+            ]
+          },
+          {
+            "multiplicity": 3,
+            "parents": [
+              2,
+              2
+            ]
+          }
+        ],
+        "blue_degree": 1,
+        "blue_deletion": [
+          1,
+          0,
+          0
+        ],
+        "canon": 64,
+        "classes": [
+          4
+        ],
+        "degree": 9,
+        "deletion": [
+          2,
+          0,
+          7
+        ],
+        "masks": [
+          1,
+          7,
+          28,
+          30,
+          31,
+          41,
+          50,
+          58,
+          59
+        ],
+        "node": 4,
+        "primitive": [
+          2,
+          0,
+          7
+        ],
+        "symmetric_H": 1,
+        "type": "mixed"
+      },
+      {
+        "Aut": 1,
+        "H": 9,
+        "black_degree": 6,
+        "black_deletion": [
+          1,
+          3,
+          2
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              0,
+              1
+            ]
+          },
+          {
+            "multiplicity": 2,
+            "parents": [
+              1,
+              2
+            ]
+          }
+        ],
+        "blue_degree": 3,
+        "blue_deletion": [
+          0,
+          1,
+          2
+        ],
+        "canon": 66,
+        "classes": [
+          6
+        ],
+        "degree": 9,
+        "deletion": [
+          1,
+          4,
+          4
+        ],
+        "masks": [
+          5,
+          12,
+          23,
+          26,
+          33,
+          34,
+          36,
+          57,
+          63
+        ],
+        "node": 5,
+        "primitive": [
+          1,
+          4,
+          4
+        ],
+        "symmetric_H": 3,
+        "type": "mixed"
+      },
+      {
+        "Aut": 1,
+        "H": 11,
+        "black_degree": 8,
+        "black_deletion": [
+          1,
+          0,
+          7
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              0,
+              2
+            ]
+          },
+          {
+            "multiplicity": 3,
+            "parents": [
+              2,
+              2
+            ]
+          }
+        ],
+        "blue_degree": 3,
+        "blue_deletion": [
+          0,
+          0,
+          3
+        ],
+        "canon": 72,
+        "classes": [
+          8
+        ],
+        "degree": 11,
+        "deletion": [
+          1,
+          0,
+          10
+        ],
+        "masks": [
+          3,
+          9,
+          14,
+          15,
+          27,
+          42,
+          43,
+          52,
+          54,
+          60,
+          62
+        ],
+        "node": 6,
+        "primitive": [
+          1,
+          0,
+          10
+        ],
+        "symmetric_H": 3,
+        "type": "mixed"
+      },
+      {
+        "Aut": 3,
+        "H": 15,
+        "black_degree": 4,
+        "black_deletion": [
+          0,
+          1,
+          3
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 1,
+            "parents": [
+              1,
+              2
+            ]
+          },
+          {
+            "multiplicity": 1,
+            "parents": [
+              2,
+              2
+            ]
+          }
+        ],
+        "blue_degree": 1,
+        "blue_deletion": [
+          0,
+          1,
+          0
+        ],
+        "canon": 80,
+        "classes": [
+          9
+        ],
+        "degree": 5,
+        "deletion": [
+          0,
+          2,
+          3
+        ],
+        "masks": [
+          17,
+          29,
+          39,
+          45,
+          51
+        ],
+        "node": 7,
+        "primitive": [
+          0,
+          2,
+          3
+        ],
+        "symmetric_H": 3,
+        "type": "mixed"
+      },
+      {
+        "Aut": 1,
+        "H": 13,
+        "black_degree": 10,
+        "black_deletion": [
+          0,
+          4,
+          6
+        ],
+        "black_parent_pairs": [
+          {
+            "multiplicity": 4,
+            "parents": [
+              1,
+              2
+            ]
+          },
+          {
+            "multiplicity": 1,
+            "parents": [
+              2,
+              2
+            ]
+          }
+        ],
+        "blue_degree": 3,
+        "blue_deletion": [
+          0,
+          1,
+          2
+        ],
+        "canon": 81,
+        "classes": [
+          10
+        ],
+        "degree": 13,
+        "deletion": [
+          0,
+          5,
+          8
+        ],
+        "masks": [
+          10,
+          13,
+          19,
+          21,
+          25,
+          35,
+          37,
+          38,
+          44,
+          47,
+          49,
+          55,
+          61
+        ],
+        "node": 8,
+        "primitive": [
+          0,
+          5,
+          8
+        ],
+        "symmetric_H": 3,
+        "type": "mixed"
+      },
+      {
+        "Aut": 5,
+        "H": 15,
+        "black_degree": 0,
+        "black_deletion": [
+          0,
+          0,
+          0
+        ],
+        "black_parent_pairs": [],
+        "blue_degree": 3,
+        "blue_deletion": [
+          0,
+          0,
+          3
+        ],
+        "canon": 200,
+        "classes": [
+          11
+        ],
+        "degree": 3,
+        "deletion": [
+          0,
+          0,
+          3
+        ],
+        "masks": [
+          11,
+          46,
+          53
+        ],
+        "node": 9,
+        "primitive": [
+          0,
+          0,
+          1
+        ],
+        "symmetric_H": 15,
+        "type": "pure_blue"
+      }
+    ],
+    "ordinary": 12,
+    "self_converse": 8
+  },
+  "equivariant_conflict_hostiles": [
+    {
+      "blue_degree": 1,
+      "common_intersection": [
+        0,
+        4
+      ],
+      "cycles": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "length_fixed_signature": [
+        [
+          3,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          5,
+          true
+        ]
+      ],
+      "mask": 1,
+      "node": 4
+    },
+    {
+      "blue_degree": 3,
+      "common_intersection": [
+        2
+      ],
+      "cycles": [
+        [
+          0,
+          4,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "length_fixed_signature": [
+        [
+          3,
+          false
+        ],
+        [
+          3,
+          false
+        ],
+        [
+          3,
+          true
+        ],
+        [
+          5,
+          true
+        ]
+      ],
+      "mask": 26,
+      "node": 5
+    }
+  ],
+  "gain_audit": {
+    "block_products": [
+      "55/637",
+      "539/153",
+      "585/34"
+    ],
+    "potential_gain_has_trivial_holonomy": true,
+    "potential_gains": [
+      "1506636509754000625/111612119056",
+      "25505687025/432344",
+      "96319361596185/11358856",
+      "1",
+      "81163398571597265625/7418150805632",
+      "3007796451352/8588418710625",
+      "4802/2025",
+      "4241194425/626363276",
+      "96319361596185/11358856",
+      "1",
+      "74575646365409408/18064350088053969936408046875",
+      "2975132645556736/33948620537534846279296875",
+      "88434/1630475",
+      "1983264657186555743/1583665902090",
+      "810601143639364/38185430882625",
+      "129861437714555625/325095323168",
+      "176454180359191376094969140625/149151292730818816",
+      "334084/1227451225",
+      "962948/7486875",
+      "1",
+      "129861437714555625/325095323168",
+      "810601143639364/38185430882625",
+      "4241194425/626363276",
+      "4802/2025",
+      "962948/7486875",
+      "1",
+      "81235613174625/22717712",
+      "262969411371975140625/1561107741852736",
+      "1983264657186555743/1583665902090",
+      "88434/1630475",
+      "3007796451352/8588418710625",
+      "81163398571597265625/7418150805632"
+    ],
+    "primegame_triangle_holonomy": "2025/4802"
+  },
+  "integral_cycle_audit": {
+    "3": {
+      "black_pairs": 0,
+      "black_restriction_matrix": [],
+      "blue_components": 1,
+      "blue_cycle_rank": 0,
+      "even_plus_odd_index": 1,
+      "even_rank": 0,
+      "literal_cycle_rank": 0,
+      "odd_rank": 0,
+      "orientation": "R-equivariant; loop twins chosen compatibly, not by independent mask order",
+      "parity_rank": 0,
+      "quotient_components": 1,
+      "quotient_cycle_basis": [],
+      "quotient_cycle_rank": 0,
+      "quotient_orbits": [
+        [
+          0
+        ]
+      ],
+      "split_basis_determinant": 1
+    },
+    "4": {
+      "black_pairs": 1,
+      "black_restriction_matrix": [
+        [
+          0
+        ]
+      ],
+      "blue_components": 2,
+      "blue_cycle_rank": 1,
+      "even_plus_odd_index": 1,
+      "even_rank": 1,
+      "literal_cycle_rank": 2,
+      "odd_rank": 1,
+      "orientation": "R-equivariant; loop twins chosen compatibly, not by independent mask order",
+      "parity_rank": 0,
+      "quotient_components": 1,
+      "quotient_cycle_basis": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "quotient_cycle_rank": 1,
+      "quotient_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "split_basis_determinant": -1
+    },
+    "5": {
+      "black_pairs": 12,
+      "black_restriction_matrix": [
+        [
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "blue_components": 3,
+      "blue_cycle_rank": 1,
+      "even_plus_odd_index": 1024,
+      "even_rank": 11,
+      "literal_cycle_rank": 23,
+      "odd_rank": 12,
+      "orientation": "R-equivariant; loop twins chosen compatibly, not by independent mask order",
+      "parity_rank": 10,
+      "quotient_components": 1,
+      "quotient_cycle_basis": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "quotient_cycle_rank": 11,
+      "quotient_orbits": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          5,
+          30
+        ],
+        [
+          6,
+          23
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12,
+          29
+        ],
+        [
+          13,
+          28
+        ],
+        [
+          14,
+          21
+        ],
+        [
+          15,
+          20
+        ],
+        [
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18,
+          24
+        ],
+        [
+          19,
+          25
+        ],
+        [
+          26
+        ],
+        [
+          27
+        ]
+      ],
+      "split_basis_determinant": 1
+    }
+  },
+  "method": {
+    "class_method": "explicit permutation orbits before fixed-path atlas",
+    "optimized_safe": true,
+    "producer_data_reads": false,
+    "producer_imports": false,
+    "source_baseline": "5277b4505b6426f2381a01eb9186f0779566ce4e",
+    "universe": "all labelled tournaments n=3,4,5,6; full n6 retained internally with two exported classifier hostiles"
+  },
+  "n6_classifier_boundary": {
+    "hostiles": [
+      {
+        "masks": [
+          1,
+          77
+        ],
+        "nodes": [
+          {
+            "Aut": 1,
+            "H": 17,
+            "black_degree": 12,
+            "black_deletion": [
+              1,
+              0,
+              0,
+              0,
+              11,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "black_parent_pairs": [
+              {
+                "multiplicity": 1,
+                "parents": [
+                  0,
+                  4
+                ]
+              },
+              {
+                "multiplicity": 5,
+                "parents": [
+                  4,
+                  4
+                ]
+              }
+            ],
+            "blue_degree": 5,
+            "blue_deletion": [
+              1,
+              0,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "canon": 1024,
+            "classes": [
+              12
+            ],
+            "degree": 17,
+            "deletion": [
+              2,
+              0,
+              0,
+              0,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "masks": [
+              1,
+              15,
+              120,
+              124,
+              126,
+              127,
+              452,
+              484,
+              486,
+              500,
+              502,
+              503,
+              657,
+              802,
+              930,
+              946,
+              947
+            ],
+            "node": 11,
+            "primitive": [
+              2,
+              0,
+              0,
+              0,
+              15,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "symmetric_H": 5,
+            "type": "mixed"
+          },
+          {
+            "Aut": 1,
+            "H": 17,
+            "black_degree": 12,
+            "black_deletion": [
+              0,
+              3,
+              5,
+              0,
+              0,
+              4,
+              0,
+              0,
+              0,
+              0
+            ],
+            "black_parent_pairs": [
+              {
+                "multiplicity": 2,
+                "parents": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "multiplicity": 1,
+                "parents": [
+                  1,
+                  5
+                ]
+              },
+              {
+                "multiplicity": 3,
+                "parents": [
+                  2,
+                  5
+                ]
+              }
+            ],
+            "blue_degree": 5,
+            "blue_deletion": [
+              0,
+              1,
+              1,
+              0,
+              0,
+              3,
+              0,
+              0,
+              0,
+              0
+            ],
+            "canon": 1043,
+            "classes": [
+              22
+            ],
+            "degree": 17,
+            "deletion": [
+              0,
+              4,
+              6,
+              0,
+              0,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            "masks": [
+              77,
+              84,
+              132,
+              367,
+              370,
+              386,
+              521,
+              522,
+              524,
+              536,
+              552,
+              584,
+              648,
+              776,
+              897,
+              1009,
+              1023
+            ],
+            "node": 16,
+            "primitive": [
+              0,
+              4,
+              6,
+              0,
+              0,
+              7,
+              0,
+              0,
+              0,
+              0
+            ],
+            "symmetric_H": 5,
+            "type": "mixed"
+          }
+        ]
+      },
+      {
+        "masks": [
+          50,
+          43
+        ],
+        "nodes": [
+          {
+            "Aut": 1,
+            "H": 29,
+            "black_degree": 22,
+            "black_deletion": [
+              0,
+              0,
+              7,
+              0,
+              0,
+              7,
+              8,
+              0,
+              0,
+              0
+            ],
+            "black_parent_pairs": [
+              {
+                "multiplicity": 3,
+                "parents": [
+                  2,
+                  5
+                ]
+              },
+              {
+                "multiplicity": 4,
+                "parents": [
+                  2,
+                  6
+                ]
+              },
+              {
+                "multiplicity": 4,
+                "parents": [
+                  5,
+                  6
+                ]
+              }
+            ],
+            "blue_degree": 7,
+            "blue_deletion": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              2,
+              4,
+              0,
+              0,
+              0
+            ],
+            "canon": 1171,
+            "classes": [
+              43
+            ],
+            "degree": 29,
+            "deletion": [
+              0,
+              0,
+              8,
+              0,
+              0,
+              9,
+              12,
+              0,
+              0,
+              0
+            ],
+            "masks": [
+              50,
+              85,
+              134,
+              148,
+              241,
+              295,
+              333,
+              365,
+              387,
+              538,
+              539,
+              556,
+              558,
+              585,
+              589,
+              652,
+              680,
+              696,
+              703,
+              777,
+              840,
+              872,
+              879,
+              905,
+              961,
+              993,
+              1007,
+              1017,
+              1021
+            ],
+            "node": 27,
+            "primitive": [
+              0,
+              0,
+              8,
+              0,
+              0,
+              9,
+              12,
+              0,
+              0,
+              0
+            ],
+            "symmetric_H": 7,
+            "type": "mixed"
+          },
+          {
+            "Aut": 1,
+            "H": 29,
+            "black_degree": 22,
+            "black_deletion": [
+              0,
+              0,
+              6,
+              0,
+              0,
+              6,
+              0,
+              0,
+              10,
+              0
+            ],
+            "black_parent_pairs": [
+              {
+                "multiplicity": 2,
+                "parents": [
+                  2,
+                  5
+                ]
+              },
+              {
+                "multiplicity": 4,
+                "parents": [
+                  2,
+                  8
+                ]
+              },
+              {
+                "multiplicity": 4,
+                "parents": [
+                  5,
+                  8
+                ]
+              },
+              {
+                "multiplicity": 1,
+                "parents": [
+                  8,
+                  8
+                ]
+              }
+            ],
+            "blue_degree": 7,
+            "blue_deletion": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              3,
+              0,
+              0,
+              3,
+              0
+            ],
+            "canon": 1177,
+            "classes": [
+              44
+            ],
+            "degree": 29,
+            "deletion": [
+              0,
+              0,
+              7,
+              0,
+              0,
+              9,
+              0,
+              0,
+              13,
+              0
+            ],
+            "masks": [
+              43,
+              86,
+              133,
+              164,
+              205,
+              223,
+              312,
+              338,
+              363,
+              371,
+              394,
+              402,
+              430,
+              540,
+              553,
+              561,
+              586,
+              596,
+              610,
+              650,
+              712,
+              756,
+              780,
+              792,
+              881,
+              901,
+              919,
+              991,
+              1022
+            ],
+            "node": 28,
+            "primitive": [
+              0,
+              0,
+              7,
+              0,
+              0,
+              9,
+              0,
+              0,
+              13,
+              0
+            ],
+            "symmetric_H": 7,
+            "type": "mixed"
+          }
+        ]
+      }
+    ],
+    "labelled": 32768,
+    "merged": 34,
+    "ordinary": 56,
+    "self_converse": 12
+  },
+  "negative_controls": {
+    "loop_counted_once": true,
+    "omitted_Aut": true,
+    "omitted_converse_sheet": true,
+    "removed_literal_parallel_line": true,
+    "swapped_color": true
+  }
+}

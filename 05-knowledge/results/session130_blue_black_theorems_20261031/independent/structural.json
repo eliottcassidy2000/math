@@ -1,0 +1,106 @@
+{
+  "colored_lifts": [
+    {
+      "blue_upper_lines": 2,
+      "eligible_lower_lines": 1,
+      "lifts_per_lower_line": 4,
+      "lower_lines": 1,
+      "order": 4
+    },
+    {
+      "blue_upper_lines": 8,
+      "eligible_lower_lines": 4,
+      "lifts_per_lower_line": 8,
+      "lower_lines": 4,
+      "order": 5
+    },
+    {
+      "blue_upper_lines": 32,
+      "eligible_lower_lines": 16,
+      "lifts_per_lower_line": 16,
+      "lower_lines": 32,
+      "order": 6
+    },
+    {
+      "blue_upper_lines": 256,
+      "eligible_lower_lines": 128,
+      "lifts_per_lower_line": 32,
+      "lower_lines": 512,
+      "order": 7
+    }
+  ],
+  "counts": "literal odd directed cycles modulo rotation, never support-only",
+  "gates_survive_optimization": true,
+  "no_producer_imports_or_data": true,
+  "odd_cycle_checks": [
+    {
+      "H_mod8": {
+        "1": 1,
+        "3": 1
+      },
+      "order": 3,
+      "scope": "exhaustive",
+      "tested": 2
+    },
+    {
+      "H_mod8": {
+        "1": 1,
+        "5": 3
+      },
+      "order": 4,
+      "scope": "exhaustive",
+      "tested": 4
+    },
+    {
+      "H_mod8": {
+        "1": 5,
+        "3": 4,
+        "5": 3,
+        "7": 4
+      },
+      "order": 5,
+      "scope": "exhaustive",
+      "tested": 16
+    },
+    {
+      "H_mod8": {
+        "1": 28,
+        "5": 36
+      },
+      "order": 6,
+      "scope": "exhaustive",
+      "tested": 64
+    },
+    {
+      "H_mod8": {
+        "1": 124,
+        "3": 110,
+        "5": 132,
+        "7": 146
+      },
+      "order": 7,
+      "scope": "exhaustive",
+      "tested": 512
+    },
+    {
+      "H_mod8": {
+        "1": 56,
+        "5": 72
+      },
+      "order": 8,
+      "scope": "every32nd reflection-orbit-assignment",
+      "tested": 128
+    }
+  ],
+  "primegame_codec": {
+    "admissible_scales": 270,
+    "binary_codewords": 17280,
+    "physical_word": "GBDEFA",
+    "raw_cycle_multiplicities": [
+      -4,
+      12
+    ],
+    "scaled_decoder_and_square_norm": true,
+    "signed_tests": 270
+  }
+}

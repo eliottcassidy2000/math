@@ -1,0 +1,686 @@
+{
+  "blue_exhaustive": [
+    {
+      "H_mod8": {
+        "1": 1,
+        "3": 1
+      },
+      "first_residue_witnesses": {
+        "1": {
+          "H": 1,
+          "alpha2": 0,
+          "c3": 0,
+          "c5": 0,
+          "center_nonfixed_pairs": 0,
+          "cycles": 0,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 0,
+          "q": 0,
+          "tile_mask": 1
+        },
+        "3": {
+          "H": 3,
+          "alpha2": 0,
+          "c3": 1,
+          "c5": 0,
+          "center_nonfixed_pairs": 0,
+          "cycles": 1,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 0,
+          "q": 1,
+          "tile_mask": 0
+        }
+      },
+      "n": 3,
+      "tested": 2
+    },
+    {
+      "H_mod8": {
+        "1": 1,
+        "5": 3
+      },
+      "first_residue_witnesses": {
+        "1": {
+          "H": 1,
+          "alpha2": 0,
+          "c3": 0,
+          "c5": 0,
+          "cycles": 0,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 0,
+          "q": 0,
+          "tile_mask": 7
+        },
+        "5": {
+          "H": 5,
+          "alpha2": 0,
+          "c3": 2,
+          "c5": 0,
+          "cycles": 2,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 1,
+          "q": 0,
+          "tile_mask": 0
+        }
+      },
+      "n": 4,
+      "tested": 4
+    },
+    {
+      "H_mod8": {
+        "1": 5,
+        "3": 4,
+        "5": 3,
+        "7": 4
+      },
+      "first_residue_witnesses": {
+        "1": {
+          "H": 9,
+          "alpha2": 0,
+          "c3": 3,
+          "c5": 1,
+          "center_nonfixed_pairs": 1,
+          "cycles": 4,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 1,
+          "q": 2,
+          "tile_mask": 0
+        },
+        "3": {
+          "H": 11,
+          "alpha2": 0,
+          "c3": 4,
+          "c5": 1,
+          "center_nonfixed_pairs": 1,
+          "cycles": 5,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 1,
+          "q": 3,
+          "tile_mask": 33
+        },
+        "5": {
+          "H": 13,
+          "alpha2": 0,
+          "c3": 4,
+          "c5": 2,
+          "center_nonfixed_pairs": 1,
+          "cycles": 6,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 2,
+          "q": 2,
+          "tile_mask": 8
+        },
+        "7": {
+          "H": 15,
+          "alpha2": 0,
+          "c3": 5,
+          "c5": 2,
+          "center_nonfixed_pairs": 1,
+          "cycles": 7,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 2,
+          "q": 3,
+          "tile_mask": 18
+        }
+      },
+      "n": 5,
+      "tested": 16
+    },
+    {
+      "H_mod8": {
+        "1": 28,
+        "5": 36
+      },
+      "first_residue_witnesses": {
+        "1": {
+          "H": 17,
+          "alpha2": 1,
+          "c3": 4,
+          "c5": 2,
+          "cycles": 6,
+          "mirror_disjoint": 1,
+          "mirror_intersecting": 2,
+          "q": 0,
+          "tile_mask": 0
+        },
+        "5": {
+          "H": 29,
+          "alpha2": 1,
+          "c3": 6,
+          "c5": 6,
+          "cycles": 12,
+          "mirror_disjoint": 1,
+          "mirror_intersecting": 5,
+          "q": 0,
+          "tile_mask": 771
+        }
+      },
+      "n": 6,
+      "tested": 64
+    },
+    {
+      "H_mod8": {
+        "1": 124,
+        "3": 110,
+        "5": 132,
+        "7": 146
+      },
+      "first_residue_witnesses": {
+        "1": {
+          "H": 25,
+          "alpha2": 0,
+          "c3": 5,
+          "c5": 6,
+          "center_nonfixed_pairs": 4,
+          "cycles": 12,
+          "mirror_disjoint": 0,
+          "mirror_intersecting": 4,
+          "q": 4,
+          "tile_mask": 16385
+        },
+        "3": {
+          "H": 75,
+          "alpha2": 5,
+          "c3": 9,
+          "c5": 13,
+          "center_nonfixed_pairs": 7,
+          "cycles": 27,
+          "mirror_disjoint": 1,
+          "mirror_intersecting": 9,
+          "q": 7,
+          "tile_mask": 18437
+        },
+        "5": {
+          "H": 61,
+          "alpha2": 3,
+          "c3": 8,
+          "c5": 12,
+          "center_nonfixed_pairs": 8,
+          "cycles": 24,
+          "mirror_disjoint": 1,
+          "mirror_intersecting": 8,
+          "q": 6,
+          "tile_mask": 8194
+        },
+        "7": {
+          "H": 31,
+          "alpha2": 3,
+          "c3": 5,
+          "c5": 3,
+          "center_nonfixed_pairs": 2,
+          "cycles": 9,
+          "mirror_disjoint": 1,
+          "mirror_intersecting": 2,
+          "q": 3,
+          "tile_mask": 0
+        }
+      },
+      "n": 7,
+      "tested": 512
+    },
+    {
+      "H_mod8": {
+        "1": 1852,
+        "5": 2244
+      },
+      "first_residue_witnesses": {
+        "1": {
+          "H": 57,
+          "alpha2": 8,
+          "c3": 6,
+          "c5": 4,
+          "cycles": 12,
+          "mirror_disjoint": 2,
+          "mirror_intersecting": 4,
+          "q": 0,
+          "tile_mask": 0
+        },
+        "5": {
+          "H": 45,
+          "alpha2": 1,
+          "c3": 6,
+          "c5": 10,
+          "cycles": 20,
+          "mirror_disjoint": 1,
+          "mirror_intersecting": 9,
+          "q": 0,
+          "tile_mask": 1572867
+        }
+      },
+      "n": 8,
+      "tested": 4096
+    }
+  ],
+  "conventions": {
+    "base_path": "0->1->...->n-1",
+    "canonical": "minimum integer upper-triangle code over all label permutations",
+    "cycles": "directed simple odd cycles length>=3, modulo rotations, not reversal",
+    "tile_bits": "lex pairs (u,v), v>=u+2; bit1 means u->v",
+    "vertices": "0..n-1"
+  },
+  "n5": {
+    "blue_lines": [
+      {
+        "endpoints": [
+          0,
+          10
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          5,
+          41
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          8,
+          12
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          10,
+          12
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          10,
+          41
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          12,
+          76
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          40,
+          76
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          41,
+          76
+        ],
+        "multiplicity": 1
+      }
+    ],
+    "classes": [
+      {
+        "H": 9,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 3,
+        "c3": 3,
+        "c5": 1,
+        "canonical": 10,
+        "converse": 10,
+        "cycles": 4,
+        "fibre": 9,
+        "fundamental_black_degree": 3,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 1,
+        "q": 2,
+        "score": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "H": 9,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 1,
+        "c3": 3,
+        "c5": 1,
+        "canonical": 8,
+        "converse": 8,
+        "cycles": 4,
+        "fibre": 9,
+        "fundamental_black_degree": 4,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 1,
+        "q": 2,
+        "score": [
+          1,
+          1,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "H": 13,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 3,
+        "c3": 4,
+        "c5": 2,
+        "canonical": 41,
+        "converse": 41,
+        "cycles": 6,
+        "fibre": 13,
+        "fundamental_black_degree": 5,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 2,
+        "q": 2,
+        "score": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "H": 11,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 3,
+        "c3": 4,
+        "c5": 1,
+        "canonical": 12,
+        "converse": 12,
+        "cycles": 5,
+        "fibre": 11,
+        "fundamental_black_degree": 4,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 1,
+        "q": 3,
+        "score": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "H": 5,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 0,
+        "c3": 2,
+        "c5": 0,
+        "canonical": 4,
+        "converse": 9,
+        "cycles": 2,
+        "fibre": 5,
+        "fundamental_black_degree": 5,
+        "score": [
+          1,
+          1,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "H": 15,
+        "alpha2": 0,
+        "aut": 3,
+        "blue": 1,
+        "c3": 4,
+        "c5": 3,
+        "canonical": 40,
+        "converse": 40,
+        "cycles": 7,
+        "fibre": 5,
+        "fundamental_black_degree": 2,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 2,
+        "q": 3,
+        "score": [
+          1,
+          2,
+          2,
+          2,
+          3
+        ]
+      },
+      {
+        "H": 15,
+        "alpha2": 0,
+        "aut": 5,
+        "blue": 3,
+        "c3": 5,
+        "c5": 2,
+        "canonical": 76,
+        "converse": 76,
+        "cycles": 7,
+        "fibre": 3,
+        "fundamental_black_degree": 0,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 2,
+        "q": 3,
+        "score": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "H": 3,
+        "alpha2": 0,
+        "aut": 3,
+        "blue": 0,
+        "c3": 1,
+        "c5": 0,
+        "canonical": 2,
+        "converse": 11,
+        "cycles": 1,
+        "fibre": 1,
+        "fundamental_black_degree": 1,
+        "score": [
+          1,
+          1,
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "H": 5,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 0,
+        "c3": 2,
+        "c5": 0,
+        "canonical": 9,
+        "converse": 4,
+        "cycles": 2,
+        "fibre": 5,
+        "fundamental_black_degree": 5,
+        "score": [
+          0,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      {
+        "H": 3,
+        "alpha2": 0,
+        "aut": 3,
+        "blue": 1,
+        "c3": 1,
+        "c5": 0,
+        "canonical": 5,
+        "converse": 5,
+        "cycles": 1,
+        "fibre": 1,
+        "fundamental_black_degree": 0,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 0,
+        "q": 1,
+        "score": [
+          0,
+          2,
+          2,
+          2,
+          4
+        ]
+      },
+      {
+        "H": 3,
+        "alpha2": 0,
+        "aut": 3,
+        "blue": 0,
+        "c3": 1,
+        "c5": 0,
+        "canonical": 11,
+        "converse": 2,
+        "cycles": 1,
+        "fibre": 1,
+        "fundamental_black_degree": 1,
+        "score": [
+          0,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "H": 1,
+        "alpha2": 0,
+        "aut": 1,
+        "blue": 1,
+        "c3": 0,
+        "c5": 0,
+        "canonical": 0,
+        "converse": 0,
+        "cycles": 0,
+        "fibre": 1,
+        "fundamental_black_degree": 0,
+        "mirror_disjoint": 0,
+        "mirror_intersecting": 0,
+        "q": 0,
+        "score": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "fundamental_black_edges": [
+      {
+        "endpoints": [
+          2,
+          8
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          4,
+          8
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          4,
+          10
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          4,
+          12
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          4,
+          40
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          4,
+          41
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          8,
+          10
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          8,
+          41
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          10,
+          40
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          12,
+          12
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          12,
+          41
+        ],
+        "multiplicity": 1
+      },
+      {
+        "endpoints": [
+          41,
+          41
+        ],
+        "multiplicity": 1
+      }
+    ],
+    "merged_nodes": [
+      0,
+      2,
+      4,
+      5,
+      8,
+      10,
+      12,
+      40,
+      41,
+      76
+    ]
+  },
+  "status": "PASS"
+}
