@@ -1,0 +1,709 @@
+{
+  "base_junction_gaps": {
+    "43": 0,
+    "44": 9,
+    "45": 14,
+    "46": 14
+  },
+  "base_pair_count": 1020,
+  "base_range": [
+    42,
+    1061
+  ],
+  "base_within_pair_max": [
+    1054,
+    813
+  ],
+  "external_C_required": false,
+  "families": {
+    "A": {
+      "carry_K": {
+        "0": 0,
+        "1": 0
+      },
+      "noncarry_gap_max": 37,
+      "ray_samples": [
+        {
+          "canonical_deletions": 12,
+          "depth": 0,
+          "gap": 9,
+          "order": 44,
+          "seed": 44,
+          "within_pair_deletions": 7
+        },
+        {
+          "canonical_deletions": 232,
+          "depth": 1,
+          "gap": 225,
+          "order": 1112,
+          "seed": 44,
+          "within_pair_deletions": 11
+        },
+        {
+          "canonical_deletions": 5636,
+          "depth": 2,
+          "gap": 5625,
+          "order": 27812,
+          "seed": 44,
+          "within_pair_deletions": 15
+        },
+        {
+          "canonical_deletions": 15,
+          "depth": 0,
+          "gap": 14,
+          "order": 45,
+          "seed": 45,
+          "within_pair_deletions": 6
+        },
+        {
+          "canonical_deletions": 369,
+          "depth": 1,
+          "gap": 350,
+          "order": 1137,
+          "seed": 45,
+          "within_pair_deletions": 24
+        },
+        {
+          "canonical_deletions": 8787,
+          "depth": 2,
+          "gap": 8750,
+          "order": 28437,
+          "seed": 45,
+          "within_pair_deletions": 42
+        }
+      ],
+      "within_pair_K_range": [
+        4,
+        22
+      ],
+      "within_pair_states": [
+        {
+          "boundary_deletions": 4,
+          "digit": 12,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 17,
+          "digit": 13,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 14,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 22,
+          "digit": 15,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 5,
+          "digit": 16,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 17,
+          "digit": 17,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 18,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 16,
+          "digit": 19,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 20,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 16,
+          "digit": 21,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 12,
+          "digit": 22,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 17,
+          "digit": 23,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 24,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 7,
+          "digit": 25,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 12,
+          "digit": 26,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 27,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 28,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 29,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 30,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 31,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 32,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 33,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 34,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 4,
+          "digit": 35,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 18,
+          "digit": 36,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 18,
+          "digit": 12,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 4,
+          "digit": 13,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 14,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 15,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 16,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 17,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 18,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 19,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 20,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 21,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 12,
+          "digit": 22,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 7,
+          "digit": 23,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 24,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 17,
+          "digit": 25,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 12,
+          "digit": 26,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 16,
+          "digit": 27,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 28,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 16,
+          "digit": 29,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 30,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 17,
+          "digit": 31,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 5,
+          "digit": 32,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 22,
+          "digit": 33,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 34,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 17,
+          "digit": 35,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 4,
+          "digit": 36,
+          "parity": 1
+        }
+      ]
+    },
+    "B": {
+      "carry_K": {
+        "0": 0,
+        "1": 0
+      },
+      "noncarry_gap_max": 36,
+      "ray_samples": [
+        {
+          "canonical_deletions": 12,
+          "depth": 0,
+          "gap": 9,
+          "order": 44,
+          "seed": 44,
+          "within_pair_deletions": 7
+        },
+        {
+          "canonical_deletions": 236,
+          "depth": 1,
+          "gap": 225,
+          "order": 1112,
+          "seed": 44,
+          "within_pair_deletions": 15
+        },
+        {
+          "canonical_deletions": 5644,
+          "depth": 2,
+          "gap": 5625,
+          "order": 27812,
+          "seed": 44,
+          "within_pair_deletions": 23
+        },
+        {
+          "canonical_deletions": 15,
+          "depth": 0,
+          "gap": 14,
+          "order": 45,
+          "seed": 45,
+          "within_pair_deletions": 6
+        },
+        {
+          "canonical_deletions": 360,
+          "depth": 1,
+          "gap": 350,
+          "order": 1137,
+          "seed": 45,
+          "within_pair_deletions": 15
+        },
+        {
+          "canonical_deletions": 8769,
+          "depth": 2,
+          "gap": 8750,
+          "order": 28437,
+          "seed": 45,
+          "within_pair_deletions": 24
+        }
+      ],
+      "within_pair_K_range": [
+        3,
+        22
+      ],
+      "within_pair_states": [
+        {
+          "boundary_deletions": 8,
+          "digit": 12,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 13,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 14,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 18,
+          "digit": 15,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 16,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 16,
+          "digit": 17,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 15,
+          "digit": 18,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 19,
+          "digit": 19,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 22,
+          "digit": 20,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 21,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 3,
+          "digit": 22,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 13,
+          "digit": 23,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 5,
+          "digit": 24,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 25,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 12,
+          "digit": 26,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 5,
+          "digit": 27,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 28,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 29,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 30,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 31,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 18,
+          "digit": 32,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 33,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 4,
+          "digit": 34,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 35,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 36,
+          "parity": 0
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 12,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 13,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 4,
+          "digit": 14,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 15,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 18,
+          "digit": 16,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 9,
+          "digit": 17,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 18,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 19,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 20,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 5,
+          "digit": 21,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 12,
+          "digit": 22,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 23,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 5,
+          "digit": 24,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 13,
+          "digit": 25,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 3,
+          "digit": 26,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 11,
+          "digit": 27,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 22,
+          "digit": 28,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 19,
+          "digit": 29,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 15,
+          "digit": 30,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 16,
+          "digit": 31,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 14,
+          "digit": 32,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 18,
+          "digit": 33,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 34,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 6,
+          "digit": 35,
+          "parity": 1
+        },
+        {
+          "boundary_deletions": 8,
+          "digit": 36,
+          "parity": 1
+        }
+      ]
+    }
+  },
+  "hostile_controls": {
+    "duplicate": true,
+    "wrong_prefix": true
+  },
+  "odd_weak_B_path_cannot_close_to_1": true,
+  "operator_certificate_manifest_sha256": "4705cc697be6a5162eee01925eb42f9bc4cde360edef82796df56be4f5476faf",
+  "owned_base_manifest_sha256": "356ecf4ca3f6207a97db3f8b315278480709a2978f66821b6c3e030dbed3eae5",
+  "phase_obstructions": [
+    {
+      "compatible_neighbors": [
+        18
+      ],
+      "failing_order": 46,
+      "internal_vertex": 46,
+      "mask": 1585793692427
+    },
+    {
+      "compatible_neighbors": [
+        35
+      ],
+      "failing_order": 46,
+      "internal_vertex": 46,
+      "mask": 1599483269979
+    },
+    {
+      "compatible_neighbors": [
+        34
+      ],
+      "failing_order": 47,
+      "internal_vertex": 47,
+      "mask": 1602705117979
+    },
+    {
+      "compatible_neighbors": [
+        18
+      ],
+      "failing_order": 46,
+      "internal_vertex": 46,
+      "mask": 3372531545867
+    },
+    {
+      "compatible_neighbors": [
+        34
+      ],
+      "failing_order": 47,
+      "internal_vertex": 47,
+      "mask": 3389445068555
+    },
+    {
+      "compatible_neighbors": [
+        34
+      ],
+      "failing_order": 47,
+      "internal_vertex": 47,
+      "mask": 3526867243787
+    }
+  ],
+  "scope": "weak B path banks, not direct cycle closures",
+  "small_base_sha256": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1",
+  "status": "PASS",
+  "universal_bank_path_limsup_lower_bound": "4/93",
+  "used_paired_certificates": 100,
+  "weak_B_catalogue_sha256": "51af1a4ec0e4e8758b2ddbcb9220859c1b568c4031ee6d2a0aa642f6c093d2ab"
+}

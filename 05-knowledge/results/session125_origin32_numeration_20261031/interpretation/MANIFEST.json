@@ -1,0 +1,15 @@
+{
+  "status": "proved identities and independently reviewed scopes",
+  "files_sha256": {
+    "PORT_CONTINUATIONS.md": "66cd55cc2f5024d99494e1cdc3bd03ce77c977db9428b53ac05c8166d690e8d1",
+    "test_port_continuations.py": "2468e724d48eccc3493b5df88802a609eab26926be7a646128775b648c428115",
+    "port_continuations.normal.json": "b4264ece8b34f083c29120f07b19387d2364f04ce60e2905e5e9db0ec6cc6f76",
+    "port_continuations.optimized.json": "b4264ece8b34f083c29120f07b19387d2364f04ce60e2905e5e9db0ec6cc6f76",
+    "MIDPOINT_PAIR_ARITHMETIC.md": "65879a0cff2301cd17cec53e7dac08d48d11b1ff7bc14fb81650903a55a12006",
+    "test_midpoints.py": "7012206bf413f0c55af16be458596ba1f696ef18e042290c8f06235d463c2ac9",
+    "midpoints.normal.json": "cd5300b79088789ff7cf04a825d3f824ebb5d04ee33ee87a272bd9a2b74ad00c",
+    "midpoints.optimized.json": "cd5300b79088789ff7cf04a825d3f824ebb5d04ee33ee87a272bd9a2b74ad00c"
+  },
+  "normal_optimized_identical": true,
+  "no_hamiltonian_existence_inferred_from_size_or_digits": true
+}

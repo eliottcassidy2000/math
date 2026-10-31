@@ -1,0 +1,42 @@
+{
+  "base_repository_path": "05-knowledge/results/square_sum_B_base_interval_20261019",
+  "default_paths_relative_to_packet": {
+    "base-dir": "../../square_sum_B_base_interval_20261019",
+    "operator-dir": "../../session124_mixed_radix_square_rays_20261031",
+    "small-bases": "../../session124_square_prefix_threshold42_20261031/SMALL_BASES.json",
+    "weak-b-catalogue": "../../session125_origin32_numeration_20261031/pair_taxonomy/weak_b_certificate.json"
+  },
+  "external_C_required": false,
+  "files": [
+    {
+      "name": "DEPENDENCIES.json",
+      "sha256": "cd410db2d6b25b2fb361c5d62326c148dd05870a7f03fbb3317c6a5a93c66e51"
+    },
+    {
+      "name": "BASE_DEPENDENCIES.json",
+      "sha256": "71a36ee304d7258dc2de4c10af6234a3c0cb8d5c880fc7dfc61d596e04618969"
+    },
+    {
+      "name": "CERTIFICATES.json",
+      "sha256": "4705cc697be6a5162eee01925eb42f9bc4cde360edef82796df56be4f5476faf"
+    },
+    {
+      "name": "SMALL_BASES.json",
+      "sha256": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1"
+    },
+    {
+      "name": "weak_b_certificate.json",
+      "sha256": "51af1a4ec0e4e8758b2ddbcb9220859c1b568c4031ee6d2a0aa642f6c093d2ab"
+    }
+  ],
+  "new_search_scope": "six fixed-phase degree obstructions; no search beyond these",
+  "operator_repository_path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031",
+  "small_base_repository_path": "05-knowledge/results/session124_square_prefix_threshold42_20261031/SMALL_BASES.json",
+  "status": "PINNED_OWNED_INPUTS",
+  "tested_base_range": [
+    42,
+    1061
+  ],
+  "weak_B_catalogue_dependency": "Session125 weak-B onset packet, weak_b_certificate.json",
+  "weak_B_catalogue_repository_path": "05-knowledge/results/session125_origin32_numeration_20261031/pair_taxonomy/weak_b_certificate.json"
+}

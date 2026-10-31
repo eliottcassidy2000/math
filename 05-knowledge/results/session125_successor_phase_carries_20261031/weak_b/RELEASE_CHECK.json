@@ -1,0 +1,71 @@
+{
+  "all_input_flags_omitted_using_source_relative_defaults": true,
+  "cache_files_included": false,
+  "external_C_required": false,
+  "frozen_parent_files_unchanged": 17,
+  "frozen_parent_snapshot_sha256": "ef35ac9ce605db29f773a9babb5c08dc07c69afc352584cb63e7aab902fa3dcd",
+  "negative_controls": [
+    {
+      "checker": "check_weakB_carry.py",
+      "control": "small-base SHA mismatch",
+      "rejected": true
+    },
+    {
+      "checker": "independent_audit.py",
+      "control": "small-base SHA mismatch",
+      "rejected": true
+    }
+  ],
+  "new_parent_link": {
+    "path": "../WEAK_B_ADDENDUM.md",
+    "sha256": "6cb3dc022793d9db1e87a9385e1f5ec2c0b6cfb618a5e0aa8dc735c5070f4320"
+  },
+  "normal_optimized_identical": true,
+  "owned_default_taxonomy_directory": "session125_origin32_numeration_20261031/pair_taxonomy",
+  "owned_source_bundles_duplicated": false,
+  "relocated_from_unrelated_cwd": true,
+  "replay_runs": [
+    {
+      "check": "producer",
+      "mode": "normal",
+      "receipt_sha256": "a8e8a3d9be2c34c4d99832eeacc03e2bb4d8fb9612ee6d0c96cfa2f2effe61a1",
+      "status": "PASS"
+    },
+    {
+      "check": "auditor",
+      "mode": "normal",
+      "receipt_sha256": "971664292b16d6b46fc5e8a1015a023741ef8990d8943dafd62acab713c3f171",
+      "status": "PASS"
+    },
+    {
+      "check": "producer",
+      "mode": "optimized",
+      "receipt_sha256": "a8e8a3d9be2c34c4d99832eeacc03e2bb4d8fb9612ee6d0c96cfa2f2effe61a1",
+      "status": "PASS"
+    },
+    {
+      "check": "auditor",
+      "mode": "optimized",
+      "receipt_sha256": "971664292b16d6b46fc5e8a1015a023741ef8990d8943dafd62acab713c3f171",
+      "status": "PASS"
+    }
+  ],
+  "scope": "weak B Q25 path banks only; universal4/93 and pinned seed45 ray28/91; no global-max claim",
+  "status": "PASS",
+  "whitelist": [
+    "DEPENDENCIES.json",
+    "README.md",
+    "RELEASE_CHECK.json",
+    "SHA256SUMS",
+    "WEAK_B_CARRY.md",
+    "audit/AUDIT.md",
+    "audit/AUDIT_INPUTS.json",
+    "audit/SHA256SUMS",
+    "audit/independent_audit.py",
+    "audit/normal.json",
+    "audit/optimized.json",
+    "check_weakB_carry.py",
+    "normal.json",
+    "optimized.json"
+  ]
+}

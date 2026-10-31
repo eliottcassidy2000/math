@@ -46,3 +46,24 @@ Each component includes proof statements, standard-library checkers (the origin 
 Run `python origin_model/check_model.py` for the elementary origin conventions. Follow the numeration and origin-pair README/proof commands for their complete independent verification. Separate successor-phase and forest packets record the further realization/carry and combinatorial-bijection results; these are not inferred from the numeration identities alone.
 
 The [independent origin-model review](ORIGIN_MODEL_AUDIT.md) records the exact proof and dependency boundary.
+
+## Two continuations and the pair's hidden half-unit
+
+[Holding the anchor versus sliding the pair](interpretation/PORT_CONTINUATIONS.md)
+explains why the same initial triple has two different futures. Keeping1 fixed
+gives closing ports3,8,15,24,...; sliding the pair gives1,3,8,21,55,... .
+The next port15 and the next Fibonacci term21 are not interchangeable.
+
+[Midpoint pair arithmetic](interpretation/MIDPOINT_PAIR_ARITHMETIC.md)
+uses x=n+1/2 for consecutive orders. The liftN=Qn+d becomes
+N+1/2=Qx+r with ordinary digits0,...,Q-1. This explains the shifted digit
+windows24..72 and12..36, and thresholds((2a+1)productQ-1)/2. A formal base32
+still lacks the required pair certificate; a size identity cannot fill that gap.
+
+The [ninja/weak-B path carry addendum](../session125_successor_phase_carries_20261031/WEAK_B_ADDENDUM.md)
+now treats that interface separately from original nice pairs. Its six initial
+phases cannot persist through orders42–47. The certified Q25 path banks have
+linear worst-case update costs despite logarithmic within-pair costs.
+The [rooted-forest packet](../session125_rooted_forest_numeration_20261031/README.md)
+provides the operation-preserving digit/tiling/forest bridge, with reading
+orientation and fixed length retained.

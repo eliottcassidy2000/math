@@ -83,7 +83,6 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
 - **THM-2102/2110/2113/2118/2127/2129 (PROVED planar-JC strata):** cubic source fibers, exact coprime two-face trains, and affine-root families close. The balanced quartic triple is empty in odd degree and has one twice-odd square.
 
 ## LRC(14) — OPEN
-
 - **THM-2074:** density-one strict LRC(14), not universal closure.
 - **THM-2080:** dyadic depth at most four, terminal size `7..10`, maximum at least `25`; depth-zero eleven and rank twelve remain separate.
 - **HYP-6820 (MIXED):** uniform `q<=25` is refuted; non-AP/deep multi-defect emptiness remains open.

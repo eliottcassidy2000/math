@@ -1,0 +1,902 @@
+{
+  "catalogue_sha256": "51af1a4ec0e4e8758b2ddbcb9220859c1b568c4031ee6d2a0aa642f6c093d2ab",
+  "external_C_required": false,
+  "lift": {
+    "base_junction_gaps": {
+      "43": 0,
+      "44": 9,
+      "45": 14,
+      "46": 14
+    },
+    "base_pair_count": 1020,
+    "base_path_max": [
+      813,
+      1054
+    ],
+    "base_range": [
+      42,
+      1061
+    ],
+    "boundary_extraction": "actual expanded edges with both decoded endpoints in {0,1,3,8,10}",
+    "decoded_chunks": [
+      "B_base_roots_0053_0308.bin.gz",
+      "B_base_roots_0309_0564.bin.gz",
+      "B_base_roots_0565_0820.bin.gz",
+      "B_base_roots_0821_1076.bin.gz"
+    ],
+    "families": {
+      "A": {
+        "carry_K": {
+          "0": 0,
+          "1": 0
+        },
+        "noncarry_gap_max": 37,
+        "ray_samples": [
+          {
+            "canonical_deletions": 12,
+            "depth": 0,
+            "gap": 9,
+            "order": 44,
+            "seed": 44,
+            "smallest_bank_two_step_max": null,
+            "within_pair_deletions": 7
+          },
+          {
+            "canonical_deletions": 232,
+            "depth": 1,
+            "gap": 225,
+            "order": 1112,
+            "seed": 44,
+            "smallest_bank_two_step_max": 232,
+            "within_pair_deletions": 11
+          },
+          {
+            "canonical_deletions": 5636,
+            "depth": 2,
+            "gap": 5625,
+            "order": 27812,
+            "seed": 44,
+            "smallest_bank_two_step_max": 5636,
+            "within_pair_deletions": 15
+          },
+          {
+            "canonical_deletions": 15,
+            "depth": 0,
+            "gap": 14,
+            "order": 45,
+            "seed": 45,
+            "smallest_bank_two_step_max": null,
+            "within_pair_deletions": 6
+          },
+          {
+            "canonical_deletions": 369,
+            "depth": 1,
+            "gap": 350,
+            "order": 1137,
+            "seed": 45,
+            "smallest_bank_two_step_max": 369,
+            "within_pair_deletions": 24
+          },
+          {
+            "canonical_deletions": 8787,
+            "depth": 2,
+            "gap": 8750,
+            "order": 28437,
+            "seed": 45,
+            "smallest_bank_two_step_max": 8787,
+            "within_pair_deletions": 42
+          }
+        ],
+        "states": [
+          {
+            "boundary_deletions": 4,
+            "digit": 12,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 17,
+            "digit": 13,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 14,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 22,
+            "digit": 15,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 5,
+            "digit": 16,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 17,
+            "digit": 17,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 18,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 16,
+            "digit": 19,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 20,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 16,
+            "digit": 21,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 12,
+            "digit": 22,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 17,
+            "digit": 23,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 24,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 7,
+            "digit": 25,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 12,
+            "digit": 26,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 27,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 28,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 29,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 30,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 31,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 32,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 33,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 34,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 4,
+            "digit": 35,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 18,
+            "digit": 36,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 18,
+            "digit": 12,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 4,
+            "digit": 13,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 14,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 15,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 16,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 17,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 18,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 19,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 20,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 21,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 12,
+            "digit": 22,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 7,
+            "digit": 23,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 24,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 17,
+            "digit": 25,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 12,
+            "digit": 26,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 16,
+            "digit": 27,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 28,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 16,
+            "digit": 29,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 30,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 17,
+            "digit": 31,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 5,
+            "digit": 32,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 22,
+            "digit": 33,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 34,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 17,
+            "digit": 35,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 4,
+            "digit": 36,
+            "parity": 1
+          }
+        ],
+        "within_pair_K_range": [
+          4,
+          22
+        ]
+      },
+      "B": {
+        "carry_K": {
+          "0": 0,
+          "1": 0
+        },
+        "noncarry_gap_max": 36,
+        "ray_samples": [
+          {
+            "canonical_deletions": 12,
+            "depth": 0,
+            "gap": 9,
+            "order": 44,
+            "seed": 44,
+            "smallest_bank_two_step_max": null,
+            "within_pair_deletions": 7
+          },
+          {
+            "canonical_deletions": 236,
+            "depth": 1,
+            "gap": 225,
+            "order": 1112,
+            "seed": 44,
+            "smallest_bank_two_step_max": 236,
+            "within_pair_deletions": 15
+          },
+          {
+            "canonical_deletions": 5644,
+            "depth": 2,
+            "gap": 5625,
+            "order": 27812,
+            "seed": 44,
+            "smallest_bank_two_step_max": 5644,
+            "within_pair_deletions": 23
+          },
+          {
+            "canonical_deletions": 15,
+            "depth": 0,
+            "gap": 14,
+            "order": 45,
+            "seed": 45,
+            "smallest_bank_two_step_max": null,
+            "within_pair_deletions": 6
+          },
+          {
+            "canonical_deletions": 360,
+            "depth": 1,
+            "gap": 350,
+            "order": 1137,
+            "seed": 45,
+            "smallest_bank_two_step_max": 360,
+            "within_pair_deletions": 15
+          },
+          {
+            "canonical_deletions": 8769,
+            "depth": 2,
+            "gap": 8750,
+            "order": 28437,
+            "seed": 45,
+            "smallest_bank_two_step_max": 8769,
+            "within_pair_deletions": 24
+          }
+        ],
+        "states": [
+          {
+            "boundary_deletions": 8,
+            "digit": 12,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 13,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 14,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 18,
+            "digit": 15,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 16,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 16,
+            "digit": 17,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 15,
+            "digit": 18,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 19,
+            "digit": 19,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 22,
+            "digit": 20,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 21,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 3,
+            "digit": 22,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 13,
+            "digit": 23,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 5,
+            "digit": 24,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 25,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 12,
+            "digit": 26,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 5,
+            "digit": 27,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 28,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 29,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 30,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 31,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 18,
+            "digit": 32,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 33,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 4,
+            "digit": 34,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 35,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 36,
+            "parity": 0
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 12,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 13,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 4,
+            "digit": 14,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 15,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 18,
+            "digit": 16,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 9,
+            "digit": 17,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 18,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 19,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 20,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 5,
+            "digit": 21,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 12,
+            "digit": 22,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 23,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 5,
+            "digit": 24,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 13,
+            "digit": 25,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 3,
+            "digit": 26,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 11,
+            "digit": 27,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 22,
+            "digit": 28,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 19,
+            "digit": 29,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 15,
+            "digit": 30,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 16,
+            "digit": 31,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 14,
+            "digit": 32,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 18,
+            "digit": 33,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 34,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 6,
+            "digit": 35,
+            "parity": 1
+          },
+          {
+            "boundary_deletions": 8,
+            "digit": 36,
+            "parity": 1
+          }
+        ],
+        "within_pair_K_range": [
+          3,
+          22
+        ]
+      }
+    },
+    "pinned_seed45_two_step_max_ratio": "4/13",
+    "source_sha256": {
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d12.json": "0231fa7e6888d92dbeb563e22711ff1da07681da4b228f25928f9af789311776",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d13.json": "6d4e839785eb8f05b043528e8a6d76b33dcaee18ee4aec9644526014e27f1515",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d14.json": "c7cca2396d7166971d6e25ddda15e5e7eda171046d18bff43fde79ca9ccd880c",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d15.json": "6547d7743e82a9a4950cc84d3a5a3bb0be21cf65a8f40aa02a1de6c98eafcf12",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d16.json": "24509c98055e29f628923f3265f372d2c70c2a23d76f361808e907eb89dae4a2",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d17.json": "cb3fa39186c3962a90e1d0224f04513822a00059b120d03a49bf56d73e3ff7a1",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d18.json": "34253542dbb04f3b9bb56c5c77046f9c91526c2a2a38b031cae00d35360abdd0",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d19.json": "35ed0e9868aafd7d6518eafc3199a46a24fd79de64cf01e45162aa37a07e100b",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d20.json": "9037c695a37f8124d981cf90d41b040f28c99c65132e391ae2150b3268b6629b",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d21.json": "fb8c031189e93e1323355171b5728c79c749feb4165147afbf68fc58c5d897ac",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d22.json": "414ab9e63a8ed4f2c0c680f2e88cc8ace07134c62ea6546c42295ca47bbb1036",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d23.json": "5906101d3d56f52c592f0c627e7e735c85ab6c49f8dcb910f4522cc4dcb34a7f",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d24.json": "51ade2463ed6744cd680266a4ce71bf66a8004e114139448228aabb5d9ca4b52",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d25.json": "3708b9e0ba0ed0dc7c66c395a30a4ac0e9338b177a46ff02710810d532f9f8e0",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d26.json": "661a5beacf82540f73da051b725ba6cc4405625c9a52a1387e1401327a5e402f",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d27.json": "9dcbbe86ff16c249f03df9e9fae22465f1922da7eb3712e44014250e4435367c",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d28.json": "fd8ced30b7916e7573fd96dd1d795c286863ca36337eae87aaacab79486c2582",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d29.json": "240bd67a1c921c478ff24129aad09888e46ca01e6de041ef86471a90b6300753",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d30.json": "4b6bcf91a6143007e945f1164bb947e3e430552763ed433d317577a424e0b629",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d31.json": "4d06c3d4b5a8e4e1e08895ae7ef82f83b9702ff98434f3f6c85f0d7ae79ec72b",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d32.json": "6ef1f3903d8c4dbbb7741ce1ed2c4be0880083a560e4f92061cd6dfb586f0550",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d33.json": "e69b0e3837cbf635f5b2a4a54ca5d96ae41eff19823caa72400b813812d17583",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d34.json": "d079ccd09cbec13cea48d5a87fc4fe885a6036b4d0390d677164ceeed55458d3",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d35.json": "2ddc64d250a6be0666b896f3a20baa800ee00dd8d5899b245b793955e47df8c6",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p0_d36.json": "07bc5c714f3dc8d9d9b55a6258539c85fc542397108e4c67671dbaa491412404",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d12.json": "42bcc1baef9e6e361da359958a5842b7aa31cfa02c10e97b907d792cadeab9cf",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d13.json": "2b79ba7a49cb0308ae1e403621e9662563d284fc1245e4cd2d447c92f5b70216",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d14.json": "3f2bfe3155a05d52942abd3aa04069ee70341b41394620e27d3ccca5459a4734",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d15.json": "68c8035e1006004ebdd0b3d0ad3b69eb4c56aeb4c8ee839c3b20387084cffdbc",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d16.json": "89f9dc29efd6d7810539ef9b6c539464325b814e4093acced6569cb41baed30f",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d17.json": "72eb1376891b49159044bf8cee62a2fd0d1d74451f207a976219213751e7d512",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d18.json": "563f0c00c186d7d31b2aafac774ef57f2b0f08c1c379bf90d2515042f83a3b8c",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d19.json": "5460930c89cea10bd5c94f4c88040fb1762dc837b1500d77910c6dc6b1bc05c6",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d20.json": "52f385f33fdaeacc38838ce39053adc9e3d793b626d275ac8706f650d6d35b0f",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d21.json": "0dba578de1f43eee6e9e3e9e1f16cbe562172a8c1ba5e40e665d42a59af0bff4",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d22.json": "81f240fc777b2936298a0d669a5679d1b218a7e4eb118754bff94d87852435a0",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d23.json": "f257aeb36502c76b041063be6a3d78daeb85749512cb92cbf934b4f404e1d60c",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d24.json": "0223a1c98f6da14bf137469d21e3fbd4c59518faf9dde836535b42f293afc93e",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d25.json": "713fb5cdd7632950807274735e2f3420b9749769a14cb7c414a05c308488f38a",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d26.json": "062715325111e244786926bf101440e71a5745133f435a1a2ff4c4f5636241f9",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d27.json": "1e3bb9e73b6c9463ef131f469524ab20f9423a3b675bf6f26d407b0ce08fd3ae",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d28.json": "46121f6e85c2c17932b7a4ed7103a039a9fc8e1d22536125465ccb139b68d394",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d29.json": "c19c5eacc7e6acb10612d3b70b6c660cea7045b605d56020043b199dc02e2d74",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d30.json": "bf9d1472a452e1f7fbdd662335181ef12c83eb7845d344c17f2280fdc91bd3b8",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d31.json": "8d8dfb6db9f0588d6d28ead5eebc222d269015aa062982ab6c824aa323989e01",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d32.json": "d0a0124bb6a6bf23c2e9d670b4b534f806a785e2d6d09ad2c74cfe1083d0c798",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d33.json": "05b4eb0891178e758aee97065ce92a4d0db449181eade25f9d74a60e24331f05",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d34.json": "ce045938d663409ee403b6b22d980390a4bb2f5092b0269f62da796548dc822f",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d35.json": "5ed3e4b3d188de2c2bec1d5885be6942ec9633152a883b7285dee0ffef76ffa3",
+      "session124_mixed_radix_square_rays_20261031/A/paired/B_p1_d36.json": "4b4bbc8c840a9197ea699fedfde23f9024a10cad3683a9f8e064375ece2a1e68",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d12.json": "9faaf973650fc017875f93834631d8f330730485389c5239bf8927ababa173c7",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d13.json": "22f4b43c0b40f541756bdf829e82fc9d270097c045688c12274236bb3d2e86c3",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d14.json": "4024ef736849c2aa02965e40112b9ea5c3b9704f2e76213d3ba43e69544ad5d0",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d15.json": "7f15d94e81397c43a565e5bfa8706e4a2fefe8176d23c8e467980f6973c55eb7",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d16.json": "fa79699b72e3aa3673f0ecd482fd229585eabedaf9b8956fd64de14477d18510",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d17.json": "ef755b51241125630678566711f3a3c654e9f16a9879ccf1f023d8554bfbfe77",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d18.json": "95f6c2099f46da0ce6f94df4d6f98c23b2bf6eefe695b73147b3c34fed65bc1e",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d19.json": "f2b1ac2dfdec82573a613a62cf7d77643f1b7e0f2013899910e7893942e11993",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d20.json": "728a4b6a435e9970a2a27bc272ed971d9baa4f8e5fc41c5517b4e3fe3542e8f2",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d21.json": "e41d8313dc165627b5e3ba3def7af5c284415ba00ae03c36fd08c47562795cbc",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d22.json": "98371127c08519d799e45e20ff7b50ff304102995102b8729c2616955421667d",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d23.json": "0454353eb4cd735680a03999d4561fc40403c0f16c37e2ab98f63f697fd272ed",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d24.json": "9655fe9145b05c8b7ed02bb8a803fa0a5cc0d2ae326bd531d1f5bfc60e84d750",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d25.json": "ae8a7f39b8b5921f69251cbf2492f22522ba69d3409867964c4b6984e36e61fd",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d26.json": "5e906e3fcc97bce2a89c28b53df1fd7291857b74ddc2323af76f7410176d7cc9",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d27.json": "d6143b0b23faab87264311f77af51b576cef62727beedfd1009d39bd5ed88214",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d28.json": "708d0341b6881e1e4d3c490b00308cfa9689bda0d3a7f2ca6d95a57c56525765",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d29.json": "9e8780d1d8dd9658b8e1dfa9f2b5052465e0416264e55e7a60fdacda17e52490",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d30.json": "27ab15434b86e224f2d3983a058b79ecc042bccd1449a3b1c5a38cd95ac19adc",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d31.json": "c9d9af1dd1e6129229e7353fa483d59fc7f4d77b9b2b8c613f7ff73cfece6a1b",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d32.json": "112bdfc9a4cbb9aa859ec41db42af8254acc697ba9f900503454fd474487f704",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d33.json": "7fd3ef2d8bd75a49e9a2f3642489923298402ea9b88b6782b95e51f56cd9700c",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d34.json": "8a9d58b010198cccb2050da8a0e4fe5fb95045f68b03c189721e6d2925eb4b8b",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d35.json": "896d44f88e3e0fa13d7a43b387a31ba722a123ae758e39f55b1b10208b41383a",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p0_d36.json": "f26af35c4268083025ef6de577ed6eddc198f409f7ac027ab1cb4ca0ca3671aa",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d12.json": "3c3157cbc3b6a70a61b768b5b970d486834c4e2317fd3d115362f6c3a3a78dc8",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d13.json": "9eb23533a376d920da70b8373aaf5e8a794033b7ba1e16c71ca06d88f2415fa8",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d14.json": "b240aa2ceaada54b86fbd84df95200ae28836bf4320b402ae7e63bb84372b142",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d15.json": "c20758a3a8f25f3ec221d95864b4728a6c444f38426e605c9d6ff642e7298cca",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d16.json": "8850c6de80147f6d8aa9091389737c4ce8ef4972c084e60b0f7afc6195cfc482",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d17.json": "78bd52adb2d2aad059f665ec6ff078591e67bea93806ace8c881ec50a2c3c87c",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d18.json": "13bb5026380901cbbee42b85a3e07aeda55535b679db946d75e6d3466f347e47",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d19.json": "9990ad040eb7eeabc3dac1bf9c56801e9e00ad4af67007e1765e55255c2f751a",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d20.json": "110ae3881628e70bd9811d3c7e64df850df264b910a6de939792446ada70822c",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d21.json": "c1e2ce7c9fd5ab445a9b4029ae5781a0ff7a41239fb8143d204d0a91949d840b",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d22.json": "e3a858b6c4781a0e02def4561ad983b76cf1e7b0febf42438b8a34f2aea89ed0",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d23.json": "b1d157bc84fc8bab27b3b16a30a8788ac743a0140a9c98b39b85f153a9def96f",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d24.json": "9f6f95d7c6f0ddc0e42fc6112646421d8358d798121d17f09ed434314c81cafd",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d25.json": "f4b7c5ef1f840de25633db77692c2bdd16caa80aff513f7d49212d274ca0ad33",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d26.json": "826931491a5971f92ef845a5c17d2af91a571f0f44209742169844d8f61c604c",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d27.json": "2842c9ba8412275dcc70c5c8b3ec07d0574580b5f542d9c5b673ff022c836a94",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d28.json": "65f2f1af4db2257b841f659c5b9ad2ad9b3673a94a15668b14936ecff0b0a1c8",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d29.json": "7f32153e691d85167663b975f54529fcc350b76d0557d691c1ff7691d6473ef1",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d30.json": "df8ae3dc5e68a258b9d22e03cfe667a63ebc7950937ff9dbaeaab487729d3dfd",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d31.json": "9e9a86b2f3dab6f5b732b9217997fcef202f1cfc26fb1882beeff3f972595944",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d32.json": "5165996e42790bca9dfc8087a2b6be56ea9f288167bc9e1528fa88412c6bbfb2",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d33.json": "3158b7571a0602fae59ba74e4b13de9543a68cf1107f1eefaee5400e1191e56b",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d34.json": "95473a23c8143f875fe86d8dd42223a3ce416e71d68da10b5d694c062b8f2a89",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d35.json": "6e05bd3440e12c9875597a3c008b8f801683b2f6c379d186c6439bb762ada32f",
+      "session124_mixed_radix_square_rays_20261031/B/paired/B_p1_d36.json": "13935176ddaee218f2b3f8f41360cbabdbec1b2cd20489c62649aad369baded8",
+      "session124_mixed_radix_square_rays_20261031/BASE_DEPENDENCIES.json": "71a36ee304d7258dc2de4c10af6234a3c0cb8d5c880fc7dfc61d596e04618969",
+      "session124_mixed_radix_square_rays_20261031/CERTIFICATES.json": "4705cc697be6a5162eee01925eb42f9bc4cde360edef82796df56be4f5476faf",
+      "session124_mixed_radix_square_rays_20261031/DEPENDENCIES.json": "cd410db2d6b25b2fb361c5d62326c148dd05870a7f03fbb3317c6a5a93c66e51",
+      "session124_square_prefix_threshold42_20261031/SMALL_BASES.json": "f7ce08836d0199e10d2c0ca9b95a5500e5780ce275acdf3b10a9970a3d206bc1",
+      "square_sum_B_base_interval_20261019/B_base_chunks.json": "356ecf4ca3f6207a97db3f8b315278480709a2978f66821b6c3e030dbed3eae5",
+      "square_sum_B_base_interval_20261019/B_base_roots_0053_0308.bin.gz": "0da46096f78d1c29d65cd12755547eae4b3109852d4e0300d0c1450b4cb13a28",
+      "square_sum_B_base_interval_20261019/B_base_roots_0309_0564.bin.gz": "971299059b7d7b994ca6a7073423674f4df4d12ce350663266fc661b51c1211d",
+      "square_sum_B_base_interval_20261019/B_base_roots_0565_0820.bin.gz": "a6747776486831b211aa51f73a644c0c4e44f7bff9c9c26d039b4348668d14b0",
+      "square_sum_B_base_interval_20261019/B_base_roots_0821_1076.bin.gz": "478f828cae5e6f798c542e044d5df2e2abbde845f2c31a45a6445d6fa8501f86"
+    },
+    "states_expanded": 100,
+    "universal_bank_path_limsup_lower_bound": "4/93"
+  },
+  "phase": {
+    "common_masks": [
+      1585793692427,
+      1599483269979,
+      1602705117979,
+      3372531545867,
+      3389445068555,
+      3526867243787
+    ],
+    "hostile_controls": {
+      "duplicate": true,
+      "nonsquare": true,
+      "separately_valid_phase_mismatch": true,
+      "wrong_prefix": true
+    },
+    "obstructions": [
+      {
+        "failing_order": 46,
+        "internal_vertex": 46,
+        "mask": 1585793692427,
+        "neighbors": [
+          18
+        ]
+      },
+      {
+        "failing_order": 46,
+        "internal_vertex": 46,
+        "mask": 1599483269979,
+        "neighbors": [
+          35
+        ]
+      },
+      {
+        "failing_order": 47,
+        "internal_vertex": 47,
+        "mask": 1602705117979,
+        "neighbors": [
+          34
+        ]
+      },
+      {
+        "failing_order": 46,
+        "internal_vertex": 46,
+        "mask": 3372531545867,
+        "neighbors": [
+          18
+        ]
+      },
+      {
+        "failing_order": 47,
+        "internal_vertex": 47,
+        "mask": 3389445068555,
+        "neighbors": [
+          34
+        ]
+      },
+      {
+        "failing_order": 47,
+        "internal_vertex": 47,
+        "mask": 3526867243787,
+        "neighbors": [
+          34
+        ]
+      }
+    ],
+    "onset_counts": [
+      {
+        "masks": 39,
+        "n": 42,
+        "paths": 49,
+        "search_nodes": 13842
+      },
+      {
+        "masks": 30,
+        "n": 43,
+        "paths": 74,
+        "search_nodes": 40391
+      }
+    ],
+    "pair_count": 20,
+    "shorter_longer_multiplicities": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "square_edges_inside_ports": [
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        8
+      ]
+    ]
+  },
+  "producer_modules_imported": false,
+  "scope": "weak-B Hamiltonian path banks, not cycle closures",
+  "status": "PASS"
+}
