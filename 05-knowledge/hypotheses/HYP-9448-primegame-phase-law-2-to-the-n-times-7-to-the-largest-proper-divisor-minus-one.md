@@ -1,7 +1,7 @@
 ---
 id: HYP-9448
 title: "PRIMEGAME phase law: Conway's PRIMEGAME (and the owner's variant with 15/14 split into 15/2, 1/7) passes, at the end of testing each n >= 1, through exactly 2^n * 7^(D(n)-1), D(n) = n / spf(n) the largest proper divisor; hence the two programs emit the same primes forever; pre-registered verification to n = 2500"
-status: OPEN (PRE-REGISTERED; the confirmatory run follows this commit)
+status: OPEN for all n; pre-registered P1-P3 CONFIRMED to n = 2500 (2026-10-31)
 session: opus-2026-10-31-S70
 date: 2026-10-31
 related: [THM-4852]
@@ -39,3 +39,16 @@ Confirmatory run: `primegame_variant_phase_law 2500`.
 - **(P3)** The variant emits the identical sequence.
 
 Any failure is a refutation at that n, to be reported with the configuration.
+
+## Results (confirmatory run, 2026-10-31, after the pre-registration commit adfb264520)
+
+`primegame_variant_phase_law 2500` (9 min 40 s) printed `NMAX=2500 standard_ok=1 variant_ok=1 phases=2500/2500
+powers_of_2=367/367 primes_exact=1 same_powers=1`.
+- **(P1) CONFIRMED:** the phase law holds for both lists at all 2500 state-free configurations.
+- **(P2) CONFIRMED:** Guy's list emits exactly the 367 primes below 2500 in order.
+- **(P3) CONFIRMED:** the owner's list emits the identical sequence.
+
+**Naming correction (found while writing the note).** The repository's PRIMEGAME check
+(`procgen_atlas_20260924_primegame.py`) calls the owner's list (ending 15/2, 1/7, 55/1) the Wikipedia/OEIS form, and
+the list ending 15/14, 15/2, 55/1 Guy's 1983 form. This file's 'standard' is Guy's form and its 'variant' is the
+owner's. The simulator labels are unchanged.

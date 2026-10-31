@@ -1,0 +1,49 @@
+==============================================================================
+A. Both published lists: powers of 2 and the phase law (n <= 300 here; C simulator to 2500)
+==============================================================================
+  both lists emit 2^p for the 62 primes p < 300 in order; phase entries equal (n, 0, 0, D(n)-1) for n <= 300
+  first phase entries: [(1, 0, 0, 0), (2, 0, 0, 0), (3, 0, 0, 0), (4, 0, 0, 1), (5, 0, 0, 0), (6, 0, 0, 2), (7, 0, 0, 0), (8, 0, 0, 3), (9, 0, 0, 2), (10, 0, 0, 4), (11, 0, 0, 0), (12, 0, 0, 5)]
+
+==============================================================================
+B. Fraction anatomy over the first ten primes
+==============================================================================
+  A   17/91  change [0, 0, 0, -1, 0, -1, 1, 0, 0, 0]  defect num/den 0 / -2
+  B   78/85  change [1, 1, -1, 0, 0, 1, -1, 0, 0, 0]  defect num/den -3 / -2
+  C   19/51  change [0, -1, 0, 0, 0, 0, -1, 1, 0, 0]  defect num/den 0 / -2
+  D   23/38  change [-1, 0, 0, 0, 0, 0, 0, -1, 1, 0]  defect num/den 0 / -2
+  E   29/33  change [0, -1, 0, 0, -1, 0, 0, 0, 0, 1]  defect num/den 0 / -2
+  F   77/29  change [0, 0, 0, 1, 1, 0, 0, 0, 0, -1]  defect num/den -2 / 0
+  G   95/23  change [0, 0, 1, 0, 0, 0, 0, 1, -1, 0]  defect num/den -2 / 0
+  H   77/19  change [0, 0, 0, 1, 1, 0, 0, -1, 0, 0]  defect num/den -2 / 0
+  I    1/17  change [0, 0, 0, 0, 0, 0, -1, 0, 0, 0]  defect num/den None / 0
+  J   11/13  change [0, 0, 0, 0, 1, -1, 0, 0, 0, 0]  defect num/den 0 / 0
+  K   13/11  change [0, 0, 0, 0, -1, 1, 0, 0, 0, 0]  defect num/den 0 / 0
+  L   15/2   change [-1, 1, 1, 0, 0, 0, 0, 0, 0, 0]  defect num/den -2 / 0
+  M    1/7   change [0, 0, 0, -1, 0, 0, 0, 0, 0, 0]  defect num/den None / 0
+  N   55/1   change [0, 0, 1, 0, 1, 0, 0, 0, 0, 0]  defect num/den -2 / None
+  owner list: net change [-1, 0, 2, 0, 2, 0, -2, 0, 0, 0], product = 55^2/(2*17^2) = 3025/578; Guy list product = 45375/1156 = owner * 15/2
+  lcm of denominators = 29# = 6469693230 (both lists)
+  balanced (F=U+S) parts are exactly the primes; defects present [-3, -2, 0]; no p^3 or p^2qr
+  pure fractions: owner [(1, 17), (1, 7), (55, 1)]  (the owner's {7, 17, 55}); Guy [(1, 17), (55, 1)]
+
+==============================================================================
+C. PRIMEGAME as a radius-1 selector cellular automaton in base 29#
+==============================================================================
+  owner list: 20,000 steps reproduced digit by digit (radius 1; rule chosen by the units digit)
+  Guy list: 20,000 steps reproduced digit by digit (radius 1; rule chosen by the units digit)
+
+==============================================================================
+D. Register-flow graph versus the n = 5 merged tiling line metagraph (THM-4729)
+==============================================================================
+  flow graph: 24 arcs, 19 simple pairs, no loops; metagraph: 8 blue + 24 black lines, 18 simple pairs, black loops [(5, 5), (8, 8)]
+  pure-blue nodes [0, 3, 9] = TT5, 1->C3->1, T5; pure fractions 3 -- equal counts only
+  => no bijection primes -> nodes preserves adjacency (19 != 18 simple edges; loops on one side only)
+  simple degree sequences: flow [3, 3, 3, 3, 3, 4, 4, 5, 5, 5]; metagraph [1, 1, 1, 3, 3, 5, 5, 5, 6, 6]
+
+==============================================================================
+E. Supersingular primes and fives (CITED facts, NUMEROLOGY readings)
+==============================================================================
+  registers = the ten smallest Ogg primes; unused Ogg five [31, 41, 47, 59, 71]; first non-supersingular prime 37
+  Fermat cap Ogg = [3, 5, 17]; 3x-1 sporadic cycle (odd terms) [17, 25, 37, 41, 55, 61, 91] contains 17, 55, 91 = 7*13 (NUMEROLOGY)
+
+ALL ASSERTIONS PASSED (229.0s)
