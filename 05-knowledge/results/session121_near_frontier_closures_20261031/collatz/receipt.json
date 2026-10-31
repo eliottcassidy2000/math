@@ -1,0 +1,21 @@
+{
+  "decorated_candidates": "EXCLUDED",
+  "full_E14": "OPEN",
+  "inherited_certificate_rerun": false,
+  "minus_v_price_inequality": "PROVED conditional on inherited certificate",
+  "primitive13_nonone_fee": "1062011676/1220703125",
+  "small_clock_pairs_checked": 58311,
+  "status": "PASS",
+  "zero_tangent_remaining_bands": [
+    {
+      "clock_mod8": 3,
+      "j": 23,
+      "maximum_clock": 48828467
+    },
+    {
+      "clock_mod8": 0,
+      "j": 24,
+      "maximum_clock": 97656592
+    }
+  ]
+}

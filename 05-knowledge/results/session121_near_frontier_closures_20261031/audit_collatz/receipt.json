@@ -1,0 +1,29 @@
+{
+  "D12": 390625000,
+  "D14": 9765625000,
+  "conclusion": "low tangent closed; four padded high-tangent forms excluded; bare high only j=23,24",
+  "conditional_on": "pinned E10 native11 fee and native-cut identities; no E10 replay",
+  "hits": {
+    "T11": [],
+    "T12": [],
+    "bare_high": [],
+    "bare_low": []
+  },
+  "literal_clock_length_pairs": 58311,
+  "multipliers": {
+    "T11": 2246093751,
+    "T12": 5126953126,
+    "bare_high": 1,
+    "bare_low": 1220703126
+  },
+  "native11_small_clock_hits": [],
+  "native11_small_clock_pairs": 58311,
+  "q": 6103515625,
+  "score_clock_caps": {
+    "22": 342,
+    "23": 48828467,
+    "24": 97656592
+  },
+  "status": "PASS",
+  "uniform_native13_margin": "1062011676/1220703125"
+}
