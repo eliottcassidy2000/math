@@ -1,0 +1,12 @@
+{
+  "rejected_shortcuts": [
+    "ordinary cycle exclusion differs from converse exclusion",
+    "odd nontrivial cycles rejected in the twisted sum",
+    "anti cycle lengths need 2 modulo 4, not merely even",
+    "anti-involution-only average at n=6 is 32/3, not 12",
+    "non-combinatorial q=1 rejected rather than rounded",
+    "four root classes divided by three do not give two child types",
+    "dropping the converse sign doubles the first merged root count"
+  ],
+  "status": "PASS"
+}

@@ -49,3 +49,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session131](S131.md): reflection modules, nonconsecutive numeral carries, square-sum seams and moonshine prime partitions.
 
 [Session131](S131.md): reflection modules, nonconsecutive numeral carries, square-sum seams and moonshine prime partitions.
+
+[Session132](S132.md): executable FRACTRAN tournament counters, half-order folding and prime/square-sum graph atlases.

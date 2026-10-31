@@ -1,0 +1,586 @@
+{
+  "status": "ALL CHECKS PASSED",
+  "source_commit": "fae72243028c39ce766cd9c59df763c9afd883e2",
+  "program_sha256": "8766bba0145d830002e697e76847182981691c57af305c15648a671183090e4e",
+  "fraction_count": 22,
+  "seed": 817086270,
+  "first_25_outputs_n_0_through_24": [
+    1,
+    1,
+    1,
+    2,
+    1,
+    3,
+    2,
+    4,
+    3,
+    6,
+    4,
+    9,
+    6,
+    13,
+    9,
+    19,
+    13,
+    28,
+    19,
+    41,
+    28,
+    60,
+    41,
+    88,
+    60
+  ],
+  "checkpoints": [
+    {
+      "n": 0,
+      "output": 1,
+      "window": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        3
+      ],
+      "rational_steps_from_seed": 0,
+      "integer_bits": 30
+    },
+    {
+      "n": 1,
+      "output": 1,
+      "window": [
+        1,
+        1,
+        2,
+        1,
+        3,
+        2
+      ],
+      "rational_steps_from_seed": 30,
+      "integer_bits": 37
+    },
+    {
+      "n": 2,
+      "output": 1,
+      "window": [
+        1,
+        2,
+        1,
+        3,
+        2,
+        4
+      ],
+      "rational_steps_from_seed": 66,
+      "integer_bits": 50
+    },
+    {
+      "n": 3,
+      "output": 2,
+      "window": [
+        2,
+        1,
+        3,
+        2,
+        4,
+        3
+      ],
+      "rational_steps_from_seed": 106,
+      "integer_bits": 59
+    },
+    {
+      "n": 4,
+      "output": 1,
+      "window": [
+        1,
+        3,
+        2,
+        4,
+        3,
+        6
+      ],
+      "rational_steps_from_seed": 156,
+      "integer_bits": 76
+    },
+    {
+      "n": 5,
+      "output": 3,
+      "window": [
+        3,
+        2,
+        4,
+        3,
+        6,
+        4
+      ],
+      "rational_steps_from_seed": 210,
+      "integer_bits": 86
+    },
+    {
+      "n": 6,
+      "output": 2,
+      "window": [
+        2,
+        4,
+        3,
+        6,
+        4,
+        9
+      ],
+      "rational_steps_from_seed": 280,
+      "integer_bits": 110
+    },
+    {
+      "n": 7,
+      "output": 4,
+      "window": [
+        4,
+        3,
+        6,
+        4,
+        9,
+        6
+      ],
+      "rational_steps_from_seed": 356,
+      "integer_bits": 122
+    },
+    {
+      "n": 8,
+      "output": 3,
+      "window": [
+        3,
+        6,
+        4,
+        9,
+        6,
+        13
+      ],
+      "rational_steps_from_seed": 454,
+      "integer_bits": 155
+    },
+    {
+      "n": 9,
+      "output": 6,
+      "window": [
+        6,
+        4,
+        9,
+        6,
+        13,
+        9
+      ],
+      "rational_steps_from_seed": 562,
+      "integer_bits": 172
+    },
+    {
+      "n": 10,
+      "output": 4,
+      "window": [
+        4,
+        9,
+        6,
+        13,
+        9,
+        19
+      ],
+      "rational_steps_from_seed": 702,
+      "integer_bits": 218
+    },
+    {
+      "n": 11,
+      "output": 9,
+      "window": [
+        9,
+        6,
+        13,
+        9,
+        19,
+        13
+      ],
+      "rational_steps_from_seed": 856,
+      "integer_bits": 240
+    },
+    {
+      "n": 12,
+      "output": 6,
+      "window": [
+        6,
+        13,
+        9,
+        19,
+        13,
+        28
+      ],
+      "rational_steps_from_seed": 1058,
+      "integer_bits": 305
+    },
+    {
+      "n": 13,
+      "output": 13,
+      "window": [
+        13,
+        9,
+        19,
+        13,
+        28,
+        19
+      ],
+      "rational_steps_from_seed": 1280,
+      "integer_bits": 335
+    },
+    {
+      "n": 14,
+      "output": 9,
+      "window": [
+        9,
+        19,
+        13,
+        28,
+        19,
+        41
+      ],
+      "rational_steps_from_seed": 1572,
+      "integer_bits": 430
+    },
+    {
+      "n": 15,
+      "output": 19,
+      "window": [
+        19,
+        13,
+        28,
+        19,
+        41,
+        28
+      ],
+      "rational_steps_from_seed": 1894,
+      "integer_bits": 472
+    },
+    {
+      "n": 16,
+      "output": 13,
+      "window": [
+        13,
+        28,
+        19,
+        41,
+        28,
+        60
+      ],
+      "rational_steps_from_seed": 2318,
+      "integer_bits": 608
+    },
+    {
+      "n": 17,
+      "output": 28,
+      "window": [
+        28,
+        19,
+        41,
+        28,
+        60,
+        41
+      ],
+      "rational_steps_from_seed": 2786,
+      "integer_bits": 668
+    },
+    {
+      "n": 18,
+      "output": 19,
+      "window": [
+        19,
+        41,
+        28,
+        60,
+        41,
+        88
+      ],
+      "rational_steps_from_seed": 3404,
+      "integer_bits": 866
+    },
+    {
+      "n": 19,
+      "output": 41,
+      "window": [
+        41,
+        28,
+        60,
+        41,
+        88,
+        60
+      ],
+      "rational_steps_from_seed": 4086,
+      "integer_bits": 952
+    },
+    {
+      "n": 20,
+      "output": 28,
+      "window": [
+        28,
+        60,
+        41,
+        88,
+        60,
+        129
+      ],
+      "rational_steps_from_seed": 4988,
+      "integer_bits": 1240
+    },
+    {
+      "n": 21,
+      "output": 60,
+      "window": [
+        60,
+        41,
+        88,
+        60,
+        129,
+        88
+      ],
+      "rational_steps_from_seed": 5984,
+      "integer_bits": 1364
+    },
+    {
+      "n": 22,
+      "output": 41,
+      "window": [
+        41,
+        88,
+        60,
+        129,
+        88,
+        189
+      ],
+      "rational_steps_from_seed": 7302,
+      "integer_bits": 1784
+    },
+    {
+      "n": 23,
+      "output": 88,
+      "window": [
+        88,
+        60,
+        129,
+        88,
+        189,
+        129
+      ],
+      "rational_steps_from_seed": 8758,
+      "integer_bits": 1964
+    },
+    {
+      "n": 24,
+      "output": 60,
+      "window": [
+        60,
+        129,
+        88,
+        189,
+        129,
+        277
+      ],
+      "rational_steps_from_seed": 10686,
+      "integer_bits": 2578
+    }
+  ],
+  "fraction_usage": {
+    "1": 402,
+    "2": 402,
+    "3": 24,
+    "4": 461,
+    "5": 461,
+    "6": 24,
+    "7": 589,
+    "8": 589,
+    "9": 24,
+    "10": 676,
+    "11": 676,
+    "12": 24,
+    "13": 863,
+    "14": 863,
+    "15": 24,
+    "16": 991,
+    "17": 991,
+    "18": 24,
+    "19": 1265,
+    "20": 1265,
+    "21": 24,
+    "22": 24
+  },
+  "macro_exhaustive": {
+    "windows": 729,
+    "value_range": [
+      0,
+      2
+    ],
+    "max_steps": 40
+  },
+  "direct_labelled_census": [
+    {
+      "n": 0,
+      "labelled_universe": 1,
+      "labelled_pure_blue": 1,
+      "isomorphism_classes": 1,
+      "converse_merged_classes": 1,
+      "canonical_codes": [
+        0
+      ]
+    },
+    {
+      "n": 1,
+      "labelled_universe": 1,
+      "labelled_pure_blue": 1,
+      "isomorphism_classes": 1,
+      "converse_merged_classes": 1,
+      "canonical_codes": [
+        0
+      ]
+    },
+    {
+      "n": 2,
+      "labelled_universe": 2,
+      "labelled_pure_blue": 2,
+      "isomorphism_classes": 1,
+      "converse_merged_classes": 1,
+      "canonical_codes": [
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "labelled_universe": 8,
+      "labelled_pure_blue": 8,
+      "isomorphism_classes": 2,
+      "converse_merged_classes": 2,
+      "canonical_codes": [
+        0,
+        2
+      ]
+    },
+    {
+      "n": 4,
+      "labelled_universe": 64,
+      "labelled_pure_blue": 24,
+      "isomorphism_classes": 1,
+      "converse_merged_classes": 1,
+      "canonical_codes": [
+        0
+      ]
+    },
+    {
+      "n": 5,
+      "labelled_universe": 1024,
+      "labelled_pure_blue": 184,
+      "isomorphism_classes": 3,
+      "converse_merged_classes": 3,
+      "canonical_codes": [
+        0,
+        5,
+        76
+      ]
+    },
+    {
+      "n": 6,
+      "labelled_universe": 32768,
+      "labelled_pure_blue": 800,
+      "isomorphism_classes": 2,
+      "converse_merged_classes": 2,
+      "canonical_codes": [
+        0,
+        87
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "strong_component_sizes": [
+        1
+      ],
+      "H": 1,
+      "palindromic_H": 1,
+      "Aut": 1,
+      "tc": 1,
+      "blue_tilings": 1
+    },
+    {
+      "strong_component_sizes": [
+        3
+      ],
+      "H": 3,
+      "palindromic_H": 3,
+      "Aut": 3,
+      "tc": 1,
+      "blue_tilings": 1
+    },
+    {
+      "strong_component_sizes": [
+        5
+      ],
+      "H": 15,
+      "palindromic_H": 15,
+      "Aut": 5,
+      "tc": 3,
+      "blue_tilings": 3
+    },
+    {
+      "strong_component_sizes": [
+        1,
+        3,
+        1
+      ],
+      "H": 3,
+      "palindromic_H": 3,
+      "Aut": 3,
+      "tc": 1,
+      "blue_tilings": 1
+    },
+    {
+      "strong_component_sizes": [
+        3,
+        3
+      ],
+      "H": 9,
+      "palindromic_H": 9,
+      "Aut": 9,
+      "tc": 1,
+      "blue_tilings": 1
+    },
+    {
+      "strong_component_sizes": [
+        5,
+        5
+      ],
+      "H": 225,
+      "palindromic_H": 75,
+      "Aut": 25,
+      "tc": 9,
+      "blue_tilings": 3
+    }
+  ],
+  "inherited_affine_shortcut_hostile": {
+    "order": 9,
+    "connection_set": [
+      1,
+      3,
+      4,
+      7
+    ],
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      7,
+      5,
+      6,
+      4,
+      8
+    ],
+    "partner_sums": [
+      5,
+      8
+    ],
+    "actual_arc_reversal_passes": true,
+    "affine_only_nonpalindromicity_inference_is_invalid": true
+  }
+}

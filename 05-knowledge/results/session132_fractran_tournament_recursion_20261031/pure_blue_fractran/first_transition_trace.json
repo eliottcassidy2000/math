@@ -1,0 +1,157 @@
+[
+  {
+    "step": 0,
+    "integer": "817086270",
+    "fraction_index_1based": null
+  },
+  {
+    "step": 1,
+    "integer": "19574544990",
+    "fraction_index_1based": 22
+  },
+  {
+    "step": 2,
+    "integer": "177858365685",
+    "fraction_index_1based": 1
+  },
+  {
+    "step": 3,
+    "integer": "166383632415",
+    "fraction_index_1based": 2
+  },
+  {
+    "step": 4,
+    "integer": "212282565495",
+    "fraction_index_1based": 3
+  },
+  {
+    "step": 5,
+    "integer": "156821354690",
+    "fraction_index_1based": 4
+  },
+  {
+    "step": 6,
+    "integer": "141521710330",
+    "fraction_index_1based": 5
+  },
+  {
+    "step": 7,
+    "integer": "164471176870",
+    "fraction_index_1based": 6
+  },
+  {
+    "step": 8,
+    "integer": "107862492738",
+    "fraction_index_1based": 7
+  },
+  {
+    "step": 9,
+    "integer": "98682706122",
+    "fraction_index_1based": 8
+  },
+  {
+    "step": 10,
+    "integer": "121632172662",
+    "fraction_index_1based": 9
+  },
+  {
+    "step": 11,
+    "integer": "96715608990",
+    "fraction_index_1based": 10
+  },
+  {
+    "step": 12,
+    "integer": "86880123330",
+    "fraction_index_1based": 11
+  },
+  {
+    "step": 13,
+    "integer": "69082577850",
+    "fraction_index_1based": 10
+  },
+  {
+    "step": 14,
+    "integer": "62057230950",
+    "fraction_index_1based": 11
+  },
+  {
+    "step": 15,
+    "integer": "71424360150",
+    "fraction_index_1based": 12
+  },
+  {
+    "step": 16,
+    "integer": "848683194450",
+    "fraction_index_1based": 13
+  },
+  {
+    "step": 17,
+    "integer": "772681714350",
+    "fraction_index_1based": 14
+  },
+  {
+    "step": 18,
+    "integer": "899350847850",
+    "fraction_index_1based": 15
+  },
+  {
+    "step": 19,
+    "integer": "782425493850",
+    "fraction_index_1based": 16
+  },
+  {
+    "step": 20,
+    "integer": "760989178950",
+    "fraction_index_1based": 17
+  },
+  {
+    "step": 21,
+    "integer": "662052340950",
+    "fraction_index_1based": 16
+  },
+  {
+    "step": 22,
+    "integer": "643913920650",
+    "fraction_index_1based": 17
+  },
+  {
+    "step": 23,
+    "integer": "560198134650",
+    "fraction_index_1based": 16
+  },
+  {
+    "step": 24,
+    "integer": "544850240550",
+    "fraction_index_1based": 17
+  },
+  {
+    "step": 25,
+    "integer": "606241816950",
+    "fraction_index_1based": 18
+  },
+  {
+    "step": 26,
+    "integer": "487069933350",
+    "fraction_index_1based": 19
+  },
+  {
+    "step": 27,
+    "integer": "463596683550",
+    "fraction_index_1based": 20
+  },
+  {
+    "step": 28,
+    "integer": "372465243150",
+    "fraction_index_1based": 19
+  },
+  {
+    "step": 29,
+    "integer": "354515110950",
+    "fraction_index_1based": 20
+  },
+  {
+    "step": 30,
+    "integer": "103213260150",
+    "fraction_index_1based": 21
+  }
+]

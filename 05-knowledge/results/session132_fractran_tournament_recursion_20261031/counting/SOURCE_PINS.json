@@ -1,0 +1,57 @@
+{
+  "retrieved_utc_date": "2026-10-31",
+  "repository_sources": "sources/repository_pins.json",
+  "web_sources": [
+    {
+      "id": "oeis-a",
+      "url": "https://oeis.org/A000568",
+      "title": "Number of outcomes of unlabeled n-team round-robin tournaments",
+      "offset": "0,4",
+      "observed": "Definition, offset, references, and explicit correction of historical n=24 and n=25 values were inspected."
+    },
+    {
+      "id": "oeis-a-table",
+      "url": "https://oeis.org/A000568/b000568.txt",
+      "observed": "n=0..25 transcribed as exact integer controls into sources/oeis_values.json."
+    },
+    {
+      "id": "oeis-s",
+      "url": "https://oeis.org/A002785",
+      "title": "Number of self-complementary oriented graphs with n nodes",
+      "offset": "1,3",
+      "observed": "Comment explicitly identifies self-converse tournaments; displayed terms n=1..23 and even/odd partition formulas inspected. These displayed values are transcribed into sources/oeis_values.json.",
+      "limitation": "The linked b-file returned a web cache miss; no claim of an external n=24 or n=25 comparison is made."
+    },
+    {
+      "id": "oeis-m",
+      "url": "https://oeis.org/A059735",
+      "title": "Number of complementary pairs of tournaments on n nodes",
+      "offset": "1,3",
+      "observed": "Formula is the average of A000568 and A002785; displayed terms n=1..19 are transcribed into sources/oeis_values.json.",
+      "limitation": "The linked b-file was inaccessible through the web tool; external comparison is restricted to n=1..19."
+    },
+    {
+      "id": "moon",
+      "url": "https://www.gutenberg.org/files/42833/42833-pdf.pdf",
+      "title": "John W. Moon, Topics on Tournaments (1968; electronic edition 2013)",
+      "location": "Section 29, printed pp.111-115, PDF pages 117-121 (zero-based): Theorem 40 and odd-cycle fixed-point lemma. Section 2, printed p.3, PDF page 9: unique irreducible decomposition.",
+      "observed": "Burnside average and fixed tournament exponent D=(sum d_k d_l gcd(k,l)-sum d_k)/2; no tournament fixed when an even permutation cycle occurs."
+    },
+    {
+      "id": "eplett",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/ED7BC2A1F6FF2D7F31547D771CE69B80/S000843950005743Xa.pdf/selfconverse_tournaments.pdf",
+      "doi": "10.4153/CMB-1979-004-6",
+      "title": "W. J. R. Eplett, Self-Converse Tournaments, Canadian Mathematical Bulletin 22(1) (1979), 23-27",
+      "location": "Section 1, pp.23-25",
+      "observed": "Automorphism and anti-automorphism group; existence and conjugacy of anti-involutions; unique odd-order tournament/looped-graph representation; independent counts s(5)..s(11)."
+    },
+    {
+      "id": "saldanha-bhatta",
+      "url": "https://ajc.maths.uq.edu.au/pdf/41/ajc_v41_p249.pdf",
+      "title": "A. R. M. Saldanha and S. Parameshwara Bhatta, On counting n-element trellises having exactly one pair of noncomparable elements, Australasian Journal of Combinatorics 41 (2008), 249-256",
+      "location": "Proof of Theorem 1, pp.253-254",
+      "observed": "Explicit odd-cycle tournament fixed-point derivation, including within-cycle, equal-cycle, and gcd cross-cycle contributions."
+    }
+  ],
+  "priority_statement": "Classical Burnside and self-converse enumeration are not claimed new. Session98 already has the weighted cycle-insertion grammar, and Session50 already has stronger parent-only pointed unpointing. This packet specializes, parameterizes, independently checks, and exposes them for arithmetic/FRACTRAN compilation."
+}

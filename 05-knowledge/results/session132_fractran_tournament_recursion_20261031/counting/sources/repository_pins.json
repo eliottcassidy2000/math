@@ -1,0 +1,38 @@
+[
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "fae72243028c39ce766cd9c59df763c9afd883e2",
+    "path": "05-knowledge/results/session98_tournament_growth_20261029/defects/MISSING_COMPARISON_GRAMMAR.md",
+    "local": "sources/prior_cycle_grammar.md",
+    "git_blob": "708d05a1cf88eedc36f92de94196e98271791dc5",
+    "sha256": "fcf0e46c03e5a7ab34fa9ec330ecf173f305bf03aa5e8efa69304a9aef70413d",
+    "bytes": 8519
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "fae72243028c39ce766cd9c59df763c9afd883e2",
+    "path": "05-knowledge/results/session98_tournament_growth_20261029/defects/check_recursive_grammar.py",
+    "local": "sources/prior_cycle_checker.py",
+    "git_blob": "32633793c85d188f87307610575a7713a42e18c6",
+    "sha256": "af2b101842a1eb8644d112264a455a10abf68e287efd21eab26f5ce2c3e26cc7",
+    "bytes": 1573
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "fae72243028c39ce766cd9c59df763c9afd883e2",
+    "path": "05-knowledge/results/session50_metagraph_count_prediction_20261024/growth-counts/THEOREM.md",
+    "local": "sources/prior_pointed_unpointing.md",
+    "git_blob": "9d6f89e170fe175734cb9987188be1c4cac5a2a2",
+    "sha256": "74dd521db3557e81eb448a87075f54e653b62b600fd9ca1311e0c91f0c927ff4",
+    "bytes": 18837
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "fae72243028c39ce766cd9c59df763c9afd883e2",
+    "path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+    "local": "sources/prior_line_metagraph.md",
+    "git_blob": "5a3290df1ccc4edc2c28ac7e6456427af247e54c",
+    "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d",
+    "bytes": 23768
+  }
+]

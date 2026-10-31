@@ -1,0 +1,25 @@
+{
+  "commands": {
+    "hostile_normal": {
+      "sha256": "82587cb04769700b5c96e813ea083650cc6cb632ca51990bea105ebd3825b960",
+      "status": "PASS"
+    },
+    "hostile_optimized": {
+      "sha256": "82587cb04769700b5c96e813ea083650cc6cb632ca51990bea105ebd3825b960",
+      "status": "PASS"
+    },
+    "normal": {
+      "sha256": "4e3952f5d94a819791f497fd3b1c3cd578514fe2e9b9a20929451b86797f3b6d",
+      "status": "PASS"
+    },
+    "optimized": {
+      "sha256": "4e3952f5d94a819791f497fd3b1c3cd578514fe2e9b9a20929451b86797f3b6d",
+      "status": "PASS"
+    }
+  },
+  "external_network_required": false,
+  "fresh_directory": true,
+  "source_hash_pins_verified": 4,
+  "standard_library_only": true,
+  "status": "PASS"
+}

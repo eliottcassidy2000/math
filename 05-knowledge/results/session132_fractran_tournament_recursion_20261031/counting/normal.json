@@ -1,0 +1,590 @@
+{
+  "counts": [
+    {
+      "A": 1,
+      "M": 1,
+      "S": 1,
+      "n": 0,
+      "odd_partitions": 1,
+      "recursive_states": 1,
+      "self_converse_recursive_states": 1
+    },
+    {
+      "A": 1,
+      "C": 1,
+      "D": 1,
+      "M": 1,
+      "S": 1,
+      "n": 1,
+      "odd_partitions": 1,
+      "recursive_states": 2,
+      "self_converse_recursive_states": 1,
+      "strong_merged": 1
+    },
+    {
+      "A": 1,
+      "C": 0,
+      "D": 0,
+      "M": 1,
+      "S": 1,
+      "n": 2,
+      "odd_partitions": 1,
+      "recursive_states": 3,
+      "self_converse_recursive_states": 2,
+      "strong_merged": 0
+    },
+    {
+      "A": 2,
+      "C": 1,
+      "D": 1,
+      "M": 2,
+      "S": 2,
+      "n": 3,
+      "odd_partitions": 2,
+      "recursive_states": 4,
+      "self_converse_recursive_states": 2,
+      "strong_merged": 1
+    },
+    {
+      "A": 4,
+      "C": 1,
+      "D": 1,
+      "M": 3,
+      "S": 2,
+      "n": 4,
+      "odd_partitions": 2,
+      "recursive_states": 6,
+      "self_converse_recursive_states": 3,
+      "strong_merged": 1
+    },
+    {
+      "A": 12,
+      "C": 6,
+      "D": 6,
+      "M": 10,
+      "S": 8,
+      "n": 5,
+      "odd_partitions": 3,
+      "recursive_states": 8,
+      "self_converse_recursive_states": 3,
+      "strong_merged": 6
+    },
+    {
+      "A": 56,
+      "C": 35,
+      "D": 9,
+      "M": 34,
+      "S": 12,
+      "n": 6,
+      "odd_partitions": 4,
+      "recursive_states": 11,
+      "self_converse_recursive_states": 4,
+      "strong_merged": 22
+    },
+    {
+      "A": 456,
+      "C": 353,
+      "D": 79,
+      "M": 272,
+      "S": 88,
+      "n": 7,
+      "odd_partitions": 5,
+      "recursive_states": 14,
+      "self_converse_recursive_states": 4,
+      "strong_merged": 216
+    },
+    {
+      "A": 6880,
+      "C": 6008,
+      "D": 162,
+      "M": 3528,
+      "S": 176,
+      "n": 8,
+      "odd_partitions": 6,
+      "recursive_states": 18,
+      "self_converse_recursive_states": 6,
+      "strong_merged": 3085
+    },
+    {
+      "A": 191536,
+      "C": 178133,
+      "D": 2661,
+      "M": 97144,
+      "S": 2752,
+      "n": 9,
+      "odd_partitions": 8,
+      "recursive_states": 23,
+      "self_converse_recursive_states": 6,
+      "strong_merged": 90397
+    },
+    {
+      "A": 9733056,
+      "C": 9355949,
+      "D": 8599,
+      "M": 4870920,
+      "S": 8784,
+      "n": 10,
+      "odd_partitions": 10,
+      "recursive_states": 29,
+      "self_converse_recursive_states": 8,
+      "strong_merged": 4682274
+    },
+    {
+      "A": 903753248,
+      "C": 884464590,
+      "D": 277200,
+      "M": 452016608,
+      "S": 279968,
+      "n": 11,
+      "odd_partitions": 12,
+      "recursive_states": 36,
+      "self_converse_recursive_states": 8,
+      "strong_merged": 442370895
+    },
+    {
+      "A": 154108311168,
+      "C": 152310149735,
+      "D": 1483449,
+      "M": 77054901728,
+      "S": 1492288,
+      "n": 12,
+      "odd_partitions": 15,
+      "recursive_states": 45,
+      "self_converse_recursive_states": 11,
+      "strong_merged": 76155816592
+    },
+    {
+      "A": 48542114686912,
+      "C": 48234782263293,
+      "D": 95178449,
+      "M": 24271105072736,
+      "S": 95458560,
+      "n": 13,
+      "odd_partitions": 18,
+      "recursive_states": 55,
+      "self_converse_recursive_states": 11,
+      "strong_merged": 24117438720871
+    },
+    {
+      "A": 28401423719122304,
+      "C": 28304491788158056,
+      "D": 871194676,
+      "M": 14200712295904928,
+      "S": 872687552,
+      "n": 14,
+      "odd_partitions": 22,
+      "recursive_states": 67,
+      "self_converse_recursive_states": 14,
+      "strong_merged": 14152246329676366
+    },
+    {
+      "A": 31021002160355166848,
+      "C": 30964247546702883729,
+      "D": 111602829713,
+      "M": 15510501136026729216,
+      "S": 111698291584,
+      "n": 15,
+      "odd_partitions": 27,
+      "recursive_states": 81,
+      "self_converse_recursive_states": 14,
+      "strong_merged": 15482123829152856721
+    },
+    {
+      "A": 63530415842308265100288,
+      "C": 63468402142317299907481,
+      "D": 1786281968089,
+      "M": 31765207922047709885696,
+      "S": 1787154671104,
+      "n": 16,
+      "odd_partitions": 32,
+      "recursive_states": 97,
+      "self_converse_recursive_states": 18,
+      "strong_merged": 31734201072051790937785
+    },
+    {
+      "A": 244912778438520759443245824,
+      "C": 244785748571033855024746438,
+      "D": 457397599043262,
+      "M": 122456389219489134370435456,
+      "S": 457509297625088,
+      "n": 17,
+      "odd_partitions": 38,
+      "recursive_states": 117,
+      "self_converse_recursive_states": 18,
+      "strong_merged": 122392874285745626311894850
+    },
+    {
+      "A": 1783398846284777975419600287232,
+      "C": 1782909084196274276970660380187,
+      "D": 13011797057010589,
+      "M": 891699423142395494501906828160,
+      "S": 13013584213369088,
+      "n": 18,
+      "odd_partitions": 46,
+      "recursive_states": 140,
+      "self_converse_recursive_states": 23,
+      "strong_merged": 891454542098143644383858695388
+    },
+    {
+      "A": 24605641171260376770598003978281472,
+      "C": 24602074618353524534591008760307017,
+      "D": 6662494479039004939,
+      "M": 12302820585630191716774996205431296,
+      "S": 6662951988432581120,
+      "n": 19,
+      "odd_partitions": 54,
+      "recursive_states": 166,
+      "self_converse_recursive_states": 23,
+      "strong_merged": 12301037309176765598542743899655978
+    },
+    {
+      "A": 645022068557873570931850526424042500096,
+      "C": 644972859058440070594348449839991522840,
+      "D": 341130093905838565906,
+      "M": 322511034278936785636496816957489112064,
+      "S": 341143107490935724032,
+      "n": 20,
+      "odd_partitions": 64,
+      "recursive_states": 197,
+      "self_converse_recursive_states": 29,
+      "strong_merged": 322486429529220035467739271872915044373
+    },
+    {
+      "A": 32207364031661175384456332260036660040346624,
+      "C": 32206074012126134010245184793848141225955805,
+      "D": 349323864477699839880209,
+      "M": 16103682015830587692402831393733230059062784,
+      "S": 349330527429800077778944,
+      "n": 21,
+      "odd_partitions": 76,
+      "recursive_states": 233,
+      "self_converse_recursive_states": 29,
+      "strong_merged": 16103037006063067005297254329162920532918007
+    },
+    {
+      "A": 3070169883150468336193188889176239554269865953280,
+      "C": 3070105469067377871115498257663473813587372207573,
+      "D": 32519154930404936836930395,
+      "M": 1535084941575234168096610704336156534243284769280,
+      "S": 32519496073514216703585280,
+      "n": 22,
+      "odd_partitions": 89,
+      "recursive_states": 275,
+      "self_converse_recursive_states": 36,
+      "strong_merged": 1535052734533688935557765388409202109262104568984
+    },
+    {
+      "A": 559879382429394075397997876821117309031348506639435776,
+      "C": 559873242121833848448831702091522545265639948121806750,
+      "D": 66599578388161954293103881680,
+      "M": 279939691214697037698998971710522513860595111152832512,
+      "S": 66599927718689841715666229248,
+      "n": 23,
+      "odd_partitions": 104,
+      "recursive_states": 325,
+      "self_converse_recursive_states": 36,
+      "strong_merged": 279936621060916924224415884345550466713797120612844215
+    },
+    {
+      "A": 195692027657521876084316842660833482785173437775365039898624,
+      "C": 195690907901827122764588205520700809974806484531635520680639,
+      "D": 11366355135396487082545808417381,
+      "M": 97846013828760938042158421336099935220033005693828713959424,
+      "S": 11366387654892573612292388020224,
+      "n": 24,
+      "odd_partitions": 122,
+      "recursive_states": 381,
+      "self_converse_recursive_states": 45,
+      "strong_merged": 97845453950913561382294102766033582555101485807090664549010
+    },
+    {
+      "A": 131326696677895002131450257709457767457170027052967027982788816896,
+      "C": 131326305294399560329787710398609430691003182338880484628341597797,
+      "D": 46556657220539029618120066607414717,
+      "M": 65663348338947501065725128854752162090495246903969200045304215552,
+      "S": 46556723820466754971372107819614208,
+      "n": 25,
+      "odd_partitions": 142,
+      "recursive_states": 445,
+      "self_converse_recursive_states": 45,
+      "strong_merged": 65663152647199780164893855199327993674111860684249302347474506257
+    }
+  ],
+  "direct_signed_permutation_burnside": [
+    {
+      "A": 1,
+      "S": 1,
+      "n": 0,
+      "permutations": 1
+    },
+    {
+      "A": 1,
+      "S": 1,
+      "n": 1,
+      "permutations": 1
+    },
+    {
+      "A": 1,
+      "S": 1,
+      "n": 2,
+      "permutations": 2
+    },
+    {
+      "A": 2,
+      "S": 2,
+      "n": 3,
+      "permutations": 6
+    },
+    {
+      "A": 4,
+      "S": 2,
+      "n": 4,
+      "permutations": 24
+    },
+    {
+      "A": 12,
+      "S": 8,
+      "n": 5,
+      "permutations": 120
+    },
+    {
+      "A": 56,
+      "S": 12,
+      "n": 6,
+      "permutations": 720
+    },
+    {
+      "A": 456,
+      "S": 88,
+      "n": 7,
+      "permutations": 5040
+    },
+    {
+      "A": 6880,
+      "S": 176,
+      "n": 8,
+      "permutations": 40320
+    }
+  ],
+  "independent_pair_tournament_census": [
+    {
+      "count": 1,
+      "n": 0,
+      "vertex_colors": 1
+    },
+    {
+      "count": 1,
+      "n": 0,
+      "vertex_colors": 2
+    },
+    {
+      "count": 1,
+      "n": 1,
+      "vertex_colors": 1
+    },
+    {
+      "count": 2,
+      "n": 1,
+      "vertex_colors": 2
+    },
+    {
+      "count": 2,
+      "n": 2,
+      "vertex_colors": 1
+    },
+    {
+      "count": 8,
+      "n": 2,
+      "vertex_colors": 2
+    },
+    {
+      "count": 12,
+      "n": 3,
+      "vertex_colors": 1
+    },
+    {
+      "count": 88,
+      "n": 3,
+      "vertex_colors": 2
+    },
+    {
+      "count": 176,
+      "n": 4,
+      "vertex_colors": 1
+    },
+    {
+      "count": 2752,
+      "n": 4,
+      "vertex_colors": 2
+    }
+  ],
+  "independent_tournament_census": [
+    {
+      "A": 1,
+      "C": 0,
+      "D": 0,
+      "M": 1,
+      "S": 1,
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "labelled": 1,
+      "merged_rooted": 0,
+      "n": 0,
+      "rooted": 0
+    },
+    {
+      "A": 1,
+      "C": 1,
+      "D": 1,
+      "M": 1,
+      "S": 1,
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "labelled": 1,
+      "merged_rooted": 1,
+      "n": 1,
+      "rooted": 1
+    },
+    {
+      "A": 1,
+      "C": 0,
+      "D": 0,
+      "M": 1,
+      "S": 1,
+      "automorphism_order_histogram": {
+        "1": 1
+      },
+      "labelled": 2,
+      "merged_rooted": 1,
+      "n": 2,
+      "rooted": 2
+    },
+    {
+      "A": 2,
+      "C": 1,
+      "D": 1,
+      "M": 2,
+      "S": 2,
+      "automorphism_order_histogram": {
+        "1": 1,
+        "3": 1
+      },
+      "labelled": 8,
+      "merged_rooted": 3,
+      "n": 3,
+      "rooted": 4
+    },
+    {
+      "A": 4,
+      "C": 1,
+      "D": 1,
+      "M": 3,
+      "S": 2,
+      "automorphism_order_histogram": {
+        "1": 2,
+        "3": 2
+      },
+      "labelled": 64,
+      "merged_rooted": 6,
+      "n": 4,
+      "rooted": 12
+    },
+    {
+      "A": 12,
+      "C": 6,
+      "D": 6,
+      "M": 10,
+      "S": 8,
+      "automorphism_order_histogram": {
+        "1": 7,
+        "3": 4,
+        "5": 1
+      },
+      "labelled": 1024,
+      "merged_rooted": 28,
+      "n": 5,
+      "rooted": 48
+    }
+  ],
+  "oeis_compared_terms": {
+    "A000568": 26,
+    "A002785": 23,
+    "A059735": 19
+  },
+  "pointed_extension_checks": [
+    {
+      "extension_orbits": 1,
+      "merged": false,
+      "naive_divide_by_nplus1": "1",
+      "parent_n": 0,
+      "weighted_unpointed": 1
+    },
+    {
+      "extension_orbits": 1,
+      "merged": true,
+      "naive_divide_by_nplus1": "1",
+      "parent_n": 0,
+      "weighted_unpointed": 1
+    },
+    {
+      "extension_orbits": 2,
+      "merged": false,
+      "naive_divide_by_nplus1": "1",
+      "parent_n": 1,
+      "weighted_unpointed": 1
+    },
+    {
+      "extension_orbits": 1,
+      "merged": true,
+      "naive_divide_by_nplus1": "1/2",
+      "parent_n": 1,
+      "weighted_unpointed": 1
+    },
+    {
+      "extension_orbits": 4,
+      "merged": false,
+      "naive_divide_by_nplus1": "4/3",
+      "parent_n": 2,
+      "weighted_unpointed": 2
+    },
+    {
+      "extension_orbits": 3,
+      "merged": true,
+      "naive_divide_by_nplus1": "1",
+      "parent_n": 2,
+      "weighted_unpointed": 2
+    },
+    {
+      "extension_orbits": 12,
+      "merged": false,
+      "naive_divide_by_nplus1": "3",
+      "parent_n": 3,
+      "weighted_unpointed": 4
+    },
+    {
+      "extension_orbits": 6,
+      "merged": true,
+      "naive_divide_by_nplus1": "3/2",
+      "parent_n": 3,
+      "weighted_unpointed": 3
+    },
+    {
+      "extension_orbits": 48,
+      "merged": false,
+      "naive_divide_by_nplus1": "48/5",
+      "parent_n": 4,
+      "weighted_unpointed": 12
+    },
+    {
+      "extension_orbits": 28,
+      "merged": true,
+      "naive_divide_by_nplus1": "28/5",
+      "parent_n": 4,
+      "weighted_unpointed": 10
+    }
+  ],
+  "range": "0..25 inclusive",
+  "status": "PASS"
+}
