@@ -1,0 +1,8 @@
+P4 anatomy (post-hoc)
+  relabellings 17280; source fraction of the hit: {(77, 29): 288, (95, 23): 288, (77, 19): 288}; total 864 = 1/20
+  full coincidence (fraction over 23 carries one odd-point product, another numerator the other): 48 = 1/360 of relabellings
+  reading: 1/60 per (register*state)/state fraction, three disjoint chances, so exactly 1/20; the full coincidence needs two more label matches.
+
+P5 anatomy (post-hoc)
+  calibration rate per target 13/136 = 0.0956; chance that at least one of the four targets (F, S, U, tau) is matched under independence: 0.331
+  the additive split F = S + U has no counterpart: S = (0,1,7) and U = (0,1,3) are matched by no invariant

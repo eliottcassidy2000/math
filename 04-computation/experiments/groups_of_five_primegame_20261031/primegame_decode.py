@@ -3,8 +3,11 @@
 
 Two published lists (both run in procgen_atlas_20260924_primegame.py; opus-2026-10-31-S70 HYP-9448 / THM-4852
 treats their equivalence and the phase law):
-  CONWAY (Conway 1987; Guy 1983):     ..., 13/11, 15/14, 15/2, 55/1
-  OWNER  (the owner's list of 2026-10-31, = the Wikipedia form): ..., 13/11, 15/2, 1/7, 55/1
+  GUY   (the 15/14 list: Guy 1983 as cited by S70 and the 2026-09-24 atlas; Endrullis-Grabmayer-Hendriks 2009 as
+         checked by session126; OEIS A007546): ..., 13/11, 15/14, 15/2, 55/1
+  OWNER (the owner's list of 2026-10-31 = Conway 1987, Theorem 1, printed p. 4, as checked against the primary scan
+         by session126; the Wikipedia form; OEIS A007547 and A007542): ..., 13/11, 15/2, 1/7, 55/1
+(An earlier draft of this script mislabelled the 15/14 list as Conway's; corrected 2026-10-31 before publication.)
 
 Prints, for both lists:
   (1) every fraction factored over 2..29, its exponent change vector and its support;
@@ -26,7 +29,7 @@ PR = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 REG = [2, 3, 5, 7]
 STA = [11, 13, 17, 19, 23, 29]
 HEAD = [(17, 91), (78, 85), (19, 51), (23, 38), (29, 33), (77, 29), (95, 23), (77, 19), (1, 17), (11, 13), (13, 11)]
-CONWAY = HEAD + [(15, 14), (15, 2), (55, 1)]
+GUY = HEAD + [(15, 14), (15, 2), (55, 1)]
 OWNER = HEAD + [(15, 2), (1, 7), (55, 1)]
 # OEIS (JSON API, retrieved 2026-10-31): steps to produce 2^(p_k), first ten terms.
 # A007546 ("fast version"; its comment names the ..., 15/14, 15/2, 55/1 program); A007547 ("slow version").
@@ -191,15 +194,15 @@ def rcwa(name, prog):
 
 def main():
     triv = {}
-    for name, prog in (('CONWAY list (Conway 1987, Guy 1983)', CONWAY), ('OWNER list (= Wikipedia form)', OWNER)):
+    for name, prog in (('GUY list (15/14; Guy 1983, EGH 2009)', GUY), ('OWNER list (= Conway 1987 Theorem 1)', OWNER)):
         triv[name] = factor_table(name, prog)
         assert state_split(name, prog)
         machine_table(name, prog)
-    fc = run('CONWAY list', CONWAY, 10)
+    fc = run('GUY list', GUY, 10)
     fo = run('OWNER list', OWNER, 10)
     primes10 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
     print()
-    print(f'  CONWAY emissions = first ten primes: {[p for p, _ in fc] == primes10}; steps = {[s for _, s in fc]}')
+    print(f'  GUY emissions = first ten primes: {[p for p, _ in fc] == primes10}; steps = {[s for _, s in fc]}')
     print(f'  OEIS A007546 (fast version, first ten terms):      {A007546_HEAD}  match: '
           f'{[s for _, s in fc] == A007546_HEAD}')
     print(f'  OWNER emissions = first ten primes: {[p for p, _ in fo] == primes10}; steps = {[s for _, s in fo]}')
@@ -207,13 +210,13 @@ def main():
           f'{[s for _, s in fo] == A007547_HEAD}')
     assert [s for _, s in fc] == A007546_HEAD and [s for _, s in fo] == A007547_HEAD
     assert [p for p, _ in fc] == primes10 and [p for p, _ in fo] == primes10
-    rcwa('CONWAY list', CONWAY)
+    rcwa('GUY list', GUY)
     rcwa('OWNER list', OWNER)
     section("(6) the owner's {1/7, 1/17, 55/1}: list dependence and label dependence")
     for k, v in triv.items():
         print(f'  {k}: trivial-sided fractions {v}')
     print('  The two lists emit the same primes (above; all n in opus-2026-10-31-S70 HYP-9448), yet the set of')
-    print('  trivial-sided fractions has 2 elements in Conway\'s list and 3 in the owner\'s: it is not an invariant of')
+    print('  trivial-sided fractions has 2 elements in the 15/14 list and 3 in the owner\'s: it is not an invariant of')
     print('  the computation. Renaming the six state primes (any bijection of {11,...,29}) or the four registers gives')
     print('  an equivalent program; e.g. the transposition 13 <-> 17 turns 1/17 into 1/13. The numbers 7, 17, 55 are')
     print('  labels, not invariants.')

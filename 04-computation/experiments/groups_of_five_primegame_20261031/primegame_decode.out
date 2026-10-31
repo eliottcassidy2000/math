@@ -1,6 +1,6 @@
 
 ====================================================================================================
-(1) CONWAY list (Conway 1987, Guy 1983): the fractions over the first ten primes 2..29
+(1) GUY list (15/14; Guy 1983, EGH 2009): the fractions over the first ten primes 2..29
 ====================================================================================================
   #   fraction    numerator        denominator      change vector (2,3,5,7,11,13,17,19,23,29)   support
   1    17/91     17               7*13             [0, 0, 0, -1, 0, -1, 1, 0, 0, 0]              [7, 13, 17]
@@ -22,7 +22,7 @@
   fractions with a trivial side (numerator or denominator 1): ['1/17', '55/1']  (count 2)
 
 ====================================================================================================
-(2) CONWAY list (Conway 1987, Guy 1983): register/state split and the one-hot state invariant
+(2) GUY list (15/14; Guy 1983, EGH 2009): register/state split and the one-hot state invariant
 ====================================================================================================
   every numerator and denominator has at most one state prime (11..29), exponent <= 1: True
   every state s has an unconditional exit s -> (numerator) listed before the first no-state fraction (#12): True  exits: [(11, (13, 11)), (13, (11, 13)), (17, (1, 17)), (19, (77, 19)), (23, (95, 23)), (29, (77, 29))]
@@ -30,7 +30,7 @@
   => by induction from 2 (no state), the state part of every configuration is zero or one prime to the first power (PROVED by the two checks above).
 
 ====================================================================================================
-(3) CONWAY list (Conway 1987, Guy 1983): the machine table (a 4-register Minsky machine, states = state primes, 1 = no state)
+(3) GUY list (15/14; Guy 1983, EGH 2009): the machine table (a 4-register Minsky machine, states = state primes, 1 = no state)
 ====================================================================================================
   state 1:
       fraction #12 if r2>0 and r7>0          then r2-=1, r7-=1, r3+=1, r5+=1   -> state 1
@@ -56,7 +56,7 @@
   state digraph arcs: [(1, 1), (1, 11), (11, 13), (11, 29), (13, 11), (13, 17), (17, 1), (17, 13), (17, 19), (19, 11), (19, 23), (23, 19), (29, 11)]
 
 ====================================================================================================
-(1) OWNER list (= Wikipedia form): the fractions over the first ten primes 2..29
+(1) OWNER list (= Conway 1987 Theorem 1): the fractions over the first ten primes 2..29
 ====================================================================================================
   #   fraction    numerator        denominator      change vector (2,3,5,7,11,13,17,19,23,29)   support
   1    17/91     17               7*13             [0, 0, 0, -1, 0, -1, 1, 0, 0, 0]              [7, 13, 17]
@@ -78,7 +78,7 @@
   fractions with a trivial side (numerator or denominator 1): ['1/17', '1/7', '55/1']  (count 3)
 
 ====================================================================================================
-(2) OWNER list (= Wikipedia form): register/state split and the one-hot state invariant
+(2) OWNER list (= Conway 1987 Theorem 1): register/state split and the one-hot state invariant
 ====================================================================================================
   every numerator and denominator has at most one state prime (11..29), exponent <= 1: True
   every state s has an unconditional exit s -> (numerator) listed before the first no-state fraction (#12): True  exits: [(11, (13, 11)), (13, (11, 13)), (17, (1, 17)), (19, (77, 19)), (23, (95, 23)), (29, (77, 29))]
@@ -86,7 +86,7 @@
   => by induction from 2 (no state), the state part of every configuration is zero or one prime to the first power (PROVED by the two checks above).
 
 ====================================================================================================
-(3) OWNER list (= Wikipedia form): the machine table (a 4-register Minsky machine, states = state primes, 1 = no state)
+(3) OWNER list (= Conway 1987 Theorem 1): the machine table (a 4-register Minsky machine, states = state primes, 1 = no state)
 ====================================================================================================
   state 1:
       fraction #12 if r2>0                   then r2-=1, r3+=1, r5+=1          -> state 1
@@ -112,7 +112,7 @@
   state digraph arcs: [(1, 1), (1, 11), (11, 13), (11, 29), (13, 11), (13, 17), (17, 1), (17, 13), (17, 19), (19, 11), (19, 23), (23, 19), (29, 11)]
 
 ====================================================================================================
-(4) CONWAY list: the run from 2 (exponent vectors), emissions 2^p
+(4) GUY list: the run from 2 (exponent vectors), emissions 2^p
 ====================================================================================================
   step  fraction  configuration (prime factorization)          exponents (2,3,5,7 | 11,13,17,19,23,29)
      0        -   2                                          [1, 0, 0, 0] | [0, 0, 0, 0, 0, 0]
@@ -265,13 +265,13 @@
   ... (trace shown through the emission of 2^3)
   emissions (p, step): [(2, 19), (3, 69), (5, 281), (7, 710), (11, 2375), (13, 3893), (17, 8102), (19, 11361), (23, 19268), (29, 36981)]
 
-  CONWAY emissions = first ten primes: True; steps = [19, 69, 280, 707, 2363, 3876, 8068, 11319, 19201, 36866]
+  GUY emissions = first ten primes: True; steps = [19, 69, 280, 707, 2363, 3876, 8068, 11319, 19201, 36866]
   OEIS A007546 (fast version, first ten terms):      [19, 69, 280, 707, 2363, 3876, 8068, 11319, 19201, 36866]  match: True
   OWNER emissions = first ten primes: True; steps = [19, 69, 281, 710, 2375, 3893, 8102, 11361, 19268, 36981]
   OEIS A007547 (slow version, first ten terms):      [19, 69, 281, 710, 2375, 3893, 8102, 11361, 19268, 36981]  match: True
 
 ====================================================================================================
-(5) CONWAY list: residue-class form; exact selection densities on residues mod 29#
+(5) GUY list: residue-class form; exact selection densities on residues mod 29#
 ====================================================================================================
   #1   17/91   selected on a fraction                         1/91 = 0.010989 of residues
   #2   78/85   selected on a fraction                      18/1547 = 0.011635 of residues
@@ -311,10 +311,10 @@
 ====================================================================================================
 (6) the owner's {1/7, 1/17, 55/1}: list dependence and label dependence
 ====================================================================================================
-  CONWAY list (Conway 1987, Guy 1983): trivial-sided fractions ['1/17', '55/1']
-  OWNER list (= Wikipedia form): trivial-sided fractions ['1/17', '1/7', '55/1']
+  GUY list (15/14; Guy 1983, EGH 2009): trivial-sided fractions ['1/17', '55/1']
+  OWNER list (= Conway 1987 Theorem 1): trivial-sided fractions ['1/17', '1/7', '55/1']
   The two lists emit the same primes (above; all n in opus-2026-10-31-S70 HYP-9448), yet the set of
-  trivial-sided fractions has 2 elements in Conway's list and 3 in the owner's: it is not an invariant of
+  trivial-sided fractions has 2 elements in the 15/14 list and 3 in the owner's: it is not an invariant of
   the computation. Renaming the six state primes (any bijection of {11,...,29}) or the four registers gives
   an equivalent program; e.g. the transposition 13 <-> 17 turns 1/17 into 1/13. The numbers 7, 17, 55 are
   labels, not invariants.

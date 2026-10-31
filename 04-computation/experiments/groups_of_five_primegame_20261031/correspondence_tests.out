@@ -1,0 +1,92 @@
+
+====================================================================================================
+P1/P2: OEIS attribution of the two lists and the step-difference law
+====================================================================================================
+  [PASS] GUY: state-dispatch simulator = literal FRACTRAN, every configuration, first 6 emissions  3876 configurations
+  [PASS] GUY: jump simulator = literal FRACTRAN emissions and steps, first 10 primes
+  [PASS] OWNER: state-dispatch simulator = literal FRACTRAN, every configuration, first 6 emissions  3893 configurations
+  [PASS] OWNER: jump simulator = literal FRACTRAN emissions and steps, first 10 primes
+  [PASS] GUY list emits the first 34 primes in order
+  [PASS] OWNER list emits the first 34 primes in order
+  [PASS] P1: GUY steps = OEIS A007546 (34 terms)
+  [PASS] P1: OWNER steps = OEIS A007547 (34 terms)
+  [PASS] P2: A007547 - A007546 = sum_{n=2}^{p_k-1} (D(n)-1), k <= 34 (OEIS data)  first differences [0, 0, 1, 3, 12, 17, 34, 42, 67, 115]
+  [PASS] both lists emit the 168 primes < 1000 in order (jump simulator)
+  [PASS] P2: step-difference law for all 168 primes < 1000  k=168: steps GUY 1333910908, OWNER 1334073859, difference 162951 = law 162951
+  growth: law(997) = 162951; c x^2/2 with c = sum_p p^-2 prod_(q<p)(1-1/q) = 0.330098: 164060 (ratio 0.9932)
+  share of the slow list spent in the extra 1/7 steps at k=168: 1.22e-04
+  [PASS] P7: A007546(k) = sum_{N=2}^{p_k} cost_G(N), 34 OEIS terms
+  [PASS] P7: A007547(k) = sum_{N=2}^{p_k} cost_O(N), 34 OEIS terms
+  [PASS] P7: closed forms = simulated steps for all 168 primes < 1000 (both lists)
+  growth: A007546-type count / (2 (1 - c) p^3) at p = 101, 499, 997: [1.0391, 1.0103, 1.0046]
+  closed form at p = 2999: 36192748269; ratio to 2(1-c)p^3 = 1.00150
+
+====================================================================================================
+P3: the strong points of symmetry are the circulants of order <= 5, i.e. the short tournament cycles
+====================================================================================================
+  q=1: 1 connection sets; pure-blue: [True]
+  [PASS] P3: every circulant tournament of order 1 is pure-blue
+  q=3: 2 connection sets; pure-blue: [True, True]
+  [PASS] P3: every circulant tournament of order 3 is pure-blue
+     necklace (0, 0, 1): connection sets [(1,), (2,)]; rational cycle with denominator D = 2^3 - 3^1 = 5; integer cycle of x -> x/2, (3x+5)/2: [4, 2, 1], odd points [1]
+  q=5: 4 connection sets; pure-blue: [True, True, True, True]
+  [PASS] P3: every circulant tournament of order 5 is pure-blue
+     necklace (0, 0, 0, 1, 1): connection sets [(1, 2), (3, 4)]; rational cycle with denominator D = 2^5 - 3^2 = 23; integer cycle of x -> x/2, (3x+23)/2: [40, 20, 10, 5, 19], odd points [5, 19]
+     necklace (0, 0, 1, 0, 1): connection sets [(1, 3), (2, 4)]; rational cycle with denominator D = 2^5 - 3^2 = 23; integer cycle of x -> x/2, (3x+23)/2: [28, 14, 7, 22, 11], odd points [7, 11]
+  q=7: 8 connection sets; pure-blue: [False, False, False, False, False, False, False, False]
+  [PASS] P3: no circulant tournament of order 7 is pure-blue
+     necklace (0, 0, 0, 0, 1, 1, 1): connection sets [(1, 2, 3), (4, 5, 6)]; rational cycle with denominator D = 2^7 - 3^3 = 101; integer cycle of x -> x/2, (3x+101)/2: [304, 152, 76, 38, 19, 79, 169], odd points [19, 79, 169]
+     necklace (0, 0, 0, 1, 0, 1, 1): connection sets [(3, 5, 6)]; rational cycle with denominator D = 2^7 - 3^3 = 101; integer cycle of x -> x/2, (3x+101)/2: [232, 116, 58, 29, 94, 47, 121], odd points [29, 47, 121]
+     necklace (0, 0, 0, 1, 1, 0, 1): connection sets [(1, 2, 4)]; rational cycle with denominator D = 2^7 - 3^3 = 101; integer cycle of x -> x/2, (3x+101)/2: [184, 92, 46, 23, 85, 178, 89], odd points [23, 85, 89]
+     necklace (0, 0, 1, 0, 0, 1, 1): connection sets [(1, 4, 5), (2, 3, 6)]; rational cycle with denominator D = 2^7 - 3^3 = 101; integer cycle of x -> x/2, (3x+101)/2: [196, 98, 49, 124, 62, 31, 97], odd points [31, 49, 97]
+     necklace (0, 0, 1, 0, 1, 0, 1): connection sets [(1, 3, 5), (2, 4, 6)]; rational cycle with denominator D = 2^7 - 3^3 = 101; integer cycle of x -> x/2, (3x+101)/2: [148, 74, 37, 106, 53, 130, 65], odd points [37, 53, 65]
+  [PASS] P3: the two q = 5 cycles are {5,10,19,20,40} and {7,11,14,22,28} with D = 23  [([5, 10, 19, 20, 40], 23), ([7, 11, 14, 22, 28], 23)]
+
+====================================================================================================
+P4: label dependence of the 95/23 and 77 coincidence
+====================================================================================================
+  relabellings: 17280; "(odd-point product)/23 occurs": 864 (5.0000%); "95 and 77 both numerators": 96 (0.5556%)
+  [FAIL] P4: (odd-point product)/23 occurs for < 5% of relabellings
+  [PASS] P4: 95 and 77 both numerators for < 10% of relabellings
+
+====================================================================================================
+P5: look-elsewhere calibration for the three points of symmetry against F, S, U
+====================================================================================================
+  battery on (TT5, 1->C3->1, T5):
+    n                            [5, 5, 5]
+    arcs                         [10, 10, 10]
+    H                            [1, 3, 15]
+    |Aut|                        [1, 3, 5]
+    tilings H/|Aut|              [1, 1, 3]
+    c3                           [0, 1, 5]
+    c4                           [0, 0, 5]
+    c5                           [0, 0, 2]
+    all cycles                   [0, 1, 12]
+    transitive triples           [10, 9, 5]
+    strong components            [5, 3, 1]
+    score variance*n             [10.0, 8.0, 0.0]
+    max score                    [4, 4, 2]
+    min score                    [0, 0, 2]
+    sum of squares of scores     [30, 28, 20]
+    Ham cycles                   [0, 0, 2]
+  target F = d-2 = (0, 2, 10): matched by ['2*c3']
+  target S (squarefree in D) = (0, 1, 7): matched by []
+  target U (prime in D) = (0, 1, 3): matched by []
+  target tau = (2, 4, 12): matched by []
+  calibration: 13 of 136 target triples (0, a, b), 0 <= a <= b <= 15, are matched (9.6%)
+  [FAIL] P5: calibration hit rate >= 20%
+  pairing test on the atoms K1, C3, T5 (orders 1, 3, 5) against (p, p^3, p^2qr) (Omega 1, 3, 4; tau 2, 4, 12):
+    order (1,3,5) vs Omega (1,3,4): differ at T5; |Aut| (1,3,5) vs tau (2,4,12): no affine relation
+
+====================================================================================================
+P6: cross-check of S70 THM-4852 (4) and a second natural prime graph
+====================================================================================================
+  [PASS] P6: register-flow graph has 24 arcs (with multiplicity), 19 unordered pairs, no loops  arcs 24, pairs 19, loops 0
+  [PASS] P6: merged metagraph simple support has 18 edges and 2 loops
+  [PASS] P6: no isomorphism flow-support vs metagraph-support
+  [PASS] P6: no isomorphism co-occurrence graph vs metagraph-support  co-occurrence edges 28, degree sequence [3, 3, 5, 6, 6, 6, 6, 7, 7, 7]; metagraph degree sequence [1, 1, 1, 3, 3, 5, 5, 5, 6, 6]
+  blue graph on merged nodes: [(0, 5), (3, 8), (4, 6), (5, 6), (5, 8), (6, 9), (7, 9), (8, 9)]; cycle basis [[6, 5, 8, 9]]
+
+FAILED CHECKS: ['P4: (odd-point product)/23 occurs for < 5% of relabellings', 'P5: calibration hit rate >= 20%']
+python3 -B correspondence_tests.py  36.52s user 0.56s system 86% cpu 42.935 total
+rc=1
