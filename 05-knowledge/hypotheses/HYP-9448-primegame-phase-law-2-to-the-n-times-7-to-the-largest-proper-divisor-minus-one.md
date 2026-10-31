@@ -1,7 +1,7 @@
 ---
 id: HYP-9448
 title: "PRIMEGAME phase law: Conway's PRIMEGAME (and the owner's variant with 15/14 split into 15/2, 1/7) passes, at the end of testing each n >= 1, through exactly 2^n * 7^(D(n)-1), D(n) = n / spf(n) the largest proper divisor; hence the two programs emit the same primes forever; pre-registered verification to n = 2500"
-status: OPEN for all n; pre-registered P1-P3 CONFIRMED to n = 2500 (2026-10-31)
+status: CLOSED - KNOWN (Conway 1987, section 5, Figure 2 = the proof of Theorem 1 for the owner's list; the same A-K analysis covers Guy's 1983 list); the pre-registered P1-P3 confirmations to n = 2500 stand as computational checks (audit S70, MISTAKE-697)
 session: opus-2026-10-31-S70
 date: 2026-10-31
 related: [THM-4852]
@@ -52,3 +52,12 @@ powers_of_2=367/367 primes_exact=1 same_powers=1`.
 (`procgen_atlas_20260924_primegame.py`) calls the owner's list (ending 15/2, 1/7, 55/1) the Wikipedia/OEIS form, and
 the list ending 15/14, 15/2, 55/1 Guy's 1983 form. This file's 'standard' is Guy's form and its 'variant' is the
 owner's. The simulator labels are unchanged.
+
+**Audit (2026-10-31, `primegame_selector_automaton_20261031_audit_S70/AUDIT.md`).** The law is classical.
+- Conway's 1987 paper prints the owner's list as Theorem 1 (p. 4). Its section 5, Figure 2 (pp. 9-10) proves that from
+  5^n 7^d 13 the orbit reaches 2^n 7^(d-1) when d | n, and that L^n M^(d-1) N then gives 3^n 5^(n+1) 11.
+- Wikipedia's FRACTRAN article states the law, and OEIS A007546's step formula (A. P. Heinz, 2009) presupposes it.
+- Wording fix: the law holds at **each entry into** the state-free set, not at every state-free configuration
+  (840 = 2^3 3 5 7 is state-free).
+- Provenance fix: the owner's list is Conway's own 1987 PRIMEGAME, and Guy's 15/14 list is the earlier form. This file's
+  'Conway's PRIMEGAME ... and the owner's variant' should be read as 'Guy's 1983 list ... and Conway's 1987 list'.

@@ -1,0 +1,7 @@
+NEGATIVE CONTROL: expected law falsified at k = 97
+FAIL [Conway1987/owner] phase law (k-th entry != 2^k 7^(D(k)-1)) at step 1274952 (phase 97)
+FAIL [Guy1983] phase law (k-th entry != 2^k 7^(D(k)-1)) at step 1273490 (phase 97)
+NMAX = 200
+(a)(b)(c) Conway1987/owner list: FAILED  (0 steps to entry 200, 0.0 s)
+(a)(b)(c) Guy1983 list:          FAILED  (0 steps to entry 200, 0.0 s)
+exit=1

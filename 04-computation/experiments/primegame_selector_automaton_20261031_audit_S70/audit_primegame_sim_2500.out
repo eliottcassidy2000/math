@@ -1,0 +1,12 @@
+NMAX = 2500
+(a)(b)(c) Conway1987/owner list: OK  (20961560628 steps to entry 2500, 175.3 s)
+(a)(b)(c) Guy1983 list:          OK  (20960532292 steps to entry 2500, 176.8 s)
+(d) identical phase-entry configurations (k = 1..2500) and post-55/1 configurations: yes
+(e) powers of 2 = 2^p for exactly the 367 primes p <= 2500, in order, both lists: yes
+(f) per-phase step counts equal Heinz's closed form (Guy) and closed form + D(k-1)-1 (Conway), k = 2..2500: yes
+    total extra steps of the 1/7 list = sum_{k<2500} (D(k)-1) = 1028336
+(g) cumulative steps at 2^p for the first 34 primes: Guy = OEIS A007546 (fast), Conway/owner = OEIS A007547 (slow): yes
+    first values Guy: 19 69 280 707 2363   Conway/owner: 19 69 281 710 2375
+    first phase entries (r2,r3,r5,r7): (1,0,0,0) (2,0,0,0) (3,0,0,0) (4,0,0,1) (5,0,0,0) (6,0,0,2) (7,0,0,0) (8,0,0,3) (9,0,0,2) (10,0,0,4) (11,0,0,0) (12,0,0,5)
+ALL CHECKS PASSED
+exit=0

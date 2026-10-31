@@ -1,0 +1,16 @@
+T1  digit formulas (random B, p, q | B, multi-digit x)
+    4000 random cases: formulas reproduce p*x/q exactly; every z_i < B; p*y_i mod B <= B-p, carry <= p-1
+T2  locality of the true map x -> p x / q
+    3000 perturbation tests at distance >= 2: 0 changes of the digit (radius 1 holds)
+    perturbing only the two neighbours changed the digit in 2694 of 3000 cases (radius 0 fails)
+T3/T4  random squarefree FRACTRAN programs (reduced fractions), rule chosen by the units digit
+    400 random programs, 134111 steps (halting runs: 67): digit update == big-integer orbit, selector == x_0
+    PRIMEGAME owner/Conway 1987: 20 large random 29-smooth starts x 3000 steps (60000 steps) + 20,000 steps from 2: match
+    PRIMEGAME Guy 1983: 20 large random 29-smooth starts x 3000 steps (60000 steps) + 20,000 steps from 2: match
+T5  the composite map is not a CA in the strict sense
+    shift test: F(B*2) = 2417248020 (rule 17/91) but B*F(2) = 97045398450 (rule 15/2): equal? False
+    x = c*B^6 + 2 vs c*B^6 + 1 (digits differ only at position 0): image digit 6 = 925925917 vs 320430165
+T6  caveats
+    6/10 on x = 35: FRACTRAN product integral -> 21; unreduced selector "10 | x_0" -> False  (needs lowest terms)
+    2000 cases with non-squarefree p, q | B (B = 900, 27000, 2520, 44100): same formulas exact
+ALL CA CHECKS PASSED

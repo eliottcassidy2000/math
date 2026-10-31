@@ -21684,3 +21684,47 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     (here: "nice pair").
   - Report structural statistics only against the matching baseline population, and for every n in the range.
   - Never run `git stash` while a background job writes into the worktree.
+
+## MISTAKE-697 (2026-10-31, opus-2026-10-31-S70, THM-4852, HYP-9448 and the note `05-knowledge/results/primegame_variant_selector_automaton_metagraph_20261031.md` at the pre-audit commit 0bfb7da871; found by the independent audit `04-computation/experiments/primegame_selector_automaton_20261031_audit_S70/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a published theorem pre-registered as an open hypothesis, the provenance of the two PRIMEGAME lists inverted, and a known automaton formulation typed new
+
+- **What was wrong.**
+  - **(1)** HYP-9448 pre-registered the PRIMEGAME phase law 2^n 7^(D(n)-1) as OPEN, and THM-4852 (1) was typed
+    "conditional on HYP-9448". The law is Conway's own proof of PRIMEGAME (FRACTRAN 1987, Theorem 1 p. 4, section 5
+    Figure 2 pp. 9-10), also stated on Wikipedia and presupposed by OEIS A007546. Conway 1987 was on the session's own
+    citation list.
+  - **(2)** The provenance was inverted. The owner's list (ending 15/2, 1/7, 55/1) is Conway's 1987 PRIMEGAME. The list
+    ending 15/14, 15/2, 55/1 is Guy's earlier 1983 form, and was mislabelled "Conway's PRIMEGAME" and "standard". The
+    note claimed 1/7 "exists only because" the owner's list splits Guy's 15/14.
+  - **(3)** The selector-automaton formulation was typed new. It is known:
+    - Kari 2012 and Kari-Kopra 2017 give automata multiplying by p/q in base pq;
+    - Cloney-Goles-Vichniac 1987 define quasi cellular automata;
+    - Conway 1987 section 11 describes the residue selection;
+    - the repository already had it for Collatz (`collatz_oscillation_gilbreath_20260926.md` section 3, base 6, radius
+      1, one global bit).
+
+    "Radius-1 cellular automaton" also over-stated the map, which does not commute with the shift.
+  - **(4)** Minor:
+    - the phase law was worded for every state-free configuration instead of each entry into the state-free set;
+    - the proof omitted the converse step (state-bearing configurations fire only A-K);
+    - the metagraph non-bijection was a theorem item although nearly vacuous;
+    - the lcm 29# was uncredited;
+    - F = U + S was sourced to THM-4733, which defines no F, U, S;
+    - the session's chat claim that both lists have the same product was false; the driver caught it and Guy's
+      product is 15/2 times the owner's;
+    - a RESERVED stub stayed in the tree after an unstaged deletion.
+- **Repair.**
+  - HYP-9448 is CLOSED as KNOWN, and THM-4852 rewritten:
+    - (1) CITED, with the elementary two-list reduction and the converse step;
+    - (3) a selector (quasi-)automaton, with only the general FRACTRAN statement new to the repository;
+    - (4) demoted to a remark.
+  - Provenance, wording, credits and the stub fixed.
+- **How it was caught.** The auditor read Conway 1987, matched OEIS A007546 and A007547 to the two lists (34/34 terms
+  each), grepped the repository for automaton formulations of Collatz-type maps, and tested the shift-commutation of the
+  map.
+- **Lesson / reusable rule.**
+  - Before pre-registering a "hypothesis" about a classical program or theorem, read the primary source's proof
+    section. A simulation that confirms a published lemma is a check, not evidence for an open question.
+  - When an owner-supplied object has two published forms, establish which is the original (dates and sources)
+    before calling either a variant.
+  - Search the repository's own Collatz notes for automaton formulations before typing an automaton view of any
+    Collatz-type map new.
