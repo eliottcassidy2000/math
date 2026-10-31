@@ -1,0 +1,54 @@
+[
+  {
+    "script": "bounded_sources.py",
+    "arguments": [],
+    "normal_equals_optimized": true,
+    "sha256": "a8454a66455137360ea619d7ec422c7b32be40eae126e7acfbfd8d3bd6a2bab4"
+  },
+  {
+    "script": "audit_sources.py",
+    "arguments": [],
+    "normal_equals_optimized": true,
+    "sha256": "b9ad25e8963873ed9751befb0eeb6ed5df3cfbf4869ccbb34bc17cdff8d5ef6a"
+  },
+  {
+    "script": "cost_census.py",
+    "arguments": [
+      "128"
+    ],
+    "normal_equals_optimized": true,
+    "sha256": "67987c8d22ccda26fd63f5dfbe71debf61a400292cbc7a352653f009cd98b677"
+  },
+  {
+    "script": "cost_census.py",
+    "arguments": [
+      "256"
+    ],
+    "normal_equals_optimized": true,
+    "sha256": "3125200124c1cf9be9231e096675d9cf49b78c124fe144ca022e6fdb9cc30516"
+  },
+  {
+    "script": "pythagorean_glue.py",
+    "arguments": [],
+    "normal_equals_optimized": true,
+    "sha256": "5e6ac661766147424530e34e7ad07bb3a29b4c176918f4a7ec833635896b0118"
+  },
+  {
+    "script": "norm_class_glue.py",
+    "arguments": [],
+    "normal_equals_optimized": true,
+    "sha256": "ad18460ca9dd740fcca9da16d5aafda0cb96050a64d1464dbd028d6ee7f8d8a5"
+  },
+  {
+    "script": "port_synchronization.py",
+    "arguments": [],
+    "normal_equals_optimized": true,
+    "sha256": "e34d2082e52fe77300a8b2a74a4b2b9bb18f4ee29237f6bd30c9387e204a4711"
+  },
+  {
+    "script": "audit_costs.py",
+    "arguments": [],
+    "normal_equals_optimized": true,
+    "sha256": "ea9613b3152010a1187b8e6196abc70a4b116c863cb2e34df178d7c37d2c0a68"
+  }
+]

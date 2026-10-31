@@ -1,0 +1,419 @@
+{
+  "missing_port_hostile_N": 2815,
+  "records": [
+    {
+      "N": 2812,
+      "class": 5,
+      "first": {
+        "frame_maximum_label": 2812,
+        "gcd_legs": 1,
+        "input_maximum_label": 2812,
+        "k": 838,
+        "l": 401,
+        "label_constant": 1971216,
+        "m": null,
+        "maximum_label": 1974710128,
+        "new_port": [
+          2035220,
+          14044880
+        ],
+        "norm_seed": [
+          1,
+          2,
+          1
+        ],
+        "output_bits": 50,
+        "output_vertices": 5624,
+        "r": 319,
+        "seams": [
+          [
+            2035220,
+            14044880
+          ],
+          [
+            8140880,
+            56179520
+          ]
+        ],
+        "source_bits": [
+          25,
+          25
+        ],
+        "source_scales": [
+          101761,
+          702244
+        ],
+        "source_vertices": [
+          2812,
+          2812
+        ],
+        "square_class": 5,
+        "t": 20
+      },
+      "first_cycle_sha256": [
+        "3ce171174a83774fe947445b997c7f2d89cc27d13ced8324c8a40fe6604add2c",
+        "53d80700f3c39d5b4d7c2d26da252666904572fb712471872b566e4f27a3cb80",
+        "dc2e703ccabc8159bc7b07bb29a249e949c719eedc5e00c0f776ffdd480657e6",
+        "ef4f8371342577a13b278be3d9abda7ac6c31aab6446529931657da1ad2ea234"
+      ],
+      "port": [
+        20,
+        80
+      ],
+      "second": {
+        "frame_maximum_label": 1974710128,
+        "gcd_legs": 1,
+        "input_maximum_label": 1974710128,
+        "k": 370658,
+        "l": 184901,
+        "label_constant": 1971216,
+        "m": null,
+        "maximum_label": 271300197357121619392,
+        "new_port": [
+          68290883193564020,
+          279613488499392080
+        ],
+        "norm_seed": [
+          1,
+          2,
+          1
+        ],
+        "output_bits": 100,
+        "output_vertices": 11248,
+        "r": 183179,
+        "seams": [
+          [
+            68290883193564020,
+            279613488499392080
+          ],
+          [
+            471269572600320080,
+            1929588885897024320
+          ]
+        ],
+        "source_bits": [
+          50,
+          50
+        ],
+        "source_scales": [
+          33554546041,
+          137387352964
+        ],
+        "source_vertices": [
+          5624,
+          5624
+        ],
+        "square_class": 5,
+        "t": 430
+      },
+      "second_cycle_sha256": "c7fa1cda207ee1d196ccf4154463d4ce83dcb942e000a93235d7f44f742d8738",
+      "source_context": {
+        "free_source_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "pins": {}
+      }
+    },
+    {
+      "N": 2828,
+      "class": 2,
+      "first": {
+        "frame_maximum_label": 2828,
+        "gcd_legs": 1,
+        "input_maximum_label": 2828,
+        "k": 1246769,
+        "l": 1000025,
+        "label_constant": 2810424250624,
+        "m": null,
+        "maximum_label": 4395936352512908,
+        "new_port": [
+          257595561771842,
+          898462238950658
+        ],
+        "norm_seed": [
+          17,
+          31,
+          25
+        ],
+        "output_bits": 50,
+        "output_vertices": 5656,
+        "r": 667583,
+        "seams": [
+          [
+            257595561771842,
+            898462238950658
+          ],
+          [
+            856572092950658,
+            2987620109451842
+          ]
+        ],
+        "source_bits": [
+          25,
+          25
+        ],
+        "source_scales": [
+          445667061889,
+          1554432939361
+        ],
+        "source_vertices": [
+          2828,
+          2828
+        ],
+        "square_class": 2,
+        "t": 200
+      },
+      "first_cycle_sha256": [
+        "11502cd2a97062cd62ca58e7feed292caa65f045a5438a81d79678197992dc1e",
+        "57d13a754c343164917965db23217568d71bff252c48fd118105db2e4774e366",
+        "f4db4f81738cfab60c6baab3236fe63bef3f1a43f4c4794a980e84fbbf32d8d9",
+        "9d3cd90114eb3c61c71bee01cc5465263a4934326e6fa70f9b068f681ee67def"
+      ],
+      "port": [
+        578,
+        1922
+      ],
+      "second": {
+        "frame_maximum_label": 4395936352512908,
+        "gcd_legs": 1,
+        "input_maximum_label": 4395936352512908,
+        "k": 8236944169,
+        "l": 6642250025,
+        "label_constant": 2810424250624,
+        "m": null,
+        "maximum_label": 298252189366288314317094567534541388,
+        "new_port": [
+          5252816967137334056558440560599138,
+          17477150283482236587558014104203362
+        ],
+        "norm_seed": [
+          17,
+          31,
+          25
+        ],
+        "output_bits": 100,
+        "output_vertices": 11312,
+        "r": 4515719383,
+        "seams": [
+          [
+            5252816967137334056558440560599138,
+            17477150283482236587558014104203362
+          ],
+          [
+            18321191796279240866771756887203362,
+            60958191461709563534399101851119138
+          ]
+        ],
+        "source_bits": [
+          50,
+          50
+        ],
+        "source_scales": [
+          20391721546001900689,
+          67847249243223100561
+        ],
+        "source_vertices": [
+          5656,
+          5656
+        ],
+        "square_class": 2,
+        "t": 16300
+      },
+      "second_cycle_sha256": "5d7a0df48c848a1ecd80dfded7493ee8d9ceb9c0c08a7357f65b9226c77af3cd",
+      "source_context": {
+        "free_source_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "pins": {}
+      }
+    },
+    {
+      "N": 2812,
+      "class": 10,
+      "first": {
+        "frame_maximum_label": 2812,
+        "gcd_legs": 1,
+        "input_maximum_label": 2812,
+        "k": 1237,
+        "l": 401,
+        "label_constant": 23814400,
+        "m": null,
+        "maximum_label": 4302835228,
+        "new_port": [
+          12454560,
+          244827040
+        ],
+        "norm_seed": [
+          1,
+          3,
+          1
+        ],
+        "output_bits": 48,
+        "output_vertices": 5624,
+        "r": 279,
+        "seams": [
+          [
+            12454560,
+            244827040
+          ],
+          [
+            112091040,
+            2203443360
+          ]
+        ],
+        "source_bits": [
+          24,
+          24
+        ],
+        "source_scales": [
+          77841,
+          1530169
+        ],
+        "source_vertices": [
+          2812,
+          2812
+        ],
+        "square_class": 10,
+        "t": 20
+      },
+      "first_cycle_sha256": [
+        "ddf0e2eef33b56d46b7a0ae74f625d3bc73ef223441cf9d316ae1dd00aba3871",
+        "0dd4cc4437bae558f0de2ab81606b48ece5227c01234e53bdd75a8bf4d6c726c",
+        "36cbdedd07b257141710b5b0f1932f4103256e7ad29dd5308ee34923cb17e4af",
+        "f301b2b972d3494b70a8bfca6a10cd0fb26aa8d00e96ca54af6a56f344545a7c"
+      ],
+      "port": [
+        160,
+        1440
+      ],
+      "second": {
+        "frame_maximum_label": 4302835228,
+        "gcd_legs": 1,
+        "input_maximum_label": 4302835228,
+        "k": 812237,
+        "l": 270401,
+        "label_constant": 23814400,
+        "m": null,
+        "maximum_label": 2838704941901618385532,
+        "new_port": [
+          889729652391564960,
+          8216633718889460640
+        ],
+        "norm_seed": [
+          1,
+          3,
+          1
+        ],
+        "output_bits": 96,
+        "output_vertices": 11248,
+        "r": 267279,
+        "seams": [
+          [
+            889729652391564960,
+            8216633718889460640
+          ],
+          [
+            17489969713523060640,
+            161519484603221529760
+          ]
+        ],
+        "source_bits": [
+          48,
+          48
+        ],
+        "source_scales": [
+          71438063841,
+          659728944169
+        ],
+        "source_vertices": [
+          5624,
+          5624
+        ],
+        "square_class": 10,
+        "t": 520
+      },
+      "second_cycle_sha256": "a07493cd4a089e8a46e9a093ab87581d06778275086e3d183065fa7ecafc91b4",
+      "source_context": {
+        "free_source_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24
+        ],
+        "pins": {
+          "22": 1
+        }
+      }
+    }
+  ],
+  "scope": "Exact selected-carrier products in square classes2,5,10, retaining the source-bit pin for the variable class10 port. No full induced-graph count is claimed.",
+  "status": "passed"
+}

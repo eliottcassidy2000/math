@@ -1,0 +1,298 @@
+{
+  "F_bound": 128,
+  "actual_maximum_vertices": 9,
+  "actual_state_witnesses": 737,
+  "complete_zero_tail_targets_3_to127": {
+    "3": {
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zeros": 1
+    },
+    "5": {
+      "rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zeros": 2
+    },
+    "9": {
+      "rows": [
+        2,
+        28,
+        25,
+        17,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zeros": 3
+    },
+    "17": {
+      "rows": [
+        2,
+        60,
+        57,
+        49,
+        33,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zeros": 4
+    },
+    "33": {
+      "rows": [
+        2,
+        124,
+        121,
+        113,
+        97,
+        65,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zeros": 5
+    },
+    "41": {
+      "rows": [
+        2,
+        76,
+        73,
+        81,
+        103,
+        79,
+        1
+      ],
+      "state": [
+        23,
+        16,
+        2,
+        9
+      ],
+      "zeros": 1
+    },
+    "65": {
+      "rows": [
+        2,
+        252,
+        249,
+        241,
+        225,
+        193,
+        129,
+        1
+      ],
+      "state": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "zeros": 6
+    },
+    "67": {
+      "rows": [
+        6,
+        100,
+        72,
+        83,
+        103,
+        77,
+        1
+      ],
+      "state": [
+        29,
+        32,
+        6,
+        11
+      ],
+      "zeros": 1
+    },
+    "69": {
+      "rows": [
+        6,
+        84,
+        72,
+        83,
+        101,
+        79,
+        1
+      ],
+      "state": [
+        31,
+        32,
+        6,
+        13
+      ],
+      "zeros": 1
+    },
+    "71": {
+      "rows": [
+        20,
+        85,
+        72,
+        83,
+        100,
+        79,
+        1
+      ],
+      "state": [
+        33,
+        32,
+        6,
+        13
+      ],
+      "zeros": 1
+    },
+    "73": {
+      "rows": [
+        2,
+        204,
+        201,
+        209,
+        231,
+        207,
+        129,
+        1
+      ],
+      "state": [
+        23,
+        16,
+        2,
+        9
+      ],
+      "zeros": 2
+    },
+    "91": {
+      "rows": [
+        54,
+        68,
+        72,
+        83,
+        102,
+        78,
+        1
+      ],
+      "state": [
+        19,
+        64,
+        8,
+        9
+      ],
+      "zeros": 1
+    },
+    "95": {
+      "rows": [
+        8,
+        141,
+        169,
+        144,
+        167,
+        203,
+        159,
+        1
+      ],
+      "state": [
+        55,
+        32,
+        8,
+        31
+      ],
+      "zeros": 1
+    },
+    "101": {
+      "rows": [
+        60,
+        69,
+        72,
+        82,
+        102,
+        78,
+        1
+      ],
+      "state": [
+        31,
+        64,
+        6,
+        9
+      ],
+      "zeros": 1
+    },
+    "111": {
+      "rows": [
+        50,
+        100,
+        73,
+        83,
+        102,
+        76,
+        1
+      ],
+      "state": [
+        41,
+        64,
+        6,
+        11
+      ],
+      "zeros": 1
+    }
+  },
+  "h_bound": 31,
+  "literal_ordered_covers": 10934,
+  "literal_parent_graphs": 37,
+  "literal_profiles": 2350,
+  "positive_deficit_states": [
+    [
+      19,
+      64,
+      8,
+      9
+    ],
+    [
+      31,
+      64,
+      6,
+      9
+    ],
+    [
+      41,
+      64,
+      6,
+      11
+    ]
+  ],
+  "q_bound": 64,
+  "scope": "All retained profiles checked by permutation covers. Every finite automaton state is checked on actual adjacency; completeness across parent orders uses the SCC theorem and inherited strong floor.",
+  "status": "passed",
+  "transitions": 849
+}

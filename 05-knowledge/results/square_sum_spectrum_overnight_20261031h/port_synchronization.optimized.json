@@ -1,0 +1,176 @@
+{
+  "full_cycle_sha256": [
+    "db627a16d4943d0f616c7d4dd1da56d87bbcbfe1f7a42ae04ab9628c0b5c64d3",
+    "d584040b53de04955f03d1f3a705e4aeb97a8bbf863c154e3bf82fc470a15fcc",
+    "134773c0bc34309658d67eeaacde7456100c5c6aec5a8a626e436825a2f2a68e",
+    "ea0cb15a251658a11b9dbf7975750096840f9840c763609ca09f508bf224973a"
+  ],
+  "rejected_unaligned_direct_join": true,
+  "scope": "Different primitive port shapes in one square class become compatible after two copies of each source; counts square before multiplying. No unpaid one-copy heterogeneous join is asserted.",
+  "status": "passed",
+  "synchronization": {
+    "aligned_port": [
+      705600,
+      17288964
+    ],
+    "alignment_square_roots": [
+      14,
+      3
+    ],
+    "first_frames": [
+      {
+        "frame_maximum_label": 2861,
+        "gcd_legs": 1,
+        "input_maximum_label": 2812,
+        "k": 20,
+        "l": 101,
+        "label_constant": 256,
+        "m": 10,
+        "maximum_label": 27560412,
+        "new_port": [
+          3600,
+          88209
+        ],
+        "norm_seed": [
+          7,
+          24,
+          25
+        ],
+        "output_bits": 50,
+        "output_vertices": 5624,
+        "r": 99,
+        "seams": [
+          [
+            3600,
+            88209
+          ],
+          [
+            6400,
+            156816
+          ]
+        ],
+        "source_bits": [
+          25,
+          25
+        ],
+        "source_scales": [
+          9801,
+          400
+        ],
+        "source_vertices": [
+          2812,
+          2812
+        ],
+        "square_class": 1,
+        "t": null
+      },
+      {
+        "frame_maximum_label": 2861,
+        "gcd_legs": 1,
+        "input_maximum_label": 2861,
+        "k": 20,
+        "l": 101,
+        "label_constant": 256,
+        "m": 10,
+        "maximum_label": 28040661,
+        "new_port": [
+          78400,
+          1920996
+        ],
+        "norm_seed": [
+          7,
+          24,
+          25
+        ],
+        "output_bits": 50,
+        "output_vertices": 5722,
+        "r": 99,
+        "seams": [
+          [
+            78400,
+            1920996
+          ],
+          [
+            921600,
+            22581504
+          ]
+        ],
+        "source_bits": [
+          25,
+          25
+        ],
+        "source_scales": [
+          9801,
+          400
+        ],
+        "source_vertices": [
+          2861,
+          2861
+        ],
+        "square_class": 1,
+        "t": null
+      }
+    ],
+    "outer": {
+      "frame_maximum_label": 5401840752,
+      "gcd_legs": 1,
+      "input_maximum_label": 5401840752,
+      "k": 548,
+      "l": 75077,
+      "label_constant": 256,
+      "m": 274,
+      "maximum_label": 30446155323814230000,
+      "new_port": [
+        211894502400,
+        3976941969000000
+      ],
+      "norm_seed": [
+        7,
+        24,
+        25
+      ],
+      "output_bits": 100,
+      "output_vertices": 11346,
+      "r": 75075,
+      "seams": [
+        [
+          211894502400,
+          3976941969000000
+        ],
+        [
+          5191945045056,
+          97445020595422500
+        ]
+      ],
+      "source_bits": [
+        50,
+        50
+      ],
+      "source_scales": [
+        5636255625,
+        300304
+      ],
+      "source_vertices": [
+        5624,
+        5722
+      ],
+      "square_class": 1,
+      "t": null
+    },
+    "source_multiplicities": [
+      2,
+      2
+    ],
+    "source_ports": [
+      [
+        9,
+        16
+      ],
+      [
+        196,
+        2304
+      ]
+    ],
+    "square_class": 1
+  }
+}

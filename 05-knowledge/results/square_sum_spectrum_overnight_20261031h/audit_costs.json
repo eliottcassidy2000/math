@@ -1,0 +1,146 @@
+{
+  "actual_dyadic_sources": 48,
+  "arbitrary_slope_reroutes": {
+    "11": {
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "state": [
+        5,
+        6,
+        0,
+        1
+      ],
+      "terminal_vertices": 5
+    },
+    "23": {
+      "rows": [
+        22,
+        20,
+        24,
+        19,
+        0
+      ],
+      "state": [
+        5,
+        15,
+        3,
+        3
+      ],
+      "terminal_vertices": 6
+    },
+    "47": {
+      "rows": [
+        30,
+        60,
+        56,
+        48,
+        32,
+        1
+      ],
+      "state": [
+        17,
+        30,
+        0,
+        1
+      ],
+      "terminal_vertices": 7
+    },
+    "55": {
+      "rows": [
+        54,
+        36,
+        56,
+        51,
+        34,
+        0
+      ],
+      "state": [
+        9,
+        41,
+        5,
+        5
+      ],
+      "terminal_vertices": 7
+    },
+    "119": {
+      "rows": [
+        124,
+        101,
+        120,
+        114,
+        98,
+        64,
+        0
+      ],
+      "state": [
+        11,
+        103,
+        5,
+        5
+      ],
+      "terminal_vertices": 8
+    },
+    "247": {
+      "rows": [
+        488,
+        493,
+        505,
+        464,
+        483,
+        456,
+        384,
+        256,
+        0
+      ],
+      "state": [
+        15,
+        223,
+        9,
+        9
+      ],
+      "terminal_vertices": 10
+    }
+  },
+  "closure_states": 16607,
+  "closure_transitions": 18721,
+  "deficit9_optimal_first_output": 1015,
+  "deficit9_optimal_q": 512,
+  "exact_minimum_dyadic_slopes_through256": {
+    "3": 128,
+    "11": 128,
+    "13": 256,
+    "17": 64,
+    "19": 128,
+    "23": 128,
+    "25": 128,
+    "27": 64,
+    "35": 256,
+    "37": 64,
+    "39": 128,
+    "41": 256,
+    "45": 256,
+    "51": 256,
+    "59": 256,
+    "67": 128,
+    "69": 256,
+    "89": 256,
+    "119": 256,
+    "133": 256,
+    "137": 256,
+    "151": 256,
+    "155": 256,
+    "157": 256,
+    "159": 256
+  },
+  "kernel_checks": 16545,
+  "literal_covers": 1451766,
+  "literal_parent_graphs": 713,
+  "literal_profiles": 9499,
+  "profile_covers_equal": true,
+  "scope": "Complete bounded-cost classification plus the all-order source reduction; direct adjacency audits of every positive dyadic state and six hostile reroutes. Universal spectrum completeness remains open.",
+  "status": "passed"
+}

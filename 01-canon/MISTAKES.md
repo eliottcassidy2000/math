@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — an invariant port in one terminal state is not universal across residues
+
+- **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031h`; the probe failed before a universal claim was promoted.
+- **Witness / failed implication:**9--16 is an invariant square-sum edge at N2812 and2861, but is absent from the A carrier at N2815. A few adjacent examples do not identify all quotient-parity/residue states.
+- **Repair:** the symbolic adjacent atoms `single(9), head(9)` authenticate the unchanged port for the exact parity0/residue12 state, giving N=50t+12 for t>=56. Other ports are separately compiled;160--1440 requires bit22=1 and pays that bit in each source copy.
+- **Related guard:** square-scaled copies are disjoint under a primitive-leg size bound. Dropping coprimality loses the source side:6^2*16=8^2*9=576 even though6^2>16. The repaired seam retains its square class, primitive norm seed, source partition and scaling address.
+
 ## 2026-10-31 — an edge set does not supply a rooted order or numeric bit addresses
 
 - **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031g`; both failures were caught by independent consequence consumers before promotion.

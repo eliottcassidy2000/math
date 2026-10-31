@@ -1,0 +1,134 @@
+{
+  "base_progression": {
+    "N": "50t+12",
+    "port": [
+      9,
+      16
+    ],
+    "symbolic_atom_pair": [
+      [
+        "single",
+        9
+      ],
+      [
+        "head",
+        9
+      ]
+    ],
+    "t_min": 56
+  },
+  "complete_free_product_bits": 6,
+  "distinct_complete_cycles": 64,
+  "first_glue": {
+    "frame_maximum_label": 2862,
+    "gcd_legs": 1,
+    "input_maximum_label": 2862,
+    "k": 20,
+    "l": 101,
+    "label_constant": 256,
+    "m": 10,
+    "maximum_label": 27560412,
+    "new_port": [
+      3600,
+      88209
+    ],
+    "norm_seed": [
+      3,
+      4,
+      5
+    ],
+    "output_bits": 50,
+    "output_vertices": 5674,
+    "r": 99,
+    "seams": [
+      [
+        3600,
+        88209
+      ],
+      [
+        6400,
+        156816
+      ]
+    ],
+    "source_bits": [
+      25,
+      25
+    ],
+    "source_scales": [
+      9801,
+      400
+    ],
+    "source_vertices": [
+      2812,
+      2862
+    ],
+    "square_class": 1,
+    "t": null
+  },
+  "hostile_non_square_endpoint_rejected": true,
+  "noncoprime_collision": {
+    "common_scaled_label": 576,
+    "legs": [
+      6,
+      8
+    ],
+    "source_labels": [
+      16,
+      9
+    ]
+  },
+  "scope": "Exact Hamiltonian product for the selected subcubic carrier on a sparse union of square-scaled vertex sets. Not an initial interval or the full induced square-sum graph.",
+  "second_glue": {
+    "frame_maximum_label": 27560412,
+    "gcd_legs": 1,
+    "input_maximum_label": 27560412,
+    "k": 148,
+    "l": 5477,
+    "label_constant": 256,
+    "m": 74,
+    "maximum_label": 826140574957500,
+    "new_port": [
+      78854400,
+      107912250000
+    ],
+    "norm_seed": [
+      3,
+      4,
+      5
+    ],
+    "output_bits": 100,
+    "output_vertices": 11348,
+    "r": 5475,
+    "seams": [
+      [
+        78854400,
+        107912250000
+      ],
+      [
+        1932129936,
+        2644119905625
+      ]
+    ],
+    "source_bits": [
+      50,
+      50
+    ],
+    "source_scales": [
+      29975625,
+      21904
+    ],
+    "source_vertices": [
+      5674,
+      5674
+    ],
+    "square_class": 1,
+    "t": null
+  },
+  "second_glue_full_code_sha256": [
+    "175dcc9f830514028a9e7be17006e2245901507fabfdec90482a1afd977e5b39",
+    "212bcecfdadc0e3cd690da692f8108c2ab376c1d5b870e25f1aea6f6ff0d24ae",
+    "f8b31ad1d57a1ca50aec0740bccd386df6bc097a90cdf7759d53aef085a93896",
+    "efca6280dcbf32bc2844d0e32643d358d489c422016bc5dc4bcdfe3ff0fc280d"
+  ],
+  "status": "passed"
+}

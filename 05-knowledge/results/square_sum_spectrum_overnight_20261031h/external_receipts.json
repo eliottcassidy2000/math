@@ -1,0 +1,20 @@
+[
+  {
+    "path": "/opt/homebrew/bin/gentourng",
+    "resolved_path": "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+    "sha256": "89df605922cc574b28688248b7c256d24342cc615f887e89b2d096038970c110",
+    "bytes": 131832
+  },
+  {
+    "path": "/tmp/square-strong-reps8.txt",
+    "resolved_path": "/private/tmp/square-strong-reps8.txt",
+    "sha256": "abd6bf66a4e7e2dacb2c33e27bcbb93e0cd14c79bc8dfb680d5920d67b02aa40",
+    "bytes": 195447
+  },
+  {
+    "path": "/tmp/square-strong-reps9.txt",
+    "resolved_path": "/private/tmp/square-strong-reps9.txt",
+    "sha256": "81e008cd7853c6e097bfee189f61673ec9691a39fc6fa4469f7865c648938750",
+    "bytes": 7142634
+  }
+]
