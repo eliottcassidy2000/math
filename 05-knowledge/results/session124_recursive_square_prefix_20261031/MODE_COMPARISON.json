@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "comparison": "All receipt fields equal after removing only optimization_level.",
+  "base_pairs": 2568,
+  "paired_states": 98,
+  "cycle_states": 98,
+  "cycle_control_sizes": [
+    2621,
+    2622,
+    128453,
+    128454,
+    6294221
+  ]
+}

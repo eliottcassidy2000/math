@@ -1,0 +1,183 @@
+{
+  "status": "passed",
+  "optimization_level": 0,
+  "paired_states": 98,
+  "cycle_states": 98,
+  "paired_dualities": 49,
+  "paired_universal_checks": 92275,
+  "direct_universal_checks": 32167,
+  "catalog_and_hash_checks": 548,
+  "base_report": {
+    "base_pairs": 2568,
+    "base_chunks": 11,
+    "checks": 17176137
+  },
+  "cycle_controls": [
+    {
+      "status": "passed",
+      "N": 2621,
+      "depth": 1,
+      "threshold": 2621,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ],
+      "closing_vertex": 15,
+      "cycle_decimal_lines_sha256": "e64ac0c802e489744e80fe6a1d603fc2080a1422d3bc6c659f162f3dd8334aaf",
+      "checks": 5537,
+      "used_base_chunks": [
+        "B_base_roots_0053_0308.bin.gz"
+      ],
+      "used_new_pair_states": [],
+      "direct_state": [
+        1,
+        24
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 2622,
+      "depth": 1,
+      "threshold": 2621,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151
+      ],
+      "closing_vertex": 8,
+      "cycle_decimal_lines_sha256": "95148a210d1b4e022c7ba2b296030397687d95a63ff49ad4f7273f90e7f7ba06",
+      "checks": 5539,
+      "used_base_chunks": [
+        "B_base_roots_0053_0308.bin.gz"
+      ],
+      "used_new_pair_states": [],
+      "direct_state": [
+        1,
+        25
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 128453,
+      "depth": 2,
+      "threshold": 128453,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ],
+      "closing_vertex": 15,
+      "cycle_decimal_lines_sha256": "87205e333733e648e3de90fe33a78240bf680e0000048e3b7341a35006ae534c",
+      "checks": 270311,
+      "used_base_chunks": [
+        "B_base_roots_0053_0308.bin.gz"
+      ],
+      "used_new_pair_states": [
+        [
+          1,
+          24
+        ]
+      ],
+      "direct_state": [
+        1,
+        24
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 128454,
+      "depth": 2,
+      "threshold": 128453,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403
+      ],
+      "closing_vertex": 8,
+      "cycle_decimal_lines_sha256": "3bd259607fe2b0efcf68a089a3c1223811e003abe23b028679a0d795cbf1d214",
+      "checks": 270313,
+      "used_base_chunks": [
+        "B_base_roots_0053_0308.bin.gz"
+      ],
+      "used_new_pair_states": [
+        [
+          1,
+          24
+        ]
+      ],
+      "direct_state": [
+        1,
+        25
+      ],
+      "cycle_stored": false
+    },
+    {
+      "status": "passed",
+      "N": 6294221,
+      "depth": 3,
+      "threshold": 6294221,
+      "prefix": [
+        1,
+        3,
+        6,
+        19,
+        45,
+        151,
+        290,
+        935,
+        2201,
+        7403,
+        14206,
+        45819,
+        107845,
+        362751
+      ],
+      "closing_vertex": 15,
+      "cycle_decimal_lines_sha256": "d9e6d31af83cd36376508a13fc6a796f60a9a7631f7b9b660479173665e47627",
+      "checks": 13244117,
+      "used_base_chunks": [
+        "B_base_roots_0053_0308.bin.gz"
+      ],
+      "used_new_pair_states": [
+        [
+          1,
+          24
+        ],
+        [
+          1,
+          24
+        ]
+      ],
+      "direct_state": [
+        1,
+        24
+      ],
+      "cycle_stored": false
+    }
+  ],
+  "old_transition_tables_used": false
+}
