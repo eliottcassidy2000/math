@@ -1,0 +1,38 @@
+{
+  "curves": 26,
+  "independent_odd_multiples": 260,
+  "rejected_false_norm_seeds": [
+    [
+      10,
+      [
+        3,
+        19,
+        0
+      ]
+    ]
+  ],
+  "scope": "Integer projective arithmetic versus the rational affine producer, with exact seam consequences. This is not a numerical rank computation.",
+  "square_classes": [
+    1,
+    2,
+    5,
+    10,
+    13,
+    17,
+    26,
+    29,
+    34,
+    37,
+    53,
+    58,
+    65,
+    73,
+    82,
+    85,
+    101,
+    109,
+    122,
+    130
+  ],
+  "status": "passed"
+}

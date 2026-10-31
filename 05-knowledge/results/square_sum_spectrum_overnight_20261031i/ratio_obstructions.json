@@ -1,0 +1,16 @@
+{
+  "complete_interval_controls": 320,
+  "native_forbidden_ratios": 1763,
+  "native_frame_bound": 1764,
+  "native_interval_pair": [
+    2812,
+    2861
+  ],
+  "raw_pair_bound": 8045133,
+  "scaled_chart_controls": 1,
+  "scope": "Exact finite bad-ratio sets for disjoint square-scaled interval charts; the charts retain source labels and multiplicities without factoring the larger output integers.",
+  "second_join_forbidden_ratios": 3436,
+  "small_equal_class_pairs": 180,
+  "status": "passed",
+  "totient_sum_through53": 882
+}

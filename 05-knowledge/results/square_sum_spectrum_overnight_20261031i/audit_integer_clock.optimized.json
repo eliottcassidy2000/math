@@ -1,0 +1,21 @@
+{
+  "examples": [],
+  "fixed_frame_collision": {
+    "scale_roots": [
+      117,
+      20
+    ],
+    "source_labels": [
+      400,
+      13689
+    ]
+  },
+  "heterogeneous_frames": 324,
+  "independent_integer_stages": 972,
+  "large_frame_stage": 1,
+  "maximum_observed_stage": 1,
+  "maximum_stated_bound": 13,
+  "primitive_triangles": 18,
+  "scope": "Exact finite controls of two independent arithmetic implementations; uniform termination is proved by the parity invariant, not the observed maximum stage.",
+  "status": "passed"
+}

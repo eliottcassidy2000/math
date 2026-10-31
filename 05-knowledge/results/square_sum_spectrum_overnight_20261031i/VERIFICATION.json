@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "review": "Same-agent proof audit and separate arithmetic/edge-set implementations; no subagent or external audit.",
+  "python": [
+    {
+      "script": "one_copy_ports.py",
+      "normal_equals_optimized": true,
+      "sha256": "8011129e9f97f21dbac174cf53fb72a54fcef4b7444c29a3a6869a15bd624bbe"
+    },
+    {
+      "script": "audit_integer_clock.py",
+      "normal_equals_optimized": true,
+      "sha256": "67516a8c3a15629736bebf20b81fed7ec061e838aae09c35fb049c9553a9dd46"
+    },
+    {
+      "script": "elliptic_ports.py",
+      "normal_equals_optimized": true,
+      "sha256": "91c8828bc4d671d53021f115e2158f7ecc2369df7e02e855d74dd694c1c55b63"
+    },
+    {
+      "script": "audit_projective.py",
+      "normal_equals_optimized": true,
+      "sha256": "6475982d499252f1448115d9321140a44043beddde2c75ffd241660ff35ce5ca"
+    },
+    {
+      "script": "ratio_obstructions.py",
+      "normal_equals_optimized": true,
+      "sha256": "2683cea21f3967cba855f8f62f198014bff7a30a05594c59b4f48ae49bad5f85"
+    },
+    {
+      "script": "weighted_join.py",
+      "normal_equals_optimized": true,
+      "sha256": "8a83836181942fe4b8300403892f3d918fc5cc3d18c4a3866e83b1671aa1ed58"
+    }
+  ],
+  "controls": {
+    "integer_clock": "324 frames; 972 independently homogeneous stages; equal-shape and physical-orientation guards.",
+    "projective_group_law": "260 odd multiples on 26 curves across 20 square classes, integer projective versus rational affine.",
+    "source_ownership": "Eight forced bad frames followed by an exact disjoint ninth; arithmetic sets only.",
+    "weighted_cycles": "All 16 actual cycles of a four-free-bit fibre; signed product identity.",
+    "forbidden_ratios": "320 complete interval pairs and one scaled-chart union checked by literal source pairs."
+  },
+  "proof_scope": "One-copy product for authenticated same-square-class ports on selected sparse carriers. Not an interval Hamiltonicity extension or universal tournament spectrum theorem."
+}

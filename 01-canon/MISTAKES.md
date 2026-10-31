@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-10-31 — valid arithmetic seams can still identify the two source copies
+
+- **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031i`; the collision was retained as the starting obstruction, not accepted as a graph join.
+- **Witness / failed implication:** for ports9--16 and196--2304, the obvious norm solution has physical scale roots7 and2. Its two seam sums are squares, but49*16=4*196=784, so source ownership fails. Two valid edge equations alone do not certify four distinct ports.
+- **Repair / strongest survivor:** retain the finite forbidden ratio set. Odd multiples of an explicitly nontorsion point preserve both seam square classes and give distinct ratios. Each actual source pair excludes at most one frame, proving a disjoint frame exists with a finite integer clock. A constructed hostile blocks eight frames before17P escapes.
+- **Computational guard:** an early auxiliary norm seed(11,38,17) for class5 failed the exact norm equation and was excluded; the corrected positive seed is(1,38,17). No invalid seed entered a curve or proof dependency. A separate deliberately false class10 seed remains as a rejection control.
+
 ## 2026-10-31 — an invariant port in one terminal state is not universal across residues
 
 - **Source/status:** pre-release `05-knowledge/results/square_sum_spectrum_overnight_20261031h`; the probe failed before a universal claim was promoted.

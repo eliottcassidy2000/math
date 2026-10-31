@@ -1,0 +1,14 @@
+{
+  "complete_cycle_fibre": 16,
+  "joined_signed_sum": -442368,
+  "scope": "The sixteen actual edge-set products agree with the source-preserving polynomial identity; no positivity or averaging assumption is used.",
+  "seam_weights": [
+    2,
+    -3
+  ],
+  "source_path_sums": [
+    96,
+    768
+  ],
+  "status": "passed"
+}
