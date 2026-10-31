@@ -1,0 +1,46 @@
+{
+  "compact_mode_serialization_from_full_ledger_matches": true,
+  "direct_compact_cli_replay": "PASS; full recomputation output byte-identical to published compact receipt",
+  "files": {
+    "compact_receipt.py": {
+      "bytes": 1907,
+      "sha256": "932291f530c85d7572f07e511a8c1a8554a2bf8e6dd01e38fb98d610f6afc09e"
+    },
+    "controls.json": {
+      "bytes": 116,
+      "sha256": "2f47927d73130a5a63b173aeffe42a897846d260508e90c52f41d25a00ebb7bb"
+    },
+    "controls.optimized.json": {
+      "bytes": 116,
+      "sha256": "2f47927d73130a5a63b173aeffe42a897846d260508e90c52f41d25a00ebb7bb"
+    },
+    "controls.py": {
+      "bytes": 1736,
+      "sha256": "f4b9ca934dfc83ec0602a6ab1404ae33503cf6714f9447145a4f514be50979d5"
+    },
+    "source_lrc_banks.py": {
+      "bytes": 7079,
+      "sha256": "4789a715e13314547f34c6061886b0c0133aad57e583e447a3f0953b5ce13c40"
+    },
+    "triple_certificate.py": {
+      "bytes": 3647,
+      "sha256": "e1361a68c0be73e23c747455fc332fec875d2042a29ada15e30a8ab193911b8d"
+    },
+    "triple_compact_receipt.json": {
+      "bytes": 175456,
+      "sha256": "e264a1ab7b31a3c7e1ca082c46ebddedd212594df568a638b4d8960a3c620bb0"
+    },
+    "triple_receipt.json": {
+      "bytes": 12405806,
+      "sha256": "5fc90cf7308ec97660136047e80ee2aa956a0ad95722a3f5adc38bcf1a701ea0"
+    },
+    "triple_receipt.optimized.json": {
+      "bytes": 12405806,
+      "sha256": "5fc90cf7308ec97660136047e80ee2aa956a0ad95722a3f5adc38bcf1a701ea0"
+    }
+  },
+  "independent_audit": "PASS; ../audit_lrc/AUDIT.md and normal/optimized result, binding and mutation receipts",
+  "normal_optimized_complete_ledgers_byte_identical": true,
+  "normal_optimized_controls_byte_identical": true,
+  "source_snapshot": "0578f16726e4e535189fb6074cc2ddb024c95d82"
+}

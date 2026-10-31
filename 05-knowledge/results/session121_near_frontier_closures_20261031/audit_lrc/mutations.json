@@ -1,0 +1,1 @@
+{"mutations": [{"mutation": "missing_core", "rejected_by": "complete unique core census"}, {"mutation": "missing_first_branch", "rejected_by": "first coverage"}, {"mutation": "missing_second_branch", "rejected_by": "second coverage"}, {"mutation": "false_second_width", "rejected_by": "second width"}, {"mutation": "false_cutoff", "rejected_by": "single cutoff"}], "status": "PASS"}

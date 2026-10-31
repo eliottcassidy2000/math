@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "script": "collatz/check_quantized_native14.py",
+      "status": "PASS",
+      "stdout_sha256": "ad63049e6c12243205ce56119d69412edac5a157d7220c519630a13c4f1d7e07"
+    },
+    {
+      "script": "audit_collatz/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "9730093e4c6d36e00cc3538eeadde9cf95ce74b9a7a4982a1c0ebea6c83c977b"
+    },
+    {
+      "script": "ramsey/check_translation.py",
+      "status": "PASS",
+      "stdout_sha256": "6ed8b79ee58cbe5c02ae40a121145d5d3bd1a056fa1d4b316ca40ac4ad4d879e"
+    },
+    {
+      "script": "lrc/controls.py",
+      "status": "PASS",
+      "stdout_sha256": "2f47927d73130a5a63b173aeffe42a897846d260508e90c52f41d25a00ebb7bb"
+    },
+    {
+      "script": "audit_lrc/check.py",
+      "status": "PASS",
+      "stdout_sha256": "84acec14e0b00def4e9ac26ec206e3a2f524412296d89d343ac7435ee2c38f81"
+    },
+    {
+      "script": "audit_lrc/compact_binding.py",
+      "status": "PASS",
+      "stdout_sha256": "17742688a0160b8e6394aff45a77ad292bc435105c22645e01c6337fa8a7f214"
+    },
+    {
+      "script": "audit_lrc/mutation_controls.py",
+      "status": "PASS",
+      "stdout_sha256": "daea2740015b899b1d9dd7a2f6063273f8621bd7c5abc34ab5eb84bd43094f1f"
+    }
+  ],
+  "compact_receipt_sha256": "e264a1ab7b31a3c7e1ca082c46ebddedd212594df568a638b4d8960a3c620bb0",
+  "core_count": 286,
+  "finite_leaves": 67585,
+  "full_ledger_sha256": "5fc90cf7308ec97660136047e80ee2aa956a0ad95722a3f5adc38bcf1a701ea0",
+  "full_lrc_replay": "PASS",
+  "normal_and_optimized": "identical",
+  "scope": "Complete declared finite replays plus separate analytic proofs; inherited E10 certificate and general Presburger compiler are not run",
+  "second_joint_branches": 574336,
+  "status": "PASS"
+}
