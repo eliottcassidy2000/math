@@ -1,0 +1,167 @@
+==============================================================================
+A. Census of Q_N: Hamiltonian paths and cycles (reversals identified), terminal paths
+==============================================================================
+  N=14 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=15 ham_paths=1 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=16 ham_paths=1 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=17 ham_paths=1 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=18 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=19 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=20 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=21 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=22 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=23 ham_paths=3 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=24 ham_paths=0 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=25 ham_paths=10 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=26 ham_paths=12 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=27 ham_paths=35 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=28 ham_paths=52 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=29 ham_paths=19 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=30 ham_paths=20 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=31 ham_paths=349 ham_cycles=0 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=32 ham_paths=392 ham_cycles=1 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=33 ham_paths=669 ham_cycles=1 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=34 ham_paths=4041 ham_cycles=11 cycles_through_8-1-3=7 cycles_through_15-1-3=2 paths_13_to_10=0
+  N=35 ham_paths=17175 ham_cycles=57 cycles_through_8-1-3=5 cycles_through_15-1-3=3 paths_13_to_10=0
+  N=36 ham_paths=12960 ham_cycles=31 cycles_through_8-1-3=4 cycles_through_15-1-3=0 paths_13_to_10=1
+  N=37 ham_paths=14026 ham_cycles=20 cycles_through_8-1-3=2 cycles_through_15-1-3=1 paths_13_to_10=0
+  N=38 ham_paths=11889 ham_cycles=25 cycles_through_8-1-3=2 cycles_through_15-1-3=1 paths_13_to_10=0
+  N=39 ham_paths=29123 ham_cycles=50 cycles_through_8-1-3=0 cycles_through_15-1-3=0 paths_13_to_10=0
+  N=40 ham_paths=39550 ham_cycles=64 cycles_through_8-1-3=11 cycles_through_15-1-3=2 paths_13_to_10=1
+  N=41 ham_paths=219968 ham_cycles=464 cycles_through_8-1-3=38 cycles_through_15-1-3=17 paths_13_to_10=1
+  N=42 ham_paths=553694 ham_cycles=1062 cycles_through_8-1-3=139 cycles_through_15-1-3=77 paths_13_to_10=48
+  paths exist for N in {15,16,17,23} and every N >= 25 (to 42); first cycle N = 32 (unique), N = 33 (unique)
+
+==============================================================================
+B. Ninja (weak B) pairs, exhaustive for 15 <= n <= 53
+==============================================================================
+  n=15: ninja=no  matching Shorter paths=0  | shorter(order 15, end 10) paths=0 longer(order 16, end 8) paths=0 distinct_longer_masks=0
+  n=16: ninja=no  matching Shorter paths=0  | shorter(order 16, end 8) paths=0 longer(order 17, end 10) paths=0 distinct_longer_masks=0
+  n=17: ninja=no  matching Shorter paths=0  | shorter(order 17, end 10) paths=0 longer(order 18, end 8) paths=0 distinct_longer_masks=0
+  n=18: ninja=no  matching Shorter paths=0  | shorter(order 18, end 8) paths=0 longer(order 19, end 10) paths=0 distinct_longer_masks=0
+  n=19: ninja=no  matching Shorter paths=0  | shorter(order 19, end 10) paths=0 longer(order 20, end 8) paths=0 distinct_longer_masks=0
+  n=20: ninja=no  matching Shorter paths=0  | shorter(order 20, end 8) paths=0 longer(order 21, end 10) paths=0 distinct_longer_masks=0
+  n=21: ninja=no  matching Shorter paths=0  | shorter(order 21, end 10) paths=0 longer(order 22, end 8) paths=0 distinct_longer_masks=0
+  n=22: ninja=no  matching Shorter paths=0  | shorter(order 22, end 8) paths=0 longer(order 23, end 10) paths=0 distinct_longer_masks=0
+  n=23: ninja=no  matching Shorter paths=0  | shorter(order 23, end 10) paths=0 longer(order 24, end 8) paths=0 distinct_longer_masks=0
+  n=24: ninja=no  matching Shorter paths=0  | shorter(order 24, end 8) paths=0 longer(order 25, end 10) paths=0 distinct_longer_masks=0
+  n=25: ninja=no  matching Shorter paths=0  | shorter(order 25, end 10) paths=0 longer(order 26, end 8) paths=0 distinct_longer_masks=0
+  n=26: ninja=no  matching Shorter paths=0  | shorter(order 26, end 8) paths=0 longer(order 27, end 10) paths=0 distinct_longer_masks=0
+  n=27: ninja=no  matching Shorter paths=0  | shorter(order 27, end 10) paths=0 longer(order 28, end 8) paths=0 distinct_longer_masks=0
+  n=28: ninja=no  matching Shorter paths=0  | shorter(order 28, end 8) paths=0 longer(order 29, end 10) paths=0 distinct_longer_masks=0
+  n=29: ninja=no  matching Shorter paths=0  | shorter(order 29, end 10) paths=0 longer(order 30, end 8) paths=0 distinct_longer_masks=0
+  n=30: ninja=no  matching Shorter paths=0  | shorter(order 30, end 8) paths=0 longer(order 31, end 10) paths=0 distinct_longer_masks=0
+  n=31: ninja=no  matching Shorter paths=0  | shorter(order 31, end 10) paths=0 longer(order 32, end 8) paths=0 distinct_longer_masks=0
+  n=32: ninja=no  matching Shorter paths=0  | shorter(order 32, end 8) paths=0 longer(order 33, end 10) paths=0 distinct_longer_masks=0
+  n=33: ninja=no  matching Shorter paths=0  | shorter(order 33, end 10) paths=0 longer(order 34, end 8) paths=7 distinct_longer_masks=5
+  n=34: ninja=no  matching Shorter paths=0  | shorter(order 34, end 8) paths=7 longer(order 35, end 10) paths=0 distinct_longer_masks=0
+  n=35: ninja=no  matching Shorter paths=0  | shorter(order 35, end 10) paths=0 longer(order 36, end 8) paths=4 distinct_longer_masks=1
+  n=36: ninja=no  matching Shorter paths=0  | shorter(order 36, end 8) paths=4 longer(order 37, end 10) paths=0 distinct_longer_masks=0
+  n=37: ninja=no  matching Shorter paths=0  | shorter(order 37, end 10) paths=0 longer(order 38, end 8) paths=2 distinct_longer_masks=2
+  n=38: ninja=no  matching Shorter paths=0  | shorter(order 38, end 8) paths=2 longer(order 39, end 10) paths=0 distinct_longer_masks=0
+  n=39: ninja=no  matching Shorter paths=0  | shorter(order 39, end 10) paths=0 longer(order 40, end 8) paths=11 distinct_longer_masks=5
+  n=40: ninja=no  matching Shorter paths=0  | shorter(order 40, end 8) paths=11 longer(order 41, end 10) paths=1 distinct_longer_masks=1
+  n=41: ninja=no  matching Shorter paths=0  | shorter(order 41, end 10) paths=1 longer(order 42, end 8) paths=139 distinct_longer_masks=74
+  n=42: ninja=YES  matching Shorter paths=10  | shorter(order 42, end 8) paths=139 longer(order 43, end 10) paths=136 distinct_longer_masks=53
+  n=43: ninja=YES  matching Shorter paths=4  | shorter(order 43, end 10) paths=136 longer(order 44, end 8) paths=946 distinct_longer_masks=403
+  n=44: ninja=YES  matching Shorter paths=45  | shorter(order 44, end 8) paths=946 longer(order 45, end 10) paths=1129 distinct_longer_masks=650
+  n=45: ninja=YES  matching Shorter paths=3  | shorter(order 45, end 10) paths=1129 longer(order 46, end 8) paths=3864 distinct_longer_masks=1567
+  n=46: ninja=YES  matching Shorter paths=5  | shorter(order 46, end 8) paths=3864 longer(order 47, end 10) paths=6083 distinct_longer_masks=3212
+  n=47: ninja=YES  matching Shorter paths=11  | shorter(order 47, end 10) paths=6083 longer(order 48, end 8) paths=8212 distinct_longer_masks=4258
+  n=48: ninja=YES  matching Shorter paths=859  | shorter(order 48, end 8) paths=8212 longer(order 49, end 10) paths=19615 distinct_longer_masks=10393
+  n=49: ninja=YES  matching Shorter paths=108  | shorter(order 49, end 10) paths=19615 longer(order 50, end 8) paths=8591 distinct_longer_masks=4899
+  n=50: ninja=YES  matching Shorter paths=153  | shorter(order 50, end 8) paths=8591 longer(order 51, end 10) paths=24777 distinct_longer_masks=12006
+  n=51: ninja=YES  matching Shorter paths=230  | shorter(order 51, end 10) paths=24777 longer(order 52, end 8) paths=153594 distinct_longer_masks=56545
+  n=52: ninja=YES  matching Shorter paths=10710  | shorter(order 52, end 8) paths=153594 longer(order 53, end 10) paths=302246 distinct_longer_masks=103504
+  n=53: ninja=YES  matching Shorter paths=32242  | shorter(order 53, end 10) paths=302246 longer(order 54, end 8) paths=481425 distinct_longer_masks=138483
+  => no ninja pair for any n <= 41; ninja pairs for every 42 <= n <= 53 (and 53..2620 certified, recursion above)
+
+==============================================================================
+C. The gate: Hamiltonian paths of odd order from 1,3 to 10
+==============================================================================
+  odd N: number of Hamiltonian paths 1,3 -> 10: {15: 0, 17: 0, 19: 0, 21: 0, 23: 0, 25: 0, 27: 0, 29: 0, 31: 0, 33: 0, 35: 0, 37: 0, 39: 0, 41: 1}
+  Q_41 unique path: 1,3,6,30,19,17,32,4,21,15,34,2,7,18,31,33,16,9,40,41,8,28,36,13,23,26,38,11,5,20,29,35,14,22,27,37,12,24,25,39,10
+
+==============================================================================
+D. The unique cycles of Q_32 and Q_33
+==============================================================================
+  Q_32: 1,8,28,21,4,32,17,19,30,6,3,13,12,24,25,11,5,31,18,7,29,20,16,9,27,22,14,2,23,26,10,15
+  Q_33: 1,8,28,21,4,32,17,19,30,6,3,13,12,24,25,11,5,20,29,7,18,31,33,16,9,27,22,14,2,23,26,10,15
+  Q_33 cycle = Q_32 cycle minus [(5, 31), (16, 20)] plus [(5, 20), (16, 33), (31, 33)]: the segment 31..20 reversed and 33 inserted
+  both cycles pass 8-1-15 (8+1 = 9, 15+1 = 16): the two terminal closings of session124 at once
+
+==============================================================================
+E. Terminal-form cycles (8-1-3 for even N, 15-1-3 for odd N)
+==============================================================================
+  exhaustive 30..62: terminal form exists for [34, 35, 36, 37, 38, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62]
+  search 63..1000 (pre-registered HYP-9447) and 1001..2620: every N FOUND with an independently verified cycle
+  => terminal cycles exist exactly for N in {34,...,38} u [40, oo) (N >= 2621: session124 terminal theorem)
+
+==============================================================================
+F. Adding a node: minimal number of old-cycle edges deleted, 32 -> 42
+==============================================================================
+  32 -> 33: cycles 1 -> 1; min deletions 2; histogram {2: 1}
+  33 -> 34: cycles 1 -> 11; min deletions 3; histogram {3: 1, 5: 1, 6: 3, 8: 5, 10: 1}
+  34 -> 35: cycles 11 -> 57; min deletions 2; histogram {2: 10, 3: 9, 4: 6, 5: 19, 6: 6, 7: 4, 8: 3}
+  35 -> 36: cycles 57 -> 31; min deletions 3; histogram {3: 7, 4: 15, 5: 4, 6: 5}
+  36 -> 37: cycles 31 -> 20; min deletions 3; histogram {3: 4, 4: 3, 5: 5, 6: 2, 7: 2, 8: 2, 9: 1, 10: 1}
+  37 -> 38: cycles 20 -> 25; min deletions 4; histogram {4: 3, 5: 6, 6: 10, 7: 6}
+  38 -> 39: cycles 25 -> 50; min deletions 4; histogram {4: 8, 5: 14, 6: 11, 7: 14, 8: 2, 9: 1}
+  39 -> 40: cycles 50 -> 64; min deletions 3; histogram {3: 12, 4: 9, 5: 25, 6: 14, 7: 4}
+  40 -> 41: cycles 64 -> 464; min deletions 2; histogram {2: 13, 3: 35, 4: 99, 5: 149, 6: 91, 7: 61, 8: 14, 9: 2}
+  41 -> 42: cycles 464 -> 1062; min deletions 2; histogram {2: 112, 3: 231, 4: 256, 5: 263, 6: 153, 7: 42, 8: 5}
+  no step from 32 to 42 admits a direct insertion (one deleted edge); 32 -> 33 needs exactly two
+
+==============================================================================
+G. First ninja pairs: the vertex after 1,3 and the consecutive edge 24-25 (sum 49)
+==============================================================================
+  n=42: path pairs 20; distinct members 20; vertex after 1,3: {13: 4, 22: 11, 33: 5}; members with 24-25: 17
+  n=43: path pairs 13; distinct members 11; vertex after 1,3: {22: 7, 33: 4}; members with 24-25: 11
+  n=44: path pairs 221; distinct members 120; vertex after 1,3: {6: 11, 13: 41, 22: 30, 33: 38}; members with 24-25: 99
+  n=45: path pairs 3; distinct members 5; vertex after 1,3: {13: 1, 22: 3, 33: 1}; members with 24-25: 5
+  n=46: path pairs 11; distinct members 16; vertex after 1,3: {13: 9, 22: 1, 46: 6}; members with 24-25: 15
+  n=47: path pairs 17; distinct members 24; vertex after 1,3: {6: 10, 13: 2, 22: 1, 33: 11}; members with 24-25: 5
+  n=48: path pairs 3384; distinct members 1994; vertex after 1,3: {6: 437, 13: 654, 22: 300, 33: 196, 46: 407}; members with 24-25: 1607
+  n=49: path pairs 276; distinct members 179; vertex after 1,3: {6: 26, 13: 19, 22: 30, 33: 75, 46: 29}; members with 24-25: 141
+
+==============================================================================
+H. The base-49 ninja numeration: n = 49^k b + sum d_i 49^i, b in [42, 2081], d_i in [24, 72]
+==============================================================================
+  42 = [42; ]
+  2081 = [2081; ]
+  2082 = [42; 24]
+  2130 = [42; 72]
+  2131 = [43; 24]
+  102102 = [42; 25, 35]
+  128453 = [53; 24, 24]
+  6294221 = [53; 24, 24, 24]
+  digits 24..72 form a complete residue system mod 49, so every n >= 42 has exactly one numeral; adding a node is
+  the odometer d -> d + 1, carrying 72 -> 24 into the next place (since 49 m + 72 + 1 = 49 (m + 1) + 24)
+  constructive: ninja_numeration_replay_20261031.py applies session124's 49 digit operators to the new pairs
+  m = 42..52 (539 outputs, all verified by session124's own check_pair)
+
+==============================================================================
+I. Zeckendorf forms of the owner's numbers and the thresholds (NUMEROLOGY table; no claim)
+==============================================================================
+    1 = 1
+    3 = 3
+    8 = 8
+   15 = 13 + 2
+   16 = 13 + 3
+   17 = 13 + 3 + 1
+   22 = 21 + 1
+   23 = 21 + 2
+   24 = 21 + 3
+   25 = 21 + 3 + 1
+   32 = 21 + 8 + 3
+   33 = 21 + 8 + 3 + 1
+   34 = 34
+   35 = 34 + 1
+   39 = 34 + 5
+   40 = 34 + 5 + 1
+   41 = 34 + 5 + 2
+   42 = 34 + 8
+   49 = 34 + 13 + 2
+   72 = 55 + 13 + 3 + 1
+
+ALL ASSERTIONS PASSED (666.1s)

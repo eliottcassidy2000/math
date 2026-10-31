@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXV 2048
+#define MAXV 4096
 static int N, deg[MAXV], *adj[MAXV], path[MAXV], vis[MAXV], avail[MAXV];
 static long long nodes, budget;
 static int target;

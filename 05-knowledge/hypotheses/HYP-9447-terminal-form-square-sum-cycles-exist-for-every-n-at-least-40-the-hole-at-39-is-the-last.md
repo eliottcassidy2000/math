@@ -1,7 +1,7 @@
 ---
 id: HYP-9447
 title: "Terminal-form square-sum cycles (through 8-1-3 for even N, 15-1-3 for odd N) exist for every N >= 40; N = 39 is the last hole after the first terminal forms at 34/35; pre-registered search for 63 <= N <= 1000"
-status: OPEN (PRE-REGISTERED; the confirmatory run follows this commit)
+status: CONFIRMED (P1, P2, P3 for 63 <= N <= 1000) and completed to a theorem by the window run 1001..2620 plus session124: THM-4851 (c)
 session: opus-2026-10-31-S69
 date: 2026-10-31
 related: [THM-4850, THM-4851]
@@ -43,3 +43,17 @@ Command: `terminal_cycles_large 63 1000 1 1000000000`.
   refuted.
 - An EXHAUSTED N refutes P3 and the conjecture.
 - Every FOUND cycle is re-verified by the program's independent checker: vertex set, square sums and the closing edge.
+
+## Results (confirmatory run, 2026-10-31, after the pre-registration commit 07c2eac4ba)
+
+`terminal_cycles_large 63 1000 1 1000000000` (`terminal_cycles_large_20261031.out`) returned all 938 values of N FOUND,
+each with an independently verified terminal cycle. There were no UNDECIDED and no EXHAUSTED outcomes; the largest
+search used 47,453 nodes, and the run took 1.8 s.
+- **(P1) CONFIRMED.**
+- **(P2) CONFIRMED.**
+- **(P3) CONFIRMED.**
+
+**Completion (exploratory, after the confirmatory run).** `terminal_cycles_large 1001 2620 1 1000000000`
+(`terminal_cycles_large_20261031_window.out`) found and verified all 1620 values, with at most 581,172 nodes. Together
+with session124's terminal-cycle theorem for N >= 2621, the conjecture is PROVED: terminal cycles exist exactly for
+N in {34, ..., 38} u [40, oo) (THM-4851 (c)).
