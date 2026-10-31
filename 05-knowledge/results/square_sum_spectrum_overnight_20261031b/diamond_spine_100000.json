@@ -1,0 +1,30 @@
+{
+  "allowed_missing": [
+    43,
+    93,
+    173,
+    247
+  ],
+  "distinct_counts": 49994,
+  "distinct_q_overflow_output_counts": 49994,
+  "limit": 100000,
+  "q_overflow_edges": 3288884,
+  "scope": "Exact all-word image for these two roots and eighteen generators, including all powers-of-five ordinal-product tails; no unrestricted absence claim.",
+  "source_roots": [
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "states": 2095168,
+  "status": "complete",
+  "support_sha256": "5ba9f55d8b0af636d01fdd57430c5a73aae33c165f17c2a730c377d0330620f3"
+}

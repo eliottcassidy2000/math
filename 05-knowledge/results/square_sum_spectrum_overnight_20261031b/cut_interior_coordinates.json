@@ -1,0 +1,16 @@
+{
+  "coordinates": [
+    "C=(F-h)/2",
+    "L=(q-F+h-g)/2",
+    "g",
+    "h"
+  ],
+  "cuts_with_literal_child_DP": 33866,
+  "diamond_transport_checks": 541856,
+  "necessary_guard": "q>=F-h+g and q-F+h-g even",
+  "parents": 1099,
+  "positive_profile_checks": 33866,
+  "scope": "The cut/interior identity is universal for nonempty parents; positivity alone is not actual-state reachability.",
+  "status": "passed",
+  "universe": "all labelled parent tournaments of orders1 through5, every marked cut"
+}

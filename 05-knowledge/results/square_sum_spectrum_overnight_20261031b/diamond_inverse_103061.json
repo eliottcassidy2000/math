@@ -1,0 +1,74 @@
+{
+  "canonical_q_bound": "floor(32F/5)",
+  "interior_guard": "q>=F-h+g and q-F+h-g even",
+  "memo_states": 409690,
+  "rank": "F+q+h",
+  "results": [
+    {
+      "state": [
+        103061,
+        114424,
+        0,
+        5
+      ],
+      "target": 103061,
+      "vertices": 18,
+      "word": [
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "D",
+          10
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ]
+      ]
+    }
+  ],
+  "scope": "Exact inverse certificates or exhaustion for the stated targets; universal acceptance above247 remains open.",
+  "status": "passed"
+}

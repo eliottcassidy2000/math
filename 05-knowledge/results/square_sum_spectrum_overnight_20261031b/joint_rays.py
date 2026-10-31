@@ -14,10 +14,13 @@ import sys
 HERE=Path(__file__).resolve().parent
 RESULTS=HERE.parent
 INCOMING=RESULTS/'session124_recursive_square_prefix_20261031'
+EXTENSION=RESULTS/'session124_square_prefix_threshold42_20261031'
 OLD=RESULTS/'seeded_eventual_cycle_theorem_20261019'
 NATIVE=RESULTS/'square_sum_spectrum_overnight_20261031a'
 sys.path.insert(0,str(INCOMING))
-from core import Core, prefix, threshold
+sys.path.insert(0,str(EXTENSION))
+from core import prefix
+from core42 import create_core, threshold
 
 P=(1,8,17,19,6,10,15,21,4,12,24)
 S=[t for t in range(-1200,1201) if not(-24<=t<=24 or 74<=t<=122)]
@@ -34,6 +37,8 @@ def edge(a,b):return (a,b) if a<b else (b,a)
 
 
 def table_contracts():
+    small_builder=create_core()
+    for n in range(42,53):small_builder.base(n)
     paired_checks=0
     for parity in (0,1):
         for d in range(24,73):
@@ -68,6 +73,7 @@ def table_contracts():
     table=json.loads((NATIVE/'n24_forest_table.json').read_text())
     check_table(table,list(P))
     return table,{'incoming_pair_states':98,'incoming_paired_checks':paired_checks,
+                  'new_small_base_pairs':11,'new_small_base_checks':small_builder.checks,
                   'old_A_states':states,'unaffected_block_occurrences':retained_blocks,
                   'excluded_offsets':sorted(cuts),'native_final_states':len(table)}
 
@@ -101,7 +107,7 @@ def expand(N,l,table):
     need(N>=threshold(l+2),'joint threshold')
     n=(N-24)//49;d=N-49*n;m=(n-24)//49
     need(m>=threshold(l),'recursive B source threshold')
-    builder=Core();pair=builder.build_B(m);small=prefix(l)
+    builder=create_core();pair=builder.build_B(m);small=prefix(l)
     need(all(p[:len(small)]==small for p in pair),'incoming unscaled prefix')
     j=int(d>=57);family='Aplus' if (n+j)%2==0 else 'Aminus'
     apair=old_A(pair,family,n)
@@ -145,7 +151,7 @@ def expand(N,l,table):
 
 def main():
     table,interfaces=table_contracts()
-    controls=[expand(128453,0,table),expand(128454,0,table),expand(6294221,1,table)]
+    controls=[expand(102042,0,table),expand(102043,0,table),expand(5000082,1,table)]
     print(json.dumps({'status':'passed','interfaces':interfaces,'checks':checks,'controls':controls,
                       'scope':'All levels by the inherited recursive prefix and intact-segment proof; controls expand the three displayed cycles.'},indent=2,sort_keys=True))
 

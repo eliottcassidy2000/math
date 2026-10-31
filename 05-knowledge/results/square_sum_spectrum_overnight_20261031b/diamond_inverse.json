@@ -1,0 +1,176 @@
+{
+  "canonical_q_bound": "floor(32F/5)",
+  "interior_guard": "q>=F-h+g and q-F+h-g even",
+  "memo_states": 32548,
+  "rank": "F+q+h",
+  "results": [
+    {
+      "scope": "absent from the declared singleton/strong-four-block grammar at every word length",
+      "target": 7,
+      "word": null
+    },
+    {
+      "scope": "absent from the declared singleton/strong-four-block grammar at every word length",
+      "target": 21,
+      "word": null
+    },
+    {
+      "scope": "absent from the declared singleton/strong-four-block grammar at every word length",
+      "target": 43,
+      "word": null
+    },
+    {
+      "scope": "absent from the declared singleton/strong-four-block grammar at every word length",
+      "target": 93,
+      "word": null
+    },
+    {
+      "scope": "absent from the declared singleton/strong-four-block grammar at every word length",
+      "target": 173,
+      "word": null
+    },
+    {
+      "scope": "absent from the declared singleton/strong-four-block grammar at every word length",
+      "target": 247,
+      "word": null
+    },
+    {
+      "state": [
+        249,
+        264,
+        0,
+        1
+      ],
+      "target": 249,
+      "vertices": 11,
+      "word": [
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ]
+      ]
+    },
+    {
+      "state": [
+        251,
+        264,
+        0,
+        5
+      ],
+      "target": 251,
+      "vertices": 10,
+      "word": [
+        [
+          "D",
+          5
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ]
+      ]
+    },
+    {
+      "state": [
+        1001,
+        1112,
+        0,
+        1
+      ],
+      "target": 1001,
+      "vertices": 13,
+      "word": [
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          1
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ],
+        [
+          "S",
+          0
+        ]
+      ]
+    }
+  ],
+  "scope": "Exact inverse certificates or exhaustion for the stated targets; universal acceptance above247 remains open.",
+  "status": "passed"
+}

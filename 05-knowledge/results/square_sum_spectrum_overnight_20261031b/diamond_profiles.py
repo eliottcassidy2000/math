@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Literal four-vertex block profiles and reversible (h,q) history."""
 from itertools import permutations,product
+from functools import lru_cache
 import json
 from pathlib import Path
 import sys
@@ -82,6 +83,35 @@ def main():
  for r in range(1,21):
   state=apply(state,bs[2]);repeated.append(state[0])
   if r>=3:require(state[0]%5==(3*pow(2,r-2,5))%5!=0,'repeat-cut nonzero mod five')
+  require(state[0]==(100*32**r+(216*r+359)*5**r)//675,'closed repeated-cut formula')
+  require((100*32**r+(216*r+359)*5**r)%675==0,'closed formula integrality')
+  require(state[0]%3==((r-1)*pow(2,r,3))%3,'source-specific mod three filter')
+ # Every nonzero XOR displacement occurs: any four fixed linear bit probes
+ # have a kernel direction and necessarily identify two admitted digits.
+ xor_hostiles=[]
+ for shift in range(1,32):
+  pair=next(((d,d^shift) for d in digits if d^shift in decoder),None)
+  require(pair is not None,'all nonadaptive linear kernels obstructed')
+  xor_hostiles.append([shift,*pair])
+ @lru_cache(None)
+ def decision_tree(candidates,depth):
+  if len(candidates)==1:return ('digit',candidates[0])
+  if depth==0 or len(candidates)>2**depth:return None
+  for mask in range(1,32):
+   halves=tuple(tuple(d for d in candidates if (d&mask).bit_count()%2==b) for b in (0,1))
+   if min(map(len,halves))==0 or max(map(len,halves))>2**(depth-1):continue
+   zero=decision_tree(halves[0],depth-1)
+   if zero is None:continue
+   one=decision_tree(halves[1],depth-1)
+   if one is not None:return ('query',mask,zero,one)
+  return None
+ tree=decision_tree(tuple(sorted(digits)),4)
+ require(tree is not None,'four adaptive linear probes')
+ for d in digits:
+  node=tree;used=0
+  while node[0]=='query':
+   node=node[2+(d&node[1]).bit_count()%2];used+=1
+  require(node==('digit',d) and used==4,'decision tree literal decoding')
  mixed_controls=0;records=[]
  for mask in range(16):
   for bit in (0,1):
@@ -97,6 +127,8 @@ def main():
  print(json.dumps({'status':'passed','rows':ROWS,'profiles':bs,'q_digit_set':sorted(digits),
                    'decoded_words':count,'repeat_mask':2,'repeat_F':repeated,
                    'independent_mixed_state_controls':mixed_controls,
+                   'nonadaptive_linear_probe_minimum':5,'xor_kernel_hostiles':xor_hostiles,
+                   'adaptive_linear_probe_minimum':4,'adaptive_probe_tree':tree,
                    'mixed_same_h_q_hostile':[{'word':w,'state_Fqgh':state,'rows':rows,'vertices':len(rows)} for w,state,rows in (first,second)],
                    'scope':'Exact cut-profile enumeration and finite decoder controls; all-depth inversion is proved by division and the distinct residues.'},indent=2,sort_keys=True))
 if __name__=='__main__':main()

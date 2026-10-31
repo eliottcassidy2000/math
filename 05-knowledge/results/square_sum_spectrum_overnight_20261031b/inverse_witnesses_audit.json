@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "witnesses": [
+    {
+      "adjacency": "H249.txt",
+      "large_case_audit": null,
+      "python_literal_count": 249,
+      "rows": [
+        2046,
+        132,
+        2040,
+        2034,
+        2018,
+        1986,
+        1922,
+        1792,
+        1538,
+        1026,
+        2
+      ],
+      "target": 249,
+      "vertices": 11
+    },
+    {
+      "adjacency": "H251.txt",
+      "large_case_audit": null,
+      "python_literal_count": 251,
+      "rows": [
+        1022,
+        84,
+        992,
+        966,
+        972,
+        986,
+        896,
+        770,
+        514,
+        2
+      ],
+      "target": 251,
+      "vertices": 10
+    },
+    {
+      "adjacency": "H1001.txt",
+      "large_case_audit": null,
+      "python_literal_count": 1001,
+      "rows": [
+        8190,
+        836,
+        8184,
+        8178,
+        8162,
+        8130,
+        8064,
+        7938,
+        7680,
+        7168,
+        6146,
+        4098,
+        2
+      ],
+      "target": 1001,
+      "vertices": 13
+    },
+    {
+      "adjacency": "H103061.txt",
+      "large_case_audit": "separate checked C++ adjacency DP",
+      "python_literal_count": null,
+      "rows": [
+        262142,
+        27628,
+        262136,
+        262128,
+        262114,
+        262080,
+        262016,
+        261888,
+        261632,
+        261120,
+        253954,
+        246784,
+        248834,
+        251904,
+        229376,
+        196610,
+        131074,
+        2
+      ],
+      "target": 103061,
+      "vertices": 18
+    }
+  ]
+}

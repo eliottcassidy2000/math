@@ -1,10 +1,10 @@
 {
-  "checks": 13395508,
+  "checks": 10646608,
   "controls": [
     {
-      "N": 128453,
-      "decimal_lines_sha256": "c34059b699aa8508b3a754ccdd481fa0ac0a9261ebedf36c4160cf5ec9d87719",
-      "incoming_core_checks": 291,
+      "N": 102042,
+      "decimal_lines_sha256": "b03e23658488ed16ad430521b2924837f6ef958b3c3a5890763c9f16c3bb1666",
+      "incoming_core_checks": 230,
       "level": 0,
       "native_path": [
         1,
@@ -26,14 +26,14 @@
         3362,
         6242
       ],
-      "source_index": 53,
-      "threshold": 128453,
+      "source_index": 42,
+      "threshold": 102042,
       "vertices_per_ray": 2
     },
     {
-      "N": 128454,
-      "decimal_lines_sha256": "0392b70db244ac35e930ab1d39f1bac202a1f3a389aa70e2e8ecf0a59d50193a",
-      "incoming_core_checks": 291,
+      "N": 102043,
+      "decimal_lines_sha256": "71e1fa526e3c7dcd0d93910477615db2cf91995eb7830c2a2224b595d516651f",
+      "incoming_core_checks": 230,
       "level": 0,
       "native_path": [
         1,
@@ -55,14 +55,14 @@
         3362,
         6242
       ],
-      "source_index": 53,
-      "threshold": 128453,
+      "source_index": 42,
+      "threshold": 102042,
       "vertices_per_ray": 2
     },
     {
-      "N": 6294221,
-      "decimal_lines_sha256": "97c48ea3093cb0721ec07327d2812cfc2e1fad1535727eb7f116757b8a32caaf",
-      "incoming_core_checks": 13401,
+      "N": 5000082,
+      "decimal_lines_sha256": "59a093554bcb4ded5f838ac5d3775f4aab9703a9b3e4259765b3668c398fa94e",
+      "incoming_core_checks": 10645,
       "level": 1,
       "native_path": [
         1,
@@ -84,8 +84,8 @@
         3362,
         6242
       ],
-      "source_index": 2621,
-      "threshold": 6294221,
+      "source_index": 2082,
+      "threshold": 5000082,
       "vertices_per_ray": 6
     }
   ],
@@ -97,6 +97,8 @@
     "incoming_pair_states": 98,
     "incoming_paired_checks": 92275,
     "native_final_states": 392,
+    "new_small_base_checks": 2654,
+    "new_small_base_pairs": 11,
     "old_A_states": 196,
     "unaffected_block_occurrences": 18424
   },
