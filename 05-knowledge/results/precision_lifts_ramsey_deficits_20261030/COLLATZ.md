@@ -284,10 +284,11 @@ concatenate to an actual violating word. Minima exist by the inherited
 positive clock bound and finite branching below any fixed price.
 
 **OPEN:** both inequalities in(11), all-layer content control, and the
-additional arithmetic argument needed for universal Collatz. This is an
-exact reduction to two unbounded-word questions, not a finite two-case
-check. Source-specific ROOT positivity is not asserted by these content
-estimates.
+additional arithmetic argument needed for universal Collatz. These are two
+native-price questions, not a two-word check. The stronger necessary
+[five-form grammar](NATIVE14.md) now retains one primitive11 core, exact
+placements and finite core-clock bounds. It does not exclude those cores.
+Source-specific ROOT positivity is not asserted by these content estimates.
 
 ## C7. Minimum multiplier precision as a targeted refinement
 

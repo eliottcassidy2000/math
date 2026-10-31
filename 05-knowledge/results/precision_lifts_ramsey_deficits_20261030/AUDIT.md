@@ -32,6 +32,14 @@ all1,961,256 compositions in the R2 fixed-length probe; and rejection before
 integer state-index overflow. The final guarded programs reproduce the
 original E6 binary byte for byte.
 
+NATIVE14.md further proves the one-primitive11-core necessary grammar for
+any remaining strict failure. Its checker verifies exact rational clock
+cutoffs and the required full affine maps modulo5^14 for all five placements
+and the bare-core4/5 case. It does not enumerate or exclude those cores.
+The clock-floor filter checks4,320 literal small-range counts and all
+modular logarithms, then records exact counts in every candidate range.
+The72 pairs in each thin branch are necessary slope data, not72 words.
+
 The old semantic_controls.json records the earlier E12-stage frontier.
 Its listed E13 obligations are **SUPERSEDED** by lift13_controls.json and
 COLLATZ.md C5-C6. It remains a historical exact receipt, not current status.

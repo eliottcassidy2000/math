@@ -8,6 +8,11 @@ review; no independent human or subagent audit is claimed.
   sharp E13 bound. The larger certificate checks9,625,000,000 edges and both
   all-letter tails. Its terminal margin183105426/48828125>3 proves S13 with
   positive non-one slack. Only two native E14 price inequalities remain.
+  Their [necessary grammar](NATIVE14.md) has one primitive11 core and five
+  source-preserving placements with explicit clock caps; these are not yet
+  excluded. A Euclidean floor-sum filter reduces each T11 placement to72
+  possible clock-length pairs, still subject to translation and native-word
+  realizability.
   The abstraction has an explicit artificial extremizer at E9; it is not
   an exact quotient of actual words.
 * [Lonely runner](LRC.md): an exact two-tail compiler counts joint tooth

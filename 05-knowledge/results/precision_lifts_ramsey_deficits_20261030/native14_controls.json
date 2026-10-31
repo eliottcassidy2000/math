@@ -1,0 +1,82 @@
+{
+  "status": "FINITE-EXACT necessary grammar arithmetic; no large native-core enumeration",
+  "eta10": "183105426/48828125",
+  "slope_increment": "3/1220703125",
+  "modulus": 6103515625,
+  "patterns": [
+    {
+      "target": "1",
+      "a11": 0,
+      "a12": 0,
+      "placement": "bare",
+      "strict_core_clock_cap": "305176850/3",
+      "max_integer_core_clock": 101725616,
+      "required_core_map_mod_5_14": [
+        1,
+        0
+      ]
+    },
+    {
+      "target": "1",
+      "a11": 0,
+      "a12": 1,
+      "placement": "prefix",
+      "strict_core_clock_cap": "12208100/3",
+      "max_integer_core_clock": 4069366,
+      "required_core_map_mod_5_14": [
+        5126953126,
+        5126953125
+      ]
+    },
+    {
+      "target": "1",
+      "a11": 0,
+      "a12": 1,
+      "placement": "suffix",
+      "strict_core_clock_cap": "12208100/3",
+      "max_integer_core_clock": 4069366,
+      "required_core_map_mod_5_14": [
+        5126953126,
+        5126953125
+      ]
+    },
+    {
+      "target": "1",
+      "a11": 1,
+      "a12": 0,
+      "placement": "prefix",
+      "strict_core_clock_cap": "2442475/3",
+      "max_integer_core_clock": 814158,
+      "required_core_map_mod_5_14": [
+        2246093751,
+        2246093750
+      ]
+    },
+    {
+      "target": "1",
+      "a11": 1,
+      "a12": 0,
+      "placement": "suffix",
+      "strict_core_clock_cap": "2442475/3",
+      "max_integer_core_clock": 814158,
+      "required_core_map_mod_5_14": [
+        2246093751,
+        2246093750
+      ]
+    },
+    {
+      "target": "4/5",
+      "a11": 0,
+      "a12": 0,
+      "placement": "bare",
+      "strict_core_clock_cap": "61036225/3",
+      "max_integer_core_clock": 20345408,
+      "required_core_map_mod_5_14": [
+        1220703126,
+        1220703125
+      ]
+    }
+  ],
+  "all_word_claim": "proved necessary form, not existence or exclusion of the cores",
+  "pass_checks": true
+}

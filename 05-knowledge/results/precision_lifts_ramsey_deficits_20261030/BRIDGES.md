@@ -87,9 +87,10 @@ upper bound.
 
 ## Concrete next questions
 
-1. For native13 excursions, can an exact source-preserving grammar prove
-   g13(0)>=1 and g13(-(4,4))>=4/5? The preserved object is the original
-   word, its tangent, and clock; a free optimizing phase is inadmissible.
+1. Can the primitive11 cores in[NATIVE14.md](NATIVE14.md)'s five-form
+   necessary grammar be excluded, proving g13(0)>=1 and
+   g13(-(4,4))>=4/5? The preserved object is the original word, its tangent
+   and clock; a free optimizing phase is inadmissible.
 2. For the equal-order runner fibres h>=3 at radius1/14, can one find a
    common label in time polynomial in the input bit lengths without
    enumerating the fibre? D1 proves existence, and D4 solves unequal orders.
