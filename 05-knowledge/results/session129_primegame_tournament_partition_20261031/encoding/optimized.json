@@ -1,0 +1,68 @@
+{
+  "image_is_fibonacci": false,
+  "image_is_triangular": false,
+  "original_next": 15,
+  "paired_steps": 25500,
+  "prime_image_of_55": 1927,
+  "priority_hostile_seed": 2,
+  "renamed_fractions": [
+    [
+      59,
+      2279
+    ],
+    [
+      60791,
+      2419
+    ],
+    [
+      61,
+      2183
+    ],
+    [
+      67,
+      1891
+    ],
+    [
+      71,
+      1739
+    ],
+    [
+      2021,
+      71
+    ],
+    [
+      2501,
+      67
+    ],
+    [
+      2021,
+      61
+    ],
+    [
+      1,
+      59
+    ],
+    [
+      47,
+      53
+    ],
+    [
+      53,
+      47
+    ],
+    [
+      1517,
+      31
+    ],
+    [
+      1,
+      43
+    ],
+    [
+      1927,
+      1
+    ]
+  ],
+  "reversed_next": 110,
+  "status": "passed"
+}

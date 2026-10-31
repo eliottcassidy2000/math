@@ -37,3 +37,7 @@ individual session routes preserve scope and remaining open obligations.
 [Session127](S127.md): GSMA, exact Tribonacci305, Lucas47, and typed norm/volume bridges.
 
 [Session128](S128.md): triadic representation functors, Pisot attractors, and exact feedback boundaries.
+
+[Session129](S129.md): PRIMEGAME block structure, tournament incidence fingerprints, and arithmetic encodings.
+
+[Session129](S129.md): PRIMEGAME block structure, tournament incidence fingerprints, and arithmetic encodings.
