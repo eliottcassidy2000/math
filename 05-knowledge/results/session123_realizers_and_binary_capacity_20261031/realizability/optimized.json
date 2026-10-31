@@ -1,0 +1,11 @@
+{
+  "algorithm_scope": "exact small exhaustive reference, not polynomial-time ILP implementation",
+  "feasible_instances": 899,
+  "instances": 1125,
+  "integer_assignments": 73404,
+  "jointness_hostile": "all three pairs feasible; triple infeasible",
+  "matrix_controls": 726,
+  "point_only_instances": 114,
+  "scaling_controls": 12,
+  "status": "PASS"
+}

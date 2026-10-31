@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "script": "monoidal_ramsey/check_kernel.py",
+      "status": "PASS",
+      "stdout_sha256": "864a634ef270d52d1205d0cc47801c365078bf0e687f981967cca920ba7e8564"
+    },
+    {
+      "script": "monoidal_ramsey/check_profile_obstruction.py",
+      "status": "PASS",
+      "stdout_sha256": "34f380d37da0bcacecae8ebe6cf406c028e83f670a8ac8c71d5a5bb5e95c1a72"
+    },
+    {
+      "script": "tensor/check.py",
+      "status": "PASS",
+      "stdout_sha256": "8788b88a62d2148f6080d6e002bf2d49064a2adb858396f531b6e4d3a27bbe11"
+    },
+    {
+      "script": "audit_ramsey/check.py",
+      "status": "PASS",
+      "stdout_sha256": "87b962f3cb5a8f254f7db6af644a0c1c205482df10962f0ea57df0397ade044e"
+    },
+    {
+      "script": "audit_ramsey/check_parity.py",
+      "status": "PASS",
+      "stdout_sha256": "2cd2e6dd7559ee4ea7cee25ecdd99452e2000c0b9b8dc2039daf04f2a69d182d"
+    },
+    {
+      "script": "audit_ramsey/check_corollaries.py",
+      "status": "PASS",
+      "stdout_sha256": "455fa07d3f728353fb7972cb442133b5a10203bd1807c4c136e42f9e73404a97"
+    },
+    {
+      "script": "circuits/check.py",
+      "status": "PASS",
+      "stdout_sha256": "7236c4a1d3ae0b82e5aecec873bb7ccbc4f14ee7e33f1805304813b63a9f1027"
+    },
+    {
+      "script": "realizability/check_witness_compiler.py",
+      "status": "PASS",
+      "stdout_sha256": "b00da2868a87f2f41fc748922334c48e607367e22584af24dfd77e63afc2e150"
+    },
+    {
+      "script": "audit_interfaces/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "3e622c5adeaf7d4437eb0fd3ab2cc693875407b2b2505f31e9b44a2584615269"
+    },
+    {
+      "script": "lrc/check_witness.py",
+      "status": "PASS",
+      "stdout_sha256": "e28aec560a488293e9439095feaf5fda33ffb394b496759faf3c8028d1a6c328"
+    },
+    {
+      "script": "lrc/check_categories.py",
+      "status": "PASS",
+      "stdout_sha256": "deada4dab113a46a5fbf8c14816fcaf6798425522e70ca131e6c2f33cd6d13a3"
+    },
+    {
+      "script": "lrc/check_family.py",
+      "status": "PASS",
+      "stdout_sha256": "81460f022d2ec92bb3fb670d3c041a4d8cd81e0e9ae99e8a7e9f49f6a6fe721b"
+    },
+    {
+      "script": "audit_lrc/check_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "32c8c7b9d7a99d29fe0342807093d2d3b7ab07b787fda2b972d0e9697e4eb003"
+    },
+    {
+      "script": "audit_lrc/check_producer.py",
+      "status": "PASS",
+      "stdout_sha256": "caf13498078295c3f0c273736435e415498ebc6d58f2a36c4810474fbe5e0a23"
+    },
+    {
+      "script": "audit_lrc/check_family_independent.py",
+      "status": "PASS",
+      "stdout_sha256": "8fb1478654f159e86d7b205d28f4b6da3e16912b9c7c2503f818d678e4a29c2c"
+    }
+  ],
+  "normal_and_optimized": "identical",
+  "scope": "All declared finite controls replayed. Uniform analytic proofs are separately audited. Classical realizability/Lenstra inputs and the inherited Session122 family theorem are explicit dependencies, not re-proved by computation. No Lean or external human review claimed.",
+  "status": "PASS"
+}

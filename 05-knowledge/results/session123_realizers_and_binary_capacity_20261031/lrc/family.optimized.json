@@ -1,0 +1,59 @@
+{
+  "eight_core_count": 1287,
+  "large_input_controls": [
+    {
+      "bits": 64,
+      "expanded_max": 14,
+      "finite_prefix": 1,
+      "method": "conductor",
+      "witness_bits": [
+        9,
+        12
+      ]
+    },
+    {
+      "bits": 256,
+      "expanded_max": 14,
+      "finite_prefix": 1,
+      "method": "conductor",
+      "witness_bits": [
+        7,
+        10
+      ]
+    },
+    {
+      "bits": 1024,
+      "expanded_max": 14,
+      "finite_prefix": 1,
+      "method": "conductor",
+      "witness_bits": [
+        8,
+        11
+      ]
+    },
+    {
+      "bits": 4096,
+      "expanded_max": 14,
+      "finite_prefix": 1,
+      "method": "conductor",
+      "witness_bits": [
+        9,
+        12
+      ]
+    }
+  ],
+  "larger_core_controls": 1093,
+  "literal_full_cover_comparisons": 3861,
+  "method_counts": {
+    "bounded_pool": 1287,
+    "conductor": 4516,
+    "finite_leaf": 80,
+    "one_tail": 552
+  },
+  "observed_max_cutoff": 100,
+  "observed_max_expanded_speed": 27,
+  "observed_max_finite_prefix": 5,
+  "rows_checked": 6435,
+  "scope": "finite controls of the implemented selector; universal family theorem remains inherited, and observed maxima are not universal claims",
+  "status": "PASS"
+}

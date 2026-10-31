@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "admissible": 804,
+    "direct": 425,
+    "halvings": 490,
+    "inputs": 1203,
+    "negative_times": 579,
+    "oracle_queries": 4218,
+    "overlap_repairs": 4,
+    "rejected": 399,
+    "strict_density": 375
+  },
+  "scope": "independent exact finite geometry; integer and rational speeds",
+  "status": "PASS"
+}
+{"accepted": 325, "producer_crosscheck": "PASS", "rejected": 175}

@@ -1,0 +1,10 @@
+{
+  "forest_assignment_checks": 305736,
+  "largest_forest_n": 5,
+  "largest_quadratic_n": 4,
+  "proof_scope": "finite checks supplement general proofs; no unrestricted lower bound",
+  "protected_forest_rewrite_cases": 6600,
+  "scalar_quadratic_boundary_cases": 10808,
+  "status": "PASS",
+  "unordered_two_output_quadratic_boundary_cases": 33024
+}

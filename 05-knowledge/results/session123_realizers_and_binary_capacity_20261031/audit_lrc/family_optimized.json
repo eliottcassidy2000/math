@@ -1,0 +1,56 @@
+{
+  "huge_controls": [
+    {
+      "bits": 64,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 64,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 257,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 257,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 1025,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 1025,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 4096,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    },
+    {
+      "bits": 4096,
+      "max_expanded_speed": 14,
+      "method": "conductor"
+    }
+  ],
+  "independent_full_cover_rows": 1287,
+  "invalid_controls": 7,
+  "larger_core_rows": 1093,
+  "methods_on_full_cover_rows": {
+    "conductor": 841,
+    "finite_leaf": 80,
+    "one_tail": 366
+  },
+  "one_tail_exact_boundary": true,
+  "point_only_completed_cover_points": 6,
+  "repeated_bounded_tail_rows": 1287,
+  "status": "PASS"
+}

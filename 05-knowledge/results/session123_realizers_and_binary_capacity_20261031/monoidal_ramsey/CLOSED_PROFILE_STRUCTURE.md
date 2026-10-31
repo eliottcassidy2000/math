@@ -30,7 +30,7 @@ Indeed, the left condition says for every n,m that h(n)+f(m) is included
 in g(n+m); apply the scalar adjunction and intersect over m. Hence this is
 a genuine thin closed symmetric monoidal category, not just an analogy.
 For finite integer-valued functions, read f(n) as down(f(n)); then convolution
-is max-plus and [f,g](n) is the possibly negative-infinite infimum
+is max-plus and `[f,g](n)` is the possibly negative-infinite infimum
 of g(n+m)-f(m). No extended-infinity subtraction is being presumed.
 This is the discrete convolution pattern of Brian Day's classical construction;
 the specialized proof here is self-contained. Primary background:

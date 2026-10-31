@@ -1,0 +1,1 @@
+{"arithmetic": "exact rational; no producer imports", "counts": {"compiler_instances": 620, "compiler_vectors": 14460, "forest_assignments": 101912, "forests": 334, "protections": 3300, "quadratics": 1024}, "status": "PASS"}

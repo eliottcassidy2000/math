@@ -1,0 +1,19 @@
+{
+  "degree_integer_controls": 738,
+  "existential_nonmonoidal_hostile": true,
+  "finite_residual_adjoint_controls": 4096,
+  "local_section_controls": 738,
+  "same_budget_disjoint_witnesses": [
+    [
+      "1/4",
+      "3/4"
+    ],
+    [
+      "0",
+      "1/2",
+      "1"
+    ]
+  ],
+  "scope": "finite implementation controls; continuous no-section theorem rests on the explicit winding proof",
+  "status": "PASS"
+}

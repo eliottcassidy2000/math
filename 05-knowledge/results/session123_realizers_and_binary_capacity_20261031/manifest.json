@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "receipt": "monoidal_ramsey/kernel_receipt.json",
+      "script": "monoidal_ramsey/check_kernel.py"
+    },
+    {
+      "receipt": "monoidal_ramsey/profile_receipt.json",
+      "script": "monoidal_ramsey/check_profile_obstruction.py"
+    },
+    {
+      "receipt": "tensor/normal.json",
+      "script": "tensor/check.py"
+    },
+    {
+      "receipt": "audit_ramsey/normal.json",
+      "script": "audit_ramsey/check.py"
+    },
+    {
+      "receipt": "audit_ramsey/parity.normal.json",
+      "script": "audit_ramsey/check_parity.py"
+    },
+    {
+      "receipt": "audit_ramsey/corollaries.normal.json",
+      "script": "audit_ramsey/check_corollaries.py"
+    },
+    {
+      "receipt": "circuits/verification.json",
+      "script": "circuits/check.py"
+    },
+    {
+      "receipt": "realizability/normal.json",
+      "script": "realizability/check_witness_compiler.py"
+    },
+    {
+      "receipt": "audit_interfaces/normal.json",
+      "script": "audit_interfaces/check_independent.py"
+    },
+    {
+      "receipt": "lrc/normal.json",
+      "script": "lrc/check_witness.py"
+    },
+    {
+      "receipt": "lrc/categories.normal.json",
+      "script": "lrc/check_categories.py"
+    },
+    {
+      "receipt": "lrc/family.normal.json",
+      "script": "lrc/check_family.py"
+    },
+    {
+      "receipt": "audit_lrc/receipt_normal.json",
+      "script": "audit_lrc/check_independent.py"
+    },
+    {
+      "receipt": "audit_lrc/producer_normal.txt",
+      "script": "audit_lrc/check_producer.py"
+    },
+    {
+      "receipt": "audit_lrc/family_normal.json",
+      "script": "audit_lrc/check_family_independent.py"
+    }
+  ],
+  "sha256": {
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "README.md": "0747e329d120883a76a7720656a2fdeb0d9904c0edca1bd1cdd68f9326dbc878",
+    "SOURCES_AND_BOUNDARIES.md": "93db4f33dff43f811350d2d59d29cd6ef9eb8d3b6d572910b9d250c35edaed5f",
+    "SYNTHESIS.md": "81ed6682259e08571f209dfe9b3ed98bd469e973237d092f39fe22eda26ca484",
+    "audit_interfaces/AUDIT.md": "56c2808efddfbc10fa8db25c7bb7166a91908e22d317319280974eb6697af16e",
+    "audit_interfaces/check_independent.py": "051096bb6ab22030157cf2bee15096b7e65f65b0162921fccf23e4b978ff0a6d",
+    "audit_interfaces/normal.json": "3e622c5adeaf7d4437eb0fd3ab2cc693875407b2b2505f31e9b44a2584615269",
+    "audit_interfaces/optimized.json": "3e622c5adeaf7d4437eb0fd3ab2cc693875407b2b2505f31e9b44a2584615269",
+    "audit_lrc/AUDIT.md": "9ca0d6cf4aa799c7fd3b4c7c53f49739dedfa73f9813d1577645dee0b015b08b",
+    "audit_lrc/check_family_independent.py": "ebf8a9b50e3147de855aa822f30cd820e992ea515fb80473b89689d5980db531",
+    "audit_lrc/check_independent.py": "d245e8279f98e84ddee2cad6f60f5a62424737912486b4733b50cbf7637d59a0",
+    "audit_lrc/check_producer.py": "b3b8fbb46200ef65af3428e1db8a1065f4728c1fc8f738f39afba859ea211fee",
+    "audit_lrc/family_normal.json": "8fb1478654f159e86d7b205d28f4b6da3e16912b9c7c2503f818d678e4a29c2c",
+    "audit_lrc/family_optimized.json": "8fb1478654f159e86d7b205d28f4b6da3e16912b9c7c2503f818d678e4a29c2c",
+    "audit_lrc/producer_normal.txt": "caf13498078295c3f0c273736435e415498ebc6d58f2a36c4810474fbe5e0a23",
+    "audit_lrc/producer_optimized.txt": "caf13498078295c3f0c273736435e415498ebc6d58f2a36c4810474fbe5e0a23",
+    "audit_lrc/receipt_normal.json": "32c8c7b9d7a99d29fe0342807093d2d3b7ab07b787fda2b972d0e9697e4eb003",
+    "audit_lrc/receipt_optimized.json": "32c8c7b9d7a99d29fe0342807093d2d3b7ab07b787fda2b972d0e9697e4eb003",
+    "audit_ramsey/AUDIT.md": "1e0f7d3c6d974dd5f1e35980ef4d889e41dd485b68085937de9947a859f591e8",
+    "audit_ramsey/check.py": "7d28dee878276f0fe16ab472da6e29cff7b43f40c34bf2ff79786b34c4018b7c",
+    "audit_ramsey/check_corollaries.py": "2f33624383f2855afddd28c0f31fd5fffdd208c2b3e2907d7e855c0ec32d35c7",
+    "audit_ramsey/check_parity.py": "d5b0d2e16563cfac070b732832c2076729b836494fe5e6aa46c9b897b60d0ce4",
+    "audit_ramsey/corollaries.normal.json": "455fa07d3f728353fb7972cb442133b5a10203bd1807c4c136e42f9e73404a97",
+    "audit_ramsey/corollaries.optimized.json": "455fa07d3f728353fb7972cb442133b5a10203bd1807c4c136e42f9e73404a97",
+    "audit_ramsey/normal.json": "87b962f3cb5a8f254f7db6af644a0c1c205482df10962f0ea57df0397ade044e",
+    "audit_ramsey/optimized.json": "87b962f3cb5a8f254f7db6af644a0c1c205482df10962f0ea57df0397ade044e",
+    "audit_ramsey/parity.normal.json": "2cd2e6dd7559ee4ea7cee25ecdd99452e2000c0b9b8dc2039daf04f2a69d182d",
+    "audit_ramsey/parity.optimized.json": "2cd2e6dd7559ee4ea7cee25ecdd99452e2000c0b9b8dc2039daf04f2a69d182d",
+    "circuits/RESOURCE_COST_AND_BOUNDARY_KERNEL.md": "01dd4f920e659d12fe91e71e1e87f42b92d0ed7d2b9dcc4922ad193eddc88b2b",
+    "circuits/check.py": "bbcc959c8ebc0caa01cc0276d95552133dd53e1eab21f7cb1812770ccb47aaa7",
+    "circuits/verification.json": "7236c4a1d3ae0b82e5aecec873bb7ccbc4f14ee7e33f1805304813b63a9f1027",
+    "circuits/verification_optimized.json": "7236c4a1d3ae0b82e5aecec873bb7ccbc4f14ee7e33f1805304813b63a9f1027",
+    "lrc/CONSTRUCTIVE_CONDUCTOR.md": "319d6861f6038773e721dfdc8efc3ae975c496efef2d7290e9dc8bf010e56aae",
+    "lrc/FAMILY_SELECTOR.md": "fdfa0cf3bfb321585d9d8c525f9d26a7c6314bffd0a771e51f483c680c886f9d",
+    "lrc/README.md": "56f9032c6c73fbbc8be42553ca3347d079d939ba2996a7836937d05393578869",
+    "lrc/SAME_CLOCK_CATEGORIES.md": "b1f2fd02fcd3b2478868d782e38611f16366349add58bb0f81b90791636f05f2",
+    "lrc/categories.normal.json": "deada4dab113a46a5fbf8c14816fcaf6798425522e70ca131e6c2f33cd6d13a3",
+    "lrc/categories.optimized.json": "deada4dab113a46a5fbf8c14816fcaf6798425522e70ca131e6c2f33cd6d13a3",
+    "lrc/check_categories.py": "1378cb915ece37c55e8b89bd625e869b0b12e536b868879caf86e076dd9ee842",
+    "lrc/check_family.py": "010690332bc15894225ef1c7164b2b20103df7e1a1434169ed77fc04ff77b7e7",
+    "lrc/check_witness.py": "f1ea780b11c309edacd6edd2374b4f55cf393cfcd2cb31ba6357b4ef15024cd1",
+    "lrc/family.normal.json": "81460f022d2ec92bb3fb670d3c041a4d8cd81e0e9ae99e8a7e9f49f6a6fe721b",
+    "lrc/family.optimized.json": "81460f022d2ec92bb3fb670d3c041a4d8cd81e0e9ae99e8a7e9f49f6a6fe721b",
+    "lrc/family_selector.py": "b3451254057a2510baac2fa78b51d9b3726c083e7bd4b61600e44292717554ec",
+    "lrc/normal.json": "e28aec560a488293e9439095feaf5fda33ffb394b496759faf3c8028d1a6c328",
+    "lrc/optimized.json": "e28aec560a488293e9439095feaf5fda33ffb394b496759faf3c8028d1a6c328",
+    "lrc/witness.py": "572db1810df3c4e97ebe72767b8b984bb75bd1ae5a0c973e31311660cbbf59c5",
+    "monoidal_ramsey/ALL_BUDGET_KERNEL.md": "5438d55954a0a8838d2f1cd1c62f3bb2898fdc6f07cc3466b0fc00d58ed37282",
+    "monoidal_ramsey/CLOSED_PROFILE_STRUCTURE.md": "4576624e326d0d5a1117280f616e97623b7205361a087497a2feac54c16987c5",
+    "monoidal_ramsey/HEREDITARY_COMPLETION.md": "7921e8bfb21459413edd5915d124b48489ed3c1f0eb4ab94f6906408f2cab29a",
+    "monoidal_ramsey/check_kernel.py": "032cacef6c640ec546bc12838e432913bf4c26cde0798d6329433d6cc79502c1",
+    "monoidal_ramsey/check_profile_obstruction.py": "43f0c1b0e16cacad946b1a24cccae085571f829e454ad339f8c5fadde60f2a05",
+    "monoidal_ramsey/kernel_receipt.json": "864a634ef270d52d1205d0cc47801c365078bf0e687f981967cca920ba7e8564",
+    "monoidal_ramsey/kernel_receipt_optimized.json": "864a634ef270d52d1205d0cc47801c365078bf0e687f981967cca920ba7e8564",
+    "monoidal_ramsey/profile_receipt.json": "34f380d37da0bcacecae8ebe6cf406c028e83f670a8ac8c71d5a5bb5e95c1a72",
+    "monoidal_ramsey/profile_receipt_optimized.json": "34f380d37da0bcacecae8ebe6cf406c028e83f670a8ac8c71d5a5bb5e95c1a72",
+    "realizability/WITNESS_REALIZABILITY.md": "8a48eb8fc1c876cbf36422ba451ab7e2970f9565d823dd8823ba7ead188ba770",
+    "realizability/check_witness_compiler.py": "22b4e6c59bbc0c4b16eedcbc81ccc1ffc8bbf7f474223c5e2fa0b745ba2e063e",
+    "realizability/normal.json": "b00da2868a87f2f41fc748922334c48e607367e22584af24dfd77e63afc2e150",
+    "realizability/optimized.json": "b00da2868a87f2f41fc748922334c48e607367e22584af24dfd77e63afc2e150",
+    "tensor/TENSOR_AND_GENERATORS.md": "4f528b79e0eb9debd0b8f59735c9209f4cb70305a5ced955868994db886bafc1",
+    "tensor/check.py": "b8ad639148611af8cff08bbc786e15e042ae6a83f5618f55e1e3b507aa3a49be",
+    "tensor/normal.json": "8788b88a62d2148f6080d6e002bf2d49064a2adb858396f531b6e4d3a27bbe11",
+    "tensor/optimized.json": "8788b88a62d2148f6080d6e002bf2d49064a2adb858396f531b6e4d3a27bbe11",
+    "verify.py": "7a52507fd5d2beb5eebefcf2c02a758362f72eba830c337199192857088a66e5"
+  }
+}
