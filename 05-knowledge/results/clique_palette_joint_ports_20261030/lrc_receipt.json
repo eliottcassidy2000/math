@@ -1,0 +1,53 @@
+{
+  "anchor_bank_count": 28,
+  "anchor_core_count": 78,
+  "anchor_families": 2184,
+  "anchor_tail_histogram": {
+    "1": 128,
+    "2": 429,
+    "3": 363,
+    "4": 374,
+    "5": 189,
+    "6": 144,
+    "7": 115,
+    "8": 37,
+    "9": 28,
+    "10": 148,
+    "11": 70,
+    "12": 54,
+    "13": 28,
+    "14": 14,
+    "16": 7,
+    "19": 7,
+    "20": 35,
+    "23": 14
+  },
+  "checks": 23021,
+  "exceptional_family_core_1_2_bank_3_12_radius_1_4": {
+    "kind": "finite",
+    "rejected": [
+      1
+    ],
+    "tail": 2
+  },
+  "large_multiplier": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000039",
+  "large_witness": "120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000469/480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001872",
+  "native_comparisons": 10800,
+  "point_family": {
+    "kind": "periodic",
+    "period": 3,
+    "rejected_residues": [
+      0
+    ]
+  },
+  "runner_graph_hostile": {
+    "component_clique_number": 2,
+    "component_vertices": 6,
+    "pairwise": [
+      true,
+      true,
+      true
+    ]
+  },
+  "scope": "All multipliers proved by the displayed stopping bound for each finite core/bank entry; no arbitrary-core LRC claim."
+}

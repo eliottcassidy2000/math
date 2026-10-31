@@ -1,0 +1,135 @@
+{
+  "checks": 16593,
+  "hole": {
+    "dichromatic": 3,
+    "dual": [
+      "1/2",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    "fractional_dichromatic": "2",
+    "half_weight_supports": [
+      37,
+      58,
+      67,
+      92
+    ],
+    "maximum_unweighted_subset_rank_bound": "7/4",
+    "one_palette": [
+      1,
+      6,
+      120
+    ],
+    "ray_formula": "chi_k=0 at k=0; chi_1=3; chi_k=2k for every k>=2",
+    "rows": [
+      74,
+      100,
+      25,
+      50,
+      35,
+      5,
+      60
+    ],
+    "three_palette": [
+      11,
+      19,
+      37,
+      92,
+      102,
+      120
+    ],
+    "transitive": 4,
+    "two_palette": [
+      11,
+      21,
+      102,
+      120
+    ]
+  },
+  "hostile_81_27": {
+    "consequence": "All named weighted acyclic-coloring problems coincide; symmetry still differs.",
+    "native": {
+      "common_cyclic_triples": 67,
+      "tournaments": [
+        {
+          "flip": false,
+          "group_order": 81,
+          "regular_binary_masks": 1620
+        },
+        {
+          "flip": true,
+          "group_order": 27,
+          "regular_binary_masks": 1728
+        }
+      ]
+    },
+    "one_port_acyclic_color_answers": [
+      1,
+      2
+    ],
+    "one_port_new_out_mask": 3839,
+    "one_port_query_vertices": [
+      8,
+      9,
+      12
+    ],
+    "same_named_transitive_subsets": 547
+  },
+  "rank_layer_cliques": [
+    {
+      "count": 7,
+      "k": 1,
+      "seed": "P7"
+    },
+    {
+      "count": 21,
+      "k": 2,
+      "seed": "P7"
+    },
+    {
+      "count": 21,
+      "k": 3,
+      "seed": "P7"
+    },
+    {
+      "count": 0,
+      "k": 4,
+      "seed": "P7"
+    },
+    {
+      "count": 7,
+      "k": 1,
+      "seed": "H7"
+    },
+    {
+      "count": 21,
+      "k": 2,
+      "seed": "H7"
+    },
+    {
+      "count": 22,
+      "k": 3,
+      "seed": "H7"
+    },
+    {
+      "count": 4,
+      "k": 4,
+      "seed": "H7"
+    }
+  ],
+  "substitution": {
+    "H_power_dichromatic": "3*2^(r-1), r>=1",
+    "H_power_fractional": "2^r",
+    "H_power_transitive": "4^r",
+    "largest_order": 13,
+    "literal_paley_substitutions": 64
+  },
+  "weighted": {
+    "range": "every d_i in {0,1,2,3}",
+    "vectors": 16384
+  }
+}

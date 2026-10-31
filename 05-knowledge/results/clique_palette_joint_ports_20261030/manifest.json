@@ -1,0 +1,113 @@
+{
+  "artifacts": {
+    ".gitattributes": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "AUDIT.md": "7902aca4ed2df31719628f4f95bb4e4b1575281148546c938804f367e1723023",
+    "HANDOFF.md": "9723fa8d4625d3bc71585688d1a45378e882dc422f16bece3bd1c949ca27b587",
+    "LRC.md": "6bc0a8a6d358ea1d78e028c17c4f9f6d155b546ade8efb3924f7d8cb0f8f8a12",
+    "PALETTES.md": "e9fa83a2f927628b161b643f1b401352efd07468be9b72d8ab69c447de1cf7e2",
+    "PORTS.md": "04aedad36808af82881297fcceb0586287baedf84e0df20ca6768e90d0bd1175",
+    "RAMSEY.md": "614a0c4f16c6bcfa6f4e48f064e5e9fd8b0e7319907e8d897cb802db7b7b6cca",
+    "README.md": "7070879ca2c9242d57c7e407beeecefecb3009243596c0c62a41651c75ad19f3",
+    "RECOVERY.md": "b539fa3fe3b3b46ba776cd8d801180bd6b3afd96067b43e3ab0093e65a49c7a5",
+    "SOURCES.md": "50da5640b1089607e9f1f5c1bb16eff4880cc9f9cc498f77870c59503469578a",
+    "all_pair_cores.py": "72f8b83a594ce954d28489b4703ca33da874ee50f018fcb1bbdbb98c2f625034",
+    "all_pair_receipt.json": "f8a667b58275238a8262bee23c2e433a7ff04bb13b346f0b76a9aa5d1ef02b8b",
+    "all_pair_receipt.optimized.json": "f8a667b58275238a8262bee23c2e433a7ff04bb13b346f0b76a9aa5d1ef02b8b",
+    "build_normality.py": "2047bbd2fd7a8dd3cef5503123c5f99d8b239eb025bf963917d5918d298b4198",
+    "capacity.py": "cbba6a140d40aed4608c77e6b0e73374e9cd770928734bd18fb2bc9bcadf857d",
+    "capacity_audit.json": "d7ca92a60368ed7e9f885b8a1031a273ecf03668db4443fe4412f440a09f0ae4",
+    "capacity_audit.optimized.json": "d7ca92a60368ed7e9f885b8a1031a273ecf03668db4443fe4412f440a09f0ae4",
+    "capacity_receipt.json": "8f90c97eed24b5eef96dbd085a8b029e6a1ea75e196ea4c76ad82e565d31d619",
+    "capacity_receipt.optimized.json": "8f90c97eed24b5eef96dbd085a8b029e6a1ea75e196ea4c76ad82e565d31d619",
+    "check_capacity.py": "1a45a42e2b96296d6eb39f2e64007a3e6f64f3ddc546f87af862c29694af14d9",
+    "check_corruptions.py": "bac0abf552adf70f8e4e60cdca7b8026291232fe9cfbe36f12f517850cf7a4c7",
+    "check_normality.py": "d25461e02f3bd39faaf852877fd60ad9b8399b810c5a27d3997500fdd30ec190",
+    "check_palettes.py": "4935f747644983114c4de8fa938cd338e1ca26fc91b40b3b44efd7d8473c76c9",
+    "corruption_receipt.json": "382e6be726c4ba5121cf119bf57b4d172940ab865c92a2d2f9ed2592cf5d3f12",
+    "corruption_receipt.optimized.json": "382e6be726c4ba5121cf119bf57b4d172940ab865c92a2d2f9ed2592cf5d3f12",
+    "discover_hostile.py": "8a0d6dfc1410f2a48501971d12a49fd8a461201cb47e6d15a7381e10dcb4c4e1",
+    "discover_triangulation.py": "78f17fbc4808333412707edbc6058fddacb2e7383136ab9d7ee95926d1176307",
+    "explore.py": "78ee5355c49614cb7210990df9afbe927c6f9e1be6f5c70af1d6f82900a1341d",
+    "lrc_banks.py": "4789a715e13314547f34c6061886b0c0133aad57e583e447a3f0953b5ce13c40",
+    "lrc_families.json": "7adaea22e987313cd4b7a8cfcd10391e1f2c6d521e1d232d2f8bc697a8ac6138",
+    "lrc_families.optimized.json": "7adaea22e987313cd4b7a8cfcd10391e1f2c6d521e1d232d2f8bc697a8ac6138",
+    "lrc_receipt.json": "7fbb7e67ca068b0bb56f4d75a81c0cd32d544dbc1544c3edf700f16b9d19821c",
+    "lrc_receipt.optimized.json": "7fbb7e67ca068b0bb56f4d75a81c0cd32d544dbc1544c3edf700f16b9d19821c",
+    "normality_certificate.json": "5740f8ffcc1033c54f2f4b4c3e0598decdb3239728097e7ffa14305e561e13df",
+    "normality_receipt.json": "d48acb074600992faf47a2b3e884748345a8890312991241f2930bfe06214701",
+    "normality_receipt.optimized.json": "d48acb074600992faf47a2b3e884748345a8890312991241f2930bfe06214701",
+    "palette_receipt.json": "4e53004675b17b60c319971043f25298b115769a61b42cf56b4ba553d0ef5899",
+    "palette_receipt.optimized.json": "4e53004675b17b60c319971043f25298b115769a61b42cf56b4ba553d0ef5899",
+    "seal.py": "714719593afe810dbf9c784ece246d7d15939c5f5da86b378feed52577c42bd7",
+    "triangulation.json": "d084ea7face5e3992ac3c3c3be16584398fa80bc4274acfca469737f7e45fcd3"
+  },
+  "basis": "Exact Git source blobs; exact LF packet bytes; explicit repaired-source bytes.",
+  "repaired_current_sources": {
+    "01-canon/theorems/THM-658-chi-c-GW-below-14-linearization-fails.md": "a72b6d941ea71db7e1037d0e5e7ffaa12ca2535fb7559c9cd5d30f5e35d5ec44"
+  },
+  "review": "Same-agent review; separate exact algorithms; no formal build.",
+  "runtime": "Python standard library; NumPy/SciPy only for optional discovery.",
+  "sources": {
+    "01-canon/theorems/THM-1850-directed-wowii-domination-transitivity-inequality-and-three-refutations.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "4408fbdc2266dbe763a247a4f095f42457266164c84e6e279de2959b7dc7a149"
+    },
+    "01-canon/theorems/THM-658-chi-c-GW-below-14-linearization-fails.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "b1b79a2b61bb6e9735d52e50b8a2aa9876a8207c4ac652703e4e2584c04ed923"
+    },
+    "05-knowledge/results/clock_even_guarded_composition_20261026/THEORY.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "a62e9aeb6fb2000c547d81b1917869333fe570f30bbf9d067d0ee9e3885c5168"
+    },
+    "05-knowledge/results/odd_descent_local_relaxations_20261030/PROOFS.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "0e9143c36e4929491fee0f38eded2e40e6d6cf5d33674e0aa5a9e5ae50b26af8"
+    },
+    "05-knowledge/results/odd_eighths_uniform_families_20261030/LRC.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "49fe1b680f7016150d584d978f23fbc46d0fe1074001101c14aeeca91410f027"
+    },
+    "05-knowledge/results/paley_multicoloring_and_carry_20261021/session23b-palettes/PALEY_MULTICOLORING_AND_CARRY.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "fe009bd8cdb5a7ab03fb8758a7c969594295ff403e7c6da910378847499afa2d"
+    },
+    "05-knowledge/results/precision_lifts_ramsey_deficits_20261030/LRC.md": {
+      "revision": "fd5a8148a472a35ead66ba741048079fbe15554d",
+      "sha256": "05c6c75da04764d05329fd52014e957b2469e11fdcae3d80f027ecbe0ae73c38"
+    },
+    "05-knowledge/results/ramsey_circuit_interfaces_20261030/RAMSEY.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "8f6cc91a42f9bf3c0d25d77a6e1d8fa5b1ed0c4c14a20d0f890db3b4b7c4039d"
+    },
+    "05-knowledge/results/ramsey_circuit_interfaces_20261030/README.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "0b679e3ee3fac9cf67062707c6c25702da612ea822f82d4c584a71a1891ecb19"
+    },
+    "05-knowledge/results/ramsey_neighbourhood_lifts_20261030/GRAPH_CAPACITY.md": {
+      "revision": "4eb3c4555da77ec3ebd4d1c4cd3250e13dda9b1d",
+      "sha256": "ba14539ffc17b3e8d72b47acf6b6fb01ba70bbffb72681e3c5c1177ced06397b"
+    },
+    "05-knowledge/results/ramsey_neighbourhood_lifts_20261030/README.md": {
+      "revision": "4eb3c4555da77ec3ebd4d1c4cd3250e13dda9b1d",
+      "sha256": "da12940b9653c39bc78fbf373a4714f9d2335d233bbb34fc76d702b188a9f5bc"
+    },
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
+    },
+    "05-knowledge/results/session119_odd_transport_classifications_20261030/RESEARCH_SYNTHESIS.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "8a48253bd1be03b59b05fb4ede76f88cd2f5ed1273238450fa711d1bba986b3b"
+    },
+    "05-knowledge/results/session120_major_frontier_interfaces_20261030/lrc/LRC.md": {
+      "revision": "fd5a8148a472a35ead66ba741048079fbe15554d",
+      "sha256": "25ccd70f83aec854bac26fe5ad8a01711bcb5d3932203cc2e6865afe59b0cd13"
+    },
+    "05-knowledge/results/terminal_fees_phase_covers_20261030/LRC.md": {
+      "revision": "16a4cdb898c71d54dcb2c6cf58784c8e13692d22",
+      "sha256": "ecf3bf67adf8efdc1e019559f30766f70e0f380f5533c9c2e795bf7d31fce2a6"
+    }
+  },
+  "status": "PROVED scoped with exact certificate / FINITE-EXACT / OPEN general targets"
+}

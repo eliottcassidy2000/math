@@ -1,0 +1,174 @@
+{
+  "enumeration": [
+    {
+      "budget": 2,
+      "candidates": 16
+    },
+    {
+      "budget": 3,
+      "candidates": 83
+    },
+    {
+      "budget": 4,
+      "candidates": 186
+    },
+    {
+      "budget": 5,
+      "candidates": 547
+    },
+    {
+      "budget": 6,
+      "candidates": 1347
+    },
+    {
+      "budget": 7,
+      "candidates": 2621
+    },
+    {
+      "budget": 8,
+      "candidates": 5405
+    },
+    {
+      "budget": 9,
+      "candidates": 10344
+    },
+    {
+      "budget": 10,
+      "candidates": 17677
+    },
+    {
+      "budget": 11,
+      "candidates": 30644
+    },
+    {
+      "budget": 12,
+      "candidates": 50858
+    }
+  ],
+  "scope": "Exact recurrence for the declared hereditary substitution palette; not unrestricted Ramsey numbers.",
+  "values": [
+    0,
+    1,
+    3,
+    7,
+    9,
+    13,
+    21,
+    25,
+    33,
+    49,
+    51,
+    55,
+    63
+  ],
+  "witnesses": [
+    null,
+    {
+      "leaf": true
+    },
+    {
+      "demands": [
+        1,
+        1,
+        1
+      ],
+      "template": "C3"
+    },
+    {
+      "demands": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "template": "P7"
+    },
+    {
+      "demands": [
+        2,
+        2,
+        2
+      ],
+      "template": "C3"
+    },
+    {
+      "demands": [
+        3,
+        2,
+        2
+      ],
+      "template": "C3"
+    },
+    {
+      "demands": [
+        3,
+        3,
+        3
+      ],
+      "template": "C3"
+    },
+    {
+      "demands": [
+        3,
+        1,
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      "template": "P7"
+    },
+    {
+      "demands": [
+        3,
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "template": "P7"
+    },
+    {
+      "demands": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "template": "P7"
+    },
+    {
+      "demands": [
+        9,
+        1,
+        1
+      ],
+      "template": "C3"
+    },
+    {
+      "demands": [
+        9,
+        2,
+        2
+      ],
+      "template": "C3"
+    },
+    {
+      "demands": [
+        6,
+        6,
+        6
+      ],
+      "template": "C3"
+    }
+  ]
+}

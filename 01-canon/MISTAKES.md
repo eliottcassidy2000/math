@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Minimal mechanism witness / repair:** the coupled relation y={2t} contains (1/8,1/4),(3/8,3/4),(5/8,1/4), but not their coordinatewise median(3/8,1/4). The lost coordinate is the integer wrap label. Each fixed-tooth increasing affine relation is median closed; its coupled wrapped union need not be.
 - **Strongest survivor / next question:** the joint tooth-pair compiler and its counts are unchanged. Separate successful runner attachments do not supply a common time marginal. A transfer from odd-denominator descent must retain that common marginal or the original integer tooth labels.
 
+## 2026-10-30 — four coloring quantities can occupy only three distinct levels
+
+- **Source:** THM-658 / `theorems/THM-658-chi-c-GW-below-14-linearization-fails.md` described its four quantities as four distinct values while displaying `chi_f=13<chi_c<=27/2<chi=14=1/M`.
+- **Failed implication / repair:** the number of named invariants was mistaken for the number of distinct numerical levels. The integer chromatic quantity and reciprocal loneliness coincide here. The corrected text says three levels among four quantities.
+- **Reciprocal repair:** the same header also wrote `1/M=1/14` although `M=1/14`; it now reads `1/M=14`, consistently with the theorem body.
+- **Preserved result:** the explicit non-rotation coloring and the strict circular-versus-linear separation remain unchanged. `clique_palette_joint_ports_20261030` inherits only this corrected chain; its interval-clique theorem retains actual phase components rather than substituting a chromatic surrogate for loneliness.
+
 ## 2026-10-30 — a half-clearance core needs a separate recursive spacing guard
 
 - **Source/status:** unpublished generalization tested in `return_kernel_core_transplants_20261030/LRC.md`. The predecessor echo theorem assumed core maximum strictly below1/2; that proved theorem is unchanged.

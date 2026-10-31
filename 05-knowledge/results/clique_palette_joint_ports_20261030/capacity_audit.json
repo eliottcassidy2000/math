@@ -1,0 +1,21 @@
+{
+  "accepted_labelled_candidates": [
+    40,
+    220,
+    778,
+    2255,
+    5648
+  ],
+  "checks": 16,
+  "independent_values": [
+    0,
+    1,
+    3,
+    7,
+    9,
+    13,
+    21
+  ],
+  "scope": "Independent exhaustive upper/lower comparison through six; witness validation through twelve.",
+  "witness_budgets": 12
+}

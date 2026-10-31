@@ -1,0 +1,23 @@
+{
+  "checks": 12179,
+  "geometry": {
+    "all_size_consequence": "The 29-inequality polytope equals the transitive-set polytope and has integer decomposition.",
+    "boundary_facets": 2364,
+    "determinants": {
+      "1": 855,
+      "2": 131,
+      "3": 2
+    },
+    "fundamental_heights": {
+      "2": 102,
+      "3": 32,
+      "4": 1
+    },
+    "fundamental_points": 135,
+    "inequalities": 29,
+    "internal_facets": 2770,
+    "simplices": 988,
+    "vertices": 50
+  },
+  "scope": "Exact certificate plus displayed finite-to-all-size proof; no floating point or producer imports."
+}

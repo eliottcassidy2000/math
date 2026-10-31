@@ -5,10 +5,10 @@ title: chi_c(G_GW) <= 27/2 = 13.5 < 14 — the CIRCULAR chromatic rung is BLIND 
   integer rung chi = 14 = 1/M). Resolves the THM-652 open rung question: chi_c(G_GW) in
   (13, 27/2], strictly below chi = 14. Consequently the LINEARIZATION identity chi_c = 1/M
   FAILS at the GW tight instance (defect 1/M − chi_c >= 1/2): a NON-rotation, variable-speed
-  circular coloring beats the best single-rotation bound 1/M = 1/14 — the graph invariant
+  circular coloring beats the best single-rotation bound 1/M = 14 — the graph invariant
   chi_c is strictly finer/lower than 1/M at the tight locus, and opus-S141's homomorphism
   ladder LRC(14) => GRAPH-14 => MOTZKIN-14 has genuinely separating rungs (chi_f = 13 <
-  chi_c <= 13.5 < chi = 14 = 1/M — four distinct values, only the integer rung meets 1/M)
+  chi_c <= 13.5 < chi = 14 = 1/M — three distinct levels among four quantities, with the integer rung meeting 1/M)
 status: PROVED (an explicit, independently machine-verified circular-coloring certificate;
   chi_c <= 27/2 is a checkable witness. The lower bound chi_c > 13 is standard: chi = 14
   forces chi_c in (chi−1, chi] = (13, 14]. Exact chi_c in (13, 27/2] not pinned; 27/2 is the
@@ -44,10 +44,16 @@ NON-rotation circular coloring** — this is the linearization question (opus-S1
 > **`chi_c(G_GW) <= 27/2 = 13.5`, hence `chi_c(G_GW) in (13, 27/2]` — strictly below
 > `chi(G_GW) = 14 = 1/M(GW)`.**
 
-**Corollary (rung separation at the tight locus).** At GW the four invariants are all
-distinct: `chi_f = 13 < chi_c <= 13.5 < chi = 14 = 1/M`. The *integer* rung meets `1/M`;
+**Corollary (rung separation at the tight locus).** At GW the four quantities have
+three distinct levels: `chi_f = 13 < chi_c <= 13.5 < chi = 14 = 1/M`. The *integer* rung meets `1/M`;
 the *fractional* and *circular* rungs do NOT. The circular chromatic number is BLIND to
 GW's tightness.
+
+**Wording correction, 2026-10-30:** the previous phrase "four distinct values"
+contradicted the displayed equality `chi=1/M`; the header's reciprocal typo
+`1/M=1/14` is corrected to `1/M=14`. The three-level chain and the
+non-rotation certificate are unchanged. See the clique/palette joint-port
+packet and the corresponding MISTAKES entry for the preserved correction lineage.
 
 **Corollary (linearization fails).** `chi_c(G_GW) < 1/M(GW)`: the identity `chi_c = 1/M`
 (opus-S141's GRAPH-LRC linearization) is FALSE at GW, with defect `1/M − chi_c >= 1/2`. A

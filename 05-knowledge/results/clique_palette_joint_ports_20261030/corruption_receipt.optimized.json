@@ -1,0 +1,11 @@
+{
+  "damaged_certificates_rejected": {
+    "damaged_palette": "exact demand decomposition",
+    "missing_simplex": "unpaired facet lies on a declared boundary",
+    "omitted_lattice_class": "every nonzero fundamental class supplied",
+    "wrong_support_inventory": "complete literal transitive subsets"
+  },
+  "native_GW_minimum_circular_distance": 2,
+  "native_GW_phase_checks": 39,
+  "scope": "Negative certificate controls and the explicit 27/2 upper-bound witness only."
+}
