@@ -41,3 +41,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session129](S129.md): PRIMEGAME block structure, tournament incidence fingerprints, and arithmetic encodings.
 
 [Session129](S129.md): PRIMEGAME block structure, tournament incidence fingerprints, and arithmetic encodings.
+
+[Session130](S130.md): blue/black line theorems, arithmetic reflection and integral cycle structure.

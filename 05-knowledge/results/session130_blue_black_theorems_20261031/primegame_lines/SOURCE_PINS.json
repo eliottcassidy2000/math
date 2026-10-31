@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "bytes": 17418,
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/partition/README.md",
+      "sha256": "2a2f780f8065c90c4bae08efd0e83e2ed94383156a4e0a53c6a2fb0ca3de959b"
+    },
+    {
+      "bytes": 4552,
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/periodic_density/README.md",
+      "sha256": "b39b0a7e16d363a3a26693295ea6e2d1eb86d9d5d8d4182a73fbaae8d35c3b28"
+    },
+    {
+      "bytes": 12828,
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/tournaments/REPORT.md",
+      "sha256": "49bb9f2664d40e8f7370761e5d5b06de8677334c16fbffa0ba70d7c039c78a96"
+    },
+    {
+      "bytes": 8012,
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/tournaments/check_tournaments.py",
+      "sha256": "ef7308b78eedeeb535d9f1f4926c74281713e09580c7db5cec1330e13dbb6b1b"
+    },
+    {
+      "bytes": 34249,
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    }
+  ],
+  "scope": "Inherited complete period classification, tiling convention and carrier discipline; checker imports none of these files.",
+  "source_commit": "5431278adcd6269b5eca7756acc7a842938cd8cf"
+}
