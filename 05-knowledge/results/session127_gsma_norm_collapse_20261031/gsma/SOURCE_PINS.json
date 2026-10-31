@@ -1,0 +1,85 @@
+{
+  "source_commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+  "files": [
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "AGENTS.md",
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "bytes": 6823
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85",
+      "bytes": 10465
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b",
+      "bytes": 23418
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "01-canon/MISTAKES.md",
+      "git_blob": "0aa04934620266401def00f7c5fd2d2e4d4fe808",
+      "sha256": "b6924925bbfcbdb6e846b0b67d9db12ab83e487cb002ea2cd295a35db1d83081",
+      "bytes": 2037083
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "01-canon/theorems/THM-227-knacci-mersenne.md",
+      "git_blob": "60549f44d69d8c8ef93ce926bb1c68957140b232",
+      "sha256": "10c453491199d14d95281790c1262752833da8347cf9926471692685f7993387",
+      "bytes": 3542
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "04-computation/prove_knacci_mersenne_s90ap.py",
+      "git_blob": "57a1e4e858692964dbffaf770b60e3d90eccd06f",
+      "sha256": "12eda8a80d44ce5d58ffb5be6da868b3be66325db0405fac36af04bc93e32b05",
+      "bytes": 17838
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "04-computation/rational_irrational_symbiosis.py",
+      "git_blob": "6bdcf9ba2a13899d69da0dcbc600b2cb9191e98e",
+      "sha256": "58616843b4a12d8e82981152fd47c374f8fc1b17c528bb24933cf14731f13735",
+      "bytes": 19076
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "05-knowledge/results/rational_irrational_symbiosis.out",
+      "git_blob": "233542bb9ac565295c93263a81819b601bb0618d",
+      "sha256": "d2350f27ebdfa24f691d8ff65e5309f2a2dd4366d9364d67605e3810d4cc5adb",
+      "bytes": 18274
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "04-computation/free_exploration_s90g.py",
+      "git_blob": "2e0177ad506b8c274451f7fdac9797430167cf9c",
+      "sha256": "f9044b4b4634a9ab4cd80a96279a15e928dda4aa3ec826a48d9ec50c1b0514b8",
+      "bytes": 22566
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "path": "05-knowledge/results/free_exploration_s90g.out",
+      "git_blob": "eea0c4c246d1abe11871e2559c492ed8b13c7b52",
+      "sha256": "de1cc1157d4a99384c96753e0bbe6156e0d132df161c4fcfdd9d5d2c98c0d93e",
+      "bytes": 18321
+    }
+  ]
+}

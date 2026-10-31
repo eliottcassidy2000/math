@@ -1,0 +1,421 @@
+{
+  "status": "FINITE-EXACT",
+  "universe": {
+    "orders": [
+      3,
+      4,
+      5
+    ],
+    "n_min": 0,
+    "n_max": 500,
+    "primitive_pair_regression_box": [
+      -8,
+      8
+    ]
+  },
+  "method": "coefficient recurrence plus independent exact monic-polynomial powering and forward cancellation",
+  "checks": 15544,
+  "rows": [
+    {
+      "k": 3,
+      "irreducibility_modulus": 3,
+      "proper_frobenius_gcd": [
+        1
+      ],
+      "bound": 500,
+      "rank_two_hits": [
+        {
+          "n": 0,
+          "coefficients": [
+            1,
+            0,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            1,
+            0
+          ]
+        },
+        {
+          "n": 3,
+          "coefficients": [
+            2,
+            -1,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            2,
+            1
+          ]
+        },
+        {
+          "n": 16,
+          "coefficients": [
+            -103,
+            56,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            -103,
+            -56
+          ]
+        }
+      ],
+      "all_vectors_sha256": "f09d42b2b377e16b332bd56490db841143b9378726613988c1aa655a601e2cce",
+      "checkpoints": [
+        {
+          "n": 0,
+          "vector": [
+            1,
+            0,
+            0
+          ],
+          "sha256": "7ff52993d5d3cb149089942de7fc7a6511db2671cf2125976c081ad6fff89772"
+        },
+        {
+          "n": 1,
+          "vector": [
+            -1,
+            -1,
+            1
+          ],
+          "sha256": "43eaedd0ec5608c91d2bd34f5a2e343cc838de0d9d59de60a2e096611225df02"
+        },
+        {
+          "n": 3,
+          "vector": [
+            2,
+            -1,
+            0
+          ],
+          "sha256": "3f8a98d645fc503807c58bc3a413ae79023450f5ff32466a4ec4eb0be4d9c7a0"
+        },
+        {
+          "n": 16,
+          "vector": [
+            -103,
+            56,
+            0
+          ],
+          "sha256": "3f0e18094168aec2300cab8fca5d48c880020a8252e3fb65f0a7157830580793"
+        },
+        {
+          "n": 50,
+          "vector": [
+            -2751336,
+            -3792150,
+            2875039
+          ],
+          "sha256": "39f7f17185d7a0a04f55733f4811f4c3e638fd2dc8f5bee3ee1cb9e4ff6cddf7"
+        },
+        {
+          "n": 100,
+          "vector": [
+            -5969459251283,
+            15593497840142,
+            -6713454766366
+          ],
+          "sha256": "d1b3a40477733bef09d08f5a96a4c8d1f93a4710087ff03d2d32687981b3f360"
+        },
+        {
+          "n": 250,
+          "vector": [
+            -711193467500005541799506389921660,
+            849715816404971212278094357172102,
+            -251753969800605119132339374985721
+          ],
+          "sha256": "110de75d5341d80298d5ffeef2cbff027d327b994effa8f97b9e7ec551e3f72f"
+        },
+        {
+          "n": 500,
+          "vector": [
+            141337549560418140274177831439325215623060909206491042369511934357,
+            -1509703213061198443536356192365139747349064473830693052904306390042,
+            779029988783635507015291879923313279964664113168074783005593000722
+          ],
+          "sha256": "72fdf520d50ad2a4520c487c21998811fb980fa452732ef2a33e775555347951"
+        }
+      ],
+      "primitive_box_count": 176,
+      "hostile_inverse_vector": [
+        -1,
+        -1,
+        1
+      ],
+      "hostile_inverse_norm": 1
+    },
+    {
+      "k": 4,
+      "irreducibility_modulus": 2,
+      "proper_frobenius_gcd": [
+        1
+      ],
+      "bound": 500,
+      "rank_two_hits": [
+        {
+          "n": 0,
+          "coefficients": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            1,
+            0
+          ]
+        },
+        {
+          "n": 4,
+          "coefficients": [
+            2,
+            -1,
+            0,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            2,
+            1
+          ]
+        }
+      ],
+      "all_vectors_sha256": "9dc38da966b9d260c0cb86f238beb1a9364d2424b9fdd6329087a3461a7007ee",
+      "checkpoints": [
+        {
+          "n": 0,
+          "vector": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "sha256": "c4b6eb04efb3f42ec2e9d8f1c791e2af10bfb9916c70dc12dfd08762d17cfa37"
+        },
+        {
+          "n": 1,
+          "vector": [
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "sha256": "6e806c4b6e98938e09bad96f975c5953314e113ca34f928a77aee8cc1f2b49e3"
+        },
+        {
+          "n": 4,
+          "vector": [
+            2,
+            -1,
+            0,
+            0
+          ],
+          "sha256": "69b1aa587dcfd080df0155e37a2f36d6fcc68945b88e26051db4e8d834dc1e61"
+        },
+        {
+          "n": 16,
+          "vector": [
+            17,
+            -31,
+            25,
+            -7
+          ],
+          "sha256": "673ebd2c6182637a37b7839c29b255bfb919b22506a800ced0814cad0eab0fda"
+        },
+        {
+          "n": 50,
+          "vector": [
+            136533,
+            -63756,
+            190396,
+            -100680
+          ],
+          "sha256": "7a2a6aa1ae7e82badf174adf0b03e26aa622452c2d5aa397aa1d13bb618b165f"
+        },
+        {
+          "n": 100,
+          "vector": [
+            49664591305,
+            -14587940840,
+            69013619128,
+            -38811942176
+          ],
+          "sha256": "7799cde6af362284f2b981b340aa464cc86a5a187add43124a1d48dd3f18fe1b"
+        },
+        {
+          "n": 250,
+          "vector": [
+            2088359512770223301559193061,
+            -606985210871042097481446748,
+            2871755885679820226760674860,
+            -1618067613564089389262261896
+          ],
+          "sha256": "1e38d0ae77417fb40ff01065b82211c3e2dd488673a0f6ee06736d1fa97d6bbd"
+        },
+        {
+          "n": 500,
+          "vector": [
+            10515408763529003853612211573563975864438623252154358249,
+            -3056290952811803980788188737803295720869979584714177032,
+            14460007018362769131987418416037412279598765878762637464,
+            -8147381962143058463519082894039957020176292429255948832
+          ],
+          "sha256": "030a532bee58509e6a454bb6c9265c65459ec83f1e0f78c939543571af53ca8a"
+        }
+      ],
+      "primitive_box_count": 176,
+      "hostile_inverse_vector": [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "hostile_inverse_norm": -1
+    },
+    {
+      "k": 5,
+      "irreducibility_modulus": 5,
+      "proper_frobenius_gcd": [
+        1
+      ],
+      "bound": 500,
+      "rank_two_hits": [
+        {
+          "n": 0,
+          "coefficients": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            1,
+            0
+          ]
+        },
+        {
+          "n": 5,
+          "coefficients": [
+            2,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "norm": 1,
+          "binary_pair": [
+            2,
+            1
+          ]
+        }
+      ],
+      "all_vectors_sha256": "b1515005e4fa68b4e75789c69c797779d32d736ffcc6a67faf780559247749ee",
+      "checkpoints": [
+        {
+          "n": 0,
+          "vector": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sha256": "3404d3bfd3c7f4315b41e4c6d2f4d0e3bbbe8a4c884df36ac042490ae960913b"
+        },
+        {
+          "n": 1,
+          "vector": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "sha256": "763a89e8284124509bd25b6e0c8c1c81dc0def3099d38fe54bc9795760c97cc1"
+        },
+        {
+          "n": 5,
+          "vector": [
+            2,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "sha256": "51771eaa3955a6287bd6b62ba59791d963aa1a979c13b03b0d6007c997e62c4d"
+        },
+        {
+          "n": 16,
+          "vector": [
+            -20,
+            -2,
+            -9,
+            -8,
+            8
+          ],
+          "sha256": "2eb2b738ab073da0b90e7389b71e734ba1c4c8172d66ee7f0e6b3eb2ee8178bd"
+        },
+        {
+          "n": 50,
+          "vector": [
+            -5024,
+            -8480,
+            7344,
+            -19374,
+            9407
+          ],
+          "sha256": "c3809996c53eac0ac8b95fddfa1ad620ef1198f8cd19d0adb9aa4a4b1017b845"
+        },
+        {
+          "n": 100,
+          "vector": [
+            -280383840,
+            105585378,
+            -257514561,
+            -97025088,
+            120855040
+          ],
+          "sha256": "422b3fe6a8887b1b32bf54bfcf3d16876ff82eb3e46628258c757aac1305f519"
+        },
+        {
+          "n": 250,
+          "vector": [
+            -2561260228693687182028,
+            -1456512681592953599636,
+            128248747923662606145,
+            -4726645664632295721600,
+            2734225331754798274464
+          ],
+          "sha256": "e450c596b5c92cdfe65aaa7abb0f53f198cbd2a22d14f0ac9b43416fb5bc152c"
+        },
+        {
+          "n": 500,
+          "vector": [
+            -1365589950678110016475798754367043971679280,
+            11682420996488641245219073577869083430263904,
+            -12685563110771187029129696571013532888168840,
+            17164699953672443722173158161924172435793240,
+            -6894886054539529278853199298912424338119679
+          ],
+          "sha256": "f7c4c3e9b0558a0785e29bb39e93580a2f7e15214c4bccedcb0b364aa487a998"
+        }
+      ],
+      "primitive_box_count": 176,
+      "hostile_inverse_vector": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "hostile_inverse_norm": 1
+    }
+  ],
+  "scope": "No all-exponent classification is asserted for k=4 or k=5; cubic global classification is separate cited work."
+}

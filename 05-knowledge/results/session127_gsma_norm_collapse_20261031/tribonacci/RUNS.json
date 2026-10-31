@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "canonical_receipt_sha256": "1f31c3ae0152e14f5af8259d2fc2e1485dfbe53fb8f267effc347831f60a6506",
+  "runs": [
+    {
+      "mode": "normal",
+      "exit_code": 0,
+      "sha256": "1f31c3ae0152e14f5af8259d2fc2e1485dfbe53fb8f267effc347831f60a6506"
+    },
+    {
+      "mode": "optimized",
+      "exit_code": 0,
+      "sha256": "1f31c3ae0152e14f5af8259d2fc2e1485dfbe53fb8f267effc347831f60a6506"
+    },
+    {
+      "mode": "relocated_optimized",
+      "exit_code": 0,
+      "sha256": "1f31c3ae0152e14f5af8259d2fc2e1485dfbe53fb8f267effc347831f60a6506"
+    }
+  ],
+  "byte_identical": true,
+  "checks_remain_active_under_O": true,
+  "source_sha256": "a41b1bdccced0d1d4867bc857012eabc889001bedf68ae2f7e1bb264039c79e3"
+}

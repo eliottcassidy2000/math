@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "relocation_subdirectory": "relocation",
+  "script_sha256": "36e09abfd2f23103ccaf3635c99b7467c9dbf0ac2e7d9b187bcd8f96e946666c",
+  "output_sha256": "de9304b930377c2bc356f1036602afeeecc351231c9119828bb508f4da4301ff",
+  "normal_and_optimized_equal_original": true,
+  "standard_library_only": true
+}

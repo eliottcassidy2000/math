@@ -1,0 +1,26 @@
+{
+  "status": "CITED",
+  "title": "Efficient resolution of Thue-Mahler equations",
+  "authors": [
+    "Adela Gherga",
+    "Samir Siksek"
+  ],
+  "version": "arXiv:2207.14492v2",
+  "url": "https://arxiv.org/abs/2207.14492v2",
+  "html_url": "https://arxiv.org/html/2207.14492v2",
+  "journal": "Algebra & Number Theory 19 (2025), 667-714",
+  "doi": "10.2140/ant.2025.19.667",
+  "inspected_sections": [
+    "Abstract",
+    "Introduction equation (2) and following paragraph"
+  ],
+  "imports": [
+    "definition of Thue-Mahler equations",
+    "classical finiteness for fixed form and finite prime set"
+  ],
+  "not_imported": [
+    "explicit solution list",
+    "effective bound for the forms in this packet",
+    "unrun software certification"
+  ]
+}

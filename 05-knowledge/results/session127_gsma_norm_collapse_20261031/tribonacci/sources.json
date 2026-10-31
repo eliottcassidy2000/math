@@ -1,0 +1,30 @@
+{
+  "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+  "files": [
+    {
+      "path": "04-computation/rational_irrational_symbiosis.py",
+      "bytes": 19076,
+      "sha256": "58616843b4a12d8e82981152fd47c374f8fc1b17c528bb24933cf14731f13735"
+    },
+    {
+      "path": "05-knowledge/results/rational_irrational_symbiosis.out",
+      "bytes": 18274,
+      "sha256": "d2350f27ebdfa24f691d8ff65e5309f2a2dd4366d9364d67605e3810d4cc5adb"
+    },
+    {
+      "path": "04-computation/free_exploration_s90g.py",
+      "bytes": 22566,
+      "sha256": "f9044b4b4634a9ab4cd80a96279a15e928dda4aa3ec826a48d9ec50c1b0514b8"
+    },
+    {
+      "path": "05-knowledge/results/free_exploration_s90g.out",
+      "bytes": 18321,
+      "sha256": "de1cc1157d4a99384c96753e0bbe6156e0d132df161c4fcfdd9d5d2c98c0d93e"
+    },
+    {
+      "path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+      "bytes": 23768,
+      "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d"
+    }
+  ]
+}

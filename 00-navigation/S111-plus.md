@@ -33,3 +33,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session125](S125.md): origin32, nice/ninja pair onsets and carry barriers, Chung–Graham/Beatty arithmetic, and rooted-forest interfaces.
 
 [Session126](S126.md): prime-register dynamics, divisor balance, six-cell symmetry and exact observer refinements.
+
+[Session127](S127.md): GSMA, exact Tribonacci305, Lucas47, and typed norm/volume bridges.

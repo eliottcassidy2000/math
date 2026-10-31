@@ -1,0 +1,508 @@
+{
+  "arithmetic": "integer/Fraction; floats display-only",
+  "cf_terms": 40,
+  "cubic_thue": {
+    "completeness": "CITED Delone-Nagell via Knapp-Lemos-Neumann Lemma2.4, Example4.1; not established by finite enumeration",
+    "discriminant": -44,
+    "norm_plus_one_solutions": [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        -103,
+        -56
+      ]
+    ],
+    "positive_sparse_inverse_power_exponents": [
+      3,
+      16
+    ]
+  },
+  "degrees": {
+    "3": {
+      "cf": [
+        1,
+        1,
+        5,
+        4,
+        2,
+        305,
+        1,
+        8,
+        2,
+        1,
+        4,
+        6,
+        14,
+        3,
+        1,
+        13,
+        5,
+        1,
+        7,
+        23,
+        1,
+        16,
+        4,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        17,
+        1,
+        3,
+        1,
+        1,
+        1,
+        29,
+        1,
+        6,
+        1,
+        3
+      ],
+      "irreducibility_prime": 3,
+      "selected_convergents": [
+        {
+          "index": 0,
+          "next_digit": 1,
+          "norm": -2,
+          "p": 1,
+          "previous_p": 1,
+          "previous_q": 0,
+          "q": 1,
+          "tail_bounds": {
+            "lower": "1191487883953/1000000000000",
+            "upper": "595743941977/500000000000"
+          }
+        },
+        {
+          "index": 1,
+          "next_digit": 5,
+          "norm": 1,
+          "p": 2,
+          "previous_p": 1,
+          "previous_q": 1,
+          "q": 1,
+          "tail_bounds": {
+            "lower": "65278281539/12500000000",
+            "upper": "5222262523121/1000000000000"
+          }
+        },
+        {
+          "index": 2,
+          "next_digit": 4,
+          "norm": -7,
+          "p": 11,
+          "previous_p": 2,
+          "previous_q": 1,
+          "q": 6,
+          "tail_bounds": {
+            "lower": "2249592027393/500000000000",
+            "upper": "4499184054787/1000000000000"
+          }
+        },
+        {
+          "index": 3,
+          "next_digit": 2,
+          "norm": 61,
+          "p": 46,
+          "previous_p": 11,
+          "previous_q": 6,
+          "q": 25,
+          "tail_bounds": {
+            "lower": "2003269115691/1000000000000",
+            "upper": "500817278923/250000000000"
+          }
+        },
+        {
+          "index": 4,
+          "next_digit": 305,
+          "norm": -1,
+          "p": 103,
+          "previous_p": 46,
+          "previous_q": 25,
+          "q": 56,
+          "tail_bounds": {
+            "lower": "152946560248907/500000000000",
+            "upper": "61178624099563/200000000000"
+          }
+        },
+        {
+          "index": 5,
+          "next_digit": 1,
+          "norm": 83326,
+          "p": 31461,
+          "previous_p": 103,
+          "previous_q": 56,
+          "q": 17105,
+          "tail_bounds": {
+            "lower": "139958718119/125000000000",
+            "upper": "1119669744953/1000000000000"
+          }
+        },
+        {
+          "index": 18,
+          "next_digit": 23,
+          "norm": -119727577897,
+          "p": 968938189754,
+          "previous_p": 123662736363,
+          "previous_q": 67234071040,
+          "q": 526801047747,
+          "tail_bounds": {
+            "lower": "23941916147927/1000000000000",
+            "upper": "2992739518491/125000000000"
+          }
+        },
+        {
+          "index": 34,
+          "next_digit": 29,
+          "norm": -965518900713521341,
+          "p": 9905930223184458398,
+          "previous_p": 6365316031160676085,
+          "previous_q": 3460752388454793953,
+          "q": 5385745422839757827,
+          "tail_bounds": {
+            "lower": "2987151604747/100000000000",
+            "upper": "29871516047471/1000000000000"
+          }
+        }
+      ],
+      "uniform_sparse_unit_exponent": 3
+    },
+    "4": {
+      "cf": [
+        1,
+        1,
+        12,
+        1,
+        4,
+        7,
+        1,
+        21,
+        1,
+        2,
+        1,
+        4,
+        6,
+        1,
+        10,
+        1,
+        2,
+        2,
+        1,
+        7,
+        1,
+        1,
+        14,
+        3,
+        2,
+        2,
+        1,
+        8,
+        2,
+        8,
+        8,
+        2,
+        16,
+        2,
+        1,
+        7,
+        1,
+        1,
+        1,
+        4
+      ],
+      "irreducibility_prime": 2,
+      "selected_convergents": [
+        {
+          "index": 0,
+          "next_digit": 1,
+          "norm": -3,
+          "p": 1,
+          "previous_p": 1,
+          "previous_q": 0,
+          "q": 1,
+          "tail_bounds": {
+            "lower": "1078095077667/1000000000000",
+            "upper": "269523769417/250000000000"
+          }
+        },
+        {
+          "index": 1,
+          "next_digit": 12,
+          "norm": 1,
+          "p": 2,
+          "previous_p": 1,
+          "previous_q": 1,
+          "q": 1,
+          "tail_bounds": {
+            "lower": "12804904353297/1000000000000",
+            "upper": "6402452176649/500000000000"
+          }
+        },
+        {
+          "index": 2,
+          "next_digit": 1,
+          "norm": -1611,
+          "p": 25,
+          "previous_p": 2,
+          "previous_q": 1,
+          "q": 13,
+          "tail_bounds": {
+            "lower": "621191819813/500000000000",
+            "upper": "1242383639627/1000000000000"
+          }
+        },
+        {
+          "index": 3,
+          "next_digit": 4,
+          "norm": 491,
+          "p": 27,
+          "previous_p": 25,
+          "previous_q": 13,
+          "q": 14,
+          "tail_bounds": {
+            "lower": "103142274943/25000000000",
+            "upper": "4125690997721/1000000000000"
+          }
+        },
+        {
+          "index": 4,
+          "next_digit": 7,
+          "norm": -7379,
+          "p": 133,
+          "previous_p": 27,
+          "previous_q": 14,
+          "q": 69,
+          "tail_bounds": {
+            "lower": "159120385411/20000000000",
+            "upper": "7956019270551/1000000000000"
+          }
+        },
+        {
+          "index": 5,
+          "next_digit": 1,
+          "norm": 2636341,
+          "p": 958,
+          "previous_p": 133,
+          "previous_q": 69,
+          "q": 497,
+          "tail_bounds": {
+            "lower": "1046004019797/1000000000000",
+            "upper": "523002009899/500000000000"
+          }
+        },
+        {
+          "index": 6,
+          "next_digit": 21,
+          "norm": -179133,
+          "p": 1091,
+          "previous_p": 958,
+          "previous_q": 497,
+          "q": 566,
+          "tail_bounds": {
+            "lower": "21737230885303/1000000000000",
+            "upper": "2717153860663/125000000000"
+          }
+        }
+      ],
+      "uniform_sparse_unit_exponent": 4
+    },
+    "5": {
+      "cf": [
+        1,
+        1,
+        28,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        2,
+        4,
+        2,
+        1,
+        3,
+        1,
+        6,
+        1,
+        4,
+        1,
+        1,
+        5,
+        3,
+        2,
+        15,
+        69,
+        1,
+        1,
+        14,
+        1,
+        8,
+        1,
+        6,
+        1,
+        1,
+        1,
+        3,
+        13,
+        19,
+        1,
+        12
+      ],
+      "irreducibility_prime": 5,
+      "selected_convergents": [
+        {
+          "index": 0,
+          "next_digit": 1,
+          "norm": -4,
+          "p": 1,
+          "previous_p": 1,
+          "previous_q": 0,
+          "q": 1,
+          "tail_bounds": {
+            "lower": "1035252161619/1000000000000",
+            "upper": "51762608081/50000000000"
+          }
+        },
+        {
+          "index": 1,
+          "next_digit": 28,
+          "norm": 1,
+          "p": 2,
+          "previous_p": 1,
+          "previous_q": 1,
+          "q": 1,
+          "tail_bounds": {
+            "lower": "7091763696559/250000000000",
+            "upper": "28367054786237/1000000000000"
+          }
+        },
+        {
+          "index": 2,
+          "next_digit": 2,
+          "norm": -245312,
+          "p": 57,
+          "previous_p": 2,
+          "previous_q": 1,
+          "q": 29,
+          "tail_bounds": {
+            "lower": "2724388940007/1000000000000",
+            "upper": "340548617501/125000000000"
+          }
+        },
+        {
+          "index": 3,
+          "next_digit": 1,
+          "norm": 3047377,
+          "p": 116,
+          "previous_p": 57,
+          "previous_q": 29,
+          "q": 59,
+          "tail_bounds": {
+            "lower": "138047386531/100000000000",
+            "upper": "1380473865311/1000000000000"
+          }
+        },
+        {
+          "index": 4,
+          "next_digit": 2,
+          "norm": -5736347,
+          "p": 173,
+          "previous_p": 116,
+          "previous_q": 59,
+          "q": 88,
+          "tail_bounds": {
+            "lower": "1314150709383/500000000000",
+            "upper": "2628301418767/1000000000000"
+          }
+        },
+        {
+          "index": 5,
+          "next_digit": 1,
+          "norm": 183306947,
+          "p": 462,
+          "previous_p": 173,
+          "previous_q": 88,
+          "q": 235,
+          "tail_bounds": {
+            "lower": "1591592777177/1000000000000",
+            "upper": "795796388589/500000000000"
+          }
+        },
+        {
+          "index": 23,
+          "next_digit": 69,
+          "norm": 212788744741425601030399524296,
+          "p": 15941531077,
+          "previous_p": 1033013098,
+          "previous_q": 525452847,
+          "q": 8108825441,
+          "tail_bounds": {
+            "lower": "34758117582489/500000000000",
+            "upper": "69516235164979/1000000000000"
+          }
+        }
+      ],
+      "uniform_sparse_unit_exponent": 5
+    }
+  },
+  "exceptional_unit": {
+    "boundary_forms": {
+      "31461/17105": 83326,
+      "31564/17161": -10037
+    },
+    "coefficients": [
+      -103,
+      56,
+      0
+    ],
+    "inverse_power": 16,
+    "norm_of_103_minus_56tau": -1,
+    "tail": "(tau^16-25)/56",
+    "tail_bounds": {
+      "lower": "152946560248907/500000000000",
+      "upper": "15294656024891/50000000000"
+    }
+  },
+  "historical_correction": {
+    "correct_digit": 14,
+    "exact_20_digits": [
+      1,
+      1,
+      5,
+      4,
+      2,
+      305,
+      1,
+      8,
+      2,
+      1,
+      4,
+      6,
+      14,
+      3,
+      1,
+      13,
+      5,
+      1,
+      7,
+      23
+    ],
+    "first_wrong_zero_based_index": 12,
+    "legacy_digit": 17
+  },
+  "status": "PASS"
+}
