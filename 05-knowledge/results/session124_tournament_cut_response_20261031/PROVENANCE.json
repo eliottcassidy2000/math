@@ -1,0 +1,35 @@
+{
+  "audit_portability_edit": {
+    "after": "SOURCE=Path(__file__).resolve().parents[1]",
+    "before": "SOURCE=Path(__file__).resolve().parents[1]/'cut_response'",
+    "file": "audit/independent_check.py",
+    "original_sha256": "0f70c43e4cb4e834c04435798522bc8e8eb88338d1c3bbcc5b718d1146bf2e92",
+    "portable_sha256": "d923365a9003ab8564867e89bd86c9873625221a7fbbf2b3da428dcb0edbe84d",
+    "semantics": "Only import root adapted to curated packet; full independent normal/-O/relocation replay passed."
+  },
+  "core_source_sha256": "99930b3155fec3444ebecec69b2c839a89139277909fc62a150dc2bf81e5280e",
+  "global_tournament_spectrum_completeness_claim": false,
+  "independent_auditor_source": "session124_research/audit_cut_response/",
+  "independent_symmetry_proof_reviewer": "audit_binary_bank_census; verdict recorded in audit/SYMMETRY_AUDIT.md",
+  "novelty_claim": false,
+  "primary_dependencies": [
+    {
+      "claim": "Rédei oddness",
+      "locator": "Theorem 5",
+      "source": "https://arxiv.org/html/2412.10572v1"
+    },
+    {
+      "claim": "optional packing corollary odd-cycle collection formula",
+      "locator": "Section 3.4, Corollary 19 as fetched 2026-10-31",
+      "source": "https://arxiv.org/html/2412.10572v1"
+    }
+  ],
+  "producer_source": "session124_research/cut_response/",
+  "publication_responsibility": "Prepared for root checkpoint; this lane made no remote or source-worktree changes.",
+  "reproduction": [
+    "python3 run_checks.py",
+    "python3 run_audit.py"
+  ],
+  "status": "PROVED with explicitly cited classical dependencies; exact finite checks PASS",
+  "target_prefix": "05-knowledge/results/session124_tournament_cut_response_20261031/"
+}

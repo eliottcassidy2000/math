@@ -1,0 +1,56 @@
+{
+  "checks": {
+    "count_one_iff_transitive": 1150,
+    "every_crossing_pair_small_deletion": 243442,
+    "gain_two_or_four_transitive_deletion": 4423,
+    "packing_path_lower_bound": 1150,
+    "pair_deletion_packing_bound": 11952,
+    "parent_independent_dp": 1150,
+    "positive_gain_has_crossing_arc": 46608,
+    "positive_gain_packing_bound": 46608,
+    "zero_gain_cuts_excluded": 3387
+  },
+  "data_sha256": "8ed6be0bbeb323232009d0e6ef9731a1c2f29c0b774590e677201d82b5b21271",
+  "parents": 1150,
+  "seed": 124032,
+  "source_sha256": "873a45f2fd5ac319399bb028c335fc7d45ddda22683232c257646330d0817d67",
+  "status": "PASS",
+  "structured_controls": [
+    {
+      "h": 27,
+      "minimum_positive_gain": 18,
+      "nu": 3,
+      "out": [
+        506,
+        508,
+        505,
+        464,
+        480,
+        456,
+        128,
+        256,
+        64
+      ]
+    },
+    {
+      "h": 81,
+      "minimum_positive_gain": 54,
+      "nu": 4,
+      "out": [
+        4090,
+        4092,
+        4089,
+        4048,
+        4064,
+        4040,
+        3712,
+        3840,
+        3648,
+        1024,
+        2048,
+        512
+      ]
+    }
+  ],
+  "universe": "all labelled n0..5; 12 seeded random per n6..9; ordinal sums of 3 and 4 triangles"
+}

@@ -1,0 +1,117 @@
+{
+  "files": {
+    "PROVENANCE.json": {
+      "bytes": 1686,
+      "sha256": "1957e7db510ea491705914b444e03666d04e655d87b5820693cecd44d9943496"
+    },
+    "README.md": {
+      "bytes": 19197,
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8"
+    },
+    "audit/AUDIT.md": {
+      "bytes": 8521,
+      "sha256": "3c235deeebd64bca33e71f7c367d6d6fe96f027158a988276289590f28d610bb"
+    },
+    "audit/SYMMETRY_AUDIT.md": {
+      "bytes": 1635,
+      "sha256": "33be24634616de98687f30b5100a8e281f3a80c0328b1f9c88f6cadcae99f296"
+    },
+    "audit/consequences.normal.json": {
+      "bytes": 883,
+      "sha256": "ee570fef552a863b0cd7e44d54e4d328fc608a43ab3594b86c6eb7e408dce2dc"
+    },
+    "audit/consequences.optimized.json": {
+      "bytes": 883,
+      "sha256": "ee570fef552a863b0cd7e44d54e4d328fc608a43ab3594b86c6eb7e408dce2dc"
+    },
+    "audit/independent_check.py": {
+      "bytes": 5683,
+      "sha256": "d923365a9003ab8564867e89bd86c9873625221a7fbbf2b3da428dcb0edbe84d"
+    },
+    "audit/independent_consequences.py": {
+      "bytes": 2589,
+      "sha256": "207e7a650a34b62565a0ddf03ff88e56c9692c4177ebc8e830c3e42fa4df8da6"
+    },
+    "audit/normal.json": {
+      "bytes": 473,
+      "sha256": "5fc357447129d1a25c25a67c9ecf7d8400dec38a54df32422f332615c3667912"
+    },
+    "audit/optimized.json": {
+      "bytes": 473,
+      "sha256": "5fc357447129d1a25c25a67c9ecf7d8400dec38a54df32422f332615c3667912"
+    },
+    "audit/producer.normal.json": {
+      "bytes": 1491,
+      "sha256": "11f0c2bebeefe7ddc20a9c77b1892961613e2d7f38080cd03a5e6a94e97afd2b"
+    },
+    "audit/producer.optimized.json": {
+      "bytes": 1491,
+      "sha256": "11f0c2bebeefe7ddc20a9c77b1892961613e2d7f38080cd03a5e6a94e97afd2b"
+    },
+    "audit/producer_consequences.normal.json": {
+      "bytes": 1240,
+      "sha256": "c4e23dafa8831b1178c1f0fff7386c3a5401f6913f12a7963f434e808efcb5d4"
+    },
+    "audit/producer_consequences.optimized.json": {
+      "bytes": 1240,
+      "sha256": "c4e23dafa8831b1178c1f0fff7386c3a5401f6913f12a7963f434e808efcb5d4"
+    },
+    "audit/verification.json": {
+      "bytes": 523,
+      "sha256": "60dc58f8db1da69d1afbd78d842db6651d6636958609176a5d5e43dcb6d60e81"
+    },
+    "cut_response.py": {
+      "bytes": 6942,
+      "sha256": "99930b3155fec3444ebecec69b2c839a89139277909fc62a150dc2bf81e5280e"
+    },
+    "receipts/verification.json": {
+      "bytes": 852,
+      "sha256": "8c2d067b6d8b4667c8eaa89fd40dcfe331dfd2a4dc9ff3cbb027badcbba8d46c"
+    },
+    "receipts/verify.normal.json": {
+      "bytes": 1491,
+      "sha256": "11f0c2bebeefe7ddc20a9c77b1892961613e2d7f38080cd03a5e6a94e97afd2b"
+    },
+    "receipts/verify.optimized.json": {
+      "bytes": 1491,
+      "sha256": "11f0c2bebeefe7ddc20a9c77b1892961613e2d7f38080cd03a5e6a94e97afd2b"
+    },
+    "receipts/verify_consequences.normal.json": {
+      "bytes": 1240,
+      "sha256": "c4e23dafa8831b1178c1f0fff7386c3a5401f6913f12a7963f434e808efcb5d4"
+    },
+    "receipts/verify_consequences.optimized.json": {
+      "bytes": 1240,
+      "sha256": "c4e23dafa8831b1178c1f0fff7386c3a5401f6913f12a7963f434e808efcb5d4"
+    },
+    "receipts/verify_examples.normal.json": {
+      "bytes": 979,
+      "sha256": "910cffa4d1014103e5c55030c28bedaa0ea1dc072d1376b0ec1d6ad50a4f35f9"
+    },
+    "receipts/verify_examples.optimized.json": {
+      "bytes": 979,
+      "sha256": "910cffa4d1014103e5c55030c28bedaa0ea1dc072d1376b0ec1d6ad50a4f35f9"
+    },
+    "run_audit.py": {
+      "bytes": 2132,
+      "sha256": "e523a16bfc83c58a99ded8b10b0fc3a6c9f1df479d8bae2fdccef11ed8ea987b"
+    },
+    "run_checks.py": {
+      "bytes": 2195,
+      "sha256": "15bafd5e04745dce37a3a4ed52598ca538b36b86ff1fc40acf156c57132bc7c3"
+    },
+    "verify.py": {
+      "bytes": 9146,
+      "sha256": "71de7236be18795c79f270957a0b109a04ea0c41e9ddef83095100631de57c31"
+    },
+    "verify_consequences.py": {
+      "bytes": 4521,
+      "sha256": "873a45f2fd5ac319399bb028c335fc7d45ddda22683232c257646330d0817d67"
+    },
+    "verify_examples.py": {
+      "bytes": 2144,
+      "sha256": "f77005aa04b4f80abd923bcc600ee956abcf7c3821ac638e3d019f8a8367c34b"
+    }
+  },
+  "status": "SEALED"
+}

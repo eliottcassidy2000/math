@@ -1,0 +1,11 @@
+{
+  "normal_optimized_identical": true,
+  "receipt_sha256": {
+    "consequences.normal.json": "ee570fef552a863b0cd7e44d54e4d328fc608a43ab3594b86c6eb7e408dce2dc",
+    "consequences.optimized.json": "ee570fef552a863b0cd7e44d54e4d328fc608a43ab3594b86c6eb7e408dce2dc",
+    "normal.json": "5fc357447129d1a25c25a67c9ecf7d8400dec38a54df32422f332615c3667912",
+    "optimized.json": "5fc357447129d1a25c25a67c9ecf7d8400dec38a54df32422f332615c3667912"
+  },
+  "status": "PASS",
+  "unrelated_working_directory_replay_identical": true
+}

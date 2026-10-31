@@ -1,0 +1,63 @@
+{
+  "examples": [
+    {
+      "extension_values": [
+        189,
+        423,
+        579,
+        657
+      ],
+      "gain_gcd": 78,
+      "h": 189,
+      "minimum_positive": [
+        423,
+        1
+      ],
+      "n": 7,
+      "out": [
+        22,
+        44,
+        88,
+        49,
+        98,
+        69,
+        11
+      ],
+      "pair_weight": 39
+    },
+    {
+      "extension_values": [
+        95095,
+        239305,
+        354673,
+        441199,
+        498883,
+        527725
+      ],
+      "gain_gcd": 28842,
+      "h": 95095,
+      "minimum_positive": [
+        239305,
+        1
+      ],
+      "n": 11,
+      "out": [
+        570,
+        1140,
+        233,
+        466,
+        932,
+        1864,
+        1681,
+        1315,
+        583,
+        1166,
+        285
+      ],
+      "pair_weight": 14421
+    }
+  ],
+  "independent_extension_dp_checks": 140,
+  "source_sha256": "f77005aa04b4f80abd923bcc600ee956abcf7c3821ac638e3d019f8a8367c34b",
+  "status": "PASS"
+}

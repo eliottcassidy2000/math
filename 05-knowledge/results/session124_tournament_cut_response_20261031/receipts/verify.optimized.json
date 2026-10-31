@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "all_cut_direct_dp": 45387,
+    "base_direct_dp": 1148,
+    "block_insertion_telescoping": 5461,
+    "canonical_outdegree": 5765,
+    "constrained_min_cut": 7566,
+    "contradictory_constraints_rejected": 1,
+    "crossing_arc_lower_bound": 45387,
+    "endpoint_divergence": 5765,
+    "extension_literal_permutations": 1099,
+    "gain_gcd_content": 1148,
+    "literal_permutation_and_cover_tables": 1100,
+    "malformed_tournament_rejected": 4,
+    "minimum_positive_cut": 1148,
+    "mixed_second_difference": 83506,
+    "orientation_and_factor_control": 1,
+    "own_arc_invariance": 410,
+    "pair_deletion_lower_bound": 11850,
+    "parents": 1148,
+    "scc_minimizer_count": 1148,
+    "zero_cut_equivalence": 45387
+  },
+  "data_sha256": "41f71bef5d391c0d0bc3f4fa37a75fbbc4baa10b5d9038ce1d45899a6933b5f1",
+  "source_sha256": {
+    "cut_response.py": "99930b3155fec3444ebecec69b2c839a89139277909fc62a150dc2bf81e5280e",
+    "verify.py": "71de7236be18795c79f270957a0b109a04ea0c41e9ddef83095100631de57c31"
+  },
+  "status": "PASS",
+  "universe": {
+    "all_cuts_for_every_parent": true,
+    "all_forced_membership_assignments_through_order": 4,
+    "all_labelled_parent_orders": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "literal_cover_tables_through_parent_order": 5,
+    "literal_extension_paths_through_parent_order": 4,
+    "random_parent_counts": {
+      "6": 12,
+      "7": 12,
+      "8": 12,
+      "9": 12
+    },
+    "random_seed": 124031
+  }
+}

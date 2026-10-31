@@ -1,0 +1,18 @@
+{
+  "normal_optimized_identical": true,
+  "receipt_sha256": {
+    "verify.normal.json": "11f0c2bebeefe7ddc20a9c77b1892961613e2d7f38080cd03a5e6a94e97afd2b",
+    "verify.optimized.json": "11f0c2bebeefe7ddc20a9c77b1892961613e2d7f38080cd03a5e6a94e97afd2b",
+    "verify_consequences.normal.json": "c4e23dafa8831b1178c1f0fff7386c3a5401f6913f12a7963f434e808efcb5d4",
+    "verify_consequences.optimized.json": "c4e23dafa8831b1178c1f0fff7386c3a5401f6913f12a7963f434e808efcb5d4",
+    "verify_examples.normal.json": "910cffa4d1014103e5c55030c28bedaa0ea1dc072d1376b0ec1d6ad50a4f35f9",
+    "verify_examples.optimized.json": "910cffa4d1014103e5c55030c28bedaa0ea1dc072d1376b0ec1d6ad50a4f35f9"
+  },
+  "scripts": [
+    "verify.py",
+    "verify_consequences.py",
+    "verify_examples.py"
+  ],
+  "status": "PASS",
+  "unrelated_working_directory_replay_identical": true
+}
