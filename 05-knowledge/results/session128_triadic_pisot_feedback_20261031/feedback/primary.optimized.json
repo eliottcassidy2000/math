@@ -1,0 +1,17 @@
+{
+  "abstract_templates": 27,
+  "admissible_words": 600,
+  "arithmetic": "exact rational and symbolic",
+  "branch_fixed_instances": 108,
+  "gains": 4,
+  "native_fixed_memory_interval": [
+    "-1/3",
+    "1/3"
+  ],
+  "native_parity_bound": "1/3",
+  "native_sharpness_scope": "complete two-harmonic carrier, not prescribed event realization",
+  "periodic_words_checked": 12960,
+  "secular_polynomial": "(649451*g**2 + 310632*g + 169344)/169344",
+  "status": "PASS",
+  "symbolic_checks": 27
+}

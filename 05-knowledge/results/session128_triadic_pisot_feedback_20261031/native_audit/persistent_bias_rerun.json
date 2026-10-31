@@ -1,0 +1,84 @@
+{
+  "arithmetic": "exact Fraction intervals with outward rounding at 450 decimal places",
+  "checks": [
+    "sqrt5_integer_bracket",
+    "h1_above_one_third",
+    "h2_below_minus_one_third",
+    "two_simple_zeros_harmonic_dominance",
+    "g0_negative",
+    "r1_negative_to_positive",
+    "r2_positive_to_negative",
+    "persistent_parity_strict_negative",
+    "parity_numeric_enclosure",
+    "borwein_delta_small_simplex",
+    "borwein_fraction_correct"
+  ],
+  "conclusion": "Native parity is nonzero forever; signs freeze because |b_t|<=1/3 while h1>1/3 and h2<-1/3.",
+  "endpoint_values": {
+    "r1_left": [
+      "-0.000000000000000320007170403215",
+      "-0.000000000000000320007170403214"
+    ],
+    "r1_right": [
+      "0.000000000000000487503181510703",
+      "0.000000000000000487503181510704"
+    ],
+    "r2_left": [
+      "0.000000000000000781339704525495",
+      "0.000000000000000781339704525496"
+    ],
+    "r2_right": [
+      "-0.000000000000001519291575557811",
+      "-0.000000000000001519291575557810"
+    ],
+    "zero": [
+      "-5.897800146521609585187354144457",
+      "-5.897800146521609585187354144456"
+    ]
+  },
+  "five_times_second_amplitude_squared": [
+    "42.6687811555978962251999",
+    "42.6687811555978962252000"
+  ],
+  "fixed_schedule": [
+    1,
+    2
+  ],
+  "fundamental_amplitude_squared": [
+    "46.3714429355552027073977",
+    "46.3714429355552027073978"
+  ],
+  "h1": [
+    "0.6754902942615236423443",
+    "0.6754902942615236423444"
+  ],
+  "h2": [
+    "-0.9961710408648277200981",
+    "-0.9961710408648277200980"
+  ],
+  "harmonic_gap": [
+    "3.7026617799573064821977",
+    "3.7026617799573064821978"
+  ],
+  "native_memory": "b_t=Pi*(1-(1-lambda)^t), for every 0<lambda<=1",
+  "parity": [
+    "-0.2089812105451970362491",
+    "-0.2089812105451969407560"
+  ],
+  "pi": "Machin formula; alternating rational arctan brackets with 80 terms",
+  "r1": [
+    "3.0450368193027045000000",
+    "3.0450368193027046000000"
+  ],
+  "r2": [
+    "5.5300956371054050000000",
+    "5.5300956371054052000000"
+  ],
+  "signs": [
+    1,
+    -1
+  ],
+  "status": "verified",
+  "trigonometry": "degree 210/211 Taylor-Horner polynomials plus rigorous Lagrange remainder",
+  "weights": "w_k=phi^(-k-2)"
+}

@@ -1,0 +1,722 @@
+{
+  "checks": 4639,
+  "orders": [
+    3,
+    4,
+    5
+  ],
+  "results": [
+    {
+      "A_paper_descending": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "C": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "O": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "O_inverse": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "R_ascending": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "U_substitution_to_power": [
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "centralizer_dimension": 3,
+      "coefficient_cube_size": 27,
+      "det_O": -1,
+      "k": 3,
+      "norm_one_n2_hostile_coefficients": [
+        0,
+        2,
+        -1
+      ],
+      "rank_two_norm_det_tests": 625,
+      "sparse_source_n_0_to_24": [
+        {
+          "coefficients": [
+            1,
+            0,
+            0
+          ],
+          "n": 0,
+          "paper_state": [
+            0,
+            0,
+            1
+          ],
+          "stream_initial": [
+            1,
+            0,
+            0
+          ],
+          "substitution_state": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            2,
+            -1,
+            0
+          ],
+          "n": 3,
+          "paper_state": [
+            -1,
+            0,
+            2
+          ],
+          "stream_initial": [
+            2,
+            0,
+            -1
+          ],
+          "substitution_state": [
+            1,
+            -1,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            -103,
+            56,
+            0
+          ],
+          "n": 16,
+          "paper_state": [
+            56,
+            0,
+            -103
+          ],
+          "stream_initial": [
+            -103,
+            0,
+            56
+          ],
+          "substitution_state": [
+            -47,
+            56,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "A_paper_descending": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "C": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "O": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          2
+        ]
+      ],
+      "O_inverse": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          -1,
+          1
+        ],
+        [
+          0,
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "R_ascending": [
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "U_substitution_to_power": [
+        [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "centralizer_dimension": 4,
+      "coefficient_cube_size": 81,
+      "det_O": -1,
+      "k": 4,
+      "norm_one_n2_hostile_coefficients": [
+        0,
+        0,
+        2,
+        -1
+      ],
+      "rank_two_norm_det_tests": 625,
+      "sparse_source_n_0_to_24": [
+        {
+          "coefficients": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "n": 0,
+          "paper_state": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "stream_initial": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "substitution_state": [
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            2,
+            -1,
+            0,
+            0
+          ],
+          "n": 4,
+          "paper_state": [
+            -1,
+            0,
+            0,
+            2
+          ],
+          "stream_initial": [
+            2,
+            0,
+            0,
+            -1
+          ],
+          "substitution_state": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "A_paper_descending": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "C": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      ],
+      "O": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          1,
+          2,
+          4
+        ]
+      ],
+      "O_inverse": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          -1,
+          -1,
+          1
+        ],
+        [
+          0,
+          -1,
+          -1,
+          1,
+          0
+        ],
+        [
+          0,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "R_ascending": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "U_substitution_to_power": [
+        [
+          1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          1,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          -1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "centralizer_dimension": 5,
+      "coefficient_cube_size": 243,
+      "det_O": 1,
+      "k": 5,
+      "norm_one_n2_hostile_coefficients": [
+        0,
+        0,
+        0,
+        2,
+        -1
+      ],
+      "rank_two_norm_det_tests": 625,
+      "sparse_source_n_0_to_24": [
+        {
+          "coefficients": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "n": 0,
+          "paper_state": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "stream_initial": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "substitution_state": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "coefficients": [
+            2,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "n": 5,
+          "paper_state": [
+            -1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "stream_initial": [
+            2,
+            0,
+            0,
+            0,
+            -1
+          ],
+          "substitution_state": [
+            1,
+            -1,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "No symbolic substitution/attractor equivalence, all-unit classification, or cross-degree field embedding is asserted.",
+  "status": "FINITE-EXACT corroboration of general algebraic proof"
+}

@@ -1,0 +1,29 @@
+{
+  "boundary_limit_control": {
+    "cell_parities": [
+      "1/4",
+      "1/8",
+      "-1/4"
+    ],
+    "first_states": [
+      "0",
+      "1/8",
+      "3/16",
+      "5/32",
+      "9/64",
+      "17/128",
+      "33/256"
+    ],
+    "lambda": "1/2",
+    "limit": "1/8",
+    "limit_is_fixed": false,
+    "thresholds": [
+      "1/8",
+      "1/4"
+    ]
+  },
+  "checks": 104626,
+  "rational_carrier_samples": 4131,
+  "scope": "Proof audit controls; synthetic threshold examples do not certify native realizability.",
+  "status": "FINITE-EXACT controls passed"
+}

@@ -1,0 +1,12 @@
+{
+  "abstract_templates": 27,
+  "admissible_words": 600,
+  "arithmetic": "stdlib Fraction only",
+  "branch_fixed_instances": 108,
+  "gains": 4,
+  "independent_gaussian_resolvent_gains": 81,
+  "periodic_words_checked": 12960,
+  "singular_resolvent_gains": 0,
+  "status": "PASS",
+  "zero_sum_sign_triples": 306
+}
