@@ -1,0 +1,753 @@
+{
+  "hostile_controls": {
+    "duplicate": true,
+    "nonsquare": true,
+    "wrong_ports": true
+  },
+  "lift": {
+    "arbitrary_middle_local_limsup_lower_bound": "2/87",
+    "carry_K": {
+      "0": 40,
+      "1": 52
+    },
+    "carry_ray_samples": [
+      {
+        "canonical_cycle_deletions": 15,
+        "canonical_old_order": 41,
+        "depth": 0,
+        "order": 42,
+        "representation_deletions": 18,
+        "seed": 42,
+        "within_pair_cycle_deletions": 6
+      },
+      {
+        "canonical_cycle_deletions": 921,
+        "canonical_old_order": 2081,
+        "depth": 1,
+        "order": 2082,
+        "representation_deletions": 922,
+        "seed": 42,
+        "within_pair_cycle_deletions": 27
+      },
+      {
+        "canonical_cycle_deletions": 45219,
+        "canonical_old_order": 102041,
+        "depth": 2,
+        "order": 102042,
+        "representation_deletions": 45218,
+        "seed": 42,
+        "within_pair_cycle_deletions": 48
+      },
+      {
+        "canonical_cycle_deletions": 12,
+        "canonical_old_order": 42,
+        "depth": 0,
+        "order": 43,
+        "representation_deletions": 9,
+        "seed": 43,
+        "within_pair_cycle_deletions": 9
+      },
+      {
+        "canonical_cycle_deletions": 496,
+        "canonical_old_order": 2130,
+        "depth": 1,
+        "order": 2131,
+        "representation_deletions": 493,
+        "seed": 43,
+        "within_pair_cycle_deletions": 43
+      },
+      {
+        "canonical_cycle_deletions": 24212,
+        "canonical_old_order": 104442,
+        "depth": 2,
+        "order": 104443,
+        "representation_deletions": 24209,
+        "seed": 43,
+        "within_pair_cycle_deletions": 78
+      }
+    ],
+    "exact_pinned_global_limsup": {
+      "applies_to_every_two_representative_selector": true,
+      "attaining_seed": 2003,
+      "maximizing_first_carry": 98171,
+      "maximizing_first_carry_gap": 90947,
+      "outside_root_ratio_upper_bound": "877/24414",
+      "root_range": [
+        42,
+        2033
+      ],
+      "seed_gap": 1855,
+      "special_boundary_seed_2033_gap": 1861,
+      "value": "22273/24042"
+    },
+    "external_arrays_redistributed": false,
+    "external_code_executed": false,
+    "max_base_cycle_deletions": 1700,
+    "max_base_path_deletions": 1699,
+    "pinned_even_ray_exact_ratio": "113/255",
+    "possible_connector_internal_decoded_types": {
+      "(1, 3)": 1097,
+      "(8, 8)": 652
+    },
+    "selector_checks": [
+      {
+        "carry_order": 2082,
+        "gap": 922,
+        "left_neighbor_gap": 28,
+        "right_neighbor_gap": 33,
+        "two_step_lower_bound": 796
+      },
+      {
+        "carry_order": 2131,
+        "gap": 493,
+        "left_neighbor_gap": 53,
+        "right_neighbor_gap": 58,
+        "two_step_lower_bound": 290
+      }
+    ],
+    "selector_limsup_lower_bound": "4/87",
+    "source_bytes": 17321973,
+    "source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+    "transition_K": [
+      {
+        "connector_deletions": 27,
+        "digit": 24,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 17,
+        "digit": 25,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 20,
+        "digit": 26,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 17,
+        "digit": 27,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 20,
+        "digit": 28,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 16,
+        "digit": 29,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 30,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 14,
+        "digit": 31,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 21,
+        "digit": 32,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 33,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 16,
+        "digit": 34,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 23,
+        "digit": 35,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 19,
+        "digit": 36,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 14,
+        "digit": 37,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 19,
+        "digit": 38,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 39,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 25,
+        "digit": 40,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 20,
+        "digit": 41,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 20,
+        "digit": 42,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 23,
+        "digit": 43,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 23,
+        "digit": 44,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 45,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 32,
+        "digit": 46,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 15,
+        "digit": 47,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 21,
+        "digit": 48,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 16,
+        "digit": 49,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 28,
+        "digit": 50,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 23,
+        "digit": 51,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 28,
+        "digit": 52,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 20,
+        "digit": 53,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 17,
+        "digit": 54,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 55,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 16,
+        "digit": 56,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 57,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 29,
+        "digit": 58,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 25,
+        "digit": 59,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 36,
+        "digit": 60,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 34,
+        "digit": 61,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 37,
+        "digit": 62,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 25,
+        "digit": 63,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 27,
+        "digit": 64,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 36,
+        "digit": 65,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 31,
+        "digit": 66,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 67,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 35,
+        "digit": 68,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 40,
+        "digit": 69,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 40,
+        "digit": 70,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 36,
+        "digit": 71,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 35,
+        "digit": 72,
+        "parity": 0
+      },
+      {
+        "connector_deletions": 40,
+        "digit": 24,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 36,
+        "digit": 25,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 41,
+        "digit": 26,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 39,
+        "digit": 27,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 44,
+        "digit": 28,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 31,
+        "digit": 29,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 38,
+        "digit": 30,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 29,
+        "digit": 31,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 29,
+        "digit": 32,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 33,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 33,
+        "digit": 34,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 26,
+        "digit": 35,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 27,
+        "digit": 36,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 28,
+        "digit": 37,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 30,
+        "digit": 38,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 13,
+        "digit": 39,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 40,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 28,
+        "digit": 41,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 26,
+        "digit": 42,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 43,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 44,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 21,
+        "digit": 45,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 32,
+        "digit": 46,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 47,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 48,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 49,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 50,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 15,
+        "digit": 51,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 14,
+        "digit": 52,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 29,
+        "digit": 53,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 54,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 55,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 16,
+        "digit": 56,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 9,
+        "digit": 57,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 24,
+        "digit": 58,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 28,
+        "digit": 59,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 21,
+        "digit": 60,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 20,
+        "digit": 61,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 11,
+        "digit": 62,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 27,
+        "digit": 63,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 15,
+        "digit": 64,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 19,
+        "digit": 65,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 18,
+        "digit": 66,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 10,
+        "digit": 67,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 19,
+        "digit": 68,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 21,
+        "digit": 69,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 16,
+        "digit": 70,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 22,
+        "digit": 71,
+        "parity": 1
+      },
+      {
+        "connector_deletions": 21,
+        "digit": 72,
+        "parity": 1
+      }
+    ],
+    "transition_K_range": [
+      9,
+      44
+    ],
+    "transition_states": 98,
+    "universal_limsup_lower_bound": "4/87",
+    "valid_base_pairs": 1992
+  },
+  "method": "independent endpoint DFS and inert-array lift audit; no producer imports",
+  "phase": {
+    "common_masks": [
+      1187208845135,
+      1453217412461,
+      1487448155501
+    ],
+    "counts": [
+      {
+        "masks": 38,
+        "n": 41,
+        "paths": 49,
+        "search_nodes": 23248
+      },
+      {
+        "masks": 132,
+        "n": 42,
+        "paths": 275,
+        "search_nodes": 91035
+      }
+    ],
+    "even_channel_lower_bound": 6,
+    "first_failures": [
+      {
+        "first_failure": 44,
+        "mask": 1187208845135
+      },
+      {
+        "first_failure": 44,
+        "mask": 1453217412461
+      },
+      {
+        "first_failure": 43,
+        "mask": 1487448155501
+      }
+    ],
+    "odd_channel_lower_bound": 4,
+    "pair_multiplicities": [
+      1,
+      4,
+      1
+    ],
+    "positive43": {
+      "1187208845135": {
+        "generated_witness": [
+          1,
+          24,
+          25,
+          39,
+          10,
+          6,
+          43,
+          21,
+          15,
+          34,
+          30,
+          19,
+          17,
+          32,
+          4,
+          5,
+          11,
+          38,
+          26,
+          23,
+          2,
+          14,
+          35,
+          29,
+          20,
+          16,
+          9,
+          40,
+          41,
+          8,
+          28,
+          36,
+          13,
+          12,
+          37,
+          27,
+          22,
+          42,
+          7,
+          18,
+          31,
+          33,
+          3
+        ],
+        "paths": 1
+      },
+      "1453217412461": {
+        "generated_witness": [
+          1,
+          35,
+          29,
+          20,
+          16,
+          33,
+          31,
+          18,
+          7,
+          42,
+          39,
+          10,
+          15,
+          21,
+          43,
+          38,
+          26,
+          23,
+          13,
+          36,
+          28,
+          8,
+          41,
+          40,
+          9,
+          27,
+          37,
+          12,
+          24,
+          25,
+          11,
+          5,
+          4,
+          32,
+          17,
+          19,
+          6,
+          30,
+          34,
+          2,
+          14,
+          22,
+          3
+        ],
+        "paths": 4
+      }
+    }
+  },
+  "status": "PASS"
+}

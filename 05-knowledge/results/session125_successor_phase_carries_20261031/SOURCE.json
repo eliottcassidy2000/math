@@ -1,0 +1,22 @@
+{
+  "archive_bytes": 5730482,
+  "archive_name": "sq.zip",
+  "archive_sha256": "05ea9f972a8b470fee84efab821dd1fe93e9001e5d310dd36c3b1240be5bdede",
+  "archive_url": "https://drive.google.com/file/d/1XpYRdJR00CldIfssjDW1clkh-HdPA708/view",
+  "author": "Robert Gerbicz",
+  "dependency": "Separately obtained pinned source required; packet is not offline self-contained",
+  "external_code_execution": false,
+  "forum_access_result": "HTTP403; archive obtained through published public Drive link",
+  "license": "No explicit redistribution license found; external files not redistributed",
+  "packet_scope": "External input only for original-table numeric audits; never compile, execute, or redistribute the source or its arrays.",
+  "prior_reconstruction": "../session124_gerbicz_reconstruction_20261031/GERBICZ_RECONSTRUCTION.md",
+  "public_download_url": "https://drive.google.com/uc?export=download&id=1XpYRdJR00CldIfssjDW1clkh-HdPA708",
+  "retrieved_utc_date": "2026-10-31",
+  "source_bytes": 17321973,
+  "source_forum_url": "https://mersenneforum.org/showthread.php?p=477787",
+  "source_name": "squares.c",
+  "source_reference": "https://arxiv.org/html/2002.03705",
+  "source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+  "theorem_author_comment": "https://oeis.org/A090461",
+  "year": 2018
+}

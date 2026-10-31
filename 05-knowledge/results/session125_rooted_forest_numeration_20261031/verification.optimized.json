@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "checks": 1245858,
+  "assertions_removed_under_O": false,
+  "all_ternary_words_lengths_0_through_11": 265720,
+  "independently_generated_odd_tilings": 75024,
+  "independently_generated_rooted_path_forests": 75024,
+  "path_rows": [
+    {
+      "vertices": 1,
+      "word_length": 0,
+      "count": 1,
+      "edge_coefficients": [
+        1
+      ]
+    },
+    {
+      "vertices": 2,
+      "word_length": 1,
+      "count": 3,
+      "edge_coefficients": [
+        1,
+        2
+      ]
+    },
+    {
+      "vertices": 3,
+      "word_length": 2,
+      "count": 8,
+      "edge_coefficients": [
+        1,
+        4,
+        3
+      ]
+    },
+    {
+      "vertices": 4,
+      "word_length": 3,
+      "count": 21,
+      "edge_coefficients": [
+        1,
+        6,
+        10,
+        4
+      ]
+    },
+    {
+      "vertices": 5,
+      "word_length": 4,
+      "count": 55,
+      "edge_coefficients": [
+        1,
+        8,
+        21,
+        20,
+        5
+      ]
+    },
+    {
+      "vertices": 6,
+      "word_length": 5,
+      "count": 144,
+      "edge_coefficients": [
+        1,
+        10,
+        36,
+        56,
+        35,
+        6
+      ]
+    },
+    {
+      "vertices": 7,
+      "word_length": 6,
+      "count": 377,
+      "edge_coefficients": [
+        1,
+        12,
+        55,
+        120,
+        126,
+        56,
+        7
+      ]
+    },
+    {
+      "vertices": 8,
+      "word_length": 7,
+      "count": 987,
+      "edge_coefficients": [
+        1,
+        14,
+        78,
+        220,
+        330,
+        252,
+        84,
+        8
+      ]
+    },
+    {
+      "vertices": 9,
+      "word_length": 8,
+      "count": 2584,
+      "edge_coefficients": [
+        1,
+        16,
+        105,
+        364,
+        715,
+        792,
+        462,
+        120,
+        9
+      ]
+    },
+    {
+      "vertices": 10,
+      "word_length": 9,
+      "count": 6765,
+      "edge_coefficients": [
+        1,
+        18,
+        136,
+        560,
+        1365,
+        2002,
+        1716,
+        792,
+        165,
+        10
+      ]
+    },
+    {
+      "vertices": 11,
+      "word_length": 10,
+      "count": 17711,
+      "edge_coefficients": [
+        1,
+        20,
+        171,
+        816,
+        2380,
+        4368,
+        5005,
+        3432,
+        1287,
+        220,
+        11
+      ]
+    },
+    {
+      "vertices": 12,
+      "word_length": 11,
+      "count": 46368,
+      "edge_coefficients": [
+        1,
+        22,
+        210,
+        1140,
+        3876,
+        8568,
+        12376,
+        11440,
+        6435,
+        2002,
+        286,
+        12
+      ]
+    }
+  ],
+  "graph_universe": [
+    {
+      "vertices": 0,
+      "all_labelled_graphs": 1
+    },
+    {
+      "vertices": 1,
+      "all_labelled_graphs": 1
+    },
+    {
+      "vertices": 2,
+      "all_labelled_graphs": 2
+    },
+    {
+      "vertices": 3,
+      "all_labelled_graphs": 8
+    },
+    {
+      "vertices": 4,
+      "all_labelled_graphs": 64
+    },
+    {
+      "vertices": 5,
+      "all_labelled_graphs": 1024
+    }
+  ],
+  "all_labelled_graphs_orders_0_through_5": 1100,
+  "all_arrival_queries_old_orders_0_through_4": 1099,
+  "square_sum_rooted_forest_counts": {
+    "12": 9240,
+    "30": 4337712683055095,
+    "31": 21517231556064823,
+    "32": 98839029392469636,
+    "33": 795810222452889290
+  },
+  "square_sum_arrivals": [
+    {
+      "new_label": 31,
+      "ports_one_based": [
+        5,
+        18
+      ],
+      "rooted_forests": 21517231556064823
+    },
+    {
+      "new_label": 32,
+      "ports_one_based": [
+        4,
+        17
+      ],
+      "rooted_forests": 98839029392469636
+    },
+    {
+      "new_label": 33,
+      "ports_one_based": [
+        3,
+        16,
+        31
+      ],
+      "rooted_forests": 795810222452889290
+    }
+  ],
+  "p3_port_hostile": {
+    "before": 8,
+    "endpoint_response": "5/8",
+    "middle_response": "1/2",
+    "endpoint_after": 21,
+    "middle_after": 20
+  },
+  "P3_word_table": [
+    {
+      "word": "00",
+      "value": 0,
+      "tiling": "MMMMM",
+      "forest_blocks": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "word": "01",
+      "value": 1,
+      "tiling": "MMMD",
+      "forest_blocks": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "word": "02",
+      "value": 2,
+      "tiling": "MMDM",
+      "forest_blocks": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "word": "10",
+      "value": 3,
+      "tiling": "MDMM",
+      "forest_blocks": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "word": "11",
+      "value": 4,
+      "tiling": "MDD",
+      "forest_blocks": [
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "word": "12",
+      "value": 5,
+      "tiling": "DDM",
+      "forest_blocks": [
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "word": "20",
+      "value": 6,
+      "tiling": "DMMM",
+      "forest_blocks": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "word": "21",
+      "value": 7,
+      "tiling": "DMD",
+      "forest_blocks": [
+        [
+          3,
+          2
+        ]
+      ]
+    }
+  ],
+  "source_sha256": {
+    "forest_bridge.py": "b890b9f63c3a05fd5c15c6f3e0bbd2dd57c18a8c7fc4b43cec6b196c05f81cd1",
+    "test_forest_bridge.py": "24aa2a9a4e0cc5ba79895d5482e1412bf2c7db10f28526532f77a35db7941ce2"
+  }
+}

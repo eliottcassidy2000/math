@@ -1,0 +1,27 @@
+{
+  "external_arrays_redistributed": false,
+  "external_code_executed": false,
+  "external_source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+  "independent_audit_imports_producer": false,
+  "normal_optimized_identical": true,
+  "producer_and_independent_shared_fields": "agree",
+  "publication_changes": "CLI sibling origin-dir and documentation paths only; mathematical algorithms reexecuted",
+  "reviewed_files": {
+    "DEPENDENCIES.json": "b53ec373fd654125280dc708d84d147b7aff650488a80816889f491c8f9f9949",
+    "README.md": "266b3480de6fcbfb37108d6ff412e37e4fd83e60579e5d1a24cfdc86f57863b0",
+    "SOURCE.json": "37fa72c5ca2e6a2311a1acebdb846975ac9bd7d7138dd35962ae70f2f6f56d05",
+    "SUCCESSOR_PHASE_AND_CARRY.md": "0addcdd0762cbb78fb8b551530b2d8e5e10701020f3c59393cbd45aed8b8810c",
+    "audit/AUDIT.md": "85ae4744ffa05e86df9d7e39bb932e50ac94ba1f6fd6d867ba6133bba49502c3",
+    "audit/independent.normal.json": "3aa4df552d85f7f0c94de333495bb6a7e905b602e0a9d4c81e852eb8eee59763",
+    "audit/independent.optimized.json": "3aa4df552d85f7f0c94de333495bb6a7e905b602e0a9d4c81e852eb8eee59763",
+    "audit/independent_audit.py": "419b9e867692540c0e9992fcc705b5de78722ac5c985f09c144a19a6769b0a4f",
+    "check_fixed_phase.py": "09c591166b759737276992da889c3cae8101d31f0398addbeda7aad4da2bd9b8",
+    "fixed_phase_receipt.json": "d903577811825fe362360d6c39adfc95bd00ccc08dc0b2504e32e98f9d37a41d",
+    "fixed_phase_receipt.optimized.json": "d903577811825fe362360d6c39adfc95bd00ccc08dc0b2504e32e98f9d37a41d",
+    "q49_edit_audit.py": "e52ece1c4411004f2e00345cfc6fe6476a2348cbba19a9233acd9c076bc31aa7",
+    "q49_edit_receipt.json": "998299246a8592b26422cf6379ec7ea5d67778281f22579d914d484e6525bf82",
+    "q49_edit_receipt.optimized.json": "998299246a8592b26422cf6379ec7ea5d67778281f22579d914d484e6525bf82"
+  },
+  "status": "PASS",
+  "unresolved_blockers": []
+}

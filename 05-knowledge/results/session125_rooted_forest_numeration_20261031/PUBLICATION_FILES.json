@@ -1,0 +1,16 @@
+[
+  "PROOFS.md",
+  "PUBLICATION_FILES.json",
+  "PUBLICATION_MANIFEST.json",
+  "README.md",
+  "SHA256SUMS",
+  "audit/PROOF_REVIEW.md",
+  "audit/independent.normal.json",
+  "audit/independent.optimized.json",
+  "audit/independent_audit.py",
+  "forest_bridge.py",
+  "test_forest_bridge.py",
+  "verification.normal.json",
+  "verification.optimized.json",
+  "verify_packet.py"
+]

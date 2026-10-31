@@ -1,0 +1,83 @@
+{
+  "cache_files_included": false,
+  "default_sibling_origin_layout": true,
+  "exact_pinned_bank_limsup": "22273/24042",
+  "external_arrays_included": false,
+  "external_code_executed": false,
+  "external_source_included": false,
+  "negative_controls": [
+    {
+      "checker": "q49_edit_audit.py",
+      "control": "incorrect source digest",
+      "rejected": true
+    },
+    {
+      "checker": "independent_audit.py",
+      "control": "incorrect source digest",
+      "rejected": true
+    }
+  ],
+  "normal_optimized_identical": true,
+  "relocated_from_unrelated_working_directory": true,
+  "replay_runs": [
+    {
+      "check": "phase",
+      "mode": "normal",
+      "receipt_sha256": "d903577811825fe362360d6c39adfc95bd00ccc08dc0b2504e32e98f9d37a41d",
+      "status": "PASS"
+    },
+    {
+      "check": "producer",
+      "mode": "normal",
+      "receipt_sha256": "998299246a8592b26422cf6379ec7ea5d67778281f22579d914d484e6525bf82",
+      "status": "PASS"
+    },
+    {
+      "check": "auditor",
+      "mode": "normal",
+      "receipt_sha256": "3aa4df552d85f7f0c94de333495bb6a7e905b602e0a9d4c81e852eb8eee59763",
+      "status": "PASS"
+    },
+    {
+      "check": "phase",
+      "mode": "optimized",
+      "receipt_sha256": "d903577811825fe362360d6c39adfc95bd00ccc08dc0b2504e32e98f9d37a41d",
+      "status": "PASS"
+    },
+    {
+      "check": "producer",
+      "mode": "optimized",
+      "receipt_sha256": "998299246a8592b26422cf6379ec7ea5d67778281f22579d914d484e6525bf82",
+      "status": "PASS"
+    },
+    {
+      "check": "auditor",
+      "mode": "optimized",
+      "receipt_sha256": "3aa4df552d85f7f0c94de333495bb6a7e905b602e0a9d4c81e852eb8eee59763",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Original-port whole-block Q49 constructor bank only; not all square-sum cycle families",
+  "status": "PASS",
+  "universal_bank_limsup_lower_bound": "4/87",
+  "unpacked_origin_reference_json_present": false,
+  "whitelist": [
+    "DEPENDENCIES.json",
+    "README.md",
+    "RELEASE_CHECK.json",
+    "SHA256SUMS",
+    "SOURCE.json",
+    "SUCCESSOR_PHASE_AND_CARRY.md",
+    "audit/AUDIT.md",
+    "audit/AUDIT_INPUTS.json",
+    "audit/independent.normal.json",
+    "audit/independent.optimized.json",
+    "audit/independent_audit.py",
+    "check_fixed_phase.py",
+    "fixed_phase_receipt.json",
+    "fixed_phase_receipt.optimized.json",
+    "q49_edit_audit.py",
+    "q49_edit_receipt.json",
+    "q49_edit_receipt.optimized.json"
+  ]
+}

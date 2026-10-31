@@ -1,0 +1,917 @@
+{
+  "status": "PASS",
+  "source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+  "external_code_executed": false,
+  "within_pair_base_range": [
+    41,
+    2032
+  ],
+  "base_path_max": [
+    2012,
+    1699,
+    1700
+  ],
+  "base_cycle_max": [
+    2012,
+    1699,
+    1700
+  ],
+  "base_path_min": [
+    47,
+    2,
+    2
+  ],
+  "K_max": [
+    28,
+    1,
+    44
+  ],
+  "K_min": [
+    57,
+    1,
+    9
+  ],
+  "noncarry_canonical_connector_max": [
+    26,
+    1,
+    62
+  ],
+  "noncarry_representative_change_max": [
+    69,
+    0,
+    60
+  ],
+  "H_base_min": [
+    43,
+    9
+  ],
+  "H_base_max": [
+    2028,
+    1872
+  ],
+  "H_base_first": [
+    [
+      42,
+      18
+    ],
+    [
+      43,
+      9
+    ],
+    [
+      44,
+      15
+    ],
+    [
+      45,
+      16
+    ],
+    [
+      46,
+      12
+    ],
+    [
+      47,
+      18
+    ],
+    [
+      48,
+      19
+    ],
+    [
+      49,
+      16
+    ],
+    [
+      50,
+      19
+    ],
+    [
+      51,
+      20
+    ],
+    [
+      52,
+      30
+    ],
+    [
+      53,
+      17
+    ]
+  ],
+  "transition_K": [
+    [
+      24,
+      0,
+      27
+    ],
+    [
+      25,
+      0,
+      17
+    ],
+    [
+      26,
+      0,
+      20
+    ],
+    [
+      27,
+      0,
+      17
+    ],
+    [
+      28,
+      0,
+      20
+    ],
+    [
+      29,
+      0,
+      16
+    ],
+    [
+      30,
+      0,
+      24
+    ],
+    [
+      31,
+      0,
+      14
+    ],
+    [
+      32,
+      0,
+      21
+    ],
+    [
+      33,
+      0,
+      18
+    ],
+    [
+      34,
+      0,
+      16
+    ],
+    [
+      35,
+      0,
+      23
+    ],
+    [
+      36,
+      0,
+      19
+    ],
+    [
+      37,
+      0,
+      14
+    ],
+    [
+      38,
+      0,
+      19
+    ],
+    [
+      39,
+      0,
+      24
+    ],
+    [
+      40,
+      0,
+      25
+    ],
+    [
+      41,
+      0,
+      20
+    ],
+    [
+      42,
+      0,
+      20
+    ],
+    [
+      43,
+      0,
+      23
+    ],
+    [
+      44,
+      0,
+      23
+    ],
+    [
+      45,
+      0,
+      24
+    ],
+    [
+      46,
+      0,
+      32
+    ],
+    [
+      47,
+      0,
+      15
+    ],
+    [
+      48,
+      0,
+      21
+    ],
+    [
+      49,
+      0,
+      16
+    ],
+    [
+      50,
+      0,
+      28
+    ],
+    [
+      51,
+      0,
+      23
+    ],
+    [
+      52,
+      0,
+      28
+    ],
+    [
+      53,
+      0,
+      20
+    ],
+    [
+      54,
+      0,
+      17
+    ],
+    [
+      55,
+      0,
+      24
+    ],
+    [
+      56,
+      0,
+      16
+    ],
+    [
+      57,
+      0,
+      24
+    ],
+    [
+      58,
+      0,
+      29
+    ],
+    [
+      59,
+      0,
+      25
+    ],
+    [
+      60,
+      0,
+      36
+    ],
+    [
+      61,
+      0,
+      34
+    ],
+    [
+      62,
+      0,
+      37
+    ],
+    [
+      63,
+      0,
+      25
+    ],
+    [
+      64,
+      0,
+      27
+    ],
+    [
+      65,
+      0,
+      36
+    ],
+    [
+      66,
+      0,
+      31
+    ],
+    [
+      67,
+      0,
+      18
+    ],
+    [
+      68,
+      0,
+      35
+    ],
+    [
+      69,
+      0,
+      40
+    ],
+    [
+      70,
+      0,
+      40
+    ],
+    [
+      71,
+      0,
+      36
+    ],
+    [
+      72,
+      0,
+      35
+    ],
+    [
+      24,
+      1,
+      40
+    ],
+    [
+      25,
+      1,
+      36
+    ],
+    [
+      26,
+      1,
+      41
+    ],
+    [
+      27,
+      1,
+      39
+    ],
+    [
+      28,
+      1,
+      44
+    ],
+    [
+      29,
+      1,
+      31
+    ],
+    [
+      30,
+      1,
+      38
+    ],
+    [
+      31,
+      1,
+      29
+    ],
+    [
+      32,
+      1,
+      29
+    ],
+    [
+      33,
+      1,
+      24
+    ],
+    [
+      34,
+      1,
+      33
+    ],
+    [
+      35,
+      1,
+      26
+    ],
+    [
+      36,
+      1,
+      27
+    ],
+    [
+      37,
+      1,
+      28
+    ],
+    [
+      38,
+      1,
+      30
+    ],
+    [
+      39,
+      1,
+      13
+    ],
+    [
+      40,
+      1,
+      24
+    ],
+    [
+      41,
+      1,
+      28
+    ],
+    [
+      42,
+      1,
+      26
+    ],
+    [
+      43,
+      1,
+      18
+    ],
+    [
+      44,
+      1,
+      18
+    ],
+    [
+      45,
+      1,
+      21
+    ],
+    [
+      46,
+      1,
+      32
+    ],
+    [
+      47,
+      1,
+      18
+    ],
+    [
+      48,
+      1,
+      24
+    ],
+    [
+      49,
+      1,
+      24
+    ],
+    [
+      50,
+      1,
+      24
+    ],
+    [
+      51,
+      1,
+      15
+    ],
+    [
+      52,
+      1,
+      14
+    ],
+    [
+      53,
+      1,
+      29
+    ],
+    [
+      54,
+      1,
+      24
+    ],
+    [
+      55,
+      1,
+      18
+    ],
+    [
+      56,
+      1,
+      16
+    ],
+    [
+      57,
+      1,
+      9
+    ],
+    [
+      58,
+      1,
+      24
+    ],
+    [
+      59,
+      1,
+      28
+    ],
+    [
+      60,
+      1,
+      21
+    ],
+    [
+      61,
+      1,
+      20
+    ],
+    [
+      62,
+      1,
+      11
+    ],
+    [
+      63,
+      1,
+      27
+    ],
+    [
+      64,
+      1,
+      15
+    ],
+    [
+      65,
+      1,
+      19
+    ],
+    [
+      66,
+      1,
+      18
+    ],
+    [
+      67,
+      1,
+      10
+    ],
+    [
+      68,
+      1,
+      19
+    ],
+    [
+      69,
+      1,
+      21
+    ],
+    [
+      70,
+      1,
+      16
+    ],
+    [
+      71,
+      1,
+      22
+    ],
+    [
+      72,
+      1,
+      21
+    ]
+  ],
+  "carry_connector_deletions": {
+    "0": 40,
+    "1": 52
+  },
+  "expanded_pair_samples": [
+    {
+      "n": 2033,
+      "parent": 41,
+      "d": 24,
+      "path_deletions": 46,
+      "cycle_deletions": 47,
+      "connector_deletions": 40
+    },
+    {
+      "n": 2034,
+      "parent": 41,
+      "d": 25,
+      "path_deletions": 42,
+      "cycle_deletions": 43,
+      "connector_deletions": 36
+    },
+    {
+      "n": 2080,
+      "parent": 41,
+      "d": 71,
+      "path_deletions": 28,
+      "cycle_deletions": 28,
+      "connector_deletions": 22
+    },
+    {
+      "n": 2081,
+      "parent": 41,
+      "d": 72,
+      "path_deletions": 27,
+      "cycle_deletions": 27,
+      "connector_deletions": 21
+    },
+    {
+      "n": 2082,
+      "parent": 42,
+      "d": 24,
+      "path_deletions": 35,
+      "cycle_deletions": 36,
+      "connector_deletions": 27
+    },
+    {
+      "n": 100000,
+      "parent": 2040,
+      "d": 40,
+      "path_deletions": 60,
+      "cycle_deletions": 61,
+      "connector_deletions": 25
+    }
+  ],
+  "carry_samples": [
+    {
+      "r": 42,
+      "path_deletions": 18,
+      "phase_disagreements": 22
+    },
+    {
+      "r": 43,
+      "path_deletions": 9,
+      "phase_disagreements": 24
+    },
+    {
+      "r": 2082,
+      "path_deletions": 922,
+      "phase_disagreements": 532
+    },
+    {
+      "r": 98171,
+      "path_deletions": 90947,
+      "phase_disagreements": 45100
+    },
+    {
+      "r": 102042,
+      "path_deletions": 45218,
+      "phase_disagreements": 26542
+    }
+  ],
+  "canonical_samples": [
+    {
+      "n": 2033,
+      "path_deletions": 67,
+      "cycle_deletions": 68,
+      "representation_gap": 58,
+      "within_pair_path_deletions": 46
+    },
+    {
+      "n": 2034,
+      "path_deletions": 64,
+      "cycle_deletions": 65,
+      "representation_gap": 51,
+      "within_pair_path_deletions": 42
+    },
+    {
+      "n": 2080,
+      "path_deletions": 36,
+      "cycle_deletions": 36,
+      "representation_gap": 28,
+      "within_pair_path_deletions": 28
+    },
+    {
+      "n": 2081,
+      "path_deletions": 921,
+      "cycle_deletions": 921,
+      "representation_gap": 922,
+      "within_pair_path_deletions": 27
+    },
+    {
+      "n": 2082,
+      "path_deletions": 43,
+      "cycle_deletions": 44,
+      "representation_gap": 33,
+      "within_pair_path_deletions": 35
+    },
+    {
+      "n": 98170,
+      "path_deletions": 90935,
+      "cycle_deletions": 90936,
+      "representation_gap": 90947,
+      "within_pair_path_deletions": 1697
+    },
+    {
+      "n": 102041,
+      "path_deletions": 45219,
+      "cycle_deletions": 45219,
+      "representation_gap": 45218,
+      "within_pair_path_deletions": 48
+    }
+  ],
+  "selector_window_controls": [
+    {
+      "carry": 2082,
+      "orders": [
+        2080,
+        2081,
+        2082,
+        2083,
+        2084
+      ],
+      "bank_order": [
+        "short_n",
+        "long_n_minus_1"
+      ],
+      "transition_deletions": [
+        [
+          [
+            36,
+            28
+          ],
+          [
+            49,
+            48
+          ]
+        ],
+        [
+          [
+            921,
+            27
+          ],
+          [
+            916,
+            37
+          ]
+        ],
+        [
+          [
+            44,
+            36
+          ],
+          [
+            918,
+            921
+          ]
+        ],
+        [
+          [
+            42,
+            26
+          ],
+          [
+            50,
+            51
+          ]
+        ]
+      ],
+      "minimax_deletions": 916,
+      "one_optimal_choice": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "theorem_lower_bound": 356.5
+    },
+    {
+      "carry": 102042,
+      "orders": [
+        102040,
+        102041,
+        102042,
+        102043,
+        102044
+      ],
+      "bank_order": [
+        "short_n",
+        "long_n_minus_1"
+      ],
+      "transition_deletions": [
+        [
+          [
+            57,
+            49
+          ],
+          [
+            70,
+            69
+          ]
+        ],
+        [
+          [
+            45219,
+            48
+          ],
+          [
+            45214,
+            58
+          ]
+        ],
+        [
+          [
+            71,
+            63
+          ],
+          [
+            45216,
+            45219
+          ]
+        ],
+        [
+          [
+            69,
+            53
+          ],
+          [
+            77,
+            78
+          ]
+        ]
+      ],
+      "minimax_deletions": 45214,
+      "one_optimal_choice": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "theorem_lower_bound": 22480.5
+    }
+  ],
+  "global_pinned_bank_limsup": {
+    "ratio": "22273/24042",
+    "maximizing_seed": 2003,
+    "seed_gap": 1855,
+    "mixed_boundary_gap": 1861,
+    "outside_root_upper_bound": "877/24414",
+    "top_ten": [
+      {
+        "ratio": "22273/24042",
+        "seed": 2003,
+        "gap": 1855
+      },
+      {
+        "ratio": "10409/11247",
+        "seed": 1874,
+        "gap": 1734
+      },
+      {
+        "ratio": "20977/22674",
+        "seed": 1889,
+        "gap": 1747
+      },
+      {
+        "ratio": "21553/23298",
+        "seed": 1941,
+        "gap": 1795
+      },
+      {
+        "ratio": "21733/23514",
+        "seed": 1959,
+        "gap": 1810
+      },
+      {
+        "ratio": "17377/18810",
+        "seed": 1567,
+        "gap": 1447
+      },
+      {
+        "ratio": "11237/12171",
+        "seed": 2028,
+        "gap": 1872
+      },
+      {
+        "ratio": "22129/23970",
+        "seed": 1997,
+        "gap": 1843
+      },
+      {
+        "ratio": "10847/11751",
+        "seed": 1958,
+        "gap": 1807
+      },
+      {
+        "ratio": "10631/11523",
+        "seed": 1920,
+        "gap": 1771
+      }
+    ]
+  }
+}

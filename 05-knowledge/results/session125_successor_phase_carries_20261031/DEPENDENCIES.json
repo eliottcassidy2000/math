@@ -1,0 +1,10 @@
+{
+  "decoded_origin_certificate_sha256": "bef547efacc1ae2a4365e44a22200d5028db327262d518c74395cf0deb6fe720",
+  "external_arrays_included": false,
+  "external_source_bytes": 17321973,
+  "external_source_sha256": "602c1919ee51101519a2f19f2c1817407006824f6f09c85a3b772a818a0b736e",
+  "origin_checker_sha256": "4927f6ee76dbbe0ffc4461ca87d75f9c1ca399e087b048fb84cdc213735ab528",
+  "origin_compressed_certificate_sha256": "a93f955052c98e46dea4900563353e5dda92e4031c298fdcf8031fe7b75d5039",
+  "origin_packet": "../session125_origin32_numeration_20261031/origin_pairs/",
+  "original_origin_certificate_json_required": false
+}
