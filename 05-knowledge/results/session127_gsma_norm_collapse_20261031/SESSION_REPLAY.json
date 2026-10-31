@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "manifest_count": 6,
+  "manifest_entries": 40,
+  "runs": [
+    {
+      "script": "tribonacci/check.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "gsma/check_unit_kernel.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "lucas47/verify.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "lucas47/independent.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": null
+    },
+    {
+      "script": "uniform_norm/verify_uniform_norm.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": "uniform_norm/verify_uniform_norm.output.json"
+    },
+    {
+      "script": "volume/verify_volume_bridge.py",
+      "normal": "PASS",
+      "optimized": "PASS",
+      "relocated": true,
+      "stdout_equal": true,
+      "generated_bytes_verified": "volume/verification.json"
+    }
+  ],
+  "dependencies": "Python3 and SymPy for the volume checker",
+  "scope": "Exact packet checks and finite controls. Cited global theorems remain mathematical dependencies; no Lean build or global quartic/quintic classification is claimed."
+}

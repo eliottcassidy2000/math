@@ -1,0 +1,86 @@
+{
+  "commit": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+  "external_primary": {
+    "authors": [
+      "M. Knapp",
+      "A. Lemos",
+      "Victor G. L. Neumann"
+    ],
+    "external_bytes_not_redistributed": true,
+    "read_sections": [
+      "Lemma 2.4, printed page 7",
+      "Example 4.1, printed pages 10\u201311"
+    ],
+    "title": "Integral Values of Generating Functions of Recurrence Sequences",
+    "url": "https://math.loyola.edu/~mknapp/papers/General%20Quadratic%20-%202-10-23.pdf"
+  },
+  "repository": "eliottcassidy2000/math",
+  "sources": [
+    {
+      "bytes": 6823,
+      "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+    },
+    {
+      "bytes": 10465,
+      "git_blob": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+      "path": "00-navigation/RESEARCH-PROTOCOL.md",
+      "sha256": "2fc7def5130432a6501a4a3beb2a44a0c362349248b3d17a8fa1f234ce8cdd85"
+    },
+    {
+      "bytes": 23418,
+      "git_blob": "9d284dee9b1a0984a1e4356826f4ae411980c7d3",
+      "path": "01-canon/ACTIVE-GUARDRAILS.md",
+      "sha256": "041382ac9700a218216cb083cf047278f0036428b6ec1c43d12b66a6ee0a7f4b"
+    },
+    {
+      "bytes": 39251,
+      "git_blob": "ea37bdb4a371461b203d10325551541f6aa14868",
+      "path": "04-computation/fibonacci_lucas_primes_s116l.py",
+      "sha256": "800a6d45068a8aac355bdb90206ebee0d8cf8452ac64d29a47fa8a62fb6acad9"
+    },
+    {
+      "bytes": 12900,
+      "git_blob": "e20dd19eb27106bd22233e1939b83f0fb5084b9f",
+      "path": "05-knowledge/results/collatz_circulant_20260930_circulants_lucas_cubic_monotile.md",
+      "sha256": "162c935f2d66aa3fbe9ee5bf2ab4eb9f357dfbe483774a1288788940f4238830"
+    },
+    {
+      "bytes": 25814,
+      "git_blob": "721e5a60f169a881ba8d0b103e47b5f3b82d2389",
+      "path": "05-knowledge/results/collatz_lucas_monotile_discrepancy_20260930.md",
+      "sha256": "0c204984ac2565cd9aea1fefebc224a1bb723466165835b4403b7eefb98f88d0"
+    },
+    {
+      "bytes": 12284,
+      "git_blob": "e07d3674c3f0c65a4b286ecfcb02a61405f1b125",
+      "path": "05-knowledge/results/session93_reversal_lucas_clocks_20261029/arithmetic/TRACE_CLOCK_CARRIERS.md",
+      "sha256": "0babd929c2ff70a9f9e5cf6ec545e32a05469c75e41a1c1c811538ae9fc07222"
+    },
+    {
+      "bytes": 18321,
+      "git_blob": "eea0c4c246d1abe11871e2559c492ed8b13c7b52",
+      "path": "05-knowledge/results/free_exploration_s90g.out",
+      "sha256": "de1cc1157d4a99384c96753e0bbe6156e0d132df161c4fcfdd9d5d2c98c0d93e"
+    },
+    {
+      "bytes": 18274,
+      "git_blob": "233542bb9ac565295c93263a81819b601bb0618d",
+      "path": "05-knowledge/results/rational_irrational_symbiosis.out",
+      "sha256": "d2350f27ebdfa24f691d8ff65e5309f2a2dd4366d9364d67605e3810d4cc5adb"
+    },
+    {
+      "bytes": 22566,
+      "git_blob": "2e0177ad506b8c274451f7fdac9797430167cf9c",
+      "path": "04-computation/free_exploration_s90g.py",
+      "sha256": "f9044b4b4634a9ab4cd80a96279a15e928dda4aa3ec826a48d9ec50c1b0514b8"
+    },
+    {
+      "bytes": 19076,
+      "git_blob": "6bdcf9ba2a13899d69da0dcbc600b2cb9191e98e",
+      "path": "04-computation/rational_irrational_symbiosis.py",
+      "sha256": "58616843b4a12d8e82981152fd47c374f8fc1b17c528bb24933cf14731f13735"
+    }
+  ]
+}

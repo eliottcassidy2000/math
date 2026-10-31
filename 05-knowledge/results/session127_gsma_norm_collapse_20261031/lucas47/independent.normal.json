@@ -1,0 +1,24 @@
+{
+  "checks": 210,
+  "row_digest": "b4af6ad6a9c35755f935b946990b1b1e7bcd5556f80fdc5d40efd871d6543685",
+  "solutions_n_p_q_norm": [
+    [
+      1,
+      2,
+      1,
+      1
+    ],
+    [
+      8,
+      103,
+      56,
+      -1
+    ]
+  ],
+  "status": "FINITE-EXACT independent audit",
+  "tau16_coordinates_1_tau_tau2": [
+    1705,
+    2632,
+    3136
+  ]
+}

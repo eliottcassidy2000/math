@@ -1,0 +1,10 @@
+{
+  "checked_utc_date": "2026-10-31",
+  "primary_sources": [
+    {"url": "https://dlmf.nist.gov/5.4", "support": "Gamma(n+1)=n!, Gamma(1/2)=sqrt(pi), equations 5.4.1 and 5.4.6"},
+    {"url": "https://dlmf.nist.gov/5.5", "support": "Gamma recurrence, equation 5.5.1"},
+    {"url": "https://www.jmilne.org/math/CourseNotes/ANT.pdf", "version": "3.08, 2020", "support": "Theorem 4.19 compact convex body theorem; Proposition 4.26 unscaled ideal covolume; Proposition 4.27 signature-adapted norm bound", "printed_pages": [76,79,80]}
+  ],
+  "original_derivations_in_packet": ["binary Gram matrix", "full norm-body infinite-volume proof", "binary norm-body area integral", "cross-degree field-map obstruction", "non-C-finite ball-volume sequence proof"],
+  "source_limit": "GSMA architectural expansion supplied by user via parent; inherited normcollapse definition not authenticated in this lane"
+}

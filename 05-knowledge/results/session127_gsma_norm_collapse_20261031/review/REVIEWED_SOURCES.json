@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "independent_norm/UNIFORM_NORM_TO_CF.md",
+      "sha256": "c1db0f97e9d60a5fdde3398c4c5b9c980ea70c3aa9bc686c29aab00acd220df8"
+    },
+    {
+      "path": "independent_norm/verify_uniform_norm.output.json",
+      "sha256": "c0b9526512bb6e4fa103eb5713cc8471c844fdf5e9cb848365c6b2ee0aa8eac8"
+    },
+    {
+      "path": "inheritance_gsma/INHERITANCE_AND_KERNEL.md",
+      "sha256": "4c40261cb5de0eb7b543f923166df7b35b03806974762df84f9814dd9288e9d7"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "sha256": "a6a14b75259110e727ec6305fcbe570aef37398d19b4c39037d42ff38963b857"
+    }
+  ]
+}

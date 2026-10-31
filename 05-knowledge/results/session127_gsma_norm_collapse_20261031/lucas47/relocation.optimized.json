@@ -1,0 +1,22 @@
+{
+  "relocation": "Copied each script to a fresh directory; ran from a separate unrelated working directory",
+  "replays": [
+    {
+      "checks": 1083,
+      "normal_equals_optimized": true,
+      "relocated_matches_frozen": true,
+      "row_digest": "b4af6ad6a9c35755f935b946990b1b1e7bcd5556f80fdc5d40efd871d6543685",
+      "script": "verify.py",
+      "stdout_sha256": "84535430d36bb33c47e4da2fd45d77b0200d96068c8efe78bc216af8d9306acb"
+    },
+    {
+      "checks": 210,
+      "normal_equals_optimized": true,
+      "relocated_matches_frozen": true,
+      "row_digest": "b4af6ad6a9c35755f935b946990b1b1e7bcd5556f80fdc5d40efd871d6543685",
+      "script": "independent.py",
+      "stdout_sha256": "4659f6ef8842ac6f8a6812cd95def127320c9baf74f34494aaac0373e3f500f8"
+    }
+  ],
+  "status": "PASS"
+}

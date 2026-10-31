@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "script": "check_unit_kernel.py",
+      "source_sha256": "36e09abfd2f23103ccaf3635c99b7467c9dbf0ac2e7d9b187bcd8f96e946666c",
+      "normal_sha256": "de9304b930377c2bc356f1036602afeeecc351231c9119828bb508f4da4301ff",
+      "optimized_sha256": "de9304b930377c2bc356f1036602afeeecc351231c9119828bb508f4da4301ff",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "relocated": true
+    },
+    {
+      "script": "verify_uniform_norm.py",
+      "source_sha256": "7ba382b7516bec990598927603d42cd19bdb419640cce956fa50abc0f264480d",
+      "normal_sha256": "57acd3833bf71dcd23c562383cba1ec470f6fc85d9954ed1f9e47df610fbbc7f",
+      "optimized_sha256": "57acd3833bf71dcd23c562383cba1ec470f6fc85d9954ed1f9e47df610fbbc7f",
+      "normal_exit": 0,
+      "optimized_exit": 0,
+      "relocated": true
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "status": "PASS",
+  "scope": "Exact k=3,4,5 reconstructed k-nacci polynomial family; symbolic p,q; unit powers 0,2,...,16; volume recurrence n=0,...,15.",
+  "sympy_version": "1.14.0",
+  "families": [
+    {
+      "k": 3,
+      "polynomial": "x**3 - x**2 - x - 1",
+      "binary_norm_form": "p**3 - p**2*q - p*q**2 - q**3",
+      "multiplication_matrix": [
+        [
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "signature": [
+        1,
+        1
+      ],
+      "polynomial_discriminant": -44,
+      "independent_trace_gram_determinant": -44,
+      "trace_theta": 1,
+      "trace_theta_squared": 3,
+      "modular_irreducibility_certificate": {
+        "prime": 3,
+        "rabin_frobenius_remainders": {
+          "0": "x",
+          "1": "x**2 + x + 1",
+          "2": "-x**2 + x",
+          "3": "x"
+        },
+        "final_minus_x": "0",
+        "gcds_for_prime_divisors_of_degree": {
+          "3": "1"
+        },
+        "irreducible": true
+      },
+      "unit_power_controls": [
+        {
+          "m": 0,
+          "theta_power": 0,
+          "coordinates": [
+            1,
+            0,
+            0
+          ],
+          "norm": 1
+        },
+        {
+          "m": 1,
+          "theta_power": 2,
+          "coordinates": [
+            0,
+            0,
+            1
+          ],
+          "norm": 1
+        },
+        {
+          "m": 2,
+          "theta_power": 4,
+          "coordinates": [
+            1,
+            2,
+            2
+          ],
+          "norm": 1
+        },
+        {
+          "m": 3,
+          "theta_power": 6,
+          "coordinates": [
+            4,
+            6,
+            7
+          ],
+          "norm": 1
+        },
+        {
+          "m": 4,
+          "theta_power": 8,
+          "coordinates": [
+            13,
+            20,
+            24
+          ],
+          "norm": 1
+        },
+        {
+          "m": 5,
+          "theta_power": 10,
+          "coordinates": [
+            44,
+            68,
+            81
+          ],
+          "norm": 1
+        },
+        {
+          "m": 6,
+          "theta_power": 12,
+          "coordinates": [
+            149,
+            230,
+            274
+          ],
+          "norm": 1
+        },
+        {
+          "m": 7,
+          "theta_power": 14,
+          "coordinates": [
+            504,
+            778,
+            927
+          ],
+          "norm": 1
+        },
+        {
+          "m": 8,
+          "theta_power": 16,
+          "coordinates": [
+            1705,
+            2632,
+            3136
+          ],
+          "norm": 1
+        }
+      ],
+      "unit_ball_volume": "4*pi/3",
+      "ball_norm_bound_constant": "2*sqrt(3)/(3*pi)",
+      "numerical_S_k_not_an_exact_certificate": 4.470353793290391
+    },
+    {
+      "k": 4,
+      "polynomial": "x**4 - x**3 - x**2 - x - 1",
+      "binary_norm_form": "p**4 - p**3*q - p**2*q**2 - p*q**3 - q**4",
+      "multiplication_matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "signature": [
+        2,
+        1
+      ],
+      "polynomial_discriminant": -563,
+      "independent_trace_gram_determinant": -563,
+      "trace_theta": 1,
+      "trace_theta_squared": 3,
+      "modular_irreducibility_certificate": {
+        "prime": 2,
+        "rabin_frobenius_remainders": {
+          "0": "x",
+          "1": "x**2",
+          "2": "x**3 + x**2 + x + 1",
+          "3": "x**3",
+          "4": "x"
+        },
+        "final_minus_x": "0",
+        "gcds_for_prime_divisors_of_degree": {
+          "2": "1"
+        },
+        "irreducible": true
+      },
+      "unit_power_controls": [
+        {
+          "m": 0,
+          "theta_power": 0,
+          "coordinates": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "norm": 1
+        },
+        {
+          "m": 1,
+          "theta_power": 2,
+          "coordinates": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "norm": 1
+        },
+        {
+          "m": 2,
+          "theta_power": 4,
+          "coordinates": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "norm": 1
+        },
+        {
+          "m": 3,
+          "theta_power": 6,
+          "coordinates": [
+            2,
+            3,
+            4,
+            4
+          ],
+          "norm": 1
+        },
+        {
+          "m": 4,
+          "theta_power": 8,
+          "coordinates": [
+            8,
+            12,
+            14,
+            15
+          ],
+          "norm": 1
+        },
+        {
+          "m": 5,
+          "theta_power": 10,
+          "coordinates": [
+            29,
+            44,
+            52,
+            56
+          ],
+          "norm": 1
+        },
+        {
+          "m": 6,
+          "theta_power": 12,
+          "coordinates": [
+            108,
+            164,
+            193,
+            208
+          ],
+          "norm": 1
+        },
+        {
+          "m": 7,
+          "theta_power": 14,
+          "coordinates": [
+            401,
+            609,
+            717,
+            773
+          ],
+          "norm": 1
+        },
+        {
+          "m": 8,
+          "theta_power": 16,
+          "coordinates": [
+            1490,
+            2263,
+            2664,
+            2872
+          ],
+          "norm": 1
+        }
+      ],
+      "unit_ball_volume": "pi**2/2",
+      "ball_norm_bound_constant": "2/pi**2",
+      "numerical_S_k_not_an_exact_certificate": 5.654968130850919
+    },
+    {
+      "k": 5,
+      "polynomial": "x**5 - x**4 - x**3 - x**2 - x - 1",
+      "binary_norm_form": "p**5 - p**4*q - p**3*q**2 - p**2*q**3 - p*q**4 - q**5",
+      "multiplication_matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1"
+        ]
+      ],
+      "signature": [
+        1,
+        2
+      ],
+      "polynomial_discriminant": 9584,
+      "independent_trace_gram_determinant": 9584,
+      "trace_theta": 1,
+      "trace_theta_squared": 3,
+      "modular_irreducibility_certificate": {
+        "prime": 5,
+        "rabin_frobenius_remainders": {
+          "0": "x",
+          "1": "x**4 + x**3 + x**2 + x + 1",
+          "2": "-2*x**4 - x**3 - 2*x**2 - x + 1",
+          "3": "2*x**4 - x**3 - 2*x + 1",
+          "4": "-x**4 + x**3 + x**2 + x - 2",
+          "5": "x"
+        },
+        "final_minus_x": "0",
+        "gcds_for_prime_divisors_of_degree": {
+          "5": "1"
+        },
+        "irreducible": true
+      },
+      "unit_power_controls": [
+        {
+          "m": 0,
+          "theta_power": 0,
+          "coordinates": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "norm": 1
+        },
+        {
+          "m": 1,
+          "theta_power": 2,
+          "coordinates": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "norm": 1
+        },
+        {
+          "m": 2,
+          "theta_power": 4,
+          "coordinates": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "norm": 1
+        },
+        {
+          "m": 3,
+          "theta_power": 6,
+          "coordinates": [
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "norm": 1
+        },
+        {
+          "m": 4,
+          "theta_power": 8,
+          "coordinates": [
+            4,
+            6,
+            7,
+            8,
+            8
+          ],
+          "norm": 1
+        },
+        {
+          "m": 5,
+          "theta_power": 10,
+          "coordinates": [
+            16,
+            24,
+            28,
+            30,
+            31
+          ],
+          "norm": 1
+        },
+        {
+          "m": 6,
+          "theta_power": 12,
+          "coordinates": [
+            61,
+            92,
+            108,
+            116,
+            120
+          ],
+          "norm": 1
+        },
+        {
+          "m": 7,
+          "theta_power": 14,
+          "coordinates": [
+            236,
+            356,
+            417,
+            448,
+            464
+          ],
+          "norm": 1
+        },
+        {
+          "m": 8,
+          "theta_power": 16,
+          "coordinates": [
+            912,
+            1376,
+            1612,
+            1732,
+            1793
+          ],
+          "norm": 1
+        }
+      ],
+      "unit_ball_volume": "8*pi**2/15",
+      "ball_norm_bound_constant": "12*sqrt(5)/(25*pi**2)",
+      "numerical_S_k_not_an_exact_certificate": 6.7232317524304275
+    }
+  ],
+  "tribonacci_hostile": {
+    "p": 103,
+    "q": 56,
+    "exact_norm": -1,
+    "exact_Q_expression": "20291+3136*(tau**2+2/tau)",
+    "tau_strict_lower_bound": "9/5",
+    "tau_strict_upper_bound": "2",
+    "Q_strict_lower_bound": "839691/25",
+    "euclidean_length_strict_lower_bound": 180
+  },
+  "independent_paths": [
+    "Norm: resultant vs multiplication-matrix determinant vs explicit homogeneous polynomial",
+    "Discriminant: polynomial discriminant vs trace-power Gram determinant",
+    "Irreducibility: exact Rabin modular certificates",
+    "Signature: exact real-root count via Sturm method"
+  ],
+  "not_claimed": [
+    "All Thue-Mahler solutions",
+    "Effective binary height bounds",
+    "Maximal-order discriminants",
+    "A recovered historic GSMA axiom system",
+    "A completed old normcollapse provenance link"
+  ]
+}

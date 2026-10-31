@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "python_version": "3.12.14",
+  "checks": [
+    "python3 verify_volume_bridge.py",
+    "python3 -O verify_volume_bridge.py",
+    "relocated standalone script in relocation_test/"
+  ],
+  "all_json_bytes_equal": true,
+  "verification_sha256": "7f73791553bd030137c7935e2890fe231fa265c4b80adce2ed755635f01f5890",
+  "checks_survive_python_optimization": "Explicit check() function; no assert statements",
+  "relocation_contract": "Only script-relative output path; no parent/sibling runtime imports"
+}
