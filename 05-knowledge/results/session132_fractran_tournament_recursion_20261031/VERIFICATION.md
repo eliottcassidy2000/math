@@ -1,0 +1,19 @@
+# Session132 verification and publication scope
+
+Run `python3 verify_session.py`. The release gate checks five SHA manifests plus the graph JSON whitelist manifest, then copies the packet into a clean temporary directory and runs fourteen principal command variants in normal and optimized Python:28 exact replays. It uses isolated Python with only the relevant bundled-script directory explicitly added, so sibling compiler helpers work without importing unrelated workspace code. All output bytes match retained receipts; generated IR, fractions, traces and geometry are also checked byte-for-byte.
+
+Six negative controls must fail: the explicit folding gate and damaged emitted rows in the A000568 and pure-blue lists, each normally and under optimization. Other hostile controls are built into producer and independent checkers. The graph release whitelist is verified separately. `SESSION_REPLAY.json` records exact hashes and command scopes.
+
+## Execution scopes, not conflated
+
+- Large A000568 program:5,543 fractions,3,979 states,36 data registers. The producer verifies560 primitive cases and5 hostile controls; register execution throughn6, actual fraction-exponent execution throughn5, and literal integer execution throughn3. The independent checker reads the emitted fraction file, checks every translation row, replays exponents throughn5, and additionally scans all5,543 literal rows at every step for n0. Eligibility indexing in other runs discards only rows whose control prime is provably absent. It is not IR execution disguised as fraction execution.
+- Literal16: actual integer and exponent runs throughn7 agree with the exact step formula. The compiler-generated alternate line program is retained as a separate compiler control, not confused with the16-row list.
+- Pure-blue22: the first25 checkpoints require10,686 actual rational steps;729 arbitrary-window controls and a full labelled tournament census throughn6 pass. The valuation rank, determinant and every microstep grading increment are independently checked.
+- Counting: formulas throughn25; direct signed pair actions throughn8; labelled tournament census throughn5; simultaneous pair/color census through half-order4. Independent cycle-type actions cover9,296 partition classes. External OEIS controls cover A0..25, S1..23 and M1..19; larger S/M values are not falsely labelled externally checked.
+- Graphs: all97 exact edge lists, degree/component/cut/girth invariants, full path/cycle counts through32, fourteen prime-order cycle certificates and the G31 ear certificate. Independent methods use pair construction, vertex/edge deletion and parity-lift shortest paths rather than producer algorithms.
+
+The graph data are compactly serialized without changing their mathematical content. The text-only graph whitelist excludes PNG/SVG outputs; `render_atlas.py` reproduces the SVG sheets, and frozen PNG previews were delivered separately as user-owned image files. Their colors denote square-root parity, not metagraph reflection. Historical source snapshots are archival evidence, excluded from active Markdown route validation.
+
+`agents/check_docs.py`, all owned active Markdown destinations, `git diff --check`, exact Git blob identity and clean remote synchronization are checked before final delivery. CSV bytes are preserved explicitly by the packet `.gitattributes`. Only the session packet and navigation are published; concurrent work is preserved. Empty remote status lists are not treated as passing CI.
+
+The all-input program theorems rely on audited symbolic invariants and compiler contracts, not extrapolation from these finite runs. They do not classify arbitrary seeds of every generated program, claim fraction minimality, or give an efficient binary-output algorithm. Counts alone do not recover metagraph wiring. The supplied prime grouping remains unchanged and its two graph interpretations remain separate.

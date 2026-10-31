@@ -1,0 +1,66 @@
+{"n": 0, "output": 1, "error": 0, "steps": 784, "halt_prime": 37991}
+{"n": 1, "output": 1, "error": 0, "steps": 4355, "halt_prime": 37991}
+{"n": 2, "output": 1, "error": 0, "steps": 7802, "halt_prime": 37991}
+{"n": 3, "output": 2, "error": 0, "steps": 42606, "halt_prime": 37991}
+{"n": 4, "output": 4, "error": 0, "steps": 77994, "halt_prime": 37991}
+{"n": 5, "output": 12, "error": 0, "steps": 699757, "halt_prime": 37991}
+{
+  "exponent_runs": [
+    {
+      "error": 0,
+      "halt_prime": 37991,
+      "n": 0,
+      "output": 1,
+      "steps": 784
+    },
+    {
+      "error": 0,
+      "halt_prime": 37991,
+      "n": 1,
+      "output": 1,
+      "steps": 4355
+    },
+    {
+      "error": 0,
+      "halt_prime": 37991,
+      "n": 2,
+      "output": 1,
+      "steps": 7802
+    },
+    {
+      "error": 0,
+      "halt_prime": 37991,
+      "n": 3,
+      "output": 2,
+      "steps": 42606
+    },
+    {
+      "error": 0,
+      "halt_prime": 37991,
+      "n": 4,
+      "output": 4,
+      "steps": 77994
+    },
+    {
+      "error": 0,
+      "halt_prime": 37991,
+      "n": 5,
+      "output": 12,
+      "steps": 699757
+    }
+  ],
+  "fraction_count": 5543,
+  "literal_run": {
+    "max_integer_bits": 79,
+    "n": 0,
+    "output": 1,
+    "steps": 784
+  },
+  "registers": 36,
+  "source_hashes": {
+    "a000568.fractions.00.txt": "bcbc9421a05646214d7c7428715df9882bc959204cd6ce7c7e9e9e1b2ac95cfa",
+    "a000568.ir.json": "1ad6b359feeaa43963edc4a90df4fc762d7abb1627117ba73e5dac4a901d06a5"
+  },
+  "states": 3979,
+  "status": "PASS"
+}

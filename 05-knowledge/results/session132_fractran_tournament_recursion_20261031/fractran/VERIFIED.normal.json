@@ -1,0 +1,260 @@
+{
+  "a000568": {
+    "exponent_fraction_replays": [
+      {
+        "n": 0,
+        "output": 1,
+        "steps": 784
+      },
+      {
+        "n": 1,
+        "output": 1,
+        "steps": 4355
+      },
+      {
+        "n": 2,
+        "output": 1,
+        "steps": 7802
+      },
+      {
+        "n": 3,
+        "output": 2,
+        "steps": 42606
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 77994
+      },
+      {
+        "n": 5,
+        "output": 12,
+        "steps": 699757
+      }
+    ],
+    "literal_integer_replays": [
+      {
+        "max_integer_bits": 79,
+        "n": 0,
+        "output": 1,
+        "steps": 784
+      },
+      {
+        "max_integer_bits": 155,
+        "n": 1,
+        "output": 1,
+        "steps": 4355
+      },
+      {
+        "max_integer_bits": 242,
+        "n": 2,
+        "output": 1,
+        "steps": 7802
+      },
+      {
+        "max_integer_bits": 649,
+        "n": 3,
+        "output": 2,
+        "steps": 42606
+      }
+    ],
+    "program": {
+      "entry_prime": 157,
+      "fraction_bytes": 67611,
+      "fraction_parts": 1,
+      "fractions": 5543,
+      "halt_prime": 37991,
+      "input_prime": 5,
+      "output_prime": 3,
+      "registers": 36,
+      "states": 3979
+    },
+    "register_replays": [
+      {
+        "n": 0,
+        "output": 1,
+        "steps": 784
+      },
+      {
+        "n": 1,
+        "output": 1,
+        "steps": 4355
+      },
+      {
+        "n": 2,
+        "output": 1,
+        "steps": 7802
+      },
+      {
+        "n": 3,
+        "output": 2,
+        "steps": 42606
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 77994
+      },
+      {
+        "n": 5,
+        "output": 12,
+        "steps": 699757
+      },
+      {
+        "n": 6,
+        "output": 56,
+        "steps": 32725255
+      }
+    ],
+    "valuation_bound": {
+      "decrement_rows": 1,
+      "increment_rows": 1,
+      "max_increment": 1,
+      "min_increment": -1,
+      "output_prime": 3
+    }
+  },
+  "literal16": {
+    "exponent_replays": [
+      {
+        "n": 3,
+        "output": 1,
+        "steps": 1
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 37
+      },
+      {
+        "n": 5,
+        "output": 32,
+        "steps": 230
+      },
+      {
+        "n": 6,
+        "output": 512,
+        "steps": 3142
+      },
+      {
+        "n": 7,
+        "output": 16384,
+        "steps": 98413
+      }
+    ],
+    "fractions": [
+      "19/221",
+      "59/17",
+      "1265/57",
+      "29/19",
+      "19/23",
+      "93/319",
+      "37/29",
+      "29/31",
+      "41/185",
+      "51/37",
+      "2107/82",
+      "47/41",
+      "41/43",
+      "106/329",
+      "37/47",
+      "47/53"
+    ],
+    "integer_replays": [
+      {
+        "max_integer_bits": 11,
+        "n": 3,
+        "output": 1,
+        "steps": 1
+      },
+      {
+        "max_integer_bits": 20,
+        "n": 4,
+        "output": 4,
+        "steps": 37
+      },
+      {
+        "max_integer_bits": 101,
+        "n": 5,
+        "output": 32,
+        "steps": 230
+      },
+      {
+        "max_integer_bits": 1450,
+        "n": 6,
+        "output": 512,
+        "steps": 3142
+      },
+      {
+        "max_integer_bits": 46010,
+        "n": 7,
+        "output": 16384,
+        "steps": 98413
+      }
+    ],
+    "valuation_bound": {
+      "decrement_rows": 1,
+      "increment_rows": 1,
+      "max_increment": 1,
+      "min_increment": -1,
+      "output_prime": 2
+    }
+  },
+  "literal_lines": {
+    "program": {
+      "entry_prime": 43,
+      "fraction_bytes": 4422,
+      "fraction_parts": 1,
+      "fractions": 463,
+      "halt_prime": 2351,
+      "input_prime": 5,
+      "output_prime": 3,
+      "registers": 13,
+      "states": 336
+    },
+    "register_replays": [
+      {
+        "n": 3,
+        "output": 1,
+        "steps": 61
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 743
+      },
+      {
+        "n": 5,
+        "output": 32,
+        "steps": 3316
+      },
+      {
+        "n": 6,
+        "output": 512,
+        "steps": 33899
+      },
+      {
+        "n": 7,
+        "output": 16384,
+        "steps": 1003906
+      }
+    ]
+  },
+  "primitive_tests": {
+    "hostile_controls": 5,
+    "primitive_cases": 560
+  },
+  "schema": "session132.finite-fractran.v1",
+  "sha256": {
+    "a000568.fractions.00.txt": "bcbc9421a05646214d7c7428715df9882bc959204cd6ce7c7e9e9e1b2ac95cfa",
+    "a000568.ir.json": "1ad6b359feeaa43963edc4a90df4fc762d7abb1627117ba73e5dac4a901d06a5",
+    "a000568_source.py": "79087898c34b45b8ecfe39f42c1e05d7a19b18b8eb7d3d3e5ebf28b5dbe065f3",
+    "compiler.py": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51",
+    "literal16.py": "cf767195eac4868d867be24cebf23a5ea18ab8dac7f14b7f0ee1c810a897e34f",
+    "literal_lines.fractions.00.txt": "526bdefc1c2aabcd4989f6da5d1be9312a6913c8cf257d7a5ccbd84d21c4bde9",
+    "literal_lines.ir.json": "55b6d3e22362a7db869c765ce6825ef401a58a6859251977240358f6e66bd6d0",
+    "literal_lines_source.py": "a4ab59a6c1c3ba5756590766b20c5ada018fbae5fa581443a3a11598ea9fabe4",
+    "run_program.py": "d5883b58d7f018ac7abe4f8d16907b24fa51fcb120eca96d2d59000720ced041",
+    "verify.py": "4aac545852f6da87b67fe36ccb3cc21eb549ec139a8ba0569150bc8219881939"
+  }
+}

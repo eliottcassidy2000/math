@@ -1,0 +1,26 @@
+i,prime_label,supplied_groups,graph_n,edges,components,delta,Delta,leaves,girth,odd_root_components,arrival_roots,hamilton_path_count,hamilton_path_exists,hamilton_cycle_exists
+1,2,A,2,0,2,0,0,0,-,2,-,0,False,False
+2,3,A,3,1,2,0,1,2,-,3,2,0,False,False
+3,5,A,5,2,3,0,1,4,-,4,3,0,False,False
+4,7,A,7,4,3,1,2,6,-,4,3,0,False,False
+5,11,A,11,8,3,1,2,6,-,7,4,0,False,False
+6,13,A,13,11,2,1,3,5,-,8,"4,5",0,False,False
+7,17,B,17,17,1,1,3,2,5,8,5,1,True,False
+8,19,B,19,20,1,1,3,2,5,8,"5,6",0,False,False
+9,23,B,23,28,1,1,4,1,5,8,"5,6",3,True,False
+10,29,C,29,40,1,1,4,1,5,8,"6,7",19,True,False
+11,31,B,31,44,1,2,4,0,3,8,"6,7",349,True,False
+12,37,D,37,59,1,2,5,0,3,8,"7,8",not enumerated,True,True
+13,41,C,41,68,1,2,5,0,3,7,"7,8,9",not enumerated,True,True
+14,43,D,43,74,1,2,5,0,3,5,"7,8,9",not enumerated,True,True
+15,47,B,47,86,1,2,6,0,3,4,"7,8,9",not enumerated,True,True
+16,53,D,53,102,1,2,6,0,3,4,"8,9,10",not enumerated,True,True
+17,59,C,59,120,1,2,6,0,3,4,"8,9,10",not enumerated,True,True
+18,61,D,61,127,1,2,7,0,3,4,"8,9,10,11",not enumerated,True,True
+19,67,MISSING,67,147,1,2,7,0,3,4,"9,10,11",not enumerated,True,True
+20,71,"C,D",71,159,1,3,7,0,3,4,"9,10,11",not enumerated,True,True
+21,73,E,73,166,1,3,7,0,3,4,"9,10,11,12",not enumerated,True,True
+22,79,E,79,190,1,3,8,0,3,4,"9,10,11,12",not enumerated,True,True
+23,83,E,83,203,1,3,8,0,3,4,"10,11,12",not enumerated,True,True
+24,89,E,89,226,1,3,8,0,3,4,"10,11,12,13",not enumerated,True,True
+25,97,E,97,258,1,4,9,0,3,4,"10,11,12,13",not enumerated,True,True

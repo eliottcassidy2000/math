@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "direct16": [
+    {
+      "n": 3,
+      "output": 1,
+      "steps": 1
+    },
+    {
+      "n": 4,
+      "output": 4,
+      "steps": 37
+    },
+    {
+      "n": 5,
+      "output": 32,
+      "steps": 230
+    },
+    {
+      "n": 6,
+      "output": 512,
+      "steps": 3142
+    },
+    {
+      "n": 7,
+      "output": 16384,
+      "steps": 98413
+    }
+  ],
+  "stream22": {
+    "checkpoints": [
+      {
+        "n": 0,
+        "output": 1,
+        "steps": 0
+      },
+      {
+        "n": 1,
+        "output": 1,
+        "steps": 30
+      },
+      {
+        "n": 2,
+        "output": 1,
+        "steps": 66
+      },
+      {
+        "n": 3,
+        "output": 2,
+        "steps": 106
+      },
+      {
+        "n": 4,
+        "output": 1,
+        "steps": 156
+      },
+      {
+        "n": 5,
+        "output": 3,
+        "steps": 210
+      },
+      {
+        "n": 6,
+        "output": 2,
+        "steps": 280
+      },
+      {
+        "n": 7,
+        "output": 4,
+        "steps": 356
+      },
+      {
+        "n": 8,
+        "output": 3,
+        "steps": 454
+      },
+      {
+        "n": 9,
+        "output": 6,
+        "steps": 562
+      },
+      {
+        "n": 10,
+        "output": 4,
+        "steps": 702
+      },
+      {
+        "n": 11,
+        "output": 9,
+        "steps": 856
+      },
+      {
+        "n": 12,
+        "output": 6,
+        "steps": 1058
+      },
+      {
+        "n": 13,
+        "output": 13,
+        "steps": 1280
+      },
+      {
+        "n": 14,
+        "output": 9,
+        "steps": 1572
+      },
+      {
+        "n": 15,
+        "output": 19,
+        "steps": 1894
+      },
+      {
+        "n": 16,
+        "output": 13,
+        "steps": 2318
+      },
+      {
+        "n": 17,
+        "output": 28,
+        "steps": 2786
+      },
+      {
+        "n": 18,
+        "output": 19,
+        "steps": 3404
+      },
+      {
+        "n": 19,
+        "output": 41,
+        "steps": 4086
+      },
+      {
+        "n": 20,
+        "output": 28,
+        "steps": 4988
+      },
+      {
+        "n": 21,
+        "output": 60,
+        "steps": 5984
+      },
+      {
+        "n": 22,
+        "output": 41,
+        "steps": 7302
+      },
+      {
+        "n": 23,
+        "output": 88,
+        "steps": 8758
+      },
+      {
+        "n": 24,
+        "output": 60,
+        "steps": 10686
+      }
+    ],
+    "zero_one_windows": 64
+  }
+}

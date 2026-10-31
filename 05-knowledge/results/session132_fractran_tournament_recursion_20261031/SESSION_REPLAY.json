@@ -1,0 +1,276 @@
+{
+  "graph_whitelist_stdout": "{\"checked_files\": 19, \"status\": \"PASS\"}",
+  "manifests": [
+    {
+      "entries": 5,
+      "path": "converse_folding/SHA256SUMS"
+    },
+    {
+      "entries": 17,
+      "path": "counting/SHA256SUMS"
+    },
+    {
+      "entries": 16,
+      "path": "fractran/SHA256SUMS"
+    },
+    {
+      "entries": 22,
+      "path": "independent/SHA256SUMS"
+    },
+    {
+      "entries": 8,
+      "path": "pure_blue_fractran/SHA256SUMS"
+    },
+    {
+      "entries": 19,
+      "path": "prime_graphs/MANIFEST.json"
+    }
+  ],
+  "negative_gates": [
+    {
+      "control": "intentional fold gate",
+      "exit_code": 1,
+      "optimized": false
+    },
+    {
+      "control": "intentional fold gate",
+      "exit_code": 1,
+      "optimized": true
+    },
+    {
+      "control": "damaged A000568 row",
+      "exit_code": 1,
+      "optimized": false
+    },
+    {
+      "control": "damaged A000568 row",
+      "exit_code": 1,
+      "optimized": true
+    },
+    {
+      "control": "damaged pure-blue row",
+      "exit_code": 1,
+      "optimized": false
+    },
+    {
+      "control": "damaged pure-blue row",
+      "exit_code": 1,
+      "optimized": true
+    }
+  ],
+  "replays": [
+    {
+      "args": [],
+      "optimized": false,
+      "script": "counting/check_counts.py",
+      "status": "PASS",
+      "stdout_sha256": "4e3952f5d94a819791f497fd3b1c3cd578514fe2e9b9a20929451b86797f3b6d"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "counting/check_counts.py",
+      "status": "PASS",
+      "stdout_sha256": "4e3952f5d94a819791f497fd3b1c3cd578514fe2e9b9a20929451b86797f3b6d"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "counting/verify_hostile.py",
+      "status": "PASS",
+      "stdout_sha256": "82587cb04769700b5c96e813ea083650cc6cb632ca51990bea105ebd3825b960"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "counting/verify_hostile.py",
+      "status": "PASS",
+      "stdout_sha256": "82587cb04769700b5c96e813ea083650cc6cb632ca51990bea105ebd3825b960"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "converse_folding/check_folding.py",
+      "status": "PASS",
+      "stdout_sha256": "0217a4dd102cc7e9a9f5ede36e9adf42020a17393bbdf1c1b77a9810543f421e"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "converse_folding/check_folding.py",
+      "status": "PASS",
+      "stdout_sha256": "0217a4dd102cc7e9a9f5ede36e9adf42020a17393bbdf1c1b77a9810543f421e"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "pure_blue_fractran/verify.py",
+      "status": "PASS",
+      "stdout_sha256": "73fa3a370c9eb812ee2b48c6808f357146d53d347587a05d8dfea01960b94c23"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "pure_blue_fractran/verify.py",
+      "status": "PASS",
+      "stdout_sha256": "73fa3a370c9eb812ee2b48c6808f357146d53d347587a05d8dfea01960b94c23"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "pure_blue_fractran/analyze_geometry.py",
+      "status": "PASS",
+      "stdout_sha256": "c612f7fa946bc3f8a03afeedf4d4cb09e5437e9be2a3d56e186cebcdcf6aa0f3"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "pure_blue_fractran/analyze_geometry.py",
+      "status": "PASS",
+      "stdout_sha256": "c612f7fa946bc3f8a03afeedf4d4cb09e5437e9be2a3d56e186cebcdcf6aa0f3"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "fractran/verify.py",
+      "status": "PASS",
+      "stdout_sha256": "83aaa5c15b59d8c085e9299c1632404c8b2e77e2ec131efa6901b7b079336d90"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "fractran/verify.py",
+      "status": "PASS",
+      "stdout_sha256": "83aaa5c15b59d8c085e9299c1632404c8b2e77e2ec131efa6901b7b079336d90"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "prime_graphs/check.py",
+      "status": "PASS",
+      "stdout_sha256": "f030ae55cbdb774a31b52dd6559da6909d1125e83661c2631c3488ba934e8f97"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "prime_graphs/check.py",
+      "status": "PASS",
+      "stdout_sha256": "f030ae55cbdb774a31b52dd6559da6909d1125e83661c2631c3488ba934e8f97"
+    },
+    {
+      "args": [
+        "../fractran/a000568",
+        "--through",
+        "5"
+      ],
+      "optimized": false,
+      "script": "independent/audit_fractions.py",
+      "status": "PASS",
+      "stdout_sha256": "30b16e3422bcef1c31ccdc2c93dc7b2377f7a394ddb389aadcd03555b3772e14"
+    },
+    {
+      "args": [
+        "../fractran/a000568",
+        "--through",
+        "5"
+      ],
+      "optimized": true,
+      "script": "independent/audit_fractions.py",
+      "status": "PASS",
+      "stdout_sha256": "30b16e3422bcef1c31ccdc2c93dc7b2377f7a394ddb389aadcd03555b3772e14"
+    },
+    {
+      "args": [
+        "../fractran/literal_lines",
+        "--through",
+        "3"
+      ],
+      "optimized": false,
+      "script": "independent/audit_fractions.py",
+      "status": "PASS",
+      "stdout_sha256": "d1121be6a77ae62208e68d28d3630024b066a61e090384bdcb125b627ccacb92"
+    },
+    {
+      "args": [
+        "../fractran/literal_lines",
+        "--through",
+        "3"
+      ],
+      "optimized": true,
+      "script": "independent/audit_fractions.py",
+      "status": "PASS",
+      "stdout_sha256": "d1121be6a77ae62208e68d28d3630024b066a61e090384bdcb125b627ccacb92"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "independent/audit_compiler.py",
+      "status": "PASS",
+      "stdout_sha256": "a2c51b0209d5c0dae8e71f003f25fc82a7192bb62dcd15226f8b921d1ab6fe1d"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "independent/audit_compiler.py",
+      "status": "PASS",
+      "stdout_sha256": "a2c51b0209d5c0dae8e71f003f25fc82a7192bb62dcd15226f8b921d1ab6fe1d"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "independent/audit_small_programs.py",
+      "status": "PASS",
+      "stdout_sha256": "3d7b2cc0188c05cf6140955f1bdc13e7cd0398d1b84c35a2cb2263b482ed245d"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "independent/audit_small_programs.py",
+      "status": "PASS",
+      "stdout_sha256": "3d7b2cc0188c05cf6140955f1bdc13e7cd0398d1b84c35a2cb2263b482ed245d"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "independent/audit_geometry.py",
+      "status": "PASS",
+      "stdout_sha256": "c803da491d6828ef4135f86febea50aa57637073c06c5caa6b498529762179f1"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "independent/audit_geometry.py",
+      "status": "PASS",
+      "stdout_sha256": "c803da491d6828ef4135f86febea50aa57637073c06c5caa6b498529762179f1"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "independent/audit_counts.py",
+      "status": "PASS",
+      "stdout_sha256": "bee4b831f15da857bb5fb3e19559a6bbde5d612ad2627d3419f992359a79bb55"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "independent/audit_counts.py",
+      "status": "PASS",
+      "stdout_sha256": "bee4b831f15da857bb5fb3e19559a6bbde5d612ad2627d3419f992359a79bb55"
+    },
+    {
+      "args": [],
+      "optimized": false,
+      "script": "independent/audit_prime_graphs.py",
+      "status": "PASS",
+      "stdout_sha256": "2ee03bd9bdcb66a5bedfb11fee5c8842ab7737fbd51c9ca6b225bf8159e61443"
+    },
+    {
+      "args": [],
+      "optimized": true,
+      "script": "independent/audit_prime_graphs.py",
+      "status": "PASS",
+      "stdout_sha256": "2ee03bd9bdcb66a5bedfb11fee5c8842ab7737fbd51c9ca6b225bf8159e61443"
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "integer_magnitude_envelope_power": 12,
+  "microstep_clock_checked_fractions": 22,
+  "clock_checkpoint_checks": 25,
+  "minor_deleted_prime": 23,
+  "minor_determinant": 1,
+  "rank": 22,
+  "left_kernel_dimension": 1,
+  "right_kernel_dimension": 0,
+  "no_nonempty_periodic_orbit_from_any_positive_integer": true
+}

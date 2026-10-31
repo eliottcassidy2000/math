@@ -1,0 +1,207 @@
+{
+  "primitive_tests": {
+    "primitive_cases": 560,
+    "hostile_controls": 5
+  },
+  "a000568": {
+    "program": {
+      "registers": 36,
+      "states": 3979,
+      "fractions": 5543,
+      "fraction_parts": 1,
+      "fraction_bytes": 67611,
+      "input_prime": 5,
+      "output_prime": 3,
+      "entry_prime": 157,
+      "halt_prime": 37991
+    },
+    "valuation_bound": {
+      "output_prime": 3,
+      "max_increment": 1,
+      "min_increment": -1,
+      "increment_rows": 1,
+      "decrement_rows": 1
+    },
+    "register_replays": [
+      {
+        "n": 0,
+        "output": 1,
+        "steps": 784
+      },
+      {
+        "n": 1,
+        "output": 1,
+        "steps": 4355
+      },
+      {
+        "n": 2,
+        "output": 1,
+        "steps": 7802
+      },
+      {
+        "n": 3,
+        "output": 2,
+        "steps": 42606
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 77994
+      },
+      {
+        "n": 5,
+        "output": 12,
+        "steps": 699757
+      },
+      {
+        "n": 6,
+        "output": 56,
+        "steps": 32725255
+      }
+    ],
+    "exponent_fraction_replays": [
+      {
+        "n": 0,
+        "output": 1,
+        "steps": 784
+      },
+      {
+        "n": 1,
+        "output": 1,
+        "steps": 4355
+      },
+      {
+        "n": 2,
+        "output": 1,
+        "steps": 7802
+      },
+      {
+        "n": 3,
+        "output": 2,
+        "steps": 42606
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 77994
+      },
+      {
+        "n": 5,
+        "output": 12,
+        "steps": 699757
+      }
+    ],
+    "literal_integer_replays": [
+      {
+        "n": 0,
+        "output": 1,
+        "steps": 784,
+        "max_integer_bits": 79
+      },
+      {
+        "n": 1,
+        "output": 1,
+        "steps": 4355,
+        "max_integer_bits": 155
+      },
+      {
+        "n": 2,
+        "output": 1,
+        "steps": 7802,
+        "max_integer_bits": 242
+      },
+      {
+        "n": 3,
+        "output": 2,
+        "steps": 42606,
+        "max_integer_bits": 649
+      }
+    ]
+  },
+  "literal16": {
+    "valuation_bound": {
+      "output_prime": 2,
+      "max_increment": 1,
+      "min_increment": -1,
+      "increment_rows": 1,
+      "decrement_rows": 1
+    },
+    "fractions": [
+      "19/221",
+      "59/17",
+      "1265/57",
+      "29/19",
+      "19/23",
+      "93/319",
+      "37/29",
+      "29/31",
+      "41/185",
+      "51/37",
+      "2107/82",
+      "47/41",
+      "41/43",
+      "106/329",
+      "37/47",
+      "47/53"
+    ],
+    "integer_replays": [
+      {
+        "n": 3,
+        "output": 1,
+        "steps": 1,
+        "max_integer_bits": 11
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 37,
+        "max_integer_bits": 20
+      },
+      {
+        "n": 5,
+        "output": 32,
+        "steps": 230,
+        "max_integer_bits": 101
+      },
+      {
+        "n": 6,
+        "output": 512,
+        "steps": 3142,
+        "max_integer_bits": 1450
+      },
+      {
+        "n": 7,
+        "output": 16384,
+        "steps": 98413,
+        "max_integer_bits": 46010
+      }
+    ],
+    "exponent_replays": [
+      {
+        "n": 3,
+        "output": 1,
+        "steps": 1
+      },
+      {
+        "n": 4,
+        "output": 4,
+        "steps": 37
+      },
+      {
+        "n": 5,
+        "output": 32,
+        "steps": 230
+      },
+      {
+        "n": 6,
+        "output": 512,
+        "steps": 3142
+      },
+      {
+        "n": 7,
+        "output": 16384,
+        "steps": 98413
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "graphs": 97,
+  "prime_cycle_certificates": 14,
+  "ear_decomposition_vertices": 31,
+  "duplicate": 71,
+  "missing": 67,
+  "scope": "Hamiltonian witness existence independently checked; exact Hamiltonian counts audited separately by source review."
+}

@@ -18,3 +18,7 @@ Least-used sidecars: emitted-fraction execution, concrete microstep clocks, the 
 Method cards: Search the statement before the method; Retain local incidence through counting; Type every analogy and every implication.
 
 No fraction-minimality, efficient binary-counting algorithm, new moonshine classification or autonomous bare-node recurrence is assumed. The original prime lists and both graph-index interpretations remain explicit.
+
+## Close-out comparison
+
+Three actual fraction programs now instantiate the counting lanes. The anti-involution fold supplies a genuine marked groupoid equivalence and an unmarked class bijection, while preserving the centralizer warning. Pure-blue SCC words give the short linear stream; ordinary and merged counts instead require richer state and are not C-finite. An exact microstep clock separates finite control cycles from integer orbits. The two prime/graph interpretations have full certificates and different meanings, and their coarse flags cannot detect the repeated/missing labels. No numerical prime coincidence is promoted to a dynamical theorem.

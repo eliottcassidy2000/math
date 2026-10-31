@@ -1,0 +1,50 @@
+{"n": 0, "output": 1, "error": 0, "steps": 61, "halt_prime": 2351}
+{"n": 1, "output": 4, "error": 0, "steps": 743, "halt_prime": 2351}
+{"n": 2, "output": 32, "error": 0, "steps": 3316, "halt_prime": 2351}
+{"n": 3, "output": 512, "error": 0, "steps": 33899, "halt_prime": 2351}
+{
+  "exponent_runs": [
+    {
+      "error": 0,
+      "halt_prime": 2351,
+      "n": 0,
+      "output": 1,
+      "steps": 61
+    },
+    {
+      "error": 0,
+      "halt_prime": 2351,
+      "n": 1,
+      "output": 4,
+      "steps": 743
+    },
+    {
+      "error": 0,
+      "halt_prime": 2351,
+      "n": 2,
+      "output": 32,
+      "steps": 3316
+    },
+    {
+      "error": 0,
+      "halt_prime": 2351,
+      "n": 3,
+      "output": 512,
+      "steps": 33899
+    }
+  ],
+  "fraction_count": 463,
+  "literal_run": {
+    "max_integer_bits": 27,
+    "n": 0,
+    "output": 1,
+    "steps": 61
+  },
+  "registers": 13,
+  "source_hashes": {
+    "literal_lines.fractions.00.txt": "526bdefc1c2aabcd4989f6da5d1be9312a6913c8cf257d7a5ccbd84d21c4bde9",
+    "literal_lines.ir.json": "55b6d3e22362a7db869c765ce6825ef401a58a6859251977240358f6e66bd6d0"
+  },
+  "states": 336,
+  "status": "PASS"
+}

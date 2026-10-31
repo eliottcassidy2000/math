@@ -1,0 +1,25 @@
+{
+  "gates": 7759,
+  "graph_orders": "1..97",
+  "independent_hamilton_counts": "all orders 1..32, paths modulo reversal and cycles modulo dihedral symmetry",
+  "nontrivial_path_ranks_1_to_25": [
+    15,
+    16,
+    17,
+    23,
+    25
+  ],
+  "prime_cycle_witnesses": 14,
+  "rank_path_prime_labels": [
+    47,
+    53,
+    59,
+    83,
+    97
+  ],
+  "status": "PASS",
+  "table_interpretations": [
+    "p_i -> G_p_i",
+    "p_i -> G_i"
+  ]
+}

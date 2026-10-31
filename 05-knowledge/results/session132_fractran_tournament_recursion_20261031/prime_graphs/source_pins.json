@@ -1,0 +1,12 @@
+[
+  {
+    "repository_path": "05-knowledge/results/session131_reflection_numeration_moonshine_20261031/square_sum/PROOFS.md",
+    "sha256": "627659d13f616b0fb431d280d1af93304f41a532de8167a37a0c3982ec235e2b",
+    "role": "Inherited odd-root components and odd-order seam floor; not a new proof claim"
+  },
+  {
+    "repository_path": "05-knowledge/results/session131_reflection_numeration_moonshine_20261031/square_sum/witnesses.json",
+    "sha256": "92ce8ab302e4e9512023aba1e1afc0a1f372d2f9840306a6f6a0815c1af0dec0",
+    "role": "Inherited odd-root components and odd-order seam floor; not a new proof claim"
+  }
+]
