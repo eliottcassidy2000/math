@@ -1,0 +1,95 @@
+{
+  "checkpoint_cycles": [
+    {
+      "N": 8192,
+      "cycle_sha256": "c00259395c65eeb8236280b93154f1cc6d1adc3fe039e6730b856eb046adb111"
+    },
+    {
+      "N": 16384,
+      "cycle_sha256": "5e0f05422a4972fb54c415c9b010a93c5f82857c76be1a87797bb8b3be4d3329"
+    },
+    {
+      "N": 24576,
+      "cycle_sha256": "51207f45554245b5f9275cb4ab89e9e4e43af7636dc010b40e35bd5ba5763a3b"
+    },
+    {
+      "N": 32768,
+      "cycle_sha256": "e71d2ec429bb6774774b465de55d68635abbbcd55128974fc1c01e38fa69d420"
+    },
+    {
+      "N": 40960,
+      "cycle_sha256": "dcf1d6fd4f6d74d5f62637f162a6ef16a84f73003bf7365e18c7e137d05af253"
+    },
+    {
+      "N": 49152,
+      "cycle_sha256": "19d5b4969ca5c228d25e2adeea35620228eef9acc5368191e53cd5a883196321"
+    },
+    {
+      "N": 57344,
+      "cycle_sha256": "9fe4e5d16665d9cd526af65ab30c265be7fde7a2db7001b1660bdae5e5d78204"
+    },
+    {
+      "N": 65536,
+      "cycle_sha256": "1cc98d316c768e11aec46ac3bf90ea3bb616e64b15bc10b4cbbf738f65412517"
+    },
+    {
+      "N": 73728,
+      "cycle_sha256": "be5c88178d8a0d115ee1ed133948d34016c2b039571def7a005a71831ff02cb7"
+    },
+    {
+      "N": 81920,
+      "cycle_sha256": "161139989eb4e601aebc1928c442f0647935e46314af9dade57351407cb34fbb"
+    },
+    {
+      "N": 90112,
+      "cycle_sha256": "e1f79d5c3d6eeecb217aa134dfef5844df23bf3ff29e75ef38a45ee2dec7da17"
+    },
+    {
+      "N": 98304,
+      "cycle_sha256": "fdc3c0a262bccc793b9570daa395e40960b057ddef0eadb97c4931338db9e82c"
+    },
+    {
+      "N": 106496,
+      "cycle_sha256": "8045552fe2338bcb3798f5d685b477e190be09962b9c752a4df6d66070915ffa"
+    },
+    {
+      "N": 114688,
+      "cycle_sha256": "403b3c5f12b9b77426e651f8c0772bbd83c3cc6a820b47397e7ad986d7d61e59"
+    },
+    {
+      "N": 122880,
+      "cycle_sha256": "3d3aa2c083b5eb3746f44f440ff9db5241aade0ebad451e92d46ba7fa8de968f"
+    }
+  ],
+  "checks": 5857676,
+  "cycles": 128325,
+  "direct_insertions": 20544,
+  "final_cycle_sha256": "fae3cb2c61436ed9a5baaa13049b22feb6070179ab21ed87c24fdf76ce1846a0",
+  "finite_head_first": 72,
+  "finite_head_last": 128,
+  "finite_head_sha256": "216a4ec581b1a5d94e595cd2fcf7fba51e96402e69ce43c27f5d4de244a03d25",
+  "first": 128,
+  "full_intermediate_audits": 399,
+  "last": 128452,
+  "max_moves": 45,
+  "moves": 531148,
+  "native_path": [
+    1,
+    8,
+    17,
+    19,
+    6,
+    10,
+    15,
+    21,
+    4,
+    12,
+    24
+  ],
+  "scope": "Every length is certified by exact permutation, single-cycle, protected-edge, and bad-edge induction; full audits additionally cover the pilot, checkpoints, and final cycle.",
+  "sharp_lower_bound": 72,
+  "source_sha256": "4898c785f3180b18057582648fa2e763d32a6f2beb4fede07a0a4fc7730bc28f",
+  "status": "passed",
+  "total_distinct_cycles": 128381,
+  "trace_file_sha256": "5ce6da1ed5747c9908f6b82054db9d1816b1ed47ac3e2e4fe9de27a2f5509cdc"
+}

@@ -1,0 +1,51 @@
+{
+  "audit": "Same-agent review with independent Python and C++ square-trace consumers; no subagent audit claimed.",
+  "excluded_from_proof": [
+    "native_forest_table.json",
+    "native_forest_discovery.out",
+    "native_onset_probe.json"
+  ],
+  "files_sha256": {
+    "HANDOFF.md": "6059eaf03685f0a7e98518ab0f5e035dbf9fca14ca44e20a33b2e2f142149d15",
+    "README.md": "ec3d6a2ec93438d1c031ae363c8de8fce7042929f56d24a8b7b4075cfba09552",
+    "binary_controller_rigidity.json": "3a3679b6a7a2bbf6726d1b18507b5ff87b321d9676299fe6e8889cbf050fffb3",
+    "binary_controller_rigidity.py": "bfd717a882a0d4ad83445c9675d6ed13e336bd86647c79e42339fbc40dc3451d",
+    "force_native_forest.py": "e737bb163593e4096ccf9bbc93ea87239992a6c7048427e4b9d8f275c98f5c24",
+    "n24_forest_discovery.out": "02bb50eb0cbae99ec4007c09d6e117d8ecc44c3e116922f978291ce983f56b65",
+    "n24_forest_receipt.json": "11a2f8e83c3745fac88d8f3df74d1feef97b5c1b3a0226befc94806983c17387",
+    "n24_forest_table.json": "0e842286110d3646f391d39da65ccfe8e8bf45f1932faf14e1242659b7faa003",
+    "native_forest_discovery.out": "02bb50eb0cbae99ec4007c09d6e117d8ecc44c3e116922f978291ce983f56b65",
+    "native_forest_table.json": "f4815f0061b5a965a64dd1f0ca5ba58758e4c3b6cbb61c560aa1b024948950e2",
+    "native_n24_threshold/discovery.out": "e4e00255b1d47e55f4a866a42c9fb20ae88bcb63b80697f9f92909465986d7f5",
+    "native_n24_threshold/extend_native_cycle.cpp": "236483722c2a7b665c245a75534e02f4bf000086c9934b648fa3daa299cb54b8",
+    "native_n24_threshold/final_cycle.txt.gz": "f7baba72270f1af592d7c5eb90cb4d4af9dda3f54260463ba0a452ec0aeb1637",
+    "native_n24_threshold/finite_head_cycles.json": "216a4ec581b1a5d94e595cd2fcf7fba51e96402e69ce43c27f5d4de244a03d25",
+    "native_n24_threshold/full_incremental_trace.bin.gz": "5ce6da1ed5747c9908f6b82054db9d1816b1ed47ac3e2e4fe9de27a2f5509cdc",
+    "native_n24_threshold/full_step_stats.tsv.gz": "4c7e7c323b00b6837ede279453e8390382bb8cd4a83ff22b8e071f3e8bc9d970",
+    "native_n24_threshold/independent_full_receipt.json": "4c3d2f8a60e91cf21ad4352290e0e91c6ac3f6bdc03566518ed5b64a7116dbd2",
+    "native_n24_threshold/initial_cycle.txt": "4898c785f3180b18057582648fa2e763d32a6f2beb4fede07a0a4fc7730bc28f",
+    "native_n24_threshold/receipt.json": "ec513fbe59079841446d9a203797d78491fbe99d4176ad8dffadb29684d72ac9",
+    "native_n24_threshold/verify_native_trace.cpp": "d2eb9b863f0c6464503a8ca7376e65cff9220063350ef48150fd9bbb24df7cdb",
+    "native_n24_threshold/verify_native_trace.py": "0e09d93d75f4f5cfa0501112d26d74007fa5ec51d1e96b8a7d1b185bbbe2a474",
+    "native_onset_probe.json": "04297d7fc9edbbaaf5e2469fa63e33f6930a6ba11a04c5bcac55550c3bd3bc79",
+    "terminal_rigidity.json": "9113b6f9275969d9f689ddc434438fa8fda5ce6448da680ccec93bfe826e7b4a",
+    "terminal_rigidity.py": "07e52a9584d0c10e0ea1e168fbd322e6a3fe2d6318d893283ecb7dfe5ca9621f",
+    "verify_native_forest.py": "ad55ae5392beaec1fd4a6d65ec9b0a94e23e70aa0e26af195ab29c4283a7dec6"
+  },
+  "inherited_commit": "b52068c6aee9b72856dc39eb9100b23ed1e62071",
+  "inherited_proof_inputs_sha256": {
+    "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "05-knowledge/results/seeded_eventual_cycle_theorem_20261019/SEEDED_INTERVAL_THEOREM.md": "ac08e9292ba1334166030842d3a400bce1f24f17b3a3b25b5947a968700f021e",
+    "05-knowledge/results/seeded_eventual_cycle_theorem_20261019/certified_pair_transition_manifest.json": "11ddda9e9d0358cc4450f3fa3123282f2d6a3306396a18211bb671fc7c05ae3d",
+    "05-knowledge/results/square_sum_B_base_interval_20261019/B_base_chunks.json": "356ecf4ca3f6207a97db3f8b315278480709a2978f66821b6c3e030dbed3eae5",
+    "05-knowledge/results/square_sum_all_size_connected_paths_20261019/ALL_SIZE_CONNECTED_PATHS.md": "93d58bfd29fb32292598715a98d2b02b2a429207ebb67c013d36a30199b08ca3",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261030/INHERITANCE.json": "b3afd278bfdf19f93bf678b9851354de70c977f9a99cf9d5a201e4bf0aa522fb",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261030/MANIFEST.json": "730652022116bcd070c166f47afa48335c2eaca3d7fb93b253261c59b52033a3",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261030/audit_feedback.py": "20e5a7095b8c73ce361e38467205c5f9e8b1f27b7df0574a956ed883d8294682",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261030/integral_feedback.json": "1f633a2b93ac83a047f4dcdc28473bc20466a2fcd1f443394b54abf6580f4078",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261030/minimal_feedback.py": "11748ffbf5acce49fc1e7a8a03e7683b42c6c0867f6e1cee7c6a0078af663444"
+  },
+  "status": "frozen exact certificates; proof scopes in README.md"
+}
