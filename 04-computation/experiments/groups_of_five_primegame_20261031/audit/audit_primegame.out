@@ -1,0 +1,58 @@
+====================================================================================================
+A1  literal integer FRACTRAN (both lists, first 25 primes)
+====================================================================================================
+  [OK] L_G (15/14 list): pure powers of 2 after step 0 are exactly 2^p, p the first 25 primes, in order  -- 0.7s, last step 1273490
+  [OK] L_G (15/14 list): the k-th configuration produced by 1/17 is 2^N 7^(D(N)-1), N = k+1 (all 96 phase entries up to the last emission)
+     first state-free configurations (step, value): [(1, 15), (19, 4), (20, 30), (21, 225), (69, 8), (70, 60), (71, 450), (72, 3375)]
+  [OK] L_G (15/14 list): a state-free configuration that is not a phase entry occurs (step 1: 15 = 3*5)
+  [OK] L_O (owner list): pure powers of 2 after step 0 are exactly 2^p, p the first 25 primes, in order  -- 0.7s, last step 1274952
+  [OK] L_O (owner list): the k-th configuration produced by 1/17 is 2^N 7^(D(N)-1), N = k+1 (all 96 phase entries up to the last emission)
+     first state-free configurations (step, value): [(1, 15), (19, 4), (20, 30), (21, 225), (69, 8), (70, 60), (71, 450), (72, 3375)]
+  [OK] L_O (owner list): a state-free configuration that is not a phase entry occurs (step 1: 15 = 3*5)
+  [OK] L_G steps = OEIS A007546 (first 25 terms)
+  [OK] L_O steps = OEIS A007547 (first 25 terms)
+  [OK] owner-list orbit a(0..8102) reproduces the OEIS A007542 b-file exactly (normalized sha256)  -- a(130..133) = [112, 840, 6300, 47250]
+     first index where the two orbits differ: 131 (owner 840, 15/14 list 120); OEIS A007542 says Guy's version differs "starting from n=132"
+====================================================================================================
+A2  block costs on the literal counter machine (2 <= N <= 60, 1 <= d < N), segment and reload
+====================================================================================================
+  [OK] trial from state 13, (0,0,N,d): non-divisor -> (0,0,N,d-1) in 6N+2floor(N/d)+2 steps; divisor -> state-free 2^N 7^(d-1) in 4N+2N/d+2 steps (both lists)  -- 3540 (list,N,d) cases
+  [OK] state-free segment from 2^(N-1) 7^(D(N-1)-1): L_G N steps, L_O N+m steps, both to 3^(N-1)5^N 11; reload 2N-1 steps to state 13 with (0,0,N,N-1)  -- N = 2..60
+     (the segment counts depend on m only: N=7, m=6 gives L_G 7 = N, L_O 13 = N+m)
+====================================================================================================
+A3  accelerated counter-machine simulator: validation against A1, then every prime < 1000
+====================================================================================================
+  [OK] L_G (15/14 list): accelerated = literal at every phase entry (step and configuration) and every emission, first 25 primes  -- 96 phase entries
+  [OK] L_G (15/14 list): emits exactly the 168 primes < 1000 in order  -- 21.4s; step at 2^997 = 1333910908
+  [OK] L_O (owner list): accelerated = literal at every phase entry (step and configuration) and every emission, first 25 primes  -- 96 phase entries
+  [OK] L_O (owner list): emits exactly the 168 primes < 1000 in order  -- 21.2s; step at 2^997 = 1334073859
+====================================================================================================
+A4  closed forms vs simulation, OEIS data fields and OEIS b-files; difference law
+====================================================================================================
+  [OK] fast closed-form evaluator = the formula of THM-4853 (a) summed term by term, N <= 2000
+     closed forms evaluated for all 5000 primes <= 48611 in 0.1s
+  [OK] closed forms = accelerated simulator, all 168 primes < 1000, both lists  -- p=997: s_G 1333910908, s_O 1334073859, diff 162951
+  [OK] closed form s_G = OEIS A007546 data (34 terms)
+  [OK] closed form s_O = OEIS A007547 data (34 terms)
+  [OK] b-files start with the JSON data fields  -- b007546 has 5000 terms, b007547 has 1000 terms
+  [OK] closed form s_G = A007546 b-file, all 5000 terms (p_k up to 48611)  -- mismatches []
+  [OK] closed form s_O = A007547 b-file, all 1000 terms (p_k up to 7919)  -- mismatches []
+  [OK] difference law A007547(k) - A007546(k) = sum_{n=2}^{p_k-1}(D(n)-1) on the b-files, k <= 1000  -- k=1000: 10341961
+====================================================================================================
+A5  the constant c and the growth claims
+====================================================================================================
+     c (primes <= 1e7) = 0.3300980352; tail bound < 3.48e-09; so c = 0.33009804..0.33009804
+  [OK] c = 0.330098... (THM-4853)
+  [OK] c/2 = 0.165049... = the constant of OEIS A032742 (Eldar 2022: sum_{k<=n} a(k) ~ c n^2)  -- c/2 = 0.165049018
+     mean of 1/spf(n), n <= 1e6: 0.330102 (c = 0.330098)
+     p =   101: s_G / (2(1-c)p^3) = 1.03909;  (s_O - s_G) / ((c/2)p^2) = 0.94496;  share (s_O-s_G)/s_O = 1.108e-03
+     p =   499: s_G / (2(1-c)p^3) = 1.01033;  (s_O - s_G) / ((c/2)p^2) = 0.98503;  share (s_O-s_G)/s_O = 2.406e-04
+     p =   997: s_G / (2(1-c)p^3) = 1.00462;  (s_O - s_G) / ((c/2)p^2) = 0.99324;  share (s_O-s_G)/s_O = 1.221e-04
+     p =  2999: s_G / (2(1-c)p^3) = 1.00150;  (s_O - s_G) / ((c/2)p^2) = 0.99778;  share (s_O-s_G)/s_O = 4.092e-05
+     p =  7919: s_G / (2(1-c)p^3) = 1.00055;  (s_O - s_G) / ((c/2)p^2) = 0.99919;  share (s_O-s_G)/s_O = 1.553e-05
+     p = 48611: s_G / (2(1-c)p^3) = 1.00006;  (s_O - s_G) / ((c/2)p^2) = 0.99993;  share (s_O-s_G)/s_O = 2.534e-06
+  [OK] ratio at p = 2999 is 1.0015 (THM-4853)  -- s_G(2999) = 36192748269
+  [OK] law(997)/((c/2) 997^2) = 0.9932 and share 1.2e-4 (THM-4853)  -- law(997) = 162951
+
+total 46s
+ALL AUDIT CHECKS PASSED

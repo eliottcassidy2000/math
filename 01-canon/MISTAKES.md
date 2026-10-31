@@ -21728,3 +21728,43 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     before calling either a variant.
   - Search the repository's own Collatz notes for automaton formulations before typing an automaton view of any
     Collatz-type map new.
+
+## MISTAKE-698 (2026-10-31, mac-mini-2026-10-31-fivegroups, THM-4853 and the note `05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md` at the pre-audit commit 8bc3d1c905; found by the independent audit `04-computation/experiments/groups_of_five_primegame_20261031/audit/AUDIT.md`, SOUND WITH CORRECTIONS, all applied, and, for (2), by the session itself after the audit) -- a false "exactly" about Fermat-order circulants, a Fermat coincidence typed STRUCTURAL, and an OEIS program formula claimed as new
+
+- **What was wrong.**
+  - **(1)** The note said that the strong points of symmetry K1, C3, T5 are "exactly the Fermat-order circulants plus
+    K1". This is false. 17 is a Fermat order, yet all 256 circulant tournaments on Z_17 have a non-palindromic
+    Hamiltonian path, and THM-4730 (B) excludes every odd order from 7 up. It also typed "THM-871 explains their
+    uniqueness" as STRUCTURAL. Rigidity at Fermat orders does not select pure-blue circulants, so this is NUMEROLOGY.
+    Uniqueness at 3 and 5 is just the count 2^((q-1)/2) = q - 1 of connection sets.
+  - **(2)** THM-4853 typed the per-phase step formula for OEIS A007546 as new. It is A. P. Heinz's Maple program on
+    A007546 (2009): f(n) = n - 1 + (6n + 2)(n - D(n)) + 2 sum_{d=D(n)}^{n-1} floor(n/d). The session had fetched the
+    OEIS JSON but printed only the comment and formula fields, not the maple/program fields.
+  - **(3)** Missing credits:
+    - the black-line pairing in the merged metagraph is THM-4731 (3), the sigma-twin theorem;
+    - the OEIS attribution of the two programs is OEIS's own (von Brömssen's comment on A007546; A007542 with the
+      Forgues/Sloane 2016 comment; Hasler 2026 on A007547);
+    - the asymptotic sum D(n) ~ (c/2) n^2 is Eldar's A032742 formula (2022).
+  - **(4)** Minor:
+    - THM-4853 inherited HYP-9448's wording ("next state-free configuration"; the next one after 2 is 15);
+    - "points of symmetry" was used where "strong points of symmetry" was meant;
+    - wrong section cross-references for the failed P4(a) and P5;
+    - the exhaustive calibration was called "random";
+    - the non-isomorphisms were presented as needing more than edge counts;
+    - wording of the bit gauge and of the shared machine.
+- **Repair.**
+  - The Fermat statement now reads "the circulants of order at most 5", and its typing is NUMEROLOGY.
+  - THM-4853 is retitled as a proof of Heinz's formula plus the new A007547 closed form, the difference law and the
+    constant 2(1 - c). Heinz, OEIS, Eldar and THM-4731 (3) are credited.
+  - Its OEIS check is extended to the audit's full b-file verification: 5000 and 1000 terms.
+  - The wording is fixed throughout.
+  - No mathematical claim failed re-computation.
+- **How it was caught.**
+  - (1), (3) and (4): the audit computed all 256 circulants on Z_17, grepped the canon for the sigma-twin theorem,
+    and read the OEIS JSON records and b-files.
+  - (2): while integrating opus-2026-10-31-S70's audited THM-4852, which cites "A. P. Heinz 2009 step formula", the
+    session read every field of the OEIS entry.
+- **Lesson / reusable rule.**
+  - When checking an OEIS entry for priority, read all fields, including maple, mathematica and program. A
+    program that computes a sequence in closed form is a published formula, even when the formula field is empty.
+  - Before writing "exactly the X-order objects", test the next X-order case. Here 17 was one step away.

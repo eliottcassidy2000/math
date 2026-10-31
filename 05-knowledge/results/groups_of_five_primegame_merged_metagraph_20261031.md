@@ -18,11 +18,12 @@ around the 15 supersingular primes".)
 **Three sessions answered this directive on the same day.** This note keeps to what the other two do not cover, and
 credits them for everything else.
 
-- **opus-2026-10-31-S70.** Note `primegame_variant_selector_automaton_metagraph_20261031.md`, THM-4852 (reserved, pre-audit
-  checkpoint 0bfb7da871) and HYP-9448. It covers:
-  - the two lists and their equivalence;
-  - the phase law, checked to n = 2500;
-  - PRIMEGAME as a selector cellular automaton in base 29#;
+- **opus-2026-10-31-S70.** Note `primegame_variant_selector_automaton_metagraph_20261031.md`, THM-4852 and HYP-9448,
+  audited 12:09 (MISTAKE-697). It covers:
+  - the two lists and their equivalence: Guy 1983 = the 15/14 "fast version" A007546, Conway 1987 = the owner's list
+    A007547;
+  - the phase law, which is Conway 1987 section 5 Figure 2 (HYP-9448 CLOSED as KNOWN);
+  - PRIMEGAME as a selector (quasi-)cellular automaton in base 29#;
   - no adjacency bijection between the register-flow graph and the merged metagraph;
   - the count coincidences 4+6 and 3 = 3;
   - the F = U + S defects of the fraction parts;
@@ -53,24 +54,36 @@ credits them for everything else.
   - the pre-registered tests P1-P7.
 - **CITED:** the inherited items, credited where they are used.
 - **Pre-registration:** `correspondence_tests.py` was committed before its run (commit 3a4164776e).
-  - P1, P2, P3, P6 and P7 PASSED.
-  - **P4 and P5 FAILED as stated** (sections 6.2 and 6.4). The failures are reported here, not repaired.
+  - P1, P2, P3, P6 and P7 PASSED, and the "95 and 77" half of P4 PASSED.
+  - **P4 (a) and P5 FAILED as stated** (sections 6.4 and 6.3). The failures are reported here, not repaired.
 - **No HYP was opened.** Nothing conjectural survived: the step counts are proved, and every proposed correspondence
   is NUMEROLOGY, GENERIC, or an inherited STRUCTURAL item.
-- Independent audit: section 10.
+- **Audit.** Independently audited: SOUND WITH CORRECTIONS, all applied (section 10, MISTAKE-698).
+  - After the audit, the per-phase formula for A007546 turned out to be A. P. Heinz's 2009 OEIS Maple program. It is
+    now credited, and THM-4853 proves it.
 
 ## 2. Results first
 
-1. **Exact step counts of both published lists (THM-4853, new).**
-   - The 15/14 list is OEIS **A007546** ("fast version") and the owner's (Conway 1987) list is **A007547** ("slow
-     version"; its orbit is A007542). This holds for all 34 listed terms of each.
+1. **Exact step counts of both published lists (THM-4853).**
+   - The 15/14 list (Guy 1983) is OEIS **A007546** ("fast version"). The owner's list (Conway 1987) is **A007547**
+     ("slow version"; its orbit is A007542). OEIS itself attributes the programs.
    - Closed forms:
-     - s_G(k) = sum_{N=2}^{p_k} [7N + 1 + 2 spf(N) + (N-1-D(N))(6N+2) + 2 sum_{D(N)<d<N} floor(N/d)];
+     - s_G(k) = sum_{N=2}^{p_k} [7N + 1 + 2 spf(N) + (N-1-D(N))(6N+2) + 2 sum_{D(N)<d<N} floor(N/d)]. This is A. P.
+       Heinz's 2009 formula on A007546.
      - s_O(k) = s_G(k) + sum_{n=2}^{p_k-1} (D(n) - 1).
-   - Growth: s_G ~ 2(1-c) p^3 and s_O - s_G ~ (c/2) p^2, with c = sum_p p^-2 prod_{q<p}(1-1/q) = 0.330098.
-   - Checked for 168 primes below 1000.
-   - Credit: session126 had the per-block lengths for the owner's list (6n+2q+2 and 7n+2q+d+3). The sums, the 15/14
-     costs, the difference law, the OEIS attribution and the growth constants are new.
+   - **Verification.**
+     - Session: the 34 OEIS data terms of each, and 168 primes below 1000.
+     - Audit: all 5000 terms of the A007546 b-file and all 1000 of the A007547 b-file.
+   - **Growth.**
+     - s_G ~ 2(1-c) p^3, with c = sum_p p^-2 prod_{q<p}(1-1/q) = 0.330098.
+     - s_O - s_G ~ (c/2) p^2. This is Eldar's A032742 asymptotic of sum D(n).
+   - **Credits.**
+     - Heinz 2009 for the A007546 formula.
+     - session126 for the per-block lengths of the owner's list (6n+2q+2 and 7n+2q+d+3).
+     - S70 and Conway for the reset words.
+     - Eldar 2022 for c/2.
+   - **New:** the proof of Heinz's formula, the A007547 closed form, the difference law, and the constant 2(1-c).
+     These are elementary corollaries once the block costs are known.
 2. **The merged metagraph in the owner's own gauge** (`merged_metagraph_n5.py`, replicating the owner's explorer
    `inbox/processed/2026-03-05/new/tournament_n5_v5.html`).
    - **Nodes.** 12 classes merge to 10 nodes: the 2 converse pairs (both pure-black) merge.
@@ -82,8 +95,10 @@ credits them for everything else.
      dictionary.
 3. **10 primes vs 10 nodes: NUMEROLOGY.**
    - S70's no-bijection result is re-verified: the flow graph has 19 pairs, the metagraph 18 edges.
-   - A second natural prime graph also fails: the co-occurrence graph has degree sequence (3,3,5,6,6,6,6,7,7,7)
-     against (1,1,1,3,3,5,5,5,6,6).
+   - A second natural prime graph, the co-occurrence graph (28 edges), is not isomorphic either. Both failures are
+     already decided by the edge counts.
+   - Under a one-way reading of "preserves adjacency", the metagraph support does embed as a spanning subgraph of the
+     co-occurrence graph (audit C(e)). That is weak: the co-occurrence graph is dense.
 4. **{1/7, 1/17, 55/1} vs the 3 points of symmetry: NUMEROLOGY.** The set of trivial-sided fractions:
    - has 3 elements in the owner's list and 2 in the 15/14 list, although the two lists compute the same primes;
    - changes under relabelling of the states;
@@ -93,11 +108,15 @@ credits them for everything else.
    - 7 and 17 are balanced, and 55 = pq has defect -2 (also in S70).
    - Of 16 tournament invariants, only 2*c3 = (0, 2, 10) reproduces F at (TT5, 1->C3->1, T5). Neither S = (0, 1, 7)
      nor U = (0, 1, 3) is reproduced, so the identity F = S + U itself has no counterpart.
-   - Calibration: 9.6% of random targets are hit. Pre-registered **P5 FAILED** (predicted at least 20%).
-6. **The points of symmetry are the circulants of order 1, 3, 5 (STRUCTURAL, a corollary of inherited canon).**
+   - Calibration: 13 of the 136 exhaustively enumerated targets (0, a, b) are hit (9.6%). Pre-registered **P5
+     FAILED** (predicted at least 20%).
+6. **The strong points of symmetry are the circulants of order 1, 3, 5 (STRUCTURAL, a corollary of inherited canon).**
+   - The strong points are K1, C3 and T5, the centres of the three points of symmetry TT5, 1->C3->1 and T5. Only T5 is
+     itself a circulant.
    - These are THM-4849's tournament cycles of period at most 5: the cycle {0}, the 3x+5 cycle {1,2,4}, and T5's two
      3x+23 cycles {5,19,40,20,10} and {7,11,22,28,14}. The last two are already in the cycle101 note.
-   - 3 and 5 are the first Fermat primes, which are the THM-871 / THM-4644 orders where every circulant is rigid.
+   - That 3 and 5 are Fermat primes is **NUMEROLOGY**. Order 17 is also rigid (THM-871 / THM-4644), yet none of its
+     16 circulant classes is a point of symmetry (audit C(a); THM-4730 (B) excludes every odd order from 7 up).
    - **PRIMEGAME echo (NUMEROLOGY).** PRIMEGAME's 95/23 = (5*19)/23 and its numerator 77 = 7*11 reproduce exactly
      these odd points and the denominator 23 = 2^5 - 3^2.
      - The partial event survives 1/20 of the 17280 label permutations. That is exactly 5%, so **P4 (a) FAILED**
@@ -105,8 +124,9 @@ credits them for everything else.
      - The full coincidence survives 1/360.
      - It is a property of Conway's labels, not of the computation.
 7. **Cellular automata and Turing machines** (section 7).
-   - STRUCTURAL and CITED: FRACTRAN = Minsky machines = generalized Collatz maps (Conway 1972, 1987). The cellular
-     automata are S70's and session126's.
+   - STRUCTURAL and CITED: FRACTRAN = Minsky machines = generalized Collatz maps (Conway 1972, 1987).
+   - The automata are S70's selector (quasi-)automaton (a known formulation per MISTAKE-697: Kari 2012, Kari-Kopra
+     2017, Cloney-Goles-Vichniac 1987) and session126's two automata.
    - GENERIC: "PRIMEGAME can simulate the metagraph" holds by Turing completeness and says nothing specific.
 
 ## 3. Groups of five: what has been merged before (credited) and what this session adds
@@ -119,7 +139,7 @@ is Gauss-Wantzel constructibility.
 | five | strongest status (where) | what links it to this directive |
 |---|---|---|
 | {15,16,17,23,25}: the first nontrivial square-sum Hamiltonian-path orders (A090461; 25 starts the infinite tail, 26 also works) | FINITE-EXACT prefix; the tail CITED (Gerbicz); THM-4505, THM-4510, THM-4851; `collatz_mod6_20260922_w6_square_sum_hamiltonicity.md`; session126 `five_families/README.md` §1 | Under F = U + S only 17 and 23 are balanced (both prime). 15, 17, 23 occur in PRIMEGAME (15 is the numerator of 15/2; 17 and 23 are state primes); 16 = 2^4 and 25 = 5^2 do not. NUMEROLOGY |
-| Fermat primes {3,5,17,257,65537} | five known, completeness OPEN; THM-871, THM-4644, THM-4800, THM-4801, THM-4847, HYP-9410 | Fermat ∩ Ogg = Fermat ∩ {the ten PRIMEGAME primes} = {3,5,17} (`aliquot_66_five_fifteen_20261028/ATLAS.md` §3; S70 §5). **3 and 5 are the orders of the nontrivial strong points of symmetry C3, T5**. THM-871 already explains their uniqueness: at Fermat orders every rotational tournament has Aut = Z_n. STRUCTURAL (inherited) |
+| Fermat primes {3,5,17,257,65537} | five known, completeness OPEN; THM-871, THM-4644, THM-4800, THM-4801, THM-4847, HYP-9410 | Fermat ∩ Ogg = Fermat ∩ {the ten PRIMEGAME primes} = {3,5,17} (`aliquot_66_five_fifteen_20261028/ATLAS.md` §3; S70 §5). 3 and 5 are the orders of the nontrivial strong points of symmetry C3 and T5. This is NUMEROLOGY: Fermat rigidity does not select them, since 17 is a Fermat order and none of its 16 circulant classes is pure-blue (audit C(a)). Uniqueness at 3 and 5 is just the count 2^((q-1)/2) = q - 1 of connection sets, true only for q = 3, 5 |
 | the five Platonic solids | CITED classification (Schläfli (p-2)(q-2) < 4); HYP-3771 scope-corrected; THM-436 (the 15 overlapping-triangle pairs of a 5-set = the 15 involutions of A5, realised by C5) | session126 `five_families/A5_FUS_MEETING_POINT.md`: \|A5\| = 60 = p^2qr is balanced (also `supersingular_divisor_shapes_qseries_20261022.md` row C10). No metagraph map. NUMEROLOGY except THM-436 |
 | the five 3x+101 cycles = the circulant tournaments on Z_7 | PROVED THM-4849 (C) | the q = 7 rung of the cycle ladder in section 6.4; neither Z_7 circulant is a point of symmetry (P3) |
 | the five vertex stars of T5 | PROVED THM-4846 (C) | T5 is the third point of symmetry |
@@ -147,8 +167,8 @@ There are six regular 4-polytopes, not five.
 
 **Added here, all small.**
 - The F = U + S reading of {15,16,17,23,25} (row 1).
-- The observation that the strong points of symmetry are exactly the Fermat-order circulants plus K1 (row 2 with
-  section 6.4).
+- The observation that the strong points of symmetry are exactly the circulants of order at most 5 (section 6.4).
+  That 3 and 5 are Fermat primes is coincidental (row 2).
 - The PRIMEGAME echo of T5's cycles (section 6.4).
 
 ## 4. PRIMEGAME over 2..29 (exact; mostly inherited)
@@ -194,7 +214,8 @@ section 3. It agrees with session126 §3:
 
 **Gauge** (the owner's explorer, replicated line by line):
 - vertices labelled 5, 4, 3, 2, 1, with base path 5 -> 4 -> 3 -> 2 -> 1;
-- tiles (5,1), (4,1), (3,1), (5,2), (4,2), (5,3) are bits 0..5, and bit 0 orients the arc downward;
+- tiles (5,1), (4,1), (3,1), (5,2), (4,2), (5,3) are bits 0..5. A clear bit orients the tile's arc x -> y, from
+  the larger label to the smaller (the transitive direction), and a set bit reverses it;
 - the grid transpose swaps bits 1 <-> 3 and 2 <-> 5;
 - a class label #ci is the rank of its lexicographically least adjacency string.
 
@@ -222,7 +243,8 @@ nodes.
 - **Check against S70.** Under the dictionary, these lists are exactly S70's §4 lists. This is an independent check:
   different code and a different gauge reading.
 
-**Why black lines come in pairs** (a two-line corollary of THM-643's (sigma, tau) frame).
+**Why black lines come in pairs.** This is THM-4731 (3), the sigma-twin theorem (2026-10-20), credited; the argument
+is recalled here and was re-checked for n = 3..6 by the audit.
 - The transpose sigma maps a line {t, t+1} to {sigma t, sigma t + 1}, between the same merged nodes.
 - sigma fixes a black line only if sigma t = t + 1 (all ones). That is impossible, because sigma fixes the
   floor((n-1)/2) >= 1 anti-diagonal tiles.
@@ -246,7 +268,9 @@ side.
 - The support of the merged metagraph has 18 edges plus 2 loops.
 - The co-occurrence graph has 28 edges, with degree sequence (3,3,5,6,6,6,6,7,7,7). The metagraph's degree sequence is
   (1,1,1,3,3,5,5,5,6,6).
-- No isomorphism exists for either graph.
+- Neither graph is isomorphic to the metagraph support. The edge counts alone already decide this.
+- Under a one-way reading of "preserves adjacency", the metagraph support embeds as a spanning subgraph of the dense
+  co-occurrence graph (audit C(e)). That embedding is weak evidence of nothing.
 
 **What matches.**
 - The split 10 = 4 + 6 (data + control) against 4 base-path arcs + 6 tiles. This is S70's DICTIONARY, a language, not
@@ -291,9 +315,11 @@ also).
   - F = (0, 2, 10) is matched by 2*c3 alone.
   - S = (0, 1, 7), U = (0, 1, 3) and tau = (2, 4, 12) are matched by nothing.
 - **Calibration.**
-  - 13 of the 136 targets (0, a, b) with a <= b <= 15 are matched (9.6%). **P5 FAILED** (predicted at least 20%).
-  - So a single match is less cheap than predicted. With four targets tried, at least one match had chance about 0.33
-    (post-hoc, `posthoc_p4_p5.out`).
+  - Of the 136 targets (0, a, b) with a <= b <= 15, enumerated exhaustively (not sampled), 13 are matched (9.6%).
+    **P5 FAILED** (predicted at least 20%).
+  - So a single match is less cheap than predicted.
+  - With four targets tried, at least one match had chance about 0.33 (post-hoc, `posthoc_p4_p5.out`). That figure is
+    only indicative: it applies the (0, a, b) rate to tau = (2, 4, 12), which lies outside that family.
   - The decisive point is unaffected: the additive identity F = S + U has no counterpart, because neither summand is
     matched.
 - **Pairing the atoms.** K1, C3, T5 have orders 1, 3, 5, while Omega(p), Omega(p^3), Omega(p^2qr) are 1, 3, 4. They
@@ -321,7 +347,7 @@ most 5:
 | 7 | (R7, QR7: not points of symmetry) | the five 3x+101 cycles of THM-4849 (C) | — |
 
 The q = 5 row is already in `cycle101_tournament_collatz_dictionary_20261029.md` ("3x+23: the two T5 cycles {5, 19} and
-{7, 11}"). The Fermat reading of q = 3, 5 is THM-871 / THM-4644.
+{7, 11}"). That q = 3 and 5 are Fermat primes is NUMEROLOGY here (section 3, row 2).
 
 **The PRIMEGAME echo** (exploratory observation, then pre-registered test P4).
 - PRIMEGAME contains 95/23 = (5*19)/23, and 77 = 7*11 as the numerator of 77/29 and 77/19. These are exactly T5's
@@ -344,16 +370,17 @@ The q = 5 row is already in `cycle101_tournament_collatz_dictionary_20261029.md`
 **STRUCTURAL (CITED).**
 - FRACTRAN programs are Minsky register machines (here 4 counters, 7 control states). They are also generalized Collatz
   maps, residue-class-wise linear mod lcm(denominators) = 29# (Conway 1972, 1987; `collatz_procgen_20260922_barrier_atlas.md`).
-- The cellular-automaton readings are S70's THM-4852 (3) and session126's two automata:
+- The automaton readings are S70's THM-4852 (3) and session126's two automata. S70's is a selector
+  (quasi-)automaton, a known formulation (MISTAKE-697). session126's are:
   - the radius-one automaton on 385,025 symbols;
   - the six-cell perimeter rule 150 on tiling masks.
 
 **GENERIC.** Any computable relation between PRIMEGAME and the metagraph can be compiled into FRACTRAN. Existence of a
 simulation is therefore no evidence of a correspondence.
 
-**The one exact count-level contact found here** is THM-4853. The step counts are an invariant of each list, so they
-distinguish the two equivalent programs. The difference is the sum of D(n) - 1 that the 1/7 loop spends erasing the
-divisor counter.
+**The one new exact result of this session** is THM-4853. It concerns PRIMEGAME alone, not the metagraph.
+- The step counts are an invariant of each list, so they distinguish the two equivalent programs.
+- The difference is the sum of D(n) - 1 that the 1/7 loop spends erasing the divisor counter.
 
 ## 7. Inheritance pass and concept board
 
@@ -363,14 +390,17 @@ divisor counter.
   - the input 14, where the two lists differ in one step (105 against 15; session126);
   - configuration 15 on the seed-2 orbit, which is state-free but not a phase entry (session126 on the wording of
     HYP-9448).
-- **Corrected near miss:** this session's first draft labelled the 15/14 list "Conway 1987". It was corrected before
-  publication, after session126's primary-source check.
-- **Least-used sidecar:** the OEIS comment by P. von Brömssen on A007546.
+- **Corrected near misses** (MISTAKE-698):
+  - The first draft labelled the 15/14 list "Conway 1987". This was corrected before publication, after session126's
+    primary-source check.
+  - The pre-audit THM-4853 typed the per-phase formula for A007546 as new. It is A. P. Heinz's 2009 OEIS Maple program.
+- **Least-used sidecar:** the OEIS entries' program fields, Maple included, not only their comment and formula
+  fields.
 
 **Concept board.**
 1. Program equivalence vs label invariance: decided every owner correspondence here.
 2. Merged metagraph = tilings / (S5 x transpose): the owner gauge, and the evenness of black multiplicities.
-3. Short tournament cycles: the points of symmetry, the Fermat orders, D_q.
+3. Short tournament cycles: the strong points of symmetry and D_q. The Fermat orders were tested and are numerology.
 4. F = U + S as a count identity with no summand-level counterpart.
 5. Step counts as list invariants (THM-4853).
 
@@ -389,11 +419,56 @@ python3 posthoc_p4_p5.py          > posthoc_p4_p5.out          # post-hoc anatom
 
 ## 9. Next obligations
 
-- **S70 (or the next session)** may promote HYP-9448 using the divisor-loop proof (session126 §4; recalled in
-  THM-4853). This note does not edit HYP-9448.
-- **OEIS.** The difference law and the closed forms could be submitted as formulas for A007546 and A007547. This is
-  the owner's decision.
+- **HYP-9448** was closed as KNOWN by S70's audit (MISTAKE-697). The phase-entry form is Conway 1987 section 5. No
+  action is left.
+- **OEIS.** Heinz's 2009 formula already gives A007546. The A007547 closed form and the difference law
+  A007547(k) - A007546(k) = sum_{n=2}^{prime(k)-1} (A032742(n) - 1) could be submitted as formulas for A007547. This
+  is the owner's decision.
 
 ## 10. Audit
 
-(pending)
+**Verdict.** Independent audit (`04-computation/experiments/groups_of_five_primegame_20261031/audit/AUDIT.md`, own code
+in `audit_primegame.py`, `audit_metagraph.py` and `audit_correspondences.py`): **SOUND WITH CORRECTIONS**, all applied
+(MISTAKE-698).
+
+**Confirmed independently.**
+- **THM-4853.**
+  - The proof was checked line by line.
+  - The block costs were checked in 3540 cases.
+  - The phase entries were checked by literal FRACTRAN through 25 primes.
+  - The closed forms equal all 5000 terms of the A007546 b-file and all 1000 of the A007547 b-file.
+  - The difference law holds on those 1000 terms.
+  - The owner's orbit equals the A007542 b-file.
+  - c = 0.33009804.
+- **Metagraph.**
+  - The full class table and the 32 lines.
+  - The S70 / THM-4729 dictionary. It is the only colour-preserving isomorphism.
+  - session126's numbering.
+- **Correspondence tests.**
+  - All circulants of orders 1, 3, 5 are pure-blue; none of order 7 is (the audit also checked order 17).
+  - The Terras cycles.
+  - The counts 864, 96, 48 and 13/136.
+  - The residue densities.
+  - F = U + S to 20000.
+  - The byte-identity of the pre-registered script.
+
+**Corrections applied.**
+1. **ERROR.** "The strong points of symmetry are exactly the Fermat-order circulants plus K1" was false, because
+   17 fails. It now reads "the circulants of order at most 5".
+2. **Typing.** The Fermat reading of C3 and T5 is retyped NUMEROLOGY, and "explains" is withdrawn.
+3. **Wording.** "Points of symmetry are circulants" became "strong points of symmetry".
+4. **Credit.** The black-line pairing is credited to THM-4731 (3).
+5. **Credit.**
+   - The OEIS attribution of both lists is credited to OEIS itself.
+   - The asymptotic c/2 is credited to Eldar's A032742 formula. Only 2(1-c) is new.
+6. **THM-4853 wording.** It now says "phase entry" (configurations produced by 1/17) and "phase-entry form of
+   HYP-9448".
+7. **Cross-references** for P4(a) and P5 were corrected.
+8. **Non-isomorphisms.** These are decided by edge counts, and the one-way embedding is noted.
+9. **Calibration.** It is exhaustive, not random, and the post-hoc 0.33 is caveated.
+10. **Wording fixes:** the bit gauge, the shared machine, the candidate divisors, "count-level contact".
+
+**Found by the session after the audit** (MISTAKE-698 (2)). The per-phase formula of THM-4853 (a) for A007546 is
+A. P. Heinz's Maple program on that OEIS entry (2009). It is now CITED, and THM-4853 states that it proves Heinz's
+formula. Neither the session nor the audit had read the OEIS program fields. opus-2026-10-31-S70's audited THM-4852
+cites it, and that citation is how it was noticed.

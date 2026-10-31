@@ -1,0 +1,47 @@
+====================================================================================================
+B1  census n = 3..6 against THM-643 (classes, SC, PB, MX, PK, gridsym, blue lines, black lines, blue self-loops) and merged node counts; black-line pairing under the transpose
+====================================================================================================
+  [OK] n=3: census (2, 2, 2, 0, 0, 2, 1, 0, 0) = THM-643 row; merged nodes 2 = 2; transpose = converse class
+  [OK] n=3: transpose has 1 = floor((n-1)/2) fixed tiles, acts freely on the 0 black lines, twins join the same merged pair, all merged black multiplicities even
+  [OK] n=4: census (4, 2, 1, 1, 2, 4, 2, 2, 1) = THM-643 row; merged nodes 3 = 3; transpose = converse class
+  [OK] n=4: transpose has 1 = floor((n-1)/2) fixed tiles, acts freely on the 2 black lines, twins join the same merged pair, all merged black multiplicities even
+  [OK] n=5: census (12, 8, 3, 5, 4, 16, 8, 24, 0) = THM-643 row; merged nodes 10 = 10; transpose = converse class
+  [OK] n=5: transpose has 2 = floor((n-1)/2) fixed tiles, acts freely on the 24 black lines, twins join the same merged pair, all merged black multiplicities even
+  [OK] n=6: census (56, 12, 2, 10, 44, 64, 32, 480, 2) = THM-643 row; merged nodes 34 = 34; transpose = converse class
+  [OK] n=6: transpose has 2 = floor((n-1)/2) fixed tiles, acts freely on the 480 black lines, twins join the same merged pair, all merged black multiplicities even
+
+====================================================================================================
+B2  n = 5 class table in the owner gauge (labels = explorer least-string ranks)
+====================================================================================================
+  #ci scores        H  Aut tilings blue type SC  conv node  s126(least mask)  palindromic paths
+  #0  [0, 1, 2, 3, 4]  1   1      1    1  PB   Y  #0     0   (0, 0)   1
+  #1  [0, 1, 3, 3, 3]  3   3      1    0  PK   n  #7     1   (4, 4)   0
+  #2  [0, 2, 2, 3, 3]  5   1      5    0  PK   n  #5     2   (2, 2)   0
+  #3  [0, 2, 2, 2, 4]  3   3      1    1  PB   Y  #3     3   (8, 16)   3
+  #4  [1, 1, 2, 3, 3]  9   1      9    1  MX   Y  #4     4   (1, 1)   1
+  #5  [1, 1, 2, 2, 4]  5   1      5    0  PK   n  #2     2   (2, 2)   0
+  #6  [1, 1, 2, 3, 3]  9   1      9    3  MX   Y  #6     5   (5, 5)   3
+  #7  [1, 1, 1, 3, 4]  3   3      1    0  PK   n  #1     1   (4, 4)   0
+  #8  [1, 2, 2, 2, 3] 11   1     11    3  MX   Y  #8     6   (3, 3)   3
+  #9  [1, 2, 2, 2, 3] 15   3      5    1  MX   Y  #9     7   (9, 17)   3
+  #10 [1, 2, 2, 2, 3] 13   1     13    3  MX   Y  #10    8   (6, 10)   3
+  #11 [2, 2, 2, 2, 2] 15   5      3    3  PB   Y  #11    9   (7, 11)   15
+  [OK] fibre law H = tilings * |Aut| and #palindromic Hamiltonian paths = #blue tilings * |Aut| for all 12 classes
+  [OK] note's section 5 table: scores, H, |Aut|, tilings, blue tilings, type, display node, session126 node (least mask) -- all 12 classes
+  [OK] note's blue lines (display nodes), each simple, no loop  -- [(0, 5), (3, 8), (4, 6), (5, 6), (5, 8), (6, 9), (7, 9), (8, 9)]
+  [OK] note's black lines, each x2
+  [OK] blue graph: one component on 8 nodes, cycle rank 1, the cycle is 5-6-9-8
+  [OK] support: 18 non-loop edges, 2 loops, degree sequence (1,1,1,3,3,5,5,5,6,6)
+
+====================================================================================================
+B3  dictionary to S70 section 4 / THM-4729 n = 5 table and to session126's metagraph_ca README
+====================================================================================================
+  [OK] under the note's dictionary my blue/black lists equal S70's section 4 lists exactly
+  [OK] under the dictionary (H, |Aut|, t, s) agree with THM-4729's n = 5 table node by node
+  [OK] the coloured multigraph alone determines the dictionary up to its automorphisms; invariants pin it  -- 1 colour-preserving isomorphisms, 1 consistent with (H,|Aut|,t,s)
+  [OK] session126 gauge (path 1->...->5, mask 0 ascending) gives the converse tournament of the owner gauge for every mask, hence identical converse-merged fibres
+  [OK] session126: pure-blue fibres node 0 {0}, node 7 {11,46,53}, node 8 {16}; masks 7,17,55 in nodes 1,9,6; rule-150 fixed points 26,63,37 in nodes 5,5,6
+  [OK] masks 7, 17, 55 in classes #4, #9, #10 (all mixed), grid-symmetric F/T/F; 17's line goes to 46 in #11  -- [(7, 4, False, 56, 2), (17, 9, True, 46, 11), (55, 10, False, 8, 2)]
+  [OK] T5 (#11) masks {11,46,53}; its three lines go to three distinct nodes
+
+ALL AUDIT CHECKS PASSED

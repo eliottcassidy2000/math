@@ -94,7 +94,6 @@ A hypothesis is unresolved unless a proved leaf is named explicitly. Search its 
   incomplete; route it as a candidate, not proved canon.
 
 ## NC2 / GMC and Lean
-
 - **Paper:** THM-2022 proves NC2/GMC(2); THM-2111 supplies an effective seed, THM-2101 two independent additive proofs, and THM-2067 the historical route.
 - **Formal:** `GMC2Main.gmc2` is unconditional, root-imported, and kernel-pure.
   `GMC2DvdKOmegaWiring.singlePolyCrux_holds` closes the former `DvdK1` endpoint;

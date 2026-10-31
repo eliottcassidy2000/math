@@ -1,0 +1,70 @@
+====================================================================================================
+C(a)  circulant tournaments: orders 1, 3, 5 all pure-blue, 7 none; order 17 (Fermat) none
+====================================================================================================
+  [OK] order 1: all 1 circulant tournaments pure-blue (every Hamiltonian path palindromic)
+  [OK] order 3: all 2 circulant tournaments pure-blue (every Hamiltonian path palindromic)
+  [OK] order 5: all 4 circulant tournaments pure-blue (every Hamiltonian path palindromic)
+  [OK] order 7: none of the 8 circulant tournaments is pure-blue
+  [OK] order 17: each of the 256 circulant tournaments has a non-palindromic Hamiltonian path (none is pure-blue, although all are rigid: THM-871 / THM-4644)  -- 256/256
+  [OK] rotational classes (multiplier orbits): 1 at order 3, 1 at order 5, 16 at order 17 -- uniqueness at 3, 5 is not a Fermat-order property  -- {3: 1, 5: 1, 17: 16}
+====================================================================================================
+C(b)  rational Collatz (Terras) cycles of the circulant parity words, q = 1, 3, 5, 7
+====================================================================================================
+     q = 1: D = 1; cycles [[0]]; all integer cycles with the right parities: True
+     q = 3: D = 5; cycles [[1, 2, 4]]; all integer cycles with the right parities: True
+     q = 5: D = 23; cycles [[5, 10, 19, 20, 40], [7, 11, 14, 22, 28]]; all integer cycles with the right parities: True
+     q = 7: D = 101; cycles [[19, 38, 76, 79, 152, 169, 304], [29, 47, 58, 94, 116, 121, 232], [23, 46, 85, 89, 92, 178, 184], [31, 49, 62, 97, 98, 124, 196], [37, 53, 65, 74, 106, 130, 148]]; all integer cycles with the right parities: True
+  [OK] q=1: {0} with D=1; q=3: {1,2,4} with D=5; q=5: {5,10,19,20,40} and {7,11,14,22,28} with D=23; q=7: five cycles with D=101
+====================================================================================================
+C(c)  relabellings of registers {2,3,5,7} and states {11..29} of the owner list (4!*6! = 17280)
+====================================================================================================
+     total 17280; event (a) 864 = 1/20; sources {(95, 23): 288, (77, 29): 288, (77, 19): 288}; event (b) 96 = 1/180; full coincidence 48 = 1/360
+  [OK] 864 (= 1/20, exactly 5%) for "some fraction is 95/23 or 77/23"; three disjoint sources of 288 each
+  [OK] 96 (0.556%) for "95 and 77 both numerators"; 48 (= 1/360) for the full coincidence
+  [OK] P4(a) as pre-registered ("fewer than 5%") fails: 864/17280 is exactly 5%
+====================================================================================================
+C(d)  look-elsewhere calibration on (TT5, 1->C3->1, T5)
+====================================================================================================
+     n                    (5, 5, 5)
+     arcs                 (10, 10, 10)
+     H                    (1, 3, 15)
+     Aut                  (1, 3, 5)
+     tilings              (1, 1, 3)
+     c3                   (0, 1, 5)
+     c4                   (0, 0, 5)
+     c5                   (0, 0, 2)
+     all cycles           (0, 1, 12)
+     transitive triples   (10, 9, 5)
+     strong components    (5, 3, 1)
+     score variance*n     (10, 8, 0)
+     max score            (4, 4, 2)
+     min score            (0, 0, 2)
+     sum sq scores        (30, 28, 20)
+     Ham cycles           (0, 0, 2)
+  [OK] the 16 battery values listed in correspondence_tests.out are right
+     target F = (0, 2, 10): [('c3', Fraction(2, 1), 0)]
+     target S = (0, 1, 7): []
+     target U = (0, 1, 3): []
+     target tau = (2, 4, 12): []
+  [OK] F = (0,2,10) matched only by 2*c3; S, U, tau matched by nothing
+     matched (a, b): [(0, 1), (0, 2), (0, 4), (0, 5), (0, 6), (0, 10), (0, 15), (1, 5), (1, 12), (2, 4), (2, 10), (2, 14), (3, 15)]
+  [OK] 13 of the 136 targets (0,a,b), 0<=a<=b<=15, are matched (9.6%): P5 (predicted >= 20%) fails
+====================================================================================================
+C(e)  prime graphs vs the merged-metagraph support
+====================================================================================================
+  [OK] owner-list register-flow graph: 24 arcs, 19 unordered pairs, no loops
+  [OK] co-occurrence graph: 28 edges, degree sequence (3,3,5,6,6,6,6,7,7,7)
+  [OK] metagraph support: 18 edges plus loops at 2 nodes
+     edge counts: flow support 19, co-occurrence 28, metagraph 18 -> no isomorphism (trivially)
+     one-way adjacency-preserving bijections: metagraph->flow False, flow->metagraph False, metagraph->co-occurrence True
+====================================================================================================
+C(f)  section 4 densities (exact, by divisibility patterns) and F = U + S facts
+====================================================================================================
+  [OK] first eleven densities identical; 17/91 = 1/91, 13/11 = 129024/2800733
+  [OK] 15/14, 15/2, 55/1 = (138240, 829440, 967680)/2800733 and 15/2, 1/7, 55/1 = (967680, 138240, 829440)/2800733
+  [OK] q = prod_{11<=p<=29}(1-1/p) = 21288960/30808063; L_G = (q/14, 3q/7, q/2), L_O = (q/2, q/14, 3q/7)
+  [OK] fast F, U, S (from the factorization) = the definition by divisor enumeration, N <= 3000
+  [OK] F = U + S exactly at shapes p, p^3, p^2qr (N <= 20000)
+  [OK] 7, 17 balanced; 55 has F=2, U+S=4; among {15,16,17,23,25} only 17, 23 balanced; p^2qr: (F,U,S)=(10,3,7)
+
+ALL AUDIT CHECKS PASSED
