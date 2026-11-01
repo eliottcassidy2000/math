@@ -1,0 +1,9 @@
+{
+  "baseline": "335577ae6d58bc9109160891885daddb6229b37f",
+  "inherited_formulas": {
+    "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/low_H_formulas.json",
+    "sha256": "c5958e559ac76e7820525a8bc3ed6baff60f43f47fb6713b48e48843898c8386"
+  },
+  "classical_bound": "https://doi.org/10.37236/1141",
+  "fresh_inventory": "../spectrum/atlas.json"
+}

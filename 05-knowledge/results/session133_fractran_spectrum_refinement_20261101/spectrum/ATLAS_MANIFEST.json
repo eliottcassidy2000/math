@@ -1,0 +1,12 @@
+{
+  "files": {
+    "ATLAS_PROOF.md": "e0f70bdce4e9f9b7dc579bbd66b63f5b8d179b93916eacbf0131e3b535a5bf59",
+    "ATLAS_README.md": "506968e9c0bc1e02a463015f2873b1f1796e6322b9bcef0c10872a8fb703beae",
+    "atlas.json": "a5762b47e02400d9836803526669f7c578c9b854387524c6477469bdc90277ee",
+    "atlas.optimized.json": "a5762b47e02400d9836803526669f7c578c9b854387524c6477469bdc90277ee",
+    "build_atlas.py": "ab8e31a5224593b2e419dfbedd076f27c49e3dc4854e666a947b31ca8bf4d569"
+  },
+  "schema": "session133.low-H-atlas.manifest.v1",
+  "source_checkout_commit": "335577ae6d58bc9109160891885daddb6229b37f",
+  "status": "FINITE-EXACT independent replay; inherited all-order exclusion; completeness OPEN"
+}

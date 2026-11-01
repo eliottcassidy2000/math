@@ -1,0 +1,7 @@
+ATLAS_README.md
+ATLAS_PROOF.md
+build_atlas.py
+atlas.json
+atlas.optimized.json
+ATLAS_MANIFEST.json
+ATLAS_PUBLIC_FILES.txt
