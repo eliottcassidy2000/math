@@ -1,0 +1,10 @@
+G4 anatomy:
+  accepted targets [4, 6, 8, 10]; halt after 2174 steps with P' = 0, Q' = 7
+  target being processed = (P'+1) + Q' + 4 = 12; last pair tested = (3, 9)
+  consistent with halting while processing N = 12: True
+
+L3 corrected control (budget register B):
+  accepted [(1, 2), (2, 5), (3, 11), (4, 17)]; status HALT in state H with L = 10 (window n = 5)
+  halts while processing n = 5 after accepting 2, 5, 11, 17: True
+
+POST-HOC ANATOMY DONE
