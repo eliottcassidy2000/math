@@ -1,0 +1,68 @@
+GOLDBACHGAME parsed from THM-4856; identical in the results note and goldbachgame.out: True
+  [PASS] the three published GOLDBACHGAME lists agree
+--- GOLDBACHGAME: 37 fractions, 30 primes
+  [CLAIM OK] GOLDBACHGAME: 37 fractions over 30 primes  -- 37 fractions, 30 primes
+  [PASS] GOLDBACHGAME: first eleven = PRIMEGAME's with 1/17 -> X/17 (X = 53)
+  [PASS] GOLDBACHGAME: state/register split derived by propagation, nothing undecided  -- states [11, 13, 17, 19, 23, 29, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113]; registers [2, 3, 5, 7, 31, 37, 41]
+  [PASS] GOLDBACHGAME: one-hot: every reduced numerator and denominator has exactly one state prime (exp 1), no self-loop  -- 23 states, 7 registers
+  [PASS] GOLDBACHGAME: start integer 43 is one-hot
+  [PASS] GOLDBACHGAME: the single-fraction controller states [47, 61, 73, 83, 101, 109] are pure returns (s/s') to a state that calls them
+  [PASS] GOLDBACHGAME: every helper loop decrements one of its own guard registers (each loop terminates)
+  [CLAIM OK] GOLDBACHGAME registers are 2,3,5,7,31,37,41 and 23 states  -- registers [2, 3, 5, 7, 31, 37, 41]
+  [PASS] start 43 = state TP with P' = Q' = 0 (N = 4)
+  [PASS] literal integer FRACTRAN = exponent-vector machine at every step (first applicable fraction identical; integer re-encoded every 2000 steps)  -- 2171231 literal steps to the acceptance of N = 100 (4s)
+  [PASS] literal run: kernel contract holds on every call; tests = predicted sequence  -- 309 kernel calls, accepted N up to 100 in 2171231 literal steps
+  [PASS] fast run to N = 1000: no halt, targets 4..1000 in order, least-prime splits, kernel contract on every call, tests = predicted  -- 4852 kernel calls, 2991801422 steps, 35s
+  [PASS] literal and fast step counts agree at every accepted N of the literal prefix
+  [CLAIM OK] session G5 cumulative steps to accept N = 4..18  -- [(4, 50), (6, 269), (8, 670), (10, 1325), (12, 2735), (14, 4120), (16, 5975), (18, 9279)]
+  [CLAIM OK] session per-target steps at N = 100: 86987  -- audit 86987  (= 8.70 N^2)
+  [CLAIM OK] session per-target steps at N = 200: 354081  -- audit 354081  (= 8.85 N^2)
+  [CLAIM OK] session per-target steps at N = 400: 1428647  -- audit 1428647  (= 8.93 N^2)
+  [CLAIM OK] session per-target steps at N = 800: 5738237  -- audit 5738237  (= 8.97 N^2)
+  [CLAIM OK] session per-target steps at N = 1000: 8973223  -- audit 8973223  (= 8.97 N^2)
+  [CLAIM OK] session G3 total steps to accept N = 1000: 2,991,801,422  -- 2991801422
+     G4 control: HALT in state 113 after 2174 steps; accepted [4, 6, 8, 10]; P' = 0, Q' = 7 at the halt; last two tests (3, 9)
+  [PASS] G4 control halts while processing N = 12 (accepted 4,6,8,10; last split (3,9); P'+Q'+4 = 11 because the guard consumed one unit of P')
+  [CLAIM OK] session G4 halt after 2174 steps  -- 2174
+--- FERMATGAME: 36 fractions, 32 primes
+  [CLAIM OK] FERMATGAME: 36 fractions over 32 primes  -- 36 fractions, 32 primes
+  [PASS] FERMATGAME: first eleven = PRIMEGAME's with 1/17 -> X/17 (X = 97)
+  [PASS] FERMATGAME: state/register split derived by propagation, nothing undecided  -- states [11, 13, 17, 19, 23, 29, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131]; registers [2, 3, 5, 7, 31, 37, 41, 43, 47]
+  [PASS] FERMATGAME: one-hot: every reduced numerator and denominator has exactly one state prime (exp 1), no self-loop  -- 23 states, 9 registers
+  [PASS] FERMATGAME: start integer (large) is one-hot
+  [PASS] FERMATGAME: the single-fraction controller states [59, 71, 79, 89, 103, 109, 127] are pure returns (s/s') to a state that calls them
+  [PASS] FERMATGAME: every helper loop decrements one of its own guard registers (each loop terminates)
+  [CLAIM OK] FERMATGAME: 9 registers, 23 states  -- registers [2, 3, 5, 7, 31, 37, 41, 43, 47]
+  [PASS] start 53*31^32*43 = state 53 with register 31 = 32 = 2^5 and register 43 = 1
+  [PASS] FERMATGAME from m = 0: halts after testing exactly F_0 = 3 (prime), kernel contract held  -- 66 steps, halted in state 131 (literal integer run in lockstep, agree=True, 0s)
+  [CLAIM OK] session step count from m = 0: 66  -- 66
+  [PASS] FERMATGAME from m = 1: halts after testing exactly F_1 = 5 (prime), kernel contract held  -- 185 steps, halted in state 131 (literal integer run in lockstep, agree=True, 0s)
+  [CLAIM OK] session step count from m = 1: 185  -- 185
+  [PASS] FERMATGAME from m = 2: halts after testing exactly F_2 = 17 (prime), kernel contract held  -- 1911 steps, halted in state 131 (literal integer run in lockstep, agree=True, 0s)
+  [CLAIM OK] session step count from m = 2: 1911  -- 1911
+  [PASS] FERMATGAME from m = 3: halts after testing exactly F_3 = 257 (prime), kernel contract held  -- 400283 steps, halted in state 131 (literal integer run in lockstep, agree=True, 1s)
+  [CLAIM OK] session step count from m = 3: 400283  -- 400283
+  [PASS] FERMATGAME from m = 4: halts after testing exactly F_4 = 65537 (prime), kernel contract held  -- 25772326379 steps, halted in state 131 (fast, 8s)
+  [CLAIM OK] session step count from m = 4: 25772326379  -- 25772326379
+  [PASS] inverted control from m = 0 passes F_0..F_4 and reaches the kernel entry with M = F_5 = 4294967297  -- completed tests [3, 5, 17, 257, 65537], then entry with r5 = 4294967297, r3 = 4294967296
+--- LEGENDREGAME: 33 fractions, 29 primes
+  [CLAIM OK] LEGENDREGAME: 33 fractions over 29 primes  -- 33 fractions, 29 primes
+  [PASS] LEGENDREGAME: first eleven = PRIMEGAME's with 1/17 -> X/17 (X = 59)
+  [PASS] LEGENDREGAME: state/register split derived by propagation, nothing undecided  -- states [11, 13, 17, 19, 23, 29, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109]; registers [2, 3, 5, 7, 31, 37, 41, 43]
+  [PASS] LEGENDREGAME: one-hot: every reduced numerator and denominator has exactly one state prime (exp 1), no self-loop  -- 21 states, 8 registers
+  [PASS] LEGENDREGAME: start integer 90621029 is one-hot
+  [PASS] LEGENDREGAME: the single-fraction controller states [53, 61, 73, 89, 101, 107] are pure returns (s/s') to a state that calls them
+  [PASS] LEGENDREGAME: every helper loop decrements one of its own guard registers (each loop terminates)
+  [CLAIM OK] LEGENDREGAME: 8 registers, 21 states  -- registers [2, 3, 5, 7, 31, 37, 41, 43]
+  [PASS] start 47*31*37*41^2 = state 47 with C1 = 1, W = 1, L = 2 (n = 1, window {2,3})
+  [PASS] literal run (lockstep with vectors), windows n = 1..12: tests = predicted, kernel contract held  -- 31 calls, 1089439 literal steps (3s)
+  [PASS] fast run, windows n = 1..120: no halt, windows in order, least prime above n^2 accepted, tests = predicted, kernel contract on every call  -- 711 calls, 138922424635 steps, 129s; last accepted (120, 14401)
+  [CLAIM OK] session L2 total 138,922,424,635 steps (at the 120th acceptance)  -- 138922424635
+     L3 as coded: HALT in state 109; accepted primes [2, 5, 11, 13, 17, 23]; L = 14 at the halt; tests [2, 5, 9, 10, 11, 13, 17, 21, 22, 23, 25, 26, 27]
+  [PASS] L3 as coded does NOT halt at n = 5 (accepts 2,5,11,13,17,23; halts with L = 14): the session's FAILED report is accurate
+  [PASS] corrected budget control (own construction, B = 2 extra tests per window): halts while processing n = 5 after accepting 2, 5, 11, 17 (tests 26, 27, 28)  -- HALT; tests [2, 5, 10, 11, 17, 26, 27, 28]; L = 10
+
+SESSION CLAIMS FOUND WRONG: none
+AUDIT CHECK FAILURES: none
+python3   181.82s user 0.79s system 97% cpu 3:07.99 total
+exit 0

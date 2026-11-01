@@ -1,0 +1,94 @@
+PART 1: criterion (1) vs literal arc test; prime word test (2); counts
+  [PASS] (2) q=3 S=[1]: palindromic paths = palindromic words  -- 1 words, 1 palindromic words, 1 palindromic paths, H = 3
+  [PASS] (2) q=5 S=[1, 2]: palindromic paths = palindromic words  -- 3 words, 3 palindromic words, 3 palindromic paths, H = 15
+  [PASS] (2) q=5 S=[1, 3]: palindromic paths = palindromic words  -- 3 words, 3 palindromic words, 3 palindromic paths, H = 15
+  [PASS] (2) q=7 S=[1, 2, 3]: palindromic paths = palindromic words  -- 25 words, 9 palindromic words, 9 palindromic paths, H = 175
+  [PASS] (2) q=7 S=[1, 2, 4]: palindromic paths = palindromic words  -- 27 words, 9 palindromic words, 9 palindromic paths, H = 189
+  [PASS] (2) q=7 S=[1, 3, 5]: palindromic paths = palindromic words  -- 25 words, 9 palindromic words, 9 palindromic paths, H = 175
+  [PASS] (2) q=7 S=[1, 4, 5]: palindromic paths = palindromic words  -- 25 words, 9 palindromic words, 9 palindromic paths, H = 175
+     q=9 S=[1, 2, 3, 4]: 363 words, 35 palindromic words, 35 palindromic paths (from 0), H = 3267
+     q=9 S=[1, 2, 3, 5]: 373 words, 37 palindromic words, 37 palindromic paths (from 0), H = 3357
+     q=9 S=[1, 2, 4, 6]: 373 words, 37 palindromic words, 37 palindromic paths (from 0), H = 3357
+     q=9 S=[1, 2, 5, 6]: 363 words, 35 palindromic words, 35 palindromic paths (from 0), H = 3267
+     q=9 S=[1, 3, 4, 7]: 351 words, 33 palindromic words, 99 palindromic paths (from 0), H = 3159
+     q=9 S=[1, 3, 5, 7]: 363 words, 35 palindromic words, 35 palindromic paths (from 0), H = 3267
+     q=9 S=[1, 4, 6, 7]: 351 words, 33 palindromic words, 99 palindromic paths (from 0), H = 3159
+     q=9 S=[1, 5, 6, 7]: 373 words, 37 palindromic words, 37 palindromic paths (from 0), H = 3357
+  [PASS] (2) q=11 S=[1, 2, 3, 4, 5]: palindromic paths = palindromic words  -- 8457 words, 181 palindromic words, 181 palindromic paths, H = 93027
+  [PASS] (2) q=11 S=[1, 2, 3, 4, 6]: palindromic paths = palindromic words  -- 8497 words, 185 palindromic words, 185 palindromic paths, H = 93467
+  [PASS] (2) q=11 S=[1, 2, 3, 5, 7]: palindromic paths = palindromic words  -- 8401 words, 185 palindromic words, 185 palindromic paths, H = 92411
+  [PASS] (2) q=11 S=[1, 2, 3, 6, 7]: palindromic paths = palindromic words  -- 8497 words, 185 palindromic words, 185 palindromic paths, H = 93467
+  [PASS] (2) q=11 S=[1, 2, 4, 5, 8]: palindromic paths = palindromic words  -- 8497 words, 185 palindromic words, 185 palindromic paths, H = 93467
+  [PASS] (2) q=11 S=[1, 2, 4, 6, 8]: palindromic paths = palindromic words  -- 8497 words, 185 palindromic words, 185 palindromic paths, H = 93467
+  [PASS] (2) q=11 S=[1, 2, 5, 7, 8]: palindromic paths = palindromic words  -- 8401 words, 185 palindromic words, 185 palindromic paths, H = 92411
+  [PASS] (2) q=11 S=[1, 2, 6, 7, 8]: palindromic paths = palindromic words  -- 8457 words, 181 palindromic words, 181 palindromic paths, H = 93027
+  [PASS] (2) q=11 S=[1, 3, 4, 5, 9]: palindromic paths = palindromic words  -- 8645 words, 185 palindromic words, 185 palindromic paths, H = 95095
+  [PASS] (2) q=11 S=[1, 3, 4, 6, 9]: palindromic paths = palindromic words  -- 8457 words, 181 palindromic words, 181 palindromic paths, H = 93027
+  [PASS] (2) q=11 S=[1, 3, 5, 7, 9]: palindromic paths = palindromic words  -- 8457 words, 181 palindromic words, 181 palindromic paths, H = 93027
+  [PASS] (2) q=11 S=[1, 3, 6, 7, 9]: palindromic paths = palindromic words  -- 8497 words, 185 palindromic words, 185 palindromic paths, H = 93467
+  [PASS] (2) q=11 S=[1, 4, 5, 8, 9]: palindromic paths = palindromic words  -- 8457 words, 181 palindromic words, 181 palindromic paths, H = 93027
+  [PASS] (2) q=11 S=[1, 4, 6, 8, 9]: palindromic paths = palindromic words  -- 8401 words, 185 palindromic words, 185 palindromic paths, H = 92411
+  [PASS] (2) q=11 S=[1, 5, 7, 8, 9]: palindromic paths = palindromic words  -- 8401 words, 185 palindromic words, 185 palindromic paths, H = 92411
+  [PASS] (2) q=11 S=[1, 6, 7, 8, 9]: palindromic paths = palindromic words  -- 8401 words, 185 palindromic words, 185 palindromic paths, H = 92411
+  [PASS] (2) q=13 S=[1, 2, 3, 4, 5, 6] (class size 6): palindromic paths = palindromic words  -- 285475 words, 1115 palindromic
+  [PASS] (2) q=13 S=[1, 2, 3, 4, 5, 7] (class size 6): palindromic paths = palindromic words  -- 285191 words, 1119 palindromic
+  [PASS] (2) q=13 S=[1, 2, 3, 4, 6, 8] (class size 6): palindromic paths = palindromic words  -- 284989 words, 1127 palindromic
+  [PASS] (2) q=13 S=[1, 2, 3, 5, 6, 9] (class size 2): palindromic paths = palindromic words  -- 284847 words, 1125 palindromic
+  [PASS] (2) q=13 S=[1, 2, 3, 5, 7, 9] (class size 6): palindromic paths = palindromic words  -- 282269 words, 1119 palindromic
+  [PASS] (2) q=13 S=[1, 2, 6, 8, 9, 10] (class size 6): palindromic paths = palindromic words  -- 283369 words, 1117 palindromic
+  [PASS] criterion (1) = literal arc test on every enumerated word (q<=11 all S; q=13 class reps)  -- 1844579 words checked, 0 disagreements, 12s
+  [CLAIM OK] "1,741,634 Hamiltonian paths" = paths from vertex 0 of one S per multiplier class, q = 3..13  -- audit count 1741634; the number of ALL Hamiltonian paths of all these circulants is far larger (q = 13 alone: 32 sets x ~3.7e6)
+  [PASS] Z_9 hostile {1,3,4,7}: 66 palindromic paths (from 0) with non-palindromic words; (1,1,1,4,7,1,7,4) among them  -- 66 found
+PART 2: q = 3, 5 enumeration; THM-4849 cycle data
+  [PASS] q=3: only S-sequencing is (1,1)  -- [(1, 1)]
+  [PASS] q=5, S={1,2}: S-sequencings exactly 1111, 2112, 2222, all palindromes, H = 15  -- [(1, 1, 1, 1), (2, 1, 1, 2), (2, 2, 2, 2)]
+     q=5, S={1,3}: [(1, 1, 1, 1), (1, 3, 3, 1), (3, 3, 3, 3)]
+  [PASS] T5: all 15 Hamiltonian paths palindromic by the literal test
+  [PASS] |Aut(T5)| = 5, so tilings = H/|Aut| = 3 = number of words from 0  -- |Aut| = 5
+  [PASS] THM-4849 cycle q=3 S=[1]: 3x+5 cycle = [1, 2, 4]  -- cycle from base point: [2, 1, 4]
+  [PASS] THM-4849 cycle q=5 S=[1, 2]: 3x+23 cycle = [5, 10, 19, 20, 40]  -- cycle from base point: [10, 5, 19, 40, 20]
+  [PASS] THM-4849 cycle q=5 S=[1, 3]: 3x+23 cycle = [7, 11, 14, 22, 28]  -- cycle from base point: [14, 7, 22, 11, 28]
+  [PASS] word (1, 1, 1, 1) visits [10, 5, 19, 40, 20]  -- [10, 5, 19, 40, 20]
+  [PASS] word (2, 1, 1, 2) visits [10, 19, 40, 20, 5]  -- [10, 19, 40, 20, 5]
+  [PASS] word (2, 2, 2, 2) visits [10, 19, 20, 5, 40]  -- [10, 19, 20, 5, 40]
+PART 3: explicit witnesses A1/A2/B/D for every S with 1 in S, odd 7 <= q <= 35 (literal arc test)
+     every admissible s (A1) and every admissible rise u (B) is tested, not one choice per S;
+     each witness: Hamiltonian path + named segment = literally violated arc (v_a, v_{b+1});
+     one witness per S additionally gets the full O(q^2) anti-automorphism scan.
+  [PASS] q=7: 4 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 1, 'A2': 1, 'B': 1, 'D': 1}, 5 witness words checked
+  [PASS] q=9: 8 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 3, 'A2': 1, 'B': 3, 'D': 1}, 11 witness words checked
+  [PASS] q=11: 16 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 7, 'A2': 1, 'B': 7, 'D': 1}, 26 witness words checked
+  [PASS] q=13: 32 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 15, 'A2': 1, 'B': 15, 'D': 1}, 62 witness words checked
+  [PASS] q=15: 64 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 31, 'A2': 1, 'B': 31, 'D': 1}, 146 witness words checked
+  [PASS] q=17: 128 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 63, 'A2': 1, 'B': 63, 'D': 1}, 338 witness words checked
+  [PASS] q=19: 256 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 127, 'A2': 1, 'B': 127, 'D': 1}, 770 witness words checked
+  [PASS] q=21: 512 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 255, 'A2': 1, 'B': 255, 'D': 1}, 1730 witness words checked
+  [PASS] q=23: 1024 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 511, 'A2': 1, 'B': 511, 'D': 1}, 3842 witness words checked
+  [PASS] q=25: 2048 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 1023, 'A2': 1, 'B': 1023, 'D': 1}, 8450 witness words checked
+  [PASS] q=27: 4096 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 2047, 'A2': 1, 'B': 2047, 'D': 1}, 18434 witness words checked
+  [PASS] q=29: 8192 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 4095, 'A2': 1, 'B': 4095, 'D': 1}, 39938 witness words checked
+  [PASS] q=31: 16384 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 8191, 'A2': 1, 'B': 8191, 'D': 1}, 86018 witness words checked
+  [PASS] q=33: 32768 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 16383, 'A2': 1, 'B': 16383, 'D': 1}, 184322 witness words checked
+  [PASS] q=35: 65536 sets, every listed witness valid and failing at its named segment  -- cases {'A1': 32767, 'A2': 1, 'B': 32767, 'D': 1}, 393218 witness words checked
+     total connection sets with 1 in S over odd q = 7..35: 131068  (8s)
+  [CLAIM WRONG] "131,071 connection sets ... at every odd q from 7 to 35"  -- actual total 131068 = 2^17 - 4 (131,071 = 2^17 - 1 would also count q = 3, 5)
+PART 4: THM-4730 (B1) for ALL admissible (a, b) (not only b = 2), composite odd q <= 27
+  [PASS] (B1) q=9: every three-interval path P(a-1,b-1) non-palindromic  -- 32 paths tested, 0 palindromic
+  [PASS] (B1) q=15: every three-interval path P(a-1,b-1) non-palindromic  -- 1120 paths tested, 0 palindromic
+  [PASS] (B1) q=21: every three-interval path P(a-1,b-1) non-palindromic  -- 20480 paths tested, 0 palindromic
+  [PASS] (B1) q=25: every three-interval path P(a-1,b-1) non-palindromic  -- 122880 paths tested, 0 palindromic
+  [PASS] (B1) q=27: every three-interval path P(a-1,b-1) non-palindromic  -- 292864 paths tested, 0 palindromic
+PART 4b: are the THM-4855 witnesses members of THM-4730 (B)'s own families? (odd 7 <= q <= 35)
+  [PASS] A1 = three-interval P(s-1, 1), (a, b) = (s, 2)  -- 245760 witnesses
+  [PASS] A2 = three-interval P(2, 1), (a, b) = (3, 2)  -- 15 witnesses
+  [PASS] B = three-interval P(u, q-1-u), (a, b) = (u+1, q-u), a + b = q + 1 (THM-4730 (B)'s instance for one small element a = u+1, d = a-1): family B is NOT new  -- 491520 witnesses
+  [PASS] D = THM-4730 descending-pairs path  -- 15 witnesses
+PART 5: (2) sampled: random S-sequencings at q = 17, 19, 23 (non-palindromic word => non-palindromic path)
+  [PASS] q=17: sampled non-palindromic words give non-palindromic paths  -- 3000 samples, 0 bad
+  [PASS] q=19: sampled non-palindromic words give non-palindromic paths  -- 3000 samples, 0 bad
+  [PASS] q=23: sampled non-palindromic words give non-palindromic paths  -- 3000 samples, 0 bad
+
+SESSION CLAIMS FOUND WRONG: "131,071 connection sets ... at every odd q from 7 to 35"
+AUDIT CHECK FAILURES: none
+python3  35 27  24.61s user 0.20s system 94% cpu 26.168 total
+exit 0

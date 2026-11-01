@@ -1,22 +1,26 @@
 ---
 id: THM-4855
-title: "Circulant tournaments as S-sequencings. (1) A Hamiltonian path of Circ(Z_q, S), with 1 in S, is a word over S of length q-1 with distinct partial sums mod q. Its positional reversal is an anti-automorphism iff every segment sum of the word and of its reversal lie in S together (segment-sum criterion, valid for every q). (2) For prime q this is the same as the difference word being a palindrome. (3) For every odd q >= 7, prime or composite, explicit words A1, A2, B, D give a non-palindromic Hamiltonian path, each with a named failing segment. This is an all-order arc-level proof along THM-4730 (B)'s original explicit route (three-interval with b = 2, descending pairs) plus a new family B. (4) For q = 3, 5 every S-sequencing is a palindrome; T5's are 1111, 2112, 2222, its three tilings. So the strong points of symmetry K1, C3, T5 are exactly the circulants of order <= 5, i.e. THM-4849's tournament cycles of period <= 5."
+title: "Circulant tournaments via path words. (1) A Hamiltonian path of Circ(Z_q, S), with 1 in S, is a word over S of length q-1 with distinct partial sums mod q (its path word). Its positional reversal is an anti-automorphism iff every segment sum of the word and of its reversal lie in S together (segment-sum criterion, valid for every q). (2) For prime q this is the same as the difference word being a palindrome. (3) For every odd q >= 7, prime or composite, a covering subfamily of THM-4730 (B)'s own explicit paths (three-interval with b = 2 or with a + b = q + 1, and descending pairs) gives a non-palindromic Hamiltonian path with a named failing segment: an all-order arc-level proof for that subfamily. (4) For q = 3, 5 every path word is a palindrome; T5's are 1111, 2112, 2222, its three tilings. So the strong points of symmetry K1, C3, T5 are exactly the circulants of order <= 5, i.e. THM-4849's tournament cycles of period <= 5."
 status: >
-  PRE-AUDIT (mac-mini-2026-11-01-fractranTM).
-  PROVED (elementary): (1), (2), (3), (4).
+  PROVED (elementary): (1), (2), (3), (4). Independently audited 2026-11-01: SOUND WITH CORRECTIONS, all applied
+  (04-computation/experiments/circulant_fractran_goldbach_20261101/audit/AUDIT.md; MISTAKE-700).
   FINITE-EXACT:
-  - the segment-sum criterion agrees with the literal arc test on all 1,741,634 Hamiltonian paths of the circulants
-    with q <= 13;
-  - the A/B/D witnesses are valid and non-palindromic for all 131,071 connection sets with 1 in S at every odd q from
-    7 to 35.
+  - the segment-sum criterion agrees with the literal arc test on all 1,741,634 path words (Hamiltonian paths from
+    vertex 0) of one connection set per multiplier class, q <= 13 (the audit: 1,844,579 words);
+  - the A/B/D witnesses are valid and non-palindromic for all 131,068 = 2^17 - 4 connection sets with 1 in S at
+    every odd q from 7 to 35; the audit checked that the NAMED segment fails for every admissible choice.
   CITED:
   - THM-4730 (A) (rotation lemma) and the audited strong-cycle reduction: a strong pure-blue tournament of odd order
     is a circulant along every Hamiltonian cycle; no even order;
-  - affine isomorphisms of prime-order circulants (Turner 1967; Babai 1977; as used in THM-4849);
+  - Burnside's theorem on transitive groups of prime degree (used in (2) with a normaliser argument);
   - THM-4849 (A) (connection set read as a parity word).
   NOT NEW: the alphabet theorem itself. It is already proved at all orders by the audited prefix-rerouting argument
-  (`pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md`). This file gives a second,
-  word-level proof and closes THM-4730's open item, which said no all-order repair of its explicit paths was claimed.
+  (`pure_blue_atom_classification_20261020/UNIFORM_PREFIX_REROUTING_CLASSIFICATION.md`), whose section 6 also lists
+  T5's three words. This file gives a second, word-level proof. It proves THM-4730 (B)'s explicit-path claim at all
+  orders only for a covering subfamily (b = 2; a + b = q + 1; descending pairs). The general three-interval claim
+  (B1) is still only finitely checked: no counterexample among 437,376 paths at composite q <= 27 (audit).
+  TERMINOLOGY: the file slug's "S-sequencings" is this file's earlier name for path words. They are not sequencings
+  in the group-theoretic sense (orderings of distinct elements).
 source: mac-mini-2026-11-01-fractranTM (owner directive of 2026-11-01)
 depends_on:
   - 01-canon/theorems/THM-4730-strong-pure-blue-alphabet-complete-points-of-symmetry-are-k1-c3-t5.md
@@ -34,7 +38,7 @@ outputs:
   - 04-computation/experiments/circulant_fractran_goldbach_20261101/witness_families.out
 ---
 
-# THM-4855 - circulant tournaments as S-sequencings
+# THM-4855 - circulant tournaments via path words
 
 ## Setting
 
@@ -43,8 +47,9 @@ u -> v iff v - u ∈ S. Since x -> -x is an isomorphism onto Circ(Z_q, -S), we m
 and let χ be the indicator of S on 1, ..., q-1, so that χ(q - v) = 1 - χ(v).
 
 A Hamiltonian path (v_1, ..., v_q) of T starting at v_1 = 0 is determined by its difference word
-w = (d_1, ..., d_{q-1}) with d_i = v_{i+1} - v_i ∈ S. Its partial sums are distinct mod q. Call such a word an
-**S-sequencing**. Every Hamiltonian path is a translate of exactly one path from 0, so H(T) = q · #S-sequencings.
+w = (d_1, ..., d_{q-1}) with d_i = v_{i+1} - v_i ∈ S. Its partial sums are distinct mod q. Call such a word a
+**path word**: it is the difference word of a Hamiltonian path in the Cayley digraph Cay(Z_q, S). Every Hamiltonian
+path is a translate of exactly one path from 0, so H(T) = q · #path words.
 
 ## Statement
 
@@ -63,7 +68,7 @@ satisfies the criterion.
 **(3) Explicit witnesses, every odd q >= 7.** With 1 ∈ S, call u ∈ [1, q-2] a *rise* if u ∉ S and u + 1 ∈ S. Then
 T has the following non-palindromic Hamiltonian path.
 
-| case | condition | S-sequencing w | failing segment: sum on w, sum on rev(w) |
+| case | condition | path word w | failing segment: sum on w, sum on rev(w) |
 |---|---|---|---|
 | A1 | 2 ∈ S and some s ∈ S, 4 <= s <= k+1, has s-1 ∉ S | 1^(s-2) 2 1^(q-1-s) s | suffix [s, q-1]: -1 ∉ S; 1-s ∈ S |
 | A2 | 2 ∈ S, no such s (then S = {1, ..., k}) | 1 2 1^(q-4) 3 | prefix [1, k-1]: k ∈ S; k+1 ∉ S |
@@ -71,11 +76,13 @@ T has the following non-palindromic Hamiltonian path.
 | D | 2 ∉ S and the only rise is k (then S = {1} ∪ [k+1, q-2]) | 1 ((q-3) 1)^(k-1) (q-2) | [1, 2]: -2 ∈ S; -1 ∉ S |
 
 So no circulant tournament of odd order q >= 7 is pure-blue. A1 and A2 are THM-4730 (B)'s three-interval path with
-b = 2. D is its descending-pairs path. B is new.
+b = 2. B is the same three-interval path with a = u+1, b = q-u (a + b = q + 1), the path THM-4730 (B) uses for "one
+small element". D is its descending-pairs path. New here are the all-order failing segments, not the paths.
 
 **(4) Orders 3 and 5, and the points of symmetry.**
-- For q = 3 the only S-sequencing is (1, 1).
-- For q = 5, S = {1, 2}, the S-sequencings are exactly 1111, 2112 and 2222. All are palindromes, so T5 is pure-blue,
+- For q = 3 the only path word is (1, 1).
+- For q = 5, S = {1, 2}, the path words are exactly 1111, 2112 and 2222 (also listed in the prefix-rerouting note,
+  section 6). All are palindromes, so T5 is pure-blue,
   and these three words are its three tilings (fibre H/|Aut| = 15/5 = 3).
 - With THM-4730 (A) and the strong-cycle reduction (a strong pure-blue tournament has odd order and is a circulant),
   the strong points of symmetry are exactly the circulant tournaments of order <= 5: K1, C3, T5.
@@ -83,7 +90,8 @@ b = 2. D is its descending-pairs path. B is new.
   - {0} for q = 1;
   - the 3x+5 cycle {1, 2, 4} for q = 3;
   - T5's two 3x+23 cycles {5, 19, 40, 20, 10} and {7, 11, 22, 28, 14} for q = 5 (already in the cycle101 note).
-- An S-sequencing is an ordering of the cycle's points by jumps T^s, s ∈ S. For example, T5's word 2112 visits
+- A path word is an ordering of the cycle's points by jumps of s cycle steps, s ∈ S: T^s in the labelling
+  vertex j -> T^j(x_0) used here, T^(-s) in THM-4849's own labelling. For example, T5's word 2112 visits
   10, 19, 40, 20, 5.
 
 ## Proof
@@ -96,13 +104,21 @@ b = 2. D is its descending-pairs path. B is new.
 ρ is an anti-automorphism iff u -> v <=> ρ(v) -> ρ(u) for all u ≠ v. Since T is a tournament, it suffices to take
 i < j.
 
-**(2).** For prime q, every isomorphism between circulants on Z_q is affine (Turner; Babai). So an
-anti-automorphism is x -> ax + c with aS = -S. Then:
+**(2).** Let q be prime.
+- Aut(T) is transitive of prime degree and has odd order, because a tournament admits no involutive automorphism.
+  So it is not 2-transitive, since 2-transitive groups have order divisible by q(q-1).
+- By Burnside's theorem, Aut(T) is therefore solvable and contained in AGL(1, q), and its Sylow q-subgroup Z_q (the
+  translations) is normal and unique.
+- Let G' be the group of automorphisms and anti-automorphisms. Aut(T) has index <= 2 in G', so it is normal there,
+  and so is its characteristic subgroup Z_q.
+- Hence G' <= N(Z_q) = AGL(1, q).
+
+So an anti-automorphism is x -> ax + c with aS = -S. This also covers the Paley case. Then:
 - ρ is an involution, so a^2 = 1, so a = -1 (a = 1 would give a translation, not an anti-automorphism);
 - ρ = (x -> c - x) on the path means v_{q+1-i} = c - v_i for all i, that is, d_{q-i} = d_i;
 - so the word is a palindrome. The converse is (1).
 
-**(3).** Each word is an S-sequencing. Its partial sums cover Z_q:
+**(3).** Each word is a path word. Its partial sums cover Z_q:
 - **A:** [0, s-2], then s, ..., q-1, then q-1+s ≡ s-1.
 - **B:** [0, u-1], then -1, then [u, q-2].
 - **D:** 0, 1, then the pairs (q-2, q-1), (q-4, q-3), ..., (3, 4), then 2.
@@ -142,26 +158,28 @@ reduction.
 ## Verification
 
 - **`circulant_sequencings.out`.**
-  - All S-sequencings for odd q <= 13, one connection set per multiplier class.
-  - The criterion (1) against the literal arc test on 1,741,634 paths.
+  - All path words for odd q <= 13, one connection set per multiplier class.
+  - The criterion (1) against the literal arc test on 1,741,634 path words (paths from vertex 0).
   - (2) for every prime q <= 13.
   - The composite hostile Circ(Z_9, {1,3,4,7}): 66 palindromic paths have non-palindromic words. This is why (1),
     not the word test, is needed at composite q.
   - Counts. H(R7) = 175 with 9 palindromic words of 25. H(QR7) = 189, also with 9 of 27. At q = 13, about 1,120
     palindromic words among about 285,000.
 - **`witness_families.out`** (pre-registered).
-  - Every one of the 131,071 connection sets with 1 ∈ S, at every odd q from 7 to 35, receives a valid,
+  - Every one of the 131,068 connection sets with 1 ∈ S, at every odd q from 7 to 35, receives a valid,
     non-palindromic witness by the case rule.
+  - The script accepted any failing segment. The audit (`audit/audit_circulants.out`) checked that the named segment
+    fails for every admissible choice.
   - Case D occurs exactly once per q.
 
 ## Mechanism: why the cut is at 5
 
-- A circulant's Hamiltonian paths are its S-sequencings.
+- A circulant's Hamiltonian paths are its path words.
 - At q <= 5 there are too few letters for an asymmetric sequencing:
   - q = 3: S = {1}.
-  - q = 5: the only sequencings are 1111, 2112 and 2222, all palindromes.
-- From q = 7 on, S has at least three letters. One more letter is enough for the two-jump words above, and those
-  cannot be palindromes.
+  - q = 5: the only path words are 1111, 2112 and 2222, all palindromes.
+- From q = 7 on, S has at least three letters. One more letter is enough for the two-jump words above; they are
+  not palindromes, and at composite q they still fail at a named segment.
 - The Collatz side of THM-4849 sees only the connection set (the parity word), not these words.
   - "Short cycles" therefore describes K1, C3, T5 but does not explain them. That is a dictionary, not a mechanism.
   - That 3 and 5 are Fermat primes is NUMEROLOGY: order 17 is equally rigid, and none of its circulants is pure-blue

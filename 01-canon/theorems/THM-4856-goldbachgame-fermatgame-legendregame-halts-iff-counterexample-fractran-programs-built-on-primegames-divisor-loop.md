@@ -1,8 +1,10 @@
 ---
 id: THM-4856
-title: "Three halts-iff-counterexample FRACTRAN programs built verbatim on PRIMEGAME's divisor loop. GOLDBACHGAME (37 fractions, 30 primes, start 43) halts iff some even N >= 4 is not a sum of two primes. FERMATGAME (36 fractions, 32 primes, started at m = 5) halts iff a sixth Fermat prime exists. LEGENDREGAME (33 fractions, 29 primes) halts iff some interval (n^2, (n+1)^2) contains no prime. Each consists of PRIMEGAME's first eleven fractions (exit 1/17 redirected) and a 20-25-fraction controller."
+title: "Three halts-iff-counterexample FRACTRAN programs built verbatim on PRIMEGAME's divisor loop. GOLDBACHGAME (37 fractions, 30 primes, start 43) halts iff some even N >= 4 is not a sum of two primes. FERMATGAME (36 fractions, 32 primes, started at m = 5) halts iff a sixth Fermat prime exists. LEGENDREGAME (33 fractions, 29 primes) halts iff some interval (n^2, (n+1)^2) contains no prime. Each consists of PRIMEGAME's first eleven fractions (exit 1/17 redirected) and a 22-26-fraction controller."
 status: >
-  PRE-AUDIT (mac-mini-2026-11-01-fractranTM).
+  Independently audited 2026-11-01: SOUND WITH CORRECTIONS, all applied
+  (04-computation/experiments/circulant_fractran_goldbach_20261101/audit/AUDIT.md; MISTAKE-700). The audit
+  re-ran all three programs literally and with its own accelerator, reproducing every step count.
   PROVED: the three equivalences, given the PRIMEGAME kernel contract (Conway 1987; THM-4853's proof; session126
   section 4).
   FINITE-EXACT (pre-registered).
@@ -21,10 +23,19 @@ status: >
     test consumes the unit it tests.
   - L3: the control was mis-specified; truncating W also shortened the window jump. A corrected control halts at
     n = 5, as predicted.
+  CREDIT:
+  - That such encodings EXIST is classical and generic: every Pi_1 statement is a statement about some FRACTRAN
+    program or generalized Collatz map (Conway 1972, 1987; Kurtz-Simon 2007). The repository's procgen atlas
+    (2026-09-24) already lists Goldbach and Legendre this way.
+  - New here are explicit, small, verified programs on PRIMEGAME's own kernel.
+  - The audit's priority search (bbchallenge Fractran and Cryptid pages, Esolang Fractran) found no published
+    FRACTRAN program for Goldbach, Legendre or Fermat primes.
+  - Concurrent: session135 (`session135_fractran_tm_structure_20261101/`, checkpoint 1 at 08:23, two minutes after
+    this file's pre-audit checkpoint) treats PRIMEGAME basins and priority-aware acceleration, not these
+    encodings.
   NOT CLAIMED:
   - minimality of any program;
-  - novelty outside this repository. No session here encoded a conjecture this way (overnight summary of sessions
-    129-134 and S71); Goldbach FRACTRAN programs may exist in the literature.
+  - novelty outside the literature searched.
   - Description sizes are not invariants of the predicates (session65's warning about the 25-state machine applies).
 source: mac-mini-2026-11-01-fractranTM (owner directive of 2026-11-01: FRACTRAN and Turing-machine connections with more repository questions; PRIMEGAME and the 25-state Goldbach machine)
 depends_on:
@@ -156,9 +167,14 @@ prime" compiles to the kernel plus a controller that enumerates the list.
 **Comparison with Leng's 25-state Goldbach Turing machine** (session65; `goldbach_tm25_structure.out`).
 - **Size.** The machine has 49 instructions on 25 states and 2 symbols. GOLDBACHGAME has 37 fractions on 23 control
   states and 7 counters.
-- **Same algorithm.** Both are trial-division searchers.
-- **Cost per target.** The Turing machine spends about n^3.26 steps per stage (n <= 74). GOLDBACHGAME spends about
-  6N^2 steps per target (8.97e6 at N = 1000). Testing a prime Q near N costs sum_d (6Q + 2 floor(Q/d) + 2) ≈ 6Q^2
-  (THM-4853 (a)).
+- **Shared design, no map (DICTIONARY).** Both search by trial division, but in different orders:
+  - the machine tests divisors in ascending order and tries only splits x <= y;
+  - PRIMEGAME's kernel tests downward from M - 1.
+
+  No predicate-preserving map between them is constructed. The structural link is GOLDBACHGAME's literal embedding
+  of PRIMEGAME's kernel, not anything about the Turing machine.
+- **Cost per target.** The Turing machine spends about n^3.26 steps per stage (n <= 74). GOLDBACHGAME spends
+  8.70-8.97 N^2 steps per target (8.97e6 at N = 1000), so about 9N^2. Its main term is the test of a prime Q near N,
+  sum_d (6Q + 2 floor(Q/d) + 2) ≈ 6Q^2 (THM-4853 (a)); the remaining tests in the target account for the rest.
 - **Sizes are not invariants.** These are description sizes only (session65): reachable padding changes them, and a
   21-state machine exists (DeepMind cryptids, 2026).

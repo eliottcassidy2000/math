@@ -21776,3 +21776,43 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
 - **Repair:** the note, THM-4854 and the index rows retyped as a reproduction beside session129 with Conway, session126, mac-mini, OEIS A068443 and THM-4815 (C) cited; "register fibres" replaced by the six-fibre check and the register unions; Lemma 1 throughout; the two false sentences corrected with the audit's L census; fourteen minors applied; what remains new listed in the note's section 7.
 - **How it was caught:** the independent audit (own reproductions; `git log` of the same day; reading THM-4732's lemmas and THM-4815 (C); Conway's paper and Ming's).
 - **Lesson:** never truncate a prior-art listing (no `| head` on the grep of the directive's keywords or on `git log --since` of the day); read the day's `git log --name-only` fully before the first commit; verify lemma numbers in the cited theorem; test every "constant along" or "exactly these nodes" sentence in code before writing it; a reading that the primary source states (Conway's registers) is CITED, not PROVED.
+
+## MISTAKE-700 (2026-11-01, mac-mini-2026-11-01-fractranTM, THM-4855, THM-4856 and the note `05-knowledge/results/fractran_turing_circulant_goldbach_20261101.md` at the pre-audit commit 1224a73dfc; found by the independent audit `04-computation/experiments/circulant_fractran_goldbach_20261101/audit/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a false "every isomorphism is affine" in a proof, an inherited path family called new, a closure overclaim, a miscount, and a design analogy typed STRUCTURAL
+
+- **What was wrong.**
+  - **(1)** The proof that palindromic paths of prime-order circulants have palindromic words cited "every isomorphism
+    between circulants on Z_q is affine (Turner; Babai)". That is false as stated: Turner and Babai give only some
+    affine isomorphism. The needed fact follows from Burnside's theorem on prime-degree transitive groups plus a
+    normaliser argument. Aut(T) has odd order, so it is not 2-transitive, hence lies in AGL(1, q); the group G' of
+    automorphisms and anti-automorphisms normalises its unique Sylow q-subgroup, so G' <= AGL(1, q).
+  - **(2)** Witness family B was called new. It is THM-4730's own three-interval path with a + b = q + 1. Only its
+    all-order failing segment [u, u+1] is new.
+  - **(3)** "Closes THM-4730's open item" overstated the result. The all-order arc proof covers a subfamily of
+    (B)'s explicit paths, and that subfamily is enough for every S. The general three-interval claim stays finitely
+    checked.
+  - **(4)** "131,071 connection sets" should be 2^17 - 4 = 131,068, the sum of the session's own per-q lines.
+  - **(5)** The 25-state Goldbach machine's relation to PRIMEGAME was typed STRUCTURAL ("same algorithm"). No
+    predicate-preserving map was given, and the two test divisors in opposite orders. It is a shared design
+    (DICTIONARY).
+  - **(6)** Minor:
+    - the per-target cost "about 6N^2" (measured 8.70-8.97 N^2);
+    - "20-25-fraction controller" (22-26);
+    - the 1.74M paths are path words from vertex 0 of one set per class;
+    - the jump direction T^s versus THM-4849's T^(-s);
+    - missing credits: T5's three words (prefix-rerouting note, section 6), session132's third indexing and
+      thresholds, the procgen atlas's generic FRACTRAN statements of Goldbach and Legendre, concurrent session135;
+    - the term "S-sequencing" clashes with group-theoretic sequencings, so it became "path word".
+- **Repair.** All of the above are corrected in the files, using the audit's evidence. No proof failed, no
+  computation changed, and nothing was withdrawn.
+- **How it was caught.** The auditor:
+  - re-derived every case with its own arc test and checked the named segments;
+  - matched family B against THM-4730's paths on 491,520 (S, u) pairs;
+  - summed the per-q counts;
+  - checked the cited theorems;
+  - re-ran the programs and the Turing machine;
+  - searched the literature.
+- **Lesson / reusable rule.**
+  - When citing "isomorphisms are affine" for circulants of prime order, use the Burnside/normaliser form. The
+    Turner/Babai statement only provides one affine isomorphism.
+  - Before calling a witness family new, express it in the parameters of the inherited family it may belong to.
+  - A shared algorithmic idea between two machines is a DICTIONARY entry until a simulation map is written down.
