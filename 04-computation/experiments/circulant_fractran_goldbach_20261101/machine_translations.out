@@ -1,0 +1,15 @@
+(T1) Leng TM -> radius-1 CA
+  [PASS] T1a: CA alphabet has 53 symbols  53
+  [PASS] T1b: CA = TM at every step for 200,000 steps  ran at t=200000
+(T2) Leng TM -> FRACTRAN (LENGGAME)
+  [PASS] T2a: 568 fractions (25*4 + 22*9 + 27*10)  568 fractions, moves R=22 L=27, 349 primes, largest 2351
+    mismatch at TM step 3: fractran ('P23', 0, 1) vs tm (23, (0, 6))
+  [FAIL] T2b: register stacks = TM stacks at each of the first 3,000 TM steps  FRACTRAN steps for 3,000 TM steps: 20789496
+  [PASS] T2c: literal integer FRACTRAN = dispatch, every configuration, first 300 TM steps  1948 configurations
+    first fractions: 65/99, 19/33, 17/11, 11/13, 145/207, 37/69, 31/23, 23/29, 215/369, 53/123, 47/41, 41/43 ...
+    cumulative FRACTRAN steps at TM steps 100/1000/2000/3000: [(100, 3424), (1000, 882044), (2000, 6639632), (3000, 20789496)]
+(T3) control: BB(2)
+  [FAIL] T3: BB(2) halts after 6 steps with four 1s; CA gives HALT at step 6; FRACTRAN halts with four 1s  TM steps 6, ones 4; CA halted at t=7; FRACTRAN halted=True after 89 steps, final stacks L=3 R=1
+
+FAILED: ['T2b: register stacks = TM stacks at each of the first 3,000 TM steps', 'T3: BB(2) halts after 6 steps with four 1s; CA gives HALT at step 6; FRACTRAN halts with four 1s']
+python3 -B machine_translations.py  6.18s user 0.15s system 76% cpu 8.313 total
