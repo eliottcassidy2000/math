@@ -1,0 +1,19 @@
+  [PASS] q=7 (prime): all 4 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 2, 'B': 1, 'D': 1}
+  [PASS] q=9 (composite): all 8 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 4, 'B': 3, 'D': 1}
+  [PASS] q=11 (prime): all 16 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 8, 'B': 7, 'D': 1}
+  [PASS] q=13 (prime): all 32 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 16, 'B': 15, 'D': 1}
+  [PASS] q=15 (composite): all 64 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 32, 'B': 31, 'D': 1}
+  [PASS] q=17 (prime): all 128 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 64, 'B': 63, 'D': 1}
+  [PASS] q=19 (prime): all 256 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 128, 'B': 127, 'D': 1}
+  [PASS] q=21 (composite): all 512 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 256, 'B': 255, 'D': 1}
+  [PASS] q=23 (prime): all 1024 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 512, 'B': 511, 'D': 1}
+  [PASS] q=25 (composite): all 2048 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 1024, 'B': 1023, 'D': 1}
+  [PASS] q=27 (composite): all 4096 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 2048, 'B': 2047, 'D': 1}
+  [PASS] q=29 (prime): all 8192 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 4096, 'B': 4095, 'D': 1}
+  [PASS] q=31 (prime): all 16384 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 8192, 'B': 8191, 'D': 1}
+  [PASS] q=33 (composite): all 32768 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 16384, 'B': 16383, 'D': 1}
+  [PASS] q=35 (composite): all 65536 connection sets get a valid non-palindromic Hamiltonian path  cases {'A': 32768, 'B': 32767, 'D': 1}
+
+case D occurs exactly once per q (S = {1} u [k+1, q-2}): True
+ALL CHECKS PASSED
+python3 -B witness_families.py 35  2.07s user 0.02s system 94% cpu 2.201 total
