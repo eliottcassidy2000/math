@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "authenticated_input_files": 41,
+  "replays": [
+    {
+      "audit": "density",
+      "mode": "normal",
+      "sha256": "172e754bd54e696cb4c694ea52e9a7772222cd858151c6273f975c24e3c305d2"
+    },
+    {
+      "audit": "density",
+      "mode": "optimized",
+      "sha256": "172e754bd54e696cb4c694ea52e9a7772222cd858151c6273f975c24e3c305d2"
+    },
+    {
+      "audit": "periodic_points",
+      "mode": "normal",
+      "sha256": "392d0a2db866ae23b27839943adfabf4c44ab994e91d618ee762013f15e4ca43"
+    },
+    {
+      "audit": "periodic_points",
+      "mode": "optimized",
+      "sha256": "392d0a2db866ae23b27839943adfabf4c44ab994e91d618ee762013f15e4ca43"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# Ordered FRACTRAN list. Start N=817086270; checkpoints are multiples of 23.
+# At checkpoint n: v_19(N)=n and v_2(N)=p_n. Do not reorder.
+527/58
+29/31
+37/29
+82/111
+37/41
+43/37
+141/215
+43/47
+53/43
+295/371
+53/59
+61/53
+7973/671
+61/67
+71/61
+803/923
+71/73
+79/71
+1079/1343
+79/83
+23/79
+551/23

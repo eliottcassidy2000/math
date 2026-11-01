@@ -1,0 +1,20 @@
+[
+  {
+    "concrete_delta_rows": 50625,
+    "expanded_sha256": "c2a3a2aef26bfa787b9a6a6de997b93857e698c3abe3719ea755bee90fd0602b",
+    "gzip_bytes": 273796,
+    "json_sha256": "759949fdbed7e8304961019b4632b5b9a64b6bfb8c7b77ed6c86a59740ee429d",
+    "mode": "path",
+    "nonhalting_states": 25,
+    "symbolic_rows": 59
+  },
+  {
+    "concrete_delta_rows": 72900,
+    "expanded_sha256": "13951acfcfc43185fd667aed094d5321bd8ec819d85aad41d58175cfd6e870c3",
+    "gzip_bytes": 395191,
+    "json_sha256": "fa8f7937de1124363893d8e183d117995e0a0286ef10add55de00d47d9a601dd",
+    "mode": "cycle",
+    "nonhalting_states": 36,
+    "symbolic_rows": 84
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "frozen_source_commit": "2a18212bfe0e8f4e82444ca2b96d3d708cb520e0",
+  "files": [
+    {
+      "local": "inherited_linear.py",
+      "repository_path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/distribution/stream.py",
+      "sha256": "7e143d2d64845cdc4459c45abefb9819ebb74bc978f5f5ce7722863a8bf51786",
+      "verbatim": true
+    },
+    {
+      "local": "pure_blue.fractran",
+      "repository_path": "05-knowledge/results/session132_fractran_tournament_recursion_20261031/pure_blue_fractran/pure_blue.fractran",
+      "sha256": "8766bba0145d830002e697e76847182981691c57af305c15648a671183090e4e",
+      "verbatim": true
+    },
+    {
+      "local": "compact_tail21.fractran",
+      "repository_path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/distribution/compact_tail21.fractran",
+      "sha256": "9d67ec22c96dcdb0daa68412f026632fcc64213a15540df4a69e16b830729724",
+      "verbatim": true
+    },
+    {
+      "local": "compact_tail_program.json",
+      "repository_path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/distribution/compact_tail_program.json",
+      "sha256": "986bf5fa6607b062e85234508290380c60a062f9d9783adc93424a9eb7872601",
+      "verbatim": true
+    },
+    {
+      "repository_path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/radix_probe/PROOF.md",
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4",
+      "used_for": "authenticated full matrix, invariant face, graph-source and output interpretation",
+      "verbatim_local_copy": false
+    },
+    {
+      "repository_path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1",
+      "used_for": "authenticated full matrix, invariant face, graph-source and output interpretation",
+      "verbatim_local_copy": false
+    }
+  ]
+}

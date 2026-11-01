@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "primitive_literal_cases": 2401,
+  "literal_TM_cases": 1681,
+  "whole_row_runs": [
+    {
+      "name": "V26-safe",
+      "accepted": true,
+      "steps": 703,
+      "input_bits": 33888
+    },
+    {
+      "name": "V26-zero-blocked",
+      "accepted": false,
+      "steps": 353,
+      "input_bits": 33607
+    },
+    {
+      "name": "V26-safe-rounded",
+      "accepted": true,
+      "steps": 53,
+      "input_bits": 2440
+    },
+    {
+      "name": "V26-zero-blocked-rounded",
+      "accepted": false,
+      "steps": 28,
+      "input_bits": 2431
+    }
+  ],
+  "harmonic_Farey_range": [
+    1,
+    120
+  ],
+  "harmonic_selected": [
+    {
+      "k": 1,
+      "intervals": 1,
+      "singletons": 0
+    },
+    {
+      "k": 3,
+      "intervals": 2,
+      "singletons": 2
+    },
+    {
+      "k": 12,
+      "intervals": 12,
+      "singletons": 4
+    },
+    {
+      "k": 80,
+      "intervals": 54,
+      "singletons": 38
+    },
+    {
+      "k": 120,
+      "intervals": 110,
+      "singletons": 58
+    }
+  ]
+}

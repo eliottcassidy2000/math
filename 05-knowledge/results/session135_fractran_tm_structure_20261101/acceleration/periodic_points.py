@@ -49,12 +49,28 @@ def main():
     need(least_return(p,x,T)==least_return(p,capped,T),'return cap');horizon+=1
  toy=density(Program([(3,2),(2,3)]),2);need(toy['density_period_at_most_L']=='5/12','toy density')
  reverse=density(Program([(2,3),(3,2)]),2);need(reverse['density_period_at_most_L']=='5/9','priority changes point density')
+ # Prime-label swapping is an exact dynamical conjugacy, not density preserving.
+ def swap23(N):
+  a=b=0
+  while N%2==0:N//=2;a+=1
+  while N%3==0:N//=3;b+=1
+  return N*2**b*3**a
+ left=Program([(3,2),(2,3)]);right=Program([(2,3),(3,2)]);conjugacy=0
+ for N in range(1,513):
+  A=N;B=swap23(N)
+  for _ in range(6):
+   x,S=left.encode(A);y,U=right.encode(B);sx=left.step(x);sy=right.step(y)
+   need((sx is None)==(sy is None),'renamed halt')
+   if sx is None:break
+   need(sx[0]==sy[0],'renamed priority index')
+   A=left.decode(sx[1],S);B=right.decode(sy[1],U)
+   need(swap23(A)==B,'prime permutation conjugacy');conjugacy+=1
  fixed=density(Program([(1,1)]),3);need(fixed['density_period_at_most_L']=='1','fixed points')
  drift=density(Program([(2,1)]),3);need(drift['density_period_at_most_L']=='0','drift not periodic')
  prime=density(Program(PRIMEGAME),2);need(prime['density_period_at_most_L']=='2654208/36409529','inherited PRIMEGAME period2 density')
  # Final halt observation at time T requires a larger cap; the first T means times0..T-1.
  p=Program([(1,2)]);need(observations(p,[2],3)!=observations(p,[3],3),'horizon endpoint hostile')
- return {'status':'PASS','finite_horizon_and_return_checks':horizon,'toy':toy,'reversed_priority_toy':reverse,
+ return {'status':'PASS','finite_horizon_and_return_checks':horizon,'prime_renaming_conjugacy_steps':conjugacy,'toy':toy,'reversed_priority_toy':reverse,
   'fixed':fixed,'drift':drift,'primegame_period2':prime,
   'scope':'Periodic POINTS with least period <= specified finite L; not eventual basins or a universal bound on periods.'}
 if __name__=='__main__':print(json.dumps(main(),indent=2,sort_keys=True))

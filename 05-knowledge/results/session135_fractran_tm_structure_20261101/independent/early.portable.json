@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "primegame_onehot": 4375,
+  "primegame_cap_0_2": 59049,
+  "primegame_independent_states": 166536,
+  "primegame_max_unmemoized_path": 173,
+  "observed_periods": [
+    2,
+    6
+  ],
+  "integer_transition_cases": 2000,
+  "square_literal_cases": 1025,
+  "square_maxsteps": 5122
+}

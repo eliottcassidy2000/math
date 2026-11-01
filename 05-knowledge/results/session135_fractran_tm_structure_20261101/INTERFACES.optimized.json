@@ -1,0 +1,244 @@
+{
+  "circulant_literal_path_checks": 40812,
+  "circulant_word_checks": 5898,
+  "circulants": [
+    {
+      "H": 3,
+      "S": [
+        1
+      ],
+      "constant_unit_words": 1,
+      "q": 3,
+      "words_starting_0": 1
+    },
+    {
+      "H": 3,
+      "S": [
+        2
+      ],
+      "constant_unit_words": 1,
+      "q": 3,
+      "words_starting_0": 1
+    },
+    {
+      "H": 15,
+      "S": [
+        1,
+        2
+      ],
+      "constant_unit_words": 2,
+      "q": 5,
+      "words_starting_0": 3
+    },
+    {
+      "H": 15,
+      "S": [
+        1,
+        3
+      ],
+      "constant_unit_words": 2,
+      "q": 5,
+      "words_starting_0": 3
+    },
+    {
+      "H": 15,
+      "S": [
+        2,
+        4
+      ],
+      "constant_unit_words": 2,
+      "q": 5,
+      "words_starting_0": 3
+    },
+    {
+      "H": 15,
+      "S": [
+        3,
+        4
+      ],
+      "constant_unit_words": 2,
+      "q": 5,
+      "words_starting_0": 3
+    },
+    {
+      "H": 175,
+      "S": [
+        1,
+        2,
+        3
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 25
+    },
+    {
+      "H": 189,
+      "S": [
+        1,
+        2,
+        4
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 27
+    },
+    {
+      "H": 175,
+      "S": [
+        1,
+        3,
+        5
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 25
+    },
+    {
+      "H": 175,
+      "S": [
+        1,
+        4,
+        5
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 25
+    },
+    {
+      "H": 175,
+      "S": [
+        2,
+        3,
+        6
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 25
+    },
+    {
+      "H": 175,
+      "S": [
+        2,
+        4,
+        6
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 25
+    },
+    {
+      "H": 189,
+      "S": [
+        3,
+        5,
+        6
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 27
+    },
+    {
+      "H": 175,
+      "S": [
+        4,
+        5,
+        6
+      ],
+      "constant_unit_words": 3,
+      "q": 7,
+      "words_starting_0": 25
+    }
+  ],
+  "composite_constant_step_hostile": {
+    "S": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "partial_sums": [
+      0,
+      3,
+      6,
+      0,
+      3,
+      6,
+      0,
+      3,
+      6
+    ],
+    "q": 9,
+    "word": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
+  },
+  "odd_eighths_in_G6": [
+    {
+      "left_good": false,
+      "right_good": true,
+      "t": "1/8",
+      "tight_owners": [
+        [
+          1,
+          "lower"
+        ]
+      ]
+    },
+    {
+      "left_good": false,
+      "right_good": false,
+      "t": "3/8",
+      "tight_owners": [
+        [
+          3,
+          "lower"
+        ],
+        [
+          5,
+          "upper"
+        ]
+      ]
+    },
+    {
+      "left_good": false,
+      "right_good": false,
+      "t": "5/8",
+      "tight_owners": [
+        [
+          3,
+          "upper"
+        ],
+        [
+          5,
+          "lower"
+        ]
+      ]
+    },
+    {
+      "left_good": true,
+      "right_good": false,
+      "t": "7/8",
+      "tight_owners": [
+        [
+          1,
+          "upper"
+        ]
+      ]
+    }
+  ],
+  "scope": "Elementary named-vertex/word correspondences; no new universal Hamiltonicity, LRC or conjecture-search proof.",
+  "square_cycle32": {
+    "full_named_mark_TM_steps": 6662,
+    "independent_edge_FRACTRAN_steps": 5344,
+    "root_weight": 180,
+    "scope": "edge checks alone versus full witness verifier; not an equal-work speed comparison"
+  },
+  "status": "PASS"
+}

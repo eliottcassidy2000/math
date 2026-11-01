@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "authenticated_input_files": 41,
+  "replays": [
+    {
+      "audit": "periodic_points",
+      "mode": "normal",
+      "sha256": "392d0a2db866ae23b27839943adfabf4c44ab994e91d618ee762013f15e4ca43"
+    },
+    {
+      "audit": "periodic_points",
+      "mode": "optimized",
+      "sha256": "392d0a2db866ae23b27839943adfabf4c44ab994e91d618ee762013f15e4ca43"
+    }
+  ]
+}

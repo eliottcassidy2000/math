@@ -1,0 +1,257 @@
+{
+  "status": "PASS",
+  "concrete_rows": {
+    "path": 50625,
+    "cycle": 72900
+  },
+  "all_strings_length_0_7_machine_cases": 43690,
+  "permutations_orders_1_7_machine_cases": 11826,
+  "square_subroutine_cases": 400,
+  "positive_cost_cases": [
+    {
+      "mode": "path",
+      "n": 15,
+      "first": 8,
+      "last": 9,
+      "steps": 1607
+    },
+    {
+      "mode": "path",
+      "n": 15,
+      "first": 9,
+      "last": 8,
+      "steps": 1610
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 1,
+      "last": 15,
+      "steps": 6662
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 8,
+      "last": 1,
+      "steps": 6683
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 28,
+      "last": 8,
+      "steps": 6743
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 21,
+      "last": 28,
+      "steps": 6722
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 4,
+      "last": 21,
+      "steps": 6671
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 32,
+      "last": 4,
+      "steps": 6755
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 17,
+      "last": 32,
+      "steps": 6710
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 19,
+      "last": 17,
+      "steps": 6716
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 30,
+      "last": 19,
+      "steps": 6749
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 6,
+      "last": 30,
+      "steps": 6677
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 3,
+      "last": 6,
+      "steps": 6668
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 13,
+      "last": 3,
+      "steps": 6698
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 12,
+      "last": 13,
+      "steps": 6695
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 24,
+      "last": 12,
+      "steps": 6731
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 25,
+      "last": 24,
+      "steps": 6734
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 11,
+      "last": 25,
+      "steps": 6692
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 5,
+      "last": 11,
+      "steps": 6674
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 31,
+      "last": 5,
+      "steps": 6752
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 18,
+      "last": 31,
+      "steps": 6713
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 7,
+      "last": 18,
+      "steps": 6680
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 29,
+      "last": 7,
+      "steps": 6746
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 20,
+      "last": 29,
+      "steps": 6719
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 16,
+      "last": 20,
+      "steps": 6707
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 9,
+      "last": 16,
+      "steps": 6686
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 27,
+      "last": 9,
+      "steps": 6740
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 22,
+      "last": 27,
+      "steps": 6725
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 14,
+      "last": 22,
+      "steps": 6701
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 2,
+      "last": 14,
+      "steps": 6665
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 23,
+      "last": 2,
+      "steps": 6728
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 26,
+      "last": 23,
+      "steps": 6737
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 10,
+      "last": 26,
+      "steps": 6689
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 15,
+      "last": 10,
+      "steps": 6704
+    },
+    {
+      "mode": "cycle",
+      "n": 32,
+      "first": 15,
+      "last": 1,
+      "steps": 6704
+    }
+  ]
+}

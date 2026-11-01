@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "guard_membership_cases": 341775,
+  "two_row_programs": 81,
+  "input_vectors_per_program": 25,
+  "certified_words": 7130,
+  "finite_maximality_cases": 3066,
+  "infinite_prefix_controls_40_rounds": 4064,
+  "priority_hostile_terminal": 5
+}

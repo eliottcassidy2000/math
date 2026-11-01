@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "independent_cap": 1,
+  "states": 1024,
+  "census": {
+    "prime": 92,
+    "cycle2": 720,
+    "cycle6": 212
+  },
+  "common_denominator": 41856930490307832900,
+  "analytic_lower_bounds": {
+    "prime": "50136286961664/86285158710179",
+    "cycle2": "753557212/2002524095",
+    "cycle6": "37396469504/151504041213525"
+  },
+  "precision_tail_controls": "m=0..64"
+}

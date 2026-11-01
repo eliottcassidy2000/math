@@ -1,0 +1,118 @@
+{
+  "fractran": {
+    "checks": "exact terminal exponent vector and exact step formula",
+    "exponent_inputs": "all n=0..1024",
+    "fraction_count": 14,
+    "literal_inputs": "all n=0..256",
+    "priority_swap_n2_final_integer": 124
+  },
+  "shells": {
+    "arrivals": "all n=1..1000",
+    "edge_total_G1000": 8711
+  },
+  "status": "FINITE-EXACT",
+  "tm": {
+    "bounded_words": {
+      "accepts": 1,
+      "digits": "0..n+1",
+      "length": "0..n+1",
+      "n": "0..4",
+      "runs": 20426
+    },
+    "cycle": {
+      "expanded_sha256": "13951acfcfc43185fd667aed094d5321bd8ec819d85aad41d58175cfd6e870c3",
+      "explicit_rows": 72900,
+      "states": 36
+    },
+    "cycle_gauge_runs": 1466,
+    "global_sidecar_hostile": [
+      1,
+      8,
+      1,
+      8,
+      1,
+      8,
+      1,
+      8
+    ],
+    "mutations": 55,
+    "path": {
+      "expanded_sha256": "c2a3a2aef26bfa787b9a6a6de997b93857e698c3abe3719ea755bee90fd0602b",
+      "explicit_rows": 50625,
+      "states": 25
+    },
+    "positive_witnesses": [
+      {
+        "mode": "path",
+        "n": 15,
+        "root_weight": 55,
+        "steps": 1607
+      },
+      {
+        "mode": "cycle",
+        "n": 32,
+        "root_weight": 180,
+        "steps": 6662
+      },
+      {
+        "mode": "cycle",
+        "n": 33,
+        "root_weight": 188,
+        "steps": 7049
+      },
+      {
+        "mode": "cycle",
+        "n": 80,
+        "root_weight": 704,
+        "steps": 37358
+      },
+      {
+        "mode": "cycle",
+        "n": 81,
+        "root_weight": 720,
+        "steps": 38273
+      },
+      {
+        "mode": "cycle",
+        "n": 82,
+        "root_weight": 734,
+        "steps": 39186
+      },
+      {
+        "mode": "cycle",
+        "n": 83,
+        "root_weight": 744,
+        "steps": 40085
+      },
+      {
+        "mode": "cycle",
+        "n": 84,
+        "root_weight": 758,
+        "steps": 41018
+      },
+      {
+        "mode": "cycle",
+        "n": 85,
+        "root_weight": 772,
+        "steps": 41961
+      },
+      {
+        "mode": "cycle",
+        "n": 86,
+        "root_weight": 786,
+        "steps": 42914
+      },
+      {
+        "mode": "cycle",
+        "n": 87,
+        "root_weight": 796,
+        "steps": 43853
+      }
+    ],
+    "raw_strings": {
+      "alphabet": "^1#$",
+      "length": "0..6",
+      "runs": 10922
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "binary_table_files_present": false,
+  "full_wrapper": {
+    "audits": 7,
+    "authenticated_input_files": 41,
+    "normal_optimized_relocated_byte_identical": true,
+    "replay_py_sha256": "4300f955145a48ae78aada5f821e1283b779b23e6344533794858978cbeba43d",
+    "script_mode_replays": 14,
+    "sha256": "c4af80ea7d042422f2c25edee79e0222c91241b103c4f4be70f09710248d2e20",
+    "status": "PASS"
+  },
+  "network_required": false,
+  "receipt_sha256": {
+    "acceleration": "a44b14c31a0a9d32e7a873ac9393c0473ba78e6bc5cc912acadc9047bf4e15b7",
+    "density": "172e754bd54e696cb4c694ea52e9a7772222cd858151c6273f975c24e3c305d2",
+    "early": "1d173a8a601ca6ea4d7699669e9f74615f32f6ec8f6423647ac935650d3b0414",
+    "lrc": "7506c48f28736507d059d2619caf566b0e8033f893b7c4319f5c7ee2b63ef28b",
+    "periodic_points": "392d0a2db866ae23b27839943adfabf4c44ab994e91d618ee762013f15e4ca43",
+    "square_tm": "853a98ec0817e7f024c11c774d11c43e5b9d7eca290c8dc0360439cf96f9fdc3",
+    "translation": "4fcdfe8faaa91e2cf15f4d54fc3a952ddfff6b1eb4cf5d2667e9a0836b2e44c0"
+  },
+  "relocated_audits": [
+    "early",
+    "density",
+    "square_tm",
+    "translation",
+    "lrc",
+    "acceleration",
+    "periodic_points"
+  ],
+  "repository_required": false,
+  "status": "PASS",
+  "third_party_packages_required": false
+}

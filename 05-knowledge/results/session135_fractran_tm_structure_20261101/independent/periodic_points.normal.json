@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "finite_horizon_rule_and_return_cases": 39204,
+  "horizons": [
+    1,
+    4
+  ],
+  "post_horizon_halt_counterexample": {
+    "inputs": [
+      4,
+      8
+    ],
+    "T": 2
+  },
+  "primegame_period_cutoff": 2,
+  "primegame_capped_states": 59049,
+  "primegame_representative_period_counts": {
+    "2": 45
+  },
+  "primegame_periodic_point_density": "2654208/36409529",
+  "toy_periodic_point_density": "5/12",
+  "reversed_toy_periodic_point_density": "5/9",
+  "toy_eventual_cycle_basin_density": "2/3",
+  "positive_polynomial_cap_cases": 81648,
+  "affine_cost_example": 1122,
+  "prime_permutation_input_cases": 2048,
+  "prime_permutation_literal_steps": 10062,
+  "renamed_readout_checks": 5632
+}

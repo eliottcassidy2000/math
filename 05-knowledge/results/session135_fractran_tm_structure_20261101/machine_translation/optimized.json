@@ -1,0 +1,747 @@
+{
+  "general_FRACTRAN": [
+    {
+      "IR_steps": 5,
+      "TM_transitions": 19,
+      "chosen_index_0based": 1,
+      "fractions": [
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          2
+        ]
+      ],
+      "input": 2,
+      "output": 7
+    },
+    {
+      "IR_steps": 1,
+      "TM_transitions": 1,
+      "chosen_index_0based": 0,
+      "fractions": [
+        [
+          2,
+          2
+        ]
+      ],
+      "input": 1,
+      "output": 1
+    },
+    {
+      "IR_steps": 2,
+      "TM_transitions": 8,
+      "chosen_index_0based": 0,
+      "fractions": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "input": 2,
+      "output": 3
+    },
+    {
+      "IR_steps": 2,
+      "TM_transitions": 6,
+      "chosen_index_0based": null,
+      "fractions": [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "input": 1,
+      "output": null
+    },
+    {
+      "IR_steps": 7,
+      "TM_transitions": 33,
+      "chosen_index_0based": 1,
+      "fractions": [
+        [
+          1,
+          12
+        ],
+        [
+          5,
+          2
+        ]
+      ],
+      "input": 4,
+      "output": 10
+    },
+    {
+      "IR_steps": 1,
+      "TM_transitions": 1,
+      "chosen_index_0based": 0,
+      "fractions": [
+        [
+          1,
+          1
+        ]
+      ],
+      "input": 7,
+      "output": 7
+    },
+    {
+      "IR_steps": 0,
+      "TM_transitions": 0,
+      "chosen_index_0based": null,
+      "fractions": [],
+      "input": 11,
+      "output": null
+    },
+    {
+      "IR_steps": 4,
+      "TM_transitions": 24,
+      "chosen_index_0based": 0,
+      "fractions": [
+        [
+          9,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "input": 12,
+      "output": 27
+    },
+    {
+      "IR_steps": 3,
+      "TM_transitions": 11,
+      "chosen_index_0based": 1,
+      "fractions": [
+        [
+          9,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "input": 3,
+      "output": 2
+    }
+  ],
+  "hostiles": {
+    "compiler_inputs_rejected": 5,
+    "unreduced_2_over_2_hostile": true
+  },
+  "input_sha256": {
+    "build.py": "115553fe1e9e7c7df622413a9be6fb35e2123629e3daff869d42e5c5ce49668d",
+    "compact_tail21.fractran": "9d67ec22c96dcdb0daa68412f026632fcc64213a15540df4a69e16b830729724",
+    "compact_tail21.ir.json": "f4ec74845ab417e35a985ddea3662c3776f5934ae968f051af4d2df929cf6b46",
+    "compact_tail21.roundtrip.json": "8d21f96f548a0d1a355fe53e224de494bcfd7fe51271aa641180a2d90e691b27",
+    "compact_tail21.tm.json": "05cbecc30f21ccc560a2a6ea27ae43662a2c182bf7831e3973ac350a57332a34",
+    "inherited_linear.py": "7e143d2d64845cdc4459c45abefb9819ebb74bc978f5f5ce7722863a8bf51786",
+    "machines.py": "f1c8634a2c76cc6af83d8a6931ef8d7620dcd6e3bdf0d5d802b873749e2c261f",
+    "migration_face.fractran": "5193eac52fe4dfe3d2bd2160f809cbc5dbc915609bf65202103f3f03ef85095a",
+    "migration_face.ir.json": "23deb1d1b954273f9a0f3cd331fa8ab58b27892bec5ca25dce210303ef5cc992",
+    "migration_face.roundtrip.json": "f95d27e1181d3a7cc6a904151b4e9d25807f35e2e45ecee8e25b571fed2926d3",
+    "migration_face.tm.json": "34199b02e3ba8939243d58e8331632fa80ba37c66b7443ddb841785d706b039f",
+    "migration_full.fractran": "111b36bf02460b269c8a9d03437ce160e5f41c1b3ac1d74f2b1d133a0039b037",
+    "migration_full.ir.json": "80f7d2791cd35840eacad37a01198c613fb6bdbe18935bdc32f9fdb1f111383a",
+    "migration_full.roundtrip.json": "d193da510ac14651cdbd617fbc177a32a2a5da5e71ae664eb00de898dea616ce",
+    "migration_full.tm.json": "22cfc83b4360105fffd65c6d7c1193383ca375594ac44b0b7cdb267c03e94c0f",
+    "migration_full.tm.rows.000.json": "e3e08f41d998ae7077dcb14b033ad9200d1a96ca5e1e91a08acf5b420b16a760",
+    "migration_full.tm.rows.001.json": "eb323854ec11dc6a647913412d60bca14154f96f09ee65aabac972512c4aa5bd",
+    "pure_blue.fractran": "8766bba0145d830002e697e76847182981691c57af305c15648a671183090e4e",
+    "pure_blue.ir.json": "aefa90813d208fa8a29c04e8b91d989dd91d8654a8ee09c912e8102567fa7c0d",
+    "pure_blue.roundtrip.json": "1c0c87eaba42545d320894c31cfde4bc4fd69d0e0b1db5b1f58876a03646a9cb",
+    "pure_blue.tm.json": "56acb0ece148264727b39f54770d102e733e5a6a4de0330a3288f9a78229998d",
+    "pure_blue.tm.rows.000.json": "965f8e96e93a0141a4f96f48f95ed5dd0b18d32735a20be9598ef28a747b52b9",
+    "pure_blue.tm.rows.001.json": "172cd675ab7163d5feb524cf5e928d6399fb2e290574e7dff6f1e7efe9e16b5c",
+    "pure_blue.tm.rows.002.json": "3e20f9ff8aee432539361a78b2b01525ce67912301453866d60d58904f6cf312",
+    "pure_blue.tm.rows.003.json": "a681394890afeaf7c03b5c1b711d82b3e92b6f01dbec4855e3a169640e5697dc",
+    "pure_blue.tm.rows.004.json": "cf719941396d58656464bf21fb128c7698e75ea5c08bf73a1d4ee27b67bb812a",
+    "verify.py": "8029d170aa56b993d160e4b3ea7bde5b2b7f6e2c2c0264e26e02e03c5fe2e2df"
+  },
+  "linear": {
+    "actual_programs": [
+      {
+        "program": "compact_tail21",
+        "rounds": [
+          {
+            "FRACTRAN_steps": 137,
+            "IR_steps": 214,
+            "TM_transitions": 1486,
+            "clock_in": 6,
+            "input": [
+              1,
+              4,
+              3,
+              5,
+              2,
+              6,
+              2
+            ],
+            "output": [
+              1,
+              5,
+              4,
+              9,
+              3,
+              12,
+              4
+            ]
+          },
+          {
+            "FRACTRAN_steps": 203,
+            "IR_steps": 316,
+            "TM_transitions": 3176,
+            "clock_in": 7,
+            "input": [
+              1,
+              5,
+              4,
+              9,
+              3,
+              12,
+              4
+            ],
+            "output": [
+              1,
+              6,
+              5,
+              14,
+              4,
+              20,
+              6
+            ]
+          },
+          {
+            "FRACTRAN_steps": 281,
+            "IR_steps": 436,
+            "TM_transitions": 6170,
+            "clock_in": 8,
+            "input": [
+              1,
+              6,
+              5,
+              14,
+              4,
+              20,
+              6
+            ],
+            "output": [
+              1,
+              7,
+              6,
+              20,
+              5,
+              30,
+              8
+            ]
+          },
+          {
+            "FRACTRAN_steps": 371,
+            "IR_steps": 574,
+            "TM_transitions": 11062,
+            "clock_in": 9,
+            "input": [
+              1,
+              7,
+              6,
+              20,
+              5,
+              30,
+              8
+            ],
+            "output": [
+              1,
+              8,
+              7,
+              27,
+              6,
+              42,
+              10
+            ]
+          },
+          {
+            "FRACTRAN_steps": 473,
+            "IR_steps": 730,
+            "TM_transitions": 18566,
+            "clock_in": 10,
+            "input": [
+              1,
+              8,
+              7,
+              27,
+              6,
+              42,
+              10
+            ],
+            "output": [
+              1,
+              9,
+              8,
+              35,
+              7,
+              56,
+              12
+            ]
+          },
+          {
+            "FRACTRAN_steps": 587,
+            "IR_steps": 904,
+            "TM_transitions": 29516,
+            "clock_in": 11,
+            "input": [
+              1,
+              9,
+              8,
+              35,
+              7,
+              56,
+              12
+            ],
+            "output": [
+              1,
+              10,
+              9,
+              44,
+              8,
+              72,
+              14
+            ]
+          }
+        ]
+      },
+      {
+        "program": "migration_full",
+        "rounds": [
+          {
+            "FRACTRAN_steps": 81,
+            "IR_steps": 152,
+            "TM_transitions": 2188,
+            "clock_in": 0,
+            "input": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "output": [
+              18,
+              0,
+              0,
+              17
+            ]
+          }
+        ]
+      },
+      {
+        "program": "migration_face",
+        "rounds": [
+          {
+            "FRACTRAN_steps": 77,
+            "IR_steps": 148,
+            "TM_transitions": 2176,
+            "clock_in": 0,
+            "input": [
+              0,
+              1
+            ],
+            "output": [
+              18,
+              17
+            ]
+          },
+          {
+            "FRACTRAN_steps": 5585,
+            "IR_steps": 11096,
+            "TM_transitions": 11449520,
+            "clock_in": 1,
+            "input": [
+              18,
+              17
+            ],
+            "output": [
+              1458,
+              1297
+            ]
+          }
+        ]
+      }
+    ],
+    "generic_matrix_cases": 8
+  },
+  "pure_blue": {
+    "checkpoints": [
+      {
+        "FRACTRAN_steps": 0,
+        "TM_transitions": 0,
+        "n": 0,
+        "output": 1,
+        "window": [
+          1,
+          1,
+          1,
+          2,
+          1,
+          3
+        ]
+      },
+      {
+        "FRACTRAN_steps": 30,
+        "TM_transitions": 148,
+        "n": 1,
+        "output": 1,
+        "window": [
+          1,
+          1,
+          2,
+          1,
+          3,
+          2
+        ]
+      },
+      {
+        "FRACTRAN_steps": 66,
+        "TM_transitions": 365,
+        "n": 2,
+        "output": 1,
+        "window": [
+          1,
+          2,
+          1,
+          3,
+          2,
+          4
+        ]
+      },
+      {
+        "FRACTRAN_steps": 106,
+        "TM_transitions": 605,
+        "n": 3,
+        "output": 2,
+        "window": [
+          2,
+          1,
+          3,
+          2,
+          4,
+          3
+        ]
+      },
+      {
+        "FRACTRAN_steps": 156,
+        "TM_transitions": 980,
+        "n": 4,
+        "output": 1,
+        "window": [
+          1,
+          3,
+          2,
+          4,
+          3,
+          6
+        ]
+      },
+      {
+        "FRACTRAN_steps": 210,
+        "TM_transitions": 1376,
+        "n": 5,
+        "output": 3,
+        "window": [
+          3,
+          2,
+          4,
+          3,
+          6,
+          4
+        ]
+      },
+      {
+        "FRACTRAN_steps": 280,
+        "TM_transitions": 2053,
+        "n": 6,
+        "output": 2,
+        "window": [
+          2,
+          4,
+          3,
+          6,
+          4,
+          9
+        ]
+      },
+      {
+        "FRACTRAN_steps": 356,
+        "TM_transitions": 2763,
+        "n": 7,
+        "output": 4,
+        "window": [
+          4,
+          3,
+          6,
+          4,
+          9,
+          6
+        ]
+      },
+      {
+        "FRACTRAN_steps": 454,
+        "TM_transitions": 4013,
+        "n": 8,
+        "output": 3,
+        "window": [
+          3,
+          6,
+          4,
+          9,
+          6,
+          13
+        ]
+      },
+      {
+        "FRACTRAN_steps": 562,
+        "TM_transitions": 5343,
+        "n": 9,
+        "output": 6,
+        "window": [
+          6,
+          4,
+          9,
+          6,
+          13,
+          9
+        ]
+      },
+      {
+        "FRACTRAN_steps": 702,
+        "TM_transitions": 7758,
+        "n": 10,
+        "output": 4,
+        "window": [
+          4,
+          9,
+          6,
+          13,
+          9,
+          19
+        ]
+      },
+      {
+        "FRACTRAN_steps": 856,
+        "TM_transitions": 10310,
+        "n": 11,
+        "output": 9,
+        "window": [
+          9,
+          6,
+          13,
+          9,
+          19,
+          13
+        ]
+      },
+      {
+        "FRACTRAN_steps": 1058,
+        "TM_transitions": 15138,
+        "n": 12,
+        "output": 6,
+        "window": [
+          6,
+          13,
+          9,
+          19,
+          13,
+          28
+        ]
+      },
+      {
+        "FRACTRAN_steps": 1280,
+        "TM_transitions": 20208,
+        "n": 13,
+        "output": 13,
+        "window": [
+          13,
+          9,
+          19,
+          13,
+          28,
+          19
+        ]
+      },
+      {
+        "FRACTRAN_steps": 1572,
+        "TM_transitions": 30032,
+        "n": 14,
+        "output": 9,
+        "window": [
+          9,
+          19,
+          13,
+          28,
+          19,
+          41
+        ]
+      },
+      {
+        "FRACTRAN_steps": 1894,
+        "TM_transitions": 40366,
+        "n": 15,
+        "output": 19,
+        "window": [
+          19,
+          13,
+          28,
+          19,
+          41,
+          28
+        ]
+      },
+      {
+        "FRACTRAN_steps": 2318,
+        "TM_transitions": 60677,
+        "n": 16,
+        "output": 13,
+        "window": [
+          13,
+          28,
+          19,
+          41,
+          28,
+          60
+        ]
+      },
+      {
+        "FRACTRAN_steps": 2786,
+        "TM_transitions": 82031,
+        "n": 17,
+        "output": 28,
+        "window": [
+          28,
+          19,
+          41,
+          28,
+          60,
+          41
+        ]
+      },
+      {
+        "FRACTRAN_steps": 3404,
+        "TM_transitions": 124574,
+        "n": 18,
+        "output": 19,
+        "window": [
+          19,
+          41,
+          28,
+          60,
+          41,
+          88
+        ]
+      },
+      {
+        "FRACTRAN_steps": 4086,
+        "TM_transitions": 169216,
+        "n": 19,
+        "output": 41,
+        "window": [
+          41,
+          28,
+          60,
+          41,
+          88,
+          60
+        ]
+      },
+      {
+        "FRACTRAN_steps": 4988,
+        "TM_transitions": 259005,
+        "n": 20,
+        "output": 28,
+        "window": [
+          28,
+          60,
+          41,
+          88,
+          60,
+          129
+        ]
+      },
+      {
+        "FRACTRAN_steps": 5984,
+        "TM_transitions": 353195,
+        "n": 21,
+        "output": 60,
+        "window": [
+          60,
+          41,
+          88,
+          60,
+          129,
+          88
+        ]
+      },
+      {
+        "FRACTRAN_steps": 7302,
+        "TM_transitions": 543687,
+        "n": 22,
+        "output": 41,
+        "window": [
+          41,
+          88,
+          60,
+          129,
+          88,
+          189
+        ]
+      },
+      {
+        "FRACTRAN_steps": 8758,
+        "TM_transitions": 743503,
+        "n": 23,
+        "output": 88,
+        "window": [
+          88,
+          60,
+          129,
+          88,
+          189,
+          129
+        ]
+      },
+      {
+        "FRACTRAN_steps": 10686,
+        "TM_transitions": 1149296,
+        "n": 24,
+        "output": 60,
+        "window": [
+          60,
+          129,
+          88,
+          189,
+          129,
+          277
+        ]
+      }
+    ],
+    "exhaustive_windows": 729,
+    "max_one_round_TM_transitions": 238,
+    "range": "{0,1,2}^6, scratch=0, clock=3"
+  },
+  "reverse": {
+    "halt_control_checked": true,
+    "ordinary_instruction_cases": 1764,
+    "self_loop_cases": 8
+  },
+  "scope": "All-input claims are proved in PROOF.md; these finite runs validate emitted tables and receipts.",
+  "status": "PASS"
+}

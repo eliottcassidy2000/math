@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "serialized_TM_instruction_cases": 1764,
+  "serialized_reverse_fraction_cases": 1764,
+  "serialized_source_macro_cases": 210,
+  "general_FRACTRAN_cases": 1000,
+  "self_loop_cases": 8,
+  "artifacts": {
+    "pure_blue": {
+      "states": 76,
+      "rows": 10926,
+      "registers": 8
+    },
+    "compact_tail21": {
+      "states": 168,
+      "rows": 293,
+      "registers": 15
+    },
+    "migration_face": {
+      "states": 503,
+      "rows": 993,
+      "registers": 5
+    },
+    "migration_full": {
+      "states": 1044,
+      "rows": 2063,
+      "registers": 9
+    }
+  }
+}

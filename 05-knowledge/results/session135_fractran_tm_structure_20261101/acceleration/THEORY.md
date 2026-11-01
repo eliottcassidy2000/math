@@ -226,3 +226,31 @@ uniform measure on valuation vectors, uniform time along a trajectory, or
 uniform distribution on tournament classes/rational witnesses. Neither
 natural-density existence nor the bounded-period algorithm is a general
 halting decider.
+
+## 8. Prime labels are a computational gauge, not a density invariant
+
+Let pi be a permutation of primes which moves only finitely many primes, and
+extend it multiplicatively to a bijection phi of positive integers and
+positive rationals. Replace each ordered fraction f_i by phi(f_i). Then
+
+    f_i N is an integer iff phi(f_i) phi(N) is an integer,
+    phi(f_i N)=phi(f_i) phi(N).
+
+Divisibility is preserved, so the FIRST eligible index is unchanged. Thus
+phi conjugates the full deterministic executions, including halting and
+least cycle periods. If an output is read from a designated prime exponent,
+that designation must be renamed too. An injective finite prime-support
+reassignment (distinct target primes) can always be extended to such a finite
+prime permutation.
+
+Natural density of INTEGER INPUTS is not invariant under this conjugacy.
+The prime swap2<->3 turns [3/2,2/3] into [2/3,3/2]. Section7 computes
+period-two point densities5/12 and5/9, respectively. This is the same
+abstract counter dynamics with different arithmetic weights on the carrier.
+Literal integer sizes and bit-cost constants also depend on the labels.
+No equality of natural measures follows from computational equivalence.
+
+This is a useful guard on cross-domain prime-group interpretations: an
+association must specify an external arithmetic observable that is retained,
+not just a changeable choice of register primes. It does not deny meaningful
+arithmetic interpretations when that additional structure is provided.

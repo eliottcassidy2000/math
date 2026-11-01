@@ -1,0 +1,159 @@
+{
+  "bounded_box": {
+    "distinct": true,
+    "failures": 0,
+    "height": 16,
+    "primitive": true,
+    "rows": 560,
+    "speeds": 13
+  },
+  "canonical_hostiles": [
+    {
+      "components": 368,
+      "first_good": "2/27",
+      "first_window": [
+        "3/364",
+        "3/364"
+      ],
+      "left_owners": [
+        [
+          4,
+          130,
+          1,
+          "+"
+        ],
+        [
+          8,
+          234,
+          1,
+          "-"
+        ]
+      ],
+      "name": "V26"
+    },
+    {
+      "components": 460,
+      "first_good": "3/26",
+      "first_window": [
+        "1/1134",
+        "13/4872"
+      ],
+      "left_owners": [
+        [
+          0,
+          81,
+          0,
+          "+"
+        ]
+      ],
+      "name": "incoherent"
+    },
+    {
+      "components": 160,
+      "first_good": "2/27",
+      "first_window": [
+        "1/602",
+        "1/168"
+      ],
+      "left_owners": [
+        [
+          0,
+          43,
+          0,
+          "+"
+        ]
+      ],
+      "name": "zero_free"
+    }
+  ],
+  "deep_well_isolated": [
+    "3/14",
+    "5/14",
+    "9/14",
+    "11/14"
+  ],
+  "fractran_max_steps": 17,
+  "fractran_register_cases": 6561,
+  "harmonic_k_range": [
+    1,
+    80
+  ],
+  "harmonic_selected": [
+    {
+      "isolated": 0,
+      "k": 1,
+      "measure": "1/3",
+      "positive": 1
+    },
+    {
+      "isolated": 2,
+      "k": 3,
+      "measure": "2/15",
+      "positive": 2
+    },
+    {
+      "isolated": 4,
+      "k": 5,
+      "measure": "2/35",
+      "positive": 2
+    },
+    {
+      "isolated": 4,
+      "k": 12,
+      "measure": "6617/194040",
+      "positive": 12
+    },
+    {
+      "isolated": 14,
+      "k": 30,
+      "measure": "300151059037/37265433004800",
+      "positive": 30
+    },
+    {
+      "isolated": 38,
+      "k": 80,
+      "measure": "4198882224955419992033840721159/3788570454263684613608358018606400",
+      "positive": 54
+    }
+  ],
+  "independent_window_cases": 1020,
+  "rational_fractran_cases_per_encoding": 4860,
+  "rational_register_encodings": 2,
+  "rejected_malformed_inputs": 6,
+  "reordering_hostile": "acceptance fraction first falsely accepts (0,1,0,0)",
+  "status": "FINITE-EXACT / PASS; LRC(14) OPEN",
+  "tight_AP13_measure": "0",
+  "tight_AP13_singletons": 6,
+  "tm_max_steps": 8450,
+  "tm_register_cases": 4225,
+  "whole_row_fractran_runs": [
+    {
+      "accepted": true,
+      "fractions": 53,
+      "input_bit_length": 33888,
+      "name": "V26-safe",
+      "steps": 703
+    },
+    {
+      "accepted": false,
+      "fractions": 53,
+      "input_bit_length": 33607,
+      "name": "V26-zero-blocked",
+      "steps": 353
+    },
+    {
+      "accepted": true,
+      "fractions": 53,
+      "input_bit_length": 2440,
+      "name": "V26-safe-rounded",
+      "steps": 53
+    },
+    {
+      "accepted": false,
+      "fractions": 53,
+      "input_bit_length": 2431,
+      "name": "V26-zero-blocked-rounded",
+      "steps": 28
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "manifest_verification": {
+    "manifests": 7,
+    "entries": 166
+  },
+  "negative_controls": [
+    "corrupt_source",
+    "remove_source",
+    "stale_receipt"
+  ],
+  "isolated_principal_replays": [
+    {
+      "lane": "acceleration",
+      "script": "check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "b7a67c5a743144925491494e2744f1470f7de9dcb95eb2793a57a610e6796e67",
+      "seconds": 0.292
+    },
+    {
+      "lane": "acceleration",
+      "script": "check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "b7a67c5a743144925491494e2744f1470f7de9dcb95eb2793a57a610e6796e67",
+      "seconds": 0.352
+    },
+    {
+      "lane": "acceleration",
+      "script": "periodic_points.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "4abafe6d34f88ac2f9ed2dc67c41dfd22e91eedbdcfab936cf22ed86693709a0",
+      "seconds": 0.54
+    },
+    {
+      "lane": "acceleration",
+      "script": "periodic_points.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "4abafe6d34f88ac2f9ed2dc67c41dfd22e91eedbdcfab936cf22ed86693709a0",
+      "seconds": 0.635
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "verify.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "89c0cc5d54dd75501fb78b0437e63b471bc13e202d2612abe36d861062295c04",
+      "seconds": 65.215
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "verify.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "89c0cc5d54dd75501fb78b0437e63b471bc13e202d2612abe36d861062295c04",
+      "seconds": 64.277
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "verify_entry_bound.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "175bd027b5415c7704bec07492a5aad8e752381b7c59a4ae9ff455b0a03cbe89",
+      "seconds": 0.664
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "verify_entry_bound.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "175bd027b5415c7704bec07492a5aad8e752381b7c59a4ae9ff455b0a03cbe89",
+      "seconds": 0.628
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "density_bounds.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "533c0375c30210a6ebc483fe7183951a34702ad5330d6503e29b1cc04b249efe",
+      "seconds": 0.027
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "density_bounds.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "533c0375c30210a6ebc483fe7183951a34702ad5330d6503e29b1cc04b249efe",
+      "seconds": 0.082
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "density_approximation.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "a65cdcf8e7f24b94ed00006f806582b500e48cb559fe27cb17d591bf4d44cb7a",
+      "seconds": 0.6
+    },
+    {
+      "lane": "primegame_machine",
+      "script": "density_approximation.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "a65cdcf8e7f24b94ed00006f806582b500e48cb559fe27cb17d591bf4d44cb7a",
+      "seconds": 0.557
+    },
+    {
+      "lane": "lrc_machine",
+      "script": "check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "3acb3bdf5dcef681765ad0c5328b3b12483c2c48b754c97e4ce0e4a0094e00ab",
+      "seconds": 4.622
+    },
+    {
+      "lane": "lrc_machine",
+      "script": "check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "3acb3bdf5dcef681765ad0c5328b3b12483c2c48b754c97e4ce0e4a0094e00ab",
+      "seconds": 4.586
+    },
+    {
+      "lane": "square_machines",
+      "script": "check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "19421f9161a59abd75c5ee76bcefe9628ccde72d99ed80b77f38884ca49fcac0",
+      "seconds": 123.879
+    },
+    {
+      "lane": "square_machines",
+      "script": "check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "19421f9161a59abd75c5ee76bcefe9628ccde72d99ed80b77f38884ca49fcac0",
+      "seconds": 122.53
+    },
+    {
+      "lane": "machine_translation",
+      "script": "verify.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "e73e354202c666ebd97a27ff56e8de26b8b3bb6422adf2f495d69af85ab1ec7a",
+      "seconds": 37.121
+    },
+    {
+      "lane": "machine_translation",
+      "script": "verify.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "e73e354202c666ebd97a27ff56e8de26b8b3bb6422adf2f495d69af85ab1ec7a",
+      "seconds": 37.804
+    },
+    {
+      "lane": ".",
+      "script": "interface_checks.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "9b4cf688a0ca46cffabe38f5f8d91306ad05dbbca9b26ab2ce05cf1a42c7d95c",
+      "seconds": 0.068
+    },
+    {
+      "lane": ".",
+      "script": "interface_checks.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "9b4cf688a0ca46cffabe38f5f8d91306ad05dbbca9b26ab2ce05cf1a42c7d95c",
+      "seconds": 0.146
+    },
+    {
+      "lane": "independent",
+      "script": "replay.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "c4af80ea7d042422f2c25edee79e0222c91241b103c4f4be70f09710248d2e20",
+      "seconds": 155.164
+    },
+    {
+      "lane": "independent",
+      "script": "replay.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "c4af80ea7d042422f2c25edee79e0222c91241b103c4f4be70f09710248d2e20",
+      "seconds": 156.288
+    }
+  ],
+  "scope": "Eleven principal verifiers across six lanes and the root integration, each normal and optimized, relocated independently; inner verifiers specify finite execution ranges and proof dependencies."
+}
