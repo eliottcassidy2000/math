@@ -2096,7 +2096,7 @@
   "controls": {
     "DP_equals_literal_OCF": "all 76 classes, orders 1..6",
     "DP_equals_permutations": "all 76 classes, orders 1..6",
-    "H_not_unique_packing_profile": "H=15",
+    "H_not_unique_packing_profile": "H=9; trailing zero coefficients normalized",
     "labelled_orbit_mass": "all orders 1..6"
   },
   "orientation": "lexicographic upper triangle, bit 1 means lower-labelled vertex points to higher",

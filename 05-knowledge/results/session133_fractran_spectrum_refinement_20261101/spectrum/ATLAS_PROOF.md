@@ -3,6 +3,10 @@
 **Status: FINITE-EXACT fresh independent reproduction of inherited results;
 CITED all-order cutoff. No novelty claim for the exclusions 7 and 21.**
 
+**Correction:** checkpoint 5811bb4 incorrectly used H15 as a packing-polynomial
+collision by comparing trailing zeros. The H9 control below repairs this;
+[CORRECTION.md](CORRECTION.md) preserves the exact failure mechanism.
+
 `H(T)` counts ordered directed Hamiltonian vertex words, not path orbits.
 `build_atlas.py` produces every isomorphism class through order six, starting
 with the empty tournament and adding every orientation of one new vertex.
@@ -63,8 +67,10 @@ is attainable.
   [Irving--Omar v3](https://arxiv.org/html/2412.10572v3), versus Corollary 19
   in v1. This packet uses literal directed cycles, not supports.
 
-A hostile checked in the atlas is that H=15 does not determine the packing
-profile. Self-converse flags also cannot be inferred from H alone: the two
+A hostile checked in the atlas is that H=9 does not determine the packing
+polynomial: a strong order-five witness has `1+4x`, while the ordered sum of
+two directed triangles has `1+2x+x^2`. Trailing zero coefficients are removed
+before comparison. Self-converse flags also cannot be inferred from H alone: the two
 strong order-five H15 classes are self-converse; the two strong order-six
 H15 classes form a converse pair.
 

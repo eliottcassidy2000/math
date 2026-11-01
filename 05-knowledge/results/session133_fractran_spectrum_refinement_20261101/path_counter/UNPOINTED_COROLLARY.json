@@ -1,0 +1,57 @@
+{
+  "H_with_two_unpointed_self_converse_classes": [
+    9,
+    513
+  ],
+  "bound_H": 1000000,
+  "double_apex_H_values": [
+    5,
+    9,
+    17,
+    33,
+    65,
+    129,
+    257,
+    513,
+    1025,
+    2049,
+    4097,
+    8193,
+    16385,
+    32769,
+    65537,
+    131073,
+    262145,
+    524289
+  ],
+  "finite_direct_apex_checks": {
+    "maximum_tournament_order": 9,
+    "reduced_words": 127
+  },
+  "pointed_versus_unpointed_hostile": {
+    "H": 5,
+    "R": 2,
+    "U": 1,
+    "anti_isomorphism": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "pointed_self_converse": 0,
+    "pointed_words": [
+      "100",
+      "110"
+    ],
+    "row_masks": [
+      2,
+      12,
+      9,
+      1
+    ],
+    "unpointed_self_converse": 1
+  },
+  "unpointed_odd_fibres": 1013,
+  "unpointed_self_converse_classes_total": 1017,
+  "unpointed_strong_classes_total": 693151
+}

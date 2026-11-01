@@ -1,0 +1,302 @@
+{
+  "status": "PASS",
+  "cycle_recurrence_through_q": 4096,
+  "inverse_fibres_all_odd_h_through": 2047,
+  "square_shells_through_q": 4096,
+  "endpoint_correction": "R_1=0; inverse formula must restrict n>=1 or h>=3.",
+  "marked_hostile": "H5 has two pointed classes100/110 exchanged by converse; the unique unpointed strong4 class is self-converse.",
+  "extremizer_counter_cases": [
+    {
+      "N": 6,
+      "count": 1,
+      "IR_steps": 226
+    },
+    {
+      "N": 7,
+      "count": 2,
+      "IR_steps": 370
+    },
+    {
+      "N": 8,
+      "count": 1,
+      "IR_steps": 702
+    },
+    {
+      "N": 9,
+      "count": 1,
+      "IR_steps": 517
+    },
+    {
+      "N": 10,
+      "count": 3,
+      "IR_steps": 700
+    },
+    {
+      "N": 11,
+      "count": 3,
+      "IR_steps": 1401
+    },
+    {
+      "N": 12,
+      "count": 1,
+      "IR_steps": 904
+    },
+    {
+      "N": 13,
+      "count": 4,
+      "IR_steps": 1126
+    },
+    {
+      "N": 14,
+      "count": 6,
+      "IR_steps": 2592
+    },
+    {
+      "N": 15,
+      "count": 1,
+      "IR_steps": 1387
+    },
+    {
+      "N": 16,
+      "count": 5,
+      "IR_steps": 1648
+    },
+    {
+      "N": 17,
+      "count": 10,
+      "IR_steps": 4563
+    },
+    {
+      "N": 18,
+      "count": 1,
+      "IR_steps": 1966
+    },
+    {
+      "N": 19,
+      "count": 6,
+      "IR_steps": 2266
+    },
+    {
+      "N": 20,
+      "count": 15,
+      "IR_steps": 7698
+    },
+    {
+      "N": 21,
+      "count": 1,
+      "IR_steps": 2641
+    },
+    {
+      "N": 22,
+      "count": 7,
+      "IR_steps": 2980
+    },
+    {
+      "N": 23,
+      "count": 21,
+      "IR_steps": 12477
+    },
+    {
+      "N": 24,
+      "count": 1,
+      "IR_steps": 3412
+    },
+    {
+      "N": 25,
+      "count": 8,
+      "IR_steps": 3790
+    },
+    {
+      "N": 26,
+      "count": 28,
+      "IR_steps": 19476
+    },
+    {
+      "N": 27,
+      "count": 1,
+      "IR_steps": 4279
+    },
+    {
+      "N": 28,
+      "count": 9,
+      "IR_steps": 4696
+    },
+    {
+      "N": 29,
+      "count": 36,
+      "IR_steps": 29367
+    },
+    {
+      "N": 30,
+      "count": 1,
+      "IR_steps": 5242
+    }
+  ],
+  "extremizer_literal_inputs": "0..8",
+  "square_counter_cases": [
+    {
+      "q": 0,
+      "G": 0,
+      "IR_steps": 41
+    },
+    {
+      "q": 1,
+      "G": 3,
+      "IR_steps": 492
+    },
+    {
+      "q": 2,
+      "G": 9,
+      "IR_steps": 1591
+    },
+    {
+      "q": 3,
+      "G": 11,
+      "IR_steps": 1772
+    },
+    {
+      "q": 4,
+      "G": 25,
+      "IR_steps": 3778
+    },
+    {
+      "q": 5,
+      "G": 31,
+      "IR_steps": 4018
+    },
+    {
+      "q": 6,
+      "G": 45,
+      "IR_steps": 5415
+    },
+    {
+      "q": 7,
+      "G": 51,
+      "IR_steps": 5726
+    },
+    {
+      "q": 8,
+      "G": 81,
+      "IR_steps": 9365
+    },
+    {
+      "q": 9,
+      "G": 91,
+      "IR_steps": 9588
+    },
+    {
+      "q": 10,
+      "G": 117,
+      "IR_steps": 11793
+    },
+    {
+      "q": 11,
+      "G": 127,
+      "IR_steps": 12066
+    },
+    {
+      "q": 12,
+      "G": 165,
+      "IR_steps": 15698
+    },
+    {
+      "q": 13,
+      "G": 179,
+      "IR_steps": 16030
+    },
+    {
+      "q": 14,
+      "G": 213,
+      "IR_steps": 18845
+    },
+    {
+      "q": 15,
+      "G": 227,
+      "IR_steps": 19290
+    },
+    {
+      "q": 16,
+      "G": 289,
+      "IR_steps": 26228
+    },
+    {
+      "q": 17,
+      "G": 307,
+      "IR_steps": 26207
+    },
+    {
+      "q": 18,
+      "G": 353,
+      "IR_steps": 30061
+    },
+    {
+      "q": 19,
+      "G": 371,
+      "IR_steps": 30090
+    },
+    {
+      "q": 20,
+      "G": 437,
+      "IR_steps": 36238
+    },
+    {
+      "q": 21,
+      "G": 459,
+      "IR_steps": 36284
+    },
+    {
+      "q": 22,
+      "G": 513,
+      "IR_steps": 40769
+    },
+    {
+      "q": 23,
+      "G": 535,
+      "IR_steps": 40928
+    },
+    {
+      "q": 24,
+      "G": 621,
+      "IR_steps": 49357
+    },
+    {
+      "q": 25,
+      "G": 647,
+      "IR_steps": 49260
+    },
+    {
+      "q": 26,
+      "G": 713,
+      "IR_steps": 54637
+    },
+    {
+      "q": 27,
+      "G": 739,
+      "IR_steps": 54674
+    },
+    {
+      "q": 28,
+      "G": 829,
+      "IR_steps": 62888
+    },
+    {
+      "q": 29,
+      "G": 859,
+      "IR_steps": 62900
+    },
+    {
+      "q": 30,
+      "G": 933,
+      "IR_steps": 68929
+    },
+    {
+      "q": 31,
+      "G": 963,
+      "IR_steps": 69138
+    }
+  ],
+  "square_emitted_inputs": "0..10",
+  "square_literal_inputs": "0..5",
+  "full_fibre_crosscheck_bound": 1000000,
+  "full_fibre_counts_sha256": "a242d86d761192ef0e3aeaff4df987c839a747c4a003901145188b3f319a0983"
+}

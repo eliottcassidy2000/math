@@ -1,0 +1,24 @@
+{
+  "check_removal_under_optimization": false,
+  "cwd_independent": true,
+  "excluded_from_manifest": [
+    "SHA256SUMS itself",
+    "__pycache__ directories"
+  ],
+  "input_artifacts": [
+    "local Python sources",
+    "fixed ordered fractions",
+    "local metadata and instruction/state shards"
+  ],
+  "network_required": false,
+  "reproduction": [
+    "python3 verify.py",
+    "cp VERIFIED.json VERIFIED.normal.json",
+    "python3 -O verify.py",
+    "cmp VERIFIED.normal.json VERIFIED.json",
+    "sha256sum -c SHA256SUMS"
+  ],
+  "runtime": "Python 3.10+; verified on 3.12.14",
+  "schema": "session133.fractran.portability.v1",
+  "third_party_packages": []
+}

@@ -1,0 +1,472 @@
+{
+  "G_first25": [
+    3,
+    9,
+    11,
+    25,
+    31,
+    45,
+    51,
+    81,
+    91,
+    117,
+    127,
+    165,
+    179,
+    213,
+    227,
+    289,
+    307,
+    353,
+    371,
+    437,
+    459,
+    513,
+    535,
+    621,
+    647
+  ],
+  "bound_H": 1000000,
+  "counts_sha256": "a242d86d761192ef0e3aeaff4df987c839a747c4a003901145188b3f319a0983",
+  "distinct_H_values": 249076,
+  "first_H_with_maximum_fibre": 176077,
+  "first_odd_H_rows": [
+    {
+      "H": 3,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 1,
+      "words": [
+        "10"
+      ]
+    },
+    {
+      "H": 5,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "100",
+        "110"
+      ]
+    },
+    {
+      "H": 7,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 9,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 3,
+      "words": [
+        "1000",
+        "1010",
+        "1110"
+      ]
+    },
+    {
+      "H": 11,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 1,
+      "words": [
+        "1100"
+      ]
+    },
+    {
+      "H": 13,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 15,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "10010",
+        "10110"
+      ]
+    },
+    {
+      "H": 17,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "10000",
+        "11110"
+      ]
+    },
+    {
+      "H": 19,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "10100",
+        "11010"
+      ]
+    },
+    {
+      "H": 21,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 23,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "11000",
+        "11100"
+      ]
+    },
+    {
+      "H": 25,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 1,
+      "words": [
+        "100110"
+      ]
+    },
+    {
+      "H": 27,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "100010",
+        "101110"
+      ]
+    },
+    {
+      "H": 29,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 31,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 1,
+      "words": [
+        "101010"
+      ]
+    },
+    {
+      "H": 33,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 4,
+      "words": [
+        "100000",
+        "100100",
+        "110110",
+        "111110"
+      ]
+    },
+    {
+      "H": 35,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 37,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "101100",
+        "110010"
+      ]
+    },
+    {
+      "H": 39,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "101000",
+        "111010"
+      ]
+    },
+    {
+      "H": 41,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 43,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 45,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 3,
+      "words": [
+        "110100",
+        "1000110",
+        "1001110"
+      ]
+    },
+    {
+      "H": 47,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "110000",
+        "111100"
+      ]
+    },
+    {
+      "H": 49,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 51,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 3,
+      "words": [
+        "111000",
+        "1000010",
+        "1011110"
+      ]
+    },
+    {
+      "H": 53,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1001010",
+        "1010110"
+      ]
+    },
+    {
+      "H": 55,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 57,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 59,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 61,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 4,
+      "words": [
+        "1000100",
+        "1010010",
+        "1011010",
+        "1101110"
+      ]
+    },
+    {
+      "H": 63,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1001100",
+        "1100110"
+      ]
+    },
+    {
+      "H": 65,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1000000",
+        "1111110"
+      ]
+    },
+    {
+      "H": 67,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 69,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1001000",
+        "1110110"
+      ]
+    },
+    {
+      "H": 71,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 73,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 4,
+      "words": [
+        "1010100",
+        "1011100",
+        "1100010",
+        "1101010"
+      ]
+    },
+    {
+      "H": 75,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 77,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 79,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1010000",
+        "1111010"
+      ]
+    },
+    {
+      "H": 81,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 3,
+      "words": [
+        "1011000",
+        "1110010",
+        "10001110"
+      ]
+    },
+    {
+      "H": 83,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 85,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "10000110",
+        "10011110"
+      ]
+    },
+    {
+      "H": 87,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1100100",
+        "1101100"
+      ]
+    },
+    {
+      "H": 89,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 91,
+      "pointed_self_converse_classes": 1,
+      "pointed_strong_classes": 1,
+      "words": [
+        "10010110"
+      ]
+    },
+    {
+      "H": 93,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    },
+    {
+      "H": 95,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "1100000",
+        "1111100"
+      ]
+    },
+    {
+      "H": 97,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 4,
+      "words": [
+        "1101000",
+        "1110100",
+        "10001010",
+        "10101110"
+      ]
+    },
+    {
+      "H": 99,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 2,
+      "words": [
+        "10000010",
+        "10111110"
+      ]
+    },
+    {
+      "H": 101,
+      "pointed_self_converse_classes": 0,
+      "pointed_strong_classes": 0,
+      "words": []
+    }
+  ],
+  "maximum_fibre_size": 14,
+  "missing_odd_H_first30": [
+    7,
+    13,
+    21,
+    29,
+    35,
+    41,
+    43,
+    49,
+    55,
+    57,
+    59,
+    67,
+    71,
+    75,
+    77,
+    83,
+    89,
+    93,
+    101,
+    105,
+    109,
+    111,
+    113,
+    119,
+    125,
+    131,
+    133,
+    135,
+    137,
+    147
+  ],
+  "odd_fibre_values": 999,
+  "pointed_strong_classes_total": 693169,
+  "status": "FINITE-EXACT under proved all-order inverse bound",
+  "tested_prefix_addresses": 999999
+}

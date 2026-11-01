@@ -1,0 +1,56 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "revision": "335577ae6d58bc9109160891885daddb6229b37f",
+  "sources": [
+    {
+      "bytes": 14290,
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/proofs.md",
+      "sha256": "c24aca5ffd092e216985eb794512d584c08db2610dd84982aabb6a5d24a69b6c"
+    },
+    {
+      "bytes": 11583,
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/BINARY_PRODUCT_DENSITY.md",
+      "sha256": "e3d1cec97f2964ac3719d5bb41836cb2a1ee919eb38da2b1362be8f200515cc1"
+    },
+    {
+      "bytes": 16219,
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/PROOF.md",
+      "sha256": "0a6fb599633afdbc197f88b577faab521cd806f2777e99ba8a0fbcf15210df52"
+    },
+    {
+      "bytes": 12803,
+      "path": "05-knowledge/results/session124_binary_bank_frontier_20261031/FINITE_BANK_PROOF.md",
+      "sha256": "7efe447d55786859450911302af901eff745056d8048b684c8cbd533b244ab8a"
+    },
+    {
+      "bytes": 10632,
+      "path": "05-knowledge/results/session26_random_bridges_20261022/session26-blue/RESULT.md",
+      "sha256": "b979dd680b70baea1ee9aedc0eae7b2475a71055ffb1ac50acdb98b652ffe43f"
+    },
+    {
+      "bytes": 14672,
+      "path": "05-knowledge/results/session26_random_bridges_20261022/session26-tournament/APEX_CLASSIFICATION_AND_SPECTRAL_LAW.md",
+      "sha256": "82d01a9acb14fab5d9f53acffc8202ce81beb2f7b55c4dbc8826a291f3a3e9f7"
+    },
+    {
+      "bytes": 4672,
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "bytes": 10552,
+      "path": "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md",
+      "sha256": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c"
+    },
+    {
+      "bytes": 5667,
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 16997,
+      "path": "05-knowledge/results/session132_fractran_tournament_recursion_20261031/fractran/compiler.py",
+      "sha256": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51"
+    }
+  ]
+}

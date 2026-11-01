@@ -1,0 +1,251 @@
+{
+  "status": "PASS",
+  "independent_Burnside_orders": "0..7",
+  "method": "Full symmetric-group permutations; direct signed unordered-pair orbits, including complement-twisted fixed sets.",
+  "table": [
+    {
+      "a000568": 1,
+      "self_converse": 1,
+      "pair_tournaments": 1,
+      "colored_tournaments": 1,
+      "colored_pair_tournaments": 1,
+      "converse_merged": 1,
+      "strong": 0
+    },
+    {
+      "a000568": 1,
+      "self_converse": 1,
+      "pair_tournaments": 1,
+      "colored_tournaments": 2,
+      "colored_pair_tournaments": 2,
+      "converse_merged": 1,
+      "strong": 1
+    },
+    {
+      "a000568": 1,
+      "self_converse": 1,
+      "pair_tournaments": 2,
+      "colored_tournaments": 4,
+      "colored_pair_tournaments": 8,
+      "converse_merged": 1,
+      "strong": 0
+    },
+    {
+      "a000568": 2,
+      "self_converse": 2,
+      "pair_tournaments": 12,
+      "colored_tournaments": 12,
+      "colored_pair_tournaments": 88,
+      "converse_merged": 2,
+      "strong": 1
+    },
+    {
+      "a000568": 4,
+      "self_converse": 2,
+      "pair_tournaments": 176,
+      "colored_tournaments": 48,
+      "colored_pair_tournaments": 2752,
+      "converse_merged": 3,
+      "strong": 1
+    },
+    {
+      "a000568": 12,
+      "self_converse": 8,
+      "pair_tournaments": 8784,
+      "colored_tournaments": 296,
+      "colored_pair_tournaments": 279968,
+      "converse_merged": 10,
+      "strong": 6
+    },
+    {
+      "a000568": 56,
+      "self_converse": 12,
+      "pair_tournaments": 1492288,
+      "colored_tournaments": 3040,
+      "colored_pair_tournaments": 95458560,
+      "converse_merged": 34,
+      "strong": 35
+    },
+    {
+      "a000568": 456,
+      "self_converse": 88,
+      "pair_tournaments": 872687552,
+      "colored_tournaments": 54256,
+      "colored_pair_tournaments": 111698291584,
+      "converse_merged": 272,
+      "strong": 353
+    }
+  ],
+  "IR_cases": [
+    {
+      "program": "a000568",
+      "n": 0,
+      "output": 1,
+      "steps": 616
+    },
+    {
+      "program": "a000568",
+      "n": 1,
+      "output": 1,
+      "steps": 3277
+    },
+    {
+      "program": "a000568",
+      "n": 2,
+      "output": 1,
+      "steps": 5790
+    },
+    {
+      "program": "a000568",
+      "n": 3,
+      "output": 2,
+      "steps": 30977
+    },
+    {
+      "program": "self_converse",
+      "n": 0,
+      "output": 1,
+      "steps": 809
+    },
+    {
+      "program": "self_converse",
+      "n": 1,
+      "output": 1,
+      "steps": 867
+    },
+    {
+      "program": "self_converse",
+      "n": 2,
+      "output": 1,
+      "steps": 3701
+    },
+    {
+      "program": "self_converse",
+      "n": 3,
+      "output": 2,
+      "steps": 3940
+    },
+    {
+      "program": "pair_tournaments",
+      "n": 0,
+      "output": 1,
+      "steps": 622
+    },
+    {
+      "program": "pair_tournaments",
+      "n": 1,
+      "output": 1,
+      "steps": 3283
+    },
+    {
+      "program": "pair_tournaments",
+      "n": 2,
+      "output": 2,
+      "steps": 5986
+    },
+    {
+      "program": "pair_tournaments",
+      "n": 3,
+      "output": 12,
+      "steps": 41807
+    },
+    {
+      "program": "colored_tournaments",
+      "n": 0,
+      "output": 1,
+      "steps": 674
+    },
+    {
+      "program": "colored_tournaments",
+      "n": 1,
+      "output": 2,
+      "steps": 3503
+    },
+    {
+      "program": "colored_tournaments",
+      "n": 2,
+      "output": 4,
+      "steps": 6731
+    },
+    {
+      "program": "colored_tournaments",
+      "n": 3,
+      "output": 12,
+      "steps": 43097
+    },
+    {
+      "program": "colored_pair_tournaments",
+      "n": 0,
+      "output": 1,
+      "steps": 688
+    },
+    {
+      "program": "colored_pair_tournaments",
+      "n": 1,
+      "output": 2,
+      "steps": 3517
+    },
+    {
+      "program": "colored_pair_tournaments",
+      "n": 2,
+      "output": 8,
+      "steps": 8280
+    },
+    {
+      "program": "colored_pair_tournaments",
+      "n": 3,
+      "output": 88,
+      "steps": 446933
+    },
+    {
+      "program": "converse_merged",
+      "n": 0,
+      "output": 1,
+      "steps": 1998
+    },
+    {
+      "program": "converse_merged",
+      "n": 1,
+      "output": 1,
+      "steps": 4773
+    },
+    {
+      "program": "converse_merged",
+      "n": 2,
+      "output": 1,
+      "steps": 10215
+    },
+    {
+      "program": "converse_merged",
+      "n": 3,
+      "output": 2,
+      "steps": 36024
+    },
+    {
+      "program": "strong",
+      "n": 0,
+      "output": 0,
+      "steps": 39
+    },
+    {
+      "program": "strong",
+      "n": 1,
+      "output": 1,
+      "steps": 3993
+    },
+    {
+      "program": "strong",
+      "n": 2,
+      "output": 0,
+      "steps": 14840
+    },
+    {
+      "program": "strong",
+      "n": 3,
+      "output": 1,
+      "steps": 66977
+    }
+  ],
+  "actual_fraction_exponent_cases": 21,
+  "literal_integer_cases": 7
+}

@@ -1,0 +1,39 @@
+{
+  "data_primes": [
+    2,
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31,
+    37,
+    41,
+    43,
+    47
+  ],
+  "error": 0,
+  "fraction_parts": [
+    "extremizer_tail.fractions.00.txt"
+  ],
+  "input": 2,
+  "instruction_parts": [
+    "extremizer_tail.instructions.00.json"
+  ],
+  "output": 1,
+  "register_count": 15,
+  "registers": {
+    "ERROR": 0,
+    "OUT": 1,
+    "k": 4,
+    "n": 2,
+    "residue": 3
+  },
+  "state_prime_parts": [
+    "extremizer_tail.states.00.json"
+  ]
+}

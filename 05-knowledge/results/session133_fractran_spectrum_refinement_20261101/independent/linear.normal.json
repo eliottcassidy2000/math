@@ -1,0 +1,1322 @@
+{
+  "status": "PASS",
+  "literal_matrix_cases": [
+    {
+      "matrix": [
+        [
+          0
+        ]
+      ],
+      "initial": [
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        0
+      ],
+      "steps_by_round": [
+        3,
+        3,
+        3
+      ],
+      "max_integer_bits": 17
+    },
+    {
+      "matrix": [
+        [
+          0
+        ]
+      ],
+      "initial": [
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        0
+      ],
+      "steps_by_round": [
+        9,
+        3,
+        3
+      ],
+      "max_integer_bits": 17
+    },
+    {
+      "matrix": [
+        [
+          1
+        ]
+      ],
+      "initial": [
+        2
+      ],
+      "rounds": 4,
+      "last": [
+        2
+      ],
+      "steps_by_round": [
+        11,
+        11,
+        11,
+        11
+      ],
+      "max_integer_bits": 24
+    },
+    {
+      "matrix": [
+        [
+          2
+        ]
+      ],
+      "initial": [
+        1
+      ],
+      "rounds": 7,
+      "last": [
+        128
+      ],
+      "steps_by_round": [
+        9,
+        15,
+        27,
+        51,
+        99,
+        195,
+        387
+      ],
+      "max_integer_bits": 232
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "initial": [
+        1,
+        0
+      ],
+      "rounds": 8,
+      "last": [
+        34,
+        21
+      ],
+      "steps_by_round": [
+        11,
+        15,
+        21,
+        31,
+        47,
+        73,
+        115,
+        183
+      ],
+      "max_integer_bits": 181
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "initial": [
+        2,
+        3
+      ],
+      "rounds": 6,
+      "last": [
+        2,
+        3
+      ],
+      "steps_by_round": [
+        25,
+        25,
+        25,
+        25,
+        25,
+        25
+      ],
+      "max_integer_bits": 45
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "initial": [
+        1,
+        2,
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        6,
+        12,
+        18
+      ],
+      "steps_by_round": [
+        45,
+        75,
+        121
+      ],
+      "max_integer_bits": 143
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "initial": [
+        2,
+        3
+      ],
+      "rounds": 4,
+      "last": [
+        0,
+        0
+      ],
+      "steps_by_round": [
+        15,
+        5,
+        5,
+        5
+      ],
+      "max_integer_bits": 28
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          1
+        ]
+      ],
+      "initial": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        222,
+        329,
+        276,
+        191
+      ],
+      "steps_by_round": [
+        91,
+        447,
+        2413
+      ],
+      "max_integer_bits": 3945
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          0
+        ]
+      ],
+      "initial": [
+        2,
+        0,
+        2,
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        10,
+        70,
+        22,
+        32
+      ],
+      "steps_by_round": [
+        65,
+        173,
+        397
+      ],
+      "max_integer_bits": 539
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ]
+      ],
+      "initial": [
+        0,
+        3,
+        3,
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        102,
+        84,
+        99,
+        213
+      ],
+      "steps_by_round": [
+        93,
+        333,
+        1263
+      ],
+      "max_integer_bits": 1993
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "initial": [
+        3,
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        24,
+        24
+      ],
+      "steps_by_round": [
+        41,
+        77,
+        149
+      ],
+      "max_integer_bits": 139
+    },
+    {
+      "matrix": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        0,
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        11,
+        10,
+        14
+      ],
+      "steps_by_round": [
+        19,
+        39,
+        99
+      ],
+      "max_integer_bits": 135
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "initial": [
+        1,
+        1
+      ],
+      "rounds": 3,
+      "last": [
+        0,
+        0
+      ],
+      "steps_by_round": [
+        13,
+        9,
+        5
+      ],
+      "max_integer_bits": 22
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "initial": [
+        3,
+        0,
+        1
+      ],
+      "rounds": 3,
+      "last": [
+        11,
+        29,
+        11
+      ],
+      "steps_by_round": [
+        37,
+        73,
+        153
+      ],
+      "max_integer_bits": 190
+    },
+    {
+      "matrix": [
+        [
+          2
+        ]
+      ],
+      "initial": [
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        0
+      ],
+      "steps_by_round": [
+        3,
+        3,
+        3
+      ],
+      "max_integer_bits": 17
+    },
+    {
+      "matrix": [
+        [
+          1
+        ]
+      ],
+      "initial": [
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        2
+      ],
+      "steps_by_round": [
+        11,
+        11,
+        11
+      ],
+      "max_integer_bits": 19
+    },
+    {
+      "matrix": [
+        [
+          2
+        ]
+      ],
+      "initial": [
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        0
+      ],
+      "steps_by_round": [
+        3,
+        3,
+        3
+      ],
+      "max_integer_bits": 17
+    },
+    {
+      "matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "initial": [
+        3,
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        144,
+        102
+      ],
+      "steps_by_round": [
+        59,
+        191,
+        641
+      ],
+      "max_integer_bits": 637
+    },
+    {
+      "matrix": [
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "initial": [
+        0,
+        3,
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        72,
+        72,
+        120
+      ],
+      "steps_by_round": [
+        37,
+        151,
+        655
+      ],
+      "max_integer_bits": 913
+    },
+    {
+      "matrix": [
+        [
+          1
+        ]
+      ],
+      "initial": [
+        1
+      ],
+      "rounds": 3,
+      "last": [
+        1
+      ],
+      "steps_by_round": [
+        7,
+        7,
+        7
+      ],
+      "max_integer_bits": 18
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "initial": [
+        2,
+        3,
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        8,
+        13,
+        0
+      ],
+      "steps_by_round": [
+        33,
+        49,
+        75
+      ],
+      "max_integer_bits": 86
+    },
+    {
+      "matrix": [
+        [
+          0
+        ]
+      ],
+      "initial": [
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        0
+      ],
+      "steps_by_round": [
+        7,
+        3,
+        3
+      ],
+      "max_integer_bits": 17
+    },
+    {
+      "matrix": [
+        [
+          0
+        ]
+      ],
+      "initial": [
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        0
+      ],
+      "steps_by_round": [
+        7,
+        3,
+        3
+      ],
+      "max_integer_bits": 17
+    },
+    {
+      "matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "initial": [
+        3,
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        72,
+        26
+      ],
+      "steps_by_round": [
+        41,
+        103,
+        273
+      ],
+      "max_integer_bits": 256
+    },
+    {
+      "matrix": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          2,
+          2
+        ]
+      ],
+      "initial": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "rounds": 3,
+      "last": [
+        20,
+        76,
+        56,
+        96
+      ],
+      "steps_by_round": [
+        55,
+        187,
+        645
+      ],
+      "max_integer_bits": 1007
+    },
+    {
+      "matrix": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "initial": [
+        1,
+        1,
+        1
+      ],
+      "rounds": 3,
+      "last": [
+        71,
+        87,
+        122
+      ],
+      "steps_by_round": [
+        39,
+        155,
+        689
+      ],
+      "max_integer_bits": 970
+    },
+    {
+      "matrix": [
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "initial": [
+        1,
+        1,
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        86,
+        63,
+        23
+      ],
+      "steps_by_round": [
+        39,
+        123,
+        443
+      ],
+      "max_integer_bits": 563
+    },
+    {
+      "matrix": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ]
+      ],
+      "initial": [
+        2,
+        2,
+        3
+      ],
+      "rounds": 3,
+      "last": [
+        36,
+        72,
+        120
+      ],
+      "steps_by_round": [
+        63,
+        193,
+        607
+      ],
+      "max_integer_bits": 812
+    },
+    {
+      "matrix": [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "initial": [
+        1,
+        0,
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        60,
+        40,
+        68
+      ],
+      "steps_by_round": [
+        37,
+        119,
+        431
+      ],
+      "max_integer_bits": 577
+    },
+    {
+      "matrix": [
+        [
+          1
+        ]
+      ],
+      "initial": [
+        2
+      ],
+      "rounds": 3,
+      "last": [
+        2
+      ],
+      "steps_by_round": [
+        11,
+        11,
+        11
+      ],
+      "max_integer_bits": 19
+    },
+    {
+      "matrix": [
+        [
+          2,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ]
+      ],
+      "initial": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "rounds": 3,
+      "last": [
+        28,
+        6,
+        28,
+        14
+      ],
+      "steps_by_round": [
+        23,
+        65,
+        205
+      ],
+      "max_integer_bits": 313
+    }
+  ],
+  "invalid_matrices_rejected": 6,
+  "strong_atoms_verified": [
+    [
+      3,
+      3,
+      1
+    ],
+    [
+      4,
+      5,
+      1
+    ],
+    [
+      5,
+      9,
+      2
+    ],
+    [
+      5,
+      11,
+      1
+    ],
+    [
+      5,
+      13,
+      1
+    ],
+    [
+      5,
+      15,
+      2
+    ],
+    [
+      6,
+      15,
+      2
+    ],
+    [
+      6,
+      17,
+      2
+    ],
+    [
+      6,
+      19,
+      2
+    ]
+  ],
+  "recurrence_matrix_dimension": 66,
+  "tail_closed_form_checks": "orders6..1000",
+  "tail_literal": {
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "initial": [
+      1,
+      4,
+      3,
+      0,
+      5,
+      2,
+      2,
+      6,
+      2,
+      2,
+      0
+    ],
+    "rounds": 6,
+    "last": [
+      1,
+      10,
+      9,
+      0,
+      44,
+      8,
+      8,
+      72,
+      14,
+      14,
+      0
+    ],
+    "steps_by_round": [
+      167,
+      245,
+      335,
+      437,
+      551,
+      677
+    ],
+    "max_integer_bits": 1164
+  },
+  "compact_alias_checks": "orders6..1000",
+  "compact_literal": {
+    "matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "initial": [
+      1,
+      4,
+      3,
+      5,
+      2,
+      6,
+      2
+    ],
+    "rounds": 6,
+    "last": [
+      1,
+      10,
+      9,
+      44,
+      8,
+      72,
+      14
+    ],
+    "steps_by_round": [
+      137,
+      203,
+      281,
+      371,
+      473,
+      587
+    ],
+    "max_integer_bits": 905
+  },
+  "compact_unused_zero_prime": 197,
+  "scope": "All-order recurrence correctness is conditional on completeness of the bounded strong inventory; literal generic compiler tests are finite.",
+  "source_sha256": {
+    "distribution/stream.py": "7e143d2d64845cdc4459c45abefb9819ebb74bc978f5f5ce7722863a8bf51786",
+    "spectrum/atlas.json": "97945919a431391b241291e190c366b5290d396e1144db52088a2abca4bfd4e7"
+  }
+}

@@ -1,0 +1,9 @@
+PASS a000568 {'registers': 34, 'states': 2914, 'fractions': 4294, 'fraction_parts': 1, 'fraction_bytes': 51468, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 149, 'halt_prime': 26879}
+PASS self_converse {'registers': 37, 'states': 3220, 'fractions': 4744, 'fraction_parts': 1, 'fraction_bytes': 57441, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 163, 'halt_prime': 30113}
+PASS converse_merged {'registers': 40, 'states': 3497, 'fractions': 5152, 'fraction_parts': 1, 'fraction_bytes': 62880, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 179, 'halt_prime': 32993}
+PASS strong {'registers': 45, 'states': 3843, 'fractions': 5663, 'fraction_parts': 1, 'fraction_bytes': 69727, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 199, 'halt_prime': 36677}
+PASS pair_tournaments {'registers': 34, 'states': 2916, 'fractions': 4296, 'fraction_parts': 1, 'fraction_bytes': 51496, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 149, 'halt_prime': 26891}
+PASS colored_pair_tournaments {'registers': 36, 'states': 3012, 'fractions': 4437, 'fraction_parts': 1, 'fraction_bytes': 53395, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 157, 'halt_prime': 27941}
+PASS colored_tournaments {'registers': 36, 'states': 3011, 'fractions': 4436, 'fraction_parts': 1, 'fraction_bytes': 53381, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 157, 'halt_prime': 27919}
+PASS extremizer_tail {'registers': 15, 'states': 564, 'fractions': 829, 'fraction_parts': 1, 'fraction_bytes': 8292, 'input_prime': 5, 'output_prime': 3, 'entry_prime': 53, 'halt_prime': 4229}
+PASS all eight compiled programs, direct core20/core14, hostile controls and independent censuses

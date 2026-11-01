@@ -1,7 +1,8 @@
 {
   "checkpoint": 2719,
-  "checks": 3262,
+  "checks": 3290,
   "clock": 2729,
+  "compact_tail_fractions": 43,
   "dimension": 66,
   "fraction_sha256": "89f96d78fecef98780b319a3a939faa53ced1948299626854e975c9073cb5982",
   "fractions": 397,

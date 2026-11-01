@@ -1,0 +1,42 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "335577ae6d58bc9109160891885daddb6229b37f",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "bytes": 5667
+    },
+    {
+      "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "bytes": 15032
+    },
+    {
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8",
+      "bytes": 19197
+    },
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+      "bytes": 4672
+    }
+  ],
+  "external": [
+    {
+      "author": "Arthur H. Busch",
+      "title": "A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+      "year": 2006,
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+      "used": "Theorem 1 / Corollary 1 exact strong minimum; SCC factorization; nearly transitive count",
+      "checked_utc": "2026-11-01"
+    },
+    {
+      "authors": "John Irving, Mohamed Omar",
+      "url": "https://arxiv.org/html/2412.10572v3",
+      "used": "Corollary 20 positive odd-cycle collection formula, credited to Grinberg\u2013Stanley",
+      "checked_utc": "2026-11-01"
+    }
+  ]
+}

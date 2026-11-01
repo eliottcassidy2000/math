@@ -1,0 +1,96 @@
+{
+  "correction": "Checkpoint5811bb4 packing-profile control repaired; see CORRECTION.md.",
+  "files": {
+    "ATLAS_MANIFEST.json": {
+      "bytes": 999,
+      "sha256": "ed19455a425cdaab197901775d83320327ddcd8f407f569c5a375a3ec50ee82f"
+    },
+    "ATLAS_PROOF.md": {
+      "bytes": 4362,
+      "sha256": "c624f3d570087fb2c18bda13c39faf5d7c6165dd9d27e09fd0ccd95902efea52"
+    },
+    "ATLAS_PUBLIC_FILES.txt": {
+      "bytes": 135,
+      "sha256": "1edae66bd49c3790c06f08b51fbfaa3cae1985103c43eb4ca5dd919e844515ad"
+    },
+    "ATLAS_README.md": {
+      "bytes": 900,
+      "sha256": "62d2a444b8c7745cd5a6717afe16784ba080041ceeec80166513d03b4f191363"
+    },
+    "CORRECTION.md": {
+      "bytes": 1430,
+      "sha256": "d83d6e8f19e67ac327efbf7aa4ac0b0205f42d3d76382782ff49d041f772da06"
+    },
+    "OBSTRUCTION_PROOF.md": {
+      "bytes": 11984,
+      "sha256": "e56a78deede068c1dbcfaf9743359994509ed8b16c64fc97405fa7a8ab0ef53c"
+    },
+    "PUBLIC_FILES.txt": {
+      "bytes": 407,
+      "sha256": "3366dddda571669f190a12b09d32dd2af5a9a74e7b1354df15d7f179c9c6e35b"
+    },
+    "README.md": {
+      "bytes": 2743,
+      "sha256": "ff0f513433e48a115a9647bdc3f68a018af5c26be29bb60487abde2f1d996251"
+    },
+    "SOURCES.json": {
+      "bytes": 2218,
+      "sha256": "229a6ea26e8f341f52c97298be74bf57402d89f0cfe484ac655a1d863f8beffb"
+    },
+    "atlas.json": {
+      "bytes": 31958,
+      "sha256": "97945919a431391b241291e190c366b5290d396e1144db52088a2abca4bfd4e7"
+    },
+    "atlas.optimized.json": {
+      "bytes": 31958,
+      "sha256": "97945919a431391b241291e190c366b5290d396e1144db52088a2abca4bfd4e7"
+    },
+    "basis21.json": {
+      "bytes": 21747,
+      "sha256": "90bb8490dc2fb933a63878bcebec327f53125120470b5fa9e162adfd89c7bf1d"
+    },
+    "basis21.optimized.json": {
+      "bytes": 21747,
+      "sha256": "90bb8490dc2fb933a63878bcebec327f53125120470b5fa9e162adfd89c7bf1d"
+    },
+    "basis7.json": {
+      "bytes": 3519,
+      "sha256": "445367a4d6092d03f720826038f12723ed2f51af8bae8a56fbd90e628b35f5da"
+    },
+    "basis_sequence.json": {
+      "bytes": 3966,
+      "sha256": "dab755595f42fbd8cd65a1eaa77b360e78c201079d553873a624457708f0039b"
+    },
+    "build_atlas.py": {
+      "bytes": 6582,
+      "sha256": "86351843fc3b40cc676abb4618a03b87bee86fa7845082f43e8127c7fcad269a"
+    },
+    "check_basis_independent.py": {
+      "bytes": 3762,
+      "sha256": "1feb03cab97bc1c9f4126ff44fb347afccf47df2466e9c025b31a65189e9dc45"
+    },
+    "forbidden_basis.py": {
+      "bytes": 6690,
+      "sha256": "4586d22cc144c35010b19f1613da6b4f1688ee9d927595a64d620bdc22d1c6d4"
+    },
+    "independent.normal.json": {
+      "bytes": 829,
+      "sha256": "e1fd8aafbe3825106a14408060634a052bac28934a0eb3036f0d86d09fbeffff"
+    },
+    "independent.optimized.json": {
+      "bytes": 829,
+      "sha256": "e1fd8aafbe3825106a14408060634a052bac28934a0eb3036f0d86d09fbeffff"
+    },
+    "run_checks.py": {
+      "bytes": 1918,
+      "sha256": "400c82751c913918e1ad1380fc12cf7f2dc727f8db1bc4b6c84027094a5af359"
+    },
+    "verification.json": {
+      "bytes": 630,
+      "sha256": "285be3bf109cd4268e3cc05eba681953a83aad5e6dea03c0eab2e8610ac4a020"
+    }
+  },
+  "schema": "session133.bounded-H-obstruction-package.v1",
+  "scope": "Sharp local-witness bound for B>=1; complete obstruction basis terms B<=21; inherited exact exclusions; unrestricted spectrum completeness OPEN",
+  "status": "PASS normal/optimized producer and independent checks; structural theorem audit passed"
+}

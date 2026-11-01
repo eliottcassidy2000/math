@@ -18,3 +18,8 @@ inventory certification is in the sibling spectrum and core_reduction lanes.
 sequences starting at n=6. Its seed and output mapping are in
 `tail_program.json`; all counts at this seed are proved initial values, not
 an oracle. The full-prefix program remains available above.
+
+**Further refinement:** `compact_tail21.fractran` uses **43 fractions**, sharing
+registers for the two pairs of identical sequences and using an absent prime
+for the two zero channels. Its eleven-entry `output_primes` map and exact seed
+are in `compact_tail_program.json`. Readout remains a prime exponent.

@@ -1,0 +1,230 @@
+{
+  "canonical_code": "Minimum upper-triangle bitcode subject to nondecreasing outdegree order.",
+  "checks": {
+    "all_vertex_deletions": "every listed obstruction",
+    "labelled_mass": "all orders 1..7",
+    "maximal_order_control": "ordered r triangle chain"
+  },
+  "counts": {
+    "by_order": {
+      "5": 6,
+      "6": 1
+    },
+    "nonstrong": 1,
+    "strong": 6,
+    "strong_by_H": {
+      "9": 2,
+      "11": 1,
+      "13": 1,
+      "15": 2
+    },
+    "strong_by_order": {
+      "5": 6
+    },
+    "total": 7
+  },
+  "nonstrong_obstructions": [
+    {
+      "H": 9,
+      "atoms": [
+        {
+          "H": 3,
+          "degree_code": 2,
+          "n": 3
+        },
+        {
+          "H": 3,
+          "degree_code": 2,
+          "n": 3
+        }
+      ],
+      "deletion_H": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "n": 6,
+      "rows": [
+        60,
+        57,
+        58,
+        32,
+        8,
+        16
+      ]
+    }
+  ],
+  "nontriangle_chain_order_bound": 5,
+  "schema": "session133.minimal-induced-H-obstructions.v1",
+  "scope": "All orders, conditional only on cited OCF, Moon strong-deletion theorem, and Busch bound; finite classification exact.",
+  "sharp_general_maximum_order": 6,
+  "strong_obstructions": [
+    {
+      "H": 9,
+      "automorphisms": 1,
+      "degree_code": 8,
+      "deletion_H": [
+        1,
+        5,
+        5,
+        5,
+        1
+      ],
+      "n": 5,
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        14
+      ],
+      "strong": true
+    },
+    {
+      "H": 15,
+      "automorphisms": 3,
+      "degree_code": 40,
+      "deletion_H": [
+        3,
+        5,
+        5,
+        5,
+        3
+      ],
+      "n": 5,
+      "rows": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ],
+      "strong": true
+    },
+    {
+      "H": 13,
+      "automorphisms": 1,
+      "degree_code": 68,
+      "deletion_H": [
+        5,
+        3,
+        5,
+        3,
+        5
+      ],
+      "n": 5,
+      "rows": [
+        8,
+        17,
+        3,
+        6,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "H": 15,
+      "automorphisms": 5,
+      "degree_code": 76,
+      "deletion_H": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "n": 5,
+      "rows": [
+        24,
+        17,
+        3,
+        6,
+        12
+      ],
+      "strong": true
+    },
+    {
+      "H": 11,
+      "automorphisms": 1,
+      "degree_code": 97,
+      "deletion_H": [
+        5,
+        1,
+        5,
+        5,
+        5
+      ],
+      "n": 5,
+      "rows": [
+        2,
+        24,
+        3,
+        5,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "H": 9,
+      "automorphisms": 1,
+      "degree_code": 258,
+      "deletion_H": [
+        3,
+        5,
+        1,
+        5,
+        3
+      ],
+      "n": 5,
+      "rows": [
+        4,
+        1,
+        18,
+        7,
+        11
+      ],
+      "strong": true
+    }
+  ],
+  "threshold": 7,
+  "universe": [
+    {
+      "classes": 1,
+      "labelled_mass": 1,
+      "n": 1
+    },
+    {
+      "classes": 1,
+      "labelled_mass": 2,
+      "n": 2
+    },
+    {
+      "classes": 2,
+      "labelled_mass": 8,
+      "n": 3
+    },
+    {
+      "classes": 4,
+      "labelled_mass": 64,
+      "n": 4
+    },
+    {
+      "classes": 12,
+      "labelled_mass": 1024,
+      "n": 5
+    },
+    {
+      "classes": 56,
+      "labelled_mass": 32768,
+      "n": 6
+    },
+    {
+      "classes": 456,
+      "labelled_mass": 2097152,
+      "n": 7
+    }
+  ]
+}

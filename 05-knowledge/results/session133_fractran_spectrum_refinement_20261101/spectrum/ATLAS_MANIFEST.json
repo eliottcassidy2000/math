@@ -1,10 +1,13 @@
 {
+  "correction": "CORRECTION.md repairs published checkpoint 5811bb4 trailing-zero hostile test; all counts unchanged.",
   "files": {
-    "ATLAS_PROOF.md": "e0f70bdce4e9f9b7dc579bbd66b63f5b8d179b93916eacbf0131e3b535a5bf59",
-    "ATLAS_README.md": "506968e9c0bc1e02a463015f2873b1f1796e6322b9bcef0c10872a8fb703beae",
-    "atlas.json": "a5762b47e02400d9836803526669f7c578c9b854387524c6477469bdc90277ee",
-    "atlas.optimized.json": "a5762b47e02400d9836803526669f7c578c9b854387524c6477469bdc90277ee",
-    "build_atlas.py": "ab8e31a5224593b2e419dfbedd076f27c49e3dc4854e666a947b31ca8bf4d569"
+    "ATLAS_PROOF.md": "c624f3d570087fb2c18bda13c39faf5d7c6165dd9d27e09fd0ccd95902efea52",
+    "ATLAS_PUBLIC_FILES.txt": "1edae66bd49c3790c06f08b51fbfaa3cae1985103c43eb4ca5dd919e844515ad",
+    "ATLAS_README.md": "62d2a444b8c7745cd5a6717afe16784ba080041ceeec80166513d03b4f191363",
+    "CORRECTION.md": "d83d6e8f19e67ac327efbf7aa4ac0b0205f42d3d76382782ff49d041f772da06",
+    "atlas.json": "97945919a431391b241291e190c366b5290d396e1144db52088a2abca4bfd4e7",
+    "atlas.optimized.json": "97945919a431391b241291e190c366b5290d396e1144db52088a2abca4bfd4e7",
+    "build_atlas.py": "86351843fc3b40cc676abb4618a03b87bee86fa7845082f43e8127c7fcad269a"
   },
   "schema": "session133.low-H-atlas.manifest.v1",
   "source_checkout_commit": "335577ae6d58bc9109160891885daddb6229b37f",

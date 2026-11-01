@@ -1,5 +1,9 @@
 # Session 133: independently replayable low-H tournament atlas
 
+**Checkpoint 5811bb4 correction:** the H15 polynomial hostile was a trailing-
+zero comparison error. The corrected H9 control normalizes coefficients. See
+[CORRECTION.md](CORRECTION.md); all atlas counts are unchanged.
+
 `ATLAS_PROOF.md` states scope, completeness proof, primary citations and
 inheritance. `build_atlas.py` regenerates `atlas.json` with every ordinary
 class through order six, actual adjacency, H, automorphism order, SCC sizes,

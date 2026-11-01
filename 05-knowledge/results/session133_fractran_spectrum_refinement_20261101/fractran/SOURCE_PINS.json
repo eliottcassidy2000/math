@@ -1,0 +1,33 @@
+{
+  "pins": [
+    {
+      "artifact": "baseline_compiler.py",
+      "copy_sha256": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51",
+      "origin_session_relative": "fractran/compiler.py",
+      "original_sha256": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51",
+      "transformation": "exact copy"
+    },
+    {
+      "artifact": "a000568_source.py",
+      "copy_sha256": "79087898c34b45b8ecfe39f42c1e05d7a19b18b8eb7d3d3e5ebf28b5dbe065f3",
+      "origin_session_relative": "fractran/a000568_source.py",
+      "original_sha256": "79087898c34b45b8ecfe39f42c1e05d7a19b18b8eb7d3d3e5ebf28b5dbe065f3",
+      "transformation": "exact copy"
+    },
+    {
+      "artifact": "reference_oracles.py",
+      "copy_sha256": "3a7272645b816ed70de49c51fd1612bc4a11662ee2bbcf1de7e8843904c24825",
+      "origin_session_relative": "counting/check_counts.py",
+      "original_sha256": "0bbae8ef92b737a722ca4c16241c5e3ce4660498884b7bc9933e385398e1d4ad",
+      "transformation": "trimmed to imported standard-library-only functions"
+    },
+    {
+      "artifact": "core_floor_and_extremizers",
+      "copy_sha256": null,
+      "origin_session_relative": "core_reduction/THEORY.md",
+      "original_sha256": "1302087c827628d8d01b3995e87819ce9b310dddae7452e0133ec3316d2e403f",
+      "transformation": "sibling theorem dependency"
+    }
+  ],
+  "schema": "session133.fractran.sources.v1"
+}

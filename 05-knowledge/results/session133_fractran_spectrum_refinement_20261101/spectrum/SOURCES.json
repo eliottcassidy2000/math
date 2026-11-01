@@ -1,0 +1,53 @@
+{
+  "accessed_utc_date": "2026-11-01",
+  "primary_sources": [
+    {
+      "author": "Arthur H. Busch",
+      "claim": "strong Hamiltonian-path bound and exact minimum",
+      "locator": "Theorem 1 / Corollary 1",
+      "title": "A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf"
+    },
+    {
+      "author": "J. W. Moon",
+      "claim": "strong order-n tournament has induced strong order-(n-1) subtournament",
+      "locator": "Theorem 2, k=n-1",
+      "title": "On Subtournaments of a Tournament",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/5D7CCBE66AB07BB3F90F771D1CD3CD08/S0008439500052875a.pdf/on_subtournaments_of_a_tournament.pdf"
+    },
+    {
+      "author": "John Irving and Mohamed Omar",
+      "claim": "odd-cycle collection formula, attributed to Grinberg--Stanley",
+      "locator": "v3 Corollary 20",
+      "title": "Revisiting The Redei-Berge Symmetric Functions via Matrix Algebra",
+      "url": "https://arxiv.org/html/2412.10572v3"
+    }
+  ],
+  "repository_antecedents": [
+    {
+      "blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md"
+    },
+    {
+      "blob": "1bc14b5444a366c2dc1b6988a53fccc0089037be",
+      "path": "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md"
+    },
+    {
+      "blob": "1f24cb1a3544272973a6e5ea9870de82ef484313",
+      "path": "05-knowledge/results/session124_cycle_packing_obstructions_20261031/RESULTS.md"
+    },
+    {
+      "blob": "9ec6a8d132bd46684bd421db06ba4a08a4de9e6f",
+      "path": "05-knowledge/results/session130_blue_black_theorems_20261031/hamiltonian/PROOFS.md"
+    },
+    {
+      "blob": "ec0d08ed0e579695fece6eab7e8b640ba3de4ead",
+      "path": "05-knowledge/results/session131_reflection_numeration_moonshine_20261031/binary_carries/PROOFS.md"
+    }
+  ],
+  "repository_commit": "335577ae6d58bc9109160891885daddb6229b37f"
+}

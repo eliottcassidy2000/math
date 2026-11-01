@@ -1,0 +1,122 @@
+{
+  "files": [
+    {
+      "bytes": 8524,
+      "name": "FIBRES.json",
+      "sha256": "98f0214b73ba750d8ceb4de5138c79f7ac4c4c595596ca2e1c04fed961e93c77"
+    },
+    {
+      "bytes": 649,
+      "name": "ONE_APEX_PROGRAM.json",
+      "sha256": "a8baee7f7d889455d8a68e87e7eddadde18c7948e2e29a442398353de88a1a7c"
+    },
+    {
+      "bytes": 373,
+      "name": "PROGRAM.json",
+      "sha256": "f6b24aa19e54288e81219aa0f9afa79d1da750c5d680304563f8ffb55b687cf1"
+    },
+    {
+      "bytes": 2254,
+      "name": "PROVENANCE.json",
+      "sha256": "61393daae5d3400168a7b5988d6ae168d2fda3953d5050810a3df0714c2f5842"
+    },
+    {
+      "bytes": 3317,
+      "name": "README.md",
+      "sha256": "88fbefddb284d88f79ef84058e67ec2fc2369bfee43944f4d7a6894414e96f9d"
+    },
+    {
+      "bytes": 370,
+      "name": "SQUARE_SHELL_PROGRAM.json",
+      "sha256": "b7b1432b4379031b16cd6275a2bf1c724d2e69a5427601107131c5fde4355422"
+    },
+    {
+      "bytes": 22384,
+      "name": "THEORY.md",
+      "sha256": "c8c1acab8a3a8b80c4d067a09f2b23b20a0da61133aad9838492dc923ce3a087"
+    },
+    {
+      "bytes": 855,
+      "name": "UNPOINTED_COROLLARY.json",
+      "sha256": "4ef866c29dd01fa3a8aec7f0a5adf9fdb3e2cf91b1dadf3e9a8216f12fc6ebd1"
+    },
+    {
+      "bytes": 6241,
+      "name": "VERIFIED.normal.json",
+      "sha256": "3785927bc2431277074233716e2f4f784f2c763941ea371c0171b885e08c73f6"
+    },
+    {
+      "bytes": 6241,
+      "name": "VERIFIED.optimized.json",
+      "sha256": "3785927bc2431277074233716e2f4f784f2c763941ea371c0171b885e08c73f6"
+    },
+    {
+      "bytes": 743,
+      "name": "build.py",
+      "sha256": "cfba3c4033db0832f8488c9dde234d507b72c1cbf3820b843cb2d2c1f5a69691"
+    },
+    {
+      "bytes": 8638,
+      "name": "check.py",
+      "sha256": "cc8fb50478364df5673bfac90a055801bcde54c059e9b3ebead92dde20e84b24"
+    },
+    {
+      "bytes": 16997,
+      "name": "compiler.py",
+      "sha256": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51"
+    },
+    {
+      "bytes": 3273,
+      "name": "fibres.py",
+      "sha256": "42f70e5e67174906f9f550330fdfbd45564621f248e2dbd601969beb8a59e833"
+    },
+    {
+      "bytes": 55126,
+      "name": "hamilton.fractions.00.txt",
+      "sha256": "be9a58a4edde219770a53bd6dbb30b11ea68f72ccfa6e35b6f815cd747938618"
+    },
+    {
+      "bytes": 76230,
+      "name": "hamilton.ir.json",
+      "sha256": "f98afb467a963e95ed245bb54f3d4d3f6cfce22e5b04871b8291309763a95936"
+    },
+    {
+      "bytes": 1428,
+      "name": "hamilton_source.py",
+      "sha256": "63891a5d4906b523f640e7cbcf8e7af510258dae1d73da8dbb535bd547827f6e"
+    },
+    {
+      "bytes": 233,
+      "name": "one_apex.fractions.txt",
+      "sha256": "b7d26aec3d504654e6a5baa5cc9fec95d73ea17f75b690ea2af588d5f6338592"
+    },
+    {
+      "bytes": 3965,
+      "name": "one_apex.py",
+      "sha256": "be8198eaad702f3cfdb2b15fd9e494eeb3c66d5d06c214784a0db4adccab28b0"
+    },
+    {
+      "bytes": 14253,
+      "name": "square_shell.fractions.00.txt",
+      "sha256": "eebb62db32ba4bc874493a49afff1cae26fc23ae4e6b579599bc9c36c64320d9"
+    },
+    {
+      "bytes": 20924,
+      "name": "square_shell.ir.json",
+      "sha256": "ab1d481fcf81d25dec46dd679b527ff31166bf1b21dfdb7a42e4f9bc5f282d38"
+    },
+    {
+      "bytes": 310,
+      "name": "square_shell_source.py",
+      "sha256": "c753b5a764f0326a40a65845bc3a1bafba086002a5312d741e83d1a8acf83c98"
+    },
+    {
+      "bytes": 2558,
+      "name": "unpointed.py",
+      "sha256": "304a49f3026eb8e61ef6a998c5fc96af474ac8598c344304c53a910143760e56"
+    }
+  ],
+  "independent_audit": "sibling independent packet owned by audit_tournament_spectrum_programs",
+  "status": "FROZEN FOR SESSION133 INTEGRATION",
+  "total_bytes": 255886
+}

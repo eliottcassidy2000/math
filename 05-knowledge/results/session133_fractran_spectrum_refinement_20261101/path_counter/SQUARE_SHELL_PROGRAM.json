@@ -1,0 +1,13 @@
+{
+  "compiler_sha256": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51",
+  "entry_prime": 71,
+  "fraction_bytes": 14253,
+  "fraction_parts": 1,
+  "fractions": 1371,
+  "halt_prime": 7937,
+  "input_prime": 5,
+  "output_prime": 3,
+  "registers": 19,
+  "source_sha256": "c753b5a764f0326a40a65845bc3a1bafba086002a5312d741e83d1a8acf83c98",
+  "states": 984
+}

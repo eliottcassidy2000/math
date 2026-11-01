@@ -1,0 +1,40 @@
+{
+  "H_prime": 2,
+  "data_primes": {
+    "C": 3,
+    "H": 2,
+    "L": 13,
+    "N": 5,
+    "Q": 7,
+    "T": 11,
+    "U": 17
+  },
+  "fractions": 32,
+  "halt_prime": 107,
+  "input": "2*19*5**E(word)",
+  "odd_cycle_prime": 3,
+  "state_primes": {
+    "error": 109,
+    "even": 31,
+    "halt": 107,
+    "l0": 89,
+    "l0_guard": 97,
+    "l1": 61,
+    "l1_guard": 67,
+    "odd": 29,
+    "read": 19,
+    "read_guard": 23,
+    "restore0": 43,
+    "restore0_guard": 47,
+    "restore1": 37,
+    "restore1_guard": 41,
+    "t0": 79,
+    "t0_guard": 83,
+    "t1": 53,
+    "t1_guard": 59,
+    "u0": 101,
+    "u0_guard": 103,
+    "u1": 71,
+    "u1_guard": 73
+  }
+}

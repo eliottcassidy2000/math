@@ -145,3 +145,21 @@ It is not a claim of a minimum program or of an equivalent arbitrary-input
 map. Both count the same eleven sequences on their stated common domain.
 The zero channels are initialized at zero and stay there, with their
 mathematical interpretation certified by the graph-theoretic proof.
+
+## 7. Alias refinement: 43 fractions with the same valuation readout
+
+Two pairs of entire sequences coincide: N_n(11)=N_n(13) and
+N_n(17)=N_n(19). The inventory gives the same single-atom formulas in each
+pair. Both forbidden channels are identically zero. Consequently only seven
+distinct nonzero sequences need state registers: h=1,3,5,9,11,15,17.
+Applying the same matrix compiler to those seven states gives the actual
+**43-fraction** `compact_tail21.fractran`, again starting at order six.
+
+`compact_tail_program.json` lists a prime for each of the eleven requested
+outputs. The equal channels deliberately share a prime; the two zero channels
+use one extra prime absent from the seed and every fraction. Thus readout is
+still just a prime valuation, not an external polynomial calculation. No
+claim that eleven independent registers remain is made. Distinct-sequence
+aliases are justified mathematically, rather than guessed from a finite
+prefix. This is 35.8 percent fewer fractions than the 67-fraction tail.
+The exact generic compiler proof and runtime law apply with d=7.

@@ -1,0 +1,1099 @@
+{
+  "status": "PASS",
+  "cases": 120,
+  "literal_first_eligible_cases": 126,
+  "checks": [
+    "independent N-valued AST semantics",
+    "baseline and refined IR",
+    "full ordered integer fraction scan",
+    "unique halt control token",
+    "zero divisors halt with ERROR=1",
+    "self-loop guard bridge"
+  ],
+  "source_sha256": {
+    "fractran/compiler.py": "4423cb2c6fac1d296de91138ae8738c3e076abcfbc2183c981475fddf7a59a7c",
+    "fractran/baseline_compiler.py": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51"
+  },
+  "results": [
+    {
+      "case": "n+2",
+      "n": 0,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 29,
+      "refined_steps": 24,
+      "literal_max_bits": 15
+    },
+    {
+      "case": "n+2",
+      "n": 1,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 48,
+      "refined_steps": 38,
+      "literal_max_bits": 23
+    },
+    {
+      "case": "n+2",
+      "n": 2,
+      "output": 4,
+      "error": 0,
+      "baseline_steps": 67,
+      "refined_steps": 52,
+      "literal_max_bits": 33
+    },
+    {
+      "case": "n+2",
+      "n": 3,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 86,
+      "refined_steps": 66,
+      "literal_max_bits": 42
+    },
+    {
+      "case": "n+2",
+      "n": 4,
+      "output": 6,
+      "error": 0,
+      "baseline_steps": 105,
+      "refined_steps": 80,
+      "literal_max_bits": 51
+    },
+    {
+      "case": "n-2",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 43,
+      "refined_steps": 38,
+      "literal_max_bits": 24
+    },
+    {
+      "case": "n-2",
+      "n": 1,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 60,
+      "refined_steps": 50,
+      "literal_max_bits": 33
+    },
+    {
+      "case": "n-2",
+      "n": 2,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 78,
+      "refined_steps": 63,
+      "literal_max_bits": 41
+    },
+    {
+      "case": "n-2",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 97,
+      "refined_steps": 77,
+      "literal_max_bits": 50
+    },
+    {
+      "case": "n-2",
+      "n": 4,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 116,
+      "refined_steps": 91,
+      "literal_max_bits": 59
+    },
+    {
+      "case": "2-n",
+      "n": 0,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 46,
+      "refined_steps": 39,
+      "literal_max_bits": 21
+    },
+    {
+      "case": "2-n",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 62,
+      "refined_steps": 51,
+      "literal_max_bits": 31
+    },
+    {
+      "case": "2-n",
+      "n": 2,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 78,
+      "refined_steps": 63,
+      "literal_max_bits": 41
+    },
+    {
+      "case": "2-n",
+      "n": 3,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 95,
+      "refined_steps": 76,
+      "literal_max_bits": 52
+    },
+    {
+      "case": "2-n",
+      "n": 4,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 113,
+      "refined_steps": 90,
+      "literal_max_bits": 63
+    },
+    {
+      "case": "n*3",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 25,
+      "refined_steps": 24,
+      "literal_max_bits": 19
+    },
+    {
+      "case": "n*3",
+      "n": 1,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 87,
+      "refined_steps": 69,
+      "literal_max_bits": 40
+    },
+    {
+      "case": "n*3",
+      "n": 2,
+      "output": 6,
+      "error": 0,
+      "baseline_steps": 149,
+      "refined_steps": 114,
+      "literal_max_bits": 54
+    },
+    {
+      "case": "n*3",
+      "n": 3,
+      "output": 9,
+      "error": 0,
+      "baseline_steps": 211,
+      "refined_steps": 159,
+      "literal_max_bits": 68
+    },
+    {
+      "case": "n*3",
+      "n": 4,
+      "output": 12,
+      "error": 0,
+      "baseline_steps": 273,
+      "refined_steps": 204,
+      "literal_max_bits": 82
+    },
+    {
+      "case": "n//2",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 75,
+      "refined_steps": 66,
+      "literal_max_bits": 29
+    },
+    {
+      "case": "n//2",
+      "n": 1,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 101,
+      "refined_steps": 85,
+      "literal_max_bits": 43
+    },
+    {
+      "case": "n//2",
+      "n": 2,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 209,
+      "refined_steps": 170,
+      "literal_max_bits": 58
+    },
+    {
+      "case": "n//2",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 256,
+      "refined_steps": 205,
+      "literal_max_bits": 73
+    },
+    {
+      "case": "n//2",
+      "n": 4,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 385,
+      "refined_steps": 306,
+      "literal_max_bits": 88
+    },
+    {
+      "case": "n%2",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 75,
+      "refined_steps": 66,
+      "literal_max_bits": 29
+    },
+    {
+      "case": "n%2",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 102,
+      "refined_steps": 85,
+      "literal_max_bits": 42
+    },
+    {
+      "case": "n%2",
+      "n": 2,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 208,
+      "refined_steps": 170,
+      "literal_max_bits": 56
+    },
+    {
+      "case": "n%2",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 256,
+      "refined_steps": 205,
+      "literal_max_bits": 69
+    },
+    {
+      "case": "n%2",
+      "n": 4,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 383,
+      "refined_steps": 306,
+      "literal_max_bits": 83
+    },
+    {
+      "case": "2**n",
+      "n": 0,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 22,
+      "refined_steps": 20,
+      "literal_max_bits": 18
+    },
+    {
+      "case": "2**n",
+      "n": 1,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 84,
+      "refined_steps": 67,
+      "literal_max_bits": 32
+    },
+    {
+      "case": "2**n",
+      "n": 2,
+      "output": 4,
+      "error": 0,
+      "baseline_steps": 191,
+      "refined_steps": 147,
+      "literal_max_bits": 45
+    },
+    {
+      "case": "2**n",
+      "n": 3,
+      "output": 8,
+      "error": 0,
+      "baseline_steps": 388,
+      "refined_steps": 293,
+      "literal_max_bits": 69
+    },
+    {
+      "case": "2**n",
+      "n": 4,
+      "output": 16,
+      "error": 0,
+      "baseline_steps": 765,
+      "refined_steps": 571,
+      "literal_max_bits": 116
+    },
+    {
+      "case": "n**0",
+      "n": 0,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 16,
+      "refined_steps": 14,
+      "literal_max_bits": 11
+    },
+    {
+      "case": "n**0",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 25,
+      "refined_steps": 21,
+      "literal_max_bits": 17
+    },
+    {
+      "case": "n**0",
+      "n": 2,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 34,
+      "refined_steps": 28,
+      "literal_max_bits": 22
+    },
+    {
+      "case": "n**0",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 43,
+      "refined_steps": 35,
+      "literal_max_bits": 28
+    },
+    {
+      "case": "n**0",
+      "n": 4,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 52,
+      "refined_steps": 42,
+      "literal_max_bits": 35
+    },
+    {
+      "case": "(n+3)//(n+1)",
+      "n": 0,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 376,
+      "refined_steps": 310,
+      "literal_max_bits": 57
+    },
+    {
+      "case": "(n+3)//(n+1)",
+      "n": 1,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 422,
+      "refined_steps": 339,
+      "literal_max_bits": 82
+    },
+    {
+      "case": "(n+3)//(n+1)",
+      "n": 2,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 437,
+      "refined_steps": 346,
+      "literal_max_bits": 107
+    },
+    {
+      "case": "(n+3)//(n+1)",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 534,
+      "refined_steps": 419,
+      "literal_max_bits": 132
+    },
+    {
+      "case": "(n+3)//(n+1)",
+      "n": 4,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 631,
+      "refined_steps": 492,
+      "literal_max_bits": 157
+    },
+    {
+      "case": "(n+3)%(n+1)",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 373,
+      "refined_steps": 310,
+      "literal_max_bits": 54
+    },
+    {
+      "case": "(n+3)%(n+1)",
+      "n": 1,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 420,
+      "refined_steps": 339,
+      "literal_max_bits": 76
+    },
+    {
+      "case": "(n+3)%(n+1)",
+      "n": 2,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 438,
+      "refined_steps": 346,
+      "literal_max_bits": 100
+    },
+    {
+      "case": "(n+3)%(n+1)",
+      "n": 3,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 535,
+      "refined_steps": 419,
+      "literal_max_bits": 124
+    },
+    {
+      "case": "(n+3)%(n+1)",
+      "n": 4,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 632,
+      "refined_steps": 492,
+      "literal_max_bits": 147
+    },
+    {
+      "case": "n==2",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 80,
+      "refined_steps": 70,
+      "literal_max_bits": 32
+    },
+    {
+      "case": "n==2",
+      "n": 1,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 105,
+      "refined_steps": 87,
+      "literal_max_bits": 41
+    },
+    {
+      "case": "n==2",
+      "n": 2,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 134,
+      "refined_steps": 107,
+      "literal_max_bits": 49
+    },
+    {
+      "case": "n==2",
+      "n": 3,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 160,
+      "refined_steps": 127,
+      "literal_max_bits": 61
+    },
+    {
+      "case": "n==2",
+      "n": 4,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 187,
+      "refined_steps": 148,
+      "literal_max_bits": 73
+    },
+    {
+      "case": "n!=2",
+      "n": 0,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 84,
+      "refined_steps": 73,
+      "literal_max_bits": 32
+    },
+    {
+      "case": "n!=2",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 109,
+      "refined_steps": 90,
+      "literal_max_bits": 41
+    },
+    {
+      "case": "n!=2",
+      "n": 2,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 130,
+      "refined_steps": 104,
+      "literal_max_bits": 49
+    },
+    {
+      "case": "n!=2",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 164,
+      "refined_steps": 130,
+      "literal_max_bits": 61
+    },
+    {
+      "case": "n!=2",
+      "n": 4,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 191,
+      "refined_steps": 151,
+      "literal_max_bits": 73
+    },
+    {
+      "case": "n<2",
+      "n": 0,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 49,
+      "refined_steps": 43,
+      "literal_max_bits": 25
+    },
+    {
+      "case": "n<2",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 66,
+      "refined_steps": 55,
+      "literal_max_bits": 35
+    },
+    {
+      "case": "n<2",
+      "n": 2,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 80,
+      "refined_steps": 65,
+      "literal_max_bits": 45
+    },
+    {
+      "case": "n<2",
+      "n": 3,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 98,
+      "refined_steps": 79,
+      "literal_max_bits": 55
+    },
+    {
+      "case": "n<2",
+      "n": 4,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 116,
+      "refined_steps": 93,
+      "literal_max_bits": 65
+    },
+    {
+      "case": "n<=2",
+      "n": 0,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 52,
+      "refined_steps": 45,
+      "literal_max_bits": 24
+    },
+    {
+      "case": "n<=2",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 69,
+      "refined_steps": 57,
+      "literal_max_bits": 34
+    },
+    {
+      "case": "n<=2",
+      "n": 2,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 86,
+      "refined_steps": 69,
+      "literal_max_bits": 45
+    },
+    {
+      "case": "n<=2",
+      "n": 3,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 100,
+      "refined_steps": 80,
+      "literal_max_bits": 56
+    },
+    {
+      "case": "n<=2",
+      "n": 4,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 118,
+      "refined_steps": 94,
+      "literal_max_bits": 67
+    },
+    {
+      "case": "n>2",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 46,
+      "refined_steps": 41,
+      "literal_max_bits": 24
+    },
+    {
+      "case": "n>2",
+      "n": 1,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 63,
+      "refined_steps": 53,
+      "literal_max_bits": 34
+    },
+    {
+      "case": "n>2",
+      "n": 2,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 80,
+      "refined_steps": 65,
+      "literal_max_bits": 45
+    },
+    {
+      "case": "n>2",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 101,
+      "refined_steps": 81,
+      "literal_max_bits": 56
+    },
+    {
+      "case": "n>2",
+      "n": 4,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 119,
+      "refined_steps": 95,
+      "literal_max_bits": 67
+    },
+    {
+      "case": "n>=2",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 48,
+      "refined_steps": 42,
+      "literal_max_bits": 25
+    },
+    {
+      "case": "n>=2",
+      "n": 1,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 65,
+      "refined_steps": 54,
+      "literal_max_bits": 35
+    },
+    {
+      "case": "n>=2",
+      "n": 2,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 86,
+      "refined_steps": 69,
+      "literal_max_bits": 45
+    },
+    {
+      "case": "n>=2",
+      "n": 3,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 104,
+      "refined_steps": 83,
+      "literal_max_bits": 55
+    },
+    {
+      "case": "n>=2",
+      "n": 4,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 122,
+      "refined_steps": 97,
+      "literal_max_bits": 65
+    },
+    {
+      "case": "self_add",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 30,
+      "refined_steps": 17,
+      "literal_max_bits": 8
+    },
+    {
+      "case": "self_add",
+      "n": 1,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 94,
+      "refined_steps": 45,
+      "literal_max_bits": 24
+    },
+    {
+      "case": "self_add",
+      "n": 2,
+      "output": 4,
+      "error": 0,
+      "baseline_steps": 158,
+      "refined_steps": 73,
+      "literal_max_bits": 41
+    },
+    {
+      "case": "self_add",
+      "n": 3,
+      "output": 6,
+      "error": 0,
+      "baseline_steps": 222,
+      "refined_steps": 101,
+      "literal_max_bits": 57
+    },
+    {
+      "case": "self_add",
+      "n": 4,
+      "output": 8,
+      "error": 0,
+      "baseline_steps": 286,
+      "refined_steps": 129,
+      "literal_max_bits": 74
+    },
+    {
+      "case": "nested_add",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 56,
+      "refined_steps": 42,
+      "literal_max_bits": 13
+    },
+    {
+      "case": "nested_add",
+      "n": 1,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 190,
+      "refined_steps": 120,
+      "literal_max_bits": 36
+    },
+    {
+      "case": "nested_add",
+      "n": 2,
+      "output": 8,
+      "error": 0,
+      "baseline_steps": 376,
+      "refined_steps": 230,
+      "literal_max_bits": 74
+    },
+    {
+      "case": "nested_add",
+      "n": 3,
+      "output": 15,
+      "error": 0,
+      "baseline_steps": 614,
+      "refined_steps": 372,
+      "literal_max_bits": 129
+    },
+    {
+      "case": "nested_add",
+      "n": 4,
+      "output": 24,
+      "error": 0,
+      "baseline_steps": 904,
+      "refined_steps": 546,
+      "literal_max_bits": 199
+    },
+    {
+      "case": "constant_overwrite",
+      "n": 0,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 291,
+      "refined_steps": 60,
+      "literal_max_bits": 38
+    },
+    {
+      "case": "constant_overwrite",
+      "n": 1,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 293,
+      "refined_steps": 62,
+      "literal_max_bits": 38
+    },
+    {
+      "case": "constant_overwrite",
+      "n": 2,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 295,
+      "refined_steps": 64,
+      "literal_max_bits": 38
+    },
+    {
+      "case": "constant_overwrite",
+      "n": 3,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 297,
+      "refined_steps": 66,
+      "literal_max_bits": 38
+    },
+    {
+      "case": "constant_overwrite",
+      "n": 4,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 299,
+      "refined_steps": 68,
+      "literal_max_bits": 38
+    },
+    {
+      "case": "natural_truthiness",
+      "n": 0,
+      "output": 7,
+      "error": 0,
+      "baseline_steps": 113,
+      "refined_steps": 68,
+      "literal_max_bits": 51
+    },
+    {
+      "case": "natural_truthiness",
+      "n": 1,
+      "output": 2,
+      "error": 0,
+      "baseline_steps": 82,
+      "refined_steps": 31,
+      "literal_max_bits": 20
+    },
+    {
+      "case": "natural_truthiness",
+      "n": 2,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 122,
+      "refined_steps": 45,
+      "literal_max_bits": 26
+    },
+    {
+      "case": "natural_truthiness",
+      "n": 3,
+      "output": 4,
+      "error": 0,
+      "baseline_steps": 162,
+      "refined_steps": 59,
+      "literal_max_bits": 32
+    },
+    {
+      "case": "natural_truthiness",
+      "n": 4,
+      "output": 5,
+      "error": 0,
+      "baseline_steps": 202,
+      "refined_steps": 73,
+      "literal_max_bits": 39
+    },
+    {
+      "case": "countdown",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 15,
+      "refined_steps": 12,
+      "literal_max_bits": 9
+    },
+    {
+      "case": "countdown",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 118,
+      "refined_steps": 84,
+      "literal_max_bits": 29
+    },
+    {
+      "case": "countdown",
+      "n": 2,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 316,
+      "refined_steps": 193,
+      "literal_max_bits": 42
+    },
+    {
+      "case": "countdown",
+      "n": 3,
+      "output": 6,
+      "error": 0,
+      "baseline_steps": 651,
+      "refined_steps": 339,
+      "literal_max_bits": 54
+    },
+    {
+      "case": "countdown",
+      "n": 4,
+      "output": 10,
+      "error": 0,
+      "baseline_steps": 1165,
+      "refined_steps": 522,
+      "literal_max_bits": 84
+    },
+    {
+      "case": "nested_guards",
+      "n": 0,
+      "output": 0,
+      "error": 0,
+      "baseline_steps": 30,
+      "refined_steps": 27,
+      "literal_max_bits": 11
+    },
+    {
+      "case": "nested_guards",
+      "n": 1,
+      "output": 1,
+      "error": 0,
+      "baseline_steps": 301,
+      "refined_steps": 242,
+      "literal_max_bits": 46
+    },
+    {
+      "case": "nested_guards",
+      "n": 2,
+      "output": 3,
+      "error": 0,
+      "baseline_steps": 773,
+      "refined_steps": 582,
+      "literal_max_bits": 61
+    },
+    {
+      "case": "nested_guards",
+      "n": 3,
+      "output": 4,
+      "error": 0,
+      "baseline_steps": 1318,
+      "refined_steps": 977,
+      "literal_max_bits": 77
+    },
+    {
+      "case": "nested_guards",
+      "n": 4,
+      "output": 8,
+      "error": 0,
+      "baseline_steps": 2299,
+      "refined_steps": 1541,
+      "literal_max_bits": 92
+    },
+    {
+      "case": "zero_divisor",
+      "n": 0,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 17,
+      "refined_steps": 16,
+      "literal_max_bits": 11
+    },
+    {
+      "case": "zero_divisor",
+      "n": 1,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 31,
+      "refined_steps": 26,
+      "literal_max_bits": 21
+    },
+    {
+      "case": "zero_divisor",
+      "n": 2,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 45,
+      "refined_steps": 36,
+      "literal_max_bits": 31
+    },
+    {
+      "case": "zero_divisor",
+      "n": 3,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 59,
+      "refined_steps": 46,
+      "literal_max_bits": 40
+    },
+    {
+      "case": "zero_divisor",
+      "n": 4,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 73,
+      "refined_steps": 56,
+      "literal_max_bits": 50
+    },
+    {
+      "case": "zero_modulus",
+      "n": 0,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 17,
+      "refined_steps": 16,
+      "literal_max_bits": 11
+    },
+    {
+      "case": "zero_modulus",
+      "n": 1,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 31,
+      "refined_steps": 26,
+      "literal_max_bits": 19
+    },
+    {
+      "case": "zero_modulus",
+      "n": 2,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 45,
+      "refined_steps": 36,
+      "literal_max_bits": 28
+    },
+    {
+      "case": "zero_modulus",
+      "n": 3,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 59,
+      "refined_steps": 46,
+      "literal_max_bits": 37
+    },
+    {
+      "case": "zero_modulus",
+      "n": 4,
+      "output": 0,
+      "error": 1,
+      "baseline_steps": 73,
+      "refined_steps": 56,
+      "literal_max_bits": 45
+    }
+  ]
+}

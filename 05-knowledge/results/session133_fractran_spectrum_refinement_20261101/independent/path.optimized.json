@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "source_exhaustive_orders": "0..5",
+  "source_tournament_cases": 1100,
+  "fraction_cases": [
+    {
+      "order": 0,
+      "bits": 0,
+      "code": 0,
+      "H": 1,
+      "steps": 700
+    },
+    {
+      "order": 1,
+      "bits": 0,
+      "code": 1,
+      "H": 1,
+      "steps": 1748
+    },
+    {
+      "order": 2,
+      "bits": 0,
+      "code": 3,
+      "H": 1,
+      "steps": 11069
+    },
+    {
+      "order": 2,
+      "bits": 1,
+      "code": 11,
+      "H": 1,
+      "steps": 14805
+    },
+    {
+      "order": 3,
+      "bits": 0,
+      "code": 7,
+      "H": 1,
+      "steps": 246160
+    },
+    {
+      "order": 3,
+      "bits": 1,
+      "code": 23,
+      "H": 1,
+      "steps": 258900
+    },
+    {
+      "order": 3,
+      "bits": 2,
+      "code": 39,
+      "H": 3,
+      "steps": 281295
+    },
+    {
+      "order": 3,
+      "bits": 3,
+      "code": 55,
+      "H": 1,
+      "steps": 309160
+    },
+    {
+      "order": 3,
+      "bits": 4,
+      "code": 71,
+      "H": 1,
+      "steps": 349404
+    },
+    {
+      "order": 3,
+      "bits": 5,
+      "code": 87,
+      "H": 3,
+      "steps": 393135
+    },
+    {
+      "order": 3,
+      "bits": 6,
+      "code": 103,
+      "H": 1,
+      "steps": 446284
+    },
+    {
+      "order": 3,
+      "bits": 7,
+      "code": 119,
+      "H": 1,
+      "steps": 505140
+    }
+  ],
+  "literal_integer_cases": [
+    {
+      "code": 0,
+      "output": 1,
+      "steps": 700,
+      "maxbits": 61
+    },
+    {
+      "code": 1,
+      "output": 1,
+      "steps": 1748,
+      "maxbits": 85
+    },
+    {
+      "code": 2,
+      "output": 0,
+      "steps": 802,
+      "maxbits": 111
+    },
+    {
+      "code": 3,
+      "output": 1,
+      "steps": 11069,
+      "maxbits": 223
+    },
+    {
+      "code": 11,
+      "output": 1,
+      "steps": 14805,
+      "maxbits": 332
+    }
+  ],
+  "invalid_source_cases": 15,
+  "source_sha256": {
+    "path_counter/compiler.py": "31d2bfd68d5624f86d2f2e596af677d859868478beb9b440bd5b719cf41f1a51",
+    "path_counter/hamilton_source.py": "63891a5d4906b523f640e7cbcf8e7af510258dae1d73da8dbb535bd547827f6e",
+    "path_counter/hamilton.ir.json": "f98afb467a963e95ed245bb54f3d4d3f6cfce22e5b04871b8291309763a95936",
+    "path_counter/hamilton.fractions.00.txt": "be9a58a4edde219770a53bd6dbb30b11ea68f72ccfa6e35b6f815cd747938618"
+  }
+}

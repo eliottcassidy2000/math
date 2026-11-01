@@ -114,3 +114,25 @@ def write_tail():
  return data
 
 if __name__=='__main__':write_tail()
+
+COMPACT_H=[1,3,5,9,11,15,17]
+def compact_tail_matrix():
+ d=len(COMPACT_H);a=[[int(i==j) for j in range(d)] for i in range(d)]
+ for h,c in [(3,1),(5,1),(11,1),(17,2)]:a[COMPACT_H.index(h)][0]+=c
+ a[COMPACT_H.index(9)][COMPACT_H.index(3)]+=1
+ a[COMPACT_H.index(15)][COMPACT_H.index(5)]+=2
+ return a
+
+def write_compact_tail():
+ a=compact_tail_matrix();p,_=compile_linear(a);v=[ordinary_table(6)[6][h] for h in COMPACT_H]
+ zero=primes(6*len(a)+3)[-1]
+ aliases={h:(0 if h in (7,21) else 11 if h==13 else 17 if h==19 else h) for h in H}
+ output={h:zero if alias==0 else p['x'][COMPACT_H.index(alias)] for h,alias in aliases.items()}
+ seed=p['checkpoint']*p['clock']**6*math.prod(q**e for q,e in zip(p['x'],v));base=Path(__file__).parent
+ (base/'compact_tail21.fractran').write_text('\n'.join(f'{n}/{d}' for n,d in p['fractions'])+'\n')
+ data={k:v for k,v in p.items() if k!='fractions'}
+ data.update(initial_order=6,initial_vector=v,initial_integer=str(seed),output_primes=output,unused_zero_prime=zero)
+ (base/'compact_tail_program.json').write_text(json.dumps(data,indent=2)+'\n')
+ return data
+
+if __name__=='__main__':write_compact_tail()

@@ -1,6 +1,6 @@
 from pathlib import Path
 import hashlib,itertools,json,math,random
-from stream import compile_linear,run,matrix,H,L,ATOMS,ordinary_table,tail_matrix
+from stream import compile_linear,run,matrix,H,L,ATOMS,ordinary_table,tail_matrix,compact_tail_matrix,COMPACT_H
 
 def require(x,m):
  if not x:raise RuntimeError(m)
@@ -35,6 +35,15 @@ def main():
  tl,tls,_=run(tail,tv,5,literal=True)
  require(tl==tg[:6] and tls==ts[:5],'literal tail counter');checks+=1
  require((Path(__file__).parent/'tail21.fractran').read_text()=='\n'.join(f'{u}/{d}' for u,d in tp['fractions'])+'\n','tail fractions')
+ cm=compact_tail_matrix();cv=[oracle[6][h] for h in COMPACT_H]
+ cg,cs,cp=run(cm,cv,26)
+ meta=json.loads((Path(__file__).parent/'compact_tail_program.json').read_text())
+ for k,row in enumerate(cg):
+  vals=dict(zip(cp['x'],row));vals[meta['unused_zero_prime']]=0
+  require({h:vals[meta['output_primes'][str(h)]] for h in H}==oracle[k+6],'compact alias readout');checks+=1
+ cl,cls,_=run(cm,cv,5,literal=True)
+ require(cl==cg[:6] and cls==cs[:5],'literal compact');checks+=1
+ require((Path(__file__).parent/'compact_tail21.fractran').read_text()=='\n'.join(f'{u}/{d}' for u,d in cp['fractions'])+'\n','compact fractions')
  # Closed forms from inherited SCC word enumeration, zero before support.
  for n in range(33):
   expected={1:1,3:max(0,n-2),5:max(0,n-3),7:0,9:(n-4)*(n-1)//2 if n>=5 else 0,
@@ -65,7 +74,7 @@ def main():
  require((base/'bounded21.fractran').read_text()==generated,'fraction regeneration')
  require(json.loads((base/'program.json').read_text())=={k:v for k,v in p.items() if k!='fractions'},'metadata regeneration')
  return {'status':'passed','checks':checks,'negative_controls':hostiles,'fractions':len(p['fractions']),
-  'dimension':len(a),'tail_fractions':len(tp['fractions']),'tail_literal_rounds':5,'tail_order_range':[6,32],'literal_integer_stream_through':10,'valuation_stream_through':32,
+  'dimension':len(a),'tail_fractions':len(tp['fractions']),'compact_tail_fractions':len(cp['fractions']),'tail_literal_rounds':5,'tail_order_range':[6,32],'literal_integer_stream_through':10,'valuation_stream_through':32,
   'checkpoint':p['checkpoint'],'clock':p['clock'],'initial_integer':2*p['checkpoint'],
   'steps_through_32':sum(steps),'rows_0_through_32':[{str(h):oracle[n][h] for h in H} for n in range(33)],
   'fraction_sha256':hashlib.sha256(generated.encode()).hexdigest()}

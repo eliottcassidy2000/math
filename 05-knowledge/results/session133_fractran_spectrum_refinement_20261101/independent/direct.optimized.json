@@ -1,0 +1,280 @@
+{
+  "status": "PASS",
+  "apex_all_words_max_length": 8,
+  "apex_literal_cases": 511,
+  "apex_max_steps": 2790,
+  "apex_attained_H": [
+    1,
+    3,
+    5,
+    9,
+    11,
+    15,
+    17,
+    19,
+    23,
+    25,
+    27,
+    31,
+    33,
+    37,
+    39,
+    45,
+    47,
+    51,
+    53,
+    61,
+    63,
+    65,
+    69,
+    73,
+    79,
+    81,
+    85,
+    87,
+    91,
+    95,
+    97,
+    99,
+    103,
+    107,
+    115,
+    117,
+    121,
+    123,
+    127,
+    129,
+    139,
+    141,
+    143,
+    145,
+    151,
+    157,
+    159,
+    165,
+    169,
+    171,
+    179,
+    187,
+    191,
+    195,
+    201,
+    213,
+    219,
+    227
+  ],
+  "core_partition_DP_through": 150,
+  "core_literal_cases": [
+    {
+      "tail": false,
+      "n": 3,
+      "output": 3,
+      "steps": 1
+    },
+    {
+      "tail": false,
+      "n": 4,
+      "output": 5,
+      "steps": 2
+    },
+    {
+      "tail": false,
+      "n": 5,
+      "output": 9,
+      "steps": 3
+    },
+    {
+      "tail": false,
+      "n": 6,
+      "output": 9,
+      "steps": 5
+    },
+    {
+      "tail": false,
+      "n": 7,
+      "output": 15,
+      "steps": 6
+    },
+    {
+      "tail": false,
+      "n": 8,
+      "output": 25,
+      "steps": 7
+    },
+    {
+      "tail": false,
+      "n": 9,
+      "output": 27,
+      "steps": 83
+    },
+    {
+      "tail": false,
+      "n": 10,
+      "output": 45,
+      "steps": 132
+    },
+    {
+      "tail": false,
+      "n": 11,
+      "output": 75,
+      "steps": 213
+    },
+    {
+      "tail": false,
+      "n": 12,
+      "output": 81,
+      "steps": 305
+    },
+    {
+      "tail": false,
+      "n": 13,
+      "output": 135,
+      "steps": 498
+    },
+    {
+      "tail": false,
+      "n": 14,
+      "output": 225,
+      "steps": 819
+    },
+    {
+      "tail": false,
+      "n": 15,
+      "output": 243,
+      "steps": 959
+    },
+    {
+      "tail": false,
+      "n": 16,
+      "output": 405,
+      "steps": 1584
+    },
+    {
+      "tail": false,
+      "n": 17,
+      "output": 675,
+      "steps": 2625
+    },
+    {
+      "tail": false,
+      "n": 18,
+      "output": 729,
+      "steps": 2909
+    },
+    {
+      "tail": false,
+      "n": 19,
+      "output": 1215,
+      "steps": 4830
+    },
+    {
+      "tail": false,
+      "n": 20,
+      "output": 2025,
+      "steps": 8031
+    },
+    {
+      "tail": false,
+      "n": 21,
+      "output": 2187,
+      "steps": 8747
+    },
+    {
+      "tail": true,
+      "n": 6,
+      "output": 9,
+      "steps": 2
+    },
+    {
+      "tail": true,
+      "n": 7,
+      "output": 15,
+      "steps": 3
+    },
+    {
+      "tail": true,
+      "n": 8,
+      "output": 25,
+      "steps": 4
+    },
+    {
+      "tail": true,
+      "n": 9,
+      "output": 27,
+      "steps": 80
+    },
+    {
+      "tail": true,
+      "n": 10,
+      "output": 45,
+      "steps": 129
+    },
+    {
+      "tail": true,
+      "n": 11,
+      "output": 75,
+      "steps": 210
+    },
+    {
+      "tail": true,
+      "n": 12,
+      "output": 81,
+      "steps": 302
+    },
+    {
+      "tail": true,
+      "n": 13,
+      "output": 135,
+      "steps": 495
+    },
+    {
+      "tail": true,
+      "n": 14,
+      "output": 225,
+      "steps": 816
+    },
+    {
+      "tail": true,
+      "n": 15,
+      "output": 243,
+      "steps": 956
+    },
+    {
+      "tail": true,
+      "n": 16,
+      "output": 405,
+      "steps": 1581
+    },
+    {
+      "tail": true,
+      "n": 17,
+      "output": 675,
+      "steps": 2622
+    },
+    {
+      "tail": true,
+      "n": 18,
+      "output": 729,
+      "steps": 2906
+    },
+    {
+      "tail": true,
+      "n": 19,
+      "output": 1215,
+      "steps": 4827
+    },
+    {
+      "tail": true,
+      "n": 20,
+      "output": 2025,
+      "steps": 8028
+    },
+    {
+      "tail": true,
+      "n": 21,
+      "output": 2187,
+      "steps": 8744
+    }
+  ],
+  "scope": "All-order program semantics are established by loop invariants; finite checks independently compare actual raw fractions to tournament DP/cycle enumeration and component-product DP."
+}

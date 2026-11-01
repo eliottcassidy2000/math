@@ -1,0 +1,495 @@
+{
+  "alternating_H": [
+    1,
+    3,
+    9,
+    31,
+    117,
+    459,
+    1825,
+    7287,
+    29133,
+    116515,
+    466041,
+    1864143
+  ],
+  "balanced_H": [
+    3,
+    11,
+    51,
+    227,
+    963,
+    3971,
+    16131,
+    65027,
+    261123,
+    1046531,
+    4190211
+  ],
+  "compiled_general_graphs": [
+    {
+      "H": 1,
+      "bits": 0,
+      "order": 0,
+      "steps": 700
+    },
+    {
+      "H": 1,
+      "bits": 0,
+      "order": 1,
+      "steps": 1748
+    },
+    {
+      "H": 1,
+      "bits": 0,
+      "order": 2,
+      "steps": 11069
+    },
+    {
+      "H": 1,
+      "bits": 1,
+      "order": 2,
+      "steps": 14805
+    },
+    {
+      "H": 1,
+      "bits": 0,
+      "order": 3,
+      "steps": 246160
+    },
+    {
+      "H": 1,
+      "bits": 1,
+      "order": 3,
+      "steps": 258900
+    },
+    {
+      "H": 3,
+      "bits": 2,
+      "order": 3,
+      "steps": 281295
+    },
+    {
+      "H": 1,
+      "bits": 3,
+      "order": 3,
+      "steps": 309160
+    },
+    {
+      "H": 1,
+      "bits": 4,
+      "order": 3,
+      "steps": 349404
+    },
+    {
+      "H": 3,
+      "bits": 5,
+      "order": 3,
+      "steps": 393135
+    },
+    {
+      "H": 1,
+      "bits": 6,
+      "order": 3,
+      "steps": 446284
+    },
+    {
+      "H": 1,
+      "bits": 7,
+      "order": 3,
+      "steps": 505140
+    }
+  ],
+  "direct_reflected_graphs": [
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      4,
+      25
+    ],
+    [
+      5,
+      31
+    ],
+    [
+      6,
+      45
+    ],
+    [
+      7,
+      51
+    ],
+    [
+      8,
+      81
+    ],
+    [
+      9,
+      91
+    ],
+    [
+      10,
+      117
+    ],
+    [
+      11,
+      127
+    ],
+    [
+      12,
+      165
+    ],
+    [
+      13,
+      179
+    ],
+    [
+      14,
+      213
+    ],
+    [
+      15,
+      227
+    ],
+    [
+      16,
+      289
+    ],
+    [
+      17,
+      307
+    ],
+    [
+      18,
+      353
+    ],
+    [
+      19,
+      371
+    ],
+    [
+      20,
+      437
+    ],
+    [
+      21,
+      459
+    ],
+    [
+      22,
+      513
+    ],
+    [
+      23,
+      535
+    ],
+    [
+      24,
+      621
+    ],
+    [
+      25,
+      647
+    ],
+    [
+      26,
+      713
+    ],
+    [
+      27,
+      739
+    ],
+    [
+      28,
+      829
+    ],
+    [
+      29,
+      859
+    ],
+    [
+      30,
+      933
+    ],
+    [
+      31,
+      963
+    ]
+  ],
+  "hostiles": [
+    "priority inversion",
+    "lost doubling",
+    "unpointed H5 quotient",
+    "global H13 grammar boundary"
+  ],
+  "invalid_general_codes": [
+    2,
+    4,
+    5,
+    9,
+    19,
+    27,
+    135,
+    151,
+    2063,
+    2095
+  ],
+  "inverse_graph_bound_H": 101,
+  "maximum_apex_steps": 2790,
+  "million_inverse_summary": {
+    "G_first25": [
+      3,
+      9,
+      11,
+      25,
+      31,
+      45,
+      51,
+      81,
+      91,
+      117,
+      127,
+      165,
+      179,
+      213,
+      227,
+      289,
+      307,
+      353,
+      371,
+      437,
+      459,
+      513,
+      535,
+      621,
+      647
+    ],
+    "bound_H": 1000000,
+    "counts_sha256": "a242d86d761192ef0e3aeaff4df987c839a747c4a003901145188b3f319a0983",
+    "distinct_H_values": 249076,
+    "first_H_with_maximum_fibre": 176077,
+    "maximum_fibre_size": 14,
+    "missing_odd_H_first30": [
+      7,
+      13,
+      21,
+      29,
+      35,
+      41,
+      43,
+      49,
+      55,
+      57,
+      59,
+      67,
+      71,
+      75,
+      77,
+      83,
+      89,
+      93,
+      101,
+      105,
+      109,
+      111,
+      113,
+      119,
+      125,
+      131,
+      133,
+      135,
+      137,
+      147
+    ],
+    "odd_fibre_values": 999,
+    "pointed_strong_classes_total": 693169,
+    "status": "FINITE-EXACT under proved all-order inverse bound",
+    "tested_prefix_addresses": 999999
+  },
+  "native_general_graphs": 76,
+  "one_apex_cycle_words": 127,
+  "one_apex_fraction_words": 511,
+  "one_apex_graph_DP_words": 255,
+  "one_apex_literal_words": 63,
+  "shell_endpoint_checks": 10000,
+  "square_shell_compiled_runs": [
+    {
+      "G": 0,
+      "q": 0,
+      "steps": 41
+    },
+    {
+      "G": 3,
+      "q": 1,
+      "steps": 492
+    },
+    {
+      "G": 9,
+      "q": 2,
+      "steps": 1591
+    },
+    {
+      "G": 11,
+      "q": 3,
+      "steps": 1772
+    },
+    {
+      "G": 25,
+      "q": 4,
+      "steps": 3778
+    },
+    {
+      "G": 31,
+      "q": 5,
+      "steps": 4018
+    },
+    {
+      "G": 45,
+      "q": 6,
+      "steps": 5415
+    },
+    {
+      "G": 51,
+      "q": 7,
+      "steps": 5726
+    },
+    {
+      "G": 81,
+      "q": 8,
+      "steps": 9365
+    },
+    {
+      "G": 91,
+      "q": 9,
+      "steps": 9588
+    },
+    {
+      "G": 117,
+      "q": 10,
+      "steps": 11793
+    },
+    {
+      "G": 127,
+      "q": 11,
+      "steps": 12066
+    },
+    {
+      "G": 165,
+      "q": 12,
+      "steps": 15698
+    },
+    {
+      "G": 179,
+      "q": 13,
+      "steps": 16030
+    },
+    {
+      "G": 213,
+      "q": 14,
+      "steps": 18845
+    },
+    {
+      "G": 227,
+      "q": 15,
+      "steps": 19290
+    },
+    {
+      "G": 289,
+      "q": 16,
+      "steps": 26228
+    },
+    {
+      "G": 307,
+      "q": 17,
+      "steps": 26207
+    },
+    {
+      "G": 353,
+      "q": 18,
+      "steps": 30061
+    },
+    {
+      "G": 371,
+      "q": 19,
+      "steps": 30090
+    },
+    {
+      "G": 437,
+      "q": 20,
+      "steps": 36238
+    },
+    {
+      "G": 459,
+      "q": 21,
+      "steps": 36284
+    },
+    {
+      "G": 513,
+      "q": 22,
+      "steps": 40769
+    },
+    {
+      "G": 535,
+      "q": 23,
+      "steps": 40928
+    },
+    {
+      "G": 621,
+      "q": 24,
+      "steps": 49357
+    },
+    {
+      "G": 647,
+      "q": 25,
+      "steps": 49260
+    }
+  ],
+  "square_shell_literal": [
+    {
+      "max_integer_bits": 14,
+      "output": 0,
+      "q": 0,
+      "steps": 41
+    },
+    {
+      "max_integer_bits": 66,
+      "output": 3,
+      "q": 1,
+      "steps": 492
+    },
+    {
+      "max_integer_bits": 129,
+      "output": 9,
+      "q": 2,
+      "steps": 1591
+    },
+    {
+      "max_integer_bits": 143,
+      "output": 11,
+      "q": 3,
+      "steps": 1772
+    },
+    {
+      "max_integer_bits": 284,
+      "output": 25,
+      "q": 4,
+      "steps": 3778
+    }
+  ],
+  "status": "PASS",
+  "universal_literal": {
+    "max_integer_bits": 61,
+    "output": 1,
+    "steps": 700
+  }
+}

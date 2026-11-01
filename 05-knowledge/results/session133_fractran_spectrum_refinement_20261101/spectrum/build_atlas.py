@@ -119,8 +119,14 @@ def main():
     strong_values={r['H'] for r in all_rows if r['strong']}
     need(7 not in strong_values and 21 not in strong_values,'forbidden strong base failure')
     # Hostile: same H can have different packing profile or SCC count.
-    h15=[r for r in all_rows if r['H']==15]
-    need(len({tuple(r['alpha']) for r in h15})>1,'lost-packing-coordinate hostile missing')
+    h9=[r for r in all_rows if r['H']==9]
+    def polynomial(alpha):
+        values=list(alpha)
+        while values and values[-1]==0:values.pop()
+        return tuple(values)
+    need(polynomial([1,7])==polynomial([1,7,0,0]),'trailing-zero normalization fails')
+    need({polynomial(r['alpha']) for r in all_rows if r['H']==15}=={(1,7)},'H15 through-six normalization hostile fails')
+    need(len({polynomial(r['alpha']) for r in h9})>1,'lost-packing-coordinate hostile missing')
     payload={'schema':'session133.small-tournament-atlas.v1',
         'scope':'Complete isomorphism classes through order 6; all-order claims require cited Busch cutoff and SCC product.',
         'orientation':'lexicographic upper triangle, bit 1 means lower-labelled vertex points to higher',
@@ -136,6 +142,6 @@ def main():
         'controls':{'DP_equals_permutations':'all 76 classes, orders 1..6',
                     'DP_equals_literal_OCF':'all 76 classes, orders 1..6',
                     'labelled_orbit_mass':'all orders 1..6',
-                    'H_not_unique_packing_profile':'H=15'}}
+                    'H_not_unique_packing_profile':'H=9; trailing zero coefficients normalized'}}
     print(json.dumps(payload,indent=2,sort_keys=True))
 if __name__=='__main__':main()
