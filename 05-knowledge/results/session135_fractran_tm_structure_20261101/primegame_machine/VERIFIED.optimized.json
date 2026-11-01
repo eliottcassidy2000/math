@@ -1,0 +1,505 @@
+{
+  "capped_box": {
+    "census": {
+      "cycle2": 36564,
+      "cycle6": 21768,
+      "prime": 717
+    },
+    "count": 59049,
+    "exponent_range": [
+      0,
+      2
+    ]
+  },
+  "checks": 583291,
+  "hostiles": {
+    "1": {
+      "basin": "cycle2",
+      "bound": 1,
+      "input": 1,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "11": {
+      "basin": "cycle2",
+      "bound": 7,
+      "input": 11,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "121": {
+      "basin": "cycle2",
+      "bound": 28,
+      "input": 121,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "periodic"
+    },
+    "13": {
+      "basin": "cycle2",
+      "bound": 7,
+      "input": 13,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "133331": {
+      "basin": "cycle6",
+      "bound": 1008,
+      "input": 133331,
+      "spectator": 31,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "witness_kind": "periodic"
+    },
+    "143": {
+      "basin": "cycle2",
+      "bound": 28,
+      "input": 143,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "periodic"
+    },
+    "17": {
+      "basin": "cycle2",
+      "bound": 21,
+      "input": 17,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "1705": {
+      "basin": "cycle2",
+      "bound": 14,
+      "input": 1705,
+      "spectator": 31,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "2": {
+      "basin": "prime",
+      "bound": 2,
+      "input": 2,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "23": {
+      "basin": "prime",
+      "bound": 42,
+      "input": 23,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "247": {
+      "basin": "cycle2",
+      "bound": 84,
+      "input": 247,
+      "spectator": 1,
+      "transitions": 3,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "29": {
+      "basin": "cycle2",
+      "bound": 21,
+      "input": 29,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "witness_kind": "onehot"
+    },
+    "3": {
+      "basin": "prime",
+      "bound": 3,
+      "input": 3,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "4301": {
+      "basin": "cycle6",
+      "bound": 1008,
+      "input": 4301,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "witness_kind": "periodic"
+    },
+    "5": {
+      "basin": "cycle2",
+      "bound": 2,
+      "input": 5,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "62": {
+      "basin": "prime",
+      "bound": 2,
+      "input": 62,
+      "spectator": 31,
+      "transitions": 0,
+      "witness": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    },
+    "91": {
+      "basin": "cycle2",
+      "bound": 21,
+      "input": 91,
+      "spectator": 1,
+      "transitions": 0,
+      "witness": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "witness_kind": "onehot"
+    }
+  },
+  "integers": {
+    "census": {
+      "cycle2": 12478,
+      "cycle6": 36,
+      "prime": 17486
+    },
+    "range": [
+      1,
+      30000
+    ]
+  },
+  "max_decider_transitions": 1566,
+  "max_uncached_raw_control_path": 1568,
+  "measure_changes": [
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 91,
+      "dk": 0,
+      "numerator": 17,
+      "rule": "A"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 85,
+      "dk": 0,
+      "numerator": 78,
+      "rule": "B"
+    },
+    {
+      "dQ": -1,
+      "dT": 0,
+      "denominator": 51,
+      "dk": 0,
+      "numerator": 19,
+      "rule": "C"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 38,
+      "dk": 0,
+      "numerator": 23,
+      "rule": "D"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 33,
+      "dk": 0,
+      "numerator": 29,
+      "rule": "E"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 29,
+      "dk": 0,
+      "numerator": 77,
+      "rule": "F"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 23,
+      "dk": 0,
+      "numerator": 95,
+      "rule": "G"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 19,
+      "dk": 0,
+      "numerator": 77,
+      "rule": "H"
+    },
+    {
+      "dQ": -1,
+      "dT": 0,
+      "denominator": 17,
+      "dk": -1,
+      "numerator": 1,
+      "rule": "I"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 13,
+      "dk": 0,
+      "numerator": 11,
+      "rule": "J"
+    },
+    {
+      "dQ": 0,
+      "dT": 0,
+      "denominator": 11,
+      "dk": 0,
+      "numerator": 13,
+      "rule": "K"
+    },
+    {
+      "dQ": 1,
+      "dT": 0,
+      "denominator": 2,
+      "dk": 0,
+      "numerator": 15,
+      "rule": "L"
+    },
+    {
+      "dQ": -1,
+      "dT": 0,
+      "denominator": 7,
+      "dk": 0,
+      "numerator": 1,
+      "rule": "M"
+    },
+    {
+      "dQ": 0,
+      "dT": 1,
+      "denominator": 1,
+      "dk": 1,
+      "numerator": 55,
+      "rule": "N"
+    }
+  ],
+  "onehot": {
+    "census": {
+      "cycle2": 286,
+      "prime": 8786
+    },
+    "count": 9072,
+    "counter_range": [
+      0,
+      5
+    ]
+  },
+  "random": {
+    "count": 300,
+    "exponent_range": [
+      0,
+      8
+    ],
+    "seed": 135
+  },
+  "raw_control_cache_size": 277046,
+  "status": "FINITE-EXACT PASS; all-input claims proved in THEORY.md"
+}

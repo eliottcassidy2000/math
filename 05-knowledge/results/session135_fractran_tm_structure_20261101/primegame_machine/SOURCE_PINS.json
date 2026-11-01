@@ -1,0 +1,26 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "2a18212bfe0e8f4e82444ca2b96d3d708cb520e0",
+  "inputs": [
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/primegame/fractran/FRACTRAN_PRIME_EXPONENT_REPORT.md",
+      "local": "inputs/s126_primegame.md",
+      "sha256": "be46fe74da6b05a17805a6373b56acda19c347b2e2cfb2bf33d2171fa8cd4d7b"
+    },
+    {
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/partition/README.md",
+      "local": "inputs/s129_partition.md",
+      "sha256": "2a2f780f8065c90c4bae08efd0e83e2ed94383156a4e0a53c6a2fb0ca3de959b"
+    },
+    {
+      "path": "05-knowledge/results/session129_primegame_tournament_partition_20261031/periodic_density/README.md",
+      "local": "inputs/s129_periodic_density.md",
+      "sha256": "b39b0a7e16d363a3a26693295ea6e2d1eb86d9d5d8d4182a73fbaae8d35c3b28"
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/fractran/THEORY.md",
+      "local": "inputs/s133_fixed_programs.md",
+      "sha256": "3dbf12e71bfcda6ac2544b624df7565151760a49b6809afe257a30c58aa9712e"
+    }
+  ]
+}

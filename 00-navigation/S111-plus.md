@@ -55,3 +55,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session133](S133.md): actual FRACTRAN sequence refinements, bounded-H cores and spectrum proof certificates; universal completeness remains open.
 
 [Session134](S134.md): constructive spectrum frontier, resource complexity and state-preserving operations; universal realization open.
+
+[Session135](S135.md): exact machine representations, fixed-PRIMEGAME basins and cost-preserving simplifications.

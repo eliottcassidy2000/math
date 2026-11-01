@@ -1,0 +1,25 @@
+{
+  "cap": 1,
+  "census": {
+    "cycle2": 720,
+    "cycle6": 212,
+    "prime": 92
+  },
+  "common_denominator": 41856930490307832900,
+  "error_numerator": 16226113735054584900,
+  "intervals": {
+    "cycle2": {
+      "lower_numerator": 14100460219966095360,
+      "upper_numerator": 30326573955020680260
+    },
+    "cycle6": {
+      "lower_numerator": 14879346004131840,
+      "upper_numerator": 16240993081058716740
+    },
+    "prime": {
+      "lower_numerator": 11515477189283020800,
+      "upper_numerator": 27741590924337605700
+    }
+  },
+  "states": 1024
+}

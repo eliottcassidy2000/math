@@ -1,0 +1,14 @@
+{
+  "cases": {
+    "exit_cycle2": 143,
+    "exit_standard": 1506,
+    "phase_cycle2": 794,
+    "phase_cycle6": 301
+  },
+  "checks": 330773,
+  "inputs": 2760,
+  "max_phase_steps": 1040,
+  "max_raw_entry_steps": 1040,
+  "positive_control_inputs": 2744,
+  "status": "FINITE-EXACT PASS"
+}

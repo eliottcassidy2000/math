@@ -1,0 +1,80 @@
+{
+  "drift": {
+    "capped_states": 1,
+    "caps": {
+      "2": 0
+    },
+    "density_by_least_period": {},
+    "density_period_at_most_L": "0",
+    "period_cutoff": 3,
+    "representative_counts": {}
+  },
+  "finite_horizon_and_return_checks": 960,
+  "fixed": {
+    "capped_states": 1,
+    "caps": {},
+    "density_by_least_period": {
+      "1": "1"
+    },
+    "density_period_at_most_L": "1",
+    "period_cutoff": 3,
+    "representative_counts": {
+      "1": 1
+    }
+  },
+  "primegame_period2": {
+    "capped_states": 59049,
+    "caps": {
+      "2": 2,
+      "3": 2,
+      "5": 2,
+      "7": 2,
+      "11": 2,
+      "13": 2,
+      "17": 2,
+      "19": 2,
+      "23": 2,
+      "29": 2
+    },
+    "density_by_least_period": {
+      "2": "2654208/36409529"
+    },
+    "density_period_at_most_L": "2654208/36409529",
+    "period_cutoff": 2,
+    "representative_counts": {
+      "2": 45
+    }
+  },
+  "reversed_priority_toy": {
+    "capped_states": 9,
+    "caps": {
+      "2": 2,
+      "3": 2
+    },
+    "density_by_least_period": {
+      "2": "5/9"
+    },
+    "density_period_at_most_L": "5/9",
+    "period_cutoff": 2,
+    "representative_counts": {
+      "2": 5
+    }
+  },
+  "scope": "Periodic POINTS with least period <= specified finite L; not eventual basins or a universal bound on periods.",
+  "status": "PASS",
+  "toy": {
+    "capped_states": 9,
+    "caps": {
+      "2": 2,
+      "3": 2
+    },
+    "density_by_least_period": {
+      "2": "5/12"
+    },
+    "density_period_at_most_L": "5/12",
+    "period_cutoff": 2,
+    "representative_counts": {
+      "2": 5
+    }
+  }
+}

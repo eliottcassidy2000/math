@@ -1,0 +1,16 @@
+{
+  "baseline": "2a18212bfe0e8f4e82444ca2b96d3d708cb520e0",
+  "inherited": [
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/fractran/THEORY.md",
+      "sha256": "3dbf12e71bfcda6ac2544b624df7565151760a49b6809afe257a30c58aa9712e"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    }
+  ],
+  "related_primary": "https://lsv.ens-paris-saclay.fr/Publis/PAPERS/PDF/DDS-tcs17.pdf",
+  "checked_utc": "2026-11-01",
+  "scope": "Elementary local proof; no global flat-system complexity theorem imported."
+}

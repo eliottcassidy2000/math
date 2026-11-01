@@ -1,0 +1,66 @@
+{
+  "T0_multicontrol_cycle2_density": {
+    "decimal_for_display_only": 0.01947262026423309,
+    "denominator": 18757643197865,
+    "numerator": 365260463044
+  },
+  "basin_intervals": {
+    "cycle2": {
+      "lower": {
+        "decimal_for_display_only": 0.37630369286517873,
+        "denominator": 2002524095,
+        "numerator": 753557212
+      },
+      "upper": {
+        "decimal_for_display_only": 0.41869974059024817,
+        "denominator": 45299708322843975,
+        "numerator": 18966976123588679
+      }
+    },
+    "cycle6": {
+      "lower": {
+        "decimal_for_display_only": 0.00024683479862622676,
+        "denominator": 151504041213525,
+        "numerator": 37396469504
+      },
+      "upper": {
+        "decimal_for_display_only": 0.04264288252369568,
+        "denominator": 431425793550895,
+        "numerator": 18397239432083
+      }
+    },
+    "prime": {
+      "lower": {
+        "decimal_for_display_only": 0.5810534246111256,
+        "denominator": 86285158710179,
+        "numerator": 50136286961664
+      },
+      "upper": {
+        "decimal_for_display_only": 0.6234494723361951,
+        "denominator": 1969552535775825,
+        "numerator": 1227916489167853
+      }
+    }
+  },
+  "onehot_cycle2_density": {
+    "decimal_for_display_only": 0.35683107260094565,
+    "denominator": 288579126121,
+    "numerator": 102973999104
+  },
+  "onehot_mass": {
+    "decimal_for_display_only": 0.9378844972120712,
+    "denominator": 86285158710179,
+    "numerator": 80925512693760
+  },
+  "onehot_prime_density": {
+    "decimal_for_display_only": 0.5810534246111256,
+    "denominator": 86285158710179,
+    "numerator": 50136286961664
+  },
+  "status": "EXACT bounds; displayed decimals are approximations, not limits from a census",
+  "unassigned_mass": {
+    "decimal_for_display_only": 0.04239604772506945,
+    "denominator": 45299708322843975,
+    "numerator": 1920528595987019
+  }
+}
