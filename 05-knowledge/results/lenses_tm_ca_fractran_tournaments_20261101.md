@@ -51,10 +51,12 @@ machines into each other. Those are the lanes this note takes.
 
    The checks: the automaton matches the machine at every step for 200,000 steps. LENGGAME matches its stacks at all
    of the first 3,000 steps; this is post-hoc, after a pre-registered checker failure, which is reported.
-3. **The owner's "12 classes become 10 nodes" is a cellular-automaton fact** (THM-4857).
-   - The GF(2) automaton x -> Ax cannot tell a tournament from its converse. It therefore lives on merged nodes, and
-     its similarity type classifies them exactly for n <= 5 (2, 3, 10 types).
-   - It fails at n = 6 (24 types / 34 nodes), at n = 7 (51 / 272) and for all n >= 9 (counting).
+3. **At n = 5 the owner's ten merged nodes are exactly the ten GF(2) automaton types** (THM-4857). This is a
+   small-n coincidence.
+   - The GF(2) automaton x -> Ax cannot tell a tournament from its converse. That explains why it cannot see beyond
+     merged nodes, which is by definition the converse merge "12 classes become 10 nodes".
+   - That it sees exactly the merged nodes for n <= 5 (2, 3, 10 types) is an accident of small n.
+   - It fails for every n >= 6: 24 types for 34 nodes, 51 for 272, and n >= 8 by counting (OEIS A070933).
    - At n = 5:
      - the automata of four of the five mixed nodes are reversible;
      - node #6 runs a single 31-cycle (a maximal-period linear recurrence);
@@ -62,15 +64,22 @@ machines into each other. Those are the lanes this note takes.
 4. **Circulant tournaments are additive cellular automata** (THM-4857 (3), (4)).
    - The rank is q - deg gcd(a(x), x^q - 1).
    - Paley tournaments are reversible iff q = 3 (mod 8). For q = 7 (mod 8) their image is a quadratic-residue code:
-     the **Hamming code at 7** and the **binary Golay code at 23**.
-   - The QR-code dichotomy is classical (CITED). That the tournament automaton realises it is the translation added
-     here.
+     the Hamming code at 7 and the binary Golay code at 23.
+   - This part is KNOWN.
+     - It is already canon: THM-481 (June 2026) identifies the Paley tournament's GF(2) code with the QR code, with
+       Golay at 23, crediting Kim-Solé 2008, Assmus-Key and T. S. Michael.
+     - The dichotomy holds for every doubly regular tournament (A^(-1) = A^T over GF(2) when n = 3 mod 8; A^2 = A when
+       n = 7 mod 8).
+   - New here: only the cellular-automaton reading of the circulant case.
 5. **FRACTRAN's priority order is a transitive tournament** (section 4).
    - Only co-applicable fractions need ordering, so the order that matters is a partial tournament.
    - A tournament-scheduled FRACTRAN is well defined iff the priority tournament has a source on every realisable
      co-applicable set.
-   - For one-hot programs such as PRIMEGAME and GOLDBACHGAME, the co-applicable sets are the per-state rule groups,
-     and the priority is a disjoint union of transitive tournaments (PRIMEGAME: 3, 2, 3, 2, 2, 1, 1).
+   - GOLDBACHGAME: every fraction carries a state prime, so the co-applicable sets are the per-state groups and the
+     priority is a disjoint union of chains.
+   - PRIMEGAME is different. Its state-free fractions (15/14, 15/2, 55/1 in Guy's list) are co-applicable with every
+     state group, since 55/1 always applies. So each state chain must lie above the state-free chain: 26 distinct
+     reachable co-applicable sets mix the two (audit).
 6. **Open questions through the lenses** (section 5). The repository's questions sort into:
    - halting problems: Goldbach, Legendre, a sixth Fermat prime, the H-spectrum;
    - Π2 orbit questions: Collatz, twin primes;
@@ -86,8 +95,8 @@ machines into each other. Those are the lanes this note takes.
 | TM -> CA | cell alphabet Γ ∪ (Q×Γ) ∪ {HALT}, radius 1 | 1 step = 1 step | the whole configuration and halting (as the symbol HALT) | nothing; locality of a single head | PROVED folklore; Leng: 53 symbols, 200,000-step lockstep |
 | TM -> FRACTRAN | two stacks as exponents, one-hot control, helper states for loops | O(2^tape) per step | configurations at TM-step boundaries, halting | speed (exponential); state count grows (25 -> 568 fractions) | PROVED (Minsky, Conway); LENGGAME lockstep |
 | FRACTRAN -> register machine -> TM | one-hot decompilation, unary tapes | polynomial | the trace word, halting | the arithmetic of the integer (prime renaming conjugates the run; session135 section 2) | session135 compiler |
-| FRACTRAN -> CA | base-P# digit automaton selected by the units digit | 1 step = 1 step | the integer | translation invariance: only a selector (quasi-)automaton (MISTAKE-697); session126 builds a true radius-1 automaton with 385,025 symbols | S70, session126 |
-| tournament -> CA | x -> Ax over GF(2); circulant = additive automaton with neighbourhood S | - | isomorphism class up to converse (complete for n <= 5) | Hamiltonian-path data (H, palindromy) is not linear | THM-4857 |
+| FRACTRAN -> CA | base-P# digit automaton selected by the units digit (S70); a true radius-1 automaton with 385,025 symbols (session126) | 1 step = 1 step for S70's quasi-automaton; many steps per FRACTRAN step for session126's true CA | the integer | S70's map is only a selector (quasi-)automaton, not shift-invariant (MISTAKE-697) | S70, session126 |
+| tournament -> CA | x -> Ax over GF(2); circulant = additive automaton with neighbourhood S | - | a merged-node invariant, complete only for n <= 5 | the node itself for n >= 6 (24/34, 51/272); Hamiltonian-path data (H, palindromy) is not linear | THM-4857 (Paley case KNOWN: THM-481) |
 | circulant tournament -> words / Collatz | Hamiltonian paths = path words; S = parity word of a Terras cycle | - | H = q · #words; palindromy by segment sums; translation = Collatz shift | which words exist is not visible in the cycle arithmetic | THM-4855, THM-4849 |
 | tournament -> FRACTRAN / TM | counting programs (A000568, H(T), pure-blue stream) | large | the counts | the structure behind the counts | session132/133, session135 |
 | FRACTRAN -> tournament | priority list = transitive tournament on fractions | - | which rule fires | everything about arithmetic | section 4 |
@@ -108,10 +117,12 @@ to the applicable set. The machine is well defined on its reachable set iff P ha
 co-applicable set.
 - If the realisable sets include all subsets of some set of size >= 3, then P must be transitive on that set: a
   3-cycle has no source.
-- For a one-hot program (one state prime per integer), the co-applicable sets lie inside the state groups, so only
-  the per-state orders matter.
-- PRIMEGAME's groups have sizes 3 (state 17), 2 (13), 2 (11), 2 (19), 1 (23), 1 (29), and 3 for the state-free group,
-  each transitive.
+- If every fraction carries a state prime and exactly one state prime is present (GOLDBACHGAME, FERMATGAME,
+  LEGENDREGAME, LENGGAME), the co-applicable sets lie inside the state groups, so only the per-state orders matter.
+- PRIMEGAME's state groups have sizes 3 (state 17), 2 (13), 2 (11), 2 (19), 1 (23) and 1 (29). Its three state-free
+  fractions are co-applicable with every state group, because 55/1 always applies. So its essential priority is each
+  state chain placed above the state-free chain, not a disjoint union. The audit found 26 distinct reachable
+  co-applicable sets mixing the two, and reordering the groups changes the run at step 3.
 
 *Proof.* The rule "fire the source" needs exactly one maximal element. A tournament on a set has a unique source iff
 its top strong component is a single vertex, and a transitive tournament has one on every subset.
@@ -133,14 +144,14 @@ The arithmetic-hierarchy classification for Goldbach, Legendre, RH, LRC, twin pr
 | twin primes | Π2 | PRIMEGAME visits 2^p, 2^(p+2) consecutively infinitely often (procgen atlas) | OPEN |
 | LRC(n), each fixed n | decidable | certificate machines (session135 lrc_machine) | LRC(14) OPEN |
 | square-sum paths for n >= 25 | Π1, proved | certificate TMs (session135) | PROVED (Gerbicz, CITED) |
-| pure-blue alphabet {K1, C3, T5} | proved | path words with a segment test (THM-4855) | PROVED |
+| pure-blue alphabet {K1, C3, T5} | Π1 (a universal statement over orders), proved | path words with a segment test (THM-4855) | PROVED |
 | merged metagraph laws (HYP-9345) | per-n finite | the GF(2) automaton classifies nodes only through n = 5 | mixed |
 
 Why the H-spectrum is Π1:
 - H is multiplicative over strong components (a Hamiltonian path visits the components in order).
-- Busch's minimum over strong m-tournaments grows like 5^(m/3) (THM-4744, CITED).
-- So a realiser of h, if one exists, has at most m(h) = O(log h) vertices in each strong component, and the
-  components can be bounded too.
+- A strong m-tournament has a Hamiltonian cycle (Camion), so H >= m. This already bounds a realiser of h by h
+  vertices (audit). Busch's minimum, which grows like 5^(m/3) (THM-4744, CITED), sharpens this to O(log h) vertices
+  per strong component.
 - So "h is realised" is decidable, and the conjecture is a halting question.
 
 This is implicit in THM-4744's complete inventories below 625. Only the halting form is spelled out here.
@@ -159,4 +170,26 @@ python3 automaton_similarity_n7.py       # ~1 min (S4)
 
 ## 7. Audit
 
-(pending)
+**Verdict.** Independent audit (`04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/AUDIT.md`;
+own code in `audit_gf2_automaton.py`, `audit_machines.py`, `audit_note.py`): **SOUND WITH CORRECTIONS**, all applied
+(MISTAKE-701). The core mathematics and both simulations hold.
+
+**Corrections applied.**
+1. **n = 8 is not open.** There are 746 similarity classes of 8 × 8 GF(2) matrices (A070933), below the at least 3,440
+   merged nodes. So the automaton fails for every n >= 6.
+2. **PRIMEGAME is not one-hot in the sense of the priority lemma.** Its state-free fractions are co-applicable with
+   every state group. The lemma's clean form holds for GOLDBACHGAME and the other fully guarded programs.
+3. **T2c covered 66 TM steps, not 300**, because of the same misaligned counter. The audit's literal run matched all
+   300.
+4. **THM-4857 (4) is KNOWN.** It is THM-481, with Kim-Solé, Assmus-Key and T. S. Michael. The audit added the
+   doubly-regular generalisation, Sutner 1988, Taussky-Zassenhaus 1959 and de Caen 1991.
+5. **Framing.** "A cellular-automaton fact" overstated a small-n coincidence. The dictionary row now reads
+   "invariant, complete only for n <= 5".
+6. **Minor items.**
+   - S1 could not fail.
+   - The image is the other QR code (reciprocal generator; same parameters).
+   - Separability is not needed in the rank formula.
+   - "Containing 1" was added to the circulant count.
+   - The FRACTRAN -> CA cost row was corrected.
+   - Busch's bound is not needed for the Π1 form.
+   - The T3 label in machine_translations.py still reads "step 6"; its condition tests step 7.

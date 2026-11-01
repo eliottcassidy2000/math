@@ -1,0 +1,121 @@
+# Audit of mac-mini-2026-11-01-lenses (THM-4857, THM-4858, lenses note)
+
+**Verdict: SOUND WITH CORRECTIONS.** The mathematics of THM-4857 (1)-(4) and THM-4858 (a)-(b) is correct and
+reproduces with independent code. The corrections cover a false OPEN item, misstated evidence, a false PRIMEGAME
+claim in the note, missing prior art and framing.
+
+Independent auditor, 2026-11-01. Own code only (stdlib); the session's scripts were read but not imported. Run from
+the repo root (each script exits 0; outputs are in the matching `.out` files):
+
+```
+python3 04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/audit_gf2_automaton.py  # ~11 s
+python3 04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/audit_machines.py       # ~6 s
+python3 04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/audit_note.py           # ~9 s
+```
+
+## Findings
+
+1. **ERROR: n = 8 is not open.** Location: THM-4857 line 16 ("OPEN: n = 8"); line 69 and the title ("every n >= 9");
+   note line 57.
+   - p(n)2^n is a valid bound but a weak one.
+   - The exact number of similarity classes of n×n GF(2) matrices is c(n) = [t^n] ∏_k (1−2t^k)^(-1) (OEIS A070933:
+     2, 6, 14, 34, 74, 166, 350, 746, ...). My Smith-form brute force reproduces n ≤ 4.
+   - c(8) = 746 < 3440 ≤ the number of merged nodes at n = 8, and c(n) < 3.47·2^n for every n, so counting settles
+     every n ≥ 8.
+   - c(6) = 166 > 34 and c(7) = 350 > 272, so S2 and S4 were genuine tests.
+   - Correction: "fails for every n ≥ 6 (n = 6, 7 computed; n ≥ 8 by counting)", and delete the OPEN line.
+
+2. **ERROR: PRIMEGAME is not one-hot.** Location: note §2 item 5 (lines 72-73) and §4 (lines 111-113).
+   - 15/14, 15/2 and 55/1 have no state prime, and 55/1 applies to every integer.
+   - In 200,000 steps from 2, 1,430 of the integers visited have no state prime. 26 distinct realised applicable sets
+     straddle a state group and the state-free group, most often {17/91, 11/13, 15/14, 15/2, 55/1}.
+   - Putting the state-free group first changes the run at step 3. So the priority that matters is not a disjoint
+     union: every state group must rank above the state-free group.
+   - The claim does hold for GOLDBACHGAME, whose 37 fractions are all one-hot (checked).
+   - Correction: restrict the claim to strictly one-hot programs.
+
+3. **ERROR: T2c's coverage is misstated.** Location: THM-4858 status, line 14.
+   - T2c used the misaligned entry counter that broke T2b. Without acceleration it counts every helper return, so its
+     1,948 configurations cover the first **66** TM steps, not 300.
+   - The claim itself is true. Literal big-integer FRACTRAN (all 568 fractions, scanned in order) equals the dispatch
+     run at all 43,582 configurations of the first 300 TM steps.
+   - Correction: "66 TM steps (1,948 configurations); 300 steps checked by audit_lenses".
+
+4. **CREDIT: THM-4857 (4) is already in the repository and in the literature.**
+   - THM-481 (June 2026) shows that the GF(2) code of the Paley tournament is the binary QR code for every prime
+     q ≡ 7 (mod 8): the Golay code at q = 23, on the QNR side.
+     - It also has a q = 11 control in which the code is all of GF(2)^11.
+     - It credits Kim–Solé (Des. Codes Cryptogr. 49 (2008), Prop. 3), Assmus–Key, and T. S. Michael for the 2-rank
+       (q+1)/2.
+     - Neither THM-4857 nor the note cites THM-481, and THM-481 pre-empts the note's "translation added here" (line 66).
+   - The dichotomy holds for every doubly regular tournament. With n = 4t−1, A·A^T = tI + (t−1)J, so over GF(2):
+     - A^(-1) = A^T when n ≡ 3 (mod 8);
+     - A^2 = A when n ≡ 7 (mod 8), so the automaton is idempotent.
+
+     I checked this for Paley q ≤ 47 and for the non-circulant Paley tournament of GF(27).
+   - Also cite:
+     - Sutner's σ-/additive automata on graphs (Complex Systems 2 (1988));
+     - Taussky–Zassenhaus (1959) for A ~ A^T;
+     - de Caen (1991) for rank ≥ (n−1)/2 over any field.
+   - Retype (4) as KNOWN/CITED. I found no prior source for the n ≤ 5 classification.
+
+5. **OVERCLAIM: the framing of the n = 5 coincidence.** Location: note line 54 ("a cellular-automaton fact"), note
+   line 90, the THM-4857 title.
+   - "12 classes become 10 nodes" is the converse merge, by definition. Converse-blindness explains only why the
+     automaton cannot see beyond merged nodes. That it sees exactly them for n ≤ 5 is a small-n accident (24/34, 51/272,
+     false for all n ≥ 6).
+   - Line 90 should read "merged-node invariant, complete only for n ≤ 5", and should list the node itself as lost for
+     n ≥ 6.
+
+6. **MINOR: S1 could not fail.** The number of coarse types is at most the number of similarity types, which is at
+   most the number of merged nodes. A1 had already printed 2, 3 and 10 coarse types, so S1 added no evidence.
+
+7. **MINOR: the image is the other QR code.** Location: THM-4857 line 86.
+   - The column space is generated by gcd(b, x^q−1), where b is the non-residue polynomial; this is the reciprocal of
+     gcd(a, x^q−1).
+   - At q = 7 the generator is x^3+x^2+1, not x^3+x+1; q = 23 behaves the same way. The parameters are unchanged.
+
+8. **MINOR.**
+   - THM-4857:
+     - line 76: no separability is needed (the formula is checked on even q);
+     - line 10: the 26,039 sets are those containing 1;
+     - title (4): add "q prime";
+     - line 120: "NUMEROLOGY" misuses the note's typing.
+   - machine_translations.py line 340: the label says "HALT at step 6", but the condition tests 7.
+   - Note:
+     - line 89: "1 step = 1 step" is true only of the S70 quasi-automaton (session126's true CA needs many steps);
+     - §2 and §4 order the PRIMEGAME groups differently;
+     - line 136: "proved" is not a class.
+   - §5: the H-spectrum Π1 argument is right and its THM-4744 credit is fair. Busch's bound is not needed, since a
+     strong m-tournament has a Hamiltonian cycle and hence H ≥ m.
+
+## Independently confirmed
+
+**THM-4857 (1).** Invariant factors are unchanged under transposition and under conjugation.
+
+**THM-4857 (2).** (classes, merged nodes, types) = (2,2,2), (4,3,3), (12,10,10), (56,34,24), (456,272,51) for n = 3..7; self-converse classes 2, 2, 8, 12, 88. At n = 6 seven types are shared (sizes 2,2,2,2,3,3,3); TT6 and the (2,2,2,3,3,3) tournament share the single invariant factor x^6 (index 6). The n = 9 figures are right.
+
+**THM-4857 (3).** The rank formula holds on all 16,382 connection sets with odd q ≤ 27. The all-ones vector is in
+the kernel for q ≡ 1 (mod 4).
+
+**THM-4857 (4).**
+- The rank dichotomy holds for all 40 primes q ≡ 3 (mod 4) below 400.
+- The images are the [7,4,3] and [23,12,7] codes.
+- The proof is correct.
+
+**THM-4857 n = 5 table.** Reproduced; four of the five mixed nodes are reversible; node #6 has the primitive
+characteristic polynomial x^5+x^2+1.
+
+**THM-4858.**
+- Leng's table: 22 right / 27 left moves; (24,0) the only undefined slot. The 53-symbol CA (full-window updates)
+  equals the TM for 200,000 steps.
+- LENGGAME: 568 fractions, 349 primes, largest 2351; first 12 fractions as printed; one-hot, nothing cancelled; halts
+  only at B0_24. Stacks agree with the TM at every instruction exit for 5,000 steps.
+- 3,000 TM steps take 24,405,662 FRACTRAN steps. This equals the closed form 4⌊R/2⌋+6L+4 per right move and
+  4⌊R/2⌋+4⌊L/2⌋+4 per left move, so the cost is O(L+R).
+- BB(2): the CA writes HALT at step 7, and FRACTRAN halts in B1_2 with four 1s.
+- T2b and T3 reproduce exactly (entry 3 = (P23, 0, 1) vs the TM's (23, 0, 6); 3,000 entries end at step 20,789,496
+  but cover 2,903 TM steps): the program is right, only the checker was wrong.
+
+**Note.** PRIMEGAME group sizes 3, 2, 2, 2, 1, 1 plus 3 state-free; H multiplicative over strong components (n ≤ 6);
+strong minima 3, 5, 9, 15; the §5 classes are correct.

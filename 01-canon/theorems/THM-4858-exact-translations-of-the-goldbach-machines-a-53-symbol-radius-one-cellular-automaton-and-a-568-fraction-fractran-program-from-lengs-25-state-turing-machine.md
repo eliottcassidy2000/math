@@ -2,7 +2,8 @@
 id: THM-4858
 title: "Exact translations of the Goldbach machines between Turing machines, cellular automata and FRACTRAN. (a) A 53-symbol radius-1 cellular automaton that writes HALT from the blank-tape configuration iff strong Goldbach fails: Leng's 25-state Turing machine, one CA step per TM step. (b) LENGGAME, a 568-fraction FRACTRAN program over 349 primes that halts iff strong Goldbach fails: the same machine in the two-stack encoding, with 4 fractions per state and 9 or 10 per instruction. (c) The square of Goldbach machines: GOLDBACHGAME (37 fractions, THM-4856), LENGGAME (568), the TM (25 states, 49 instructions), the CA (53 symbols). Their sizes measure encodings, not the predicate."
 status: >
-  PRE-AUDIT (mac-mini-2026-11-01-lenses).
+  Independently audited 2026-11-01: SOUND WITH CORRECTIONS, all applied
+  (04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/AUDIT.md; MISTAKE-701).
   PROVED (elementary): the step-for-step simulation lemmas (a) and (b), using standard constructions (TM -> CA:
   folklore, e.g. A. R. Smith III 1971; two-stack counter encoding: Minsky 1967; FRACTRAN as a Minsky machine:
   Conway 1987).
@@ -10,8 +11,13 @@ status: >
   two primes (session65 audit, `goldbach_tm/GoldbachTm/Tm25/Content.lean`).
   FINITE-EXACT:
   - (a) the CA equals the TM at every step for 200,000 steps (pre-registered T1, PASSED);
-  - (b) 568 fractions, PASSED (pre-registered T2a); literal integer FRACTRAN equals the dispatch simulator on every
-    configuration of the first 300 TM steps (T2c, PASSED).
+  - (b) 568 fractions, PASSED (pre-registered T2a).
+  - T2c PASSED as coded, but its 1,948 configurations cover only the first 66 TM steps, not 300: it used the same
+    misaligned step counter as T2b. The audit's own literal big-integer run matched all 43,582 configurations of the
+    first 300 TM steps. It also confirmed the stacks for 5,000 TM steps, the 24,405,662-step count for 3,000 TM steps,
+    and the CA with every cell updated for 200,000 steps.
+  - The label of T3 in machine_translations.py still says "HALT at step 6" while its condition tests step 7. The
+    docstring was corrected before the run; the label was not.
   FAILED AS STATED: pre-registered T2b and T3. The checker counted returns from the head-bit loop's helper state as
   TM steps. Post-hoc with the alignment fixed (`machine_translations_posthoc.out`):
   - LENGGAME's stacks equal the TM's at each of the first 3,000 TM steps (24,405,662 FRACTRAN steps);

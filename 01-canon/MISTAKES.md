@@ -21816,3 +21816,44 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     Turner/Babai statement only provides one affine isomorphism.
   - Before calling a witness family new, express it in the parameters of the inherited family it may belong to.
   - A shared algorithmic idea between two machines is a DICTIONARY entry until a simulation map is written down.
+
+## MISTAKE-701 (2026-11-01, mac-mini-2026-11-01-lenses, THM-4857, THM-4858 and the note `05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md` at the pre-audit commit dd854a0940; found by the independent audit `04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a case left "open" that counting settles, a one-hot claim false for PRIMEGAME, a check whose coverage was misstated, a known theorem typed new, and a small-n coincidence framed as a fact
+
+- **What was wrong.**
+  - **(1)** THM-4857 left n = 8 "open" and claimed failure only for n >= 9. The exact number of similarity classes of
+    8 × 8 matrices over GF(2) is 746 (OEIS A070933), below the at least 3,440 merged nodes. So the GF(2) automaton
+    fails to classify merged nodes for every n >= 6. The session used the weak bound p(n) · 2^n and did not look up
+    the exact counts.
+  - **(2)** The note called PRIMEGAME "one-hot", with priority a disjoint union of per-state chains. Its state-free
+    fractions (15/14, 15/2, 55/1) are co-applicable with every state group, since 55/1 always applies. 26 reachable
+    co-applicable sets mix them, and reordering changes the run at step 3. The clean form holds only for fully
+    guarded programs (GOLDBACHGAME, FERMATGAME, LEGENDREGAME, LENGGAME).
+  - **(3)** THM-4858 said literal FRACTRAN matched "every configuration of the first 300 TM steps" (T2c). T2c used
+    the same misaligned counter as the failed T2b, so its 1,948 configurations covered only 66 TM steps. The audit's
+    literal run then confirmed all 300.
+  - **(4)** THM-4857 (4), the Paley/QR-code dichotomy with the Golay code at 23, was typed as this session's
+    translation. It is THM-481 (June 2026), crediting Kim-Solé, Assmus-Key and T. S. Michael. It also holds for
+    every doubly regular tournament.
+  - **(5)** "The owner's '12 classes become 10 nodes' is a cellular-automaton fact" overstated a small-n coincidence.
+    Converse-blindness explains only the upper bound.
+  - **(6)** Minor:
+    - S1 could not fail, given A1's coarse counts;
+    - the automaton's image is the other QR code (reciprocal generator);
+    - "separable" was unnecessary in the rank formula;
+    - "containing 1" was missing from the circulant count;
+    - the FRACTRAN -> CA cost row was wrong for session126's true CA;
+    - "NUMEROLOGY" was used for an absence of a link;
+    - the T3 label reads "step 6" while its condition tests step 7.
+- **Repair.** Every item is corrected in THM-4857, THM-4858, the note and the index. No computation changed, and no
+  mathematical claim failed re-computation.
+- **How it was caught.** The auditor:
+  - recomputed the similarity types with its own invariant;
+  - looked up OEIS A070933;
+  - enumerated PRIMEGAME's reachable co-applicable sets;
+  - re-ran literal FRACTRAN for 300 TM steps;
+  - grepped the canon for QR codes.
+- **Lesson / reusable rule.**
+  - Before leaving a counting case "open", look up exact counts (OEIS) instead of using a crude bound.
+  - Grep the canon for the classical object a new translation lands on (here "quadratic residue code", "Golay")
+    before typing the landing as new.
+  - When a checker is found misaligned, re-examine every other check that used the same counter.

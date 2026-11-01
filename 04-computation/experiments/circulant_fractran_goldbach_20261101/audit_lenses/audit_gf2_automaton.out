@@ -1,0 +1,69 @@
+G0  sanity of the Smith-form similarity invariant
+  [OK] n=1: brute-force similarity classes of all 2 matrices = series coefficient -- 2 vs 2
+  [OK] n=2: brute-force similarity classes of all 16 matrices = series coefficient -- 6 vs 6
+  [OK] n=3: brute-force similarity classes of all 512 matrices = series coefficient -- 14 vs 14
+  [OK] n=4: brute-force similarity classes of all 65536 matrices = series coefficient -- 34 vs 34
+  [OK] invariant factors unchanged under random conjugation and under transposition (300 random A)
+G1  tournament classes, merged nodes, similarity types (n = 3..7)
+  [OK] n=3: classes, merged nodes, similarity types = (2, 2, 2) -- got (2, 2, 2); self-converse classes 2; types holding >1 node: sizes []
+  [OK] n=4: classes, merged nodes, similarity types = (4, 3, 3) -- got (4, 3, 3); self-converse classes 2; types holding >1 node: sizes []
+  [OK] n=5: classes, merged nodes, similarity types = (12, 10, 10) -- got (12, 10, 10); self-converse classes 8; types holding >1 node: sizes []
+  [OK] n=6: classes, merged nodes, similarity types = (56, 34, 24) -- got (56, 34, 24); self-converse classes 12; types holding >1 node: sizes [2, 2, 2, 2, 3, 3, 3]
+  [OK] n=7: classes, merged nodes, similarity types = (456, 272, 51) -- got (456, 272, 51); self-converse classes 88; types holding >1 node: sizes [2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 8, 8, 8, 8, 8, 10, 10, 12, 13, 13, 15]
+    n = 6 types holding more than one merged node (score sequences; invariant factors):
+      ['x^6+x^2']: [(0, 1, 3, 3, 4, 4), (1, 2, 2, 3, 3, 4), (1, 1, 2, 3, 4, 4)]
+      ['x^6+x']: [(0, 2, 3, 3, 3, 4), (1, 2, 2, 3, 3, 4), (2, 2, 2, 3, 3, 3)]
+      ['x^6+1']: [(1, 2, 2, 3, 3, 4), (2, 2, 2, 3, 3, 3), (1, 1, 2, 3, 4, 4)]
+      ['x^6']: [(0, 1, 2, 3, 4, 5), (2, 2, 2, 3, 3, 3)]
+      ['x^6+x^3']: [(0, 1, 2, 4, 4, 4), (1, 2, 2, 2, 4, 4)]
+      ['x^6+x^3+x^2+x']: [(0, 2, 2, 3, 4, 4), (1, 2, 3, 3, 3, 3)]
+      ['x^6+x^2+1']: [(1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)]
+  [OK] TT6 shares its type with exactly one other merged node, scores (2,2,2,3,3,3); type = single invariant factor x^6 (nilpotent of index 6) -- ((64,), [(0, 1, 2, 3, 4, 5), (2, 2, 2, 3, 3, 3)])
+G2  counting (exact similarity-class numbers vs merged nodes)
+    n= 3: A000568=             2  merged >=             1  exact similarity classes c(n)=    14  crude p(n)2^n=      24  counting settles: exact no  crude no
+    n= 4: A000568=             4  merged >=             2  exact similarity classes c(n)=    34  crude p(n)2^n=      80  counting settles: exact no  crude no
+    n= 5: A000568=            12  merged >=             6  exact similarity classes c(n)=    74  crude p(n)2^n=     224  counting settles: exact no  crude no
+    n= 6: A000568=            56  merged >=            28  exact similarity classes c(n)=   166  crude p(n)2^n=     704  counting settles: exact no  crude no
+    n= 7: A000568=           456  merged >=           228  exact similarity classes c(n)=   350  crude p(n)2^n=    1920  counting settles: exact no  crude no
+    n= 8: A000568=          6880  merged >=          3440  exact similarity classes c(n)=   746  crude p(n)2^n=    5632  counting settles: exact YES crude no
+    n= 9: A000568=        191536  merged >=         95768  exact similarity classes c(n)=  1546  crude p(n)2^n=   15360  counting settles: exact YES crude YES
+    n=10: A000568=       9733056  merged >=       4866528  exact similarity classes c(n)=  3206  crude p(n)2^n=   43008  counting settles: exact YES crude YES
+    n=11: A000568=     903753248  merged >=     451876624  exact similarity classes c(n)=  6550  crude p(n)2^n=  114688  counting settles: exact YES crude YES
+    n=12: A000568=  154108311168  merged >=   77054155584  exact similarity classes c(n)= 13386  crude p(n)2^n=  315392  counting settles: exact YES crude YES
+  [OK] A000568(9) = 191536, so A000568(9)/2 = 95768; p(9) 2^9 = 15360
+  [OK] crude bound fails at n = 8 (p(8) 2^8 = 5632 >= 3440)
+  [OK] crude bound valid: c(n) <= p(n) 2^n for n <= 12
+  [OK] EXACT count c(8) = 746 < 3440 <= merged nodes at n = 8, so n = 8 is NOT open (fails by counting); c(7) = 350 >= 272, so n = 7 needed the computation (S4 was a genuine test) -- c(6)=166, c(7)=350, c(8)=746
+G3  circulant rank formula and the all-ones kernel
+  [OK] rank = q - deg gcd(a, x^q - 1) on ALL connection sets (both halves), odd q <= 27; ones in kernel at q=1 mod 4 -- 16382 connection sets
+  [OK] the circulant rank formula needs no separability: it also holds for 2000 random 0/1 circulants of EVEN order q <= 16 (x^q - 1 inseparable over GF(2))
+G4  Paley tournaments
+  [OK] rank = q (q = 3 mod 8), (q+1)/2 (q = 7 mod 8) for every prime q = 3 mod 4 below 400 -- 40 primes
+  [OK] P_7: image of x -> Ax has dimension 4 and minimum distance 3 -- got [7,4,3]
+    P_7: gcd(a, x^q-1) = x^3+x+1; gcd(b, x^q-1) = x^3+x^2+1 (b = non-residue polynomial); image (column space) generated by gcd(a,.): False, by gcd(b,.): True
+  [OK] P_7: the image is the code generated by gcd(b, x^q-1) (non-residue side), not by gcd(a, x^q-1)
+  [OK] P_23: image of x -> Ax has dimension 12 and minimum distance 7 -- got [23,12,7]
+    P_23: gcd(a, x^q-1) = x^11+x^9+x^7+x^6+x^5+x+1; gcd(b, x^q-1) = x^11+x^10+x^6+x^5+x^4+x^2+1 (b = non-residue polynomial); image (column space) generated by gcd(a,.): False, by gcd(b,.): True
+  [OK] P_23: the image is the code generated by gcd(b, x^q-1) (non-residue side), not by gcd(a, x^q-1)
+  [OK] doubly regular identities: A A^T = I over GF(2) for q = 3 mod 8 (so A^-1 = A^T), A^2 = A for q = 7 mod 8 (the automaton is idempotent); also the non-circulant Paley tournament of GF(27) is reversible
+G5  the n = 5 table (classes read from merged_metagraph_n5.json as data)
+    # 0 PB scores [0, 1, 2, 3, 4] H 1: rank 4, depth 5, cycles (1,), invariant factors ['x^5']
+    # 1 PK scores [0, 1, 3, 3, 3] H 3: rank 4, depth 2, cycles (1, 1, 3, 3), invariant factors ['x^5+x^2']
+    # 2 PK scores [0, 2, 2, 3, 3] H 5: rank 4, depth 1, cycles (1, 1, 2, 4, 4, 4), invariant factors ['x^5+x']
+    # 3 PB scores [0, 2, 2, 2, 4] H 3: rank 3, depth 1, cycles (1, 1, 3, 3), invariant factors ['x', 'x^4+x']
+    # 4 MX scores [1, 1, 2, 3, 3] H 9: rank 5, depth 0, cycles (1, 1, 2, 7, 7, 14), invariant factors ['x^5+x^2+x+1']
+    # 5 PK scores [1, 1, 2, 2, 4] H 5: rank 4, depth 1, cycles (1, 1, 2, 4, 4, 4), invariant factors ['x^5+x']
+    # 6 MX scores [1, 1, 2, 3, 3] H 9: rank 5, depth 0, cycles (1, 31), invariant factors ['x^5+x^2+1']
+    # 7 PK scores [1, 1, 1, 3, 4] H 3: rank 4, depth 2, cycles (1, 1, 3, 3), invariant factors ['x^5+x^2']
+    # 8 MX scores [1, 2, 2, 2, 3] H 11: rank 5, depth 0, cycles (1, 1, 5, 5, 5, 5, 5, 5), invariant factors ['x^5+1']
+    # 9 MX scores [1, 2, 2, 2, 3] H 15: rank 5, depth 0, cycles (1, 3, 7, 21), invariant factors ['x^5+x+1']
+    #10 MX scores [1, 2, 2, 2, 3] H 13: rank 4, depth 1, cycles (1, 1, 1, 1, 2, 2, 4, 4), invariant factors ['x+1', 'x^4+x^3+x^2+x']
+    #11 PB scores [2, 2, 2, 2, 2] H 15: rank 4, depth 1, cycles (1, 15), invariant factors ['x^5+x^2+x']
+  [OK] THM-4857 n = 5 table (rank, nilpotent depth, cycles) reproduced; #1/#7 and #2/#5 are converse pairs
+  [OK] reversible (rank 5) classes are exactly four of the five mixed nodes -- mixed [4, 6, 8, 9, 10], reversible [4, 6, 8, 9]
+  [OK] #6: characteristic polynomial primitive of degree 5 (single 31-cycle) -- x^5+x^2+1
+
+elapsed 10.7 s
+ALL AUDIT CHECKS AGREE
+python3 -B audit_gf2_automaton.py  9.63s user 0.10s system 90% cpu 10.774 total
+rc=0
