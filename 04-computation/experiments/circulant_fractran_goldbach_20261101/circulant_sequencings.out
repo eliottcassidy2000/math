@@ -1,0 +1,72 @@
+Circulant tournaments Circ(Z_q, S), 1 in S: S-sequencings and palindromic Hamiltonian paths
+
+  q = 1: K1, one path (empty word), pure-blue.
+  q = 3 (prime): 1 connection sets with 1 in S, 1 multiplier classes
+     S = [1] (class size 1): H = 3, words 1, palindromic words 1, palindromic paths 1, pure-blue True
+  [PASS] prime q=3, S=[1]: palindromic path <=> palindromic word
+  [PASS] q=3: pure-blue
+  q = 5 (prime): 2 connection sets with 1 in S, 1 multiplier classes
+     S = [1, 2] (class size 2): H = 15, words 3, palindromic words 3, palindromic paths 3, pure-blue True
+  [PASS] prime q=5, S=[1, 2]: palindromic path <=> palindromic word
+  [PASS] q=5: pure-blue
+  q = 7 (prime): 4 connection sets with 1 in S, 2 multiplier classes
+     S = [1, 2, 3] (class size 3): H = 175, words 25, palindromic words 9, palindromic paths 9, pure-blue False; simplest non-palindromic word (1, 2, 1, 1, 1, 3)
+  [PASS] prime q=7, S=[1, 2, 3]: palindromic path <=> palindromic word
+  [PASS] q=7, S=[1, 2, 3]: not pure-blue
+     S = [1, 2, 4] (class size 1): H = 189, words 27, palindromic words 9, palindromic paths 9, pure-blue False; simplest non-palindromic word (1, 1, 2, 1, 1, 4)
+  [PASS] prime q=7, S=[1, 2, 4]: palindromic path <=> palindromic word
+  [PASS] q=7, S=[1, 2, 4]: not pure-blue
+  q = 9 (composite): 8 connection sets with 1 in S, 4 multiplier classes
+     S = [1, 2, 3, 4] (class size 3): H = 3267, words 363, palindromic words 35, palindromic paths 35, pure-blue False; simplest non-palindromic word (1, 1, 2, 1, 1, 1, 1, 4)
+  [PASS] q=9, S=[1, 2, 3, 4]: not pure-blue
+     S = [1, 2, 3, 5] (class size 3): H = 3357, words 373, palindromic words 37, palindromic paths 37, pure-blue False; simplest non-palindromic word (1, 1, 1, 2, 1, 1, 1, 5)
+  [PASS] q=9, S=[1, 2, 3, 5]: not pure-blue
+     S = [1, 3, 4, 7] (class size 1): H = 3159, words 351, palindromic words 33, palindromic paths 99, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 3, 7, 1)  (composite: 66 palindromic paths with non-palindromic words)
+  [PASS] q=9, S=[1, 3, 4, 7]: not pure-blue
+     S = [1, 4, 6, 7] (class size 1): H = 3159, words 351, palindromic words 33, palindromic paths 99, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 4, 6, 1, 1)  (composite: 66 palindromic paths with non-palindromic words)
+  [PASS] q=9, S=[1, 4, 6, 7]: not pure-blue
+  q = 11 (prime): 16 connection sets with 1 in S, 4 multiplier classes
+     S = [1, 2, 3, 4, 5] (class size 5): H = 93027, words 8457, palindromic words 181, palindromic paths 181, pure-blue False; simplest non-palindromic word (1, 1, 1, 2, 1, 1, 1, 1, 1, 5)
+  [PASS] prime q=11, S=[1, 2, 3, 4, 5]: palindromic path <=> palindromic word
+  [PASS] q=11, S=[1, 2, 3, 4, 5]: not pure-blue
+     S = [1, 2, 3, 4, 6] (class size 5): H = 93467, words 8497, palindromic words 185, palindromic paths 185, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 2, 1, 1, 1, 1, 6)
+  [PASS] prime q=11, S=[1, 2, 3, 4, 6]: palindromic path <=> palindromic word
+  [PASS] q=11, S=[1, 2, 3, 4, 6]: not pure-blue
+     S = [1, 2, 3, 5, 7] (class size 5): H = 92411, words 8401, palindromic words 185, palindromic paths 185, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 2, 1, 1, 1, 7)
+  [PASS] prime q=11, S=[1, 2, 3, 5, 7]: palindromic path <=> palindromic word
+  [PASS] q=11, S=[1, 2, 3, 5, 7]: not pure-blue
+     S = [1, 3, 4, 5, 9] (class size 1): H = 95095, words 8645, palindromic words 185, palindromic paths 185, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 1, 1, 3, 9, 1)
+  [PASS] prime q=11, S=[1, 3, 4, 5, 9]: palindromic path <=> palindromic word
+  [PASS] q=11, S=[1, 3, 4, 5, 9]: not pure-blue
+  q = 13 (prime): 32 connection sets with 1 in S, 6 multiplier classes
+     S = [1, 2, 3, 4, 5, 6] (class size 6): H = 3711175, words 285475, palindromic words 1115, palindromic paths 1115, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 6)
+  [PASS] prime q=13, S=[1, 2, 3, 4, 5, 6]: palindromic path <=> palindromic word
+  [PASS] q=13, S=[1, 2, 3, 4, 5, 6]: not pure-blue
+     S = [1, 2, 3, 4, 5, 7] (class size 6): H = 3707483, words 285191, palindromic words 1119, palindromic paths 1119, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 7)
+  [PASS] prime q=13, S=[1, 2, 3, 4, 5, 7]: palindromic path <=> palindromic word
+  [PASS] q=13, S=[1, 2, 3, 4, 5, 7]: not pure-blue
+     S = [1, 2, 3, 4, 6, 8] (class size 6): H = 3704857, words 284989, palindromic words 1127, palindromic paths 1127, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 8)
+  [PASS] prime q=13, S=[1, 2, 3, 4, 6, 8]: palindromic path <=> palindromic word
+  [PASS] q=13, S=[1, 2, 3, 4, 6, 8]: not pure-blue
+     S = [1, 2, 3, 5, 6, 9] (class size 2): H = 3703011, words 284847, palindromic words 1125, palindromic paths 1125, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 9)
+  [PASS] prime q=13, S=[1, 2, 3, 5, 6, 9]: palindromic path <=> palindromic word
+  [PASS] q=13, S=[1, 2, 3, 5, 6, 9]: not pure-blue
+     S = [1, 2, 3, 5, 7, 9] (class size 6): H = 3669497, words 282269, palindromic words 1119, palindromic paths 1119, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 9)
+  [PASS] prime q=13, S=[1, 2, 3, 5, 7, 9]: palindromic path <=> palindromic word
+  [PASS] q=13, S=[1, 2, 3, 5, 7, 9]: not pure-blue
+     S = [1, 2, 6, 8, 9, 10] (class size 6): H = 3683797, words 283369, palindromic words 1117, palindromic paths 1117, pure-blue False; simplest non-palindromic word (1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 10)
+  [PASS] prime q=13, S=[1, 2, 6, 8, 9, 10]: palindromic path <=> palindromic word
+  [PASS] q=13, S=[1, 2, 6, 8, 9, 10]: not pure-blue
+  [PASS] segment-sum criterion agrees with the literal arc test on all 1741634 paths
+  [PASS] Z_9 hostile: word (1,1,1,4,7,1,7,4) is not a palindrome but the path is palindromic  word (1, 1, 1, 4, 7, 1, 7, 4)
+
+THM-4849 reading of the q <= 5 circulants (connection set as a q-periodic parity word)
+  q=3, S=[1]: parity word [0, 1, 0], cycle of x -> x/2, (3x+5)/2: [2, 1, 4]
+  q=5, S=[1, 2]: parity word [0, 1, 1, 0, 0], cycle of x -> x/2, (3x+23)/2: [10, 5, 19, 40, 20]
+  q=5, S=[1, 3]: parity word [0, 1, 0, 1, 0], cycle of x -> x/2, (3x+23)/2: [14, 7, 22, 11, 28]
+  T5 = Circ(Z_5,{1,2}): its 3 S-sequencings [(1, 1, 1, 1), (2, 1, 1, 2), (2, 2, 2, 2)] are all palindromes;
+     word (1, 1, 1, 1): visits cycle points [10, 5, 19, 40, 20] (position j = T^j of the base point)
+     word (2, 1, 1, 2): visits cycle points [10, 19, 40, 20, 5] (position j = T^j of the base point)
+     word (2, 2, 2, 2): visits cycle points [10, 19, 20, 5, 40] (position j = T^j of the base point)
+
+ALL CHECKS PASSED
