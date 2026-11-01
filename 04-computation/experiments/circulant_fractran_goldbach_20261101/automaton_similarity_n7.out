@@ -1,0 +1,4 @@
+  n=7: 51 GF(2)-similarity types over all 32768 tilings; merged nodes 272
+  [PASS] S4: fewer than 272 similarity types at n = 7
+python3 -B $E/automaton_similarity_n7.py  50.48s user 0.34s system 91% cpu 55.713 total
+rc=0
