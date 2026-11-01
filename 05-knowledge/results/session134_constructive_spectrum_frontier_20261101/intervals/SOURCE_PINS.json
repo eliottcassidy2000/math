@@ -1,0 +1,18 @@
+{
+  "commit": "04cdf182d9e4543800b421a8893232ccf69b2399",
+  "inherited_files": {
+    "01-canon/theorems/THM-209-independence-polynomial.md": "48fd3433e2ec4891c8a337081e10a3453d84224ab20fa081e32cf7bd0e819d72",
+    "01-canon/theorems/THM-4748-two-reversed-arcs-exact-path-counts-the-seven-mod-eight-lines-and-the-mersenne-side-three-arcs-from-transitivity.md": "e83a80296e20d4ae93f24a64756a808368926d52ed08e31e2602c4f3905794fd",
+    "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/run_density.md": "e1388250fb899fd4e31ff7df34bc13ed56d4c08fac63c1272cf6bb7d1195bad0",
+    "05-knowledge/results/session124_million_path_spectrum_20261031/PROOF.md": "f8d8e9d669aa52e21f92693b9cd76b5bdc6801f80e3d2fa01bc37fc4e29e17b2",
+    "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261031g/README.md": "bdd69e36bf1acf3b85915bdc01d3b775b4250cfc67d030b04a178d09a83ea4a2",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261031h/README.md": "a5db9880551d2d6b100ea90be29c3801d18d1159be5559ad5fbe2dfa6bf9a2ef"
+  },
+  "primary_source": {
+    "accessed_utc_date": "2026-11-01",
+    "checked": "Theorem 1, Corollary 1, SCC multiplicativity; sole author Arthur H. Busch",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf"
+  },
+  "repository": "eliottcassidy2000/math"
+}

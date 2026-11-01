@@ -1,0 +1,65 @@
+{
+  "deletion_projection_checks": 1198372,
+  "finite_bounds": [
+    {
+      "N": 5,
+      "two_apex_bounds": [
+        59,
+        319,
+        1059,
+        2149,
+        2799
+      ]
+    },
+    {
+      "N": 10,
+      "two_apex_bounds": [
+        114,
+        1284,
+        10164,
+        55944,
+        219744,
+        628404
+      ]
+    },
+    {
+      "N": 20,
+      "two_apex_bounds": [
+        224,
+        5164,
+        89524,
+        1145734,
+        11223334,
+        86650294
+      ]
+    },
+    {
+      "N": 40,
+      "two_apex_bounds": [
+        444,
+        20724,
+        751844,
+        20674864,
+        448380064,
+        7917867544
+      ]
+    },
+    {
+      "N": 80,
+      "two_apex_bounds": [
+        884,
+        83044,
+        6162884,
+        350947324,
+        15976957724,
+        600750346924
+      ]
+    }
+  ],
+  "marked_tournament_kernel_checks": 10385,
+  "rational_exp3_5_lower_bound": "193059439849433/5829914787840",
+  "rational_exp4_lower_bound": "592647422623/10854718875",
+  "scope": "Finite verification of encoding and monotone run resources; entropy consequences are proved in THEORY.md, not inferred from these checks.",
+  "status": "PASS",
+  "word_histogram_checks": 95
+}

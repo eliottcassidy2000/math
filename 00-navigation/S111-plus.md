@@ -53,3 +53,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session132](S132.md): executable FRACTRAN tournament counters, half-order folding and prime/square-sum graph atlases.
 
 [Session133](S133.md): actual FRACTRAN sequence refinements, bounded-H cores and spectrum proof certificates; universal completeness remains open.
+
+[Session134](S134.md): constructive spectrum frontier, resource complexity and state-preserving operations; universal realization open.

@@ -1,0 +1,15 @@
+{
+  "base": "04cdf182d9e4543800b421a8893232ccf69b2399",
+  "inherited": [
+    {
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/run_density.md",
+      "sha256": "e1388250fb899fd4e31ff7df34bc13ed56d4c08fac63c1272cf6bb7d1195bad0"
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    }
+  ],
+  "prime_number_theorem": "https://dlmf.nist.gov/27.2.E3",
+  "external_checked_utc": "2026-11-01"
+}

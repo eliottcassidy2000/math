@@ -1,0 +1,268 @@
+{
+  "actual_tournament_controls": 1100,
+  "capped_core_multiset_comparisons": 35000,
+  "complete_labelled_universe": "every tournament of orders 0 through 5",
+  "finite_dyadic_count_gates": [
+    {
+      "arc_budget": 1,
+      "at_most_low_arc_values_below_upper_endpoint": 56,
+      "certified_targets_without_low_arc_realizations_at_least": 8,
+      "core_order_bound": 11,
+      "first_dyadic_exponent_for_this_bound": 8,
+      "maximizing_r_u_v": [
+        1,
+        2,
+        2
+      ],
+      "odd_targets_in_open_dyadic_interval": 64
+    },
+    {
+      "arc_budget": 2,
+      "at_most_low_arc_values_below_upper_endpoint": 32132,
+      "certified_targets_without_low_arc_realizations_at_least": 636,
+      "core_order_bound": 23,
+      "first_dyadic_exponent_for_this_bound": 17,
+      "maximizing_r_u_v": [
+        2,
+        3,
+        5
+      ],
+      "odd_targets_in_open_dyadic_interval": 32768
+    },
+    {
+      "arc_budget": 3,
+      "at_most_low_arc_values_below_upper_endpoint": 79092651,
+      "certified_targets_without_low_arc_realizations_at_least": 55125077,
+      "core_order_bound": 40,
+      "first_dyadic_exponent_for_this_bound": 29,
+      "maximizing_r_u_v": [
+        3,
+        5,
+        9
+      ],
+      "odd_targets_in_open_dyadic_interval": 134217728
+    },
+    {
+      "arc_budget": 4,
+      "at_most_low_arc_values_below_upper_endpoint": 202353835861,
+      "certified_targets_without_low_arc_realizations_at_least": 72524071083,
+      "core_order_bound": 55,
+      "first_dyadic_exponent_for_this_bound": 40,
+      "maximizing_r_u_v": [
+        4,
+        6,
+        13
+      ],
+      "odd_targets_in_open_dyadic_interval": 274877906944
+    },
+    {
+      "arc_budget": 5,
+      "at_most_low_arc_values_below_upper_endpoint": 907348813768798,
+      "certified_targets_without_low_arc_realizations_at_least": 218551093073826,
+      "core_order_bound": 72,
+      "first_dyadic_exponent_for_this_bound": 52,
+      "maximizing_r_u_v": [
+        5,
+        2,
+        21
+      ],
+      "odd_targets_in_open_dyadic_interval": 1125899906842624
+    },
+    {
+      "arc_budget": 6,
+      "at_most_low_arc_values_below_upper_endpoint": 4359919199804281268,
+      "certified_targets_without_low_arc_realizations_at_least": 251766818623106636,
+      "core_order_bound": 88,
+      "first_dyadic_exponent_for_this_bound": 64,
+      "maximizing_r_u_v": [
+        6,
+        11,
+        20
+      ],
+      "odd_targets_in_open_dyadic_interval": 4611686018427387904
+    },
+    {
+      "arc_budget": 10,
+      "at_most_low_arc_values_below_upper_endpoint": 34531497843035145032193216459468707,
+      "certified_targets_without_low_arc_realizations_at_least": 7006877025243475996050754174292061,
+      "core_order_bound": 161,
+      "first_dyadic_exponent_for_this_bound": 117,
+      "maximizing_r_u_v": [
+        10,
+        2,
+        49
+      ],
+      "odd_targets_in_open_dyadic_interval": 41538374868278621028243970633760768
+    }
+  ],
+  "larger_six_arc_gates": [
+    {
+      "arc_budget": 6,
+      "core_order_bound": 171,
+      "dyadic_exponent": 128,
+      "odd_targets": 85070591730234615865843651857942052864,
+      "value_upper_bound": 13088468648540145585103
+    },
+    {
+      "arc_budget": 6,
+      "core_order_bound": 336,
+      "dyadic_exponent": 256,
+      "odd_targets": 28948022309329048855892746252171976963317496166410141009864396001978282409984,
+      "value_upper_bound": 44128847784624307692657587
+    },
+    {
+      "arc_budget": 6,
+      "core_order_bound": 667,
+      "dyadic_exponent": 512,
+      "odd_targets": 3351951982485649274893506249551461531869841455148098344430890360930441007518386744200468574541725856922507964546621512713438470702986642486608412251521024,
+      "value_upper_bound": 166751715490281764266838746201
+    },
+    {
+      "arc_budget": 6,
+      "core_order_bound": 1329,
+      "dyadic_exponent": 1024,
+      "odd_targets": 44942328371557897693232629769725618340449424473557664318357520289433168951375240783177119330601884005280028469967848339414697442203604155623211857659868531094441973356216371319075554900311523529863270738021251442209537670585615720368478277635206809290837627671146574559986811484619929076208839082406056034304,
+      "value_upper_bound": 655875542087187559382012328858019
+    }
+  ],
+  "literal_cycle_hostile": {
+    "H": 15,
+    "distinct_odd_cycle_supports": 5,
+    "literal_odd_cycles": 7,
+    "rows": [
+      14,
+      20,
+      24,
+      18,
+      1
+    ],
+    "support_collapsed_I_at_2": 11
+  },
+  "scope": "Exact finite checks; all-order arc-entropy gate is proved in THEORY.md. No universal spectrum closure.",
+  "six_arc_deficit_nine_controls": [
+    [
+      9,
+      1015,
+      6
+    ],
+    [
+      10,
+      2039,
+      6
+    ],
+    [
+      11,
+      4087,
+      6
+    ],
+    [
+      12,
+      8183,
+      6
+    ],
+    [
+      13,
+      16375,
+      6
+    ],
+    [
+      14,
+      32759,
+      6
+    ],
+    [
+      15,
+      65527,
+      6
+    ]
+  ],
+  "status": "passed",
+  "strong_floor_controls": [
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      15
+    ],
+    [
+      7,
+      25
+    ],
+    [
+      8,
+      45
+    ],
+    [
+      9,
+      75
+    ],
+    [
+      10,
+      125
+    ],
+    [
+      11,
+      225
+    ],
+    [
+      12,
+      375
+    ],
+    [
+      13,
+      625
+    ],
+    [
+      14,
+      1125
+    ],
+    [
+      15,
+      1875
+    ]
+  ],
+  "twin_contraction_hostile_t_H": [
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      9
+    ],
+    [
+      4,
+      17
+    ],
+    [
+      5,
+      33
+    ],
+    [
+      6,
+      65
+    ],
+    [
+      7,
+      129
+    ],
+    [
+      8,
+      257
+    ]
+  ]
+}
