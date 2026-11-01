@@ -1,0 +1,52 @@
+{
+  "literal_repair_recounts": [
+    {
+      "independent_native_state": [
+        89,
+        173,
+        325,
+        63
+      ],
+      "parent_order": 9,
+      "target": 173
+    },
+    {
+      "independent_native_state": [
+        31,
+        67,
+        73,
+        13
+      ],
+      "parent_order": 7,
+      "target": 67
+    }
+  ],
+  "mixed_transitive_local_bank": {
+    "matrices": 32,
+    "missing_odds": [
+      7,
+      21
+    ],
+    "states": 6234
+  },
+  "saturation": 174,
+  "scope": "Exact unbounded-word/all-strip-length result in the stated fixed-seed grammars; does not exclude arbitrary seeds or unrestricted tournaments.",
+  "seed_positive_coordinates": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "status": "PASS",
+  "zero_strip": {
+    "matrices_after_capping": 13,
+    "missing_odds": [
+      7,
+      21,
+      67,
+      173
+    ],
+    "states": 5373,
+    "tail_representative": 10
+  }
+}

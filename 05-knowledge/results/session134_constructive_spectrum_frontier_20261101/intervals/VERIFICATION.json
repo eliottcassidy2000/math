@@ -1,0 +1,12 @@
+{
+  "network_or_repository_required_for_verifier": false,
+  "normal_optimized_identical": true,
+  "normal_output_sha256": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+  "producer_sha256": "5c823d53fd085bf9eaae5a28b0ecb2c1a31b65e01fde8e6dedb00a4a64d2aa2b",
+  "relocated_normal_output_sha256": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+  "relocated_optimized_output_sha256": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+  "relocated_source_independent_directory": true,
+  "rerun_working_directory": "/tmp",
+  "scope": "Implementation and exact finite controls; all-order statements use THEORY.md proof and cited strong minimum.",
+  "status": "passed"
+}

@@ -1,0 +1,11 @@
+PROOF.md
+README.md
+migration.py
+verify.py
+normal.json
+optimized.json
+relocated.normal.json
+relocated.optimized.json
+MANIFEST.json
+PUBLIC_FILES.txt
+SHA256SUMS

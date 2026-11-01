@@ -2,6 +2,7 @@
   "actual_tournament_controls": 1100,
   "capped_core_multiset_comparisons": 35000,
   "complete_labelled_universe": "every tournament of orders 0 through 5",
+  "fast_one_dimensional_formula_comparisons": 35000,
   "finite_dyadic_count_gates": [
     {
       "arc_budget": 1,

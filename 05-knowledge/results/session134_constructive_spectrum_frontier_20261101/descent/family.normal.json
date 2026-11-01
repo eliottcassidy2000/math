@@ -1,0 +1,89 @@
+{
+  "controls": [
+    {
+      "high_H": 67,
+      "high_order": 7,
+      "k": 6,
+      "low_H": 65,
+      "low_order": 8
+    },
+    {
+      "high_H": 131,
+      "high_order": 8,
+      "k": 7,
+      "low_H": 129,
+      "low_order": 9
+    },
+    {
+      "high_H": 259,
+      "high_order": 9,
+      "k": 8,
+      "low_H": 257,
+      "low_order": 10
+    },
+    {
+      "high_H": 515,
+      "high_order": 10,
+      "k": 9,
+      "low_H": 513,
+      "low_order": 11
+    },
+    {
+      "high_H": 1027,
+      "high_order": 11,
+      "k": 10,
+      "low_H": 1025,
+      "low_order": 12
+    },
+    {
+      "high_H": 2051,
+      "high_order": 12,
+      "k": 11,
+      "low_H": 2049,
+      "low_order": 13
+    },
+    {
+      "high_H": 4099,
+      "high_order": 13,
+      "k": 12,
+      "low_H": 4097,
+      "low_order": 14
+    }
+  ],
+  "hostiles": [
+    "r=0 formula fails as required",
+    "changed cut rejected"
+  ],
+  "infinite_claim": "For every k>=6, both2^k+1 and2^k+3 are actual counts; non-nesting uses THEORY.md.",
+  "literal_source_state": [
+    33,
+    32,
+    2,
+    9
+  ],
+  "source_cut": 17,
+  "source_full_rows": [
+    20,
+    33,
+    34,
+    39,
+    14,
+    17
+  ],
+  "source_parent_rows": [
+    20,
+    1,
+    2,
+    7,
+    14
+  ],
+  "source_sha256": "7455a2c291f11f07405a24211c4d241529e9d40965c80aaac1c6d76d75079b76",
+  "state_order": [
+    "F",
+    "q",
+    "g",
+    "h"
+  ],
+  "status": "PASS",
+  "tail_scope": "Literal source plus proved zero-tail recurrence gives all k, not extrapolation from controls."
+}

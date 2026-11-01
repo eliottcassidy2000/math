@@ -1,0 +1,87 @@
+{
+  "B_eigenspace_dimension_histogram": {
+    "1": 88
+  },
+  "all_integer_B_eigen_pairs": 88,
+  "depths": [
+    {
+      "depth": 1,
+      "eigen1_products": 7,
+      "exact_length_distinct_products": 32
+    },
+    {
+      "depth": 2,
+      "eigen1_products": 15,
+      "exact_length_distinct_products": 690
+    },
+    {
+      "depth": 3,
+      "eigen1_products": 49,
+      "exact_length_distinct_products": 14396
+    },
+    {
+      "depth": 4,
+      "eigen1_products": 143,
+      "exact_length_distinct_products": 297239
+    }
+  ],
+  "eligible_positive_output_rays": 84,
+  "eligible_radices": [
+    2,
+    4,
+    8,
+    16,
+    80,
+    216,
+    508,
+    676,
+    728,
+    872,
+    1544,
+    1600,
+    1672,
+    3200,
+    6400
+  ],
+  "generator_count": 32,
+  "normalized_B_ray_injective": true,
+  "scope": "Every product of1..4 operations in the exact32-generator bank; all integer B>=2 tested by exact Sturm isolation. No two distinct NONZERO digits on a common output-normalized affine ray in this finite macro universe. Zero-digit macros and longer words remain outside this obstruction.",
+  "sign_changing_output_normalized_rays": 0,
+  "status": "PASS",
+  "survivor_cut": 64,
+  "survivor_digit": -27,
+  "survivor_first_values": [
+    1,
+    53,
+    4213,
+    337013,
+    26961013,
+    2156881013
+  ],
+  "survivor_literal_first_native_state": [
+    17,
+    53,
+    36,
+    0
+  ],
+  "survivor_parent_masks": [
+    254,
+    240,
+    242,
+    214,
+    224,
+    136,
+    160,
+    0
+  ],
+  "survivor_radix": 80,
+  "survivor_signed_intercept": [
+    "-9/26",
+    "0",
+    "0",
+    "9/13"
+  ],
+  "union_distinct_products_lengths_1_to_4": 297623,
+  "union_eigen1_products": 166,
+  "zero_output_rays": 4
+}

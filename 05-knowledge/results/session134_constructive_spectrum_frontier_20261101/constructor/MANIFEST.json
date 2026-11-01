@@ -1,0 +1,137 @@
+{
+  "baseline": "04cdf182d9e4543800b421a8893232ccf69b2399",
+  "correction": "Discarded exploratory q coefficient 3^(r-1), false at r=3. Correct coefficient 2*3^(r-1)-2^r+1, retained literal hostile in report.",
+  "files": {
+    "PROOF.md": {
+      "bytes": 14020,
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    },
+    "README.md": {
+      "bytes": 1056,
+      "sha256": "01395b6a00f538bf32a851ff1bbd838adbed0ceb2a952a9e0f48602f92c0c50c"
+    },
+    "migration.py": {
+      "bytes": 3271,
+      "sha256": "91b0e21515f8f590f9093f26be650f6fc8a6e89276251920e75dda6c801f41d2"
+    },
+    "normal.json": {
+      "bytes": 2878,
+      "sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3"
+    },
+    "optimized.json": {
+      "bytes": 2878,
+      "sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3"
+    },
+    "relocated.normal.json": {
+      "bytes": 2878,
+      "sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3"
+    },
+    "relocated.optimized.json": {
+      "bytes": 2878,
+      "sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3"
+    },
+    "verify.py": {
+      "bytes": 6158,
+      "sha256": "dd32e64c46f045e400ca4836bc59922f716c282100dc1aa3244487d5ffb83e87"
+    }
+  },
+  "independent_audits": {
+    "checks": {
+      "closure_independent_method": "DFS from independently conjugated archived native matrix bank",
+      "elementary_identity_checks": 9882,
+      "elementary_marked_sources": 1098,
+      "final_repairs_literal_counts": [
+        67,
+        173
+      ],
+      "general_actual_extension_checks": 15540,
+      "general_literal_controls": 180,
+      "mixed_states": 6234,
+      "strip_actual_graph_checks": 444,
+      "strip_literal_controls": 222,
+      "strip_states": 5373
+    },
+    "directory": "../independent",
+    "files": {
+      "audit_migration.py": {
+        "bytes": 3663,
+        "sha256": "c95d3cdc6612899acb49b0d0385774c3a525b9a5cd63ba599bc1de183adb994c"
+      },
+      "audit_migration_closure.py": {
+        "bytes": 3760,
+        "sha256": "82351c4e9393e0d28d551c1e1d3d279799f37b32cde79b1843f8f45d33fe2ffe"
+      },
+      "audit_migration_compiler.py": {
+        "bytes": 3805,
+        "sha256": "46fa38260d09c83a6f9fdede8bb64dd9005f7f864eb5ac57b712b8b9f709f0dc"
+      },
+      "audit_zero_tail_migration.py": {
+        "bytes": 1997,
+        "sha256": "325e67fe62e6168dd1b61ee58365f4f8d88e27ff9ddc51d75430f25d40460e86"
+      },
+      "migration.normal.json": {
+        "bytes": 846,
+        "sha256": "b5697cfa6b306e21922d055d40d70ff045cab13f38e939906baf8bf3521ff641"
+      },
+      "migration.optimized.json": {
+        "bytes": 846,
+        "sha256": "b5697cfa6b306e21922d055d40d70ff045cab13f38e939906baf8bf3521ff641"
+      },
+      "migration_closure.normal.json": {
+        "bytes": 902,
+        "sha256": "683d74159abeca19d25d93e1fd11102ed22ddfc9ef4464d52f3091bc2c80a8ae"
+      },
+      "migration_closure.optimized.json": {
+        "bytes": 902,
+        "sha256": "683d74159abeca19d25d93e1fd11102ed22ddfc9ef4464d52f3091bc2c80a8ae"
+      },
+      "migration_compiler.normal.json": {
+        "bytes": 565,
+        "sha256": "78f482d3a4fc7b5579952e5a79f3bc6f270a5c02d4350845e0d753cbb4a24c52"
+      },
+      "migration_compiler.optimized.json": {
+        "bytes": 565,
+        "sha256": "78f482d3a4fc7b5579952e5a79f3bc6f270a5c02d4350845e0d753cbb4a24c52"
+      },
+      "migration_matrix_bank.json": {
+        "bytes": 87542,
+        "sha256": "e5dcf40528765079ae00d7c98802473b78f5c4759f0124e87b4a74e919c6ed1a"
+      },
+      "migration_repairs.json": {
+        "bytes": 1962,
+        "sha256": "cb710fb2a8a2b67239c736692e6551bb38ce3684c3678a926760a094bb0e456c"
+      },
+      "zero_tail_migration.normal.json": {
+        "bytes": 560,
+        "sha256": "8605a232b18bf4c3d054b73db6153f080f7bd99cde09554524728ecec6608fa2"
+      },
+      "zero_tail_migration.optimized.json": {
+        "bytes": 560,
+        "sha256": "8605a232b18bf4c3d054b73db6153f080f7bd99cde09554524728ecec6608fa2"
+      }
+    },
+    "manuscript_review": "Independent auditor approved sections2-4; section5 clarified that the mixed-chain bank is alternative, not asserted to contain all strip operators."
+  },
+  "prior_paths": [
+    "05-knowledge/results/session124_digital_constructor_inverse_20261031/PROOF.md",
+    "05-knowledge/results/session124_digital_constructor_inverse_20261031/global_reduction/README.md",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+    "05-knowledge/results/square_sum_spectrum_overnight_20261031h/README.md",
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+  ],
+  "public_files": [
+    "PROOF.md",
+    "README.md",
+    "migration.py",
+    "verify.py",
+    "normal.json",
+    "optimized.json",
+    "relocated.normal.json",
+    "relocated.optimized.json"
+  ],
+  "reproduction": [
+    "PYTHONDONTWRITEBYTECODE=1 python3 verify.py",
+    "PYTHONDONTWRITEBYTECODE=1 python3 -O verify.py"
+  ],
+  "status": "PROVED scoped identities; FINITE-EXACT complete restricted-language decisions; unrestricted spectrum OPEN"
+}

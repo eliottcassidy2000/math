@@ -1,0 +1,18 @@
+{
+  "all_two_apex_words_through_length": 5,
+  "continuation_loss_hostile": {
+    "3333_then_0_H": 47,
+    "H": 1,
+    "empty_H": 1,
+    "empty_then_0_H": 1,
+    "word": "3333"
+  },
+  "exact_bound": "5**reduced_spine_length <= H**3",
+  "largest_reduced_spine": 5,
+  "missing_apex_restoration_cases": 184,
+  "nontrivial_SCC_floor_controls": 1317,
+  "retained_original_apex_controls": 1365,
+  "scope": "Finite graph controls support the proved all-order SCC/Busch argument; code-size bound concerns existence of a scalar-H representative, not all profiles.",
+  "status": "PASS",
+  "word_cases": 1365
+}

@@ -1,0 +1,61 @@
+{
+  "actual_family_pairs": [
+    {
+      "k": 6,
+      "lower_H": 65,
+      "lower_order": 8,
+      "upper_H": 67,
+      "upper_order": 7
+    },
+    {
+      "k": 7,
+      "lower_H": 129,
+      "lower_order": 9,
+      "upper_H": 131,
+      "upper_order": 8
+    },
+    {
+      "k": 8,
+      "lower_H": 257,
+      "lower_order": 10,
+      "upper_H": 259,
+      "upper_order": 9
+    },
+    {
+      "k": 9,
+      "lower_H": 513,
+      "lower_order": 11,
+      "upper_H": 515,
+      "upper_order": 10
+    },
+    {
+      "k": 10,
+      "lower_H": 1025,
+      "lower_order": 12,
+      "upper_H": 1027,
+      "upper_order": 11
+    },
+    {
+      "k": 11,
+      "lower_H": 2049,
+      "lower_order": 13,
+      "upper_H": 2051,
+      "upper_order": 12
+    },
+    {
+      "k": 12,
+      "lower_H": 4097,
+      "lower_order": 14,
+      "upper_H": 4099,
+      "upper_order": 13
+    }
+  ],
+  "literal_source_h_F_q_g": [
+    9,
+    33,
+    32,
+    2
+  ],
+  "scope": "Adjacency positives are independently verified; all-order construction follows native zero-tail recurrence. Non-nesting of any witnesses uses separately proved all-order +2 induced-gap classification.",
+  "status": "PASS"
+}

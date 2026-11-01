@@ -16,26 +16,35 @@ change count R(w)=#{i:w_i!=w_(i+1)}, zero for empty/singleton words.
 This is a presentation resource, not an invariant of an unmarked graph unless
 minimized over all such presentations.
 
-Delete all singleton SCCs of T. H is unchanged. Restrict A to the remaining
-vertices, delete removed chain letters, and project surviving letters onto
-the surviving apex coordinates. The remaining chain is transitive and R
-cannot increase. Projection can only identify letters. For deletion, the
-inequality 1[a!=c]<=1[a!=b]+1[b!=c] shows that removing an interior letter
-cannot increase changes. This argument does not assume a new shortest
-presentation exists or retain a nonexistent marked vertex.
+Delete every chain vertex lying in a singleton SCC, but retain all marked
+apices, including singleton ones. H is unchanged. The remaining chain word
+is a subsequence of the original, and R cannot increase: the inequality
+1[a!=c]<=1[a!=b]+1[b!=c] controls deleting an interior letter. If one also
+discards singleton apices, coordinate projection can only identify letters.
 
-Session133's core theorem bounds the remaining order by
+Every remaining nonsingleton SCC C_i contains a_i>=1 marked apices: a
+subtournament of the transitive chain alone cannot be strongly connected
+and nontrivial. If n_i is its order, the surviving spine length is
 
-    K(X)=max{3a+4b:3^a5^b<=X}, for H(T)<=X.
+    m=sum_i(n_i-a_i)<=sum_i(n_i-1).
 
-In particular K(X)<=3 ln(X)/ln(3). For prime H=p, the reduced core is a SINGLE
-nontrivial strong component: SCC counts multiply, and every nontrivial strong
-component has H>=3. Busch gives the sharper order bound
+Busch's cited bound H(C_i)^3>=5^(n_i-1), multiplied over SCCs, therefore gives
 
-    n<=1+3 ln(X)/ln(5), if p<=X.
+    H(T)^3>=5^m,  hence m<=floor(log_5(H(T)^3)).
 
-Singleton padding cannot defeat either bound. Counting every presentation,
-rather than quotienting by isomorphism, only enlarges the resulting upper
+This is stronger for marked-spine purposes than using the whole-core bound
+K(X)<=3 ln(X)/ln3. It applies to every target, not only prime counts, and
+retains exactly the original marked apex tournament. The empty spine is
+allowed; if H=1 then m=0. The fixed marked graph itself must still be
+compatible with that target. This compression preserves scalar H and the
+run budget, not the complete future-response state. Long trailing sink
+words can have the same H and different continuation probes; the logarithmic
+bound concerns existence of a reduced representative, not every encoding.
+
+This refinement was obtained jointly with the sibling two-apex decoder
+lane after checkpoint1. The earlier K(X) bound and prime-only stronger bound
+remain correct; this is an improvement, not a retraction. Counting every
+presentation rather than quotienting by isomorphism only enlarges an upper
 bound on the number of distinct H values.
 
 ## 2. Exact finite encoding bound
@@ -50,9 +59,10 @@ q binom(m-1,r)(q-1)^r words of length m with r changes: choose the first
 letter, change positions, and a different letter at every change. Summing
 m=1,...,N uses the hockey-stick identity and adding the empty word gives the
 bracket above. Thus the number of positive H<=X with a <=k-apex presentation
-of change count <=R is at most E_k(floor(K(X)),R). Restricting the targets to
-primes permits N=floor(1+3 ln(X)/ln(5)). This finite estimate overcounts
-chain length by ignoring the apex vertices, deliberately and safely.
+of change count <=R is at most E_k(floor(log_5(X^3)),R). The logarithmic floor is evaluated
+with integer powers, avoiding numerical ambiguity. The fixed apex graph
+choices are deliberately overcounted; its number of vertices does not
+consume any of the spine-length bound.
 
 It is NOT a lower bound on the number of attainable values. Different words
 or different apex markings may have the same H. No identification of these
@@ -75,28 +85,28 @@ R=c ln X+o(ln X), with 0<c/C<1-1/q. Standard binomial entropy gives
 
 The formula follows equally from factorial bounds in the exact finite sum;
 it is a counting upper bound, not a probabilistic assumption on actual words.
-For primes take C=3/ln5; for unrestricted targets C=3/ln3. Whenever beta<1,
+For every target take C=3/ln5 using the spine-specific bound. Whenever beta<1,
 these low-change presentations cover a zero-density subset even of the primes
 (by the classical [prime number theorem, DLMF27.2.3](https://dlmf.nist.gov/27.2.E3)). This does not prove the remaining
 prime values are attained: they may be unattained, or require more changes.
 
 ## 4. Explicit two-apex consequences without numerical root fitting
 
-For k=2 and prime targets, use C<2 and R=floor((ln X)/5). The binomial bound
+For k=2 and all targets, use C<2 and R=floor((ln X)/5). The binomial bound
 already gives exponent at most
 
     (ln30+1)/5 < 9/10.
 
 The strict inequality follows from exp(7/2)>30, certified by a finite rational
-partial sum in the checker. Therefore only X^(9/10+o(1)) primes up to X can
-have a two-apex presentation with <=(ln p)/5 changes. In particular, for
+partial sum in the checker. Therefore only X^(9/10+o(1)) values up to X can
+have a two-apex presentation with <=(ln h)/5 changes, where h is that value. In particular, for
 almost all primes, either no two-apex presentation exists or every such
 presentation has more than (ln p)/5 changes. This is a necessary resource
 condition, NOT an assertion of prime realization.
 
-For all targets, C<3 and R=floor((ln X)/6) give exponent less than5/6 since
-ln54<4. Again exp4>54 has a rational partial-sum certificate. Thus only
-X^(5/6+o(1)) target values admit that restricted resource budget.
+The weaker checkpoint1 bound C<3 and R=floor((ln X)/6) give exponent less than5/6 since
+ln54<4. Again exp4>54 has a rational partial-sum certificate. Thus the earlier valid bound was
+X^(5/6+o(1)) target values admitting that restricted resource budget.
 
 A universal two-apex construction, if one exists, must use profiles with
 logarithmically many changes on a large target population. This does not

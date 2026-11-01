@@ -1,0 +1,21 @@
+{
+  "all_word_lengths": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "empty_middle_hostile": "empty word has one x->y path, not two apex orders",
+  "maxima": [
+    1,
+    3,
+    5,
+    15,
+    45
+  ],
+  "scope": "All short words; does not claim global spectrum coverage.",
+  "status": "PASS",
+  "three_independent_counts": "literal permutations, generic adjacency subset DP, ordered three-run assignments",
+  "word_cases": 341
+}

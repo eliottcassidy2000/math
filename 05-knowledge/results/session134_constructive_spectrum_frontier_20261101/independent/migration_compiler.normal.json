@@ -1,0 +1,14 @@
+{
+  "actual_extension_checks": 15540,
+  "literal_permutation_and_cover_controls": 180,
+  "local_orders_distinct_matrices": {
+    "2": 2,
+    "3": 8,
+    "4": 32
+  },
+  "local_rooted_tournaments": 210,
+  "matrix_bank_producer_sha256": "91b0e21515f8f590f9093f26be650f6fc8a6e89276251920e75dda6c801f41d2",
+  "old_marked_parents": 74,
+  "scope": "All old labelled parents of order1..3 with all cuts; all local tournaments of orders2..4 with every distinct new root. The all-order compiler claim additionally requires its path-decomposition proof.",
+  "status": "PASS"
+}

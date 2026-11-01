@@ -48,6 +48,22 @@ def capped_core_bound(x, b, witness=False):
     return (best, arg) if witness else best
 
 
+def capped_core_fast(x, b):
+    """Equivalent one-dimensional maximization; b=0 is an essential branch."""
+    if type(x) is not int or x < 1 or type(b) is not int or b < 0:
+        raise ValueError('integer x>=1 and integer b>=0 required')
+    if b == 0:
+        return 0
+    best, power3 = 0, 1
+    for u in range(2 * b + 1):
+        if power3 > x:
+            break
+        v = ilog(x // power3, 5)
+        best = max(best, 2 * u + 3 * v + min(b, u + v))
+        power3 *= 3
+    return best
+
+
 def uncapped_core_bound(x):
     # Inherited S133 exact K(x), independently encoded.
     return max((4 * d + 3 * ilog(x // 5 ** d, 3)
@@ -185,6 +201,7 @@ def capped_bound_independent(max_x=5000, max_b=6):
         for x in range(1, max_x + 1):
             best = max(best, states.get(x, 0))
             need(capped_core_bound(x, b) == best, 'capped core formula versus multiset enumeration')
+            need(capped_core_fast(x, b) == best, 'one-dimensional capped core formula')
             need(best <= uncapped_core_bound(x), 'capped bound exceeds uncapped kernel')
             cases += 1
     return cases
@@ -284,6 +301,7 @@ def main():
                       'complete_labelled_universe': 'every tournament of orders 0 through 5',
                       'actual_tournament_controls': full_controls,
                       'capped_core_multiset_comparisons': bound_cases,
+                      'fast_one_dimensional_formula_comparisons': bound_cases,
                       'strong_floor_controls': floor_controls,
                       'six_arc_deficit_nine_controls': six,
                       'twin_contraction_hostile_t_H': twins,

@@ -1,0 +1,37 @@
+{
+  "all_order_scope": "Theorems in THEORY.md; no global spectrum coverage claim.",
+  "harness_sha256": "f0e483bdd4d9207f60bae9f168480e9209bf567ad5751cb9047ca6a20c41a55b",
+  "independent_pairsets_agree": true,
+  "optimization_mode_outputs_identical": true,
+  "records": [
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "receipt_sha256": "f7b2e42e6c4184fd1a97b20f60e15e9a04cbc53955a4f9c664274b613bbeb381",
+      "script": "verify.py",
+      "source_sha256": "56a1aaceb763c03f61bbc75ba860b809e36c3ebd1fa51d6c96d1ee8a705b85db"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "receipt_sha256": "67259bf2003f911d87a3d4bf4f4f4d71629bade034faa3ba42ad2b05ad83a491",
+      "script": "independent_check.py",
+      "source_sha256": "35c27b01b7f39dc33b329b96e80de05da2d5d4d3f0ef280906999756dfa97bef"
+    },
+    {
+      "modes": [
+        "normal",
+        "optimized"
+      ],
+      "receipt_sha256": "e86aefd36c624a9b343afea42bbed21adb7cd10f441f6fea9d26e4cbc1d7bebd",
+      "script": "family_check.py",
+      "source_sha256": "7455a2c291f11f07405a24211c4d241529e9d40965c80aaac1c6d76d75079b76"
+    }
+  ],
+  "source_realizability_verified": true,
+  "status": "PASS"
+}

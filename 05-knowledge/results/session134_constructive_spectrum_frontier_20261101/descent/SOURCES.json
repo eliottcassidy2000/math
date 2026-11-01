@@ -1,0 +1,54 @@
+{
+  "base_commit": "04cdf182d9e4543800b421a8893232ccf69b2399",
+  "inherited_sources": [
+    {
+      "git_blob": "d7c575893a6a5abe8d508c8a22d25a2148cecf75",
+      "path": "01-canon/theorems/THM-070-claim-a-from-ocf.md",
+      "sha256": "e6c3fe8f80ce87ad21075f81e79c633889b4917b3014c90736cf14a585449de0"
+    },
+    {
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "git_blob": "cf651da723eecbbb10e8741d318dd4172749e856",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8"
+    },
+    {
+      "git_blob": "71d7f0679bc15245242ca017a33a12dcc867da42",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/PROOF.md",
+      "sha256": "f8d8e9d669aa52e21f92693b9cd76b5bdc6801f80e3d2fa01bc37fc4e29e17b2"
+    },
+    {
+      "git_blob": "b9002ed0666535112e24331ccd3773fa8b3b2e18",
+      "path": "05-knowledge/results/session124_digital_constructor_inverse_20261031/PROOF.md",
+      "sha256": "0a6fb599633afdbc197f88b577faab521cd806f2777e99ba8a0fbcf15210df52"
+    },
+    {
+      "git_blob": "100516c4f45217b8c22df9c8612853c8b8a06c60",
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    {
+      "git_blob": "ad4b098ee0ec9e0552ac87f2be9289b94951cade",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md",
+      "sha256": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5"
+    }
+  ],
+  "primary_sources": [
+    {
+      "name": "J.W.Moon, On Subtournaments of a Tournament (1966)",
+      "url": "https://doi.org/10.4153/CMB-1966-038-7",
+      "used": "Theorem1 p297, every vertex has cycles of every length3..n",
+      "verified_utc_date": "2026-11-01"
+    },
+    {
+      "name": "Irving-Omar, Revisiting The Redei-Berge Symmetric Functions via Matrix Algebra v3",
+      "url": "https://arxiv.org/html/2412.10572v3#S3.SS4",
+      "used": "Corollary20, OCF attributed to Grinberg-Stanley",
+      "verified_utc_date": "2026-11-01"
+    }
+  ]
+}

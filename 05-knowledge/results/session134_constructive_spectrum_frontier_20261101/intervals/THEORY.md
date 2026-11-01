@@ -24,8 +24,10 @@ Closest proved mechanisms:
 * THM-4748, `two-reversed-arcs-exact-path-counts-...`, already classifies
   two-backward-arc families. Those formulas are not rediscovered here.
 * Overnight packet g gives the six-backward-arc family
-  `H=2^(n+1)-9`, `n>=9`, and the 118-deficit near-dyadic window; packet h
-  proves that deficit nine has minimum dyadic source slope 512. Neither
+  `H=2^(n+1)-9`, `n>=9`, and every odd count in
+  `[2^k-235,2^k-1]` for every `k>=14`, on at most `k+1` vertices (118
+  deficits). Packet h proves that deficit nine has minimum dyadic source
+  slope 512, so that source enters only at exponents `k>=10`. Neither
   licenses increasing the target exponent to evade a source-entry cost.
 
 The addition here is an **exact SCC-count-capped core budget**, its finite
@@ -104,6 +106,21 @@ among the r components. Take actual strong tournaments attaining the
 cited minima, and form their ordinal join. It has the specified order,
 exact count `3^u*5^v<=X`, and r nonsingleton SCCs. Thus the maximum is
 attained. QED.
+
+**One-dimensional form.** For `b>=1`, put
+`v(u)=floor(log_5(floor(X/3^u)))`. Then
+
+```
+J_b(X)=max_{0<=u<=min(2b,floor(log_3 X))}
+        [2u+3v(u)+min(b,u+v(u))].
+```
+
+For fixed u,v, the largest admissible number of components is
+`r=min(b,u+v)`: its lower bound `r>=ceil(u/2)` follows from `u<=2b`.
+The objective increases with v, so choose its largest permitted value.
+The case u=v=0 accounts for the empty core. For `b=0` set `J_0(X)=0`
+separately; forgetting that branch would incorrectly allow increments
+without any component. This form needs only O(b) integer-log trials.
 
 This is an exact extremal theorem for an **SCC cap**. Its extremizer may
 have much more than b feedback arcs. We use it only as an upper bound on
@@ -206,7 +223,9 @@ this low arc budget tends to zero. In particular a constructor covering
 all sufficiently large allowed odd integers cannot have a uniform arc
 budget bounded by this expression.
 
-**Proof.** Since `N<=K(X)=O(log X)`, we have `M=O((log X)^2)`. For large X,
+**Proof.** Since `N<=K(X)=O(log X)`, we have `M=O((log X)^2)`. Also
+`N>=J_1(X)>=1+3 floor(log_5 X)` for X>=5, by the actual strong minima
+of order `3v+1` and count `5^v`. Thus `M=Omega((log X)^2)`. For large X,
 `b<=M/2`, and the standard product bound on binomial coefficients gives
 
 ```
@@ -263,7 +282,8 @@ under `python -O`.
 
 * The capped-core formula is compared with a direct multiplicative knapsack
   over all strong-order minimum counts, for every `1<=X<=5000`, `0<=b<=6`:
-  35,000 exact comparisons. This tests the arithmetic formula, not the
+  35,000 exact comparisons, also checking the one-dimensional form. This
+  tests the arithmetic formula, not the
   externally cited strong minimum theorem.
 * All 1,100 labelled tournaments of orders 0 through 5 are counted both by
   subset DP and literal permutations. Minimum fa is checked by subset DP

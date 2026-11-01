@@ -1,0 +1,93 @@
+{
+  "actual_word_tests": 21869,
+  "claim": "all-order exact word recovery from twelve continuation probes",
+  "exact_coordinate_identity_checks": 360,
+  "finite_max_exhaustive_word_length": 7,
+  "finite_random_max_length": 1000,
+  "hostile_rejections": 15,
+  "independent_subset_dp_tests": 341,
+  "occupancy_invariance_rows": 32,
+  "ordinary_spectrum_completeness": "OPEN",
+  "probe_suffixes": [
+    "0",
+    "1",
+    "2",
+    "00",
+    "10",
+    "20",
+    "30",
+    "01",
+    "000",
+    "100",
+    "200",
+    "010"
+  ],
+  "singleton_scc_cutoff_tests": 341,
+  "small_complete_decisions": {
+    "1": {
+      "bound": 0,
+      "word": ""
+    },
+    "11": {
+      "bound": 4,
+      "word": "1100"
+    },
+    "13": {
+      "bound": 4,
+      "word": "120"
+    },
+    "15": {
+      "bound": 5,
+      "word": "10010"
+    },
+    "17": {
+      "bound": 5,
+      "word": "10000"
+    },
+    "19": {
+      "bound": 5,
+      "word": "10100"
+    },
+    "21": {
+      "bound": 5,
+      "word": null
+    },
+    "23": {
+      "bound": 5,
+      "word": "1020"
+    },
+    "25": {
+      "bound": 6,
+      "word": "100110"
+    },
+    "27": {
+      "bound": 6,
+      "word": "100010"
+    },
+    "29": {
+      "bound": 6,
+      "word": "10021"
+    },
+    "3": {
+      "bound": 2,
+      "word": "10"
+    },
+    "31": {
+      "bound": 6,
+      "word": "101010"
+    },
+    "5": {
+      "bound": 3,
+      "word": "100"
+    },
+    "7": {
+      "bound": 3,
+      "word": null
+    },
+    "9": {
+      "bound": 4,
+      "word": "1000"
+    }
+  },
+  "status": "PASS"
+}

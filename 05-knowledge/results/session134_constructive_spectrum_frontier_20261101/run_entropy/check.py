@@ -66,7 +66,10 @@ def main():
      w=word(a,A)
      if w is None:continue
      B=tuple(C.index(v) for v in A if v in C);new=word(b,B)
-     need(new is not None and changes(new)<=changes(w),'marked core lost transitive spine or run budget');graphchecks+=1
+     need(new is not None and changes(new)<=changes(w),'marked core lost transitive spine or run budget')
+     kept=sorted(set(C)|set(A));bb=induced(a,kept);AA=tuple(kept.index(v) for v in A);ww=word(bb,AA)
+     need(ww is not None and changes(ww)<=changes(w),'retained-apex compression')
+     need(h(bb)==h(a) and h(a)**3>=5**len(ww),'spine-specific Busch bound');graphchecks+=1
  # Fully rational certificates for elementary exponential inequalities used in prose.
  e4=sum((4**j)/math.factorial(j) for j in range(18))
  from fractions import Fraction

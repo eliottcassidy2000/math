@@ -1,0 +1,58 @@
+{
+  "fixed_backarc": {
+    "chosen_backarc_controls": 6590,
+    "nontrivial_log_span_controls": 1800,
+    "sparse_presentations": 2366,
+    "universe": "all presentations through order7 with at most3 backward arcs"
+  },
+  "fixed_increment": {
+    "all_vertex_deletions": 5405,
+    "maximum_core_order_tested": 5,
+    "plus_two_pairs": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "positive_increment_cases": 4190,
+    "strict_induced_pair_kernel_controls": 28022,
+    "universe": "all labelled tournaments through order5, each vertex"
+  },
+  "run_entropy": {
+    "constant_conclusion": "(ln(30)+1)/5 < 9/10",
+    "exact_word_count_cases": 63,
+    "exp_3_5_lower_bound": "1951237723/58982400",
+    "scope": "finite deletion/projection/count controls and exact constant bound; asymptotic theorem requires stated core-size proof",
+    "subsequence_cases_with_all4_bit_projections": 299593
+  },
+  "status": "PASS",
+  "strong_literal_cycle_cover": {
+    "literal_vertex_deletions": 3251,
+    "plus_four_pairs": [
+      [
+        1,
+        5
+      ],
+      [
+        5,
+        9
+      ]
+    ],
+    "plus_two_pairs": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "scope": "All strong classes orders3..6 covered via Hamilton-cycle relabelling; literal permutations only.",
+    "strong_fixed_Hamilton_cycle_presentations": 549
+  }
+}

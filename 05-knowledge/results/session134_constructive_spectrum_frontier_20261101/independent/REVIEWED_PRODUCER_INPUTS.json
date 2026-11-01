@@ -1,0 +1,25 @@
+{
+  "baseline_git_commit": "04cdf182d9e4543800b421a8893232ccf69b2399",
+  "note": "These hashes identify proof/source inputs reviewed by the auditor. Default independent consumers do not import these external files. Migration matrix and repair inputs are retained within this packet.",
+  "review_time_utc": "2026-11-01T02:09:00Z",
+  "reviewed_files_sha256": {
+    "constructor/PROOF.md": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1",
+    "constructor/migration.py": "91b0e21515f8f590f9093f26be650f6fc8a6e89276251920e75dda6c801f41d2",
+    "constructor/verify.py": "dd32e64c46f045e400ca4836bc59922f716c282100dc1aa3244487d5ffb83e87",
+    "descent/THEORY.md": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7",
+    "descent/family_check.py": "7455a2c291f11f07405a24211c4d241529e9d40965c80aaac1c6d76d75079b76",
+    "descent/independent_check.py": "35c27b01b7f39dc33b329b96e80de05da2d5d4d3f0ef280906999756dfa97bef",
+    "descent/verify.py": "56a1aaceb763c03f61bbc75ba860b809e36c3ebd1fa51d6c96d1ee8a705b85db",
+    "intervals/THEORY.md": "d2d6d90b13fb15ec290631baf625e8e496abe93afd96c2473f8711088df198dc",
+    "intervals/verify_arc_budget.py": "5c823d53fd085bf9eaae5a28b0ecb2c1a31b65e01fde8e6dedb00a4a64d2aa2b",
+    "radix_probe/PROOF.md": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4",
+    "radix_probe/bank.json": "1c9cdf86bf767b5d4e2a2242dc6cfb8e1c353bdf88beaac373ec173849619ebb",
+    "radix_probe/migration.py": "91b0e21515f8f590f9093f26be650f6fc8a6e89276251920e75dda6c801f41d2",
+    "radix_probe/verify.py": "e9c79f17e116d323fa20aa42419afee912661bd3cd0f12069fc279eddb1f6c84",
+    "run_entropy/THEORY.md": "93ad5bb243b8a8a992e2134972d516d11a30893aa0ddc4de540545827ba6a0f1",
+    "run_entropy/check.py": "d0516e2d9e74ececf977bca5b6641123d634d9f93a672840b0df45df5d23ef24",
+    "two_apex/THEORY.md": "46fd97379889f6a259e4cf882f22551ee548dd17ec452f68c4bda16d680848f3",
+    "two_apex/check_word_recovery.py": "ab631ce460eb52431ce07f471921e7f2434127ff83bd94f588bf3fe76085b9e3",
+    "two_apex/word_recovery.py": "d4869500e602eabb07cb3c1a481d62d55ddee06116c46fc52f668febee9d34d6"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "baseline": "5111e02a42f7",
+  "compiler_origin": "Unchanged constructor/migration.py audited with sibling constructor/PROOF.md",
+  "files": {
+    "PROOF.md": {
+      "bytes": 10040,
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4"
+    },
+    "README.md": {
+      "bytes": 1215,
+      "sha256": "95d5321d247bb16d96be40601cb0eaef7817624376dc263394100459e36fbbed"
+    },
+    "bank.json": {
+      "bytes": 10166,
+      "sha256": "1c9cdf86bf767b5d4e2a2242dc6cfb8e1c353bdf88beaac373ec173849619ebb"
+    },
+    "migration.py": {
+      "bytes": 3271,
+      "sha256": "91b0e21515f8f590f9093f26be650f6fc8a6e89276251920e75dda6c801f41d2"
+    },
+    "normal.json": {
+      "bytes": 65470,
+      "sha256": "01eecdd446f83a8b7f4b588c796a53968f4d4cfe48ff69984d50e5dcc7a72e8b"
+    },
+    "optimized.json": {
+      "bytes": 65470,
+      "sha256": "01eecdd446f83a8b7f4b588c796a53968f4d4cfe48ff69984d50e5dcc7a72e8b"
+    },
+    "relocated.normal.json": {
+      "bytes": 65470,
+      "sha256": "01eecdd446f83a8b7f4b588c796a53968f4d4cfe48ff69984d50e5dcc7a72e8b"
+    },
+    "relocated.optimized.json": {
+      "bytes": 65470,
+      "sha256": "01eecdd446f83a8b7f4b588c796a53968f4d4cfe48ff69984d50e5dcc7a72e8b"
+    },
+    "verify.py": {
+      "bytes": 9727,
+      "sha256": "e9c79f17e116d323fa20aa42419afee912661bd3cd0f12069fc279eddb1f6c84"
+    }
+  },
+  "status": "FINITE-EXACT short-word no-two-nonzero-digit theorem; PROVED actual infinite radix80 family; global completeness OPEN",
+  "universe": "All words of lengths1..4 in the exact32-generator fresh transitive block bank; no all-length extrapolation"
+}

@@ -3,10 +3,11 @@
   "sha256": {
     "README.md": "cf987e8bc466a9544ef4e4307e336879a8d4942966fe3c2a1a3db7a6325578c7",
     "SOURCE_PINS.json": "9d00a764f69e75c5477611c46f839b44a3199a819190cdd82f37b81e5bcdb7d3",
-    "THEORY.md": "3b5b70508cbab1f8d8cb3b7bd49ad09d8a64b20e9e74b27d8c44dde5d76a719b",
-    "normal.json": "715ea84ca55d9c901ad78f0182d9eb4e4df6541d316cc2d3a52e902e11384748",
-    "optimized.json": "715ea84ca55d9c901ad78f0182d9eb4e4df6541d316cc2d3a52e902e11384748",
-    "verify_arc_budget.py": "7bb204619019cc198a431f1928545a9eec8458f8e1d3e8788abd5ca990e7b975",
+    "THEORY.md": "d2d6d90b13fb15ec290631baf625e8e496abe93afd96c2473f8711088df198dc",
+    "VERIFICATION.json": "0aef0f4b7d298ac34d829f758ab0232ef073b5fee660e3eb5a1af341d4195f54",
+    "normal.json": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+    "optimized.json": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+    "verify_arc_budget.py": "5c823d53fd085bf9eaae5a28b0ecb2c1a31b65e01fde8e6dedb00a4a64d2aa2b",
     "verify_packet.py": "8b70847da22efe65a7b5c6df2c91314266daba5e59784dd0a087efd578e8ad79"
   }
 }

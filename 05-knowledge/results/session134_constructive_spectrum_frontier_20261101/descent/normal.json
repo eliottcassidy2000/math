@@ -1,0 +1,122 @@
+{
+  "checks": {
+    "actual_induced_pair_kernel": 2027318,
+    "hostile_mutation_rejected": 1,
+    "induced_gap_2": 75646,
+    "induced_gap_4": 133872,
+    "literal_cycle_deletion_checks": 5405,
+    "literal_full_path_checks": 1099,
+    "one_vertex_deletions": 202013,
+    "positive_increment_bounds": 182750,
+    "tournaments": 33867
+  },
+  "exact_maximum_core_by_gain": {
+    "2": 4,
+    "4": 5
+  },
+  "inventory": [
+    {
+      "labelled": 1,
+      "n": 1,
+      "strong_labelled": 0
+    },
+    {
+      "labelled": 2,
+      "n": 2,
+      "strong_labelled": 0
+    },
+    {
+      "labelled": 8,
+      "n": 3,
+      "strong_labelled": 2
+    },
+    {
+      "labelled": 64,
+      "n": 4,
+      "strong_labelled": 24
+    },
+    {
+      "labelled": 1024,
+      "n": 5,
+      "strong_labelled": 544
+    },
+    {
+      "labelled": 32768,
+      "n": 6,
+      "strong_labelled": 22320
+    }
+  ],
+  "one_vertex_pairs_by_half_gain": {
+    "1": [
+      [
+        1,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "2": [
+      [
+        1,
+        5
+      ],
+      [
+        5,
+        9
+      ]
+    ]
+  },
+  "scope": "Complete all-order +2/+4 pair classification uses the proved affected-SCC cutoff; higher bounded increments are not enumerated.",
+  "semantic_sha256": "2eede5e9d415bcdbb9b7030b1189788da8a17a2b59c78b97684aaf1811b848c9",
+  "source_sha256": "56a1aaceb763c03f61bbc75ba860b809e36c3ebd1fa51d6c96d1ee8a705b85db",
+  "status": "PASS",
+  "universe": "all labelled tournaments of orders1..6; every deletion and induced subset",
+  "witnesses": {
+    "1->3": {
+      "new_H": 3,
+      "old_H": 1,
+      "removed_vertex": 0,
+      "rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    "1->5": {
+      "new_H": 5,
+      "old_H": 1,
+      "removed_vertex": 0,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ]
+    },
+    "3->5": {
+      "new_H": 5,
+      "old_H": 3,
+      "removed_vertex": 1,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ]
+    },
+    "5->9": {
+      "new_H": 9,
+      "old_H": 5,
+      "removed_vertex": 1,
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        14
+      ]
+    }
+  }
+}

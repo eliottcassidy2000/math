@@ -1,0 +1,10 @@
+README.md
+THEORY.md
+PROVENANCE.json
+word_recovery.py
+check_word_recovery.py
+VERIFIED.normal.json
+VERIFIED.optimized.json
+PUBLIC_FILES.txt
+MANIFEST.json
+SHA256SUMS

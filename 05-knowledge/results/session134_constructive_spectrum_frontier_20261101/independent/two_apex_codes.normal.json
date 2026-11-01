@@ -1,0 +1,76 @@
+{
+  "actual_profiles": 341,
+  "all_order_certificate": {
+    "all_order_extraction_residuals": 2,
+    "exact_digit_recurrence_coordinate_checks": 288,
+    "method": "independently rebuilt run transfer and invariant rational span; no producer import",
+    "mutated_coefficient_rejected": true,
+    "reachable_span_dimension": 28
+  },
+  "all_word_lengths": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "formal_state_rejections": [
+    {
+      "Qx": 0,
+      "Qy": 0,
+      "decoded_word": "",
+      "formal_multiple": 7,
+      "replay_H": 1
+    },
+    {
+      "Qx": 0,
+      "Qy": 0,
+      "decoded_word": "",
+      "formal_multiple": 21,
+      "replay_H": 1
+    }
+  ],
+  "hostiles": [
+    {
+      "H": 1,
+      "Qx": 0,
+      "Qy": 0,
+      "word": ""
+    },
+    {
+      "H": 1,
+      "Qx": 0,
+      "Qy": 0,
+      "word": "0"
+    },
+    {
+      "H": 1,
+      "Qx": 1,
+      "Qy": 0,
+      "word": "1"
+    },
+    {
+      "H": 3,
+      "Qx": 0,
+      "Qy": 1,
+      "word": "2"
+    },
+    {
+      "H": 5,
+      "Qx": 2,
+      "Qy": 1,
+      "word": "12"
+    },
+    {
+      "H": 5,
+      "Qx": 1,
+      "Qy": 2,
+      "word": "21"
+    }
+  ],
+  "independent_adjacency_H_evaluations": 4437,
+  "method": "generic Hamiltonian-path subset DP; no transfer or producer import",
+  "normalized_profile_count": 256,
+  "scope": "All-order code identities verified on a closed reachable span; actual-word membership requires exact replay. Scalar spectrum completeness remains open.",
+  "status": "PASS"
+}

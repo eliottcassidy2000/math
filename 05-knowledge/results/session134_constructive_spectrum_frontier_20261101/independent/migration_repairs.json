@@ -1,0 +1,127 @@
+{
+  "producer_receipt_sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3",
+  "repairs": {
+    "173": {
+      "cut": 448,
+      "parent_adjacency_masks": [
+        510,
+        504,
+        498,
+        452,
+        392,
+        408,
+        304,
+        64,
+        128
+      ],
+      "stages": [
+        {
+          "parent_order": 3,
+          "recipe": [
+            3,
+            2,
+            2
+          ],
+          "state": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "parent_order": 6,
+          "recipe": [
+            4,
+            4,
+            3
+          ],
+          "state": [
+            9,
+            19,
+            26,
+            6
+          ]
+        },
+        {
+          "parent_order": 9,
+          "recipe": [
+            4,
+            2,
+            3
+          ],
+          "state": [
+            89,
+            173,
+            325,
+            63
+          ]
+        }
+      ],
+      "state": [
+        89,
+        173,
+        325,
+        63
+      ]
+    },
+    "67": {
+      "cut": 96,
+      "parent_adjacency_masks": [
+        126,
+        120,
+        82,
+        68,
+        72,
+        28,
+        32
+      ],
+      "stages": [
+        {
+          "parent_order": 2,
+          "recipe": "S1",
+          "state": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "parent_order": 5,
+          "recipe": [
+            4,
+            2,
+            3
+          ],
+          "state": [
+            5,
+            9,
+            18,
+            4
+          ]
+        },
+        {
+          "parent_order": 7,
+          "recipe": [
+            3,
+            0,
+            2
+          ],
+          "state": [
+            31,
+            67,
+            73,
+            13
+          ]
+        }
+      ],
+      "state": [
+        31,
+        67,
+        73,
+        13
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+README.md
+THEORY.md
+SOURCES.json
+verify.py
+independent_check.py
+family_check.py
+run_checks.py
+normal.json
+optimized.json
+independent.normal.json
+independent.optimized.json
+family.normal.json
+family.optimized.json
+verification.json
+PUBLIC_FILES.txt
+MANIFEST.json
+SHA256SUMS

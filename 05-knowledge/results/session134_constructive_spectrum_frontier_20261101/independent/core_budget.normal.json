@@ -1,0 +1,56 @@
+{
+  "SCC_budget_range": [
+    0,
+    8
+  ],
+  "X_range": [
+    1,
+    2000
+  ],
+  "direct_component_knapsack_comparisons": 18000,
+  "first_certified_dyadic_shortage_k": 64,
+  "formula_paths": [
+    "direct component-size product knapsack",
+    "r,u,v enumeration",
+    "optimized u-only maximum"
+  ],
+  "scope": "J_b exact for at most b nontrivial SCCs; only upper bound for feedback-arc budget b. Dyadic shortage is a counting-certificate failure, not location of the first missing value.",
+  "six_arc_gate": [
+    {
+      "B6": 2151251342228850878,
+      "J6": 83,
+      "k": 60,
+      "odd_interval_size": 288230376151711744,
+      "strict_shortage": false
+    },
+    {
+      "B6": 2486056977980681876,
+      "J6": 84,
+      "k": 61,
+      "odd_interval_size": 576460752303423488,
+      "strict_shortage": false
+    },
+    {
+      "B6": 3303108701964728687,
+      "J6": 86,
+      "k": 62,
+      "odd_interval_size": 1152921504606846976,
+      "strict_shortage": false
+    },
+    {
+      "B6": 3797951284894764208,
+      "J6": 87,
+      "k": 63,
+      "odd_interval_size": 2305843009213693952,
+      "strict_shortage": false
+    },
+    {
+      "B6": 4359919199804281268,
+      "J6": 88,
+      "k": 64,
+      "odd_interval_size": 4611686018427387904,
+      "strict_shortage": true
+    }
+  ],
+  "status": "PASS"
+}

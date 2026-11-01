@@ -1,0 +1,28 @@
+{
+  "actual_graph_checks": 444,
+  "discarded_r3_coefficient_hostile": {
+    "actual_new_h_F_q_g": [
+      5,
+      9,
+      20,
+      4
+    ],
+    "correct_q_coefficient": 11,
+    "old_h_F_q_g": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "r": 3,
+    "wrong_q_if_coefficient_9": 18
+  },
+  "literal_permutation_cover_checks": 222,
+  "old_marked_parent_cases": 74,
+  "scope": "All labelled old parents orders1..3/all cuts, tails1..6. All-order formula requires the stated local cover enumeration.",
+  "status": "PASS",
+  "tail_lengths": [
+    1,
+    6
+  ]
+}

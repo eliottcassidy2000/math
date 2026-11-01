@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "manifest_verification": {
+    "manifests": 11,
+    "entries": 138
+  },
+  "negative_controls": [
+    "corrupt_source",
+    "remove_source",
+    "stale_receipt"
+  ],
+  "isolated_principal_replays": [
+    {
+      "lane": "run_entropy",
+      "script": "check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "e96cd729233a57cef9c16d4a62e4b84e1e2dcc9b0ca162ad90a3f62ddaca19fe",
+      "seconds": 2.176
+    },
+    {
+      "lane": "run_entropy",
+      "script": "check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "e96cd729233a57cef9c16d4a62e4b84e1e2dcc9b0ca162ad90a3f62ddaca19fe",
+      "seconds": 2.172
+    },
+    {
+      "lane": "intervals",
+      "script": "verify_arc_budget.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+      "seconds": 1.247
+    },
+    {
+      "lane": "intervals",
+      "script": "verify_arc_budget.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "21c82e8f0231abd4633e4dac9f89fc68f1ac668cdae1cbb1d48b0c3189a56b79",
+      "seconds": 1.22
+    },
+    {
+      "lane": "two_apex",
+      "script": "check_word_recovery.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "6492c7d88b3c7674995d1c044784d67570fe7d5b5196a47fe57a37c2caec1659",
+      "seconds": 1.803
+    },
+    {
+      "lane": "two_apex",
+      "script": "check_word_recovery.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "6492c7d88b3c7674995d1c044784d67570fe7d5b5196a47fe57a37c2caec1659",
+      "seconds": 1.844
+    },
+    {
+      "lane": "constructor",
+      "script": "verify.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3",
+      "seconds": 0.788
+    },
+    {
+      "lane": "constructor",
+      "script": "verify.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "1c202b3d1f815a7afd2c45ebf6ca4f631e8a1d1caaa164b4c15605c3c09300c3",
+      "seconds": 0.846
+    },
+    {
+      "lane": "descent",
+      "script": "run_checks.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "78c0071c18e5303d41a867f4a51bf1fd2e463d48ec00e9ead9225daff594b950",
+      "seconds": 9.749
+    },
+    {
+      "lane": "descent",
+      "script": "run_checks.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "78c0071c18e5303d41a867f4a51bf1fd2e463d48ec00e9ead9225daff594b950",
+      "seconds": 9.411
+    },
+    {
+      "lane": "radix_probe",
+      "script": "verify.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "01eecdd446f83a8b7f4b588c796a53968f4d4cfe48ff69984d50e5dcc7a72e8b",
+      "seconds": 5.826
+    },
+    {
+      "lane": "radix_probe",
+      "script": "verify.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "01eecdd446f83a8b7f4b588c796a53968f4d4cfe48ff69984d50e5dcc7a72e8b",
+      "seconds": 6.084
+    },
+    {
+      "lane": "independent",
+      "script": "run_checks.py",
+      "mode": "normal",
+      "status": "PASS",
+      "receipt_sha256": "25e57e7cb3d4d20d09ffdf5c9d6b99d4ae6bad2905b6150a59ab05fe36f03052",
+      "seconds": 41.646
+    },
+    {
+      "lane": "independent",
+      "script": "run_checks.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "receipt_sha256": "25e57e7cb3d4d20d09ffdf5c9d6b99d4ae6bad2905b6150a59ab05fe36f03052",
+      "seconds": 41.62
+    }
+  ],
+  "scope": "Seven principal verifiers across seven lanes, each normal and optimized, relocated independently; inner verifiers specify finite execution ranges and proof dependencies."
+}

@@ -1,0 +1,50 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "04cdf182d9e4543800b421a8893232ccf69b2399",
+  "inherited_files": [
+    {
+      "path": "05-knowledge/results/feedback_word_hamilton_spectrum_20261020/proofs.md",
+      "sha256": "c24aca5ffd092e216985eb794512d584c08db2610dd84982aabb6a5d24a69b6c"
+    },
+    {
+      "path": "05-knowledge/results/session124_two_ear_obstructions_20261031/TWO_EAR_TRANSFER_AND_COMPILER_OBSTRUCTION.md",
+      "sha256": "d52f5d39466ef3926effdb2f9640c323d95c92a5b1dfc3d2cffa51e7b71d1526"
+    },
+    {
+      "path": "05-knowledge/results/session124_two_ear_obstructions_20261031/OCCUPANCY_RELATIONS_AND_MODULAR_MODE.md",
+      "sha256": "0fdf9de06fe1e29efc2e02e5d5f7b62736fe4f135034ff0519cf33ab90a8d34e"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/README.md",
+      "sha256": "b102b091596bd0f7dd412daf1e691616c4385f0b2f9debcd9a697076657985e5"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/minimal_feedback.json",
+      "sha256": "a8781c7bfa2fdd2eb106159084ffad4e57eb5e059968d83c6610f964053f9e3c"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/integral_feedback.json",
+      "sha256": "1f633a2b93ac83a047f4dcdc28473bc20466a2fcd1f443394b54abf6580f4078"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/README.md",
+      "sha256": "ec3d6a2ec93438d1c031ae363c8de8fce7042929f56d24a8b7b4075cfba09552"
+    }
+  ],
+  "new_claim": "explicit binary ear-code readout, word rigidity modulo leading0, and exact actual-orbit membership",
+  "not_new": [
+    "36-state gap transfer",
+    "rank17",
+    "integer observation lattice",
+    "positive coverage through99999"
+  ],
+  "open": "prescribed ordinary Hamiltonian-path spectrum completeness",
+  "primary_sources": [
+    {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+      "title": "Arthur H. Busch, A Note on the Number of Hamiltonian Paths in Strong Tournaments, EJC 13 (2006), N3",
+      "verified": "2026-11-01",
+      "used_claim": "Theorem1 gives H(C)^3 >= 5^(|C|-1); SCC path counts multiply."
+    }
+  ]
+}
