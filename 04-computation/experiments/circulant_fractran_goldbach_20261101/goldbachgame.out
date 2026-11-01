@@ -1,0 +1,14 @@
+GOLDBACHGAME fractions (in order):
+  17/91, 78/85, 19/51, 23/38, 29/33, 77/29, 95/23, 77/19, 53/17, 11/13, 13/11, 705/1333, 825/43, 43/47, 79/2173, 59/53, 1891/118, 67/56699, 59/61, 97/469, 71/67, 1095/2627, 33825/71, 71/73, 3071/158, 89/108151, 79/83, 97/623, 107/89, 101/679, 103/97, 97/101, 1333/3811, 113/103, 4033/3317, 58867/107, 107/109
+  start integer: 43 (state TP, N = 4)
+  [PASS] G1: 37 fractions over 30 primes (7 registers, 23 states)  37 fractions, 30 primes
+  [PASS] first eleven fractions are PRIMEGAME's with 1/17 -> X/17
+  [PASS] G2: literal FRACTRAN = state-dispatch simulator, every configuration through N = 14  4119 configurations, targets [4, 6, 8, 10, 12, 14]
+  [PASS] G3: no halt for every even N <= 1000; targets in order; accepted split has the least prime P  status ('STOP', 2991801422, 1000)
+  [FAIL] G4: control variant (P in {2,3}) halts while processing N = 12  status ('HALT', 2174, 11), accepted [4, 6, 8, 10]
+  G5: steps to accept N: [(4, 50), (6, 269), (8, 670), (10, 1325), (12, 2735), (14, 4120), (16, 5975), (18, 9279)] ... (1000, 2991801422)
+      per-target steps (first): [(4, 50), (6, 219), (8, 401), (10, 655), (12, 1410), (14, 1385), (16, 1855), (18, 3304), (20, 3021), (22, 3707)]
+      per-target steps at selected N: [(100, 86987), (200, 354081), (400, 1428647), (800, 5738237), (1000, 8973223)]
+
+FAILED: ['G4: control variant (P in {2,3}) halts while processing N = 12']
+python3 -B goldbachgame.py 1000  54.81s user 0.31s system 96% cpu 57.259 total
