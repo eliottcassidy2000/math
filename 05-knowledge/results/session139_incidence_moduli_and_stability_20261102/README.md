@@ -2,7 +2,9 @@
 
 **Checkpoint 3 — independently accepted, 2026-11-02.**
 
-## Sharp real stability: the current boundary
+**Follow-up, 2026-11-02:** [the sharper discarded-degree/shared-baseline proof](../stability_priority_moduli_20261102/STABILITY_N276.md), incorporating this checkpoint's per-edge geometric-tail argument, establishes the same sharp formula and equality locus for every **n>=276**. The current open interval is **10..275**. This packet's n>=526/n>=748 proofs and frozen receipts below retain their original scope.
+
+## Sharp real stability: checkpoint boundary
 
 For weighted A, set `V=sum Aij*Aji`, `Delta=H-det(I+A)-abs(det A)` and
 `R=floor(n/2)`. The exact optimal coefficients are
