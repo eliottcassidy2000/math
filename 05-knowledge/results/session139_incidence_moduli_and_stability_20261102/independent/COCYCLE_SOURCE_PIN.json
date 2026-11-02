@@ -1,0 +1,23 @@
+{
+  "first_checkpoint_files_changed": false,
+  "independent_receipts": [
+    "audit_integral_cocycle.out",
+    "audit_integral_cocycle_optimized.out",
+    "audit_weighted_cocycle.out",
+    "audit_weighted_cocycle_optimized.out"
+  ],
+  "last_edit_verified": "Only the declared expectation brackets changed; previous source hash recovered exactly by reversing them.",
+  "notation": "Source explicitly writes E[eta(T)^2] and E[Pf(S(T))^2]; these are expectations of squares.",
+  "proof_path": "/tmp/session139_research/cocycle/PROOF.md",
+  "reviewed_sections": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scope": "integral all-modulus cocycle; sharp binary support floor; weighted second moment; explicit isospectral M22 loss",
+  "sha256": "9e1d401fb62b143b0f44a5a18178612a0f27482bebd6c034d26750ceba21cff4",
+  "source_baseline": "291b4d9757842c02aa451beb65acfade2848609b",
+  "status": "ACCEPTED"
+}

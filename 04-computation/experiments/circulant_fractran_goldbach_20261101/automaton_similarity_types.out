@@ -1,0 +1,15 @@
+  n=3: 2 classes, 2 merged nodes, 2 GF(2)-similarity types
+  [PASS] S1: n=3 similarity types = merged nodes
+  n=4: 4 classes, 3 merged nodes, 3 GF(2)-similarity types
+  [PASS] S1: n=4 similarity types = merged nodes
+  n=5: 12 classes, 10 merged nodes, 10 GF(2)-similarity types
+  [PASS] S1: n=5 similarity types = merged nodes
+  n=6: 56 classes, 34 merged nodes, 24 GF(2)-similarity types
+  [PASS] S2: n=6 similarity types < 34 merged nodes  24 types
+  S3: 7 similarity types hold more than one merged node; sizes [2, 2, 2, 2, 3, 3, 3]
+      collision: score sequences [[0, 1, 2, 3, 4, 5], [2, 2, 2, 3, 3, 3]]
+      collision: score sequences [[0, 1, 2, 4, 4, 4], [1, 1, 3, 3, 3, 4]]
+      collision: score sequences [[0, 1, 3, 3, 4, 4], [1, 1, 2, 3, 4, 4], [1, 2, 2, 3, 3, 4]]
+
+ALL PRE-REGISTERED CHECKS PASSED
+python3 -B automaton_similarity_types.py  2.21s user 0.02s system 95% cpu 2.320 total

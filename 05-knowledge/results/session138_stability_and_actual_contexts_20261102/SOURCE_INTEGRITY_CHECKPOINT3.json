@@ -1,0 +1,278 @@
+{
+  "status": "PASS",
+  "added_curated_files": 53,
+  "frozen_prior_checkpoint_lane_files": 143,
+  "prior_packet_paths_preserved": 153,
+  "prior_non_summary_files_byte_unchanged": 148,
+  "new_manifest_entries": 44,
+  "new_reviewed_pin_entries": 29,
+  "frozen_prior_lane_files_changed": [],
+  "curated_files": [
+    {
+      "path": "independent/THIRD_CHECKPOINT_FILES.json",
+      "bytes": 1073,
+      "sha256": "dda86a8103b2956c2859afd7ea12da1f5003518afa13b035785651267025ffe1"
+    },
+    {
+      "path": "independent/THIRD_CHECKPOINT_SHA256SUMS",
+      "bytes": 497,
+      "sha256": "ea2c127d525d15442f69d5044c3d76e189126e0223c8f64a1f054d90e1127ed1"
+    },
+    {
+      "path": "independent/threshold1500_audit/AUDIT.md",
+      "bytes": 6304,
+      "sha256": "e068bc28ad091612e7be49104ee7275d3ba978390349b9aeb66590ec7c64b568"
+    },
+    {
+      "path": "independent/threshold1500_audit/REVIEWED_SOURCES.json",
+      "bytes": 1353,
+      "sha256": "7f6d9d5dbb2d5703f0dd41b035af99eeeeb95e75ec880a2f8729ce1b09e5716d"
+    },
+    {
+      "path": "independent/threshold1500_audit/check.py",
+      "bytes": 3294,
+      "sha256": "4d554b1dd51848efedf848eb4598b6f44dba1b540bdb7fcc1f2e767464fc684b"
+    },
+    {
+      "path": "independent/threshold1500_audit/normal.json",
+      "bytes": 2399,
+      "sha256": "b406f15579422cc4b6589aef452775e54545855eb39aac40a17cd5aa527b82be"
+    },
+    {
+      "path": "independent/threshold1500_audit/optimized.json",
+      "bytes": 2399,
+      "sha256": "b406f15579422cc4b6589aef452775e54545855eb39aac40a17cd5aa527b82be"
+    },
+    {
+      "path": "independent_pfaffian_hostile/AUDIT.md",
+      "bytes": 1115,
+      "sha256": "1b96ed2c917457f1de4136fecb3e773733acf02c7927d8ebf3763de5fa55777b"
+    },
+    {
+      "path": "independent_pfaffian_hostile/PUBLIC_FILES.txt",
+      "bytes": 67,
+      "sha256": "dd582b0102699a6ee03672ebe5e84dc3d5fe74b1004416f4ed66694ba2f8db5c"
+    },
+    {
+      "path": "independent_pfaffian_hostile/REVIEWED_SOURCES.json",
+      "bytes": 442,
+      "sha256": "90604a3480003c130977824bdcf876542971e230e0c18040d7ce75eb4d0cf2f4"
+    },
+    {
+      "path": "independent_pfaffian_hostile/SHA256SUMS",
+      "bytes": 480,
+      "sha256": "dc179f4e355753e368bff798f6a70e111cfdb998b1a18571dc7a3d40f395da4e"
+    },
+    {
+      "path": "independent_pfaffian_hostile/check.py",
+      "bytes": 1558,
+      "sha256": "e40b9278b48c7c4b827e2490a13e227964cbaee5d5df55457dbcd51d88a7203d"
+    },
+    {
+      "path": "independent_pfaffian_hostile/normal.json",
+      "bytes": 139,
+      "sha256": "7d0c113ca2f685154d324de501cd6be7b733b9eee3e4f1299b375e95fefcb4a6"
+    },
+    {
+      "path": "independent_pfaffian_hostile/optimized.json",
+      "bytes": 139,
+      "sha256": "7d0c113ca2f685154d324de501cd6be7b733b9eee3e4f1299b375e95fefcb4a6"
+    },
+    {
+      "path": "independent_zero_framework_later/AUDIT.md",
+      "bytes": 11783,
+      "sha256": "67f328607ecef6237ffe230609c83f7cc38cf9fcbdd7f9525ea16c0694f8e614"
+    },
+    {
+      "path": "independent_zero_framework_later/SHA256SUMS",
+      "bytes": 935,
+      "sha256": "4d3b9dfc5a9413c3868eccf5e6feca40d1c9e3a5870551bc8fcc75350e81b402"
+    },
+    {
+      "path": "independent_zero_framework_later/SOURCE_PINS.json",
+      "bytes": 3599,
+      "sha256": "7f5c66e4848b8e76d6225d2eec41e67eafcde089d1cd9c9ec6e18bec6e965720"
+    },
+    {
+      "path": "independent_zero_framework_later/audit_framework.py",
+      "bytes": 7624,
+      "sha256": "9bd6b7a49c63d28ef35d81707b3163a8f797167308be4e1799f27bc6c25714a9"
+    },
+    {
+      "path": "independent_zero_framework_later/enumerate_profiles.cpp",
+      "bytes": 2965,
+      "sha256": "93381ff6e92f0b8a402be9327cabd158ee5b908a3cb3ecd3141633edd04b8553"
+    },
+    {
+      "path": "independent_zero_framework_later/enumeration_receipts.json",
+      "bytes": 1746,
+      "sha256": "50e21e271feaaf7286cf36e29ab2f6c900416886b0434b20948143cb0f31c642"
+    },
+    {
+      "path": "independent_zero_framework_later/normal.json",
+      "bytes": 4565,
+      "sha256": "98335b35eae1e6669c7e6aa40f0a2bc6e6cc8e8fe06ec1ca234d2c3d2a60dc9e"
+    },
+    {
+      "path": "independent_zero_framework_later/optimized.json",
+      "bytes": 4565,
+      "sha256": "98335b35eae1e6669c7e6aa40f0a2bc6e6cc8e8fe06ec1ca234d2c3d2a60dc9e"
+    },
+    {
+      "path": "independent_zero_framework_later/producer_replay_receipts.json",
+      "bytes": 2345,
+      "sha256": "bf322d35a8eefebc2ad59685f7b593eac27cead85649b1a337544526016a6770"
+    },
+    {
+      "path": "independent_zero_framework_later/profiles_O2.json",
+      "bytes": 2018,
+      "sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e"
+    },
+    {
+      "path": "independent_zero_framework_later/profiles_UBSan.json",
+      "bytes": 2018,
+      "sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e"
+    },
+    {
+      "path": "independent_zero_framework_later/python_receipts.json",
+      "bytes": 674,
+      "sha256": "676b246aa8a89c2bcaf44b37e56b74de29795a33ce62e6800fa1c29a3561e0a1"
+    },
+    {
+      "path": "stability/HOSTILE_PUBLIC_FILES.txt",
+      "bytes": 147,
+      "sha256": "711c1209818c2054d06077b7e4bee58ae641cecee2e710d93b8b1673618cfa4a"
+    },
+    {
+      "path": "stability/HOSTILE_SHA256SUMS",
+      "bytes": 411,
+      "sha256": "a7e3c6de5822316ea034b100f0264c86a5db074a42801597f9ee1ebfda74b1b3"
+    },
+    {
+      "path": "stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md",
+      "bytes": 2681,
+      "sha256": "c362bc043326657c475e2095105d8d46309aa3dd96e6175c1a1cf88cd77e2257"
+    },
+    {
+      "path": "stability/pfaffian_coefficient_hostile.json",
+      "bytes": 628,
+      "sha256": "bdcafc9d781c1009547a327f349e0792ddc560173efd0a64b3ae9e43832856c4"
+    },
+    {
+      "path": "stability/pfaffian_coefficient_hostile.optimized.json",
+      "bytes": 628,
+      "sha256": "bdcafc9d781c1009547a327f349e0792ddc560173efd0a64b3ae9e43832856c4"
+    },
+    {
+      "path": "stability/pfaffian_coefficient_hostile.py",
+      "bytes": 1776,
+      "sha256": "42b21c43cc0e9f8fce294ce8446c7bef4a72943189e660771e2ffdfe1bfe9f4a"
+    },
+    {
+      "path": "threshold_refinement/PROOF_N1500.md",
+      "bytes": 6210,
+      "sha256": "fec495e0e7845b723b8d964eeb242bc537119d1baccbb683b2dd2b1000227636"
+    },
+    {
+      "path": "threshold_refinement/PUBLIC_FILES.txt",
+      "bytes": 144,
+      "sha256": "a92bfec31cec441595bff69a4164ccf5ac42b5d9658b719b67572a36606a2c81"
+    },
+    {
+      "path": "threshold_refinement/SHA256SUMS",
+      "bytes": 540,
+      "sha256": "0988697908d0bb6b734d8ae4e060029afbe64531ec25e845422bdc240892f314"
+    },
+    {
+      "path": "threshold_refinement/verification_controls_n1500.txt",
+      "bytes": 276,
+      "sha256": "29fac404d6c7a78c158ac43344eee1d71edac6e061e531249e544721d62cebe1"
+    },
+    {
+      "path": "threshold_refinement/verification_n1500.txt",
+      "bytes": 438,
+      "sha256": "ff327733cbc0ed61c10bdda91e4ab0663e413b459744b2fc019fc94fd0dac9bd"
+    },
+    {
+      "path": "threshold_refinement/verification_n1500_optimized.txt",
+      "bytes": 438,
+      "sha256": "ff327733cbc0ed61c10bdda91e4ab0663e413b459744b2fc019fc94fd0dac9bd"
+    },
+    {
+      "path": "threshold_refinement/verify_controls_n1500.py",
+      "bytes": 1726,
+      "sha256": "aa5d1a73732ef8760f018a8766c5ccb0786b8ab017d8ea13c242b1edc359a70f"
+    },
+    {
+      "path": "threshold_refinement/verify_n1500.py",
+      "bytes": 1468,
+      "sha256": "3da3669003700273bc95d59c38ccfdc91413eab7d0812564ad0b90130b21cad0"
+    },
+    {
+      "path": "zero_framework_later/GENERAL_CRITERION.md",
+      "bytes": 10181,
+      "sha256": "29b85ded2a59a44bc862e33b316d284968c714d9b79406892e2f457ed6e4dfc9"
+    },
+    {
+      "path": "zero_framework_later/README.md",
+      "bytes": 2446,
+      "sha256": "6169db0c3a660a6e7c4e3ebaf732895b8d5e27a993e4986a88620c108f4aec29"
+    },
+    {
+      "path": "zero_framework_later/SHA256SUMS",
+      "bytes": 1030,
+      "sha256": "10f2c2de720824dfb9f0e86f07504f11680d6133f31ef8617bbbb64f26102a42"
+    },
+    {
+      "path": "zero_framework_later/actual_row_hostile.json",
+      "bytes": 643,
+      "sha256": "b6b7483736696af44c7bca9bf07d3c2b8d1f806d0970d238d05fc853ce823822"
+    },
+    {
+      "path": "zero_framework_later/certify.py",
+      "bytes": 2726,
+      "sha256": "672df815afce73b275087199d4a46cce2ce6288effcb151e09127573358b5802"
+    },
+    {
+      "path": "zero_framework_later/framework_audit.out",
+      "bytes": 1231,
+      "sha256": "c2a1102728982b6a913c6ceea6310f0c421fb22c7fcec8714dab9bdc34e5325a"
+    },
+    {
+      "path": "zero_framework_later/framework_audit.py",
+      "bytes": 3668,
+      "sha256": "6de88ef4d19ff44bcd7323a9bb05ea4a57b06fac74ef25cc5ad1ff6f52006f19"
+    },
+    {
+      "path": "zero_framework_later/framework_audit_optimized.out",
+      "bytes": 1231,
+      "sha256": "c2a1102728982b6a913c6ceea6310f0c421fb22c7fcec8714dab9bdc34e5325a"
+    },
+    {
+      "path": "zero_framework_later/minimality_literal.cpp",
+      "bytes": 1767,
+      "sha256": "6f73cb68577deb0d114b1fd60ddf538a8d2370fb24c87cd08fa714fc5ab62074"
+    },
+    {
+      "path": "zero_framework_later/minimality_literal.out",
+      "bytes": 637,
+      "sha256": "63b5fbb55fee211b6c041a7ef7e66cb40c5a6ec66224882889465662aeaae1f4"
+    },
+    {
+      "path": "zero_framework_later/profile_tools.py",
+      "bytes": 633,
+      "sha256": "79706f06ce26a339474cc7790c4e6d55272852f175cde43c74be461bff0c0bc4"
+    },
+    {
+      "path": "zero_framework_later/public_manifest.json",
+      "bytes": 2166,
+      "sha256": "84ea98c7ceb5d7ec18d628bbd2a5251d83b222bce22b44108a4f1b3bc941ff23"
+    },
+    {
+      "path": "zero_framework_later/seed_controls.json",
+      "bytes": 2577,
+      "sha256": "6ed28d8ee3ecca265f788db7c2ac9c1e455e147af5d747d018aabe2cff124e3f"
+    }
+  ],
+  "scope": "Third checkpoint: exact stability and V>0 equality for n>=1500; sufficient cyclic sign certificates and minimal actual row-condition hostile; independently checked refutation of an unused Pfaffian shortcut. Exact orders 9..1499 remain unresolved; no historical larger-threshold candidate or unaccepted n9 candidate is included."
+}

@@ -1,0 +1,92 @@
+{
+  "empty_boundary": {
+    "H": 1,
+    "full_inequality": false,
+    "u": 1,
+    "v": 1
+  },
+  "literal_parent_cut_checks": 470,
+  "nonempty_classes_checked": 7412,
+  "rows": [
+    {
+      "classes": 1,
+      "cyclic_classes": 0,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": null,
+      "minimum_packing_two_refined_excess": null,
+      "n": 1,
+      "packing_at_least_two_classes": 0,
+      "refined_equality_classes": 1
+    },
+    {
+      "classes": 1,
+      "cyclic_classes": 0,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": null,
+      "minimum_packing_two_refined_excess": null,
+      "n": 2,
+      "packing_at_least_two_classes": 0,
+      "refined_equality_classes": 1
+    },
+    {
+      "classes": 2,
+      "cyclic_classes": 1,
+      "equality_classes": 2,
+      "minimum_cyclic_gap": 0,
+      "minimum_packing_two_refined_excess": null,
+      "n": 3,
+      "packing_at_least_two_classes": 0,
+      "refined_equality_classes": 2
+    },
+    {
+      "classes": 4,
+      "cyclic_classes": 3,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": 1,
+      "minimum_packing_two_refined_excess": null,
+      "n": 4,
+      "packing_at_least_two_classes": 0,
+      "refined_equality_classes": 4
+    },
+    {
+      "classes": 12,
+      "cyclic_classes": 11,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": 1,
+      "minimum_packing_two_refined_excess": null,
+      "n": 5,
+      "packing_at_least_two_classes": 0,
+      "refined_equality_classes": 12
+    },
+    {
+      "classes": 56,
+      "cyclic_classes": 55,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": 1,
+      "minimum_packing_two_refined_excess": 2,
+      "n": 6,
+      "packing_at_least_two_classes": 25,
+      "refined_equality_classes": 31
+    },
+    {
+      "classes": 456,
+      "cyclic_classes": 455,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": 1,
+      "minimum_packing_two_refined_excess": 3,
+      "n": 7,
+      "packing_at_least_two_classes": 386,
+      "refined_equality_classes": 70
+    },
+    {
+      "classes": 6880,
+      "cyclic_classes": 6879,
+      "equality_classes": 1,
+      "minimum_cyclic_gap": 1,
+      "minimum_packing_two_refined_excess": 3,
+      "n": 8,
+      "packing_at_least_two_classes": 6734,
+      "refined_equality_classes": 146
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "presentations": 1365,
+  "scope": "FINITE-EXACT every oriented two-apex attachment word with fixed apex arc, transitive spine length0..5",
+  "summary": [
+    {
+      "max_abs_v": "0",
+      "max_u": "1",
+      "min_strong_H_minus_P": null,
+      "n": 2,
+      "presentations": 1,
+      "strong_presentations": 0
+    },
+    {
+      "max_abs_v": "1",
+      "max_u": "2",
+      "min_strong_H_minus_P": "0",
+      "n": 3,
+      "presentations": 4,
+      "strong_presentations": 1
+    },
+    {
+      "max_abs_v": "1",
+      "max_u": "2",
+      "min_strong_H_minus_P": "2",
+      "n": 4,
+      "presentations": 16,
+      "strong_presentations": 6
+    },
+    {
+      "max_abs_v": "3",
+      "max_u": "5",
+      "min_strong_H_minus_P": "5",
+      "n": 5,
+      "presentations": 64,
+      "strong_presentations": 29
+    },
+    {
+      "max_abs_v": "4",
+      "max_u": "6",
+      "min_strong_H_minus_P": "11",
+      "n": 6,
+      "presentations": 256,
+      "strong_presentations": 128
+    },
+    {
+      "max_abs_v": "6",
+      "max_u": "10",
+      "min_strong_H_minus_P": "21",
+      "n": 7,
+      "presentations": 1024,
+      "strong_presentations": 540
+    }
+  ]
+}

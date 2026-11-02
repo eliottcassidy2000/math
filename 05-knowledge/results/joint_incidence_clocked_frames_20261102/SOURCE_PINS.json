@@ -1,0 +1,136 @@
+{
+  "date": "2026-11-02",
+  "baseline": "dde756b2c2d4506156d637a536910fc80a35450d",
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "repo_inputs": [
+    {
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/STABILITY_48.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "711863194c6440d153315f4d8b5153f02ca57750f590922e0be316ebb72a493b"
+    },
+    {
+      "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/tensor_matching/PROOF.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66"
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N500.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "fd0ddd18e4b0a57bff61ef4b71279ccd78c53441e2bc9bdb78253c6f702f5770"
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/PAIR_RESERVE.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "7887d7a3ea7c7eab19902ae0437d96dd3ed28ad75be77f0ec66c0d3cc67bf445"
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
+    },
+    {
+      "path": "05-knowledge/results/session43_observers_phase_guards_20261023/cycle-geometry/PROOF.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "bd04cad6a9bacafadb7f58f7f40910e07ef286b52102795bc842b595db9650a0"
+    },
+    {
+      "path": "05-knowledge/results/session90_even_graphs_odd_descent_20261029/trijection/TREE_COMPRESSION.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "784abb98742e65b7764c03b14b4554b894d58ce700bb94157b1557d9309910cf"
+    },
+    {
+      "path": "05-knowledge/results/tournament_graph_trijections_20261020/TRIJECTIONS_AND_TREE_GAUGES.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "4a19202298e373dff64cb9ca4b887642c415b560102ff40d34d01735ce0660e7"
+    },
+    {
+      "path": "05-knowledge/results/collatz_source_refinement_floor_20261005.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "96ce4d659f0576d2950133163ab59fc6b601adf2120f886a38754d9b06b87f1d"
+    },
+    {
+      "path": "05-knowledge/results/collatz_coherence_20260930_trichotomy_hexagon_motifs.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "e9e2b9864d455ecff27cadae0834b74b041df197c4a4847b6e19f2944cec467a"
+    },
+    {
+      "path": "05-knowledge/results/collatz_pentagon_fixed_points_argument_styles_20260930.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "3194d52e29fef37cbdb09a050c6925f0e09477714c4b9193ecdce7063d4913dd"
+    },
+    {
+      "path": "05-knowledge/results/s58_fermat_pepin_collatz_20261026/README.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "d78b0728717f6e9ce2c39327bcb7e3fbaf5351689b12e107346856461321a5a5"
+    },
+    {
+      "path": "05-knowledge/results/overnight_rank_return_20261029/DEFECT_TRANSFER.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "8568e40f76396e9c1bd5441db30adca588cd0ef8d06009eff88d4a1b102b254e"
+    },
+    {
+      "path": "05-knowledge/results/trees5_tournaments4_erdos_sos_20261005.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "c27f7cd9e820c1334bfd0cfb0e800cad01f68458862380161295c9e6fc8e0054"
+    },
+    {
+      "path": "05-knowledge/results/borwein_ladder_owner_numbers_vsc_twelve_20261028.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "e040f46c8f8d0101ffbaa4bd9195f0e3d4ca274c3f7bd36e811e4ab6a1bd6005"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/STABILITY_42.md",
+      "commit": "4e3e096444",
+      "sha256_git_blob": "bbd20505e0b4fb1f429647b95e75a2bb7d157f6050e0ba198d0919d072bbf5b2"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/RECURRENCES.md",
+      "commit": "00f55b6c70",
+      "sha256_git_blob": "95d4e904903463fd9eeb0d5044b51b4e25afa9a89f60f15f1c527cb0745f5f59"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/STABILITY_42.md",
+      "commit": "00f55b6c70",
+      "sha256_git_blob": "3a9cbd47d3c39424c8356d69ffc6ec4d3f612defc9b1d9bf0050f28157e40901"
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256_git_blob": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/CORNER_CARRIER.md",
+      "commit": "66cf347030",
+      "sha256_git_blob": "88bd20ecee9c385f4652de785a5e5758ab1fd18827169995e3d80827522f8e27"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md",
+      "commit": "66cf347030",
+      "sha256_git_blob": "07cec6485117d4be849ba4f2d8dd56dc28876a1922b9a68cf6cc8873d01599de"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/HANDOFF.md",
+      "commit": "66cf347030",
+      "sha256_git_blob": "7800d2870de1fefce16430f75ce2f920588db467eda8fdf41e04c2f60e997083"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1604.04429",
+      "scope": "Conway moves and closed-frame group, section1.1"
+    },
+    {
+      "url": "https://homepages.gac.edu/~jsiehler/Articles/M13-article.pdf",
+      "scope": "Displayed line4,13,10,12; Theorem1 sharp5-transitivity"
+    },
+    {
+      "url": "https://arxiv.org/pdf/math/0006096",
+      "scope": "Section2 genus, cusp and elliptic-point formula"
+    },
+    {
+      "url": "https://arxiv.org/abs/1002.1777",
+      "scope": "Baby Monster special involution geometry; no six-number map"
+    }
+  ]
+}

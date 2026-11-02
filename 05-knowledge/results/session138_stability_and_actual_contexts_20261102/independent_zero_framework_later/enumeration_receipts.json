@@ -1,0 +1,64 @@
+[
+  {
+    "command": [
+      "g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-O2",
+      "/tmp/session138_research/independent_zero_framework_later/enumerate_profiles.cpp",
+      "-o",
+      "/tmp/session138_research/independent_zero_framework_later/enumerate_profiles_O2"
+    ],
+    "elapsed_seconds": 0.553522,
+    "exit_code": 0,
+    "kind": "build",
+    "mode": "O2",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/tmp/session138_research/independent_zero_framework_later/enumerate_profiles_O2"
+    ],
+    "elapsed_seconds": 0.154244,
+    "exit_code": 0,
+    "kind": "run",
+    "mode": "O2",
+    "stderr": "",
+    "stdout_sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e"
+  },
+  {
+    "command": [
+      "g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-O1",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "/tmp/session138_research/independent_zero_framework_later/enumerate_profiles.cpp",
+      "-o",
+      "/tmp/session138_research/independent_zero_framework_later/enumerate_profiles_UBSan"
+    ],
+    "elapsed_seconds": 0.641074,
+    "exit_code": 0,
+    "kind": "build",
+    "mode": "UBSan",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/tmp/session138_research/independent_zero_framework_later/enumerate_profiles_UBSan"
+    ],
+    "elapsed_seconds": 0.730758,
+    "exit_code": 0,
+    "kind": "run",
+    "mode": "UBSan",
+    "stderr": "",
+    "stdout_sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e"
+  }
+]

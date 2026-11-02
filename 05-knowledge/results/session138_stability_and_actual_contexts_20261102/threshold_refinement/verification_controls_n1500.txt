@@ -1,0 +1,6 @@
+normal_positive: PASS (11/11 exact checks)
+normal_negative_control: PASS (explicit RuntimeError, exit 1)
+optimized_positive: PASS (11/11 exact checks)
+optimized_negative_control: PASS (explicit RuntimeError, exit 1)
+normal_optimized_output_identity: PASS
+controls: 5 / 5 PASS

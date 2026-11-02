@@ -1,0 +1,16 @@
+{
+  "claim": "All-order proof independently accepted; finite controls verify intermediate slice and phase identities only.",
+  "counts": {
+    "Bernstein_coefficient_floor": 728,
+    "Q1_positive_eigenvalues": 1,
+    "all_slices_PSD": 7812,
+    "exact_tensor_slice_decomposition": 728,
+    "independent_phase_average": 2730,
+    "phase_nonzero_mod2": 7812,
+    "phase_positive_integral_norm": 7812,
+    "retained_odd_top_parity": 2730,
+    "retained_slice_count": 728,
+    "retained_slice_floor": 2730
+  },
+  "status": "PASS"
+}

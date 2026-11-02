@@ -1,0 +1,10 @@
+{
+  "action": "compile UBSan independent C audit without optimization",
+  "data_limit_bytes": 25165824,
+  "rss_limit_bytes": 41943040,
+  "returncode": 1,
+  "elapsed_seconds": 0.1002534469589591,
+  "max_rss_kib": 32936,
+  "stdout": "",
+  "stderr": "virtual memory exhausted: Cannot allocate memory\n"
+}

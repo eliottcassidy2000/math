@@ -1,0 +1,8 @@
+{
+  "complete_K4_controls": 729,
+  "quadratic_checks": 5151,
+  "random_controls": 800,
+  "scope": "Separate local algebra and wedge accounting, not an independent-agent audit or a finite-sample global proof.",
+  "seed": 514,
+  "status": "passed"
+}

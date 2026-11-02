@@ -1,0 +1,7 @@
+{
+  "n5_residual": "-7/8192",
+  "n5_symbolic_fplus": "{'(0, 0)': '81/256', '(1, 0)': '-3/32', '(2, 0)': '1/4'}",
+  "n8_residual": "-1/4",
+  "scope": "conditional factors only; absolute floor survives",
+  "status": "PASS"
+}

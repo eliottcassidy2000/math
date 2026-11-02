@@ -1,0 +1,8 @@
+{
+  "scope": "all labelled n1..6 and128 fixed-seed tournaments each n7..10",
+  "tournaments": 34379,
+  "two_disjoint_triangle_cases": 15931,
+  "literal_directed_cycles": 1147738,
+  "literal_proper_cycles": 1024879,
+  "verdict": "PASS both cycle-defect lower bounds, equality iff packing<=1, and extra>=2 for packing>=2"
+}

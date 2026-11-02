@@ -1,0 +1,4 @@
+{"all_literal_outer_contexts_match": true, "counts": {"equal": 1, "high_H": 0, "high_equal_H": 0, "low": 3}, "k": 1, "rows": 4}
+{"all_literal_outer_contexts_match": true, "counts": {"equal": 2, "high_H": 16, "high_equal_H": 2, "low": 12}, "k": 2, "rows": 32}
+{"all_literal_outer_contexts_match": true, "counts": {"equal": 3, "high_H": 158, "high_equal_H": 4, "low": 27}, "k": 3, "rows": 192}
+PASS {"rows": 228, "sha256": "d999d48a42eff62c4d227d55fa215f4c6ab54e80d50a6f1fa0379fb57e0039ea"}

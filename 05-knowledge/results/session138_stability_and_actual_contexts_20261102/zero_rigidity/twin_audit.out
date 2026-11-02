@@ -1,0 +1,2 @@
+{"actual_cyclic": 198963, "actual_middle": 197559, "actual_min_twin_gap": 432, "equality_control": [0, 0, 0, 0, 0, 2, 2], "formal_bad_external_cut": 224, "formal_cyclic": 198963, "formal_cyclic_cut": 225, "formal_middle": 199053, "formal_middle_cut": 226, "formal_min_twin_gap": -90, "literal_rows": 16933, "lower_bound": 54}
+PASS sha256=db345556ad12c8f929ce83d1e062263447f319821d17b5b25dcb7b7ea6667a9e

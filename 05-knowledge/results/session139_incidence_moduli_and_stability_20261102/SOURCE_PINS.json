@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "source_commit": "291b4d9757842c02aa451beb65acfade2848609b",
+  "historical_source_blob_pins_verified": 20,
+  "historical_pin_file": "riemann_five_eleven/source_pins.tsv",
+  "inherited_inputs": [
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "git_blob": "5e5da0f2ecfda539059f8c4625659965eb542019",
+      "sha256": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0",
+      "bytes": 6500
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "git_blob": "645e3a9d2930721285b596d27cfe6b559bd654ca",
+      "sha256": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3",
+      "bytes": 7240
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/threshold_refinement/PROOF_N1500.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "git_blob": "220b4768e9ce88aa29e428e84afff84e172250ec",
+      "sha256": "fec495e0e7845b723b8d964eeb242bc537119d1baccbb683b2dd2b1000227636",
+      "bytes": 6210
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/H1_STABILITY.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "git_blob": "191c052d35c13faf2d23109fdeece735f145b460",
+      "sha256": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82",
+      "bytes": 4844
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/TRIANGLE_VARIANCE.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "git_blob": "0a8bc5a0e025dc8b49f348a6915242154024580d",
+      "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc",
+      "bytes": 3005
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/SHARP_LOW_ORDER_STABILITY.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "git_blob": "f3db4fa5528fd70b6c91498792c70b82ef56709b",
+      "sha256": "873f58bff9bf11e4e95b7ecfb04d8f148df4e72f599a35a9ee24c8277fba3c88",
+      "bytes": 6334
+    }
+  ],
+  "scope": "Source identity verified; all Session138 mathematics is inherited, not re-proved by this checkpoint."
+}

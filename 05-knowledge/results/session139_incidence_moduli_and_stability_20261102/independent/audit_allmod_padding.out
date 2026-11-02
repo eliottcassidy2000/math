@@ -1,0 +1,15 @@
+{
+  "E4_L1_L21_mod275": [
+    117,
+    172
+  ],
+  "Psi_moduli": 64,
+  "Psi_tournament_modulus_checks": 70336,
+  "distinct_integer_profiles": 15,
+  "labelled_tournaments": 1099,
+  "padding_moduli": 132,
+  "padding_period_comparisons": 89402,
+  "profile_algorithm": "permutations with mandatory and optional cuts, divided by c!",
+  "sharp_K1_clocks_sha256": "95bcae458e86fc6b89821c94bc919f0fe6b4fe4eb7a6b7c486c8746f051ffaa0",
+  "status": "PASS"
+}

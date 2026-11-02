@@ -1,0 +1,16 @@
+{
+  "mutation": "h=0",
+  "runs": [
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": "shared_budget_contradiction"
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "rejected": "shared_budget_contradiction"
+    }
+  ],
+  "status": "EXPECTED_REJECTION"
+}

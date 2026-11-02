@@ -1,0 +1,323 @@
+{
+  "publication_files": 233,
+  "manifest_entries": 242,
+  "source_pin_count": 34,
+  "inventory": {
+    "manifests": {
+      "constructors/SHA256SUMS": {
+        "entries": 23,
+        "bad": []
+      },
+      "coverage/SHA256SUMS": {
+        "entries": 49,
+        "bad": []
+      },
+      "cycle_carriers/SHA256SUMS": {
+        "entries": 22,
+        "bad": []
+      },
+      "harmonic_owners/MANIFEST.sha256": {
+        "entries": 15,
+        "bad": []
+      },
+      "independent/COUNTING_SHA256SUMS": {
+        "entries": 4,
+        "bad": []
+      },
+      "independent/GLOBAL_SHA256SUMS": {
+        "entries": 12,
+        "bad": []
+      },
+      "independent/SHA256SUMS": {
+        "entries": 90,
+        "bad": []
+      },
+      "width/SHA256SUMS": {
+        "entries": 7,
+        "bad": []
+      },
+      "width_phase2/SHA256SUMS": {
+        "entries": 20,
+        "bad": []
+      }
+    },
+    "public": {
+      "constructors/PUBLIC_FILES.txt": {
+        "entries": 24,
+        "bytes": 87917,
+        "missing": [],
+        "duplicates": 0,
+        "contains_self": true,
+        "contains_SHA256SUMS": true
+      },
+      "cycle_carriers/PUBLIC_FILES.txt": {
+        "entries": 23,
+        "bytes": 527126,
+        "missing": [],
+        "duplicates": 0,
+        "contains_self": true,
+        "contains_SHA256SUMS": true
+      },
+      "independent/PUBLIC_FILES.txt": {
+        "entries": 89,
+        "bytes": 251169,
+        "missing": [],
+        "duplicates": 0,
+        "contains_self": false,
+        "contains_SHA256SUMS": false
+      },
+      "width/PUBLIC_FILES.txt": {
+        "entries": 8,
+        "bytes": 61814,
+        "missing": [],
+        "duplicates": 0,
+        "contains_self": true,
+        "contains_SHA256SUMS": true
+      },
+      "width_phase2/PUBLIC_FILES.txt": {
+        "entries": 21,
+        "bytes": 442369,
+        "missing": [],
+        "duplicates": 0,
+        "contains_self": true,
+        "contains_SHA256SUMS": true
+      }
+    },
+    "pins": [
+      {
+        "family": "independent",
+        "path": "discriminant/GLOBAL_PROOF.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "f7e79e9aa935533f2a0444ce2bf6b220f5ff1cb29fea16adc1fa19a7cc71ba6f"
+      },
+      {
+        "family": "independent",
+        "path": "width/PROOF.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "3d3992c28612a5ddc3e58a5061cc674bd5b647007c8a978d30774ad8a6ac8797"
+      },
+      {
+        "family": "independent",
+        "path": "constructors/THEORY.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+      },
+      {
+        "family": "independent",
+        "path": "coverage/PHASE2.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "9cbe71ad7e84eb705a683aa36bbb82ec4070bc5361ca9768187bd52423aa8e71"
+      },
+      {
+        "family": "independent",
+        "path": "cycle_carriers/THEORY.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "d19c535da0635e81cc7509e522b929fe75e826e60cbeac883298215182633206"
+      },
+      {
+        "family": "independent",
+        "path": "harmonic_owners/README.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "5e082eeebc6a003312db714f83740f59f2966b033a3b592fadc4f9f22dce68b8"
+      },
+      {
+        "family": "independent",
+        "path": "constructors/BOUNDED_INTERIOR.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "b022aa9af14cd97d3ce1169c7f18b1a0d11830918b005e63fd801efd4847ee6c"
+      },
+      {
+        "family": "independent",
+        "path": "global_referee/COUNTING_GAPS.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "b665291d2fd022d8019784fea2a279249eb37755ba6a339e9df3fce71be9ed87"
+      },
+      {
+        "family": "independent",
+        "path": "global_referee/counting_gaps.py",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "4fa3b805dd247bd7d6219f93e3bf4ee4c1b20209b123bf6033a7e832ae4c1ca7"
+      },
+      {
+        "family": "independent",
+        "path": "coverage/TRIANGLE_CARD_RIGIDITY.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "fb8a4f8e7cb81a94d8a8d4db0bb4a0178e9758981956abe276ed022138f224f1"
+      },
+      {
+        "family": "independent",
+        "path": "width_phase2/PROOF.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "b7da98667ef7547dd8814d522363cde9c7209f39283bfe4bce7a41cb434d4bf2"
+      },
+      {
+        "family": "independent",
+        "path": "coverage/RESULT.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "dfa7f4ebf45235926b52c06e952a133e5a4f250fb1e3b45b4b3b931c0a54123a"
+      },
+      {
+        "family": "independent",
+        "path": "coverage/SYMMETRY_EDIT.md",
+        "bytes_ok": true,
+        "sha_ok": true,
+        "actual": "f02526c196353835e4740fc765017d79ffe0f4c61a479bb27002f3bbea645c39"
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "AGENTS.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "01-canon/theorems/THM-002-ocf.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "05-knowledge/results/session81_counterexample_families_20261028/CONFLICT_IMAGES.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "05-knowledge/reference/CORE-PAPERS-TOURNAMENT-STRONG-EARS-2026-08-25.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "01-canon/theorems/THM-264-omega-girth-binary.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "05-knowledge/results/defect_boundary_20261020/grammar.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/gluing/PROOF.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "cycle_carriers",
+        "path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+        "copied_sha_ok": true,
+        "repo_sha_ok": true,
+        "git_blob_ok": true
+      },
+      {
+        "family": "constructors",
+        "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md",
+        "revision": "bb7cb2d1f61a14632389814469317131d897b640",
+        "repo_sha_ok": true
+      },
+      {
+        "family": "constructors",
+        "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/migration.py",
+        "revision": "bb7cb2d1f61a14632389814469317131d897b640",
+        "repo_sha_ok": true
+      },
+      {
+        "family": "constructors",
+        "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/radix_probe/PROOF.md",
+        "revision": "bb7cb2d1f61a14632389814469317131d897b640",
+        "repo_sha_ok": true
+      },
+      {
+        "family": "constructors",
+        "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+        "revision": "bb7cb2d1f61a14632389814469317131d897b640",
+        "repo_sha_ok": true
+      },
+      {
+        "family": "constructors",
+        "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+        "revision": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+        "repo_sha_ok": true
+      },
+      {
+        "family": "constructors",
+        "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md",
+        "revision": "bb7cb2d1f61a14632389814469317131d897b640",
+        "repo_sha_ok": true
+      }
+    ]
+  },
+  "harmonic_pins": [
+    {
+      "local": "GENERAL_CORE.md",
+      "repo": "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md",
+      "exit": 0,
+      "byte_match": true,
+      "sha256": "f8bec1a3d529a256fce78dd51137d8ecd4d3618b174e4bb6814e5605778504d7"
+    },
+    {
+      "local": "SECOND_BAND.md",
+      "repo": "05-knowledge/results/session116_dimension_owner_towers_20261030/lrc/SECOND_BAND.md",
+      "exit": 0,
+      "byte_match": true,
+      "sha256": "49d7d3c7434aff308cb3d2cf56a34828e3cdfdb01a3910f4e6cef15e59c81657"
+    },
+    {
+      "local": "CONCURRENT_OWNER_PROOFS.md",
+      "repo": "05-knowledge/results/odd_eighth_owner_families_20261030/PROOFS.md",
+      "exit": 0,
+      "byte_match": true,
+      "sha256": "32a1588f9a62744b83d031079cc8d3434bb48a6a0eb5c9002c9474adb19a0e02"
+    },
+    {
+      "local": "THM-819-primitive-harmonic-law-for-interval-cores.md",
+      "repo": "01-canon/theorems/THM-819-primitive-harmonic-law-for-interval-cores.md",
+      "exit": 0,
+      "byte_match": true,
+      "sha256": "1e6c86fb2a47c39b824354926886984ada8221dc579832f63ca77e327bfeb678"
+    },
+    {
+      "local": "THM-826-farey-profile-theorem-interval-core-measure.md",
+      "repo": "01-canon/theorems/THM-826-farey-profile-theorem-interval-core-measure.md",
+      "exit": 0,
+      "byte_match": true,
+      "sha256": "0eed65fb30be085cb642a4a6dedfa49241db9c39b7bcbdb9dfc3348e2dcbdbe2"
+    }
+  ]
+}

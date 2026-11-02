@@ -1,0 +1,6 @@
+{
+  "scalar_group_controls": 3457,
+  "scope": "Checks the proved aggregate remainder lemma. Does not establish the proposed tail payment or certify any order below314.",
+  "seed": 314,
+  "status": "passed"
+}

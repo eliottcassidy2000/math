@@ -1,0 +1,36 @@
+{
+  "all_checks_active_under_optimization": true,
+  "counts": {
+    "exhaustive_dimension_0": 132,
+    "exhaustive_dimension_1": 1980,
+    "exhaustive_dimension_2": 89100,
+    "independent_transform_identity": 720,
+    "mixed_dimension_0": 120,
+    "mixed_dimension_1": 120,
+    "mixed_dimension_2": 120,
+    "mixed_dimension_3": 120,
+    "mixed_dimension_4": 120,
+    "mixed_dimension_5": 120,
+    "sharp_minimum_representative": 9486
+  },
+  "minimum_gaps": {
+    "exhaustive_dimension_0": "0",
+    "exhaustive_dimension_1": "0",
+    "exhaustive_dimension_2": "0",
+    "mixed_dimension_0": "0",
+    "mixed_dimension_1": "0",
+    "mixed_dimension_2": "0",
+    "mixed_dimension_3": "77628/1225",
+    "mixed_dimension_4": "1512696/6125",
+    "mixed_dimension_5": "43095401016/73530625",
+    "sharp_minimum_representative": "0"
+  },
+  "negative_controls": {
+    "nonmultiple_tail_M3_rho1": "-1",
+    "outside_cube_M2_rho1": "-4",
+    "using_unreduced_residue_M5_rho4": "-15",
+    "wrong_constant_coset_M5_rho2": "-3"
+  },
+  "scope": "Arbitrary-modulus tensor lemma only; no new Pfaffian, stability cutoff, or RH claim.",
+  "status": "PASS"
+}

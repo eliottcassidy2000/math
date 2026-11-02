@@ -1,0 +1,177 @@
+{
+  "expected_rejections": 14,
+  "fresh_relocation": true,
+  "independent_endpoint_named_checks": 22,
+  "normal_optimized_identical": [
+    "stability/verify_n748.py",
+    "independent_threshold/audit_n748.py",
+    "independent/audit_bridges.py",
+    "riemann_five_eleven/verify_history.py"
+  ],
+  "positive_runs": 8,
+  "producer_imported_by_independent_audit": false,
+  "runs": [
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "stability/verify_n748.py",
+      "mode": "normal",
+      "stdout_sha256": "45092077abe6ff8508bfe73fad609fd98f0d02f077d6e674fa70029df10871e7"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent_threshold/audit_n748.py",
+      "mode": "normal",
+      "stdout_sha256": "11eba321caae38c71f6c864f86e9f10ee242079bb4fbb0dbee607b02a95275a4"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_bridges.py",
+      "mode": "normal",
+      "stdout_sha256": "98c16826b7c29334069949fbe4ecbf6bd9b0bc5d0045a9fe23869e6467a78d5e"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "riemann_five_eleven/verify_history.py",
+      "mode": "normal",
+      "stdout_sha256": "4c9f5a30fc4b27b78396a6e8ee02c62e615457f835d75061a303db11ba43e3cc"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "threshold747-negative",
+      "mode": "normal",
+      "stdout_sha256": "2b88d1b12ad4cc996d521a4f5b3d129251f251248dd7c71728933c2e07669692"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "producer-h-zero-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "bridge-hamiltonian-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "bridge-paley-negative",
+      "mode": "normal",
+      "stdout_sha256": "e2e775e7c86e4bdd0189159a8a0bc468a7865e41a74ddb3939961b32476ec9d5"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "history-tetranacci-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "history-paley-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "history-incidence-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "stability/verify_n748.py",
+      "mode": "optimized",
+      "stdout_sha256": "45092077abe6ff8508bfe73fad609fd98f0d02f077d6e674fa70029df10871e7"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent_threshold/audit_n748.py",
+      "mode": "optimized",
+      "stdout_sha256": "11eba321caae38c71f6c864f86e9f10ee242079bb4fbb0dbee607b02a95275a4"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_bridges.py",
+      "mode": "optimized",
+      "stdout_sha256": "98c16826b7c29334069949fbe4ecbf6bd9b0bc5d0045a9fe23869e6467a78d5e"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "riemann_five_eleven/verify_history.py",
+      "mode": "optimized",
+      "stdout_sha256": "4c9f5a30fc4b27b78396a6e8ee02c62e615457f835d75061a303db11ba43e3cc"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "threshold747-negative",
+      "mode": "optimized",
+      "stdout_sha256": "2b88d1b12ad4cc996d521a4f5b3d129251f251248dd7c71728933c2e07669692"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "producer-h-zero-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "bridge-hamiltonian-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "bridge-paley-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e2e775e7c86e4bdd0189159a8a0bc468a7865e41a74ddb3939961b32476ec9d5"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "history-tetranacci-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "history-paley-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "history-incidence-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_executions": 22,
+  "source_pins": {
+    "independent/audit_bridges.py": "56886462b21cd75f9cd9de1ef0fd0f8617f56aa91c4efbd984eed1cc889e75a7",
+    "independent_threshold/audit_n748.py": "77cf373bf40c87dbe228b4abe592a3499df79b39e3bb2d3dd952d2e85a257d45",
+    "riemann_five_eleven/verify_history.py": "e30366d10a99ac11cbdeddd7d45fd31eba5ae53f5d33c69e37ec99f1ef050c39",
+    "stability/verify_n748.py": "9fd557a3ca6a8c3967cd161b3fffda3d73bf81733752bce6b02880bdb3fa38d1"
+  },
+  "status": "PASS"
+}

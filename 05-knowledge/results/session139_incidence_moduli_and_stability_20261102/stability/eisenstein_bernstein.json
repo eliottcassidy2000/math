@@ -1,0 +1,8 @@
+{
+  "all_checks_active_under_optimization": true,
+  "checks_passed": 762,
+  "negative_control": "P=x-1 fails when even-proper-coefficient hypothesis is removed",
+  "phase_cases": 18,
+  "status": "PASS",
+  "tensor_coefficient_cases": 484
+}

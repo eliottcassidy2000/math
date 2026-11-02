@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Bounded startup bytes/lines, merged publication conflict scan; existing full-checker receipt retained but not misrepresented as checking the concurrent opaque ledger. Links and exact tree preservation are separately recorded.",
+  "remote_parent": "c16226249f1f27a335cf7c84afdeaa90879b9580",
+  "startup_bytes": 179966,
+  "startup_byte_budget": 180000,
+  "frontier_lines": 450,
+  "frontier_line_budget": 450,
+  "startup_changed_paths": [
+    "00-navigation/CURRENT-FRONTIER.md"
+  ],
+  "full_checker_rerun": false,
+  "reason": "Full checker reads the large concurrently changed mistakes ledger; no read authorized for reconciliation. Remote tree entry preserved unchanged."
+}

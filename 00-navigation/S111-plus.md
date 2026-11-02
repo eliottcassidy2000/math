@@ -57,3 +57,11 @@ individual session routes preserve scope and remaining open obligations.
 [Session134](S134.md): constructive spectrum frontier, resource complexity and state-preserving operations; universal realization open.
 
 [Session135](S135.md): exact machine representations, fixed-PRIMEGAME basins and cost-preserving simplifications.
+
+[Session136](S136.md): full tournament spectrum frameworks, local universality and exact structural boundaries.
+
+[Session137](S137.md): overnight proof frontiers; global Hamiltonian determinant bound and further structural classifications.
+
+[Session138](S138.md): matching-support and equality mechanisms; current sharp range n=3..9,n>=48. Earlier n>=1500 checkpoint retained. Unrestricted spectrum and general zero-rigidity remain open.
+
+[Session139](S139.md): tensor/Eisenstein reserve plus the combined follow-up proves n>=48; gap10..47 open. Earlier routes retained; all-modulus contexts, finite prime states, typed spectral boundaries and guarded FRACTRAN precision.

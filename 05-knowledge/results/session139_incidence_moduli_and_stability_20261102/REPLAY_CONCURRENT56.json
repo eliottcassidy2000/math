@@ -1,0 +1,129 @@
+{
+  "active_conditions": 40,
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "normal_optimized_both": true,
+  "producer_gates": 4351,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "n56-independent",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "4c468dc0d656f06fabb37a875dd71a0818f6472986e040648c0d0dd649f2af82"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n55",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "3a1a999bba700700cc625d0ee83cb74ed213572655708774892ab753dfbca949"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-dual",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "c8f4acd54a17a2832705e4f8c415092a4eb991c350c8971eced9c911ce9f410f"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "15414735d303e14bc0a29c499a167ae6be0d17071ec7724ae4f909198e666342"
+    },
+    {
+      "expected_rejection": false,
+      "label": "auditor-curation",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "db5aa7c43433d8fd0f7f91a8a28d06e4b2d69965e51a78c2eec600677d12da7d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "pinned-upstream-producer",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "ccb6966adf8d6e52466febe65ba89b481bb728f79bbc535f81eafade0161ceb5"
+    },
+    {
+      "expected_rejection": false,
+      "label": "n56-independent",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "4c468dc0d656f06fabb37a875dd71a0818f6472986e040648c0d0dd649f2af82"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n55",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "3a1a999bba700700cc625d0ee83cb74ed213572655708774892ab753dfbca949"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-dual",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "c8f4acd54a17a2832705e4f8c415092a4eb991c350c8971eced9c911ce9f410f"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "15414735d303e14bc0a29c499a167ae6be0d17071ec7724ae4f909198e666342"
+    },
+    {
+      "expected_rejection": false,
+      "label": "auditor-curation",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "db5aa7c43433d8fd0f7f91a8a28d06e4b2d69965e51a78c2eec600677d12da7d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "pinned-upstream-producer",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "ccb6966adf8d6e52466febe65ba89b481bb728f79bbc535f81eafade0161ceb5"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-audit-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "auditor-curation-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-audit-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "auditor-curation-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 4,
+  "scope": "Proof controls and exact arithmetic verification, not finite sampling as an all-order proof. False55 control rejects the certificate, not the theorem.",
+  "source_files_verified": 15,
+  "source_integrity_positive_runs": 4,
+  "source_manifest_sha256": "ae9a361f52670bdd23d5b5e6ef84c79d7bfa62014f3be3ab98885e4f095c0695",
+  "status": "PASS",
+  "total_executions": 16,
+  "wrong_cwd": true
+}

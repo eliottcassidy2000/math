@@ -1,0 +1,442 @@
+{
+  "conway": {
+    "points": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        2
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        2
+      ]
+    ],
+    "lines": [
+      [
+        1,
+        4,
+        7,
+        10
+      ],
+      [
+        0,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        4,
+        9,
+        11
+      ],
+      [
+        2,
+        4,
+        8,
+        12
+      ],
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        6,
+        9,
+        12
+      ],
+      [
+        1,
+        5,
+        8,
+        11
+      ],
+      [
+        0,
+        10,
+        11,
+        12
+      ],
+      [
+        3,
+        6,
+        8,
+        10
+      ],
+      [
+        2,
+        5,
+        9,
+        10
+      ],
+      [
+        0,
+        7,
+        8,
+        9
+      ],
+      [
+        2,
+        6,
+        7,
+        11
+      ],
+      [
+        3,
+        5,
+        7,
+        12
+      ]
+    ],
+    "generating_hole_words": [
+      [
+        0,
+        1,
+        4,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        0
+      ],
+      [
+        0,
+        1,
+        6,
+        0
+      ],
+      [
+        0,
+        1,
+        7,
+        0
+      ],
+      [
+        0,
+        1,
+        8,
+        0
+      ],
+      [
+        0,
+        2,
+        4,
+        0
+      ]
+    ],
+    "order_schreier_sims": 95040,
+    "order_literal_bfs": 95040,
+    "marker_fibres": [
+      {
+        "tokens": 0,
+        "fixed_hole_states": 1,
+        "moving_hole_states": 13,
+        "fibre_size": 95040
+      },
+      {
+        "tokens": 1,
+        "fixed_hole_states": 12,
+        "moving_hole_states": 156,
+        "fibre_size": 7920
+      },
+      {
+        "tokens": 2,
+        "fixed_hole_states": 132,
+        "moving_hole_states": 1716,
+        "fibre_size": 720
+      },
+      {
+        "tokens": 3,
+        "fixed_hole_states": 1320,
+        "moving_hole_states": 17160,
+        "fibre_size": 72
+      },
+      {
+        "tokens": 4,
+        "fixed_hole_states": 11880,
+        "moving_hole_states": 154440,
+        "fibre_size": 8
+      },
+      {
+        "tokens": 5,
+        "fixed_hole_states": 95040,
+        "moving_hole_states": 1235520,
+        "fibre_size": 1
+      }
+    ],
+    "four_marker_hidden_permutation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      5,
+      10,
+      12,
+      11,
+      7,
+      9,
+      8
+    ],
+    "four_marker_stabilizer_orders": {
+      "1": 1,
+      "2": 1,
+      "4": 6
+    },
+    "four_marker_noncommuting_pair": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        10,
+        7,
+        5,
+        11,
+        8,
+        6,
+        12,
+        9
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        12,
+        8,
+        9,
+        5,
+        10,
+        11,
+        7,
+        6
+      ]
+    ],
+    "identity_triangle": [
+      0,
+      1,
+      2,
+      0
+    ],
+    "nonidentity_triangle": [
+      0,
+      1,
+      4,
+      0
+    ],
+    "nonidentity_transport": [
+      0,
+      4,
+      3,
+      2,
+      1,
+      6,
+      5,
+      10,
+      8,
+      9,
+      7,
+      11,
+      12
+    ],
+    "full_moving_hole_states": 1235520
+  },
+  "collatz": {
+    "root": 5,
+    "inverse_exponents_by_mod9": {
+      "1": [
+        2,
+        4
+      ],
+      "2": [
+        3,
+        7
+      ],
+      "4": [
+        2,
+        6
+      ],
+      "5": [
+        3,
+        5
+      ],
+      "7": [
+        4,
+        6
+      ],
+      "8": [
+        5,
+        7
+      ]
+    },
+    "level_counts": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "unique_nodes": 8191,
+    "max_native_steps_per_inverse_edge": 8,
+    "triangle_cycle": [
+      1,
+      4,
+      2,
+      1
+    ],
+    "wild_35_path": [
+      5,
+      16,
+      8,
+      4,
+      2,
+      1
+    ]
+  },
+  "arithmetic": {
+    "group_order_core": 39046339332000,
+    "inherited_height_cycle": [
+      4,
+      2,
+      5,
+      3,
+      7
+    ],
+    "fold_values": {
+      "4": 2,
+      "13": 2
+    },
+    "modular_curves": [
+      {
+        "level": 4,
+        "index": 6,
+        "cusps": 3,
+        "elliptic2": 0,
+        "elliptic3": 0,
+        "genus": 0
+      },
+      {
+        "level": 13,
+        "index": 14,
+        "cusps": 2,
+        "elliptic2": 2,
+        "elliptic3": 2,
+        "genus": 0
+      }
+    ],
+    "affine_clock_controls": [
+      {
+        "modulus": 15,
+        "orbit_from_zero": [
+          0,
+          1,
+          4,
+          13,
+          10
+        ],
+        "repeat_index": 1,
+        "image_size": 5
+      },
+      {
+        "modulus": 17,
+        "orbit_from_zero": [
+          0,
+          1,
+          4,
+          13,
+          6,
+          2,
+          7,
+          5,
+          16,
+          15,
+          12,
+          3,
+          10,
+          14,
+          9,
+          11
+        ],
+        "repeat_index": 0,
+        "image_size": 17
+      }
+    ],
+    "conflicting_reduced_fractions": [
+      "1/2",
+      "5/2"
+    ]
+  }
+}

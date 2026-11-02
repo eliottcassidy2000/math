@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/tmp/session139_research/stability/verify_n140.py", line 27, in <module>
+    pos('bootstrap_step_%d'%i,slack)
+  File "/tmp/session139_research/stability/verify_n140.py", line 10, in pos
+    if not x>0:raise RuntimeError((name,str(x)))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ('bootstrap_step_0', '-117786080690094699417700704808407184425155510702333021017/2508833834834695103422768305672940669422796800000000000000')

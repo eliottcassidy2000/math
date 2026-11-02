@@ -1,0 +1,38 @@
+{
+  "R": 263,
+  "active_checks": {
+    "exp4_partial_exceeds_50": "16319/315",
+    "final_strict_margin": "81/8416000",
+    "global_budget_identity": "487/32000",
+    "heavy_count_endpoint_exceeds_17": "964339/1680000",
+    "heavy_count_uniform_slope": "128249/2000000",
+    "light_deficit_positive": "487/4000",
+    "local_square_constant": true,
+    "local_square_linear_w": true,
+    "local_square_polynomial_identity": true,
+    "local_square_remainder_nonnegative": true,
+    "no_light_closure": "64081/4208000",
+    "nonlinear_c_bootstrap": "3/3125000",
+    "order_domain": true,
+    "parity_bound_526": true,
+    "parity_bound_527": true,
+    "small_variance_excluded": "193/840",
+    "tail_budget_positive": "6499/1000000",
+    "tail_left_endpoint": true,
+    "tail_left_uniform_derivative": "259/1052",
+    "tail_right_derivative_identity": true,
+    "tail_right_endpoint": "1846127022469099/27674621771776000000",
+    "tail_right_uniform_derivative": true,
+    "variance_bootstrap_exceeds_4": "773/64",
+    "variance_upper_even_identity": true,
+    "variance_upper_odd_identity": true
+  },
+  "constants": {
+    "c": "249999/1000000",
+    "d": "487/2000",
+    "lambda": "487/128000",
+    "t": "487/16000"
+  },
+  "status": "PASS",
+  "threshold": 526
+}

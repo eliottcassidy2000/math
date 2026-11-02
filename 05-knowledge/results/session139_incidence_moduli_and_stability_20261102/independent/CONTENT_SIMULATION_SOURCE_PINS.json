@@ -1,0 +1,26 @@
+{
+  "files": {
+    "all_moduli/CONTEXT_CONTENT.md": "2490bdd7b077f3103e56bcb147b4f72a62740bf7c602d33116d67d42873be7b0",
+    "all_moduli/PROOF.md": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c",
+    "all_moduli/WEIGHTED_BINARY_SIMULATION.md": "704dc34ec66b03299c14853c7000de01eddd915c614f00aa225a7e3853f19b75",
+    "all_moduli/content.normal.json": "5ee1af479cff6ecef4a34874a94768e3d86432d24da7bed4e0c8d0dc28c18605",
+    "all_moduli/content.optimized.json": "5ee1af479cff6ecef4a34874a94768e3d86432d24da7bed4e0c8d0dc28c18605",
+    "all_moduli/verify_content.py": "92b92084afb35b2120e54c5cdee2291de730a5daae1efb6627a29d40926d5a0f",
+    "all_moduli/verify_weighted_simulation.py": "ac6f2e216124a0545a2ed0fa3329a199ab0161c0b91d34172de1a46c7f1f1031",
+    "all_moduli/weighted.normal.json": "391115d8db846a01b4fdb32a4e2862bcadd1b6d01e80c493f28d72e69507e680",
+    "all_moduli/weighted.optimized.json": "391115d8db846a01b4fdb32a4e2862bcadd1b6d01e80c493f28d72e69507e680",
+    "riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md": "dc5c4ca6af9ea94f794ff4fea41ae38810db9053f12a2e83e1c66338b23aa0af"
+  },
+  "git_sources": [
+    {
+      "blob": "c0091ea1ae2f09730c6a7a15a4087b49d06f3590",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "path": "01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md"
+    },
+    {
+      "blob": "97509d0195c27aa7f693de4d789508d64b4cf933",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/exact_resources/PROOF.md"
+    }
+  ]
+}

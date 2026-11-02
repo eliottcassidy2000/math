@@ -1,0 +1,42 @@
+{
+  "cycle_complement_groups": 3,
+  "cycle_types_including_empty": 30,
+  "endpoint_residual_coefficients": [
+    81,
+    -64,
+    16,
+    -4,
+    19,
+    16
+  ],
+  "sharp_graph_witness_counts": [
+    5,
+    9,
+    7,
+    2,
+    1,
+    3
+  ],
+  "signed_ledgers": 2,
+  "status": "PASS",
+  "triangle_reserve": "105/256",
+  "unused_nonnegative_products": {
+    "minus": {
+      "233": "1",
+      "25": "1",
+      "333": "8",
+      "35": "3",
+      "9": "2"
+    },
+    "plus": {
+      "2223": "2",
+      "233": "1",
+      "25": "1",
+      "27": "2",
+      "333": "6",
+      "35": "3",
+      "36": "2"
+    }
+  },
+  "variance_coefficient": "175/256"
+}

@@ -1,0 +1,6 @@
+PASS independent CRT scalar landings: 24832
+PASS safely preconditioned R/E steps: 11394
+PASS all 20 mod-5 word endpoints, full ten-state orbit, fixed diagonal, singular E at 13
+unit moduli exhaustively generated: [1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 27, 32, 36, 48, 54, 64, 72, 81, 96, 108, 128, 144, 162, 192, 216, 243, 256, 384, 576, 1152, 1728, 3456, 5184, 10368, 15552]
+unit_word_cache CacheInfo(hits=24796, misses=36, maxsize=None, currsize=36)
+script_sha256 a64965acb5e60ae4e943d737d8f155471d47e9482837c8b5436518e4959ff86f

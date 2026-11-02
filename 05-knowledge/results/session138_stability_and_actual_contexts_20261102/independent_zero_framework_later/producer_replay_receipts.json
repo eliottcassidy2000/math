@@ -1,0 +1,89 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "framework_audit.py"
+    ],
+    "elapsed_seconds": 1.296539,
+    "exit_code": 0,
+    "matches_retained_stdout": true,
+    "mode": "producer_python_normal",
+    "stderr": "",
+    "stdout_sha256": "c2a1102728982b6a913c6ceea6310f0c421fb22c7fcec8714dab9bdc34e5325a"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-O",
+      "framework_audit.py"
+    ],
+    "elapsed_seconds": 1.296111,
+    "exit_code": 0,
+    "matches_retained_stdout": true,
+    "mode": "producer_python_optimized",
+    "stderr": "",
+    "stdout_sha256": "c2a1102728982b6a913c6ceea6310f0c421fb22c7fcec8714dab9bdc34e5325a"
+  },
+  {
+    "command": [
+      "g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-O2",
+      "minimality_literal.cpp",
+      "-o",
+      "/tmp/session138_research/independent_zero_framework_later/producer_census_O2"
+    ],
+    "elapsed_seconds": 0.520489,
+    "exit_code": 0,
+    "mode": "producer_cpp_build_O2",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/tmp/session138_research/independent_zero_framework_later/producer_census_O2"
+    ],
+    "elapsed_seconds": 0.194451,
+    "exit_code": 0,
+    "matches_retained_stdout": true,
+    "mode": "producer_cpp_run_O2",
+    "stderr": "",
+    "stdout_sha256": "63b5fbb55fee211b6c041a7ef7e66cb40c5a6ec66224882889465662aeaae1f4"
+  },
+  {
+    "command": [
+      "g++",
+      "-std=c++17",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-O1",
+      "-fsanitize=undefined",
+      "-fno-sanitize-recover=all",
+      "minimality_literal.cpp",
+      "-o",
+      "/tmp/session138_research/independent_zero_framework_later/producer_census_UBSan"
+    ],
+    "elapsed_seconds": 0.587316,
+    "exit_code": 0,
+    "mode": "producer_cpp_build_UBSan",
+    "stderr": "",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "/tmp/session138_research/independent_zero_framework_later/producer_census_UBSan"
+    ],
+    "elapsed_seconds": 0.488419,
+    "exit_code": 0,
+    "matches_retained_stdout": true,
+    "mode": "producer_cpp_run_UBSan",
+    "stderr": "",
+    "stdout_sha256": "63b5fbb55fee211b6c041a7ef7e66cb40c5a6ec66224882889465662aeaae1f4"
+  }
+]

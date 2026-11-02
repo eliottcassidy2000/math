@@ -1,0 +1,5 @@
+Q 3 2 H 3159
+ROW 0 parentH 621 gcd 2 profiles 64 cuts 256 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 621 gcd 2 profiles 64 cuts 256 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 621 gcd 2 profiles 64 cuts 256 zero_profiles 1 zero_cuts 1 original 120 zeros 120
+PASS classes 1 rows 3 profiles 192 represented_cuts 768 zero_escape_rows 0

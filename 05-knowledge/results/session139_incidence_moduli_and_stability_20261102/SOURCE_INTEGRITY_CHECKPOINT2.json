@@ -1,0 +1,237 @@
+{
+  "status": "PASS",
+  "base_commit": "400dcd629598c30762eb9adb8bb85bea581698a7",
+  "prior_packet_files_preserved": 39,
+  "frozen_prior_scientific_evidence_files": 34,
+  "frozen_prior_files_byte_unchanged": true,
+  "prior_mutable_summary_paths": [
+    "BOARD.md",
+    "README.md",
+    "SHA256SUMS",
+    "SYNTHESIS.md",
+    "VERIFICATION.md"
+  ],
+  "new_curated_lane_files": 33,
+  "new_verbatim_copies": 31,
+  "document_only_curation": [
+    {
+      "path": "all_moduli/README.md",
+      "sha256": "a73ed921844907601aff864615715847625cf91828e527c635ec137cc3bc7787",
+      "bytes": 842,
+      "source_sha256": "928a665bfbbfaa5e4743eb612f0e9b1ab4d1b8b21e468c8ea1db82c00c4bf49a",
+      "source_bytes": 1177,
+      "transformation": "Removed only references to excluded later CONTEXT_CONTENT addendum."
+    },
+    {
+      "path": "all_moduli/VERIFICATION.md",
+      "sha256": "16a75d525074a3ea5418760a8e81595e4f9ae42874cd6a00e0bc1f216f322863",
+      "bytes": 1469,
+      "source_sha256": "54ae3db76545aa75bd3f1d0304b58ee548409137212a68399e354c6f206a2d44",
+      "source_bytes": 1578,
+      "transformation": "Removed only references to excluded later CONTEXT_CONTENT addendum."
+    }
+  ],
+  "new_reviewed_source_sha256_pins": 6,
+  "new_inherited_git_blob_pins_verified": 5,
+  "new_publication_markdown_links_checked": 38,
+  "links": [
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT2.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT2.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold526/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/N526_STRUCTURAL_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT2.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/verify_history.py",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SOURCE_PINS.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/DOC_OVERLAY_VERIFICATION_CHECKPOINT2.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/BOARD.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold526/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/HISTORICAL_RECOVERY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT2.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/README.md",
+      "scope": "tracked sparse baseline"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    }
+  ],
+  "prior_canon_paths_modified": [],
+  "pending_lanes_excluded": [
+    "context-content addendum",
+    "cocycle",
+    "regular critical-line strengthening",
+    "local-factor hostiles"
+  ],
+  "scope": "Checkpoint 2: n>=526 and accepted base all-modulus theorem only."
+}

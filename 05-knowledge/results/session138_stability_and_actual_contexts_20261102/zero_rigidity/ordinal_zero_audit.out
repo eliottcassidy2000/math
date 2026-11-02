@@ -1,0 +1,9 @@
+{"k": 1, "labelled_zero_counts": [1], "profile_checks": 4, "roots": 1}
+{"k": 2, "labelled_zero_counts": [4, 4], "profile_checks": 32, "roots": 2}
+{"k": 3, "labelled_zero_counts": [4, 7, 4], "profile_checks": 192, "roots": 3}
+{"k": 4, "labelled_zero_counts": [4, 7, 7, 4], "profile_checks": 1024, "roots": 4}
+{"k": 5, "labelled_zero_counts": [4, 7, 7, 7, 4], "profile_checks": 5120, "roots": 5}
+{"k": 6, "labelled_zero_counts": [4, 7, 7, 7, 7, 4], "profile_checks": 24576, "roots": 6}
+{"k": 7, "labelled_zero_counts": [4, 7, 7, 7, 7, 7, 4], "profile_checks": 114688, "roots": 7}
+{"k": 8, "labelled_zero_counts": [4, 7, 7, 7, 7, 7, 7, 4], "profile_checks": 524288, "roots": 8}
+PASS {"coefficient_audit_through_k": 6, "profile_checks": 669924, "rows": 36, "sha256": "37e958624f3328ec0cc2b954b91bf825ce0c1c89efb7e01ca8e15e6f89a6d285", "zero_classification_through_k": 8}

@@ -1,0 +1,77 @@
+{
+  "scope": "Reviewed snapshots for Session138 first checkpoint through order7; changed mathematical content requires renewed review",
+  "sources": [
+    {
+      "path": "stability/H1_STABILITY.md",
+      "sha256": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82",
+      "bytes": 4844,
+      "review_scope": "all-order H1 locus, scalar minima, interpolation"
+    },
+    {
+      "path": "stability/SHARP_LOW_ORDER_STABILITY.md",
+      "sha256": "873f58bff9bf11e4e95b7ecfb04d8f148df4e72f599a35a9ee24c8277fba3c88",
+      "bytes": 6334,
+      "review_scope": "orders5,6 analytic decompositions, sharp coefficient regions and Bernstein method"
+    },
+    {
+      "path": "stability/MULTISTAR_STABILITY.md",
+      "sha256": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3",
+      "bytes": 7240,
+      "review_scope": "all-order multistar plus matching-uncertainty appendix"
+    },
+    {
+      "path": "stability/TRIANGLE_VARIANCE.md",
+      "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc",
+      "bytes": 3005,
+      "review_scope": "local Bernstein lemma, variance consequences and failed graph hostile"
+    },
+    {
+      "path": "stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md",
+      "sha256": "af25e0ae83d0880250f0d31b370913a44c46a5d2c186951e67a1173368eb0f4f",
+      "bytes": 4945,
+      "review_scope": "full analytic reduction, complete finite graph certificate, sharpness/equality"
+    },
+    {
+      "path": "stability/SHARP_WEAK_SIX.md",
+      "sha256": "9f049015b98e4e67894faaf97a242a33b274ab3b5e58511641e8ffc90b398284",
+      "bytes": 1998,
+      "review_scope": "full weak gap analytic/graph reduction and equality"
+    },
+    {
+      "path": "stability/sharp7_graph_certificate.cpp",
+      "sha256": "e01e0e3bcbbe0f59584e05330d203e231110a3b79dc53ffc3676d4653315b419",
+      "bytes": 1168,
+      "review_scope": "read and independently reproduced via different graph counting algorithm"
+    },
+    {
+      "path": "stability/graph6.cpp",
+      "sha256": "813f927178e160e7a007792546879063f9aa729c03334018d164efe35a8877e3",
+      "bytes": 1107,
+      "review_scope": "read and independently reproduced via different graph counting algorithm"
+    },
+    {
+      "path": "rounding_graph/PROOF.md",
+      "sha256": "393e3e819527b1fad00ed230e0ac310ebdf11aedf2a1d2d97c7aeaec8a2e66d2",
+      "bytes": 5972,
+      "review_scope": "parity lemma, edge-order bound, n4/n5 consequences, FPT parity evaluation and matching equality boundary"
+    },
+    {
+      "path": "zero_rigidity/README.md",
+      "sha256": "c229149f2f174b91f3da7aefe99186f38139357911b4d67420199a5361290e34",
+      "bytes": 12890,
+      "review_scope": "homogeneous-pair identities/compiler/formal firewall; NOT later PROFILE_DICHOTOMY/ORDINAL_ZERO manuscripts"
+    },
+    {
+      "path": "exact_resources/PROOF.md",
+      "sha256": "004b82bcb840ea96f58c8201f4c912047249b2746be901940c148c5dac23c67a",
+      "bytes": 14222,
+      "review_scope": "reflector, full profile, inverse, finite minimality and quantitative resource proof"
+    },
+    {
+      "path": "exact_resources/RESOURCE_BUDGET.md",
+      "sha256": "6a1b3b26ceb385770c7d5c73032970ac29eb0774955938611a8ce42140eb31bc",
+      "bytes": 4881,
+      "review_scope": "fixed affine-dyadic bank obstruction and explicit resource/modulus bounds"
+    }
+  ]
+}

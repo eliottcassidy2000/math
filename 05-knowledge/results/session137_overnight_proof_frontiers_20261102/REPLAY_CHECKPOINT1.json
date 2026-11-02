@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "executions": 14,
+  "results": [
+    {
+      "script": "discriminant/check_global.py",
+      "mode": "normal",
+      "status": "PASS",
+      "sha256": "41a8efe7f4263aa27180a6c23797113405e95c077cd5c49b1df3db3dfedd4974",
+      "seconds": 11.781
+    },
+    {
+      "script": "discriminant/check_global.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "sha256": "41a8efe7f4263aa27180a6c23797113405e95c077cd5c49b1df3db3dfedd4974",
+      "seconds": 8.08
+    },
+    {
+      "script": "independent_global/audit_weighted_gap.py",
+      "mode": "normal",
+      "status": "PASS",
+      "sha256": "74c80b7bedbbdfb2363dd83600fa70d694af5e592ae1900ede43f5297e30554c",
+      "seconds": 1.799
+    },
+    {
+      "script": "independent_global/audit_weighted_gap.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "sha256": "74c80b7bedbbdfb2363dd83600fa70d694af5e592ae1900ede43f5297e30554c",
+      "seconds": 2.051
+    },
+    {
+      "script": "global_referee/check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "sha256": "f4cb7d25b104f0305fd0ada183fb427e88fef6d6fc08a46fd2b864e762061f1d",
+      "seconds": 1.627
+    },
+    {
+      "script": "global_referee/check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "sha256": "f4cb7d25b104f0305fd0ada183fb427e88fef6d6fc08a46fd2b864e762061f1d",
+      "seconds": 1.859
+    },
+    {
+      "script": "global_referee/counting_gaps.py",
+      "mode": "normal",
+      "status": "PASS",
+      "sha256": "d6d695ca69586ffcba0870a78246c5de40fb87172e817bc291035f5bafcf8536",
+      "seconds": 1.035
+    },
+    {
+      "script": "global_referee/counting_gaps.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "sha256": "d6d695ca69586ffcba0870a78246c5de40fb87172e817bc291035f5bafcf8536",
+      "seconds": 1.058
+    },
+    {
+      "script": "independent_global/global_gap.cpp",
+      "mode": "O2",
+      "status": "PASS",
+      "sha256": "7ea06c6757380f62310fb5768bd87c0b906b0a20aa3d82072b079b4e7711b6cc",
+      "seconds": 2.67
+    },
+    {
+      "script": "independent_global/global_gap.cpp",
+      "mode": "UBSan",
+      "status": "PASS",
+      "sha256": "7ea06c6757380f62310fb5768bd87c0b906b0a20aa3d82072b079b4e7711b6cc",
+      "seconds": 4.481
+    },
+    {
+      "script": "independent_global/audit_defects.cpp",
+      "mode": "O2",
+      "status": "PASS",
+      "sha256": "c207ce558bbda4231f0d69e35af5224624596ee0f5847fa46157c3799dc99369",
+      "seconds": 0.35
+    },
+    {
+      "script": "independent_global/audit_defects.cpp",
+      "mode": "UBSan",
+      "status": "PASS",
+      "sha256": "c207ce558bbda4231f0d69e35af5224624596ee0f5847fa46157c3799dc99369",
+      "seconds": 0.515
+    },
+    {
+      "script": "independent_global/audit_counting_certificates.py",
+      "mode": "normal",
+      "status": "PASS",
+      "sha256": "50a0c0c34ad163d55a208940e0096ec7dcc8c1513a84d1619f078286944d7088"
+    },
+    {
+      "script": "independent_global/audit_counting_certificates.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "sha256": "50a0c0c34ad163d55a208940e0096ec7dcc8c1513a84d1619f078286944d7088"
+    }
+  ]
+}

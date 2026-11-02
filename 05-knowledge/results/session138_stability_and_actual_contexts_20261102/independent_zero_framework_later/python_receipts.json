@@ -1,0 +1,27 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "/tmp/session138_research/independent_zero_framework_later/audit_framework.py"
+    ],
+    "elapsed_seconds": 1.253052,
+    "exit_code": 0,
+    "mode": "normal",
+    "stderr": "",
+    "stdout_sha256": "98335b35eae1e6669c7e6aa40f0a2bc6e6cc8e8fe06ec1ca234d2c3d2a60dc9e"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-O",
+      "/tmp/session138_research/independent_zero_framework_later/audit_framework.py"
+    ],
+    "elapsed_seconds": 1.144376,
+    "exit_code": 0,
+    "mode": "optimized",
+    "stderr": "",
+    "stdout_sha256": "98335b35eae1e6669c7e6aa40f0a2bc6e6cc8e8fe06ec1ca234d2c3d2a60dc9e"
+  }
+]

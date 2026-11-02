@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "added_curated_files": 30,
+  "frozen_prior_checkpoint_lane_files": 196,
+  "prior_packet_paths_preserved": 209,
+  "prior_non_summary_files_byte_unchanged": 204,
+  "new_manifest_entries": 26,
+  "new_reviewed_pin_entries": 6,
+  "frozen_prior_lane_files_changed": [],
+  "curated_files": [
+    {
+      "path": "independent/FOURTH_CHECKPOINT_FILES.json",
+      "bytes": 3968,
+      "sha256": "473dd216804b40ac005688897cb2ca5e122574dcf7128b325813c4d8f7b13ea3"
+    },
+    {
+      "path": "independent/FOURTH_CHECKPOINT_SHA256SUMS",
+      "bytes": 2066,
+      "sha256": "991d40cf77258671b3504e469ce6e1ac5c3b92ce1607f19854f8ace571254730"
+    },
+    {
+      "path": "independent/ORDER_NINE_CONTINUATION_AUDIT.md",
+      "bytes": 6567,
+      "sha256": "ab005cea6db0ae8d2e37b49270db08770c02c08de0f9209bb709baa57cc070a0"
+    },
+    {
+      "path": "independent/ORDER_NINE_REVIEWED_SOURCES.json",
+      "bytes": 1197,
+      "sha256": "5f6839781f7064aad47d68a15f9ac21639fcc916b8894b92048e852924b7fb52"
+    },
+    {
+      "path": "independent/n9_audit/AUDIT.md",
+      "bytes": 7347,
+      "sha256": "2976b310aeec2ec4c2af4c14991ec0328512b70ed73ea289c2066fdfe75800d6"
+    },
+    {
+      "path": "independent/n9_audit/compile_c.json",
+      "bytes": 226,
+      "sha256": "1511e33a10486e2ed34723540125250c72a1d72a545148de17c500d238aa3dfe"
+    },
+    {
+      "path": "independent/n9_audit/compile_optimized.json",
+      "bytes": 249,
+      "sha256": "811388d2b1cb9d0a45fc85e2f0abcd8658e06284b4dd20ca8ee880bda96ecfc9"
+    },
+    {
+      "path": "independent/n9_audit/compile_ubsan.json",
+      "bytes": 308,
+      "sha256": "b20e3da164749e74513b5d89504916326c59dda6952e5a2a218dbdfefedad151"
+    },
+    {
+      "path": "independent/n9_audit/compile_ubsan_o0.json",
+      "bytes": 302,
+      "sha256": "af5f31a4b02b68fff865febae42bbb4b06569e5947b42376291f25f6a5b563dc"
+    },
+    {
+      "path": "independent/n9_audit/compile_ubsan_recovery.json",
+      "bytes": 386,
+      "sha256": "967df0d835a96c30dcb0b3604917af4651aa3f79da7db8ba7061a312711e1d1e"
+    },
+    {
+      "path": "independent/n9_audit/cycle_ledger.normal.json",
+      "bytes": 645,
+      "sha256": "8c991821c3a6c751b566fe577b29ab46be87cd4ccb225c6842096cdf5ba2c8be"
+    },
+    {
+      "path": "independent/n9_audit/cycle_ledger.optimized.json",
+      "bytes": 645,
+      "sha256": "8c991821c3a6c751b566fe577b29ab46be87cd4ccb225c6842096cdf5ba2c8be"
+    },
+    {
+      "path": "independent/n9_audit/cycle_ledger.py",
+      "bytes": 4206,
+      "sha256": "ec73d0f55ca6e2c692ae8d365977030f811b7491c817033b6e4feb651bd94f2d"
+    },
+    {
+      "path": "independent/n9_audit/graph9_independent.c",
+      "bytes": 7852,
+      "sha256": "255e80086a6d1efbe85c6c2660943cfdfe00e3636681c4c632ebb31974d5b423"
+    },
+    {
+      "path": "independent/n9_audit/guarded_run.py",
+      "bytes": 1768,
+      "sha256": "0fe68047a8891e5caff6fd4288a86d68c5773805d68b3599b6bed85b9da5ab83"
+    },
+    {
+      "path": "independent/n9_audit/normal.json",
+      "bytes": 1067,
+      "sha256": "de769219604405fd17870408677e4871cebe1a81c9649318db531c697da6bb3a"
+    },
+    {
+      "path": "independent/n9_audit/normal.stderr",
+      "bytes": 37,
+      "sha256": "67dc391926e1d3d81086a5031951e42415dae11cc869ce297c695369d6a8e88f"
+    },
+    {
+      "path": "independent/n9_audit/optimized.json",
+      "bytes": 1067,
+      "sha256": "de769219604405fd17870408677e4871cebe1a81c9649318db531c697da6bb3a"
+    },
+    {
+      "path": "independent/n9_audit/optimized.stderr",
+      "bytes": 37,
+      "sha256": "67dc391926e1d3d81086a5031951e42415dae11cc869ce297c695369d6a8e88f"
+    },
+    {
+      "path": "independent/n9_audit/optimized_resources.json",
+      "bytes": 185,
+      "sha256": "99d7df10d3934d938d94175744c74ff4b9172451892cb4e104a1f7f971cb70ea"
+    },
+    {
+      "path": "independent/n9_audit/run_resources.json",
+      "bytes": 174,
+      "sha256": "080b1b66c51b58852235d0b1959fe2c3d4e7ca855588c9826582490da473a970"
+    },
+    {
+      "path": "independent/n9_audit/ubsan.json",
+      "bytes": 1067,
+      "sha256": "de769219604405fd17870408677e4871cebe1a81c9649318db531c697da6bb3a"
+    },
+    {
+      "path": "independent/n9_audit/ubsan.stderr",
+      "bytes": 37,
+      "sha256": "67dc391926e1d3d81086a5031951e42415dae11cc869ce297c695369d6a8e88f"
+    },
+    {
+      "path": "independent/n9_audit/ubsan_resources.json",
+      "bytes": 245,
+      "sha256": "f8d2c07d57251cc81d8fb8e0dbe515e0d62388ed097bab72d03962abf6fb346d"
+    },
+    {
+      "path": "stability/N9_PUBLIC_FILES.txt",
+      "bytes": 109,
+      "sha256": "72b7dba6a7847df521e6cf0adaac589c951f919ed3f14cf7ba7d5356f4753d41"
+    },
+    {
+      "path": "stability/N9_SHA256SUMS",
+      "bytes": 373,
+      "sha256": "e1b6c1f4a03cf7ac4bf7a164177f9aba168cb8fbd64decbac5d5cce59828e1c7"
+    },
+    {
+      "path": "stability/SHARP_NINE_GRAPH_CERTIFICATE.md",
+      "bytes": 7096,
+      "sha256": "d371ed57f3be408cb287c9799cdf857e8864e52904d8db60900b3aedd2e31c1a"
+    },
+    {
+      "path": "stability/graph9_certificate.cpp",
+      "bytes": 3830,
+      "sha256": "fa28c804cf1ed57f085b4457371dbd988eec768da81399959eeede87cf761580"
+    },
+    {
+      "path": "stability/graph9_certificate.json",
+      "bytes": 319,
+      "sha256": "a9daf1b8809b0c798902b6911fa89ccc9c4e233b744ebccb78f5c0a911dedb1b"
+    },
+    {
+      "path": "stability/graph9_certificate.ubsan.json",
+      "bytes": 319,
+      "sha256": "a9daf1b8809b0c798902b6911fa89ccc9c4e233b744ebccb78f5c0a911dedb1b"
+    }
+  ],
+  "scope": "Final fourth checkpoint: sharp order nine with independent analytic and complete graph audits. Established exact coefficients for n=3..9 and n>=1500; orders10..1499 remain unresolved. No order-ten research. Historical compiler-cap failures remain failures alongside successful sanitizer recovery."
+}

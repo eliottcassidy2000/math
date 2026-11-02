@@ -1,0 +1,38 @@
+{
+  "encoding": "LSB lexicographic pairs, bit1 means i->j",
+  "hostile": {
+    "H": 41,
+    "code": 280,
+    "rows": [
+      48,
+      33,
+      3,
+      7,
+      14,
+      28
+    ]
+  },
+  "interpretation": "Both adjacency matrices over GF(2) have one nilpotent Jordan block; H differs. This verifies inherited lens blindness, not a new classification theorem.",
+  "order": 6,
+  "rank_powers": [
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "status": "verified",
+  "transitive": {
+    "H": 1,
+    "rows": [
+      62,
+      60,
+      56,
+      48,
+      32,
+      0
+    ]
+  }
+}

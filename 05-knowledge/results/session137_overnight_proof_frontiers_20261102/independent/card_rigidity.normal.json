@@ -1,0 +1,8 @@
+{
+  "deleted_cards": 16215,
+  "literal_completion_cuts": 18828,
+  "quotients": 1099,
+  "scope": "all labelled quotients k1..5, including nonstrong;all cuts for each deletion at k1..3",
+  "semantic_sha256": "d63fcf4c274261a8b9aa8207c917647287a0bd4ed7437321115b3b22d1fd2246",
+  "verdict": "PASS unique homogeneous pair, intrinsic original cut, canonical triangle modules, family-wide completion uniqueness"
+}

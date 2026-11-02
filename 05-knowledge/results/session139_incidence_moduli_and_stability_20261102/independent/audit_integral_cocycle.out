@@ -1,0 +1,18 @@
+{
+  "alternating_checks": 1536,
+  "hostiles": [
+    "mod2 skew matrix forgets eta",
+    "K=0 weighted Pf-square formula fails"
+  ],
+  "labelled_fivesets": 1024,
+  "labelled_foursets": 64,
+  "moduli": "2..33 (integral identity proves every modulus)",
+  "modulus_checks": 32768,
+  "signed_distribution": {
+    "-1": 8,
+    "0": 48,
+    "1": 8
+  },
+  "status": "PASS",
+  "switching_checks": 1024
+}

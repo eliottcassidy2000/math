@@ -1,0 +1,50 @@
+{
+  "basis_states": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "distinct_matrices": 38,
+  "height1_formal_hostile": {
+    "F": 11,
+    "positive_state": [
+      5,
+      0,
+      0,
+      1
+    ],
+    "reason": "C5 is not a power of two, although H11 is globally attainable"
+  },
+  "local_recipes": 210,
+  "observed_face_odd_parts": {
+    "1": [
+      1
+    ],
+    "3": [
+      3
+    ]
+  },
+  "scope": "FINITE-EXACT all marked sources parent order<=4; every local tournament order2..4 and every fresh re-mark, reconstructed on four unimodular witnesses",
+  "source_states": 1098
+}

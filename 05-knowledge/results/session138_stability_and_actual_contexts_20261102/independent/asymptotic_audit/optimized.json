@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "baseline_square_checks": 765,
+    "margin_product_checks": 796,
+    "matching_graphs": 384,
+    "matching_groups": 2467,
+    "matrices": 796,
+    "near_candidate_checks": 10,
+    "quadratic_edge_checks": 4566,
+    "rational_gap_checks": 1584
+  },
+  "explicit_boundaries": [
+    "r1 margins1",
+    "r2 fair edge margins1/2,1",
+    "empty margins2,0 excludes empty product claim",
+    "n2 gap0 excludes nonlinear positive correction"
+  ],
+  "scope": "all ternary n1..4;8 six-fractional-edge rational cases and one sharp fair-matching control each n5..8;16 nonnegative rational graph weights per order n2..25",
+  "semantic_sha256": "5af0e882af37de26b39217b660b93e72b7692fe59cba189b3f8f3f97f133a7cf",
+  "status": "PASS"
+}

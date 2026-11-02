@@ -4,6 +4,33 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — distinguish the modular curve, its Fricke quotient and the observer
+
+- **Scope:** correction of user-supplied inspirational text, not a retraction of a previously accepted repo theorem. It labelled {2,3,5,7,13} the Ogg-prime group, conflating the genus-zero X0 levels with the distinct Fricke-quotient classification, and proposed a geometric bijection to Fermat primes without an action-preserving map.
+- **First failed implication / witness:** passing from X0(p) to X0(p)^+ changes genus; p17 has genus1 before quotient and0 afterwards. Counts of self-dual objects do not specify a map between primes. Rational Mobius transforms also preserve field degree, so the real cyclotomic generators at13 and17 (degrees6,8) cannot be related that way.
+- **Repair:** `05-knowledge/results/clocks_carriers_genus_20261102/GENUS_BRIDGE.md` retains the correct intersections and proves a separate genus-to-Collatz identity. `FERMAT_NEIGHBOURS.md` gives exact multiplier-orbit equinumerosity at15/17 but retains the different unit groups and composite block symmetries. A symmetry-preserving bijection remains unsupplied.
+- **Navigation correction:** S139's inherited final sentence still called n56 the best stability cutoff although its opening correctly routed n48. The initial local correction to 48 was superseded during sync by the incoming independently audited 48 and capacity-potential 42 routes; their stronger navigation and proof lineage are retained. No inherited proof or receipt is changed.
+
+## 2026-11-02 — a cyclic triangle is not a proper cycle at order three
+
+- **Correction lineage:** final scope audit of `05-knowledge/results/joint_incidence_clocked_frames_20261102/STABILITY_42.md`, Corollary J-capacity; also clarifies the use of B in the earlier `stability_priority_moduli_20261102/PAIR_RESERVE.md`. The inherited theorem in `session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md` correctly states n>=4; an initial local corollary omitted that guard.
+- **Witness / first failed implication:** every binary three-tournament has Delta=0. A fair weighted triangle therefore has B=E Delta(T)=0 but tau=1/4. With R=1,M=1/4,D=1/2,k=1/4, the unguarded capacity corollary would demand B>=1/8.
+- **Repair / strongest survivor:** the pointwise triangle surplus and its matching sum for tau remain valid; transfer to B and the full-quarter global capacity bound require n>=4. All binary orders3/4 are now exact scope controls. Sharp stability for n>=42 and its equality classification are unchanged.
+- **Mechanism / next question:** a local cycle certificate contributes to the binary proper-cycle baseline only when its vertex set is proper. Retain source order when transporting a local inequality into a global expectation.
+
+## 2026-11-02 — FRACTRAN prime support does not bound selector precision
+
+- **Correction lineage:** THM-4852 at `01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md`, following MISTAKE-697. The previously audited generalization used prime support <=P to claim selection from one base-P# digit. Its 400 random-program tests were squarefree; the audit's actual local formulas required p,q to divide the base, not merely a power of it.
+- **Witness / first failed implication:** `(1/4,3/2)` selects rule 2 at N=2 and rule 1 at N=8, although both are 2 modulo 6. Even `(1/4)` in base 2 distinguishes N=2 (halt) from N=4. Having no new prime factors does not retain their valuations.
+- **Repair / strongest survivor:** remove rules shadowed by earlier denominator divisibility. Selection has exact minimal period equal to the remaining denominator lcm L; k low base-B digits suffice iff L divides B^k. PRIMEGAME's squarefree case, two-list phase law, and stated metagraph non-identifications survive. `05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md` P1-P5 proves exact successor and finite-clock moduli with priority guards.
+- **Related nonminimality control:** iterating a sufficient one-step precision transformer can overpay. For `(2/3,3/2)`, two-step label observation has least period 18, not 36. Actual reachable words, not arbitrary intermediate residues, determine the finite-horizon minimum. The new checker includes literal squareful programs and normal/optimized replay.
+
+## 2026-11-02 — a spectral collision is not a complexity separation
+
+- **Correction:** [THM-1780, binary spectral boundary](theorems/THM-1780-H-leaves-the-spectral-ladder-at-n6.md) retains its exact H=13/17 cospectral witness at order6 and now gives the source-padding proof at every larger order. The historical deductions placing H above a rational/algebraic/holonomic ladder or proving hardness from that collision are withdrawn; this repeats the decoder-scope mechanism already repaired in THM-1970.
+- **First failed implication:** failure of reconstruction from one invariant does not establish computational hardness or a hierarchy of generating functions. Nor is H the ordinary adjacency permanent: the transitive two-tournament has permanent0 and H=1.
+- **Strongest survivor / missing coordinate:** no function of ordinary adjacency spectrum recovers binary H at n>=6. Closed-walk traces lose simple-cycle and disjoint-cycle incidence. Native integer moments and independent Hamilton-path DP reproduce the six-vertex witness in `05-knowledge/results/stability_priority_spectrum_20261102/carrier_checks.json`. The next question concerns retained incidence or contextual profiles, not a complexity inference from noninjectivity.
+
 ## 2026-10-31 — cyclic product completeness needs all path-cover states
 
 - **Correction source:** `05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md` restricts the interpretation of packet j's cyclic matching formula. It counts sewn products of local Hamiltonian cycles, not necessarily all cycles of the sewn graph. The tree theorem and finite105-state kernel remain valid.
@@ -21816,3 +21843,44 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
     Turner/Babai statement only provides one affine isomorphism.
   - Before calling a witness family new, express it in the parameters of the inherited family it may belong to.
   - A shared algorithmic idea between two machines is a DICTIONARY entry until a simulation map is written down.
+
+## MISTAKE-701 (2026-11-01, mac-mini-2026-11-01-lenses, THM-4857, THM-4858 and the note `05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md` at the pre-audit commit dd854a0940; found by the independent audit `04-computation/experiments/circulant_fractran_goldbach_20261101/audit_lenses/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a case left "open" that counting settles, a one-hot claim false for PRIMEGAME, a check whose coverage was misstated, a known theorem typed new, and a small-n coincidence framed as a fact
+
+- **What was wrong.**
+  - **(1)** THM-4857 left n = 8 "open" and claimed failure only for n >= 9. The exact number of similarity classes of
+    8 × 8 matrices over GF(2) is 746 (OEIS A070933), below the at least 3,440 merged nodes. So the GF(2) automaton
+    fails to classify merged nodes for every n >= 6. The session used the weak bound p(n) · 2^n and did not look up
+    the exact counts.
+  - **(2)** The note called PRIMEGAME "one-hot", with priority a disjoint union of per-state chains. Its state-free
+    fractions (15/14, 15/2, 55/1) are co-applicable with every state group, since 55/1 always applies. 26 reachable
+    co-applicable sets mix them, and reordering changes the run at step 3. The clean form holds only for fully
+    guarded programs (GOLDBACHGAME, FERMATGAME, LEGENDREGAME, LENGGAME).
+  - **(3)** THM-4858 said literal FRACTRAN matched "every configuration of the first 300 TM steps" (T2c). T2c used
+    the same misaligned counter as the failed T2b, so its 1,948 configurations covered only 66 TM steps. The audit's
+    literal run then confirmed all 300.
+  - **(4)** THM-4857 (4), the Paley/QR-code dichotomy with the Golay code at 23, was typed as this session's
+    translation. It is THM-481 (June 2026), crediting Kim-Solé, Assmus-Key and T. S. Michael. It also holds for
+    every doubly regular tournament.
+  - **(5)** "The owner's '12 classes become 10 nodes' is a cellular-automaton fact" overstated a small-n coincidence.
+    Converse-blindness explains only the upper bound.
+  - **(6)** Minor:
+    - S1 could not fail, given A1's coarse counts;
+    - the automaton's image is the other QR code (reciprocal generator);
+    - "separable" was unnecessary in the rank formula;
+    - "containing 1" was missing from the circulant count;
+    - the FRACTRAN -> CA cost row was wrong for session126's true CA;
+    - "NUMEROLOGY" was used for an absence of a link;
+    - the T3 label reads "step 6" while its condition tests step 7.
+- **Repair.** Every item is corrected in THM-4857, THM-4858, the note and the index. No computation changed, and no
+  mathematical claim failed re-computation.
+- **How it was caught.** The auditor:
+  - recomputed the similarity types with its own invariant;
+  - looked up OEIS A070933;
+  - enumerated PRIMEGAME's reachable co-applicable sets;
+  - re-ran literal FRACTRAN for 300 TM steps;
+  - grepped the canon for QR codes.
+- **Lesson / reusable rule.**
+  - Before leaving a counting case "open", look up exact counts (OEIS) instead of using a crude bound.
+  - Grep the canon for the classical object a new translation lands on (here "quadratic residue code", "Golay")
+    before typing the landing as new.
+  - When a checker is found misaligned, re-examine every other check that used the same counter.

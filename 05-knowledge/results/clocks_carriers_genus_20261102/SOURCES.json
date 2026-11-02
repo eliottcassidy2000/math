@@ -1,0 +1,119 @@
+{
+  "baseline": "dde756b2c2d4506156d637a536910fc80a35450d",
+  "repo_inputs": [
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "path": "01-canon/theorems/THM-871-fermat-rung-rigidity.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "b6a3c15950ff30dfc7e1d40b8ffbd921c0bf1d748337d7becdef3e1dde99143c"
+    },
+    {
+      "path": "01-canon/theorems/THM-4807-untraced-arcs-are-cycle-closing-chords-elementary-legal-path-reconstruction-endpoint-decoder-one-guard-separation.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "8c886c105dc6692f2bcdcfd87d40d7fed283cf28eab1e90c1db3502261209935"
+    },
+    {
+      "path": "01-canon/theorems/THM-4835-euler-characteristic-criterion-for-marked-excess-minus-one-carriers-in-tournaments.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "03ebfae6f06a397b36ce9b29bbf2f61e16276a2c087ad82d5b10e2e40dd9173e"
+    },
+    {
+      "path": "01-canon/theorems/THM-4836-coherent-carrier-sets-of-tournaments-and-the-pair-or-triple-law.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "08942b2937f8ecb862e3456cce6969eddcb4c21396d2e34cd10fceb79a8aa1a5"
+    },
+    {
+      "path": "01-canon/theorems/THM-4801-collatz-meets-the-constructible-polygons-trunk-five-initial-segment-principle-collatz-closed-family.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "0b971f70f4dd06767c60b12a02ef6a92d9c707413ec95dbd41550c107ce45716"
+    },
+    {
+      "path": "01-canon/theorems/THM-4644-fermat-primes-rigid-circulant-tournaments-wieferich-orbit-explosion.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "499f703c003504d31c1bc393b1788677ddbc505d64c6f37d95af70879998a552"
+    },
+    {
+      "path": "01-canon/theorems/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "619ee1a2ae6aed62a1a25775e51cd0ae4090cdbc07ad3a6d17ff16f873174dce"
+    },
+    {
+      "path": "01-canon/theorems/THM-4510-sum-graphs-as-reflection-orbits-pythagorean-zigzags.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "01f8a8ad6c016fa12db5120721687e4bff24470240f6022d61030660419069d1"
+    },
+    {
+      "path": "01-canon/theorems/THM-4733-divisor-plane-of-p2qr-versus-the-marked-path-tiling-cube-3-4-3-and-4-2-4-reflections.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "bb990b326f4dced3118a83ef240accb47ebf387c9586dcd67994507a64194098"
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_spectrum_20261102/FRACTRAN_CLOCKS.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "f151b3c2099e7400536f02e122b611cf25061336640ee086350a7fa7b12a78ad"
+    },
+    {
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/GUARDED_PATHS.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256": "9826d8f57764bea37007d2063dc3596538245e63017fd4499a299c9682c5893e"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/STABILITY_42.md",
+      "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+      "sha256": "3a9cbd47d3c39424c8356d69ffc6ec4d3f612defc9b1d9bf0050f28157e40901"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/RECURRENCES.md",
+      "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+      "sha256": "95d4e904903463fd9eeb0d5044b51b4e25afa9a89f60f15f1c527cb0745f5f59"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/TENSOR_COSETS.md",
+      "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+      "sha256": "47e164d9d4f4bcf061ab4b24eb81e86cce256e5863875854a078f8f5290e4b40"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/RECOVERY.md",
+      "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+      "sha256": "e0da85bc7e9be0d2c5d3e53ddbafd3c09e792fff1bc502772d34a4a713f48727"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/AUDIT.md",
+      "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+      "sha256": "5241f0252ee8dfdb636253805b766cff83ba29158f4206d6a6f0227e61d4efb6"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://celebratio.org/Ogg_AP/article/1157/",
+      "author": "Victor Manuel Aricheta",
+      "scope": "Theorem1: X0(p)+ and the fifteen primes; full relevant statement read"
+    },
+    {
+      "url": "https://public.websites.umich.edu/asnowden/teaching/2013/679/L12.html",
+      "author": "Andrew Snowden",
+      "scope": "Genus formula and prime-level elliptic/cusp counts; full relevant statement read"
+    },
+    {
+      "url": "https://arxiv.org/html/1806.11241v4",
+      "author": "Ethan Akin",
+      "scope": "Theorems3.13-3.14: free unit action iff squarefree product of Fermat primes, odd stabilizers; full statements and proofs read"
+    },
+    {
+      "url": "https://www.maths.dur.ac.uk/users/anna.felikson/Geometry/Geometry24/notes.pdf",
+      "author": "Anna Felikson",
+      "scope": "Standard upper-half-plane cosh-distance formula verified in indexed search extract; direct PDF fetch timed out. Only this formula used."
+    }
+  ],
+  "scope": "Sources support only their identified inputs. New corollaries and representation comparisons have separate proofs and no external-priority claim.",
+  "incoming_commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3"
+}

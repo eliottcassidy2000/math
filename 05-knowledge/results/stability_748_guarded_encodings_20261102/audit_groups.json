@@ -1,0 +1,7 @@
+{
+  "complete_four_vertex_controls": 1458,
+  "scope": "Independent edge-pair accounting checks; the exact all-size group proof is inherited and the disjoint summation is explicit. Samples are not a stability proof.",
+  "seed": 748,
+  "seeded_rational_controls": 800,
+  "status": "passed"
+}

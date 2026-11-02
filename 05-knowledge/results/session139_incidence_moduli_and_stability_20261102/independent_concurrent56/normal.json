@@ -1,0 +1,77 @@
+{
+  "R_min": 28,
+  "active_checks": {
+    "bootstrap_advance_0": "28404006581/9378906250000",
+    "bootstrap_advance_1": "21073575206681/660878131200000",
+    "bootstrap_advance_2": "340875870324523013869/2151296000000000000000",
+    "bootstrap_mass_0": "122/175",
+    "bootstrap_mass_1": "139/56",
+    "bootstrap_mass_2": "7493/1400",
+    "bootstrap_remaining_probability_0": true,
+    "bootstrap_remaining_probability_1": true,
+    "bootstrap_remaining_probability_2": true,
+    "bootstrap_uniform_mass_slope_0": true,
+    "bootstrap_uniform_mass_slope_1": true,
+    "bootstrap_uniform_mass_slope_2": true,
+    "closing_upper_bound": true,
+    "coarse_penalty": true,
+    "domain": true,
+    "dual_at_square_zero_boundary": "1/522732",
+    "dual_constant_identity": true,
+    "dual_polynomial_identity": true,
+    "dual_remainder_uniform_nonnegative": "1/74676",
+    "g1_lower": true,
+    "heavy_integer_floor": "227/350",
+    "heavy_uniform_slope": "293/700",
+    "left_tail": "6590088802397455491/31525197391593472000",
+    "left_tail_uniform_ratio": true,
+    "light_deficit_positive": "667/3500",
+    "no_light_closure": true,
+    "parity_coefficient_56": true,
+    "parity_coefficient_57": true,
+    "perfect_penalty_n56_r1": true,
+    "perfect_penalty_n56_r28": true,
+    "perfect_penalty_n57_r1": true,
+    "perfect_penalty_n57_r28": true,
+    "right_tail": "1751781/458752000",
+    "right_tail_uniform_form": true,
+    "small_variance_excluded": true,
+    "tail_interval": true,
+    "total_dual_positive": "667/18669",
+    "uniform_Rt_endpoint": "0",
+    "variance_even_envelope": true,
+    "variance_odd_envelope": true
+  },
+  "bootstrap": [
+    {
+      "Taylor_degree": 4,
+      "coarse_slack": "28404006581/9378906250000",
+      "from": "49/200",
+      "mass": "122/175",
+      "to": "1/2"
+    },
+    {
+      "Taylor_degree": 5,
+      "coarse_slack": "21073575206681/660878131200000",
+      "from": "1/2",
+      "mass": "139/56",
+      "to": "91/100"
+    },
+    {
+      "Taylor_degree": 5,
+      "coarse_slack": "340875870324523013869/2151296000000000000000",
+      "from": "91/100",
+      "mass": "7493/1400",
+      "to": "99/100"
+    }
+  ],
+  "coarse_penalty": "1/10000",
+  "constants": {
+    "c": "99/100",
+    "d": "381/500",
+    "lambda": "500/18669",
+    "t": "1/7"
+  },
+  "status": "PASS",
+  "threshold": 56
+}

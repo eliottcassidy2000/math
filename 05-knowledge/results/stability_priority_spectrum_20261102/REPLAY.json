@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "local_gates": 64626,
+  "inherited_hostile_gates": 7,
+  "local_links_checked": 56,
+  "runs": [
+    {
+      "script": "verify_stability.py",
+      "receipt": "stability_checks.json",
+      "gates": 3475,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "b5ec76982610887d4b8158f8e39464c839b0cad7a74a2b8af4ab34a4792fb65a"
+    },
+    {
+      "script": "verify_stability_320.py",
+      "receipt": "stability_320_checks.json",
+      "gates": 3683,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "ee6d94354ee0c41556759df4634d0fd0a0bb4ea7f0d2c0f22c61c9ce1a2fad62"
+    },
+    {
+      "script": "verify_stability_238.py",
+      "receipt": "stability_238_checks.json",
+      "gates": 15246,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "fbf794df22be1314dbe61eed0199de5e36ee0b1a848740509d6d4c08b60a2753"
+    },
+    {
+      "script": "verify_stability_56.py",
+      "receipt": "stability_56_checks.json",
+      "gates": 4351,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "bdede5cc75ec741c71111065fce6b5baf04288cc92f9432d1fbd7be08c3b20b9"
+    },
+    {
+      "script": "verify_clocks.py",
+      "receipt": "clock_checks.json",
+      "gates": 37806,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "f5b3fb45b76d06f9f3e3bcec5dc4485d98e1218f7242f754bee9544bf70f4558"
+    },
+    {
+      "script": "verify_carriers.py",
+      "receipt": "carrier_checks.json",
+      "gates": 65,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "a344559cd41704650e0492a760a28820eab3da130b478f3046109f1ed2e50ad8"
+    }
+  ]
+}

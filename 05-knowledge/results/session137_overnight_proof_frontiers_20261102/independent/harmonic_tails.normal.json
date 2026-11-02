@@ -1,0 +1,7 @@
+{
+  "ceiling_checks": 464,
+  "maximum_checks": 447,
+  "primitive_grid_extra_points_counted": 428,
+  "scope": "FINITE-EXACT all promotion subsets q3..6,m1..4, every ceiling; q3..5,m1..3 all k<n for maximum certificates",
+  "terminal_mass_checks": 292
+}

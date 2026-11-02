@@ -1,0 +1,244 @@
+{
+  "status": "PASS",
+  "executions": 34,
+  "results": [
+    {
+      "script": "local_closure/check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 12.009,
+      "sha256": "f36be6f8b573c4ab22d0a05d918141557003478748c8aaa30d52e67b177c33ba"
+    },
+    {
+      "script": "local_closure/check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 12.139,
+      "sha256": "f36be6f8b573c4ab22d0a05d918141557003478748c8aaa30d52e67b177c33ba"
+    },
+    {
+      "script": "spectrum_structure/verify.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 4.28,
+      "sha256": "fd656b69be723678f4d24daaf0aa9f290578908026fb7c1b6be6ac664d80eee0"
+    },
+    {
+      "script": "spectrum_structure/verify.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 3.841,
+      "sha256": "fd656b69be723678f4d24daaf0aa9f290578908026fb7c1b6be6ac664d80eee0"
+    },
+    {
+      "script": "obstructions/check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 7.178,
+      "sha256": "860369af2977afddcad2cfa3658350067670f0004f6658a376b583773a1652e9"
+    },
+    {
+      "script": "obstructions/check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 7.268,
+      "sha256": "860369af2977afddcad2cfa3658350067670f0004f6658a376b583773a1652e9"
+    },
+    {
+      "script": "gluing/module_contexts.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 2.592,
+      "sha256": "3ddb69e2fa5bfa0507421556b4e3e29682b359adc8b2bfc8219c59354c28af25"
+    },
+    {
+      "script": "gluing/module_contexts.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 2.84,
+      "sha256": "3ddb69e2fa5bfa0507421556b4e3e29682b359adc8b2bfc8219c59354c28af25"
+    },
+    {
+      "script": "gluing/width5_probe.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.426,
+      "sha256": "9b9795d78a42e30f07b30c550572edc65f4848597a683117917cfb9331530061"
+    },
+    {
+      "script": "gluing/width5_probe.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.429,
+      "sha256": "9b9795d78a42e30f07b30c550572edc65f4848597a683117917cfb9331530061"
+    },
+    {
+      "script": "ear_geometry/audit.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 10.987,
+      "sha256": "eb3062b1fbe4ce482807bdf3036eb668fb1728347c4db4407340dbb9d6607cb7"
+    },
+    {
+      "script": "ear_geometry/audit.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 10.967,
+      "sha256": "eb3062b1fbe4ce482807bdf3036eb668fb1728347c4db4407340dbb9d6607cb7"
+    },
+    {
+      "script": "ear_geometry/symmetry_audit.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 2.026,
+      "sha256": "1d7cda523d27f63e3661d7366bbf8d6b9d2c1d8288f77015e499b65f820c87a6"
+    },
+    {
+      "script": "ear_geometry/symmetry_audit.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 1.917,
+      "sha256": "1d7cda523d27f63e3661d7366bbf8d6b9d2c1d8288f77015e499b65f820c87a6"
+    },
+    {
+      "script": "independent/audit.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 1.079,
+      "sha256": "0a6e4e4a6ec45a3d43e6dc54cb6a1caf6523a1098b55ce397a7ce37789b6c69f"
+    },
+    {
+      "script": "independent/audit.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 1.143,
+      "sha256": "0a6e4e4a6ec45a3d43e6dc54cb6a1caf6523a1098b55ce397a7ce37789b6c69f"
+    },
+    {
+      "script": "independent/local_check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.938,
+      "sha256": "c57fc99164a63f3f75c8af381ccf2731266c5fc4912280aae7cc5d650c8468fb"
+    },
+    {
+      "script": "independent/local_check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.899,
+      "sha256": "c57fc99164a63f3f75c8af381ccf2731266c5fc4912280aae7cc5d650c8468fb"
+    },
+    {
+      "script": "independent/grammar_check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.751,
+      "sha256": "3848c8f09fa710825d39bdc9342345e38f038b3fe2ccf0166ed725c87dc27215"
+    },
+    {
+      "script": "independent/grammar_check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.772,
+      "sha256": "3848c8f09fa710825d39bdc9342345e38f038b3fe2ccf0166ed725c87dc27215"
+    },
+    {
+      "script": "independent/obstruction_check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 5.527,
+      "sha256": "7c4be12580e89e2177b4eaf499879eea477eef447ffaa6ec3b6ca454256672a9"
+    },
+    {
+      "script": "independent/obstruction_check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 5.959,
+      "sha256": "7c4be12580e89e2177b4eaf499879eea477eef447ffaa6ec3b6ca454256672a9"
+    },
+    {
+      "script": "independent/ear_check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.599,
+      "sha256": "ec4ddab6e7b34acfd219233d99bd99a340dfadeb344e613b1db7cc643a0cc61d"
+    },
+    {
+      "script": "independent/ear_check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.691,
+      "sha256": "ec4ddab6e7b34acfd219233d99bd99a340dfadeb344e613b1db7cc643a0cc61d"
+    },
+    {
+      "script": "independent/width5_check.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.508,
+      "sha256": "860da1397c1e501293bd4ed60211a98eb1d5b418aec5e33d8a5963f3df2470f7"
+    },
+    {
+      "script": "independent/width5_check.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.463,
+      "sha256": "860da1397c1e501293bd4ed60211a98eb1d5b418aec5e33d8a5963f3df2470f7"
+    },
+    {
+      "script": "independent/tiny_extensions.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.046,
+      "sha256": "e43bd4a1bc188408f107abdea1c5a6b47be020469ac6e2c7286ee72e5c6f4d65"
+    },
+    {
+      "script": "independent/tiny_extensions.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.107,
+      "sha256": "e43bd4a1bc188408f107abdea1c5a6b47be020469ac6e2c7286ee72e5c6f4d65"
+    },
+    {
+      "script": "ear_geometry/probe.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 4.354,
+      "sha256": "8b584004b4f5f8a35541dce7dcb6e1dee01ee83f98cb459ef6b2a0abc7e7e48d"
+    },
+    {
+      "script": "ear_geometry/probe.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 4.146,
+      "sha256": "8b584004b4f5f8a35541dce7dcb6e1dee01ee83f98cb459ef6b2a0abc7e7e48d"
+    },
+    {
+      "script": "interfaces.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.079,
+      "sha256": "05e167e93929e349ad2e9a0fa75ee7a94ff0a36fa6f897faa5fdc918f9187278"
+    },
+    {
+      "script": "interfaces.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.117,
+      "sha256": "05e167e93929e349ad2e9a0fa75ee7a94ff0a36fa6f897faa5fdc918f9187278"
+    },
+    {
+      "script": "lens_boundary.py",
+      "mode": "normal",
+      "status": "PASS",
+      "seconds": 0.029,
+      "sha256": "66262f4d78b97814bf1f5ee6652a5d31e4e9438499daad8f0cb2a06f38c6a1e1"
+    },
+    {
+      "script": "lens_boundary.py",
+      "mode": "optimized",
+      "status": "PASS",
+      "seconds": 0.066,
+      "sha256": "66262f4d78b97814bf1f5ee6652a5d31e4e9438499daad8f0cb2a06f38c6a1e1"
+    }
+  ]
+}

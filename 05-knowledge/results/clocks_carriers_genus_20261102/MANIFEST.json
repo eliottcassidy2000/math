@@ -1,0 +1,19 @@
+{
+  "baseline": "dde756b2c2d4506156d637a536910fc80a35450d",
+  "status": "PROVED scoped; same-agent proof review and normal/optimized exact checks",
+  "files_sha256": {
+    "AUDIT.md": "c5850bf0df1d8bed74d2714a73564cfa1b15535bed372d6f9fffff14296b4699",
+    "BOARD.md": "3ef171ba6759dd432a81fca5f1bfd7e9932e6d4f30fccf09930d4610ea3087dc",
+    "COLLATZ_GEOMETRY.md": "07cec6485117d4be849ba4f2d8dd56dc28876a1922b9a68cf6cc8873d01599de",
+    "CORNER_CARRIER.md": "88bd20ecee9c385f4652de785a5e5758ab1fd18827169995e3d80827522f8e27",
+    "FERMAT_NEIGHBOURS.md": "5a813e7506121a0e13a5fda9eeba1bc5a43baae7c3c9af84695cd49027cc37f4",
+    "GENUS_BRIDGE.md": "5cb525ba5c5e5fa115bf0637525ab43be44b081b5b50acd3ff9d77769e4e8d76",
+    "HANDOFF.md": "7800d2870de1fefce16430f75ce2f920588db467eda8fdf41e04c2f60e997083",
+    "README.md": "5d88ff77297ef22282dcbc6c2c413731e0fe1eadf2d6b747f6b83891b02d50a5",
+    "SOURCES.json": "575ca72b7c659180a7c07bb4405075889f4ad3a221b6a53f5e8b6008dd4adb54",
+    "TREE_PORTS.md": "4babd158e275f3c2e16383730da7f35a018ca0f8af42579d968fda3f61b1165d",
+    "normal.json": "6cbf50fc2f0084b31d24893b4478247f075fd5c76e3ce4481e55ae5f2aee8368",
+    "optimized.json": "6cbf50fc2f0084b31d24893b4478247f075fd5c76e3ce4481e55ae5f2aee8368",
+    "verify.py": "fc503f3c5e908976aa66363e88c40be0de46358b025ec2301c0f498dcfb2971e"
+  }
+}

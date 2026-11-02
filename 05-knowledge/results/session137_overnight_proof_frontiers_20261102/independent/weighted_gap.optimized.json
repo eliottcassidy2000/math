@@ -1,0 +1,11 @@
+{
+  "empty_complement_terms": 19870,
+  "induced_determinants": 14670,
+  "matrices": 808,
+  "positive_weight_old_paths": 70745,
+  "root_insertions": 3292,
+  "scope": "FINITE-EXACT rational weighted tournaments: all ternary edge weights n<=4;16 fixed-seed samples each n5..7",
+  "semantic_sha256": "96a01189b943ef7bdd01f73cc7ecce6e399a425c5457fbcca5ea8e4acdb58db6",
+  "two_cycle_terms": 3742,
+  "verdict": "PASS weighted insertion identities, H>=det(I+A)+|detA|, and complete weighted equality classification"
+}

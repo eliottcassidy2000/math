@@ -1,0 +1,135 @@
+{
+  "complete_labelled_parent_orders": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "exact_all_order_small_height_bases": {
+    "1": [
+      {
+        "C_base": 1,
+        "cut": 1,
+        "native_state": [
+          1,
+          3,
+          2,
+          0
+        ],
+        "parent": [
+          2,
+          0
+        ]
+      }
+    ],
+    "3": [
+      {
+        "C_base": 3,
+        "cut": 1,
+        "native_state": [
+          3,
+          9,
+          6,
+          0
+        ],
+        "parent": [
+          12,
+          9,
+          10,
+          0
+        ]
+      }
+    ],
+    "5": [
+      {
+        "C_base": 5,
+        "cut": 1,
+        "native_state": [
+          5,
+          15,
+          10,
+          0
+        ],
+        "parent": [
+          24,
+          17,
+          19,
+          22,
+          0
+        ]
+      },
+      {
+        "C_base": 6,
+        "cut": 2,
+        "native_state": [
+          5,
+          17,
+          12,
+          0
+        ],
+        "parent": [
+          24,
+          17,
+          19,
+          22,
+          0
+        ]
+      },
+      {
+        "C_base": 7,
+        "cut": 8,
+        "native_state": [
+          5,
+          19,
+          14,
+          0
+        ],
+        "parent": [
+          24,
+          17,
+          19,
+          22,
+          0
+        ]
+      },
+      {
+        "C_base": 9,
+        "cut": 4,
+        "native_state": [
+          5,
+          23,
+          18,
+          0
+        ],
+        "parent": [
+          24,
+          17,
+          19,
+          22,
+          0
+        ]
+      },
+      {
+        "C_base": 16,
+        "cut": 1,
+        "native_state": [
+          5,
+          37,
+          32,
+          0
+        ],
+        "parent": [
+          30,
+          16,
+          2,
+          6,
+          12
+        ]
+      }
+    ]
+  },
+  "literal_SCC_reductions": 1598,
+  "scope": "All-order conclusion uses proved finite-core reduction; controls enumerate the stated exact finite universes.",
+  "small_height_membership_controls": 1598,
+  "status": "PASS"
+}

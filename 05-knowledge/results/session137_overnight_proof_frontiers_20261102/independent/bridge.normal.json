@@ -1,0 +1,53 @@
+{
+  "counts": {
+    "bridges": 1440,
+    "disjoint_edges": 0,
+    "opposite_direction": 0,
+    "strong_pivot_parent": 0
+  },
+  "explicit_H": [
+    25,
+    27
+  ],
+  "explicit_base_masks": [
+    4,
+    1,
+    2,
+    7,
+    15
+  ],
+  "explicit_cuts": [
+    25,
+    16
+  ],
+  "first_witnesses": [
+    {
+      "H25_code": 89,
+      "H27_code": 80,
+      "flipped_vertices": [
+        1,
+        4
+      ],
+      "pivot": 0
+    },
+    {
+      "H25_code": 90,
+      "H27_code": 80,
+      "flipped_vertices": [
+        2,
+        4
+      ],
+      "pivot": 0
+    },
+    {
+      "H25_code": 92,
+      "H27_code": 80,
+      "flipped_vertices": [
+        3,
+        4
+      ],
+      "pivot": 0
+    }
+  ],
+  "scope": "FINITE-EXACT all labelled strong6 H25 to H27 pairs differing in exactly two arcs"
+}

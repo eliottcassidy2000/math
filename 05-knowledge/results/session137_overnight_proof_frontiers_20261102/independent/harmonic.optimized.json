@@ -1,0 +1,58 @@
+{
+  "boundary_cases": 1020,
+  "cases": 5100,
+  "controls": {
+    "q3_A1_isolated": [
+      "1/5",
+      "4/5"
+    ],
+    "q5_A14_t3over7_owners": [
+      2,
+      9
+    ]
+  },
+  "max_components": 20,
+  "scope": "FINITE-EXACT; q=3..10, every promotion subset, five rational thresholds each",
+  "summary": [
+    {
+      "promotion_sets": 4,
+      "q": 3,
+      "rational_cases": 20
+    },
+    {
+      "promotion_sets": 8,
+      "q": 4,
+      "rational_cases": 40
+    },
+    {
+      "promotion_sets": 16,
+      "q": 5,
+      "rational_cases": 80
+    },
+    {
+      "promotion_sets": 32,
+      "q": 6,
+      "rational_cases": 160
+    },
+    {
+      "promotion_sets": 64,
+      "q": 7,
+      "rational_cases": 320
+    },
+    {
+      "promotion_sets": 128,
+      "q": 8,
+      "rational_cases": 640
+    },
+    {
+      "promotion_sets": 256,
+      "q": 9,
+      "rational_cases": 1280
+    },
+    {
+      "promotion_sets": 512,
+      "q": 10,
+      "rational_cases": 2560
+    }
+  ]
+}

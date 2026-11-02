@@ -1,12 +1,28 @@
 ---
 id: THM-1455
-title: "WHY ELEVEN SPECTRA: c3 = 35 + 8k where k counts the 4-subsets containing an ODD number of cyclic triples, and k is EVEN — PROVED, because each triple lies in n-3 four-subsets and n-3 is even exactly when n is ODD. The Pfaffian dichotomy is the engine: for a 4-vertex tournament |Pf| = 3 iff it has EXACTLY ONE cyclic triple (scores (0,2,2,2) or (1,1,1,3)) and |Pf| = 1 iff it has zero or two (transitive (0,1,2,3) or strong (1,1,2,2)). Hence k in {0,4,6,8,10,12,14} — seven values of c3, with k=2 empirically absent and unexplained — and the eleven spectra decompose as 1+1+1+3+3+1+1, c3 = 99 and c3 = 115 each splitting into three by c1. Paley is the unique k = 14 maximum. REFUTED: my hypothesis that the switching-invariant triple statistic t = #{triples with s_ab s_bc s_ca = +1} determines the spectrum — there are 24 values of t and t = 25 alone yields SEVEN different spectra. SCOPED OUT: the 'eleven' is a count (1+1+1+3+3+1+1), not the prime 11; no Kakeya or Mandelbrot connection was found"
+title: "WHY ELEVEN SPECTRA: c3 = 35 + 8k where k counts the 4-subsets containing an ODD number of cyclic triples, and k is EVEN — PROVED, because each triple lies in n-3 four-subsets and n-3 is even exactly when n is ODD. The Pfaffian dichotomy is the engine: for a 4-vertex tournament |Pf| = 3 iff it has EXACTLY ONE cyclic triple (scores (0,2,2,2) or (1,1,1,3)) and |Pf| = 1 iff it has zero or two (transitive (0,1,2,3) or strong (1,1,2,2)). Hence k in {0,4,6,8,10,12,14} — seven values of c3, with k=2 excluded by the sharp nonzero-support bound k>=n-3 (Session139 recovery) — and the eleven spectra decompose as 1+1+1+3+3+1+1, c3 = 99 and c3 = 115 each splitting into three by c1. Paley is the unique k = 14 maximum. REFUTED: my hypothesis that the switching-invariant triple statistic t = #{triples with s_ab s_bc s_ca = +1} determines the spectrum — there are 24 values of t and t = 25 alone yields SEVEN different spectra. SCOPED OUT: the 'eleven' is a count (1+1+1+3+3+1+1), not the prime 11; no Kakeya or Mandelbrot connection was found"
 status: PROVED (the congruence, the Pfaffian dichotomy, and the evenness of k) + VERIFIED-BY-EXHAUSTION (all 32768 switching classes)
 author: opus-2026-07-20-S408
 depends_on: [THM-1450 (the eleven-spectra census), THM-474 (switching classes = tilings)]
 ---
 
 # THM-1455 — Why eleven spectra
+
+## Session139 recovery and correction (2026-11-02)
+
+The former unexplained absence of `k=2` at order7 is resolved by the sharp
+all-order support bound `k=0` or `k>=n-3`. The odd-fourset indicator is the
+mod2 coboundary of cyclic-triangle incidence. A supported fourset X forces
+another supported face in X union {v} for every outside vertex v, giving
+at least1+(n-4) distinct faces. One ordinal C3 block with singleton blocks
+attains equality. The [integral cocycle proof and weighted boundary](../../05-knowledge/results/session139_incidence_moduli_and_stability_20261102/cocycle/PROOF.md)
+give a signed all-modulus lift and independent exact checks. This is a
+recovered structural explanation, not a novelty claim.
+
+The former statement that Paley7 has every fourset odd was incorrect:
+exactly14 of its35 foursets are odd. The old evenness proof and finite
+spectral census remain separately scoped; this support-floor argument
+does not prove the full census or its maximality classification.
 
 ## 1. The Pfaffian dichotomy (the engine)
 
@@ -50,9 +66,9 @@ makes the switching-class ↔ even-graph bijection single-valued (THM-1430 §2).
 
 **Verified:** `k ∈ {0, 4, 6, 8, 10, 12, 14}` over all 32768 switching classes. All even. ✓
 
-**Unexplained:** `k = 2` is **absent**. Evenness permits it; the tournament structure does
-not realise it. This is the one genuine gap left, and it is a sharp small question: *why can
-a 7-tournament not have exactly two odd 4-subsets?*
+**Resolved in Session139:** `k = 2` is absent because nonzero support has
+size at least `n-3=4`. The recovery/correction above replaces the former
+unexplained-status claim; the finite table itself is unchanged.
 
 ## 3. The eleven, decomposed
 
@@ -71,8 +87,9 @@ a 7-tournament not have exactly two odd 4-subsets?*
 ```
 
 Seven values of `c₃` (from the seven admissible `k`), of which two — `k = 8` and `k = 10` —
-split into three by `c₁`. **Paley is the unique `k = 14` class**: every 4-subset has an odd
-number of cyclic triples, the maximum, which is exactly what "doubly regular" buys. The
+split into three by `c₁`. **Paley is the unique `k = 14` class in this census**:
+exactly14 of its35 four-subsets have an odd number of cyclic triples, not all35.
+The maximality assertion here is the separately reported finite census. The
 modal spectrum is `k = 10` (12768 classes), and within it `c₁ = 119` (10080) — the owner's
 polynomial of THM-1450.
 
@@ -113,9 +130,9 @@ Per HYP-8230's rule that coincidence of index is not evidence of mechanism:
 
 ## 6. Open
 
-1. **Why is `k = 2` unrealisable?** The sharpest remaining question, and small.
-2. **Is `k` even at every odd `n`, and what happens at even `n`?** §2's proof needs `n − 3`
-   even. At even `n` the argument fails and `k` should be able to be odd — worth one run.
+1. **RESOLVED:** `k = 2` at order7 is excluded by the sharp support floor above.
+2. **Odd-order evenness is proved in §2.** The fuller even-order distribution
+   remains a separate question; the odd-order proof is not an all-order evenness law.
 3. **Does the `(k, c₁)` stratification refine to a known tournament classification?** The
    splits at `k = 8, 10` into three each are unexplained.
 

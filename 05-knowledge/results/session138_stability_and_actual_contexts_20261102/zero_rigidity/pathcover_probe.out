@@ -1,0 +1,7 @@
+{"code": 1, "cut": 14, "difference": [0, 24, 72, 48, 0, 0], "k": 2, "profile_cut": [2, 2], "root": 0, "strict_somewhere": true, "weakly_dominates": true}
+{"code": 1, "cut": 17, "difference": [0, 24, 72, 48, 0, 0], "k": 2, "profile_cut": [1, 2], "root": 1, "strict_somewhere": true, "weakly_dominates": true}
+{"code": 0, "cut": 6, "difference": [0, 288, 3888, 17280, 33840, 30240, 10080, 0, 0], "k": 3, "profile_cut": [2, 1, 0], "root": 0, "strict_somewhere": true, "weakly_dominates": true}
+{"code": 0, "cut": 19, "difference": [0, 288, 3888, 17280, 33840, 30240, 10080, 0, 0], "k": 3, "profile_cut": [2, 2, 0], "root": 1, "strict_somewhere": true, "weakly_dominates": true}
+{"code": 0, "cut": 55, "difference": [0, 288, 3888, 17280, 33840, 30240, 10080, 0, 0], "k": 3, "profile_cut": [3, 2, 1], "root": 1, "strict_somewhere": true, "weakly_dominates": true}
+{"code": 0, "cut": 159, "difference": [0, 288, 3888, 17280, 33840, 30240, 10080, 0, 0], "k": 3, "profile_cut": [3, 2, 2], "root": 2, "strict_somewhere": true, "weakly_dominates": true}
+PASS rows 6 all_weakly_dominate True

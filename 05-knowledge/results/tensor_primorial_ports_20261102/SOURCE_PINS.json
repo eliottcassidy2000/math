@@ -1,0 +1,19 @@
+{
+  "normalization": "SHA256 after CRLF to LF",
+  "revision": "4e3e096444fe47f4f17985501a75b3481036d639",
+  "sha256_LF": {
+    "01-canon/theorems/THM-1286-D-graded-gate-tower-primorial-cascade.md": "dc53e74593064eb0546db364dd4c8f42fef827dabcfe684b331e006ba6665742",
+    "05-knowledge/results/aliquot_divisor_overlap_20261028/README.md": "539e7c419bf5cae2a8b9990e60a153a815dd5b4c7bbde38764f466bfd07ccdef",
+    "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/README.md": "3eabebc98e46f535059e661ce87425d2caae7e03b3480ecf8c8b963605f4a41e",
+    "05-knowledge/results/degree_local_tournament_enumeration_20261021/session22-enumeration/local_scale.py": "b76167ef82dda0b134681abce33e159d5dd80d15e92edb9e31ab9b490f6939ad",
+    "05-knowledge/results/free_bits_seven_fiftysix_20261028/FIFTYSIX.md": "fe28772eaaf5a89e968dd68a7be7e8b8e8f996745a659f0114eda8291023f767",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/session114_continuation_symmetry_20261030/lrc/GENERAL_CORE.md": "f8bec1a3d529a256fce78dd51137d8ecd4d3618b174e4bb6814e5605778504d7",
+    "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c",
+    "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_concurrent48/AUDIT.md": "a4505123894a20edbb3aa851867c7d91d008d1ed5eee08cf5402f7157b879fbe",
+    "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/EISENSTEIN_BERNSTEIN_TENSOR_PROOF.md": "9281b141014e2b8feb89570bc9203b127f675080aec2b597cdc214e96196be02",
+    "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/tensor_matching/PROOF.md": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66",
+    "05-knowledge/results/stability_748_guarded_encodings_20261102/STABILITY_48.md": "711863194c6440d153315f4d8b5153f02ca57750f590922e0be316ebb72a493b",
+    "05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N276.md": "59fe8d25ec5a15bdc61d1481baa389774a021370c59e4237a3cc81702b29aaf0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "method": "Unmodified same-tree documentation checker with read-only current-navigation overlays on clean materialized Session137 ancestor; every intervening path accounted for. No hydration or mutation of baseline.",
+  "baseline_commit": "67b24c26b20d0a1efc1fa36bccebdc2297e27a4f",
+  "baseline_tree": "9d18034b2c03f3bf261b9b9017089468997c6859",
+  "intervening_changed_paths_verified": 329,
+  "overlaid_paths": [
+    "00-navigation/CURRENT-FRONTIER.md",
+    "00-navigation/S111-plus.md",
+    "00-navigation/S138.md",
+    "01-canon/theorems/THM-1455-why-eleven-spectra.md"
+  ],
+  "new_publication_conflict_scan": "PASS",
+  "startup_bytes": 179966,
+  "startup_byte_budget": 180000,
+  "frontier_lines": 450,
+  "frontier_line_budget": 450,
+  "native_sparse_check": "Unavailable baseline documents; diagnostic retained separately."
+}

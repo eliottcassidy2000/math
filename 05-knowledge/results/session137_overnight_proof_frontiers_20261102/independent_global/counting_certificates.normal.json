@@ -1,0 +1,29 @@
+{
+  "controls": [
+    {
+      "gaps": [
+        5,
+        3,
+        4,
+        2
+      ],
+      "name": "C3=>C3"
+    },
+    {
+      "gaps": [
+        5,
+        3,
+        5,
+        3
+      ],
+      "name": "source=>C3=>C3"
+    }
+  ],
+  "inputs": 78,
+  "mutants_that_are_other_valid_certificates": 38,
+  "scope": "implementation-under-test audit; independent literal expected gaps for every labelled order0..4 plus two positive-Gamma controls, and every single-bit mutation of every valid certificate",
+  "single_bit_mutants": 23834,
+  "valid_certificates": 184,
+  "verdict": "PASS exact expected counts, canonical uniqueness, exhaustive local parser mutations, and zero extensions",
+  "verifier_source_sha256": "4fa3b805dd247bd7d6219f93e3bf4ee4c1b20209b123bf6033a7e832ae4c1ca7"
+}

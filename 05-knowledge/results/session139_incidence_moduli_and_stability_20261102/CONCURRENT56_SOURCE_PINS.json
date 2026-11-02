@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "reviewed_sources": [
+    {
+      "commit": "c1e79aee0e226c2c03409b96b17a92ba88bfcca1",
+      "path": "05-knowledge/results/stability_priority_spectrum_20261102/STABILITY_56.md",
+      "sha256": "c07cdd8fbb97d1d5848c32768c8decb23dad66df470de62751f33742c4610e0a",
+      "git_tree_entry": "100644 blob b551ff46344f277a843e44e1b0b05031952a8e5b"
+    },
+    {
+      "commit": "c1e79aee0e226c2c03409b96b17a92ba88bfcca1",
+      "path": "05-knowledge/results/stability_priority_spectrum_20261102/verify_stability_56.py",
+      "sha256": "3c9d29138c26eba4fc73a83ed4a46226128ae582b8fc6056bbcbc558b782c6e0",
+      "git_tree_entry": "100644 blob 47bdac37adeba7c1492485e032c959a5224aafa1"
+    }
+  ],
+  "independent_audit": "independent_concurrent56/AUDIT.md",
+  "selector_sha256": "23b25d038e340ad59f8919cedd5dfce8d3dd10aa226af26863acd196a95a5b15",
+  "credit": "Preserve the pinned spectrum proof source chain: Session138 baselines/equality; Session139 tails/duals and accepted tensor reserve; concurrent spectrum baseline/flexible dual; concurrent moduli discarded-degree bound. No sole-priority claim.",
+  "upstream_sources_modified": false
+}

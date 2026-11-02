@@ -1,0 +1,69 @@
+{
+  "certificates": [
+    {
+      "name": "c0>49/200",
+      "positive_margin": "569/315",
+      "uniform_extension": "Positive Taylor remainder gives exp4>partial>50; hence c0>(1-1/50)/4."
+    },
+    {
+      "name": "kappa<1/187",
+      "positive_margin": "3/280313",
+      "uniform_extension": "8/(n-1) decreases on n>=1500."
+    },
+    {
+      "name": "kappa<c0",
+      "positive_margin": "8963/37400",
+      "uniform_extension": "Use the preceding strict upper/lower bounds."
+    },
+    {
+      "name": "heavy_selected_weights_exceed_kappa",
+      "positive_margin": "13/748",
+      "uniform_extension": "eta=1/44; independent of n once kappa<1/187."
+    },
+    {
+      "name": "V_upper_n/7",
+      "positive_margin": "1275/83944",
+      "uniform_extension": "After dividing by n, 1/8+4/(n-1) decreases."
+    },
+    {
+      "name": "retained_heavy_mass>n/120",
+      "positive_margin": "9253539/26382400",
+      "uniform_extension": "f(n)=slope*n-49/1600-16n/(n-1); derivative=slope+16/(n-1)^2>0."
+    },
+    {
+      "name": "heavy_mass_monotonic_slope",
+      "positive_margin": "577/52800",
+      "uniform_extension": "Additional derivative term16/(n-1)^2 is nonnegative."
+    },
+    {
+      "name": "epsilon_endpoint",
+      "positive_margin": "190803618690450518341329705376",
+      "uniform_extension": "n=1500; equivalent to n*(3/4)^(n/30)<1/1000."
+    },
+    {
+      "name": "epsilon_decreases_after_multiplying_n",
+      "positive_margin": "23/3000",
+      "uniform_extension": "log(4/3)>1/4 by integral; derivative log[n*(3/4)^(n/30)]<1/n-1/120<0."
+    },
+    {
+      "name": "light_mass_absorption>3/20",
+      "positive_margin": "271/77000",
+      "uniform_extension": "Since L>=1, the fixed error<=1/1750 is absorbed into L/1750."
+    },
+    {
+      "name": "contraction_remaining_positive",
+      "positive_margin": "13/17",
+      "uniform_extension": "Squaring the remaining positive term is legitimate."
+    },
+    {
+      "name": "strict_contraction_square_gap",
+      "positive_margin": "137/9537",
+      "uniform_extension": "Thus4/17+sqrt(320/561)<1 without floating point."
+    }
+  ],
+  "cutoff": 1500,
+  "rational_certificates": 12,
+  "scope": "Exact endpoints plus stated analytic monotonic extensions; no tournament/graph census; active checks under Python -O",
+  "semantic_sha256": "06497c79c3f5b0905171f6484197662b809f75932653d415babddd98af2d262a",
+  "status": "PASS"
+}

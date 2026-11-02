@@ -1,0 +1,50 @@
+{
+  "bootstrap": [
+    {
+      "from": "49/200",
+      "mass": "539/1200",
+      "slack": "1448315581534472206927183302040107247304801670895263222871/78060438699970904403055522873344000000000000000000000000000",
+      "taylor_degree": 12,
+      "to": "7/20"
+    },
+    {
+      "from": "7/20",
+      "mass": "259/240",
+      "slack": "104736636982202302116472944314301070288283022976349/3517091126065889068784069638581387264000000000000000",
+      "taylor_degree": 12,
+      "to": "13/20"
+    },
+    {
+      "from": "13/20",
+      "mass": "691/240",
+      "slack": "8365108246734923475081832274460334379041430543153399/123098189412306117407442437350348554240000000000000000",
+      "taylor_degree": 12,
+      "to": "47/50"
+    },
+    {
+      "from": "47/50",
+      "mass": "5543/1200",
+      "slack": "48964214898902220802484290209381340846360787012947725181/3747757687927272502204311797760000000000000000000000000000",
+      "taylor_degree": 12,
+      "to": "99/100"
+    }
+  ],
+  "finite_R_controls": 277,
+  "local_checks": 25351,
+  "negative_order": 47,
+  "remaining_open_orders": [
+    10,
+    47
+  ],
+  "scalar_ratio24over5_hostile": "-1/288",
+  "scope": "The continuum minimization, monotone bootstrap and convex endpoints prove all n>=48. Finite controls are supplementary; no independent-agent audit claimed.",
+  "slot_slack": "1/100",
+  "status": "passed",
+  "tail_allowance": "47/300",
+  "tail_endpoints": [
+    "7688359604205/140737488355328",
+    "14467005/134217728"
+  ],
+  "threshold": 48,
+  "whole_graph_controls": 729
+}

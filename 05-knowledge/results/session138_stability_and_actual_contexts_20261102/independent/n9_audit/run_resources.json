@@ -1,0 +1,7 @@
+{
+  "action": "independent n9 graph certificate",
+  "address_space_limit_bytes": 41943040,
+  "returncode": 0,
+  "elapsed_seconds": 1.095530521008186,
+  "max_rss_kib": 6132
+}

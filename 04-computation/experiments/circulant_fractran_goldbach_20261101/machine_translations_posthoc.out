@@ -1,0 +1,6 @@
+T2b (post-hoc): stacks agree at each of the first 3000 TM steps: True; FRACTRAN steps 24405662
+  cumulative FRACTRAN steps at TM steps 10/100/1000/2000/3000: [(10, 86), (100, 4614), (1000, 1024712), (2000, 7792354), (3000, 24405662)]
+  largest register value at TM step 3000: 32734 (= 2^14..)
+T3 (post-hoc): BB(2) compiled FRACTRAN: 6 TM steps recorded, all agree True, halted True after 89 FRACTRAN steps, final stacks L=3 R=3 (4 ones): True
+
+POST-HOC CHECKS PASSED

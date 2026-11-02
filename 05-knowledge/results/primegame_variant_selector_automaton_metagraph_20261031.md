@@ -12,6 +12,14 @@ opus-2026-10-31-S70, 2026-10-31.
 - **REMARK / NUMEROLOGY:** the metagraph, fives and supersingular readings.
 - Independently audited, **SOUND WITH CORRECTIONS**, all applied (section 8; MISTAKE-697).
 
+**2026-11-02 scope correction:** the general units-digit assertion below required
+the reachable denominator lcm to divide the base. Prime support alone is
+insufficient: `(1/4,3/2)` selects different rules at 2 and 8, despite equality
+modulo 6. The corrected formulas, minimal moduli at every finite horizon,
+and squareful controls are in
+[FRACTRAN_PRECISION P1-P5](stability_priority_moduli_20261102/FRACTRAN_PRECISION.md).
+The PRIMEGAME phase law and its squarefree digit formulas are unchanged.
+
 ## 0. Directive
 
 Owner, 2026-10-31: "merge in {15,16,17,23,25} and other groups of 5 we have studied like the fermat primes, the
@@ -55,13 +63,13 @@ to {7,17,55} and {p,p^3,p^2qr} regarding F=U+S, think cellular automata and cone
      primes. There is no p^3 and no p^2qr.
 4. **Cellular automata** (THM-4852 (3)). Every FRACTRAN program in lowest terms over the primes <= P is a **selector
    (quasi-)cellular automaton** on base-P# digits.
-   - Each fraction acts digit-locally (division reads the right neighbour, multiplication the left).
-   - The fraction is chosen by the units digit.
+   - Each fraction acts digit-locally with a bounded neighbourhood depending on its prime-power exponents.
+   - Selection uses a finite low-digit block; the units digit suffices iff the reachable denominator lcm divides the base.
    - The map does not commute with the shift, so it is not a cellular automaton in the strict sense.
    - Prior art: Kari 2012 (3x/2 in base 6), Kari-Kopra 2017 (p/q in base pq), Cloney-Goles-Vichniac 1987, Conway 1987
      section 11, and the repository's Collatz version (Gilbreath note section 3). Only the general FRACTRAN statement is
      new to the repository.
-   - Checked on 20,000 steps of each list, and by the audit on 400 random programs.
+   - Checked on 20,000 steps of each list, and by the original audit on 400 random squarefree programs.
 5. **The n = 5 merged metagraph** (a REMARK). PRIMEGAME's register-flow graph (24 arcs, 19 pairs) and the metagraph
    (18 pairs, two black loops) cannot be matched by an adjacency-preserving bijection. But the comparison is nearly
    vacuous:
@@ -119,8 +127,9 @@ to {7,17,55} and {p,p^3,p^2qr} regarding F=U+S, think cellular automata and cone
   - x/q has digits floor(x_i/q) + (x_(i+1) mod q)(B/q);
   - p y has digits (p y_i mod B) + floor(p y_(i-1)/B), with no further carry;
   - the fraction is the first with q_k | x, read off from x_0 mod q_k.
-- Squarefree parts and the full primorial are not essential; lowest terms are (audit). The general statement holds with
-  B = P# for any program over the primes <= P.
+- Squarefree parts and the full primorial are not essential when p,q divide B; lowest terms are (audit).
+  For arbitrary prime powers supported in B=P#, larger digit neighbourhoods are needed. The exact selector
+  block has length max_p v_p(L), where L is the reachable denominator lcm (zero digits when L=1).
 
 ## 4. Remark: PRIMEGAME and the n = 5 merged metagraph
 

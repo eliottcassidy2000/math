@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "gates": 15246,
+  "threshold": 238,
+  "remaining_open": [
+    10,
+    237
+  ],
+  "closed_since_original_1500": 1262,
+  "graph_universe_count": 1827,
+  "bipartite_controls": [
+    {
+      "r": 2,
+      "nW_over_D_squared": "4"
+    },
+    {
+      "r": 3,
+      "nW_over_D_squared": "3"
+    },
+    {
+      "r": 4,
+      "nW_over_D_squared": "8/3"
+    },
+    {
+      "r": 5,
+      "nW_over_D_squared": "5/2"
+    },
+    {
+      "r": 6,
+      "nW_over_D_squared": "12/5"
+    },
+    {
+      "r": 7,
+      "nW_over_D_squared": "7/3"
+    },
+    {
+      "r": 8,
+      "nW_over_D_squared": "16/7"
+    },
+    {
+      "r": 9,
+      "nW_over_D_squared": "9/4"
+    },
+    {
+      "r": 10,
+      "nW_over_D_squared": "20/9"
+    },
+    {
+      "r": 11,
+      "nW_over_D_squared": "11/5"
+    },
+    {
+      "r": 12,
+      "nW_over_D_squared": "24/11"
+    },
+    {
+      "r": 13,
+      "nW_over_D_squared": "13/6"
+    },
+    {
+      "r": 14,
+      "nW_over_D_squared": "28/13"
+    },
+    {
+      "r": 15,
+      "nW_over_D_squared": "15/7"
+    },
+    {
+      "r": 16,
+      "nW_over_D_squared": "32/15"
+    },
+    {
+      "r": 17,
+      "nW_over_D_squared": "17/8"
+    },
+    {
+      "r": 18,
+      "nW_over_D_squared": "36/17"
+    },
+    {
+      "r": 19,
+      "nW_over_D_squared": "19/9"
+    },
+    {
+      "r": 20,
+      "nW_over_D_squared": "40/19"
+    }
+  ],
+  "constants": {
+    "c": "999/4000",
+    "t": "4/119",
+    "d": "1793/10000",
+    "lambda": "160000/25390673"
+  },
+  "tight_tail_slack": "6985054879/17001349120000"
+}

@@ -1,0 +1,34 @@
+{
+  "boundary_audits": [
+    "d=0",
+    "s=0",
+    "even-modulus minimum-representative ties",
+    "composite moduli",
+    "negative and noncanonical residue representatives",
+    "cube endpoints"
+  ],
+  "domain": {
+    "coordinates": "all real |x_i|<=1",
+    "dimension": "every integer s>=0",
+    "modulus": "every integer M>=2",
+    "residue": "every integer rho, canonical or noncanonical"
+  },
+  "exact_controls": {
+    "additional_mixed_dimension_points": 720,
+    "exhaustive_coset_points": 91212,
+    "independent_transform_identities": 720,
+    "minimum_representative_equalities": 9486,
+    "negative_controls_rejected": 4,
+    "normal_and_optimized_receipts_identical": true
+  },
+  "frozen_primary_and_arithmetic_packet_unchanged": true,
+  "git_mutations": false,
+  "mathematical_audit": "The same-coset induction is valid for every integer M>=2 and residue rho. Its base is the exact coset distance; a, a+c and a-c all retain rho modulo M. Sharpness follows from the minimum representative. No division by d occurs.",
+  "scope_exclusions": [
+    "stronger tournament Pfaffian bound for larger M",
+    "new universal stability cutoff",
+    "arbitrary-modulus Eisenstein phase argument",
+    "Riemann hypothesis"
+  ],
+  "status": "ACCEPTED"
+}

@@ -1,0 +1,320 @@
+{
+  "status": "PASS",
+  "base_commit": "9c7eb0b13e48e68b8fd076feccbf56d04cdd54aa",
+  "prior_packet_files_preserved": 83,
+  "frozen_prior_scientific_evidence_files": 78,
+  "frozen_prior_files_byte_unchanged": true,
+  "prior_mutable_summary_paths": [
+    "BOARD.md",
+    "README.md",
+    "SHA256SUMS",
+    "SYNTHESIS.md",
+    "VERIFICATION.md"
+  ],
+  "new_curated_lane_files": 57,
+  "new_verbatim_copies": 57,
+  "document_only_curation": [],
+  "new_reviewed_source_sha256_pins": 12,
+  "new_inherited_git_blob_pins_verified": 2,
+  "new_publication_markdown_links_checked": 58,
+  "links": [
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT2.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT2.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT3.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT3.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/cocycle/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/INTEGRAL_COCYCLE_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/WEIGHTED_COCYCLE_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/regular_spectral/REGULAR_CRITICAL_LINE.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/REGULAR_SPECTRAL_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/CONTEXT_CONTENT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/WEIGHTED_BINARY_SIMULATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/CONTENT_SIMULATION_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/REGULAR_CONTENT_BRIDGE_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT3.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SOURCE_PINS_CHECKPOINT3.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "01-canon/theorems/THM-1455-why-eleven-spectra.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/cocycle/CANON_REPAIR.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold526/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/N526_STRUCTURAL_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT2.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/verify_history.py",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SOURCE_PINS.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/DOC_OVERLAY_VERIFICATION_CHECKPOINT3.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/REGULAR_CONTENT_BRIDGE_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold526/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/CONTEXT_CONTENT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/WEIGHTED_BINARY_SIMULATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/cocycle/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/regular_spectral/REGULAR_CRITICAL_LINE.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/HISTORICAL_RECOVERY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/BOARD.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT2.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT3.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/ACCEPTANCE.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_AUDIT.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/ALL_MODULI_PADDING_AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "01-canon/theorems/THM-1455-why-eleven-spectra.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/cocycle/PROOF.md",
+      "scope": "materialized"
+    }
+  ],
+  "authorized_canon_paths_modified": [
+    "01-canon/theorems/THM-1455-why-eleven-spectra.md"
+  ],
+  "pending_lanes_excluded": [
+    "tensor matching",
+    "local-factor hostiles"
+  ],
+  "scope": "Checkpoint 3: accepted cocycle, regular spectral circle, context content/simulation, coarse regular-content bridge and narrow historical repair; dimension frontier unchanged."
+}

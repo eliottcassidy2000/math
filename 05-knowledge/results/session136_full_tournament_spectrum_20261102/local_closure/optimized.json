@@ -1,0 +1,127 @@
+{
+  "binary_graph_word_length_bound": 9,
+  "binary_graphs_checked": 1023,
+  "c_residue_modulus_bound": 160,
+  "constructor_digest": "ce13d04dffe066eff3c4b423adb7578e76cf1420d7585d5cbb1aa374642a5000",
+  "constructor_residues_checked": 12880,
+  "direct_constructor_graphs": 76,
+  "expanded_words_checked": 1759,
+  "largest_constructor_bit_length": 22846022,
+  "odd_affine_states_checked": 43679,
+  "one_apex_13_inverse_candidates": [
+    11,
+    9,
+    17,
+    15,
+    19,
+    15,
+    23
+  ],
+  "rejected_mutations": [
+    {
+      "M": 24,
+      "mutation": "omit_reset",
+      "observed": 12,
+      "target": 0
+    },
+    {
+      "M": 5,
+      "mutation": "reverse_commutator",
+      "observed": 2,
+      "target": 0
+    }
+  ],
+  "selected_mixed_moduli": [
+    8640,
+    16128,
+    1782,
+    729,
+    1024,
+    808,
+    6096
+  ],
+  "selected_mixed_targets": 70,
+  "short_examples": [
+    {
+      "H": 5,
+      "M": 1,
+      "word": "100",
+      "z": 0
+    },
+    {
+      "H": 5,
+      "M": 2,
+      "word": "100",
+      "z": 0
+    },
+    {
+      "H": 19,
+      "M": 2,
+      "word": "10100",
+      "z": 1
+    },
+    {
+      "H": 9,
+      "M": 3,
+      "word": "1000",
+      "z": 1
+    },
+    {
+      "H": 9,
+      "M": 4,
+      "word": "1000",
+      "z": 0
+    },
+    {
+      "H": 627,
+      "M": 4,
+      "word": "1010101000",
+      "z": 1
+    },
+    {
+      "H": 157,
+      "M": 4,
+      "word": "10101000",
+      "z": 2
+    },
+    {
+      "H": 39,
+      "M": 4,
+      "word": "101000",
+      "z": 3
+    },
+    {
+      "H": 33,
+      "M": 5,
+      "word": "100000",
+      "z": 1
+    },
+    {
+      "H": 39,
+      "M": 6,
+      "word": "101000",
+      "z": 1
+    },
+    {
+      "H": 9,
+      "M": 6,
+      "word": "1000",
+      "z": 4
+    },
+    {
+      "H": 17,
+      "M": 7,
+      "word": "10000",
+      "z": 1
+    }
+  ],
+  "status": "PASS",
+  "strong_binary_graphs": 256,
+  "unrestricted_13_adjacency": [
+    22,
+    12,
+    24,
+    17,
+    2
+  ]
+}

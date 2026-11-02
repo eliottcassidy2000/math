@@ -1,0 +1,14 @@
+N1  PRIMEGAME priority structure
+  [OK] group sizes 17:3, 13:2, 11:2, 19:2, 23:1, 29:1, state-free:3 -- {13: 2, 17: 3, 19: 2, 11: 2, 29: 1, 23: 1, 'free': 3}
+  [OK] PRIMEGAME is NOT one-hot: reachable integers with no state prime occur, and 55/1 (index 13) is applicable at EVERY integer, so it is co-applicable with every state group -- 1430 of 200,000 visited integers have no state prime; 26 distinct realised applicable sets straddle a state group and the state-free group
+    most frequent straddling applicable sets (fraction indices, 0-based; 8 = 1/17, 12 = 15/2, 13 = 55/1): [((0, 9, 11, 12, 13), 32149), ((3, 7, 11, 12, 13), 28752), ((6, 11, 12, 13), 27955), ((1, 2, 8, 11, 12, 13), 27800)]
+  [OK] the inter-group orientation matters (state-free group first gives a different run) -- PRIMEGAME [15, 825, 725, 1925, 2275] vs reordered [15, 825, 45375, 2495625, 137259375]
+N2  GOLDBACHGAME one-hot check (fractions read from goldbachgame.out)
+  [OK] GOLDBACHGAME: 37 fractions, each with exactly one non-register (state) prime, exponent 1, in numerator and denominator
+N3  H-spectrum section: multiplicativity over strong components, strong minima
+  [OK] H(T) = product of H over strong components, every labelled tournament n = 3..6
+  [OK] minimum H over strong m-tournaments = Moon chain value 3, 5, 9, 15 (m = 3..6), all >= m -- {3: 3, 4: 5, 5: 9, 6: 15}
+
+ALL AUDIT CHECKS AGREE
+python3 -B   7.96s user 0.06s system 94% cpu 8.470 total
+rc=0

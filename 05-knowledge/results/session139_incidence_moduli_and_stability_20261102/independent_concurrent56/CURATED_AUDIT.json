@@ -1,0 +1,136 @@
+{
+  "credit": "Preserve the pinned spectrum proof source chain: Session138 baselines/equality; Session139 tails/duals and accepted tensor reserve; concurrent spectrum baseline/flexible dual; concurrent moduli discarded-degree bound. No sole-priority claim.",
+  "exact_controls": {
+    "independent_Taylor_degrees": [
+      4,
+      5,
+      5
+    ],
+    "independent_active_checks": 40,
+    "independent_penalty_bound": "1/10000",
+    "outputs_equal_under_optimization": true,
+    "producer_gates": 4351
+  },
+  "exclusions": [
+    "producer_replay directory is an operational isolated copy of already-published upstream files, not a new scientific artifact.",
+    "No upstream scientific/canonical file selected for replacement.",
+    "All older threshold proofs/audits remain unchanged."
+  ],
+  "files": [
+    {
+      "bytes": 9826,
+      "path": "independent_concurrent56/AUDIT.md",
+      "sha256": "ac9d15ca803a14d8def4e32a537176d7df67d8d89804c57af3ba36479f608d86"
+    },
+    {
+      "bytes": 4078,
+      "path": "independent_concurrent56/audit_n56.py",
+      "sha256": "6878007bc977f6e35a08a6f2e676a1212c243fd35cff8b2c78e638730652e725"
+    },
+    {
+      "bytes": 2330,
+      "path": "independent_concurrent56/normal.json",
+      "sha256": "4c468dc0d656f06fabb37a875dd71a0818f6472986e040648c0d0dd649f2af82"
+    },
+    {
+      "bytes": 2330,
+      "path": "independent_concurrent56/optimized.json",
+      "sha256": "4c468dc0d656f06fabb37a875dd71a0818f6472986e040648c0d0dd649f2af82"
+    },
+    {
+      "bytes": 105,
+      "path": "independent_concurrent56/negative_threshold55.json",
+      "sha256": "3a1a999bba700700cc625d0ee83cb74ed213572655708774892ab753dfbca949"
+    },
+    {
+      "bytes": 105,
+      "path": "independent_concurrent56/negative_threshold55_optimized.json",
+      "sha256": "3a1a999bba700700cc625d0ee83cb74ed213572655708774892ab753dfbca949"
+    },
+    {
+      "bytes": 79,
+      "path": "independent_concurrent56/negative_dual.json",
+      "sha256": "c8f4acd54a17a2832705e4f8c415092a4eb991c350c8971eced9c911ce9f410f"
+    },
+    {
+      "bytes": 79,
+      "path": "independent_concurrent56/negative_dual_optimized.json",
+      "sha256": "c8f4acd54a17a2832705e4f8c415092a4eb991c350c8971eced9c911ce9f410f"
+    },
+    {
+      "bytes": 1039,
+      "path": "independent_concurrent56/producer_normal.json",
+      "sha256": "bb70145028d74bae7b32bc0c1c0adf69338d4d9ed672b309414c6bfd5367c9af"
+    },
+    {
+      "bytes": 1039,
+      "path": "independent_concurrent56/producer_optimized.json",
+      "sha256": "bb70145028d74bae7b32bc0c1c0adf69338d4d9ed672b309414c6bfd5367c9af"
+    },
+    {
+      "bytes": 1345,
+      "path": "independent_concurrent56/verify_curated_audit.py",
+      "sha256": "ae3eb66d1b6b633f30b94a5455cc37ed5a180bb5aa6879e115611b81eb414113"
+    }
+  ],
+  "generated_manifest_exclusions": [
+    "independent_concurrent56/CURATED_AUDIT.json",
+    "independent_concurrent56/SHA256SUMS",
+    "independent_concurrent56/manifest_verification.json",
+    "independent_concurrent56/manifest_verification.optimized.json"
+  ],
+  "negative_controls": [
+    {
+      "arguments": [
+        "--threshold",
+        "55"
+      ],
+      "expected_exit_code": 1,
+      "rejected_at": "bootstrap_advance_0"
+    },
+    {
+      "arguments": [
+        "--bad-dual"
+      ],
+      "expected_exit_code": 1,
+      "rejected_at": "dual_remainder_uniform_nonnegative"
+    }
+  ],
+  "receipt_pairs": [
+    [
+      "independent_concurrent56/normal.json",
+      "independent_concurrent56/optimized.json",
+      "PASS"
+    ],
+    [
+      "independent_concurrent56/negative_threshold55.json",
+      "independent_concurrent56/negative_threshold55_optimized.json",
+      "REJECTED"
+    ],
+    [
+      "independent_concurrent56/negative_dual.json",
+      "independent_concurrent56/negative_dual_optimized.json",
+      "REJECTED"
+    ],
+    [
+      "independent_concurrent56/producer_normal.json",
+      "independent_concurrent56/producer_optimized.json",
+      "PASS"
+    ]
+  ],
+  "root": "Parent of independent_concurrent56; paths root-relative.",
+  "scope": "Exact weighted stability and equality for n>=56; orders 10..55 unresolved; upstream scientific sources unchanged.",
+  "status": "FROZEN_AND_INDEPENDENTLY_AUDITED",
+  "upstream_sources": [
+    {
+      "commit": "c1e79aee0e226c2c03409b96b17a92ba88bfcca1",
+      "path": "05-knowledge/results/stability_priority_spectrum_20261102/STABILITY_56.md",
+      "sha256": "c07cdd8fbb97d1d5848c32768c8decb23dad66df470de62751f33742c4610e0a"
+    },
+    {
+      "commit": "c1e79aee0e226c2c03409b96b17a92ba88bfcca1",
+      "path": "05-knowledge/results/stability_priority_spectrum_20261102/verify_stability_56.py",
+      "sha256": "3c9d29138c26eba4fc73a83ed4a46226128ae582b8fc6056bbcbc558b782c6e0"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+M1  Leng table
+  [OK] 50 slots, 49 instructions, 22 right and 27 left moves, (24,0) the only undefined slot -- R=22 L=27 undefined=[(24, 0)]
+M2  TM -> radius-1 CA (full-window updates)
+  [OK] alphabet size 53 = 2 + 25*2 + 1; rule quiescent away from heads (exhaustive) -- 53
+  [OK] CA = TM at every step for 200,000 steps (full updates; full tape compared every 100 steps) -- ran at t=200000
+  [OK] BB(2) CA (9 symbols) writes HALT at step 7 -- halt at t=7
+M3  TM -> FRACTRAN (THM-4858 (b) construction)
+  [OK] 568 fractions = 25*4 + 22*9 + 27*10; 349 primes (4 registers + 345 control); largest 2351 -- 568 fractions, 349 primes, 345 control, largest 2351
+  [OK] first 12 fractions equal those printed in machine_translations.out -- 65/99, 19/33, 17/11, 11/13, 145/207, 37/69, 31/23, 23/29, 215/369, 53/123, 47/41, 41/43
+  [OK] one-hot after reduction: exactly one control prime (exponent 1) in each numerator and denominator, different ones; no register on both sides (nothing cancels)
+  [OK] every state with fractions ends with an unconditional fraction; the only fraction-less state is B0_24 -- halting states ['B0_24']
+M4  own vector interpreter, accelerated, vs own TM
+  [OK] stacks and control state at every instruction exit = TM after k steps, k = 1..5000
+  [OK] FRACTRAN steps for the first 3,000 TM steps = 24,405,662 (interpreter count = closed-form count) -- (24405662, 24405662)
+    FRACTRAN steps for the first 5000 TM steps: 135789404; largest register then: 245757
+M5  literal big-integer FRACTRAN vs the vector interpreter (single steps)
+  [OK] literal integer FRACTRAN = vector interpreter at every one of the 43582 configurations of the first 300 TM steps
+  [OK] the session's T2c ("first 300 TM steps") stopped after 1,948 FRACTRAN steps -- 1948 FRACTRAN steps = only 66 TM steps
+M6  the failed T2b / T3 numbers from the misaligned "entry" convention (accelerated; helper returns recorded when the extraction loop runs once)
+  [OK] 3,000 misaligned entries end at FRACTRAN step 20,789,496 (the failed T2b figure) -- 20789496; they cover only 2903 TM steps
+  [OK] misaligned entry 3 is (P23, L=0, R=1), a helper return, vs TM step 3 = (23, L=0, R=6) -- (23, 0, 1, 10, True)
+M7  BB(2) compiled
+  [OK] BB(2): TM halts after 6 steps with four 1s; compiled FRACTRAN halts in B1_2 with four 1s (L, head bit, A) -- TM 6 steps, 4 ones; FRACTRAN 89 steps, state B1_2, regs {2: 3, 3: 0, 5: 1}, ones 4
+
+elapsed 5.4 s
+ALL AUDIT CHECKS AGREE
+python3 -B   5.11s user 0.05s system 94% cpu 5.447 total
+rc=0

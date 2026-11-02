@@ -1,0 +1,10 @@
+{"bases":74,"literal child checks":1096,"test":"seam identities","two-ear completions":16928}
+{"maximum radius bound":0,"order":4,"replacement steps":0,"strong labelled parents":24,"test":"constructive parent overlap"}
+{"maximum radius bound":1,"order":5,"replacement steps":544,"strong labelled parents":544,"test":"constructive parent overlap"}
+{"maximum radius bound":2,"order":6,"replacement steps":44640,"strong labelled parents":22320,"test":"constructive parent overlap"}
+{"child order":5,"components":[{"image":[9,11,13,15],"vertices":544}],"root-marked undirected edge counts":{"exchange":1680,"flip":2160},"strong children":544,"test":"full labelled unit atlas"}
+{"child order":6,"components":[{"image":[15,17,19],"vertices":4320},{"image":[23,25],"vertices":4320},{"image":[27,29,31,33],"vertices":7440},{"image":[37],"vertices":3600},{"image":[41,43,45],"vertices":2640}],"root-marked undirected edge counts":{"exchange":59040,"flip":65280},"strong children":22320,"test":"full labelled unit atlas"}
+{"all pivots":"nonstrong deletion parent, same-direction two-bit change","explicit base H":3,"explicit base masks":[4,1,2,7,15],"first child codes and pivot":[89,80,0],"labelled H25-to-H27 distance-two bridges":1440,"strong-child diamond":{"16":27,"17":23,"24":33,"25":25},"test":"missing scalar seam repair"}
+{"H":3159,"base masks":[450,452,449,23,39,15,184,312,120],"base order":9,"distinct seam gaps":507,"forced divisor":6,"minimum nonzero seam":30,"nonconstant attachment pairs":260100,"quotient order":3,"seam gcd":6,"test":"C3 substitution seam obstruction","witness child counts x_to_y,y_to_x":[50265,50295],"witness cuts":[9,68]}
+{"H":241137,"base masks":[3586,3588,3585,23,39,15,191,319,127,1528,2552,1016],"base order":12,"forced divisor":18,"quotient order":4,"seam gcd":18,"test":"C3 substitution seam obstruction"}
+PASS semantic_sha256=36080794d9f15949f533caa2ef78ef42237f7d3f98413dbb90631d5cab1cedf0

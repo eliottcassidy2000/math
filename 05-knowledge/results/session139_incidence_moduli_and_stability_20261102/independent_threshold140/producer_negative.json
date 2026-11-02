@@ -1,0 +1,16 @@
+{
+  "control": "threshold139",
+  "runs": [
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected_at": "bootstrap_step_0"
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "rejected_at": "bootstrap_step_0"
+    }
+  ],
+  "status": "EXPECTED_REJECTION"
+}

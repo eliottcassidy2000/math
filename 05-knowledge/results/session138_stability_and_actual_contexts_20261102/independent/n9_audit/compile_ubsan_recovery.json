@@ -1,0 +1,11 @@
+{
+  "action": "authorized recovery compile UBSan with64MiB data cap",
+  "authorization": "Root clarified40MB was desired runtime, not a hard compile ceiling, and authorized64MB or128MB compile data cap.",
+  "data_limit_bytes": 67108864,
+  "rss_limit_bytes": 134217728,
+  "returncode": 0,
+  "elapsed_seconds": 0.5153117520385422,
+  "max_rss_kib": 50468,
+  "stdout": "",
+  "stderr": ""
+}

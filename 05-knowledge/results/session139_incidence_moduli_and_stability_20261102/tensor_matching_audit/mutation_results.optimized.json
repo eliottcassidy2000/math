@@ -1,0 +1,106 @@
+{
+  "mutations": {
+    "conditional_product_factor": {
+      "false_claim_gap": "-1/4",
+      "true_absolute_floor": "3/4",
+      "u": "3",
+      "v": "-1/4"
+    },
+    "ignore_other_fractional_edges": {
+      "false_claim_gap": "-129/256",
+      "u": "165/256",
+      "v": "-33/128"
+    },
+    "missing_coordinate_domain": {
+      "b": [
+        1,
+        -2
+      ],
+      "false_claim_gap": "-4",
+      "x": "2"
+    },
+    "missing_even_tail": {
+      "b": [
+        1,
+        -1
+      ],
+      "false_claim_gap": "-1",
+      "x": "1"
+    },
+    "missing_odd_constant": {
+      "b": [
+        0,
+        0
+      ],
+      "false_claim_gap": "-1",
+      "x": "0"
+    },
+    "omit_no_isolate_correction": {
+      "false_claim_gap": "-1/4",
+      "u": "3/4",
+      "v": "-1/4"
+    },
+    "termwise_pfaffian_floor": {
+      "binary_cross_bits": 513,
+      "false_claim_gap": "-4/9",
+      "polynomial": "3x-2",
+      "skew_matrix": [
+        [
+          "0",
+          "2/3",
+          "1",
+          "-1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-2/3",
+          "0",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ],
+        [
+          "-1",
+          "1",
+          "0",
+          "-1",
+          "1",
+          "-1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0",
+          "-1",
+          "-1"
+        ],
+        [
+          "1",
+          "1",
+          "-1",
+          "1",
+          "0",
+          "-1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "skew_pair": "2/3"
+    },
+    "wrong_signed_parity_n2": {
+      "false_claim_gap": "-1/2",
+      "u": "3/4",
+      "v": "-1/4"
+    }
+  },
+  "status": "all eight false strengthenings rejected exactly"
+}

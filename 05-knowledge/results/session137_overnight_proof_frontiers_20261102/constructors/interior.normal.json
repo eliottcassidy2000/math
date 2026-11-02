@@ -1,0 +1,31 @@
+{
+  "all_nonempty_cut_normalizations": 32767,
+  "complete_labelled_parent_orders": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "h1_L1_canonical_native_bases": [
+    [
+      1,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      3,
+      5,
+      1
+    ]
+  ],
+  "h1_L1_exact_all_order_H_language": "{1,3} union {3*2^k-1,5*2^k-1:k>=1}",
+  "h1_L1_transitive_cut_controls_through_order10": 81,
+  "literal_reencoded_suffix_controls": 5084,
+  "maximum_interior_L_in_universe": 45,
+  "scope": "All-order statements use the proved fixed-(h,L) normal form; exact finite universes above are implementation controls.",
+  "status": "PASS",
+  "suffix_operator_commutation_controls": 300
+}

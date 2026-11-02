@@ -1,0 +1,10 @@
+{
+  "action": "compile independent C audit",
+  "data_limit_bytes": 25165824,
+  "rss_limit_bytes": 41943040,
+  "returncode": 0,
+  "elapsed_seconds": 0.09834388800663874,
+  "max_rss_kib": 18432,
+  "stdout": "",
+  "stderr": ""
+}

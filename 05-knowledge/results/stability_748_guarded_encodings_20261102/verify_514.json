@@ -1,0 +1,20 @@
+{
+  "dual_coefficient": "2491/160000",
+  "final_surplus": "187/41120000",
+  "heavy_endpoint_slack": "86393731/1026000000",
+  "hostiles": [
+    "discarding U",
+    "same constants at512"
+  ],
+  "large_tail_endpoint": "5789452743369435231/47408132269433547653120",
+  "remaining_open_orders": [
+    10,
+    513
+  ],
+  "scope": "Exact endpoints plus analytic monotonicity prove all n>=514; the finite controls alone do not.",
+  "small_tail_slack": "463842995492257303903/70781597908992000000",
+  "status": "passed",
+  "tail_allowance": "899/1000000",
+  "threshold": 514,
+  "unsplit_finite_controls": 141556
+}

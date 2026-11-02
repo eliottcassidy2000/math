@@ -1,0 +1,27 @@
+{
+  "explicit_lost_root_control": "(B^2)11-(A^2)11=5t^2/18",
+  "first_checkpoint_files_changed": false,
+  "independent_receipts": [
+    "audit_regular_spectrum.out",
+    "audit_regular_spectrum_optimized.out",
+    "audit_regular_circle.out",
+    "audit_regular_circle_optimized.out",
+    "regular_negative_controls.out"
+  ],
+  "mathematical_scope": [
+    "general regular weighted critical line/pole circle/functional equation",
+    "regular five-vertex cospectral Hamiltonian obstruction",
+    "exact oscillation width on the stated 3+2 rank-two regular circle only",
+    "modular hostile only where denominators are units"
+  ],
+  "no_claims": [
+    "RH/GRH",
+    "full weighted isospectral-fibre classification",
+    "stability closure from this family"
+  ],
+  "proof_path": "/tmp/session139_research/regular_spectral/REGULAR_CRITICAL_LINE.md",
+  "root_scope": "all-one marked resolvent preserved; individual vertex-root responses need not agree",
+  "sha256": "751f4ebb6580f9933fc95e78c3b103341cbbc0571ef4a964f6844db889ef8169",
+  "source_baseline": "291b4d9757842c02aa451beb65acfade2848609b",
+  "status": "ACCEPTED"
+}

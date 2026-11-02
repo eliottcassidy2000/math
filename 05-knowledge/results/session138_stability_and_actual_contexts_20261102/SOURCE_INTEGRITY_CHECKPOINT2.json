@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "added_curated_files": 35,
+  "frozen_first_checkpoint_lane_files": 108,
+  "frozen_first_checkpoint_lane_files_changed": [],
+  "first_checkpoint_packet_paths_preserved": 115,
+  "new_manifest_entries": 27,
+  "new_reviewed_pin_entries": 17,
+  "curated_files": [
+    {
+      "path": "stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md",
+      "bytes": 4574,
+      "sha256": "162c35eb28ad5319a44961c61f48b45267464c6787b6e5847fcff839aaaa734a"
+    },
+    {
+      "path": "stability/graph8_zero_alpha.cpp",
+      "bytes": 2319,
+      "sha256": "7ae249fb605c06a046107e01577c0974740195a961c28d519a0e59702bc44918"
+    },
+    {
+      "path": "stability/graph8_zero_alpha.json",
+      "bytes": 181,
+      "sha256": "f98670101810c31f366c88fe3c473cbafa2b69198be10519ea0b3036ef3aac97"
+    },
+    {
+      "path": "stability/graph8_zero_alpha.ubsan.json",
+      "bytes": 181,
+      "sha256": "f98670101810c31f366c88fe3c473cbafa2b69198be10519ea0b3036ef3aac97"
+    },
+    {
+      "path": "stability/N8_PUBLIC_FILES.txt",
+      "bytes": 107,
+      "sha256": "3a7a7768179681c58027e857144f7e1593e1a46954158e2d1508449501b5d12c"
+    },
+    {
+      "path": "stability/N8_SHA256SUMS",
+      "bytes": 371,
+      "sha256": "df1e7162c749d34deab68d4158563b6f58a51e9d38c311bb4e67663738612797"
+    },
+    {
+      "path": "stability/RESOLVENT_ROBUSTNESS_CROSSCHECK.md",
+      "bytes": 2863,
+      "sha256": "943775526eb8100c70702fda334892c55e4a706169bdc2811544edf10ca9c6d4"
+    },
+    {
+      "path": "asymptotic_stability/PROOF.md",
+      "bytes": 6500,
+      "sha256": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0"
+    },
+    {
+      "path": "independent/ORDER_EIGHT_CONTINUATION_AUDIT.md",
+      "bytes": 2620,
+      "sha256": "266262581bcd855fed0fbe8693b82d986956cd99a9816f105716de3184292d5a"
+    },
+    {
+      "path": "independent/ORDER_EIGHT_REVIEWED_SOURCES.json",
+      "bytes": 673,
+      "sha256": "06c3693a59c595742e41bbbe83f101af79d84bb3326af95c13f8ea107b16181c"
+    },
+    {
+      "path": "independent/n8_audit/FINAL_GRAPH_AUDIT.md",
+      "bytes": 4324,
+      "sha256": "52e97400883f0a478c1adc83170262c4c0a8014264c9b627404f11829b3ac173"
+    },
+    {
+      "path": "independent/n8_audit/graph8_no_wedge.cpp",
+      "bytes": 4026,
+      "sha256": "a4a3d57923ab747702775e4a3b70c56c35c97ffdfae28f6d4d170eea94725ff6"
+    },
+    {
+      "path": "independent/n8_audit/no_wedge.normal.json",
+      "bytes": 592,
+      "sha256": "043a19e9449fdfefc0acfa0c45f1628598ed37905cbe6beacaccc5ecb2a6eaf5"
+    },
+    {
+      "path": "independent/n8_audit/no_wedge.ubsan.json",
+      "bytes": 592,
+      "sha256": "043a19e9449fdfefc0acfa0c45f1628598ed37905cbe6beacaccc5ecb2a6eaf5"
+    },
+    {
+      "path": "independent/asymptotic_audit/AUDIT.md",
+      "bytes": 10048,
+      "sha256": "ceebdd28462af5625f3d5ba0f5fc865da8fa2778df5fe995bdd71f8b6dcf0ec8"
+    },
+    {
+      "path": "independent/asymptotic_audit/check.py",
+      "bytes": 7514,
+      "sha256": "eda7afbaf1792732fa82d2b2286edd19f1111ce8c86b1434cae918eeee7b5834"
+    },
+    {
+      "path": "independent/asymptotic_audit/normal.json",
+      "bytes": 739,
+      "sha256": "5268ea04848f7be54a9be7953fdd16a49246b5a2af2decc42faf86c9f4c992b0"
+    },
+    {
+      "path": "independent/asymptotic_audit/optimized.json",
+      "bytes": 739,
+      "sha256": "5268ea04848f7be54a9be7953fdd16a49246b5a2af2decc42faf86c9f4c992b0"
+    },
+    {
+      "path": "independent/asymptotic_audit/REVIEWED_SOURCES.json",
+      "bytes": 1029,
+      "sha256": "62014bf51137aa822da0dcf2c425428b3187789be37d4d30f117e0aa2ded3b11"
+    },
+    {
+      "path": "independent/SECOND_CHECKPOINT_FILES.json",
+      "bytes": 2031,
+      "sha256": "2658557bcd6e6bec0482fbe90c309adc604c124642e5eaefe4474371f6664800"
+    },
+    {
+      "path": "independent/SECOND_CHECKPOINT_SHA256SUMS",
+      "bytes": 1064,
+      "sha256": "2dd81df60ba23d6dd2ef3ffd1d184d38e8c428fb991cf48d728d617ea7317e20"
+    },
+    {
+      "path": "zero_balance_later/NO_ZERO_THEOREM.md",
+      "bytes": 10188,
+      "sha256": "6adadf59d2628d4905e835ac82b83b4723e89f76d7829043f4930c7db227fd6b"
+    },
+    {
+      "path": "zero_balance_later/README.md",
+      "bytes": 2194,
+      "sha256": "672b05aa7097ae458c5dac19b4963b206c695bf4c9107d7fdef7f2e0716d1aa5"
+    },
+    {
+      "path": "zero_balance_later/audit.out",
+      "bytes": 1696,
+      "sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb"
+    },
+    {
+      "path": "zero_balance_later/audit.py",
+      "bytes": 4027,
+      "sha256": "1108376ed63a2e9f072f3435e414e4ba4ec4d330c7562bb8ad1e3b25da730e89"
+    },
+    {
+      "path": "zero_balance_later/audit_optimized.out",
+      "bytes": 1696,
+      "sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb"
+    },
+    {
+      "path": "zero_balance_later/mixed_profile_inputs.json",
+      "bytes": 2577,
+      "sha256": "6ed28d8ee3ecca265f788db7c2ac9c1e455e147af5d747d018aabe2cff124e3f"
+    },
+    {
+      "path": "zero_balance_later/public_manifest.json",
+      "bytes": 1213,
+      "sha256": "5d7e77c7dfe883654e279ef1d6f1d93e5bf29ae603de5dec3b9405a36097244a"
+    },
+    {
+      "path": "zero_balance_later/SHA256SUMS",
+      "bytes": 577,
+      "sha256": "29449d38cda406fd3af20f31334b1597ddbb27d092de26de6b60a8817df63375"
+    },
+    {
+      "path": "independent_zero_balance_later/AUDIT.md",
+      "bytes": 11779,
+      "sha256": "71ecb982c9d65b316d23bb65e7fec55b12a8447e23212e5c8b9b4e03a19ee95a"
+    },
+    {
+      "path": "independent_zero_balance_later/SOURCE_PINS.json",
+      "bytes": 1827,
+      "sha256": "8337c959220d4fa92ffbee8a2bb86f4f9eb5b0b15d345d9ef85598bfeb9ce7dd"
+    },
+    {
+      "path": "independent_zero_balance_later/audit_zero_balance.py",
+      "bytes": 7310,
+      "sha256": "1977cee210527a648006f9d4deb89a2d75d6da9a29e3c068ac9514803925a6bf"
+    },
+    {
+      "path": "independent_zero_balance_later/normal.json",
+      "bytes": 3595,
+      "sha256": "2510edaf1ee4c59cf1d96619ab71c5bea57376a539e464423c0f2e2f8fa5d770"
+    },
+    {
+      "path": "independent_zero_balance_later/optimized.json",
+      "bytes": 3595,
+      "sha256": "2510edaf1ee4c59cf1d96619ab71c5bea57376a539e464423c0f2e2f8fa5d770"
+    },
+    {
+      "path": "independent_zero_balance_later/SHA256SUMS",
+      "bytes": 405,
+      "sha256": "a92099f16b9c8450411e3b1ab518b31903bd89c1e9ae1292d696eebba710d6b8"
+    }
+  ],
+  "scope": "Second checkpoint: final zero-wedge n8; accepted O(n^-2) asymptotic theorem and resolvent mechanism; actual-module sign chambers. No additional exact-equality candidate."
+}

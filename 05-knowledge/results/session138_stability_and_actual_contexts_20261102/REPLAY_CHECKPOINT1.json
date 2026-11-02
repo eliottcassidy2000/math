@@ -1,0 +1,265 @@
+{
+  "status": "PASS",
+  "scientific_executions": 12,
+  "builds": 2,
+  "elapsed_seconds": 38.397,
+  "frozen_payload_files": 108,
+  "portable_originals_changed": [],
+  "scope": "Fresh relocated replay of selected final independent and exact-resource programs; not a full replay of every larger corroborative certificate.",
+  "records": [
+    {
+      "tag": "graph_gray_O2-build",
+      "directory": "independent",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph_gray_audit.cpp",
+        "-o",
+        "graph_gray_O2"
+      ],
+      "seconds": 0.627,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph_gray_O2",
+      "directory": "independent",
+      "command": [
+        "./graph_gray_O2"
+      ],
+      "seconds": 0.281,
+      "exit": 0,
+      "stdout_bytes": 326,
+      "stdout_sha256": "4ee80ef5f518510c45f85a0fa14722b75a2e32a85990bafbf692de204eea669d",
+      "stderr": "",
+      "expected": "independent/graph_gray_audit.jsonl",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph_gray_UBSan-build",
+      "directory": "independent",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph_gray_audit.cpp",
+        "-o",
+        "graph_gray_UBSan"
+      ],
+      "seconds": 0.709,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph_gray_UBSan",
+      "directory": "independent",
+      "command": [
+        "./graph_gray_UBSan"
+      ],
+      "seconds": 0.338,
+      "exit": 0,
+      "stdout_bytes": 326,
+      "stdout_sha256": "4ee80ef5f518510c45f85a0fa14722b75a2e32a85990bafbf692de204eea669d",
+      "stderr": "",
+      "expected": "independent/graph_gray_audit.ubsan.jsonl",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "audit_multistar-normal",
+      "directory": "independent",
+      "command": [
+        "python3",
+        "-B",
+        "audit_multistar.py"
+      ],
+      "seconds": 9.328,
+      "exit": 0,
+      "stdout_bytes": 456,
+      "stdout_sha256": "2393ae031a5ddf734cd46edb76d4b4fcf0e1da5e73f09622250814172fbf7211",
+      "stderr": "",
+      "expected": "independent/multistar.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "audit_multistar-O",
+      "directory": "independent",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit_multistar.py"
+      ],
+      "seconds": 10.011,
+      "exit": 0,
+      "stdout_bytes": 456,
+      "stdout_sha256": "2393ae031a5ddf734cd46edb76d4b4fcf0e1da5e73f09622250814172fbf7211",
+      "stderr": "",
+      "expected": "independent/multistar.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "audit_profile_dichotomy-normal",
+      "directory": "independent",
+      "command": [
+        "python3",
+        "-B",
+        "audit_profile_dichotomy.py"
+      ],
+      "seconds": 5.337,
+      "exit": 0,
+      "stdout_bytes": 2366,
+      "stdout_sha256": "305a9cce98f8bc8b4956e42a251d533c88d75d15e0aa9d9ad51b078660fafec6",
+      "stderr": "",
+      "expected": "independent/profile_dichotomy.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "audit_profile_dichotomy-O",
+      "directory": "independent",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit_profile_dichotomy.py"
+      ],
+      "seconds": 4.705,
+      "exit": 0,
+      "stdout_bytes": 2366,
+      "stdout_sha256": "305a9cce98f8bc8b4956e42a251d533c88d75d15e0aa9d9ad51b078660fafec6",
+      "stderr": "",
+      "expected": "independent/profile_dichotomy.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "audit_triangle_reserve-normal",
+      "directory": "independent",
+      "command": [
+        "python3",
+        "-B",
+        "audit_triangle_reserve.py"
+      ],
+      "seconds": 1.095,
+      "exit": 0,
+      "stdout_bytes": 508,
+      "stdout_sha256": "ad4bec8ddefc60fd58f13b659c6a2a4ad43007ad54f53536a09bd0c537c6ed43",
+      "stderr": "",
+      "expected": "independent/triangle_reserve.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "audit_triangle_reserve-O",
+      "directory": "independent",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit_triangle_reserve.py"
+      ],
+      "seconds": 1.375,
+      "exit": 0,
+      "stdout_bytes": 508,
+      "stdout_sha256": "ad4bec8ddefc60fd58f13b659c6a2a4ad43007ad54f53536a09bd0c537c6ed43",
+      "stderr": "",
+      "expected": "independent/triangle_reserve.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "verify-normal",
+      "directory": "exact_resources",
+      "command": [
+        "python3",
+        "-B",
+        "verify.py"
+      ],
+      "seconds": 3.156,
+      "exit": 0,
+      "stdout_bytes": 12464,
+      "stdout_sha256": "41e0fb9514759d8089e1724680670ff01cffa119804e6856f916119b712a1818",
+      "stderr": "",
+      "expected": "exact_resources/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "verify-O",
+      "directory": "exact_resources",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify.py"
+      ],
+      "seconds": 3.186,
+      "exit": 0,
+      "stdout_bytes": 12464,
+      "stdout_sha256": "41e0fb9514759d8089e1724680670ff01cffa119804e6856f916119b712a1818",
+      "stderr": "",
+      "expected": "exact_resources/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "budget-normal",
+      "directory": "exact_resources",
+      "command": [
+        "python3",
+        "-B",
+        "budget.py"
+      ],
+      "seconds": 0.07,
+      "exit": 0,
+      "stdout_bytes": 2821,
+      "stdout_sha256": "1fa954aaa8e06df2ca38bf1ca4e942a5040a93140053ca8b05e721573e6eb152",
+      "stderr": "",
+      "expected": "exact_resources/budget.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "budget-O",
+      "directory": "exact_resources",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "budget.py"
+      ],
+      "seconds": 0.121,
+      "exit": 0,
+      "stdout_bytes": 2821,
+      "stdout_sha256": "1fa954aaa8e06df2ca38bf1ca4e942a5040a93140053ca8b05e721573e6eb152",
+      "stderr": "",
+      "expected": "exact_resources/budget.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    }
+  ]
+}

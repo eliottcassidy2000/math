@@ -1,0 +1,422 @@
+{
+  "H31_minimal_cycle_budget": 9,
+  "connected_types": [
+    {
+      "H": 3,
+      "alpha2": 0,
+      "code": 2,
+      "key": [
+        1,
+        0,
+        0
+      ],
+      "m": 1,
+      "n": 3
+    },
+    {
+      "H": 5,
+      "alpha2": 0,
+      "code": 4,
+      "key": [
+        2,
+        0,
+        0
+      ],
+      "m": 2,
+      "n": 4
+    },
+    {
+      "H": 9,
+      "alpha2": 0,
+      "code": 8,
+      "key": [
+        4,
+        0,
+        0
+      ],
+      "m": 4,
+      "n": 5
+    },
+    {
+      "H": 11,
+      "alpha2": 0,
+      "code": 97,
+      "key": [
+        5,
+        0,
+        0
+      ],
+      "m": 5,
+      "n": 5
+    },
+    {
+      "H": 17,
+      "alpha2": 1,
+      "code": 8706,
+      "key": [
+        4,
+        2,
+        1
+      ],
+      "m": 6,
+      "n": 6
+    },
+    {
+      "H": 13,
+      "alpha2": 0,
+      "code": 68,
+      "key": [
+        6,
+        0,
+        0
+      ],
+      "m": 6,
+      "n": 5
+    },
+    {
+      "H": 15,
+      "alpha2": 0,
+      "code": 40,
+      "key": [
+        7,
+        0,
+        0
+      ],
+      "m": 7,
+      "n": 5
+    },
+    {
+      "H": 17,
+      "alpha2": 0,
+      "code": 16,
+      "key": [
+        8,
+        0,
+        0
+      ],
+      "m": 8,
+      "n": 6
+    },
+    {
+      "H": 31,
+      "alpha2": 3,
+      "code": 559106,
+      "key": [
+        5,
+        4,
+        44
+      ],
+      "m": 9,
+      "n": 7
+    },
+    {
+      "H": 23,
+      "alpha2": 1,
+      "code": 260,
+      "key": [
+        7,
+        2,
+        1
+      ],
+      "m": 9,
+      "n": 6
+    },
+    {
+      "H": 19,
+      "alpha2": 0,
+      "code": 321,
+      "key": [
+        9,
+        0,
+        0
+      ],
+      "m": 9,
+      "n": 6
+    },
+    {
+      "H": 29,
+      "alpha2": 2,
+      "code": 8865,
+      "key": [
+        6,
+        4,
+        12
+      ],
+      "m": 10,
+      "n": 6
+    },
+    {
+      "H": 29,
+      "alpha2": 2,
+      "code": 133122,
+      "key": [
+        7,
+        3,
+        6
+      ],
+      "m": 10,
+      "n": 7
+    },
+    {
+      "H": 27,
+      "alpha2": 1,
+      "code": 80,
+      "key": [
+        9,
+        2,
+        1
+      ],
+      "m": 11,
+      "n": 6
+    },
+    {
+      "H": 23,
+      "alpha2": 0,
+      "code": 385,
+      "key": [
+        11,
+        0,
+        0
+      ],
+      "m": 11,
+      "n": 6
+    },
+    {
+      "H": 57,
+      "alpha2": 8,
+      "code": 71573506,
+      "key": [
+        4,
+        8,
+        189861952
+      ],
+      "m": 12,
+      "n": 8
+    },
+    {
+      "H": 33,
+      "alpha2": 2,
+      "code": 264,
+      "key": [
+        8,
+        4,
+        12
+      ],
+      "m": 12,
+      "n": 6
+    },
+    {
+      "H": 29,
+      "alpha2": 1,
+      "code": 1313,
+      "key": [
+        10,
+        2,
+        1
+      ],
+      "m": 12,
+      "n": 6
+    },
+    {
+      "H": 25,
+      "alpha2": 0,
+      "code": 8385,
+      "key": [
+        12,
+        0,
+        0
+      ],
+      "m": 12,
+      "n": 6
+    },
+    {
+      "H": 35,
+      "alpha2": 2,
+      "code": 198658,
+      "key": [
+        10,
+        3,
+        6
+      ],
+      "m": 13,
+      "n": 7
+    },
+    {
+      "H": 31,
+      "alpha2": 1,
+      "code": 1282,
+      "key": [
+        11,
+        2,
+        1
+      ],
+      "m": 13,
+      "n": 6
+    },
+    {
+      "H": 27,
+      "alpha2": 0,
+      "code": 16386,
+      "key": [
+        13,
+        0,
+        0
+      ],
+      "m": 13,
+      "n": 7
+    },
+    {
+      "H": 45,
+      "alpha2": 4,
+      "code": 8881,
+      "key": [
+        6,
+        8,
+        297024
+      ],
+      "m": 14,
+      "n": 6
+    },
+    {
+      "H": 53,
+      "alpha2": 6,
+      "code": 17047554,
+      "key": [
+        8,
+        6,
+        15632
+      ],
+      "m": 14,
+      "n": 8
+    },
+    {
+      "H": 37,
+      "alpha2": 2,
+      "code": 144,
+      "key": [
+        10,
+        4,
+        12
+      ],
+      "m": 14,
+      "n": 6
+    },
+    {
+      "H": 41,
+      "alpha2": 3,
+      "code": 16392,
+      "key": [
+        10,
+        4,
+        44
+      ],
+      "m": 14,
+      "n": 7
+    },
+    {
+      "H": 33,
+      "alpha2": 1,
+      "code": 2433,
+      "key": [
+        12,
+        2,
+        1
+      ],
+      "m": 14,
+      "n": 6
+    },
+    {
+      "H": 51,
+      "alpha2": 5,
+      "code": 67641346,
+      "key": [
+        9,
+        6,
+        22800
+      ],
+      "m": 15,
+      "n": 8
+    },
+    {
+      "H": 31,
+      "alpha2": 0,
+      "code": 20482,
+      "key": [
+        15,
+        0,
+        0
+      ],
+      "m": 15,
+      "n": 7
+    }
+  ],
+  "minimum_disjoint_pairs_by_cycle_budget": [
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    1,
+    0
+  ],
+  "scope": "FINITE-EXACT complete all source classes through8; complete connected cycle budget<=15 using cited Moon bound",
+  "summary": [
+    {
+      "budget15_qualifying_classes": 0,
+      "classes": 1,
+      "n": 1,
+      "strong_classes": 0
+    },
+    {
+      "budget15_qualifying_classes": 0,
+      "classes": 1,
+      "n": 2,
+      "strong_classes": 0
+    },
+    {
+      "budget15_qualifying_classes": 1,
+      "classes": 2,
+      "n": 3,
+      "strong_classes": 1
+    },
+    {
+      "budget15_qualifying_classes": 1,
+      "classes": 4,
+      "n": 4,
+      "strong_classes": 1
+    },
+    {
+      "budget15_qualifying_classes": 6,
+      "classes": 12,
+      "n": 5,
+      "strong_classes": 6
+    },
+    {
+      "budget15_qualifying_classes": 27,
+      "classes": 56,
+      "n": 6,
+      "strong_classes": 35
+    },
+    {
+      "budget15_qualifying_classes": 13,
+      "classes": 456,
+      "n": 7,
+      "strong_classes": 353
+    },
+    {
+      "budget15_qualifying_classes": 5,
+      "classes": 6880,
+      "n": 8,
+      "strong_classes": 6008
+    }
+  ]
+}

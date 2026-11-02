@@ -1,0 +1,105 @@
+{
+  "actual_cycle_tables": [
+    {
+      "actual_complete": true,
+      "periods": [
+        {
+          "cycles": 1,
+          "period": 1,
+          "states": 1
+        },
+        {
+          "cycles": 2,
+          "period": 2,
+          "states": 4
+        }
+      ],
+      "prime": 3
+    },
+    {
+      "actual_complete": true,
+      "periods": [
+        {
+          "cycles": 1,
+          "period": 1,
+          "states": 1
+        },
+        {
+          "cycles": 4,
+          "period": 2,
+          "states": 8
+        },
+        {
+          "cycles": 10,
+          "period": 4,
+          "states": 40
+        }
+      ],
+      "prime": 5
+    },
+    {
+      "actual_complete": true,
+      "periods": [
+        {
+          "cycles": 1,
+          "period": 1,
+          "states": 1
+        },
+        {
+          "cycles": 6,
+          "period": 2,
+          "states": 12
+        },
+        {
+          "cycles": 112,
+          "period": 6,
+          "states": 672
+        }
+      ],
+      "prime": 7
+    },
+    {
+      "actual_complete": true,
+      "periods": [
+        {
+          "cycles": 1,
+          "period": 1,
+          "states": 1
+        },
+        {
+          "cycles": 10,
+          "period": 2,
+          "states": 20
+        },
+        {
+          "cycles": 32208,
+          "period": 10,
+          "states": 322080
+        }
+      ],
+      "prime": 11
+    }
+  ],
+  "formal_prime_checks": 24,
+  "limits": "No new actual-state realization asserted outside primes3,5,7,11.",
+  "padding_matrix": {
+    "formal_basis_checks": 3009,
+    "moduli": 131,
+    "sharp_seed_clocks": 131,
+    "weighted_matrix_checks": 202222
+  },
+  "root_of_unity_checks": 2068,
+  "status": "PASS",
+  "support_crosscheck_primes": [
+    3,
+    5,
+    7,
+    11,
+    13,
+    17,
+    19,
+    23,
+    29,
+    31
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "inputs": [
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/migration.py",
+      "sha256": "91b0e21515f8f590f9093f26be650f6fc8a6e89276251920e75dda6c801f41d2"
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/radix_probe/PROOF.md",
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4"
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+      "read_only_revision": "522535a7b6f519fd0c1e4304a2c5b1c909fce4c9",
+      "sha256": "70c63dba335d5372b607935b0c0e223a17659079b9467a2d3d1ef4cc2ede8c86"
+    },
+    {
+      "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md",
+      "sha256": "3ce83912d0d0a75f3fe94af6ee5535b3227b9ed4af7ca1daaf682ec39e2cb719"
+    }
+  ],
+  "scope": "Exact inherited proof/compiler inputs read without repository mutation; no novelty claim."
+}

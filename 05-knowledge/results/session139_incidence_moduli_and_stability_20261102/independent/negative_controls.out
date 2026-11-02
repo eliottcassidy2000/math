@@ -1,0 +1,4 @@
+REJECTED  hamiltonian: RuntimeError: H difference a^2 b^2/54
+REJECTED  paley: RuntimeError: Paley7 has 14, not all 35, odd foursets
+REJECTED -O hamiltonian: RuntimeError: H difference a^2 b^2/54
+REJECTED -O paley: RuntimeError: Paley7 has 14, not all 35, odd foursets
