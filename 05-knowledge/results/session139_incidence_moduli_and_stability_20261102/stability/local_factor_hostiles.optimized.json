@@ -1,0 +1,25 @@
+{
+  "n5_fractional_cross_factor_1_minus_2q": {
+    "L": "127/256",
+    "detA": "33/128",
+    "fminus": "231/256",
+    "fplus": "99/256",
+    "minimum": "99/256",
+    "proposed_factor": "25/32",
+    "q": "7/64",
+    "residual": "-7/8192",
+    "u": "165/256"
+  },
+  "n8_matching_support_factor_1_minus_q": {
+    "L": "4",
+    "detA": "-1/4",
+    "fminus": "13/4",
+    "fplus": "11/4",
+    "minimum": "11/4",
+    "proposed_factor": "3/4",
+    "q": "1/4",
+    "residual": "-1/4",
+    "u": "3"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "base_commit": "b68db2afda029c83ad7087f09fdb9297037f8414",
+  "reviewed_primary_sha256": {
+    "tensor_matching/PROOF.md": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66",
+    "stability/PROOF_N140.md": "eb82003767cef8b188dc8eb3e5a6536353bdc29dfc43e08df138be18cd3a1de5",
+    "stability/verify_n140.py": "e79fb618d6922f9d24c86e61f7bfb7b3d2f9f3a8bcf098e2c56a80cb9579c509",
+    "all_moduli/PRIME_PADDING_ORBITS.md": "8b2f4a83e2a6d96d18e52d3d5a0d750b05af797a51f1c56c8efda5228d226887",
+    "all_moduli/verify_padding_orbits.py": "3ec2bfa83d6aa1a7bd9cb52d1aafac58cfadd19898106365669f93c4252f9d6e",
+    "tensor_matching_moduli/APPENDIX.md": "24e89eb866be6462f215aaa51bb384d15033cd1119244a05476edb02571ed891"
+  },
+  "n140_original_audited_sha256": "23474d7041549ed099d261812397a31599ac32e31b5c6c4b6e8985d508663314",
+  "status_only_lineage_reconstructed": true,
+  "producer_selector": "stability/CURATED_CHECKPOINT4.json",
+  "tensor_selector": "tensor_matching_audit/CURATED_FILES.json",
+  "padding_source_pins": "all_moduli/PADDING_SOURCE_PINS.json",
+  "older_threshold_sources_frozen": true,
+  "separate_coset_review": "tensor_matching_moduli/REVIEW.json",
+  "historical_padding_source_pins_verified": [
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/independent_zero_framework_later/AUDIT.md",
+      "git_blob": "be14d092de2c20ddaae2fa1ddfe1553e704672a3"
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/zero_framework_later/minimality_literal.out",
+      "git_blob": "7e335471cde267df582f32933cdb8806a56c4747"
+    },
+    {
+      "path": "01-canon/theorems/THM-4857-the-gf2-automaton-of-a-tournament-classifies-the-merged-metagraph-exactly-through-order-five-circulants-are-additive-cellular-automata-and-paley-tournaments-give-quadratic-residue-codes.md",
+      "git_blob": "f8db1f2e8d170940f659844ad58ec4b16fc36d67"
+    }
+  ],
+  "frozen_all_moduli_main_proof_pin_verified": {
+    "path": "PROOF.md",
+    "sha256": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c"
+  }
+}

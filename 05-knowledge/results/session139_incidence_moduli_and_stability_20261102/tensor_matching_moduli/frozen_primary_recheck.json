@@ -1,0 +1,9 @@
+{
+  "all_source_digests_verified": true,
+  "curated_files": 21,
+  "normal_optimized_and_producer_replays_identical": true,
+  "primary_proof_sha256": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66",
+  "scope": "Matching tensor theorem, arithmetic second proof, exact controls and adversarial mutations only; no new cutoff or RH claim.",
+  "source_bytes": 61496,
+  "status": "PASS"
+}

@@ -84,6 +84,13 @@ a single integer. *(Verified: 810 automorphisms across `n = 4,6`, none of odd si
 
 ## 5. The spectrum — and the isolated maximum
 
+**Session139 terminology correction (2026-11-02).** The earlier wording
+"doubly regular tournament on 8 vertices" was impossible: a regular binary
+tournament has odd order. The extremal object here is the order-eight
+skew-Hadamard sign matrix obtained by augmenting the seven-vertex Paley
+tournament. Its identity `SS^T=7I` and Pfaffian magnitude49 are unchanged;
+this corrects the object name, not the finite spectrum census.
+
 | `n` | attained `\|Pf\|` | gaps below the max |
 |---|---|---|
 | 4 | `{1, 3}` | **none** |
@@ -97,8 +104,8 @@ switching classes, which by §3 is exhaustive for `|Pf|`.
 
 Two features worth naming:
 
-- **The maximum is isolated.** `49 = 7²` is the skew-Hadamard value: a doubly regular tournament
-  on 8 vertices has `SSᵀ = 7I`, so `det S = 7⁴` and `|Pf| = 49`. It sits above an *eleven-wide*
+- **The maximum is isolated.** `49 = 7²` is the skew-Hadamard value: an order-eight skew-Hadamard tournament sign matrix
+  (obtained by adjoining a source or sink to Paley7) has `SSᵀ = 7I`, so `det S = 7⁴` and `|Pf| = 49`. It sits above an *eleven-wide*
   run of unattainable values `37…47`. Nothing approaches the optimum gradually — this is a
   rigidity phenomenon at the extremal design, not a boundary effect. THM-476 governs the
   *maximum*; the *gap below it* is new here.

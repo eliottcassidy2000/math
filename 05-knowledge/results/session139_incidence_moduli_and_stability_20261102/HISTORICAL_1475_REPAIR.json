@@ -1,0 +1,20 @@
+{
+  "path": "01-canon/theorems/THM-1475-the-pfaffian-is-the-odd-function-and-its-spectrum-has-gaps.md",
+  "original_sha256": "45825d057b7b70bfb0250935944e0cf295b8a1ad5c7cd59d32b8e30f69e8c71e",
+  "repaired_sha256": "03960af3f516b475b090685bf25cea1a139841b9ea3aa18c1be8db249c52d4ef",
+  "gram_diagonal": 7,
+  "pfaffian": -49,
+  "scores": [
+    7,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "central_ledger_unchanged": true,
+  "baseline_commit": "b68db2afda029c83ad7087f09fdb9297037f8414",
+  "original_git_blob": "bb7ea2a14289a527b07f6fc8c6c03e5f76ac98ec"
+}

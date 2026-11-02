@@ -1,0 +1,26 @@
+{
+  "accepted_claims": [
+    "odd-coset tensor inequality",
+    "signed and absolute matching determinant floors",
+    "nonlinear retained-baseline matching reserve",
+    "arbitrary-tournament retain-a-matching corollary"
+  ],
+  "boundaries_checked": [
+    "nonempty tournament",
+    "r=0 binary case",
+    "n=2 empty-remainder case handled directly",
+    "t=0 parity signs",
+    "only first matching-rounding remainder lacks isolates"
+  ],
+  "excluded_claims": [
+    "universal finite stability gap closure",
+    "new dimension cutoff",
+    "Riemann hypothesis",
+    "arbitrary-modulus tensor extension"
+  ],
+  "git_mutations": false,
+  "review_scope": "Final full-text review after status promotion and two precision wording edits; no mathematical change.",
+  "reviewed_file": "tensor_matching/PROOF.md",
+  "sha256": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66",
+  "status": "PASS"
+}

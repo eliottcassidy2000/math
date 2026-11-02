@@ -62,6 +62,6 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session137](S137.md): overnight proof frontiers; global Hamiltonian determinant bound and further structural classifications.
 
-[Session138](S138.md): matching-support and equality mechanisms; current sharp range n=3..9,n>=276. Earlier n>=1500 checkpoint retained. Unrestricted spectrum and general zero-rigidity remain open.
+[Session138](S138.md): matching-support and equality mechanisms; current sharp range n=3..9,n>=140. Earlier n>=1500 checkpoint retained. Unrestricted spectrum and general zero-rigidity remain open.
 
-[Session139](S139.md): n>=526 checkpoint; follow-up n>=276, gap10..275 open. All-modulus contexts/content, prime-state realization, weighted simulation, integral cocycles and regular spectral-incidence boundaries.
+[Session139](S139.md): tensor/Eisenstein reserve proves n>=140; gap10..139 open. Concurrent n>=276/314/466 routes retained; all-modulus contexts, finite prime states, typed spectral boundaries and guarded FRACTRAN precision.

@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "executions": 4,
+  "fresh_relocation_wrong_cwd": true,
+  "checks": [
+    {
+      "mode": "normal",
+      "expected": "PASS",
+      "observed_returncode": 0
+    },
+    {
+      "mode": "optimized",
+      "expected": "PASS",
+      "observed_returncode": 0
+    },
+    {
+      "mode": "normal",
+      "expected": "reject false Pfaffian -48",
+      "observed_returncode": 1
+    },
+    {
+      "mode": "optimized",
+      "expected": "reject false Pfaffian -48",
+      "observed_returncode": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "curated_files": 21,
+  "cwd_controls": [
+    {
+      "cwd": "/",
+      "optimized": false,
+      "status": "PASS"
+    },
+    {
+      "cwd": "/tmp",
+      "optimized": true,
+      "status": "PASS"
+    },
+    {
+      "cwd": "/tmp/session139-source",
+      "optimized": false,
+      "status": "PASS"
+    }
+  ],
+  "manifest_sha256": "06633cec612d892fdf4252748ac81d094580a27e32696a508a9d085095ff127c",
+  "mutation_error": "SHA256 mismatch: tensor_matching/PROOF.md",
+  "mutations_applied_only_to_temporary_copy": true,
+  "relocated_copy_passed": true,
+  "same_size_primary_proof_mutation_rejected_under_optimization": true,
+  "sha256sums_sha256": "f47c17205a0d65ba55b432810fd4f55639cb6408058728cfb8e23dbb04328255",
+  "status": "PASS",
+  "temporary_copy_removed": true
+}

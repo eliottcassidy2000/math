@@ -1,25 +1,133 @@
 # Session139 verification and checkpoint lineage
 
-**Current accepted scope:** exact weighted stability at n=3..9 and n>=526;
+**Current accepted scope:** exact weighted stability at n=3..9 and n>=140;
 all-modulus contexts/clocks/content; finite complete prime states and weighted
 simulation at3,5,7,11; integral/weighted cocycle incidence; the exact stated
 regular isospectral-circle range. The first weighted spectral boundary is n5.
-**10..525 remains OPEN.** No RH/GRH or integer-spectrum closure is claimed.
+**10..139 remains OPEN.** No RH/GRH or integer-spectrum closure is claimed.
 
 | Checkpoint | Scope | Evidence |
 |---|---|---|
 | 1, published `400dcd629598c30762eb9adb8bb85bea581698a7` | n>=748, weighted n5 spectral loss, corrected historical recovery | [Frozen scope](CHECKPOINT1.md), [original replay](REPLAY_CHECKPOINT1.json), [original source integrity](SOURCE_INTEGRITY_CHECKPOINT1.json); 42 published owned blobs verified |
 | 2, published `9c7eb0b13e48e68b8fd076feccbf56d04cdd54aa` | n>=526; all-modulus functions/clocks/padding; exact finite prime quotients and actual5/11 projectors | [Frozen scope](CHECKPOINT2.md), [replay](REPLAY_CHECKPOINT2.json);86 cumulative owned blobs verified |
-| 3 | Integral/weighted cocycle, regular critical-circle obstruction, context content/simulation and narrow historical repair | [Frozen scope](CHECKPOINT3.md), [fresh replay](REPLAY_CHECKPOINT3.json), separately pinned independent audits |
+| 3, published `b68db2afda029c83ad7087f09fdb9297037f8414` | Integral/weighted cocycle, regular critical-circle obstruction, context content/simulation and narrow historical repair | [Frozen scope](CHECKPOINT3.md), [fresh replay](REPLAY_CHECKPOINT3.json), separately pinned independent audits;153 cumulative owned blobs verified |
+| 4 | Tensor product margin and independent arithmetic proof; n>=140; prime padding orbits; separate all-modulus tensor-coset appendix; narrow order-eight naming repair | [Frozen scope](CHECKPOINT4.md), [fresh replay](REPLAY_CHECKPOINT4.json), [final handoff](FINAL_HANDOFF.md) |
 
 All earlier scientific lane files, audit reports and replay receipts remain
 byte-unchanged. Root README/SYNTHESIS/BOARD/VERIFICATION and SHA256SUMS are
 maintained summaries/manifest. `CHECKPOINT1_SHA256SUMS` preserves the original
 whole-packet manifest **at checkpoint-one's commit**; `CHECKPOINT2_SHA256SUMS`
-does the same at checkpoint two. Neither is a command to
+does the same at checkpoint two, and `CHECKPOINT3_SHA256SUMS` at checkpoint
+three. These are not commands to
 validate later rewritten summaries against old hashes. The original
 `PUBLIC_FILES.json` is likewise the historical checkpoint-one selector.
 The root `SHA256SUMS` validates the cumulative current packet.
+
+## Fourth checkpoint: the genuine dimension-improving dependency
+
+[Primary tensor proof](tensor_matching/PROOF.md) · [Independent review](stability/INDEPENDENT_TENSOR_MATCHING_REVIEW.md) · [Independent arithmetic proof](stability/EISENSTEIN_BERNSTEIN_TENSOR_PROOF.md) · [Exact audit](tensor_matching_audit/AUDIT.md)
+
+**ACCEPTED.** Odd constant/even other coefficients imply the sharp tensor
+norm floor on the real unit cube. Grouping all even principal Pfaffians
+and observer counterparts compensates cancellations; it does not assert
+that each individual Pfaffian is bounded below. Rounding the complement
+of a chosen matching preserves its variances and yields the weight-sensitive
+product margin. The matching restriction, perfect-matching penalty and
+binary floor are explicit; a product over an arbitrary uncertainty graph
+is not asserted. Ordinal weighted pairs attain the bound, without claiming
+a complete equality classification for this standalone floor.
+
+The independent exact audit covers12,604 exhaustive low-dimensional tensor
+controls,300 higher-dimensional controls,876 rational tournaments through
+order9,7,394 complete grouped transforms,20 ordinal equalities and eight
+false-strengthening hostiles. The separate Eisenstein--Bernstein route
+retains all coefficient slices and uses nonvanishing in F4; it is not a
+fixed-polynomial evenness shortcut. Producer controls comprise762 checks,
+including18 phase and484 coefficient cases; independent arithmetic-slice
+checks reconstruct the transforms rather than importing producer code.
+
+[N140 proof](stability/PROOF_N140.md) · [Independent audit](independent_threshold140/AUDIT.md) · [Final status bridge](independent_threshold140/FINAL_STATUS_REVIEW.md)
+
+**ACCEPTED, including the stated equality.** The new product reserve gives
+`B+1-exp(-M)-4^-R`, with the product penalty used only for a perfect matching.
+For R>=70, exact Taylor bounds bootstrap the retained reserve from
+`249999/1000000` through `7/25` and `57/100` to `99/100`. The light-deficit
+dual then has exact final slack `1/448`. The46 named independent conditions
+remain active under optimization. The false139 certificate and altered
+perfect-matching indicator are both rejected: neither is a counterexample
+to the unresolved theorem at139. The original audit pin and final proof pin
+differ only in the status line; reconstruction and the final review bridge
+are recorded in [source pins](SOURCE_PINS_CHECKPOINT4.json).
+
+Thus the causal chain is **binary odd-Pfaffian parity -> tensor compensation
+(with an independent arithmetic proof) -> matching product reserve ->
+bootstrap -> n>=140**. The former one-quarter dual barrier limited the older
+input, not all proof strategies. The RH-adjacent spectral work is a rigorous
+information-loss boundary, not this dimension-improving mechanism.
+
+[Local-factor hostiles](stability/LOCAL_FACTOR_HOSTILES.md) reject the tempting
+conditional factors: the five-vertex fractional-cross residual is `-7/8192`,
+and the eight-vertex uncertain-pair/two-triangle residual is `-q`. Independent
+literal checks agree. The old hostile note's pending absolute-floor question
+is now answered by the new tensor proof; [scope reconciliation](stability/CHECKPOINT4_PRODUCER_SCOPE.md)
+preserves that chronology instead of rewriting the old note.
+
+## Fourth checkpoint: padding orbits and the separate coset extension
+
+[Prime padding proof](all_moduli/PRIME_PADDING_ORBITS.md) · [Independent review](independent/PRIME_PADDING_ORBITS_AUDIT.md)
+
+**ACCEPTED.** Formal odd-prime parity-function fixed counts are1 for odd
+iterates and `2*p^(gcd(d,p-1)/2)-1` for even iterates. Mobius inversion yields
+periodic-state and orbit counts. Complete actual realization remains restricted
+to3,5,7,11; formal higher-prime spaces are not relabeled as actual tournaments.
+The all-modulus reduced-coordinate operator and weighted operator are distinct.
+The historical ten-node metagraph/eight-profile cardinality firewall remains
+explicit, with all three historical blob pins rechecked.
+
+The verifier covers24 formal primes through97,2,068 root counts,131 matrix
+moduli,3,009 basis instances and202,222 operator updates. The independent
+work is a proof review plus replay of the producer's two-formula verifier,
+not an independent new census or second implementation of the full audit.
+
+[All-modulus tensor appendix](tensor_matching_moduli/APPENDIX.md) · [Independent acceptance](tensor_matching_moduli/REVIEW.json)
+
+**ACCEPTED separately.** If the constant coefficient lies in `rho+MZ` and
+all others in `MZ`, the same induction proves the real norm floor
+`dist(rho,MZ)^2 * product(1+x_i^2)`, for every integer M>=2 and unit-cube point.
+The zero-coset case, ties and composite moduli need no division. Exact controls
+include91,212 low-dimensional examples,720 mixed-point/transform comparisons,
+9,486 equality cases and four invalid-assumption hostiles. Ordinary binary
+Pfaffian grouping supplies only the M=2 coset; no stronger tournament bound,
+further cutoff, or all-modulus Eisenstein mechanism is inferred.
+
+## Fourth checkpoint: assembled replay and final historical repair
+
+```bash
+# From this packet directory:
+sha256sum -c SHA256SUMS
+python3 replay_checkpoint4.py --output /tmp/session139-checkpoint4-replay.json
+python3 verify_1475_repair.py
+python3 -O verify_1475_repair.py
+```
+
+The fresh, wrong-working-directory relocation runs ten scientific kernels
+and two manifest verifiers under normal and optimized Python: **44 executions,
+20 scientific positives, four source-integrity positives,20 expected
+rejections**. Positive pairs match the frozen receipts. Mutations test strict
+instead of non-strict tensor/coset inequalities, arithmetic and conditional-
+factor constants, the padding count, the140 endpoint, the perfect-matching
+indicator, and same-size source corruption. All checks are explicit runtime
+conditions, not removable Python assertions. All fourth-checkpoint kernels
+use the standard library. [Receipt](REPLAY_CHECKPOINT4.json).
+
+One further explicitly authorized naming correction changes
+[THM-1475](../../../01-canon/theorems/THM-1475-the-pfaffian-is-the-odd-function-and-its-spectrum-has-gaps.md):
+the order-eight extremizer is a skew-Hadamard sign matrix obtained by adjoining
+a source to Paley7, not an impossible even-order regular tournament. A separate
+independent exact reconstruction verifies `SS^T=7I`, Pfaffian `-49` and score
+sequence `7,3,3,3,3,3,3,3`, normally and with optimization; a false `-48`
+Pfaffian is rejected in both modes ([four-run replay](HISTORICAL_1475_REPLAY.json)). The original census
+is unchanged. [Before/after pins](HISTORICAL_1475_REPAIR.json) · [Independent receipt](HISTORICAL_1475_INDEPENDENT.json).
 
 ## Third checkpoint: cocycle, second moment and regular geometry
 
@@ -212,19 +320,31 @@ are preserved in [the first pin record](SOURCE_PINS.json). The exploratory
 probe is non-load-bearing; no global priority, RH/GRH or spectral-proof
 impossibility is inferred.
 
+## Concurrency reconciliation
+
+Publication was guarded and stopped when main advanced. The final local tree
+is based on `c16226249f1f27a335cf7c84afdeaa90879b9580`; all concurrent unrelated
+entries are preserved. Four overlapping summary/router paths merge current140
+with the separate276/314/466 proof credits and guarded-FRACTRAN precision work.
+Scientific proofs and all44+4 final replay outcomes remain unchanged.
+[Reconciliation](RECONCILIATION.md) · [Tree-entry evidence](RECONCILIATION.json).
+
 ## Documentation, scope and publication checks
 
 Native `agents/check_docs.py` needs baseline documents absent from this sparse
 checkout. Its unmodified same-version checker passes with read-only overlays
 on the clean materialized Session137 ancestor, with every intervening path
-accounted for. No baseline mutation or hydration is used. The final receipt
-is [checkpoint-three documentation verification](DOC_OVERLAY_VERIFICATION_CHECKPOINT3.json);
+accounted for. No baseline mutation or hydration is used. The pre-reconciliation receipt
+is [checkpoint-four documentation verification](DOC_OVERLAY_VERIFICATION_CHECKPOINT4.json);
 startup remains179966/180000 bytes and frontier450/450 lines. New links,
 source hashes, frozen prior lanes, conflict markers and explicit staging scope
-are independently checked.
+are independently checked. After concurrent main changes, a [scoped check](DOC_RECONCILIATION_CHECK.json)
+revalidates startup budgets and merged links. The full checker is not rerun
+against the opaque concurrent mistakes-ledger change; its remote blob is
+preserved exactly instead.
 
-Only the explicitly listed THM-1455 historical repair changes older canon;
-the central mistakes ledger and the other same-ID slug remain untouched.
+Only the explicitly listed THM-1455 and THM-1475 historical repairs change
+older canon; the central mistakes ledger and the other1455 slug remain
+untouched. Exploratory probes and unsupported extensions are excluded.
 Prepared local commits are not remote publication: the publishing agent
-separately verifies the actual main commit and every owned blob. Pending
-tensor-matching and local-factor-hostile work are outside this checkpoint.
+separately verifies the actual main commit and every owned blob.
