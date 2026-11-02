@@ -1,0 +1,25 @@
+{
+  "source_commit": "291b4d9757842c02aa451beb65acfade2848609b",
+  "files": [
+    {
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/width/PROOF.md",
+      "git_blob": "7bd522e0aef614fc01f70450b6def44a83266080"
+    },
+    {
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/width_phase2/PROOF.md",
+      "git_blob": "ff745c30f5585887809ddac7f48c265527d72915"
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/exact_resources/PROOF.md",
+      "git_blob": "97509d0195c27aa7f693de4d789508d64b4cf933"
+    },
+    {
+      "path": "01-canon/theorems/THM-1926-tournament-zeta-euler-product-over-strong-core.md",
+      "git_blob": "fa3057ebdbf1088f8e1ccae3cb8e159b209b49ab"
+    },
+    {
+      "path": "01-canon/theorems/THM-4093-rational-edge-diagonal-gauge-and-padic-tournament-zeta-tangent.md",
+      "git_blob": "4dc61068ca8bd3ffaf658802fd37224335db3259"
+    }
+  ]
+}

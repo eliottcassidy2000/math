@@ -1,68 +1,83 @@
-# Session139 synthesis: use the information that the quotient discarded
+# Session139 synthesis: retain the response that the quotient discarded
 
-## Direct progress: 752 previously unresolved orders
+## Direct progress: exact stability from 526
 
-**PROVED.** The sharp coefficient is now established at n=3..9 and every
-n>=748. Session138's n>=1500 proof charged discarded matching mass in separate
-estimates. The new proof keeps the expected binary gap B inside the nonlinear
-margin inequality, giving `V-D>c/kappa-n*kappa/2`. Heavy and light discarded
-edges then share a single wedge budget,
-`W>=eta*D_h+D_l^2/(4*L)`. Its minimum exceeds `kappa*D` uniformly from 748.
-The strict contradiction forces matching uncertainty and B=0; the inherited
-H=1 minimization supplies the fair-pair equality locus.
-
-The improvement is analytic, not finite-order enumeration. Rational endpoint
-certificates and monotonicity give all-order scope. **10..747 remains open.**
-A modified endpoint test fails at 747; that detects the certificate's boundary,
-not a mathematical failure of the sharp conjecture there.
-
-## Niche progress: the first weighted spectral loss
-
-**PROVED.** Digons, absent in binary tournaments, introduce a disjoint `2+3`
-cycle-cover correlation at five vertices. Thus the weighted first-blindness
-order is five rather than the binary order six. Orthogonal conjugation fixing
-the all-one vector preserves characteristic polynomial, full adjacency zeta,
-skew spectrum and rooted walk response while changing H. The exact loss is
-`M23`, the sum of digon weight times its complementary triangle weight:
+The sharp coefficient is proved at n=3..9 and every n>=526. Checkpoint 1
+retained the binary baseline and combined heavy/light wedge budgets to reach
+748. Checkpoint 2 keeps the actual light selected mass U rather than replacing
+it by its count L times a cutoff. A local quadratic dual pays for that deficit:
 
 ```text
-H = 1 + 2*tau + 2*M23 - 2*[z^5]det(I-zA).
+W_i >= w_i*S_i/2 + S_i^2/4,
+lambda=d/64, t=d/8, h=d/16, d=487/2000.
 ```
 
-For a two-parameter family, `Delta(B)-Delta(A)=a^2*b^2/54`; the rational
-instance is `1/3456`. Adding deterministic singleton blocks keeps the failure
-at every larger order. It remains compatible with every established lower
-bound; exact spectral reconstruction and spectral sufficient inequalities are
-different claims.
+An exact square identity plus the light-deficit inequality yields a global
+charge stronger than kappa times discarded mass. Endpoint-convexity and
+monotonicity control the geometric tail uniformly, not by sampling orders.
+The contradiction again forces matching uncertainty and zero expected binary
+gap; the inherited scalar minimization supplies equality. **10..525 is OPEN.**
+The certificate's failed endpoint at 525 is not a counterexample tournament.
 
-## Wildcard recovered: what five and eleven actually label
+## All-modulus structure: an exact observer with the right factorials
 
-The historical record contains several different carriers: the transfer
-matrix discriminant `4*x*(x^2-11*x-1)` with quadratic discriminant `5^3`;
-Paley-11 character sums; eleven skew spectra at order seven; and weighted
-five-vertex incidence. Their labels do not constitute a common theorem.
-The useful recovered bridge is instead operation-level: closed-walk totals
-forget disjointness, and a marked incidence sidecar can restore the target.
+For every integer M>=1, the map T -> Psi_T modulo M preserves exactly all
+homogeneous-context H responses. Its forward differences are
+`c!(c-1)! p_T(c)`, and integer Newton coefficients give both directions
+without modular division. At an odd prime p, ordinary F_T functions suffice;
+composite modulus16 has a hostile: L4 and L6 are context-equivalent while
+F(3) differs. The actual image is a finite family, not a proved ring or a
+realization of every arbitrary function.
 
-Historical repairs include the tetranacci discriminant `-563`, the distinction
-between OCF's disjoint-cycle sum and a primitive-closed-walk Euler product,
-Paley eigenvalue normalization, and the scoped real-zero exclusion from
-nonnegative quadratic-character partial sums. No classical RH/GRH conclusion
-or external priority assertion is inherited. Source blobs are pinned; older
-canon and the central mistakes ledger are not rewritten by this release.
+The transitive clock is exact. For p^a, the transient is a; the period is
+`(p-1)p^(a-1)` for odd p, and `1` for a<=2 or `2^max(1,a-3)` for p=2.
+CRT takes maximum transient and lcm period. Source padding on every actual
+module has the same sharp universal index A(M)-1 and period L(M); an
+individual module can stabilize sooner or have a smaller period.
+The 5/11 coupling is literal: period10 modulo11 forces a factor5 in the
+combined period, and an actual E4 context separates L1/L21 modulo275.
 
-## What to try next, and what not to infer
+## Full finite quotients and a real 5/11 construction
 
-1. Preserve the shared budget while attacking 10..747; improve a sufficient
-   inequality or find a new finite certificate, rather than claim threshold
-   failure is a hostile tournament.
-2. Track edge/complement incidence or a higher exclusion hierarchy in any
-   spectral/recursive approach. Ordinary root moments alone already fail.
-3. Keep all-modulus algebra separate from real positivity and absolute values.
-   The localized rational hostile reduces only at moduli coprime to six;
-   division-free determinant coefficient identities have broader scope.
-4. Review pending signed/root-cocycle work separately before promotion.
+At p=3,5,7,11, exact constructor-orbit exhaustion attains the all-order upper
+bound `2*p^((p-1)/2)-1`, giving 5,49,685,322101 context classes. The independent
+checker uses full p-entry functions, unlike the producer's parity compression.
+At5,11 all unary P/C/D gates are invertible, so they cannot reach the zero
+function at any depth. One join of reached disjoint-support factors repairs
+that resource loss. This is not an all-prime realization theorem.
 
-Method cards used: controlled forgetting/sidecar repair, structured adversaries,
-and retained shared budgets. No new global META-PATTERNS promotion is made:
-this packet records the evidence and counterindications locally.
+The particularly small actual factors W5=C3[L2,1,1] and W11=C3[L2,L2,1]
+have H=5 and11 and complementary function supports modulo5. Their order-nine
+join H=55 vanishes under every homogeneous context modulo5. Positive powers
+supply complementary idempotent projectors. Their formal function sum is not
+misrepresented as addition of tournaments.
+
+## Spectral and historical connections retained
+
+Weighted digons introduce a hidden disjoint `2+3` cycle-cover correlation
+at five vertices. Conjugacy fixing the all-one root preserves full zeta and
+rooted walk response but changes H; M23 repairs exact recovery at n5.
+By contrast, transitive modules have zeta1 at every order but their modular
+context clocks recover order when all moduli are supplied. These are distinct
+fixed-order and varying-order demonstrations of information lost by zeta.
+Neither excludes spectral sufficient inequalities or proves RH/GRH.
+
+The old 5/11 transfer discriminant, Paley character sums and eleven order-seven
+skew spectra have different carriers. Historical recovery retains their actual
+maps and corrections, not a universal prime-label role. The new projector
+and clock maps are operational connections, not consequences of those labels.
+
+## Remaining frontier and research method
+
+- Sharp weighted stability at10..525 remains open.
+- Complete contextual realization at every odd prime or composite modulus is
+  open; all-modulus scalar universality does not settle those stronger claims.
+- Exact integer-spectrum completeness and general scalar zero-rigidity remain
+  open. Context functions quotient magnitude, graph structure and nonhomogeneous
+  observations even when they preserve every homogeneous modular response.
+- Pending cocycle and regular-spectrum extensions await their own checkpoint.
+
+Methods used: retain a shared budget before relaxing it; test the cheapest
+structured hostile; repair a quotient by the coordinate its target consumes;
+separate exact function identity, formal polynomial identity and realizability.
+No new global META-PATTERNS promotion is made from this packet alone.

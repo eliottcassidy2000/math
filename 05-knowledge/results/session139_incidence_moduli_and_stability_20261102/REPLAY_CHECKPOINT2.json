@@ -1,0 +1,202 @@
+{
+  "expected_rejections": 12,
+  "fresh_relocation": true,
+  "frozen_outputs_matched": [
+    "stability/verification_n526.json",
+    "independent_threshold526/normal.json",
+    "all_moduli/normal.json",
+    "independent/audit_moduli.out",
+    "independent/audit_function_states.out",
+    "independent/audit_allmod_padding.out"
+  ],
+  "n526_independent_named_checks": 25,
+  "normal_optimized_identical": [
+    "stability/verify_n526.py",
+    "independent_threshold526/audit_n526.py",
+    "all_moduli/verify.py",
+    "independent/audit_moduli.py",
+    "independent/audit_function_states.py",
+    "independent/audit_allmod_padding.py"
+  ],
+  "positive_runs": 12,
+  "runs": [
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "stability/verify_n526.py",
+      "mode": "normal",
+      "stdout_sha256": "e2a6d0c289792ace7ea40d682c201165ce56617ff311a6f60a180cf420e3461c"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent_threshold526/audit_n526.py",
+      "mode": "normal",
+      "stdout_sha256": "5f311ec71dca4d604b84c5aa50403827872505c770cbc6241bfac43d88dc446c"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "all_moduli/verify.py",
+      "mode": "normal",
+      "stdout_sha256": "43d34a9688f076c64e2e7f9acefe275b075da11bb7aa5d0666ab0a0ed9d7c6b8"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_moduli.py",
+      "mode": "normal",
+      "stdout_sha256": "817baca7e8443f208fe57e9ebce8648f2d3c868f1de82f2484f41855abecb7d1"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_function_states.py",
+      "mode": "normal",
+      "stdout_sha256": "db5ce7a9fe221b01e405da78d6699112b42a262dcb9f27501952d26623a6efc3"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_allmod_padding.py",
+      "mode": "normal",
+      "stdout_sha256": "89487ac244283db25c124c5cc76ca6f22e025170fbc1bf025ca7e7d391f1a436"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "threshold525-negative",
+      "mode": "normal",
+      "stdout_sha256": "d8c84363b7386bfe795ade7033bf78fda2843006e4ab0846846a91ee5edbced6"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "stability/verify_n526.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "all_moduli/verify.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_moduli.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_function_states.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_allmod_padding.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "stability/verify_n526.py",
+      "mode": "optimized",
+      "stdout_sha256": "e2a6d0c289792ace7ea40d682c201165ce56617ff311a6f60a180cf420e3461c"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent_threshold526/audit_n526.py",
+      "mode": "optimized",
+      "stdout_sha256": "5f311ec71dca4d604b84c5aa50403827872505c770cbc6241bfac43d88dc446c"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "all_moduli/verify.py",
+      "mode": "optimized",
+      "stdout_sha256": "43d34a9688f076c64e2e7f9acefe275b075da11bb7aa5d0666ab0a0ed9d7c6b8"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_moduli.py",
+      "mode": "optimized",
+      "stdout_sha256": "817baca7e8443f208fe57e9ebce8648f2d3c868f1de82f2484f41855abecb7d1"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_function_states.py",
+      "mode": "optimized",
+      "stdout_sha256": "db5ce7a9fe221b01e405da78d6699112b42a262dcb9f27501952d26623a6efc3"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_allmod_padding.py",
+      "mode": "optimized",
+      "stdout_sha256": "89487ac244283db25c124c5cc76ca6f22e025170fbc1bf025ca7e7d391f1a436"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "threshold525-negative",
+      "mode": "optimized",
+      "stdout_sha256": "d8c84363b7386bfe795ade7033bf78fda2843006e4ab0846846a91ee5edbced6"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "stability/verify_n526.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "all_moduli/verify.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_moduli.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_function_states.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_allmod_padding.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_executions": 24,
+  "source_pins": {
+    "all_moduli/verify.py": "0b707d5ef791c8090025b1e5cb765994fea6bdfb6b4e170438a123aae5e5aa13",
+    "independent/audit_allmod_padding.py": "d008f4315a8c8ad50052d7cb01ee6508b3739bd2e3a06f6549e3a8cae6d31422",
+    "independent/audit_function_states.py": "06501a35b37fbb3851f299e5bd7eee6a9f4afa8ebd6553cd86194e83ef5a7b87",
+    "independent/audit_moduli.py": "c10d689df8acc81706e3d5049fc7629668f9e76645526c9284bcb660b58e70ee",
+    "independent_threshold526/audit_n526.py": "daf9e90dd4c5c699db1546d7ba154e04704502ecd76c910ee6255a618efdeafc",
+    "stability/verify_n526.py": "9522c195aad09a340caa07aacb8aa7f2aadb35e0c434ff43be08d81fb1930276"
+  },
+  "status": "PASS"
+}

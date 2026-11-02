@@ -1,0 +1,16 @@
+{
+  "mutation": "lambda=d/63",
+  "runs": [
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected": "dual_polynomial_identity"
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "rejected": "dual_polynomial_identity"
+    }
+  ],
+  "status": "EXPECTED_REJECTION"
+}

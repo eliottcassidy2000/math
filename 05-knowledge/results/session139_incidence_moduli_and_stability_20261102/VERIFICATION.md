@@ -1,95 +1,138 @@
-# Session139 checkpoint-one verification
+# Session139 verification and checkpoint lineage
 
-**PASS in the stated scopes.** This release inherits the accepted Session138
-inputs; it does not claim to rerun every earlier theorem or to close 10..747.
-The source proof's drafting-status sentence is retained verbatim; its final
-independent acceptance is recorded here and in [frozen scope](CHECKPOINT1.md).
+**Current accepted scope:** exact weighted stability at n=3..9 and every
+n>=526; exact all-modulus context function/clock/padding theorems; finite-exact
+complete prime context states at3,5,7,11; the weighted n5 spectral boundary.
+**10..525 remains OPEN.** No RH/GRH or integer-spectrum closure is claimed.
 
-## Sharp coefficient for every n>=748
+| Checkpoint | Scope | Evidence |
+|---|---|---|
+| 1, published `400dcd629598c30762eb9adb8bb85bea581698a7` | n>=748, weighted n5 spectral loss, corrected historical recovery | [Frozen scope](CHECKPOINT1.md), [original replay](REPLAY_CHECKPOINT1.json), [original source integrity](SOURCE_INTEGRITY_CHECKPOINT1.json); 42 published owned blobs verified |
+| 2 | n>=526; all-modulus functions/clocks/padding; exact finite prime quotients and actual5/11 projectors | [Frozen scope](CHECKPOINT2.md), new source pins and independent audits, [fresh replay](REPLAY_CHECKPOINT2.json) |
 
-- [Proof](stability/PROOF_N748.md): retained binary baseline, square completion,
-  and one simultaneous heavy/light wedge budget.
-- [Independent audit](independent_threshold/AUDIT.md): checks quantifiers,
-  nonempty retained matching, both parities, strict inequalities, nonnegative
-  boundaries and the inherited equality classification.
-- Producer certificate: 20 explicit exact integer/Fraction checks.
-- Independently authored certificate: 22 named checks, importing no producer
-  implementation. Both normal and optimized Python outputs are byte-identical.
-- Threshold 747 is deliberately rejected by the endpoint certificate; this
-  is a control of the method, not a counterexample at order 747. Setting the
-  producer's h to zero is also rejected in both execution modes.
+All earlier scientific lane files, audit reports and replay receipts remain
+byte-unchanged. Root README/SYNTHESIS/BOARD/VERIFICATION and SHA256SUMS are
+maintained summaries/manifest. `CHECKPOINT1_SHA256SUMS` preserves the original
+whole-packet manifest **at checkpoint-one's commit**; it is not a command to
+validate later rewritten summaries against old hashes. The original
+`PUBLIC_FILES.json` is likewise the historical checkpoint-one selector.
+The root `SHA256SUMS` validates the cumulative current packet.
 
-Uniformity comes from the proof's monotonicity arguments, not finite sampling.
-The reviewed producer proof and executable match the independent audit's
-SHA-256 pins. No invalid termwise Pfaffian unit-coefficient lemma is used.
+## Second checkpoint: light-mass dual closure at n>=526
 
-## Weighted spectral loss and historical recovery
+[Proof](stability/PROOF_N526.md) · [Independent endpoint/full audit](independent_threshold526/AUDIT.md) · [Second structural audit](independent/N526_STRUCTURAL_AUDIT.md)
 
-The [independent bridge audit](independent/AUDIT.md) reconstructs the full
-bivariate rational conjugacy, determinant polynomial and Hamiltonian sum with
-standard-library polynomial arithmetic, not SymPy or producer imports.
-It verifies the two-parameter `a^2*b^2/54` H difference and the exact rational
-witness, including the `M23` repair. Conjugacy fixing the all-one vector proves
-all rooted scalar walk responses coincide, not just a sampled list.
+**ACCEPTED, including equality.** The proof retains actual light mass U,
+uses a nonempty heavy matching, and pays the light-deficit budget with an
+exact nonnegative quadratic dual. Endpoint-convexity and monotonicity—not
+sampled orders—supply the uniform geometric tail bound. All divisions,
+strict signs, parities and matching-coefficient directions were reviewed.
+The final exact slack is `81/8416000`.
 
-The same frozen audit contains auxiliary exhaustive binary F2 controls on all
-labeled tournaments at n=4,5,6 and sharp ordinal witnesses through 20. This
-retained evidence is **not promotion of the separate pending all-moduli or
-root-cocycle continuation**. False H coefficient 1/55 and false Paley7 count
-35 are rejected with and without optimization.
+The producer and independent integer/Fraction certificates match their pinned
+receipts in normal and optimized Python. The independent code imports no
+producer implementation. A false extension to525 is rejected, as is a changed
+dual multiplier `lambda=d/63`, in both modes. These are controls of the proof
+certificate, not counterexamples at525. The older748 proof and its tests are
+not rewritten to claim526. Accepted Session138 inputs/equality are inherited,
+not all re-proved in this release.
 
-The release's [historical checks](riemann_five_eleven/verify_history.py) use
-SymPy only for exact polynomial algebra and an independently written
-Held–Karp dynamic program for the rational witness's Hamiltonian sum. They
-also check the corrected transfer/tetranacci/pentanacci discriminants,
-Bernoulli denominator repetition, and Paley11 character partial sums with
-natural/optimal ranking counts 33/35. These are bounded arithmetic checks,
-not a literature-priority certificate or an RH/GRH result. Deliberately false
-tetranacci, Paley optimum and incidence values are rejected under both modes.
-The original exploratory `probe.py` and its printed output are retained as
-non-load-bearing producer evidence; they do not themselves assert checks.
+## Second checkpoint: all-modulus operational arithmetic
 
-[Source pins](SOURCE_PINS.json) verify 20 historical Git blob references and
-six inherited proof inputs against base commit
-`291b4d9757842c02aa451beb65acfade2848609b`. Historical prose is inherited only
-with the corrections and type boundaries in [recovery](riemann_five_eleven/HISTORICAL_RECOVERY.md).
-No older canon or central mistakes-ledger file is edited by this checkpoint.
+[Proof](all_moduli/PROOF.md) · [Core/orbit audit](independent/ALL_MODULI_AUDIT.md) · [Padding audit](independent/ALL_MODULI_PADDING_AUDIT.md)
 
-## Fresh relocated replay
+**ACCEPTED.** The all-M equivalence uses integer Newton coefficients, not
+division by factorials modulo a composite. Exact transitive periods and
+transients use prime-power valuation arguments plus CRT. Universal source
+padding has sharp index A(M)-1 and period L(M); the individual delta-dependent
+onset is a sufficient bound only. The actual image of Psi is a finite family,
+not an asserted ring or a realization of all arbitrary functions.
 
-Run from this packet directory:
+The exact class counts5,49,685,322101 at primes3,5,7,11 combine all-order
+upper bounds and complete finite constructor-quotient reachability. The
+producer uses parity-tagged half-vectors; the independent orbit audit uses
+full p-entry functions. Its raw unary counts are5,48,685,322100, not the
+producer's tagged counts6,48,686,322100. Their final contextual counts agree
+after identifying zero tags and adjoining a disjoint-support join at5,11.
+All-depth unary zero exclusion at5,11 follows from invertibility, not a
+bounded search. These results do not extrapolate to every prime/composite.
+
+Independent executable coverage:
+
+- 209 moduli for exact first-repeat clocks via Newton power sums rather than
+  the producer's Stirling recurrence; literal order-nine H55 profile.
+- 7,776 signed degree-five profile/modulus pairs, plus full-function orbit
+  exhaustion at3,5,7,11.
+- All1,099 labeled nonempty tournaments through order5 via literal vertex
+  permutations and cuts, rather than producer Hamilton-subset/partition DP;
+  70,336 actual tournament/modulus comparisons, 89,402 padding comparisons
+  over132 moduli, and the actual E4 response117/172 modulo275.
+- Producer separately checks519 clock moduli,70,588 period comparisons,
+  35,168 Psi comparisons,225 actual operator/profile checks and its full
+  constructor quotient orbits.
+
+All five inherited source blob pins match the declared source commit. The
+base theorem's proof/verifier/receipts/pins are verbatim. Two producer summary
+files only lose references to the excluded later CONTEXT_CONTENT addendum;
+[acceptance and curated selector](all_moduli/ACCEPTANCE.md) document that cut.
+
+## Fresh second-checkpoint relocation and failure controls
 
 ```bash
+# From this packet directory:
 sha256sum -c SHA256SUMS
+python3 replay_checkpoint2.py --output /tmp/session139-checkpoint2-replay.json
 python3 replay.py --output /tmp/session139-checkpoint1-replay.json
 ```
 
-`replay.py` copies only the four named kernels into a fresh temporary directory,
-then performs **22 executions: eight successful scientific runs and fourteen
-expected hostile rejections**, including normal and `python3 -O` modes.
-The four positive output pairs are byte-identical; frozen producer and audit
-outputs must match exactly. The report records source hashes and stdout hashes.
-Python 3 and SymPy (version recorded in the history receipt) are required;
-the two stability certificates and symbolic bridge audit use only the standard
-library. [Fresh assembled receipt](REPLAY_CHECKPOINT1.json).
+The second replay copies six standalone kernels to a new temporary directory.
+It performs **24 executions:12 positive runs and12 expected rejections**.
+Each normal/optimized output pair must agree and match the frozen receipt.
+False threshold, dual multiplier, dyadic period, orbit cardinality and actual
+E4-response mutations are rejected by explicit runtime checks, including
+under `python3 -O`. All second-checkpoint kernels use the standard library.
+Source/output hashes are recorded in [the receipt](REPLAY_CHECKPOINT2.json).
 
-The older `independent/SHA256SUMS` is an unchanged archival source receipt with
-original absolute scratch paths. The root `SHA256SUMS` is the portable release
-manifest; it is the one used by the command above.
+The original first replay remains unchanged:22 executions, eight positive
+runs and fourteen expected rejections. Its historical polynomial cross-check
+requires SymPy; the two stability kernels and symbolic bridge audit use the
+standard library. The archived `independent/SHA256SUMS` has original absolute
+scratch paths; use the cumulative root manifest for portable validation.
 
-## Documentation and publication boundary
+## First checkpoint retained: n>=748, spectral loss and history
 
-The native documentation checker cannot pass directly in this sparse checkout
-because its baseline documents are absent. The unmodified same-version checker
-passes with read-only navigation overlays on a clean, materialized Session137
-ancestor; all 245 intervening Session138 paths are explicitly accounted for.
-No baseline files are changed or hydrated. The exact result is
-[recorded here](DOC_OVERLAY_VERIFICATION.json): startup 179966/180000 bytes,
-frontier 450/450 lines, maintained warning sentinels and router smoke PASS.
-New packet links, explicit source pins, frozen-copy integrity, conflict markers,
-and the owned-path staging boundary are checked separately.
+The [n748 audit](independent_threshold/AUDIT.md) accepts the original shared
+wedge-budget theorem and equality;20 producer and22 independent exact checks
+remain recorded. False747 extension and producer h=0 are rejected. The proof's
+original review-pending sentence is its drafting snapshot, not current status.
 
-The local release commit and remote transport/publication receipt are distinct.
-A prepared local commit is not evidence of a remote update; the publishing
-agent must verify the actual remote commit and every owned blob before reporting
-publication. Later continuations must retain this checkpoint's original scope.
+The [bridge audit](independent/AUDIT.md) independently reconstructs the full
+bivariate rational conjugacy, determinant and Hamiltonian polynomial with
+standard-library arithmetic. The all-one-root conjugacy proves the full
+rooted response is preserved. M23 repairs exact H at n5; binary first-blindness
+remains6. Auxiliary binary cocycle controls were retained without promoting
+the separate later integral/weighted cocycle continuation.
+
+The [historical checks](riemann_five_eleven/verify_history.py) reproduce the
+corrected transfer/tetranacci/pentanacci discriminants, Bernoulli denominator
+repeat, Paley11 character sums/ranking33 versus35, and a separate Held–Karp
+rational witness. Twenty historical source pins and six inherited input hashes
+are preserved in [the first pin record](SOURCE_PINS.json). The exploratory
+probe is non-load-bearing; no global priority, RH/GRH or spectral-proof
+impossibility is inferred.
+
+## Documentation, scope and publication checks
+
+Native `agents/check_docs.py` needs baseline documents absent from this sparse
+checkout. Its unmodified same-version checker passes with read-only overlays
+on the clean materialized Session137 ancestor, with every intervening path
+accounted for. No baseline mutation or hydration is used. The final receipt
+is [checkpoint-two documentation verification](DOC_OVERLAY_VERIFICATION_CHECKPOINT2.json);
+startup remains179966/180000 bytes and frontier450/450 lines. New links,
+source hashes, frozen prior lanes, conflict markers and explicit staging scope
+are independently checked.
+
+No central mistakes ledger or older canon file is changed here. Prepared local
+commits are not remote publication: the publishing agent separately verifies
+the actual main commit and every owned blob. Cocycle, regular-critical-line,
+context-content and local-factor-hostile work require their own audited release.

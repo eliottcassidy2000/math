@@ -1,0 +1,166 @@
+{
+  "actual": {
+    "actual_gate_identities": 225,
+    "factorial_function_moduli": 32,
+    "factorial_function_tournament_checks": 35168,
+    "labelled_tournaments": 1099,
+    "prime_moduli": [
+      3,
+      5,
+      7,
+      11
+    ]
+  },
+  "arithmetic_bridge": {
+    "W11_F2": 100,
+    "W11_order": 5,
+    "W5_F2": 32,
+    "W5_order": 4,
+    "ordinary_function_hostile": {
+      "M": 16,
+      "at_x3": [
+        1,
+        9
+      ],
+      "orders": [
+        4,
+        6
+      ]
+    },
+    "zero_join_H": 55,
+    "zero_join_order": 9
+  },
+  "clock": {
+    "digest": "745eefede1e3271ed6eee70dfc4da4f37ca9b8cfcfe1059311efb2ffda362a64",
+    "moduli": 519,
+    "period_checks": 70588,
+    "selected": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        8,
+        3,
+        2
+      ],
+      [
+        16,
+        4,
+        2
+      ],
+      [
+        25,
+        2,
+        20
+      ],
+      [
+        55,
+        1,
+        20
+      ],
+      [
+        121,
+        2,
+        110
+      ],
+      [
+        625,
+        4,
+        500
+      ],
+      [
+        1331,
+        3,
+        1210
+      ],
+      [
+        14641,
+        4,
+        13310
+      ]
+    ]
+  },
+  "orbits": [
+    {
+      "contextual_classes": 5,
+      "determinants": {
+        "C:-1": 0,
+        "C:1": 2,
+        "D:-1": 2,
+        "D:1": 2,
+        "P:-1": 1,
+        "P:1": 1
+      },
+      "p": 3,
+      "tagged_unary_states": 6,
+      "visited_sha256": "a14e8849d7b843c67fe8fa8c4ebc530b8cca381cc987a6c1ba133d8b30afcbb4",
+      "zero_witness": {
+        "word": "C"
+      }
+    },
+    {
+      "contextual_classes": 49,
+      "determinants": {
+        "C:-1": 4,
+        "C:1": 3,
+        "D:-1": 4,
+        "D:1": 4,
+        "P:-1": 2,
+        "P:1": 2
+      },
+      "p": 5,
+      "tagged_unary_states": 48,
+      "visited_sha256": "cbab7da6cda5168bc7e430ca5f0daa13b76fd680b301953b98f7554597ecb4df",
+      "zero_witness": {
+        "left": "PD",
+        "left_order": 5,
+        "operation": "J",
+        "profile_function": "zero",
+        "right": "PPDD",
+        "right_order": 9
+      }
+    },
+    {
+      "contextual_classes": 685,
+      "determinants": {
+        "C:-1": 0,
+        "C:1": 1,
+        "D:-1": 4,
+        "D:1": 4,
+        "P:-1": 6,
+        "P:1": 6
+      },
+      "p": 7,
+      "tagged_unary_states": 686,
+      "visited_sha256": "5fb1cd8b9d9dc1c74d6ad13c8791aa127e13ed42f57032276a4731bacf269742",
+      "zero_witness": {
+        "word": "CDDCC"
+      }
+    },
+    {
+      "contextual_classes": 322101,
+      "determinants": {
+        "C:-1": 5,
+        "C:1": 7,
+        "D:-1": 6,
+        "D:1": 6,
+        "P:-1": 10,
+        "P:1": 10
+      },
+      "p": 11,
+      "tagged_unary_states": 322100,
+      "visited_sha256": "9abb10f6db4678c8e2537fbc5ceb3186d12a7a6366b982eb3aac3a0c99e4f7e9",
+      "zero_witness": {
+        "left": "CDPPPDCPCDD",
+        "left_order": 23,
+        "operation": "J",
+        "profile_function": "zero",
+        "right": "PPCCDDDCCP",
+        "right_order": 21
+      }
+    }
+  ],
+  "status": "PASS"
+}

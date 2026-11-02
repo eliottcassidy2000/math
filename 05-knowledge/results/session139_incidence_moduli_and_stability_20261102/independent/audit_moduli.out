@@ -1,0 +1,44 @@
+{
+  "clock": {
+    "first_repetitions_match": true,
+    "method": "Newton finite differences, not Stirling recurrence",
+    "moduli": 209
+  },
+  "status": "PASS",
+  "zero": {
+    "Hamiltonian_counts": [
+      5,
+      11,
+      55
+    ],
+    "function_not_polynomial_zero": true,
+    "mod5_signature": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "order9_pathcover_profile": [
+      0,
+      55,
+      1545,
+      7495,
+      12310,
+      8665,
+      2898,
+      474,
+      36,
+      1
+    ],
+    "orders": [
+      4,
+      5,
+      9
+    ]
+  }
+}

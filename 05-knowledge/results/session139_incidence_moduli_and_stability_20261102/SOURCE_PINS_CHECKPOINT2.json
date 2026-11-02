@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "base_commit": "400dcd629598c30762eb9adb8bb85bea581698a7",
+  "inherited_source_commit": "291b4d9757842c02aa451beb65acfade2848609b",
+  "independently_reviewed_final_sha256": {
+    "stability/PROOF_N526.md": "e82bf3b0eb986f63daee55d42e84c3545921800e0a9936484cfdff97a03b6561",
+    "stability/verify_n526.py": "9522c195aad09a340caa07aacb8aa7f2aadb35e0c434ff43be08d81fb1930276",
+    "all_moduli/PROOF.md": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c",
+    "all_moduli/verify.py": "0b707d5ef791c8090025b1e5cb765994fea6bdfb6b4e170438a123aae5e5aa13",
+    "all_moduli/normal.json": "43d34a9688f076c64e2e7f9acefe275b075da11bb7aa5d0666ab0a0ed9d7c6b8",
+    "all_moduli/optimized.json": "43d34a9688f076c64e2e7f9acefe275b075da11bb7aa5d0666ab0a0ed9d7c6b8"
+  },
+  "all_moduli_inherited_git_blobs_verified": [
+    {
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/width/PROOF.md",
+      "git_blob": "7bd522e0aef614fc01f70450b6def44a83266080"
+    },
+    {
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/width_phase2/PROOF.md",
+      "git_blob": "ff745c30f5585887809ddac7f48c265527d72915"
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/exact_resources/PROOF.md",
+      "git_blob": "97509d0195c27aa7f693de4d789508d64b4cf933"
+    },
+    {
+      "path": "01-canon/theorems/THM-1926-tournament-zeta-euler-product-over-strong-core.md",
+      "git_blob": "fa3057ebdbf1088f8e1ccae3cb8e159b209b49ab"
+    },
+    {
+      "path": "01-canon/theorems/THM-4093-rational-edge-diagonal-gauge-and-padic-tournament-zeta-tangent.md",
+      "git_blob": "4dc61068ca8bd3ffaf658802fd37224335db3259"
+    }
+  ],
+  "scope": "Accepted n526 and base all-modulus theorem only; first-checkpoint source pins retained separately."
+}

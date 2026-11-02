@@ -1,0 +1,36 @@
+{
+  "Psi": {
+    "function_signature_checks": 7776,
+    "moduli": 32,
+    "ordinary_F_composite_hostile": "3^4=1,3^6=9 mod16",
+    "profile_degree": 5,
+    "signed_profiles_per_modulus": 243
+  },
+  "orbits": [
+    {
+      "all_context_classes_with_one_join": 5,
+      "p": 3,
+      "unary_full_functions": 5,
+      "zero_in_unary_orbit": true
+    },
+    {
+      "all_context_classes_with_one_join": 49,
+      "p": 5,
+      "unary_full_functions": 48,
+      "zero_in_unary_orbit": false
+    },
+    {
+      "all_context_classes_with_one_join": 685,
+      "p": 7,
+      "unary_full_functions": 685,
+      "zero_in_unary_orbit": true
+    },
+    {
+      "all_context_classes_with_one_join": 322101,
+      "p": 11,
+      "unary_full_functions": 322100,
+      "zero_in_unary_orbit": false
+    }
+  ],
+  "status": "PASS"
+}
