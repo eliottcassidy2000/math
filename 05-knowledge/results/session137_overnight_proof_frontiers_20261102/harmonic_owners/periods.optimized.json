@@ -1,0 +1,12 @@
+{
+  "all_attachment_sets": 4092,
+  "all_h": "1..d",
+  "boundary_correction_period_cases": 12276,
+  "m_choices": "s,s+1,s+5",
+  "period_cases": 24522,
+  "q": [
+    3,
+    12
+  ],
+  "status": "FINITE-EXACT / PASS"
+}

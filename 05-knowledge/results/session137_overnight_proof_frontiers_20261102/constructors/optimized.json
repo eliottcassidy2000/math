@@ -1,0 +1,254 @@
+{
+  "actual_axis_rays": [
+    {
+      "first_cut": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "full_cut": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "n": 1
+    },
+    {
+      "first_cut": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "n": 2
+    },
+    {
+      "first_cut": [
+        2,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        3,
+        1,
+        0
+      ],
+      "n": 3
+    },
+    {
+      "first_cut": [
+        4,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        7,
+        1,
+        0
+      ],
+      "n": 4
+    },
+    {
+      "first_cut": [
+        8,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        15,
+        1,
+        0
+      ],
+      "n": 5
+    },
+    {
+      "first_cut": [
+        16,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        31,
+        1,
+        0
+      ],
+      "n": 6
+    },
+    {
+      "first_cut": [
+        32,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        63,
+        1,
+        0
+      ],
+      "n": 7
+    },
+    {
+      "first_cut": [
+        64,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        127,
+        1,
+        0
+      ],
+      "n": 8
+    },
+    {
+      "first_cut": [
+        128,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        255,
+        1,
+        0
+      ],
+      "n": 9
+    },
+    {
+      "first_cut": [
+        256,
+        0,
+        0,
+        1
+      ],
+      "full_cut": [
+        0,
+        511,
+        1,
+        0
+      ],
+      "n": 10
+    }
+  ],
+  "all_length_quotient": {
+    "bank_size": 32,
+    "cap": 173,
+    "missing_odds": [
+      7,
+      21
+    ],
+    "overflow_tags": 85,
+    "positive_saturation_states": 6234,
+    "source_cost_states": 2592,
+    "support_sha256": "bf7e153b60c4261d7138c1663c251b5b99a6cc5259241a076f32407eb9428d26"
+  },
+  "collapse_word_source_checks": 624,
+  "face": {
+    "actual_H11": {
+      "cut": 3,
+      "parent": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "state": [
+        1,
+        11,
+        12,
+        0
+      ]
+    },
+    "all_cuts_through_chain_order": 10,
+    "face_instances": 55,
+    "fake_positive": [
+      5,
+      0,
+      0,
+      1
+    ]
+  },
+  "general_compiler": {
+    "all_labelled_local_orders": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "matrices": 1098,
+    "zero_cost_sealing_recipes": 75
+  },
+  "hostiles": {
+    "negative_column_passes_four_small_actual_tests": true,
+    "next_actual_ray_rejects": true,
+    "positive_integer_parity_preserving_add4_rejected_by_face": true
+  },
+  "literal_compiler_checks": 5476,
+  "padding_hostile": {
+    "neutral_S1": {
+      "cut": 5,
+      "parent": [
+        6,
+        4,
+        0
+      ],
+      "state": [
+        1,
+        3,
+        5,
+        1
+      ]
+    },
+    "source": {
+      "cut": 1,
+      "parent": [
+        2,
+        0
+      ],
+      "state": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    "successful_S0": {
+      "cut": 1,
+      "parent": [
+        6,
+        4,
+        0
+      ],
+      "state": [
+        1,
+        5,
+        4,
+        0
+      ]
+    },
+    "target_5_rejected_all_right_local_words": true
+  },
+  "scope": "Structural universal proofs use actual witnesses and inherited compiler; finite controls are not universal spectrum completeness.",
+  "status": "PASS"
+}

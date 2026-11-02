@@ -1,0 +1,11 @@
+{
+  "scope": "one independently recomputed k6 quotient code16, deleted vertex0; all131072 literal cuts, no orbit compression",
+  "source_order": 18,
+  "parent_order": 17,
+  "target_H": 1049305833,
+  "parent_H": 28273779,
+  "response_gcd": 54,
+  "zero_cuts": [114689],
+  "direct_child_controls": 4,
+  "verdict": "PASS unique original zero and no unit response; not the entire k6 census"
+}

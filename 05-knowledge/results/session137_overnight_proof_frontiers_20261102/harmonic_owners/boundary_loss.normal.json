@@ -1,0 +1,42 @@
+{
+  "A": [
+    1,
+    2
+  ],
+  "A_owners": [
+    [
+      3,
+      "+"
+    ]
+  ],
+  "A_safe": true,
+  "B": [
+    1,
+    2,
+    6
+  ],
+  "B_owners": [
+    [
+      3,
+      "+"
+    ],
+    [
+      14,
+      "+"
+    ]
+  ],
+  "B_safe": false,
+  "common_E": [
+    9,
+    3,
+    5,
+    7
+  ],
+  "common_d": 3,
+  "continuation_point": "119989/330000",
+  "lower_radius": "9989/110000",
+  "point": "4/11",
+  "q": 8,
+  "radius": "1/11",
+  "status": "FINITE-EXACT / PASS"
+}

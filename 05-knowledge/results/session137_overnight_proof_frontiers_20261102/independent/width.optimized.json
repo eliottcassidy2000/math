@@ -1,0 +1,179 @@
+{
+  "coefficient_gcds": [
+    1,
+    2,
+    12
+  ],
+  "detectors": [
+    {
+      "W": [
+        1
+      ],
+      "c": 1,
+      "code": 0,
+      "leading_coefficient": 1,
+      "order": 1
+    },
+    {
+      "W": [
+        3,
+        1
+      ],
+      "c": 2,
+      "code": 5,
+      "leading_coefficient": 2,
+      "order": 3
+    },
+    {
+      "W": [
+        9,
+        10,
+        2
+      ],
+      "c": 3,
+      "code": 883,
+      "leading_coefficient": 12,
+      "order": 5
+    },
+    {
+      "W": [
+        31,
+        83,
+        50,
+        6
+      ],
+      "c": 4,
+      "code": 1994695,
+      "leading_coefficient": 144,
+      "order": 7
+    }
+  ],
+  "modular_cutoffs": [
+    {
+      "first_invisible_cover_count": 2,
+      "modulus": 2
+    },
+    {
+      "first_invisible_cover_count": 3,
+      "modulus": 3
+    },
+    {
+      "first_invisible_cover_count": 3,
+      "modulus": 4
+    },
+    {
+      "first_invisible_cover_count": 5,
+      "modulus": 5
+    },
+    {
+      "first_invisible_cover_count": 3,
+      "modulus": 6
+    },
+    {
+      "first_invisible_cover_count": 7,
+      "modulus": 7
+    },
+    {
+      "first_invisible_cover_count": 4,
+      "modulus": 8
+    },
+    {
+      "first_invisible_cover_count": 4,
+      "modulus": 9
+    },
+    {
+      "first_invisible_cover_count": 5,
+      "modulus": 10
+    },
+    {
+      "first_invisible_cover_count": 11,
+      "modulus": 11
+    },
+    {
+      "first_invisible_cover_count": 3,
+      "modulus": 12
+    },
+    {
+      "first_invisible_cover_count": 13,
+      "modulus": 13
+    },
+    {
+      "first_invisible_cover_count": 7,
+      "modulus": 14
+    },
+    {
+      "first_invisible_cover_count": 5,
+      "modulus": 15
+    },
+    {
+      "first_invisible_cover_count": 4,
+      "modulus": 16
+    },
+    {
+      "first_invisible_cover_count": 17,
+      "modulus": 17
+    },
+    {
+      "first_invisible_cover_count": 4,
+      "modulus": 18
+    },
+    {
+      "first_invisible_cover_count": 19,
+      "modulus": 19
+    },
+    {
+      "first_invisible_cover_count": 5,
+      "modulus": 20
+    },
+    {
+      "first_invisible_cover_count": 7,
+      "modulus": 21
+    },
+    {
+      "first_invisible_cover_count": 11,
+      "modulus": 22
+    },
+    {
+      "first_invisible_cover_count": 23,
+      "modulus": 23
+    },
+    {
+      "first_invisible_cover_count": 4,
+      "modulus": 24
+    },
+    {
+      "first_invisible_cover_count": 6,
+      "modulus": 25
+    },
+    {
+      "first_invisible_cover_count": 13,
+      "modulus": 26
+    },
+    {
+      "first_invisible_cover_count": 6,
+      "modulus": 27
+    },
+    {
+      "first_invisible_cover_count": 7,
+      "modulus": 28
+    },
+    {
+      "first_invisible_cover_count": 29,
+      "modulus": 29
+    },
+    {
+      "first_invisible_cover_count": 5,
+      "modulus": 30
+    },
+    {
+      "first_invisible_cover_count": 31,
+      "modulus": 31
+    },
+    {
+      "first_invisible_cover_count": 5,
+      "modulus": 32
+    }
+  ],
+  "quotients": 1099,
+  "scope": "FINITE-EXACT all fixed-root quotients order<=5; detector c<=4; universal proof audited separately"
+}

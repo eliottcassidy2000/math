@@ -1,0 +1,25 @@
+{
+  "exact_order_three_checks": 27,
+  "matrices": 856,
+  "sample_min_gap_over_variance": {
+    "3": "1",
+    "4": "3/4",
+    "5": "1045099/429534",
+    "6": "1705766053/420945525",
+    "7": "577297369/42342272",
+    "8": "622928661417/12173511784"
+  },
+  "scope": "all ternary weighted matrices n1..4;24 fixed-seed rational samples each n5..8;coefficient identities n3..200",
+  "semantic_sha256": "d98f1956ed08a7a5939c1f4be5eb6f29a0a8b66bb2501a705488147e8b5962b1",
+  "sharp_n4": {
+    "H": "1",
+    "V": "1/2",
+    "delta": "7/16",
+    "gap": "3/8",
+    "u": "9/16",
+    "v": "1/16"
+  },
+  "strong_root_checks": 3621,
+  "verdict": "PASS polynomial coefficients, root recurrences, averaged bounds, n3 identity, n4 sharpness and n2 hostile",
+  "weak_root_checks": 3627
+}

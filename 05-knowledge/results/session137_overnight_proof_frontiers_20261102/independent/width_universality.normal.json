@@ -1,0 +1,11 @@
+{
+  "full_polynomial_recipes": 132,
+  "literal_factor_pairs": 121,
+  "literal_seed_checks": 4,
+  "positive_inverse_calls_in_full_replays": 2566,
+  "primitive_gate_applications_in_full_replays": 33705,
+  "scope": "independent literal set-partition profiles and positive modular controller;all compatible targets M1..96 plus selected mixed/prime-power moduli;full polynomial recipes M1..18 plus six mixed cases at35,65,120",
+  "semantic_sha256": "a1ab518e1652e7e5650a6008eed6fe5c3eeb4bbf13f8978171a2e6398654fcf8",
+  "simultaneous_landings": 3562,
+  "verdict": "PASS bilinear foundation, anchors, positive inverses, resets, mod5 and13 hostiles, simultaneous landing and final strong-extraction marker"
+}

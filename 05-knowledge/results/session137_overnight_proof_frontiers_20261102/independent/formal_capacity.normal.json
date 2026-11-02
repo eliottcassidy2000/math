@@ -1,0 +1,23 @@
+{
+  "actual_zero_cuts": [
+    1793
+  ],
+  "formal_zero_cuts": [
+    480,
+    736,
+    1248,
+    1793
+  ],
+  "max_pair_floor": 4194,
+  "nonstrong_zero_cuts": [
+    14,
+    22,
+    26,
+    29
+  ],
+  "parent_H": 24651,
+  "response_gcd": 6,
+  "scope": "exact one actual order11 parent and a deliberately formal modified capacity tensor; no tournament-realizability inference",
+  "total_capacity": 582822,
+  "verdict": "PASS listed invariants survive but actual zero uniqueness does not follow from them alone"
+}

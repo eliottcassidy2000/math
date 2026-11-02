@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-02T15:33:02.044322+00:00",
+  "manifests": [
+    {
+      "tree": "frozen_original",
+      "manifest": "constructors/SHA256SUMS",
+      "entries": 23,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "coverage/SHA256SUMS",
+      "entries": 49,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "cycle_carriers/SHA256SUMS",
+      "entries": 22,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "harmonic_owners/MANIFEST.sha256",
+      "entries": 15,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "independent/COUNTING_SHA256SUMS",
+      "entries": 4,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "independent/GLOBAL_SHA256SUMS",
+      "entries": 12,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "independent/SHA256SUMS",
+      "entries": 90,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "width/SHA256SUMS",
+      "entries": 7,
+      "mismatches": []
+    },
+    {
+      "tree": "frozen_original",
+      "manifest": "width_phase2/SHA256SUMS",
+      "entries": 20,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "constructors/SHA256SUMS",
+      "entries": 23,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "coverage/SHA256SUMS",
+      "entries": 49,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "cycle_carriers/SHA256SUMS",
+      "entries": 22,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "harmonic_owners/MANIFEST.sha256",
+      "entries": 15,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "independent/COUNTING_SHA256SUMS",
+      "entries": 4,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "independent/GLOBAL_SHA256SUMS",
+      "entries": 12,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "independent/SHA256SUMS",
+      "entries": 90,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "width/SHA256SUMS",
+      "entries": 7,
+      "mismatches": []
+    },
+    {
+      "tree": "portable_after_replay",
+      "manifest": "width_phase2/SHA256SUMS",
+      "entries": 20,
+      "mismatches": []
+    }
+  ],
+  "manifest_entries_per_tree": 242,
+  "scientific_executions": 65,
+  "compilations": 9,
+  "sidecar_comparisons": 12,
+  "nonempty_stderr": [],
+  "originals_changed": [],
+  "reconciliation_total_bytes": 4487440
+}

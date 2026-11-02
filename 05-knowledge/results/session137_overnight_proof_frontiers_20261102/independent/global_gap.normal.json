@@ -1,0 +1,10 @@
+{
+  "scope": "all labelled tournaments n1..6; all roots n<=5; 128 deterministic tournaments at each n7..10 with all roots; exact s<1 hostile",
+  "tournaments": 34380,
+  "root_insertions": 42532,
+  "literal_old_paths": 4748109,
+  "induced_determinant_checks": 2342526,
+  "empty_complement_terms": 654234,
+  "semantic_fnv64": "1527053700552675887",
+  "verdict": "PASS all three insertion identities, both signed gaps, algebraic positivity, and equality loci"
+}

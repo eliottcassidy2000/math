@@ -1,0 +1,730 @@
+{
+  "branch_escapes": [
+    {
+      "H": 11,
+      "adjacency": [
+        14,
+        12,
+        24,
+        16,
+        3
+      ]
+    },
+    {
+      "H": 55,
+      "adjacency": [
+        502,
+        500,
+        504,
+        499,
+        224,
+        192,
+        384,
+        256,
+        48
+      ]
+    }
+  ],
+  "coefficient_gcds": [
+    1,
+    2,
+    12
+  ],
+  "direct_modular_substitution_checks": 320,
+  "exact_context_classes": {
+    "3": [
+      {
+        "H": 3,
+        "adjacency": [
+          2,
+          4,
+          1
+        ],
+        "state": [
+          0,
+          0
+        ],
+        "word": "C"
+      },
+      {
+        "H": 1,
+        "adjacency": [
+          0
+        ],
+        "state": [
+          1,
+          0
+        ],
+        "word": ""
+      },
+      {
+        "H": 1,
+        "adjacency": [
+          2,
+          0
+        ],
+        "state": [
+          1,
+          1
+        ],
+        "word": "P"
+      },
+      {
+        "H": 5,
+        "adjacency": [
+          30,
+          12,
+          8,
+          16,
+          6
+        ],
+        "state": [
+          2,
+          0
+        ],
+        "word": "PCP"
+      },
+      {
+        "H": 5,
+        "adjacency": [
+          6,
+          4,
+          8,
+          3
+        ],
+        "state": [
+          2,
+          2
+        ],
+        "word": "PC"
+      }
+    ],
+    "4": [
+      {
+        "H": 1,
+        "adjacency": [
+          0
+        ],
+        "state": [
+          1,
+          0
+        ],
+        "word": ""
+      },
+      {
+        "H": 1,
+        "adjacency": [
+          2,
+          0
+        ],
+        "state": [
+          1,
+          1
+        ],
+        "word": "P"
+      },
+      {
+        "H": 3,
+        "adjacency": [
+          2,
+          4,
+          1
+        ],
+        "state": [
+          3,
+          1
+        ],
+        "word": "C"
+      }
+    ],
+    "8": [
+      {
+        "H": 1,
+        "adjacency": [
+          0
+        ],
+        "state": [
+          1,
+          0,
+          0
+        ],
+        "word": ""
+      },
+      {
+        "H": 1,
+        "adjacency": [
+          2,
+          0
+        ],
+        "state": [
+          1,
+          1,
+          0
+        ],
+        "word": "P"
+      },
+      {
+        "H": 9,
+        "adjacency": [
+          14,
+          12,
+          8,
+          16,
+          7
+        ],
+        "state": [
+          1,
+          1,
+          1
+        ],
+        "word": "PPC"
+      },
+      {
+        "H": 1,
+        "adjacency": [
+          14,
+          12,
+          8,
+          0
+        ],
+        "state": [
+          1,
+          3,
+          0
+        ],
+        "word": "PPP"
+      },
+      {
+        "H": 1,
+        "adjacency": [
+          6,
+          4,
+          0
+        ],
+        "state": [
+          1,
+          3,
+          1
+        ],
+        "word": "PP"
+      },
+      {
+        "H": 3,
+        "adjacency": [
+          14,
+          4,
+          8,
+          2
+        ],
+        "state": [
+          3,
+          1,
+          0
+        ],
+        "word": "CP"
+      },
+      {
+        "H": 3,
+        "adjacency": [
+          30,
+          28,
+          8,
+          16,
+          4
+        ],
+        "state": [
+          3,
+          1,
+          1
+        ],
+        "word": "CPP"
+      },
+      {
+        "H": 3,
+        "adjacency": [
+          2,
+          4,
+          1
+        ],
+        "state": [
+          3,
+          3,
+          1
+        ],
+        "word": "C"
+      },
+      {
+        "H": 93,
+        "adjacency": [
+          46,
+          44,
+          40,
+          48,
+          39,
+          64,
+          31
+        ],
+        "state": [
+          5,
+          1,
+          1
+        ],
+        "word": "PPCC"
+      },
+      {
+        "H": 5,
+        "adjacency": [
+          6,
+          4,
+          8,
+          3
+        ],
+        "state": [
+          5,
+          3,
+          0
+        ],
+        "word": "PC"
+      },
+      {
+        "H": 5,
+        "adjacency": [
+          30,
+          12,
+          8,
+          16,
+          6
+        ],
+        "state": [
+          5,
+          3,
+          1
+        ],
+        "word": "PCP"
+      },
+      {
+        "H": 15,
+        "adjacency": [
+          62,
+          20,
+          24,
+          18,
+          32,
+          14
+        ],
+        "state": [
+          7,
+          1,
+          0
+        ],
+        "word": "CCP"
+      },
+      {
+        "H": 15,
+        "adjacency": [
+          126,
+          124,
+          40,
+          48,
+          36,
+          64,
+          28
+        ],
+        "state": [
+          7,
+          1,
+          1
+        ],
+        "word": "CCPP"
+      },
+      {
+        "H": 15,
+        "adjacency": [
+          10,
+          12,
+          9,
+          16,
+          7
+        ],
+        "state": [
+          7,
+          3,
+          1
+        ],
+        "word": "CC"
+      }
+    ]
+  },
+  "exact_mod12_classes": [
+    {
+      "H": 1,
+      "adjacency": [
+        0
+      ],
+      "expression": "1",
+      "state": [
+        1,
+        0
+      ]
+    },
+    {
+      "H": 1,
+      "adjacency": [
+        2,
+        0
+      ],
+      "expression": "J(1,1)",
+      "state": [
+        1,
+        1
+      ]
+    },
+    {
+      "H": 1,
+      "adjacency": [
+        6,
+        4,
+        0
+      ],
+      "expression": "J(1,J(1,1))",
+      "state": [
+        1,
+        3
+      ]
+    },
+    {
+      "H": 3,
+      "adjacency": [
+        2,
+        4,
+        1
+      ],
+      "expression": "C(1)",
+      "state": [
+        3,
+        3
+      ]
+    },
+    {
+      "H": 5,
+      "adjacency": [
+        30,
+        12,
+        8,
+        16,
+        6
+      ],
+      "expression": "J(1,C(J(1,1)))",
+      "state": [
+        5,
+        3
+      ]
+    },
+    {
+      "H": 5,
+      "adjacency": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "expression": "C(J(1,1))",
+      "state": [
+        5,
+        5
+      ]
+    },
+    {
+      "H": 211,
+      "adjacency": [
+        126,
+        92,
+        88,
+        112,
+        96,
+        70,
+        128,
+        63
+      ],
+      "expression": "C(J(1,B))",
+      "state": [
+        7,
+        1
+      ]
+    },
+    {
+      "H": 211,
+      "adjacency": [
+        510,
+        252,
+        184,
+        176,
+        224,
+        192,
+        140,
+        256,
+        126
+      ],
+      "expression": "J(1,C(J(1,B)))",
+      "state": [
+        7,
+        3
+      ]
+    },
+    {
+      "H": 33,
+      "adjacency": [
+        238,
+        236,
+        248,
+        240,
+        227,
+        64,
+        128,
+        32
+      ],
+      "expression": "J(B,C(1))",
+      "state": [
+        9,
+        3
+      ]
+    },
+    {
+      "H": 11,
+      "adjacency": [
+        14,
+        12,
+        24,
+        16,
+        3
+      ],
+      "expression": "B",
+      "state": [
+        11,
+        3
+      ]
+    },
+    {
+      "H": 11,
+      "adjacency": [
+        62,
+        28,
+        24,
+        48,
+        32,
+        6
+      ],
+      "expression": "J(1,B)",
+      "state": [
+        11,
+        5
+      ]
+    }
+  ],
+  "labelled_contexts": 1099,
+  "literal_profile_checks": 1099,
+  "modular_signature_precisions": {
+    "12": [
+      12,
+      6
+    ],
+    "16": [
+      16,
+      8,
+      4
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3,
+      3
+    ],
+    "32": [
+      32,
+      16,
+      8,
+      2
+    ],
+    "4": [
+      4,
+      2
+    ],
+    "5": [
+      5,
+      5,
+      5,
+      5
+    ],
+    "64": [
+      64,
+      32,
+      16,
+      4
+    ],
+    "8": [
+      8,
+      4,
+      2
+    ],
+    "9": [
+      9,
+      9,
+      3
+    ]
+  },
+  "old_cyclic_decoder_hostile_mod8": [
+    {
+      "cyclic_response": 137,
+      "n": 3,
+      "sharp_response": 81,
+      "signature8": [
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "cyclic_response": 393,
+      "n": 4,
+      "sharp_response": 221,
+      "signature8": [
+        1,
+        3,
+        0
+      ]
+    }
+  ],
+  "repeat_support": {
+    "cyclic_hostile_W": 3,
+    "cyclic_hostile_counts": [
+      3,
+      3,
+      3
+    ],
+    "labelled_checks": 5421,
+    "sharp_balanced_family": [
+      {
+        "W": 1,
+        "c": 2,
+        "counts": [
+          2,
+          2,
+          1
+        ],
+        "quotient": [
+          2,
+          4,
+          1
+        ]
+      },
+      {
+        "W": 2,
+        "c": 3,
+        "counts": [
+          3,
+          3,
+          1,
+          1
+        ],
+        "quotient": [
+          2,
+          12,
+          9,
+          1
+        ]
+      },
+      {
+        "W": 6,
+        "c": 4,
+        "counts": [
+          4,
+          4,
+          1,
+          1,
+          1
+        ],
+        "quotient": [
+          2,
+          28,
+          25,
+          17,
+          1
+        ]
+      }
+    ]
+  },
+  "restricted_G_mod12_residues": [
+    1,
+    3,
+    5,
+    9
+  ],
+  "restricted_G_mod12_states": [
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      9,
+      3
+    ]
+  ],
+  "scope": "All-order proofs in PROOF.md; finite tests are the stated universes, not a spectrum census.",
+  "sharp_detector_rows": [
+    [
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      9,
+      20,
+      12
+    ],
+    [
+      31,
+      166,
+      300,
+      144
+    ],
+    [
+      117,
+      1368,
+      5448,
+      8064,
+      2880
+    ],
+    [
+      459,
+      11562,
+      89256,
+      283680,
+      342720,
+      86400
+    ]
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,246 @@
+Q 6 16 H 1049305833
+ROW 0 parentH 28273779 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114689 zeros 114689
+ROW 1 parentH 237098259 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 237098259 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 237098259 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 237098259 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 28273779 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 80 H 6416288397
+ROW 0 parentH 303793983 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114689 zeros 114689
+ROW 1 parentH 929894175 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1807 zeros 1807
+ROW 2 parentH 929894175 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 929894175 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 967 zeros 967
+ROW 4 parentH 1461632607 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 303793983 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 88 H 19839639501
+ROW 0 parentH 508543839 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129025 zeros 129025
+ROW 1 parentH 2691203859 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1807 zeros 1807
+ROW 2 parentH 2691203859 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 2691203859 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 967 zeros 967
+ROW 4 parentH 3720342879 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 3720342879 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 144 H 24658874793
+ROW 0 parentH 1631171763 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114689 zeros 114689
+ROW 1 parentH 2603371023 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 3839821119 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 3839821119 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 2603371023 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 1631171763 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 148 H 30946762233
+ROW 0 parentH 1544722083 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 116481 zeros 116481
+ROW 1 parentH 2791098243 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 4070277459 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 4758885027 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1016 zeros 1016
+ROW 4 parentH 3885492483 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 5031713763 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 209 H 31936347657
+ROW 0 parentH 1577269503 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114717 zeros 114717
+ROW 1 parentH 3229229187 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 16136 zeros 16136
+ROW 2 parentH 3845361519 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 4405715631 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 967 zeros 967
+ROW 4 parentH 4405715631 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 4923681795 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 260 H 3445076853
+ROW 0 parentH 655722135 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1793 zeros 1793
+ROW 1 parentH 165262599 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 522138231 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 325436535 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1016 zeros 1016
+ROW 4 parentH 837416151 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 384013143 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65479 zeros 65479
+Q 6 264 H 16277007753
+ROW 0 parentH 2272897827 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14337 zeros 14337
+ROW 1 parentH 1048602591 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 2514409695 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 2514409695 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 1048602591 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 2272897827 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65479 zeros 65479
+Q 6 280 H 65405583297
+ROW 0 parentH 4954757607 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129025 zeros 129025
+ROW 1 parentH 7069666311 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 9675508887 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 9675508887 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 7069666311 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 4954757607 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65472 zeros 65472
+Q 6 321 H 1732769577
+ROW 0 parentH 344286531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 29 zeros 29
+ROW 1 parentH 31768119 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 116488 zeros 116488
+ROW 2 parentH 344286531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 367128531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 967 zeros 967
+ROW 4 parentH 443201139 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 221239107 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65479 zeros 65479
+Q 6 385 H 4244993973
+ROW 0 parentH 894359799 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 29 zeros 29
+ROW 1 parentH 53774199 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129032 zeros 129032
+ROW 2 parentH 894359799 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 894359799 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 763334199 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 763334199 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65479 zeros 65479
+Q 6 1040 H 6416288397
+ROW 0 parentH 303793983 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114689 zeros 114689
+ROW 1 parentH 1461632607 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 929894175 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14463 zeros 14463
+ROW 3 parentH 929894175 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 929894175 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 7743 zeros 7743
+ROW 5 parentH 303793983 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65528 zeros 65528
+Q 6 1282 H 12342731805
+ROW 0 parentH 2535136623 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 836998191 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 789086367 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14456 zeros 14456
+ROW 3 parentH 2084921775 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 1415660895 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 7743 zeros 7743
+ROW 5 parentH 1736541423 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65479 zeros 65479
+Q 6 1296 H 19839639501
+ROW 0 parentH 3720342879 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114689 zeros 114689
+ROW 1 parentH 3720342879 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 2691203859 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14463 zeros 14463
+ROW 3 parentH 2691203859 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 2691203859 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 7743 zeros 7743
+ROW 5 parentH 508543839 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65472 zeros 65472
+Q 6 1298 H 73189492461
+ROW 0 parentH 8260442127 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114913 zeros 114913
+ROW 1 parentH 8422015743 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 7385735439 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14456 zeros 14456
+ROW 3 parentH 10286498367 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 7803236655 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 7743 zeros 7743
+ROW 5 parentH 5362649631 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65472 zeros 65472
+Q 6 1313 H 10414214793
+ROW 0 parentH 2035951443 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 29 zeros 29
+ROW 1 parentH 346627107 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114920 zeros 114920
+ROW 2 parentH 1383716115 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14407 zeros 14407
+ROW 3 parentH 1686132531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 1318327731 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 7743 zeros 7743
+ROW 5 parentH 1538466291 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65479 zeros 65479
+Q 6 2050 H 619464105
+ROW 0 parentH 95438979 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 160862355 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 17950167 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114808 zeros 114808
+ROW 3 parentH 150209235 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 150209235 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 54824931 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65087 zeros 65087
+Q 6 2056 H 3445076853
+ROW 0 parentH 384013143 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14337 zeros 14337
+ROW 1 parentH 837416151 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 325436535 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114815 zeros 114815
+ROW 3 parentH 522138231 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 165262599 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 655722135 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65087 zeros 65087
+Q 6 2192 H 30946762233
+ROW 0 parentH 5031713763 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114689 zeros 114689
+ROW 1 parentH 3885492483 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 4758885027 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114815 zeros 114815
+ROW 3 parentH 4070277459 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 2791098243 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 1544722083 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65080 zeros 65080
+Q 6 2312 H 31936347657
+ROW 0 parentH 4923681795 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14337 zeros 14337
+ROW 1 parentH 4405715631 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114703 zeros 114703
+ROW 2 parentH 4405715631 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114815 zeros 114815
+ROW 3 parentH 3845361519 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 1577269503 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 3229229187 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65031 zeros 65031
+Q 6 2433 H 23382506601
+ROW 0 parentH 4823561907 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 29 zeros 29
+ROW 1 parentH 1217243619 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129032 zeros 129032
+ROW 2 parentH 3286417779 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114815 zeros 114815
+ROW 3 parentH 3433539699 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 2374467939 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 2230887987 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65031 zeros 65031
+Q 6 3074 H 1732769577
+ROW 0 parentH 221239107 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 443201139 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 31768119 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129144 zeros 129144
+ROW 3 parentH 367128531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1023 zeros 1023
+ROW 4 parentH 344286531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 7743 zeros 7743
+ROW 5 parentH 344286531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 65087 zeros 65087
+Q 6 8196 H 619464105
+ROW 0 parentH 54824931 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1793 zeros 1793
+ROW 1 parentH 150209235 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 150209235 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 17950167 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115704 zeros 115704
+ROW 4 parentH 160862355 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 95438979 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8264 H 12342731805
+ROW 0 parentH 1736541423 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14337 zeros 14337
+ROW 1 parentH 1415660895 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1807 zeros 1807
+ROW 2 parentH 2084921775 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 789086367 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115655 zeros 115655
+ROW 4 parentH 836998191 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 2535136623 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8280 H 73189492461
+ROW 0 parentH 5362649631 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129025 zeros 129025
+ROW 1 parentH 7803236655 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1807 zeros 1807
+ROW 2 parentH 10286498367 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 7385735439 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115655 zeros 115655
+ROW 4 parentH 8422015743 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8184 zeros 8184
+ROW 5 parentH 8260442127 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61944 zeros 61944
+Q 6 8324 H 10414214793
+ROW 0 parentH 1538466291 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1793 zeros 1793
+ROW 1 parentH 1318327731 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 1686132531 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 346627107 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115704 zeros 115704
+ROW 4 parentH 1383716115 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 2035951443 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8385 H 6595890669
+ROW 0 parentH 1387694511 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 29 zeros 29
+ROW 1 parentH 237848643 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 16136 zeros 16136
+ROW 2 parentH 1387694511 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 516758211 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115655 zeros 115655
+ROW 4 parentH 868579443 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 1326715119 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8706 H 767608569
+ROW 0 parentH 116822979 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 187740099 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 15 zeros 15
+ROW 2 parentH 53891811 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1912 zeros 1912
+ROW 3 parentH 53891811 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115263 zeros 115263
+ROW 4 parentH 187740099 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8191 zeros 8191
+ROW 5 parentH 116822979 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8834 H 9601146513
+ROW 0 parentH 1934803179 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 1254776427 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 626891643 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1912 zeros 1912
+ROW 3 parentH 626891643 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115263 zeros 115263
+ROW 4 parentH 1254776427 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 1934803179 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8850 H 80469411849
+ROW 0 parentH 8531380323 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114913 zeros 114913
+ROW 1 parentH 8531380323 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 8531380323 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1912 zeros 1912
+ROW 3 parentH 8531380323 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115263 zeros 115263
+ROW 4 parentH 8531380323 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 8531380323 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61944 zeros 61944
+Q 6 8865 H 10861651665
+ROW 0 parentH 2032003179 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 29 zeros 29
+ROW 1 parentH 762372891 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14568 zeros 14568
+ROW 2 parentH 1332238023 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1863 zeros 1863
+ROW 3 parentH 762372891 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115263 zeros 115263
+ROW 4 parentH 1332238023 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 2032003179 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 8881 H 82069875945
+ROW 0 parentH 8521141275 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 114717 zeros 114717
+ROW 1 parentH 8521141275 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14568 zeros 14568
+ROW 2 parentH 8521141275 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1863 zeros 1863
+ROW 3 parentH 8521141275 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 115263 zeros 115263
+ROW 4 parentH 8521141275 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 8521141275 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61944 zeros 61944
+Q 6 12356 H 4244993973
+ROW 0 parentH 763334199 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1793 zeros 1793
+ROW 1 parentH 763334199 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1807 zeros 1807
+ROW 2 parentH 894359799 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 53774199 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129984 zeros 129984
+ROW 4 parentH 894359799 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 4607 zeros 4607
+ROW 5 parentH 894359799 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 12866 H 6595890669
+ROW 0 parentH 1326715119 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 225 zeros 225
+ROW 1 parentH 868579443 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1807 zeros 1807
+ROW 2 parentH 516758211 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1912 zeros 1912
+ROW 3 parentH 237848643 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 129543 zeros 129543
+ROW 4 parentH 1387694511 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 4607 zeros 4607
+ROW 5 parentH 1387694511 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 61951 zeros 61951
+Q 6 16524 H 23382506601
+ROW 0 parentH 2230887987 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 16129 zeros 16129
+ROW 1 parentH 2374467939 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 14351 zeros 14351
+ROW 2 parentH 3433539699 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 127 zeros 127
+ROW 3 parentH 3286417779 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 1016 zeros 1016
+ROW 4 parentH 1217243619 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 122816 zeros 122816
+ROW 5 parentH 4823561907 gcd 54 profiles 4096 cuts 131072 zero_profiles 1 zero_cuts 1 original 36863 zeros 36863
+PASS classes 35 rows 210 profiles 860160 represented_cuts 27525120 zero_escape_rows 0

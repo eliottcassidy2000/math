@@ -1,0 +1,9 @@
+Q 7 85298 H 123156134945235
+ROW 0 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 1032417 zeros 1032417
+ROW 1 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 931855 zeros 931855
+ROW 2 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 919416 zeros 919416
+ROW 3 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 115263 zeros 115263
+ROW 4 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 8135 zeros 8135
+ROW 5 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 61944 zeros 61944
+ROW 6 parentH 11160377792361 gcd 162 profiles 16384 cuts 1048576 zero_profiles 1 zero_cuts 1 original 523776 zeros 523776
+PASS classes 1 rows 7 profiles 114688 represented_cuts 7340032 zero_escape_rows 0

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "executions": 74,
+  "elapsed_seconds": 1039.381,
+  "original_files": 233,
+  "originals_changed": [],
+  "records_status": {
+    "PASS": 74
+  },
+  "scope": "Portable same-source replay, including full k7 producer census; not an independent census.",
+  "scientific_replays": 65,
+  "compilations": 9,
+  "sidecar_comparisons": 12,
+  "postflight_status": "PASS",
+  "nonempty_stderr": [],
+  "frozen_manifest_entries": 242,
+  "portable_manifest_entries": 242,
+  "completed_utc": "2026-11-02T15:33:02.044322+00:00"
+}

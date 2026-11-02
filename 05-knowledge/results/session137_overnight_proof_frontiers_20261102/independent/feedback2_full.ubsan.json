@@ -1,0 +1,14 @@
+{
+  "method": "exact full-matrix modular Gaussian determinants, Hadamard reconstruction",
+  "prime": 1000003,
+  "rows": [
+    {"n": 3, "presentations": 4, "strong": 1, "max_P": 3, "max_word": 1},
+    {"n": 4, "presentations": 16, "strong": 6, "max_P": 3, "max_word": 4},
+    {"n": 5, "presentations": 64, "strong": 29, "max_P": 8, "max_word": 24},
+    {"n": 6, "presentations": 256, "strong": 128, "max_P": 10, "max_word": 216},
+    {"n": 7, "presentations": 1024, "strong": 540, "max_P": 16, "max_word": 920},
+    {"n": 8, "presentations": 4096, "strong": 2224, "max_P": 20, "max_word": 3480},
+    {"n": 9, "presentations": 16384, "strong": 9040, "max_P": 26, "max_word": 14744},
+    {"n": 10, "presentations": 65536, "strong": 36480, "max_P": 30, "max_word": 50788}
+  ]
+}

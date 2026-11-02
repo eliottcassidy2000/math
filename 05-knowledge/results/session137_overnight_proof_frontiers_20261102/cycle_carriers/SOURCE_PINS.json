@@ -1,0 +1,72 @@
+[
+  {
+    "git_blob": "fdde24ac382ea703618dc52685054c6528071a41",
+    "local_path": "sources/00-AGENTS.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "AGENTS.md",
+    "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6"
+  },
+  {
+    "git_blob": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd",
+    "local_path": "sources/01-THM-002-ocf.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "01-canon/theorems/THM-002-ocf.md",
+    "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+  },
+  {
+    "git_blob": "11af60229e986e7e914465a082ffb6f4cda35b26",
+    "local_path": "sources/02-CONFLICT_IMAGES.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "05-knowledge/results/session81_counterexample_families_20261028/CONFLICT_IMAGES.md",
+    "sha256": "99f5651b8d90cd5f2a1eecea675c3a7cb4b9e3c23b9808617f8c06f6a98a9d16"
+  },
+  {
+    "git_blob": "7cc506716280330c7a83ae8d21f24373e153dfba",
+    "local_path": "sources/03-CORE-PAPERS-TOURNAMENT-STRONG-EARS-2026-08-25.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "05-knowledge/reference/CORE-PAPERS-TOURNAMENT-STRONG-EARS-2026-08-25.md",
+    "sha256": "047762142f73b3b4a34aff0cba178c65578d98065909c2170eec8343ebe8f273"
+  },
+  {
+    "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+    "local_path": "sources/04-THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+  },
+  {
+    "git_blob": "fa7809b06b02780f76cb18eb863ce351a9752aa9",
+    "local_path": "sources/05-THM-264-omega-girth-binary.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "01-canon/theorems/THM-264-omega-girth-binary.md",
+    "sha256": "b453353a214f55712a7521dc0e7cb538064b605a00ccb1b7d391a4a8a70254cd"
+  },
+  {
+    "git_blob": "dbf7d0d3334bff07b5cbbd873f634a74ee1fd669",
+    "local_path": "sources/06-grammar.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "05-knowledge/results/defect_boundary_20261020/grammar.md",
+    "sha256": "de191371719f988657d2d7503cc289353d0e14f4d04c7836aac524c583e82fb0"
+  },
+  {
+    "git_blob": "2ba7acad79d82343b43ede8a60c918ca379fc7f7",
+    "local_path": "sources/07-PROOF.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/gluing/PROOF.md",
+    "sha256": "1f83b74693dd3c2ff50381d8936f6266fd53fb13758db0487359cde1d72a8af1"
+  },
+  {
+    "git_blob": "b5f32625eb334b824174d9a90cf2c44db943734c",
+    "local_path": "sources/08-positive_cut_geometry.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md",
+    "sha256": "3ce83912d0d0a75f3fe94af6ee5535b3227b9ed4af7ca1daaf682ec39e2cb719"
+  },
+  {
+    "git_blob": "5a3290df1ccc4edc2c28ac7e6456427af247e54c",
+    "local_path": "sources/09-THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+    "repo_commit": "bb7cb2d1f61a14632389814469317131d897b640",
+    "repo_path": "01-canon/theorems/THM-4731-tiling-line-metagraph-self-lines-by-twisted-burnside-sigma-twins-depth-and-the-tribonacci-partner.md",
+    "sha256": "8ea12db1b5f412d01ac00e8f4018c14dd8679710af227b9ab9c3f7e0a8d7fd2d"
+  }
+]

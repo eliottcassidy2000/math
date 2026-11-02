@@ -1,0 +1,20 @@
+{
+  "by_order": {
+    "1": 1,
+    "2": 3,
+    "3": 28,
+    "4": 729,
+    "5": 24,
+    "6": 24,
+    "7": 24,
+    "8": 24
+  },
+  "matrices": 857,
+  "n2_hostile_variance": "2/9",
+  "pair_deletion_margins": 6234,
+  "root_stability_checks": 3624,
+  "scope": "all ternary weighted matrices n1..4;24 fixed-seed rational matrices each n5..8;one n3 sharp control",
+  "semantic_sha256": "38395ed92ecb5111d0f75abfeead39b3a580e957d45ce0a5073efb5f716e48a7",
+  "sharp_n3_gap": "2/9",
+  "verdict": "PASS exact pair-deletion, uniform root, averaged stability, augmented-skew cofactor lower bounds"
+}
