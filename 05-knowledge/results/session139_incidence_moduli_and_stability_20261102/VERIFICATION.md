@@ -1,27 +1,168 @@
 # Session139 verification and checkpoint lineage
 
-**Current accepted scope:** exact weighted stability at n=3..9 and n>=140;
+**Independently accepted scope through this checkpoint:** exact weighted stability at n=3..9 and n>=48;
 all-modulus contexts/clocks/content; finite complete prime states and weighted
 simulation at3,5,7,11; integral/weighted cocycle incidence; the exact stated
 regular isospectral-circle range. The first weighted spectral boundary is n5.
-**10..139 remains OPEN.** No RH/GRH or integer-spectrum closure is claimed.
+**10..47 is unresolved by this reviewed work.** No RH/GRH or integer-spectrum closure is claimed.
 
 | Checkpoint | Scope | Evidence |
 |---|---|---|
 | 1, published `400dcd629598c30762eb9adb8bb85bea581698a7` | n>=748, weighted n5 spectral loss, corrected historical recovery | [Frozen scope](CHECKPOINT1.md), [original replay](REPLAY_CHECKPOINT1.json), [original source integrity](SOURCE_INTEGRITY_CHECKPOINT1.json); 42 published owned blobs verified |
 | 2, published `9c7eb0b13e48e68b8fd076feccbf56d04cdd54aa` | n>=526; all-modulus functions/clocks/padding; exact finite prime quotients and actual5/11 projectors | [Frozen scope](CHECKPOINT2.md), [replay](REPLAY_CHECKPOINT2.json);86 cumulative owned blobs verified |
 | 3, published `b68db2afda029c83ad7087f09fdb9297037f8414` | Integral/weighted cocycle, regular critical-circle obstruction, context content/simulation and narrow historical repair | [Frozen scope](CHECKPOINT3.md), [fresh replay](REPLAY_CHECKPOINT3.json), separately pinned independent audits;153 cumulative owned blobs verified |
-| 4 | Tensor product margin and independent arithmetic proof; n>=140; prime padding orbits; separate all-modulus tensor-coset appendix; narrow order-eight naming repair | [Frozen scope](CHECKPOINT4.md), [fresh replay](REPLAY_CHECKPOINT4.json), [final handoff](FINAL_HANDOFF.md) |
+| 4, published `8da4684eef0e8f35041889ae4f0b5dbea37e1a40` | Tensor product margin and independent arithmetic proof; n>=140; prime padding orbits; separate all-modulus tensor-coset appendix; narrow order-eight naming repair | [Frozen scope](CHECKPOINT4.md), [fresh replay](REPLAY_CHECKPOINT4.json), [final handoff](FINAL_HANDOFF.md);246 cumulative owned blobs verified |
+| 5 | Independently audited n68 alternate; independent acceptance of concurrent n56 and slot-aware n48 frontiers | [Scope](CHECKPOINT5.md), [proof](concurrent68/PROOF.md), [fresh replay](REPLAY_CHECKPOINT5.json) |
 
 All earlier scientific lane files, audit reports and replay receipts remain
-byte-unchanged. Root README/SYNTHESIS/BOARD/VERIFICATION and SHA256SUMS are
+byte-unchanged. Root README/SYNTHESIS/BOARD/VERIFICATION/FINAL_HANDOFF and SHA256SUMS are
 maintained summaries/manifest. `CHECKPOINT1_SHA256SUMS` preserves the original
 whole-packet manifest **at checkpoint-one's commit**; `CHECKPOINT2_SHA256SUMS`
 does the same at checkpoint two, and `CHECKPOINT3_SHA256SUMS` at checkpoint
-three. These are not commands to
+three; `CHECKPOINT4_SHA256SUMS` records the published fourth checkpoint.
+These are not commands to
 validate later rewritten summaries against old hashes. The original
 `PUBLIC_FILES.json` is likewise the historical checkpoint-one selector.
 The root `SHA256SUMS` validates the cumulative current packet.
+
+## Reviewed snapshot reaches n>=48 without rewriting upstream sources
+
+[Concurrent source](../stability_748_guarded_encodings_20261102/STABILITY_48.md) · [Independent audit](independent_concurrent48/AUDIT.md) · [Immutable pins](CONCURRENT48_SOURCE_PINS.json)
+
+**ACCEPTED after independent argument and equality review.** This packet's
+reviewed range is3..9 and n>=48; later global routers may point to newer
+external claims without those claims being automatically endorsed here.
+The independent68 alternate and reviewed56 predecessor remain unchanged.
+
+The48 proof credits the accepted tensor reserve and stronger degree bound,
+then adds exact matching slots and the maximum of two valid group invoices,
+`max(w*S,w*S/2+S^2/4)`. It does not add those overlapping invoice bounds.
+The two-regime scalar envelope and polynomial identities are checked exactly;
+the slot constraint forces12 heavy edges with strict endpoint slack1/100.
+Uniform tail monotonicity and the full equality transport are reviewed.
+Any optional general scalar iff statement is interpreted for d>0; the actual
+theorem fixes d=5/6. No source correction is needed.
+
+The independent implementation has **47 active checks and760 exact graph
+controls**, with continuum-polynomial reasoning rather than extrapolation
+from a grid. Its47 endpoint fails the first bootstrap advance. A false24/5
+scalar ratio gives the exact negative minimum -1/288; this is a local
+counterexample to that stronger invoice, not to the stability theorem at47.
+
+```bash
+# From this packet in a checkout containing the pinned upstream source:
+python3 replay_concurrent48.py --output /tmp/session139-concurrent48-replay.json
+```
+
+The fresh wrong-working-directory replay runs **16 executions** normally and
+with optimization: four scientific positives, four source-integrity positives
+and eight expected rejections. Independent outputs and both source verifiers
+match frozen receipts; same-size audit corruption is rejected. The unmodified
+pinned producer runs only in a temporary directory, reproducing25,351 local
+checks,729 whole-graph controls and277 finite-R controls. These are checking
+evidence, not the all-order proof. [Replay](REPLAY_CONCURRENT48.json).
+
+Across the credited combined work,1452 of the original1490 unresolved orders
+are now certified in this snapshot; **10..47 (38 orders) remains unresolved**.
+No threshold-optimality or phase-transition claim is made. The global router
+bytes from the newer parent are preserved; all29 non-owned incoming changed
+entries and all other parent entries are inherited exactly, without ledger
+queries. [Latest reconciliation](CHECKPOINT5_RECONCILIATION_48.md).
+
+## Reviewed n56 predecessor: independently audited n>=56
+
+[Concurrent source](../stability_priority_spectrum_20261102/STABILITY_56.md) · [Independent audit](independent_concurrent56/AUDIT.md) · [Immutable pins](CONCURRENT56_SOURCE_PINS.json)
+
+**ACCEPTED after independent review.** The original source's same-agent audit
+wording is preserved as history, not silently rewritten. This release adds
+an independently written proof review and40 active endpoint checks. The
+source combines Session139's accepted tensor reserve with the credited
+stronger discarded-degree inequality and flexible retained-baseline dual.
+All contributions, earlier proofs and their independent ranges remain clear;
+the n68 proof is a valid alternate rather than the current best cutoff.
+
+The independent bootstrap uses different Taylor degrees4,5,5 and the weaker
+penalty1/10000 instead of copying the producer's degree12 certificate. The
+local dual is checked coefficient-wise, its remainder is nonnegative over
+the stated domain, uniform tail monotonicity is explicit, and the complete
+boundary/equality chain is reviewed. Threshold55 fails the first reserve
+advance. The bad-dual control keeps the square identity but violates the
+remainder sign, producing a genuine local counterexample. Neither control
+is a counterexample to the stability theorem at55.
+
+```bash
+# From the packet in a checkout containing the pinned upstream source:
+python3 replay_concurrent56.py --output /tmp/session139-concurrent56-replay.json
+```
+
+The fresh wrong-working-directory replay has **16 executions** in normal
+and optimized Python: four scientific positives, four source-integrity
+positives and eight expected rejections. The independent outputs match the
+frozen receipts. The unmodified pinned producer runs only in a temporary
+directory and its4351-gate output matches both frozen producer receipts;
+no upstream file is written. Both source verifiers reject same-size audit
+corruption. [Replay](REPLAY_CONCURRENT56.json). The finite producer scan is
+verification evidence, not a substitute for the uniform proof.
+
+This predecessor certifies **3..9 and n>=56**, covering1444 of the initially1490
+unresolved orders. The independently reviewed48 source above extends that
+range; the56 source is not rewritten to claim48.
+The proof does not claim threshold optimality. All32 newly concurrent paths
+are inherited; the29 non-owned changed entries remain exact parent entries.
+The n56 source, THM-1780 correction and opaque ledger are not rewritten.
+[Final reconciliation](CHECKPOINT5_RECONCILIATION.md).
+
+## Fifth checkpoint alternate: a credited proof combination reaches n>=68
+
+[Combined proof](concurrent68/PROOF.md) · [Independent audit](independent_concurrent68/AUDIT.md) · [Final source review](independent_concurrent68/FINAL_SOURCE_REVIEW.md)
+
+**ACCEPTED, including the stated equality.** The factor-four stronger
+`W>=2D^2/n` degree cancellation and retained `-RB` light budget are explicitly
+credited to the concurrent stability-priority-moduli packet. The combination
+reproves those used lemmas and imports Session139's independently accepted
+tensor product reserve. This is not a new claim of independent verification
+of the whole concurrent n276 theorem.
+
+Each discarded edge is paid by its assigned greedy selected/discarded wedge,
+canceling the diagonal subtraction in the discarded-degree square identity.
+The assigned and discarded/discarded wedge sets are disjoint. Stronger square
+completion then bootstraps the reserve `6/25 -> 63/100 -> 49/50 -> 99/100`
+for R>=34. After retaining `-RB`, the exact light-budget margins are both
+`43/71400`; the geometric-tail endpoint has slack
+`1854611611/766651662336`. Explicit monotonicity supplies all larger orders.
+The proof preserves the perfect-matching-only correction and binary baseline
+once, and handles zero variance, zero discarded mass and the equality locus.
+
+The independent exact verifier has **38 active conditions** and exhausts760
+weighted simple graphs through order4 with edge weights in `{0,1/8,1/4}`.
+These test the cancellation identity and joint budget separately; finite
+controls are not substituted for the all-real-weight proof. Normal and
+optimized outputs match. The false67 certificate fails its first bootstrap
+mass check; omitting selected-edge payment fails a three-vertex path. These
+are rejected proof shortcuts, not counterexamples to stability at67.
+
+Final source pins and the reviewed definition/status changes are recorded
+without modifying the original audit. Earlier748/526/140 proof bytes, all
+concurrent proof packets and guarded-FRACTRAN precision work remain intact.
+No canonical file or central ledger changes in this checkpoint.
+
+```bash
+# From this packet directory:
+sha256sum -c SHA256SUMS
+python3 replay_checkpoint5.py --output /tmp/session139-checkpoint5-replay.json
+```
+
+The fresh wrong-working-directory replay performs **14 executions** under
+normal and optimized Python: two scientific positives, four source-integrity
+positives and eight expected rejections (67, missing selected payment and
+same-size proof corruption rejected by both source verifiers in both modes). Output bytes match the frozen
+receipts; source-integrity comparisons are active with optimization.
+[Replay receipt](REPLAY_CHECKPOINT5.json) · [Source pins](SOURCE_PINS_CHECKPOINT5.json).
+
+This independently audited alternate certifies **3..9 and n>=68**, covering
+1432 of the1490 initially unresolved orders. The later concurrent n56/n48 audits
+above supply stronger reviewed ranges; this proof is not rewritten to
+claim56. Neither cutoff is asserted optimal.
 
 ## Fourth checkpoint: the genuine dimension-improving dependency
 
@@ -320,7 +461,7 @@ are preserved in [the first pin record](SOURCE_PINS.json). The exploratory
 probe is non-load-bearing; no global priority, RH/GRH or spectral-proof
 impossibility is inferred.
 
-## Concurrency reconciliation
+## First concurrency reconciliation (checkpoint4)
 
 Publication was guarded and stopped when main advanced. The final local tree
 is based on `c16226249f1f27a335cf7c84afdeaa90879b9580`; all concurrent unrelated
@@ -336,7 +477,7 @@ checkout. Its unmodified same-version checker passes with read-only overlays
 on the clean materialized Session137 ancestor, with every intervening path
 accounted for. No baseline mutation or hydration is used. The pre-reconciliation receipt
 is [checkpoint-four documentation verification](DOC_OVERLAY_VERIFICATION_CHECKPOINT4.json);
-startup remains179966/180000 bytes and frontier450/450 lines. New links,
+the fourth-checkpoint startup was179966/180000 bytes and frontier450/450 lines. New links,
 source hashes, frozen prior lanes, conflict markers and explicit staging scope
 are independently checked. After concurrent main changes, a [scoped check](DOC_RECONCILIATION_CHECK.json)
 revalidates startup budgets and merged links. The full checker is not rerun
@@ -346,5 +487,9 @@ preserved exactly instead.
 Only the explicitly listed THM-1455 and THM-1475 historical repairs change
 older canon; the central mistakes ledger and the other1455 slug remain
 untouched. Exploratory probes and unsupported extensions are excluded.
+The fifth checkpoint inherits that same opaque ledger through parent `dde756b2`
+without reading, querying or changing it, and uses
+a [bounded documentation check](DOC_VERIFICATION_CHECKPOINT5.json):179964/180000
+startup bytes and450/450 frontier lines, not an unreported full-ledger scan.
 Prepared local commits are not remote publication: the publishing agent
 separately verifies the actual main commit and every owned blob.

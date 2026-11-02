@@ -1,0 +1,16 @@
+{
+  "mutation": "Final proof digest replaced by 64 zeros.",
+  "runs": [
+    {
+      "exit_code": 1,
+      "mode": "normal",
+      "rejected_at": "pin mismatch"
+    },
+    {
+      "exit_code": 1,
+      "mode": "optimized",
+      "rejected_at": "pin mismatch"
+    }
+  ],
+  "status": "EXPECTED_REJECTION"
+}

@@ -1,0 +1,6 @@
+{
+  "pinned_files": 11,
+  "scope": "Exact weighted stability and equality for n>=48; orders 10..47 unresolved; optional general scalar iff interpreted for d>0; upstream scientific files unchanged.",
+  "status": "PASS",
+  "upstream_source_pins_recorded": 2
+}

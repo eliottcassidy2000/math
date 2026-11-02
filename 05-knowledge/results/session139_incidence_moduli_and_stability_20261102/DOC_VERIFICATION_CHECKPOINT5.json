@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Checkpoint5 bounded startup bytes/lines and publication conflict scan; same opaque concurrent ledger inherited unchanged. Links/source pins/staging scope are separately verified.",
+  "remote_parent": "dde756b2c2d4506156d637a536910fc80a35450d",
+  "startup_bytes": 179964,
+  "startup_byte_budget": 180000,
+  "frontier_lines": 450,
+  "frontier_line_budget": 450,
+  "startup_changed_paths": [
+    "00-navigation/CURRENT-FRONTIER.md"
+  ],
+  "full_checker_rerun": false,
+  "reason": "Full checker reads the large concurrently changed mistakes ledger; no read authorized for reconciliation. Remote tree entry preserved unchanged."
+}

@@ -1,0 +1,132 @@
+{
+  "active_conditions": 47,
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "independent_graph_controls": 760,
+  "normal_optimized_both": true,
+  "producer_finite_R_controls": 277,
+  "producer_local_checks": 25351,
+  "producer_whole_graph_controls": 729,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "n48-independent",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "917087ebbc8844a16f1039c7ca16db9305b8521ed03972eb1c9036daccf806de"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n47",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "b124f57da79a14d087def2db94410597122e4ad1a403a6f56ad6a2c38c51fffa"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-dual",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "abeea3ef2366f615a71288082e2cea7267a7f72b768ce98388ac35133efb905e"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "15414735d303e14bc0a29c499a167ae6be0d17071ec7724ae4f909198e666342"
+    },
+    {
+      "expected_rejection": false,
+      "label": "auditor-curation",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "8e27a88c722d88430f2b9cdc37726169f0185bc6eac50119175ea79550802ba0"
+    },
+    {
+      "expected_rejection": false,
+      "label": "pinned-upstream-producer",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "9f3905caba1bce0a545c37b9e7ae6d182c4538e8a3eb4456ee58168ee1447989"
+    },
+    {
+      "expected_rejection": false,
+      "label": "n48-independent",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "917087ebbc8844a16f1039c7ca16db9305b8521ed03972eb1c9036daccf806de"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n47",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "b124f57da79a14d087def2db94410597122e4ad1a403a6f56ad6a2c38c51fffa"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-dual",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "abeea3ef2366f615a71288082e2cea7267a7f72b768ce98388ac35133efb905e"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "15414735d303e14bc0a29c499a167ae6be0d17071ec7724ae4f909198e666342"
+    },
+    {
+      "expected_rejection": false,
+      "label": "auditor-curation",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "8e27a88c722d88430f2b9cdc37726169f0185bc6eac50119175ea79550802ba0"
+    },
+    {
+      "expected_rejection": false,
+      "label": "pinned-upstream-producer",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "9f3905caba1bce0a545c37b9e7ae6d182c4538e8a3eb4456ee58168ee1447989"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-audit-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "auditor-curation-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-audit-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "auditor-curation-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 4,
+  "scope": "Proof controls and exact arithmetic verification, not finite sampling as an all-order proof. False47 control rejects the certificate, not the theorem.",
+  "source_files_verified": 15,
+  "source_integrity_positive_runs": 4,
+  "source_manifest_sha256": "a51601903b82ccd5270265010acc8df22625f7c4b056fe15be44ae45de958ee1",
+  "status": "PASS",
+  "total_executions": 16,
+  "wrong_cwd": true
+}

@@ -1,0 +1,91 @@
+{
+  "R_min": 24,
+  "active_checks": {
+    "Rt47_negative": true,
+    "bootstrap_advance_0": "212322379/28800000000",
+    "bootstrap_advance_1": "3765319801/829440000000",
+    "bootstrap_advance_2": "50314354522091675519/1375941427200000000000",
+    "bootstrap_advance_3": "4211957060596623741919072456319700832001/4279728215162880000000000000000000000000000",
+    "bootstrap_mass_0": "539/1200",
+    "bootstrap_mass_1": "259/240",
+    "bootstrap_mass_2": "691/240",
+    "bootstrap_mass_3": "5543/1200",
+    "bootstrap_remaining_probability_0": true,
+    "bootstrap_remaining_probability_1": true,
+    "bootstrap_remaining_probability_2": true,
+    "bootstrap_remaining_probability_3": true,
+    "bootstrap_uniform_slope_0": true,
+    "bootstrap_uniform_slope_1": true,
+    "bootstrap_uniform_slope_2": true,
+    "bootstrap_uniform_slope_3": true,
+    "closing_coefficient": true,
+    "coarse_perfect_penalty": true,
+    "domain": true,
+    "dual_total_positive": "1/30",
+    "exact_graph_controls": "760",
+    "first_minimum_nonnegative": "1/30",
+    "g1_floor": true,
+    "light_deficit_positive": "1/6",
+    "linear_boundary_identity": true,
+    "no_light_closure": true,
+    "parity_coefficient_48": true,
+    "parity_coefficient_49": true,
+    "quadratic_boundary_identity": true,
+    "quadratic_vertex_identity": true,
+    "regime_minimum_gap_identity": true,
+    "scalar_ratio24over5_hostile": "-1/288",
+    "second_minimum_nonnegative": "1/50",
+    "second_minimum_square_identity": true,
+    "slot47_negative": true,
+    "slot_forces_twelve": "1/100",
+    "slot_positive_divisor": "1/3",
+    "slot_uniform_slope": "97/300",
+    "small_variance_excluded": true,
+    "tail_left": "1077038517859729/10555311626649600",
+    "tail_left_uniform_ratio": true,
+    "tail_right": "492032929/10066329600",
+    "tail_right_uniform_form": true,
+    "uniform_Rt": "0",
+    "variance_even_envelope": true,
+    "variance_odd_envelope": true
+  },
+  "bootstrap": [
+    {
+      "coarse_slack": "212322379/28800000000",
+      "degree": 2,
+      "from": "49/200",
+      "mass": "539/1200",
+      "to": "7/20"
+    },
+    {
+      "coarse_slack": "3765319801/829440000000",
+      "degree": 3,
+      "from": "7/20",
+      "mass": "259/240",
+      "to": "13/20"
+    },
+    {
+      "coarse_slack": "50314354522091675519/1375941427200000000000",
+      "degree": 6,
+      "from": "13/20",
+      "mass": "691/240",
+      "to": "47/50"
+    },
+    {
+      "coarse_slack": "4211957060596623741919072456319700832001/4279728215162880000000000000000000000000000",
+      "degree": 11,
+      "from": "47/50",
+      "mass": "5543/1200",
+      "to": "99/100"
+    }
+  ],
+  "coarse_penalty": "1/10000",
+  "constants": {
+    "d": "5/6",
+    "h": "1/30",
+    "lambda": "1/30",
+    "t": "1/6"
+  },
+  "status": "PASS",
+  "threshold": 48
+}

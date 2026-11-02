@@ -1,8 +1,11 @@
 # Session139: tensor parity, sharp stability and arithmetic incidence
 
-**Final research frontier — independently accepted, 2026-11-02.**
+**Independently reviewed snapshot through checkpoint5, 2026-11-02.**
 
-## Main result: exact stability from140, not closure of the whole gap
+This packet states its independently reviewed range. Later global routers may
+link newer external claims; they are not automatically endorsed here.
+
+## Main result: exact stability from48, not closure of the whole gap
 
 For weighted A, set `V=sum Aij*Aji`, `Delta=H-det(I+A)-abs(det A)` and
 `R=floor(n/2)`. The optimal coefficients are exactly
@@ -12,22 +15,27 @@ kappa_(2R)   = (4/R)[1-(3/4)^R-(1/4)^R],
 kappa_(2R+1) = (4/R)[1-(3/4)^R].
 ```
 
-They are proved at **n=3..9 and every n>=140**. This session closes1360
-previously unresolved orders140..1499. **10..139 (130 orders) remains OPEN.**
+They are proved at **n=3..9 and every n>=48**. Together with the credited concurrent follow-ups,1452
+previously unresolved orders48..1499 are closed. **10..47 (38 orders) remains OPEN.**
 Positive-variance equality in the new range is maximal ordinal fair pairs,
 with one singleton in odd order; n=3 instead has Delta=V for every weighted
-triangle. Threshold140 is sufficient, not asserted optimal.
+triangle. Threshold48 is sufficient, not asserted optimal.
 
 The actual proof chain is
 
 **odd Pfaffian parity -> odd-coset tensor norm -> sharp matching product
-margin -> retained nonlinear reserve near1 -> n140.**
+margin -> retained nonlinear reserve near1 -> concurrent degree/baseline
+budgets -> audited68, concurrent flexible-dual56 and slot-aware two-regime48.**
 
 The tensor lemma has an independently audited second proof using
 Eisenstein integers, F4 and Bernstein coefficients. It controls the energy
 of whole Pfaffian groups; it does not revive a false termwise lower bound.
-[New cutoff](stability/PROOF_N140.md) · [Independent audit](independent_threshold140/AUDIT.md)
-· [Final source pin](independent_threshold140/FINAL_STATUS_REVIEW.md)
+[Reviewed n48 proof](../stability_748_guarded_encodings_20261102/STABILITY_48.md)
+· [Independent n48 audit](independent_concurrent48/AUDIT.md)
+· [Reviewed n56 predecessor](independent_concurrent56/AUDIT.md)
+· [Audited n68 alternate](concurrent68/PROOF.md)
+· [Its final source pin](independent_concurrent68/FINAL_SOURCE_REVIEW.md)
+· [Frozen n140 predecessor](stability/PROOF_N140.md)
 · [Tensor/product proof](tensor_matching/PROOF.md)
 · [Arithmetic second proof](stability/EISENSTEIN_BERNSTEIN_TENSOR_PROOF.md).
 
@@ -41,13 +49,23 @@ The concurrently published [shared-baseline n276 proof](../stability_priority_mo
 combines a sharper greedy degree bound with this packet's per-edge geometric-tail
 mechanism. It and the independent [n314](../stability_748_guarded_encodings_20261102/STABILITY_314.md)
 and [n466](../stability_priority_spectrum_20261102/STABILITY_466.md) routes remain
-credited, separately scoped proofs; the new tensor-based n140 route is now the
-strongest accepted range. Their packets and receipts are not overwritten.
+credited, separately scoped proofs; the tensor-based n140 route is the
+preceding accepted range. The final n68 combination explicitly credits and
+reproves the concurrent factor-four discarded-degree inequality and retained
+negative-RB light budget, then adds Session139's tensor reserve. This focused
+review does not assert a new independent audit of the whole n276 packet.
+The concurrent spectrum packet subsequently combines the tensor reserve,
+stronger degree estimate and flexible retained-baseline dual to reach56.
+Its original scientific text is unchanged; this release adds independent
+acceptance of that pinned proof. The guarded-encodings packet then reaches48
+using exact slots and a two-regime invoice; its pinned source is independently
+accepted here as well. All packets and receipts retain their credit.
+Their packets and receipts are not overwritten.
 
 The [concurrent guarded-arithmetic work](../stability_priority_moduli_20261102/FRACTRAN_PRECISION.md)
 proves exact FRACTRAN moduli and the minimal reciprocal clock observer. Its
 THM-4852 precision correction and provenance entries are retained unchanged.
-[Reconciliation record](RECONCILIATION.md).
+[First reconciliation](RECONCILIATION.md) · [n56 reconciliation](CHECKPOINT5_RECONCILIATION.md) · [Final n48 reconciliation](CHECKPOINT5_RECONCILIATION_48.md).
 
 ## Other accepted connections, with their boundaries intact
 
@@ -75,7 +93,7 @@ spectral sufficient inequalities. The arithmetic5/11 projector, clock and
 affine55 actions are separate precise maps, not shared-prime-label inference.
 
 [**Synthesis**](SYNTHESIS.md) · [**Concept board**](BOARD.md) · [**Verification**](VERIFICATION.md)
-· [Final scope](CHECKPOINT4.md) · [Next-session handoff](FINAL_HANDOFF.md)
+· [Final scope](CHECKPOINT5.md) · [Next-session handoff](FINAL_HANDOFF.md)
 
 All-prime/full-composite contextual realization, exact integer-spectrum
 completeness, general scalar zero-rigidity and LRC(14) remain OPEN.

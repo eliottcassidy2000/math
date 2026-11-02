@@ -1,0 +1,94 @@
+{
+  "status": "FROZEN_AND_INDEPENDENTLY_AUDITED",
+  "files": [
+    {
+      "path": "independent_concurrent48/AUDIT.md",
+      "sha256": "a4505123894a20edbb3aa851867c7d91d008d1ed5eee08cf5402f7157b879fbe",
+      "bytes": 11138
+    },
+    {
+      "path": "independent_concurrent48/audit_n48.py",
+      "sha256": "11b14a4f274ae67a01f6b65fa1ba0801e15ebf86b8b7ad89fec699b50cb6682f",
+      "bytes": 6577
+    },
+    {
+      "path": "independent_concurrent48/normal.json",
+      "sha256": "917087ebbc8844a16f1039c7ca16db9305b8521ed03972eb1c9036daccf806de",
+      "bytes": 2802
+    },
+    {
+      "path": "independent_concurrent48/optimized.json",
+      "sha256": "917087ebbc8844a16f1039c7ca16db9305b8521ed03972eb1c9036daccf806de",
+      "bytes": 2802
+    },
+    {
+      "path": "independent_concurrent48/negative_threshold47.json",
+      "sha256": "b124f57da79a14d087def2db94410597122e4ad1a403a6f56ad6a2c38c51fffa",
+      "bytes": 85
+    },
+    {
+      "path": "independent_concurrent48/negative_threshold47_optimized.json",
+      "sha256": "b124f57da79a14d087def2db94410597122e4ad1a403a6f56ad6a2c38c51fffa",
+      "bytes": 85
+    },
+    {
+      "path": "independent_concurrent48/negative_dual.json",
+      "sha256": "abeea3ef2366f615a71288082e2cea7267a7f72b768ce98388ac35133efb905e",
+      "bytes": 71
+    },
+    {
+      "path": "independent_concurrent48/negative_dual_optimized.json",
+      "sha256": "abeea3ef2366f615a71288082e2cea7267a7f72b768ce98388ac35133efb905e",
+      "bytes": 71
+    },
+    {
+      "path": "independent_concurrent48/producer_normal.json",
+      "sha256": "9f3905caba1bce0a545c37b9e7ae6d182c4538e8a3eb4456ee58168ee1447989",
+      "bytes": 1534
+    },
+    {
+      "path": "independent_concurrent48/producer_optimized.json",
+      "sha256": "9f3905caba1bce0a545c37b9e7ae6d182c4538e8a3eb4456ee58168ee1447989",
+      "bytes": 1534
+    },
+    {
+      "path": "independent_concurrent48/verify_curated_audit.py",
+      "sha256": "f6f7e78a5c5d468c60286250069b1cc30f755f232904eb80d3b0502e99b19107",
+      "bytes": 1345
+    },
+    {
+      "path": "independent_concurrent48/CURATED_AUDIT.json",
+      "sha256": "158cc9fb0f0d0772836af48e0a844336eac3019fbc71546693c7359e2ab643b5",
+      "bytes": 5127
+    },
+    {
+      "path": "independent_concurrent48/SHA256SUMS",
+      "sha256": "b1cdd605834673a88bdd89ad221e1c1232ab2976d00ed3e66905abfe083365fa",
+      "bytes": 1229
+    },
+    {
+      "path": "independent_concurrent48/manifest_verification.json",
+      "sha256": "8e27a88c722d88430f2b9cdc37726169f0185bc6eac50119175ea79550802ba0",
+      "bytes": 258
+    },
+    {
+      "path": "independent_concurrent48/manifest_verification.optimized.json",
+      "sha256": "8e27a88c722d88430f2b9cdc37726169f0185bc6eac50119175ea79550802ba0",
+      "bytes": 258
+    }
+  ],
+  "upstream_sources": [
+    {
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/STABILITY_48.md",
+      "sha256": "711863194c6440d153315f4d8b5153f02ca57750f590922e0be316ebb72a493b"
+    },
+    {
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/verify_48.py",
+      "runtime_dependencies": "Python standard library only.",
+      "sha256": "40f9acda78dbba05639e7b735309c93f0bd3c9dcdf0aafe23c62904478ffb7a8",
+      "sibling_import_dependencies": []
+    }
+  ]
+}

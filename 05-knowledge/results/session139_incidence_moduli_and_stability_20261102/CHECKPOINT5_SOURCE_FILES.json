@@ -1,0 +1,104 @@
+{
+  "checkpoint": 5,
+  "status": "FROZEN_AND_AUDITED",
+  "files": [
+    {
+      "path": "concurrent68/PROOF.md",
+      "sha256": "566dd97f59c4d9f329a0e756f5702abe180c36edae57a964b30854feb09d39fe",
+      "bytes": 6359
+    },
+    {
+      "path": "independent_concurrent68/AUDIT.md",
+      "sha256": "bc5dbe85d060b665ac3bb85becb5797a6097164f3d64c58c8a17dc35a61e4d15",
+      "bytes": 9696
+    },
+    {
+      "path": "independent_concurrent68/FINAL_SOURCE_REVIEW.md",
+      "sha256": "53ef74ee75d36a2b2cb1b646c761b556d0960a90783d5e6998099429cba3bff9",
+      "bytes": 1235
+    },
+    {
+      "path": "independent_concurrent68/audit_n68.py",
+      "sha256": "ba9aa8255a033ccf091c6b24d990260a9b0ccefa7eaa81a9a3b89ee8081e9e6e",
+      "bytes": 6109
+    },
+    {
+      "path": "independent_concurrent68/normal.json",
+      "sha256": "87e7b77aa03b081c10e28c982e29d93ba62dcba8534226893854d229efcfa31d",
+      "bytes": 2020
+    },
+    {
+      "path": "independent_concurrent68/optimized.json",
+      "sha256": "87e7b77aa03b081c10e28c982e29d93ba62dcba8534226893854d229efcfa31d",
+      "bytes": 2020
+    },
+    {
+      "path": "independent_concurrent68/negative_threshold67.json",
+      "sha256": "4b1d4cf91c004a38f7a67d1afc88e278766415e94bca095ff19e8daf91f0d0b0",
+      "bytes": 62
+    },
+    {
+      "path": "independent_concurrent68/negative_threshold67_optimized.json",
+      "sha256": "4b1d4cf91c004a38f7a67d1afc88e278766415e94bca095ff19e8daf91f0d0b0",
+      "bytes": 62
+    },
+    {
+      "path": "independent_concurrent68/negative_payment.json",
+      "sha256": "6d69cc5c5e9478fe4987344704e6d13e1cdc7158a9a4dc5d9ba94b4ee4d5a0fd",
+      "bytes": 69
+    },
+    {
+      "path": "independent_concurrent68/negative_payment_optimized.json",
+      "sha256": "6d69cc5c5e9478fe4987344704e6d13e1cdc7158a9a4dc5d9ba94b4ee4d5a0fd",
+      "bytes": 69
+    },
+    {
+      "path": "independent_concurrent68/verify_curated_checkpoint5.py",
+      "sha256": "7a03f60f2d685b758c1ff3424608e380ba55126dded162bec290c2292f77c375",
+      "bytes": 1346
+    },
+    {
+      "path": "independent_concurrent68/CURATED_CHECKPOINT5.json",
+      "sha256": "ea6654d055c51f37cadb7ece3a1ddba9341c06a9f83f89b820007c0612e75c29",
+      "bytes": 4863
+    },
+    {
+      "path": "independent_concurrent68/SHA256SUMS_CHECKPOINT5",
+      "sha256": "e5ad8597533ae48be99d7938d9addd4988db3e79d3d4d4be7e28e8b6cbb55a29",
+      "bytes": 1216
+    },
+    {
+      "path": "independent_concurrent68/manifest_verification.json",
+      "sha256": "a4148c5e19607a005610b5e693b97b34779be85a76bdd9948796b67b57f6dc90",
+      "bytes": 204
+    },
+    {
+      "path": "independent_concurrent68/manifest_verification.optimized.json",
+      "sha256": "a4148c5e19607a005610b5e693b97b34779be85a76bdd9948796b67b57f6dc90",
+      "bytes": 204
+    },
+    {
+      "path": "independent_concurrent68/MANIFEST_NEGATIVE_CONTROLS.json",
+      "sha256": "24702bb39801c88d5708b37c2a8344cc1a1ebcbf09ed37c0941fecd554b50db1",
+      "bytes": 304
+    },
+    {
+      "path": "tensor_matching/PROOF.md",
+      "sha256": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66",
+      "bytes": 5754,
+      "role": "previously accepted dependency"
+    },
+    {
+      "path": "tensor_matching_audit/AUDIT.md",
+      "sha256": "1d58a11025063d58179d617aa66295dcb33df6812f93026261f504ffc1f1c483",
+      "bytes": 7890,
+      "role": "previously accepted dependency"
+    },
+    {
+      "path": "stability/PROOF_N526.md",
+      "sha256": "e82bf3b0eb986f63daee55d42e84c3545921800e0a9936484cfdff97a03b6561",
+      "bytes": 6758,
+      "role": "previously accepted dependency"
+    }
+  ]
+}

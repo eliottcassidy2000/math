@@ -1,0 +1,115 @@
+{
+  "active_conditions": 38,
+  "exact_weighted_graph_controls": 760,
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "normal_optimized_both": true,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "n68-independent",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "87e7b77aa03b081c10e28c982e29d93ba62dcba8534226893854d229efcfa31d"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n67",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "4b1d4cf91c004a38f7a67d1afc88e278766415e94bca095ff19e8daf91f0d0b0"
+    },
+    {
+      "expected_rejection": true,
+      "label": "omit-selected-payment",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "6d69cc5c5e9478fe4987344704e6d13e1cdc7158a9a4dc5d9ba94b4ee4d5a0fd"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "7b43a6930ad5d331a9549130ebad00033fd4cd43397f74a079e3dbeeaaeb39fe"
+    },
+    {
+      "expected_rejection": false,
+      "label": "auditor-curation",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "a4148c5e19607a005610b5e693b97b34779be85a76bdd9948796b67b57f6dc90"
+    },
+    {
+      "expected_rejection": false,
+      "label": "n68-independent",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "87e7b77aa03b081c10e28c982e29d93ba62dcba8534226893854d229efcfa31d"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n67",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "4b1d4cf91c004a38f7a67d1afc88e278766415e94bca095ff19e8daf91f0d0b0"
+    },
+    {
+      "expected_rejection": true,
+      "label": "omit-selected-payment",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "6d69cc5c5e9478fe4987344704e6d13e1cdc7158a9a4dc5d9ba94b4ee4d5a0fd"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "7b43a6930ad5d331a9549130ebad00033fd4cd43397f74a079e3dbeeaaeb39fe"
+    },
+    {
+      "expected_rejection": false,
+      "label": "auditor-curation",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "a4148c5e19607a005610b5e693b97b34779be85a76bdd9948796b67b57f6dc90"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "auditor-curation-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "auditor-curation-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 2,
+  "scope": "Proof controls and exact arithmetic verification, not finite sampling as an all-order proof. False67 control rejects the certificate, not the theorem.",
+  "source_files_verified": 19,
+  "source_integrity_positive_runs": 4,
+  "source_manifest_sha256": "3372dfa3013006053872a20a0b4101dc154b465352e39ff9bbbd82d0821c0a8e",
+  "status": "PASS",
+  "total_executions": 14,
+  "wrong_cwd": true
+}

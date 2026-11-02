@@ -1,8 +1,8 @@
-# Final Session139 concept board
+# Session139 reviewed-checkpoint concept board
 
 | Concept | Operation / faithful coordinate | Accepted outcome | Boundary |
 |---|---|---|---|
-| Sharp real stability | Retained B, matching mass, wedge budget and local dual | Exact n>=140 plus inherited3..9 |10..139 open; threshold not optimality claim |
+| Sharp real stability | Retained B, matching mass, credited degree cancellation, exact slots and two-regime invoice | Exact n>=48 plus inherited3..9 |10..47 open; threshold not optimality claim |
 | Tensor arithmetic | Odd Pfaffian coefficient coset -> whole-group norm; Eisenstein/F4 second proof | Sharp matching product floor and nonlinear reserve | Not a termwise Pfaffian or false conditional factor |
 | Spectral incidence | Full zeta/all-one response plus M23 | Exact n5 H recovery after sidecar; regular-circle width t^4/27 | No RH/GRH; not all vertex-root data or full fibre |
 | Signed charge / randomness | Integral eta then modular reduction; M22 second moment | Binary support floor n-3; exact weighted expectation | Mean support need not inherit binary gap |
@@ -12,7 +12,9 @@
 ## The load-bearing cross-connection
 
 Odd Pfaffian parity -> odd-coset tensor norm -> weight-sensitive matching
-product margin -> nonlinear retained reserve near1 -> n140. The independent
+product margin -> nonlinear retained reserve near1 -> credited concurrent
+degree/baseline budgets -> n68 alternate, concurrent flexible-dual n56 and slot-aware two-regime n48. The independently preserved n140 route remains
+a valid predecessor. The independent
 Eisenstein/Bernstein/F4 route proves the same norm lemma. This chain is an
 actual proof dependency; the RH-adjacent history is not a substitute for it.
 
@@ -34,7 +36,7 @@ actual proof dependency; the RH-adjacent history is not a substitute for it.
 
 ## Next decisive tests, not promised closures
 
-A future stability proof must control the remaining10..139, not merely tune
+A future stability proof must control the remaining10..47, not merely tune
 an obsolete c<1/4 estimate or read a failed sufficient endpoint as a witness.
 The new matching reserve is available; extending it or adding a complete
 finite certificate is the explicit open obligation. General contextual-state

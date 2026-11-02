@@ -1,0 +1,143 @@
+{
+  "credit": "Preserve pinned source credits for the concurrent n56 flexible-dual framing, concurrent stronger discarded-degree estimate, independently accepted Session139 tensor reserve, and inherited matching/equality inputs. No sole-priority claim.",
+  "exact_controls": {
+    "independent_Taylor_degrees": [
+      2,
+      3,
+      6,
+      11
+    ],
+    "independent_active_checks": 47,
+    "independent_penalty_bound": "1/10000",
+    "independent_weighted_graph_controls": 760,
+    "outputs_equal_under_optimization": true,
+    "producer_finite_R_controls": 277,
+    "producer_local_checks": 25351,
+    "producer_weighted_graph_controls": 729
+  },
+  "exclusions": [
+    "producer_replay is an operational isolated copy of already-published upstream files, not a new scientific artifact.",
+    "No upstream scientific/canonical file selected for replacement.",
+    "All older threshold proofs/audits remain unchanged."
+  ],
+  "files": [
+    {
+      "bytes": 11138,
+      "path": "independent_concurrent48/AUDIT.md",
+      "sha256": "a4505123894a20edbb3aa851867c7d91d008d1ed5eee08cf5402f7157b879fbe"
+    },
+    {
+      "bytes": 6577,
+      "path": "independent_concurrent48/audit_n48.py",
+      "sha256": "11b14a4f274ae67a01f6b65fa1ba0801e15ebf86b8b7ad89fec699b50cb6682f"
+    },
+    {
+      "bytes": 2802,
+      "path": "independent_concurrent48/normal.json",
+      "sha256": "917087ebbc8844a16f1039c7ca16db9305b8521ed03972eb1c9036daccf806de"
+    },
+    {
+      "bytes": 2802,
+      "path": "independent_concurrent48/optimized.json",
+      "sha256": "917087ebbc8844a16f1039c7ca16db9305b8521ed03972eb1c9036daccf806de"
+    },
+    {
+      "bytes": 85,
+      "path": "independent_concurrent48/negative_threshold47.json",
+      "sha256": "b124f57da79a14d087def2db94410597122e4ad1a403a6f56ad6a2c38c51fffa"
+    },
+    {
+      "bytes": 85,
+      "path": "independent_concurrent48/negative_threshold47_optimized.json",
+      "sha256": "b124f57da79a14d087def2db94410597122e4ad1a403a6f56ad6a2c38c51fffa"
+    },
+    {
+      "bytes": 71,
+      "path": "independent_concurrent48/negative_dual.json",
+      "sha256": "abeea3ef2366f615a71288082e2cea7267a7f72b768ce98388ac35133efb905e"
+    },
+    {
+      "bytes": 71,
+      "path": "independent_concurrent48/negative_dual_optimized.json",
+      "sha256": "abeea3ef2366f615a71288082e2cea7267a7f72b768ce98388ac35133efb905e"
+    },
+    {
+      "bytes": 1534,
+      "path": "independent_concurrent48/producer_normal.json",
+      "sha256": "9f3905caba1bce0a545c37b9e7ae6d182c4538e8a3eb4456ee58168ee1447989"
+    },
+    {
+      "bytes": 1534,
+      "path": "independent_concurrent48/producer_optimized.json",
+      "sha256": "9f3905caba1bce0a545c37b9e7ae6d182c4538e8a3eb4456ee58168ee1447989"
+    },
+    {
+      "bytes": 1345,
+      "path": "independent_concurrent48/verify_curated_audit.py",
+      "sha256": "f6f7e78a5c5d468c60286250069b1cc30f755f232904eb80d3b0502e99b19107"
+    }
+  ],
+  "generated_manifest_exclusions": [
+    "independent_concurrent48/CURATED_AUDIT.json",
+    "independent_concurrent48/SHA256SUMS",
+    "independent_concurrent48/manifest_verification.json",
+    "independent_concurrent48/manifest_verification.optimized.json"
+  ],
+  "negative_controls": [
+    {
+      "arguments": [
+        "--threshold",
+        "47"
+      ],
+      "expected_exit_code": 1,
+      "rejected_at": "bootstrap_advance_0"
+    },
+    {
+      "arguments": [
+        "--bad-dual-ratio"
+      ],
+      "expected_exit_code": 1,
+      "meaning": "Formal two-invoice scalar hostile, not an actual tournament counterexample.",
+      "rejected_at": "second_minimum_nonnegative"
+    }
+  ],
+  "receipt_pairs": [
+    [
+      "independent_concurrent48/normal.json",
+      "independent_concurrent48/optimized.json",
+      "PASS"
+    ],
+    [
+      "independent_concurrent48/negative_threshold47.json",
+      "independent_concurrent48/negative_threshold47_optimized.json",
+      "REJECTED"
+    ],
+    [
+      "independent_concurrent48/negative_dual.json",
+      "independent_concurrent48/negative_dual_optimized.json",
+      "REJECTED"
+    ],
+    [
+      "independent_concurrent48/producer_normal.json",
+      "independent_concurrent48/producer_optimized.json",
+      "passed"
+    ]
+  ],
+  "root": "Parent of independent_concurrent48; paths root-relative.",
+  "scope": "Exact weighted stability and equality for n>=48; orders 10..47 unresolved; optional general scalar iff interpreted for d>0; upstream scientific files unchanged.",
+  "status": "FROZEN_AND_INDEPENDENTLY_AUDITED",
+  "upstream_sources": [
+    {
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/STABILITY_48.md",
+      "sha256": "711863194c6440d153315f4d8b5153f02ca57750f590922e0be316ebb72a493b"
+    },
+    {
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/verify_48.py",
+      "runtime_dependencies": "Python standard library only.",
+      "sha256": "40f9acda78dbba05639e7b735309c93f0bd3c9dcdf0aafe23c62904478ffb7a8",
+      "sibling_import_dependencies": []
+    }
+  ]
+}

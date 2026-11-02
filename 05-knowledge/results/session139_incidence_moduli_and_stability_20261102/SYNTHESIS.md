@@ -8,12 +8,16 @@
 | Checkpoint1 |748..1499| Retained baseline plus one shared heavy/light wedge budget |
 | Checkpoint2 |526..747| Actual light-mass deficit paid by a local quadratic dual |
 | Checkpoint4 |140..525| New matching product reserve bootstraps the scalar gap to99/100 |
+| Checkpoint5 alternate |68..139| Combine tensor reserve with credited concurrent degree cancellation and retained negative-RB budget |
+| Concurrent n56, independently audited here |56..67| Combine tensor reserve and stronger degree estimate with flexible retained-baseline dual |
+| Concurrent n48, independently audited here |48..55| Exact matching-slot accounting and the two-regime wedge invoice |
 
-The session closes1360 previously open orders, leaving **10..139 OPEN**.
-The current theorem is exact at n=3..9 and every n>=140. Positive-variance
+Together with the credited concurrent follow-ups,1452 previously open orders
+are closed, leaving **10..47 OPEN**.
+The current theorem is exact at n=3..9 and every n>=48. Positive-variance
 large-order equality is the maximal ordinal fair-pair locus. The exceptional
 order-three identity holds for every weighted triangle. No optimality claim
-for threshold140 or theorem-failure claim at139 is made.
+for threshold48 or theorem-failure claim at47 is made.
 
 ## 2. Why the new structural input works
 
@@ -63,7 +67,38 @@ light-deficit dual then closes every n>=140, with final slack1/448.
 
 The prior c<1/4 method ceiling was a limitation of that old input, not a
 universal impossibility barrier. The new proof changes the input. Neither
-this success nor failure of its139 endpoint settles the remaining130 orders.
+the n140 certificate nor its failed139 endpoint is an obstruction to another
+method: the final combination now closes68..139. The concurrent n56 and n48 proofs close20 more;38 orders remain open.
+
+### The final concurrent-input improvement
+
+The concurrent [degree cancellation and shared baseline](../stability_priority_moduli_20261102/STABILITY_N276.md)
+sharpen the discarded-mass inequality to `W>=2D^2/n` and retain `-RB` in
+the light-edge budget. These are credited upstream mechanisms, not claimed
+Session139 discoveries. The [n68 proof](concurrent68/PROOF.md) independently
+reproves only the pieces it uses, then combines them with the new tensor
+reserve: `6/25 -> 63/100 -> 49/50 -> 99/100`. At R>=34 the heavy matching
+has at least14 edges, the tail is absorbed with `delta=1/21`, and both
+strict absorption margins equal `43/71400`. The full signed baseline
+budget rules out light groups and completes sharp equality. This is a
+self-contained proof combination, not a census or a wholesale re-audit
+of the concurrent n276 theorem.
+
+The subsequently published [n56 proof](../stability_priority_spectrum_20261102/STABILITY_56.md)
+uses the same accepted tensor and stronger-degree inputs with a flexible
+retained-baseline dual. Its [independent audit](independent_concurrent56/AUDIT.md)
+uses distinct Taylor degrees4,5,5 and a coarser penalty, checks the dual
+identity coefficient-wise and verifies the equality transport. This adds
+independent acceptance without rewriting the upstream proof or assigning
+sole credit. The n68 proof remains a valid independently audited alternate.
+
+The latest [n48 proof](../stability_748_guarded_encodings_20261102/STABILITY_48.md) adds the exact slot constraint
+`r_h+L<=R` and uses the maximum of two valid local wedge invoices,
+`max(w*S,w*S/2+S^2/4)`, not their invalid sum. Its two-regime lower-envelope
+argument pays a stronger local dual; slot accounting forces12 heavy edges.
+The [independent audit](independent_concurrent48/AUDIT.md) preserves this
+concurrent contribution and the earlier tensor/degree credit. Neither failed
+47 certificates nor the scalar hostile establish optimality of threshold48.
 
 ## 3. Why the discarded local shortcuts remain false
 
@@ -88,7 +123,7 @@ a reduced-zeta pole circle and a finite functional equation. Those data still
 allow width t^4/27 on the specified five-vertex3+2 rank-two circle. Only the
 all-one marked response is fixed, not each vertex-rooted response. None of
 these reconstruction obstructions rules out spectral sufficient inequalities.
-They do not cause the n140 improvement and yield no classical RH/GRH theorem.
+They do not cause the n140/n68/n56/n48 improvements and yield no classical RH/GRH theorem.
 
 ## 5. The actual5/11 arithmetic connections
 
@@ -134,7 +169,7 @@ nodes through F: the inherited census has only eight full profiles there.
 
 ## 7. Stopping frontier and reusable method
 
-Remaining: sharp real stability10..139; full all-prime/composite contextual
+Remaining: sharp real stability10..47; full all-prime/composite contextual
 realization; integer-spectrum completeness; general scalar zero-rigidity;
 LRC(14). This session makes no closure claim for them.
 

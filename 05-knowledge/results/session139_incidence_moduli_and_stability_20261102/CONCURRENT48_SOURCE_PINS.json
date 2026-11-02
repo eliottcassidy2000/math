@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "reviewed_sources": [
+    {
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/STABILITY_48.md",
+      "sha256": "711863194c6440d153315f4d8b5153f02ca57750f590922e0be316ebb72a493b",
+      "git_tree_entry": "100644 blob b2421c79f4d43b196288dc8d9555cd056c318eec"
+    },
+    {
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "path": "05-knowledge/results/stability_748_guarded_encodings_20261102/verify_48.py",
+      "runtime_dependencies": "Python standard library only.",
+      "sha256": "40f9acda78dbba05639e7b735309c93f0bd3c9dcdf0aafe23c62904478ffb7a8",
+      "sibling_import_dependencies": [],
+      "git_tree_entry": "100644 blob 12cd289ab37bfdb3a9394cb3f2c1382fdb8945a2"
+    }
+  ],
+  "independent_audit": "independent_concurrent48/AUDIT.md",
+  "selector_sha256": "158cc9fb0f0d0772836af48e0a844336eac3019fbc71546693c7359e2ab643b5",
+  "credit": "Preserve pinned source credits for the concurrent n56 flexible-dual framing, concurrent stronger discarded-degree estimate, independently accepted Session139 tensor reserve, and inherited matching/equality inputs. No sole-priority claim.",
+  "upstream_sources_modified": false
+}
