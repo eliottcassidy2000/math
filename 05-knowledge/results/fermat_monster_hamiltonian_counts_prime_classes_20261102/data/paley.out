@@ -1,0 +1,5 @@
+Paley q = 3: paths from 0 = 1, H = q * that = 3, |Aut| = q(q-1)/2 = 3, H / |Aut| = 1 (remainder 0)
+Paley q = 7: paths from 0 = 27, H = q * that = 189, |Aut| = q(q-1)/2 = 21, H / |Aut| = 9 (remainder 0)
+Paley q = 11: paths from 0 = 8645, H = q * that = 95095, |Aut| = q(q-1)/2 = 55, H / |Aut| = 1729 (remainder 0)
+Paley q = 19: paths from 0 = 61720828785, H = q * that = 1172695746915, |Aut| = q(q-1)/2 = 171, H / |Aut| = 6857869865 (remainder 0)
+Paley q = 23: paths from 0 = 685226390277363, H = q * that = 15760206976379349, |Aut| = q(q-1)/2 = 253, H / |Aut| = 62293308207033 (remainder 0)

@@ -1,0 +1,17 @@
+--- Fermat primes ---
+F_0 = 3: mod 36 = 3, mod 3 = 0, mod 4 = 3, kind special; first square-sum prime partners [(13, 4), (61, 8), (97, 10)]
+F_1 = 5: mod 36 = 5, mod 3 = 2, mod 4 = 1, kind partner(5); first square-sum prime partners [(11, 4), (31, 6), (59, 8)]
+F_2 = 17: mod 36 = 17, mod 3 = 2, mod 4 = 1, kind partner(17); first square-sum prime partners [(19, 6), (47, 8), (83, 10)]
+F_3 = 257: mod 36 = 5, mod 3 = 2, mod 4 = 1, kind partner(5); first square-sum prime partners [(67, 18), (227, 22), (419, 26)]
+F_4 = 65537: mod 36 = 17, mod 3 = 2, mod 4 = 1, kind partner(17); first square-sum prime partners [(2063, 260), (4159, 264), (6287, 268)]
+degrees below 10^5 of 3, 5, 17, 257, 65537: [45, 56, 82, 57, 31]
+--- the 25 primes below 100 by mod-36 kind ---
+  Fi22     [(2, 'special'), (3, 'special'), (5, 'partner(5)'), (7, 'restricted(7->29)'), (11, 'partner(11)'), (13, 'restricted(13->23)')]
+  B\Fi22   [(17, 'partner(17)'), (19, 'restricted(19->17)'), (23, 'partner(23)'), (31, 'restricted(31->5)'), (47, 'partner(11)')]
+  M\B      [(29, 'partner(29)'), (41, 'partner(5)'), (59, 'partner(23)'), (71, 'partner(35)')]
+  nonSS-1  [(37, 'restricted(1->35)'), (43, 'restricted(7->29)'), (53, 'partner(17)'), (61, 'restricted(25->11)'), (67, 'restricted(31->5)')]
+  nonSS-2  [(73, 'restricted(1->35)'), (79, 'restricted(7->29)'), (83, 'partner(11)'), (89, 'partner(17)'), (97, 'restricted(25->11)')]
+restricted among the 15 supersingular primes: 4; among the 10 non-supersingular primes below 100: 7
+isolated primes below 100 and their kinds: [(37, 'restricted(1->35)'), (43, 'restricted(7->29)'), (67, 'restricted(31->5)')] ; their first partners: [(107, 'partner(35)'), (101, 'partner(29)'), (257, 'partner(5)')]
+squares of units mod 36: [1, 13, 25] ; 7*squares: [7, 19, 31]
+counts below 10^5 by class mod 36 (restricted classes marked *): {'1*': 797, 5: 793, '7*': 804, 11: 799, '13*': 790, 17: 812, '19*': 795, 23: 811, '25*': 787, 29: 804, '31*': 811, 35: 787}

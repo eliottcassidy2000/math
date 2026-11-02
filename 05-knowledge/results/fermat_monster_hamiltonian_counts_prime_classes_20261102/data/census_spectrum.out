@@ -1,0 +1,9 @@
+order 3: 2 tournaments, max H = 3; 2 distinct values; odd values below the maximum not attained: []
+order 4: 4 tournaments, max H = 5; 3 distinct values; odd values below the maximum not attained: []
+order 5: 12 tournaments, max H = 15; 7 distinct values; odd values below the maximum not attained: [7]
+order 6: 56 tournaments, max H = 45; 19 distinct values; odd values below the maximum not attained: [7, 21, 35, 39]
+order 7: 456 tournaments, max H = 189; 77 distinct values; odd values below the maximum not attained: [7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173] ...
+order 8: 6880 tournaments, max H = 661; 320 distinct values; odd values below the maximum not attained: [7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+order 9: 191536 tournaments, max H = 3357; 1520 distinct values; odd values below the maximum not attained: [7, 21, 2883, 2887, 2889, 2893, 2895, 2897, 2899, 2901, 2905, 2907] ...
+least order attaining each Fermat prime (order, number of tournaments of that order): {3: (3, 1), 5: (4, 1), 17: (6, 2), 257: (8, 30)} ; 65537: order 11 (witnesses in data/climb_65537_11.out; max H(10) = 15745 < 65537 < 95095 = max H(11), OEIS A038375)
+7 and 21 never attained at orders 3..9 (consistent with THM-1370): True

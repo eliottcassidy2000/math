@@ -1,0 +1,22 @@
+(1) Paley tournaments
+    P_3: H = 3 = 3 * 1 (|Aut| = q(q-1)/2 = 3, quotient odd True)
+    P_7: H = 189 = 21 * 9 (|Aut| = q(q-1)/2 = 21, quotient odd True)
+    P_11: H = 95095 = 55 * 1729 (|Aut| = q(q-1)/2 = 55, quotient odd True)
+(2) circulant tournaments
+    R_3: H = 3 = 3 * 1, quotient odd True
+    R_5: H = 15 = 5 * 3, quotient odd True
+    R_7: H = 175 = 7 * 25, quotient odd True
+    R_9: H = 3267 = 9 * 363, quotient odd True
+    R_11: H = 93027 = 11 * 8457, quotient odd True
+    R_13: H = 3711175 = 13 * 285475, quotient odd True
+    all circulants of order 7 (connection sets with 1): H values [175, 189]; all multiples of 7: True; quotients [25, 27]; maximiser(s) [(1, 2, 4)]
+    all circulants of order 9 (connection sets with 1): H values [3159, 3267, 3357]; all multiples of 9: True; quotients [351, 363, 373]; maximiser(s) [(1, 2, 3, 5), (1, 2, 4, 6), (1, 5, 6, 7)]
+    all circulants of order 11 (connection sets with 1): H values [92411, 93027, 93467, 95095]; all multiples of 11: True; quotients [8401, 8457, 8497, 8645]; maximiser(s) [(1, 3, 4, 5, 9)]
+(3) witnesses
+    order  6 111011111111110: H = 17 (expected 17) OK; scores [1, 1, 2, 3, 4, 4]; strong True
+    order  6 101011111111101: H = 17 (expected 17) OK; scores [1, 1, 2, 3, 4, 4]; strong True
+    order  8 1111101111001111111111110110: H = 257 (expected 257) OK; scores [2, 2, 2, 3, 4, 4, 5, 6]; strong True
+    order 11 0010010010100011000001001100011011000110101001101110111: H = 65537 (expected 65537) OK; scores [3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6]; strong True
+    order 11 1011101001100010111010111010100010001100101010100011000: H = 65537 (expected 65537) OK; scores [3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6]; strong True
+    order 11 1000001010011010110001010001010000111000011110110011011: H = 65537 (expected 65537) OK; scores [3, 4, 4, 5, 5, 5, 5, 5, 6, 6, 7]; strong True
+    order 12 000010001001001011101100010011010001011101111101110111110111100110: H = 65537 (expected 65537) OK; scores [2, 3, 4, 4, 5, 5, 5, 5, 7, 7, 9, 10]; strong True
