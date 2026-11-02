@@ -15,6 +15,16 @@ minimum-distance property and proves the native metric and LCA-detour
 bounds below. The shared gap construction is not claimed as exclusive
 new work here.
 
+Incoming91cc1210ed adds the
+[complete nearest-distance phase classification](../honeycomb_gap_aliquot_20261102/GAP_GEOMETRY.md):
+in the two-parameter family, the minimum-distance graph switches between
+a matching, a tree of triangles and the binary tree at
+W^2=4q/(4-q). This reinforces the distinction between recovering a
+coarse metric and recovering a specified adjacency relation. Our width-one
+case lies in its binary-tree regime. G5-G6 below answer the selected-odd-source
+part of its native-clock transport question; placing all expanded even
+states remains open.
+
 ## G1. The interval construction
 
 Fix a real b>=2 and put r=1/b. Give the root the interval [0,1].

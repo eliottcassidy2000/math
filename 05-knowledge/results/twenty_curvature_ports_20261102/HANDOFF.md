@@ -41,6 +41,11 @@ proof notes; do not rediscover it as exclusive new work. Its geometric
 family reaches any equal edge length above log2, while the present
 width-one family retains induced minimum-distance adjacency.
 
+Incoming91cc1210ed further classifies the nearest-distance phases; its
+GAP_GEOMETRY.md is credited and pinned. The present G5-G6 supplies the
+actual selected-source clock bounds requested in its third next question,
+but not a placement of the whole native shared-tail expansion.
+
 Reproduce verify.py in normal and -O modes, compare JSON bytewise,
 and run seal.py --check. No background job, submission or message to
 another person is part of this handoff.

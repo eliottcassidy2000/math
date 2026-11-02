@@ -28,6 +28,7 @@ INPUTS=[
     '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CONNECTIONS.md',
     '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md',
     '05-knowledge/results/eleven_wedge_honeycomb_20261102/README.md',
+    '05-knowledge/results/honeycomb_gap_aliquot_20261102/GAP_GEOMETRY.md',
     '01-canon/theorems/THM-4661-odd-degree-carriers-a-failed-six-colour-exterior-has-at-least-twenty-vertices-and-equality-testers-are-seven-colour-certificates.md',
 ]
 

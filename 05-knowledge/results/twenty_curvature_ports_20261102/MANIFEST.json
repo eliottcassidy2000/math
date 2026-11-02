@@ -2,8 +2,8 @@
   "files": {
     "AUDIT.md": "a76159730d6ba73d749be308d2bd4203824f391524a8f9475814e2272e4fd3a5",
     "BOARD.md": "19140e86243bcdf577aa5e2a988556fdf3b846600304e1c554c11ca3bd5035b6",
-    "GAPPED_GEOMETRY.md": "d3212d60286e0ee1fe4f02e77cdf1320177e2621aeafbf7006dfafa61e0e3199",
-    "HANDOFF.md": "20fe58fb170789f406e17fd6493ddf965ece256529c0807f0933a2cf0372c73a",
+    "GAPPED_GEOMETRY.md": "38ffbd4e2fb363e506592d852a32d87ec8f3a5f2687df298b0f0d77df0006899",
+    "HANDOFF.md": "dd2eb0dbd355b59fa754ad2168ecb2725ab0d24eec248476f8de9fa82b6e6c45",
     "README.md": "5343407a6db63d27dda0e9169d4bde033ea91b2cdbebfb436192cf5d1fefcb68",
     "RECOVERY.md": "9484a65f6a7af597e18fe4f31b076f77268c2b52b4785e3e4c6b94f41c1941ab",
     "THREE_WINDOW_CARRIER.md": "b5a25cfe5336b0f6c4f8537e69415f7bad5d8c5e6394286e2d9ba405a6152239",
@@ -12,7 +12,7 @@
     "path_scout.json": "9a43648471e4521ffed0b9b4e934ea66266865db7c42f30ee3404df55463837e",
     "plot.py": "6d8785cb37dcef3bf3723b10adff10205c8923ebfc06ddc6f26dc8e14ee83949",
     "probe_paths.py": "c473c7474162ad767cddb1b3b976068fff468d46c9cf6ba369a85ddc38ff7500",
-    "seal.py": "5c1c1ef2d2fb63d023cebbc2513979639d6cd92694027b059195639f32889dc8",
+    "seal.py": "95479a8e2e5020ba52e213b6d19fb825cacaf280121d39f0e443a23aee366a01",
     "verification.json": "13711620fdaaacc2a690548dc40191c2556fae1c5f5a726e11332427e42bc276",
     "verification.optimized.json": "13711620fdaaacc2a690548dc40191c2556fae1c5f5a726e11332427e42bc276",
     "verify.py": "b57bcc44f728e89923da727676b504531e172b9f85c162e3958eb727c314ecfe"
@@ -28,6 +28,7 @@
     "05-knowledge/results/cursor_cm_phase_20261028/TRACE_CARRIER.md": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
     "05-knowledge/results/eleven_wedge_honeycomb_20261102/README.md": "316febd69383c1d3c052a59fb50423190ef9c8707a0d583e29b666ef01b6219a",
     "05-knowledge/results/free_bits_seven_fiftysix_20261028/ATLAS.md": "2205df1ddb160029f3a7f82e80b150a9a6452247948c42b26a63632825abb49b",
+    "05-knowledge/results/honeycomb_gap_aliquot_20261102/GAP_GEOMETRY.md": "8754f3a963c9a43b46ae4b11555d0bc918ddf0b6ecfa6341e4ac5355b8c319a8",
     "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
     "05-knowledge/results/joint_incidence_clocked_frames_20261102/path_kernel.py": "0e9d48693b88c513ebc7714e6641c9e5bcae970f7c116f930600dceacf7b841f",
     "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md": "3b3e95d0e1fe422516b604299ac3f6f0a2a4ad57ec3d0f5dc9ce31ab6affd990",
