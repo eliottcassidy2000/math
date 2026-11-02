@@ -23,6 +23,9 @@ mask72 has H15 and every edge flip increases its squared error from H17.
    controller while preserving common edge/source variables. Compare
    a true shared-port calculation with the 49/53 covariance hostile.
    A product of independent marginal recurrences is not sufficient.
+   The incoming native97-state25-to26 interface is an additional concrete
+   testbed. Its guarded outputs lack ordinary-H parity, and arbitrary
+   edge biases require weighted fibre masses beyond uniform counts.
 4. For any proposed minimal carrier, replay the false cube partition
    (tiles4/26) and the actual81/27 pair. Booleanity is necessary but
    actual transport coherence is an independent obligation.

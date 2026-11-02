@@ -105,6 +105,33 @@ They share the same 67 labelled cyclic triples but retain group orders
 81 and 27; their regular binary subset counts are 1620 and 1728.
 The current constructors do not replace orientations by cyclic triples.
 
+## Incoming work integrated before publication
+
+Commit9d5bae74f0, [Session142's Jacobian bridge](../session142_tournament_odd_spectrum_20261102/jacobian_bridge/PROOFS.md),
+already records the same one-edge masks and weighted expectation principle.
+Its additional unimodular examples have legal parameter set {0,1} and
+an integral but illegal inverse t=-1. These sharpen the source-guard
+distinction; they are read and credited, not newly rerun here. The present
+scout independently finds the identical lexicographically first pairs.
+
+Commits5e7c84e6d1 and83e69bea5a supply the
+[complete97-state native birth interface](../eleven_wedge_honeycomb_20261102/NATIVE_26.md).
+It retains all order25 source mass, including sources inactive before
+birth, and maps every supplied pair of new bits to the complete71-state
+order26 observer. That is a concrete finite example of the source/guard
+requirements in this packet. Its counts are square-sum-guarded path counts,
+not ordinary H. Integer-valued energy rounding would use threshold one
+without an additional parity theorem. Uniform fibre masses permit moments
+for the specified uniform source; arbitrary biased edge probabilities
+require their corresponding weighted fibre masses. The97-state result
+is CITED in-repository here, not independently recomputed in this session.
+
+The correcting commitd4e61c87ab also supersedes the incoming index's
+duplicate near-join entry that called spectrum completeness Pi^0_2 and
+reduced it only to primes. This session removes that stale duplicate and
+keeps its explicitly corrected Pi^0_1/two-lane entry. This is a navigation
+repair, not a new completeness proof or a fresh audit of the large banks.
+
 ## Primary literature and current boundaries
 
 - Arthur H. Busch,

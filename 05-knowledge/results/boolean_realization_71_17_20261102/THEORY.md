@@ -89,6 +89,11 @@ for finding a point below the threshold. Exact conditional energy queries
 can be expensive. The finite demonstrations for \(h=17,71\) deliberately
 start near known solutions; they do not discover new spectrum values.
 
+The same clamping proof works for any real function on a finite cube.
+If its values belong to an integer lattice and the target is an integer,
+energy below one suffices. The threshold four above uses ordinary
+tournament parity specifically; guarded path counts need not be odd.
+
 There are three different inverse requests:
 a **mean inverse** satisfies \(\mathbb E H=h\);
 a **support inverse** is a positive law supported on \(H^{-1}(h)\);
@@ -124,6 +129,13 @@ masks use lexicographic pair order starting at bit zero:
 | --- | --- | --- | --- | --- |
 | 5 | 7 | 4, 260 | 5, 9 | (2,4) |
 | 6 | 21 | 20, 28 | 19, 23 | (0,4) |
+
+These exact one-edge pairs are also recorded in the incoming
+[Session142 bridge, Proposition 2](../session142_tournament_odd_spectrum_20261102/jacobian_bridge/PROOFS.md).
+They were independently reproduced here; the pairs and the expectation
+interpretation are recovered inputs, not claimed as new discoveries.
+Our additions are the target energy, its sharpness and rounding bound,
+the interior certificates, and the explicit local-search obstruction.
 
 Giving that edge probability \(p\), with the other arcs fixed, gives
 \(H(p)=h-2+4p\). At \(p=1/2\), the mean is \(h\), the derivative is four,
