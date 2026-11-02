@@ -1,0 +1,195 @@
+{
+  "L_logconcavity_MLR_steps": 5112,
+  "base_logconcavity_slacks": [
+    81,
+    9720,
+    259200,
+    1511136,
+    2047680
+  ],
+  "fixed_actual_module_profile_pairs": 3,
+  "independence": "Imports prior independent profile kernel only; no producer algorithms imported",
+  "independent_kernel_sha256": "be7768a52bfe0f69e114f0b50fe2c520d3a6267db40f193a206c26227835c23a",
+  "input_sha256": "6ed28d8ee3ecca265f788db7c2ac9c1e455e147af5d747d018aabe2cff124e3f",
+  "literal_cyclic_run_word_kernel_entries": 507,
+  "literal_three_module_contexts": 1331,
+  "logconcave_sequences_tested": 852,
+  "nonlogconcave_hostile": {
+    "Lv": [
+      2,
+      6,
+      9,
+      8
+    ],
+    "MLR": false,
+    "v": [
+      2,
+      1,
+      2
+    ]
+  },
+  "nonnegative_multiplier_checks": 2556,
+  "positive_stirling_profiles": 64,
+  "rows": [
+    {
+      "cut": 867,
+      "finite_parameter_sign_counts_1_to64": {
+        "-1": 3969,
+        "1": 127
+      },
+      "gap_1_1": 338751018,
+      "gap_2_2": -373209154588134,
+      "kernel_diagonal": [
+        262266,
+        1768470,
+        4721556,
+        -1994616,
+        -50116368,
+        -158346720,
+        -267382080,
+        -272321280,
+        -165553920,
+        -54432000,
+        -7257600,
+        0,
+        0
+      ],
+      "kernel_upper": [
+        236262,
+        1308948,
+        2326920,
+        -5562768,
+        -37749600,
+        -89651520,
+        -119024640,
+        -92977920,
+        -39916800,
+        -7257600,
+        0,
+        0
+      ],
+      "thin_profile_functional": [
+        2204370,
+        19173294,
+        36183024,
+        13961520,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cut": 995,
+      "finite_parameter_sign_counts_1_to64": {
+        "-1": 3969,
+        "1": 127
+      },
+      "gap_1_1": 712132722,
+      "gap_2_2": -93517858646046,
+      "kernel_diagonal": [
+        449154,
+        3229470,
+        11143764,
+        15640776,
+        -18700992,
+        -122189040,
+        -241725600,
+        -262362240,
+        -164021760,
+        -54432000,
+        -7257600,
+        0,
+        0
+      ],
+      "kernel_upper": [
+        403038,
+        2446452,
+        6630840,
+        4445568,
+        -23027760,
+        -76252320,
+        -112129920,
+        -91445760,
+        -39916800,
+        -7257600,
+        0,
+        0
+      ],
+      "thin_profile_functional": [
+        3765690,
+        35264646,
+        81541296,
+        39785040,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "cut": 996,
+      "finite_parameter_sign_counts_1_to64": {
+        "1": 4096
+      },
+      "gap_1_1": 821420082,
+      "gap_2_2": 1394211209453730,
+      "kernel_diagonal": [
+        135618,
+        2355966,
+        16152084,
+        64136232,
+        166371456,
+        296165520,
+        366760800,
+        311109120,
+        171521280,
+        54432000,
+        7257600,
+        0,
+        0
+      ],
+      "kernel_upper": [
+        143070,
+        2066100,
+        12166680,
+        41722176,
+        93174480,
+        141291360,
+        145877760,
+        98945280,
+        39916800,
+        7257600,
+        0,
+        0
+      ],
+      "thin_profile_functional": [
+        1265274,
+        26961606,
+        109309104,
+        73000080,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "script_sha256": "1977cee210527a648006f9d4deb89a2d75d6da9a29e3c068ac9514803925a6bf",
+  "status": "PASS"
+}

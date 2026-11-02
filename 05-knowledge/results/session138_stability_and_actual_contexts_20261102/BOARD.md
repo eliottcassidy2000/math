@@ -1,16 +1,18 @@
-# Session138 proof board — first checkpoint
+# Session138 proof board — combined audited checkpoints
 
-**Accepted scope:** all-order weighted stability at the correct dimensional order; sharp unrestricted coefficients through order seven; actual exterior-edge contexts; bounded-source profinite obstructions; and restricted ordinal-module reconstruction. [Synthesis](SYNTHESIS.md) · [Verification](VERIFICATION.md)
+**Results:** optimal all-order coefficient `K_n=8/n+O(n^(-2))`, a positive explicit finite-order lower bound, sharp exact coefficients through eight, and quantitative near-candidate structure. Actual-context constructions and restricted no-zero theorems retain their precise domains. [Synthesis](SYNTHESIS.md) · [Verification](VERIFICATION.md) · [First-checkpoint history](CHECKPOINT1.md)
 
-| Concept | New connection | Boundary retained |
+| Concept | Established connection | Remaining boundary |
 |---|---|---|
-| Binary rounding and Pfaffian parity | Uncertainty graphs certify remainder margins; multistar averaging gives asymptotic 4/n, with matching-support sharpness and an FPT parity evaluator | Fair-pair upper bound is asymptotic 8/n; arbitrary-support all-order optimum is not settled |
-| Triangle variance and cycle reserves | Exact Bernstein/graph reductions close sharp orders five through seven and the low-order joint regions | Complete graph endpoints imply a real-cube theorem only after the audited separate-affinity reduction |
-| Actual old-edge contexts | One exterior reversal gives 6E-H and 6E+H, with full-profile operators and a source-certified inverse | Scalar H loses profile information; fixed induced-increment restrictions do not apply to this different operation |
-| Height/interior resource accounting | Finite actual bases plus dyadic tails miss residues at 2^r-1 | Bounded quotient width does not bound source resources; no unrestricted spectral omission |
-| Actual kernel derivatives | Homogeneous-pair polarization and quotient derivatives recover the deleted-triangle kernel | Positive formal kernels can still have spurious zeros; cross-block realizability matters |
-| Ordinal profile comparison | Fifteen finite cores prove all-order profile dichotomy and strict cyclic strongification for internal edits | Outside incidences must stay fixed; an actual strong-Q4 hostile blocks extension of the profile dichotomy |
+| Pfaffian and resolvent robustness | Two analytic margin mechanisms give nonlinear gap bounds; the Pfaffian route has the stronger constant | Nonempty remainder required; no positive order-two gap correction |
+| Retained binary baseline and matching extraction | Square completion improves the uniform rate to 8/n+O(n^-2); near-candidate expected gap is O(1/n), off-matching variance O(1) | Exact fair-pair equality beyond eight and finite-n exact rigidity remain open |
+| Finite cycle/graph certificates | Sharp coefficients through eight, with independent complete graph coverage and continuous-cube reduction | The final eight-vertex certificate has no wedge term; no exact higher-order claim follows |
+| Actual old-edge reflection | Literal 6E-H / 6E+H contexts, profile operators, source-certified inverse and fixed-gap families | Scalar H alone does not preserve future context responses or imply an induced extension |
+| Resource accounting | Bounded actual height/interior banks miss residues at 2^r-1 | Bounded quotient width does not bound these resources; unrestricted spectrum stays open |
+| Profile rigidity and sign chambers | Ordinal internal-edit rigidity; three actual Q4 seeds classified for every positive side multiplicity, with wider positivity/negative chambers | Outside attachment changes and arbitrary strong-quotient scalar zero-rigidity remain open |
 
-Inherited mechanisms retain credit: Session137 global/signed determinant bounds and source normal forms; OCF; the earlier exact nonsingleton-core bound; and the known omissions 7 and 21. The all-order proofs are not inferred from finite scans.
+The finite parity pattern has a structural explanation: an odd singleton kills the full determinant, while an even full fair-pair cover contributes the extra `(1/4)^r` subtraction. This explains the candidate coefficients; it is not a proof of exact global optimality at every order.
 
-**OPEN:** unrestricted odd H-spectrum completeness, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14). Order-eight sharp stability and new asymptotic candidates belong to separate continuation work and are not included here.
+The first-checkpoint lane bytes and scope are frozen. Later accepted proofs have separate selectors and audit pins. No additional exact-equality candidate, executable, cache, or unselected parameter search is included.
+
+**OPEN:** exact `K_n=kappa_n` beyond eight, unrestricted positive-odd H-spectrum completeness, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14).

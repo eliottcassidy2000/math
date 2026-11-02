@@ -1,51 +1,67 @@
 # Session138: stability and actual contexts
 
-**Weighted determinant stability has the correct order in dimension, and the sharp unrestricted coefficients are established through order seven.** Actual graph contexts also give infinite strong fixed-gap pairs, while restricted profile rigidity and explicit resource bounds explain why these constructions do not solve exact-spectrum completeness.
+**The optimal weighted determinant stability coefficient is `8/n+O(n^(-2))`; exact sharp coefficients are proved through order eight.** The continuation also closes an explicit unbounded mixed-profile construction family without solving general zero-rigidity.
 
-[Results and scope](SYNTHESIS.md) · [Verification](VERIFICATION.md)
+[Results and scope](SYNTHESIS.md) · [Verification and checkpoint history](VERIFICATION.md) · [Continuation replay: PASS](REPLAY_CHECKPOINT2.json)
 
-## 1. All-order weighted stability
+## 1. The optimal asymptotic stability constant
 
-For a weighted tournament matrix A of order `n>=3`, write
-`Delta=H-det(I+A)-|det A|`, `V=sum_(i<j) A_ij A_ji`, and let T be its independent binary rounding. For every `1<=k<=n`,
+**PROVED, independently audited.** For weighted tournament matrices of order n, let `Delta=H-det(I+A)-|det A|`, `V=sum_(i<j) A_ij A_ji`, and
 
 ```text
-Delta(A) >= E Delta(T) + gamma_(n,k) V,
-gamma_(n,k) = 4[n-k+2-(n+k+2)/2^k]/[n(n-1)].
+K_n = inf_(V>0) Delta/V.
 ```
 
-Optimizing k gives a lower coefficient asymptotic to `4/n`, improving the inherited `24/n^2` bound in the large-order regime. Ordinal fair-pair examples give an asymptotic upper bound `8/n` on the optimal coefficient. Thus the order is settled, not the all-order optimal constant; dimension-free positive stability is impossible.
+Write `r=floor(n/2)` and define the fair-pair coefficients
 
-The sharper conjectured coefficients are proved on the entire **matching-uncertainty class**, even with arbitrary binary cross-edge orientations. The H=1 locus has a complete ordinal-pair classification and exact ratio minimum.
+```text
+kappa_(2r)   = (4/r)[1-(3/4)^r-(1/4)^r],
+kappa_(2r+1) = (4/r)[1-(3/4)^r].
+```
 
-[Multistar theorem and matching corollary](stability/MULTISTAR_STABILITY.md) · [H=1 classification](stability/H1_STABILITY.md) · [Uncertainty-graph rounding](rounding_graph/PROOF.md)
+The theorem gives, for `n>=4` and `c0=(1-exp(-4))/4`,
 
-## 2. Sharp small-order coefficients
+```text
+kappa_n/[1+n*kappa_n^2/(2*c0)] <= K_n <= kappa_n,
+K_n = 8/n + O(n^(-2)).
+```
 
-The largest universal coefficient b in `Delta>=bV` is:
+Its near-candidate consequence is also quantitative: if `Delta/V<=kappa_n`, independent binary rounding T has expected gap at most `2n*kappa_n^2`; a greedy matching leaves at most `2n*kappa_n` variance outside it; and `Pr(T nontransitive)<=2n*kappa_n^2`. These are probability and weighted-mass statements, not exact fair-pair rigidity.
 
-| Order n | 3 | 4 | 5 | 6 | 7 |
-|---|---:|---:|---:|---:|---:|
-| Sharp b | 1 | 3/4 | 7/8 | 3/4 | 37/48 |
+[Asymptotic theorem](asymptotic_stability/PROOF.md) · [Independent audit](independent/asymptotic_audit/AUDIT.md) · [Separate resolvent mechanism](stability/RESOLVENT_ROBUSTNESS_CROSSCHECK.md)
 
-Orders three and four are inherited from Session137; this checkpoint adds sharp orders five through seven, stronger triangle/cycle reserves, and exact joint coefficient regions. At orders four through seven, positive-variance equality is precisely an ordinal sum of the maximum possible number of fair pairs and at most one singleton.
+## 2. Exact small-order constants and parity
 
-For `tau`, the total directed-triangle weight, the exact order-five region for `Delta>=a*tau+b*V` is
-`a<=1`, `b<=7/8`, `a/4+b<=17/16`; at order six it is the rectangle `a<=1`, `b<=3/4`.
+The largest universal b in `Delta>=bV` is:
 
-[Sharp low orders and joint regions](stability/SHARP_LOW_ORDER_STABILITY.md) · [Sharp seven](stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md) · [Sharp weak six](stability/SHARP_WEAK_SIX.md)
+| Order n | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---:|---:|---:|---:|---:|---:|
+| Sharp b | 1 | 3/4 | 7/8 | 3/4 | 37/48 | 87/128 |
 
-## 3. Actual contexts and restricted rigidity
+At orders four through eight, positive-variance equality is exactly an ordinal sum of the maximum number of fair pairs and at most one singleton. The parity effect is structural: a singleton makes the full determinant vanish; an even perfect pair cover contributes the extra subtraction `(1/4)^r`. Exact equality `K_n=kappa_n` beyond order eight remains **OPEN**.
 
-| Result | Scope | Read |
-|---|---|---|
-| One exterior arc reversal realizes `6E(U)-H(U)` and `6E(U)+H(U)` | Actual strong contexts for every nonempty U; unbounded fixed gaps, source-certified inverse, and complete minimal-context classification | [Reflector theorem](exact_resources/PROOF.md) |
-| Every bounded actual height/interior bank misses a residue at some `2^r-1` | Resource obstruction, not an unrestricted spectral omission; bounded substitution width does not bound these resources | [Budget theorem](exact_resources/RESOURCE_BUDGET.md) |
-| Homogeneous-pair strict comparison and exact quotient-derivative kernel | All-order realizability identities; a strengthened formal-network countercontrol still does not represent a tournament | [Actual-kernel theorem](zero_rigidity/README.md) |
-| Ordinal triangle completions are fully profile-comparable; cyclic embeddings are zero-rigid under internal star edits | All orders in the stated module class; changes to outside attachments are excluded | [Profile dichotomy](zero_rigidity/PROFILE_DICHOTOMY.md) |
+The order-eight theorem retains positive triangle and cycle reserves. Its complete graph certificate is checked by independent orbit construction and subset dynamic programming, then extended to the full real variance cube by the reviewed multiaffine reduction.
+
+[Sharp eight](stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md) · [Sharp low orders and joint regions](stability/SHARP_LOW_ORDER_STABILITY.md) · [Sharp seven](stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md)
+
+## 3. All-order mechanisms retained from checkpoint one
+
+- Multistar rounding gives `Delta(A)>=E Delta(T)+gamma_(n,k)V`, with optimized coefficient asymptotic to `4/n`. Its original scope remains recorded separately from the later asymptotic continuation.
+- The exact matching-uncertainty coefficients hold with arbitrary binary cross-edge orientations. Uncertainty-graph Pfaffian parity gives edge-order certificates and a vertex-cover-parameterized evaluator.
+- H=1 is exactly the ordinal-pair/singleton locus. Low-order triangle/variance coefficient regions and stronger weak-gap reserves are exact.
+
+[Multistar and matching support](stability/MULTISTAR_STABILITY.md) · [Uncertainty-graph framework](rounding_graph/PROOF.md) · [H=1 classification](stability/H1_STABILITY.md)
+
+## 4. Actual contexts: constructions and precise barriers
+
+The literal one-edge reflector realizes strong tournament counts `6E(U)-H(U)` and `6E(U)+H(U)` for every nonempty U. Its full-profile operators, source-certified inverse, minimal exterior budget, and unbounded fixed-gap families are proved. Bounded actual height/interior source banks fail even profinite universality; this is not an unrestricted spectral omission.
+
+The ordinal-profile theorem proves internal star-edit zero-rigidity in `C3[TT_k[C3],A,B]` when outside attachments stay fixed. The later sign theorem handles three explicit actual strong-Q4 mixed-profile seeds for every positive side multiplicity: two are positive on the thin boundary and negative throughout the thick quadrant, never zero; the third is positive for arbitrary nonempty side tournaments, with sharp lower gap `135618 H(A)H(B)`.
+
+[Reflector](exact_resources/PROOF.md) · [Resource bounds](exact_resources/RESOURCE_BUDGET.md) · [Restricted profile rigidity](zero_rigidity/PROFILE_DICHOTOMY.md) · [All-parameter sign classification](zero_balance_later/NO_ZERO_THEOREM.md)
 
 ## Boundaries
 
-The unrestricted positive-odd H-spectrum conjecture, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) remain **OPEN**. The all-order optimal weighted coefficient is not determined. Order-eight sharp stability is a separate continuation, not included in this checkpoint.
+The unrestricted positive-odd H-spectrum conjecture, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) remain **OPEN**. None of the family-specific no-zero results is a theorem for arbitrary strong quotients. Exact optimal stability coefficients beyond eight are not claimed.
 
-Finite graph certificates prove continuous-cube statements only through their explicit polynomial reductions. Same-code replay is not an independent implementation. Exploratory searches and executables are excluded from the release selectors; any retained hostile control is labeled as such. No external-priority or formal proof-assistant claim is made.
+[Checkpoint-one scope](CHECKPOINT1.md), manuscripts, selectors, audit pins, and [portable replay](REPLAY_CHECKPOINT1.json) retain their original through-seven scope. Later results have separate source identities and audit scopes. No finite scan is extrapolated to an all-parameter theorem; no external-priority or formal proof-assistant claim is made.

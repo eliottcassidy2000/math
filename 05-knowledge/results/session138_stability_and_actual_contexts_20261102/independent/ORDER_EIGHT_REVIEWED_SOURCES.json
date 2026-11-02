@@ -1,0 +1,20 @@
+{
+  "scope": "Accepted final no-wedge order8 theorem; separate checkpoint2 continuation; pending-named manuscript and +2w provenance excluded",
+  "sources": [
+    {
+      "path": "stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md",
+      "sha256": "162c35eb28ad5319a44961c61f48b45267464c6787b6e5847fcff839aaaa734a",
+      "bytes": 4574
+    },
+    {
+      "path": "stability/graph8_zero_alpha.cpp",
+      "sha256": "7ae249fb605c06a046107e01577c0974740195a961c28d519a0e59702bc44918",
+      "bytes": 2319
+    },
+    {
+      "path": "stability/graph8_zero_alpha.json",
+      "sha256": "f98670101810c31f366c88fe3c473cbafa2b69198be10519ea0b3036ef3aac97",
+      "bytes": 181
+    }
+  ]
+}

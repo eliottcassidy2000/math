@@ -1,0 +1,61 @@
+{
+  "scope": "This auditor checkpoint2 additions only: final zero-wedge n8 and accepted asymptotic O(n^-2); no eventual-exact theorem, binaries, caches or superseded +2w variants",
+  "files": [
+    {
+      "path": "ORDER_EIGHT_CONTINUATION_AUDIT.md",
+      "sha256": "266262581bcd855fed0fbe8693b82d986956cd99a9816f105716de3184292d5a",
+      "bytes": 2620
+    },
+    {
+      "path": "ORDER_EIGHT_REVIEWED_SOURCES.json",
+      "sha256": "06c3693a59c595742e41bbbe83f101af79d84bb3326af95c13f8ea107b16181c",
+      "bytes": 673
+    },
+    {
+      "path": "n8_audit/FINAL_GRAPH_AUDIT.md",
+      "sha256": "52e97400883f0a478c1adc83170262c4c0a8014264c9b627404f11829b3ac173",
+      "bytes": 4324
+    },
+    {
+      "path": "n8_audit/graph8_no_wedge.cpp",
+      "sha256": "a4a3d57923ab747702775e4a3b70c56c35c97ffdfae28f6d4d170eea94725ff6",
+      "bytes": 4026
+    },
+    {
+      "path": "n8_audit/no_wedge.normal.json",
+      "sha256": "043a19e9449fdfefc0acfa0c45f1628598ed37905cbe6beacaccc5ecb2a6eaf5",
+      "bytes": 592
+    },
+    {
+      "path": "n8_audit/no_wedge.ubsan.json",
+      "sha256": "043a19e9449fdfefc0acfa0c45f1628598ed37905cbe6beacaccc5ecb2a6eaf5",
+      "bytes": 592
+    },
+    {
+      "path": "asymptotic_audit/AUDIT.md",
+      "sha256": "ceebdd28462af5625f3d5ba0f5fc865da8fa2778df5fe995bdd71f8b6dcf0ec8",
+      "bytes": 10048
+    },
+    {
+      "path": "asymptotic_audit/check.py",
+      "sha256": "eda7afbaf1792732fa82d2b2286edd19f1111ce8c86b1434cae918eeee7b5834",
+      "bytes": 7514
+    },
+    {
+      "path": "asymptotic_audit/normal.json",
+      "sha256": "5268ea04848f7be54a9be7953fdd16a49246b5a2af2decc42faf86c9f4c992b0",
+      "bytes": 739
+    },
+    {
+      "path": "asymptotic_audit/optimized.json",
+      "sha256": "5268ea04848f7be54a9be7953fdd16a49246b5a2af2decc42faf86c9f4c992b0",
+      "bytes": 739
+    },
+    {
+      "path": "asymptotic_audit/REVIEWED_SOURCES.json",
+      "sha256": "62014bf51137aa822da0dcf2c425428b3187789be37d4d30f117e0aa2ded3b11",
+      "bytes": 1029
+    }
+  ],
+  "total_bytes": 32896
+}

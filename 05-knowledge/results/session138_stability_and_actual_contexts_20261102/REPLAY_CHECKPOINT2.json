@@ -1,0 +1,274 @@
+{
+  "status": "PASS",
+  "scientific_executions": 10,
+  "builds": 4,
+  "elapsed_seconds": 19.644,
+  "frozen_payload_files": 143,
+  "portable_originals_changed": [],
+  "scope": "Fresh relocated continuation replay: both final n8 source implementations, independent asymptotic exact controls, and producer/independent zero-balance controls. Re-executions corroborate the distinct independently authored proofs and algorithms; they are not additional independent implementations.",
+  "records": [
+    {
+      "tag": "graph8_no_wedge_O2-build",
+      "directory": "independent/n8_audit",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph8_no_wedge.cpp",
+        "-o",
+        "graph8_no_wedge_O2"
+      ],
+      "seconds": 0.705,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_no_wedge_O2",
+      "directory": "independent/n8_audit",
+      "command": [
+        "./graph8_no_wedge_O2"
+      ],
+      "seconds": 0.652,
+      "exit": 0,
+      "stdout_bytes": 592,
+      "stdout_sha256": "043a19e9449fdfefc0acfa0c45f1628598ed37905cbe6beacaccc5ecb2a6eaf5",
+      "stderr": "",
+      "expected": "independent/n8_audit/no_wedge.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_no_wedge_UBSan-build",
+      "directory": "independent/n8_audit",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph8_no_wedge.cpp",
+        "-o",
+        "graph8_no_wedge_UBSan"
+      ],
+      "seconds": 0.984,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_no_wedge_UBSan",
+      "directory": "independent/n8_audit",
+      "command": [
+        "./graph8_no_wedge_UBSan"
+      ],
+      "seconds": 1.885,
+      "exit": 0,
+      "stdout_bytes": 592,
+      "stdout_sha256": "043a19e9449fdfefc0acfa0c45f1628598ed37905cbe6beacaccc5ecb2a6eaf5",
+      "stderr": "",
+      "expected": "independent/n8_audit/no_wedge.ubsan.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_zero_alpha_O2-build",
+      "directory": "stability",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph8_zero_alpha.cpp",
+        "-o",
+        "graph8_zero_alpha_O2"
+      ],
+      "seconds": 0.639,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_zero_alpha_O2",
+      "directory": "stability",
+      "command": [
+        "./graph8_zero_alpha_O2"
+      ],
+      "seconds": 0.175,
+      "exit": 0,
+      "stdout_bytes": 181,
+      "stdout_sha256": "f98670101810c31f366c88fe3c473cbafa2b69198be10519ea0b3036ef3aac97",
+      "stderr": "",
+      "expected": "stability/graph8_zero_alpha.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_zero_alpha_UBSan-build",
+      "directory": "stability",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph8_zero_alpha.cpp",
+        "-o",
+        "graph8_zero_alpha_UBSan"
+      ],
+      "seconds": 0.714,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph8_zero_alpha_UBSan",
+      "directory": "stability",
+      "command": [
+        "./graph8_zero_alpha_UBSan"
+      ],
+      "seconds": 0.313,
+      "exit": 0,
+      "stdout_bytes": 181,
+      "stdout_sha256": "f98670101810c31f366c88fe3c473cbafa2b69198be10519ea0b3036ef3aac97",
+      "stderr": "",
+      "expected": "stability/graph8_zero_alpha.ubsan.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent-asymptotic_audit-normal",
+      "directory": "independent/asymptotic_audit",
+      "command": [
+        "python3",
+        "-B",
+        "check.py"
+      ],
+      "seconds": 7.922,
+      "exit": 0,
+      "stdout_bytes": 739,
+      "stdout_sha256": "5268ea04848f7be54a9be7953fdd16a49246b5a2af2decc42faf86c9f4c992b0",
+      "stderr": "",
+      "expected": "independent/asymptotic_audit/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent-asymptotic_audit-O",
+      "directory": "independent/asymptotic_audit",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "seconds": 6.715,
+      "exit": 0,
+      "stdout_bytes": 739,
+      "stdout_sha256": "5268ea04848f7be54a9be7953fdd16a49246b5a2af2decc42faf86c9f4c992b0",
+      "stderr": "",
+      "expected": "independent/asymptotic_audit/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent_zero_balance_later-normal",
+      "directory": "independent_zero_balance_later",
+      "command": [
+        "python3",
+        "-B",
+        "audit_zero_balance.py"
+      ],
+      "seconds": 1.601,
+      "exit": 0,
+      "stdout_bytes": 3595,
+      "stdout_sha256": "2510edaf1ee4c59cf1d96619ab71c5bea57376a539e464423c0f2e2f8fa5d770",
+      "stderr": "",
+      "expected": "independent_zero_balance_later/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent_zero_balance_later-O",
+      "directory": "independent_zero_balance_later",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit_zero_balance.py"
+      ],
+      "seconds": 1.72,
+      "exit": 0,
+      "stdout_bytes": 3595,
+      "stdout_sha256": "2510edaf1ee4c59cf1d96619ab71c5bea57376a539e464423c0f2e2f8fa5d770",
+      "stderr": "",
+      "expected": "independent_zero_balance_later/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "zero_balance_later-normal",
+      "directory": "zero_balance_later",
+      "command": [
+        "python3",
+        "-B",
+        "audit.py"
+      ],
+      "seconds": 0.824,
+      "exit": 0,
+      "stdout_bytes": 1696,
+      "stdout_sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb",
+      "stderr": "",
+      "expected": "zero_balance_later/audit.out",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "zero_balance_later-O",
+      "directory": "zero_balance_later",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit.py"
+      ],
+      "seconds": 0.853,
+      "exit": 0,
+      "stdout_bytes": 1696,
+      "stdout_sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb",
+      "stderr": "",
+      "expected": "zero_balance_later/audit.out",
+      "byte_match": true,
+      "status": "PASS"
+    }
+  ]
+}

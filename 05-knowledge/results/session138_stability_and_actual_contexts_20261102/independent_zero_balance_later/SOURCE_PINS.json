@@ -1,0 +1,52 @@
+{
+  "verdict": "ACCEPT",
+  "scope": "All-parameter classification for the three actual mixed-profile seeds; arbitrary strong-quotient scalar zero rigidity remains OPEN.",
+  "reviewed_files": [
+    {
+      "path": "zero_balance_later/NO_ZERO_THEOREM.md",
+      "bytes": 10188,
+      "sha256": "6adadf59d2628d4905e835ac82b83b4723e89f76d7829043f4930c7db227fd6b"
+    },
+    {
+      "path": "zero_balance_later/README.md",
+      "bytes": 2194,
+      "sha256": "672b05aa7097ae458c5dac19b4963b206c695bf4c9107d7fdef7f2e0716d1aa5"
+    },
+    {
+      "path": "zero_balance_later/audit.out",
+      "bytes": 1696,
+      "sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb"
+    },
+    {
+      "path": "zero_balance_later/audit.py",
+      "bytes": 4027,
+      "sha256": "1108376ed63a2e9f072f3435e414e4ba4ec4d330c7562bb8ad1e3b25da730e89"
+    },
+    {
+      "path": "zero_balance_later/audit_optimized.out",
+      "bytes": 1696,
+      "sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb"
+    },
+    {
+      "path": "zero_balance_later/mixed_profile_inputs.json",
+      "bytes": 2577,
+      "sha256": "6ed28d8ee3ecca265f788db7c2ac9c1e455e147af5d747d018aabe2cff124e3f"
+    },
+    {
+      "path": "zero_balance_later/public_manifest.json",
+      "bytes": 1213,
+      "sha256": "5d7e77c7dfe883654e279ef1d6f1d93e5bf29ae603de5dec3b9405a36097244a"
+    },
+    {
+      "path": "zero_balance_later/SHA256SUMS",
+      "bytes": 577,
+      "sha256": "29449d38cda406fd3af20f31334b1597ddbb27d092de26de6b60a8817df63375"
+    },
+    {
+      "path": "independent/audit_profile_dichotomy.py",
+      "bytes": 10111,
+      "sha256": "be7768a52bfe0f69e114f0b50fe2c520d3a6267db40f193a206c26227835c23a"
+    }
+  ],
+  "normal_optimized_receipt_sha256": "2510edaf1ee4c59cf1d96619ab71c5bea57376a539e464423c0f2e2f8fa5d770"
+}

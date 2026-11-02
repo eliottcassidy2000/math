@@ -1,0 +1,38 @@
+{
+  "baseline_manifest_sha256": "d2240ca6ed71a89847154be371e806ec64838d0363b182654d1930133488db18",
+  "files": [
+    {
+      "bytes": 10188,
+      "path": "NO_ZERO_THEOREM.md",
+      "sha256": "6adadf59d2628d4905e835ac82b83b4723e89f76d7829043f4930c7db227fd6b"
+    },
+    {
+      "bytes": 2194,
+      "path": "README.md",
+      "sha256": "672b05aa7097ae458c5dac19b4963b206c695bf4c9107d7fdef7f2e0716d1aa5"
+    },
+    {
+      "bytes": 1696,
+      "path": "audit.out",
+      "sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb"
+    },
+    {
+      "bytes": 4027,
+      "path": "audit.py",
+      "sha256": "1108376ed63a2e9f072f3435e414e4ba4ec4d330c7562bb8ad1e3b25da730e89"
+    },
+    {
+      "bytes": 1696,
+      "path": "audit_optimized.out",
+      "sha256": "487bcd3c127c559d52a59f38357b57f1c13a48a30c10abbdbe7f424791fccccb"
+    },
+    {
+      "bytes": 2577,
+      "path": "mixed_profile_inputs.json",
+      "sha256": "6ed28d8ee3ecca265f788db7c2ac9c1e455e147af5d747d018aabe2cff124e3f"
+    }
+  ],
+  "general_strong_quotient_zero_rigidity": "OPEN",
+  "packet": "Session138 later checkpoint \u2014 exact actual-module cyclic sign chambers",
+  "status": "PROVED; independent proof audit ACCEPT"
+}

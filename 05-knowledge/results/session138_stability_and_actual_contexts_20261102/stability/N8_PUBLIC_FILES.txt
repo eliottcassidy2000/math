@@ -1,0 +1,4 @@
+SHARP_EIGHT_GRAPH_CERTIFICATE.md
+graph8_zero_alpha.cpp
+graph8_zero_alpha.json
+graph8_zero_alpha.ubsan.json

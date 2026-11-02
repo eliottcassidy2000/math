@@ -1,0 +1,30 @@
+{
+  "scope": "Accepted final n>=4 baseline-preserving rational bound, K_n=8/n+O(n^-2), and near-candidate baseline/mass/probability bounds; separate checkpoint2 continuation",
+  "sources": [
+    {
+      "path": "asymptotic_stability/PROOF.md",
+      "sha256": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0",
+      "bytes": 6500
+    },
+    {
+      "path": "stability/RESOLVENT_ROBUSTNESS_CROSSCHECK.md",
+      "sha256": "943775526eb8100c70702fda334892c55e4a706169bdc2811544edf10ca9c6d4",
+      "bytes": 2863
+    },
+    {
+      "path": "stability/MULTISTAR_STABILITY.md",
+      "sha256": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3",
+      "bytes": 7240
+    },
+    {
+      "path": "rounding_graph/PROOF.md",
+      "sha256": "393e3e819527b1fad00ed230e0ac310ebdf11aedf2a1d2d97c7aeaec8a2e66d2",
+      "bytes": 5972
+    },
+    {
+      "path": "stability/TRIANGLE_VARIANCE.md",
+      "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc",
+      "bytes": 3005
+    }
+  ]
+}
