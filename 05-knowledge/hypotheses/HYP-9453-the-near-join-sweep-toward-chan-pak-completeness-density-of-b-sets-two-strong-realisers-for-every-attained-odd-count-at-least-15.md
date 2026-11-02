@@ -6,7 +6,11 @@ status: >
   missing lemma named in the reflection: B(T, t0) counts ordered partitions of T - t0 into a path and a path from t0,
   B >= h(T), and no structural control of the B-sets is known; the pair (h, B) is not a closed state under iteration at
   t0 (counterexample pairs with equal (h, B, k) and B(T', t0) = 45 vs 47), while B(T', z) = H(T') always. The
-  completeness statement itself is Pi^0_2 and reduces to the odd primes (07-reflections, section 0).
+  completeness statement itself is Pi^0_1 (bounded witnesses of order <= floor(3 log_3 h); rotation_owners_spectrum_20261020e)
+  and reduces to the odd primes != 7 together with the 7p lane (THM-4094 Theorem 6.1); the repository's digital bank and
+  strong-ear banks already realise every odd number <= 99,999,999 except 7, 21 (square_sum_spectrum_overnight_20261031d;
+  independently audited to 999,999 in session124_million_path_spectrum_20261031), so the near-join family is a third,
+  weaker construction whose interest is its one-parameter formula, not its reach.
 session: klein-2026-11-02 (codex/session-ramsey-20261030)
 source: 05-knowledge/results/spectrum_analogies_nearjoin_20261102/README.md
 related:
@@ -19,11 +23,11 @@ related:
 
 ## 1. The near-join family misses exactly seven odd numbers below its reach (FINITE-EXACT)
 
-`H(T′) = h(T) + 2^k B(T, t₀)` for `T′ = T → M_k → z` with `z → t₀` reversed (PROVED in the reflection, §2). With bases of order `≤ 7` the family realises every odd number `≤ 1,437` except `1, 7, 11, 13, 21, 47, 67`; with bases of order `≤ 8` every odd number `≤ 22,227` except the same seven. **Claim:** for every `X` there is an order `n(X)` such that bases of order `≤ n(X)` realise every odd number `≤ X` other than these seven. Since 11, 13, 47, 67 are attained by strong tournaments and 7, 21 are impossible, this claim implies Chan–Pak completeness.
+`H(T′) = h(T) + 2^k B(T, t₀)` for `T′ = T → M_k → z` with `z → t₀` reversed (PROVED in the reflection, §2). With bases of order `≤ 7` the family realises every odd number `≤ 1,437` except `1, 7, 11, 13, 21, 47, 67`; with bases of order `≤ 8` every odd number `≤ 22,227` except the same seven. **Claim:** for every `X` there is an order `n(X)` such that bases of order `≤ n(X)` realise every odd number `≤ X` other than these seven. Since 11, 13, 47, 67 are attained by strong tournaments and 7, 21 are impossible, this claim implies Chan–Pak completeness; the digital bank already proves the analogous statement through `10^8`, so the claim's value is structural (one formula) rather than numerical.
 
 ## 2. The density of `B`-sets (OPEN; the lemma that would turn §1 into an induction)
 
-`B(T, t₀) = Σ_S h(T[S]) · h_{t₀}(T[S^c ∪ t₀]) ≥ h(T)`. If for every attained odd `h` the set `𝔅(h) = {B(T, t) : H(T) = h}` contained every integer in `[h, c·h]` for some `c > 3/2`, then `h + 2B` with `h ≤ v/3` would realise every odd `v` in `(3h, (1 + 2c)h]`, and an induction over dyadic windows would prove completeness from a finite base. Computed `𝔅(h)` for `h ≤ 31` (bases `≤ 7`) have 14–42 members, contain `h`, and are not intervals; what is needed is a construction that moves `B` by one while fixing `h`.
+`B(T, t₀) = Σ_S h(T[S]) · h_{t₀}(T[S^c ∪ t₀]) ≥ h(T)`. If for every attained odd `h` the set `𝔅(h) = {B(T, t) : H(T) = h}` contained every integer in `[h, c·h]` for some `c > 3/2`, then `h + 2B` with `h ≤ v/3` would realise every odd `v` in `(3h, (1 + 2c)h]`, and an induction over dyadic windows would prove completeness from a finite base (the same shape as HYP-9029's tiling law for strong intervals). Computed `𝔅(h)` for `h ≤ 31` (bases `≤ 7`) have 14–42 members, contain `h`, and are not intervals; what is needed is a construction that moves `B` by one while fixing `h`.
 
 ## 3. Two strong realisers (OPEN beyond order 9)
 
