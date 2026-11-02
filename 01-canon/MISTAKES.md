@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Mechanism and repair:** low algebraic rank, integer divisibility and nonnegative cut/interior weights do not imply actual source membership. Compare all recursively legal predecessor branches using the exact Bellman cost; an admissible clock lower bound may prune only after a valid incumbent exists. The new suffix-jump inverse recovers entire binary suffixes and proves minimum cost within the declared grammar.
 - **Strongest survivor / new question:** termination and fixed-atom-count efficient inversion hold. Uniform source entry for every odd target except7,21 remains unproved. A concrete fibre of S0 has actual endpoints(5,5,5,5),(9,5,1,5) and forbidden middle(7,5,3,5), so an ambient Jacobian inverse cannot supply the missing realization guarantee.
 
+## 2026-11-02 — exact Boolean energy does not imply monotone local inversion
+
+- **Scope:** prepublication probe in `05-knowledge/results/boolean_realization_71_17_20261102/verify.py`; no accepted theorem is retracted.
+- **Witness / failed implication:** six-vertex mask72 has Hamiltonian-path count15 and squared error4 for target17. Its fifteen single-edge neighbours have counts13,13,13,3,33,9,9,13,31,9,13,31,13,31,27, all with greater error. The exact objective has the correct global minimum but a strict non-solution local minimum, even in the product probability cube. The complete labelled energy-at-most-four graph has768 isolated non-solutions.
+- **Strongest survivor / repair:** Boolean-reduced energy E_h(x)=E[(H-h)^2] can be rounded without increasing energy by conditional coordinate fixing. For odd h, E_h<4 guarantees a genuine target tournament; this does not supply a method for finding such a point. Weighted mean alone fails already at the 5/9 and19/23 one-edge interpolations, with regular means7 and21 and sharp energy4.
+- **Missing information / next test:** retain the second moment and shared-source covariance, and test explicit multi-edge escape moves. Actual tournament path transport remains separate from Boolean partition identities; the same ordinary H17 tournament can have complement counts71 or33 under different path markings. Proofs, exact witnesses and the81/27 control are in the packet's `THEORY.md` and `verification.json`.
+
 ## 2026-11-02 — the honeycomb capacity deficit is ten, not twenty
 
 - **Scope:** arithmetic correction to the user's inspirational comparison; the inherited root5 certificate already had the correct counts and is unchanged.
