@@ -1,0 +1,375 @@
+{
+  "files": {
+    "AUDIT.md": "f426cd52af48aa1d26702c9afc4acc5f190fbc8fde29dab88107405ceec5085b",
+    "BOARD.md": "f4d369c3731d6c8f84a1fad0b2b8b635b1ca97d42ef48b7841a74088d7c91cbe",
+    "CATALOG.json": "85a37ac1ea8543037bbcfc9b80297ce82fcfc0468d3cb4bf7bfb9c5115b399dc",
+    "CATALOG.md": "2854c6f98fc0bbac32135576f8a0ab336ffdff6ad89043af0576098eb67120fc",
+    "ENVIRONMENT.json": "1ebc965a615035ee5983650dbb83ac3009a8b35061107a194a7c0f3f5d81523b",
+    "HANDOFF.md": "841213189eea8159580e94b81c8b24172df9798a4909e0f16e68efd0060ae112",
+    "HISTORY_DISCOVERY.json": "85b10cddceb42a530b79b47e21b3ceb58584a2a947c2421c402aa0621521d723",
+    "INCOMING.md": "66a90fb2a5b836fc90bd8bf3c38962e68d2e1e2416d0fd1c1322237b83a99a26",
+    "NATIVE_CONTEXTS.md": "c717d9fd4793c1d5872d7a6d141e2b0d943341368b6682ace37196b87f2132ee",
+    "README.md": "142eaae976994f67aa4e6d2df2a4a0a8cb7a9b0fc8c53946fe177dca92d28751",
+    "RECOVERY.md": "bc45092b8d3fd7a6f37eba4608a69a5ab3204427666691ba67421bd4ccfa172d",
+    "STABILITY_10.md": "922ee97e1abccaf61d8119fe616dddbf26fced88b3a15e3a4163ec534f7e6891",
+    "catalogue.py": "2b9a8520f3c7da5c345107cf148745ec2fc1b10379e5e9d2a97708c5464f5442",
+    "check_incoming.py": "8994d8d0512b1f95b481b06b523dae87884ec21f4f4ba3ca7669b493e2fb7c04",
+    "combination.json": "41b9f16514a0ca7a6176eafdf483178e52f29a3387813fca9621fd228f2dbe38",
+    "graph10-dual.json": "6629883d095e010e581fbc9a42eef4050180276c225a01815fd88f68881f8892",
+    "graph10.cpp": "83178d60c71b276434f83d47b67d816f92b1dd23d5b1614bdb55cc0ece04bdff",
+    "incoming_checks.json": "a9bd2b302e52ba902e89136486b9ff33373bf61deddcceacebdf3a6c1e8fb250",
+    "native_contexts.json": "7bf33b26b7ad5fcf1f3fe8470681c7d695f3bf3360fde9bd2cb966b20dc7380b",
+    "reduction.json": "a65e37df6023c5d01c32d8725f7b1596a5a7b43757608ebfa0362edd3bb1c399",
+    "reduction.optimized.json": "a65e37df6023c5d01c32d8725f7b1596a5a7b43757608ebfa0362edd3bb1c399",
+    "seal.py": "a4b28f4fd8910b5c9efe91330f190c8098db2c860198be392fc9bb943e01b8a2",
+    "verify_combination.py": "6f19af82886df1abe557c352ca77640f9afc88b99ab3ed4e8fa15f90525c43fa",
+    "verify_native_contexts.py": "93ddd67a8422869556e9d0120e209cfb00195b135d96ba13d280d0dd0eff8553",
+    "verify_reduction.py": "c0f719c6bc340c28a5dba40de5045efdec04d428eb00d257fc1f2fbbc1ba1c54"
+  },
+  "scope": "Integrity of this packet and explicit cited sources. Does not certify mathematics, all historical files, or transitive dependencies.",
+  "sources": [
+    {
+      "blob": "5ad5948f088d8e2039627c775ba88b0ae532d230",
+      "path": "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e"
+    },
+    {
+      "blob": "d88dc76e925abe983706bc5bc9acd82405ab4ea8",
+      "path": "01-canon/theorems/THM-2765-rooted-nullstellensatz-linear-range-distinct-edge-labeling.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "cba6f2d425a9a32df83957a000e79c71fec97fb14b409f70c0327396b850e2d3"
+    },
+    {
+      "blob": "0e5381676a88aea3ac23a73667915bdaf98490a1",
+      "path": "01-canon/theorems/THM-2786-binary-golomb-universal-edge-difference-separation-and-graceful-compression-boundary.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "1d2ee86212e338567e9bdb6976ecbfe4d75f2971264af4060186d29f1a2163c3"
+    },
+    {
+      "blob": "c258aa978269474f1b1720b3b07c2e1a2aa071c1",
+      "path": "01-canon/theorems/THM-3335-square-triangular-pell-markov-pythagorean-selector.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "8b051336ae39ee499e5e81347006c6570a5b0fbfadb27edbd748cb0b90e10d5d"
+    },
+    {
+      "blob": "2b327ab42779f0da6a692c2aa2c29009f3a8281b",
+      "path": "01-canon/theorems/THM-4850-ninja-pairs-of-the-square-sum-graph-start-at-42-and-the-base-49-numeration.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "8701451648b270f357cec2cb08d6f23d95bf47f60110f0e14c3f1cd3ed2c39e8"
+    },
+    {
+      "blob": "f7d01cb26a2f3436c15e0c2881ccc239d5bfefad",
+      "path": "01-canon/theorems/THM-4851-the-prehistory-of-the-square-sum-numbers-unique-cycles-at-32-and-33-terminal-spectrum-with-the-hole-at-39.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "14cfab372636cd3860c850a5361d10e3abd9613eef709b8c68b03277158b2795"
+    },
+    {
+      "blob": "6dbad0fa0ae51ff3be244081ca1666be218b0e3f",
+      "path": "05-knowledge/results/ap_square_odd_zeta_20261019.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "d7757bb744346fc1bfc56ceb5d6156ebc3b23a651277d0dba573ecd3104fda8b"
+    },
+    {
+      "blob": "c97fe35e6ad0dac7606cce265095f977a84fa121",
+      "path": "05-knowledge/results/attachment_lattices_square_sum_20261023/square_sum/SHARED_CLOCKS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "14ca21b4287fbae93e19d37d004755b7a2e45bc272517e4ca281929fec38057f"
+    },
+    {
+      "blob": "676ef198ac8f4bfe754230a2fb41edda7d485645",
+      "path": "05-knowledge/results/collatz_hexagonal_growth_20261102/JOINT_PORTS.md",
+      "revision": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+      "role": "recovery or incoming reference",
+      "sha256": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d"
+    },
+    {
+      "blob": "f5fe63ab3276d457f1a4df940cb968dddd6928b3",
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_square_sum_hamiltonicity.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "e9d91f6ffb53d702b2e242089ca57b46ca65475e6c441c5cab8d4da414c85220"
+    },
+    {
+      "blob": "26e7917ef9d8a08a28aada131798cb857731b65e",
+      "path": "05-knowledge/results/collatz_mod6_20260922_w6_summand_closure_square_filter.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "81e0f74d8840fa79a0d58123fdf7e126e4e45231e176e9ba3a2be0330b4b296d"
+    },
+    {
+      "blob": "b9831f4491473be3e848b0c8377e8d11fc1b51c1",
+      "path": "05-knowledge/results/crossroads_family_20260926_squares.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "f15e24e90ddf4dd840f5b85494f1675a5aa6b5b7bc08006654215174b4ccde38"
+    },
+    {
+      "blob": "ecf12fa03e5f9fc2af7973ce5c49a17ca695a873",
+      "path": "05-knowledge/results/decoder_prime_square_20260925.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "0e17ee6364f38b5cd74f4bb0651f6fad33c713db9c40906f3595b5680b77a8be"
+    },
+    {
+      "blob": "4f29643c5c2adcceb352d6a7746a1e2fb9c83e33",
+      "path": "05-knowledge/results/fermat_monster_hamiltonian_counts_prime_classes_20261102/README.md",
+      "revision": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+      "role": "recovery or incoming reference",
+      "sha256": "6746f6e0b28f05095dd23bdbd5e13842d25768d79eae84fb12ec4bdcebcfe54c"
+    },
+    {
+      "blob": "2d65903ba5c5d8df18cb5d49f93b2a5818a5b882",
+      "path": "05-knowledge/results/graceful_square_exchange_20261019.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8"
+    },
+    {
+      "blob": "5fd20505a21963b1f22ddf2c0a4b595278a6e54c",
+      "path": "05-knowledge/results/induced_square_forests_subdivisions_20261019/INDUCED_SQUARE_FORESTS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "258b0a5ba31887cd648c53f0f55490cc64e9706e021ece4b446e0cfbd2301228"
+    },
+    {
+      "blob": "3d22d64aa2eab1b56a1e5ccef6cebce57a5db45e",
+      "path": "05-knowledge/results/induced_square_forests_subdivisions_20261019/SUBDIVISION_MOD7_CONSTRUCTION.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "6c2a6628cefef3ff8fb9508b240b0c8100190f6035e96b0aa24854870b76efc1"
+    },
+    {
+      "blob": "dfa4290b88b65740d53ae11c710f5a1fb66b63d5",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md",
+      "revision": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+      "role": "recovery or incoming reference",
+      "sha256": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d"
+    },
+    {
+      "blob": "f5c8aa323322923c8dcc94c83b37c1c403075098",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/STABILITY_42.md",
+      "revision": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+      "role": "recovery or incoming reference",
+      "sha256": "793adf785c5213aaf4574cae392b03cae6ae09daf38bc0fe29587dc5a5435358"
+    },
+    {
+      "blob": "a113b5530118eeb0c7201d8f3a9cb65c7bae45f0",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md",
+      "revision": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "role": "recovery or incoming reference",
+      "sha256": "ee1a33a40b67321429e22158827418c528a6f15bd110fedb5d957bc12daf592e"
+    },
+    {
+      "blob": "083c26cceb1c855e4e4966b6a77bef53fc9d6653",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/FIBONACCI.md",
+      "revision": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "role": "recovery or incoming reference",
+      "sha256": "9c71db8f099683649a14994ca86068a75565097f62b1e56f280cd424b05417d1"
+    },
+    {
+      "blob": "318c9e1ae5f5ff76835fccc07cc4c149c0bcdb36",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/STABILITY_10.md",
+      "revision": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "role": "recovery or incoming reference",
+      "sha256": "969dbf778a17b0f891397a8d4289d17001755cae95b703ea479a702abe80a5e5"
+    },
+    {
+      "blob": "b516dc02f7b5acddec1b4454bfd08b3bbcdd841c",
+      "path": "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/README.md",
+      "revision": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+      "role": "recovery or incoming reference",
+      "sha256": "838497b33deff6d5a4aa9fddefcead9968765a16c66517057a28b4b963b92655"
+    },
+    {
+      "blob": "469fb60e848c16c3cc88493bc767cb0cf685b1ee",
+      "path": "05-knowledge/results/seeded_optimal_threshold_6242_20261019/OPTIMAL_THRESHOLD_THEOREM.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "322f9671d17e24b5c046974d9ecc264794a75a54576fb7a0a5506932e88424ed"
+    },
+    {
+      "blob": "3a5e9b7656e7c6a291bb41f1b4eecf2f2727f5c0",
+      "path": "05-knowledge/results/session124_mixed_radix_square_rays_20261031/TERNARY_SCHEDULE_THEOREM.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "32d8232c417252f550c87f159e070ccd1721d66a27cef7acd55886b53298b065"
+    },
+    {
+      "blob": "2af6ea7fd74c65d3beebac78dbca2c9909e67926",
+      "path": "05-knowledge/results/session131_reflection_numeration_moonshine_20261031/square_sum/PROOFS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "627659d13f616b0fb431d280d1af93304f41a532de8167a37a0c3982ec235e2b"
+    },
+    {
+      "blob": "88f661095e55c500331267a800917ca18a153e4b",
+      "path": "05-knowledge/results/session135_fractran_tm_structure_20261101/square_machines/THEORY.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "702819c06b81535a903672ace0cd0ef8415996d3d811af4ea18743566192a0ce"
+    },
+    {
+      "blob": "7ed792af3049055e9553e6eceec83bd27973dce3",
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/discriminant/GLOBAL_PROOF.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "stability proof dependency",
+      "sha256": "f7e79e9aa935533f2a0444ce2bf6b220f5ff1cb29fea16adc1fa19a7cc71ba6f"
+    },
+    {
+      "blob": "191c052d35c13faf2d23109fdeece735f145b460",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/H1_STABILITY.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "stability proof dependency",
+      "sha256": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82"
+    },
+    {
+      "blob": "645e3a9d2930721285b596d27cfe6b559bd654ca",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "stability proof dependency",
+      "sha256": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3"
+    },
+    {
+      "blob": "f3db4fa5528fd70b6c91498792c70b82ef56709b",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/SHARP_LOW_ORDER_STABILITY.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "873f58bff9bf11e4e95b7ecfb04d8f148df4e72f599a35a9ee24c8277fba3c88"
+    },
+    {
+      "blob": "a65f9e4d26b78ebcc4db1f8c92f3be290822f102",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/SHARP_NINE_GRAPH_CERTIFICATE.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "stability proof dependency",
+      "sha256": "d371ed57f3be408cb287c9799cdf857e8864e52904d8db60900b3aedd2e31c1a"
+    },
+    {
+      "blob": "0a8bc5a0e025dc8b49f348a6915242154024580d",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/TRIANGLE_VARIANCE.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "stability proof dependency",
+      "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc"
+    },
+    {
+      "blob": "c821bb4b8164302b443b145c4a3b0c5270c1da11",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/CHECKPOINT2.md",
+      "revision": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "role": "recovery or incoming reference",
+      "sha256": "bf236c1a7ee3a73866e7b361a686645da1731719378dc3d680562ea15a7ee559"
+    },
+    {
+      "blob": "a45dbc8a561f123cde5db371aec24990aefe125e",
+      "path": "05-knowledge/results/session32_square_monster_20261023/CAT_MAP_PATH_FORESTS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "9f449e2bced76d98bb7b1b6b7c49b930e2858da7ca54aaa7e6ad1aa8fa5f682b"
+    },
+    {
+      "blob": "4e3f2cd7b2bbd7cadd6b813cba6ee9867df922fd",
+      "path": "05-knowledge/results/session33_continuation_states_20261023/ports/PORT_CONNECTION_ALGEBRA.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "f0497923251d09d2e035f586c6068503458048e10e622e61be5cb3be7afcc700"
+    },
+    {
+      "blob": "bbd5de266a069c670f1bebf70e9670f726fb2571",
+      "path": "05-knowledge/results/session40_marked_ports_square_sum_20261023/PATH_SCATTER_AND_MARKING.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "3b94d52a01b6b29d5e327cecc5ecc25abf826ece69442778e241595c74cfaec2"
+    },
+    {
+      "blob": "938ecf27547b6fa2edb91e43a4c45f6acee0e7d1",
+      "path": "05-knowledge/results/session42_shared_lattices_square_colors_20261023/SYNTHESIS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "56fa722d43e18584b61a1b44ff2dc32de07b8338220c87937b5916c2a93d6f57"
+    },
+    {
+      "blob": "52a6e0c2579449a91ac020c90860f723a4125d73",
+      "path": "05-knowledge/results/session52_saturation_residues_metagraph_20261024/fortunate-square-pattern/THEOREM.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "bc5fc6cf7e642b863728b218b63a10f5bf463039fdabf91afcb2579f3abbbbc3"
+    },
+    {
+      "blob": "5c802a20cdb8864282a7716114093117d7e580e1",
+      "path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/SYNTHESIS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "f1f2dd02da56a5323aeb3efb06c3b3e26256af60be73fad359d828b8531040ea"
+    },
+    {
+      "blob": "173ae344208e7d40919e493d08f14074f0b1459e",
+      "path": "05-knowledge/results/square_sum_all_size_connected_paths_20261019/ALL_SIZE_CONNECTED_PATHS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "93d58bfd29fb32292598715a98d2b02b2a429207ebb67c013d36a30199b08ca3"
+    },
+    {
+      "blob": "4d564477272a5b283988f6236d15adef14b99358",
+      "path": "05-knowledge/results/square_sum_simultaneous_matching_20261019/SIMULTANEOUS_MATCHING_THEOREM.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "1d4359910714e7497960604b4a19600c8bd8389ca612101c1e8ad1e0e75dcad9"
+    },
+    {
+      "blob": "949858347bc1de3e1f9d075d753c94812f95881b",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031a/README.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "ec3d6a2ec93438d1c031ae363c8de8fce7042929f56d24a8b7b4075cfba09552"
+    },
+    {
+      "blob": "80bc47a18b768830444e0d0713c367dbbdbe25ee",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031e/README.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "320e5dbbf6a86c2749067b1b1dddc4f8cbe6ddf203af6c3396803712476389e4"
+    },
+    {
+      "blob": "db9c70c84734edfdce5328a5de1c1426b5803f6b",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031f/README.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "7ac1f30b32d3823451118e14fc4a6ca89dda612acc73491f386cdf9f76504528"
+    },
+    {
+      "blob": "268871f2d31c8df68e408e836adc9008ebd1fa5a",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031g/PORT-ORDERS.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "c6955e7fbf0ed530ea35b603b552a0694578889151e79014d0ec892be61a689f"
+    },
+    {
+      "blob": "de14cbec4fd9d4b41c8cc6839454ca8c2163f259",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031i/README.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "8d26eb35f856ab99f028ec08b9b181ef2e9b0c9bd83dbde1b58a15dc98781978"
+    },
+    {
+      "blob": "eba2ab3fab02f0a42f01d00f6b03152fd4d64193",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031j/README.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "3edc971bb7eda8ad5de79afaa7780b741d7640fcd481654af2bd6e9c1357b36a"
+    },
+    {
+      "blob": "ad4b098ee0ec9e0552ac87f2be9289b94951cade",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md",
+      "revision": "66cf347030dcdae55b2ab0b0cce6417ca18a3421",
+      "role": "recovery or incoming reference",
+      "sha256": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5"
+    }
+  ]
+}

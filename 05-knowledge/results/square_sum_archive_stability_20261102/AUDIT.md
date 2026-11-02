@@ -54,6 +54,12 @@ orientations. Every pair of labels is tested for inducedness, and both full
 resulting 2-factors are checked for their components. A further eight-port control joins four source fragments into one16-cycle while the rejected pairing leaves cycles of sizes4 and12. Normal/-O outputs agree.
 The theorem is all-size by proof; 65 is only the implementation test universe.
 
+Incoming verification is separate: `check_incoming.py` checks every prime
+label and every square edge of the50396 witness, independently reconstructs
+the complete Q25 path-cube spectrum, and records the exact failed direct
+order-eleven extension. It does not rerun the prime minimality exclusions.
+Its normal/-O receipts agree; INCOMING.md retains full scope and provenance.
+
 ## Recovery controls and honest limits
 
 `catalogue.py` records a pinned Git baseline, all matching file paths, Git
@@ -83,6 +89,9 @@ python3 -O verify_native_contexts.py > /tmp/native-contexts.optimized.replay.jso
 cmp native_contexts.json /tmp/native-contexts.replay.json
 cmp native_contexts.json /tmp/native-contexts.optimized.replay.json
 python3 catalogue.py
+python3 check_incoming.py > /tmp/incoming.replay.json
+cmp incoming_checks.json /tmp/incoming.replay.json
+python3 seal.py --check
 ```
 
 The first command pair can take several minutes. Do not rerun a complete

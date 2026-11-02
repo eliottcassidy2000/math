@@ -26,3 +26,9 @@ paths, not an independent-agent audit or Lean verification. The generator
 dependency, full reproduction commands, positive/hostile controls and the
 prepublication multiplicity repair are explicit in [AUDIT.md](AUDIT.md).
 See [BOARD.md](BOARD.md) and [HANDOFF.md](HANDOFF.md) for the remaining targets.
+
+[INCOMING.md](INCOMING.md) records the mid-session integration: the new Q25
+guarded tournament response, an independent check of the50396-prime path,
+its singleton scope correction, and the triangle surplus for the next order.
+Run `python3 seal.py --check` to verify packet and cited-source integrity;
+this is a byte check, not a substitute for the mathematical audit.

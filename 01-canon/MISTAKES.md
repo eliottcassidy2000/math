@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — the prime square-sum minimum has a singleton exception
+
+- **Source:** THM-4860, `01-canon/theorems/THM-4860-the-prime-square-sum-graph-is-bipartite-by-residue-mod-4-two-primes-1-mod-3-are-never-adjacent-chebyshev-bias-obstruction-to-prime-square-sum-paths-none-below-615731-and-the-25-primes-below-100-by-ogg-layer.md`.
+- **Witness / failed implication:** `(2)` is a Hamiltonian path on the first one prime. Absence through50,395 and a least count50,396 must exclude that trivial case; the necessary no-isolated-vertex condition also requires at least two vertices.
+- **Repair:** canonical scope is now the least **nontrivial** count, with all absence claims restricted to lengths2..50,395. The50396 construction and existing finite exclusion certificates are unchanged. A separate sieve and every-edge check of its full witness pass in `05-knowledge/results/square_sum_archive_stability_20261102/incoming_checks.json`; that new replay verifies existence, not the whole inherited minimality scan.
+
 ## 2026-11-02 — distinguishing one cycle counts repeated lengths with multiplicity
 
 - **Scope:** prepublication correction in `05-knowledge/results/square_sum_archive_stability_20261102/STABILITY_10.md`; no previously accepted theorem is retracted.

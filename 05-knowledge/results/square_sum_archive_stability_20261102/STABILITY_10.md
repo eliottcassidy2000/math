@@ -24,7 +24,7 @@ This extends the inherited sharp small-order range 3..9 to **3..10**.
 It says nothing new about exclusion of raw H=7 or H=21: those exclusions
 already hold at every order. Nor does it identify raw H with H/Aut.
 
-Dependencies, all at baseline commit 66cf347030dc (full pin in CATALOG.json):
+Dependencies, all at baseline commit 66cf347030dc (full pin in ENVIRONMENT.json):
 
 - `../session137_overnight_proof_frontiers_20261102/discriminant/GLOBAL_PROOF.md`:
   odd-cycle-family expansion of H, determinant identities and margin signs.

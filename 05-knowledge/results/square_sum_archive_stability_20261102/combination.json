@@ -1,0 +1,36 @@
+{
+  "combined_C5_coefficient": "1",
+  "retained_C6_coefficient": "1/2",
+  "scope": "Exact all-matrix cycle allocation; analytic five-vertex identity is cited in INCOMING.md.",
+  "signed_ledgers": [
+    {
+      "full_cover_multiplier": 0,
+      "remaining_coefficients": {
+        "2,2,2,3": "1",
+        "2,2,3,3": "2",
+        "2,3,3": "1",
+        "2,7": "1",
+        "2,8": "2",
+        "3,3,3": "7",
+        "3,7": "4",
+        "5,5": "4"
+      }
+    },
+    {
+      "full_cover_multiplier": 2,
+      "remaining_coefficients": {
+        "10": "2",
+        "2,2,2,2,2": "2",
+        "2,2,2,3": "1",
+        "2,2,6": "2",
+        "2,3,3": "1",
+        "2,3,5": "2",
+        "2,7": "1",
+        "3,3,3": "7",
+        "3,7": "2",
+        "5,5": "2"
+      }
+    }
+  ],
+  "status": "passed"
+}

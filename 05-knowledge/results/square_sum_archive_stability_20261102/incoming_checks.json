@@ -1,0 +1,56 @@
+{
+  "eleven_hostile": {
+    "P": "431/512",
+    "P21": "1/16",
+    "V": "3/2",
+    "graph": "P3 disjoint-union 4 K2",
+    "minimum_W_coefficient": "7/40",
+    "residual": "-7/640",
+    "status": "refuted direct extension only"
+  },
+  "guarded_square25": {
+    "compatible_pairs": [
+      [
+        3,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        13,
+        18
+      ],
+      [
+        16,
+        19
+      ]
+    ],
+    "directed_paths": 20,
+    "guard_edges": 32,
+    "histogram": {
+      "0": 4294962432,
+      "1": 4608,
+      "2": 256
+    },
+    "n": 25,
+    "outside_free_bits": 268,
+    "scope": "guarded H_G, not raw tournament H",
+    "status": "finite-exact"
+  },
+  "prime_witness": {
+    "edges_checked": 50395,
+    "max_prime": 617053,
+    "minimality": "inherited finite-exact nontrivial classification; not rerun here",
+    "path": "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/data/prime_path_N617059.txt",
+    "sha256": "f6f520ee0f74371834b9c0de533232764febd35158649e65c1de2243e0f00491",
+    "source_revision": "d7bbbf3f05",
+    "status": "verified construction",
+    "trivial_exception": [
+      2
+    ],
+    "vertices": 50396
+  },
+  "status": "passed"
+}

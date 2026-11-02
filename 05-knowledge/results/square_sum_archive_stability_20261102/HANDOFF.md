@@ -29,6 +29,8 @@ new finite check of the already universal raw-H exclusions7,21.
   P=V-M22+M222-M2222+M22222. Adding alpha W requires alpha>=7/40
   already on this hostile. Retain enough actual triangle reserve before
   paying it. This refutes a direct proof template, not weighted stability.
+  The incoming joint-incidence triangle surplus is a concrete possible
+  payment mechanism; INCOMING.md records its nonoverlap requirement.
 - **Arithmetic contexts versus interval contexts:** the new separator proves
   unrestricted native arithmetic continuation still sees all ACTUAL pairing
   differences. The useful compression target is now a RESTRICTED set of
@@ -45,3 +47,15 @@ proofs and receipts remain unchanged. No new theorem ID was reserved, no
 subagent or new chat was created, and no messages were sent to other users.
 Before further research, fetch from a clean worktree, inspect current incoming
 mathematics and preserve any stronger new frontier. Reproduction is in AUDIT.md.
+
+Incoming d7bbbf3f05 was merged and its prime path and Q25 response independently
+checked. THM-4860 now excludes the trivial one-prime path from its minimum
+claim. The exact bound3..10,42..infinity and its remaining gap11..41 survive
+this integration; the two independent large-order routes are both retained.
+
+Final incoming c190e11b77 includes a separate order-ten graph-generation
+certificate and the restricted33-state square25 complement carrier.
+INCOMING.md proves a compatible combination: use its C5 reserve while
+retaining our C6/2, with both signed ledgers checked in combination.json.
+The next meaningful compression test must specify whether operations are
+restricted path complements or unrestricted fresh arithmetic contexts.

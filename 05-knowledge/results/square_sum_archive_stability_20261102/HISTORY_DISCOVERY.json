@@ -23,8 +23,9 @@
     {
       "path": "01-canon/theorems/THM-2147-exact-square-prefix-compression-and-monic-depressed-quartic-closure.md",
       "latest_change": "3aa4a334d062c196af942ad571845dacbc8b241d",
-      "previous_title": "",
-      "square_sum_hamiltonian_topic": false
+      "previous_title": "THM-2147 -- compressing an exact square prefix",
+      "square_sum_hamiltonian_topic": false,
+      "inspection_revision": "3aa4a334d062c196af942ad571845dacbc8b241d"
     },
     {
       "path": "01-canon/theorems/THM-3568-squarefree-danielewski-affine-modification-and-two-bracket-collapse.md",

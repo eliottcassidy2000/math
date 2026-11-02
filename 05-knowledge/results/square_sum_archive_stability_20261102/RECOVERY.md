@@ -69,7 +69,7 @@ relations, not ordinary Hamiltonicity.
    [THM-2786, binary-golomb-universal-edge-difference-separation-and-graceful-compression-boundary](../../../01-canon/theorems/THM-2786-binary-golomb-universal-edge-difference-separation-and-graceful-compression-boundary.md)
    decodes pairs by valuation and gives quadratic Sidon height. Universal
    pair separation must pay for all binomial(n,2) differences; graceful
-   labeling asks only for n-1 selected edges. THM-2765 already has a stronger
+   labeling asks only for n-1 selected edges. [THM-2765, rooted-nullstellensatz-linear-range-distinct-edge-labeling](../../../01-canon/theorems/THM-2765-rooted-nullstellensatz-linear-range-distinct-edge-labeling.md) already has a stronger
    tree-specific bound, so the general construction must not replace it.
    The analogous square-sum distinction is all native continuations versus
    one fixed transition catalog.
@@ -198,3 +198,8 @@ These are maps and failure boundaries, not a claim that all listed structures
 are isomorphic. The two new useful outcomes are order-ten stability and
 native source-preserving separation; arbitrary-interval prescription,
 universal odd tournament-H completeness, and Collatz convergence remain open.
+
+The clean-checkpoint fetch then supplied additional square-sum work, including
+the prime-label construction and exact guarded tournament response at Q25.
+[INCOMING.md](INCOMING.md) records their separate verification, the singleton
+scope correction, and how the new triangle surplus changes the next target.
