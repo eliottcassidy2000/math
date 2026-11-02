@@ -1,0 +1,16 @@
+{
+  "checks": 101445,
+  "exact_clock_tests": 10000,
+  "hyperbolic_edge_pairs": 7875,
+  "hyperbolic_edges": 126,
+  "hyperbolic_vertex_pairs": 8001,
+  "hyperbolic_vertices": 127,
+  "maximum_circle_candidates_used": 1,
+  "non_quasi_isometry_depths": 64,
+  "proper_unit_rational_control_vertices": 31,
+  "ring_sites": 30301,
+  "scope": "Independent finite exact controls supplement written proofs; not Collatz convergence, full Collatz hyperbolic embedding, quasi-isometry, or full inherited theorem audit",
+  "source_pins": 5,
+  "status": "PASS",
+  "three_variable_jet_tests": 2625
+}

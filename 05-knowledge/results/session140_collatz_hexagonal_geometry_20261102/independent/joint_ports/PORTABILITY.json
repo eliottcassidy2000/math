@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "normal_equals_optimized": true,
+  "relocated_outputs_equal_original": true,
+  "output_sha256": "a02f02b5a21540a47096bbed19c1818a4adbfc06065a581837395c4fdac97d1c"
+}

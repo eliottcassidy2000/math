@@ -39,3 +39,19 @@ routing clocks. This repairs representation, not convergence.
 Method cards used: controlled forgetting/sidecar repair; exact hostile
 examples; quantifier and map separation. The evidence is recorded locally;
 no priority claim or global META-PATTERNS edit is made.
+
+
+## Checkpoint2 update
+
+- **Exact clock:** replace endpoint agreement by first return to designated
+  states. Native periods sum clocks; premature marked hits are the hostile.
+- **Proper Euclidean geometry:** retain induced unit distances and local
+  finiteness, but not uniform separation or Collatz-oriented height descent.
+- **Curvature control:** change the metric's capacity, not just its drawing.
+  Binary-tree geodesics are proper and separated, but distant branches can
+  remain at bounded hyperbolic distance; no quasi-isometry claim survives.
+- **Consumer response:** keep legality and full joint boundary information.
+  Scope every context theorem to its observer and operation language.
+
+The cross-domain invariant is a preservation contract, not a claim that
+Collatz, HN, tournaments, integral repair and arithmetic jets are equivalent.

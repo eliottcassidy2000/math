@@ -1,0 +1,36 @@
+{
+  "local_packets": [
+    {
+      "path": "principles/PRINCIPLES.md",
+      "bytes": 32695,
+      "sha256": "584084daac8dd298e425b823f107b31467598d4fa19e08e4e11fdb989977a99a"
+    },
+    {
+      "path": "principles/verify.py",
+      "bytes": 8840,
+      "sha256": "b23329c39161d4aed90598d6ec8a7a79938863129231b82b3860e27f832f9d20"
+    },
+    {
+      "path": "curvature_control/PROOF.md",
+      "bytes": 8621,
+      "sha256": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f"
+    },
+    {
+      "path": "curvature_control/verify.py",
+      "bytes": 4748,
+      "sha256": "43b106ae09514d7a33aff7744ef53f37df45a91659f72d12311820878fab2e6b"
+    },
+    {
+      "path": "hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md",
+      "bytes": 6002,
+      "sha256": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c"
+    }
+  ],
+  "scope": "Separate checkpoint2; frozen checkpoint1 unaffected",
+  "primary_metric_input": {
+    "url": "https://www.maths.dur.ac.uk/users/anna.felikson/Geometry/Geometry23/notes.pdf",
+    "location": "Section 6.2, Theorem 6.22, printed pages 95-96",
+    "checked": "2026-11-02",
+    "status": "Author-hosted primary text independently reopened"
+  }
+}

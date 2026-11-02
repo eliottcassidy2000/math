@@ -1,0 +1,248 @@
+{
+  "bitlength_colouring_checks": 100000,
+  "controls": {
+    "Collatz_trace_carry_hostile": {
+      "common_trace": 265,
+      "merge": 17,
+      "u": [
+        9,
+        5,
+        256
+      ],
+      "v": [
+        1,
+        -1,
+        0
+      ]
+    },
+    "K4_subdivision_hostile": true,
+    "parity_marginal_hostile": true,
+    "triangle_real_integral_repair_hostile": true
+  },
+  "first_return_root_tests": 17066,
+  "first_return_systems": 4330,
+  "inverse_residue_controls": [
+    {
+      "children": [
+        [
+          3,
+          13
+        ],
+        [
+          5,
+          53
+        ]
+      ],
+      "n": 5
+    },
+    {
+      "children": [
+        [
+          4,
+          37
+        ],
+        [
+          6,
+          149
+        ]
+      ],
+      "n": 7
+    },
+    {
+      "children": [
+        [
+          3,
+          29
+        ],
+        [
+          7,
+          469
+        ]
+      ],
+      "n": 11
+    },
+    {
+      "children": [
+        [
+          2,
+          17
+        ],
+        [
+          6,
+          277
+        ]
+      ],
+      "n": 13
+    },
+    {
+      "children": [
+        [
+          5,
+          181
+        ],
+        [
+          7,
+          725
+        ]
+      ],
+      "n": 17
+    },
+    {
+      "children": [
+        [
+          2,
+          25
+        ],
+        [
+          4,
+          101
+        ]
+      ],
+      "n": 19
+    }
+  ],
+  "macro_tree_levels": [
+    {
+      "depth": 1,
+      "leaves": 2,
+      "max_standard_radius_bound": 8,
+      "total_odd_vertices": 3,
+      "triangular_ball_at_radius_bound": 217
+    },
+    {
+      "depth": 2,
+      "leaves": 4,
+      "max_standard_radius_bound": 16,
+      "total_odd_vertices": 7,
+      "triangular_ball_at_radius_bound": 817
+    },
+    {
+      "depth": 3,
+      "leaves": 8,
+      "max_standard_radius_bound": 24,
+      "total_odd_vertices": 15,
+      "triangular_ball_at_radius_bound": 1801
+    },
+    {
+      "depth": 4,
+      "leaves": 16,
+      "max_standard_radius_bound": 32,
+      "total_odd_vertices": 31,
+      "triangular_ball_at_radius_bound": 3169
+    },
+    {
+      "depth": 5,
+      "leaves": 32,
+      "max_standard_radius_bound": 40,
+      "total_odd_vertices": 63,
+      "triangular_ball_at_radius_bound": 4921
+    },
+    {
+      "depth": 6,
+      "leaves": 64,
+      "max_standard_radius_bound": 48,
+      "total_odd_vertices": 127,
+      "triangular_ball_at_radius_bound": 7057
+    },
+    {
+      "depth": 7,
+      "leaves": 128,
+      "max_standard_radius_bound": 56,
+      "total_odd_vertices": 255,
+      "triangular_ball_at_radius_bound": 9577
+    },
+    {
+      "depth": 8,
+      "leaves": 256,
+      "max_standard_radius_bound": 64,
+      "total_odd_vertices": 511,
+      "triangular_ball_at_radius_bound": 12481
+    },
+    {
+      "depth": 9,
+      "leaves": 512,
+      "max_standard_radius_bound": 72,
+      "total_odd_vertices": 1023,
+      "triangular_ball_at_radius_bound": 15769
+    },
+    {
+      "depth": 10,
+      "leaves": 1024,
+      "max_standard_radius_bound": 80,
+      "total_odd_vertices": 2047,
+      "triangular_ball_at_radius_bound": 19441
+    },
+    {
+      "depth": 11,
+      "leaves": 2048,
+      "max_standard_radius_bound": 88,
+      "total_odd_vertices": 4095,
+      "triangular_ball_at_radius_bound": 23497
+    },
+    {
+      "depth": 12,
+      "leaves": 4096,
+      "max_standard_radius_bound": 96,
+      "total_odd_vertices": 8191,
+      "triangular_ball_at_radius_bound": 27937
+    },
+    {
+      "depth": 13,
+      "leaves": 8192,
+      "max_standard_radius_bound": 104,
+      "total_odd_vertices": 16383,
+      "triangular_ball_at_radius_bound": 32761
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "max_standard_radius_bound": 112,
+      "total_odd_vertices": 32767,
+      "triangular_ball_at_radius_bound": 37969
+    },
+    {
+      "depth": 15,
+      "leaves": 32768,
+      "max_standard_radius_bound": 120,
+      "total_odd_vertices": 65535,
+      "triangular_ball_at_radius_bound": 43561
+    },
+    {
+      "depth": 16,
+      "leaves": 65536,
+      "max_standard_radius_bound": 128,
+      "total_odd_vertices": 131071,
+      "triangular_ball_at_radius_bound": 49537
+    }
+  ],
+  "max_macro_standard_time": 8,
+  "ring_sites": 30301,
+  "scope": "Finite exact controls supplement the written proofs; no convergence or chromatic-bound advance.",
+  "site_conjugacy_checks": 10000,
+  "source_imports": false,
+  "status": "PASS",
+  "tensor_jet_checks": 42525,
+  "triangular_ball_counts_r0_to20": [
+    1,
+    7,
+    19,
+    37,
+    61,
+    91,
+    127,
+    169,
+    217,
+    271,
+    331,
+    397,
+    469,
+    547,
+    631,
+    721,
+    817,
+    919,
+    1027,
+    1141,
+    1261
+  ]
+}

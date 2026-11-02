@@ -1,0 +1,17 @@
+{
+  "checked_date": "2026-11-02",
+  "external_standard_input": {
+    "author": "Anna Felikson",
+    "title": "Geometry III/V",
+    "institution": "Durham University",
+    "edition": "2023-2024",
+    "url": "https://www.maths.dur.ac.uk/users/anna.felikson/Geometry/Geometry23/notes.pdf",
+    "location": "Section 6.2, Theorem 6.22, printed pages 95-96",
+    "imported_facts": [
+      "Upper-half-plane hyperbolic distance formula",
+      "Geodesics are vertical lines or circle arcs orthogonal to the boundary"
+    ],
+    "role": "Primary author-hosted university lecture notes; no novelty or priority claim"
+  },
+  "construction_dependencies": "Elementary rational algebra, monotonicity, compactness, and the triangle inequality; no Collatz claim imported"
+}

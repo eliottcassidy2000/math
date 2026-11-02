@@ -1,0 +1,559 @@
+{
+  "status": "FROZEN",
+  "base_commit": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+  "new_source_files": 43,
+  "preserved_checkpoint1_source_files": 42,
+  "files": [
+    {
+      "path": "principles/PRINCIPLES.md",
+      "source_path": "principles/PRINCIPLES.md",
+      "sha256": "584084daac8dd298e425b823f107b31467598d4fa19e08e4e11fdb989977a99a",
+      "bytes": 32695,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "principles/README.md",
+      "source_path": "principles/README.md",
+      "sha256": "f035c768f2b97f2e6fb0bbb3b2cc7d40faef6107139f9754336233e37622aad0",
+      "bytes": 4345,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "principles/SOURCE_PINS.json",
+      "source_path": "principles/SOURCE_PINS.json",
+      "sha256": "a9fd749ca2c2672301cc17e2201c4128d9498e0ad8993f95643d7179770ae7a1",
+      "bytes": 6321,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "principles/SHA256SUMS.json",
+      "source_path": "principles/SHA256SUMS.json",
+      "sha256": "4b5e67d49b41204af36a64adce69704e3df35da9b2354b259ddc2cca27d17b85",
+      "bytes": 519,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "principles/verify.py",
+      "source_path": "principles/verify.py",
+      "sha256": "b23329c39161d4aed90598d6ec8a7a79938863129231b82b3860e27f832f9d20",
+      "bytes": 8840,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "principles/normal.json",
+      "source_path": "principles/normal.json",
+      "sha256": "d64ce955dc09aae2c9472849eb9e75b478012842606928c4f1ccb2dfc12235ea",
+      "bytes": 4664,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "principles/optimized.json",
+      "source_path": "principles/optimized.json",
+      "sha256": "d64ce955dc09aae2c9472849eb9e75b478012842606928c4f1ccb2dfc12235ea",
+      "bytes": 4664,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md",
+      "source_path": "hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md",
+      "sha256": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c",
+      "bytes": 6002,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "hadwiger_nelson_refinement/REVIEW.json",
+      "source_path": "hadwiger_nelson_refinement/REVIEW.json",
+      "sha256": "ca90094c2dba3f0a5480a57dd524c3ffcf3b3821c99f2a0ccacf6c5e89e11cab",
+      "bytes": 606,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "hadwiger_nelson_refinement/SHA256SUMS",
+      "source_path": "hadwiger_nelson_refinement/SHA256SUMS",
+      "sha256": "e701cd861f36b8feb915c9e5b09dac1cce33e83da4051a4cb1af2ee8d48d7114",
+      "bytes": 179,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/PROOF.md",
+      "source_path": "curvature_control/PROOF.md",
+      "sha256": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+      "bytes": 8621,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/README.md",
+      "source_path": "curvature_control/README.md",
+      "sha256": "fc1fb51735dfee11d19d0ccd30653226195c8f54cd0c065ff21d5d02341b71a1",
+      "bytes": 1087,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/SOURCE_PINS.json",
+      "source_path": "curvature_control/SOURCE_PINS.json",
+      "sha256": "c3a58883c7e1f0dc04b9ae0bffee1f43591a048a2c030f23f237c6688f49544f",
+      "bytes": 759,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/draw.py",
+      "source_path": "curvature_control/draw.py",
+      "sha256": "b4ddf0b4b40ea27ade536e009b4d7b859307faddcd5b0e7fd31b65ab9ac657d2",
+      "bytes": 3621,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/hyperbolic_binary_tree.svg",
+      "source_path": "curvature_control/hyperbolic_binary_tree.svg",
+      "sha256": "8f9716428b90a5a2081ecb4b22291749d284e6139c5b6b1394eb7680ff7c7dfa",
+      "bytes": 78179,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/verification.json",
+      "source_path": "curvature_control/verification.json",
+      "sha256": "bb2128f8f4aab7bc63ff1bfb656a3efa10b0b5381312fd202470384e19069d25",
+      "bytes": 597,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/verification.optimized.json",
+      "source_path": "curvature_control/verification.optimized.json",
+      "sha256": "bb2128f8f4aab7bc63ff1bfb656a3efa10b0b5381312fd202470384e19069d25",
+      "bytes": 597,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/verify.py",
+      "source_path": "curvature_control/verify.py",
+      "sha256": "43b106ae09514d7a33aff7744ef53f37df45a91659f72d12311820878fab2e6b",
+      "bytes": 4748,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/PRODUCER_PUBLIC_FILES.json",
+      "source_path": "curvature_control/PUBLIC_FILES.json",
+      "sha256": "b6abf10dfbbdc226c274e4d71d515a539843dbd1713c05da6c0d3f11edeabdda",
+      "bytes": 202,
+      "curation": "verbatim original selector; includes unpublished PNG"
+    },
+    {
+      "path": "curvature_control/PRODUCER_SHA256SUMS",
+      "source_path": "curvature_control/SHA256SUMS",
+      "sha256": "acae420e735635e8548b04079d5c2cd5029ed074b6b2011bdd5bc5c85344c7bb",
+      "bytes": 748,
+      "curation": "verbatim original manifest; provenance only, PNG excluded from release"
+    },
+    {
+      "path": "independent/checkpoint2/AUDIT.md",
+      "source_path": "independent/checkpoint2/AUDIT.md",
+      "sha256": "e608a6098ec5f06af4ca0fabda4e57069b0b9a3ed63b5cb08ba5e8102e4e8c3f",
+      "bytes": 8609,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/SOURCE_PINS.json",
+      "source_path": "independent/checkpoint2/SOURCE_PINS.json",
+      "sha256": "c715713572fef8477405968676f039e06f6623220788a5348d6ac18ad60337a9",
+      "bytes": 1214,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/verify.py",
+      "source_path": "independent/checkpoint2/verify.py",
+      "sha256": "79cdad0dac273ae195532dc3e94407ceddb2051398b4fcc4b114034585b79b28",
+      "bytes": 6485,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/normal.json",
+      "source_path": "independent/checkpoint2/normal.json",
+      "sha256": "2a13f111d6b9c20b2609baeb6e36297d19a2b746a6861a2613af7e8e79e5e79d",
+      "bytes": 581,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/optimized.json",
+      "source_path": "independent/checkpoint2/optimized.json",
+      "sha256": "2a13f111d6b9c20b2609baeb6e36297d19a2b746a6861a2613af7e8e79e5e79d",
+      "bytes": 581,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/PORTABILITY.json",
+      "source_path": "independent/checkpoint2/PORTABILITY.json",
+      "sha256": "99dfd1835847835d908485c2b7d83d8de211283b20d25c41c6b1de233a59535c",
+      "bytes": 371,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/principles.normal.json",
+      "source_path": "independent/checkpoint2/principles.normal.json",
+      "sha256": "d64ce955dc09aae2c9472849eb9e75b478012842606928c4f1ccb2dfc12235ea",
+      "bytes": 4664,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/principles.optimized.json",
+      "source_path": "independent/checkpoint2/principles.optimized.json",
+      "sha256": "d64ce955dc09aae2c9472849eb9e75b478012842606928c4f1ccb2dfc12235ea",
+      "bytes": 4664,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/curvature.normal.json",
+      "source_path": "independent/checkpoint2/curvature.normal.json",
+      "sha256": "bb2128f8f4aab7bc63ff1bfb656a3efa10b0b5381312fd202470384e19069d25",
+      "bytes": 597,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/curvature.optimized.json",
+      "source_path": "independent/checkpoint2/curvature.optimized.json",
+      "sha256": "bb2128f8f4aab7bc63ff1bfb656a3efa10b0b5381312fd202470384e19069d25",
+      "bytes": 597,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/PUBLIC_FILES.json",
+      "source_path": "independent/checkpoint2/PUBLIC_FILES.json",
+      "sha256": "6f8283f3ad6bca12865ad55608d0983e7ab454e6f88c0d93c87f012503877c4d",
+      "bytes": 229,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "independent/checkpoint2/SHA256SUMS",
+      "source_path": "independent/checkpoint2/SHA256SUMS",
+      "sha256": "eb52737ea341c21ed3556a49f52e0b9d30cb2a2a22e2f2a5c8bf843aa3439bfd",
+      "bytes": 920,
+      "curation": "verbatim frozen selected source"
+    },
+    {
+      "path": "curvature_control/PUBLIC_FILES.json",
+      "sha256": "94b2b3935ac3ea6a8b58e63516b74505545de43abb5eda17f8a02a6466a4c1a5",
+      "bytes": 227,
+      "curation": "release-owned text/SVG selector; PNG excluded by root authorization"
+    },
+    {
+      "path": "curvature_control/SHA256SUMS",
+      "sha256": "3e9daca37dcbd95e90dcc5408ad10620bbd30ffff5750ccad041bd39b42b517e",
+      "bytes": 918,
+      "curation": "release-owned text/SVG selector; PNG excluded by root authorization"
+    },
+    {
+      "path": "collatz_hex/AUDIT.md",
+      "sha256": "9bb44aa1153afafac62145fe3819ae9a736116debbf61acf9ae545bfb36e9da3",
+      "bytes": 1804,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/CORRECTIONS.md",
+      "sha256": "6856a329d3fca148c466672e17ff72900b99b7ec0057fa9a58229e72008c9014",
+      "bytes": 1402,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/PROOF.md",
+      "sha256": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c",
+      "bytes": 21349,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/PUBLIC_FILES.json",
+      "sha256": "e5a6191fc309232a32ed6b65d53bfc24e2ede945011b223fbf76219c47c8a656",
+      "bytes": 122,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/SHA256SUMS",
+      "sha256": "18265914e423fa25cab8780154826e53e13e46ebb57b56ffad21c07fcc1cf013",
+      "bytes": 485,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/verification-optimized.json",
+      "sha256": "8a705baf4c0457e1d7b1bc6b0db9a00408382646ea86cd2ac2faf87c12d79b3d",
+      "bytes": 1652,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/verification.json",
+      "sha256": "8a705baf4c0457e1d7b1bc6b0db9a00408382646ea86cd2ac2faf87c12d79b3d",
+      "bytes": 1652,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "collatz_hex/verify.py",
+      "sha256": "eb1bc802f259793321883b53d3f12401b5855142c5ab10c43950629290179df8",
+      "bytes": 4840,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/HISTORICAL_RECOVERY.md",
+      "sha256": "e61f484572b41d93e1dd940bc4d197d657b8777fabf2b992f5fd4a2f7c831994",
+      "bytes": 12855,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/INDEPENDENT_REVIEW.md",
+      "sha256": "b496cdb113ad4ecab287dd09d3c8e614eb33ff773b9fc5a21428031be35abdc0",
+      "bytes": 2240,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/PROOF.md",
+      "sha256": "e714ae9c62d4fd218911bb3ed313ff986c4735d51c73100413f6ce767dfde54e",
+      "bytes": 13216,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/PUBLIC_FILES.json",
+      "sha256": "2d30e5c699cd9c138ed620c7a929b00156ec0e1b7570e82474b17de332703484",
+      "bytes": 1553,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/README.md",
+      "sha256": "872db2646a826cf95e58c5d24f005461978142a8a933b6ca82c9b4142e5e6029",
+      "bytes": 2758,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/SHA256SUMS",
+      "sha256": "2248f1a45417e21766f09cb39c4bbd8604afefa811346749878932cf9ac81fb2",
+      "bytes": 2831,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/SOURCE_PINS.json",
+      "sha256": "89bc364708ae0ad0a0b482604bcceb9e21fb72a12ab00ccad00ff3bbc955cd7b",
+      "bytes": 5326,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/01-canon__theorems__THM-418-lattice-chromatic-dichotomy-of-the-plane.md",
+      "sha256": "bfd9c2c9a1474053ec3c52a36aaf9a69cbcc2a81fbc9dc551de4956c902319e3",
+      "bytes": 5485,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/01-canon__theorems__THM-419-2d-lattice-chromatic-cap.md",
+      "sha256": "c7cb23b29dcb22f51c939c1aa48cd0f6d11f9c74425d5a103113f11eb1a2f35d",
+      "bytes": 9208,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/01-canon__theorems__THM-4558-residue-colourings-of-field-planes-the-heegner-tower-is-at-most-four-chromatic.md",
+      "sha256": "db90449c5c8f8f95d1f96f2a1873f06581158f318d65d227171556811479ed33",
+      "bytes": 12336,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/05-knowledge__results__cubic_descent_audit_20261016e.json",
+      "sha256": "3ae68d9143f5c05f6fe11b01d84cb2dfffb9d96b7b04123e3a0530086ec835f5",
+      "bytes": 4104,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/05-knowledge__results__incoming_cylinder_prime_repair_20261013.md",
+      "sha256": "024411c79bbd41120e5708e52babd6a63b4536cba50f786ca8f74524d6c94cc4",
+      "bytes": 5662,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__SOURCE_STATUS.md",
+      "sha256": "5ed18fab7ac025c04f2d988a52ad4d6e69cdd0589be71b991cdef07a02263eb6",
+      "bytes": 2493,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__audits__cap__AUDIT.md",
+      "sha256": "c2ad358fe7517abe147b72b3eebe0ed06740414b415ac28d85e316ff947a39b2",
+      "bytes": 17662,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__hexagonal__RESULTS.md",
+      "sha256": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8",
+      "bytes": 16035,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__lattice-cap__LATTICE_CAP_REPAIR.md",
+      "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f",
+      "bytes": 15496,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/THM-4622-logical-status-dictionary-absoluteness-choice-and-automorphisms-for-jc2-collatz-hadwiger-nelson.md",
+      "sha256": "98dd52ee0073472ccaff3fd80bb6f34cc12e1949b69935328d2079ad11dc6d50",
+      "bytes": 11011,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/THM-4628-residue-colourings-of-the-unit-distance-graph-of-q-zeta55-are-kloosterman-forced-at-every-conjugation-fixed-prime.md",
+      "sha256": "de7ad071935f25ed6e5bd6fdfa22ef5a7a82a29834eeab2a106e32676cf4ecb5",
+      "bytes": 9474,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/THM-4662-the-fish-curve-has-no-point-over-the-real-quartic-field-so-the-fish-and-ei21-are-not-in-q-zeta55-or-any-odd-carrier.md",
+      "sha256": "dc0d47164a1c5972922bd618e4d0f83c50bbe30972c79578a316d0691462ec92",
+      "bytes": 9940,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/sources/THM-4663-polygon-ladder-of-the-finite-unit-distance-graphs-closed-walks-are-kloosterman-moments-pentagons-level-15-hexagons-level-6.md",
+      "sha256": "438addc3f5cfd7d4a5e89e6dd8754e1b28e46baf9c86dbc2898436d24a5628b9",
+      "bytes": 24035,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/verification.json",
+      "sha256": "d67e794ced14189f370c7c6d7fa1152dd58ca2fcdde2ecbc1d563498be4edbd2",
+      "bytes": 2676,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/verification.optimized.json",
+      "sha256": "d67e794ced14189f370c7c6d7fa1152dd58ca2fcdde2ecbc1d563498be4edbd2",
+      "bytes": 2676,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "hadwiger_nelson/verify.py",
+      "sha256": "4e5de6de65a57f80cc98cc3b008ba968b143195963c5dc08332688c7906331d7",
+      "bytes": 7854,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/AUDIT.md",
+      "sha256": "c24e424ed548ce92a8747c9fec4ffac6fe1736f90a49f377c4dace5f70504974",
+      "bytes": 7915,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/PORTABILITY.json",
+      "sha256": "5f5c53f38a2737626f276a563987894740b5847592930ad8d30fd52eb11ddd5e",
+      "bytes": 312,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/PUBLIC_FILES.json",
+      "sha256": "460117be698bceb67a540139d44b0d4f02f528738f509f3f995abe3aaf1ce07e",
+      "bytes": 113,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/SHA256SUMS",
+      "sha256": "aab7edb74bc8c44a71c6e255aaf37ecc99c2adc9d45b3bb655f435bf2be6dbfc",
+      "bytes": 560,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/SOURCE_PINS.json",
+      "sha256": "45dbf82b618fd4fe4423cd3ad2835d5535b857787f3f8bef19060e5603fdd20f",
+      "bytes": 1627,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/normal.json",
+      "sha256": "b07ba71cbff04e3843e9ca43c990853a4e2a19a06a402326b5954ef994ae9447",
+      "bytes": 1943,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/optimized.json",
+      "sha256": "b07ba71cbff04e3843e9ca43c990853a4e2a19a06a402326b5954ef994ae9447",
+      "bytes": 1943,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "independent/verify.py",
+      "sha256": "c09a6f642666a2bdb81d9531de761c572c007d2becacf8e32e02634c386dc846",
+      "bytes": 9780,
+      "curation": "verbatim frozen producer/auditor selection"
+    },
+    {
+      "path": "SOURCE_FILES_CHECKPOINT1.json",
+      "sha256": "98bd6fb2cb2276e7ae051d8d9f4722d8c207424c8147d04644adaaab101ea0ed",
+      "bytes": 10090,
+      "curation": "frozen first-checkpoint replay dependency"
+    },
+    {
+      "path": "replay_checkpoint1.py",
+      "sha256": "73eb5d5afa52ea1bb8a7f369e7a0f6be502b3e259733c2ee62651fe034da7e40",
+      "bytes": 5132,
+      "curation": "frozen first-checkpoint replay dependency"
+    },
+    {
+      "path": "REPLAY_CHECKPOINT1.json",
+      "sha256": "151343fd86ce2b4913150d3a63d4fd50268264b2413eb8c8382df58f6822692d",
+      "bytes": 4181,
+      "curation": "frozen first-checkpoint replay dependency"
+    },
+    {
+      "path": "independent/joint_ports/AUDIT.md",
+      "source_path": "independent/joint_ports/AUDIT.md",
+      "sha256": "547bc108382ecccd4e824bea41e197d83a7c9fa8cd765adf40f26ab97f7f360d",
+      "bytes": 4002,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/SOURCE.md",
+      "source_path": "independent/joint_ports/SOURCE.md",
+      "sha256": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d",
+      "bytes": 8423,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/SOURCE_PINS.json",
+      "source_path": "independent/joint_ports/SOURCE_PINS.json",
+      "sha256": "57abf7d7defde36d92d6a4f95ef0772123fcb0a82306d77c2022576895f7ffaa",
+      "bytes": 408,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/verify.py",
+      "source_path": "independent/joint_ports/verify.py",
+      "sha256": "8f2a0f7658e6470d59a47ed9d9a3bf8e708a88c6e0d4d9d6e5128be6832e95f2",
+      "bytes": 5550,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/normal.json",
+      "source_path": "independent/joint_ports/normal.json",
+      "sha256": "a02f02b5a21540a47096bbed19c1818a4adbfc06065a581837395c4fdac97d1c",
+      "bytes": 605,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/optimized.json",
+      "source_path": "independent/joint_ports/optimized.json",
+      "sha256": "a02f02b5a21540a47096bbed19c1818a4adbfc06065a581837395c4fdac97d1c",
+      "bytes": 605,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/PORTABILITY.json",
+      "source_path": "independent/joint_ports/PORTABILITY.json",
+      "sha256": "3426bff8a32765337792bd3314c43b1a81cbed71ad4908860ae2055ad9d4bc98",
+      "bytes": 189,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/PUBLIC_FILES.json",
+      "source_path": "independent/joint_ports/PUBLIC_FILES.json",
+      "sha256": "61c6bcd022bb4222440d4371fd769ba7772a32cafa804bd1514c39c729637bdf",
+      "bytes": 128,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    },
+    {
+      "path": "independent/joint_ports/SHA256SUMS",
+      "source_path": "independent/joint_ports/SHA256SUMS",
+      "sha256": "e91b0cdd68629d59e74a3ae09162359f6733cec0b62fe5eef37f9f41dd473a3e",
+      "bytes": 636,
+      "curation": "verbatim frozen narrow joint-port audit; upstream unchanged"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "nested_checkpoint1_executions": 16,
+  "new_scientific_positive_runs": 8,
+  "normal_and_optimized": true,
+  "preserved_checkpoint1_scientific_positive_runs": 6,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "frozen-checkpoint1-replay",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "151343fd86ce2b4913150d3a63d4fd50268264b2413eb8c8382df58f6822692d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "principles-controls",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "d64ce955dc09aae2c9472849eb9e75b478012842606928c4f1ccb2dfc12235ea"
+    },
+    {
+      "expected_rejection": false,
+      "label": "curvature-controls",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "bb2128f8f4aab7bc63ff1bfb656a3efa10b0b5381312fd202470384e19069d25"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-checkpoint2",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2a13f111d6b9c20b2609baeb6e36297d19a2b746a6861a2613af7e8e79e5e79d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "joint-port-controls",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "a02f02b5a21540a47096bbed19c1818a4adbfc06065a581837395c4fdac97d1c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "a3716e455bd1ccb8aef9738359cfeadfaa7e7a255ef4fa76078d2722f47fc9d8"
+    },
+    {
+      "expected_rejection": false,
+      "label": "principles-controls",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "d64ce955dc09aae2c9472849eb9e75b478012842606928c4f1ccb2dfc12235ea"
+    },
+    {
+      "expected_rejection": false,
+      "label": "curvature-controls",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "bb2128f8f4aab7bc63ff1bfb656a3efa10b0b5381312fd202470384e19069d25"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-checkpoint2",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2a13f111d6b9c20b2609baeb6e36297d19a2b746a6861a2613af7e8e79e5e79d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "joint-port-controls",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "a02f02b5a21540a47096bbed19c1818a4adbfc06065a581837395c4fdac97d1c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "a3716e455bd1ccb8aef9738359cfeadfaa7e7a255ef4fa76078d2722f47fc9d8"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-period-clock",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-period-clock",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-edge-distance",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-edge-distance",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-proof-pin-rejection",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-proof-pin-rejection",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Finite exact controls and corruption detection; infinite results depend on written proofs and explicitly cited inputs. No Collatz convergence, external HN proof, or Lean build is certified.",
+  "source_files_verified": 85,
+  "source_integrity_positive_runs": 2,
+  "source_manifest_sha256": "d67adcea9ddfb6a21fc8ef3d723652b0bc5479e983d580e84562a657b0ff2c4c",
+  "status": "PASS",
+  "total_executions": 19,
+  "unrelated_cwd": true
+}

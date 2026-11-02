@@ -1,4 +1,81 @@
-# Verification and reproducibility
+# Verification and reproducibility — checkpoint2
+
+**PASS — 2026-11-02.** The first-checkpoint science and audit remain frozen.
+
+```sh
+python3 -B 05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/replay_checkpoint2.py
+(cd 05-knowledge/results/session140_collatz_hexagonal_geometry_20261102 && sha256sum -c SHA256SUMS)
+```
+
+[Latest replay](REPLAY_CHECKPOINT2.json) performs **19 top-level
+executions** from a fresh relocation and unrelated working directory:
+
+- Eight new scientific runs: principles, curvature, independent checkpoint2
+  and independent native-port controls, each in normal and optimized Python.
+- Two positive source-integrity runs.
+- Eight required rejections in both modes: wrong period-clock sum, wrong
+  hyperbolic edge constant, same-size principles-proof corruption, and the
+  independent auditor's detection of that corrupt proof.
+- One complete first-checkpoint replay, byte-matching its frozen receipt;
+  this additionally executes its 16 internal runs (six scientific positives,
+  two integrity positives and eight required rejections).
+
+All 85 replay inputs have SHA-256 pins. Explicit exception
+checks remain active under `-O`. Mutations affect temporary copies only.
+Finite controls are not substitutes for the written universal proofs.
+
+## New finite universes
+
+- Principles: 131,071 distinct odd macro-tree labels through depth 16;
+  4,330 map/clock systems; 30,301 lattice sites; 10,000 site-conjugate steps;
+  100,000 bitlength-coloring edges; 42,525 exact rational two-variable jet
+  checks, plus boundary-marginal, subdivision, affine-carry and torsion hostiles.
+- Curvature producer: 255 vertices, 254 edges, 32,385 vertex pairs and 32,131
+  edge pairs; sharp distance/equality, geodesic circle and band controls.
+- Independent checkpoint2: 101,445 checks ;127 hyperbolic vertices and 8,001
+  pairs; 7,875 edge pairs; 64 non-quasi-isometry hostile depths; a 31-vertex
+  exact rational proper unit-tree control; 30,301 addresses; 10,000 exact-clock
+  steps; 2,625 three-variable jet controls.
+- Narrow J1–J4 audit: 30,940 checks; 8,001 source pairs; merged 425-vertex native
+  tree; 20 generating-polynomial comparisons; 385 Gram determinants; both
+  fixed-port hostiles. **Leaf-Gram rank 2^h requires h>=1; h=0 has rank 0.**
+
+## Preservation, sources and visual artifact
+
+[Integrity report](SOURCE_INTEGRITY_CHECKPOINT2.json) verifies all prior
+immutable files, 20 targeted historical principles source Git/SHA identities,
+the separate concurrent joint-port source pin, and active publication links.
+The original joint-port packet and its manifest are **unchanged**; the
+independent addendum explicitly corrects its h=0 rank boundary. This is not
+a whole-packet or external-input seal replay.
+
+[Curated file distinction](CURATION_CHECKPOINT2.json) preserves the curvature
+producer's original selector/hash list as provenance, while publishing only
+text, SVG, generating source and exact receipts. The PNG was visually checked
+but is not published. The SVG is XML-validated; sampled drawing coordinates
+are illustrative, not mathematical certificates. There are no caches or
+external-paper binaries in the payload.
+The verbatim Matplotlib SVG has 1,986 trailing-whitespace path-coordinate
+lines; its original hash is preserved. The [style receipt](STYLE_VERIFICATION_CHECKPOINT2.json)
+records this narrow generated-file exception; every other path passes the
+strict Git whitespace gate. No mathematical check is waived.
+
+The current [scoped documentation gate](DOC_VERIFICATION_CHECKPOINT2.json)
+uses the published checkpoint1 parent, preserving the fresh concurrent
+S61/S138/S139 routes. Startup remains 179,892/180,000 bytes and frontier 450/450
+lines. This checkpoint does not edit the frontier. The full checker, which
+reads the central ledger, is not claimed as run; that ledger is neither read
+nor changed. Pending Session113 approval and the upstream order42 status
+remain unchanged.
+
+No local Lean build, external HN proof/axiom audit, or full recertification
+of the inherited theorem inventory is claimed. The accepted elementary
+proofs, CITED classical inputs and finite controls are separated in the
+[source/status ledger](SOURCE_STATUS.md).
+
+---
+
+# First-checkpoint verification (retained history)
 
 **PASS — frozen checkpoint1, 2026-11-02.**
 

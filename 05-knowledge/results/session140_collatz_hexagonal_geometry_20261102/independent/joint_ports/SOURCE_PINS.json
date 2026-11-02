@@ -1,0 +1,9 @@
+{
+  "commit": "2bf016747f984c148248e4e7cefa5cef2dfa9f22",
+  "path": "05-knowledge/results/collatz_hexagonal_growth_20261102/JOINT_PORTS.md",
+  "git_blob": "676ef198ac8f4bfe754230a2fb41edda7d485645",
+  "sha256": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d",
+  "bytes": 8423,
+  "local_copy": "SOURCE.md",
+  "scope": "J1-J4 written identities only; no whole concurrent-packet promotion"
+}

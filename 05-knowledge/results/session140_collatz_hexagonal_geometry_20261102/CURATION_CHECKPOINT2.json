@@ -1,0 +1,16 @@
+{
+  "status": "EXPLICIT CURATION",
+  "verbatim_new_source_files": 32,
+  "release_owned_curvature_manifests": 2,
+  "excluded_files": [
+    {
+      "source": "curvature_control/hyperbolic_binary_tree.png",
+      "reason": "Binary publication excluded by root; text/SVG and generating source retained"
+    }
+  ],
+  "original_producer_selector": "curvature_control/PRODUCER_PUBLIC_FILES.json",
+  "original_producer_manifest": "curvature_control/PRODUCER_SHA256SUMS",
+  "curated_public_selector": "curvature_control/PUBLIC_FILES.json",
+  "PNG_visually_inspected": true,
+  "figure_scope": "Euclidean coordinate view of a hyperbolic abstract binary tree; not full Collatz or a regular hexmesh."
+}

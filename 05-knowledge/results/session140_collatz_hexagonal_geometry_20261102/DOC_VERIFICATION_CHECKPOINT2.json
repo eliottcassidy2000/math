@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "Bounded startup budgets and publication conflict scan. Source pins and links checked separately. Full documentation checker not run because it reads the opaque central ledger, which is neither hydrated nor read.",
+  "base_commit": "d7bbbf3f0552613bdd067ecc09e120cd82d87d15",
+  "materialized_ancestor": "67b24c26b20d0a1efc1fa36bccebdc2297e27a4f",
+  "startup_paths_changed_since_ancestor": [
+    "00-navigation/CURRENT-FRONTIER.md"
+  ],
+  "startup_bytes": 179892,
+  "startup_byte_budget": 180000,
+  "frontier_lines": 450,
+  "frontier_line_budget": 450,
+  "opaque_ledger_read": false,
+  "full_checker_rerun": false
+}

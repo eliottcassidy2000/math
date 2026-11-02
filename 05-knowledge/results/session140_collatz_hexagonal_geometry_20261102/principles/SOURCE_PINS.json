@@ -1,0 +1,137 @@
+{
+  "audit_scope": "Statements and relevant proof mechanisms inspected; inherited theorem audits not wholly rerun. New remote order42 remains same-agent audited in this synthesis.",
+  "primary_external_sources": [
+    {
+      "role": "Classical inverse-tree growth context; no novelty claim for exponential growth; source uses shortcut map",
+      "url": "https://dept.math.lsa.umich.edu/~lagarias/doc/applegateI.pdf"
+    },
+    {
+      "role": "Existence of a finite plane unit-distance graph not 4-colourable",
+      "url": "https://arxiv.org/abs/1804.02385"
+    }
+  ],
+  "read_method": "bounded targeted git show; no history dump",
+  "source_commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+  "sources": [
+    {
+      "bytes": 27147,
+      "git_blob": "346991110594940fc0aa36138b984f61be1dfe04",
+      "path": "00-navigation/META-PATTERNS.md",
+      "sha256": "fe251316ad9241a26990a8271f7b0a326fdd10bb32a75f45192e2d261f9ee8fe"
+    },
+    {
+      "bytes": 4652,
+      "git_blob": "8e10f5f304ea7b86ad7bc5f31f87e3ec1730d2b7",
+      "path": "01-canon/theorems/THM-4507-finite-valuation-collatz-potential-obstruction.md",
+      "sha256": "afdf74ae12b502b77aa0fb025f65de2323eeeaa8b440dac2b17dd6cd819a8274"
+    },
+    {
+      "bytes": 6557,
+      "git_blob": "d32eb89c5d24edd941f29e031e75bdbd1b51ae78",
+      "path": "01-canon/theorems/THM-4523-collatz-functional-graph-is-rigid-backward-trees-identify-vertices.md",
+      "sha256": "91214b8a337f0ba6eb57a8159f015f970cc56f236de625cf86a12af307d439a2"
+    },
+    {
+      "bytes": 9143,
+      "git_blob": "66b8da022edb9e84639b2bf9bba23be2a74f6a71",
+      "path": "01-canon/theorems/THM-4604-collatz-words-are-the-reducible-locus-carries-are-the-extension-cocycle-and-traces-only-hear-the-tuning.md",
+      "sha256": "b45fc4a6b7f1dd7ef2f9f63e1b219c72e69e87c4c5242aff44f3900c3466ae46"
+    },
+    {
+      "bytes": 12694,
+      "git_blob": "970e446d8a2d7a06ea16c8c2be6511c7dd91f87a",
+      "path": "01-canon/theorems/THM-2615-physical-diagonal-toric-kernel-and-dipole-radon-invoice.md",
+      "sha256": "be33efb8dec8b25f5b5f122d6b19d2a45ad49412eba8604d907bd13d0a104599"
+    },
+    {
+      "bytes": 5836,
+      "git_blob": "a725d585fdbbe3f75d18362bd2037b314052a253",
+      "path": "01-canon/theorems/THM-3955-node-cotangent-normalization-kernel-and-conductor-torsion.md",
+      "sha256": "1d44ece601abae4a4cb92c2782d63ee6b1153c66d2f832ad14e284c9de7031f1"
+    },
+    {
+      "bytes": 12516,
+      "git_blob": "e5a9288acc681c79ca09aa03da7240c62d4e0344",
+      "path": "01-canon/theorems/THM-3990-componentwise-harmonic-obstruction-and-repair-quotient.md",
+      "sha256": "00d54ba4baeb70f351564d3789a01a45089a4fa9f27ede2de8a2fd3de41d0e64"
+    },
+    {
+      "bytes": 19013,
+      "git_blob": "1e1f8c3021fdeb6afd6f44fe719ebf13978f9f92",
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/THEORY.md",
+      "sha256": "a62e9aeb6fb2000c547d81b1917869333fe570f30bbf9d067d0ee9e3885c5168"
+    },
+    {
+      "bytes": 10236,
+      "git_blob": "5d89f3ecd05815bccb3af7f4df6e739e5cb76a8c",
+      "path": "05-knowledge/results/clock_even_guarded_composition_20261026/CLOCKS-MACHINES.md",
+      "sha256": "d5780e190ff3a911361fbc2c0a8eda3c96ea84c126b6dc6e6a9ab35b67859cde"
+    },
+    {
+      "bytes": 15068,
+      "git_blob": "06a0a4079d43204b6c56bef3f31e50905d14db55",
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/metric_spindle/RESULT.md",
+      "sha256": "06c6837e844acfdcb01b43f487206a2aaeadd9ae26ffcc4ad89d253a6778616d"
+    },
+    {
+      "bytes": 13358,
+      "git_blob": "33bb49a661d271f1c944fe323e843824b3bf22c5",
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/cube_boundary/RESULT.md",
+      "sha256": "8a5c7a02cf3b319c034f8821d9d425c3c644c69c35e96edfa958f9cf6589c905"
+    },
+    {
+      "bytes": 10795,
+      "git_blob": "303113dfb85dd3f3660b68a622e0ec01a57351ca",
+      "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "sha256": "2cb9df95516578fb0cabb3b3be8420f2f62e2c1d875c0d0a5961d95cfa5f64ea"
+    },
+    {
+      "bytes": 18707,
+      "git_blob": "fefa2ac56faef8843aa08804dd4a07f72afd9cf7",
+      "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+      "sha256": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c"
+    },
+    {
+      "bytes": 3800,
+      "git_blob": "4041a509e1a8eee3e483bfe5e669055e387cb5cd",
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/TENSOR_COSETS.md",
+      "sha256": "47e164d9d4f4bcf061ab4b24eb81e86cce256e5863875854a078f8f5290e4b40"
+    },
+    {
+      "bytes": 9564,
+      "git_blob": "2a70a00a0f776ca5cbb358b8ce462b8c4218e37f",
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/RECURRENCES.md",
+      "sha256": "95d4e904903463fd9eeb0d5044b51b4e25afa9a89f60f15f1c527cb0745f5f59"
+    },
+    {
+      "bytes": 6205,
+      "git_blob": "41c5a798251306b3fcaac66ac723b26b8f78decc",
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/STABILITY_42.md",
+      "sha256": "3a9cbd47d3c39424c8356d69ffc6ec4d3f612defc9b1d9bf0050f28157e40901"
+    },
+    {
+      "bytes": 3804,
+      "git_blob": "506aee734df2590c7ec00179794da1fad26d7e8b",
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/AUDIT.md",
+      "sha256": "5241f0252ee8dfdb636253805b766cff83ba29158f4206d6a6f0227e61d4efb6"
+    },
+    {
+      "bytes": 7669,
+      "git_blob": "6be72811c95be683cb0861b124fc57ee02e68b18",
+      "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
+      "sha256": "dc5c4ca6af9ea94f794ff4fea41ae38810db9053f12a2e83e1c66338b23aa0af"
+    },
+    {
+      "bytes": 5466,
+      "git_blob": "de3788f5b5e3443b317a997dfae6c4159b92f744",
+      "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/cocycle/PROOF.md",
+      "sha256": "9e1d401fb62b143b0f44a5a18178612a0f27482bebd6c034d26750ceba21cff4"
+    },
+    {
+      "bytes": 8840,
+      "git_blob": "7b99e66f3d157eebb26fd73e29baf5f9b8f99081",
+      "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/WEIGHTED_BINARY_SIMULATION.md",
+      "sha256": "704dc34ec66b03299c14853c7000de01eddd915c614f00aa225a7e3853f19b75"
+    }
+  ]
+}

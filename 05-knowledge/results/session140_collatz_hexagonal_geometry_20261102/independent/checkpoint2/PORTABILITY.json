@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "normal_equals_optimized": true,
+  "relocated_normal_equals_original": true,
+  "relocated_optimized_equals_original": true,
+  "source_hashes_verified": true,
+  "output_sha256": "2a13f111d6b9c20b2609baeb6e36297d19a2b746a6861a2613af7e8e79e5e79d",
+  "relocation_directory_retained": false,
+  "required_relative_location": "independent/checkpoint2"
+}

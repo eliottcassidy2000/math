@@ -1,0 +1,15 @@
+{
+  "status": "PASS by proof inspection",
+  "finite_computation_needed": false,
+  "constant_squared": "15/16",
+  "construction": "finite seed, nested open child intervals, upward unit arcs, finite forbidden intersections, separated component strips",
+  "frozen_checkpoint1_files_modified": false,
+  "source_file": "PROPER_UNIT_DISTANCE_REFINEMENT.md",
+  "source_sha256": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c",
+  "scope_limits": [
+    "existence, not effective component identification",
+    "crossings allowed",
+    "no uniform separation",
+    "not a convergence proof"
+  ]
+}

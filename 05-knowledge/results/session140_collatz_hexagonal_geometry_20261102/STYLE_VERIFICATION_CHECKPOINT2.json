@@ -1,0 +1,10 @@
+{
+  "status": "PASS WITH NARROW GENERATED-SVG STYLE EXCEPTION",
+  "raw_git_diff_check": "1986 trailing-whitespace records, all in the verbatim Matplotlib SVG; no other warnings",
+  "exception_path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/hyperbolic_binary_tree.svg",
+  "exception_source_sha256": "8f9716428b90a5a2081ecb4b22291749d284e6139c5b6b1394eb7680ff7c7dfa",
+  "preserve_original_source_bytes": true,
+  "raw_diagnostic_sha256": "903d68483c013321cb97185899936269a4e85550f9cb381546519a8b0a0ef67a",
+  "strict_check_for_all_other_paths": true,
+  "not_a_scientific_exception": true
+}

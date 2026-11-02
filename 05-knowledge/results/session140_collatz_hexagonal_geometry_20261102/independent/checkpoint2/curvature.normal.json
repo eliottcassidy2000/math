@@ -1,0 +1,17 @@
+{
+  "all_level_status": "proved in PROOF.md, not by finite enumeration",
+  "circle_radius_squared_over_parent_height_squared": "185/64",
+  "edge_pairs": 32131,
+  "edges": 254,
+  "incident_edge_pairs": 379,
+  "minimum_attained_exactly_on_tree_edges": true,
+  "minimum_cosh_distance": "21/16",
+  "negative_controls": [
+    "Euclidean separation tends to zero",
+    "not quasi-isometric: root-split graph distance 2k, cosh H-distance 3/2"
+  ],
+  "status": "FINITE-EXACT PASS",
+  "universe": "all vertices at levels 0 through 7; every pair and edge pair",
+  "vertex_pairs": 32385,
+  "vertices": 255
+}

@@ -1,0 +1,12 @@
+[
+  "PRODUCER_PUBLIC_FILES.json",
+  "PRODUCER_SHA256SUMS",
+  "PROOF.md",
+  "README.md",
+  "SOURCE_PINS.json",
+  "draw.py",
+  "hyperbolic_binary_tree.svg",
+  "verification.json",
+  "verification.optimized.json",
+  "verify.py"
+]
