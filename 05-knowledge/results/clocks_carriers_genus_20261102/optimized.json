@@ -1,0 +1,655 @@
+{
+  "Collatz": {
+    "depth_counts": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768,
+      65536
+    ],
+    "largest_depth16_integer_bits": 68,
+    "native_macro_edges_checked": 131070,
+    "unit_dilation_contradiction_depth": 17,
+    "unit_residue_exponents": {
+      "1": [
+        2,
+        4
+      ],
+      "2": [
+        1,
+        3
+      ],
+      "4": [
+        2,
+        6
+      ],
+      "5": [
+        3,
+        5
+      ],
+      "7": [
+        4,
+        6
+      ],
+      "8": [
+        1,
+        5
+      ]
+    }
+  },
+  "Fermat_neighbours": {
+    "Pascal_parity_rows": 129,
+    "all_known_Fermat_subset_collisions": [
+      [
+        3,
+        5
+      ],
+      [
+        15,
+        17
+      ],
+      [
+        255,
+        257
+      ],
+      [
+        65535,
+        65537
+      ]
+    ],
+    "binary_carry_controls": 4096,
+    "block_symmetry_controls": [
+      {
+        "S": [
+          1,
+          3,
+          4,
+          6,
+          7,
+          10,
+          13
+        ],
+        "block_count": 3,
+        "block_size": 5,
+        "subgroup_order": 375
+      },
+      {
+        "S": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          12
+        ],
+        "block_count": 5,
+        "block_size": 3,
+        "subgroup_order": 1215
+      }
+    ],
+    "ladder_log2_counts": [
+      [
+        3,
+        5,
+        0
+      ],
+      [
+        15,
+        17,
+        4
+      ],
+      [
+        255,
+        257,
+        120
+      ],
+      [
+        65535,
+        65537,
+        32752
+      ]
+    ],
+    "small_orbit_census": [
+      {
+        "connection_sets": 2,
+        "multiplier_orbits": 1,
+        "n": 3,
+        "stabilizer_histogram": {
+          "1": 2
+        },
+        "unit_group_order": 2
+      },
+      {
+        "connection_sets": 4,
+        "multiplier_orbits": 1,
+        "n": 5,
+        "stabilizer_histogram": {
+          "1": 4
+        },
+        "unit_group_order": 4
+      },
+      {
+        "connection_sets": 8,
+        "multiplier_orbits": 2,
+        "n": 7,
+        "stabilizer_histogram": {
+          "1": 6,
+          "3": 2
+        },
+        "unit_group_order": 6
+      },
+      {
+        "connection_sets": 16,
+        "multiplier_orbits": 4,
+        "n": 9,
+        "stabilizer_histogram": {
+          "1": 12,
+          "3": 4
+        },
+        "unit_group_order": 6
+      },
+      {
+        "connection_sets": 32,
+        "multiplier_orbits": 4,
+        "n": 11,
+        "stabilizer_histogram": {
+          "1": 30,
+          "5": 2
+        },
+        "unit_group_order": 10
+      },
+      {
+        "connection_sets": 64,
+        "multiplier_orbits": 6,
+        "n": 13,
+        "stabilizer_histogram": {
+          "1": 60,
+          "3": 4
+        },
+        "unit_group_order": 12
+      },
+      {
+        "connection_sets": 128,
+        "multiplier_orbits": 16,
+        "n": 15,
+        "stabilizer_histogram": {
+          "1": 128
+        },
+        "unit_group_order": 8
+      },
+      {
+        "connection_sets": 256,
+        "multiplier_orbits": 16,
+        "n": 17,
+        "stabilizer_histogram": {
+          "1": 256
+        },
+        "unit_group_order": 16
+      }
+    ],
+    "zero_increments_including_auxiliary_zero": [
+      0,
+      1,
+      3,
+      7,
+      15,
+      31,
+      63,
+      127,
+      255,
+      511,
+      1023,
+      2047,
+      4095
+    ]
+  },
+  "corner": {
+    "attachment_updates": 200832,
+    "corner_counts": [
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        4,
+        0,
+        2
+      ],
+      [
+        4,
+        1,
+        8
+      ],
+      [
+        5,
+        0,
+        2
+      ],
+      [
+        5,
+        1,
+        8
+      ],
+      [
+        5,
+        2,
+        64
+      ],
+      [
+        6,
+        0,
+        2
+      ],
+      [
+        6,
+        1,
+        8
+      ],
+      [
+        6,
+        2,
+        64
+      ],
+      [
+        6,
+        3,
+        1024
+      ],
+      [
+        7,
+        0,
+        2
+      ],
+      [
+        7,
+        1,
+        8
+      ],
+      [
+        7,
+        2,
+        64
+      ],
+      [
+        7,
+        3,
+        1024
+      ],
+      [
+        7,
+        4,
+        32768
+      ]
+    ],
+    "deletion_updates": 268560,
+    "legality_profiles": [
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        64
+      ],
+      [
+        6,
+        1024
+      ]
+    ],
+    "remark_hostile": {
+      "after_remark": [
+        0,
+        1
+      ],
+      "initial_corner": [
+        0,
+        0,
+        1
+      ],
+      "path": [
+        3,
+        2,
+        5,
+        4,
+        1
+      ]
+    }
+  },
+  "genus": {
+    "Fermat_genus_rows": [
+      {
+        "genus": 1,
+        "m": 2,
+        "p": 17,
+        "power": 4,
+        "trunk_index": 1
+      },
+      {
+        "genus": 21,
+        "m": 3,
+        "p": 257,
+        "power": 64,
+        "trunk_index": 3
+      },
+      {
+        "genus": 5461,
+        "m": 4,
+        "p": 65537,
+        "power": 16384,
+        "trunk_index": 7
+      }
+    ],
+    "Ogg_Fermat_intersection": [
+      3,
+      5,
+      17
+    ],
+    "channels": [
+      {
+        "genus": 1,
+        "k": 1,
+        "prime_levels": [
+          17,
+          19,
+          11
+        ]
+      },
+      {
+        "genus": 5,
+        "k": 2,
+        "prime_levels": [
+          73,
+          67,
+          59
+        ]
+      },
+      {
+        "genus": 21,
+        "k": 3,
+        "prime_levels": [
+          257,
+          251
+        ]
+      },
+      {
+        "genus": 85,
+        "k": 4,
+        "prime_levels": [
+          1033,
+          1019
+        ]
+      },
+      {
+        "genus": 341,
+        "k": 5,
+        "prime_levels": [
+          4099,
+          4091
+        ]
+      },
+      {
+        "genus": 1365,
+        "k": 6,
+        "prime_levels": []
+      },
+      {
+        "genus": 5461,
+        "k": 7,
+        "prime_levels": [
+          65537,
+          65539
+        ]
+      },
+      {
+        "genus": 21845,
+        "k": 8,
+        "prime_levels": [
+          262153,
+          262147,
+          262139
+        ]
+      }
+    ],
+    "composite_F5": {
+      "actual_3g_plus1": 1075417084,
+      "actual_genus": 358472361,
+      "formal_trunk": 357913941
+    },
+    "genus_zero_prime_levels_through199": [
+      2,
+      3,
+      5,
+      7,
+      13
+    ]
+  },
+  "monodromy": [
+    {
+      "R_cycles": {
+        "3": 2
+      },
+      "S_cycles": {
+        "1": 2,
+        "2": 2
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "5": 1
+      },
+      "genus": 0,
+      "p": 5
+    },
+    {
+      "R_cycles": {
+        "1": 2,
+        "3": 2
+      },
+      "S_cycles": {
+        "2": 4
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "7": 1
+      },
+      "genus": 0,
+      "p": 7
+    },
+    {
+      "R_cycles": {
+        "3": 4
+      },
+      "S_cycles": {
+        "2": 6
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "11": 1
+      },
+      "genus": 1,
+      "p": 11
+    },
+    {
+      "R_cycles": {
+        "1": 2,
+        "3": 4
+      },
+      "S_cycles": {
+        "1": 2,
+        "2": 6
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "13": 1
+      },
+      "genus": 0,
+      "p": 13
+    },
+    {
+      "R_cycles": {
+        "3": 6
+      },
+      "S_cycles": {
+        "1": 2,
+        "2": 8
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "17": 1
+      },
+      "genus": 1,
+      "p": 17
+    },
+    {
+      "R_cycles": {
+        "1": 2,
+        "3": 6
+      },
+      "S_cycles": {
+        "2": 10
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "19": 1
+      },
+      "genus": 1,
+      "p": 19
+    },
+    {
+      "R_cycles": {
+        "3": 20
+      },
+      "S_cycles": {
+        "2": 30
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "59": 1
+      },
+      "genus": 5,
+      "p": 59
+    },
+    {
+      "R_cycles": {
+        "1": 2,
+        "3": 22
+      },
+      "S_cycles": {
+        "2": 34
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "67": 1
+      },
+      "genus": 5,
+      "p": 67
+    },
+    {
+      "R_cycles": {
+        "1": 2,
+        "3": 24
+      },
+      "S_cycles": {
+        "1": 2,
+        "2": 36
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "73": 1
+      },
+      "genus": 5,
+      "p": 73
+    },
+    {
+      "R_cycles": {
+        "3": 84
+      },
+      "S_cycles": {
+        "2": 126
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "251": 1
+      },
+      "genus": 21,
+      "p": 251
+    },
+    {
+      "R_cycles": {
+        "3": 86
+      },
+      "S_cycles": {
+        "1": 2,
+        "2": 128
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "257": 1
+      },
+      "genus": 21,
+      "p": 257
+    },
+    {
+      "R_cycles": {
+        "3": 21846
+      },
+      "S_cycles": {
+        "1": 2,
+        "2": 32768
+      },
+      "cusp_cycles": {
+        "1": 1,
+        "65537": 1
+      },
+      "genus": 5461,
+      "p": 65537
+    }
+  ],
+  "ports": {
+    "Q15_endpoint_counts": {
+      "8": 1,
+      "9": 1
+    },
+    "Q18_leaves": [
+      16,
+      17,
+      18
+    ],
+    "leaf_attachment_controls": 694,
+    "two_port_hostile": {
+      "joint_03": [
+        1,
+        0
+      ],
+      "marginals": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "two_leaf_H": [
+        2,
+        0
+      ]
+    }
+  },
+  "scope": "Exact finite controls supplement the written all-size proofs; no independent reviewer, all-order enumeration or universal Collatz claim.",
+  "status": "passed"
+}

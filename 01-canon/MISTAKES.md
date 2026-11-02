@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — distinguish the modular curve, its Fricke quotient and the observer
+
+- **Scope:** correction of user-supplied inspirational text, not a retraction of a previously accepted repo theorem. It labelled {2,3,5,7,13} the Ogg-prime group, conflating the genus-zero X0 levels with the distinct Fricke-quotient classification, and proposed a geometric bijection to Fermat primes without an action-preserving map.
+- **First failed implication / witness:** passing from X0(p) to X0(p)^+ changes genus; p17 has genus1 before quotient and0 afterwards. Counts of self-dual objects do not specify a map between primes. Rational Mobius transforms also preserve field degree, so the real cyclotomic generators at13 and17 (degrees6,8) cannot be related that way.
+- **Repair:** `05-knowledge/results/clocks_carriers_genus_20261102/GENUS_BRIDGE.md` retains the correct intersections and proves a separate genus-to-Collatz identity. `FERMAT_NEIGHBOURS.md` gives exact multiplier-orbit equinumerosity at15/17 but retains the different unit groups and composite block symmetries. A symmetry-preserving bijection remains unsupplied.
+- **Navigation correction:** S139's inherited final sentence still called n56 the best stability cutoff although its opening correctly routed n48. The initial local correction to 48 was superseded during sync by the incoming independently audited 48 and capacity-potential 42 routes; their stronger navigation and proof lineage are retained. No inherited proof or receipt is changed.
+
 ## 2026-11-02 — FRACTRAN prime support does not bound selector precision
 
 - **Correction lineage:** THM-4852 at `01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md`, following MISTAKE-697. The previously audited generalization used prime support <=P to claim selection from one base-P# digit. Its 400 random-program tests were squarefree; the audit's actual local formulas required p,q to divide the base, not merely a power of it.
