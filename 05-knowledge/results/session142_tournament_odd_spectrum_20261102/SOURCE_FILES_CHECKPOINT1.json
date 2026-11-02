@@ -1,0 +1,328 @@
+{
+  "files": [
+    {
+      "bytes": 2210,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "REPLAY_CONFIG_CHECKPOINT1.json",
+      "sha256": "3b186621abc32e3db3cd8376eadbbca59460ce439662b63626e55a68512cdb62"
+    },
+    {
+      "bytes": 223,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "sha256": "6ed0df1eb3f1da93484477da61a28ab6d817243696ff9a353038916ce129cdb2"
+    },
+    {
+      "bytes": 11266,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "SOURCE_PINS_CHECKPOINT1.json",
+      "sha256": "98848cd8025d6a562ff221bf27ff0e0220ca1862dfef46144765f5fd53bbcd4d"
+    },
+    {
+      "bytes": 4073,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "canon_repair/ELLIPTIC_CANON_REPAIR.patch",
+      "sha256": "2a91ccbbe00b3bf8e8c1f0d331dccd68c256f421c944add573a24f6f7450ac21"
+    },
+    {
+      "bytes": 614,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "canon_repair/IDENTITY.json",
+      "sha256": "1e2257ef65abc2ba70bdccaa535be645db41f55b75a5452698f0459ceeae1866"
+    },
+    {
+      "bytes": 7519,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "canon_repair/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "sha256": "9b01045059f1931533a56563b5cac3cbf1d18f23ac442068b5f36d23d361aee5"
+    },
+    {
+      "bytes": 2075,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/SHA256SUMS",
+      "sha256": "997c970e841947450a80509124cd4438989391226920e67e052d84ca4e5fcc39"
+    },
+    {
+      "bytes": 2663,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/literature_sources.json",
+      "sha256": "f7de05c6d48e6fd3976d68c9efcbbda908825375f0b6e5edac1464b068c3e04b"
+    },
+    {
+      "bytes": 857,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/negative_controls.json",
+      "sha256": "2fae9703504595c583b7e6b2e32567d9ed9fbbfe383d028e2053ae800dfd0b0a"
+    },
+    {
+      "bytes": 11539,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/proof.md",
+      "sha256": "28d50c012046cdccbb10327a3b9b44b49e2de5a791a47ecde5e6df916e4e69cd"
+    },
+    {
+      "bytes": 7009,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/repository_sources.json",
+      "sha256": "c996c6e37110daffa98f50e194aaf13d8a21556374ecb580ab8582fc3e1bd8b7"
+    },
+    {
+      "bytes": 9303,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8"
+    },
+    {
+      "bytes": 6269,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py",
+      "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a"
+    },
+    {
+      "bytes": 5667,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 15032,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    {
+      "bytes": 10631,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f"
+    },
+    {
+      "bytes": 16726,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac"
+    },
+    {
+      "bytes": 22524,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "bytes": 86,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources.normal.json",
+      "sha256": "8a54ca8551a5dc0968979183490de33db76f909b4128c576958d8993fba7adf2"
+    },
+    {
+      "bytes": 86,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/sources.optimized.json",
+      "sha256": "8a54ca8551a5dc0968979183490de33db76f909b4128c576958d8993fba7adf2"
+    },
+    {
+      "bytes": 1313,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/verify.normal.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 1313,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/verify.optimized.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 6890,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/verify_frontier.py",
+      "sha256": "e2b420473acc4f8ea6ac41f68213d5fd87127f8c3466e2e95cb9f0fd6863e2b5"
+    },
+    {
+      "bytes": 1111,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "frontier/verify_sources.py",
+      "sha256": "0ba16397e038fa001004e7ac8a498cffff9b7b69c17e6a9743c6f7cc55d16435"
+    },
+    {
+      "bytes": 1246,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/CANON_REPAIR_AUDIT.json",
+      "sha256": "d69d16f78398d6ebdbe7e7594235de615513f699fe2b72e615fcf538b170f6b0"
+    },
+    {
+      "bytes": 3512,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/CHECKPOINT1_AUDIT.md",
+      "sha256": "b75c7289be135caaf7c9e4481680f57699438935802830c2332d1af7c0a0584c"
+    },
+    {
+      "bytes": 2457,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/check_checkpoint1.py",
+      "sha256": "bbc5c240a43f85bf3abfbf1b758a6bcd53c3e01b3f104edfe02fb62d2ffd80c2"
+    },
+    {
+      "bytes": 2577,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/checkpoint1.audit.json",
+      "sha256": "9d25ff56384e32707c196b8a3afff6d16a622b24fe89cdaaf8e2cc09edb67cd1"
+    },
+    {
+      "bytes": 572,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/checkpoint1_integrity.json",
+      "sha256": "2d17ddc006ac63eb6373134c483715edf5bd4cf64fa6d9459e6c6edbae46d987"
+    },
+    {
+      "bytes": 1313,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/frontier_rerun.normal.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 1313,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/frontier_rerun.optimized.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 7503,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/jacobian_rerun.normal.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 7503,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/jacobian_rerun.optimized.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 5370,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/verification.normal.json",
+      "sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "bytes": 5370,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/verification.optimized.json",
+      "sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "bytes": 6632,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "independent/verify_independent.py",
+      "sha256": "3f6a090a7eab8f75fce30317316a4b0815a66d6964ff7f47b8b8ef1205036f15"
+    },
+    {
+      "bytes": 3354,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/MANIFEST.json",
+      "sha256": "63c066ac291f6f2d9823e05d80e322364a59221bcdcd6ece5bf601f743114873"
+    },
+    {
+      "bytes": 15669,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/PROOFS.md",
+      "sha256": "0b8c09f38987d8a548ac39094e2e0dbd315ff230be1a947b10fc5ac60d43de53"
+    },
+    {
+      "bytes": 1188,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/external_sources.json",
+      "sha256": "18c6b801d1f9c133384a38d4b2e62e30ec4eb766d144fb7f62c67a17e68ad4ac"
+    },
+    {
+      "bytes": 2746,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/source_manifest.json",
+      "sha256": "467e258bf215ac926426cf5be5531270fa0d80d0e24ebe99bd8a47cbed21730f"
+    },
+    {
+      "bytes": 16320,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c"
+    },
+    {
+      "bytes": 6147,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd"
+    },
+    {
+      "bytes": 5667,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 13039,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce"
+    },
+    {
+      "bytes": 11494,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md",
+      "sha256": "a57b2e8323d96f6358bb56506f5ddfc20e32c075e19d9dcc833690b1a857b0a6"
+    },
+    {
+      "bytes": 13505,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "sha256": "fc959a24343dae5ee0ffbac31b617ea801133e661049845c6fa43ec915023bba"
+    },
+    {
+      "bytes": 5854,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md",
+      "sha256": "59d2c487b22918ca6c0d87eec403922f8108eecca8c9ea1a80a4b72f953386ac"
+    },
+    {
+      "bytes": 9654,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md",
+      "sha256": "444adda9dd6b5772708e8b2c6b325af07a8b708bfdeb6640606bf78d6a4e68e8"
+    },
+    {
+      "bytes": 16282,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/sources/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df"
+    },
+    {
+      "bytes": 7503,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/verification.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 7503,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/verification_optimized.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 9024,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "jacobian_bridge/verify_bridge.py",
+      "sha256": "2d442d2bba45c0b9b5f39b4150e919be060ebca7d105c49b795a7401c2f2e5f8"
+    },
+    {
+      "bytes": 5009,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "replay_checkpoint1.py",
+      "sha256": "ebe9c7d62aa216be24decf6e8e6aa3dbd33115b86cf57e383842c2297a5ec128"
+    },
+    {
+      "bytes": 1419,
+      "curation": "verbatim frozen producer/auditor selector or reviewed release support",
+      "path": "verify_source_pins.py",
+      "sha256": "8c7d8c23203ab9b158e6dce63d470849a1d2a20ad427434063bd6a77283e8329"
+    }
+  ]
+}

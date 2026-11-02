@@ -1,0 +1,28 @@
+[
+  {
+    "mode": "normal",
+    "exit_code": 1,
+    "expected_failure_observed": true,
+    "final_error": "RuntimeError: small spectrum"
+  },
+  {
+    "mode": "optimized",
+    "exit_code": 1,
+    "expected_failure_observed": true,
+    "final_error": "RuntimeError: small spectrum"
+  },
+  {
+    "control": "corrupted Git blob digest",
+    "mode": "normal",
+    "exit_code": 1,
+    "expected_failure_observed": true,
+    "final_error": "RuntimeError: source identity mismatch: sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md"
+  },
+  {
+    "control": "corrupted Git blob digest",
+    "mode": "optimized",
+    "exit_code": 1,
+    "expected_failure_observed": true,
+    "final_error": "RuntimeError: source identity mismatch: sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md"
+  }
+]

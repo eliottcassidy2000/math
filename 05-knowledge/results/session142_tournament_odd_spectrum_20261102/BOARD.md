@@ -1,0 +1,29 @@
+# Session142 concept board
+
+The target is the **ordinary integer count** H(T) of directed Hamiltonian
+vertex words in an actual finite tournament. The conjectured union over
+all orders is every positive odd integer except 7 and 21. **Completeness
+remains OPEN.** No weighted interpolation or modular image is a witness.
+
+| Lane / object | Mechanism and operation | Lost coordinate / decisive test |
+|---|---|---|
+| Anchor: actual H-spectrum | SCC order-join multiplies exact counts; prime and 7-prime atoms isolate missing existence | A product cannot introduce a prime absent from all factors; demand literal Boolean adjacency and exact count |
+| Anchor: all-order exclusions | Strong minimum bounds reduce 7 and 21 to small strong orders | A lower bound is not a full spectrum; independently count the small structural cover |
+| Niche: target arithmetic monoid | Factor h=7^a*m and retain the exceptional 7*3^b carry | Arithmetic factorization is not realization; keep explicit strong 49,63,343 certificates |
+| Niche: finite construction state | Endpoint/refinement response rather than scalar H alone | Forgetting marked states can invent feasible increments; test real tournament constructors |
+| Wildcard: Jacobian algebra and guarded source | Exact polynomial identity and full fiber/collision data | Rational/weighted solvability does not preserve Boolean inputs or positivity; test targets 7 and21 on one-edge interpolation |
+
+## Inheritance pass
+
+Closest proved mechanisms: SCC multiplication, the exact strong minimum,
+and the inherited two-prime-lane reduction. Canonical hostiles: 7 and21,
+and rational midpoints that hit them while no Boolean endpoint does.
+Corrected near miss: primitive response lattice is not feasible image;
+the reported Royle prefix is inclusive80555, not80557. Least-used sidecar:
+retain source-domain guards, full collision fibers and marked construction
+state instead of only a determinant, gcd or scalar count.
+
+The method used is the repository's connection contract and quotient-loss
+ledger. This packet does not promote a new universal meta-pattern or alter
+other sessions' proof status. Follow-up ideas are separated from proved and
+finite-exact statements, and inherited citations retain their own limits.

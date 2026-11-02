@@ -1,0 +1,171 @@
+{
+  "checkpoint": "1",
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "lane_integrity_positive_runs": 6,
+  "normal_and_optimized": true,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "frontier-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "expected_rejection": false,
+      "label": "jacobian-and-boolean-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "expected_rejection": false,
+      "label": "frontier-source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "8a54ca8551a5dc0968979183490de33db76f909b4128c576958d8993fba7adf2"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-frozen-payloads",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2d17ddc006ac63eb6373134c483715edf5bd4cf64fa6d9459e6c6edbae46d987"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-git-blob-identities",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "6ed0df1eb3f1da93484477da61a28ab6d817243696ff9a353038916ce129cdb2"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "0b5a147761d413fbe76d404383da6e6fa1131170b3b6ac1abbdaa531d696a0e8"
+    },
+    {
+      "expected_rejection": false,
+      "label": "frontier-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "expected_rejection": false,
+      "label": "jacobian-and-boolean-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "expected_rejection": false,
+      "label": "frontier-source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "8a54ca8551a5dc0968979183490de33db76f909b4128c576958d8993fba7adf2"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-frozen-payloads",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2d17ddc006ac63eb6373134c483715edf5bd4cf64fa6d9459e6c6edbae46d987"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-git-blob-identities",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "6ed0df1eb3f1da93484477da61a28ab6d817243696ff9a353038916ce129cdb2"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "0b5a147761d413fbe76d404383da6e6fa1131170b3b6ac1abbdaa531d696a0e8"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-small-strong-spectrum",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-small-strong-spectrum",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-polynomial-determinant",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-polynomial-determinant",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-determinant",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-determinant",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 6,
+  "scope": "Recovered all-order exclusions and elementary guarded-response proofs with finite exact controls; no universal tournament realization, no local external formal build, no rerun of inherited large prefixes.",
+  "source_files_verified": 54,
+  "source_integrity_positive_runs": 2,
+  "source_manifest_sha256": "337b112b6c312131b5d19e7b5d7aebda98d6e9979b2617526462f810b9b5def1",
+  "status": "PASS",
+  "total_executions": 22,
+  "unrelated_cwd": true
+}

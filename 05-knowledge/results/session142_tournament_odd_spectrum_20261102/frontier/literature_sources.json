@@ -1,0 +1,44 @@
+[
+  {
+    "authors": "Swee Hong Chan and Igor Pak",
+    "title": "Computational complexity of counting coincidences",
+    "doi": "10.1016/j.tcs.2024.114776",
+    "url": "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf",
+    "version": "Author PDF dated 2024-02-09; published TCS 1015 (2024), 114776",
+    "selector": "Section 6.5, Conjecture 6.2, printed page 17",
+    "verified_claim": "Completeness is a conjecture, credited to bof and Gordon Royle (2016). The paper's informal up-to-80557 endpoint is narrowed to 80555 by the primary report.",
+    "retrieved_utc_date": "2026-11-02",
+    "pin_kind": "DOI, exact author URL, dated version and printed-page selector; raw PDF bytes not retained"
+  },
+  {
+    "authors": "Arthur H. Busch",
+    "title": "A Note on the Number of Hamiltonian Paths in Strong Tournaments",
+    "doi": "10.37236/1141",
+    "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+    "version": "Electronic Journal of Combinatorics 13(1), N3, published 2006-02-01",
+    "selector": "Lemma 1 on printed pages 2--3; Corollary 1 on printed page 4",
+    "verified_claim": "Strong overlap/nearly-transitive dichotomy and exact strong minimum by order modulo 3.",
+    "retrieved_utc_date": "2026-11-02",
+    "pin_kind": "DOI, journal PDF URL and precise theorem/page selectors; raw PDF bytes not retained"
+  },
+  {
+    "authors": "bof (question); Gordon Royle (computational answer)",
+    "title": "The number of Hamiltonian paths in a tournament",
+    "url": "https://mathoverflow.net/questions/232751/the-number-of-hamiltonian-paths-in-a-tournament",
+    "version": "Question begun 2016-03-04; Royle answer 2016-03-06, final coverage edit 2022-01-31",
+    "selector": "Royle answer, final paragraph labelled Even more additional data",
+    "verified_claim": "Every allowed odd integer strictly below 80557 occurred at order at most 11; strictness matters.",
+    "retrieved_utc_date": "2026-11-02",
+    "pin_kind": "Original computational report, stable question URL and answer/paragraph selector; this packet does not independently replay the 11-vertex census"
+  },
+  {
+    "authors": "Darij Grinberg",
+    "title": "Math 530 Spring 2022, Lecture 12: more tournaments and Hamiltonian paths",
+    "url": "https://darijgrinberg.gitlab.io/t/22s/lec12.pdf",
+    "version": "April 27, 2026",
+    "selector": "Remark 1.1.11, printed page 5",
+    "verified_claim": "Omissions 7/21; coverage of other odd values through 80555; higher-value question stated open.",
+    "retrieved_utc_date": "2026-11-02",
+    "pin_kind": "Dated author PDF and exact remark/page selector; raw PDF bytes not retained"
+  }
+]

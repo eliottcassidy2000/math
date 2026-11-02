@@ -1,0 +1,489 @@
+{
+  "arithmetic": {
+    "positive_weight_unimodular_guard_hostile": {
+      "determinant": 1,
+      "integral_inverse": [
+        -1,
+        1
+      ],
+      "map": [
+        "x+y^2",
+        "y"
+      ],
+      "target": [
+        0,
+        1
+      ],
+      "weights": [
+        2,
+        1
+      ]
+    },
+    "primitive_lattice_hole": {
+      "hole": 1,
+      "integer_solution": [
+        -1,
+        1
+      ],
+      "matrix": [
+        [
+          2,
+          3
+        ]
+      ],
+      "nonnegative_solution": null
+    },
+    "unimodular_guard_hostile": {
+      "integral_inverse": [
+        -1,
+        2
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "target": [
+        1,
+        3
+      ]
+    }
+  },
+  "keller": {
+    "F_coefficients": [
+      [
+        [
+          [
+            0,
+            0,
+            1
+          ],
+          1
+        ],
+        [
+          [
+            0,
+            2,
+            0
+          ],
+          4
+        ],
+        [
+          [
+            1,
+            1,
+            1
+          ],
+          3
+        ],
+        [
+          [
+            1,
+            3,
+            0
+          ],
+          7
+        ],
+        [
+          [
+            2,
+            2,
+            1
+          ],
+          3
+        ],
+        [
+          [
+            2,
+            4,
+            0
+          ],
+          3
+        ],
+        [
+          [
+            3,
+            3,
+            1
+          ],
+          1
+        ]
+      ],
+      [
+        [
+          [
+            0,
+            1,
+            0
+          ],
+          1
+        ],
+        [
+          [
+            1,
+            0,
+            1
+          ],
+          3
+        ],
+        [
+          [
+            1,
+            2,
+            0
+          ],
+          12
+        ],
+        [
+          [
+            2,
+            1,
+            1
+          ],
+          6
+        ],
+        [
+          [
+            2,
+            3,
+            0
+          ],
+          9
+        ],
+        [
+          [
+            3,
+            2,
+            1
+          ],
+          3
+        ]
+      ],
+      [
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          2
+        ],
+        [
+          [
+            2,
+            1,
+            0
+          ],
+          -3
+        ],
+        [
+          [
+            3,
+            0,
+            1
+          ],
+          -1
+        ]
+      ]
+    ],
+    "F_term_counts": [
+      7,
+      6,
+      3
+    ],
+    "determinant": -2,
+    "images": [
+      [
+        "-1/4",
+        "0",
+        "0"
+      ],
+      [
+        "-1/4",
+        "0",
+        "0"
+      ],
+      [
+        "-1/4",
+        "0",
+        "0"
+      ]
+    ],
+    "points": [
+      [
+        "0",
+        "0",
+        "-1/4"
+      ],
+      [
+        "1",
+        "-3/2",
+        "13/2"
+      ],
+      [
+        "-1",
+        "3/2",
+        "13/2"
+      ]
+    ],
+    "weighted_coordinate_determinant": 2
+  },
+  "status": "PASS",
+  "tournaments": {
+    "all_labeled_n_le_6": {
+      "1": {
+        "labeled_tournaments": 1,
+        "nonconstant_coefficient_gcd": 0,
+        "nonzero_coefficients": 1,
+        "polynomial_degree": 0,
+        "spectrum": [
+          1
+        ]
+      },
+      "2": {
+        "labeled_tournaments": 2,
+        "nonconstant_coefficient_gcd": 0,
+        "nonzero_coefficients": 1,
+        "polynomial_degree": 0,
+        "spectrum": [
+          1
+        ]
+      },
+      "3": {
+        "labeled_tournaments": 8,
+        "nonconstant_coefficient_gcd": 2,
+        "nonzero_coefficients": 5,
+        "polynomial_degree": 2,
+        "spectrum": [
+          1,
+          3
+        ]
+      },
+      "4": {
+        "labeled_tournaments": 64,
+        "nonconstant_coefficient_gcd": 2,
+        "nonzero_coefficients": 16,
+        "polynomial_degree": 2,
+        "spectrum": [
+          1,
+          3,
+          5
+        ]
+      },
+      "5": {
+        "labeled_tournaments": 1024,
+        "nonconstant_coefficient_gcd": 2,
+        "nonzero_coefficients": 136,
+        "polynomial_degree": 4,
+        "spectrum": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          13,
+          15
+        ]
+      },
+      "6": {
+        "labeled_tournaments": 32768,
+        "nonconstant_coefficient_gcd": 2,
+        "nonzero_coefficients": 737,
+        "polynomial_degree": 4,
+        "spectrum": [
+          1,
+          3,
+          5,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          37,
+          41,
+          43,
+          45
+        ]
+      }
+    },
+    "arc_interpolation_controls": [
+      {
+        "affine_response": [
+          5,
+          4
+        ],
+        "flipped_edge": [
+          2,
+          4
+        ],
+        "masks": [
+          4,
+          260
+        ],
+        "midpoint": 7,
+        "n": 5,
+        "values": [
+          [
+            "0",
+            "5"
+          ],
+          [
+            "1/4",
+            "6"
+          ],
+          [
+            "1/2",
+            "7"
+          ],
+          [
+            "3/4",
+            "8"
+          ],
+          [
+            "1",
+            "9"
+          ]
+        ]
+      },
+      {
+        "affine_response": [
+          19,
+          4
+        ],
+        "flipped_edge": [
+          0,
+          4
+        ],
+        "masks": [
+          20,
+          28
+        ],
+        "midpoint": 21,
+        "n": 6,
+        "values": [
+          [
+            "0",
+            "19"
+          ],
+          [
+            "1/4",
+            "20"
+          ],
+          [
+            "1/2",
+            "21"
+          ],
+          [
+            "3/4",
+            "22"
+          ],
+          [
+            "1",
+            "23"
+          ]
+        ]
+      }
+    ],
+    "scope": "The n<=6 census is bounded, not a proof of all-order gaps or completeness.",
+    "unimodular_source_guard_controls": [
+      {
+        "flipped_edge": [
+          0,
+          1
+        ],
+        "forbidden_target": 7,
+        "legal_parameter_set": [
+          0,
+          1
+        ],
+        "masks": [
+          4,
+          5
+        ],
+        "n": 5,
+        "normalized_affine_response": [
+          2,
+          -1
+        ],
+        "unique_integral_inverse": -1,
+        "values_t_H_Q": [
+          [
+            "-1",
+            "7",
+            "3"
+          ],
+          [
+            "0",
+            "5",
+            "2"
+          ],
+          [
+            "1/2",
+            "4",
+            "3/2"
+          ],
+          [
+            "1",
+            "3",
+            "1"
+          ]
+        ]
+      },
+      {
+        "flipped_edge": [
+          0,
+          3
+        ],
+        "forbidden_target": 21,
+        "legal_parameter_set": [
+          0,
+          1
+        ],
+        "masks": [
+          20,
+          16
+        ],
+        "n": 6,
+        "normalized_affine_response": [
+          9,
+          -1
+        ],
+        "unique_integral_inverse": -1,
+        "values_t_H_Q": [
+          [
+            "-1",
+            "21",
+            "10"
+          ],
+          [
+            "0",
+            "19",
+            "9"
+          ],
+          [
+            "1/2",
+            "18",
+            "17/2"
+          ],
+          [
+            "1",
+            "17",
+            "8"
+          ]
+        ]
+      }
+    ]
+  }
+}

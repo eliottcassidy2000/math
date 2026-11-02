@@ -1,0 +1,11 @@
+{
+  "corrected_bytes": 7519,
+  "corrected_git_blob": "80ebdd4823cdb30a0a673b7eae7915c9043be7b8",
+  "corrected_sha256": "9b01045059f1931533a56563b5cac3cbf1d18f23ac442068b5f36d23d361aee5",
+  "original_bytes": 6147,
+  "original_git_blob": "fae2cf36b1045a7a2108fd2f8cbf4c7c7e1ac306",
+  "original_sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd",
+  "path": "01-canon/theorems/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+  "review_status": "PASS: independent exact-byte review",
+  "reviewed_corrected_sha256": "9b01045059f1931533a56563b5cac3cbf1d18f23ac442068b5f36d23d361aee5"
+}

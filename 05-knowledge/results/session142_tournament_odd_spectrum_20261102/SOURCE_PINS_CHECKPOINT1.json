@@ -1,0 +1,188 @@
+{
+  "sources": [
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "snapshot": "frontier/sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "bytes": 22524,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "snapshot": "frontier/sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "bytes": 16726,
+      "git_blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+      "snapshot": "frontier/sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md"
+    },
+    {
+      "bytes": 10631,
+      "git_blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f",
+      "snapshot": "frontier/sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md"
+    },
+    {
+      "bytes": 9303,
+      "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+      "snapshot": "frontier/sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+    },
+    {
+      "bytes": 15032,
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "snapshot": "frontier/sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md"
+    },
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "snapshot": "frontier/sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "bytes": 22524,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "snapshot": "frontier/sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "bytes": 16726,
+      "git_blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+      "snapshot": "frontier/sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md"
+    },
+    {
+      "bytes": 10631,
+      "git_blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f",
+      "snapshot": "frontier/sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md"
+    },
+    {
+      "bytes": 9303,
+      "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+      "snapshot": "frontier/sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+    },
+    {
+      "bytes": 15032,
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "snapshot": "frontier/sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md"
+    },
+    {
+      "bytes": 6269,
+      "git_blob": "45ef507f8aa1b1a12a33e9fe19314940a311a9d2",
+      "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+      "snapshot": "frontier/sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "04-computation/h63_counterexample_audit_s8.py"
+    },
+    {
+      "bytes": 6269,
+      "git_blob": "45ef507f8aa1b1a12a33e9fe19314940a311a9d2",
+      "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+      "snapshot": "frontier/sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "04-computation/h63_counterexample_audit_s8.py"
+    },
+    {
+      "bytes": 16320,
+      "git_blob": "1c902f116745fa6faf9d94ca9664e7f71a3d9fba",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c",
+      "snapshot": "jacobian_bridge/sources/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md"
+    },
+    {
+      "bytes": 6147,
+      "git_blob": "fae2cf36b1045a7a2108fd2f8cbf4c7c7e1ac306",
+      "sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd",
+      "snapshot": "jacobian_bridge/sources/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md"
+    },
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "snapshot": "jacobian_bridge/sources/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "bytes": 13039,
+      "git_blob": "77265e6fede907f8a94b3bd9cbf091f25f98a07c",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce",
+      "snapshot": "jacobian_bridge/sources/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md"
+    },
+    {
+      "bytes": 11494,
+      "git_blob": "0692478d124a578125c734783bb286b40e681c31",
+      "sha256": "a57b2e8323d96f6358bb56506f5ddfc20e32c075e19d9dcc833690b1a857b0a6",
+      "snapshot": "jacobian_bridge/sources/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md"
+    },
+    {
+      "bytes": 13505,
+      "git_blob": "6f3a39a82d725455d14f625056e36e5446fdb6d2",
+      "sha256": "fc959a24343dae5ee0ffbac31b617ea801133e661049845c6fa43ec915023bba",
+      "snapshot": "jacobian_bridge/sources/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md"
+    },
+    {
+      "bytes": 5854,
+      "git_blob": "e04677adceccc65e0c7202d2c13c4980327f70b6",
+      "sha256": "59d2c487b22918ca6c0d87eec403922f8108eecca8c9ea1a80a4b72f953386ac",
+      "snapshot": "jacobian_bridge/sources/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md"
+    },
+    {
+      "bytes": 9654,
+      "git_blob": "2c52c443dd307d671e292c0833dd2f1ca46bb414",
+      "sha256": "444adda9dd6b5772708e8b2c6b325af07a8b708bfdeb6640606bf78d6a4e68e8",
+      "snapshot": "jacobian_bridge/sources/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md"
+    },
+    {
+      "bytes": 16282,
+      "git_blob": "8258fdffb8129927bb4b56ad196785cad323f324",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df",
+      "snapshot": "jacobian_bridge/sources/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md"
+    }
+  ]
+}

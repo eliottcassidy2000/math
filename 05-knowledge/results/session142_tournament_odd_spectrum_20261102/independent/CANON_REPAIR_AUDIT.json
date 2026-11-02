@@ -1,0 +1,18 @@
+{
+  "accepted_changes": [
+    "Differentiate equivariance at zero: JF(0) D(lambda)=sigma(lambda) JF(0). Invertible JF(0) makes the target action conjugate to the positive source action, and its only fixed vector is zero, so F(0)=0. This supplies the original proof's implicit target contraction and nonempty zero fiber.",
+    "Replace false blanket exclusion of identity-plus-ordinary-homogeneous maps by the explicit positive-weight shear (x+y^2,y) with weights (2,1).",
+    "Restrict grading claims to maps actually admitting the stated grading; do not assert every counterexample has a diagonal grading.",
+    "Preserve the main theorem and original source snapshot; add correction lineage."
+  ],
+  "corrected_sha256": "9b01045059f1931533a56563b5cac3cbf1d18f23ac442068b5f36d23d361aee5",
+  "limits": [
+    "No new unrestricted Jacobian conjecture result.",
+    "No tournament spectrum completeness consequence.",
+    "No local Isabelle build claimed."
+  ],
+  "original_sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd",
+  "patch_sha256": "2a91ccbbe00b3bf8e8c1f0d331dccd68c256f421c944add573a24f6f7450ac21",
+  "path": "01-canon/theorems/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+  "status": "APPROVED"
+}

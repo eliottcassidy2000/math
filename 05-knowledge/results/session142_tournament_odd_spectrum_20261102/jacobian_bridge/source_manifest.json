@@ -1,0 +1,60 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "git_blob": "1c902f116745fa6faf9d94ca9664e7f71a3d9fba",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c",
+      "bytes": 16320
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "git_blob": "fae2cf36b1045a7a2108fd2f8cbf4c7c7e1ac306",
+      "sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd",
+      "bytes": 6147
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "bytes": 5667
+    },
+    {
+      "path": "01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "git_blob": "77265e6fede907f8a94b3bd9cbf091f25f98a07c",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce",
+      "bytes": 13039
+    },
+    {
+      "path": "01-canon/theorems/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md",
+      "git_blob": "0692478d124a578125c734783bb286b40e681c31",
+      "sha256": "a57b2e8323d96f6358bb56506f5ddfc20e32c075e19d9dcc833690b1a857b0a6",
+      "bytes": 11494
+    },
+    {
+      "path": "01-canon/theorems/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "git_blob": "6f3a39a82d725455d14f625056e36e5446fdb6d2",
+      "sha256": "fc959a24343dae5ee0ffbac31b617ea801133e661049845c6fa43ec915023bba",
+      "bytes": 13505
+    },
+    {
+      "path": "01-canon/theorems/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md",
+      "git_blob": "e04677adceccc65e0c7202d2c13c4980327f70b6",
+      "sha256": "59d2c487b22918ca6c0d87eec403922f8108eecca8c9ea1a80a4b72f953386ac",
+      "bytes": 5854
+    },
+    {
+      "path": "01-canon/theorems/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md",
+      "git_blob": "2c52c443dd307d671e292c0833dd2f1ca46bb414",
+      "sha256": "444adda9dd6b5772708e8b2c6b325af07a8b708bfdeb6640606bf78d6a4e68e8",
+      "bytes": 9654
+    },
+    {
+      "path": "01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "git_blob": "8258fdffb8129927bb4b56ad196785cad323f324",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df",
+      "bytes": 16282
+    }
+  ]
+}

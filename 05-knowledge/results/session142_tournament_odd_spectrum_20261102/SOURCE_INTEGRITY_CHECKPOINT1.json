@@ -1,0 +1,6 @@
+{
+  "scope": "Offline Git blob and SHA256 identity of selected historical source bytes; no external formal build or mathematical status promotion.",
+  "source_identities": 22,
+  "source_snapshots": 16,
+  "status": "PASS"
+}

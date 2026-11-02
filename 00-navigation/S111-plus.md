@@ -69,3 +69,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session140](S140.md): exponential Collatz growth, unbounded routing, proper unit-distance realizations, exact return clocks/cycle lifts, corrected HN recovery and hyperbolic binary-tree control; no convergence or new plane-coloring bound.
 
 [Session141](S141.md): functional-layer capacity and connected extremizers; tau<=17 excess-two classification; sharp hyperbolic binary-tree capacity; square-path common blocks and cubic n26. Typed20 roles, no conjecture shortcut.
+
+[Session142](S142.md): recovered7/21 exclusion, exact prime-lane obstruction and factor length; Jacobian parity and legal-source barriers. Universal tournament spectrum remains OPEN.

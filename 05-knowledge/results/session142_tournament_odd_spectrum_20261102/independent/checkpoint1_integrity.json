@@ -1,0 +1,28 @@
+{
+  "frontier_payloads": 17,
+  "jacobian_payloads": 15,
+  "jacobian_source_blobs": 9,
+  "negative_controls": [
+    {
+      "control": "false21 spectrum",
+      "expected_failure": true,
+      "mode": "normal"
+    },
+    {
+      "control": "corrupt source digest",
+      "expected_failure": true,
+      "mode": "normal"
+    },
+    {
+      "control": "false21 spectrum",
+      "expected_failure": true,
+      "mode": "optimized"
+    },
+    {
+      "control": "corrupt source digest",
+      "expected_failure": true,
+      "mode": "optimized"
+    }
+  ],
+  "status": "PASS"
+}

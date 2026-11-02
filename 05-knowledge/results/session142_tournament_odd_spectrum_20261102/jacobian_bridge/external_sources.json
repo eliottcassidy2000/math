@@ -1,0 +1,30 @@
+{
+  "retrieved_utc_date": "2026-11-02",
+  "sources": [
+    {
+      "title": "Formal Verification of an Explicit Counterexample to the Jacobian Conjecture",
+      "url": "https://isa-afp.org/entries/Jacobian_Counterexample.html",
+      "source_date": "2026-07-20",
+      "role": "Current primary formal-verification report; formal build not locally run"
+    },
+    {
+      "title": "An elementary way to find a counterexample to the Jacobian Conjecture",
+      "url": "https://arxiv.org/abs/2609.17795",
+      "version": "v1",
+      "source_date": "2026-09-15",
+      "role": "Current primary mathematical construction; abstract inspected"
+    },
+    {
+      "title": "The two-dimensional Centralizer Conjecture",
+      "url": "https://arxiv.org/abs/1802.04685v2",
+      "source_date": "2018-02-20",
+      "role": "Characteristic-zero field form and explicit distinction from domain conjecture"
+    },
+    {
+      "title": "Computational complexity of counting coincidences",
+      "url": "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf",
+      "section": "6.5, Conjecture 6.2",
+      "role": "Tournament spectrum completeness remains a conjecture in this source"
+    }
+  ]
+}

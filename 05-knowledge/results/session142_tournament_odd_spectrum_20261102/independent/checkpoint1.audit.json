@@ -1,0 +1,73 @@
+{
+  "external_status": {
+    "AFP": "primary entry checked; not locally built",
+    "Busch_Lemma1_and_Corollary1": "primary PDF checked",
+    "Royle_prefix": "strictly less than80557, i.e. safe odd endpoint80555"
+  },
+  "files": [
+    {
+      "bytes": 6632,
+      "path": "verify_independent.py",
+      "sha256": "3f6a090a7eab8f75fce30317316a4b0815a66d6964ff7f47b8b8ef1205036f15"
+    },
+    {
+      "bytes": 5370,
+      "path": "verification.normal.json",
+      "sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "bytes": 5370,
+      "path": "verification.optimized.json",
+      "sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "bytes": 2457,
+      "path": "check_checkpoint1.py",
+      "sha256": "bbc5c240a43f85bf3abfbf1b758a6bcd53c3e01b3f104edfe02fb62d2ffd80c2"
+    },
+    {
+      "bytes": 572,
+      "path": "checkpoint1_integrity.json",
+      "sha256": "2d17ddc006ac63eb6373134c483715edf5bd4cf64fa6d9459e6c6edbae46d987"
+    },
+    {
+      "bytes": 1313,
+      "path": "frontier_rerun.normal.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 1313,
+      "path": "frontier_rerun.optimized.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 7503,
+      "path": "jacobian_rerun.normal.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 7503,
+      "path": "jacobian_rerun.optimized.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    }
+  ],
+  "independent_polynomial_arithmetic": "hand-expanded coefficients with carry-checked Kronecker monomial indices; exact determinant and rational collision",
+  "independent_tournament_census": 33867,
+  "limits": [
+    "No all-value completeness claim.",
+    "No local Isabelle build.",
+    "Large reported tournament prefixes not rerun.",
+    "Inherited Jacobian source mechanisms not globally reproved."
+  ],
+  "normal_optimized_identical": true,
+  "producer_manifests": {
+    "frontier/SHA256SUMS": "997c970e841947450a80509124cd4438989391226920e67e052d84ca4e5fcc39",
+    "jacobian_bridge/MANIFEST.json": "63c066ac291f6f2d9823e05d80e322364a59221bcdcd6ece5bf601f743114873"
+  },
+  "scope": "Checkpoint1 independent audit: exclusions, target-monoid reduction, Jacobian bridge. Full spectrum completeness OPEN.",
+  "source_blobs_checked": {
+    "frontier": 7,
+    "jacobian": 9
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,89 @@
+{
+  "order5_structural_cover": {
+    "nearly_transitive_count": 9,
+    "overlap_cases": 16,
+    "strong_spectrum": [
+      9,
+      11,
+      13,
+      15
+    ]
+  },
+  "order6_structural_cover": {
+    "nearly_transitive_count": 17,
+    "overlap_cases": 256,
+    "strong_spectrum": [
+      15,
+      17,
+      19,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      37,
+      41,
+      43,
+      45
+    ]
+  },
+  "strong4": {
+    "canonical_code": 4,
+    "labelled_count": 24,
+    "single_relabelling_orbit": true,
+    "spectrum": [
+      5
+    ]
+  },
+  "strong_carries": {
+    "49": {
+      "code": 238327,
+      "order": 7,
+      "rows": [
+        110,
+        44,
+        32,
+        116,
+        7,
+        16,
+        54
+      ]
+    },
+    "63": {
+      "code": 201850833,
+      "order": 8,
+      "rows": [
+        162,
+        252,
+        249,
+        17,
+        1,
+        152,
+        185,
+        24
+      ]
+    },
+    "343": {
+      "code": 119616630,
+      "order": 8,
+      "rows": [
+        236,
+        161,
+        74,
+        130,
+        143,
+        220,
+        26,
+        68
+      ]
+    }
+  },
+  "target_monoid": {
+    "allowed_values_checked": 4999,
+    "atoms_checked": 1452,
+    "bound": 10001,
+    "formula_matches": true,
+    "not_a_tournament_existence_check": true
+  }
+}

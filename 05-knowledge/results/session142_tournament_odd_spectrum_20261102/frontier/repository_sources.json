@@ -1,0 +1,128 @@
+[
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+    "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "bytes": 5667,
+    "local_snapshot": "sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+    "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+    "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "bytes": 22524,
+    "local_snapshot": "sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+    "git_blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+    "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+    "bytes": 16726,
+    "local_snapshot": "sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+    "git_blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+    "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f",
+    "bytes": 10631,
+    "local_snapshot": "sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+    "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+    "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+    "bytes": 9303,
+    "local_snapshot": "sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+    "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+    "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+    "bytes": 15032,
+    "local_snapshot": "sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+    "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+    "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "bytes": 5667,
+    "local_snapshot": "sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+    "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+    "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "bytes": 22524,
+    "local_snapshot": "sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+    "git_blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+    "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+    "bytes": 16726,
+    "local_snapshot": "sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+    "git_blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+    "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f",
+    "bytes": 10631,
+    "local_snapshot": "sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+    "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+    "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+    "bytes": 9303,
+    "local_snapshot": "sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+    "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+    "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+    "bytes": 15032,
+    "local_snapshot": "sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+    "path": "04-computation/h63_counterexample_audit_s8.py",
+    "git_blob": "45ef507f8aa1b1a12a33e9fe19314940a311a9d2",
+    "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+    "bytes": 6269,
+    "local_snapshot": "sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+    "path": "04-computation/h63_counterexample_audit_s8.py",
+    "git_blob": "45ef507f8aa1b1a12a33e9fe19314940a311a9d2",
+    "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+    "bytes": 6269,
+    "local_snapshot": "sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py"
+  }
+]

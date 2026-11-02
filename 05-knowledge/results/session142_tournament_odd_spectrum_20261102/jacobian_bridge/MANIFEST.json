@@ -1,0 +1,88 @@
+{
+  "packet": "session142-jacobian-spectrum-bridge",
+  "status": "FROZEN_LOCAL_VERIFIED",
+  "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+  "python": "3.12.14",
+  "commands": [
+    "python3 verify_bridge.py | cmp - verification.json",
+    "python3 -O verify_bridge.py | cmp - verification.json"
+  ],
+  "scope": "Elementary proofs and finite-exact hostiles, not tournament spectrum completeness; no local Isabelle build.",
+  "files": [
+    {
+      "path": "PROOFS.md",
+      "sha256": "0b8c09f38987d8a548ac39094e2e0dbd315ff230be1a947b10fc5ac60d43de53",
+      "bytes": 15669
+    },
+    {
+      "path": "verify_bridge.py",
+      "sha256": "2d442d2bba45c0b9b5f39b4150e919be060ebca7d105c49b795a7401c2f2e5f8",
+      "bytes": 9024
+    },
+    {
+      "path": "verification.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b",
+      "bytes": 7503
+    },
+    {
+      "path": "verification_optimized.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b",
+      "bytes": 7503
+    },
+    {
+      "path": "source_manifest.json",
+      "sha256": "467e258bf215ac926426cf5be5531270fa0d80d0e24ebe99bd8a47cbed21730f",
+      "bytes": 2746
+    },
+    {
+      "path": "external_sources.json",
+      "sha256": "18c6b801d1f9c133384a38d4b2e62e30ec4eb766d144fb7f62c67a17e68ad4ac",
+      "bytes": 1188
+    },
+    {
+      "path": "sources/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c",
+      "bytes": 16320
+    },
+    {
+      "path": "sources/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd",
+      "bytes": 6147
+    },
+    {
+      "path": "sources/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "bytes": 5667
+    },
+    {
+      "path": "sources/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce",
+      "bytes": 13039
+    },
+    {
+      "path": "sources/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md",
+      "sha256": "a57b2e8323d96f6358bb56506f5ddfc20e32c075e19d9dcc833690b1a857b0a6",
+      "bytes": 11494
+    },
+    {
+      "path": "sources/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "sha256": "fc959a24343dae5ee0ffbac31b617ea801133e661049845c6fa43ec915023bba",
+      "bytes": 13505
+    },
+    {
+      "path": "sources/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md",
+      "sha256": "59d2c487b22918ca6c0d87eec403922f8108eecca8c9ea1a80a4b72f953386ac",
+      "bytes": 5854
+    },
+    {
+      "path": "sources/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md",
+      "sha256": "444adda9dd6b5772708e8b2c6b325af07a8b708bfdeb6640606bf78d6a4e68e8",
+      "bytes": 9654
+    },
+    {
+      "path": "sources/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df",
+      "bytes": 16282
+    }
+  ]
+}

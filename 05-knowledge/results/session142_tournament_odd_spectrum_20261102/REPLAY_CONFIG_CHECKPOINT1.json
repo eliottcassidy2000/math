@@ -1,0 +1,62 @@
+{
+  "proof_corruption": "jacobian_bridge/PROOFS.md",
+  "scientific_mutations": [
+    {
+      "after": "5: [9, 11, 13, 15, 21]",
+      "before": "5: [9, 11, 13, 15]",
+      "label": "false-small-strong-spectrum",
+      "reason": "small spectrum",
+      "script": "frontier/verify_frontier.py"
+    },
+    {
+      "after": "check(det == const(-3), 'Full polynomial Jacobian determinant failed')",
+      "before": "check(det == const(-2), 'Full polynomial Jacobian determinant failed')",
+      "label": "false-polynomial-determinant",
+      "reason": "Full polynomial Jacobian determinant failed",
+      "script": "jacobian_bridge/verify_bridge.py"
+    },
+    {
+      "after": "need(det3(j)=={0:-3},'exact Jacobian determinant')",
+      "before": "need(det3(j)=={0:-2},'exact Jacobian determinant')",
+      "label": "false-independent-determinant",
+      "reason": "exact Jacobian determinant",
+      "script": "independent/verify_independent.py"
+    }
+  ],
+  "scientific_tests": [
+    {
+      "label": "frontier-exact",
+      "output": "frontier/verify.normal.json",
+      "script": "frontier/verify_frontier.py"
+    },
+    {
+      "label": "jacobian-and-boolean-exact",
+      "output": "jacobian_bridge/verification.json",
+      "script": "jacobian_bridge/verify_bridge.py"
+    },
+    {
+      "label": "independent-exact",
+      "output": "independent/verification.normal.json",
+      "script": "independent/verify_independent.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "frontier-source-integrity",
+      "output": "frontier/sources.normal.json",
+      "script": "frontier/verify_sources.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "independent-frozen-payloads",
+      "output": "independent/checkpoint1_integrity.json",
+      "script": "independent/check_checkpoint1.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "source-git-blob-identities",
+      "output": "SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "script": "verify_source_pins.py"
+    }
+  ],
+  "scope": "Recovered all-order exclusions and elementary guarded-response proofs with finite exact controls; no universal tournament realization, no local external formal build, no rerun of inherited large prefixes."
+}
