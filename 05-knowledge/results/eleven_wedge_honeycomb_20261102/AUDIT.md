@@ -68,3 +68,49 @@ Replace `python3` by `python3 -O` for assertion-independent replays. Explicit
 exceptions enforce checks. The matrix consumer imports the predecessor's
 exact determinant/path/cycle routines; it is independent of the partition
 compiler, not a separately authored replacement for those inherited routines.
+
+## Geometry and twenty-object extension
+
+`geometry_controls.py` independently reconstructs the root5 native inverse
+tree, honeycomb and triangular balls through26. It checks8,001 pairs at
+each base2,3,4,5 through binary depth6 using exact rational cosh distances;
+the infinite metric statement rests on the analytic proof. It enumerates
+all6,431 K4-free eight-vertex graphs, verifies the two-diamond unit realization
+over Q(sqrt(3)), and checks three exact rational consequences of the improved
+weighted inequality. Actual divisor lists test the user's arithmetic inputs.
+
+`twenty_controls.py` enumerates the complete square25 path bank from its
+forced leaf18, verifies both transported operations on all20 objects,
+and reconstructs the polynomial from actual union sizes. Invariant color
+refinement proves graph rigidity with12,23,25 classes. Six-slot rotation
+is an explicit failed transport. The finite-field counts in TWENTY_SHADOW
+are elementary fixed-field counts, not computational conjectures.
+
+`extension26.py` checks all4,864 active G25 orientations and all four new
+port orientations. It verifies old-state transition closure, the36/38/38
+refinement, and the same final equivalence starting from current legality
+rather than the old quotient. Literal arc membership independently verifies
+the exhibited one-edge source pair's counts1 and2. The old dead fibre is
+not enumerated and is excluded from the minimality claim.
+
+`next12_probe.py` checks37,038 padded-core cases and77 clique partitions.
+Those are declared restricted universes; the all-order12 claim stays OPEN.
+All four side-lane checkers pass in normal and optimized Python with identical output:
+
+```bash
+python3 geometry_controls.py > /tmp/geometry.replay.json
+python3 twenty_controls.py > /tmp/twenty.replay.json
+python3 next12_probe.py > /tmp/next12.replay.json
+python3 extension26.py > /tmp/extension26.replay.json
+cmp geometry_controls.json /tmp/geometry.replay.json
+cmp twenty_controls.json /tmp/twenty.replay.json
+cmp next12_probe.json /tmp/next12.replay.json
+cmp extension26.json /tmp/extension26.replay.json
+```
+
+The historical THM-461 repair has elementary exact witnesses: four points
+at spacing2 have no unit distances; two equilateral triangles sharing an
+edge realize u(4)=5, and K4 cannot be a planar unit-distance graph. The
+second real-root correction follows from243<15625/64. These do not depend
+on a current unverified extremal table. The source correction and its
+mechanism are logged in MISTAKES.md.

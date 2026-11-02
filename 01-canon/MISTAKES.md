@@ -18,6 +18,14 @@ a historical synthesis or promoting computational evidence.
 - **Missing coordinate / next test:** retain incidence profiles and how a new port splits a mixed atom. A two-bit mixed source01 versus10 is separated by a new guard on the first bit.
 - **Separate prompt correction:** the Collatz honeycomb deficit is704-694=10, not20. The obstruction still holds; no prior repo theorem using20 is retracted. The recovered aliquot role of20 is the unique five-proper-divisor factor-pair overlap, and16 does not satisfy that predicate.
 
+## 2026-11-02 — extremal edge count cannot replace the actual source count
+
+- **Source:** THM-461, `01-canon/theorems/THM-461-unit-distance-deletion-ladder-and-floor.md`, recovered during `05-knowledge/results/eleven_wedge_honeycomb_20261102/GEOMETRY.md`.
+- **Witness / first failed implication:** four collinear points at mutual successive spacing2 have no unit edges and minimum degree0, whereas `u(4)-u(3)=5-3=2`. Deleting a vertex from a nonextremizer leaves `m-d(v)` edges, not `u(n)-d(v)`.
+- **Repair / strongest survivor:** every actual source satisfies `delta>=m-U(n-1)` for a valid extremal upper bound `U`. Only extremizers permit `m=u(n)`. The deletion ladder itself is unchanged; its numerical claims are explicitly dated to AMP. No near-regularity or hull-degree contradiction follows from this minimum-degree inequality alone.
+- **Related arithmetic correction:** the same proof's claim that `3^x=x^3` only at positive real `x=3` is false: a second root lies in `(2,5/2)`, since `9>8` but `243<15625/64` after squaring the endpoint comparison. The planar specialization `kappa/2=3` and the positive crossing `3n=n^(4/3)` at27 survive.
+- **New question / missing coordinate:** when transporting a deletion certificate retain the actual edge count and whether extremality has been proved; do not infer a universal source bound from a maximum statistic.
+
 ## 2026-11-02 — the prime square-sum minimum has a singleton exception
 
 - **Source:** THM-4860, `01-canon/theorems/THM-4860-the-prime-square-sum-graph-is-bipartite-by-residue-mod-4-two-primes-1-mod-3-are-never-adjacent-chebyshev-bias-obstruction-to-prime-square-sum-paths-none-below-615731-and-the-25-primes-below-100-by-ogg-layer.md`.

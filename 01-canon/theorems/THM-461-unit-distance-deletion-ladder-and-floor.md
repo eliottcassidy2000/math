@@ -15,6 +15,12 @@ sharpens:
 
 # THM-461: the unit-distance upper-bound ladder above n=22 is elementary, and the 3N-floor it can reach is exhausted at N*≥25
 
+**2026-11-02 correction and dating:** the min-degree corollary below now uses
+the actual edge count of the source graph, specializing to `u(n)` only for
+an extremizer. The real-exponent uniqueness claim in (C) is also removed.
+The numerical ladder in this file is the cited AMP baseline, not a claim
+that these remain the strongest bounds after that paper.
+
 ## Context
 
 `u(n)` = max number of **unit distances** among `n` points in the plane (Erdős).
@@ -33,7 +39,7 @@ THM-431-C). This theorem dissects the **upper-bound (floor) side** of `N*`.
 ```
         Σ_v u(G−v) = (n−2)·u(G),     hence     u(n) ≤ ⌊ n · u_max(n−1) / (n−2) ⌋.
 ```
-**Consequence:** the best-known upper bounds for `u(23..27)` — `66, 72, 78, 84, 90`
+**Consequence:** the AMP upper bounds for `u(23..27)` — `66, 72, 78, 84, 90`
 — are **exactly** this averaging ladder iterated from the single hard bound
 `u(22) ≤ 61`. Only `u(21)=57` (exact) and `u(22)≤61` require nontrivial machinery;
 everything above `n=22` is one elementary averaging step per `n`.
@@ -73,16 +79,18 @@ method beats averaging.) ∎
 **(B).** `u(m) ≤ ⌊m·u(m−1)/(m−2)⌋ ≤ 3m` ⟺ `m·u(m−1)/(m−2) < 3m+1` ⟺
 `u(m−1) < (3m+1)(m−2)/m`, i.e. `u(m−1) ≤ A(m) := ⌈(3m+1)(m−2)/m⌉ − 1`. Direct
 evaluation: `A(25)=69, A(26)=72, A(27)=75` (exact integers; checked). The
-comparisons with `L(m−1)` are arithmetic. For the impossibility: any planar set
-realizes `u(26) ≥ L(26) = 76 > 75 = A(27)`, so the averaging hypothesis `u(26) ≤
+comparisons with `L(m−1)` are arithmetic. For the impossibility: the construction
+establishes `u(26) ≥ L(26) = 76 > 75 = A(27)`, so the averaging hypothesis `u(26) ≤
 A(27)` is **false for the true `u(26)`**; the averaging step from `n=26` yields at
 best `u(27) ≤ ⌊27·76/25⌋ = 82`, which does not exclude `u(27)=82`. ∎
 
 **(C).** `27^{4/3} = (3³)^{4/3} = 3⁴ = 81 = 3·27`. The integer polynomial
 `(3n)³ − n⁴ = n³(27−n)` is `>0` for `n<27`, `=0` at `n=27`, `<0` for `n>27`, so the
-line `3n` and curve `n^{4/3}` cross only at `n=27`. `3^{κ/2}` and `(κ/2)³` are equal
-iff `κ/2 = 3` (the equation `3^x = x³` over positive reals has `x=3` as its
-relevant root), which holds for the Euclidean plane `κ=6`. ∎
+line `3n` and curve `n^{4/3}` cross only at positive `n=27`. At the planar
+value `κ/2=3`, the quantities `3^{κ/2}` and `(κ/2)³` both equal27.
+This is not an iff over all positive real exponents: `3^x=x³` also has a
+root in `(2,5/2)`, since `3²>2³` but `3^(5/2)<(5/2)³`.
+The latter comparison follows by squaring: `243<15625/64`. ∎
 
 ## What this says about N* (the payoff)
 
@@ -104,15 +112,17 @@ much closer target than the naïve "prove `u(27)≤81`". This is the precise sen
 which "the cost of Euclidean realizability" (THM-431) lives in a handful of `O(1)`
 edge counts at `n=24,25,26`.
 
-**Corollary (min-degree necessary condition, rigorous).** Any planar set on `n`
-points has unit-distance min-degree `δ ≥ u(n) − u_max(n−1)`: deleting a min-degree
-vertex leaves `u(n) − δ ≤ u_max(n−1)`. Hence a `3N`-beating graph is forced toward
-near-regularity — e.g. `u(25)=78` ⟹ `δ ≥ 6`; conditionally on construction
-optimality (`u_max(26)=76`), `u(27)=82` ⟹ `δ ≥ 6`. This conflicts with the
-low-degree convex-hull/boundary vertices that finite planar sets must have, which
-is the mechanism, not yet a quantitative bound (the local degree of a hull vertex
-is *not* bounded — neighbors fill a semicircular arc — so the obstruction is global,
-i.e. the cherry/incidence bound, THM-421).
+**Corollary (min-degree necessary condition, rigorous).** A planar unit-distance
+graph on `n` vertices with **actual edge count `m`** has
+`δ ≥ m − u_max(n−1)`: deleting a min-degree vertex leaves
+`m − δ ≤ u_max(n−1)`. Only an extremal graph permits replacing `m` by `u(n)`.
+For example an extremizer with `u(25)=78` has `δ≥6`; conditionally on
+`u_max(26)=76`, an extremizer with `u(27)=82` has `δ≥6`.
+The previous unqualified statement fails for four widely separated points:
+their `δ=0`, whereas `u(4)−u(3)=5−3=2`.
+This is a minimum-degree constraint, not a geometric upper bound or a proof
+of near-regularity. A hull vertex can have arbitrarily many neighbors on a
+semicircle, so no local hull-degree obstruction follows.
 
 ## Honest scope
 

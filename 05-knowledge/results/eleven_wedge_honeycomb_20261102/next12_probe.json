@@ -1,0 +1,60 @@
+{
+  "clique_minimum": 0,
+  "clique_negative_witnesses": [],
+  "clique_zero_witnesses": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "core_cases": 37038,
+  "core_rows": [
+    {
+      "cases": 12346,
+      "fair_pair_components": 0,
+      "isolates_added": 4,
+      "minimum": 0,
+      "witnesses": [
+        "G?????"
+      ]
+    },
+    {
+      "cases": 12346,
+      "fair_pair_components": 1,
+      "isolates_added": 2,
+      "minimum": 319,
+      "witnesses": [
+        "G?`@?_"
+      ]
+    },
+    {
+      "cases": 12346,
+      "fair_pair_components": 2,
+      "isolates_added": 0,
+      "minimum": 0,
+      "witnesses": [
+        "G?`@?_"
+      ]
+    }
+  ],
+  "scope": "All eight-vertex cores plus k=0,1,2 separate edges and enough isolated vertices to make12; all77 disjoint-clique supports of order12.",
+  "status": "finite probe complete; universal inequality OPEN"
+}

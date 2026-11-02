@@ -16,7 +16,22 @@ must be checked by a complete partition ledger. Least-used sidecar: native
 length-three square-sum bridges and metric volume versus boundary incidence.
 Method cards: residual-obligation typing; recompute essentiality per consumer.
 
-Initial positive signal: at order11, M22223<=M2223/16 pays the negative
-full-cover term while retaining7/8 M2223. The remaining triangle bracket
-is an eight-vertex multiaffine graph polynomial. This is under verification,
-not yet a promoted theorem.
+Final anchor: M22223<=M2223/16 retains7/8 M2223. The eight-vertex bracket
+and complete ten-base extension certificate pass, proving sharp order11.
+The payment is7/40 W once, with153/640 tau left. See PROOF.md.
+
+Incoming ca437c4534 supplies an independently audited functional-layer
+capacity theorem and a stronger aliquot arity classification; both are
+inherited with attribution in RECOVERY.md. Comparing the board after that
+integration led to the actual K4-free stability restriction and its unit
+diamond equality support. Density and coloring remain different targets.
+
+The niche now has an exact20-object reversal/compatibility map and a rotation
+hostile. The wildcard has a gapped hyperbolic tree with two-sided metric
+control. NEXT_12.md retains the new even-cover obligation as OPEN.
+
+Following the niche to the next native integer produced a stronger result:
+the actual10->26->23 attachment exposes the previously erased6--10 bit.
+The minimal active-source terminal-extension observer has38 states, versus
+32 before extension. It preserves every old complement word; it does not
+yet include dead sources or new26-complement commands. See NATIVE_26.md.

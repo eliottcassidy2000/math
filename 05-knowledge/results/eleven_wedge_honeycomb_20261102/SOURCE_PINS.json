@@ -1,0 +1,112 @@
+{
+  "correction_note": "The THM-461 pin records incoming error provenance; the shared theorem is repaired in this checkpoint and MISTAKES.md states the correction.",
+  "scope": "Referenced proof inputs and recovered context; pinning is not an assertion that every historical theorem was independently reaudited.",
+  "source_revision": "fc2d85f9a81c4bf9a2b22eecc8b2fc562922c1ad",
+  "sources": [
+    {
+      "git_blob": "5ad5948f088d8e2039627c775ba88b0ae532d230",
+      "path": "01-canon/theorems/THM-2761-graph-edge-sum-discriminant-codegree-factorization-and-graceful-sign-gauge.md",
+      "sha256": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e"
+    },
+    {
+      "git_blob": "ad9b838e514264532e4cb847a30100d1db64c42b",
+      "path": "01-canon/theorems/THM-461-unit-distance-deletion-ladder-and-floor.md",
+      "sha256": "6b6d4a799040ca73ee3c06bdaaf160d801571024bfbce00abf1fc906ee1450e3"
+    },
+    {
+      "git_blob": "027a91e5ad4b6957214b251c14bbefd79f280321",
+      "path": "01-canon/theorems/THM-4661-odd-degree-carriers-a-failed-six-colour-exterior-has-at-least-twenty-vertices-and-equality-testers-are-seven-colour-certificates.md",
+      "sha256": "fc389aa4d1c22a7182b14f40f6c6fe05bd1806b4cd83049d297df9428199b7d3"
+    },
+    {
+      "git_blob": "2beed45e434697471e022f30cd5c08c1ef914b8d",
+      "path": "01-canon/theorems/THM-4663-polygon-ladder-of-the-finite-unit-distance-graphs-closed-walks-are-kloosterman-moments-pentagons-level-15-hexagons-level-6.md",
+      "sha256": "438addc3f5cfd7d4a5e89e6dd8754e1b28e46baf9c86dbc2898436d24a5628b9"
+    },
+    {
+      "git_blob": "d84acd997fbb7dd181a86d2f5059ae83dca17a70",
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/ATLAS.md",
+      "sha256": "60d672f425b42718e2a3a4e1c7bef0d4c7f8f1ae7580169dbbb9a55ee9804b5a"
+    },
+    {
+      "git_blob": "cdf5522671ea0bd6592e7c4791b76af9160dfce3",
+      "path": "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md",
+      "sha256": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2"
+    },
+    {
+      "git_blob": "777ec7b7cf5a2e58aab43bc599fb73d4e4c0d61f",
+      "path": "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md",
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9"
+    },
+    {
+      "git_blob": "2d65903ba5c5d8df18cb5d49f93b2a5818a5b882",
+      "path": "05-knowledge/results/graceful_square_exchange_20261019.md",
+      "sha256": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8"
+    },
+    {
+      "git_blob": "dfa4290b88b65740d53ae11c710f5a1fb66b63d5",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md",
+      "sha256": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d"
+    },
+    {
+      "git_blob": "1fd4ab60d701a0cdcd73b7a78da15320394dc4da",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md",
+      "sha256": "3b3e95d0e1fe422516b604299ac3f6f0a2a4ad57ec3d0f5dc9ce31ab6affd990"
+    },
+    {
+      "git_blob": "322efaa8d652af6e2476f16c8e1d8f507fbf5900",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/NEXT_11.md",
+      "sha256": "246d7e46047401f03600af581b4848bff79997f40ca85e9cd0c3e52bbeb763e4"
+    },
+    {
+      "git_blob": "c821bb4b8164302b443b145c4a3b0c5270c1da11",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/CHECKPOINT2.md",
+      "sha256": "bf236c1a7ee3a73866e7b361a686645da1731719378dc3d680562ea15a7ee559"
+    },
+    {
+      "git_blob": "1253da7d85292842a21900b00a7674c4c22f68db",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md",
+      "sha256": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f"
+    },
+    {
+      "git_blob": "b8fb05bed5cbbe9451cc6118798bff650f79de37",
+      "path": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md",
+      "sha256": "19d5854bcec14cd7e94cea32d7f4654cd9915a6c3f325c9b4e5e43e74dab885e"
+    },
+    {
+      "git_blob": "44bff2bf95dff16739a45d16bcbf93cc6d109b26",
+      "path": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/unit_distance/PROOF.md",
+      "sha256": "15fc9acbb7bc9f6ac1eb3044987364345bd4ec747d6ed9de04c780154fdb6a4f"
+    },
+    {
+      "git_blob": "aeec93b86ded0c1245202a2e54a9e97c7d92f5f4",
+      "path": "05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md",
+      "sha256": "128d084d32d3680a0d86a3ec881606268b4195ecf93fec00fdee92e092f751c1"
+    },
+    {
+      "git_blob": "938ecf27547b6fa2edb91e43a4c45f6acee0e7d1",
+      "path": "05-knowledge/results/session42_shared_lattices_square_colors_20261023/SYNTHESIS.md",
+      "sha256": "56fa722d43e18584b61a1b44ff2dc32de07b8338220c87937b5916c2a93d6f57"
+    },
+    {
+      "git_blob": "d9d78908d6c631f1ee222f4bd3c6f36127d94855",
+      "path": "05-knowledge/results/square_sum_archive_stability_20261102/RECOVERY.md",
+      "sha256": "bc45092b8d3fd7a6f37eba4608a69a5ab3204427666691ba67421bd4ccfa172d"
+    },
+    {
+      "git_blob": "ae077ce3c60938f83d3f330e053156c9c0fea6a0",
+      "path": "05-knowledge/results/square_sum_archive_stability_20261102/STABILITY_10.md",
+      "sha256": "922ee97e1abccaf61d8119fe616dddbf26fced88b3a15e3a4163ec534f7e6891"
+    },
+    {
+      "git_blob": "38bb75c0c312b67bd086e056e58ff1b065559dfd",
+      "path": "05-knowledge/results/square_sum_archive_stability_20261102/verify_reduction.py",
+      "sha256": "c0f719c6bc340c28a5dba40de5045efdec04d428eb00d257fc1f2fbbc1ba1c54"
+    },
+    {
+      "git_blob": "ad4b098ee0ec9e0552ac87f2be9289b94951cade",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md",
+      "sha256": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5"
+    }
+  ]
+}
