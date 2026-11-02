@@ -14,3 +14,9 @@ Closest proved mechanism: Session138's binary-baseline matching extraction, nonl
 | Square-sum paths | Preserve actual Hamiltonian existence | Forbidden-edge mask and all visited vertices | Small graph with zero paths despite a tournament completion |
 
 Scope rule: equal counts, finite residues and a common total order do not identify these objects. Every connection must provide its map, predicate, loss and sidecar. No subagents are used in this session.
+
+## Incoming update: 9c7eb0b13e
+
+Session139 independently reached748 and then526, with exact all-modulus context clocks and a weighted n5 isospectral hostile repaired by M23. The anchor now uses its stronger local dual. Retaining the unused light-mass gain proves n>=514;10..513 is the actual remaining interval. The old748 two-bin obstruction motivates this change of coordinate rather than constant tuning.
+
+The niche lane must inherit the complete factorial-transform/CRT context model, not rederive scalar modular universality. The wildcard will encode square-sum Hamiltonicity by a missing-edge valuation; a fair-tournament completion alone is intentionally blind to it. The common lesson is to retain incidence or guard data needed by the next operation.

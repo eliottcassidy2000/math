@@ -1,9 +1,11 @@
-# Sharp stability through the coupled rounding budget
+# Sharp stability by a tail paid with actual light mass
 
-**PROVED scoped.** The exact weighted tournament determinant-gap coefficient and its full equality classification hold for every **n>=748**, improving the inherited sufficient threshold1500. The newly resolved interval is748..1499; **orders10..747 remain OPEN**. The unrestricted raw Hamiltonian-path spectrum remains OPEN.
+**PROVED scoped.** The exact weighted tournament determinant-gap coefficient and its complete equality classification hold for every **n>=514**. Together with inherited n=3..9, **orders10..513 remain OPEN**. The unrestricted raw Hamiltonian-path spectrum remains OPEN.
 
-[Proof](STABILITY_748.md) · [Concept board](BOARD.md) · [Verification](VERIFICATION.md).
+[Current proof](STABILITY_514.md) · [Verification](VERIFICATION.md) · [Concept board](BOARD.md).
 
-The improvement couples the nonlinear gap and matching extraction before estimating their losses, then adds the disjoint heavy/light group energies before spending the common binary baseline. The same two-bin scalar relaxation has ideal ceiling(3-2sqrt(2))/16: below this threshold range, merely polishing its constants cannot finish the problem.
+The initial shared-budget argument reached748. A clean fetch recovered independently audited Session139 progress through526. The new continuation keeps its positive light-mass term: when the retained matching is small, this mass pays the larger geometric tail. This newly resolves514..525 beyond that incoming result. The initial748 proof and receipts are retained as a superseded checkpoint, not advertised as progress beyond526.
 
-This packet inherits Session138 at291b4d975784. It distinguishes raw H from presentation count H/Aut, modular occurrence from exact integer attainment, and a tournament completion from a guarded square-sum path. Further side-lane investigations will be recorded separately.
+The sharp coefficient is `(4/R)[1-(3/4)^R-1_(n even)(1/4)^R]`, R=floor(n/2). Positive-variance equality consists exactly of maximal ordinal fair pairs, with one singleton at odd order. The arithmetic proof does not use an RH analogy, a graph census, or a spectral reconstruction claim.
+
+This packet inherits Session138 at291b4d975784 and Session139 at9c7eb0b13e. No external novelty or independent-agent-audit claim is made for the new514 proof. The accepted526 input has its own published independent audits.
