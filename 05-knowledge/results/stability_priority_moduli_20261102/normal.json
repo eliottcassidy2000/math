@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "stability_276": {
+    "small_variance_slack": "59663/1100000",
+    "retained_floor_slack": "31599/88000",
+    "retained_derivative_lower": "924931/13800000",
+    "tail_at_one_removed": "1396293266287145424835817133654306310391888853557721792522388250288736203859852169333/82381302710947323413678431486234848634804565018554791573084670000490409844483372875776",
+    "tail_at_max_removed": "18763479311/119479547723776",
+    "absorption_slack": "58643/135700000",
+    "joint_positive_slack": "1/1380",
+    "n274_scalar_hostile": "-14246000649/35893041692672"
+  },
+  "intermediate_stability_500": {
+    "exp12_taylor_slack": "5514819/175",
+    "small_variance_slack": "3358167/49900000",
+    "retained_mass_endpoint": "654055969/12375200000",
+    "retained_mass_derivative_lower": "187469/24800000",
+    "epsilon_integer_endpoint": "20520278086277476",
+    "baseline_absorption_endpoint": "464029788839/178309616100000",
+    "joint_budget_slack": "1/465",
+    "matching_size_slack": "2",
+    "variance_upper_bound_slack": "34375/6986"
+  },
+  "graphs": {
+    "universes": [
+      {
+        "n": 5,
+        "integer_weight_alphabet": [
+          0,
+          1,
+          2
+        ],
+        "graphs": 59049
+      },
+      {
+        "n": 6,
+        "integer_weight_alphabet": [
+          0,
+          1
+        ],
+        "graphs": 32768
+      }
+    ],
+    "seeded_stress_graphs": 48,
+    "total": 91865,
+    "sharpness_family": "K_(r,r), 2<=r<=30; symbolic ratio 2r/(r-1)"
+  },
+  "fractran": {
+    "fraction_alphabet": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    "programs": 133,
+    "horizons": [
+      1,
+      2,
+      3
+    ],
+    "target_moduli": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "literal_cases": 1596,
+    "literal_states": 334546,
+    "maximum_minimal_modulus": 6912,
+    "realized_word_checks": 5408,
+    "reciprocal_family_checks": 2688,
+    "minimal_clocked_carrier_integer_states": 61404,
+    "hostiles": {
+      "same_mod_6_different_rules": [
+        2,
+        8
+      ],
+      "minimal_two_step": 18,
+      "iterated_one_step": 36
+    }
+  },
+  "native_padding": [
+    {
+      "r": 1,
+      "H": "3/2",
+      "u": "3/8",
+      "abs_v": "1/16",
+      "V": "1"
+    },
+    {
+      "r": 2,
+      "H": "3/2",
+      "u": "9/32",
+      "abs_v": "1/64",
+      "V": "5/4"
+    },
+    {
+      "r": 1,
+      "H": "3",
+      "u": "3/2",
+      "abs_v": "1/4",
+      "V": "1/4"
+    },
+    {
+      "r": 2,
+      "H": "3",
+      "u": "9/8",
+      "abs_v": "1/16",
+      "V": "1/2"
+    }
+  ],
+  "pair_reserve": {
+    "triangle_grid_cases": 729,
+    "grid_denominator": 8,
+    "same_variances_different_cycles": [
+      "0",
+      "1/2"
+    ]
+  },
+  "square_sum": {
+    "counts_up_to_reversal": {
+      "1": 1,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 1,
+      "16": 1,
+      "17": 1,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 3,
+      "24": 0,
+      "25": 10
+    },
+    "memo_states": 5090,
+    "scope": "finite n=1..25 only; no all-size construction claimed"
+  },
+  "semantic_sha256": "18077bb524a0dd4e98be8ff3b6cb96dfc51de6683cecc4d8d2ad4a6bb31ddf6b",
+  "script_sha256": "8acc7cb85e92bb7d9f5ce40c2ffc66db0059c8f43f6ffa43b6783d5796790ed0"
+}

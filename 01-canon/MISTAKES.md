@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — FRACTRAN prime support does not bound selector precision
+
+- **Correction lineage:** THM-4852 at `01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md`, following MISTAKE-697. The previously audited generalization used prime support <=P to claim selection from one base-P# digit. Its 400 random-program tests were squarefree; the audit's actual local formulas required p,q to divide the base, not merely a power of it.
+- **Witness / first failed implication:** `(1/4,3/2)` selects rule 2 at N=2 and rule 1 at N=8, although both are 2 modulo 6. Even `(1/4)` in base 2 distinguishes N=2 (halt) from N=4. Having no new prime factors does not retain their valuations.
+- **Repair / strongest survivor:** remove rules shadowed by earlier denominator divisibility. Selection has exact minimal period equal to the remaining denominator lcm L; k low base-B digits suffice iff L divides B^k. PRIMEGAME's squarefree case, two-list phase law, and stated metagraph non-identifications survive. `05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md` P1-P5 proves exact successor and finite-clock moduli with priority guards.
+- **Related nonminimality control:** iterating a sufficient one-step precision transformer can overpay. For `(2/3,3/2)`, two-step label observation has least period 18, not 36. Actual reachable words, not arbitrary intermediate residues, determine the finite-horizon minimum. The new checker includes literal squareful programs and normal/optimized replay.
+
 ## 2026-10-31 — cyclic product completeness needs all path-cover states
 
 - **Correction source:** `05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md` restricts the interpretation of packet j's cyclic matching formula. It counts sewn products of local Hamiltonian cycles, not necessarily all cycles of the sewn graph. The tree theorem and finite105-state kernel remain valid.

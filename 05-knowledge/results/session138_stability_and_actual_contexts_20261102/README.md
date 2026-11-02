@@ -2,6 +2,8 @@
 
 **The optimal weighted determinant stability coefficient is now exact for every order `n>=1500`, with a complete positive-variance equality classification.** Together with the finite-order proofs, exact coefficients are established for `n=3,...,9` and `n>=1500`; orders **10 through 1499 remain unresolved**.
 
+**Follow-up, 2026-11-02:** the [new matching-budget proof](../stability_priority_moduli_20261102/STABILITY_N276.md), incorporating incoming Session139, lowers the sufficient threshold to **276**, with the same equality classification. The current open interval is **10 through 275**. The ranges below describe this packet's independently audited n>=1500 checkpoint; its frozen proofs and audit outputs are preserved.
+
 [Results and scope](SYNTHESIS.md) · [Verification and checkpoint history](VERIFICATION.md) · [Final replay: PASS](REPLAY_CHECKPOINT4.json)
 
 ## 1. Eventual exact stability, not only an asymptotic constant

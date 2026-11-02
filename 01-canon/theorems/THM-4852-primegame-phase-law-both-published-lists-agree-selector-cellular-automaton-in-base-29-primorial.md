@@ -1,6 +1,6 @@
 ---
 id: THM-4852
-title: "PRIMEGAME over the first ten primes: the owner's list is Conway's 1987 PRIMEGAME (Theorem 1), Guy's 1983 list is the earlier 15/14 form; at each entry into the state-free set both pass through 2^n 7^(D(n)-1) (Conway 1987, section 5, Figure 2) and reset to 3^n 5^(n+1) 11, so they emit the same primes; the owner's pure fractions 1/7, 1/17, 55/1 = {7, 17, 55}; every FRACTRAN program in lowest terms over primes <= P is a selector (quasi-)cellular automaton on base-P# digits with the rule chosen by the units digit (new to the repository only in this generality)"
+title: "PRIMEGAME phase law for Conway's and Guy's lists; FRACTRAN digit selectors with denominator-sensitive precision (units digit only when the reachable denominator lcm divides the base)"
 status: CITED (Conway 1987 Theorem 1 and section 5 Figure 2 - the phase law and the roles of 1/7, 55/1, 1/17; Guy 1983; OEIS A007546/A007547; Kari 2012, Kari-Kopra 2017, Cloney-Goles-Vichniac 1987; repository collatz_oscillation_gilbreath_20260926 section 3) + PROVED (elementary: the reduction of the two lists to the law; the general selector-automaton statement) + FINITE-EXACT; metagraph comparison a REMARK, readings NUMEROLOGY; independently audited SOUND WITH CORRECTIONS (MISTAKE-697)
 session: opus-2026-10-31-S70
 date: 2026-10-31
@@ -15,6 +15,15 @@ external:
 ---
 
 # THM-4852 - PRIMEGAME over the first ten primes
+
+**Correction, 2026-11-02:** the former general units-digit assertion in (3)
+was false for squareful denominators. In the program `(1/4,3/2)`, states
+2 and 8 agree modulo 6 but select different rules. The squarefree PRIMEGAME
+case and its phase law survive. The exact general selector modulus is the
+lcm of reachable denominators; see
+[precision theorem P1-P5](../../05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md).
+This supplements MISTAKE-697; the earlier random-program audit sampled only
+squarefree fractions and did not test this extension.
 
 **Setting.**
 - States are exponent vectors over 2..29: data registers 2, 3, 5, 7 and state registers 11, 13, 17, 19, 23, 29.
@@ -49,18 +58,21 @@ n = 2500 (HYP-9448), emitting exactly the 367 primes below 2500.
 
 **(3) Selector automaton.** Let B = P# and let f be a FRACTRAN program whose fractions are in lowest terms with all
 primes <= P.
-- For each fraction p/q, the map x -> x p/q on the multiples of q is digit-local on base-B digits:
-  - divide by q, reading the right neighbour;
-  - multiply by p (p | B^k), reading the left neighbour, with bounded carry.
-- The fraction is chosen by x mod q, i.e. by the units digit.
+- For each fraction p/q, the map x -> x p/q on the multiples of q is digit-local on base-B digits,
+  with a bounded neighbourhood depending on powers k,l for which p divides B^k and q divides B^l.
+  The single-neighbour formulas apply when p and q divide B; prime support alone does not imply this.
+- Delete every rule whose denominator is divisible by an earlier denominator. If L is the lcm of the
+  remaining denominators, selection has least period L. It uses the lowest k digits exactly when L divides B^k.
+  In particular selection uses the units digit iff L divides B. PRIMEGAME satisfies this condition.
 - So f is a **selector (quasi-)cellular automaton**: each step applies one of finitely many local rules to all digits,
-  the rule being selected by the units digit. It does not commute with the shift, so it is not a cellular automaton in
+  the rule being selected by a finite low-digit block. It does not commute with the shift, so it is not a cellular automaton in
   the strict sense: F(29# * 2) = 2417248020, but 29# * F(2) = 97045398450.
 - Prior art: Kari 2012 (3x/2 in base 6), Kari-Kopra 2017 (p/q in base pq), Cloney-Goles-Vichniac 1987 (quasi cellular
   automata), Conway 1987 section 11 (residue selection), and the repository's Collatz version
   (`collatz_oscillation_gilbreath_20260926.md` section 3).
-- New to the repository is only this general FRACTRAN statement. It was checked on PRIMEGAME (20,000 steps of each
-  list) and on 400 random programs by the audit.
+- The original checks covered PRIMEGAME (20,000 steps of each list) and 400 random squarefree programs.
+  The corrected general precision statement and finite-clock realization guards have separate proofs and
+  literal squareful controls in the linked 2026-11-02 packet.
 
 **(4) Remark (the n = 5 merged metagraph).** The register-flow graph (an arc p -> q when p divides a denominator and q
 the numerator of the same fraction: 24 arcs, 19 pairs) and the merged tiling line metagraph of THM-4729 (18 pairs, two
@@ -70,6 +82,6 @@ black loops) differ in size, so no adjacency-preserving bijection exists.
 - The count matches (10 = 4 + 6; 3 pure fractions = 3 pure-blue nodes) are NUMEROLOGY.
 
 **Novelty.** Almost everything here is classical or prior repository work. New to the repository are:
-- the general selector-automaton statement for all FRACTRAN programs;
+- the general selector-automaton formulation, with the denominator-sensitive correction above;
 - the explicit two-list reduction;
 - the anatomy observations, the roles of the owner's three pure fractions, and the remark.

@@ -1,0 +1,74 @@
+[
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/threshold_refinement/PROOF_N1500.md",
+    "bytes": 6210,
+    "sha256": "fec495e0e7845b723b8d964eeb242bc537119d1baccbb683b2dd2b1000227636"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
+    "bytes": 6500,
+    "sha256": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md",
+    "bytes": 7240,
+    "sha256": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/H1_STABILITY.md",
+    "bytes": 4844,
+    "sha256": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/TRIANGLE_VARIANCE.md",
+    "bytes": 3005,
+    "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "01-canon/theorems/THM-643-blue-black-line-parity-structure.md",
+    "bytes": 10395,
+    "sha256": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md",
+    "bytes": 6186,
+    "sha256": "35b0fe2db7c94f6962112c9e7cec99c3184c23b09e78fed6e8ad897d6fb80469"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "04-computation/experiments/primegame_selector_automaton_20261031_audit_S70/AUDIT.md",
+    "bytes": 32409,
+    "sha256": "b70c5051b51b35823e8490ed7d160f409761baa4be2ad1157dae006341c4ddcb"
+  },
+  {
+    "commit": "291b4d9757842c02aa451beb65acfade2848609b",
+    "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/local_closure/PROOF.md",
+    "bytes": 8895,
+    "sha256": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3"
+  },
+  {
+    "commit": "9c7eb0b13e",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
+    "bytes": 6758,
+    "sha256": "e82bf3b0eb986f63daee55d42e84c3545921800e0a9936484cfdff97a03b6561"
+  },
+  {
+    "commit": "9c7eb0b13e",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+    "bytes": 18707,
+    "sha256": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c"
+  },
+  {
+    "commit": "9c7eb0b13e",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
+    "bytes": 7669,
+    "sha256": "dc5c4ca6af9ea94f794ff4fea41ae38810db9053f12a2e83e1c66338b23aa0af"
+  }
+]
