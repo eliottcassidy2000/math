@@ -126,10 +126,23 @@ The incoming48+ theorem completes the stated all-order range.
 This certificate does not reach order41. At R20 its initial bootstrap
 value decreases; verification.json records the exact failed comparison.
 That is a limitation of this proof, not a counterexample tournament.
-An explicit rational scalar configuration at n41 is recorded separately
-to test whether these lower bounds alone can settle the next order.
-The next useful information is actual degree/group compatibility or
-directed-cycle baseline beyond W, not another unsupported averaging step.
+At n41, take twenty selected weights1/70, eighteen discarded group masses
+11/105, and final masses3/35,1/35. Then M=2/7,D=2,V=16/7,B=8/41.
+This scalar configuration satisfies all the displayed relaxed bounds and
+the individual capacities S_i<=2(n-2i-2)w_i (zero-based i), while all three
+listed reserve lower bounds stay below kappa V. Its exact slacks are in
+verification.json. It is not asserted to come from a tournament.
+
+There is a concrete repair. For weighted degrees d_v=sum_(e incident v)q_e,
+
+    W=(1/2)sum_v d_v^2-sum_e q_e^2
+      >=2V^2/n-q_max V,  q_max=max_e q_e.
+
+The first greedy selected weight is q_max. At this scalar configuration
+the stronger lower bound is greater than B, and adding the tensor reserve
+exceeds kappa V. Thus remembering q_max rejects the witness. The next
+useful information is actual degree/group compatibility or directed-cycle
+baseline beyond W, not another unsupported averaging step.
 
 The general contribution is(1)--(2), not the constants42 or5. Tensor parity
 supplies a nonlinear product; unused capacity turns local losses into one
