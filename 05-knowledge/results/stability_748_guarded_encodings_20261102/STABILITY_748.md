@@ -1,6 +1,6 @@
 # Exact weighted stability at every order n>=748
 
-**Historical checkpoint: valid but SUPERSEDED as the current frontier by [n>=514](STABILITY_514.md).** Its original remaining-gap statements below record the pre-fetch state. Concurrent Session139 independently proved this threshold and then526.
+**Historical checkpoint: valid but SUPERSEDED as the current frontier by [n>=314](STABILITY_314.md).** Its original remaining-gap statements below record the pre-fetch state. Concurrent Session139 independently proved this threshold and then526.
 
 **Status: PROVED; same-session proof review, exact rational verification and a separate combinatorial implementation. No independent-agent audit has been performed.** This file strengthens the sufficient threshold1500; it does not assert exact optimality at every smaller order. No external novelty claim.
 

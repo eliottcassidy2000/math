@@ -64,4 +64,4 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session138](S138.md): exact weighted stability for n=3..9 and n>=1500, with full large-order equality; 10..1499 unresolved. Actual contexts and sign certificates; unrestricted spectrum and general zero-rigidity remain open.
 
-[Session139](S139.md): sharp stability through nine and from526; gap10..525 open. All-modulus contexts/content, prime-state realization, weighted simulation, integral cocycles and regular spectral-incidence boundaries.
+[Session139](S139.md): sharp stability through nine and from314 after continuation; gap10..313 open. All-modulus contexts/content, prime-state realization, weighted simulation, integral cocycles and regular spectral-incidence boundaries.

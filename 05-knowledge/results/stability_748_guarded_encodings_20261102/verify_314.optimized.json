@@ -1,0 +1,29 @@
+{
+  "baseline_polynomial_vertices": 256,
+  "dual_minima": 101,
+  "hostiles": [
+    "same constants at312",
+    "omit -BR",
+    "omit actual U"
+  ],
+  "large_tail_endpoint": "9653625765/337154932736",
+  "remaining_open_orders": [
+    10,
+    313
+  ],
+  "scope": "Written monotonic/convex proof establishes all n>=314; finite controls corroborate it. No independent-agent audit claimed.",
+  "slot_endpoint_slack": "2225351/157000000",
+  "small_tail_slacks": [
+    "363349507136067/402563072000000",
+    "175134030288958737/25764036608000000"
+  ],
+  "source_commits": [
+    "291b4d975784",
+    "9c7eb0b13e",
+    "e9dd62edb6"
+  ],
+  "status": "passed",
+  "tail_allowance": "7249843/157000000",
+  "threshold": 314,
+  "unsplit_finite_controls": 109908
+}

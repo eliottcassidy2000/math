@@ -1,5 +1,7 @@
 # Exact stability for n>=514 by paying the tail with light mass
 
+**Historical checkpoint: valid but SUPERSEDED by the [combined n>=314 proof](STABILITY_314.md).** The earlier remaining-gap statements below retain their checkpoint meaning.
+
 **Status: PROVED; same-session proof audit, exact arithmetic, and a separate local-energy implementation. No independent-agent audit is claimed.** This extends the
 independently audited Session139 n>=526 argument. No graph census enters.
 

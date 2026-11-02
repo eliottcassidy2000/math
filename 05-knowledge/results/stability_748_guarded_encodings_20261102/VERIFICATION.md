@@ -31,3 +31,16 @@ The exact endpoint verifier checks the bootstrap, heavy count17, both convex tai
 The separate dual checker minimizes the quadratic directly in S, retaining the nonnegative residual w(t-w)/4. It checks5151 rational points, all729 three-weight K4 graphs and800 rational graphs at orders5..12 by literal incident-edge accounting. This is an independent implementation, not a delegated independent mathematical reviewer.
 
 The all-n proof depends on monotonicity and convexity, not the finite sample. Audit review checked that U enters both the retained matching mass and the SAME local-energy budget; in the m<=31 branch its lower bound comes from M_h<=m/4, while the m>=32 branch pays the tail without U. The lower bound may be negative outside its branch and is not used there. All inequalities use the same B; D=0 is included in the strict contradiction. No order below514 is promoted.
+
+## Current n>=314 combined certificate
+
+```sh
+python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_314.py
+python3 -O 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_314.py
+```
+
+Both receipts agree. This checks the exact slot-count residual2225351/157000000, convex and concave tail endpoints, the final baseline inequality,109908 unsplit corroborating(R,m) cases, and the full multiaffine rearrangement on256 Boolean vertices (which determine all its coefficients). The quadratic dual is checked at101 rational minima; its general identity and independent graph accounting were established above. The ideal coefficients here are t=4/157,lambda=1/314,h=2/157.
+
+Hostiles: omitting-BR breaks the final energy coefficient; omitting U breaks the tail bound; the same parameter choice at312 fails to force nine retained edges and its m8 scalar cell fails. None is an actual stability counterexample. Review of all steps verified the SAME B distribution, positive1-4t, nonempty heavy matching, coefficient monotonicity, inequality directions after retaining-BR, and the separate case lambda R>=1. The strict contradiction includes D=0. No proof below314 follows.
+
+Incoming proof pointers: `stability_priority_spectrum_20261102/STABILITY_466.md` at e9dd62edb6 supplies the baseline-retaining rearrangement; Session139's `stability/PROOF_N526.md` and its independent audits supply the local dual. The combined proof uses accepted Session138 inputs directly and reconstructs both algebraic moves.
