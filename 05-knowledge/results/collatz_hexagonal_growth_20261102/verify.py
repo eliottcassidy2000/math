@@ -5,6 +5,7 @@ from itertools import permutations,product,combinations
 from pathlib import Path
 from math import gcd
 import hashlib,importlib.util,json
+from chart_checks import main as chart_checks
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 def need(ok,msg):
@@ -248,5 +249,5 @@ def main():
         'honeycomb_obstruction':{'radius':21,'sources':704,'capacity':694},'triangular_obstruction':{'radius':26,'sources':2263,'capacity':2107},
         'lattice_ball_checks':212,'drawing_checks':drawing_checks,'phase_hostiles':phase,'p5_parents_checked':len(p5),
         'p5_cycle':[13,33,83],'palette_histogram':dict(histogram),'parity_accepts':parity_pass,'parity_false_accepts':false_pass,
-        'functional_maps_checked':maps_checked,'hostile81_27':hostile,'joint_ports':joint}
+        'functional_maps_checked':maps_checked,'hostile81_27':hostile,'joint_ports':joint,'finite_horizon_charts':chart_checks()}
 if __name__=='__main__':print(json.dumps(main(),sort_keys=True,indent=2))

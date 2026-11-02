@@ -1,6 +1,6 @@
 {
   "hash_convention": "SHA256; CRLF normalized to LF for md/py/json/tsv/svg; other files literal bytes",
-  "input_checkout_commit": "0bfe76afbf7db29f411146efab21c715bbc180d8",
+  "input_checkout_commit": "2bf016747f984c148248e4e7cefa5cef2dfa9f22",
   "inputs": {
     "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md": "ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446",
     "05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md": "07cec6485117d4be849ba4f2d8dd56dc28876a1922b9a68cf6cc8873d01599de",
@@ -17,20 +17,22 @@
     "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
   },
   "packet": {
-    "AUDIT.md": "cb14494e8f68dd3a8ac849091c684ae6bf0c664b5e1f91521c4e9765b99f12c9",
+    "AUDIT.md": "2d76ee6e447be6878d5730313ccb6be4185dee962e7d4dc3c1cea4382c1526f8",
     "COLOUR_AND_CLOCKS.md": "f4a92e660c87c2f070ca74d6fb768604ac11e4042c736fde41543fc654f0de58",
     "GEOMETRY.md": "c83e9bdf0ee94277f47dfd59d90835ea2f0ccf4f2e611e06bba85eebfe18783c",
-    "HANDOFF.md": "8928ae35868817aa6fa3164c16632846c0df47ab14d6a969de3d95fc437eeaa9",
+    "HANDOFF.md": "f5a9f86bbd193dee292115af19e5b645867fc5b94072e94c42761b1dc7a86b3a",
     "JOINT_PORTS.md": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d",
-    "README.md": "3ef66837dc572eef7de1b0cd6cfd8754cadbed49169f0166b58596e71a1b89d5",
-    "SYNTHESIS.md": "b62dc4c457e99f65d62620bff688ddeb43e37d61bf05bba8e1bafb7322b70c22",
+    "MINIMAL_CHART.md": "cddfea18a85b1bfa6242d153dc1962e760abe379fb098d63e00829acfef0069c",
+    "README.md": "1601c4b79721cafaf9bb6eb223a3af9da2864b61e88a685b3ceed959d9599701",
+    "SYNTHESIS.md": "cc53211abfc3bd8404a0534f1b80c015970847e22cb8c4f6aeb9acdf791b52bb",
+    "chart_checks.py": "4b3503e8faede8db80ff8686bf602f1afe9e4e550daff63af1352895546f2b39",
     "growth_and_ports.png": "2e1c71e62afc7e60cf190b88d5ecfc4f5739bbad6d6460a7f0c4e8aa2e744c9e",
     "growth_and_ports.svg": "f452a57fb249ab57bda0a7a0c449229d56d91078d24d34350143040d9df75a89",
     "inverse_root5_depth26.tsv": "3ca1af5f402b0c6036a65c05980e30e9a00398abf8961eef566f5e6d84cc0e40",
     "plot.py": "6f15b35e25b54ef662641bdea42bb929a7b522c7f78f7400c01106e643ee7261",
     "seal.py": "768176be1c64eb1bcf971981d68e1414806b6b4155b0b8fecc147c55dd52d42f",
-    "verification.json": "3d228d8497683b2df8104290cb35221a7cd681d3a4de782195284d5df438c92b",
-    "verification.optimized.json": "3d228d8497683b2df8104290cb35221a7cd681d3a4de782195284d5df438c92b",
-    "verify.py": "0b049aa5c0a04a2c20a132af9ca70359f7971381a77fca8702c3c29a55923da6"
+    "verification.json": "2c98f81b030231dadfbf5272357178ae71276ac8eb20c349e891d58c43fc2438",
+    "verification.optimized.json": "2c98f81b030231dadfbf5272357178ae71276ac8eb20c349e891d58c43fc2438",
+    "verify.py": "62bdc8bfd418cf6e819532b5fa83a88e8d2920805e23579c5d69cf6858815464"
   }
 }

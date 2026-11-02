@@ -24,6 +24,11 @@ functional components; and proves why a fixed3-adic chart loses future
 inverse precision. [SYNTHESIS.md](SYNTHESIS.md) records the inheritance,
 concept board, explicit connection maps, and remaining proof obligations.
 
+[MINIMAL_CHART.md](MINIMAL_CHART.md) proves the exact minimum2*3^h states
+for its specified horizon-h branch/clock observer, and3^(H+1)-2 states
+when remaining horizons0..H are included. The full weighted polynomial
+separates every root class through h7; its all-horizon faithfulness is OPEN.
+
 [AUDIT.md](AUDIT.md) gives universes, controls and reproduction commands.
 [HANDOFF.md](HANDOFF.md) names the next decisive tests. The receipt is
 [verification.json](verification.json); every source of the radius26 witness

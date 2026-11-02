@@ -79,6 +79,15 @@ frame. In arithmetic, equal roots mod3^k can have different next roots mod3^k.
 In supplied odd trees, by contrast, LCA plus exponent-labelled edges does
 derive pair meetings without storing a separate quadratic table.
 
+The last experiment sharpens this into an exact observer theorem:
+[MINIMAL_CHART C1--C3](MINIMAL_CHART.md) proves2*3^h classes at horizon h
+for the stated branch-menu/native-clock language, with a closed update
+that drops one3-adic digit per inverse step. Complete charts through H
+have3^(H+1)-2 states. The weighted J5 polynomial separates all those
+source classes through h7, while totals already collide at h1. The
+all-horizon polynomial statement remains OPEN; source labels require
+their own retained register.
+
 **Second: identify overlaps before summing responses.** For nested halving
 tails, union uses max(a,b), intersection uses min(a,b), and J5 is an exact
 source-dependent generating recurrence. Its Gram determinant is a product

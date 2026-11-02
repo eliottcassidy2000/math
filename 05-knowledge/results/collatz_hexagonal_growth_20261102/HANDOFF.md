@@ -18,6 +18,9 @@ inverse-growth proof: SF5 predates this session, and concurrent66cf347030 and
   J7. Full native leaf path Gram rank is2^h although the tree is contractible.
 - Complete48-map palette census; exact source-specific phase hostiles;
   prime5 branching and its separate nonprincipal cycle; actual81/27 replay.
+- Exact minimal finite-horizon chart:2*3^h branch/clock states, or
+  3^(H+1)-2 with STOP and horizons0..H. Weighted polynomials separate
+  all root classes through h7; plain totals do not.
 
 ## Next decisive tests, in order
 
@@ -31,11 +34,13 @@ inverse-growth proof: SF5 predates this session, and concurrent66cf347030 and
    prove max/min incidence if it holds, and test actual complement/re-marking
    within the declared grammar. Keep the81/27 hostile. The arithmetic J5
    recurrence does not authorize this transfer by itself.
-3. **Faster exact recurrence.** Evaluate J5 by a decreasing-precision3-adic
-   chart keyed by the remaining horizon. Compare it with direct labelled
-   recursion; measure repeated subproblems before claiming a speedup.
-   A fixed mod9 chart already fails at19/37. Any compression must preserve
-   coefficient clocks and later joint-port queries actually requested.
+3. **Polynomial faithfulness.** The decreasing-precision chart is now
+   implemented and proved minimal for named branch/clock observations.
+   Determine whether J5's UNLABELLED coefficient polynomial still recovers
+   all2*3^h source classes for every h. It does through7; this does not
+   follow from the trace proof. Seek a coefficient decoder or the first
+   collision, retaining actual source lifts and the separating port query.
+   For speed claims, first compare state reuse with direct labelled recursion.
 4. **HN actual attachment.** Put the full48-state palette transport on a
    certified Euclidean unit-distance gadget, not just a functional arrow
    skeleton; find whether the nine parity false accepts occur under its

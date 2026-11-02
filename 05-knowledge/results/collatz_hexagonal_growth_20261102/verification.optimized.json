@@ -1,5 +1,69 @@
 {
   "drawing_checks": 254,
+  "finite_horizon_charts": {
+    "cache_entries": 6559,
+    "first_polynomial_collision": null,
+    "literal_root_classes_checked": 240,
+    "rows": [
+      {
+        "branch_response_classes": 6,
+        "count_classes": 4,
+        "h": 1,
+        "modulus": 9,
+        "polynomial_classes": 6,
+        "states_with_clock_up_to_h": 7
+      },
+      {
+        "branch_response_classes": 18,
+        "count_classes": 8,
+        "h": 2,
+        "modulus": 27,
+        "polynomial_classes": 18,
+        "states_with_clock_up_to_h": 25
+      },
+      {
+        "branch_response_classes": 54,
+        "count_classes": 12,
+        "h": 3,
+        "modulus": 81,
+        "polynomial_classes": 54,
+        "states_with_clock_up_to_h": 79
+      },
+      {
+        "branch_response_classes": 162,
+        "count_classes": 22,
+        "h": 4,
+        "modulus": 243,
+        "polynomial_classes": 162,
+        "states_with_clock_up_to_h": 241
+      },
+      {
+        "branch_response_classes": 486,
+        "count_classes": 38,
+        "h": 5,
+        "modulus": 729,
+        "polynomial_classes": 486,
+        "states_with_clock_up_to_h": 727
+      },
+      {
+        "branch_response_classes": 1458,
+        "count_classes": 58,
+        "h": 6,
+        "modulus": 2187,
+        "polynomial_classes": 1458,
+        "states_with_clock_up_to_h": 2185
+      },
+      {
+        "branch_response_classes": 4374,
+        "count_classes": 90,
+        "h": 7,
+        "modulus": 6561,
+        "polynomial_classes": 4374,
+        "states_with_clock_up_to_h": 6559
+      }
+    ],
+    "status": "PASS"
+  },
   "functional_maps_checked": 3413,
   "honeycomb_obstruction": {
     "capacity": 694,

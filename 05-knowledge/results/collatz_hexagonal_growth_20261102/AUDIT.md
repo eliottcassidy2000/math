@@ -37,6 +37,8 @@ installed in an isolated temporary environment, leaving repo dependencies intact
 | Gram controls | Six legal sibling exponents3,5,9,11,15,17;256 depth8 leaves | Literal tail-edge overlaps; exact rational elimination agrees with J7; private edges certify leaf rank256 |
 | Periodic clock hostile | Sources13/853, fixed port53 | Same exponent mod6, different meetings40/160 |
 | Residue precision hostile | k2..8, roots19 and19+2*3^k, exponent2 | Same legal branch and root residue, different successor residue |
+| Minimal chart | All unit source residues modulo3^(h+1), h1..7 |2*3^h distinct lower-branch menu traces and weighted polynomials; totals lose information |
+| Independent chart replay | All240 root classes at h1..4, with actual odd lifts>1 | Polynomial coefficients equal literal native unions; one merged STOP state |
 | Prime multiplier | All odd n<=201 not divisible by5; all exponents3..22 | Exactly four increasing unit predecessors each; separate13/33/83 cycle replay |
 | Palette transport | All48 maps x->Px+v, P in S3,v in F2^3 | Literal fixed frames versus kernel/image formula; histogram0:33,2:8,4:6,8:1 |
 | Functional colouring | Every total map on each labelled set of size1..5,3413 maps | Literal3-colourings agree with tree/unicycle formula |
@@ -87,6 +89,11 @@ obligation. Reading the concurrent root85 proof exposed that gap;13/53
 supplied the exact witness. JOINT_PORTS repairs it and the global mistakes
 ledger preserves the failed inference. The antecedent SF5 theorem remains
 valid; it concerns the odd inverse tree with clocks.
+
+A later incoming dictionary repeated THM-4852's already retracted generic
+one-primorial-digit selector claim. The table and CA comparison were repaired
+to retain denominator valuations, with the existing2/8 modulo6 hostile.
+Its README hash was refreshed; all simulation receipts were preserved.
 
 ## External claims
 
