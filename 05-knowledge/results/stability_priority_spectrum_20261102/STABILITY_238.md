@@ -5,6 +5,10 @@ listed below. Same-agent proof review with exact rational certificates and
 independent native graph tests; no independent-agent or formal audit of this
 final combination is claimed.
 
+Later refinement: [STABILITY_56.md](STABILITY_56.md) incorporates the
+independently accepted tensor theorem and strengthens the cutoff to56.
+The open interval below describes this238 argument, not the current frontier.
+
 ## Statement and combined provenance
 
 For every real weighted tournament A of order n>=238, let

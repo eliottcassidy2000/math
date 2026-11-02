@@ -3,8 +3,10 @@
 Status: same-agent proof review with separate native computational paths.
 No new independent-agent or formal verification is claimed. Session139's
 526 proof and its audited local inequality are credited dependencies; the
-new238 combination additionally uses the incoming discarded-degree lemma,
-reproduced in the proof and tested independently on native weighted graphs.
+new56 combination additionally uses the incoming discarded-degree lemma
+and Session139's independently accepted tensor matching theorem. The degree
+lemma is tested independently here; the new nonlinear bootstrap uses that
+stronger degree bound rather than the weaker one in the140 proof.
 
 ## Reproduce
 
@@ -13,13 +15,14 @@ Run in this directory, with Python's standard library only:
     python -B verify_stability.py
     python -B verify_stability_320.py
     python -B verify_stability_238.py
+    python -B verify_stability_56.py
     python -B verify_clocks.py
     python -B verify_carriers.py
     python -B seal.py --check
 
 All gates use explicit exceptions and remain active under `python -O`.
 Normal and optimized runs have byte-identical JSON receipts. The total is
-60,275 local checks plus seven inherited81/27 checks. Quantifiers over all
+64,626 local checks plus seven inherited81/27 checks. Quantifiers over all
 orders, all moduli, and all horizons follow from the proofs; finite replay
 does not establish them by itself.
 
@@ -28,6 +31,7 @@ does not establish them by itself.
 | Stability466 | Rational endpoints; symbolic deletion identity;24 native weighted matrices at orders4..6 with full independent rounding; fair pairs4..12 |3,475 gates |
 | Stability320 | Rational dual and tail endpoints; polynomial identity; orders320..1499 finite replay; even/odd recurrences |3,683 gates |
 | Stability238 | Stronger degree cancellation on1,827 complete finite graph cases and19 balanced bipartite controls; exact dual and endpoints; orders238..1499 replay |15,246 gates |
+| Stability56 | Nonlinear bootstrap by rational Taylor sums; exact local dual and tail endpoints; orders56..1499 replay |4,351 gates |
 | Arithmetic clocks |132 ordered programs of length1 or2 over reduced a/b with1<=a,b<=4, each modulo1..12; first9 trace horizons; native inputs1..10000; compatible CRT charts |37,806 gates |
 | Carriers | Actual six-vertex spectral witnesses and source extensions; exhaustive square-sum path existence1..25; all169 quadratic-ring states; literal five-vertex cycles; weighted order-five zeta witness |65 local plus seven inherited gates |
 
@@ -52,6 +56,16 @@ does not establish them by itself.
   adjacency markings decide whether it represents a Hamiltonian witness.
 
 ## All-size proof audit
+
+For56, the accepted tensor theorem supplies the full matching-product reserve
+with the binary baseline retained. Using W>=2D^2/n improves each bootstrap
+mass to cR/4-1-1/(2R). Three strict rational Taylor comparisons at R28
+raise the baseline reserve from49/200 to99/100. Mass bounds increase and
+the perfect-matching correction4^(-R) decreases. At c99/100, the retained
+matching has eight heavy edges and the per-edge geometric tail is paid by
+c-d. The same flexible dual and sign split then close at t=1/7, including
+R28. The new proof changes neither the tensor theorem's parity assumptions
+nor the perfect-matching indicator. No individual Pfaffian lower bound is used.
 
 For238, the incoming bound W>=2D^2/n improves the retained-mass square
 completion to c/kappa-n kappa/8. The retained matching has at least ten
@@ -79,7 +93,7 @@ The trace-period necessity proof separates the2-adic and3-adic coordinates;
 its response-class count has an independently enumerated valuation model.
 
 The general spectrum, realization of all prime-power context states,
-weighted orders10..237, LRC(14), RH and Collatz remain open. The session
+weighted orders10..55, LRC(14), RH and Collatz remain open. The session
 does not claim a new complexity theorem from an invariant collision.
 
 ## Repository checks
@@ -88,5 +102,5 @@ Owned-path diffs pass `git diff --check`. The documentation checker is run
 through a Windows extended-length path because an existing canon filename
 exceeds the ordinary path limit. The initial long frontier line was
 shortened to respect the bounded startup-surface budget. Historical proof
-packets remain frozen; current navigation points to the238 refinement.
+packets remain frozen; current navigation points to the56 refinement.
 Source pins and artifact hashes provide the exact reproduction boundary.

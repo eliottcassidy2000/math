@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "local_gates": 60275,
+  "local_gates": 64626,
   "inherited_hostile_gates": 7,
-  "local_links_checked": 45,
+  "local_links_checked": 56,
   "runs": [
     {
       "script": "verify_stability.py",
@@ -24,6 +24,13 @@
       "gates": 15246,
       "normal_optimized_identical": true,
       "receipt_sha256": "fbf794df22be1314dbe61eed0199de5e36ee0b1a848740509d6d4c08b60a2753"
+    },
+    {
+      "script": "verify_stability_56.py",
+      "receipt": "stability_56_checks.json",
+      "gates": 4351,
+      "normal_optimized_identical": true,
+      "receipt_sha256": "bdede5cc75ec741c71111065fce6b5baf04288cc92f9432d1fbd7be08c3b20b9"
     },
     {
       "script": "verify_clocks.py",

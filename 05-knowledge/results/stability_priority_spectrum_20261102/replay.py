@@ -10,6 +10,7 @@ HERE = Path(__file__).resolve().parent
 CASES = [('verify_stability.py', 'stability_checks.json'),
          ('verify_stability_320.py', 'stability_320_checks.json'),
          ('verify_stability_238.py', 'stability_238_checks.json'),
+         ('verify_stability_56.py', 'stability_56_checks.json'),
          ('verify_clocks.py', 'clock_checks.json'),
          ('verify_carriers.py', 'carrier_checks.json')]
 
@@ -30,7 +31,7 @@ def main():
         rows.append({'script': script, 'receipt': receipt, 'gates': record['gates'],
                      'normal_optimized_identical': True,
                      'receipt_sha256': hashlib.sha256(after).hexdigest()})
-    if total != 60275:
+    if total != 64626:
         raise RuntimeError('documented gate count changed')
     links = 0
     for path in HERE.glob('*.md'):

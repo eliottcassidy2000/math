@@ -1,30 +1,32 @@
 # Continuation boundary
 
-2026-11-02. The exact weighted stability threshold is now **238**; preserve
-the1500,748,526,466,320,314 and276 proofs as lineage. Current unresolved interval:
-**10..237**, with3..9 inherited as proved. Same-agent audit of this new
+2026-11-02. The exact weighted stability threshold is now **56**; preserve
+the1500,748,526,466,320,314,276,238 and140 proofs as lineage. Current unresolved interval:
+**10..55**, with3..9 inherited as proved. Same-agent audit of this new
 combination; an independent review is still a useful next task.
 
 Completed:
 
-- [STABILITY_238.md](STABILITY_238.md) combines this packet's retained
-  -BR baseline and flexible local dual with the incoming discarded-degree
-  cancellation W>=2D^2/n. The first466 checkpoint was pushed as e9dd62edb6;
-  the320 proof remains a separate intermediate result.
+- [STABILITY_56.md](STABILITY_56.md) combines Session139's accepted tensor
+  matching reserve with the stronger discarded-degree bound and this packet's
+  -BR baseline/flexible dual. Three exact nonlinear bootstrap steps reach
+  reserve99/100 at R28. The first466 checkpoint was pushed as e9dd62edb6;
+  the320 and238 proofs remain separate intermediate results.
 - [FRACTRAN_CLOCKS.md](FRACTRAN_CLOCKS.md) proves least one-step clocks at
   all moduli, compatible CRT charts, and exact trace periods and response
   counts for [1/2,2/3]. The program's rank v2+2v3 decreases exactly one.
 - [SPECTRUM_AND_WITNESSES.md](SPECTRUM_AND_WITNESSES.md) recovers March--July
   work, credits incoming139, and distinguishes native graph/path/clock
   observations. THM-1780's invalid complexity inference is repaired.
-- Five exact scripts pass60,275 local gates plus seven inherited controls,
+- Six exact scripts pass64,626 local gates plus seven inherited controls,
   with identical normal/-O receipts; source pins are sealed.
 
 Next decisive tests, in priority order:
 
-1. Independently audit the238 combination, especially spending W only once,
-   the light deficit dL-4U<4D-BR, and the1-lambda R sign split. Then test
-   stronger native incidence certificates for10..237. A further cutoff
+1. Independently audit the56 combination: accepted tensor theorem and perfect
+   indicator; stronger-degree nonlinear bootstrap; disjoint W budget;
+   light deficit dL-4U<4D-BR; and1-lambda R sign split. Then test
+   stronger native incidence certificates for10..55. A further cutoff
    optimization alone is not an all-order proof.
 2. Start from Session139's factorial-transform quotient, not scalar H,
    to classify realizable prime-power context states. Require a source

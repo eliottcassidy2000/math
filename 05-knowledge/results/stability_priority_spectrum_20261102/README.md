@@ -4,15 +4,15 @@ Research date: 2026-11-02. Starting revision:
 `291b4d9757842c02aa451beb65acfade2848609b`.
 
 **PROVED:** the sharp weighted tournament determinant-gap coefficient is
-now established for every n>=238, including its fair-pair equality cases.
-This closes 1,262 of the originally open orders10..1499, and38 orders
-beyond the incoming276 threshold. Orders10..237 remain open;
+now established for every n>=56, including its fair-pair equality cases.
+This closes 1,444 of the originally open orders10..1499, and84 orders
+beyond the incoming140 threshold. Orders10..55 remain open;
 the previously proved orders3..9 are inherited.
 
-The [combined proof](STABILITY_238.md) retains the expected binary gap,
-uses Session139's local inequality and the incoming discarded-degree
-cancellation, and allocates disjoint interaction contributions once. The
-[466](STABILITY_466.md) and [320](STABILITY_320.md) checkpoints are preserved
+The [combined proof](STABILITY_56.md) uses Session139's independently
+accepted tensor matching theorem, the incoming discarded-degree cancellation,
+and this packet's flexible dual with the binary baseline retained. The
+[466](STABILITY_466.md), [320](STABILITY_320.md) and [238](STABILITY_238.md) checkpoints are preserved
 as lineage. The infinite range follows from the proof, not
 finite sampling. These refinements have a same-agent audit and exact
 certificates; no independent-agent or formal audit is claimed.
@@ -29,7 +29,7 @@ has common H=462915 but presentation-fibre sizes5715 and17145. Literal
 cycles, incidence, and priority supply different necessary retained data.
 An old complexity inference in THM-1780 is explicitly repaired.
 
-Five standard-library checkers pass60,275 local gates plus seven inherited
+Six standard-library checkers pass64,626 local gates plus seven inherited
 81/27 gates. Exact receipts include1,584 short-program/modulus cases,
 complete square-sum existence tests at orders1..25, and native weighted and
 binary spectral counterexamples. See [AUDIT.md](AUDIT.md) for replay and

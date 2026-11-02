@@ -8,8 +8,13 @@ import subprocess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-SOURCE_REV = 'c16226249f1f27a335cf7c84afdeaa90879b9580'
+SOURCE_REV = '8da4684eef0e8f35041889ae4f0b5dbea37e1a40'
 SOURCES = [
+    '05-knowledge/results/session139_incidence_moduli_and_stability_20261102/tensor_matching/PROOF.md',
+    '05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N140.md',
+    '05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/EISENSTEIN_BERNSTEIN_TENSOR_PROOF.md',
+    '05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold140/AUDIT.md',
+    '05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold140/FINAL_STATUS_REVIEW.md',
     '05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N500.md',
     '05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N276.md',
     '05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md',

@@ -85,8 +85,17 @@ from a mean-square bound. That is an analogy of proof structure: copies
 need a proved relation to the target and an error budget. Its claimed
 11/12 zero-free half-plane is **CITED, not audited here**. It supplies no
 weighted tournament inequality or RH consequence. Our successful
-[n>=238 proof](STABILITY_238.md) retains the native binary-rounding baseline
+[n>=56 proof](STABILITY_56.md) retains the native binary-rounding baseline
 and disjoint group incidence instead of assuming a local-to-global map.
+
+The last incoming improvement supplied an actual arithmetic theorem:
+Session139's [Eisenstein tensor proof](../session139_incidence_moduli_and_stability_20261102/stability/EISENSTEIN_BERNSTEIN_TENSOR_PROOF.md)
+turns odd-top/even-rest coefficient parity into nonvanishing in F4 and a
+positive integral Eisenstein norm. Its full derivative tensor compensates
+for cancellation of individual Pfaffians. The resulting nonlinear matching
+reserve powers the140 proof; combining it with the stronger degree estimate
+and flexible retained-baseline dual here reaches56. This is a proved
+arithmetic-to-stability connection, with no RH inference.
 
 ## Every modulus still does not settle the integer spectrum
 
@@ -221,7 +230,7 @@ stability to modular forms. :codex-annotation{index="1"}
 | Square-sum graph | Marked total orders encode Hamiltonian witnesses | Integer labels, adjacency and distinct visits | Repeated1,8 walk; empty graph |
 
 The next substantial targets are: use actual incidence distributions for
-weighted orders10..237; classify realizable factorial-transform functions
+weighted orders10..55; classify realizable factorial-transform functions
 at prime powers with compatible source witnesses; and seek bounded-resource
 integer realization beyond profinite spectrum density. None is replaced
 by a numerical coincidence, a chronological order, or a scalar average.
