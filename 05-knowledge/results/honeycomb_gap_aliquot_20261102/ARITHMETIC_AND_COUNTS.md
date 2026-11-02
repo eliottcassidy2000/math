@@ -72,6 +72,11 @@ This gives a real connection among20,26 and the1-2-4 divisor row. Equal
 sigma does not preserve source, proper-divisor count, abundance, or the
 next aliquot state. For example tau(20)=6 whereas tau(26)=4.
 
+Incoming [Session141's aliquot classification](../session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md)
+also proves the complete fibre sigma^-1(42)={20,26,41}. Our chart specifies
+two dyadic-prime source shapes; it does not claim that20 and26 exhaust the
+fibre. That packet extends the excess-two classification through tau17.
+
 ## Why 16 and 33 can belong together under a different observer
 
 For an odd prime p other than3,
@@ -136,6 +141,16 @@ not an extra square-sum vertex or a physical honeycomb site. G25 is rigid,
 so keeping the guard graph canonically recovers the named command frame.
 Discarding the guard, adding arbitrary tournament paths or adding arithmetic
 extension contexts changes the minimum carrier.
+
+The incoming [integer-content refinement](../session141_metric_aliquot_square_paths_20261102/square_paths_content/PROOF.md)
+shows that the full polynomial has exact coefficient gcd2^276, so (6) can
+also be written2^276(16777197+18z+z^2). Integer translation preserves the
+coefficient gcd; reversal and joint multiplicities explain its binary factors.
+Its order26 extension is2^296(536870561+320z+29z^2+2z^3). These are incoming
+results, not new enumerations here. The [common-block connection](../session141_metric_aliquot_square_paths_20261102/CONNECTIONS.md)
+further records that reversing the25 pair changes its fixed-arrow successor
+deletion cost from1 to2 while preserving its undirected cost1. A retained
+terminal is thus a concrete additional coordinate, even at unchanged counts.
 
 ## The older geometric 15 20 24 and multiplicities 1 2 4
 

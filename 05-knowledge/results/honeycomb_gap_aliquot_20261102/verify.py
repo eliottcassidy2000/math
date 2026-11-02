@@ -105,6 +105,41 @@ def lattice_balls(radius, honeycomb):
     return counts
 
 
+def geometry_phases():
+    configs = list(product((F(1, 4), F(1, 3), F(2, 5), F(3, 7), F(49, 100)),
+                           (F(1, 4), F(1, 2), F(3, 4), F(1))))
+    for W in (F(1, 2), F(2, 3), F(3, 4)):
+        configs.append((4*W**2/(4+W**2), W))
+    rows = []
+    for q, W in configs:
+        pts = {w: (W*x, y) for w, (x, y) in vertices(1/q, 5).items()}
+        E = 1+(1+W**2/4)*(1-q)**2/(2*q)
+        S = 1+W**2*(1-q)**2/(2*q**2)
+        threshold = 4*q/(4-q)
+        phase = 'tree' if W**2 > threshold else 'triangles' if W**2 == threshold else 'matching'
+        expected_count = {'tree': 62, 'triangles': 93, 'matching': 31}[phase]
+        pairs = minimum_edges = 0
+        for u, v in combinations(pts, 2):
+            d = len(u)+len(v)-2*lca(u, v)
+            sibling = len(u) == len(v) and u[:-1] == v[:-1]
+            expected = d == 1 if phase == 'tree' else sibling if phase == 'matching' else d == 1 or sibling
+            C = cosh_distance(pts[u], pts[v])
+            need(C >= min(E, S) and (C == min(E, S)) == expected,
+                 'complete nearest-distance phase classification')
+            pairs += 1
+            minimum_edges += C == min(E, S)
+        need(minimum_edges == expected_count, 'phase graph edge count')
+        boundary = 1+2*(1-q)**2/(q*(4-q))
+        need(boundary-F(9, 7) == 2*(2*q-1)*(4*q-7)/(7*q*(4-q)) > 0,
+             'strict adjacency-preserving edge-scale floor')
+        if phase == 'tree':
+            need(E > boundary > F(9, 7) > F(5, 4), 'tradeoff above log2')
+        rows.append({'q': str(q), 'W': str(W), 'phase': phase,
+                     'pair_checks': pairs, 'minimum_edges': minimum_edges,
+                     'cosh_edge': str(E), 'cosh_sibling': str(S)})
+    return rows
+
+
 def capacity():
     seen, level = {5}, {5}
     counts = [1]
@@ -292,9 +327,11 @@ def a5():
 
 
 if __name__ == '__main__':
-    report = {'geometry': geometry(), 'capacity': capacity(), 'arithmetic': arithmetic(),
+    report = {'geometry': geometry(), 'geometry_phases': geometry_phases(),
+              'capacity': capacity(), 'arithmetic': arithmetic(),
               'finite_graphs': small_graphs(), 'A5_order_counts': a5()}
     (HERE/'verification.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf8')
     print(json.dumps({'status': 'passed', 'geometry_pair_checks': sum(r['pair_checks'] for r in report['geometry']),
+                      'phase_pair_checks': sum(r['pair_checks'] for r in report['geometry_phases']),
                       'arithmetic_checks': report['arithmetic']['collision_equivalences_checked'],
                       'square15_cycle': report['finite_graphs']['odd_cycle_in_square15']}))

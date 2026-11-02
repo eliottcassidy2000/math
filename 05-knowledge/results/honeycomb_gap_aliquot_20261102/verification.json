@@ -55,6 +55,215 @@
       "cross_root_depth6_cosh": "43954689"
     }
   ],
+  "geometry_phases": [
+    {
+      "q": "1/4",
+      "W": "1/4",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "1097/512",
+      "cosh_sibling": "41/32"
+    },
+    {
+      "q": "1/4",
+      "W": "1/2",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "281/128",
+      "cosh_sibling": "17/8"
+    },
+    {
+      "q": "1/4",
+      "W": "3/4",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "1169/512",
+      "cosh_sibling": "113/32"
+    },
+    {
+      "q": "1/4",
+      "W": "1",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "77/32",
+      "cosh_sibling": "11/2"
+    },
+    {
+      "q": "1/3",
+      "W": "1/4",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "161/96",
+      "cosh_sibling": "9/8"
+    },
+    {
+      "q": "1/3",
+      "W": "1/2",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "41/24",
+      "cosh_sibling": "3/2"
+    },
+    {
+      "q": "1/3",
+      "W": "3/4",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "169/96",
+      "cosh_sibling": "17/8"
+    },
+    {
+      "q": "1/3",
+      "W": "1",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "11/6",
+      "cosh_sibling": "3"
+    },
+    {
+      "q": "2/5",
+      "W": "1/4",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "373/256",
+      "cosh_sibling": "137/128"
+    },
+    {
+      "q": "2/5",
+      "W": "1/2",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "473/320",
+      "cosh_sibling": "41/32"
+    },
+    {
+      "q": "2/5",
+      "W": "3/4",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "1937/1280",
+      "cosh_sibling": "209/128"
+    },
+    {
+      "q": "2/5",
+      "W": "1",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "25/16",
+      "cosh_sibling": "17/8"
+    },
+    {
+      "q": "3/7",
+      "W": "1/4",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "233/168",
+      "cosh_sibling": "19/18"
+    },
+    {
+      "q": "3/7",
+      "W": "1/2",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "59/42",
+      "cosh_sibling": "11/9"
+    },
+    {
+      "q": "3/7",
+      "W": "3/4",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "241/168",
+      "cosh_sibling": "3/2"
+    },
+    {
+      "q": "3/7",
+      "W": "1",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "31/21",
+      "cosh_sibling": "17/9"
+    },
+    {
+      "q": "49/100",
+      "W": "1/4",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "159253/125440",
+      "cosh_sibling": "79433/76832"
+    },
+    {
+      "q": "49/100",
+      "W": "1/2",
+      "phase": "matching",
+      "pair_checks": 1953,
+      "minimum_edges": 31,
+      "cosh_edge": "201017/156800",
+      "cosh_sibling": "21809/19208"
+    },
+    {
+      "q": "49/100",
+      "W": "3/4",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "817073/627200",
+      "cosh_sibling": "100241/76832"
+    },
+    {
+      "q": "49/100",
+      "W": "1",
+      "phase": "tree",
+      "pair_checks": 1953,
+      "minimum_edges": 62,
+      "cosh_edge": "10441/7840",
+      "cosh_sibling": "7403/4802"
+    },
+    {
+      "q": "4/17",
+      "W": "1/2",
+      "phase": "triangles",
+      "pair_checks": 1953,
+      "minimum_edges": 93,
+      "cosh_edge": "297/128",
+      "cosh_sibling": "297/128"
+    },
+    {
+      "q": "2/5",
+      "W": "2/3",
+      "phase": "triangles",
+      "pair_checks": 1953,
+      "minimum_edges": 93,
+      "cosh_edge": "3/2",
+      "cosh_sibling": "3/2"
+    },
+    {
+      "q": "36/73",
+      "W": "3/4",
+      "phase": "triangles",
+      "pair_checks": 1953,
+      "minimum_edges": 93,
+      "cosh_edge": "5977/4608",
+      "cosh_sibling": "5977/4608"
+    }
+  ],
   "capacity": {
     "root5_counts": [
       1,

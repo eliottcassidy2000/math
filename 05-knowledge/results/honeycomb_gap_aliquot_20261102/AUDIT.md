@@ -14,6 +14,11 @@ latest shared-tail normalization corrections. No theorem ID is reserved.
   bounds through rational cosh comparisons. The b2 cross-root hostile and
   general geodesic circle equations are explicit. The all-depth and all-real-b
   conclusions rely on the proof, not interpolation of these samples.
+- The incoming two-parameter comparison adds44,919 exact pair checks in23
+  configurations through depth5, including three rational equality cases.
+  The full minimum-distance graph is checked, not just its number of edges.
+  The sharp arcosh(9/7) infimum is restricted to this family and the
+  minimum-distance relation; no universal induced-unit-distance bound follows.
 - Independent native predecessor enumeration through radius26 and BFS in
   both lattices reproduce704/694 and2263/2107, including their first radius
   violations for root5. The information-theoretic equality case is a direct
@@ -80,10 +85,29 @@ this session were installed into a separate Temp directory, leaving the
 global Python environment unchanged. The PNG preview was visually inspected;
 the SVG export records the same figure.
 
-Normal and optimized runs produced byte-identical receipts. All15 local
+Normal and optimized runs produced byte-identical receipts. All local
 Markdown links resolve, `git diff --check` passes, and the repository's
 agent-facing documentation checker passes its startup, correction and router
 checks. These are packaging checks, separate from the mathematical audit.
+
+## Incoming mathematical signal
+
+The clean rebase onto9e1ae5aaf7 brought Session141 and fc2d85f9a8. Session141's
+`curvature_triangle/PROOF.md`, section5, independently supplies our gap repair
+in the broader (q,W) family, with a sharper upper constant and the near-log2
+edge-scale construction. We credit it explicitly. Its warning about close
+siblings led to the new exact matching/triangles/tree phase classification
+and the restricted arcosh(9/7) infimum. This is additional adjacency control,
+not an independent claim to invent Cantor-boundary geometry.
+
+Session141 also proves the complete sigma42 fibre {20,26,41}, the excess-two
+classification through tau17, the order26 joint-path polynomial and exact
+binary coefficient content. Our row-family parametrization and finite entropy
+bound are distinct; the order25 polynomial was already inherited. The
+arithmetic/count note links these incoming results without redoing their
+censuses. The separate eleven-wedge packet proves sharp order11 stability,
+so the current stability gap is12..41. That certificate is inherited here,
+not represented as a fresh full census or independent replay in this packet.
 
 The meta-patterns used were **correct the object before sharpening the
 technique**, **retain local incidence through counting**, and **keep observer,

@@ -9,7 +9,7 @@ survives because it permits unbounded route lengths and keeps original
 vertices and clocks. It is not a nearest-neighbour placement of ordinary
 Collatz steps.
 
-The strongest new geometric result is [GAP_GEOMETRY.md](GAP_GEOMETRY.md).
+The geometric comparison is [GAP_GEOMETRY.md](GAP_GEOMETRY.md).
 Replacing adjacent dyadic child intervals by separated b-adic intervals,
 b>2, upgrades the inherited drawing to a roughly isometric embedding:
 
@@ -18,6 +18,17 @@ b>2, upgrades the inherited drawing to a roughly isometric embedding:
 The all-depth proof retains properness, noncrossing and exact equal-length
 tree adjacency. A boundary ultrametric and an explicit gap explain how LCA
 information is recovered; triangle inequality remains intact.
+
+Incoming Session141 independently proves a broader gap construction and
+sharper edge-scale efficiency. We credit that overlap. Comparing its width
+W and contraction q<1/2 with our sharp separation gives a further all-size
+classification: at Wcrit=2 sqrt(q/(4-q)), the minimum-distance graph changes
+from sibling matching, to a tree of triangles, to the binary tree. Requiring
+exactly the tree forces edge length greater than arcosh(9/7), a sharp infimum
+within this family. The incoming unrestricted separated construction can
+approach log2. These differ because minimum-distance adjacency is additional
+information, beyond coarse LCA distance. Neither bound is a new universal
+Euclidean unit-distance obstruction.
 
 ![Dyadic and gapped hyperbolic tree comparison](gap_geometry.png)
 

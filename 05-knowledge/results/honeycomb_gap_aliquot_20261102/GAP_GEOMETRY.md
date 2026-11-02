@@ -2,7 +2,10 @@
 
 **PROVED elementary extension, same-agent audit.** This is an explicit
 all-depth construction, with finite rational controls. No external priority
-claim is made for Cantor-boundary tree embeddings.
+claim is made for Cantor-boundary tree embeddings. Incoming Session141
+independently supplies the broader two-parameter gap construction; the exact
+nearest-distance phase classification below compares that construction with
+our W=1 sharp-separation proof.
 
 ## Inherited model and the missing property
 
@@ -142,6 +145,81 @@ The level supply is 2^k while the total length of the 2^k boundary intervals
 is (2/b)^k. This identifies a critical b=2 regime and a separated b>2 regime
 without confusing binary source clocks with the ambient metric.
 
+## Incoming construction and the exact nearest-distance phase boundary
+
+The incoming [Session141 curvature theorem, section5](../session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md)
+uses q=1/b in (0,1/2) and horizontal width 0<W<=1: multiply every horizontal
+coordinate above by W and leave the height q^k unchanged. Its proof gives
+the same lower estimate with gap W(1-2q), and the stronger upper constant
+log(W^2+2). Our displayed log4 bound is valid but not sharp. Its packing
+argument proves the necessary edge-scale bound L>=log2 in curvature -1;
+all strict values are realized by the two-parameter family, while attainment
+at equality is open. Those incoming results are credited, not claimed anew.
+
+Here is a further COMPLETE classification within this parameter family.
+Write E for the parent-child distance and S for the sibling distance:
+
+    cosh E = 1+(1+W^2/4)(1-q)^2/(2q),
+    cosh S = 1+W^2(1-q)^2/(2q^2),
+    Wcrit(q)^2 = 4q/(4-q).                              (6)
+
+The exact minimum distance between distinct vertices is min(E,S), and the
+graph of pairs at that minimum distance has three regimes:
+
+- W>Wcrit: exactly the binary tree;
+- W=Wcrit: the binary tree together with every sibling edge;
+- W<Wcrit: exactly the disjoint sibling pairs, with the root isolated.
+
+**Proof.** At one level the minimum horizontal separation is
+W(1-q)q^(k-1), attained exactly by siblings, since q<1/2. Between adjacent
+levels the true children have offset W(1-q)q^k/2; a child of another parent
+has offset at least W(1-q)(1/q-1/2)q^k, strictly larger. Thus E is the
+adjacent-level minimum, attained exactly by the tree edges. Levels differing
+by at least two have distance >=2log(1/q), which exceeds E: at fixed q the
+edge length increases with W, so the W=1 strict inequality proved above
+applies to all W<=1. These three cases prove the minimum and its entire
+equality graph. Comparing the two cosh expressions gives
+
+    E<S iff W^2(1-q/4)>q,
+
+and equality or reversal gives the other regimes. QED.
+
+At the boundary, each parent and its two children is an equilateral
+hyperbolic triangle at the minimum distance. This is an actual three-colour
+graph, not a Euclidean Hadwiger-Nelson lower bound. Above the boundary the
+minimum-distance graph needs two colours; below it there are only matching
+edges and the isolated root. All three placements still satisfy the same
+positive-gap coarse tree-metric estimates: metric recovery alone does not
+determine the nearest-distance relation.
+
+A pair closer than E is not automatically an edge of the distance-E graph.
+The classification concerns the MINIMUM-distance relation. When S<E it does
+not classify every pair at the parent-child length E, and supplies no lower
+bound for arbitrary induced unit-distance realizations.
+
+**Sharp edge-scale tradeoff in this family.** Requiring the minimum-distance
+graph to be exactly the tree forces
+
+    E > arcosh(9/7) > log2.                             (7)
+
+The infimum arcosh(9/7) is sharp WITHIN this two-parameter construction,
+not asserted as a universal lower bound for all hyperbolic tree drawings.
+Indeed at Wcrit the edge cosh is
+
+    1+2(1-q)^2/[q(4-q)],
+
+and subtracting 9/7 gives
+
+    2(2q-1)(4q-7)/[7q(4-q)] > 0.
+
+For W>Wcrit the edge length is larger still. Let q approach1/2 from below
+and W approach Wcrit(q) from above to attain the infimum as a limit;
+Wcrit(q)<1 leaves room for this choice. The bound is not attained inside
+the stated strict parameter range. This explains precisely why the incoming
+near-log2 construction loses exact minimum-distance adjacency, and why our
+W=1 construction retains it. The triangle inequality is unchanged in every
+regime.
+
 ## Scope
 
 The source here is the abstract binary tree. Transport to a selected Collatz
@@ -153,3 +231,6 @@ exponential growth; this construction supplies no higher chromatic lower bound.
 The exact checker covers all pairs through depth6 for b=2,9/4,5/2,3,4,5:
 48,006 pairs, with rational cosh comparisons, circle equations and the
 critical b=2 hostile. The all-real, all-depth claim is the proof above.
+The incoming comparison adds23 rational (q,W) configurations through depth5,
+including three EXACT equality cases, checking44,919 pairs and each full
+minimum-distance graph. These finite checks support, not replace, (6)--(7).
