@@ -66,6 +66,15 @@ or subtracts r alpha_p, truncated at zero. This is a statement about
 integer precision, not field Frobenius. Iterated Phi need not be the minimal
 precision of the actual r-step operation: intermediate states may be unreachable.
 
+**Concurrent result recovered before publication:** incoming `e9dd62edb6`,
+`../stability_priority_spectrum_20261102/FRACTRAN_CLOCKS.md`, independently
+proves these one-step formulas. Its compact equivalent is
+Phi(m)=D*m/gcd(m,G), with D=lcm_J b_j, G=gcd_J a_j and gcd(D,G)=1.
+This is immediate from P3. That source also proves the contrasting terminating
+family (1/2,2/3), whose exact rank v_2(N)+2v_3(N) decreases by one per step.
+P4 below supplies the general guarded-horizon minimum; P5-P6 treat a returning
+reciprocal family rather than claiming the one-step formula as unique here.
+
 ## P4. Exact finite-clock precision, with all priority guards
 
 Fix a horizon r>=1. The observation O_(r,m)(N) is the actual rule-label word

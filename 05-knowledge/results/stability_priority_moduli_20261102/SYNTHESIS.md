@@ -158,6 +158,13 @@ priority and divisibility guards; a rule may recur many times in one run.
 The common operation is guarded word composition, not an automatic
 tournament structure at order 25.
 
+Incoming `../stability_priority_spectrum_20261102/FRACTRAN_CLOCKS.md`
+adds a useful contrast: the terminating (1/2,2/3) program has exact trace
+class count 1+h+floor((h+1)^2/4), whereas the reciprocal returning family
+here has h+2. These are actual counts of distinguishable finite responses,
+not counts of primes or graph vertices. Priority, a decreasing rank versus
+a two-step return, and the retained clock explain the different growth.
+
 ## Three concrete next targets
 
 1. **OPEN: stability at 10..275.** Combine the joint row reserve J2 with

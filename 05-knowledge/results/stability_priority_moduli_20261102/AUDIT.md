@@ -87,6 +87,13 @@ geometric tail and coupled-mass method are explicitly credited. The new
 degree cancellation and retained B budget integrate them rather than
 claiming their rediscovery as novel. Source pins record the exact inputs.
 
+The first push met concurrent mainline updates and was rejected normally.
+The subsequent clean rebase incorporated `b68db2afda` (Session139 integral
+and regular spectral boundaries) and `e9dd62edb6` (n>=466 and one-step
+arithmetic clocks). The overlapping baseline method and one-step formula
+are credited in the proof notes. The general guarded-horizon formula and
+reciprocal minimal observer retain their stated distinct scopes.
+
 Primary source reading: Conway 1987 sections 1,8,11; the authors' quasi-Riemann
 TeX with the source blob named in `SYNTHESIS.md`; Gerbicz's OEIS contributor
 record. The forum proof returned 403, so the all-size square-sum theorem is

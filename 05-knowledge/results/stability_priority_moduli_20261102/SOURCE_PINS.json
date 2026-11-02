@@ -70,5 +70,17 @@
     "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
     "bytes": 7669,
     "sha256": "dc5c4ca6af9ea94f794ff4fea41ae38810db9053f12a2e83e1c66338b23aa0af"
+  },
+  {
+    "commit": "e9dd62edb6",
+    "path": "05-knowledge/results/stability_priority_spectrum_20261102/STABILITY_466.md",
+    "bytes": 6957,
+    "sha256": "4817ac26f0e8fd3f580a1c596804f4b512b9705517342d16e9900a06f87abb0b"
+  },
+  {
+    "commit": "e9dd62edb6",
+    "path": "05-knowledge/results/stability_priority_spectrum_20261102/FRACTRAN_CLOCKS.md",
+    "bytes": 6559,
+    "sha256": "240aa914150d39bfc742aa218548a41d17496254f162cb0d6fb6e5907c8e28f7"
   }
 ]

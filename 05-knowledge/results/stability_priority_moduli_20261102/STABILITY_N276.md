@@ -46,6 +46,12 @@ tail mechanism give n>=276. The prior mechanism is credited, not presented
 as newly discovered by this packet. The original Session138 and Session139
 proofs and frozen audits are unchanged.
 
+Before the final push, incoming `e9dd62edb6` also supplied
+`../stability_priority_spectrum_20261102/STABILITY_466.md`. That concurrent
+proof independently keeps the negative -RB term and shares the group budget,
+using the earlier weaker degree bound. The n>=276 proof retains its separate
+stronger discarded-degree lemma and the credited Session139 tail argument.
+
 ## 1. Candidate configurations and coupled matching mass
 
 Assume V>0 and Delta<=kappa V, with kappa=kappa_n. Set

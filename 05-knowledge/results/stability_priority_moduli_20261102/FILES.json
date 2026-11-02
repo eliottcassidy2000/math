@@ -1,13 +1,13 @@
 [
   {
     "file": "AUDIT.md",
-    "bytes": 6218,
-    "sha256": "6dbfe6fc1a264cb210ab3ecd086f2bfc36ab631cc858b77e52ba76c66e78a4fa"
+    "bytes": 6650,
+    "sha256": "660d48254a423fb6f2463f40febdfd4819ff255759a8a708c0646bd3b937e457"
   },
   {
     "file": "FRACTRAN_PRECISION.md",
-    "bytes": 9774,
-    "sha256": "7ad061456290038ede23e79082e04c7c3cb37e2c3e46f1b5d2fe9f863aaf8945"
+    "bytes": 10362,
+    "sha256": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
   },
   {
     "file": "normal.json",
@@ -31,13 +31,13 @@
   },
   {
     "file": "SOURCE_PINS.json",
-    "bytes": 3352,
-    "sha256": "6f19df4831169e6797e2f53e09ce28cdeb209bd986a4b3059aa00b63208cd39a"
+    "bytes": 3820,
+    "sha256": "5c8100ffed0d8ad4d3370bde83c6e3dc6f4dbf0bd005fcaded0db379000f1000"
   },
   {
     "file": "STABILITY_N276.md",
-    "bytes": 6303,
-    "sha256": "c8b7587dd24aae0215c3c6ede9278cf8336234e45c7b7cde2e9a72747d00ca48"
+    "bytes": 6668,
+    "sha256": "59fe8d25ec5a15bdc61d1481baa389774a021370c59e4237a3cc81702b29aaf0"
   },
   {
     "file": "STABILITY_N500.md",
@@ -46,8 +46,8 @@
   },
   {
     "file": "SYNTHESIS.md",
-    "bytes": 10947,
-    "sha256": "ad806e7893ab6f09947ccfafe4564310883338de2417389b789240942daeba29"
+    "bytes": 11388,
+    "sha256": "536505f8f94b83f28072a26ed59fbbc4d861dce86fbfdde9d5260375762a88e3"
   },
   {
     "file": "verify.py",
