@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — distinguishing one cycle counts repeated lengths with multiplicity
+
+- **Scope:** prepublication correction in `05-knowledge/results/square_sum_archive_stability_20261102/STABILITY_10.md`; no previously accepted theorem is retracted.
+- **First failed implication:** summing a complement determinant over a distinguished4-cycle counts a collection with two4-cycles twice. The draft minus-branch group omitted `-2 M244`; the complete partition ledger rejected it at partition(2,4,4).
+- **Repair:** retain `sum_C w(C)(u_R+v_R)+M44-2M244`. The complementary pair has variance at most1/4, so `M44-2M244>=M44/2`. Both full-cover branches then have nonnegative residual ledgers; normal/-O rational matrix controls and the two full graph-counting kernels pass. This closes weighted stability at order10 with sharp39/64, not universal tournament-H coverage.
+- **Related navigation repair:** S138 still displayed the superseded gap10..47. S139 already routed the stronger42 cutoff. Both now retain that result and the new small-order endpoint10, leaving11..41 open; frozen older proof packets are unchanged.
+
 ## 2026-11-02 — distinguish the modular curve, its Fricke quotient and the observer
 
 - **Scope:** correction of user-supplied inspirational text, not a retraction of a previously accepted repo theorem. It labelled {2,3,5,7,13} the Ogg-prime group, conflating the genus-zero X0 levels with the distinct Fricke-quotient classification, and proposed a geometric bijection to Fermat primes without an action-preserving map.

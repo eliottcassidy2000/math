@@ -1,0 +1,42 @@
+{
+  "scope": "All reachable-ref path history matching *square*, *squaresum*, *gerbicz*, or *ninja*. Filename discovery only, not full historical text audit. Each missing current path inspected by its previous title.",
+  "history_paths": 2641,
+  "absent_from_baseline": [
+    {
+      "path": "01-canon/theorems/THM-2135-exact-square-prefix-compression-and-monic-depressed-quartic-closure.md",
+      "latest_change": "b88589ca1d8121db13f3706962e57cc99a295c63",
+      "previous_title": "THM-2135 -- compressing an exact square prefix",
+      "square_sum_hamiltonian_topic": false
+    },
+    {
+      "path": "01-canon/theorems/THM-2139-exact-square-prefix-compression-and-monic-depressed-quartic-closure.md",
+      "latest_change": "3aa4a334d062c196af942ad571845dacbc8b241d",
+      "previous_title": "THM-2139 -- compressing an exact square prefix",
+      "square_sum_hamiltonian_topic": false
+    },
+    {
+      "path": "01-canon/theorems/THM-2141-reduced-square-top-terminal-closure-and-ordinary-edge-purity.md",
+      "latest_change": "08c1acddf352771b4766d0a45664ce5377255e3c",
+      "previous_title": "THM-2141 -- the reduced square-top terminal closure",
+      "square_sum_hamiltonian_topic": false
+    },
+    {
+      "path": "01-canon/theorems/THM-2147-exact-square-prefix-compression-and-monic-depressed-quartic-closure.md",
+      "latest_change": "3aa4a334d062c196af942ad571845dacbc8b241d",
+      "previous_title": "",
+      "square_sum_hamiltonian_topic": false
+    },
+    {
+      "path": "01-canon/theorems/THM-3568-squarefree-danielewski-affine-modification-and-two-bracket-collapse.md",
+      "latest_change": "96a7c2349d772e54a90a2f60ee80e62209dcc206",
+      "previous_title": "THM-3568 -- squarefree Danielewski affine modification and two-bracket collapse",
+      "square_sum_hamiltonian_topic": false
+    },
+    {
+      "path": "01-canon/theorems/THM-4299-d-zero-square-face-elliptic-splitting-and-central-extinction.md",
+      "latest_change": "c3373a47611ef26d10bc0579a7a093a25bd525d6",
+      "previous_title": "THM-4299 -- D-zero square-face elliptic splitting and central extinction",
+      "square_sum_hamiltonian_topic": false
+    }
+  ]
+}
