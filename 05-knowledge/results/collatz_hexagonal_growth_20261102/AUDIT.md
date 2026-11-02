@@ -105,6 +105,10 @@ Primary sources inspected:
 - OpenAI, [The Euclidean plane is not five-colorable, pinned introduction](https://raw.githubusercontent.com/openai/math/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/build/sections/introduction.tex),
   Theorems1.1 and1.3. This is CITED external status. No complete independent
   proof review, Lean build, or axiom audit is represented as having occurred.
+- Kuehn, [Minor-universal planar graphs without accumulation points](https://web.mat.bham.ac.uk/D.Kuehn/unvacc3.pdf),
+  Theorem2, especially condition(iii) for nested cycles and disconnected
+  graphs. This is the CITED primary input to Session140's inherited
+  honeycomb subdivision proof; no effective-layout claim is added.
 
 All results newly proved here are independent of the external six-colour
 lower bound. No downloaded papers or full extracted source texts are

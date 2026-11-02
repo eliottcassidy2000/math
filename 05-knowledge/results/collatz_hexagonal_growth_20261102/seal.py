@@ -18,6 +18,7 @@ INPUTS=[
  '05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md',
  '05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md',
  '05-knowledge/results/joint_incidence_clocked_frames_20261102/COLLATZ_LATTICE.md',
+ '05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md',
  '01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md',
 ]
 

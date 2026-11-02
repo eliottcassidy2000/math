@@ -18,6 +18,11 @@ that lattice fails at radius26, with2263 sources versus2107 positions.
 credits the two concurrent growth proofs, and states which geometric repairs
 remain possible.
 
+Incoming [Session140's repair](../session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md)
+constructs a faithful honeycomb subdivision using a cited grid-minor
+theorem, with necessarily unbounded route lengths. This is inherited
+progress; original integer markers and clocks remain essential.
+
 [COLOUR_AND_CLOCKS.md](COLOUR_AND_CLOCKS.md) separates arithmetic arrows
 from all Euclidean unit-distance pairs; classifies palette transport on
 functional components; and proves why a fixed3-adic chart loses future

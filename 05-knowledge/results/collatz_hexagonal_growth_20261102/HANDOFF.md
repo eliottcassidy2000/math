@@ -49,6 +49,11 @@ inverse-growth proof: SF5 predates this session, and concurrent66cf347030 and
 
 LRC(14), Collatz universal convergence, the plane six/seven decision,
 general strong-atom carrier closure, and weighted tournament stability
-orders10..41 remain OPEN. No theorem IDs were reserved or existing results
+orders11..41 remain OPEN. Incoming c101a849a7 and dcd7acb699 resolve order10
+with sharp coefficient39/64; both proof routes are credited in SYNTHESIS.
+Incoming d7bbbf3f05 gives the cheaper exact five-step predecessor grammar
+and the honeycomb subdivision theorem; compare that grammar with SF5
+without identifying exact-time predecessors with first-hit certificates.
+No theorem IDs were reserved or existing results
 promoted without an audit. Shared-checkout scratch and unrelated work were
 preserved. No message or submission to other people was sent.

@@ -186,3 +186,30 @@ Applegate--Lagarias give substantially stronger quantitative inverse-tree
 growth estimates in [Density Bounds for the3x+1 Problem I, Theorem1.1](https://websites.umich.edu/~lagarias/doc/applegateI.pdf).
 Their growth theory is classical. We use the weaker repository SF5 tree
 because its short proof supplies a self-contained geometric certificate.
+
+## 7. Incoming geometric repair and a cheaper fixed clock
+
+After the first checkpoint, [Session140, Theorems1--4](../session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md)
+arrived in d7bbbf3f05. These are inherited results, not new claims of this
+packet. It gives two increasing3-unit predecessors at exactly FIVE
+ordinary steps from every3-unit root. The fixed clock is sharp for that
+uniform unit-surviving requirement. Its predecessor walks need not be
+first-hit paths near a cycle, and they share native states. This is a
+different grammar from SF5, so MINIMAL_CHART's observer minimum does not
+claim to minimize every possible arithmetic controller.
+
+It also proves that the entire ordinary Collatz graph has a faithful
+directed subdivision inside the honeycomb. The graph is a countable,
+subcubic pseudoforest with an accumulation-free plane drawing and at most
+one cycle per component. [Kuehn's Theorem2](https://web.mat.bham.ac.uk/D.Kuehn/unvacc3.pdf)
+therefore supplies a square-grid minor. A matching contraction realizes
+the square grid as a honeycomb minor; the median of each subcubic branch
+set converts the minor to a subdivision. The primary theorem's nested-cycle
+condition was checked; it is automatic for these components.
+
+The route lengths are necessarily unbounded by the growth obstruction.
+Original integer vertices and native step clocks must be marked; routing
+vertices are additional states. This is a subgraph, not a spanning or
+unique space-filling traversal, and no effective canonical placement or
+new convergence assertion is claimed. Thus the proposed geometry has a
+precise positive survivor alongside its fixed-scale obstruction.

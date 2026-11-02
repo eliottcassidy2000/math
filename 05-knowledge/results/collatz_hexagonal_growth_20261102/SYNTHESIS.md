@@ -54,6 +54,7 @@ is inferred merely because the recurrence is short.
 | [FRACTRAN precision, November2](../stability_priority_moduli_20261102/FRACTRAN_PRECISION.md) | Guarded finite-horizon congruences retain valuations | h inverse divisions by3 consume h digits; low residues alone are not operation closed. |
 | [Clocks/carriers](../clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md),66cf347030 | Root85 binary growth with native clock<=7; hyperbolic macro drawing | Earlier concurrent proof of the same polynomial-growth obstruction. Credit retained; exact radius certificates and native gluing are the additions here. |
 | [Joint incidence](../joint_incidence_clocked_frames_20261102/COLLATZ_LATTICE.md),252a039419 | The same SF5 root5 growth proof and hidden-label budget | Agreement verifies inheritance, not three independent new conjecture resolutions. |
+| [Session140](../session140_collatz_hexagonal_geometry_20261102/SYNTHESIS.md),d7bbbf3f05 | Sharp fixed-clock five-step unit predecessor supply; honeycomb subdivision using a cited grid-minor theorem | A faithful stretched network exists. This is inherited; SF5's minimal chart concerns its own declared observer. |
 
 The source literature already has much stronger inverse growth bounds:
 [Applegate--Lagarias, Density Bounds I, Theorem1.1](https://websites.umich.edu/~lagarias/doc/applegateI.pdf).
@@ -134,7 +135,12 @@ overlap sets are genuinely nested, so the max/min recurrence is transferable.
 Supply vertices, pairwise observable, ties/gauge and an actual source-preserving
 map before calling an arithmetic network a tournament. Full native complement
 and arbitrary re-marking still require their own closure proof. The current
-weighted stability frontier remains the inherited3..9 and n>=42;10..41 is OPEN.
+weighted stability frontier is now the inherited3..10 and n>=42;11..41 is OPEN.
+The last integration credits the concurrent
+[archive order-ten proof](../square_sum_archive_stability_20261102/STABILITY_10.md)
+and [complement-port proof](../lower_frontier_complement_fibonacci_20261102/STABILITY_10.md),
+both with sharp coefficient39/64. Their finite certificates were not rerun
+here; they are incoming proved results with their own stated audit scopes.
 
 **LRC(14):** preserve the actual runner phases and owner/clock data before
 constructing any constraint graph. The star Gram control and J7 both reject
