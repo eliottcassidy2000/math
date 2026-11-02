@@ -1,19 +1,12 @@
 ---
 id: THM-1860
-title: "c₃ ≤ H (3-CYCLES ≤ HAMILTONIAN PATHS) IS PROVED MODULO THE STRONGLY-CONNECTED BASE, VIA THE SCC DECOMPOSITION — the strongest survivor of the WOWII tournament conjecture loop (THM-1845), and its arithmetic kernel is formalized in Lean. For every tournament T, the number of directed 3-cycles c₃ is at most the number of directed Hamiltonian paths H. (0) STATUS: verified exhaustively for all tournaments n ≤ 6, on 95661+ strongly-connected samples at n = 6,7, and to n = 23 on high-c₃ structured families (Paley, rotational, near-regular) — 0 violations. (1) THE SCC REDUCTION, PROVED: order the strongly-connected components C₁ ⋗ ⋯ ⋗ C_r transitively; a Hamiltonian path must traverse each Cᵢ completely before the next (no back-arcs), so H(T) = ∏ᵢ H(Cᵢ), while every 3-cycle lies inside one component, so c₃(T) = Σᵢ c₃(Cᵢ). Singletons contribute (c₃,H) = (0,1); non-trivial components are strongly connected with H(Cᵢ) ≥ 3 (verified min H over strongly-connected tournaments = 3,5,9,15,25 for n = 3..7). Hence, given the per-component base c₃(Cᵢ) ≤ H(Cᵢ), Σᵢ c₃(Cᵢ) ≤ Σᵢ H(Cᵢ) ≤ ∏ᵢ H(Cᵢ) — the last step being SUM ≤ PRODUCT for naturals each ≥ 2 (the trivial components drop out of both). (2) SO c₃ ≤ H FOLLOWS FROM THE STRONGLY-CONNECTED CASE c₃ ≤ H, which is the only remaining piece — verified n ≤ 7 and to n = 23, and where H is genuinely large (Moon vertex-pancyclicity gives many Hamiltonian paths). (3) FORMALIZED: the arithmetic kernel 'a list of naturals each ≥ 2 has sum ≤ product' is proved sorry-free in Lean 4 / Mathlib (SumLeProd.lean). (4) THIS IS THE WOWII LOOP CLOSING: the generator (THM-1845) proposed c₃ ≤ H; pushing past the n ≤ 7 filter refuted the sibling H ≤ 2^{n−2}c₃+1 (breaks at n = 10: near-regular-10 has H = 8767 > 8193, Paley-11 has 95095 > 28161 — a WOWII off-by-scale bound) while c₃ ≤ H survived to n = 23 and then reduced to a clean strongly-connected base"
+title: "Triangle count bound as an inherited OCF corollary; historical SCC reduction"
 status: >
-  (0) VERIFIED as stated (exhaustive n ≤ 6; strongly-connected samples n = 6,7; structured
-  families to n = 23; H ≤ 2^{n−2}c₃+1 refuted at n = 10 exactly).
-  (1) PROVED: H(T) = ∏ H(Cᵢ) and c₃(T) = Σ c₃(Cᵢ) are the standard SCC-order facts (a
-  Hamiltonian path is a concatenation of per-component Hamiltonian paths; 3-cycles are
-  intra-component); the sum ≤ product step is proved and formalized.  H(Cᵢ) ≥ 2 for
-  non-trivial components is Moon (strongly connected ⟹ Hamiltonian ⟹ ≥ n paths); verified
-  min = 3,5,9,15,25.
-  (2) The residual STRONGLY-CONNECTED base c₃ ≤ H is NOT proved — it is the whole remaining
-  content, strongly evidenced (n ≤ 7 exhaustive/sample, n ≤ 23 structured, 0 violations) but
-  open.  So this is 'c₃ ≤ H reduced to strongly-connected', not 'c₃ ≤ H proved'.
-  (3) Lean: SumLeProd.sum_le_prod, sorry-free, builds under Mathlib v4.30.0.
-  A candidate theorem with a proved reduction + formalized kernel; honest about the open base.
+  PROVED as an immediate corollary of the inherited odd-cycle collection
+  formula: H(T)>=1+2*c3(T), hence c3(T)<=H(T), for every tournament.
+  The Session137 status repair corrects an obsolete open-base description;
+  it is not a new theorem or a new independent proof of OCF.
+  The historical SCC laws and formalized arithmetic kernel remain valid.
 source: kind-pasteur-2026-07-21-S128c135 (owner: work the full WOWII loop for a long session)
 depends_on:
   - THM-1845    # the tournament WOWII conjecture generator that proposed c₃ ≤ H
@@ -22,7 +15,16 @@ lean: 04-computation/lean/TournamentH7/TournamentH7/SumLeProd.lean
 script: 04-computation/wowii_candidates_largen_kps_S128c135.py (+ .out), /tmp scbase check
 ---
 
-# THM-1860 — c₃ ≤ H, reduced to the strongly-connected case
+# THM-1860 — current status correction
+
+**Inherited OCF corollary, not open.** In `H(T)=sum_C 2^|C|` over vertex-disjoint odd-cycle collections, the empty collection contributes1 and each single directed triangle contributes2. All other terms are nonnegative. Therefore
+
+    H(T)>=1+2*c3(T)>=c3(T).
+
+This is already supplied by [the canonical OCF](THM-002-ocf.md); the 2026-11-02 status repair does not claim a new result. The earlier conditional reduction below is preserved as history, with its obsolete open-base language superseded by this paragraph. Its SCC product and sum laws and arithmetic kernel remain valid.
+
+## Historical reduction and provenance
+
 
 The WOWII generator (THM-1845) proposed `c₃ ≤ H` (3-cycles ≤ Hamiltonian paths). It survived
 every test; here it is reduced to a clean base, with the arithmetic kernel formalized.

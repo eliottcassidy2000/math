@@ -1,0 +1,20 @@
+literal exhaustive unweighted n=0 passed (1 cumulative)
+literal exhaustive unweighted n=1 passed (2 cumulative)
+literal exhaustive unweighted n=2 passed (4 cumulative)
+literal exhaustive unweighted n=3 passed (12 cumulative)
+literal exhaustive unweighted n=4 passed (76 cumulative)
+literal exhaustive unweighted n=5 passed (1100 cumulative)
+literal random unweighted n=6 count=100 passed
+literal random unweighted n=7 count=20 passed
+literal random unweighted n=8 count=3 passed
+two C3 hostile n=6 (H,u,v)=(Fraction(9, 1), Fraction(4, 1), Fraction(1, 1))
+two C3 hostile n=7 (H,u,v)=(Fraction(9, 1), Fraction(4, 1), Fraction(0, 1))
+two C3 hostile n=8 (H,u,v)=(Fraction(9, 1), Fraction(4, 1), Fraction(0, 1))
+exact rational weighted n=1 passed (30 cumulative)
+exact rational weighted n=2 passed (60 cumulative)
+exact rational weighted n=3 passed (90 cumulative)
+exact rational weighted n=4 passed (120 cumulative)
+exact rational weighted n=5 passed (150 cumulative)
+exact rational weighted n=6 passed (180 cumulative)
+PASS all identities, bounds, equality classifications, empty bases; no floating point
+script_sha256 a7518de9b6ca37d6e82d7f7d970f305aacff578c6b2af08a9dbf7276a1d3d645

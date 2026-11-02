@@ -230,13 +230,12 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
 ### Live work and limits
 
 - [THM-1950](../01-canon/theorems/THM-1950-h-ge-disc-reduced-to-strongly-connected.md)
-  reduces the still-open `H>=disc` problem to strong tournaments. THM-3729
-  proves the rooted bound/average. Switching gives `avg H=n!/2^(n-1)` but no
-  fixed-root conclusion: at `n=6`, shared `(H,disc)=(29,2)` has rooted energies
-  `6,4`; covariant root transport repairs it.
+  **PROVED, Session137:** `H>=det(I+A)+abs(det A)+C_nonHamilton>=max(1,s)*disc`.
+  Its addendum gives equality and weighted extensions. THM-3729 retains
+  root covariance; fixed-T arbitrary roots need separate treatment.
 - [THM-4051](../01-canon/theorems/THM-4051-tournament-order-seven-strong-base-exact-frontier.md)
-  closes all 353 strong order-seven classes; Paley gives minimum ratio `27/8`,
-  not sampled `4.22`. All-order remains open.
+  has exact order-seven minimum ratio `27/8` (Paley), not sampled `4.22`.
+  The global inequality is now closed; no all-order ratio claim follows.
 - THM-3315--3380 compile switched-walk, response, and deletion tools; losses remain.
 - A literal Paley bridge exists only in THM-640's prime quadratic-residue scope.
   Composite modulus 14 and repeated score/node heuristics do not inherit it.

@@ -1,25 +1,18 @@
 ---
 id: THM-1950
-title: "H ≥ disc REDUCED TO THE STRONGLY-CONNECTED BASE, via the skew-determinant SCC-composition law — the exact structural parallel of THM-1860 (c₃ ≤ H) for death-star's HYP-8636. For every tournament T, the Rédei Hamiltonian-path count H(T) is at least the poly-time skew-determinant disc(T)=|det(I+K)|/2^{n−1} (K=A−Aᵀ), with equality iff T is transitive. This is PROVED modulo the strongly-connected base H(C) ≥ max(1,s(C))·disc(C), where s(C)=𝟙ᵀ(I+K)⁻¹𝟙=‖(I+K)⁻¹𝟙‖² is the total inverse-response. The reduction rests on three PROVED facts: (i) the SCC-composition law disc(C₁⇒⋯⇒C_r)=∏disc(Cᵢ)·[∏(1+sᵢ)+∏(1−sᵢ)]/2^r (Schur complement; disc is SUPER-multiplicative, unlike H which is exactly multiplicative, and unlike char_A which factors — THM-1925); (ii) the velocity-addition law s(C₁⇒C₂)=(s₁+s₂)/(1+s₁s₂) (a Möbius/SL₂ action on the SCC composition); (iii) the elementary kernel inequality max(1,x)·max(1,y) ≥ max(1+xy,x+y)/2 for x,y≥0. Peeling the top strong component with the invariant P(T)=max(1,s(T))·disc(T) closes the induction: H(T)≥P(T)≥disc(T)."
+title: "Hamiltonian path determinant bound: global vertex-cycle induction, proper-cycle defect and weighted extension"
 status: >
-  (0) VERIFIED: H ≥ disc exhaustive n ≤ 6 (33864 tournaments, 0 violations; reconfirms
-  death-star HYP-8636) and sampled n = 7,8; equality locus = transitive only.
-  (1) PROVED (this session), all machine-verified:
-    - SCC-composition law for disc: exact to 1.8e-15 over all 10976 reducible tournaments n≤6.
-    - s velocity-addition s(C₁⇒C₂)=(s₁+s₂)/(1+s₁s₂): derived by block solve, verified.
-    - kernel inequality max(1,x)max(1,y) ≥ max(1+xy,x+y)/2: proved by 3 cases, 500k-sample slack ≥ 0.
-    - the invariant statement H(T) ≥ P(T)=max(1,s(T))·disc(T): exhaustive n≤6 (all 2^{C(n,2)}).
-  (2) THE RESIDUAL BASE (open, the whole remaining content): for strongly connected C,
-    H(C) ≥ max(1,s(C))·disc(C). Verified exhaustively through n=7: n≤6 on labelled
-    tournaments and n=7 on all 353 strong isomorphism classes (THM-4051), with 0 violations.
-    Tight only at C₃ (H=3, s=3, disc=1 ⟹ max(1,s)disc=3). The former sampled n=7
-    minimum ratio 4.22 and monotone-growth inference are SUPERSEDED: the exact minimum is
-    27/8 at the Paley tournament, so no monotonic margin claim is licensed. Note s(C)≥1 FAILS for strong C at
-    n≥7 (min s = 0.667,0.556 at n=7,8), which is exactly why the base must carry the max(1,·) and
-    the kernel is the two-sided max-inequality, not the naive ∏sᵢ bound.
-  (3) So this is "H ≥ disc reduced to strongly-connected", NOT "H ≥ disc proved" — the exact
-    status of THM-1860 (c₃ ≤ H) for its sibling conjecture; the composition machinery is fully
-    proved and the base is the residual.
+  PROVED, Session137 addendum (2026-11-02), with independent proof audits and
+  exact execution controls. For every nonempty tournament,
+  H >= det(I+A)+abs(det A)+C_nonHamilton >= max(1,s)*disc >= disc.
+  Equality in the first bound holds exactly when no two directed triangles
+  are vertex-disjoint; H=disc exactly for transitive tournaments.
+  The weaker bound H>=det(I+A)+abs(det A) extends to weighted tournaments
+  Aij in [0,1], Aij+Aji=1, with the stated low-order equality exceptions.
+  This closes the formerly open strong base without assuming the SCC
+  reduction. The historical Schur/Mobius formulas remain valid, but the
+  unconditional supermultiplicativity description is corrected below.
+  This is not a formal Lean verification or a full value-spectrum theorem.
 source: klein-2026-07-21-S400 (owner: synthesise repo progress; work high-leverage open math to the fundamental; small improvements toward proofs)
 depends_on:
   - THM-1860    # c₃ ≤ H reduced to strong — the structural template
@@ -28,7 +21,23 @@ answers: HYP-8636   # death-star-S78's H ≥ disc conjecture — now reduced to 
 script: 04-computation/h_ge_disc_reduction_to_strong_klein_S400.py, disc_composition_law_klein_S400.py, h_ge_disc_reduction_klein_S400.py (+ .out)
 ---
 
-# THM-1950 — H ≥ disc, reduced to the strongly-connected base
+# THM-1950 — current global closure
+
+**PROVED, independently audited, 2026-11-02.** The [Session137 vertex-cycle induction](../../05-knowledge/results/session137_overnight_proof_frontiers_20261102/discriminant/GLOBAL_PROOF.md) proves the previously open base for every nonempty tournament, not just strong tournaments. Write u=det(I+A), v=(-1)^n det A and P=u+|v|=max(1,s)disc. Then
+
+    H >= P+C_nonHamilton >= P >= disc.
+
+The sharp proper-cycle equality holds exactly when there are no two vertex-disjoint directed triangles. H=P exactly for transitive tournaments and C3; H=disc exactly for transitive tournaments. The weighted extension H>=det(I+A)+|det A| and its separate equality classification are proved in the linked source. Empty tournaments are excluded from the P bound.
+
+The proof separates determinant cycle signs from the inherited OCF and uses the weaker induction H>=u, whose empty base is valid. Algebraic u±v positivity supplies both margins. [Audit and reproduction](../../05-knowledge/results/session137_overnight_proof_frontiers_20261102/README.md). No unrestricted value-spectrum realization or literature-priority claim follows.
+
+**Correction to historical prose.** The exact join factor is (1+s1*s2)/2, so disc is supermultiplicative only when s1*s2>=1. A strong seven-vertex factor with rows(30,8,122,80,2,91,19) has disc6,s2/3, and its ordinal square has disc26<36. Reducibility does not force s<1: three ordinal triangles have s9/7. The original Schur law and max-kernel reduction survive these corrections.
+
+## Historical reduction and finite evidence
+
+The following records the earlier reduction and its provenance. Its statements that the strong base remained open are superseded by the current addendum above.
+
+
 
 death-star-S78 (HYP-8636) conjectured `H(T) ≥ disc(T)` with equality iff transitive, where
 `H(T)` = # directed Hamiltonian paths (Rédei, #P-hard, always odd) and
@@ -52,7 +61,7 @@ are `√(1+σ²)≥1`, so `‖(I+K)⁻¹‖≤1`. A singleton has `s=1`.
    > `disc(T₁ ⇒ T₂) = disc(T₁)·disc(T₂)·(1+s₁s₂)/2.`
    Iterating over the transitive SCC order `C₁ ⋗ ⋯ ⋗ C_r`:
    > `disc(T) = (∏ᵢ disc(Cᵢ))·[∏ᵢ(1+sᵢ) + ∏ᵢ(1−sᵢ)]/2^r.`
-   Since `sᵢ ≥ 0`, the correction `≥ 1`: **disc is super-multiplicative over strong components**
+   The correction need not be at least one: **disc has the displayed modulated product law, not unconditional supermultiplicativity** (see the current counterexample above)
    (contrast: `H` is exactly multiplicative — THM-1860; `char_A` factors — THM-1925; `disc` does
    *not*). Verified to `1.8e-15` over all 10976 reducible tournaments `n ≤ 6`.
 
@@ -77,8 +86,7 @@ Because a regular tournament has `K𝟙 = 0` (row sums `= out−in = 0`), `x=(I+
 `s=n` forces `x∥𝟙` (equality in Cauchy–Schwarz `s=𝟙ᵀx≤√n‖x‖=√n√s`) hence `K𝟙=0`, i.e. regular.
 Verified exhaustively n=3,5,7 (0 mismatches). So `s ∈ [0,n]` with the top value pinned to regularity;
 regular tournaments (Paley, rotational) uniquely maximize `s`, and there the base reads `H ≥ n·disc`
-(e.g. Paley-7: `H=189 ≥ 7·8=56`). Under `⇒` the velocity law drives `s` into `(−1,1)` (reducible
-`s<1`), so `s` measures how far the top strong component is from regular, in a Möbius-additive
+(e.g. Paley-7: `H=189 ≥ 7·8=56`). Under `⇒` the velocity law can put `s` on either side of one (the ordinal-triangle family alternates), so `s` measures how far the top strong component is from regular, in a Möbius-additive
 coordinate.
 
 ## The reduction

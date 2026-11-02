@@ -4,13 +4,13 @@ title: "Rooted Pfaffian response and sign-root deletion average"
 status: >
   PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.  For every real skew K
   and root vector u, the odd rooted-Pfaffian square sum is exactly
-  det(I+K)u^T(I+K)^(-1)u.  For tournaments this identifies THM-1950's open
+  det(I+K)u^T(I+K)^(-1)u.  For tournaments this identifies THM-1950's formerly open
   strong base with an even/odd parity-energy inequality.  Averaging the odd
   energy over every incident sign root equals one half the sum of all
   vertex-deletion discriminants when n>=2.  Over a full switching class the
   Hamiltonian-path mean is n!/2^(n-1), and it dominates both the constant
   even-energy mean and the odd-energy mean by Hadamard bounds.  The fixed
-  all-one-root inequality remains open.
+  all-one-root inequality is closed by the Session137 addendum below.
 source: root / 2026-08-22
 audit: >
   PASS.  A separate Fraction/Gaussian-elimination implementation checked
@@ -41,6 +41,9 @@ hash_basis: raw LF bytes
 ---
 
 # THM-3729 -- rooted Pfaffian energy is the exact inverse response
+
+**Current addendum, 2026-11-02.** [Session137](../../05-knowledge/results/session137_overnight_proof_frontiers_20261102/discriminant/GLOBAL_PROOF.md) proves the formerly open fixed-all-one-root bound H>=max(1,s)disc for every nonempty tournament. The parity-energy identities and switching averages below remain valid and retain their original scope. This does not assert an arbitrary-root bound with the underlying tournament held fixed.
+
 
 **PROVED + VERIFIED-EXACT + INDEPENDENTLY AUDITED.**
 

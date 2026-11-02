@@ -1,0 +1,10 @@
+exhaustive n=0 passed; inputs=1 accepting certificates=0
+exhaustive n=1 passed; inputs=2 accepting certificates=0
+exhaustive n=2 passed; inputs=4 accepting certificates=0
+exhaustive n=3 passed; inputs=12 accepting certificates=2
+exhaustive n=4 passed; inputs=76 accepting certificates=154
+exhaustive n=5 passed; inputs=1100 accepting certificates=9882
+source=>C3=>C3 passed; gaps=(5,3,5,3), certificates=16
+adversarial rejection controls passed: 48
+PASS exact canonical #P certificate counts for delta, e, H-P, Gamma
+script_sha256 4fa3b805dd247bd7d6219f93e3bf4ee4c1b20209b123bf6033a7e832ae4c1ca7

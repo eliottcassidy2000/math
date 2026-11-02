@@ -59,3 +59,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session135](S135.md): exact machine representations, fixed-PRIMEGAME basins and cost-preserving simplifications.
 
 [Session136](S136.md): full tournament spectrum frameworks, local universality and exact structural boundaries.
+
+[Session137](S137.md): overnight proof frontiers; global Hamiltonian determinant bound and further structural classifications.

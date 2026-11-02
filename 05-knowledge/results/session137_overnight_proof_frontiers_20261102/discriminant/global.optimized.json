@@ -1,0 +1,17 @@
+{
+  "empty_complements": 3360,
+  "negative_controls": [
+    "empty theorem domain",
+    "wrong distinguished-cycle v sign",
+    "missing OCF factor2",
+    "omitted weighted one-vertex path"
+  ],
+  "ordinary_proper_cycle_checks": 1099,
+  "ordinary_tournaments": 33867,
+  "positive_weight_old_paths": 10642,
+  "root_recurrences": 1094,
+  "scope": "Finite exact identity/equality controls; the universal theorem is the written induction, not this census.",
+  "status": "PASS",
+  "weighted_one_vertex_paths": 1250,
+  "weighted_tournaments": 4325
+}
