@@ -1,0 +1,47 @@
+[
+  {
+    "commit": "291b4d975784",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
+    "sha256": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0"
+  },
+  {
+    "commit": "291b4d975784",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md",
+    "sha256": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3"
+  },
+  {
+    "commit": "291b4d975784",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/TRIANGLE_VARIANCE.md",
+    "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc"
+  },
+  {
+    "commit": "291b4d975784",
+    "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/H1_STABILITY.md",
+    "sha256": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82"
+  },
+  {
+    "commit": "9c7eb0b13e",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
+    "sha256": "e82bf3b0eb986f63daee55d42e84c3545921800e0a9936484cfdff97a03b6561"
+  },
+  {
+    "commit": "9c7eb0b13e",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold526/AUDIT.md",
+    "sha256": "c7ffdb5e8c6609d9b1e0ed86127ce9d87a54a26ea9038c0103b1186fbf528350"
+  },
+  {
+    "commit": "9c7eb0b13e",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
+    "sha256": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c"
+  },
+  {
+    "commit": "e9dd62edb6",
+    "path": "05-knowledge/results/stability_priority_spectrum_20261102/STABILITY_466.md",
+    "sha256": "4817ac26f0e8fd3f580a1c596804f4b512b9705517342d16e9900a06f87abb0b"
+  },
+  {
+    "commit": "e9dd62edb6",
+    "path": "05-knowledge/results/stability_priority_spectrum_20261102/FRACTRAN_CLOCKS.md",
+    "sha256": "240aa914150d39bfc742aa218548a41d17496254f162cb0d6fb6e5907c8e28f7"
+  }
+]

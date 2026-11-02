@@ -44,3 +44,9 @@ Both receipts agree. This checks the exact slot-count residual2225351/157000000,
 Hostiles: omitting-BR breaks the final energy coefficient; omitting U breaks the tail bound; the same parameter choice at312 fails to force nine retained edges and its m8 scalar cell fails. None is an actual stability counterexample. Review of all steps verified the SAME B distribution, positive1-4t, nonempty heavy matching, coefficient monotonicity, inequality directions after retaining-BR, and the separate case lambda R>=1. The strict contradiction includes D=0. No proof below314 follows.
 
 Incoming proof pointers: `stability_priority_spectrum_20261102/STABILITY_466.md` at e9dd62edb6 supplies the baseline-retaining rearrangement; Session139's `stability/PROOF_N526.md` and its independent audits supply the local dual. The combined proof uses accepted Session138 inputs directly and reconstructs both algebraic moves.
+
+## Guarded path carrier
+
+`python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_guarded_paths.py` and its `-O` replay agree. Independent permutation enumeration and edge-subset linear-forest enumeration agree on all1099 labelled graphs of orders1..5. Checks include complement reciprocity, leading degree/coefficient, and the marked-leaf hostile. The15-vertex square-sum path is checked against its original labels and targets9,16,25. Infinite square-sum existence remains inherited/CITED, not derived from this finite check.
+
+The local unspent-remainder lemma is additionally checked by `verify_remainder.py` in normal and optimized Python, with matching receipts. It verifies the clamped scalar minimizer and the retained invoice; its proposed payment inequality remains OPEN.

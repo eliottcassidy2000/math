@@ -1,0 +1,8 @@
+{
+  "checked": "2026-11-02",
+  "source": "https://oeis.org/A090461",
+  "attribution": "Robert Gerbicz, Jan21,2018, author comment reporting all n>=25 paths and n>=32 cycles",
+  "forum": "https://www.mersenneforum.org/showthread.php?p=477787",
+  "forum_status": "not accessible through web tool; no fresh forum-proof review claimed",
+  "scope": "CITED prior result, corroborating inherited repo proof/certificate lineage"
+}
