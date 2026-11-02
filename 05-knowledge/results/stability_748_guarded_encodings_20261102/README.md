@@ -1,17 +1,15 @@
-# Sharp stability from66: tensor reserve, degree energy and matching slots
+# Sharp stability from 48: tensor reserve, exact slots and two local estimates
 
-**PROVED scoped.** The exact weighted tournament determinant-gap coefficient and complete equality classification hold for every **n>=66**. Together with inherited n=3..9, **orders10..65 remain OPEN**. Universal raw Hamiltonian-path spectrum completeness remains OPEN.
+**PROVED, scoped.** The exact weighted tournament determinant-gap coefficient and complete equality classification hold for every **n>=48**. Together with inherited n=3..9, **orders10..47 remain OPEN**. Universal raw Hamiltonian-path spectrum completeness remains OPEN; vertex orders and raw path-count values are different targets.
 
-[Current proof](STABILITY_66.md) · [Verification](VERIFICATION.md) · [Concept board](BOARD.md).
+[Current proof](STABILITY_48.md) · [Verification](VERIFICATION.md) · [Concept board](BOARD.md) · [Handoff](HANDOFF.md).
 
-For R=floor(n/2), the coefficient is `(4/R)[1-(3/4)^R-1_(n even)(1/4)^R]`. Positive-variance equality is precisely maximal ordinal fair pairs, with one singleton at odd order.
+For R=floor(n/2), the coefficient is `(4/R)[1-(3/4)^R-1_(n even)(1/4)^R]`. Positive-variance equality is precisely maximal ordinal fair pairs, with one singleton at odd order; zero-variance equality is transitivity.
 
-The initial local argument reached748. Incoming Session139 independently reached748 and then526. Keeping its unused positive light-mass term yielded514. A second incoming proof reached466 by retaining the negative baseline term-BR. Combining those two credits, and retaining the missing matching slots, proves314. This newly covers314..465 beyond the strongest incoming result. Earlier proofs and receipts are retained as superseded checkpoints.
+The proof combines Session138's rounding/equality mechanisms, Session139's independently audited tensor matching reserve, the concurrent stronger discarded-degree estimate, and the negative-baseline dual. The new step takes the maximum of two overlapping group estimates, rather than adding them, and retains the exact matching-slot constraint. The resulting scalar dual has exact ratio boundary `2+2sqrt(2)`; the rational choice5 yields the order48 certificate. This resolves48..55 beyond the incoming56 theorem. The original10..1499 gap now contains only10..47: 1,452 of its1,490 orders are covered by the combined advances.
 
-The current proof is a same-agent proof audit with exact rational checks and separate local-energy code. No independent-agent audit, formal proof, or external novelty is claimed. Session138 and Session139 inputs retain their own published audits. Main pins are291b4d975784,9c7eb0b13e ande9dd62edb6.
+This new combination has a same-agent proof audit, exact rational checks, and direct disjoint-group tests. No independent-agent audit, formal proof, or external novelty is claimed. Accepted inputs retain their published audits. Earlier748,514,314,66 proofs and receipts remain valid historical checkpoints.
 
-[Guarded square-sum carrier](GUARDED_PATHS.md): its lowest polynomial degree is the minimum path-cover defect. Complement reciprocity exactly pairs the four-vertex star and triangle-plus-isolate, while a same-port attachment separates them. [Next retained remainder](NEXT_MASS_REMAINDER.md) gives a quantitative local extension for the remaining stability gap; no additional order is claimed.
+[Guarded square-sum carrier](GUARDED_PATHS.md): its lowest polynomial degree is the minimum path-cover defect. Complement reciprocity pairs the four-vertex star and triangle-plus-isolate, while a same-port attachment separates them. [Retained remainder](NEXT_MASS_REMAINDER.md) gives another local estimate whose use below48 remains OPEN.
 
-[Research synthesis](SYNTHESIS.md) · [Next tests and handoff](HANDOFF.md).
-
-A final incoming checkpoint at8da4684eef supplied the independently audited tensor matching reserve and a140 theorem. Combining that reserve with the earlier factor-four discarded-degree estimate, exact slot counting, and the negative baseline proves **n>=66**. This newly resolves66..139 beyond the strongest incoming theorem. The full coefficient and equality locus are unchanged. The earlier314 result remains a valid, explicitly superseded route.
+[Research synthesis](SYNTHESIS.md) recovers older metagraph, five-vertex incidence,5/11, all-modulus and FRACTRAN work, with exact maps and their limits.

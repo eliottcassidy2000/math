@@ -17,7 +17,7 @@ Proof review checked: both rounding inequalities have the SAME independent termi
 
 The inherited low-order hostile C4 disjoint-union K3 still obstructs a generic unsigned graph shortcut. The new proof does not supply that shortcut or an all-order Hamiltonian spectrum theorem.
 
-## Current n>=514 continuation
+## Historical n>=514 continuation
 
 ```sh
 python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_514.py
@@ -32,7 +32,7 @@ The separate dual checker minimizes the quadratic directly in S, retaining the n
 
 The all-n proof depends on monotonicity and convexity, not the finite sample. Audit review checked that U enters both the retained matching mass and the SAME local-energy budget; in the m<=31 branch its lower bound comes from M_h<=m/4, while the m>=32 branch pays the tail without U. The lower bound may be negative outside its branch and is not used there. All inequalities use the same B; D=0 is included in the strict contradiction. No order below514 is promoted.
 
-## Current n>=314 combined certificate
+## Historical n>=314 combined certificate
 
 ```sh
 python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_314.py
@@ -51,7 +51,7 @@ Incoming proof pointers: `stability_priority_spectrum_20261102/STABILITY_466.md`
 
 The local unspent-remainder lemma is additionally checked by `verify_remainder.py` in normal and optimized Python, with matching receipts. It verifies the clamped scalar minimizer and the retained invoice; its proposed payment inequality remains OPEN.
 
-## Current n>=66 theorem
+## Historical n>=66 theorem
 
 ```sh
 python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_66.py
@@ -63,3 +63,27 @@ Receipts agree. The three rational Taylor inequalities bootstrap999/4000 to3/5,1
 Same-agent proof audit checked the tensor parity correction is only present for a perfect matching; the stronger discarded-degree estimate is proved by distinct selected/discarded invoices; nonlinear coupling subtracts n*kappa/8, not n*kappa/2; V>2 suffices for the starting constant; U<=eta(R-r_h) retains the lost slots; positive matching mass, coefficient monotonicity, strict-BR accounting, and the nonpositive-dual-coefficient case are handled. The uniform theorem comes from these proofs, not the finite checks. The new combined66 theorem has not been independently reviewed by another agent.
 
 The previously independent tensor audit script `session139.../tensor_matching_audit/verify_exact.py` was replayed in this session; its JSON is byte-identical to the published exact_results.json. `tensor_input_replay.json` records this input check. Replaying an earlier independent audit is not a new independent review of the66 combination.
+
+## Current n>=48 theorem
+
+```sh
+python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_48.py
+python3 -O 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_48.py
+```
+
+Normal and optimized receipts agree. Four exact degree12 Taylor inequalities
+bootstrap49/200 to99/100 at R24. The heavy-slot slack is1/100; both convex
+tail endpoints are below47/300. The verifier checks25,351 rational local
+points, the exact piecewise minimizer, all729 ternary-weighted K4 graphs
+by literal disjoint-group accounting, and277 corroborating R values.
+The ratio24/5 hostile has exact deficit-1/288; order47 rejects the chosen
+certificate. Neither is a tournament counterexample.
+
+Same-agent proof review checked the continuum minimization and its iff
+boundary2+2sqrt(2), max versus sum of overlapping estimates, the common
+rounding baseline, nonlinear mass bootstrap, exact matching slots,
+nonempty/nonperfect retained matching, decreasing matching coefficient,
+tail endpoint monotonicity, strict negative-baseline accounting, and both
+signs of1-lambda R. Equality reduces to the accepted matching-support
+classification after D=B=0. The uniform proof is algebraic, not inferred
+from finite controls. No new independent-agent or formal audit is claimed.

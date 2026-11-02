@@ -1,8 +1,8 @@
 # The next retained coordinate: variation inside the light groups
 
-**Frontier update:** the local inequality remains valid; the sample R156 test below is now superseded by [n>=66](STABILITY_66.md). Any application to the remaining10..65 must be newly proved.
+**Frontier update:** the local inequality remains valid; the sample R156 test below is now superseded by [n>=48](STABILITY_48.md). Any application to the remaining10..47 must be newly proved.
 
-**Status: PROVED local inequality; its use to close any order below314 is OPEN.**
+**Status: PROVED local inequality; its use to close any remaining order below48 is OPEN.**
 This keeps the exact squares discarded in the current proof. It is a
 concrete continuation target rather than another independent worst-case bound.
 

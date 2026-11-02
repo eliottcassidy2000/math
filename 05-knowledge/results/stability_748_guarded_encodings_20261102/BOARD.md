@@ -15,16 +15,25 @@ Closest proved mechanism: Session138's binary-baseline matching extraction, nonl
 
 Scope rule: equal counts, finite residues and a common total order do not identify these objects. Every connection must provide its map, predicate, loss and sidecar. No subagents are used in this session.
 
-## Incoming update: 9c7eb0b13e
+## Historical incoming update: 9c7eb0b13e
 
 Session139 independently reached748 and then526, with exact all-modulus context clocks and a weighted n5 isospectral hostile repaired by M23. The anchor now uses its stronger local dual. Retaining the unused light-mass gain proves n>=514;10..513 is the actual remaining interval. The old748 two-bin obstruction motivates this change of coordinate rather than constant tuning.
 
 The niche lane must inherit the complete factorial-transform/CRT context model, not rederive scalar modular universality. The wildcard will encode square-sum Hamiltonicity by a missing-edge valuation; a fair-tournament completion alone is intentionally blind to it. The common lesson is to retain incidence or guard data needed by the next operation.
 
-## Second incoming update: e9dd62edb6
+## Historical second incoming update: e9dd62edb6
 
 The466 proof retains-BR in matching deletion. Combining it with this packet's U-payment and the exact slot relation L+r_h<=R proves n>=314. Current anchor:10..313. This is an actual synthesis of distinct compatible costs; neither a second spending of B nor a claim that a modular shadow forces equality. Niche: inherit the incoming minimal FRACTRAN clocks instead of duplicating them. Wildcard: the complement-reciprocal missing-edge polynomial of an undirected graph and its path-cover valuation.
 
-## Final incoming update:8da4684eef
+## Historical tensor update:8da4684eef
 
 The independently audited tensor theorem gives a retained nonlinear matching reserve near1. Combined with the stronger2D^2/n degree estimate and this lane's exact slot accounting, it proves n>=66. Current anchor is10..65; earlier R156 tests are no longer open. Niche/wildcard identities remain as proved, with raw-H universal coverage still OPEN. Do not force the repeated numerical thresholds into a common arithmetic interpretation.
+
+## Current frontier: combined order48 certificate
+
+Incoming c1e79aee0e reached56. The new max-of-invoices dual has sharp
+scalar boundary d/t=2+2sqrt(2); d/t=5 plus exact slots forces12 heavy
+edges from R24, paying the tail. Current anchor:10..47. Its proof preserves
+the same B and counts every wedge once. Niche: all-modulus shadows still
+need bounded integer witnesses. Wildcard: the port-dependent missing-edge
+polynomial distinguishes what the unmarked complement pair cannot.

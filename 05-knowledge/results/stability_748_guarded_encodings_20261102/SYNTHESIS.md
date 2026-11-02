@@ -2,7 +2,7 @@
 
 The assigned interval10..1499 concerns the sharp weighted determinant-gap
 coefficient at VERTEX ORDERS, not missing raw Hamiltonian-path values.
-The present merged frontier is3..9 and all n>=66, leaving10..65 open.
+The present merged frontier is3..9 and all n>=48, leaving10..47 open.
 The all-order binary omissions7,21 are inherited; completeness of every
 other positive odd raw H is still open. Presentation counts H/Aut remain
 a separate observable throughout.
@@ -28,6 +28,14 @@ estimate and exact slots, it gives66; these are additional proved inputs,
 not mere constant tuning of the314 argument. The tensor source keeps the
 whole odd-parity norm, so cancellation of one Pfaffian coordinate cannot
 erase the companion energy.
+
+The final48 extension sharpens the flexible dual from the incoming56
+proof. A group supports two overlapping lower bounds, wS and wS/2+S^2/4.
+Their maximum has a better dual than either alone. Solving the two-regime
+quadratic minimization gives the exact scalar ratio2+2sqrt(2); choosing5
+and keeping the exact slots produces48. This is a useful arithmetic
+meaning of5 in this construction, without equating it to unrelated5/11
+occurrences. The remaining interval is10..47.
 
 ## Older metagraph/RH-adjacent work: what was recovered
 

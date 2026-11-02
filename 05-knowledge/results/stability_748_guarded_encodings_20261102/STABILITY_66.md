@@ -1,5 +1,7 @@
 # Tensor reserve, discarded-degree energy and exact slots: sharp stability from66
 
+**Historical checkpoint: valid but SUPERSEDED as the current frontier by [n>=48](STABILITY_48.md).** Remaining-range statements below record this earlier checkpoint.
+
 **Status: PROVED; same-agent proof audit with exact rational certificates and a separate weighted-degree implementation. No independent-agent audit of this new combined theorem is claimed.** This combines the
 independently audited incoming tensor matching theorem, the concurrent
 discarded-degree estimate, and the retained-baseline/slot method. It does
