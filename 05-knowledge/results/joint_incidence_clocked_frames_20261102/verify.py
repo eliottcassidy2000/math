@@ -4,7 +4,7 @@ Run from any directory. Writes verification.json beside this file.
 The continuum proofs are in STABILITY_42.md, not inferred from grids.
 """
 from fractions import Fraction as F
-from itertools import combinations, product
+from itertools import combinations, permutations, product
 from math import factorial
 from pathlib import Path
 import json
@@ -99,6 +99,36 @@ def global_checks():
     return {"all_five_vertex_ternary_weight_tournaments": count}
 
 
+def baseline_scope_checks():
+    records = {}
+    for n in (3, 4):
+        edges = list(combinations(range(n), 2))
+        perms = list(permutations(range(n)))
+        signs = [(-1)**sum(p[i] > p[j] for i in range(n) for j in range(i+1, n)) for p in perms]
+        def det(A):
+            return sum(sign*product_entries(A, p) for sign, p in zip(signs, perms))
+        def product_entries(A, p):
+            value = 1
+            for i, j in enumerate(p):
+                value *= A[i][j]
+            return value
+        ds = []
+        for bits in product((0, 1), repeat=len(edges)):
+            A = [[0]*n for _ in range(n)]
+            for (u, v), bit in zip(edges, bits):
+                A[u][v], A[v][u] = bit, 1-bit
+            H = sum(all(A[p[i]][p[i+1]] for i in range(n-1)) for p in perms)
+            U = [[A[i][j]+int(i == j) for j in range(n)] for i in range(n)]
+            delta = H-det(U)-abs(det(A))
+            tau = sum(A[i][j]*A[j][k]*A[k][i]+A[j][i]*A[k][j]*A[i][k]
+                      for i, j, k in combinations(range(n), 3))
+            require(delta == 0 if n == 3 else delta >= tau, "proper-triangle order boundary")
+            ds.append(delta)
+        records[str(n)] = {"binary_sources": len(ds), "min_delta": min(ds), "max_delta": max(ds)}
+    require(F(1, 4)*F(1, 2)-F(1, 4)**2*(1-4*F(1, 4)) == F(1, 8), "fair triangle hostile")
+    return {"binary": records, "fair_triangle_B": "0", "unguarded_capacity_rhs": "1/8"}
+
+
 def endpoint_checks():
     c0 = F(1243, 5000)
     taylor = sum(F(26, 5)**j/factorial(j) for j in range(17))
@@ -146,7 +176,7 @@ def endpoint_checks():
 def main():
     result = {"status": "FINITE-EXACT; continuum claims proved in STABILITY_42.md",
               "triangle": triangle_checks(), "global": global_checks(),
-              "endpoints": endpoint_checks()}
+              "baseline_scope": baseline_scope_checks(), "endpoints": endpoint_checks()}
     path = Path(__file__).with_name("verification.json")
     path.write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8")
     print(json.dumps({"triangle": result["triangle"], "global": result["global"],

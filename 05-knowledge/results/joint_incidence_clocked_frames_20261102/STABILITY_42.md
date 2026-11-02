@@ -30,7 +30,8 @@ results remain separate, so the unresolved interval after this result is
 ## 1. Inheritance and the budget that must not be spent twice
 
 Use the SAME independent binary rounding throughout, and put B=E Delta(T).
-The accepted inputs from the order-48 proof and its cited predecessors are
+The accepted inputs from the order-48 proof and its cited predecessors,
+for n>=4, are
 
     B>=tau>=W,  W>=2D^2/n,  W>=2V^2/n-V/4,
     Delta>=B+(1-exp(-4V))/4,  Delta>=B+kappa_n M.
@@ -206,7 +207,8 @@ This completes orders 42..47; the incoming theorem supplies n>=48.
 
 ## 5. What this does and does not compress
 
-**Corollary J-capacity (PROVED).** For every weighted tournament, every
+**Corollary J-capacity (PROVED).** For every weighted tournament of order
+n>=4, every
 descending greedy matching as above, and every 0<=k<=1/4,
 
     B >= kD-k^2(R-4M).                                (13)
@@ -229,6 +231,12 @@ R-4M>0 and D<=(R-4M)/2, and B>=D/4-(R-4M)/16 otherwise. At zero unused
 capacity the latter formula gives B>=D/4. These are additional scalar
 consequences, not an all-order solution: the low-matching-mass bootstrap
 obstruction at40,41 remains.
+
+The order guard is essential. On every binary three-tournament Delta=0,
+so a fair weighted triangle has B=0, M=1/4, D=1/2 and R=1. Formula(13)
+at k=1/4 would incorrectly require B>=1/8. The pointwise triangle lemma
+remains valid; it is the transfer B>=tau that needs a proper triangle
+and hence n>=4. The order42 theorem is unaffected by this scope correction.
 
 The new usable coordinate is the attachment of TWO external incidences to
 the SAME selected pair. After paying the ordinary wedge sum, enough of that

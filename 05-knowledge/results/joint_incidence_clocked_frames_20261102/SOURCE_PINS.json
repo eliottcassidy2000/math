@@ -83,6 +83,21 @@
       "path": "05-knowledge/results/tensor_primorial_ports_20261102/STABILITY_42.md",
       "commit": "4e3e096444",
       "sha256_git_blob": "bbd20505e0b4fb1f429647b95e75a2bb7d157f6050e0ba198d0919d072bbf5b2"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/RECURRENCES.md",
+      "commit": "00f55b6c70",
+      "sha256_git_blob": "95d4e904903463fd9eeb0d5044b51b4e25afa9a89f60f15f1c527cb0745f5f59"
+    },
+    {
+      "path": "05-knowledge/results/tensor_primorial_ports_20261102/STABILITY_42.md",
+      "commit": "00f55b6c70",
+      "sha256_git_blob": "3a9cbd47d3c39424c8356d69ffc6ec4d3f612defc9b1d9bf0050f28157e40901"
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
+      "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
+      "sha256_git_blob": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0"
     }
   ],
   "primary_sources": [

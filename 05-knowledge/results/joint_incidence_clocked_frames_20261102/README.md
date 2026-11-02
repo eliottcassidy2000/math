@@ -12,7 +12,7 @@ response rather than confuse that response with the source:
   sharp weighted stability for42..47; the inherited theorem supplies48+.
   Concurrent mainline `4e3e096444` independently reached42 using unused
   capacity. The distinct joint-incidence surplus additionally extends the
-  capacity inequality to EVERY k<=1/4. **10..41 remains OPEN.**
+  capacity inequality to EVERY k<=1/4 at n>=4. **10..41 remains OPEN.**
 * [PATH_KERNEL](PATH_KERNEL.md): an integer intersection formula for every
   finite bank of directed paths, with a separate Shannon compiler. For
   square-sum G25 its guarded histogram is4294962432+4608z+256z^2 on32 edges,
@@ -63,8 +63,9 @@ cards suffice; no new universal meta-pattern is promoted from this packet.
 ## Strongest next targets
 
 1. **OPEN,10..41:** combine the full-quarter potential with the actual
-   five-vertex feasible region. Low-matching-mass scalar failure is not
-   a counterexample; joint orientation/realizability is still missing.
+   five-vertex feasible region and q_max. Incoming `00f55b6c70` rejects its
+   scalar order41 witness by W>=2V^2/n-q_max V; joint orientation and
+   realizability remain necessary beyond scalar certificates.
 2. **OPEN, complements:** use native multi-run attachments in the path
    decision diagram, carrying full targets and signed unions. Require
    both81/27 joint-rank controls and the six-vertex revisit hostile first.
@@ -73,6 +74,11 @@ cards suffice; no new universal meta-pattern is promoted from this packet.
 4. **OPEN, transport:** calculate stabilizer bases for the actual strong-atom
    language. Q8 is a tested model of fixed versus moving selectors, not
    an automorphism group of a tournament atom.
+
+Incoming [cycle-marked recurrences](../tensor_primorial_ports_20261102/RECURRENCES.md)
+reproduce A000568 and fixed-port extensions through body order55. Our path
+kernel refines fixed-tournament intersections; it does not replace that
+cycle-index recurrence or claim new unlabelled sequence terms.
 
 ## Reproduce
 

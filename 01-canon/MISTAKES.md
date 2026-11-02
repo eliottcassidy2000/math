@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair:** `05-knowledge/results/clocks_carriers_genus_20261102/GENUS_BRIDGE.md` retains the correct intersections and proves a separate genus-to-Collatz identity. `FERMAT_NEIGHBOURS.md` gives exact multiplier-orbit equinumerosity at15/17 but retains the different unit groups and composite block symmetries. A symmetry-preserving bijection remains unsupplied.
 - **Navigation correction:** S139's inherited final sentence still called n56 the best stability cutoff although its opening correctly routed n48. The initial local correction to 48 was superseded during sync by the incoming independently audited 48 and capacity-potential 42 routes; their stronger navigation and proof lineage are retained. No inherited proof or receipt is changed.
 
+## 2026-11-02 — a cyclic triangle is not a proper cycle at order three
+
+- **Correction lineage:** final scope audit of `05-knowledge/results/joint_incidence_clocked_frames_20261102/STABILITY_42.md`, Corollary J-capacity; also clarifies the use of B in the earlier `stability_priority_moduli_20261102/PAIR_RESERVE.md`. The inherited theorem in `session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md` correctly states n>=4; an initial local corollary omitted that guard.
+- **Witness / first failed implication:** every binary three-tournament has Delta=0. A fair weighted triangle therefore has B=E Delta(T)=0 but tau=1/4. With R=1,M=1/4,D=1/2,k=1/4, the unguarded capacity corollary would demand B>=1/8.
+- **Repair / strongest survivor:** the pointwise triangle surplus and its matching sum for tau remain valid; transfer to B and the full-quarter global capacity bound require n>=4. All binary orders3/4 are now exact scope controls. Sharp stability for n>=42 and its equality classification are unchanged.
+- **Mechanism / next question:** a local cycle certificate contributes to the binary proper-cycle baseline only when its vertex set is proper. Retain source order when transporting a local inequality into a global expectation.
+
 ## 2026-11-02 — FRACTRAN prime support does not bound selector precision
 
 - **Correction lineage:** THM-4852 at `01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md`, following MISTAKE-697. The previously audited generalization used prime support <=P to claim selection from one base-P# digit. Its 400 random-program tests were squarefree; the audit's actual local formulas required p,q to divide the base, not merely a power of it.

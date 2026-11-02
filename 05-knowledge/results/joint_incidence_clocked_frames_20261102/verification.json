@@ -10,6 +10,22 @@
   "global": {
     "all_five_vertex_ternary_weight_tournaments": 59049
   },
+  "baseline_scope": {
+    "binary": {
+      "3": {
+        "binary_sources": 8,
+        "min_delta": 0,
+        "max_delta": 0
+      },
+      "4": {
+        "binary_sources": 64,
+        "min_delta": 0,
+        "max_delta": 2
+      }
+    },
+    "fair_triangle_B": "0",
+    "unguarded_capacity_rhs": "1/8"
+  },
   "endpoints": {
     "initial_taylor_slack": "20197730982327541759/7494564056396484375",
     "bootstrap_chain": [

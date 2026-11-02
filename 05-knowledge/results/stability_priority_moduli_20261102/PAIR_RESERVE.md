@@ -28,9 +28,12 @@ selected edge. Hence, without overlap,
                     sum_(x not u,v)
                     [q(A_vx)+q(A_ux)+(A_vx-A_ux)^2].      (J2)
 
-Together with the inherited B=E Delta(T)>=tau(A), this supplies a lower
+For n>=4, together with the inherited B=E Delta(T)>=tau(A), this supplies a lower
 bound on the binary baseline retaining *joint external profiles*. The
-unlabelled multiset of edge variances cannot recover the last summand:
+order guard is essential: B=0 for every rounded three-vertex source, even
+when its expected cyclic-triangle count is positive. The local triangle
+identity and the matching sum for tau hold without this extra guard.
+The unlabelled multiset of edge variances cannot recover the last summand:
 with p=1/2, the choices (a,b)=(0,0) and (1,0) have exactly the same three
 edge variances, but cyclic probabilities 0 and 1/2. The missing coordinate
 is alignment of the two endpoint rows at the *same* external vertex.
