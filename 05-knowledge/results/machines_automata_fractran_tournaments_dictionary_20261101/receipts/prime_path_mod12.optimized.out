@@ -1,0 +1,5 @@
+(i) edges below 10^5: 85035; violations of the class rules: 0
+(ii) N = 615731: class counts {1: 12520, 5: 12620, 7: 12577, 11: 12564} {'|A|-|B|': -1, 'c1-c11': -44, 'c7-c5': -43, 'mod4 ok': True, 'class1 ok': True, 'class7 ok': True}
+(iii) bounds N in (100, 5000000) passing all three count conditions: 380; first: (101, {1: 5, 5: 6, 7: 6, 11: 6}, -1)
+     windows: [(101, 27031), (615731, 634199)]
+(iv) bounds N < 700000 passing ALL five conditions (isolated, leaves, mod 4, class 1, class 7): 323; first 8: [(615731, 50283, 1, -1, -44, -43), (615869, 50297, 1, -1, -46, -45), (615883, 50298, 1, 0, -46, -46), (615887, 50299, 1, -1, -46, -45), (616171, 50321, 1, -1, -44, -43), (616207, 50323, 1, -1, -44, -43), (616327, 50335, 1, -1, -45, -44), (616367, 50337, 1, -1, -45, -44)]

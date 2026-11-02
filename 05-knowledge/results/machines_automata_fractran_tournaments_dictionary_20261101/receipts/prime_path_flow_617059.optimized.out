@@ -1,0 +1,6 @@
+N = 617059: 50396 primes (A 25198, B 25198), 933431 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50395, n - 1 = 50395, T s
+2-matching: path of 20934 vertices + 25 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 24]...), T s
+  round 1: path 50396, cycles left 0, T s
+HAMILTONIAN PATH FOUND: 50396 primes, T s;T starts [582451, 362333, 293767, 381917, 313639, 391961] ends [221447, 175453, 244451, 256813, 351587, 616669]
+written data/prime_path_N617059.txt

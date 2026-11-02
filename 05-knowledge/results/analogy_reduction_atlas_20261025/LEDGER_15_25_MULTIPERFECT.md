@@ -74,7 +74,7 @@ THM-4752, THM-4605 and the problem ledger.
 | `v_T = (s | 70) in II_{25,1}` with `v·v = -2 c3(T)`, null iff transitive; score set on the level `-25` slice of the `A_24` cusp | THM-4752 | STRUCTURE |
 | `(24+k)Delta` with `24 + k = 25` for `A24, D24`; `A24`'s frame shape `25·1^{-1}` and lambency `Gamma_0(25)` | THM-4758/4759 | STRUCTURE |
 | the two regular groups of order 25 and the depth triples; vertex-transitive 25-tournaments; order-25 deficit-six centres vertex-transitive but none exist | THM-4764, `center_transitivity_20261021c` | STRUCTURE |
-| `q <= 25` REFUTED; `25B < 27P` sharp; `AP(1,25,49)`; odd non-Parker field orders include 25; `e = 25` projectivization loss; square-sum onsets `{15, 23, 25}` | THM-764, THM-4239, Session60, Session55, Session58a, `collatz_mod6_20260922_lead_reflection3.md` | each its own; the onset pair `{15,25}` is a Pell coincidence per that file |
+| `q <= 25` REFUTED; `25B < 27P` sharp; `AP(1,25,49)`; odd non-Parker field orders include 25; `e = 25` projectivization loss; square-sum onsets `{15, 23, 25}` | THM-764, THM-4239, Session60, Session55, Session58a, `monster_levels_square_sum_7_21_20261022.md` §4 (Pell entry/exit law: `n = k^2`, `k` in A079496; audit MISTAKE-668) | each its own; the onset pair `{15,25}` is a Pell coincidence per the monster-levels note (citation corrected 2026-11-01 by klein: the earlier pointer to `collatz_mod6_20260922_lead_reflection3.md` named a file that does not mention Pell) |
 | `c_2 = 25/8`, the Sun mean `X^{25/24}` | HYP-9367, THM-4028 | OPEN / STRUCTURE (exponent) |
 
 ### 4c. Perfect numbers in the repository

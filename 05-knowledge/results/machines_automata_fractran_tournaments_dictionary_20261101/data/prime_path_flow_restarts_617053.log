@@ -1,0 +1,43 @@
+N = 617053: 50395 primes (A 25197, B 25198), 933403 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50394, n - 1 = 50394, 10 s
+2-matching: path of 34063 vertices + 22 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 32, 54]...), 11 s
+  round 1: path 42015, cycles left 5, 20 s
+  round 2: path 42015, cycles left 4, 28 s
+  round 3: path 42015, cycles left 3, 42 s
+  round 4: path 42015, cycles left 2, 57 s
+  round 5: path 42015, cycles left 1, 72 s
+STUCK: 1 cycles cannot be merged (lengths [8380]); restart with another seed
+N = 617053: 50395 primes (A 25197, B 25198), 933403 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50394, n - 1 = 50394, 9 s
+2-matching: path of 34063 vertices + 22 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 32, 54]...), 10 s
+  round 1: path 42015, cycles left 5, 19 s
+  round 2: path 42015, cycles left 4, 29 s
+  round 3: path 42015, cycles left 3, 44 s
+  round 4: path 42015, cycles left 2, 59 s
+  round 5: path 42015, cycles left 1, 73 s
+STUCK: 1 cycles cannot be merged (lengths [8380]); restart with another seed
+N = 617053: 50395 primes (A 25197, B 25198), 933403 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50394, n - 1 = 50394, 9 s
+2-matching: path of 34063 vertices + 22 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 32, 54]...), 10 s
+  round 1: path 42015, cycles left 5, 18 s
+  round 2: path 42015, cycles left 4, 27 s
+  round 3: path 42015, cycles left 3, 41 s
+  round 4: path 42015, cycles left 2, 56 s
+  round 5: path 42015, cycles left 1, 70 s
+STUCK: 1 cycles cannot be merged (lengths [8380]); restart with another seed
+N = 617053: 50395 primes (A 25197, B 25198), 933403 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50394, n - 1 = 50394, 8 s
+2-matching: path of 34063 vertices + 22 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 32, 54]...), 9 s
+  round 1: path 42015, cycles left 5, 17 s
+  round 2: path 42015, cycles left 4, 26 s
+  round 3: path 42015, cycles left 3, 40 s
+  round 4: path 42015, cycles left 2, 54 s
+  round 5: path 42015, cycles left 1, 69 s
+STUCK: 1 cycles cannot be merged (lengths [8380]); restart with another seed
+N = 617053: 50395 primes (A 25197, B 25198), 933403 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50394, n - 1 = 50394, 8 s
+2-matching: path of 34063 vertices + 22 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 32, 54]...), 9 s
+  round 1: path 42015, cycles left 5, 18 s
+  round 2: path 42015, cycles left 4, 27 s
+  round 3: path 42015, cycles left 3, 41 s
+  round 4: path 42015, cycles left 2, 55 s

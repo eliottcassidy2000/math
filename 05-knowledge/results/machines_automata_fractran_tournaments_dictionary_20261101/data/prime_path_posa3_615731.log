@@ -1,0 +1,15 @@
+N = 615731: 50283 primes, 930345 edges, min degree 1, 5 forced chains, 1 leaf chain(s)
+  ... rotations 20000, insertions 0, length 50255, 99 s
+  ... rotations 40000, insertions 0, length 50262, 187 s
+  ... rotations 60000, insertions 0, length 50265, 273 s
+  ... rotations 80000, insertions 0, length 50266, 381 s
+  ... rotations 100000, insertions 0, length 50267, 465 s
+  ... rotations 120000, insertions 0, length 50272, 580 s
+  ... rotations 140000, insertions 0, length 50272, 627 s
+  ... rotations 160000, insertions 0, length 50272, 730 s
+  ... rotations 180000, insertions 0, length 50272, 789 s
+  ... rotations 200000, insertions 0, length 50273, 860 s
+run 1 failed: length 50273 of 50283 after 210761 rotations, 0 insertions
+  ... rotations 20000, insertions 0, length 50251, 95 s
+  ... rotations 40000, insertions 0, length 50260, 178 s
+  ... rotations 60000, insertions 0, length 50266, 262 s

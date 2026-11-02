@@ -1,0 +1,5 @@
+N = 617039: n = 50393, nu_2 = 50391, n - 1 = 50392, gap -1 (1 s)
+Hall certificate: |S| = 25197 A-vertices with demand 50394; |N(S)| = 25196 with capacity 50391; deficiency 3 (= 2|A| - nu_2 = 3)
+  classes mod 12 of S: {1: 12546, 5: 12650, 2: 1} ; of N(S): {7: 12605, 11: 12590, 3: 1}
+  degrees in S: min 2, median 29, max 204; N(S) vertices of degree 1: 1
+  S (sorted, first 40): [2, 5, 13, 17, 29, 37, 41, 53, 61, 73, 89, 97, 101, 109, 113, 137, 149, 157, 173, 181, 193, 197, 229, 233, 241, 257, 269, 277, 281, 293, 313, 317, 337, 349, 353, 373, 389, 397, 401, 409]

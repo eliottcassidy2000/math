@@ -1,0 +1,9 @@
+(i) edges below 10^5: 85035; violations of the mod-36 partner law: 0; observed partner pairs: [(1, 35), (7, 29), (13, 23), (19, 17), (25, 11), (31, 5)]
+(ii) N = 615731: pairs (c_a, c_partner, c_a - c_partner): {1: (4167, 4192, -25), 13: (4170, 4194, -24), 25: (4183, 4178, 5), 7: (4191, 4220, -29), 19: (4185, 4190, -5), 31: (4201, 4210, -9)}
+(iii) bounds N in (100, 5000000) passing mod-4 balance and all six mod-36 conditions: 361
+      windows: [(101, 27031), (617039, 634199)]
+      N = 101: pair margins c_partner + 2 - c_a = {1: 1, 13: 3, 25: 3, 7: 0, 19: 4, 31: 2}
+      N = 634199: pair margins c_partner + 2 - c_a = {1: 25, 13: 13, 25: 4, 7: 28, 19: 10, 31: 3}
+(iv) segment conditions: first passing bound N = 103 (26 primes, |A|-|B| = +0, surpluses c_a - c_partner {1: 1, 13: -1, 25: -1, 7: 1, 19: -2, 31: 0})
+      bounds in [615731, 617059] passing, and the three landmarks (N, primes, status, |A|-|B|, c_25 - c_11): [(615731, 50283, 'fail', -1, 5), (617039, 50393, 'PASS', 1, 2), (617053, 50395, 'fail', -1, 1), (617059, 50396, 'PASS', 0, 1)]
+      passing bounds below 5000000: 342; windows: [(103, 1423), (26821, 27031), (617039, 634199)]

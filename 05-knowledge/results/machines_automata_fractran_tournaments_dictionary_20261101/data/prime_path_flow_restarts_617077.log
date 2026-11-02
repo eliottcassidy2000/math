@@ -1,0 +1,40 @@
+N = 617077: 50397 primes (A 25198, B 25199), 933438 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50396, n - 1 = 50396, 9 s
+2-matching: path of 36203 vertices + 24 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 24]...), 10 s
+  round 1: path 42017, cycles left 8, 21 s
+  round 2: path 42017, cycles left 7, 32 s
+  round 3: path 42017, cycles left 6, 45 s
+  round 4: path 42017, cycles left 5, 58 s
+  round 5: path 42017, cycles left 4, 73 s
+  round 6: path 42017, cycles left 3, 88 s
+  round 7: path 42017, cycles left 2, 103 s
+STUCK: 2 cycles cannot be merged (lengths [10, 8370]); restart with another seed
+N = 617077: 50397 primes (A 25198, B 25199), 933438 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50396, n - 1 = 50396, 9 s
+2-matching: path of 36203 vertices + 24 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 24]...), 9 s
+  round 1: path 42017, cycles left 8, 21 s
+  round 2: path 42017, cycles left 7, 32 s
+  round 3: path 42017, cycles left 6, 44 s
+  round 4: path 42017, cycles left 5, 59 s
+  round 5: path 42017, cycles left 4, 73 s
+  round 6: path 42017, cycles left 3, 88 s
+  round 7: path 42017, cycles left 2, 103 s
+STUCK: 2 cycles cannot be merged (lengths [10, 8370]); restart with another seed
+N = 617077: 50397 primes (A 25198, B 25199), 933438 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50396, n - 1 = 50396, 8 s
+2-matching: path of 36203 vertices + 24 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 24]...), 9 s
+  round 1: path 42017, cycles left 8, 20 s
+  round 2: path 42017, cycles left 7, 31 s
+  round 3: path 42017, cycles left 6, 43 s
+  round 4: path 42017, cycles left 5, 57 s
+  round 5: path 42017, cycles left 4, 71 s
+  round 6: path 42017, cycles left 3, 85 s
+  round 7: path 42017, cycles left 2, 100 s
+STUCK: 2 cycles cannot be merged (lengths [10, 8370]); restart with another seed
+N = 617077: 50397 primes (A 25198, B 25199), 933438 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50396, n - 1 = 50396, 8 s
+2-matching: path of 36203 vertices + 24 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 10, 24]...), 9 s
+  round 1: path 42017, cycles left 8, 20 s
+  round 2: path 42017, cycles left 7, 31 s
+  round 3: path 42017, cycles left 6, 44 s
+  round 4: path 42017, cycles left 5, 57 s

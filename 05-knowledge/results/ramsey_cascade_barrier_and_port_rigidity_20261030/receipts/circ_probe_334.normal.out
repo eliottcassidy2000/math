@@ -1,0 +1,5 @@
+circulant (3,3,4;29) colourings (labelled by difference classes): 14
+class-size splits (|D0|,|D1|,|D2|) -> edge counts 29*size, degrees 2*size:
+   (4, 4, 6) edges (116, 116, 174) degrees (8, 8, 12) count 14
+up to multipliers and the colour-0/1 swap: 1 classes
+   01021102222021 split (4, 4, 6)

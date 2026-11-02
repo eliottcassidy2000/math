@@ -1,0 +1,11 @@
+bound 700000: 56543 primes; N with bias in {0,1,2}: 400 (first bias 0 at N = 3); N passing all three conditions: 323
+first passing N (N, #primes, leaves, bias): [(615731, 50283, 1, 2), (615869, 50297, 1, 2), (615883, 50298, 1, 1), (615887, 50299, 1, 2), (616171, 50321, 1, 2), (616207, 50323, 1, 2), (616327, 50335, 1, 2), (616367, 50337, 1, 2), (616757, 50369, 1, 2), (616769, 50370, 1, 1), (616783, 50371, 1, 0), (616787, 50372, 1, 1)]
+last passing N below the bound: (634199, 51651, 1, 2) ; Hamiltonian-cycle candidates (bias 1, no leaf, no isolated): 0 []
+leaf primes at the bound: [582451]
+primes still isolated at the bound: [] ... count 0 ; leaves at the bound: 1 ; bias at the bound: 46
+N = 615731 (50283 primes): search deferred to prime_path_posa.py (rotation-extension)
+N = 615869 (50297 primes): search deferred to prime_path_posa.py (rotation-extension)
+N = 615883 (50298 primes): search deferred to prime_path_posa.py (rotation-extension)
+N = 615887 (50299 primes): search deferred to prime_path_posa.py (rotation-extension)
+N = 616171 (50321 primes): search deferred to prime_path_posa.py (rotation-extension)
+N = 616207 (50323 primes): search deferred to prime_path_posa.py (rotation-extension)

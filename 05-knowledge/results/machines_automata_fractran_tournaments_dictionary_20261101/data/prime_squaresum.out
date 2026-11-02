@@ -1,0 +1,24 @@
+(1) the 25 primes below 100
+    24 edges; by square: {9: [(2, 7)], 16: [(3, 13), (5, 11)], 25: [(2, 23)], 36: [(5, 31), (7, 29), (13, 23), (17, 19)], 49: [(2, 47)], 64: [(3, 61), (5, 59), (11, 53), (17, 47), (23, 41)], 81: [(2, 79)], 100: [(3, 97), (11, 89), (17, 83), (29, 71), (41, 59), (47, 53)], 144: [(47, 97), (61, 83), (71, 73)]}
+    isolated: [37, 43, 67] ; leaves: [19, 31, 73, 79, 89] ; components: [22, 1, 1, 1]
+    Fi22     [2, 3, 5, 7, 11, 13]     sides ABABBA internal edges [((2, 7), 9), ((3, 13), 16), ((5, 11), 16)]
+    B\Fi22   [17, 19, 23, 31, 47]     sides ABBBB internal edges [((17, 19), 36), ((17, 47), 64)]
+    M\B      [29, 41, 59, 71]         sides AABB internal edges [((29, 71), 100), ((41, 59), 100)]
+    nonSS-1  [37, 43, 53, 61, 67]     sides ABAAB internal edges []
+    nonSS-2  [73, 79, 83, 89, 97]     sides ABBAA internal edges []
+    bipartition A = {2} u {1 mod 4} = [2, 5, 13, 17, 29, 37, 41, 53, 61, 73, 89, 97] (12) ; B = {3 mod 4} = [3, 7, 11, 19, 23, 31, 43, 47, 59, 67, 71, 79, 83] (13)
+(2) congruence mechanisms, brute force on primes below 10^5
+    edges 85035; bipartite A|B: True; neighbours of 2 all = 7 mod 8: True; no edge with p = q = 1 mod 3: True
+(3) null model: splits of the ten non-supersingular primes below 100 into two pentads with no internal edge on either side
+    internal edges among the ten: [(61, 83)]; edge-free splits: 70 of 126
+(4) isolated primes below 100: first prime partner; growth
+    37: first partner 107 (square 12^2 = 144)
+    43: first partner 101 (square 12^2 = 144)
+    67: first partner 257 (square 18^2 = 324)
+    N=   100: primes    25, edges     24, isolated 3 [37, 43, 67], components 4 (largest 22), max degree 4, |A|-|B| = -1
+    N=  1000: primes   168, edges    300, isolated 7 [163, 373, 601, 691, 757, 919, 997], components 8 (largest 161), max degree 11, |A|-|B| = -6
+    N= 10000: primes  1229, edges   4519, isolated 7 [6301, 6421, 7351, 8467, 8719, 8941, 9769], components 8 (largest 1222), max degree 34, |A|-|B| = -9
+    N=100000: primes  9592, edges  85035, isolated 1 [57649], components 2 (largest 9591), max degree 100, |A|-|B| = -24
+(5) the prime square-sum path problem: primes below N, N over the primes up to 2000 (N = next prime after the last vertex)
+    candidates passing (no isolated, <= 2 leaves, | |A|-|B| | <= 1):
+    no Hamiltonian path found below 2100 within the budget

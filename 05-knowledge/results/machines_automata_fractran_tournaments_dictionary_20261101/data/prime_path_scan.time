@@ -1,0 +1,1 @@
+python3 scripts/prime_path_scan.py 700000  9.36s user 0.08s system 97% cpu 9.641 total

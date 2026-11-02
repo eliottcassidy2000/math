@@ -1,0 +1,8 @@
+N = 615731: 50283 primes, 930345 edges, min degree 1, leaves [582451], |A| - |B| = -1
+  ... rotations 20000, length 50265, 63 s
+  ... rotations 40000, length 50265, 122 s
+  ... rotations 60000, length 50269, 185 s
+  ... rotations 80000, length 50270, 236 s
+  ... rotations 100000, length 50271, 312 s
+  ... rotations 120000, length 50271, 402 s
+  ... rotations 140000, length 50272, 492 s

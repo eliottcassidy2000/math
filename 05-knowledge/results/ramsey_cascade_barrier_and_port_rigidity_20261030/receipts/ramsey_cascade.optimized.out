@@ -1,0 +1,238 @@
+=== Boza-style scan, DS1.18 inputs ===
+R(3, 3, 3): known (17, 17); P = 17 from terms [(3, 3), (3, 3), (3, 3)] with U = [6, 6, 6]
+R(3, 3, 3, 3): known (51, 62); P = 66 from terms [(3, 3, 3), (3, 3, 3), (3, 3, 3), (3, 3, 3)] with U = [17, 17, 17, 17]
+R(3, 3, 3, 3, 3): known (None, 307); P = 307 from terms [(3, 3, 3, 3), (3, 3, 3, 3), (3, 3, 3, 3), (3, 3, 3, 3), (3, 3, 3, 3)] with U = [62, 62, 62, 62, 62]
+R(3, 3, 3, 3, 4): known (None, 900); P = 900 from terms [(3, 3, 3, 4), (3, 3, 3, 4), (3, 3, 3, 4), (3, 3, 3, 4), (3, 3, 3, 3, 3)] with U = [149, 149, 149, 149, 307]
+   colour 4 (k=4): nested port sizes [306, 61] -> forced number of colour-4 K_3 = 2796789: integer
+R(3, 3, 3, 4): known (97, 149); P = 150 from terms [(3, 3, 4), (3, 3, 4), (3, 3, 4), (3, 3, 3, 3)] with U = [30, 30, 30, 62]; parity strict -> <= 149
+   colour 3 (k=4): port (3, 3, 3, 3) unsaturated (U=62, P=66): deeper counts not forced
+R(3, 3, 3, 5): known (None, 318); P = 318 from terms [(3, 3, 5), (3, 3, 5), (3, 3, 5), (3, 3, 3, 4)] with U = [57, 57, 57, 149]
+   colour 3 (k=5): port (3, 3, 3, 4) unsaturated (U=149, P=150): deeper counts not forced
+R(3, 3, 4): known (30, 30); P = 34 from terms [(3, 4), (3, 4), (3, 3, 3)] with U = [9, 9, 17]
+   colour 2 (k=4): nested port sizes [16, 5] -> forced number of colour-2 K_3 = 440: integer
+R(3, 3, 4, 4): known (174, 450); P = 450 from terms [(3, 4, 4), (3, 4, 4), (3, 3, 3, 4), (3, 3, 3, 4)] with U = [77, 77, 149, 149]
+   colour 2 (k=4): port (3, 3, 3, 4) unsaturated (U=149, P=150): deeper counts not forced
+   colour 3 (k=4): port (3, 3, 3, 4) unsaturated (U=149, P=150): deeper counts not forced
+R(3, 3, 4, 5): known (None, 1079); P = 1080 from terms [(3, 4, 5), (3, 4, 5), (3, 3, 3, 5), (3, 3, 4, 4)] with U = [157, 157, 318, 450]; parity strict -> <= 1079
+   colour 2 (k=4): nested port sizes [317, 56] -> forced number of colour-2 K_3 = 9577204/3: NOT an integer -> R <= P-1
+   colour 3 (k=5): nested port sizes [449, 148] -> forced number of colour-3 K_3 = 35850854/3: NOT an integer -> R <= P-1
+   colour 3 (k=5): port (3, 3, 3, 4) unsaturated (U=149, P=150): deeper counts not forced
+R(3, 3, 5): known (45, 57); P = 57 from terms [(3, 5), (3, 5), (3, 3, 4)] with U = [14, 14, 30]
+   colour 2 (k=5): port (3, 3, 4) unsaturated (U=30, P=34): deeper counts not forced
+R(3, 3, 5, 5): known (None, 2874); P = 2874 from terms [(3, 5, 5), (3, 5, 5), (3, 3, 4, 5), (3, 3, 4, 5)] with U = [359, 359, 1079, 1079]
+   colour 2 (k=5): port (3, 3, 4, 5) unsaturated (U=1079, P=1080): deeper counts not forced
+   colour 3 (k=5): port (3, 3, 4, 5) unsaturated (U=1079, P=1080): deeper counts not forced
+R(3, 3, 6): known (61, 91); P = 92 from terms [(3, 6), (3, 6), (3, 3, 5)] with U = [18, 18, 57]; parity strict -> <= 91
+   colour 2 (k=6): nested port sizes [56, 29] -> forced number of colour-2 K_3 = 73892/3: NOT an integer -> R <= P-1
+   colour 2 (k=6): port (3, 3, 4) unsaturated (U=30, P=34): deeper counts not forced
+R(3, 3, 7): known (None, 136); P = 136 from terms [(3, 7), (3, 7), (3, 3, 6)] with U = [23, 23, 91]
+   colour 2 (k=7): port (3, 3, 6) unsaturated (U=91, P=92): deeper counts not forced
+R(3, 4, 4): known (55, 77); P = 77 from terms [(4, 4), (3, 3, 4), (3, 3, 4)] with U = [18, 30, 30]
+   colour 1 (k=4): port (3, 3, 4) unsaturated (U=30, P=34): deeper counts not forced
+   colour 2 (k=4): port (3, 3, 4) unsaturated (U=30, P=34): deeper counts not forced
+R(3, 4, 4, 4): known (381, 1576); P = 1577 from terms [(4, 4, 4), (3, 3, 4, 4), (3, 3, 4, 4), (3, 3, 4, 4)] with U = [229, 450, 450, 450]
+   colour 1 (k=4): nested port sizes [449, 76] -> forced number of colour-1 K_3 = 26889712/3: NOT an integer -> R <= P-1
+   colour 2 (k=4): nested port sizes [449, 76] -> forced number of colour-2 K_3 = 26889712/3: NOT an integer -> R <= P-1
+   colour 3 (k=4): nested port sizes [449, 76] -> forced number of colour-3 K_3 = 26889712/3: NOT an integer -> R <= P-1
+R(3, 4, 4, 5): known (None, 4273); P = 4274 from terms [(4, 4, 5), (3, 3, 4, 5), (3, 3, 4, 5), (3, 4, 4, 4)] with U = [542, 1079, 1079, 1576]; parity strict -> <= 4273
+   colour 1 (k=4): port (3, 3, 4, 5) unsaturated (U=1079, P=1080): deeper counts not forced
+   colour 2 (k=4): port (3, 3, 4, 5) unsaturated (U=1079, P=1080): deeper counts not forced
+   colour 3 (k=5): port (3, 4, 4, 4) unsaturated (U=1576, P=1577): deeper counts not forced
+R(3, 4, 5): known (89, 157); P = 158 from terms [(4, 5), (3, 3, 5), (3, 4, 4)] with U = [25, 57, 77]
+   colour 1 (k=4): nested port sizes [56, 13] -> forced number of colour-1 K_3 = 57148/3: NOT an integer -> R <= P-1
+   colour 2 (k=5): nested port sizes [76, 29] -> forced number of colour-2 K_3 = 173014/3: NOT an integer -> R <= P-1
+   colour 2 (k=5): port (3, 3, 4) unsaturated (U=30, P=34): deeper counts not forced
+R(3, 4, 5, 5): known (None, 12859); P = 12859 from terms [(4, 5, 5), (3, 3, 5, 5), (3, 4, 4, 5), (3, 4, 4, 5)] with U = [1441, 2874, 4273, 4273]
+   colour 1 (k=4): nested port sizes [2873, 358] -> forced number of colour-1 K_3 = 2204148362: integer
+   colour 2 (k=5): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+   colour 3 (k=5): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+R(3, 4, 6): known (None, 287); P = 287 from terms [(4, 6), (3, 3, 6), (3, 4, 5)] with U = [40, 91, 157]
+   colour 1 (k=4): port (3, 3, 6) unsaturated (U=91, P=92): deeper counts not forced
+   colour 2 (k=6): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+R(3, 4, 7): known (None, 479); P = 480 from terms [(4, 7), (3, 3, 7), (3, 4, 6)] with U = [58, 136, 287]; parity strict -> <= 479
+   colour 1 (k=4): nested port sizes [135, 22] -> forced number of colour-1 K_3 = 237105: integer
+   colour 2 (k=7): nested port sizes [286, 156] -> forced number of colour-2 K_3 = 3561844: integer
+   colour 2 (k=7): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+R(3, 5, 5): known (None, 359); P = 359 from terms [(5, 5), (3, 4, 5), (3, 4, 5)] with U = [46, 157, 157]
+   colour 1 (k=5): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+   colour 2 (k=5): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+R(3, 5, 5, 5): known (None, 42897); P = 42897 from terms [(5, 5, 5), (3, 4, 5, 5), (3, 4, 5, 5), (3, 4, 5, 5)] with U = [4322, 12859, 12859, 12859]
+   colour 1 (k=5): nested port sizes [12858, 2873] -> forced number of colour-1 K_3 = 264103765744: integer
+   colour 1 (k=5): nested port sizes [12858, 2873, 358] -> forced number of colour-1 K_4 = 23637287034088: integer
+   colour 2 (k=5): nested port sizes [12858, 2873] -> forced number of colour-2 K_3 = 264103765744: integer
+   colour 2 (k=5): nested port sizes [12858, 2873, 358] -> forced number of colour-2 K_4 = 23637287034088: integer
+   colour 3 (k=5): nested port sizes [12858, 2873] -> forced number of colour-3 K_3 = 264103765744: integer
+   colour 3 (k=5): nested port sizes [12858, 2873, 358] -> forced number of colour-3 K_4 = 23637287034088: integer
+R(3, 5, 6): known (None, 730); P = 730 from terms [(5, 6), (3, 4, 6), (3, 5, 5)] with U = [85, 287, 359]
+   colour 1 (k=5): nested port sizes [286, 90] -> forced number of colour-1 K_3 = 3127410: integer
+   colour 1 (k=5): port (3, 3, 6) unsaturated (U=91, P=92): deeper counts not forced
+   colour 2 (k=6): nested port sizes [358, 156] -> forced number of colour-2 K_3 = 6785532: integer
+   colour 2 (k=6): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+R(3, 5, 7): known (None, 1341); P = 1341 from terms [(5, 7), (3, 4, 7), (3, 5, 6)] with U = [133, 479, 730]
+   colour 1 (k=5): port (3, 4, 7) unsaturated (U=479, P=480): deeper counts not forced
+   colour 2 (k=7): nested port sizes [729, 358] -> forced number of colour-2 K_3 = 58285980: integer
+   colour 2 (k=7): nested port sizes [729, 358, 156] -> forced number of colour-2 K_4 = 2273153220: integer
+   colour 2 (k=7): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+R(3, 6, 6): known (None, 1623); P = 1624 from terms [(6, 6), (3, 5, 6), (3, 5, 6)] with U = [165, 730, 730]; parity strict -> <= 1623
+   colour 1 (k=6): nested port sizes [729, 286] -> forced number of colour-1 K_3 = 56397627: integer
+   colour 1 (k=6): nested port sizes [729, 286, 90] -> forced number of colour-1 K_4 = 2537893215/2: NOT an integer -> R <= P-1
+   colour 1 (k=6): port (3, 3, 6) unsaturated (U=91, P=92): deeper counts not forced
+   colour 2 (k=6): nested port sizes [729, 286] -> forced number of colour-2 K_3 = 56397627: integer
+   colour 2 (k=6): nested port sizes [729, 286, 90] -> forced number of colour-2 K_4 = 2537893215/2: NOT an integer -> R <= P-1
+   colour 2 (k=6): port (3, 3, 6) unsaturated (U=91, P=92): deeper counts not forced
+(3, 6, 7) inputs missing
+(3, 7, 7) inputs missing
+R(4, 4, 4): known (128, 229); P = 230 from terms [(3, 4, 4), (3, 4, 4), (3, 4, 4)] with U = [77, 77, 77]
+   colour 0 (k=4): nested port sizes [76, 17] -> forced number of colour-0 K_3 = 147934/3: NOT an integer -> R <= P-1
+   colour 1 (k=4): nested port sizes [76, 17] -> forced number of colour-1 K_3 = 147934/3: NOT an integer -> R <= P-1
+   colour 2 (k=4): nested port sizes [76, 17] -> forced number of colour-2 K_3 = 147934/3: NOT an integer -> R <= P-1
+R(4, 4, 4, 4): known (634, 6301); P = 6302 from terms [(3, 4, 4, 4), (3, 4, 4, 4), (3, 4, 4, 4), (3, 4, 4, 4)] with U = [1576, 1576, 1576, 1576]; parity strict -> <= 6301
+   colour 0 (k=4): port (3, 4, 4, 4) unsaturated (U=1576, P=1577): deeper counts not forced
+   colour 1 (k=4): port (3, 4, 4, 4) unsaturated (U=1576, P=1577): deeper counts not forced
+   colour 2 (k=4): port (3, 4, 4, 4) unsaturated (U=1576, P=1577): deeper counts not forced
+   colour 3 (k=4): port (3, 4, 4, 4) unsaturated (U=1576, P=1577): deeper counts not forced
+R(4, 4, 4, 5): known (None, 19118); P = 19118 from terms [(3, 4, 4, 5), (3, 4, 4, 5), (3, 4, 4, 5), (4, 4, 4, 4)] with U = [4273, 4273, 4273, 6301]
+   colour 0 (k=4): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+   colour 1 (k=4): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+   colour 2 (k=4): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+   colour 3 (k=5): port (4, 4, 4, 4) unsaturated (U=6301, P=6302): deeper counts not forced
+R(4, 4, 5): known (None, 542); P = 542 from terms [(3, 4, 5), (3, 4, 5), (4, 4, 4)] with U = [157, 157, 229]
+   colour 0 (k=4): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+   colour 1 (k=4): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+   colour 2 (k=5): port (4, 4, 4) unsaturated (U=229, P=230): deeper counts not forced
+R(4, 4, 5, 5): known (None, 63951); P = 63952 from terms [(3, 4, 5, 5), (3, 4, 5, 5), (4, 4, 4, 5), (4, 4, 4, 5)] with U = [12859, 12859, 19118, 19118]; parity strict -> <= 63951
+   colour 0 (k=4): nested port sizes [12858, 1440] -> forced number of colour-0 K_3 = 197347669920: integer
+   colour 1 (k=4): nested port sizes [12858, 1440] -> forced number of colour-1 K_3 = 197347669920: integer
+   colour 2 (k=5): nested port sizes [19117, 4272] -> forced number of colour-2 K_3 = 870456502104: integer
+   colour 2 (k=5): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+   colour 3 (k=5): nested port sizes [19117, 4272] -> forced number of colour-3 K_3 = 870456502104: integer
+   colour 3 (k=5): port (3, 4, 4, 5) unsaturated (U=4273, P=4274): deeper counts not forced
+R(4, 4, 6): known (None, 1115); P = 1115 from terms [(3, 4, 6), (3, 4, 6), (4, 4, 5)] with U = [287, 287, 542]
+   colour 0 (k=4): nested port sizes [286, 39] -> forced number of colour-0 K_3 = 2070926: integer
+   colour 1 (k=4): nested port sizes [286, 39] -> forced number of colour-1 K_3 = 2070926: integer
+   colour 2 (k=6): nested port sizes [541, 228] -> forced number of colour-2 K_3 = 22901612: integer
+   colour 2 (k=6): port (4, 4, 4) unsaturated (U=229, P=230): deeper counts not forced
+R(4, 4, 7): known (None, 2072); P = 2072 from terms [(3, 4, 7), (3, 4, 7), (4, 4, 6)] with U = [479, 479, 1115]
+   colour 0 (k=4): port (3, 4, 7) unsaturated (U=479, P=480): deeper counts not forced
+   colour 1 (k=4): port (3, 4, 7) unsaturated (U=479, P=480): deeper counts not forced
+   colour 2 (k=7): nested port sizes [1114, 541] -> forced number of colour-2 K_3 = 624068927/3: NOT an integer -> R <= P-1
+   colour 2 (k=7): nested port sizes [1114, 541, 228] -> forced number of colour-2 K_4 = 11857309613: integer
+   colour 2 (k=7): port (4, 4, 4) unsaturated (U=229, P=230): deeper counts not forced
+R(4, 5, 5): known (None, 1441); P = 1442 from terms [(3, 5, 5), (4, 4, 5), (4, 4, 5)] with U = [359, 542, 542]; parity strict -> <= 1441
+   colour 0 (k=4): nested port sizes [358, 45] -> forced number of colour-0 K_3 = 3869085: integer
+   colour 1 (k=5): nested port sizes [541, 156] -> forced number of colour-1 K_3 = 20269106: integer
+   colour 1 (k=5): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+   colour 2 (k=5): nested port sizes [541, 156] -> forced number of colour-2 K_3 = 20269106: integer
+   colour 2 (k=5): port (3, 4, 5) unsaturated (U=157, P=158): deeper counts not forced
+R(4, 5, 5, 5): known (None, 234748); P = 234748 from terms [(3, 5, 5, 5), (4, 4, 5, 5), (4, 4, 5, 5), (4, 4, 5, 5)] with U = [42897, 63951, 63951, 63951]
+   colour 0 (k=4): nested port sizes [42896, 4321] -> forced number of colour-0 K_3 = 7251867549192: integer
+   colour 1 (k=5): port (4, 4, 5, 5) unsaturated (U=63951, P=63952): deeper counts not forced
+   colour 2 (k=5): port (4, 4, 5, 5) unsaturated (U=63951, P=63952): deeper counts not forced
+   colour 3 (k=5): port (4, 4, 5, 5) unsaturated (U=63951, P=63952): deeper counts not forced
+R(4, 5, 6): known (None, 3285); P = 3285 from terms [(3, 5, 6), (4, 4, 6), (4, 5, 5)] with U = [730, 1115, 1441]
+   colour 0 (k=4): nested port sizes [729, 84] -> forced number of colour-0 K_3 = 33516504: integer
+   colour 1 (k=5): nested port sizes [1114, 286] -> forced number of colour-1 K_3 = 523147768/3: NOT an integer -> R <= P-1
+   colour 1 (k=5): nested port sizes [1114, 286, 39] -> forced number of colour-1 K_4 = 1700230246: integer
+   colour 2 (k=6): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+R(4, 5, 7): known (None, 6697); P = 6697 from terms [(3, 5, 7), (4, 4, 7), (4, 5, 6)] with U = [1341, 2072, 3285]
+   colour 0 (k=4): nested port sizes [1340, 132] -> forced number of colour-0 K_3 = 197398080: integer
+   colour 1 (k=5): nested port sizes [2071, 478] -> forced number of colour-1 K_3 = 1104770808: integer
+   colour 1 (k=5): port (3, 4, 7) unsaturated (U=479, P=480): deeper counts not forced
+   colour 2 (k=7): nested port sizes [3284, 1440] -> forced number of colour-2 K_3 = 5277519360: integer
+   colour 2 (k=7): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+R(4, 6, 6): known (None, 8192); P = 8192 from terms [(3, 6, 6), (4, 5, 6), (4, 5, 6)] with U = [1623, 3285, 3285]
+   colour 0 (k=4): port (3, 6, 6) unsaturated (U=1623, P=1624): deeper counts not forced
+   colour 1 (k=6): nested port sizes [3284, 1114] -> forced number of colour-1 K_3 = 14982878908/3: NOT an integer -> R <= P-1
+   colour 1 (k=6): nested port sizes [3284, 1114, 286] -> forced number of colour-1 K_4 = 1071275841922/3: NOT an integer -> R <= P-1
+   colour 1 (k=6): nested port sizes [3284, 1114, 286, 39] -> forced number of colour-1 K_5 = 13926585944986/5: NOT an integer -> R <= P-1
+   colour 2 (k=6): nested port sizes [3284, 1114] -> forced number of colour-2 K_3 = 14982878908/3: NOT an integer -> R <= P-1
+   colour 2 (k=6): nested port sizes [3284, 1114, 286] -> forced number of colour-2 K_4 = 1071275841922/3: NOT an integer -> R <= P-1
+   colour 2 (k=6): nested port sizes [3284, 1114, 286, 39] -> forced number of colour-2 K_5 = 13926585944986/5: NOT an integer -> R <= P-1
+(4, 6, 7) inputs missing
+(4, 7, 7) inputs missing
+R(5, 5, 5): known (None, 4322); P = 4322 from terms [(4, 5, 5), (4, 5, 5), (4, 5, 5)] with U = [1441, 1441, 1441]
+   colour 0 (k=5): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+   colour 1 (k=5): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+   colour 2 (k=5): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+R(5, 5, 5, 5): known (None, 938989); P = 938990 from terms [(4, 5, 5, 5), (4, 5, 5, 5), (4, 5, 5, 5), (4, 5, 5, 5)] with U = [234748, 234748, 234748, 234748]; parity strict -> <= 938989
+   colour 0 (k=5): nested port sizes [234747, 42896] -> forced number of colour-0 K_3 = 1575890733197928: integer
+   colour 0 (k=5): nested port sizes [234747, 42896, 4321] -> forced number of colour-0 K_4 = 1702355964537061722: integer
+   colour 1 (k=5): nested port sizes [234747, 42896] -> forced number of colour-1 K_3 = 1575890733197928: integer
+   colour 1 (k=5): nested port sizes [234747, 42896, 4321] -> forced number of colour-1 K_4 = 1702355964537061722: integer
+   colour 2 (k=5): nested port sizes [234747, 42896] -> forced number of colour-2 K_3 = 1575890733197928: integer
+   colour 2 (k=5): nested port sizes [234747, 42896, 4321] -> forced number of colour-2 K_4 = 1702355964537061722: integer
+   colour 3 (k=5): nested port sizes [234747, 42896] -> forced number of colour-3 K_3 = 1575890733197928: integer
+   colour 3 (k=5): nested port sizes [234747, 42896, 4321] -> forced number of colour-3 K_4 = 1702355964537061722: integer
+R(5, 5, 6): known (None, 10891); P = 10891 from terms [(4, 5, 6), (4, 5, 6), (5, 5, 5)] with U = [3285, 3285, 4322]
+   colour 0 (k=5): nested port sizes [3284, 729] -> forced number of colour-0 K_3 = 4345175340: integer
+   colour 0 (k=5): nested port sizes [3284, 729, 84] -> forced number of colour-0 K_4 = 91248682140: integer
+   colour 1 (k=5): nested port sizes [3284, 729] -> forced number of colour-1 K_3 = 4345175340: integer
+   colour 1 (k=5): nested port sizes [3284, 729, 84] -> forced number of colour-1 K_4 = 91248682140: integer
+   colour 2 (k=6): nested port sizes [4321, 1440] -> forced number of colour-2 K_3 = 11293365600: integer
+   colour 2 (k=6): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+R(5, 5, 7): known (None, 24284); P = 24284 from terms [(4, 5, 7), (4, 5, 7), (5, 5, 6)] with U = [6697, 6697, 10891]
+   colour 0 (k=5): nested port sizes [6696, 1340] -> forced number of colour-0 K_3 = 36313769520: integer
+   colour 0 (k=5): nested port sizes [6696, 1340, 132] -> forced number of colour-0 K_4 = 1198354394160: integer
+   colour 1 (k=5): nested port sizes [6696, 1340] -> forced number of colour-1 K_3 = 36313769520: integer
+   colour 1 (k=5): nested port sizes [6696, 1340, 132] -> forced number of colour-1 K_4 = 1198354394160: integer
+   colour 2 (k=7): nested port sizes [10890, 4321] -> forced number of colour-2 K_3 = 190442220045: integer
+   colour 2 (k=7): nested port sizes [10890, 4321, 1440] -> forced number of colour-2 K_4 = 68559199216200: integer
+   colour 2 (k=7): port (4, 5, 5) unsaturated (U=1441, P=1442): deeper counts not forced
+R(5, 6, 6): known (None, 29973); P = 29973 from terms [(4, 6, 6), (5, 5, 6), (5, 5, 6)] with U = [8192, 10891, 10891]
+   colour 0 (k=5): nested port sizes [8191, 1622] -> forced number of colour-0 K_3 = 199101028772/3: NOT an integer -> R <= P-1
+   colour 0 (k=5): port (3, 6, 6) unsaturated (U=1623, P=1624): deeper counts not forced
+   colour 1 (k=6): nested port sizes [10890, 3284] -> forced number of colour-1 K_3 = 178646907120: integer
+   colour 1 (k=6): nested port sizes [10890, 3284, 729] -> forced number of colour-1 K_4 = 32558398822620: integer
+   colour 1 (k=6): nested port sizes [10890, 3284, 729, 84] -> forced number of colour-1 K_5 = 546981100220016: integer
+   colour 2 (k=6): nested port sizes [10890, 3284] -> forced number of colour-2 K_3 = 178646907120: integer
+   colour 2 (k=6): nested port sizes [10890, 3284, 729] -> forced number of colour-2 K_4 = 32558398822620: integer
+   colour 2 (k=6): nested port sizes [10890, 3284, 729, 84] -> forced number of colour-2 K_5 = 546981100220016: integer
+(5, 6, 7) inputs missing
+(5, 7, 7) inputs missing
+R(6, 6, 6): known (None, 89918); P = 89918 from terms [(5, 6, 6), (5, 6, 6), (5, 6, 6)] with U = [29973, 29973, 29973]
+   colour 0 (k=6): nested port sizes [29972, 8191] -> forced number of colour-0 K_3 = 11037341062942/3: NOT an integer -> R <= P-1
+   colour 0 (k=6): nested port sizes [29972, 8191, 1622] -> forced number of colour-0 K_4 = 4475641801022981/3: NOT an integer -> R <= P-1
+   colour 0 (k=6): port (3, 6, 6) unsaturated (U=1623, P=1624): deeper counts not forced
+   colour 1 (k=6): nested port sizes [29972, 8191] -> forced number of colour-1 K_3 = 11037341062942/3: NOT an integer -> R <= P-1
+   colour 1 (k=6): nested port sizes [29972, 8191, 1622] -> forced number of colour-1 K_4 = 4475641801022981/3: NOT an integer -> R <= P-1
+   colour 1 (k=6): port (3, 6, 6) unsaturated (U=1623, P=1624): deeper counts not forced
+   colour 2 (k=6): nested port sizes [29972, 8191] -> forced number of colour-2 K_3 = 11037341062942/3: NOT an integer -> R <= P-1
+   colour 2 (k=6): nested port sizes [29972, 8191, 1622] -> forced number of colour-2 K_4 = 4475641801022981/3: NOT an integer -> R <= P-1
+   colour 2 (k=6): port (3, 6, 6) unsaturated (U=1623, P=1624): deeper counts not forced
+(6, 6, 7) inputs missing
+(6, 7, 7) inputs missing
+(7, 7, 7) inputs missing
+
+=== What the owner targets require (recursion-level arithmetic) ===
+R(3,4,4) <= 73: the recursion gives 77 = 18 + 30 + 30 - 1 with all terms exact; no recursive route exists. Needs direct exclusion of (3,4,4;n) for n = 73..76.
+  if R(3,3,5) <= 57: P(3,3,6) = 2*18 + 57 - 1 = 92 (even; terms 18 even -> parity strict -> <= 91)
+  if R(3,3,5) <= 56: P(3,3,6) = 2*18 + 56 - 1 = 91
+  if R(3,3,5) <= 55: P(3,3,6) = 2*18 + 55 - 1 = 90 (even; terms 18 even -> parity strict -> <= 89)
+  if R(3,3,5) <= 54: P(3,3,6) = 2*18 + 54 - 1 = 89
+  if R(3,3,5) <= 53: P(3,3,6) = 2*18 + 53 - 1 = 88 (even; terms 18 even -> parity strict -> <= 87)
+  if R(3,3,5) <= 52: P(3,3,6) = 2*18 + 52 - 1 = 87
+  if R(3,3,5) <= 51: P(3,3,6) = 2*18 + 51 - 1 = 86 (even; terms 18 even -> parity strict -> <= 85)
+R(3,3,6) <= 86 via recursion needs R(3,3,5) <= 52 with parity (P = 87 odd... ) -> check: R(3,3,5) <= 51 gives P = 86.
+  R(3,4,5) <= 158 from R(3,3,5) <= 57 and R(3,4,4) <= 77
+  R(3,4,5) <= 157 from R(3,3,5) <= 56 and R(3,4,4) <= 77
+  R(3,4,5) <= 157 from R(3,3,5) <= 57 and R(3,4,4) <= 76
+  R(3,4,5) <= 148 from R(3,3,5) <= 51 and R(3,4,4) <= 73
+  R(3,4,5) <= 124 from R(3,3,5) <= 45 and R(3,4,4) <= 55
+R(3,4,5) <= 137 needs R(3,3,5) + R(3,4,4) <= 113 (current 134); e.g. 45 + 68, or 51 + 62.
+  R(4,4,4) <= 230 from R(3,4,4) <= 77
+  R(4,4,4) <= 227 from R(3,4,4) <= 76
+  R(4,4,4) <= 218 from R(3,4,4) <= 73
+  R(4,4,4) <= 209 from R(3,4,4) <= 70
+  R(4,4,4) <= 200 from R(3,4,4) <= 67
+  R(4,4,4) <= 197 from R(3,4,4) <= 66
+R(4,4,4) <= 198 needs R(3,4,4) <= 66 (3*66 - 1 = 197).
+
+=== (3,4,4;76) saturation ledger (exact consequences of saturation) ===
+degrees forced (17,29,29); colour-1 graph 17-regular triangle-free with 646 edges; colour-2 and colour-3 graphs 29-regular K4-free with 1102 edges each
+N1(v) = unique (4,4;17) graph = Paley17 in colours 2/3: 68 colour-2 and 68 colour-3 edges, 8-regular each
+for r in N1(v): |N1(r) ∩ N2(v)| = |N1(r) ∩ N3(v)| = 8 (v has 8 colour-2 and 8 colour-3 neighbours in the Paley port N1(r)) -> e1(N1,N2) = e1(N1,N3) = 17*8 = 136
+colour-1 degree sum over N2(v): 29*17 = 493 = 2 e1(N2) + 136 + e1(N2,N3); same for N3 -> e1(N2(v)) = e1(N3(v)) =: e*, 2e* + e1(N2,N3) = 357
+   so e1(N2(v),N3(v)) is odd; with the in-port cap deg <= 8 (an (3,4)-set), e* <= 116 hence e1(N2,N3) >= 125
+mean colour-1 codegree |N1(w) ∩ N1(v)| over colour-2 edges vw: 136/29 = 136/29 (non-integral: not constant)
+colour-2 triangles T2 = (1/3) sum_v e2(N2(v)); e2(N2(v)) <= 116; a mod-3 contradiction needs e2(N2(v)) forced to a constant c with 3 ∤ 76c -- NOT available: N2(v) is an unsaturated (3,3,4;29) port (30 < P(3,3,4) = 34)
+in-port degree caps in N2(v): (8, 8, 16) for colours (1, 2, 3), sum 28: slack 4 per vertex

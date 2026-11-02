@@ -1,0 +1,9 @@
+N = 615731: 50283 primes, 930345 edges; degree histogram (low end): [(1, 1), (2, 4), (3, 22), (4, 75), (5, 162), (6, 318), (7, 485), (8, 687)]
+forced chains: 5 (lengths [2, 3]); longest 3; leaf chains (must be endpoints): 1
+  ... rotations 20000, length 50255, 51 s
+  ... rotations 40000, length 50262, 113 s
+  ... rotations 60000, length 50265, 176 s
+  ... rotations 80000, length 50266, 239 s
+  ... rotations 100000, length 50267, 296 s
+  ... rotations 120000, length 50272, 357 s
+  ... rotations 140000, length 50272, 370 s

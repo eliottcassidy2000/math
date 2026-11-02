@@ -1,0 +1,4 @@
+file prime_path_N617059.txt: 50396 terms; set = all 50396 primes below 617059: True; all 50395 consecutive sums are squares: True
+largest prime 617053 (the 50396th prime); first terms [582451, 362333, 293767, 381917, 313639, 391961, 564523, 588953]; last terms [175453, 244451, 256813, 351587, 616669]
+square roots used: 245 distinct, from 6 to 1110; most frequent root 780 (1021 times)
+VERIFIED

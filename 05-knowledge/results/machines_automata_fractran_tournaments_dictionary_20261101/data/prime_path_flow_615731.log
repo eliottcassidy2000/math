@@ -1,0 +1,6 @@
+N = 615731: 50283 primes (A 25141, B 25142), 930345 edges, leaf 582451; building the flow network
+max flow = 50274 (need 50282 = 2|A|), 7 s
+Traceback (most recent call last):
+  File "/private/tmp/math-wt-ramsey-20261030/05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/scripts/prime_path_flow.py", line 48, in <module>
+    assert res.flow_value == 2 * nA, 'no degree-constrained spanning subgraph: the flow is short by %d' % (2 * nA - res.flow_value)
+AssertionError: no degree-constrained spanning subgraph: the flow is short by 8

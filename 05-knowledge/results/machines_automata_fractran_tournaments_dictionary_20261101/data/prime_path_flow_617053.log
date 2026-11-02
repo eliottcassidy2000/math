@@ -1,0 +1,9 @@
+N = 617053: 50395 primes (A 25197, B 25198), 933403 edges, leaves [582451]; building the flow network
+nu_2 = max flow = 50394, n - 1 = 50394, 7 s
+2-matching: path of 34063 vertices + 22 cycles (lengths [6, 6, 6, 6, 8, 8, 8, 8, 10, 10, 32, 54]...), 8 s
+  round 1: path 42001, cycles left 7, 8 s
+  round 2: path 42001, cycles left 6, 8 s
+  round 3: path 42001, cycles left 5, 9 s
+  round 4: path 42001, cycles left 4, 9 s
+  round 5: path 42001, cycles left 3, 9 s
+STUCK: 3 cycles cannot be merged (lengths [6, 8, 8380])
