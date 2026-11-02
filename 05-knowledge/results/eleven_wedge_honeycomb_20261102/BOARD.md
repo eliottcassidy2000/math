@@ -33,5 +33,7 @@ control. NEXT_12.md retains the new even-cover obligation as OPEN.
 Following the niche to the next native integer produced a stronger result:
 the actual10->26->23 attachment exposes the previously erased6--10 bit.
 The minimal active-source terminal-extension observer has38 states, versus
-32 before extension. It preserves every old complement word; it does not
-yet include dead sources or new26-complement commands. See NATIVE_26.md.
+32 before extension. Integration of the incoming71-state target strengthened
+this to a complete97-state pre-birth interface, covering ALL2^32 sources,
+old dead sources and new26-complement commands. One weighted residual class
+covers the non-relevant cube. See NATIVE_26.md and INCOMING.md.

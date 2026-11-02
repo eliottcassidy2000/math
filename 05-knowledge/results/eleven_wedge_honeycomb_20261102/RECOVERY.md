@@ -47,8 +47,8 @@ triangle variance bound and exact endpoint certificate stated in PROOF.md.
 | [Aliquot overlap P1/P2](../aliquot_divisor_overlap_20261028/THEORY.md) | s(20)=22=1+1+20 with1*20=20, while its actual divisor list has five terms |20 is the unique five-proper-divisor source with this factor-pair compression; the repeated1 and source20 are not additional proper divisors |
 | Same proof, prime-guarded4q row | s(4q)=3q+7, excess7-q; q=3,5,7 gives12,20,28 | The excess4,2,0 is explained by one affine chart; the outputs usually leave it, so there is no Collatz conjugacy |
 | Incoming [Session141 aliquot proof](../session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md) | sigma^-1(42)={20,26,41}; excess2 classified through17 proper divisors | Same total sigma still gives different successors22,16,1. This strengthens the older eleven-term cutoff and must not be replaced by it |
-| Root5 inverse tree, radius21 |704 distinct sources versus694 honeycomb sites |20 is a deficit of vertex capacity with a specified root and ordinary clock, not an edge count |
-| AMP's small unit-distance table | u(10)=20 |20 counts edges among ten points. It cannot identify a20-vertex deficit; use endpoint-slot capacity if relating it to successor maps |
+| Root5 inverse tree, radius21 |704 distinct sources versus694 honeycomb sites |The deficit is10, NOT20. The initial draft repeated the prompt's arithmetic error; incoming review corrected it. This row is a rejected occurrence of20 |
+| AMP's small unit-distance table | u(10)=20 |20 counts edges among ten points. Use endpoint-slot capacity if relating it to successor maps; the hosting-site deficit is a different count |
 | [Q25 joint path kernel](../joint_incidence_clocked_frames_20261102/PATH_KERNEL.md) |20 directed Hamilton paths, four compatible pairs | The new TWENTY_SHADOW.md gives an actual reversal/compatibility-preserving map to K4's three-edge subsets, with a full source lookup table |
 | K4 three-edge subsets | binom(6,3)=20=4 stars+4 triangles/isolate+12 paths | Complement pairs star/triangle and preserves the path sector; vertex incidence is extra data beyond six exchangeable slots |
 | [Odd-carrier exterior, THM-4661](../../../01-canon/theorems/THM-4661-odd-degree-carriers-a-failed-six-colour-exterior-has-at-least-twenty-vertices-and-equality-testers-are-seven-colour-certificates.md) | The old analytic lower bound20 was strengthened to22 under its finite necessary-condition census | A lower bound on an exterior is not an actual forcing gadget. We inherit this scoped result; no SAT rerun or new plane-coloring consequence is claimed |
@@ -123,10 +123,10 @@ deletion ladder itself is unchanged and the AMP bounds are explicitly dated.
   and retain ordinary-step lengths before asking for an embedding theorem.
 - **A complete square25 consumer.** The20-object model preserves two
   operations on individual paths. The actual test in NATIVE_26.md now shows
-  that the old orientation quotient needs38 active states when it must
-  support old complement words followed by a26-extension count. Include
-  dead sources and new complement commands next. A symmetry of the model
-  cannot act on the rigid original graph by itself.
+  that the old orientation quotient needs38 active states, and97 across
+  ALL old sources, when it must support the complete26-birth interface.
+  The next target is the26->27 interface and two-birth composition. A symmetry
+  of the model cannot act on the rigid original graph by itself.
 
 These are separate precise tests. No equal-number identification is used
 as a proof step in the anchor theorem.

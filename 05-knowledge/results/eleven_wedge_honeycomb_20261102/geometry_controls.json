@@ -288,6 +288,7 @@
     "clock": "ordinary Collatz",
     "first_honeycomb_violation": 21,
     "first_triangular_violation": 26,
+    "honeycomb_deficit_at21": 10,
     "honeycomb_sizes": [
       1,
       4,
@@ -347,6 +348,7 @@
       2263
     ],
     "root": 5,
+    "triangular_deficit_at26": 156,
     "triangular_sizes": [
       1,
       7,

@@ -11,10 +11,11 @@
   improve the remaining triangle coefficient to47/160. The relaxed bracket
   minimum is attained by a realizable pair of unit-distance diamonds, so
   support geometry alone cannot further improve that bracket.
-- **PROVED elementary:** base-b gap coordinates for the binary tree,
+- **PROVED elementary specialization:** base-b gap coordinates for the binary tree,
   b>=3, preserve scaled tree distance within an explicit additive constant.
   The b2 bounded-distance hostile explains exactly why its inverse bound
-  fails. This is not a Collatz convergence argument.
+  fails. The incoming real-base/two-parameter proofs are stronger and credited
+  in INCOMING.md. This is not a Collatz convergence argument.
 - **PROVED finite relation map:** the20 square25 directed paths and K4's
   20 three-edge subsets have isomorphic reversal/compatibility systems.
   Six-slot rotation fails to preserve compatibility. The source path table
@@ -22,6 +23,10 @@
 - **PROVED finite minimality:** on all4,864 active G25 orientations, old
   complement words plus a terminal26-extension count require38 states.
   A one-edge6--10 hostile separates counts1/2 under the identical new ports.
+- **PROVED complete native birth:** all2^32 old orientations need exactly97
+  pre-birth states for old words, adding26, then arbitrary new complement
+  words. The incoming71-state target is independently reproduced. Only14,048
+  relevant sources are explicit; one exact residual weight covers the rest.
 
 ## Audit and reproduction
 
@@ -46,11 +51,11 @@ a uniform multiplicative improvement of tau>=W; that shortcut has a known
 hostile. For arithmetic trees, first identify shared native even tails,
 then test a compatible metric construction on the quotient.
 
-The square-sum target is now extending the38-state active-source theorem:
-include old dead sources that acquire a path at26, or allow complements
-along new26-paths. Do not re-prove ordinary eventual Hamiltonicity or the
-20-path census. An internal new26 leaves a spanning two-path forest at25;
-retain that endpoint pairing before attempting an all-size extension rule.
+The square-sum target is the complete26->27 birth interface, using the
+already known637-state target, and then two successive births. Do not
+re-prove ordinary eventual Hamiltonicity, the20-path census, or the fixed
+71/637-state controllers. An internal new vertex leaves a spanning two-path
+forest; retain that endpoint pairing and the actual source weights.
 
 RECOVERY.md records the older sources and the exact meanings of20,7,15,24,26.
 THM-461's source-edge-count and real-root scope errors were repaired and

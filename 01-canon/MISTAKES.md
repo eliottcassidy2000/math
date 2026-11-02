@@ -9,6 +9,7 @@ a historical synthesis or promoting computational evidence.
 - **Scope:** arithmetic correction to the user's inspirational comparison; the inherited root5 certificate already had the correct counts and is unchanged.
 - **Witness / failed implication:** 704 source vertices versus694 honeycomb sites gives a deficit10. Neither the cycle deletion nor a change of arithmetic interpretation alters that subtraction.
 - **Repair:** `05-knowledge/results/honeycomb_gap_aliquot_20261102/CAPACITY_AND_COLOUR.md` retains the nearest-neighbour obstruction and proves a separate sharp information bound. For a uniform source and an unrestricted map into694 visible states, the minimizing fibres are684 singletons and10 doubletons, giving conditional entropy20/704=5/176 bits. Here20 counts occurrences in ambiguous pairs, not missing sites; adjacency need not permit the minimizing map. Its equality with the aliquot integer20 supplies no arithmetic map.
+- **Additional correction lineage:** the pre-push geometry/atlas draft in `05-knowledge/results/eleven_wedge_honeycomb_20261102` repeated20 even though its exact checker reconstructed704 and694 correctly. Incoming review exposed the missing final subtraction check. Both prose instances and the atlas row are repaired; the checker now explicitly asserts deficits10 and156. The already-pushed order11 stability proof and the20-path census are unaffected.
 
 ## 2026-11-02 — compatibility triangles do not determine complement controllers
 

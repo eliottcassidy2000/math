@@ -1,7 +1,9 @@
-# The next integer exposes an erased edge: 32 to36 to38 states
+# A complete native birth interface: 97 states before adding26
 
-Status: **PROVED by complete finite computation**, for the explicitly active
-source universe and operation language below. This extends the inherited
+Status: **PROVED by complete finite computation and a symbolic dead-fibre
+reduction**, for ALL2^32 old guard orientations. The initial active-only
+38-state theorem is retained below; the final section incorporates all
+old dead sources and every post-birth complement word. This extends the inherited
 [fixed-G25 complement carrier](../lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md).
 It is not an unrestricted tournament carrier or an all-size recurrence.
 
@@ -10,7 +12,8 @@ It is not an unrestricted tournament carrier or an all-size recurrence.
 Let G25 be the square-sum graph on1..25. Retain all its4,864 orientations
 that admit at least one of its20 directed Hamilton paths. The inherited
 minimal observer has32 states on this active universe; including the dead
-fibre gives33 states, but that enormous dead fibre is NOT enumerated here.
+fibre gives33 states. In this first calculation the old dead fibre is
+excluded; the final section supplies its complete symbolic treatment.
 Commands K_P are the actual tournament complement along a currently legal
 named path P: retain P's arcs and reverse every other arc. On guard bits
 they are x xor(1_G xor E(P)). Active sources remain active after every command.
@@ -88,6 +91,77 @@ immediate query, involving four old states; closure accounts for the further
 two states. All counts and the explicit witness are in extension26.json.
 Normal and optimized Python agree, with explicit exceptions enforcing checks.
 
+## Integrating the incoming full target controller
+
+The concurrent [three-window carrier](../twenty_curvature_ports_20261102/THREE_WINDOW_CARRIER.md)
+already proves the full G26 observer has71 states, including one dead state,
+and gives637 at G27. It also supplies a general signed-incidence atom
+compiler. These are inherited stronger fixed-order mechanisms; our38-state
+result is a different, cross-order language, not a replacement for71.
+Our direct implementation reproduces all11,232 active G26 orientations and
+their36,66,70,70 refinement, independently of the incoming implementation.
+
+Replace the four terminal COUNTS by the four complete G26 observer states.
+Refining under old commands again yields exactly38 active pre-birth states,
+with the SAME equivalence as the count-only future observer. Thus that
+restricted38-state controller already supports arbitrary legal old commands,
+then adding26, then arbitrary legal NEW26-path complement commands.
+This equality is a finite fact of this bank, not a general count-sufficiency law.
+
+## All old sources: the complete97-state interface
+
+There is a general finite reduction for nested guards. Let A be all active
+old orientations, let A' be all active new orientations, and let pi restrict
+new coordinates to the old guard. Set
+
+    S=A union pi(A').
+
+Every old legal complement keeps its selected old path, so keeps A invariant.
+An old orientation outside S has no old legal command, and EVERY assignment
+to the new coordinates leads to the new dead class. Hence all orientations
+outside S form one exact residual state of weight2^m-|S|. Explicitly retain
+S, the actual new-coordinate assignments, and this residual state. This
+finite weighted system represents ALL old sources and every two-stage
+command word. It does not require enumerating the old dead cube.
+
+Here |S|=14,048, so the residual weight is4,294,953,248. Initialize each
+explicit source by its old legal path names and four complete target71-state
+labels. The residual has no old legal names and four dead targets. Refinement
+has89,97,97 classes. The same closure/distinguishing-word argument above proves
+that **97 is the exact minimal number of pre-birth states** for this language.
+The integer clock distinguishes pre-birth order25 from post-birth order26;
+we do not merge stages or claim97 states for their untagged union.
+
+The97-row controller table in extension26.json includes source weights,
+old command targets, the four target26 states and converse. Its source
+weights sum to2^32. Pushing these weights through ALL four new-edge
+assignments recovers EXACTLY every full G26 observer fibre weight, including
+dead mass2^34-11232. No resetting to a uniform distribution within an
+observed target class is used. Old partial involutions and converse preserve
+source weights. Converse also commutes with birth when the new bit pair
+is replaced by its complement. The two actual ports remain10 and23.
+For full labelled tournaments, multiply old source weights by2^268;
+each supplied pair of new guard bits has2^23 other new-arc choices. The
+resulting common target factor is2^291, exactly the G26 free-arc factor.
+
+The active-source breakdown is particularly informative:
+
+    new active from old active =2048,
+    new active from old dead   =9184,
+    total new active          =11232.
+
+The9,184 new-active sources in the second row project to9,184 distinct
+old orientations. They account for58 additional pre-birth classes; the
+residual adds one, giving97=38+58+1. This explains precisely why an induction
+that only extends old Hamilton paths fails to capture the full response.
+
+The general reduction preserves all future behaviour because every target
+label denotes the complete post-birth controller, and the pre-birth partition
+is closed under every old command. Minimality is relative to those named
+path observations, arbitrary legal words in each stage, one literal birth,
+and the supplied two new edge bits. No unrestricted H or all-order state
+bound is asserted.
+
 ## The surviving extension question
 
 The20-object K4 map remains an exact path-level reversal/compatibility map.
@@ -96,7 +170,8 @@ full lookup table. The failure here concerns a quotient of ORIENTATIONS,
 which discarded edges unused by its old path bank. A new path bank can
 observe those edges. These are different source types.
 
-Next include old dead sources that become active at26, or allow complements
-along newly created26-paths. Neither is included in the38-state theorem.
-A useful all-size grammar must retain enough spanning-forest port states
+The next target is the analogous complete birth26->27 interface, using the
+already known637-state target, followed by two successive births without
+forgetting the intermediate source. A useful all-size grammar must control
+the growth of these interfaces and retain enough spanning-forest port states
 to handle internal new vertices, not only append old Hamilton paths.

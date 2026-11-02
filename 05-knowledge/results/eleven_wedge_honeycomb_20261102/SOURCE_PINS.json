@@ -1,7 +1,7 @@
 {
-  "correction_note": "The THM-461 pin records incoming error provenance; the shared theorem is repaired in this checkpoint and MISTAKES.md states the correction.",
+  "correction_note": "THM-461 is pinned after its repaired source-count and real-root statements; MISTAKES.md records their lineage. The honeycomb subtraction correction is also explicit there.",
   "scope": "Referenced proof inputs and recovered context; pinning is not an assertion that every historical theorem was independently reaudited.",
-  "source_revision": "fc2d85f9a81c4bf9a2b22eecc8b2fc562922c1ad",
+  "source_revision": "df904afa09fce7ea35cb1eb491ee63ca7be17101",
   "sources": [
     {
       "git_blob": "5ad5948f088d8e2039627c775ba88b0ae532d230",
@@ -9,9 +9,9 @@
       "sha256": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e"
     },
     {
-      "git_blob": "ad9b838e514264532e4cb847a30100d1db64c42b",
+      "git_blob": "af7935a80140b1ab85973c69e07c3b5432a6f85f",
       "path": "01-canon/theorems/THM-461-unit-distance-deletion-ladder-and-floor.md",
-      "sha256": "6b6d4a799040ca73ee3c06bdaaf160d801571024bfbce00abf1fc906ee1450e3"
+      "sha256": "3c0e046bcd46e2e4c95000fadbe6bc8354671845e053185f1a3795911ef43fa1"
     },
     {
       "git_blob": "027a91e5ad4b6957214b251c14bbefd79f280321",
@@ -44,6 +44,16 @@
       "sha256": "f508c08c6bd4b38133c95451bf05ad93b6bee83ab7bc5c8d843250e18660ceb8"
     },
     {
+      "git_blob": "95faad70921477f1d37b706e653a1dbc023387ff",
+      "path": "05-knowledge/results/honeycomb_gap_aliquot_20261102/CAPACITY_AND_COLOUR.md",
+      "sha256": "060601f5747665534cd9fa37dedbb1179554f3d25508fb3e54ed14514be1544a"
+    },
+    {
+      "git_blob": "fb19f6395c77c65102a2f2bec7a8d03ad42c4978",
+      "path": "05-knowledge/results/honeycomb_gap_aliquot_20261102/GAP_GEOMETRY.md",
+      "sha256": "8754f3a963c9a43b46ae4b11555d0bc918ddf0b6ecfa6341e4ac5355b8c319a8"
+    },
+    {
       "git_blob": "dfa4290b88b65740d53ae11c710f5a1fb66b63d5",
       "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md",
       "sha256": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d"
@@ -72,6 +82,21 @@
       "git_blob": "b8fb05bed5cbbe9451cc6118798bff650f79de37",
       "path": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md",
       "sha256": "19d5854bcec14cd7e94cea32d7f4654cd9915a6c3f325c9b4e5e43e74dab885e"
+    },
+    {
+      "git_blob": "37764f48059d2b19f73f031b976382c22a1dbe6b",
+      "path": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md",
+      "sha256": "e37e9ccfeb631e0bc91ab6d837a98191aa8b4be1e2e658847706822c439e06b0"
+    },
+    {
+      "git_blob": "3f98b8c8692ba70ee013bf226f5d20661357b18a",
+      "path": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths/PROOF.md",
+      "sha256": "b8d872356c0f439c4c48199ef281a50df84609866554b1ec87a1b257a558e637"
+    },
+    {
+      "git_blob": "7fbfddd0332e6293fcaa8f0b325a60a9babfb866",
+      "path": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths_content/PROOF.md",
+      "sha256": "e88cf8631ad3c0b14accdf4760d6166f3a46ee8ab57b1c5b4b8624553ad3d89b"
     },
     {
       "git_blob": "44bff2bf95dff16739a45d16bcbf93cc6d109b26",
@@ -107,6 +132,11 @@
       "git_blob": "ad4b098ee0ec9e0552ac87f2be9289b94951cade",
       "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md",
       "sha256": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5"
+    },
+    {
+      "git_blob": "370656d8705e53ed3cfee18f94d4ee49b3d01884",
+      "path": "05-knowledge/results/twenty_curvature_ports_20261102/THREE_WINDOW_CARRIER.md",
+      "sha256": "b5a25cfe5336b0f6c4f8537e69415f7bad5d8c5e6394286e2d9ba405a6152239"
     }
   ]
 }

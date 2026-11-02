@@ -23,7 +23,7 @@ def main(write):
             data=git('show',revision+':'+path)
             rows.append({'path':path,'git_blob':git('rev-parse',revision+':'+path).decode().strip(),'sha256':digest(data)})
         pins={'source_revision':revision,'scope':'Referenced proof inputs and recovered context; pinning is not an assertion that every historical theorem was independently reaudited.',
-              'correction_note':'The THM-461 pin records incoming error provenance; the shared theorem is repaired in this checkpoint and MISTAKES.md states the correction.',
+              'correction_note':'THM-461 is pinned after its repaired source-count and real-root statements; MISTAKES.md records their lineage. The honeycomb subtraction correction is also explicit there.',
               'sources':rows}
         (HERE/'SOURCE_PINS.json').write_text(json.dumps(pins,indent=2,sort_keys=True)+'\n')
         manifest={'scope':'Integrity only, not a proof of mathematical correctness. Shared navigation/correction edits are versioned by Git, not frozen here.',

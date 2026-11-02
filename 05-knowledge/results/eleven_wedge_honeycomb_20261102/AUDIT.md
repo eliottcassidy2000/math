@@ -90,8 +90,13 @@ are elementary fixed-field counts, not computational conjectures.
 port orientations. It verifies old-state transition closure, the36/38/38
 refinement, and the same final equivalence starting from current legality
 rather than the old quotient. Literal arc membership independently verifies
-the exhibited one-edge source pair's counts1 and2. The old dead fibre is
-not enumerated and is excluded from the minimality claim.
+the exhibited one-edge source pair's counts1 and2. The incoming71-state
+target is then independently reproduced via all11,232 active G26 sources.
+The complete old-source reduction retains14,048 relevant orientations plus
+one residual state of weight4,294,953,248. Its89/97/97 refinement proves
+minimality on ALL2^32 old sources, as explained in NATIVE_26.md. Exact
+weights push to every target fibre, and converse commutes with birth.
+The old dead cube is covered symbolically, not omitted or brute-force scanned.
 
 `next12_probe.py` checks37,038 padded-core cases and77 clique partitions.
 Those are declared restricted universes; the all-order12 claim stays OPEN.

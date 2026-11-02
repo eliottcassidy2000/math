@@ -1,7 +1,12 @@
 # A gap repairs the hyperbolic tree's inverse distance control
 
 Status: **PROVED elementary refinement**, using the standard upper-half-plane
-hyperbolic distance formula. No claim of literature novelty is made. The
+hyperbolic distance formula. No claim of literature novelty is made. Concurrent
+[Session141](../session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md)
+and the [real-base gap proof](../honeycomb_gap_aliquot_20261102/GAP_GEOMETRY.md)
+reached mainline before this side-lane checkpoint and supply stronger parameter
+and distance bounds. The construction below is an independently checked integer-
+base specialization, not a claim to the strongest result. The
 [incoming dyadic construction](../session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md)
 already supplies a proper induced constant-edge binary tree but proves it is
 not quasi-isometric. Its final accepted audit is recorded in
@@ -101,7 +106,7 @@ or show universal forward entry. Those obligations remain distinct.
 
 The independent controls reproduce704 sources reaching5 by ordinary time21,
 versus694 sites in the honeycomb radius21 ball, and2263 versus2107 in the
-triangular-lattice comparison at26. The first deficit is20 for this ROOT,
+triangular-lattice comparison at26. The first deficit is10 for this ROOT,
 CLOCK and METRIC. Changing any of them changes the comparison. Removing
 the1–4–2 cycle has no effect on this already acyclic subtree.
 
@@ -109,7 +114,10 @@ The older June unit-distance work asks a different question: maximize the
 number of unit pairs among a FIXED number of planar points. AMP's dated
 [Theorem1 and Table1](https://arxiv.org/html/2412.11914v2) give u(10)=20,
 u(20)=54 and u(21)=57. These are cited results, not re-proved here.
-The present deficit20 counts missing hosting SITES, not unit EDGES.
+The present deficit10 counts missing hosting SITES, not unit EDGES. An early
+version of this packet repeated the prompt's subtraction error20; incoming
+review exposed it. The checker now verifies the differences10 and156
+explicitly, not just the four original counts.
 
 Incoming [Session141](../session141_metric_aliquot_square_paths_20261102/unit_distance/PROOF.md)
 makes the useful exact bridge: a graph admits k partial successor layers

@@ -60,7 +60,8 @@ def capacity():
     h=ball(H,(0,0,0),26);t=ball(T,(0,0),26)
     for r in range(27):need(h[r]==1+3*r*(r+1)//2 and t[r]==1+3*r*(r+1),'lattice ball')
     need(sizes[21]==704 and h[21]==694 and sizes[26]==2263 and t[26]==2107,'capacity control')
-    return {'first_honeycomb_violation':next(r for r in range(27) if sizes[r]>h[r]),'first_triangular_violation':next(r for r in range(27) if sizes[r]>t[r]),'root':5,'clock':'ordinary Collatz','inverse_sizes':sizes,'honeycomb_sizes':h,'triangular_sizes':t}
+    need(sizes[21]-h[21]==10 and sizes[26]-t[26]==156,'literal deficit subtraction; twenty is false')
+    return {'first_honeycomb_violation':next(r for r in range(27) if sizes[r]>h[r]),'first_triangular_violation':next(r for r in range(27) if sizes[r]>t[r]),'honeycomb_deficit_at21':sizes[21]-h[21],'triangular_deficit_at26':sizes[26]-t[26],'root':5,'clock':'ordinary Collatz','inverse_sizes':sizes,'honeycomb_sizes':h,'triangular_sizes':t}
 def restricted():
     best=None;which=[];total=0
     for s in subprocess.check_output(['geng','-q','8'],text=True).splitlines():
