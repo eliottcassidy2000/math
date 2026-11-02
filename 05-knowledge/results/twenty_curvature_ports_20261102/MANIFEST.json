@@ -1,0 +1,58 @@
+{
+  "files": {
+    "AUDIT.md": "8d5683b16d48fe5c68c4ced7497dea3fbc0ca9f1debca4a38a9c808e9a991911",
+    "BOARD.md": "19140e86243bcdf577aa5e2a988556fdf3b846600304e1c554c11ca3bd5035b6",
+    "GAPPED_GEOMETRY.md": "d3212d60286e0ee1fe4f02e77cdf1320177e2621aeafbf7006dfafa61e0e3199",
+    "HANDOFF.md": "20fe58fb170789f406e17fd6493ddf965ece256529c0807f0933a2cf0372c73a",
+    "README.md": "5343407a6db63d27dda0e9169d4bde033ea91b2cdbebfb436192cf5d1fefcb68",
+    "RECOVERY.md": "9484a65f6a7af597e18fe4f31b076f77268c2b52b4785e3e4c6b94f41c1941ab",
+    "THREE_WINDOW_CARRIER.md": "b5a25cfe5336b0f6c4f8537e69415f7bad5d8c5e6394286e2d9ba405a6152239",
+    "gap_distance.png": "fcebce1fac8f6ec81d404bdcbad117e1ac581309e90f4430cba10d0d1eb1cd57",
+    "gap_distance.svg": "6338fbeebad01b922ec4394123a39fff0644c50bc34b180ff7012b2292273fc1",
+    "path_scout.json": "9a43648471e4521ffed0b9b4e934ea66266865db7c42f30ee3404df55463837e",
+    "plot.py": "6d8785cb37dcef3bf3723b10adff10205c8923ebfc06ddc6f26dc8e14ee83949",
+    "probe_paths.py": "c473c7474162ad767cddb1b3b976068fff468d46c9cf6ba369a85ddc38ff7500",
+    "seal.py": "4dcce71be0befe805c13ab86abf334f60a5b3e82101a89e34c39d65cf9d36956",
+    "verification.json": "13711620fdaaacc2a690548dc40191c2556fae1c5f5a726e11332427e42bc276",
+    "verification.optimized.json": "13711620fdaaacc2a690548dc40191c2556fae1c5f5a726e11332427e42bc276",
+    "verify.py": "b57bcc44f728e89923da727676b504531e172b9f85c162e3958eb727c314ecfe"
+  },
+  "hash_convention": "SHA256; canonical LF for listed text extensions, raw bytes otherwise",
+  "inputs": {
+    "01-canon/theorems/THM-4661-odd-degree-carriers-a-failed-six-colour-exterior-has-at-least-twenty-vertices-and-equality-testers-are-seven-colour-certificates.md": "fc389aa4d1c22a7182b14f40f6c6fe05bd1806b4cd83049d297df9428199b7d3",
+    "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2",
+    "05-knowledge/results/collatz_hexagonal_growth_20261102/JOINT_PORTS.md": "79585916cc6e1ce9492aadfddec4d3a6f48d87a1ff9b108df4947f94d0306ff1",
+    "05-knowledge/results/collatz_hexagonal_growth_20261102/verify.py": "e4c71b0f4a2b19015d8d08fd2a391a8f500916877004c04f3dc54ea07f52fb1d",
+    "05-knowledge/results/collatz_mod6_20260917_three_adic_g_map.md": "953518d5545e782f871b35699c90c5b94b19aa76d3f12040de30c9ce3416eb18",
+    "05-knowledge/results/cursor_cm_phase_20261028/RAMANUJAN.md": "93b249a19a470b397ca3f7c7e202657023a93abbe8e6b4fa4dd9eacb04e42dd1",
+    "05-knowledge/results/cursor_cm_phase_20261028/TRACE_CARRIER.md": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
+    "05-knowledge/results/free_bits_seven_fiftysix_20261028/ATLAS.md": "2205df1ddb160029f3a7f82e80b150a9a6452247948c42b26a63632825abb49b",
+    "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
+    "05-knowledge/results/joint_incidence_clocked_frames_20261102/path_kernel.py": "0e9d48693b88c513ebc7714e6641c9e5bcae970f7c116f930600dceacf7b841f",
+    "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md": "3b3e95d0e1fe422516b604299ac3f6f0a2a4ad57ec3d0f5dc9ce31ab6affd990",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/scaled_count_fft_carriers_20261030/THEORY.md": "e06c3f75ab9794e9f1ce3fd0725d7223e5a92372ca2582bead414b9e66265e86",
+    "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md": "5d42e5d91a2c122ffde93730729b9239c8cb68f71348acf41cf19300380f3944",
+    "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+    "05-knowledge/results/twin_pythagorean_124_20261026/CONNECTION_BOARD.md": "55fca506aa04224a16a87be8757c6ecdf9795b6f5f725f6205df5bcb6d39756c"
+  },
+  "primary_sources": [
+    {
+      "scope": "Theorem1 and Table1 finite unit distances; read 2026-11-02",
+      "url": "https://arxiv.org/html/2412.11914v2"
+    },
+    {
+      "scope": "near-perfect definition, Proposition1, counterexample650; read 2026-11-02",
+      "url": "https://www.pollack-math.net/pnp-4.pdf"
+    },
+    {
+      "scope": "classical tree-embedding context; read 2026-11-02",
+      "url": "https://proceedings.mlr.press/v80/sala18a.html"
+    },
+    {
+      "scope": "standard metric formula via pinned Session140 proof; direct refetch timed out this session",
+      "url": "https://www.maths.dur.ac.uk/users/anna.felikson/Geometry/Geometry23/notes.pdf"
+    }
+  ],
+  "starting_commit": "fb7c88537a4a"
+}

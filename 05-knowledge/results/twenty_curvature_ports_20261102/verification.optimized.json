@@ -1,0 +1,2961 @@
+{
+  "arithmetic": {
+    "bound": 10000,
+    "factor_pairs": [
+      {
+        "factor_pairs": [
+          [
+            1,
+            20
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "lorentz_coordinates": [
+          [
+            21,
+            19
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            9,
+            1
+          ]
+        ],
+        "n": 20
+      },
+      {
+        "factor_pairs": [
+          [
+            1,
+            44
+          ],
+          [
+            2,
+            22
+          ],
+          [
+            4,
+            11
+          ]
+        ],
+        "lorentz_coordinates": [
+          [
+            45,
+            43
+          ],
+          [
+            24,
+            20
+          ],
+          [
+            15,
+            7
+          ]
+        ],
+        "n": 44
+      },
+      {
+        "factor_pairs": [
+          [
+            1,
+            52
+          ],
+          [
+            2,
+            26
+          ],
+          [
+            4,
+            13
+          ]
+        ],
+        "lorentz_coordinates": [
+          [
+            53,
+            51
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            17,
+            9
+          ]
+        ],
+        "n": 52
+      }
+    ],
+    "five_divisor_overlap": [
+      20
+    ],
+    "recovered_trace_clocks": [
+      {
+        "a": 5,
+        "modulus": 13,
+        "primitive_pairs": 169,
+        "twelfth_pairs": 13,
+        "u_power12": [
+          1,
+          0
+        ]
+      },
+      {
+        "a": 2,
+        "modulus": 11,
+        "primitive_pairs": 121,
+        "twelfth_pairs": 11,
+        "u_power12": [
+          10,
+          0
+        ]
+      },
+      {
+        "a": 5,
+        "modulus": 29,
+        "primitive_pairs": 29,
+        "twelfth_pairs": null,
+        "u_power12": [
+          18,
+          28
+        ]
+      }
+    ],
+    "rows": [
+      {
+        "n": 8,
+        "proper_divisors": [
+          1,
+          2,
+          4
+        ],
+        "s": 7
+      },
+      {
+        "n": 12,
+        "proper_divisors": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "s": 16
+      },
+      {
+        "n": 16,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "s": 15
+      },
+      {
+        "n": 20,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          5,
+          10
+        ],
+        "s": 22
+      },
+      {
+        "n": 24,
+        "proper_divisors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12
+        ],
+        "s": 36
+      },
+      {
+        "n": 28,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          7,
+          14
+        ],
+        "s": 28
+      },
+      {
+        "n": 44,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          11,
+          22
+        ],
+        "s": 40
+      },
+      {
+        "n": 52,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          13,
+          26
+        ],
+        "s": 46
+      }
+    ],
+    "sigma42_fibre": [
+      20,
+      26,
+      41
+    ]
+  },
+  "collatz": {
+    "honeycomb_deficit": 10,
+    "inverse_root5_counts": [
+      1,
+      2,
+      4,
+      6,
+      9,
+      12,
+      16,
+      21,
+      28,
+      37,
+      49,
+      64,
+      83,
+      106,
+      136,
+      173,
+      219,
+      276,
+      348,
+      440,
+      557,
+      704,
+      891,
+      1124,
+      1418,
+      1792,
+      2263
+    ],
+    "native_pairs": 8001,
+    "positive_greedy_edges": [
+      [
+        13,
+        4,
+        0
+      ],
+      [
+        4,
+        1,
+        0
+      ]
+    ],
+    "selected_vertices": 127,
+    "signed_greedy_cycle": [
+      [
+        4,
+        11,
+        3
+      ],
+      [
+        11,
+        4,
+        0
+      ]
+    ]
+  },
+  "geometry": [
+    {
+      "base": 2,
+      "central_pairs": [
+        {
+          "cosh_distance": "3/2",
+          "depth": 1,
+          "tree_distance": 2
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 2,
+          "tree_distance": 4
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 3,
+          "tree_distance": 6
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 4,
+          "tree_distance": 8
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 5,
+          "tree_distance": 10
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 6,
+          "tree_distance": 12
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 7,
+          "tree_distance": 14
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 8,
+          "tree_distance": 16
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 9,
+          "tree_distance": 18
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 10,
+          "tree_distance": 20
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 11,
+          "tree_distance": 22
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 12,
+          "tree_distance": 24
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 13,
+          "tree_distance": 26
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 14,
+          "tree_distance": 28
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 15,
+          "tree_distance": 30
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 16,
+          "tree_distance": 32
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 17,
+          "tree_distance": 34
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 18,
+          "tree_distance": 36
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 19,
+          "tree_distance": 38
+        },
+        {
+          "cosh_distance": "3/2",
+          "depth": 20,
+          "tree_distance": 40
+        }
+      ],
+      "cosh_edge_length": "21/16",
+      "pairs": 8001,
+      "vertices": 127
+    },
+    {
+      "base": 3,
+      "central_pairs": [
+        {
+          "cosh_distance": "3",
+          "depth": 1,
+          "tree_distance": 2
+        },
+        {
+          "cosh_distance": "9",
+          "depth": 2,
+          "tree_distance": 4
+        },
+        {
+          "cosh_distance": "51",
+          "depth": 3,
+          "tree_distance": 6
+        },
+        {
+          "cosh_distance": "393",
+          "depth": 4,
+          "tree_distance": 8
+        },
+        {
+          "cosh_distance": "3363",
+          "depth": 5,
+          "tree_distance": 10
+        },
+        {
+          "cosh_distance": "29769",
+          "depth": 6,
+          "tree_distance": 12
+        },
+        {
+          "cosh_distance": "266451",
+          "depth": 7,
+          "tree_distance": 14
+        },
+        {
+          "cosh_distance": "2393673",
+          "depth": 8,
+          "tree_distance": 16
+        },
+        {
+          "cosh_distance": "21529923",
+          "depth": 9,
+          "tree_distance": 18
+        },
+        {
+          "cosh_distance": "193729929",
+          "depth": 10,
+          "tree_distance": 20
+        },
+        {
+          "cosh_distance": "1743451251",
+          "depth": 11,
+          "tree_distance": 22
+        },
+        {
+          "cosh_distance": "15690706953",
+          "depth": 12,
+          "tree_distance": 24
+        },
+        {
+          "cosh_distance": "141215299683",
+          "depth": 13,
+          "tree_distance": 26
+        },
+        {
+          "cosh_distance": "1270934508489",
+          "depth": 14,
+          "tree_distance": 28
+        },
+        {
+          "cosh_distance": "11438401010451",
+          "depth": 15,
+          "tree_distance": 30
+        },
+        {
+          "cosh_distance": "102945580396233",
+          "depth": 16,
+          "tree_distance": 32
+        },
+        {
+          "cosh_distance": "926510137472643",
+          "depth": 17,
+          "tree_distance": 34
+        },
+        {
+          "cosh_distance": "8338590978973449",
+          "depth": 18,
+          "tree_distance": 36
+        },
+        {
+          "cosh_distance": "75047318035920051",
+          "depth": 19,
+          "tree_distance": 38
+        },
+        {
+          "cosh_distance": "675425859998757513",
+          "depth": 20,
+          "tree_distance": 40
+        }
+      ],
+      "cosh_edge_length": "11/6",
+      "pairs": 8001,
+      "vertices": 127
+    },
+    {
+      "base": 4,
+      "central_pairs": [
+        {
+          "cosh_distance": "11/2",
+          "depth": 1,
+          "tree_distance": 2
+        },
+        {
+          "cosh_distance": "83/2",
+          "depth": 2,
+          "tree_distance": 4
+        },
+        {
+          "cosh_distance": "1091/2",
+          "depth": 3,
+          "tree_distance": 6
+        },
+        {
+          "cosh_distance": "16643/2",
+          "depth": 4,
+          "tree_distance": 8
+        },
+        {
+          "cosh_distance": "263171/2",
+          "depth": 5,
+          "tree_distance": 10
+        },
+        {
+          "cosh_distance": "4198403/2",
+          "depth": 6,
+          "tree_distance": 12
+        },
+        {
+          "cosh_distance": "67125251/2",
+          "depth": 7,
+          "tree_distance": 14
+        },
+        {
+          "cosh_distance": "1073807363/2",
+          "depth": 8,
+          "tree_distance": 16
+        },
+        {
+          "cosh_distance": "17180131331/2",
+          "depth": 9,
+          "tree_distance": 18
+        },
+        {
+          "cosh_distance": "274878955523/2",
+          "depth": 10,
+          "tree_distance": 20
+        },
+        {
+          "cosh_distance": "4398050705411/2",
+          "depth": 11,
+          "tree_distance": 22
+        },
+        {
+          "cosh_distance": "70368760954883/2",
+          "depth": 12,
+          "tree_distance": 24
+        },
+        {
+          "cosh_distance": "1125899973951491/2",
+          "depth": 13,
+          "tree_distance": 26
+        },
+        {
+          "cosh_distance": "18014398777917443/2",
+          "depth": 14,
+          "tree_distance": 28
+        },
+        {
+          "cosh_distance": "288230377225453571/2",
+          "depth": 15,
+          "tree_distance": 30
+        },
+        {
+          "cosh_distance": "4611686022722355203/2",
+          "depth": 16,
+          "tree_distance": 32
+        },
+        {
+          "cosh_distance": "73786976312018075651/2",
+          "depth": 17,
+          "tree_distance": 34
+        },
+        {
+          "cosh_distance": "1180591620786130780163/2",
+          "depth": 18,
+          "tree_distance": 36
+        },
+        {
+          "cosh_distance": "18889465931753458761731/2",
+          "depth": 19,
+          "tree_distance": 38
+        },
+        {
+          "cosh_distance": "302231454904756805304323/2",
+          "depth": 20,
+          "tree_distance": 40
+        }
+      ],
+      "cosh_edge_length": "77/32",
+      "pairs": 8001,
+      "vertices": 127
+    }
+  ],
+  "hostile_81_27": {
+    "common_cyclic_triples": 67,
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ]
+  },
+  "paths": {
+    "carriers": [
+      {
+        "active_sources": 4864,
+        "atom_models": [
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              22
+            ],
+            "class_weight_histogram": {
+              "64": 3,
+              "128": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 448
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              22
+            ],
+            "class_weight_histogram": {
+              "64": 3,
+              "128": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 448
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              22
+            ],
+            "class_weight_histogram": {
+              "64": 3,
+              "128": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 448
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              22
+            ],
+            "class_weight_histogram": {
+              "64": 3,
+              "128": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 448
+          },
+          {
+            "atoms": [
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 256
+          }
+        ],
+        "class_weight_histogram_active": {
+          "64": 12,
+          "128": 8,
+          "256": 12
+        },
+        "component_size_histogram": {
+          "1": 12,
+          "2": 4
+        },
+        "minimum_including_dead": 33,
+        "n": 25,
+        "refinement_rounds_active": [
+          24,
+          32,
+          32
+        ],
+        "return_words": {
+          "active_word_counts": [
+            4864,
+            5120,
+            5632,
+            6144,
+            7168,
+            8192,
+            10240,
+            12288,
+            16384,
+            20480,
+            28672,
+            36864,
+            53248,
+            69632,
+            102400,
+            135168
+          ],
+          "annihilator_low_to_high": [
+            "2",
+            "-2",
+            "-1",
+            "1"
+          ],
+          "minimal_recurrence_order": 3
+        },
+        "source_partition_sha256": "4533d1b69cec66a069a45f6527e96bd27222b5c481e4ca5d9800d55583e2b5ec",
+        "triangles": []
+      },
+      {
+        "active_sources": 11232,
+        "atom_models": [
+          {
+            "atoms": [
+              25
+            ],
+            "class_weight_histogram": {
+              "512": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 512
+          },
+          {
+            "atoms": [
+              25
+            ],
+            "class_weight_histogram": {
+              "512": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 512
+          },
+          {
+            "atoms": [
+              25
+            ],
+            "class_weight_histogram": {
+              "512": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 512
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              2,
+              2,
+              21
+            ],
+            "class_weight_histogram": {
+              "32": 8,
+              "64": 6,
+              "128": 1,
+              "256": 2
+            },
+            "compressed_active": 21,
+            "minimum_active": 17,
+            "named_paths": 3,
+            "refinement_rounds": [
+              6,
+              15,
+              17,
+              17
+            ],
+            "source_mass": 1280
+          },
+          {
+            "atoms": [
+              5,
+              5,
+              20
+            ],
+            "class_weight_histogram": {
+              "16": 3,
+              "480": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1008
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              23
+            ],
+            "class_weight_histogram": {
+              "128": 3,
+              "256": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 896
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              23
+            ],
+            "class_weight_histogram": {
+              "128": 3,
+              "256": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 896
+          },
+          {
+            "atoms": [
+              25
+            ],
+            "class_weight_histogram": {
+              "512": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 512
+          },
+          {
+            "atoms": [
+              25
+            ],
+            "class_weight_histogram": {
+              "512": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 512
+          },
+          {
+            "atoms": [
+              25
+            ],
+            "class_weight_histogram": {
+              "512": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 512
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              2,
+              2,
+              21
+            ],
+            "class_weight_histogram": {
+              "32": 8,
+              "64": 6,
+              "128": 1,
+              "256": 2
+            },
+            "compressed_active": 21,
+            "minimum_active": 17,
+            "named_paths": 3,
+            "refinement_rounds": [
+              6,
+              15,
+              17,
+              17
+            ],
+            "source_mass": 1280
+          },
+          {
+            "atoms": [
+              5,
+              5,
+              20
+            ],
+            "class_weight_histogram": {
+              "16": 3,
+              "480": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1008
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              23
+            ],
+            "class_weight_histogram": {
+              "128": 3,
+              "256": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 896
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              23
+            ],
+            "class_weight_histogram": {
+              "128": 3,
+              "256": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 896
+          }
+        ],
+        "class_weight_histogram_active": {
+          "16": 6,
+          "32": 16,
+          "64": 12,
+          "128": 14,
+          "256": 12,
+          "480": 4,
+          "512": 6
+        },
+        "component_size_histogram": {
+          "1": 6,
+          "2": 6,
+          "3": 2
+        },
+        "minimum_including_dead": 71,
+        "n": 26,
+        "refinement_rounds_active": [
+          36,
+          66,
+          70,
+          70
+        ],
+        "return_words": {
+          "active_word_counts": [
+            11232,
+            12288,
+            14528,
+            16896,
+            21888,
+            27264,
+            38784,
+            51328,
+            78848,
+            109056,
+            177152,
+            252288,
+            426624,
+            619392,
+            1079808,
+            1588480
+          ],
+          "annihilator_low_to_high": [
+            "6",
+            "0",
+            "-17",
+            "6",
+            "11",
+            "-5",
+            "-2",
+            "1"
+          ],
+          "minimal_recurrence_order": 7
+        },
+        "source_partition_sha256": "13cfe19055dde57a67550b7864573f0009e9007b9a9f484fa72774ae7644146f",
+        "triangles": [
+          {
+            "block_sizes": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "path_ids": [
+              3,
+              7,
+              9
+            ],
+            "paths": [
+              [
+                18,
+                7,
+                9,
+                16,
+                20,
+                5,
+                11,
+                25,
+                24,
+                1,
+                8,
+                17,
+                19,
+                6,
+                3,
+                13,
+                12,
+                4,
+                21,
+                15,
+                10,
+                26,
+                23,
+                2,
+                14,
+                22
+              ],
+              [
+                18,
+                7,
+                9,
+                16,
+                20,
+                5,
+                11,
+                25,
+                24,
+                1,
+                8,
+                17,
+                19,
+                6,
+                10,
+                26,
+                23,
+                2,
+                14,
+                22,
+                3,
+                13,
+                12,
+                4,
+                21,
+                15
+              ],
+              [
+                18,
+                7,
+                9,
+                16,
+                20,
+                5,
+                11,
+                25,
+                24,
+                12,
+                4,
+                21,
+                15,
+                1,
+                8,
+                17,
+                19,
+                6,
+                10,
+                26,
+                23,
+                2,
+                14,
+                22,
+                3,
+                13
+              ]
+            ],
+            "union_edges": 29,
+            "window_masks": [
+              67142148,
+              69206148,
+              35651720
+            ]
+          },
+          {
+            "block_sizes": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "path_ids": [
+              15,
+              19,
+              21
+            ],
+            "paths": [
+              [
+                22,
+                14,
+                2,
+                23,
+                26,
+                10,
+                15,
+                21,
+                4,
+                12,
+                13,
+                3,
+                6,
+                19,
+                17,
+                8,
+                1,
+                24,
+                25,
+                11,
+                5,
+                20,
+                16,
+                9,
+                7,
+                18
+              ],
+              [
+                15,
+                21,
+                4,
+                12,
+                13,
+                3,
+                22,
+                14,
+                2,
+                23,
+                26,
+                10,
+                6,
+                19,
+                17,
+                8,
+                1,
+                24,
+                25,
+                11,
+                5,
+                20,
+                16,
+                9,
+                7,
+                18
+              ],
+              [
+                13,
+                3,
+                22,
+                14,
+                2,
+                23,
+                26,
+                10,
+                6,
+                19,
+                17,
+                8,
+                1,
+                15,
+                21,
+                4,
+                12,
+                24,
+                25,
+                11,
+                5,
+                20,
+                16,
+                9,
+                7,
+                18
+              ]
+            ],
+            "union_edges": 29,
+            "window_masks": [
+              67142148,
+              69206148,
+              35651720
+            ]
+          }
+        ]
+      },
+      {
+        "active_sources": 62952,
+        "atom_models": [
+          {
+            "atoms": [
+              1,
+              3,
+              1,
+              1,
+              1,
+              1,
+              3,
+              1,
+              2,
+              18
+            ],
+            "class_weight_histogram": {
+              "16": 7,
+              "240": 3,
+              "256": 3,
+              "448": 1,
+              "480": 1,
+              "512": 2
+            },
+            "compressed_active": 76,
+            "minimum_active": 17,
+            "named_paths": 4,
+            "refinement_rounds": [
+              7,
+              15,
+              17,
+              17
+            ],
+            "source_mass": 3552
+          },
+          {
+            "atoms": [
+              3,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1,
+              4,
+              17,
+              1
+            ],
+            "class_weight_histogram": {
+              "8": 18,
+              "16": 3,
+              "48": 3,
+              "56": 7,
+              "184": 3,
+              "368": 1,
+              "480": 1,
+              "672": 1,
+              "896": 1,
+              "928": 1
+            },
+            "compressed_active": 144,
+            "minimum_active": 39,
+            "named_paths": 5,
+            "refinement_rounds": [
+              11,
+              31,
+              38,
+              39,
+              39
+            ],
+            "source_mass": 4624
+          },
+          {
+            "atoms": [
+              2,
+              1,
+              2,
+              1,
+              2,
+              1,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              16
+            ],
+            "class_weight_histogram": {
+              "4": 71,
+              "8": 43,
+              "16": 19,
+              "24": 4,
+              "28": 4,
+              "32": 11,
+              "56": 3,
+              "64": 3,
+              "128": 6,
+              "224": 4,
+              "256": 2,
+              "448": 1,
+              "496": 1,
+              "512": 2,
+              "808": 1
+            },
+            "compressed_active": 2640,
+            "minimum_active": 175,
+            "named_paths": 8,
+            "refinement_rounds": [
+              25,
+              105,
+              156,
+              173,
+              175,
+              175
+            ],
+            "source_mass": 6804
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              2,
+              1,
+              1,
+              2,
+              3,
+              19
+            ],
+            "class_weight_histogram": {
+              "16": 20,
+              "32": 7,
+              "48": 8,
+              "64": 3,
+              "96": 6,
+              "192": 4,
+              "384": 3,
+              "512": 1
+            },
+            "compressed_active": 98,
+            "minimum_active": 52,
+            "named_paths": 5,
+            "refinement_rounds": [
+              12,
+              42,
+              52,
+              52
+            ],
+            "source_mass": 4128
+          },
+          {
+            "atoms": [
+              1,
+              1,
+              4,
+              4,
+              1,
+              1,
+              20
+            ],
+            "class_weight_histogram": {
+              "16": 10,
+              "240": 3,
+              "480": 2,
+              "928": 1
+            },
+            "compressed_active": 30,
+            "minimum_active": 16,
+            "named_paths": 3,
+            "refinement_rounds": [
+              7,
+              16,
+              16
+            ],
+            "source_mass": 2768
+          },
+          {
+            "atoms": [
+              3,
+              3,
+              23
+            ],
+            "class_weight_histogram": {
+              "128": 3,
+              "768": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1920
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 3,
+              "512": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1792
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 3,
+              "512": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1792
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              1,
+              3,
+              1,
+              1,
+              1,
+              1,
+              3,
+              1,
+              2,
+              18
+            ],
+            "class_weight_histogram": {
+              "16": 7,
+              "240": 3,
+              "256": 3,
+              "448": 1,
+              "480": 1,
+              "512": 2
+            },
+            "compressed_active": 76,
+            "minimum_active": 17,
+            "named_paths": 4,
+            "refinement_rounds": [
+              7,
+              15,
+              17,
+              17
+            ],
+            "source_mass": 3552
+          },
+          {
+            "atoms": [
+              3,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              1,
+              4,
+              17,
+              1
+            ],
+            "class_weight_histogram": {
+              "8": 18,
+              "16": 3,
+              "48": 3,
+              "56": 7,
+              "184": 3,
+              "368": 1,
+              "480": 1,
+              "672": 1,
+              "896": 1,
+              "928": 1
+            },
+            "compressed_active": 144,
+            "minimum_active": 39,
+            "named_paths": 5,
+            "refinement_rounds": [
+              11,
+              31,
+              38,
+              39,
+              39
+            ],
+            "source_mass": 4624
+          },
+          {
+            "atoms": [
+              2,
+              1,
+              2,
+              1,
+              2,
+              1,
+              1,
+              2,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              16
+            ],
+            "class_weight_histogram": {
+              "4": 71,
+              "8": 43,
+              "16": 19,
+              "24": 4,
+              "28": 4,
+              "32": 11,
+              "56": 3,
+              "64": 3,
+              "128": 6,
+              "224": 4,
+              "256": 2,
+              "448": 1,
+              "496": 1,
+              "512": 2,
+              "808": 1
+            },
+            "compressed_active": 2640,
+            "minimum_active": 175,
+            "named_paths": 8,
+            "refinement_rounds": [
+              25,
+              105,
+              156,
+              173,
+              175,
+              175
+            ],
+            "source_mass": 6804
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              2,
+              1,
+              1,
+              2,
+              3,
+              19
+            ],
+            "class_weight_histogram": {
+              "16": 20,
+              "32": 7,
+              "48": 8,
+              "64": 3,
+              "96": 6,
+              "192": 4,
+              "384": 3,
+              "512": 1
+            },
+            "compressed_active": 98,
+            "minimum_active": 52,
+            "named_paths": 5,
+            "refinement_rounds": [
+              12,
+              42,
+              52,
+              52
+            ],
+            "source_mass": 4128
+          },
+          {
+            "atoms": [
+              1,
+              1,
+              4,
+              4,
+              1,
+              1,
+              20
+            ],
+            "class_weight_histogram": {
+              "16": 10,
+              "240": 3,
+              "480": 2,
+              "928": 1
+            },
+            "compressed_active": 30,
+            "minimum_active": 16,
+            "named_paths": 3,
+            "refinement_rounds": [
+              7,
+              16,
+              16
+            ],
+            "source_mass": 2768
+          },
+          {
+            "atoms": [
+              3,
+              3,
+              23
+            ],
+            "class_weight_histogram": {
+              "128": 3,
+              "768": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1920
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 3,
+              "512": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1792
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          },
+          {
+            "atoms": [
+              2,
+              2,
+              24
+            ],
+            "class_weight_histogram": {
+              "256": 3,
+              "512": 2
+            },
+            "compressed_active": 5,
+            "minimum_active": 5,
+            "named_paths": 2,
+            "refinement_rounds": [
+              3,
+              5,
+              5
+            ],
+            "source_mass": 1792
+          },
+          {
+            "atoms": [
+              26
+            ],
+            "class_weight_histogram": {
+              "1024": 1
+            },
+            "compressed_active": 1,
+            "minimum_active": 1,
+            "named_paths": 1,
+            "refinement_rounds": [
+              1,
+              1
+            ],
+            "source_mass": 1024
+          }
+        ],
+        "class_weight_histogram_active": {
+          "4": 142,
+          "8": 122,
+          "16": 118,
+          "24": 8,
+          "28": 8,
+          "32": 36,
+          "48": 22,
+          "56": 20,
+          "64": 12,
+          "96": 12,
+          "128": 18,
+          "184": 6,
+          "192": 8,
+          "224": 8,
+          "240": 12,
+          "256": 22,
+          "368": 2,
+          "384": 6,
+          "448": 4,
+          "480": 8,
+          "496": 2,
+          "512": 18,
+          "672": 2,
+          "768": 4,
+          "808": 2,
+          "896": 2,
+          "928": 4,
+          "1024": 8
+        },
+        "component_size_histogram": {
+          "1": 8,
+          "2": 6,
+          "3": 2,
+          "4": 2,
+          "5": 4,
+          "8": 2
+        },
+        "minimum_including_dead": 637,
+        "n": 27,
+        "refinement_rounds_active": [
+          150,
+          456,
+          596,
+          632,
+          636,
+          636
+        ],
+        "source_partition_sha256": "69b7ddb2a9a52adce12eca24077524b3fb5c82febcf23ff178a9e43d5c30eba8",
+        "triangles": []
+      }
+    ],
+    "spectra": [
+      {
+        "clique_nodes": 25,
+        "directed_paths": 20,
+        "edges": 32,
+        "full_content_exponent": 276,
+        "independent_dp_states": 44155,
+        "n": 25,
+        "outside_free_bits": 268,
+        "primitive_coefficients": {
+          "0": 16777197,
+          "1": 18,
+          "2": 1
+        },
+        "shannon_states": 598,
+        "spectrum": {
+          "0": 4294962432,
+          "1": 4608,
+          "2": 256
+        }
+      },
+      {
+        "clique_nodes": 39,
+        "directed_paths": 24,
+        "edges": 34,
+        "full_content_exponent": 296,
+        "independent_dp_states": 87120,
+        "n": 26,
+        "outside_free_bits": 291,
+        "primitive_coefficients": {
+          "0": 536870561,
+          "1": 320,
+          "2": 29,
+          "3": 2
+        },
+        "shannon_states": 779,
+        "spectrum": {
+          "0": 17179857952,
+          "1": 10240,
+          "2": 928,
+          "3": 64
+        }
+      },
+      {
+        "clique_nodes": 205,
+        "directed_paths": 70,
+        "edges": 36,
+        "full_content_exponent": 318,
+        "n": 27,
+        "outside_free_bits": 315,
+        "primitive_coefficients": {
+          "0": 8589926723,
+          "1": 6872,
+          "2": 920,
+          "3": 61,
+          "4": 15,
+          "5": 1
+        },
+        "shannon_states": 4307,
+        "spectrum": {
+          "0": 68719413784,
+          "1": 54976,
+          "2": 7360,
+          "3": 488,
+          "4": 120,
+          "5": 8
+        }
+      },
+      {
+        "clique_nodes": 313,
+        "directed_paths": 104,
+        "edges": 38,
+        "full_content_exponent": 344,
+        "n": 28,
+        "outside_free_bits": 340,
+        "primitive_coefficients": {
+          "0": 17179857718,
+          "1": 9881,
+          "2": 1365,
+          "3": 183,
+          "4": 33,
+          "5": 4
+        },
+        "shannon_states": 8681,
+        "spectrum": {
+          "0": 274877723488,
+          "1": 158096,
+          "2": 21840,
+          "3": 2928,
+          "4": 528,
+          "5": 64
+        }
+      },
+      {
+        "clique_nodes": 59,
+        "directed_paths": 38,
+        "edges": 40,
+        "full_content_exponent": 377,
+        "n": 29,
+        "outside_free_bits": 366,
+        "primitive_coefficients": {
+          "0": 536870843,
+          "1": 63,
+          "2": 5,
+          "3": 1
+        },
+        "shannon_states": 1518,
+        "spectrum": {
+          "0": 1099511486464,
+          "1": 129024,
+          "2": 10240,
+          "3": 2048
+        }
+      },
+      {
+        "clique_nodes": 61,
+        "directed_paths": 40,
+        "edges": 42,
+        "full_content_exponent": 405,
+        "n": 30,
+        "outside_free_bits": 393,
+        "primitive_coefficients": {
+          "0": 1073741751,
+          "1": 67,
+          "2": 5,
+          "3": 1
+        },
+        "shannon_states": 1618,
+        "spectrum": {
+          "0": 4398046212096,
+          "1": 274432,
+          "2": 20480,
+          "3": 4096
+        }
+      }
+    ],
+    "three_window_models": [
+      {
+        "active_sources": 8,
+        "active_word_counts": [
+          8,
+          12,
+          22,
+          34,
+          62,
+          96,
+          176,
+          272,
+          502,
+          774,
+          1438,
+          2212,
+          4136,
+          6348,
+          11942,
+          18290
+        ],
+        "block_sizes": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8
+        },
+        "minimal_count_recurrence_order": 4,
+        "minimum": 8,
+        "refinement_rounds": [
+          6,
+          8,
+          8
+        ]
+      },
+      {
+        "active_sources": 12,
+        "active_word_counts": [
+          12,
+          16,
+          26,
+          38,
+          66,
+          100,
+          180,
+          276,
+          506,
+          778,
+          1442,
+          2216,
+          4140,
+          6352,
+          11946,
+          18294
+        ],
+        "block_sizes": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "4": 1
+        },
+        "minimal_count_recurrence_order": 5,
+        "minimum": 9,
+        "refinement_rounds": [
+          6,
+          9,
+          9
+        ]
+      },
+      {
+        "active_sources": 14,
+        "active_word_counts": [
+          14,
+          20,
+          34,
+          50,
+          86,
+          128,
+          224,
+          336,
+          598,
+          902,
+          1630,
+          2468,
+          4520,
+          6860,
+          12710,
+          19314
+        ],
+        "block_sizes": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3
+        },
+        "minimal_count_recurrence_order": 6,
+        "minimum": 11,
+        "refinement_rounds": [
+          6,
+          10,
+          11,
+          11
+        ]
+      },
+      {
+        "active_sources": 22,
+        "active_word_counts": [
+          22,
+          28,
+          42,
+          58,
+          94,
+          136,
+          232,
+          344,
+          606,
+          910,
+          1638,
+          2476,
+          4528,
+          6868,
+          12718,
+          19322
+        ],
+        "block_sizes": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3,
+          "8": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 12,
+        "refinement_rounds": [
+          6,
+          11,
+          12,
+          12
+        ]
+      },
+      {
+        "active_sources": 14,
+        "active_word_counts": [
+          14,
+          20,
+          34,
+          50,
+          86,
+          128,
+          224,
+          336,
+          598,
+          902,
+          1630,
+          2468,
+          4520,
+          6860,
+          12710,
+          19314
+        ],
+        "block_sizes": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3
+        },
+        "minimal_count_recurrence_order": 6,
+        "minimum": 11,
+        "refinement_rounds": [
+          6,
+          10,
+          11,
+          11
+        ]
+      },
+      {
+        "active_sources": 18,
+        "active_word_counts": [
+          18,
+          24,
+          38,
+          54,
+          90,
+          132,
+          228,
+          340,
+          602,
+          906,
+          1634,
+          2472,
+          4524,
+          6864,
+          12714,
+          19318
+        ],
+        "block_sizes": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3,
+          "4": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 12,
+        "refinement_rounds": [
+          6,
+          11,
+          12,
+          12
+        ]
+      },
+      {
+        "active_sources": 24,
+        "active_word_counts": [
+          24,
+          32,
+          50,
+          70,
+          114,
+          164,
+          276,
+          404,
+          698,
+          1034,
+          1826,
+          2728,
+          4908,
+          7376,
+          13482,
+          20342
+        ],
+        "block_sizes": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 6,
+          "4": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 15,
+        "refinement_rounds": [
+          6,
+          13,
+          15,
+          15
+        ]
+      },
+      {
+        "active_sources": 32,
+        "active_word_counts": [
+          32,
+          40,
+          58,
+          78,
+          122,
+          172,
+          284,
+          412,
+          706,
+          1042,
+          1834,
+          2736,
+          4916,
+          7384,
+          13490,
+          20350
+        ],
+        "block_sizes": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 6,
+          "4": 1,
+          "8": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 16,
+        "refinement_rounds": [
+          6,
+          14,
+          16,
+          16
+        ]
+      },
+      {
+        "active_sources": 12,
+        "active_word_counts": [
+          12,
+          16,
+          26,
+          38,
+          66,
+          100,
+          180,
+          276,
+          506,
+          778,
+          1442,
+          2216,
+          4140,
+          6352,
+          11946,
+          18294
+        ],
+        "block_sizes": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "4": 1
+        },
+        "minimal_count_recurrence_order": 5,
+        "minimum": 9,
+        "refinement_rounds": [
+          6,
+          9,
+          9
+        ]
+      },
+      {
+        "active_sources": 16,
+        "active_word_counts": [
+          16,
+          20,
+          30,
+          42,
+          70,
+          104,
+          184,
+          280,
+          510,
+          782,
+          1446,
+          2220,
+          4144,
+          6356,
+          11950,
+          18298
+        ],
+        "block_sizes": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "4": 2
+        },
+        "minimal_count_recurrence_order": 5,
+        "minimum": 10,
+        "refinement_rounds": [
+          6,
+          10,
+          10
+        ]
+      },
+      {
+        "active_sources": 18,
+        "active_word_counts": [
+          18,
+          24,
+          38,
+          54,
+          90,
+          132,
+          228,
+          340,
+          602,
+          906,
+          1634,
+          2472,
+          4524,
+          6864,
+          12714,
+          19318
+        ],
+        "block_sizes": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3,
+          "4": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 12,
+        "refinement_rounds": [
+          6,
+          11,
+          12,
+          12
+        ]
+      },
+      {
+        "active_sources": 26,
+        "active_word_counts": [
+          26,
+          32,
+          46,
+          62,
+          98,
+          140,
+          236,
+          348,
+          610,
+          914,
+          1642,
+          2480,
+          4532,
+          6872,
+          12722,
+          19326
+        ],
+        "block_sizes": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3,
+          "4": 1,
+          "8": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 13,
+        "refinement_rounds": [
+          6,
+          12,
+          13,
+          13
+        ]
+      },
+      {
+        "active_sources": 22,
+        "active_word_counts": [
+          22,
+          28,
+          42,
+          58,
+          94,
+          136,
+          232,
+          344,
+          606,
+          910,
+          1638,
+          2476,
+          4528,
+          6868,
+          12718,
+          19322
+        ],
+        "block_sizes": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3,
+          "8": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 12,
+        "refinement_rounds": [
+          6,
+          11,
+          12,
+          12
+        ]
+      },
+      {
+        "active_sources": 26,
+        "active_word_counts": [
+          26,
+          32,
+          46,
+          62,
+          98,
+          140,
+          236,
+          348,
+          610,
+          914,
+          1642,
+          2480,
+          4532,
+          6872,
+          12722,
+          19326
+        ],
+        "block_sizes": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 3,
+          "4": 1,
+          "8": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 13,
+        "refinement_rounds": [
+          6,
+          12,
+          13,
+          13
+        ]
+      },
+      {
+        "active_sources": 32,
+        "active_word_counts": [
+          32,
+          40,
+          58,
+          78,
+          122,
+          172,
+          284,
+          412,
+          706,
+          1042,
+          1834,
+          2736,
+          4916,
+          7384,
+          13490,
+          20350
+        ],
+        "block_sizes": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 6,
+          "4": 1,
+          "8": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 16,
+        "refinement_rounds": [
+          6,
+          14,
+          16,
+          16
+        ]
+      },
+      {
+        "active_sources": 40,
+        "active_word_counts": [
+          40,
+          48,
+          66,
+          86,
+          130,
+          180,
+          292,
+          420,
+          714,
+          1050,
+          1842,
+          2744,
+          4924,
+          7392,
+          13498,
+          20358
+        ],
+        "block_sizes": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "2": 6,
+          "4": 1,
+          "8": 2
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 17,
+        "refinement_rounds": [
+          6,
+          15,
+          17,
+          17
+        ]
+      },
+      {
+        "active_sources": 200,
+        "active_word_counts": [
+          200,
+          224,
+          274,
+          326,
+          434,
+          548,
+          788,
+          1044,
+          1594,
+          2186,
+          3490,
+          4904,
+          8108,
+          11600,
+          19754,
+          28662
+        ],
+        "block_sizes": [
+          2,
+          3,
+          4,
+          2
+        ],
+        "class_weight_histogram": {
+          "1": 8,
+          "6": 3,
+          "14": 3,
+          "16": 1,
+          "32": 1,
+          "84": 1
+        },
+        "minimal_count_recurrence_order": 7,
+        "minimum": 17,
+        "refinement_rounds": [
+          6,
+          15,
+          17,
+          17
+        ]
+      }
+    ]
+  }
+}

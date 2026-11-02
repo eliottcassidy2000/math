@@ -10,6 +10,14 @@ a historical synthesis or promoting computational evidence.
 - **Witness / failed implication:** 704 source vertices versus694 honeycomb sites gives a deficit10. Neither the cycle deletion nor a change of arithmetic interpretation alters that subtraction.
 - **Repair:** `05-knowledge/results/honeycomb_gap_aliquot_20261102/CAPACITY_AND_COLOUR.md` retains the nearest-neighbour obstruction and proves a separate sharp information bound. For a uniform source and an unrestricted map into694 visible states, the minimizing fibres are684 singletons and10 doubletons, giving conditional entropy20/704=5/176 bits. Here20 counts occurrences in ambiguous pairs, not missing sites; adjacency need not permit the minimizing map. Its equality with the aliquot integer20 supplies no arithmetic map.
 
+## 2026-11-02 — compatibility triangles do not determine complement controllers
+
+- **Scope:** prepublication probe in `05-knowledge/results/twenty_curvature_ports_20261102/verify.py`; no accepted theorem is retracted. The first order27 probe attempted to reuse the order26 four-block window shape from a K3 compatibility component and correctly failed its shape guard.
+- **Witness / first failed implication:** the actual order26 K3 has minimum17; the order27 component on path IDs7,15,18 is also K3 but has minimum16. Its free-membership atoms have sizes P:4,Q:1,R:1,PQ:1,PR:1,QR:4, unlike the four-block chain of windows. Pairwise compatibility does not specify the joint signed incidence.
+- **Repair / strongest survivor:** C1 of that packet's `THREE_WINDOW_CARRIER.md` compiles the full signed incidence into empty/full/mixed atoms with exact weights. Independent literal source refinement and atom compilation agree at orders25,26,27, including all class weights. C3's17-state law retains its explicit four-window hypothesis.
+- **Missing coordinate / next test:** retain incidence profiles and how a new port splits a mixed atom. A two-bit mixed source01 versus10 is separated by a new guard on the first bit.
+- **Separate prompt correction:** the Collatz honeycomb deficit is704-694=10, not20. The obstruction still holds; no prior repo theorem using20 is retracted. The recovered aliquot role of20 is the unique five-proper-divisor factor-pair overlap, and16 does not satisfy that predicate.
+
 ## 2026-11-02 — the prime square-sum minimum has a singleton exception
 
 - **Source:** THM-4860, `01-canon/theorems/THM-4860-the-prime-square-sum-graph-is-bipartite-by-residue-mod-4-two-primes-1-mod-3-are-never-adjacent-chebyshev-bias-obstruction-to-prime-square-sum-paths-none-below-615731-and-the-25-primes-below-100-by-ogg-layer.md`.
