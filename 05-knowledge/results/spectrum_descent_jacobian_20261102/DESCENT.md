@@ -140,6 +140,45 @@ Paley "least resistance" work warned that series/parallel reduction stops at
 irreducible character data. Here the missing data are actual predecessor
 membership and the overwritten endpoint amplitude g.
 
+### Cost optimization descends through a correct observer
+
+There is a precise general connection to the square25 carrier. Suppose a
+quotient of actual sources preserves current outputs, legality of each named
+operation, and its target class. Give each operation label a fixed nonnegative
+cost and choose a goal predicate depending only on the observed output.
+Then the minimum cost of a legal word reaching the goal is constant on each
+quotient class and is exactly the shortest-path value in the quotient graph.
+
+**Proof.** Induction on word length says that two equivalent sources admit
+exactly the same operation words and have equal final observations after
+each word. The costs are sums of the same label costs. Taking the infimum
+over goal-reaching words proves equality, including infinity for no such
+word. In a finite graph with nonnegative costs a minimum is attained whenever
+the goal is reachable: remove cycles from a minimizing walk. A shortest word
+can be replayed on the specified actual source. QED.
+
+Thus least-cost optimization requires no additional state **once the correct
+operation-closed observer is supplied**. For the inherited fixed square25
+language this uses33 states. The late incoming
+[native25-to26 birth interface](../eleven_wedge_honeycomb_20261102/NATIVE_26.md)
+requires97 pre-birth states, followed by the71-state G26 observer. Their
+clock-tagged disjoint union is a sufficient168-state shortest-path graph for
+old named complements, one specified birth with its two supplied edge bits,
+and new named complements. This is an elementary cost corollary of those
+accepted transition tables, not a new minimality claim for the union or a
+replay of their finite enumeration. Restrict birth labels when their bits are
+externally prescribed; allow all four when they are choices of the controller.
+
+The97-state refinement is necessary for its richer observation language:
+9,184 active new orientations arise from old dead sources. Consequently
+discarding an old dead source as "high resistance" would destroy valid future
+paths. In this comparison the source map is actual orientation -> observer
+class, the preserved predicate is existence and cost of an allowed goal word,
+and the discarded information is the remaining incidence inside a class.
+Changing the allowed operations requires a new closure check. This supplies
+a precise natural-recursion principle without identifying guarded square-sum
+counts with unrestricted tournament Hamiltonian counts.
+
 ## 4. Exact greedy failures
 
 Define the hostile algorithm precisely: at each inverse step choose the

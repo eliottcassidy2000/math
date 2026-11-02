@@ -24,6 +24,16 @@ inherited. Incoming d4e61c87ab correctly retains both prime lanes, the existing
 99,999,999 finite ceiling and the bounded-witness logical classification.
 No Pi^0_2 or primes-only reformulation is used here.
 
+The next clean-tree fetch brought83e69bea5a and the preceding eleven-wedge
+updates. Their [NATIVE_26.md](../eleven_wedge_honeycomb_20261102/NATIVE_26.md)
+was read:97 pre-birth states cover all old orientations, whereas38 covered
+only old active sources; the full target observer has71 states. The9,184
+new-active orientations born from old dead sources give a direct warning
+against source pruning before a language extension. DESCENT.md records the
+elementary shortest-path corollary of an exact observer and a sufficient
+clock-tagged168-state two-stage graph. These incoming tables and minimality
+results are inherited, not re-enumerated here.
+
 ## Live concept board, revisited after the computations
 
 | Lane / concept | New consequence | Retained limitation |

@@ -49,6 +49,10 @@ square25 carrier supplies the same methodological constraint: optimize paths
 only after retaining the state on which the allowed operations are defined.
 Its 33-state restricted-complement observer is not a universal spectrum
 carrier. No electrical-network/tournament identification is asserted.
+An exact operation observer also preserves minimum costs for fixed
+nonnegative label costs. This yields a sufficient168-state shortest-path
+controller from the incoming97-state birth interface and71-state target
+observer, with the two stages kept distinct; it is not a minimum union claim.
 
 ## Inherited frontier and the missing theorem
 
