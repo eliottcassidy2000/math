@@ -1,0 +1,23 @@
+{
+  "pinned_sources": [
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "local_copy": "sources/THM3121_RUN_KERNEL.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/gluing/PROOF.md",
+      "local_copy": "sources/S136_GLUING.md",
+      "sha256": "1f83b74693dd3c2ff50381d8936f6266fd53fb13758db0487359cde1d72a8af1"
+    }
+  ],
+  "external_scope_source": {
+    "url": "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf",
+    "section": "6.5, Conjecture 6.2",
+    "use": "Classical oddness and open all-odd-except7/21 status; no priority claim."
+  }
+}

@@ -1,0 +1,1168 @@
+{
+  "files": [
+    {
+      "bytes": 357,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "AUDIT_INTEGRITY_CHECKPOINT2.json",
+      "sha256": "e3ae6945124a054e1d7df3062e389ebccdb277b07abf0fb1b025b6aea50d0438"
+    },
+    {
+      "bytes": 298,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "AUDIT_INTEGRITY_CHECKPOINT3.json",
+      "sha256": "512712198f4a69ac46e7556431f0798d17c79a417dad30038f7969ec3da10875"
+    },
+    {
+      "bytes": 5689,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "REPLAY_CHECKPOINT1.json",
+      "sha256": "a560be4258eb70f13d37228941ade98f703b693c548d0af994d073e1f0b0df5a"
+    },
+    {
+      "bytes": 6696,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "REPLAY_CHECKPOINT2.json",
+      "sha256": "90fe1d6fffc826dc433a727fe4d2e8d175e3b95a7c342b3d1fc64c10766a701d"
+    },
+    {
+      "bytes": 2210,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "REPLAY_CONFIG_CHECKPOINT1.json",
+      "sha256": "3b186621abc32e3db3cd8376eadbbca59460ce439662b63626e55a68512cdb62"
+    },
+    {
+      "bytes": 2796,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "REPLAY_CONFIG_CHECKPOINT2.json",
+      "sha256": "f1018c2bb130a6f1e40f6646ba92daba1011581f7ec49fa75064fc4493e3cd12"
+    },
+    {
+      "bytes": 3082,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "REPLAY_CONFIG_CHECKPOINT3.json",
+      "sha256": "7144c28144c23bdb6559fb4d2610f291553052ecaec1544dc03823bf9f6a8149"
+    },
+    {
+      "bytes": 15177,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_FILES_CHECKPOINT1.json",
+      "sha256": "337b112b6c312131b5d19e7b5d7aebda98d6e9979b2617526462f810b9b5def1"
+    },
+    {
+      "bytes": 29865,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_FILES_CHECKPOINT2.json",
+      "sha256": "01c1761ed0b70f2cb0efd31720c215d9b228b79f5c5491d7b27dc0443fc44948"
+    },
+    {
+      "bytes": 223,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "sha256": "6ed0df1eb3f1da93484477da61a28ab6d817243696ff9a353038916ce129cdb2"
+    },
+    {
+      "bytes": 223,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_INTEGRITY_CHECKPOINT2.json",
+      "sha256": "2b801446ff75dda0746ba0447d621d2d3c1a80153bd0d6e63f6e75a53e07ada5"
+    },
+    {
+      "bytes": 223,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_INTEGRITY_CHECKPOINT3.json",
+      "sha256": "cb2149a21d42226268c0357a93176a6ea14f5c4f14827cff1fae3a886f37611e"
+    },
+    {
+      "bytes": 11266,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_PINS_CHECKPOINT1.json",
+      "sha256": "98848cd8025d6a562ff221bf27ff0e0220ca1862dfef46144765f5fd53bbcd4d"
+    },
+    {
+      "bytes": 17547,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_PINS_CHECKPOINT2.json",
+      "sha256": "1b563e254b38324d74852be679e4f25443a7e7e34754cf688100bcd78dcacacc"
+    },
+    {
+      "bytes": 28324,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "SOURCE_PINS_CHECKPOINT3.json",
+      "sha256": "a278f17f7ae8b89245ec0db69bdaca8a564a917ec114ca1731e1d31a314b947a"
+    },
+    {
+      "bytes": 4073,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "canon_repair/ELLIPTIC_CANON_REPAIR.patch",
+      "sha256": "2a91ccbbe00b3bf8e8c1f0d331dccd68c256f421c944add573a24f6f7450ac21"
+    },
+    {
+      "bytes": 614,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "canon_repair/IDENTITY.json",
+      "sha256": "1e2257ef65abc2ba70bdccaa535be645db41f55b75a5452698f0459ceeae1866"
+    },
+    {
+      "bytes": 7519,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "canon_repair/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "sha256": "9b01045059f1931533a56563b5cac3cbf1d18f23ac442068b5f36d23d361aee5"
+    },
+    {
+      "bytes": 8954,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/BINARY_NO_GO.md",
+      "sha256": "5e342fac18537bb234c432b4c8b675ed0ee4d4b41af9dfd67c49f19c12204a6a"
+    },
+    {
+      "bytes": 1122,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/README.md",
+      "sha256": "1918661769a82efee24b415c0cca80bbe47e770fe4d5e207ed27f5710f45d269"
+    },
+    {
+      "bytes": 2194,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/SOURCE_PINS.json",
+      "sha256": "d5bbe1f76840af1bf9aefc506388cd7f11c409f822b5a2b4e6aadc3b8f10aedd"
+    },
+    {
+      "bytes": 1145,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/VERIFICATION.md",
+      "sha256": "8088d725b69a496db6de844787dbee973523084ad9811cd181c2bcd74c9efeb4"
+    },
+    {
+      "bytes": 2320,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/manifest.json",
+      "sha256": "7c85d8ae854381540f51e9d3b6b200f000fe12f7c30e02867f7286ac4d36b9a1"
+    },
+    {
+      "bytes": 6816,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/normal.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 6816,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/optimized.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 6816,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/relocated.normal.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 6816,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/relocated.optimized.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 14020,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/sources/S134_CONSTRUCTOR_PROOF.md",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    },
+    {
+      "bytes": 10040,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/sources/S134_RADIX_PROOF.md",
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4"
+    },
+    {
+      "bytes": 8845,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/sources/S137_BOUNDED_INTERIOR.md",
+      "sha256": "b022aa9af14cd97d3ce1169c7f18b1a0d11830918b005e63fd801efd4847ee6c"
+    },
+    {
+      "bytes": 18929,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/sources/S137_CONSTRUCTORS_THEORY.md",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    {
+      "bytes": 9303,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/sources/THM4749.md",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8"
+    },
+    {
+      "bytes": 5571,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "constructions/verify_binary.py",
+      "sha256": "bbaaec382697a7727db248c1c9a54f7b047e18908cd5a61e7448802a3dd7630b"
+    },
+    {
+      "bytes": 2075,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/SHA256SUMS",
+      "sha256": "997c970e841947450a80509124cd4438989391226920e67e052d84ca4e5fcc39"
+    },
+    {
+      "bytes": 2663,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/literature_sources.json",
+      "sha256": "f7de05c6d48e6fd3976d68c9efcbbda908825375f0b6e5edac1464b068c3e04b"
+    },
+    {
+      "bytes": 857,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/negative_controls.json",
+      "sha256": "2fae9703504595c583b7e6b2e32567d9ed9fbbfe383d028e2053ae800dfd0b0a"
+    },
+    {
+      "bytes": 11539,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/proof.md",
+      "sha256": "28d50c012046cdccbb10327a3b9b44b49e2de5a791a47ecde5e6df916e4e69cd"
+    },
+    {
+      "bytes": 7009,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/repository_sources.json",
+      "sha256": "c996c6e37110daffa98f50e194aaf13d8a21556374ecb580ab8582fc3e1bd8b7"
+    },
+    {
+      "bytes": 9303,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8"
+    },
+    {
+      "bytes": 6269,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py",
+      "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a"
+    },
+    {
+      "bytes": 5667,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 15032,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    {
+      "bytes": 10631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f"
+    },
+    {
+      "bytes": 16726,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac"
+    },
+    {
+      "bytes": 22524,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "bytes": 86,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources.normal.json",
+      "sha256": "8a54ca8551a5dc0968979183490de33db76f909b4128c576958d8993fba7adf2"
+    },
+    {
+      "bytes": 86,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/sources.optimized.json",
+      "sha256": "8a54ca8551a5dc0968979183490de33db76f909b4128c576958d8993fba7adf2"
+    },
+    {
+      "bytes": 1313,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/verify.normal.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 1313,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/verify.optimized.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 6890,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/verify_frontier.py",
+      "sha256": "e2b420473acc4f8ea6ac41f68213d5fd87127f8c3466e2e95cb9f0fd6863e2b5"
+    },
+    {
+      "bytes": 1111,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "frontier/verify_sources.py",
+      "sha256": "0ba16397e038fa001004e7ac8a498cffff9b7b69c17e6a9743c6f7cc55d16435"
+    },
+    {
+      "bytes": 2307,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/AMPLIFICATION_AUDIT.json",
+      "sha256": "5c6d314c78442181ba90c19157a0885563043b5a53ddec82e13cc6db1e8771fc"
+    },
+    {
+      "bytes": 1246,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/CANON_REPAIR_AUDIT.json",
+      "sha256": "d69d16f78398d6ebdbe7e7594235de615513f699fe2b72e615fcf538b170f6b0"
+    },
+    {
+      "bytes": 3512,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/CHECKPOINT1_AUDIT.md",
+      "sha256": "b75c7289be135caaf7c9e4481680f57699438935802830c2332d1af7c0a0584c"
+    },
+    {
+      "bytes": 2312,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/CONSTRUCTIONS_AUDIT.json",
+      "sha256": "0b5dc6b621a252bfaf25e1a88cd339f6a358c0d48fe407b95b350c18ca48c42e"
+    },
+    {
+      "bytes": 2087,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/MINIMAL_GAP_AUDIT.json",
+      "sha256": "283edede6aead9b6b2cd5318f64617abb4d9404a4ae6795de168a5a94612f349"
+    },
+    {
+      "bytes": 5685,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/PRIME_WITNESS_AUDIT.json",
+      "sha256": "e1a6bdfa64ddc46908cef89e764ffd4d8de2a7deb5ff3973a935747e501eff4d"
+    },
+    {
+      "bytes": 3543,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/PRIME_WITNESS_COUNT_PROOF.md",
+      "sha256": "34957086bca0bce3c9d1716a300b52f35d6d547d0efa9b0328818f576a6b8fef"
+    },
+    {
+      "bytes": 761,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/amplification.normal.json",
+      "sha256": "06a7e52a50cf86a0e4cb3f1fb081fc093515d3828895ca71f8ee4418b45f361c"
+    },
+    {
+      "bytes": 761,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/amplification.optimized.json",
+      "sha256": "06a7e52a50cf86a0e4cb3f1fb081fc093515d3828895ca71f8ee4418b45f361c"
+    },
+    {
+      "bytes": 1631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/amplification_producer.normal.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 1631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/amplification_producer.optimized.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 633,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/binary.normal.json",
+      "sha256": "79e503c6003180dcaf73c488cc66be129be7748c7e39fa0386a7f177a14e3613"
+    },
+    {
+      "bytes": 633,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/binary.optimized.json",
+      "sha256": "79e503c6003180dcaf73c488cc66be129be7748c7e39fa0386a7f177a14e3613"
+    },
+    {
+      "bytes": 2457,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/check_checkpoint1.py",
+      "sha256": "bbc5c240a43f85bf3abfbf1b758a6bcd53c3e01b3f104edfe02fb62d2ffd80c2"
+    },
+    {
+      "bytes": 2577,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/checkpoint1.audit.json",
+      "sha256": "9d25ff56384e32707c196b8a3afff6d16a622b24fe89cdaaf8e2cc09edb67cd1"
+    },
+    {
+      "bytes": 572,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/checkpoint1_integrity.json",
+      "sha256": "2d17ddc006ac63eb6373134c483715edf5bd4cf64fa6d9459e6c6edbae46d987"
+    },
+    {
+      "bytes": 6816,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/constructions_rerun.normal.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 6816,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/constructions_rerun.optimized.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 1313,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/frontier_rerun.normal.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 1313,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/frontier_rerun.optimized.json",
+      "sha256": "610e7531e003117b468e309f1722bc5b7ee86f288fe235af63d77c3e1c82fc65"
+    },
+    {
+      "bytes": 7503,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/jacobian_rerun.normal.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 7503,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/jacobian_rerun.optimized.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 3247,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/minimal_gap_rerun.normal.json",
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "bytes": 3247,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/minimal_gap_rerun.optimized.json",
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "bytes": 85,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/prime80557_subset_dp.json",
+      "sha256": "e5c5d86ab8b77294826fdebb5d91a3abaa1fe649247068e3e3ad5a7b80d103e3"
+    },
+    {
+      "bytes": 153,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/prime_portable_replay.json",
+      "sha256": "2866ff314bfe7502244ba9e9c20b7a9abd4cf8f2179f0c2e0830be6b3b5810a1"
+    },
+    {
+      "bytes": 4890,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/prime_provenance_repin.json",
+      "sha256": "527a4a221c3c2bfe3fd9a43cda0aed4adacb74aecd9f955f0a9460bcc3772876"
+    },
+    {
+      "bytes": 315,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/prime_sources_integrity.json",
+      "sha256": "8e6d47df88579c7152e8bd8d1743e3132d14eb5654197dec3e87c375803d2ca4"
+    },
+    {
+      "bytes": 4558,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/prime_witnesses.normal.json",
+      "sha256": "562ce15ced0f3a2d644a2855577f2e5d0c74e5e7b296382eec09d291fdfd2da0"
+    },
+    {
+      "bytes": 4558,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/prime_witnesses.optimized.json",
+      "sha256": "562ce15ced0f3a2d644a2855577f2e5d0c74e5e7b296382eec09d291fdfd2da0"
+    },
+    {
+      "bytes": 458,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/root_one_apex_count.json",
+      "sha256": "86640baff95230ff010affb119de3e9a913216ffca5d733add86ad0803e1b3e2"
+    },
+    {
+      "bytes": 647,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/symmetry.normal.json",
+      "sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    {
+      "bytes": 647,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/symmetry.optimized.json",
+      "sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    {
+      "bytes": 5370,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verification.normal.json",
+      "sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "bytes": 5370,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verification.optimized.json",
+      "sha256": "a7cf783903712672624ee7776b072c0404155ce02cd07f919e7b70b1897aa84e"
+    },
+    {
+      "bytes": 3550,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verify_amplification_independent.py",
+      "sha256": "7d165ba615196ba0213917b07873ad4ccff9f5055ea2823b323ea9c244514194"
+    },
+    {
+      "bytes": 4640,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verify_binary_independent.py",
+      "sha256": "d6cef8b5a0c7a01a52d25fe1d0fee931afe032a8bd1687cd8deeca8bebf406a0"
+    },
+    {
+      "bytes": 6632,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verify_independent.py",
+      "sha256": "3f6a090a7eab8f75fce30317316a4b0815a66d6964ff7f47b8b8ef1205036f15"
+    },
+    {
+      "bytes": 5117,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verify_prime_witnesses_independent.py",
+      "sha256": "172d3cc1a697e56254873dc56b1decee5e4d2da99150d2c12541b00d07d5b043"
+    },
+    {
+      "bytes": 3334,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "independent/verify_symmetry.py",
+      "sha256": "812a7b6f8a8b09e5a75fe1e550904b01da2bc06758ba9765956aa43168e29f60"
+    },
+    {
+      "bytes": 3354,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/MANIFEST.json",
+      "sha256": "63c066ac291f6f2d9823e05d80e322364a59221bcdcd6ece5bf601f743114873"
+    },
+    {
+      "bytes": 15669,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/PROOFS.md",
+      "sha256": "0b8c09f38987d8a548ac39094e2e0dbd315ff230be1a947b10fc5ac60d43de53"
+    },
+    {
+      "bytes": 1188,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/external_sources.json",
+      "sha256": "18c6b801d1f9c133384a38d4b2e62e30ec4eb766d144fb7f62c67a17e68ad4ac"
+    },
+    {
+      "bytes": 2746,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/source_manifest.json",
+      "sha256": "467e258bf215ac926426cf5be5531270fa0d80d0e24ebe99bd8a47cbed21730f"
+    },
+    {
+      "bytes": 16320,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c"
+    },
+    {
+      "bytes": 6147,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd"
+    },
+    {
+      "bytes": 5667,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "bytes": 13039,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce"
+    },
+    {
+      "bytes": 11494,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md",
+      "sha256": "a57b2e8323d96f6358bb56506f5ddfc20e32c075e19d9dcc833690b1a857b0a6"
+    },
+    {
+      "bytes": 13505,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "sha256": "fc959a24343dae5ee0ffbac31b617ea801133e661049845c6fa43ec915023bba"
+    },
+    {
+      "bytes": 5854,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md",
+      "sha256": "59d2c487b22918ca6c0d87eec403922f8108eecca8c9ea1a80a4b72f953386ac"
+    },
+    {
+      "bytes": 9654,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md",
+      "sha256": "444adda9dd6b5772708e8b2c6b325af07a8b708bfdeb6640606bf78d6a4e68e8"
+    },
+    {
+      "bytes": 16282,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/sources/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df"
+    },
+    {
+      "bytes": 7503,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/verification.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 7503,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/verification_optimized.json",
+      "sha256": "92bd90a8538b00222310639f170329c080fce1af836f87eef3957ad96ee02a6b"
+    },
+    {
+      "bytes": 9024,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "jacobian_bridge/verify_bridge.py",
+      "sha256": "2d442d2bba45c0b9b5f39b4150e919be060ebca7d105c49b795a7401c2f2e5f8"
+    },
+    {
+      "bytes": 13182,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/PROOF.md",
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db"
+    },
+    {
+      "bytes": 745,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/README.md",
+      "sha256": "2607b96b350fff9caec47ac77ff05561054ea33b198401a13c6a0cdf4f2961cc"
+    },
+    {
+      "bytes": 1375,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/VALIDATION.md",
+      "sha256": "76940c13544faf67dc77a2b0e60b22c17943be1b12869e7f2e631df9ecdf16f8"
+    },
+    {
+      "bytes": 3059,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/manifest.json",
+      "sha256": "da1dfbb9d532426d12952a7e8e32b0a15d377635f66f3a9e2b7e4f28afc91e87"
+    },
+    {
+      "bytes": 15032,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/01-spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    {
+      "bytes": 22524,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/02-two-prime-lanes.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "bytes": 7232,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/03-vertex-transitive-prime.md",
+      "sha256": "2a671ed57d72b1824efa7946a6400a1284e2443f6e7c1141469ea4b88a0f447a"
+    },
+    {
+      "bytes": 14766,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/04-session133-core.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    {
+      "bytes": 15815,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/05-session134-descent.md",
+      "sha256": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7"
+    },
+    {
+      "bytes": 12180,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/06-session136-spectrum.md",
+      "sha256": "d1d3e488020d17c2c2859e8e2e6015909a6c984b6fc118d128218f6cd3adda50"
+    },
+    {
+      "bytes": 8895,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/07-session136-local-closure.md",
+      "sha256": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3"
+    },
+    {
+      "bytes": 18929,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/08-session137-constructors.md",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    {
+      "bytes": 14222,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/source_snapshots/09-session138-actual-contexts.md",
+      "sha256": "004b82bcb840ea96f58c8201f4c912047249b2746be901940c148c5dac23c67a"
+    },
+    {
+      "bytes": 3512,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/sources.json",
+      "sha256": "bbde4ae360f7dc50f05126ae36b2c48418283012c4b7c5ee7bddfff815644903"
+    },
+    {
+      "bytes": 3247,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/verification.json",
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "bytes": 3247,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/verification.optimized.json",
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "bytes": 8463,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "minimal_gap/verify.py",
+      "sha256": "aaf38cfa57f5b7b5a83100c03eeb4e81a524100ef6458c3164fad4e1adcd5a8a"
+    },
+    {
+      "bytes": 7193,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/PROOF.md",
+      "sha256": "1a7cb87fb29bc70b67e3039bfef00928916e9e5c73002ddca138247443bd0fc0"
+    },
+    {
+      "bytes": 1186,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/README.md",
+      "sha256": "8144b80d9ef4bf199b2b5f57009d4493781d4176b0353cc64a81467ce202853d"
+    },
+    {
+      "bytes": 954,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/SOURCE_PINS.json",
+      "sha256": "2327fe239d492a6839523ef3cb55c0ee6d6cc4bbd945eb52d8a03c27235f656e"
+    },
+    {
+      "bytes": 1553,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/VERIFICATION.md",
+      "sha256": "9d65c729b13a8ea3a3b220b8ef6725bc113db1a84d0ce245a4fc3278ddfd07aa"
+    },
+    {
+      "bytes": 2118,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/manifest.json",
+      "sha256": "b90467d5fe672cc402badd7217fa3dc45468cc817ac11b357d37e874163328fb"
+    },
+    {
+      "bytes": 1631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/normal.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 1631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/optimized.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 1631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/relocated.normal.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 1631,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/relocated.optimized.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 1499,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/selector.normal.json",
+      "sha256": "9209689b604774e2c23277041cec4a623b4ffca733262801edad6cc3cfd47944"
+    },
+    {
+      "bytes": 1499,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/selector.optimized.json",
+      "sha256": "9209689b604774e2c23277041cec4a623b4ffca733262801edad6cc3cfd47944"
+    },
+    {
+      "bytes": 21109,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/sources/S136_GLUING.md",
+      "sha256": "1f83b74693dd3c2ff50381d8936f6266fd53fb13758db0487359cde1d72a8af1"
+    },
+    {
+      "bytes": 9804,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/sources/THM3121_RUN_KERNEL.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "bytes": 5833,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "path_cover_amplification/verify.py",
+      "sha256": "c15708de9130f1e4c16f9896c51a66e1229c30f7f53073909abbc995e51f6a0b"
+    },
+    {
+      "bytes": 8076,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/README.md",
+      "sha256": "6f93fc26341185fa6def5ff7f35b3b14ae2ae3d155a6e2492b5314f834729ece"
+    },
+    {
+      "bytes": 5169,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/SHA256SUMS",
+      "sha256": "3e43c06423800b0a91021ce161e72c8a913fc6617db561a9872d9e52cba9c70a"
+    },
+    {
+      "bytes": 2012,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/WHITELIST.txt",
+      "sha256": "fc2db70e23eb626f5ebe5e68de6caa1bb8f1c42134269377cd31b5bd226f1240"
+    },
+    {
+      "bytes": 883,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/adjacency_100000007.txt",
+      "sha256": "e61765a33df33687f919993c69c7db158fef002ddf1bad07914012704642f3af"
+    },
+    {
+      "bytes": 389,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/adjacency_80557.txt",
+      "sha256": "eb8c04748eaf3ba4e50327f3bc8aff91639906a023943925e613603805900db4"
+    },
+    {
+      "bytes": 1570,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/construct.py",
+      "sha256": "3a64affb0c23d78c05bd0180891363b45df396c2ab4a59a00fe8bf1a74e709ea"
+    },
+    {
+      "bytes": 4957,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/freeze_and_verify.py",
+      "sha256": "6ac699e926b56ec019b22733ba10935a4d8d39d406757f16d7ca07b04591eca8"
+    },
+    {
+      "bytes": 150,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/hostile.normal.json",
+      "sha256": "31710c390c4d552fe54573cce2b2270a821a2e977011880ced1ddcc18606cb55"
+    },
+    {
+      "bytes": 150,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/hostile.optimized.json",
+      "sha256": "31710c390c4d552fe54573cce2b2270a821a2e977011880ced1ddcc18606cb55"
+    },
+    {
+      "bytes": 1160,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/hostile_controls.py",
+      "sha256": "d36db60224a17fc8f0b49ad554751cbbc4ccf4e0cddfbf6675235ec02446ed88"
+    },
+    {
+      "bytes": 114,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/inverse.normal.json",
+      "sha256": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4"
+    },
+    {
+      "bytes": 114,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/inverse.optimized.json",
+      "sha256": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4"
+    },
+    {
+      "bytes": 665,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/query.normal.jsonl",
+      "sha256": "93018dc4f9eb93be99d6e5b365b271756371380d5c1bc5d0e83bdd227ac685ad"
+    },
+    {
+      "bytes": 665,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/query.optimized.jsonl",
+      "sha256": "93018dc4f9eb93be99d6e5b365b271756371380d5c1bc5d0e83bdd227ac685ad"
+    },
+    {
+      "bytes": 1476,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/recover_sources.py",
+      "sha256": "42d00fa4b8784b117f74fd96136c51fb9912559f0035134f3a0d5eab8c6c74de"
+    },
+    {
+      "bytes": 2250,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/run_checks.py",
+      "sha256": "f1b0e90e3e1524932acc4acb47674b6faa38ffbd46a00756e991aed347235910"
+    },
+    {
+      "bytes": 65,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/source_pins.normal.json",
+      "sha256": "f16b2a0fd2d8b83265643ff9b9e43b8092493f59614efc574384adadbf43ee58"
+    },
+    {
+      "bytes": 65,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/source_pins.optimized.json",
+      "sha256": "f16b2a0fd2d8b83265643ff9b9e43b8092493f59614efc574384adadbf43ee58"
+    },
+    {
+      "bytes": 7122,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/session124_million_path_spectrum_20261031/README.md",
+      "sha256": "79ecd62ffe78292b73b17f8f3fde72d165946953e8e07dc55e20672cd2c46f90"
+    },
+    {
+      "bytes": 3688,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/session124_million_path_spectrum_20261031/construct_witness.py",
+      "sha256": "14e3ce3b8bc459ccfeaca93934df6e37b9d0b87d061f860d5cf852c8a9239e29"
+    },
+    {
+      "bytes": 623,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/session124_million_path_spectrum_20261031/constructors/block_target_witnesses.jsonl",
+      "sha256": "14be60a2a781a7c9a636476cb3b88938d03a7c120c0649dfd5569e21f244d6a0"
+    },
+    {
+      "bytes": 13692,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/session124_million_path_spectrum_20261031/constructors/seed_roots.json",
+      "sha256": "7c5a1df6186622dfe1790a9a26c7ec27b3468fc362bc9f17002a2b80f6492ad9"
+    },
+    {
+      "bytes": 7382,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DD_profiles.tsv",
+      "sha256": "6ec7445715976fe695f8ff15a99b2fe956fc203ecbd4f23a5668730612bb42e1"
+    },
+    {
+      "bytes": 15492,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT1D_profiles.tsv",
+      "sha256": "534809a81c7cabc29b642f0cfe0701769adb5b6b84415e33b2f1be05ba62bd08"
+    },
+    {
+      "bytes": 32305,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT2D_profiles.tsv",
+      "sha256": "e90e8c867bb1ce66d17cbc56811d2486b5d5c8e46d1957330dd4f4db71b01c36"
+    },
+    {
+      "bytes": 66768,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT3D_profiles.tsv",
+      "sha256": "a8fca7d966a5009e529f4bbd49664d315200b2ed4d12e322c6827ff40cf3e765"
+    },
+    {
+      "bytes": 142233,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT4D_profiles.tsv",
+      "sha256": "7ce16c66738623fa7f68085ddd131208ddbace93db6ba63465e422cbb0eab7d4"
+    },
+    {
+      "bytes": 296342,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT5D_profiles.tsv",
+      "sha256": "61545a27abfdfd46fab685b571b2480d9b2b9030d5d8ba36cbc76c7d36326fd8"
+    },
+    {
+      "bytes": 309,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031c/D_profiles.tsv",
+      "sha256": "0e9266779403a5b1401f74b75e8fa603e325517ffb9c3870e82bc5add7fd2447"
+    },
+    {
+      "bytes": 26335,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/MANIFEST.json",
+      "sha256": "b8f0c75ce328b66fa0d17b1ea909b1199f8f0abab4ebbbce1261d6e0ada5bda3"
+    },
+    {
+      "bytes": 19251,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/README.md",
+      "sha256": "626961a791a6e628db9f9a5df51690783743f66a09cc796ab943894fd8adce32"
+    },
+    {
+      "bytes": 4955,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/VERIFICATION.json",
+      "sha256": "60ceff0572834383a380c71415e61b1d3b21253cce35291b0bc1a7c070977f47"
+    },
+    {
+      "bytes": 1978,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/audit_capped_scan.cpp",
+      "sha256": "9f52125670a02213b5203060e765ce1c2b7856b4a7b897aa90b7f3f01a4f39d8"
+    },
+    {
+      "bytes": 786,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/audit_large_points.py",
+      "sha256": "61203e912c65a766ca4dd543b27a323d283ba15fa5797415cf7813929b523226"
+    },
+    {
+      "bytes": 2269,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/bank_query.py",
+      "sha256": "6718c8fbf88ba4cccdc996d7610b0092eb02d2cc7af4c00171d712c430d54f55"
+    },
+    {
+      "bytes": 2167,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/capped_scan.cpp",
+      "sha256": "8a66229aabd95fabdbc99b581241323a8b5dfd089f725d900a7775e6291491a4"
+    },
+    {
+      "bytes": 916,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/large_point_adjacency_audit.json",
+      "sha256": "5db330c6c442e8ef7ce17592672fb507cc202a702a2ce15046c487e9926afd3b"
+    },
+    {
+      "bytes": 3838,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/large_point_queries.jsonl",
+      "sha256": "97a527d04e7193df369cea5f2fb6d0162e42420dbec92d79fae55fba24d26bc5"
+    },
+    {
+      "bytes": 114,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/source_inverse.json",
+      "sha256": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4"
+    },
+    {
+      "bytes": 2995,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources/square_sum_spectrum_overnight_20261031d/source_inverse.py",
+      "sha256": "7eadc28fabd720064a4ae6b47513720786adf988d079623b7c201b11a08fd841"
+    },
+    {
+      "bytes": 9322,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/sources.json",
+      "sha256": "1573e8237766e00c35161fcd55cf9d1960fc1cdc5670c8e2de01abd09d059925"
+    },
+    {
+      "bytes": 85,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/subset_dp.O0.json",
+      "sha256": "e5c5d86ab8b77294826fdebb5d91a3abaa1fe649247068e3e3ad5a7b80d103e3"
+    },
+    {
+      "bytes": 85,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/subset_dp.O2.json",
+      "sha256": "e5c5d86ab8b77294826fdebb5d91a3abaa1fe649247068e3e3ad5a7b80d103e3"
+    },
+    {
+      "bytes": 1823,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/subset_dp.cpp",
+      "sha256": "6c76c6260df0d311d09808fb1e3602688e2575ba8bb82dd073530e41abfd8dd1"
+    },
+    {
+      "bytes": 602,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/verify.normal.json",
+      "sha256": "2698ea9fa0e5e2393a1b48cfa06763a1bcca4dc88f0a69a04e945f1cba18ce28"
+    },
+    {
+      "bytes": 602,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/verify.optimized.json",
+      "sha256": "2698ea9fa0e5e2393a1b48cfa06763a1bcca4dc88f0a69a04e945f1cba18ce28"
+    },
+    {
+      "bytes": 544,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/verify_source_pins.py",
+      "sha256": "0547921626639cdbe983b7adec82512ca832543ccdca7842fae0178032017acb"
+    },
+    {
+      "bytes": 2164,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/witness_100000007.json",
+      "sha256": "afc0f4c4dceec4c449ef86c2fdd6b96cc3efa0b34c83056037ee1d37d0cd790d"
+    },
+    {
+      "bytes": 1280,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "prime80557/witness_80557.json",
+      "sha256": "f38174084dd2c9d1fa8bc908287514430e87768d873dc4077c97d5de462e7ccb"
+    },
+    {
+      "bytes": 5009,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "replay_checkpoint1.py",
+      "sha256": "ebe9c7d62aa216be24decf6e8e6aa3dbd33115b86cf57e383842c2297a5ec128"
+    },
+    {
+      "bytes": 5009,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "replay_checkpoint2.py",
+      "sha256": "ebe9c7d62aa216be24decf6e8e6aa3dbd33115b86cf57e383842c2297a5ec128"
+    },
+    {
+      "bytes": 5009,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "replay_checkpoint3.py",
+      "sha256": "ebe9c7d62aa216be24decf6e8e6aa3dbd33115b86cf57e383842c2297a5ec128"
+    },
+    {
+      "bytes": 370,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "replay_prime.py",
+      "sha256": "1651068c35352e50a11dea96986c6772c0fe4fbbe667a0ac8e097d03fe2c9177"
+    },
+    {
+      "bytes": 1543,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "verify_checkpoint2_integrity.py",
+      "sha256": "8591539bfe925a3f095631cf16bd195dda4da7dd95bf73a65594b00a59e55113"
+    },
+    {
+      "bytes": 2065,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "verify_checkpoint3_integrity.py",
+      "sha256": "1eab1997dbff1896a1a72ce9425a1a4b3e95f4507a560d19c888481e079e94a1"
+    },
+    {
+      "bytes": 1419,
+      "curation": "preserved prior-checkpoint science plus final frozen source-preserving selections",
+      "path": "verify_source_pins.py",
+      "sha256": "8c7d8c23203ab9b158e6dce63d470849a1d2a20ad427434063bd6a77283e8329"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "scope": "Frozen final producer and independent-audit source bytes; no rerun of inherited100million prefix.",
+  "status": "PASS",
+  "verified_payload_selections": {
+    "amplification_independent": 5,
+    "amplification_producer": 13,
+    "prime_independent": 9,
+    "prime_producer": 49
+  }
+}

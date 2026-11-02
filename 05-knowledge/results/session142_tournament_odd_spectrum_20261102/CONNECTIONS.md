@@ -66,3 +66,23 @@ constant determinant is not the missing realization theorem.
 This obstruction explains why a Jacobian or formal inverse on the state
 space does not itself create legal tournament branches. It leaves a concrete
 research obligation rather than claiming that all richer constructors fail.
+
+
+## Hamiltonian cuts -> module amplification
+
+A Hamiltonian vertex word with k-1 cut positions maps to an unordered cover
+by k nonempty directed paths. It preserves every internal path and loses at
+most k! run orders. Restoring ordered marked quotient runs gives the exact
+k!W_k kernel. The sidecar is the homogeneous port and the cyclic/inactive
+SCC distinction. The decisive consequence is size-dependent amplification
+at every cyclic port, even with varying contexts; it does not constrain
+nonhomogeneous S0/R1 attachments.
+
+## Recovered inverse -> literal graph witness
+
+The inherited seven-parent inverse yields an explicit block word and cut.
+Reconstruction gives all0/1 adjacency entries. Independent counting then
+checks the consequence H itself: full subset DP at19 vertices, and direct
+max-before/min-after partition at29. The inverse's membership logic does not
+by itself prove every target has a successful source; that global coverage
+step remains open. Historical finite coverage is provenance, not a new scan.

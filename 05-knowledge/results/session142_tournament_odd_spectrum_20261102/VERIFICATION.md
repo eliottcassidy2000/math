@@ -52,3 +52,30 @@ proof corruption must fail. The first wrapper's nested checks are additional.
 Source Git-blob/SHA identities and exact frozen producer/auditor selections
 are checked offline. Archived checkpoint1 manifests describe its original
 packet, while current SHA256SUMS seals both checkpoints and updated syntheses.
+
+
+## Checkpoint3
+
+`python3 -B replay_checkpoint3.py` relocates194 selected source files and
+reruns the frozen checkpoint2 wrapper, which also reruns checkpoint1. The
+new tests include both exact path-cover implementations, actual literal
+prime-count witnesses, their independent adjacency reconstruction/count,
+the unchanged portable inverse suite and C++17 full order19 subset DP
+compiled at O0/O2. The order29 witness uses a direct graph partition formula,
+not full subset DP.80498 inverse controls and598 small graph controls are
+rerun; the inherited billion-pair100million-prefix scans are not.
+
+The third wrapper has28 top-level executions:18 positive and10 expected
+rejections, in ordinary/optimized Python. New hostiles falsify the cut
+incidence bound, factorial/run convention, recovered count and independent
+max-before/min-after count. Same-size proof corruption must fail. The
+producer's malformed-graph/partition and wrong-count hostiles run inside
+its portable suite as additional controls. All previous scientific bytes
+and replay reports remain unchanged.
+
+Two historical TSV sources exceed the transport batch ceiling. They are
+unchanged files, published by referencing their already-existing remote
+Git blobs, verified against the source path and published commit; no source
+is truncated, omitted or rewritten. Final repository checkouts contain the
+ordinary complete files, so offline replay requires no transport handling.
+The final source manifest and packet seal verify their full original bytes.

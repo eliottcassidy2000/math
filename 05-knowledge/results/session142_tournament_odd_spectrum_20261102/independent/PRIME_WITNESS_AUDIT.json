@@ -1,0 +1,164 @@
+{
+  "claims": [
+    {
+      "final_native_state_h_F_q_g": [
+        5,
+        80557,
+        120658,
+        0
+      ],
+      "independent_methods": [
+        "literal-seed native-coordinate composition",
+        "auditor rebuilt and reran checked-uint64 full subset endpoint DP"
+      ],
+      "order": 19,
+      "prime_target": true,
+      "target": 80557,
+      "valid_strong_tournament": true
+    },
+    {
+      "final_native_state_h_F_q_g": [
+        1,
+        100000007,
+        162678086,
+        0
+      ],
+      "full_order29_subset_DP_run": false,
+      "independent_methods": [
+        "literal-seed native-coordinate composition",
+        "direct max-before/min-after partition formula on the actual transitive-parent adjacency"
+      ],
+      "order": 29,
+      "prime_target": true,
+      "target": 100000007,
+      "valid_strong_tournament": true
+    }
+  ],
+  "controls": {
+    "actual_apex_edge_reversal_counts": [
+      135233,
+      17494899
+    ],
+    "literal_small_S0_S1_graph_transfers": 2196,
+    "normal_optimized_identical": true,
+    "source_snapshots_SHA256_Git_blob_and_commit_path_verified": 22
+  },
+  "final_portable_wrapper": "PASS: source identities, 80498 source-inverse controls, graph recovery, 598 graph controls, normal/-O agreement, O0/O2 order19 subset DP and hostile rejection.",
+  "final_prose_review": "README.md approved: literal count proofs, inherited-prefix boundary, fixed-source inverse scope and no novelty/minimum-order/universal coverage claim.",
+  "independent_files": [
+    {
+      "bytes": 3543,
+      "path": "PRIME_WITNESS_COUNT_PROOF.md",
+      "sha256": "34957086bca0bce3c9d1716a300b52f35d6d547d0efa9b0328818f576a6b8fef"
+    },
+    {
+      "bytes": 5117,
+      "path": "verify_prime_witnesses_independent.py",
+      "sha256": "172d3cc1a697e56254873dc56b1decee5e4d2da99150d2c12541b00d07d5b043"
+    },
+    {
+      "bytes": 4558,
+      "path": "prime_witnesses.normal.json",
+      "sha256": "562ce15ced0f3a2d644a2855577f2e5d0c74e5e7b296382eec09d291fdfd2da0"
+    },
+    {
+      "bytes": 4558,
+      "path": "prime_witnesses.optimized.json",
+      "sha256": "562ce15ced0f3a2d644a2855577f2e5d0c74e5e7b296382eec09d291fdfd2da0"
+    },
+    {
+      "bytes": 85,
+      "path": "prime80557_subset_dp.json",
+      "sha256": "e5c5d86ab8b77294826fdebb5d91a3abaa1fe649247068e3e3ad5a7b80d103e3"
+    },
+    {
+      "bytes": 315,
+      "path": "prime_sources_integrity.json",
+      "sha256": "8e6d47df88579c7152e8bd8d1743e3132d14eb5654197dec3e87c375803d2ca4"
+    },
+    {
+      "bytes": 458,
+      "path": "root_one_apex_count.json",
+      "sha256": "86640baff95230ff010affb119de3e9a913216ffca5d733add86ad0803e1b3e2"
+    },
+    {
+      "bytes": 153,
+      "path": "prime_portable_replay.json",
+      "sha256": "2866ff314bfe7502244ba9e9c20b7a9abd4cf8f2179f0c2e0830be6b3b5810a1"
+    },
+    {
+      "bytes": 4890,
+      "path": "prime_provenance_repin.json",
+      "sha256": "527a4a221c3c2bfe3fd9a43cda0aed4adacb74aecd9f955f0a9460bcc3772876"
+    }
+  ],
+  "limits": [
+    "Inherited hundred-million prefix computation not replayed.",
+    "No minimum-order or external priority claim.",
+    "No proof that every permitted odd count occurs.",
+    "Do not describe the order29 count as full subset DP."
+  ],
+  "producer_freeze": "Final published-provenance SHA256SUMS and WHITELIST verified; all22 unchanged source blobs now pinned to published commit9d5bae74f05a685d523df0c5559d71c3cd53cd6a.",
+  "producer_manifests": {
+    "SHA256SUMS": "3e43c06423800b0a91021ce161e72c8a913fc6617db561a9872d9e52cba9c70a",
+    "WHITELIST.txt": "fc2db70e23eb626f5ebe5e68de6caa1bb8f1c42134269377cd31b5bd226f1240"
+  },
+  "producer_selected_files": 49,
+  "provenance_only_repin": {
+    "README_change_checked_by_exact_reverse_commit_substitution": true,
+    "commit_reachable_from_cached_origin_main": true,
+    "mathematical_source_and_witness_bytes_unchanged": true,
+    "verified": true
+  },
+  "published_source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+  "reviewed_producer_files": [
+    {
+      "bytes": 1280,
+      "path": "witness_80557.json",
+      "sha256": "f38174084dd2c9d1fa8bc908287514430e87768d873dc4077c97d5de462e7ccb"
+    },
+    {
+      "bytes": 2164,
+      "path": "witness_100000007.json",
+      "sha256": "afc0f4c4dceec4c449ef86c2fdd6b96cc3efa0b34c83056037ee1d37d0cd790d"
+    },
+    {
+      "bytes": 389,
+      "path": "adjacency_80557.txt",
+      "sha256": "eb8c04748eaf3ba4e50327f3bc8aff91639906a023943925e613603805900db4"
+    },
+    {
+      "bytes": 883,
+      "path": "adjacency_100000007.txt",
+      "sha256": "e61765a33df33687f919993c69c7db158fef002ddf1bad07914012704642f3af"
+    },
+    {
+      "bytes": 4957,
+      "path": "freeze_and_verify.py",
+      "sha256": "6ac699e926b56ec019b22733ba10935a4d8d39d406757f16d7ca07b04591eca8"
+    },
+    {
+      "bytes": 1823,
+      "path": "subset_dp.cpp",
+      "sha256": "6c76c6260df0d311d09808fb1e3602688e2575ba8bb82dd073530e41abfd8dd1"
+    },
+    {
+      "bytes": 9322,
+      "path": "sources.json",
+      "sha256": "1573e8237766e00c35161fcd55cf9d1960fc1cdc5670c8e2de01abd09d059925"
+    },
+    {
+      "bytes": 8076,
+      "path": "README.md",
+      "sha256": "6f93fc26341185fa6def5ff7f35b3b14ae2ae3d155a6e2492b5314f834729ece"
+    },
+    {
+      "bytes": 2250,
+      "path": "run_checks.py",
+      "sha256": "f1b0e90e3e1524932acc4acb47674b6faa38ffbd46a00756e991aed347235910"
+    }
+  ],
+  "scope": "Exact actual-graph certificates for recovered counts80557 and100000007; no new grammar or universal spectrum claim.",
+  "status": "PASS",
+  "transport_requirement": "Original source paths and frozen bytes are retained; no chunking is needed. Final relocated package replay remains required."
+}

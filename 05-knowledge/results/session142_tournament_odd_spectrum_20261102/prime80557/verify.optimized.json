@@ -1,0 +1,24 @@
+{
+  "controls": 598,
+  "records": [
+    {
+      "certificate_sha256": "f38174084dd2c9d1fa8bc908287514430e87768d873dc4077c97d5de462e7ccb",
+      "count_singleton_formula": null,
+      "count_two_lane": 80557,
+      "order": 19,
+      "prime": true,
+      "strong": true,
+      "target": 80557
+    },
+    {
+      "certificate_sha256": "afc0f4c4dceec4c449ef86c2fdd6b96cc3efa0b34c83056037ee1d37d0cd790d",
+      "count_singleton_formula": 100000007,
+      "count_two_lane": 100000007,
+      "order": 29,
+      "prime": true,
+      "strong": true,
+      "target": 100000007
+    }
+  ],
+  "status": "passed"
+}

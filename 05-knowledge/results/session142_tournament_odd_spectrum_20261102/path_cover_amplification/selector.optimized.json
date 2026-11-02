@@ -1,0 +1,84 @@
+{
+  "active_contexts": 150,
+  "hostile_scope": "S0/R1 new vertices are nonhomogeneous to A+x, so this theorem does not apply to those operations",
+  "inactive_contexts": 135,
+  "incidence_inequalities_checked": 29,
+  "labelled_universes": [
+    {
+      "labelled_tournaments": 1,
+      "order": 1
+    },
+    {
+      "labelled_tournaments": 2,
+      "order": 2
+    },
+    {
+      "labelled_tournaments": 8,
+      "order": 3
+    }
+  ],
+  "literal_context_module_kernel_checks": 1140,
+  "literal_permutation_and_unordered_cover_checks": 11,
+  "max_order": 3,
+  "pointed_contexts_orders1to4": 285,
+  "scope": "Finite controls; universal theorem proved separately; unrestricted spectrum OPEN",
+  "sharp_controls": [
+    {
+      "C3_H": 3,
+      "H": 1,
+      "code": 0,
+      "n": 1,
+      "out_masks": [
+        0
+      ],
+      "p2_unordered": 0
+    },
+    {
+      "C3_H": 5,
+      "H": 1,
+      "code": 0,
+      "n": 2,
+      "out_masks": [
+        0,
+        1
+      ],
+      "p2_unordered": 1
+    },
+    {
+      "C3_H": 5,
+      "H": 1,
+      "code": 1,
+      "n": 2,
+      "out_masks": [
+        2,
+        0
+      ],
+      "p2_unordered": 1
+    },
+    {
+      "C3_H": 15,
+      "H": 3,
+      "code": 2,
+      "n": 3,
+      "out_masks": [
+        4,
+        1,
+        2
+      ],
+      "p2_unordered": 3
+    },
+    {
+      "C3_H": 15,
+      "H": 3,
+      "code": 5,
+      "n": 3,
+      "out_masks": [
+        2,
+        4,
+        1
+      ],
+      "p2_unordered": 3
+    }
+  ],
+  "status": "PASS"
+}

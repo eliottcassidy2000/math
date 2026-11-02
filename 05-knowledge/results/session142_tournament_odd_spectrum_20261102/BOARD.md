@@ -43,3 +43,18 @@ finite-exact statements, and inherited citations retain their own limits.
 - The Jacobian lane's missing source guard is now operational: preserve the
   full marked state and exhibit a new legal step that restores binary
   eligibility. Formal image dimension cannot substitute for that step.
+
+
+## Final comparison and bounded stopping point
+
+The incidence bound now links the path-cover sidecar to the constructor
+lane: cyclic homogeneous replacement has a multiplier growing with source
+order, even if its context changes. This explains another family boundary
+without extending the nonhomogeneous binary-language no-go. Recovered actual
+prime witnesses cross the obsolete80555 numerical target and validate the
+asymmetry restriction, but were already accessible to inherited constructors.
+The current finite baseline is the cited99,999,999 prefix, not a new scan.
+All five concepts therefore retain the same unresolved existence step:
+uniform legal coverage of both infinite prime lanes. This release stops at
+the reviewed proofs, exact witnesses, restored source provenance and verified
+publication, without starting another exploratory search or claiming closure.

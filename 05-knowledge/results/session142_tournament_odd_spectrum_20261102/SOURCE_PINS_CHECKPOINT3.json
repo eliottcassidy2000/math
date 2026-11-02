@@ -1,0 +1,492 @@
+{
+  "sources": [
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "snapshot": "frontier/sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "bytes": 22524,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "snapshot": "frontier/sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "bytes": 16726,
+      "git_blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+      "snapshot": "frontier/sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md"
+    },
+    {
+      "bytes": 10631,
+      "git_blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f",
+      "snapshot": "frontier/sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md"
+    },
+    {
+      "bytes": 9303,
+      "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+      "snapshot": "frontier/sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+    },
+    {
+      "bytes": 15032,
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "snapshot": "frontier/sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md"
+    },
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "snapshot": "frontier/sources/48607834292f4bd7cbcf573a01ef8f3a2d3e85c8_THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "bytes": 22524,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "snapshot": "frontier/sources/963ba70f0d5f1154b07fd406cb24245eda16debc_THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "bytes": 16726,
+      "git_blob": "8566eaaba93bd4f724891a0c5b19af8802f70427",
+      "sha256": "566e36860b24351fb40eee865dd03e8ff101658da92423265afcb3c8b26a22ac",
+      "snapshot": "frontier/sources/8566eaaba93bd4f724891a0c5b19af8802f70427_THM-4104-selected-order-eleven-strong-ear-solid-interval.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md"
+    },
+    {
+      "bytes": 10631,
+      "git_blob": "687b273ebcf3e8b2f228c882c2174d057f000271",
+      "sha256": "37ff5a53790ae3bcd834ffb6f81e08a619974b3dc661d5ba7634b120578bba2f",
+      "snapshot": "frontier/sources/687b273ebcf3e8b2f228c882c2174d057f000271_THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4118-ear-response-lattice-and-stateful-unit-component-intervals.md"
+    },
+    {
+      "bytes": 9303,
+      "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+      "snapshot": "frontier/sources/1ccc489cb70a3ef3d61473522f4d380884c73d5b_THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+    },
+    {
+      "bytes": 15032,
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "snapshot": "frontier/sources/56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f_spectrum.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md"
+    },
+    {
+      "bytes": 6269,
+      "git_blob": "45ef507f8aa1b1a12a33e9fe19314940a311a9d2",
+      "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+      "snapshot": "frontier/sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py",
+      "source_commit": "9e1ae5aaf724ef8de84aa82c4a523132a81e34b7",
+      "source_path": "04-computation/h63_counterexample_audit_s8.py"
+    },
+    {
+      "bytes": 6269,
+      "git_blob": "45ef507f8aa1b1a12a33e9fe19314940a311a9d2",
+      "sha256": "5339a9001573c755fe8112bf1a7a5c451171bf13bf4893ac20b6a2de336b3b9a",
+      "snapshot": "frontier/sources/45ef507f8aa1b1a12a33e9fe19314940a311a9d2_h63_counterexample_audit_s8.py",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "04-computation/h63_counterexample_audit_s8.py"
+    },
+    {
+      "bytes": 16320,
+      "git_blob": "1c902f116745fa6faf9d94ca9664e7f71a3d9fba",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c",
+      "snapshot": "jacobian_bridge/sources/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md"
+    },
+    {
+      "bytes": 6147,
+      "git_blob": "fae2cf36b1045a7a2108fd2f8cbf4c7c7e1ac306",
+      "sha256": "6a794e45c1f815a48816b4964e4760fa8c0f523099d1a5d5ea9adf7191c5f8bd",
+      "snapshot": "jacobian_bridge/sources/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1370-elliptic-jacobian-conjecture-all-dimensions.md"
+    },
+    {
+      "bytes": 5667,
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+      "snapshot": "jacobian_bridge/sources/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md"
+    },
+    {
+      "bytes": 13039,
+      "git_blob": "77265e6fede907f8a94b3bd9cbf091f25f98a07c",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce",
+      "snapshot": "jacobian_bridge/sources/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md"
+    },
+    {
+      "bytes": 11494,
+      "git_blob": "0692478d124a578125c734783bb286b40e681c31",
+      "sha256": "a57b2e8323d96f6358bb56506f5ddfc20e32c075e19d9dcc833690b1a857b0a6",
+      "snapshot": "jacobian_bridge/sources/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3225-affine-jacobian-clutch-resultant-and-two-boundary-no-escape.md"
+    },
+    {
+      "bytes": 13505,
+      "git_blob": "6f3a39a82d725455d14f625056e36e5446fdb6d2",
+      "sha256": "fc959a24343dae5ee0ffbac31b617ea801133e661049845c6fa43ec915023bba",
+      "snapshot": "jacobian_bridge/sources/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3477-jacobian-effectivity-moving-numerator-jordan-prufer-response-normal-form.md"
+    },
+    {
+      "bytes": 5854,
+      "git_blob": "e04677adceccc65e0c7202d2c13c4980327f70b6",
+      "sha256": "59d2c487b22918ca6c0d87eec403922f8108eecca8c9ea1a80a4b72f953386ac",
+      "snapshot": "jacobian_bridge/sources/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3652-wright-elementary-jacobian-criterion-reduced-word-reproof.md"
+    },
+    {
+      "bytes": 9654,
+      "git_blob": "2c52c443dd307d671e292c0833dd2f1ca46bb414",
+      "sha256": "444adda9dd6b5772708e8b2c6b325af07a8b708bfdeb6640606bf78d6a4e68e8",
+      "snapshot": "jacobian_bridge/sources/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4626-surjective-dual-fields-are-locally-nilpotent-and-hyp-9255-is-the-planar-jacobian-conjecture.md"
+    },
+    {
+      "bytes": 16282,
+      "git_blob": "8258fdffb8129927bb4b56ad196785cad323f324",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df",
+      "snapshot": "jacobian_bridge/sources/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md"
+    },
+    {
+      "bytes": 15032,
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "snapshot": "minimal_gap/source_snapshots/01-spectrum.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md"
+    },
+    {
+      "bytes": 22524,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "snapshot": "minimal_gap/source_snapshots/02-two-prime-lanes.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md"
+    },
+    {
+      "bytes": 7232,
+      "git_blob": "e7625c6090361a19bc70c28ae2d22901a57f37f9",
+      "sha256": "2a671ed57d72b1824efa7946a6400a1284e2443f6e7c1141469ea4b88a0f447a",
+      "snapshot": "minimal_gap/source_snapshots/03-vertex-transitive-prime.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4861-the-five-fermat-primes-are-hamiltonian-path-counts-of-tournaments-with-least-orders-3-4-6-8-11-a-vertex-transitive-tournament-has-a-prime-count-only-for-c3-and-fermat-primes-are-free-vertices-of-the-prime-square-sum-graph.md"
+    },
+    {
+      "bytes": 14766,
+      "git_blob": "100516c4f45217b8c22df9c8612853c8b8a06c60",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+      "snapshot": "minimal_gap/source_snapshots/04-session133-core.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md"
+    },
+    {
+      "bytes": 15815,
+      "git_blob": "ce2ee9bc5f236c6717287a25c780823e258c6378",
+      "sha256": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7",
+      "snapshot": "minimal_gap/source_snapshots/05-session134-descent.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/descent/THEORY.md"
+    },
+    {
+      "bytes": 12180,
+      "git_blob": "45b0a0625f7e9f989926034202fdbb2382f7c7e5",
+      "sha256": "d1d3e488020d17c2c2859e8e2e6015909a6c984b6fc118d128218f6cd3adda50",
+      "snapshot": "minimal_gap/source_snapshots/06-session136-spectrum.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/spectrum_structure/THEORY.md"
+    },
+    {
+      "bytes": 8895,
+      "git_blob": "854edd385ee613704dce8fdddf6bcc1991730f57",
+      "sha256": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3",
+      "snapshot": "minimal_gap/source_snapshots/07-session136-local-closure.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/local_closure/PROOF.md"
+    },
+    {
+      "bytes": 18929,
+      "git_blob": "46229a39575cb575c1c9e020fbc66c40e053f954",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7",
+      "snapshot": "minimal_gap/source_snapshots/08-session137-constructors.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/THEORY.md"
+    },
+    {
+      "bytes": 14222,
+      "git_blob": "97509d0195c27aa7f693de4d789508d64b4cf933",
+      "sha256": "004b82bcb840ea96f58c8201f4c912047249b2746be901940c148c5dac23c67a",
+      "snapshot": "minimal_gap/source_snapshots/09-session138-actual-contexts.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/exact_resources/PROOF.md"
+    },
+    {
+      "bytes": 14020,
+      "git_blob": "ee422799d50929fd2696769eb1b2350b59548cee",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1",
+      "snapshot": "constructions/sources/S134_CONSTRUCTOR_PROOF.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md"
+    },
+    {
+      "bytes": 10040,
+      "git_blob": "007df88c74ae4909d13cfc1ade42be5f5f57730e",
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4",
+      "snapshot": "constructions/sources/S134_RADIX_PROOF.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/radix_probe/PROOF.md"
+    },
+    {
+      "bytes": 18929,
+      "git_blob": "46229a39575cb575c1c9e020fbc66c40e053f954",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7",
+      "snapshot": "constructions/sources/S137_CONSTRUCTORS_THEORY.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/THEORY.md"
+    },
+    {
+      "bytes": 8845,
+      "git_blob": "23a92abacc855797fb456da7fefc4d53f8b101bf",
+      "sha256": "b022aa9af14cd97d3ce1169c7f18b1a0d11830918b005e63fd801efd4847ee6c",
+      "snapshot": "constructions/sources/S137_BOUNDED_INTERIOR.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/BOUNDED_INTERIOR.md"
+    },
+    {
+      "bytes": 9303,
+      "git_blob": "1ccc489cb70a3ef3d61473522f4d380884c73d5b",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8",
+      "snapshot": "constructions/sources/THM4749.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md"
+    },
+    {
+      "bytes": 9804,
+      "git_blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+      "snapshot": "path_cover_amplification/sources/THM3121_RUN_KERNEL.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md"
+    },
+    {
+      "bytes": 21109,
+      "git_blob": "2ba7acad79d82343b43ede8a60c918ca379fc7f7",
+      "sha256": "1f83b74693dd3c2ff50381d8936f6266fd53fb13758db0487359cde1d72a8af1",
+      "snapshot": "path_cover_amplification/sources/S136_GLUING.md",
+      "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "source_path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/gluing/PROOF.md"
+    },
+    {
+      "bytes": 309,
+      "git_blob": "c942f936414140bb4fff5e5589d75c9fdaf61b49",
+      "sha256": "0e9266779403a5b1401f74b75e8fa603e325517ffb9c3870e82bc5add7fd2447",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/D_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/D_profiles.tsv"
+    },
+    {
+      "bytes": 7382,
+      "git_blob": "9e2829c41a64452053eb517b0813cef99b7bd3cd",
+      "sha256": "6ec7445715976fe695f8ff15a99b2fe956fc203ecbd4f23a5668730612bb42e1",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DD_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DD_profiles.tsv"
+    },
+    {
+      "bytes": 15492,
+      "git_blob": "90bb6aacc600c2b3187802915ff627e19150c6be",
+      "sha256": "534809a81c7cabc29b642f0cfe0701769adb5b6b84415e33b2f1be05ba62bd08",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT1D_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT1D_profiles.tsv"
+    },
+    {
+      "bytes": 32305,
+      "git_blob": "c6c5af48b7a1f220df09fcf105456c1dfc5484db",
+      "sha256": "e90e8c867bb1ce66d17cbc56811d2486b5d5c8e46d1957330dd4f4db71b01c36",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT2D_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT2D_profiles.tsv"
+    },
+    {
+      "bytes": 66768,
+      "git_blob": "5f393be2b866d14e39fd9efaee87408303b01f82",
+      "sha256": "a8fca7d966a5009e529f4bbd49664d315200b2ed4d12e322c6827ff40cf3e765",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT3D_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT3D_profiles.tsv"
+    },
+    {
+      "bytes": 142233,
+      "git_blob": "4cad4b52bc2f72d8c40018958a608cd701a68d47",
+      "sha256": "7ce16c66738623fa7f68085ddd131208ddbace93db6ba63465e422cbb0eab7d4",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT4D_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT4D_profiles.tsv"
+    },
+    {
+      "bytes": 296342,
+      "git_blob": "dfc84fcc162bd5d0aa0878c3f4d20489c56a6eac",
+      "sha256": "61545a27abfdfd46fab685b571b2480d9b2b9030d5d8ba36cbc76c7d36326fd8",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031c/DT5D_profiles.tsv",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031c/DT5D_profiles.tsv"
+    },
+    {
+      "bytes": 19251,
+      "git_blob": "14e883e570d6d3c16ea3a8c7a01fe353239707b6",
+      "sha256": "626961a791a6e628db9f9a5df51690783743f66a09cc796ab943894fd8adce32",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/README.md",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/README.md"
+    },
+    {
+      "bytes": 4955,
+      "git_blob": "0f81c749d2cc2db1d4f9091cc2340658445b7f11",
+      "sha256": "60ceff0572834383a380c71415e61b1d3b21253cce35291b0bc1a7c070977f47",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/VERIFICATION.json",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/VERIFICATION.json"
+    },
+    {
+      "bytes": 26335,
+      "git_blob": "5f18007cb30730e36f942bb67ab33f73d336f7a4",
+      "sha256": "b8f0c75ce328b66fa0d17b1ea909b1199f8f0abab4ebbbce1261d6e0ada5bda3",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/MANIFEST.json",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/MANIFEST.json"
+    },
+    {
+      "bytes": 2269,
+      "git_blob": "cbdd4207164cb51c6182aee94446db31d1cb69f8",
+      "sha256": "6718c8fbf88ba4cccdc996d7610b0092eb02d2cc7af4c00171d712c430d54f55",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/bank_query.py",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/bank_query.py"
+    },
+    {
+      "bytes": 2995,
+      "git_blob": "8cfd8517e0319c7320f2c2895da7413c41df707b",
+      "sha256": "7eadc28fabd720064a4ae6b47513720786adf988d079623b7c201b11a08fd841",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/source_inverse.py",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/source_inverse.py"
+    },
+    {
+      "bytes": 114,
+      "git_blob": "e28e6f16f727dae8a86e7eb25b0ddafcf4939ee4",
+      "sha256": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/source_inverse.json",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/source_inverse.json"
+    },
+    {
+      "bytes": 3838,
+      "git_blob": "ae4741075b799a914da4878f86bf0d32f077487c",
+      "sha256": "97a527d04e7193df369cea5f2fb6d0162e42420dbec92d79fae55fba24d26bc5",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/large_point_queries.jsonl",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/large_point_queries.jsonl"
+    },
+    {
+      "bytes": 916,
+      "git_blob": "c00f97d086ed3286547e4b5ff4ffff2536a2986a",
+      "sha256": "5db330c6c442e8ef7ce17592672fb507cc202a702a2ce15046c487e9926afd3b",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/large_point_adjacency_audit.json",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/large_point_adjacency_audit.json"
+    },
+    {
+      "bytes": 786,
+      "git_blob": "730c65a0d4e161c6b3ba3119e9c6afa021cfec3a",
+      "sha256": "61203e912c65a766ca4dd543b27a323d283ba15fa5797415cf7813929b523226",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/audit_large_points.py",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/audit_large_points.py"
+    },
+    {
+      "bytes": 2167,
+      "git_blob": "c7b01be2d4f079da560159da69734d6a9d6c591b",
+      "sha256": "8a66229aabd95fabdbc99b581241323a8b5dfd089f725d900a7775e6291491a4",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/capped_scan.cpp",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/capped_scan.cpp"
+    },
+    {
+      "bytes": 1978,
+      "git_blob": "4325a4b94553b39a573c7223def85c94af4912b7",
+      "sha256": "9f52125670a02213b5203060e765ce1c2b7856b4a7b897aa90b7f3f01a4f39d8",
+      "snapshot": "prime80557/sources/square_sum_spectrum_overnight_20261031d/audit_capped_scan.cpp",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/audit_capped_scan.cpp"
+    },
+    {
+      "bytes": 7122,
+      "git_blob": "c3a3de22059398aac1220a8e1662a312f8b81315",
+      "sha256": "79ecd62ffe78292b73b17f8f3fde72d165946953e8e07dc55e20672cd2c46f90",
+      "snapshot": "prime80557/sources/session124_million_path_spectrum_20261031/README.md",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/session124_million_path_spectrum_20261031/README.md"
+    },
+    {
+      "bytes": 3688,
+      "git_blob": "7b8cee81651126cd56f4a72a9ea4546a30b52276",
+      "sha256": "14e3ce3b8bc459ccfeaca93934df6e37b9d0b87d061f860d5cf852c8a9239e29",
+      "snapshot": "prime80557/sources/session124_million_path_spectrum_20261031/construct_witness.py",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/session124_million_path_spectrum_20261031/construct_witness.py"
+    },
+    {
+      "bytes": 13692,
+      "git_blob": "bd41aa6e042c10927f91f0a30a205786eb2e68fb",
+      "sha256": "7c5a1df6186622dfe1790a9a26c7ec27b3468fc362bc9f17002a2b80f6492ad9",
+      "snapshot": "prime80557/sources/session124_million_path_spectrum_20261031/constructors/seed_roots.json",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/session124_million_path_spectrum_20261031/constructors/seed_roots.json"
+    },
+    {
+      "bytes": 623,
+      "git_blob": "242e61f68a7711b2d1c21241db1bce9f770f220b",
+      "sha256": "14be60a2a781a7c9a636476cb3b88938d03a7c120c0649dfd5569e21f244d6a0",
+      "snapshot": "prime80557/sources/session124_million_path_spectrum_20261031/constructors/block_target_witnesses.jsonl",
+      "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+      "source_path": "05-knowledge/results/session124_million_path_spectrum_20261031/constructors/block_target_witnesses.jsonl"
+    }
+  ]
+}

@@ -46,3 +46,19 @@ O(log X) outputs, even allowing the specified neutral S1/reset interleavings.
 This does not exclude richer gadgets. Two actual positive rays are recovered
 and credited to their inherited sources. See [checkpoint2](CHECKPOINT2.md).
 Run `python3 -B replay_checkpoint2.py` for the combined portable checks.
+
+## Checkpoint3: module gain and recovered actual witnesses
+
+[Path-cover proof](path_cover_amplification/PROOF.md):
+`k! p_k >= H binom(n-1,k-1)` gives `H(Q[T]) >= (n+2)H(T)` at cyclic
+homogeneous ports, with an extra1 for even n, even when the context varies.
+This does not cover nonhomogeneous or multi-port operations.
+
+[Recovered witnesses](prime80557/README.md): actual strong tournaments of
+orders19 and29 have prime counts80557 and100000007. Full subset DP checks
+the first; an independent direct adjacency partition formula checks the
+second. The constructor is inherited, not a new interval or global proof.
+Its22source pins use a published commit. See [checkpoint3](CHECKPOINT3.md).
+
+For the complete packet, run `python3 -B replay_checkpoint3.py` (Python3
+standard library plus C++17 compiler required), then `sha256sum -c SHA256SUMS`.

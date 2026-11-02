@@ -107,3 +107,55 @@ records all allowed odd values through99,999,999. That100million scan is
 **inherited and not rerun here**, not a Session142 numerical advance and not
 an infinite completeness theorem. Source-preserving individual recovered
 witnesses are a separate later checkpoint.
+
+## Checkpoint3: size-dependent module amplification
+
+[Path-cover proof](path_cover_amplification/PROOF.md) counts incidences of a
+Hamiltonian path and k-1 cuts. Forgetting the order of the k resulting
+nonempty directed paths loses at most k! choices, so
+`k! p_k(T) >= H(T) binom(n-1,k-1)`. In the inherited exact homogeneous
+substitution kernel the coefficient is k!W_k, not W_k alone. A cyclic port
+has W_1>=3 and W_2>=1, giving `H(Q[T]) >= (n+2)H(T)` and an extra1 for even n.
+The context may depend on T; a finite-template restriction is not needed.
+Inactive singleton-SCC ports remain exact odd multiplication. This does not
+apply to the nonhomogeneous marked S0/R1 operations or arbitrary multi-port
+surgery, and does not prove any additional unattainable integer.
+
+## Checkpoint3: recover actual counts, not a new numerical frontier
+
+[Recovered witnesses](prime80557/README.md) preserve the prior executable
+seven-parent constructor and22 source snapshots. Explicit adjacency matrices
+have H80557 at order19 and H100000007 at order29. Both are strong and prime-
+count, hence asymmetric. Neither is asserted smallest or newly discovered.
+80557 was already covered by an earlier million-prefix construction;
+100000007 is only an isolated positive control beyond the inherited100million
+scan, not a new interval or a global realization theorem.
+
+The small witness is checked by ordinary full subset DP at O0/O2. The larger
+one has a transitive parent after deleting its apex, and is counted directly
+from the adjacency by partitioning paths at that apex and summing over the
+maximum-before/minimum-after pair. A separate two-block-side enumeration
+also works. No order29 full subset-DP run is claimed.80498 inherited inverse
+controls and598 small graph controls are rerun; the billion-pair finite
+prefix scans are not. Source paths are pinned to a published commit.
+
+These positive controls help distinguish a *failed restricted language* from
+a missing actual count. The remaining obligation is still uniform legal
+source-image coverage of the infinite prime and7p lanes, not another local
+rank argument or a larger list of isolated witnesses.
+
+## CITED incoming full-state inverse: a distinct solved subproblem
+
+The concurrent [compressed legal descent](../spectrum_descent_jacobian_20261102/DESCENT.md),
+read at published commit0040dca1285542b81b305d96aa97181dfe8d8376, provides a
+minimum-cost complete inverse for its declared singleton/D **full-state**
+grammar. Its scalar-target entry theorem remains OPEN. In its ordered
+coordinates(F,q,g,h), positivity-admissible(9,7,3,5) is not a reachable state,
+even though the scalar Hamiltonian count9 is attained. Thus selecting a legal
+state above a scalar target remains a separate obligation.
+
+The accompanying [Boolean realization handoff](../boolean_realization_71_17_20261102/HANDOFF.md)
+correctly separates that Bellman search over legal predecessors from the
+refuted local greedy energy rule. These incoming results are **CITED here**,
+not newly replayed, independently promoted or claimed as Session142 discoveries.
+They complement rather than duplicate the recovered fixed-source inverse.

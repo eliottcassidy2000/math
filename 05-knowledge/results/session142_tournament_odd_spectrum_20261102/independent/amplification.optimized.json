@@ -1,0 +1,43 @@
+{
+  "convention": "p_k counts unordered nonempty directed path covers; W_k counts words with k indistinguishable marked runs; coefficient is k!*W_k.",
+  "cover_inequalities": 5405,
+  "cyclic_contexts": 150,
+  "exact_kernel_controls": 3135,
+  "marked_quotient_contexts_n_le4": 285,
+  "scope": "Finite controls only; path-cut injection and triangle-twin insertion give the all-order proof.",
+  "sharp_lower_bound_examples": [
+    [
+      1,
+      0,
+      1,
+      3
+    ],
+    [
+      2,
+      0,
+      1,
+      5
+    ],
+    [
+      2,
+      1,
+      1,
+      5
+    ],
+    [
+      3,
+      2,
+      3,
+      15
+    ],
+    [
+      3,
+      5,
+      3,
+      15
+    ]
+  ],
+  "source_tournaments_n_le5": 1099,
+  "status": "PASS",
+  "triangle_substitutions": 1099
+}

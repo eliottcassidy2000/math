@@ -1,0 +1,102 @@
+{
+  "hundred_million": {
+    "commands": [
+      "c++ -std=c++17 -O2 capped_scan.cpp -o /tmp/capped_scan && /tmp/capped_scan 100000000 56 /tmp/capped_scan.bin ../square_sum_spectrum_overnight_20261031c/D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DD_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT1D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT2D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT3D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT4D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT5D_profiles.tsv",
+      "c++ -std=c++17 -O2 audit_capped_scan.cpp -o /tmp/audit_capped_scan && /tmp/audit_capped_scan 100000000 56 /tmp/audit_capped_scan.bin ../square_sum_spectrum_overnight_20261031c/D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DD_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT1D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT2D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT3D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT4D_profiles.tsv ../square_sum_spectrum_overnight_20261031c/DT5D_profiles.tsv"
+    ],
+    "counts": 49999994,
+    "limit": 100000000,
+    "missing": [
+      7,
+      21,
+      43,
+      93,
+      173,
+      247
+    ],
+    "packed_bytes": 6250001,
+    "prefix_cap": 56,
+    "support_sha256": "34530aa67d56eb84e89943e9b525f37e2baaecb2b1ccce39ad094f8f4ef6fa7d"
+  },
+  "normal_optimized": [
+    {
+      "json_equal": true,
+      "normal_sha256": "68f0139a279c4bc49b8ac514b60aa3091d68ebdb09df93aaab9b235ffd5ca945",
+      "optimized_sha256": "68f0139a279c4bc49b8ac514b60aa3091d68ebdb09df93aaab9b235ffd5ca945",
+      "receipt": "audit_leaf_switches.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "4d446384579ee38f04ea372b56eb5872966ce9397b9c830f2ce46b663a42f7fd",
+      "optimized_sha256": "4d446384579ee38f04ea372b56eb5872966ce9397b9c830f2ce46b663a42f7fd",
+      "receipt": "audit_tree_interfaces.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "467b4f3e6fc9d0e4137e35b6ac539d9044a4e804dd1c0fdb16491eb4f2ff5d87",
+      "optimized_sha256": "467b4f3e6fc9d0e4137e35b6ac539d9044a4e804dd1c0fdb16491eb4f2ff5d87",
+      "receipt": "audit_native_readability.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "959ea056a8e4d776a7fe8642083a6e19a3a2d663bec490a6c61893627e4855d4",
+      "optimized_sha256": "959ea056a8e4d776a7fe8642083a6e19a3a2d663bec490a6c61893627e4855d4",
+      "receipt": "tree_pairs.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "64826fffc626b64890ebadbebdd696f582796f962845640e578e7506881cba2a",
+      "optimized_sha256": "64826fffc626b64890ebadbebdd696f582796f962845640e578e7506881cba2a",
+      "receipt": "native_tree_cycle.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "364fd73be1aba7cfab709b79d4372d75d94b9053fc7b85d3fb7abfbf540a658f",
+      "optimized_sha256": "364fd73be1aba7cfab709b79d4372d75d94b9053fc7b85d3fb7abfbf540a658f",
+      "receipt": "digital_reflection.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "1ef150406f3f291721248e3ea6ffa796397fa7933a08714bd1352547e5b0d7cb",
+      "optimized_sha256": "1ef150406f3f291721248e3ea6ffa796397fa7933a08714bd1352547e5b0d7cb",
+      "receipt": "local_switch_obstruction.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "313c53771507d2ebf807cd793488b0bcbbe947dcf6ee8848d6fbc0cc904bc43f",
+      "optimized_sha256": "313c53771507d2ebf807cd793488b0bcbbe947dcf6ee8848d6fbc0cc904bc43f",
+      "receipt": "power_two_slopes.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "fc71f8fb2586bbc5a15300fba555f359ea9784af7a41ba131bd73ae79a4de6e8",
+      "optimized_sha256": "fc71f8fb2586bbc5a15300fba555f359ea9784af7a41ba131bd73ae79a4de6e8",
+      "receipt": "leaf_switches_receipt.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "5db330c6c442e8ef7ce17592672fb507cc202a702a2ce15046c487e9926afd3b",
+      "optimized_sha256": "5db330c6c442e8ef7ce17592672fb507cc202a702a2ce15046c487e9926afd3b",
+      "receipt": "large_point_adjacency_audit.json"
+    },
+    {
+      "json_equal": true,
+      "normal_sha256": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4",
+      "optimized_sha256": "b5159460efd207efdade548ecafb1830b0b0740d743320c6efa90e686cd9dbb4",
+      "receipt": "source_inverse.json"
+    }
+  ],
+  "proof_boundary": "All-depth pair/cycle injectivity and fixed-source inversion have separate proofs. Universal raw tournament spectrum and a universal56 cap remain OPEN.",
+  "review": "Same-agent proof review with independent algorithms; no subagent audit.",
+  "sanitizer": {
+    "flags": [
+      "address",
+      "undefined"
+    ],
+    "limit": 249,
+    "prefix_cap": 1000,
+    "purpose": "Exercise the case where the source cap exceeds2N/5, as well as all actual profiles.",
+    "receipt": "sanitizer_receipt.json"
+  },
+  "status": "passed"
+}

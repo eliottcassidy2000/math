@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "bytes": 3550,
+      "path": "verify_amplification_independent.py",
+      "sha256": "7d165ba615196ba0213917b07873ad4ccff9f5055ea2823b323ea9c244514194"
+    },
+    {
+      "bytes": 761,
+      "path": "amplification.normal.json",
+      "sha256": "06a7e52a50cf86a0e4cb3f1fb081fc093515d3828895ca71f8ee4418b45f361c"
+    },
+    {
+      "bytes": 761,
+      "path": "amplification.optimized.json",
+      "sha256": "06a7e52a50cf86a0e4cb3f1fb081fc093515d3828895ca71f8ee4418b45f361c"
+    },
+    {
+      "bytes": 1631,
+      "path": "amplification_producer.normal.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "bytes": 1631,
+      "path": "amplification_producer.optimized.json",
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    }
+  ],
+  "independent_controls": {
+    "cover_inequalities": 5405,
+    "cyclic_contexts": 150,
+    "exact_run_kernel_substitutions": 3135,
+    "normal_optimized_byte_identical": true,
+    "pointed_contexts_n_le4": 285,
+    "source_tournaments_n_le5": 1099,
+    "triangle_substitutions": 1099
+  },
+  "limits": [
+    "No unrestricted spectrum completeness theorem.",
+    "No obstruction to nonhomogeneous S0/R1 operations or arbitrary multi-port surgery.",
+    "No novelty or priority certification."
+  ],
+  "producer_manifest_sha256": "b90467d5fe672cc402badd7217fa3dc45468cc817ac11b357d37e874163328fb",
+  "producer_payloads_verified": 13,
+  "proof_sha256": "1a7cb87fb29bc70b67e3039bfef00928916e9e5c73002ddca138247443bd0fc0",
+  "reviewed_claims": [
+    "For unordered nonempty directed k-path covers, k!*p_k(T)>=H(T)*binom(n-1,k-1).",
+    "The maximal-run formula is H(Q[T])=sum_k k!*W_k(Q,q)*p_k(T), where W_k counts quotient words with indistinguishable separated q occurrences.",
+    "A cyclic port has W_1=H(Q)>=3 and W_2>=1, by triangle-path extension and transitive-twin insertion.",
+    "Cyclic homogeneous one-port substitution satisfies H(Q[T])>=(n+2)*H(T), with an extra1 for even n, even when the context varies with T.",
+    "A singleton-SCC port gives exactly H(Q-q)*H(T); bounded multipliers through cyclic homogeneous ports cannot persist at unbounded source order."
+  ],
+  "source_snapshots_byte_identical_to_pinned_commit": 2,
+  "status": "PASS"
+}

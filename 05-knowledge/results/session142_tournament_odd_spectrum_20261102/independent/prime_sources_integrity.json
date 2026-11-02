@@ -1,0 +1,9 @@
+{
+  "provenance_only_repin_verified": true,
+  "scope": "Source identity only; inherited hundred-million prefix was not replayed.",
+  "sha256_git_blob_and_commit_path_verified": true,
+  "source_bytes": 651560,
+  "source_commit": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
+  "source_count": 22,
+  "status": "PASS"
+}

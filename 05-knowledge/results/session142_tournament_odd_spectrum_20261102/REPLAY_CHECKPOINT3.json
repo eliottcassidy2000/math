@@ -1,0 +1,213 @@
+{
+  "checkpoint": "3",
+  "expected_rejections": 10,
+  "fresh_relocation": true,
+  "lane_integrity_positive_runs": 8,
+  "normal_and_optimized": true,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "preserved-checkpoint2-replay",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "90fe1d6fffc826dc433a727fe4d2e8d175e3b95a7c342b3d1fc64c10766a701d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "path-cover-amplification-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-path-cover-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "06a7e52a50cf86a0e4cb3f1fb081fc093515d3828895ca71f8ee4418b45f361c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "actual-recovered-graph-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2698ea9fa0e5e2393a1b48cfa06763a1bcca4dc88f0a69a04e945f1cba18ce28"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-prime-witness-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "562ce15ced0f3a2d644a2855577f2e5d0c74e5e7b296382eec09d291fdfd2da0"
+    },
+    {
+      "expected_rejection": false,
+      "label": "prime-portable-builds-and-inverse",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2866ff314bfe7502244ba9e9c20b7a9abd4cf8f2179f0c2e0830be6b3b5810a1"
+    },
+    {
+      "expected_rejection": false,
+      "label": "checkpoint3-frozen-payloads",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "512712198f4a69ac46e7556431f0798d17c79a417dad30038f7969ec3da10875"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-git-blob-identities",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "cb2149a21d42226268c0357a93176a6ea14f5c4f14827cff1fae3a886f37611e"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "e75e8d2e403be68d75c6f6466f1d59fc267de8310d3a0b823fc0824c91301b20"
+    },
+    {
+      "expected_rejection": false,
+      "label": "preserved-checkpoint2-replay",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "90fe1d6fffc826dc433a727fe4d2e8d175e3b95a7c342b3d1fc64c10766a701d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "path-cover-amplification-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-path-cover-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "06a7e52a50cf86a0e4cb3f1fb081fc093515d3828895ca71f8ee4418b45f361c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "actual-recovered-graph-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2698ea9fa0e5e2393a1b48cfa06763a1bcca4dc88f0a69a04e945f1cba18ce28"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-prime-witness-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "562ce15ced0f3a2d644a2855577f2e5d0c74e5e7b296382eec09d291fdfd2da0"
+    },
+    {
+      "expected_rejection": false,
+      "label": "prime-portable-builds-and-inverse",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2866ff314bfe7502244ba9e9c20b7a9abd4cf8f2179f0c2e0830be6b3b5810a1"
+    },
+    {
+      "expected_rejection": false,
+      "label": "checkpoint3-frozen-payloads",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "512712198f4a69ac46e7556431f0798d17c79a417dad30038f7969ec3da10875"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-git-blob-identities",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "cb2149a21d42226268c0357a93176a6ea14f5c4f14827cff1fae3a886f37611e"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "e75e8d2e403be68d75c6f6466f1d59fc267de8310d3a0b823fc0824c91301b20"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-path-cut-incidence",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-path-cut-incidence",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-run-factor",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-run-factor",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-recovered-witness-count",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-recovered-witness-count",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-direct-count",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-direct-count",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 8,
+  "scope": "Universal path-cover/module amplification and exact recovered actual prime-count witnesses; inherited100million prefix not rerun; no universal tournament spectrum closure.",
+  "source_files_verified": 194,
+  "source_integrity_positive_runs": 2,
+  "source_manifest_sha256": "b1bc390c49789b1cf233cbbc6bd6bb0b6059da3f937ead59681feb7b24771dd5",
+  "status": "PASS",
+  "total_executions": 28,
+  "unrelated_cwd": true
+}

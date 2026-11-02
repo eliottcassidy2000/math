@@ -1,0 +1,84 @@
+{
+  "proof_corruption": "path_cover_amplification/PROOF.md",
+  "scientific_mutations": [
+    {
+      "after": "need(math.factorial(k)*p[k]>=h*math.comb(n-1,k-1)+1,'incidence bound')",
+      "before": "need(math.factorial(k)*p[k]>=h*math.comb(n-1,k-1),'incidence bound')",
+      "label": "false-path-cut-incidence",
+      "reason": "incidence bound",
+      "script": "path_cover_amplification/verify.py"
+    },
+    {
+      "after": "need(value==3*h+p2,'triangle coefficient convention')",
+      "before": "need(value==3*h+2*p2,'triangle coefficient convention')",
+      "label": "false-independent-run-factor",
+      "reason": "triangle coefficient convention",
+      "script": "independent/verify_amplification_independent.py"
+    },
+    {
+      "after": "require(h==q['target']+2,'count mismatch')",
+      "before": "require(h==q['target'],'count mismatch')",
+      "label": "false-recovered-witness-count",
+      "reason": "count mismatch",
+      "script": "prime80557/freeze_and_verify.py"
+    },
+    {
+      "after": "need(direct==target+2,'direct max-before/min-after graph count')",
+      "before": "need(direct==target,'direct max-before/min-after graph count')",
+      "label": "false-independent-direct-count",
+      "reason": "direct max-before/min-after graph count",
+      "script": "independent/verify_prime_witnesses_independent.py"
+    }
+  ],
+  "scientific_tests": [
+    {
+      "kind": "integrity",
+      "label": "preserved-checkpoint2-replay",
+      "output": "REPLAY_CHECKPOINT2.json",
+      "script": "replay_checkpoint2.py"
+    },
+    {
+      "label": "path-cover-amplification-exact",
+      "output": "path_cover_amplification/normal.json",
+      "script": "path_cover_amplification/verify.py"
+    },
+    {
+      "label": "independent-path-cover-exact",
+      "output": "independent/amplification.normal.json",
+      "script": "independent/verify_amplification_independent.py"
+    },
+    {
+      "label": "actual-recovered-graph-exact",
+      "output": "prime80557/verify.normal.json",
+      "script": "prime80557/freeze_and_verify.py"
+    },
+    {
+      "label": "independent-prime-witness-exact",
+      "output": "independent/prime_witnesses.normal.json",
+      "script": "independent/verify_prime_witnesses_independent.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "prime-portable-builds-and-inverse",
+      "output": "independent/prime_portable_replay.json",
+      "script": "replay_prime.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "checkpoint3-frozen-payloads",
+      "output": "AUDIT_INTEGRITY_CHECKPOINT3.json",
+      "script": "verify_checkpoint3_integrity.py"
+    },
+    {
+      "argv": [
+        "--manifest",
+        "SOURCE_PINS_CHECKPOINT3.json"
+      ],
+      "kind": "integrity",
+      "label": "source-git-blob-identities",
+      "output": "SOURCE_INTEGRITY_CHECKPOINT3.json",
+      "script": "verify_source_pins.py"
+    }
+  ],
+  "scope": "Universal path-cover/module amplification and exact recovered actual prime-count witnesses; inherited100million prefix not rerun; no universal tournament spectrum closure."
+}

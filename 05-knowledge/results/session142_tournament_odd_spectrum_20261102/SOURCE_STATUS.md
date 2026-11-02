@@ -26,3 +26,16 @@ audit or promotion. The central mistakes ledger was not read, hydrated or
 edited. Session113 approval and prior Session140/141 evidence are unchanged.
 The environment restart cleared old temporary scratch; this release uses
 fresh local files and the pinned published history, not unavailable caches.
+
+
+The final recovered-constructor sources are explicitly repinned to published
+commit9d5bae74f05a685d523df0c5559d71c3cd53cd6a. Independent review verified
+all22commit/path/blob identities and the unchanged snapshots after replacing
+the local-only prepublication locator. Earlier checkpoint source pins remain
+as originally frozen. The updated final audit binds the provenance-only reseal.
+
+
+Concurrent full-state descent and its Boolean-realization handoff are linked
+in the synthesis at published0040dca1285542b81b305d96aa97181dfe8d8376. They
+are CITED incoming work, not independently replayed or promoted by this
+packet. Their explicit scalar-to-legal-state entry gap remains OPEN.

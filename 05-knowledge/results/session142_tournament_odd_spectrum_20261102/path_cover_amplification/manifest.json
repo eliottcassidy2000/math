@@ -1,0 +1,70 @@
+{
+  "scope": "Path-cover incidence and homogeneous active-port size amplification; not unrestricted spectrum completeness",
+  "files": [
+    {
+      "path": "PROOF.md",
+      "bytes": 7193,
+      "sha256": "1a7cb87fb29bc70b67e3039bfef00928916e9e5c73002ddca138247443bd0fc0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1186,
+      "sha256": "8144b80d9ef4bf199b2b5f57009d4493781d4176b0353cc64a81467ce202853d"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 954,
+      "sha256": "2327fe239d492a6839523ef3cb55c0ee6d6cc4bbd945eb52d8a03c27235f656e"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 1553,
+      "sha256": "9d65c729b13a8ea3a3b220b8ef6725bc113db1a84d0ce245a4fc3278ddfd07aa"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 1631,
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 1631,
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "path": "relocated.normal.json",
+      "bytes": 1631,
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "path": "relocated.optimized.json",
+      "bytes": 1631,
+      "sha256": "140cab606fccf3b5402a3f1b4dfd6d968bfa45856314b4e92b3ac01e90fd45e4"
+    },
+    {
+      "path": "selector.normal.json",
+      "bytes": 1499,
+      "sha256": "9209689b604774e2c23277041cec4a623b4ffca733262801edad6cc3cfd47944"
+    },
+    {
+      "path": "selector.optimized.json",
+      "bytes": 1499,
+      "sha256": "9209689b604774e2c23277041cec4a623b4ffca733262801edad6cc3cfd47944"
+    },
+    {
+      "path": "sources/S136_GLUING.md",
+      "bytes": 21109,
+      "sha256": "1f83b74693dd3c2ff50381d8936f6266fd53fb13758db0487359cde1d72a8af1"
+    },
+    {
+      "path": "sources/THM3121_RUN_KERNEL.md",
+      "bytes": 9804,
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 5833,
+      "sha256": "c15708de9130f1e4c16f9896c51a66e1229c30f7f53073909abbc995e51f6a0b"
+    }
+  ]
+}
