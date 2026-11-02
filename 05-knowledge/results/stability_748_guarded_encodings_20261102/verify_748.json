@@ -1,0 +1,24 @@
+{
+  "contradiction_surplus": "3/411400",
+  "energy_floor": "259/24200",
+  "finite_uniform_controls": 1253,
+  "heavy_derivative_floor": "14467/2640000",
+  "heavy_endpoint": "1736491/59760000",
+  "ideal_method_ceiling_interval": [
+    "8578643/800000000",
+    "2144661/200000000"
+  ],
+  "kappa_cap": "2/187",
+  "light_bracket_surplus": "5063/39820000",
+  "new_orders": [
+    748,
+    1499
+  ],
+  "remaining_open_orders": [
+    10,
+    747
+  ],
+  "scope": "All-n extension comes from the written monotonicity and matching proofs; finite controls alone do not prove it. No all-order spectrum conclusion.",
+  "status": "passed",
+  "threshold": 748
+}
