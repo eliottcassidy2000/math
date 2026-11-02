@@ -116,13 +116,25 @@ def main():
     need(rows[2]['minimal_modulus'] == 12 and rows[2]['naive_modulus'] == 36,
          'priority makes naive precision nonminimal')
     need(period_formula(((2, 1), (1, 3)), 6) == 3, 'inactive division excluded')
+    crt_program = ((1, 2), (2, 3))
+    chart5, chart7 = period_formula(crt_program, 5), period_formula(crt_program, 7)
+    compatible = {(a, b) for a in range(chart5) for b in range(chart7) if (a-b) % 6 == 0}
+    native_pairs = {(n % chart5, n % chart7) for n in range(210)}
+    need(compatible == native_pairs and len(compatible) == 210, 'compatible CRT input charts')
+    for m in range(1, 13):
+        for n in range(1, 13):
+            lm, ln = period_formula(crt_program, m), period_formula(crt_program, n)
+            need(lcm(lm, ln) == period_formula(crt_program, lcm(m, n)), 'clock lcm compatibility')
+            need(gcd(lm, ln) == period_formula(crt_program, gcd(m, n)), 'clock gcd compatibility')
     # Same current parity cannot support one more exact division/parity query.
     need(observe(((1, 2),), 2, 2) != observe(((1, 2),), 4, 2), 'closed parity quotient rejected')
     report = {'status': 'PASS', 'gates': GATES,
               'universe': 'Every reduced a/b with 1<=a,b<=4, lists of length 1 or 2; m=1..12',
               'programs': len(programs), 'one_step_cases': cases,
               'largest_observed_minimal_one_step_period': max_period,
-              'trace_table': rows, 'rank_inputs_checked': [1, 10000]}
+              'trace_table': rows, 'rank_inputs_checked': [1, 10000],
+              'crt_example': {'chart_moduli': [chart5, chart7], 'shared_modulus': 6,
+                              'compatible_pairs': 210, 'cartesian_pairs': chart5*chart7}}
     Path(__file__).with_name('clock_checks.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
     print(json.dumps({'status': 'PASS', 'gates': GATES, 'one_step_cases': cases,
                       'last_trace_row': rows[-1]}))

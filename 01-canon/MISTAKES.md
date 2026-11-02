@@ -11,6 +11,12 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** remove rules shadowed by earlier denominator divisibility. Selection has exact minimal period equal to the remaining denominator lcm L; k low base-B digits suffice iff L divides B^k. PRIMEGAME's squarefree case, two-list phase law, and stated metagraph non-identifications survive. `05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md` P1-P5 proves exact successor and finite-clock moduli with priority guards.
 - **Related nonminimality control:** iterating a sufficient one-step precision transformer can overpay. For `(2/3,3/2)`, two-step label observation has least period 18, not 36. Actual reachable words, not arbitrary intermediate residues, determine the finite-horizon minimum. The new checker includes literal squareful programs and normal/optimized replay.
 
+## 2026-11-02 — a spectral collision is not a complexity separation
+
+- **Correction:** [THM-1780, binary spectral boundary](theorems/THM-1780-H-leaves-the-spectral-ladder-at-n6.md) retains its exact H=13/17 cospectral witness at order6 and now gives the source-padding proof at every larger order. The historical deductions placing H above a rational/algebraic/holonomic ladder or proving hardness from that collision are withdrawn; this repeats the decoder-scope mechanism already repaired in THM-1970.
+- **First failed implication:** failure of reconstruction from one invariant does not establish computational hardness or a hierarchy of generating functions. Nor is H the ordinary adjacency permanent: the transitive two-tournament has permanent0 and H=1.
+- **Strongest survivor / missing coordinate:** no function of ordinary adjacency spectrum recovers binary H at n>=6. Closed-walk traces lose simple-cycle and disjoint-cycle incidence. Native integer moments and independent Hamilton-path DP reproduce the six-vertex witness in `05-knowledge/results/stability_priority_spectrum_20261102/carrier_checks.json`. The next question concerns retained incidence or contextual profiles, not a complexity inference from noninjectivity.
+
 ## 2026-10-31 — cyclic product completeness needs all path-cover states
 
 - **Correction source:** `05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md` restricts the interpretation of packet j's cyclic matching formula. It counts sewn products of local Hamiltonian cycles, not necessarily all cycles of the sewn graph. The tree theorem and finite105-state kernel remain valid.

@@ -4,6 +4,10 @@ Status: **PROVED**, using the accepted Session138 inputs below; same-agent
 proof audit and exact rational certificate. No independent-agent audit or
 formal proof is claimed. The threshold is sufficient, not claimed optimal.
 
+Later refinement: [STABILITY_320.md](STABILITY_320.md) combines this retained
+baseline with concurrent Session139's local dual and reaches n>=320. The
+466 proof and its exact receipt remain unchanged as the first checkpoint.
+
 ## Statement and inherited mechanism
 
 Let A be a real weighted tournament: A_ii=0, 0<=A_ij<=1, and
@@ -20,7 +24,8 @@ At V=0, equality occurs precisely at transitive binary tournaments.
 
 This extends the [accepted n>=1500 proof](../session138_stability_and_actual_contexts_20261102/threshold_refinement/PROOF_N1500.md).
 Together with its separate small-order results, the unresolved orders are
-now 10..465. No assertion at those orders follows from this note.
+10..465 at this checkpoint. No assertion at those orders follows from this
+note alone; the later320 refinement leaves10..319.
 
 The closest mechanism is binary rounding with a matching retained. The
 hostile family is the ordinal sum of fair pairs, which rules out a

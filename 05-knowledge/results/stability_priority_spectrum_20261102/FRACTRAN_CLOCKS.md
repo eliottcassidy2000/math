@@ -41,6 +41,19 @@ nonunits, prime powers, and CRT products.
 The least clock for the rule index alone is D (take m=1). The numerator
 gcd can remove only output precision, never a prime required by division.
 
+**Compatible CRT charts.** For every m,n>=1,
+
+    L_lcm(m,n)=lcm(L_m,L_n),  L_gcd(m,n)=gcd(L_m,L_n).
+
+This follows from the primewise formula in the proof: each exponent is a
+fixed increasing function of the corresponding output exponent. In
+particular, if gcd(m,n)=1, the two input-residue charts must agree modulo
+D; their fiber product has L_m L_n/D=L_(mn) states. They cannot be chosen
+independently. For [1/2,2/3] and output moduli5,7, the charts have30 and42
+residues and share the mod6 selector; exactly210 of the1260 chart pairs
+are compatible. These are minimal **congruence** carriers, not a claim
+that the observation itself has that many distinct values.
+
 **Corollary 2.** A finite congruence carrier N mod M determines both the
 selected rule and the next state mod M iff L_M divides M. Such an M
 exists iff D=1. If D>1, any p dividing D requires v_p(M)+v_p(D) input

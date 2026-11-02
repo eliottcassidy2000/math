@@ -1,5 +1,5 @@
 """Native path, spectrum and clock-loss controls with preserved source objects."""
-from itertools import combinations
+from itertools import combinations, permutations
 from math import isqrt
 from pathlib import Path
 import importlib.util
@@ -130,6 +130,62 @@ def square_controls():
     return result
 
 
+def literal_cycle_control():
+    rows = from_mask(5, 40)
+    cycles = []
+    for size in (3, 5):
+        for vertices in combinations(range(5), size):
+            root = min(vertices)
+            for tail in permutations(v for v in vertices if v != root):
+                word = (root,)+tail
+                if all((rows[word[i]] >> word[(i+1) % size]) & 1 for i in range(size)):
+                    cycles.append(word)
+    by_size = {k: sum(len(c) == k for c in cycles) for k in (3, 5)}
+    collapsed = {frozenset(c) for c in cycles}
+    need(by_size == {3: 4, 5: 3}, 'old literal-cycle hostile recovered')
+    need(ham(rows) == 1+2*len(cycles) == 15, 'literal OCF agrees with native paths')
+    need(1+2*len(collapsed) == 11, 'support collapse gives wrong H')
+    return {'rows': rows, 'literal_cycles': cycles, 'cycle_counts': by_size,
+            'true_H': 15, 'support_collapsed_value': 11}
+
+
+def weighted_zeta_control():
+    from fractions import Fraction as F
+    import verify_stability as native_weighted
+    a = [[F(i != j, 2) for j in range(5)] for i in range(5)]
+    a[0][3], a[3][0], a[1][4], a[4][1] = F(5, 8), F(3, 8), F(3, 4), F(1, 4)
+    b = [[F(x) for x in row] for row in [
+        ['0', '1/2', '1/2', '7/12', '5/12'],
+        ['1/2', '0', '1/2', '11/24', '2/3'],
+        ['1/2', '1/2', '0', '7/12', '2/3'],
+        ['5/12', '13/24', '5/12', '0', '1/2'],
+        ['7/12', '1/3', '1/3', '1/2', '0']]]
+    def multiply(x, y):
+        return [[sum(x[i][k]*y[k][j] for k in range(5)) for j in range(5)] for i in range(5)]
+    def trace_list(x):
+        power = [[F(i == j) for j in range(5)] for i in range(5)]
+        out = []
+        for _ in range(5):
+            power = multiply(power, x)
+            out.append(sum(power[i][i] for i in range(5)))
+        return out
+    def m23(x):
+        result = F(0)
+        for i, j in combinations(range(5), 2):
+            u, v, w = [k for k in range(5) if k not in (i, j)]
+            tri = x[u][v]*x[v][w]*x[w][u]+x[u][w]*x[w][v]*x[v][u]
+            result += x[i][j]*x[j][i]*tri
+        return result
+    ha, da, va, _, _ = native_weighted.native(a)
+    hb, db, vb, _, _ = native_weighted.native(b)
+    need(trace_list(a) == trace_list(b), 'weighted cospectral witness')
+    need(hb-ha == db-da == F(1, 3456), 'weighted spectral loss in H and Delta')
+    need(va == vb and m23(b)-m23(a) == F(1, 6912), 'missing digon/triangle incidence')
+    return {'source': 'Session139 WEIGHTED_ZETA_BOUNDARY.md',
+            'H_difference': str(hb-ha), 'Delta_difference': str(db-da),
+            'M23_difference': str(m23(b)-m23(a)), 'moments': list(map(str, trace_list(a)))}
+
+
 def quadratic_clock_controls():
     # O=Z[u], u^2=5u+1; all 169 states mod13, not just units.
     m = 13
@@ -170,6 +226,9 @@ def hostile_81_27():
             rows[u if arc else v] |= 1 << (v if arc else u)
         counts.append(ham(rows))
     report['native_H_counts'] = counts
+    report['ordered_path_presentation_fibres'] = [h//r['group_order']
+                                                 for h, r in zip(counts, report['tournaments'])]
+    need(report['ordered_path_presentation_fibres'] == [5715, 17145], 'metagraph path-fibre distinction')
     report['inherited_gates'] = module.GATES
     need([r['group_order'] for r in report['tournaments']] == [81, 27], 'symmetry hostile retained')
     return report
@@ -178,6 +237,8 @@ def hostile_81_27():
 def main():
     report = {'status': 'PASS', 'spectral_hostile': spectral_hostile(),
               'square_sum_orders_through25': square_controls(),
+              'literal_cycle_control': literal_cycle_control(),
+              'weighted_zeta_control': weighted_zeta_control(),
               'quadratic_clock': quadratic_clock_controls(), 'hostile_81_27': hostile_81_27()}
     report['gates'] = GATES
     Path(__file__).with_name('carrier_checks.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "gates": 36361,
+  "gates": 37806,
   "universe": "Every reduced a/b with 1<=a,b<=4, lists of length 1 or 2; m=1..12",
   "programs": 132,
   "one_step_cases": 1584,
@@ -70,5 +70,14 @@
   "rank_inputs_checked": [
     1,
     10000
-  ]
+  ],
+  "crt_example": {
+    "chart_moduli": [
+      30,
+      42
+    ],
+    "shared_modulus": 6,
+    "compatible_pairs": 210,
+    "cartesian_pairs": 1260
+  }
 }

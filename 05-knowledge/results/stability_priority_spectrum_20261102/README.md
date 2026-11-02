@@ -4,17 +4,37 @@ Research date: 2026-11-02. Starting revision:
 `291b4d9757842c02aa451beb65acfade2848609b`.
 
 **PROVED:** the sharp weighted tournament determinant-gap coefficient is
-now established for every n>=466, including its fair-pair equality cases.
-This closes 1,034 of the formerly open orders 10..1499. Orders 10..465
-remain open; the previously proved orders 3..9 are inherited.
+now established for every n>=320, including its fair-pair equality cases.
+This closes 1,180 of the originally open orders10..1499, and206 orders
+beyond concurrent Session139's526 threshold. Orders10..319 remain open;
+the previously proved orders3..9 are inherited.
 
-The [proof](STABILITY_466.md) retains the expected binary gap and allocates
-disjoint interaction contributions once. The standard-library
-[checker](verify_stability.py) passes 3,475 exact gates, including native
-Hamiltonian/determinant calculations and a polynomial identity check.
-The infinite range follows from the proof, not finite sampling.
+The [combined proof](STABILITY_320.md) retains the expected binary gap,
+uses Session139's stronger local inequality, and allocates disjoint
+interaction contributions once. Its first [466 checkpoint](STABILITY_466.md)
+is preserved as lineage. The infinite range follows from the proof, not
+finite sampling. These refinements have a same-agent audit and exact
+certificates; no independent-agent or formal audit is claimed.
 
-The ongoing portfolio is: weighted stability (anchor); priority-preserving
+The [FRACTRAN classification](FRACTRAN_CLOCKS.md) proves the least one-step
+residue clock L_m=Dm/gcd(m,G) for every modulus, its compatible CRT charts,
+and a full finite-horizon trace classification for [1/2,2/3]. Its decreasing
+rank v2(N)+2v3(N) proves termination for that program only.
+
+The [synthesis](SPECTRUM_AND_WITNESSES.md) recovers March--July odd-cycle
+and spectral work, incorporates the concurrent all-modulus context theory,
+and gives a marked-order bijection for square-sum paths. The81/27 control
+has common H=462915 but presentation-fibre sizes5715 and17145. Literal
+cycles, incidence, and priority supply different necessary retained data.
+An old complexity inference in THM-1780 is explicitly repaired.
+
+Four standard-library checkers pass45,029 local gates plus seven inherited
+81/27 gates. Exact receipts include1,584 short-program/modulus cases,
+complete square-sum existence tests at orders1..25, and native weighted and
+binary spectral counterexamples. See [AUDIT.md](AUDIT.md) for replay and
+[RECOVERY_SOURCES.md](RECOVERY_SOURCES.md) for source scope.
+
+The portfolio is: weighted stability (anchor); priority-preserving
 FRACTRAN clocks (niche); marked Hamiltonian witnesses and old odd-cycle
 carriers (wildcard). All are compared on a five-concept board: native
 observable, retained baseline, overlap, priority, and lost quotient data.

@@ -1,0 +1,22 @@
+{
+  "AUDIT.md": "4f599b9a8fa79815e7f8a27cc9d878d8f7dda27e87c295afefb0ee95f81e1df7",
+  "carrier_checks.json": "ec720ac7932bd6381bb7b881e7a5d9ac9cd1e7e557101e7845487536f8472878",
+  "clock_checks.json": "2f5d2c7733c2f159e3611fb3557232b5bb1058c165f5d1a6988d48cd4cd1f281",
+  "FRACTRAN_CLOCKS.md": "08a4e2164562d3331ad185c3945333cf610891d5206f1c2b65c8fd070a4b29c7",
+  "HANDOFF.md": "9ccafb06ccbdf4d9b476d521b2c457901bea43e005cfa993ef5b87b2495b0531",
+  "README.md": "3ce68a7ec7085245deb2ce2b7db0903ebe3048eaf2e358384f3e6d1f26384fab",
+  "RECOVERY_SOURCES.md": "67b80e9ab54b994de7345035b604ae662999dc91857fa50cfa797122d03941f9",
+  "REPLAY.json": "0b178717daf6c5063bfd9c67012e104c7d486419af7efeb3c33f4139c59328e2",
+  "replay.py": "a03ba2b3abf107c531821d391ade1cd8f5fdcbda99b070b8882b1b38e7771feb",
+  "seal.py": "ab51dc07899493b07d06135a5d26a9cdd885144d1936ecb4fcd0f151ebb24574",
+  "SOURCE_PINS.json": "3bdb7212b15ed4bdfba256a0d3ab08a740d970ea2c1245aeaeabbd143aadda72",
+  "SPECTRUM_AND_WITNESSES.md": "7a9df6978bf98a5fa45f89bea6fbcf7c136d49c076d2122572927f8e64f3c1b9",
+  "STABILITY_320.md": "5f6071521741b82a3f04cb5f9b2c8d40c2599ea52197dd379683fcc88e0032be",
+  "stability_320_checks.json": "ad4011f0bd52ea768b6f1c424c9d26f2e033033a73fddca266b127ceb4cd8e8f",
+  "STABILITY_466.md": "6f90c91010501de10b4bcc9691e1a0c299a084acd7c87e8cae22bee2ed52c3e4",
+  "stability_checks.json": "a32433316bd7c67a9f863e1932e7790cb0a4e629d9cad6159fea5654c09f6e41",
+  "verify_carriers.py": "978877ff3b2ad7bc67ef73aa88f7bd460daef8c1bebc5b35c6a3992f3d144970",
+  "verify_clocks.py": "d09d0c0f0d193c424e307b0e36c2b2cf7f2342c25cb68fa04f5077932bcc1cc0",
+  "verify_stability.py": "33c881c63123e8fa7d7295b990b32af08e99585461a947f64ab05ff422530608",
+  "verify_stability_320.py": "25e2727e82ec5290f8284b9e969f9765d61c23ea86eab2f6df630c5d66ab89f0"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "gates": 3683,
+  "threshold": 320,
+  "scope": "Exact endpoint certificate; infinite proof in STABILITY_320.md",
+  "constants": {
+    "c": "999/4000",
+    "t": "25001/1000000",
+    "d": "667/5000",
+    "lambda": "27176087/5800000000"
+  },
+  "tight_tail_slack": "1681793/24903680000",
+  "remaining_open": [
+    10,
+    319
+  ],
+  "closed_since_original_1500_threshold": 1180,
+  "closed_beyond_concurrent_526_threshold": 206
+}
