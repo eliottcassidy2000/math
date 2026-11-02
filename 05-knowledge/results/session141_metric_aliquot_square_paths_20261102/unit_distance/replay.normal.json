@@ -1,0 +1,210 @@
+{
+  "arithmetic": {
+    "first_layer_obstructions": {
+      "one_to_two": 4,
+      "three_to_four_lower": 25,
+      "three_to_four_upper": 28,
+      "two_to_three": 11
+    },
+    "rows": [
+      {
+        "AMP2025_lower": 37,
+        "AMP2025_upper": 37,
+        "cycle_rank_at_least": 23,
+        "functional_edges_at_most": 15,
+        "functional_edges_missing_at_least": 22,
+        "honeycomb_girth6_edge_upper": 19,
+        "maximum_degree_at_least": 5,
+        "n": 15
+      },
+      {
+        "AMP2025_lower": 54,
+        "AMP2025_upper": 54,
+        "cycle_rank_at_least": 35,
+        "functional_edges_at_most": 20,
+        "functional_edges_missing_at_least": 34,
+        "honeycomb_girth6_edge_upper": 27,
+        "maximum_degree_at_least": 6,
+        "n": 20
+      },
+      {
+        "AMP2025_lower": 68,
+        "AMP2025_upper": 72,
+        "cycle_rank_at_least": 45,
+        "functional_edges_at_most": 24,
+        "functional_edges_missing_at_least": 44,
+        "honeycomb_girth6_edge_upper": 33,
+        "maximum_degree_at_least": 6,
+        "n": 24
+      },
+      {
+        "AMP2025_lower": 72,
+        "AMP2025_upper": 78,
+        "cycle_rank_at_least": 48,
+        "functional_edges_at_most": 25,
+        "functional_edges_missing_at_least": 47,
+        "honeycomb_girth6_edge_upper": 34,
+        "maximum_degree_at_least": 6,
+        "n": 25
+      },
+      {
+        "AMP2025_lower": 76,
+        "AMP2025_upper": 84,
+        "cycle_rank_at_least": 51,
+        "functional_edges_at_most": 26,
+        "functional_edges_missing_at_least": 50,
+        "honeycomb_girth6_edge_upper": 36,
+        "maximum_degree_at_least": 6,
+        "n": 26
+      }
+    ]
+  },
+  "eisenstein21": {
+    "coordinates": [
+      [
+        0,
+        0
+      ],
+      [
+        3,
+        -1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        -2,
+        3
+      ],
+      [
+        -3,
+        1
+      ],
+      [
+        -1,
+        -2
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        4,
+        -2
+      ],
+      [
+        -1,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        -3,
+        6
+      ],
+      [
+        -4,
+        4
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "m": 57,
+    "minimum_squared_norm_before_scaling": 1,
+    "n": 21,
+    "unit_squared_norm_before_scaling": 7
+  },
+  "finite_graph_controls": {
+    "all_labeled_simple_graphs_n0_through5": 1100,
+    "layer_capacities_checked": [
+      1,
+      2,
+      3
+    ],
+    "single_edge_subdivisions_checked": 1094
+  },
+  "hostile_controls": [
+    "duplicate points rejected",
+    "nonunit rotation rejected",
+    "wrong edge count rejected",
+    "K4 false one-layer claim rejected",
+    "K4 false capacity rejected"
+  ],
+  "product_witnesses": [
+    {
+      "chi": 3,
+      "cycle_rank": 1,
+      "d": 1,
+      "degree": 2,
+      "functional_layers_exact": 1,
+      "m": 3,
+      "n": 3
+    },
+    {
+      "chi": 3,
+      "cycle_rank": 10,
+      "d": 2,
+      "degree": 4,
+      "functional_layers_exact": 2,
+      "m": 18,
+      "n": 9
+    },
+    {
+      "chi": 3,
+      "cycle_rank": 55,
+      "d": 3,
+      "degree": 6,
+      "functional_layers_exact": 3,
+      "m": 81,
+      "n": 27
+    },
+    {
+      "chi": 3,
+      "cycle_rank": 244,
+      "d": 4,
+      "degree": 8,
+      "functional_layers_exact": 4,
+      "m": 324,
+      "n": 81
+    }
+  ],
+  "scope": "Exact finite controls only. AMP global extremality is cited, not recomputed. No Collatz convergence or plane chromatic improvement.",
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "AUDIT.md": "44ef6241b8c3d1c2025ef42490b8909eef5258e296b6fccb3863c6ea8bdf3bc5",
+  "REVIEWED_PRODUCERS.json": "4e14d76260c48ca58f4aaa798f5c61e2e9ae0d37d1b9e08422b61fe1477247c5",
+  "SOURCE_PINS.json": "679bae75c4e0ab08cca94bf28e8b0cc7bb2119a3afeadea2f045ca28c40c30b7",
+  "check.py": "9d461ca7a33b54fb1a786f4546e9475d2f4a105ff2c1670e6381810be5eec274",
+  "normal.json": "9fc4d2f465eac503aa33eb32a0dd65c2c723b105205f40db0c7170b1dc258bff",
+  "optimized.json": "9fc4d2f465eac503aa33eb32a0dd65c2c723b105205f40db0c7170b1dc258bff",
+  "sources/aliquot_inherited.md": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2",
+  "sources/aliquot_twenty.md": "19d5854bcec14cd7e94cea32d7f4654cd9915a6c3f325c9b4e5e43e74dab885e",
+  "sources/unit_distance.md": "15fc9acbb7bc9f6ac1eb3044987364345bd4ec747d6ed9de04c780154fdb6a4f",
+  "verify.py": "fc5633e58b0ddb68e1c8e6a24931a6943043f3e189ee96a149400b0f6d442c08"
+}

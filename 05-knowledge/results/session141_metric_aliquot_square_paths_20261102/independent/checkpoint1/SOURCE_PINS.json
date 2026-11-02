@@ -1,0 +1,24 @@
+{
+  "external_inputs": [
+    {
+      "independent_read_date": "2026-11-02",
+      "locations": [
+        "Theorem 1(a,b)",
+        "Table 1"
+      ],
+      "scope": "u(n) exact through21,22..28 bounds; primary result cited, not computationally reproved; dated baseline, not current-best assertion",
+      "url": "https://arxiv.org/html/2412.11914v2",
+      "version_date": "2025-02-12"
+    }
+  ],
+  "git_sources": [
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob_oid": "cdf5522671ea0bd6592e7c4791b76af9160dfce3",
+      "path": "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2",
+      "snapshot": "sources/aliquot_inherited.md"
+    }
+  ]
+}

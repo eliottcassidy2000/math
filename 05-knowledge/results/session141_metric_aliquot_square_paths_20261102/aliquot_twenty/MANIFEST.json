@@ -1,0 +1,73 @@
+{
+  "files": {
+    "PROOFS.md": {
+      "bytes": 10916,
+      "sha256": "19d5854bcec14cd7e94cea32d7f4654cd9915a6c3f325c9b4e5e43e74dab885e"
+    },
+    "README.md": {
+      "bytes": 1841,
+      "sha256": "171f7c3f7ee8f839b239959e812ac9d181da90442dea392f14f402b7d9a60087"
+    },
+    "check.py": {
+      "bytes": 7093,
+      "sha256": "e82da5106a9fe5be5dbdcc5be5c58117668b562c27a0754301770c4a9094956c"
+    },
+    "normal.json": {
+      "bytes": 12804,
+      "sha256": "544fed0f17437634c1a12239c412b64e00c3502f15c29970612f46ef76803711"
+    },
+    "optimized.json": {
+      "bytes": 12804,
+      "sha256": "544fed0f17437634c1a12239c412b64e00c3502f15c29970612f46ef76803711"
+    },
+    "sourcepins/01_THEORY.md": {
+      "bytes": 16269,
+      "sha256": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2"
+    },
+    "sourcepins/02_README.md": {
+      "bytes": 4538,
+      "sha256": "539e7c419bf5cae2a8b9990e60a153a815dd5b4c7bbde38764f466bfd07ccdef"
+    },
+    "sourcepins/03_FIXED_EXCESS_AND_FIBERS.md": {
+      "bytes": 9717,
+      "sha256": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31"
+    },
+    "sourcepins/04_LOW_TERM_ATLAS.md": {
+      "bytes": 5440,
+      "sha256": "c511a691d888e505490ec6334882e9a2c0b3798b45c4b072989c04bf63f304c1"
+    },
+    "sourcepins/05_TOURNAMENTS_124.md": {
+      "bytes": 15376,
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9"
+    },
+    "sourcepins/06_README.md": {
+      "bytes": 8903,
+      "sha256": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19"
+    },
+    "sourcepins/07_README.md": {
+      "bytes": 8199,
+      "sha256": "c0dff724182e51332a2116014b05648e88a97216069e45e9be8237847b4874a0"
+    },
+    "sourcepins/08_ALIQUOT_OVERLAP.md": {
+      "bytes": 14946,
+      "sha256": "017707e6519a9aa211a8925119ad846fce1a76a42e92d0c51995d28a56480790"
+    },
+    "sourcepins/09_PROOFS.md": {
+      "bytes": 17354,
+      "sha256": "11624023b5d0145eebbfef2e75b1727f2fbf45bbd75c048a36edd16557a80d60"
+    },
+    "sourcepins/10_aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md": {
+      "bytes": 25366,
+      "sha256": "2b72047a3cb163ccb12ed7e70d5f11d9b13011fbc9ba11c8eaf670df31b56e7e"
+    },
+    "sourcepins/index.json": {
+      "bytes": 3345,
+      "sha256": "e258ca399fa9b006ff698b876e3dd05ff309967e19ef368180b41d9c1af5b7db"
+    },
+    "verify.py": {
+      "bytes": 1799,
+      "sha256": "69d8a881dc58a006ee048e97aa3253df16e0989697263aee820c8fe1214486b8"
+    }
+  },
+  "schema": "closed-sha256-v1"
+}

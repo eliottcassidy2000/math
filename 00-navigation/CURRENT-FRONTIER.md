@@ -4,7 +4,7 @@
 
 **Oct20:** [Prime arithmetic](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md); [prior](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
 [Oct25 shape/port repairs](../05-knowledge/results/shape_ports_20261025/README.md).
-**Nov2:** [S140](S140.md): Collatz growth/routing, unit-distance/cycle lifts; convergence/HN value OPEN.
+**Nov2:** [S140](S140.md); [S141](S141.md): geometry, aliquot and path bridges; conjectures OPEN.
 ## LRC(14)
 
 ### Headline

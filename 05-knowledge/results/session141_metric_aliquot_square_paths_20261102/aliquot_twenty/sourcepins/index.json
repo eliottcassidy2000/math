@@ -1,0 +1,76 @@
+{
+  "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+  "repository": "eliottcassidy2000/math",
+  "sources": [
+    {
+      "bytes": 16269,
+      "git_blob": "cdf5522671ea0bd6592e7c4791b76af9160dfce3",
+      "original_path": "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md",
+      "sha256": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2",
+      "snapshot": "01_THEORY.md"
+    },
+    {
+      "bytes": 4538,
+      "git_blob": "cb953bdf3fe62803db26d30e6aa4387d1d06d635",
+      "original_path": "05-knowledge/results/aliquot_divisor_overlap_20261028/README.md",
+      "sha256": "539e7c419bf5cae2a8b9990e60a153a815dd5b4c7bbde38764f466bfd07ccdef",
+      "snapshot": "02_README.md"
+    },
+    {
+      "bytes": 9717,
+      "git_blob": "c54162500fd95e197d6fb6e013b9e2f195f06522",
+      "original_path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md",
+      "sha256": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31",
+      "snapshot": "03_FIXED_EXCESS_AND_FIBERS.md"
+    },
+    {
+      "bytes": 5440,
+      "git_blob": "a113c9d0e57e4c2905e37f17faf9edd30b79a96c",
+      "original_path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/LOW_TERM_ATLAS.md",
+      "sha256": "c511a691d888e505490ec6334882e9a2c0b3798b45c4b072989c04bf63f304c1",
+      "snapshot": "04_LOW_TERM_ATLAS.md"
+    },
+    {
+      "bytes": 15376,
+      "git_blob": "777ec7b7cf5a2e58aab43bc599fb73d4e4c0d61f",
+      "original_path": "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md",
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9",
+      "snapshot": "05_TOURNAMENTS_124.md"
+    },
+    {
+      "bytes": 8903,
+      "git_blob": "48ae3786dc9622a5793c18487e1fa1b3355d0ced",
+      "original_path": "05-knowledge/results/aliquot_power_124_20261026/aliquot/README.md",
+      "sha256": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19",
+      "snapshot": "06_README.md"
+    },
+    {
+      "bytes": 8199,
+      "git_blob": "d2b2cade60a092142de9280ce8c47e666b413431",
+      "original_path": "05-knowledge/results/aliquot_power_124_20261026/README.md",
+      "sha256": "c0dff724182e51332a2116014b05648e88a97216069e45e9be8237847b4874a0",
+      "snapshot": "07_README.md"
+    },
+    {
+      "bytes": 14946,
+      "git_blob": "5932df3372cd03555c96e50553a09627d2ccc9d2",
+      "original_path": "05-knowledge/results/dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md",
+      "sha256": "017707e6519a9aa211a8925119ad846fce1a76a42e92d0c51995d28a56480790",
+      "snapshot": "08_ALIQUOT_OVERLAP.md"
+    },
+    {
+      "bytes": 17354,
+      "git_blob": "b0c6238023e045e4d44cffeabfa8887989a2a582",
+      "original_path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/PROOFS.md",
+      "sha256": "11624023b5d0145eebbfef2e75b1727f2fbf45bbd75c048a36edd16557a80d60",
+      "snapshot": "09_PROOFS.md"
+    },
+    {
+      "bytes": 25366,
+      "git_blob": "f21d1e1e133fe9e1ea028a94d9ac5e07d3732d3e",
+      "original_path": "05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md",
+      "sha256": "2b72047a3cb163ccb12ed7e70d5f11d9b13011fbc9ba11c8eaf670df31b56e7e",
+      "snapshot": "10_aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md"
+    }
+  ]
+}

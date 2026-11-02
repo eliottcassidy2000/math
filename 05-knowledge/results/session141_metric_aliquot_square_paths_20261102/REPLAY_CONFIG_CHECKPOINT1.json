@@ -1,0 +1,59 @@
+{
+  "proof_corruption": "unit_distance/PROOF.md",
+  "scientific_mutations": [
+    {
+      "after": "need(len(edges)==56,'Eisenstein21 edge count')",
+      "before": "need(len(edges)==57,'Eisenstein21 edge count')",
+      "label": "false-lattice21-edge-count",
+      "reason": "Eisenstein21 edge count",
+      "script": "unit_distance/check.py"
+    },
+    {
+      "after": "g.eq(s(18),20,'composite q9 hostile actual')",
+      "before": "g.eq(s(18),21,'composite q9 hostile actual')",
+      "label": "false-aliquot-composite-value",
+      "reason": "composite q9 hostile actual",
+      "script": "aliquot_twenty/check.py"
+    },
+    {
+      "after": "require(704-694==20,'subtraction correction')",
+      "before": "require(704-694==10,'subtraction correction')",
+      "label": "false-independent-subtraction",
+      "reason": "subtraction correction",
+      "script": "independent/checkpoint1/check.py"
+    }
+  ],
+  "scientific_tests": [
+    {
+      "label": "unit-distance-exact",
+      "output": "unit_distance/replay.normal.json",
+      "script": "unit_distance/check.py"
+    },
+    {
+      "label": "aliquot-exact",
+      "output": "aliquot_twenty/normal.json",
+      "script": "aliquot_twenty/check.py"
+    },
+    {
+      "label": "independent-exact",
+      "output": "independent/checkpoint1/normal.json",
+      "script": "independent/checkpoint1/check.py"
+    },
+    {
+      "argv": [
+        "--replay"
+      ],
+      "kind": "integrity",
+      "label": "aliquot-closed-manifest",
+      "output": "ALIQUOT_INTEGRITY_CHECKPOINT1.json",
+      "script": "aliquot_twenty/verify.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "audit-closed-manifest",
+      "output": "AUDIT_INTEGRITY_CHECKPOINT1.json",
+      "script": "independent/checkpoint1/verify.py"
+    }
+  ],
+  "scope": "Exact finite controls, closed manifests and corruption rejection. Infinite results use independently reviewed written proofs. No AMP extremality recomputation, Collatz convergence, global aliquot classification, HN improvement or Lean certification."
+}

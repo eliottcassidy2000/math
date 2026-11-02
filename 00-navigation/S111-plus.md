@@ -67,3 +67,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session139](S139.md): tensor/Eisenstein reserve plus the combined follow-up proves n>=48; gap10..47 open. Earlier routes retained; all-modulus contexts, finite prime states, typed spectral boundaries and guarded FRACTRAN precision.
 
 [Session140](S140.md): exponential Collatz growth, unbounded routing, proper unit-distance realizations, exact return clocks/cycle lifts, corrected HN recovery and hyperbolic binary-tree control; no convergence or new plane-coloring bound.
+
+[Session141](S141.md): functional-layer/unit-distance capacity, source-preserving aliquot20 and the tau<=17 excess-two extension; geometry/path continuations separately audited.

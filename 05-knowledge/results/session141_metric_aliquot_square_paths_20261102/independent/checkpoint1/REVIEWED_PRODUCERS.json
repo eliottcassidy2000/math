@@ -1,0 +1,21 @@
+[
+  {
+    "SHA256SUMS_sha256": "175a908e6bb86935acb6cfde14659a81b6d27eb77f81b00b37a359c47279dae2",
+    "lane": "unit_distance",
+    "proof": "PROOF.md",
+    "proof_sha256": "15fc9acbb7bc9f6ac1eb3044987364345bd4ec747d6ed9de04c780154fdb6a4f",
+    "selector": "PUBLIC_FILES.json",
+    "selector_sha256": "3201660cf1fee29a895bad7adb040628f9ad50bd4faf5e33cbbebb71b613dcf9",
+    "snapshot": "sources/unit_distance.md",
+    "status": "ACCEPTED; analytic proofs reviewed and separate computations reproduced"
+  },
+  {
+    "lane": "aliquot_twenty",
+    "proof": "PROOFS.md",
+    "proof_sha256": "19d5854bcec14cd7e94cea32d7f4654cd9915a6c3f325c9b4e5e43e74dab885e",
+    "selector": "MANIFEST.json",
+    "selector_sha256": "d9992847606170d5daf4b601d0d6f18c3ed5d1903a797e76f159f8f82d35f094",
+    "snapshot": "sources/aliquot_twenty.md",
+    "status": "ACCEPTED; analytic proofs reviewed and separate computations reproduced"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "correction_policy": "THM-431 contains stale claims despite its correction. Only corrected norm7 lattice construction and dated literature table used; no nearest-neighbor cap generalized to scaled shells; crossover28 not accepted as an exact result.",
+  "external_sources": [
+    {
+      "authors": "Boris Alexeev, Dustin G. Mixon, Hans Parshall",
+      "locations": [
+        "Theorem 1(a,b)",
+        "Table 1"
+      ],
+      "retrieved_utc": "2026-11-02",
+      "status": "Primary paper read; global computer-assisted proof cited, not reexecuted; dated baseline rather than current-best claim.",
+      "title": "The Erdos unit distance problem for small point sets",
+      "url": "https://arxiv.org/html/2412.11914v2",
+      "version": "arXiv:2412.11914v2",
+      "version_date": "2025-02-12"
+    },
+    {
+      "authors": "S. L. Hakimi",
+      "doi": "10.1016/0016-0032(65)90340-6",
+      "journal": "Journal of the Franklin Institute 279(4), 290-308 (1965)",
+      "retrieved_utc": "2026-11-02",
+      "status": "Primary bibliographic/abstract page verified; classical orientation theorem re-proved self-contained with Hall matching, not claimed new.",
+      "title": "On the degrees of the vertices of a directed graph",
+      "url": "https://doi.org/10.1016/0016-0032(65)90340-6"
+    }
+  ],
+  "repository": "eliottcassidy2000/math",
+  "repository_sources": [
+    {
+      "bytes": 8971,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "1611549f320cee0bc1fcf33a51b56fbf31924157",
+      "path": "01-canon/theorems/THM-431-unit-distance-u21-equals-57.md",
+      "sha256": "d44ca6555e2badd4fd8269d977b3924829ebe7424b682b30899f4f5451bcdf3a"
+    },
+    {
+      "bytes": 7714,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "ad9b838e514264532e4cb847a30100d1db64c42b",
+      "path": "01-canon/theorems/THM-461-unit-distance-deletion-ladder-and-floor.md",
+      "sha256": "6b6d4a799040ca73ee3c06bdaaf160d801571024bfbce00abf1fc906ee1450e3"
+    },
+    {
+      "bytes": 6602,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "da6c8920880be5917c0c6da7553bba8f5717bfad",
+      "path": "01-canon/theorems/THM-432-unit-distance-product-crossover-hamming-tie.md",
+      "sha256": "c6a7b7c6e763c63d861b03fff26b17f7fcd3ad36d8a3be6c5d1c3c6a2d963deb"
+    },
+    {
+      "bytes": 9280,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "e08eeefc9aa707985e847156c6dd94a537bdbd62",
+      "path": "04-computation/unit_distance_product_crossover_monad_s711.py",
+      "sha256": "a2a09943c34969bba8a5da1382b7d81839919b5ce716c6b9555cd13beb7a4c69"
+    },
+    {
+      "bytes": 2467,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "000ab9b5f60927d22b542f3a9ae49c3beb96deb9",
+      "path": "04-computation/experiments/oai2_20261006_lattice_u21.py",
+      "sha256": "064f14dc26a03e9be7ad9d77cc81d12e9a272ab742dae96205b10f1fd6503d96"
+    },
+    {
+      "bytes": 13216,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "b30d69cc2d86d15eb5cb9ff042ec66b74f8f8e02",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/PROOF.md",
+      "sha256": "e714ae9c62d4fd218911bb3ed313ff986c4735d51c73100413f6ce767dfde54e"
+    },
+    {
+      "bytes": 6002,
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "9766adda34b4ea8a5e598dc0596bf8ce87acb1e7",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md",
+      "sha256": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c"
+    }
+  ],
+  "source_commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf"
+}

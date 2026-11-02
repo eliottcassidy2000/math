@@ -1,0 +1,921 @@
+{
+  "533_factor_pairs": [
+    [
+      1,
+      533
+    ],
+    [
+      13,
+      41
+    ]
+  ],
+  "aliquot_chains": {
+    "20": [
+      20,
+      22,
+      14,
+      10,
+      8,
+      7,
+      1,
+      0
+    ],
+    "24": [
+      24,
+      36,
+      55,
+      17,
+      1,
+      0
+    ],
+    "26": [
+      26,
+      16,
+      15,
+      9,
+      4,
+      3,
+      1,
+      0
+    ]
+  },
+  "excess2_census": [
+    20,
+    104,
+    464,
+    650,
+    1952,
+    130304
+  ],
+  "f8": {
+    "alternate_orbit": [
+      3,
+      5,
+      7
+    ],
+    "alternate_rank": 3,
+    "marked_orbit": [
+      2,
+      4,
+      6
+    ],
+    "marked_rank": 2
+  },
+  "gates": 415334,
+  "inverse_s_fibers": {
+    "15": {
+      "bound": 196,
+      "sources": [
+        16,
+        33
+      ]
+    },
+    "16": {
+      "bound": 225,
+      "sources": [
+        12,
+        26
+      ]
+    },
+    "20": {
+      "bound": 361,
+      "sources": [
+        34,
+        361
+      ]
+    },
+    "21": {
+      "bound": 400,
+      "sources": [
+        18,
+        51,
+        91
+      ]
+    },
+    "22": {
+      "bound": 441,
+      "sources": [
+        20,
+        38
+      ]
+    },
+    "24": {
+      "bound": 529,
+      "sources": [
+        529
+      ]
+    },
+    "26": {
+      "bound": 625,
+      "sources": [
+        46
+      ]
+    },
+    "28": {
+      "bound": 729,
+      "sources": [
+        28
+      ]
+    },
+    "36": {
+      "bound": 1225,
+      "sources": [
+        24
+      ]
+    },
+    "7": {
+      "bound": 36,
+      "sources": [
+        8
+      ]
+    }
+  },
+  "inverse_sigma_fibers": {
+    "24": {
+      "exclusive_bound": 24,
+      "sources": [
+        14,
+        15,
+        23
+      ]
+    },
+    "42": {
+      "exclusive_bound": 42,
+      "sources": [
+        20,
+        26,
+        41
+      ]
+    },
+    "60": {
+      "exclusive_bound": 60,
+      "sources": [
+        24,
+        38,
+        59
+      ]
+    }
+  },
+  "literal_lists": {
+    "first": [
+      16,
+      10,
+      15,
+      14,
+      21,
+      35,
+      22,
+      33
+    ],
+    "negative": [
+      4,
+      9,
+      2,
+      8,
+      49,
+      121,
+      27,
+      169,
+      16
+    ],
+    "second": [
+      12,
+      18,
+      20,
+      28,
+      24
+    ]
+  },
+  "low_arity_excess2_census": [
+    20,
+    104,
+    464,
+    650,
+    1952
+  ],
+  "scope": {
+    "all_size_proof": "PROOFS.md section5; computation is a finite control only",
+    "direct_divisor_universe": [
+      1,
+      5000
+    ],
+    "source_universe": [
+      1,
+      200000
+    ]
+  },
+  "sigma_tau_digest": "1b63c26e2052f657fc8b6ff59f17426b168e9794ed1b07a7639c9c77e0758ae7",
+  "source_rows": {
+    "10": {
+      "compression_witnesses": [
+        [
+          2,
+          5
+        ]
+      ],
+      "excess": -2,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "n": 10,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        5
+      ],
+      "s": 8,
+      "sigma": 18,
+      "tau": 4
+    },
+    "12": {
+      "compression_witnesses": [],
+      "excess": 4,
+      "factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "n": 12,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "s": 16,
+      "sigma": 28,
+      "tau": 6
+    },
+    "121": {
+      "compression_witnesses": [],
+      "excess": -109,
+      "factorization": [
+        [
+          11,
+          2
+        ]
+      ],
+      "n": 121,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        11
+      ],
+      "s": 12,
+      "sigma": 133,
+      "tau": 3
+    },
+    "14": {
+      "compression_witnesses": [
+        [
+          2,
+          7
+        ]
+      ],
+      "excess": -4,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "n": 14,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        7
+      ],
+      "s": 10,
+      "sigma": 24,
+      "tau": 4
+    },
+    "15": {
+      "compression_witnesses": [
+        [
+          3,
+          5
+        ]
+      ],
+      "excess": -6,
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "n": 15,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        3,
+        5
+      ],
+      "s": 9,
+      "sigma": 24,
+      "tau": 4
+    },
+    "16": {
+      "compression_witnesses": [],
+      "excess": -1,
+      "factorization": [
+        [
+          2,
+          4
+        ]
+      ],
+      "n": 16,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "s": 15,
+      "sigma": 31,
+      "tau": 5
+    },
+    "169": {
+      "compression_witnesses": [],
+      "excess": -155,
+      "factorization": [
+        [
+          13,
+          2
+        ]
+      ],
+      "n": 169,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        13
+      ],
+      "s": 14,
+      "sigma": 183,
+      "tau": 3
+    },
+    "18": {
+      "compression_witnesses": [],
+      "excess": 3,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "n": 18,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        6,
+        9
+      ],
+      "s": 21,
+      "sigma": 39,
+      "tau": 6
+    },
+    "2": {
+      "compression_witnesses": [],
+      "excess": -1,
+      "factorization": [
+        [
+          2,
+          1
+        ]
+      ],
+      "n": 2,
+      "prime_power": true,
+      "proper_divisors": [
+        1
+      ],
+      "s": 1,
+      "sigma": 3,
+      "tau": 2
+    },
+    "20": {
+      "compression_witnesses": [
+        [
+          1,
+          20
+        ]
+      ],
+      "excess": 2,
+      "factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "n": 20,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        5,
+        10
+      ],
+      "s": 22,
+      "sigma": 42,
+      "tau": 6
+    },
+    "21": {
+      "compression_witnesses": [
+        [
+          3,
+          7
+        ]
+      ],
+      "excess": -10,
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "n": 21,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        3,
+        7
+      ],
+      "s": 11,
+      "sigma": 32,
+      "tau": 4
+    },
+    "22": {
+      "compression_witnesses": [
+        [
+          2,
+          11
+        ]
+      ],
+      "excess": -8,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "n": 22,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        11
+      ],
+      "s": 14,
+      "sigma": 36,
+      "tau": 4
+    },
+    "24": {
+      "compression_witnesses": [],
+      "excess": 12,
+      "factorization": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "n": 24,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        12
+      ],
+      "s": 36,
+      "sigma": 60,
+      "tau": 8
+    },
+    "26": {
+      "compression_witnesses": [
+        [
+          2,
+          13
+        ]
+      ],
+      "excess": -10,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "n": 26,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        13
+      ],
+      "s": 16,
+      "sigma": 42,
+      "tau": 4
+    },
+    "27": {
+      "compression_witnesses": [
+        [
+          3,
+          9
+        ]
+      ],
+      "excess": -14,
+      "factorization": [
+        [
+          3,
+          3
+        ]
+      ],
+      "n": 27,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        3,
+        9
+      ],
+      "s": 13,
+      "sigma": 40,
+      "tau": 4
+    },
+    "28": {
+      "compression_witnesses": [],
+      "excess": 0,
+      "factorization": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "n": 28,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        4,
+        7,
+        14
+      ],
+      "s": 28,
+      "sigma": 56,
+      "tau": 6
+    },
+    "33": {
+      "compression_witnesses": [
+        [
+          3,
+          11
+        ]
+      ],
+      "excess": -18,
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "n": 33,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        3,
+        11
+      ],
+      "s": 15,
+      "sigma": 48,
+      "tau": 4
+    },
+    "35": {
+      "compression_witnesses": [
+        [
+          5,
+          7
+        ]
+      ],
+      "excess": -22,
+      "factorization": [
+        [
+          5,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "n": 35,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        5,
+        7
+      ],
+      "s": 13,
+      "sigma": 48,
+      "tau": 4
+    },
+    "38": {
+      "compression_witnesses": [
+        [
+          2,
+          19
+        ]
+      ],
+      "excess": -16,
+      "factorization": [
+        [
+          2,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "n": 38,
+      "prime_power": false,
+      "proper_divisors": [
+        1,
+        2,
+        19
+      ],
+      "s": 22,
+      "sigma": 60,
+      "tau": 4
+    },
+    "4": {
+      "compression_witnesses": [],
+      "excess": -1,
+      "factorization": [
+        [
+          2,
+          2
+        ]
+      ],
+      "n": 4,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        2
+      ],
+      "s": 3,
+      "sigma": 7,
+      "tau": 3
+    },
+    "41": {
+      "compression_witnesses": [],
+      "excess": -40,
+      "factorization": [
+        [
+          41,
+          1
+        ]
+      ],
+      "n": 41,
+      "prime_power": true,
+      "proper_divisors": [
+        1
+      ],
+      "s": 1,
+      "sigma": 42,
+      "tau": 2
+    },
+    "49": {
+      "compression_witnesses": [],
+      "excess": -41,
+      "factorization": [
+        [
+          7,
+          2
+        ]
+      ],
+      "n": 49,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        7
+      ],
+      "s": 8,
+      "sigma": 57,
+      "tau": 3
+    },
+    "7": {
+      "compression_witnesses": [],
+      "excess": -6,
+      "factorization": [
+        [
+          7,
+          1
+        ]
+      ],
+      "n": 7,
+      "prime_power": true,
+      "proper_divisors": [
+        1
+      ],
+      "s": 1,
+      "sigma": 8,
+      "tau": 2
+    },
+    "8": {
+      "compression_witnesses": [
+        [
+          2,
+          4
+        ]
+      ],
+      "excess": -1,
+      "factorization": [
+        [
+          2,
+          3
+        ]
+      ],
+      "n": 8,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        2,
+        4
+      ],
+      "s": 7,
+      "sigma": 15,
+      "tau": 4
+    },
+    "9": {
+      "compression_witnesses": [],
+      "excess": -5,
+      "factorization": [
+        [
+          3,
+          2
+        ]
+      ],
+      "n": 9,
+      "prime_power": true,
+      "proper_divisors": [
+        1,
+        3
+      ],
+      "s": 4,
+      "sigma": 13,
+      "tau": 3
+    }
+  },
+  "status": "PASS",
+  "tau13_to17_patterns": {
+    "13": [
+      [
+        12
+      ]
+    ],
+    "14": [
+      [
+        6,
+        1
+      ],
+      [
+        13
+      ]
+    ],
+    "15": [
+      [
+        4,
+        2
+      ],
+      [
+        14
+      ]
+    ],
+    "16": [
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        7,
+        1
+      ],
+      [
+        15
+      ]
+    ],
+    "17": [
+      [
+        16
+      ]
+    ]
+  },
+  "two_prime_parameters": [
+    {
+      "a": 2,
+      "prime": true,
+      "q": 5,
+      "source": 20
+    },
+    {
+      "a": 3,
+      "prime": true,
+      "q": 13,
+      "source": 104
+    },
+    {
+      "a": 4,
+      "prime": true,
+      "q": 29,
+      "source": 464
+    },
+    {
+      "a": 5,
+      "prime": true,
+      "q": 61,
+      "source": 1952
+    },
+    {
+      "a": 6,
+      "prime": false,
+      "q": 125,
+      "source": 8000
+    },
+    {
+      "a": 7,
+      "prime": false,
+      "q": 253,
+      "source": 32384
+    }
+  ]
+}

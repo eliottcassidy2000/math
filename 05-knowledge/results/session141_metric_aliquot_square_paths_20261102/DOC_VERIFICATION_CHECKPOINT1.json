@@ -1,0 +1,15 @@
+{
+  "base_commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+  "frontier_line_budget": 450,
+  "frontier_lines": 450,
+  "full_checker_run": false,
+  "materialized_ancestor": "67b24c26b20d0a1efc1fa36bccebdc2297e27a4f",
+  "opaque_ledger_read": false,
+  "scope": "Bounded startup budgets and owned-publication conflict scan. Link and source pins checked separately. Full docs checker not run because it reads the opaque central ledger.",
+  "startup_byte_budget": 180000,
+  "startup_bytes": 179893,
+  "startup_paths_changed_since_ancestor": [
+    "00-navigation/CURRENT-FRONTIER.md"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,10 @@
+[
+  "README.md",
+  "PROOF.md",
+  "SOURCE_PINS.json",
+  "check.py",
+  "replay.normal.json",
+  "replay.optimized.json",
+  "PUBLIC_FILES.json",
+  "SHA256SUMS"
+]
