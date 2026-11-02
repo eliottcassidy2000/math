@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "bytes": 4640,
+      "path": "verify_binary_independent.py",
+      "sha256": "d6cef8b5a0c7a01a52d25fe1d0fee931afe032a8bd1687cd8deeca8bebf406a0"
+    },
+    {
+      "bytes": 633,
+      "path": "binary.normal.json",
+      "sha256": "79e503c6003180dcaf73c488cc66be129be7748c7e39fa0386a7f177a14e3613"
+    },
+    {
+      "bytes": 633,
+      "path": "binary.optimized.json",
+      "sha256": "79e503c6003180dcaf73c488cc66be129be7748c7e39fa0386a7f177a14e3613"
+    },
+    {
+      "bytes": 6816,
+      "path": "constructions_rerun.normal.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "bytes": 6816,
+      "path": "constructions_rerun.optimized.json",
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    }
+  ],
+  "independent_evidence": {
+    "history_depth_control": 8,
+    "history_seeds": 172,
+    "literal_actual_S_R_transfers": 2196,
+    "nonnegative_states_checked": 14520,
+    "normal_optimized_byte_identical": true,
+    "parent_universe": "all labelled parents of orders1..4 and every cut"
+  },
+  "limits": [
+    "No all-count tournament constructor.",
+    "No unrestricted no-go for richer gadgets.",
+    "No inference about meeting every residue modulo a fixed modulus.",
+    "The producer theorem assumes seed F>=5; the optional small-seed extension is not part of this frozen packet."
+  ],
+  "producer_manifest_sha256": "7c85d8ae854381540f51e9d3b6b200f000fe12f7c30e02867f7286ac4d36b9a1",
+  "producer_payloads_verified": 14,
+  "proof_sha256": "5e342fac18537bb234c432b4c8b675ed0ee4d4b41af9dfd67c49f19c12204a6a",
+  "reviewed_claims": [
+    "Actual append/re-mark graph operations S0 and R1 have the stated positive-coordinate laws, with P allowed empty in q.",
+    "From a nonnegative integral seed F>=5, any binary history of length k>=4 has only S in its first k-1 positions; at most one scalar output occurs at each such depth.",
+    "A finite actual seed bank with F>=5 yields O(log X) outputs at most X in this exact binary language.",
+    "Named neutral S1 and reset Z, plus neutral S0/R1 moves, enter/preserve the dead set and add no outputs under the specified neutral-or-binary step restriction."
+  ],
+  "source_snapshots_byte_identical_to_pinned_commit": 5,
+  "status": "PASS"
+}

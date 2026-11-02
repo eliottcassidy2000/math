@@ -1,0 +1,78 @@
+{
+  "proof_corruption": "minimal_gap/PROOF.md",
+  "scientific_mutations": [
+    {
+      "after": "check(prime(593) and 7*593 == 4153,'threshold prime')",
+      "before": "check(prime(593) and 7*593 == 4151,'threshold prime')",
+      "label": "false-symmetric-threshold",
+      "reason": "threshold prime",
+      "script": "minimal_gap/verify.py"
+    },
+    {
+      "after": "need(F(S(v))==F(R(v))==2*F(v)+I(v)+2,'count identity')",
+      "before": "need(F(S(v))==F(R(v))==2*F(v)+I(v),'count identity')",
+      "label": "false-binary-response",
+      "reason": "count identity",
+      "script": "constructions/verify_binary.py"
+    },
+    {
+      "after": "need(len(values)==192 and min(values)==4153,'rooted substitution minimum')",
+      "before": "need(len(values)==192 and min(values)==4151,'rooted substitution minimum')",
+      "label": "false-independent-substitution-minimum",
+      "reason": "rooted substitution minimum",
+      "script": "independent/verify_symmetry.py"
+    },
+    {
+      "after": "need(F(Z(v))==F(v) and I(Z(v))==F(v),'reset identity')",
+      "before": "need(F(Z(v))==F(v) and I(Z(v))==-F(v),'reset identity')",
+      "label": "false-independent-neutral-reset",
+      "reason": "reset identity",
+      "script": "independent/verify_binary_independent.py"
+    }
+  ],
+  "scientific_tests": [
+    {
+      "kind": "integrity",
+      "label": "preserved-checkpoint1-replay",
+      "output": "REPLAY_CHECKPOINT1.json",
+      "script": "replay_checkpoint1.py"
+    },
+    {
+      "label": "prime-lane-asymmetry-exact",
+      "output": "minimal_gap/verification.json",
+      "script": "minimal_gap/verify.py"
+    },
+    {
+      "label": "actual-binary-language-exact",
+      "output": "constructions/normal.json",
+      "script": "constructions/verify_binary.py"
+    },
+    {
+      "label": "independent-marked-module-exact",
+      "output": "independent/symmetry.normal.json",
+      "script": "independent/verify_symmetry.py"
+    },
+    {
+      "label": "independent-actual-constructor-exact",
+      "output": "independent/binary.normal.json",
+      "script": "independent/verify_binary_independent.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "checkpoint2-frozen-payloads",
+      "output": "AUDIT_INTEGRITY_CHECKPOINT2.json",
+      "script": "verify_checkpoint2_integrity.py"
+    },
+    {
+      "argv": [
+        "--manifest",
+        "SOURCE_PINS_CHECKPOINT2.json"
+      ],
+      "kind": "integrity",
+      "label": "source-git-blob-identities",
+      "output": "SOURCE_INTEGRITY_CHECKPOINT2.json",
+      "script": "verify_source_pins.py"
+    }
+  ],
+  "scope": "All-witness prime/7p symmetry restrictions and the exact S0/R1 binary-growth language with named neutral moves; not universal tournament realization or an unrestricted no-go for richer gadgets."
+}

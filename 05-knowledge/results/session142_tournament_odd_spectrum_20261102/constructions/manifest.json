@@ -1,0 +1,75 @@
+{
+  "scope": "S0/R1 binary-growth obstruction, plus specified neutral S1/reset moves; actual positive rays are inherited",
+  "files": [
+    {
+      "path": "BINARY_NO_GO.md",
+      "bytes": 8954,
+      "sha256": "5e342fac18537bb234c432b4c8b675ed0ee4d4b41af9dfd67c49f19c12204a6a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1122,
+      "sha256": "1918661769a82efee24b415c0cca80bbe47e770fe4d5e207ed27f5710f45d269"
+    },
+    {
+      "path": "SOURCE_PINS.json",
+      "bytes": 2194,
+      "sha256": "d5bbe1f76840af1bf9aefc506388cd7f11c409f822b5a2b4e6aadc3b8f10aedd"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 1145,
+      "sha256": "8088d725b69a496db6de844787dbee973523084ad9811cd181c2bcd74c9efeb4"
+    },
+    {
+      "path": "normal.json",
+      "bytes": 6816,
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "path": "optimized.json",
+      "bytes": 6816,
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "path": "relocated.normal.json",
+      "bytes": 6816,
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "path": "relocated.optimized.json",
+      "bytes": 6816,
+      "sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "path": "sources/S134_CONSTRUCTOR_PROOF.md",
+      "bytes": 14020,
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    },
+    {
+      "path": "sources/S134_RADIX_PROOF.md",
+      "bytes": 10040,
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4"
+    },
+    {
+      "path": "sources/S137_BOUNDED_INTERIOR.md",
+      "bytes": 8845,
+      "sha256": "b022aa9af14cd97d3ce1169c7f18b1a0d11830918b005e63fd801efd4847ee6c"
+    },
+    {
+      "path": "sources/S137_CONSTRUCTORS_THEORY.md",
+      "bytes": 18929,
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    {
+      "path": "sources/THM4749.md",
+      "bytes": 9303,
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8"
+    },
+    {
+      "path": "verify_binary.py",
+      "bytes": 5571,
+      "sha256": "bbaaec382697a7727db248c1c9a54f7b047e18908cd5a61e7448802a3dd7630b"
+    }
+  ]
+}

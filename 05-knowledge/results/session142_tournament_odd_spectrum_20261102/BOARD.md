@@ -27,3 +27,19 @@ The method used is the repository's connection contract and quotient-loss
 ledger. This packet does not promote a new universal meta-pattern or alter
 other sessions' proof status. Follow-up ideas are separated from proved and
 finite-exact statements, and inherited citations retain their own limits.
+
+## Checkpoint2 comparison against the whole board
+
+- The prime-lane anchor now forbids **all** nontrivial symmetry for prime H>3;
+  a circulant-only search cannot settle it. The7p lane first permits a
+  symmetric prime quotient at593, with an actual sharp witness.
+- The exclusion lane's strong minimum becomes a symmetry limiter, not a new
+  realization theorem. SCC padding preserves the automorphism restriction.
+- The arithmetic monoid still identifies missing atoms but creates no new
+  prime. Group divisibility supplies a different, orthogonal constraint.
+- The finite-state lane is sharpened to an all-depth language theorem:
+  two legal mark choices do not mean two count descendants. The positive
+  rays remain useful witnesses but logarithmic coverage is not cofinite.
+- The Jacobian lane's missing source guard is now operational: preserve the
+  full marked state and exhibit a new legal step that restores binary
+  eligibility. Formal image dimension cannot substitute for that step.

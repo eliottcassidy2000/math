@@ -1,0 +1,214 @@
+{
+  "circulants": {
+    "5": [
+      {
+        "H": 15,
+        "bits": [
+          0,
+          0
+        ]
+      },
+      {
+        "H": 15,
+        "bits": [
+          0,
+          1
+        ]
+      },
+      {
+        "H": 15,
+        "bits": [
+          1,
+          0
+        ]
+      },
+      {
+        "H": 15,
+        "bits": [
+          1,
+          1
+        ]
+      }
+    ],
+    "7": [
+      {
+        "H": 175,
+        "bits": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "H": 189,
+        "bits": [
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "H": 175,
+        "bits": [
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "H": 175,
+        "bits": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "H": 175,
+        "bits": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "H": 175,
+        "bits": [
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "H": 189,
+        "bits": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "H": 175,
+        "bits": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "claims": "finite checks; theorems proved in PROOF.md",
+  "floor_bases": {
+    "seven_times_order": [
+      [
+        11,
+        225
+      ],
+      [
+        12,
+        375
+      ],
+      [
+        13,
+        625
+      ]
+    ],
+    "strict_order": [
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        15
+      ]
+    ]
+  },
+  "module_tables": {
+    "5_orbit_3_quotient": {
+      "H_histogram": {
+        "135": 8
+      },
+      "strong_quotients": 2,
+      "substitutions": 8
+    },
+    "7_orbit_3_quotient": {
+      "H_histogram": {
+        "2163": 12,
+        "2205": 4
+      },
+      "strong_quotients": 2,
+      "substitutions": 16
+    },
+    "7_orbit_4_quotient": {
+      "H_histogram": {
+        "4151": 72,
+        "4221": 24,
+        "5789": 72,
+        "5859": 24
+      },
+      "strong_quotients": 24,
+      "substitutions": 192
+    }
+  },
+  "sharp_witness": {
+    "H": 4151,
+    "exact_group_order_by_proof": 7,
+    "prime_quotient": 593,
+    "rows": [
+      142,
+      156,
+      184,
+      240,
+      225,
+      195,
+      135,
+      512,
+      255,
+      383
+    ],
+    "visible_automorphisms": 7
+  },
+  "small_literal_controls": [
+    {
+      "marked_strong4_checks": 0,
+      "nontrivial_prime_automorphisms": 0,
+      "order": 1,
+      "prime_gt3_count": 0,
+      "tournaments": 1
+    },
+    {
+      "marked_strong4_checks": 0,
+      "nontrivial_prime_automorphisms": 0,
+      "order": 2,
+      "prime_gt3_count": 0,
+      "tournaments": 2
+    },
+    {
+      "marked_strong4_checks": 0,
+      "nontrivial_prime_automorphisms": 0,
+      "order": 3,
+      "prime_gt3_count": 0,
+      "tournaments": 8
+    },
+    {
+      "marked_strong4_checks": 96,
+      "nontrivial_prime_automorphisms": 0,
+      "order": 4,
+      "prime_gt3_count": 24,
+      "tournaments": 64
+    },
+    {
+      "marked_strong4_checks": 2720,
+      "nontrivial_prime_automorphisms": 0,
+      "order": 5,
+      "prime_gt3_count": 480,
+      "tournaments": 1024
+    }
+  ],
+  "status": "PASS"
+}

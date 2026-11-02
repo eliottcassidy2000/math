@@ -64,3 +64,46 @@ Later repository constructive prefixes, when used, retain their own source
 certificates and do not promote the universal claim. No unrelated current
 order-eleven claim, LRC(14), planar-Jacobian conjecture or earlier session's
 approval is altered or promoted by this release.
+
+## Checkpoint2: the new structural restrictions
+
+[Prime-lane proof](minimal_gap/PROOF.md) proves that **every** actual tournament
+with H=p prime, p>3, is asymmetric, including those padded by arbitrary
+singleton strong components. The free automorphism action on Hamiltonian
+vertex words gives |Aut(T)| dividing H; the cited strong minimum makes the
+core smaller than p, excluding an order-p permutation.
+
+For H=7p and prime p>=11, only group orders1 or7 remain. The complete small
+cyclic-orbit tables plus an injective merge of disjoint path words give the
+sharp first symmetric prime quotient: every7p witness for odd prime p<593
+is asymmetric, while the actual ten-vertex rows
+`[142,156,184,240,225,195,135,512,255,383]` have H=4151=7*593 and exactly
+seven automorphisms. These are all-witness restrictions, not existence for
+every prescribed p or7p.
+
+[Constructor-language proof](constructions/BINARY_NO_GO.md) addresses the
+actual inherited append/re-mark operations S0,R1 on positive marked states
+(C,L,g,t). Both choices have the same next count2F+I, where F=2C+g+t and
+I=2L+g-t. Eligibility for a binary step is exactly I=+/-1. An R cannot
+start three binary steps at F>=5, and at depth k>=4 all first k-1 operations
+must be S. Thus finite seed banks have only O(log X) reachable binary-growth
+outputs below X, despite permitting arbitrary operation depth and state
+choices. This is an all-depth proof, not a finite-search extrapolation.
+
+The two literal H=5 seeds recover rays2^(k+2)+1 and6*2^k-1. Both rays are
+inherited. The new conclusion is the obstruction for this exact operation
+alphabet, including arbitrary named-neutral S1/reset interleavings: those
+enter an invariant state set from which binary growth cannot resume. Other
+neutral gadgets, extra vertices, nonuniform attachments,
+old-edge edits, extra marks or older-vertex re-marking are outside it.
+A useful next construction must retain a legal marked state while adding
+an operation able to renew the missing I=+/-1 branching resource.
+
+### Current finite-prefix provenance
+
+The cited Royle/local order11 prefixes above are not the best later repository
+construction bound. The inherited [October31 constructive packet](../square_sum_spectrum_overnight_20261031d/README.md)
+records all allowed odd values through99,999,999. That100million scan is
+**inherited and not rerun here**, not a Session142 numerical advance and not
+an infinite completeness theorem. Source-preserving individual recovered
+witnesses are a separate later checkpoint.

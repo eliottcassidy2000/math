@@ -1,0 +1,44 @@
+{
+  "pinned_sources": [
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/constructor/PROOF.md",
+      "local_copy": "sources/S134_CONSTRUCTOR_PROOF.md",
+      "sha256": "20a3926688d9048cab4ddda61db9eb1c535e95dda038cec2601688033cc618f1"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/radix_probe/PROOF.md",
+      "local_copy": "sources/S134_RADIX_PROOF.md",
+      "sha256": "883c78579df810f34d1863a1905c30b82be4a037287ca22f1e598d303577b9e4"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/THEORY.md",
+      "local_copy": "sources/S137_CONSTRUCTORS_THEORY.md",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/BOUNDED_INTERIOR.md",
+      "local_copy": "sources/S137_BOUNDED_INTERIOR.md",
+      "sha256": "b022aa9af14cd97d3ce1169c7f18b1a0d11830918b005e63fd801efd4847ee6c"
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+      "path": "01-canon/theorems/THM-4749-the-repunit-degree-law-phi-2-of-2-is-the-triangle-phi-3-of-2-is-the-gap-and-fermat-products-reverse-the-order.md",
+      "local_copy": "sources/THM4749.md",
+      "sha256": "e5b3668b30c04f79d25287c238614fffee1c705b13135fc7cc877334955e46d8"
+    }
+  ],
+  "external_scope_source": {
+    "url": "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf",
+    "section": "6.5, Conjecture 6.2",
+    "claim": "All odd values except 7 and 21 is stated as an open conjecture, not a theorem; construction lane claims no literature priority."
+  }
+}

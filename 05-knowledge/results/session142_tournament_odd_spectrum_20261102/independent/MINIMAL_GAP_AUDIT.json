@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "bytes": 3334,
+      "path": "verify_symmetry.py",
+      "sha256": "812a7b6f8a8b09e5a75fe1e550904b01da2bc06758ba9765956aa43168e29f60"
+    },
+    {
+      "bytes": 647,
+      "path": "symmetry.normal.json",
+      "sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    {
+      "bytes": 647,
+      "path": "symmetry.optimized.json",
+      "sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    {
+      "bytes": 3247,
+      "path": "minimal_gap_rerun.normal.json",
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "bytes": 3247,
+      "path": "minimal_gap_rerun.optimized.json",
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    }
+  ],
+  "independent_substitution_values": [
+    4151,
+    4221,
+    5789,
+    5859
+  ],
+  "limits": [
+    "Not a full-spectrum completeness proof.",
+    "Not an external novelty or priority certificate.",
+    "No local formal proof build."
+  ],
+  "normal_optimized_byte_identical": true,
+  "producer_manifest_sha256": "da1dfbb9d532426d12952a7e8e32b0a15d377635f66f3a9e2b7e4f28afc91e87",
+  "proof_gates": [
+    "SCC padding fixed pointwise",
+    "free automorphism action on Hamiltonian vertex words",
+    "Busch floor bounds and Cauchy exclusions",
+    "deterministic path-merge injection",
+    "elementary marked strong-four lemma",
+    "p=5 and p=7 exceptions",
+    "entire actual seven-orbit module retained by induced lift",
+    "all 192 rooted strong-four substitutions enumerated"
+  ],
+  "proof_sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db",
+  "reviewed_claims": [
+    "Every tournament of prime Hamiltonian-path count p>3 is asymmetric.",
+    "For prime p>=11, every H=7p witness has automorphism group order1 or7.",
+    "For odd prime p<593, every H=7p witness is asymmetric; H=4151=7*593 has an actual strong ten-vertex witness with automorphism group order7."
+  ],
+  "source_snapshots_sha256_and_git_blob_checked": 9,
+  "status": "PASS"
+}

@@ -1,0 +1,55 @@
+{
+  "circulant_and_triangle_values": {
+    "5": [
+      [
+        15,
+        135
+      ]
+    ],
+    "7": [
+      [
+        175,
+        2163
+      ],
+      [
+        189,
+        2205
+      ]
+    ]
+  },
+  "cyclic_automorphism": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    0,
+    7,
+    8,
+    9
+  ],
+  "hostile_one_arc_breaks_symmetry": true,
+  "minimum": 4151,
+  "prime_quotient": 593,
+  "rooted_strong4_substitutions": 192,
+  "status": "PASS",
+  "substitution_values": [
+    4151,
+    4221,
+    5789,
+    5859
+  ],
+  "threshold_witness_rows": [
+    142,
+    156,
+    184,
+    240,
+    225,
+    195,
+    135,
+    512,
+    255,
+    383
+  ]
+}

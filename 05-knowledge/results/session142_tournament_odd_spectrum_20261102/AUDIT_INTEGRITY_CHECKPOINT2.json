@@ -1,0 +1,10 @@
+{
+  "scope": "Frozen second-checkpoint producer and independent-audit bytes only; all-size claims use reviewed written proofs.",
+  "status": "PASS",
+  "verified_payload_selections": {
+    "constructions/manifest.json": 14,
+    "independent/CONSTRUCTIONS_AUDIT.json": 5,
+    "independent/MINIMAL_GAP_AUDIT.json": 5,
+    "minimal_gap/manifest.json": 19
+  }
+}

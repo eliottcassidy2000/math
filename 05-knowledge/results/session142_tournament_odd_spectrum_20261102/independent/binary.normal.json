@@ -1,0 +1,22 @@
+{
+  "RR_allowed_initial_F": [
+    1,
+    3
+  ],
+  "RS_allowed_initial_F": [
+    1
+  ],
+  "actual_source_checks": {
+    "S_R_graph_transfers": 2196,
+    "counter": "literal permutations and subset covers",
+    "parent_orders": "1..4"
+  },
+  "bounded_nonnegative_states": 14520,
+  "dead_set_neutral_extension": true,
+  "histories_checked": 298,
+  "history_seeds": 172,
+  "linear_identities_checked_on_basis": 4,
+  "max_depth": 8,
+  "scope": "Identities plus elementary proof give all-state no-go; census is only a control. O(log X) image size does not imply failure to meet every residue modulo a fixed modulus.",
+  "status": "PASS"
+}

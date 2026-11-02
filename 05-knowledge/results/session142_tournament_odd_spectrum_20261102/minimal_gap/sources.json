@@ -1,0 +1,69 @@
+{
+  "bounded_duplication_audit_only": true,
+  "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+  "sources": [
+    {
+      "bytes": 15032,
+      "git_blob": "56a5b0b8b0a3a264cef4e95eb947fbfb62dbac4f",
+      "literal_snapshot": "source_snapshots/01-spectrum.md",
+      "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    {
+      "bytes": 22524,
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "literal_snapshot": "source_snapshots/02-two-prime-lanes.md",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "bytes": 7232,
+      "git_blob": "e7625c6090361a19bc70c28ae2d22901a57f37f9",
+      "literal_snapshot": "source_snapshots/03-vertex-transitive-prime.md",
+      "path": "01-canon/theorems/THM-4861-the-five-fermat-primes-are-hamiltonian-path-counts-of-tournaments-with-least-orders-3-4-6-8-11-a-vertex-transitive-tournament-has-a-prime-count-only-for-c3-and-fermat-primes-are-free-vertices-of-the-prime-square-sum-graph.md",
+      "sha256": "2a671ed57d72b1824efa7946a6400a1284e2443f6e7c1141469ea4b88a0f447a"
+    },
+    {
+      "bytes": 14766,
+      "git_blob": "100516c4f45217b8c22df9c8612853c8b8a06c60",
+      "literal_snapshot": "source_snapshots/04-session133-core.md",
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    {
+      "bytes": 15815,
+      "git_blob": "ce2ee9bc5f236c6717287a25c780823e258c6378",
+      "literal_snapshot": "source_snapshots/05-session134-descent.md",
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/descent/THEORY.md",
+      "sha256": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7"
+    },
+    {
+      "bytes": 12180,
+      "git_blob": "45b0a0625f7e9f989926034202fdbb2382f7c7e5",
+      "literal_snapshot": "source_snapshots/06-session136-spectrum.md",
+      "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/spectrum_structure/THEORY.md",
+      "sha256": "d1d3e488020d17c2c2859e8e2e6015909a6c984b6fc118d128218f6cd3adda50"
+    },
+    {
+      "bytes": 8895,
+      "git_blob": "854edd385ee613704dce8fdddf6bcc1991730f57",
+      "literal_snapshot": "source_snapshots/07-session136-local-closure.md",
+      "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/local_closure/PROOF.md",
+      "sha256": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3"
+    },
+    {
+      "bytes": 18929,
+      "git_blob": "46229a39575cb575c1c9e020fbc66c40e053f954",
+      "literal_snapshot": "source_snapshots/08-session137-constructors.md",
+      "path": "05-knowledge/results/session137_overnight_proof_frontiers_20261102/constructors/THEORY.md",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    {
+      "bytes": 14222,
+      "git_blob": "97509d0195c27aa7f693de4d789508d64b4cf933",
+      "literal_snapshot": "source_snapshots/09-session138-actual-contexts.md",
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/exact_resources/PROOF.md",
+      "sha256": "004b82bcb840ea96f58c8201f4c912047249b2746be901940c148c5dac23c67a"
+    }
+  ]
+}

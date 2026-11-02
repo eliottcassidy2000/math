@@ -1,0 +1,199 @@
+{
+  "checkpoint": "2",
+  "expected_rejections": 10,
+  "fresh_relocation": true,
+  "lane_integrity_positive_runs": 6,
+  "normal_and_optimized": true,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "preserved-checkpoint1-replay",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "a560be4258eb70f13d37228941ade98f703b693c548d0af994d073e1f0b0df5a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "prime-lane-asymmetry-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "expected_rejection": false,
+      "label": "actual-binary-language-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-marked-module-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-actual-constructor-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "79e503c6003180dcaf73c488cc66be129be7748c7e39fa0386a7f177a14e3613"
+    },
+    {
+      "expected_rejection": false,
+      "label": "checkpoint2-frozen-payloads",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "e3ae6945124a054e1d7df3062e389ebccdb277b07abf0fb1b025b6aea50d0438"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-git-blob-identities",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2b801446ff75dda0746ba0447d621d2d3c1a80153bd0d6e63f6e75a53e07ada5"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "c7f17f6c50032b5cddf35b99cebb9cc166e3ffcec66565b50d8274454d408cba"
+    },
+    {
+      "expected_rejection": false,
+      "label": "preserved-checkpoint1-replay",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "a560be4258eb70f13d37228941ade98f703b693c548d0af994d073e1f0b0df5a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "prime-lane-asymmetry-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    {
+      "expected_rejection": false,
+      "label": "actual-binary-language-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "f20e98dbafd4c04a419bcd064e722fad73f1745425afa5f2b819d7fef7bb9731"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-marked-module-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-actual-constructor-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "79e503c6003180dcaf73c488cc66be129be7748c7e39fa0386a7f177a14e3613"
+    },
+    {
+      "expected_rejection": false,
+      "label": "checkpoint2-frozen-payloads",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "e3ae6945124a054e1d7df3062e389ebccdb277b07abf0fb1b025b6aea50d0438"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-git-blob-identities",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2b801446ff75dda0746ba0447d621d2d3c1a80153bd0d6e63f6e75a53e07ada5"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "c7f17f6c50032b5cddf35b99cebb9cc166e3ffcec66565b50d8274454d408cba"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-symmetric-threshold",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-symmetric-threshold",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-binary-response",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-binary-response",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-substitution-minimum",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-substitution-minimum",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-neutral-reset",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-independent-neutral-reset",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 8,
+  "scope": "All-witness prime/7p symmetry restrictions and the exact S0/R1 binary-growth language with named neutral moves; not universal tournament realization or an unrestricted no-go for richer gadgets.",
+  "source_files_verified": 106,
+  "source_integrity_positive_runs": 2,
+  "source_manifest_sha256": "01c1761ed0b70f2cb0efd31720c215d9b228b79f5c5491d7b27dc0443fc44948",
+  "status": "PASS",
+  "total_executions": 26,
+  "unrelated_cwd": true
+}

@@ -33,3 +33,22 @@ links. The full repository checker was **not run**, because it reads the
 central mistakes ledger. This is not a full-repository documentation pass.
 No Lean/Isabelle build, global spectrum proof, unrestricted construction
 classification or independent rerun of the large inherited prefix is claimed.
+
+
+## Checkpoint2
+
+`python3 -B replay_checkpoint2.py` uses106 pinned selected files and reruns
+the preserved checkpoint1 wrapper. New ordinary/optimized scientific runs
+check the symmetry tables and actual binary language, plus independent
+matrix/recursive counts and literal path-word/cover graph transfers. The
+independent construction audit covers2196 actual S/R transfers on all
+labelled parents of orders1..4 and every cut. Infinite statements remain
+written-proof claims with the audited scope, not extrapolations.
+
+The second wrapper has26 top-level executions:16 positive runs and10 expected
+rejections. Hostiles falsify the prime threshold, binary response identity,
+independent substitution minimum and neutral reset identity; same-size
+proof corruption must fail. The first wrapper's nested checks are additional.
+Source Git-blob/SHA identities and exact frozen producer/auditor selections
+are checked offline. Archived checkpoint1 manifests describe its original
+packet, while current SHA256SUMS seals both checkpoints and updated syntheses.

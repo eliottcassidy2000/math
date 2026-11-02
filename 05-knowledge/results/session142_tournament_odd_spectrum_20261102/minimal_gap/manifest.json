@@ -1,0 +1,82 @@
+{
+  "files": {
+    "../independent/symmetry.normal.json": {
+      "bytes": 647,
+      "sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    "../independent/symmetry.optimized.json": {
+      "bytes": 647,
+      "sha256": "8903953afc2cc5b7e5035efca409944b21f6ef4083d20495c165600de9e72971"
+    },
+    "../independent/verify_symmetry.py": {
+      "bytes": 3334,
+      "sha256": "812a7b6f8a8b09e5a75fe1e550904b01da2bc06758ba9765956aa43168e29f60"
+    },
+    "PROOF.md": {
+      "bytes": 13182,
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db"
+    },
+    "README.md": {
+      "bytes": 745,
+      "sha256": "2607b96b350fff9caec47ac77ff05561054ea33b198401a13c6a0cdf4f2961cc"
+    },
+    "VALIDATION.md": {
+      "bytes": 1375,
+      "sha256": "76940c13544faf67dc77a2b0e60b22c17943be1b12869e7f2e631df9ecdf16f8"
+    },
+    "source_snapshots/01-spectrum.md": {
+      "bytes": 15032,
+      "sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    "source_snapshots/02-two-prime-lanes.md": {
+      "bytes": 22524,
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    "source_snapshots/03-vertex-transitive-prime.md": {
+      "bytes": 7232,
+      "sha256": "2a671ed57d72b1824efa7946a6400a1284e2443f6e7c1141469ea4b88a0f447a"
+    },
+    "source_snapshots/04-session133-core.md": {
+      "bytes": 14766,
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    "source_snapshots/05-session134-descent.md": {
+      "bytes": 15815,
+      "sha256": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7"
+    },
+    "source_snapshots/06-session136-spectrum.md": {
+      "bytes": 12180,
+      "sha256": "d1d3e488020d17c2c2859e8e2e6015909a6c984b6fc118d128218f6cd3adda50"
+    },
+    "source_snapshots/07-session136-local-closure.md": {
+      "bytes": 8895,
+      "sha256": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3"
+    },
+    "source_snapshots/08-session137-constructors.md": {
+      "bytes": 18929,
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    "source_snapshots/09-session138-actual-contexts.md": {
+      "bytes": 14222,
+      "sha256": "004b82bcb840ea96f58c8201f4c912047249b2746be901940c148c5dac23c67a"
+    },
+    "sources.json": {
+      "bytes": 3512,
+      "sha256": "bbde4ae360f7dc50f05126ae36b2c48418283012c4b7c5ee7bddfff815644903"
+    },
+    "verification.json": {
+      "bytes": 3247,
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    "verification.optimized.json": {
+      "bytes": 3247,
+      "sha256": "15ea998687c36504ff82ced60ec77cf68b6c71adf2ce0c04ffd2a5e1e9bb5efa"
+    },
+    "verify.py": {
+      "bytes": 8463,
+      "sha256": "aaf38cfa57f5b7b5a83100c03eeb4e81a524100ef6458c3164fad4e1adcd5a8a"
+    }
+  },
+  "source_commit": "91cc1210ed2bc94ca52686b8091c0eec2c57a441",
+  "status": "proved structural restrictions, finite-exact tables, global completeness open"
+}

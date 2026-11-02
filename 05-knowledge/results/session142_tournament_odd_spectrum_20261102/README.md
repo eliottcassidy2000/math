@@ -32,3 +32,17 @@ Run `python3 -B replay_checkpoint1.py` from any working directory, and
 their original bytes, including historical claims that this packet scopes
 or corrects. The narrow elliptic-Jacobian canon repair is independently
 reviewed and byte-pinned; no central mistakes ledger was read or edited.
+
+## Checkpoint2: asymmetry and legal constructor language
+
+[Prime-lane proof](minimal_gap/PROOF.md): every prime-count witness H=p>3
+is asymmetric; for prime p>=11, H=7p permits group orders1 or7. The first
+symmetric7p prime quotient is sharply593, attained by an explicit strong
+order10 witness with H4151 and group order7.
+
+[Constructor proof](constructions/BINARY_NO_GO.md): finite actual seed banks
+of count at least5 under singleton append/re-mark binary growth yield only
+O(log X) outputs, even allowing the specified neutral S1/reset interleavings.
+This does not exclude richer gadgets. Two actual positive rays are recovered
+and credited to their inherited sources. See [checkpoint2](CHECKPOINT2.md).
+Run `python3 -B replay_checkpoint2.py` for the combined portable checks.

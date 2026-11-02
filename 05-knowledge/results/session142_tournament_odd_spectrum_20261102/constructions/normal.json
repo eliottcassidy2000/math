@@ -1,0 +1,411 @@
+{
+  "actual_witnesses": [
+    {
+      "continuations": [
+        {
+          "H": 9,
+          "I": -1,
+          "eligible_for_next": true,
+          "positive_state": [
+            4,
+            0,
+            0,
+            1
+          ],
+          "word": "S"
+        },
+        {
+          "H": 9,
+          "I": -3,
+          "eligible_for_next": false,
+          "positive_state": [
+            2,
+            0,
+            1,
+            4
+          ],
+          "word": "R"
+        },
+        {
+          "H": 17,
+          "I": -1,
+          "eligible_for_next": true,
+          "positive_state": [
+            8,
+            0,
+            0,
+            1
+          ],
+          "word": "SS"
+        },
+        {
+          "H": 17,
+          "I": -7,
+          "eligible_for_next": false,
+          "positive_state": [
+            4,
+            0,
+            1,
+            8
+          ],
+          "word": "SR"
+        },
+        {
+          "H": 15,
+          "I": -5,
+          "eligible_for_next": false,
+          "positive_state": [
+            5,
+            0,
+            0,
+            5
+          ],
+          "word": "RS"
+        },
+        {
+          "H": 15,
+          "I": -1,
+          "eligible_for_next": true,
+          "positive_state": [
+            3,
+            0,
+            4,
+            5
+          ],
+          "word": "RR"
+        },
+        {
+          "H": 25,
+          "I": -5,
+          "eligible_for_next": false,
+          "positive_state": [
+            10,
+            0,
+            0,
+            5
+          ],
+          "word": "RSS"
+        },
+        {
+          "H": 29,
+          "I": -9,
+          "eligible_for_next": false,
+          "positive_state": [
+            10,
+            0,
+            0,
+            9
+          ],
+          "word": "RRS"
+        },
+        {
+          "H": 65,
+          "I": -1,
+          "eligible_for_next": true,
+          "positive_state": [
+            32,
+            0,
+            0,
+            1
+          ],
+          "word": "SSSS"
+        }
+      ],
+      "cut": 1,
+      "full_masks": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "native_state": [
+        1,
+        5,
+        4,
+        0
+      ],
+      "neutral_S1": {
+        "cut": 9,
+        "native_state": [
+          1,
+          5,
+          9,
+          1
+        ],
+        "parent_masks": [
+          14,
+          12,
+          8,
+          0
+        ],
+        "positive_state": [
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      "neutral_reset": {
+        "cut": 0,
+        "native_state": [
+          5,
+          5,
+          0,
+          0
+        ],
+        "parent_masks": [
+          6,
+          12,
+          8,
+          1
+        ],
+        "positive_state": [
+          0,
+          0,
+          0,
+          5
+        ]
+      },
+      "parent_masks": [
+        6,
+        4,
+        0
+      ],
+      "positive_state": [
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "continuations": [
+        {
+          "H": 11,
+          "I": 1,
+          "eligible_for_next": true,
+          "positive_state": [
+            5,
+            1,
+            0,
+            1
+          ],
+          "word": "S"
+        },
+        {
+          "H": 11,
+          "I": -3,
+          "eligible_for_next": false,
+          "positive_state": [
+            3,
+            0,
+            1,
+            4
+          ],
+          "word": "R"
+        },
+        {
+          "H": 23,
+          "I": 1,
+          "eligible_for_next": true,
+          "positive_state": [
+            11,
+            1,
+            0,
+            1
+          ],
+          "word": "SS"
+        },
+        {
+          "H": 23,
+          "I": -9,
+          "eligible_for_next": false,
+          "positive_state": [
+            6,
+            0,
+            1,
+            10
+          ],
+          "word": "SR"
+        },
+        {
+          "H": 19,
+          "I": -5,
+          "eligible_for_next": false,
+          "positive_state": [
+            7,
+            0,
+            0,
+            5
+          ],
+          "word": "RS"
+        },
+        {
+          "H": 19,
+          "I": -3,
+          "eligible_for_next": false,
+          "positive_state": [
+            4,
+            0,
+            4,
+            7
+          ],
+          "word": "RR"
+        },
+        {
+          "H": 33,
+          "I": -5,
+          "eligible_for_next": false,
+          "positive_state": [
+            14,
+            0,
+            0,
+            5
+          ],
+          "word": "RSS"
+        },
+        {
+          "H": 35,
+          "I": -11,
+          "eligible_for_next": false,
+          "positive_state": [
+            12,
+            0,
+            0,
+            11
+          ],
+          "word": "RRS"
+        },
+        {
+          "H": 95,
+          "I": 1,
+          "eligible_for_next": true,
+          "positive_state": [
+            47,
+            1,
+            0,
+            1
+          ],
+          "word": "SSSS"
+        }
+      ],
+      "cut": 3,
+      "full_masks": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "native_state": [
+        1,
+        5,
+        6,
+        0
+      ],
+      "neutral_S1": {
+        "cut": 11,
+        "native_state": [
+          1,
+          5,
+          13,
+          1
+        ],
+        "parent_masks": [
+          14,
+          12,
+          8,
+          0
+        ],
+        "positive_state": [
+          2,
+          4,
+          1,
+          0
+        ]
+      },
+      "neutral_reset": {
+        "cut": 0,
+        "native_state": [
+          5,
+          5,
+          0,
+          0
+        ],
+        "parent_masks": [
+          6,
+          4,
+          8,
+          3
+        ],
+        "positive_state": [
+          0,
+          0,
+          0,
+          5
+        ]
+      },
+      "parent_masks": [
+        6,
+        4,
+        0
+      ],
+      "positive_state": [
+        2,
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "claims": [
+    "At F>=5 no R can start three binary steps",
+    "At depth>=4 first k-1 operations all S",
+    "Finite seed banks yield O(log X) outputs",
+    "Neutral S1/reset interleavings add no outputs"
+  ],
+  "formal_checked_history_edges_through_depth8": 1352,
+  "formal_coordinate_box": "0..6 each, h>=1",
+  "formal_eligible_seeds_F_ge5": 199,
+  "scope": "Two-operation S0/R1 binary-growth language only; unrestricted spectrum OPEN",
+  "status": "PASS",
+  "symbolic_RR_cases": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "symbolic_RS_cases": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ]
+  ]
+}

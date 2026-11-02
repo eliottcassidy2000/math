@@ -36,3 +36,33 @@ certificate are rechecked as algebra. Source attribution and external formal
 claims are separate. No map from that polynomial's fibers to actual
 Hamiltonian-path witnesses has been supplied. Shared terminology or a
 constant determinant is not the missing realization theorem.
+
+## Automorphism action -> actual prime-lane search constraint
+
+- **Source:** an actual tournament and its action on Hamiltonian vertex words.
+- **Map:** decompose into free automorphism orbits, retaining the strong core.
+- **Preserved:** exact divisibility |Aut(T)| divides H(T).
+- **Destroyed:** explicit paths and construction coordinates.
+- **Sidecar:** cited strong-order floor, fixed singleton padding, and actual
+  induced cyclic modules; no vertex-transitivity assumption is inserted.
+- **Test:** prime H>3 forces trivial automorphism group; the explicit H4151
+  witness certifies the sharp symmetric7p branch with group order7.
+
+## Actual marked constructor -> operation-language obstruction
+
+- **Source:** a real parent tournament with a marked external vertex.
+- **Map:** append a singleton and either keep the mark or move it to the
+  fresh vertex, recording(C,L,g,t) after each operation.
+- **Preserved:** exact graph reconstruction and count update F'=2F+I.
+- **Destroyed by scalar F:** the eligibility coordinate I and the next
+  state's ability to continue a binary-growth history.
+- **Sidecar:** all four nonnegative marked coordinates and the precise
+  operation word; arbitrary old-vertex re-marking is not in this alphabet.
+- **Test:** both mark choices have the same immediate scalar output; the
+  R choice cannot sustain three binary steps when F>=5; the named neutral
+  S1/reset steps enter an invariant set with no future binary growth. An unbounded
+  operation language can therefore have only logarithmic output growth.
+
+This obstruction explains why a Jacobian or formal inverse on the state
+space does not itself create legal tournament branches. It leaves a concrete
+research obligation rather than claiming that all richer constructors fail.
