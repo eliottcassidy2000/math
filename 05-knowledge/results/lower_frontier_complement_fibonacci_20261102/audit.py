@@ -77,11 +77,15 @@ def ledger():
     hostile11 = 499*m1-320*m2+80*m3-20*m4+5*m5+80*p21
     need(hostile11 == -56 and F(-hostile11, 320*wedge) == F(7, 40),
          'order eleven bare graph obstruction')
+    matching11 = [499*r-320*comb(r, 2)+80*comb(r, 3)-20*comb(r, 4)
+                  +5*comb(r, 5) for r in range(6)]
+    need(matching11 == [0, 499, 678, 617, 376, 0], 'isolated-vertex repair')
     return {"all_cycle_collections": len(list(parts(n))),
             "nonnegative_unused_terms": receipts, "matching_values": values,
             "triangle_reserve": "8849/18432",
             "order11_bare_graph_witness": {"graph": "P3 disjoint union 4K2",
-                "value": hostile11, "necessary_wedge_coefficient": "7/40"}}
+                "value": hostile11, "necessary_wedge_coefficient": "7/40"},
+            "order11_matching_values": matching11}
 
 
 def load_paths():
@@ -155,19 +159,41 @@ def complement_carrier(n):
     need(all(sum(i in e for e in comp) <= 1 for i in range(len(pats))),
          "matching compatibility hypothesis")
     sizes = Counter(map(len, group.values()))
+    rigidity = None
     if n == 25:
         need(len(edges) == 32 and len(paths) == 20 and len(states) == 4864,
              "inherited square25 controls")
         need(rounds == [24, 32, 32] and sizes == {64: 12, 128: 8, 256: 12},
              "minimal actual-complement carrier")
         need(histogram == {0: 4294962432, 1: 4608, 2: 256}, "path spectrum")
+        adjacency = [set() for _ in range(n)]
+        for i, j in edges:
+            adjacency[i].add(j)
+            adjacency[j].add(i)
+        colour = [len(row) for row in adjacency]
+        colour_counts = [len(set(colour))]
+        for _ in range(n):
+            signatures = [(colour[i], tuple(sorted(colour[j] for j in adjacency[i])))
+                          for i in range(n)]
+            labels = {s: i for i, s in enumerate(sorted(set(signatures)))}
+            new = [labels[s] for s in signatures]
+            colour_counts.append(len(set(new)))
+            same = all((new[i] == new[j]) == (colour[i] == colour[j])
+                       for i in range(n) for j in range(n))
+            colour = new
+            if len(set(colour)) == n or same:
+                break
+        need(len(set(colour)) == 25, 'square25 rigidity certificate')
+        rigidity = {'colour_counts_starting_with_degree': colour_counts,
+                    'canonical_vertex_colours': colour, 'automorphism_order': 1}
     return {"n": n, "guard_edges": len(edges), "directed_paths": len(paths),
             "compatible_pairs": comp, "active_orientations": len(states),
             "refinement_class_counts": rounds,
             "active_class_size_histogram": dict(sorted(sizes.items())),
             "minimal_states_including_dead": len(group)+int(histogram[0] > 0),
             "path_count_histogram": dict(sorted(histogram.items())),
-            "full_tournament_free_bits": n*(n-1)//2-len(edges)}
+            "full_tournament_free_bits": n*(n-1)//2-len(edges),
+            "guard_rigidity": rigidity}
 
 
 def fibonacci():
@@ -270,8 +296,14 @@ def numerical_controls():
         cyc = cycles(a)
         need(F(cyc[3], 64) == tau, 'cycle DP versus triple enumeration')
         margin -= sum(F(cyc[j], 4**j)*weight for j, weight in
-                      ((4, F(1, 32)), (5, 1), (6, F(1, 8)),
+                      ((4, F(1, 32)), (5, 1), (6, F(1, 2)),
                        (7, 1), (8, F(1, 2)), (9, 1)))
+        q4 = sum(a[i][j]*a[j][i] for i, j in combinations(range(4), 2))
+        tau4 = sum(a[i][j]*a[j][k]*a[k][i]+a[i][k]*a[k][j]*a[j][i]
+                   for i, j, k in combinations(range(4), 3))
+        skew4 = sum((2*a[i][j]+2*a[j][k]+2*a[k][i]-12)**2
+                    for i, j, k in combinations(range(4), 3))
+        need(8*q4 == 2*tau4+64-skew4, 'incoming four-vertex square identity')
         need(margin >= 0, 'direct determinant/Hamilton control')
         margins.append(margin)
     need(margins[-1] == 0 and margins[-6] == 0 and all(x > 0 for x in margins[-5:-1]),
@@ -295,6 +327,9 @@ def numerical_controls():
     need(old == 1 and new == 1+2**(distance-1) and new > old,
          'unrestricted Hamilton observer hostile')
     return {'exact_order10_samples': len(matrices),
+            'combined_cycle_reserves': {'4': '1/32', '5': '1', '6': '1/2',
+                                       '7': '1', '8': '1/2', '9': '1'},
+            'incoming_four_vertex_identity_checks': len(matrices),
             'square15_scope_hostile': {'extra_guard_edge': [i+1, j+1],
                 'path_distance': distance, 'full_H': [old, new],
                 'same_guarded_carrier': True}}

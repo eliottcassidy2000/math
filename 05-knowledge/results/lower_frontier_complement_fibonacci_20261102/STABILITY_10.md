@@ -13,7 +13,7 @@ cyclic rotation, tau=C3, and M_ab... for unordered vertex-disjoint cycle
 collections. A two-cycle has weight q. Then
 
     Delta >= (39/64)V + (8849/18432)tau
-             + C4/32 + C5 + C6/8 + C7 + C8/2 + C9.          (1)
+             + C4/32 + C5 + C6/2 + C7 + C8/2 + C9.          (1)
 
 The coefficient 39/64 is optimal. Equality in Delta>=39V/64 with V>0
 holds exactly for the ordinal sum of five fair two-vertex tournaments,
@@ -32,6 +32,14 @@ uniform margins u_r+v_r>=2^(1-r), u_r-v_r>=r*2^(1-r), also recorded in
 [MULTISTAR_STABILITY.md](../session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md).
 These mechanisms are inherited; the order-ten grouping and certificate are
 the extension here.
+
+**Concurrent merge:** mainline commit c101a849a7 independently published
+[the same sharp constant and triangle reserve](../square_sum_archive_stability_20261102/STABILITY_10.md)
+while this packet was being checked. Its two full graph evaluators use nauty
+generation; the certificate below uses self-contained augmentation. Its
+four-vertex identity improves this packet's original C6/8 reserve to C6/2.
+Our five-vertex grouping improves its C5/16 reserve to C5. Formula (1)
+combines those separately compatible improvements and credits both routes.
 
 ## Exact signed ledger
 
@@ -78,13 +86,16 @@ After removing (2), the six-cycle terms are
     E6,+ = C6-M26+M36.
 
 On the complementary four-set R their brackets are respectively
-1-V_R+tau_R+2M22_R and 1-V_R+tau_R. Since
+1-V_R+tau_R+2M22_R and 1-V_R+tau_R. The incoming four-vertex identity is
 
-    u_R=1-V_R+tau_R-C4_R+M22_R,
-    u_R>=5/16,  M22_R<=3/16,
+    V_R=tau_R+1/2-(1/8)sum_(triples D in R) s_D^2,
+    s_D=Kij+Kjk+Kki.
 
-we get E6,->=5C6/16 and E6,+>=C6/8. The u_R bound is the average of
-the two uniform four-vertex margins. The common eight-cycle group is
+It follows by summing the triple identity
+sum_(e in D) q_e=2tau_D+1/4-s_D^2/4: each edge appears twice.
+Thus both E6 groups are at least C6/2, with the additional square reserve
+and (in the minus branch) 2M226 retained as nonnegative. This improves the
+original margin-only estimate C6/8. The common eight-cycle group is
 C8-2M28>=C8/2; inserting the negative term also into G_+ only weakens it.
 
 ## The five vertex sum of squares pays the five cycle coupling
@@ -138,7 +149,7 @@ their presence and all full-cover signs are checked by the ledger compiler.
 Combining the groups, with the unused positive C7 and C9, yields
 
     Delta >= P+M23+(8849/18432)tau
-             +C4/32+C5+C6/8+C7+C8/2+C9.              (6)
+             +C4/32+C5+C6/2+C7+C8/2+C9.              (6)
 
 ## The integer graph certificate
 

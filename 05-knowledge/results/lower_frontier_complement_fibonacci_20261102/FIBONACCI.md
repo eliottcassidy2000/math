@@ -86,6 +86,15 @@ variance, triangle response and a square remainder instead of summarizing
 them separately. The packing model carries a mark and clearance guards.
 
 These are different carriers produced by the same mathematical test.
+Incoming [native Collatz joint ports](../collatz_hexagonal_growth_20261102/JOINT_PORTS.md)
+give another literal reconstruction: an odd inverse tree with edge valuations
+determines its shared halving tails. If two branches enter their odd LCA q
+with valuations a,b, their first native meeting is 2^min(a,b) q, with both
+clocks shortened by min(a,b). Thus the sidecar is sufficient because an
+explicit reconstruction map exists. Independent edge subdivision would
+lose the shared-tail identification. This is a comparison of source-preserving
+composition, not an equivalence of Collatz convergence and tournament stability.
+
 Complete metagraph classification would additionally need all legal paths,
 full target relations, vertex transport and symmetry weights. In particular,
 the square15 sources with full H=1 and H=9 forbid using the 33-state

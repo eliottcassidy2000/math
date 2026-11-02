@@ -24,12 +24,21 @@ order-ten theorem; numerical tests alone would not do so.
   inequality on 50 seeded quarter-integral tournaments and six ordinal
   fair-matching controls. They are additional controls, not exhaustive
   weighted enumeration.
+
+The inherited source baseline was commit 10849672b602; the proof and path
+kernel links name files at that baseline. Concurrent mathematical additions
+were read through c101a849a7 before combining reserves. The helper import in
+audit.py is the explicitly linked path_kernel.py, with its path counts and
+joint spectrum checked against the retained receipt.
 - The square25 program enumerates all 4,864 active guard orientations,
   every legal complement and every target fibre. It verifies all 32 active
   quotient classes, their weights, the inherited path-count polynomial,
   and the stable partition after one refinement. The general matching-bank
   theorem separately explains minimality. The dead class has no enabled
   command. Full tournament fibres have 268 unused bits, preserved in weights.
+- Ordinary colour refinement on G25 gives 4,12,23,25 colour classes,
+  starting with degree. The final 25 singleton classes certify rigidity
+  and canonically recover the vertex frame without arithmetic names.
 - At square15, same restricted state and ordinary H=1 versus H=9 is an
   explicit scope hostile. The 81/27 prior tensors remain distinct and are
   cited, not recomputed or identified by this quotient.
@@ -67,3 +76,23 @@ contact family. There is no new primary-literature claim about optimal square
 packing. Q8 occurs in a different frame transport action. The equality
 classification in stability is not a complete metagraph classification;
 the 33-state carrier has an explicitly restricted path alphabet.
+
+## Incoming independent production and combined reserve
+
+Mainline c101a849a7 published the same sharp constant and triangle reserve
+concurrently, using nauty and two full exact evaluators. We read its complete
+analytic reduction and graph receipt. Those are independent production and
+complementary computational evidence, not an independent-agent audit of this
+packet. Our self-contained generation provides a third route to the common
+endpoint inequality. Both zero-type classifications agree.
+
+The incoming four-vertex identity strengthens our C6 reserve from 1/8 to 1/2.
+Our five-vertex identity strengthens its C5 reserve from 1/16 to 1. They use
+disjoint cycle groups, so the improvements compose. The full combined
+inequality and four-vertex identity were replayed in normal and optimized
+exact Python. The unchanged endpoint polynomial needs no new graph run.
+
+The separate order-eleven scout is explicitly non-exhaustive: 100,000 seeded
+graphs, no negative values, and no universal conclusion. Its isolated-vertex
+subcase instead follows algebraically from the proved order-ten certificate;
+the matching equality controls and necessary 7/40 correction are exact.

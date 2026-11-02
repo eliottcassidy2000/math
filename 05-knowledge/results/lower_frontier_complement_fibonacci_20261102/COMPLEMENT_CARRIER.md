@@ -94,6 +94,20 @@ program [audit.py](audit.py) enumerates every active source, constructs
 every legal literal target, and verifies every quotient fibre. The
 theorem above separately explains and proves its minimality.
 
+There is also a canonical-frame certificate: starting from vertex degrees,
+three rounds of ordinary neighbour-colour refinement distinguish ALL 25
+vertices of this guard graph. Every graph automorphism preserves these
+colours, so Aut(G25) is trivial. This is a rigidity proof by a finite
+certificate, not an inference from a failed automorphism search.
+
+Consequently the same 33-state theorem holds when vertex names are erased
+but the guard graph itself is retained: recover the unique canonical colours
+and name path commands by their colour words. The frame comes from G25 for
+free; it does not come from the tournament alone. Among active sources the
+32 states fit in five bits; the full 33-state carrier requires six fixed
+bits. Erasing the guard graph or enlarging its command alphabet is a
+different operation and invalidates this argument.
+
 Other full square-path banks give 3 states at n=15,16,17 and 7 states at
 n=23, including the dead state. These are declared finite orders, not a
 claim about all square-sum graphs from 25 onward.
@@ -117,6 +131,17 @@ considered. The present compression is possible precisely because the
 arithmetic path bank is smaller. Unnamed observations and selected-frame
 transport are separate quotient questions.
 
+Incoming mainline gives a second, operation-specific boundary:
+[native square-sum contexts](../square_sum_archive_stability_20261102/NATIVE_CONTEXTS.md)
+separate two realized spanning linear forests with different pairings of
+the same 2r endpoint ports. Exactly 2r new positive integer labels realize
+private length-three connectors, retaining every old label and selected
+edge. One pairing completes to a Hamilton cycle and the other does not.
+This combines inherited induced square-sum bridges with abstract matching
+separation. It shows why adding source-preserving arithmetic extension
+commands can force endpoint pairing back into the carrier. Those extensions
+change the guard graph and are outside the fixed-G theorem (2).
+
 The twelve-vertex 81/27 hostile remains inherited from
 [DEFECT_TRANSFER.md](../overnight_rank_return_20261029/DEFECT_TRANSFER.md):
 equal two-run mass 9,011,898 with ranks 24/22 modulo three, and equal
@@ -131,6 +156,10 @@ The inherited
 belongs to the M12 hole-move model: four named tracked tokens leave eight
 possible source frames; five tracked tokens determine the frame. That
 result supplies no action of Q8 on the square-guard sources.
+
+Indeed G25's rigidity rules out any nontrivial Q8 action by vertex
+automorphisms preserving this guard relation. A different action on response
+fibres would need its own map; it cannot be imported from the hole puzzle.
 
 For any proposed group quotient, the operational test is precise: each
 guard and output must be constant on quotient fibres, and every enabled

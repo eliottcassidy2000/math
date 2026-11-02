@@ -37,7 +37,15 @@
       "graph": "P3 disjoint union 4K2",
       "value": -56,
       "necessary_wedge_coefficient": "7/40"
-    }
+    },
+    "order11_matching_values": [
+      0,
+      499,
+      678,
+      617,
+      376,
+      0
+    ]
   },
   "complement_carriers": [
     {
@@ -58,7 +66,8 @@
         "0": 32764,
         "1": 4
       },
-      "full_tournament_free_bits": 90
+      "full_tournament_free_bits": 90,
+      "guard_rigidity": null
     },
     {
       "n": 16,
@@ -78,7 +87,8 @@
         "0": 65532,
         "1": 4
       },
-      "full_tournament_free_bits": 104
+      "full_tournament_free_bits": 104,
+      "guard_rigidity": null
     },
     {
       "n": 17,
@@ -98,7 +108,8 @@
         "0": 131068,
         "1": 4
       },
-      "full_tournament_free_bits": 119
+      "full_tournament_free_bits": 119,
+      "guard_rigidity": null
     },
     {
       "n": 23,
@@ -118,7 +129,8 @@
         "0": 268435072,
         "1": 384
       },
-      "full_tournament_free_bits": 225
+      "full_tournament_free_bits": 225,
+      "guard_rigidity": null
     },
     {
       "n": 25,
@@ -159,7 +171,43 @@
         "1": 4608,
         "2": 256
       },
-      "full_tournament_free_bits": 268
+      "full_tournament_free_bits": 268,
+      "guard_rigidity": {
+        "colour_counts_starting_with_degree": [
+          4,
+          12,
+          23,
+          25
+        ],
+        "canonical_vertex_colours": [
+          23,
+          16,
+          24,
+          18,
+          15,
+          13,
+          12,
+          6,
+          3,
+          7,
+          17,
+          22,
+          21,
+          19,
+          14,
+          1,
+          2,
+          0,
+          4,
+          5,
+          8,
+          11,
+          9,
+          20,
+          10
+        ],
+        "automorphism_order": 1
+      }
     }
   ],
   "fibonacci": {
@@ -190,6 +238,15 @@
   },
   "independent_controls": {
     "exact_order10_samples": 56,
+    "combined_cycle_reserves": {
+      "4": "1/32",
+      "5": "1",
+      "6": "1/2",
+      "7": "1",
+      "8": "1/2",
+      "9": "1"
+    },
+    "incoming_four_vertex_identity_checks": 56,
     "square15_scope_hostile": {
       "extra_guard_edge": [
         1,
