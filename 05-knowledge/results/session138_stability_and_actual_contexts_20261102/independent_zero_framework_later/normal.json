@@ -1,0 +1,226 @@
+{
+  "actual_api_controls": [
+    {
+      "actual_profile_difference": [
+        2,
+        0,
+        0
+      ],
+      "base_profile": [
+        1
+      ],
+      "negative": {
+        "base_quadratic": 6,
+        "reason": "base quadratic is not negative",
+        "status": "NOT_CERTIFIED"
+      },
+      "positive": {
+        "lower_bound_coefficient": 6,
+        "scope": "every pair of nonempty side tournaments",
+        "status": "SUFFICIENT_CERTIFICATE"
+      }
+    },
+    {
+      "actual_profile_difference": [
+        -2,
+        0,
+        0
+      ],
+      "base_profile": [
+        1
+      ],
+      "negative": {
+        "base_order": 1,
+        "base_quadratic": -6,
+        "pivot": 1,
+        "scope": "both side color polynomials are P_base times nonzero monomial-nonnegative polynomials",
+        "status": "SUFFICIENT_CERTIFICATE"
+      },
+      "positive": {
+        "reason": "negative matrix entry",
+        "status": "NOT_CERTIFIED"
+      }
+    },
+    {
+      "actual_profile_difference": [
+        0,
+        0,
+        0
+      ],
+      "base_profile": [
+        9,
+        126,
+        684,
+        1656,
+        1800,
+        720
+      ],
+      "negative": {
+        "base_quadratic": 0,
+        "reason": "base quadratic is not negative",
+        "status": "NOT_CERTIFIED"
+      },
+      "positive": {
+        "K11": 0,
+        "status": "WEAK_NONNEGATIVITY_ONLY"
+      }
+    },
+    {
+      "actual_profile_difference": [
+        -2,
+        0,
+        0
+      ],
+      "base_profile": [
+        9,
+        126,
+        684,
+        1656,
+        1800,
+        720
+      ],
+      "negative": {
+        "base_order": 6,
+        "base_quadratic": -36774,
+        "pivot": 1,
+        "scope": "both side color polynomials are P_base times nonzero monomial-nonnegative polynomials",
+        "status": "SUFFICIENT_CERTIFICATE"
+      },
+      "positive": {
+        "reason": "negative matrix entry",
+        "status": "NOT_CERTIFIED"
+      }
+    }
+  ],
+  "actual_hostile": {
+    "both_strong": true,
+    "contexts": [
+      {
+        "gap": -36,
+        "new_H": 795,
+        "old_H": 831,
+        "side_orders": [
+          1,
+          1
+        ]
+      },
+      {
+        "gap": -60,
+        "new_H": 2229,
+        "old_H": 2289,
+        "side_orders": [
+          1,
+          2
+        ]
+      },
+      {
+        "gap": -180,
+        "new_H": 6687,
+        "old_H": 6867,
+        "side_orders": [
+          1,
+          3
+        ]
+      },
+      {
+        "gap": -60,
+        "new_H": 2229,
+        "old_H": 2289,
+        "side_orders": [
+          2,
+          1
+        ]
+      },
+      {
+        "gap": 828,
+        "new_H": 28107,
+        "old_H": 27279,
+        "side_orders": [
+          2,
+          2
+        ]
+      },
+      {
+        "gap": 5364,
+        "new_H": 140913,
+        "old_H": 135549,
+        "side_orders": [
+          2,
+          3
+        ]
+      },
+      {
+        "gap": -180,
+        "new_H": 6687,
+        "old_H": 6867,
+        "side_orders": [
+          3,
+          1
+        ]
+      },
+      {
+        "gap": 5364,
+        "new_H": 140913,
+        "old_H": 135549,
+        "side_orders": [
+          3,
+          2
+        ]
+      },
+      {
+        "gap": 67932,
+        "new_H": 1476387,
+        "old_H": 1408455,
+        "side_orders": [
+          3,
+          3
+        ]
+      }
+    ],
+    "difference": [
+      -12,
+      0,
+      240,
+      480,
+      240,
+      0,
+      0
+    ],
+    "module_order": 7,
+    "new_masks": [
+      96,
+      1,
+      3,
+      7,
+      79,
+      94,
+      14
+    ],
+    "old_masks": [
+      32,
+      65,
+      3,
+      71,
+      79,
+      94,
+      5
+    ],
+    "row2_diagonal": 228,
+    "same_card": true
+  },
+  "formal_api_decisions": 14400,
+  "formal_certificates_accepted": 1642,
+  "formal_multiplier_pair_controls": 26272,
+  "independence": "Expected values from independent kernels; producer imported only as API under test",
+  "independent_census_sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e",
+  "independent_graph_kernel_sha256": "be7768a52bfe0f69e114f0b50fe2c520d3a6267db40f193a206c26227835c23a",
+  "invalid_actual_api_inputs_rejected": 8,
+  "invalid_formal_api_inputs_rejected": 3,
+  "producer_certify_sha256": "672df815afce73b275087199d4a46cce2ce6288effcb151e09127573358b5802",
+  "small_census_tournaments": 33867,
+  "small_distinct_profiles": 39,
+  "small_literal_kernel_entries": 14623,
+  "small_profile_pairs": 308,
+  "source_sha256": "9bd6b7a49c63d28ef35d81707b3163a8f797167308be4e1799f27bc6c25714a9",
+  "status": "PASS"
+}

@@ -1,67 +1,70 @@
-# Session138: stability and actual contexts
+# Session138: exact stability and actual contexts
 
-**The optimal weighted determinant stability coefficient is `8/n+O(n^(-2))`; exact sharp coefficients are proved through order eight.** The continuation also closes an explicit unbounded mixed-profile construction family without solving general zero-rigidity.
+**The optimal weighted determinant stability coefficient is now exact for every order `n>=1500`, with a complete positive-variance equality classification.** Together with the finite-order proofs, exact coefficients are established for `n=3,...,8` and `n>=1500`; orders **9 through 1499 remain unresolved**.
 
-[Results and scope](SYNTHESIS.md) · [Verification and checkpoint history](VERIFICATION.md) · [Continuation replay: PASS](REPLAY_CHECKPOINT2.json)
+[Results and scope](SYNTHESIS.md) · [Verification and checkpoint history](VERIFICATION.md) · [Third replay: PASS](REPLAY_CHECKPOINT3.json)
 
-## 1. The optimal asymptotic stability constant
+## 1. Eventual exact stability, not only an asymptotic constant
 
-**PROVED, independently audited.** For weighted tournament matrices of order n, let `Delta=H-det(I+A)-|det A|`, `V=sum_(i<j) A_ij A_ji`, and
-
-```text
-K_n = inf_(V>0) Delta/V.
-```
-
-Write `r=floor(n/2)` and define the fair-pair coefficients
+For weighted tournament matrices, let `Delta=H-det(I+A)-|det A|`, `V=sum_(i<j) A_ij A_ji`, and `K_n=inf_(V>0) Delta/V`. Write `r=floor(n/2)` and
 
 ```text
-kappa_(2r)   = (4/r)[1-(3/4)^r-(1/4)^r],
-kappa_(2r+1) = (4/r)[1-(3/4)^r].
+kappa_n=(4/r)[1-(3/4)^r-1_(n even)*(1/4)^r].
 ```
 
-The theorem gives, for `n>=4` and `c0=(1-exp(-4))/4`,
+**PROVED, independently audited:** for every integer `n>=1500`,
 
 ```text
-kappa_n/[1+n*kappa_n^2/(2*c0)] <= K_n <= kappa_n,
-K_n = 8/n + O(n^(-2)).
+K_n=kappa_n.
 ```
 
-Its near-candidate consequence is also quantitative: if `Delta/V<=kappa_n`, independent binary rounding T has expected gap at most `2n*kappa_n^2`; a greedy matching leaves at most `2n*kappa_n` variance outside it; and `Pr(T nontransitive)<=2n*kappa_n^2`. These are probability and weighted-mass statements, not exact fair-pair rigidity.
+Equality with `V>0` consists exactly of an ordinal sum of the maximum number of fair pairs, with one singleton at odd order. The proof first forces the uncertainty graph to be a matching and the expected binary gap to vanish; the accepted H=1 minimization then supplies the exact equality locus.
 
-[Asymptotic theorem](asymptotic_stability/PROOF.md) · [Independent audit](independent/asymptotic_audit/AUDIT.md) · [Separate resolvent mechanism](stability/RESOLVENT_ROBUSTNESS_CROSSCHECK.md)
+This is an all-order argument above a sufficient threshold, not a census at order 1500 or an extrapolation from small orders. The threshold is not asserted optimal. The proof uses already accepted stability and matching theorems directly.
 
-## 2. Exact small-order constants and parity
+[Exact theorem and equality](threshold_refinement/PROOF_N1500.md) · [Independent audit](independent/threshold1500_audit/AUDIT.md)
 
-The largest universal b in `Delta>=bV` is:
+## 2. Established finite orders and the remaining interval
 
 | Order n | 3 | 4 | 5 | 6 | 7 | 8 |
 |---|---:|---:|---:|---:|---:|---:|
-| Sharp b | 1 | 3/4 | 7/8 | 3/4 | 37/48 | 87/128 |
+| Sharp K_n | 1 | 3/4 | 7/8 | 3/4 | 37/48 | 87/128 |
 
-At orders four through eight, positive-variance equality is exactly an ordinal sum of the maximum number of fair pairs and at most one singleton. The parity effect is structural: a singleton makes the full determinant vanish; an even perfect pair cover contributes the extra subtraction `(1/4)^r`. Exact equality `K_n=kappa_n` beyond order eight remains **OPEN**.
+At orders four through eight, positive-variance equality has the same maximal fair-pair form. Order three is exceptional: `Delta=V` for every weighted tournament matrix. **Exact optimality for 9<=n<=1499 is not claimed.**
 
-The order-eight theorem retains positive triangle and cycle reserves. Its complete graph certificate is checked by independent orbit construction and subset dynamic programming, then extended to the full real variance cube by the reviewed multiaffine reduction.
+Parity is structural: an odd singleton makes the full determinant vanish, whereas an even full pair cover contributes the extra subtraction `(1/4)^r`.
 
-[Sharp eight](stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md) · [Sharp low orders and joint regions](stability/SHARP_LOW_ORDER_STABILITY.md) · [Sharp seven](stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md)
+[Sharp low orders](stability/SHARP_LOW_ORDER_STABILITY.md) · [Sharp seven](stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md) · [Sharp eight](stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md)
 
-## 3. All-order mechanisms retained from checkpoint one
+## 3. Uniform bounds and quantitative mechanisms
 
-- Multistar rounding gives `Delta(A)>=E Delta(T)+gamma_(n,k)V`, with optimized coefficient asymptotic to `4/n`. Its original scope remains recorded separately from the later asymptotic continuation.
-- The exact matching-uncertainty coefficients hold with arbitrary binary cross-edge orientations. Uncertainty-graph Pfaffian parity gives edge-order certificates and a vertex-cover-parameterized evaluator.
-- H=1 is exactly the ordinal-pair/singleton locus. Low-order triangle/variance coefficient regions and stronger weak-gap reserves are exact.
+For every `n>=4`, the earlier continuation proves, with `c0=(1-exp(-4))/4`,
 
-[Multistar and matching support](stability/MULTISTAR_STABILITY.md) · [Uncertainty-graph framework](rounding_graph/PROOF.md) · [H=1 classification](stability/H1_STABILITY.md)
+```text
+kappa_n/[1+n*kappa_n^2/(2*c0)] <= K_n <= kappa_n,
+K_n=8/n+O(n^(-2)).
+```
 
-## 4. Actual contexts: constructions and precise barriers
+These uniform bounds still apply in the unresolved intermediate range. The retained binary baseline, multiplicative Pfaffian margins, and greedy matching extraction also give quantitative near-candidate probability and variance-mass controls. The new exact theorem strengthens those conclusions at sufficiently large orders; it does not retroactively turn the earlier quantitative argument into exact rigidity at every order.
 
-The literal one-edge reflector realizes strong tournament counts `6E(U)-H(U)` and `6E(U)+H(U)` for every nonempty U. Its full-profile operators, source-certified inverse, minimal exterior budget, and unbounded fixed-gap families are proved. Bounded actual height/interior source banks fail even profinite universality; this is not an unrestricted spectral omission.
+The first checkpoint retains its separate multistar coefficient asymptotic to `4/n`, arbitrary binary cross-orientation matching-support theorem, uncertainty-graph certificates, fixed-parameter evaluator, and H=1 classification.
 
-The ordinal-profile theorem proves internal star-edit zero-rigidity in `C3[TT_k[C3],A,B]` when outside attachments stay fixed. The later sign theorem handles three explicit actual strong-Q4 mixed-profile seeds for every positive side multiplicity: two are positive on the thin boundary and negative throughout the thick quadrant, never zero; the third is positive for arbitrary nonempty side tournaments, with sharp lower gap `135618 H(A)H(B)`.
+[Uniform asymptotic theorem](asymptotic_stability/PROOF.md) · [Independent resolvent mechanism](stability/RESOLVENT_ROBUSTNESS_CROSSCHECK.md) · [Matching support](stability/MULTISTAR_STABILITY.md) · [Uncertainty graph](rounding_graph/PROOF.md)
 
-[Reflector](exact_resources/PROOF.md) · [Resource bounds](exact_resources/RESOURCE_BUDGET.md) · [Restricted profile rigidity](zero_rigidity/PROFILE_DICHOTOMY.md) · [All-parameter sign classification](zero_balance_later/NO_ZERO_THEOREM.md)
+## 4. Actual contexts and precise no-zero families
 
-## Boundaries
+Literal one-edge reflectors realize the strong tournament counts `6E(U)-H(U)` and `6E(U)+H(U)` for every nonempty U. Full-profile operators, a source-certified inverse, minimal exterior budget, and unbounded fixed-gap families are proved. Bounded actual height/interior source banks fail even profinite universality; this is not an unrestricted spectral omission.
 
-The unrestricted positive-odd H-spectrum conjecture, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) remain **OPEN**. None of the family-specific no-zero results is a theorem for arbitrary strong quotients. Exact optimal stability coefficients beyond eight are not claimed.
+The ordinal-profile theorem proves internal star-edit zero-rigidity in `C3[TT_k[C3],A,B]` when outside attachments stay fixed. A separate theorem classifies three explicit actual strong-Q4 mixed-profile seeds for every positive side multiplicity: two are positive on the thin boundary and negative throughout the thick quadrant, never zero; the third is positive for arbitrary nonempty side tournaments, with sharp lower gap `135618 H(A)H(B)`.
 
-[Checkpoint-one scope](CHECKPOINT1.md), manuscripts, selectors, audit pins, and [portable replay](REPLAY_CHECKPOINT1.json) retain their original through-seven scope. Later results have separate source identities and audit scopes. No finite scan is extrapolated to an all-parameter theorem; no external-priority or formal proof-assistant claim is made.
+[Reflector](exact_resources/PROOF.md) · [Resource bounds](exact_resources/RESOURCE_BUDGET.md) · [Restricted profile rigidity](zero_rigidity/PROFILE_DICHOTOMY.md) · [All-parameter sign chambers](zero_balance_later/NO_ZERO_THEOREM.md)
+
+The later reusable framework gives finite **sufficient** certificates for universal nonnegative cyclic response and for a negative polynomial-multiplier chamber. A genuine strong same-card pair of order seven shows the row-crossing condition cannot be omitted: its response changes from −36 with singleton sides to +828 with transitive two-vertex sides. Complete independent coverage through module order six proves this hostile's module order is minimal. Failed certification remains inconclusive; this is not a counterexample to scalar zero-rigidity.
+
+[General criteria and minimal actual hostile](zero_framework_later/GENERAL_CRITERION.md) · [Independent framework audit](independent_zero_framework_later/AUDIT.md)
+
+## Boundaries and checkpoint provenance
+
+**OPEN:** exact stability coefficients at orders 9 through 1499; the unrestricted positive-odd H-spectrum; global boundedness of exact spectral width; arbitrary strong-quotient scalar zero-rigidity; and LRC(14).
+
+The [first checkpoint](CHECKPOINT1.md)'s through-seven results and the [second checkpoint](CHECKPOINT2.md)'s through-eight/asymptotic results retain their original lane bytes, selectors, and audit scopes. The new exact theorem has a separate manuscript and independent audit. No unaccepted finite-order graph candidate or historical threshold candidate is required for this release. A separately audited [Pfaffian hostile](stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md) refutes an unused termwise shortcut; it does not invalidate any accepted theorem.

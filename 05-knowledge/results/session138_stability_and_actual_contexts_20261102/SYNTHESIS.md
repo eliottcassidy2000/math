@@ -1,8 +1,8 @@
-# Session138 synthesis: sharp stability and actual-context barriers
+# Session138 synthesis: exact stability and actual-context barriers
 
 ## Result map and inheritance
 
-Session137 proved the nonempty determinant bound, its weighted extension, and an all-order variance coefficient asymptotic to `24/n^2`. It also separated width-three local universality from exact realization and proved finite-base normal forms for bounded actual sources. Checkpoint one strengthened quantitative stability to the correct `1/n` order and proved exact constants through seven. The continuation proves sharp order eight and all-parameter sign chambers for three actual mixed-profile seeds. The independently audited all-order continuation sharpens the asymptotic constant to eight with error `O(n^(-2))`. Its exact finite-order bound and probability/matching consequences have separate source pins from checkpoint one.
+Session137 proved the nonempty determinant bound, its weighted extension, and an all-order variance coefficient asymptotic to `24/n^2`. It also separated width-three local universality from exact realization and proved finite-base normal forms for bounded actual sources. Checkpoint one strengthened quantitative stability to the correct `1/n` order and proved exact constants through seven. The continuation proves sharp order eight and all-parameter sign chambers for three actual mixed-profile seeds. The independently audited all-order continuation sharpens the asymptotic constant to eight with error `O(n^(-2))`. Its exact finite-order bound and probability/matching consequences have separate source pins from checkpoint one. A third independently audited continuation proves exact fair-pair optimality and the complete positive-variance equality classification for every n>=1500. The established exact domain is n=3,...,8 and n>=1500; orders 9 through 1499 remain unresolved.
 
 Here **PROVED** denotes an argument for the entire stated domain. A finite certificate can support such a theorem when an explicit reduction covers the full continuous domain or every order; it is not a sampled inequality. **FINITE-EXACT** labels the complete finite classifications themselves. Audit and replay scopes are in [VERIFICATION.md](VERIFICATION.md).
 
@@ -95,7 +95,7 @@ H=1,  u=product_i(1-q_i),  V=sum_i q_i,
 
 For at least two positive pair variances, `Delta/V` strictly decreases as each variance increases, so the minimum requires fair pairs. The sharp H=1 constants are b_r at even order `2r>=4` and a_r at odd order `2r+1>=3`. Positive-variance equality at order at least four requires the maximum possible number of fair pairs, with one singleton exactly at odd order. At order three the ratio is identically one on this locus.
 
-These examples supply global upper bounds on the unknown optimal stability coefficient; the structure theorem alone is not a global lower-bound proof.
+These examples supply global upper bounds on the optimal stability coefficient; the structure theorem alone is not a global lower-bound proof.
 
 [H=1 theorem](stability/H1_STABILITY.md)
 
@@ -108,7 +108,7 @@ n:  3    4    5    6     7      8
 b:  1   3/4  7/8  3/4  37/48  87/128.
 ```
 
-The first two are inherited. Checkpoint one established orders five through seven; the separate continuation establishes order eight. For positive variance at orders four through eight, equality is exactly the ordinal fair-pair construction above. Exact equality with the fair-pair candidate at higher orders remains open.
+The first two are inherited. Checkpoint one established orders five through seven; the separate continuation establishes order eight. For positive variance at orders four through eight, equality is exactly the ordinal fair-pair construction above. This finite-certificate route covers only orders through eight. The separate argument in Section 10 establishes all orders n>=1500; orders 9 through 1499 remain open.
 
 Let tau be the sum of directed-triangle weights, C_j the sum of directed j-cycle weights, and M33 the sum over unordered disjoint triangle pairs. Cycle rotations and collection multiplicities follow the source definitions.
 
@@ -175,7 +175,7 @@ where m_j counts j-edge matchings and p21 counts a wedge plus a disjoint edge. T
 
 Four fair ordinal pairs have `H=1`, `u=81/256`, `|v|=1/256`, `V=1`, hence `Delta=87/128`. The positive triangle reserve forces H=1 at unreserved equality, and the H=1 classification forces exactly those four fair pairs.
 
-The alternating finite-order coefficients are not fitted numerology. At odd order a singleton kills the full determinant, giving `(4/r)[1-(3/4)^r]`; at even order a full pair cover subtracts `(4/r)(1/4)^r`. This explains the fair-pair candidate's parity dependence without proving its optimality at unreviewed orders.
+The uniform formula is `kappa_n=(4/r)[1-(3/4)^r-1_(n even)*(1/4)^r]`, with `r=floor(n/2)`. The parity term is the full-matching determinant: an odd singleton kills det A. This is structural, not fitted numerology, and is not by itself a global optimality proof.
 
 [Order-eight proof](stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md)
 
@@ -285,7 +285,7 @@ The upper family is already actual. The lower bound combines three mechanisms:
 3. **Extract a weighted matching but retain B.** A greedy maximum-weight matching of total variance M satisfies `W>=(V-M)^2/(2n)`. The first-checkpoint matching-support theorem and binary proper-cycle bound `B>=tau>=W` then give
    `Delta>=kappa_n V+B-kappa_n sqrt(2nB)>=kappa_n V-n*kappa_n^2/2`.
 
-The last additive error, combined with the nonlinear bound, gives the positive finite-order ratio bound above, uniformly over all variance scales. Discarding B too early loses the improved rate. The statement is not exact finite-n equality `K_n=kappa_n`, and the lower bound is not advertised as sharp at small orders.
+The last additive error, combined with the nonlinear bound, gives the positive finite-order ratio bound above, uniformly over all variance scales. Discarding B too early loses the improved rate. This asymptotic argument alone does not establish exact finite-n equality `K_n=kappa_n`, and its lower bound is not advertised as sharp at small orders. Section 10 supplies a distinct exact argument for n>=1500.
 
 ### Near-candidate structure is quantitative, not exact rigidity
 
@@ -338,6 +338,89 @@ For seed 996 this matrix is nonnegative and its first diagonal entry is 135618. 
 
 [All-parameter sign theorem](zero_balance_later/NO_ZERO_THEOREM.md)
 
+## 10. Exact fair-pair optimality for every n>=1500
+
+**PROVED, independently audited, including positive-variance equality.** For all integer n>=1500, `K_n=kappa_n`. This proof depends directly on the already accepted uniform rounding, matching-support, triangle-variance, and H=1 results; it does not require a historical larger-threshold candidate.
+
+Assume `V>0` and `Delta<=kappa_n V`, and keep the expected binary baseline `B=E Delta(T)`. Let D be the variance discarded by descending-weight greedy matching. The earlier bounds yield
+
+```text
+V>49(n-1)/1600,       V<=n/7,
+B<=kappa_n D,         D<=2n*kappa_n.
+```
+
+Mark a selected edge light if its variance is at most `eta=1/44`, and let L be the number of light selected edges. If L>=1, delete those edges and apply the sharper nonperfect-matching coefficient to the retained heavy matching. Its retained variance exceeds n/120, so it has more than n/30 edges. The tail `(3/4)^(n/30)<=1/(1000n)` follows from an exact endpoint comparison and monotonicity, not testing many orders.
+
+Using `floor(n/2)` rather than n/2 avoids a parity error. The retained-matching estimate then forces `L<(80/3)D`. Greedy edge groups have disjoint wedge contributions, giving
+
+```text
+D_heavy<=44B,
+D_light<=2*sqrt(LB).
+```
+
+Together with `B<=kappa_n D`, these would imply
+
+```text
+1 < 44*kappa_n+2*sqrt((80/3)*kappa_n)
+  <= 4/17+sqrt(320/561) < 1,
+```
+
+an exact contradiction: the final squared slack is `137/9537>0`. Therefore there are no light selected edges. Every selected variance is greater than eta and hence greater than kappa_n. Any discarded positive mass would then force `B>kappa_n D`, another contradiction. Thus `D=B=0`.
+
+The uncertainty graph is consequently a matching, proving the universal lower bound; the fair ordinal family attains it. At equality, B=0 forces every supported binary completion to be transitive. The H=1 scalar minimization then gives **exactly a maximal ordinal collection of fair pairs, with one singleton at odd order**.
+
+The threshold 1500 is sufficient, not claimed optimal. The arithmetic controls verify endpoint and squared inequalities exactly; all-order scope comes from the monotonicity and matching argument. This is neither a tournament census at order 1500 nor an extension of an eight-vertex graph scan.
+
+[Exact theorem](threshold_refinement/PROOF_N1500.md) · [Independent audit](independent/threshold1500_audit/AUDIT.md)
+
+## 11. Reusable sufficient cyclic-response criteria and a minimal actual hostile
+
+For any actual nonempty same-order modules M0,M1, let `d=f_M1-f_M0` be their ordered path-cover profile difference. The exact finite tridiagonal kernel of Section 9 applies without requiring the modules to share a deletion card:
+
+```text
+H(C3[M1,A,B])-H(C3[M0,A,B])=f_A^T K f_B
+```
+
+for all nonempty actual side tournaments A,B. Coordinates above the module order plus one vanish exactly; this is not a profile truncation approximation.
+
+**Certificate P.** Entrywise `K>=0` implies nonnegative response for all actual sides. If `K11>0`, the sharp lower bound is `K11 H(A)H(B)>0`, with equality at singleton sides. Within this entrywise-nonnegative class, K11>0 is necessary for strict positivity over all nonempty sides. Entrywise positivity is not claimed necessary over realizable side profiles.
+
+**Certificate N.** Supply an actual base V with positive log-concave profile v, a pivot c within its support, and `v^T K v<0`. Require every row before c to be entrywise nonnegative and every row after c to be entrywise nonpositive; the pivot row may be mixed. Then response is strictly negative for every actual pair whose colored profiles satisfy
+
+```text
+P_A=P_V R_A,      P_B=P_V R_B,
+```
+
+where the R polynomials are nonzero and monomial-nonnegative. The likelihood-ratio and one-crossing argument extends the finite base certificate to the whole stated chamber. Ordinal extra tournament factors supply actual examples. For an ordinal-power family, a supplied base `V=TT_k[F]` can certify all multiplicities at least k; the theorem does not assert that any successful k exists.
+
+The exact certifier validates literal tournament masks before computing actual profiles. Its lower-level formal-profile interfaces do not imply realizability. A failed sufficient test returns **NOT_CERTIFIED**, not a negative theorem or a decision that no sign certificate exists.
+
+### The row condition is indispensable even for actual strong modules
+
+Two strong seven-vertex completions of the same six-vertex card have difference
+
+```text
+d=(-12,0,240,480,240,0,0).
+```
+
+For actual base K1 the profile `(1)` is log-concave and the response is −36. But with both sides TT2 the response is +828; with both sides C3 it is +67932. The multipliers are respectively m and `m^2+2`, both nonnegative. Thus removing the row condition makes the negative-propagation conclusion false for actual tournaments, not merely formal vectors. Here `K22=228>0`, explicitly violating the required high-row sign for the only possible base pivot c=1.
+
+**Minimum module order seven is FINITE-EXACT.** A complete census through order six covers 33,867 labeled tournaments, 39 order-specific profiles, and all 308 distinct same-order profile-pair kernels. Every such kernel is entrywise one-signed. Therefore a negative base response cannot turn positive under any admissible multipliers at those smaller module orders. The producer reconstructs profiles from 23,717,429 literal vertex words; an independent implementation uses Hamilton-subset and ordered-cover dynamic programming instead. These are genuinely different finite kernels, not two independent literal-word traversals.
+
+The short non-log-concave vector `(2,1,2)` remains a **formal** boundary control for a different hypothesis. No actual non-log-concave tournament profile is claimed. The accepted seven-vertex hostile retains log-concavity and isolates only the omitted row-crossing condition; it gives a sign reversal, not a scalar zero.
+
+[General criteria and certifier](zero_framework_later/GENERAL_CRITERION.md) · [Independent audit](independent_zero_framework_later/AUDIT.md)
+
+## 12. An explicit false-lemma boundary: odd does not mean unit
+
+A proposed termwise Pfaffian shortcut is **REFUTED**, not used as a premise. A binary complementary Pfaffian is odd, but need not have magnitude one. The retained exact six-vertex example has full Pfaffian `3x-2` and complementary coefficient three. At x=2/3 the full square vanishes despite `x^2=4/9>0`, refuting the proposed individual-square lower bound.
+
+The full weighted determinant margin is nevertheless `u-|v|=17/9`, with `u=32/9` and `v=-5/3`. Thus the example does **not** refute the proposed total matching-support margin, let alone an accepted stability theorem: other principal terms carry excess energy. The unit-coefficient version survives when the complementary Pfaffian is independently known to be ±1; a general compensating total-margin refinement remains open.
+
+The accepted independent-set proof retains entirely binary principal subsets. The accepted multiplicative robustness proof uses the full Gram/Cauchy sum and its actual coefficient energy. Neither assumes that an arbitrary odd complementary Pfaffian is a unit. Independent full antisymmetrization and Leibniz sums verify the counterexample, separately from the producer's recursive Pfaffian and Gaussian determinant calculation.
+
+[Exact hostile and scoped survivor](stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md) · [Independent audit](independent_pfaffian_hostile/AUDIT.md)
+
 ## What is not concluded
 
-The unrestricted H-spectrum, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) remain open. Exact equality `K_n=kappa_n` beyond eight remains open. The new no-zero theorem closes one explicit unbounded construction family, not every mixed-profile seed or every actual side context. The asymptotic constant is now proved; this is not an exact finite-order equality theorem beyond eight.
+The exact stability coefficient is proved for n=3,...,8 and every n>=1500. **Orders 9 through 1499 remain unresolved.** The unrestricted H-spectrum, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) also remain open. The no-zero theorem closes one explicit unbounded construction family, not every mixed-profile seed or every actual side context.

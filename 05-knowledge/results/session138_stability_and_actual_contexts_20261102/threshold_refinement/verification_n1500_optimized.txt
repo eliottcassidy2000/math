@@ -1,0 +1,13 @@
+exp4_partial_above_50: PASS
+kappa_at_1500_below_1_over_187: PASS
+kappa_below_eta: PASS
+variance_upper_n_over_7: PASS
+heavy_mass_endpoint: PASS
+heavy_mass_positive_slope: PASS
+epsilon_endpoint: PASS
+epsilon_log_slope_bound: PASS
+light_absorption_slack: PASS
+contradiction_linear_term: PASS
+contradiction_squared_slack: PASS
+proof_sha256: fec495e0e7845b723b8d964eeb242bc537119d1baccbb683b2dd2b1000227636
+exact_endpoint_checks: 11 / 11 PASS

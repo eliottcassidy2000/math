@@ -62,4 +62,4 @@ individual session routes preserve scope and remaining open obligations.
 
 [Session137](S137.md): overnight proof frontiers; global Hamiltonian determinant bound and further structural classifications.
 
-[Session138](S138.md): optimal asymptotic weighted stability 8/n, sharp coefficients through eight, actual contexts and all-parameter sign chambers; exact spectrum and general scalar zero-rigidity remain open.
+[Session138](S138.md): exact weighted stability for n=3..8 and n>=1500, with full large-order equality; 9..1499 unresolved. Actual contexts and sign chambers; unrestricted spectrum and general zero-rigidity remain open.

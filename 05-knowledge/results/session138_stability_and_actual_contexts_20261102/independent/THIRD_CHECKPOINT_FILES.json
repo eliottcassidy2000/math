@@ -1,0 +1,31 @@
+{
+  "scope": "This auditor checkpoint3 addition only: final exact n>=1500 theorem and equality. Excludes historical10^7, unaccepted order9, binaries, caches, all earlier checkpoint artifacts.",
+  "files": [
+    {
+      "path": "threshold1500_audit/AUDIT.md",
+      "sha256": "e068bc28ad091612e7be49104ee7275d3ba978390349b9aeb66590ec7c64b568",
+      "bytes": 6304
+    },
+    {
+      "path": "threshold1500_audit/check.py",
+      "sha256": "4d554b1dd51848efedf848eb4598b6f44dba1b540bdb7fcc1f2e767464fc684b",
+      "bytes": 3294
+    },
+    {
+      "path": "threshold1500_audit/normal.json",
+      "sha256": "b406f15579422cc4b6589aef452775e54545855eb39aac40a17cd5aa527b82be",
+      "bytes": 2399
+    },
+    {
+      "path": "threshold1500_audit/optimized.json",
+      "sha256": "b406f15579422cc4b6589aef452775e54545855eb39aac40a17cd5aa527b82be",
+      "bytes": 2399
+    },
+    {
+      "path": "threshold1500_audit/REVIEWED_SOURCES.json",
+      "sha256": "7f6d9d5dbb2d5703f0dd41b035af99eeeeb95e75ec880a2f8729ce1b09e5716d",
+      "bytes": 1353
+    }
+  ],
+  "total_bytes": 15749
+}

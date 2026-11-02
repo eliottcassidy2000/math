@@ -1,0 +1,7 @@
+ROW n 1 tournaments 1 profiles 1 pairs 0 all_kernels_one_signed 1 all_profiles_log_concave 1
+ROW n 2 tournaments 2 profiles 1 pairs 0 all_kernels_one_signed 1 all_profiles_log_concave 1
+ROW n 3 tournaments 8 profiles 2 pairs 1 all_kernels_one_signed 1 all_profiles_log_concave 1
+ROW n 4 tournaments 64 profiles 3 pairs 3 all_kernels_one_signed 1 all_profiles_log_concave 1
+ROW n 5 tournaments 1024 profiles 8 pairs 28 all_kernels_one_signed 1 all_profiles_log_concave 1
+ROW n 6 tournaments 32768 profiles 24 pairs 276 all_kernels_one_signed 1 all_profiles_log_concave 1
+PASS tournaments 33867 permutations 23717429 profiles 39 pairs 308

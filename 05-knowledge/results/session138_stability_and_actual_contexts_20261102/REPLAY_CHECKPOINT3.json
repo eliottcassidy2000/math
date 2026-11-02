@@ -1,0 +1,413 @@
+{
+  "status": "PASS",
+  "scientific_executions": 18,
+  "builds": 4,
+  "frozen_payload_files": 196,
+  "portable_originals_changed": [],
+  "scope": "Fresh relocated third-checkpoint replay: exact endpoint and failure controls; producer literal and independent DP minimality kernels; actual/formal framework controls; distinct producer and independent Pfaffian-hostile kernels. Re-execution is not a new independent implementation or a large-order tournament census. Expected negative-control failures occur only inside the explicit control harness; every retained top-level command exits zero with empty stderr.",
+  "records": [
+    {
+      "tag": "verify_n1500-normal",
+      "directory": "threshold_refinement",
+      "command": [
+        "python3",
+        "-B",
+        "verify_n1500.py"
+      ],
+      "seconds": 0.027,
+      "exit": 0,
+      "stdout_bytes": 438,
+      "stdout_sha256": "ff327733cbc0ed61c10bdda91e4ab0663e413b459744b2fc019fc94fd0dac9bd",
+      "stderr": "",
+      "expected": "threshold_refinement/verification_n1500.txt",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "verify_n1500-O",
+      "directory": "threshold_refinement",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify_n1500.py"
+      ],
+      "seconds": 0.093,
+      "exit": 0,
+      "stdout_bytes": 438,
+      "stdout_sha256": "ff327733cbc0ed61c10bdda91e4ab0663e413b459744b2fc019fc94fd0dac9bd",
+      "stderr": "",
+      "expected": "threshold_refinement/verification_n1500.txt",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "verify_controls_n1500-normal",
+      "directory": "threshold_refinement",
+      "command": [
+        "python3",
+        "-B",
+        "verify_controls_n1500.py"
+      ],
+      "seconds": 0.326,
+      "exit": 0,
+      "stdout_bytes": 276,
+      "stdout_sha256": "29fac404d6c7a78c158ac43344eee1d71edac6e061e531249e544721d62cebe1",
+      "stderr": "",
+      "expected": "threshold_refinement/verification_controls_n1500.txt",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "verify_controls_n1500-O",
+      "directory": "threshold_refinement",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "verify_controls_n1500.py"
+      ],
+      "seconds": 0.384,
+      "exit": 0,
+      "stdout_bytes": 276,
+      "stdout_sha256": "29fac404d6c7a78c158ac43344eee1d71edac6e061e531249e544721d62cebe1",
+      "stderr": "",
+      "expected": "threshold_refinement/verification_controls_n1500.txt",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "check-normal",
+      "directory": "independent/threshold1500_audit",
+      "command": [
+        "python3",
+        "-B",
+        "check.py"
+      ],
+      "seconds": 0.024,
+      "exit": 0,
+      "stdout_bytes": 2399,
+      "stdout_sha256": "b406f15579422cc4b6589aef452775e54545855eb39aac40a17cd5aa527b82be",
+      "stderr": "",
+      "expected": "independent/threshold1500_audit/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "check-O",
+      "directory": "independent/threshold1500_audit",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "seconds": 0.075,
+      "exit": 0,
+      "stdout_bytes": 2399,
+      "stdout_sha256": "b406f15579422cc4b6589aef452775e54545855eb39aac40a17cd5aa527b82be",
+      "stderr": "",
+      "expected": "independent/threshold1500_audit/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "minimality_literal_O2-build",
+      "directory": "zero_framework_later",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "minimality_literal.cpp",
+        "-o",
+        "minimality_literal_O2"
+      ],
+      "seconds": 0.605,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "minimality_literal_O2",
+      "directory": "zero_framework_later",
+      "command": [
+        "./minimality_literal_O2"
+      ],
+      "seconds": 0.211,
+      "exit": 0,
+      "stdout_bytes": 637,
+      "stdout_sha256": "63b5fbb55fee211b6c041a7ef7e66cb40c5a6ec66224882889465662aeaae1f4",
+      "stderr": "",
+      "expected": "zero_framework_later/minimality_literal.out",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "zero_framework_later-normal",
+      "directory": "zero_framework_later",
+      "command": [
+        "python3",
+        "-B",
+        "framework_audit.py"
+      ],
+      "seconds": 1.463,
+      "exit": 0,
+      "stdout_bytes": 1231,
+      "stdout_sha256": "c2a1102728982b6a913c6ceea6310f0c421fb22c7fcec8714dab9bdc34e5325a",
+      "stderr": "",
+      "expected": "zero_framework_later/framework_audit.out",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "minimality_literal_UBSan-build",
+      "directory": "zero_framework_later",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "minimality_literal.cpp",
+        "-o",
+        "minimality_literal_UBSan"
+      ],
+      "seconds": 0.854,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "minimality_literal_UBSan",
+      "directory": "zero_framework_later",
+      "command": [
+        "./minimality_literal_UBSan"
+      ],
+      "seconds": 0.786,
+      "exit": 0,
+      "stdout_bytes": 637,
+      "stdout_sha256": "63b5fbb55fee211b6c041a7ef7e66cb40c5a6ec66224882889465662aeaae1f4",
+      "stderr": "",
+      "expected": "zero_framework_later/minimality_literal.out",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "enumerate_profiles_O2-build",
+      "directory": "independent_zero_framework_later",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "enumerate_profiles.cpp",
+        "-o",
+        "enumerate_profiles_O2"
+      ],
+      "seconds": 0.691,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "zero_framework_later-O",
+      "directory": "zero_framework_later",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "framework_audit.py"
+      ],
+      "seconds": 1.767,
+      "exit": 0,
+      "stdout_bytes": 1231,
+      "stdout_sha256": "c2a1102728982b6a913c6ceea6310f0c421fb22c7fcec8714dab9bdc34e5325a",
+      "stderr": "",
+      "expected": "zero_framework_later/framework_audit.out",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "enumerate_profiles_O2",
+      "directory": "independent_zero_framework_later",
+      "command": [
+        "./enumerate_profiles_O2"
+      ],
+      "seconds": 0.21,
+      "exit": 0,
+      "stdout_bytes": 2018,
+      "stdout_sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e",
+      "stderr": "",
+      "expected": "independent_zero_framework_later/profiles_O2.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "enumerate_profiles_UBSan-build",
+      "directory": "independent_zero_framework_later",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "enumerate_profiles.cpp",
+        "-o",
+        "enumerate_profiles_UBSan"
+      ],
+      "seconds": 0.954,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent_zero_framework_later-normal",
+      "directory": "independent_zero_framework_later",
+      "command": [
+        "python3",
+        "-B",
+        "audit_framework.py"
+      ],
+      "seconds": 1.514,
+      "exit": 0,
+      "stdout_bytes": 4565,
+      "stdout_sha256": "98335b35eae1e6669c7e6aa40f0a2bc6e6cc8e8fe06ec1ca234d2c3d2a60dc9e",
+      "stderr": "",
+      "expected": "independent_zero_framework_later/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "enumerate_profiles_UBSan",
+      "directory": "independent_zero_framework_later",
+      "command": [
+        "./enumerate_profiles_UBSan"
+      ],
+      "seconds": 1.0,
+      "exit": 0,
+      "stdout_bytes": 2018,
+      "stdout_sha256": "fa2bc93ac417540b361b67ad1966bbdde07d35b86b49d32a8be3493f72e0fe7e",
+      "stderr": "",
+      "expected": "independent_zero_framework_later/profiles_UBSan.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent_zero_framework_later-O",
+      "directory": "independent_zero_framework_later",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "audit_framework.py"
+      ],
+      "seconds": 1.306,
+      "exit": 0,
+      "stdout_bytes": 4565,
+      "stdout_sha256": "98335b35eae1e6669c7e6aa40f0a2bc6e6cc8e8fe06ec1ca234d2c3d2a60dc9e",
+      "stderr": "",
+      "expected": "independent_zero_framework_later/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "stability-hostile-normal",
+      "directory": "stability",
+      "command": [
+        "python3",
+        "-B",
+        "pfaffian_coefficient_hostile.py"
+      ],
+      "seconds": 0.026,
+      "exit": 0,
+      "stdout_bytes": 628,
+      "stdout_sha256": "bdcafc9d781c1009547a327f349e0792ddc560173efd0a64b3ae9e43832856c4",
+      "stderr": "",
+      "expected": "stability/pfaffian_coefficient_hostile.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "stability-hostile-O",
+      "directory": "stability",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "pfaffian_coefficient_hostile.py"
+      ],
+      "seconds": 0.077,
+      "exit": 0,
+      "stdout_bytes": 628,
+      "stdout_sha256": "bdcafc9d781c1009547a327f349e0792ddc560173efd0a64b3ae9e43832856c4",
+      "stderr": "",
+      "expected": "stability/pfaffian_coefficient_hostile.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent_pfaffian_hostile-hostile-normal",
+      "directory": "independent_pfaffian_hostile",
+      "command": [
+        "python3",
+        "-B",
+        "check.py"
+      ],
+      "seconds": 0.064,
+      "exit": 0,
+      "stdout_bytes": 139,
+      "stdout_sha256": "7d0c113ca2f685154d324de501cd6be7b733b9eee3e4f1299b375e95fefcb4a6",
+      "stderr": "",
+      "expected": "independent_pfaffian_hostile/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent_pfaffian_hostile-hostile-O",
+      "directory": "independent_pfaffian_hostile",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "check.py"
+      ],
+      "seconds": 0.121,
+      "exit": 0,
+      "stdout_bytes": 139,
+      "stdout_sha256": "7d0c113ca2f685154d324de501cd6be7b733b9eee3e4f1299b375e95fefcb4a6",
+      "stderr": "",
+      "expected": "independent_pfaffian_hostile/normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    }
+  ]
+}

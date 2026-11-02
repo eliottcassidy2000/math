@@ -1,0 +1,40 @@
+{
+  "complement_pfaffian": "3",
+  "full_pfaffian": "3x-2",
+  "full_pfaffian_at_x": "0",
+  "margin": "17/9",
+  "proposed_total_margin_bound": "31/36",
+  "scope": "FINITE-EXACT single weighted6-tournament, one uncertain edge",
+  "skew_upper": [
+    [
+      "2/3",
+      "-1",
+      "-1",
+      "-1",
+      "-1"
+    ],
+    [
+      "1",
+      "-1",
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "-1"
+    ],
+    [
+      "1"
+    ],
+    []
+  ],
+  "u": "32/9",
+  "v": "-5/3",
+  "verdict": "REFUTES termwise Pfaffian square>=x^2; does NOT refute total-margin refinement",
+  "x": "2/3"
+}

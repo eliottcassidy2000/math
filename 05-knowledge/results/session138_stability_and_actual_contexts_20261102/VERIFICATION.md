@@ -2,14 +2,47 @@
 
 ## Results and provenance
 
-**All current headline claims are independently accepted in their stated scopes.** The all-order asymptotic coefficient is proved; exact finite-order coefficients are proved through eight. Arbitrary strong-quotient scalar zero-rigidity and unrestricted spectrum completeness remain open.
+**All current headline claims are independently accepted in their stated scopes.** The all-order asymptotic coefficient is proved; exact coefficients and positive-variance equality are proved through eight and at every n>=1500. Orders 9 through 1499 remain unresolved. Arbitrary strong-quotient scalar zero-rigidity and unrestricted spectrum completeness remain open.
 
 | Checkpoint | Mathematical scope | Evidence retained |
 |---|---|---|
 | First, published at `6fff918603cec8a2b9e233bbb627d703214d6953` | Multistar coefficient asymptotic to 4/n, matching-support sharpness, exact unrestricted coefficients through seven, reflector/resource theorems, restricted profile rigidity | [Frozen scope](CHECKPOINT1.md), original lane selectors and audit pins, [first portable replay](REPLAY_CHECKPOINT1.json); 118 published blobs verified |
-| Second continuation | Sharp order eight; `K_n=8/n+O(n^(-2))` and finite-order/near-candidate bounds; exact all-parameter sign chambers for three actual modules | Separately curated source files, independent proofs, exact receipts, and continuation replay |
+| Second, published at `a60f529a50744a6a95a3d327983f9542780894d2` | Sharp order eight; `K_n=8/n+O(n^(-2))` and finite-order/near-candidate bounds; exact all-parameter sign chambers for three actual modules | [Frozen scope](CHECKPOINT2.md), separately curated source files, independent proofs, exact receipts, and [second portable replay](REPLAY_CHECKPOINT2.json); 156 cumulative published blobs verified |
+| Third continuation | Exact `K_n=kappa_n` for all n>=1500 and complete positive-variance equality; general sufficient cyclic sign certificates and minimal order-seven actual hostile | Separate proofs and reviewed pins; exact endpoint controls and independent complete small-module profile coverage |
 
 The first-checkpoint lane bytes are not rewritten to claim later results. The first source-integrity and replay files retain their original counts. Updated root summaries describe the combined release; historical through-seven statements remain explicitly scoped.
+
+## Third continuation: exact stability above a sufficient threshold
+
+[Exact theorem](threshold_refinement/PROOF_N1500.md) · [Independent audit](independent/threshold1500_audit/AUDIT.md)
+
+**ACCEPT, including the complete equality locus.** The proof covers every integer n>=1500 using accepted uniform inequalities, a heavy/light greedy-matching contradiction, and the exact H=1 minimization. It has no dependency on an unpublished larger-threshold candidate. The nonperfect-matching coefficient is applied only to a nonempty retained matching; all divisions by discarded mass and square-root squaring steps have their positivity hypotheses checked. The final contradiction has exact squared slack `137/9537`.
+
+The producer's standard-library endpoint checker has eleven exact Fraction/integer checks. Its failure-control program injects a false gate and verifies explicit failure both normally and under `-O`; its five controls also check normal/optimized output identity. The independently authored checker imports no producer code or data and reconstructs twelve exact certificates. Monotonicity arguments—not finite sampled orders—extend the endpoint estimates to the full stated range.
+
+The sufficient threshold 1500 is not asserted optimal. The equality statement concerns V>0; it forces matching uncertainty, a zero expected binary gap, transitive supported completions, and finally maximal fair ordinal pairs. Orders 9 through 1499 are outside the accepted exact result.
+
+The separately recorded third-checkpoint source integrity and fresh portable replay preserve the two earlier receipts unchanged.
+
+## Third continuation: general cyclic criteria and exact minimality
+
+[Framework theorem](zero_framework_later/GENERAL_CRITERION.md) · [Independent audit](independent_zero_framework_later/AUDIT.md) · [Reviewed pins](independent_zero_framework_later/SOURCE_PINS.json)
+
+**ACCEPT:** both sufficient criteria for actual nonempty same-order modules, the strong seven-vertex same-card row-condition hostile, and its minimal module order. The negative-chamber theorem requires an actual log-concave base, the stated row pivot condition, and a strict negative base quadratic. Formal nonnegative polynomial products are not asserted realizable; failed tests are inconclusive.
+
+The independent small-module census covers all 33,867 labeled tournaments through order six, all 39 resulting order-specific profiles, and all 308 distinct same-order profile-pair kernels. Every kernel is entrywise one-signed; this proves the exact lower-order exclusion for any actual base and allowed multipliers, not merely for sampled contexts. The independent census counts by Hamilton-subset and ordered-cover DP, whereas the producer traverses 23,717,429 literal vertex words. The independent result must not be described as a second literal-permutation census.
+
+Normal/UBSan census outputs agree. The independent Python audit reconstructs 14,623 kernel entries from forced run words, nine actual hostile side-pair contexts, four actual certifier controls, and six invalid-input rejections. Its separate API-conformance controls cover 14,400 **formal** finite cases, 1,642 accepted predicates, and 26,272 negative multiplier-pair checks; those formal vectors are not claimed actual tournament profiles.
+
+The actual responses −36, +828, and +67932 at singleton, TT2, and C3 side pairs confirm that dropping the row condition is unsafe. This is not a scalar-zero counterexample, a universal sign decision procedure, or a theorem of arbitrary strong-quotient zero-rigidity.
+
+## Third continuation: independently checked false-lemma counterexample
+
+[Pfaffian hostile](stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md) · [Independent audit](independent_pfaffian_hostile/AUDIT.md)
+
+**ACCEPTED counterexample to a proposed termwise lemma, not a new lower bound or theorem premise.** The independent checker uses full antisymmetrization over all 720 permutations and Leibniz determinant sums, not the producer's recursive Pfaffian and Gaussian-elimination kernels. Eleven exact active checks agree under normal and optimized Python. They recover `Pf(K)=3x-2`, the complementary coefficient three, its zero at x=2/3, and `u=32/9`, `v=-5/3`, `u-|v|=17/9`.
+
+Only the claimed unit-coefficient implication and its unrestricted individual-square bound are refuted. The total-margin refinement is not refuted by this witness and remains open; all accepted proof dependencies are unchanged.
 
 ## 1. All-order asymptotic theorem: proof and exact controls
 
@@ -54,7 +87,7 @@ The independent graph implementation constructs seven-vertex isomorphism orbits 
 
 Matching counts use vertex-subset dynamic programming; wedge-plus-edge patterns are counted wedge-first. These differ from the producer's permutation-orbit construction and pattern-mask counting. The exact minimum is zero, maximum 10,808, with two zero augmentations: empty and perfect matching. Normal and UBSan outputs match. All arithmetic is integral; separate-affinity interpolation and the independently reviewed tournament-cycle reduction establish the theorem over the whole real variance cube.
 
-Positive-variance equality in `Delta>=87V/128` follows from the retained positive triangle reserve and H=1 classification, not merely from interpreting a graph zero count. Exact equality beyond order eight remains open.
+Positive-variance equality in `Delta>=87V/128` follows from the retained positive triangle reserve and H=1 classification, not merely from interpreting a graph zero count. This order-eight certificate alone proves no higher order. The third continuation proves n>=1500; orders 9 through 1499 remain unresolved.
 
 ## 3. All-parameter mixed-profile sign chambers
 
@@ -89,15 +122,23 @@ The [stability audit](independent/STABILITY_AUDIT.md), [extended through-seven a
 
 The first assembled-packet replay passed twelve scientific executions and two builds, with every output matching and all 108 curated lane inputs unchanged. [Original receipt](REPLAY_CHECKPOINT1.json) · [Original source-integrity record](SOURCE_INTEGRITY.json)
 
-## 5. Fresh continuation replay: terminal PASS
+## 5. Second-checkpoint fresh replay: terminal PASS
 
-The relocated continuation replay passed **ten scientific executions and four builds**, with all ten outputs byte-matching their frozen receipts and no stderr or UBSan diagnostics. It covers the independent asymptotic checker, producer and independent zero-balance checkers, and both final order-eight graph implementations; each Python checker ran normally and under `-O`, and each C++ implementation ran optimized and under UBSan. Total elapsed time was 19.644 seconds.
+The relocated second-checkpoint replay passed **ten scientific executions and four builds**, with all ten outputs byte-matching their frozen receipts and no stderr or UBSan diagnostics. It covers the independent asymptotic checker, producer and independent zero-balance checkers, and both final order-eight graph implementations; each Python checker ran normally and under `-O`, and each C++ implementation ran optimized and under UBSan. Total elapsed time was 19.644 seconds.
 
 All **143 curated lane files** in the relocated tree remained unchanged. The 108 first-checkpoint files remain byte-identical, all 115 prior packet paths are preserved, and the continuation adds 35 explicitly selected lane files. The new source-integrity pass checks 27 manifest entries and seventeen reviewed-source pin entries. These are checks of the stated retained scopes, not a new independent proof or an expansion of any census.
 
 [Continuation replay receipt](REPLAY_CHECKPOINT2.json) · [Continuation source integrity](SOURCE_INTEGRITY_CHECKPOINT2.json)
 
-## 6. Curated inventory and replay discipline
+## 6. Third-checkpoint fresh replay: terminal PASS
+
+**Eighteen scientific executions and four C++ builds passed**, with all scientific outputs byte-identical to their frozen receipts and every top-level process exiting zero with empty stderr. This includes normal/optimized exact-threshold endpoint and failure-control programs, both framework Python kernels, producer literal and independent DP minimality programs under optimization and UBSan, and both Pfaffian-hostile implementations normally and under `-O`. Expected injected failures are checked inside the explicit failure-control harness, not hidden as successful theorem checks.
+
+All **196 curated lane files** in the relocated copy remain unchanged. The continuation adds 53 explicitly curated files; all 143 earlier curated lane hashes and all 153 earlier packet paths are preserved. In fact all 148 earlier packet files outside the four current summary documents and aggregate hash manifest remain byte-identical. The new verification pass checks 44 manifest entries and 29 reviewed-source pin entries.
+
+[Third replay receipt](REPLAY_CHECKPOINT3.json) · [Third source integrity](SOURCE_INTEGRITY_CHECKPOINT3.json)
+
+## 7. Curated inventory and replay discipline
 
 First-checkpoint selectors remain unchanged: `stability/PUBLIC_FILES.txt`, `exact_resources/PUBLIC_FILES.txt`, `zero_rigidity/public_manifest.json`, and `independent/FIRST_CHECKPOINT_FILES.json`, plus the dedicated profile audit packet.
 
@@ -109,7 +150,9 @@ Continuation selectors are:
 - [zero-balance manifest](zero_balance_later/public_manifest.json): six payloads plus both manifests;
 - the six-file `independent_zero_balance_later` audit packet, including its own `SHA256SUMS`.
 
-No executable, cache, superseded graph variant, exploratory parameter scan, or additional exact-equality candidate is included. Retained finite diagnostic controls have their scopes stated above. A repeated program is a same-source replay, not a newly independent proof.
+Third-checkpoint additions have separate selectors: six payloads plus two manifests in [threshold_refinement](threshold_refinement/PUBLIC_FILES.txt); five independent threshold files plus [their selector](independent/THIRD_CHECKPOINT_FILES.json) and hash manifest; eleven producer framework payloads plus [two manifests](zero_framework_later/public_manifest.json); twelve independent framework audit files; four producer Pfaffian-hostile files plus [their selector](stability/HOSTILE_PUBLIC_FILES.txt) and hash manifest; and five independent hostile files plus [two manifests](independent_pfaffian_hostile/PUBLIC_FILES.txt).
+
+No compiled executable, cache, superseded graph variant, exploratory parameter scan, or unaccepted exact-equality candidate is included. Retained finite diagnostic controls have their scopes stated above. A repeated program is a same-source replay, not a newly independent proof.
 
 Copy the assembled packet before replaying programs that may create sidecars; retain sibling directories. Python tensor programs require NumPy; the new continuation Python checks use the standard library. C++ graph certificates require a C++17 compiler. All gates remain active under optimization.
 
