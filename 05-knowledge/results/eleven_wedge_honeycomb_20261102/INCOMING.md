@@ -80,3 +80,23 @@ These are typed constructions with different invariants. They suggest
 future source-weighted arithmetic certificates, but give no Collatz entry
 or HN forcing theorem. The exact next test is the26->27 birth interface
 and composition of two such interfaces, not another fixed-order census.
+
+## Final synchronization: the ordinary spectrum remains separate
+
+The later public9d5bae74f0 checkpoint's
+[Session142 frontier proof](../session142_tournament_odd_spectrum_20261102/frontier/proof.md)
+compresses the inherited7/21 exclusion to272 structural cases and retains
+both prime lanes p and7p, with the explicit carry values49,63,343. Its
+[synthesis](../session142_tournament_odd_spectrum_20261102/SYNTHESIS.md)
+also distinguishes an algebraic inverse from one landing in the legal
+Boolean source. These inputs were read, not rerun here, and are not
+dependencies of the weighted order11 theorem.
+
+The [near-join packet](../spectrum_analogies_nearjoin_20261102/README.md)
+gives a scoped response h+2^k B with a retained root; the correcting commit
+d4e61c87ab explicitly restores the7p lane and the stronger prior digital
+banks. Neither finite coverage nor weighted interpolation settles ordinary
+H completeness. Our97-state result instead preserves an actual finite
+source domain and its whole permitted future language; the all-size interface
+growth remains open. This distinction prevents transferring a weighted
+stability proof or a finite observer into an unproved integer realization law.

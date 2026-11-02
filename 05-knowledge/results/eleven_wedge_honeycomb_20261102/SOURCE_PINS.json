@@ -1,7 +1,7 @@
 {
-  "correction_note": "THM-461 is pinned after its repaired source-count and real-root statements; MISTAKES.md records their lineage. The honeycomb subtraction correction is also explicit there.",
+  "correction_note": "THM-461 is pinned as historical input, not as authority for its old false corollary. Use the maintained repaired theorem and MISTAKES.md for current truth. The honeycomb subtraction correction is also explicit there.",
   "scope": "Referenced proof inputs and recovered context; pinning is not an assertion that every historical theorem was independently reaudited.",
-  "source_revision": "df904afa09fce7ea35cb1eb491ee63ca7be17101",
+  "source_revision": "9d5bae74f05a685d523df0c5559d71c3cd53cd6a",
   "sources": [
     {
       "git_blob": "5ad5948f088d8e2039627c775ba88b0ae532d230",
@@ -9,9 +9,9 @@
       "sha256": "ca492955b0ac2ad8a2c22103bdca84373025f0e090c706997734ba0970b4c84e"
     },
     {
-      "git_blob": "af7935a80140b1ab85973c69e07c3b5432a6f85f",
+      "git_blob": "ad9b838e514264532e4cb847a30100d1db64c42b",
       "path": "01-canon/theorems/THM-461-unit-distance-deletion-ladder-and-floor.md",
-      "sha256": "3c0e046bcd46e2e4c95000fadbe6bc8354671845e053185f1a3795911ef43fa1"
+      "sha256": "6b6d4a799040ca73ee3c06bdaaf160d801571024bfbce00abf1fc906ee1450e3"
     },
     {
       "git_blob": "027a91e5ad4b6957214b251c14bbefd79f280321",
@@ -104,6 +104,16 @@
       "sha256": "15fc9acbb7bc9f6ac1eb3044987364345bd4ec747d6ed9de04c780154fdb6a4f"
     },
     {
+      "git_blob": "389c5a969e23bbeed0b273a32a6cda51ef49091e",
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/SYNTHESIS.md",
+      "sha256": "2bad6744d8d416aadb10df5295e59625b5636d7438c010af27dbc239e3354f3a"
+    },
+    {
+      "git_blob": "21f2963f53f1b514fb24fc1fb2df2f9efdf31a89",
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/frontier/proof.md",
+      "sha256": "28d50c012046cdccbb10327a3b9b44b49e2de5a791a47ecde5e6df916e4e69cd"
+    },
+    {
       "git_blob": "aeec93b86ded0c1245202a2e54a9e97c7d92f5f4",
       "path": "05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md",
       "sha256": "128d084d32d3680a0d86a3ec881606268b4195ecf93fec00fdee92e092f751c1"
@@ -112,6 +122,11 @@
       "git_blob": "938ecf27547b6fa2edb91e43a4c45f6acee0e7d1",
       "path": "05-knowledge/results/session42_shared_lattices_square_colors_20261023/SYNTHESIS.md",
       "sha256": "56fa722d43e18584b61a1b44ff2dc32de07b8338220c87937b5916c2a93d6f57"
+    },
+    {
+      "git_blob": "50dce9b3b873db0fde42cbf759d5ac72a8e0dad6",
+      "path": "05-knowledge/results/spectrum_analogies_nearjoin_20261102/README.md",
+      "sha256": "4c815b5e57b7970eac4e83ccdacbc3a5af5375c476de02fa9a00d762044a293a"
     },
     {
       "git_blob": "d9d78908d6c631f1ee222f4bd3c6f36127d94855",

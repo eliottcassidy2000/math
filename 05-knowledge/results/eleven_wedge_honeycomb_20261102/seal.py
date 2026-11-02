@@ -10,7 +10,9 @@ def files():
     return sorted(p for p in HERE.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.name!='MANIFEST.json')
 def main(write):
     if write:
-        revision=git('rev-parse','HEAD').decode().strip();sources=set()
+        # Public immutable commit: a later rebase must not strand source pins
+        # on an unpublished local commit unavailable in a fresh clone.
+        revision=git('rev-parse','origin/main').decode().strip();sources=set()
         for doc in HERE.glob('*.md'):
             for target in re.findall(r'\]\(([^)]+)\)',doc.read_text()):
                 if '://' in target or target.startswith('#'):continue
@@ -23,7 +25,7 @@ def main(write):
             data=git('show',revision+':'+path)
             rows.append({'path':path,'git_blob':git('rev-parse',revision+':'+path).decode().strip(),'sha256':digest(data)})
         pins={'source_revision':revision,'scope':'Referenced proof inputs and recovered context; pinning is not an assertion that every historical theorem was independently reaudited.',
-              'correction_note':'THM-461 is pinned after its repaired source-count and real-root statements; MISTAKES.md records their lineage. The honeycomb subtraction correction is also explicit there.',
+              'correction_note':'THM-461 is pinned as historical input, not as authority for its old false corollary. Use the maintained repaired theorem and MISTAKES.md for current truth. The honeycomb subtraction correction is also explicit there.',
               'sources':rows}
         (HERE/'SOURCE_PINS.json').write_text(json.dumps(pins,indent=2,sort_keys=True)+'\n')
         manifest={'scope':'Integrity only, not a proof of mathematical correctness. Shared navigation/correction edits are versioned by Git, not frozen here.',
