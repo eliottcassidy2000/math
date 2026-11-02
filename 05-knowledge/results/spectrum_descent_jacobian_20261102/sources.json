@@ -1,0 +1,54 @@
+{
+  "base_commit": "91cc1210ed",
+  "files": [
+    {
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/descent.py",
+      "sha256": "c902e9a1a6f91a3bdf81fd0eaffcd1a085369dd95184a7b55652bc56e2f2aff2"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/verify.py",
+      "sha256": "0debcdb9b5a421b63e50e0186247c87f578cd1f35eb35c432975104f520b40e0"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/diamond_profiles.py",
+      "sha256": "86df7654a9b4a4a8e70fb4a02729906bbe7832cfaffcc808fd239d587641b24e"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/diamond_inverse.py",
+      "sha256": "073fba65401fbf97d78338b400a024e9d4218f2832caf2cf71b8ed9b7775257b"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/cut_interior_coordinates.py",
+      "sha256": "c88399f7cdeaa3a9e556681fe416dcf915e75e5fcf54fc6762a923f9a9451f35"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/audit_feedback.py",
+      "sha256": "20e5a7095b8c73ce361e38467205c5f9e8b1f27b7df0574a956ed883d8294682"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031h/README.md",
+      "sha256": "a5db9880551d2d6b100ea90be29c3801d18d1159be5559ad5fbe2dfa6bf9a2ef"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031h/strong_profiles256.json",
+      "sha256": "6a435e4e0f1a4a652f9f7f76db2ba7898d991e7e2e28f423f027118c7be8b322"
+    },
+    {
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031h/strong_profiles256.ears.json",
+      "sha256": "6a93b43c63c292ade42a63c56127e890d1b99806804faa4eb89d850c0efe20d6"
+    },
+    {
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "path": "01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce"
+    }
+  ],
+  "scope": "Exact executable and accepted inherited dependency bytes, not a certificate of all inherited theorems"
+}

@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — least-rank inverse selection can discard an actual source
+
+- **Scope:** prepublication candidate tested in `05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md`; no accepted theorem is retracted.
+- **Witness / first failed implication:** in the actual singleton/D response grammar, minimizing predecessor F+q+h for target(17,12,0,5) selects(7,6,4,5), although the alternative D_2 S0 realizes the target. At(49,48,0,5) it selects forbidden F=21. Deleting those scalar values still fails at target(19,14,0,5): predecessor(9,7,3,5) passes the necessary guards but is globally unrealizable as a marked-parent state.
+- **Mechanism and repair:** low algebraic rank, integer divisibility and nonnegative cut/interior weights do not imply actual source membership. Compare all recursively legal predecessor branches using the exact Bellman cost; an admissible clock lower bound may prune only after a valid incumbent exists. The new suffix-jump inverse recovers entire binary suffixes and proves minimum cost within the declared grammar.
+- **Strongest survivor / new question:** termination and fixed-atom-count efficient inversion hold. Uniform source entry for every odd target except7,21 remains unproved. A concrete fibre of S0 has actual endpoints(5,5,5,5),(9,5,1,5) and forbidden middle(7,5,3,5), so an ambient Jacobian inverse cannot supply the missing realization guarantee.
+
 ## 2026-11-02 — the honeycomb capacity deficit is ten, not twenty
 
 - **Scope:** arithmetic correction to the user's inspirational comparison; the inherited root5 certificate already had the correct counts and is unchanged.
