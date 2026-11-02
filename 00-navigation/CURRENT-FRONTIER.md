@@ -2,9 +2,9 @@
 
 **2026-09-08.** Statuses: **PROVED**, **CITED**, **FINITE-EXACT**, **VERIFIED**, **CONDITIONAL**, **OPEN**, **RESERVED**, **REFUTED**, **SUPERSEDED**.
 
-**Oct20, ongoing:** [Overnight checkpoint](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md). Affine degree, mixed primes, two-edit families, conductor and power sums. [Prior map](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
-**Oct 25:** [Audited checkpoint](../05-knowledge/results/shape_ports_20261025/README.md): quartic/sextic exclusion, Collatz phase/refill, weighted endpoint and pure-blue correction.
-
+**Oct20:** [Prime arithmetic](../05-knowledge/results/overnight_prime_arithmetic_20261020/README.md); [prior](../05-knowledge/results/prime_power_bijections_session_20261020/README.md).
+[Oct25 shape/port repairs](../05-knowledge/results/shape_ports_20261025/README.md).
+**Nov2:** [S140](S140.md): Collatz growth/routing, unit-distance/cycle lifts; convergence/HN value OPEN.
 ## LRC(14)
 
 ### Headline

@@ -65,3 +65,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session138](S138.md): matching-support and equality mechanisms; current sharp range n=3..9,n>=48. Earlier n>=1500 checkpoint retained. Unrestricted spectrum and general zero-rigidity remain open.
 
 [Session139](S139.md): tensor/Eisenstein reserve plus the combined follow-up proves n>=48; gap10..47 open. Earlier routes retained; all-modulus contexts, finite prime states, typed spectral boundaries and guarded FRACTRAN precision.
+
+[Session140](S140.md): exponential Collatz growth, necessarily unbounded honeycomb routing, induced unit-distance realizations, exact cycle lifts and corrected HN recovery; no convergence or new plane-coloring bound.

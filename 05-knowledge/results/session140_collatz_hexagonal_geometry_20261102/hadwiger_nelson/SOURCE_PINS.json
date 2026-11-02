@@ -1,0 +1,102 @@
+[
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-4622-logical-status-dictionary-absoluteness-choice-and-automorphisms-for-jc2-collatz-hadwiger-nelson.md",
+    "blob": "188c29e8fbb09c4670262f33baaa57cf67cf55a3",
+    "sha256": "98dd52ee0073472ccaff3fd80bb6f34cc12e1949b69935328d2079ad11dc6d50",
+    "size": 11011
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-4628-residue-colourings-of-the-unit-distance-graph-of-q-zeta55-are-kloosterman-forced-at-every-conjugation-fixed-prime.md",
+    "blob": "a6ed8d4763c9c1f1cf83d91699d416c3865724d8",
+    "sha256": "de7ad071935f25ed6e5bd6fdfa22ef5a7a82a29834eeab2a106e32676cf4ecb5",
+    "size": 9474
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-4662-the-fish-curve-has-no-point-over-the-real-quartic-field-so-the-fish-and-ei21-are-not-in-q-zeta55-or-any-odd-carrier.md",
+    "blob": "b8177b914b2849fcb1ba7f572023f88b2d5357d4",
+    "sha256": "dc0d47164a1c5972922bd618e4d0f83c50bbe30972c79578a316d0691462ec92",
+    "size": 9940
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-4663-polygon-ladder-of-the-finite-unit-distance-graphs-closed-walks-are-kloosterman-moments-pentagons-level-15-hexagons-level-6.md",
+    "blob": "2beed45e434697471e022f30cd5c08c1ef914b8d",
+    "sha256": "438addc3f5cfd7d4a5e89e6dd8754e1b28e46baf9c86dbc2898436d24a5628b9",
+    "size": 24035
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-418-lattice-chromatic-dichotomy-of-the-plane.md",
+    "local_source": "sources/01-canon__theorems__THM-418-lattice-chromatic-dichotomy-of-the-plane.md",
+    "blob": "1de580dada12d967a2a9d1b77a237b6f738acd90",
+    "sha256": "bfd9c2c9a1474053ec3c52a36aaf9a69cbcc2a81fbc9dc551de4956c902319e3",
+    "size": 5485
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-419-2d-lattice-chromatic-cap.md",
+    "local_source": "sources/01-canon__theorems__THM-419-2d-lattice-chromatic-cap.md",
+    "blob": "f388a92332e7d01999fec0f0a96df704d3e08159",
+    "sha256": "c7cb23b29dcb22f51c939c1aa48cd0f6d11f9c74425d5a103113f11eb1a2f35d",
+    "size": 9208
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "01-canon/theorems/THM-4558-residue-colourings-of-field-planes-the-heegner-tower-is-at-most-four-chromatic.md",
+    "local_source": "sources/01-canon__theorems__THM-4558-residue-colourings-of-field-planes-the-heegner-tower-is-at-most-four-chromatic.md",
+    "blob": "1a7932c5554e5726e516698af2bb8a153507b26d",
+    "sha256": "db90449c5c8f8f95d1f96f2a1873f06581158f318d65d227171556811479ed33",
+    "size": 12336
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "05-knowledge/results/incoming_cylinder_prime_repair_20261013.md",
+    "local_source": "sources/05-knowledge__results__incoming_cylinder_prime_repair_20261013.md",
+    "blob": "9ea7bbda7cbb6015e33a5f573b1dd6869fcfe4f4",
+    "sha256": "024411c79bbd41120e5708e52babd6a63b4536cba50f786ca8f74524d6c94cc4",
+    "size": 5662
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "05-knowledge/results/cubic_descent_audit_20261016e.json",
+    "local_source": "sources/05-knowledge__results__cubic_descent_audit_20261016e.json",
+    "blob": "dc1811cf388ef596cd6c5d5be68155e7c165299a",
+    "sha256": "3ae68d9143f5c05f6fe11b01d84cb2dfffb9d96b7b04123e3a0530086ec835f5",
+    "size": 4104
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/SOURCE_STATUS.md",
+    "local_source": "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__SOURCE_STATUS.md",
+    "blob": "fc12f67c063d28b561db01be9791329efb4c085b",
+    "sha256": "5ed18fab7ac025c04f2d988a52ad4d6e69cdd0589be71b991cdef07a02263eb6",
+    "size": 2493
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/lattice-cap/LATTICE_CAP_REPAIR.md",
+    "local_source": "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__lattice-cap__LATTICE_CAP_REPAIR.md",
+    "blob": "4cad824b2d5da1b74f8e5bd28e81750c351255cb",
+    "sha256": "2c6212ebc62d6ceb18c4d5e5b1b61a1b5cc2ec85a78453d57a378e4a087ae04f",
+    "size": 15496
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/hexagonal/RESULTS.md",
+    "local_source": "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__hexagonal__RESULTS.md",
+    "blob": "cf72fa5e6820207de5bd5e615d01e06d414dc59a",
+    "sha256": "481675ebdcc3f3743b851c7169cf0a57c8a8bed1b22dde90895f979b6387afb8",
+    "size": 16035
+  },
+  {
+    "commit": "2d8f820db8716b168a4cb956224ffcb59c37b998",
+    "path": "05-knowledge/results/session61_hadwiger_six_seven_20261025/audits/cap/AUDIT.md",
+    "local_source": "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__audits__cap__AUDIT.md",
+    "blob": "b3f5aad5d46fa6d3b4d0dbc782d68307ddd70f3a",
+    "sha256": "c2ad358fe7517abe147b72b3eebe0ed06740414b415ac28d85e316ff947a39b2",
+    "size": 17662
+  }
+]

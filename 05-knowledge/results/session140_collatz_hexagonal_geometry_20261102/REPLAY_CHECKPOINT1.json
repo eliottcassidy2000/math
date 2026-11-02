@@ -1,0 +1,127 @@
+{
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "normal_and_optimized": true,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "collatz-controls",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "8a705baf4c0457e1d7b1bc6b0db9a00408382646ea86cd2ac2faf87c12d79b3d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "HN-controls",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "d67e794ced14189f370c7c6d7fa1152dd58ca2fcdde2ecbc1d563498be4edbd2"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-controls",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "b07ba71cbff04e3843e9ca43c990853a4e2a19a06a402326b5954ef994ae9447"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "1a2c24bba82daf4f1ef0873afa0403b38b0b51708d869a3bfae29cfba2e4bf50"
+    },
+    {
+      "expected_rejection": false,
+      "label": "collatz-controls",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "8a705baf4c0457e1d7b1bc6b0db9a00408382646ea86cd2ac2faf87c12d79b3d"
+    },
+    {
+      "expected_rejection": false,
+      "label": "HN-controls",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "d67e794ced14189f370c7c6d7fa1152dd58ca2fcdde2ecbc1d563498be4edbd2"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-controls",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "b07ba71cbff04e3843e9ca43c990853a4e2a19a06a402326b5954ef994ae9447"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "1a2c24bba82daf4f1ef0873afa0403b38b0b51708d869a3bfae29cfba2e4bf50"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-five-step-formula",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-five-step-formula",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-mod55-class",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-mod55-class",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-proof-pin-rejection",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-proof-pin-rejection",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 6,
+  "scope": "Finite exact controls and corruption detection; infinite results depend on written proofs and explicitly cited inputs. No Collatz convergence, external HN proof, or Lean build is certified.",
+  "source_files_verified": 39,
+  "source_integrity_positive_runs": 2,
+  "source_manifest_sha256": "98bd6fb2cb2276e7ae051d8d9f4722d8c207424c8147d04644adaaab101ea0ed",
+  "status": "PASS",
+  "total_executions": 16,
+  "unrelated_cwd": true
+}

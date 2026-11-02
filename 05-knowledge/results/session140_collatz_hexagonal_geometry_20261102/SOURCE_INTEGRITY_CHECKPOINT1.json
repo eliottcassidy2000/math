@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "base_commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+  "verbatim_selected_lane_files": 39,
+  "historical_HN_source_sha256_and_git_blobs_verified": 13,
+  "Collatz_inheritance_tree_pins_verified": 7,
+  "publication_markdown_links_checked": 19,
+  "links": [
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/REPLAY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/SOURCE_FILES_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/SOURCE_STATUS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/DOC_VERIFICATION_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/BOARD.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/HISTORICAL_RECOVERY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/PROOF.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/HISTORICAL_RECOVERY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/verify.py",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/README.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/SOURCE_PINS.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S140.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S140.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S140.md",
+      "target": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    }
+  ],
+  "source_snapshot_links": "Original historical relative contexts preserved verbatim; not treated as active packet routes.",
+  "frontier_science_below_intro_byte_unchanged": true,
+  "frontier_science_compared_to": "12eaf3ab17de07fcfd8d495849c19c6ae1156039",
+  "upstream_order42_unchanged": true,
+  "canon_files_changed": false,
+  "pending_session113_approval_untouched": true,
+  "central_mistakes_ledger_read_or_changed": false,
+  "external_HN_Lean_build": false,
+  "scope": "First checkpoint only: accepted geometry and recovered HN; principles excluded except finite suspension controls."
+}

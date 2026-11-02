@@ -1,0 +1,44 @@
+{
+  "repository_baseline": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+  "local_packets": [
+    {
+      "path": "collatz_hex/PROOF.md",
+      "bytes": 21349,
+      "sha256": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c"
+    },
+    {
+      "path": "collatz_hex/verify.py",
+      "bytes": 4840,
+      "sha256": "eb1bc802f259793321883b53d3f12401b5855142c5ab10c43950629290179df8"
+    },
+    {
+      "path": "collatz_hex/CORRECTIONS.md",
+      "bytes": 1402,
+      "sha256": "6856a329d3fca148c466672e17ff72900b99b7ec0057fa9a58229e72008c9014"
+    },
+    {
+      "path": "hadwiger_nelson/PROOF.md",
+      "bytes": 13216,
+      "sha256": "e714ae9c62d4fd218911bb3ed313ff986c4735d51c73100413f6ce767dfde54e"
+    },
+    {
+      "path": "hadwiger_nelson/verify.py",
+      "bytes": 7854,
+      "sha256": "4e5de6de65a57f80cc98cc3b008ba968b143195963c5dc08332688c7906331d7"
+    },
+    {
+      "path": "hadwiger_nelson/HISTORICAL_RECOVERY.md",
+      "bytes": 12855,
+      "sha256": "e61f484572b41d93e1dd940bc4d197d657b8777fabf2b992f5fd4a2f7c831994"
+    }
+  ],
+  "external_primary": {
+    "author": "Daniela K\u00fchn",
+    "title": "Minor-universal planar graphs without accumulation points",
+    "url": "https://web.mat.bham.ac.uk/D.Kuehn/unvacc3.pdf",
+    "checked": "2026-11-02",
+    "theorem": "2, especially (iii), printed page 4; definitions printed page 2",
+    "status": "Primary text independently read; theorem CITED, not reproved or formally verified"
+  },
+  "scope": "Checkpoint 1 only: accepted Collatz and HN packets; finite canonical-suspension controls are not acceptance of the pending synthesis packet."
+}

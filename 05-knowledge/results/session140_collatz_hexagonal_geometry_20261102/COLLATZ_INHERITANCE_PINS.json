@@ -1,0 +1,51 @@
+[
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "01-canon/theorems/THM-4523-collatz-functional-graph-is-rigid-backward-trees-identify-vertices.md",
+    "blob": "d32eb89c5d24edd941f29e031e75bdbd1b51ae78",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  },
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "01-canon/theorems/THM-4623-collatz-functional-graph-order-topology-endomorphisms-and-koopman-torsion.md",
+    "blob": "4a75c5ca8ad9e86296f69bf0d851ef3ccf09ab9f",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  },
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "01-canon/theorems/THM-4754-three-adic-sierpinski-tournament-collatz-arc-flip-steiner-midpoint.md",
+    "blob": "60da26daf9f6d7fada6467b8f9f56921cec5248b",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  },
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "01-canon/theorems/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md",
+    "blob": "3bd3a8f2c048bd743134f9aa82de397c9855fef1",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  },
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "05-knowledge/results/collatz_mod6_20260917_reverse_tree_pieces.md",
+    "blob": "452777b110b38a1670fb12fadf483e3af7003bcd",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  },
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "05-knowledge/results/collatz_coherence_20260930_trichotomy_hexagon_motifs.md",
+    "blob": "bd32c469ab9437de42dad877b60c860ad6e0613d",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  },
+  {
+    "commit": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+    "path": "05-knowledge/results/collatz_procgen_20260924_inverse_tree_mod192.md",
+    "blob": "2d38c8d1dcdb0bd7971ae10e8e7501c6b45c0f1b",
+    "status": "INHERITED / recovered by producer; not newly proof-assistant verified",
+    "local_snapshot_included": false
+  }
+]

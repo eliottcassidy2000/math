@@ -1,0 +1,97 @@
+{
+  "arithmetic_universe": "1 <= n <= 10000",
+  "brick_wall_matching_universe": "-10 <= x,y <= 10; x+y even",
+  "full_hostile_fibres": {
+    "C_inverse_depth4_at7": [
+      18,
+      112
+    ],
+    "T_inverse_depth3_at7": [
+      18,
+      56
+    ]
+  },
+  "independent_odd_branch_universe": "odd m < 2000, 3 not dividing m",
+  "inverse_fibre_universe": "1 <= n <= 500",
+  "scope": "finite exact controls, not a convergence test or proof",
+  "selected_macro_tree_checks": [
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "C",
+      "root": 1
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "T",
+      "root": 1
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "C",
+      "root": 2
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "T",
+      "root": 2
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "C",
+      "root": 5
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "T",
+      "root": 5
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "C",
+      "root": 7
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "T",
+      "root": 7
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "C",
+      "root": 8
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "T",
+      "root": 8
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "C",
+      "root": 31
+    },
+    {
+      "depth": 14,
+      "leaves": 16384,
+      "map": "T",
+      "root": 31
+    }
+  ],
+  "sharp_uniform_unit_clocks": {
+    "C": 5,
+    "T": 4,
+    "hostile_root": 7
+  },
+  "status": "PASS"
+}

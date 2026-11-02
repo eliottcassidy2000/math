@@ -1,0 +1,174 @@
+{
+  "Gamma9": {
+    "chromatic_number": 3,
+    "coordinate_field": "Q(sqrt7,i)",
+    "edges": 14,
+    "vertices": 9
+  },
+  "checks": 50685,
+  "conjugation_fixed_classes": [
+    [
+      19,
+      10
+    ],
+    [
+      24,
+      10
+    ],
+    [
+      29,
+      10
+    ],
+    [
+      39,
+      10
+    ],
+    [
+      54,
+      2
+    ]
+  ],
+  "finite_field_replay": [
+    {
+      "closed_walks_1_to_4": [
+        0,
+        6,
+        12,
+        90
+      ],
+      "nonsquare": 2,
+      "p": 5,
+      "smooth_quartics": 2
+    },
+    {
+      "closed_walks_1_to_4": [
+        0,
+        8,
+        0,
+        168
+      ],
+      "nonsquare": 3,
+      "p": 7,
+      "smooth_quartics": 4
+    },
+    {
+      "closed_walks_1_to_4": [
+        0,
+        12,
+        24,
+        396
+      ],
+      "nonsquare": 2,
+      "p": 11,
+      "smooth_quartics": 8
+    },
+    {
+      "closed_walks_1_to_4": [
+        0,
+        14,
+        0,
+        546
+      ],
+      "nonsquare": 2,
+      "p": 13,
+      "smooth_quartics": 10
+    }
+  ],
+  "functional_maps_exhausted_n_le_5": 3413,
+  "inverse_levels": [
+    {
+      "depth": 1,
+      "standard_radius_bound": 7,
+      "vertices": 2
+    },
+    {
+      "depth": 2,
+      "standard_radius_bound": 14,
+      "vertices": 4
+    },
+    {
+      "depth": 3,
+      "standard_radius_bound": 21,
+      "vertices": 8
+    },
+    {
+      "depth": 4,
+      "standard_radius_bound": 28,
+      "vertices": 16
+    },
+    {
+      "depth": 5,
+      "standard_radius_bound": 35,
+      "vertices": 32
+    },
+    {
+      "depth": 6,
+      "standard_radius_bound": 42,
+      "vertices": 64
+    },
+    {
+      "depth": 7,
+      "standard_radius_bound": 49,
+      "vertices": 128
+    },
+    {
+      "depth": 8,
+      "standard_radius_bound": 56,
+      "vertices": 256
+    },
+    {
+      "depth": 9,
+      "standard_radius_bound": 63,
+      "vertices": 512
+    },
+    {
+      "depth": 10,
+      "standard_radius_bound": 70,
+      "vertices": 1024
+    },
+    {
+      "depth": 11,
+      "standard_radius_bound": 77,
+      "vertices": 2048
+    },
+    {
+      "depth": 12,
+      "standard_radius_bound": 84,
+      "vertices": 4096
+    }
+  ],
+  "odd_inverse_residue_table": {
+    "1": [
+      2,
+      4
+    ],
+    "2": [
+      1,
+      3
+    ],
+    "4": [
+      2,
+      6
+    ],
+    "5": [
+      3,
+      5
+    ],
+    "7": [
+      4,
+      6
+    ],
+    "8": [
+      1,
+      5
+    ]
+  },
+  "rooted_quotient_triangles": {
+    "closed_exactly": 12,
+    "closed_only_modulo_ideal": 18
+  },
+  "scope": "Finite exact controls; infinite claims have written proofs; inherited Selmer/modularity proofs not replayed",
+  "source_bytes": 142941,
+  "source_files": 13,
+  "status": "PASS"
+}

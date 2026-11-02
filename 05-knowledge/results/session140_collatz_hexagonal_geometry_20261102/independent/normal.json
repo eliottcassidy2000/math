@@ -1,0 +1,104 @@
+{
+  "arithmetic_color_samples": 103024,
+  "baseline": "00f55b6c70a43b10ef9e4763a8f5b9aefd97c3c3",
+  "canonical_suspensions": 21504,
+  "checks": 1242745,
+  "full_fibres": {
+    "C": {
+      "forward_enumeration_ceiling": 6400,
+      "roots": 200
+    },
+    "T": {
+      "forward_enumeration_ceiling": 3200,
+      "roots": 200
+    }
+  },
+  "gate_table": {
+    "1": 2,
+    "2": 1,
+    "4": 2,
+    "5": 3,
+    "7": 4,
+    "8": 1
+  },
+  "large_integer_boundary_max_exponent": 1024,
+  "rooted_K7_triangles": {
+    "exactly_closed": 12,
+    "only_modularly_closed": 18
+  },
+  "scope": "Independent finite exact controls only; written audit handles infinite claims; no convergence conclusion or external HN/Lean audit",
+  "selected_trees": [
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "C",
+      "root": 1
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "C",
+      "root": 5
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "C",
+      "root": 7
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "C",
+      "root": 11
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "T",
+      "root": 1
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "T",
+      "root": 5
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "T",
+      "root": 7
+    },
+    {
+      "all_levels": 8191,
+      "blocks": 12,
+      "leaves": 4096,
+      "map": "T",
+      "root": 11
+    }
+  ],
+  "sharp_clock_full_fibres": {
+    "C_inverse4_of7": [
+      18,
+      112
+    ],
+    "T_inverse3_of7": [
+      18,
+      56
+    ]
+  },
+  "status": "PASS",
+  "tree_median_control": {
+    "attachment_triples": 77305,
+    "labeled_trees": 1441
+  },
+  "verified_local_source_pins": 6
+}

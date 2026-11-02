@@ -1,0 +1,23 @@
+[
+  "HISTORICAL_RECOVERY.md",
+  "INDEPENDENT_REVIEW.md",
+  "PROOF.md",
+  "README.md",
+  "SOURCE_PINS.json",
+  "sources/01-canon__theorems__THM-418-lattice-chromatic-dichotomy-of-the-plane.md",
+  "sources/01-canon__theorems__THM-419-2d-lattice-chromatic-cap.md",
+  "sources/01-canon__theorems__THM-4558-residue-colourings-of-field-planes-the-heegner-tower-is-at-most-four-chromatic.md",
+  "sources/05-knowledge__results__cubic_descent_audit_20261016e.json",
+  "sources/05-knowledge__results__incoming_cylinder_prime_repair_20261013.md",
+  "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__SOURCE_STATUS.md",
+  "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__audits__cap__AUDIT.md",
+  "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__hexagonal__RESULTS.md",
+  "sources/05-knowledge__results__session61_hadwiger_six_seven_20261025__lattice-cap__LATTICE_CAP_REPAIR.md",
+  "sources/THM-4622-logical-status-dictionary-absoluteness-choice-and-automorphisms-for-jc2-collatz-hadwiger-nelson.md",
+  "sources/THM-4628-residue-colourings-of-the-unit-distance-graph-of-q-zeta55-are-kloosterman-forced-at-every-conjugation-fixed-prime.md",
+  "sources/THM-4662-the-fish-curve-has-no-point-over-the-real-quartic-field-so-the-fish-and-ei21-are-not-in-q-zeta55-or-any-odd-carrier.md",
+  "sources/THM-4663-polygon-ladder-of-the-finite-unit-distance-graphs-closed-walks-are-kloosterman-moments-pentagons-level-15-hexagons-level-6.md",
+  "verification.json",
+  "verification.optimized.json",
+  "verify.py"
+]

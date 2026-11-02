@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "normal_equals_optimized": true,
+  "relocated_normal_equals_original": true,
+  "relocated_optimized_equals_original": true,
+  "source_hashes_verified": true,
+  "output_sha256": "b07ba71cbff04e3843e9ca43c990853a4e2a19a06a402326b5954ef994ae9447",
+  "relocation_directory_retained": false
+}
