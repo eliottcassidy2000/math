@@ -8,8 +8,11 @@ import subprocess
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-SOURCE_REV = 'e9dd62edb6278fee329329d01cda6fc2aab5ef5a'
+SOURCE_REV = 'c16226249f1f27a335cf7c84afdeaa90879b9580'
 SOURCES = [
+    '05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N500.md',
+    '05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N276.md',
+    '05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md',
     '05-knowledge/results/session138_stability_and_actual_contexts_20261102/threshold_refinement/PROOF_N1500.md',
     '05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md',
     '05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md',

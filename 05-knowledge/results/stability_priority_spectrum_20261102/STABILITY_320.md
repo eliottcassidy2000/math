@@ -5,6 +5,10 @@ dual identity of concurrent Session139 and the retained baseline developed
 in this packet. Same-agent proof audit and exact rational verification;
 no independent-agent or formal audit of this refinement is claimed.
 
+Later refinement: [STABILITY_238.md](STABILITY_238.md) combines this flexible
+dual with the incoming stronger discarded-degree bound. The open intervals
+below describe this320 proof; the current unresolved interval is10..237.
+
 ## Theorem and credit
 
 For every real weighted tournament A of order n>=320, put

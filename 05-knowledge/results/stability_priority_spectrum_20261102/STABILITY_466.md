@@ -6,7 +6,8 @@ formal proof is claimed. The threshold is sufficient, not claimed optimal.
 
 Later refinement: [STABILITY_320.md](STABILITY_320.md) combines this retained
 baseline with concurrent Session139's local dual and reaches n>=320. The
-466 proof and its exact receipt remain unchanged as the first checkpoint.
+466 proof and its exact receipt remain as the first checkpoint. The final
+[238 refinement](STABILITY_238.md) additionally uses incoming degree cancellation.
 
 ## Statement and inherited mechanism
 
@@ -25,7 +26,7 @@ At V=0, equality occurs precisely at transitive binary tournaments.
 This extends the [accepted n>=1500 proof](../session138_stability_and_actual_contexts_20261102/threshold_refinement/PROOF_N1500.md).
 Together with its separate small-order results, the unresolved orders are
 10..465 at this checkpoint. No assertion at those orders follows from this
-note alone; the later320 refinement leaves10..319.
+note alone; the final238 refinement leaves10..237.
 
 The closest mechanism is binary rounding with a matching retained. The
 hostile family is the ordinal sum of fair pairs, which rules out a

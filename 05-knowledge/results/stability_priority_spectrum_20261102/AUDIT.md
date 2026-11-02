@@ -3,7 +3,8 @@
 Status: same-agent proof review with separate native computational paths.
 No new independent-agent or formal verification is claimed. Session139's
 526 proof and its audited local inequality are credited dependencies; the
-new320 combination has the proof and checks supplied here.
+new238 combination additionally uses the incoming discarded-degree lemma,
+reproduced in the proof and tested independently on native weighted graphs.
 
 ## Reproduce
 
@@ -11,13 +12,14 @@ Run in this directory, with Python's standard library only:
 
     python -B verify_stability.py
     python -B verify_stability_320.py
+    python -B verify_stability_238.py
     python -B verify_clocks.py
     python -B verify_carriers.py
     python -B seal.py --check
 
 All gates use explicit exceptions and remain active under `python -O`.
 Normal and optimized runs have byte-identical JSON receipts. The total is
-45,029 local checks plus seven inherited81/27 checks. Quantifiers over all
+60,275 local checks plus seven inherited81/27 checks. Quantifiers over all
 orders, all moduli, and all horizons follow from the proofs; finite replay
 does not establish them by itself.
 
@@ -25,6 +27,7 @@ does not establish them by itself.
 |---|---|---|
 | Stability466 | Rational endpoints; symbolic deletion identity;24 native weighted matrices at orders4..6 with full independent rounding; fair pairs4..12 |3,475 gates |
 | Stability320 | Rational dual and tail endpoints; polynomial identity; orders320..1499 finite replay; even/odd recurrences |3,683 gates |
+| Stability238 | Stronger degree cancellation on1,827 complete finite graph cases and19 balanced bipartite controls; exact dual and endpoints; orders238..1499 replay |15,246 gates |
 | Arithmetic clocks |132 ordered programs of length1 or2 over reduced a/b with1<=a,b<=4, each modulo1..12; first9 trace horizons; native inputs1..10000; compatible CRT charts |37,806 gates |
 | Carriers | Actual six-vertex spectral witnesses and source extensions; exhaustive square-sum path existence1..25; all169 quadratic-ring states; literal five-vertex cycles; weighted order-five zeta witness |65 local plus seven inherited gates |
 
@@ -50,6 +53,14 @@ does not establish them by itself.
 
 ## All-size proof audit
 
+For238, the incoming bound W>=2D^2/n improves the retained-mass square
+completion to c/kappa-n kappa/8. The retained matching has at least ten
+edges at R119, and both per-light-edge tail endpoints decrease thereafter.
+The flexible dual remains nonnegative with exact slack101/25390673. The
+closing sign split uses B<=4D/R and t=4/119, including equality at the
+cutoff: the strict light budget produces the contradiction. The stronger
+degree estimate and local dual are used as separate bounds on W, not added.
+
 For320, the retained matching has at least eight edges because
 g(160)=98867/12500>7 and g increases. The geometric tail is bounded per
 deleted edge by a discrete endpoint argument, and both endpoints decrease
@@ -68,7 +79,7 @@ The trace-period necessity proof separates the2-adic and3-adic coordinates;
 its response-class count has an independently enumerated valuation model.
 
 The general spectrum, realization of all prime-power context states,
-weighted orders10..319, LRC(14), RH and Collatz remain open. The session
+weighted orders10..237, LRC(14), RH and Collatz remain open. The session
 does not claim a new complexity theorem from an invariant collision.
 
 ## Repository checks
@@ -77,5 +88,5 @@ Owned-path diffs pass `git diff --check`. The documentation checker is run
 through a Windows extended-length path because an existing canon filename
 exceeds the ordinary path limit. The initial long frontier line was
 shortened to respect the bounded startup-surface budget. Historical proof
-packets remain frozen; current navigation points to the320 refinement.
+packets remain frozen; current navigation points to the238 refinement.
 Source pins and artifact hashes provide the exact reproduction boundary.

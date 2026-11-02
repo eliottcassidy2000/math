@@ -85,7 +85,7 @@ from a mean-square bound. That is an analogy of proof structure: copies
 need a proved relation to the target and an error budget. Its claimed
 11/12 zero-free half-plane is **CITED, not audited here**. It supplies no
 weighted tournament inequality or RH consequence. Our successful
-[n>=320 proof](STABILITY_320.md) retains the native binary-rounding baseline
+[n>=238 proof](STABILITY_238.md) retains the native binary-rounding baseline
 and disjoint group incidence instead of assuming a local-to-global map.
 
 ## Every modulus still does not settle the integer spectrum
@@ -127,6 +127,14 @@ that selector. In tournament profiles factorial divisibility can remove
 response coordinates; in arithmetic programs division can demand more
 coordinates. Both are primewise laws, but their operations and directions
 of information loss differ.
+
+During final integration, the concurrent [guarded-horizon theorem](../stability_priority_moduli_20261102/FRACTRAN_PRECISION.md)
+supplied the general exact finite-clock modulus and independently recovered
+the same one-step formula. It minimizes over realizable priority words,
+improving the sufficient iterated clock. Its reciprocal family has h+2
+trace classes and returns periodically; our [1/2,2/3] family has
+1+h+floor((h+1)^2/4) trace classes and decreases to halt. Neither family
+supplies a generic all-time finite carrier.
 
 ## The 81/27 metagraph control is stronger than a count collision
 
@@ -213,7 +221,7 @@ stability to modular forms. :codex-annotation{index="1"}
 | Square-sum graph | Marked total orders encode Hamiltonian witnesses | Integer labels, adjacency and distinct visits | Repeated1,8 walk; empty graph |
 
 The next substantial targets are: use actual incidence distributions for
-weighted orders10..319; classify realizable factorial-transform functions
+weighted orders10..237; classify realizable factorial-transform functions
 at prime powers with compatible source witnesses; and seek bounded-resource
 integer realization beyond profinite spectrum density. None is replaced
 by a numerical coincidence, a chronological order, or a scalar average.

@@ -2,183 +2,204 @@
   "normalization": "CRLF to LF",
   "sources": [
     {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N500.md",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
+      "git_blob": "7414c7e67c614abc3d3fadb181f699e23ef7f81b",
+      "sha256_lf": "fd0ddd18e4b0a57bff61ef4b71279ccd78c53441e2bc9bdb78253c6f702f5770",
+      "current_file_must_match": true
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N276.md",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
+      "git_blob": "bf4e32fb2da42197df526efce6a68ebcba929faa",
+      "sha256_lf": "59fe8d25ec5a15bdc61d1481baa389774a021370c59e4237a3cc81702b29aaf0",
+      "current_file_must_match": true
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
+      "git_blob": "7be6be420a54d07c6398a1e810a28ca4aca473ed",
+      "sha256_lf": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d",
+      "current_file_must_match": true
+    },
+    {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/threshold_refinement/PROOF_N1500.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "220b4768e9ce88aa29e428e84afff84e172250ec",
       "sha256_lf": "fec495e0e7845b723b8d964eeb242bc537119d1baccbb683b2dd2b1000227636",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "5e5da0f2ecfda539059f8c4625659965eb542019",
       "sha256_lf": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/MULTISTAR_STABILITY.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "645e3a9d2930721285b596d27cfe6b559bd654ca",
       "sha256_lf": "4dec64dfe70e203c55db6d5b0a470554ffb4c0bfc673f2e059ec8e44e1bebee3",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/TRIANGLE_VARIANCE.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "0a8bc5a0e025dc8b49f348a6915242154024580d",
       "sha256_lf": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/H1_STABILITY.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "191c052d35c13faf2d23109fdeece735f145b460",
       "sha256_lf": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/stability/SHARP_LOW_ORDER_STABILITY.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "f3db4fa5528fd70b6c91498792c70b82ef56709b",
       "sha256_lf": "873f58bff9bf11e4e95b7ecfb04d8f148df4e72f599a35a9ee24c8277fba3c88",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/rounding_graph/PROOF.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "de66e01afd68429a869ee60904a2a1d4177bf057",
       "sha256_lf": "393e3e819527b1fad00ed230e0ac310ebdf11aedf2a1d2d97c7aeaec8a2e66d2",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N526.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "9fa6d5bf9c47f7afb97597f98ceddb9c8eed63fb",
       "sha256_lf": "e82bf3b0eb986f63daee55d42e84c3545921800e0a9936484cfdff97a03b6561",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold526/AUDIT.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "543cf3a6822b463a8ae210c6af38ba2e7874a163",
       "sha256_lf": "c7ffdb5e8c6609d9b1e0ed86127ce9d87a54a26ea9038c0103b1186fbf528350",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/all_moduli/PROOF.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "fefa2ac56faef8843aa08804dd4a07f72afd9cf7",
       "sha256_lf": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "6be72811c95be683cb0861b124fc57ee02e68b18",
       "sha256_lf": "dc5c4ca6af9ea94f794ff4fea41ae38810db9053f12a2e83e1c66338b23aa0af",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/local_closure/PROOF.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "854edd385ee613704dce8fdddf6bcc1991730f57",
       "sha256_lf": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/session135_fractran_tm_structure_20261101/SYNTHESIS.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "f1fac87deb2d51d2086fca42eb876f5c0f4ae2cc",
       "sha256_lf": "2fd25bef641d6df39cffb0f8e1a1f94d92f0d0bb92a6868696751a4bb87acc0c",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/primegame_variant_selector_automaton_metagraph_20261031.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
-      "git_blob": "bc8489c08cc5fe4c5f712f61336090d49ef587ee",
-      "sha256_lf": "a58ad88b4b64e63c45b63453b16f9cfdae607e2283fceb30785624d0a1bfdafa",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
+      "git_blob": "cefc1065f75b3f2f82dbefbd0c89cdaf26e36dc2",
+      "sha256_lf": "31fd7743d3ec99be84775c8e0179fe548296964e3f480cfda6b9e3268992d575",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/cursor_cm_phase_20261028/TRACE_CARRIER.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "43067dd5e3f8e61f2420f1414c24eacd4c16f367",
       "sha256_lf": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/cursor_cm_phase_20261028/RAMANUJAN.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "ca736a4890b6fdd1c55d60e8d2a8a72b91c5d97e",
       "sha256_lf": "93b249a19a470b397ca3f7c7e202657023a93abbe8e6b4fa4dd9eacb04e42dd1",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "e948999109d6888e6256c65f66ce06fa0996479e",
       "sha256_lf": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
       "current_file_must_match": true
     },
     {
       "path": "05-knowledge/results/ninja_pairs_square_sum_number_system_20261031.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "5d300c9519396ca44d65f9dc9c32be71ba8c9c2e",
       "sha256_lf": "ef631b98ba2b2eed442808d919a9a6da8d98e2d5050e5fe5ae1c8a0beff7d62f",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-002-ocf.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd",
       "sha256_lf": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-209-independence-polynomial.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "af0e72ee7df4120a288b224a2441825df696e396",
       "sha256_lf": "48fd3433e2ec4891c8a337081e10a3453d84224ab20fa081e32cf7bd0e819d72",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-326-staircase-hp-equals-ip.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "8955f2e99e2b6ffcc0d1517a44754f02e57e665f",
       "sha256_lf": "432b70df1c10ebd0de38d792326f26af722e884dca7dcc1849adf6d85acc4228",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-466-the-2-adic-digits-of-H-are-odd-cycle-collection-counts.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "4bce85216d801937a007f9de903b4f5ca014205b",
       "sha256_lf": "2964ced6d038c6dd9f2b798cbebbf3d26459d051d7ff1316eceb1dcaf5f1521c",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-505-the-ocf-non-spectral-defect-H-equals-spectral-skeleton-plus-witt-defect.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "1a9e228994e1c12990e8d857d84eee238cde5ab0",
       "sha256_lf": "8467fdb879c359e12bbf444fc518c64bdd4f609ccf65e824a1dfca49eae549f5",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
       "sha256_lf": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
       "current_file_must_match": true
     },
     {
       "path": "01-canon/theorems/THM-1780-H-leaves-the-spectral-ladder-at-n6.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "61b1a166e446b93440b7f29e14a495e7cd4afc2b",
       "sha256_lf": "ab3c5f7d6413a019fc6d0200a1cee21121c150338fcec0a405b4651a7259ba6b",
       "current_file_must_match": false
     },
     {
       "path": "01-canon/theorems/THM-4729-closed-and-open-tilings-hamiltonian-cycle-bipartition-of-the-metagraph-lines-and-the-forced-arrangement.md",
-      "revision": "e9dd62edb6278fee329329d01cda6fc2aab5ef5a",
+      "revision": "c16226249f1f27a335cf7c84afdeaa90879b9580",
       "git_blob": "c96757e145ceed772a1be400030374be27bd344b",
       "sha256_lf": "016fcbf20415d3f0c069a2feea7e9f5e40e3d24d46735034dbd70cf7793acd49",
       "current_file_must_match": true

@@ -2,7 +2,8 @@
 
 The initial clean source revision was
 `291b4d9757842c02aa451beb65acfade2848609b`. Concurrent changes were integrated
-through Session139 revision9c7eb0b13e and b68db2afda before the320 proof.
+through Session139 revision9c7eb0b13e and b68db2afda before the320 proof,
+then through c16226249f for the incoming276 proof and degree cancellation.
 The first466 checkpoint was pushed as e9dd62edb6. Local source pins and
 LF-normalized hashes are in `SOURCE_PINS.json`; packet hashes are in
 `SHA256SUMS.json`. `seal.py --check` verifies both against the pinned Git
@@ -28,6 +29,9 @@ objects and the current packet.
 5. **Incoming current work:** Session139's526 local dual, weighted zeta
    order-five obstruction, factorial-transform context model, and actual5/11
    projectors. The320 proof explicitly credits and uses the local dual.
+   The238 proof additionally credits the incoming factor-four discarded-degree
+   bound. The guarded finite-horizon arithmetic classification is integrated
+   as a complementary result, including its independent one-step formula.
    The all-modulus theorem is inherited, not renamed as our clock theorem.
 
 Targeted searches covered exact theorem names, thresholds, quasi-Riemann,

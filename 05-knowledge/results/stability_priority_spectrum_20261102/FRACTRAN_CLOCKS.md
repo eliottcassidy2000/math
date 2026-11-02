@@ -4,6 +4,12 @@ Status: **PROVED** elementary statements below; **FINITE-EXACT** replay in
 `verify_clocks.py`. This is a finite-query classification, not a halting
 algorithm for arbitrary FRACTRAN programs.
 
+Concurrent credit: the incoming [priority-precision packet](../stability_priority_moduli_20261102/FRACTRAN_PRECISION.md)
+independently proves the same one-step formulas and additionally gives the
+general exact finite-horizon modulus by enumerating realizable guarded
+words. Its reciprocal example returns; the two-rule family here terminates.
+The one-step formula is not claimed as unique to this session.
+
 ## The observation determines the clock
 
 Let P=(a_1/b_1,...,a_s/b_s) be a nonempty ordered list of reduced positive
