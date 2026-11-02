@@ -57,3 +57,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session134](S134.md): constructive spectrum frontier, resource complexity and state-preserving operations; universal realization open.
 
 [Session135](S135.md): exact machine representations, fixed-PRIMEGAME basins and cost-preserving simplifications.
+
+[Session136](S136.md): full tournament spectrum frameworks, local universality and exact structural boundaries.

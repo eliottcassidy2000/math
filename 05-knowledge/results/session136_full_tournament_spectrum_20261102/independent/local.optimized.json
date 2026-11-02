@@ -1,0 +1,20 @@
+{
+  "actual_binary_words_through_length7": 255,
+  "dyadic_initialization_exponents": [
+    0,
+    9
+  ],
+  "odd_commutator_and_positive_inverse_states": 43679,
+  "odd_moduli_for_commutator": [
+    3,
+    63
+  ],
+  "positive_block_orbit_all_moduli": [
+    1,
+    80
+  ],
+  "positive_block_states_checked": 156760,
+  "script_sha256": "6e7788bc6815979a5d45218e5a5c5444d6e798e597a20240ff40eed0d0786824",
+  "status": "PASS",
+  "strong_words_directly_checked": 63
+}
