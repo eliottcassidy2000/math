@@ -22,6 +22,12 @@ INPUTS=[
     '05-knowledge/results/scaled_count_fft_carriers_20261030/THEORY.md',
     '05-knowledge/results/free_bits_seven_fiftysix_20261028/ATLAS.md',
     '05-knowledge/results/twin_pythagorean_124_20261026/CONNECTION_BOARD.md',
+    '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md',
+    '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths/PROOF.md',
+    '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths_content/PROOF.md',
+    '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CONNECTIONS.md',
+    '05-knowledge/results/session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md',
+    '05-knowledge/results/eleven_wedge_honeycomb_20261102/README.md',
     '01-canon/theorems/THM-4661-odd-degree-carriers-a-failed-six-colour-exterior-has-at-least-twenty-vertices-and-equality-testers-are-seven-colour-certificates.md',
 ]
 

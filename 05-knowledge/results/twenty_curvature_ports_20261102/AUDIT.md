@@ -66,3 +66,13 @@ sealed by seal.py. Run the commands in README.md.
 No reserved theorem IDs are consumed, and no historical theorem is
 promoted solely on these finite computations. The unrelated shared
 checkout and other sessions' files are preserved.
+
+## Release checks
+
+The normal and optimized receipts are byte-identical. The repository's
+agents/check_docs.py passes its bounded-startup, frontier-status,
+correction-sentinel and router checks after integrating the incoming
+Session141 and order11 commits. git diff --check passes. The scientific
+plot was rendered and visually inspected; its metric and axes are explicit.
+The source manifest was extended to pin the incoming proofs; all original
+sixteen inherited input hashes remained unchanged across that integration.

@@ -1,6 +1,6 @@
 {
   "files": {
-    "AUDIT.md": "8d5683b16d48fe5c68c4ced7497dea3fbc0ca9f1debca4a38a9c808e9a991911",
+    "AUDIT.md": "a76159730d6ba73d749be308d2bd4203824f391524a8f9475814e2272e4fd3a5",
     "BOARD.md": "19140e86243bcdf577aa5e2a988556fdf3b846600304e1c554c11ca3bd5035b6",
     "GAPPED_GEOMETRY.md": "d3212d60286e0ee1fe4f02e77cdf1320177e2621aeafbf7006dfafa61e0e3199",
     "HANDOFF.md": "20fe58fb170789f406e17fd6493ddf965ece256529c0807f0933a2cf0372c73a",
@@ -12,7 +12,7 @@
     "path_scout.json": "9a43648471e4521ffed0b9b4e934ea66266865db7c42f30ee3404df55463837e",
     "plot.py": "6d8785cb37dcef3bf3723b10adff10205c8923ebfc06ddc6f26dc8e14ee83949",
     "probe_paths.py": "c473c7474162ad767cddb1b3b976068fff468d46c9cf6ba369a85ddc38ff7500",
-    "seal.py": "4dcce71be0befe805c13ab86abf334f60a5b3e82101a89e34c39d65cf9d36956",
+    "seal.py": "5c1c1ef2d2fb63d023cebbc2513979639d6cd92694027b059195639f32889dc8",
     "verification.json": "13711620fdaaacc2a690548dc40191c2556fae1c5f5a726e11332427e42bc276",
     "verification.optimized.json": "13711620fdaaacc2a690548dc40191c2556fae1c5f5a726e11332427e42bc276",
     "verify.py": "b57bcc44f728e89923da727676b504531e172b9f85c162e3958eb727c314ecfe"
@@ -26,6 +26,7 @@
     "05-knowledge/results/collatz_mod6_20260917_three_adic_g_map.md": "953518d5545e782f871b35699c90c5b94b19aa76d3f12040de30c9ce3416eb18",
     "05-knowledge/results/cursor_cm_phase_20261028/RAMANUJAN.md": "93b249a19a470b397ca3f7c7e202657023a93abbe8e6b4fa4dd9eacb04e42dd1",
     "05-knowledge/results/cursor_cm_phase_20261028/TRACE_CARRIER.md": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7",
+    "05-knowledge/results/eleven_wedge_honeycomb_20261102/README.md": "316febd69383c1d3c052a59fb50423190ef9c8707a0d583e29b666ef01b6219a",
     "05-knowledge/results/free_bits_seven_fiftysix_20261028/ATLAS.md": "2205df1ddb160029f3a7f82e80b150a9a6452247948c42b26a63632825abb49b",
     "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
     "05-knowledge/results/joint_incidence_clocked_frames_20261102/path_kernel.py": "0e9d48693b88c513ebc7714e6641c9e5bcae970f7c116f930600dceacf7b841f",
@@ -34,6 +35,11 @@
     "05-knowledge/results/scaled_count_fft_carriers_20261030/THEORY.md": "e06c3f75ab9794e9f1ce3fd0725d7223e5a92372ca2582bead414b9e66265e86",
     "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/README.md": "5d42e5d91a2c122ffde93730729b9239c8cb68f71348acf41cf19300380f3944",
     "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+    "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CONNECTIONS.md": "834c0d833c6717ed14a1d474b2d3eafb5990d4ff2fc22a8db1bb4c25463e8532",
+    "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md": "19d5854bcec14cd7e94cea32d7f4654cd9915a6c3f325c9b4e5e43e74dab885e",
+    "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md": "e37e9ccfeb631e0bc91ab6d837a98191aa8b4be1e2e658847706822c439e06b0",
+    "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths/PROOF.md": "b8d872356c0f439c4c48199ef281a50df84609866554b1ec87a1b257a558e637",
+    "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths_content/PROOF.md": "e88cf8631ad3c0b14accdf4760d6166f3a46ee8ab57b1c5b4b8624553ad3d89b",
     "05-knowledge/results/twin_pythagorean_124_20261026/CONNECTION_BOARD.md": "55fca506aa04224a16a87be8757c6ecdf9795b6f5f725f6205df5bcb6d39756c"
   },
   "primary_sources": [
