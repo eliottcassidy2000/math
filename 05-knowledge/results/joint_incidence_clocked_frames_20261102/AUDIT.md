@@ -83,6 +83,13 @@ order41 witness. These were read and integrated as inherited inputs, not
 new results of this packet. Their literal port requirement agrees with
 the path kernel's group-fixed intersection formula.
 
+A push was rejected by incoming `66cf347030`. Its endpoint-corner theorem,
+Fermat-neighbour classification handoff, and Collatz geometry proof were
+read; the latter independently proves the same growth obstruction with
+native bound7 instead of SF5's8. Both proofs and all mathematical corrections
+were preserved when resolving the S139/MISTAKES append conflicts. The
+endpoint-corner result is cited with its operation and clock restrictions.
+
 The81/27 data are inherited exact controls, not replayed here. General
 minimal strong-atom carriers, all-size selected-path recovery, arbitrary
 complement closure, A000568 speedups, LRC(14), and Collatz remain OPEN.

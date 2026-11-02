@@ -98,6 +98,21 @@
       "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/asymptotic_stability/PROOF.md",
       "commit": "dde756b2c2d4506156d637a536910fc80a35450d",
       "sha256_git_blob": "af7a86c2390b5e7507c1c689fc4cd2c0d3a191c2f6019207eed3b7c9e472dae0"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/CORNER_CARRIER.md",
+      "commit": "66cf347030",
+      "sha256_git_blob": "88bd20ecee9c385f4652de785a5e5758ab1fd18827169995e3d80827522f8e27"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md",
+      "commit": "66cf347030",
+      "sha256_git_blob": "07cec6485117d4be849ba4f2d8dd56dc28876a1922b9a68cf6cc8873d01599de"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/HANDOFF.md",
+      "commit": "66cf347030",
+      "sha256_git_blob": "7800d2870de1fefce16430f75ce2f920588db467eda8fdf41e04c2f60e997083"
     }
   ],
   "primary_sources": [

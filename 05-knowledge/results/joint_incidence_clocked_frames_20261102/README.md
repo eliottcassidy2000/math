@@ -80,6 +80,11 @@ reproduce A000568 and fixed-port extensions through body order55. Our path
 kernel refines fixed-tournament intersections; it does not replace that
 cycle-index recurrence or claim new unlabelled sequence terms.
 
+During publication, `66cf347030` also supplied a minimal actual endpoint-edit
+corner carrier and an independent, sharper-clock proof of the same Collatz
+lattice obstruction. These are integrated in the transport and geometry
+notes, with the restricted operation alphabet and concurrent credit retained.
+
 ## Reproduce
 
 ```text

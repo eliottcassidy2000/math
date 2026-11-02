@@ -3,6 +3,15 @@
 **Status: PROVED elementary consequence of an inherited inverse tree;
 FINITE-EXACT clock controls. Collatz remains OPEN.**
 
+**Concurrent lineage:** `66cf347030`, received during publication, proves the
+same polynomial-growth obstruction using a different inverse grammar rooted
+at85 and the sharper native bound7 per macro edge. Its
+[geometry note](../clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md) also gives
+a constant-macro-length hyperbolic layout. The present proof is retained as
+the explicit reuse of SF5's strictly increasing tree; no priority over that
+independent concurrent obstruction is claimed. The sidecar-bit consequence
+below applies to either grammar with its own clock constant.
+
 Fix the native positive-integer map C(n)=n/2 for even n and3n+1 for odd n.
 Every node has exactly one outgoing edge. Its incoming nodes are2n and,
 when n=4 mod6, the additional odd node(n-1)/3. Thus the requested indegree

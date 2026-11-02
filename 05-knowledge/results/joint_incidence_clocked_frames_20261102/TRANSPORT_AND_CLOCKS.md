@@ -169,3 +169,22 @@ The proved M12 carrier is a controlled example of the desired phenomenon;
 it is NOT a solution of general unnamed strong-atom composition. The latter
 still needs actual relations, joint port multiplicities, common transport,
 and integral realization guards. No new twelve-vertex minimality is claimed.
+
+## 6. Incoming actual endpoint attachments
+
+Concurrent `66cf347030` supplies a more directly native example:
+[the corner-carrier theorem C1](../clocks_carriers_genus_20261102/CORNER_CARRIER.md).
+Conditional on the common ordered path and a decrementing edit clock h,
+the endpoint-chord language has exactly(h+1)(h+2)/2 independent orientation
+bits, for n>=h+3. Complement/reflection, endpoint deletion, and prescribed
+endpoint attachment are included; only h bits of a new row can affect
+remaining answers. Arbitrary re-marking defeats that compression.
+
+This result is inherited, not reproved here. Together with the fixed-marker
+lemma it identifies two exact kinds of savings: inaccessible coordinates
+under a deadline, and a stabilizer invisible to a fixed observation. A joint
+polynomial of the SAME visible bits needs no extra orientation coordinates.
+An actual multi-run port query may inspect other arcs or need multiplicities;
+the corner theorem does not authorize dropping those. Finding the appropriate
+closed joint-response algebra under its restricted edit grammar is a precise
+next target before attempting unrestricted complements and re-markings.
