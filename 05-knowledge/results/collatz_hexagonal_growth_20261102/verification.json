@@ -219,6 +219,17 @@
       }
     ],
     "leaf_gram_rank": 256,
+    "leaf_gram_ranks_by_depth": {
+      "0": 0,
+      "1": 2,
+      "2": 4,
+      "3": 8,
+      "4": 16,
+      "5": 32,
+      "6": 64,
+      "7": 128,
+      "8": 256
+    },
     "pairs_checked": 130305,
     "pairs_with_earlier_even_meeting": 126719,
     "periodic_phase_hostile": [

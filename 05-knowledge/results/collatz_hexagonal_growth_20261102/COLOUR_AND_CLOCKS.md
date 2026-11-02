@@ -151,8 +151,10 @@ unboundedly many certified sources still leaves a genuine coverage problem.
 
 The distinction also appears in energy. On a binary tree, split unit flow
 equally: the total unit-resistance energy is sum_(h>=1)2^h(2^-h)^2=1.
-But under its fair boundary measure, the evaluation norm for a chosen
-length-h cylinder is2^h and diverges along a single infinite address.
+But under its fair boundary measure, evaluation on functions constant
+on length-h cylinders has SQUARED norm2^h for a chosen cylinder. Its
+representer is1_C/mu(C), of squared norm1/mu(C); the norm itself is2^(h/2).
+Both diverge along a single infinite address.
 Finite transport energy is not finite source-evaluation energy. This is
 the precise boundary highlighted by SF4 and the deleted-atom hostile in
 [the source-floor packet](../collatz_source_refinement_floor_20261005.md).

@@ -2,7 +2,10 @@
 
 Status: **PROVED elementary identities/obstructions; FINITE-EXACT certificates;
 recovered and external results credited; major conjectures remain OPEN.**
-Same-agent proof review and normal/optimized exact replay; no independent audit.
+Same-agent review and normal/optimized exact replay for the whole packet.
+The [bounded independent review](../session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/AUDIT.md)
+accepts J1--J7 with the now-repaired depth-zero leaf-rank boundary. It does
+not independently certify the minimal-chart theorem or the complete packet.
 
 The strongest constructive result is [JOINT_PORTS.md](JOINT_PORTS.md): an odd
 inverse tree plus its valuation clocks determines its entire native expansion,

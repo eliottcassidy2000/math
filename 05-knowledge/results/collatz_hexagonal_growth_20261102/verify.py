@@ -114,11 +114,18 @@ def joint_port_checks():
     predicted=exponents[0]
     for a,b in zip(exponents,exponents[1:]):predicted*=b-a
     need(det==predicted,'exact Gram determinant')
-    leaf_paths=[paths[a] for a in levels[-1]]
-    edges=[set(zip(path,path[1:])) for path in leaf_paths]
-    for i,path in enumerate(leaf_paths):
-        private=(path[0],path[1])
-        need(sum(private in s for s in edges)==1,'private leaf edge gives full Gram rank')
+    leaf_ranks={}
+    for h,level in enumerate(levels):
+        leaf_paths=[paths[a] for a in level]
+        edges=[set(zip(path,path[1:])) for path in leaf_paths]
+        if h==0:
+            need([[len(s&t) for t in edges] for s in edges]==[[0]],'stopped root Gram rank is zero')
+            leaf_ranks[h]=0
+        else:
+            for i,path in enumerate(leaf_paths):
+                private=(path[0],path[1])
+                need(sum(private in s for s in edges)==1,'private leaf edge gives full Gram rank')
+            leaf_ranks[h]=len(leaf_paths)
     alias=[]
     for source in (13,853):
         pth=[source]
@@ -128,7 +135,7 @@ def joint_port_checks():
         alias.append({'source':source,'a':U(source)[1],'meeting_with53':meet,'clocks':[pth.index(meet),fixed.index(meet)]})
     need([x['meeting_with53'] for x in alias]==[40,160] and alias[0]['a']%6==alias[1]['a']%6,'periodic clock phase loses fixed-port response')
     return {'pairs_checked':pairs,'pairs_with_earlier_even_meeting':shifted,'witness':witness,'expansion_rows':rows,
-        'tail_gram_exponents':exponents,'tail_gram_determinant':int(det),'leaf_gram_rank':len(leaf_paths),'periodic_phase_hostile':alias}
+        'tail_gram_exponents':exponents,'tail_gram_determinant':int(det),'leaf_gram_rank':len(leaf_paths),'leaf_gram_ranks_by_depth':leaf_ranks,'periodic_phase_hostile':alias}
 def main():
     joint=joint_port_checks()
     # Independent inverse generation and forward replay of every literal label.

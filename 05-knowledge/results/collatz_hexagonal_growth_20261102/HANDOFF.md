@@ -15,7 +15,9 @@ inverse-growth proof: SF5 predates this session, and concurrent66cf347030 and
   duplicated halving tails. Depth8:511 odd nodes,2001 native states,810
   duplicate states removed from naive subdivision;130305 pair tests pass.
 - The shared-tail kernel min(a,b) has the exact positive-increment determinant
-  J7. Full native leaf path Gram rank is2^h although the tree is contractible.
+  J7. Full native leaf path Gram rank is2^h for h>=1, and0 at h0,
+  although the tree is contractible. Session140's bounded independent
+  review accepted J1--J7 and caught this now-repaired depth-zero boundary.
 - Complete48-map palette census; exact source-specific phase hostiles;
   prime5 branching and its separate nonprincipal cycle; actual81/27 replay.
 - Exact minimal finite-horizon chart:2*3^h branch/clock states, or

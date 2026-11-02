@@ -34,7 +34,8 @@ the native-LCA correction:
 5. **Holonomy/phase:** palette compatibility is a fixed-point equation;
    arithmetic branch precision grows with the requested future horizon.
 6. **Weighted observation:** a tree can be contractible while its native
-   path Gram rank doubles at every odd depth. Geometry/topology alone
+   path Gram rank doubles between positive odd depths; at depth0 it is0.
+   Geometry/topology alone
    does not supply uniform target-specific evaluation bounds.
 
 The positive change in direction was from a global drawing obstruction to
@@ -111,7 +112,7 @@ their common use is to state exactly which resource must grow.
 | Function -> simple undirected graph | Forget arrows; delete loops and duplicate opposite edges | Arithmetic target and full unit-distance relation | Triangle1,4,2 gives exactly3 colours; no HN transfer |
 | Palette transports -> sections | Carry a reference frame along edges; impose one cycle holonomy | Parity forgets action on four even frames |48-map census, nine false accepts |
 | Integer root -> residue chart | n mod3^k under legal j_a | Next inverse step loses a3-adic digit |19 and19+2*3^k at a2 |
-| Supplied path tree -> response Gram | Integer path-edge indicators, with positive edge weights | Contractibility loses overlap and rank |2^h independent leaf columns; J7 |
+| Supplied path tree -> response Gram | Integer path-edge indicators, with positive edge weights | Contractibility loses overlap and rank |2^h independent leaf columns for h>=1; rank0 at h0; J7 |
 | Cyclic-triple data -> tournament attachments | Same labelled triples | Automorphism and actual port response | Aut81/27; regular binary masks1620/1728 |
 
 ## Where this can advance the open targets

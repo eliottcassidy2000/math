@@ -19,6 +19,10 @@ INPUTS=[
  '05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md',
  '05-knowledge/results/joint_incidence_clocked_frames_20261102/COLLATZ_LATTICE.md',
  '05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md',
+ '05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/AUDIT.md',
+ '05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/verify.py',
+ '05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/SOURCE.md',
+ '05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/SOURCE_PINS.json',
  '01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md',
 ]
 
@@ -48,9 +52,11 @@ def main():
             for name in sorted(set(saved[section])|set(now[section])):
                 if saved[section].get(name)!=now[section].get(name):errors.append(section+': '+name)
         if errors:raise RuntimeError('Seal mismatch\n'+'\n'.join(errors))
-        a=(HERE/'verification.json').read_bytes().replace(b'\r\n',b'\n')
-        b=(HERE/'verification.optimized.json').read_bytes().replace(b'\r\n',b'\n')
-        if a!=b:raise RuntimeError('normal and optimized receipts differ')
+        for normal,optimized in [('verification.json','verification.optimized.json'),
+                ('joint_ports_independent.normal.json','joint_ports_independent.optimized.json')]:
+            a=(HERE/normal).read_bytes().replace(b'\r\n',b'\n')
+            b=(HERE/optimized).read_bytes().replace(b'\r\n',b'\n')
+            if a!=b:raise RuntimeError('normal and optimized receipts differ: '+normal)
         print('PASS: packet and inherited inputs sealed; normal/optimized receipts identical')
     else:raise SystemExit('Usage: seal.py [--check|--write]')
 

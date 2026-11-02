@@ -1,7 +1,10 @@
 # Recovering native meetings from odd ancestors and clocks
 
 **PROVED for finite rooted inverse trees of odd Collatz states; FINITE-EXACT
-checks on the selected SF5 family. Same-agent review, no independent audit.**
+checks on the selected SF5 family. Bounded independent review of J1--J7
+accepted, with the depth-zero leaf-rank correction recorded below.**
+See [Session140's pinned review](../session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/AUDIT.md).
+This does not upgrade the rest of the packet to independently audited status.
 These are elementary reconstruction identities. No claim of literature
 priority is made. They supply a positive refinement of the lattice obstruction:
 an odd-state tree with its edge valuations reconstructs all joint native ports.
@@ -157,8 +160,11 @@ periodic exponent summary, within the already convergent basin.
 
 More generally, take all leaves at odd depth h in the expanded SF5 tree
 and their edge indicators along native paths to5. Their Gram matrix has
-rank2^h: each leaf's first outgoing edge is used by no other leaf path,
-so these columns contain an identity submatrix. The underlying finite
+rank2^h for h>=1: each leaf's first outgoing edge is used by no other leaf path,
+so these columns contain an identity submatrix. At h=0 the sole leaf is
+the stopping root, its path vector is zero, and the rank is0. The original
+unguarded leaf-rank sentence at commit2bf016747f was corrected following
+the independent Session140 review in c190e11b77. The underlying finite
 tree is contractible for every h. This supplies a literal arithmetic
 instance of topology failing to bound the rank of a weighted response.
 It complements, without identifying its operator with, the prior

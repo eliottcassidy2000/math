@@ -1,7 +1,10 @@
 # Verification and scope audit
 
-Status: same-agent proof review and FINITE-EXACT replay. No independent agent
-audit and no Lean build. General theorems use the written proofs, not a finite
+Status: same-agent whole-packet proof review and FINITE-EXACT replay; no Lean
+build. The incoming [bounded independent audit](../session140_collatz_hexagonal_geometry_20261102/independent/joint_ports/AUDIT.md)
+accepts J1--J7 and supplies the repaired h0 boundary of the leaf-rank corollary.
+It does not audit the whole packet or the new minimal-chart theorem.
+General theorems use the written proofs, not a finite
 search extrapolation. The verifier uses explicit exceptions, not assert.
 
 agents/check_docs.py passed after integration of the concurrent checkpoints:
@@ -35,6 +38,7 @@ installed in an isolated temporary environment, leaving repo dependencies intact
 | Joint native meetings | Every unordered pair of511 SF5 nodes through depth8 |130305 pairs; literal path intersection agrees with J4 |
 | Weighted native union | All nodes/first-hit clocks in expanded SF5 depth0..8 | All coefficients agree with J5; depth8 has2001 states, not2811 |
 | Gram controls | Six legal sibling exponents3,5,9,11,15,17;256 depth8 leaves | Literal tail-edge overlaps; exact rational elimination agrees with J7; private edges certify leaf rank256 |
+| Leaf-depth boundary | Every depth0..8 | Rank0 for the stopped root, private-edge identity minors of size2^h for h>=1 |
 | Periodic clock hostile | Sources13/853, fixed port53 | Same exponent mod6, different meetings40/160 |
 | Residue precision hostile | k2..8, roots19 and19+2*3^k, exponent2 | Same legal branch and root residue, different successor residue |
 | Minimal chart | All unit source residues modulo3^(h+1), h1..7 |2*3^h distinct lower-branch menu traces and weighted polynomials; totals lose information |
@@ -94,6 +98,21 @@ A later incoming dictionary repeated THM-4852's already retracted generic
 one-primorial-digit selector claim. The table and CA comparison were repaired
 to retain denominator valuations, with the existing2/8 modulo6 hostile.
 Its README hash was refreshed; all simulation receipts were preserved.
+
+The independent Session140 review of the published2bf016747f source caught
+an omitted h>=1 guard in the leaf-Gram corollary: at h0 the only path has
+no edges, so its Gram rank is0. J1--J7's reconstruction and kernel formulas
+are unaffected. The statement, summaries and local checker are repaired;
+the mistake ledger retains this boundary and the original source pin.
+The independent verifier was replayed here in normal and optimized modes;
+its matching outputs are joint_ports_independent.normal.json and
+joint_ports_independent.optimized.json. Its code, exact source snapshot,
+source pin and audit are included in this packet's inherited-input seal.
+
+A final dimensional check corrected COLOUR_AND_CLOCKS section4: the
+cylinder evaluation functional has squared L2 norm2^h, and norm2^(h/2).
+The published predecessor called2^h the norm. The divergence conclusion
+is unchanged; the representer1_C/mu(C) now makes the convention explicit.
 
 ## External claims
 
