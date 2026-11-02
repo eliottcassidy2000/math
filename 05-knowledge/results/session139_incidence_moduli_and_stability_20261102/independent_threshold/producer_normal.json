@@ -1,0 +1,55 @@
+{
+  "N": 748,
+  "checks": {
+    "V_lower_exceeds4": {
+      "positive_exact": "30203/1600"
+    },
+    "c0_lower_exceeds_kappa_upper": {
+      "positive_exact": "35003/149400"
+    },
+    "c_value_from_250000": true,
+    "epsilon_variance_error": true,
+    "exp16_lower_exceeds250000": true,
+    "exponential_endpoint_integer": true,
+    "exponential_monotonicity": {
+      "positive_exact": "43/2805"
+    },
+    "heavy_count_derivative_constant": {
+      "positive_exact": "1449967/66000000"
+    },
+    "heavy_count_endpoint_value": true,
+    "heavy_count_lower_minus_n_over15": {
+      "positive_exact": "428091991/1494000000"
+    },
+    "heavy_weights_exceed_kappa": {
+      "positive_exact": "307/41085"
+    },
+    "light_count_denominator": {
+      "positive_exact": "13627923/77000000"
+    },
+    "partial_exp4_exceeds50": {
+      "positive_exact": "569/315"
+    },
+    "partial_exp4_value": true,
+    "shared_budget_contradiction": {
+      "positive_exact": "190787/186634405485"
+    },
+    "shared_budget_contradiction_value": true,
+    "shared_budget_interior": {
+      "positive_exact": "2427923/27255846"
+    },
+    "shared_budget_interior_value": true,
+    "variance_bound_uniform_condition": true,
+    "variance_upper_n_over7": {
+      "positive_exact": "97801/10458"
+    }
+  },
+  "constants": {
+    "C": "308000000/13627923",
+    "c": "249999/1000000",
+    "delta": "1/3500",
+    "eta": "1/55",
+    "h": "8027923/749535765"
+  },
+  "status": "PASS"
+}

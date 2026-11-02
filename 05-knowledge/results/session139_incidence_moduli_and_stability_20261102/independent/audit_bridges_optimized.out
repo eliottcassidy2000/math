@@ -1,0 +1,8 @@
+Symbolic family PASS; polynomial H difference {'(2, 2)': '1/54'} M23 difference {'(2, 2)': '1/108'}
+Point values H_A,H_B,V,tau,M23_A,M23_B,u,v: 15/2,25921/3456,155/64,5/2,155/256,2093/3456,233/1024,-37/256
+Common det(I-zA) coefficients: ['1', '0', '-155/64', '-5/2', '-1019/1024', '-37/256']
+Endpoints a=0 or b=0 retain H; nonzero ab loses H despite full spectrum and all-one-root conjugacy.
+Full labelled binary universes n=4,5,6 PASS: {4: {0: 48, 1: 16}, 5: {0: 384, 2: 640}, 6: {0: 3840, 3: 7680, 4: 11520, 5: 4608, 6: 5120}}
+Ordinal C3 witness n=4..20 PASS; Paley7 odd-fourset count 14 of 35
+Hostile arbitrary singleton 4-support fails cocycle, so domain condition is essential.
+INDEPENDENT BRIDGE AUDIT PASS

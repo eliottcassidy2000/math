@@ -1,0 +1,35 @@
+{
+  "active_checks": {
+    "exp4_partial_exceeds_50": "569/315",
+    "exp4_partial_identity": "16319/315",
+    "exponential_tail_endpoint": true,
+    "exponential_tail_uniform_derivative": "43/2805",
+    "heavy_mass_endpoint_surplus": "428091991/5976000000",
+    "heavy_mass_square_identity": true,
+    "heavy_mass_uniform_slope": "1449967/264000000",
+    "kappa_positive_domain": true,
+    "light_coefficient_positive": "13627923/77000000",
+    "light_error_delta": "1/3500",
+    "no_light_closure": "307/41085",
+    "nonlinear_c_bootstrap": "3/3125000",
+    "order_domain": "748",
+    "parity_coefficient_748": true,
+    "parity_coefficient_749": true,
+    "shared_budget_interior_minimum": "2427923/27255846",
+    "shared_budget_square_identity": true,
+    "shared_budget_strict_contradiction": "190787/186634405485",
+    "small_variance_excluded": "35003/149400",
+    "variance_bootstrap_exceeds_4": "30203/1600",
+    "variance_upper_endpoint": "97801/10458",
+    "variance_upper_uniform_domain": true
+  },
+  "constants": {
+    "C": "308000000/13627923",
+    "c": "249999/1000000",
+    "delta": "1/3500",
+    "eta": "1/55",
+    "h": "8027923/749535765"
+  },
+  "status": "PASS",
+  "threshold": 748
+}

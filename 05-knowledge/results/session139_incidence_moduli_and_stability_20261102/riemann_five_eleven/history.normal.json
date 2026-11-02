@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "bernoulli_denominator_repeat": "42",
+    "delta_difference": "1/3456",
+    "enhanced_recovery_A": "15/2",
+    "enhanced_recovery_B": "25921/3456",
+    "held_karp_hamiltonian_difference": "1/3456",
+    "incidence_difference": "1/6912",
+    "paley11_local_not_global": "(33, 35)",
+    "paley11_partial_sums": "[1, 0, 1, 2, 3, 2, 1, 0, 1, 0]",
+    "pentanacci_at_one": "9584",
+    "pentanacci_parameter": "-16*x**3*(4*x**4 - 20*x**3 - 14*x**2 - 553*x - 16)",
+    "quadratic_discriminant": "125",
+    "rational_pair_conjugacy": "orthogonal, fixes 1, cospectral",
+    "tetranacci_correction": "-563",
+    "transfer_characteristic": "-x*z - x + z**3 - z**2",
+    "transfer_discriminant": "4*x*(x**2 - 11*x - 1)"
+  },
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

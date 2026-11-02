@@ -63,3 +63,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session137](S137.md): overnight proof frontiers; global Hamiltonian determinant bound and further structural classifications.
 
 [Session138](S138.md): exact weighted stability for n=3..9 and n>=1500, with full large-order equality; 10..1499 unresolved. Actual contexts and sign certificates; unrestricted spectrum and general zero-rigidity remain open.
+
+[Session139](S139.md): sharp stability through nine and from 748; gap 10..747 open. Weighted first spectral blindness at five and corrected RH/5/11 recovery.

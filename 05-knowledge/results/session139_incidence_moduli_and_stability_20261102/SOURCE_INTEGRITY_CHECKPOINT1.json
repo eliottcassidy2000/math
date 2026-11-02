@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "base_commit": "291b4d9757842c02aa451beb65acfade2848609b",
+  "copied_frozen_lane_files": 23,
+  "copied_lane_files_byte_unchanged": true,
+  "historical_git_blob_pins_verified": 20,
+  "accepted_inherited_input_pins_verified": 6,
+  "new_publication_markdown_links_checked": 22,
+  "links": [
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N748.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/verify_history.py",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SOURCE_PINS.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/HISTORICAL_RECOVERY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/REPLAY_CHECKPOINT1.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/DOC_OVERLAY_VERIFICATION.json",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/BOARD.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/CHECKPOINT1.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N748.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent_threshold/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/riemann_five_eleven/HISTORICAL_RECOVERY.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/independent/AUDIT.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "target": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/README.md",
+      "scope": "tracked sparse baseline"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/README.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/SYNTHESIS.md",
+      "scope": "materialized"
+    },
+    {
+      "source": "00-navigation/S139.md",
+      "target": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/VERIFICATION.md",
+      "scope": "materialized"
+    }
+  ],
+  "prior_packet_or_canon_paths_modified": [],
+  "tracked_navigation_edits": [
+    "00-navigation/CURRENT-FRONTIER.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "pending_lanes_excluded": [
+    "all_moduli",
+    "cocycle",
+    "new stability threshold continuations",
+    "regular critical-line strengthening"
+  ],
+  "scope": "Checkpoint 1: n>=748 and weighted n=5 zeta boundary only; auxiliary frozen binary cocycle controls retained without separate headline promotion."
+}
