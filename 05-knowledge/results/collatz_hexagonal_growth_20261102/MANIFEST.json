@@ -1,0 +1,36 @@
+{
+  "hash_convention": "SHA256; CRLF normalized to LF for md/py/json/tsv/svg; other files literal bytes",
+  "input_checkout_commit": "0bfe76afbf7db29f411146efab21c715bbc180d8",
+  "inputs": {
+    "01-canon/theorems/THM-3357-berggren-three-branch-walsh-level-collapse-and-parent-circuit.md": "ba24accf81d123d76ceee2ea7332d394d9ff23d6c9a0d47c7c76ab5b3ad9d446",
+    "05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md": "07cec6485117d4be849ba4f2d8dd56dc28876a1922b9a68cf6cc8873d01599de",
+    "05-knowledge/results/collatz_coherence_20260930_trichotomy_hexagon_motifs.md": "e9e2b9864d455ecff27cadae0834b74b041df197c4a4847b6e19f2944cec467a",
+    "05-knowledge/results/collatz_source_refinement_floor_20261005.md": "96ce4d659f0576d2950133163ab59fc6b601adf2120f886a38754d9b06b87f1d",
+    "05-knowledge/results/collatz_tail_quotient_integration_20261009.md": "4a0c521f797a440e68d9e6064db5373f37d45a030de1af8157fccae1135a878d",
+    "05-knowledge/results/hadwiger_six_seven_eight_20261025/fano_eight/RESULT.md": "1ddae6b29dc28e3fac0383269ffb69837522d8bcf0e86587ef32fa29f34e1665",
+    "05-knowledge/results/hadwiger_six_seven_eight_20261025/metric_spindle/RESULT.md": "06c6837e844acfdcb01b43f487206a2aaeadd9ae26ffcc4ad89d253a6778616d",
+    "05-knowledge/results/joint_incidence_clocked_frames_20261102/COLLATZ_LATTICE.md": "dcc7dfe5c309425718eb6353d8d750692a392ce985048781529c2ee86a20697c",
+    "05-knowledge/results/lucas_mirror_gap_spaces_20261028/GAP_TOPOLOGY.md": "e514bd072a6473da7f6639b3951cf7adb3d6964fdf9fb9767d9148accd67ecca",
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/session61_hadwiger_six_seven_20261025/SOURCE_STATUS.md": "5ed18fab7ac025c04f2d988a52ad4d6e69cdd0589be71b991cdef07a02263eb6",
+    "05-knowledge/results/session62_agent_theme_bridges_20261025/holonomy/TWISTED_PAIR_LIFTS.md": "bfa426ff8c7107af9ecf8fcf837ab3b23a65e49ac2492f8e6c8b65d3aa062134",
+    "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
+  },
+  "packet": {
+    "AUDIT.md": "cb14494e8f68dd3a8ac849091c684ae6bf0c664b5e1f91521c4e9765b99f12c9",
+    "COLOUR_AND_CLOCKS.md": "f4a92e660c87c2f070ca74d6fb768604ac11e4042c736fde41543fc654f0de58",
+    "GEOMETRY.md": "c83e9bdf0ee94277f47dfd59d90835ea2f0ccf4f2e611e06bba85eebfe18783c",
+    "HANDOFF.md": "8928ae35868817aa6fa3164c16632846c0df47ab14d6a969de3d95fc437eeaa9",
+    "JOINT_PORTS.md": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d",
+    "README.md": "3ef66837dc572eef7de1b0cd6cfd8754cadbed49169f0166b58596e71a1b89d5",
+    "SYNTHESIS.md": "b62dc4c457e99f65d62620bff688ddeb43e37d61bf05bba8e1bafb7322b70c22",
+    "growth_and_ports.png": "2e1c71e62afc7e60cf190b88d5ecfc4f5739bbad6d6460a7f0c4e8aa2e744c9e",
+    "growth_and_ports.svg": "f452a57fb249ab57bda0a7a0c449229d56d91078d24d34350143040d9df75a89",
+    "inverse_root5_depth26.tsv": "3ca1af5f402b0c6036a65c05980e30e9a00398abf8961eef566f5e6d84cc0e40",
+    "plot.py": "6f15b35e25b54ef662641bdea42bb929a7b522c7f78f7400c01106e643ee7261",
+    "seal.py": "768176be1c64eb1bcf971981d68e1414806b6b4155b0b8fecc147c55dd52d42f",
+    "verification.json": "3d228d8497683b2df8104290cb35221a7cd681d3a4de782195284d5df438c92b",
+    "verification.optimized.json": "3d228d8497683b2df8104290cb35221a7cd681d3a4de782195284d5df438c92b",
+    "verify.py": "0b049aa5c0a04a2c20a132af9ca70359f7971381a77fca8702c3c29a55923da6"
+  }
+}

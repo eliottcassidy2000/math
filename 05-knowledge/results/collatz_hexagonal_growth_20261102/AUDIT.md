@@ -4,6 +4,9 @@ Status: same-agent proof review and FINITE-EXACT replay. No independent agent
 audit and no Lean build. General theorems use the written proofs, not a finite
 search extrapolation. The verifier uses explicit exceptions, not assert.
 
+agents/check_docs.py passed after integration of the concurrent checkpoints:
+bounded startup, frontier statuses, correction sentinels and router smoke.
+
 ## Reproduction
 
 From the repository root:
@@ -18,6 +21,9 @@ The first two stdout receipts are stored in verification.json and
 verification.optimized.json and must be byte-identical. The checker also
 rewrites the source-labelled TSV deterministically. seal.py checks LF-normalized
 text hashes and literal binary hashes, including the imported hostile source.
+The optional plot.py uses Matplotlib; it is not a verification dependency.
+The PNG and SVG were rendered and the PNG visually checked. Matplotlib was
+installed in an isolated temporary environment, leaving repo dependencies intact.
 
 ## Declared universes and independent paths
 

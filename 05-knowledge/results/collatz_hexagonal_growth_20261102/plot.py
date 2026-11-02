@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 import matplotlib
 matplotlib.use('Agg')
+matplotlib.rcParams['svg.hashsalt']='collatz-hexagonal-20261102'
 import matplotlib.pyplot as plt
 
 HERE=Path(__file__).resolve().parent
@@ -14,7 +15,7 @@ ax.plot(r,[1+3*x*(x+1)//2 for x in r],color='#a84b00',lw=2,label='Honeycomb capa
 ax.plot(r,[1+3*x*(x+1) for x in r],color='#387b50',lw=2,label='Triangular capacity')
 ax.scatter([21,26],[704,2263],color='#153e75',zorder=4)
 ax.annotate('Radius 21: 704 > 694',(21,704),(9,1150),arrowprops={'arrowstyle':'->','color':'#555'},fontsize=10)
-ax.annotate('Radius 26: 2263 > 2107',(26,2263),(8,2300),arrowprops={'arrowstyle':'->','color':'#555'},fontsize=10)
+ax.annotate('Radius 26: 2263 > 2107',(26,2263),(11,2450),arrowprops={'arrowstyle':'->','color':'#555'},fontsize=10)
 ax.set(xlabel='Ordinary Collatz steps / lattice radius',ylabel='Distinct vertices',xlim=(0,27),ylim=(0,2550))
 ax.set_title('A finite obstruction inside a convergent basin',fontsize=12,pad=12)
 ax.legend(loc='upper left',frameon=False,fontsize=9);ax.grid(alpha=.18)
@@ -35,4 +36,4 @@ ax.set(xlim=(-1.5,2.65),ylim=(-4.2,3.7));ax.axis('off')
 ax.set_title('Odd-tree edges share their even tails',fontsize=12,pad=12)
 fig.tight_layout(pad=2)
 fig.savefig(HERE/'growth_and_ports.png',dpi=180)
-fig.savefig(HERE/'growth_and_ports.svg')
+fig.savefig(HERE/'growth_and_ports.svg',metadata={'Date':None})

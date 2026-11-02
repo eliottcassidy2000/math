@@ -29,6 +29,8 @@ concept board, explicit connection maps, and remaining proof obligations.
 [verification.json](verification.json); every source of the radius26 witness
 is in [inverse_root5_depth26.tsv](inverse_root5_depth26.tsv).
 
+![Exact lattice capacities and a native meeting](growth_and_ports.png)
+
 No Collatz convergence, new Hadwiger--Nelson bound, LRC(14), or unrestricted
 tournament-carrier theorem is claimed. The81/27 control is recomputed, not
 replaced by an abstract pair with the same group orders.
