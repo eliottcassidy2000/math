@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "Copied verifier, SOURCE_PINS.json, and five source snapshots into a separate directory; executed from filesystem root, not the repository or packet directory. No network used by verifier.",
+  "normal_command": "python3 <copied-packet>/verify.py",
+  "optimized_command": "python3 -O <copied-packet>/verify.py",
+  "normal_exit_code": 0,
+  "optimized_exit_code": 0,
+  "both_match_saved_output": true,
+  "output_sha256": "fa2a728e6e9be86bed7b40e6fa849683712ee6accbeda69d5af72d24982e385b",
+  "verifier_sha256": "2704541e26fdc0504fff246313e47246f8f2c6840478925d59cd0a7eb4b86853",
+  "limitations": "This checks path portability and normal/-O parity, not isolation of the Python standard library or a formal proof assistant."
+}

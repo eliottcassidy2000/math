@@ -1,0 +1,13 @@
+{
+  "AUDIT.md": "ef88dbe43dd570db5a48348a01afdb4a50b2e0eb78da6aefc0aafcba1e408827",
+  "CONNECTION_REVIEW.json": "6597562a024f00277dc902682464813a8efe40422023b220626a12da46fa3ee9",
+  "REVIEWED_PRODUCERS.json": "9fa8d8d7cd673299bf06e4d15eaebb2330fd197f0b758afa7a85f8bccfcd320a",
+  "SOURCE_PINS.json": "5d2214175c4d3a8e7b8860a37b7424326fa87a49a8cd79a5ad2f30448eeafa2e",
+  "check.py": "099ca147cfe1aaf48b76fbe058104643a7dc700a2c8490e0fc072141d22a41ed",
+  "normal.json": "3be8931f05a9fed59b39c523eb73a555fa0ea602f9afe53394519aeafb224ed9",
+  "optimized.json": "3be8931f05a9fed59b39c523eb73a555fa0ea602f9afe53394519aeafb224ed9",
+  "sources/CONNECTIONS.md": "834c0d833c6717ed14a1d474b2d3eafb5990d4ff2fc22a8db1bb4c25463e8532",
+  "sources/square_paths_content.md": "e88cf8631ad3c0b14accdf4760d6166f3a46ee8ab57b1c5b4b8624553ad3d89b",
+  "sources/unit_distance_refinement.md": "c76c0c70de5eee71daa270f2bad734a41068f86a414c4e3ccf52d42366aab82f",
+  "verify.py": "fc5633e58b0ddb68e1c8e6a24931a6943043f3e189ee96a149400b0f6d442c08"
+}

@@ -1,0 +1,10 @@
+{
+  "isolated_copy": "verify.py only",
+  "normal_vs_optimized": "byte-identical",
+  "output_sha256": "148cd79f3dd30a1bc8c756de94c992546a41aeb881d618f64c03d2ac3b482022",
+  "runtime": "3.12.14",
+  "runtime_dependencies": "Python standard library only",
+  "saved_receipt_match": true,
+  "source_snapshots_verified": 3,
+  "status": "passed"
+}

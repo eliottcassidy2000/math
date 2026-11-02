@@ -1,0 +1,33 @@
+{
+  "external_inputs": [
+    {
+      "author": "Bruno Martelli",
+      "independently_checked": "2026-11-02",
+      "locations": [
+        "Proposition4.1,printed45/PDF52:disk area",
+        "Propositions1.17-1.19,printed33-34/PDF40-41:half-plane metric and geodesics"
+      ],
+      "scope": "Primary author notes read for the standard metric/geodesic/area inputs. Felikson PDF fetch timed out in this independent audit; the producer separately records that source.",
+      "url": "https://people.dm.unipi.it/martelli/didattica/matematica/2014/Hyperbolic%20geometry.pdf",
+      "version_date": "2013-12-18"
+    }
+  ],
+  "git_sources": [
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob_oid": "1253da7d85292842a21900b00a7674c4c22f68db",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+      "snapshot": "sources/curvature_inherited.md"
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob_oid": "dfa4290b88b65740d53ae11c710f5a1fb66b63d5",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
+      "snapshot": "sources/path_kernel_inherited.md"
+    }
+  ]
+}

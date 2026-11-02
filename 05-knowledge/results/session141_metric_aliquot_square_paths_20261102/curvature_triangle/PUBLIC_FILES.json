@@ -1,0 +1,14 @@
+[
+  "PORTABILITY.json",
+  "PROOF.md",
+  "README.md",
+  "SOURCE_PINS.json",
+  "sources/GEOMETRY.md",
+  "sources/JOINT_PORTS.md",
+  "sources/collatz_prior.md",
+  "sources/curvature_prior.md",
+  "sources/inverse_root5_depth26.tsv",
+  "verification.json",
+  "verification.optimized.json",
+  "verify.py"
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "SHA256SUMS_sha256": "66992b0cfaaa5acebfa6f6a5862c2daa682ab6f8e4c7c2dda37db2ba9103a1ab",
+    "lane": "curvature_triangle",
+    "proof": "PROOF.md",
+    "proof_sha256": "e37e9ccfeb631e0bc91ab6d837a98191aa8b4be1e2e658847706822c439e06b0",
+    "selector": "PUBLIC_FILES.json",
+    "selector_sha256": "ee6fc76ca344797caae71260b8a4e17b8bde8280352ebb3b70c49d151d1f4fe0",
+    "snapshot": "sources/curvature_triangle.md",
+    "status": "ACCEPTED; full analytic proof review plus separate exhaustive finite corroboration"
+  },
+  {
+    "SHA256SUMS_sha256": "fdfcadb7f3c5442b73b5c4a56330758b4e84acb45a2af06dc255752281d826dc",
+    "lane": "square_paths",
+    "proof": "PROOF.md",
+    "proof_sha256": "b8d872356c0f439c4c48199ef281a50df84609866554b1ec87a1b257a558e637",
+    "selector": "PUBLIC_FILES.json",
+    "selector_sha256": "db918311f9ef0b2055bfced32eefa7f567d280ab862278276695c1e93c9575f3",
+    "snapshot": "sources/square_paths.md",
+    "status": "ACCEPTED; full analytic proof review plus separate exhaustive finite corroboration"
+  }
+]

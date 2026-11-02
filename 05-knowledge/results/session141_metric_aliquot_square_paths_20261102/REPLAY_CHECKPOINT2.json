@@ -1,0 +1,202 @@
+{
+  "checkpoint": "2",
+  "expected_rejections": 8,
+  "fresh_relocation": true,
+  "lane_integrity_positive_runs": 4,
+  "normal_and_optimized": true,
+  "preserved_checkpoint_replay_runs": 2,
+  "replay_config_sha256": "9b3b1297962b15e4d466ae1343e4c36ba7b403f626e73539984feb3e0ea7ba50",
+  "replay_driver_sha256": "1fdd3184d95b0eb6b683cf0ab06147691a310e3a84c0f05ed62eb3520756ca50",
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "preserved-checkpoint1-replay",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "2a4392a93d0f2c45859196cf3bbc9fe24683e565aa079ba6b7b7fb30bfdf7a45"
+    },
+    {
+      "expected_rejection": false,
+      "label": "curvature-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "fa2a728e6e9be86bed7b40e6fa849683712ee6accbeda69d5af72d24982e385b"
+    },
+    {
+      "expected_rejection": false,
+      "label": "square-path-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "148cd79f3dd30a1bc8c756de94c992546a41aeb881d618f64c03d2ac3b482022"
+    },
+    {
+      "expected_rejection": false,
+      "label": "square-content-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "45809d7403ff1d2f611a0526f36f8626466ad78df4def1e220c9dbc7856d8377"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-core-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "c9cedc1157aed8e3c657f0f636aa9035ab2081f666f1c0721f6a8d8da15e7af3"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-refinements-exact",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "3be8931f05a9fed59b39c523eb73a555fa0ea602f9afe53394519aeafb224ed9"
+    },
+    {
+      "expected_rejection": false,
+      "label": "audit-core-closed-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "25ecbdfa5134b474c3c6491cf04cf271020150c8f6798388d986b523184ba88b"
+    },
+    {
+      "expected_rejection": false,
+      "label": "audit-refinement-closed-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "c2427c637cfb642905c9be590640767435edbfcc2cea20ec9313f257f46e4838"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "22ca205c8cf36dd8b2aa66972684dbff681c4986d5c7a9da2acf0520c2d87b24"
+    },
+    {
+      "expected_rejection": false,
+      "label": "preserved-checkpoint1-replay",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "2a4392a93d0f2c45859196cf3bbc9fe24683e565aa079ba6b7b7fb30bfdf7a45"
+    },
+    {
+      "expected_rejection": false,
+      "label": "curvature-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "fa2a728e6e9be86bed7b40e6fa849683712ee6accbeda69d5af72d24982e385b"
+    },
+    {
+      "expected_rejection": false,
+      "label": "square-path-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "148cd79f3dd30a1bc8c756de94c992546a41aeb881d618f64c03d2ac3b482022"
+    },
+    {
+      "expected_rejection": false,
+      "label": "square-content-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "45809d7403ff1d2f611a0526f36f8626466ad78df4def1e220c9dbc7856d8377"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-core-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "c9cedc1157aed8e3c657f0f636aa9035ab2081f666f1c0721f6a8d8da15e7af3"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-refinements-exact",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "3be8931f05a9fed59b39c523eb73a555fa0ea602f9afe53394519aeafb224ed9"
+    },
+    {
+      "expected_rejection": false,
+      "label": "audit-core-closed-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "25ecbdfa5134b474c3c6491cf04cf271020150c8f6798388d986b523184ba88b"
+    },
+    {
+      "expected_rejection": false,
+      "label": "audit-refinement-closed-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "c2427c637cfb642905c9be590640767435edbfcc2cea20ec9313f257f46e4838"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "22ca205c8cf36dd8b2aa66972684dbff681c4986d5c7a9da2acf0520c2d87b24"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-equal-edge-formula",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-equal-edge-formula",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n26-spectrum",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-n26-spectrum",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-binary-content-exponent",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "false-binary-content-exponent",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_positive_runs": 10,
+  "scope": "New finite controls, exact source/closed manifests and corruption rejection; preserved checkpoint1 replay separately counted. Infinite results require reviewed proofs; classical metric/area inputs remain cited. No native full Collatz embedding, threshold equality, unrestricted tournament spectrum or arithmetic all-size square-path law is certified.",
+  "source_files_verified": 112,
+  "source_integrity_positive_runs": 2,
+  "source_manifest_sha256": "c0514afc6510533b65d60ec64fac915e76d64ebe177a16a2a6de309fe3647ab4",
+  "status": "PASS",
+  "total_executions": 26,
+  "unrelated_cwd": true
+}

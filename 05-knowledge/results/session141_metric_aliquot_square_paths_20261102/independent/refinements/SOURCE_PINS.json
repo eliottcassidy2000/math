@@ -1,0 +1,5 @@
+{
+  "dependency_scope": "Refinements are self-contained elementary proofs based on the frozen source-preserving packets; exact producer source identities are in REVIEWED_PRODUCERS.json. The legacy classifications and primary-source bounds are audited in checkpoint1. Core geometry/path inputs are audited in checkpoint2v2. No new literature claim is made.",
+  "external_inputs": [],
+  "git_sources": []
+}

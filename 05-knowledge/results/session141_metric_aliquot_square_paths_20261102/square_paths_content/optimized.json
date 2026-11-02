@@ -1,0 +1,69 @@
+{
+  "controls": {
+    "all_undirected_guards_orders2_to4": 74,
+    "leaf_endpoint_half_checks": 112,
+    "non_reversal_closed_hostile": "passed",
+    "nonempty_compatible_subsets_checked": 902,
+    "order_one_hostile": "passed"
+  },
+  "scope": "uniform theorem; exhaustive small guards; existing n25/n26 census only",
+  "square_rows": [
+    {
+      "N": 300,
+      "Umax": 26,
+      "bound_sharp": false,
+      "content_exponent": 276,
+      "maximum_response": 2,
+      "mean": [
+        5,
+        4194304
+      ],
+      "n": 25,
+      "nonzero_moment_valuations": {
+        "0": 300,
+        "1": 278,
+        "2": 276
+      },
+      "positive_probability": [
+        19,
+        16777216
+      ],
+      "primitive_coefficients": [
+        16777197,
+        18,
+        1
+      ],
+      "reversal_bound_exponent": 275
+    },
+    {
+      "N": 325,
+      "Umax": 30,
+      "bound_sharp": true,
+      "content_exponent": 296,
+      "maximum_response": 3,
+      "mean": [
+        3,
+        4194304
+      ],
+      "n": 26,
+      "nonzero_moment_valuations": {
+        "0": 325,
+        "1": 303,
+        "2": 296,
+        "3": 297
+      },
+      "positive_probability": [
+        351,
+        536870912
+      ],
+      "primitive_coefficients": [
+        536870561,
+        320,
+        29,
+        2
+      ],
+      "reversal_bound_exponent": 296
+    }
+  ],
+  "status": "passed"
+}

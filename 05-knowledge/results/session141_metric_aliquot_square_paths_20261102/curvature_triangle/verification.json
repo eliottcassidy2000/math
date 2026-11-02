@@ -1,0 +1,400 @@
+{
+  "controls": {
+    "floating_examples_not_proofs": [
+      {
+        "W": "1",
+        "edge_length_float": 1.2148902147975682,
+        "q": "1/3",
+        "qi_additive_lower_float": 2.197224577336219,
+        "separation_lower_float": 1.0986122886681098,
+        "siblings_closer_than_edges": false
+      },
+      {
+        "W": "1/10",
+        "edge_length_float": 0.7142049958314879,
+        "q": "49/100",
+        "qi_additive_lower_float": 12.429216196844381,
+        "separation_lower_float": 0.10403471002838127,
+        "siblings_closer_than_edges": true
+      },
+      {
+        "W": "1/100",
+        "edge_length_float": 0.6951575387429435,
+        "q": "499/1000",
+        "qi_additive_lower_float": 21.639556568820563,
+        "separation_lower_float": 0.010040037991119475,
+        "siblings_closer_than_edges": true
+      }
+    ],
+    "sphere_degree5": {
+      "edges": 30,
+      "faces": 20,
+      "vertices": 12
+    }
+  },
+  "dyadic_radial": [
+    {
+      "cross_root_tree_distance": null,
+      "depth": 0,
+      "outer_radius_cosh": "1",
+      "vertices_through_depth": 1
+    },
+    {
+      "cross_root_tree_distance": 2,
+      "depth": 1,
+      "outer_radius_cosh": "21/16",
+      "vertices_through_depth": 3
+    },
+    {
+      "cross_root_tree_distance": 4,
+      "depth": 2,
+      "outer_radius_cosh": "77/32",
+      "vertices_through_depth": 7
+    },
+    {
+      "cross_root_tree_distance": 6,
+      "depth": 3,
+      "outer_radius_cosh": "309/64",
+      "vertices_through_depth": 15
+    },
+    {
+      "cross_root_tree_distance": 8,
+      "depth": 4,
+      "outer_radius_cosh": "1253/128",
+      "vertices_through_depth": 31
+    },
+    {
+      "cross_root_tree_distance": 10,
+      "depth": 5,
+      "outer_radius_cosh": "5061/256",
+      "vertices_through_depth": 63
+    },
+    {
+      "cross_root_tree_distance": 12,
+      "depth": 6,
+      "outer_radius_cosh": "20357/512",
+      "vertices_through_depth": 127
+    },
+    {
+      "cross_root_tree_distance": 14,
+      "depth": 7,
+      "outer_radius_cosh": "81669/1024",
+      "vertices_through_depth": 255
+    },
+    {
+      "cross_root_tree_distance": 16,
+      "depth": 8,
+      "outer_radius_cosh": "327173/2048",
+      "vertices_through_depth": 511
+    },
+    {
+      "cross_root_tree_distance": 18,
+      "depth": 9,
+      "outer_radius_cosh": "1309701/4096",
+      "vertices_through_depth": 1023
+    }
+  ],
+  "five_step_supply": {
+    "selector_parent_checks": 1334,
+    "tree_rows": [
+      {
+        "cumulative": 3,
+        "endpoints": 2,
+        "macro_depth": 1,
+        "native_first_hit_steps": 5
+      },
+      {
+        "cumulative": 7,
+        "endpoints": 4,
+        "macro_depth": 2,
+        "native_first_hit_steps": 10
+      },
+      {
+        "cumulative": 15,
+        "endpoints": 8,
+        "macro_depth": 3,
+        "native_first_hit_steps": 15
+      },
+      {
+        "cumulative": 31,
+        "endpoints": 16,
+        "macro_depth": 4,
+        "native_first_hit_steps": 20
+      },
+      {
+        "cumulative": 63,
+        "endpoints": 32,
+        "macro_depth": 5,
+        "native_first_hit_steps": 25
+      },
+      {
+        "cumulative": 127,
+        "endpoints": 64,
+        "macro_depth": 6,
+        "native_first_hit_steps": 30
+      },
+      {
+        "cumulative": 255,
+        "endpoints": 128,
+        "macro_depth": 7,
+        "native_first_hit_steps": 35
+      },
+      {
+        "cumulative": 511,
+        "endpoints": 256,
+        "macro_depth": 8,
+        "native_first_hit_steps": 40
+      },
+      {
+        "cumulative": 1023,
+        "endpoints": 512,
+        "macro_depth": 9,
+        "native_first_hit_steps": 45
+      },
+      {
+        "cumulative": 2047,
+        "endpoints": 1024,
+        "macro_depth": 10,
+        "native_first_hit_steps": 50
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "W": "1",
+      "depth": 7,
+      "edge_cosh": "21/16",
+      "edges": 254,
+      "gapped": false,
+      "minimum_equality_pairs": 254,
+      "pairs": 32385,
+      "q": "1/2",
+      "vertices": 255
+    },
+    {
+      "W": "1",
+      "depth": 6,
+      "edge_cosh": "11/6",
+      "edges": 126,
+      "gapped": true,
+      "minimum_equality_pairs": 0,
+      "pairs": 8001,
+      "q": "1/3",
+      "vertices": 127
+    },
+    {
+      "W": "1/2",
+      "depth": 6,
+      "edge_cosh": "473/320",
+      "edges": 126,
+      "gapped": true,
+      "minimum_equality_pairs": 0,
+      "pairs": 8001,
+      "q": "2/5",
+      "vertices": 127
+    },
+    {
+      "W": "1/10",
+      "depth": 6,
+      "edge_cosh": "4963001/3920000",
+      "edges": 126,
+      "gapped": true,
+      "minimum_equality_pairs": 0,
+      "pairs": 8001,
+      "q": "49/100",
+      "vertices": 127
+    }
+  ],
+  "lattice_bfs": [
+    {
+      "graph": "honeycomb",
+      "last_count": 16696,
+      "last_radius": 105,
+      "radii_checked": 106
+    },
+    {
+      "graph": "triangular",
+      "last_count": 33391,
+      "last_radius": 105,
+      "radii_checked": 106
+    }
+  ],
+  "limits": [
+    "Finite exact checks corroborate but do not replace all-level proofs.",
+    "The sharp threshold is an infimum; equality is not settled.",
+    "No native Collatz hyperbolic embedding or convergence theorem is claimed."
+  ],
+  "native_collatz": {
+    "counts": [
+      1,
+      2,
+      4,
+      6,
+      9,
+      12,
+      16,
+      21,
+      28,
+      37,
+      49,
+      64,
+      83,
+      106,
+      136,
+      173,
+      219,
+      276,
+      348,
+      440,
+      557,
+      704,
+      891,
+      1124,
+      1418,
+      1792,
+      2263
+    ],
+    "honeycomb": {
+      "capacity": 694,
+      "excess": 10,
+      "radius": 21,
+      "sources": 704
+    },
+    "levels": [
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      4,
+      5,
+      7,
+      9,
+      12,
+      15,
+      19,
+      23,
+      30,
+      37,
+      46,
+      57,
+      72,
+      92,
+      117,
+      147,
+      187,
+      233,
+      294,
+      374,
+      471
+    ],
+    "triangular": {
+      "capacity": 2107,
+      "excess": 156,
+      "radius": 26,
+      "sources": 2263
+    },
+    "tsv_sha256": "3ca1af5f402b0c6036a65c05980e30e9a00398abf8961eef566f5e6d84cc0e40"
+  },
+  "native_source_unions": {
+    "rows": [
+      {
+        "duplicate_even_states": 0,
+        "max_first_hit_clock": 0,
+        "naive_subdivision_vertices": 1,
+        "native_edges": 0,
+        "native_vertices": 1,
+        "odd_depth": 0,
+        "odd_vertices": 1
+      },
+      {
+        "duplicate_even_states": 3,
+        "max_first_hit_clock": 6,
+        "naive_subdivision_vertices": 11,
+        "native_edges": 7,
+        "native_vertices": 8,
+        "odd_depth": 1,
+        "odd_vertices": 3
+      },
+      {
+        "duplicate_even_states": 10,
+        "max_first_hit_clock": 14,
+        "naive_subdivision_vertices": 35,
+        "native_edges": 24,
+        "native_vertices": 25,
+        "odd_depth": 2,
+        "odd_vertices": 7
+      },
+      {
+        "duplicate_even_states": 26,
+        "max_first_hit_clock": 22,
+        "naive_subdivision_vertices": 85,
+        "native_edges": 58,
+        "native_vertices": 59,
+        "odd_depth": 3,
+        "odd_vertices": 15
+      },
+      {
+        "duplicate_even_states": 52,
+        "max_first_hit_clock": 29,
+        "naive_subdivision_vertices": 171,
+        "native_edges": 118,
+        "native_vertices": 119,
+        "odd_depth": 4,
+        "odd_vertices": 31
+      },
+      {
+        "duplicate_even_states": 106,
+        "max_first_hit_clock": 37,
+        "naive_subdivision_vertices": 359,
+        "native_edges": 252,
+        "native_vertices": 253,
+        "odd_depth": 5,
+        "odd_vertices": 63
+      },
+      {
+        "duplicate_even_states": 208,
+        "max_first_hit_clock": 42,
+        "naive_subdivision_vertices": 717,
+        "native_edges": 508,
+        "native_vertices": 509,
+        "odd_depth": 6,
+        "odd_vertices": 127
+      },
+      {
+        "duplicate_even_states": 424,
+        "max_first_hit_clock": 50,
+        "naive_subdivision_vertices": 1445,
+        "native_edges": 1020,
+        "native_vertices": 1021,
+        "odd_depth": 7,
+        "odd_vertices": 255
+      },
+      {
+        "duplicate_even_states": 810,
+        "max_first_hit_clock": 58,
+        "naive_subdivision_vertices": 2811,
+        "native_edges": 2000,
+        "native_vertices": 2001,
+        "odd_depth": 8,
+        "odd_vertices": 511
+      }
+    ],
+    "sibling_meeting": {
+      "first_hit_clocks": [
+        1,
+        3
+      ],
+      "independent_subdivision_distance": 10,
+      "meeting": 40,
+      "native_distance": 4,
+      "sources": [
+        13,
+        53
+      ]
+    }
+  },
+  "source_pins_checked": 5,
+  "status": "PASS"
+}

@@ -1,0 +1,8 @@
+{
+  "isolated_payload": "verifier, pins, and two local source snapshots only",
+  "normal_optimized_saved": "byte-identical",
+  "output_sha256": "45809d7403ff1d2f611a0526f36f8626466ad78df4def1e220c9dbc7856d8377",
+  "runtime": "3.12.14",
+  "source_core_receipt_sha256": "148cd79f3dd30a1bc8c756de94c992546a41aeb881d618f64c03d2ac3b482022",
+  "status": "passed"
+}

@@ -1,0 +1,14 @@
+{
+  "AUDIT.md": "38664a5a537e65156bfd5e96eb2af4359a58833edeecac0ee87465fb3c7bcc0c",
+  "REVIEWED_PRODUCERS.json": "8d7b291962fbb7511ea243e357b4ca73f2ce38d683f8985a47f60a027c8bb392",
+  "SERIALIZATION_IDENTITY.json": "add40f20925c97079e4901d3d46df68708888156ebbc5a751b605fa50b1535c0",
+  "SOURCE_PINS.json": "2314dc6577281193c3a86b2d92fcacdc2bac9fd604161c2f46d63a9456d6b940",
+  "check.py": "89b06324e9a259f8b5dcb20211a409aae708564652901ef262d246cd37a5e397",
+  "normal.json": "c9cedc1157aed8e3c657f0f636aa9035ab2081f666f1c0721f6a8d8da15e7af3",
+  "optimized.json": "c9cedc1157aed8e3c657f0f636aa9035ab2081f666f1c0721f6a8d8da15e7af3",
+  "sources/curvature_inherited.md": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+  "sources/curvature_triangle.md": "e37e9ccfeb631e0bc91ab6d837a98191aa8b4be1e2e658847706822c439e06b0",
+  "sources/path_kernel_inherited.md": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
+  "sources/square_paths.md": "b8d872356c0f439c4c48199ef281a50df84609866554b1ec87a1b257a558e637",
+  "verify.py": "fc5633e58b0ddb68e1c8e6a24931a6943043f3e189ee96a149400b0f6d442c08"
+}

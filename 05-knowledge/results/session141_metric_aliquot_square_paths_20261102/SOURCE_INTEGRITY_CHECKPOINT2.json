@@ -1,0 +1,313 @@
+{
+  "canon_changed": false,
+  "central_ledger_read_or_changed": false,
+  "curated_source_files": 68,
+  "historical_git_and_sha256_pins_checked": 25,
+  "historical_pins": [
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "dfa4290b88b65740d53ae11c710f5a1fb66b63d5",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md",
+      "sha256": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "112aae94aeceb797a704e48c5da0627c150d1976",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/path_kernel.py",
+      "sha256": "0e9d48693b88c513ebc7714e6641c9e5bcae970f7c116f930600dceacf7b841f",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "a113b5530118eeb0c7201d8f3a9cb65c7bae45f0",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md",
+      "sha256": "ee1a33a40b67321429e22158827418c528a6f15bd110fedb5d957bc12daf592e",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "1253da7d85292842a21900b00a7674c4c22f68db",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md",
+      "sha256": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "922a91faeb8468acef0c9448b05200c81277b616",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md",
+      "sha256": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "819fb665bf037f7e46ad4ce79f4f8a358fdb4cd6",
+      "path": "05-knowledge/results/collatz_hexagonal_growth_20261102/GEOMETRY.md",
+      "sha256": "c83e9bdf0ee94277f47dfd59d90835ea2f0ccf4f2e611e06bba85eebfe18783c",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "676ef198ac8f4bfe754230a2fb41edda7d485645",
+      "path": "05-knowledge/results/collatz_hexagonal_growth_20261102/JOINT_PORTS.md",
+      "sha256": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "07c36e13f4c413771638ee22ba4db649a370e209",
+      "path": "05-knowledge/results/collatz_hexagonal_growth_20261102/inverse_root5_depth26.tsv",
+      "sha256": "3ca1af5f402b0c6036a65c05980e30e9a00398abf8961eef566f5e6d84cc0e40",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "1611549f320cee0bc1fcf33a51b56fbf31924157",
+      "path": "01-canon/theorems/THM-431-unit-distance-u21-equals-57.md",
+      "sha256": "d44ca6555e2badd4fd8269d977b3924829ebe7424b682b30899f4f5451bcdf3a",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "ad9b838e514264532e4cb847a30100d1db64c42b",
+      "path": "01-canon/theorems/THM-461-unit-distance-deletion-ladder-and-floor.md",
+      "sha256": "6b6d4a799040ca73ee3c06bdaaf160d801571024bfbce00abf1fc906ee1450e3",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "da6c8920880be5917c0c6da7553bba8f5717bfad",
+      "path": "01-canon/theorems/THM-432-unit-distance-product-crossover-hamming-tie.md",
+      "sha256": "c6a7b7c6e763c63d861b03fff26b17f7fcd3ad36d8a3be6c5d1c3c6a2d963deb",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "e08eeefc9aa707985e847156c6dd94a537bdbd62",
+      "path": "04-computation/unit_distance_product_crossover_monad_s711.py",
+      "sha256": "a2a09943c34969bba8a5da1382b7d81839919b5ce716c6b9555cd13beb7a4c69",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "000ab9b5f60927d22b542f3a9ae49c3beb96deb9",
+      "path": "04-computation/experiments/oai2_20261006_lattice_u21.py",
+      "sha256": "064f14dc26a03e9be7ad9d77cc81d12e9a272ab742dae96205b10f1fd6503d96",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "b30d69cc2d86d15eb5cb9ff042ec66b74f8f8e02",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson/PROOF.md",
+      "sha256": "e714ae9c62d4fd218911bb3ed313ff986c4735d51c73100413f6ce767dfde54e",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "9766adda34b4ea8a5e598dc0596bf8ce87acb1e7",
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/hadwiger_nelson_refinement/PROPER_UNIT_DISTANCE_REFINEMENT.md",
+      "sha256": "ed9f99c07f4d82c86f9f05be8a191e2ad3583804bb8e7652d28765e24a65657c",
+      "snapshot_present": false
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "cdf5522671ea0bd6592e7c4791b76af9160dfce3",
+      "path": "05-knowledge/results/aliquot_divisor_overlap_20261028/THEORY.md",
+      "sha256": "7e9f0966d25a5ede7aef7105dbc74cb8761d55701966ac372fff71b25cffc0a2",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "cb953bdf3fe62803db26d30e6aa4387d1d06d635",
+      "path": "05-knowledge/results/aliquot_divisor_overlap_20261028/README.md",
+      "sha256": "539e7c419bf5cae2a8b9990e60a153a815dd5b4c7bbde38764f466bfd07ccdef",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "c54162500fd95e197d6fb6e013b9e2f195f06522",
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/FIXED_EXCESS_AND_FIBERS.md",
+      "sha256": "aa5a359106fa0d799d672bd7566fa3f6eb75c85dd908620fe6701b5ed711ae31",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "a113c9d0e57e4c2905e37f17faf9edd30b79a96c",
+      "path": "05-knowledge/results/session83_aliquot_divisor_grammar_20261028/LOW_TERM_ATLAS.md",
+      "sha256": "c511a691d888e505490ec6334882e9a2c0b3798b45c4b072989c04bf63f304c1",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "777ec7b7cf5a2e58aab43bc599fb73d4e4c0d61f",
+      "path": "05-knowledge/results/aliquot_power_124_20261026/tournaments/TOURNAMENTS_124.md",
+      "sha256": "c6fb8d3696fb54822d2452a7fbd7a46b76f996dcc01dff84c6a7f96db5f6b2f9",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "48ae3786dc9622a5793c18487e1fa1b3355d0ced",
+      "path": "05-knowledge/results/aliquot_power_124_20261026/aliquot/README.md",
+      "sha256": "d81354d2bfd630da39eb266e05235284984a9c6afec2c292981e591982df9f19",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "d2b2cade60a092142de9280ce8c47e666b413431",
+      "path": "05-knowledge/results/aliquot_power_124_20261026/README.md",
+      "sha256": "c0dff724182e51332a2116014b05648e88a97216069e45e9be8237847b4874a0",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "5932df3372cd03555c96e50553a09627d2ccc9d2",
+      "path": "05-knowledge/results/dyadic_module_spectrum_20261026/ALIQUOT_OVERLAP.md",
+      "sha256": "017707e6519a9aa211a8925119ad846fce1a76a42e92d0c51995d28a56480790",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "b0c6238023e045e4d44cffeabfa8887989a2a582",
+      "path": "05-knowledge/results/aliquot_66_five_fifteen_20261028/PROOFS.md",
+      "sha256": "11624023b5d0145eebbfef2e75b1727f2fbf45bbd75c048a36edd16557a80d60",
+      "snapshot_present": true
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "git_blob": "f21d1e1e133fe9e1ea028a94d9ac5e07d3732d3e",
+      "path": "05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md",
+      "sha256": "2b72047a3cb163ccb12ed7e70d5f11d9b13011fbc9ba11c8eaf670df31b56e7e",
+      "snapshot_present": true
+    }
+  ],
+  "in_session_source_pins": [
+    {
+      "origin_package": "square_paths",
+      "origin_relative_path": "normal.json",
+      "sha256": "148cd79f3dd30a1bc8c756de94c992546a41aeb881d618f64c03d2ac3b482022"
+    },
+    {
+      "origin_package": "square_paths",
+      "origin_relative_path": "PROOF.md",
+      "sha256": "b8d872356c0f439c4c48199ef281a50df84609866554b1ec87a1b257a558e637"
+    }
+  ],
+  "in_session_source_snapshots_checked": 2,
+  "independent_connection_reviews": 1,
+  "independent_reviewed_producer_selections": 6,
+  "links": [
+    {
+      "scope": "materialized",
+      "source": "00-navigation/S141.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "00-navigation/S141.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/SYNTHESIS.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "00-navigation/S141.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/VERIFICATION.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/SYNTHESIS.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CONNECTIONS.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/SYNTHESIS.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CONNECTIONS.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CHECKPOINT1.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/CHECKPOINT2.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/BOARD.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/unit_distance/PROOF.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/aliquot_twenty/PROOFS.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/independent/checkpoint1/AUDIT.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths/PROOF.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/unit_distance_refinement/PROOF.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/square_paths_content/PROOF.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/independent/refinements/AUDIT.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/independent/checkpoint2/AUDIT.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/VERIFICATION.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/SOURCE_STATUS.md"
+    },
+    {
+      "scope": "materialized",
+      "source": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/curvature_triangle/README.md",
+      "target": "05-knowledge/results/session141_metric_aliquot_square_paths_20261102/curvature_triangle/PROOF.md"
+    }
+  ],
+  "pending_session113_approval_untouched": true,
+  "prior_frozen_files_preserved": 46,
+  "producer_files_byte_unchanged_after_freeze": true,
+  "publication_markdown_links_checked": 21,
+  "scope": "Own source integrity, scoped links and boundaries; scientific claims audited in lane proofs/replays. No full-corpus proof or documentation certification.",
+  "source_base_commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+  "status": "PASS",
+  "upstream_order42_scope_preserved": true
+}

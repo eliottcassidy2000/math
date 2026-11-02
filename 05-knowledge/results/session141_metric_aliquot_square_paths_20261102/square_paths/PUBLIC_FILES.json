@@ -1,0 +1,21 @@
+{
+  "status": "frozen",
+  "files": [
+    "README.md",
+    "PROOF.md",
+    "AUDIT.md",
+    "verify.py",
+    "normal.json",
+    "optimized.json",
+    "PORTABILITY.json",
+    "SOURCE_PINS.json",
+    "sources/PATH_KERNEL.md",
+    "sources/path_kernel.py",
+    "sources/COMPLEMENT_CARRIER.md"
+  ],
+  "excluded_scratch": [
+    "probe.py",
+    "probe2.py"
+  ],
+  "manifest_policy": "SHA256SUMS authenticates all listed payload files and PUBLIC_FILES.json; SHA256SUMS itself is not self-hashed."
+}

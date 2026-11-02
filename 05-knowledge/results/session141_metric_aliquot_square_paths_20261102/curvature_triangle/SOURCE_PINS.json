@@ -1,0 +1,65 @@
+{
+  "git_sources": [
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "source_path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/curvature_control/PROOF.md",
+      "blob_oid": "1253da7d85292842a21900b00a7674c4c22f68db",
+      "sha256": "875d2ec3aecdb9750a0fe603b0bcd04579558a1552118ce36245538fde924c3f",
+      "snapshot": "sources/curvature_prior.md",
+      "bytes": 8621
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "source_path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md",
+      "blob_oid": "922a91faeb8468acef0c9448b05200c81277b616",
+      "sha256": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c",
+      "snapshot": "sources/collatz_prior.md",
+      "bytes": 21349
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "source_path": "05-knowledge/results/collatz_hexagonal_growth_20261102/GEOMETRY.md",
+      "blob_oid": "819fb665bf037f7e46ad4ce79f4f8a358fdb4cd6",
+      "sha256": "c83e9bdf0ee94277f47dfd59d90835ea2f0ccf4f2e611e06bba85eebfe18783c",
+      "snapshot": "sources/GEOMETRY.md",
+      "bytes": 9345
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "source_path": "05-knowledge/results/collatz_hexagonal_growth_20261102/JOINT_PORTS.md",
+      "blob_oid": "676ef198ac8f4bfe754230a2fb41edda7d485645",
+      "sha256": "012e51e6a918163cfbe0c5a66c259e3de3f9b24c411c20174aa858d48793d83d",
+      "snapshot": "sources/JOINT_PORTS.md",
+      "bytes": 8423
+    },
+    {
+      "repository": "eliottcassidy2000/math",
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "source_path": "05-knowledge/results/collatz_hexagonal_growth_20261102/inverse_root5_depth26.tsv",
+      "blob_oid": "07c36e13f4c413771638ee22ba4db649a370e209",
+      "sha256": "3ca1af5f402b0c6036a65c05980e30e9a00398abf8961eef566f5e6d84cc0e40",
+      "snapshot": "sources/inverse_root5_depth26.tsv",
+      "bytes": 20471
+    }
+  ],
+  "external_inputs": [
+    {
+      "url": "https://www.maths.dur.ac.uk/users/anna.felikson/Geometry/Geometry23/notes.pdf",
+      "author": "Anna Felikson",
+      "location": "Section 6.2, Theorem 6.22, printed pp.95\u201396",
+      "input": "Upper-half-plane distance and geodesic formulas",
+      "checked_utc": "2026-11-02"
+    },
+    {
+      "url": "https://archive.maths.nuim.ie/staff/sbuckley/Papers/nonpos.pdf",
+      "author": "Stephen M. Buckley",
+      "location": "Section 2.8, printed p.16 / PDF page index 15, disk-area discussion before Section 2.9",
+      "input": "Area A(R)=4\u03c0sinh\u00b2(R/2)=2\u03c0(cosh R\u22121) for curvature \u22121",
+      "checked_utc": "2026-11-02"
+    }
+  ]
+}

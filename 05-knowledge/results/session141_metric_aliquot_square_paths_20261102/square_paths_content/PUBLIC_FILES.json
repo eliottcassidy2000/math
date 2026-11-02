@@ -1,0 +1,16 @@
+{
+  "status": "frozen",
+  "files": [
+    "README.md",
+    "PROOF.md",
+    "AUDIT.md",
+    "verify.py",
+    "normal.json",
+    "optimized.json",
+    "PORTABILITY.json",
+    "SOURCE_PINS.json",
+    "sources/square_paths_normal.json",
+    "sources/square_paths_PROOF.md"
+  ],
+  "manifest_policy": "SHA256SUMS authenticates the listed payload and PUBLIC_FILES.json; no self-hash."
+}

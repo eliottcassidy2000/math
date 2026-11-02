@@ -1,0 +1,22 @@
+[
+  {
+    "SHA256SUMS_sha256": "323a7be0e16031331c0d61c3d811b3dd1a6c65c796a87c100a2fb7959be9b2d8",
+    "lane": "unit_distance_refinement",
+    "proof": "PROOF.md",
+    "proof_sha256": "c76c0c70de5eee71daa270f2bad734a41068f86a414c4e3ccf52d42366aab82f",
+    "selector": "PUBLIC_FILES.json",
+    "selector_sha256": "eb8c8279ff1616a0c174019b1c2bc4d315db1a5d088cfbc3d82af36febc0a5fb",
+    "snapshot": "sources/unit_distance_refinement.md",
+    "status": "ACCEPTED; full independent proof review"
+  },
+  {
+    "SHA256SUMS_sha256": "04106b2bfb2ddcd6307d71f4ac9b83df4199fc0d2fc6a5514613b04a0829baef",
+    "lane": "square_paths_content",
+    "proof": "PROOF.md",
+    "proof_sha256": "e88cf8631ad3c0b14accdf4760d6166f3a46ee8ab57b1c5b4b8624553ad3d89b",
+    "selector": "PUBLIC_FILES.json",
+    "selector_sha256": "adf4d6ebeaaeff08c22e00237d34666c27aa1fa2d25f8baa80a4e5422a64843b",
+    "snapshot": "sources/square_paths_content.md",
+    "status": "ACCEPTED; full independent proof review"
+  }
+]

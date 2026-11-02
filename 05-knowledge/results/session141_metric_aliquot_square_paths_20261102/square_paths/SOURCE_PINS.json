@@ -1,0 +1,30 @@
+{
+  "status": "pinned",
+  "repository": "eliottcassidy2000/math",
+  "sources": [
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/PATH_KERNEL.md",
+      "git_blob": "dfa4290b88b65740d53ae11c710f5a1fb66b63d5",
+      "sha256": "a47ffc3d309cf6ecb9f1c45d0c94e8f9968ae9646942397ae13bf77130b3e17d",
+      "bytes": 8438,
+      "snapshot": "sources/PATH_KERNEL.md"
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/path_kernel.py",
+      "git_blob": "112aae94aeceb797a704e48c5da0627c150d1976",
+      "sha256": "0e9d48693b88c513ebc7714e6641c9e5bcae970f7c116f930600dceacf7b841f",
+      "bytes": 7355,
+      "snapshot": "sources/path_kernel.py"
+    },
+    {
+      "commit": "c190e11b7795ed4e2d2f3aeb667e86d08238cdbf",
+      "path": "05-knowledge/results/lower_frontier_complement_fibonacci_20261102/COMPLEMENT_CARRIER.md",
+      "git_blob": "a113b5530118eeb0c7201d8f3a9cb65c7bae45f0",
+      "sha256": "ee1a33a40b67321429e22158827418c528a6f15bd110fedb5d957bc12daf592e",
+      "bytes": 7998,
+      "snapshot": "sources/COMPLEMENT_CARRIER.md"
+    }
+  ]
+}

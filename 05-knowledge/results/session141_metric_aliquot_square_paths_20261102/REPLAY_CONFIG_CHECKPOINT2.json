@@ -1,0 +1,72 @@
+{
+  "proof_corruption": "curvature_triangle/PROOF.md",
+  "scientific_mutations": [
+    {
+      "after": "need(cosh_distance(parent,(x,y))==target+1, 'equal edge cosh')",
+      "before": "need(cosh_distance(parent,(x,y))==target, 'equal edge cosh')",
+      "label": "false-equal-edge-formula",
+      "reason": "equal edge cosh",
+      "script": "curvature_triangle/verify.py"
+    },
+    {
+      "after": "26:{0:17179857953,1:10240,2:928,3:64}",
+      "before": "26:{0:17179857952,1:10240,2:928,3:64}",
+      "label": "false-n26-spectrum",
+      "reason": "new spectrum controls",
+      "script": "square_paths/verify.py"
+    },
+    {
+      "after": "need(result['content_exponent']=={25:276,26:297}[row['n']],'exact square content')",
+      "before": "need(result['content_exponent']=={25:276,26:296}[row['n']],'exact square content')",
+      "label": "false-binary-content-exponent",
+      "reason": "exact square content",
+      "script": "square_paths_content/verify.py"
+    }
+  ],
+  "scientific_tests": [
+    {
+      "kind": "preserved",
+      "label": "preserved-checkpoint1-replay",
+      "output": "REPLAY_CHECKPOINT1.json",
+      "script": "replay_checkpoint1.py"
+    },
+    {
+      "label": "curvature-exact",
+      "output": "curvature_triangle/verification.json",
+      "script": "curvature_triangle/verify.py"
+    },
+    {
+      "label": "square-path-exact",
+      "output": "square_paths/normal.json",
+      "script": "square_paths/verify.py"
+    },
+    {
+      "label": "square-content-exact",
+      "output": "square_paths_content/normal.json",
+      "script": "square_paths_content/verify.py"
+    },
+    {
+      "label": "independent-core-exact",
+      "output": "independent/checkpoint2/normal.json",
+      "script": "independent/checkpoint2/check.py"
+    },
+    {
+      "label": "independent-refinements-exact",
+      "output": "independent/refinements/normal.json",
+      "script": "independent/refinements/check.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "audit-core-closed-manifest",
+      "output": "AUDIT_INTEGRITY_CHECKPOINT2.json",
+      "script": "independent/checkpoint2/verify.py"
+    },
+    {
+      "kind": "integrity",
+      "label": "audit-refinement-closed-manifest",
+      "output": "REFINEMENT_INTEGRITY_CHECKPOINT2.json",
+      "script": "independent/refinements/verify.py"
+    }
+  ],
+  "scope": "New finite controls, exact source/closed manifests and corruption rejection; preserved checkpoint1 replay separately counted. Infinite results require reviewed proofs; classical metric/area inputs remain cited. No native full Collatz embedding, threshold equality, unrestricted tournament spectrum or arithmetic all-size square-path law is certified."
+}

@@ -1,0 +1,88 @@
+{
+  "n1_reversal_fixed_hostile_polynomial": [
+    0,
+    1
+  ],
+  "rows": [
+    {
+      "binomial_moments": [
+        2037035976334486086268445688409378161051468393665936250636140449354381299763336706183397376,
+        2428336115282161338649327383529398633303008548815174401564765512173630356506510622720,
+        121416805764108066932466369176469931665150427440758720078238275608681517825325531136
+      ],
+      "common_block_budget": {
+        "J": 4,
+        "b": 3,
+        "cycle_rank": 2,
+        "fixed_arrow_defect": 1,
+        "reorientable_defect": 1,
+        "reversed_fixed_arrow_defect": 2,
+        "sinks": 0
+      },
+      "exact_content_exponent": 276,
+      "max_compatible_union": 26,
+      "mean": "5/4194304",
+      "n": 25,
+      "normalized_coefficients": [
+        16777197,
+        18,
+        1
+      ],
+      "paired_compatible_nonempty_subsets": 12,
+      "positive_probability": "19/16777216",
+      "reversal_bound_exponent": 275
+    },
+    {
+      "binomial_moments": [
+        68351585149469122636640694597425667667286544715412888638305331450311031224980497600734786781970432,
+        48888863432027666070442696521825075865235241447982470015267370784505151194320080948401537024,
+        4456016198231688313712224943395514727300087111144235548266557232962709093232299044776181760,
+        254629497041810760783555711051172270131433549208242031329517556169297662470417088272924672
+      ],
+      "common_block_budget": {
+        "J": 8,
+        "b": 5,
+        "cycle_rank": 4,
+        "fixed_arrow_defect": 3,
+        "reorientable_defect": 3,
+        "reversed_fixed_arrow_defect": 4,
+        "sinks": 0
+      },
+      "exact_content_exponent": 296,
+      "max_compatible_union": 30,
+      "mean": "3/4194304",
+      "n": 26,
+      "normalized_coefficients": [
+        536870561,
+        320,
+        29,
+        2
+      ],
+      "paired_compatible_nonempty_subsets": 19,
+      "positive_probability": "351/536870912",
+      "reversal_bound_exponent": 296
+    }
+  ],
+  "same_terminal_hostile": {
+    "fixed_arrow_budget": 2,
+    "paths": [
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        3,
+        4,
+        1,
+        2,
+        5
+      ]
+    ],
+    "reorientable_budget": 1
+  },
+  "scope": "unpruned complete square-path banks n25 and26; all compatibility cliques and reversal pairs; n1 hostile",
+  "status": "PASS"
+}

@@ -1,0 +1,25 @@
+{
+  "receipts": [
+    {
+      "new_bytes": 41329,
+      "new_sha256": "c9cedc1157aed8e3c657f0f636aa9035ab2081f666f1c0721f6a8d8da15e7af3",
+      "old_bytes": 200199,
+      "old_sha256": "a7ed46831496b218db1ab664c7b96dd219f08e6be2db7864d6c16983d3916dfa",
+      "parsed_json_identity": "PASS",
+      "receipt": "normal.json"
+    },
+    {
+      "new_bytes": 41329,
+      "new_sha256": "c9cedc1157aed8e3c657f0f636aa9035ab2081f666f1c0721f6a8d8da15e7af3",
+      "old_bytes": 200199,
+      "old_sha256": "a7ed46831496b218db1ab664c7b96dd219f08e6be2db7864d6c16983d3916dfa",
+      "parsed_json_identity": "PASS",
+      "receipt": "optimized.json"
+    }
+  ],
+  "scope": "Serialization-only v2 to v3; mathematical checker, proofs and source pins unchanged except JSON printing syntax",
+  "source_manifest_sha256": "4c8ea369d9d939eb8671bcd92cb29a5a1878dfb56b265c2bc948e989ef7135e5",
+  "source_version": "checkpoint2v2",
+  "target_version": "checkpoint2v3",
+  "unchanged_other_payload_bytes": true
+}
