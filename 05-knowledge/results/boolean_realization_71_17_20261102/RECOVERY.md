@@ -132,6 +132,18 @@ reduced it only to primes. This session removes that stale duplicate and
 keeps its explicitly corrected Pi^0_1/two-lane entry. This is a navigation
 repair, not a new completeness proof or a fresh audit of the large banks.
 
+The final incoming commitsc9b28ca4ef and9080f360ab give an
+[actual-source minimum-cost inverse](../spectrum_descent_jacobian_20261102/DESCENT.md)
+within the singleton/strong-four-block grammar. Their exact greedy
+failures discard a valid branch in favour of forbidden H7/H21 or an
+impossible joint state with an attainable scalar. This is a different
+operation-level obstruction from our single-edge energy trap. Their
+Bellman minimum compares recursively legal branches; our local witness
+does not refute that algorithm. The common unresolved obligation is
+entry into an actual source family, rather than termination once inside
+it. These incoming proofs were read and are CITED here; their larger
+finite state audit was not rerun.
+
 ## Primary literature and current boundaries
 
 - Arthur H. Busch,

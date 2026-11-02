@@ -7,6 +7,7 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 INPUTS=[
+    '05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md',
     '05-knowledge/results/session142_tournament_odd_spectrum_20261102/jacobian_bridge/PROOFS.md',
     '05-knowledge/results/eleven_wedge_honeycomb_20261102/NATIVE_26.md',
     '05-knowledge/results/regular_parent_symmetry_20261029/verify.py',

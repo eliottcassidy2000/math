@@ -37,5 +37,10 @@ The 17/71 valuation-word sidecar suggests retaining ordered guards and
 native source progressions, not transferring an arithmetic convergence
 claim into tournaments.
 
+The incoming spectrum_descent_jacobian_20261102/DESCENT.md now provides
+a minimum-cost legal inverse for its restricted block grammar. Use it
+as a constructive baseline when testing energy-guided source entry;
+do not confuse its Bellman search with the refuted local greedy rule.
+
 No theorem IDs were reserved. No messages were sent to other people.
 
