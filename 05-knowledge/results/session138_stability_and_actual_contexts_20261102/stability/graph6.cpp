@@ -1,0 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <array>
+#include <cstdint>
+using namespace std;
+int main(){const int n=6,m=15;vector<pair<int,int>>e;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)e.push_back({i,j});array<unsigned,15>disj{};for(int i=0;i<m;i++)for(int j=0;j<m;j++)if(e[i].first!=e[j].first&&e[i].first!=e[j].second&&e[i].second!=e[j].first&&e[i].second!=e[j].second)disj[i]|=1u<<j;
+int mn=10000,zeros=0;unsigned witness=0;uint64_t count=0;
+for(unsigned mask=0;mask<(1u<<m);mask++){int E=__builtin_popcount(mask),M2=0,M3=0,P21=0;for(unsigned a=mask;a;a&=a-1){int i=__builtin_ctz(a);unsigned D=mask&disj[i],rest=D&(~0u<<(i+1));M2+=__builtin_popcount(rest);int d[6]={};for(unsigned b=D;b;b&=b-1){int j=__builtin_ctz(b);d[e[j].first]++;d[e[j].second]++;}for(int j=0;j<n;j++)P21+=d[j]*(d[j]-1)/2;for(unsigned b=rest;b;b&=b-1){int j=__builtin_ctz(b);M3+=__builtin_popcount(rest&disj[j]&(~0u<<(j+1)));}}
+int Z=3*M3+3*P21+11*E-12*M2;if(Z<mn){mn=Z;witness=mask;}if(!Z)zeros++;count++;}
+cout<<"{\"n\":6,\"graphs\":"<<count<<",\"minimum\":"<<mn<<",\"zero_graphs\":"<<zeros<<",\"witness\":"<<witness<<"}\n";}

@@ -233,6 +233,7 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
   **PROVED, Session137:** `H>=det(I+A)+abs(det A)+C_nonHamilton>=max(1,s)*disc`.
   Its addendum gives equality and weighted extensions. THM-3729 retains
   root covariance; fixed-T arbitrary roots need separate treatment.
+- [Session138](S138.md): stability through n=7; spectrum/zero-rigidity OPEN.
 - [THM-4051](../01-canon/theorems/THM-4051-tournament-order-seven-strong-base-exact-frontier.md)
   has exact order-seven minimum ratio `27/8` (Paley), not sampled `4.22`.
   The global inequality is now closed; no all-order ratio claim follows.

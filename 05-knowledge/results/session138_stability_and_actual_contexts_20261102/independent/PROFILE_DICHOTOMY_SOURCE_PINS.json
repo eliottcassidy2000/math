@@ -1,0 +1,64 @@
+{
+  "verdict": "ACCEPT",
+  "scope": "All-order ordinal profile dichotomy and cyclic strongification for internal edits only; arbitrary strong-quotient zero rigidity remains open.",
+  "reviewed_files": [
+    {
+      "path": "zero_rigidity/PROFILE_DICHOTOMY.md",
+      "bytes": 9925,
+      "sha256": "4dfba4b2f2f53a9a9a76ca1bbc31bc75034d0c9955cd09d49990c929ca6f897f"
+    },
+    {
+      "path": "zero_rigidity/ORDINAL_ZERO_CLASSIFICATION.md",
+      "bytes": 8124,
+      "sha256": "48e04886dcf780579447bf546956fdf9e7d6b580aeafbc05dbd3a671fe56595a"
+    },
+    {
+      "path": "zero_rigidity/profile_core_certificate.py",
+      "bytes": 1660,
+      "sha256": "cea17c4c38d714a717b5a1e7cf8ab85167dbaeead6953c943d2db1cc633f1e8d"
+    },
+    {
+      "path": "zero_rigidity/profile_core_certificate.out",
+      "bytes": 2455,
+      "sha256": "2e8c3c7ffd56a9e229486527118efbceb1e0507c79d996bc0caed82f5512f20a"
+    },
+    {
+      "path": "zero_rigidity/profile_leafs.txt",
+      "bytes": 1271,
+      "sha256": "e0d84a208a2fc5840ea0f4bbefdbff36ffe4d2edf5eef48cd99c973c7151403f"
+    },
+    {
+      "path": "zero_rigidity/profile_literal_audit.cpp",
+      "bytes": 988,
+      "sha256": "dd34aacabfae8bed0cac657dbd6df000443d11564f66bdac9234697d7aec69c1"
+    },
+    {
+      "path": "zero_rigidity/profile_literal_audit.out",
+      "bytes": 1321,
+      "sha256": "211575ce56a66da7426573533b1fba4fac92040e4fdbf5d33b4215a60542e215"
+    },
+    {
+      "path": "zero_rigidity/strong_profile_hostile.py",
+      "bytes": 857,
+      "sha256": "89ec7c98ddd81d74df6b35677978f7e9e0e68d9f0291e6eb38322925f8cdaac6"
+    },
+    {
+      "path": "zero_rigidity/strong_profile_hostile.out",
+      "bytes": 1263,
+      "sha256": "e9da240156068db1b6eff4ad3255a4e31625e272c6b7edf7c7e9800c8c27e5b7"
+    },
+    {
+      "path": "zero_rigidity/public_manifest.json",
+      "bytes": 5353,
+      "sha256": "d2240ca6ed71a89847154be371e806ec64838d0363b182654d1930133488db18"
+    },
+    {
+      "path": "zero_rigidity/SHA256SUMS",
+      "bytes": 2984,
+      "sha256": "e3d00b41f8b7667c13aa8f2b4a4f397572c185ea09a1a1d06de7159d949a7dd0"
+    }
+  ],
+  "final_package_payload_files": 32,
+  "final_package_files_including_manifests": 34,
+  "packaging_note": "Final theorem/proof prefix is unchanged; appended producer replay paragraph; core metadata renamed parent_masks to core_masks; portable reference_paths imports."
+}

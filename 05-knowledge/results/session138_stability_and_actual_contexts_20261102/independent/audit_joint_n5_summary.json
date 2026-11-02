@@ -1,0 +1,386 @@
+{
+  "n": 5,
+  "k": "13/16",
+  "subtracted_triangle": true,
+  "direct_scale_for_margin": 16777216,
+  "certificates": 24,
+  "orientation_coverage": 1024,
+  "rows": [
+    {
+      "orientation": 0,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 0,
+      "zeros": 33,
+      "maximum": 84672512,
+      "sha256": "d0e53458d93b19ae32c66441af248e4623c9b61e595fc203b1509776e826ebfa",
+      "maximal_zero_faces": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 0,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 0,
+      "zeros": 1,
+      "maximum": 58982400,
+      "sha256": "55a99fd5d03627ac46d3407745fc3e7f6822a3c3aa05fcda09b304b7ea8c95d7",
+      "maximal_zero_faces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 2,
+      "orbit_size": 40,
+      "sign": -1,
+      "minimum": 0,
+      "zeros": 17,
+      "maximum": 97517568,
+      "sha256": "b06f390efd5e2e032c4fc1bd0396ea5f54366005d322894f18d047d1f0a103ca",
+      "maximal_zero_faces": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 2,
+      "orbit_size": 40,
+      "sign": 1,
+      "minimum": 0,
+      "zeros": 1,
+      "maximum": 66060288,
+      "sha256": "9b164312cfefc406f080e91467e801bf17e3831e566cf4e774fb5b03542728c6",
+      "maximal_zero_faces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 4,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 3407872,
+      "zeros": 0,
+      "maximum": 107216896,
+      "sha256": "0efb01458cf9f0e8cecb8133504191dc3cded6b65968af453b178cae38e3efe0"
+    },
+    {
+      "orientation": 4,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 3407872,
+      "zeros": 0,
+      "maximum": 75497472,
+      "sha256": "34e4dc2485cdec82b0d92d866b52067b8cae3680499f7a435f4ef282be025597"
+    },
+    {
+      "orientation": 5,
+      "orbit_size": 40,
+      "sign": -1,
+      "minimum": 0,
+      "zeros": 1,
+      "maximum": 92012544,
+      "sha256": "595b6c82465d8566b44b9ca019305adc0ffc40533f98630d374b2f09ba6f253f",
+      "maximal_zero_faces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 5,
+      "orbit_size": 40,
+      "sign": 1,
+      "minimum": 0,
+      "zeros": 1,
+      "maximum": 66846720,
+      "sha256": "3d32bc4a7dc64740f433812d59784ca6bb058dc3afab8e11d7c19aa0bad8f1af",
+      "maximal_zero_faces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 8,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 12320768,
+      "zeros": 0,
+      "maximum": 118226944,
+      "sha256": "13d63a4935e5848cb81be4e6e9aa906c99a0d6b3b27266aca3fdd85ba3fcb871"
+    },
+    {
+      "orientation": 8,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 11534336,
+      "zeros": 0,
+      "maximum": 82051072,
+      "sha256": "a72a3c8db84bd554618811b21a88338f44f66540f7fa924b91f224f01b688493"
+    },
+    {
+      "orientation": 9,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 3407872,
+      "zeros": 0,
+      "maximum": 107216896,
+      "sha256": "44bde5a575458fc6756f94ff3c49815faf238787a1ad4d1bb3fd813569933604"
+    },
+    {
+      "orientation": 9,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 3407872,
+      "zeros": 0,
+      "maximum": 75497472,
+      "sha256": "14f568b14263567d77e3be6a3bb5c1b7295ffd9db58901ea94ae4dfc223d8517"
+    },
+    {
+      "orientation": 10,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 6291456,
+      "zeros": 0,
+      "maximum": 125042688,
+      "sha256": "a6d8bc82885e682d4d246dfa47a8d44db7680ed8cef80a2e591f999602a24302"
+    },
+    {
+      "orientation": 10,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 8388608,
+      "zeros": 0,
+      "maximum": 77332480,
+      "sha256": "5ef85696fab494a515f5f49b41dc0a1a8b3806482996c25aad58afa4f041d835"
+    },
+    {
+      "orientation": 11,
+      "orbit_size": 40,
+      "sign": -1,
+      "minimum": 0,
+      "zeros": 17,
+      "maximum": 97517568,
+      "sha256": "6bc4a30ce4d8c8a0dd3b0434d8704c11ca7a55843fa2c53bcc72834ff0b72044",
+      "maximal_zero_faces": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 11,
+      "orbit_size": 40,
+      "sign": 1,
+      "minimum": 0,
+      "zeros": 1,
+      "maximum": 66060288,
+      "sha256": "c18ac63b7e4c3181eb41321c9cc512ce41daa914bc6cecd82c79250cb69d7b04",
+      "maximal_zero_faces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "orientation": 12,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 22544384,
+      "zeros": 0,
+      "maximum": 126615552,
+      "sha256": "f0a71c8e744fb9c0d0c489faa8d2538484184c44a50c46917cb2066fe3324f8d"
+    },
+    {
+      "orientation": 12,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 19136512,
+      "zeros": 0,
+      "maximum": 89915392,
+      "sha256": "cd7223a72b8f3dfd0cccc7ff9da9924b41b476085ffc73b90c904b3183f844c5"
+    },
+    {
+      "orientation": 40,
+      "orbit_size": 40,
+      "sign": -1,
+      "minimum": 30670848,
+      "zeros": 0,
+      "maximum": 150994944,
+      "sha256": "a95a7da7c0dd2f340e5fea44df24dcdcd99ff83ff6cc4613410a20823f755573"
+    },
+    {
+      "orientation": 40,
+      "orbit_size": 40,
+      "sign": 1,
+      "minimum": 25690112,
+      "zeros": 0,
+      "maximum": 78905344,
+      "sha256": "275f47995f968c65e4c7d608f60463156ad5d1faf47d4bcc32a6da508ee82f35"
+    },
+    {
+      "orientation": 41,
+      "orbit_size": 120,
+      "sign": -1,
+      "minimum": 17563648,
+      "zeros": 0,
+      "maximum": 135790592,
+      "sha256": "615ebd1f2dd3505d5a1967dcec3b7208602d5acc67499bd2cb33bcd20ac25ab5"
+    },
+    {
+      "orientation": 41,
+      "orbit_size": 120,
+      "sign": 1,
+      "minimum": 15466496,
+      "zeros": 0,
+      "maximum": 86245376,
+      "sha256": "3b0b8b8bfae50cf46e9e8786e012f5427aa3b55a581fbe88e11c34d431bb95d0"
+    },
+    {
+      "orientation": 76,
+      "orbit_size": 24,
+      "sign": -1,
+      "minimum": 38010880,
+      "zeros": 0,
+      "maximum": 150994944,
+      "sha256": "906e25891355d9a8ffff2d38ab20398830cafd73afa27a33e43f1044ed4cf5c2"
+    },
+    {
+      "orientation": 76,
+      "orbit_size": 24,
+      "sign": 1,
+      "minimum": 31719424,
+      "zeros": 0,
+      "maximum": 93847552,
+      "sha256": "38efae3f9f6796c31496bcd3c3f4be0e75ece0d9861d265adf0fd8fa0970728f"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "binary_gap_cache": 2916,
+  "counts": {
+    "binary_core_bounds": 808,
+    "matrices": 808,
+    "multistar_bounds": 3309
+  },
+  "scope": "all ternary n1..4, twelve six-fractional-edge rational matrices each n5..8; coefficient identities n3..200",
+  "semantic_sha256": "d2d3c3c9706adc4b9730ae5be4f687888f2638a43e64ba737dd00ee06182f017",
+  "status": "PASS",
+  "triangle_coefficients": 216,
+  "triangle_minimum": "0",
+  "triangle_zero_coefficients": 54
+}

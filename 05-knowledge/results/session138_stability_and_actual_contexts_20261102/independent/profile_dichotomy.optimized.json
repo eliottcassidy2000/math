@@ -1,0 +1,133 @@
+{
+  "all_block_profile_cases_k_le3": 228,
+  "all_fifteen_core_types_reached": 15,
+  "block_profile_class_counts": {
+    "canonical": 6,
+    "cyclic-positive": 51,
+    "low": 42,
+    "positive-core": 129
+  },
+  "bounded_core_case_reduction_states_k_le8": 669924,
+  "complete_leaf_profiles": 17,
+  "core_certificate_sha256": "47a97a29cd8e3f8e6f754c2fd2f2a4413bfe4d3484b23ca1bfd71776fb4f256b",
+  "finite_core_profiles": 15,
+  "hostiles": [
+    {
+      "cut": 867,
+      "difference": [
+        13002,
+        223260,
+        1085688,
+        1241232,
+        -6804000,
+        -30945600,
+        -58705920,
+        -60318720,
+        -32659200,
+        -7257600,
+        0,
+        0
+      ],
+      "new_H": 254139,
+      "original_H": 241137,
+      "singleton_context_gap": 262266,
+      "strong": true
+    },
+    {
+      "cut": 995,
+      "difference": [
+        23058,
+        379980,
+        2066472,
+        4564368,
+        -118800,
+        -22908960,
+        -53343360,
+        -58786560,
+        -32659200,
+        -7257600,
+        0,
+        0
+      ],
+      "new_H": 264195,
+      "original_H": 241137,
+      "singleton_context_gap": 449154,
+      "strong": true
+    },
+    {
+      "cut": 996,
+      "difference": [
+        -3726,
+        146796,
+        1919304,
+        10247376,
+        31474800,
+        61699680,
+        79591680,
+        66286080,
+        32659200,
+        7257600,
+        0,
+        0
+      ],
+      "new_H": 237411,
+      "original_H": 241137,
+      "singleton_context_gap": 135618,
+      "strong": true
+    }
+  ],
+  "labelled_zero_counts": [
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      0,
+      4
+    ],
+    [
+      2,
+      1,
+      4
+    ],
+    [
+      3,
+      0,
+      4
+    ],
+    [
+      3,
+      1,
+      7
+    ],
+    [
+      3,
+      2,
+      4
+    ]
+  ],
+  "literal_cut_cases_k_le3": 836,
+  "literal_cyclic_context_checks": 108,
+  "method": "backward Hamilton-subset DP plus minimum-vertex anchored unordered set-partition DP; no producer imports",
+  "nine_vertex_lower_envelope": [
+    4,
+    648,
+    8088,
+    35040,
+    67920,
+    60480,
+    20160,
+    0,
+    0
+  ],
+  "reduction_categories": {
+    "canonical": 36,
+    "cyclic-positive": 167445,
+    "finite_core": 501831,
+    "low": 612
+  },
+  "source_sha256": "be7768a52bfe0f69e114f0b50fe2c520d3a6267db40f193a206c26227835c23a",
+  "status": "PASS"
+}

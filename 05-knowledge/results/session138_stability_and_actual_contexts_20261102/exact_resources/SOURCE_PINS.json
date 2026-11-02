@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "path": "/tmp/session137_research/constructors/THEORY.md",
+      "sha256": "093408cb7dcc90d4bcf04271562873b6f99ba3d7659ac817ff8cad5fa99011f7"
+    },
+    {
+      "path": "/tmp/session137_research/constructors/BOUNDED_INTERIOR.md",
+      "sha256": "b022aa9af14cd97d3ce1169c7f18b1a0d11830918b005e63fd801efd4847ee6c"
+    },
+    {
+      "path": "/tmp/session137_research/width_phase2/PROOF.md",
+      "sha256": "b7da98667ef7547dd8814d522363cde9c7209f39283bfe4bce7a41cb434d4bf2"
+    },
+    {
+      "path": "/tmp/session137_research/coverage/PHASE2.md",
+      "sha256": "9cbe71ad7e84eb705a683aa36bbb82ec4070bc5361ca9768187bd52423aa8e71"
+    },
+    {
+      "path": "/tmp/session134_research/descent/THEORY.md",
+      "sha256": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7"
+    },
+    {
+      "path": "/tmp/session133_research/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    }
+  ],
+  "status": "read-only inherited sources"
+}

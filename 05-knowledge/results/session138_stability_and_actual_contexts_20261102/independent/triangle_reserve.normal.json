@@ -1,0 +1,20 @@
+{
+  "counts": {
+    "matrices": 888,
+    "strong_matrices": 857,
+    "strong_roots": 3748,
+    "weak_roots": 3835
+  },
+  "n3_strong_hostile": "C3:Delta0,tau1",
+  "n5_7_over_8_joint_hostile": {
+    "Delta_minus_tau": "13/16",
+    "H": "3/2",
+    "V": "1",
+    "tau": "1/4",
+    "u": "3/8",
+    "v": "1/16"
+  },
+  "scope": "all ternary matrices n1..4 and32 fixed-seed rational matrices each n5..8",
+  "semantic_sha256": "85e7a7dfa4969b25240185351a6217b1e7d725ed24a9e26c9c01c17d72612672",
+  "verdict": "PASS"
+}
