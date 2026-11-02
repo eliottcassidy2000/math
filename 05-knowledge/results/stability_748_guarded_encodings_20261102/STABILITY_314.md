@@ -1,5 +1,7 @@
 # Combined baseline and light-mass payment: exact stability for n>=314
 
+**Historical checkpoint: valid but SUPERSEDED as the current frontier by [n>=66](STABILITY_66.md).** Its remaining-range sentences record its publication stage.
+
 **Status: PROVED; same-agent proof audit and exact rational certificates, with separate local-energy checks. No independent-agent or formal-proof claim.** This combines the incoming
 [n>=466 proof](../stability_priority_spectrum_20261102/STABILITY_466.md)
 with the [mass-paid tail](STABILITY_514.md) and Session139's audited dual.

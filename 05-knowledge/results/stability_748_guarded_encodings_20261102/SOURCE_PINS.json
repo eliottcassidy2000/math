@@ -43,5 +43,25 @@
     "commit": "e9dd62edb6",
     "path": "05-knowledge/results/stability_priority_spectrum_20261102/FRACTRAN_CLOCKS.md",
     "sha256": "240aa914150d39bfc742aa218548a41d17496254f162cb0d6fb6e5907c8e28f7"
+  },
+  {
+    "commit": "8da4684eef",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/tensor_matching/PROOF.md",
+    "sha256": "7bd612d505eac4940c4add25b1e109d99e5369e8633fb866fb27c9af195d1b66"
+  },
+  {
+    "commit": "8da4684eef",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/tensor_matching_audit/AUDIT.md",
+    "sha256": "1d58a11025063d58179d617aa66295dcb33df6812f93026261f504ffc1f1c483"
+  },
+  {
+    "commit": "8da4684eef",
+    "path": "05-knowledge/results/session139_incidence_moduli_and_stability_20261102/stability/PROOF_N140.md",
+    "sha256": "eb82003767cef8b188dc8eb3e5a6536353bdc29dfc43e08df138be18cd3a1de5"
+  },
+  {
+    "commit": "9086b4e178",
+    "path": "05-knowledge/results/stability_priority_moduli_20261102/STABILITY_N500.md",
+    "sha256": "fd0ddd18e4b0a57bff61ef4b71279ccd78c53441e2bc9bdb78253c6f702f5770"
   }
 ]

@@ -24,3 +24,7 @@ The niche lane must inherit the complete factorial-transform/CRT context model, 
 ## Second incoming update: e9dd62edb6
 
 The466 proof retains-BR in matching deletion. Combining it with this packet's U-payment and the exact slot relation L+r_h<=R proves n>=314. Current anchor:10..313. This is an actual synthesis of distinct compatible costs; neither a second spending of B nor a claim that a modular shadow forces equality. Niche: inherit the incoming minimal FRACTRAN clocks instead of duplicating them. Wildcard: the complement-reciprocal missing-edge polynomial of an undirected graph and its path-cover valuation.
+
+## Final incoming update:8da4684eef
+
+The independently audited tensor theorem gives a retained nonlinear matching reserve near1. Combined with the stronger2D^2/n degree estimate and this lane's exact slot accounting, it proves n>=66. Current anchor is10..65; earlier R156 tests are no longer open. Niche/wildcard identities remain as proved, with raw-H universal coverage still OPEN. Do not force the repeated numerical thresholds into a common arithmetic interpretation.

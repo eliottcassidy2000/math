@@ -1,8 +1,8 @@
-# Sharp stability from314: combine the baseline and actual light mass
+# Sharp stability from66: tensor reserve, degree energy and matching slots
 
-**PROVED scoped.** The exact weighted tournament determinant-gap coefficient and complete equality classification hold for every **n>=314**. Together with inherited n=3..9, **orders10..313 remain OPEN**. Universal raw Hamiltonian-path spectrum completeness remains OPEN.
+**PROVED scoped.** The exact weighted tournament determinant-gap coefficient and complete equality classification hold for every **n>=66**. Together with inherited n=3..9, **orders10..65 remain OPEN**. Universal raw Hamiltonian-path spectrum completeness remains OPEN.
 
-[Current proof](STABILITY_314.md) · [Verification](VERIFICATION.md) · [Concept board](BOARD.md).
+[Current proof](STABILITY_66.md) · [Verification](VERIFICATION.md) · [Concept board](BOARD.md).
 
 For R=floor(n/2), the coefficient is `(4/R)[1-(3/4)^R-1_(n even)(1/4)^R]`. Positive-variance equality is precisely maximal ordinal fair pairs, with one singleton at odd order.
 
@@ -13,3 +13,5 @@ The current proof is a same-agent proof audit with exact rational checks and sep
 [Guarded square-sum carrier](GUARDED_PATHS.md): its lowest polynomial degree is the minimum path-cover defect. Complement reciprocity exactly pairs the four-vertex star and triangle-plus-isolate, while a same-port attachment separates them. [Next retained remainder](NEXT_MASS_REMAINDER.md) gives a quantitative local extension for the remaining stability gap; no additional order is claimed.
 
 [Research synthesis](SYNTHESIS.md) · [Next tests and handoff](HANDOFF.md).
+
+A final incoming checkpoint at8da4684eef supplied the independently audited tensor matching reserve and a140 theorem. Combining that reserve with the earlier factor-four discarded-degree estimate, exact slot counting, and the negative baseline proves **n>=66**. This newly resolves66..139 beyond the strongest incoming theorem. The full coefficient and equality locus are unchanged. The earlier314 result remains a valid, explicitly superseded route.

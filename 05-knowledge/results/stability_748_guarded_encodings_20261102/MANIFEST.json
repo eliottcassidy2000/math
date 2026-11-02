@@ -1,17 +1,18 @@
 {
   "files_sha256": {
-    "BOARD.md": "da0e3c45fad1c70eaf296847522f49a7a36bf28f750ca28ee4a8dcb21ce53c42",
+    "BOARD.md": "637b73774db77e0006830b679dcbb858326ad9e8e6a9b625e354ab7cea0eccc5",
     "EXTERNAL_SOURCE.json": "5cd9f6586d0c81bf59f7c8d326a4a6ae6924f1306302ed22be99e25121e23828",
     "GUARDED_PATHS.md": "9826d8f57764bea37007d2063dc3596538245e63017fd4499a299c9682c5893e",
-    "HANDOFF.md": "0541e46fb1210b691953f304953966920f177862cacf260dd451b4e033fff081",
-    "NEXT_MASS_REMAINDER.md": "4e6ce6b5cf6966f6225d9f71f2fc076933198cd007ed2d00d3a880a758f68583",
-    "README.md": "e2129714e735ec616a7eff4640ace9cf1ef2108e7db77c96db1b500fdfbdfba7",
-    "SOURCE_PINS.json": "aa7cee698579237fded498874a2fdcfce9a1e276839d5ec6d5857828e93e93e6",
-    "STABILITY_314.md": "99bacdba5687d2c813bbfdc910643704f987c4093afa5f7406edaa9ceaa9ba70",
-    "STABILITY_514.md": "8c49db2dcb45d4b0e791a48d00f50ddd47d718adee121d52a074ee19090f8eb6",
-    "STABILITY_748.md": "1a37913028f4e2693a3a7ebcfd82edf792a02a448d678fb05b98492bfd818f6b",
-    "SYNTHESIS.md": "ec5827701dce532e13f2a403d107bcad01c7e867f40572a3d419e642003ed071",
-    "VERIFICATION.md": "8f172ad5e510ca70c14b882a8fb086c7df53cae1a5e2f7f5ae11a67633197528",
+    "HANDOFF.md": "18a6f1ade9fe1fb49afe5fe138d3b7fd843170b8e8421e736921ad4ae0054504",
+    "NEXT_MASS_REMAINDER.md": "fd5ed2031e009e1d0743a15c94aae5fc3cd28db56c7a656e3cc8738e7cedc89b",
+    "README.md": "8d2ae01964b659822d561f9bef548e0db5b9af231e6a40d400c2b63c54aed527",
+    "SOURCE_PINS.json": "31e857fb7f068cb4abd9def017e15cf9ce38b1888c9d2712c899151b6f186928",
+    "STABILITY_314.md": "dcadcef2e4e97a7433111771f90c5f1016077dcc9f377354df61475567bf4bd1",
+    "STABILITY_514.md": "fbb03c9d02c6a293596ab13f41cb14bb1aca55ea4607543a0c4e60341d83be9a",
+    "STABILITY_66.md": "85aadf36ed9295abd3bf493e5cfc63dfea5726500ddf1dccf6938aa20d50905c",
+    "STABILITY_748.md": "7b5a6d0fbcc1d8958092e6dfc602fdd5c41f73ef6547469476919ab8f0226f5c",
+    "SYNTHESIS.md": "a863111aee45e8411a9f47fad72250750c821fb382514ecab3008c9071247b0a",
+    "VERIFICATION.md": "00502066992f1c531b402601fe6779c114048c8b9c148e52f1ab0714802384b7",
     "audit_dual.json": "c6c3307ee61807059238b997a4b3dff4705c795c2bc17107623a131e4a204303",
     "audit_dual.optimized.json": "c6c3307ee61807059238b997a4b3dff4705c795c2bc17107623a131e4a204303",
     "audit_dual.py": "57f28a960e8e017d339c157ecbab668c8b6f6337de1e46d134f465b1c27f18f2",
@@ -21,21 +22,25 @@
     "guarded_paths.optimized.json": "1ab550ac7f83218bbc4a7d20bb0b86c4a786a60c6c3dd69af95974ff9f8b29ab",
     "remainder.json": "ee15e5a28b778a7004b7e47de2ea7490f766ac9d03a0ad4e9d3fafff6e6057fd",
     "remainder.optimized.json": "ee15e5a28b778a7004b7e47de2ea7490f766ac9d03a0ad4e9d3fafff6e6057fd",
+    "tensor_input_replay.json": "021f0b7fcbc41189966aaa5d53413d0c56e250340c69dcc08ff8b99df50460df",
     "verify_314.json": "8270f138803b679d0da7422c3b0bd3065479e558952679e14fda4a17b568145d",
     "verify_314.optimized.json": "8270f138803b679d0da7422c3b0bd3065479e558952679e14fda4a17b568145d",
     "verify_314.py": "bc4aec2ae8e0942f356dbaa1c1e22adc2e0dc116de60973a8e74a544ca251aec",
     "verify_514.json": "147fa548d747c3ed79b6aea4c7723fbec022c98a7363e0ea7dbb48911598097b",
     "verify_514.optimized.json": "147fa548d747c3ed79b6aea4c7723fbec022c98a7363e0ea7dbb48911598097b",
     "verify_514.py": "ac92ef5916b7aff57b33a5947229ab6a905af6ef64462320acda239578311578",
+    "verify_66.json": "c8c325abb77e84f3862846f9439cccd8bc8833ff2c0294fc0a3e558e6a695475",
+    "verify_66.optimized.json": "c8c325abb77e84f3862846f9439cccd8bc8833ff2c0294fc0a3e558e6a695475",
+    "verify_66.py": "787a0cd11b5b24413c5d13758855270c9066d7caa264060c8e49d594e8571fd8",
     "verify_748.json": "f795e09962cf9d95f7b8c3c06cc713ecc294f3d812d8c5a453ed76b170f4e771",
     "verify_748.py": "ff62b69c8e95030e1c6935e4bf646596f7d604a2690d422e9c2188c684ad1b24",
     "verify_guarded_paths.py": "691c4c6944c590c2f6901decb43ab9e232c84eab0e66e427c65bbba4c06ff3dd",
     "verify_remainder.py": "be0c5258bc1708900adf7bde092cb393a1a8a3f8231ff90b6d52ddc9ff4f4b23"
   },
-  "current_proof": "STABILITY_314.md",
+  "current_proof": "STABILITY_66.md",
   "remaining_open_orders": [
     10,
-    313
+    65
   ],
-  "audit_scope": "same-agent proof audit and independent implementation checks; no delegated or formal audit"
+  "audit_scope": "same-agent proof audit; exact arithmetic and separate degree-energy implementation; accepted tensor input independently audited and replayed"
 }

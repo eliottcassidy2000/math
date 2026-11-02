@@ -1,0 +1,47 @@
+{
+  "actual_equality_orders": [
+    66,
+    67,
+    140,
+    141
+  ],
+  "bootstrap": [
+    {
+      "degree": 2,
+      "from": "999/4000",
+      "mass": "551911/528000",
+      "slack": "2512287552614870231440540414361/68568761331267248502865920000000",
+      "to": "3/5"
+    },
+    {
+      "degree": 3,
+      "from": "3/5",
+      "mass": "2597/660",
+      "slack": "8187227130774689800710485993/57854892373256740924293120000",
+      "to": "19/20"
+    },
+    {
+      "degree": 4,
+      "from": "19/20",
+      "mass": "18011/2640",
+      "slack": "59167078316676726373173390301731733/79649473162400035860929052672000000",
+      "to": "99/100"
+    }
+  ],
+  "dual_slack": "17/1650",
+  "finite_R_controls": 368,
+  "graph_controls": 1529,
+  "negative_control": "same certificate at order65 fails",
+  "remaining_open_orders": [
+    10,
+    65
+  ],
+  "scope": "All-n proof uses monotone bootstrap, slot count and convex endpoints. Finite checks corroborate it; no independent-agent audit is claimed.",
+  "slot_slack": "811/3300",
+  "status": "passed",
+  "tail_endpoints": [
+    "2027821760000198001/405828369621610135552",
+    "927216168267123/198158383604301824"
+  ],
+  "threshold": 66
+}

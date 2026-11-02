@@ -8,11 +8,11 @@ overnight heartbeat was not resumed.
 ## Current mathematical truth
 
 - **PROVED:** sharp weighted determinant-gap coefficient and equality
-  for n>=314, using STABILITY_314.md. Small n3..9 are inherited.
-- **OPEN:** n10..313, raw-H completeness beyond the omissions7,21,
+  for n>=66, using STABILITY_66.md. Small n3..9 are inherited.
+- **OPEN:** n10..65, raw-H completeness beyond the omissions7,21,
   and any all-prime realization claim outside the incoming proven scope.
 - **PROVED local:** NEXT_MASS_REMAINDER.md keeps an additional aggregate
-  quadratic remainder. Its tail-paying application below314 is OPEN.
+  quadratic remainder. Its tail-paying application below66 is OPEN.
 - **PROVED elementary:** guarded path polynomial, linear-forest expansion,
   complement reciprocity and minimum path-cover valuation.
 - **FINITE-EXACT:**1099 small labelled graph controls, the explicit
@@ -23,15 +23,19 @@ overnight heartbeat was not resumed.
 The initial748 proof was independently matched by incoming Session139,
 which then reached526. Its dual and this packet's unused U term gave514.
 Incoming e9dd62edb6 supplied-BR and466; their combination plus exact slot
-accounting gave314. Earlier receipts retain historical gaps and are
+accounting gave314. Incoming8da4684eef then supplied the tensor reserve
+and140; combining it with the stronger degree estimate and exact slots
+gave66. Earlier receipts retain historical gaps and are
 explicitly marked superseded. Do not route those as the current frontier.
 
 ## Next decisive tests
 
-1. Retune to t=4/R,lambda=1/(2R) at R156. The old m8 tail can fail;
-   test the quantitative remainder in NEXT_MASS_REMAINDER.md against
-   that deficit under compatible mass/slot constraints. A feasible scalar
-   point is not an actual weighted-tournament counterexample.
+1. At R32, retune the cut and use the full matching product, additional
+   group remainder, or joint endpoint profile reserve. The66 proof's
+   eta=4/33 no longer satisfies eta>=4/R there. Its failure is a method
+   boundary; no tournament counterexample has been constructed. The old
+   R156 scalar hostile is now superseded, although its remainder lemma
+   remains valid. Avoid adding overlapping triangle and wedge budgets.
 2. In the smaller-order range, retain complementary triangle incidence
    (M23 at order5 is the model) rather than attempt spectral reconstruction
    already ruled out by incoming exact isospectral witnesses.
@@ -47,7 +51,7 @@ explicitly marked superseded. Do not route those as the current frontier.
 From repo root, run the four current verifiers normally and with `-O`:
 
 ```sh
-python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_314.py
+python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_66.py
 python3 05-knowledge/results/stability_748_guarded_encodings_20261102/audit_dual.py
 python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_remainder.py
 python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_guarded_paths.py
@@ -55,7 +59,7 @@ python3 agents/check_docs.py
 git diff --check
 ```
 
-The314 proof is same-agent reviewed with exact checks; no independent
+The66 proof is same-agent reviewed with exact checks; no independent
 reviewer or formal proof is claimed. Parent inputs retain their own audits.
 Consult VERIFICATION.md and the normal/optimized JSON receipts for scope.
 

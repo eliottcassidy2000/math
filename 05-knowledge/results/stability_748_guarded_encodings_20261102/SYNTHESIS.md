@@ -2,7 +2,7 @@
 
 The assigned interval10..1499 concerns the sharp weighted determinant-gap
 coefficient at VERTEX ORDERS, not missing raw Hamiltonian-path values.
-The present merged frontier is3..9 and all n>=314, leaving10..313 open.
+The present merged frontier is3..9 and all n>=66, leaving10..65 open.
 The all-order binary omissions7,21 are inherited; completeness of every
 other positive odd raw H is still open. Presentation counts H/Aut remain
 a separate observable throughout.
@@ -21,6 +21,13 @@ variation of discarded mass across light groups and a lower bound for
 heavy owners forced by their total mass. Its proposed tail payment remains
 OPEN; its point is to exclude incompatible scalar worst cases before
 discarding another coordinate.
+
+The final incoming tensor reserve replaces the quarter-sized scalar gap by
+a bootstrap to99/100. Combined with the factor-four discarded-degree
+estimate and exact slots, it gives66; these are additional proved inputs,
+not mere constant tuning of the314 argument. The tensor source keeps the
+whole odd-parity norm, so cancellation of one Pfaffian coordinate cannot
+erase the companion energy.
 
 ## Older metagraph/RH-adjacent work: what was recovered
 

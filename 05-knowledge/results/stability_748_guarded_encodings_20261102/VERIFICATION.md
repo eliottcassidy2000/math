@@ -50,3 +50,16 @@ Incoming proof pointers: `stability_priority_spectrum_20261102/STABILITY_466.md`
 `python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_guarded_paths.py` and its `-O` replay agree. Independent permutation enumeration and edge-subset linear-forest enumeration agree on all1099 labelled graphs of orders1..5. Checks include complement reciprocity, leading degree/coefficient, and the marked-leaf hostile. The15-vertex square-sum path is checked against its original labels and targets9,16,25. Infinite square-sum existence remains inherited/CITED, not derived from this finite check.
 
 The local unspent-remainder lemma is additionally checked by `verify_remainder.py` in normal and optimized Python, with matching receipts. It verifies the clamped scalar minimizer and the retained invoice; its proposed payment inequality remains OPEN.
+
+## Current n>=66 theorem
+
+```sh
+python3 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_66.py
+python3 -O 05-knowledge/results/stability_748_guarded_encodings_20261102/verify_66.py
+```
+
+Receipts agree. The three rational Taylor inequalities bootstrap999/4000 to3/5,19/20,99/100. The exact heavy-slot slack is811/3300; both convex tail endpoints are below1/100; the shared dual slack is17/1650. There are368 corroborating R values,1529 independently reconstructed weighted-graph degree controls, and exact fair-pair equality checks at66,67,140,141. The unchanged constants explicitly reject65.
+
+Same-agent proof audit checked the tensor parity correction is only present for a perfect matching; the stronger discarded-degree estimate is proved by distinct selected/discarded invoices; nonlinear coupling subtracts n*kappa/8, not n*kappa/2; V>2 suffices for the starting constant; U<=eta(R-r_h) retains the lost slots; positive matching mass, coefficient monotonicity, strict-BR accounting, and the nonpositive-dual-coefficient case are handled. The uniform theorem comes from these proofs, not the finite checks. The new combined66 theorem has not been independently reviewed by another agent.
+
+The previously independent tensor audit script `session139.../tensor_matching_audit/verify_exact.py` was replayed in this session; its JSON is byte-identical to the published exact_results.json. `tensor_input_replay.json` records this input check. Replaying an earlier independent audit is not a new independent review of the66 combination.
