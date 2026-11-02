@@ -1,0 +1,391 @@
+{
+  "drawing_checks": 254,
+  "functional_maps_checked": 3413,
+  "honeycomb_obstruction": {
+    "capacity": 694,
+    "radius": 21,
+    "sources": 704
+  },
+  "hostile81_27": {
+    "common_cyclic_triples": 67,
+    "tournaments": [
+      {
+        "flip": false,
+        "group_order": 81,
+        "regular_binary_masks": 1620
+      },
+      {
+        "flip": true,
+        "group_order": 27,
+        "regular_binary_masks": 1728
+      }
+    ]
+  },
+  "inverse_ball_counts": [
+    1,
+    2,
+    4,
+    6,
+    9,
+    12,
+    16,
+    21,
+    28,
+    37,
+    49,
+    64,
+    83,
+    106,
+    136,
+    173,
+    219,
+    276,
+    348,
+    440,
+    557,
+    704,
+    891,
+    1124,
+    1418,
+    1792,
+    2263
+  ],
+  "inverse_level_counts": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    5,
+    7,
+    9,
+    12,
+    15,
+    19,
+    23,
+    30,
+    37,
+    46,
+    57,
+    72,
+    92,
+    117,
+    147,
+    187,
+    233,
+    294,
+    374,
+    471
+  ],
+  "joint_ports": {
+    "expansion_rows": [
+      {
+        "depth": 0,
+        "duplicate_even_states": 0,
+        "max_native_clock": 0,
+        "naive_subdivision_nodes": 1,
+        "native_nodes": 1,
+        "odd_nodes": 1
+      },
+      {
+        "depth": 1,
+        "duplicate_even_states": 3,
+        "max_native_clock": 6,
+        "naive_subdivision_nodes": 11,
+        "native_nodes": 8,
+        "odd_nodes": 3
+      },
+      {
+        "depth": 2,
+        "duplicate_even_states": 10,
+        "max_native_clock": 14,
+        "naive_subdivision_nodes": 35,
+        "native_nodes": 25,
+        "odd_nodes": 7
+      },
+      {
+        "depth": 3,
+        "duplicate_even_states": 26,
+        "max_native_clock": 22,
+        "naive_subdivision_nodes": 85,
+        "native_nodes": 59,
+        "odd_nodes": 15
+      },
+      {
+        "depth": 4,
+        "duplicate_even_states": 52,
+        "max_native_clock": 29,
+        "naive_subdivision_nodes": 171,
+        "native_nodes": 119,
+        "odd_nodes": 31
+      },
+      {
+        "depth": 5,
+        "duplicate_even_states": 106,
+        "max_native_clock": 37,
+        "naive_subdivision_nodes": 359,
+        "native_nodes": 253,
+        "odd_nodes": 63
+      },
+      {
+        "depth": 6,
+        "duplicate_even_states": 208,
+        "max_native_clock": 42,
+        "naive_subdivision_nodes": 717,
+        "native_nodes": 509,
+        "odd_nodes": 127
+      },
+      {
+        "depth": 7,
+        "duplicate_even_states": 424,
+        "max_native_clock": 50,
+        "naive_subdivision_nodes": 1445,
+        "native_nodes": 1021,
+        "odd_nodes": 255
+      },
+      {
+        "depth": 8,
+        "duplicate_even_states": 810,
+        "max_native_clock": 58,
+        "naive_subdivision_nodes": 2811,
+        "native_nodes": 2001,
+        "odd_nodes": 511
+      }
+    ],
+    "leaf_gram_rank": 256,
+    "pairs_checked": 130305,
+    "pairs_with_earlier_even_meeting": 126719,
+    "periodic_phase_hostile": [
+      {
+        "a": 3,
+        "clocks": [
+          1,
+          3
+        ],
+        "meeting_with53": 40,
+        "source": 13
+      },
+      {
+        "a": 9,
+        "clocks": [
+          5,
+          1
+        ],
+        "meeting_with53": 160,
+        "source": 853
+      }
+    ],
+    "tail_gram_determinant": 384,
+    "tail_gram_exponents": [
+      3,
+      5,
+      9,
+      11,
+      15,
+      17
+    ],
+    "witness": {
+      "distance": 4,
+      "meeting_clocks": [
+        1,
+        3
+      ],
+      "native_meeting": 40,
+      "odd_lca": 5,
+      "sources": [
+        13,
+        53
+      ]
+    }
+  },
+  "lattice_ball_checks": 212,
+  "p5_cycle": [
+    13,
+    33,
+    83
+  ],
+  "p5_parents_checked": 81,
+  "palette_histogram": {
+    "0": 33,
+    "2": 8,
+    "4": 6,
+    "8": 1
+  },
+  "parity_accepts": 24,
+  "parity_false_accepts": 9,
+  "phase_hostiles": [
+    {
+      "k": 2,
+      "modulus": 9,
+      "outputs": [
+        25,
+        49
+      ],
+      "roots": [
+        19,
+        37
+      ]
+    },
+    {
+      "k": 3,
+      "modulus": 27,
+      "outputs": [
+        25,
+        97
+      ],
+      "roots": [
+        19,
+        73
+      ]
+    },
+    {
+      "k": 4,
+      "modulus": 81,
+      "outputs": [
+        25,
+        241
+      ],
+      "roots": [
+        19,
+        181
+      ]
+    },
+    {
+      "k": 5,
+      "modulus": 243,
+      "outputs": [
+        25,
+        673
+      ],
+      "roots": [
+        19,
+        505
+      ]
+    },
+    {
+      "k": 6,
+      "modulus": 729,
+      "outputs": [
+        25,
+        1969
+      ],
+      "roots": [
+        19,
+        1477
+      ]
+    },
+    {
+      "k": 7,
+      "modulus": 2187,
+      "outputs": [
+        25,
+        5857
+      ],
+      "roots": [
+        19,
+        4393
+      ]
+    },
+    {
+      "k": 8,
+      "modulus": 6561,
+      "outputs": [
+        25,
+        17521
+      ],
+      "roots": [
+        19,
+        13141
+      ]
+    }
+  ],
+  "root5_certificate_sha256": "7343a931e75140790f54a42e06fd43f41ea8326dca8ee9751ec2c66f6e99fdf8",
+  "sf5_rows": [
+    {
+      "cumulative": 3,
+      "depth": 1,
+      "level_count": 2,
+      "max_raw_clock": 6
+    },
+    {
+      "cumulative": 7,
+      "depth": 2,
+      "level_count": 4,
+      "max_raw_clock": 14
+    },
+    {
+      "cumulative": 15,
+      "depth": 3,
+      "level_count": 8,
+      "max_raw_clock": 22
+    },
+    {
+      "cumulative": 31,
+      "depth": 4,
+      "level_count": 16,
+      "max_raw_clock": 29
+    },
+    {
+      "cumulative": 63,
+      "depth": 5,
+      "level_count": 32,
+      "max_raw_clock": 37
+    },
+    {
+      "cumulative": 127,
+      "depth": 6,
+      "level_count": 64,
+      "max_raw_clock": 42
+    },
+    {
+      "cumulative": 255,
+      "depth": 7,
+      "level_count": 128,
+      "max_raw_clock": 50
+    },
+    {
+      "cumulative": 511,
+      "depth": 8,
+      "level_count": 256,
+      "max_raw_clock": 58
+    },
+    {
+      "cumulative": 1023,
+      "depth": 9,
+      "level_count": 512,
+      "max_raw_clock": 66
+    },
+    {
+      "cumulative": 2047,
+      "depth": 10,
+      "level_count": 1024,
+      "max_raw_clock": 73
+    },
+    {
+      "cumulative": 4095,
+      "depth": 11,
+      "level_count": 2048,
+      "max_raw_clock": 80
+    },
+    {
+      "cumulative": 8191,
+      "depth": 12,
+      "level_count": 4096,
+      "max_raw_clock": 88
+    },
+    {
+      "cumulative": 16383,
+      "depth": 13,
+      "level_count": 8192,
+      "max_raw_clock": 95
+    }
+  ],
+  "status": "PASS",
+  "triangular_obstruction": {
+    "capacity": 2107,
+    "radius": 26,
+    "sources": 2263
+  }
+}

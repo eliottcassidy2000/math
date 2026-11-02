@@ -18,6 +18,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** the pointwise triangle surplus and its matching sum for tau remain valid; transfer to B and the full-quarter global capacity bound require n>=4. All binary orders3/4 are now exact scope controls. Sharp stability for n>=42 and its equality classification are unchanged.
 - **Mechanism / next question:** a local cycle certificate contributes to the binary proper-cycle baseline only when its vertex set is proper. Retain source order when transporting a local inequality into a global expectation.
 
+## 2026-11-02 — odd inverse-tree edges share native even tails
+
+- **Source/status:** pre-release `05-knowledge/results/collatz_hexagonal_growth_20261102/GEOMETRY.md`, repaired before publication. The concurrent root85 proof in `clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md` already warns of this distinction; SF5's odd-tree theorem is unchanged.
+- **Witness / first failed implication:** independently subdividing13->5 and53->5 by their ordinary clocks4 and6 duplicates40,20,10. Their odd LCA is5, but their first native meeting is40; native distance is4, not10. A planar drawing of the macro tree does not automatically remain injective after native identifications.
+- **Repair / strongest survivor:** group even chains by their unique odd part. For final incoming exponents a,b at odd LCA q, the meeting is2^min(a,b)q and both clocks decrease by min(a,b). Expanded vertex count is|V_odd|+sum_q max A(q); JOINT_PORTS.md J1--J7 gives the source-preserving recurrence and Gram formula. All130305 pairs through selected depth8 replay exactly.
+- **Missing coordinate / next question:** retain shared-tail incidence and exact exponent clocks. Exponents3 and9 agree mod6 but sources13 and853 meet the fixed port53 at40 and160. Determine which restricted attachment languages make such joint data derivable, rather than replacing it by unrelated marginal clocks.
+
 ## 2026-11-02 — FRACTRAN prime support does not bound selector precision
 
 - **Correction lineage:** THM-4852 at `01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md`, following MISTAKE-697. The previously audited generalization used prime support <=P to claim selection from one base-P# digit. Its 400 random-program tests were squarefree; the audit's actual local formulas required p,q to divide the base, not merely a power of it.
