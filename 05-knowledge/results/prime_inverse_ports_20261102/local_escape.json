@@ -1,0 +1,11 @@
+{
+"labelled_sources":32768,"target":17,"target_sources":1440,"weak_local_minima":768,"strict_local_minima":768,"sublevel_isolated":768,
+"strict_minimum_distance_histogram":{"2":480,"3":288},
+"isolated_minimum_barrier_histogram":{"6":768},
+"mask72":{"H":15,"distance":2,"barrier_absolute":6,"one_flip_counts":[13,13,13,3,33,9,9,13,31,9,13,31,13,31,27],"two_flip_targets":[[5,14],[6,14],[9,14]]},
+"local_minima_summary":[{"H":15,"distance":2,"barrier":6,"sources":480},{"H":15,"distance":3,"barrier":6,"sources":288}],
+"low_barrier_distance_histogram":{"3":768},
+"shared_path_packet_distance_histogram":{"2":480,"3":288},
+"legal_path_complement_target_hits_histogram":{"0":768},
+"examples":[{"source":72,"target":16968,"shared_paths":6,"packet_size":2,"minimum_barrier_walk":[[72,15],[200,13],[456,23],[968,17]]},{"source":140,"target":2572,"shared_paths":3,"packet_size":3,"minimum_barrier_walk":[[140,15],[12,11],[28,23],[30,17]]}]
+}

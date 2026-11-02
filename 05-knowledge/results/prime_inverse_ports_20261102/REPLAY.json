@@ -1,0 +1,43 @@
+{
+  "audit_scope": "Same-agent proof review with independent counting/control algorithms; no subagent or formal audit",
+  "checks": [
+    {
+      "normal_optimized_equal": true,
+      "output": "valuation.json",
+      "script": "valuation.py",
+      "sha256": "78af418e987f59f13377fb642042900578f39abfff7cedebb531a34f0b945d41"
+    },
+    {
+      "normal_optimized_equal": true,
+      "output": "exchange.json",
+      "script": "exchange.py",
+      "sha256": "4c4977f849b8b54a56e51ee3ca53248bb96e5828f64ad2e893e583ec84198590"
+    },
+    {
+      "normal_optimized_equal": true,
+      "output": "escape_audit.json",
+      "script": "escape_audit.py",
+      "sha256": "f47474ef9fb884584aec3d2607d7071434a8d1edbea6e1f212c3a59c7f255961"
+    },
+    {
+      "normal_optimized_equal": true,
+      "output": "regular_balance.json",
+      "script": "regular_balance.py",
+      "sha256": "e17d7e2e3c2d3dd25a889122894deba0070abe3cdc4be6f4c201edaca49ea47c"
+    },
+    {
+      "O0_O2_equal": true,
+      "script": "local_escape.cpp",
+      "sha256": "5d98a2373ab4b451d2c1c7c485d8409b27a6e3ea1ee89d56bc370e4b19c99cff"
+    },
+    {
+      "O0_O2_equal": true,
+      "script": "module_audit.cpp",
+      "sha256": "798afc8185e756d3dcabc1bb2a605e8f68406addab460778822558d0b0ed5db9"
+    }
+  ],
+  "independent_prime_targets": 12,
+  "input_generation_scope": "Frozen nauty complete-class banks, not two independent class generators",
+  "marked_strong_quotients": 50782,
+  "status": "PASS"
+}

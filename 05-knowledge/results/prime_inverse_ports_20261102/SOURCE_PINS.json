@@ -1,0 +1,65 @@
+{
+  "public_commit": "0d2b365955499a2bacea644570cc1b1156039985",
+  "sources": [
+    {
+      "git_blob": "955d7bdf1c8a115b55f11cc60c719ff3ba6410cd",
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "git_blob": "21c54c68fac2c18efcacd26331006824fe891cda",
+      "path": "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md",
+      "sha256": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f"
+    },
+    {
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "git_blob": "2e6ee39028cb3dd18d4a0f476797724f82604f40",
+      "path": "05-knowledge/results/spectrum_basins_20261020e/regular.md",
+      "sha256": "f419a6fabbc1159ffeee6370cff00207b9e9e487fa1627fafd178227d199fc6b"
+    },
+    {
+      "git_blob": "8a3f077c7bcd2391830afb677d4bbc963ba38a55",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031h/README.md",
+      "sha256": "a5db9880551d2d6b100ea90be29c3801d18d1159be5559ad5fbe2dfa6bf9a2ef"
+    },
+    {
+      "git_blob": "ad4b098ee0ec9e0552ac87f2be9289b94951cade",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md",
+      "sha256": "df1a5b96b363ad43a33bf20cc59382296826ccdaaa0e49a3fa20060f36ebf9d5"
+    },
+    {
+      "git_blob": "71d7f0679bc15245242ca017a33a12dcc867da42",
+      "path": "05-knowledge/results/session124_million_path_spectrum_20261031/PROOF.md",
+      "sha256": "f8d8e9d669aa52e21f92693b9cd76b5bdc6801f80e3d2fa01bc37fc4e29e17b2"
+    },
+    {
+      "git_blob": "8d41f3f2ab04b59013b8af9cab50e03737d2a3e6",
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md",
+      "sha256": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db"
+    },
+    {
+      "git_blob": "3f37f9f33bac74cfb61e8ae29a26fbed6e03ad6b",
+      "path": "05-knowledge/results/session142_tournament_odd_spectrum_20261102/path_cover_amplification/PROOF.md",
+      "sha256": "1a7cb87fb29bc70b67e3039bfef00928916e9e5c73002ddca138247443bd0fc0"
+    },
+    {
+      "git_blob": "a3f0af519b4056894cdf951a709a9d89e6dc42e9",
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md",
+      "sha256": "665510704752baface0462e9cd50e4ffb5aca7a2d8dafe297db72978fc475d1d"
+    },
+    {
+      "git_blob": "4924b7ad24afad854fe7d89d2b30b42ec53f1bf5",
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/AMPLIFIERS.md",
+      "sha256": "c6a66ee07c75df19534538ac256516553ca60f6cbf8284ea3c31796d322f6d48"
+    },
+    {
+      "git_blob": "8d9145fef7786116698e1ada28ac9b20751c23b9",
+      "path": "05-knowledge/results/boolean_realization_71_17_20261102/HANDOFF.md",
+      "sha256": "753e8d2aa7293dc0f402d41dd9fcb843468353ec3dea9e6e757d829aec58e289"
+    }
+  ]
+}

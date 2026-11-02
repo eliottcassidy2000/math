@@ -1,0 +1,84 @@
+{
+  "generator": "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+  "generator_sha256": "89df605922cc574b28688248b7c256d24342cc615f887e89b2d096038970c110",
+  "inputs": [
+    {
+      "classes": 1,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "2"
+      ],
+      "order": 2,
+      "path": "inputs/quotients_n2.txt",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "classes": 2,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "3"
+      ],
+      "order": 3,
+      "path": "inputs/quotients_n3.txt",
+      "sha256": "b8bd9f18dbaa6e48bf08aea7368585a4e3e001c4914a4012b138c7aa8b1bb6a0"
+    },
+    {
+      "classes": 4,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "4"
+      ],
+      "order": 4,
+      "path": "inputs/quotients_n4.txt",
+      "sha256": "91dde84a6b6286a5e0b7b6295ccb1d16955dc4d74b8b93163d50d8a9cd7c7921"
+    },
+    {
+      "classes": 12,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "5"
+      ],
+      "order": 5,
+      "path": "inputs/quotients_n5.txt",
+      "sha256": "5d16cab0f65c58f402ef49c3442e3e8fedbb5498a8cb09f58a5d8d733784f6e4"
+    },
+    {
+      "classes": 56,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "6"
+      ],
+      "order": 6,
+      "path": "inputs/quotients_n6.txt",
+      "sha256": "814e0ed10e5d3aaae92d809b9eb915f1eb5542a65a33fe4d47463d22159a525b"
+    },
+    {
+      "classes": 456,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "7"
+      ],
+      "order": 7,
+      "path": "inputs/quotients_n7.txt",
+      "sha256": "164260b94960af0cc63faf3f178ceb95f4dd23bbca376ec23872c33b30d94261"
+    },
+    {
+      "classes": 6880,
+      "command": [
+        "/opt/homebrew/Cellar/nauty/2.9.3/bin/gentourng",
+        "-q",
+        "8"
+      ],
+      "order": 8,
+      "path": "inputs/quotients_n8.txt",
+      "sha256": "fc96c6997724e54ccea3bd166f4117d9e27925d85f568e31b0623527e5139dad"
+    }
+  ],
+  "scope": "Trusted nauty complete isomorphism-class generation, all marked vertices retained downstream."
+}
