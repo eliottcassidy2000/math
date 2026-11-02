@@ -1,0 +1,90 @@
+{
+  "scope": "Exact finite certificate; infinite quantifiers proved in STABILITY_466.md",
+  "endpoints": {
+    "threshold": 466,
+    "formerly_open_orders_closed": 1034,
+    "remaining_open": [
+      10,
+      465
+    ],
+    "constants": [
+      "999/4000",
+      "1/58",
+      "11/100",
+      "8211/116000"
+    ]
+  },
+  "native": {
+    "fair_pair_data": {
+      "4": {
+        "V": "1/2",
+        "Delta": "3/8",
+        "ratio": "3/4",
+        "global_optimality_proved_here": true
+      },
+      "5": {
+        "V": "1/2",
+        "Delta": "7/16",
+        "ratio": "7/8",
+        "global_optimality_proved_here": true
+      },
+      "6": {
+        "V": "3/4",
+        "Delta": "9/16",
+        "ratio": "3/4",
+        "global_optimality_proved_here": true
+      },
+      "7": {
+        "V": "3/4",
+        "Delta": "37/64",
+        "ratio": "37/48",
+        "global_optimality_proved_here": true
+      },
+      "8": {
+        "V": "1",
+        "Delta": "87/128",
+        "ratio": "87/128",
+        "global_optimality_proved_here": true
+      },
+      "9": {
+        "V": "1",
+        "Delta": "175/256",
+        "ratio": "175/256",
+        "global_optimality_proved_here": true
+      },
+      "10": {
+        "V": "5/4",
+        "Delta": "195/256",
+        "ratio": "39/64",
+        "global_optimality_proved_here": false
+      },
+      "11": {
+        "V": "5/4",
+        "Delta": "781/1024",
+        "ratio": "781/1280",
+        "global_optimality_proved_here": false
+      },
+      "12": {
+        "V": "3/2",
+        "Delta": "1683/2048",
+        "ratio": "561/1024",
+        "global_optimality_proved_here": false
+      }
+    },
+    "local_transfer_hostiles": {
+      "6": {
+        "global_gap": "9/16",
+        "edge_normalized_five_gap": "21/32",
+        "defect": "3/32"
+      },
+      "11": {
+        "global_gap": "781/1024",
+        "edge_normalized_five_gap": "115/96",
+        "defect": "1337/3072"
+      }
+    },
+    "random_native_controls": 24,
+    "random_seed": 466
+  },
+  "gates": 3475
+}

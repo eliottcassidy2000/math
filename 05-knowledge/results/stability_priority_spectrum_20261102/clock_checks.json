@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "gates": 36361,
+  "universe": "Every reduced a/b with 1<=a,b<=4, lists of length 1 or 2; m=1..12",
+  "programs": 132,
+  "one_step_cases": 1584,
+  "largest_observed_minimal_one_step_period": 144,
+  "trace_table": [
+    {
+      "horizon": 0,
+      "minimal_modulus": 1,
+      "response_classes": 1,
+      "naive_modulus": 1
+    },
+    {
+      "horizon": 1,
+      "minimal_modulus": 6,
+      "response_classes": 3,
+      "naive_modulus": 6
+    },
+    {
+      "horizon": 2,
+      "minimal_modulus": 12,
+      "response_classes": 5,
+      "naive_modulus": 36
+    },
+    {
+      "horizon": 3,
+      "minimal_modulus": 72,
+      "response_classes": 8,
+      "naive_modulus": 216
+    },
+    {
+      "horizon": 4,
+      "minimal_modulus": 144,
+      "response_classes": 11,
+      "naive_modulus": 1296
+    },
+    {
+      "horizon": 5,
+      "minimal_modulus": 864,
+      "response_classes": 15,
+      "naive_modulus": 7776
+    },
+    {
+      "horizon": 6,
+      "minimal_modulus": 1728,
+      "response_classes": 19,
+      "naive_modulus": 46656
+    },
+    {
+      "horizon": 7,
+      "minimal_modulus": 10368,
+      "response_classes": 24,
+      "naive_modulus": 279936
+    },
+    {
+      "horizon": 8,
+      "minimal_modulus": 20736,
+      "response_classes": 29,
+      "naive_modulus": 1679616
+    },
+    {
+      "horizon": 9,
+      "minimal_modulus": 124416,
+      "response_classes": 35,
+      "naive_modulus": 10077696
+    }
+  ],
+  "rank_inputs_checked": [
+    1,
+    10000
+  ]
+}
