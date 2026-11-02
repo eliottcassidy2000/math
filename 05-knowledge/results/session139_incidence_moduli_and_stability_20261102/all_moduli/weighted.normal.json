@@ -1,0 +1,74 @@
+{
+  "contextual_checks": {
+    "contexts": 77,
+    "max_substituted_order": 9,
+    "mixed_rectangle": "1/1728"
+  },
+  "mod11_simulation": [
+    {
+      "actual_H": 100671287595046269,
+      "order": 29,
+      "positive_half_values": [
+        2,
+        9,
+        3,
+        8,
+        1
+      ],
+      "weighted_input": "A",
+      "word": "PPDDCDDCDPCDP"
+    },
+    {
+      "actual_H": 13291517610922779,
+      "order": 27,
+      "positive_half_values": [
+        8,
+        10,
+        10,
+        10,
+        9
+      ],
+      "weighted_input": "B",
+      "word": "PPCDCCPCDDDD"
+    }
+  ],
+  "mod5_simulation": {
+    "A": "J(W5,W11)",
+    "B": "K1"
+  },
+  "status": "PASS",
+  "weighted_polynomials": {
+    "A": [
+      "0",
+      "3/2",
+      "0",
+      "5",
+      "0",
+      "1"
+    ],
+    "B": [
+      "0",
+      "5185/3456",
+      "0",
+      "5",
+      "0",
+      "1"
+    ]
+  },
+  "weighted_profiles": {
+    "A": [
+      "15/2",
+      "30",
+      "30",
+      "10",
+      "1"
+    ],
+    "B": [
+      "25921/3456",
+      "30",
+      "30",
+      "10",
+      "1"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+audit_bridges.py
+audit_regular_spectrum.py
+audit_regular_spectrum.out
+audit_regular_spectrum_optimized.out
+regular_negative_controls.out
+audit_regular_circle.py
+audit_regular_circle.out
+audit_regular_circle_optimized.out
+REGULAR_SPECTRAL_AUDIT.md
+REGULAR_SOURCE_PIN.json

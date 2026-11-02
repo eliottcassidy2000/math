@@ -1,41 +1,49 @@
-# Session139 concept board
+# Session139 concept board after checkpoint 3
 
-| Live concept | Object / operation | Preserved target and lost coordinate | Decisive evidence / frontier |
+| Concept | Object / operation | Preserves / loses | Decisive evidence and boundary |
 |---|---|---|---|
-| Sharp stability (anchor) | Weighted A; greedy matching, rounding, local dual | Retain B, one wedge budget and exact light mass U | n>=526 proved;10..525 open |
-| Spectral incidence (niche) | A -> full zeta and all-one rooted response | Walk totals preserved; disjoint edge/complement incidence lost | Weighted n5 cospectral hostile; M23 repairs H at n5 |
-| All-modulus contexts | T -> factorial-transform function Psi | Exactly all homogeneous-context H responses; graph, order and magnitude lost | All-M iff; ordinary F mod16 hostile |
-| Transitive clocks | L_n and source padding; prime-power/CRT reduction | Exact transient and residue class preserved | Universal sharp onset A-1 and period L; individual onset only bounded |
-| Prime constructor resources | Actual P/C/D words and ordinal join | Finite function state retained with actual positive recipe | Full counts at3,5,7,11; unary zero obstruction at5,11 repaired by join |
-| RH/5/11 recovery (wildcard) | Transfer discriminants, Paley sums, historical metagraphs | Only each specified map's target retained | Corrected arithmetic; no RH/GRH or shared-prime-label transfer |
+| Sharp real stability | Randomized rounding, retained matching, local dual | B,W and exact light mass; loses information if budgets are separated | Exact n>=526;10..525 open |
+| Hamilton incidence | Weighted A -> zeta / all-one response | Full spectral data; loses disjoint2+3 incidence | M23 restores H at n5; binary boundary remains6 |
+| Signed four-face charge | Integral cochain -> reduction / averaging | Integer conservation; mean loses second moment | Binary support floor n-3; M22 repairs expected bad-face count |
+| Regular critical circle | Regular weighted A -> reduced determinant | Automatic critical line/circle and finite functional equation | Exact t^4/27 oscillation on the specified circle; not full fibre |
+| Modular context arithmetic | T -> Psi, clocks and content | Exact homogeneous modular responses; graph/order/magnitude lost | All-M theorem; zero iff odd M; partial exact minimum-order results |
+| Actual realization / history | Positive unary words, join, binary simulator; recovered5/11 maps | Constructor recipes and stated responses; no automatic real/spectral transport | Full states only at3,5,7,11; no RH/GRH or integer-spectrum closure |
 
-## Cross-comparison after checkpoint 2
+## Cross-comparison: the new connections are typed
 
-1. **Stability / spectral incidence:** a lower-bound proof need not reconstruct
-   H spectrally. B,W,U retain extra structure, while M23 makes one exact loss
-   explicit. Do not infer impossibility of every spectral sufficient bound.
-2. **Spectral / contexts:** zeta1 on all L_n erases the exact context clock;
-   the fixed-order weighted pair loses M23 even after an all-one-root mark.
-   The lost coordinate depends on the consumer, not on the word "spectral".
-3. **Contexts / clocks:** integer Newton coefficients repair nonunit factorials;
-   CRT glues proved prime-power clocks. Prime-only F simplification cannot be
-   exported to composite moduli without the factorial-transform sidecar.
-4. **Clocks / historical5/11:** the factor5 from11-1 and the E4 detector are an
-   actual map; the transfer discriminant's coefficients5,11 are not its proof.
-5. **Resources / realizability:** finite quotient reachability supplies actual
-   positive expressions. A formal signed combination may prove an identity,
-   but does not create a tournament; a function sum is not tournament addition.
-6. **Resources / magnitude:** a zero mod-p context state or complete residue
-   quotient does not produce every exact integer Hamiltonian count.
+- **Hamilton / cochain:** the same cospectral pair loses both M23 and M22,
+  but they restore different outputs. Identical zero mean charge is not
+  identical expected support; a binary support theorem cannot be averaged
+  into a support-of-the-mean theorem.
+- **Hamilton / regularity:** even automatic critical-line symmetry and a
+  finite functional equation leave incidence free. This refutes exact
+  reconstruction, not every possible spectral sufficient lower bound.
+- **Hamilton / contexts:** a first-channel profile difference multiplies by
+  H(Q), while a two-sided all-one orthogonal conjugacy extends blockwise.
+  Arbitrary one-sided similarities fail the required cross-block identity.
+- **Contexts / realizability:** good-prime weighted response functions have
+  actual binary simulators at the proved primes, but those simulators do
+  not inherit the input's spectra, order or real inequalities.
+- **Contexts /5/11:** complementary projector supports explain content
+  creation1*1->5. The factor5 forced by11-1 explains a different clock
+  interaction. Neither follows from a shared numerical label in old work.
+- **Symmetry / content:** automorphism free action is sufficient for content
+  divisibility, not an equality. R5's15 versus5 and cyclic/Paley11's distinct
+  contextual divisibility are concrete boundaries.
 
-## Failure anatomy and next tests
+## False shortcuts and their repairs
 
-- **False shortcut:** ordinary profile functions classify contexts for every
-  modulus. **Witness:** L4/L6 modulo16. **Failure:** factorial multipliers stop
-  being units. **Repair:** Psi and division-free forward differences.
-- **False shortcut:** unary constructors can realize every prime context state.
-  **Witness:** zero at5,11. **Failure:** invertible gates preserve nonzeroness.
-  **Repair:** one genuine join of disjoint-support functions.
-- **Open target:**10..525. **Cheapest sound next test:** strengthen an actual
-  inequality or certify a finite graph reduction; a failed sufficient gate is
-  not a hostile weighted tournament.
+1. Full spectrum plus an ordinary root statistic determines H: weighted n5
+   hostile; append the target's M23 exclusion incidence.
+2. A mean signed cocycle determines random support: same-mean hostile;
+   append the correct second moment/M22.
+3. Modular profile functions need no factorial correction: L4/L6 mod16;
+   use Psi and integer Newton coefficients.
+4. Unary positive gates reach every prime state: zero at5,11 is inaccessible
+   at all depths because gates are invertible; one actual join repairs it.
+5. Content multiplies, or equals symmetry order: actual1,1->5 and15>5;
+   retain full response functions or the finite weighted-coordinate gcd.
+
+Next real-stability test: strengthen an actual matching/input inequality or
+certify the remaining finite range. None of the five failed shortcuts is a
+counterexample to sharp stability itself.

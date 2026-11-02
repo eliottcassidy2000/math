@@ -1,59 +1,56 @@
-# Session139: shared budgets, incidence, and all-modulus contexts
+# Session139: shared budgets, incidence and all-modulus contexts
 
-**Checkpoint 2 — independently accepted, 2026-11-02.**
+**Checkpoint 3 — independently accepted, 2026-11-02.**
 
-## Current result
+## Sharp real stability: the current boundary
 
-For a weighted tournament A, put `V=sum_{i<j} Aij Aji` and
-`Delta=H(A)-det(I+A)-abs(det A)`. Writing `R=floor(n/2)`, the optimal
-coefficient in `Delta>=K_n V` is
+For weighted A, set `V=sum Aij*Aji`, `Delta=H-det(I+A)-abs(det A)` and
+`R=floor(n/2)`. The exact optimal coefficients are
 
 ```text
 kappa_(2R)   = (4/R)[1-(3/4)^R-(1/4)^R],
 kappa_(2R+1) = (4/R)[1-(3/4)^R].
 ```
 
-It is now proved that `K_n=kappa_n` at **n=3..9 and every n>=526**.
-The new light-mass dual certificate sharpens checkpoint 1's n>=748 result;
-all earlier evidence is retained. Positive-variance equality in the new range
-is exactly maximal ordinal fair pairs, with one singleton in odd order.
-At n=3 every weighted triangle instead has `Delta=V`.
-**Orders 10..525 remain OPEN.** Threshold 526 is sufficient, not claimed optimal.
+They are proved at **n=3..9 and every n>=526**. Positive-variance equality
+in the new large-order range is maximal ordinal fair pairs, with a singleton
+in odd order; n=3 instead has Delta=V for every weighted triangle.
+**10..525 remains OPEN.** The sufficient threshold526 is not claimed optimal.
+[Dual proof](stability/PROOF_N526.md) · [Independent audit](independent_threshold526/AUDIT.md).
 
-## Arithmetic structure, not numerical analogy
+## What the strengthened arithmetic and spectral bridges prove
 
-For **every modulus M**, the factorial-transform function
-`Psi_T=sum (c-1)! p_T(c) (x)_c` captures exactly all homogeneous-context
-Hamiltonian responses. Its transitive modules have a sharp prime-power/CRT
-clock, and this gives a sharp universal eventual source-padding identity.
-At odd primes ordinary profile functions suffice; this simplification fails
-at composite moduli. Complete finite constructor orbits prove exact class
-counts **5,49,685,322101 at p=3,5,7,11**.
+- **Every modulus:** the factorial-transform function Psi captures exactly
+  all homogeneous-context H responses, with sharp transitive/source-padding
+  clocks. Complete finite constructor orbits give5,49,685,322101 classes at
+  primes3,5,7,11. [Base proof](all_moduli/PROOF.md).
+- **Context content:** a finite gcd detects universal divisibility; zero
+  contextual states exist exactly at odd moduli. Actual H5/H11 factors are
+  separately primitive but their join has content5. The exact small minimum
+  orders distinguish cyclic R11 from Paley11. [Content](all_moduli/CONTEXT_CONTENT.md).
+- **Weighted/binary simulation:** good-prime context functions have actual
+  binary representatives at3,5,7,11. The rational cospectral pair's first-channel
+  difference propagates through every binary homogeneous context, while its
+  orthogonal block conjugacy preserves spectra and the all-one marked response.
+  [Simulation and propagation](all_moduli/WEIGHTED_BINARY_SIMULATION.md).
+- **Integral four-face charge:** signed cocycle conservation holds over Z and
+  every modulus after retaining the lift; the binary support floor n-3 is
+  sharp. Weighted second moments require disjoint-edge incidence M22 even
+  when spectra and all mean charges agree. [Cocycle](cocycle/PROOF.md).
+- **Regular critical circle:** full spectrum, regularity, automatic critical
+  line/pole circle, finite functional equation and all-one marked resolvent
+  still do not determine H. The exact width on one regular five-vertex circle
+  is t^4/27. [Regular family](regular_spectral/REGULAR_CRITICAL_LINE.md).
 
-Actual H=5 and H=11 factors have complementary profile-function supports
-modulo5. Their nine-vertex join has H=55 and is zero under every homogeneous
-context modulo5. This is a full-response statement, not merely divisibility
-of one scalar count. All-prime/full-composite state realization stays open.
+The original weighted first-blindness boundary is five, not the binary six;
+M23 repairs exact H there. [Original boundary](riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md)
+· [Corrected RH/5/11 history](riemann_five_eleven/HISTORICAL_RECOVERY.md).
+None of this proves RH/GRH or rules out spectral sufficient lower bounds.
 
-## Spectral loss and recovered history
+[**Synthesis**](SYNTHESIS.md) · [**Concept board**](BOARD.md) · [**Verification**](VERIFICATION.md)
+· [Checkpoint1](CHECKPOINT1.md) · [Checkpoint2](CHECKPOINT2.md) · [Checkpoint3](CHECKPOINT3.md)
 
-Weighted order five is the first spectral reconstruction failure for H and
-Delta: a rational pair has identical full zeta and all-one rooted resolvent,
-but a difference `1/3456`. Adding the digon/complement-triangle incidence
-scalar M23 restores H at that order. Binary first-blindness remains six.
-Historical RH-adjacent/5/11 work is recovered with explicit corrections;
-no RH/GRH claim or rejection of all spectral sufficient bounds follows.
-
-## Routes
-
-- [Synthesis](SYNTHESIS.md) · [Concept board](BOARD.md) · [Verification](VERIFICATION.md)
-- [Light-mass dual proof](stability/PROOF_N526.md) · [Independent audit](independent_threshold526/AUDIT.md)
-- [All-moduli proof](all_moduli/PROOF.md) · [Final acceptance](all_moduli/ACCEPTANCE.md)
-- [Weighted zeta boundary](riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md)
-- [Historical recovery](riemann_five_eleven/HISTORICAL_RECOVERY.md)
-- [Frozen checkpoint 1](CHECKPOINT1.md) · [Frozen checkpoint 2](CHECKPOINT2.md)
-- [Inherited Session138](../session138_stability_and_actual_contexts_20261102/README.md)
-
-Pending cocycle, regular-critical-line and context-content continuations are
-not promoted here. General strong-quotient scalar zero-rigidity, unrestricted
-integer tournament spectrum and LRC(14) remain OPEN.
+All-prime/full-composite contextual-state realization, exact integer-spectrum
+completeness, general scalar zero-rigidity and LRC(14) remain OPEN. The current
+modular simulator is not an order-, spectrum- or real-inequality-preserving
+realization. Pending tensor-matching work is not included here.

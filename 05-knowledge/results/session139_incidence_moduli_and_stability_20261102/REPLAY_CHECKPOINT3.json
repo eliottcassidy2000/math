@@ -1,0 +1,329 @@
+{
+  "expected_rejections": 22,
+  "fresh_relocation": true,
+  "frozen_outputs_matched": [
+    "independent/audit_integral_cocycle.out",
+    "independent/audit_weighted_cocycle.out",
+    "regular_spectral/verify_regular_critical_line.out",
+    "independent/audit_regular_spectrum.out",
+    "independent/audit_regular_circle.out",
+    "all_moduli/content.normal.json",
+    "all_moduli/weighted.normal.json",
+    "independent/audit_content_simulation.out",
+    "independent/audit_regular_content_bridge.out"
+  ],
+  "imported_independent_helpers": [
+    "independent/audit_bridges.py",
+    "independent/audit_integral_cocycle.py"
+  ],
+  "normal_optimized_identical": [
+    "independent/audit_integral_cocycle.py",
+    "independent/audit_weighted_cocycle.py",
+    "regular_spectral/verify_regular_critical_line.py",
+    "independent/audit_regular_spectrum.py",
+    "independent/audit_regular_circle.py",
+    "all_moduli/verify_content.py",
+    "all_moduli/verify_weighted_simulation.py",
+    "independent/audit_content_simulation.py",
+    "independent/audit_regular_content_bridge.py"
+  ],
+  "pinned_input_receipt": "all_moduli/content.normal.json",
+  "positive_runs": 18,
+  "runs": [
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_integral_cocycle.py",
+      "mode": "normal",
+      "stdout_sha256": "89e1a61a6b95b462e67cd781a70e1faa6c2f63dead0ab74132e9c2a9549790b4"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_weighted_cocycle.py",
+      "mode": "normal",
+      "stdout_sha256": "b00e2cd40c1ccdd43928e1951af8f8357247ed69cbf1f0c0efc0a6dc64f845bc"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "regular_spectral/verify_regular_critical_line.py",
+      "mode": "normal",
+      "stdout_sha256": "37a294992def2f55961ddf43a1a1ea17034241ed81afeabc677775cb0f7f1cfa"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_regular_spectrum.py",
+      "mode": "normal",
+      "stdout_sha256": "1768c7e2b45af3a5a4b9bf8fcb323131754ea9a8d4058e50d447e3acea8ec73c"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_regular_circle.py",
+      "mode": "normal",
+      "stdout_sha256": "df490cf531ae3c9d5ee9af4dc5e787f18ca1252fe8ce452166a0ad5e9510e826"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "all_moduli/verify_content.py",
+      "mode": "normal",
+      "stdout_sha256": "5ee1af479cff6ecef4a34874a94768e3d86432d24da7bed4e0c8d0dc28c18605"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "all_moduli/verify_weighted_simulation.py",
+      "mode": "normal",
+      "stdout_sha256": "391115d8db846a01b4fdb32a4e2862bcadd1b6d01e80c493f28d72e69507e680"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_content_simulation.py",
+      "mode": "normal",
+      "stdout_sha256": "223033210a1e94650157a4f7f9120260ca3d48d430572a1ee5c7c056a37b9b21"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_regular_content_bridge.py",
+      "mode": "normal",
+      "stdout_sha256": "5ff94ff32e06d51c4941d4b0db7735ee9800273a1e3fc43c938584cd754a920e"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_integral_cocycle.py--mutate-five-sign",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_weighted_cocycle.py--mutate-second-constant",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "regular_spectral/verify_regular_critical_line.py--mutate-conjugation",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "regular_spectral/verify_regular_critical_line.py--mutate-difference",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "regular_spectral/verify_regular_critical_line.py--mutate-functional-sign",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_regular_spectrum.py--mutate-h-coefficient",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_regular_circle.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "all_moduli/verify_content.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "all_moduli/verify_weighted_simulation.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_content_simulation.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_regular_content_bridge.py-negative",
+      "mode": "normal",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_integral_cocycle.py",
+      "mode": "optimized",
+      "stdout_sha256": "89e1a61a6b95b462e67cd781a70e1faa6c2f63dead0ab74132e9c2a9549790b4"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_weighted_cocycle.py",
+      "mode": "optimized",
+      "stdout_sha256": "b00e2cd40c1ccdd43928e1951af8f8357247ed69cbf1f0c0efc0a6dc64f845bc"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "regular_spectral/verify_regular_critical_line.py",
+      "mode": "optimized",
+      "stdout_sha256": "37a294992def2f55961ddf43a1a1ea17034241ed81afeabc677775cb0f7f1cfa"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_regular_spectrum.py",
+      "mode": "optimized",
+      "stdout_sha256": "1768c7e2b45af3a5a4b9bf8fcb323131754ea9a8d4058e50d447e3acea8ec73c"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_regular_circle.py",
+      "mode": "optimized",
+      "stdout_sha256": "df490cf531ae3c9d5ee9af4dc5e787f18ca1252fe8ce452166a0ad5e9510e826"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "all_moduli/verify_content.py",
+      "mode": "optimized",
+      "stdout_sha256": "5ee1af479cff6ecef4a34874a94768e3d86432d24da7bed4e0c8d0dc28c18605"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "all_moduli/verify_weighted_simulation.py",
+      "mode": "optimized",
+      "stdout_sha256": "391115d8db846a01b4fdb32a4e2862bcadd1b6d01e80c493f28d72e69507e680"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_content_simulation.py",
+      "mode": "optimized",
+      "stdout_sha256": "223033210a1e94650157a4f7f9120260ca3d48d430572a1ee5c7c056a37b9b21"
+    },
+    {
+      "exit_code": 0,
+      "expected_rejection": false,
+      "label": "independent/audit_regular_content_bridge.py",
+      "mode": "optimized",
+      "stdout_sha256": "5ff94ff32e06d51c4941d4b0db7735ee9800273a1e3fc43c938584cd754a920e"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_integral_cocycle.py--mutate-five-sign",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_weighted_cocycle.py--mutate-second-constant",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "regular_spectral/verify_regular_critical_line.py--mutate-conjugation",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "regular_spectral/verify_regular_critical_line.py--mutate-difference",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "regular_spectral/verify_regular_critical_line.py--mutate-functional-sign",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_regular_spectrum.py--mutate-h-coefficient",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_regular_circle.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "all_moduli/verify_content.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "all_moduli/verify_weighted_simulation.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_content_simulation.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "exit_code": 1,
+      "expected_rejection": true,
+      "label": "independent/audit_regular_content_bridge.py-negative",
+      "mode": "optimized",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scientific_executions": 40,
+  "source_pins": {
+    "all_moduli/content.normal.json": "5ee1af479cff6ecef4a34874a94768e3d86432d24da7bed4e0c8d0dc28c18605",
+    "all_moduli/verify_content.py": "92b92084afb35b2120e54c5cdee2291de730a5daae1efb6627a29d40926d5a0f",
+    "all_moduli/verify_weighted_simulation.py": "ac6f2e216124a0545a2ed0fa3329a199ab0161c0b91d34172de1a46c7f1f1031",
+    "independent/audit_bridges.py": "56886462b21cd75f9cd9de1ef0fd0f8617f56aa91c4efbd984eed1cc889e75a7",
+    "independent/audit_content_simulation.py": "347b6662591d4898bdfbe8678611d35d428ac42a115623ea143da554d9d03937",
+    "independent/audit_integral_cocycle.py": "d65c57f6ac93be588e7401f9eaa74806c1dc84e479e94af0db60461501947904",
+    "independent/audit_regular_circle.py": "9e7ed4f4a0ecd8d5ee2dc75b45fe6eba74c99add10edaba1af8bb1ca1a982802",
+    "independent/audit_regular_content_bridge.py": "5010ee89571808c865f271a15f8ee70acbd9e8c4ba1cd65fb39377cb19476684",
+    "independent/audit_regular_spectrum.py": "fd5e04770e6bc7ed80bb852b9bada612447e4cfe6fd6c610e9ac20144bb4f8a4",
+    "independent/audit_weighted_cocycle.py": "85c1dd4ed7109c42415c3b6c652dd4ed89b7a600d0c7eabedfcf12cd988c5645",
+    "regular_spectral/verify_regular_critical_line.py": "49af8b37ff2be51a4b6930bf7ab730b40da26b31f76ba0af26c34e2acfbd40fb"
+  },
+  "status": "PASS"
+}

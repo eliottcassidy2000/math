@@ -1,83 +1,112 @@
-# Session139 synthesis: retain the response that the quotient discarded
+# Session139 synthesis: recover incidence before transporting a theorem
 
-## Direct progress: exact stability from 526
+## Direct progress and the remaining finite gap
 
-The sharp coefficient is proved at n=3..9 and every n>=526. Checkpoint 1
-retained the binary baseline and combined heavy/light wedge budgets to reach
-748. Checkpoint 2 keeps the actual light selected mass U rather than replacing
-it by its count L times a cutoff. A local quadratic dual pays for that deficit:
+Exact weighted stability now holds at n=3..9 and every n>=526. The accepted
+continuations first retained one heavy/light wedge budget (748), then retained
+the actual light mass and paid its deficit with a quadratic dual (526).
+These are all-order analytic proofs with exact endpoint controls, not scans
+of the missing orders. **10..525 remains open.** The later spectral, cocycle
+and arithmetic results below do not change that dimension cutoff.
 
-```text
-W_i >= w_i*S_i/2 + S_i^2/4,
-lambda=d/64, t=d/8, h=d/16, d=487/2000.
-```
+## A concrete hierarchy of information loss
 
-An exact square identity plus the light-deficit inequality yields a global
-charge stronger than kappa times discarded mass. Endpoint-convexity and
-monotonicity control the geometric tail uniformly, not by sampling orders.
-The contradiction again forces matching uncertainty and zero expected binary
-gap; the inherited scalar minimization supplies equality. **10..525 is OPEN.**
-The certificate's failed endpoint at 525 is not a counterexample tournament.
+The weighted n5 orthogonal pair has identical full spectrum, adjacency zeta
+and all-one marked resolvent but different H. Its first missing coordinate
+is M23, the disjoint digon/complement-triangle incidence. At n5,
+`H=1+2*tau+2*M23-2*[z^5]det(I-zA)` restores the target exactly.
 
-## All-modulus structure: an exact observer with the right factorials
+The same pair has every mean four-face charge equal to zero. Yet its expected
+number of bad binary four-faces changes: the disjoint-edge incidence M22
+changes by `-a^2*b^2/54`, giving an expected-support change `a^2*b^2/27`.
+Thus a full mean-charge cochain plus full spectra is still not a second moment.
+M22 and M23 are different sidecars for different consumers, not aliases.
 
-For every integer M>=1, the map T -> Psi_T modulo M preserves exactly all
-homogeneous-context H responses. Its forward differences are
-`c!(c-1)! p_T(c)`, and integer Newton coefficients give both directions
-without modular division. At an odd prime p, ordinary F_T functions suffice;
-composite modulus16 has a hostile: L4 and L6 are context-equivalent while
-F(3) differs. The actual image is a finite family, not a proved ring or a
-realization of every arbitrary function.
+The integral lift eta=delta(cyclic signed triangle cochain) has values-1,0,1,
+is switching invariant and satisfies integer five-face conservation. It
+explains the sharp binary support gap n-3 and the old order-seven missing
+support size2. Reduction works at every modulus only after retaining the
+integer lift when4 is not invertible. Averaging preserves conservation but
+not the pointwise support gap.
 
-The transitive clock is exact. For p^a, the transient is a; the period is
-`(p-1)p^(a-1)` for odd p, and `1` for a<=2 or `2^max(1,a-3)` for p=2.
-CRT takes maximum transient and lcm period. Source padding on every actual
-module has the same sharp universal index A(M)-1 and period L(M); an
-individual module can stabilize sooner or have a smaller period.
-The 5/11 coupling is literal: period10 modulo11 forces a factor5 in the
-combined period, and an actual E4 context separates L1/L21 modulo275.
+## The regular finite critical circle is not the missing information
 
-## Full finite quotients and a real 5/11 construction
+For every regular weighted tournament, the all-one orthogonal complement
+has A=-I/2+K/2 with K skew. Nonprincipal eigenvalues therefore lie on
+Re(lambda)=-1/2 automatically, and reciprocal poles lie on |z+1|=1.
+The reduced determinant satisfies a finite Möbius functional equation.
+These are finite linear-algebra identities, not Riemann zero statements.
 
-At p=3,5,7,11, exact constructor-orbit exhaustion attains the all-order upper
-bound `2*p^((p-1)/2)-1`, giving 5,49,685,322101 context classes. The independent
-checker uses full p-entry functions, unlike the producer's parity compression.
-At5,11 all unary P/C/D gates are invertible, so they cannot reach the zero
-function at any depth. One join of reached disjoint-support factors repairs
-that resource loss. This is not an all-prime realization theorem.
+Within a specified rank-two3+2 regular five-vertex circle, all that spectral
+data is fixed but the exact H and Delta range has width t^4/27. The endpoint
+pair differs by-1/6912 at t=1/4. Only the all-one scalar rooted response is
+preserved: an individual diagonal second moment changes by5*t^2/18.
+Neither the entire isospectral fibre nor arbitrary vertex-rooted data is
+classified. Exact recovery fails; spectral sufficient inequalities remain
+possible.
 
-The particularly small actual factors W5=C3[L2,1,1] and W11=C3[L2,L2,1]
-have H=5 and11 and complementary function supports modulo5. Their order-nine
-join H=55 vanishes under every homogeneous context modulo5. Positive powers
-supply complementary idempotent projectors. Their formal function sum is not
-misrepresented as addition of tournaments.
+## Operational arithmetic across every modulus
 
-## Spectral and historical connections retained
+The factorial-transform function Psi, not ordinary F at composites, exactly
+captures all homogeneous-context responses modulo every M. Integer forward
+differences and Newton reconstruction avoid division by nonunits. Sharp
+prime-power transients and unit periods glue by CRT; they also give a sharp
+universal source-padding clock. Individual modules may stabilize earlier.
+At3,5,7,11 complete finite constructor quotients attain the all-order upper
+bound, yielding5,49,685,322101 classes. This does not extrapolate to every
+prime or composite.
 
-Weighted digons introduce a hidden disjoint `2+3` cycle-cover correlation
-at five vertices. Conjugacy fixing the all-one root preserves full zeta and
-rooted walk response but changes H; M23 repairs exact recovery at n5.
-By contrast, transitive modules have zeta1 at every order but their modular
-context clocks recover order when all moduli are supplied. These are distinct
-fixed-order and varying-order demonstrations of information lost by zeta.
-Neither excludes spectral sufficient inequalities or proves RH/GRH.
+Context content is the gcd of `c!(c-1)!*p_T(c)`, equivalently the gcd of all
+contextual H responses. It gives a finite exact divisibility certificate.
+Automorphism free actions supply zeros at every odd modulus, while parity
+excludes every even modulus. This is weaker than complete contextual-state
+realization, but stronger than a scalar H congruence. Odd-prime minimum zero
+order is exactlyp; the explicitly proved composite minima are5,11,11 for
+15,33,55. General composite construction bounds are not minimum formulas.
 
-The old 5/11 transfer discriminant, Paley character sums and eleven order-seven
-skew spectra have different carriers. Historical recovery retains their actual
-maps and corrections, not a universal prime-label role. The new projector
-and clock maps are operational connections, not consequences of those labels.
+The actual H5/H11 factors have complementary mod5 function supports. Their
+individual contents are1,1 while the join's content is5. Symmetry also fails
+to determine content: R5 has content15 and automorphism order5. Cyclic R11 has
+content33 and is not zero modulo55; Paley11's affine subgroup gives a different
+strong zero witness modulo55. These are operational5/11 connections, not
+consequences of the older transfer discriminant's numerical labels.
 
-## Remaining frontier and research method
+## A deliberately coarse spectral bridge at eleven
 
-- Sharp weighted stability at10..525 remains open.
-- Complete contextual realization at every odd prime or composite modulus is
-  open; all-modulus scalar universality does not settle those stronger claims.
-- Exact integer-spectrum completeness and general scalar zero-rigidity remain
-  open. Context functions quotient magnitude, graph structure and nonhomogeneous
-  observations even when they preserve every homogeneous modular response.
-- Pending cocycle and regular-spectrum extensions await their own checkpoint.
+Cyclic R11 and Paley P11 both have degree5, exactly55 directed cyclic
+triangles and the automatic nonprincipal line Re(lambda)=-1/2. Yet R11 has
+content33, while55 divides Paley11's content by its affine automorphism
+subgroup. These coarse spectral features therefore do not determine content.
+The graphs are explicitly **not cospectral**: tr(A^4) is880 versus660.
+No exact Paley11-content value is asserted. [Independent bridge audit](independent/REGULAR_CONTENT_BRIDGE_AUDIT.md).
 
-Methods used: retain a shared budget before relaxing it; test the cheapest
-structured hostile; repair a quotient by the coordinate its target consumes;
-separate exact function identity, formal polynomial identity and realizability.
-No new global META-PATTERNS promotion is made from this packet alone.
+## The fixed-order hostile propagates through actual contexts
+
+The rational pair's path-cover difference is `(delta,0,0,0,0)` with
+delta=1/3456. Since the first context coefficient is H(Q),
+`H(Q[B])-H(Q[A])=delta*H(Q)` for every binary homogeneous context Q.
+The orthogonal conjugacy fixing both all-one row/column vectors extends
+blockwise, preserving full spectra and the all-one marked resolvent. Thus
+the same real Delta difference follows. The mixed reflector rectangle is
+exactly2*delta=1/1728, an actual interaction of two independently recovered
+first-channel mechanisms.
+
+Good-prime reduction at the proved prime quotients gives actual binary
+context simulators. For the displayed pair, modulo5 they are the H55 join
+and K1; modulo11 explicit positive words suffice. Simulation preserves the
+modular contextual response, not order, integer H, spectrum or real stability.
+The particular rational pair cannot reduce canonically at2 or3.
+
+## Honest frontier and reusable method
+
+The current gap10..525, integer-spectrum completeness, general scalar
+zero-rigidity, and full all-prime/composite state realization remain open.
+Historical corrections retain their source lineage; old RH-adjacent analogies
+are not analytic RH statements. No global novelty claim is made.
+
+Use the target's actual consumer to choose a sidecar: exclusion incidence
+for Hamilton paths, a second moment for random support, factorial coordinates
+for modular contexts, and an actual constructor word for realizability.
+Keep universal proof, finite quotient exhaustion, formal identity and actual
+realization distinct. Retain a shared budget before weakening it. These
+methods are recorded locally; no unsupported META-PATTERNS promotion is made.

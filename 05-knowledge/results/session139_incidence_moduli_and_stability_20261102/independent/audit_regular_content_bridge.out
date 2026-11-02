@@ -1,0 +1,28 @@
+{
+  "Paley11_certified_context_content_divisor": 55,
+  "Paley11_exact_content_claimed": false,
+  "R11_context_content": 33,
+  "content_receipt_sha256": "5ee1af479cff6ecef4a34874a94768e3d86432d24da7bed4e0c8d0dc28c18605",
+  "cospectral": false,
+  "graphs": [
+    {
+      "cyclic_triangles": 55,
+      "exact_normality": true,
+      "name": "R11",
+      "order": 11,
+      "outdegree": 5,
+      "skew_annihilates_ones": true,
+      "trace_A4": 880
+    },
+    {
+      "cyclic_triangles": 55,
+      "exact_normality": true,
+      "name": "P11",
+      "order": 11,
+      "outdegree": 5,
+      "skew_annihilates_ones": true,
+      "trace_A4": 660
+    }
+  ],
+  "status": "PASS"
+}

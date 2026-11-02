@@ -1,22 +1,113 @@
 # Session139 verification and checkpoint lineage
 
-**Current accepted scope:** exact weighted stability at n=3..9 and every
-n>=526; exact all-modulus context function/clock/padding theorems; finite-exact
-complete prime context states at3,5,7,11; the weighted n5 spectral boundary.
+**Current accepted scope:** exact weighted stability at n=3..9 and n>=526;
+all-modulus contexts/clocks/content; finite complete prime states and weighted
+simulation at3,5,7,11; integral/weighted cocycle incidence; the exact stated
+regular isospectral-circle range. The first weighted spectral boundary is n5.
 **10..525 remains OPEN.** No RH/GRH or integer-spectrum closure is claimed.
 
 | Checkpoint | Scope | Evidence |
 |---|---|---|
 | 1, published `400dcd629598c30762eb9adb8bb85bea581698a7` | n>=748, weighted n5 spectral loss, corrected historical recovery | [Frozen scope](CHECKPOINT1.md), [original replay](REPLAY_CHECKPOINT1.json), [original source integrity](SOURCE_INTEGRITY_CHECKPOINT1.json); 42 published owned blobs verified |
-| 2 | n>=526; all-modulus functions/clocks/padding; exact finite prime quotients and actual5/11 projectors | [Frozen scope](CHECKPOINT2.md), new source pins and independent audits, [fresh replay](REPLAY_CHECKPOINT2.json) |
+| 2, published `9c7eb0b13e48e68b8fd076feccbf56d04cdd54aa` | n>=526; all-modulus functions/clocks/padding; exact finite prime quotients and actual5/11 projectors | [Frozen scope](CHECKPOINT2.md), [replay](REPLAY_CHECKPOINT2.json);86 cumulative owned blobs verified |
+| 3 | Integral/weighted cocycle, regular critical-circle obstruction, context content/simulation and narrow historical repair | [Frozen scope](CHECKPOINT3.md), [fresh replay](REPLAY_CHECKPOINT3.json), separately pinned independent audits |
 
 All earlier scientific lane files, audit reports and replay receipts remain
 byte-unchanged. Root README/SYNTHESIS/BOARD/VERIFICATION and SHA256SUMS are
 maintained summaries/manifest. `CHECKPOINT1_SHA256SUMS` preserves the original
-whole-packet manifest **at checkpoint-one's commit**; it is not a command to
+whole-packet manifest **at checkpoint-one's commit**; `CHECKPOINT2_SHA256SUMS`
+does the same at checkpoint two. Neither is a command to
 validate later rewritten summaries against old hashes. The original
 `PUBLIC_FILES.json` is likewise the historical checkpoint-one selector.
 The root `SHA256SUMS` validates the cumulative current packet.
+
+## Third checkpoint: cocycle, second moment and regular geometry
+
+[Cocycle proof](cocycle/PROOF.md) · [Integral audit](independent/INTEGRAL_COCYCLE_AUDIT.md) · [Weighted audit](independent/WEIGHTED_COCYCLE_AUDIT.md)
+
+**ACCEPTED.** Integer signed conservation precedes modular reduction. The
+support floor n-3 is pointwise for a nonzero binary cochain; it does not
+apply to the possibly cancelling mean after weighted rounding. The square
+identity is binary; weighted formulas explicitly use expectations of squares.
+Disjoint-edge M22 is a necessary second-moment sidecar in the displayed
+cospectral same-mean hostile. No new stability constant follows from it.
+
+The integral audit exhausts64 labeled four-vertex and1024 five-vertex
+configurations,1024 switchings,1536 relabelings and32768 modular boundary
+controls. The weighted audit verifies the polynomial M22 difference and3136
+exact binary roundings, including an unstructured nonzero-mean four-vertex
+case. It imports only the frozen independently written bridge/integral helpers,
+not the producer's implementation. The unsigned boundary and wrong second-
+moment constant are rejected normally and with optimization.
+
+[Regular proof](regular_spectral/REGULAR_CRITICAL_LINE.md) · [Independent family/slice audit](independent/REGULAR_SPECTRAL_AUDIT.md)
+
+**ACCEPTED.** The general critical line, reciprocal pole circle and finite
+functional equation follow from the real skew restriction. The full regular
+rank-two3+2 circle has exact H/Delta width t^4/27, but the full isospectral
+fibre is not classified. The producer's rational-polynomial checks and the
+independent full rational-parameter enumeration agree. Only the all-one
+marked resolvent is fixed: the audit explicitly detects individual vertex-
+root difference5*t^2/18. Three producer mutations and false independent H
+coefficient are rejected. A separate exact-circle coefficient mutation is
+also rejected in the assembled replay. No RH/GRH or spectral-sufficiency
+impossibility claim is made.
+
+## Third checkpoint: content and weighted/binary context simulation
+
+[Content](all_moduli/CONTEXT_CONTENT.md) · [Simulation](all_moduli/WEIGHTED_BINARY_SIMULATION.md) · [Independent audit](independent/CONTENT_SIMULATION_AUDIT.md)
+
+**ACCEPTED after incorporated scope clarifications.** The finite gcd formula
+uses equality of integer ideals, not a claim that signed linear combinations
+are actual contexts. The zero state exists exactly at odd moduli; odd-prime
+minimum order isp, and the named composite minima15/33/55 are5/11/11.
+The general composite construction is only an upper bound. Content33 for
+cyclic R11 is exact; Paley11 uses55 dividing its content, not exact equality.
+
+Weighted profile multilinearity extends the homogeneous-context kernel.
+Good-prime binary simulation at3,5,7,11 preserves modular contextual H only,
+not exact H, order, spectrum or real inequalities. The particular rational
+pair cannot reduce at2 or3. Its all-context spectral propagation uses an
+orthogonal conjugacy fixing both row and column all-one vectors; a one-sided
+similarity is explicitly rejected. The first-channel response difference is
+H(Q)/3456, and the mixed reflector rectangle is1/1728.
+
+The independent binary profiles use disjoint odd-cycle collections followed
+by a Stirling transform, unlike the producer's path/subset partitions. Weighted
+profiles use an independent endpoint/partition DP. Thirty-one literal pointed
+contexts (largest substituted order9), full R11 profile, all120 R5 permutations,
+Paley11 affine subgroup closure and explicit mod11 positive words are checked.
+False content and weighted-profile mutations remain active under `-O`.
+
+The additional [R11/Paley11 bridge](independent/REGULAR_CONTENT_BRIDGE_AUDIT.md)
+checks degree5, cyclic triangles55 and the regular critical-line identities for
+both graphs. Their fourth traces880/660 explicitly reject cospectrality;
+coarse spectral data do not determine arithmetic context content. No exact
+Paley11-content value is claimed.
+
+## Third checkpoint: fresh assembled replay and historical repair
+
+```bash
+# From this packet directory:
+sha256sum -c SHA256SUMS
+python3 replay_checkpoint3.py --output /tmp/session139-checkpoint3-replay.json
+```
+
+The fresh relocation runs nine kernels in both normal and optimized Python:
+**40 executions,18 positive runs and22 expected rejected controls**. All nine
+positive output pairs agree exactly and match the frozen receipts. The shared
+independent helper and the pinned content receipt are copied explicitly; there
+are no producer imports in the independent audits. All new kernels use the
+standard library. [Receipt](REPLAY_CHECKPOINT3.json) · [Reviewed pins](SOURCE_PINS_CHECKPOINT3.json).
+
+One explicitly authorized historical file is repaired:
+[THM-1455 / why-eleven-spectra](../../../01-canon/theorems/THM-1455-why-eleven-spectra.md).
+It now says Paley7 has14 of35 odd foursets, explains absence of k=2 by the
+sharp n-3 support floor, and records that odd-order evenness was already
+proved. The dated correction links the new proof and retains the finite-census
+scope. [Exact before/after hash record](cocycle/CANON_REPAIR.json).
+The distinct same-ID sibling and central mistakes ledger are unchanged;
+old historical blob pins continue to identify the old source version honestly.
 
 ## Second checkpoint: light-mass dual closure at n>=526
 
@@ -127,12 +218,13 @@ Native `agents/check_docs.py` needs baseline documents absent from this sparse
 checkout. Its unmodified same-version checker passes with read-only overlays
 on the clean materialized Session137 ancestor, with every intervening path
 accounted for. No baseline mutation or hydration is used. The final receipt
-is [checkpoint-two documentation verification](DOC_OVERLAY_VERIFICATION_CHECKPOINT2.json);
+is [checkpoint-three documentation verification](DOC_OVERLAY_VERIFICATION_CHECKPOINT3.json);
 startup remains179966/180000 bytes and frontier450/450 lines. New links,
 source hashes, frozen prior lanes, conflict markers and explicit staging scope
 are independently checked.
 
-No central mistakes ledger or older canon file is changed here. Prepared local
-commits are not remote publication: the publishing agent separately verifies
-the actual main commit and every owned blob. Cocycle, regular-critical-line,
-context-content and local-factor-hostile work require their own audited release.
+Only the explicitly listed THM-1455 historical repair changes older canon;
+the central mistakes ledger and the other same-ID slug remain untouched.
+Prepared local commits are not remote publication: the publishing agent
+separately verifies the actual main commit and every owned blob. Pending
+tensor-matching and local-factor-hostile work are outside this checkpoint.

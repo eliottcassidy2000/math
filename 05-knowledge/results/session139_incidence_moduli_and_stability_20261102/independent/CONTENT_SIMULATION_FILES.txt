@@ -1,0 +1,5 @@
+CONTENT_SIMULATION_AUDIT.md
+CONTENT_SIMULATION_SOURCE_PINS.json
+audit_content_simulation.py
+audit_content_simulation.out
+audit_content_simulation_optimized.out

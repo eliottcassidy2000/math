@@ -1,0 +1,17 @@
+[
+  {
+    "flag": "--mutate-conjugation",
+    "rejection": "RuntimeError: conjugacy: got [[(Fraction(0, 1),), (Fraction(1, 2),), (Fraction(1, 2),), (Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 3))], [(Fraction(1, 2),), (Fraction(0, 1),), (Fraction(1, 2),), (Fraction(1, 2), Fraction(-1, 6)), (Fraction(1, 2), Fraction(1, 6))], [(Fraction(1, 2),), (Fraction(1, 2),), (Fraction(0, 1),), (Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 3))], [(Fraction(1, 2), Fraction(-1, 3)), (Fraction(1, 2), Fraction(1, 6)), (Fraction(1, 2), Fraction(-1, 3)), (Fraction(0, 1),), (Fraction(1, 2), Fraction(1, 2))], [(Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 6)), (Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1),)]], expected [[(Fraction(0, 1),), (Fraction(1, 2),), (Fraction(1, 2),), (Fraction(1, 2), Fraction(103, 300)), (Fraction(1, 2), Fraction(-1, 3))], [(Fraction(1, 2),), (Fraction(0, 1),), (Fraction(1, 2),), (Fraction(1, 2), Fraction(-1, 6)), (Fraction(1, 2), Fraction(1, 6))], [(Fraction(1, 2),), (Fraction(1, 2),), (Fraction(0, 1),), (Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 3))], [(Fraction(1, 2), Fraction(-1, 3)), (Fraction(1, 2), Fraction(1, 6)), (Fraction(1, 2), Fraction(-1, 3)), (Fraction(0, 1),), (Fraction(1, 2), Fraction(1, 2))], [(Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 6)), (Fraction(1, 2), Fraction(1, 3)), (Fraction(1, 2), Fraction(-1, 2)), (Fraction(0, 1),)]]",
+    "returncode": 1
+  },
+  {
+    "flag": "--mutate-difference",
+    "rejection": "RuntimeError: H difference: got (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(-1, 27)), expected (Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 27))",
+    "returncode": 1
+  },
+  {
+    "flag": "--mutate-functional-sign",
+    "rejection": "RuntimeError: reduced polynomial functional equation: got [(Fraction(1, 1),), (Fraction(6, 1),), (Fraction(27, 2), Fraction(0, 1), Fraction(3, 4)), (Fraction(27, 2), Fraction(0, 1), Fraction(9, 4)), (Fraction(81, 16), Fraction(0, 1), Fraction(27, 16))], expected [(Fraction(1, 1),), (Fraction(2, 1),), (Fraction(3, 2), Fraction(0, 1), Fraction(3, 4)), (Fraction(1, 2), Fraction(0, 1), Fraction(3, 4)), (Fraction(1, 16), Fraction(0, 1), Fraction(3, 16))]",
+    "returncode": 1
+  }
+]

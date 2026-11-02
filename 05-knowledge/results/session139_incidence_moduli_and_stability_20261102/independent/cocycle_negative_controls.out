@@ -1,0 +1,2 @@
+REJECTED  unsigned five-face sum: RuntimeError: oriented five-face integral conservation
+REJECTED -O unsigned five-face sum: RuntimeError: oriented five-face integral conservation

@@ -1,0 +1,54 @@
+{
+  "A": {
+    "M22": "901/1024",
+    "V": "155/64",
+    "e4": "1/64",
+    "mean_charges": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "total_bad_probability": "5/4"
+  },
+  "B": {
+    "M22": "24319/27648",
+    "V": "155/64",
+    "e4": "1/64",
+    "mean_charges": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "total_bad_probability": "2161/1728"
+  },
+  "binary_roundings": 3136,
+  "status": "PASS",
+  "symbolic_M22_difference": "-a^2*b^2/54",
+  "symbolic_expected_bad_difference": "a^2*b^2/27",
+  "uniform": {
+    "M22": "15/16",
+    "V": "5/2",
+    "e4": "0",
+    "mean_charges": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "total_bad_probability": "5/4"
+  },
+  "unstructured_four": {
+    "M22": "973781/8467200",
+    "V": "7459259/6350400",
+    "e4": "361/396900",
+    "mean_charges": [
+      "-61/3360"
+    ],
+    "total_bad_probability": "251/1080"
+  }
+}

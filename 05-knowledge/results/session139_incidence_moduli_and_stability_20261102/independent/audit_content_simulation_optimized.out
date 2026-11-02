@@ -1,0 +1,93 @@
+{
+  "Paley11_affine_subgroup": 55,
+  "R5_automorphism_order": 5,
+  "binary_profile_method": "odd-cycle collections then Stirling transform",
+  "content": {
+    "R11": {
+      "content": 33,
+      "profile": [
+        93027,
+        787479,
+        2034813,
+        2376110,
+        1481546,
+        537075,
+        117975,
+        15840,
+        1265,
+        55,
+        1
+      ]
+    },
+    "R5": {
+      "content": 15,
+      "profile": [
+        15,
+        45,
+        35,
+        10,
+        1
+      ]
+    },
+    "W11": {
+      "content": 1,
+      "profile": [
+        11,
+        39,
+        33,
+        10,
+        1
+      ]
+    },
+    "W5": {
+      "content": 1,
+      "profile": [
+        5,
+        11,
+        6,
+        1
+      ]
+    },
+    "Z5": {
+      "content": 5,
+      "profile": [
+        55,
+        1545,
+        7495,
+        12310,
+        8665,
+        2898,
+        474,
+        36,
+        1
+      ]
+    }
+  },
+  "literal_contexts": 31,
+  "mixed_reflector_rectangle": "1/1728",
+  "mod11_words": [
+    {
+      "H": 100671287595046269,
+      "input": "A",
+      "order": 29,
+      "word": "PPDDCDDCDPCDP"
+    },
+    {
+      "H": 13291517610922779,
+      "input": "B",
+      "order": 27,
+      "word": "PPCDCCPCDDDD"
+    }
+  ],
+  "one_sided_ones_similarity_hostile": "rejected",
+  "orthogonal_two_sided_ones_checked": true,
+  "status": "PASS",
+  "weighted_profile_delta": [
+    "1/3456",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "weighted_profile_method": "endpoint and partition subset DP"
+}

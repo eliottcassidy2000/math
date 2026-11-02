@@ -1,0 +1,16 @@
+{
+  "H_A": "489/64",
+  "H_B": "52811/6912",
+  "V": "157/64",
+  "difference": "-1/6912",
+  "rational_t": "1/4",
+  "reduced_functional_equation": "Q(z)=(1+z)^4 Q(-z/(1+z))",
+  "status": "PASS",
+  "symbolic_H_A": "{'(0, 0)': '15/2', '(2, 0)': '9/4'}",
+  "symbolic_H_B_minus_H_A": "{'(4, 0)': '-1/27'}",
+  "tau": "163/64",
+  "u": "57/256",
+  "v": "-19/128",
+  "vertex_root_second_moment_difference": "5t^2/18",
+  "weighted_interval": "-1<=t<=1"
+}

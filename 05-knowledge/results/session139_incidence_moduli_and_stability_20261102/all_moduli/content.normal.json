@@ -1,0 +1,92 @@
+{
+  "Paley11_affine_subgroup": 55,
+  "R11": {
+    "context_content": 33,
+    "profile": [
+      93027,
+      787479,
+      2034813,
+      2376110,
+      1481546,
+      537075,
+      117975,
+      15840,
+      1265,
+      55,
+      1
+    ]
+  },
+  "primitive_product": [
+    {
+      "context_content": 1,
+      "name": "W5",
+      "order": 4,
+      "profile": [
+        5,
+        11,
+        6,
+        1
+      ]
+    },
+    {
+      "context_content": 1,
+      "name": "W11",
+      "order": 5,
+      "profile": [
+        11,
+        39,
+        33,
+        10,
+        1
+      ]
+    },
+    {
+      "context_content": 5,
+      "name": "Z5",
+      "order": 9,
+      "profile": [
+        55,
+        1545,
+        7495,
+        12310,
+        8665,
+        2898,
+        474,
+        36,
+        1
+      ]
+    }
+  ],
+  "rotation_orders": 16,
+  "small_cyclic_zero_states": [
+    {
+      "H": 3,
+      "context_content": 3,
+      "order": 3
+    },
+    {
+      "H": 15,
+      "automorphism_order": 5,
+      "context_content": 15,
+      "order": 5,
+      "profile": [
+        15,
+        45,
+        35,
+        10,
+        1
+      ]
+    },
+    {
+      "H": 175,
+      "context_content": 7,
+      "order": 7
+    },
+    {
+      "H": 3267,
+      "context_content": 9,
+      "order": 9
+    }
+  ],
+  "status": "PASS"
+}

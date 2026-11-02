@@ -1,0 +1,2 @@
+REJECTED  false H coefficient: RuntimeError: regular H difference
+REJECTED -O false H coefficient: RuntimeError: regular H difference

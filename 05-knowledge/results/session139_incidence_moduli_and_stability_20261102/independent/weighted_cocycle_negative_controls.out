@@ -1,0 +1,2 @@
+REJECTED  false second-moment constant: RuntimeError: eta second moment
+REJECTED -O false second-moment constant: RuntimeError: eta second moment

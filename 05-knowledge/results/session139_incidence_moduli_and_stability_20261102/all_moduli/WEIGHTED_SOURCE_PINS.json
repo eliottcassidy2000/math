@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "path": "../riemann_five_eleven/WEIGHTED_ZETA_BOUNDARY.md",
+      "sha256": "dc5c4ca6af9ea94f794ff4fea41ae38810db9053f12a2e83e1c66338b23aa0af"
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "74aa0348207b196ddc64712d34adebbb5552b01c198e562d5e02e0ffd4885a3c"
+    },
+    {
+      "path": "05-knowledge/results/session138_stability_and_actual_contexts_20261102/exact_resources/PROOF.md",
+      "commit": "291b4d9757842c02aa451beb65acfade2848609b"
+    }
+  ]
+}
