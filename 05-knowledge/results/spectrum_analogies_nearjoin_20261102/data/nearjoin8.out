@@ -1,0 +1,14 @@
+order 2 done: 2 pairs
+order 3 done: 4 pairs
+order 4 done: 11 pairs
+order 5 done: 38 pairs
+order 6 done: 227 pairs
+order 7 done: 2378 pairs
+order 8 done: 43015 pairs
+base orders <= 8: odd numbers <= 100000 not of the form h + 2^k B: 4593; first 30: [1, 7, 11, 13, 21, 47, 67, 22229, 22563, 24811, 24851, 26125, 26339, 26751, 26843, 27437, 27487, 28645, 29317, 29345, 29607, 29731, 29765, 29999, 30087, 30215, 30229, 30453, 30629, 30911]
+  coverage of odd numbers in (1000/2, 1000]: 1.000
+  coverage of odd numbers in (2000/2, 2000]: 1.000
+  coverage of odd numbers in (5000/2, 5000]: 1.000
+  coverage of odd numbers in (10000/2, 10000]: 1.000
+  coverage of odd numbers in (20000/2, 20000]: 1.000
+  coverage of odd numbers in (50000/2, 50000]: 0.968
