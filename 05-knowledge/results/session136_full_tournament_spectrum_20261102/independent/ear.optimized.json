@@ -1,0 +1,56 @@
+{
+  "cyclic_controls": [
+    {
+      "H": 15,
+      "exact_missing_low_band": 0,
+      "low_cut_count": 10,
+      "low_values": [
+        33
+      ],
+      "maximum_ear": 43,
+      "minimum_ear": 33,
+      "n": 5,
+      "rho": 1
+    },
+    {
+      "H": 175,
+      "exact_missing_low_band": 4,
+      "low_cut_count": 14,
+      "low_values": [
+        409
+      ],
+      "maximum_ear": 659,
+      "minimum_ear": 409,
+      "n": 7,
+      "rho": 9
+    },
+    {
+      "H": 3267,
+      "exact_missing_low_band": 52,
+      "low_cut_count": 18,
+      "low_values": [
+        8053
+      ],
+      "maximum_ear": 15459,
+      "minimum_ear": 8053,
+      "n": 9,
+      "rho": 105
+    },
+    {
+      "H": 93027,
+      "exact_missing_low_band": 1062,
+      "low_cut_count": 22,
+      "low_values": [
+        236205
+      ],
+      "maximum_ear": 528411,
+      "minimum_ear": 236205,
+      "n": 11,
+      "rho": 2125
+    }
+  ],
+  "literal_child_checks": 948,
+  "no_singleton_minimum_failure_all_strong_through5": true,
+  "script_sha256": "11d92722595f8133a48b1b0c7ccce61118f9e078b01a66327c1c09dba83ef3f9",
+  "status": "PASS"
+}

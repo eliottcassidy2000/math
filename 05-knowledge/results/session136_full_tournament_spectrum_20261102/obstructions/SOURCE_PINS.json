@@ -1,0 +1,25 @@
+{
+  "repository_commit": "d11ba3658601c3975876ff32a3e3ca602b49f25a",
+  "files": [
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/OBSTRUCTION_PROOF.md",
+      "sha256": "e56a78deede068c1dbcfaf9743359994509ed8b16c64fc97405fa7a8ab0ef53c",
+      "bytes": 11984
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/forbidden_basis.py",
+      "sha256": "4586d22cc144c35010b19f1613da6b4f1688ee9d927595a64d620bdc22d1c6d4",
+      "bytes": 6690
+    },
+    {
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+      "bytes": 14766
+    },
+    {
+      "path": "05-knowledge/results/session134_constructive_spectrum_frontier_20261101/descent/THEORY.md",
+      "sha256": "e2fc90883994c5ee3033f8184afa7996a7db36326e7fa46d76f5d19797819da7",
+      "bytes": 15815
+    }
+  ]
+}

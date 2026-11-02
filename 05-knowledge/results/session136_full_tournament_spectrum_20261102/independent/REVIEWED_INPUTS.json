@@ -1,0 +1,19 @@
+{
+  "sha256": {
+    "ear_geometry/audit.py": "da86c26d2ea867ff2f7d28270bd0d314b48dd299ebee4ab4560c9e43d5774c42",
+    "ear_geometry/positive_cut_geometry.md": "3ce83912d0d0a75f3fe94af6ee5535b3227b9ed4af7ca1daaf682ec39e2cb719",
+    "ear_geometry/symmetry_audit.py": "0f1c21c6589d9ced35482e652f210dd3c9861950389d41d12e2a692354ab3665",
+    "gluing/PROOF.md": "1f83b74693dd3c2ff50381d8936f6266fd53fb13758db0487359cde1d72a8af1",
+    "gluing/module_contexts.py": "3a6d6763a2add30162cc79b8e0c21e15d3032187ae3a42bcdd8cd80d9b048b91",
+    "gluing/width5_probe.py": "028442a430b1617011838e1af45aa758f4be06e5d2194b1770ddca555045538d",
+    "lens_boundary.py": "10b4add544f1fc2c8418ab62a5e97806bb092ab25dc9bbfbcdf3b86df8d4051e",
+    "local_closure/PROOF.md": "4912fb41ce61f073c0e35230e4298fde0a2e74ae5ae5bc3690b770a29098f9f3",
+    "local_closure/check.py": "fe21d0d46a7b730ceeedcad713550b885f857ed5cbb98e72fbedcbdbb5a9f6a8",
+    "obstructions/THEORY.md": "2209dfe6b9540c5084993aabc87b95690724e324464071294a1d41f8836749ef",
+    "obstructions/check.py": "33de41b95c4abba0a3fff083b2f576a0ec5d5ae6a3811db698a9bc049bccea39",
+    "spectrum_structure/COFINALITY.md": "8cbcb4abf2906fbb0ec1f840576e0e00c12b92289e253eb9522ccad45e2280b7",
+    "spectrum_structure/THEORY.md": "d1d3e488020d17c2c2859e8e2e6015909a6c984b6fc118d128218f6cd3adda50",
+    "spectrum_structure/verify.py": "8e241d34a59179a9be69030a8e66f419b6442b87fcea9198a20c5e15c0508454"
+  },
+  "status": "Producer snapshot associated with independently reviewed manuscripts and compared consequences; not a claim of independent rerun of all producer scripts"
+}

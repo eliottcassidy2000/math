@@ -1,0 +1,51 @@
+{
+  "entries": 77,
+  "manifests": [
+    {
+      "entries": 12,
+      "manifest": "SHA256SUMS"
+    },
+    {
+      "entries": 10,
+      "manifest": "ear_geometry/SHA256SUMS"
+    },
+    {
+      "entries": 9,
+      "manifest": "gluing/SHA256SUMS"
+    },
+    {
+      "entries": 30,
+      "manifest": "independent/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "manifest": "local_closure/SHA256SUMS"
+    },
+    {
+      "entries": 6,
+      "manifest": "obstructions/SHA256SUMS"
+    },
+    {
+      "entries": 5,
+      "manifest": "spectrum_structure/SHA256SUMS"
+    }
+  ],
+  "negative_controls": [
+    {
+      "mutation": "append",
+      "path": "local_closure/check.py",
+      "rejected": true
+    },
+    {
+      "mutation": "append",
+      "path": "gluing/width5.normal.json",
+      "rejected": true
+    },
+    {
+      "mutation": "missing",
+      "path": "ear_geometry/positive_cut_geometry.md",
+      "rejected": true
+    }
+  ],
+  "status": "PASS"
+}

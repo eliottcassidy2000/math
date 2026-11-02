@@ -1,0 +1,205 @@
+{
+  "claims_not_made": [
+    "Every allowed odd h is attained",
+    "Output witness is induced in input",
+    "Output is strong",
+    "Universal cutoff is exact minimal order",
+    "New proof of inherited bank",
+    "Literature priority"
+  ],
+  "constants": {
+    "B": 80265,
+    "D": 80267,
+    "L": 285,
+    "batch_max": 80089,
+    "coefficient_display_only": 1.9480898075965785,
+    "old_core_coefficient_display_only": 2.730717679880512
+  },
+  "crossings_checked": 19143,
+  "examples": [
+    {
+      "count": 3486784401,
+      "input_order": 60,
+      "pieces": [
+        [
+          "bank",
+          729,
+          11
+        ],
+        [
+          "bank",
+          729,
+          11
+        ],
+        [
+          "bank",
+          729,
+          11
+        ],
+        [
+          "residual",
+          9,
+          5
+        ]
+      ],
+      "recipe_order": 38,
+      "universal_cutoff": 43
+    },
+    {
+      "count": 95367431640625,
+      "input_order": 80,
+      "pieces": [
+        [
+          "bank",
+          625,
+          11
+        ],
+        [
+          "bank",
+          625,
+          11
+        ],
+        [
+          "bank",
+          625,
+          11
+        ],
+        [
+          "bank",
+          625,
+          11
+        ],
+        [
+          "bank",
+          625,
+          11
+        ]
+      ],
+      "recipe_order": 55,
+      "universal_cutoff": 63
+    },
+    {
+      "count": 273603515625,
+      "input_order": 50,
+      "pieces": [
+        [
+          "bank",
+          46695,
+          11
+        ],
+        [
+          "original",
+          5859375,
+          30
+        ]
+      ],
+      "recipe_order": 41,
+      "universal_cutoff": 52
+    }
+  ],
+  "floor_base_checks": {
+    "23": true,
+    "24": true,
+    "25": true
+  },
+  "floor_orders_checked": [
+    23,
+    300
+  ],
+  "labelled_tournaments": 33867,
+  "literal_controls": 1099,
+  "minimum_order_convolution_values_checked": 23,
+  "random_actual_factor_recipes": 1200,
+  "relative_mesh_controls": [
+    {
+      "a": 3,
+      "b": 5,
+      "integer_samples": 121,
+      "m0": 3
+    },
+    {
+      "a": 9,
+      "b": 11,
+      "integer_samples": 121,
+      "m0": 11
+    },
+    {
+      "a": 65,
+      "b": 67,
+      "integer_samples": 121,
+      "m0": 138
+    }
+  ],
+  "residual_values_checked": 139,
+  "scope": "New integer inequalities, recipe packing, and labelled n<=6 controls; large witness bank inherited, not regenerated",
+  "scope_hostile_triangle_chains": [
+    {
+      "count": 3,
+      "cutoff": 3,
+      "ordered_triangle_core_order": 3,
+      "strong_chain_order": 3
+    },
+    {
+      "count": 9,
+      "cutoff": 5,
+      "ordered_triangle_core_order": 6,
+      "strong_chain_order": 5
+    },
+    {
+      "count": 27,
+      "cutoff": 7,
+      "ordered_triangle_core_order": 9,
+      "strong_chain_order": 7
+    },
+    {
+      "count": 81,
+      "cutoff": 9,
+      "ordered_triangle_core_order": 12,
+      "strong_chain_order": 9
+    },
+    {
+      "count": 243,
+      "cutoff": 11,
+      "ordered_triangle_core_order": 15,
+      "strong_chain_order": 11
+    },
+    {
+      "count": 729,
+      "cutoff": 13,
+      "ordered_triangle_core_order": 18,
+      "strong_chain_order": 13
+    }
+  ],
+  "status": "PASS",
+  "strong_values_n_le_6": {
+    "1": [],
+    "2": [],
+    "3": [
+      3
+    ],
+    "4": [
+      5
+    ],
+    "5": [
+      9,
+      11,
+      13,
+      15
+    ],
+    "6": [
+      15,
+      17,
+      19,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      37,
+      41,
+      43,
+      45
+    ]
+  }
+}

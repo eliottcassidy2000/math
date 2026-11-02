@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "output_sha256": "0a6e4e4a6ec45a3d43e6dc54cb6a1caf6523a1098b55ce397a7ce37789b6c69f",
+      "script": "audit.py",
+      "status": "PASS"
+    },
+    {
+      "output_sha256": "c57fc99164a63f3f75c8af381ccf2731266c5fc4912280aae7cc5d650c8468fb",
+      "script": "local_check.py",
+      "status": "PASS"
+    },
+    {
+      "output_sha256": "3848c8f09fa710825d39bdc9342345e38f038b3fe2ccf0166ed725c87dc27215",
+      "script": "grammar_check.py",
+      "status": "PASS"
+    },
+    {
+      "output_sha256": "860da1397c1e501293bd4ed60211a98eb1d5b418aec5e33d8a5963f3df2470f7",
+      "script": "width5_check.py",
+      "status": "PASS"
+    },
+    {
+      "output_sha256": "7c4be12580e89e2177b4eaf499879eea477eef447ffaa6ec3b6ca454256672a9",
+      "script": "obstruction_check.py",
+      "status": "PASS"
+    },
+    {
+      "output_sha256": "ec4ddab6e7b34acfd219233d99bd99a340dfadeb344e613b1db7cc643a0cc61d",
+      "script": "ear_check.py",
+      "status": "PASS"
+    },
+    {
+      "output_sha256": "e43bd4a1bc188408f107abdea1c5a6b47be020469ac6e2c7286ee72e5c6f4d65",
+      "script": "tiny_extensions.py",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

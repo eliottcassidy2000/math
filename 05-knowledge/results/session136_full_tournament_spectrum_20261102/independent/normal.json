@@ -1,0 +1,104 @@
+{
+  "compression_integer_checks": "PASS; residual first-order table audited separately",
+  "cyclic_ear_hole_controls": [
+    {
+      "H": 3267,
+      "certified_bottom_band_holes": 23,
+      "n": 9,
+      "rho": 105
+    },
+    {
+      "H": 93027,
+      "certified_bottom_band_holes": 1025,
+      "n": 11,
+      "rho": 2125
+    }
+  ],
+  "dyadic_initialization": "all2^a,a0..8",
+  "ear_balanced_minimum": {
+    "H": 17,
+    "min_child": 27,
+    "min_cuts": [
+      14
+    ],
+    "rows": [
+      38,
+      8,
+      2,
+      5,
+      15,
+      30
+    ],
+    "singleton_complement_children": {
+      "1": 49,
+      "2": 29,
+      "4": 31,
+      "8": 35,
+      "16": 77,
+      "31": 29,
+      "32": 71,
+      "47": 31,
+      "55": 49,
+      "59": 77,
+      "61": 71,
+      "62": 35
+    }
+  },
+  "kernel_all_labelled_n0_to_n5": [
+    1,
+    1,
+    2,
+    8,
+    64,
+    1024
+  ],
+  "literal_context_cases": 2850,
+  "literal_ear_cut_and_uncrossing_count": 1098,
+  "obstruction_collision": [
+    {
+      "H": 23,
+      "deletions": [
+        1,
+        11,
+        11,
+        11,
+        9,
+        9
+      ],
+      "envelope": 11,
+      "rows": [
+        48,
+        1,
+        3,
+        7,
+        14,
+        30
+      ]
+    },
+    {
+      "H": 23,
+      "deletions": [
+        3,
+        9,
+        9,
+        5,
+        13,
+        5
+      ],
+      "envelope": 13,
+      "rows": [
+        34,
+        8,
+        3,
+        5,
+        15,
+        30
+      ]
+    }
+  ],
+  "own_sources_sha256": {
+    "audit.py": "75350c4b1f087f796231d93253c3dcfdc12c96086c9c04a34efe269e5d41db0d",
+    "kernel.py": "ac5bf847df30e700984a3843350fe90674309a6ce54dffe2aa2de6d771d31114"
+  },
+  "positive_affine_odd_orbits_moduli": "every odd modulus1..99"
+}

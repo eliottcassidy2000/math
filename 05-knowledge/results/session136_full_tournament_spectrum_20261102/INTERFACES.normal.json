@@ -1,0 +1,77 @@
+{
+  "congruence_hostiles": [
+    {
+      "actual_H": 2007,
+      "modulus": 1000,
+      "order": 13,
+      "target": 7,
+      "word": "101010000010"
+    },
+    {
+      "actual_H": 2013,
+      "modulus": 1000,
+      "order": 13,
+      "target": 13,
+      "word": "101011100010"
+    },
+    {
+      "actual_H": 1021,
+      "modulus": 1000,
+      "order": 12,
+      "target": 21,
+      "word": "10001001000"
+    }
+  ],
+  "contextual_padding_hostiles": [
+    {
+      "cap127": 3,
+      "context_H": 3,
+      "module_H": 1,
+      "module_order": 1
+    },
+    {
+      "cap127": 5,
+      "context_H": 5,
+      "module_H": 1,
+      "module_order": 2
+    },
+    {
+      "cap127": 9,
+      "context_H": 9,
+      "module_H": 1,
+      "module_order": 3
+    },
+    {
+      "cap127": 17,
+      "context_H": 17,
+      "module_H": 1,
+      "module_order": 4
+    },
+    {
+      "cap127": 33,
+      "context_H": 33,
+      "module_H": 1,
+      "module_order": 5
+    },
+    {
+      "cap127": 65,
+      "context_H": 65,
+      "module_H": 1,
+      "module_order": 6
+    },
+    {
+      "cap127": 128,
+      "context_H": 129,
+      "module_H": 1,
+      "module_order": 7
+    },
+    {
+      "cap127": 128,
+      "context_H": 257,
+      "module_H": 1,
+      "module_order": 8
+    }
+  ],
+  "scope": "Small literal subset-DP interfaces, not the universal proofs. The missing exact values and one-apex13 are inherited.",
+  "status": "PASS"
+}

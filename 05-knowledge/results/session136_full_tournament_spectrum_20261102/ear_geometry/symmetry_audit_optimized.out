@@ -1,0 +1,5 @@
+{"H": 15, "divisor_cut_values": {"1": 33}, "low_states": 10, "low_values": 1, "maximum": 43, "minimum": 33, "missing": 0, "order": 5, "primitive_control": true, "rho": 1, "small_side_sizes": [1], "vertex_transitive_missing_floor": 0}
+{"H": 175, "divisor_cut_values": {"1": 409}, "low_states": 14, "low_values": 1, "maximum": 659, "minimum": 409, "missing": 4, "order": 7, "primitive_control": true, "rho": 9, "small_side_sizes": [1], "vertex_transitive_missing_floor": 4}
+{"H": 3267, "divisor_cut_values": {"1": 8053, "3": 14037}, "low_states": 18, "low_values": 1, "maximum": 15459, "minimum": 8053, "missing": 52, "order": 9, "primitive_control": false, "rho": 105, "small_side_sizes": [1], "vertex_transitive_missing_floor": 51}
+{"H": 93027, "divisor_cut_values": {"1": 236205}, "low_states": 22, "low_values": 1, "maximum": 528411, "minimum": 236205, "missing": 1062, "order": 11, "primitive_control": true, "rho": 2125, "small_side_sizes": [1], "vertex_transitive_missing_floor": 1061}
+{"semantic_sha256": "6f367c4f74b166a7464b092b17f4a367c9e4bccd2ec96005839082ba96ef2f15", "status": "PASS"}
