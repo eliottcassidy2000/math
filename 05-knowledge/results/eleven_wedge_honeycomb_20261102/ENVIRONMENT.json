@@ -1,0 +1,8 @@
+{
+  "baseline": "fb7c88537a4a4c57e1e85e5394aa085f08005da5",
+  "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+  "geng_path": "/opt/homebrew/Cellar/nauty/2.9.3/bin/geng",
+  "geng_sha256": "a755568c69fc6f3d5c3601381c5776ce01c85171d80bf898559b89428cd9305f",
+  "compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)\nTarget: arm64-apple-darwin24.3.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+  "scope": "Exact endpoint and analytic certificate; same-session audit, no subagents."
+}

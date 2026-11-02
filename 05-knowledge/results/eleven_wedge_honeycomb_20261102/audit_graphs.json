@@ -1,0 +1,376 @@
+{
+  "exceptional_bases": [
+    {
+      "all_1024_minimum": 0,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "edges": 0,
+      "graph6": "I????????",
+      "zero_neighborhoods": [
+        0
+      ]
+    },
+    {
+      "all_1024_minimum": 1068,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "edges": 3,
+      "graph6": "I????A?o?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 772,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "edges": 3,
+      "graph6": "I????A?W?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 1359,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "edges": 4,
+      "graph6": "I????A?w?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 1143,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "edges": 4,
+      "graph6": "I????A?[?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 1279,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edges": 4,
+      "graph6": "I????B?o?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 847,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "edges": 4,
+      "graph6": "I????B?K?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 376,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edges": 3,
+      "graph6": "I???C@?G?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 1063,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "edges": 4,
+      "graph6": "I???C@?o?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 747,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "edges": 4,
+      "graph6": "I???C@?g?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 431,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "edges": 4,
+      "graph6": "I???C@?K?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 1143,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "edges": 4,
+      "graph6": "I???C@?_O",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 938,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "edges": 5,
+      "graph6": "I???C@_W?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 466,
+      "degree_sequence": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "edges": 5,
+      "graph6": "I???C@_E?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 0,
+      "degree_sequence": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edges": 4,
+      "graph6": "I??CA?_C?",
+      "zero_neighborhoods": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "all_1024_minimum": 702,
+      "degree_sequence": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "edges": 5,
+      "graph6": "I??CA?_o?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 351,
+      "degree_sequence": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "edges": 5,
+      "graph6": "I??CA?_c?",
+      "zero_neighborhoods": []
+    },
+    {
+      "all_1024_minimum": 0,
+      "degree_sequence": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "edges": 5,
+      "graph6": "I??CA?_E?",
+      "zero_neighborhoods": [
+        32
+      ]
+    },
+    {
+      "all_1024_minimum": 0,
+      "degree_sequence": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "edges": 5,
+      "graph6": "I?AA@?OA?",
+      "zero_neighborhoods": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512
+      ]
+    }
+  ],
+  "scope": "Independent same-session kernels; not an independent-agent or formal audit.",
+  "status": "passed",
+  "triangle8": {
+    "equality_graph6": [
+      "GQhTQg"
+    ],
+    "kernel": "explicit subsets of edges, wedge intersection masks",
+    "minimum": 212,
+    "universe": 12346
+  }
+}
