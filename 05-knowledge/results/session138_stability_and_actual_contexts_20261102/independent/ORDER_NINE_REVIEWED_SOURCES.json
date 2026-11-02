@@ -1,0 +1,35 @@
+{
+  "scope": "Final accepted order-nine theorem and graph certificate, with previously audited triangle/H=1 dependencies. No order-ten run or claim at orders10..1499.",
+  "sources": [
+    {
+      "path": "stability/SHARP_NINE_GRAPH_CERTIFICATE.md",
+      "sha256": "d371ed57f3be408cb287c9799cdf857e8864e52904d8db60900b3aedd2e31c1a",
+      "bytes": 7096
+    },
+    {
+      "path": "stability/graph9_certificate.cpp",
+      "sha256": "fa28c804cf1ed57f085b4457371dbd988eec768da81399959eeede87cf761580",
+      "bytes": 3830
+    },
+    {
+      "path": "stability/graph9_certificate.json",
+      "sha256": "a9daf1b8809b0c798902b6911fa89ccc9c4e233b744ebccb78f5c0a911dedb1b",
+      "bytes": 319
+    },
+    {
+      "path": "stability/graph9_certificate.ubsan.json",
+      "sha256": "a9daf1b8809b0c798902b6911fa89ccc9c4e233b744ebccb78f5c0a911dedb1b",
+      "bytes": 319
+    },
+    {
+      "path": "stability/TRIANGLE_VARIANCE.md",
+      "sha256": "1d94bd8d406da3f34c9a5dcdc91c35411ae006bc37c6279c1995b8e48b90e0cc",
+      "bytes": 3005
+    },
+    {
+      "path": "stability/H1_STABILITY.md",
+      "sha256": "24e9a0ff0042ef7132f39107f6bd236d64edcc44e8516dc415831b81620e5b82",
+      "bytes": 4844
+    }
+  ]
+}

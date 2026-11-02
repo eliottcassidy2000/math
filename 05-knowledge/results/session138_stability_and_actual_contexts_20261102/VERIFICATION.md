@@ -2,13 +2,14 @@
 
 ## Results and provenance
 
-**All current headline claims are independently accepted in their stated scopes.** The all-order asymptotic coefficient is proved; exact coefficients and positive-variance equality are proved through eight and at every n>=1500. Orders 9 through 1499 remain unresolved. Arbitrary strong-quotient scalar zero-rigidity and unrestricted spectrum completeness remain open.
+**All current headline claims are independently accepted in their stated scopes.** The all-order asymptotic coefficient is proved; exact coefficients are proved through nine and at every n>=1500. Positive-variance equality is maximal fair ordinal pairs at orders 4..9 and n>=1500; order three instead has Delta=V for every weighted triangle. Orders 10 through 1499 remain unresolved. Arbitrary strong-quotient scalar zero-rigidity and unrestricted spectrum completeness remain open.
 
 | Checkpoint | Mathematical scope | Evidence retained |
 |---|---|---|
 | First, published at `6fff918603cec8a2b9e233bbb627d703214d6953` | Multistar coefficient asymptotic to 4/n, matching-support sharpness, exact unrestricted coefficients through seven, reflector/resource theorems, restricted profile rigidity | [Frozen scope](CHECKPOINT1.md), original lane selectors and audit pins, [first portable replay](REPLAY_CHECKPOINT1.json); 118 published blobs verified |
 | Second, published at `a60f529a50744a6a95a3d327983f9542780894d2` | Sharp order eight; `K_n=8/n+O(n^(-2))` and finite-order/near-candidate bounds; exact all-parameter sign chambers for three actual modules | [Frozen scope](CHECKPOINT2.md), separately curated source files, independent proofs, exact receipts, and [second portable replay](REPLAY_CHECKPOINT2.json); 156 cumulative published blobs verified |
-| Third continuation | Exact `K_n=kappa_n` for all n>=1500 and complete positive-variance equality; general sufficient cyclic sign certificates and minimal order-seven actual hostile | Separate proofs and reviewed pins; exact endpoint controls and independent complete small-module profile coverage |
+| Third, published at `77c2efbdda76ce338a69faa649ba0f70d9576086` | Exact `K_n=kappa_n` for all n>=1500 and complete positive-variance equality; general sufficient cyclic sign certificates and minimal order-seven actual hostile | [Frozen scope](CHECKPOINT3.md), separate proofs and reviewed pins; exact endpoint controls and independent complete small-module profile coverage; 212 cumulative published blobs verified |
+| Fourth, final finite continuation | Sharp order nine, positive cycle reserves, exact positive-variance equality; remaining finite gap 10..1499 | Independently audited analytic ledger and full graph augmentation certificate; separate final selectors and portable replay |
 
 The first-checkpoint lane bytes are not rewritten to claim later results. The first source-integrity and replay files retain their original counts. Updated root summaries describe the combined release; historical through-seven statements remain explicitly scoped.
 
@@ -20,7 +21,7 @@ The first-checkpoint lane bytes are not rewritten to claim later results. The fi
 
 The producer's standard-library endpoint checker has eleven exact Fraction/integer checks. Its failure-control program injects a false gate and verifies explicit failure both normally and under `-O`; its five controls also check normal/optimized output identity. The independently authored checker imports no producer code or data and reconstructs twelve exact certificates. Monotonicity arguments—not finite sampled orders—extend the endpoint estimates to the full stated range.
 
-The sufficient threshold 1500 is not asserted optimal. The equality statement concerns V>0; it forces matching uncertainty, a zero expected binary gap, transitive supported completions, and finally maximal fair ordinal pairs. Orders 9 through 1499 are outside the accepted exact result.
+The sufficient threshold 1500 is not asserted optimal. The equality statement concerns V>0; it forces matching uncertainty, a zero expected binary gap, transitive supported completions, and finally maximal fair ordinal pairs. That large-order theorem alone says nothing about orders 9 through 1499; the final finite certificate below separately establishes order nine.
 
 The separately recorded third-checkpoint source integrity and fresh portable replay preserve the two earlier receipts unchanged.
 
@@ -43,6 +44,20 @@ The actual responses −36, +828, and +67932 at singleton, TT2, and C3 side pair
 **ACCEPTED counterexample to a proposed termwise lemma, not a new lower bound or theorem premise.** The independent checker uses full antisymmetrization over all 720 permutations and Leibniz determinant sums, not the producer's recursive Pfaffian and Gaussian-elimination kernels. Eleven exact active checks agree under normal and optimized Python. They recover `Pf(K)=3x-2`, the complementary coefficient three, its zero at x=2/3, and `u=32/9`, `v=-5/3`, `u-|v|=17/9`.
 
 Only the claimed unit-coefficient implication and its unrestricted individual-square bound are refuted. The total-margin refinement is not refuted by this witness and remains open; all accepted proof dependencies are unchanged.
+
+## Final finite continuation: sharp order nine
+
+[Theorem](stability/SHARP_NINE_GRAPH_CERTIFICATE.md) · [Independent analytic audit](independent/ORDER_NINE_CONTINUATION_AUDIT.md) · [Independent graph audit](independent/n9_audit/AUDIT.md)
+
+The analytic signed-cycle reduction and complete graph certificate are independently ACCEPTED. The final inequality retains `(105/256)tau`; this positive reserve is essential to the tournament equality proof. The graph certificate alone has continuous zero segments and cannot supply an isolated-endpoint equality argument.
+
+The complete universe contains 1,044 seven-vertex orbits covering all 2,097,152 labeled graphs, 133,632 eight-vertex augmentations, exactly 12,346 eight-vertex isomorphism classes, and 3,160,576 ninth-vertex augmentations. The independent kernel uses adjacent-transposition BFS, label-invariant equitable refinement followed by exhaustive within-cell permutations, and vertex-addition matching/wedge recurrences. It imports neither producer representatives nor counting code. Every augmentation checks `m2+w=binom(m,2)`; 344 snapshots also use a full nine-vertex matching DP and direct wedge-first counter.
+
+The exact residual range is 0 through 60,372. Fourteen zero augmentations represent three graph types, not fourteen isomorphism classes: the empty graph, four disjoint edges plus a singleton, and P3 plus three disjoint edges. The last also proves the sharp graph wedge coefficient 19/64. This is not a claim that the retained actual triangle coefficient 105/256 is optimal.
+
+Producer optimized and UBSan outputs match. Independent ordinary outputs match, and the recovered UBSan build/run also matches after a compilation-only resource-cap failure was corrected. Those failed compiler attempts are not scientific counterexamples or successful sanitizer executions. The successful UBSan run has no undefined-behavior diagnostic. Expected representative-count progress output is recorded separately rather than described as empty stderr. Final curated pins, retained receipts, and the fresh assembled replay record the exact executed scope.
+
+At n>=1500, V=0 equality is deterministic transitivity by the inherited binary theorem, while V>0 equality is the maximal fair-pair locus. Neither statement erases the exceptional order-three identity for every weighted triangle.
 
 ## 1. All-order asymptotic theorem: proof and exact controls
 
@@ -87,7 +102,7 @@ The independent graph implementation constructs seven-vertex isomorphism orbits 
 
 Matching counts use vertex-subset dynamic programming; wedge-plus-edge patterns are counted wedge-first. These differ from the producer's permutation-orbit construction and pattern-mask counting. The exact minimum is zero, maximum 10,808, with two zero augmentations: empty and perfect matching. Normal and UBSan outputs match. All arithmetic is integral; separate-affinity interpolation and the independently reviewed tournament-cycle reduction establish the theorem over the whole real variance cube.
 
-Positive-variance equality in `Delta>=87V/128` follows from the retained positive triangle reserve and H=1 classification, not merely from interpreting a graph zero count. This order-eight certificate alone proves no higher order. The third continuation proves n>=1500; orders 9 through 1499 remain unresolved.
+Positive-variance equality in `Delta>=87V/128` follows from the retained positive triangle reserve and H=1 classification, not merely from interpreting a graph zero count. This order-eight certificate alone proves no higher order. The third continuation proves n>=1500; the final continuation adds nine. Orders 10 through 1499 remain unresolved.
 
 ## 3. All-parameter mixed-profile sign chambers
 
@@ -138,7 +153,17 @@ All **196 curated lane files** in the relocated copy remain unchanged. The conti
 
 [Third replay receipt](REPLAY_CHECKPOINT3.json) · [Third source integrity](SOURCE_INTEGRITY_CHECKPOINT3.json)
 
-## 7. Curated inventory and replay discipline
+## 7. Final fourth-checkpoint replay: terminal PASS
+
+**Six scientific executions and four builds passed.** Fresh relocated producer optimized/UBSan graph runs, independent guarded optimized/UBSan graph runs, and independent symbolic-ledger normal/`-O` runs all match their frozen stdout receipts byte-for-byte. The two graph kernels each cover the full stated augmentation universe. This is a same-source replay of the separately authored implementations, not a third independent certificate.
+
+Expected representative-count progress lines match exactly. No extra stderr or sanitizer diagnostic is accepted. The independent guarded replays also retain successful child return codes and measured runtime memory below the 40 MiB target. Earlier capped compilation failures remain separately labeled failures in the frozen audit evidence; they are not counted as scientific failures or successful builds here.
+
+All **226 curated lane files** in the portable tree remain byte-identical. This final addition has 30 explicitly curated files, 26 checked manifest entries, and six reviewed-source pins. All 196 prior curated files, all 209 prior packet paths, and all 204 prior packet files outside the four current summaries and aggregate hash manifest are preserved unchanged.
+
+[Final replay receipt](REPLAY_CHECKPOINT4.json) · [Final source integrity](SOURCE_INTEGRITY_CHECKPOINT4.json)
+
+## 8. Curated inventory and replay discipline
 
 First-checkpoint selectors remain unchanged: `stability/PUBLIC_FILES.txt`, `exact_resources/PUBLIC_FILES.txt`, `zero_rigidity/public_manifest.json`, and `independent/FIRST_CHECKPOINT_FILES.json`, plus the dedicated profile audit packet.
 
@@ -151,6 +176,8 @@ Continuation selectors are:
 - the six-file `independent_zero_balance_later` audit packet, including its own `SHA256SUMS`.
 
 Third-checkpoint additions have separate selectors: six payloads plus two manifests in [threshold_refinement](threshold_refinement/PUBLIC_FILES.txt); five independent threshold files plus [their selector](independent/THIRD_CHECKPOINT_FILES.json) and hash manifest; eleven producer framework payloads plus [two manifests](zero_framework_later/public_manifest.json); twelve independent framework audit files; four producer Pfaffian-hostile files plus [their selector](stability/HOSTILE_PUBLIC_FILES.txt) and hash manifest; and five independent hostile files plus [two manifests](independent_pfaffian_hostile/PUBLIC_FILES.txt).
+
+Final fourth-checkpoint additions are [four producer n9 payloads](stability/N9_PUBLIC_FILES.txt) plus their selector and hash manifest, and [22 independent audit/source/receipt files](independent/FOURTH_CHECKPOINT_FILES.json) plus their selector and hash manifest. The two earlier capped compiler failures remain explicitly labeled failures alongside the successful recovery; they are not failed mathematical certificates. No duplicate Pfaffian counterexample or order-ten work is selected.
 
 No compiled executable, cache, superseded graph variant, exploratory parameter scan, or unaccepted exact-equality candidate is included. Retained finite diagnostic controls have their scopes stated above. A repeated program is a same-source replay, not a newly independent proof.
 
@@ -187,5 +214,21 @@ Representative continuation routes:
  ./graph8_replay > replay.normal.json &&
  cmp replay.normal.json no_wedge.normal.json)
 ```
+
+Final order-nine routes, still in a writable portable copy:
+
+```sh
+(cd independent/n9_audit &&
+ python3 -B cycle_ledger.py > replay.ledger.json &&
+ cmp replay.ledger.json cycle_ledger.normal.json &&
+ python3 -B guarded_run.py --compile &&
+ python3 -B guarded_run.py > replay.graph.json &&
+ cmp replay.graph.json normal.json &&
+ python3 -B guarded_run.py --compile --sanitize &&
+ python3 -B guarded_run.py --sanitize > replay.ubsan.json &&
+ cmp replay.ubsan.json ubsan.json)
+```
+
+The guard preserves its measured resource receipt and expected progress stderr separately. The mathematical certificate is the complete finite graph reduction, not its resource measurements.
 
 No formal proof-assistant certification, external-priority claim, efficient exact Hamilton counter, unrestricted spectrum theorem, or general zero-rigidity theorem follows from these receipts.

@@ -1,0 +1,10 @@
+{
+  "action": "compile UBSan independent C audit",
+  "data_limit_bytes": 25165824,
+  "rss_limit_bytes": 41943040,
+  "returncode": 1,
+  "elapsed_seconds": 0.21016579400748014,
+  "max_rss_kib": 34460,
+  "stdout": "",
+  "stderr": "\ncc1: out of memory allocating 65536 bytes after a total of 8925184 bytes\n"
+}

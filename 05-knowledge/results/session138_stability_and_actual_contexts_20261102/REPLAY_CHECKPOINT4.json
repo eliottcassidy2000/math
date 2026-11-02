@@ -1,0 +1,248 @@
+{
+  "status": "PASS",
+  "scientific_executions": 6,
+  "builds": 4,
+  "elapsed_seconds": 16.443,
+  "frozen_payload_files": 226,
+  "portable_originals_changed": [],
+  "scope": "Fresh relocated final order-nine replay: producer graph optimized/UBSan, independent graph optimized/UBSan with its retained resource guard, and independent symbolic cycle ledger normal/-O. The independent graph replay covers every graph up to isomorphism by complete augmentation, not a literal 2^36-mask scan. Expected representative-count progress lines are checked exactly; no other stderr or sanitizer diagnostic is accepted. Historical capped compile failures remain separate frozen evidence, not scientific replay failures or claimed passes.",
+  "records": [
+    {
+      "tag": "cycle_ledger-normal",
+      "directory": "independent/n9_audit",
+      "command": [
+        "python3",
+        "-B",
+        "cycle_ledger.py"
+      ],
+      "seconds": 0.03,
+      "exit": 0,
+      "stdout_bytes": 645,
+      "stdout_sha256": "8c991821c3a6c751b566fe577b29ab46be87cd4ccb225c6842096cdf5ba2c8be",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": "independent/n9_audit/cycle_ledger.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "cycle_ledger-O",
+      "directory": "independent/n9_audit",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "cycle_ledger.py"
+      ],
+      "seconds": 0.099,
+      "exit": 0,
+      "stdout_bytes": 645,
+      "stdout_sha256": "8c991821c3a6c751b566fe577b29ab46be87cd4ccb225c6842096cdf5ba2c8be",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": "independent/n9_audit/cycle_ledger.normal.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent-O1-build",
+      "directory": "independent/n9_audit",
+      "command": [
+        "python3",
+        "-B",
+        "guarded_run.py",
+        "--compile"
+      ],
+      "seconds": 0.246,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": null,
+      "byte_match": null,
+      "guarded_child": {
+        "returncode": 0,
+        "seconds": 0.2082674239645712,
+        "max_rss_kib": 24396,
+        "stderr": ""
+      },
+      "guarded_child_stderr_matches_expected": true,
+      "guarded_child_exit_zero": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent-O1",
+      "directory": "independent/n9_audit",
+      "command": [
+        "python3",
+        "-B",
+        "guarded_run.py"
+      ],
+      "seconds": 0.502,
+      "exit": 0,
+      "stdout_bytes": 1067,
+      "stdout_sha256": "de769219604405fd17870408677e4871cebe1a81c9649318db531c697da6bb3a",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": "independent/n9_audit/normal.json",
+      "byte_match": true,
+      "guarded_child": {
+        "returncode": 0,
+        "seconds": 0.4709446009946987,
+        "max_rss_kib": 6732,
+        "stderr": "independent n8 representatives 12346\n"
+      },
+      "guarded_child_stderr_matches_expected": true,
+      "guarded_child_exit_zero": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph9_replay_O3-build",
+      "directory": "stability",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph9_certificate.cpp",
+        "-o",
+        "graph9_replay_O3"
+      ],
+      "seconds": 1.185,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent-UBSan-build",
+      "directory": "independent/n9_audit",
+      "command": [
+        "python3",
+        "-B",
+        "guarded_run.py",
+        "--compile",
+        "--sanitize"
+      ],
+      "seconds": 0.517,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": null,
+      "byte_match": null,
+      "guarded_child": {
+        "returncode": 0,
+        "seconds": 0.48441075097071007,
+        "max_rss_kib": 50532,
+        "stderr": ""
+      },
+      "guarded_child_stderr_matches_expected": true,
+      "guarded_child_exit_zero": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "independent-UBSan",
+      "directory": "independent/n9_audit",
+      "command": [
+        "python3",
+        "-B",
+        "guarded_run.py",
+        "--sanitize"
+      ],
+      "seconds": 1.092,
+      "exit": 0,
+      "stdout_bytes": 1067,
+      "stdout_sha256": "de769219604405fd17870408677e4871cebe1a81c9649318db531c697da6bb3a",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": "independent/n9_audit/normal.json",
+      "byte_match": true,
+      "guarded_child": {
+        "returncode": 0,
+        "seconds": 1.0549533119774424,
+        "max_rss_kib": 6732,
+        "stderr": "independent n8 representatives 12346\n"
+      },
+      "guarded_child_stderr_matches_expected": true,
+      "guarded_child_exit_zero": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph9_replay_O3",
+      "directory": "stability",
+      "command": [
+        "./graph9_replay_O3"
+      ],
+      "seconds": 3.368,
+      "exit": 0,
+      "stdout_bytes": 319,
+      "stdout_sha256": "a9daf1b8809b0c798902b6911fa89ccc9c4e233b744ebccb78f5c0a911dedb1b",
+      "stderr": "reps8 12346\n",
+      "expected_stderr": "reps8 12346\n",
+      "stderr_matches_expected": true,
+      "expected": "stability/graph9_certificate.json",
+      "byte_match": true,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph9_replay_UBSan-build",
+      "directory": "stability",
+      "command": [
+        "g++",
+        "-std=c++17",
+        "-O1",
+        "-fsanitize=undefined",
+        "-fno-sanitize-recover=undefined",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "graph9_certificate.cpp",
+        "-o",
+        "graph9_replay_UBSan"
+      ],
+      "seconds": 0.988,
+      "exit": 0,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "expected_stderr": "",
+      "stderr_matches_expected": true,
+      "expected": null,
+      "byte_match": null,
+      "status": "PASS"
+    },
+    {
+      "tag": "graph9_replay_UBSan",
+      "directory": "stability",
+      "command": [
+        "./graph9_replay_UBSan"
+      ],
+      "seconds": 10.891,
+      "exit": 0,
+      "stdout_bytes": 319,
+      "stdout_sha256": "a9daf1b8809b0c798902b6911fa89ccc9c4e233b744ebccb78f5c0a911dedb1b",
+      "stderr": "reps8 12346\n",
+      "expected_stderr": "reps8 12346\n",
+      "stderr_matches_expected": true,
+      "expected": "stability/graph9_certificate.json",
+      "byte_match": true,
+      "status": "PASS"
+    }
+  ]
+}

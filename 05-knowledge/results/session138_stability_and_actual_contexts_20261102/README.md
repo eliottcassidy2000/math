@@ -1,8 +1,8 @@
 # Session138: exact stability and actual contexts
 
-**The optimal weighted determinant stability coefficient is now exact for every order `n>=1500`, with a complete positive-variance equality classification.** Together with the finite-order proofs, exact coefficients are established for `n=3,...,8` and `n>=1500`; orders **9 through 1499 remain unresolved**.
+**The optimal weighted determinant stability coefficient is now exact for every order `n>=1500`, with a complete positive-variance equality classification.** Together with the finite-order proofs, exact coefficients are established for `n=3,...,9` and `n>=1500`; orders **10 through 1499 remain unresolved**.
 
-[Results and scope](SYNTHESIS.md) · [Verification and checkpoint history](VERIFICATION.md) · [Third replay: PASS](REPLAY_CHECKPOINT3.json)
+[Results and scope](SYNTHESIS.md) · [Verification and checkpoint history](VERIFICATION.md) · [Final replay: PASS](REPLAY_CHECKPOINT4.json)
 
 ## 1. Eventual exact stability, not only an asymptotic constant
 
@@ -18,7 +18,7 @@ kappa_n=(4/r)[1-(3/4)^r-1_(n even)*(1/4)^r].
 K_n=kappa_n.
 ```
 
-Equality with `V>0` consists exactly of an ordinal sum of the maximum number of fair pairs, with one singleton at odd order. The proof first forces the uncertainty graph to be a matching and the expected binary gap to vanish; the accepted H=1 minimization then supplies the exact equality locus.
+Equality with `V>0` consists exactly of an ordinal sum of the maximum number of fair pairs, with one singleton at odd order. The proof first forces the uncertainty graph to be a matching and the expected binary gap to vanish; the accepted H=1 minimization then supplies the exact equality locus. At these orders, V=0 equality consists exactly of deterministic transitive tournaments by the inherited binary theorem.
 
 This is an all-order argument above a sufficient threshold, not a census at order 1500 or an extrapolation from small orders. The threshold is not asserted optimal. The proof uses already accepted stability and matching theorems directly.
 
@@ -26,15 +26,23 @@ This is an all-order argument above a sufficient threshold, not a census at orde
 
 ## 2. Established finite orders and the remaining interval
 
-| Order n | 3 | 4 | 5 | 6 | 7 | 8 |
-|---|---:|---:|---:|---:|---:|---:|
-| Sharp K_n | 1 | 3/4 | 7/8 | 3/4 | 37/48 | 87/128 |
+| Order n | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Sharp K_n | 1 | 3/4 | 7/8 | 3/4 | 37/48 | 87/128 | 175/256 |
 
-At orders four through eight, positive-variance equality has the same maximal fair-pair form. Order three is exceptional: `Delta=V` for every weighted tournament matrix. **Exact optimality for 9<=n<=1499 is not claimed.**
+At orders four through nine, positive-variance equality has the same maximal fair-pair form. Order three is exceptional: `Delta=V` for every weighted tournament matrix. **Exact optimality for 10<=n<=1499 is not claimed.**
 
 Parity is structural: an odd singleton makes the full determinant vanish, whereas an even full pair cover contributes the extra subtraction `(1/4)^r`.
 
-[Sharp low orders](stability/SHARP_LOW_ORDER_STABILITY.md) · [Sharp seven](stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md) · [Sharp eight](stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md)
+The final order-nine continuation retains a positive triangle reserve:
+
+```text
+Delta >= (175/256)V+(105/256)tau+C4/16+(5/8)C5+C6/4+C7+C8.
+```
+
+Its independent complete graph certificate covers 3,160,576 nine-vertex augmentations, and the reviewed separately affine reduction proves the real-weight inequality. Equality uses the positive triangle reserve—not a false claim that the graph polynomial has only isolated zero endpoints.
+
+[Sharp low orders](stability/SHARP_LOW_ORDER_STABILITY.md) · [Sharp seven](stability/SHARP_SEVEN_GRAPH_CERTIFICATE.md) · [Sharp eight](stability/SHARP_EIGHT_GRAPH_CERTIFICATE.md) · [Sharp nine](stability/SHARP_NINE_GRAPH_CERTIFICATE.md)
 
 ## 3. Uniform bounds and quantitative mechanisms
 
@@ -65,6 +73,6 @@ The later reusable framework gives finite **sufficient** certificates for univer
 
 ## Boundaries and checkpoint provenance
 
-**OPEN:** exact stability coefficients at orders 9 through 1499; the unrestricted positive-odd H-spectrum; global boundedness of exact spectral width; arbitrary strong-quotient scalar zero-rigidity; and LRC(14).
+**OPEN:** exact stability coefficients at orders 10 through 1499; the unrestricted positive-odd H-spectrum; global boundedness of exact spectral width; arbitrary strong-quotient scalar zero-rigidity; and LRC(14).
 
-The [first checkpoint](CHECKPOINT1.md)'s through-seven results and the [second checkpoint](CHECKPOINT2.md)'s through-eight/asymptotic results retain their original lane bytes, selectors, and audit scopes. The new exact theorem has a separate manuscript and independent audit. No unaccepted finite-order graph candidate or historical threshold candidate is required for this release. A separately audited [Pfaffian hostile](stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md) refutes an unused termwise shortcut; it does not invalidate any accepted theorem.
+The [first checkpoint](CHECKPOINT1.md)'s through-seven results and the [second checkpoint](CHECKPOINT2.md)'s through-eight/asymptotic results retain their original lane bytes, selectors, and audit scopes. The [third checkpoint](CHECKPOINT3.md) adds the exact large-order theorem and general cyclic criteria; the final order-nine continuation has its own separately curated proof and graph audit. No unaccepted finite-order graph candidate or historical threshold candidate is required for this release. A separately audited [Pfaffian hostile](stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md) refutes an unused termwise shortcut; it does not invalidate any accepted theorem.

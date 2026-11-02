@@ -1,0 +1,9 @@
+{
+  "action": "UBSan independent n9 graph certificate",
+  "address_space_limit_bytes": 134217728,
+  "data_limit_bytes": 25165824,
+  "rss_limit_bytes": 41943040,
+  "returncode": 0,
+  "elapsed_seconds": 1.0681111760204658,
+  "max_rss_kib": 6164
+}

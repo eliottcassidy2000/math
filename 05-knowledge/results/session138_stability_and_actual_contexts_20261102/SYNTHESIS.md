@@ -2,7 +2,7 @@
 
 ## Result map and inheritance
 
-Session137 proved the nonempty determinant bound, its weighted extension, and an all-order variance coefficient asymptotic to `24/n^2`. It also separated width-three local universality from exact realization and proved finite-base normal forms for bounded actual sources. Checkpoint one strengthened quantitative stability to the correct `1/n` order and proved exact constants through seven. The continuation proves sharp order eight and all-parameter sign chambers for three actual mixed-profile seeds. The independently audited all-order continuation sharpens the asymptotic constant to eight with error `O(n^(-2))`. Its exact finite-order bound and probability/matching consequences have separate source pins from checkpoint one. A third independently audited continuation proves exact fair-pair optimality and the complete positive-variance equality classification for every n>=1500. The established exact domain is n=3,...,8 and n>=1500; orders 9 through 1499 remain unresolved.
+Session137 proved the nonempty determinant bound, its weighted extension, and an all-order variance coefficient asymptotic to `24/n^2`. It also separated width-three local universality from exact realization and proved finite-base normal forms for bounded actual sources. Checkpoint one strengthened quantitative stability to the correct `1/n` order and proved exact constants through seven. The continuation proves sharp order eight and all-parameter sign chambers for three actual mixed-profile seeds. The independently audited all-order continuation sharpens the asymptotic constant to eight with error `O(n^(-2))`. Its exact finite-order bound and probability/matching consequences have separate source pins from checkpoint one. A third independently audited continuation proves exact fair-pair optimality and the complete positive-variance equality classification for every n>=1500. The final finite-order continuation adds sharp order nine. The established exact domain is n=3,...,9 and n>=1500; orders 10 through 1499 remain unresolved.
 
 Here **PROVED** denotes an argument for the entire stated domain. A finite certificate can support such a theorem when an explicit reduction covers the full continuous domain or every order; it is not a sampled inequality. **FINITE-EXACT** labels the complete finite classifications themselves. Audit and replay scopes are in [VERIFICATION.md](VERIFICATION.md).
 
@@ -62,7 +62,7 @@ At k=1 this is `2/n`; optimizing k near `log_2 n` gives `max_k gamma_(n,k)~4/n`.
 
 Fair-pair examples show that the optimal unrestricted coefficient is at most asymptotic to `8/n`. This first-checkpoint lower bound settled the dimensional order and left a factor-two asymptotic gap relative to the fair-pair upper family. Its scope is preserved; the separate continuation in Section 8 closes that asymptotic gap. A dimension-free positive coefficient is impossible, and exact finite-order optimality is a separate question.
 
-Any separately proved nonnegative binary lower bound can also be transferred through `E Delta(T)`; this does not assume an unproved weighted recurrence.
+Any separately proved nonnegative binary lower bound can also be transferred through `E Delta(T)`; this does not assume an unproved weighted recurrence. For cycle weights, this applies to directed simple cycles of length at least three (even cycles therefore have length at least four). Weighted two-cycle terms `q_e=p_e(1-p_e)` are variance corrections, not independent binary cycle events: the two opposite arcs of one unordered edge are correlated.
 
 [Multistar proof](stability/MULTISTAR_STABILITY.md)
 
@@ -99,7 +99,7 @@ These examples supply global upper bounds on the optimal stability coefficient; 
 
 [H=1 theorem](stability/H1_STABILITY.md)
 
-## 4. Sharp unrestricted constants through order eight
+## 4. Earlier finite-order certificates: sharp constants through eight
 
 The exact coefficients in `Delta>=bV` are
 
@@ -108,7 +108,7 @@ n:  3    4    5    6     7      8
 b:  1   3/4  7/8  3/4  37/48  87/128.
 ```
 
-The first two are inherited. Checkpoint one established orders five through seven; the separate continuation establishes order eight. For positive variance at orders four through eight, equality is exactly the ordinal fair-pair construction above. This finite-certificate route covers only orders through eight. The separate argument in Section 10 establishes all orders n>=1500; orders 9 through 1499 remain open.
+The first two are inherited. Checkpoint one established orders five through seven; the separate continuation establishes order eight. For positive variance at orders four through eight, equality is exactly the ordinal fair-pair construction above. These first two checkpoints cover orders through eight. Section 13 adds order nine; the separate argument in Section 10 establishes all orders n>=1500. Orders 10 through 1499 remain open.
 
 Let tau be the sum of directed-triangle weights, C_j the sum of directed j-cycle weights, and M33 the sum over unordered disjoint triangle pairs. Cycle rotations and collection multiplicities follow the source definitions.
 
@@ -369,6 +369,8 @@ an exact contradiction: the final squared slack is `137/9537>0`. Therefore there
 
 The uncertainty graph is consequently a matching, proving the universal lower bound; the fair ordinal family attains it. At equality, B=0 forces every supported binary completion to be transitive. The H=1 scalar minimization then gives **exactly a maximal ordinal collection of fair pairs, with one singleton at odd order**.
 
+At these orders, V=0 equality is exactly the deterministic transitive case by the inherited binary theorem. This is distinct from the n=3 exception, where Delta=V for every weighted triangle.
+
 The threshold 1500 is sufficient, not claimed optimal. The arithmetic controls verify endpoint and squared inequalities exactly; all-order scope comes from the monotonicity and matching argument. This is neither a tournament census at order 1500 nor an extension of an eight-vertex graph scan.
 
 [Exact theorem](threshold_refinement/PROOF_N1500.md) · [Independent audit](independent/threshold1500_audit/AUDIT.md)
@@ -421,6 +423,38 @@ The accepted independent-set proof retains entirely binary principal subsets. Th
 
 [Exact hostile and scoped survivor](stability/PFAFFIAN_UNIT_COEFFICIENT_HOSTILE.md) · [Independent audit](independent_pfaffian_hostile/AUDIT.md)
 
+## 13. Sharp order nine: the final finite continuation
+
+**PROVED, independently audited.** The exact variance coefficient is 175/256, with the stronger reserve
+
+```text
+Delta >= (175/256)V+(105/256)tau+C4/16+(5/8)C5+C6/4+C7+C8.
+```
+
+The complete signed cycle-cover ledger includes the full covers 3+3+3 and 2+2+2+3 without choosing a sign for det A. Four-cycle grouping uses complementary five-vertex signed margins and the necessary factor one-half on complementary four-cycles. A six-vertex variance estimate controls the triangle coupling, yielding
+
+```text
+Delta >= P+(181/256)tau+M23+C4/16+(5/8)C5+C6/4+C7+C8,
+P=V-M22+M222-M2222.
+```
+
+The separately affine residual is
+
+```text
+F=P+(19/64)W+P21-(175/256)V,
+1024F=81m-64m2+16m3-4m4+19w+16p21
+```
+
+at graph endpoints. Complete augmentation coverage starts with all 1,044 seven-vertex orbits, covers 133,632 eight-vertex augmentations and exactly 12,346 eight-vertex isomorphism classes, then adds all 256 ninth-vertex neighborhoods. The 3,160,576 final augmentations cover every nine-vertex graph up to isomorphism; this is not a literal scan of all 2^36 masks.
+
+The independent implementation uses adjacent-transposition BFS, equitable-refinement canonicalization, vertex-addition matching/wedge recurrences, and 344 separate full-DP checks. These differ from the producer's permutation orbit construction, degree-cell canonicalization, and fixed pattern-mask counts. Exact minimum is zero. Separate affinity extends the graph result to the entire real variance cube; the local triangle and disjoint-edge lifts complete the theorem.
+
+The wedge coefficient 19/64 is optimal **for this graph reduction**, forced by P3 disjoint-union three edges. It does not assert that 105/256 is the optimal actual triangle reserve. The fourteen zero augmentations represent three graph types, and some are joined by genuine continuous zero segments of the graph polynomial. Thus graph-zero geometry alone cannot force the tournament equality locus.
+
+Instead the strictly positive triangle reserve forces tau=0 at positive-variance equality. Every supported binary completion is then transitive; the accepted H=1 classification gives exactly **four fair ordinal pairs and one singleton**. That family has H=1, u=81/256, v=0, V=1 and Delta=175/256.
+
+[Order-nine theorem](stability/SHARP_NINE_GRAPH_CERTIFICATE.md) · [Independent graph audit](independent/n9_audit/AUDIT.md)
+
 ## What is not concluded
 
-The exact stability coefficient is proved for n=3,...,8 and every n>=1500. **Orders 9 through 1499 remain unresolved.** The unrestricted H-spectrum, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) also remain open. The no-zero theorem closes one explicit unbounded construction family, not every mixed-profile seed or every actual side context.
+The exact stability coefficient is proved for n=3,...,9 and every n>=1500. **Orders 10 through 1499 remain unresolved.** The unrestricted H-spectrum, global boundedness of exact spectral width, arbitrary strong-quotient scalar zero-rigidity, and LRC(14) also remain open. The no-zero theorem closes one explicit unbounded construction family, not every mixed-profile seed or every actual side context.
