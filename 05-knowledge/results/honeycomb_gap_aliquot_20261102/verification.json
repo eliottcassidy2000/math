@@ -1,0 +1,683 @@
+{
+  "geometry": [
+    {
+      "base": "2",
+      "vertices": 127,
+      "pair_checks": 8001,
+      "tree_edges": 126,
+      "rough_checks": 0,
+      "cosh_edge_length": "21/16",
+      "cross_root_depth6_cosh": "3/2"
+    },
+    {
+      "base": "9/4",
+      "vertices": 127,
+      "pair_checks": 8001,
+      "tree_edges": 126,
+      "rough_checks": 8001,
+      "cosh_edge_length": "413/288",
+      "cross_root_depth6_cosh": "4020845457/33554432"
+    },
+    {
+      "base": "5/2",
+      "vertices": 127,
+      "pair_checks": 8001,
+      "tree_edges": 126,
+      "rough_checks": 8001,
+      "cosh_edge_length": "25/16",
+      "cross_root_depth6_cosh": "10177913/8192"
+    },
+    {
+      "base": "3",
+      "vertices": 127,
+      "pair_checks": 8001,
+      "tree_edges": 126,
+      "rough_checks": 8001,
+      "cosh_edge_length": "11/6",
+      "cross_root_depth6_cosh": "29769"
+    },
+    {
+      "base": "4",
+      "vertices": 127,
+      "pair_checks": 8001,
+      "tree_edges": 126,
+      "rough_checks": 8001,
+      "cosh_edge_length": "77/32",
+      "cross_root_depth6_cosh": "4198403/2"
+    },
+    {
+      "base": "5",
+      "vertices": 127,
+      "pair_checks": 8001,
+      "tree_edges": 126,
+      "rough_checks": 8001,
+      "cosh_edge_length": "3",
+      "cross_root_depth6_cosh": "43954689"
+    }
+  ],
+  "capacity": {
+    "root5_counts": [
+      1,
+      2,
+      4,
+      6,
+      9,
+      12,
+      16,
+      21,
+      28,
+      37,
+      49,
+      64,
+      83,
+      106,
+      136,
+      173,
+      219,
+      276,
+      348,
+      440,
+      557,
+      704,
+      891,
+      1124,
+      1418,
+      1792,
+      2263
+    ],
+    "honeycomb_radius21": 694,
+    "triangular_radius26": 2107,
+    "deficits": [
+      10,
+      156
+    ],
+    "entropy_minimizing_fibres": {
+      "size1": 684,
+      "size2": 10
+    },
+    "minimum_conditional_entropy_bits": "5/176"
+  },
+  "arithmetic": {
+    "collision_equivalences_checked": 132540,
+    "collisions": 45,
+    "role_table": [
+      {
+        "n": 4,
+        "proper_divisors": [
+          1,
+          2
+        ],
+        "s": 3,
+        "sigma": 7,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 8,
+        "proper_divisors": [
+          1,
+          2,
+          4
+        ],
+        "s": 7,
+        "sigma": 15,
+        "factor_pair_compression": [
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      {
+        "n": 9,
+        "proper_divisors": [
+          1,
+          3
+        ],
+        "s": 4,
+        "sigma": 13,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 12,
+        "proper_divisors": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "s": 16,
+        "sigma": 28,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 15,
+        "proper_divisors": [
+          1,
+          3,
+          5
+        ],
+        "s": 9,
+        "sigma": 24,
+        "factor_pair_compression": [
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      {
+        "n": 16,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "s": 15,
+        "sigma": 31,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 20,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          5,
+          10
+        ],
+        "s": 22,
+        "sigma": 42,
+        "factor_pair_compression": [
+          [
+            1,
+            20
+          ]
+        ]
+      },
+      {
+        "n": 24,
+        "proper_divisors": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          8,
+          12
+        ],
+        "s": 36,
+        "sigma": 60,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 25,
+        "proper_divisors": [
+          1,
+          5
+        ],
+        "s": 6,
+        "sigma": 31,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 26,
+        "proper_divisors": [
+          1,
+          2,
+          13
+        ],
+        "s": 16,
+        "sigma": 42,
+        "factor_pair_compression": [
+          [
+            2,
+            13
+          ]
+        ]
+      },
+      {
+        "n": 28,
+        "proper_divisors": [
+          1,
+          2,
+          4,
+          7,
+          14
+        ],
+        "s": 28,
+        "sigma": 56,
+        "factor_pair_compression": []
+      },
+      {
+        "n": 33,
+        "proper_divisors": [
+          1,
+          3,
+          11
+        ],
+        "s": 15,
+        "sigma": 48,
+        "factor_pair_compression": [
+          [
+            3,
+            11
+          ]
+        ]
+      }
+    ],
+    "sigma_family_ell_through100": [
+      [
+        1,
+        20,
+        26,
+        42
+      ],
+      [
+        3,
+        68,
+        82,
+        126
+      ],
+      [
+        7,
+        164,
+        194,
+        294
+      ],
+      [
+        10,
+        236,
+        278,
+        420
+      ],
+      [
+        12,
+        284,
+        334,
+        504
+      ],
+      [
+        18,
+        428,
+        502,
+        756
+      ],
+      [
+        22,
+        524,
+        614,
+        924
+      ],
+      [
+        25,
+        596,
+        698,
+        1050
+      ],
+      [
+        30,
+        716,
+        838,
+        1260
+      ],
+      [
+        33,
+        788,
+        922,
+        1386
+      ],
+      [
+        42,
+        1004,
+        1174,
+        1764
+      ],
+      [
+        43,
+        1028,
+        1202,
+        1806
+      ],
+      [
+        52,
+        1244,
+        1454,
+        2184
+      ],
+      [
+        58,
+        1388,
+        1622,
+        2436
+      ],
+      [
+        60,
+        1436,
+        1678,
+        2520
+      ],
+      [
+        67,
+        1604,
+        1874,
+        2814
+      ],
+      [
+        75,
+        1796,
+        2098,
+        3150
+      ],
+      [
+        78,
+        1868,
+        2182,
+        3276
+      ],
+      [
+        87,
+        2084,
+        2434,
+        3654
+      ],
+      [
+        93,
+        2228,
+        2602,
+        3906
+      ],
+      [
+        100,
+        2396,
+        2798,
+        4200
+      ]
+    ],
+    "aliquot_target_twins_exponent_through13": [
+      [
+        16,
+        33,
+        15
+      ],
+      [
+        64,
+        177,
+        63
+      ],
+      [
+        256,
+        753,
+        255
+      ],
+      [
+        1024,
+        3057,
+        1023
+      ],
+      [
+        4096,
+        12273,
+        4095
+      ]
+    ]
+  },
+  "finite_graphs": {
+    "square_graphs": [
+      {
+        "n": 15,
+        "edges": 15,
+        "cycle_rank": 1,
+        "maximum_degree": 3,
+        "degree_four_vertices": [],
+        "colouring": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "n": 20,
+        "edges": 22,
+        "cycle_rank": 3,
+        "maximum_degree": 3,
+        "degree_four_vertices": [],
+        "colouring": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "n": 24,
+        "edges": 30,
+        "cycle_rank": 7,
+        "maximum_degree": 4,
+        "degree_four_vertices": [
+          1,
+          3
+        ],
+        "colouring": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "n": 25,
+        "edges": 32,
+        "cycle_rank": 8,
+        "maximum_degree": 4,
+        "degree_four_vertices": [
+          1,
+          3
+        ],
+        "colouring": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "n": 26,
+        "edges": 34,
+        "cycle_rank": 9,
+        "maximum_degree": 4,
+        "degree_four_vertices": [
+          1,
+          3
+        ],
+        "colouring": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "n": 33,
+        "edges": 49,
+        "cycle_rank": 17,
+        "maximum_degree": 5,
+        "degree_four_vertices": [
+          1,
+          4,
+          5,
+          6,
+          7
+        ],
+        "colouring": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          1,
+          0,
+          2
+        ]
+      }
+    ],
+    "odd_cycle_in_square15": [
+      1,
+      3,
+      6,
+      10,
+      15
+    ],
+    "first_cycle_occurrences": {
+      "triangle": {
+        "n": 30,
+        "witness": [
+          6,
+          19,
+          30
+        ]
+      },
+      "four_cycle": {
+        "n": 46,
+        "witness": [
+          1,
+          3,
+          46,
+          35
+        ]
+      }
+    },
+    "square25": {
+      "directed_paths": 20,
+      "path_arcs": 24,
+      "compatible_pairs": 4,
+      "pair_union_arcs": 26,
+      "guard_edges": 32,
+      "initial_active_guard_classes": 24,
+      "closed_carrier_states": 33
+    }
+  },
+  "A5_order_counts": {
+    "1": 1,
+    "2": 15,
+    "3": 20,
+    "5": 24
+  }
+}

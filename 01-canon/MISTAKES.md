@@ -4,6 +4,12 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — the honeycomb capacity deficit is ten, not twenty
+
+- **Scope:** arithmetic correction to the user's inspirational comparison; the inherited root5 certificate already had the correct counts and is unchanged.
+- **Witness / failed implication:** 704 source vertices versus694 honeycomb sites gives a deficit10. Neither the cycle deletion nor a change of arithmetic interpretation alters that subtraction.
+- **Repair:** `05-knowledge/results/honeycomb_gap_aliquot_20261102/CAPACITY_AND_COLOUR.md` retains the nearest-neighbour obstruction and proves a separate sharp information bound. For a uniform source and an unrestricted map into694 visible states, the minimizing fibres are684 singletons and10 doubletons, giving conditional entropy20/704=5/176 bits. Here20 counts occurrences in ambiguous pairs, not missing sites; adjacency need not permit the minimizing map. Its equality with the aliquot integer20 supplies no arithmetic map.
+
 ## 2026-11-02 — the prime square-sum minimum has a singleton exception
 
 - **Source:** THM-4860, `01-canon/theorems/THM-4860-the-prime-square-sum-graph-is-bipartite-by-residue-mod-4-two-primes-1-mod-3-are-never-adjacent-chebyshev-bias-obstruction-to-prime-square-sum-paths-none-below-615731-and-the-25-primes-below-100-by-ogg-layer.md`.
