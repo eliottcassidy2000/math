@@ -1,0 +1,110 @@
+{
+  "files": [
+    {
+      "bytes": 5369,
+      "path": "AUDIT.md",
+      "sha256": "1f1b701a6ac046d624ab12e8cb05348140dcfe08c6139f9c0c95739f543a4a92"
+    },
+    {
+      "bytes": 3690,
+      "path": "BALANCED_BOUNDARY.md",
+      "sha256": "f4ce18e04986dfaf5739e5a6e506b8232fff1cb79b86b6198693cd620b2b0db5"
+    },
+    {
+      "bytes": 15127,
+      "path": "BRANCH.md",
+      "sha256": "f1b5721de604714400dfabfd1a7c9a5eb222bdb5dc5b16fc4bf532b2a55e3a55"
+    },
+    {
+      "bytes": 8233,
+      "path": "GRADED_OBSERVER.md",
+      "sha256": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9"
+    },
+    {
+      "bytes": 14232,
+      "path": "GRAMMAR.md",
+      "sha256": "c3113efeab85ddde5e155d46de3d5327b2673874461d08f682ca5b1e59a03e7d"
+    },
+    {
+      "bytes": 4094,
+      "path": "INCOMING.md",
+      "sha256": "8f8e1a8db1c88b2394595dc017624264b78bc2dd847e14466fd6386a251e9a54"
+    },
+    {
+      "bytes": 19713,
+      "path": "NATIVE_SELECTION.md",
+      "sha256": "d1b2c379031259ae6673fbc16d710fb85e635abd33eeb9793581f956449cd820"
+    },
+    {
+      "bytes": 8735,
+      "path": "README.md",
+      "sha256": "e12c6f5a52af7f38e7c316743e87a3261b4f45408c3753c27c9aed1588e7508e"
+    },
+    {
+      "bytes": 267464,
+      "path": "branch_probe.json",
+      "sha256": "4d6514ae4952f10c936c3a8840660faeef7eaa040450c72dacbb02ae94808941"
+    },
+    {
+      "bytes": 18605,
+      "path": "branch_probe.py",
+      "sha256": "6aad41f84f0a9ab191162fb6d8f183cfc78f41074d13620854a09b474e74f784"
+    },
+    {
+      "bytes": 159058,
+      "path": "graded_carrier.json",
+      "sha256": "dba83ee5b2f9bfd4a0c2ba4bfcc5f94423b2afe6e0cc760a1ffc631fab2b3cff"
+    },
+    {
+      "bytes": 9509,
+      "path": "graded_carrier.py",
+      "sha256": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b"
+    },
+    {
+      "bytes": 99722,
+      "path": "grammar_inverse.json",
+      "sha256": "500ede091976f735db9d36c184f6709947b7b22baa4ba08919c82bcad0f29fad"
+    },
+    {
+      "bytes": 12453,
+      "path": "grammar_inverse.py",
+      "sha256": "f57dd47e077a0349df76158ac85a28e2a9ab08dd8f57b62831a4834d310e4ced"
+    },
+    {
+      "bytes": 1461,
+      "path": "independent_audit.json",
+      "sha256": "bb7a78cb37500da325d498a335b55cc8d8108aaa5bbc22d21b0361571f2df67e"
+    },
+    {
+      "bytes": 6088,
+      "path": "independent_audit.py",
+      "sha256": "b81c9ae018467e22c08c295253eb79ca4b41ad6ccb1faf05c011cd9b6d63c850"
+    },
+    {
+      "bytes": 70135,
+      "path": "native_port_selector.json",
+      "sha256": "414bac09a4a1ccc521b26425854ccd100a7960a3be7e5e1a84df65608e912e0e"
+    },
+    {
+      "bytes": 16330,
+      "path": "native_port_selector.py",
+      "sha256": "4fed06f0ad93e9f37c78e7e759d658381f1f85f31b42ae4a2f3ef1d2adc0a4b5"
+    },
+    {
+      "bytes": 8291,
+      "path": "sources.json",
+      "sha256": "48ee57212d20ad87d045f4821900bf6e42989dd319e2824e00aa67b4ab1c2656"
+    },
+    {
+      "bytes": 1805,
+      "path": "verification.json",
+      "sha256": "d412a279ea40b83f95f3ff38dc6218f8b7702b57af41ef864bade5541505eefb"
+    },
+    {
+      "bytes": 1441,
+      "path": "verify_packet.py",
+      "sha256": "33518ecd08a6711390e3faaa8ada277ccb6affb2ee9ba4d24fa0407e2e7b4e06"
+    }
+  ],
+  "scope": "All packet files except this manifest; caches excluded."
+}

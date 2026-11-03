@@ -53,7 +53,7 @@ Both quotients are proved prime by trial division.
 
 [NATIVE_SELECTION](NATIVE_SELECTION.md) proves these results and the general
 position law: for k children at a rooted source (h,s,q,F), the pair formed
-by the old root and a chosen leaf has content gcd(h,s,q,F) exactly at the
+by the old root and a chosen leaf has content gcd(h,s,q,F) at the
 oldest position, and gcd(q,F,h-s) at every other position. The two values
 can coincide; no inherited common factor is erased by this selector.
 

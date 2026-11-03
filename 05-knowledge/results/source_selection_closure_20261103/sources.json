@@ -1,0 +1,205 @@
+{
+  "incoming_reviewed_through": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+  "scope": "Direct local document links and computational inputs; not a transitive dependency graph.",
+  "session_base": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+  "sources": [
+    {
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "git_blob": "258dcbf8b59e8cec5a5879f41a1f1577646e5120",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "01-canon/theorems/THM-4145-rooted-homogeneous-pair-expansion-two-defect-formula.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "3f29378d1651f0da6966ca8d98526df3f94a2dfab7b5e9ba7c888df4923eada4"
+    },
+    {
+      "git_blob": "fe9bafa9f0dcf46b03acb03e328ba533dfb0d08f",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ANCESTRY.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "c3581c0a5341ef20ad094df4c1a07f8396302b1bd0d99b1010d068e1e9eb9f9b"
+    },
+    {
+      "git_blob": "8daf85791686b534baac24107b6b16dd10024292",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
+    },
+    {
+      "git_blob": "d6375d7777b554a10c5827f0e3b6e1eef4716f14",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/BLOCK_SWITCH.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "459f737c674cf6d3dfbc8732b41a42b154af11b790922f74a2b673040404359a"
+    },
+    {
+      "git_blob": "c63cbb361cd6837f58148fcaa1a54619676c1aa7",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/COMMON_OBSERVER.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "9ac00fdf97ec7ae8758a96ca5f8db6912e61d41122ec7b545db1a794cbfd8563"
+    },
+    {
+      "git_blob": "6f8d0dae821da436515990bcf9ec22f425c5641b",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.json",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "6703d24d3d1a4fe8b121c3a5d9942f2d57d67dc7ca8738d855f7260c7f8e2f23"
+    },
+    {
+      "git_blob": "8a32e98da533b1a2147540b379d30dbc66d4b90f",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/two_port_envelope.json",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe"
+    },
+    {
+      "git_blob": "8f206d3e1ffb851a369b6ee64cbc00c937a81dfa",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/exclusion_7_21_20261103/PORTS.md",
+      "revision": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+      "sha256": "b13cf604964d1335f2223aa6b2a8beeffc89de4728de7475d67f7e248b166201"
+    },
+    {
+      "git_blob": "a2c5700d81171e76d19879fc6369cfd1e66e8428",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/exclusion_7_21_20261103/PROOF.md",
+      "revision": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+      "sha256": "12bd0d094f3250d2b838502519f9cb27eeec11b008ff4f5652b8404491cc5e1b"
+    },
+    {
+      "git_blob": "f5a218c9bce6f0665dbcc0043220bff23d795b45",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session155_spectrum_20261103/primes/README.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "2849fad78d84dde44191ddb9cc696e08d1bc27bc9292b20776ad8a0ae5ec1b0a"
+    },
+    {
+      "git_blob": "0a57b55b25ffdd5a04ac31d7ccf8021336efe21d",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session157_gaps_20261103/cycles/README.md",
+      "revision": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+      "sha256": "84b9f245dc27fbd8a537f6ed4604a7aeb76bbdff471cacdaa58ee7197ad5eda7"
+    },
+    {
+      "git_blob": "2388528b3c01579a687326c67e0f9e9caaee31a9",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session157_gaps_20261103/prime_power/NOTE.md",
+      "revision": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+      "sha256": "0274561dbd60331a06d12060f434c0d78946e22d4eb77a9d837215fe68984a3d"
+    },
+    {
+      "git_blob": "92e7c9a431f2cfd55adb9b7948cf44cc70645d88",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session157_gaps_20261103/universal/NOTE.md",
+      "revision": "da9c1c4caa4523fcf220a8c65b1fd85ee2e82ce3",
+      "sha256": "6172d56fc1765d016ebd70dd859b2d60be1ba85deed413f9840f8643a6c4b2d7"
+    },
+    {
+      "git_blob": "55e5a342ad499568c62de87ac17f66e68a517663",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/spectrum31_return_20261103/LIVE_FIBRES.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "9fa9a96208bb56ff0030190db371101588fd2f1877053640b19c2bc283237579"
+    },
+    {
+      "git_blob": "29626e5110a71d06fc93c3f349edc2ba9b84dc52",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/spectrum31_return_20261103/PROJECTIVE.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "b6edb33db89e6eae45d0848f5b8f06b86f7fb216ae029238bffc7704ee829685"
+    },
+    {
+      "git_blob": "99983a71657119a839bdd669b8306ab13f3cc5f0",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/two_port_return_induction_20261103/NATIVE_RESET_INDUCTION.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "750b2dfced18d8165672e1a68f4425022a278f9f447bba049f3e43477aa2f64d"
+    },
+    {
+      "git_blob": "c870bd968059fd8b45dd0c6b06bdc47fa1fa2890",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/two_port_return_induction_20261103/OBSERVER_INDUCTION.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "545c1540dcf626a7f293c926e1838203f6aae7e93bc90b25a04b0e07dbd3b2df"
+    },
+    {
+      "git_blob": "06d9ce8647ef2a4677edaee3a5f5371739c2e112",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/two_port_return_induction_20261103/README.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "c9b4ba08320e286ecc4a9e5e4210bbd7afa87582f69b415b61e8c1fa551091a1"
+    },
+    {
+      "git_blob": "cc678d454a222e24ffaea72faad43b5fa4e9c94b",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+    },
+    {
+      "git_blob": "615f7d3fef0ac2f9cfd65ca1c45eef5dadcf7ab5",
+      "kinds": [
+        "direct computational input"
+      ],
+      "path": "05-knowledge/results/two_port_return_induction_20261103/rooted_resets.json",
+      "revision": "04d6dc35aaa364e8608fcf6f8a6d486bc6b68ef8",
+      "sha256": "fd303cc132feb5fda082ecafa9635334a3888d93107cc08797d77bedc686d3ce"
+    }
+  ]
+}
