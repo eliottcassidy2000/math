@@ -1,0 +1,348 @@
+{
+  "checks": 186,
+  "generic_dimension_controls": [
+    {
+      "common_kernel": 3,
+      "dimension": 3,
+      "directions": 6,
+      "normalized_constraint_rank": 3
+    },
+    {
+      "common_kernel": 4,
+      "dimension": 4,
+      "directions": 7,
+      "normalized_constraint_rank": 8
+    },
+    {
+      "common_kernel": 5,
+      "dimension": 5,
+      "directions": 8,
+      "normalized_constraint_rank": 15
+    },
+    {
+      "common_kernel": 6,
+      "dimension": 6,
+      "directions": 9,
+      "normalized_constraint_rank": 24
+    },
+    {
+      "common_kernel": 7,
+      "dimension": 7,
+      "directions": 10,
+      "normalized_constraint_rank": 35
+    },
+    {
+      "common_kernel": 8,
+      "dimension": 8,
+      "directions": 11,
+      "normalized_constraint_rank": 48
+    },
+    {
+      "common_kernel": 9,
+      "dimension": 9,
+      "directions": 12,
+      "normalized_constraint_rank": 63
+    }
+  ],
+  "literal_states": [
+    {
+      "state_row_major": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        6,
+        0,
+        1,
+        2
+      ],
+      "vertices": 3,
+      "word": "empty"
+    },
+    {
+      "state_row_major": [
+        2,
+        3,
+        6,
+        3,
+        6,
+        11,
+        1,
+        2,
+        3
+      ],
+      "vertices": 4,
+      "word": "C"
+    },
+    {
+      "state_row_major": [
+        1,
+        3,
+        5,
+        4,
+        6,
+        12,
+        0,
+        0,
+        0
+      ],
+      "vertices": 4,
+      "word": "D"
+    },
+    {
+      "state_row_major": [
+        3,
+        6,
+        11,
+        6,
+        11,
+        20,
+        2,
+        3,
+        6
+      ],
+      "vertices": 5,
+      "word": "CC"
+    },
+    {
+      "state_row_major": [
+        3,
+        5,
+        9,
+        6,
+        12,
+        22,
+        0,
+        0,
+        0
+      ],
+      "vertices": 5,
+      "word": "CD"
+    },
+    {
+      "state_row_major": [
+        4,
+        6,
+        12,
+        5,
+        9,
+        17,
+        1,
+        3,
+        5
+      ],
+      "vertices": 5,
+      "word": "DC"
+    },
+    {
+      "state_row_major": [
+        1,
+        3,
+        5,
+        8,
+        12,
+        24,
+        0,
+        0,
+        0
+      ],
+      "vertices": 5,
+      "word": "DD"
+    },
+    {
+      "state_row_major": [
+        6,
+        11,
+        20,
+        11,
+        20,
+        37,
+        3,
+        6,
+        11
+      ],
+      "vertices": 6,
+      "word": "CCC"
+    },
+    {
+      "state_row_major": [
+        5,
+        9,
+        17,
+        12,
+        22,
+        40,
+        0,
+        0,
+        0
+      ],
+      "vertices": 6,
+      "word": "CCD"
+    },
+    {
+      "state_row_major": [
+        6,
+        12,
+        22,
+        9,
+        17,
+        31,
+        3,
+        5,
+        9
+      ],
+      "vertices": 6,
+      "word": "CDC"
+    },
+    {
+      "state_row_major": [
+        3,
+        5,
+        9,
+        12,
+        24,
+        44,
+        0,
+        0,
+        0
+      ],
+      "vertices": 6,
+      "word": "CDD"
+    },
+    {
+      "state_row_major": [
+        5,
+        9,
+        17,
+        10,
+        18,
+        34,
+        0,
+        0,
+        0
+      ],
+      "vertices": 6,
+      "word": "DCD"
+    },
+    {
+      "state_row_major": [
+        11,
+        20,
+        37,
+        20,
+        37,
+        68,
+        6,
+        11,
+        20
+      ],
+      "vertices": 7,
+      "word": "CCCC"
+    },
+    {
+      "state_row_major": [
+        9,
+        17,
+        31,
+        18,
+        34,
+        62,
+        0,
+        0,
+        0
+      ],
+      "vertices": 7,
+      "word": "CDCD"
+    },
+    {
+      "state_row_major": [
+        3,
+        5,
+        9,
+        24,
+        48,
+        88,
+        0,
+        0,
+        0
+      ],
+      "vertices": 7,
+      "word": "CDDD"
+    },
+    {
+      "state_row_major": [
+        10,
+        18,
+        34,
+        15,
+        27,
+        51,
+        5,
+        9,
+        17
+      ],
+      "vertices": 7,
+      "word": "DCDC"
+    },
+    {
+      "state_row_major": [
+        9,
+        15,
+        29,
+        18,
+        30,
+        58,
+        8,
+        12,
+        24
+      ],
+      "vertices": 7,
+      "word": "DDCC"
+    }
+  ],
+  "physical_bank": {
+    "basis_words": [
+      "CDDD",
+      "DD",
+      "CDCD",
+      "CCD",
+      "CDC",
+      "DDCC",
+      "DCD",
+      "DCDC",
+      "CDD"
+    ],
+    "common_motion_kernel_dimension": 9,
+    "direct_period_matrix_rank_mod_1009": 87,
+    "direct_period_matrix_shape": [
+      108,
+      108
+    ],
+    "max_moves": 4,
+    "normalized_constraint_rank_mod_1009": 63,
+    "physical_basis_determinant": "2048",
+    "words": [
+      "CDDD",
+      "DD",
+      "CDCD",
+      "CCD",
+      "CDC",
+      "DDCC",
+      "DCD",
+      "DCDC",
+      "CDD",
+      "CCC",
+      "CCCC",
+      "C"
+    ]
+  },
+  "radius_three": {
+    "basis_determinant_matrix_coordinates": 16,
+    "blind_quotient_dimension_exact": 3,
+    "kernel_dimension_exact": 12,
+    "normalized_constraint_rank_mod_1009": 60,
+    "radius_two_span": 7,
+    "word_count": 15
+  }
+}

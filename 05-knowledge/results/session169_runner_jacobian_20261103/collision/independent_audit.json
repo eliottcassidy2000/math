@@ -1,0 +1,39 @@
+{
+  "direct_period_rank_Q": 87,
+  "generic_banks": [
+    {
+      "dimension": 3,
+      "rank_Q": 3
+    },
+    {
+      "dimension": 4,
+      "rank_Q": 8
+    },
+    {
+      "dimension": 5,
+      "rank_Q": 15
+    },
+    {
+      "dimension": 6,
+      "rank_Q": 24
+    },
+    {
+      "dimension": 7,
+      "rank_Q": 35
+    },
+    {
+      "dimension": 8,
+      "rank_Q": 48
+    },
+    {
+      "dimension": 9,
+      "rank_Q": 63
+    }
+  ],
+  "positive_constraint_rank_Q": 63,
+  "radius_three_blind_quotient_dimension_Q": 3,
+  "radius_three_constraint_rank_Q": 60,
+  "radius_three_kernel_rank_Q": 12,
+  "radius_two_span_Q": 7,
+  "status": "PASS"
+}
