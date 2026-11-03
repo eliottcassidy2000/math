@@ -77,3 +77,9 @@ No correction to an established theorem or new theorem-ID reservation was
 needed. Existing order-five and weighted-cut results are explicitly
 credited. The stronger all-size claims here are mathematical proofs;
 finite controls and inherited numerical banks are labeled separately.
+
+Final integration checks passed: all packet links resolve after the clean
+rebase; artifact and inherited-source hashes match; and
+`python3 agents/check_docs.py` passes its bounded-startup, frontmatter,
+correction-sentinel and router checks. The new route is kept in HN and the
+results index to respect the maintained frontier's existing line budget.

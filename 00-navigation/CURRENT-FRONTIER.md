@@ -244,7 +244,6 @@ proves the full A2 parity response negative at the original zero; beta-skip is O
   reading. THM-4088/4095 show bare order loses magnitude/type; THM-4093 needs cycles.
 - THM-4094 reduces completeness, via exact deletion and carries `49,63,343`,
   to lanes `p` (`p!=7`) and `7p` (`p!=3`). [Birth/embedding limits](../05-knowledge/results/metagraph_primegame_20261102/README.md).
-- [Prime lanes and attachment ports](../05-knowledge/results/prime_lane_ports_five_groups_20261102/README.md): **PROVED scoped / FINITE-EXACT, independently audited.** Actual source-order moves give sparse strong dyadic prime/7p exchanges. Independent triangle modules force `v3(H)>=max(k-2r,0)` after r births, sharply even for strong targets when r>=1,k>=2r; new-new rewiring preserves a stronger modulus. Two births detect circulation erased by the entire one-step response. The recovered25-prime groups require physical square-sum ports; H49 carries all24 odd labels, while23–2–47 blocks the even vertex under odd-square dilation. Universal realization remains OPEN.
 - THM-4099 makes insertion compositional; marginals lose mixed response.
 - THM-4097/4102/4104/4111--4137 handle the order-nine/ten interval-cut route;
   THM-4144/4162/4163 close nonprimes, THM-4168 symmetric primes, and
