@@ -1,0 +1,33 @@
+{
+  "files": {
+    "AUDIT.md": "f67925210659700d929b25f10758289121c431131a760e181220e3bbb9a3aa76",
+    "BOUNDARY_BUDGET.md": "61e2965a2cec5263134f70e396901d9b0a62f4d80837642bf603c9409b5b0dcb",
+    "README.md": "04c84ba2399489d77c82c1a5cb1aa3263bb9e690157ed2a62b3904da2554a884",
+    "attachment.md": "40555deb834245e47cbdd670d5eba973e8f8a6cc2dade333a47b7619b5da3669",
+    "attachment_boundary_audit.md": "baa386188526cee1fcf086496b456b8ffd3ad4dd10f47d731b8567ba44cc952a",
+    "attachment_probe.py": "ca871ad71b7c999e03c9d54e3316c39725a31d7ae7a7ae09de01e666c34f3f97",
+    "attachment_receipt.json": "aaf29bddc05044db836aa1bdc67c83263ae2e6a0b9b3dea12f894f56fffcb91b",
+    "audit_attachment.json": "949311538b1a01395836103af041ad25ca47ab0840e077d646c2bbc4ceee824c",
+    "audit_attachment.md": "7d0113b4993d75c3a4de81bc0d9ca0df8435eba5355a4abe4eba2aa03d21d529",
+    "audit_attachment.py": "9de79b7792aa1fe865d7c271eb8f859d6cee66642f5d2325d3f4600df92ff60c",
+    "audit_realization.json": "5a51bc0bea47e5d6fffcd33cc5f52cfc2ba48a84d00838e0831df60628fcee00",
+    "audit_realization.md": "9808587d4ab23e928f5022a0e8a111c9769e694deb92624fd3ae78b3ae30c8e1",
+    "audit_realization.py": "cfbebe8d5fa075dec5e451cb8989197adfeaa4b3ff313f18ce96bf8160deee78",
+    "boundary_budget.json": "debdf9a96cb67fec3a726dba2df1893e84164c6393d8bbbfd8355f42c5e4b716",
+    "boundary_budget.py": "3c179574387df0c6e5433657a3fa3760550a7b2ce766b4139706f7181e767119",
+    "boundary_independent.md": "34a06fb4ab29d7f7d70627feba5aa60bf0f8a6cae177facb716dfdb1836b5e10",
+    "boundary_independent.out": "c953d057a0015c9ed2747ee6525d32013aa07812734b8b45b00032171930766e",
+    "boundary_independent.py": "da2ec7b165b4034fef08ea9c1fac592daee87b16d67cec6cd84108dfe5c1c0cd",
+    "prime_groups.json": "08373dd9761c83a53f66fcbf18c9a7b38b892589974cdaf50d1ebee445c12201",
+    "prime_groups.md": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba",
+    "prime_groups.png": "90e8fc132a849393244e922dd1691b3ac5db2da72ed84f701bcacf073438328c",
+    "prime_groups.svg": "83e9d34ef2f6a676120577730e82c348bad4b676aa6c9ea83ade6a5dd1044e77",
+    "prime_groups_probe.py": "e0519b532b6e330f8936d14e2fecfdf49dc5f79d8dbf87a2f15dd5411b524469",
+    "realization.json": "60c8f3a6799eed83840246fa626f32c4ebbf4c4fef6c8e66d7d518a19e6a8294",
+    "realization.md": "53553dbf93dd3b687c0eb4291a13311d6f514d68b43e51f0baab005ab805278d",
+    "realization_probe.py": "5015dc2e2ac1362d4c6c6b5622756c895f0b0a39cbb1deface6bd059576e305e",
+    "source_pins.json": "dc42b16959fa6551c11c441d0907b4f300a88e991081b3c36a80869cfe7f678f"
+  },
+  "hash": "sha256 raw bytes",
+  "scope": "All direct files except this manifest; inherited sources pinned separately"
+}

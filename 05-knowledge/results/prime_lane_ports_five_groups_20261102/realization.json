@@ -1,0 +1,102 @@
+{
+  "H13_family_membership": [],
+  "checks": {
+    "actual_word_swap_controls": 2408,
+    "arbitrary_block_cut_profiles": 1098,
+    "direct_full_state_words": 723,
+    "family_formula_and_residue_controls": 60,
+    "general_matrix_checks": 156
+  },
+  "port_convention": "apex beats first a triangle vertices, all prefix vertices; loses to zero singleton",
+  "same_port_prime_lanes": [
+    [
+      23,
+      29
+    ],
+    [
+      35,
+      59
+    ],
+    [
+      71,
+      119
+    ],
+    [
+      287,
+      479
+    ]
+  ],
+  "small_families": [
+    {
+      "U": 23,
+      "V": 29,
+      "a": 1,
+      "r": 1,
+      "vertices": 6
+    },
+    {
+      "U": 17,
+      "V": 29,
+      "a": 2,
+      "r": 1,
+      "vertices": 6
+    },
+    {
+      "U": 53,
+      "V": 65,
+      "a": 1,
+      "r": 2,
+      "vertices": 7
+    },
+    {
+      "U": 35,
+      "V": 59,
+      "a": 2,
+      "r": 2,
+      "vertices": 7
+    },
+    {
+      "U": 113,
+      "V": 137,
+      "a": 1,
+      "r": 3,
+      "vertices": 8
+    },
+    {
+      "U": 71,
+      "V": 119,
+      "a": 2,
+      "r": 3,
+      "vertices": 8
+    },
+    {
+      "U": 233,
+      "V": 281,
+      "a": 1,
+      "r": 4,
+      "vertices": 9
+    },
+    {
+      "U": 143,
+      "V": 239,
+      "a": 2,
+      "r": 4,
+      "vertices": 9
+    },
+    {
+      "U": 473,
+      "V": 569,
+      "a": 1,
+      "r": 5,
+      "vertices": 10
+    },
+    {
+      "U": 287,
+      "V": 479,
+      "a": 2,
+      "r": 5,
+      "vertices": 10
+    }
+  ],
+  "status": "PROVED formulas; FINITE-EXACT implementation controls, no all-prime coverage"
+}

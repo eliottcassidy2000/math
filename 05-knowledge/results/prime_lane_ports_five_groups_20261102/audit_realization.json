@@ -1,0 +1,174 @@
+{
+  "empty_full_context_controls": 396,
+  "families": [
+    {
+      "H": [
+        23,
+        29
+      ],
+      "a": 1,
+      "changed_named_edges": 3,
+      "parent_ordered_nonempty_cover_profile": [
+        3,
+        42,
+        162,
+        240,
+        120
+      ],
+      "r": 1,
+      "vertices": 6
+    },
+    {
+      "H": [
+        17,
+        29
+      ],
+      "a": 2,
+      "changed_named_edges": 3,
+      "parent_ordered_nonempty_cover_profile": [
+        3,
+        42,
+        162,
+        240,
+        120
+      ],
+      "r": 1,
+      "vertices": 6
+    },
+    {
+      "H": [
+        53,
+        65
+      ],
+      "a": 1,
+      "changed_named_edges": 3,
+      "parent_ordered_nonempty_cover_profile": [
+        3,
+        90,
+        612,
+        1608,
+        1800,
+        720
+      ],
+      "r": 2,
+      "vertices": 7
+    },
+    {
+      "H": [
+        35,
+        59
+      ],
+      "a": 2,
+      "changed_named_edges": 3,
+      "parent_ordered_nonempty_cover_profile": [
+        3,
+        90,
+        612,
+        1608,
+        1800,
+        720
+      ],
+      "r": 2,
+      "vertices": 7
+    },
+    {
+      "H": [
+        113,
+        137
+      ],
+      "a": 1,
+      "changed_named_edges": 3,
+      "parent_ordered_nonempty_cover_profile": [
+        3,
+        186,
+        2106,
+        8880,
+        17040,
+        15120,
+        5040
+      ],
+      "r": 3,
+      "vertices": 8
+    },
+    {
+      "H": [
+        71,
+        119
+      ],
+      "a": 2,
+      "changed_named_edges": 3,
+      "parent_ordered_nonempty_cover_profile": [
+        3,
+        186,
+        2106,
+        8880,
+        17040,
+        15120,
+        5040
+      ],
+      "r": 3,
+      "vertices": 8
+    },
+    {
+      "H": [
+        233,
+        281
+      ],
+      "a": 1,
+      "changed_named_edges": 3,
+      "r": 4,
+      "vertices": 9
+    },
+    {
+      "H": [
+        143,
+        239
+      ],
+      "a": 2,
+      "changed_named_edges": 3,
+      "r": 4,
+      "vertices": 9
+    },
+    {
+      "H": [
+        473,
+        569
+      ],
+      "a": 1,
+      "changed_named_edges": 3,
+      "r": 5,
+      "vertices": 10
+    },
+    {
+      "H": [
+        287,
+        479
+      ],
+      "a": 2,
+      "changed_named_edges": 3,
+      "r": 5,
+      "vertices": 10
+    }
+  ],
+  "independence": "No producer imports; adjacency DFS, full permutations, and cut-of-permutation cover counts.",
+  "literal_profiles": 1098,
+  "named_contextual_swaps": 1584,
+  "profile_universe": "all labelled tournaments n1..4 with every apex cut",
+  "r0_outside_formula_scope": [
+    {
+      "a": 1,
+      "actual_H": [
+        5,
+        9
+      ]
+    },
+    {
+      "a": 2,
+      "actual_H": [
+        5,
+        13
+      ]
+    }
+  ],
+  "status": "PASS"
+}

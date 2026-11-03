@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="920" viewBox="0 0 1260 920">
+<rect width="1260" height="920" fill="#f8fafc"/>
+<text x="30" y="43" font-family="Arial,sans-serif" font-size="27" fill="#14213d">The actual five prime groups: names and square-sum ports survive</text>
+<text x="30" y="80" font-family="Arial,sans-serif" font-size="21" fill="#14213d">First 25 primes = all primes below 100. An edge means p + q is an integer square.</text>
+<text x="85" y="116" font-family="Arial,sans-serif" font-size="18" fill="#14213d">A: 2 and primes 1 mod 4 (12)</text>
+<text x="580" y="116" font-family="Arial,sans-serif" font-size="18" fill="#14213d">B: primes 3 mod 4 (13)</text>
+<line x1="260" y1="145" x2="690" y2="188" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="145" x2="690" y2="317" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="145" x2="690" y2="446" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="145" x2="690" y2="618" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="145" x2="260" y2="231" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="145" x2="260" y2="489" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="145" x2="260" y2="618" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="188" x2="690" y2="231" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="188" x2="690" y2="360" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="188" x2="690" y2="489" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="188" x2="260" y2="317" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="231" x2="260" y2="446" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="231" x2="260" y2="575" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="231" x2="690" y2="317" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="274" x2="690" y2="274" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="274" x2="690" y2="446" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="274" x2="690" y2="661" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="317" x2="260" y2="403" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="317" x2="690" y2="575" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="403" x2="690" y2="489" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="446" x2="260" y2="446" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="446" x2="260" y2="618" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="260" y1="489" x2="690" y2="661" stroke="#b3bdcc" stroke-width="2"/>
+<line x1="690" y1="575" x2="260" y2="532" stroke="#b3bdcc" stroke-width="2"/>
+<circle cx="260" cy="145" r="9" fill="#2764a5"/>
+<text x="212" y="152" font-family="Arial,sans-serif" font-size="20" fill="#2764a5">2</text>
+<circle cx="690" cy="145" r="9" fill="#2764a5"/>
+<text x="708" y="152" font-family="Arial,sans-serif" font-size="20" fill="#2764a5">3</text>
+<circle cx="260" cy="188" r="9" fill="#2764a5"/>
+<text x="212" y="195" font-family="Arial,sans-serif" font-size="20" fill="#2764a5">5</text>
+<circle cx="690" cy="188" r="9" fill="#2764a5"/>
+<text x="708" y="195" font-family="Arial,sans-serif" font-size="20" fill="#2764a5">7</text>
+<circle cx="690" cy="231" r="9" fill="#2764a5"/>
+<text x="708" y="238" font-family="Arial,sans-serif" font-size="20" fill="#2764a5">11</text>
+<circle cx="260" cy="231" r="9" fill="#2764a5"/>
+<text x="212" y="238" font-family="Arial,sans-serif" font-size="20" fill="#2764a5">13</text>
+<circle cx="260" cy="274" r="9" fill="#a14ca1"/>
+<text x="212" y="281" font-family="Arial,sans-serif" font-size="20" fill="#a14ca1">17</text>
+<circle cx="690" cy="274" r="9" fill="#a14ca1"/>
+<text x="708" y="281" font-family="Arial,sans-serif" font-size="20" fill="#a14ca1">19</text>
+<circle cx="690" cy="317" r="9" fill="#a14ca1"/>
+<text x="708" y="324" font-family="Arial,sans-serif" font-size="20" fill="#a14ca1">23</text>
+<circle cx="260" cy="317" r="9" fill="#cf8425"/>
+<text x="212" y="324" font-family="Arial,sans-serif" font-size="20" fill="#cf8425">29</text>
+<circle cx="690" cy="360" r="9" fill="#a14ca1"/>
+<text x="708" y="367" font-family="Arial,sans-serif" font-size="20" fill="#a14ca1">31</text>
+<circle cx="260" cy="360" r="9" fill="#168a75"/>
+<text x="212" y="367" font-family="Arial,sans-serif" font-size="20" fill="#168a75">37</text>
+<text x="117" y="367" font-family="Arial,sans-serif" font-size="16" fill="#b91c1c">isolated</text>
+<circle cx="260" cy="403" r="9" fill="#cf8425"/>
+<text x="212" y="410" font-family="Arial,sans-serif" font-size="20" fill="#cf8425">41</text>
+<circle cx="690" cy="403" r="9" fill="#168a75"/>
+<text x="708" y="410" font-family="Arial,sans-serif" font-size="20" fill="#168a75">43</text>
+<text x="754" y="410" font-family="Arial,sans-serif" font-size="16" fill="#b91c1c">isolated</text>
+<circle cx="690" cy="446" r="9" fill="#a14ca1"/>
+<text x="708" y="453" font-family="Arial,sans-serif" font-size="20" fill="#a14ca1">47</text>
+<circle cx="260" cy="446" r="9" fill="#168a75"/>
+<text x="212" y="453" font-family="Arial,sans-serif" font-size="20" fill="#168a75">53</text>
+<circle cx="690" cy="489" r="9" fill="#cf8425"/>
+<text x="708" y="496" font-family="Arial,sans-serif" font-size="20" fill="#cf8425">59</text>
+<circle cx="260" cy="489" r="9" fill="#168a75"/>
+<text x="212" y="496" font-family="Arial,sans-serif" font-size="20" fill="#168a75">61</text>
+<circle cx="690" cy="532" r="9" fill="#168a75"/>
+<text x="708" y="539" font-family="Arial,sans-serif" font-size="20" fill="#168a75">67</text>
+<text x="754" y="539" font-family="Arial,sans-serif" font-size="16" fill="#b91c1c">isolated</text>
+<circle cx="690" cy="575" r="9" fill="#cf8425"/>
+<text x="708" y="582" font-family="Arial,sans-serif" font-size="20" fill="#cf8425">71</text>
+<circle cx="260" cy="532" r="9" fill="#d45162"/>
+<text x="212" y="539" font-family="Arial,sans-serif" font-size="20" fill="#d45162">73</text>
+<circle cx="690" cy="618" r="9" fill="#d45162"/>
+<text x="708" y="625" font-family="Arial,sans-serif" font-size="20" fill="#d45162">79</text>
+<circle cx="690" cy="661" r="9" fill="#d45162"/>
+<text x="708" y="668" font-family="Arial,sans-serif" font-size="20" fill="#d45162">83</text>
+<circle cx="260" cy="575" r="9" fill="#d45162"/>
+<text x="212" y="582" font-family="Arial,sans-serif" font-size="20" fill="#d45162">89</text>
+<circle cx="260" cy="618" r="9" fill="#d45162"/>
+<text x="212" y="625" font-family="Arial,sans-serif" font-size="20" fill="#d45162">97</text>
+<text x="825" y="145" font-family="Arial,sans-serif" font-size="23" fill="#14213d">Recovered groups</text>
+<text x="825" y="193" font-family="Arial,sans-serif" font-size="18" fill="#2764a5">G1: 2,3,5,7,11,13</text>
+<text x="825" y="220" font-family="Arial,sans-serif" font-size="15" fill="#14213d">prime divisors of Fi22</text>
+<text x="825" y="279" font-family="Arial,sans-serif" font-size="18" fill="#a14ca1">G2: 17,19,23,31,47</text>
+<text x="825" y="306" font-family="Arial,sans-serif" font-size="15" fill="#14213d">new prime divisors in Baby Monster</text>
+<text x="825" y="365" font-family="Arial,sans-serif" font-size="18" fill="#cf8425">G3: 29,41,59,71</text>
+<text x="825" y="392" font-family="Arial,sans-serif" font-size="15" fill="#14213d">new prime divisors in Monster</text>
+<text x="825" y="451" font-family="Arial,sans-serif" font-size="18" fill="#168a75">G4: 37,43,53,61,67</text>
+<text x="825" y="478" font-family="Arial,sans-serif" font-size="15" fill="#14213d">first five primes outside Monster support</text>
+<text x="825" y="537" font-family="Arial,sans-serif" font-size="18" fill="#d45162">G5: 73,79,83,89,97</text>
+<text x="825" y="564" font-family="Arial,sans-serif" font-size="15" fill="#14213d">remaining five below 100</text>
+<text x="825" y="665" font-family="Arial,sans-serif" font-size="18" fill="#14213d">24 edges; components 22 + 1 + 1 + 1</text>
+<text x="825" y="696" font-family="Arial,sans-serif" font-size="18" fill="#14213d">Cycle rank 3; no spanning path.</text>
+<line x1="30" y1="740" x2="1230" y2="740" stroke="#cbd5e1" stroke-width="2"/>
+<text x="30" y="778" font-family="Arial,sans-serif" font-size="21" fill="#14213d">Exact tournament bridge: choose K with H(K)=49; send T to the ordered join K -&gt; T.</text>
+<text x="30" y="816" font-family="Arial,sans-serif" font-size="20" fill="#14213d">H becomes 49H, tournament order increases by 7, and each square root s becomes 7s.</text>
+<text x="30" y="854" font-family="Arial,sans-serif" font-size="20" fill="#14213d">5 + 11 = 4^2  -&gt;  245 + 539 = 28^2.  Multiplication by 7 alone gives 35 + 77 = 112.</text>
+<text x="30" y="891" font-family="Arial,sans-serif" font-size="17" fill="#14213d">The 24 odd primes lift to count labels 49p; an odd label for prime 2 cannot keep its edges to 23 and 47.</text>
+</svg>

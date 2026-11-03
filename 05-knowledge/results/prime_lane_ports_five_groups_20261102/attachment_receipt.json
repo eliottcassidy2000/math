@@ -1,0 +1,408 @@
+{
+  "all_cut_controls": {
+    "cuts": 33866,
+    "parents": 1099
+  },
+  "canonical_eight_cases": [
+    {
+      "H": [
+        13,
+        11
+      ],
+      "a": 6,
+      "b": 5,
+      "deletion_H_decks": [
+        [
+          3,
+          3,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        0,
+        0
+      ],
+      "new_arc_x_to_y": 0
+    },
+    {
+      "H": [
+        11,
+        13
+      ],
+      "a": 6,
+      "b": 5,
+      "deletion_H_decks": [
+        [
+          1,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          3,
+          3,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        0,
+        0
+      ],
+      "new_arc_x_to_y": 1
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "a": 6,
+      "b": 4,
+      "deletion_H_decks": [
+        [
+          1,
+          3,
+          3,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        0,
+        1
+      ],
+      "new_arc_x_to_y": 0
+    },
+    {
+      "H": [
+        11,
+        15
+      ],
+      "a": 6,
+      "b": 4,
+      "deletion_H_decks": [
+        [
+          1,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          3,
+          3,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        0,
+        1
+      ],
+      "new_arc_x_to_y": 1
+    },
+    {
+      "H": [
+        11,
+        15
+      ],
+      "a": 4,
+      "b": 6,
+      "deletion_H_decks": [
+        [
+          1,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          3,
+          3,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        1,
+        0
+      ],
+      "new_arc_x_to_y": 0
+    },
+    {
+      "H": [
+        9,
+        9
+      ],
+      "a": 4,
+      "b": 6,
+      "deletion_H_decks": [
+        [
+          1,
+          3,
+          3,
+          5,
+          5
+        ],
+        [
+          1,
+          1,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        1,
+        0
+      ],
+      "new_arc_x_to_y": 1
+    },
+    {
+      "H": [
+        11,
+        13
+      ],
+      "a": 4,
+      "b": 2,
+      "deletion_H_decks": [
+        [
+          1,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          3,
+          3,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        1,
+        1
+      ],
+      "new_arc_x_to_y": 0
+    },
+    {
+      "H": [
+        13,
+        11
+      ],
+      "a": 4,
+      "b": 2,
+      "deletion_H_decks": [
+        [
+          3,
+          3,
+          5,
+          5,
+          5
+        ],
+        [
+          1,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "missing_signature": [
+        1,
+        1
+      ],
+      "new_arc_x_to_y": 1
+    }
+  ],
+  "check_semantics": "explicit exceptions active under python -O",
+  "difference_histogram": {
+    "-4": 6,
+    "-2": 12,
+    "0": 92,
+    "2": 12,
+    "4": 6
+  },
+  "linear_response_span": {
+    "all_fixed_dimension": "7 (inherited; elementary no-old-triangle upper bound)",
+    "evaluation_matrix": [
+      [
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      [
+        3,
+        5,
+        9,
+        9,
+        3,
+        9,
+        5,
+        9
+      ],
+      [
+        5,
+        3,
+        9,
+        3,
+        9,
+        9,
+        9,
+        5
+      ],
+      [
+        5,
+        5,
+        13,
+        9,
+        9,
+        13,
+        11,
+        11
+      ],
+      [
+        1,
+        3,
+        5,
+        5,
+        1,
+        5,
+        3,
+        5
+      ],
+      [
+        3,
+        1,
+        5,
+        1,
+        5,
+        5,
+        5,
+        3
+      ],
+      [
+        5,
+        5,
+        13,
+        9,
+        9,
+        11,
+        15,
+        13
+      ]
+    ],
+    "first_seven_columns_determinant": -128,
+    "one_new_dimension": 4,
+    "seven_contexts": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "two_new_dimension": 7
+  },
+  "one_new_triangle_responses": [
+    3,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    3
+  ],
+  "prime_target_witness": {
+    "H": [
+      13,
+      11
+    ],
+    "first_old_to_new_mask": 1,
+    "negative_child_rows": [
+      12,
+      17,
+      2,
+      6,
+      13
+    ],
+    "positive_child_rows": [
+      10,
+      20,
+      1,
+      6,
+      13
+    ],
+    "second_old_to_new_mask": 2
+  },
+  "status": "FINITE-EXACT",
+  "triangle_module_controls": 296,
+  "two_new_classification": [
+    {
+      "count": 36,
+      "same_H": false,
+      "same_class": false
+    },
+    {
+      "count": 12,
+      "same_H": true,
+      "same_class": false
+    },
+    {
+      "count": 80,
+      "same_H": true,
+      "same_class": true
+    }
+  ],
+  "universe": "all labelled parents orders1..5; all128 two-new attachments of each named cyclic triangle"
+}

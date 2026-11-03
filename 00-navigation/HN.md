@@ -1,5 +1,7 @@
 # Full boundaries, tournament families, and information
 
+[Prime/7p realization and the five prime groups](../05-knowledge/results/prime_lane_ports_five_groups_20261102/README.md): arbitrary-block source-order relocation, explicit strong dyadic lane exchanges, and a sharp multi-birth symmetry budget. The complete two-birth triangle detector identifies the circulation lost by one-step response; actual square-carry joins connect the25-prime graph while retaining individual ports and the obstruction at2. Independently audited scoped results; full Hamilton spectrum remains OPEN.
+
 [Compatible pairings and four-bit recurrences](../05-knowledge/results/paired_recursions_20261103/README.md): exact free binary rank commuting with converse and H-fibre fixed-point defect; normalized A000568 modulo16 with weighted CRT; minimum n5 full-frame cover corrected to4. Abstract symmetry feasibility is separate from native metagraph realization. Full Hamilton spectrum remains OPEN.
 
 [Parity, joint spectrum and toothpick symmetry](../05-knowledge/results/tournament_joint_parity_20261102/README.md): explicit class pairing from odd presentation fibres; no free H-preserving pairing; exact self-converse parity tails and sharp order-five attachment-distribution obstruction. Full spectrum remains OPEN.

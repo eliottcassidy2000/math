@@ -1,0 +1,8 @@
+PASS: 80 sources/cuts; 69342 literal Hamilton words; 104316 generator images
+PASS: nonextendable source symmetries, sharp named source deletion and ordered-join counts
+strong sharp 1 0 (7, 41, 41, 0)
+strong sharp 1 1 (10, 537, 537, 0)
+strong sharp 1 2 (13, 6471, 6471, 0)
+strong sharp 2 0 (14, 1681, 7009, 5328)
+strong sharp 2 1 (17, 22017, 107985, 85968)
+PASS: strong all-budget construction controls, exceptional t=0 seed and higher new-edge congruence

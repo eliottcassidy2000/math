@@ -1,0 +1,175 @@
+{
+  "base_commit": "48298050dea58978d7a8a4d239dd058b47925a70",
+  "incoming_reviewed_through": "f48af4d9486ca9b390c635fae04c94262733b77b",
+  "scope": "Identity pins for inherited sources; theorem scope comes from the linked documents. This is not a claim to replay every inherited theorem.",
+  "sources": [
+    {
+      "git_blob": "8ef9df35a1d5ff9446e011e4e50b7f1d57e2306c",
+      "path": "01-canon/theorems/THM-1862-order-join-reduction-principle.md",
+      "sha256": "329eb02887d21f178db6ddb2c71806da0b9f2695552c645409be64360ac6d58e",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "39d7d2e857bb6a158fe7717c0c14bf6360dfcbdb",
+      "path": "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md",
+      "sha256": "01abd5e2a0bb1fc617d3f2649534acfb7b05f00cc4fe7573deb18302997c9198",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "7a5c2349f4b74110d743dd443ae8f595e34c3599",
+      "path": "01-canon/theorems/THM-4097-order-nine-strong-ear-spectrum-solid-interval-and-lane-extension.md",
+      "sha256": "73f5b6430abf1386c910968d8fc73081732c2800a6bff22b619cbe27d410ded7",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "05551ae58e601035475788ff8919fb551388e31b",
+      "path": "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/README.md",
+      "sha256": "fe98f7ba5190a1551ae943e685dc0cb363ac09376b46255206b3bc1bd0585539",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "d4547e987ea2e2c6a57e990fe91f3adc22786da1",
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "sha256": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "afe071a3082399b2ea8d6ae81df91217602389e2",
+      "path": "05-knowledge/results/n7_class_reps_boxeph_S152.txt",
+      "sha256": "151070ab6234a9fd9f449f05f93feab64a04b17ad8dae71ba7b7a19679ccd262",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "9c43c8e721bb392fa7e49b0a44d15d01a413b44e",
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/BRANCHES.md",
+      "sha256": "692306c41e9413e7d2f6536343ae3c4724ef6b185801acc2ffa4c40055804e57",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "1f762c0bf5422c8953db4561fcc5bf6d5a7a504c",
+      "path": "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md",
+      "sha256": "c19454f45ca6958abf84535500d70f4813670aab9fe060a63cb8eba14d401956",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "cf651da723eecbbb10e8741d318dd4172749e856",
+      "path": "05-knowledge/results/session124_tournament_cut_response_20261031/README.md",
+      "sha256": "b497fb33d662598913946bbeb818c7d758aec38782488f0ca6f0da4581ca5dc8",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "b5f32625eb334b824174d9a90cf2c44db943734c",
+      "path": "05-knowledge/results/session136_full_tournament_spectrum_20261102/ear_geometry/positive_cut_geometry.md",
+      "sha256": "3ce83912d0d0a75f3fe94af6ee5535b3227b9ed4af7ca1daaf682ec39e2cb719",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "df6662e19f704959c36c649344d3220f7d0d9e38",
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md",
+      "sha256": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "003a0aa48937ddf723b96091a6b7e87f2556fa56",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier10_upper/PROOF.md",
+      "sha256": "830fad776d3ff32a0bda00d8241fb79319864255c71f7822af9420c6f50d2b51",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "6f56e3a8c4a739dbdfad1b6c28a4e6f064e84d0c",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/adaptive/RESULT.md",
+      "sha256": "89a81021b0c32a226de74001ea210cd56172cfed4f8351456b17ab7a53b806eb",
+      "source_commit": "f48af4d9486ca9b390c635fae04c94262733b77b"
+    },
+    {
+      "git_blob": "ff176451599ff152e65a79b8afb16d3375aeac6e",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/gadgets/RESULT.md",
+      "sha256": "1fe138c98ddcff609269b2b8437fbdd0432c47115646b984c9065ad41ef0bf86",
+      "source_commit": "f48af4d9486ca9b390c635fae04c94262733b77b"
+    },
+    {
+      "git_blob": "1a1649d3a2e3429e784007b068f64de9fbad6b8c",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/induction/RESULT.md",
+      "sha256": "a030e18ca55fa61d1682d3c39ab0f977dee464aa4f6e4450cfc25a4307197a62",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "23b72e33063fb21b7282f42e08821d83638a5211",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/obstructions/RESULT.md",
+      "sha256": "6c9785bc7c38c4124135934ff8677694875f951760f3fce3c4c997e3999e3f81",
+      "source_commit": "f48af4d9486ca9b390c635fae04c94262733b77b"
+    },
+    {
+      "git_blob": "9d8d1b44ad3208d9e9f2a23b02170f16c29d25be",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/prime_induction/RESULT.md",
+      "sha256": "19462f34ba7c8b48ce91f79b954bd0c5977e125892dfb13f0fe900957344b568",
+      "source_commit": "f48af4d9486ca9b390c635fae04c94262733b77b"
+    },
+    {
+      "git_blob": "12ebad29f33a48ebc129db38fdbd243e6823eedf",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/status/verify_witnesses.py",
+      "sha256": "0ad133bf705782efeb55b938795f52383679887e8308e364c6d5c9685b56648c",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "a570f5a58e77d5ef31fdfc898224b7a8cb263f14",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/transfer/TRANSFER.md",
+      "sha256": "7286be338f9e0c15becc2e8187616014f39b1c4ed05a9bd7ec479404715d6ab0",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "432a858f8ab725c1456f3b1e88f5aae427c2702c",
+      "path": "05-knowledge/results/session32_square_monster_20261023/FISCHER_SUPPORT_SHELLS.md",
+      "sha256": "dc07a08481befedda81558d5c32896783241b6000aee028c847bd0b82a055d48",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "30c84d0458302b114f885c6211aa55b16bd3239f",
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/README.md",
+      "sha256": "4df5d13b18f4dd3e100c8ba8f3c4da7ccbcfa2fc34d5024a9d6a00c7e67c180a",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "ac385bcbb3d3141e3fb53553c68e834494015562",
+      "path": "05-knowledge/results/square_birth_windows_20261103/GROWTH.md",
+      "sha256": "89d84ca310c6aaf2bfd147a2b7c66e05040d9a09d02d492e0caa965e0b7de7ba",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "59b0b3c807d8ba7d4c7d8477d96cb62a28787491",
+      "path": "05-knowledge/results/square_birth_windows_20261103/LEDGER.md",
+      "sha256": "3d311171d93e64e641d6bafef15da7e1414687801d26134bb433d52e8cbb6b6d",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "1ddeeba2e245ae53cb840ce8fea205a6e753b2e8",
+      "path": "05-knowledge/results/square_birth_windows_20261103/README.md",
+      "sha256": "bf3dc2d16d6f061215e1a3b895c749ceb73168f2aa35a6ca18b2058860da58ef",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "8ca0795b4090ea4fd8055f9d6107bf452a60bae7",
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",
+      "sha256": "dc20e1e97aff4c0e82c04b3ed6759649b0c403b851e2d176b5f600491dd9fbb9",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "4751d5eae9f000e5f986d5f04599af9d65401f0a",
+      "path": "05-knowledge/results/uniform_prime_transport_20261103/README.md",
+      "sha256": "7f16f0b7d81ca9374fa823efec49ed998d49a22d80faf818d291ad41079ea574",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    },
+    {
+      "git_blob": "a7a99518d2f204464cb0323f193addec651e1d31",
+      "path": "05-knowledge/results/uniform_prime_transport_20261103/THEORY.md",
+      "sha256": "9dbecacedb815882a51903bfb5022bee27eb09c1d91430b46aba6b418f7954a3",
+      "source_commit": "48298050dea58978d7a8a4d239dd058b47925a70"
+    }
+  ]
+}
