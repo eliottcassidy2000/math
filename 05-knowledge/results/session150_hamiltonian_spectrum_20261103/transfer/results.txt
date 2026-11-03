@@ -1,0 +1,9 @@
+n 1 checked 1 ambiguous []
+n 2 checked 2 ambiguous []
+n 3 checked 8 ambiguous []
+n 4 checked 64 ambiguous []
+n 5 checked 1024 ambiguous [(15, [(78, (40, [0, 15, 78, 198, 240, 120])), (90, (76, [0, 15, 90, 210, 240, 120]))])]
+full-profile transfer checked 1
+full-profile transfer checked 2
+full-profile transfer checked 3
+full-profile transfer checked 4
