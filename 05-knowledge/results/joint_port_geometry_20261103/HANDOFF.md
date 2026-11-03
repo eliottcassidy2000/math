@@ -18,6 +18,8 @@ The useful discovered abstraction is the mixed endpoint observer, not the
 hope that ready sources form a universal bank: H35 rules that out. Test
 whether a specified enlarged defect bank is stable under actual ternary
 birth and repair. A numerical target count alone is insufficient.
+Incoming native161 escapes in [INCOMING.md](INCOMING.md) show an actual
+complement-plus-birth alternative when all induced attachments fail.
 
 ## Algebra frontier
 
@@ -40,6 +42,9 @@ that links two eligibility components is the cheapest probe of hidden
 phase; classify its gain constraints and coincidence guards before using
 any chromatic inference. The family already has chromatic number3, so its
 exponentially growing fibre does not itself improve a Hadwiger bound.
+Its hidden component phases and converse-metagraph cycle voltages occupy
+the kernel and cokernel of the same incidence map (IM1). Keep those two
+counts separate when transporting the geometry to a metagraph quotient.
 
 For planar response probes, JP1 supplies the full source/image normal form
 once a mate is provided. The next genuine question is which restricted

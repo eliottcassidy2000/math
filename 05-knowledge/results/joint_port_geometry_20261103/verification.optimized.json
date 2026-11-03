@@ -4,7 +4,7 @@
   "python": "3.13.14",
   "sympy": "1.14.0",
   "numpy": "2.3.2",
-  "inherited_files": 79,
+  "inherited_files": 83,
   "receipts": [
     {
       "script": "return_probe",
@@ -69,7 +69,7 @@
     {
       "script": "geometric_phases",
       "stdout": "PASS: two-anchor phase fibres, complete graph counts through d6, exact unit geometry through d12",
-      "sha256": "a5e8d1b3ab31c66acf088dde5d04872befd3152181700a9f4c893eee54c138f9"
+      "sha256": "27723a611893926403507c050ba8c13d3f3b47cb2f030a37dd5cf41a2b76a161"
     },
     {
       "script": "jacobian_observer",

@@ -36,6 +36,9 @@ full Q4 charts and operation clocks are retained separately.
 See [RECOVERY.md](RECOVERY.md) for the concept board, recovered old sources
 and exact connection maps, [AUDIT.md](AUDIT.md) for proof boundaries and
 controls, and [HANDOFF.md](HANDOFF.md) for the next decisive tests.
+The [incoming synthesis](INCOMING.md) identifies reflection-phase loss and
+converse-metagraph holonomy as the kernel and cokernel of the same binary
+incidence map, with separate source-realizability guards.
 
 From the repository root, reproduce every generated result and check all
 source pins with:

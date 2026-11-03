@@ -61,9 +61,11 @@ No global theorem ID was reserved for a provisional claim.
 ## Reproduction receipts
 
 All14 deterministic script/receipt pairs pass in both normal Python and
-`python -O`, with79 inherited source files hash-checked. The recorded
+`python -O`, with83 inherited source files hash-checked after incoming integration. The recorded
 verification files include Python, SymPy and NumPy versions. Local packet
 Markdown links and `git diff --check` pass. On Windows the repository-wide
 documentation checker must be launched using an extended-length `\\?\`
-script path; the ordinary invocation encounters an existing long theorem
-filename outside this packet.
+script path; that invocation passed. The ordinary invocation encounters an
+existing long theorem filename outside this packet. Incoming integration
+changed only a routing README among the original79 pins; its five-line
+addition was read and the pin updated. Four incoming proof routes were added.

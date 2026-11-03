@@ -28,6 +28,16 @@ def main():
         k=3*d-1;edges=eligibility(d);parts=components(k,edges);sizes=sorted(map(len,parts))
         expected=[2]+([3] if d%2==0 else [])+[6]*((d-1)//2)
         need(sizes==sorted(expected),'exact K2/P3/C6 eligibility classification')
+        piv={}
+        for i,j,sign in edges:
+            row=(1<<i)^(1<<j)
+            while row:
+                p=row.bit_length()-1
+                if p in piv:row^=piv[p]
+                else:piv[p]=row;break
+        beta=len(edges)-len(piv)
+        need(len(piv)==k-len(parts) and beta==(d-1)//2,'binary incidence kernel/cokernel dimensions')
+        need((1<<len(piv))*(1<<beta)==1<<len(edges),'attainable edge patterns times abstract voltage classes')
         poly=s.expand(z**(3*d+1)*(1+z)**(1+2*int(d%2==0))*E6**((d-1)//2))
         if d<=6:
             # Fix the first reflection sign to remove simultaneous reflection.
@@ -51,6 +61,7 @@ def main():
             prior=z**(3*(d-2)+1)*(1+z)**(1+2*int(d%2==0))*E6**((d-3)//2)
             need(s.expand(poly-z**6*E6*prior)==0,'all-size two-step polynomial recurrence')
         receipts.append({'d':d,'vertices_with_anchors':3*d+1,'eligibility_component_sizes':sizes,
+             'incidence_rank':len(piv),'cycle_voltage_dimension':beta,
              'unit_steps':unit_steps,'edge_polynomial':str(poly),'complete_phase_test':finite})
     # A separate four-point hostile: two equal individual anchored charts,
     # but induced unit completion changes a star to a triangle with a leaf.

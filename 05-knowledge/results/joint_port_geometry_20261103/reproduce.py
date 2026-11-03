@@ -20,6 +20,10 @@ EXTRA=(
  '05-knowledge/results/spectrum_descent_jacobian_20261102/JACOBIAN_FIBRES.md',
  '05-knowledge/results/planar_jc48_sep06_torsion_audit.md',
  '01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md',
+ '05-knowledge/results/session166_planar_metagraph_20261103/reflection_voltages/REFLECTION_VOLTAGES.md',
+ '05-knowledge/results/session166_planar_metagraph_20261103/unit_diamonds/NOTE.md',
+ '05-knowledge/results/defect_offset_dynamics_20261103/ESCAPES.md',
+ '05-knowledge/results/six_roots_hidden_bits_20261103/PORT_MEMORY.md',
 )
 
 def need(ok,msg):
@@ -33,7 +37,7 @@ def main():
         paths.update(str(p.relative_to(ROOT)).replace('\\','/') for p in PREV.glob('*.py'))
         paths.update(EXTRA)
         save('sources.json',{'status':'INHERITED_PINNED_NOT_ALL_RETESTED','startup_commit':'2af5e7549da1',
-          'note':'PHASE_LEGALIZER.md pin includes this session correction of live-port wording',
+          'note':'PHASE_LEGALIZER.md includes the live-port correction; incoming integration through596ae1ea47 changes only the older ready README route among prior pins',
           'hash_scheme':'SHA256 with LF newline normalization',
           'dependencies':[{'path':p,'sha256':digest(ROOT/p)} for p in sorted(paths)],
           'hostile81_27':prior['hostile81_27'],'one_birth55_orientations':prior['one_birth55_orientations']})

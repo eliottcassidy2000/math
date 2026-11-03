@@ -1,7 +1,7 @@
 {
   "status": "INHERITED_PINNED_NOT_ALL_RETESTED",
   "startup_commit": "2af5e7549da1",
-  "note": "PHASE_LEGALIZER.md pin includes this session correction of live-port wording",
+  "note": "PHASE_LEGALIZER.md includes the live-port correction; incoming integration through596ae1ea47 changes only the older ready README route among prior pins",
   "hash_scheme": "SHA256 with LF newline normalization",
   "dependencies": [
     {
@@ -47,6 +47,10 @@
     {
       "path": "05-knowledge/results/coverage_machine_induction_20261103/junction.py",
       "sha256": "23a4c897277e68e825aa5cbf6393178aa037bd991def78328671f3a59c590b61"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/ESCAPES.md",
+      "sha256": "7f5558a9e65a5bd484bc71f3058c3a08c8e095fe44890e22a8c8b890b8a09a07"
     },
     {
       "path": "05-knowledge/results/exception_pathcover_transfers_20261021/session24-pathcovers/PATHCOVERS.md",
@@ -154,7 +158,7 @@
     },
     {
       "path": "05-knowledge/results/ready_return_pentagon_20261103/README.md",
-      "sha256": "a360f71a78b99b715e2533957aa30b913cb0d88865c13563a5a4667157bd1121"
+      "sha256": "cdcafedeb02b06f7a2d505378a74a24f46fa85264651222445c097d0d0fe535b"
     },
     {
       "path": "05-knowledge/results/rooted_carry_closure_20261103/HANDOFF.md",
@@ -261,8 +265,20 @@
       "sha256": "b5b0d91de21a067f68834ffa512b7c0f1084f717e7907465e1fc83366fb7f672"
     },
     {
+      "path": "05-knowledge/results/session166_planar_metagraph_20261103/reflection_voltages/REFLECTION_VOLTAGES.md",
+      "sha256": "e53b064de0ff785d8ec49d5909eba6559a4fcd0bda9077e08b4bce389f980c85"
+    },
+    {
+      "path": "05-knowledge/results/session166_planar_metagraph_20261103/unit_diamonds/NOTE.md",
+      "sha256": "e22c27d59116ec974ad65ad9567215531dca5fea37d0b87423e5556b6e3a4621"
+    },
+    {
       "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/README.md",
       "sha256": "4c7ba043935f21db5e54efd46652d4aee61aea98290f4fb2f6a311ccc437397c"
+    },
+    {
+      "path": "05-knowledge/results/six_roots_hidden_bits_20261103/PORT_MEMORY.md",
+      "sha256": "37fdaaa3071838bc4be168e898a27bf96fe13afb17339f40311ade7258ec84d4"
     },
     {
       "path": "05-knowledge/results/source_selection_closure_20261103/BALANCED_BOUNDARY.md",

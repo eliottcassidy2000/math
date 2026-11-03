@@ -104,6 +104,10 @@ linear quotients, with quotient dimensions
 
 `0,5,12,14,17,19,26,31`.
 
+Only the full31-dimensional quotient preserves every required future query
+in JE1. Each of the seven smaller invariant quotients forgets some of those
+observations; invariance alone does not make it a sufficient carrier.
+
 This extends the previous M2(Q) direct-sum Q direct-sum M3(Q) effect cube:
 the sizes change, but the Boolean lattice of three independently retained
 blocks survives. The identification is a lattice isomorphism of block
