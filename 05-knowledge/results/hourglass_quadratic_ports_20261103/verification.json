@@ -1,0 +1,695 @@
+{
+  "bounded_quadratic": {
+    "-1": -7,
+    "-3": -5,
+    "-5": -1,
+    "-7": 5,
+    "1": -7,
+    "3": -5,
+    "5": -1,
+    "7": 5
+  },
+  "chain_counts": [
+    1,
+    3,
+    28,
+    479,
+    15863,
+    1032090,
+    133167377,
+    34225465711,
+    17557822965460,
+    17996805909309195,
+    36875473644489061435,
+    151078833910579648192346,
+    1237788923503723179618519029
+  ],
+  "clique_dimensions_335": [
+    10,
+    20,
+    39,
+    69,
+    116,
+    186,
+    286,
+    424
+  ],
+  "deletion_catalogue": [
+    {
+      "code": [
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        0
+      ],
+      "multiplicity": 1,
+      "outdegrees": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "removed": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "strong_completions": 1
+    },
+    {
+      "code": [
+        -1,
+        -1,
+        0,
+        -1,
+        0,
+        -1
+      ],
+      "multiplicity": 2,
+      "outdegrees": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "removed": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "strong_completions": 2
+    },
+    {
+      "code": [
+        -1,
+        -1,
+        0,
+        -1,
+        1,
+        0
+      ],
+      "multiplicity": 1,
+      "outdegrees": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "removed": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ],
+      "strong_completions": 1
+    },
+    {
+      "code": [
+        -1,
+        -1,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "multiplicity": 1,
+      "outdegrees": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "removed": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      ],
+      "strong_completions": 2
+    },
+    {
+      "code": [
+        -1,
+        -1,
+        0,
+        0,
+        -1,
+        1
+      ],
+      "multiplicity": 1,
+      "outdegrees": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "removed": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "strong_completions": 1
+    },
+    {
+      "code": [
+        -1,
+        -1,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "multiplicity": 2,
+      "outdegrees": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "removed": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "strong_completions": 2
+    },
+    {
+      "code": [
+        -1,
+        -1,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "multiplicity": 3,
+      "outdegrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "removed": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "strong_completions": 3
+    },
+    {
+      "code": [
+        -1,
+        0,
+        0,
+        -1,
+        1,
+        -1
+      ],
+      "multiplicity": 3,
+      "outdegrees": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "removed": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "strong_completions": 3
+    },
+    {
+      "code": [
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        -1
+      ],
+      "multiplicity": 1,
+      "outdegrees": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "removed": [
+        [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ],
+      "strong_completions": 4
+    }
+  ],
+  "fractran_rules": [
+    [
+      17,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      3,
+      13
+    ],
+    [
+      7,
+      17
+    ],
+    [
+      17,
+      19
+    ]
+  ],
+  "increasing_forest_universe": 76,
+  "magnitude_map": {
+    "1": 7,
+    "3": 5,
+    "5": 1,
+    "7": 5
+  },
+  "native_after": [
+    0,
+    0,
+    4,
+    3,
+    4,
+    1,
+    6,
+    7
+  ],
+  "native_before": [
+    2,
+    4,
+    4,
+    3,
+    2,
+    5,
+    6,
+    7
+  ],
+  "native_code": {
+    "-7": 3,
+    "-5": 0,
+    "-3": 6,
+    "-1": 1,
+    "1": 2,
+    "3": 7,
+    "5": 4,
+    "7": 5
+  },
+  "native_witnesses": [
+    {
+      "a": -7,
+      "after": 4,
+      "b": 3,
+      "before": 3,
+      "complement": 4,
+      "first_path": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "second_path": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "a": -5,
+      "after": 1,
+      "b": 0,
+      "before": 2,
+      "complement": 5,
+      "first_path": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "second_path": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "a": -3,
+      "after": 0,
+      "b": 6,
+      "before": 6,
+      "complement": 1,
+      "first_path": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "second_path": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "a": -1,
+      "after": 3,
+      "b": 1,
+      "before": 4,
+      "complement": 3,
+      "first_path": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "second_path": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "a": 1,
+      "after": 3,
+      "b": 2,
+      "before": 4,
+      "complement": 3,
+      "first_path": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "second_path": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "a": 3,
+      "after": 0,
+      "b": 7,
+      "before": 7,
+      "complement": 0,
+      "first_path": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "second_path": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "a": 5,
+      "after": 1,
+      "b": 4,
+      "before": 2,
+      "complement": 5,
+      "first_path": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "second_path": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "a": 7,
+      "after": 4,
+      "b": 5,
+      "before": 5,
+      "complement": 2,
+      "first_path": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "second_path": [
+        1,
+        2,
+        0,
+        3
+      ]
+    }
+  ],
+  "partial_orientation_universe": 760,
+  "prime_clocks": [
+    {
+      "first_hit": 11,
+      "modulus": 10,
+      "pairs_at_modulus": 2
+    },
+    {
+      "first_hit": 19,
+      "modulus": 20,
+      "pairs_at_modulus": 2
+    },
+    {
+      "first_hit": 41,
+      "modulus": 40,
+      "pairs_at_modulus": 3
+    },
+    {
+      "first_hit": 79,
+      "modulus": 78,
+      "pairs_at_modulus": 7
+    },
+    {
+      "first_hit": 1451,
+      "modulus": 290,
+      "pairs_at_modulus": 10
+    }
+  ],
+  "star_counts": [
+    1,
+    3,
+    24,
+    414,
+    14280,
+    964992,
+    127858896,
+    33415969296,
+    17316837373440,
+    17855966559282048,
+    36713298181376457984,
+    150709856067633582311424,
+    1236126567701634031106104320
+  ],
+  "status": "FINITE-EXACT controls for scoped proofs; same-agent audit",
+  "strong_fixed_path_counts": [
+    0,
+    1,
+    0,
+    1,
+    5,
+    50,
+    903,
+    30773,
+    2032504,
+    264271477,
+    68184627441,
+    35047197032002,
+    35958496436958947
+  ],
+  "strong_labelled_counts": [
+    0,
+    1,
+    0,
+    2,
+    24,
+    544,
+    22320,
+    1677488,
+    236522496,
+    64026088576,
+    33832910196480,
+    35262092417856512,
+    72926863133112198144
+  ],
+  "tiling_fibres": [
+    [
+      0,
+      1,
+      2,
+      4,
+      5
+    ],
+    [
+      3
+    ],
+    [
+      6
+    ],
+    [
+      7
+    ]
+  ],
+  "wheel_moduli": [
+    3,
+    5,
+    7,
+    15,
+    21,
+    35,
+    105
+  ]
+}

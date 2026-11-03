@@ -1,0 +1,15 @@
+{
+  "scope": "same-agent audit, scoped proofs and exact controls",
+  "sha256": {
+    "ARITHMETIC.md": "31eb4d9818885f1a5b59450c915188f9b0e67030a4fa11dc09c0beebc7a13b7a",
+    "AUDIT.md": "c3df42b42463b2b28c3a1855f67e2956cb63a07d44b752432c77402889f77116",
+    "CHECKS.json": "fc644630d3d6144bf9b07d7ee4d70d9c1f4f893f4aa7e0df70e548cc619d1d8b",
+    "COMPLETIONS.md": "e53d8a97c0af8b337e1811eb3523068b6a2739d86cf23faf5bd5ee0d4368d20c",
+    "NATIVE.md": "74bb5a9c9542ab559e6deee99851009de173e435223e4e48a0ccc22445b8c0ab",
+    "README.md": "c776f42e275328b4104b0d00b49e1705c4b1f7fb1405a000a233d1fa8bb3a985",
+    "seal.py": "2b503fd3735f12e50f58ce8cc6b4d7b367489ffcb1253f7fca3b8459fb2b01ed",
+    "SOURCE_PINS.json": "8a7aeca967127f5d0d7a44c3612a42f6710d71ea3299fb4a1872a52841583123",
+    "verification.json": "3272c37a1ea8dfb6f34a90f8ea311c4ecbcaece5fb932166f05a3edfd4e8524c",
+    "verify.py": "1ee2f19c4f33cf83bb380550321bc240314cdf119475e41705595c71f1ede483"
+  }
+}

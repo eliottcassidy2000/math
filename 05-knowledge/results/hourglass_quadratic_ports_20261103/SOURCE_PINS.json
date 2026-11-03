@@ -1,0 +1,110 @@
+{
+  "repo_sources": [
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md",
+      "blob": "fc03eb50de11c3cf2f5a778fafee402ace756783",
+      "sha256": "3faf679d5aded24746c0198daedfec04f7729fcbac3daff52035b92ec42dda89"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "01-canon/theorems/THM-4146-rational-three-cycle-order-six-lift-horizontal-divisor-fibre-firewall.md",
+      "blob": "ea9176575c208181408862d3dbddff565b858c7f",
+      "sha256": "c610612bfd5d5ded0a7a20d967bfc59942c1592d19877d8865985f54255f0634"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "01-canon/theorems/THM-1430-the-tiling-class-metagraph-dictionary-and-which-tricks-pay.md",
+      "blob": "6dd57b2e2881a8478bb7badcc562a381ad7098ec",
+      "sha256": "3a39720c36fc9e98a6717cf176739664827e1ac47633b2f22f7c1c4eb3a135ab"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md",
+      "blob": "59c2b9708274a029042ac9a9adde642c1a78e96e",
+      "sha256": "09289c2ad4c12bcadf5d29a54a198e56b0ef8223853ac3f83a9caa931c65b9b8"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "01-canon/theorems/THM-001-redei.md",
+      "blob": "e6e199d68d94829d68acfda1578fd1c21dc05fad",
+      "sha256": "e89c0bf0e21d5a987dadbe0db82e02497cb7e74b52d62bb959f43edc2c673560"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "01-canon/theorems/THM-1862-order-join-reduction-principle.md",
+      "blob": "8ef9df35a1d5ff9446e011e4e50b7f1d57e2306c",
+      "sha256": "329eb02887d21f178db6ddb2c71806da0b9f2695552c645409be64360ac6d58e"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/hypotheses/HYP-3053-tournament-diagonal-layer-flow.md",
+      "blob": "47f03cb9b7d82bfcb577c50156ac4e08ac9c521f",
+      "sha256": "7f4253799c0a3f493a6b3fd99730fa58ee517db5d6bf802337b1b6d86f7b5814"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/machines/README.md",
+      "blob": "6c5dd0f96f884fd4787d4b64941cca6b1a8f16f0",
+      "sha256": "bfc6c8a635443363424641d8b86e850d65947938cc04ff87314e274d4efc815b"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/prime290/README.md",
+      "blob": "a0a63ae29dd84208a8d20b72b05e03224b8dbfe8",
+      "sha256": "c0696bf9adf5987a1e915ff052587e6d92480202de98c201bd79e883a69b594b"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/prime290/WHEEL_GENERAL.md",
+      "blob": "037487ecb8fc0ea368db48f19acd2c3df5b3ae76",
+      "sha256": "c87a8e4aff0dbe6b7cf8ecb4b08b961973285e705ce05fb2e009460b9a42f8c9"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/results/chart_clique_norm_20261103/CLIQUE_CARRIER.md",
+      "blob": "b914e4b2570fa72af5cd0d52a2c43f95a4fd2e4b",
+      "sha256": "03d0d999ceb533f8eb7759be7ed1d217b3bb797653fbe066d2cd833335e920c5"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/results/period3_graph_square_bridge_20261019.md",
+      "blob": "60e0ceaf97cc1ca89b5ff89be1f9dfdaaf9b09aa",
+      "sha256": "c3135250f42909d5d129b514a0022891e0724582e9ebe65de0ac2367e5f18c02"
+    },
+    {
+      "commit": "6a47c3bac4b6404f0236835ee543ff905af268e8",
+      "path": "05-knowledge/results/quadratic_cycle_phase_20261015b.md",
+      "blob": "708905e2ae5ecbdb47cd15e8e5c19e9a86e31874",
+      "sha256": "338bdecbcaf07889d7536c79fbd1d40900b0912808735854a42f9c39cfba5180"
+    },
+    {
+      "commit": "917c974679e21269b8fc6bb6332e7ba527955584",
+      "path": "05-knowledge/results/quadratic_2916_odd_pair_triangles_n4_20261102.md",
+      "blob": "e39487f79d02696b50633c87aa18fb5b1d28a73c",
+      "sha256": "a030fdd812aa05a8c1668b33ecd5fcdd0ed74d5ddcd35963b3b87c2362d097f9"
+    },
+    {
+      "commit": "f139791ef3f194128283655cde6c1e77e2504337",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier9/PROOF.md",
+      "blob": "679facb2bd70703adeedaa39615a9e4f5990c225",
+      "sha256": "ba32f8214b52b9e8c9b6d9d4cbdec0a089596eadb8e73d7a302a6d81871ad721"
+    },
+    {
+      "commit": "f139791ef3f194128283655cde6c1e77e2504337",
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier10_upper/PROOF.md",
+      "blob": "003a0aa48937ddf723b96091a6b7e87f2556fa56",
+      "sha256": "830fad776d3ff32a0bda00d8241fb79319864255c71f7822af9420c6f50d2b51"
+    }
+  ],
+  "primary_records_opened": [
+    {
+      "url": "https://arxiv.org/abs/0808.1408",
+      "scope": "CITED endpoint-prime existence; original Dirichlet translation"
+    },
+    {
+      "url": "https://arxiv.org/abs/math/9512217",
+      "scope": "context only; general classification is conditional in its abstract"
+    }
+  ]
+}

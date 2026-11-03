@@ -1,0 +1,10 @@
+{
+  "normal": {
+    "stdout_sha256": "f47dd3dfb3044bf1e1a9de2e95d1f62a8d92369dc0dbe0ac5551f2361e752aaa",
+    "receipt_sha256": "3272c37a1ea8dfb6f34a90f8ea311c4ecbcaece5fb932166f05a3edfd4e8524c"
+  },
+  "optimized": {
+    "stdout_sha256": "f47dd3dfb3044bf1e1a9de2e95d1f62a8d92369dc0dbe0ac5551f2361e752aaa",
+    "receipt_sha256": "3272c37a1ea8dfb6f34a90f8ea311c4ecbcaece5fb932166f05a3edfd4e8524c"
+  }
+}
