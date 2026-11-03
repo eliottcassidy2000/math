@@ -4,6 +4,10 @@ import json
 from pathlib import Path
 
 
+def require(ok,message):
+    if not ok:raise RuntimeError(message)
+
+
 def f32mul(a,b):
     c=0
     while b:
@@ -39,20 +43,20 @@ def clock(q,add,mul,c,d,x):
 if __name__=='__main__':
     add32=lambda a,b:a^b
     # Nonzero z has prime order 31, proving the degree-five polynomial irreducible.
-    assert order(f32mul,2,1,31)==31
-    assert all(f32mul(x,x)^x^1 for x in range(32))
+    require(order(f32mul,2,1,31)==31,'F32 generator')
+    require(all(f32mul(x,x)^x^1 for x in range(32)),'quadratic irreducible over F32')
     failed_generator,_=clock(32,add32,f32mul,1,1,(2,1))
     f32,_=clock(32,add32,f32mul,1,1,(6,1))
     add13=lambda a,b:(a+b)%13
     mul13=lambda a,b:a*b%13
-    assert all((x*x-x-1)%13 for x in range(13))
+    require(all((x*x-x-1)%13 for x in range(13)),'golden quadratic irreducible over F13')
     golden,_=clock(13,add13,mul13,1,1,(0,1))
     shifted,_=clock(13,add13,mul13,1,1,(2,1))
-    assert golden['linear_order']==28 and golden['projective_order']==7
-    assert shifted['linear_order']==56 and shifted['projective_order']==14
-    assert order(mul13,2,1,12)==12
-    assert f32['projective_order']==33
-    assert failed_generator['projective_order']==11
+    require(golden['linear_order']==28 and golden['projective_order']==7,'golden scalar phase')
+    require(shifted['linear_order']==56 and shifted['projective_order']==14,'shifted golden phase')
+    require(order(mul13,2,1,12)==12,'split F13 clock')
+    require(f32['projective_order']==33,'full nonsplit F32 clock')
+    require(failed_generator['projective_order']==11,'short generator hostile')
     result={'split_32_order':31,'nonsplit_32':f32,'short_generator_32':failed_generator,'split_13_order':12,
             'golden_13':golden,'shifted_golden_13':shifted}
     Path(__file__).with_name('arithmetic.json').write_text(json.dumps(result,indent=2)+'\n')

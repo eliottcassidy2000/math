@@ -65,6 +65,14 @@ def all_prefix_defects(rows):
     return [sum(ends[s][v]*h[full^s]for s in range(1,full+1))-h[full]for v in range(n)]
 
 
+def ordered_covers_literal(rows,k):
+    n=len(rows);answer=0
+    for p in permutations(range(n)):
+        bad=sum(not(rows[a]>>b&1)for a,b in zip(p,p[1:]))
+        if bad<=k-1<=n-1:answer+=comb(n-1-bad,k-1-bad)
+    return answer
+
+
 def add(rows,mask):
     n=len(rows);return [r+((1<<n)if mask>>i&1 else 0)for i,r in enumerate(rows)]+[((1<<n)-1)^mask]
 
@@ -106,6 +114,19 @@ if __name__=='__main__':
     base=[10,36,1,22,7,29];mate=[26,36,1,22,6,29]
     need(skeleton(base,3)[1:4]==[31,30,8],'31 source coefficients')
     need(skeleton(mate,3)[1:4]==[33,26,6],'33 mate coefficients')
+    atlas_checked=0
+    for file in sorted(HERE.glob('catalog*.jsonl')):
+        for line in file.read_text().splitlines():
+            row=json.loads(line);t=row['rows'];c=skeleton(t,0);scale=3**row['level']
+            need(c[1:4]==[row['H'],30*scale,8*scale]and not any(c[4:]),'independent atlas polynomial')
+            for start in range(len(t)):
+                seen={start}
+                while True:
+                    nxt=seen|{j for i in seen for j in range(len(t))if t[i]>>j&1}
+                    if nxt==seen:break
+                    seen=nxt
+                need(len(seen)==len(t),'independent atlas strongness')
+            atlas_checked+=1
     progs=json.loads((HERE/'scout31.json').read_text())['programmes']
     for r in progs:uniform_program(r)
     # Audit every saved next-level positive, not only the chosen 97->293 route.
@@ -115,6 +136,13 @@ if __name__=='__main__':
         if 'programmes'not in data:continue
         for r in data['programmes']:uniform_program(r);next_count+=1
     results=json.loads((HERE/'returns.json').read_text())
+    hypothesis_controls=[progs[0],progs[1],json.loads((HERE/'next_0.json').read_text())['programmes'][1],*results]
+    for r in hypothesis_controls:
+        old=len(r['source']);v=r['clone'];source=r['source'];target=r['target']
+        need(len(target)-old<=3,'hypothesis permanent-birth control')
+        need(sum(bool((source[a]^target[a])>>b&1)for a,b in combinations(range(old),2))<=4,
+             'hypothesis exterior-edit control')
+        need(all(bool(source[v]>>j&1)==bool(target[v]>>j&1)for j in range(old)),'hypothesis root-star control')
     for r in results:
         t=r['source'];v=r['clone'];cs=skeleton(t,v)
         for mask in r['permanent_birth_masks']:t=add(t,mask)
@@ -148,7 +176,17 @@ if __name__=='__main__':
             for q,value in r['values'][m-1].items():
                 q=int(q);index=q+(m-1 if q>r['clone']else 0)
                 need(d[index]==value,'independent all-prefix boundary count')
+    moments=json.loads((HERE/'moment_budget.json').read_text())
+    for bank in moments:
+        for r in bank['witnesses']:
+            need(matching(r['rows'],0)==r['matching'],'actual matching witness')
+            for m in range(1,4):
+                need(ordered_covers_literal(expand(r['rows'],0,m)[0],r['components'])==r['values'][m-1],
+                     'independent permutation/cut moment control')
     report={'rooted_small_bank_checks':rooted,'first_programmes':len(progs),'second_programmes':next_count,
             'repaired_returns':len(results),'marked_census_identifications':isos,
+            'boundary_samples_independently_checked':16,
+            'atlas_positive_presentations_checked':atlas_checked,
+            'moment_budget_dimensions':[r['dimension']for r in moments],
             'method':'same agent, independently implemented skeleton and boolean-word algorithms; not an independent agent audit'}
     (HERE/'audit.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))

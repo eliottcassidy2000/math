@@ -1,0 +1,290 @@
+[
+  {
+    "matching_cap": 0,
+    "component_cap": 3,
+    "dimension": 3,
+    "coefficient_determinant": 1,
+    "witnesses": [
+      {
+        "matching": 0,
+        "components": 1,
+        "rows": [
+          0
+        ],
+        "coefficients": [
+          1,
+          0,
+          0
+        ],
+        "values": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "matching": 0,
+        "components": 2,
+        "rows": [
+          0
+        ],
+        "coefficients": [
+          0,
+          1,
+          0
+        ],
+        "values": [
+          0,
+          2,
+          6,
+          14
+        ]
+      },
+      {
+        "matching": 0,
+        "components": 3,
+        "rows": [
+          0
+        ],
+        "coefficients": [
+          0,
+          0,
+          1
+        ],
+        "values": [
+          0,
+          0,
+          6,
+          36
+        ]
+      }
+    ]
+  },
+  {
+    "matching_cap": 1,
+    "component_cap": 3,
+    "dimension": 4,
+    "coefficient_determinant": 6,
+    "witnesses": [
+      {
+        "matching": 0,
+        "components": 1,
+        "rows": [
+          0
+        ],
+        "coefficients": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "values": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "matching": 1,
+        "components": 1,
+        "rows": [
+          2,
+          4,
+          1
+        ],
+        "coefficients": [
+          3,
+          1,
+          0,
+          0
+        ],
+        "values": [
+          3,
+          5,
+          9,
+          17,
+          33
+        ]
+      },
+      {
+        "matching": 1,
+        "components": 2,
+        "rows": [
+          2,
+          4,
+          1
+        ],
+        "coefficients": [
+          6,
+          8,
+          2,
+          0
+        ],
+        "values": [
+          6,
+          22,
+          66,
+          190,
+          546
+        ]
+      },
+      {
+        "matching": 1,
+        "components": 3,
+        "rows": [
+          2,
+          4,
+          1
+        ],
+        "coefficients": [
+          6,
+          15,
+          15,
+          3
+        ],
+        "values": [
+          6,
+          36,
+          186,
+          828,
+          3426
+        ]
+      }
+    ]
+  },
+  {
+    "matching_cap": 2,
+    "component_cap": 3,
+    "dimension": 5,
+    "coefficient_determinant": 144,
+    "witnesses": [
+      {
+        "matching": 0,
+        "components": 1,
+        "rows": [
+          0
+        ],
+        "coefficients": [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "values": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "matching": 1,
+        "components": 1,
+        "rows": [
+          2,
+          4,
+          1
+        ],
+        "coefficients": [
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        "values": [
+          3,
+          5,
+          9,
+          17,
+          33,
+          65
+        ]
+      },
+      {
+        "matching": 2,
+        "components": 1,
+        "rows": [
+          6,
+          12,
+          16,
+          21,
+          3
+        ],
+        "coefficients": [
+          13,
+          10,
+          2,
+          0,
+          0
+        ],
+        "values": [
+          13,
+          33,
+          85,
+          225,
+          613,
+          1713
+        ]
+      },
+      {
+        "matching": 2,
+        "components": 2,
+        "rows": [
+          6,
+          12,
+          16,
+          21,
+          3
+        ],
+        "coefficients": [
+          78,
+          96,
+          44,
+          6,
+          0
+        ],
+        "values": [
+          78,
+          270,
+          918,
+          3150,
+          10998,
+          39150
+        ]
+      },
+      {
+        "matching": 2,
+        "components": 3,
+        "rows": [
+          6,
+          12,
+          16,
+          21,
+          3
+        ],
+        "coefficients": [
+          198,
+          387,
+          333,
+          114,
+          12
+        ],
+        "values": [
+          198,
+          972,
+          4518,
+          20340,
+          90558,
+          403452
+        ]
+      }
+    ]
+  }
+]

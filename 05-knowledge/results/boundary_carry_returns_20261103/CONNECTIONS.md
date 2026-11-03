@@ -54,6 +54,45 @@ not a shortcut around the outstanding realization theorem.
 
 ## Recovered old and concurrent mechanisms
 
+### An arithmetic address for the carry
+
+The inherited [six-root return forest](../triple_reentry_interfaces_20261103/README.md)
+has a particularly useful normalization. Write L=(H+1)/2 for an odd raw
+count H. The three desired count operations become
+
+    3H       -> 3L-1,
+    3H+2     -> 3L,
+    3H+4     -> 3L+1.
+
+Thus the arithmetic address is balanced ternary. The forbidden raw counts
+7 and 21 have addresses 4 and 11. Removing those vertices leaves roots
+at addresses 1,12,13,32,33,34, corresponding to raw counts
+1,23,25,63,65,67. Here 12 and 13 are addresses, not even Hamilton counts;
+address 14 corresponds to raw H=27 and has parent 5, whereas addresses
+12,13 have the removed parent 4. A sliding triple such as 13+-1 therefore
+crosses a genuine parent boundary. Its members need not have one source.
+
+For the two-offset sublanguage at our raw H=31 seed, use instead D=H+1.
+Each branch bit b=0 or 1 acts as D->3D+2b, starting at D=32. After ell steps,
+
+    D_ell / 3^ell = 32 + sum_(i=1)^ell 2b_i/3^i.
+
+This is an exact integer clock with a finite ternary fractional address.
+The limiting address set is the translated ternary Cantor set in [32,33].
+The four newly realized length-two addresses are D=288,290,294,296.
+Beyond length two the formula specifies requested counts, not proved
+realizations from the current source. The inverse digit word also does not
+recover a tournament's boundary relation: several named sources can have
+the same H and different legal continuations. That is precisely the missing
+sidecar our matching and path-cover records retain.
+
+Even complete realization of this binary sublanguage from one fixed seed
+would give only 2^ell counts over a range of size proportional to 3^ell.
+It would not prove the full odd spectrum. The reusable multiplicative
+branch and all required source seeds remain essential. The 31/33
+refinement pair in BC4 is a different, literal graph comparison; its
+changing gap must not be replaced by this address interval.
+
 | Prior source | Map / preserved predicate | Information that must survive | Effect on this session |
 |---|---|---|---|
 | [THM-1865, score and inflation](../../../01-canon/theorems/THM-1865-h-not-score-determined-and-inflation-neutrality.md), July | Same score multiset -> different actual path counts; source/sink insertion gives a path bijection | Named arcs and endpoint role | Produced the literal 31/33 pair; BC4 shows its gap changes sign under the same refinement. No old random maximality claim is inherited. |
@@ -75,6 +114,65 @@ targeted to these actual mechanisms, not a claim that every occurrence of
 
 ## The reusable move and a sharper open question
 
+### Incoming work integrated after the first checkpoint
+
+The clean-tree pull added eight commits through `2d137c00ea`. The most
+relevant sources were read at their actual proof level:
+
+* [S170 guard resets](../session170_holonomy_homotopy_20261103/guards/NOTE.md)
+  exhibits the two literal words DCD and D C^14 D. Their Hamilton endpoint
+  transfers have rank one, while the full path-slot polynomial transfer is
+  injective. Its value plus first derivative recovers the input value for
+  these two reset words. The long reset has outer vectors (47,112,0) and
+  (47,112,47), and repeating it multiplies by 14753. These exact matrix
+  identities are distinct from the finite-field 14-cycle above. The source's
+  all-gap exclusion uses an external Tribonacci zero theorem; this packet
+  neither re-proves nor needs that exclusion.
+* [S169's collision ledger](../session169_runner_jacobian_20261103/collision/META_LEDGER.md)
+  derives an exact K+1 finite-horizon budget for its nonuniform head from
+  the positive new exponential mode at each step. Comparing this with BC1
+  led to **BC7's new d+K bound**: a matching cap pays for root returns and
+  each permitted path component pays for another run. The two theorems
+  concern different operators but share a proved triangular-rank mechanism.
+* [S170 flat covers](../session170_holonomy_homotopy_20261103/monodromy/NOTE.md),
+  §§3--5, gives an actual labelled tournament torus whose deck return is
+  winding parity. Mixed-coordinate squares preserve the cover, whereas
+  filling a coordinate triangle would erase its sheet bit. This sharpens
+  the boundary-carry interpretation without changing the price H=29^N of
+  attaching that clock bank. Its literal edges are arc flips; they are not
+  silently counted as our native Hamilton-path complements.
+* The [701 update](../return701_algebra_20261103/ALGEBRA95.md) supplies an
+  exact degree-24 annihilator for a positive weighted sum of its persistent
+  generators. It controls those matrix responses and their radical layers,
+  not the existence of a positive word giving our desired affine offsets.
+  Its incoming-note warning about an unpaired complement is retained: such
+  a move changes a transitive block and cannot use common-frame cancellation.
+
+The revised board therefore separates three costs: matching-limited clone
+moments, full path-slot memory at a reset, and actual named reachability.
+BC2 handles the third only for a supplied target; BC7 handles the first
+only in a specified linear query space. Neither is substituted for the
+remaining positive source-return theorem.
+
+A final clean-tree pull added S171 through `942626a6e4`. Its
+[one-vertex read head](../session171_knots_information_20261103/information/NOTE.md)
+stores nonisomorphic five-vertex alternatives with the same full profile
+and H=9, yet the same specified attachment reads H=17 versus 19. Its
+[update barrier](../session171_knots_information_20261103/information/UPDATE_BARRIER.md)
+shows that a constant-profile update can leave the promised error-correcting
+code family between valid endpoints. This makes our boundary precise:
+**BC7's moment-space dimension is not a sufficient controller state**, even
+if many unpointed cover moments are supplied. Attachment context and the
+completion clock still matter. Our native repairs already retain them and
+do not claim that their intermediate tournaments remain two-cover sources.
+
+The companion [winding-code theorem](../session171_knots_information_20261103/winding_codes/NOTE.md)
+prices a hidden physical return at exactly three times code distance in
+its arc-flip carrier. That is a different clock from a native complement;
+BC2's explicit binom(L-1,2) conversion retains this distinction. These
+incoming results strengthen the stopping conditions of the present proof,
+without replacing its source-specific realization steps.
+
 The common operation across these lanes is:
 
 1. identify a scalar clock or a quotient period;
@@ -94,3 +192,21 @@ same base order. A successful grammar must charge the extra permanent
 vertices or change its representation. The complete second-level repair
 shows that this is an interface/size obstruction, not a counterexample to
 the scalar spectrum conjecture.
+
+**A precise next hypothesis, OPEN and deliberately restricted.** Starting
+from the marked A_m family, can representatives be chosen for every finite
+word in {+2,+4} so that each step adds at most three permanent vertices,
+changes at most four old exterior arcs, leaves the old clone star unchanged,
+and has the requested 3H+c identity for every m? All words through length
+two have the stated witnesses. BC2 would compile such an endpoint rule into
+a uniformly bounded number of legal native events per step (with its stated
+quadratic arc-clock cost). The first new test is both continuations of the
+actual 295 family, not an arbitrary graph with H=295. This hypothesis is
+stronger than scalar existence for this family and weaker than full spectrum
+coverage; neither direction of that distinction is suppressed.
+
+For the four-old-arc bound on the 97->293 branch, choose program 1 of
+`next_0.json`. BC3's displayed program 0 uses six old arc changes but only
+two native events; the two clocks need not rank programs the same way.
+BC6's boundary table refers to the displayed program 0, not this alternative
+target. Both named targets and all their path guards remain in the packet.

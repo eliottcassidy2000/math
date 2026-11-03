@@ -51,6 +51,13 @@ independently checking the four determining clone sizes for every exterior
 pin of each new target. The fifth sample checks the degree bound; the proof
 of that bound is necessary for the asserted constant defects 0,0,17.
 
+BC7's exact moment-budget lower bound uses actual matching-star tournaments,
+not arbitrary formal vectors. The producer uses subset convolution to count
+ordered path covers. The audit checks the first three clone sizes of every
+triangular witness by full vertex permutations and cuts, with no cover-DP
+import. This independently validates the displayed determinants 1,6,144;
+the general rank statement rests on BC7's positive top-coefficient proof.
+
 `catalog.cpp` enumerates root-neighbourhood banks, counts H by subset DP,
 and tests clone values through the proved maximum degree. Independently,
 `audit_catalog.cpp` counts literal paths by recursive DFS, with cutoff only

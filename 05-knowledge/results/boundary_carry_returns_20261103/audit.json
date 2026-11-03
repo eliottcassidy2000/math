@@ -31,5 +31,12 @@
       ]
     }
   ],
+  "boundary_samples_independently_checked": 16,
+  "atlas_positive_presentations_checked": 19,
+  "moment_budget_dimensions": [
+    3,
+    4,
+    5
+  ],
   "method": "same agent, independently implemented skeleton and boolean-word algorithms; not an independent agent audit"
 }

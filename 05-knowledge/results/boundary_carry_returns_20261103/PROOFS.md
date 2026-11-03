@@ -1,6 +1,6 @@
 # Matching boundaries and two levels of actual ternary returns
 
-**PROVED scoped:** BC1--BC4 and BC6 below. **FINITE-EXACT:** the exhaustive minimum
+**PROVED scoped:** BC1--BC4, BC6--BC7 below. **FINITE-EXACT:** the exhaustive minimum
 orders in BC5, backed by two different counting algorithms. **OPEN:** an
 unbounded return grammar and the full odd Hamilton-path spectrum. These are
 raw directed Hamilton-path counts H, never H/Aut. Native means complementing
@@ -95,6 +95,13 @@ already reverses arbitrary named arcs more economically at a single size.
 BC2 is a uniform clone-compatible version with an explicit constant frame;
 it is not a claim that three helpers are necessary. No old relabelling,
 converse operation, disappearing pin, or uncharged path choice occurs.
+
+The integer clock here counts native complements separately from births and
+deletions. On order L, a native complement reverses exactly binom(L-1,2)
+arcs. Thus BC2's d exterior repairs, at peak order n+m+2, cost exactly
+2d*binom(n+m+1,2) arc reversals if expanded to that finer clock. A constant
+number of native events does not mean a constant number of arc reversals
+as the clone grows.
 
 **Birth extension.** If a larger target's root star extends the source star,
 first birth its permanent new vertices with their final incident cuts.
@@ -277,3 +284,55 @@ Literal enumeration of every directed prefix independently audits all four
 determining samples in `audit.py`. This bound, not a constant-looking finite
 plot, proves the identities. It also explains why scalar branch success has
 not closed the return grammar.
+
+## BC7. Exact linear moment budget for a matching cap
+
+Fix integers d>=0 and K>=1. Consider, over all finite rooted tournaments
+(T,v) with crossing matching number at most d, the functions of m>=1 that
+count ordered covers of T_m by k nonempty directed paths, 1<=k<=K.
+Allowing additional fixed exterior endpoint constraints does not enlarge
+the following space. Its rational linear span is exactly
+
+    span_Q {1^m,2^m,...,(d+K)^m},
+
+of dimension d+K. Thus at most d+K run coefficients or exact samples specify
+each such function, and no smaller linear function space contains this
+whole family. For our d=2, Hamilton queries use three modes; two-path queries
+use four. Letting K grow makes this budget unbounded.
+
+**Upper bound.** With r total clone runs, at most k paths meet the clone.
+The inter-run crossing arcs give a matching of size at least r-k, so
+r<=d+k. Ordered skeletons, with any fixed exterior endpoint conditions,
+give a nonnegative integer combination of R_r(m)=r!S(m,r). These have exactly
+the indicated exponential bases. Empty auxiliary paths, if allowed as in
+BC6, merely add terms with fewer components and obey the same bound.
+
+**Realizable lower bound.** For each j>=0 use a rooted tournament W_j on
+1+2j vertices: the root beats o_1,...,o_j and loses to i_1,...,i_j;
+the crossing arcs are exactly o_a->i_a, with every other cross arc directed
+from I to O. Orient each side as an increasing transitive tournament.
+Its crossing graph is a matching of size j. For j=0 it is the singleton.
+
+The matching skeleton from BC1, together with k-1 separate singleton-root
+paths, gives an ordered k-path skeleton with j+k clone runs. Insert all
+remaining exterior vertices into its first path as before. Hence the
+largest base in the k-cover function of W_j is exactly j+k, with positive
+coefficient. For every b=1,...,d+K choose
+
+    j=min(d,b-1),  k=b-j.
+
+Then 1<=k<=K and the resulting function has positive top base b and only
+smaller bases below it. The d+K functions are triangularly independent.
+Vandermonde independence of the sequences b^m proves the claim.
+
+`moment_budget.py` supplies literal witness tournaments and exact coefficient
+matrices for (d,K)=(0,3),(1,3),(2,3), with determinants 1,6,144.
+The independent audit uses vertex permutations and path cuts instead of
+the subset-cover convolution. These are controls of the general proof.
+
+**Exact scope.** This is a dimension theorem for functions of the clone
+parameter over the stated collection of sources and queries. It is not
+a lower bound on arbitrary nonlinear encodings, a minimum bit count, or a
+closed finite-state native controller. In particular it does not say that
+these coefficients retain the legal Hamilton path needed for the next
+complement. Source realization and path ownership remain separate duties.
