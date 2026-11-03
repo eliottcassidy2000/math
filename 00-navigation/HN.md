@@ -1,5 +1,7 @@
 # Full boundaries, tournament families, and information
 
+[Compatible pairings and four-bit recurrences](../05-knowledge/results/paired_recursions_20261103/README.md): exact free binary rank commuting with converse and H-fibre fixed-point defect; normalized A000568 modulo16 with weighted CRT; minimum n5 full-frame cover corrected to4. Abstract symmetry feasibility is separate from native metagraph realization. Full Hamilton spectrum remains OPEN.
+
 [Parity, joint spectrum and toothpick symmetry](../05-knowledge/results/tournament_joint_parity_20261102/README.md): explicit class pairing from odd presentation fibres; no free H-preserving pairing; exact self-converse parity tails and sharp order-five attachment-distribution obstruction. Full spectrum remains OPEN.
 
 2026-10-28. [Five-interior extension theorem](../05-knowledge/results/paired_budget_selectors_matrix_20261028/FIVE_INTERIORS.md): every proper six-colouring constant on four disjoint port pairs extends across at most five private unit-distance vertices. The proof excludes the exact critical quotient `K4 join C5` using the pentagon's maximum of three external triple-contact centres. A forcing selector in this architecture needs at least six private interiors; existence remains OPEN.

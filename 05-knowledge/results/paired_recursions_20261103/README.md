@@ -74,6 +74,12 @@ is the *commuting rank and observer-specific defect*, the next low digits,
 and the exact four-frame correction. No historical or literature priority
 is asserted for the elementary finite-action lemma.
 
+The later incoming947b6c3852 [third-bit packet](../fibonacci_parity_precision_20261103/PRECISION.md)
+was published before our first push and receives credit for the explicit
+modulo8 formula and order40 hostile. Our fourth-bit formula supplies its
+requested next layer, including the shifted totient term. Its factorized
+modulo8 simplification agrees with our weighted CRT expression after reduction.
+
 The existing “Controlled forgetting and unlabeled quotients require a
 sidecar” method card is used. No new meta-pattern is promoted: the evidence
 refines its fixed-locus requirement.

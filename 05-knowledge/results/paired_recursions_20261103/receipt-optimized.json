@@ -763,6 +763,120 @@
     1000000,
     1000002
   ],
+  "phase_periods": [
+    {
+      "order_mod16": 0,
+      "odd_phase_weights": [
+        15,
+        7,
+        7,
+        15,
+        15,
+        7,
+        7,
+        15
+      ],
+      "steps_by2_period": 4
+    },
+    {
+      "order_mod16": 2,
+      "odd_phase_weights": [
+        1,
+        5,
+        1,
+        5,
+        1,
+        5,
+        1,
+        5
+      ],
+      "steps_by2_period": 2
+    },
+    {
+      "order_mod16": 4,
+      "odd_phase_weights": [
+        11,
+        11,
+        3,
+        3,
+        11,
+        11,
+        3,
+        3
+      ],
+      "steps_by2_period": 4
+    },
+    {
+      "order_mod16": 6,
+      "odd_phase_weights": [
+        13,
+        9,
+        13,
+        9,
+        13,
+        9,
+        13,
+        9
+      ],
+      "steps_by2_period": 2
+    },
+    {
+      "order_mod16": 8,
+      "odd_phase_weights": [
+        7,
+        15,
+        15,
+        7,
+        7,
+        15,
+        15,
+        7
+      ],
+      "steps_by2_period": 4
+    },
+    {
+      "order_mod16": 10,
+      "odd_phase_weights": [
+        9,
+        13,
+        9,
+        13,
+        9,
+        13,
+        9,
+        13
+      ],
+      "steps_by2_period": 2
+    },
+    {
+      "order_mod16": 12,
+      "odd_phase_weights": [
+        3,
+        3,
+        11,
+        11,
+        3,
+        3,
+        11,
+        11
+      ],
+      "steps_by2_period": 4
+    },
+    {
+      "order_mod16": 14,
+      "odd_phase_weights": [
+        5,
+        1,
+        5,
+        1,
+        5,
+        1,
+        5,
+        1
+      ],
+      "steps_by2_period": 2
+    }
+  ],
   "class_pairings": [
     {
       "n": 1,

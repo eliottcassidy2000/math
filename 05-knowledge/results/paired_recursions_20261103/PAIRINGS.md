@@ -30,6 +30,13 @@ The construction's required choice is a numbering inside the blocks.
 It preserves R and cardinality, but need not preserve adjacency,
 Hamilton counts, scores, or any named port.
 
+The incoming [blue-fibre alternating-trail construction](../tournament_joint_parity_20261102/parity.md#33-a-refined-pairing-that-preserves-self-converseness)
+already supplies a more geometric rank-one example: on the fixed locus R
+is identity, and on its complement that construction uses R itself.
+It therefore commutes with R automatically. The present theorem classifies
+all feasible free ranks and observer restrictions; it is not the first
+construction of a commuting free involution.
+
 ## P2. Specialization to tournament classes
 
 Let a_n=A000568(n) and c_n be the number of self-converse classes.

@@ -47,15 +47,16 @@ def phi_factored(n):
 def crt_pair_sum(n,bits=4):
     need(n>=4 and n%2==0 and bits>=1,'CRT domain')
     modulus=1<<bits;limit=n//2-1;divisors=[(1,1)]
+    phase=(8 if n%4==0 else 4) if bits==4 else modulus
     for p in distinct_prime_factors(n):
         if p!=2:divisors += [(d*p,-mu) for d,mu in divisors[:]]
     answer=0
-    for residue in range(1,modulus,2):
+    for residue in range(1,phase,2):
         count=0
         for divisor,mu in divisors:
-            first=residue*pow(divisor,-1,modulus)%modulus
+            first=residue*pow(divisor,-1,phase)%phase
             bound=limit//divisor
-            count+=mu*max(0,1+(bound-first)//modulus)
+            count+=mu*max(0,1+(bound-first)//phase)
         answer+=count*pow(residue*(n-residue),-1,modulus)
     return answer%modulus
 def odd_four_bits(n):
@@ -218,6 +219,12 @@ def main():
         need(even_four_bits_crt(n)==even_four_bits(n),('CRT formula',n))
         for bits in (1,2,3,4,5):
             need(crt_pair_sum(n,bits)==coprime_pair_sum(n,bits),('CRT weights',n,bits))
+    phase_periods=[]
+    for n in range(0,16,2):
+        weights=[pow(a*(n-a),-1,16) for a in range(1,16,2)]
+        period=next(k for k in (1,2,4,8) if all(weights[i]==weights[(i+k)%8] for i in range(8)))
+        need(period==(4 if n%4==0 else 2),'minimal weight clock')
+        phase_periods.append({'order_mod16':n,'odd_phase_weights':weights,'steps_by2_period':period})
     counts=[]
     for n in range(41):
         f=channel(n//2,2,n%2);a=exact[n]
@@ -272,7 +279,7 @@ def main():
     result={"status":"PASS","scope":{"exact_Burnside":40,"independent_pair_orbits":12,
              "four_binary_digit_law":200,"all_labelled_class_orbits":6,
              "literal_path_order_check_classes":literal},
-            "counts":counts,"four_bit_checks":checks,"CRT_cases":crt_cases,
+            "counts":counts,"four_bit_checks":checks,"CRT_cases":crt_cases,"phase_periods":phase_periods,
             "class_pairings":fine,"hostile_81_27":hostile,
             "native_matching_n5":native,"stronger_totient_valuation_failures_through76":fails,
             "provenance":"Inherited partition/precision and port code imported by exact repository path; source hashes in manifest."}

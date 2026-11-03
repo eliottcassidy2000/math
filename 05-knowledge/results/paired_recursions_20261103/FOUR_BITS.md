@@ -6,6 +6,14 @@ The modulo4 laws and bounded-cycle algorithm are inherited from
 This note computes modulo16 explicitly. No full-value enumeration speedup
 is claimed.
 
+Incoming commit947b6c3852, read during final integration, independently
+published the [modulo8 formulas](../fibonacci_parity_precision_20261103/PRECISION.md)
+and the n40 valuation hostile before this packet's first push. It has
+priority here for that third-bit result and also gives a shorter factored
+even-order expression modulo8. Formula(6) agrees with it. The present
+extension is modulo16, including the four-cycle totient(n-2) contribution
+and the weighted CRT evaluation below.
+
 Write b_n=a_n/2^floor(n/2) for n>=3. All inverses below are taken in
 Z/16, or the explicitly indicated lower-power quotient, and have odd
 denominators. Let
@@ -134,6 +142,19 @@ now with inverse-product weights and a half-interval boundary. Repeated
 prime powers disappear from R but **remain in q and L**. Replacing q by
 its radical would change the clock and give the wrong counts.
 
+For M=16 the weight itself needs a smaller, provably minimal cyclic clock:
+on odd a under the step a->a+2, its period is **four** if4 divides q and
+**two** if q=2 mod4. Equivalently the integer-a phases are modulo8 and4.
+Indeed x(a)=a(q-a) satisfies
+x(a+h)-x(a)=h(q-2a)-h^2. At h=8 this vanishes modulo16 for every even q.
+For4|q, h=4 gives8 modulo16 and fails. For q=2 mod4, h=4 vanishes, while
+h=2 gives4 times an odd integer and fails. Inversion is a permutation of
+the odd units, so it preserves these exact periods. The implementation
+uses this smaller phase in the progression count but still inverts the
+weight modulo16. This is the smallest clock for the **weight under the
+specified step**, not for the entire coprimality predicate; the divisor
+filters and interval bound are separate retained data.
+
 Given the prime factorizations, (14) uses O(M*2^omega(R)) operations on
 O(log q)-bit integers. Evaluating(7) needs the factors of n and n-2;
 the n/3 term uses factors already present in n. Our implementation uses
@@ -148,10 +169,10 @@ even q=4,...,1000, each M=2,4,8,16,32, and the additional q values
 and the user-relevant modulus2*101^2. Normal and optimized receipts agree.
 The standalone benchmark includes factorization and checks all three
 methods agree at n=200,400,800. At800 the generic method visited454711
-partitions and took about1.53 seconds; direct arithmetic took0.000104
-seconds and CRT0.000016 seconds on this one run. These tiny timings are
-illustrative, not stable hardware-independent ratios; the operation-count
-reduction is the rigorous claim. Large exact formula evaluations, not
+partitions; exact timings for all three implementations are recorded in
+benchmark.json. The tiny CRT timings are illustrative, not stable
+hardware-independent ratios; the operation-count reduction is the rigorous
+claim. Large exact formula evaluations, not
 independent full counts, are separately labelled in benchmark.json.
 
 ## Hostiles and costs

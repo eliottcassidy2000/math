@@ -28,6 +28,9 @@ and FOUR_BITS.md; bounded checks provide controls, not their quantifiers.
 - Weighted CRT counts checked for505 even moduli (all499 even values4..1000
   plus six extras), at five binary precisions, against direct gcd scans.
   The full even four-bit formula is independently checked on the same505.
+- All eight even order residues modulo16 checked for the exact minimal
+  two/four-state inverse-product weight clock under a->a+2. This clock
+  compresses only the weight; prime-exclusion and interval data remain.
 - Actual81/27 tournaments reconstructed; common67 cyclic triples,
   H=462915 for both, automorphism orders81 and27, port8 after a sink gives
   2390013 versus1754919. This inherited hostile is freshly replayed.
@@ -67,6 +70,9 @@ The new packet makes no literature-priority claim. OEIS A000568 was checked
 for the standard initial counts, not used as an independent proof.
 Applegate--Pol--Sloane's primary arXiv HTML and Royle et al.'s primary
 abstract were opened; RECOVERY.md links them beside the limited cited claims.
+The later incoming947b6c3852 third-bit law and n40 hostile have priority for
+those overlapping results. The next two/four-state phase proof and modulo16
+four-cycle contribution are separately identified in FOUR_BITS.md.
 
 The recovered June greedy-cover claim failed and is explicitly corrected.
 The stronger totient valuation formula was a local scout guess, not an
@@ -74,4 +80,6 @@ accepted theorem; its first failure in the declared even range is recorded.
 No other canonical claim is promoted from a computational prefix.
 
 See manifest.json for hashes of artifacts and the actual local dependencies.
+The repository documentation gate passed after integration; local packet
+references are independently checked by seal.py. Git whitespace checks pass.
 
