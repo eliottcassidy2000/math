@@ -74,6 +74,7 @@ remain active under optimization. `verification.json` records the hashes.
 | `metagraph_reset_probe.py` |Complete small declared H fibres, selected named native components and two-step return endpoints, module checks, cover profiles, attachment cuts. The H95->289 failure is only for the tested return horizon.|
 | `metagraph_reset_contexts.py` |Independent triangular-context coefficient enumeration and literal source substitutions in the stated small universe; arbitrary-r conclusion follows from the proof.|
 | `prime_boundary.py` |All25 primes<=100, all300 unordered pairs, every ascending prefix cut, and exact odd-prime square dilation.|
+| `incoming_clock.py` |Exact2-by-2 Cayley-Hamilton, determinant and Smith identities; three actual seed bulk rows and twelve subsequent powers. History independently audited the all-depth valuation proof; the row-lattice gate follows by equal index.|
 
 Read each JSON's declared universe before using a negative result. A complete
 bounded-H adaptive saturation is an all-order exclusion at those values
@@ -106,3 +107,16 @@ history inventory is inherited and is not repeated here. `manifest.json`
 hashes the packet excluding itself. Source edits after this session may
 require using the pinned revision. The audit scripts' own producer hashes
 are separate integrity checks. No new literature-priority assertion is made.
+
+The final twelve incoming commits through44d94b4e50 were reviewed by root,
+history and spectrum in their relevant lanes. They change no imported
+producer dependencies. [INCOMING](INCOMING.md) distinguishes their cited
+finite receipts from the new exact two-step clock consequence. The added
+fourteenth job was run normally and optimized; the first thirteen frozen
+receipts remain exactly as verified before integration.
+
+The later7516d6f461 return-channel checkpoint was also read and integrated;
+its port-start bit and context-entry hostile preserve the distinction between
+our H-continuation observer and the legality of arbitrary native resets.
+Root and toothpick reviewed the targeted source surfaces without rerunning
+the incoming large extension census.

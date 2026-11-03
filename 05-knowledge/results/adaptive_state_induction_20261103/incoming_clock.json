@@ -1,0 +1,113 @@
+{
+  "Q": [
+    [
+      77,
+      152
+    ],
+    [
+      28,
+      55
+    ]
+  ],
+  "Smith_U": [
+    1,
+    49
+  ],
+  "U": [
+    [
+      3395,
+      6688
+    ],
+    [
+      1232,
+      2427
+    ]
+  ],
+  "controls": [
+    {
+      "bulk": [
+        25,
+        34
+      ],
+      "lattice_residue_mod49": 46,
+      "levels_j0_through12": [
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6
+      ],
+      "next_bulk": [
+        2877,
+        5670
+      ],
+      "seed_H": 31
+    },
+    {
+      "bulk": [
+        75,
+        102
+      ],
+      "lattice_residue_mod49": 40,
+      "levels_j0_through12": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6,
+        7,
+        7
+      ],
+      "next_bulk": [
+        8631,
+        17010
+      ],
+      "seed_H": 95
+    },
+    {
+      "bulk": [
+        75,
+        102
+      ],
+      "lattice_residue_mod49": 40,
+      "levels_j0_through12": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        6,
+        6,
+        7,
+        7
+      ],
+      "next_bulk": [
+        8631,
+        17010
+      ],
+      "seed_H": 97
+    }
+  ],
+  "det_Q": -21,
+  "det_U": 49,
+  "scope": "Exact two-by-two identities and finite controls; all-depth proof in INCOMING I1-I2",
+  "status": "PASS"
+}

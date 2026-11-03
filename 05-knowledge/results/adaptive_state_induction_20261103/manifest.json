@@ -3,14 +3,15 @@
   "scope": "Packet files excluding this manifest",
   "sha256": {
     "ACTIVE_RANK.md": "af4045103420732268fe16f15fc2484b84b74e7aa70d43c87741cf422cb3fd91",
-    "AUDIT.md": "00c934f27583ee6f0499ef7078f000dfaa572763494bccb3ea0f2c82b4f985eb",
+    "AUDIT.md": "32490d8dade6d46c9b44179c021e4ff13b8716bf10cf765becc6fad7db177303",
     "BLOCK_SWITCH.md": "459f737c674cf6d3dfbc8732b41a42b154af11b790922f74a2b673040404359a",
     "COMMON_OBSERVER.md": "9ac00fdf97ec7ae8758a96ca5f8db6912e61d41122ec7b545db1a794cbfd8563",
+    "INCOMING.md": "bc8ae896c2cf555e5b696ec5c3039757bda298ad47e34b4ab10349dd4f9f55ab",
     "INHERITANCE.md": "a95c7e6b9b0a0d863bec7b852ddf2236e5ce1f61078dd31ddbf992ec35284935",
     "LIVE_PORTS.md": "1933eb6fa2fd9244b910e4fd14319e546d0aac63227c09c18f0fb2a8b5f4c853",
     "METAGRAPH_RESETS.md": "ddeaa76a403b85e7df77c033b9d6a3e2406c6167dc432b9fd114c25608706f21",
     "PRIME_BOUNDARY.md": "fbc6f8faf3a58a0aefdcf897faed80d4deec81ef69658a28b37bbc34f2851bbf",
-    "README.md": "099c461db39595b500b19a1888392b850a970e891f6ba298bae8fb2e0a5ff737",
+    "README.md": "8a920ac04963abe1c30f9d9e5b51f4a938f9355dc049dffcf2cc2f68aa482148",
     "RETURN_BANKS.md": "96c9493858200756c63ed52a83c3ac2842aa5ac19d99efbbb72b75b7900daf70",
     "active_rank_exact.json": "cee829eb30115875191317be15bb7138ae8277cacab2bad38e747dd84a93a15f",
     "active_rank_exact.py": "d1b54c9da35021d4b8ae448bd74f4f5c32488b089a33c5c0ab2fcc06a6423c4e",
@@ -20,6 +21,8 @@
     "block_switch.py": "87ce0e38c88fabafc30979ad8dc4f6425f66fc28d15e2e1f7b76a0fa28c048bb",
     "block_switch_independent_audit.json": "9c69b041d1a9f29d22284277facd819fe0643d6c56fb239ea76aac8c50afb559",
     "block_switch_independent_audit.py": "1211fc458ce43a4627809a90f1d5a364e23bc08a5dd647c53e6bad8c84ee4cf1",
+    "incoming_clock.json": "1561f2f0554c333130e91f5f9b7e46a4b95e2825ff1fb1d2cd239ee3e3e15cfe",
+    "incoming_clock.py": "861c14eec77c7c0ee79acc4867190a11ec5b3aa2b9ff45b8e6dd5c4e47007f6e",
     "live_port.json": "6703d24d3d1a4fe8b121c3a5d9942f2d57d67dc7ca8738d855f7260c7f8e2f23",
     "live_port.py": "8eb8f928730dca30224d02e2a2b194287e86b198a0db571603710c036aebb524",
     "live_port_audit.md": "01bba5be2ccc78658c17e0cf5470d3808b5311cb9dd53e64abb499ecd1621555",
@@ -35,12 +38,12 @@
     "prime_boundary.py": "f3114c54204f6bc409bfbbf7d828e019b2b2378062d8a7d0b532070af2f59002",
     "return_bank.json": "65ed181a49907876a3bd84fbbc96f5ca8193e8215fc15e18416e4cdbc9cef803",
     "return_bank_probe.py": "97b76162315bbade7a2704893dd5de5099701b95e66a7c514d07df5f522902e1",
-    "sources.json": "3363c17ffd3466f6eb6b914b04865f2ee4acc46f82b8e30e4321f87038bc6e34",
+    "sources.json": "7a62174b4a06e5c67488e313345b208e39c359a3c21a0dd393bc300c01a24cd8",
     "two_port_envelope.json": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe",
     "two_port_envelope.py": "26fa6023770088bfb9cc679b2fdf66ab70e0e8504a460826c23564e981e2bf5b",
     "two_port_envelope_independent_audit.json": "54b7bb046da4286fc76d0f274ea05fa03e19a2fe255e3cdf9b386bd91c3d9094",
     "two_port_envelope_independent_audit.py": "0a735dce17d5bf9c52aeb76653caa1f99c912acca457214aefb2d4b4050f4121",
-    "verification.json": "6201e16689b855d39a5d615b4684bdbeace3d854fe655788045a3bd2bfb2a5df",
-    "verify_packet.py": "07e086b238ad42939444797278cca3bbe3ecc7222145cef11d2bd6fcb7423ff9"
+    "verification.json": "7e0bd92dee767c5bb972b70aae64da20c009f5b1395bc8883faaf3a70e50b317",
+    "verify_packet.py": "7b9e1be8dccbc75fb5d6812030ebd074f3df0c9710dc4e0aec681af1579c9575"
   }
 }

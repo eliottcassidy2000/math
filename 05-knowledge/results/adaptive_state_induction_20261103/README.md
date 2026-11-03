@@ -138,6 +138,14 @@ are known. None is supplied merely by a recurrence, modular clock or finite
 support check. The constrained targets and counterexamples here make these
 tests smaller and more informative than another unstructured census.
 
+The [incoming reconciliation](INCOMING.md) sharpens the return test further.
+The recovered same-channel symbol s78 has Q^2=3U with det U=49, so its bulk
+valuation gains exactly one every two steps. The candidate exact two-symbol
+return nevertheless fails for the H31,95,97 seeds by the explicit gate
+`Y-21X2=0 mod49`. This new all-depth law, and the incoming finite four-level
+repair tree with carries, separate removal of one prime-adic obstruction
+from actual recursive closure.
+
 ## Verification and provenance
 
 [AUDIT](AUDIT.md) separates proof dependencies, literal controls, finite

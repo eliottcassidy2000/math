@@ -1,5 +1,7 @@
 {
   "base_revision": "ff94a6d74130612bf3e34f2ac278c1f848168d88",
+  "final_incoming_revision": "7516d6f461c0c65adfc84cb11aff1854e3ed4867",
+  "incoming_revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
   "scope": "Directly linked predecessor proof surfaces and three external computational dependencies; not the full transitive dependency graph",
   "sources": [
     {
@@ -176,6 +178,84 @@
       "git_blob": "8ca0795b4090ea4fd8055f9d6107bf452a60bae7",
       "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",
       "sha256": "dc20e1e97aff4c0e82c04b3ed6759649b0c403b851e2d176b5f600491dd9fbb9"
+    },
+    {
+      "git_blob": "8ef2f8f7ae5a240f81e9b624d2e3a0f001b1ec84",
+      "path": "05-knowledge/results/ternary_repair_clock_20261103/README.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "3661d673dfe1b8a53fbce35f9168f61785121c5aef4c6d61a11a11bdb4c94d58"
+    },
+    {
+      "git_blob": "7ed4982c41a4bbbe8467f2769720e54817cff673",
+      "path": "05-knowledge/results/session154_gadgets_20261103/closure/NOTE.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "9a58764e5f580191bd28594df08013ee2eded52dc9525d7cdd0719aed074c94c"
+    },
+    {
+      "git_blob": "9d26efa9e678b7cea9c6e36f381ed4b41bafb6e2",
+      "path": "05-knowledge/results/session154_gadgets_20261103/full_prefix/NOTE.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "29a51a36ac8609cecd7c0d3df7fa3af9363db6957f1b6014680097ef1ccab727"
+    },
+    {
+      "git_blob": "dfe9930cfd353fd5359db62903809b84cdf423c1",
+      "path": "05-knowledge/results/session154_gadgets_20261103/padic13/REFINEMENT.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "ad1666f933d213e2aa8560b63b4b718f0b2dc04e51808ab1b56c9cbda48317f5"
+    },
+    {
+      "git_blob": "ed29ebabe69f4034701200de519816068ff61424",
+      "path": "05-knowledge/results/session154_gadgets_20261103/padic_general/GENERAL.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "18cae85e505184684e43ff99e5da807eaea7aef8f11fc8de4358b3c09730ba39"
+    },
+    {
+      "git_blob": "2edd32fb0356592d1a50d242b0b384dd88ea498b",
+      "path": "05-knowledge/results/session154_gadgets_20261103/crt713/JOINT.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "933cf3fc88d7ab9ffa2d0833cecb64164826e7f7027fafbba3e70e542dea1b8c"
+    },
+    {
+      "git_blob": "796c9a37c3f24841bf9bb3e1f994a40b6735bfd7",
+      "path": "05-knowledge/results/session154_gadgets_20261103/crt719/CRT.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "5d2c78688100a67bceae14c15bf16dc36dcc0a1904f6e1320968b999c9365095"
+    },
+    {
+      "git_blob": "cb521ba119f7d35ceebb148daff939778890c14b",
+      "path": "05-knowledge/results/session154_gadgets_20261103/interfaces/README.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "67219ed0474b9f1de73f52fa9fa3ee2af6618e6688ac1e91d5acfd2114fea0c0"
+    },
+    {
+      "git_blob": "5f146ab188fafd8b826effac79a1d6a361ed171c",
+      "path": "05-knowledge/results/ternary_repair_clock_20261103/CARRIES.md",
+      "revision": "44d94b4e50ef8bfc463bdc6e6ae03f8cf3382e45",
+      "sha256": "8afb2e2f2d840cf2792a0ecf2aa3e5c7712a275ec300305fcda1b70951abf853"
+    },
+    {
+      "git_blob": "0ecd00e0c76da2aea8c77b4030b126c81ecc7690",
+      "path": "05-knowledge/results/return_channels_20261103/README.md",
+      "revision": "7516d6f461c0c65adfc84cb11aff1854e3ed4867",
+      "sha256": "f37c3ca780146a401aceb89d26e4b23a57072c4b2b88263fc065a3db8b53d985"
+    },
+    {
+      "git_blob": "1605401725c790bdf2e684c7469d4d8da6ae463f",
+      "path": "05-knowledge/results/return_channels_20261103/PORT_GUARD.md",
+      "revision": "7516d6f461c0c65adfc84cb11aff1854e3ed4867",
+      "sha256": "bfe73e1f76cabaa766170468862779de5054698daefb69ab5aa4af17c6109a07"
+    },
+    {
+      "git_blob": "3df0a0af18ece7d1ef4a79b535eb96f4247813fb",
+      "path": "05-knowledge/results/return_channels_20261103/CONTEXT_ENTRY.md",
+      "revision": "7516d6f461c0c65adfc84cb11aff1854e3ed4867",
+      "sha256": "f9280505433ae68e7d4076ed1157a592ca780b385044a7561d23762eacbc5d91"
+    },
+    {
+      "git_blob": "5d2d23435509053671d422e06901fdb15a3c9aa0",
+      "path": "05-knowledge/results/return_channels_20261103/BIRTHS.md",
+      "revision": "7516d6f461c0c65adfc84cb11aff1854e3ed4867",
+      "sha256": "4fb163cdf8f3eeaac926c9079d3a318df9ab5822af832d2c4474bffa64fcebe3"
     }
   ]
 }

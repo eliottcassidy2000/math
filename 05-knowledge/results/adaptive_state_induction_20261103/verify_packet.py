@@ -25,6 +25,7 @@ JOBS = [
     ('block_switch_independent_audit.py', 'block_switch_independent_audit.json', True),
     ('two_port_envelope.py', 'two_port_envelope.json', False),
     ('two_port_envelope_independent_audit.py', 'two_port_envelope_independent_audit.json', True),
+    ('incoming_clock.py', 'incoming_clock.json', False),
 ]
 
 
@@ -46,7 +47,7 @@ def main():
                          'normal_exact': True, 'optimized_exact': True})
         print(f'PASS {script}', flush=True)
     (HERE / 'verification.json').write_text(json.dumps({
-        'status': 'PASS', 'scope': 'Exact replay of thirteen frozen jobs in normal and optimized Python; no expanded universe',
+        'status': 'PASS', 'scope': 'Exact replay of fourteen frozen jobs in normal and optimized Python; no expanded universe',
         'jobs': receipts}, indent=2, sort_keys=True) + '\n')
 
 

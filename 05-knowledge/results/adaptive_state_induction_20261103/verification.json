@@ -90,8 +90,15 @@
       "receipt": "two_port_envelope_independent_audit.json",
       "script": "two_port_envelope_independent_audit.py",
       "sha256": "54b7bb046da4286fc76d0f274ea05fa03e19a2fe255e3cdf9b386bd91c3d9094"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "incoming_clock.json",
+      "script": "incoming_clock.py",
+      "sha256": "1561f2f0554c333130e91f5f9b7e46a4b95e2825ff1fb1d2cd239ee3e3e15cfe"
     }
   ],
-  "scope": "Exact replay of thirteen frozen jobs in normal and optimized Python; no expanded universe",
+  "scope": "Exact replay of fourteen frozen jobs in normal and optimized Python; no expanded universe",
   "status": "PASS"
 }
