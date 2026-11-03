@@ -1,0 +1,78 @@
+{
+  "code": [
+    {
+      "file": "completion_hostile.py",
+      "sha256": "2a2346e721a7fa0ac9f1cc66c79135874eaa69c23877d65caa65345d3251adda"
+    },
+    {
+      "file": "halving_response.py",
+      "sha256": "7ce353375467e8fe852d8224cd88968f29e8ac4abb27e17e0e2737298cf51927"
+    },
+    {
+      "file": "match6325.cpp",
+      "sha256": "6c8788c0cb63b57be68e1d75bc7897c251cbb8d638492e7e319503e751f1f335"
+    },
+    {
+      "file": "matching_carry.py",
+      "sha256": "3427c587e6bb58be0e0129197f9fba112d2043414778e895503f1f09b302b50a"
+    },
+    {
+      "file": "observer_filtration.py",
+      "sha256": "d916d3d2376c5b44b8d73b21fcf54980217595bf1bd02206499ff756096f6de7"
+    },
+    {
+      "file": "ready6325.py",
+      "sha256": "d0d378e1bdd672f7e0bf9aab9d6ea7fdae206ec851427a0f0f47f426f2e6f4b2"
+    },
+    {
+      "file": "ready_filter.cpp",
+      "sha256": "9b913d9929c55ba1468f50467506616a06b099b473afb5294527a51c17f8a41d"
+    },
+    {
+      "file": "reproduce.py",
+      "sha256": "5132ddf042925774225069f2f62f4ddc6389a2e53198b44d1223081e6779604e"
+    },
+    {
+      "file": "return6325.py",
+      "sha256": "ee57288ff551c39f7bae00acc93d7155afa94f009beedec8e800c14b11737eff"
+    },
+    {
+      "file": "support.py",
+      "sha256": "2ce788123f830f0e32b441b18d21a6ccdbb1f95e1f8bb917e9942b70470ab25b"
+    },
+    {
+      "file": "target6325.py",
+      "sha256": "6fff4d47294ba4757ccbbaab21c5e28c2649a4edc8255e9a0492d16a265f11a6"
+    }
+  ],
+  "receipts": [
+    {
+      "file": "ready6325.json",
+      "sha256": "3f8c4d42b9bcd20806bf35464ad63d58e4d705e3eafe5ba95e9d2556ed882cc7"
+    },
+    {
+      "file": "target6325.json",
+      "sha256": "c175a5e5bc76d4c0c12512b722cba815280c6059c08b5f0955858b0bce729907"
+    },
+    {
+      "file": "return6325.json",
+      "sha256": "b2905c481149de618ff3011d48d0d3d3c815439ece066d7e13e7859f987e96dc"
+    },
+    {
+      "file": "matching_carry.json",
+      "sha256": "0fdd3750ca37a3cfc438353a720ba08d748618b8394d91597aefd6b23f5c8a80"
+    },
+    {
+      "file": "completion_hostile.json",
+      "sha256": "a8e13db556fbf4c71afa9c2749e7faeda378ee027dc5c7e115ccb7425d4acdfa"
+    },
+    {
+      "file": "observer_filtration.json",
+      "sha256": "d82f192f2e1cf123a627a95dec7782955158d746c579882eaacb37f38c85dcd1"
+    },
+    {
+      "file": "halving_response.json",
+      "sha256": "f9da09d592e4238aeecf992d8113f61427b30fda4de69287192105dd7a9b90b0"
+    }
+  ]
+}

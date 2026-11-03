@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "mode": "normal",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "compiler": "g++ (GCC) 15.2.0",
+  "inherited_files": 189,
+  "receipts": [
+    {
+      "script": "ready6325",
+      "stdout": "parent 3 budget 1 count 1 hits 0\nparent 3 budget 2 count 0 hits 0\nparent 4 budget 1 count 3 hits 0\nparent 4 budget 2 count 1 hits 0\nparent 5 budget 1 count 8 hits 0\nparent 5 budget 2 count 5 hits 0\nparent 6 budget 1 count 21 hits 0\nparent 6 budget 2 count 18 hits 0\nparent 7 budget 1 count 55 hits 0\nparent 7 budget 2 count 60 hits 0\nparent 8 budget 1 count 144 hits 0\nparent 8 budget 2 count 191 hits 0\nparent 9 budget 1 count 377 hits 0\nparent 9 budget 2 count 589 hits 0\nparent 10 budget 1 count 987 hits 0\nparent 10 budget 2 count 1775 hits 0\nparent 11 budget 1 count 2584 hits 0\nparent 11 budget 2 count 5257 hits 0\nparent 12 budget 1 count 6765 hits 0\nparent 12 budget 2 count 15360 hits 1",
+      "sha256": "3f8c4d42b9bcd20806bf35464ad63d58e4d705e3eafe5ba95e9d2556ed882cc7"
+    },
+    {
+      "script": "target6325",
+      "stdout": "PASS target6325 minimum arcs 10 search nodes 40284",
+      "sha256": "c175a5e5bc76d4c0c12512b722cba815280c6059c08b5f0955858b0bce729907"
+    },
+    {
+      "script": "return6325",
+      "stdout": "PASS return6325 20 native moves; no old deletions; next18979",
+      "sha256": "b2905c481149de618ff3011d48d0d3d3c815439ece066d7e13e7859f987e96dc"
+    },
+    {
+      "script": "matching_carry",
+      "stdout": "PASS matching/carry root clone debt 1342 *(2^m-2)",
+      "sha256": "0fdd3750ca37a3cfc438353a720ba08d748618b8394d91597aefd6b23f5c8a80"
+    },
+    {
+      "script": "completion_hostile",
+      "stdout": "PASS hostile completion (291,) holonomy orders [54, 9, 9]",
+      "sha256": "a8e13db556fbf4c71afa9c2749e7faeda378ee027dc5c7e115ccb7425d4acdfa"
+    },
+    {
+      "script": "observer_filtration",
+      "stdout": "queries ('h',) levels [{'depth': 0, 'response_rank': 1, 'invisible_source_dimension': 26, 'algebra_error_dimension': 85}, {'depth': 1, 'response_rank': 4, 'invisible_source_dimension': 23, 'algebra_error_dimension': 62}, {'depth': 2, 'response_rank': 10, 'invisible_source_dimension': 17, 'algebra_error_dimension': 51}]\nqueries ('h', 's', 'E1', 'S2') levels [{'depth': 0, 'response_rank': 4, 'invisible_source_dimension': 23, 'algebra_error_dimension': 58}, {'depth': 1, 'response_rank': 14, 'invisible_source_dimension': 13, 'algebra_error_dimension': 12}, {'depth': 2, 'response_rank': 27, 'invisible_source_dimension': 0, 'algebra_error_dimension': 0}]",
+      "sha256": "d82f192f2e1cf123a627a95dec7782955158d746c579882eaacb37f38c85dcd1"
+    },
+    {
+      "script": "halving_response",
+      "stdout": "PASS halving completion: bare fibres m-1; binary hierarchy m/2; ordered fibres0",
+      "sha256": "f9da09d592e4238aeecf992d8113f61427b30fda4de69287192105dd7a9b90b0"
+    }
+  ]
+}

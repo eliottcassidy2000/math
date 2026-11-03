@@ -1,0 +1,768 @@
+{
+  "status": "PINNED_INHERITANCE_WITH_SELECTED_FRESH_REPLAY",
+  "startup_commit": "31b13dd9a2c8",
+  "hash_scheme": "SHA256 with LF newline normalization",
+  "dependencies": [
+    {
+      "path": "01-canon/theorems/THM-2230-planar-jacobian-response-fiber-and-exact-target-shear-quotient.md",
+      "sha256": "d2a7eca6ec57b9827e0e2e025cda33c7f4ac8bd01f831acb823542c3040f40ce"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.json",
+      "sha256": "6703d24d3d1a4fe8b121c3a5d9942f2d57d67dc7ca8738d855f7260c7f8e2f23"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.py",
+      "sha256": "8eb8f928730dca30224d02e2a2b194287e86b198a0db571603710c036aebb524"
+    },
+    {
+      "path": "05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md",
+      "sha256": "2b72047a3cb163ccb12ed7e70d5f11d9b13011fbc9ba11c8eaf670df31b56e7e"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md",
+      "sha256": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/mechanisms.py",
+      "sha256": "236fd8f13b71365cf806fbfc8e19592c2a70bec9c1219554d79a7dff9b80519c"
+    },
+    {
+      "path": "05-knowledge/results/boundary_carry_returns_20261103/PROOFS.md",
+      "sha256": "77acdfb3c95c9beff9e67ce2e26dd7e5a49dd167c3250a1c451987ef0ed3dbc5"
+    },
+    {
+      "path": "05-knowledge/results/cayley_dickson_integral_20261030/PROOFS.md",
+      "sha256": "518f299bb22deca3041259fb4fcebf01806bec117f0f313c7055f0b19acccfb5"
+    },
+    {
+      "path": "05-knowledge/results/clocks_carriers_genus_20261102/COLLATZ_GEOMETRY.md",
+      "sha256": "07cec6485117d4be849ba4f2d8dd56dc28876a1922b9a68cf6cc8873d01599de"
+    },
+    {
+      "path": "05-knowledge/results/collatz_hexagonal_growth_20261102/GEOMETRY.md",
+      "sha256": "d65eb5c6a2217c7a11bff309badc3dd577558d009881cbb9032c4274e3abb7dc"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/README.md",
+      "sha256": "0d40bda50e21cf906ff129ba3ee667fd6398a57d19d0cbe4d7ee4cd6af0a41f1"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "sha256": "27d99326c5ea879612c47c08cba42ea263c98c046afceca48b1b33156bf516f6"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/gluing/NOTE.md",
+      "sha256": "9b2acb148d353a59ffd0a0aa5e87d3a8abd42cb07f7bd11da11f805a18694a9f"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/gluing/check.py",
+      "sha256": "e8e3c4d901db3583910d9e5dccc0a745f850da4acfa727811d8f73d30fb87432"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/junction.py",
+      "sha256": "23a4c897277e68e825aa5cbf6393178aa037bd991def78328671f3a59c590b61"
+    },
+    {
+      "path": "05-knowledge/results/cursor_cm_phase_20261028/RAMANUJAN.md",
+      "sha256": "93b249a19a470b397ca3f7c7e202657023a93abbe8e6b4fa4dd9eacb04e42dd1"
+    },
+    {
+      "path": "05-knowledge/results/cursor_cm_phase_20261028/TRACE_CARRIER.md",
+      "sha256": "67a1ce4a23fdd4645e3e9038aba36072056d9d7da39a688c78a98ecfc09e60a7"
+    },
+    {
+      "path": "05-knowledge/results/decoder_halving_20260925.md",
+      "sha256": "346d9858f9d135c5fb0799be62e95a09cc1a1c4a901744d7274d492f65b01010"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/ESCAPES.md",
+      "sha256": "7f5558a9e65a5bd484bc71f3058c3a08c8e095fe44890e22a8c8b890b8a09a07"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/boundary_search.py",
+      "sha256": "870d851250fb9d1e38b4be7909b08c6cc76eb06b747176f5b9d992ce2e1fca5c"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/branch_search.py",
+      "sha256": "804c655c33272a1ff73baeef0d6314fd1573caab5833a698e681d4b0490f7270"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/clone_clock.py",
+      "sha256": "e85ab46c46b39fbd517bdc34192f8af56ee13721a0edcd0c6d4165439d0aa93b"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/dynamics.py",
+      "sha256": "eb6901314246372db6525136f2f4a5df5dc7ab4e8b5f7a3bd452c755d4df9adb"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/ear_cuts.py",
+      "sha256": "5328f37f6593855e2a2979c048ce48044a94a95eb82eb575341812ce9854ab9a"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/incoming_checks.py",
+      "sha256": "c90daa2c265502220c187b8b3c56e8603507182e355541b9a8cfe220499be3f7"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/replay.py",
+      "sha256": "b2c9ca86507f4c2da405697b1aba6e39a6746eca62d3ea88f64f045aa40d6993"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/run_polynomial.py",
+      "sha256": "b3e046eb276ee41e1290a5bc0a1bb7d72dae24bf9408da4924bde6ce45d1fbc8"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/wing.py",
+      "sha256": "5de01c634fafc83dcc624f4870904fd4d6a395ff611c55aeeb143e8803a4ffd7"
+    },
+    {
+      "path": "05-knowledge/results/defect_offset_dynamics_20261103/wing_switch.py",
+      "sha256": "a33b41c633797a21835d2e66b9e050f8fede82039518eab762f0fe9db8e38102"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/HANDOFF.md",
+      "sha256": "0cc8fc7eb63e24cef96ed72107de73afdd046e7a25a3cf9665e66bbd667af336"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/SYMMETRY_AND_PORTS.md",
+      "sha256": "e0e05ee04c7335991790ac8cdab6266c4272b51894262052a8f3aea1deb376e5"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/attachments.py",
+      "sha256": "de48bee8941fd28174d980e4fd5a7aa48248691a7fa0a8bc6f4ae1c1090a9ead"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/clock.py",
+      "sha256": "9590d051022fa2cc11772531e6e85d7bf60e49d79bcfc0c1edfad6a2d1313289"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/digits.py",
+      "sha256": "0da192a7e7bccd39d823066d7d2f953ed5972524be5d836e58fa00360bc60f69"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/even_towers.py",
+      "sha256": "007de42864ff6da21108bab6bc13cdb80c8ddee7de861f08dc473b013c309067"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/halving_normalization.json",
+      "sha256": "3a50448751d5da738649d311c19151242123b3dfb4fdff67fce2a104ed2d7292"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/halving_normalization.py",
+      "sha256": "83548300d975ffac4648ac866dfd9191fefad085811b23f8c74e6fb78ea25c5a"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/hostile_embedding.json",
+      "sha256": "de2dbd798841e64ec7e1ff5d8463345076d008b2f073169b0541dbe666b5e894"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/hostile_embedding.py",
+      "sha256": "29228f56f7337923f25fbe3fed5f9e8ebae4c1a0104a8391a76249ca12c3cfae"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/ready2107.py",
+      "sha256": "850db49679b86c3215a5c8e511c1db91f568b9cf47f17c2429e6f63c44252047"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/reproduce.py",
+      "sha256": "798d711e3a9899192f346cac178b4804c8d27ba50e79bf37efec766b03e0eae9"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/return2107.json",
+      "sha256": "c544a29d7e7bc185cba13e31713ce5ead2502a78cbb0e3295aab8053af7295b5"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/return2107.py",
+      "sha256": "1b211510bd5d1ef99afb0b50b617259769897d1f2170e307935ffb8f8f9177f4"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/support.py",
+      "sha256": "0c0ade02d7623ecde0043022d9c6955671da5335401c774f98c1fe275fada7c0"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/target2107.py",
+      "sha256": "7bc5ebb71cb4b3c819f7aa806d268cd9d84393ac35cfdf3c82029d5da846b9ed"
+    },
+    {
+      "path": "05-knowledge/results/digit_cycle_ternary_20261103/ternary_family.py",
+      "sha256": "2735821bd3d5d070a1ed9bb1c74b439d31929404464ec57eba435eeba66671fa"
+    },
+    {
+      "path": "05-knowledge/results/exception_pathcover_transfers_20261021/session24-pathcovers/PATHCOVERS.md",
+      "sha256": "e18b58b2aa8b0da2714a770f106aa95f8a6cbae1081a9ffdcce08be3fb6ba97a"
+    },
+    {
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/TRANSPORT.md",
+      "sha256": "03183aa0957fd817393972510e7d924994ba7b77c6dde738f1a93c2722318b56"
+    },
+    {
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/inverse.py",
+      "sha256": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb"
+    },
+    {
+      "path": "05-knowledge/results/golden_prime_clocks_20261003.md",
+      "sha256": "842ea375f82165c5dc8ece1b3ee822ca87666ec560518d7315371d4913bf60bd"
+    },
+    {
+      "path": "05-knowledge/results/golden_seam_recurrence_20261103/atom_atlas.json",
+      "sha256": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba"
+    },
+    {
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/SYNTHESIS.md",
+      "sha256": "a98071c0d6c3dfca215dbcfe360b3530fe657bc097c5cceb0ec414592a504c80"
+    },
+    {
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/fano_eight/RESULT.md",
+      "sha256": "1ddae6b29dc28e3fac0383269ffb69837522d8bcf0e86587ef32fa29f34e1665"
+    },
+    {
+      "path": "05-knowledge/results/hadwiger_six_seven_eight_20261025/metric_spindle/RESULT.md",
+      "sha256": "06c6837e844acfdcb01b43f487206a2aaeadd9ae26ffcc4ad89d253a6778616d"
+    },
+    {
+      "path": "05-knowledge/results/joint_incidence_clocked_frames_20261102/COLLATZ_LATTICE.md",
+      "sha256": "dcc7dfe5c309425718eb6353d8d750692a392ce985048781529c2ee86a20697c"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/JACOBIAN_PROBES.md",
+      "sha256": "a793fd27e12ec0c59986ea9ea2df6632a267152f270dd4471c86a32fffdd795d"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/JOINT_EFFECTS.md",
+      "sha256": "c1e7b8a2a181d12e024e41652bc0783f9557b437c4c284575cc80fa9e9b67827"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/RETURN_233.md",
+      "sha256": "88d510782594cd88ba06d9db728f37cca0a65c1a7b86b15172e1418c87ec31a9"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/algebra_probe.py",
+      "sha256": "d1ca85c99bfc1b89d5e36997f65b3dbf53a5fa4fbcfba425654bedb1d063fe94"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/filtration.py",
+      "sha256": "d9b067626b82ee2b47b0b47b77ed7a32cf7ef42117a415a277f64d76f1f206b8"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/geometric_phases.py",
+      "sha256": "fa6793009080eb7c21018b8d651c63ca2fa7864ad1ddab48d0a0e9a50994565f"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/jacobian_observer.py",
+      "sha256": "95adf780b511ed1f9e02290f7882685d66cc401a96419562622284db952be82e"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/joint_probe.py",
+      "sha256": "1ac273edfc45336f0579d53aa269207bf001bd688f5189bc1c0e548dd5af896e"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/literal_interfaces.py",
+      "sha256": "96113d095fe4ec4b01739dee572940aa39349234166a46fbb7e297d1c591ff5a"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/persistent_certificate.json",
+      "sha256": "d1f4d037adb8d92ff89e96828dbeb985988bce687b4048e2be0b591e94ad9816"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/persistent_certificate.py",
+      "sha256": "e07bdc39265b24dd9fbeb6167264bae96ad2f172bda32b78c6ba78d108c6525f"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/persistent_port.json",
+      "sha256": "fd5c2ec0f4ae78e99143bf3ec500b165d1b38e2ba120b74aa1980f211e3a362d"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/persistent_port.py",
+      "sha256": "5222a3694a9b07a282ac8af84d62a7aaf824bf3ed206763593d70385a8e10265"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/rank_transfer.py",
+      "sha256": "f4d700c4fe67b4e50c953fff9917d4a00b000bb2f539f4b66b658f33cd3f6046"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/recurrences.py",
+      "sha256": "9c0c63aca81401bbeaf3cd365f106a1d4377246f1022764db4dfc54ad95fab01"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/reproduce.py",
+      "sha256": "398840807899740b81457823297f28d52a8618b65400d7c211d2e5a4cef3f8e3"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/return_native.json",
+      "sha256": "f5a323cdb473db000861b122bc49e48e0a9c9be544a5c53d6c587c35e13791ba"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/return_native.py",
+      "sha256": "9af87a0e0e0e702c89f830e4e8c4df523486ec2249cdaebce7125541cc771756"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/return_probe.py",
+      "sha256": "00d1dee071955b76c24f7288368e0adbd342194e41434d5fea4fe2cf826ffb2c"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/split_algebra.py",
+      "sha256": "b27ff0f7a0ab1aa5f4c0accb90879ef2b9fdb1e7724ff2ca9257932d08f345eb"
+    },
+    {
+      "path": "05-knowledge/results/joint_port_geometry_20261103/word_return.py",
+      "sha256": "e175e6915f3e07fe59b63ef10b1c66606b929f29a705049a4dbee2d033819ce4"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/JOINT_CARRIER.md",
+      "sha256": "f9eb818b5208eef0db8f4ac84f64b02e0030b834ab997c3d44d4fcfbdedc1818"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/PHASE_LEGALIZER.md",
+      "sha256": "3af5d94c3de0c302f1481be74b001f1539d7ab8ce3301509eab79e2325956dfd"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/READY_REPAIR.md",
+      "sha256": "70506b11fbc5409d8378825ff7c6b7c5f98cbad55adac84009d2177edceaa5c6"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/algebra.py",
+      "sha256": "00c5c8deec6f8f77ee846dbeadbc97048a2843bf1690fa8fb3ad4a245e934370"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/clock_cube.py",
+      "sha256": "9a6dc503cf246fbcb91c62feedaacf6de8b4e38fea382f6aef94c991a26548ed"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/controls.py",
+      "sha256": "4366b6a6a506ba7bcfb62a14970bba9f801f7f16e087ec438a6fdd4f24edbe0a"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/effects.py",
+      "sha256": "2a2bf6a34359076795931972afad626ecb4aa2f385e755a4fea6539c147e3837"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/lattice.py",
+      "sha256": "7f29e1529e6f7683c66977177d87510c3ec4f61d18d8a2014dab12a644b1b8eb"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/legalizer.py",
+      "sha256": "931b7bf4eab588242d597a3e099ab738c580d34f44078975ed107e34445e00c8"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/one_hole.py",
+      "sha256": "21a8b1aa73f6460038494448f5b9630ee641dad56a036f14df24fc0c64b777ab"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/ready.py",
+      "sha256": "53ff222b3ef05d3cfaced4d0ab5ae66d1c5a0eb21d9b1a016fdb8488516ede66"
+    },
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/reproduce.py",
+      "sha256": "27e5c6e4db879c69c72dd76eb4df1faa87c9679ca9f9c8e13470333b71080343"
+    },
+    {
+      "path": "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
+      "sha256": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d"
+    },
+    {
+      "path": "05-knowledge/results/mixed_returns_20261103/controllers.json",
+      "sha256": "d6633b1e8c042f15b2a1828c8b4985cbeb88cafe003ed48c6b990eb8d7a8e5b9"
+    },
+    {
+      "path": "05-knowledge/results/mrb_square_probe_spectrum_20261103/INCOMING.md",
+      "sha256": "d06b0101e45faa2158f6d423c8523f50882029b4c18341cfb988a57aa46cf6e1"
+    },
+    {
+      "path": "05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md",
+      "sha256": "1eeddc0610234012034affe80e4bd512aa529aeb8001abb782b4991251c49b33"
+    },
+    {
+      "path": "05-knowledge/results/ordered_response_ten_20261103/neutral_carries.json",
+      "sha256": "2ece655a0ea098c4bf460373a32e11b12183d61bae3b909d4fc7a86ab06507b3"
+    },
+    {
+      "path": "05-knowledge/results/overnight_research_20261029/PERIODIC_FROBENIUS_LIFT.md",
+      "sha256": "69889ce18313c0cc50fee8cd46a16e28c4d8b177ba15cf7a02b767c0b9eb93c6"
+    },
+    {
+      "path": "05-knowledge/results/planar_jc48_sep06_torsion_audit.md",
+      "sha256": "2d92ac9302a937a158cf9ed87fab4d0ca1f7f91f2604bae01487c23d7636613f"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/FUNNELS.md",
+      "sha256": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/counts.py",
+      "sha256": "45ee52d491e05ac9def4e2da8611764a6556a17dd7f62cc3511a08f85e18f366"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/explore.py",
+      "sha256": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/recognize.py",
+      "sha256": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/verify_packet.py",
+      "sha256": "493e18f9a84d9390beba857a898023ea91a194e8b8a00a0caf6950c45e27a7a3"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/OBSTRUCTION.md",
+      "sha256": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/README.md",
+      "sha256": "cdcafedeb02b06f7a2d505378a74a24f46fa85264651222445c097d0d0fe535b"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/explore_returns.py",
+      "sha256": "e2c6e592ec4d7e04c42fa917a8346fd1be8ab9ca59c1961ec32d9b420660ca19"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/obstruction.py",
+      "sha256": "d42725c29297481d8e5a75a8697a3b3bf778b9e467e2a99ded9164d0c1218a11"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/ready_inverse.py",
+      "sha256": "4c9f06467d9acdaef9707e7542668d3fb5d8656f8ccc6eec1942a585c36cdbec"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/replay.py",
+      "sha256": "4c4f13116d5a2d04896648baf092155bc02af0dcd82f2d31302890291bd30ed6"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/return_program.py",
+      "sha256": "7c1685b15117716b161929ca262d4397737865d4f8560ff7b26bc7869d4fcbbf"
+    },
+    {
+      "path": "05-knowledge/results/regular_parent_symmetry_20261029/verify.py",
+      "sha256": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/ALGEBRA95.md",
+      "sha256": "779e6e8e15fd5319043d1930f5ee2ca7169b8df4c396020f328291f1789d2489"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/HANDOFF.md",
+      "sha256": "03c0bdf3b88dc71128c7cbf154a58c7a59cd054d49ec6ad40103ef4fc86528ee"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/RETURN701.md",
+      "sha256": "188111557ab04ea9924a92ac059c254bc018bcb124a35c2f6b060570cd6735a5"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/SPACE_FILLING.md",
+      "sha256": "473aeddbcb625a50f155725ee0ec5f892efefe43fcf0699a83868d5081d329ca"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/algebra_exact.json",
+      "sha256": "57b2c33d738fc70a1a17bf2d30913229aa388d3ece5e5c5f7003aa30a8e774fe"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/algebra_exact.py",
+      "sha256": "9d0612556e93361419e07eaa8007ef8de9e17429c30730d038bdb1668e526dfa"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/clock_split.py",
+      "sha256": "e36b61075127f1fb2522403990a5810b2744982b58c03aa8906b0688e7e9db61"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/common.py",
+      "sha256": "d47b59335bfe4074791fa6f224d05bdeed0bc6c040345fa2817c7faf7bfe6b39"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/escape_birth.py",
+      "sha256": "b015a7a5f0e2c195f9f7cf703b97d986aeffe76d07ce3d1397fa3edbba1dae72"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/escape_probe.py",
+      "sha256": "470f464e883f53e9124c2d786a82e143e413a4a221bdea01a580c80697424944"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/hilbert_collatz.py",
+      "sha256": "24993169df1d9e10d5574eb28555a178c445619a4c0cd3a471e766f2b7dbbdc9"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/hostiles.py",
+      "sha256": "cbec75acc18cc8f736b5316a131ea6a4fd33631e446cc225af0e7afb43cb6de9"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/multiplication.py",
+      "sha256": "ef8d050e68d5d1188a2003e5d245485b689152e70aaf4543d99ceffe521bc637"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/native_return.json",
+      "sha256": "3731ae37ed9080c78916ca1affddbe01acd7f600d6797f93bd4162ddd11b7460"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/native_return.py",
+      "sha256": "5ec2468c1bf1b1fa07f1c9433c33837dfca95cbae651acfa3f4f16855f7813f8"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/radical.py",
+      "sha256": "67e42d04173222c9166e9bb8e2378a74f763ecdad6864c760909f2d7cc104fce"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/radical_clocks.json",
+      "sha256": "9dd0a5cb3c4623f8823021435ebd6c7b6ff46b3af1cb2395b5d8fe654c1aee4f"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/radical_clocks.py",
+      "sha256": "3c97960b52dfe7221675d48a14b891c34cb49a06fe3ccfa8ac020273467c0283"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/ready701.py",
+      "sha256": "19ddc26a26dc5e727524990729353a936bba7c531b6080913a62beb4fe95b99e"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/reproduce.py",
+      "sha256": "7698a1e7f2b6bd21e98bbc1132748ed39f35479cc07a917bce2eb8e846f6d63c"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/semisimple.py",
+      "sha256": "c8b64e4b672205a8b9c0eb4e9ef735d08e5da551bc93b5dd68b0a549716e4c1f"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/target_match.py",
+      "sha256": "1f334b2d8bcfe69c8c80b06f548318f9dbdbcdbd1ec2eca6a6304be5cd4c6405"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/ternary_escapes.py",
+      "sha256": "2bf1f2c5c1046660490ecee58ea038dcf926dc57b6a641cc27b46a6bfe481042"
+    },
+    {
+      "path": "05-knowledge/results/return701_algebra_20261103/two_ready701.py",
+      "sha256": "7551c3941f29ff2701b19c6fe5bfb4cdcf6b35242cbf41166f8b105a1827e762"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/HANDOFF.md",
+      "sha256": "e18d62ec7e1646ce81a22d9307c2983af463daecd299557349018dc380d82bc2"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/PHASE_49_50_51.md",
+      "sha256": "779dac4e41c72c91301ca514b1e00dd6fb3c60f51d6c5f883be57e3a26020f71"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/ROOTED_RETURN.md",
+      "sha256": "0d1237159a589fe9b0c90dd203347ed689bd3ce57ac6cf371b47f4607366bdca"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/SINGULAR_RETURN.md",
+      "sha256": "228d79dcef036f8a92d7d7603c81573ae4ae0be1b5e61fb4c03926c064663e76"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/carrier6.py",
+      "sha256": "62f486840772d51de6c6dd0087221967ca181b5f55f40f2dbcde6aeec8f245e5"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/field_clock.py",
+      "sha256": "13280e4edf06a7833f63df8ec127108d330eb8b0519a27068ef354ece0329bd2"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/golden_transport.py",
+      "sha256": "360c6accb88283259ac09585ac7ed3d077884c6fd22371e5b20da7caafd81c3d"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/observer.py",
+      "sha256": "abc1959800b99d48cc9cdf40556c4e1e7c150341e7537718a338ddef70700f96"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/phase_recurrence.py",
+      "sha256": "c010a655e1ecb69a3cac12e47eca4c45f8eb6cfc67ae0961b9a5199264503a9a"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/reproduce.py",
+      "sha256": "a840e1f0064331f72e324041e0a23a47e7933a9cc5628d26ddae4dd67b1ebe3b"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/returns.py",
+      "sha256": "2233afb1d4615999f4891081f968ae975def327b14382aaf5718ba8e1e36fd8b"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/singular_return.py",
+      "sha256": "f37a70245065cb153882ab6355c78b8aaaca13077976e18c9f797661d8c53f62"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/ternary_probe.py",
+      "sha256": "c8228c3325351f0f9d3bba0a3a3f9a9e4a948a7dd60e71092ab17d61bf072262"
+    },
+    {
+      "path": "05-knowledge/results/session143_frobenius_magic_followup_20261103/producer/PROOF.md",
+      "sha256": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f"
+    },
+    {
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/lambda_octonions/PROOF.md",
+      "sha256": "25df351cd4f905217cc02f9763253f09ecc32f5bae881a78cf0da2bcf0aefb4e"
+    },
+    {
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/THEOREM.md",
+      "sha256": "423d05fa2dad0be0dbac384524798d822af40481b25261ce605b31173023e3b4"
+    },
+    {
+      "path": "05-knowledge/results/session156_spectrum_20261103/returns/NOTE.md",
+      "sha256": "49b4373b29f80b1df6ca7d1855293c42fe453d0dce4bb66dc7e7f986518a1b3c"
+    },
+    {
+      "path": "05-knowledge/results/session162_mrb_square_20261103/square_transfer/NOTE.md",
+      "sha256": "27da2734e2a58d33f6aecf61e57473da97850ff295793da787f9eb0198ac716b"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/nonuniform/MARKED_ESCAPE.md",
+      "sha256": "b5ec72bb306a52da5cdad472d80f0596bbf4a6ebb63e206065a3f34a3f3fcf9f"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md",
+      "sha256": "6618ddc51467ee130dc76edb60f2a774be0169b216556d9ce4b539444d2de96c"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md",
+      "sha256": "280404ec6535d7ebedab81c62f8bcd4a6108f5274232b6183193e621ee9ab3cb"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/NOTE.md",
+      "sha256": "bf3c4573ff007fd9ea5fc5e10568f920e882d2219893a3c5e980d269241740a7"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/TWO_EARS.md",
+      "sha256": "ff0dd6500840ac06a2934e93577cdb0cbe7d25653dcdb7c114e382e60faba161"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/profile_algebras/CANONICAL_RETURNS.md",
+      "sha256": "1e0bd5339312bc93861cc00a3b79407888b8aba85c73860494a90a70a2d38ada"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/triple_gluing/NOTE.md",
+      "sha256": "94e13112370700925a62d8bab61dbfefdbf1029eb764d75a7311c43d58feb66b"
+    },
+    {
+      "path": "05-knowledge/results/session165_geometry_representation_20261103/guard_adjunctions/NOTE.md",
+      "sha256": "7470e6092c5fcd1f2461e1b7205c79dc96e7bc60e9bff940ea785a7af1718bc1"
+    },
+    {
+      "path": "05-knowledge/results/session165_geometry_representation_20261103/slot_representation/UNIFORM_PLANCHEREL.md",
+      "sha256": "b5b0d91de21a067f68834ffa512b7c0f1084f717e7907465e1fc83366fb7f672"
+    },
+    {
+      "path": "05-knowledge/results/session166_planar_metagraph_20261103/reflection_voltages/REFLECTION_VOLTAGES.md",
+      "sha256": "e53b064de0ff785d8ec49d5909eba6559a4fcd0bda9077e08b4bce389f980c85"
+    },
+    {
+      "path": "05-knowledge/results/session166_planar_metagraph_20261103/unit_diamonds/NOTE.md",
+      "sha256": "e22c27d59116ec974ad65ad9567215531dca5fea37d0b87423e5556b6e3a4621"
+    },
+    {
+      "path": "05-knowledge/results/session167_recurring_structures_20261103/honeycomb/NOTE.md",
+      "sha256": "bf326b9e74978049e28ef69a8da79a73e0c2d739da5a38f1658699f389b4d92c"
+    },
+    {
+      "path": "05-knowledge/results/session170_holonomy_homotopy_20261103/guards/NOTE.md",
+      "sha256": "56313e7ffc4cd6634bb63281b913c35635ed0e7286cfdf57880d2831e4a578b1"
+    },
+    {
+      "path": "05-knowledge/results/session171_knots_information_20261103/information/NOTE.md",
+      "sha256": "3b4b85de8731900c6759d849fe11e1ba60518b722493ffb24c76861e6e9f5076"
+    },
+    {
+      "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/README.md",
+      "sha256": "4c7ba043935f21db5e54efd46652d4aee61aea98290f4fb2f6a311ccc437397c"
+    },
+    {
+      "path": "05-knowledge/results/six_output_return_20261103/COMMON_GRAMMAR.md",
+      "sha256": "6b4bc013cebc1d37e2c3a27860a38420248238e342bd6decaa486332779da8ab"
+    },
+    {
+      "path": "05-knowledge/results/six_roots_hidden_bits_20261103/PORT_MEMORY.md",
+      "sha256": "37fdaaa3071838bc4be168e898a27bf96fe13afb17339f40311ade7258ec84d4"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/BALANCED_BOUNDARY.md",
+      "sha256": "f4ce18e04986dfaf5739e5a6e506b8232fff1cb79b86b6198693cd620b2b0db5"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/GRADED_OBSERVER.md",
+      "sha256": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "sha256": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/graded_carrier.py",
+      "sha256": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/native_port_selector.py",
+      "sha256": "4fed06f0ad93e9f37c78e7e759d658381f1f85f31b42ae4a2f3ef1d2adc0a4b5"
+    },
+    {
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/JACOBIAN_FIBRES.md",
+      "sha256": "5137b4877b680410361fb678d0ce2a4a17cd8355602811c2a8c804a32a24b4e8"
+    },
+    {
+      "path": "05-knowledge/results/twin_pythagorean_124_20261026/finite_field/README.md",
+      "sha256": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413"
+    },
+    {
+      "path": "05-knowledge/results/two_edge_transport_20261102/ARITHMETIC_AND_SOURCE_AUDIT.md",
+      "sha256": "e440c50fd8c87777f5ed89f2c47d046bbbb8bef2ee7615fc36ebabd403b6b220"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/AUDIT.md",
+      "sha256": "a5f13dfb589c89c20f31282fd26440e3904361b79d8a5cfcf8c3eb7182258c6b"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "sha256": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/TRANSPORT.md",
+      "sha256": "8ee3708fe971e2e2e649fab17ed6dce3b98a841df5194ba8f892c8e8b32f7210"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/TWO_ENTRY.md",
+      "sha256": "31c18d359d4f56c5778492ccdb4435793d117890d8318138b727b8816e8e4c93"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/boundary.py",
+      "sha256": "f1737e3df65aa722a6410ba6cefd7aa1c49dbaa3ce276fc92b68119cabf0acfe"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/carrier.py",
+      "sha256": "b64813435c45418e8d2173d8cdc19678715bf338b8c2242495b49020692157bb"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/enumeration.py",
+      "sha256": "30c56c7719c3a4d78e2936f01f0d6b2eb766a367350b6542162f820f63e9a446"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/replay.py",
+      "sha256": "81772fd37ea925a0e12805198f3b20bd401475ef7ea5114814ab51a12743a06b"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/research.py",
+      "sha256": "75e0188ab2763faa84637c8ed07a05a0978e9034b3fc3a91de1661162cb6a387"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/verify.py",
+      "sha256": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
+    },
+    {
+      "path": "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/CARRIER.md",
+      "sha256": "4e603929924cc9bbee397064abe6c90daa0d6fbc81b2b56f65aed19bba1c3136"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/INSPIRATION.md",
+      "sha256": "3010512bec45e7117a6a66c4484edac7d48e482d6d2b6bf38615b05bf1cf6f29"
+    }
+  ],
+  "hostile81_27": {
+    "status": "FRESH_REPLAY",
+    "receipt": "completion_hostile.json"
+  },
+  "one_birth55_orientations": 768
+}

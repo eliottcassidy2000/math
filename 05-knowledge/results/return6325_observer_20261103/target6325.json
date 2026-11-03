@@ -1,0 +1,97 @@
+{
+  "status": "FINITE_EXACT_MINIMUM_IN_ONE_SPECIFIED_ROOTED_TARGET_CLASS",
+  "nodes": 40284,
+  "unbounded_degree_control_nodes": 1813997,
+  "cost": 10,
+  "target_to_source_order": [
+    6,
+    3,
+    2,
+    9,
+    7,
+    11,
+    1,
+    8,
+    10,
+    0,
+    5,
+    12,
+    4
+  ],
+  "final_rows": [
+    1020,
+    4601,
+    938,
+    288,
+    1004,
+    512,
+    428,
+    808,
+    32,
+    2378,
+    1023,
+    5631,
+    2045
+  ],
+  "flips": [
+    [
+      0,
+      9
+    ],
+    [
+      0,
+      10
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      9,
+      10
+    ]
+  ],
+  "source_names": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    13,
+    14,
+    21,
+    22,
+    31,
+    32
+  ],
+  "root": 11,
+  "spare": 4,
+  "fixed_in_port": 9,
+  "scope": "all root/in-port-fixed identifications of this bounded-search target; not all ready targets or all native programs"
+}

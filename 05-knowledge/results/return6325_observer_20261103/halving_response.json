@@ -1,0 +1,195 @@
+{
+  "status": "EXACT_FINITE_CONTROLS_FOR_ALL_SIZE_TWIN_COMPLETION_THEOREM",
+  "finite_atlases": [
+    {
+      "m": 2,
+      "retained": "bare_fibre",
+      "source_count": 2,
+      "minimum_queries": 1,
+      "query_labels": [
+        0
+      ]
+    },
+    {
+      "m": 2,
+      "retained": "unordered_binary_hierarchy",
+      "source_count": 2,
+      "minimum_queries": 1,
+      "query_labels": [
+        0
+      ]
+    },
+    {
+      "m": 4,
+      "retained": "bare_fibre",
+      "source_count": 24,
+      "minimum_queries": 3,
+      "query_labels": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "m": 4,
+      "retained": "unordered_binary_hierarchy",
+      "source_count": 8,
+      "minimum_queries": 2,
+      "query_labels": [
+        0,
+        2
+      ]
+    },
+    {
+      "m": 8,
+      "retained": "unordered_binary_hierarchy",
+      "source_count": 128,
+      "minimum_queries": 4,
+      "query_labels": [
+        0,
+        2,
+        4,
+        6
+      ]
+    }
+  ],
+  "actual_normalization_controls": [
+    {
+      "k": 1,
+      "flipped": false,
+      "H_before_normalization": 3,
+      "H_after_normalization": 1,
+      "H_first_halving": 1,
+      "H_odd_core": 1,
+      "ordered_original_fibres": [
+        [
+          3,
+          1,
+          2,
+          0
+        ]
+      ],
+      "single_port_response": [
+        9,
+        3,
+        5,
+        1
+      ],
+      "bare_fibre_completion": 3,
+      "hierarchy_completion": 2
+    },
+    {
+      "k": 1,
+      "flipped": true,
+      "H_before_normalization": 3,
+      "H_after_normalization": 1,
+      "H_first_halving": 1,
+      "H_odd_core": 1,
+      "ordered_original_fibres": [
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "single_port_response": [
+        1,
+        5,
+        3,
+        9
+      ],
+      "bare_fibre_completion": 3,
+      "hierarchy_completion": 2
+    },
+    {
+      "k": 2,
+      "flipped": false,
+      "H_before_normalization": 462915,
+      "H_after_normalization": 421425,
+      "H_first_halving": 45,
+      "H_odd_core": 3,
+      "ordered_original_fibres": [
+        [
+          9,
+          3,
+          6,
+          0
+        ],
+        [
+          10,
+          4,
+          7,
+          1
+        ],
+        [
+          11,
+          5,
+          8,
+          2
+        ]
+      ],
+      "single_port_response": [
+        1251613,
+        1251613,
+        1251613,
+        1052777,
+        1052777,
+        1052777,
+        1148479,
+        1148479,
+        1148479,
+        964265,
+        964265,
+        964265
+      ],
+      "bare_fibre_completion": 9,
+      "hierarchy_completion": 6
+    },
+    {
+      "k": 2,
+      "flipped": true,
+      "H_before_normalization": 462915,
+      "H_after_normalization": 421425,
+      "H_first_halving": 45,
+      "H_odd_core": 3,
+      "ordered_original_fibres": [
+        [
+          0,
+          6,
+          3,
+          9
+        ],
+        [
+          10,
+          4,
+          7,
+          1
+        ],
+        [
+          11,
+          5,
+          8,
+          2
+        ]
+      ],
+      "single_port_response": [
+        964265,
+        1251613,
+        1251613,
+        1148479,
+        1052777,
+        1052777,
+        1052777,
+        1148479,
+        1148479,
+        1251613,
+        964265,
+        964265
+      ],
+      "bare_fibre_completion": 9,
+      "hierarchy_completion": 6
+    }
+  ],
+  "scope": "single-old-vertex incoming cuts; quotient and named fibre membership known; all-size minima proved separately, not extrapolated"
+}

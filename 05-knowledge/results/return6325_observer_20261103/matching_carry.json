@@ -1,0 +1,398 @@
+{
+  "status": "EXACT_COEFFICIENT_CERTIFICATE_WITH_INHERITED_MATCHING_BOUND",
+  "sources": [
+    {
+      "state": "source",
+      "marked_boundaries": {
+        "31": {
+          "matching": [
+            [
+              13,
+              21
+            ]
+          ],
+          "cover": [
+            21
+          ]
+        },
+        "6": {
+          "matching": [
+            [
+              4,
+              2
+            ],
+            [
+              13,
+              21
+            ]
+          ],
+          "cover": [
+            4,
+            13
+          ]
+        }
+      },
+      "scalar_skeleton": [
+        6325,
+        4065
+      ],
+      "samples": [
+        {
+          "m": 1,
+          "H": 6325,
+          "first_last_profiles": [
+            [
+              6325,
+              2107,
+              2107,
+              6325
+            ],
+            [
+              6325,
+              2107,
+              2107,
+              6325
+            ]
+          ],
+          "all_clone_ready_defects": [
+            0
+          ]
+        },
+        {
+          "m": 2,
+          "H": 14455,
+          "first_last_profiles": [
+            [
+              14455,
+              6172,
+              6325,
+              14608
+            ],
+            [
+              14455,
+              4065,
+              6325,
+              20933
+            ]
+          ],
+          "all_clone_ready_defects": [
+            153,
+            6478
+          ]
+        },
+        {
+          "m": 3,
+          "H": 30715,
+          "first_last_profiles": [
+            [
+              30715,
+              14302,
+              14455,
+              30868
+            ],
+            [
+              30715,
+              4065,
+              14455,
+              66409
+            ]
+          ],
+          "all_clone_ready_defects": [
+            153,
+            14761,
+            35694
+          ]
+        },
+        {
+          "m": 4,
+          "H": 63235,
+          "first_last_profiles": [
+            [
+              63235,
+              30562,
+              30715,
+              63388
+            ],
+            [
+              63235,
+              4065,
+              30715,
+              206141
+            ]
+          ],
+          "all_clone_ready_defects": [
+            153,
+            31021,
+            76497,
+            142906
+          ]
+        },
+        {
+          "m": 5,
+          "H": 128275,
+          "first_last_profiles": [
+            [
+              128275,
+              63082,
+              63235,
+              128428
+            ],
+            [
+              128275,
+              4065,
+              63235,
+              631945
+            ]
+          ],
+          "all_clone_ready_defects": [
+            153,
+            63541,
+            157797,
+            297529,
+            503670
+          ]
+        }
+      ],
+      "first_last_profile_modes_m_minus_1": [
+        [
+          [
+            -1805,
+            -1958,
+            -1805,
+            -1652
+          ],
+          [
+            8130,
+            4065,
+            4065,
+            8130
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            -1805,
+            4065,
+            -1805,
+            -153
+          ],
+          [
+            8130,
+            0,
+            4065,
+            -1652
+          ],
+          [
+            0,
+            0,
+            0,
+            8130
+          ]
+        ]
+      ]
+    },
+    {
+      "state": "returned",
+      "marked_boundaries": {
+        "31": {
+          "matching": [
+            [
+              1,
+              21
+            ]
+          ],
+          "cover": [
+            21
+          ]
+        },
+        "6": {
+          "matching": [
+            [
+              4,
+              2
+            ],
+            [
+              21,
+              31
+            ]
+          ],
+          "cover": [
+            4,
+            21
+          ]
+        }
+      },
+      "scalar_skeleton": [
+        6325,
+        5407
+      ],
+      "samples": [
+        {
+          "m": 1,
+          "H": 6325,
+          "first_last_profiles": [
+            [
+              6325,
+              891,
+              893,
+              6327
+            ],
+            [
+              6325,
+              891,
+              893,
+              6327
+            ]
+          ],
+          "all_clone_ready_defects": [
+            2
+          ]
+        },
+        {
+          "m": 2,
+          "H": 17139,
+          "first_last_profiles": [
+            [
+              17139,
+              6298,
+              6325,
+              17166
+            ],
+            [
+              17139,
+              5407,
+              6325,
+              23493
+            ]
+          ],
+          "all_clone_ready_defects": [
+            27,
+            6354
+          ]
+        },
+        {
+          "m": 3,
+          "H": 38767,
+          "first_last_profiles": [
+            [
+              38767,
+              17112,
+              17139,
+              38794
+            ],
+            [
+              38767,
+              5407,
+              17139,
+              79453
+            ]
+          ],
+          "all_clone_ready_defects": [
+            27,
+            17193,
+            40686
+          ]
+        },
+        {
+          "m": 4,
+          "H": 82023,
+          "first_last_profiles": [
+            [
+              82023,
+              38740,
+              38767,
+              82050
+            ],
+            [
+              82023,
+              5407,
+              38767,
+              256257
+            ]
+          ],
+          "all_clone_ready_defects": [
+            27,
+            38821,
+            94781,
+            174234
+          ]
+        },
+        {
+          "m": 5,
+          "H": 168535,
+          "first_last_profiles": [
+            [
+              168535,
+              81996,
+              82023,
+              168562
+            ],
+            [
+              168535,
+              5407,
+              82023,
+              804517
+            ]
+          ],
+          "all_clone_ready_defects": [
+            27,
+            82077,
+            202921,
+            379725,
+            635982
+          ]
+        }
+      ],
+      "first_last_profile_modes_m_minus_1": [
+        [
+          [
+            -4489,
+            -4516,
+            -4489,
+            -4462
+          ],
+          [
+            10814,
+            5407,
+            5407,
+            10814
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            -4489,
+            5407,
+            -4489,
+            -25
+          ],
+          [
+            10814,
+            0,
+            5407,
+            -4462
+          ],
+          [
+            0,
+            0,
+            0,
+            10814
+          ]
+        ]
+      ]
+    }
+  ],
+  "neutral_return_clone_c2_difference": 1342,
+  "scalar_return_difference": "delta_c2*(2^m-2)",
+  "scope": "cloning the actual old root; matching bound proves the function-space upper bound; no uniform neutral return inferred from m=1"
+}
