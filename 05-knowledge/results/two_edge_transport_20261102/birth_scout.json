@@ -1,0 +1,1204 @@
+{
+  "edges25": 32,
+  "edges26": 34,
+  "paths25": 20,
+  "paths26": 24,
+  "new_edges": [
+    [
+      10,
+      26
+    ],
+    [
+      23,
+      26
+    ]
+  ],
+  "old_active": 4864,
+  "new_active": 11232,
+  "old_dead_parents": 9184,
+  "old_dead_extension_multiplicities": {
+    "1": 9184
+  },
+  "rows": [
+    {
+      "old_active": false,
+      "new_bits": 0,
+      "positive_count_histogram": {},
+      "active_sources": 0,
+      "H_sum": 0,
+      "H_square_sum": 0
+    },
+    {
+      "old_active": true,
+      "new_bits": 0,
+      "positive_count_histogram": {
+        "1": 512
+      },
+      "active_sources": 512,
+      "H_sum": 512,
+      "H_square_sum": 512
+    },
+    {
+      "old_active": false,
+      "new_bits": 1,
+      "positive_count_histogram": {
+        "1": 4240,
+        "2": 320,
+        "3": 32
+      },
+      "active_sources": 4592,
+      "H_sum": 4976,
+      "H_square_sum": 5808
+    },
+    {
+      "old_active": true,
+      "new_bits": 1,
+      "positive_count_histogram": {
+        "2": 144,
+        "1": 368
+      },
+      "active_sources": 512,
+      "H_sum": 656,
+      "H_square_sum": 944
+    },
+    {
+      "old_active": false,
+      "new_bits": 2,
+      "positive_count_histogram": {
+        "1": 4240,
+        "2": 320,
+        "3": 32
+      },
+      "active_sources": 4592,
+      "H_sum": 4976,
+      "H_square_sum": 5808
+    },
+    {
+      "old_active": true,
+      "new_bits": 2,
+      "positive_count_histogram": {
+        "2": 144,
+        "1": 368
+      },
+      "active_sources": 512,
+      "H_sum": 656,
+      "H_square_sum": 944
+    },
+    {
+      "old_active": false,
+      "new_bits": 3,
+      "positive_count_histogram": {},
+      "active_sources": 0,
+      "H_sum": 0,
+      "H_square_sum": 0
+    },
+    {
+      "old_active": true,
+      "new_bits": 3,
+      "positive_count_histogram": {
+        "1": 512
+      },
+      "active_sources": 512,
+      "H_sum": 512,
+      "H_square_sum": 512
+    }
+  ],
+  "dead_source_decoders": [
+    {
+      "attachment": 1,
+      "initial_energy": "268434893/268435152",
+      "source25_mask": 3927609650,
+      "source26_mask": 8222576946,
+      "square_sum_path": [
+        18,
+        7,
+        9,
+        16,
+        20,
+        5,
+        4,
+        21,
+        15,
+        1,
+        8,
+        17,
+        19,
+        6,
+        10,
+        26,
+        23,
+        2,
+        14,
+        22,
+        3,
+        13,
+        12,
+        24,
+        25,
+        11
+      ],
+      "trace": [
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "old_energy": "268434893/268435152",
+          "conditional_energies": [
+            "268434893/268435152",
+            "268434893/268435152"
+          ],
+          "conditional_populations": [
+            2147481216,
+            2147481216
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            1,
+            8
+          ],
+          "old_energy": "268434893/268435152",
+          "conditional_energies": [
+            "16777203/16777208",
+            "134217269/134217488"
+          ],
+          "conditional_populations": [
+            1073741312,
+            1073739904
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            1,
+            15
+          ],
+          "old_energy": "134217269/134217488",
+          "conditional_energies": [
+            "67108549/67108744",
+            "8388590/8388593"
+          ],
+          "conditional_populations": [
+            536869952,
+            536869952
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            1,
+            24
+          ],
+          "old_energy": "67108549/67108744",
+          "conditional_energies": [
+            "11184755/11184788",
+            "8388571/8388595"
+          ],
+          "conditional_populations": [
+            268434912,
+            268435040
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            2,
+            7
+          ],
+          "old_energy": "11184755/11184788",
+          "conditional_energies": [
+            "33554273/33554356",
+            "33554257/33554372"
+          ],
+          "conditional_populations": [
+            134217424,
+            134217488
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            2,
+            14
+          ],
+          "old_energy": "33554257/33554372",
+          "conditional_energies": [
+            "16777141/16777188",
+            "4194279/4194296"
+          ],
+          "conditional_populations": [
+            67108752,
+            67108736
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            2,
+            23
+          ],
+          "old_energy": "4194279/4194296",
+          "conditional_energies": [
+            "2097128/2097145",
+            "1"
+          ],
+          "conditional_populations": [
+            33554320,
+            33554416
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            3,
+            6
+          ],
+          "old_energy": "2097128/2097145",
+          "conditional_energies": [
+            "2097127/2097145",
+            "2097129/2097145"
+          ],
+          "conditional_populations": [
+            16777160,
+            16777160
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            3,
+            13
+          ],
+          "old_energy": "2097127/2097145",
+          "conditional_energies": [
+            "2097137/2097145",
+            "2097117/2097145"
+          ],
+          "conditional_populations": [
+            8388580,
+            8388580
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            3,
+            22
+          ],
+          "old_energy": "2097117/2097145",
+          "conditional_energies": [
+            "1048549/1048569",
+            "131071/131072"
+          ],
+          "conditional_populations": [
+            4194276,
+            4194304
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "old_energy": "1048549/1048569",
+          "conditional_energies": [
+            "1048543/1048571",
+            "1048555/1048567"
+          ],
+          "conditional_populations": [
+            2097142,
+            2097134
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            4,
+            12
+          ],
+          "old_energy": "1048543/1048571",
+          "conditional_energies": [
+            "524271/524287",
+            "131068/131071"
+          ],
+          "conditional_populations": [
+            1048574,
+            1048568
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            4,
+            21
+          ],
+          "old_energy": "524271/524287",
+          "conditional_energies": [
+            "1",
+            "16383/16384"
+          ],
+          "conditional_populations": [
+            524286,
+            524288
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            5,
+            11
+          ],
+          "old_energy": "16383/16384",
+          "conditional_energies": [
+            "16383/16384",
+            "16383/16384"
+          ],
+          "conditional_populations": [
+            262144,
+            262144
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            5,
+            20
+          ],
+          "old_energy": "16383/16384",
+          "conditional_energies": [
+            "16383/16384",
+            "16383/16384"
+          ],
+          "conditional_populations": [
+            131072,
+            131072
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            6,
+            10
+          ],
+          "old_energy": "16383/16384",
+          "conditional_energies": [
+            "1",
+            "8191/8192"
+          ],
+          "conditional_populations": [
+            65536,
+            65536
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            6,
+            19
+          ],
+          "old_energy": "8191/8192",
+          "conditional_energies": [
+            "4095/4096",
+            "1"
+          ],
+          "conditional_populations": [
+            32768,
+            32768
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            7,
+            9
+          ],
+          "old_energy": "4095/4096",
+          "conditional_energies": [
+            "1",
+            "2047/2048"
+          ],
+          "conditional_populations": [
+            16384,
+            16384
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            7,
+            18
+          ],
+          "old_energy": "2047/2048",
+          "conditional_energies": [
+            "1023/1024",
+            "1"
+          ],
+          "conditional_populations": [
+            8192,
+            8192
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            8,
+            17
+          ],
+          "old_energy": "1023/1024",
+          "conditional_energies": [
+            "1",
+            "511/512"
+          ],
+          "conditional_populations": [
+            4096,
+            4096
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            9,
+            16
+          ],
+          "old_energy": "511/512",
+          "conditional_energies": [
+            "1",
+            "255/256"
+          ],
+          "conditional_populations": [
+            2048,
+            2048
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            10,
+            15
+          ],
+          "old_energy": "255/256",
+          "conditional_energies": [
+            "255/256",
+            "255/256"
+          ],
+          "conditional_populations": [
+            1024,
+            1024
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            11,
+            14
+          ],
+          "old_energy": "255/256",
+          "conditional_energies": [
+            "255/256",
+            "255/256"
+          ],
+          "conditional_populations": [
+            512,
+            512
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            11,
+            25
+          ],
+          "old_energy": "255/256",
+          "conditional_energies": [
+            "127/128",
+            "1"
+          ],
+          "conditional_populations": [
+            256,
+            256
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            12,
+            13
+          ],
+          "old_energy": "127/128",
+          "conditional_energies": [
+            "63/64",
+            "1"
+          ],
+          "conditional_populations": [
+            128,
+            128
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            12,
+            24
+          ],
+          "old_energy": "63/64",
+          "conditional_energies": [
+            "1",
+            "31/32"
+          ],
+          "conditional_populations": [
+            64,
+            64
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            13,
+            23
+          ],
+          "old_energy": "31/32",
+          "conditional_energies": [
+            "31/32",
+            "31/32"
+          ],
+          "conditional_populations": [
+            32,
+            32
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            14,
+            22
+          ],
+          "old_energy": "31/32",
+          "conditional_energies": [
+            "1",
+            "15/16"
+          ],
+          "conditional_populations": [
+            16,
+            16
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            15,
+            21
+          ],
+          "old_energy": "15/16",
+          "conditional_energies": [
+            "7/8",
+            "1"
+          ],
+          "conditional_populations": [
+            8,
+            8
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            16,
+            20
+          ],
+          "old_energy": "7/8",
+          "conditional_energies": [
+            "1",
+            "3/4"
+          ],
+          "conditional_populations": [
+            4,
+            4
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            17,
+            19
+          ],
+          "old_energy": "3/4",
+          "conditional_energies": [
+            "1",
+            "1/2"
+          ],
+          "conditional_populations": [
+            2,
+            2
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            24,
+            25
+          ],
+          "old_energy": "1/2",
+          "conditional_energies": [
+            "1",
+            "0"
+          ],
+          "conditional_populations": [
+            1,
+            1
+          ],
+          "chosen": 1
+        }
+      ]
+    },
+    {
+      "attachment": 2,
+      "initial_energy": "268434893/268435152",
+      "source25_mask": 2449821388,
+      "source26_mask": 11039755980,
+      "square_sum_path": [
+        13,
+        3,
+        22,
+        14,
+        2,
+        23,
+        26,
+        10,
+        6,
+        19,
+        17,
+        8,
+        1,
+        15,
+        21,
+        4,
+        12,
+        24,
+        25,
+        11,
+        5,
+        20,
+        16,
+        9,
+        7,
+        18
+      ],
+      "trace": [
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "old_energy": "268434893/268435152",
+          "conditional_energies": [
+            "268434893/268435152",
+            "268434893/268435152"
+          ],
+          "conditional_populations": [
+            2147481216,
+            2147481216
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            1,
+            8
+          ],
+          "old_energy": "268434893/268435152",
+          "conditional_energies": [
+            "134217445/134217664",
+            "16777181/16777186"
+          ],
+          "conditional_populations": [
+            1073741312,
+            1073739904
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            1,
+            15
+          ],
+          "old_energy": "134217445/134217664",
+          "conditional_energies": [
+            "8388601/8388604",
+            "67108637/67108832"
+          ],
+          "conditional_populations": [
+            536870656,
+            536870656
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            1,
+            24
+          ],
+          "old_energy": "67108637/67108832",
+          "conditional_energies": [
+            "1048573/1048576",
+            "1016797/1016800"
+          ],
+          "conditional_populations": [
+            268435456,
+            268435200
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            2,
+            7
+          ],
+          "old_energy": "1016797/1016800",
+          "conditional_energies": [
+            "6710857/6710880",
+            "33554317/33554400"
+          ],
+          "conditional_populations": [
+            134217600,
+            134217600
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            2,
+            14
+          ],
+          "old_energy": "6710857/6710880",
+          "conditional_energies": [
+            "4194285/4194302",
+            "16777145/16777192"
+          ],
+          "conditional_populations": [
+            67108832,
+            67108768
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            2,
+            23
+          ],
+          "old_energy": "4194285/4194302",
+          "conditional_energies": [
+            "1",
+            "2097133/2097150"
+          ],
+          "conditional_populations": [
+            33554432,
+            33554400
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            3,
+            6
+          ],
+          "old_energy": "2097133/2097150",
+          "conditional_energies": [
+            "1048567/1048575",
+            "349522/349525"
+          ],
+          "conditional_populations": [
+            16777200,
+            16777200
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            3,
+            13
+          ],
+          "old_energy": "349522/349525",
+          "conditional_energies": [
+            "1048561/1048575",
+            "1048571/1048575"
+          ],
+          "conditional_populations": [
+            8388600,
+            8388600
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            3,
+            22
+          ],
+          "old_energy": "1048561/1048575",
+          "conditional_energies": [
+            "131071/131072",
+            "524277/524287"
+          ],
+          "conditional_populations": [
+            4194304,
+            4194296
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "old_energy": "524277/524287",
+          "conditional_energies": [
+            "524281/524287",
+            "524273/524287"
+          ],
+          "conditional_populations": [
+            2097148,
+            2097148
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            4,
+            12
+          ],
+          "old_energy": "524273/524287",
+          "conditional_energies": [
+            "87379/87381",
+            "32767/32768"
+          ],
+          "conditional_populations": [
+            1048572,
+            1048576
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            4,
+            21
+          ],
+          "old_energy": "32767/32768",
+          "conditional_energies": [
+            "16383/16384",
+            "1"
+          ],
+          "conditional_populations": [
+            524288,
+            524288
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            5,
+            11
+          ],
+          "old_energy": "16383/16384",
+          "conditional_energies": [
+            "16383/16384",
+            "16383/16384"
+          ],
+          "conditional_populations": [
+            262144,
+            262144
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            5,
+            20
+          ],
+          "old_energy": "16383/16384",
+          "conditional_energies": [
+            "1",
+            "8191/8192"
+          ],
+          "conditional_populations": [
+            131072,
+            131072
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            6,
+            10
+          ],
+          "old_energy": "8191/8192",
+          "conditional_energies": [
+            "8191/8192",
+            "8191/8192"
+          ],
+          "conditional_populations": [
+            65536,
+            65536
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            6,
+            19
+          ],
+          "old_energy": "8191/8192",
+          "conditional_energies": [
+            "1",
+            "4095/4096"
+          ],
+          "conditional_populations": [
+            32768,
+            32768
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            7,
+            9
+          ],
+          "old_energy": "4095/4096",
+          "conditional_energies": [
+            "2047/2048",
+            "1"
+          ],
+          "conditional_populations": [
+            16384,
+            16384
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            7,
+            18
+          ],
+          "old_energy": "2047/2048",
+          "conditional_energies": [
+            "1",
+            "1023/1024"
+          ],
+          "conditional_populations": [
+            8192,
+            8192
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            8,
+            17
+          ],
+          "old_energy": "1023/1024",
+          "conditional_energies": [
+            "511/512",
+            "1"
+          ],
+          "conditional_populations": [
+            4096,
+            4096
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            9,
+            16
+          ],
+          "old_energy": "511/512",
+          "conditional_energies": [
+            "255/256",
+            "1"
+          ],
+          "conditional_populations": [
+            2048,
+            2048
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            10,
+            15
+          ],
+          "old_energy": "255/256",
+          "conditional_energies": [
+            "253/256",
+            "257/256"
+          ],
+          "conditional_populations": [
+            1024,
+            1024
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            11,
+            14
+          ],
+          "old_energy": "253/256",
+          "conditional_energies": [
+            "253/256",
+            "253/256"
+          ],
+          "conditional_populations": [
+            512,
+            512
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            11,
+            25
+          ],
+          "old_energy": "253/256",
+          "conditional_energies": [
+            "63/64",
+            "127/128"
+          ],
+          "conditional_populations": [
+            256,
+            256
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            12,
+            13
+          ],
+          "old_energy": "63/64",
+          "conditional_energies": [
+            "63/64",
+            "63/64"
+          ],
+          "conditional_populations": [
+            128,
+            128
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            12,
+            24
+          ],
+          "old_energy": "63/64",
+          "conditional_energies": [
+            "1",
+            "31/32"
+          ],
+          "conditional_populations": [
+            64,
+            64
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            13,
+            23
+          ],
+          "old_energy": "31/32",
+          "conditional_energies": [
+            "31/32",
+            "31/32"
+          ],
+          "conditional_populations": [
+            32,
+            32
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            14,
+            22
+          ],
+          "old_energy": "31/32",
+          "conditional_energies": [
+            "15/16",
+            "1"
+          ],
+          "conditional_populations": [
+            16,
+            16
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            15,
+            21
+          ],
+          "old_energy": "15/16",
+          "conditional_energies": [
+            "1",
+            "7/8"
+          ],
+          "conditional_populations": [
+            8,
+            8
+          ],
+          "chosen": 1
+        },
+        {
+          "edge": [
+            16,
+            20
+          ],
+          "old_energy": "7/8",
+          "conditional_energies": [
+            "3/4",
+            "1"
+          ],
+          "conditional_populations": [
+            4,
+            4
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            17,
+            19
+          ],
+          "old_energy": "3/4",
+          "conditional_energies": [
+            "1/2",
+            "1"
+          ],
+          "conditional_populations": [
+            2,
+            2
+          ],
+          "chosen": 0
+        },
+        {
+          "edge": [
+            24,
+            25
+          ],
+          "old_energy": "1/2",
+          "conditional_energies": [
+            "1",
+            "0"
+          ],
+          "conditional_populations": [
+            1,
+            1
+          ],
+          "chosen": 1
+        }
+      ]
+    }
+  ]
+}

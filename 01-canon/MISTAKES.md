@@ -11,6 +11,20 @@ a historical synthesis or promoting computational evidence.
 - **Decay correction:** the inherited reversing-involution mechanism gives2^floor(n^2/4) compatible labelled tournaments for a fixed involution. Elementary class bounds yield log(S_n/T_n)=-(log2)n^2/4+O(n log n), incompatible with the pasted fixed-constant formula's leading -n^2 log n/4. The eight self-converse classes among twelve at order five are verified and retained; no Baby Monster character map or MRB parameter follows.
 - **Repair / missing coordinate:** retain actual line incidences, zero/tie guards, representative gauge and a specified representation before comparing spectra. The valid Conway moving-hole mechanism has source-dependent permutations, not the failed pentad construction. The reported source laws and closed carrier are developed independently of those false premises.
 
+## 2026-11-02 — minimizing peak then length requires a fixed sublevel
+
+- **Scope:** prepublication prototype in `05-knowledge/results/two_edge_transport_20261102/escape_depth.py`; no accepted theorem is retracted.
+- **First failed implication:** a single lexicographic (peak,length) label does not justify Dijkstra for the two objectives together. Labels (1,100)<(2,1) reverse after extension through a vertex of weight 3: (3,101)>(3,2). Discarding the second label may discard the shortest eventual minimax path.
+- **Repair / strongest survivor:** minimize the peak alone, then run breadth-first search in the resulting fixed sublevel. Independent sublevel floods verify the sharp barrier 36 and three-step minimum for every one of the 768 target-17 traps. The 480/288 two-edge split is independently reproduced by the concurrent prime-inverse packet.
+- **Missing coordinate / next test:** retain competing length information until the optimal sublevel is fixed; do not promote a generic lexicographic path algorithm without checking extension monotonicity.
+
+## 2026-11-02 — an unspecified Hecke table does not define a modular bridge
+
+- **Scope:** audit of the user-supplied inspiration preserved in `05-knowledge/results/two_edge_transport_20261102/pasted_inspiration.txt`; no accepted repo theorem is retracted.
+- **Witness / first failed implication:** weight, character, eigenform and normalization are absent. Under the weight-two cuspidal interpretation, `dim S_2(Gamma_0(13))=g(X_0(13))=0`, so the suggested nonzero cusp-eigenform signature cannot occur. A Fricke involution and an unspecified Hecke operator are not interchangeable.
+- **Repair / strongest survivor:** the five-vertex counts 12 ordinary, 8 self-converse and 10 merged classes are independently exact. `ARITHMETIC_AND_SOURCE_AUDIT.md` retains the genus formula, primary sources and the distinction between `X_0(p)` and its Fricke quotient. An elementary anti-involution union bound gives a separate quadratic-exponent upper bound for self-converse proportions.
+- **Missing coordinate / new question:** specify an actual modular form and an operation-preserving map before comparing its eigenvalues to tournament data. Equal small counts and numerical maxima do not supply that map.
+
 ## 2026-11-02 — least-rank inverse selection can discard an actual source
 
 - **Scope:** prepublication candidate tested in `05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md`; no accepted theorem is retracted.

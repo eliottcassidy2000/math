@@ -1,0 +1,105 @@
+{
+  "all_source_distance_histogram": {
+    "0": 1440,
+    "1": 13520,
+    "2": 16080,
+    "3": 1728
+  },
+  "trap_types": [
+    {
+      "key": [
+        2,
+        36,
+        3
+      ],
+      "source": 72,
+      "count": 480,
+      "shortest": {
+        "masks": [
+          72,
+          16456,
+          16392
+        ],
+        "counts": [
+          15,
+          27,
+          17
+        ],
+        "flipped_edge_indices": [
+          14,
+          6
+        ]
+      },
+      "minimax": {
+        "masks": [
+          72,
+          200,
+          456,
+          968
+        ],
+        "counts": [
+          15,
+          13,
+          23,
+          17
+        ],
+        "flipped_edge_indices": [
+          7,
+          8,
+          9
+        ]
+      },
+      "three_flip_targets": 27
+    },
+    {
+      "key": [
+        3,
+        36,
+        3
+      ],
+      "source": 140,
+      "count": 288,
+      "shortest": {
+        "masks": [
+          140,
+          12,
+          28,
+          30
+        ],
+        "counts": [
+          15,
+          11,
+          23,
+          17
+        ],
+        "flipped_edge_indices": [
+          7,
+          4,
+          1
+        ]
+      },
+      "minimax": {
+        "masks": [
+          140,
+          12,
+          28,
+          30
+        ],
+        "counts": [
+          15,
+          11,
+          23,
+          17
+        ],
+        "flipped_edge_indices": [
+          7,
+          4,
+          1
+        ]
+      },
+      "three_flip_targets": 20
+    }
+  ],
+  "goal_count": 1440,
+  "traps_reachable_at_peak16": 0
+}
