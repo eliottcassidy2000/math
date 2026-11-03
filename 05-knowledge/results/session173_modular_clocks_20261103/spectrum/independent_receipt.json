@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "method": "permutation descent profiles; independent incoming subset recursion; explicit basis transform",
+  "seed_profiles": [
+    [
+      0,
+      9,
+      33,
+      31,
+      10,
+      1
+    ],
+    [
+      0,
+      9,
+      33,
+      31,
+      10,
+      1
+    ]
+  ],
+  "query_profiles": [
+    [
+      0,
+      17,
+      95,
+      138,
+      73,
+      15,
+      1
+    ],
+    [
+      0,
+      19,
+      109,
+      150,
+      75,
+      15,
+      1
+    ]
+  ],
+  "substitution_contexts": [
+    {
+      "context": [
+        0,
+        1,
+        3
+      ],
+      "profile": [
+        0,
+        9,
+        159,
+        453,
+        410,
+        146,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        2,
+        0,
+        3
+      ],
+      "profile": [
+        0,
+        9,
+        159,
+        453,
+        410,
+        146,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        4,
+        1,
+        2
+      ],
+      "profile": [
+        0,
+        93,
+        477,
+        759,
+        510,
+        156,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        6,
+        0,
+        2
+      ],
+      "profile": [
+        0,
+        9,
+        159,
+        453,
+        410,
+        146,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        0,
+        5,
+        1
+      ],
+      "profile": [
+        0,
+        9,
+        159,
+        453,
+        410,
+        146,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        2,
+        4,
+        1
+      ],
+      "profile": [
+        0,
+        93,
+        477,
+        759,
+        510,
+        156,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        4,
+        5,
+        0
+      ],
+      "profile": [
+        0,
+        9,
+        159,
+        453,
+        410,
+        146,
+        21,
+        1
+      ]
+    },
+    {
+      "context": [
+        6,
+        4,
+        0
+      ],
+      "profile": [
+        0,
+        9,
+        159,
+        453,
+        410,
+        146,
+        21,
+        1
+      ]
+    }
+  ],
+  "literal_reads": [
+    {
+      "r": 1,
+      "address": 0,
+      "responses": [
+        15831,
+        18117
+      ],
+      "gap": 2286
+    },
+    {
+      "r": 1,
+      "address": 1,
+      "responses": [
+        15831,
+        18117
+      ],
+      "gap": 2286
+    },
+    {
+      "r": 2,
+      "address": 0,
+      "responses": [
+        585033,
+        645915
+      ],
+      "gap": 60882
+    },
+    {
+      "r": 2,
+      "address": 1,
+      "responses": [
+        585033,
+        645915
+      ],
+      "gap": 60882
+    },
+    {
+      "r": 3,
+      "address": 0,
+      "responses": [
+        10781181,
+        11497527
+      ],
+      "gap": 716346
+    },
+    {
+      "r": 3,
+      "address": 1,
+      "responses": [
+        10781181,
+        11497527
+      ],
+      "gap": 716346
+    },
+    {
+      "r": 4,
+      "address": 0,
+      "responses": [
+        125505429,
+        131065599
+      ],
+      "gap": 5560170
+    },
+    {
+      "r": 4,
+      "address": 1,
+      "responses": [
+        125505429,
+        131065599
+      ],
+      "gap": 5560170
+    }
+  ],
+  "closed_formula_M": [
+    2,
+    30
+  ],
+  "hostiles": [
+    "either endpoint deletion erases a bit",
+    "side size equal to r permits competing r-cut"
+  ]
+}
