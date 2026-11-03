@@ -1,0 +1,74 @@
+{
+  "arbitrary_iterate_proof": "Companion theorem, not inferred from finite tests.",
+  "check_names": [
+    "fixed witness determinant -2",
+    "untwisted witness determinant +2",
+    "exact collision 0",
+    "exact collision 1",
+    "exact collision 2",
+    "quotient first coordinate",
+    "quotient second coordinate",
+    "quotient determinant",
+    "quotient fixes origin",
+    "common-zero elimination identity",
+    "v=-1 excluded from A=B=0",
+    "v=0 forces t=0",
+    "second quotient direct determinant",
+    "H degree pair",
+    "H squared degree pair",
+    "pairwise comaximal f0 f1",
+    "pairwise comaximal f0 f2",
+    "pairwise comaximal f1 f2",
+    "orbit degree sequence 1,7,37",
+    "second scale top homogeneous",
+    "scale pullback f0 has no repeated factors",
+    "scale pullback f1 has no repeated factors",
+    "scale pullback f2 has no repeated factors",
+    "finite module reconstruction k2..7 degree<=18",
+    "missing quadratic-z hostile",
+    "gcd-corrected c2 k2",
+    "gcd-corrected c2 k3",
+    "gcd-corrected c2 k4",
+    "gcd-corrected c2 k5",
+    "gcd-corrected c2 k6",
+    "gcd-corrected c2 k7",
+    "gcd-corrected c2 k8",
+    "gcd-corrected c2 k9",
+    "odd k minimal hostile A=t^2 D=t",
+    "equal-sum unequal-multiset obstruction",
+    "identity positive control",
+    "non-Keller quotient hostile"
+  ],
+  "checks": 37,
+  "exact_degrees": {
+    "H": [
+      4,
+      6
+    ],
+    "H_squared": [
+      20,
+      30
+    ],
+    "iterate_orbit_scale": [
+      1,
+      7,
+      37
+    ]
+  },
+  "finite_universe": {
+    "total_monomial_degree_max": 18,
+    "weight_k": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "weight_monomials_checked": 455
+  },
+  "scope": "Explicit untwisted-map composition tower and corrected weight-module statements; not all Keller-map classification.",
+  "second_scale_factored": "(t + 3*v - 2)*(t**3*v**3 + 3*t**3*v**2 + 3*t**3*v + t**3 + 9*t**2*v**4 + 21*t**2*v**3 + t**2*v**2 - 24*t**2*v - 13*t**2 + 27*t*v**5 + 45*t*v**4 - 63*t*v**3 - 103*t*v**2 + 6*t*v + 22*t + 27*v**6 + 27*v**5 - 117*v**4 - 74*v**3 + 79*v**2 + 6*v - 2)",
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

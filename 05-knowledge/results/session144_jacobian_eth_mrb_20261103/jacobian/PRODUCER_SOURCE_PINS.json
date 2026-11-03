@@ -1,0 +1,39 @@
+{
+  "external_primary_pages": [
+    "https://isa-afp.org/entries/Jacobian_Counterexample.html",
+    "https://arxiv.org/html/2608.00222v1",
+    "https://github.com/algal/jacobianfun/blob/main/RESEARCH.md",
+    "https://arxiv.org/html/2609.17795v1"
+  ],
+  "external_read_date": "2026-11-03",
+  "forbidden_ledger_accessed": false,
+  "formal_build_executed": false,
+  "source_commit": "5e1cedf452c7cc1ec447205939a9d6cf4c0e8743",
+  "source_mutated": false,
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "sha256": "6312da6ebb07437e226166bfd36308eec5cc1a123371bcd9aef79fc06457357c"
+    },
+    {
+      "path": "01-canon/theorems/THM-1305-jacobian-equivariant-anatomy-rigidity-decode.md",
+      "sha256": "414ae21dd4a871d81553a9f7373bcd0193cd0a39a9f71819851ef6cd16b36894"
+    },
+    {
+      "path": "01-canon/theorems/THM-1310-jacobian-counterexample-fiber-geometry-S3-resolvent-jelonek.md",
+      "sha256": "d56c170989f4e5afb41bac7d2a97d1f11dffcfb75dd1792c473d25fd1c704bdd"
+    },
+    {
+      "path": "01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md",
+      "sha256": "d467e1522c486ae89e7f6399a25a8543021d86144da7db250f54220614106cba"
+    },
+    {
+      "path": "01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md",
+      "sha256": "7174e89cafbfc8736d3cab06a6e3d8d8d8204a304a9dc9801970246c7244cb7b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "sha256": "eebf30e950564595a72f48b62304184930f7a48b3b6503473daebef96c9288df"
+    }
+  ]
+}

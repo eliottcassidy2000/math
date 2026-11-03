@@ -73,3 +73,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session142](S142.md): recovered7/21 exclusion, exact prime-lane obstruction and factor length; Jacobian parity and legal-source barriers. Universal tournament spectrum remains OPEN.
 
 [Session143](S143.md): complete degree3 magic classification, explicit cyclic/octonion/puzzle maps, and the sharp index11 polynomial-calculus boundary; magic-square-of-squares remains OPEN.
+
+[Session144](S144.md): audited Jacobian composition tower and nonlinear-scale correction; full map classification remains open. ETH/MRB continuation in progress.

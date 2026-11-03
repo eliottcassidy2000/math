@@ -1,0 +1,89 @@
+{
+  "check_count": 46,
+  "checks": [
+    "seed determinant -2",
+    "three distinct exact collision points",
+    "quotient identity determinant 2*l^2",
+    "quotient origin fixed",
+    "off-divisor simultaneous zero identity",
+    "hostile v=-1 excluded",
+    "v=0 forces t=0",
+    "second scale degree 7",
+    "second scale leading form",
+    "f1=2 modulo f0",
+    "f0 and f1 coprime",
+    "f1 smooth exact Groebner certificate",
+    "unique degree-leading term H1 at (4,6)",
+    "unique degree-leading term H2 at (4,6)",
+    "unique degree-leading term H1 at (20,30)",
+    "unique degree-leading term H2 at (20,30)",
+    "unique degree-leading term H1 at (100,150)",
+    "unique degree-leading term H2 at (100,150)",
+    "conic relation loss factor",
+    "old conic pair accepts spurious point",
+    "direct relation rejects spurious point",
+    "spurious reconstructed point exact image",
+    "E1 reconstructs first component",
+    "E2 reconstructs second component",
+    "direct resultant gx^3N",
+    "direct linear subresultant",
+    "cusp identity Q^2=k^3+27g^2L",
+    "cubic discriminant",
+    "L irreducibility discriminant witness",
+    "missing curve L vanishes",
+    "missing curve Q vanishes",
+    "missing curve N constant nonzero",
+    "fold quadratic has distinct roots",
+    "g=0 nonzero-x fiber equation",
+    "scaling family polynomial",
+    "scaling family linear endpoint",
+    "scaling family constant determinant",
+    "fold N double/simple root certificate",
+    "fold repeated-x u equation",
+    "fold fiber trace with multiplicities",
+    "fold support trace differs",
+    "escape singleton candidate image",
+    "escape singleton target L=0,Q!=0",
+    "all 125 targets reconstructed over F_5",
+    "all 343 targets reconstructed over F_7",
+    "all 1331 targets reconstructed over F_11"
+  ],
+  "finite_field_crosscheck": [
+    {
+      "mismatches": 0,
+      "p": 5,
+      "source_points": 125,
+      "targets": 125
+    },
+    {
+      "mismatches": 0,
+      "p": 7,
+      "source_points": 343,
+      "targets": 343
+    },
+    {
+      "mismatches": 0,
+      "p": 11,
+      "source_points": 1331,
+      "targets": 1331
+    }
+  ],
+  "fixed_map_complex_fiber_counts": {
+    "L!=0": 3,
+    "L=0,Q!=0": 1,
+    "L=Q=0": 0
+  },
+  "hostiles_rejected": [
+    "wrong seed determinant",
+    "altered collision point",
+    "lost conic sidecar",
+    "wrong second-scale degree",
+    "erased fold multiplicity",
+    "wrong missing curve sign",
+    "global counterexample deformation endpoint"
+  ],
+  "l2_degree": 7,
+  "l2_leading_form": "v^3*(t+3v)^4",
+  "scope": "Exact algebraic certificates and finite-field reconstruction; no claim to global classification of Keller maps or formal proof-assistant build.",
+  "status": "PASS"
+}

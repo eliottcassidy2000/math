@@ -1,0 +1,52 @@
+{
+  "source_commit": "5e1cedf452c7cc1ec447205939a9d6cf4c0e8743",
+  "scope": "Targeted inherited theorem inputs; proof statuses and source boundaries are audited in the companion notes. A historical source pin is not blanket endorsement of every statement in its file.",
+  "sources": [
+    {
+      "path": "01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md",
+      "blob": "1c902f116745fa6faf9d94ca9664e7f71a3d9fba",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-1300-jacobian-counterexample-dixmier-A3-explicit.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1305-jacobian-equivariant-anatomy-rigidity-decode.md",
+      "blob": "dfb062a662450e71a4be547e69337c9adeef7a25",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-1305-jacobian-equivariant-anatomy-rigidity-decode.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1310-jacobian-counterexample-fiber-geometry-S3-resolvent-jelonek.md",
+      "blob": "3401846c11992b90755327d36518c09f92724c5f",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-1310-jacobian-counterexample-fiber-geometry-S3-resolvent-jelonek.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md",
+      "blob": "368c72e95f152d8b611e9b384cbde9eb1f323afe",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-1340-engine-trichotomy-zaffine-keller.md",
+      "blob": "524bf8043d7669dcf90a803c584fd6d31425ec09",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-1340-engine-trichotomy-zaffine-keller.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md",
+      "blob": "c48d6fc8a37b10af602cb39615332eeec01f6b1d",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-3438-weighted-lift-keller-degree-spectrum.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-3448-weighted-keller-cyclic-jelonek-inertia-family.md",
+      "blob": "9c09768fe0395439b571ac38be5657fef6774e95",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-3448-weighted-keller-cyclic-jelonek-inertia-family.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4625-tangent-sweep-keller-maps-fibrewise-punctured-lines-hyperelliptic-fibres-and-symmetric-monodromy.md",
+      "blob": "2069d7cfe660ddb1d6fc113f7c57b77cce172650",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-4625-tangent-sweep-keller-maps-fibrewise-punctured-lines-hyperelliptic-fibres-and-symmetric-monodromy.md"
+    },
+    {
+      "path": "01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md",
+      "blob": "8258fdffb8129927bb4b56ad196785cad323f324",
+      "url": "https://github.com/eliottcassidy2000/math/blob/5e1cedf452c7cc1ec447205939a9d6cf4c0e8743/01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md"
+    }
+  ],
+  "central_mistakes_read": false
+}

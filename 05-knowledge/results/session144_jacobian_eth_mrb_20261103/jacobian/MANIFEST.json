@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "bytes": 1325,
+      "path": "CORRECTION_LINEAGE.md",
+      "sha256": "8551d281a5cae8b486c32e76ad5abedacaf535e8ea3b7d7942a2bea556d89250"
+    },
+    {
+      "bytes": 1695,
+      "path": "PRODUCER_SOURCE_PINS.json",
+      "sha256": "b09594efe014e9d4f5352d942c0108da204d662b95049bb9648fb6dfd7208366"
+    },
+    {
+      "bytes": 3665,
+      "path": "SOURCE_PINS.json",
+      "sha256": "92aa188d5e080eea3a88bb700928308add88a0a409f59f475a0376df92b961ca"
+    },
+    {
+      "bytes": 9990,
+      "path": "equivariant_composition_tower.md",
+      "sha256": "3ccfe330a6764a55019c6015f0ca17e41b899045a48de2b29b48e8d96633e1f1"
+    },
+    {
+      "bytes": 10022,
+      "path": "independent/INDEPENDENT_AUDIT.md",
+      "sha256": "fe4eb98dcfedab38ccfddf9db9a54224da6dc4015362b8d4e89614d7183d6a56"
+    },
+    {
+      "bytes": 2742,
+      "path": "independent/audit_checks.json",
+      "sha256": "f8171f7e0ff154847cf1aabf113a565308f9fd50ceb2955162c60f3372946cb2"
+    },
+    {
+      "bytes": 2742,
+      "path": "independent/audit_checks.optimized.json",
+      "sha256": "f8171f7e0ff154847cf1aabf113a565308f9fd50ceb2955162c60f3372946cb2"
+    },
+    {
+      "bytes": 7855,
+      "path": "independent/verify_audit.py",
+      "sha256": "6feed05d3a19562741bde6ac49e2f0bf6265a9897a6643027fb47bb3f9e47e9f"
+    },
+    {
+      "bytes": 2160,
+      "path": "verification.json",
+      "sha256": "5c5bb3e93ba1ae3a971180fe33e3b527c4e22aefa5f7ea1d3b4fda2197a92877"
+    },
+    {
+      "bytes": 2160,
+      "path": "verification.optimized.json",
+      "sha256": "5c5bb3e93ba1ae3a971180fe33e3b527c4e22aefa5f7ea1d3b4fda2197a92877"
+    },
+    {
+      "bytes": 5065,
+      "path": "verify_equivariant_composition.py",
+      "sha256": "60b2282d0014139cff1209a2af7829cff54b4e5d4f28bb75b4adcdf5da7d159a"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "../README.md",
+    "../../../../00-navigation/S144.md",
+    "../../../../00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "verify_equivariant_composition.py",
+      "stdout_sha256": "5c5bb3e93ba1ae3a971180fe33e3b527c4e22aefa5f7ea1d3b4fda2197a92877"
+    },
+    {
+      "script": "independent/verify_audit.py",
+      "stdout_sha256": "f8171f7e0ff154847cf1aabf113a565308f9fd50ceb2955162c60f3372946cb2"
+    }
+  ],
+  "schema": 1,
+  "scope": "Frozen checkpoint-1 Jacobian proofs, correction lineage, source pins and explicit normal/optimized certificate replays. Universal claims rely on the proofs, not finite tests."
+}
