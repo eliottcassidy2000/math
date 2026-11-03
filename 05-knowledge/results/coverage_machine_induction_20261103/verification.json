@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "normal": true,
+      "optimized": true,
+      "receipt": "junction.json",
+      "receipt_sha256": "3f48539ca5162007e988820a1095dba6a2e5b11c5b43d51c33b1a735f48929b1",
+      "script": "junction.py",
+      "script_sha256": "23a4c897277e68e825aa5cbf6393178aa037bd991def78328671f3a59c590b61"
+    },
+    {
+      "normal": true,
+      "optimized": true,
+      "receipt": "gluing/check.json",
+      "receipt_sha256": "3cda1e0cf1aee11f4a55b3c646aa5e76fc924d2711c88674d21be9bd9f50a2f8",
+      "script": "gluing/check.py",
+      "script_sha256": "e8e3c4d901db3583910d9e5dccc0a745f850da4acfa727811d8f73d30fb87432"
+    },
+    {
+      "normal": true,
+      "optimized": true,
+      "receipt": "axiom/counter_check.json",
+      "receipt_sha256": "6c7f3afb3a2189e95ad1de22421a3ccbd60a39356f795b4195848f4d7485ffc1",
+      "script": "axiom/counter_check.py",
+      "script_sha256": "53e409987bdb81d88ba53ea5d86489ba51b351533763f3d0d01671e3f640b842"
+    },
+    {
+      "normal": true,
+      "optimized": true,
+      "receipt": "machines/normal.json",
+      "receipt_sha256": "7174d88a113bc486ebc672fda5eda7de654d6b271521a3922265f536d49e59b5",
+      "script": "machines/check.py",
+      "script_sha256": "4b4c7c5e0593c85ef97a50ea0d06a10294f0a8ddc85a19d9752bd42a81f5fe5d"
+    },
+    {
+      "normal": true,
+      "optimized": true,
+      "receipt": "machines/hankel.normal.json",
+      "receipt_sha256": "6daf598548f71baae6fd46526129d6de2c4d564233a2dad50c1dea61f7d6e88c",
+      "script": "machines/hankel.py",
+      "script_sha256": "bce8e66d713cc0d8a81ab5cb2825d3717d652938bbf54d4962294bbd0ae8b619"
+    }
+  ],
+  "runner_sha256": "ca7480d2ffd79c7ce58a8fd6aef9814773a915247b5b180879a0d8cd13472029",
+  "scope": "Five frozen local jobs; byte-identical normal and optimized outputs, not spectrum coverage",
+  "status": "PASS"
+}

@@ -1,0 +1,4285 @@
+{
+  "control_primes": {
+    "0p": 37,
+    "0pb": 41,
+    "0r": 29,
+    "0rb": 31,
+    "0s": 43,
+    "0sb": 47,
+    "1p": 61,
+    "1pb": 67,
+    "1r": 53,
+    "1rb": 59,
+    "1s": 71,
+    "1sb": 73,
+    "div": 19,
+    "divback": 23,
+    "halt": 79,
+    "main": 13,
+    "restore": 17
+  },
+  "fractions": [
+    "17/26",
+    "79/13",
+    "38/17",
+    "161/76",
+    "53/38",
+    "29/19",
+    "19/23",
+    "62/203",
+    "29/31",
+    "37/29",
+    "75035125/111",
+    "37/41",
+    "43/37",
+    "141/473",
+    "43/47",
+    "13/43",
+    "118/371",
+    "53/59",
+    "61/53",
+    "24523675/183",
+    "61/67",
+    "71/61",
+    "219/781",
+    "71/73",
+    "2925/71"
+  ],
+  "hostile_same_H9_words": [
+    "1000",
+    "1010"
+  ],
+  "records": [
+    {
+      "H": 3,
+      "births": [],
+      "bits": [],
+      "blue": true,
+      "input": 0,
+      "literal_and_DP": true,
+      "native_partner_H": 1,
+      "order": 3,
+      "ports": [
+        0,
+        2
+      ],
+      "prefix": 2,
+      "reflection_defect_weight": 0,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "steps": 1
+    },
+    {
+      "H": 9,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        }
+      ],
+      "bits": [
+        1
+      ],
+      "blue": false,
+      "input": 1,
+      "literal_and_DP": true,
+      "native_partner_H": 9,
+      "order": 5,
+      "ports": [
+        0,
+        4
+      ],
+      "prefix": 10,
+      "reflection_defect_weight": 2,
+      "rows": [
+        10,
+        28,
+        25,
+        16,
+        1
+      ],
+      "steps": 27
+    },
+    {
+      "H": 27,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        }
+      ],
+      "bits": [
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 2,
+      "literal_and_DP": true,
+      "native_partner_H": 29,
+      "order": 7,
+      "ports": [
+        0,
+        6
+      ],
+      "prefix": 34,
+      "reflection_defect_weight": 6,
+      "rows": [
+        34,
+        124,
+        121,
+        113,
+        97,
+        64,
+        1
+      ],
+      "steps": 117
+    },
+    {
+      "H": 31,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        }
+      ],
+      "bits": [
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 3,
+      "literal_and_DP": true,
+      "native_partner_H": 53,
+      "order": 7,
+      "ports": [
+        0,
+        6
+      ],
+      "prefix": 42,
+      "reflection_defect_weight": 4,
+      "rows": [
+        42,
+        124,
+        121,
+        112,
+        97,
+        64,
+        1
+      ],
+      "steps": 137
+    },
+    {
+      "H": 99,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 4,
+      "literal_and_DP": true,
+      "native_partner_H": 97,
+      "order": 9,
+      "ports": [
+        0,
+        8
+      ],
+      "prefix": 130,
+      "reflection_defect_weight": 10,
+      "rows": [
+        130,
+        508,
+        505,
+        497,
+        481,
+        449,
+        385,
+        256,
+        1
+      ],
+      "steps": 451
+    },
+    {
+      "H": 121,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 5,
+      "literal_and_DP": true,
+      "native_partner_H": 265,
+      "order": 9,
+      "ports": [
+        0,
+        8
+      ],
+      "prefix": 162,
+      "reflection_defect_weight": 8,
+      "rows": [
+        138,
+        508,
+        505,
+        496,
+        481,
+        449,
+        385,
+        256,
+        1
+      ],
+      "steps": 551
+    },
+    {
+      "H": 97,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 6,
+      "literal_and_DP": true,
+      "native_partner_H": 183,
+      "order": 9,
+      "ports": [
+        0,
+        8
+      ],
+      "prefix": 138,
+      "reflection_defect_weight": 8,
+      "rows": [
+        162,
+        508,
+        505,
+        497,
+        481,
+        448,
+        385,
+        256,
+        1
+      ],
+      "steps": 475
+    },
+    {
+      "H": 117,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 7,
+      "literal_and_DP": true,
+      "native_partner_H": 325,
+      "order": 9,
+      "ports": [
+        0,
+        8
+      ],
+      "prefix": 170,
+      "reflection_defect_weight": 6,
+      "rows": [
+        170,
+        508,
+        505,
+        496,
+        481,
+        448,
+        385,
+        256,
+        1
+      ],
+      "steps": 575
+    },
+    {
+      "H": 387,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 8,
+      "literal_and_DP": true,
+      "native_partner_H": 329,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 514,
+      "reflection_defect_weight": 14,
+      "rows": [
+        514,
+        2044,
+        2041,
+        2033,
+        2017,
+        1985,
+        1921,
+        1793,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 1753
+    },
+    {
+      "H": 481,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 9,
+      "literal_and_DP": true,
+      "native_partner_H": 1553,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 642,
+      "reflection_defect_weight": 12,
+      "rows": [
+        522,
+        2044,
+        2041,
+        2032,
+        2017,
+        1985,
+        1921,
+        1793,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 2173
+    },
+    {
+      "H": 403,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 10,
+      "literal_and_DP": true,
+      "native_partner_H": 919,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 546,
+      "reflection_defect_weight": 12,
+      "rows": [
+        546,
+        2044,
+        2041,
+        2033,
+        2017,
+        1984,
+        1921,
+        1793,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 1857
+    },
+    {
+      "H": 495,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 11,
+      "literal_and_DP": true,
+      "native_partner_H": 2055,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 674,
+      "reflection_defect_weight": 10,
+      "rows": [
+        554,
+        2044,
+        2041,
+        2032,
+        2017,
+        1984,
+        1921,
+        1793,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 2277
+    },
+    {
+      "H": 361,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 12,
+      "literal_and_DP": true,
+      "native_partner_H": 617,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 522,
+      "reflection_defect_weight": 12,
+      "rows": [
+        642,
+        2044,
+        2041,
+        2033,
+        2017,
+        1985,
+        1921,
+        1792,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 1785
+    },
+    {
+      "H": 447,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 13,
+      "literal_and_DP": true,
+      "native_partner_H": 1659,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 650,
+      "reflection_defect_weight": 10,
+      "rows": [
+        650,
+        2044,
+        2041,
+        2032,
+        2017,
+        1985,
+        1921,
+        1792,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 2205
+    },
+    {
+      "H": 375,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 14,
+      "literal_and_DP": true,
+      "native_partner_H": 1119,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 554,
+      "reflection_defect_weight": 10,
+      "rows": [
+        674,
+        2044,
+        2041,
+        2033,
+        2017,
+        1984,
+        1921,
+        1792,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 1889
+    },
+    {
+      "H": 459,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 15,
+      "literal_and_DP": true,
+      "native_partner_H": 2073,
+      "order": 11,
+      "ports": [
+        0,
+        10
+      ],
+      "prefix": 682,
+      "reflection_defect_weight": 8,
+      "rows": [
+        682,
+        2044,
+        2041,
+        2032,
+        2017,
+        1984,
+        1921,
+        1792,
+        1537,
+        1024,
+        1
+      ],
+      "steps": 2309
+    },
+    {
+      "H": 1539,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 16,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2050,
+      "reflection_defect_weight": 18,
+      "rows": [
+        2050,
+        8188,
+        8185,
+        8177,
+        8161,
+        8129,
+        8065,
+        7937,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 6911
+    },
+    {
+      "H": 1921,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 17,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2562,
+      "reflection_defect_weight": 16,
+      "rows": [
+        2058,
+        8188,
+        8185,
+        8176,
+        8161,
+        8129,
+        8065,
+        7937,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 8611
+    },
+    {
+      "H": 1627,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 18,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2178,
+      "reflection_defect_weight": 16,
+      "rows": [
+        2082,
+        8188,
+        8185,
+        8177,
+        8161,
+        8128,
+        8065,
+        7937,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 7335
+    },
+    {
+      "H": 2007,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 19,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2690,
+      "reflection_defect_weight": 14,
+      "rows": [
+        2090,
+        8188,
+        8185,
+        8176,
+        8161,
+        8128,
+        8065,
+        7937,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 9035
+    },
+    {
+      "H": 1531,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 20,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2082,
+      "reflection_defect_weight": 16,
+      "rows": [
+        2178,
+        8188,
+        8185,
+        8177,
+        8161,
+        8129,
+        8065,
+        7936,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 7023
+    },
+    {
+      "H": 1905,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 21,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2594,
+      "reflection_defect_weight": 14,
+      "rows": [
+        2186,
+        8188,
+        8185,
+        8176,
+        8161,
+        8129,
+        8065,
+        7936,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 8723
+    },
+    {
+      "H": 1617,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 22,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2210,
+      "reflection_defect_weight": 14,
+      "rows": [
+        2210,
+        8188,
+        8185,
+        8177,
+        8161,
+        8128,
+        8065,
+        7936,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 7447
+    },
+    {
+      "H": 1989,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "blue": false,
+      "input": 23,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2722,
+      "reflection_defect_weight": 12,
+      "rows": [
+        2218,
+        8188,
+        8185,
+        8176,
+        8161,
+        8128,
+        8065,
+        7936,
+        7681,
+        7169,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 9147
+    },
+    {
+      "H": 1417,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 24,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2058,
+      "reflection_defect_weight": 16,
+      "rows": [
+        2562,
+        8188,
+        8185,
+        8177,
+        8161,
+        8129,
+        8065,
+        7937,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 6959
+    },
+    {
+      "H": 1767,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 25,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2570,
+      "reflection_defect_weight": 14,
+      "rows": [
+        2570,
+        8188,
+        8185,
+        8176,
+        8161,
+        8129,
+        8065,
+        7937,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 8659
+    },
+    {
+      "H": 1497,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 26,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2186,
+      "reflection_defect_weight": 14,
+      "rows": [
+        2594,
+        8188,
+        8185,
+        8177,
+        8161,
+        8128,
+        8065,
+        7937,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 7383
+    },
+    {
+      "H": 1845,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 27,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2698,
+      "reflection_defect_weight": 12,
+      "rows": [
+        2602,
+        8188,
+        8185,
+        8176,
+        8161,
+        8128,
+        8065,
+        7937,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 9083
+    },
+    {
+      "H": 1407,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 28,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2090,
+      "reflection_defect_weight": 14,
+      "rows": [
+        2690,
+        8188,
+        8185,
+        8177,
+        8161,
+        8129,
+        8065,
+        7936,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 7071
+    },
+    {
+      "H": 1749,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 29,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2602,
+      "reflection_defect_weight": 12,
+      "rows": [
+        2698,
+        8188,
+        8185,
+        8176,
+        8161,
+        8129,
+        8065,
+        7936,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 8771
+    },
+    {
+      "H": 1485,
+      "births": [
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 30,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2218,
+      "reflection_defect_weight": 12,
+      "rows": [
+        2722,
+        8188,
+        8185,
+        8177,
+        8161,
+        8128,
+        8065,
+        7936,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 7495
+    },
+    {
+      "H": 1825,
+      "births": [
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            3
+          ],
+          "old_ports": [
+            0,
+            2
+          ],
+          "vertex": 3
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            4
+          ],
+          "old_ports": [
+            0,
+            3
+          ],
+          "vertex": 4
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            5
+          ],
+          "old_ports": [
+            0,
+            4
+          ],
+          "vertex": 5
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            6
+          ],
+          "old_ports": [
+            0,
+            5
+          ],
+          "vertex": 6
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            7
+          ],
+          "old_ports": [
+            0,
+            6
+          ],
+          "vertex": 7
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            8
+          ],
+          "old_ports": [
+            0,
+            7
+          ],
+          "vertex": 8
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            9
+          ],
+          "old_ports": [
+            0,
+            8
+          ],
+          "vertex": 9
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            10
+          ],
+          "old_ports": [
+            0,
+            9
+          ],
+          "vertex": 10
+        },
+        {
+          "apex_beats_new": 1,
+          "new_ports": [
+            0,
+            11
+          ],
+          "old_ports": [
+            0,
+            10
+          ],
+          "vertex": 11
+        },
+        {
+          "apex_beats_new": 0,
+          "new_ports": [
+            0,
+            12
+          ],
+          "old_ports": [
+            0,
+            11
+          ],
+          "vertex": 12
+        }
+      ],
+      "bits": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "blue": false,
+      "input": 31,
+      "order": 13,
+      "ports": [
+        0,
+        12
+      ],
+      "prefix": 2730,
+      "reflection_defect_weight": 10,
+      "rows": [
+        2730,
+        8188,
+        8185,
+        8176,
+        8161,
+        8128,
+        8065,
+        7936,
+        7681,
+        7168,
+        6145,
+        4096,
+        1
+      ],
+      "steps": 9195
+    }
+  ],
+  "register_primes": {
+    "H": 5,
+    "P": 3,
+    "Q": 7,
+    "R": 2,
+    "S": 11
+  },
+  "scope": {
+    "literal_and_DP_inputs": "0..15",
+    "no_spectrum_coverage_claim": true,
+    "peak_DP_order": 11,
+    "register_CA_TM_inputs": "0..31"
+  },
+  "status": "FINITE-EXACT controls for proved all-input transducer"
+}

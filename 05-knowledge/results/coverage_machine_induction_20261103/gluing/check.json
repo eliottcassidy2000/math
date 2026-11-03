@@ -1,0 +1,3655 @@
+{
+  "adaptive_probe": {
+    "F2": 84,
+    "H": 9,
+    "rows": [
+      10,
+      4,
+      1,
+      22,
+      7
+    ]
+  },
+  "fixed_divisor_control": {
+    "C3_F2": 12,
+    "C3_adaptive_birth_H": 5,
+    "C3_wrapped_H": 15
+  },
+  "fixed_divisor_hostiles": [
+    {
+      "F2": 12,
+      "H": 3,
+      "fixed_divisor": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "wrapped_H": 15
+    },
+    {
+      "F2": 84,
+      "H": 9,
+      "fixed_divisor": 3,
+      "rows": [
+        10,
+        4,
+        1,
+        22,
+        7
+      ],
+      "wrapped_H": 93
+    },
+    {
+      "F2": 216,
+      "H": 15,
+      "fixed_divisor": 3,
+      "rows": [
+        10,
+        4,
+        1,
+        54,
+        7,
+        23
+      ],
+      "wrapped_H": 231
+    }
+  ],
+  "formal_not_claimed_realizable_valuation_hostile": {
+    "fixed_divisor": 9,
+    "power_coefficients": [
+      0,
+      18,
+      0,
+      4,
+      0,
+      4,
+      0,
+      1
+    ],
+    "wrapper_content": 27
+  },
+  "literal_rows": [
+    {
+      "F2": 4,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        1
+      ],
+      "wrapped_H": 5,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 4,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        0
+      ],
+      "wrapped_H": 5,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 8,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        1,
+        3
+      ],
+      "wrapped_H": 9,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 8,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        0,
+        3
+      ],
+      "wrapped_H": 9,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 12,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        4,
+        1,
+        2
+      ],
+      "wrapped_H": 15,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 8,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        0,
+        2
+      ],
+      "wrapped_H": 9,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 8,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        5,
+        1
+      ],
+      "wrapped_H": 9,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 12,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ],
+      "wrapped_H": 15,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 8,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        5,
+        0
+      ],
+      "wrapped_H": 9,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 8,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        4,
+        0
+      ],
+      "wrapped_H": 9,
+      "wrapped_fixed_slot_divisor": 3,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        0,
+        3,
+        7
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        4,
+        1,
+        2,
+        7
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        0,
+        2,
+        7
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        10,
+        0,
+        3,
+        6
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        12,
+        1,
+        2,
+        6
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        5,
+        1,
+        7
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        2,
+        4,
+        1,
+        7
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        5,
+        0,
+        7
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        4,
+        0,
+        7
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        8,
+        5,
+        1,
+        6
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        10,
+        4,
+        1,
+        6
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        12,
+        5,
+        0,
+        6
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        14,
+        4,
+        0,
+        6
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        0,
+        9,
+        3,
+        5
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        8,
+        3,
+        5
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        9,
+        2,
+        5
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        8,
+        2,
+        5
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        8,
+        9,
+        3,
+        4
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        10,
+        8,
+        3,
+        4
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        12,
+        9,
+        2,
+        4
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        14,
+        8,
+        2,
+        4
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        13,
+        1,
+        5
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        13,
+        0,
+        5
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        6,
+        12,
+        0,
+        5
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        8,
+        13,
+        1,
+        4
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        10,
+        12,
+        1,
+        4
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        12,
+        13,
+        0,
+        4
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        14,
+        12,
+        0,
+        4
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        1,
+        11,
+        3
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        0,
+        11,
+        3
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        1,
+        10,
+        3
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        6,
+        0,
+        10,
+        3
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        8,
+        1,
+        11,
+        2
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        10,
+        0,
+        11,
+        2
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        12,
+        1,
+        10,
+        2
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        14,
+        0,
+        10,
+        2
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        0,
+        5,
+        9,
+        3
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        5,
+        8,
+        3
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        8,
+        5,
+        9,
+        2
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        10,
+        4,
+        9,
+        2
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        12,
+        5,
+        8,
+        2
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        14,
+        4,
+        8,
+        2
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        9,
+        11,
+        1
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        2,
+        8,
+        11,
+        1
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        4,
+        9,
+        10,
+        1
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        8,
+        10,
+        1
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        8,
+        9,
+        11,
+        0
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        10,
+        8,
+        11,
+        0
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        12,
+        9,
+        10,
+        0
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        14,
+        8,
+        10,
+        0
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        0,
+        13,
+        9,
+        1
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        2,
+        12,
+        9,
+        1
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        4,
+        13,
+        8,
+        1
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 32,
+      "H": 5,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        6,
+        12,
+        8,
+        1
+      ],
+      "wrapped_H": 37,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        8,
+        13,
+        9,
+        0
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 24,
+      "H": 3,
+      "fixed_slot_divisor": 3,
+      "rows": [
+        10,
+        12,
+        9,
+        0
+      ],
+      "wrapped_H": 27,
+      "wrapped_fixed_slot_divisor": 9,
+      "wrapper_content": 3
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        12,
+        13,
+        8,
+        0
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    },
+    {
+      "F2": 16,
+      "H": 1,
+      "fixed_slot_divisor": 1,
+      "rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "wrapped_H": 17,
+      "wrapped_fixed_slot_divisor": 1,
+      "wrapper_content": 1
+    }
+  ],
+  "literal_sources": 74,
+  "mod49_jet_literal_ordinal_controls": 74,
+  "mod49_jet_wrapper_controls": 296,
+  "modular_ca_cell_controls": 4514,
+  "moduli": [
+    2,
+    3,
+    7,
+    49
+  ],
+  "multiplicity_and_projection_controls": 126,
+  "old_observer_twins": [
+    {
+      "H": 1,
+      "order": 2,
+      "wrapped_H": 5
+    },
+    {
+      "H": 1,
+      "order": 3,
+      "wrapped_H": 9
+    }
+  ],
+  "operator_entries": [
+    [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      2,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      2,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      4
+    ],
+    [
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      2,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      2,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      0,
+      1,
+      3
+    ],
+    [
+      2,
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      0,
+      0,
+      2
+    ],
+    [
+      2,
+      2,
+      0,
+      1,
+      3
+    ],
+    [
+      2,
+      2,
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      5,
+      0,
+      0,
+      1
+    ],
+    [
+      2,
+      5,
+      0,
+      1,
+      3
+    ],
+    [
+      2,
+      5,
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      1,
+      0,
+      2
+    ],
+    [
+      2,
+      2,
+      1,
+      1,
+      5
+    ],
+    [
+      2,
+      2,
+      1,
+      2,
+      2
+    ],
+    [
+      2,
+      5,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      5,
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      1
+    ],
+    [
+      3,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      3,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      1,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      3,
+      0,
+      0,
+      3
+    ],
+    [
+      3,
+      3,
+      0,
+      1,
+      3
+    ],
+    [
+      3,
+      3,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      15,
+      0,
+      1,
+      2
+    ],
+    [
+      3,
+      15,
+      0,
+      2,
+      1
+    ],
+    [
+      3,
+      16,
+      0,
+      0,
+      1
+    ],
+    [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      1,
+      1,
+      2,
+      1
+    ],
+    [
+      3,
+      3,
+      1,
+      0,
+      2
+    ],
+    [
+      3,
+      3,
+      1,
+      1,
+      5
+    ],
+    [
+      3,
+      3,
+      1,
+      2,
+      2
+    ],
+    [
+      3,
+      15,
+      1,
+      1,
+      1
+    ],
+    [
+      3,
+      15,
+      1,
+      2,
+      1
+    ],
+    [
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    [
+      3,
+      3,
+      2,
+      2,
+      1
+    ],
+    [
+      4,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      4,
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      4,
+      3,
+      0,
+      0,
+      2
+    ],
+    [
+      4,
+      3,
+      0,
+      1,
+      1
+    ],
+    [
+      4,
+      4,
+      0,
+      0,
+      1
+    ],
+    [
+      4,
+      4,
+      0,
+      1,
+      2
+    ],
+    [
+      4,
+      4,
+      0,
+      2,
+      1
+    ],
+    [
+      4,
+      5,
+      0,
+      0,
+      1
+    ],
+    [
+      4,
+      5,
+      0,
+      1,
+      1
+    ],
+    [
+      4,
+      16,
+      0,
+      0,
+      1
+    ],
+    [
+      4,
+      17,
+      0,
+      1,
+      2
+    ],
+    [
+      4,
+      17,
+      0,
+      2,
+      1
+    ],
+    [
+      4,
+      2,
+      1,
+      0,
+      1
+    ],
+    [
+      4,
+      2,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      3,
+      1,
+      0,
+      1
+    ],
+    [
+      4,
+      3,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      4,
+      1,
+      0,
+      1
+    ],
+    [
+      4,
+      4,
+      1,
+      1,
+      4
+    ],
+    [
+      4,
+      4,
+      1,
+      2,
+      2
+    ],
+    [
+      4,
+      17,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      17,
+      1,
+      2,
+      1
+    ],
+    [
+      4,
+      4,
+      2,
+      1,
+      1
+    ],
+    [
+      4,
+      4,
+      2,
+      2,
+      1
+    ],
+    [
+      5,
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      5,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      5,
+      5,
+      0,
+      0,
+      1
+    ],
+    [
+      5,
+      5,
+      0,
+      1,
+      2
+    ],
+    [
+      5,
+      5,
+      0,
+      2,
+      1
+    ],
+    [
+      5,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      5,
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      5,
+      5,
+      1,
+      0,
+      1
+    ],
+    [
+      5,
+      5,
+      1,
+      1,
+      4
+    ],
+    [
+      5,
+      5,
+      1,
+      2,
+      2
+    ],
+    [
+      5,
+      5,
+      2,
+      1,
+      1
+    ],
+    [
+      5,
+      5,
+      2,
+      2,
+      1
+    ],
+    [
+      6,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      6,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      6,
+      5,
+      0,
+      1,
+      2
+    ],
+    [
+      6,
+      5,
+      0,
+      2,
+      1
+    ],
+    [
+      6,
+      6,
+      0,
+      0,
+      3
+    ],
+    [
+      6,
+      6,
+      0,
+      1,
+      3
+    ],
+    [
+      6,
+      6,
+      0,
+      2,
+      1
+    ],
+    [
+      6,
+      8,
+      0,
+      1,
+      2
+    ],
+    [
+      6,
+      8,
+      0,
+      2,
+      1
+    ],
+    [
+      6,
+      14,
+      0,
+      0,
+      1
+    ],
+    [
+      6,
+      5,
+      1,
+      1,
+      1
+    ],
+    [
+      6,
+      5,
+      1,
+      2,
+      1
+    ],
+    [
+      6,
+      6,
+      1,
+      0,
+      2
+    ],
+    [
+      6,
+      6,
+      1,
+      1,
+      5
+    ],
+    [
+      6,
+      6,
+      1,
+      2,
+      2
+    ],
+    [
+      6,
+      8,
+      1,
+      1,
+      1
+    ],
+    [
+      6,
+      8,
+      1,
+      2,
+      1
+    ],
+    [
+      6,
+      6,
+      2,
+      1,
+      1
+    ],
+    [
+      6,
+      6,
+      2,
+      2,
+      1
+    ],
+    [
+      7,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      7,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      7,
+      2,
+      0,
+      0,
+      1
+    ],
+    [
+      7,
+      2,
+      0,
+      1,
+      1
+    ],
+    [
+      7,
+      5,
+      0,
+      1,
+      1
+    ],
+    [
+      7,
+      6,
+      0,
+      0,
+      2
+    ],
+    [
+      7,
+      6,
+      0,
+      1,
+      1
+    ],
+    [
+      7,
+      7,
+      0,
+      0,
+      1
+    ],
+    [
+      7,
+      7,
+      0,
+      1,
+      2
+    ],
+    [
+      7,
+      7,
+      0,
+      2,
+      1
+    ],
+    [
+      7,
+      11,
+      0,
+      1,
+      2
+    ],
+    [
+      7,
+      11,
+      0,
+      2,
+      1
+    ],
+    [
+      7,
+      14,
+      0,
+      0,
+      1
+    ],
+    [
+      7,
+      2,
+      1,
+      0,
+      1
+    ],
+    [
+      7,
+      2,
+      1,
+      1,
+      1
+    ],
+    [
+      7,
+      6,
+      1,
+      0,
+      1
+    ],
+    [
+      7,
+      6,
+      1,
+      1,
+      1
+    ],
+    [
+      7,
+      7,
+      1,
+      0,
+      1
+    ],
+    [
+      7,
+      7,
+      1,
+      1,
+      4
+    ],
+    [
+      7,
+      7,
+      1,
+      2,
+      2
+    ],
+    [
+      7,
+      11,
+      1,
+      1,
+      1
+    ],
+    [
+      7,
+      11,
+      1,
+      2,
+      1
+    ],
+    [
+      7,
+      7,
+      2,
+      1,
+      1
+    ],
+    [
+      7,
+      7,
+      2,
+      2,
+      1
+    ],
+    [
+      8,
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      8,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      8,
+      8,
+      0,
+      0,
+      1
+    ],
+    [
+      8,
+      8,
+      0,
+      1,
+      2
+    ],
+    [
+      8,
+      8,
+      0,
+      2,
+      1
+    ],
+    [
+      8,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      8,
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      8,
+      8,
+      1,
+      0,
+      1
+    ],
+    [
+      8,
+      8,
+      1,
+      1,
+      4
+    ],
+    [
+      8,
+      8,
+      1,
+      2,
+      2
+    ],
+    [
+      8,
+      8,
+      2,
+      1,
+      1
+    ],
+    [
+      8,
+      8,
+      2,
+      2,
+      1
+    ],
+    [
+      9,
+      8,
+      0,
+      0,
+      1
+    ],
+    [
+      9,
+      8,
+      0,
+      1,
+      3
+    ],
+    [
+      9,
+      8,
+      0,
+      2,
+      1
+    ],
+    [
+      9,
+      9,
+      0,
+      0,
+      2
+    ],
+    [
+      9,
+      9,
+      0,
+      1,
+      3
+    ],
+    [
+      9,
+      9,
+      0,
+      2,
+      1
+    ],
+    [
+      9,
+      15,
+      0,
+      0,
+      1
+    ],
+    [
+      9,
+      15,
+      0,
+      1,
+      3
+    ],
+    [
+      9,
+      15,
+      0,
+      2,
+      1
+    ],
+    [
+      9,
+      8,
+      1,
+      1,
+      1
+    ],
+    [
+      9,
+      8,
+      1,
+      2,
+      1
+    ],
+    [
+      9,
+      9,
+      1,
+      0,
+      2
+    ],
+    [
+      9,
+      9,
+      1,
+      1,
+      5
+    ],
+    [
+      9,
+      9,
+      1,
+      2,
+      2
+    ],
+    [
+      9,
+      15,
+      1,
+      1,
+      1
+    ],
+    [
+      9,
+      15,
+      1,
+      2,
+      1
+    ],
+    [
+      9,
+      9,
+      2,
+      1,
+      1
+    ],
+    [
+      9,
+      9,
+      2,
+      2,
+      1
+    ],
+    [
+      10,
+      6,
+      0,
+      0,
+      2
+    ],
+    [
+      10,
+      6,
+      0,
+      1,
+      1
+    ],
+    [
+      10,
+      8,
+      0,
+      1,
+      1
+    ],
+    [
+      10,
+      9,
+      0,
+      0,
+      1
+    ],
+    [
+      10,
+      9,
+      0,
+      1,
+      1
+    ],
+    [
+      10,
+      10,
+      0,
+      0,
+      1
+    ],
+    [
+      10,
+      10,
+      0,
+      1,
+      2
+    ],
+    [
+      10,
+      10,
+      0,
+      2,
+      1
+    ],
+    [
+      10,
+      14,
+      0,
+      0,
+      1
+    ],
+    [
+      10,
+      15,
+      0,
+      0,
+      1
+    ],
+    [
+      10,
+      15,
+      0,
+      1,
+      1
+    ],
+    [
+      10,
+      17,
+      0,
+      1,
+      2
+    ],
+    [
+      10,
+      17,
+      0,
+      2,
+      1
+    ],
+    [
+      10,
+      6,
+      1,
+      0,
+      1
+    ],
+    [
+      10,
+      6,
+      1,
+      1,
+      1
+    ],
+    [
+      10,
+      9,
+      1,
+      0,
+      1
+    ],
+    [
+      10,
+      9,
+      1,
+      1,
+      1
+    ],
+    [
+      10,
+      10,
+      1,
+      0,
+      1
+    ],
+    [
+      10,
+      10,
+      1,
+      1,
+      4
+    ],
+    [
+      10,
+      10,
+      1,
+      2,
+      2
+    ],
+    [
+      10,
+      17,
+      1,
+      1,
+      1
+    ],
+    [
+      10,
+      17,
+      1,
+      2,
+      1
+    ],
+    [
+      10,
+      10,
+      2,
+      1,
+      1
+    ],
+    [
+      10,
+      10,
+      2,
+      2,
+      1
+    ],
+    [
+      11,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      11,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      11,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      11,
+      8,
+      0,
+      0,
+      1
+    ],
+    [
+      11,
+      8,
+      0,
+      1,
+      1
+    ],
+    [
+      11,
+      11,
+      0,
+      1,
+      1
+    ],
+    [
+      11,
+      11,
+      0,
+      2,
+      1
+    ],
+    [
+      11,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      11,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      11,
+      8,
+      1,
+      0,
+      1
+    ],
+    [
+      11,
+      8,
+      1,
+      1,
+      1
+    ],
+    [
+      11,
+      11,
+      1,
+      1,
+      3
+    ],
+    [
+      11,
+      11,
+      1,
+      2,
+      2
+    ],
+    [
+      11,
+      11,
+      2,
+      1,
+      1
+    ],
+    [
+      11,
+      11,
+      2,
+      2,
+      1
+    ],
+    [
+      12,
+      3,
+      0,
+      0,
+      2
+    ],
+    [
+      12,
+      3,
+      0,
+      1,
+      1
+    ],
+    [
+      12,
+      8,
+      0,
+      0,
+      1
+    ],
+    [
+      12,
+      8,
+      0,
+      1,
+      1
+    ],
+    [
+      12,
+      9,
+      0,
+      0,
+      1
+    ],
+    [
+      12,
+      9,
+      0,
+      1,
+      1
+    ],
+    [
+      12,
+      11,
+      0,
+      1,
+      2
+    ],
+    [
+      12,
+      11,
+      0,
+      2,
+      1
+    ],
+    [
+      12,
+      12,
+      0,
+      0,
+      1
+    ],
+    [
+      12,
+      12,
+      0,
+      1,
+      2
+    ],
+    [
+      12,
+      12,
+      0,
+      2,
+      1
+    ],
+    [
+      12,
+      15,
+      0,
+      1,
+      1
+    ],
+    [
+      12,
+      16,
+      0,
+      0,
+      1
+    ],
+    [
+      12,
+      3,
+      1,
+      0,
+      1
+    ],
+    [
+      12,
+      3,
+      1,
+      1,
+      1
+    ],
+    [
+      12,
+      9,
+      1,
+      0,
+      1
+    ],
+    [
+      12,
+      9,
+      1,
+      1,
+      1
+    ],
+    [
+      12,
+      11,
+      1,
+      1,
+      1
+    ],
+    [
+      12,
+      11,
+      1,
+      2,
+      1
+    ],
+    [
+      12,
+      12,
+      1,
+      0,
+      1
+    ],
+    [
+      12,
+      12,
+      1,
+      1,
+      4
+    ],
+    [
+      12,
+      12,
+      1,
+      2,
+      2
+    ],
+    [
+      12,
+      12,
+      2,
+      1,
+      1
+    ],
+    [
+      12,
+      12,
+      2,
+      2,
+      1
+    ],
+    [
+      13,
+      3,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      4,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      4,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      6,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      7,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      7,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      10,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      10,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      11,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      12,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      12,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      13,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      13,
+      0,
+      2,
+      1
+    ],
+    [
+      13,
+      14,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      16,
+      0,
+      0,
+      1
+    ],
+    [
+      13,
+      17,
+      0,
+      1,
+      1
+    ],
+    [
+      13,
+      4,
+      1,
+      0,
+      1
+    ],
+    [
+      13,
+      4,
+      1,
+      1,
+      1
+    ],
+    [
+      13,
+      7,
+      1,
+      0,
+      1
+    ],
+    [
+      13,
+      7,
+      1,
+      1,
+      1
+    ],
+    [
+      13,
+      10,
+      1,
+      0,
+      1
+    ],
+    [
+      13,
+      10,
+      1,
+      1,
+      1
+    ],
+    [
+      13,
+      12,
+      1,
+      0,
+      1
+    ],
+    [
+      13,
+      12,
+      1,
+      1,
+      1
+    ],
+    [
+      13,
+      13,
+      1,
+      1,
+      3
+    ],
+    [
+      13,
+      13,
+      1,
+      2,
+      2
+    ],
+    [
+      13,
+      13,
+      2,
+      1,
+      1
+    ],
+    [
+      13,
+      13,
+      2,
+      2,
+      1
+    ],
+    [
+      14,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      14,
+      5,
+      0,
+      0,
+      1
+    ],
+    [
+      14,
+      5,
+      0,
+      1,
+      1
+    ],
+    [
+      14,
+      8,
+      0,
+      0,
+      1
+    ],
+    [
+      14,
+      8,
+      0,
+      1,
+      1
+    ],
+    [
+      14,
+      14,
+      0,
+      1,
+      1
+    ],
+    [
+      14,
+      14,
+      0,
+      2,
+      1
+    ],
+    [
+      14,
+      5,
+      1,
+      0,
+      1
+    ],
+    [
+      14,
+      5,
+      1,
+      1,
+      1
+    ],
+    [
+      14,
+      8,
+      1,
+      0,
+      1
+    ],
+    [
+      14,
+      8,
+      1,
+      1,
+      1
+    ],
+    [
+      14,
+      14,
+      1,
+      1,
+      3
+    ],
+    [
+      14,
+      14,
+      1,
+      2,
+      2
+    ],
+    [
+      14,
+      14,
+      2,
+      1,
+      1
+    ],
+    [
+      14,
+      14,
+      2,
+      2,
+      1
+    ],
+    [
+      15,
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      15,
+      0,
+      0,
+      2,
+      1
+    ],
+    [
+      15,
+      15,
+      0,
+      0,
+      1
+    ],
+    [
+      15,
+      15,
+      0,
+      1,
+      2
+    ],
+    [
+      15,
+      15,
+      0,
+      2,
+      1
+    ],
+    [
+      15,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      15,
+      0,
+      1,
+      2,
+      1
+    ],
+    [
+      15,
+      15,
+      1,
+      0,
+      1
+    ],
+    [
+      15,
+      15,
+      1,
+      1,
+      4
+    ],
+    [
+      15,
+      15,
+      1,
+      2,
+      2
+    ],
+    [
+      15,
+      15,
+      2,
+      1,
+      1
+    ],
+    [
+      15,
+      15,
+      2,
+      2,
+      1
+    ],
+    [
+      16,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      16,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      16,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      16,
+      15,
+      0,
+      0,
+      1
+    ],
+    [
+      16,
+      15,
+      0,
+      1,
+      1
+    ],
+    [
+      16,
+      16,
+      0,
+      1,
+      1
+    ],
+    [
+      16,
+      16,
+      0,
+      2,
+      1
+    ],
+    [
+      16,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      16,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      16,
+      15,
+      1,
+      0,
+      1
+    ],
+    [
+      16,
+      15,
+      1,
+      1,
+      1
+    ],
+    [
+      16,
+      16,
+      1,
+      1,
+      3
+    ],
+    [
+      16,
+      16,
+      1,
+      2,
+      2
+    ],
+    [
+      16,
+      16,
+      2,
+      1,
+      1
+    ],
+    [
+      16,
+      16,
+      2,
+      2,
+      1
+    ],
+    [
+      17,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      17,
+      5,
+      0,
+      0,
+      1
+    ],
+    [
+      17,
+      5,
+      0,
+      1,
+      1
+    ],
+    [
+      17,
+      15,
+      0,
+      0,
+      1
+    ],
+    [
+      17,
+      15,
+      0,
+      1,
+      1
+    ],
+    [
+      17,
+      17,
+      0,
+      1,
+      1
+    ],
+    [
+      17,
+      17,
+      0,
+      2,
+      1
+    ],
+    [
+      17,
+      5,
+      1,
+      0,
+      1
+    ],
+    [
+      17,
+      5,
+      1,
+      1,
+      1
+    ],
+    [
+      17,
+      15,
+      1,
+      0,
+      1
+    ],
+    [
+      17,
+      15,
+      1,
+      1,
+      1
+    ],
+    [
+      17,
+      17,
+      1,
+      1,
+      3
+    ],
+    [
+      17,
+      17,
+      1,
+      2,
+      2
+    ],
+    [
+      17,
+      17,
+      2,
+      1,
+      1
+    ],
+    [
+      17,
+      17,
+      2,
+      2,
+      1
+    ]
+  ],
+  "prime_escape_controls": 370,
+  "scope": "all-order two-port cyclic-gluing operator; finite literal controls, no spectrum coverage claim",
+  "skeletons": [
+    [],
+    [
+      [
+        -1,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ]
+    ]
+  ],
+  "status": "PASS",
+  "uniform_context_controls": [
+    {
+      "context_H": 11,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "context_H": 11,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "context_H": 23,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "context_H": 23,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "context_H": 33,
+      "input_divisor": 3,
+      "output_divisor": 3,
+      "rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "context_H": 23,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "context_H": 23,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "context_H": 33,
+      "input_divisor": 3,
+      "output_divisor": 3,
+      "rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "context_H": 23,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "context_H": 23,
+      "input_divisor": 1,
+      "output_divisor": 1,
+      "rows": [
+        6,
+        4,
+        0
+      ]
+    }
+  ],
+  "wrapper_history_rows": [
+    {
+      "1": 1
+    },
+    {
+      "1": 1,
+      "2": 1
+    },
+    {
+      "1": -1,
+      "2": 5,
+      "3": 2
+    },
+    {
+      "1": -11,
+      "2": 13,
+      "3": 28,
+      "4": 6
+    },
+    {
+      "1": -37,
+      "2": -43,
+      "3": 254,
+      "4": 180,
+      "5": 24
+    },
+    {
+      "1": 49,
+      "2": -971,
+      "3": 1480,
+      "4": 3522,
+      "5": 1320,
+      "6": 120
+    },
+    {
+      "1": 1991,
+      "2": -8275,
+      "3": -2710,
+      "4": 54192,
+      "5": 46368,
+      "6": 10920,
+      "7": 720
+    },
+    {
+      "1": 18541,
+      "2": -22979,
+      "3": -257708,
+      "4": 627102,
+      "5": 1310448,
+      "6": 619920,
+      "7": 100800,
+      "8": 5040
+    },
+    {
+      "1": 64499,
+      "2": 699749,
+      "3": -4873738,
+      "4": 2708268,
+      "5": 31550088,
+      "6": 28163760,
+      "7": 8618400,
+      "8": 1028160,
+      "9": 40320
+    },
+    {
+      "1": -1334999,
+      "2": 17484709,
+      "3": -53297216,
+      "4": -129039366,
+      "5": 630602712,
+      "6": 1111317000,
+      "7": 583058880,
+      "8": 125768160,
+      "9": 11491200,
+      "10": 362880
+    },
+    {
+      "1": -36304417,
+      "2": 228495485,
+      "3": 71451938,
+      "4": -5377535064,
+      "5": 8581008336,
+      "6": 39079013400,
+      "7": 34231641840,
+      "8": 12027153600,
+      "9": 1933303680,
+      "10": 139708800,
+      "11": 3628800
+    },
+    {
+      "1": -493295387,
+      "2": 663321709,
+      "3": 22610198668,
+      "4": -128731246890,
+      "5": -41459012256,
+      "6": 1210128031200,
+      "7": 1815607301760,
+      "8": 991959590160,
+      "9": 251417738880,
+      "10": 31330696320,
+      "11": 1836172800,
+      "12": 39916800
+    }
+  ]
+}

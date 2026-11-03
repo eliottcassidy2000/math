@@ -1,0 +1,30 @@
+{
+  "external_urls": [
+    "https://arxiv.org/html/0903.4366v3#S2",
+    "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf"
+  ],
+  "files": {
+    "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md": "de47a4bc5c720ad738108a945edcd29f4b5dc75805286640c37b90c88554ae55",
+    "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea",
+    "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4",
+    "05-knowledge/results/prime_lane_ports_five_groups_20261102/prime_groups.md": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba",
+    "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+    "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+    "05-knowledge/results/session158_creative_20261103/binary_bank/FRACTRAN.md": "ee3817c60bc46aacfc92edc890dcbf95408327daa07e73afcb13a4955bde052b",
+    "05-knowledge/results/session158_creative_20261103/binary_bank/NOTE.md": "df5168bb7fd0c5229a0e8f9b443ae6add302286112c77e6418ee737470df1152",
+    "05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md": "ac4a128208d4774e999a8ff06f85fb8de8532d24df03e9451f20f0a8fb888608",
+    "05-knowledge/results/session159_constructions_20261103/heaps/NOTE.md": "e79a977b603df807d9011e3d8a7ab194450b45b81d3d9230fcaba0e1cb798c5f",
+    "05-knowledge/results/session159_constructions_20261103/profile_operator/NOTE.md": "ae763db7c3c30a125d335893e952f401c23f92a65d87fb907f362713cfdcb698",
+    "05-knowledge/results/source_selection_closure_20261103/BRANCH.md": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da",
+    "05-knowledge/results/source_selection_closure_20261103/GRADED_OBSERVER.md": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9",
+    "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
+    "05-knowledge/results/source_selection_closure_20261103/README.md": "e12c6f5a52af7f38e7c316743e87a3261b4f45408c3753c27c9aed1588e7508e",
+    "05-knowledge/results/two_port_return_induction_20261103/NATIVE_RESET_INDUCTION.md": "750b2dfced18d8165672e1a68f4425022a278f9f447bba049f3e43477aa2f64d",
+    "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+  },
+  "published_source_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+  "scope": "Direct inherited local Markdown dependencies and primary URLs; not a transitive dependency graph"
+}

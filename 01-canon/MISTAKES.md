@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — arithmetic guards do not imply entry to a chosen controller orbit
+
+- **Scope:** prepublication J4 in `05-knowledge/results/coverage_machine_induction_20261103/RESET_JUNCTION.md`; no previously accepted theorem is retracted.
+- **Witness / first failed implication:** the new primitive balanced source (203,65) enters (12253,1827) after one C3 return. It satisfies gcd one, 3 dividing the second coordinate and not the first, yet its projective ratio modulo11 is10, outside the inherited eight-state controller. The draft identified the arithmetic guard with orbit membership.
+- **Repair / strongest survivor:** after the first C3, apply C5 when the ratio is not7. At ratio7 first apply another C3, changing it to3, and then C5. The exact C5 guard now holds and its output ratio0 enters the authenticated controller. The infinite primitive seed family and its107/203 witnesses are unchanged. The receipt checks all ten starting clock classes.
+- **Missing coordinate / next question:** retain the actual controller state, not just an invariant satisfied by every state. An admissible guard can contain several orbits. The gluing agent found this gap during independent review; the repaired named-source bridge preserves all primitive arithmetic guards.
+
 ## 2026-11-03 — a forward attachment was described with the wrong arc direction
 
 - **Scope:** proof prose in `05-knowledge/results/session158_creative_20261103/square_overlap/CONTIGUOUS.md`, inherited at `6bb391f902`. The attachment formula and its zero-endpoint guard remain valid.

@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "path": "05-knowledge/results/session126_primegame_symmetry_20261031/metagraph_ca/README.md",
+      "sha256": "26d33df1427061a98b545c206e2ea1756031ac5954929771a6da9acbab9d2e75"
+    },
+    {
+      "path": "05-knowledge/results/session158_creative_20261103/binary_bank/NOTE.md",
+      "sha256": "df5168bb7fd0c5229a0e8f9b443ae6add302286112c77e6418ee737470df1152"
+    },
+    {
+      "path": "05-knowledge/results/session158_creative_20261103/binary_bank/FRACTRAN.md",
+      "sha256": "ee3817c60bc46aacfc92edc890dcbf95408327daa07e73afcb13a4955bde052b"
+    },
+    {
+      "path": "01-canon/theorems/THM-4858-exact-translations-of-the-goldbach-machines-a-53-symbol-radius-one-cellular-automaton-and-a-568-fraction-fractran-program-from-lengs-25-state-turing-machine.md",
+      "sha256": "ab765e042832f449e557a4195c7c3bacc16d579eab5e50c98d6c812a5f5bb16e"
+    },
+    {
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    }
+  ],
+  "primary_source": {
+    "checked": "2026-11-03",
+    "role": "Definition and general TM-to-FRACTRAN context only; no imported spectrum conclusion",
+    "title": "Endrullis, Grabmayer and Hendriks, Complexity of Fractran and Productivity, v3, section2",
+    "url": "https://arxiv.org/html/0903.4366v3#S2"
+  },
+  "scope": "Direct inherited files; not a transitive theorem dependency manifest. Executables use only Python standard library and local check.py.",
+  "source_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960"
+}

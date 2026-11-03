@@ -1,0 +1,496 @@
+{
+  "controller_entries": [
+    {
+      "after_first_C3": [
+        6461,
+        963
+      ],
+      "entry": [
+        164997797,
+        12942435
+      ],
+      "initial_ratio": 7,
+      "k": 1,
+      "word": [
+        "C3",
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        12253,
+        1827
+      ],
+      "entry": [
+        5154859,
+        404349
+      ],
+      "initial_ratio": 10,
+      "k": 2,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        23837,
+        3555
+      ],
+      "entry": [
+        10028267,
+        786621
+      ],
+      "initial_ratio": "infinity",
+      "k": 3,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        47005,
+        7011
+      ],
+      "entry": [
+        19775083,
+        1551165
+      ],
+      "initial_ratio": 2,
+      "k": 4,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        93341,
+        13923
+      ],
+      "entry": [
+        39268715,
+        3080253
+      ],
+      "initial_ratio": 5,
+      "k": 5,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        186013,
+        27747
+      ],
+      "entry": [
+        78255979,
+        6138429
+      ],
+      "initial_ratio": 9,
+      "k": 6,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        371357,
+        55395
+      ],
+      "entry": [
+        156230507,
+        12254781
+      ],
+      "initial_ratio": 4,
+      "k": 7,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        742045,
+        110691
+      ],
+      "entry": [
+        312179563,
+        24487485
+      ],
+      "initial_ratio": 6,
+      "k": 8,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        1483421,
+        221283
+      ],
+      "entry": [
+        624077675,
+        48952893
+      ],
+      "initial_ratio": 8,
+      "k": 9,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    },
+    {
+      "after_first_C3": [
+        2966173,
+        442467
+      ],
+      "entry": [
+        1247873899,
+        97883709
+      ],
+      "initial_ratio": 3,
+      "k": 10,
+      "word": [
+        "C3",
+        "C5"
+      ]
+    }
+  ],
+  "cover_tuning": {
+    "F2": [
+      644,
+      596
+    ],
+    "glued_counts": [
+      675,
+      627
+    ],
+    "h": 31,
+    "path": [
+      4,
+      1,
+      2,
+      0,
+      5,
+      6,
+      3
+    ],
+    "source": [
+      42,
+      4,
+      1,
+      22,
+      7,
+      94,
+      31
+    ],
+    "target": [
+      112,
+      109,
+      121,
+      33,
+      106,
+      64,
+      8
+    ]
+  },
+  "examples": [
+    {
+      "k": 1,
+      "ports": [
+        6,
+        7
+      ],
+      "profile": [
+        107,
+        33,
+        33,
+        107
+      ],
+      "root": 6,
+      "rows": [
+        6,
+        20,
+        24,
+        3,
+        105,
+        15,
+        175,
+        63
+      ],
+      "steps": [
+        {
+          "letter": "R",
+          "newborn": 5,
+          "ports": [
+            5,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "N",
+          "newborn": 6,
+          "ports": [
+            6,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "R",
+          "newborn": 7,
+          "ports": [
+            6,
+            7
+          ],
+          "root": 6
+        }
+      ]
+    },
+    {
+      "k": 2,
+      "ports": [
+        7,
+        8
+      ],
+      "profile": [
+        203,
+        65,
+        65,
+        203
+      ],
+      "root": 7,
+      "rows": [
+        6,
+        20,
+        24,
+        3,
+        233,
+        15,
+        47,
+        367,
+        127
+      ],
+      "steps": [
+        {
+          "letter": "R",
+          "newborn": 5,
+          "ports": [
+            5,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "R",
+          "newborn": 6,
+          "ports": [
+            6,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "N",
+          "newborn": 7,
+          "ports": [
+            7,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "R",
+          "newborn": 8,
+          "ports": [
+            7,
+            8
+          ],
+          "root": 7
+        }
+      ]
+    },
+    {
+      "k": 3,
+      "ports": [
+        8,
+        9
+      ],
+      "profile": [
+        395,
+        129,
+        129,
+        395
+      ],
+      "root": 8,
+      "rows": [
+        6,
+        20,
+        24,
+        3,
+        489,
+        15,
+        47,
+        111,
+        751,
+        255
+      ],
+      "steps": [
+        {
+          "letter": "R",
+          "newborn": 5,
+          "ports": [
+            5,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "R",
+          "newborn": 6,
+          "ports": [
+            6,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "R",
+          "newborn": 7,
+          "ports": [
+            7,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "N",
+          "newborn": 8,
+          "ports": [
+            8,
+            4
+          ],
+          "root": 4
+        },
+        {
+          "letter": "R",
+          "newborn": 9,
+          "ports": [
+            8,
+            9
+          ],
+          "root": 8
+        }
+      ]
+    }
+  ],
+  "junction": {
+    "automorphism_orders": [
+      3,
+      5
+    ],
+    "observer_after": [
+      15,
+      33,
+      33,
+      41,
+      57,
+      65,
+      91,
+      83,
+      57,
+      89,
+      65,
+      83,
+      159,
+      143,
+      213,
+      243,
+      219
+    ],
+    "observer_before": [
+      15,
+      33,
+      27,
+      33,
+      57,
+      69,
+      69,
+      69,
+      45,
+      75,
+      51,
+      57,
+      117,
+      111,
+      177,
+      141,
+      135
+    ],
+    "ports": [
+      3,
+      4
+    ],
+    "reset": [
+      6,
+      20,
+      24,
+      3,
+      9
+    ],
+    "slot_divisors": [
+      3,
+      15
+    ],
+    "slot_values_after": [
+      15,
+      120,
+      525,
+      1680,
+      4395
+    ],
+    "slot_values_before": [
+      15,
+      108,
+      477,
+      1560,
+      4155
+    ],
+    "source": [
+      2,
+      4,
+      1
+    ],
+    "spine": [
+      4,
+      0,
+      1,
+      2,
+      3
+    ],
+    "wrapper": [
+      10,
+      12,
+      9,
+      16,
+      7
+    ]
+  },
+  "status": "FINITE-EXACT controls; proofs in RESET_JUNCTION.md",
+  "universe": {
+    "common_automorphism_controls": 206,
+    "direct_permutation_orders": [
+      8,
+      9
+    ],
+    "rooted_seal_controls": 126,
+    "wrapper_sources": 13
+  }
+}
