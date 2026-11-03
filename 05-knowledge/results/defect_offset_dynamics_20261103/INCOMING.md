@@ -105,3 +105,46 @@ This is the useful synthesis: old quotient walks establish the finite response
 space, actual probes read its coordinates, and realization guards determine
 which algebraic operations can be performed on sources. Dropping any one of
 those three steps would misidentify scalar success with reusable closure.
+
+## I4. Final incoming scope: regular-five obstruction and common CRT witnesses
+
+Incoming through `2af5e7549d` adds the
+[six-root return forest](../triple_reentry_interfaces_20261103/RETURN_FOREST.md)
+and the [strong induced-R5 readiness obstruction](../lambda_emergent_20261103/READY_REPAIR.md).
+Their scope is preserved: describing all responses is different from finding
+one physical interface meeting all requirements; an R5-containing source
+cannot acquire a one/two-ready root in a **strong** induced extension. Neither
+statement proves universal exact ternary closure.
+
+Our whole four-module family is induced-R5-free. Indeed Q has two vertices
+of outdegree1, so every five-vertex subtournament contains a vertex of
+outdegree at most1 and cannot be regular. The regular five-vertex tournament
+is prime (directly checking its proper subsets suffices); any induced copy
+in a transitive substitution would therefore use at most one vertex per
+block and project to a forbidden copy in Q. The two literal escape targets
+485 and487 are also R5-free: all462 five-subsets of each have been checked.
+Thus the new escapes avoid this particular inherited obstruction. Its absence
+is not a readiness certificate, as the incoming work explicitly warns.
+
+Reproduce the latter finite check from the repository root:
+
+```python
+import sys, json
+from pathlib import Path
+from itertools import combinations
+sys.path.insert(0, '05-knowledge/results/defect_offset_dynamics_20261103')
+from wing import induced
+p = Path('05-knowledge/results/defect_offset_dynamics_20261103/native_escape_161.json')
+for h, row in json.loads(p.read_text()).items():
+    T = tuple(row['target'])
+    print(h, sum(all(r.bit_count() == 2 for r in induced(T, S))
+                 for S in combinations(range(len(T)), 5)))
+# 487 0; 485 0
+```
+
+The new common-CRT-witness obstruction also clarifies I2a. Coprime minors
+license reconstruction by combining several actual observations; they do
+not assert that one of those probes is a common unit for every prime factor
+of a modulus. Joint interface identity and observation-module invertibility
+remain separate requirements. The incoming P4 path-index correction is
+accepted; none of our arguments uses the historical incomplete P4 proof.
