@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib,json,sys,subprocess,platform
 import sympy
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
-SCRIPTS=('observer','carrier6','returns','field_clock','ternary_probe','golden_transport','phase_recurrence')
+SCRIPTS=('observer','carrier6','returns','field_clock','ternary_probe','golden_transport','phase_recurrence','singular_return')
 RELATIVE=(
  'ordered_response_ten_20261103/NEUTRAL_CARRIES.md',
  'ordered_response_ten_20261103/neutral_carries.json',
@@ -39,6 +39,10 @@ RELATIVE=(
  'session163_ternary_triples_20261103/strong_returns/NOTE.md',
  'session163_ternary_triples_20261103/nonuniform/MARKED_ESCAPE.md',
  'session162_mrb_square_20261103/square_transfer/NOTE.md',
+ 'session163_ternary_triples_20261103/strong_returns/TWO_EARS.md',
+ 'session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md',
+ 'session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md',
+ 'mrb_square_probe_spectrum_20261103/INCOMING.md',
 )
 def need(ok,msg):
     if not ok:raise RuntimeError(msg)
@@ -50,7 +54,7 @@ def main():
         deps=[{'path':'05-knowledge/results/'+p,'sha256':digest(ROOT/'05-knowledge/results'/p)} for p in RELATIVE]
         controls=json.loads((ROOT/'05-knowledge/results/mixed_returns_20261103/controllers.json').read_text())
         save('sources.json',{'status':'INHERITED_PINNED_NOT_ALL_RETESTED','startup_commit':'d79221bc31b8',
-            'incoming_through':'5891f002e2','ready_source_commit':'4ed40bd587','recovery':'RECOVERY.md',
+            'incoming_through':'d9d9f3e483','ready_source_commit':'4ed40bd587','recovery':'RECOVERY.md',
             'hash_scheme':'SHA256 UTF8 text with LF newlines','dependencies':deps,
             'hostile81_27':controls['hostile81_27'],'one_birth55_orientations':controls['one_birth55_orientations']})
         save('manifest.json',{'receipts':[{'file':name+'.json','sha256':digest(HERE/(name+'.json'))} for name in SCRIPTS]})
@@ -69,5 +73,5 @@ def main():
     mode='optimized' if sys.flags.optimize else 'normal'
     save('verification.'+mode+'.json',{'status':'PASS','mode':mode,'python':platform.python_version(),'sympy':sympy.__version__,
         'dependency_files':len(RELATIVE),'receipts':outputs})
-    print('PASS:',mode,'source pins and all seven reproducible receipts')
+    print('PASS:',mode,'source pins and all eight reproducible receipts')
 if __name__=='__main__':main()

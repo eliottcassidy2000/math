@@ -20,6 +20,11 @@ clocks accompany the formulas.
   legalizer at every7-power precision. One mixed-source selector refines
   the algebraic projective observation quotient from10 to51 classes.
 - [Recovery](RECOVERY.md), [audit](AUDIT.md), [next decisive task](HANDOFF.md).
+- [RC4/PC5: moving guards and the complete residue monoid](SINGULAR_RETURN.md):
+  the actual two-birth reset adjoins a rank-one map, generating all2401
+  matrices over F7. All51 classes become reachable by paired source
+  programs when primitivity is relaxed. Literal zero-pair-phase witnesses
+  retain distinct nonzero golden phases.
 
 This is **balanced primitive return closure**. Incoming ready-root work
 proves these final resets have no ready root. The complete bounded
@@ -39,4 +44,4 @@ python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/reproduce.p
 python -X utf8 -B -O 05-knowledge/results/rooted_carry_closure_20261103/reproduce.py
 ```
 
-The runner checks source pins and reproduces seven deterministic receipts.
+The runner checks source pins and reproduces eight deterministic receipts.

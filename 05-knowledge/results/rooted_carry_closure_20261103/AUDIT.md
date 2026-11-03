@@ -14,6 +14,7 @@ is claimed. All checks use explicit exceptions and remain active under -O.
 |PC2|Every e>=1, any1..3 authenticated sources|Binomial lift proof; all controller tuples at e1..4; four-source blocked clock|
 |PC3/4|Algebraic projective model, not whole source histories|All336 actions on51 states; actual independent H497 source pair; fine versus coarse future-test partitions|
 |Bounded ternary search|All six-command descendants of either supplied marked H497 source with H<=1495|Positive H growth, complete queue, literal count of every representative|
+|RC4/PC5|Every balanced-source macro word, primitivity relaxed|Full2401-matrix monoid; all51 sourced strata; literal43/44-vertex zero-word programs with full18 transport; initial NR steps directly counted|
 
 Every primary computation starts from explicit Boolean adjacency rows.
 No weighted tournament inversion or integer count alone supplies a source.
@@ -46,6 +47,6 @@ impossibility. Existence for all remaining odd counts remains OPEN.
 
 `sources.json` pins each imported module and each principal mathematical
 dependency using SHA256 of UTF8 text with normalized LF newlines.
-`manifest.json` pins the seven output receipts. `reproduce.py` checks both,
+`manifest.json` pins the eight output receipts. `reproduce.py` checks both,
 reruns every script in the current optimization mode, and compares outputs.
 Normal and optimized runs must agree before the final checkpoint.

@@ -1,7 +1,7 @@
 {
   "status": "INHERITED_PINNED_NOT_ALL_RETESTED",
   "startup_commit": "d79221bc31b8",
-  "incoming_through": "5891f002e2",
+  "incoming_through": "d9d9f3e483",
   "ready_source_commit": "4ed40bd587",
   "recovery": "RECOVERY.md",
   "hash_scheme": "SHA256 UTF8 text with LF newlines",
@@ -141,6 +141,22 @@
     {
       "path": "05-knowledge/results/session162_mrb_square_20261103/square_transfer/NOTE.md",
       "sha256": "27da2734e2a58d33f6aecf61e57473da97850ff295793da787f9eb0198ac716b"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/TWO_EARS.md",
+      "sha256": "ff0dd6500840ac06a2934e93577cdb0cbe7d25653dcdb7c114e382e60faba161"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md",
+      "sha256": "280404ec6535d7ebedab81c62f8bcd4a6108f5274232b6183193e621ee9ab3cb"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md",
+      "sha256": "6618ddc51467ee130dc76edb60f2a774be0169b216556d9ce4b539444d2de96c"
+    },
+    {
+      "path": "05-knowledge/results/mrb_square_probe_spectrum_20261103/INCOMING.md",
+      "sha256": "d06b0101e45faa2158f6d423c8523f50882029b4c18341cfb988a57aa46cf6e1"
     }
   ],
   "hostile81_27": {

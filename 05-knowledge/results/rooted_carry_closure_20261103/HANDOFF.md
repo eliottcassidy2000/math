@@ -5,6 +5,13 @@ fixed-port derivative, PC2 common legalizers at all7-power precisions,
 PC4 exact projective selector refinement, and RC3 all-length golden
 recurrences. The full source/native/port/clock receipts are reproducible.
 
+Final incoming work adds RC4/PC5: NR is the moving-guard rank-one map
+(b,t)->(3b,b). With actual C3/C5 programs it generates all M2(F7) residues
+and reaches all51 projective-plus-zero classes, at the cost of primitivity.
+The zero word NR,C3,C3,C5,C3,NR has literal43/44-vertex witnesses with
+different nonzero golden phases. Do not repeat this modular completion;
+the remaining task is exact source selection.
+
 The ready-family source cited by the user is now located and integrated:
 `two_entry_funnels_20261103/READY.md`, incoming4ed40bd587. Its definition
 and five-family classification must be retained, rather than using

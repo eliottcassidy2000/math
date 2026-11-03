@@ -114,3 +114,23 @@ construction turns equal scalar outputs into equal physical sources.
 No general metagraph, Collatz, square-sum, prime or Sha theorem is inferred
 from the new scoped closures. The constructive transfer and its missing
 interface are now explicit enough for the next exact test.
+
+## Final incoming wave: an actual singular completion
+
+The next clean fetch found commits through d9d9f3e483. S163's
+[two-ear returns](../session163_ternary_triples_20261103/strong_returns/TWO_EARS.md)
+extend the named zero branches and exclude their next offsets for the
+specified at-most-two-vertex induced extensions. Its
+[moving guard](../session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md)
+and [first-step defect](../session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md)
+identify directly with the physical NR seam here. This produces RC4/PC5,
+the complete M2(F7) residue monoid and actual reachability of all51 strata
+when primitivity is not required. Two actual zero-pair-phase outputs still
+have distinct nonzero golden phases.
+
+Incoming [finite-horizon integration](../mrb_square_probe_spectrum_20261103/INCOMING.md)
+preserves the distinction between observing finite responses and selecting
+an actual target. Its reference to this packet's initial FINITE-EXACT
+checkpoint describes that earlier published stage. The proof promotion
+and singular completion are recorded here without treating that earlier
+reference as an all-order dependency.

@@ -37,7 +37,7 @@ def act(A,r):
     if r==50:return 50
     if r==49:num=A[3];den=A[1]
     else:num=fadd(A[2],fmul(A[3],r));den=fadd(A[0],fmul(A[1],r))
-    return divide(num,den) if den else 49
+    return divide(num,den) if den else 49 if num else 50
 def alpha(v):
     b,t=v;return (5*b+t)%7+7*(t%7)
 def pair_point(v,w):

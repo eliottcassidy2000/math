@@ -3,7 +3,7 @@
   "mode": "optimized",
   "python": "3.13.14",
   "sympy": "1.14.0",
-  "dependency_files": 34,
+  "dependency_files": 38,
   "receipts": [
     {
       "script": "observer",
@@ -39,6 +39,11 @@
       "script": "phase_recurrence",
       "stdout": "PASS: universal capped-operator annihilators; all-order golden formulas and exact six-clock",
       "receipt_sha256": "b5026d9ff006285ae859abc5fdf9de289e1c5099ce503f76412f96df5c3385d5"
+    },
+    {
+      "script": "singular_return",
+      "stdout": "PASS: actual NR reset, full 2401-matrix monoid, all51 strata, and literal zero-phase sources; zero word N3353N",
+      "receipt_sha256": "4cbc2736600eeca5c47ddf3fbb95293e7fd2ddce0f40a14b6ef035329fd836e7"
     }
   ]
 }

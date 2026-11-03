@@ -27,6 +27,10 @@
     {
       "file": "phase_recurrence.json",
       "sha256": "b5026d9ff006285ae859abc5fdf9de289e1c5099ce503f76412f96df5c3385d5"
+    },
+    {
+      "file": "singular_return.json",
+      "sha256": "4cbc2736600eeca5c47ddf3fbb95293e7fd2ddce0f40a14b6ef035329fd836e7"
     }
   ]
 }
