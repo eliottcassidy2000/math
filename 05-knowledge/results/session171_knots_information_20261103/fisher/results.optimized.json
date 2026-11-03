@@ -1,0 +1,111 @@
+{
+  "adaptive": {
+    "dimension": 3,
+    "expected_rank": "3/2",
+    "leaf_sizes": [
+      2,
+      2,
+      4
+    ],
+    "residual_entropy_bits": "3/2"
+  },
+  "cases": [
+    {
+      "characters_checked": 15,
+      "code_dimension": 4,
+      "d": 3,
+      "degree": 1,
+      "fibre_count": 2,
+      "fibre_size": 8,
+      "identity_fisher_full": "15/256",
+      "identity_fisher_lost": "7/128",
+      "identity_fisher_observed": "1/256",
+      "minimum_distance": 4,
+      "name": "one sheet in level-four balanced family",
+      "rank": 1,
+      "readout_count": 1,
+      "residual_entropy_bits": 3
+    },
+    {
+      "characters_checked": 15,
+      "code_dimension": 4,
+      "d": 3,
+      "degree": 1,
+      "fibre_count": 2,
+      "fibre_size": 8,
+      "identity_fisher_full": "15/256",
+      "identity_fisher_lost": "7/128",
+      "identity_fisher_observed": "1/256",
+      "minimum_distance": 4,
+      "name": "duplicate reads carry no new noiseless information",
+      "rank": 1,
+      "readout_count": 3,
+      "residual_entropy_bits": 3
+    },
+    {
+      "characters_checked": 15,
+      "code_dimension": 4,
+      "d": 3,
+      "degree": 1,
+      "fibre_count": 16,
+      "fibre_size": 1,
+      "identity_fisher_full": "15/256",
+      "identity_fisher_lost": "0",
+      "identity_fisher_observed": "15/256",
+      "minimum_distance": 4,
+      "name": "optimal level-four bank",
+      "rank": 4,
+      "readout_count": 4,
+      "residual_entropy_bits": 0
+    },
+    {
+      "characters_checked": 16,
+      "code_dimension": 11,
+      "d": 4,
+      "degree": 2,
+      "fibre_count": 32,
+      "fibre_size": 64,
+      "identity_fisher_full": "2047/4194304",
+      "identity_fisher_lost": "63/131072",
+      "identity_fisher_observed": "31/4194304",
+      "minimum_distance": 4,
+      "name": "degree-one bank misses degree-two coefficients",
+      "rank": 5,
+      "readout_count": 5,
+      "residual_entropy_bits": 6
+    },
+    {
+      "characters_checked": 16,
+      "code_dimension": 11,
+      "d": 4,
+      "degree": 2,
+      "fibre_count": 2048,
+      "fibre_size": 1,
+      "identity_fisher_full": "2047/4194304",
+      "identity_fisher_lost": "0",
+      "identity_fisher_observed": "2047/4194304",
+      "minimum_distance": 4,
+      "name": "optimal level-five bank",
+      "rank": 11,
+      "readout_count": 11,
+      "residual_entropy_bits": 0
+    },
+    {
+      "characters_checked": 16,
+      "code_dimension": 11,
+      "d": 4,
+      "degree": 2,
+      "fibre_count": 2048,
+      "fibre_size": 1,
+      "identity_fisher_full": "2047/4194304",
+      "identity_fisher_lost": "0",
+      "identity_fisher_observed": "2047/4194304",
+      "minimum_distance": 4,
+      "name": "redundant full level-five cube",
+      "rank": 11,
+      "readout_count": 16,
+      "residual_entropy_bits": 0
+    }
+  ],
+  "status": "PASS"
+}
