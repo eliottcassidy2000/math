@@ -3,9 +3,10 @@
     ".gitattributes": "05bce1f34342a39f8e6b5a3f06183ca80dfe09934dd7d2e19fba4bf4a10ecbfc",
     "AUDIT.md": "0d127fdd9c61cedc98e85770cbea05da054e1ef4c1293cc50a4bc6d23ca6de9b",
     "BOARD.md": "9daa9a92092a1be3761320aef9826d49305ae08758be3aaaaaa7e85a632556e0",
-    "INCOMING_RECONCILIATION.md": "1b7e0cff14b582f9e2e25c55ea9c1592f32dbcd9e4f8dbedcdddbd9de8fc09a2",
+    "INCOMING_RECONCILIATION.md": "a7cae137b08eea97df8d17973672eb516ede4b456c8004bef3e0a73a8073974f",
     "INCOMING_SOURCES.json": "7e8e502dd2ff37ca59fd66ab2d306503e410409013456a9dd618b949482b0d0c",
-    "NAVIGATION_PATCH.json": "6d5b3074453f29a63f8045cc7c5e6066424ff0d578f0cd39523e2b6fb20179b0",
+    "LATE_SOURCES.json": "832ec54bfde8cccc2c3189076816c75d5a48c657fe34f898f69204e700ea1910",
+    "NAVIGATION_PATCH.json": "d9061a2f14fc6b9cfe9c650dca963cf7a659eddf1ced1b8abe4fc3dbd4f968ae",
     "README.md": "399b33fdf72ca76191dabf86bd1894e77d7b1f1d28e8d746473a43aa1be8bde2",
     "audit_machines/MANIFEST.json": "0c821b19cb5a28d7ab2a8f1811bccc3670eb87ca0b726fedb3ab088bdc95a272",
     "audit_machines/REPORT.md": "347ae9c5df41f2c2593a660d9cb098f7ce3ed6e599eba031d398d55efab6dd82",
@@ -389,6 +390,16 @@
       "path": "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md",
       "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
       "sha256": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
+    },
+    {
+      "path": "04-computation/experiments/circulant_fractran_goldbach_20261101/residue_pairs_posthoc.py",
+      "revision": "50f4e1fa038030c825e6ed904e33eb5d5392a902",
+      "sha256": "e3acff0a0d7e12e0234aea6ebd19f63897c86bd71aa61f70d2463c57188e2e6a"
+    },
+    {
+      "path": "05-knowledge/results/quadratic_2916_odd_pair_triangles_n4_20261102.md",
+      "revision": "50f4e1fa038030c825e6ed904e33eb5d5392a902",
+      "sha256": "a030fdd812aa05a8c1668b33ecd5fcdd0ed74d5ddcd35963b3b87c2362d097f9"
     },
     {
       "path": "00-navigation/S146.md",

@@ -7,6 +7,30 @@ were not rerun here. The machine producer reviewed the overlap independently;
 the ROOT/lattice producer separately checked the norm corollary. These additions
 do not change the four independently audited proof bodies or their receipts.
 
+A later incoming pair-scan note and its exact-definition script are pinned
+separately in [LATE_SOURCES.json](LATE_SOURCES.json) at50f4e1fa03. The note is
+marked pre-audit, so its finite sweeps are not adopted as audited evidence.
+Its elementary one-way inclusion is checked explicitly below.
+
+## The first-prime scan has a precise Goldbach boundary
+
+For even m>=6, let P(m) be the first prime congruent to either1 or-1 modulo m.
+Following the incoming [pair-scan definition](../../../04-computation/experiments/circulant_fractran_goldbach_20261101/residue_pairs_posthoc.py),
+retain an unordered pair {r,m-r}, with odd3<=r<=m-3, exactly when **both**
+residues occur among odd primes strictly below P(m). Call the result R(m),
+and let G(m) be the actual odd-prime partitions of m. Then G(m) is contained
+in R(m). Every member of a Goldbach pair is at most m-3, while P(m)>=m-1,
+so both members appear before the stopping prime.
+
+If m-1 or m+1 is prime, P(m) is that first prime neighbour. In either case
+the admitted nontrivial residues are exactly the odd primes at most m-3:
+when P=m+1, m-1 is composite. Hence R(m)=G(m). This checks the stated
+one-way theorem directly. Merely observing one end is insufficient, and
+the converse equality=>prime neighbour is still open in the incoming note.
+Its finite strict-containment observations are not promoted to an all-size
+statement here. Beyond the first wrap, a prime's residue need not itself
+be prime; this is the missing realization guard in the proposed scan.
+
 ## Three triangular charts, with different predicates
 
 Session146's [prime290 note](../session146_carrier_primegame_20261103/prime290/README.md)

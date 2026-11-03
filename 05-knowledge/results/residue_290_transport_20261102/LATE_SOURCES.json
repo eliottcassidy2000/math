@@ -1,0 +1,8 @@
+{
+  "scope": "Pre-audit incoming note; elementary scan implication read and checked, finite sweep not adopted",
+  "source_revision": "50f4e1fa038030c825e6ed904e33eb5d5392a902",
+  "sources": {
+    "04-computation/experiments/circulant_fractran_goldbach_20261101/residue_pairs_posthoc.py": "e3acff0a0d7e12e0234aea6ebd19f63897c86bd71aa61f70d2463c57188e2e6a",
+    "05-knowledge/results/quadratic_2916_odd_pair_triangles_n4_20261102.md": "a030fdd812aa05a8c1668b33ecd5fcdd0ed74d5ddcd35963b3b87c2362d097f9"
+  }
+}
