@@ -1,0 +1,5 @@
+{"n": 6, "depth": 2, "tests": 266, "variables": 562, "clauses": 3221, "collision": false}
+{"n": 7, "depth": 2, "tests": 624, "variables": 1293, "clauses": 8011, "collision": false}
+{"n": 8, "depth": 2, "tests": 1242, "variables": 2547, "clauses": 16569, "collision": true, "masks": [509, 253], "differing_edges": [[1, 5]]}
+{"n": 9, "depth": 2, "tests": 2213, "variables": 4510, "clauses": 30329, "collision": true, "masks": [1574911, 1573375], "differing_edges": [[1, 5], [1, 6]]}
+{"n": 10, "depth": 2, "tests": 3642, "variables": 7392, "clauses": 50917, "collision": true, "masks": [7440699255, 7440703351], "differing_edges": [[1, 7]]}

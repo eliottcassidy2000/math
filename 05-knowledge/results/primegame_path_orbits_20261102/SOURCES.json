@@ -1,0 +1,26 @@
+{
+  "basis": "SHA256 UTF-8/LF-normalized bytes; inherited source files, not claimed new results",
+  "base_commit": "ec2cfc9e50f71b081f682a39bf14921afeb788ec",
+  "python": "3.13.14",
+  "python_sat_optional": "1.9.dev5 / Glucose4",
+  "normal_optimized_receipt_sha256": "e09bb206a27fa794ebc8f599cdd181df4845293c721bd05e799b6d86cdb56aa6",
+  "sources": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "01-canon/theorems/THM-2422-operation-fibres-summand-closure-and-twin-center-ancestry.md": "ab1960d1b4dc9117f1ff2a6cb4d429cd3f790cb63b965a98f5ab2b41c13f5b95",
+    "01-canon/theorems/THM-4854-primegame-four-blocks-register-decomposition-bipartite-flags-triangular-semiprimes-metagraph-quotient-of-complement-graph.md": "584e2c55f5ed835ed123389a7c7039e2ad69d2c757d5db3fad599f0892e4c43c",
+    "05-knowledge/results/two_edge_transport_20261102/ESCAPES_AND_CARRIERS.md": "7afc3df5c1e4e7a2c5b758802bf7d2fb81e714734b0b3423a43d9bea4922b749",
+    "05-knowledge/results/two_edge_transport_20261102/carrier_scout.json": "6493a529c43cf7f7f182ad3a88de2473f0d646b392551d9959d63226a1bdbcb2",
+    "05-knowledge/results/prime_inverse_ports_20261102/MOVES.md": "d8b3c8d381d586c9142cd054168b3db35c2261d69d48260b89d1b75f598f0da7",
+    "05-knowledge/results/groups_of_five_primegame_merged_metagraph_20261031.md": "70ad0f50758bd68e1d1664302d2879276dd9a7b4cd5a2b18e645aeb1f4f218d5",
+    "05-knowledge/results/session129_primegame_tournament_partition_20261031/partition/README.md": "2a2f780f8065c90c4bae08efd0e83e2ed94383156a4e0a53c6a2fb0ca3de959b",
+    "05-knowledge/results/two_selector_boolean_20261102/CARRIER.md": "4e603929924cc9bbee397064abe6c90daa0d6fbc81b2b56f65aed19bba1c3136",
+    "05-knowledge/results/two_selector_boolean_20261102/JOINT_REPAIRS.md": "c6057316841540c392a665a34dfc2a84e4093bdc9c33457f10474220139766be",
+    "05-knowledge/results/spectrum_descent_jacobian_20261102/README.md": "4df5d13b18f4dd3e100c8ba8f3c4da7ccbcfa2fc34d5024a9d6a00c7e67c180a",
+    "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/tournaments/RESEARCH.md": "fa95d4d59517699d46a0e174e737261ba8af6a4920a2b418a77711dd69c058eb"
+  },
+  "primary_urls": [
+    "https://www.cs.unc.edu/~stotts/COMP210-s23/madMath/Conway87.pdf",
+    "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf"
+  ]
+}
