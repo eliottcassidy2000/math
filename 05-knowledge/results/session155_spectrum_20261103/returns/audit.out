@@ -1,0 +1,16 @@
+seed totals / bulk: [(31, (25, 34)), (95, (75, 102)), (97, (75, 102))]
+power 1 index 100 second-row-second-entry mod10 1
+power 2 index 10000 second-row-second-entry mod10 1
+power 3 index 1000000 second-row-second-entry mod10 1
+power 4 index 100000000 second-row-second-entry mod10 1
+power 5 index 10000000000 second-row-second-entry mod10 1
+power 6 index 1000000000000 second-row-second-entry mod10 1
+power 7 index 100000000000000 second-row-second-entry mod10 1
+power 8 index 10000000000000000 second-row-second-entry mod10 1
+formal integer witnesses, all seeds, 0<=j<=4 and 1<=k<=j: PASS
+all target bulks odd first coordinate excluded at k=1: PASS
+direct graph h,h_a,h_aa: 31 59 109
+direct graph h,h_a,h_aa: 95 177 327
+direct graph h,h_a,h_aa: 97 177 327
+independent atom matrix product, seed reconstruction: PASS
+general criterion constructive tests for k>j: PASS

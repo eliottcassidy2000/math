@@ -1,0 +1,6 @@
+mod30 reachable monoid: 6400 zero mod3: 184
+gate profile: only mod5 12, only mod2 111, neither 61, both 0
+normalized example ('Lp2', 'L2') det -1300 passes (mod2,mod5) False True
+normalized example ('Lp2', 'Lp2') det 16900 passes (mod2,mod5) True False
+mixed descendant witness: v= (33868343, 15615527, 26989950) w= (69, 0, -21) carry=216
+PASS
