@@ -1,0 +1,51 @@
+# LRC and planar-Jacobian sources: exact levers for current tournament work
+
+This is a targeted historical metanalysis, not a repository-wide census. It follows named navigation entries and their exact source files. Mathematical conclusions are scoped to the cited carriers. The repository's LRC(14), planar Jacobian, and exact odd tournament-spectrum problems remain open.
+
+## Main result of this pass
+
+[COLLISION_BANK.md](COLLISION_BANK.md) turns the strongest planar source into new mathematics: a sharp n+3 spanning-direction theorem in every dimension n≥3, and a twelve-state, four-move physical collision bank for S164's entire nine-coordinate fixed-port guard interface. The radius-three failure has three explicit missing motion classes. This is a tested composition of prior sources, not an assertion that the same construction solves any of the three open problems.
+
+## Source → idea → lever → obstacle ledger
+
+| Indexed source | Exact inherited idea | Concrete lever for the current research | Obstacle / next decisive test |
+|---|---|---|---|
+| [THM-4411, first-order collision transgression](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/01-canon/theorems/THM-4411-first-order-collision-transgression-seminormal-tradeoff.md) | In a surface, all tangent-relation area periods are exactly common-motion compatibility. Filling the seminormal miss with h=x splits the retained collision. | Import the **kernel calculation**, not the Jacobian slogan. A purported new response is meaningful only after the common-motion quotient is identified. | First-order compatibility does not provide an admissible global polynomial deformation or physical tournament operation. |
+| [Quadratic sidecars after suspension](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/05-knowledge/results/planar_jc48_sep06_collision.md) | In dimension three, all scalar relation/wedge periods still miss exactly the quadrics vanishing on tangent directions. Any number of conic directions can stay blind. | Replace branch-count heuristics by exact evaluation rank. Generalize to the quadratic vector response v wedge A(v) before enlarging a state. | The special scalar-quadric identification is dimension-three specific. The new all-dimensional lemma in COLLISION_BANK.md avoids reusing it incorrectly in dimension nine. |
+| [S166 physical collision banks](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/05-knowledge/results/session166_planar_metagraph_20261103/collision_banks/NOTE.md) | Six literal C/D states detect all quadrics, determinant192. Reset planes give degree-optimal three-state interpolation banks. | Move from one raw guard to all three query blocks. The new twelve-word bank is cardinality- and radius-optimal for the full nine-state collision problem. | Tangents are physically indexed; arbitrary branch velocities are still ambient. No affine +2/+4 source return is produced. |
+| [S163 moving-guard return](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/05-knowledge/results/session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md) and [S164 guard algebra](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/05-knowledge/results/session164_emergent_20261103/profile_algebras/GUARD_ALGEBRA.md) | A moving guard gives an indefinitely reusable physical 3× return. C/D act simultaneously on three query states; scalar and full-interface return differ. | Retain the actual observer port and moving guard separately. The C3 seed's query-state matrix has determinant−2, making the nine-state carrier genuinely full-dimensional. | The 0 ternary branch is reusable; the desired +2/+4 source-bank closure is not implied by modular coverage, matrix-algebra generation, or collision completeness. |
+| [LRC THM-2535, boundary-tooth clock intertwiner](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/01-canon/theorems/THM-2535-boundary-tooth-clock-intertwiner-and-neutral-collapse.md) | Pure septimal translation fixes root data while moving an independent seven-epoch owner torsor. A retained cut intercept gives the missing clock coordinate. Uniform contraction erases it again. | The portable service is an **orbit-separating mark**. In tournament work, ask which actual guard, observer port, or source address separates states before seeking a return on their quotient. | No LRC clock is identified with a C/D guard. The graph/source map and equivariance must be explicit. A large Fourier support count is not a physical owner transition. |
+| [LRC THM-2568, full-X annihilation](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/01-canon/theorems/THM-2568-full-x-transition-annihilation-and-refined-pair-drift-boundary.md) | Refined pair colours can be active while the lawful coarse pushforward vanishes identically: Parseval restores P(1−P)=0. | Check **composition before contraction**. C/D has its own exact erasure: temporal DCD has rank one on the raw state, DCD(v)=(s+2u+d)(1,2,0). Retain a source coordinate before this map if later tests need it. | This is a comparison of exact erasure mechanisms, not an LRC→tournament theorem. No downstream test can reconstruct a difference already in the kernel unless extra data were retained. |
+| [LRC THM-3505, slope pencil and Haar basis](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/01-canon/theorems/THM-3505-r5-projective-slope-pencil-and-anchored-haar-basis.md) | One retained table has 936 surviving primitive coefficients, while another basis has 804 of864 nonzero coordinates. Both describe the same nonaxial quotient. | Separate **rank/completeness**, which survives change of basis, from **support counts**, which do not. This is why the new physical bank uses exact rank rather than the number of nonzero period entries. | Full retained-table tomography is not an ancestry/address map or a positive current. For a ternary gadget, test a source-state return, not merely a dense response spectrum. |
+| [S166 local monodromy](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/05-knowledge/results/session166_planar_metagraph_20261103/local_monodromy/NOTE.md) | Erasure, hidden covering sheets, and a restricted source image are different failures. Rigid colourings can conceal arbitrarily many sheets; three-count inversion does not certify C/D seed membership. | Before importing an LRC clock or planar local-inverse analogy, classify the failure: rank loss, cycle holonomy, or positive-word/source membership. Each needs a different sidecar. | The formal covers are not tournament realization theorems. The existing forbidden C/D cone is a source-language exclusion, not a singular observation map. |
+| [S164 nonuniform head operator](https://github.com/eliottcassidy2000/math/blob/2374ba81efc7ad585d723015630b546a3cf01ff1/05-knowledge/results/session164_emergent_20261103/nonuniform_operator/NOTE.md) | Repetition of a literal seven-vertex strong head uses a three-shift operator on the whole path-cover polynomial. On transitive tails, the k-th output introduces a nonzero (k+1)^n term. | Price the observer by the intended horizon instead of insisting on one fixed small state. The finite-horizon corollary below gives an exact K+1 coordinate budget. | Infinite iteration across all tails cannot fit a fixed finite-dimensional linear observer. The nine-coordinate C/D bank applies to its own operation language, not automatically to this head. |
+
+## A second concrete deliverable: exact finite-horizon observer budget
+
+This is an immediate, useful corollary of S164's existing operator theorem, not a claim of an independent new construction.
+
+For its seven-vertex head G, write
+
+    (L F)(r)=r[B(r)F(r+1)+A(r)F(r)−E(r)F(r−1)],
+    B(r)=2r^5+5r^4+12r^3+13r^2+10r+3.
+
+Fix K≥0. Across all nonempty tournament tails Z, exactly K+1 linear coordinates suffice, and are necessary, to represent every output H(G^k(Z)) for 0≤k≤K. A sufficient observer is
+
+    (F_Z(1),…,F_Z(K+1)).
+
+Use the tridiagonal truncation of L on indices1,…,K+1, putting F(0)=0 and truncating the upper boundary arbitrarily to zero. Starting from output index1, at most k shifts cannot reach indexK+2 when k≤K. Thus the truncated operator gives all those outputs exactly.
+
+For necessity restrict to the actual transitive tails T_n, where F_(T_n)(r)=r^n. S164 proves
+
+    H(G^k(T_n)) = c_k (k+1)^n + lower j^n terms,
+    c_k=product_(j=1)^k j B(j)>0.
+
+The K+1 output functions of n are linearly independent by triangularity and the Vandermonde independence of1^n,…,(K+1)^n. Any linear observer representing them therefore needs at least K+1 coordinates. An affine observer pays the constant coordinate as part of its homogenized dimension. This gives a precise finite replacement for the unavailable all-depth finite observer.
+
+## Priority order for continuing research
+
+1. **Use the new full-query bank on a genuine candidate offset gadget.** First derive its response on the retained raw-query state, or exhibit two physical sources with equal raw state and different response. A successful polynomial response can then be tested against the twelve physical directions. A failure identifies a concrete extra coordinate to retain.
+2. **For operations outside C/D, grow the observer by horizon.** Use the K+1 budget above for nonuniform heads instead of silently treating the nine-coordinate interface as universal. A small closed source family might still admit a smaller observer, but needs its own proof.
+3. **For LRC imports, require a named lost coordinate.** Clock epoch, endpoint owner, and ancestry address are useful source services. Bare spectral support, carrier scores, and analogy labels are not substitutes for the map that retains them.
+
+The most fertile bridge is therefore collision-kernel computation → physical full-interface testing. The next most useful is finite-horizon operator rank → an explicitly priced growing observer. Broad claims that rigidity, local inversion, or modular density imply source closure should be deprioritized until a physical return map is present.
