@@ -1,0 +1,2054 @@
+{
+  "status": "PASS",
+  "independent_literal_classes": 532,
+  "basis_counts": {
+    "6": 29,
+    "7": 13,
+    "8": 13,
+    "9": 1
+  },
+  "inherited_basis": "exact graph-set equality after canonicalization",
+  "strong_atoms": [
+    {
+      "n": 3,
+      "code": 2,
+      "rows": [
+        4,
+        1,
+        2
+      ],
+      "H": 3,
+      "aut": 3,
+      "roots": 1,
+      "ordered_distinct_ports": 2,
+      "deletion_H": [
+        1,
+        1,
+        1
+      ],
+      "strong": true
+    },
+    {
+      "n": 4,
+      "code": 4,
+      "rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "H": 5,
+      "aut": 1,
+      "roots": 4,
+      "ordered_distinct_ports": 12,
+      "deletion_H": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "strong": true
+    },
+    {
+      "n": 5,
+      "code": 8,
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        14
+      ],
+      "H": 9,
+      "aut": 1,
+      "roots": 5,
+      "ordered_distinct_ports": 20,
+      "deletion_H": [
+        1,
+        5,
+        5,
+        5,
+        1
+      ],
+      "strong": true
+    },
+    {
+      "n": 5,
+      "code": 40,
+      "rows": [
+        16,
+        9,
+        3,
+        5,
+        14
+      ],
+      "H": 15,
+      "aut": 3,
+      "roots": 3,
+      "ordered_distinct_ports": 8,
+      "deletion_H": [
+        3,
+        5,
+        5,
+        5,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 5,
+      "code": 68,
+      "rows": [
+        8,
+        17,
+        3,
+        6,
+        13
+      ],
+      "H": 13,
+      "aut": 1,
+      "roots": 5,
+      "ordered_distinct_ports": 20,
+      "deletion_H": [
+        5,
+        3,
+        5,
+        3,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 5,
+      "code": 76,
+      "rows": [
+        24,
+        17,
+        3,
+        6,
+        12
+      ],
+      "H": 15,
+      "aut": 5,
+      "roots": 1,
+      "ordered_distinct_ports": 4,
+      "deletion_H": [
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 5,
+      "code": 97,
+      "rows": [
+        2,
+        24,
+        3,
+        5,
+        13
+      ],
+      "H": 11,
+      "aut": 1,
+      "roots": 5,
+      "ordered_distinct_ports": 20,
+      "deletion_H": [
+        5,
+        1,
+        5,
+        5,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 5,
+      "code": 258,
+      "rows": [
+        4,
+        1,
+        18,
+        7,
+        11
+      ],
+      "H": 9,
+      "aut": 1,
+      "roots": 5,
+      "ordered_distinct_ports": 20,
+      "deletion_H": [
+        3,
+        5,
+        1,
+        5,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 16,
+      "rows": [
+        32,
+        1,
+        3,
+        7,
+        15,
+        30
+      ],
+      "H": 17,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        1,
+        9,
+        9,
+        9,
+        9,
+        1
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 321,
+      "rows": [
+        2,
+        40,
+        3,
+        5,
+        15,
+        29
+      ],
+      "H": 19,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        1,
+        9,
+        9,
+        11,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 2050,
+      "rows": [
+        4,
+        1,
+        34,
+        7,
+        15,
+        27
+      ],
+      "H": 15,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        9,
+        1,
+        9,
+        9,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 3074,
+      "rows": [
+        4,
+        1,
+        50,
+        7,
+        11,
+        27
+      ],
+      "H": 19,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        11,
+        1,
+        9,
+        9,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8196,
+      "rows": [
+        8,
+        1,
+        3,
+        38,
+        15,
+        23
+      ],
+      "H": 15,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        3,
+        9,
+        9,
+        1,
+        9,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8706,
+      "rows": [
+        4,
+        1,
+        10,
+        35,
+        15,
+        23
+      ],
+      "H": 17,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        9,
+        3,
+        3,
+        9,
+        5
+      ],
+      "strong": true
+    }
+  ],
+  "minimal_obstructions": [
+    {
+      "n": 6,
+      "code": 80,
+      "rows": [
+        32,
+        9,
+        3,
+        5,
+        15,
+        30
+      ],
+      "H": 27,
+      "aut": 3,
+      "roots": 4,
+      "ordered_distinct_ports": 14,
+      "deletion_H": [
+        3,
+        9,
+        9,
+        9,
+        15,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 88,
+      "rows": [
+        48,
+        9,
+        3,
+        5,
+        14,
+        30
+      ],
+      "H": 33,
+      "aut": 3,
+      "roots": 4,
+      "ordered_distinct_ports": 14,
+      "deletion_H": [
+        3,
+        11,
+        11,
+        11,
+        15,
+        15
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 144,
+      "rows": [
+        32,
+        17,
+        3,
+        7,
+        13,
+        30
+      ],
+      "H": 37,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        9,
+        15,
+        15,
+        9,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 148,
+      "rows": [
+        40,
+        17,
+        3,
+        6,
+        13,
+        30
+      ],
+      "H": 37,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        9,
+        13,
+        15,
+        11,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 209,
+      "rows": [
+        34,
+        24,
+        3,
+        5,
+        13,
+        30
+      ],
+      "H": 37,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        9,
+        11,
+        13,
+        13,
+        11
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 260,
+      "rows": [
+        8,
+        33,
+        3,
+        6,
+        15,
+        29
+      ],
+      "H": 23,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        3,
+        9,
+        5,
+        13,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 264,
+      "rows": [
+        16,
+        33,
+        3,
+        7,
+        14,
+        29
+      ],
+      "H": 33,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        5,
+        13,
+        13,
+        5,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 280,
+      "rows": [
+        48,
+        33,
+        3,
+        7,
+        14,
+        28
+      ],
+      "H": 41,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        11,
+        15,
+        15,
+        11,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 385,
+      "rows": [
+        2,
+        48,
+        3,
+        7,
+        13,
+        29
+      ],
+      "H": 23,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        11,
+        1,
+        11,
+        11,
+        9,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 1040,
+      "rows": [
+        32,
+        1,
+        19,
+        7,
+        11,
+        30
+      ],
+      "H": 27,
+      "aut": 3,
+      "roots": 4,
+      "ordered_distinct_ports": 14,
+      "deletion_H": [
+        3,
+        15,
+        9,
+        9,
+        9,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 1282,
+      "rows": [
+        4,
+        33,
+        18,
+        7,
+        11,
+        29
+      ],
+      "H": 31,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        15,
+        5,
+        5,
+        13,
+        9,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 1296,
+      "rows": [
+        32,
+        33,
+        19,
+        7,
+        11,
+        28
+      ],
+      "H": 33,
+      "aut": 3,
+      "roots": 4,
+      "ordered_distinct_ports": 14,
+      "deletion_H": [
+        15,
+        15,
+        11,
+        11,
+        11,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 1298,
+      "rows": [
+        36,
+        33,
+        18,
+        7,
+        11,
+        28
+      ],
+      "H": 43,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        15,
+        13,
+        11,
+        15,
+        13,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 1313,
+      "rows": [
+        2,
+        36,
+        17,
+        7,
+        11,
+        29
+      ],
+      "H": 29,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        13,
+        3,
+        9,
+        11,
+        9,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 2056,
+      "rows": [
+        16,
+        1,
+        35,
+        7,
+        14,
+        27
+      ],
+      "H": 23,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        5,
+        13,
+        5,
+        9,
+        3,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 2192,
+      "rows": [
+        32,
+        17,
+        35,
+        7,
+        13,
+        26
+      ],
+      "H": 37,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        13,
+        11,
+        15,
+        13,
+        9,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 2312,
+      "rows": [
+        16,
+        33,
+        35,
+        7,
+        14,
+        25
+      ],
+      "H": 37,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        11,
+        13,
+        13,
+        11,
+        5,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 2433,
+      "rows": [
+        2,
+        48,
+        35,
+        7,
+        13,
+        25
+      ],
+      "H": 33,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        15,
+        5,
+        11,
+        13,
+        9,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8264,
+      "rows": [
+        16,
+        9,
+        3,
+        37,
+        14,
+        23
+      ],
+      "H": 31,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        9,
+        13,
+        5,
+        5,
+        15
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8280,
+      "rows": [
+        48,
+        9,
+        3,
+        37,
+        14,
+        22
+      ],
+      "H": 43,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        13,
+        15,
+        11,
+        13,
+        15
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8324,
+      "rows": [
+        8,
+        17,
+        3,
+        38,
+        13,
+        23
+      ],
+      "H": 29,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        9,
+        11,
+        3,
+        9,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8385,
+      "rows": [
+        2,
+        24,
+        3,
+        37,
+        13,
+        23
+      ],
+      "H": 25,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        13,
+        3,
+        13,
+        5,
+        9,
+        11
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8834,
+      "rows": [
+        4,
+        17,
+        10,
+        35,
+        13,
+        23
+      ],
+      "H": 29,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        13,
+        9,
+        5,
+        5,
+        9,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8850,
+      "rows": [
+        36,
+        17,
+        10,
+        35,
+        13,
+        22
+      ],
+      "H": 45,
+      "aut": 3,
+      "roots": 2,
+      "ordered_distinct_ports": 10,
+      "deletion_H": [
+        13,
+        13,
+        13,
+        13,
+        13,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8865,
+      "rows": [
+        2,
+        20,
+        9,
+        35,
+        13,
+        23
+      ],
+      "H": 29,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        11,
+        5,
+        9,
+        5,
+        9,
+        11
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 8881,
+      "rows": [
+        34,
+        20,
+        9,
+        35,
+        13,
+        22
+      ],
+      "H": 45,
+      "aut": 3,
+      "roots": 2,
+      "ordered_distinct_ports": 10,
+      "deletion_H": [
+        11,
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 12356,
+      "rows": [
+        8,
+        9,
+        3,
+        52,
+        7,
+        23
+      ],
+      "H": 23,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        9,
+        11,
+        1,
+        11,
+        11
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 12866,
+      "rows": [
+        4,
+        9,
+        10,
+        49,
+        7,
+        23
+      ],
+      "H": 25,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        11,
+        9,
+        5,
+        3,
+        13,
+        13
+      ],
+      "strong": true
+    },
+    {
+      "n": 6,
+      "code": 16524,
+      "rows": [
+        24,
+        17,
+        3,
+        6,
+        44,
+        15
+      ],
+      "H": 33,
+      "aut": 1,
+      "roots": 6,
+      "ordered_distinct_ports": 30,
+      "deletion_H": [
+        9,
+        9,
+        13,
+        11,
+        5,
+        15
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 32,
+      "rows": [
+        64,
+        1,
+        3,
+        7,
+        15,
+        31,
+        62
+      ],
+      "H": 33,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        1,
+        17,
+        17,
+        17,
+        17,
+        17,
+        1
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 1153,
+      "rows": [
+        2,
+        72,
+        3,
+        5,
+        15,
+        31,
+        61
+      ],
+      "H": 33,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        15,
+        1,
+        15,
+        17,
+        19,
+        19,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 16386,
+      "rows": [
+        4,
+        1,
+        66,
+        7,
+        15,
+        31,
+        59
+      ],
+      "H": 27,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        9,
+        17,
+        1,
+        15,
+        15,
+        15,
+        3
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 20482,
+      "rows": [
+        4,
+        1,
+        82,
+        7,
+        11,
+        31,
+        59
+      ],
+      "H": 31,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        9,
+        19,
+        1,
+        15,
+        15,
+        19,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 131076,
+      "rows": [
+        8,
+        1,
+        3,
+        70,
+        15,
+        31,
+        55
+      ],
+      "H": 25,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        5,
+        15,
+        15,
+        1,
+        15,
+        15,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 133122,
+      "rows": [
+        4,
+        1,
+        10,
+        67,
+        15,
+        31,
+        55
+      ],
+      "H": 29,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        9,
+        15,
+        5,
+        3,
+        17,
+        17,
+        5
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 196612,
+      "rows": [
+        8,
+        1,
+        3,
+        102,
+        15,
+        23,
+        55
+      ],
+      "H": 33,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        5,
+        19,
+        19,
+        1,
+        17,
+        15,
+        15
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 198658,
+      "rows": [
+        4,
+        1,
+        10,
+        99,
+        15,
+        23,
+        55
+      ],
+      "H": 35,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        11,
+        19,
+        5,
+        3,
+        15,
+        17,
+        17
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 524296,
+      "rows": [
+        16,
+        1,
+        3,
+        7,
+        78,
+        31,
+        47
+      ],
+      "H": 27,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        3,
+        15,
+        15,
+        15,
+        1,
+        17,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 524673,
+      "rows": [
+        2,
+        24,
+        3,
+        5,
+        77,
+        31,
+        47
+      ],
+      "H": 35,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        17,
+        3,
+        17,
+        15,
+        5,
+        19,
+        11
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 528386,
+      "rows": [
+        4,
+        1,
+        18,
+        7,
+        75,
+        31,
+        47
+      ],
+      "H": 27,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        9,
+        15,
+        3,
+        17,
+        3,
+        15,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 557060,
+      "rows": [
+        8,
+        1,
+        3,
+        22,
+        71,
+        31,
+        47
+      ],
+      "H": 29,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        5,
+        17,
+        17,
+        3,
+        5,
+        15,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 7,
+      "code": 559106,
+      "rows": [
+        4,
+        1,
+        10,
+        19,
+        71,
+        31,
+        47
+      ],
+      "H": 31,
+      "aut": 1,
+      "roots": 7,
+      "ordered_distinct_ports": 42,
+      "deletion_H": [
+        9,
+        17,
+        5,
+        9,
+        5,
+        17,
+        9
+      ],
+      "strong": true
+    },
+    {
+      "n": 9,
+      "code": 17184063490,
+      "rows": [
+        508,
+        505,
+        506,
+        480,
+        456,
+        464,
+        256,
+        64,
+        128
+      ],
+      "H": 27,
+      "deletion_H": [
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 16777220,
+      "rows": [
+        248,
+        241,
+        243,
+        246,
+        128,
+        16,
+        48,
+        96
+      ],
+      "H": 25,
+      "deletion_H": [
+        5,
+        15,
+        15,
+        5,
+        5,
+        15,
+        15,
+        5
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67108872,
+      "rows": [
+        252,
+        249,
+        250,
+        128,
+        8,
+        24,
+        56,
+        112
+      ],
+      "H": 27,
+      "deletion_H": [
+        9,
+        9,
+        9,
+        3,
+        15,
+        15,
+        15,
+        3
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 2097154,
+      "rows": [
+        240,
+        225,
+        227,
+        231,
+        238,
+        128,
+        32,
+        64
+      ],
+      "H": 27,
+      "deletion_H": [
+        3,
+        15,
+        15,
+        15,
+        3,
+        9,
+        9,
+        9
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67109128,
+      "rows": [
+        252,
+        249,
+        250,
+        128,
+        72,
+        24,
+        40,
+        112
+      ],
+      "H": 45,
+      "deletion_H": [
+        15,
+        15,
+        15,
+        9,
+        15,
+        15,
+        15,
+        9
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 10485762,
+      "rows": [
+        240,
+        233,
+        227,
+        229,
+        238,
+        128,
+        32,
+        64
+      ],
+      "H": 45,
+      "deletion_H": [
+        9,
+        15,
+        15,
+        15,
+        9,
+        15,
+        15,
+        15
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67109380,
+      "rows": [
+        252,
+        249,
+        250,
+        64,
+        136,
+        24,
+        48,
+        104
+      ],
+      "H": 39,
+      "deletion_H": [
+        13,
+        13,
+        13,
+        15,
+        9,
+        15,
+        9,
+        15
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 17825794,
+      "rows": [
+        232,
+        241,
+        227,
+        230,
+        237,
+        128,
+        32,
+        64
+      ],
+      "H": 39,
+      "deletion_H": [
+        15,
+        9,
+        15,
+        9,
+        15,
+        13,
+        13,
+        13
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67109388,
+      "rows": [
+        252,
+        249,
+        250,
+        192,
+        136,
+        24,
+        48,
+        96
+      ],
+      "H": 45,
+      "deletion_H": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 19922946,
+      "rows": [
+        248,
+        241,
+        227,
+        230,
+        236,
+        128,
+        32,
+        64
+      ],
+      "H": 45,
+      "deletion_H": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67109633,
+      "rows": [
+        252,
+        249,
+        250,
+        16,
+        192,
+        24,
+        40,
+        104
+      ],
+      "H": 33,
+      "deletion_H": [
+        11,
+        11,
+        11,
+        15,
+        3,
+        15,
+        15,
+        15
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 25427970,
+      "rows": [
+        226,
+        248,
+        227,
+        229,
+        237,
+        128,
+        32,
+        64
+      ],
+      "H": 33,
+      "deletion_H": [
+        15,
+        3,
+        15,
+        15,
+        15,
+        11,
+        11,
+        11
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67125250,
+      "rows": [
+        252,
+        249,
+        250,
+        32,
+        8,
+        144,
+        56,
+        88
+      ],
+      "H": 27,
+      "deletion_H": [
+        9,
+        9,
+        9,
+        9,
+        15,
+        3,
+        15,
+        9
+      ],
+      "strong": false
+    },
+    {
+      "n": 8,
+      "code": 67633154,
+      "rows": [
+        228,
+        225,
+        242,
+        231,
+        235,
+        128,
+        32,
+        64
+      ],
+      "H": 27,
+      "deletion_H": [
+        9,
+        15,
+        3,
+        15,
+        9,
+        9,
+        9,
+        9
+      ],
+      "strong": false
+    }
+  ],
+  "core_formulas": {
+    "1": [
+      {
+        "H": 1,
+        "m": 0,
+        "k": 0,
+        "root_orbits": 0,
+        "pair_orbits": 0,
+        "atoms": []
+      }
+    ],
+    "3": [
+      {
+        "H": 3,
+        "m": 3,
+        "k": 1,
+        "root_orbits": 1,
+        "pair_orbits": 2,
+        "atoms": [
+          [
+            3,
+            2
+          ]
+        ]
+      }
+    ],
+    "5": [
+      {
+        "H": 5,
+        "m": 4,
+        "k": 1,
+        "root_orbits": 4,
+        "pair_orbits": 12,
+        "atoms": [
+          [
+            4,
+            4
+          ]
+        ]
+      }
+    ],
+    "7": [],
+    "9": [
+      {
+        "H": 9,
+        "m": 6,
+        "k": 2,
+        "root_orbits": 2,
+        "pair_orbits": 6,
+        "atoms": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "H": 9,
+        "m": 5,
+        "k": 1,
+        "root_orbits": 5,
+        "pair_orbits": 20,
+        "atoms": [
+          [
+            5,
+            8
+          ]
+        ]
+      },
+      {
+        "H": 9,
+        "m": 5,
+        "k": 1,
+        "root_orbits": 5,
+        "pair_orbits": 20,
+        "atoms": [
+          [
+            5,
+            258
+          ]
+        ]
+      }
+    ],
+    "11": [
+      {
+        "H": 11,
+        "m": 5,
+        "k": 1,
+        "root_orbits": 5,
+        "pair_orbits": 20,
+        "atoms": [
+          [
+            5,
+            97
+          ]
+        ]
+      }
+    ],
+    "13": [
+      {
+        "H": 13,
+        "m": 5,
+        "k": 1,
+        "root_orbits": 5,
+        "pair_orbits": 20,
+        "atoms": [
+          [
+            5,
+            68
+          ]
+        ]
+      }
+    ],
+    "15": [
+      {
+        "H": 15,
+        "m": 7,
+        "k": 2,
+        "root_orbits": 5,
+        "pair_orbits": 22,
+        "atoms": [
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      {
+        "H": 15,
+        "m": 7,
+        "k": 2,
+        "root_orbits": 5,
+        "pair_orbits": 22,
+        "atoms": [
+          [
+            4,
+            4
+          ],
+          [
+            3,
+            2
+          ]
+        ]
+      },
+      {
+        "H": 15,
+        "m": 5,
+        "k": 1,
+        "root_orbits": 3,
+        "pair_orbits": 8,
+        "atoms": [
+          [
+            5,
+            40
+          ]
+        ]
+      },
+      {
+        "H": 15,
+        "m": 5,
+        "k": 1,
+        "root_orbits": 1,
+        "pair_orbits": 4,
+        "atoms": [
+          [
+            5,
+            76
+          ]
+        ]
+      },
+      {
+        "H": 15,
+        "m": 6,
+        "k": 1,
+        "root_orbits": 6,
+        "pair_orbits": 30,
+        "atoms": [
+          [
+            6,
+            2050
+          ]
+        ]
+      },
+      {
+        "H": 15,
+        "m": 6,
+        "k": 1,
+        "root_orbits": 6,
+        "pair_orbits": 30,
+        "atoms": [
+          [
+            6,
+            8196
+          ]
+        ]
+      }
+    ],
+    "17": [
+      {
+        "H": 17,
+        "m": 6,
+        "k": 1,
+        "root_orbits": 6,
+        "pair_orbits": 30,
+        "atoms": [
+          [
+            6,
+            16
+          ]
+        ]
+      },
+      {
+        "H": 17,
+        "m": 6,
+        "k": 1,
+        "root_orbits": 6,
+        "pair_orbits": 30,
+        "atoms": [
+          [
+            6,
+            8706
+          ]
+        ]
+      }
+    ],
+    "19": [
+      {
+        "H": 19,
+        "m": 6,
+        "k": 1,
+        "root_orbits": 6,
+        "pair_orbits": 30,
+        "atoms": [
+          [
+            6,
+            321
+          ]
+        ]
+      },
+      {
+        "H": 19,
+        "m": 6,
+        "k": 1,
+        "root_orbits": 6,
+        "pair_orbits": 30,
+        "atoms": [
+          [
+            6,
+            3074
+          ]
+        ]
+      }
+    ],
+    "21": []
+  },
+  "controls": [
+    "all vertex deletions",
+    "ordered triangle chain",
+    "nonminimal singleton padding",
+    "C3 one-port versus two-port orbit distinction"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "compiler_modes": [
+    "O2 DNDEBUG",
+    "O0"
+  ],
+  "python_modes": [
+    "normal",
+    "optimized"
+  ],
+  "pinned_inputs": 6,
+  "audit_stdout": "PASS: 532 literal classes; 56 exact inherited obstructions; all-order marked core formulas",
+  "census_sha256_lf": "949fa4bcab4e96c83f14bb21c88ed031a38f78643b17d3c721931770dce1cb88",
+  "audit_sha256_lf": "8d4647c01d0d0b2e300a4ba844276d0f0feccadfce01a7387a2696ec42c567b6"
+}

@@ -1,0 +1,30 @@
+{
+  "input_commit": "04d6dc35aaa3",
+  "sha256_lf": {
+    "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3",
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/basis21.json": "90bb8490dc2fb933a63878bcebec327f53125120470b5fa9e162adfd89c7bf1d",
+    "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/spectrum/OBSTRUCTION_PROOF.md": "e56a78deede068c1dbcfaf9743359994509ed8b16c64fc97405fa7a8ab0ef53c",
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+    "05-knowledge/results/session153_gadgets_20261103/species/SPECIES_TROPICAL.md": "b8a0193bc8114626b0bbd67b844fe119e3e0ccfa845f23004bf00009f61f07e8"
+  },
+  "primary_pages_checked": {
+    "Moon1966": {
+      "url": "https://doi.org/10.4153/CMB-1966-038-7",
+      "role": "classical provenance; needed case proved directly"
+    },
+    "Busch2006": {
+      "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf",
+      "role": "Corollary 1, contextual stronger minimum theorem, not a proof dependency"
+    },
+    "ChanPak2024": {
+      "url": "https://www.math.ucla.edu/~pak/papers/DominoPermanent16.pdf",
+      "role": "Section 6.5 Conjecture 6.2, open completeness rather than exclusion"
+    },
+    "Grinberg2026": {
+      "url": "https://darijgrinberg.gitlab.io/t/22s/lec12.pdf",
+      "role": "April 27 2026 version, Remark 1.1.11: known exclusions and unresolved higher range"
+    }
+  },
+  "checked_date": "2026-11-03"
+}
