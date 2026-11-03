@@ -11,6 +11,8 @@ The productive distinction is between a scalar value, its attachment response, a
 
 The scope is constructive: none of these statements turns a value encoding into an inverse for arbitrary requested H. Named sources, actual ports, native phase and arithmetic counters are retained wherever the operation language uses them.
 
+[Incoming integration](INCOMING.md) reduces the entire neutral carry cone to nonnegative polynomial multiples of an explicit five-vertex H15 native response. It also retains the incoming exact source-matching chains, rooted gluing operator and corrected native-line terminology.
+
 ## Reproduction
 
 From the repository root, with Python and SymPy:

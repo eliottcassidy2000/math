@@ -20,6 +20,7 @@ Status labels: **PROVED scoped** means the all-order elementary proofs N1--N4, C
 | neutral_carries.py | All128 odd P from1 through255 | Independent full response formula versus closed carry law, exact falling-basis reconstruction, separately implemented native replay |
 | neutral_carries.py | Literal P=1,3,5,7,11 sources | Endpoint DP and two-bin convolution; full path covers at1,3,5 and literal G at1,3,7 |
 | neutral_carries.py | Five G iterations of the H497 pair | Nonnegative falling coefficients and exact scalar improvements |
+| neutral_carries.py | Incoming five-vertex reset and128 multiplier identities | Literal native replay, independent path partitions, persistent-divisor formula and actual447/495 padded wrappers |
 
 `reproduce.py` runs all four scripts normally and under `-O`, checks byte-identical JSON receipts, and verifies pinned dependency hashes. It records interpreter/SymPy versions and receipt hashes. No network is needed.
 

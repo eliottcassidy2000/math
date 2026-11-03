@@ -25,6 +25,13 @@ DEPENDENCIES=[
  '05-knowledge/results/black_descent_20261020c/snarks.md',
  '01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md',
  '05-knowledge/results/mixed_returns_20261103/controllers.json',
+ '05-knowledge/results/session161_source_matching_20261103/q_response/NOTE.md',
+ '05-knowledge/results/session161_source_matching_20261103/matched_sources/NOTE.md',
+ '05-knowledge/results/session161_source_matching_20261103/matched_sources/CHAIN.md',
+ '05-knowledge/results/session161_source_matching_20261103/matched_sources/FAN.md',
+ '05-knowledge/results/coverage_machine_induction_20261103/RESET_JUNCTION.md',
+ '05-knowledge/results/coverage_machine_induction_20261103/gluing/NOTE.md',
+ '05-knowledge/results/coverage_machine_induction_20261103/machines/NOTE.md',
 ]
 
 def digest(path):return hashlib.sha256(path.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
@@ -36,8 +43,9 @@ def main():
     source_file=HERE/'sources.json'
     if '--pin-sources' in sys.argv:
         entries=[{'path':p,'sha256':digest(ROOT/p)} for p in DEPENDENCIES]
-        prior=json.loads((ROOT/DEPENDENCIES[-1]).read_text())
+        prior=json.loads((ROOT/'05-knowledge/results/mixed_returns_20261103/controllers.json').read_text())
         data={'status':'INHERITED_PINNED_NOT_RETESTED','base_commit':'34fc4d716863','hash_scheme':'sha256 of UTF8 text with LF newlines',
+              'incoming_commit':'ad049727df','incoming_review':'INCOMING.md',
               'dependencies':entries,'hostile81_27':prior['hostile81_27'],
               'one_birth55_orientations':prior['one_birth55_orientations']}
         source_file.write_text(json.dumps(data,indent=2)+'\n',encoding='utf8',newline='\n')
@@ -50,7 +58,8 @@ def main():
         receipts=[];outputs=[]
         for optimized in (False,True):
             cmd=[sys.executable,'-X','utf8','-B']+(['-O'] if optimized else [])+[str(HERE/(name+'.py'))]
-            result=subprocess.run(cmd,cwd=ROOT,check=True,capture_output=True,text=True,encoding='utf8')
+            result=subprocess.run(cmd,cwd=ROOT,capture_output=True,text=True,encoding='utf8')
+            need(result.returncode==0,result.stdout+'\n'+result.stderr)
             receipts.append(digest(HERE/(name+'.json')));outputs.append(result.stdout.strip())
         need(receipts[0]==receipts[1] and outputs[0]==outputs[1],'normal/-O discrepancy: '+name)
         records.append({'script':name+'.py','script_sha256':digest(HERE/(name+'.py')),

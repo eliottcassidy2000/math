@@ -2,8 +2,8 @@
   "status": "PASS",
   "python": "3.13.14",
   "sympy": "1.14.0",
-  "dependency_count": 21,
-  "source_manifest_sha256": "ee7720fe72903c6c462b0edad47ea3d862dd30cbe6f8fa9a287330fb2f246029",
+  "dependency_count": 28,
+  "source_manifest_sha256": "211c5a70918e4f1573f2a7cd9362b34d630164fc67ad4a2f268b7558ec08c1a5",
   "runs": [
     {
       "script": "normal_forms.py",
@@ -31,9 +31,9 @@
     },
     {
       "script": "neutral_carries.py",
-      "script_sha256": "5047e892f2252e9c2c16588fe094011b17bbe01af914810b6b3bf25e71b3d7c1",
+      "script_sha256": "262cbfa57556a245240b1b3aabc741bf4d8bfa82a4dc770af09ecce6ee461742",
       "receipt": "neutral_carries.json",
-      "sha256": "aa17672c85f8dbd6effb6db2dfce21542a30da64ecc50429d018dca943b81bf1",
+      "sha256": "2ece655a0ea098c4bf460373a32e11b12183d61bae3b909d4fc7a86ab06507b3",
       "normal_equals_optimized": true,
       "output": "PASS: 128 carry formulas and named native resets; H497 neutral repair gains48 after G"
     }

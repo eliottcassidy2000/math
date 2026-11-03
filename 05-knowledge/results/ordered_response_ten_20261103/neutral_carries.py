@@ -1,8 +1,8 @@
 """All-carry formula, cover dominance, and actual source-preserving native programs."""
 from pathlib import Path
-from math import factorial,comb
+from math import factorial,comb,gcd
 import sys,json,sympy as s
-from bank import subset_h,path_poly,strong,gate,op,need
+from bank import subset_h,path_poly,strong,gate,op,need,ordinal
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
 PRIOR=ROOT/'05-knowledge/results/apex_wedge_constructor_20261103'
 sys.path.insert(0,str(PRIOR))
@@ -34,12 +34,23 @@ def replay(program):
     need(endpoint==tuple(program['target']),'independent native replay with named ports')
 
 def main():
+    # Incoming five-vertex reset: the primitive polynomial generating our cone.
+    T=(10,12,9,16,7);U=(6,20,24,3,9);marked=(4,0,1,2,3)
+    FT,_,_=path_poly(T);FU,_,_=path_poly(U);basic=s.expand(FU-FT)
+    need(native(T,marked)==U and s.expand(basic-2*r*(r*r-1))==0,'incoming native reset and primitive response')
+    def slot_divisor(F,n):
+        answer=0
+        for i in range(1,n+1):answer=gcd(answer,factorial(i-1)*int(F.subs(r,i)))
+        return answer
+    need(slot_divisor(FT,5)==3 and slot_divisor(FU,5)==15,'cover growth versus permanent divisor')
     formulas=[]
     for P in range(1,256,2):
         w,u=chart(P,P+1);D=formula(P)
         need(s.expand(response(w,u,r)-D)==0,'uniform binary carry response')
         need(gap_h(w,u)==gap_h(w,u,False),'scalar H-neutrality')
         need((D==0)==(carry(P)==1),'complete profile-neutral classification')
+        multiplier=s.div(-D,basic,r)
+        need(multiplier[1]==0 and all(v>=0 for v in s.Poly(multiplier[0],r).all_coeffs()),'five-vertex response generates the carry cone')
         coeff=falling_coeffs(-D)
         need(all(v>=0 for v in coeff) and (D==0 or coeff[2]>0),'path-cover dominance')
         need(s.expand(sum(v*s.prod(r-j for j in range(k)) for k,v in enumerate(coeff))+D)==0,'exact falling basis reconstruction')
@@ -69,8 +80,14 @@ def main():
         g=op(g);coeff=falling_coeffs(g)
         need(all(v>=0 for v in coeff) and g.subs(r,1)>0,'iterated triangle dominance')
         propagation.append({'depth':depth,'H_improvement':int(g.subs(r,1)),'profile_difference':str(g)})
+    padding=(2,0);small_plus=gate(ordinal([padding,T]));small_minus=gate(ordinal([padding,U]))
+    compact_counts=[subset_h(small_plus)[-1],subset_h(small_minus)[-1]]
+    need(compact_counts==[447,495],'compact same-response attachment control')
     out={'status':'PROVED_SCOPED','odd_P_universe':[1,255],'symbolic_and_native_checks':len(formulas),
-         'formulas':formulas,'literal_examples':examples,'iterated_G_improvements':propagation}
+         'formulas':formulas,'literal_examples':examples,'iterated_G_improvements':propagation,
+         'incoming_five_vertex_generator':{'source':T,'target':U,'path':marked,'source_profile':str(FT),
+                'target_profile':str(FU),'difference':str(basic),'uniform_wrapper_divisors':[3,15],
+                'compact_order9_counts':compact_counts,'reference':'coverage_machine_induction_20261103/RESET_JUNCTION.md#J2'}}
     (HERE/'neutral_carries.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf8',newline='\n')
     print('PASS: 128 carry formulas and named native resets; H497 neutral repair gains48 after G')
 if __name__=='__main__':main()

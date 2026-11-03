@@ -2,6 +2,8 @@
   "status": "INHERITED_PINNED_NOT_RETESTED",
   "base_commit": "34fc4d716863",
   "hash_scheme": "sha256 of UTF8 text with LF newlines",
+  "incoming_commit": "ad049727df",
+  "incoming_review": "INCOMING.md",
   "dependencies": [
     {
       "path": "05-knowledge/results/session160_ordered_programs_20261103/axioms/NOTE.md",
@@ -9,7 +11,7 @@
     },
     {
       "path": "05-knowledge/results/session160_ordered_programs_20261103/priority_tilings/NOTE.md",
-      "sha256": "fa5db873ae3ba6aa1531c76c682ff64c50ff5cebe9a21b5cbf902573a528f0aa"
+      "sha256": "4dd3e5f5a39afd1bb26d37ebe7f15f1cfd8900b269d1b105d7540e3e21e9683f"
     },
     {
       "path": "05-knowledge/results/session160_ordered_programs_20261103/metagraph/NOTE.md",
@@ -86,6 +88,34 @@
     {
       "path": "05-knowledge/results/mixed_returns_20261103/controllers.json",
       "sha256": "d6633b1e8c042f15b2a1828c8b4985cbeb88cafe003ed48c6b990eb8d7a8e5b9"
+    },
+    {
+      "path": "05-knowledge/results/session161_source_matching_20261103/q_response/NOTE.md",
+      "sha256": "51a318b28165f6b8bb17aece7386db3c0c0948ef1128a84cb3859c8e89933a18"
+    },
+    {
+      "path": "05-knowledge/results/session161_source_matching_20261103/matched_sources/NOTE.md",
+      "sha256": "123aef1c98e9f52cb197b89e2cba8ed83ffbc987dc3a6d65faac09fad01cefd0"
+    },
+    {
+      "path": "05-knowledge/results/session161_source_matching_20261103/matched_sources/CHAIN.md",
+      "sha256": "5c9d876fd8633ea6f1d3adb807c1b7b44434bf301ebd291cd58f7dfc88410f38"
+    },
+    {
+      "path": "05-knowledge/results/session161_source_matching_20261103/matched_sources/FAN.md",
+      "sha256": "e65f6fec0a1d6ae7cb278599a4bd5907adb42380c018c366cb54ae08063bac7f"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "sha256": "27d99326c5ea879612c47c08cba42ea263c98c046afceca48b1b33156bf516f6"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/gluing/NOTE.md",
+      "sha256": "9b2acb148d353a59ffd0a0aa5e87d3a8abd42cb07f7bd11da11f805a18694a9f"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/machines/NOTE.md",
+      "sha256": "6530a50c6f185393d17e2c3cb8f84124395d8ffc3ffc4463b62be42c6d05f91b"
     }
   ],
   "hostile81_27": {

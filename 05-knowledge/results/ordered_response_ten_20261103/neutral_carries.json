@@ -2731,5 +2731,40 @@
       "H_improvement": 17089392,
       "profile_difference": "2*r**15 + 178*r**13 + 7380*r**11 + 151112*r**9 + 1499596*r**7 + 6257520*r**5 + 7979076*r**3 + 1194528*r"
     }
-  ]
+  ],
+  "incoming_five_vertex_generator": {
+    "source": [
+      10,
+      12,
+      9,
+      16,
+      7
+    ],
+    "target": [
+      6,
+      20,
+      24,
+      3,
+      9
+    ],
+    "path": [
+      4,
+      0,
+      1,
+      2,
+      3
+    ],
+    "source_profile": "r**5 + 8*r**3 + 6*r",
+    "target_profile": "r**5 + 10*r**3 + 4*r",
+    "difference": "2*r**3 - 2*r",
+    "uniform_wrapper_divisors": [
+      3,
+      15
+    ],
+    "compact_order9_counts": [
+      447,
+      495
+    ],
+    "reference": "coverage_machine_induction_20261103/RESET_JUNCTION.md#J2"
+  }
 }

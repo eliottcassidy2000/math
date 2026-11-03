@@ -46,3 +46,5 @@ Anchor: improve actual tournament source closure. Niche: nonunique factorization
 The repeated numbers10,7 and13 have distinct, specified objects: ten rewrite schemas, ten bank symbols, ten complement-compatible guard states; seven primitive control states; thirteen parity-refined states. Only the maps proved above identify structures. No argument relies on matching these cardinalities by themselves.
 
 The source hashes and inherited hostile receipt are pinned in `sources.json`. This is research continuity, not a blanket audit of every historical claim in the cited packets.
+
+Subsequent incoming work through `ad049727df` is integrated in [INCOMING.md](INCOMING.md): actual matched order-ten chains, a primitive five-vertex generator for our carry responses, rooted versus uniform divisor behavior, and the repaired native-complement color terminology.

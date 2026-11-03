@@ -6,7 +6,7 @@ Do not repeat the old spectrum exclusion audit or recertify the existing adaptiv
 
 ## First decisive test
 
-For the H497 plus/minus pair and the j=2 infinite carry family, compute the polarized start/end path-bin profiles from `polarized_path_calculus_20261103`. Preserve both named apexes. Determine exactly which one-port and joint-port return predicates improve, remain equal, or reverse under the reset. The full homogeneous profile dominance is proved; rooted dominance is currently OPEN.
+For the H497 plus/minus pair and the j=2 infinite carry family, compute the polarized start/end path-bin profiles from `polarized_path_calculus_20261103` and the incoming eighteen-polynomial gluing operator in `coverage_machine_induction_20261103/gluing/NOTE.md`. Preserve both named apexes. Determine exactly which one-port and joint-port return predicates improve, remain equal, or reverse under the reset. The full homogeneous profile dominance is proved; rooted dominance is currently OPEN. The incoming five-vertex reset generates every carry response by nonnegative polynomial weighting, but its uniform-wrapper divisor worsens from3 to15 while its named-port divisor improves from3 to1; see [INCOMING.md](INCOMING.md).
 
 If a rooted return improves, attach the same literal macro on both endpoints and decode the resulting source. The objective is an all-order source-matching return, not merely another attained scalar. Retain the existing81/27 and failed55->111 sources as hostile controls.
 

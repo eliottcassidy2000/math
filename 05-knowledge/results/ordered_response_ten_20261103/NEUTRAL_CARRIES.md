@@ -89,4 +89,6 @@ The order-ten example is a full-profile-neutral physical reset, while the neighb
 
 ## Next use
 
+Incoming integration gives a smaller generator: the explicit five-vertex H15 native reset has difference E(r)=2r(r^2-1). Every difference in D1 equals E times a nonnegative integer polynomial; the first strict one is r^2 E. See [INCOMING I1](INCOMING.md). This is a response-cone reduction with actual padded controls, not an identification of source counts.
+
 These moves give controlled variation inside an H fibre. They can repair a supplied source's future response while preserving both old apex names. The remaining constructive obligation is to select a pair that changes a desired rooted return or divisibility condition, then match the next source again. Homogeneous response dominance alone does not establish that rooted closure. The 81/27 and failed55->111 controls remain relevant precisely at this boundary.
