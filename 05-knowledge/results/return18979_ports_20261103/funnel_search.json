@@ -1,0 +1,28 @@
+{
+  "status": "FINITE_EXACT_BOUNDED_LANGUAGE_ABSENCE",
+  "core_presentations": 476,
+  "banks": [
+    {
+      "child_order": 15,
+      "tests": 14848
+    },
+    {
+      "child_order": 16,
+      "tests": 29696
+    },
+    {
+      "child_order": 17,
+      "tests": 59392
+    },
+    {
+      "child_order": 18,
+      "tests": 118784
+    },
+    {
+      "child_order": 19,
+      "tests": 237568
+    }
+  ],
+  "hit": null,
+  "scope": "two-start one-port cores or unique-cycle two-port cores through order8; one additional funnel then newborn; child orders15..19; duplicates allowed"
+}

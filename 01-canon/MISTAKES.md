@@ -4,6 +4,25 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a final square-sum path does not identify its old boundary
+
+**Research/commentary correction, not a retracted theorem:** the initial
+return18979 connector calculation treated317 as an original anchor and44 as
+new. The inherited S173 problem instead fixes44 as old and317 as new. Both
+choices yield three old components and admit the same displayed final path,
+so checking its square sums cannot recover which source was intended.
+The first boundary gives13 minimum pairs (and33 triples with8); the intended
+boundary gives9 pairs and17 triples, completely enumerated by endpoint
+factor pairs and distinct-connector guards. Their minimum-height sets are
+{12,44}/{1,12,44} versus {12,317}/{1,12,317}, respectively.
+
+**Repair:** retain the actual old vertex set as part of every splice carrier.
+The corrected original boundary and separate alternate calculation are in
+[return18979 SQUARES](../05-knowledge/results/return18979_ports_20261103/SQUARES.md).
+Incoming [S173 section4](../05-knowledge/results/session173_modular_clocks_20261103/squares/NOTE.md)
+authenticated the original anchors before publication. No count for one
+boundary is used as a count for the other.
+
 ## 2026-11-03 — an ambient projective order need not be the chosen generator order
 
 **Draft candidate, not a retracted theorem:** in F_32=F_2[z]/(z^5+z^2+1),

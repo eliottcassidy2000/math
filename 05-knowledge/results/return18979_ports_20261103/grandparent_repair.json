@@ -1,0 +1,7812 @@
+{
+  "status": "EXACT_ALL_SIZE_MECHANISM_WITH_FINITE_CERTIFICATES",
+  "source_rows": [
+    1020,
+    4601,
+    938,
+    288,
+    1004,
+    512,
+    428,
+    808,
+    32,
+    2378,
+    1023,
+    5631,
+    2045
+  ],
+  "source_names": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    13,
+    14,
+    21,
+    22,
+    31,
+    32
+  ],
+  "root": 11,
+  "in_port": 9,
+  "spare": 4,
+  "grandparent_rows": [
+    508,
+    1529,
+    426,
+    288,
+    492,
+    0,
+    428,
+    296,
+    32,
+    511,
+    1021
+  ],
+  "grandparent_H": 27,
+  "root_spare_untouched_H": 15,
+  "unique_extra_port": 2,
+  "feedback_minimum": 2,
+  "arbitrary_mixed_root_spare_obstruction": [
+    {
+      "prospective_inport": 1,
+      "untouched_directed_triangle": [
+        2,
+        4,
+        8
+      ]
+    },
+    {
+      "prospective_inport": 2,
+      "untouched_directed_triangle": [
+        4,
+        8,
+        21
+      ]
+    },
+    {
+      "prospective_inport": 4,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        21
+      ]
+    },
+    {
+      "prospective_inport": 5,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 6,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 7,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 8,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 13,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 14,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 21,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 22,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "prospective_inport": 32,
+      "untouched_directed_triangle": [
+        1,
+        2,
+        4
+      ]
+    }
+  ],
+  "one_extra_port_completion_moving_inport": {
+    "2": [
+      21
+    ],
+    "21": [
+      2
+    ]
+  },
+  "alternate_completion": {
+    "extra_port": 21,
+    "new_inport": 2,
+    "minimum_arcs_in_declared_support": 5,
+    "strong_candidates": 40,
+    "rows": [
+      1020,
+      6649,
+      938,
+      800,
+      1004,
+      512,
+      940,
+      808,
+      544,
+      2,
+      1023,
+      6141,
+      2045
+    ],
+    "flips": [
+      [
+        2,
+        31
+      ],
+      [
+        5,
+        21
+      ],
+      [
+        8,
+        21
+      ],
+      [
+        14,
+        21
+      ],
+      [
+        21,
+        31
+      ]
+    ],
+    "grandparent_order": [
+      32,
+      22,
+      1,
+      6,
+      8,
+      4,
+      13,
+      5,
+      14,
+      7,
+      21
+    ],
+    "base_profile": [
+      1837,
+      778,
+      779,
+      1838
+    ],
+    "two_clone_profile": [
+      3953,
+      1836,
+      1837,
+      3954
+    ],
+    "root_phases": {
+      "profile": [
+        1837,
+        778,
+        779,
+        1838
+      ],
+      "golden": [
+        1837,
+        51572,
+        51573
+      ],
+      "golden_phase": [
+        6,
+        4,
+        6
+      ],
+      "all_five_Q4_phases": {
+        "q0": [
+          2,
+          1,
+          2
+        ],
+        "q1": [
+          0,
+          5,
+          4
+        ],
+        "q2": [
+          1,
+          1,
+          6
+        ],
+        "q4": [
+          4,
+          6,
+          3
+        ],
+        "q5": [
+          3,
+          3,
+          4
+        ]
+      }
+    },
+    "spare_phases": {
+      "profile": [
+        1837,
+        66,
+        913,
+        8916
+      ],
+      "golden": [
+        1837,
+        11699,
+        11713
+      ],
+      "golden_phase": [
+        6,
+        2,
+        1
+      ],
+      "all_five_Q4_phases": {
+        "q0": [
+          0,
+          1,
+          6
+        ],
+        "q1": [
+          3,
+          1,
+          0
+        ],
+        "q2": [
+          4,
+          0,
+          1
+        ],
+        "q4": [
+          5,
+          6,
+          6
+        ],
+        "q5": [
+          0,
+          6,
+          3
+        ]
+      }
+    }
+  },
+  "transitive_order": [
+    32,
+    22,
+    2,
+    1,
+    6,
+    8,
+    4,
+    13,
+    5,
+    14,
+    7
+  ],
+  "flips": [
+    [
+      32,
+      2
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "repaired_rows": [
+    1020,
+    509,
+    936,
+    288,
+    1004,
+    512,
+    428,
+    808,
+    32,
+    2378,
+    1023,
+    5631,
+    2047
+  ],
+  "samples": [
+    {
+      "m": 1,
+      "original_profile": [
+        6325,
+        891,
+        893,
+        6327
+      ],
+      "repaired_profile": [
+        1425,
+        181,
+        181,
+        1425
+      ]
+    },
+    {
+      "m": 2,
+      "original_profile": [
+        17139,
+        6298,
+        6325,
+        17166
+      ],
+      "repaired_profile": [
+        3911,
+        1424,
+        1425,
+        3912
+      ]
+    },
+    {
+      "m": 3,
+      "original_profile": [
+        38767,
+        17112,
+        17139,
+        38794
+      ],
+      "repaired_profile": [
+        8883,
+        3910,
+        3911,
+        8884
+      ]
+    },
+    {
+      "m": 4,
+      "original_profile": [
+        82023,
+        38740,
+        38767,
+        82050
+      ],
+      "repaired_profile": [
+        18827,
+        8882,
+        8883,
+        18828
+      ]
+    }
+  ],
+  "programs": [
+    {
+      "m": 1,
+      "trace": [
+        {
+          "arc": [
+            "2",
+            "32"
+          ],
+          "guards": [
+            [
+              "2",
+              "32",
+              "helper100",
+              "31:0",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "4",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper101",
+              "helper102"
+            ],
+            [
+              "2",
+              "helper102",
+              "32",
+              "helper100",
+              "31:0",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "4",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper101"
+            ]
+          ],
+          "rows": [
+            1020,
+            505,
+            938,
+            288,
+            1004,
+            512,
+            428,
+            808,
+            32,
+            2378,
+            1023,
+            5631,
+            2047
+          ],
+          "birth_incoming_masks": [
+            4096,
+            16383,
+            32765
+          ],
+          "deleted": [
+            "helper100",
+            "helper101",
+            "helper102"
+          ]
+        },
+        {
+          "arc": [
+            "4",
+            "2"
+          ],
+          "guards": [
+            [
+              "4",
+              "2",
+              "helper103",
+              "31:0",
+              "32",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper104",
+              "helper105"
+            ],
+            [
+              "4",
+              "helper105",
+              "2",
+              "helper103",
+              "31:0",
+              "32",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper104"
+            ]
+          ],
+          "rows": [
+            1020,
+            509,
+            936,
+            288,
+            1004,
+            512,
+            428,
+            808,
+            32,
+            2378,
+            1023,
+            5631,
+            2047
+          ],
+          "birth_incoming_masks": [
+            2,
+            16383,
+            32763
+          ],
+          "deleted": [
+            "helper103",
+            "helper104",
+            "helper105"
+          ]
+        }
+      ],
+      "native_moves": 4,
+      "births": 6,
+      "deletions": 6,
+      "old_deletions": 0,
+      "peak_order": 16,
+      "expanded_arc_reversals": 420
+    },
+    {
+      "m": 2,
+      "trace": [
+        {
+          "arc": [
+            "2",
+            "32"
+          ],
+          "guards": [
+            [
+              "2",
+              "32",
+              "helper100",
+              "31:0",
+              "31:1",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "4",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper101",
+              "helper102"
+            ],
+            [
+              "2",
+              "helper102",
+              "32",
+              "helper100",
+              "31:0",
+              "31:1",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "4",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper101"
+            ]
+          ],
+          "rows": [
+            1020,
+            505,
+            938,
+            288,
+            1004,
+            512,
+            428,
+            808,
+            32,
+            6474,
+            1023,
+            13823,
+            9727,
+            2047
+          ],
+          "birth_incoming_masks": [
+            8192,
+            32767,
+            65533
+          ],
+          "deleted": [
+            "helper100",
+            "helper101",
+            "helper102"
+          ]
+        },
+        {
+          "arc": [
+            "4",
+            "2"
+          ],
+          "guards": [
+            [
+              "4",
+              "2",
+              "helper103",
+              "31:0",
+              "31:1",
+              "32",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper104",
+              "helper105"
+            ],
+            [
+              "4",
+              "helper105",
+              "2",
+              "helper103",
+              "31:0",
+              "31:1",
+              "32",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper104"
+            ]
+          ],
+          "rows": [
+            1020,
+            509,
+            936,
+            288,
+            1004,
+            512,
+            428,
+            808,
+            32,
+            6474,
+            1023,
+            13823,
+            9727,
+            2047
+          ],
+          "birth_incoming_masks": [
+            2,
+            32767,
+            65531
+          ],
+          "deleted": [
+            "helper103",
+            "helper104",
+            "helper105"
+          ]
+        }
+      ],
+      "native_moves": 4,
+      "births": 6,
+      "deletions": 6,
+      "old_deletions": 0,
+      "peak_order": 17,
+      "expanded_arc_reversals": 480
+    },
+    {
+      "m": 4,
+      "trace": [
+        {
+          "arc": [
+            "2",
+            "32"
+          ],
+          "guards": [
+            [
+              "2",
+              "32",
+              "helper100",
+              "31:0",
+              "31:1",
+              "31:2",
+              "31:3",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "4",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper101",
+              "helper102"
+            ],
+            [
+              "2",
+              "helper102",
+              "32",
+              "helper100",
+              "31:0",
+              "31:1",
+              "31:2",
+              "31:3",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "4",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper101"
+            ]
+          ],
+          "rows": [
+            1020,
+            505,
+            938,
+            288,
+            1004,
+            512,
+            428,
+            808,
+            32,
+            31050,
+            1023,
+            62975,
+            58879,
+            50687,
+            34303,
+            2047
+          ],
+          "birth_incoming_masks": [
+            32768,
+            131071,
+            262141
+          ],
+          "deleted": [
+            "helper100",
+            "helper101",
+            "helper102"
+          ]
+        },
+        {
+          "arc": [
+            "4",
+            "2"
+          ],
+          "guards": [
+            [
+              "4",
+              "2",
+              "helper103",
+              "31:0",
+              "31:1",
+              "31:2",
+              "31:3",
+              "32",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper104",
+              "helper105"
+            ],
+            [
+              "4",
+              "helper105",
+              "2",
+              "helper103",
+              "31:0",
+              "31:1",
+              "31:2",
+              "31:3",
+              "32",
+              "22",
+              "1",
+              "6",
+              "21",
+              "8",
+              "13",
+              "5",
+              "14",
+              "7",
+              "helper104"
+            ]
+          ],
+          "rows": [
+            1020,
+            509,
+            936,
+            288,
+            1004,
+            512,
+            428,
+            808,
+            32,
+            31050,
+            1023,
+            62975,
+            58879,
+            50687,
+            34303,
+            2047
+          ],
+          "birth_incoming_masks": [
+            2,
+            131071,
+            262139
+          ],
+          "deleted": [
+            "helper103",
+            "helper104",
+            "helper105"
+          ]
+        }
+      ],
+      "native_moves": 4,
+      "births": 6,
+      "deletions": 6,
+      "old_deletions": 0,
+      "peak_order": 19,
+      "expanded_arc_reversals": 612
+    }
+  ],
+  "original_formula": "5407*2^m-4489",
+  "repaired_formula": "1243*2^m-1061",
+  "count_debt": "-4164*2^m+3428",
+  "uniform_ready_scope": "m>=2, first clone, defect1; next reset gives 3H+2",
+  "phases": {
+    "31": {
+      "before": {
+        "profile": [
+          6325,
+          891,
+          893,
+          6327
+        ],
+        "golden": [
+          6325,
+          57732,
+          57759
+        ],
+        "golden_phase": [
+          4,
+          2,
+          2
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            0,
+            1,
+            1
+          ],
+          "q1": [
+            3,
+            6,
+            3
+          ],
+          "q2": [
+            4,
+            5,
+            2
+          ],
+          "q4": [
+            2,
+            0,
+            0
+          ],
+          "q5": [
+            3,
+            5,
+            5
+          ]
+        }
+      },
+      "after": {
+        "profile": [
+          1425,
+          181,
+          181,
+          1425
+        ],
+        "golden": [
+          1425,
+          23836,
+          23837
+        ],
+        "golden_phase": [
+          2,
+          2,
+          2
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            5,
+            2,
+            5
+          ],
+          "q1": [
+            2,
+            2,
+            4
+          ],
+          "q2": [
+            4,
+            3,
+            2
+          ],
+          "q4": [
+            3,
+            3,
+            6
+          ],
+          "q5": [
+            5,
+            3,
+            1
+          ]
+        }
+      }
+    },
+    "6": {
+      "before": {
+        "profile": [
+          6325,
+          463,
+          2555,
+          22839
+        ],
+        "golden": [
+          6325,
+          26211,
+          26331
+        ],
+        "golden_phase": [
+          3,
+          4,
+          0
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            1,
+            5,
+            6
+          ],
+          "q1": [
+            3,
+            1,
+            4
+          ],
+          "q2": [
+            1,
+            5,
+            0
+          ],
+          "q4": [
+            5,
+            5,
+            0
+          ],
+          "q5": [
+            0,
+            1,
+            4
+          ]
+        }
+      },
+      "after": {
+        "profile": [
+          1425,
+          39,
+          723,
+          8941
+        ],
+        "golden": [
+          1425,
+          7823,
+          7841
+        ],
+        "golden_phase": [
+          2,
+          1,
+          3
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            4,
+            2,
+            0
+          ],
+          "q1": [
+            0,
+            0,
+            2
+          ],
+          "q2": [
+            2,
+            6,
+            3
+          ],
+          "q4": [
+            0,
+            3,
+            4
+          ],
+          "q5": [
+            0,
+            1,
+            4
+          ]
+        }
+      }
+    },
+    "2": {
+      "before": {
+        "profile": [
+          6325,
+          457,
+          649,
+          9237
+        ],
+        "golden": [
+          6325,
+          28036,
+          28073
+        ],
+        "golden_phase": [
+          5,
+          3,
+          1
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            2,
+            4,
+            4
+          ],
+          "q1": [
+            2,
+            3,
+            1
+          ],
+          "q2": [
+            6,
+            3,
+            1
+          ],
+          "q4": [
+            1,
+            2,
+            6
+          ],
+          "q5": [
+            0,
+            1,
+            4
+          ]
+        }
+      },
+      "after": {
+        "profile": [
+          1425,
+          155,
+          649,
+          4255
+        ],
+        "golden": [
+          1425,
+          15934,
+          15939
+        ],
+        "golden_phase": [
+          4,
+          0,
+          4
+        ],
+        "all_five_Q4_phases": {
+          "q0": [
+            5,
+            1,
+            5
+          ],
+          "q1": [
+            6,
+            2,
+            6
+          ],
+          "q2": [
+            0,
+            4,
+            4
+          ],
+          "q4": [
+            3,
+            0,
+            3
+          ],
+          "q5": [
+            0,
+            1,
+            4
+          ]
+        }
+      }
+    }
+  },
+  "two_port_before": [
+    {
+      "skeleton": [],
+      "degree": 1,
+      "count": 4838
+    },
+    {
+      "skeleton": [],
+      "degree": 2,
+      "count": 165358
+    },
+    {
+      "skeleton": [],
+      "degree": 3,
+      "count": 1050124
+    },
+    {
+      "skeleton": [],
+      "degree": 4,
+      "count": 2144861
+    },
+    {
+      "skeleton": [],
+      "degree": 5,
+      "count": 1806451
+    },
+    {
+      "skeleton": [],
+      "degree": 6,
+      "count": 710552
+    },
+    {
+      "skeleton": [],
+      "degree": 7,
+      "count": 137294
+    },
+    {
+      "skeleton": [],
+      "degree": 8,
+      "count": 12833
+    },
+    {
+      "skeleton": [],
+      "degree": 9,
+      "count": 517
+    },
+    {
+      "skeleton": [],
+      "degree": 10,
+      "count": 6
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 25
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 4390
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 73466
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 305176
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 457292
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 299207
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 93998
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 14555
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 1053
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 28
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 93
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 5880
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 54128
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 148543
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 162916
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 83166
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 21279
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 2767
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 172
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 4
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 448
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 18426
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 134596
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 315693
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 310416
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 146564
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 35409
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 4409
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 265
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 6
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 15
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 2063
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 30716
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 123181
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 190181
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 135878
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 49570
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 9649
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 998
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 51
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 108
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 13823
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 193100
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 717353
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 1004761
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 634874
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 198523
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 31785
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 2546
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 91
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 2875
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 110028
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 753119
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 1699641
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 1645689
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 779204
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 191454
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 24505
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 1526
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 36
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 12
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 2894
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 56474
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 262768
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 452178
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 355003
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 141556
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 30048
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 3384
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 188
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 4
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 879
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 97142
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 1230301
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 4268407
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 5775685
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 3623076
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 1148080
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 189164
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 15781
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 594
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 10,
+      "count": 7
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 9852
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 305212
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 1849963
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 3848647
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 3508559
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 1583376
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 373696
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 46191
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 2789
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 64
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 477
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 40227
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 455254
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 1528445
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 2106709
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 1403498
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 492132
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 94097
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 9712
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 501
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 10
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 812
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 44230
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 369348
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 949686
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 1009895
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 513344
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 133336
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 17842
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 1152
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 28
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 69
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 9960
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 156475
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 641600
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 1013627
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 746917
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 283281
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 57696
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 6273
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 338
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 10,
+      "count": 7
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 479
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 20493
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 157231
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 401750
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 448394
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 251391
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 76147
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 12816
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 1181
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 55
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 11,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 12
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 3361
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 76139
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 413813
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 841490
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 793879
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 389703
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 105674
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 16162
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 1368
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 59
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 11,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 461
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 38694
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 429800
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 1355155
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 1671624
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 947542
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 266683
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 37855
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 2552
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 64
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 2
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 461
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 10134
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 53536
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 102019
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 85992
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 35787
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 7747
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 874
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 48
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 2063
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 61432
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 369543
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 760724
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 679390
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 297420
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 67543
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 7984
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 459
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 10
+    }
+  ],
+  "two_port_after": [
+    {
+      "skeleton": [],
+      "degree": 1,
+      "count": 1188
+    },
+    {
+      "skeleton": [],
+      "degree": 2,
+      "count": 80048
+    },
+    {
+      "skeleton": [],
+      "degree": 3,
+      "count": 695616
+    },
+    {
+      "skeleton": [],
+      "degree": 4,
+      "count": 1687893
+    },
+    {
+      "skeleton": [],
+      "degree": 5,
+      "count": 1576308
+    },
+    {
+      "skeleton": [],
+      "degree": 6,
+      "count": 660836
+    },
+    {
+      "skeleton": [],
+      "degree": 7,
+      "count": 132720
+    },
+    {
+      "skeleton": [],
+      "degree": 8,
+      "count": 12679
+    },
+    {
+      "skeleton": [],
+      "degree": 9,
+      "count": 516
+    },
+    {
+      "skeleton": [],
+      "degree": 10,
+      "count": 6
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 1150
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 37065
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 207739
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 366567
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 264392
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 88167
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 14149
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 1044
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 28
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 15
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 2506
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 33889
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 112841
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 138550
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 75886
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 20296
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 2711
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 171
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 4
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 38
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 5918
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 72399
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 221625
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 254348
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 131834
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 33677
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 4327
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 264
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 6
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 619
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 16098
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 84811
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 153017
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 120262
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 46546
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 9388
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 990
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 51
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 16
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 5631
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 117765
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 536175
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 845767
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 575578
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 188618
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 31076
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 2529
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 91
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 1224
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 66718
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 554448
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 1404265
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 1462687
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 726704
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 184359
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 24087
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 1518
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 36
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 2
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 1227
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 33970
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 191950
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 371367
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 314291
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 131726
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 28904
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 3325
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 187
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 4
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 179
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 42503
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 759389
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 3181506
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 4824953
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 3255655
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 1081943
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 183788
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 15614
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 593
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 10,
+      "count": 7
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 2153
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 141332
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 1191974
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 2974125
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 3024425
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 1460776
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 359468
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 45519
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 2781
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 64
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 103
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 18331
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 288786
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 1162979
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 1789153
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 1277716
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 468353
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 92044
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 9648
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 501
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 10
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 179
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 20320
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 234678
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 721106
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 854365
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 465406
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 126448
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 17410
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 1143
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 28
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 2153
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 71525
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 409038
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 777448
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 640841
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 260673
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 55432
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 6179
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 337
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 10,
+      "count": 7
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 103
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 9249
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 98803
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 303430
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 378880
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 228165
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 72353
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 12528
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 1173
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 55
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 11,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 2
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 1328
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 42837
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 286762
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 665326
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 685170
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 356979
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 100767
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 15816
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 1359
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 59
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 11,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 39
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 12672
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 236223
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 967171
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 1384757
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 857974
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 254569
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 37217
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 2544
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 64
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 39
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 3377
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 30475
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 75574
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 73473
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 33134
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 7501
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 866
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 48
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 619
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 32196
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 254433
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 612068
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 601310
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 279276
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 65716
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 7920
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 459
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 10
+    }
+  ],
+  "extra_port_after": [
+    {
+      "skeleton": [],
+      "degree": 1,
+      "count": 1084
+    },
+    {
+      "skeleton": [],
+      "degree": 2,
+      "count": 67539
+    },
+    {
+      "skeleton": [],
+      "degree": 3,
+      "count": 566572
+    },
+    {
+      "skeleton": [],
+      "degree": 4,
+      "count": 1354363
+    },
+    {
+      "skeleton": [],
+      "degree": 5,
+      "count": 1261932
+    },
+    {
+      "skeleton": [],
+      "degree": 6,
+      "count": 534483
+    },
+    {
+      "skeleton": [],
+      "degree": 7,
+      "count": 110336
+    },
+    {
+      "skeleton": [],
+      "degree": 8,
+      "count": 11157
+    },
+    {
+      "skeleton": [],
+      "degree": 9,
+      "count": 511
+    },
+    {
+      "skeleton": [],
+      "degree": 10,
+      "count": 8
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 929
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 26473
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 139296
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 236005
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 165038
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 53628
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 8412
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 608
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 16
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 777
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 12672
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 47155
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 62120
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 35597
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 9800
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 1333
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 85
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 2
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 155
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 14593
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 148684
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 410343
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 436742
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 212715
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 51452
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 6293
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 367
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 8
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 623
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 16670
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 90069
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 164539
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 129453
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 49745
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 9907
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 1028
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 52
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 4
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 2177
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 54686
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 278689
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 475139
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 343035
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 118345
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 20571
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 1793
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 72
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 698
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 44033
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 405557
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 1096759
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 1184753
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 597201
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 151310
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 19533
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 1208
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 28
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 698
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 22075
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 136570
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 279723
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 244226
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 103599
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 22699
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 2584
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 143
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 180
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 43738
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 793405
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 3334195
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 5023449
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 3346383
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 1095658
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 183954
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 15617
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 609
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 10,
+      "count": 8
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 2128
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 156567
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 1390209
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 3557947
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 3652295
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 1760567
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 428834
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 53437
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 3200
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 72
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 25
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 8679
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 183862
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 880205
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 1514036
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 1163721
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 447199
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 90419
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 9619
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 502
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 10
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 180
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 20952
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 243870
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 745152
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 867820
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 460448
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 121093
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 16082
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 1017
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 10,
+      "count": 24
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 2128
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 79118
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 476762
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 931397
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 776822
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 316121
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 66699
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 7334
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 393
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 10,
+      "count": 8
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 25
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 4359
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 62413
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 227670
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 317922
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 206199
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 68619
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 12240
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 1165
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 55
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 11,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 722
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 25923
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 189653
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 473288
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 519623
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 286971
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 85438
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 14074
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 1263
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 57
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 11,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 155
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 28631
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 427202
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 1542413
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 2023673
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 1170915
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 6,
+      "count": 328032
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 7,
+      "count": 45611
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 8,
+      "count": 2981
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 9,
+      "count": 72
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 155
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 7019
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 43278
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 77846
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 55341
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 6,
+      "count": 17890
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 7,
+      "count": 2760
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 8,
+      "count": 195
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 9,
+      "count": 5
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 623
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 33340
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 270207
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 658156
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 647265
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 298470
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 7,
+      "count": 69349
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 8,
+      "count": 8224
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 9,
+      "count": 468
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 10,
+      "count": 10
+    }
+  ],
+  "small_identity_checks": 110,
+  "scope": "root star and its unique in-port fixed; permitted corrections touch declared old ports; no neutral count return or complete ternary closure claimed"
+}

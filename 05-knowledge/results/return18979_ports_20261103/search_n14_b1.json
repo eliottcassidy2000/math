@@ -1,0 +1,10 @@
+{
+  "status": "FINITE_EXACT_ABSENT_FROM_DECLARED_BANK",
+  "parent_order": 14,
+  "budget": 1,
+  "bank_size": 46368,
+  "examined": 46368,
+  "seed": 18979,
+  "hit": null,
+  "scope": "classified parent bank at specified order/budget; stop at first positive batch; no all-order absence or native-cost minimality claim"
+}

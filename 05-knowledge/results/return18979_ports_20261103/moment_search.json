@@ -1,0 +1,29 @@
+{
+  "status": "FINITE_EXACT_ABSENCE_IN_SPECIFIED_ONE_ENTRY_BANKS",
+  "checks": 88,
+  "banks": [
+    {
+      "parent_order": 14,
+      "class_count": 46368,
+      "examined": 46368
+    },
+    {
+      "parent_order": 15,
+      "class_count": 121393,
+      "examined": 121393
+    },
+    {
+      "parent_order": 16,
+      "class_count": 317811,
+      "examined": 317811
+    },
+    {
+      "parent_order": 17,
+      "class_count": 832040,
+      "examined": 832040
+    }
+  ],
+  "hit": null,
+  "source_formula": "polarized_path_calculus_20261103/explore.py:funnel_poly; selective integer evaluation, no polynomial interpolation",
+  "scope": "positive finite search or listed one-entry banks only; no two-entry or all-order absence claim"
+}
