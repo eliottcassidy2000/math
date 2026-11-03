@@ -100,6 +100,22 @@ minima, derive the correlated birth law, and give an inactive-source
 Boolean decoder. No global literature priority is claimed for the
 group-action, probability or finite-automaton mechanisms.
 
+During the final push, commits072cd911c3,e6aa4efc90,d8c58bd01e arrived.
+Their source changes were read and preserved; the single ledger conflict
+was resolved by retaining both complete correction entries. The
+[two-selector packet](../two_selector_boolean_20261102/CARRIER.md)
+independently agrees at10455 and proves an all-size formula for C,R.
+Its15874 result adds a second marking S, whereas our16149 result adds
+converse-and-reversal rho. Its [joint repair laws](../two_selector_boolean_20261102/JOINT_REPAIRS.md)
+show that all pair marginals and the target mean can still miss target
+support; this complements the present two-port correlation law without
+extending that law beyond its uniform-old-source hypothesis.
+The [Session143 synthesis](../session143_magic_square_cyclic_bridges_20261103/SYNTHESIS.md)
+supplies an explicitly defined cyclic group-algebra operator bridge and
+retains the unresolved Hecke correspondence. No modular bridge is inferred
+from the pasted table. These incoming conclusions are cited; their new
+computations are not claimed as independently replayed in this packet.
+
 ## Scope limits
 
 The complete target17 inverse is for six vertices. The carrier

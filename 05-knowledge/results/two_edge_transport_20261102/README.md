@@ -21,6 +21,11 @@ single-vertex relocations force all32,768 orientations. Even legality
 alone separates them. This full separation is verified through seven,
 not proved at every size.
 
+Concurrent work supplies an [all-size formula for the restricted C,R
+carrier](../two_selector_boolean_20261102/CARRIER.md), independently matching
+10455. The richer relocation result here shows the cost of enlarging that
+operation language.
+
 The G25-to-G26 birth calculation independently recovers9,184 active new
 orientations from inactive old sources. It gives an exact two-port
 distribution and a conditional-energy decoder that preserves all old bits

@@ -9,14 +9,15 @@
     "05-knowledge/results/prime_inverse_ports_20261102/MOVES.md": "d8b3c8d381d586c9142cd054168b3db35c2261d69d48260b89d1b75f598f0da7",
     "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
     "05-knowledge/results/session142_tournament_odd_spectrum_20261102/minimal_gap/PROOF.md": "243d500c1d726c6ca66f766d6ce041dfc7a370196cc6b39563a43f22a1bb34db",
+    "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/SYNTHESIS.md": "0aea897efd77df586a6bcb52f8138a671d9b30e99e46b5b43262483c719c4bef",
     "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/padic-lifts/PROOF.md": "8010f2996a695d420daa7b9e7296ccd091156352cdd069bf51f51e7bd4519149",
     "05-knowledge/results/session57_square_sum_magic_paths_20261025/biclique-bridge/THEOREM.md": "3abf8dcf8c863c199cb21fd8715776bc27faa24e39008964adcdfc4e1b0eaaf5",
     "05-knowledge/results/two_edge_transport_20261102/ARITHMETIC_AND_SOURCE_AUDIT.md": "e440c50fd8c87777f5ed89f2c47d046bbbb8bef2ee7615fc36ebabd403b6b220",
-    "05-knowledge/results/two_edge_transport_20261102/AUDIT.md": "fac7703ba17f425f81c89df7737d0f7a2190a47335e02435bc5578276aed26b8",
+    "05-knowledge/results/two_edge_transport_20261102/AUDIT.md": "581994425b6e6a712793d3bae259febb7c4a7a96579d654672b57c7e77c35c32",
     "05-knowledge/results/two_edge_transport_20261102/BIRTH_AND_MOMENTS.md": "aa552aea5255703b104b69d0633677fe225c86c6fe835b1b3903cec5df3e872a",
-    "05-knowledge/results/two_edge_transport_20261102/ESCAPES_AND_CARRIERS.md": "2300e08c2a4b21e52d7b1e0b4e6c7abd539e95368a1461fe91d6a1d6eecf4374",
+    "05-knowledge/results/two_edge_transport_20261102/ESCAPES_AND_CARRIERS.md": "7afc3df5c1e4e7a2c5b758802bf7d2fb81e714734b0b3423a43d9bea4922b749",
     "05-knowledge/results/two_edge_transport_20261102/HANDOFF.md": "5638cdb87307def82de4be96a62a73ab092ec303fa253ea675c7b308a7207bd2",
-    "05-knowledge/results/two_edge_transport_20261102/README.md": "28ecb0a4a3618929d096934ce29548c1aac977c9238e14687b332b000f683930",
+    "05-knowledge/results/two_edge_transport_20261102/README.md": "ece556559d0c991e9edf4194999618f3ca6c1d7afd62c89f3d9e16d0d3b26618",
     "05-knowledge/results/two_edge_transport_20261102/birth_scout.json": "4503877d5e3ed2f751955ef197072fb4552962cb23521a0309e8ed4b8300a54e",
     "05-knowledge/results/two_edge_transport_20261102/birth_scout.py": "33ebed4d09fae23373d70d165c484f6f0c3bd84f728a696103da60932a667411",
     "05-knowledge/results/two_edge_transport_20261102/carrier_run.txt": "20dc1ffc968be6135311dfb24599e9dc82377a66d7d99185d371015423eebe0b",
@@ -28,9 +29,11 @@
     "05-knowledge/results/two_edge_transport_20261102/escape_scout.json": "193b9d371df2fcf00d4cc971758cfd6cbd8dde1ef26d1e6cacd853276fe73190",
     "05-knowledge/results/two_edge_transport_20261102/pasted_inspiration.txt": "926dfcdba7e2f589be509e162a758630029d71f9d27337b709c70809855c30b2",
     "05-knowledge/results/two_edge_transport_20261102/scout.py": "cdf81eea6e9ad2ea40d81a23554afdcd2360e9b747244c42e1eca446c63a5ee8",
-    "05-knowledge/results/two_edge_transport_20261102/seal.py": "a9758579e27fd4fa8462a74bfbd20b8ef87e8ac33c9d1e958be3423951f5a265",
+    "05-knowledge/results/two_edge_transport_20261102/seal.py": "4c83a02ff46f4d7d6b233b881a52724466f3c4641264fbbbcd2a6c12d7dc6c66",
     "05-knowledge/results/two_edge_transport_20261102/verification.json": "36a77920ecefabe01d6e5a8c4b9a39bd18ea4f0929e56658d24738f20e3c6912",
     "05-knowledge/results/two_edge_transport_20261102/verification_optimized.json": "36a77920ecefabe01d6e5a8c4b9a39bd18ea4f0929e56658d24738f20e3c6912",
-    "05-knowledge/results/two_edge_transport_20261102/verify.py": "08637793eca1832b5fffac5122d02ef0b3371933d2675191feecad97fb09df87"
+    "05-knowledge/results/two_edge_transport_20261102/verify.py": "08637793eca1832b5fffac5122d02ef0b3371933d2675191feecad97fb09df87",
+    "05-knowledge/results/two_selector_boolean_20261102/CARRIER.md": "4e603929924cc9bbee397064abe6c90daa0d6fbc81b2b56f65aed19bba1c3136",
+    "05-knowledge/results/two_selector_boolean_20261102/JOINT_REPAIRS.md": "c6057316841540c392a665a34dfc2a84e4093bdc9c33457f10474220139766be"
   }
 }

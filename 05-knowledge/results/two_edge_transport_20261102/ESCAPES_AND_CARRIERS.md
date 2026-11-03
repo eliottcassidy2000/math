@@ -185,6 +185,17 @@ Iterative partition refinement produces the coarsest such congruence:
 | C, guarded R, and rho | 16149 |
 | C and every named single-vertex relocation and its inverse | 32768 |
 
+The concurrent [selected-marking proof](../two_selector_boolean_20261102/CARRIER.md)
+now gives an all-size formula for the second row's language. Its states
+retain (H,H after C), a phase recording membership in D, C(D), or neither,
+and one conditional response after R and C. Here D is the legality domain
+of the specified nonidentity involutive marking. D and C(D) are disjoint,
+which closes the transition formula. The same packet independently
+obtains10455 at n7. Its second marking S gives15874 states; S is a
+different operation from the converse-and-reversal rho used here, so that
+number is not in conflict with16149. These all-size restricted-carrier
+and second-selector conclusions are CITED, not new results of this packet.
+
 A right relocation moves the vertex at position i to position j, j>=i+2,
 retaining the relative order of all other vertices; it is legal iff the
 resulting word is a Hamiltonian path. Each inverse is also a separately
