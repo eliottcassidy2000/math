@@ -1,0 +1,19 @@
+{
+  "hash_basis": "UTF-8 text with universal-newline LF normalization",
+  "sha256": {
+    "AUDIT.md": "3574b805d82a578d28f13051ffc2c8f635202d87c03cf64be84ce1e3b97f63ff",
+    "COVERAGE.md": "8e4bf83338835edef0e958acc81b26c36665cbf9fb0b1dc280b10169f719f711",
+    "README.md": "a52b2965a6a98a98ff5b490eb22b50b39c1bb62f3e60d2479df88c378f9f7e0b",
+    "RECOVERY.md": "e96b8b7f24b4cc9fcc4c14f9bae57ec992e8005cd7d299429b7b92e3377a9724",
+    "THEORY.md": "701bd92c8b6a60d4f1ee8af2c58036df670d35673cd4dc2bf2b88d8087304da3",
+    "atom_atlas.json": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba",
+    "coverage.json": "20df5c951233930a12a51e6ccbca4640b390871364052357e9aa35cd91d12664",
+    "exclusions.json": "f95a65197fe0ec619850fa1f60755baafcaeff82983d6abb2ac42336ebb0f9b5",
+    "extension.py": "4e44711ea7d12353eb56ec687a6f8133583a9399814511ea8c24d117b37edd31",
+    "receipt.json": "fe0566d3ccccf7c6c091c73a7fd33a86fa9f99927e845e6ca09ac9d6c85d4fc3",
+    "seal.py": "fe22d0d7e5c8dd1b7d3d5b7862433d3d165bfa51c54dad0f898bdab1c1002583",
+    "search.py": "e1609998818a815be7abc4da5327a8afc467a51fe7b5e53cb6eb39dee0648afd",
+    "transfer.py": "5209ba6934c7180c1b97a23b717dd1f8799213a5d2f46e7086af3b7f4ca3936a",
+    "verify.py": "0853aaf1de8b94b4ad5295e23f6d80fa918c764d1336d639fc4bcdc4e06b8361"
+  }
+}
