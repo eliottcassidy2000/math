@@ -1,0 +1,90 @@
+[
+  {
+    "source": 4373,
+    "limit_exclusive": 30,
+    "mode": "one-neighbour",
+    "log": [
+      "bounded end examined 8260 scalar hits 54 found 0 1"
+    ]
+  },
+  {
+    "source": 4375,
+    "limit_exclusive": 30,
+    "mode": "one-neighbour",
+    "log": [
+      "bounded end examined 12042 scalar hits 181 found 1 0"
+    ]
+  },
+  {
+    "source": 4379,
+    "limit_exclusive": 30,
+    "mode": "one-neighbour",
+    "log": [
+      "bounded end examined 4115 scalar hits 67 found 0 0"
+    ]
+  },
+  {
+    "source": 4381,
+    "limit_exclusive": 25,
+    "mode": "one-neighbour",
+    "log": [
+      "bounded end examined 2455 scalar hits 51 found 0 0"
+    ]
+  },
+  {
+    "source": 4393,
+    "limit_exclusive": 25,
+    "mode": "one-neighbour",
+    "log": [
+      "bounded end examined 9035 scalar hits 167 found 0 0"
+    ]
+  },
+  {
+    "source": 4399,
+    "limit_exclusive": 25,
+    "mode": "one-neighbour",
+    "log": [
+      "bounded end examined 10363 scalar hits 60 found 0 0"
+    ]
+  },
+  {
+    "source": 4373,
+    "limit_exclusive": 30,
+    "mode": "opposite birth direction, capacity-one guardian",
+    "log": [
+      "bounded end examined 8260 scalar hits 24 found 0 0"
+    ]
+  },
+  {
+    "source": 4375,
+    "limit_exclusive": 30,
+    "mode": "opposite birth direction, capacity-one guardian",
+    "log": [
+      "bounded end examined 12042 scalar hits 66 found 0 0"
+    ]
+  },
+  {
+    "source": 4379,
+    "limit_exclusive": 30,
+    "mode": "opposite birth direction, capacity-one guardian",
+    "log": [
+      "bounded end examined 4115 scalar hits 15 found 0 0"
+    ]
+  },
+  {
+    "source": 4373,
+    "limit_exclusive": 10,
+    "mode": "corrected clone-splice",
+    "log": [
+      "bounded end examined 4747 intermediate hits 1 found 0 0"
+    ]
+  },
+  {
+    "source": 4375,
+    "limit_exclusive": 10,
+    "mode": "corrected clone-splice",
+    "log": [
+      "bounded end examined 12499 intermediate hits 0 found 0 0"
+    ]
+  }
+]

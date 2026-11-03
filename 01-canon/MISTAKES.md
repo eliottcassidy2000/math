@@ -18,6 +18,24 @@ these arithmetic actions to tournament moves without an actual compiler.
 See [boundary-carry connections](../05-knowledge/results/boundary_carry_returns_20261103/CONNECTIONS.md)
 and its exact arithmetic receipt.
 
+## 2026-11-03 — clone-splice inversion must retain the constant exponential mode
+
+**Draft/search correction, caught before publishing this packet:** the first
+`six_output_return_20261103/clone_splice.cpp` filter treated the dyadic ray
+`A*2^(m-1)+B` as an arithmetic progression when recovering its predecessor.
+It searched for intermediate H=`6h-3h2+c=3B+c`, and wrongly inferred an
+obstruction from a negative intercept. No positive witness or theorem used
+that filter; its negative prefixes have been discarded.
+
+**Minimal mechanism:** the values 1,3,7 satisfy `f3=3f2-2f1`, not
+`f3=2f2-f1`. The correct intermediate base value for a clone-splice ternary
+return is `(9h-3h2)/2+c=3A/2+3B+c`. If A=2c2, its Hamilton parity forces
+c2 even. This gives a valid route-specific obstruction for the 4379/4381
+heads, while negative B alone gives none. The repaired code, all-size
+identity checks and derivation are in
+[RETURN_BARRIER R4](../05-knowledge/results/six_output_return_20261103/RETURN_BARRIER.md).
+The earlier six clone returns and their fourth-size audits are unaffected.
+
 ## 2026-11-03 — a sole-in-neighbor birth needs the starting-path correction
 
 **Draft candidate, not a retracted theorem:** for a new vertex w with only

@@ -5,6 +5,8 @@ searches.** Same-agent proof review, Python and C++ implementations, and
 independent path enumeration. The complete odd Hamilton-path spectrum and a
 source bank closed under repeated `3H+2 / 3H+4` remain **OPEN**.
 
+Follow-up: [six output inputs, cycle guardians and the ternary carry](../six_output_return_20261103/README.md) supplies two further uniform mixed branches and proves why a finite dyadic bank cannot close. The full physical return obligation remains open.
+
 Continuation of [the joint-clock packet](../sheet_return_compiler_20261103/README.md).
 Input pin `1f357b02dfc5`; incoming Session168 is discussed in [AUDIT.md](AUDIT.md).
 

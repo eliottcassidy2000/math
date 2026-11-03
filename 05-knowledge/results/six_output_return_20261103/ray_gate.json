@@ -1,0 +1,301 @@
+{
+  "checks": 11664,
+  "inputs": {
+    "1457": [
+      1188,
+      269
+    ],
+    "1459": [
+      1846,
+      -387
+    ],
+    "1463": [
+      1240,
+      223
+    ],
+    "1465": [
+      1076,
+      389
+    ]
+  },
+  "outputs": [
+    [
+      1457,
+      2,
+      3564,
+      809
+    ],
+    [
+      1457,
+      4,
+      3564,
+      811
+    ],
+    [
+      1459,
+      2,
+      5538,
+      -1159
+    ],
+    [
+      1459,
+      4,
+      5538,
+      -1157
+    ],
+    [
+      1463,
+      4,
+      3720,
+      673
+    ],
+    [
+      1465,
+      4,
+      3228,
+      1171
+    ]
+  ],
+  "intersections": [
+    {
+      "source": 1457,
+      "offset": 2,
+      "target_input": 1457,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 2,
+      "target_input": 1459,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 2,
+      "target_input": 1463,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 2,
+      "target_input": 1465,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 4,
+      "target_input": 1457,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 4,
+      "target_input": 1459,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 4,
+      "target_input": 1463,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1457,
+      "offset": 4,
+      "target_input": 1465,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 2,
+      "target_input": 1457,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 2,
+      "target_input": 1459,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 2,
+      "target_input": 1463,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 2,
+      "target_input": 1465,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 4,
+      "target_input": 1457,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 4,
+      "target_input": 1459,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 4,
+      "target_input": 1463,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1459,
+      "offset": 4,
+      "target_input": 1465,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1463,
+      "offset": 4,
+      "target_input": 1457,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1463,
+      "offset": 4,
+      "target_input": 1459,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1463,
+      "offset": 4,
+      "target_input": 1463,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1463,
+      "offset": 4,
+      "target_input": 1465,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1465,
+      "offset": 4,
+      "target_input": 1457,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1465,
+      "offset": 4,
+      "target_input": 1459,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1465,
+      "offset": 4,
+      "target_input": 1463,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    },
+    {
+      "source": 1465,
+      "offset": 4,
+      "target_input": 1465,
+      "result": {
+        "infinite": false,
+        "shift": null,
+        "points": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "INVALID FILTER: not evidence against a clone-splice return",
+  "reason": "Used 2f2-f3 instead of (3f2-f3)/2 for a dyadic ray; see MISTAKES and R4.",
+  "records": [
+    {
+      "source": 4373,
+      "limit_exclusive": 20,
+      "mode": "clone-splice",
+      "log": [
+        "bounded end examined 13003 intermediate hits 0 found 0 0"
+      ]
+    },
+    {
+      "source": 4375,
+      "limit_exclusive": 20,
+      "mode": "clone-splice",
+      "log": [
+        "bounded end examined 24049 intermediate hits 0 found 0 0"
+      ]
+    },
+    {
+      "source": 4393,
+      "limit_exclusive": 20,
+      "mode": "clone-splice",
+      "log": [
+        "bounded end examined 15308 intermediate hits 1 found 0 0"
+      ]
+    },
+    {
+      "source": 4399,
+      "limit_exclusive": 20,
+      "mode": "clone-splice",
+      "log": [
+        "bounded end examined 34566 intermediate hits 4 found 0 0"
+      ]
+    }
+  ]
+}

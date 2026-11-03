@@ -1,0 +1,182 @@
+{
+  "scope": "arithmetic words and formal integer response modules; not universal physical branch realization",
+  "levels": [
+    {
+      "length": 0,
+      "integer_carries": 1,
+      "mod7_carries": 1
+    },
+    {
+      "length": 1,
+      "integer_carries": 2,
+      "mod7_carries": 2
+    },
+    {
+      "length": 2,
+      "integer_carries": 4,
+      "mod7_carries": 4
+    },
+    {
+      "length": 3,
+      "integer_carries": 8,
+      "mod7_carries": 7
+    },
+    {
+      "length": 4,
+      "integer_carries": 16,
+      "mod7_carries": 7
+    },
+    {
+      "length": 5,
+      "integer_carries": 32,
+      "mod7_carries": 7
+    },
+    {
+      "length": 6,
+      "integer_carries": 64,
+      "mod7_carries": 7
+    },
+    {
+      "length": 7,
+      "integer_carries": 128,
+      "mod7_carries": 7
+    },
+    {
+      "length": 8,
+      "integer_carries": 256,
+      "mod7_carries": 7
+    },
+    {
+      "length": 9,
+      "integer_carries": 512,
+      "mod7_carries": 7
+    }
+  ],
+  "carry_code": "C+1 has ternary digits 1 followed by 0/2; k is its digit length minus one. Binary heap address replaces those suffix digits by 0/1.",
+  "splice_parity_checks": 128,
+  "splice_identity_checks": 448,
+  "first_phase_collision": {
+    "words": [
+      [
+        2,
+        4,
+        2
+      ],
+      [
+        4,
+        2,
+        4
+      ]
+    ],
+    "carries": [
+      32,
+      46
+    ]
+  },
+  "formal_group_size": 42,
+  "padding_matrix": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      2,
+      0
+    ],
+    [
+      0,
+      3,
+      3
+    ]
+  ],
+  "empty_slot_basis": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      1,
+      0
+    ],
+    [
+      3,
+      3,
+      1
+    ]
+  ],
+  "padding_smith": [
+    {
+      "t": 1,
+      "smith": [
+        1,
+        1,
+        6
+      ]
+    },
+    {
+      "t": 2,
+      "smith": [
+        1,
+        1,
+        36
+      ]
+    },
+    {
+      "t": 3,
+      "smith": [
+        1,
+        1,
+        216
+      ]
+    },
+    {
+      "t": 4,
+      "smith": [
+        1,
+        1,
+        1296
+      ]
+    },
+    {
+      "t": 5,
+      "smith": [
+        1,
+        1,
+        7776
+      ]
+    },
+    {
+      "t": 6,
+      "smith": [
+        1,
+        1,
+        46656
+      ]
+    },
+    {
+      "t": 7,
+      "smith": [
+        1,
+        1,
+        279936
+      ]
+    },
+    {
+      "t": 8,
+      "smith": [
+        1,
+        1,
+        1679616
+      ]
+    }
+  ],
+  "evaluation_smith": [
+    1,
+    2,
+    6
+  ]
+}

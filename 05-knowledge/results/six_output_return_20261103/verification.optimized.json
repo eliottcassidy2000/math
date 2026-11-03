@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+      "step": "ray_gate.py",
+      "output": [
+        "exact dyadic gate 11664 nonempty []"
+      ]
+    },
+    {
+      "step": "port_rank.py",
+      "output": [
+        "port rank 5405 {'T': (16, 1, 3, 7, 14), 'q': 2, 'guardian': 0, 'matching': [(0, 4)], 'coefficients': [0, 9, 4, 0, 0, 0]}"
+      ]
+    },
+    {
+      "step": "carry.py",
+      "output": [
+        "carry and lattice checks passed"
+      ]
+    },
+    {
+      "step": "substitution.py",
+      "output": [
+        "arbitrary child source_C3 [3, 18, 36] six literal squares passed",
+        "substitution audit 954ea8ac7e2cfbe02f15428938440021d27ff8c1b0628c9f03db3e71c959809e [{'flip': False, 'Q': [462915, 9011898, 80614764], 'triangle_matching_ranks': [4, 5, 5, 5, 4, 5, 5, 5, 4, 5, 5, 5]}, {'flip': True, 'Q': [462915, 9011898, 80614764], 'triangle_matching_ranks': [4, 5, 5, 5, 4, 5, 5, 5, 4, 5, 5, 5]}]"
+      ]
+    },
+    {
+      "step": "return_audit.py",
+      "output": [
+        "next uniform return 4375 2 13127",
+        "return audit abad1d12e7652012e356cc35ea0365b8e692ce89f072c5718cf36801c89958da"
+      ]
+    }
+  ],
+  "hashes": {
+    "ray_gate.json": "83bcf20f660c7863db5e5d06789c3ada9e4195555e50caa401ccb3c33634bab7",
+    "port_rank.json": "55be57bd6ec20d0af40bc6bad2e44eb609b391ad66d8b54d0f39b2d97bc01f15",
+    "carry.json": "38afc85b50ef32fc859f4b243b68caf3a4a97d1dd2a4c02a1ef13cfad04b59f5",
+    "substitution.json": "82d39bb76c7080013c82219154be7a6bea0e580b10b11d0001081ee10128a76f",
+    "return_audit.json": "e2fa96a3f66a7ad43cb66399e129ce700a5cb753d0778795d27949d70645b2a4"
+  }
+}

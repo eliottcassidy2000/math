@@ -1,0 +1,150 @@
+{
+  "checks": 5405,
+  "minimum_cycle_guard_checks": 5405,
+  "histogram": [
+    {
+      "n": 1,
+      "rank": 0,
+      "count": 1
+    },
+    {
+      "n": 2,
+      "rank": 0,
+      "count": 4
+    },
+    {
+      "n": 3,
+      "rank": 0,
+      "count": 18
+    },
+    {
+      "n": 3,
+      "rank": 1,
+      "count": 6
+    },
+    {
+      "n": 4,
+      "rank": 0,
+      "count": 112
+    },
+    {
+      "n": 4,
+      "rank": 1,
+      "count": 144
+    },
+    {
+      "n": 5,
+      "rank": 0,
+      "count": 1080
+    },
+    {
+      "n": 5,
+      "rank": 1,
+      "count": 3200
+    },
+    {
+      "n": 5,
+      "rank": 2,
+      "count": 840
+    }
+  ],
+  "expanded_port": {
+    "T": [
+      16,
+      1,
+      3,
+      7,
+      14
+    ],
+    "q": 2,
+    "guardian": 0,
+    "matching": [
+      [
+        0,
+        4
+      ]
+    ],
+    "coefficients": [
+      0,
+      9,
+      4,
+      0,
+      0,
+      0
+    ]
+  },
+  "six_inputs": [
+    {
+      "head": 4373,
+      "port": 0,
+      "guardian": 2,
+      "degree": 1,
+      "matching": [
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "head": 4375,
+      "port": 0,
+      "guardian": 2,
+      "degree": 1,
+      "matching": [
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "head": 4379,
+      "port": 0,
+      "guardian": 3,
+      "degree": 1,
+      "matching": [
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "head": 4381,
+      "port": 0,
+      "guardian": 3,
+      "degree": 1,
+      "matching": [
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "head": 4393,
+      "port": 7,
+      "guardian": 5,
+      "degree": 11,
+      "matching": [
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "head": 4399,
+      "port": 6,
+      "guardian": 7,
+      "degree": 1,
+      "matching": [
+        [
+          7,
+          8
+        ]
+      ]
+    }
+  ]
+}
