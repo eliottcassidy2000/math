@@ -106,6 +106,21 @@ Fetched `7102ed8e69` before publication and read the relevant new proofs.
 - Incoming MISTAKE-702 repairs an unrelated prime-neighbor 'iff' and credit
   omissions. No affected assertion is used as a dependency here.
 
+A second fetch brought `5ffac37a51` before publication. Session148 now has
+an explicit [fundamental-cycle proof](../session148_square_sum_20261103/cycle_basis/FUNDAMENTAL_CYCLES.md)
+of the same standard cycle-basis/path-cube algebra used here; this overlap
+is credited rather than treated as a separate discovery. Its
+[Pell plateau proof](../session148_square_sum_20261103/pell_plateaus/PELL_PLATEAUS.md)
+establishes the three-vertex count plateau at every cancellation center,
+including 8/9/10 and 24/25/26. This reinforces our distinction between the
+count plateau and the changing root-labelled parents. Its
+[shell bridge](../session148_square_sum_20261103/shell_bridge/README.md)
+matches the user's component sizes 6/4/5 to the corresponding sporadic
+prime-support shells, then disproves graph identification: the source has
+12 edges and three components, while the 15-prime target is a connected
+14-edge tree. The present 6/9 bipartition also rules out a Hamilton path
+in that target. These are compatible, explicitly typed obstructions.
+
 ## Strongest next questions
 
 1. Extend the same exact backward compiler one more birth, retaining dormant

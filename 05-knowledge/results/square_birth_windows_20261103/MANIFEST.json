@@ -9,8 +9,8 @@
       "sha256_lf": "945e2843b4b5df3f4b2f5f862bc1c84121a63bbe5e085e318fde2105f311d501"
     },
     "GROWTH.md": {
-      "bytes_lf": 9028,
-      "sha256_lf": "170436b999c37adcc09ff90353d0ba604a9b478c4c87256d5c9b582d52bd48ad"
+      "bytes_lf": 9217,
+      "sha256_lf": "89d84ca310c6aaf2bfd147a2b7c66e05040d9a09d02d492e0caa965e0b7de7ba"
     },
     "LEDGER.md": {
       "bytes_lf": 1527,
@@ -21,8 +21,8 @@
       "sha256_lf": "bf3dc2d16d6f061215e1a3b895c749ceb73168f2aa35a6ca18b2058860da58ef"
     },
     "RECOVERY.md": {
-      "bytes_lf": 8150,
-      "sha256_lf": "04a5b21899b73509137ad41a626cf5df61e45b466c5f4a5d9cdb9c2a7fd1829a"
+      "bytes_lf": 9194,
+      "sha256_lf": "86b4a4974042e74d3bf88c9470f77f18007346665f5fc53a82fec868a4a4663a"
     },
     "birth.json": {
       "bytes_lf": 844900,
@@ -61,8 +61,8 @@
       "sha256_lf": "6962aecb32ea14af051bb2f6aa3ce41593f84c1f71b88544e8f756b242f0fb9d"
     },
     "sources.json": {
-      "bytes_lf": 4807,
-      "sha256_lf": "2be4897b131f6383b922cdd1ade19d3355cf4ac62b630c499e286ffec8832a84"
+      "bytes_lf": 5771,
+      "sha256_lf": "08bccd79516dd5f495f88ebda15bb106d83f0cb5b2c12849efef02e8a83f1eae"
     },
     "verify.py": {
       "bytes_lf": 1274,

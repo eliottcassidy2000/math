@@ -90,6 +90,24 @@
       "git_blob": "92fb8fa5a9dcefe452ae52e461ff1915fe996ada",
       "path": "05-knowledge/results/hourglass_triangular_dynamics_20261103/README.md",
       "sha256_blob": "befd7af39b3000e28c05a6ef014e797731de4a1ab8ad0fcaf32dc925cb8b770c"
+    },
+    {
+      "commit": "5ffac37a51f16f2fefb5bf83bc8deabe8c0ef4ed",
+      "git_blob": "9741786c728adae5f86b7ad447ec519d34e7d908",
+      "path": "05-knowledge/results/session148_square_sum_20261103/cycle_basis/FUNDAMENTAL_CYCLES.md",
+      "sha256_blob": "55d477b7d0ae9d4227b770f4ceefc531c00db99647f7f11bc9068d1bfb973f64"
+    },
+    {
+      "commit": "5ffac37a51f16f2fefb5bf83bc8deabe8c0ef4ed",
+      "git_blob": "d1986ca79c6a7241769474f9bbce144f660c44d7",
+      "path": "05-knowledge/results/session148_square_sum_20261103/pell_plateaus/PELL_PLATEAUS.md",
+      "sha256_blob": "dbb4a58be32ff1698a1e090620cc13dc136dc2038abccb65c4495fd959c72252"
+    },
+    {
+      "commit": "5ffac37a51f16f2fefb5bf83bc8deabe8c0ef4ed",
+      "git_blob": "e7b17d3a706b5c5a45cb8c20753959dbfa7fd2b7",
+      "path": "05-knowledge/results/session148_square_sum_20261103/shell_bridge/README.md",
+      "sha256_blob": "9ddca16feb15ade0bd110a8a34560cdf332867e4a71a5e136b86bb8bddb3b1e8"
     }
   ]
 }

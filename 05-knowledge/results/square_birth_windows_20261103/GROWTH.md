@@ -69,6 +69,8 @@ of dimension m-n+1. Its coordinates are the unused edges. Different path
 cubes may overlap, so summing their sizes counts incidences, not distinct
 orientations. A basis for one path does not identify bases for all paths.
 This is standard spanning-tree cycle algebra applied to the current guard.
+The concurrent [Session148 cycle-basis packet](../session148_square_sum_20261103/cycle_basis/FUNDAMENTAL_CYCLES.md)
+gives the same algebra explicitly and checks these graphs independently.
 
 **Proposition (any finite graph).** Directed Hamilton paths are in bijection
 with acyclic orientations that admit a Hamilton path: orient every edge
