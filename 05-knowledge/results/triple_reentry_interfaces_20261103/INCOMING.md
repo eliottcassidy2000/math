@@ -119,7 +119,7 @@ possible; an unrestricted finite linear compression is not a fresh target.
 The clean close-out fetch brought revision `8e1fdebbdc`. Its
 [ready-repair theorem](../lambda_emergent_20261103/READY_REPAIR.md) proves
 that every strong one- or two-ready tournament is induced-R5-free, and hence
-no induced extension of a source containing R5 can gain such a root.
+no strong induced extension of a source containing R5 can gain such a root.
 We checked the six actual root witnesses: the65 source contains the regular
 five-vertex tournament on labels `(0,1,2,3,6)`. Each vertex of this induced
 copy starts exactly three of its Hamilton paths, independently enumerated.
@@ -127,7 +127,7 @@ None of the other five printed seeds contains R5.
 
 Therefore the difficulty at this65 witness is stronger than its finite
 minimum slack4: **births alone, of any depth and with any re-marking, cannot
-make it one- or two-ready.** To use that kind of nonzero-offset preparation,
+make a strong final source one- or two-ready.** To use that kind of nonzero-offset preparation,
 one must change an old edge, delete an old vertex, or supply another65
 witness. The67 witness has no R5 but still has minimum slack5, so absence of
 this obstruction does not certify readiness. This is an actual retained-source

@@ -111,7 +111,7 @@ forest and physical source operations.
 
 **Additional decisive hostile from the last incoming merge:** the literal65
 seed contains an induced regular five-vertex tournament on0,1,2,3,6. The
-incoming ready-repair theorem excludes one/two-readiness in every induced
+incoming ready-repair theorem excludes one/two-readiness in every strong induced
 extension. For this source, switch to an old-edge change or a different
 certified65 witness; a deeper birth-only search is already ruled out.
 The67 seed is R5-free but has minimum slack5, retaining a separate boundary.
