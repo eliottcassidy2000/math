@@ -6,6 +6,12 @@ future-H observer, but it permanently misses37 and133. Enlarging to every
 source SCC of size<=5 still permanently misses47. Do not restart the bounded
 order scans or infer a global theorem from the near-complete finite range.
 
+**Integrated update:** the concurrent seam packet already supplies the
+six-vertex repairs and a fixed65-symbol bank covering all allowed odds
+through30000. Our960-matrix transport and eight literal repairs pass.
+Our universal block proof resolves its arbitrary-size closure question;
+the all-value inverse remains OPEN. See INCOMING.md before choosing work.
+
 ## Inheritance pass and concept board
 
 - Closest proved mechanism: the seven-symbol actual complement language in
@@ -55,13 +61,14 @@ Explicit connection maps:
 
 ## Next decisive test
 
-Compile actual strong six-vertex source charts via (G4), starting with those
-whose K image or short surrounding word yields47. The current proof shows
-that size6 is necessary within the source-SCC architecture, not sufficient.
-After repairing47, test the existing missing83,103,491,709,833,3227,4619
-against the enlarged closure. More finite coverage alone is not the goal:
-look for an infinite, decoded family of block matrices or a legal second
-backward bridge whose inverse covers a whole prime/7p lane.
+The strong6 atlas and eight finite repairs have now arrived from concurrent
+work; do not repeat them. The next target is a guarded inverse covering
+the prime/7p fibres of the fixed65-symbol bank, or a decisive counterexample
+outside its30000 holdout. Any descent must decrease a natural-number measure
+and produce an actual predecessor, not just a positive triple in the cone.
+Alternatively, find a source-dependent family of larger blocks or a legal
+second backward bridge whose decoded inverse covers an infinite lane.
+The universal block recurrence supplies the evaluator, not that inverse.
 
 For any proposed inverse, preserve the supplied source, the shared physical
 ports, and the vertex clock. Prove it lands in the actual reachable state
@@ -75,6 +82,13 @@ search changes actual roots and avoids its earlier fixed-root-ray barrier.
 Our restricted-family table is not a general coverage record. These broader
 interfaces may repair the single-bridge obstruction but require their own
 closed source carrier. An arbitrary one-step response table is insufficient.
+
+The later incoming59fc9abf05 checkpoint is merged and credited in INCOMING.md.
+Its independent three-coordinate formulation, order12 mass recurrence,
+and golden/strong5 coverage agree exactly with ours after basis transport.
+Its both-end minimum9 and fixed-wrapper obstruction sharpen the operation
+scope. The source55 exhaustion and universal block proof are distinct
+additions retained here. The30000 holdout is inherited, not replayed wholesale.
 
 ## Files and status
 

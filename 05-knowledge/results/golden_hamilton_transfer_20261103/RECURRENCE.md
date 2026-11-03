@@ -99,8 +99,9 @@ Then H(T star B_j)=v(T,a) dot g_j. The columns of its transfer matrix are
 
 This proves exact rational linear closure for arbitrary supplied blocks;
 compiling a large arbitrary block still requires its path counts. There
-is no general polynomial-time counting claim. For the golden and strong5
-alphabets below all entries are nonnegative integers.
+is no general polynomial-time counting claim. The forest argument in G4
+also proves that the matrix in these physical coordinates always has
+nonnegative integer entries, without a bound on block size.
 
 Minimum rational linear dimension is3: the singleton-only response
 Hankel minor is
@@ -145,6 +146,22 @@ For every letter, the finite transfer matrices satisfy M7_l R=R M_l.
 The seven-state matrices and the checked equality are in transfer.json.
 Together with (G1)-(G4), this proves the recurrence for every word length;
 the check through order10 is corroboration rather than the induction.
+
+**Universal intertwining.** Temporarily retain enough endpoint names for
+an arbitrary block B; the same seven boundary states remain after it.
+For the states in the displayed R order, the continuation H responses are
+
+    H_B, H_B-S_B+D_B, H_B, H_B-S_B, H_B+D_B, D_B, D_B.
+
+This follows by the same run decomposition, now with the old chosen path
+forest fixed. It is exactly R times g_0 from (G4). Replacing B by B star s
+and B star s star s gives R g_1 and R g_2. The reconstruction (G3) is a
+linear identity on these forest states as well, so M7_B R=R M_B for every
+block, not only the finite alphabet. Rows for an internal-port path, an
+end-port path, and a two-path cover have R rows e_A,e_B,e_C. Therefore
+the rows of M_B are those rows of the nonnegative integer matrix M7_B R:
+M_B has nonnegative integer entries. This supplies a uniform proof where
+a finite bank of checked intertwiners alone would leave a quantifier gap.
 
 Small contexts distinguish every Q4 phase:
 

@@ -123,3 +123,10 @@ Incoming Session150 has a much larger general finite prefix; this result
 classifies the expressive limits of specific small-alphabet recurrences.
 The decisive next problem is a source-preserving rule for choosing larger
 blocks, or a different operation, with an infinite prime/7p covering proof.
+
+**Incoming completion of the finite repair stage:**
+[INCOMING](INCOMING.md) transports the independently published strong6 atlas,
+replays its eight repairs, and cites its fixed65-symbol bank's holdout through
+30000. The next work should use that bank rather than repeat the strong6
+enumeration. The arbitrary-block recurrence is now proved; all-value image
+coverage still needs a separate theorem.

@@ -89,3 +89,18 @@ tools are credited rather than renamed as new theory.
 
 Full Hamilton spectrum completeness, LRC(14), arbitrary-port minimality and
 source-preserving inverse construction for every prime/7p remain OPEN.
+
+## Concurrent integration audit
+
+`integrate.py` independently derives all960 incoming atom matrices from the
+literal graph endpoint/cover formula (G4) and verifies exact basis conjugacy.
+The counts are1,1,5,50,903 strong charts at sizes1,3,4,5,6. All matrices in
+our physical basis are nonnegative integers. The eight six-vertex repair
+words are checked on literal targets, including strongness. The other-end
+hostile v(sc)=v(q5), but H(ssc)=9 versus H(sq5)=13, is also replayed.
+Normal and optimized receipts agree. The30000 full closure and nine-dimensional
+both-end minimum are inherited from the concurrent packet; only the stated
+matrix and witness controls are independently rerun here. Incoming source
+hashes are recorded in integration.json. The proof of universal block-size
+intertwining is an all-order argument in RECURRENCE G4, not extrapolation
+from this finite atlas.

@@ -30,6 +30,8 @@ def main():
     normal=(HERE/'verification.json').read_bytes()
     optimized=(HERE/'verification_optimized.json').read_bytes()
     if normal!=optimized:raise RuntimeError('normal and -O receipts differ')
+    if (HERE/'integration.json').read_bytes()!=(HERE/'integration_optimized.json').read_bytes():
+        raise RuntimeError('integration normal and -O receipts differ')
     sources={p:record(ROOT/p) for p in SOURCES}
     pinpath=HERE/'source_pins.json'
     if pinpath.exists():

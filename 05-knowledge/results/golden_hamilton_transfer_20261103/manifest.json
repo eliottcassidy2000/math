@@ -2,8 +2,8 @@
   "hash_basis": "UTF-8 text with CRLF normalized to LF",
   "files": {
     "AUDIT.md": {
-      "LF_normalized_sha256": "fef0a038acb5e4d4014d0a91b1a0097d4870148ad9727f8e5edf8d6a0beb233d",
-      "LF_normalized_bytes": 5441
+      "LF_normalized_sha256": "162295063ef106b49ccd2934d12fb42acf70db24a6bceeef47e9478786dec5de",
+      "LF_normalized_bytes": 6324
     },
     "CONNECTIONS.md": {
       "LF_normalized_sha256": "47fbaf98eccb88b5c1d35c1132585727a628cec02079a79e109b2a00d9542692",
@@ -18,8 +18,24 @@
       "LF_normalized_bytes": 3113
     },
     "HANDOFF.md": {
-      "LF_normalized_sha256": "425b9518b0b98c695b7d15bfe999c30066c2d6afa937282d288888c2a248ae7a",
-      "LF_normalized_bytes": 5407
+      "LF_normalized_sha256": "ba7cd0a6f5846572f6820530e381c8c351b386aba209b736f13779269a5fe889",
+      "LF_normalized_bytes": 6303
+    },
+    "INCOMING.md": {
+      "LF_normalized_sha256": "6c672d7550dd4302b5a3b961004d0abdb4bac38a098eb20b16bf67b29a716f92",
+      "LF_normalized_bytes": 4298
+    },
+    "integrate.py": {
+      "LF_normalized_sha256": "97564d81ebcad4db7b183f4d7ef47906ae1785e590955f9b5667101be95adfea",
+      "LF_normalized_bytes": 3838
+    },
+    "integration.json": {
+      "LF_normalized_sha256": "4d21428c678f077e18187b39b89d429d03a2b7a8b888ec4ef47599c7b08864a5",
+      "LF_normalized_bytes": 4680
+    },
+    "integration_optimized.json": {
+      "LF_normalized_sha256": "4d21428c678f077e18187b39b89d429d03a2b7a8b888ec4ef47599c7b08864a5",
+      "LF_normalized_bytes": 4680
     },
     "reach.py": {
       "LF_normalized_sha256": "6afa9aea563547da1e909838deb4b93ea539f1989414d3f2c4e2af0ff76420ef",
@@ -30,20 +46,20 @@
       "LF_normalized_bytes": 47699
     },
     "REACHABILITY.md": {
-      "LF_normalized_sha256": "109a54a01197c6a6fb1b5b4981dca0bc82c9e7c155f0aaf7f02a98013cab3c47",
-      "LF_normalized_bytes": 5674
+      "LF_normalized_sha256": "22eb0a4da79e72d6a54115cb314d154d16fa999954b25cf500f3dfae94b6bf58",
+      "LF_normalized_bytes": 6073
     },
     "README.md": {
-      "LF_normalized_sha256": "554fd00e3e3b1fec33541202534d41c9c84a90e30c4bacb6dbc4d6bcb4bffb45",
-      "LF_normalized_bytes": 3636
+      "LF_normalized_sha256": "f3fc57c3546b69e46013f32d7223c1513422f3f7e8a701420e6f6c54611b99e2",
+      "LF_normalized_bytes": 4349
     },
     "RECURRENCE.md": {
-      "LF_normalized_sha256": "ed1784b863bfcb71a07859b80a9673a3cf47177198749ee69ed778824b078bc0",
-      "LF_normalized_bytes": 8284
+      "LF_normalized_sha256": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed",
+      "LF_normalized_bytes": 9290
     },
     "seal.py": {
-      "LF_normalized_sha256": "9741139343a27fcec77e3639eadbbead054391c8abaef351d9f815c16cfc5e6d",
-      "LF_normalized_bytes": 2774
+      "LF_normalized_sha256": "a953c5a04117b361717659d6c2dd154592292cf3484fbb504dd671499d295cea",
+      "LF_normalized_bytes": 2943
     },
     "source_pins.json": {
       "LF_normalized_sha256": "95e74662fd7c5194a274ff5e939e4f98da0ab22da597edf2ac29722020f5f8f7",

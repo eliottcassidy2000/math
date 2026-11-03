@@ -35,6 +35,14 @@ restricted construction, not the unrestricted tournament spectrum.
 The [reachability proof and receipts](REACHABILITY.md) explain why these
 are all-order conclusions despite a finite computation.
 
+**Concurrent synthesis:** the independently published
+[seam packet](../golden_seam_recurrence_20261103/README.md) supplies eight
+six-vertex charts whose fixed65-symbol bank reaches every allowed odd value
+through30000. We independently transport all960 of its atom matrices and
+replay the eight repairs. Our single-bridge proof also resolves its open
+arbitrary-block-size closure question. Its both-end minimum is9, so the
+three-coordinate claim must retain which end may grow. See [INCOMING](INCOMING.md).
+
 There are exactly two marked golden H55 sources. Neither has any
 one-vertex attachment with H111. The inherited successful55->111 arrow
 uses a different actual source. [CONNECTIONS](CONNECTIONS.md) relates this
@@ -59,6 +67,8 @@ python -X utf8 05-knowledge/results/golden_hamilton_transfer_20261103/reach.py -
 python -X utf8 05-knowledge/results/golden_hamilton_transfer_20261103/extension.py
 python -X utf8 05-knowledge/results/golden_hamilton_transfer_20261103/verify.py
 python -O -X utf8 05-knowledge/results/golden_hamilton_transfer_20261103/verify.py --output verification_optimized.json
+python -X utf8 05-knowledge/results/golden_hamilton_transfer_20261103/integrate.py
+python -O -X utf8 05-knowledge/results/golden_hamilton_transfer_20261103/integrate.py --output integration_optimized.json
 ```
 
 The proof and independent checks are detailed in [AUDIT](AUDIT.md).
