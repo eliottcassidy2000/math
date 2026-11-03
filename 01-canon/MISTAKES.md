@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — toothpick cumulative recursion lost its boundary subtraction
+
+- **Scope:** historical `00-navigation/TANGENTS.md`, T1544. Its displayed cumulative recurrence omitted `-1`, and its assertion of a proved self-converse parity lemma cited the unrelated legacy ID THM-893 (the current file is the eroded-diamond theorem).
+- **Minimal witness / first failed implication:** T(2)=3, T(1)=1 and T(3)=7; the old expression T(2)+2T(1)+T(2) predicts8. Summing a birth recurrence duplicates the first boundary term unless it is subtracted. A theorem number without its slug does not establish a dependency.
+- **Repair / strongest survivor:** for 1<=i<2^k, T(2^k+i)=T(2^k)+2T(i)+T(i+1)-1, as in Applegate–Pol–Sloane, arXiv:1004.3036v2, Corollary3. T1544 now cites that source and separates ordinary class parity from converse fixed classes. All-order tournament parity and a specified class pairing are proved/recovered in `05-knowledge/results/tournament_joint_parity_20261102/parity.md`.
+- **Missing coordinate / new question:** the stage-zero/first-birth boundary and the fixed-point locus. Reflection orbit counts alone do not decide exposed physical ports or an H-preserving pairing; the packet's toothpick shared-port hostile and unique-H1 obstruction give the exact repair boundaries.
+
 ## 2026-11-03 — a capped face is not the gross interior of a nested cycle
 
 - **Scope:** prepublication fence argument in `05-knowledge/results/chart_clique_norm_20261103/FENCES_AND_PORTS.md`; no accepted theorem is retracted.

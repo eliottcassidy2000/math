@@ -1,0 +1,16 @@
+{
+  "incoming_revision": "9b75ef18bff76bd9e4ecb9fb6e8711f7d91c4a3c",
+  "source_sha256": {
+    "01-canon/theorems/LEM-003-aut-acts-freely-on-ham-paths.md": "09289c2ad4c12bcadf5d29a54a198e56b0ef8223853ac3f83a9caa931c65b9b8",
+    "01-canon/theorems/THM-001-redei.md": "e89c0bf0e21d5a987dadbe0db82e02497cb7e74b52d62bb959f43edc2c673560",
+    "01-canon/theorems/THM-305-two-adic-valuation-tournament-count.md": "dcebe4b6af219c55510c5d38849e366e362090c98be5784c5160fbf8fd69d8f5",
+    "01-canon/theorems/THM-3121-path-cover-walk-content-substitution-kernel.md": "ae7d8dd95dceb52da784106cfdfa64f57336c6eb1de8c7f0902cbbb47eb3866f",
+    "01-canon/theorems/THM-3166-falling-factorial-order-join-path-colour-transform.md": "01abd5e2a0bb1fc617d3f2649534acfb7b05f00cc4fe7573deb18302997c9198",
+    "01-canon/theorems/THM-643-blue-black-line-parity-structure.md": "64ca35cf912157882c2e5c788b20f3ade2349b275eee3b3728144793c35920ff",
+    "05-knowledge/results/actual_hamilton_multiplicities_20261021/session24-multiplicities/PROOF.md": "40d8b722dc71233a2e6ab31f224cb5de20db56463be568148c865b438f16cdfe",
+    "05-knowledge/results/port_residual_integral_20261025/precision/README.md": "4339ed5bac7bed574ee6bded654d6be3c2792debf8dca3532385338ac2339a93",
+    "05-knowledge/results/residue_290_transport_20261102/INCOMING_RECONCILIATION.md": "a7cae137b08eea97df8d17973672eb516ede4b456c8004bef3e0a73a8073974f",
+    "05-knowledge/results/residue_290_transport_20261102/tournament/README.md": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5"
+  },
+  "start_revision": "3857c6f714892a395c7d4f8c4ae11c9bddc0bf3c"
+}

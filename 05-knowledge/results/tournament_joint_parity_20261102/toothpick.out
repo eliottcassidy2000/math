@@ -1,0 +1,150 @@
+{
+  "hostile_ports": {
+    "false_added_by_support_only_port_rule": 2,
+    "incidences": 4,
+    "naive_neighbor_orbit_count": 1,
+    "per_port": 2,
+    "port_orbit": [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "stage": 3,
+    "stick_orbit_size": 4,
+    "true_newborn_at_stage4": 4
+  },
+  "independent_control": "All newborn and total counts equal cited dyadic recurrence through 128.",
+  "normal_or_optimized": "Checks use explicit exceptions and remain active under python -O.",
+  "rooted_order3_insertion_H_fibers": {
+    "1": 3,
+    "3": 1
+  },
+  "scope": "FINITE-EXACT: classical origin seed, stages 0..128; all reflections/parents/clocks checked",
+  "selected_stages": [
+    {
+      "births": 0,
+      "exposed": 0,
+      "n": 0,
+      "total": 0
+    },
+    {
+      "births": 1,
+      "exposed": 2,
+      "n": 1,
+      "total": 1
+    },
+    {
+      "births": 2,
+      "exposed": 4,
+      "n": 2,
+      "total": 3
+    },
+    {
+      "births": 4,
+      "exposed": 4,
+      "n": 3,
+      "total": 7
+    },
+    {
+      "births": 4,
+      "exposed": 4,
+      "n": 4,
+      "total": 11
+    },
+    {
+      "births": 4,
+      "exposed": 8,
+      "n": 5,
+      "total": 15
+    },
+    {
+      "births": 8,
+      "exposed": 12,
+      "n": 6,
+      "total": 23
+    },
+    {
+      "births": 12,
+      "exposed": 8,
+      "n": 7,
+      "total": 35
+    },
+    {
+      "births": 8,
+      "exposed": 4,
+      "n": 8,
+      "total": 43
+    },
+    {
+      "births": 4,
+      "exposed": 8,
+      "n": 9,
+      "total": 47
+    },
+    {
+      "births": 8,
+      "exposed": 12,
+      "n": 10,
+      "total": 55
+    },
+    {
+      "births": 12,
+      "exposed": 12,
+      "n": 11,
+      "total": 67
+    },
+    {
+      "births": 12,
+      "exposed": 16,
+      "n": 12,
+      "total": 79
+    },
+    {
+      "births": 16,
+      "exposed": 28,
+      "n": 13,
+      "total": 95
+    },
+    {
+      "births": 28,
+      "exposed": 32,
+      "n": 14,
+      "total": 123
+    },
+    {
+      "births": 32,
+      "exposed": 16,
+      "n": 15,
+      "total": 155
+    },
+    {
+      "births": 16,
+      "exposed": 4,
+      "n": 16,
+      "total": 171
+    },
+    {
+      "births": 32,
+      "exposed": 4,
+      "n": 32,
+      "total": 683
+    },
+    {
+      "births": 64,
+      "exposed": 4,
+      "n": 64,
+      "total": 2731
+    },
+    {
+      "births": 128,
+      "exposed": 4,
+      "n": 128,
+      "total": 10923
+    }
+  ]
+}

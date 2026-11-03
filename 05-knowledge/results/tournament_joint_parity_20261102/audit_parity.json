@@ -1,0 +1,70 @@
+{
+  "blue_component_checks": [
+    {
+      "blue_masks": 2,
+      "class_pairs": 1,
+      "discarded_cycle_components": 0,
+      "n": 3,
+      "self_converse_classes": 2
+    },
+    {
+      "blue_masks": 4,
+      "class_pairs": 1,
+      "discarded_cycle_components": 0,
+      "n": 4,
+      "self_converse_classes": 2
+    },
+    {
+      "blue_masks": 16,
+      "class_pairs": 4,
+      "discarded_cycle_components": 0,
+      "n": 5,
+      "self_converse_classes": 8
+    },
+    {
+      "blue_masks": 64,
+      "class_pairs": 6,
+      "discarded_cycle_components": 2,
+      "n": 6,
+      "self_converse_classes": 12
+    }
+  ],
+  "exhaustive_abstract_odd_partitions": [
+    {
+      "all_odd_fibre_partitions": 1,
+      "cycle_components": 0,
+      "presentation_size": 2
+    },
+    {
+      "all_odd_fibre_partitions": 5,
+      "cycle_components": 2,
+      "presentation_size": 4
+    },
+    {
+      "all_odd_fibre_partitions": 37,
+      "cycle_components": 22,
+      "presentation_size": 6
+    },
+    {
+      "all_odd_fibre_partitions": 457,
+      "cycle_components": 300,
+      "presentation_size": 8
+    },
+    {
+      "all_odd_fibre_partitions": 8169,
+      "cycle_components": 6004,
+      "presentation_size": 10
+    }
+  ],
+  "ordinary_joint_census_agrees_n": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "scope": "independent matrix and component audit; no producer imports",
+  "status": "PASS"
+}
