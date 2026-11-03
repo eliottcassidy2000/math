@@ -1,0 +1,149 @@
+{
+  "negative_controls": 22,
+  "outcomes": [
+    {
+      "control": "unmodified certificate",
+      "exit": 0,
+      "mode": "normal"
+    },
+    {
+      "control": "wrong N3 count",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "wrong magic line",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "wrong elliptic fiber partition",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "false twist fixed point",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "false symmetric cube trace",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "missing tournament self-converse",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "reducible cubic modulus",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "reducible extension modulus"
+    },
+    {
+      "control": "omit infinity point",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "point count histogram"
+    },
+    {
+      "control": "replace power trace by symmetric trace",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "extension recurrence comparison"
+    },
+    {
+      "control": "replace nonsquare twist by square twist",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "free quadratic twist involution"
+    },
+    {
+      "control": "replace symmetric trace by power trace",
+      "exit": 1,
+      "mode": "normal",
+      "reason": "operator traces"
+    },
+    {
+      "control": "unmodified certificate",
+      "exit": 0,
+      "mode": "optimized"
+    },
+    {
+      "control": "wrong N3 count",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "wrong magic line",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "wrong elliptic fiber partition",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "false twist fixed point",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "false symmetric cube trace",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "missing tournament self-converse",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "certificate mismatch"
+    },
+    {
+      "control": "reducible cubic modulus",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "reducible extension modulus"
+    },
+    {
+      "control": "omit infinity point",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "point count histogram"
+    },
+    {
+      "control": "replace power trace by symmetric trace",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "extension recurrence comparison"
+    },
+    {
+      "control": "replace nonsquare twist by square twist",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "free quadratic twist involution"
+    },
+    {
+      "control": "replace symmetric trace by power trace",
+      "exit": 1,
+      "mode": "optimized",
+      "reason": "operator traces"
+    }
+  ],
+  "positive_controls": 2,
+  "status": "PASS"
+}

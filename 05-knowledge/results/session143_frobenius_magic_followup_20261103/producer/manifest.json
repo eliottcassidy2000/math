@@ -1,0 +1,18 @@
+{
+  "files": {
+    "PROOF.md": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f",
+    "check_bridge.py": "50a80630049dc282b943221c82d3a5183ea3c093efcc7a83cf019f5df32422ca",
+    "hostile_results.json": "0c9e7aeeb81b9005cebe587a6f73b6b7187df448759befb4ded162e5632484d9",
+    "hostile_results.optimized.json": "0c9e7aeeb81b9005cebe587a6f73b6b7187df448759befb4ded162e5632484d9",
+    "result.json": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9",
+    "result.optimized.json": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9",
+    "source_pins.json": "f9f9ebd061a1cb4ca6cfb44943f1e258d8d187acc03cc99de7381fc4efe2db9d",
+    "sources/FULL_CUBIC_CLASSIFICATION.md": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df",
+    "sources/prior_sixth_clock_branches.py.txt": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02",
+    "sources/tournament_classification.json": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c",
+    "test_controls.py": "f7b59d40e94dbb80b1f962d92b653b396f4ef4dab574d22b7703003d1e4213d2",
+    "verify_manifest.py": "da69e026c564ce39652d54ebc130f085d568d71cd4e8d7b41d5403eb2290834a"
+  },
+  "schema": 1,
+  "status": "producer packet, independent audit pending"
+}

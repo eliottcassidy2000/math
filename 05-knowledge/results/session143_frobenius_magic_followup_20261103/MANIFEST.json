@@ -1,0 +1,154 @@
+{
+  "files": {
+    "README.md": {
+      "bytes": 4492,
+      "sha256": "44a47cd0b3acfc307d855d68fe06368c7195330335b286653ae5c6c51516b16c"
+    },
+    "REPLAY.json": {
+      "bytes": 4199,
+      "sha256": "766f6f2db3afbde2ad9cd1b4f420216f3bfcfa951f75fcfc1499a9d3a72af5e5"
+    },
+    "SCOPED_DOCS.json": {
+      "bytes": 1822,
+      "sha256": "fdd8e1cc9be423c0b7851e09ffe7f7c2635f59d0af809a3b7cb2628999ebf1bb"
+    },
+    "SOURCE_PINS.json": {
+      "bytes": 4374,
+      "sha256": "c4de1f1bb57ec929c29690941d0f1fa8e32576505f1fa189cbf3dd8a0cfd8c9e"
+    },
+    "VERIFICATION.md": {
+      "bytes": 4988,
+      "sha256": "c6e64e212dde47d369c4ba0dd4d8c9186aa99e63c417d44e0b2f2a8903b6c5fb"
+    },
+    "WRAPPER_AUDIT.json": {
+      "bytes": 1055,
+      "sha256": "28cdd396846fd90163192b4432266dd99e5bfe7a1ae0b4f5bf02fb4dfd1421aa"
+    },
+    "independent/PROOF.md": {
+      "bytes": 9755,
+      "sha256": "4952cda10ed920cd325acd4ab315680b309b6d6abef4434586937086731fb5a2"
+    },
+    "independent/audit_producer.py": {
+      "bytes": 2748,
+      "sha256": "09d0e6974108dc166bdea7881ea133098482f8fa8c1af401d41d51a10bb935c3"
+    },
+    "independent/check_independent.py": {
+      "bytes": 11144,
+      "sha256": "b7c7874a35f568cec4d32be93d3f88c7a8079e497700f4f1228564e129080da4"
+    },
+    "independent/manifest.json": {
+      "bytes": 1479,
+      "sha256": "febfda378c306203d1a11ca345c653cd337b3c3d7c621b797b6f44c906305693"
+    },
+    "independent/negative_controls.json": {
+      "bytes": 3478,
+      "sha256": "93775813cb079e84f3ffca8f7f22c2f33073408bf5474691edf7cf88188ee1eb"
+    },
+    "independent/negative_controls.optimized.json": {
+      "bytes": 3478,
+      "sha256": "93775813cb079e84f3ffca8f7f22c2f33073408bf5474691edf7cf88188ee1eb"
+    },
+    "independent/producer_review.json": {
+      "bytes": 1108,
+      "sha256": "4526566e78ada396f26f202390ca68da5dfd6d317cd5f550a553d140d2cf9602"
+    },
+    "independent/result.json": {
+      "bytes": 14334,
+      "sha256": "a3c2df63529b873435f5f03780af471ee8857b9d570b014aa0c0f398c8eef6ca"
+    },
+    "independent/result.optimized.json": {
+      "bytes": 14334,
+      "sha256": "a3c2df63529b873435f5f03780af471ee8857b9d570b014aa0c0f398c8eef6ca"
+    },
+    "independent/source_pins.json": {
+      "bytes": 2610,
+      "sha256": "4447a9a9a682a02bd06b277ec1a8f706ecda1fefe35db3d1816d3ffd9682bfe5"
+    },
+    "independent/sources/session143_full_cubic.md": {
+      "bytes": 5808,
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df"
+    },
+    "independent/sources/session143_magic_theorem.md": {
+      "bytes": 17703,
+      "sha256": "423d05fa2dad0be0dbac384524798d822af40481b25261ce605b31173023e3b4"
+    },
+    "independent/sources/session143_tournaments.json": {
+      "bytes": 17412,
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    "independent/test_negative_controls.py": {
+      "bytes": 3588,
+      "sha256": "c3e955d15e39234d123a19c6a3e44be87678cf27da10e15dce0a1d849bbe489b"
+    },
+    "independent/verify_manifest.py": {
+      "bytes": 1119,
+      "sha256": "4d893e665537a7a8b420179f113bf0b28c0f82dd58d222ca5783ad5e980568ac"
+    },
+    "producer/PROOF.md": {
+      "bytes": 10636,
+      "sha256": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f"
+    },
+    "producer/check_bridge.py": {
+      "bytes": 11864,
+      "sha256": "50a80630049dc282b943221c82d3a5183ea3c093efcc7a83cf019f5df32422ca"
+    },
+    "producer/hostile_results.json": {
+      "bytes": 1741,
+      "sha256": "0c9e7aeeb81b9005cebe587a6f73b6b7187df448759befb4ded162e5632484d9"
+    },
+    "producer/hostile_results.optimized.json": {
+      "bytes": 1741,
+      "sha256": "0c9e7aeeb81b9005cebe587a6f73b6b7187df448759befb4ded162e5632484d9"
+    },
+    "producer/manifest.json": {
+      "bytes": 1275,
+      "sha256": "a8666d9791f8dfb0c8874be77bd46c2200651f90e899261f51dc379183122c4c"
+    },
+    "producer/result.json": {
+      "bytes": 16587,
+      "sha256": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9"
+    },
+    "producer/result.optimized.json": {
+      "bytes": 16587,
+      "sha256": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9"
+    },
+    "producer/source_pins.json": {
+      "bytes": 3557,
+      "sha256": "f9f9ebd061a1cb4ca6cfb44943f1e258d8d187acc03cc99de7381fc4efe2db9d"
+    },
+    "producer/sources/FULL_CUBIC_CLASSIFICATION.md": {
+      "bytes": 5808,
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df"
+    },
+    "producer/sources/prior_sixth_clock_branches.py.txt": {
+      "bytes": 15070,
+      "sha256": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02"
+    },
+    "producer/sources/tournament_classification.json": {
+      "bytes": 17412,
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    "producer/test_controls.py": {
+      "bytes": 2392,
+      "sha256": "f7b59d40e94dbb80b1f962d92b653b396f4ef4dab574d22b7703003d1e4213d2"
+    },
+    "producer/verify_manifest.py": {
+      "bytes": 1091,
+      "sha256": "da69e026c564ce39652d54ebc130f085d568d71cd4e8d7b41d5403eb2290834a"
+    },
+    "replay.py": {
+      "bytes": 4960,
+      "sha256": "26a2b32fe7926abafc3f0c2f6de8cc1ba7c3252f09794539961c5067dffab4a2"
+    },
+    "verify_manifest.py": {
+      "bytes": 1232,
+      "sha256": "28ab120c5fd8c2573c305b4a3209a21cd85fe369aed8aa04c8b652c6301f2187"
+    },
+    "verify_source_pins.py": {
+      "bytes": 1791,
+      "sha256": "0f8c9189b3b84b963e996c7e003095a6f41a4426a5d550049681c1dfdb229cc2"
+    }
+  },
+  "schema": 1,
+  "scope": "All standalone packet files except this self-excluded manifest; generated Python bytecode excluded."
+}

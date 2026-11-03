@@ -1,0 +1,1291 @@
+{
+  "checks_passed": 660,
+  "class_trace_fibers": {
+    "-4": 1,
+    "-3": 1,
+    "-2": 2,
+    "-1": 1,
+    "0": 2,
+    "1": 1,
+    "2": 2,
+    "3": 1,
+    "4": 1
+  },
+  "cycle": [
+    4,
+    8,
+    3,
+    7,
+    2,
+    6,
+    10,
+    5,
+    9,
+    4
+  ],
+  "f25_control": {
+    "indexed_values": [
+      20,
+      27,
+      32,
+      35,
+      36,
+      35,
+      32,
+      27,
+      20
+    ],
+    "nonintegral_required_center": "88/3",
+    "sum": 264
+  },
+  "hostile_controls": {
+    "hecke_cubic_not_magic": true,
+    "incompatible_12_to_9_fibers": true,
+    "incompatible_involutions": true,
+    "literal_cube_not_magic": true
+  },
+  "isomorphism_classes": [
+    {
+      "models": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "n125": 126,
+      "n5": 6,
+      "representative": [
+        0,
+        1
+      ],
+      "t": 0,
+      "twist_representative": [
+        0,
+        2
+      ]
+    },
+    {
+      "models": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "n125": 126,
+      "n5": 6,
+      "representative": [
+        0,
+        2
+      ],
+      "t": 0,
+      "twist_representative": [
+        0,
+        1
+      ]
+    },
+    {
+      "models": [
+        [
+          1,
+          0
+        ]
+      ],
+      "n125": 148,
+      "n5": 4,
+      "representative": [
+        1,
+        0
+      ],
+      "t": 2,
+      "twist_representative": [
+        4,
+        0
+      ]
+    },
+    {
+      "models": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "n125": 108,
+      "n5": 9,
+      "representative": [
+        1,
+        1
+      ],
+      "t": -3,
+      "twist_representative": [
+        4,
+        2
+      ]
+    },
+    {
+      "models": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "n125": 148,
+      "n5": 4,
+      "representative": [
+        1,
+        2
+      ],
+      "t": 2,
+      "twist_representative": [
+        4,
+        1
+      ]
+    },
+    {
+      "models": [
+        [
+          2,
+          0
+        ]
+      ],
+      "n125": 122,
+      "n5": 2,
+      "representative": [
+        2,
+        0
+      ],
+      "t": 4,
+      "twist_representative": [
+        3,
+        0
+      ]
+    },
+    {
+      "models": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "n125": 112,
+      "n5": 7,
+      "representative": [
+        2,
+        1
+      ],
+      "t": -1,
+      "twist_representative": [
+        3,
+        2
+      ]
+    },
+    {
+      "models": [
+        [
+          3,
+          0
+        ]
+      ],
+      "n125": 130,
+      "n5": 10,
+      "representative": [
+        3,
+        0
+      ],
+      "t": -4,
+      "twist_representative": [
+        2,
+        0
+      ]
+    },
+    {
+      "models": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "n125": 140,
+      "n5": 5,
+      "representative": [
+        3,
+        2
+      ],
+      "t": 1,
+      "twist_representative": [
+        2,
+        1
+      ]
+    },
+    {
+      "models": [
+        [
+          4,
+          0
+        ]
+      ],
+      "n125": 104,
+      "n5": 8,
+      "representative": [
+        4,
+        0
+      ],
+      "t": -2,
+      "twist_representative": [
+        1,
+        0
+      ]
+    },
+    {
+      "models": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "n125": 104,
+      "n5": 8,
+      "representative": [
+        4,
+        1
+      ],
+      "t": -2,
+      "twist_representative": [
+        1,
+        2
+      ]
+    },
+    {
+      "models": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "n125": 144,
+      "n5": 3,
+      "representative": [
+        4,
+        2
+      ],
+      "t": 3,
+      "twist_representative": [
+        1,
+        1
+      ]
+    }
+  ],
+  "line_sums": [
+    378,
+    378,
+    378,
+    378,
+    378,
+    378,
+    378,
+    378
+  ],
+  "magic_arrangement_count": 8,
+  "magic_square": [
+    [
+      108,
+      148,
+      122
+    ],
+    [
+      140,
+      126,
+      112
+    ],
+    [
+      130,
+      104,
+      144
+    ]
+  ],
+  "models": [
+    {
+      "a": 0,
+      "affine_points_f5": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "b": 1,
+      "class_representative": [
+        0,
+        1
+      ],
+      "n125": 126,
+      "n25": 36,
+      "n5": 6,
+      "t": 0
+    },
+    {
+      "a": 0,
+      "affine_points_f5": [
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "b": 2,
+      "class_representative": [
+        0,
+        2
+      ],
+      "n125": 126,
+      "n25": 36,
+      "n5": 6,
+      "t": 0
+    },
+    {
+      "a": 0,
+      "affine_points_f5": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "b": 3,
+      "class_representative": [
+        0,
+        2
+      ],
+      "n125": 126,
+      "n25": 36,
+      "n5": 6,
+      "t": 0
+    },
+    {
+      "a": 0,
+      "affine_points_f5": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "b": 4,
+      "class_representative": [
+        0,
+        1
+      ],
+      "n125": 126,
+      "n25": 36,
+      "n5": 6,
+      "t": 0
+    },
+    {
+      "a": 1,
+      "affine_points_f5": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "b": 0,
+      "class_representative": [
+        1,
+        0
+      ],
+      "n125": 148,
+      "n25": 32,
+      "n5": 4,
+      "t": 2
+    },
+    {
+      "a": 1,
+      "affine_points_f5": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "b": 1,
+      "class_representative": [
+        1,
+        1
+      ],
+      "n125": 108,
+      "n25": 27,
+      "n5": 9,
+      "t": -3
+    },
+    {
+      "a": 1,
+      "affine_points_f5": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "b": 2,
+      "class_representative": [
+        1,
+        2
+      ],
+      "n125": 148,
+      "n25": 32,
+      "n5": 4,
+      "t": 2
+    },
+    {
+      "a": 1,
+      "affine_points_f5": [
+        [
+          1,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "b": 3,
+      "class_representative": [
+        1,
+        2
+      ],
+      "n125": 148,
+      "n25": 32,
+      "n5": 4,
+      "t": 2
+    },
+    {
+      "a": 1,
+      "affine_points_f5": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "b": 4,
+      "class_representative": [
+        1,
+        1
+      ],
+      "n125": 108,
+      "n25": 27,
+      "n5": 9,
+      "t": -3
+    },
+    {
+      "a": 2,
+      "affine_points_f5": [
+        [
+          0,
+          0
+        ]
+      ],
+      "b": 0,
+      "class_representative": [
+        2,
+        0
+      ],
+      "n125": 122,
+      "n25": 20,
+      "n5": 2,
+      "t": 4
+    },
+    {
+      "a": 2,
+      "affine_points_f5": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "b": 1,
+      "class_representative": [
+        2,
+        1
+      ],
+      "n125": 112,
+      "n25": 35,
+      "n5": 7,
+      "t": -1
+    },
+    {
+      "a": 2,
+      "affine_points_f5": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "b": 4,
+      "class_representative": [
+        2,
+        1
+      ],
+      "n125": 112,
+      "n25": 35,
+      "n5": 7,
+      "t": -1
+    },
+    {
+      "a": 3,
+      "affine_points_f5": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "b": 0,
+      "class_representative": [
+        3,
+        0
+      ],
+      "n125": 130,
+      "n25": 20,
+      "n5": 10,
+      "t": -4
+    },
+    {
+      "a": 3,
+      "affine_points_f5": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "b": 2,
+      "class_representative": [
+        3,
+        2
+      ],
+      "n125": 140,
+      "n25": 35,
+      "n5": 5,
+      "t": 1
+    },
+    {
+      "a": 3,
+      "affine_points_f5": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "b": 3,
+      "class_representative": [
+        3,
+        2
+      ],
+      "n125": 140,
+      "n25": 35,
+      "n5": 5,
+      "t": 1
+    },
+    {
+      "a": 4,
+      "affine_points_f5": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "b": 0,
+      "class_representative": [
+        4,
+        0
+      ],
+      "n125": 104,
+      "n25": 32,
+      "n5": 8,
+      "t": -2
+    },
+    {
+      "a": 4,
+      "affine_points_f5": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "b": 1,
+      "class_representative": [
+        4,
+        1
+      ],
+      "n125": 104,
+      "n25": 32,
+      "n5": 8,
+      "t": -2
+    },
+    {
+      "a": 4,
+      "affine_points_f5": [
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "b": 2,
+      "class_representative": [
+        4,
+        2
+      ],
+      "n125": 144,
+      "n25": 27,
+      "n5": 3,
+      "t": 3
+    },
+    {
+      "a": 4,
+      "affine_points_f5": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "b": 3,
+      "class_representative": [
+        4,
+        2
+      ],
+      "n125": 144,
+      "n25": 27,
+      "n5": 3,
+      "t": 3
+    },
+    {
+      "a": 4,
+      "affine_points_f5": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "b": 4,
+      "class_representative": [
+        4,
+        1
+      ],
+      "n125": 104,
+      "n25": 32,
+      "n5": 8,
+      "t": -2
+    }
+  ],
+  "square_entries": [
+    144
+  ],
+  "status": "FINITE-EXACT; proposed precise lambda-cubed route, not confirmed user referent",
+  "symbolic_hecke3_coefficients_ascending": [
+    0,
+    -10,
+    0,
+    1
+  ],
+  "symbolic_trace3_coefficients_ascending": [
+    0,
+    -15,
+    0,
+    1
+  ],
+  "tournament_classes": [
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "dual_mask": 0,
+      "mask": 0,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "dual_mask": 11,
+      "mask": 2,
+      "self_dual": false
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -2,
+        -1,
+        0
+      ],
+      "dual_mask": 9,
+      "mask": 4,
+      "self_dual": false
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "dual_mask": 5,
+      "mask": 5,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -3,
+        -3,
+        -1
+      ],
+      "dual_mask": 8,
+      "mask": 8,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -2,
+        -1,
+        0
+      ],
+      "dual_mask": 4,
+      "mask": 9,
+      "self_dual": false
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -3,
+        -2,
+        -1
+      ],
+      "dual_mask": 10,
+      "mask": 10,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "dual_mask": 2,
+      "mask": 11,
+      "self_dual": false
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -4,
+        -4,
+        -1
+      ],
+      "dual_mask": 12,
+      "mask": 12,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -3
+      ],
+      "dual_mask": 40,
+      "mask": 40,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -2
+      ],
+      "dual_mask": 41,
+      "mask": 41,
+      "self_dual": true
+    },
+    {
+      "characteristic_desc": [
+        1,
+        0,
+        0,
+        -5,
+        -5,
+        -2
+      ],
+      "dual_mask": 76,
+      "mask": 76,
+      "self_dual": true
+    }
+  ],
+  "tournament_converse_orbits": 10,
+  "tournament_selfdual_classes": 8,
+  "tournament_spectrum_fibers": [
+    3,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "trace_to_extension_count": [
+    [
+      -4,
+      130
+    ],
+    [
+      -3,
+      108
+    ],
+    [
+      -2,
+      104
+    ],
+    [
+      -1,
+      112
+    ],
+    [
+      0,
+      126
+    ],
+    [
+      1,
+      140
+    ],
+    [
+      2,
+      148
+    ],
+    [
+      3,
+      144
+    ],
+    [
+      4,
+      122
+    ]
+  ],
+  "transformed_cycle": [
+    148,
+    104,
+    144,
+    112,
+    122,
+    126,
+    130,
+    140,
+    108,
+    148
+  ],
+  "twist_orbits": 6,
+  "universe": {
+    "field_modulus": "z^3+z+1 over F5",
+    "modulus_root_values": [
+      1,
+      3,
+      1,
+      1,
+      4
+    ],
+    "nonsingular": 20,
+    "short_models": 25,
+    "singular": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        4
+      ]
+    ]
+  }
+}

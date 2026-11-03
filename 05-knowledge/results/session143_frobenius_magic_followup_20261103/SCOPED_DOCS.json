@@ -1,0 +1,31 @@
+{
+  "base_commit": "fda1d845ebbf0f0d632cfeeac96afb517bece1db",
+  "budget_definition_unchanged": true,
+  "curated_publication_links_checked": 13,
+  "frontier_line_budget": 450,
+  "full_checker_run": false,
+  "opaque_ledger_read": false,
+  "original_S143_prefix_preserved": true,
+  "original_S143_sha256": "35ed0dfa0e7c683e4293a933f119d49f6d7a0186b55d6f995fa484fe3052af85",
+  "scope": "Owned conflict markers and curated links, strict navigation append, and disjointness from bounded startup surfaces. No repository-wide documentation or current-byte-budget census claim.",
+  "startup_blobs": {
+    "00-navigation/CONCURRENT-SESSIONS.md": "eb245dde6e84839d8ff626fdb77490954fec7108",
+    "00-navigation/CURRENT-FRONTIER.md": "cc62b5cf5b1ff7af3afca91fe076423b43ea16b7",
+    "00-navigation/META-PATTERNS.md": "346991110594940fc0aa36138b984f61be1dfe04",
+    "00-navigation/RESEARCH-PROTOCOL.md": "f669494bc5fe49076e3719a05cd3d9d88ee73c0c",
+    "00-navigation/START-HERE.md": "f1fd2e6ca91416a97b93a9a28671f91f57b9f8ea",
+    "01-canon/ACTIVE-GUARDRAILS.md": "668a5dbb0baaee91eccc7ff0e2b37ecd7335be24",
+    "01-canon/README.md": "cfda5c344b909961c512d99a15ff983fa12989bd",
+    "05-knowledge/README.md": "ac2566635f5f1172f2862b78c266c8d77d9ee875",
+    "05-knowledge/reference/CORE-PAPERS.md": "db844f9499998d2b2623b3ca6e536ca9a8f39cbc",
+    "07-reflections/README.md": "b1c277a28218553712acbfa47265863dd82acb49",
+    "AGENTS.md": "fdde24ac382ea703618dc52685054c6528071a41",
+    "CLAUDE.md": "1ce7361fc2a54c11d66afab3eed307ff35c373e9",
+    "README.md": "bbf920b0619f552b9b00bf35106c854e9b1be099",
+    "agents/README.md": "e73ea76f6131fd45bd9bdf94d37a142e6403bdef",
+    "agents/doc_surface.py": "49bb883068d4abb5c14dfea77550ebd941bdef94"
+  },
+  "startup_byte_budget": 180000,
+  "startup_surface_unchanged": true,
+  "status": "PASS"
+}

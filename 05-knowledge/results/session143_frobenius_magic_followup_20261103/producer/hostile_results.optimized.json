@@ -1,0 +1,76 @@
+{
+  "outcomes": [
+    {
+      "accepted": true,
+      "case": "unmodified_positive",
+      "optimized": false
+    },
+    {
+      "case": "bad_field_reduction",
+      "expected_gate": "z^3 reduction",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "wrong_extension_formula",
+      "expected_gate": "Frobenius-cube formula",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "wrong_magic_entry",
+      "expected_gate": "magic witness entries",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "confused_hecke_cube",
+      "expected_gate": "Hecke / symmetric-cube coefficient",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "case": "wrong_fiber_claim",
+      "expected_gate": "tournament spectrum fibers",
+      "optimized": false,
+      "rejected": true
+    },
+    {
+      "accepted": true,
+      "case": "unmodified_positive",
+      "optimized": true
+    },
+    {
+      "case": "bad_field_reduction",
+      "expected_gate": "z^3 reduction",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "wrong_extension_formula",
+      "expected_gate": "Frobenius-cube formula",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "wrong_magic_entry",
+      "expected_gate": "magic witness entries",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "confused_hecke_cube",
+      "expected_gate": "Hecke / symmetric-cube coefficient",
+      "optimized": true,
+      "rejected": true
+    },
+    {
+      "case": "wrong_fiber_claim",
+      "expected_gate": "tournament spectrum fibers",
+      "optimized": true,
+      "rejected": true
+    }
+  ],
+  "runs": 12,
+  "status": "PASS"
+}

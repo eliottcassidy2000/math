@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "bytes": 5808,
+      "git_blob": "c736529d4a3ed5e9e1ad947f1d732655f4023c4a",
+      "local_path": "sources/session143_full_cubic.md",
+      "repository_path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/FULL_CUBIC_CLASSIFICATION.md",
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df"
+    },
+    {
+      "bytes": 17703,
+      "git_blob": "910ddc78f09b2f54112405e60e503c2b10e9aefe",
+      "local_path": "sources/session143_magic_theorem.md",
+      "repository_path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/THEOREM.md",
+      "sha256": "423d05fa2dad0be0dbac384524798d822af40481b25261ce605b31173023e3b4"
+    },
+    {
+      "bytes": 17412,
+      "git_blob": "7971ce523d2ed8ea51286bcd18196da3613694ca",
+      "local_path": "sources/session143_tournaments.json",
+      "repository_path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/tournaments/classification.json",
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    }
+  ],
+  "primary_source_boundary": "Primary sources were read with web tools; URLs and exact locations are recorded, not invented hashes of unmaterialized web bytes.",
+  "primary_sources": [
+    {
+      "checked_utc_date": "2026-11-03",
+      "claims": [
+        "Frobenius characteristic polynomial T^2\u2212tT+q",
+        "extension count q^n+1\u2212alpha^n\u2212beta^n"
+      ],
+      "section": "Elliptic curves over finite fields / Point counting",
+      "url": "https://public.websites.umich.edu/asnowden/teaching/2013/679/L03.html"
+    },
+    {
+      "checked_utc_date": "2026-11-03",
+      "claims": [
+        "short Weierstrass models and scaling isomorphisms in characteristic not 2 or 3",
+        "extension count formula cross-check"
+      ],
+      "section": "II Theorem 2.1(a,b), printed pp.50\u201351; IV Theorem9.10 and Remark9.11(a), printed p.156",
+      "url": "https://jmilne.org/math/Books/EC2.pdf"
+    },
+    {
+      "checked_utc_date": "2026-11-03",
+      "claims": [
+        "normalized weight-two trivial-character good-prime Euler denominator 1\u2212a_p T+p T\u00b2; formal T\u00b3 coefficient differs from Frobenius power trace"
+      ],
+      "section": "Theorem24.27, printed p.9; equation(5)",
+      "url": "https://math.mit.edu/classes/18.783/2025/LectureNotes24.pdf"
+    }
+  ],
+  "repository": "https://github.com/eliottcassidy2000/math",
+  "revision": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+  "verified_by": "git show of exact revision; copied bytes match"
+}

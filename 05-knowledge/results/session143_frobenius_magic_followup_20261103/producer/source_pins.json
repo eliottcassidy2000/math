@@ -1,0 +1,70 @@
+{
+  "external_sources": [
+    {
+      "author": "Andrew Snowden",
+      "checked_utc_date": "2026-11-03",
+      "locator": "Point counting: characteristic polynomial and extension-field count formula",
+      "status": "CITED; source read",
+      "url": "https://public.websites.umich.edu/asnowden/teaching/2013/679/L03.html"
+    },
+    {
+      "author": "Andrew Sutherland",
+      "checked_utc_date": "2026-11-03",
+      "locator": "Theorem 7.3: separable Frobenius-fixed-point count and trace",
+      "status": "CITED; source read",
+      "url": "https://math.mit.edu/classes/18.783/2025/LectureNotes7.pdf"
+    },
+    {
+      "author": "Andrew Sutherland",
+      "boundary": "Power-trace and Hecke sequences have different initial terms (2 versus 1), despite equal recurrence coefficients.",
+      "checked_utc_date": "2026-11-03",
+      "locator": "24.4-24.5; Theorem 24.27: normalized-eigenform local Euler factor",
+      "status": "CITED; source read",
+      "url": "https://math.mit.edu/classes/18.783/2025/LectureNotes24.pdf"
+    }
+  ],
+  "provenance_search_scope": "Pinned Session143 local packet, its inherited S57 synthesis, all tracked filenames by git ls-tree (no broad blob hydration), and the single targeted older sixth_clock_branches script. No repository-wide novelty or user-referent claim.",
+  "repository_sources": [
+    {
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "c736529d4a3ed5e9e1ad947f1d732655f4023c4a",
+      "local_snapshot": "sources/FULL_CUBIC_CLASSIFICATION.md",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/FULL_CUBIC_CLASSIFICATION.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df"
+    },
+    {
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "7971ce523d2ed8ea51286bcd18196da3613694ca",
+      "local_snapshot": "sources/tournament_classification.json",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/tournaments/classification.json",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "a1d9b3d55a74f8da66442ba2261aa501717f8c24",
+      "local_snapshot": null,
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/lambda_octonions/PROOF.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "25df351cd4f905217cc02f9763253f09ecc32f5bae881a78cf0da2bcf0aefb4e"
+    },
+    {
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "5c802a20cdb8864282a7716114093117d7e580e1",
+      "local_snapshot": null,
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/sources/S57_synthesis.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "f1f2dd02da56a5323aeb3efb06c3b3e26256af60be73fad359d828b8531040ea"
+    },
+    {
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "3bc64d77bfe314d6f0ebf0de9cd89cbdb3a50e77",
+      "local_snapshot": "sources/prior_sixth_clock_branches.py.txt",
+      "path": "04-computation/experiments/sixth_clock_branches_20261004.py",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02"
+    }
+  ],
+  "source_ownership": "No edits or Git commits made to the source repository."
+}

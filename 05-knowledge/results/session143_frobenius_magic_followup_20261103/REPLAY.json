@@ -1,0 +1,124 @@
+{
+  "cross_check": {
+    "classes": 12,
+    "magic_line_sum": 378,
+    "models": 20,
+    "square_entries": [
+      144
+    ],
+    "tournament_converse_orbits": 10,
+    "trace_states": 9,
+    "twist_orbits": 6
+  },
+  "executions": [
+    {
+      "expected_output": "producer/result.json",
+      "mode": "normal",
+      "output_sha256": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9",
+      "program": "producer/check_bridge.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "producer/result.optimized.json",
+      "mode": "optimized",
+      "output_sha256": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9",
+      "program": "producer/check_bridge.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "producer/hostile_results.json",
+      "mode": "normal",
+      "output_sha256": "0c9e7aeeb81b9005cebe587a6f73b6b7187df448759befb4ded162e5632484d9",
+      "program": "producer/test_controls.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "producer/hostile_results.optimized.json",
+      "mode": "optimized",
+      "output_sha256": "0c9e7aeeb81b9005cebe587a6f73b6b7187df448759befb4ded162e5632484d9",
+      "program": "producer/test_controls.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "independent/result.json",
+      "mode": "normal",
+      "output_sha256": "a3c2df63529b873435f5f03780af471ee8857b9d570b014aa0c0f398c8eef6ca",
+      "program": "independent/check_independent.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "independent/result.optimized.json",
+      "mode": "optimized",
+      "output_sha256": "a3c2df63529b873435f5f03780af471ee8857b9d570b014aa0c0f398c8eef6ca",
+      "program": "independent/check_independent.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "independent/negative_controls.json",
+      "mode": "normal",
+      "output_sha256": "93775813cb079e84f3ffca8f7f22c2f33073408bf5474691edf7cf88188ee1eb",
+      "program": "independent/test_negative_controls.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "independent/negative_controls.optimized.json",
+      "mode": "optimized",
+      "output_sha256": "93775813cb079e84f3ffca8f7f22c2f33073408bf5474691edf7cf88188ee1eb",
+      "program": "independent/test_negative_controls.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "independent/producer_review.json",
+      "mode": "normal",
+      "output_sha256": "4526566e78ada396f26f202390ca68da5dfd6d317cd5f550a553d140d2cf9602",
+      "program": "independent/audit_producer.py",
+      "status": "PASS"
+    },
+    {
+      "expected_output": "independent/producer_review.json",
+      "mode": "optimized",
+      "output_sha256": "4526566e78ada396f26f202390ca68da5dfd6d317cd5f550a553d140d2cf9602",
+      "program": "independent/audit_producer.py",
+      "status": "PASS"
+    },
+    {
+      "mode": "normal",
+      "output_sha256": "e833ae31d0afddb6888ab3ba1823aba32c4284966b14c9a5a4aa58522f81f12e",
+      "program": "producer/verify_manifest.py",
+      "status": "PASS"
+    },
+    {
+      "mode": "optimized",
+      "output_sha256": "e833ae31d0afddb6888ab3ba1823aba32c4284966b14c9a5a4aa58522f81f12e",
+      "program": "producer/verify_manifest.py",
+      "status": "PASS"
+    },
+    {
+      "mode": "normal",
+      "output_sha256": "6434398517114bf3fdaec9d4e203d313635e683fc2b3946087e3a3d316f7787e",
+      "program": "independent/verify_manifest.py",
+      "status": "PASS"
+    },
+    {
+      "mode": "optimized",
+      "output_sha256": "6434398517114bf3fdaec9d4e203d313635e683fc2b3946087e3a3d316f7787e",
+      "program": "independent/verify_manifest.py",
+      "status": "PASS"
+    },
+    {
+      "mode": "normal",
+      "output_sha256": "32b798bf51f3707194bd4bff1d728e2199262a84c8685c8d64456afda81492ba",
+      "program": "verify_source_pins.py",
+      "status": "PASS"
+    },
+    {
+      "mode": "optimized",
+      "output_sha256": "32b798bf51f3707194bd4bff1d728e2199262a84c8685c8d64456afda81492ba",
+      "program": "verify_source_pins.py",
+      "status": "PASS"
+    }
+  ],
+  "integrity": "PASS",
+  "scope": "Finite F5 short-model census and degrees 1, 2, 3 only; no MSOS solution.",
+  "status": "PASS"
+}

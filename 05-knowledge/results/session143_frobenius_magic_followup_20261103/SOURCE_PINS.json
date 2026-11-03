@@ -1,0 +1,89 @@
+{
+  "checked_against_git_objects": true,
+  "external_sources": "See the producer and independent source_pins.json files: primary URLs and locators, no fabricated external byte hashes or uploaded PDFs.",
+  "prior_lambda_locator": "05-knowledge/results/sixth_clock_branches_20261004.md section 4 (lines 211-240 at the pinned revision); lambda=(1+3 phi)^(-1/3), negative norm -5. Not a user-referent identification.",
+  "published_source_commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+  "repository_sources": [
+    {
+      "bytes": 5808,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "c736529d4a3ed5e9e1ad947f1d732655f4023c4a",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/FULL_CUBIC_CLASSIFICATION.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df",
+      "snapshots": [
+        "producer/sources/FULL_CUBIC_CLASSIFICATION.md",
+        "independent/sources/session143_full_cubic.md"
+      ]
+    },
+    {
+      "bytes": 17412,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "7971ce523d2ed8ea51286bcd18196da3613694ca",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/tournaments/classification.json",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c",
+      "snapshots": [
+        "producer/sources/tournament_classification.json",
+        "independent/sources/session143_tournaments.json"
+      ]
+    },
+    {
+      "bytes": 14454,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "a1d9b3d55a74f8da66442ba2261aa501717f8c24",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/lambda_octonions/PROOF.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "25df351cd4f905217cc02f9763253f09ecc32f5bae881a78cf0da2bcf0aefb4e",
+      "snapshots": []
+    },
+    {
+      "bytes": 17864,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "5c802a20cdb8864282a7716114093117d7e580e1",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/sources/S57_synthesis.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "f1f2dd02da56a5323aeb3efb06c3b3e26256af60be73fad359d828b8531040ea",
+      "snapshots": []
+    },
+    {
+      "bytes": 15070,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "3bc64d77bfe314d6f0ebf0de9cd89cbdb3a50e77",
+      "path": "04-computation/experiments/sixth_clock_branches_20261004.py",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "ae993401c37861705827f8074be6e066ebe9e7623d8ad45311c0258377477b02",
+      "snapshots": [
+        "producer/sources/prior_sixth_clock_branches.py.txt"
+      ]
+    },
+    {
+      "bytes": 17703,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "910ddc78f09b2f54112405e60e503c2b10e9aefe",
+      "path": "05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/magic_cycle/THEOREM.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "423d05fa2dad0be0dbac384524798d822af40481b25261ce605b31173023e3b4",
+      "snapshots": [
+        "independent/sources/session143_magic_theorem.md"
+      ]
+    },
+    {
+      "bytes": 30139,
+      "commit": "74e81ed37c9175d94e8fad57fc5809cf78cee572",
+      "git_blob": "68e445a88328ead10606f8bdec1f7bc435a0b7a2",
+      "path": "05-knowledge/results/sixth_clock_branches_20261004.md",
+      "repository": "eliottcassidy2000/math",
+      "sha256": "ffd91e16899bbc24f65de390b2d8c0017655c3c76662447dafdd4fb4227db977",
+      "snapshots": []
+    }
+  ],
+  "schema": 1,
+  "scope": "Exact selected source identities at an already published commit; bounded provenance, not a repository-wide novelty search.",
+  "wrapper_primary_source": {
+    "checked_utc_date": "2026-11-03",
+    "claim": "An Fq-defined isogeny preserves Frobenius eigenvalues and the Fq point count; no cycle edge between different count labels can be such an isogeny.",
+    "locator": "Point counting: paragraph and theorem on isogenous curves, lines 62-64 of rendered source",
+    "url": "https://public.websites.umich.edu/~asnowden/teaching/2013/679/L03.html"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "arrangement_method": "8! center-fixed permutations",
+  "independent_field_modulus": "z^3+2z+1",
+  "pointcount_comparisons": 20,
+  "producer_controls_and_manifest": "passed normal and optimized",
+  "producer_field_modulus": "z^3+z+1",
+  "producer_normal_optimized_replay": "byte-identical to both saved certificates",
+  "producer_pins": {
+    "PROOF.md": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f",
+    "check_bridge.py": "50a80630049dc282b943221c82d3a5183ea3c093efcc7a83cf019f5df32422ca",
+    "manifest.json": "a8666d9791f8dfb0c8874be77bd46c2200651f90e899261f51dc379183122c4c",
+    "result.json": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9",
+    "result.optimized.json": "35cae094cc708e1b2e2fed381512c7160df41c37faffb6ed39bfadbc7d5db9f9",
+    "source_pins.json": "f9f9ebd061a1cb4ca6cfb44943f1e258d8d187acc03cc99de7381fc4efe2db9d",
+    "test_controls.py": "f7b59d40e94dbb80b1f962d92b653b396f4ef4dab574d22b7703003d1e4213d2"
+  },
+  "status": "PASS",
+  "tournament_polynomial_paths": [
+    "auditor Newton identities",
+    "producer Leibniz determinant"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "PROOF.md": "4952cda10ed920cd325acd4ab315680b309b6d6abef4434586937086731fb5a2",
+    "audit_producer.py": "09d0e6974108dc166bdea7881ea133098482f8fa8c1af401d41d51a10bb935c3",
+    "check_independent.py": "b7c7874a35f568cec4d32be93d3f88c7a8079e497700f4f1228564e129080da4",
+    "negative_controls.json": "93775813cb079e84f3ffca8f7f22c2f33073408bf5474691edf7cf88188ee1eb",
+    "negative_controls.optimized.json": "93775813cb079e84f3ffca8f7f22c2f33073408bf5474691edf7cf88188ee1eb",
+    "producer_review.json": "4526566e78ada396f26f202390ca68da5dfd6d317cd5f550a553d140d2cf9602",
+    "result.json": "a3c2df63529b873435f5f03780af471ee8857b9d570b014aa0c0f398c8eef6ca",
+    "result.optimized.json": "a3c2df63529b873435f5f03780af471ee8857b9d570b014aa0c0f398c8eef6ca",
+    "source_pins.json": "4447a9a9a682a02bd06b277ec1a8f706ecda1fefe35db3d1816d3ffd9682bfe5",
+    "sources/session143_full_cubic.md": "7514cbd2ffce6d83e71e9cf0ba65c88f38925eab41ae6094ad74821be39559df",
+    "sources/session143_magic_theorem.md": "423d05fa2dad0be0dbac384524798d822af40481b25261ce605b31173023e3b4",
+    "sources/session143_tournaments.json": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c",
+    "test_negative_controls.py": "c3e955d15e39234d123a19c6a3e44be87678cf27da10e15dce0a1d849bbe489b",
+    "verify_manifest.py": "4d893e665537a7a8b420179f113bf0b28c0f82dd58d222ca5783ad5e980568ac"
+  },
+  "schema": 1,
+  "status": "independent audit frozen; bounded F5,F25,F125 bridge"
+}
