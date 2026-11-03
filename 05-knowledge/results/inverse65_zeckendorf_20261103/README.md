@@ -12,6 +12,13 @@ the reverse of source-component order. A source word, physical port, and vertex
 clock accompany every construction; equality of Hamilton-path counts never
 authorizes replacing the supplied source.
 
+Concurrent [golden-inverse work](../golden_inverse_defects_20261103/README.md)
+independently establishes the realization inverse and strengthens the attachment
+classification. Our [integration](INCOMING.md) credits that overlap and derives
+the dual error/charge channels, with exact integral gluing indices2,5,13 and
+two further actual source replacements giving3H-10 and3H-20. Their return
+closure remains open.
+
 The main results are:
 
 - [Exact inverse](INVERSE.md): the positive norm `6h+9x+5y` grows by at least

@@ -12,7 +12,7 @@ def main():
         if digest(ROOT/path)!=expected:raise RuntimeError(('changed inherited input',path))
     pairs=(('verify.py','verification.json'),('branch_probe.py','branches.json'),
            ('charges.py','charges.json'),('ear_bridge.py','ear_bridge.json'),
-           ('zero_cycle_prepare.py','zero_cycles.json'))
+           ('zero_cycle_prepare.py','zero_cycles.json'),('integration_probe.py','integration.json'))
     records=[]
     for script,result in pairs:
         hashes=[];runs=[]

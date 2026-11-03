@@ -5,6 +5,10 @@ their correction routes, not a claim to have reread every historical session.
 Chronological logs were not used as mathematical authority. Input commit:
 `7c371e94aae8`; runtime dependencies are pinned in `source_pins.json`.
 
+The later [incoming integration](INCOMING.md) records commits through4a08185e87,
+credits independently overlapping inverse results, and turns the paired
+left-error/right-charge coordinates into new exact source replacements.
+
 ## Inheritance and live concept board
 
 Closest proved mechanism: G1-G3 in

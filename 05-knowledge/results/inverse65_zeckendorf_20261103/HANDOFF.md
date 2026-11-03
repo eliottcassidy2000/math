@@ -5,6 +5,13 @@ Resume here rather than replaying all finite experiments.
 
 ## What is now available
 
+- [Concurrent integration](INCOMING.md) credits the independently published
+  realization inverse and stronger positive-offset obstruction. Dual error/charge
+  projectors have exact integral indices2,5,13. Actual norm13 source replacements
+  give3H-10 from H227 and3H-20 from H321, but use different source families;
+  no joint lift occurs with all participating states in the complete H<=2000
+  state universe. Larger output states are outside that finite test.
+
 - Exact terminating state inverse and scalar membership/witness algorithm for
   the fixed65 bank, with norm `6h+9x+5y` growing by9/5 per symbol.
 - Complete H55 source census: six presentations, all order7, all768 cuts miss111.
@@ -54,7 +61,7 @@ of those intersections.
 
 ## Reproduce / preserve
 
-`reproduce.py` pins inherited inputs and repeats all five probes normally and
+`reproduce.py` pins inherited inputs and repeats all six probes normally and
 under-O. `zero_cycle.cpp` is the independent wider word enumeration.
 Do not commit binaries or overwrite another worktree. Source input commit is
 in `source_pins.json`; the session's startup packet is retained as provenance.

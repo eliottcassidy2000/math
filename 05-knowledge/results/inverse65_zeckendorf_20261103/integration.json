@@ -1,0 +1,434 @@
+{
+  "status": "PASS",
+  "projectors": [
+    {
+      "letter": "b",
+      "sign": -1,
+      "charge": [
+        1,
+        0,
+        -1
+      ],
+      "error_direction": [
+        2,
+        -1,
+        0
+      ],
+      "pairing": 2,
+      "gluing_index": 2
+    },
+    {
+      "letter": "q1",
+      "sign": -1,
+      "charge": [
+        3,
+        0,
+        -4
+      ],
+      "error_direction": [
+        3,
+        -2,
+        1
+      ],
+      "pairing": 5,
+      "gluing_index": 5
+    },
+    {
+      "letter": "q2",
+      "sign": 1,
+      "charge": [
+        1,
+        0,
+        -1
+      ],
+      "error_direction": [
+        2,
+        -1,
+        0
+      ],
+      "pairing": 2,
+      "gluing_index": 2
+    },
+    {
+      "letter": "q4",
+      "sign": -1,
+      "charge": [
+        3,
+        2,
+        -4
+      ],
+      "error_direction": [
+        3,
+        -2,
+        0
+      ],
+      "pairing": 5,
+      "gluing_index": 5
+    },
+    {
+      "letter": "q5",
+      "sign": -1,
+      "charge": [
+        1,
+        1,
+        -2
+      ],
+      "error_direction": [
+        2,
+        -2,
+        1
+      ],
+      "pairing": -2,
+      "gluing_index": 2
+    },
+    {
+      "letter": "r21",
+      "sign": 1,
+      "charge": [
+        3,
+        -2,
+        -2
+      ],
+      "error_direction": [
+        3,
+        -1,
+        -1
+      ],
+      "pairing": 13,
+      "gluing_index": 13
+    },
+    {
+      "letter": "r38",
+      "sign": 1,
+      "charge": [
+        3,
+        -2,
+        -2
+      ],
+      "error_direction": [
+        3,
+        -1,
+        -1
+      ],
+      "pairing": 13,
+      "gluing_index": 13
+    }
+  ],
+  "incoming_rejected_states": [
+    [
+      287,
+      122,
+      225
+    ],
+    [
+      289,
+      121,
+      225
+    ],
+    [
+      293,
+      119,
+      225
+    ],
+    [
+      295,
+      118,
+      225
+    ]
+  ],
+  "complete_reachable_states_through2000": 20703,
+  "individual_lifts": {
+    "2": [
+      {
+        "state": [
+          129,
+          171,
+          186
+        ],
+        "word": [
+          "r13",
+          "q4"
+        ],
+        "target_state": [
+          393,
+          511,
+          556
+        ],
+        "target_word": [
+          "a",
+          "r27",
+          "q0"
+        ]
+      },
+      {
+        "state": [
+          39,
+          16,
+          31
+        ],
+        "word": [
+          "r4",
+          "a",
+          "a"
+        ],
+        "target_state": [
+          123,
+          46,
+          91
+        ],
+        "target_word": [
+          "a",
+          "a",
+          "r27",
+          "a"
+        ]
+      }
+    ],
+    "4": [
+      {
+        "state": [
+          33,
+          33,
+          39
+        ],
+        "word": [
+          "a",
+          "r12"
+        ],
+        "target_state": [
+          111,
+          95,
+          113
+        ],
+        "target_word": [
+          "a",
+          "a",
+          "a",
+          "r10"
+        ]
+      },
+      {
+        "state": [
+          333,
+          270,
+          327
+        ],
+        "word": [
+          "q4",
+          "a",
+          "a",
+          "q2"
+        ],
+        "target_state": [
+          1011,
+          806,
+          977
+        ],
+        "target_word": [
+          "a",
+          "r0",
+          "a",
+          "q2"
+        ]
+      }
+    ]
+  },
+  "joint_lifts": [],
+  "actual_negative_offset_families": [
+    {
+      "multiple": 2,
+      "charge_J": -23,
+      "offset": -10,
+      "terms": [
+        {
+          "k": 0,
+          "base_word": [
+            "r4",
+            "a",
+            "a",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "r27",
+            "a",
+            "b"
+          ],
+          "H": 227,
+          "target_H": 671,
+          "base_vertices": 10,
+          "target_vertices": 11
+        },
+        {
+          "k": 1,
+          "base_word": [
+            "r4",
+            "a",
+            "a",
+            "r21",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "r27",
+            "a",
+            "r21",
+            "b"
+          ],
+          "H": 9215,
+          "target_H": 27635,
+          "base_vertices": 15,
+          "target_vertices": 16
+        },
+        {
+          "k": 2,
+          "base_word": [
+            "r4",
+            "a",
+            "a",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "r27",
+            "a",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "H": 365879,
+          "target_H": 1097627,
+          "base_vertices": 20,
+          "target_vertices": 21
+        },
+        {
+          "k": 3,
+          "base_word": [
+            "r4",
+            "a",
+            "a",
+            "r21",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "r27",
+            "a",
+            "r21",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "H": 14515595,
+          "target_H": 43546775,
+          "base_vertices": 25,
+          "target_vertices": 26
+        }
+      ]
+    },
+    {
+      "multiple": 4,
+      "charge_J": 45,
+      "offset": -20,
+      "terms": [
+        {
+          "k": 0,
+          "base_word": [
+            "a",
+            "r12",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "a",
+            "r10",
+            "b"
+          ],
+          "H": 321,
+          "target_H": 943,
+          "base_vertices": 9,
+          "target_vertices": 11
+        },
+        {
+          "k": 1,
+          "base_word": [
+            "a",
+            "r12",
+            "r21",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "a",
+            "r10",
+            "r21",
+            "b"
+          ],
+          "H": 12081,
+          "target_H": 36223,
+          "base_vertices": 14,
+          "target_vertices": 16
+        },
+        {
+          "k": 2,
+          "base_word": [
+            "a",
+            "r12",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "a",
+            "r10",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "H": 478617,
+          "target_H": 1435831,
+          "base_vertices": 19,
+          "target_vertices": 21
+        },
+        {
+          "k": 3,
+          "base_word": [
+            "a",
+            "r12",
+            "r21",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "target_word": [
+            "a",
+            "a",
+            "a",
+            "r10",
+            "r21",
+            "r21",
+            "r21",
+            "b"
+          ],
+          "H": 18987177,
+          "target_H": 56961511,
+          "base_vertices": 24,
+          "target_vertices": 26
+        }
+      ]
+    }
+  ],
+  "scope": "Infinite actual suffix replacements; no jointly closed ternary bank."
+}

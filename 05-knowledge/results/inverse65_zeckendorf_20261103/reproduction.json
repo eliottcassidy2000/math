@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "pinned_inputs": 68,
+  "pinned_inputs": 74,
   "checks_survive_optimization": true,
   "runs": [
     {
@@ -17,7 +17,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\verify.py"
           ],
-          "seconds": 2.105,
+          "seconds": 2.059,
           "stdout": "{\"status\": \"PASS\", \"complete_forward_states_through151\": 747, \"rejected_small_physical_cone_states\": 942, \"inverse_cache_states\": 1719}",
           "stderr": ""
         },
@@ -31,7 +31,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\verify.py"
           ],
-          "seconds": 2.099,
+          "seconds": 2.053,
           "stdout": "{\"status\": \"PASS\", \"complete_forward_states_through151\": 747, \"rejected_small_physical_cone_states\": 942, \"inverse_cache_states\": 1719}",
           "stderr": ""
         }
@@ -51,7 +51,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\branch_probe.py"
           ],
-          "seconds": 1.543,
+          "seconds": 1.55,
           "stdout": "{\"status\": \"PASS\", \"H55_sources\": 6, \"minimum_suffix_slack\": \"1/96\", \"ternary_ss_exceptions\": [{\"state\": [1, 1, 1], \"word\": [\"a\", \"a\"], \"H\": 1, \"offset\": 2}, {\"state\": [5, 2, 4], \"word\": [\"a\", \"a\", \"a\", \"a\"], \"H\": 5, \"offset\": 2}, {\"state\": [5, 3, 4], \"word\": [\"q2\"], \"H\": 5, \"offset\": 4}, {\"state\": [9, 3, 7], \"word\": [\"b\", \"a\", \"a\"], \"H\": 9, \"offset\": 2}, {\"state\": [9, 4, 7], \"word\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \"H\": 9, \"offset\": 4}, {\"state\": [9, 5, 6], \"word\": [\"r5\"], \"H\": 9, \"offset\": 4}, {\"state\": [11, 4, 8], \"word\": [\"q2\", \"a\"], \"H\": 11, \"offset\": 2}, {\"state\": [11, 6, 7], \"word\": [\"r6\"], \"H\": 11, \"offset\": 4}, {\"state\": [13, 5, 9], \"word\": [\"q5\", \"a\"], \"H\": 13, \"offset\": 2}, {\"state\": [13, 6, 9], \"word\": [\"r13\"], \"H\": 13, \"offset\": 4}, {\"state\": [17, 5, 13], \"word\": [\"q0\", \"a\", \"a\"], \"H\": 17, \"offset\": 2}, {\"state\": [19, 6, 14], \"word\": [\"r5\", \"a\"], \"H\": 19, \"offset\": 2}, {\"state\": [23, 7, 17], \"word\": [\"r6\", \"a\"], \"H\": 23, \"offset\": 2}, {\"state\": [23, 8, 16], \"word\": [\"r4\", \"a\"], \"H\": 23, \"offset\": 2}, {\"state\": [23, 9, 16], \"word\": [\"r27\", \"a\"], \"H\": 23, \"offset\": 4}, {\"state\": [23, 12, 13], \"word\": [\"s14\"], \"H\": 23, \"offset\": 4}, {\"state\": [29, 10, 21], \"word\": [\"r21\", \"a\"], \"H\": 29, \"offset\": 4}, {\"state\": [29, 11, 19], \"word\": [\"r33\", \"a\"], \"H\": 29, \"offset\": 2}, {\"state\": [29, 11, 20], \"word\": [\"r43\", \"a\"], \"H\": 29, \"offset\": 4}, {\"state\": [31, 12, 20], \"word\": [\"r17\", \"a\"], \"H\": 31, \"offset\": 2}, {\"state\": [33, 9, 25], \"word\": [\"r0\", \"a\", \"a\"], \"H\": 33, \"offset\": 2}, {\"state\": [33, 13, 21], \"word\": [\"r25\", \"a\"], \"H\": 33, \"offset\": 2}, {\"state\": [37, 14, 24], \"word\": [\"r20\", \"a\"], \"H\": 37, \"offset\": 2}, {\"state\": [37, 14, 25], \"word\": [\"r18\", \"a\"], \"H\": 37, \"offset\": 4}, {\"state\": [47, 13, 35], \"word\": [\"s14\", \"a\"], \"H\": 47, \"offset\": 2}, {\"state\": [53, 21, 34], \"word\": [\"a\", \"a\", \"q4\", \"a\"], \"H\": 53, \"offset\": 4}, {\"state\": [59, 23, 38], \"word\": [\"a\", \"a\", \"q0\", \"a\"], \"H\": 59, \"offset\": 4}, {\"state\": [69, 27, 44], \"word\": [\"a\", \"r36\", \"a\"], \"H\": 69, \"offset\": 4}, {\"state\": [71, 26, 47], \"word\": [\"a\", \"r58\", \"a\"], \"H\": 71, \"offset\": 4}, {\"state\": [73, 26, 49], \"word\": [\"a\", \"r50\", \"a\"], \"H\": 73, \"offset\": 4}, {\"state\": [73, 30, 44], \"word\": [\"a\", \"r48\", \"a\"], \"H\": 73, \"offset\": 2}, {\"state\": [77, 31, 47], \"word\": [\"a\", \"r56\", \"a\"], \"H\": 77, \"offset\": 2}, {\"state\": [77, 32, 46], \"word\": [\"a\", \"r32\", \"a\"], \"H\": 77, \"offset\": 2}, {\"state\": [81, 31, 52], \"word\": [\"a\", \"r20\", \"a\"], \"H\": 81, \"offset\": 4}, {\"state\": [85, 35, 51], \"word\": [\"a\", \"r0\", \"a\"], \"H\": 85, \"offset\": 2}, {\"state\": [91, 37, 55], \"word\": [\"a\", \"r16\", \"a\"], \"H\": 91, \"offset\": 2}, {\"state\": [99, 40, 61], \"word\": [\"a\", \"r24\", \"a\"], \"H\": 99, \"offset\": 4}, {\"state\": [123, 51, 74], \"word\": [\"a\", \"a\", \"r48\", \"a\"], \"H\": 123, \"offset\": 4}, {\"state\": [133, 55, 80], \"word\": [\"a\", \"a\", \"r32\", \"a\"], \"H\": 133, \"offset\": 4}, {\"state\": [135, 55, 82], \"word\": [\"a\", \"a\", \"r56\", \"a\"], \"H\": 135, \"offset\": 4}, {\"state\": [155, 63, 94], \"word\": [\"a\", \"a\", \"r0\", \"a\"], \"H\": 155, \"offset\": 4}], \"hostile81_27\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
           "stderr": ""
         },
@@ -65,7 +65,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\branch_probe.py"
           ],
-          "seconds": 1.577,
+          "seconds": 1.568,
           "stdout": "{\"status\": \"PASS\", \"H55_sources\": 6, \"minimum_suffix_slack\": \"1/96\", \"ternary_ss_exceptions\": [{\"state\": [1, 1, 1], \"word\": [\"a\", \"a\"], \"H\": 1, \"offset\": 2}, {\"state\": [5, 2, 4], \"word\": [\"a\", \"a\", \"a\", \"a\"], \"H\": 5, \"offset\": 2}, {\"state\": [5, 3, 4], \"word\": [\"q2\"], \"H\": 5, \"offset\": 4}, {\"state\": [9, 3, 7], \"word\": [\"b\", \"a\", \"a\"], \"H\": 9, \"offset\": 2}, {\"state\": [9, 4, 7], \"word\": [\"a\", \"a\", \"a\", \"a\", \"a\"], \"H\": 9, \"offset\": 4}, {\"state\": [9, 5, 6], \"word\": [\"r5\"], \"H\": 9, \"offset\": 4}, {\"state\": [11, 4, 8], \"word\": [\"q2\", \"a\"], \"H\": 11, \"offset\": 2}, {\"state\": [11, 6, 7], \"word\": [\"r6\"], \"H\": 11, \"offset\": 4}, {\"state\": [13, 5, 9], \"word\": [\"q5\", \"a\"], \"H\": 13, \"offset\": 2}, {\"state\": [13, 6, 9], \"word\": [\"r13\"], \"H\": 13, \"offset\": 4}, {\"state\": [17, 5, 13], \"word\": [\"q0\", \"a\", \"a\"], \"H\": 17, \"offset\": 2}, {\"state\": [19, 6, 14], \"word\": [\"r5\", \"a\"], \"H\": 19, \"offset\": 2}, {\"state\": [23, 7, 17], \"word\": [\"r6\", \"a\"], \"H\": 23, \"offset\": 2}, {\"state\": [23, 8, 16], \"word\": [\"r4\", \"a\"], \"H\": 23, \"offset\": 2}, {\"state\": [23, 9, 16], \"word\": [\"r27\", \"a\"], \"H\": 23, \"offset\": 4}, {\"state\": [23, 12, 13], \"word\": [\"s14\"], \"H\": 23, \"offset\": 4}, {\"state\": [29, 10, 21], \"word\": [\"r21\", \"a\"], \"H\": 29, \"offset\": 4}, {\"state\": [29, 11, 19], \"word\": [\"r33\", \"a\"], \"H\": 29, \"offset\": 2}, {\"state\": [29, 11, 20], \"word\": [\"r43\", \"a\"], \"H\": 29, \"offset\": 4}, {\"state\": [31, 12, 20], \"word\": [\"r17\", \"a\"], \"H\": 31, \"offset\": 2}, {\"state\": [33, 9, 25], \"word\": [\"r0\", \"a\", \"a\"], \"H\": 33, \"offset\": 2}, {\"state\": [33, 13, 21], \"word\": [\"r25\", \"a\"], \"H\": 33, \"offset\": 2}, {\"state\": [37, 14, 24], \"word\": [\"r20\", \"a\"], \"H\": 37, \"offset\": 2}, {\"state\": [37, 14, 25], \"word\": [\"r18\", \"a\"], \"H\": 37, \"offset\": 4}, {\"state\": [47, 13, 35], \"word\": [\"s14\", \"a\"], \"H\": 47, \"offset\": 2}, {\"state\": [53, 21, 34], \"word\": [\"a\", \"a\", \"q4\", \"a\"], \"H\": 53, \"offset\": 4}, {\"state\": [59, 23, 38], \"word\": [\"a\", \"a\", \"q0\", \"a\"], \"H\": 59, \"offset\": 4}, {\"state\": [69, 27, 44], \"word\": [\"a\", \"r36\", \"a\"], \"H\": 69, \"offset\": 4}, {\"state\": [71, 26, 47], \"word\": [\"a\", \"r58\", \"a\"], \"H\": 71, \"offset\": 4}, {\"state\": [73, 26, 49], \"word\": [\"a\", \"r50\", \"a\"], \"H\": 73, \"offset\": 4}, {\"state\": [73, 30, 44], \"word\": [\"a\", \"r48\", \"a\"], \"H\": 73, \"offset\": 2}, {\"state\": [77, 31, 47], \"word\": [\"a\", \"r56\", \"a\"], \"H\": 77, \"offset\": 2}, {\"state\": [77, 32, 46], \"word\": [\"a\", \"r32\", \"a\"], \"H\": 77, \"offset\": 2}, {\"state\": [81, 31, 52], \"word\": [\"a\", \"r20\", \"a\"], \"H\": 81, \"offset\": 4}, {\"state\": [85, 35, 51], \"word\": [\"a\", \"r0\", \"a\"], \"H\": 85, \"offset\": 2}, {\"state\": [91, 37, 55], \"word\": [\"a\", \"r16\", \"a\"], \"H\": 91, \"offset\": 2}, {\"state\": [99, 40, 61], \"word\": [\"a\", \"r24\", \"a\"], \"H\": 99, \"offset\": 4}, {\"state\": [123, 51, 74], \"word\": [\"a\", \"a\", \"r48\", \"a\"], \"H\": 123, \"offset\": 4}, {\"state\": [133, 55, 80], \"word\": [\"a\", \"a\", \"r32\", \"a\"], \"H\": 133, \"offset\": 4}, {\"state\": [135, 55, 82], \"word\": [\"a\", \"a\", \"r56\", \"a\"], \"H\": 135, \"offset\": 4}, {\"state\": [155, 63, 94], \"word\": [\"a\", \"a\", \"r0\", \"a\"], \"H\": 155, \"offset\": 4}], \"hostile81_27\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
           "stderr": ""
         }
@@ -85,7 +85,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\charges.py"
           ],
-          "seconds": 0.573,
+          "seconds": 0.668,
           "stdout": "{\"status\": \"PASS\", \"charges\": [{\"letter\": \"b\", \"sign\": -1, \"primitive_charge\": [1, 0, -1], \"quadratic_trace\": 8, \"quadratic_norm\": -1, \"forcing_multiplier\": \"8\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 8*X - 1)\"}, {\"letter\": \"q1\", \"sign\": -1, \"primitive_charge\": [3, 0, -4], \"quadratic_trace\": 18, \"quadratic_norm\": -9, \"forcing_multiplier\": \"6\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 18*X - 9)\"}, {\"letter\": \"q2\", \"sign\": 1, \"primitive_charge\": [1, 0, -1], \"quadratic_trace\": 18, \"quadratic_norm\": 5, \"forcing_multiplier\": \"-12\", \"characteristic_polynomial\": \"(X - 1)*(X**2 - 18*X + 5)\"}, {\"letter\": \"q4\", \"sign\": -1, \"primitive_charge\": [3, 2, -4], \"quadratic_trace\": 18, \"quadratic_norm\": -9, \"forcing_multiplier\": \"6\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 18*X - 9)\"}, {\"letter\": \"q5\", \"sign\": -1, \"primitive_charge\": [1, 1, -2], \"quadratic_trace\": 16, \"quadratic_norm\": -21, \"forcing_multiplier\": \"4\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 16*X - 21)\"}, {\"letter\": \"r21\", \"sign\": 1, \"primitive_charge\": [3, -2, -2], \"quadratic_trace\": 40, \"quadratic_norm\": 13, \"forcing_multiplier\": \"-6\", \"characteristic_polynomial\": \"(X - 1)*(X**2 - 40*X + 13)\"}, {\"letter\": \"r38\", \"sign\": 1, \"primitive_charge\": [3, -2, -2], \"quadratic_trace\": 40, \"quadratic_norm\": 13, \"forcing_multiplier\": \"-6\", \"characteristic_polynomial\": \"(X - 1)*(X**2 - 40*X + 13)\"}], \"family_first_terms\": {\"r29\": [13, 529, 21001, 833173, 33053917, 1311325441], \"r43\": [13, 501, 19861, 787917, 31258477, 1240096149]}, \"clock_lengths\": {\"r29\": [[2, 0, 1], [3, 0, 1], [5, 0, 8], [7, 0, 6], [11, 0, 120], [13, 1, 13], [17, 0, 16], [19, 0, 18], [23, 0, 33], [27, 0, 6]], \"r43\": [[2, 0, 1], [3, 0, 2], [5, 0, 8], [7, 0, 6], [11, 0, 120], [13, 1, 13], [17, 0, 16], [19, 0, 18], [23, 0, 33], [27, 0, 18]]}}",
           "stderr": ""
         },
@@ -99,7 +99,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\charges.py"
           ],
-          "seconds": 0.57,
+          "seconds": 0.567,
           "stdout": "{\"status\": \"PASS\", \"charges\": [{\"letter\": \"b\", \"sign\": -1, \"primitive_charge\": [1, 0, -1], \"quadratic_trace\": 8, \"quadratic_norm\": -1, \"forcing_multiplier\": \"8\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 8*X - 1)\"}, {\"letter\": \"q1\", \"sign\": -1, \"primitive_charge\": [3, 0, -4], \"quadratic_trace\": 18, \"quadratic_norm\": -9, \"forcing_multiplier\": \"6\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 18*X - 9)\"}, {\"letter\": \"q2\", \"sign\": 1, \"primitive_charge\": [1, 0, -1], \"quadratic_trace\": 18, \"quadratic_norm\": 5, \"forcing_multiplier\": \"-12\", \"characteristic_polynomial\": \"(X - 1)*(X**2 - 18*X + 5)\"}, {\"letter\": \"q4\", \"sign\": -1, \"primitive_charge\": [3, 2, -4], \"quadratic_trace\": 18, \"quadratic_norm\": -9, \"forcing_multiplier\": \"6\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 18*X - 9)\"}, {\"letter\": \"q5\", \"sign\": -1, \"primitive_charge\": [1, 1, -2], \"quadratic_trace\": 16, \"quadratic_norm\": -21, \"forcing_multiplier\": \"4\", \"characteristic_polynomial\": \"(X + 1)*(X**2 - 16*X - 21)\"}, {\"letter\": \"r21\", \"sign\": 1, \"primitive_charge\": [3, -2, -2], \"quadratic_trace\": 40, \"quadratic_norm\": 13, \"forcing_multiplier\": \"-6\", \"characteristic_polynomial\": \"(X - 1)*(X**2 - 40*X + 13)\"}, {\"letter\": \"r38\", \"sign\": 1, \"primitive_charge\": [3, -2, -2], \"quadratic_trace\": 40, \"quadratic_norm\": 13, \"forcing_multiplier\": \"-6\", \"characteristic_polynomial\": \"(X - 1)*(X**2 - 40*X + 13)\"}], \"family_first_terms\": {\"r29\": [13, 529, 21001, 833173, 33053917, 1311325441], \"r43\": [13, 501, 19861, 787917, 31258477, 1240096149]}, \"clock_lengths\": {\"r29\": [[2, 0, 1], [3, 0, 1], [5, 0, 8], [7, 0, 6], [11, 0, 120], [13, 1, 13], [17, 0, 16], [19, 0, 18], [23, 0, 33], [27, 0, 6]], \"r43\": [[2, 0, 1], [3, 0, 2], [5, 0, 8], [7, 0, 6], [11, 0, 120], [13, 1, 13], [17, 0, 16], [19, 0, 18], [23, 0, 33], [27, 0, 18]]}}",
           "stderr": ""
         }
@@ -119,7 +119,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\ear_bridge.py"
           ],
-          "seconds": 0.114,
+          "seconds": 0.12,
           "stdout": "{\"status\": \"PASS\", \"histogram\": {\"15\": 2, \"17\": 4, \"19\": 2, \"23\": 6, \"25\": 2, \"27\": 2, \"29\": 2, \"33\": 4, \"37\": 4, \"41\": 2}, \"failed_lifts\": [{\"cut\": 24, \"H\": 41}, {\"cut\": 28, \"H\": 41}], \"accepted_charts\": 143, \"minimum_added_atoms\": [\"s76\"], \"shared_repair_atom_count\": 41, \"filtered_next_singleton_responses\": {\"17\": [33, 33, 33, 33], \"23\": [49, 47, 81, 39, 41, 47], \"27\": [51, 51], \"19\": [31, 33]}}",
           "stderr": ""
         },
@@ -133,7 +133,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\ear_bridge.py"
           ],
-          "seconds": 0.113,
+          "seconds": 0.11,
           "stdout": "{\"status\": \"PASS\", \"histogram\": {\"15\": 2, \"17\": 4, \"19\": 2, \"23\": 6, \"25\": 2, \"27\": 2, \"29\": 2, \"33\": 4, \"37\": 4, \"41\": 2}, \"failed_lifts\": [{\"cut\": 24, \"H\": 41}, {\"cut\": 28, \"H\": 41}], \"accepted_charts\": 143, \"minimum_added_atoms\": [\"s76\"], \"shared_repair_atom_count\": 41, \"filtered_next_singleton_responses\": {\"17\": [33, 33, 33, 33], \"23\": [49, 47, 81, 39, 41, 47], \"27\": [51, 51], \"19\": [31, 33]}}",
           "stderr": ""
         }
@@ -153,7 +153,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\zero_cycle_prepare.py"
           ],
-          "seconds": 0.492,
+          "seconds": 0.495,
           "stdout": "{\"status\": \"PASS\", \"unit_letters\": [\"a\", \"b\", \"q0\", \"r0\", \"r20\", \"r30\", \"r6\"], \"candidate_counts\": {\"3\": 2, \"6\": 8, \"9\": 53}}",
           "stderr": ""
         },
@@ -167,8 +167,42 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\zero_cycle_prepare.py"
           ],
-          "seconds": 0.496,
+          "seconds": 0.488,
           "stdout": "{\"status\": \"PASS\", \"unit_letters\": [\"a\", \"b\", \"q0\", \"r0\", \"r20\", \"r30\", \"r6\"], \"candidate_counts\": {\"3\": 2, \"6\": 8, \"9\": 53}}",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "script": "integration_probe.py",
+      "result": "integration.json",
+      "sha256_lf": "60b1b3700e649328f141044adcc3f3245eccf78fe015c5ebe5ec716b92626740",
+      "runs": [
+        {
+          "optimized": false,
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\integration_probe.py"
+          ],
+          "seconds": 2.87,
+          "stdout": "{\"status\": \"PASS\", \"projector_indices\": [2, 5, 2, 5, 2, 13, 13], \"states\": 20703, \"lift_counts\": [2, 2], \"initial_offsets\": [[227, 671], [321, 943]]}",
+          "stderr": ""
+        },
+        {
+          "optimized": true,
+          "command": [
+            "C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+            "-X",
+            "utf8",
+            "-B",
+            "-O",
+            "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-inverse65_zeckendorf_20261103\\05-knowledge\\results\\inverse65_zeckendorf_20261103\\integration_probe.py"
+          ],
+          "seconds": 2.936,
+          "stdout": "{\"status\": \"PASS\", \"projector_indices\": [2, 5, 2, 5, 2, 13, 13], \"states\": 20703, \"lift_counts\": [2, 2], \"initial_offsets\": [[227, 671], [321, 943]]}",
           "stderr": ""
         }
       ]

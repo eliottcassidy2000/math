@@ -7,7 +7,7 @@ explicit exceptions and survive `-O`.
 ## Reproduction and input identity
 
 Run `python -X utf8 -B reproduce.py` from this packet or by its repository path.
-It checks68 inherited file hashes, then runs each of the five probes normally
+It checks all recorded inherited file hashes, then runs each of the six probes normally
 and with `-O`. Each pair must produce identical LF-normalized JSON bytes.
 `reproduction.json` records commands, timings, outputs and digests. Hashes
 normalize CRLF to LF to allow ordinary Windows/Git line-ending conversion.
@@ -26,6 +26,12 @@ The Python proof also checks the64-bit matrix-entry range for this experiment;
 the second characteristic coefficient uses128-bit intermediate arithmetic.
 The pruned SymPy certificate checks2,8,53 admissible words independently.
 No executable is committed.
+
+The sixth probe integrates incoming commit4a08185e87. It replays the four
+failed affine closure states with our inverse; verifies the seven dual
+projectors and gluing indices2,5,13; exhausts all20703 states through H2000
+for the two specified affine lifts; and counts the new literal replacement
+pairs independently through16 vertices. All six normal/-O receipts agree.
 
 ## Declared universes and controls
 

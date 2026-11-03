@@ -45,7 +45,9 @@ Consequently a word of length ell satisfies
     ell <= log_(9/5)(230h/6).                            (I3)
 
 There are at most six actual vertices per symbol. This is a certificate-size
-bound; it does not bound the number of failed inverse branches by a polynomial.
+bound, not a polynomial bound in the bit length of h. The finite cone permits
+O(h^3) memoized states; see the independently obtained inverse and fibre
+polynomials in [incoming THEORY I3](../golden_inverse_defects_20261103/THEORY.md).
 
 Every P is nonsingular. Given a state w, each candidate last letter determines
 one rational predecessor `v=w adj(P)/det(P)`. Retain it only when it is integral,
@@ -94,6 +96,11 @@ append-only operations, without resetting to an unrelated representative.
 The obstruction is not an objection to the existence of each desired scalar
 somewhere in the family. It specifically identifies the failed implication
 from scalar reachability to source-compatible recursive reachability.
+
+The concurrent [THEORY I4](../golden_inverse_defects_20261103/THEORY.md) sharpens
+this: no state supports both positive offsets3h+2 and3h+4. The only possible
+cross-cases would require x=h+1, x+y=h+2 (hence y=1), or x=h+2, x+y=h+1
+(hence y=-1). Both violate the physical cone. We credit this stronger result.
 
 ## I4. Exact positive ternary offsets from two singletons
 

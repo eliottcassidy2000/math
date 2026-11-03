@@ -69,6 +69,13 @@
     "05-knowledge/results/primegame_port_spectrum_20261103/verification.json": "76c789810a517021d81e67407a864b4ff3e9e971f4cba0c5ee71918e4bcfe72e",
     "05-knowledge/results/primegame_port_spectrum_20261103/verification_optimized.json": "76c789810a517021d81e67407a864b4ff3e9e971f4cba0c5ee71918e4bcfe72e",
     "05-knowledge/results/primegame_port_spectrum_20261103/verify.py": "3a12b3d8c1a61964f3cfbf98e76963eda0336c95ee70592762d24ecb84486804",
-    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
-  }
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
+    "05-knowledge/results/golden_inverse_defects_20261103/README.md": "0dd5e1e5c8c1475f6657139c6fc3427f3085212f12a45cdb46414fdb4e8e5954",
+    "05-knowledge/results/golden_inverse_defects_20261103/THEORY.md": "895a9062de718344c95a093519e4d31bc1c28868eeafade8d9bb7c468966b830",
+    "05-knowledge/results/golden_inverse_defects_20261103/TRANSPORT.md": "03183aa0957fd817393972510e7d924994ba7b77c6dde738f1a93c2722318b56",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/README.md": "13cd4f7a58ed885d55b172beab2442268e220aa3089d444d4f27e107418d2590",
+    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/INCOMING.md": "08291d2f53b686915d831d4ddfdefc1cfd638e94ac63f5da02d92ad503350ccc",
+    "05-knowledge/results/session153_gadgets_20261103/rewriting/NOTE.md": "a800c6323ea851e8cb08b1ffad6e96f011f6998e32df2b5753cb24979af6b925"
+  },
+  "incoming_review_commit": "4a08185e87"
 }
