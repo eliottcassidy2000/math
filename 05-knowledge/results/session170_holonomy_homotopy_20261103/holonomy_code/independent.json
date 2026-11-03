@@ -1,0 +1,91 @@
+{
+  "dense_levels": [
+    {
+      "balanced_paths": 256,
+      "basis_products": 64,
+      "distinct_balanced_returns": 2,
+      "layers": [
+        {
+          "r": 2,
+          "support_size": 4,
+          "word_length": 4
+        }
+      ],
+      "n": 3
+    },
+    {
+      "balanced_paths": 256,
+      "basis_products": 256,
+      "distinct_balanced_returns": 16,
+      "layers": [
+        {
+          "r": 2,
+          "support_size": 4,
+          "word_length": 4
+        },
+        {
+          "r": 3,
+          "support_size": 8,
+          "word_length": 10
+        }
+      ],
+      "n": 4
+    },
+    {
+      "balanced_paths": 256,
+      "basis_products": 1024,
+      "distinct_balanced_returns": 160,
+      "layers": [
+        {
+          "r": 2,
+          "support_size": 4,
+          "word_length": 4
+        },
+        {
+          "r": 3,
+          "support_size": 8,
+          "word_length": 10
+        },
+        {
+          "r": 4,
+          "support_size": 16,
+          "word_length": 22
+        }
+      ],
+      "n": 5
+    }
+  ],
+  "shifted_hostile": {
+    "e0": [
+      0,
+      0
+    ],
+    "e4": [
+      4,
+      1
+    ],
+    "support": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "status": "PASS",
+  "subset_path_profiles": {
+    "10": [
+      9,
+      33,
+      31,
+      10,
+      1
+    ],
+    "8": [
+      9,
+      33,
+      31,
+      10,
+      1
+    ]
+  }
+}

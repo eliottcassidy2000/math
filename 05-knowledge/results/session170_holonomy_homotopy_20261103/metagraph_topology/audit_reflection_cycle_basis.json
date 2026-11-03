@@ -1,0 +1,22 @@
+[
+  {
+    "n": 3,
+    "cycle_rank": 0,
+    "direct_signed_h1_trace": 0
+  },
+  {
+    "n": 4,
+    "cycle_rank": 1,
+    "direct_signed_h1_trace": 1
+  },
+  {
+    "n": 5,
+    "cycle_rank": 21,
+    "direct_signed_h1_trace": 1
+  },
+  {
+    "n": 6,
+    "cycle_rank": 457,
+    "direct_signed_h1_trace": 21
+  }
+]

@@ -1,0 +1,219 @@
+{
+  "levels": [
+    {
+      "flat_circuits_checked": 3,
+      "full_group_probes": 4,
+      "generator_pairs": 21,
+      "layers": [
+        {
+          "distance": 4,
+          "enumerated_minimum_distance": 4,
+          "moved_signed_sheets": 16,
+          "probe_count": 1,
+          "r": 2
+        }
+      ],
+      "n": 3,
+      "probe_sets_checked": 256,
+      "signed_sheets": 16
+    },
+    {
+      "flat_circuits_checked": 21,
+      "full_group_probes": 8,
+      "generator_pairs": 105,
+      "layers": [
+        {
+          "distance": 4,
+          "enumerated_minimum_distance": 4,
+          "moved_signed_sheets": 16,
+          "probe_count": 4,
+          "r": 2
+        },
+        {
+          "distance": 8,
+          "enumerated_minimum_distance": 8,
+          "moved_signed_sheets": 32,
+          "probe_count": 1,
+          "r": 3
+        }
+      ],
+      "n": 4,
+      "probe_sets_checked": 1024,
+      "signed_sheets": 32
+    },
+    {
+      "flat_circuits_checked": 105,
+      "full_group_probes": 16,
+      "generator_pairs": 465,
+      "layers": [
+        {
+          "distance": 4,
+          "enumerated_minimum_distance": 4,
+          "moved_signed_sheets": 16,
+          "probe_count": 11,
+          "r": 2
+        },
+        {
+          "distance": 8,
+          "enumerated_minimum_distance": 8,
+          "moved_signed_sheets": 32,
+          "probe_count": 5,
+          "r": 3
+        },
+        {
+          "distance": 16,
+          "enumerated_minimum_distance": 16,
+          "moved_signed_sheets": 64,
+          "probe_count": 1,
+          "r": 4
+        }
+      ],
+      "n": 5,
+      "probe_sets_checked": 1024,
+      "signed_sheets": 64
+    },
+    {
+      "flat_circuits_checked": 465,
+      "full_group_probes": 32,
+      "generator_pairs": 1953,
+      "layers": [
+        {
+          "distance": 4,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 16,
+          "probe_count": 26,
+          "r": 2
+        },
+        {
+          "distance": 8,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 32,
+          "probe_count": 16,
+          "r": 3
+        },
+        {
+          "distance": 16,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 64,
+          "probe_count": 6,
+          "r": 4
+        },
+        {
+          "distance": 32,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 128,
+          "probe_count": 1,
+          "r": 5
+        }
+      ],
+      "n": 6,
+      "probe_sets_checked": 1024,
+      "signed_sheets": 128
+    },
+    {
+      "flat_circuits_checked": 1953,
+      "full_group_probes": 64,
+      "generator_pairs": 8001,
+      "layers": [
+        {
+          "distance": 4,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 16,
+          "probe_count": 57,
+          "r": 2
+        },
+        {
+          "distance": 8,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 32,
+          "probe_count": 42,
+          "r": 3
+        },
+        {
+          "distance": 16,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 64,
+          "probe_count": 22,
+          "r": 4
+        },
+        {
+          "distance": 32,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 128,
+          "probe_count": 7,
+          "r": 5
+        },
+        {
+          "distance": 64,
+          "enumerated_minimum_distance": null,
+          "moved_signed_sheets": 256,
+          "probe_count": 1,
+          "r": 6
+        }
+      ],
+      "n": 7,
+      "probe_sets_checked": 1024,
+      "signed_sheets": 256
+    }
+  ],
+  "physical_trials": [
+    {
+      "blocks": 8,
+      "final_sign": 0,
+      "final_word": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hamilton_count": 43046721,
+      "initial_word": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "literal_arc_reversals": 16,
+      "start_index": 0,
+      "vertices": 40
+    },
+    {
+      "blocks": 8,
+      "final_sign": 1,
+      "final_word": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "hamilton_count": 43046721,
+      "initial_word": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "literal_arc_reversals": 17,
+      "start_index": 4,
+      "vertices": 40
+    }
+  ],
+  "source": "S170 holonomy code tests",
+  "status": "PASS"
+}
