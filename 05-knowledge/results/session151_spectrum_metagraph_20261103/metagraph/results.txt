@@ -1,0 +1,49 @@
+CHECKS PASS: S converse, fixed coordinates, color fiber parity, all black bundles including loops even
+
+n= 3 m= 1 classes= 2 merged= 2
+original
+{'code': 0, 'SC': True, 'mass': 1, 'aut': 1, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 2, 'SC': True, 'mass': 1, 'aut': 3, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+merged
+{'code': 0, 'SC': True, 'mass': 1, 'aut': 1, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 2, 'SC': True, 'mass': 1, 'aut': 3, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+CHECKS PASS: S converse, fixed coordinates, color fiber parity, all black bundles including loops even
+
+n= 4 m= 3 classes= 4 merged= 3
+original
+{'code': 0, 'SC': True, 'mass': 1, 'aut': 1, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 2, 'SC': False, 'mass': 1, 'aut': 3, 'blue': 0, 'black': 1, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 1}
+{'code': 4, 'SC': True, 'mass': 5, 'aut': 1, 'blue': 3, 'black': 2, 'blue_loop': 1, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 2}
+{'code': 5, 'SC': False, 'mass': 1, 'aut': 3, 'blue': 0, 'black': 1, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 1}
+merged
+{'code': 0, 'SC': True, 'mass': 1, 'aut': 1, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 2, 'SC': False, 'mass': 2, 'aut': 3, 'blue': 0, 'black': 2, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 2}
+{'code': 4, 'SC': True, 'mass': 5, 'aut': 1, 'blue': 3, 'black': 2, 'blue_loop': 1, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 2}
+n=5 pure-blue code 76 has three distinct blue neighbors: [12, 40, 41]
+CHECKS PASS: S converse, fixed coordinates, color fiber parity, all black bundles including loops even
+
+n= 5 m= 6 classes= 12 merged= 10
+original
+{'code': 0, 'SC': True, 'mass': 1, 'aut': 1, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 2, 'SC': False, 'mass': 1, 'aut': 3, 'blue': 0, 'black': 1, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 1}
+{'code': 4, 'SC': False, 'mass': 5, 'aut': 1, 'blue': 0, 'black': 5, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 5}
+{'code': 5, 'SC': True, 'mass': 1, 'aut': 3, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 8, 'SC': True, 'mass': 9, 'aut': 1, 'blue': 1, 'black': 8, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 8}
+{'code': 9, 'SC': False, 'mass': 5, 'aut': 1, 'blue': 0, 'black': 5, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 5}
+{'code': 10, 'SC': True, 'mass': 9, 'aut': 1, 'blue': 3, 'black': 6, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 3, 'black_cross': 6}
+{'code': 11, 'SC': False, 'mass': 1, 'aut': 3, 'blue': 0, 'black': 1, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 1}
+{'code': 12, 'SC': True, 'mass': 11, 'aut': 1, 'blue': 3, 'black': 8, 'blue_loop': 0, 'black_loop': 2, 'blue_cross': 3, 'black_cross': 4}
+{'code': 40, 'SC': True, 'mass': 5, 'aut': 3, 'blue': 1, 'black': 4, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 4}
+{'code': 41, 'SC': True, 'mass': 13, 'aut': 1, 'blue': 3, 'black': 10, 'blue_loop': 0, 'black_loop': 2, 'blue_cross': 3, 'black_cross': 6}
+{'code': 76, 'SC': True, 'mass': 3, 'aut': 5, 'blue': 3, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 3, 'black_cross': 0}
+merged
+{'code': 0, 'SC': True, 'mass': 1, 'aut': 1, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 2, 'SC': False, 'mass': 2, 'aut': 3, 'blue': 0, 'black': 2, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 2}
+{'code': 4, 'SC': False, 'mass': 10, 'aut': 1, 'blue': 0, 'black': 10, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 0, 'black_cross': 10}
+{'code': 5, 'SC': True, 'mass': 1, 'aut': 3, 'blue': 1, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 0}
+{'code': 8, 'SC': True, 'mass': 9, 'aut': 1, 'blue': 1, 'black': 8, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 8}
+{'code': 10, 'SC': True, 'mass': 9, 'aut': 1, 'blue': 3, 'black': 6, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 3, 'black_cross': 6}
+{'code': 12, 'SC': True, 'mass': 11, 'aut': 1, 'blue': 3, 'black': 8, 'blue_loop': 0, 'black_loop': 2, 'blue_cross': 3, 'black_cross': 4}
+{'code': 40, 'SC': True, 'mass': 5, 'aut': 3, 'blue': 1, 'black': 4, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 1, 'black_cross': 4}
+{'code': 41, 'SC': True, 'mass': 13, 'aut': 1, 'blue': 3, 'black': 10, 'blue_loop': 0, 'black_loop': 2, 'blue_cross': 3, 'black_cross': 6}
+{'code': 76, 'SC': True, 'mass': 3, 'aut': 5, 'blue': 3, 'black': 0, 'blue_loop': 0, 'black_loop': 0, 'blue_cross': 3, 'black_cross': 0}
