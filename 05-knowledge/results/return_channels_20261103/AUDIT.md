@@ -75,6 +75,8 @@ checks remain active, and the LF-normalized JSON outputs agree.
   phases and their source-relative Frobenius map; literal graph counts for
   all three seed families at k=0,1,2,3 through 66 vertices. The uniform level
   step is proved by invertibility of R modulo 3. The universal parity
+  extension and the exact index-100 return lattice are proved separately;
+  the three original seeds fail the integral reset gate. The universal parity
   extension credits the incoming all-block calibration. Other incoming
   censuses are cited with their scope, not claimed as fresh independent checks.
 

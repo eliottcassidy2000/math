@@ -15,6 +15,13 @@ All three seed families are checked through 66 vertices. The incoming
 concrete operations/endpoints for a next return test; their global closure
 is still open. Test these before conducting another unguided word census.
 
+**Final gate update, 2aa09af4b8:** the concurrent s78-squared return has an
+integral mod-49 gate. Our independent D gate is a+50b=0 mod 100 on beta=(a,b),
+with Smith factors 1,100. U,U2,U4 fail it with residues 25,75,75. Therefore
+an exact D-based ternary reset to these three seeds is impossible even for
+formal integer predecessors. Test mixed returns or the repaired endpoints
+with carries; do not search that already-excluded direct reset again.
+
 ## Completed mechanisms to inherit
 
 - Processing seeds U=`r5 a a`, U2=`a a q1 a a`, U4=`q0 a a a a a` have

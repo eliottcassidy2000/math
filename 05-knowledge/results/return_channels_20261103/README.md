@@ -37,6 +37,8 @@ one for every nonzero input. The normalized bulk has an exact eight-phase F9
 clock. Literal source-family counts are checked through 66 vertices. This
 leaves the incoming return theorem's unit-determinant hypothesis, but still
 does not supply a closed ternary source bank.
+Its exact reset to the three original seeds is excluded by a newly derived
+mod-100 lattice gate, paralleling the incoming s78 return's mod-49 gate.
 
 Four actual error loops have gains-2,6,45,13. They give exact valuation and
 generating-function formulas. In this loop language, Liouville needs2 response

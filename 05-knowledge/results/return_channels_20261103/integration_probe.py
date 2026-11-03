@@ -30,6 +30,15 @@ def main():
     need(B*Q==Z,'saturated quotient intertwining')
     R=Q/3
     need(all(x.q==1 for x in R) and R.det()==-100,'uniform exact level elevator')
+    from math import gcd
+    need(gcd(*[int(x) for x in R])==1,'normalized Smith factors one and one hundred')
+    need(all((int(R[i,0])+50*int(R[i,1]))%100==0 for i in range(2)),'index-one-hundred lattice inclusion')
+    return_gates=[]
+    for seed in SEEDS:
+        bulk=sp.Matrix([vector(seed)])*B
+        residue=int(bulk[0]+50*bulk[1])%100
+        need(residue!=0,'no exact D-based ternary return to these seeds')
+        return_gates.append({'seed':seed,'bulk':[int(x) for x in bulk],'residue_mod100':residue})
     need(step(T,matrix(word))==tuple(-4*x for x in T),'separate error gain')
     need(sum(COSTS[l] for l in word)==19,'literal vertex clock')
     modR=R.applyfunc(lambda x:x%3)
@@ -70,6 +79,7 @@ def main():
         'matrix':[[int(x) for x in row] for row in P.tolist()],
         'bulk_basis':B.tolist(),'bulk_matrix':Q.tolist(),'normalized_bulk_matrix':R.tolist(),
         'normalized_determinant':int(R.det()),'normalized_mod3_order':order,
+        'normalized_Smith_factors':[1,100],'exact_return_lattice_gates':return_gates,
         'phase':phase,'families':records,'H_values':h,
         'scope':'Uniform level increase for every nonzero bulk; an actual infinite family, not a closed ternary source bank.'}
     # Convert SymPy integers explicitly for portable JSON.

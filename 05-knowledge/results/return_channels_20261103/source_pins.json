@@ -111,13 +111,14 @@
     "05-knowledge/results/primegame_port_spectrum_20261103/verify.py": "3a12b3d8c1a61964f3cfbf98e76963eda0336c95ee70592762d24ecb84486804",
     "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5",
     "05-knowledge/results/session153_gadgets_20261103/rewriting/NOTE.md": "a800c6323ea851e8cb08b1ffad6e96f011f6998e32df2b5753cb24979af6b925",
-    "05-knowledge/results/adaptive_state_induction_20261103/README.md": "099c461db39595b500b19a1888392b850a970e891f6ba298bae8fb2e0a5ff737",
+    "05-knowledge/results/adaptive_state_induction_20261103/README.md": "8a920ac04963abe1c30f9d9e5b51f4a938f9355dc049dffcf2cc2f68aa482148",
     "05-knowledge/results/adaptive_state_induction_20261103/COMMON_OBSERVER.md": "9ac00fdf97ec7ae8758a96ca5f8db6912e61d41122ec7b545db1a794cbfd8563",
     "05-knowledge/results/adaptive_state_induction_20261103/RETURN_BANKS.md": "96c9493858200756c63ed52a83c3ac2842aa5ac19d99efbbb72b75b7900daf70",
     "05-knowledge/results/ternary_repair_clock_20261103/README.md": "3661d673dfe1b8a53fbce35f9168f61785121c5aef4c6d61a11a11bdb4c94d58",
     "05-knowledge/results/ternary_repair_clock_20261103/THEORY.md": "b25942100346b808b5084b0637ada97ac175c41b20df412ecacbaafe47658898",
     "05-knowledge/results/ternary_repair_clock_20261103/CARRIES.md": "8afb2e2f2d840cf2792a0ecf2aa3e5c7712a275ec300305fcda1b70951abf853",
-    "05-knowledge/results/session154_gadgets_20261103/full_prefix/NOTE.md": "29a51a36ac8609cecd7c0d3df7fa3af9363db6957f1b6014680097ef1ccab727"
+    "05-knowledge/results/session154_gadgets_20261103/full_prefix/NOTE.md": "29a51a36ac8609cecd7c0d3df7fa3af9363db6957f1b6014680097ef1ccab727",
+    "05-knowledge/results/adaptive_state_induction_20261103/INCOMING.md": "bc8ae896c2cf555e5b696ec5c3039757bda298ad47e34b4ab10349dd4f9f55ab"
   },
-  "incoming_through": "a140b314340ccb9d42d392985d4d20df01808b63"
+  "incoming_through": "2aa09af4b8fda9da986be81962d0c98e427fc54f"
 }

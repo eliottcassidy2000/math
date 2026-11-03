@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "pinned_inputs": 116,
+  "pinned_inputs": 117,
   "cpp_runs": [
     {
       "command": [
@@ -11,7 +11,7 @@
         "-o",
         "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\.reproduce-birth.exe"
       ],
-      "seconds": 0.82,
+      "seconds": 0.806,
       "exit_code": 0
     },
     {
@@ -20,7 +20,7 @@
         "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\parents55.txt",
         "2"
       ],
-      "seconds": 0.169,
+      "seconds": 0.168,
       "exit_code": 0,
       "summary": [
         [
@@ -59,7 +59,7 @@
         "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\representatives55.txt",
         "3"
       ],
-      "seconds": 5.016,
+      "seconds": 4.98,
       "exit_code": 0,
       "summary": [
         [
@@ -91,7 +91,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\channels.py"
           ],
-          "seconds": 1.928,
+          "seconds": 1.946,
           "stdout": "{\"status\": \"PASS\", \"M\": [798527, 31810907, 1262229579, 50075815519], \"seven_quotients\": [342223, 13633243, 540955531, 21461063791], \"gains\": [-45, -36, -6, -2, -1, 1, 2, 6, 13, 36, 45], \"literal_max_vertices\": 38, \"loop_characteristics\": {\"L2\": \"(X + 2)*(X**2 - 367*X - 30)\", \"L6\": \"(X - 6)*(X**2 - 1133*X + 90)\", \"L45\": \"(X - 45)*(X**2 - 1581580*X + 5985)\", \"L13\": \"(X - 13)*(X**2 - 348170*X + 81225)\"}, \"noncommuting_H\": [7450383, 12892021]}",
           "stderr": ""
         },
@@ -104,7 +104,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\channels.py"
           ],
-          "seconds": 1.897,
+          "seconds": 1.913,
           "stdout": "{\"status\": \"PASS\", \"M\": [798527, 31810907, 1262229579, 50075815519], \"seven_quotients\": [342223, 13633243, 540955531, 21461063791], \"gains\": [-45, -36, -6, -2, -1, 1, 2, 6, 13, 36, 45], \"literal_max_vertices\": 38, \"loop_characteristics\": {\"L2\": \"(X + 2)*(X**2 - 367*X - 30)\", \"L6\": \"(X - 6)*(X**2 - 1133*X + 90)\", \"L45\": \"(X - 45)*(X**2 - 1581580*X + 5985)\", \"L13\": \"(X - 13)*(X**2 - 348170*X + 81225)\"}, \"noncommuting_H\": [7450383, 12892021]}",
           "stderr": ""
         }
@@ -123,7 +123,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\arithmetic_probe.py"
           ],
-          "seconds": 0.594,
+          "seconds": 0.591,
           "stdout": "{\"status\": \"PASS\", \"gain_values\": 51, \"squarefree_gains\": [1, 2, 6, 13, 26, 78], \"minimal_states\": {\"lambda\": 2, \"mu\": 7, \"lambda_mu\": 8, \"lambda_mu_orientation_phase\": 16}}",
           "stderr": ""
         },
@@ -155,7 +155,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\port_guard.py"
           ],
-          "seconds": 0.539,
+          "seconds": 0.529,
           "stdout": "{\"status\": \"PASS\", \"literal_joins\": 1270, \"kappa_values\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18], \"linear_rank\": 4}",
           "stderr": ""
         },
@@ -187,7 +187,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\birth_verify.py"
           ],
-          "seconds": 1.31,
+          "seconds": 1.24,
           "stdout": "{\"status\": \"PASS\", \"literal_samples\": 585, \"hostile_three_birth_orientations\": 33554432, \"positive_counts\": [4, 18], \"hostile\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
           "stderr": ""
         },
@@ -200,7 +200,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\birth_verify.py"
           ],
-          "seconds": 1.233,
+          "seconds": 1.228,
           "stdout": "{\"status\": \"PASS\", \"literal_samples\": 585, \"hostile_three_birth_orientations\": 33554432, \"positive_counts\": [4, 18], \"hostile\": {\"groups\": [81, 27], \"common_H\": [462915, 462915], \"port8_after_sink\": [2390013, 1754919], \"common_cyclic_triples\": 67}}",
           "stderr": ""
         }
@@ -219,7 +219,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\context_entry.py"
           ],
-          "seconds": 11.259,
+          "seconds": 11.396,
           "stdout": "{\"status\": \"PASS\", \"absent_states\": 942, \"pairs\": 61230, \"rescues\": 49}",
           "stderr": ""
         },
@@ -232,7 +232,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\context_entry.py"
           ],
-          "seconds": 11.401,
+          "seconds": 11.507,
           "stdout": "{\"status\": \"PASS\", \"absent_states\": 942, \"pairs\": 61230, \"rescues\": 49}",
           "stderr": ""
         }
@@ -241,7 +241,7 @@
     {
       "script": "integration_probe.py",
       "result": "integration.json",
-      "sha256_lf": "699268fc376b0305425777eb51ea8f1d2b8fc008803e6f23f323b030fbadf34e",
+      "sha256_lf": "de53ff113bd72b239e620261e21635d89015f2dc4f0fd2e406b02fcddb5f09a2",
       "runs": [
         {
           "command": [
@@ -251,7 +251,7 @@
             "-B",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\integration_probe.py"
           ],
-          "seconds": 0.803,
+          "seconds": 0.789,
           "stdout": "{\"status\": \"PASS\", \"H_values\": [31, 33868343, 37036149733639, 40500251957161045607], \"gain\": -4, \"bulk_level_step\": 1, \"normalized_clock_period\": 8, \"literal_max_order\": 66}",
           "stderr": ""
         },
@@ -264,7 +264,7 @@
             "-O",
             "C:\\Users\\Eliott\\AppData\\Local\\Temp\\math-wt-return_channels_20261103\\05-knowledge\\results\\return_channels_20261103\\integration_probe.py"
           ],
-          "seconds": 0.856,
+          "seconds": 0.789,
           "stdout": "{\"status\": \"PASS\", \"H_values\": [31, 33868343, 37036149733639, 40500251957161045607], \"gain\": -4, \"bulk_level_step\": 1, \"normalized_clock_period\": 8, \"literal_max_order\": 66}",
           "stderr": ""
         }

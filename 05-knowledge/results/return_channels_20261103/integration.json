@@ -66,6 +66,53 @@
   ],
   "normalized_determinant": -100,
   "normalized_mod3_order": 8,
+  "normalized_Smith_factors": [
+    1,
+    100
+  ],
+  "exact_return_lattice_gates": [
+    {
+      "seed": [
+        "r5",
+        "a",
+        "a"
+      ],
+      "bulk": [
+        25,
+        34
+      ],
+      "residue_mod100": 25
+    },
+    {
+      "seed": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "bulk": [
+        75,
+        102
+      ],
+      "residue_mod100": 75
+    },
+    {
+      "seed": [
+        "q0",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "bulk": [
+        75,
+        102
+      ],
+      "residue_mod100": 75
+    }
+  ],
   "phase": [
     {
       "k": 0,

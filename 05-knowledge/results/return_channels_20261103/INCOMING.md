@@ -61,6 +61,19 @@ This removes one hypothesis of the inherited obstruction; it does not
 negate that theorem or close a source bank. In particular beta Q=3 beta R
 is not beta Q=3 beta: the normalized bulk still changes substantially.
 
+There is a sharper integral obstruction. The row lattice Z^2 R has index
+100 and is exactly
+
+    (a,b) in Z^2 R iff a+50b=0 mod 100.               (I2a)
+
+Both rows satisfy the congruence; its kernel has index 100, so inclusion
+and equal index give equality. The Smith factors are 1,100. Therefore an
+exact return `w P_D=3v+m t` from ANY integer state w requires (I2a) for
+beta(v), since beta(w)R=beta(v). The U,U2,U4 bulks have residues 25,75,75,
+respectively, and fail this gate. Thus this particular exact reset is
+excluded even before testing source realizability. Mixed return words,
+additional carries and other input seeds are not excluded.
+
 The exact characteristic polynomial is
 
     char(P_D)=(X+4)(X^2-1093533X-900).
@@ -125,3 +138,12 @@ The next decisive test is to try D or another nonunit return on the supplied
 repaired endpoints while retaining normalized bulk phase, integer carry,
 port feasibility, and actual graph. Prove a return to a declared source
 family. A correct valuation change or a full residue image is insufficient.
+
+**Final incoming update, 2aa09af4b8:** the concurrent
+[two-step s78 law](../adaptive_state_induction_20261103/INCOMING.md), I1-I2,
+proves an analogous level increase using the enlarged alphabet: Q_s78^2=3U
+with det U=49, followed by an exact mod-49 return gate. That update arrived
+after our first integration checkpoint. It prompted the independent
+mod-100 calculation (I2a) above. The two constructions use different words
+and lattices; both demonstrate why removing the valuation obstruction
+exposes a remaining integral-image condition rather than source closure.
