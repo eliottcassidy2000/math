@@ -1,0 +1,25 @@
+{
+  "sha256": {
+    "AUDIT.md": "2cfc99fad1560f97019502f237f11aa1381d12ae4966909c4620c8a264f4980d",
+    "CARRIER.md": "033285ac66934419032708c4ac215dbaba18c5e8ad39d8bd8fbfe6f95a2bed12",
+    "geometry.json": "eed6d756bb202f4ab2f5e2b4943a61b6bd1b45e9d6fb8090167837810fdc9088",
+    "GEOMETRY.md": "05f2031d568654504d5b474040abfcf8f4a6f035883c4479ae14221d2cb4e8e5",
+    "geometry.py": "789741abe4ecc51393b2e22c727d0ef0fedd4777795aa7a4cf177208d4fcce0b",
+    "HANDOFF.md": "0c5cf10b53797e3ec69d84bc744d539d559e9a566615fc7d71b48ba755754e70",
+    "jump_carrier.json": "8540a379c3aa48596fa1e4d69df7d8c262fbc4a3fff704187ae5dc802eb40172",
+    "jump_carrier.py": "c343666cbdb10975886263df4f1005ec5d276f45182cf05444bc25df3e6a8ff9",
+    "mechanisms.py": "236fd8f13b71365cf806fbfc8e19592c2a70bec9c1219554d79a7dff9b80519c",
+    "README.md": "609a81f560d6ddd56d4e8a093ddc66829794203aa473e3643353c82cbf63100c",
+    "RECOVERY.md": "86996811a4ac0900ea374874f4c46a3c3c2c75a6093d823cf2799489f7ed3ffc",
+    "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452",
+    "RECURRENCES.md": "17b7aa76591bf6f21356c6fb9995fc91381bdd9d7bfb6740a122e01cc187758b",
+    "recurrences.py": "013fddeb6182d5df0b58d385e1da42a3bb83af704d62951bb2be1d16c154cd17",
+    "reproduce.py": "5c281aafeda8eadd08f24d2f747d269fabd1525a6368740280fe4cc69f6ad173",
+    "reproduction.json": "859c749c3f003c60a5c97e48fa294523aa11ccf7d79208f78c0c368600ba239e",
+    "seal.py": "0296bb9ff2455cb56ae8cc8363a6e6fa9e2394ed53d2801f1a20984763971382",
+    "source_pins.json": "e23dbdaa59e1a3b0d1423da2febf35ccc2b4c25538992a6a7e9c81626eda5722",
+    "THEORY.md": "67232eb30059e1bef39bbf1a79c465ad8f72e73ca6067c8a7372ebde8c12476e",
+    "verification.json": "1aace47fe65ca5aad24ba5f380f7c9010a88cb7c24d9cf50c4ada25637367f3a",
+    "verify.py": "f6ab30f9532b4d2117de4f3f3cda0cdc768376e9059070f4b7fda1c8cda5c72b"
+  }
+}

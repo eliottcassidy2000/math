@@ -1,0 +1,311 @@
+{
+  "status": "PROVED_FINITE_RECURRENCE_CERTIFICATE",
+  "families": {
+    "-2": {
+      "r0": 2,
+      "krylov_dimensions_by_apex_order": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "certificate_dimension": 12,
+      "annihilator_coefficients": [
+        1,
+        -16,
+        95,
+        -260,
+        324,
+        -144
+      ],
+      "factorization": "(x - 6)*(x - 4)*(x - 3)*(x - 2)*(x - 1)",
+      "initial_lower_counts": [
+        339,
+        2625,
+        17397,
+        109749,
+        677949,
+        4142565,
+        25151997,
+        152101509
+      ],
+      "template": {
+        "r0": 2,
+        "prefix": [],
+        "A": [
+          1,
+          1
+        ],
+        "a0": 1,
+        "middle": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "B": [
+          1,
+          1
+        ],
+        "b0": 2,
+        "suffix": [
+          [
+            0,
+            0
+          ]
+        ],
+        "roots": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ]
+      }
+    },
+    "0": {
+      "r0": 2,
+      "krylov_dimensions_by_apex_order": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "certificate_dimension": 12,
+      "annihilator_coefficients": [
+        1,
+        -7,
+        14,
+        -8,
+        0
+      ],
+      "factorization": "x*(x - 4)*(x - 2)*(x - 1)",
+      "initial_lower_counts": [
+        1351,
+        4939,
+        18481,
+        71389,
+        280501,
+        1111909,
+        4427461,
+        17669509
+      ],
+      "template": {
+        "r0": 2,
+        "prefix": [
+          [
+            1,
+            1
+          ]
+        ],
+        "A": [
+          0,
+          0
+        ],
+        "a0": 2,
+        "middle": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "B": [
+          1,
+          1
+        ],
+        "b0": 0,
+        "suffix": [
+          [
+            0,
+            0
+          ]
+        ],
+        "roots": [
+          0,
+          1,
+          2,
+          4
+        ]
+      }
+    },
+    "3": {
+      "r0": 3,
+      "krylov_dimensions_by_apex_order": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "certificate_dimension": 12,
+      "annihilator_coefficients": [
+        1,
+        -7,
+        14,
+        -8,
+        0
+      ],
+      "factorization": "x*(x - 4)*(x - 2)*(x - 1)",
+      "initial_lower_counts": [
+        25027,
+        84381,
+        305835,
+        1161831,
+        4526175,
+        17864271,
+        70978095,
+        282956271
+      ],
+      "template": {
+        "r0": 3,
+        "prefix": [
+          [
+            1,
+            1
+          ]
+        ],
+        "A": [
+          0,
+          0
+        ],
+        "a0": 1,
+        "middle": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "B": [
+          1,
+          1
+        ],
+        "b0": 0,
+        "suffix": [
+          [
+            0,
+            0
+          ]
+        ],
+        "roots": [
+          0,
+          1,
+          2,
+          4
+        ]
+      }
+    }
+  },
+  "seven_adic_phases": [
+    {
+      "e": 1,
+      "t_residue": 1,
+      "t_modulus": 7,
+      "r_residue": 8,
+      "r_modulus": 21
+    },
+    {
+      "e": 2,
+      "t_residue": 43,
+      "t_modulus": 49,
+      "r_residue": 134,
+      "r_modulus": 147
+    },
+    {
+      "e": 3,
+      "t_residue": 92,
+      "t_modulus": 343,
+      "r_residue": 281,
+      "r_modulus": 1029
+    },
+    {
+      "e": 4,
+      "t_residue": 1807,
+      "t_modulus": 2401,
+      "r_residue": 5426,
+      "r_modulus": 7203
+    },
+    {
+      "e": 5,
+      "t_residue": 9010,
+      "t_modulus": 16807,
+      "r_residue": 27035,
+      "r_modulus": 50421
+    },
+    {
+      "e": 6,
+      "t_residue": 9010,
+      "t_modulus": 117649,
+      "r_residue": 27035,
+      "r_modulus": 352947
+    },
+    {
+      "e": 7,
+      "t_residue": 9010,
+      "t_modulus": 823543,
+      "r_residue": 27035,
+      "r_modulus": 2470629
+    }
+  ],
+  "prime_control": {
+    "r": 5,
+    "lower": 305835,
+    "upper": 305837,
+    "upper_over_7": 43691,
+    "order": 16
+  }
+}

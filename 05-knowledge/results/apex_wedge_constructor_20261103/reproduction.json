@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "source_pin_count": 11,
+  "same_agent_independent_implementations": true,
+  "receipt_sha256_by_mode": {
+    "normal": {
+      "verification.json": "1aace47fe65ca5aad24ba5f380f7c9010a88cb7c24d9cf50c4ada25637367f3a",
+      "geometry.json": "eed6d756bb202f4ab2f5e2b4943a61b6bd1b45e9d6fb8090167837810fdc9088",
+      "jump_carrier.json": "8540a379c3aa48596fa1e4d69df7d8c262fbc4a3fff704187ae5dc802eb40172",
+      "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452"
+    },
+    "optimized": {
+      "verification.json": "1aace47fe65ca5aad24ba5f380f7c9010a88cb7c24d9cf50c4ada25637367f3a",
+      "geometry.json": "eed6d756bb202f4ab2f5e2b4943a61b6bd1b45e9d6fb8090167837810fdc9088",
+      "jump_carrier.json": "8540a379c3aa48596fa1e4d69df7d8c262fbc4a3fff704187ae5dc802eb40172",
+      "recurrences.json": "c8b1a425d20305c0d3a782e2488f10c00cfd0aa4d54619001f7732ee55626452"
+    }
+  },
+  "inherited_controls": {
+    "source": "mixed_returns_20261103/controllers.json",
+    "recomputed_here": false,
+    "hostile81_27": {
+      "groups": [
+        81,
+        27
+      ],
+      "common_H": [
+        462915,
+        462915
+      ],
+      "port8_after_sink": [
+        2390013,
+        1754919
+      ],
+      "common_cyclic_triples": 67
+    },
+    "one_birth55_orientations": 768
+  }
+}
