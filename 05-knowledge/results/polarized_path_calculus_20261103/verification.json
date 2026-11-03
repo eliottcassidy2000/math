@@ -1,0 +1,30 @@
+{
+  "checks": {
+    "counts.py": {
+      "normal_optimized_identical": true,
+      "output_sha256": "ae635eb3e86023f6ba713a3547317fd3f0ef4d1ac9c48e0997df118ba6b9afe3"
+    },
+    "explore.py": {
+      "normal_optimized_identical": true,
+      "output_sha256": "0b97e849d9f7f863df57a5b2cfaf3fc2421f7a66db69a5891c671f30078d9147"
+    },
+    "recognize.py": {
+      "normal_optimized_identical": true,
+      "output_sha256": "111d6b37cd2d00faf938d3c7ae60b4aedd7569af676a457c325ca0db26987772"
+    }
+  },
+  "inherited_hashes": {
+    "golden_inverse_defects_20261103/inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
+    "golden_seam_recurrence_20261103/atom_atlas.json": "d7f6eea85bb99e95c209adbc17d12a879efe76dc780036827d3f36fac0b58091"
+  },
+  "source_hashes": {
+    "AUDIT.md": "ba29302a36e9743827e1476467f2a3edb6d2bacec52c9f0dfae52e88e8c496e8",
+    "CALCULUS.md": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728",
+    "FUNNELS.md": "d4415fe860bdcc737c05614d97f3909168dd73a783f892505e42103add064a8e",
+    "README.md": "bbf1f985fddbc4f77f1298d4b15a95b1e06b1e57ef017e65bed1833a4c295b74",
+    "counts.py": "45ee52d491e05ac9def4e2da8611764a6556a17dd7f62cc3511a08f85e18f366",
+    "explore.py": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4",
+    "recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "verify_packet.py": "13294de348da9ee47c9c86db2e46aa559b8b352f23ca6238bcfaf407da0f792e"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "all_rooted_classes": [
+    1,
+    1,
+    2,
+    5,
+    13,
+    34,
+    89
+  ],
+  "strong_rooted_classes": [
+    0,
+    0,
+    1,
+    3,
+    8,
+    21,
+    55
+  ],
+  "all_root_DP_decision_controls": 361,
+  "canonical_charts": 33868,
+  "small_rank_round_trips": 1596,
+  "long_rank_controls": [
+    {
+      "n": 50,
+      "classes": 51680708854858323072,
+      "rank_bits": 66
+    },
+    {
+      "n": 100,
+      "classes": 40934782466626840596168752972961528246147,
+      "rank_bits": 135
+    }
+  ]
+}
