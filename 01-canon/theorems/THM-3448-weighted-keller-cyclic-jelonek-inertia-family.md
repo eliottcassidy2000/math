@@ -35,6 +35,13 @@ This theorem closes the genuine-C3 lane left open by THM-3441, but only for
 the three-dimensional weighted Keller family.  It does not classify arbitrary
 Keller boundaries or touch `JC(2)`.
 
+**Companion extension, 2026-11-02:** [W1–W3, weighted fibre classification](../../05-knowledge/results/jacobian_eth_prime_wait_20261102/WEIGHTED-CLASSIFICATION.md)
+remove the simple-nonzero-root restriction below, give all target fibre
+counts and realize arbitrary inertia partitions. They prove a lower bound
+`p_part(n-3)+p_part(n-2)-1` for inequivalent degree-n maps, not arbitrary-map
+classification. Status: proved in the research packet, same-agent audit
+with independent exact computational routes; no independent-agent review.
+
 ## 1. Setup and exact component statement
 
 Use the notation of THM-3438.  Thus, over a characteristic-zero field,

@@ -1,0 +1,31 @@
+{
+  "retrieved_utc": "2026-11-03T02:29:40.413058+00:00",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/docs/378.md",
+      "bytes": 1090,
+      "sha256": "a2f7b390d6308997350b903be02c40a1227ebd2b9376982da528574500531f79"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/openai/math/main/lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "bytes": 7833,
+      "sha256": "4183b2057cff350d66848215ff7167196dfc20e1891b598fdddea59077a76685"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/eth/README.md",
+      "bytes": 3696,
+      "sha256": "844e0dd78593f728e6a6a1f52b7b3d1e162020c1746ac1f4b3c4e5f2ff7f494e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/eth/MainResults.lean",
+      "bytes": 11542,
+      "sha256": "47f78a9550d95b37d8718dd1ee16ae824da893a5e17c319f737e6d0a5ed24944"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/anthropics/formal-math/main/eth/scripts/PrintAxioms.lean",
+      "bytes": 675,
+      "sha256": "2cee91aad13365865fbf239db74c3a05588d6721717d94720674bb260cfe2406"
+    }
+  ],
+  "verification": "source statements read; no local Lean build or kernel audit"
+}

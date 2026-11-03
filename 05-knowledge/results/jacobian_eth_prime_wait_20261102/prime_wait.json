@@ -1,0 +1,512 @@
+{
+  "checks": "PASS",
+  "crt_modulus": 1939938,
+  "crt_obstructions": [
+    {
+      "candidate": 289,
+      "divisor": 17,
+      "factorization": [
+        [
+          17,
+          2
+        ]
+      ]
+    },
+    {
+      "candidate": 291,
+      "divisor": 3,
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          97,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 579,
+      "divisor": 3,
+      "factorization": [
+        [
+          3,
+          1
+        ],
+        [
+          193,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 581,
+      "divisor": 7,
+      "factorization": [
+        [
+          7,
+          1
+        ],
+        [
+          83,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 869,
+      "divisor": 11,
+      "factorization": [
+        [
+          11,
+          1
+        ],
+        [
+          79,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 871,
+      "divisor": 13,
+      "factorization": [
+        [
+          13,
+          1
+        ],
+        [
+          67,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 1159,
+      "divisor": 19,
+      "factorization": [
+        [
+          19,
+          1
+        ],
+        [
+          61,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 1161,
+      "divisor": 3,
+      "factorization": [
+        [
+          3,
+          3
+        ],
+        [
+          43,
+          1
+        ]
+      ]
+    },
+    {
+      "candidate": 1449,
+      "divisor": 3,
+      "factorization": [
+        [
+          3,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          23,
+          1
+        ]
+      ]
+    }
+  ],
+  "max_first_prime": 149551,
+  "mrb_mask_means": {
+    "oriented_plus_minus": "0",
+    "plus_minus_alternating": "-1/145",
+    "unit_alternating": "-56/145"
+  },
+  "quotient_U290_by_sign_order_histogram": {
+    "1": 1,
+    "2": 3,
+    "4": 4,
+    "7": 6,
+    "14": 18,
+    "28": 24
+  },
+  "record_ratios": [
+    {
+      "eligible_rank": 1,
+      "first_prime": 3,
+      "iid_ratio": "1",
+      "m": 4,
+      "phi": 2,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 0
+    },
+    {
+      "eligible_rank": 3,
+      "first_prime": 7,
+      "iid_ratio": "3/2",
+      "m": 8,
+      "phi": 4,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 2
+    },
+    {
+      "eligible_rank": 5,
+      "first_prime": 17,
+      "iid_ratio": "5/3",
+      "m": 18,
+      "phi": 6,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 4
+    },
+    {
+      "eligible_rank": 7,
+      "first_prime": 23,
+      "iid_ratio": "7/4",
+      "m": 24,
+      "phi": 8,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 6
+    },
+    {
+      "eligible_rank": 14,
+      "first_prime": 53,
+      "iid_ratio": "7/3",
+      "m": 26,
+      "phi": 12,
+      "residual_prime_rank": 7,
+      "zero_hazard_prefix": 7
+    },
+    {
+      "eligible_rank": 24,
+      "first_prime": 101,
+      "iid_ratio": "12/5",
+      "m": 50,
+      "phi": 20,
+      "residual_prime_rank": 11,
+      "zero_hazard_prefix": 13
+    },
+    {
+      "eligible_rank": 57,
+      "first_prime": 277,
+      "iid_ratio": "57/22",
+      "m": 92,
+      "phi": 44,
+      "residual_prime_rank": 35,
+      "zero_hazard_prefix": 22
+    },
+    {
+      "eligible_rank": 49,
+      "first_prime": 239,
+      "iid_ratio": "49/16",
+      "m": 120,
+      "phi": 32,
+      "residual_prime_rank": 22,
+      "zero_hazard_prefix": 27
+    },
+    {
+      "eligible_rank": 81,
+      "first_prime": 431,
+      "iid_ratio": "27/8",
+      "m": 144,
+      "phi": 48,
+      "residual_prime_rank": 49,
+      "zero_hazard_prefix": 32
+    },
+    {
+      "eligible_rank": 173,
+      "first_prime": 1039,
+      "iid_ratio": "173/48",
+      "m": 208,
+      "phi": 96,
+      "residual_prime_rank": 129,
+      "zero_hazard_prefix": 44
+    },
+    {
+      "eligible_rank": 227,
+      "first_prime": 1451,
+      "iid_ratio": "227/56",
+      "m": 290,
+      "phi": 112,
+      "residual_prime_rank": 169,
+      "zero_hazard_prefix": 58
+    },
+    {
+      "eligible_rank": 1772,
+      "first_prime": 15193,
+      "iid_ratio": "443/105",
+      "m": 1688,
+      "phi": 840,
+      "residual_prime_rank": 1511,
+      "zero_hazard_prefix": 261
+    },
+    {
+      "eligible_rank": 1516,
+      "first_prime": 12739,
+      "iid_ratio": "379/72",
+      "m": 1820,
+      "phi": 576,
+      "residual_prime_rank": 1240,
+      "zero_hazard_prefix": 276
+    },
+    {
+      "eligible_rank": 5441,
+      "first_prime": 53377,
+      "iid_ratio": "5441/1026",
+      "m": 4106,
+      "phi": 2052,
+      "residual_prime_rank": 4878,
+      "zero_hazard_prefix": 563
+    },
+    {
+      "eligible_rank": 13810,
+      "first_prime": 149551,
+      "iid_ratio": "6905/996",
+      "m": 9970,
+      "phi": 3984,
+      "residual_prime_rank": 12585,
+      "zero_hazard_prefix": 1225
+    }
+  ],
+  "square_roots_of_minus_one": [
+    17,
+    133,
+    157,
+    273
+  ],
+  "square_roots_of_plus_one": [
+    1,
+    59,
+    231,
+    289
+  ],
+  "stern_227": [
+    [
+      1,
+      225,
+      [
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          2
+        ]
+      ]
+    ],
+    [
+      2,
+      219,
+      [
+        [
+          3,
+          1
+        ],
+        [
+          73,
+          1
+        ]
+      ]
+    ],
+    [
+      3,
+      209,
+      [
+        [
+          11,
+          1
+        ],
+        [
+          19,
+          1
+        ]
+      ]
+    ],
+    [
+      4,
+      195,
+      [
+        [
+          3,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    ],
+    [
+      5,
+      177,
+      [
+        [
+          3,
+          1
+        ],
+        [
+          59,
+          1
+        ]
+      ]
+    ],
+    [
+      6,
+      155,
+      [
+        [
+          5,
+          1
+        ],
+        [
+          31,
+          1
+        ]
+      ]
+    ],
+    [
+      7,
+      129,
+      [
+        [
+          3,
+          1
+        ],
+        [
+          43,
+          1
+        ]
+      ]
+    ],
+    [
+      8,
+      99,
+      [
+        [
+          3,
+          2
+        ],
+        [
+          11,
+          1
+        ]
+      ]
+    ],
+    [
+      9,
+      65,
+      [
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ]
+      ]
+    ],
+    [
+      10,
+      27,
+      [
+        [
+          3,
+          3
+        ]
+      ]
+    ]
+  ],
+  "table": [
+    {
+      "eligible_rank": 49,
+      "first_prime": 239,
+      "iid_ratio": "49/16",
+      "m": 120,
+      "phi": 32,
+      "residual_prime_rank": 22,
+      "zero_hazard_prefix": 27
+    },
+    {
+      "eligible_rank": 81,
+      "first_prime": 431,
+      "iid_ratio": "27/8",
+      "m": 144,
+      "phi": 48,
+      "residual_prime_rank": 49,
+      "zero_hazard_prefix": 32
+    },
+    {
+      "eligible_rank": 173,
+      "first_prime": 1039,
+      "iid_ratio": "173/48",
+      "m": 208,
+      "phi": 96,
+      "residual_prime_rank": 129,
+      "zero_hazard_prefix": 44
+    },
+    {
+      "eligible_rank": 43,
+      "first_prime": 211,
+      "iid_ratio": "43/24",
+      "m": 210,
+      "phi": 48,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 42
+    },
+    {
+      "eligible_rank": 54,
+      "first_prime": 263,
+      "iid_ratio": "54/65",
+      "m": 262,
+      "phi": 130,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 53
+    },
+    {
+      "eligible_rank": 57,
+      "first_prime": 277,
+      "iid_ratio": "19/23",
+      "m": 278,
+      "phi": 138,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 56
+    },
+    {
+      "eligible_rank": 227,
+      "first_prime": 1451,
+      "iid_ratio": "227/56",
+      "m": 290,
+      "phi": 112,
+      "residual_prime_rank": 169,
+      "zero_hazard_prefix": 58
+    },
+    {
+      "eligible_rank": 60,
+      "first_prime": 293,
+      "iid_ratio": "5/6",
+      "m": 292,
+      "phi": 144,
+      "residual_prime_rank": 1,
+      "zero_hazard_prefix": 59
+    }
+  ],
+  "universe": "all even 4 <= m <= 10000; primes <= 4000000"
+}
