@@ -1,0 +1,283 @@
+{
+  "seed": {
+    "masks": [
+      153,
+      177,
+      181
+    ],
+    "profile": [
+      0,
+      29,
+      131,
+      162,
+      77,
+      15,
+      1
+    ],
+    "pairs": [
+      {
+        "from": 153,
+        "to": 177,
+        "minimum_distance": 1,
+        "old_to_new": [
+          4,
+          2,
+          1,
+          5,
+          0,
+          3
+        ],
+        "relabelled_target": 8345,
+        "flipped_pair": [
+          3,
+          5
+        ]
+      },
+      {
+        "from": 153,
+        "to": 181,
+        "minimum_distance": 1,
+        "old_to_new": [
+          0,
+          4,
+          2,
+          1,
+          3,
+          5
+        ],
+        "relabelled_target": 185,
+        "flipped_pair": [
+          1,
+          2
+        ]
+      },
+      {
+        "from": 177,
+        "to": 181,
+        "minimum_distance": 1,
+        "old_to_new": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "relabelled_target": 181,
+        "flipped_pair": [
+          0,
+          3
+        ]
+      }
+    ],
+    "triangle_lift": [
+      {
+        "from_labelled_mask": 153,
+        "to_labelled_mask": 8345,
+        "target_class_seed": 177,
+        "old_to_new": [
+          4,
+          2,
+          1,
+          5,
+          0,
+          3
+        ]
+      },
+      {
+        "from_labelled_mask": 8345,
+        "to_labelled_mask": 8337,
+        "target_class_seed": 181,
+        "old_to_new": [
+          4,
+          0,
+          1,
+          2,
+          5,
+          3
+        ]
+      },
+      {
+        "from_labelled_mask": 8337,
+        "to_labelled_mask": 8369,
+        "target_class_seed": 153,
+        "old_to_new": [
+          4,
+          2,
+          1,
+          5,
+          0,
+          3
+        ]
+      }
+    ],
+    "closing_permutation_sign": -1
+  },
+  "minimality": [
+    {
+      "n": 1,
+      "labelled_tournaments": 1,
+      "classes": 1,
+      "profile_equal_edges": [],
+      "profile_equal_triangles": 0
+    },
+    {
+      "n": 2,
+      "labelled_tournaments": 2,
+      "classes": 1,
+      "profile_equal_edges": [],
+      "profile_equal_triangles": 0
+    },
+    {
+      "n": 3,
+      "labelled_tournaments": 8,
+      "classes": 2,
+      "profile_equal_edges": [],
+      "profile_equal_triangles": 0
+    },
+    {
+      "n": 4,
+      "labelled_tournaments": 64,
+      "classes": 4,
+      "profile_equal_edges": [],
+      "profile_equal_triangles": 0
+    },
+    {
+      "n": 5,
+      "labelled_tournaments": 1024,
+      "classes": 12,
+      "profile_equal_edges": [
+        [
+          8,
+          10
+        ]
+      ],
+      "profile_equal_triangles": 0
+    }
+  ],
+  "ordinal": {
+    "states": 9,
+    "order": 12,
+    "profile": [
+      0,
+      841,
+      50359,
+      516558,
+      1754613,
+      2590560,
+      1918700,
+      773444,
+      177203,
+      23355,
+      1729,
+      66,
+      1
+    ]
+  },
+  "budget": {
+    "all_nonempty_three_variable_downward_families_checked": 19,
+    "path_exclusion": [
+      {
+        "slots": 1,
+        "states": 3,
+        "edges": 3,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 2,
+        "states": 5,
+        "edges": 6,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 3,
+        "states": 11,
+        "edges": 21,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 4,
+        "states": 21,
+        "edges": 48,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 5,
+        "states": 43,
+        "edges": 123,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 6,
+        "states": 85,
+        "edges": 282,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 7,
+        "states": 171,
+        "edges": 657,
+        "all_pairs_Hamming_isometry": true
+      },
+      {
+        "slots": 8,
+        "states": 341,
+        "edges": 1476,
+        "all_pairs_Hamming_isometry": true
+      }
+    ],
+    "three_two_fifths_pieces": {
+      "faces": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "states": 19,
+      "edges": 45
+    }
+  },
+  "cellular_automaton": [
+    {
+      "slots": 1,
+      "delta_period": 2,
+      "unwrapped_tournament_order": 6,
+      "constant_H": "29"
+    },
+    {
+      "slots": 3,
+      "delta_period": 6,
+      "unwrapped_tournament_order": 18,
+      "constant_H": "24389"
+    },
+    {
+      "slots": 9,
+      "delta_period": 18,
+      "unwrapped_tournament_order": 54,
+      "constant_H": "14507145975869"
+    },
+    {
+      "slots": 27,
+      "delta_period": 54,
+      "unwrapped_tournament_order": 162,
+      "constant_H": "3053134545970524535745336759489912159909"
+    },
+    {
+      "slots": 81,
+      "delta_period": 162,
+      "unwrapped_tournament_order": 486,
+      "constant_H": "28460192274683252067641587184070060152533008953728086009094435531484770427909293744039496370928530635848872578990126429"
+    }
+  ],
+  "unweighted_carriers": [
+    1,
+    1,
+    2,
+    7,
+    28,
+    126
+  ]
+}
