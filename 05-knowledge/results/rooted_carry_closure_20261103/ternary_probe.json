@@ -1,0 +1,109 @@
+{
+  "status": "FINITE_EXACT_COMPLETE_BOUNDED_LANGUAGE",
+  "controls": [
+    {
+      "orientation": "plus",
+      "initial_rows": [
+        126,
+        124,
+        248,
+        368,
+        96,
+        64,
+        384,
+        315,
+        55
+      ],
+      "ports": [
+        7,
+        8
+      ],
+      "cutoff": 1495,
+      "distinct_observers": 7,
+      "transitions": 42,
+      "maximum_depth": 1,
+      "attained_H": [
+        497,
+        987,
+        1039
+      ],
+      "missing_targets": [
+        1493,
+        1495
+      ],
+      "words": [
+        [],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "orientation": "minus",
+      "initial_rows": [
+        126,
+        124,
+        248,
+        368,
+        96,
+        64,
+        384,
+        59,
+        183
+      ],
+      "ports": [
+        7,
+        8
+      ],
+      "cutoff": 1495,
+      "distinct_observers": 7,
+      "transitions": 42,
+      "maximum_depth": 1,
+      "attained_H": [
+        497,
+        969,
+        1061
+      ],
+      "missing_targets": [
+        1493,
+        1495
+      ],
+      "words": [
+        [],
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    }
+  ]
+}
