@@ -1,0 +1,175 @@
+{
+  "status": "FINITE_EXACT_TWO_ALGORITHMS_SHARED_PROVED_GRAMMAR",
+  "checks": [
+    {
+      "n": 3,
+      "budget": 1,
+      "children": 1,
+      "hits": []
+    },
+    {
+      "n": 3,
+      "budget": 2,
+      "children": 0,
+      "hits": []
+    },
+    {
+      "n": 4,
+      "budget": 1,
+      "children": 3,
+      "hits": []
+    },
+    {
+      "n": 4,
+      "budget": 2,
+      "children": 1,
+      "hits": []
+    },
+    {
+      "n": 5,
+      "budget": 1,
+      "children": 8,
+      "hits": []
+    },
+    {
+      "n": 5,
+      "budget": 2,
+      "children": 5,
+      "hits": []
+    },
+    {
+      "n": 6,
+      "budget": 1,
+      "children": 21,
+      "hits": []
+    },
+    {
+      "n": 6,
+      "budget": 2,
+      "children": 18,
+      "hits": []
+    },
+    {
+      "n": 7,
+      "budget": 1,
+      "children": 55,
+      "hits": []
+    },
+    {
+      "n": 7,
+      "budget": 2,
+      "children": 60,
+      "hits": []
+    },
+    {
+      "n": 8,
+      "budget": 1,
+      "children": 144,
+      "hits": []
+    },
+    {
+      "n": 8,
+      "budget": 2,
+      "children": 191,
+      "hits": []
+    },
+    {
+      "n": 9,
+      "budget": 1,
+      "children": 377,
+      "hits": []
+    },
+    {
+      "n": 9,
+      "budget": 2,
+      "children": 589,
+      "hits": []
+    },
+    {
+      "n": 10,
+      "budget": 1,
+      "children": 987,
+      "hits": []
+    },
+    {
+      "n": 10,
+      "budget": 2,
+      "children": 1775,
+      "hits": []
+    },
+    {
+      "n": 11,
+      "budget": 1,
+      "children": 2584,
+      "hits": []
+    },
+    {
+      "n": 11,
+      "budget": 2,
+      "children": 5257,
+      "hits": []
+    },
+    {
+      "n": 12,
+      "budget": 1,
+      "children": 6765,
+      "hits": []
+    },
+    {
+      "n": 12,
+      "budget": 2,
+      "children": 15360,
+      "hits": [
+        [
+          12,
+          2,
+          14960
+        ]
+      ]
+    },
+    {
+      "n": 13,
+      "budget": 1,
+      "children": 17711,
+      "hits": [
+        [
+          13,
+          1,
+          1120
+        ],
+        [
+          13,
+          1,
+          1150
+        ]
+      ]
+    }
+  ],
+  "exceptional": [
+    {
+      "a": 3,
+      "c": -1,
+      "first_above": 12
+    },
+    {
+      "a": 6,
+      "c": 1,
+      "first_above": 11
+    },
+    {
+      "a": 5,
+      "c": -1,
+      "first_above": 11
+    },
+    {
+      "a": 13,
+      "c": 3,
+      "first_above": 9
+    },
+    {
+      "a": 14,
+      "c": 3,
+      "first_above": 9
+    }
+  ]
+}

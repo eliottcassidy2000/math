@@ -1,0 +1,155 @@
+{
+  "status": "FINITE_EXACT_CONTROLS_FOR_SCOPED_ALL_SIZE_PROOFS",
+  "parity": {
+    "first_cut": 1,
+    "second_cut": 20,
+    "responses": [
+      375,
+      417,
+      415,
+      467,
+      407,
+      463,
+      453,
+      523
+    ],
+    "even_sum": 1758,
+    "odd_sum": 1762,
+    "reversed_new_edge_responses": [
+      309,
+      351,
+      341,
+      397,
+      337,
+      389,
+      375,
+      445
+    ],
+    "one_birth_basis_masks": [
+      1,
+      2,
+      4,
+      5,
+      16,
+      17,
+      20
+    ],
+    "completion_determinant": -143302656,
+    "rank_filtration": [
+      1,
+      7,
+      8
+    ],
+    "blind_dimensions": [
+      7,
+      1,
+      0
+    ],
+    "holonomy_kernel_orders": [
+      8,
+      1,
+      1
+    ]
+  },
+  "local_reader": [
+    [
+      3,
+      48
+    ],
+    [
+      5,
+      64
+    ],
+    [
+      5,
+      64
+    ],
+    [
+      9,
+      84
+    ]
+  ],
+  "sharp_controls": [
+    {
+      "k": 1,
+      "counts": [
+        51,
+        69,
+        69,
+        93
+      ],
+      "alternating_sum": 6,
+      "source_order": 6,
+      "target_order": 7
+    },
+    {
+      "k": 2,
+      "counts": [
+        2313,
+        3087,
+        3087,
+        4059,
+        3087,
+        4121,
+        4121,
+        5421,
+        3087,
+        4121,
+        4121,
+        5421,
+        4059,
+        5421,
+        5421,
+        7137
+      ],
+      "alternating_sum": 20,
+      "source_order": 10,
+      "target_order": 12
+    }
+  ],
+  "hostile": {
+    "rows": [
+      [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        3599,
+        1039,
+        2063,
+        527
+      ],
+      [
+        254,
+        244,
+        248,
+        242,
+        4064,
+        3904,
+        3968,
+        3872,
+        15,
+        2319,
+        783,
+        1295
+      ]
+    ],
+    "baseline": 462915,
+    "contexts": 4094,
+    "differing": 3584,
+    "cut": 256,
+    "responses": [
+      1061775,
+      1395279
+    ],
+    "full_table_sha256": [
+      "2a3cf817a6f70312849a454af75d9e5848c88a2f2213bea3512e3c7805d88ab1",
+      "4f660d8af82987afdce81497dadc2632f81e1ca7d918a2d3099a236f08cd47de"
+    ],
+    "automorphism_orders": "81/27 inherited, not recomputed"
+  }
+}

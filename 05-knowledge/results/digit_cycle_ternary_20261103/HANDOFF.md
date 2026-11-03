@@ -1,19 +1,19 @@
-# Resume from the saved 6325 source and the new family interfaces
+# Resume from both6325 returns and the new family interfaces
 
 1. `return2107.json` contains the literal 13-vertex child with H=6325,
    next root name 31 and spare name 6. Its profile is
    `(6325,2107,2107,6325)`, golden observer `(6325,86228,86264)` and
    chart `(6,3,1)`. All eleven old names survived the 2107 return.
    Do not restart the completed 701 or 2107 searches.
-2. Seek a parameterized family explaining the actual repaired sources,
-   or a ready target for this child with a provable return guard.
-   A naive full ready-grammar scan will grow quickly; prune by scalar
-   and joint responses before expanding large parent orders. The 2107
-   search did not classify its ready locus at every size.
-   Compare the incoming boundary-carry matching/two-cover construction
-   linked in RECOVERY before attempting another unstructured scan. Its
-   four uniform second returns suggest a target-family language, while
-   its lack of arbitrary-depth closure is still the relevant hostile.
+2. Both ready targets and actual returns at6325 are now completed in
+   [RETURN6325](../return6325_completion_20261103/RETURN6325.md). Continue
+   from its named children18977/18979 rather than repeating the search.
+   Its CLONE_LAW proves that the old H-neutral repair does not stay neutral
+   after cloning: the missing parent-deletion defects are153/27/3.
+   Seek a graded input grammar respecting that coordinate and the H35
+   ready-image obstruction. RANK_DEPTH in the same packet classifies exact
+   response ranks under fixed births, with all-size binomial recurrences;
+   integral Smith layers and extra actual complements remain open.
 3. The decimal append quotient is exactly `(s10(4n),[n=2 mod5])`.
    It is closed for appended digit queries but not for halving. The
    explicit common-suffix selector in D5 distinguishes every pair of

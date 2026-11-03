@@ -1,0 +1,112 @@
+{
+  "status": "FINITE_EXACT_CONTROLS_FOR_ALL_SIZE_RANK_PROOF",
+  "one_birth": [
+    {
+      "N": 1,
+      "source_order": 4,
+      "contexts": 14,
+      "rank": 2,
+      "expected": 2
+    },
+    {
+      "N": 2,
+      "source_order": 6,
+      "contexts": 62,
+      "rank": 4,
+      "expected": 4
+    },
+    {
+      "N": 3,
+      "source_order": 8,
+      "contexts": 254,
+      "rank": 7,
+      "expected": 7
+    },
+    {
+      "N": 4,
+      "source_order": 10,
+      "contexts": 1022,
+      "rank": 11,
+      "expected": 11
+    },
+    {
+      "N": 5,
+      "source_order": 12,
+      "contexts": 4094,
+      "rank": 16,
+      "expected": 16
+    }
+  ],
+  "spaced_readers": [
+    {
+      "middle_vertices": 0,
+      "counts": [
+        3,
+        5,
+        5,
+        9
+      ],
+      "mixed": 2
+    },
+    {
+      "middle_vertices": 1,
+      "counts": [
+        5,
+        9,
+        9,
+        15
+      ],
+      "mixed": 2
+    },
+    {
+      "middle_vertices": 2,
+      "counts": [
+        9,
+        15,
+        17,
+        27
+      ],
+      "mixed": 4
+    },
+    {
+      "middle_vertices": 3,
+      "counts": [
+        17,
+        27,
+        33,
+        51
+      ],
+      "mixed": 8
+    },
+    {
+      "middle_vertices": 4,
+      "counts": [
+        33,
+        51,
+        65,
+        99
+      ],
+      "mixed": 16
+    },
+    {
+      "middle_vertices": 5,
+      "counts": [
+        65,
+        99,
+        129,
+        195
+      ],
+      "mixed": 32
+    },
+    {
+      "middle_vertices": 6,
+      "counts": [
+        129,
+        195,
+        257,
+        387
+      ],
+      "mixed": 64
+    }
+  ]
+}

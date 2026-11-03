@@ -1,0 +1,41 @@
+{
+  "status": "PASS_NORMAL_AND_OPTIMIZED_IDENTICAL",
+  "output_sha256": {
+    "audit_ready.json": "6d5dcfbe464f8db7d3f396b49549ce022924bc4f502c2032e1f1646307bd3e51",
+    "completion.json": "3c64db73e2bed76016e2aa52e3edb311f86676d5e944be4e52e7823cdbc225a2",
+    "halving_response.json": "f0209c836df5837d9512acb71ab4942f89fec984bb490c3ce86a18e91612e965",
+    "clone_probe.json": "68e8746a9b0ab2441021a4fbd11900ccb1d10186145a6ff0fbecb8c68d511f66",
+    "transport.json": "3ff6acce83a00359ff831f7a690af76ed8e0ec71ce919b0fd4c209522854ba11",
+    "audit.json": "b4cc4640bc42792ff81b71784e04493e3f28ea60d8d18a7d5fee3f64d39e7e7b",
+    "rank_depth.json": "e25253b6a8b1f76347159d12d44707790d5e909101ea02e6ab44d79daa2f8919"
+  },
+  "source_pin": "31b13dd9a2c8",
+  "input_sha256": {
+    "digit_cycle_ternary_20261103/return2107.json": "0041f693dd07af8dbf9e3a433d9f70c6ed9bae0102478c859c0b00d771c34734",
+    "two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
+    "ready_return_pentagon_20261103/ready_inverse.py": "4c9f06467d9acdaef9707e7542668d3fb5d8656f8ccc6eec1942a585c36cdbec",
+    "polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "adaptive_four_returns_20261103/lift_search.cpp": "b3f9a9abd463d29fe62a1234b3f4b15e5603b99050f5ad32a9c30f87218a6bdb",
+    "overnight_rank_return_20261029/atom_precision.py": "6913ca90dc6a1dcd8f572073d7b517288a3a65c4d9840c48cc75719563ccde6d",
+    "adaptive_four_returns_20261103/audit.json": "5f2b6b42a324057868459f7c0f14c157b2e9abc923f514983e4554c0f6542d7a"
+  },
+  "scripts_sha256": {
+    "audit.py": "060954834cc94a23f0fc442189ad9da2ee2ec874f8f418b8b1762f0298f4d4b1",
+    "audit_ready.cpp": "04c34947965032634f2e12525e6d7dfa82ada49618731f94045096ecbfc20136",
+    "audit_ready.py": "b2555c5ab74be55e0932a93fbf96b00b343feb3de110f6a3d75c0377d87625ed",
+    "clone_probe.py": "5b5382c79bf3c1074a010b7b317b475bbd4328d2a0927cba01095b30355030fa",
+    "completion.py": "e33b13aae69f2066acf343957ccb75fd4f437c20f1d31238cb09b1a3e0d58e3f",
+    "ears.cpp": "80a32acaf726c9393f1ff8cbd298d27c4a1ced5da8d87aec78660da01437953d",
+    "halving_response.py": "c8bbd0e58e06545ae52d95c9781d4f6d86a4699e604594215c8b3085e6826b76",
+    "one_ready_search.py": "b9d3e0582128d2552d7b2ada95a16ce9c379e3d5c3fb75aaaf14706304ed2931",
+    "rank_depth.py": "0dfb617745d794bd8656a9414bcd13128b7cfeae3866e851788085de09e5aeea",
+    "reproduce.py": "57694995b10f3119ae200ff1fa0784c2ee0a546fa14d765fe8a20b03a5d1add2",
+    "return6325.py": "a326d98274c6764cd82fbfebc4d2f9944a05aafe1d79327c7e07c223ffbdc47f",
+    "return6325_plus2.py": "347b44682a3173f16dd0ef0e0b3a34c8d5b3e9e447287cd32ac44e1c5debcfca",
+    "search_ready.cpp": "0b58c7baf0e43705634e76c4603ed5a0ffb13ece98bf3c7a58fa592b3f3635dd",
+    "search_ready.py": "7f7987c7a34c3c6ad3d0bd5de596fa5cf831449820815f847bea6385b0354dc4",
+    "transport.py": "9e620a5e174d5c52686214206ba9b326ad7658dd9214f0ec0039bc681ec77f39"
+  },
+  "scope": "Exact saved words and bounded universes; same-agent proof review, independent algorithms, no external proof audit",
+  "supplement": "Rank-depth theorem added after the full replay; its controls separately passed normal/O, earlier output hashes rechecked unchanged."
+}

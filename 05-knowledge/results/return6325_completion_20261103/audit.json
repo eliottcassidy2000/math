@@ -1,0 +1,47 @@
+{
+  "status": "FINITE_EXACT_INDEPENDENT_MATRIX_AND_ENDPOINT_REPLAY",
+  "branches": [
+    {
+      "file": "return6325.json",
+      "native_guards": 20,
+      "returned_profile": [
+        6325,
+        891,
+        893,
+        6327
+      ],
+      "next_profile": [
+        18979,
+        6325,
+        6325,
+        18979
+      ],
+      "next_golden": [
+        18979,
+        634781,
+        634808
+      ]
+    },
+    {
+      "file": "return6325_plus2.json",
+      "native_guards": 10,
+      "returned_profile": [
+        6325,
+        2092,
+        2093,
+        6326
+      ],
+      "next_profile": [
+        18977,
+        6325,
+        6325,
+        18977
+      ],
+      "next_golden": [
+        18977,
+        1421129,
+        1421132
+      ]
+    }
+  ]
+}

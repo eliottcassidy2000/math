@@ -3,6 +3,11 @@
 2026-11-03. **PROVED scoped / FINITE-EXACT / CITED background.** Same-agent
 proof review, with separate exact algorithms and literal source controls.
 
+**Continuation:** [the6325 packet](../return6325_completion_20261103/README.md)
+now supplies both actual retained-name returns and next children18977/18979.
+It also gives exact attachment-depth ranks and the marked clone obstruction.
+The completed6325 target search should not be repeated.
+
 The cycle `4,8,3,7,2,6,10,5,9,4` now has several explicit extensions.
 
 * [DIGITS_AND_TOWERS](DIGITS_AND_TOWERS.md) proves a nearest-neighbour
