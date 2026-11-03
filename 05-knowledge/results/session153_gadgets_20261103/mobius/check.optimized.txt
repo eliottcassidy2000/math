@@ -1,0 +1,6 @@
+n 1 tournaments 1 spectrum [(1, 1)]
+n 2 tournaments 2 spectrum [(1, 2)]
+n 3 tournaments 8 spectrum [(1, 6), (3, 2)]
+n 4 tournaments 64 spectrum [(1, 24), (3, 16), (5, 24)]
+n 5 tournaments 1024 spectrum [(1, 120), (3, 120), (5, 240), (9, 240), (11, 120), (13, 120), (15, 64)]
+cyclic 7 (175, [371, -224, 28, 0, 0, 0, 0, 0])
