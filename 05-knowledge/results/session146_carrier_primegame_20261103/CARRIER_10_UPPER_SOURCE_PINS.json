@@ -1,0 +1,36 @@
+{
+  "base_commit": "0402d9db2bb04b17630916d4df682db858546f39",
+  "scope": "Inherited lower, lifting and upper-bound sources, not reproved in this certificate.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md",
+      "blob": "df6662e19f704959c36c649344d3220f7d0d9e38",
+      "bytes": 17957,
+      "sha256": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier9/PROOF.md",
+      "blob": "679facb2bd70703adeedaa39615a9e4f5990c225",
+      "bytes": 3992,
+      "sha256": "ba32f8214b52b9e8c9b6d9d4cbdec0a089596eadb8e73d7a302a6d81871ad721"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier9/MANIFEST.json",
+      "blob": "f298d1f896dc1175dc50135d72e8a7ec67933430",
+      "bytes": 3398,
+      "sha256": "91e0639f20c661a2ce4744faab0f3a81f11bd81c51ceab628bc9cd693d9e15bc"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier10/PROOF.md",
+      "blob": "bfbe1deccf4e0e29b79030329f3971cfb4cf0ae7",
+      "bytes": 4100,
+      "sha256": "00decfa30b01771d29878036151499a57a398eccb353aa8cf9ac32a516e03362"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier10/MANIFEST.json",
+      "blob": "f80c7058316a10f8139e4b2b631e56630e04deca",
+      "bytes": 3997,
+      "sha256": "7e2b394425bbf6bd08a6de37e69692969c752804147db95321367ba0e07bbd95"
+    }
+  ]
+}

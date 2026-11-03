@@ -1,0 +1,4 @@
+kernel column rank mod 101 = 56
+kernel column rank mod 103 = 56
+cycle, disconnected even/odd paths, relabel gauge, tail saturation, zero columns, kernel corruption: PASS
+canonical diagrams=32400, zero=17042, exact integer annihilation PASS

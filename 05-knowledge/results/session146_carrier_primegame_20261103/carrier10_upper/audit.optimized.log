@@ -1,0 +1,5 @@
+joined kernel SHA-256 91c68094d7c5d74467a9de29e949b6bbabe844edd0e2c0193bca9d5b241522fb
+kernel column rank mod 101 = 56
+kernel column rank mod 103 = 56
+cycle, disconnected even/odd paths, relabel gauge, tail saturation, zero columns, kernel corruption: PASS
+canonical diagrams=32400, zero=17042, exact integer annihilation PASS
