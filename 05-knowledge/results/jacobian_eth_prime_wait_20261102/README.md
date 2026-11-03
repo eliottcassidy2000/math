@@ -4,9 +4,10 @@
 from `5e1cedf452`. This packet separates proofs, exact finite checks,
 external statements and open classification problems.
 
-The mathematical advance is [W1–W3](WEIGHTED-CLASSIFICATION.md): all target
+The mathematical advance is [W1–W4](WEIGHTED-CLASSIFICATION.md): all target
 fibres in the inherited weighted Keller family, arbitrary disjoint-cycle
 inertia at infinity, and a partition lower bound for inequivalent maps.
+Many remain inequivalent while sharing the exact same positive component.
 The number-theory advance is the explicit CRT delay family and the MRB
 orientation calculation in [PRIME-MRB.md](PRIME-MRB.md).
 
@@ -75,6 +76,12 @@ read the current primary formalization interfaces and scope notes. Their
 content hashes and retrieval time are in [external_source_hashes.json](external_source_hashes.json).
 No local Lean build, comparator run or independent kernel replay was
 performed; the local Jacobian/prime proofs do not depend on ETH being false.
+
+There is positive external replay evidence beyond the original source
+announcement: the [community replication thread](https://ethdiscussion.blog/2026/10/30/lean-replications/)
+and [Carlos Toledo's report](https://carlostoledo.co/eth/) describe successful
+kernel checks and distinguish formal theorem acceptance from interpretation
+of the machine model. These are cited reports, not executions by this session.
 
 * [OpenAI scope note](https://github.com/openai/math/blob/main/lean/docs/378.md):
   for fixed k, the documented formal result counts canonically encoded
@@ -153,6 +160,48 @@ sector; and a SAT reduction needs the actual encoding and multiplicity.
 | units -> sign quotient | U(290)/±1 has 56 classes and preserves the ±1 target event | orientation characters; the signed MRB sum converges while the merged filter diverges |
 | MRB profile -> jump plus finite data | inherited h_K preserves those observations | the alternating functional changes explicitly |
 | SAT instance -> counted tournament object | only a proposed encoding at present | clause width, variable inflation, auxiliary witness multiplicity; no automatic runtime gain |
+
+## Incoming work integrated after the first checkpoint
+
+The clean-tree fetch brought in `b687cd28ca`, `7b76044ca1` and
+`aaf2c12555`. The first two are the independent
+[Session144 synthesis](../session144_jacobian_eth_mrb_20261103/SYNTHESIS.md).
+They agree on the distinction between degree spectra and full map classes,
+and add stronger results which this packet inherits rather than duplicates:
+
+* The corrected equivariant form allows bivariate coefficients. The
+  primitive nonlinear-scale question cannot be phrased as raw degree:
+  an equivariant shear makes that degree arbitrarily large within one
+  equivalence class. Our W3 uses intrinsic target nonproper-component
+  data under unrestricted equivalence instead of raw displayed degree.
+* Its universal positive-coordinate theorem and disjoint iteration levels
+  concern source orbit-zero divisors in an equivariant category. Our
+  target nonproper components are different objects. W4 supplies a strong
+  comparison: p_part(n-3) inequivalent primitive maps can share the
+  **identical** positive coordinate x(1-xy/2+x²z). Complete information
+  about that single coordinate still cannot classify their joint map.
+* The incoming MRB theorem strengthens h_K to smooth-Laplace perturbations
+  preserving all algebraic-order asymptotics uniformly on the entire
+  right half-plane. Its complete periodic-mean criterion includes our
+  even-modulus specialization. It also proves a certified precision
+  algorithm and distinguishes cutoff from Abel finite parts; none
+  recognizes a modular closed form. Our contribution on this lane is
+  the explicit 290/227 CRT and sign-sector synthesis, not a claim to
+  improve that stronger analytic obstruction.
+* Its bounded-integer Keller/SAT interface counts declared finite witnesses
+  and includes verification gates. The W1 family admits a different,
+  unconditional exact reduction: **two univariate gcds** count every
+  complex fibre at a rational target. This preserves the full target
+  predicate within the specified family without Boolean encoding.
+
+The latest [native module-exchange packet](../uniform_prime_transport_20261103/README.md)
+separates fixed-attachment means from legality after native re-marking;
+it does not claim spectrum completeness. This complements the earlier
+[endpoint-block recurrence](../primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md):
+compression is faithful for its specified operation class, and a new
+guard can demand information outside it. The MRB orientation loss and
+the missing Keller chart provide concrete mathematical analogues, not
+unproved reductions between these problems.
 
 ## Audit, searches and handoff
 

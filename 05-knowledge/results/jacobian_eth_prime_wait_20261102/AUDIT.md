@@ -81,7 +81,10 @@ The formalization's expected axioms are not reported as a local audit.
 ## Handoff
 
 The new all-target weighted-family rule and partition bound are proved
-in the companion note, with local IDs W1–W3. No scarce THM namespace was
+in the companion note, with local IDs W1–W4. W4 keeps the entire positive
+coordinate fixed and W1 gives a two-gcd fibre-count algorithm. Incoming
+Session144's stronger MRB obstruction and corrected equivariant scope
+are inherited explicitly. No scarce THM namespace was
 reserved and no false universal classification was promoted. The next
 stronger target is an invariant detecting moduli inside one fixed
 component passport, or a polynomial-gluing criterion for a proposed

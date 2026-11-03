@@ -74,7 +74,7 @@ def main():
         if ratio > record:
             records.append(row)
             record = ratio
-        if m in expected or m == 210:
+        if m in expected or m in (210,9970):
             direct = [p for p in range(2,hit+1)
                       if trial_prime(p) and math.gcd(p,m)==1]
             check(len(direct)==rank, f"independent rank: {m}")

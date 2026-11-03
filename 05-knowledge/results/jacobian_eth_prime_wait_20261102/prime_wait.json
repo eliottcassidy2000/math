@@ -506,6 +506,15 @@
       "phi": 144,
       "residual_prime_rank": 1,
       "zero_hazard_prefix": 59
+    },
+    {
+      "eligible_rank": 13810,
+      "first_prime": 149551,
+      "iid_ratio": "6905/996",
+      "m": 9970,
+      "phi": 3984,
+      "residual_prime_rank": 12585,
+      "zero_hazard_prefix": 1225
     }
   ],
   "universe": "all even 4 <= m <= 10000; primes <= 4000000"

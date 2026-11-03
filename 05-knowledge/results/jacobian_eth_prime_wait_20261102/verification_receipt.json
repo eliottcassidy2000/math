@@ -1,0 +1,23 @@
+{
+  "all_even_moduli": "4 through 10000 inclusive",
+  "audit": "same-agent proof review; independent symbolic/direct-enumeration and sieve/trial-division routes; no independent-agent review",
+  "documentation_check": "PASS; bounded startup surface",
+  "external_lean_build_performed": false,
+  "finite_source_triples": 7196,
+  "fixed_scale_partition_controls": 194,
+  "normal_and_optimized_outputs_identical": true,
+  "parent_checkpoint": "5e14c36ccf6be70b14dbe70287efe3c987d1d03f",
+  "python": "3.10.0",
+  "sha256": {
+    "AUDIT.md": "24d6c74f0f050d9933a89ef690dd668b00d202cfe55c3eabae5b875f7bf6c9e0",
+    "PRIME-MRB.md": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc",
+    "README.md": "a9adcacfaf76b29dd0b3d2fce13e6103427b34c54a05334da30a6a42544a2aee",
+    "WEIGHTED-CLASSIFICATION.md": "c48e8e79043b04d4e7b6c4b29e3121c4c1e0d65f9e116dd8203d328b6213ef26",
+    "external_source_hashes.json": "805b49e23ec5b32a8323f515f265cdb04c50646ca0b550e02bd5e7439211c03d",
+    "prime_wait.json": "3598b086b0f6291f4c78e620fc77ccf9b0572b97caaae8563b8b42f9acfaabc1",
+    "prime_wait.py": "ee0c30f2c1d43a7e852bda7d797a1f5d94ce1ea64af599e8ece247d9ec3b2098",
+    "weighted_fibres.json": "b728f2288a9e1f734c69b55152506b2241bf4f10f9338fb4171d063d6ec89941",
+    "weighted_fibres.py": "781d703c94e1400c831012e9c956c5ecfc0a919bb9fe54723a3d2dee9e3cf7ac"
+  },
+  "sympy": "1.14.0"
+}

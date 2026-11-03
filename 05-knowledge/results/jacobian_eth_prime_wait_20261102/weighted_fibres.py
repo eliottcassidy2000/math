@@ -121,6 +121,8 @@ def main():
                 D=s.gcd(T,T.diff())
                 formula=T.degree()-D.degree()-D.sqf_part().degree()
                 check(formula==sum(e==1 for e in (i,j,k)),"simple-root count")
+                check(formula==T.degree()-2*D.degree()+s.gcd(D,D.diff()).degree(),
+                      'two-gcd implementation')
                 tests+=1
     # MRB's finite-prefix and all-orders-asymptotic blind perturbation.
     q=s.symbols('q')
@@ -145,6 +147,7 @@ def main():
             partition_counts[total]+=partition_counts[total-part]
     lower_bounds=[]
     degree_five=[]
+    fixed_scale_checks=0
     for n in range(4,15):
         ledgers=set()
         for finite,partitions_of in ((3,n-3),(2,n-2)):
@@ -170,12 +173,33 @@ def main():
                     degree_five.append(dict(finite=finite,partition=lam,
                                             R=str(s.factor(R)),kappa=str(kappa),
                                             component_ledger=ledger))
+                if finite==3:
+                    r=len(lam)
+                    roots=[1+s.Rational(e*(2**r-1),2**i)
+                           for i,e in enumerate(lam,1)]
+                    check(len(set(roots))==r and all(rr>1 for rr in roots),
+                          'fixed-scale root separation')
+                    RR=-w*w*(w-1)
+                    for rr,e in zip(roots,lam):
+                        RR*=((w-rr)/(1-rr))**e
+                    check(s.diff(RR,w).subs(w,1)==-1 and
+                          s.diff(RR,w,2).subs(w,1)==0,
+                          'identical positive component')
+                    fixed_scale_checks+=1
         lower=partition_counts[n-3]+partition_counts[n-2]-1
         check(len(ledgers)==lower,'independent partition recurrence')
         lower_bounds.append([n,lower])
+    quartic_counts=[]
+    for PP,QQ in [(s.Rational(1,8),-s.Rational(1,64)),(0,0),(-1,-1),(0,1)]:
+        TT=s.Poly(w**3-w**4-PP*w+QQ,w)
+        DD=s.gcd(TT,TT.diff())
+        quartic_counts.append(4-DD.degree()-DD.sqf_part().degree())
+    check(quartic_counts==[0,1,2,4],'quartic no-three-point spectrum')
     print(json.dumps(dict(seeds=rows,quartic_boundary='(87*y**2+6*z,y,0)',
                          root_multiplicity_controls=tests,mrb_series=mrb,
                          inequivalent_lower_bounds=lower_bounds,degree_five=degree_five,
+                         fixed_scale_partition_checks=fixed_scale_checks,
+                         second_quartic_witness_counts=quartic_counts,
                          checks='PASS'),indent=2,sort_keys=True,default=int))
 
 

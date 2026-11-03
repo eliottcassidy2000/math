@@ -90,6 +90,7 @@
       ]
     }
   ],
+  "fixed_scale_partition_checks": 194,
   "inequivalent_lower_bounds": [
     [
       4,
@@ -148,6 +149,12 @@
   ],
   "quartic_boundary": "(87*y**2+6*z,y,0)",
   "root_multiplicity_controls": 64,
+  "second_quartic_witness_counts": [
+    0,
+    1,
+    2,
+    4
+  ],
   "seeds": [
     {
       "R": "-w**3 + w**2",

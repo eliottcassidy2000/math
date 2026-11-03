@@ -79,6 +79,20 @@ otherwise; y,z then reconstruct uniquely. If d=0, instead Bx=c, u=Ax²:
 there is one additional point exactly when B!=0. This proves (2)–(3).
 No simplicity hypothesis on the other roots of R was used. ∎
 
+**Exact fibre-count algorithm.** For a seed and target over Q (or another
+specified exact coefficient field), the C!=0 count can equivalently be
+computed as
+
+    n-2 deg gcd(T,T') + deg gcd(D,D'), D=gcd(T,T').
+
+This requires two univariate gcds and no algebraic root enumeration or
+expansion of the three coordinate polynomials. Ordinary dense Euclidean
+division uses O(n²) coefficient-field operations. This is an arithmetic
+operation bound, not a claim about unit-cost arbitrary-bit integers or
+about counting rational points. The C=0 branches need only the coefficient
+tests (2)–(3). Thus this structured-family algorithm is unconditional and
+does not need the external SAT result.
+
 **Hostile boundary.** For THM-3438's quartic G, x=0 gives
 G(0,y,z)=(87y²+6z,y,0). Its other boundary points satisfy
 (B²-A)x²=1. Thus C=0 has three points when A!=B² and one otherwise.
@@ -196,7 +210,61 @@ two finite sheets and five escaping sheets, with inertia (2)(3), raw
 discriminant valuation five and index one. This proves that the local
 cycle pattern can be composite while the global covering is primitive.
 
-## 4. Reproduction and independent checks
+## 4. The same positive coordinate can conceal inequivalent maps
+
+The incoming [Session144 equivariant boundary theorem](../session144_jacobian_eth_mrb_20261103/jacobian_followup/universal_equivariant_boundary_corollary.md)
+classifies the fibres of the positive-weight coordinate and proves a
+composition law in the equivariant category. The following gives a precise
+limit to using that coordinate as a classifier of the whole map.
+
+**W4.** For every n>=4, at least p_part(n-3) of W3's inequivalent primitive
+degree-n, determinant-one maps can be chosen with the identical component
+
+    F_3(x,y,z)=x(1-xy/2+x²z).                            (7)
+
+In particular even the entire positive-coordinate polynomial, not just
+its degree or zero-fibre type, fails to classify the map.
+
+**Proof.** For a partition s_1>=...>=s_r of n-3, set
+
+    r_i=1+s_i(2^r-1)/2^i,
+    R=-w²(w-1) product_i ((w-r_i)/(1-r_i))^s_i.         (8)
+
+The positive rationals r_i-1 are strictly decreasing, hence the roots
+are distinct and outside {0,1}. Their logarithmic derivative satisfies
+
+    sum_i s_i/(1-r_i) = -sum_(i=1)^r 2^i/(2^r-1)=-2.
+
+Thus c=1, kappa=-2[2-2]=0 and a=-1/2 for every partition.
+Taking b=1 gives (7). Their C-component inertia still has the different
+cycle partitions s, and three finite sheets, so W3's unrestricted
+inequivalence argument applies unchanged. ∎
+
+For n=5 the two seeds can be written
+
+    R_1=-w²(w-1)(w-2)²,
+    R_2=-(8/9)w²(w-1)(w-5/2)(w-7/4).
+
+Both have exactly the same F_3 in (7), generic degree five and S_5
+monodromy. The C-component inertia is a transposition for the first and
+the identity for the second. This is not a contradiction to the incoming
+coordinate-fibre theorem: that theorem classifies one coordinate, not all
+coordinates jointly.
+
+There is also an elementary degree-four separation. For R=w³-w⁴, c=1,
+W1 excludes three-point fibres everywhere: C!=0 excludes n-1, while C=0
+has only one or two points. At C=1, the pairs (P,Q)
+
+    (1/8,-1/64), (0,0), (-1,-1), (0,1)
+
+have respectively 0,1,2,4 finite preimages. In the first case
+T=-(w²-w/2-1/8)²; in the third T=-(w-1)²(w²+w+1).
+Thus this map has the exact spectrum {0,1,2,4}, whereas the inherited
+quartic G has {0,1,2,3,4}. They cannot be equivalent under arbitrary
+source/target automorphisms. The explicit separation is stronger than
+merely observing different displayed formulas.
+
+## 5. Reproduction and independent checks
 
 From the worktree root:
 
@@ -214,6 +282,8 @@ fields. Sixty-four root multiplicity patterns audit (1). Partitions are
 enumerated independently of a coin-change recurrence through degree 14;
 every seed's normalization, admissibility and distinct invariant ledger
 is checked. The general conclusion rests on W3's proof, not this cutoff.
+The fixed-coordinate construction (8) is checked on all partitions through
+degree 14, and the four degree-four witnesses are checked by exact gcds.
 
 Next decisive questions: can the component ledger distinguish positive-
 dimensional moduli at one degree; which non-S_n global monodromies are
