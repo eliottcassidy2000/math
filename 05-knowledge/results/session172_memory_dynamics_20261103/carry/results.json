@@ -1,0 +1,13 @@
+{
+  "checks": 105275,
+  "response_classes": {
+    "all": 2048,
+    "bulk": 1,
+    "weight_le_one": 32,
+    "weight_le_two": 2048
+  },
+  "rm_dimension": 11,
+  "scope": "finite transcription controls; general claims proved in NOTE.md",
+  "status": "pass",
+  "word_count": 5460
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "arbitrary_profile_examples": 42,
+  "three_block_examples": [
+    {
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "address": null,
+      "H": 524583
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "address": null,
+      "H": 524583
+    },
+    {
+      "bits": [
+        0,
+        1,
+        0
+      ],
+      "address": 0,
+      "H": 1446579
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "address": 0,
+      "H": 1656153
+    },
+    {
+      "bits": [
+        0,
+        0,
+        1
+      ],
+      "address": 2,
+      "H": 1603053
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "address": 1,
+      "H": 1603053
+    }
+  ]
+}

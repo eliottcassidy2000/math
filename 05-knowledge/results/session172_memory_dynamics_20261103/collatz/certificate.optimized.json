@@ -1,0 +1,69 @@
+{
+  "cylinders_checked": 8190,
+  "finite_exceptions_summed_across_depths": 11,
+  "positive_orbit_representatives_checked": 49140,
+  "read_counts": [
+    17,
+    19
+  ],
+  "seed_profiles": [
+    9,
+    33,
+    31,
+    10,
+    1
+  ],
+  "status": "PASS",
+  "survival_counts": {
+    "1": {
+      "denominator": 2,
+      "density": 0.5,
+      "survivors": 1
+    },
+    "12": {
+      "denominator": 4096,
+      "density": 0.05517578125,
+      "survivors": 226
+    },
+    "128": {
+      "denominator": 340282366920938463463374607431768211456,
+      "density": 6.977799878299422e-05,
+      "survivors": 23744222584883638495407855640356220
+    },
+    "16": {
+      "denominator": 65536,
+      "density": 0.032257080078125,
+      "survivors": 2114
+    },
+    "2": {
+      "denominator": 4,
+      "density": 0.25,
+      "survivors": 1
+    },
+    "256": {
+      "denominator": 115792089237316195423570985008687907853269984665640564039457584007913129639936,
+      "density": 3.2760221243761753e-07,
+      "survivors": 37933744616918826336506027646167154052909131283110018145640477926649259
+    },
+    "32": {
+      "denominator": 4294967296,
+      "density": 0.009626961080357432,
+      "survivors": 41347483
+    },
+    "4": {
+      "denominator": 16,
+      "density": 0.1875,
+      "survivors": 3
+    },
+    "64": {
+      "denominator": 18446744073709551616,
+      "density": 0.0014930653834529545,
+      "survivors": 27542195013871668
+    },
+    "8": {
+      "denominator": 256,
+      "density": 0.07421875,
+      "survivors": 19
+    }
+  }
+}
