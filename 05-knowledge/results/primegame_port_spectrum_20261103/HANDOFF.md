@@ -1,5 +1,10 @@
 # Next decisive tests
 
+**Follow-up:** [the parity-carrier session](../positive_source_jacobian_prime_clocks_20261103/HANDOFF.md)
+finds the defect at six: the661-coordinate bound is not sharp; a closed
+571-coordinate carrier suffices and571 actual query words of at most five births attain it. It also rules out the natural uniform-port
+positive certificate at every order>=5. Use that handoff for these two lanes.
+
 The global7/21 completeness conjecture remains OPEN. Do not rerun the
 current finite prefix as an extension of the inherited99,999,999 bank.
 
@@ -32,9 +37,10 @@ current finite prefix as an extension of the inherited99,999,999 bank.
 6. **Sharpness of the mean-response recurrence.** The endpoint-block
    carrier is closed at all orders and has EGF exp(x+x^2 exp(x)/2).
    Actual S/B query banks attain its full dimensions 7,28,126 at orders
-   3,4,5; full-row independent counts verify them. Prove the span assertion
-   at all orders, or find a defect at six (upper bound 661). A length n-1
-   growth bound is a suggested pattern, not a theorem. Retain both endpoints
+   3,4,5; full-row independent counts verify them. The subsequent parity
+   quotient refutes all-order sharpness of this bound at six, reducing it
+   to571, now attained by actual queries. Determine sharpness at seven (bound2668). A length n-1 growth bound
+   remains unproved. Retain both endpoints
    and all path-cover types; ordinary converse is not native path complement.
    For a positive target certificate, retain m=E[q] and R=E[qq^t]:
    fixed attachments update them by M m and M R M^t. Seek an actual

@@ -1,0 +1,47 @@
+{
+  "dimensions_0_to_20": [
+    1,
+    1,
+    2,
+    7,
+    28,
+    126,
+    571,
+    2668,
+    13028,
+    65908,
+    347626,
+    1902231,
+    10777900,
+    63113350,
+    380843828,
+    2364668881,
+    15076718956,
+    98563236804,
+    659770311934,
+    4516277002363,
+    31579832588951
+  ],
+  "n6": {
+    "old_bound": 661,
+    "new_bound": 571,
+    "forest_terms": 1486
+  },
+  "n7": {
+    "old_bound": 3928,
+    "new_bound": 2668,
+    "forest_terms": 12412
+  },
+  "all_birth_cuts": 64,
+  "exact_basis_pullbacks": 170752,
+  "hostile_masks": [
+    10376,
+    5392
+  ],
+  "hostile_signs": [
+    1,
+    1
+  ],
+  "egf_coefficients_verified_through": 20,
+  "scope": "closed rational upper bound; all-order sharpness unproved"
+}

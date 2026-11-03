@@ -1,0 +1,70 @@
+{
+  "hostile_81_27": {
+    "groups": [
+      81,
+      27
+    ],
+    "common_H": [
+      462915,
+      462915
+    ],
+    "port8_after_sink": [
+      2390013,
+      1754919
+    ],
+    "common_cyclic_triples": 67
+  },
+  "cycles_3n13": [
+    {
+      "values": [
+        227,
+        347,
+        527,
+        797,
+        601
+      ],
+      "valuations": [
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "total": 2499,
+      "A": 8
+    },
+    {
+      "values": [
+        259,
+        395,
+        599,
+        905,
+        341
+      ],
+      "valuations": [
+        1,
+        1,
+        1,
+        3,
+        2
+      ],
+      "total": 2499,
+      "A": 8
+    }
+  ],
+  "source_splice": {
+    "values": [
+      151,
+      227,
+      341,
+      1
+    ],
+    "valuations": [
+      1,
+      1,
+      10
+    ]
+  },
+  "independent_prime_records": 15,
+  "ordinary_and_optimized_identical": true
+}

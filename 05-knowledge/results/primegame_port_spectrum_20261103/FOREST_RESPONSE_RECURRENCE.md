@@ -3,6 +3,12 @@
 **PROVED all-order upper bound and closure / FINITE-EXACT sharpness at
 orders three through five. Same-agent proof audit and independent rank algorithms.**
 
+**Subsequent refinement:** [PARITY_CARRIER](../positive_source_jacobian_prime_clocks_20261103/PARITY_CARRIER.md)
+shows that internal allocation across path blocks can also be forgotten
+when endpoint pairing and individual path parities are retained. Its closed
+dimensions571/2668 improve661/3928 at orders6/7. The theorem below remains
+valid as an upper bound; its all-order sharpness candidate is refuted.
+
 For a law on labelled tournaments, every fixed source-oblivious attachment
 response is determined by a vector indexed by set partitions with two
 designated endpoints in each nonsingleton block. The dimension bound has
