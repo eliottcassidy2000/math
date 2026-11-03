@@ -1,0 +1,104 @@
+{
+  "direct_character_cases": 363,
+  "pointed_Specht_cases": 1100,
+  "compact_six_coordinate_cases": 220,
+  "cycle_tensor_cases": 1099,
+  "ordinal_character_cases": 726,
+  "C_chain": [
+    {
+      "order": 2,
+      "H": 1,
+      "F3": 9,
+      "S3_multiplicities": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "order": 3,
+      "H": 3,
+      "F3": 33,
+      "S3_multiplicities": [
+        7,
+        11,
+        4
+      ]
+    },
+    {
+      "order": 4,
+      "H": 5,
+      "F3": 117,
+      "S3_multiplicities": [
+        22,
+        39,
+        17
+      ]
+    },
+    {
+      "order": 5,
+      "H": 9,
+      "F3": 411,
+      "S3_multiplicities": [
+        73,
+        137,
+        64
+      ]
+    },
+    {
+      "order": 6,
+      "H": 17,
+      "F3": 1449,
+      "S3_multiplicities": [
+        250,
+        483,
+        233
+      ]
+    },
+    {
+      "order": 7,
+      "H": 31,
+      "F3": 5109,
+      "S3_multiplicities": [
+        867,
+        1703,
+        836
+      ]
+    },
+    {
+      "order": 8,
+      "H": 57,
+      "F3": 18009,
+      "S3_multiplicities": [
+        3030,
+        6003,
+        2973
+      ]
+    },
+    {
+      "order": 9,
+      "H": 105,
+      "F3": 63483,
+      "S3_multiplicities": [
+        10633,
+        21161,
+        10528
+      ]
+    }
+  ],
+  "R5": {
+    "cycles": {
+      "3": 5,
+      "5": 2
+    },
+    "cover_profile": [
+      0,
+      15,
+      45,
+      35,
+      10,
+      1
+    ],
+    "s32_coefficient": -5
+  }
+}
