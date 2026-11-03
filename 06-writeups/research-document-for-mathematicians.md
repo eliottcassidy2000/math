@@ -290,7 +290,7 @@ These are the only known permanent gaps in the $H$-spectrum. The value $H = 63$ 
 
 *Proof of $H \neq 7$.* Strong components occur consecutively on each Hamiltonian path, so their counts multiply. Since 7 is prime, a strong component would have count 7. Busch's bound $H(S)\geq 5^{(|S|-1)/3}$ excludes order at least 5, and direct enumeration through order 4 gives path-count sets $\{1\}$, $\{1\}$, $\{1,3\}$, and $\{1,3,5\}$. See https://www.combinatorics.org/ojs/index.php/eljc/article/view/v13i1n3.
 
-*Proof of $H \neq 21$.* Component multiplicativity and the exclusion of 7 imply that a strong component would have count 21. Busch's bound excludes order at least 7, while exhaustive finite enumeration through order 6 finds no such count. These gaps were already noted in https://mathoverflow.net/questions/232751/the-number-of-hamiltonian-paths-in-a-tournament.
+*Proof of $H \neq 21$.* Component multiplicativity and the exclusion of 7 imply that a strong component would have count 21. Busch's bound excludes order at least 7, while exhaustive finite enumeration through order 6 finds no such count; see `05-knowledge/results/session155_spectrum_20261103/corrections/spectrum_permute.cpp` and its recorded output. These gaps were already noted in https://mathoverflow.net/questions/232751/the-number-of-hamiltonian-paths-in-a-tournament.
 
 **k-nacci connection (HYP-1618/1623).** The forbidden values arise from $k$-nacci power sums via Newton's identities. For any $k \geq 3$, the $k$-nacci companion matrix $M_k$ satisfies $\mathrm{Tr}(M_k^3) = 7$ and $\mathrm{Tr}(M_3^5) = 21 = 3 \times 7$. The universality of $\mathrm{Tr}(M_k^3) = 7$ follows from the fact that the first three elementary symmetric polynomials of $k$-nacci roots are identical for all $k \geq 3$.
 
@@ -536,7 +536,7 @@ where the empty determinant and permanent are $1$. See https://arxiv.org/html/24
 | Pin grid $S_3 \times \mathbb{Z}_2$ symmetry | — |
 | $k$-nacci Mersenne identity | THM-227 |
 | Simplicial Rédei: $\mathrm{sim}_H \in \{0,1\}$ | THM-220 |
-| Egyptian fraction splitting ($3/N$, master criterion $k/N$) | HYP-1612/1615 |
+| Egyptian fraction splitting ($3/N$, master criterion $k/N$) | Corrected criteria in §9.2 |
 | Double factorial fixed point | HYP-1614/1616 |
 | Constant symbol matrix for circulant tournaments | THM-125 |
 | Cayley–Delannoy framework (variance, Rodrigues, duality) | — |
