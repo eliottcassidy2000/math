@@ -13,6 +13,10 @@ Their last relevant return-note edit is
 `9d0990d3ea08e131bdd7e615995136b4fd27db53`. They do not change this packet's
 computational imports. Exact source blobs are recorded in `sources.json`.
 
+A publication-time push race brought seven more commits through
+`fdd6289501974ad7e61e32c31957711dc52fc626`. Their mathematical connections
+are recorded below; no computational import in this packet changed.
+
 ## Return obstructions have different domains
 
 [Session155 fixed returns](../session155_spectrum_20261103/returns/NOTE.md)
@@ -87,3 +91,58 @@ Root, history and toothpick independently reviewed the relevant incoming
 lanes. These citations preserve provenance and scope; their large orbit,
 clone census and extension computations are not additional experiments of
 this session.
+
+## Final concurrent return, carry and source-language results
+
+[Mixed-return THEORY](../mixed_returns_20261103/THEORY.md), first committed
+at `6e25dc17ce05ffce0d7e4c629a56df5c5ebfe41e`, independently proves the
+same positive-cone and expansion-versus-determinant cycle mechanisms as
+our M2-M3 for a broader catalog: 785 correction-line return words of original
+bank length at most six, augmented by s78. Our seven-macro monoid lies
+inside that monoid, with D expanded as L2 b L2. This is concurrent independent
+overlap and a broader certified alphabet, not a distinct priority claim for
+our cycle proof. Our explicit normalized-content descending rank, four-macro
+decoder and additional tree/twin endpoint audit retain their stated scopes.
+
+[CARRIES](../mixed_returns_20261103/CARRIES.md) gives a complete all-carry
+test in its 66-symbol parent bank: two of fourteen prescribed branches
+survive. Choosing the actual state (293,231,295) produced from H97 makes
+the next H293-to-881 step exact. This selected representative is outside
+our original seven-target list; an isolated exact edge is compatible with
+both acyclicity theorems. Its positive quadratic pair family and native
+programs do not establish a closed source family. The
+[handoff](../mixed_returns_20261103/HANDOFF.md) keeps transverse carries,
+longer primitive return blocks, re-marking and unbounded families open.
+
+The [eight-macro projective decoder](../spectrum31_return_20261103/PROJECTIVE.md)
+extends the four-interval route, includes our D through word expansion, and
+retains exact integer scale and charge alongside the ratio. Its
+[complete live fibres](../spectrum31_return_20261103/LIVE_FIBRES.md) give a
+particularly relevant branch-closure obstruction: none of the 37 H31
+two-port states reaches both 95 and 97 by any legal append-only continuation,
+although the scalar language reaches each separately. This concerns the
+old append-only language, so it does not exclude our native resets. The
+[705,894-map F7 action monoid](../spectrum31_return_20261103/TRANSPORT.md)
+classifies residue transport rather than exact source return; integer scale,
+actual source words, strongness and terminal-port guards remain necessary.
+
+[Session156 physical returns](../session156_spectrum_20261103/returns/NOTE.md)
+give a seven-macro target-family predecessor iff, a 53-letter cone exclusion,
+and actual distinct-source identities with explicit 24/26-vertex clocks and
+suffix-dependent carries. Those identities are not fixed-order H-preserving
+native transport or marked two-port reentry. Its later targets ending in a
+lie outside the earlier seven-macro iff hypothesis.
+
+[Session156 feedback states](../session156_spectrum_20261103/states/NOTE.md)
+overlap the inherited static two-feedback automaton: reverse the base-to-apex
+type word and complement both bits to obtain the common observer's static
+chronological masks. The two unminimized 27-state gap realizations are
+compatible with minimal rational dimension 17 and have a different source
+language from our adaptive grammar. Their median cutoff, regular strongness
+language and presentation counts add separate structure. The corrected
+warning that equal apex-neighborhood types need not form modules does not
+affect the actual homogeneous leaf module used in N4/N7.
+
+History, spectrum and toothpick reviewed these incoming statements and
+source scopes; their catalog, fibre, monoid and state-bank computations were
+not rerun. No theorem correction to this packet was required.

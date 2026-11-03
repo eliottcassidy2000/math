@@ -15,6 +15,9 @@ marked reentry**, together with a finite21-entry/28-map positive grammar on
 four coordinates. The principal negative advance is an all-length positive
 height obstruction for the seven named mixed-return macros. These concern
 different operation languages; neither settles the global spectrum.
+Concurrent work independently proves the same cycle mechanism for a broader
+786-block catalog; [INCOMING](INCOMING.md) credits that overlap and its actual
+carry-selected continuations.
 
 ## The constructive objects now available
 

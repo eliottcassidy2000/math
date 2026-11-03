@@ -1,5 +1,5 @@
 {
-  "incoming_reviewed_through": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
+  "incoming_reviewed_through": "fdd6289501974ad7e61e32c31957711dc52fc626",
   "scope": "Direct local document links and computational inputs only; not a transitive dependency graph. The locally updated mistakes ledger is excluded.",
   "session_base": "aa7514b988295fe0caac7fc06359a28b330dccf3",
   "sources": [
@@ -176,6 +176,33 @@
       "sha256": "971ec980c107b36b9f9d2078c111002214b0c6ce3f4ed82f36a6a53c292b0373"
     },
     {
+      "git_blob": "aa147342bcdeba2ba1ac9a79bed11505263a7c8d",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/mixed_returns_20261103/CARRIES.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "b2bc0d7ab0441377617e119aecee57a49b4bfb743425f48f46b0dca602c6911d"
+    },
+    {
+      "git_blob": "be70aa031a989695ee173810f44c758ac2517feb",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/mixed_returns_20261103/HANDOFF.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "518f01e49115fb5ba9850beede889551d02a3f124d0ab6028ca574b1d1624921"
+    },
+    {
+      "git_blob": "538a389cab01c785f08ac42fd58a28d7db768226",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/mixed_returns_20261103/THEORY.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "5604c0c01e42987b8688f4d817189a5122055168185977ddaf040ecbcd32f6f5"
+    },
+    {
       "git_blob": "9cdf235a08db79f16bda4301b977541c6eab30ed",
       "kinds": [
         "direct document link"
@@ -264,6 +291,51 @@
       "path": "05-knowledge/results/session156_spectrum_20261103/interfaces/NOTE.md",
       "revision": "1322afabdb2f6525b6fa85949313eb3b2d364c28",
       "sha256": "46c97232a339608f6c91c6b23da1470c13568665470f5747f2ee71bd608975b3"
+    },
+    {
+      "git_blob": "c3b5f2869603ee094ac4f72c6e0b7a622a696f7a",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session156_spectrum_20261103/returns/NOTE.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "49b4373b29f80b1df6ca7d1855293c42fe453d0dce4bb66dc7e7f986518a1b3c"
+    },
+    {
+      "git_blob": "11c756abb15196668b6a4d93f750280cf3ada8b9",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/session156_spectrum_20261103/states/NOTE.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "ac84be5d30a66600157232fa9ea3cd5764284163cae0008c115f19f330d7d1f6"
+    },
+    {
+      "git_blob": "55e5a342ad499568c62de87ac17f66e68a517663",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/spectrum31_return_20261103/LIVE_FIBRES.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "9fa9a96208bb56ff0030190db371101588fd2f1877053640b19c2bc283237579"
+    },
+    {
+      "git_blob": "29626e5110a71d06fc93c3f349edc2ba9b84dc52",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/spectrum31_return_20261103/PROJECTIVE.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "b6edb33db89e6eae45d0848f5b8f06b86f7fb216ae029238bffc7704ee829685"
+    },
+    {
+      "git_blob": "861c4b0e120a24bd76357f2877c69d04702bc4dc",
+      "kinds": [
+        "direct document link"
+      ],
+      "path": "05-knowledge/results/spectrum31_return_20261103/TRANSPORT.md",
+      "revision": "fdd6289501974ad7e61e32c31957711dc52fc626",
+      "sha256": "fd18c0f04f217a09328866b28959f8076b6be3b87635946832ae8e7be0dda074"
     },
     {
       "git_blob": "06b73ad8e7280a51c6e2ec0b8d37d25a38dcf085",
