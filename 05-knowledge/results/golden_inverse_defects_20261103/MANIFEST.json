@@ -1,0 +1,14 @@
+{
+  "hash_basis": "UTF-8 text with universal-newline LF normalization",
+  "sha256": {
+    "AUDIT.md": "01fa9b4bd18366f388638bc6b5956141c876bb853c8b7811131dd2ae2615b5be",
+    "README.md": "0dd5e1e5c8c1475f6657139c6fc3427f3085212f12a45cdb46414fdb4e8e5954",
+    "RECOVERY.md": "a08d91cbdbe02e84cf5c7da7138cdb74c4f2e71a617dca9840e3e270de5368bf",
+    "THEORY.md": "895a9062de718344c95a093519e4d31bc1c28868eeafade8d9bb7c468966b830",
+    "TRANSPORT.md": "03183aa0957fd817393972510e7d924994ba7b77c6dde738f1a93c2722318b56",
+    "inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
+    "receipt.json": "fea51cb04a5c257686fceb4071c813b2ae8e81c92b0b5e53833c8deda2392ab7",
+    "seal.py": "6a1f031e2cb537ff7f2a8c35aeb3ebe8c4d506d8a132c5a1684aff6383fc366b",
+    "verify.py": "37cb1cff6074bdbe64489b695db500a7f066adc0fe7831bf360e66232876b802"
+  }
+}
