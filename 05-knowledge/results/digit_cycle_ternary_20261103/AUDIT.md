@@ -50,3 +50,8 @@ receipt hashes. Normal and optimized modes have separate verification
 receipts. Scripts use explicit exceptions; no critical check depends on
 Python assert. The inherited failed 55-to-111 bank remains pinned and
 was not rerun. No global theorem IDs or priority claims are made.
+
+Both replay modes passed on Python 3.13.14, SymPy 1.14.0 and NumPy 2.3.2,
+with all 168 inherited file pins and all ten receipt hashes matching.
+Local Markdown targets and the repository's agent-facing documentation
+check passed. See the two `verification.*.json` files for exact receipts.
