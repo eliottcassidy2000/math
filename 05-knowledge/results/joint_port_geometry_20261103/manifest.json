@@ -1,0 +1,118 @@
+{
+  "scripts": [
+    {
+      "file": "return_probe.py",
+      "sha256": "00d1dee071955b76c24f7288368e0adbd342194e41434d5fea4fe2cf826ffb2c"
+    },
+    {
+      "file": "return_native.py",
+      "sha256": "9af87a0e0e0e702c89f830e4e8c4df523486ec2249cdaebce7125541cc771756"
+    },
+    {
+      "file": "word_return.py",
+      "sha256": "e175e6915f3e07fe59b63ef10b1c66606b929f29a705049a4dbee2d033819ce4"
+    },
+    {
+      "file": "joint_probe.py",
+      "sha256": "1ac273edfc45336f0579d53aa269207bf001bd688f5189bc1c0e548dd5af896e"
+    },
+    {
+      "file": "rank_transfer.py",
+      "sha256": "f4d700c4fe67b4e50c953fff9917d4a00b000bb2f539f4b66b658f33cd3f6046"
+    },
+    {
+      "file": "algebra_probe.py",
+      "sha256": "d1ca85c99bfc1b89d5e36997f65b3dbf53a5fa4fbcfba425654bedb1d063fe94"
+    },
+    {
+      "file": "filtration.py",
+      "sha256": "d9b067626b82ee2b47b0b47b77ed7a32cf7ef42117a415a277f64d76f1f206b8"
+    },
+    {
+      "file": "split_algebra.py",
+      "sha256": "b27ff0f7a0ab1aa5f4c0accb90879ef2b9fdb1e7724ff2ca9257932d08f345eb"
+    },
+    {
+      "file": "persistent_port.py",
+      "sha256": "5222a3694a9b07a282ac8af84d62a7aaf824bf3ed206763593d70385a8e10265"
+    },
+    {
+      "file": "persistent_certificate.py",
+      "sha256": "e07bdc39265b24dd9fbeb6167264bae96ad2f172bda32b78c6ba78d108c6525f"
+    },
+    {
+      "file": "literal_interfaces.py",
+      "sha256": "96113d095fe4ec4b01739dee572940aa39349234166a46fbb7e297d1c591ff5a"
+    },
+    {
+      "file": "recurrences.py",
+      "sha256": "9c0c63aca81401bbeaf3cd365f106a1d4377246f1022764db4dfc54ad95fab01"
+    },
+    {
+      "file": "geometric_phases.py",
+      "sha256": "b3bdcefbe0d7db389fd4ea8fb63a71bf5628c58fa298f09eb283397d6252195f"
+    },
+    {
+      "file": "jacobian_observer.py",
+      "sha256": "95adf780b511ed1f9e02290f7882685d66cc401a96419562622284db952be82e"
+    }
+  ],
+  "receipts": [
+    {
+      "file": "return_probe.json",
+      "sha256": "eb84b68226eec2009fd66e8251e55f41d502a08642bce8fc9f100b083a681781"
+    },
+    {
+      "file": "return_native.json",
+      "sha256": "f5a323cdb473db000861b122bc49e48e0a9c9be544a5c53d6c587c35e13791ba"
+    },
+    {
+      "file": "word_return.json",
+      "sha256": "6f7f7fbfb5a6cf2a49b278504ee73140767618fb4c7e7f7836753c155e1c9829"
+    },
+    {
+      "file": "joint_probe.json",
+      "sha256": "a78d14360223eab409132a77f9cddf310088c458c81dde7777f383922250e681"
+    },
+    {
+      "file": "rank_transfer.json",
+      "sha256": "36a53acf9361318877764517a7a2c32c4e8b479c1cc8a413594813fcd4cb8f7d"
+    },
+    {
+      "file": "algebra_probe.json",
+      "sha256": "12c3143a8119906afbaed24e0121cfc45a4b4262b0d93e15872028b5b506c5dd"
+    },
+    {
+      "file": "filtration.json",
+      "sha256": "843eeb3fa8640d312dce9d6008409ef3c2ac89f2c30a869eb6449141039bd85f"
+    },
+    {
+      "file": "split_algebra.json",
+      "sha256": "34a54f2208fcf2f03140eae73989b27c64ae0838bce81c27776a1332a08e9e4b"
+    },
+    {
+      "file": "persistent_port.json",
+      "sha256": "fd5c2ec0f4ae78e99143bf3ec500b165d1b38e2ba120b74aa1980f211e3a362d"
+    },
+    {
+      "file": "persistent_certificate.json",
+      "sha256": "d1f4d037adb8d92ff89e96828dbeb985988bce687b4048e2be0b591e94ad9816"
+    },
+    {
+      "file": "literal_interfaces.json",
+      "sha256": "f69af186a3b2b9f577fd6842cd0d5ccc3439068f7a3627815c0d26fde7b52e18"
+    },
+    {
+      "file": "recurrences.json",
+      "sha256": "9200873e9057647ee1748238654b6dfccda706a9663ae493dd70a161871e678d"
+    },
+    {
+      "file": "geometric_phases.json",
+      "sha256": "a5e8d1b3ab31c66acf088dde5d04872befd3152181700a9f4c893eee54c138f9"
+    },
+    {
+      "file": "jacobian_observer.json",
+      "sha256": "112c1c9ca4c988e7ba49c63ad90e28a1d36eba272caa3bcae1df05fdd84cb530"
+    }
+  ]
+}

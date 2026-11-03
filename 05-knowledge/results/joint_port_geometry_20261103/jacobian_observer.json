@@ -1,0 +1,92 @@
+{
+  "status": "FINITE_EXACT_SYMBOLIC_CERTIFICATE",
+  "examples": [
+    {
+      "P": "x",
+      "B": "y",
+      "Q": "x**3 + 2*x*y + y**4",
+      "D_Q": "2*x + 4*y**3",
+      "D_BQ": "x**3 + 4*x*y + 5*y**4",
+      "nonunit_coefficient": "2*y"
+    },
+    {
+      "P": "x + y**2",
+      "B": "y",
+      "Q": "x**3 + 2*x*y + y**4",
+      "D_Q": "-6*x**2*y + 2*x + 4*y**3 - 4*y**2",
+      "D_BQ": "x**3 - 6*x**2*y**2 + 4*x*y + 5*y**4 - 4*y**3",
+      "nonunit_coefficient": "2*y"
+    },
+    {
+      "P": "x + (x**2 + y)**2",
+      "B": "x**2 + y",
+      "Q": "x**3 + 2*x*y + y**4",
+      "D_Q": "2*x**4 + 16*x**3*y**3 - 2*x**2*y + 16*x*y**4 + 2*x + 4*y**3 - 4*y**2",
+      "D_BQ": "2*x**6 + 16*x**5*y**3 + 32*x**3*y**4 + 3*x**3 + 4*x**2*y**3 - 6*x**2*y**2 + 16*x*y**5 + 4*x*y + 5*y**4 - 4*y**3",
+      "nonunit_coefficient": "2*x**2 + 2*y"
+    }
+  ],
+  "truncation_controls": [
+    {
+      "degree_cap": 1,
+      "boundary_rank": 1,
+      "boundary_coefficient": 2
+    },
+    {
+      "degree_cap": 2,
+      "boundary_rank": 1,
+      "boundary_coefficient": 3
+    },
+    {
+      "degree_cap": 3,
+      "boundary_rank": 1,
+      "boundary_coefficient": 4
+    },
+    {
+      "degree_cap": 4,
+      "boundary_rank": 1,
+      "boundary_coefficient": 5
+    },
+    {
+      "degree_cap": 5,
+      "boundary_rank": 1,
+      "boundary_coefficient": 6
+    },
+    {
+      "degree_cap": 6,
+      "boundary_rank": 1,
+      "boundary_coefficient": 7
+    },
+    {
+      "degree_cap": 7,
+      "boundary_rank": 1,
+      "boundary_coefficient": 8
+    },
+    {
+      "degree_cap": 8,
+      "boundary_rank": 1,
+      "boundary_coefficient": 9
+    },
+    {
+      "degree_cap": 9,
+      "boundary_rank": 1,
+      "boundary_coefficient": 10
+    },
+    {
+      "degree_cap": 10,
+      "boundary_rank": 1,
+      "boundary_coefficient": 11
+    },
+    {
+      "degree_cap": 11,
+      "boundary_rank": 1,
+      "boundary_coefficient": 12
+    },
+    {
+      "degree_cap": 12,
+      "boundary_rank": 1,
+      "boundary_coefficient": 13
+    }
+  ],
+  "scope": "mate supplied; this does not prove mate existence or polynomial invertibility"
+}

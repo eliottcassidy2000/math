@@ -1,0 +1,541 @@
+{
+  "status": "FINITE_EXACT_LITERAL_NATIVE_REPLAY",
+  "source": {
+    "rows": [
+      12,
+      1,
+      2,
+      22,
+      7
+    ],
+    "ports": [
+      3,
+      1
+    ],
+    "cap_vector": [
+      0,
+      2,
+      0,
+      1,
+      2,
+      0,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      2,
+      1,
+      2,
+      6,
+      1,
+      2,
+      2,
+      1,
+      4,
+      2,
+      2,
+      6,
+      2,
+      1,
+      4,
+      0,
+      2,
+      2,
+      0,
+      2,
+      0,
+      1,
+      3,
+      1,
+      4,
+      5,
+      1,
+      2,
+      0,
+      1,
+      1,
+      0,
+      2,
+      2
+    ],
+    "provenance": [
+      "seal",
+      3,
+      2,
+      0,
+      1
+    ]
+  },
+  "tests": [
+    {
+      "operation": "J0",
+      "rows": [
+        12,
+        1,
+        2,
+        86,
+        7,
+        31,
+        183,
+        63
+      ],
+      "ports": [
+        6,
+        1
+      ],
+      "H": 45
+    },
+    {
+      "operation": "J1",
+      "rows": [
+        12,
+        1,
+        2,
+        118,
+        7,
+        23,
+        183,
+        63
+      ],
+      "ports": [
+        6,
+        1
+      ],
+      "H": 45
+    },
+    {
+      "operation": "J2",
+      "rows": [
+        12,
+        33,
+        2,
+        86,
+        7,
+        29,
+        183,
+        63
+      ],
+      "ports": [
+        6,
+        1
+      ],
+      "H": 111
+    },
+    {
+      "operation": "J3",
+      "rows": [
+        12,
+        33,
+        2,
+        118,
+        7,
+        21,
+        183,
+        63
+      ],
+      "ports": [
+        6,
+        1
+      ],
+      "H": 95
+    },
+    {
+      "operation": "C3",
+      "rows": [
+        12,
+        1,
+        2,
+        54,
+        7,
+        471,
+        287,
+        351,
+        543,
+        1279,
+        511
+      ],
+      "replacement_ports": [
+        9,
+        10
+      ],
+      "persistent_ports": [
+        9,
+        1
+      ],
+      "root_profile": [
+        543,
+        81,
+        81,
+        543
+      ],
+      "native_trace": [
+        {
+          "temporary_name": "cycle3_helper0",
+          "temporary_index": 9,
+          "branch": "append",
+          "swapped_old_arc": [
+            8,
+            7
+          ],
+          "temporary_incoming_mask": 255,
+          "first_path": [
+            8,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0,
+            9
+          ],
+          "second_path": [
+            8,
+            9,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0
+          ],
+          "result_rows": [
+            12,
+            1,
+            2,
+            54,
+            7,
+            471,
+            31,
+            351,
+            95
+          ],
+          "ports": [
+            8,
+            5
+          ]
+        },
+        {
+          "temporary_name": "cycle3_helper1",
+          "temporary_index": 9,
+          "branch": "append",
+          "swapped_old_arc": [
+            8,
+            6
+          ],
+          "temporary_incoming_mask": 255,
+          "first_path": [
+            7,
+            8,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0,
+            9
+          ],
+          "second_path": [
+            7,
+            8,
+            9,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0
+          ],
+          "result_rows": [
+            12,
+            1,
+            2,
+            54,
+            7,
+            471,
+            287,
+            351,
+            31
+          ],
+          "ports": [
+            8,
+            5
+          ]
+        }
+      ],
+      "clocks": {
+        "permanent_births": 6,
+        "native_moves": 4,
+        "temporary_births": 2,
+        "temporary_deletions": 2
+      }
+    },
+    {
+      "operation": "C5",
+      "rows": [
+        12,
+        1,
+        2,
+        54,
+        7,
+        2007,
+        1055,
+        1119,
+        1247,
+        1503,
+        2079,
+        5119,
+        2047
+      ],
+      "replacement_ports": [
+        11,
+        12
+      ],
+      "persistent_ports": [
+        11,
+        1
+      ],
+      "root_profile": [
+        3783,
+        297,
+        297,
+        3783
+      ],
+      "native_trace": [
+        {
+          "temporary_name": "cycle5_helper0",
+          "temporary_index": 11,
+          "branch": "append",
+          "swapped_old_arc": [
+            10,
+            9
+          ],
+          "temporary_incoming_mask": 1023,
+          "first_path": [
+            10,
+            9,
+            8,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0,
+            11
+          ],
+          "second_path": [
+            10,
+            11,
+            9,
+            8,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0
+          ],
+          "result_rows": [
+            12,
+            1,
+            2,
+            54,
+            7,
+            2007,
+            31,
+            95,
+            223,
+            1503,
+            479
+          ],
+          "ports": [
+            10,
+            5
+          ]
+        },
+        {
+          "temporary_name": "cycle5_helper1",
+          "temporary_index": 11,
+          "branch": "append",
+          "swapped_old_arc": [
+            10,
+            8
+          ],
+          "temporary_incoming_mask": 1023,
+          "first_path": [
+            9,
+            10,
+            8,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0,
+            11
+          ],
+          "second_path": [
+            9,
+            10,
+            11,
+            8,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0
+          ],
+          "result_rows": [
+            12,
+            1,
+            2,
+            54,
+            7,
+            2007,
+            31,
+            95,
+            1247,
+            1503,
+            223
+          ],
+          "ports": [
+            10,
+            5
+          ]
+        },
+        {
+          "temporary_name": "cycle5_helper2",
+          "temporary_index": 11,
+          "branch": "append",
+          "swapped_old_arc": [
+            10,
+            7
+          ],
+          "temporary_incoming_mask": 1023,
+          "first_path": [
+            9,
+            8,
+            10,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0,
+            11
+          ],
+          "second_path": [
+            9,
+            8,
+            10,
+            11,
+            7,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0
+          ],
+          "result_rows": [
+            12,
+            1,
+            2,
+            54,
+            7,
+            2007,
+            31,
+            1119,
+            1247,
+            1503,
+            95
+          ],
+          "ports": [
+            10,
+            5
+          ]
+        },
+        {
+          "temporary_name": "cycle5_helper3",
+          "temporary_index": 11,
+          "branch": "append",
+          "swapped_old_arc": [
+            10,
+            6
+          ],
+          "temporary_incoming_mask": 1023,
+          "first_path": [
+            9,
+            8,
+            7,
+            10,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0,
+            11
+          ],
+          "second_path": [
+            9,
+            8,
+            7,
+            10,
+            11,
+            6,
+            3,
+            5,
+            4,
+            2,
+            1,
+            0
+          ],
+          "result_rows": [
+            12,
+            1,
+            2,
+            54,
+            7,
+            2007,
+            1055,
+            1119,
+            1247,
+            1503,
+            31
+          ],
+          "ports": [
+            10,
+            5
+          ]
+        }
+      ],
+      "clocks": {
+        "permanent_births": 8,
+        "native_moves": 8,
+        "temporary_births": 4,
+        "temporary_deletions": 4
+      }
+    }
+  ]
+}

@@ -4,6 +4,21 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a retained vertex is not a retained live port
+
+**Affected:** `05-knowledge/results/lambda_emergent_20261103/PHASE_LEGALIZER.md`,
+PL2's former sentence that the old second port survives C3/C5 legalizers.
+The actual `rooted_carry_closure_20261103/returns.py` program replaces that
+live port at its first birth; the old vertex remains only as an unmarked
+vertex. NR's different policy does retain the second live port.
+
+**Repair:** retain the actual port-replacement trace. The six-coordinate
+matrix identities, phase orders, primitive guards and native-step bounds
+are unchanged. They do not prove a persistent-second-port result. The
+joint-port continuation distinguishes replacement and persistent policies
+and tests their actual operators separately. No re-marking of a forgotten
+old vertex is free.
+
 ## 2026-11-03 — Path-order indexing and the incomplete historical P4 proof
 
 **Affected:** THM-1425 (`theorems/THM-1425-the-ocf-is-the-weight-two-shifted-pascal-identity.md`)

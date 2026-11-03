@@ -1,0 +1,48 @@
+{
+  "status": "FINITE_EXACT_WITH_UNIFORM_WORD_IDENTITY",
+  "one_hole_range": {
+    "p": [
+      1,
+      9
+    ],
+    "q": [
+      0,
+      9
+    ]
+  },
+  "tested": 945,
+  "literal_checks": 36,
+  "successes": [
+    {
+      "p": 2,
+      "q": 1,
+      "deleted_letter": 3,
+      "H": 77,
+      "target": 233,
+      "u": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "next_source_u": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+  ],
+  "next_required_H": 701,
+  "next_target_values": [
+    571,
+    601,
+    673,
+    673,
+    377
+  ]
+}

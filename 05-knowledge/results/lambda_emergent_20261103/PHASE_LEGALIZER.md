@@ -55,8 +55,10 @@ are
 
 For two sources use j in {0,1,2}; at most two choices are forbidden.
 Each L adds 6a_e+8b_e=456*7^(e-1) permanent vertices and half its native
-step count in temporary helpers. The old retained second port survives;
-the root follows the inherited named program. These are constructive word
+step count in temporary helpers. The root and second live port follow the
+inherited replacement program: C3/C5 replace the old second live port at
+their first birth. Its vertex remains in the graph, but it is no longer
+a live attachment port. NR alone keeps the second port. These are constructive word
 bounds, not minimum lengths. No exponentially large literal graph was
 enumerated in the finite tests.
 

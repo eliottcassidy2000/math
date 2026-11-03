@@ -1,0 +1,266 @@
+{
+  "status": "FINITE_EXACT_GEOMETRIC_CERTIFICATE",
+  "regular_circle_family": [
+    {
+      "d": 1,
+      "vertices_with_anchors": 4,
+      "eligibility_component_sizes": [
+        2
+      ],
+      "unit_steps": [
+        1,
+        5
+      ],
+      "edge_polynomial": "z**5 + z**4",
+      "complete_phase_test": {
+        "phase_orbits": 2,
+        "distinct_graphs": 2,
+        "fibre": 1
+      }
+    },
+    {
+      "d": 2,
+      "vertices_with_anchors": 7,
+      "eligibility_component_sizes": [
+        2,
+        3
+      ],
+      "unit_steps": [
+        2,
+        10
+      ],
+      "edge_polynomial": "z**10 + 3*z**9 + 3*z**8 + z**7",
+      "complete_phase_test": {
+        "phase_orbits": 16,
+        "distinct_graphs": 8,
+        "fibre": 2
+      }
+    },
+    {
+      "d": 3,
+      "vertices_with_anchors": 10,
+      "eligibility_component_sizes": [
+        2,
+        6
+      ],
+      "unit_steps": [
+        3,
+        15
+      ],
+      "edge_polynomial": "z**17 + z**16 + 15*z**15 + 15*z**14 + 15*z**13 + 15*z**12 + z**11 + z**10",
+      "complete_phase_test": {
+        "phase_orbits": 128,
+        "distinct_graphs": 64,
+        "fibre": 2
+      }
+    },
+    {
+      "d": 4,
+      "vertices_with_anchors": 13,
+      "eligibility_component_sizes": [
+        2,
+        3,
+        6
+      ],
+      "unit_steps": [
+        4,
+        20
+      ],
+      "edge_polynomial": "z**22 + 3*z**21 + 18*z**20 + 46*z**19 + 60*z**18 + 60*z**17 + 46*z**16 + 18*z**15 + 3*z**14 + z**13",
+      "complete_phase_test": {
+        "phase_orbits": 1024,
+        "distinct_graphs": 256,
+        "fibre": 4
+      }
+    },
+    {
+      "d": 5,
+      "vertices_with_anchors": 16,
+      "eligibility_component_sizes": [
+        2,
+        6,
+        6
+      ],
+      "unit_steps": [
+        5,
+        25
+      ],
+      "edge_polynomial": "z**29 + z**28 + 30*z**27 + 30*z**26 + 255*z**25 + 255*z**24 + 452*z**23 + 452*z**22 + 255*z**21 + 255*z**20 + 30*z**19 + 30*z**18 + z**17 + z**16",
+      "complete_phase_test": {
+        "phase_orbits": 8192,
+        "distinct_graphs": 2048,
+        "fibre": 4
+      }
+    },
+    {
+      "d": 6,
+      "vertices_with_anchors": 19,
+      "eligibility_component_sizes": [
+        2,
+        3,
+        6,
+        6
+      ],
+      "unit_steps": [
+        6,
+        30
+      ],
+      "edge_polynomial": "z**34 + 3*z**33 + 33*z**32 + 91*z**31 + 345*z**30 + 795*z**29 + 1217*z**28 + 1611*z**27 + 1611*z**26 + 1217*z**25 + 795*z**24 + 345*z**23 + 91*z**22 + 33*z**21 + 3*z**20 + z**19",
+      "complete_phase_test": {
+        "phase_orbits": 65536,
+        "distinct_graphs": 8192,
+        "fibre": 8
+      }
+    },
+    {
+      "d": 7,
+      "vertices_with_anchors": 22,
+      "eligibility_component_sizes": [
+        2,
+        6,
+        6,
+        6
+      ],
+      "unit_steps": [
+        7,
+        35
+      ],
+      "edge_polynomial": "z**41 + z**40 + 45*z**39 + 45*z**38 + 720*z**37 + 720*z**36 + 4728*z**35 + 4728*z**34 + 10890*z**33 + 10890*z**32 + 10890*z**31 + 10890*z**30 + 4728*z**29 + 4728*z**28 + 720*z**27 + 720*z**26 + 45*z**25 + 45*z**24 + z**23 + z**22",
+      "complete_phase_test": null
+    },
+    {
+      "d": 8,
+      "vertices_with_anchors": 25,
+      "eligibility_component_sizes": [
+        2,
+        3,
+        6,
+        6,
+        6
+      ],
+      "unit_steps": [
+        8,
+        40
+      ],
+      "edge_polynomial": "z**46 + 3*z**45 + 48*z**44 + 136*z**43 + 855*z**42 + 2205*z**41 + 6888*z**40 + 14904*z**39 + 25074*z**38 + 37398*z**37 + 43560*z**36 + 43560*z**35 + 37398*z**34 + 25074*z**33 + 14904*z**32 + 6888*z**31 + 2205*z**30 + 855*z**29 + 136*z**28 + 48*z**27 + 3*z**26 + z**25",
+      "complete_phase_test": null
+    },
+    {
+      "d": 9,
+      "vertices_with_anchors": 28,
+      "eligibility_component_sizes": [
+        2,
+        6,
+        6,
+        6,
+        6
+      ],
+      "unit_steps": [
+        9,
+        45
+      ],
+      "edge_polynomial": "z**53 + z**52 + 60*z**51 + 60*z**50 + 1410*z**49 + 1410*z**48 + 16204*z**47 + 16204*z**46 + 92655*z**45 + 92655*z**44 + 245880*z**43 + 245880*z**42 + 336156*z**41 + 336156*z**40 + 245880*z**39 + 245880*z**38 + 92655*z**37 + 92655*z**36 + 16204*z**35 + 16204*z**34 + 1410*z**33 + 1410*z**32 + 60*z**31 + 60*z**30 + z**29 + z**28",
+      "complete_phase_test": null
+    },
+    {
+      "d": 10,
+      "vertices_with_anchors": 31,
+      "eligibility_component_sizes": [
+        2,
+        3,
+        6,
+        6,
+        6,
+        6
+      ],
+      "unit_steps": [
+        10,
+        50
+      ],
+      "edge_polynomial": "z**58 + 3*z**57 + 63*z**56 + 181*z**55 + 1590*z**54 + 4290*z**53 + 20434*z**52 + 50022*z**51 + 141267*z**50 + 294169*z**49 + 523845*z**48 + 830295*z**47 + 1073796*z**46 + 1254348*z**45 + 1254348*z**44 + 1073796*z**43 + 830295*z**42 + 523845*z**41 + 294169*z**40 + 141267*z**39 + 50022*z**38 + 20434*z**37 + 4290*z**36 + 1590*z**35 + 181*z**34 + 63*z**33 + 3*z**32 + z**31",
+      "complete_phase_test": null
+    },
+    {
+      "d": 11,
+      "vertices_with_anchors": 34,
+      "eligibility_component_sizes": [
+        2,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "unit_steps": [
+        11,
+        55
+      ],
+      "edge_polynomial": "z**65 + z**64 + 75*z**63 + 75*z**62 + 2325*z**61 + 2325*z**60 + 38255*z**59 + 38255*z**58 + 356925*z**57 + 356925*z**56 + 1880175*z**55 + 1880175*z**54 + 5430385*z**53 + 5430385*z**52 + 9069075*z**51 + 9069075*z**50 + 9069075*z**49 + 9069075*z**48 + 5430385*z**47 + 5430385*z**46 + 1880175*z**45 + 1880175*z**44 + 356925*z**43 + 356925*z**42 + 38255*z**41 + 38255*z**40 + 2325*z**39 + 2325*z**38 + 75*z**37 + 75*z**36 + z**35 + z**34",
+      "complete_phase_test": null
+    },
+    {
+      "d": 12,
+      "vertices_with_anchors": 37,
+      "eligibility_component_sizes": [
+        2,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "unit_steps": [
+        12,
+        60
+      ],
+      "edge_polynomial": "z**70 + 3*z**69 + 78*z**68 + 226*z**67 + 2550*z**66 + 7050*z**65 + 45230*z**64 + 117090*z**63 + 471690*z**62 + 1109030*z**61 + 2950950*z**60 + 5997450*z**59 + 11070910*z**58 + 18171330*z**57 + 25360230*z**56 + 32637610*z**55 + 36276300*z**54 + 36276300*z**53 + 32637610*z**52 + 25360230*z**51 + 18171330*z**50 + 11070910*z**49 + 5997450*z**48 + 2950950*z**47 + 1109030*z**46 + 471690*z**45 + 117090*z**44 + 45230*z**43 + 7050*z**42 + 2550*z**41 + 226*z**40 + 78*z**39 + 3*z**38 + z**37",
+      "complete_phase_test": null
+    }
+  ],
+  "elementary_hostile": [
+    {
+      "Q_sign": 1,
+      "unit_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "P_Q_squared": "1",
+      "chromatic_polynomial": "q*(q - 2)*(q - 1)**2"
+    },
+    {
+      "Q_sign": -1,
+      "unit_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "P_Q_squared": "3",
+      "chromatic_polynomial": "q*(q - 1)**3"
+    }
+  ],
+  "scope": "marked supplied point configurations; graphs are full induced unit-distance completions"
+}

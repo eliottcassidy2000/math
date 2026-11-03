@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "mode": "normal",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "numpy": "2.3.2",
+  "inherited_files": 79,
+  "receipts": [
+    {
+      "script": "return_probe",
+      "stdout": "targets [((1, 1, 1, 1, 1, 0), (1, 0, 1, 1, 0, 0), (233, 36, 37, 234))]\nminimum 4 minimizers 1 universe 600",
+      "sha256": "eb84b68226eec2009fd66e8251e55f41d502a08642bce8fc9f100b083a681781"
+    },
+    {
+      "script": "return_native",
+      "stdout": "PASS: exact native return {'order': (4, 0, 1, 3, 2), 'H': [233, 113, 199, 71, 209, 233], 'peak': 9} profile (233, 36, 37, 234) next H701",
+      "sha256": "f5a323cdb473db000861b122bc49e48e0a9c9be544a5c53d6c587c35e13791ba"
+    },
+    {
+      "script": "word_return",
+      "stdout": "PASS: uniform four-edge word transform; 77 success; next701 outside this deletion bank",
+      "sha256": "6f7f7fbfb5a6cf2a49b278504ee73140767618fb4c7e7f7836753c155e1c9829"
+    },
+    {
+      "script": "joint_probe",
+      "stdout": "masks (3,) universal rank 43 sealed rank 30 depth 4\nmasks (0,) universal rank 8 sealed rank 6 depth 1\nmasks (1,) universal rank 11 sealed rank 6 depth 1\nmasks (2,) universal rank 32 sealed rank 28 depth 3\nmasks (0, 1, 2, 3) universal rank 46 sealed rank 31 depth 3",
+      "sha256": "a78d14360223eab409132a77f9cddf310088c458c81dde7777f383922250e681"
+    },
+    {
+      "script": "rank_transfer",
+      "stdout": "rank 1 examined 1\nrank 2 examined 2\nrank 3 examined 3\nrank 4 examined 4\nrank 5 examined 25\nrank 6 examined 26\nrank 7 examined 27\nrank 8 examined 28\nrank 9 examined 29\nrank 10 examined 30\nrank 11 examined 31\nrank 12 examined 32\nrank 13 examined 33\nrank 14 examined 34\nrank 15 examined 35\nrank 16 examined 36\nrank 17 examined 37\nrank 18 examined 38\nrank 19 examined 39\nrank 20 examined 40\nrank 21 examined 41\nrank 22 examined 42\nrank 23 examined 44\nrank 24 examined 505\nrank 25 examined 506\nrank 26 examined 507\nrank 27 examined 508\nrank 28 examined 509\nrank 29 examined 510\nrank 30 examined 511\nrank 31 examined 512\nactual initial 31\n[{'masks': [3], 'actual_hankel_rank': 30}, {'masks': [0], 'actual_hankel_rank': 6}, {'masks': [1], 'actual_hankel_rank': 6}, {'masks': [2], 'actual_hankel_rank': 28}, {'masks': [0, 1, 2, 3], 'actual_hankel_rank': 31}]",
+      "sha256": "36a53acf9361318877764517a7a2c32c4e8b479c1cc8a413594813fcd4cb8f7d"
+    },
+    {
+      "script": "algebra_probe",
+      "stdout": "algebra rank 50 dimension 30\nalgebra rank 100 dimension 30\nalgebra rank 150 dimension 30\nalgebra rank 200 dimension 30\nalgebra rank 250 dimension 30\nalgebra rank 300 dimension 30\nRESULT [3] 30 338\nalgebra rank 50 dimension 31\nalgebra rank 100 dimension 31\nalgebra rank 150 dimension 31\nalgebra rank 200 dimension 31\nalgebra rank 250 dimension 31\nalgebra rank 300 dimension 31\nalgebra rank 350 dimension 31\nRESULT [0, 1, 2, 3] 31 365",
+      "sha256": "12c3143a8119906afbaed24e0121cfc45a4b4262b0d93e15872028b5b506c5dd"
+    },
+    {
+      "script": "filtration",
+      "stdout": "algebra rank 50 dimension 31\nalgebra rank 100 dimension 31\nalgebra rank 150 dimension 31\nalgebra rank 200 dimension 31\nalgebra rank 250 dimension 31\nalgebra rank 300 dimension 31\nalgebra rank 350 dimension 31\nDIAGONAL 365",
+      "sha256": "843eeb3fa8640d312dce9d6008409ef3c2ac89f2c30a869eb6449141039bd85f"
+    },
+    {
+      "script": "split_algebra",
+      "stdout": "PASS: exact shared-port algebra M14(Q)+M12(Q)+M5(Q), eight invariant quotient types",
+      "sha256": "34a54f2208fcf2f03140eae73989b27c64ae0838bce81c27776a1332a08e9e4b"
+    },
+    {
+      "script": "persistent_port",
+      "stdout": "persistent spare: source rank 27 observer 27 depth 3",
+      "sha256": "fd5c2ec0f4ae78e99143bf3ec500b165d1b38e2ba120b74aa1980f211e3a362d"
+    },
+    {
+      "script": "persistent_certificate",
+      "stdout": "algebra rank 50 dimension 27\nPASS: actual minimal persistent-spare observer27; modular algebra95",
+      "sha256": "d1f4d037adb8d92ff89e96828dbeb985988bce687b4048e2be0b591e94ad9816"
+    },
+    {
+      "script": "literal_interfaces",
+      "stdout": "PASS: J0..J3 literal graphs and C3/C5 native replays match both live-port policies",
+      "sha256": "f69af186a3b2b9f577fd6842cd0d5ccc3439068f7a3627815c0d26fde7b52e18"
+    },
+    {
+      "script": "recurrences",
+      "stdout": "3 x*(x - 4)*(x**2 - 61*x + 18)*(x**3 - 472*x**2 + 3936*x - 3072)\n5 x*(x - 16)*(x**2 - 421*x + 66)*(x**3 - 4984*x**2 + 147744*x - 431616)\nN x**2*(x - 3)*(x - 2)*(x - 1)*(x + 1)*(x + 2)*(x**3 - 11*x**2 - 8*x - 72)*(x**3 - 6*x**2 - 3*x - 12)\nJ0 x**2*(x - 5)*(x - 4)*(x - 1)*(x + 1)*(x + 4)*(x**3 - 39*x**2 - 64*x - 1728)*(x**3 - 16*x**2 - 9*x - 72)\nJ1 x*(x - 5)*(x - 4)*(x - 1)*(x + 1)*(x + 4)*(x**3 - 39*x**2 - 64*x - 1728)*(x**3 - 16*x**2 - 9*x - 72)\nJ2 x**2*(x - 5)**2*(x - 4)*(x - 1)**2*(x + 1)*(x + 4)*(x**3 - 39*x**2 - 64*x - 1728)*(x**3 - 16*x**2 - 9*x - 72)**2\nJ3 x*(x - 5)**2*(x - 4)*(x - 1)**2*(x + 1)*(x + 4)*(x**3 - 39*x**2 - 64*x - 1728)*(x**3 - 16*x**2 - 9*x - 72)**2",
+      "sha256": "9200873e9057647ee1748238654b6dfccda706a9663ae493dd70a161871e678d"
+    },
+    {
+      "script": "geometric_phases",
+      "stdout": "PASS: two-anchor phase fibres, complete graph counts through d6, exact unit geometry through d12",
+      "sha256": "a5e8d1b3ab31c66acf088dde5d04872befd3152181700a9f4c893eee54c138f9"
+    },
+    {
+      "script": "jacobian_observer",
+      "stdout": "PASS: exact mixed-response reconstruction, image defect and finite-rank boundary corrections",
+      "sha256": "112c1c9ca4c988e7ba49c63ad90e28a1d36eba272caa3bcae1df05fdd84cb530"
+    }
+  ]
+}

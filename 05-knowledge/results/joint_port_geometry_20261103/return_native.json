@@ -1,0 +1,1555 @@
+{
+  "status": "FINITE_EXACT_NATIVE_RETURN",
+  "legal_schedules": 10,
+  "chosen_schedule": {
+    "order": [
+      4,
+      0,
+      1,
+      3,
+      2
+    ],
+    "H": [
+      233,
+      113,
+      199,
+      71,
+      209,
+      233
+    ],
+    "peak": 9
+  },
+  "trace": [
+    {
+      "operation": "delete",
+      "name": 3,
+      "H_before": 233,
+      "H_after": 113
+    },
+    {
+      "operation": "native_arc",
+      "arc": [
+        8,
+        6
+      ],
+      "helper": 9,
+      "paths": [
+        [
+          8,
+          6,
+          0,
+          1,
+          2,
+          4,
+          5,
+          7,
+          9
+        ],
+        [
+          8,
+          9,
+          6,
+          0,
+          1,
+          2,
+          4,
+          5,
+          7
+        ]
+      ],
+      "H_before": 113,
+      "H_after": 199
+    },
+    {
+      "operation": "native_arc",
+      "arc": [
+        4,
+        5
+      ],
+      "helper": 10,
+      "paths": [
+        [
+          4,
+          5,
+          7,
+          0,
+          1,
+          2,
+          6,
+          8,
+          10
+        ],
+        [
+          4,
+          10,
+          5,
+          7,
+          0,
+          1,
+          2,
+          6,
+          8
+        ]
+      ],
+      "H_before": 199,
+      "H_after": 71
+    },
+    {
+      "operation": "native_arc",
+      "arc": [
+        7,
+        4
+      ],
+      "helper": 11,
+      "paths": [
+        [
+          7,
+          4,
+          6,
+          8,
+          5,
+          0,
+          1,
+          2,
+          11
+        ],
+        [
+          7,
+          11,
+          4,
+          6,
+          8,
+          5,
+          0,
+          1,
+          2
+        ]
+      ],
+      "H_before": 71,
+      "H_after": 209
+    },
+    {
+      "operation": "native_arc",
+      "arc": [
+        5,
+        7
+      ],
+      "helper": 12,
+      "paths": [
+        [
+          5,
+          7,
+          0,
+          1,
+          2,
+          4,
+          6,
+          8,
+          12
+        ],
+        [
+          5,
+          12,
+          7,
+          0,
+          1,
+          2,
+          4,
+          6,
+          8
+        ]
+      ],
+      "H_before": 209,
+      "H_after": 233
+    }
+  ],
+  "final_names": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "final_rows": [
+    14,
+    12,
+    40,
+    96,
+    47,
+    131,
+    183,
+    31
+  ],
+  "retained_original_names": [
+    5,
+    6,
+    4
+  ],
+  "root_name": 7,
+  "other_port_name": 6,
+  "root_profile": [
+    233,
+    36,
+    37,
+    234
+  ],
+  "full_observer": [
+    {
+      "skeleton": [],
+      "degree": 1,
+      "count": 143
+    },
+    {
+      "skeleton": [],
+      "degree": 2,
+      "count": 461
+    },
+    {
+      "skeleton": [],
+      "degree": 3,
+      "count": 313
+    },
+    {
+      "skeleton": [],
+      "degree": 4,
+      "count": 61
+    },
+    {
+      "skeleton": [],
+      "degree": 5,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 13
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 121
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 171
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 63
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 6
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 18
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 87
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 86
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 25
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 2
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 22
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 119
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 124
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 37
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 31
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 90
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 65
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 15
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 19
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 205
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 348
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 165
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 25
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 48
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 337
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 418
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 143
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 13
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 49
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 177
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 151
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 40
+    },
+    {
+      "skeleton": [
+        [
+          -1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 35
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 489
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 950
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 485
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 76
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 42
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 315
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 398
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 135
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 12
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 61
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 255
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 235
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 65
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 5
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 35
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 240
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 295
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 100
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ]
+      ],
+      "degree": 5,
+      "count": 9
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 43
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 168
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 149
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 40
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 5,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 31
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 90
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 65
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 15
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 49
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 193
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 216
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 95
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 17
+    },
+    {
+      "skeleton": [
+        [
+          0,
+          1
+        ]
+      ],
+      "degree": 6,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 0,
+      "count": 21
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 1,
+      "count": 217
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 2,
+      "count": 323
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 3,
+      "count": 123
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          -1
+        ]
+      ],
+      "degree": 4,
+      "count": 12
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 0,
+      "count": 1
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 1,
+      "count": 21
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 2,
+      "count": 49
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 3,
+      "count": 25
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          0
+        ]
+      ],
+      "degree": 4,
+      "count": 3
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 1,
+      "count": 31
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 2,
+      "count": 180
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 3,
+      "count": 195
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 4,
+      "count": 60
+    },
+    {
+      "skeleton": [
+        [
+          1,
+          1
+        ]
+      ],
+      "degree": 5,
+      "count": 5
+    }
+  ],
+  "native_moves": 8,
+  "temporary_helpers": 4,
+  "old_vertex_deletions": [
+    3
+  ],
+  "peak_order": 9,
+  "next_ternary_H": 701,
+  "sourced_phases": {
+    "source77": {
+      "profile": [
+        77,
+        18,
+        19,
+        78
+      ],
+      "golden": [
+        77,
+        116,
+        121
+      ],
+      "golden_phase": [
+        3,
+        2,
+        5
+      ],
+      "all_five_Q4_phases": {
+        "q0": [
+          5,
+          2,
+          4
+        ],
+        "q1": [
+          2,
+          3,
+          6
+        ],
+        "q2": [
+          4,
+          4,
+          5
+        ],
+        "q4": [
+          1,
+          6,
+          2
+        ],
+        "q5": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "child233": {
+      "profile": [
+        233,
+        77,
+        77,
+        233
+      ],
+      "golden": [
+        233,
+        987,
+        992
+      ],
+      "golden_phase": [
+        2,
+        5,
+        4
+      ],
+      "all_five_Q4_phases": {
+        "q0": [
+          4,
+          4,
+          3
+        ],
+        "q1": [
+          6,
+          4,
+          6
+        ],
+        "q2": [
+          3,
+          1,
+          4
+        ],
+        "q4": [
+          6,
+          0,
+          1
+        ],
+        "q5": [
+          4,
+          0,
+          1
+        ]
+      }
+    },
+    "ready233": {
+      "profile": [
+        233,
+        36,
+        37,
+        234
+      ],
+      "golden": [
+        233,
+        344,
+        358
+      ],
+      "golden_phase": [
+        5,
+        1,
+        1
+      ],
+      "all_five_Q4_phases": {
+        "q0": [
+          3,
+          6,
+          5
+        ],
+        "q1": [
+          3,
+          2,
+          0
+        ],
+        "q2": [
+          2,
+          2,
+          1
+        ],
+        "q4": [
+          3,
+          6,
+          5
+        ],
+        "q5": [
+          2,
+          2,
+          5
+        ]
+      }
+    },
+    "child701": {
+      "profile": [
+        701,
+        233,
+        233,
+        701
+      ],
+      "golden": [
+        701,
+        3634,
+        3648
+      ],
+      "golden_phase": [
+        1,
+        1,
+        0
+      ],
+      "all_five_Q4_phases": {
+        "q0": [
+          4,
+          2,
+          1
+        ],
+        "q1": [
+          0,
+          6,
+          0
+        ],
+        "q2": [
+          2,
+          5,
+          0
+        ],
+        "q4": [
+          2,
+          0,
+          1
+        ],
+        "q5": [
+          5,
+          4,
+          5
+        ]
+      }
+    }
+  }
+}
