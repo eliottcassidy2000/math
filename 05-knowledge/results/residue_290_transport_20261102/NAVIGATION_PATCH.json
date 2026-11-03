@@ -1,7 +1,7 @@
 {
-  "after_sha256": "b3786f96deb12b3895b2c407db2d382ac4e85155b0fe90df6174ccfd0acba2f7",
+  "after_sha256": "97605350b7d7dd866d6b89c4be5e1ac8e4bd0ea5e8eeb2c2f3a5dd64d13c05b0",
   "append": "\n[290 signed transport](../05-knowledge/results/residue_290_transport_20261102/README.md): audited prime-pair/PRIMEGAME triangles, weighted sieve rank45, signed doubling and lattice norms; explicit scalar A000568 recurrence and recovered ROOT/black-core routes. Uniform debt and global connectivity remain open.\n",
-  "before_sha256": "8191ad36aec5b3196fcf89a0882e21802cb337f1d8499fbb3e23456be7f6579e",
+  "before_sha256": "13fd58723d1e493e59fa435ce4862169f55a22006d18ae81eb50b9e50f7d6b10",
   "path": "00-navigation/S111-plus.md",
-  "source_revision": "89c753882f26fb6a61d5954c5e8cb52c13725007"
+  "source_revision": "5788ec6eb9f90f3aced6a52e0bf7fea03ea32847"
 }

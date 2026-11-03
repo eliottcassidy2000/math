@@ -47,3 +47,17 @@ No new meta-card or scarce theorem ID was reserved. The counterindication to
 retaining everything is the valid nonfaithful Gaussian observer: sufficient
 state is operation-relative, not necessarily a faithful model of every algebraic
 feature.
+
+The final incoming reconciliation pins six files at f139791ef3. Two producers
+independently checked its machine dictionary and norm corollary; the latter
+review corrected two draft target values, with the mechanism logged in
+MISTAKES.md. The large incoming carrier certificates were read by scope, not
+rerun. Main's later5788ec6eb9 adds a preregistered experiment only; it was
+not treated as a proved result or computational receipt.
+
+Rebasing changed the unpublished checkpoint hash89c75388. Its nine frozen
+machine source pins were each verified byte-for-byte at the already published
+research base4c6f0ca135. The root manifest uses that reachable source revision;
+the nested reviewed manifest preserves the original provenance. Navigation
+is separately replayed against the final shared baseline. None of these
+source-binding changes modifies an audited proof, checker or receipt.

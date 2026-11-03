@@ -73,7 +73,7 @@ even and the split exponent is one. Thus A(28)=sum_(d|28)chi3(d)=2 and,
 since28 is not square, A1 gives exactly two triple fibres and no two-point
 fibres. The norm representation N(6+2 omega)=28 gives (t,u)=(8,2), hence
 the first displayed triple; negation gives the other. Direct substitution
-gives the displayed values. Every remaining integer fibre is a singleton.
+gives the displayed values. Every other nonempty integer fibre is a singleton.
 
 This gives28 a different role from the degree28 of the unweighted sieve
 quotient: the map above, rather than equality of integers, is the evidence.

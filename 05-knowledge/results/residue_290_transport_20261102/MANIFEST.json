@@ -1,11 +1,11 @@
 {
   "files": {
     ".gitattributes": "05bce1f34342a39f8e6b5a3f06183ca80dfe09934dd7d2e19fba4bf4a10ecbfc",
-    "AUDIT.md": "cae9113468e6b7023ba0c4c1cf7eff80abf1cd5979f8f607799bd1c98abf2bbc",
+    "AUDIT.md": "0d127fdd9c61cedc98e85770cbea05da054e1ef4c1293cc50a4bc6d23ca6de9b",
     "BOARD.md": "9daa9a92092a1be3761320aef9826d49305ae08758be3aaaaaa7e85a632556e0",
-    "INCOMING_RECONCILIATION.md": "24ead81e7cf18733a142d7d97a523deaf5ade6fa373cd5b6beced6937fb92691",
+    "INCOMING_RECONCILIATION.md": "1b7e0cff14b582f9e2e25c55ea9c1592f32dbcd9e4f8dbedcdddbd9de8fc09a2",
     "INCOMING_SOURCES.json": "7e8e502dd2ff37ca59fd66ab2d306503e410409013456a9dd618b949482b0d0c",
-    "NAVIGATION_PATCH.json": "512f92d92549fef499dba8110c01708af9e29e2d077ed15de80042cf52e39c08",
+    "NAVIGATION_PATCH.json": "6d5b3074453f29a63f8045cc7c5e6066424ff0d578f0cd39523e2b6fb20179b0",
     "README.md": "399b33fdf72ca76191dabf86bd1894e77d7b1f1d28e8d746473a43aa1be8bde2",
     "audit_machines/MANIFEST.json": "0c821b19cb5a28d7ab2a8f1811bccc3670eb87ca0b726fedb3ab088bdc95a272",
     "audit_machines/REPORT.md": "347ae9c5df41f2c2593a660d9cb098f7ce3ed6e599eba031d398d55efab6dd82",
@@ -261,6 +261,21 @@
       "sha256": "c74a00964dc37b9332c6630e3032fb77e6ab118d2fa1b51105e81da70b2aace6"
     },
     {
+      "path": "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "e694122f3b7d2ca1170e486481fffc16d2c068943149a13f612b2d71e82c1683"
+    },
+    {
+      "path": "01-canon/theorems/THM-4853-primegame-step-counts-in-closed-form-oeis-a007546-is-the-15-14-list-a007547-the-conway-1987-list-and-their-difference-is-a-sum-of-largest-proper-divisors.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "4ff7228cd571bb550babfab17f0ad6f3f68be69e718f32be3b21e24dcd8d3085"
+    },
+    {
+      "path": "01-canon/theorems/THM-4854-primegame-four-blocks-register-decomposition-bipartite-flags-triangular-semiprimes-metagraph-quotient-of-complement-graph.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "584e2c55f5ed835ed123389a7c7039e2ad69d2c757d5db3fad599f0892e4c43c"
+    },
+    {
       "path": "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md",
       "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
       "sha256": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9"
@@ -281,9 +296,24 @@
       "sha256": "0f75e006321c83946ffb4c1992000cec665f2980b1012ccf6981c90ec994b7ca"
     },
     {
+      "path": "05-knowledge/results/fractran_turing_circulant_goldbach_20261101.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "b7b5a57f5059abc0d1d07e81e54ccb8c1e5264af4e76e5bdaa06b6da4f5dc602"
+    },
+    {
       "path": "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md",
       "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
       "sha256": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
+    },
+    {
+      "path": "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d"
+    },
+    {
+      "path": "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/README.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "fe98f7ba5190a1551ae943e685dc0cb363ac09376b46255206b3bc1bd0585539"
     },
     {
       "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
@@ -351,48 +381,13 @@
       "sha256": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267"
     },
     {
-      "path": "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "e694122f3b7d2ca1170e486481fffc16d2c068943149a13f612b2d71e82c1683"
-    },
-    {
-      "path": "01-canon/theorems/THM-4853-primegame-step-counts-in-closed-form-oeis-a007546-is-the-15-14-list-a007547-the-conway-1987-list-and-their-difference-is-a-sum-of-largest-proper-divisors.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "4ff7228cd571bb550babfab17f0ad6f3f68be69e718f32be3b21e24dcd8d3085"
-    },
-    {
-      "path": "01-canon/theorems/THM-4854-primegame-four-blocks-register-decomposition-bipartite-flags-triangular-semiprimes-metagraph-quotient-of-complement-graph.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "584e2c55f5ed835ed123389a7c7039e2ad69d2c757d5db3fad599f0892e4c43c"
-    },
-    {
-      "path": "05-knowledge/results/fractran_turing_circulant_goldbach_20261101.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "b7b5a57f5059abc0d1d07e81e54ccb8c1e5264af4e76e5bdaa06b6da4f5dc602"
-    },
-    {
-      "path": "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
-    },
-    {
-      "path": "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d"
-    },
-    {
-      "path": "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/README.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
-      "sha256": "fe98f7ba5190a1551ae943e685dc0cb363ac09376b46255206b3bc1bd0585539"
-    },
-    {
       "path": "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
       "sha256": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
     },
     {
       "path": "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md",
-      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
       "sha256": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
     },
     {
