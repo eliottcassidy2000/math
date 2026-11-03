@@ -23,4 +23,15 @@ The live text of [Tomon, arXiv:2610.03517v2](https://arxiv.org/html/2610.03517v2
 - `search_induced.py` reproduced every positive and negative result. Normal and optimized records agree after omitting elapsed-time fields.
 - `audit_chain_independent.py` uses a separate structural search: choose the shared root, enumerate every adjacent neighbor pair and common nonneighbor tip, then exhaustively join compatible diamonds. It independently confirms G2 is absent from M5, G3 from M6, and G4 from M7. Positive controls find G2 in M6 and G3 in M7. Its normal and optimized output is byte-identical. Results are in `audit_chain_independent.json`.
 
-The absence claims remain finite order-specific results; nothing beyond order seven is inferred except the stated induced-subchain implication.
+The absence claims remain finite order-specific results. No nonexistence beyond order seven is inferred except the stated induced-subchain implication.
+
+
+## Additional order-eight witness
+
+The later G5 witness also passes independent audit. Both normal and optimized executions of `check_chain8.py` pass with identical output. The separate `audit_chain8_independent.py` does not import the author's graph or profile helpers. It computes the permutation action directly on bits, reproduces all 120 minimum quotient distances over 40,320 permutations per source, confirms all sixteen tournaments are strong, and checks every complete profile using endpoint subset DP followed by a first-block recurrence.
+
+The induced graph has exactly 29 edges on 16 classes. Removing O,t1,t3 leaves the five components {t0,a0,b0}, {a1,b1}, {t2,a2,b2}, {a3,b3}, {t4,a4,b4}. This certifies nontraceability, since deleting three vertices from a Hamiltonian path can leave at most four nonempty components. An explicit proper four-coloring passes; the diamond-forced three-color contradiction establishes chromatic number four.
+
+Nontraceability belongs to this metagraph subgraph, not its tournament vertices. Their directed Hamilton-path counts in certificate order are 541,427,497,517,415,497,517,401,509,479,415,497,517,427,497,517. All are positive odd integers. The prior exclusions establish that order eight is minimal for both G4 and G5. No order-eight census or negative search is needed to certify this positive witness.
+
+Independent code and output: `audit_chain8_independent.py` and `audit_chain8_independent.json`. Normal and optimized output is byte-identical.
