@@ -1,0 +1,193 @@
+{
+  "matrix_certificates": {
+    "det_O": 2,
+    "det_V": -2,
+    "det_L": 2,
+    "hankel_det": -4,
+    "integral_index": 16,
+    "basis_temporal_words": [
+      "",
+      "C",
+      "D",
+      "CC",
+      "CD",
+      "DC",
+      "DD",
+      "CCD",
+      "CDD"
+    ]
+  },
+  "small_guarded_sources": 110,
+  "finite_word_controls": {
+    "maximum_depth": 12,
+    "words": 8191,
+    "defect_zero_states_with_multiplicity": 4096,
+    "literal_words_through_depth_6": 127
+  },
+  "inhomogeneous_polynomial_bank_ranks": [
+    {
+      "degree": 0,
+      "samples": 1,
+      "rank": 1
+    },
+    {
+      "degree": 1,
+      "samples": 8,
+      "rank": 4
+    },
+    {
+      "degree": 2,
+      "samples": 27,
+      "rank": 10
+    },
+    {
+      "degree": 3,
+      "samples": 64,
+      "rank": 20
+    },
+    {
+      "degree": 4,
+      "samples": 125,
+      "rank": 35
+    }
+  ],
+  "homogeneous_polynomial_bank_ranks": [
+    {
+      "degree": 0,
+      "samples": 1,
+      "rank": 1
+    },
+    {
+      "degree": 1,
+      "samples": 4,
+      "rank": 3
+    },
+    {
+      "degree": 2,
+      "samples": 9,
+      "rank": 6
+    },
+    {
+      "degree": 3,
+      "samples": 16,
+      "rank": 10
+    },
+    {
+      "degree": 4,
+      "samples": 25,
+      "rank": 15
+    },
+    {
+      "degree": 5,
+      "samples": 36,
+      "rank": 21
+    },
+    {
+      "degree": 6,
+      "samples": 49,
+      "rank": 28
+    }
+  ],
+  "distinct_reset_planes_checked": 31,
+  "literal_escape_family": [
+    {
+      "order": 6,
+      "state": [
+        5,
+        14,
+        0
+      ],
+      "H": 19
+    },
+    {
+      "order": 7,
+      "state": [
+        9,
+        30,
+        0
+      ],
+      "H": 39
+    },
+    {
+      "order": 8,
+      "state": [
+        17,
+        62,
+        0
+      ],
+      "H": 79
+    },
+    {
+      "order": 9,
+      "state": [
+        33,
+        126,
+        0
+      ],
+      "H": 159
+    },
+    {
+      "order": 10,
+      "state": [
+        65,
+        254,
+        0
+      ],
+      "H": 319
+    },
+    {
+      "order": 11,
+      "state": [
+        129,
+        510,
+        0
+      ],
+      "H": 639
+    },
+    {
+      "order": 12,
+      "state": [
+        257,
+        1022,
+        0
+      ],
+      "H": 1279
+    },
+    {
+      "order": 13,
+      "state": [
+        513,
+        2046,
+        0
+      ],
+      "H": 2559
+    },
+    {
+      "order": 14,
+      "state": [
+        1025,
+        4094,
+        0
+      ],
+      "H": 5119
+    },
+    {
+      "order": 15,
+      "state": [
+        2049,
+        8190,
+        0
+      ],
+      "H": 10239
+    }
+  ],
+  "six_vertex_rows": [
+    30,
+    60,
+    24,
+    48,
+    32,
+    5
+  ],
+  "status": "all checks passed"
+}
