@@ -178,4 +178,22 @@ python3 check_chain.py
 python3 -O check_chain.py
 ```
 
-`chain_embedding_search.json` is the resulting search record. The positive seed is independently checkable without trusting the census; the nonexistence statements depend on the exhaustive census and search. No complete enumeration beyond order seven is asserted.
+`chain_embedding_search.json` is the resulting search record. The positive seed is independently checkable without trusting the census; the nonexistence statements depend on the exhaustive census and search. The nonexistence assertions stop at order seven; the positive order-eight witness below is independently certified.
+
+### The rigid nontraceable member also transfers, at minimal order eight
+
+The chain G_5 has a literal induced realization in S_8. In the order
+
+O,t_0,a_0,b_0,t_1,a_1,b_1,t_2,a_2,b_2,t_3,a_3,b_3,t_4,a_4,b_4
+
+use these sixteen tournament masks:
+
+17928585,9314500,10846530,9320707,1712324,3244354,1718531,54952202,25475209,3342737,54542928,67668801,83954712,54804816,67684801,84478232.
+
+The exact verifier `check_chain8.py` independently checks all 120 pairs against all 40320 vertex relabellings and records `chain8_certificate.json`. It also confirms all sixteen tournaments are strong and computes each profile by two independent methods. Run it normally and under `python3 -O`. The positive claim does not depend on the score-canonicalization algorithm used to discover the witness.
+
+Keeping only the first four diamond blocks restricts this realization to G_4. Thus both G_4 and G_5 occur at tournament order eight. This is minimal: G_4 is absent from M_7; G_3 is absent from M_6; G_2 is absent from M_5; and M_4 and smaller have too few vertices. A longer chain contains each shorter one as an induced subgraph.
+
+As proved in the companion shared-root diamond packet, the same G_5 is a faithful unit-distance graph in the plane, is infinitesimally rigid with exactly 29 independent bars on 16 points, has chromatic number four, and has no Hamiltonian path. Consequently all these properties coexist in one graph that is also an induced flip graph of strong tournaments. The absence of a Hamiltonian path is a property of this sixteen-vertex metagraph subgraph, not of the individual tournaments, each of which has directed Hamiltonian paths by Rédei's theorem.
+
+There is also a short internal proof of the nontraceability: deleting O,t_1,t_3 leaves five components, whereas deleting three vertices from a Hamiltonian path could leave at most four. This avoids depending on a Hamilton-path enumeration for the negative claim.

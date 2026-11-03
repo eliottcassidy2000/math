@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "pairs": 120,
+  "permutations_per_source": 40320,
+  "strong_tournaments": 16,
+  "induced_edges": 29,
+  "tournament_H": [
+    541,
+    427,
+    497,
+    517,
+    415,
+    497,
+    517,
+    401,
+    509,
+    479,
+    415,
+    497,
+    517,
+    427,
+    497,
+    517
+  ],
+  "separator": [
+    0,
+    4,
+    10
+  ],
+  "components_after_deletion": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8,
+      9
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      13,
+      14,
+      15
+    ]
+  ],
+  "metagraph_has_Hamilton_path": false,
+  "proper_four_coloring": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    1,
+    2,
+    0,
+    1,
+    2,
+    3,
+    1,
+    2,
+    0,
+    1,
+    2
+  ],
+  "independent_profile_algorithms": "endpoint subset DP plus first-block cover recurrence"
+}
