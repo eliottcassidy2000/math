@@ -1,6 +1,6 @@
 # Matching boundaries and two levels of actual ternary returns
 
-**PROVED scoped:** BC1--BC4, BC6--BC7 below. **FINITE-EXACT:** the exhaustive minimum
+**PROVED scoped:** BC1--BC4, BC6--BC8 below. **FINITE-EXACT:** the exhaustive minimum
 orders in BC5, backed by two different counting algorithms. **OPEN:** an
 unbounded return grammar and the full odd Hamilton-path spectrum. These are
 raw directed Hamilton-path counts H, never H/Aut. Native means complementing
@@ -336,3 +336,48 @@ a lower bound on arbitrary nonlinear encodings, a minimum bit count, or a
 closed finite-state native controller. In particular it does not say that
 these coefficients retain the legal Hamilton path needed for the next
 complement. Source realization and path ownership remain separate duties.
+
+## BC8. Arbitrary children: the correction is multiplied by their path count
+
+This is a corollary for our supplied programs of the incoming
+[COMMON_GRAMMAR G4](../six_output_return_20261103/COMMON_GRAMMAR.md) and
+THM-3121's already inherited substitution kernel, not a new claim for the
+general substitution theorem.
+
+Replace the module root by any nonempty tournament S with a selected
+Hamilton path R. Every displayed program in BC3, including each helper
+repair, still works as an exact named relation-level program if that same
+R expands the clone slot in both paths of each complement pair. The old
+pins and all child labels survive. Its scalar law is now
+
+    H(output[S]) = 3 H(input[S]) + c H(S), c in {2,4}.
+
+**Proof.** Within S the first native complement is K_R and the second is
+the same involution K_R. The common exterior frame cancels their incident
+exceptions. Uniform births and named exterior deletions commute with the
+substitution. Thus the proof of BC2 and each short program applies to the
+arbitrary child itself, not only its path count.
+
+Let Q_r(S) count ordered covers by r nonempty directed paths. The exact
+source count is sum c_r Q_r(S). Every displayed target has coefficients
+c'_1=3c_1+c and c'_r=3c_r for r>1. Subtracting these expressions gives
+c Q_1(S)=cH(S), as asserted. This argument retains all child paths and their
+actual ordering; no arbitrary representative path is counted as all paths.
+
+The constant +c therefore survives exactly when H(S)=1, equivalently when
+S is transitive. A nontransitive S contains a directed triangle, and induced
+vertex extension cannot decrease H by the insertion injection, so H(S)>=3.
+The excess beyond the requested constant is exactly c(H(S)-1).
+
+For the present source, H(A[S])=31Q_1(S)+30Q_2(S)+8Q_3(S). A C3 child
+gives source 321 and first targets 969,975, whose excesses over 3H+2/+4
+are 4,8. The strong four-vertex child with rows (2,4,9,3), H=5, gives source
+1103 and first targets 3319,3329: these implement 3H+10 and 3H+20, with
+excesses 8,16. `child_audit.py` replays all six chosen steps for both children,
+including every temporary-helper cut and native guard, and separately
+checks their counts using the ordered-cover coefficients.
+
+This supplies an exact new repair obligation: a constant-offset extension
+to general children needs a legal mechanism replacing H(S) by the weight
+of one selected path, or another construction paying c(H(S)-1). Merely
+having selected R in the program does not already perform that selection.

@@ -173,6 +173,25 @@ BC2's explicit binom(L-1,2) conversion retains this distinction. These
 incoming results strengthen the stopping conditions of the present proof,
 without replacing its source-specific realization steps.
 
+The next close-out pull through `37e6cd63a4` brought the most direct
+convergence: [six-output COMMON_GRAMMAR](../six_output_return_20261103/COMMON_GRAMMAR.md)
+independently proves the matching boundary, credits this packet's earlier
+checkpoint, and identifies a cycle guardian at matching rank one. Its
+arbitrary-child naturality applies to our rank-two programs as BC8. The
+exact correction cH(S) isolates a selected-path realization problem; our
+C3 and H=5 child controls check it on all six supplied steps. Its
+[RETURN_BARRIER](../six_output_return_20261103/RETURN_BARRIER.md) also proves
+that no finite fixed dyadic-ray bank closes under ternary offsets, and
+that exact integer carry recovers word height and arithmetic LCA. Our
+new d+K dimension theorem is not offered as a way around that obstruction:
+linear query dimension and the number of realizable source states differ.
+
+[The simultaneous 2107 return](../digit_cycle_ternary_20261103/RETURN2107.md)
+advances that separate marked lane to an actual 6325 source. It does not
+supersede our all-m family result or supply its missing third-level rules.
+The next work should compare these actual source relations and their
+cycle covers, rather than repeat the already completed 701/2107 searches.
+
 The common operation across these lanes is:
 
 1. identify a scalar clock or a quotient period;

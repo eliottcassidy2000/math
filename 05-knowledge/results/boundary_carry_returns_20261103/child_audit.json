@@ -1,0 +1,230 @@
+[
+  {
+    "base_source_H": 31,
+    "offset": 2,
+    "child": [
+      2,
+      4,
+      1
+    ],
+    "selected_path": [
+      0,
+      1,
+      2
+    ],
+    "child_H": 3,
+    "source_H": 321,
+    "target_H": 969,
+    "constant_offset_excess": 4
+  },
+  {
+    "base_source_H": 31,
+    "offset": 4,
+    "child": [
+      2,
+      4,
+      1
+    ],
+    "selected_path": [
+      0,
+      1,
+      2
+    ],
+    "child_H": 3,
+    "source_H": 321,
+    "target_H": 975,
+    "constant_offset_excess": 8
+  },
+  {
+    "base_source_H": 97,
+    "offset": 2,
+    "child": [
+      2,
+      4,
+      1
+    ],
+    "selected_path": [
+      0,
+      1,
+      2
+    ],
+    "child_H": 3,
+    "source_H": 975,
+    "target_H": 2931,
+    "constant_offset_excess": 4
+  },
+  {
+    "base_source_H": 95,
+    "offset": 2,
+    "child": [
+      2,
+      4,
+      1
+    ],
+    "selected_path": [
+      0,
+      1,
+      2
+    ],
+    "child_H": 3,
+    "source_H": 969,
+    "target_H": 2913,
+    "constant_offset_excess": 4
+  },
+  {
+    "base_source_H": 95,
+    "offset": 4,
+    "child": [
+      2,
+      4,
+      1
+    ],
+    "selected_path": [
+      0,
+      1,
+      2
+    ],
+    "child_H": 3,
+    "source_H": 969,
+    "target_H": 2919,
+    "constant_offset_excess": 8
+  },
+  {
+    "base_source_H": 97,
+    "offset": 4,
+    "child": [
+      2,
+      4,
+      1
+    ],
+    "selected_path": [
+      0,
+      1,
+      2
+    ],
+    "child_H": 3,
+    "source_H": 975,
+    "target_H": 2937,
+    "constant_offset_excess": 8
+  },
+  {
+    "base_source_H": 31,
+    "offset": 2,
+    "child": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "selected_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_H": 5,
+    "source_H": 1103,
+    "target_H": 3319,
+    "constant_offset_excess": 8
+  },
+  {
+    "base_source_H": 31,
+    "offset": 4,
+    "child": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "selected_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_H": 5,
+    "source_H": 1103,
+    "target_H": 3329,
+    "constant_offset_excess": 16
+  },
+  {
+    "base_source_H": 97,
+    "offset": 2,
+    "child": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "selected_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_H": 5,
+    "source_H": 3329,
+    "target_H": 9997,
+    "constant_offset_excess": 8
+  },
+  {
+    "base_source_H": 95,
+    "offset": 2,
+    "child": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "selected_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_H": 5,
+    "source_H": 3319,
+    "target_H": 9967,
+    "constant_offset_excess": 8
+  },
+  {
+    "base_source_H": 95,
+    "offset": 4,
+    "child": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "selected_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_H": 5,
+    "source_H": 3319,
+    "target_H": 9977,
+    "constant_offset_excess": 16
+  },
+  {
+    "base_source_H": 97,
+    "offset": 4,
+    "child": [
+      2,
+      4,
+      9,
+      3
+    ],
+    "selected_path": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "child_H": 5,
+    "source_H": 3329,
+    "target_H": 10007,
+    "constant_offset_excess": 16
+  }
+]

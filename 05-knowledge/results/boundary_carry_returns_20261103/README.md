@@ -28,6 +28,9 @@ root star with a constant helper budget, uniformly over the clone size.
 d+K-dimensional function space for a crossing-matching cap d and queries
 using at most K path components. This is a linear moment budget, not a
 finite-state native realization theorem.
+[BC8](PROOFS.md) integrates the incoming arbitrary-child law: the same
+programs work on any selected-path child S but implement 3H+cH(S).
+The exact additional obligation for a constant offset is c(H(S)-1).
 
 The failed short programs had a real size obstruction. The four second-step
 functions have minimum marked base orders **9,9,8,10**, certified by complete
@@ -82,9 +85,10 @@ python3 -B 05-knowledge/results/boundary_carry_returns_20261103/arithmetic.py
 python3 -B 05-knowledge/results/boundary_carry_returns_20261103/boundary.py
 python3 -B 05-knowledge/results/boundary_carry_returns_20261103/moment_budget.py
 python3 -B 05-knowledge/results/boundary_carry_returns_20261103/audit.py
+python3 -B 05-knowledge/results/boundary_carry_returns_20261103/child_audit.py
 ```
 
-The final five commands check the saved certificates without
+The final six commands check the saved certificates without
 repeating the searches. `next_level.py` uses three local processes, not agents.
 The small orbit banks contain 1,1,2,4,12,56 classes at orders 1 through 6;
 their completeness is independently checked by literal relabelling orbits.

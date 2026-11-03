@@ -58,6 +58,13 @@ triangular witness by full vertex permutations and cuts, with no cover-DP
 import. This independently validates the displayed determinants 1,6,144;
 the general rank statement rests on BC7's positive top-coefficient proof.
 
+BC8 uses the incoming general-child naturality theorem on this packet's
+specific two-level programs. `child_audit.py` checks six literal steps for
+each of C3 and the strong four-vertex H=5 child, including all helper paths.
+Subset-DP counts of the substituted tournaments agree with the skeleton
+formula whose child cover counts are independently enumerated by
+permutations and cuts. The observed excesses are exactly c(H(child)-1).
+
 `catalog.cpp` enumerates root-neighbourhood banks, counts H by subset DP,
 and tests clone values through the proved maximum degree. Independently,
 `audit_catalog.cpp` counts literal paths by recursive DFS, with cutoff only
