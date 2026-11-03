@@ -32,6 +32,15 @@ and boundary spectral elimination. Each new result changed the other lanes:
 | Recursive-tree word to tournament | Every arc and its chosen parent | Isomorphism and minimality outside grammar | Complete factorial presentation universe and11888 replayed graphs |
 | Quartet to fraction product | Valuation displacement | Priority and complete prefix cell | BDGL has no executable permutation at any source |
 | Blue graph to radicals | Declared symmetric adjacency | Induced subgraph differs from full graph | P4+isolate and corona C4 reconstructed literally |
+| Mean responses to endpoint-block moments | All fixed attachment means and updates | Joint source products and adaptive guards excluded | Exact dimensions 7/28/126; all 2240 one-birth basis pullbacks |
+
+The later inheritance pass added a seventh concept: spanning path blocks
+with both endpoints retained. Session32 PORT_TRANSFER and the October31
+cyclic-product correction prevent replacing all path-cover states by cuts
+of one local cycle. Our coefficient argument retains every forest type.
+It compresses signed internal-order sums, with closure proved separately.
+This explains the smaller mean carrier without weakening pointwise
+faithfulness or supplying a positive target law.
 
 Applicable META-PATTERNS cards: operation-sensitive controlled forgetting,
 and re-evaluating certificates after fibre-changing operations. No new
@@ -92,6 +101,20 @@ Section6 supplies an explicit all-context obstruction to that inference.
   archive manifest pins artifacts and load-bearing inherited source files.
 
 ## Incoming work
+
+The endpoint-block extension has 5284 normal/-O gates with byte-identical
+receipts; the extended five-vertex probe has 5947. All edge sets through
+six check the two recurrences. Independent C++ counting and full-row modular
+elimination check 347,048 actual graphs and ranks 7,28,126, without using
+the Fourier compression. The five-vertex probe stops after 70 specified
+length-four words reach the all-context upper bound; it does not claim to
+enumerate every word of that length. Closure is independently tested on
+all 2240 basis/cut pairs from orders three to four and four to five.
+
+All-order sharpness of b_n remains open. The proved all-order assertion is
+the rational carrier and its update closure. No modulo-two inverse,
+adaptive legality closure or native fixed-path-complement closure is
+inferred from ordinary-converse closure.
 
 During this session, d7c2dfd3e6,74e81ed37c,9d60922686,cc36cd9f73 arrived.
 The new primegame_path_orbits_20261102/THEORY.md refutes depth-two

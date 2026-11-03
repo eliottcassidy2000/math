@@ -233,6 +233,12 @@ tests or source-conditioned information are required for the latter.
 
 ### Shared copies repair the rational ensemble inverse
 
+The sharper [endpoint-block recurrence](FOREST_RESPONSE_RECURRENCE.md)
+classifies a closed rational space containing every separate mean response.
+It gives exact minimum dimensions 7, 28 and 126 at orders three through
+five, with an all-order generating function for the carrier upper bound.
+This is a different task from the deterministic faithfulness theorem above.
+
 Allow a further explicit operation: take several copies of the SAME old
 source T, apply specified growth contexts independently to those copies,
 and concatenate the resulting tournaments as an ordinal sum. The count

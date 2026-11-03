@@ -18,12 +18,17 @@ INPUTS=[
  '05-knowledge/results/primegame_path_orbits_20261102/CONNECTIONS.md',
  '05-knowledge/results/metagraph_primegame_20261102/TWO_BIRTH_THEOREM.md',
  '05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md',
+ '05-knowledge/results/metagraph_primegame_20261102/INCOMING.md',
+ '05-knowledge/results/session32_square_monster_20261023/ports/PORT_TRANSFER.md',
+ '05-knowledge/results/square_sum_spectrum_overnight_20261031l/README.md',
  '05-knowledge/results/session143_magic_square_cyclic_bridges_20261103/cyclic_integral_order/PROOF.md',
 ]
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
     a=(HERE/'verification.json').read_bytes();b=(HERE/'verification_optimized.json').read_bytes()
     if a!=b:raise RuntimeError('Normal and optimized verifier outputs differ')
+    if (HERE/'forest_observations.json').read_bytes()!=(HERE/'forest_observations_optimized.json').read_bytes():
+        raise RuntimeError('Normal and optimized endpoint-carrier receipts differ')
     paths=[p for p in HERE.iterdir() if p.is_file() and p.name!='manifest.json']+[ROOT/p for p in INPUTS]
     result={'convention':'SHA256 of UTF8 text, leading BOM removed, CRLF normalized to LF','files':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_text(encoding='utf-8-sig').replace('\r\n','\n').encode()).hexdigest() for p in sorted(paths)}}
     target=HERE/'manifest.json'

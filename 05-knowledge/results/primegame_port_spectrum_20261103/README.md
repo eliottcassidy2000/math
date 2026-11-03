@@ -29,12 +29,19 @@ obstruction while testing a concrete construction grammar.
 3. **The81/27 hostile is retained literally.** Both inputs have67 identical
    cyclic triples and H462915. Appending a sink and then a vertex beating
    precisely old port8 gives H2390013 versus1754919.
-4. **A small constructor language has a substantial exact prefix.** All
+4. **A uniform recurrence for the mean-response carrier.** Retain each path
+   block's vertex set and two endpoints. These rational moment coordinates
+   are closed under fixed source-oblivious attachments, and their exponential
+   generating function is exp(x+x^2 exp(x)/2). The exact minimum dimensions
+   at orders 3, 4 and 5 are 7, 28 and 126. An independent counter checks
+   347,048 actual graphs establishing those ranks.
+   [Proof, recurrence and scope](FOREST_RESPONSE_RECURRENCE.md).
+5. **A small constructor language has a substantial exact prefix.** All
    4,037,914 recursive-tree presentations through11 vertices were checked.
    The saved11888 witnesses cover every allowed odd value through20405;
    all witnesses have a second exact counting check. A runnable constructor
    returns the actual adjacency. [Finite scope and branching obstruction](TREE_CONSTRUCTIONS.md).
-5. **The numerical prompts acquire specified operators and guards.** The
+6. **The numerical prompts acquire specified operators and guards.** The
    five mixed blue nodes induce P4 plus an isolate, giving golden-ratio
    eigenvalues. The eight self-converse blue nodes form a leafed C4, giving
    silver-ratio eigenvalues. PRIMEGAME's quartets have respectively1,2,0
@@ -59,10 +66,15 @@ From the repository root:
     python -B -O 05-knowledge/results/primegame_port_spectrum_20261103/verify.py --output verification_optimized.json
     python -B 05-knowledge/results/primegame_port_spectrum_20261103/construct.py 20405
     python -B 05-knowledge/results/primegame_port_spectrum_20261103/replay_cpp.py
+    python -B 05-knowledge/results/primegame_port_spectrum_20261103/forest_observations.py
+    python -B -O 05-knowledge/results/primegame_port_spectrum_20261103/forest_observations.py --output forest_observations_optimized.json
+    python -B 05-knowledge/results/primegame_port_spectrum_20261103/forest_observations.py --five --output forest_observations_five.json
+    python -B 05-knowledge/results/primegame_port_spectrum_20261103/audit_forest_rows.py
     python -B 05-knowledge/results/primegame_port_spectrum_20261103/seal.py --check
 
 Only spectra_primegame.py needs SymPy; the other Python verifiers use the
 standard library. replay_cpp.py needs a C++17 compiler and regenerates the
 two full tree censuses, the complete first-derivative census and the
 independent all-witness receipt. It writes temporary executables outside
-the repository. [Audit](AUDIT.md) and [next decisive tests](HANDOFF.md).
+the repository. audit_forest_rows.py also needs g++ and independently
+rechecks the sharp response ranks. [Audit](AUDIT.md) and [next decisive tests](HANDOFF.md).

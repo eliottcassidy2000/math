@@ -1,0 +1,689 @@
+{
+  "checks": 5947,
+  "sequence_L0_to_L12": [
+    1,
+    1,
+    2,
+    7,
+    34,
+    206,
+    1486,
+    12412,
+    117692,
+    1248004,
+    14625856,
+    187638716,
+    2614602112
+  ],
+  "sequence_B0_to_B12": [
+    1,
+    1,
+    2,
+    7,
+    28,
+    126,
+    661,
+    3928,
+    25628,
+    181828,
+    1396261,
+    11517606,
+    101321320
+  ],
+  "complete_edge_set_censuses": [
+    {
+      "n": 1,
+      "all_edge_sets": 1,
+      "linear_forests": 1,
+      "endpoint_blocks": 1
+    },
+    {
+      "n": 2,
+      "all_edge_sets": 2,
+      "linear_forests": 2,
+      "endpoint_blocks": 2
+    },
+    {
+      "n": 3,
+      "all_edge_sets": 8,
+      "linear_forests": 7,
+      "endpoint_blocks": 7
+    },
+    {
+      "n": 4,
+      "all_edge_sets": 64,
+      "linear_forests": 34,
+      "endpoint_blocks": 28
+    },
+    {
+      "n": 5,
+      "all_edge_sets": 1024,
+      "linear_forests": 206,
+      "endpoint_blocks": 126
+    },
+    {
+      "n": 6,
+      "all_edge_sets": 32768,
+      "linear_forests": 1486,
+      "endpoint_blocks": 661
+    }
+  ],
+  "closed_basis_pullbacks": [
+    {
+      "old_n": 3,
+      "new_basis_size": 28,
+      "cuts": 8,
+      "basis_pullbacks_verified": 224
+    },
+    {
+      "old_n": 4,
+      "new_basis_size": 126,
+      "cuts": 16,
+      "basis_pullbacks_verified": 2016
+    }
+  ],
+  "actual_growth_ranks": [
+    {
+      "n": 3,
+      "linear_forest_upper_bound": 7,
+      "endpoint_block_upper_bound": 7,
+      "layers": [
+        {
+          "depth": 0,
+          "contexts": 1,
+          "rank_Q": 1,
+          "ranks_mod_101_103": [
+            1,
+            1
+          ]
+        },
+        {
+          "depth": 1,
+          "contexts": 5,
+          "rank_Q": 4,
+          "ranks_mod_101_103": [
+            4,
+            4
+          ]
+        },
+        {
+          "depth": 2,
+          "contexts": 21,
+          "rank_Q": 7,
+          "ranks_mod_101_103": [
+            7,
+            7
+          ]
+        },
+        {
+          "depth": 3,
+          "contexts": 85,
+          "rank_Q": 7,
+          "ranks_mod_101_103": [
+            7,
+            7
+          ]
+        }
+      ],
+      "arbitrary_two_birth_contexts": 128,
+      "two_birth_rank_Q": 7,
+      "two_birth_ranks_mod_101_103": [
+        7,
+        7
+      ]
+    },
+    {
+      "n": 4,
+      "linear_forest_upper_bound": 34,
+      "endpoint_block_upper_bound": 28,
+      "layers": [
+        {
+          "depth": 0,
+          "contexts": 1,
+          "rank_Q": 1,
+          "ranks_mod_101_103": [
+            1,
+            1
+          ]
+        },
+        {
+          "depth": 1,
+          "contexts": 6,
+          "rank_Q": 5,
+          "ranks_mod_101_103": [
+            5,
+            5
+          ]
+        },
+        {
+          "depth": 2,
+          "contexts": 31,
+          "rank_Q": 19,
+          "ranks_mod_101_103": [
+            19,
+            19
+          ]
+        },
+        {
+          "depth": 3,
+          "contexts": 156,
+          "rank_Q": 28,
+          "ranks_mod_101_103": [
+            28,
+            28
+          ]
+        },
+        {
+          "depth": 4,
+          "contexts": 781,
+          "rank_Q": 28,
+          "ranks_mod_101_103": [
+            28,
+            28
+          ]
+        }
+      ],
+      "arbitrary_two_birth_contexts": 512,
+      "two_birth_rank_Q": 21,
+      "two_birth_ranks_mod_101_103": [
+        21,
+        21
+      ]
+    },
+    {
+      "n": 5,
+      "linear_forest_upper_bound": 206,
+      "endpoint_block_upper_bound": 126,
+      "layers": [
+        {
+          "depth": 0,
+          "contexts": 1,
+          "rank_Q": 1,
+          "ranks_mod_101_103": [
+            1,
+            1
+          ]
+        },
+        {
+          "depth": 1,
+          "contexts": 7,
+          "rank_Q": 6,
+          "ranks_mod_101_103": [
+            6,
+            6
+          ]
+        },
+        {
+          "depth": 2,
+          "contexts": 43,
+          "rank_Q": 34,
+          "ranks_mod_101_103": [
+            34,
+            34
+          ]
+        },
+        {
+          "depth": 3,
+          "contexts": 259,
+          "rank_Q": 96,
+          "ranks_mod_101_103": [
+            96,
+            96
+          ]
+        }
+      ],
+      "rank_coordinates": "one verified Fourier coefficient per endpoint block",
+      "depth4_probe": {
+        "selection": "base-six words from 137*i mod 6^4; stop at upper rank or exhaustion",
+        "tested_words": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            4,
+            3,
+            0
+          ],
+          [
+            4,
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            5,
+            1
+          ],
+          [
+            2,
+            1,
+            3,
+            2
+          ],
+          [
+            1,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            5,
+            4,
+            3
+          ],
+          [
+            5,
+            3,
+            2,
+            4
+          ],
+          [
+            4,
+            2,
+            0,
+            5
+          ],
+          [
+            3,
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            5,
+            5,
+            0
+          ],
+          [
+            0,
+            4,
+            3,
+            1
+          ],
+          [
+            5,
+            2,
+            1,
+            2
+          ],
+          [
+            4,
+            1,
+            5,
+            2
+          ],
+          [
+            3,
+            0,
+            3,
+            3
+          ],
+          [
+            2,
+            5,
+            0,
+            4
+          ],
+          [
+            1,
+            4,
+            4,
+            4
+          ],
+          [
+            0,
+            3,
+            2,
+            5
+          ],
+          [
+            5,
+            1,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            4,
+            0
+          ],
+          [
+            3,
+            5,
+            1,
+            1
+          ],
+          [
+            2,
+            4,
+            5,
+            1
+          ],
+          [
+            1,
+            3,
+            3,
+            2
+          ],
+          [
+            0,
+            2,
+            1,
+            3
+          ],
+          [
+            5,
+            0,
+            5,
+            3
+          ],
+          [
+            4,
+            5,
+            2,
+            4
+          ],
+          [
+            3,
+            4,
+            0,
+            5
+          ],
+          [
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            5,
+            5,
+            3,
+            1
+          ],
+          [
+            4,
+            4,
+            1,
+            2
+          ],
+          [
+            3,
+            3,
+            5,
+            2
+          ],
+          [
+            2,
+            2,
+            3,
+            3
+          ],
+          [
+            1,
+            1,
+            1,
+            4
+          ],
+          [
+            0,
+            0,
+            5,
+            4
+          ],
+          [
+            5,
+            4,
+            2,
+            5
+          ],
+          [
+            4,
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            4,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            5,
+            3,
+            2
+          ],
+          [
+            5,
+            3,
+            1,
+            3
+          ],
+          [
+            4,
+            2,
+            5,
+            3
+          ],
+          [
+            3,
+            1,
+            3,
+            4
+          ],
+          [
+            2,
+            0,
+            1,
+            5
+          ],
+          [
+            1,
+            5,
+            4,
+            5
+          ],
+          [
+            0,
+            4,
+            2,
+            0
+          ],
+          [
+            5,
+            2,
+            0,
+            1
+          ],
+          [
+            4,
+            1,
+            4,
+            1
+          ],
+          [
+            3,
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            5,
+            5,
+            2
+          ],
+          [
+            1,
+            4,
+            3,
+            3
+          ],
+          [
+            0,
+            3,
+            1,
+            4
+          ],
+          [
+            5,
+            1,
+            5,
+            4
+          ],
+          [
+            4,
+            0,
+            3,
+            5
+          ],
+          [
+            3,
+            5,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            4,
+            0
+          ],
+          [
+            1,
+            3,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            0,
+            2
+          ],
+          [
+            5,
+            0,
+            4,
+            2
+          ],
+          [
+            4,
+            5,
+            1,
+            3
+          ],
+          [
+            3,
+            4,
+            5,
+            3
+          ],
+          [
+            2,
+            3,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            2,
+            0
+          ],
+          [
+            4,
+            4,
+            0,
+            1
+          ],
+          [
+            3,
+            3,
+            4,
+            1
+          ]
+        ],
+        "rank_Q": 126,
+        "ranks_mod_101_103": [
+          126,
+          126
+        ]
+      }
+    }
+  ],
+  "hidden_path_law": {
+    "old_path_masks": [
+      41,
+      26
+    ],
+    "word": [
+      1
+    ],
+    "moments": [
+      [
+        "15/2",
+        "285/4"
+      ],
+      [
+        "15/2",
+        "279/4"
+      ]
+    ],
+    "density": "mu_plus/minus(a)=(1 +/- (chi_41(a)+chi_26(a))/4)/64"
+  },
+  "rank_scope": "Fraction-free integer elimination gives exact rational ranks; two prime-field computations are independent lower-bound controls. Attaining the all-context endpoint-block bound proves the all-context rank at that order."
+}

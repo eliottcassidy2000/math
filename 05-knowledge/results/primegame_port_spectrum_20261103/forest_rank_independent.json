@@ -1,0 +1,27 @@
+{
+  "audits": [
+    {
+      "n": 3,
+      "contexts": 21,
+      "orientations": 8,
+      "rank_mod101": 7,
+      "rank_mod103": 7
+    },
+    {
+      "n": 4,
+      "contexts": 156,
+      "orientations": 64,
+      "rank_mod101": 28,
+      "rank_mod103": 28
+    },
+    {
+      "n": 5,
+      "contexts": 329,
+      "orientations": 1024,
+      "rank_mod101": 126,
+      "rank_mod103": 126
+    }
+  ],
+  "literal_graph_counts": 347048,
+  "algorithm": "independent starting-endpoint DP; elimination of full Boolean evaluation rows"
+}

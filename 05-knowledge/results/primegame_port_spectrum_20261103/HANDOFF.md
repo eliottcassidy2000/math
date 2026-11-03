@@ -29,6 +29,17 @@ current finite prefix as an extension of the inherited99,999,999 bank.
    Any proposed block machine must use guarded interleavings or new return
    sections; keep the actual source cells, valuation clock and priority.
    The formal block product is not a legal macro instruction.
+6. **Sharpness of the mean-response recurrence.** The endpoint-block
+   carrier is closed at all orders and has EGF exp(x+x^2 exp(x)/2).
+   Actual S/B query banks attain its full dimensions 7,28,126 at orders
+   3,4,5; full-row independent counts verify them. Prove the span assertion
+   at all orders, or find a defect at six (upper bound 661). A length n-1
+   growth bound is a suggested pattern, not a theorem. Retain both endpoints
+   and all path-cover types; ordinary converse is not native path complement.
+   For a positive target certificate, retain m=E[q] and R=E[qq^t]:
+   fixed attachments update them by M m and M R M^t. Seek an actual
+   source-law family with E[(H-h)^2]<4; a merely positive semidefinite
+   moment matrix is not a Boolean realization certificate.
 
 Incoming primegame_path_orbits_20261102 has settled the previous depth-two
 legality extrapolation negatively at8, using H171/173. Eventual legality-
