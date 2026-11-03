@@ -1,0 +1,67 @@
+Q  x -> x^2 - 29/16 on odd/4 (integer form g(a) = (a^2 - 29)/4 on odd a)
+  [PASS] cycle -7/4 -> 5/4 -> -1/4 -> -7/4
+  [PASS] Q1: bounded iff |a| <= 7 (odd a, |a| <= 100001); all enter the cycle within 2 steps  depths {-7: 0, -5: 1, -3: 2, -1: 0, 1: 1, 3: 2, 5: 0, 7: 1}
+  [PASS] Q2: |B|, |f(B)|, |f^2 B|, |f^3 B| = 8, 4, 3, 3; fibre shapes (2,2,2,2), (2,1,1)  f(B) = [Fraction(-7, 4), Fraction(-5, 4), Fraction(-1, 4), Fraction(5, 4)], f^2(B) = [Fraction(-7, 4), Fraction(-1, 4), Fraction(5, 4)]
+M  the n = 4 tiling metagraph (owner explorer gauge)
+  [PASS] M1: 8 tilings -> 4 classes {5,1,1,1} -> 3 merged {5,2,1}; 4 lines  classes [(0, [0, 1, 2, 3], 1, 'PB'), (1, [0, 2, 2, 2], 1, 'PK'), (2, [1, 1, 2, 2], 5, 'MX'), (3, [1, 1, 1, 3], 1, 'PK')]
+  [PASS] M2: class fibre shape {5,1,1,1} differs from the f-fibre shape {2,2,2,2}
+    class line multigraph {(0, 2): 1, (2, 2): 1, (2, 3): 1, (1, 2): 1}; f on f(B) (undirected) {(0, 3): 1, (1, 2): 1, (0, 2): 1, (2, 3): 1} on [Fraction(-7, 4), Fraction(-5, 4), Fraction(-1, 4), Fraction(5, 4)]
+  [PASS] M3: no bijection carries the class line multigraph onto f's functional graph on f(B)
+P  primes modulo even numbers until they reach +-1
+  [PASS] P1: least prime = +-1 (mod m) is below m^2 for every even m in [4, 20000]  P(m) in {m-1, m+1} for 4179 of 9999 m (41.8%); largest P(m)/m = 17.0 at m = 16012
+    first rows (m, least prime = +-1 mod m, residues of the odd primes seen before it):
+      m=  4: P=  3; residues []; residue pairs r + (m - r) []; Goldbach pairs []
+      m=  6: P=  5; residues [3]; residue pairs r + (m - r) [(3, 3)]; Goldbach pairs [(3, 3)]
+      m=  8: P=  7; residues [3, 5]; residue pairs r + (m - r) [(3, 5)]; Goldbach pairs [(3, 5)]
+      m= 10: P= 11; residues [3, 5, 7]; residue pairs r + (m - r) [(3, 7), (5, 5)]; Goldbach pairs [(3, 7), (5, 5)]
+      m= 12: P= 11; residues [3, 5, 7]; residue pairs r + (m - r) [(5, 7)]; Goldbach pairs [(5, 7)]
+      m= 14: P= 13; residues [3, 5, 7, 11]; residue pairs r + (m - r) [(3, 11), (7, 7)]; Goldbach pairs [(3, 11), (7, 7)]
+      m= 16: P= 17; residues [3, 5, 7, 11, 13]; residue pairs r + (m - r) [(3, 13), (5, 11)]; Goldbach pairs [(3, 13), (5, 11)]
+      m= 18: P= 17; residues [3, 5, 7, 11, 13]; residue pairs r + (m - r) [(5, 13), (7, 11)]; Goldbach pairs [(5, 13), (7, 11)]
+      m= 20: P= 19; residues [3, 5, 7, 11, 13, 17]; residue pairs r + (m - r) [(3, 17), (7, 13)]; Goldbach pairs [(3, 17), (7, 13)]
+    {10, 20}: P(10) = 11, P(20) = 19
+  [PASS] P3: chart_clique_norm carrier formula gives 10, 20, 39 at n = 3, 4, 5  [10, 20, 39, 69]
+T  the two jagged triangles
+    odd-pair triangle, rows m = 2k, entry a (odd, a <= k) marked * if a and m - a are both prime:
+      m= 6: .*
+      m= 8: .*
+      m=10: .**
+      m=12: ..*
+      m=14: .*.*
+      m=16: .**.
+      m=18: ..**.
+      m=20: .*.*.
+      m=22: .**..*
+      m=24: ..**.*
+      m=26: .*.*..*
+      m=28: ..*..*.
+      m=30: ...*.**.
+      m=32: .*....*.
+      m=34: .**..*..*
+      m=36: ..**..*.*
+      m=38: ...*.....*
+      m=40: .*...*..*.
+    PRIMEGAME trial-division region {(n, d): D(n) <= d <= n-1}; row n lists the trial divisors tested:
+      n= 2: d = 1..1  (1 trials)  <- prime (reaches d = 1)
+      n= 3: d = 2..1  (2 trials)  <- prime (reaches d = 1)
+      n= 4: d = 3..2  (2 trials)
+      n= 5: d = 4..1  (4 trials)  <- prime (reaches d = 1)
+      n= 6: d = 5..3  (3 trials)
+      n= 7: d = 6..1  (6 trials)  <- prime (reaches d = 1)
+      n= 8: d = 7..4  (4 trials)
+      n= 9: d = 8..3  (6 trials)
+      n=10: d = 9..5  (5 trials)
+      n=11: d = 10..1  (10 trials)  <- prime (reaches d = 1)
+      n=12: d = 11..6  (6 trials)
+      n=13: d = 12..1  (12 trials)  <- prime (reaches d = 1)
+      n=14: d = 13..7  (7 trials)
+      n=15: d = 14..5  (10 trials)
+      n=16: d = 15..8  (8 trials)
+      n=17: d = 16..1  (16 trials)  <- prime (reaches d = 1)
+      n=18: d = 17..9  (9 trials)
+      n=19: d = 18..1  (18 trials)  <- prime (reaches d = 1)
+      n=20: d = 19..10  (10 trials)
+      n=21: d = 20..7  (14 trials)
+
+ALL PRE-REGISTERED CHECKS PASSED
+python3 -B $E/quadratic_triangle_n4.py  0.32s user 0.03s system 82% cpu 0.433 total

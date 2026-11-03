@@ -1,0 +1,5 @@
+  m with m-1 or m+1 prime: 4178 of 9998; R(m) = G(m) for all of them: True
+  G(m) contained in R(m) for every even m in [6, 20000]: True
+  m (neither neighbour prime) with R(m) strictly larger than G(m): 5820; first [26, 34, 50, 56, 64, 76, 86, 92, 94, 116]
+POST-HOC PROPOSITION CONFIRMED
+python3 -B $E/residue_pairs_posthoc.py  14.32s user 0.21s system 90% cpu 15.973 total
