@@ -1,0 +1,187 @@
+{
+  "independent_two_ears": 512,
+  "all_five_Q4_checks": 20,
+  "escapes": {
+    "successful53_sources": [
+      [
+        0,
+        6
+      ],
+      [
+        3,
+        6
+      ]
+    ],
+    "neutral_one": 4,
+    "neutral_two": 8,
+    "native_paths": 161,
+    "phases": [
+      {
+        "h": 485,
+        "source": {
+          "root": 0,
+          "observer": [
+            161,
+            53,
+            125
+          ],
+          "phase": [
+            1,
+            6,
+            1
+          ]
+        },
+        "target": {
+          "root": 0,
+          "observer": [
+            485,
+            4665,
+            4668
+          ],
+          "phase": [
+            1,
+            6,
+            3
+          ]
+        }
+      },
+      {
+        "h": 487,
+        "source": {
+          "root": 0,
+          "observer": [
+            161,
+            53,
+            125
+          ],
+          "phase": [
+            1,
+            6,
+            1
+          ]
+        },
+        "target": {
+          "root": 0,
+          "observer": [
+            487,
+            1970,
+            1972
+          ],
+          "phase": [
+            6,
+            5,
+            6
+          ]
+        }
+      }
+    ],
+    "hostile53": {
+      "bad": [
+        250,
+        40,
+        51,
+        52,
+        2,
+        16,
+        62,
+        126
+      ],
+      "good": [
+        14,
+        12,
+        8,
+        16,
+        39,
+        79,
+        159,
+        63
+      ],
+      "bad_observer": {
+        "root": 7,
+        "observer": [
+          53,
+          225,
+          226
+        ],
+        "phase": [
+          2,
+          2,
+          2
+        ]
+      },
+      "good_observer": {
+        "root": 7,
+        "observer": [
+          53,
+          204,
+          205
+        ],
+        "phase": [
+          2,
+          2,
+          2
+        ]
+      },
+      "good_hits": [
+        [
+          64,
+          64,
+          161
+        ],
+        [
+          64,
+          320,
+          161
+        ],
+        [
+          64,
+          448,
+          161
+        ],
+        [
+          192,
+          64,
+          161
+        ],
+        [
+          192,
+          192,
+          161
+        ],
+        [
+          192,
+          448,
+          161
+        ]
+      ]
+    }
+  },
+  "boundary_families": 47,
+  "boundary_programs": 14,
+  "strong_boundary_programs": 10,
+  "clock": {
+    "wing_states": 9,
+    "wing_observations": 7,
+    "joint_states": 81,
+    "joint_observations": 49,
+    "future_scalar_classes": 81,
+    "scope": "modulo-seven Hamilton response under four independent block growths"
+  },
+  "incoming": {
+    "literal_port_identifications": 16,
+    "canonical_final_h": 7305,
+    "canonical_final_order": 16,
+    "two_probe_cases": 9,
+    "integral_probe_smith": [
+      1,
+      1
+    ]
+  },
+  "wing_switch": {
+    "examples": 6,
+    "literal_Q4_checks": 10,
+    "future_classes": 18,
+    "scope": "one-edge switch with a two-native traced implementation; helper restriction is explicit"
+  },
+  "status": "PASS; same-session review, independent combinatorial counting paths"
+}

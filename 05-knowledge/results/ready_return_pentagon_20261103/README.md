@@ -5,6 +5,11 @@ classifications**, same-agent proof review with independent counting algorithms.
 The complete odd Hamilton-path spectrum remains **OPEN**. No A000568 extension
 or externally established novelty is claimed.
 
+Next checkpoint: [defect returns and actual native escapes](../defect_offset_dynamics_20261103/README.md)
+classifies the full fixed-boundary two-ear alphabet on C4/C6, extends to a
+four-parameter two-wing law and exact marked-class series, and supplies literal
+161->485/487 complement/birth escapes. Full two-offset source closure stays open.
+
 The requested return law becomes more precise here. A return preserving H
 cannot close the entire classified F-H=1/2 library: **H35 has no ready source
 at any order**, even allowing weak tournaments and arbitrary source changes.

@@ -25,6 +25,13 @@ all-order raw-count exclusion. No spectral completeness claim follows.
 recurrence index. The new triple-reentry packet checks path orders 0..12 by
 independent-set enumeration, recurrence and the corrected binomial formula.
 
+## 2026-11-03 — one continuation target does not mean one successful source
+
+- **Scope:** a progress sentence during `05-knowledge/results/defect_offset_dynamics_20261103/`; no accepted theorem was changed.
+- **Witness / first failed implication:** the six strong H53 classes reached from the specified H5/H17 chain have two successful source classes, each with six strong two-ear programs, reaching the same H161 target class. Deduplicating targets gave one; it did not count source fibres.
+- **Repair / strongest survivor:** retain the bipartite source-program-target incidence. The successful sources are the converse pair T_(3,1),T_(1,3); the final target is T_(3,3). The exact target count and scalar chain remain valid.
+- **Missing coordinate / new question:** source identity and transported ports remain necessary even when all targets coalesce. `ESCAPES.md` and `replay.py` in that packet record and reproduce the repaired counts.
+
 ## 2026-11-03 — a native chord complement need not be a blue line
 
 - **Scope:** `session160_ordered_programs_20261103/priority_tilings/NOTE.md` and its scanner output labels, received at `ab860360b8`. The priority scanner, arithmetic-image counts2592/512 and native-complement identity remain valid.

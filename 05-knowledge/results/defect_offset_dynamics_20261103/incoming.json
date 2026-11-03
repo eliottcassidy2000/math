@@ -1,0 +1,10 @@
+{
+  "literal_port_identifications": 16,
+  "canonical_final_h": 7305,
+  "canonical_final_order": 16,
+  "two_probe_cases": 9,
+  "integral_probe_smith": [
+    1,
+    1
+  ]
+}
