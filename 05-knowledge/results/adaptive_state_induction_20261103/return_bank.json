@@ -1,0 +1,1833 @@
+{
+  "status": "PASS",
+  "base_commit": "ff94a6d741",
+  "atlas_sha256": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba",
+  "scope": "65 supplied matrices; five inherited error lines; all 4225 length-two words; both ends of each discovery lift have H<=500; three literal switched-family controls. No all-word signed-charge or global-spectrum classification.",
+  "quotient_records": [
+    {
+      "channel": "bq2",
+      "letter": "b",
+      "basis": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "matrix": [
+        [
+          5,
+          8
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "determinant": -1,
+      "unit_mod3": true
+    },
+    {
+      "channel": "bq2",
+      "letter": "q2",
+      "basis": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "matrix": [
+        [
+          11,
+          18
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "determinant": 5,
+      "unit_mod3": true
+    },
+    {
+      "channel": "r21",
+      "letter": "r21",
+      "basis": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "matrix": [
+        [
+          3,
+          -49
+        ],
+        [
+          -2,
+          37
+        ]
+      ],
+      "determinant": 13,
+      "unit_mod3": true
+    },
+    {
+      "channel": "r21",
+      "letter": "r38",
+      "basis": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "matrix": [
+        [
+          3,
+          -49
+        ],
+        [
+          -2,
+          37
+        ]
+      ],
+      "determinant": 13,
+      "unit_mod3": true
+    },
+    {
+      "channel": "q5",
+      "letter": "q5",
+      "basis": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "matrix": [
+        [
+          9,
+          14
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "determinant": -21,
+      "unit_mod3": false
+    }
+  ],
+  "one_letter_bridges": [
+    {
+      "source": "bq2",
+      "letter": "b",
+      "target": "bq2",
+      "multiplier": -1
+    },
+    {
+      "source": "bq2",
+      "letter": "q2",
+      "target": "bq2",
+      "multiplier": 1
+    },
+    {
+      "source": "q1",
+      "letter": "q1",
+      "target": "q1",
+      "multiplier": -1
+    },
+    {
+      "source": "q4",
+      "letter": "q4",
+      "target": "q4",
+      "multiplier": -1
+    },
+    {
+      "source": "q5",
+      "letter": "a",
+      "target": "bq2",
+      "multiplier": -1
+    },
+    {
+      "source": "q5",
+      "letter": "q5",
+      "target": "q5",
+      "multiplier": -1
+    },
+    {
+      "source": "q5",
+      "letter": "r21",
+      "target": "bq2",
+      "multiplier": 1
+    },
+    {
+      "source": "q5",
+      "letter": "r38",
+      "target": "bq2",
+      "multiplier": 1
+    },
+    {
+      "source": "r21",
+      "letter": "r21",
+      "target": "r21",
+      "multiplier": 1
+    },
+    {
+      "source": "r21",
+      "letter": "r38",
+      "target": "r21",
+      "multiplier": 1
+    }
+  ],
+  "two_letter_signed_units": [
+    {
+      "word": [
+        "b",
+        "b"
+      ],
+      "sign": 1,
+      "determinant": 1
+    },
+    {
+      "word": [
+        "b",
+        "q2"
+      ],
+      "sign": -1,
+      "determinant": 5
+    },
+    {
+      "word": [
+        "q1",
+        "q1"
+      ],
+      "sign": 1,
+      "determinant": 81
+    },
+    {
+      "word": [
+        "q2",
+        "b"
+      ],
+      "sign": -1,
+      "determinant": 5
+    },
+    {
+      "word": [
+        "q2",
+        "q2"
+      ],
+      "sign": 1,
+      "determinant": 25
+    },
+    {
+      "word": [
+        "q4",
+        "q4"
+      ],
+      "sign": 1,
+      "determinant": 81
+    },
+    {
+      "word": [
+        "q5",
+        "q5"
+      ],
+      "sign": 1,
+      "determinant": 441
+    },
+    {
+      "word": [
+        "r21",
+        "r21"
+      ],
+      "sign": 1,
+      "determinant": 169
+    },
+    {
+      "word": [
+        "r21",
+        "r38"
+      ],
+      "sign": 1,
+      "determinant": 169
+    },
+    {
+      "word": [
+        "r38",
+        "r21"
+      ],
+      "sign": 1,
+      "determinant": 169
+    },
+    {
+      "word": [
+        "r38",
+        "r38"
+      ],
+      "sign": 1,
+      "determinant": 169
+    }
+  ],
+  "small_lift_discovery": {
+    "cap": 500,
+    "state_count": 3592,
+    "lifts": {
+      "bq2": [
+        {
+          "state": [
+            5,
+            3,
+            4
+          ],
+          "word": [
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                19,
+                7,
+                12
+              ],
+              "word": [
+                "r2",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            5,
+            9,
+            9
+          ],
+          "word": [
+            "r10"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                19,
+                25,
+                27
+              ],
+              "word": [
+                "a",
+                "r36"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            9,
+            7,
+            8
+          ],
+          "word": [
+            "r4"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                29,
+                20,
+                24
+              ],
+              "word": [
+                "a",
+                "r5"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            11,
+            6,
+            7
+          ],
+          "word": [
+            "r6"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                37,
+                16,
+                21
+              ],
+              "word": [
+                "r16",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            1,
+            1,
+            1
+          ],
+          "word": [
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                5,
+                2,
+                3
+              ],
+              "word": [
+                "b",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            147,
+            99,
+            123
+          ],
+          "word": [
+            "q1",
+            "r21"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                443,
+                296,
+                369
+              ],
+              "word": [
+                "r19",
+                "r21"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            73,
+            60,
+            72
+          ],
+          "word": [
+            "q2",
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                223,
+                178,
+                216
+              ],
+              "word": [
+                "r2",
+                "a",
+                "q2"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            151,
+            132,
+            155
+          ],
+          "word": [
+            "r10",
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                457,
+                394,
+                465
+              ],
+              "word": [
+                "a",
+                "r36",
+                "q2"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            73,
+            57,
+            73
+          ],
+          "word": [
+            "r27",
+            "b"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                221,
+                170,
+                219
+              ],
+              "word": [
+                "b",
+                "a",
+                "b",
+                "b"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            149,
+            124,
+            148
+          ],
+          "word": [
+            "r4",
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                449,
+                371,
+                444
+              ],
+              "word": [
+                "a",
+                "r5",
+                "q2"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            145,
+            117,
+            141
+          ],
+          "word": [
+            "r6",
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                439,
+                349,
+                423
+              ],
+              "word": [
+                "r16",
+                "a",
+                "q2"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            19,
+            16,
+            19
+          ],
+          "word": [
+            "a",
+            "a",
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                59,
+                47,
+                57
+              ],
+              "word": [
+                "b",
+                "a",
+                "q2"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            39,
+            52,
+            55
+          ],
+          "word": [
+            "a",
+            "a",
+            "r4"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                119,
+                155,
+                165
+              ],
+              "word": [
+                "b",
+                "a",
+                "r20"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            81,
+            32,
+            53
+          ],
+          "word": [
+            "a",
+            "r28",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                247,
+                94,
+                159
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "r4",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            45,
+            39,
+            48
+          ],
+          "word": [
+            "q1",
+            "a",
+            "b"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                137,
+                116,
+                144
+              ],
+              "word": [
+                "r19",
+                "a",
+                "b"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            147,
+            54,
+            108
+          ],
+          "word": [
+            "q1",
+            "q5",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                443,
+                161,
+                324
+              ],
+              "word": [
+                "r19",
+                "q5",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            59,
+            50,
+            62
+          ],
+          "word": [
+            "q2",
+            "a",
+            "b"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                179,
+                149,
+                186
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "a",
+                "a",
+                "a",
+                "a",
+                "b"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            43,
+            19,
+            34
+          ],
+          "word": [
+            "r13",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                133,
+                55,
+                102
+              ],
+              "word": [
+                "r4",
+                "a",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            137,
+            115,
+            143
+          ],
+          "word": [
+            "r13",
+            "a",
+            "b"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                413,
+                344,
+                429
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "b",
+                "a",
+                "a",
+                "b"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            153,
+            130,
+            161
+          ],
+          "word": [
+            "r21",
+            "a",
+            "b"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                461,
+                389,
+                483
+              ],
+              "word": [
+                "b",
+                "q5",
+                "a",
+                "b"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            31,
+            14,
+            25
+          ],
+          "word": [
+            "r5",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                95,
+                41,
+                75
+              ],
+              "word": [
+                "a",
+                "a",
+                "q1",
+                "a",
+                "a"
+              ]
+            },
+            {
+              "m": 2,
+              "state": [
+                97,
+                40,
+                75
+              ],
+              "word": [
+                "q0",
+                "a",
+                "a",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            37,
+            17,
+            30
+          ],
+          "word": [
+            "r6",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                113,
+                50,
+                90
+              ],
+              "word": [
+                "a",
+                "r51",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            73,
+            32,
+            57
+          ],
+          "word": [
+            "r27",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                221,
+                95,
+                171
+              ],
+              "word": [
+                "a",
+                "r29",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            89,
+            40,
+            70
+          ],
+          "word": [
+            "r33",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                269,
+                119,
+                210
+              ],
+              "word": [
+                "a",
+                "r26",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            131,
+            57,
+            102
+          ],
+          "word": [
+            "b",
+            "b",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                397,
+                169,
+                306
+              ],
+              "word": [
+                "a",
+                "a",
+                "r27",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        }
+      ],
+      "q1": [
+        {
+          "state": [
+            29,
+            23,
+            26
+          ],
+          "word": [
+            "s262"
+          ],
+          "outputs": [
+            {
+              "m": 4,
+              "state": [
+                99,
+                61,
+                82
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "r29"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            37,
+            18,
+            26
+          ],
+          "word": [
+            "a",
+            "r19"
+          ],
+          "outputs": [
+            {
+              "m": 4,
+              "state": [
+                123,
+                46,
+                82
+              ],
+              "word": [
+                "a",
+                "a",
+                "r58",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            51,
+            44,
+            51
+          ],
+          "word": [
+            "a",
+            "a",
+            "r17"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                159,
+                128,
+                155
+              ],
+              "word": [
+                "q5",
+                "a",
+                "q2"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            65,
+            39,
+            50
+          ],
+          "word": [
+            "a",
+            "a",
+            "r6"
+          ],
+          "outputs": [
+            {
+              "m": 4,
+              "state": [
+                207,
+                109,
+                154
+              ],
+              "word": [
+                "r4",
+                "q1"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            57,
+            26,
+            45
+          ],
+          "word": [
+            "r2",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                177,
+                74,
+                137
+              ],
+              "word": [
+                "r11",
+                "a",
+                "a",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        }
+      ],
+      "q4": [
+        {
+          "state": [
+            123,
+            163,
+            177
+          ],
+          "word": [
+            "q5",
+            "a",
+            "q4"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                375,
+                485,
+                531
+              ],
+              "word": [
+                "a",
+                "r45",
+                "q4"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            81,
+            76,
+            85
+          ],
+          "word": [
+            "a",
+            "a",
+            "a",
+            "r1"
+          ],
+          "outputs": [
+            {
+              "m": 4,
+              "state": [
+                255,
+                220,
+                255
+              ],
+              "word": [
+                "r3",
+                "r17"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            89,
+            40,
+            70
+          ],
+          "word": [
+            "r33",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                273,
+                116,
+                210
+              ],
+              "word": [
+                "b",
+                "q5",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            71,
+            30,
+            54
+          ],
+          "word": [
+            "r6",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 4,
+              "state": [
+                225,
+                82,
+                162
+              ],
+              "word": [
+                "b",
+                "r22",
+                "a"
+              ]
+            }
+          ]
+        }
+      ],
+      "q5": [
+        {
+          "state": [
+            3,
+            3,
+            3
+          ],
+          "word": [
+            "q1"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                11,
+                7,
+                10
+              ],
+              "word": [
+                "r19"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            5,
+            3,
+            4
+          ],
+          "word": [
+            "q2"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                17,
+                7,
+                13
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            13,
+            6,
+            9
+          ],
+          "word": [
+            "r13"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                41,
+                16,
+                28
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "b",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            13,
+            8,
+            10
+          ],
+          "word": [
+            "r21"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                41,
+                22,
+                31
+              ],
+              "word": [
+                "b",
+                "q5"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            73,
+            26,
+            55
+          ],
+          "word": [
+            "a",
+            "r19",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                221,
+                76,
+                166
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "r3",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            49,
+            21,
+            39
+          ],
+          "word": [
+            "r21",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                151,
+                59,
+                119
+              ],
+              "word": [
+                "a",
+                "r26",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            59,
+            21,
+            46
+          ],
+          "word": [
+            "r25",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                179,
+                61,
+                139
+              ],
+              "word": [
+                "a",
+                "r24",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            99,
+            42,
+            76
+          ],
+          "word": [
+            "r29",
+            "a",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 1,
+              "state": [
+                299,
+                124,
+                229
+              ],
+              "word": [
+                "a",
+                "a",
+                "q2",
+                "a",
+                "a",
+                "a",
+                "a"
+              ]
+            }
+          ]
+        }
+      ],
+      "r21": [
+        {
+          "state": [
+            33,
+            33,
+            39
+          ],
+          "word": [
+            "a",
+            "r12"
+          ],
+          "outputs": [
+            {
+              "m": 4,
+              "state": [
+                111,
+                95,
+                113
+              ],
+              "word": [
+                "a",
+                "a",
+                "a",
+                "r10"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            129,
+            171,
+            186
+          ],
+          "word": [
+            "r13",
+            "q4"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                393,
+                511,
+                556
+              ],
+              "word": [
+                "a",
+                "r27",
+                "q0"
+              ]
+            }
+          ]
+        },
+        {
+          "state": [
+            39,
+            16,
+            31
+          ],
+          "word": [
+            "r4",
+            "a",
+            "a"
+          ],
+          "outputs": [
+            {
+              "m": 2,
+              "state": [
+                123,
+                46,
+                91
+              ],
+              "word": [
+                "a",
+                "a",
+                "r27",
+                "a"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "actual_switched_family_controls": [
+    {
+      "k": 0,
+      "tail": [],
+      "source_word": [
+        "q2",
+        "a"
+      ],
+      "target_word": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "source_state": [
+        11,
+        4,
+        8
+      ],
+      "target_state": [
+        31,
+        13,
+        24
+      ],
+      "source_H": 11,
+      "target_H": 31,
+      "offset": -2,
+      "source_order": 5,
+      "target_order": 7,
+      "source_rows": [
+        24,
+        17,
+        19,
+        6,
+        8
+      ],
+      "target_rows": [
+        124,
+        121,
+        114,
+        100,
+        72,
+        16,
+        32
+      ]
+    },
+    {
+      "k": 0,
+      "tail": [
+        "b"
+      ],
+      "source_word": [
+        "q2",
+        "a",
+        "b"
+      ],
+      "target_word": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "b"
+      ],
+      "source_state": [
+        59,
+        50,
+        62
+      ],
+      "target_state": [
+        179,
+        149,
+        186
+      ],
+      "source_H": 59,
+      "target_H": 179,
+      "offset": 2,
+      "source_order": 8,
+      "target_order": 10,
+      "source_rows": [
+        248,
+        241,
+        243,
+        230,
+        200,
+        16,
+        32,
+        96
+      ],
+      "target_rows": [
+        1020,
+        1017,
+        1010,
+        996,
+        968,
+        912,
+        800,
+        64,
+        128,
+        384
+      ]
+    },
+    {
+      "k": 1,
+      "tail": [],
+      "source_word": [
+        "q2",
+        "q5",
+        "a"
+      ],
+      "target_word": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "q5",
+        "a"
+      ],
+      "source_state": [
+        189,
+        69,
+        138
+      ],
+      "target_state": [
+        569,
+        206,
+        414
+      ],
+      "source_H": 189,
+      "target_H": 569,
+      "offset": 2,
+      "source_order": 9,
+      "target_order": 11,
+      "source_rows": [
+        504,
+        497,
+        499,
+        486,
+        328,
+        400,
+        288,
+        80,
+        128
+      ],
+      "target_rows": [
+        2044,
+        2041,
+        2034,
+        2020,
+        1992,
+        1936,
+        1312,
+        1600,
+        1152,
+        320,
+        512
+      ]
+    }
+  ],
+  "singular_q5_bulk_control": [
+    {
+      "word": [
+        "q2"
+      ],
+      "bulk": [
+        8,
+        11
+      ],
+      "valuation3": 0
+    },
+    {
+      "word": [
+        "q2",
+        "q5"
+      ],
+      "bulk": [
+        138,
+        189
+      ],
+      "valuation3": 1
+    },
+    {
+      "word": [
+        "q2",
+        "q5",
+        "q5"
+      ],
+      "bulk": [
+        2376,
+        3255
+      ],
+      "valuation3": 1
+    }
+  ],
+  "inherited_bq2_seed_levels": [
+    {
+      "word": [
+        "r5",
+        "a",
+        "a"
+      ],
+      "state": [
+        31,
+        14,
+        25
+      ],
+      "bulk": [
+        25,
+        34
+      ],
+      "valuation3": 0
+    },
+    {
+      "word": [
+        "a",
+        "a",
+        "q1",
+        "a",
+        "a"
+      ],
+      "state": [
+        95,
+        41,
+        75
+      ],
+      "bulk": [
+        75,
+        102
+      ],
+      "valuation3": 1
+    },
+    {
+      "word": [
+        "q0",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "state": [
+        97,
+        40,
+        75
+      ],
+      "bulk": [
+        75,
+        102
+      ],
+      "valuation3": 1
+    }
+  ]
+}

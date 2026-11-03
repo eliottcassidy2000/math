@@ -1,0 +1,97 @@
+{
+  "actual_return_prefix": [
+    29,
+    69,
+    155,
+    349,
+    803
+  ],
+  "actual_transition_queries": 113,
+  "charts": [
+    {
+      "control": [
+        1,
+        1
+      ],
+      "determinant": 4,
+      "dimension": 3,
+      "largest_actual_order": 8
+    },
+    {
+      "control": [
+        1,
+        2,
+        1
+      ],
+      "determinant": -8,
+      "dimension": 3,
+      "largest_actual_order": 7
+    },
+    {
+      "control": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "determinant": 5,
+      "dimension": 1,
+      "largest_actual_order": 4
+    },
+    {
+      "control": [
+        2,
+        1,
+        1
+      ],
+      "determinant": -4,
+      "dimension": 3,
+      "largest_actual_order": 7
+    },
+    {
+      "control": [
+        2,
+        2,
+        1
+      ],
+      "determinant": 917504,
+      "dimension": 11,
+      "largest_actual_order": 10
+    },
+    {
+      "control": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "determinant": -9600,
+      "dimension": 7,
+      "largest_actual_order": 9
+    }
+  ],
+  "distinct_actual_graphs_counted": 433,
+  "global_guarded_minor": {
+    "determinant": 12470867040665600,
+    "dimension": 28,
+    "entries": 784,
+    "illegal_zero_entries": 176
+  },
+  "literal_query_entries": 198,
+  "mod75_guard": {
+    "actual_H00": 59,
+    "actual_queries": [
+      13,
+      23,
+      29,
+      25,
+      29,
+      49,
+      43
+    ],
+    "fake_H15_H00": "3953/75"
+  },
+  "producer_sha256": "d1b54c9da35021d4b8ae448bd74f4f5c32488b089a33c5c0ab2fcc06a6423c4e",
+  "scope": "All198 local and784 guarded global lower-bound entries,19 transitions on one actual prefix per source chart, and actual scalar prefix; full rational closure proof separately code-audited, not reimplemented here. Global minimum is scoped to illegal words assigned zero.",
+  "status": "PASS independent actual Hamilton-query minors and transports"
+}

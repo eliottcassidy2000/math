@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — low-rank commands need not share a low-dimensional observer
+
+- **Scope:** prepublication block-switch derivation in `05-knowledge/results/adaptive_state_induction_20261103/BLOCK_SWITCH.md`; no accepted theorem is retracted.
+- **Witness / first failed implication:** each fresh-block command has rank at most3, including J1, whose image satisfies `h'-q'=2s'`. This does not put their union in one common three-dimensional space. The actual C3 prefix/query Hankel matrix for prefixes empty,R,N,J1 and suffixes empty,R,RR,NR has determinant-32. Its last-row RR entry is45, correcting an initial mental53 and the consequent wrong determinant-64.
+- **Repair / strongest survivor:** the four-coordinate positive representation is closed and has minimum rational dimension4 when J1 is allowed. The cap1 C3 language still has minimum3. Individual map rank, reachable-span dimension and future-response rank are different quantities.
+- **Missing coordinate / new question:** retain the command-dependent image chart and its relations before comparing linear dimensions; a union of different low-rank images may require more observation coordinates. Exact matrices, actual minor and independent profile checks are in the linked packet and `AUDIT.md`.
+
 ## 2026-11-03 — negative affine offsets reverse the inverse-descent threshold
 
 - **Scope:** the conditional multi-interface certificate in `05-knowledge/results/session153_gadgets_20261103/strategy/finite_certificate.md`, as received at `583a44a8b19857f68ef880494ed6ab8b1b1467ac`. No tournament spectrum theorem had been claimed.

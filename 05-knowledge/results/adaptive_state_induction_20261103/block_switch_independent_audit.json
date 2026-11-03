@@ -1,0 +1,7553 @@
+{
+  "checks": 240,
+  "controls": [
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        2,
+        0
+      ],
+      "new_mark": 1,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        6,
+        0,
+        2
+      ],
+      "new_mark": 1,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        6,
+        0,
+        2
+      ],
+      "new_mark": 2,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "new_mark": 1,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "new_mark": 2,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        4,
+        1,
+        2
+      ],
+      "new_mark": 2,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        12,
+        1,
+        2,
+        6
+      ],
+      "new_mark": 2,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        12,
+        1,
+        2,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        28,
+        1,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 2,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        28,
+        1,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        28,
+        1,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        5,
+        1
+      ],
+      "new_mark": 2,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        0,
+        13,
+        1,
+        5
+      ],
+      "new_mark": 2,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        13,
+        1,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        0,
+        29,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 2,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        0,
+        29,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        29,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        6,
+        0,
+        2
+      ],
+      "new_mark": 2,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "new_mark": 2,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        30,
+        0,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 2,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        30,
+        0,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        30,
+        0,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        2,
+        4,
+        1
+      ],
+      "new_mark": 2,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "new_mark": 2,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        2,
+        28,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 2,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        2,
+        28,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        2,
+        28,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "child_rows": [
+        8,
+        1,
+        3,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        3,
+        5,
+        17
+      ],
+      "child_rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        4,
+        5,
+        12
+      ],
+      "child_rows": [
+        24,
+        1,
+        3,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        3,
+        11,
+        53
+      ],
+      "child_rows": [
+        56,
+        1,
+        3,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        6,
+        11,
+        36
+      ],
+      "child_rows": [
+        56,
+        1,
+        3,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "child_rows": [
+        56,
+        1,
+        3,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        0,
+        9,
+        3,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        0,
+        25,
+        3,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        0,
+        25,
+        3,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        0,
+        57,
+        3,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        0,
+        57,
+        3,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        0,
+        57,
+        3,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        1,
+        11,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        0,
+        1,
+        27,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        1,
+        27,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        0,
+        1,
+        59,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        0,
+        1,
+        59,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        1,
+        59,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        10,
+        0,
+        3,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        26,
+        0,
+        3,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        26,
+        0,
+        3,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        58,
+        0,
+        3,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        58,
+        0,
+        3,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        58,
+        0,
+        3,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "child_rows": [
+        2,
+        8,
+        3,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        3,
+        5,
+        17
+      ],
+      "child_rows": [
+        2,
+        24,
+        3,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        4,
+        5,
+        12
+      ],
+      "child_rows": [
+        2,
+        24,
+        3,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        3,
+        11,
+        53
+      ],
+      "child_rows": [
+        2,
+        56,
+        3,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        6,
+        11,
+        36
+      ],
+      "child_rows": [
+        2,
+        56,
+        3,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "child_rows": [
+        2,
+        56,
+        3,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        2,
+        0,
+        11,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        2,
+        0,
+        27,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        2,
+        0,
+        27,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        2,
+        0,
+        59,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        2,
+        0,
+        59,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        2,
+        0,
+        59,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        12,
+        1,
+        2,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        28,
+        1,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        28,
+        1,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        2,
+        9,
+        44
+      ],
+      "child_rows": [
+        60,
+        1,
+        2,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        4,
+        9,
+        28
+      ],
+      "child_rows": [
+        60,
+        1,
+        2,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "child_rows": [
+        60,
+        1,
+        2,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        4,
+        9,
+        2,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        4,
+        25,
+        2,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        4,
+        25,
+        2,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        2,
+        9,
+        44
+      ],
+      "child_rows": [
+        4,
+        57,
+        2,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        4,
+        9,
+        28
+      ],
+      "child_rows": [
+        4,
+        57,
+        2,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "child_rows": [
+        4,
+        57,
+        2,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        4,
+        1,
+        10,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        4,
+        1,
+        26,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        4,
+        1,
+        26,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        2,
+        9,
+        44
+      ],
+      "child_rows": [
+        4,
+        1,
+        58,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        4,
+        9,
+        28
+      ],
+      "child_rows": [
+        4,
+        1,
+        58,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "child_rows": [
+        4,
+        1,
+        58,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        14,
+        0,
+        2,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        30,
+        0,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        30,
+        0,
+        2,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        62,
+        0,
+        2,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        62,
+        0,
+        2,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        62,
+        0,
+        2,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "child_rows": [
+        6,
+        8,
+        2,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        3,
+        5,
+        17
+      ],
+      "child_rows": [
+        6,
+        24,
+        2,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        4,
+        5,
+        12
+      ],
+      "child_rows": [
+        6,
+        24,
+        2,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        3,
+        11,
+        53
+      ],
+      "child_rows": [
+        6,
+        56,
+        2,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        6,
+        11,
+        36
+      ],
+      "child_rows": [
+        6,
+        56,
+        2,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "child_rows": [
+        6,
+        56,
+        2,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        6,
+        0,
+        10,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        6,
+        0,
+        26,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        6,
+        0,
+        26,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        6,
+        0,
+        58,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        6,
+        0,
+        58,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        6,
+        0,
+        58,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "child_rows": [
+        8,
+        5,
+        1,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        3,
+        5,
+        17
+      ],
+      "child_rows": [
+        24,
+        5,
+        1,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        4,
+        5,
+        12
+      ],
+      "child_rows": [
+        24,
+        5,
+        1,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        3,
+        11,
+        53
+      ],
+      "child_rows": [
+        56,
+        5,
+        1,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        6,
+        11,
+        36
+      ],
+      "child_rows": [
+        56,
+        5,
+        1,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "child_rows": [
+        56,
+        5,
+        1,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        13,
+        1,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        0,
+        29,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        29,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        0,
+        61,
+        1,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        0,
+        61,
+        1,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        0,
+        61,
+        1,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        0,
+        5,
+        9,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        0,
+        5,
+        25,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        0,
+        5,
+        25,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        0,
+        5,
+        57,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        0,
+        5,
+        57,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        0,
+        5,
+        57,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        0,
+        5,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        10,
+        4,
+        1,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        26,
+        4,
+        1,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        26,
+        4,
+        1,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        2,
+        9,
+        44
+      ],
+      "child_rows": [
+        58,
+        4,
+        1,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        4,
+        9,
+        28
+      ],
+      "child_rows": [
+        58,
+        4,
+        1,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "child_rows": [
+        58,
+        4,
+        1,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        2,
+        12,
+        1,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        2,
+        28,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        2,
+        28,
+        1,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        2,
+        9,
+        44
+      ],
+      "child_rows": [
+        2,
+        60,
+        1,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        4,
+        9,
+        28
+      ],
+      "child_rows": [
+        2,
+        60,
+        1,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "child_rows": [
+        2,
+        60,
+        1,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        2,
+        4,
+        25,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        2,
+        9,
+        44
+      ],
+      "child_rows": [
+        2,
+        4,
+        57,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        4,
+        9,
+        28
+      ],
+      "child_rows": [
+        2,
+        4,
+        57,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        17,
+        8,
+        9,
+        18
+      ],
+      "child_rows": [
+        2,
+        4,
+        57,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "source_rows": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        12,
+        5,
+        0,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        28,
+        5,
+        0,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        28,
+        5,
+        0,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        60,
+        5,
+        0,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        60,
+        5,
+        0,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        60,
+        5,
+        0,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        4,
+        13,
+        0,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        4,
+        29,
+        0,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        4,
+        29,
+        0,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        4,
+        61,
+        0,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        4,
+        61,
+        0,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        4,
+        61,
+        0,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "child_rows": [
+        4,
+        5,
+        8,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        3,
+        5,
+        17
+      ],
+      "child_rows": [
+        4,
+        5,
+        24,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        4,
+        5,
+        12
+      ],
+      "child_rows": [
+        4,
+        5,
+        24,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        3,
+        11,
+        53
+      ],
+      "child_rows": [
+        4,
+        5,
+        56,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        6,
+        11,
+        36
+      ],
+      "child_rows": [
+        4,
+        5,
+        56,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "child_rows": [
+        4,
+        5,
+        56,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        4,
+        5,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        14,
+        4,
+        0,
+        6
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        30,
+        4,
+        0,
+        6,
+        14
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        30,
+        4,
+        0,
+        6,
+        14
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        8
+      ],
+      "child_rows": [
+        62,
+        4,
+        0,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "child_rows": [
+        62,
+        4,
+        0,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "child_rows": [
+        62,
+        4,
+        0,
+        6,
+        14,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        3,
+        1,
+        1,
+        3
+      ],
+      "child_rows": [
+        6,
+        12,
+        0,
+        5
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        3,
+        9
+      ],
+      "child_rows": [
+        6,
+        28,
+        0,
+        5,
+        13
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        2,
+        3,
+        6
+      ],
+      "child_rows": [
+        6,
+        28,
+        0,
+        5,
+        13
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        1,
+        5,
+        25
+      ],
+      "child_rows": [
+        6,
+        60,
+        0,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        2,
+        5,
+        16
+      ],
+      "child_rows": [
+        6,
+        60,
+        0,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        9,
+        4,
+        5,
+        10
+      ],
+      "child_rows": [
+        6,
+        60,
+        0,
+        5,
+        13,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        5,
+        1,
+        1,
+        5
+      ],
+      "child_rows": [
+        6,
+        4,
+        8,
+        3
+      ],
+      "new_mark": 3,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        3,
+        5,
+        17
+      ],
+      "child_rows": [
+        6,
+        4,
+        24,
+        3,
+        11
+      ],
+      "new_mark": 3,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        11,
+        4,
+        5,
+        12
+      ],
+      "child_rows": [
+        6,
+        4,
+        24,
+        3,
+        11
+      ],
+      "new_mark": 4,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        3,
+        11,
+        53
+      ],
+      "child_rows": [
+        6,
+        4,
+        56,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 3,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        6,
+        11,
+        36
+      ],
+      "child_rows": [
+        6,
+        4,
+        56,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 4,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        23,
+        10,
+        11,
+        24
+      ],
+      "child_rows": [
+        6,
+        4,
+        56,
+        3,
+        11,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        1,
+        0,
+        1,
+        4
+      ],
+      "source_rows": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "actual_profile": [
+        101,
+        31,
+        37,
+        107
+      ],
+      "child_rows": [
+        74,
+        20,
+        33,
+        6,
+        13,
+        27,
+        62
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        6,
+        15,
+        70
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        211,
+        55,
+        101,
+        333
+      ],
+      "child_rows": [
+        202,
+        20,
+        33,
+        6,
+        13,
+        27,
+        62,
+        126
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        6,
+        15,
+        70
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        211,
+        86,
+        101,
+        226
+      ],
+      "child_rows": [
+        202,
+        20,
+        33,
+        6,
+        13,
+        27,
+        62,
+        126
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        6,
+        15,
+        70
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        431,
+        55,
+        211,
+        1005
+      ],
+      "child_rows": [
+        458,
+        20,
+        33,
+        6,
+        13,
+        27,
+        62,
+        126,
+        254
+      ],
+      "new_mark": 6,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        6,
+        15,
+        70
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        431,
+        110,
+        211,
+        672
+      ],
+      "child_rows": [
+        458,
+        20,
+        33,
+        6,
+        13,
+        27,
+        62,
+        126,
+        254
+      ],
+      "new_mark": 7,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        6,
+        15,
+        70
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        431,
+        196,
+        211,
+        446
+      ],
+      "child_rows": [
+        458,
+        20,
+        33,
+        6,
+        13,
+        27,
+        62,
+        126,
+        254
+      ],
+      "new_mark": 8,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        37,
+        6,
+        15,
+        70
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        95,
+        33,
+        37,
+        99
+      ],
+      "child_rows": [
+        10,
+        84,
+        33,
+        6,
+        13,
+        27,
+        61
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        4,
+        9,
+        62
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        201,
+        53,
+        95,
+        309
+      ],
+      "child_rows": [
+        10,
+        212,
+        33,
+        6,
+        13,
+        27,
+        61,
+        125
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        4,
+        9,
+        62
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        201,
+        86,
+        95,
+        210
+      ],
+      "child_rows": [
+        10,
+        212,
+        33,
+        6,
+        13,
+        27,
+        61,
+        125
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        4,
+        9,
+        62
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        413,
+        53,
+        201,
+        941
+      ],
+      "child_rows": [
+        10,
+        468,
+        33,
+        6,
+        13,
+        27,
+        61,
+        125,
+        253
+      ],
+      "new_mark": 6,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        4,
+        9,
+        62
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        413,
+        106,
+        201,
+        632
+      ],
+      "child_rows": [
+        10,
+        468,
+        33,
+        6,
+        13,
+        27,
+        61,
+        125,
+        253
+      ],
+      "new_mark": 7,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        4,
+        9,
+        62
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        413,
+        192,
+        201,
+        422
+      ],
+      "child_rows": [
+        10,
+        468,
+        33,
+        6,
+        13,
+        27,
+        61,
+        125,
+        253
+      ],
+      "new_mark": 8,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        37,
+        4,
+        9,
+        62
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        79,
+        32,
+        37,
+        84
+      ],
+      "child_rows": [
+        10,
+        20,
+        97,
+        6,
+        13,
+        27,
+        59
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        5,
+        5,
+        47
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        163,
+        42,
+        79,
+        252
+      ],
+      "child_rows": [
+        10,
+        20,
+        225,
+        6,
+        13,
+        27,
+        59,
+        123
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        5,
+        5,
+        47
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        163,
+        74,
+        79,
+        168
+      ],
+      "child_rows": [
+        10,
+        20,
+        225,
+        6,
+        13,
+        27,
+        59,
+        123
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        5,
+        5,
+        47
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        331,
+        42,
+        163,
+        756
+      ],
+      "child_rows": [
+        10,
+        20,
+        481,
+        6,
+        13,
+        27,
+        59,
+        123,
+        251
+      ],
+      "new_mark": 6,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        5,
+        5,
+        47
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        331,
+        84,
+        163,
+        504
+      ],
+      "child_rows": [
+        10,
+        20,
+        481,
+        6,
+        13,
+        27,
+        59,
+        123,
+        251
+      ],
+      "new_mark": 7,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        5,
+        5,
+        47
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        331,
+        158,
+        163,
+        336
+      ],
+      "child_rows": [
+        10,
+        20,
+        481,
+        6,
+        13,
+        27,
+        59,
+        123,
+        251
+      ],
+      "new_mark": 8,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        37,
+        5,
+        5,
+        47
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        103,
+        32,
+        37,
+        108
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        70,
+        13,
+        27,
+        55
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 3,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        219,
+        58,
+        103,
+        340
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        198,
+        13,
+        27,
+        55,
+        119
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 3,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        219,
+        90,
+        103,
+        232
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        198,
+        13,
+        27,
+        55,
+        119
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 3,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        451,
+        58,
+        219,
+        1036
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        454,
+        13,
+        27,
+        55,
+        119,
+        247
+      ],
+      "new_mark": 6,
+      "newer_A": 2,
+      "old_root": 3,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        451,
+        116,
+        219,
+        696
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        454,
+        13,
+        27,
+        55,
+        119,
+        247
+      ],
+      "new_mark": 7,
+      "newer_A": 1,
+      "old_root": 3,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        451,
+        206,
+        219,
+        464
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        454,
+        13,
+        27,
+        55,
+        119,
+        247
+      ],
+      "new_mark": 8,
+      "newer_A": 0,
+      "old_root": 3,
+      "older_B": 2,
+      "source_profile": [
+        37,
+        5,
+        13,
+        71
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        81,
+        31,
+        37,
+        87
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        77,
+        27,
+        47
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 4,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        6,
+        11,
+        50
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        159,
+        39,
+        81,
+        257
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        205,
+        27,
+        47,
+        111
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 4,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        6,
+        11,
+        50
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        159,
+        70,
+        81,
+        170
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        205,
+        27,
+        47,
+        111
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 4,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        6,
+        11,
+        50
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        315,
+        39,
+        159,
+        753
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        461,
+        27,
+        47,
+        111,
+        239
+      ],
+      "new_mark": 6,
+      "newer_A": 2,
+      "old_root": 4,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        6,
+        11,
+        50
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        315,
+        78,
+        159,
+        496
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        461,
+        27,
+        47,
+        111,
+        239
+      ],
+      "new_mark": 7,
+      "newer_A": 1,
+      "old_root": 4,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        6,
+        11,
+        50
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        315,
+        148,
+        159,
+        326
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        461,
+        27,
+        47,
+        111,
+        239
+      ],
+      "new_mark": 8,
+      "newer_A": 0,
+      "old_root": 4,
+      "older_B": 2,
+      "source_profile": [
+        37,
+        6,
+        11,
+        50
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        26,
+        37,
+        76
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        91,
+        31
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 5,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        11,
+        13,
+        39
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        117,
+        26,
+        65,
+        206
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        219,
+        31,
+        95
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 5,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        11,
+        13,
+        39
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        117,
+        52,
+        65,
+        130
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        219,
+        31,
+        95
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 5,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        11,
+        13,
+        39
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        221,
+        26,
+        117,
+        570
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        475,
+        31,
+        95,
+        223
+      ],
+      "new_mark": 6,
+      "newer_A": 2,
+      "old_root": 5,
+      "older_B": 0,
+      "source_profile": [
+        37,
+        11,
+        13,
+        39
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        221,
+        52,
+        117,
+        364
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        475,
+        31,
+        95,
+        223
+      ],
+      "new_mark": 7,
+      "newer_A": 1,
+      "old_root": 5,
+      "older_B": 1,
+      "source_profile": [
+        37,
+        11,
+        13,
+        39
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        221,
+        104,
+        117,
+        234
+      ],
+      "child_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        475,
+        31,
+        95,
+        223
+      ],
+      "new_mark": 8,
+      "newer_A": 0,
+      "old_root": 5,
+      "older_B": 2,
+      "source_profile": [
+        37,
+        11,
+        13,
+        39
+      ],
+      "source_rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "actual_profile": [
+        33,
+        12,
+        15,
+        36
+      ],
+      "child_rows": [
+        38,
+        12,
+        24,
+        17,
+        3,
+        30
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        16,
+        33,
+        106
+      ],
+      "child_rows": [
+        102,
+        12,
+        24,
+        17,
+        3,
+        30,
+        62
+      ],
+      "new_mark": 5,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        28,
+        33,
+        70
+      ],
+      "child_rows": [
+        102,
+        12,
+        24,
+        17,
+        3,
+        30,
+        62
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        16,
+        65,
+        310
+      ],
+      "child_rows": [
+        230,
+        12,
+        24,
+        17,
+        3,
+        30,
+        62,
+        126
+      ],
+      "new_mark": 5,
+      "newer_A": 2,
+      "old_root": 0,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        32,
+        65,
+        204
+      ],
+      "child_rows": [
+        230,
+        12,
+        24,
+        17,
+        3,
+        30,
+        62,
+        126
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 0,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        60,
+        65,
+        134
+      ],
+      "child_rows": [
+        230,
+        12,
+        24,
+        17,
+        3,
+        30,
+        62,
+        126
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 0,
+      "older_B": 2,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        33,
+        12,
+        15,
+        36
+      ],
+      "child_rows": [
+        6,
+        44,
+        24,
+        17,
+        3,
+        29
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        16,
+        33,
+        106
+      ],
+      "child_rows": [
+        6,
+        108,
+        24,
+        17,
+        3,
+        29,
+        61
+      ],
+      "new_mark": 5,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        28,
+        33,
+        70
+      ],
+      "child_rows": [
+        6,
+        108,
+        24,
+        17,
+        3,
+        29,
+        61
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        16,
+        65,
+        310
+      ],
+      "child_rows": [
+        6,
+        236,
+        24,
+        17,
+        3,
+        29,
+        61,
+        125
+      ],
+      "new_mark": 5,
+      "newer_A": 2,
+      "old_root": 1,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        32,
+        65,
+        204
+      ],
+      "child_rows": [
+        6,
+        236,
+        24,
+        17,
+        3,
+        29,
+        61,
+        125
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 1,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        60,
+        65,
+        134
+      ],
+      "child_rows": [
+        6,
+        236,
+        24,
+        17,
+        3,
+        29,
+        61,
+        125
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 1,
+      "older_B": 2,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        33,
+        12,
+        15,
+        36
+      ],
+      "child_rows": [
+        6,
+        12,
+        56,
+        17,
+        3,
+        27
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        16,
+        33,
+        106
+      ],
+      "child_rows": [
+        6,
+        12,
+        120,
+        17,
+        3,
+        27,
+        59
+      ],
+      "new_mark": 5,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        28,
+        33,
+        70
+      ],
+      "child_rows": [
+        6,
+        12,
+        120,
+        17,
+        3,
+        27,
+        59
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        16,
+        65,
+        310
+      ],
+      "child_rows": [
+        6,
+        12,
+        248,
+        17,
+        3,
+        27,
+        59,
+        123
+      ],
+      "new_mark": 5,
+      "newer_A": 2,
+      "old_root": 2,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        32,
+        65,
+        204
+      ],
+      "child_rows": [
+        6,
+        12,
+        248,
+        17,
+        3,
+        27,
+        59,
+        123
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 2,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        60,
+        65,
+        134
+      ],
+      "child_rows": [
+        6,
+        12,
+        248,
+        17,
+        3,
+        27,
+        59,
+        123
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 2,
+      "older_B": 2,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        33,
+        12,
+        15,
+        36
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        49,
+        3,
+        23
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 3,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        16,
+        33,
+        106
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        113,
+        3,
+        23,
+        55
+      ],
+      "new_mark": 5,
+      "newer_A": 1,
+      "old_root": 3,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        28,
+        33,
+        70
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        113,
+        3,
+        23,
+        55
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 3,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        16,
+        65,
+        310
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        241,
+        3,
+        23,
+        55,
+        119
+      ],
+      "new_mark": 5,
+      "newer_A": 2,
+      "old_root": 3,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        32,
+        65,
+        204
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        241,
+        3,
+        23,
+        55,
+        119
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 3,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        60,
+        65,
+        134
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        241,
+        3,
+        23,
+        55,
+        119
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 3,
+      "older_B": 2,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        33,
+        12,
+        15,
+        36
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        17,
+        35,
+        15
+      ],
+      "new_mark": 5,
+      "newer_A": 0,
+      "old_root": 4,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        16,
+        33,
+        106
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        17,
+        99,
+        15,
+        47
+      ],
+      "new_mark": 5,
+      "newer_A": 1,
+      "old_root": 4,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        65,
+        28,
+        33,
+        70
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        17,
+        99,
+        15,
+        47
+      ],
+      "new_mark": 6,
+      "newer_A": 0,
+      "old_root": 4,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        16,
+        65,
+        310
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        17,
+        227,
+        15,
+        47,
+        111
+      ],
+      "new_mark": 5,
+      "newer_A": 2,
+      "old_root": 4,
+      "older_B": 0,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        32,
+        65,
+        204
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        17,
+        227,
+        15,
+        47,
+        111
+      ],
+      "new_mark": 6,
+      "newer_A": 1,
+      "old_root": 4,
+      "older_B": 1,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "actual_profile": [
+        129,
+        60,
+        65,
+        134
+      ],
+      "child_rows": [
+        6,
+        12,
+        24,
+        17,
+        227,
+        15,
+        47,
+        111
+      ],
+      "new_mark": 7,
+      "newer_A": 0,
+      "old_root": 4,
+      "older_B": 2,
+      "source_profile": [
+        15,
+        3,
+        5,
+        21
+      ],
+      "source_rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    }
+  ],
+  "maximum_child_order": 9,
+  "profile_convention": "(h,s,q,F): Hamilton paths; paths starting at root; H after deleting root; ordered two-slot spanning covers with first nonempty path ending at root, second path possibly empty. H(empty)=1.",
+  "scope": "All roots of all labelled tournaments orders1..3, plus regularC5 and adaptive H37 order6; k1..3 and every new mark. Direct subset/end recursion counts all four profile coordinates. This finite check is separate from the all-order combinatorial proof.",
+  "status": "PASS"
+}

@@ -1,0 +1,218 @@
+{
+  "actual_Hankel_entries": 425,
+  "all_short_program_literal_H": 1885,
+  "all_twelve_matrices_rebuilt": true,
+  "all_twelve_updates_verified_on_full25_coordinates": true,
+  "common_static_query_rank": 17,
+  "consequence": "A common exact17-dimensional rational observer for all twelve operations, expressed by static continuation counts, valid for every actual source with two marked vertices. It identifies future count response, not graph languages or spectra.",
+  "constantH_unbounded_weight_controls": [
+    {
+      "H": 1,
+      "births": 2,
+      "selected_coefficient": 2
+    },
+    {
+      "H": 1,
+      "births": 3,
+      "selected_coefficient": 6
+    },
+    {
+      "H": 1,
+      "births": 4,
+      "selected_coefficient": 14
+    },
+    {
+      "H": 1,
+      "births": 5,
+      "selected_coefficient": 30
+    },
+    {
+      "H": 1,
+      "births": 6,
+      "selected_coefficient": 62
+    }
+  ],
+  "distinct_Hankel_graphs": 321,
+  "entire_abstract_nondegenerate_signature_universe": 25,
+  "field_prime": 1000003,
+  "full_literal_cover_vectors": 157,
+  "maximum_Hankel_graph_order": 8,
+  "old_four_letter_graph_map_controls": 85,
+  "scope": "Independent twelve-letter carrier and common static-query observer; no spectrum scan.",
+  "source_receipt_sha256": "fc14da2ead29fa9c9fe5218ad96c87bce606c0cf41f5f0d5a4325917ebaeeafe",
+  "static_basis_prefix_words": [
+    [],
+    [
+      2
+    ],
+    [
+      5
+    ],
+    [
+      8
+    ],
+    [
+      11
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      5
+    ],
+    [
+      2,
+      2,
+      8
+    ],
+    [
+      2,
+      2,
+      11
+    ],
+    [
+      2,
+      5,
+      2
+    ],
+    [
+      2,
+      5,
+      8
+    ],
+    [
+      2,
+      5,
+      11
+    ],
+    [
+      2,
+      8,
+      5
+    ],
+    [
+      5,
+      2,
+      8
+    ]
+  ],
+  "static_queries": [
+    [],
+    [
+      1
+    ],
+    [
+      2
+    ],
+    [
+      3
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      3,
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      3,
+      2,
+      1
+    ]
+  ],
+  "static_reachable_rank_lower_bound": 25,
+  "status": "PASS"
+}

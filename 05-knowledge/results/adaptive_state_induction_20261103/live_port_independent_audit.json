@@ -1,0 +1,379 @@
+{
+  "full_literal_vector_checks": 43,
+  "letter_convention": "3*root_slot+drop; drop0/1 replaces that slot; drop2 discards newborn",
+  "oriented_seed_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "oriented_seed_vectors_equal": true,
+  "program_counts_by_length": [
+    1,
+    6,
+    36
+  ],
+  "rank_audit": {
+    "Hankel_rank_mod_prime": 17,
+    "actual_Hankel_entries_recounted": 408,
+    "actual_Hankel_minor_determinant": "33554432",
+    "actual_Hankel_minor_row_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      18
+    ],
+    "common_static_subseries": {
+      "field_prime": 1000003,
+      "literal_graph_map_controls": 15,
+      "new_fixed_port_dimensions": {
+        "Hankel": 13,
+        "observable": 15,
+        "reachable": 13
+      },
+      "old_reversed_mixed_chain_dimensions": {
+        "Hankel": 13,
+        "observable": 20,
+        "reachable": 15
+      },
+      "scope": "A genuine proper common graph sublanguage and its exact rank13 over F_1000003. This does not identify the full old/new languages or explain both full rational ranks17."
+    },
+    "consequence": "Exact rational reachable rank24, observable rank17, and scalar-series Hankel rank17. No support saturation or all-target claim is inferred.",
+    "distinct_actual_graphs_recounted": 254,
+    "exact_observable_closure_dimension": 17,
+    "maximum_graph_order": 10,
+    "observable_rank_mod_prime": 17,
+    "prime_for_lower_bounds": 1000003,
+    "producer_receipt_sha256": "6703d24d3d1a4fe8b121c3a5d9942f2d57d67dc7ca8738d855f7260c7f8e2f23",
+    "reachable_rank_mod_prime": 24,
+    "six_matrices_rebuilt_independently": true
+  },
+  "reachable_signatures": [
+    [
+      [
+        -1,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        -1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ]
+    ],
+    [
+      [
+        1,
+        0
+      ]
+    ]
+  ],
+  "scope": "Independent component-chain transfer and literal graph covers. All six-action words of length<=2; complete signature support closure; two selected literal Hamilton controls; actual-Hankel recount and exact rank closure. No target saturation through999.",
+  "signature_count": 24,
+  "status": "PASS",
+  "unbounded_degree_family_controls": [
+    {
+      "future_width": 2,
+      "k": 1,
+      "last_root_indegree": 2
+    },
+    {
+      "future_width": 2,
+      "k": 2,
+      "last_root_indegree": 3
+    },
+    {
+      "future_width": 2,
+      "k": 5,
+      "last_root_indegree": 6
+    },
+    {
+      "future_width": 2,
+      "k": 12,
+      "last_root_indegree": 13
+    }
+  ],
+  "width_degree_controls": [
+    {
+      "H_literal": 37,
+      "future_width": 3,
+      "root_indegrees": [
+        1,
+        2,
+        3
+      ],
+      "roots": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        10,
+        20,
+        33,
+        6,
+        13,
+        27
+      ]
+    },
+    {
+      "H_literal": 127,
+      "future_width": 2,
+      "root_indegrees": [
+        1,
+        1,
+        2,
+        2,
+        3
+      ],
+      "roots": [
+        0,
+        0,
+        3,
+        3,
+        0
+      ],
+      "rows": [
+        154,
+        4,
+        1,
+        102,
+        14,
+        23,
+        55,
+        126
+      ]
+    }
+  ]
+}

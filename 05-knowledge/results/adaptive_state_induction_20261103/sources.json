@@ -1,0 +1,181 @@
+{
+  "base_revision": "ff94a6d74130612bf3e34f2ac278c1f848168d88",
+  "scope": "Directly linked predecessor proof surfaces and three external computational dependencies; not the full transitive dependency graph",
+  "sources": [
+    {
+      "git_blob": "e6e199d68d94829d68acfda1578fd1c21dc05fad",
+      "path": "01-canon/theorems/THM-001-redei.md",
+      "sha256": "e89c0bf0e21d5a987dadbe0db82e02497cb7e74b52d62bb959f43edc2c673560"
+    },
+    {
+      "git_blob": "48607834292f4bd7cbcf573a01ef8f3a2d3e85c8",
+      "path": "01-canon/theorems/THM-1370-h-spectrum-omits-7-21-all-n.md",
+      "sha256": "1a4d6ca341b19f31b2bb438b23cb2b230d63a563fc7f0eba433dbc980c39ddc3"
+    },
+    {
+      "git_blob": "963ba70f0d5f1154b07fd406cb24245eda16debc",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "git_blob": "0e591b4265f5278347c25cd6539c0b65fe38fd10",
+      "path": "01-canon/theorems/THM-4804-complement-lines-shatter-every-module-and-the-carousel-fibre-as-frobenius-orbits-of-a-normal-basis.md",
+      "sha256": "7657cc5cc86f19776a0efe79a864d58fcd1599c04ea2a505c93d93a1569e3a03"
+    },
+    {
+      "git_blob": "14b6746991ff5169b9dfc98c536d76386b03ed16",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ACTIVE_PORTS.md",
+      "sha256": "a4a1558e4bd0ab1be9098cfa249f0cc296a183ab37d910fbc5cda13e352c4564"
+    },
+    {
+      "git_blob": "22ab0ca82d5c931ca6327b6355de952e0b867c0e",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971"
+    },
+    {
+      "git_blob": "fe9bafa9f0dcf46b03acb03e328ba533dfb0d08f",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ANCESTRY.md",
+      "sha256": "c3581c0a5341ef20ad094df4c1a07f8396302b1bd0d99b1010d068e1e9eb9f9b"
+    },
+    {
+      "git_blob": "ac327a8e9994e777c399ab18a196311934d5014b",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/HISTORY.md",
+      "sha256": "e6623a184b77a3fe9e623b724fd68eb36930ab2d46f35c20ca8125ead2d57a3e"
+    },
+    {
+      "git_blob": "8daf85791686b534baac24107b6b16dd10024292",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+      "sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
+    },
+    {
+      "git_blob": "766f8eb2f96476c5a4f4a5a864fbb341dcbb5f6d",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/README.md",
+      "sha256": "13cd4f7a58ed885d55b172beab2442268e220aa3089d444d4f27e107418d2590"
+    },
+    {
+      "git_blob": "541470ef7bd716956f2a97fbcef822261b3bab1a",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/active_port_transfer.py",
+      "sha256": "fe791876e6c85cfe0c6b4e3545d83e156b372fe5a3223ef5e28f82c454552642"
+    },
+    {
+      "git_blob": "382f0776402f9c936e6bcc721f281576354b0dd4",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/adaptive_probe.py",
+      "sha256": "8a6e506b300bed57d2302f99766a51309be2394a4b11cee6e33aaa06c349f47f"
+    },
+    {
+      "git_blob": "5435994b6e6df3be1329cec053012159ad607d79",
+      "path": "05-knowledge/results/golden_hamilton_transfer_20261103/RECURRENCE.md",
+      "sha256": "611d9a6792ec1805201f43c69313d59a3dd401539cef5dd238d481b76b506aed"
+    },
+    {
+      "git_blob": "48bd645e6c1008b066dbb50bf6b78e3cc6938497",
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/THEORY.md",
+      "sha256": "895a9062de718344c95a093519e4d31bc1c28868eeafade8d9bb7c468966b830"
+    },
+    {
+      "git_blob": "102137ef53a114eaad2aa6a43b5856e2765f865a",
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/TRANSPORT.md",
+      "sha256": "03183aa0957fd817393972510e7d924994ba7b77c6dde738f1a93c2722318b56"
+    },
+    {
+      "git_blob": "c14a27963c1cec188ff9d59b07af0d05936ba23b",
+      "path": "05-knowledge/results/golden_seam_recurrence_20261103/atom_atlas.json",
+      "sha256": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba"
+    },
+    {
+      "git_blob": "a813ceeb0aa8887423d2f4d9d32947bb1f12cc1b",
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/CHARGES.md",
+      "sha256": "5e9b80964eaf5a19ebf8eb97823b5797d31fb242daed474ab6c5f7b5a9b581cc"
+    },
+    {
+      "git_blob": "bfd3ad340261c05eea48f6a7a34da5e47f4bc97d",
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/INCOMING.md",
+      "sha256": "58ff893b8b9eb7b41fa6e5dcabc91c0cbf903ddca08c49275e7d9597eecc1f6f"
+    },
+    {
+      "git_blob": "d9b68d3501cf6c78770ac44c0577ebd27441b305",
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/INVERSE.md",
+      "sha256": "971ec980c107b36b9f9d2078c111002214b0c6ce3f4ed82f36a6a53c292b0373"
+    },
+    {
+      "git_blob": "bd2bf285c3a138b0ce9cf03d37a7c1a48dd11727",
+      "path": "05-knowledge/results/inverse65_zeckendorf_20261103/ZECKENDORF.md",
+      "sha256": "d63d0859e2dcc5966083fb73872d8b4a06f093cdfee724ccbf733b88205fa890"
+    },
+    {
+      "git_blob": "f881cf4fd1e4bc7ff45c13337ad5031403b86e0c",
+      "path": "05-knowledge/results/prime_lane_ports_five_groups_20261102/prime_groups.md",
+      "sha256": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba"
+    },
+    {
+      "git_blob": "2c8d3e398bc99e3834911783129a5404fc3e2f9c",
+      "path": "05-knowledge/results/session105_metagraph_recursion_20261029/metagraph/WEIGHTED_NATIVE_RECURSION.md",
+      "sha256": "d3aa196082d95bca0a25a800828fdcd8e5fe305f94d19eb4d4a329dc385383be"
+    },
+    {
+      "git_blob": "ff176451599ff152e65a79b8afb16d3375aeac6e",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/gadgets/RESULT.md",
+      "sha256": "1fe138c98ddcff609269b2b8437fbdd0432c47115646b984c9065ad41ef0bf86"
+    },
+    {
+      "git_blob": "a570f5a58e77d5ef31fdfc898224b7a8cb263f14",
+      "path": "05-knowledge/results/session150_hamiltonian_spectrum_20261103/transfer/TRANSFER.md",
+      "sha256": "7286be338f9e0c15becc2e8187616014f39b1c4ed05a9bd7ec479404715d6ab0"
+    },
+    {
+      "git_blob": "344fc67b3c73f7a891263ee1b10e5fa1ec447a4f",
+      "path": "05-knowledge/results/session152_sequences_20261103/inductive_target/README.md",
+      "sha256": "70914aa60135dcf4d14a118ae23201b7bc51950313eac3946782791157bea616"
+    },
+    {
+      "git_blob": "ab29c68b6fe5f0c7d928c4c3afbaad7edad06ec1",
+      "path": "05-knowledge/results/session153_gadgets_20261103/gadgets/README.md",
+      "sha256": "7d766cad4ef0b8c4b01f5a1ff0deea8a673bedd7b72901fbec57f51f7a6ba07a"
+    },
+    {
+      "git_blob": "a1d9feda301fc74ad654004977c4722b6a4e76f6",
+      "path": "05-knowledge/results/session153_gadgets_20261103/rewriting/NOTE.md",
+      "sha256": "a800c6323ea851e8cb08b1ffad6e96f011f6998e32df2b5753cb24979af6b925"
+    },
+    {
+      "git_blob": "36139820f85e29badb7268f190e1cf3c5b28189c",
+      "path": "05-knowledge/results/session153_gadgets_20261103/species/SPECIES_TROPICAL.md",
+      "sha256": "b8a0193bc8114626b0bbd67b844fe119e3e0ccfa845f23004bf00009f61f07e8"
+    },
+    {
+      "git_blob": "c0873db28e7582d2cc3f0b647aee215d80f95204",
+      "path": "05-knowledge/results/session153_gadgets_20261103/strategy/finite_certificate.md",
+      "sha256": "d3807ef2d6ce0fe7d3b1e1b4633999aabb165411d76576171f2dd228089b34ca"
+    },
+    {
+      "git_blob": "a3f0af519b4056894cdf951a709a9d89e6dc42e9",
+      "path": "05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md",
+      "sha256": "665510704752baface0462e9cd50e4ffb5aca7a2d8dafe297db72978fc475d1d"
+    },
+    {
+      "git_blob": "04dfd5944a798017a554cd7c7f2e153f3c9305f2",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261030/README.md",
+      "sha256": "b102b091596bd0f7dd412daf1e691616c4385f0b2f9debcd9a697076657985e5"
+    },
+    {
+      "git_blob": "22bc9c7572bead356fcd8b4f1b2424a07b4dad91",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031b/README.md",
+      "sha256": "70c63dba335d5372b607935b0c0e223a17659079b9467a2d3d1ef4cc2ede8c86"
+    },
+    {
+      "git_blob": "14e883e570d6d3c16ea3a8c7a01fe353239707b6",
+      "path": "05-knowledge/results/square_sum_spectrum_overnight_20261031d/README.md",
+      "sha256": "626961a791a6e628db9f9a5df51690783743f66a09cc796ab943894fd8adce32"
+    },
+    {
+      "git_blob": "914b5f0073689f1815f39f3aa9e50ba84082cef1",
+      "path": "05-knowledge/results/tournament_composition_classification_20261026/fibre/RESULT.md",
+      "sha256": "7510bcefb26180aa0c79b262320cf0d092b64a76809342ee646fbf024814aaa5"
+    },
+    {
+      "git_blob": "8ca0795b4090ea4fd8055f9d6107bf452a60bae7",
+      "path": "05-knowledge/results/tournament_joint_parity_20261102/growth_obstruction.md",
+      "sha256": "dc20e1e97aff4c0e82c04b3ed6759649b0c403b851e2d176b5f600491dd9fbb9"
+    }
+  ]
+}
