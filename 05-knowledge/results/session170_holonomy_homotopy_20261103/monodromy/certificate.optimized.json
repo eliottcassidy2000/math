@@ -1,0 +1,81 @@
+{
+  "E_n_coordinate_action_checks_n3_to_n7": 3552,
+  "all_equivariant_quotient_partitions_including_discrete": {
+    "2": 6,
+    "3": 17,
+    "4": 68
+  },
+  "associator_relator": {
+    "fixed_sheets": 8,
+    "maximal_extending_quotient_sheets": 8,
+    "original_sheets": 16
+  },
+  "coordinate_triangle_checks": 648,
+  "literal_E3": {
+    "Hamilton_count": 707281,
+    "checked_arc_flips": 192,
+    "signed_sheets_per_logical_vertex": 16,
+    "tournament_order": 24
+  },
+  "literal_product_controls": {
+    "1": {
+      "logical_vertices": 3,
+      "order": 6,
+      "physical_vertices": 6,
+      "sheets": 2
+    },
+    "2": {
+      "logical_vertices": 9,
+      "order": 12,
+      "physical_vertices": 36,
+      "sheets": 4
+    },
+    "3": {
+      "logical_vertices": 27,
+      "order": 18,
+      "physical_vertices": 216,
+      "sheets": 8
+    }
+  },
+  "mixed_square_checks": 648,
+  "seed_canonical_masks": [
+    153,
+    177,
+    181,
+    153,
+    177,
+    181
+  ],
+  "seed_masks": [
+    153,
+    8345,
+    8337,
+    8369,
+    177,
+    185
+  ],
+  "seed_profile": [
+    0,
+    29,
+    131,
+    162,
+    77,
+    15,
+    1
+  ],
+  "seed_slot_coefficients": [
+    0,
+    0,
+    16,
+    0,
+    12,
+    0,
+    1
+  ],
+  "stabilizer_separators_n3_to_n7": 243,
+  "transport_group_orders": {
+    "2": 8,
+    "3": 128,
+    "4": 4096
+  }
+}
