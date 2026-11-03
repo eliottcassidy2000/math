@@ -29,7 +29,7 @@ Take the S159 ordered list
 
 Use the marked path 0→1→⋯→14. It has 91 nonconsecutive chords. Assign e_i to chord (i−1,i+1), i=1,...,13, interpreted as forward iff e_i=1. Assign every remaining chord the value e_1. Thus every e∈{0,1}^13 gives a labeled tournament C(e) with that same forward Hamiltonian path, and C is injective. The stations 1,...,13 scan those 13 distinguished chord bits, in order. Their fractions are decorations; encoding alone does not make the graph choose a rule.
 
-The blue partner reverses all 91 chords and fixes the path, so B(C(e))=C(1−e). Scanning it chooses the first fraction *inapplicable to the original N*, if there is one. Blue does not reverse program order and is not the last transition or a previous computation step. It may not correspond to any input integer at all.
+The native partner reverses all 91 chords and fixes the path, so K_P(C(e))=C(1−e). Scanning it chooses the first fraction *inapplicable to the original N*, if there is one. This native complement does not reverse program order and is not the last transition or a previous computation step. It may not correspond to any input integer at all. Its line colour is a separate predicate: under THM-796 it is blue exactly when the chord tiling is fixed by path reflection, and black otherwise.
 
 An exact criterion settles this: for any bit pattern e, put L=lcm{b_i:e_i=1}, with lcm(empty)=1. Then e is realized by a positive integer iff no b_j with e_j=0 divides L. Necessity holds because L divides any realizing N; sufficiency holds by choosing N=L. This criterion also handles repeated/shared prime factors, without assuming independence of divisibility tests.
 
@@ -41,9 +41,9 @@ Their only constraints are four independent Boolean implications
 
  e_2≤e_4, e_5≤e_7, e_8≤e_10, e_11≤e_13,
 
-with five other unconstrained bits. Each implication pair admits 00,01,11, hence the marked cube contains 3^4·2^5=2,592 arithmetic images out of 2^13 patterns. A pattern and its bitwise complement are both realizable iff each implication pair is 00 or 11, giving 2^4·2^5=512 such patterns. For example N=41 realizes 0000000000001. Its blue complement enables denominator 287=7·41 but disables denominator 41, and so is unrealizable.
+with five other unconstrained bits. Each implication pair admits 00,01,11, hence the marked cube contains 3^4·2^5=2,592 arithmetic images out of 2^13 patterns. A pattern and its bitwise complement are both realizable iff each implication pair is 00 or 11, giving 2^4·2^5=512 such patterns. For example N=41 realizes 0000000000001. Its native complement enables denominator 287=7·41 but disables denominator 41, and so is unrealizable. This example is black: reflection exchanges chords (0,2) and (12,14), whose bits are respectively0 and1.
 
-The duplicated unused chords are important: choosing their orientations as constants would generally stop the blue mate from being literally in the encoded subcube. These duplicates carry no additional arithmetic information.
+The duplicated unused chords are important: choosing their orientations as constants would generally stop the native mate from being literally in the encoded subcube. These duplicates carry no additional arithmetic information.
 
 ## State and quotient warnings
 
@@ -53,4 +53,4 @@ Forgetting the path, station labels, and edge markings loses still more. In the 
 
 ## Checks
 
-`python3 check.py` independently enumerates all 2^13 bit patterns using the lcm criterion, checks the blue-complement counts, compares the two-state scan with explicit FRACTRAN execution for N=1,...,10,000, and finds the unmarked four-vertex collision via permutation search. `python3 collisions.py` searches for the actual 23/46 status collision. These checks corroborate the finite claims; the scanner and feasibility proofs above hold for all inputs.
+`python3 check.py` independently enumerates all 2^13 bit patterns using the lcm criterion, checks the native-complement image counts, compares the two-state scan with explicit FRACTRAN execution for N=1,...,10,000, and finds the unmarked four-vertex collision via permutation search. `python3 collisions.py` searches for the actual 23/46 status collision. These checks corroborate the finite claims; the scanner and feasibility proofs above hold for all inputs. The colour terminology was repaired during the [coverage-machine integration audit](../../coverage_machine_induction_20261103/INCOMING.md); the arithmetic counts and scanner construction are unchanged.

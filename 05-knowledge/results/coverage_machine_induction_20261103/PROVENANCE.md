@@ -11,14 +11,22 @@ The session began at published commit
 was not modified. The previous clean isolated session worktree was reused
 because the volume had only about1.6 GiB free; it was fetched and confirmed
 current before research. Startup, protocol, guardrails, targeted message
-peek and topic routes were read. All new packet files and the three stated
-navigation/correction edits belong to this session.
+peek and topic routes were read. All packet files, the current navigation
+entries and correction ledger edits belong to this session. Incoming
+integration additionally repairs only the demonstrated colour terminology
+in the S160 priority note, router and checker output labels.
 
 The directly referenced inherited files are pinned in `sources.json`.
 These pins are direct inputs, not a transitive proof-dependency manifest.
 The packet manifest and verification receipt pin the final executable
 controls. No broad scalar support scan or new numerical coverage record
 was attempted.
+
+Incoming commits through `ab860360b8` were reviewed and rebased before the
+first checkpoint push. Their source matching, polarized calculus and
+machine connections are reconciled in [INCOMING](INCOMING.md). Published
+source revisions and any local correction hashes are distinguished in
+the pin file.
 
 ## Closest mechanisms and hostile examples
 

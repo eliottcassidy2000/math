@@ -39,9 +39,17 @@
       "receipt_sha256": "6daf598548f71baae6fd46526129d6de2c4d564233a2dad50c1dea61f7d6e88c",
       "script": "machines/hankel.py",
       "script_sha256": "bce8e66d713cc0d8a81ab5cb2825d3717d652938bbf54d4962294bbd0ae8b619"
+    },
+    {
+      "normal": true,
+      "optimized": true,
+      "receipt": "incoming_checks.json",
+      "receipt_sha256": "dcc1d828e82d2ab7bcd5c50d96cc90b9b8e6b1b187303882c44ac846a2d27840",
+      "script": "incoming_checks.py",
+      "script_sha256": "9c23be41d2da862a180f82a44fffe1b8c472a8dba9a0c1c66fab2fb2428197ec"
     }
   ],
-  "runner_sha256": "ca7480d2ffd79c7ce58a8fd6aef9814773a915247b5b180879a0d8cd13472029",
-  "scope": "Five frozen local jobs; byte-identical normal and optimized outputs, not spectrum coverage",
+  "runner_sha256": "719cfc6d09d7373597e80c9e7d1637dc746b4a82c8bd1f4ec0b7b8eb7c8539f3",
+  "scope": "Five research jobs and one local incoming correction; byte-identical normal and optimized outputs, not spectrum coverage",
   "status": "PASS"
 }

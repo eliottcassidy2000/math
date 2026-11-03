@@ -85,8 +85,8 @@ completed-pair count. Initially `(P,h)=(2,3)`. Then
     P' = 4P+2b,
     h' = h+(3-b)P+2b.                              (1)
 
-Proof: the inherited one-apex formula is2 plus the sum of `2^(i-j-1)` over
-every earlier1/later0 pair, plus the number of adjacent01 pairs. Appending0
+Proof: the inherited one-apex formula is2 plus the sum of `2^(j-i-1)` over
+every earlier1 at i and later0 at j>i, plus the number of adjacent01 pairs. Appending0
 adds P; appending1 adds1 precisely after0. Thus00 adds `P+2P`, whereas10
 adds `1+(2P+1)`. This proof concerns the accumulator at completed strong
 returns, without falsely reading the advance credit as an intermediate H.

@@ -9,11 +9,11 @@ def feasible(bits):
     return all(x or L % D[i] for i,x in enumerate(bits))
 A=list(product((0,1),repeat=m)); F=[x for x in A if feasible(x)]; both=sum(feasible(tuple(1-b for b in x)) for x in F)
 if len(F)!=2592 or both!=512: raise AssertionError((len(F),both))
-print('denominators',D,'patterns feasible',len(F),'of',len(A),'blue-preserved ordered patterns',both)
+print('denominators',D,'patterns feasible',len(F),'of',len(A),'native-complement-preserved ordered patterns',both)
 for x in F:
     if not feasible(tuple(1-b for b in x)):
-        print('blue exits image:', ''.join(map(str,x)), 'witness L=',lcm(*(D[i] for i,b in enumerate(x) if b)));break
-else: raise AssertionError('expected a blue exit')
+        print('native complement exits image:', ''.join(map(str,x)), 'witness L=',lcm(*(D[i] for i,b in enumerate(x) if b)));break
+else: raise AssertionError('expected a native complement exit')
 for n in range(1,10001):
     e=tuple(int(n%d==0) for d in D)
     # independently execute two-state transfer

@@ -13,6 +13,7 @@ universal target-selector are not certified by this packet.
 | `axiom/counter_check.py` |All16 counter pairs with0<=a,b<=3; complete marked covers at a+b<=3; literal instruction states, native endpoint edits, source strongness, priority hostile, address-map and inherited core-budget controls |
 | `machines/check.py` |Input0–31 for register/CA/Turing/marked-source agreement; literal big-integer FRACTRAN and independent Hamilton DP for0–15; fixed program, named native exits, graph-word recovery and blue/black criterion |
 | `machines/hankel.py` |All31 strong word sources behind the specified7-by-7 matrix, orders5–13; independent subset DP and odd-cycle collection enumeration; exact rational determinant |
+| `incoming_checks.py` |The incoming15-vertex input41 priority gadget; actual91-chord complement identity and its two reflected unequal chords certify a black line |
 
 Every verification gate uses explicit runtime checks that remain enabled
 under Python optimization. `verify_packet.py` reruns each frozen job normally
@@ -36,9 +37,15 @@ is an all-order scalar-spectrum census.
 - Root checked the conditional coverage theorem against the actual inherited
   finite core bound and single-arc compiler, including strongness of prime/
   7p targets, physical-name preservation and temporary-interface scope.
-- Machine proof review and any remaining findings are recorded in
-  `axiom/REVIEW.md` when complete; verification does not replace the
-  all-input program proof.
+- The axiom agent's completed [independent review](axiom/REVIEW.md) covers
+  the fixed machine phases, source programs, colours, bounds and Hankel
+  scope, as well as the gluing gcd and mod49 jets. Its one machine indexing
+  clarification was applied; code and receipts were unchanged.
+- Incoming work through `ab860360b8` was read as mathematical input and
+  reconciled in [INCOMING](INCOMING.md). A demonstrated colour error in the
+  priority scanner was repaired in the source note, router and output
+  labels. Its arithmetic counts are unchanged; the new one-example
+  correction job is separate from the five research jobs.
 
 No Lean formalization or proof-assistant certification is claimed.
 The finite machine simulators have explicit safety caps; mathematical
@@ -48,9 +55,10 @@ the unconditional formulas or the computed witnesses.
 
 ## Filing checks
 
-The close-out runs the repository documentation checker, validates direct
-local Markdown links and source pins, and checks whitespace and final Git
-state. `manifest.json` records final packet files other than itself;
+The repository documentation checker and direct local Markdown-link
+validation passed; all34 direct inherited source pins were checked against
+published revisions, with the one repaired prose source explicitly marked.
+Whitespace checks passed. `manifest.json` records final packet files other than itself;
 `sources.json` records direct inherited source files, not an entire
 transitive dependency graph. A successful push is required before the
 session is reported complete.

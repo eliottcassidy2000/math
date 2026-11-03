@@ -1,0 +1,33 @@
+{
+  "files": {
+    "AUDIT.md": "724dd782bcdd8304393fc754180e20b08d4c4a02d9b8dbfd21c6f1cda87bf89e",
+    "INCOMING.md": "7a5d0e2f2ffe8c3b357c8e9c0e3f27ac621ddf988f07ea0609655bdc4631d37c",
+    "PROVENANCE.md": "701c1c6d4b4502d60efceea1d62f1d6ab7fe9409aa755a459f16866d33a016d6",
+    "README.md": "0d40bda50e21cf906ff129ba3ee667fd6398a57d19d0cbe4d7ee4cd6af0a41f1",
+    "RESET_JUNCTION.md": "27d99326c5ea879612c47c08cba42ea263c98c046afceca48b1b33156bf516f6",
+    "axiom/AXIOM.md": "e5c2a2f2265d92b325548192de4a5a13a2fe1f29b5bf8e58e0ff91f8c6fa38d5",
+    "axiom/COUNTER_CARRIER.md": "ccb63437edf89ca3f9c7d30379c28207615e7cf8e509dd2885132d439ea1f2c3",
+    "axiom/REVIEW.md": "307b601d3b9b80ac17c4ed9f2462de83748eb680ae6f7af6a1b60c25cfffd2c2",
+    "axiom/counter_check.json": "6c7f3afb3a2189e95ad1de22421a3ccbd60a39356f795b4195848f4d7485ffc1",
+    "axiom/counter_check.py": "53e409987bdb81d88ba53ea5d86489ba51b351533763f3d0d01671e3f640b842",
+    "gluing/NOTE.md": "9b2acb148d353a59ffd0a0aa5e87d3a8abd42cb07f7bd11da11f805a18694a9f",
+    "gluing/check.json": "3cda1e0cf1aee11f4a55b3c646aa5e76fc924d2711c88674d21be9bd9f50a2f8",
+    "gluing/check.py": "e8e3c4d901db3583910d9e5dccc0a745f850da4acfa727811d8f73d30fb87432",
+    "incoming_checks.json": "dcc1d828e82d2ab7bcd5c50d96cc90b9b8e6b1b187303882c44ac846a2d27840",
+    "incoming_checks.py": "9c23be41d2da862a180f82a44fffe1b8c472a8dba9a0c1c66fab2fb2428197ec",
+    "junction.json": "3f48539ca5162007e988820a1095dba6a2e5b11c5b43d51c33b1a735f48929b1",
+    "junction.py": "23a4c897277e68e825aa5cbf6393178aa037bd991def78328671f3a59c590b61",
+    "machines/NOTE.md": "6530a50c6f185393d17e2c3cb8f84124395d8ffc3ffc4463b62be42c6d05f91b",
+    "machines/check.py": "4b4c7c5e0593c85ef97a50ea0d06a10294f0a8ddc85a19d9752bd42a81f5fe5d",
+    "machines/hankel.normal.json": "6daf598548f71baae6fd46526129d6de2c4d564233a2dad50c1dea61f7d6e88c",
+    "machines/hankel.optimized.json": "6daf598548f71baae6fd46526129d6de2c4d564233a2dad50c1dea61f7d6e88c",
+    "machines/hankel.py": "bce8e66d713cc0d8a81ab5cb2825d3717d652938bbf54d4962294bbd0ae8b619",
+    "machines/normal.json": "7174d88a113bc486ebc672fda5eda7de654d6b271521a3922265f536d49e59b5",
+    "machines/optimized.json": "7174d88a113bc486ebc672fda5eda7de654d6b271521a3922265f536d49e59b5",
+    "machines/sources.json": "3d9e0cd56ad250ee7c26e4bc480cbb5d48df0152a62258f9297c20ec1355ea23",
+    "sources.json": "b19918c88de7c57ae66c9897569a4ecf473430e6adbba0cc3ab28600d1039d33",
+    "verification.json": "13587be2a027b623f52405ef6febaabd65b89eb25c593c025409cb5c31f28f2e",
+    "verify_packet.py": "719cfc6d09d7373597e80c9e7d1637dc746b4a82c8bd1f4ec0b7b8eb7c8539f3"
+  },
+  "scope": "Final packet files other than this manifest; no formal proof certification"
+}

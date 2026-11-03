@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replay the five frozen control jobs normally and with optimization."""
+"""Replay the five research jobs and one incoming correction control."""
 from concurrent.futures import ThreadPoolExecutor
 from hashlib import sha256
 from pathlib import Path
@@ -12,7 +12,8 @@ HERE = Path(__file__).resolve().parent
 JOBS = [('junction.py', 'junction.json'), ('gluing/check.py', 'gluing/check.json'),
         ('axiom/counter_check.py', 'axiom/counter_check.json'),
         ('machines/check.py', 'machines/normal.json'),
-        ('machines/hankel.py', 'machines/hankel.normal.json')]
+        ('machines/hankel.py', 'machines/hankel.normal.json'),
+        ('incoming_checks.py','incoming_checks.json')]
 
 
 def digest(data):
@@ -39,7 +40,7 @@ def main():
         jobs = list(pool.map(run, JOBS))
     result = dict(status='PASS', jobs=jobs,
                   runner_sha256=digest(Path(__file__).read_bytes()),
-                  scope='Five frozen local jobs; byte-identical normal and optimized outputs, not spectrum coverage')
+                  scope='Five research jobs and one local incoming correction; byte-identical normal and optimized outputs, not spectrum coverage')
     (HERE / 'verification.json').write_text(json.dumps(result, indent=2, sort_keys=True) + '\n')
     print(json.dumps(result, indent=2, sort_keys=True))
 

@@ -1,0 +1,32 @@
+{
+  "free_chords": 91,
+  "guard_bits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "input": 41,
+  "line_colour": "black",
+  "native_subcube_identity": true,
+  "reflection_defect": [
+    [
+      0,
+      2
+    ],
+    [
+      12,
+      14
+    ]
+  ],
+  "status": "FINITE-EXACT local correction control"
+}

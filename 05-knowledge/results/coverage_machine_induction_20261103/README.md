@@ -173,5 +173,9 @@ third has new infinite constructions and explicit hostile examples.
 [AUDIT](AUDIT.md) gives the five executable jobs, independent algorithms,
 cross-agent proof reviews and the repaired controller-entry near miss.
 [PROVENANCE](PROVENANCE.md) records the inheritance and live concept board.
+The [incoming integration](INCOMING.md) adds an exact ordered-priority
+scanner, matched-source jump chains and the explicit projection to the
+concurrent rooted path-bin calculus; it also repairs a native/blue colour
+confusion without changing the scanner's arithmetic.
 All controls are small procedural families or complete declared local
 universes. No new mass spectrum scan or literature-priority claim is made.

@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a native chord complement need not be a blue line
+
+- **Scope:** `session160_ordered_programs_20261103/priority_tilings/NOTE.md` and its scanner output labels, received at `ab860360b8`. The priority scanner, arithmetic-image counts2592/512 and native-complement identity remain valid.
+- **Witness / first failed implication:** input41 gives status0000000000001. In the specified15-vertex chart, reflected chords (0,2) and (12,14) have different bits. The tiling is not reflection-fixed, so its native line is black under THM-796. The prose had called arbitrary chord complementation blue.
+- **Repair / strongest survivor:** use “native complement” for the operation and retain the reflection test for colour. The native complement still maps C(e) to C(1-e), and its arithmetic-image obstruction is unchanged. The local checker in `coverage_machine_induction_20261103/incoming_checks.py` verifies the actual chord operation and this colour witness.
+- **Missing coordinate:** line colour requires the chosen path's reflection action, separately from the complement involution and the arithmetic guard word. The machine agent found this during incoming integration; no tournament counting formula is retracted.
+
 ## 2026-11-03 — arithmetic guards do not imply entry to a chosen controller orbit
 
 - **Scope:** prepublication J4 in `05-knowledge/results/coverage_machine_induction_20261103/RESET_JUNCTION.md`; no previously accepted theorem is retracted.

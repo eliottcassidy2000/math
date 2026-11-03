@@ -3,28 +3,214 @@
     "https://arxiv.org/html/0903.4366v3#S2",
     "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1n3/pdf"
   ],
-  "files": {
-    "01-canon/theorems/THM-002-ocf.md": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
-    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
-    "01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md": "de47a4bc5c720ad738108a945edcd29f4b5dc75805286640c37b90c88554ae55",
-    "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
-    "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea",
-    "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4",
-    "05-knowledge/results/prime_lane_ports_five_groups_20261102/prime_groups.md": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba",
-    "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
-    "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
-    "05-knowledge/results/session158_creative_20261103/binary_bank/FRACTRAN.md": "ee3817c60bc46aacfc92edc890dcbf95408327daa07e73afcb13a4955bde052b",
-    "05-knowledge/results/session158_creative_20261103/binary_bank/NOTE.md": "df5168bb7fd0c5229a0e8f9b443ae6add302286112c77e6418ee737470df1152",
-    "05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md": "ac4a128208d4774e999a8ff06f85fb8de8532d24df03e9451f20f0a8fb888608",
-    "05-knowledge/results/session159_constructions_20261103/heaps/NOTE.md": "e79a977b603df807d9011e3d8a7ab194450b45b81d3d9230fcaba0e1cb798c5f",
-    "05-knowledge/results/session159_constructions_20261103/profile_operator/NOTE.md": "ae763db7c3c30a125d335893e952f401c23f92a65d87fb907f362713cfdcb698",
-    "05-knowledge/results/source_selection_closure_20261103/BRANCH.md": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da",
-    "05-knowledge/results/source_selection_closure_20261103/GRADED_OBSERVER.md": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9",
-    "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
-    "05-knowledge/results/source_selection_closure_20261103/README.md": "e12c6f5a52af7f38e7c316743e87a3261b4f45408c3753c27c9aed1588e7508e",
-    "05-knowledge/results/two_port_return_induction_20261103/NATIVE_RESET_INDUCTION.md": "750b2dfced18d8165672e1a68f4425022a278f9f447bba049f3e43477aa2f64d",
-    "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
-  },
-  "published_source_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
-  "scope": "Direct inherited local Markdown dependencies and primary URLs; not a transitive dependency graph"
+  "files": [
+    {
+      "current_sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1",
+      "path": "01-canon/theorems/THM-002-ocf.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "01f0ae440b14c2a7d5b473ffcb5b58f7ed81ce3fd9300ba5b1e5072d6a0719e1"
+    },
+    {
+      "current_sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "current_sha256": "de47a4bc5c720ad738108a945edcd29f4b5dc75805286640c37b90c88554ae55",
+      "path": "01-canon/theorems/THM-4747-hamiltonian-cycles-under-automorphisms-fermat-wilson-congruences-for-circulant-and-paley-tournaments.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "de47a4bc5c720ad738108a945edcd29f4b5dc75805286640c37b90c88554ae55"
+    },
+    {
+      "current_sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95",
+      "path": "01-canon/theorems/THM-796-three-sorted-recursive-tiling-line-node-incidence.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "7d5896d81b874dc982b321bd95f33796aa40e410ae86a6c13c0d987bac37bf95"
+    },
+    {
+      "current_sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea",
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/METAGRAPH.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "ee0cd2951e90d9659ed664c3ebfc10d2a3b3a17c55256610711b9610e84bb9ea"
+    },
+    {
+      "current_sha256": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295",
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295"
+    },
+    {
+      "current_sha256": "298cebb20ec0e253982a72a7ed59d4f48c43bd8674c79edff2d61345a0453a03",
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/README.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "298cebb20ec0e253982a72a7ed59d4f48c43bd8674c79edff2d61345a0453a03"
+    },
+    {
+      "current_sha256": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4",
+      "path": "05-knowledge/results/metagraph_primegame_20261102/INDUCED_OBSTRUCTIONS.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "4e27c4c91ad22038a1927cf912ef33062d5d165640f16f97f8cd3f1e01c833e4"
+    },
+    {
+      "current_sha256": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728",
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/CALCULUS.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728"
+    },
+    {
+      "current_sha256": "bbf1f985fddbc4f77f1298d4b15a95b1e06b1e57ef017e65bed1833a4c295b74",
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/README.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "bbf1f985fddbc4f77f1298d4b15a95b1e06b1e57ef017e65bed1833a4c295b74"
+    },
+    {
+      "current_sha256": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba",
+      "path": "05-knowledge/results/prime_lane_ports_five_groups_20261102/prime_groups.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "c14b0e8bf534a268e43779ebe629c9f0a2b1930310dc4eac5bee1dd0298d69ba"
+    },
+    {
+      "current_sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042",
+      "path": "05-knowledge/results/rotation_owners_spectrum_20261020e/spectrum.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "c068c33f8dabea65f9a099524821c0f0b641fae722ee64a7f28472f039e20042"
+    },
+    {
+      "current_sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5",
+      "path": "05-knowledge/results/session133_fractran_spectrum_refinement_20261101/core_reduction/THEORY.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "706f795aaf5abccefeff5cf616e38c1f67239b86b160a2d759e899c92259a7c5"
+    },
+    {
+      "current_sha256": "ee3817c60bc46aacfc92edc890dcbf95408327daa07e73afcb13a4955bde052b",
+      "path": "05-knowledge/results/session158_creative_20261103/binary_bank/FRACTRAN.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "ee3817c60bc46aacfc92edc890dcbf95408327daa07e73afcb13a4955bde052b"
+    },
+    {
+      "current_sha256": "df5168bb7fd0c5229a0e8f9b443ae6add302286112c77e6418ee737470df1152",
+      "path": "05-knowledge/results/session158_creative_20261103/binary_bank/NOTE.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "df5168bb7fd0c5229a0e8f9b443ae6add302286112c77e6418ee737470df1152"
+    },
+    {
+      "current_sha256": "ac4a128208d4774e999a8ff06f85fb8de8532d24df03e9451f20f0a8fb888608",
+      "path": "05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "ac4a128208d4774e999a8ff06f85fb8de8532d24df03e9451f20f0a8fb888608"
+    },
+    {
+      "current_sha256": "e79a977b603df807d9011e3d8a7ab194450b45b81d3d9230fcaba0e1cb798c5f",
+      "path": "05-knowledge/results/session159_constructions_20261103/heaps/NOTE.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "e79a977b603df807d9011e3d8a7ab194450b45b81d3d9230fcaba0e1cb798c5f"
+    },
+    {
+      "current_sha256": "ae763db7c3c30a125d335893e952f401c23f92a65d87fb907f362713cfdcb698",
+      "path": "05-knowledge/results/session159_constructions_20261103/profile_operator/NOTE.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "ae763db7c3c30a125d335893e952f401c23f92a65d87fb907f362713cfdcb698"
+    },
+    {
+      "current_sha256": "f205bbb9a08588837a52163c3f7392710d1171c750e65a7fbd8a50ef7f7d9eee",
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/adaptive_codes/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "f205bbb9a08588837a52163c3f7392710d1171c750e65a7fbd8a50ef7f7d9eee"
+    },
+    {
+      "current_sha256": "aeb538f733fb47ecb1f18e1d5727f5730bfd34fdf5e6756701ebb8aad704568a",
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/axioms/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "aeb538f733fb47ecb1f18e1d5727f5730bfd34fdf5e6756701ebb8aad704568a"
+    },
+    {
+      "current_sha256": "5ede28d8e69f6e6f4fcec52260f38118e76adabc1579b1fd6bd3f2a6dd77188a",
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/instructions/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "5ede28d8e69f6e6f4fcec52260f38118e76adabc1579b1fd6bd3f2a6dd77188a"
+    },
+    {
+      "current_sha256": "2e58cf831a59b6a861f805c21db09556931246f62d607b899fdf08b06f63d4fa",
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/metagraph/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "2e58cf831a59b6a861f805c21db09556931246f62d607b899fdf08b06f63d4fa"
+    },
+    {
+      "current_sha256": "4dd3e5f5a39afd1bb26d37ebe7f15f1cfd8900b269d1b105d7540e3e21e9683f",
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/priority_tilings/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "fa5db873ae3ba6aa1531c76c682ff64c50ff5cebe9a21b5cbf902573a528f0aa",
+      "repair": "Native-complement versus blue-line prose correction; see INCOMING.md and MISTAKES.md."
+    },
+    {
+      "current_sha256": "68d0c78b036566cc8b62e647729d01352d71247192593f36559ef211037da8db",
+      "path": "05-knowledge/results/session161_source_matching_20261103/carry_fingerprint/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "68d0c78b036566cc8b62e647729d01352d71247192593f36559ef211037da8db"
+    },
+    {
+      "current_sha256": "5c9d876fd8633ea6f1d3adb807c1b7b44434bf301ebd291cd58f7dfc88410f38",
+      "path": "05-knowledge/results/session161_source_matching_20261103/matched_sources/CHAIN.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "5c9d876fd8633ea6f1d3adb807c1b7b44434bf301ebd291cd58f7dfc88410f38"
+    },
+    {
+      "current_sha256": "e65f6fec0a1d6ae7cb278599a4bd5907adb42380c018c366cb54ae08063bac7f",
+      "path": "05-knowledge/results/session161_source_matching_20261103/matched_sources/FAN.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "e65f6fec0a1d6ae7cb278599a4bd5907adb42380c018c366cb54ae08063bac7f"
+    },
+    {
+      "current_sha256": "123aef1c98e9f52cb197b89e2cba8ed83ffbc987dc3a6d65faac09fad01cefd0",
+      "path": "05-knowledge/results/session161_source_matching_20261103/matched_sources/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "123aef1c98e9f52cb197b89e2cba8ed83ffbc987dc3a6d65faac09fad01cefd0"
+    },
+    {
+      "current_sha256": "51a318b28165f6b8bb17aece7386db3c0c0948ef1128a84cb3859c8e89933a18",
+      "path": "05-knowledge/results/session161_source_matching_20261103/q_response/NOTE.md",
+      "published_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+      "published_sha256": "51a318b28165f6b8bb17aece7386db3c0c0948ef1128a84cb3859c8e89933a18"
+    },
+    {
+      "current_sha256": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da",
+      "path": "05-knowledge/results/source_selection_closure_20261103/BRANCH.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "26822bbb84ac8b889806a357ae72f647535816f7e2b1e57fb58ee6919843b3da"
+    },
+    {
+      "current_sha256": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9",
+      "path": "05-knowledge/results/source_selection_closure_20261103/GRADED_OBSERVER.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9"
+    },
+    {
+      "current_sha256": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178",
+      "path": "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178"
+    },
+    {
+      "current_sha256": "e12c6f5a52af7f38e7c316743e87a3261b4f45408c3753c27c9aed1588e7508e",
+      "path": "05-knowledge/results/source_selection_closure_20261103/README.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "e12c6f5a52af7f38e7c316743e87a3261b4f45408c3753c27c9aed1588e7508e"
+    },
+    {
+      "current_sha256": "750b2dfced18d8165672e1a68f4425022a278f9f447bba049f3e43477aa2f64d",
+      "path": "05-knowledge/results/two_port_return_induction_20261103/NATIVE_RESET_INDUCTION.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "750b2dfced18d8165672e1a68f4425022a278f9f447bba049f3e43477aa2f64d"
+    },
+    {
+      "current_sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f",
+      "path": "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "published_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+      "published_sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+    }
+  ],
+  "incoming_revision": "ab860360b8dcae14454ea150a849ac8616233039",
+  "initial_revision": "377dbbe882ed426b9b66ac7b3e5408cc54498960",
+  "scope": "Direct inherited dependencies, not a transitive proof graph"
 }
