@@ -1,0 +1,48 @@
+{
+  "incoming_revision": "2374ba81ef",
+  "status": "FINITE-EXACT complete phase universe and literal controls; no new universal return",
+  "phase_states": 81,
+  "future_tests_per_state": 81,
+  "current_joint_observations": 49,
+  "largest_joint_fibre": 9,
+  "joint_tag_bits": 4,
+  "Hmod7_fibre_sizes": {
+    "0": 18,
+    "1": 12,
+    "2": 11,
+    "3": 8,
+    "4": 13,
+    "5": 13,
+    "6": 6
+  },
+  "Hmod7_tag_bits": 5,
+  "one_bit_literal_controls": [
+    {
+      "m": 1,
+      "H": 71,
+      "clone_H": [
+        145,
+        149
+      ],
+      "changed_old_edges": 1
+    },
+    {
+      "m": 2,
+      "H": 119,
+      "clone_H": [
+        289,
+        293
+      ],
+      "changed_old_edges": 1
+    },
+    {
+      "m": 3,
+      "H": 215,
+      "clone_H": [
+        577,
+        581
+      ],
+      "changed_old_edges": 1
+    }
+  ]
+}

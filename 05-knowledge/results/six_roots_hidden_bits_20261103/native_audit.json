@@ -1,0 +1,13 @@
+{
+  "status": "PASS independent full one-birth coefficient audit and literal best-port permutation cuts",
+  "paths": 65,
+  "birth_outputs": 16640,
+  "strong_target_hits": {
+    "195": 37,
+    "197": 18,
+    "199": 2
+  },
+  "common_zero_port": 6,
+  "native_tribonacci_pair_checks_through": 50,
+  "tribonacci_counts_through": 12
+}

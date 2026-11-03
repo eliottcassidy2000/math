@@ -88,7 +88,9 @@ caught before promoting the result, not a universal obstruction to67.
    two-port E_n chart just enough to include its ear outputs, carrying the
    source and exact count correction. Can the number of selected future
    interface types stay bounded, even though arbitrary re-markings cannot?
-   First tests are the actual195/197 outputs of E8, not abstract numbers.
+   The final integration now supplies actual195/197/199 outputs of E8,
+   all with the same zero-slack port6; see NATIVE_BRANCHES. Their repeated
+   nonzero-offset return remains the first test, not mere scalar realization.
 2. **Root67 (OPEN).** Seek a strong H=67 source with J<=2, or prove that
    the desired ternary branches require a different attachment. The stated
    two/three-flip neighbourhoods fail; that is a stopping boundary for this
@@ -105,6 +107,15 @@ caught before promoting the result, not a universal obstruction to67.
    different boundary pairings, so such pairings cannot simply be erased.
 
 ## Audit and boundaries
+
+Final incoming integration and its executed experiment are in INCOMING
+and NATIVE_BRANCHES. The full65-by256 native/birth census is checked by
+an independent permutation-derived quadratic response, including every
+strongness decision. The best three literal targets have their rooted
+profiles checked by9-vertex permutations/cuts. The all-size map from E_n
+to two source vertices followed by T*_(n−2) explains65→17 and meets the
+incoming wing quotient literally. THM-4731's March tribonacci theorem is
+credited, not rediscovered; its known31-versus33 failure is retained.
 
 P2's hand proof counts paths by whether and where the sole backward edge
 is used; the correction at q=n−2 is essential. Its independent audit

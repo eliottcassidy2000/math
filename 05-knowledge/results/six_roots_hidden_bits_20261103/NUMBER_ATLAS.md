@@ -142,6 +142,11 @@ unrelated-looking operations, not frequency of the numeral.
   P4, and eight distinct marked-ear responses. Its canonical ports0,1
   supply a better first-ear choice than the older H=65 witness. This is
   the concrete progress toward the six-root construction in this session.
+  The final [native-branch extension](NATIVE_BRANCHES.md) then realizes
+  195,197,199 from that SAME source with a common physical zero-slack port6.
+  The199 branch passes through the old tribonacci17-path quotient and two
+  retained source vertices, connecting the new wing interface to March's
+  metagraph work by an actual graph operation.
 
 ## 67: arithmetic invariant versus replaceable register name
 
