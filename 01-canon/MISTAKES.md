@@ -22006,3 +22006,33 @@ Prevention: identify the operator versus angle coordinate, the geometric carrier
   - Grep the canon for the classical object a new translation lands on (here "quadratic residue code", "Golay")
     before typing the landing as new.
   - When a checker is found misaligned, re-examine every other check that used the same counter.
+
+## MISTAKE-702 (2026-11-02, mac-mini-2026-11-02-triangles, the note `05-knowledge/results/quadratic_2916_odd_pair_triangles_n4_20261102.md` at the pre-audit commit 917c974679; found by the independent audit `04-computation/experiments/circulant_fractran_goldbach_20261101/audit_triangles/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- two same-day packets on the same objects missed, an "iff" in the index where only "if" was proved, and minor typing
+
+- **What was wrong.**
+  - **(1)** Two concurrent packets on the same objects were not credited:
+    - `jacobian_eth_prime_wait_20261102/PRIME-MRB.md`, committed 52 minutes before the pre-registration, already
+      defined P(m), the least prime = ±1 (mod m), proved P(m) >= m - 1 and had a prime-neighbour census to 10000;
+    - `session146_carrier_primegame_20261103/prime290/README.md`, committed 18 minutes before, proved the same
+      eight-point classification of x -> x^2 - 29/16 and treated the odd-pair triangle.
+
+    The session's priority grep used the prompt's phrases ("29/16", "hourglass", "{10,20,39}") but not the
+    concept's own wording, "least prime", "±1 mod m". It also did not re-scan the day's new packets immediately before
+    the pre-registration.
+  - **(2)** The index line said "equal the Goldbach pairs exactly when m-1 or m+1 is prime". Only the "if" direction
+    is proved; the converse is finite-exact to 20000. The note body was correct.
+  - **(3)** Minor:
+    - THM-4139 was dated 2025 instead of 2026;
+    - "eight quarter-integers plus the 3-cycle" (they include it);
+    - "units mod 16" was untyped, though it is GENERIC and f does not act mod 16;
+    - the ratio 17 should be 16.99994;
+    - the inner loop of the scan was mislabelled;
+    - the "hourglass atom" identification was not labelled an interpretation.
+- **Repair.** All items are corrected in the note and the index, with the two packets, the one-out-edge note and
+  Walde-Russo credited. No computation changed.
+- **How it was caught.** The auditor grepped the day's commits for the concept's own terms and timed them against
+  the pre-registration commit. It re-ran both scripts and checked 32 claims with independent code.
+- **Lesson / reusable rule.**
+  - On busy days, grep the day's new packets for the concept's mathematical name as well as the owner's phrasing.
+  - Re-run that grep immediately before the pre-registration commit.
+  - Index lines must keep "proved one way" scope.

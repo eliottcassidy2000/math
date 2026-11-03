@@ -16,11 +16,18 @@ divided by 4. Exactly eight such starting values are bounded; all enter the cycl
 
 ## 1. Prior work (credited)
 
-- **x -> x^2 - 29/16.** THM-4139 (codex, 2025-08-25): the complete rational preperiodic graph is the eight
-  quarter-integers plus the exact 3-cycle, so there is no rational 6-cycle. This is classical (Poonen 1998); c = -29/16
-  is the standard example with a rational 3-cycle. The owner's statement is this theorem restricted to odd/4 starts.
-- **"Hourglass."** In the tiling literature here, hourglass cycles are HYP-3053's bridge-to-bridge cycles of the
-  diagonal-layer graph: C(n-2, 2) of them, so exactly one at n = 4. The Pythagorean hourglass of THM-4773 / THM-4780
+- **x -> x^2 - 29/16.** THM-4139 (codex, 2026-08-25): the complete rational preperiodic graph is eight
+  quarter-integers, including the exact 3-cycle, so there is no rational 6-cycle. The owner's statement is this theorem
+  restricted to odd/4 starts.
+  - It is classical: Poonen 1998; Walde-Russo 1994, where c = -29/16 is the t = 1 member of the rational 3-cycle
+    family.
+  - The same eight points appear in `collatz_one_out_edge_systems_20260930.md`.
+  - Concurrent: `session146_carrier_primegame_20261103/prime290/README.md`, committed 18 minutes before this session's
+    pre-registration, proves the same eight-point classification with the same escape inequality and also treats the
+    jagged odd-pair triangle.
+- **"Hourglass."** "Hourglass atom" appears nowhere else in the repository. The closest object is HYP-3053's
+  bridge-to-bridge hourglass cycles of the diagonal-layer graph, C(n-2, 2) of them, so exactly one at n = 4. That cycle
+  belongs to the full layer flow, not to the 3-tile chart of section 2.2, so the identification is an interpretation. The Pythagorean hourglass of THM-4773 / THM-4780
   is a different object.
 - **{10, 20, 39}.** These are the clique-mean carrier dimensions of the concurrent packet `chart_clique_norm_20261103`
   (three colours, forbidden clique sizes (3,3,5)), at n = 3, 4, 5:
@@ -44,8 +51,9 @@ divided by 4. Exactly eight such starting values are bounded; all enter the cycl
    - depths to the cycle: 0 for {-7/4, 5/4, -1/4}, 1 for {-5/4, 1/4, 7/4}, 2 for {±3/4}.
 
    On numerators, the map is the integer map g(a) = (a^2 - 29)/4 on odd a. Its orbit is bounded iff |a| <= 7
-   (checked for |a| <= 100,001; for |a| >= 9, g(a) > |a|). The eight bounded numerators {±1, ±3, ±5, ±7} are the units
-   mod 16.
+   (checked for |a| <= 100,001; for |a| >= 9, 4(g(a) - |a|) = (|a| - 2)^2 - 33 >= 16). The eight bounded numerators
+   {±1, ±3, ±5, ±7} are the units mod 16. That is GENERIC: any eight consecutive odd numbers form such a set, and f
+   does not act on residues mod 16, since g(a + 16) = g(a) + 8 (mod 16).
 2. **Against the n = 4 metagraph** (M1-M3 PASSED).
    - **The metagraph chain.** 8 tilings -> 4 classes, with fibres {5,1,1,1} (TT4 1; source+C3 1; C3+sink 1; the
      strong 4-tournament 5) -> 3 merged nodes, with fibres {5,2,1}. There are 4 lines.
@@ -57,13 +65,21 @@ divided by 4. Exactly eight such starting values are bounded; all enter the cycl
        (GENERIC).
      - No bijection carries the class line multigraph (a star at the strong class, with a loop there) onto f's
        functional graph on f(B) (a triangle with a pendant edge) (M3).
-   - **Further failed structural reading.** (Z/16)^× ≅ Z/2 × Z/4 is not GF(2)^3, the tiling cube.
-   - **What survives.** The shared shape: an 8-set, folded by a fixed-point-free involution and one further merge. In
-     the metagraph that merge is the converse; in the map, the f-fold of a 4-point set onto the cycle.
+   - **Further failed structural readings.**
+     - (Z/16)^× is not GF(2)^3, the tiling cube, and in any case f does not act mod 16 (above).
+     - f restricted to B has only one nontrivial automorphism (3/4 <-> -3/4).
+     - The natural Klein four-groups on the two sides are not conjugate as permutation groups (audit).
+   - **What survives (GENERIC).** The shared shape: an 8-set, folded by a fixed-point-free involution and one further
+     merge. It uses the complement lines, not the owner's class nodes. In the metagraph the second merge is the
+     converse; in the map, the f-fold of a 4-point set onto the cycle.
 3. **Primes modulo even numbers until +-1** (P1 PASSED; post-hoc proposition proved and checked). For even m, scan the
    odd primes in increasing order, recording residues mod m, until the first prime P(m) = ±1 (mod m).
-   - **Bound.** P(m) < m^2 for every even m <= 20,000. P(m) = m ± 1 for 41.8% of them, and the largest P(m)/m is 17,
-     at m = 16012.
+   - **Prior work.** The same P(m) (the least prime = ±1 mod m) is defined in the concurrent packet
+     `jacobian_eth_prime_wait_20261102/PRIME-MRB.md`, committed 52 minutes before this session's pre-registration. That
+     packet proves P(m) >= m - 1 and gives a census of even m <= 10000 including the prime-neighbour case (its
+     δ(m) = 1). Credited; the residue-pair proposition below is the addition here.
+   - **Bound.** P(m) < m^2 for every even m <= 20,000. P(m) = m ± 1 for 41.8% of them. The largest P(m)/m is 16.99994,
+     at m = 16012, where P = 272,203 = 17·16012 - 1.
    - **Proposition (PROVED, elementary).** Let R(m) be the set of residue pairs {r, m - r} that the scan hits and G(m)
      the Goldbach partitions of m into odd primes.
      - G(m) ⊆ R(m) always.
@@ -86,9 +102,9 @@ divided by 4. Exactly eight such starting values are bounded; all enter the cycl
        automaton (THM-4858) sweeps the same rows in unary.
    - **PRIMEGAME's region.** PRIMEGAME sweeps the jagged triangle {(n, d) : D(n) <= d <= n - 1}: row n has n - D(n)
      trial divisors, and exactly the prime rows run down to d = 1 (THM-4853's cost is a sum over this region).
-     - These are "numbers modulo descending moduli until the remainder is 0". The owner's scan is "primes modulo
-       increasing even moduli until the residue is ±1". Both select pairs from a jagged triangular region by a
-       first-hit rule.
+     - These are "numbers modulo descending moduli until the remainder is 0". The owner's scan fixes m and runs over
+       increasing primes until one has residue ±1. Both select pairs from a jagged triangular region by a first-hit
+       rule.
      - In machine terms each is a nested counter loop: FRACTRAN 2-cycles, or Turing scanners.
 
 ## 3. Reproduction
@@ -102,4 +118,25 @@ python3 residue_pairs_posthoc.py     # ~15 s; the residue-pair proposition and t
 
 ## 4. Audit
 
-(pending)
+**Verdict.** Independent audit (`04-computation/experiments/circulant_fractran_goldbach_20261101/audit_triangles/AUDIT.md`;
+own script `audit_independent.py`, 32 of 32 checks agree; both session scripts re-run byte-identically;
+pre-registration confirmed genuine): **SOUND WITH CORRECTIONS**, all applied (MISTAKE-702). No mathematical errors.
+
+**Corrections applied.**
+1. **INDEX overclaim.** The index line now says "when m-1 or m+1 is prime (proved)", not "exactly when".
+2. **Credits.**
+   - The concurrent PRIME-MRB packet for P(m) and its prime-neighbour census.
+   - Concurrent session146 prime290 for the eight-point classification and the odd-pair triangle.
+   - The 2026-09-30 one-out-edge note and Walde-Russo 1994.
+3. **Minor items.**
+   - THM-4139's date (2026-08-25; the pre-registered script's docstring still says 2025).
+   - "Including" for the eight points.
+   - "What survives" is typed GENERIC.
+   - "Units mod 16" is GENERIC, and f does not act mod 16.
+   - The ratio 16.99994.
+   - The inner-loop wording.
+   - The hourglass identification is labelled an interpretation.
+
+**Also confirmed by the audit.** It could not prove the open converse. Every one of the 5,820 cases has a witness
+{p - m, 2m - p} with 2m = p + q, q < m < p and p - m composite, which needs a refined Goldbach statement, so OPEN
+stands.

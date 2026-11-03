@@ -1,0 +1,39 @@
+A  x -> x^2 - 29/16 on odd/4
+  [OK] A1 3-cycle -7/4 -> 5/4 -> -1/4 -> -7/4
+  [OK] A2 g(a) = (a^2-29)/4 is an odd integer for odd a (|a| <= 20001; proof: a^2 = 1 mod 8)
+  [OK] A3 escape lemma: 4(g(a)-|a|) = (|a|-2)^2 - 33, so g(a) > |a| (>= 9) for odd |a| >= 9  -- then the orbit is strictly increasing: unbounded
+  [OK] A4 closure: g maps {+-1,+-3,+-5,+-7} into itself (so those 8 orbits are bounded)
+  [OK] A5 bounded iff |a| <= 7 (odd |a| <= 200001, via A3)
+  [OK] A6 |B|,|f B|,|f^2 B|,|f^3 B| = 8,4,3,3; fibres (2,2,2,2) = {x,-x}, then (2,1,1)  -- composite f^2 fibres on B: [4, 2, 2]
+  [OK] A7 depths 0 {-7/4,5/4,-1/4}, 1 {-5/4,1/4,7/4}, 2 {+-3/4}
+  [OK] A8 B = units mod 16 (GENERIC: any 8 consecutive odd integers); g(a+16) = g(a) + 8 (mod 16), so f does not act on residues mod 16
+  [OK] A9 2-adic cube on B (b = (a-1)/2 mod 8): -a <-> complement; g is b -> b(b+1)/2 - 4 (triangular); f^2-fibres = orbits of <complement, swap(b0,b2)> (an ad hoc swap)
+  [OK] A10 Aut(f on B) = Z/2, the swap 3/4 <-> -3/4 (negation is a deck symmetry f(-x) = f(x), not an automorphism)
+  [OK] A11 3-cycle family c(t) = -(t^6+2t^5+4t^4+8t^3+9t^2+4t+1)/(4t^2(t+1)^2): period 3 at 8 sample t; t = 1 gives c = -29/16 with cycle point 5/4
+  [OK] A12 2-adic cube: x7, x9, x15 (mod 16) act on B as translations by 011, 100, 111 (free; f-incompatible by A8)  -- {1: 0, 7: 3, 9: 4, 15: 7}
+B  n = 4 tiling metagraph (path 4->3->2->1; tiles (4,1),(3,1),(4,2); bit 1 = arc y -> x)
+  [OK] B1 8 tilings -> 4 classes, fibres {5,1,1,1}; converse merge -> 3 nodes, fibres {5,2,1}  -- class: scores/fibre [(0, (0, 1, 2, 3), 1), (1, (1, 1, 1, 3), 1), (2, (1, 1, 2, 2), 5), (3, (0, 2, 2, 2), 1)]; converse {0: 0, 2: 2, 1: 3, 3: 1}
+  [OK] B2 4 flip lines {t, t+111}; class line multigraph = star at the strong class with one loop there  -- {(0, 2): 1, (2, 2): 1, (1, 2): 1, (2, 3): 1}
+  [OK] B3 no bijection classes -> f(B) carries the line multigraph onto undirected f on f(B) (loops kept)  -- f on f(B): {(0, 3): 1, (1, 2): 1, (0, 2): 1, (2, 3): 1} (triangle + pendant, no loop) on ['-7/4', '-5/4', '-1/4', '5/4']
+  [OK] B4 merged level: line multigraph on 3 nodes vs f on the 3-cycle: not isomorphic  -- merged lines {(0, 2): 1, (2, 2): 1, (1, 2): 2}; cycle {(0, 2): 1, (0, 1): 1, (1, 2): 1}
+  [OK] B5 grid transpose = converse on tilings (swaps tiles (3,1),(4,2), fixes (4,1))
+  [OK] B6 line chain 8 -> 4 lines -> 3 converse-orbits: shapes (2,2,2,2), (2,1,1); composite (4,2,2) = f^2 fibres (4,2,2) [GENERIC: equal-shape partition chains are always isomorphic]
+  [OK] B7 owner chain composite 8 -> 3 has fibres {5,2,1} vs f^2 on B {4,2,2}: differ  -- [5, 2, 1] vs [4, 2, 2]
+  [OK] B8 natural Klein four-groups are not conjugate in S_8: fixed points <flip,transpose> on tilings vs <negation, Aut(f|B)> on B vs mod-16 units {1,7,9,15} on B  -- [0, 0, 4] vs [0, 2, 6] vs [0, 0, 0]
+C  primes modulo even m until +-1
+  [OK] C1 P(m) < m^2 for all even m in [4, 20000]  -- max P = 272203
+  [OK] C2 P(m) in {m-1, m+1}: 4179 of 9999 (m >= 4), 4178 of 9998 (m >= 6); 41.8%  -- 4179/9999 = 0.4179
+  [OK] C3 largest P(m)/m at m = 16012 (P = 17m - 1, ratio 16.99994, not exactly 17)  -- P(16012) = 272203 = 17*16012 -1
+  [OK] C4 G(m) subset of R(m) for all even m in [4, 20000]
+  [OK] C5 R(m) = G(m) whenever m-1 or m+1 is prime
+  [OK] C6 no prime neighbour => R(m) strictly contains G(m): 5820 of 5820 (m <= 20000)  -- first [26, 34, 50, 56, 64, 76, 86, 92]
+  [OK] C7 witness family (i) {p-m, 2m-p}: 2m = p + q, q < m < p, p - m composite, covers every strict case  -- covered 5820/5820; others []
+  [OK] C8 P(m) = PRIME-MRB p_*(m) on its rows (120..9970); "prime neighbour" <=> its delta(m) = pi(p_*) - pi(m-2) = 1
+D  clique-carrier dimensions (chart_clique_norm_20261103 formula)
+  [OK] D1 r = 3, t = (3,3,5): n = 3,4,5,6 -> 10, 20, 39, 69; the note's display agrees for n = 3..60  -- [10, 20, 39, 69]
+E  printed triangles vs recomputation
+  [OK] E1 odd-pair triangle rows m = 6..40 match  -- 18 rows
+  [OK] E2 PRIMEGAME rows n = 2..21: d from n-1 down to D(n), n - D(n) trials, D(n) = 1 iff n prime
+  [OK] E3 shift identity chi(m+2-a) = chi(m-(a-2)) (trivially true; GENERIC)
+
+ALL INDEPENDENT CHECKS AGREE
