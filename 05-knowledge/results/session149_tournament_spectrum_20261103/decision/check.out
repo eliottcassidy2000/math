@@ -1,0 +1,4 @@
+strong witnesses by divisor: {13: (5, 41)}
+target 13 global bound 7 result ((13, (5, 41)),)
+strong witnesses by divisor: {3: (3, 2), 7: None, 21: None}
+target 21 global bound 8 result None
