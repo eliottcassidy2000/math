@@ -1,0 +1,422 @@
+{
+  "arithmetic": {
+    "bounded_cycle_orders": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      127,
+      128,
+      139,
+      149,
+      192,
+      199,
+      200,
+      257,
+      300
+    ],
+    "counter_stats": {
+      "channels": 1,
+      "peak_states": 2953,
+      "precomputed_transfers": 11109,
+      "transitions": 90219
+    },
+    "even_normalized_mod8_orders4_through40": [
+      1,
+      7,
+      6,
+      6,
+      2,
+      3,
+      4,
+      3,
+      4,
+      1,
+      4,
+      2,
+      2,
+      4,
+      0,
+      0,
+      2,
+      5,
+      0
+    ],
+    "full_integer_orders": [
+      0,
+      100
+    ],
+    "independent_Fraction_orders": [
+      0,
+      30
+    ],
+    "n40_normalized_mod128_by_cycle_count": {
+      "2": 8,
+      "4": 56
+    },
+    "valuation_extrapolation_failures": [
+      [
+        40,
+        26,
+        23
+      ],
+      [
+        48,
+        30,
+        27
+      ],
+      [
+        64,
+        35,
+        36
+      ],
+      [
+        80,
+        45,
+        44
+      ],
+      [
+        96,
+        51,
+        52
+      ]
+    ],
+    "valuation_lane_cases": 40
+  },
+  "diagrams": {
+    "alphabet_sizes": [
+      1,
+      1,
+      5
+    ],
+    "atom_widths": [
+      0,
+      2,
+      4,
+      3,
+      3,
+      3,
+      2
+    ],
+    "maximum_retained_order_width": 4,
+    "n4_blue_charts": [
+      0,
+      2,
+      5,
+      7
+    ],
+    "n4_chart_classes": [
+      "Q4",
+      "Q4",
+      "Q4",
+      "1_to_C3",
+      "Q4",
+      "Q4",
+      "C3_to_1",
+      "TT4"
+    ],
+    "n4_class_pairing_trails": [
+      [
+        0,
+        7
+      ],
+      [
+        3,
+        4,
+        5,
+        2,
+        1,
+        6
+      ]
+    ],
+    "n4_fibres": {
+      "1_to_C3": 1,
+      "C3_to_1": 1,
+      "Q4": 5,
+      "TT4": 1
+    },
+    "n4_lines": [
+      {
+        "ends": [
+          "1_to_C3",
+          "Q4"
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ends": [
+          "C3_to_1",
+          "Q4"
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ends": [
+          "Q4",
+          "Q4"
+        ],
+        "multiplicity": 1
+      },
+      {
+        "ends": [
+          "Q4",
+          "TT4"
+        ],
+        "multiplicity": 1
+      }
+    ],
+    "width4_witness": {
+      "n": 4,
+      "source_rows": [
+        2,
+        4,
+        9,
+        3
+      ],
+      "target_rows": [
+        14,
+        12,
+        8,
+        0
+      ],
+      "width": 4
+    },
+    "word_universe": [
+      {
+        "blue_sources": 1,
+        "marked_sources": 1,
+        "n": 1,
+        "target_H_histogram": {
+          "1": 1
+        }
+      },
+      {
+        "blue_sources": 1,
+        "marked_sources": 1,
+        "n": 2,
+        "target_H_histogram": {
+          "1": 1
+        }
+      },
+      {
+        "blue_sources": 2,
+        "marked_sources": 2,
+        "n": 3,
+        "target_H_histogram": {
+          "1": 1,
+          "3": 1
+        }
+      },
+      {
+        "blue_sources": 4,
+        "marked_sources": 8,
+        "n": 4,
+        "target_H_histogram": {
+          "1": 1,
+          "3": 2,
+          "5": 5
+        }
+      },
+      {
+        "blue_sources": 2,
+        "marked_sources": 14,
+        "n": 5,
+        "target_H_histogram": {
+          "9": 7,
+          "11": 2,
+          "13": 3,
+          "15": 2
+        }
+      },
+      {
+        "blue_sources": 5,
+        "marked_sources": 21,
+        "n": 6,
+        "target_H_histogram": {
+          "15": 4,
+          "17": 4,
+          "19": 2,
+          "23": 4,
+          "27": 2,
+          "29": 2,
+          "31": 2,
+          "33": 1
+        }
+      },
+      {
+        "blue_sources": 3,
+        "marked_sources": 39,
+        "n": 7,
+        "target_H_histogram": {
+          "25": 1,
+          "27": 6,
+          "29": 2,
+          "31": 1,
+          "33": 4,
+          "35": 2,
+          "41": 9,
+          "45": 2,
+          "49": 2,
+          "51": 4,
+          "53": 2,
+          "55": 2,
+          "59": 2
+        }
+      },
+      {
+        "blue_sources": 11,
+        "marked_sources": 93,
+        "n": 8,
+        "target_H_histogram": {
+          "45": 5,
+          "49": 1,
+          "51": 4,
+          "53": 4,
+          "57": 3,
+          "59": 2,
+          "61": 2,
+          "65": 3,
+          "69": 8,
+          "73": 5,
+          "75": 2,
+          "77": 8,
+          "81": 2,
+          "85": 3,
+          "87": 6,
+          "89": 1,
+          "91": 8,
+          "95": 4,
+          "99": 6,
+          "101": 4,
+          "105": 5,
+          "109": 2,
+          "123": 4,
+          "153": 1
+        }
+      },
+      {
+        "blue_sources": 10,
+        "marked_sources": 184,
+        "n": 9,
+        "target_H_histogram": {}
+      },
+      {
+        "blue_sources": 20,
+        "marked_sources": 328,
+        "n": 10,
+        "target_H_histogram": {}
+      }
+    ]
+  },
+  "source_hashes_lf": {
+    "01-canon/theorems/THM-1420-no-linear-tournament-invariants-and-the-chirality-that-survives.md": "b842f8dd2b48b50f968b29153cc54a3ac6a18e6466ee9351c92f72b34a2328b1",
+    "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9",
+    "01-canon/theorems/THM-646-line-metagraph-score-complement-skeleton.md": "203525a858e167724249038f5e6f5610ac82ce0c10a44f43c7ca9d4a7d4a7664",
+    "05-knowledge/results/merged_metagraph_purity_and_strong_core_20261020/STRONG_CORE_COUNT_RECURSIONS.md": "576ba99df7c2cd4960ecfb438d069f2dbae0bd233a8c20843a176fd4ee1cfe8d",
+    "05-knowledge/results/metagraph_scheduled_recursion_20261029/PRECISION.md": "eea2288b59cd8049d676c1717164d2f36bde43d392cf1ff6f20194d18aee259c",
+    "05-knowledge/results/overnight_rank_return_20261029/DEFECT_TRANSFER.md": "8568e40f76396e9c1bd5441db30adca588cd0ef8d06009eff88d4a1b102b254e",
+    "05-knowledge/results/port_residual_integral_20261025/precision/README.md": "4339ed5bac7bed574ee6bded654d6be3c2792debf8dca3532385338ac2339a93",
+    "05-knowledge/results/port_residual_integral_20261025/precision/check.py": "9107ca384b3f891c759932262769ecf741be76eb5b4e45fd45931a307a62fc6e",
+    "05-knowledge/results/scc_basins_20261020d/arithmetic.md": "6d8c4c9bd87f0ea885d9dd59ebd7cb6d695406cc27ac78e94f10d1e04b2fc681",
+    "05-knowledge/results/session149_tournament_spectrum_20261103/toothpick/CORRECTION.md": "f97e597a7cde00f377ba51350d5b1ae8577ab89ffce32a2ff0825ae976c7d1ba",
+    "05-knowledge/results/session81_counterexample_families_20261028/CONFLICT_IMAGES.md": "99f5651b8d90cd5f2a1eecea675c3a7cb4b9e3c23b9808617f8c06f6a98a9d16",
+    "05-knowledge/results/session89_consecutive_tournament_pairs_20261028/counting/channels.py": "38e7c86cb3c9405cd1661ed3cd4463067e5a6a6a288d5145a26761aaac6c1bb9"
+  }
+}

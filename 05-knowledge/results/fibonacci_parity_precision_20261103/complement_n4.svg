@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="730" viewBox="0 0 1300 730">
+<rect width="1300" height="730" fill="#f6f8fc"/>
+<text x="650" y="38" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="29" fill="#303b49">Complement pairs presentations; the quotient retains incidence</text>
+<text x="300" y="110" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="25" fill="#303b49">8 marked presentations</text>
+<text x="975" y="110" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="25" fill="#303b49">4 ordinary isomorphism classes</text>
+<line x1="160" y1="185" x2="440" y2="185" stroke="#2166ba" stroke-width="3"/>
+<ellipse cx="160.0" cy="185.0" rx="23.0" ry="23.0" stroke="#2166ba" stroke-width="3" fill="white"/>
+<text x="160" y="185" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">0</text>
+<text x="160" y="227" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">Strong Q4</text>
+<ellipse cx="440.0" cy="185.0" rx="23.0" ry="23.0" stroke="#2166ba" stroke-width="3" fill="white"/>
+<text x="440" y="185" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">7</text>
+<text x="440" y="227" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">Transitive</text>
+<line x1="160" y1="290" x2="440" y2="290" stroke="#303b49" stroke-width="3"/>
+<ellipse cx="160.0" cy="290.0" rx="23.0" ry="23.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="160" y="290" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">1</text>
+<text x="160" y="332" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">Strong Q4</text>
+<ellipse cx="440.0" cy="290.0" rx="23.0" ry="23.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="440" y="290" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">6</text>
+<text x="440" y="332" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">C3 → 1</text>
+<line x1="160" y1="395" x2="440" y2="395" stroke="#2166ba" stroke-width="3"/>
+<ellipse cx="160.0" cy="395.0" rx="23.0" ry="23.0" stroke="#2166ba" stroke-width="3" fill="white"/>
+<text x="160" y="395" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">2</text>
+<text x="160" y="437" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">Strong Q4</text>
+<ellipse cx="440.0" cy="395.0" rx="23.0" ry="23.0" stroke="#2166ba" stroke-width="3" fill="white"/>
+<text x="440" y="395" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">5</text>
+<text x="440" y="437" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">Strong Q4</text>
+<line x1="160" y1="500" x2="440" y2="500" stroke="#303b49" stroke-width="3"/>
+<ellipse cx="160.0" cy="500.0" rx="23.0" ry="23.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="160" y="500" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">3</text>
+<text x="160" y="542" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">1 → C3</text>
+<ellipse cx="440.0" cy="500.0" rx="23.0" ry="23.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="440" y="500" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">4</text>
+<text x="440" y="542" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="18" fill="#303b49">Strong Q4</text>
+<line x1="735" y1="375" x2="975" y2="375" stroke="#303b49" stroke-width="3"/>
+<line x1="1215" y1="375" x2="975" y2="375" stroke="#303b49" stroke-width="3"/>
+<ellipse cx="975.0" cy="447.5" rx="50.0" ry="62.5" stroke="#2166ba" stroke-width="3" fill="none"/>
+<line x1="975" y1="375" x2="975" y2="185" stroke="#2166ba" stroke-width="3"/>
+<ellipse cx="975.0" cy="185.0" rx="49.0" ry="30.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="975" y="185" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">TT4</text>
+<text x="975" y="131" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">degree 1</text>
+<ellipse cx="735.0" cy="375.0" rx="49.0" ry="30.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="735" y="375" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">1 → C3</text>
+<text x="735" y="321" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">degree 1</text>
+<ellipse cx="1215.0" cy="375.0" rx="49.0" ry="30.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="1215" y="375" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">C3 → 1</text>
+<text x="1215" y="321" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">degree 1</text>
+<ellipse cx="975.0" cy="375.0" rx="49.0" ry="30.0" stroke="#303b49" stroke-width="3" fill="white"/>
+<text x="975" y="375" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">Q4</text>
+<text x="1051" y="321" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="19" fill="#303b49">degree 5</text>
+<text x="300" y="577" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" fill="#303b49">Four disjoint complement pairs.</text>
+<text x="975" y="577" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" fill="#303b49">Loops count twice. Every degree is odd.</text>
+<text x="650" y="625" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" fill="#303b49">Blue and black are actual path-line colours. The quotient star has no perfect matching.</text>
+<text x="650" y="674" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="20" fill="#303b49">Adding within-class re-markings gives class pairs: TT4 ↔ Q4 and (1 → C3) ↔ (C3 → 1).</text>
+<text x="650" y="706" text-anchor="middle" dominant-baseline="central" font-family="Segoe UI,DejaVu Sans,sans-serif" font-size="17" fill="#303b49">Actual chart trails: 0—7 and 3—4—5—2—1—6; the latter retains two re-markings inside Q4.</text>
+</svg>
