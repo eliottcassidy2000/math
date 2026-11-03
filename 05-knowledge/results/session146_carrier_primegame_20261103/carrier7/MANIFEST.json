@@ -1,0 +1,117 @@
+{
+  "files": [
+    {
+      "bytes": 3440,
+      "path": "AUDIT.md",
+      "sha256": "e1fab488e1df5dcc98180d4eca50ec317ecf0e027d51b197b963fbb0d0d5f552"
+    },
+    {
+      "bytes": 4861,
+      "path": "PROOF.md",
+      "sha256": "c119c8dea4252860f1db9ef0f4e7255e5db8f6328eab5ed0bcee8063efd6b5c9"
+    },
+    {
+      "bytes": 1804,
+      "path": "README.md",
+      "sha256": "e78a574979fbb4f6fb0a9ea0173f9de0cc6fbeb8f51925066a113967565e7de9"
+    },
+    {
+      "bytes": 633,
+      "path": "SHA256SUMS",
+      "sha256": "a74162e53b579f996c2c1d9f23dbcc6b4e9f3784f9a807e7551021dd22c958de"
+    },
+    {
+      "bytes": 50945,
+      "path": "contexts7.part00",
+      "sha256": "e56da38fe04ca2f96fcf502e95b3cb78d6498d222f961b038a622d4b1352c316"
+    },
+    {
+      "bytes": 54331,
+      "path": "contexts7.part01",
+      "sha256": "120639122a9005c8821f8b44b73641b712dc428440d597fedb9b4bbe9c49c86e"
+    },
+    {
+      "bytes": 195,
+      "path": "controls.normal.txt",
+      "sha256": "68a81a541126cfc44b09fa8f848b2a9cc5615bc54ebf75cdbd0d70d9c04c2985"
+    },
+    {
+      "bytes": 195,
+      "path": "controls.optimized.txt",
+      "sha256": "68a81a541126cfc44b09fa8f848b2a9cc5615bc54ebf75cdbd0d70d9c04c2985"
+    },
+    {
+      "bytes": 3219,
+      "path": "controls.py",
+      "sha256": "8e2844cf156a507445f297196547fa4d050352de962b1b1ae7b7e4f36b51bb80"
+    },
+    {
+      "bytes": 112,
+      "path": "deletion.log",
+      "sha256": "a6a67bddbe1b56ec7da094fd958d33295e80f0d4a4594b62e8bdf704512cb116"
+    },
+    {
+      "bytes": 4263,
+      "path": "generate_rank7.cpp",
+      "sha256": "4844268fd24c8aaf728eebe336b42af0d4b48fd6d5bf73963604f9aee95f9ca5"
+    },
+    {
+      "bytes": 17799,
+      "path": "rank_contexts6.txt",
+      "sha256": "19f3e917d64e15d6cc79d15bf11d5f1fa3d3cac78215096226715cb21636987f"
+    },
+    {
+      "bytes": 997,
+      "path": "replay.py",
+      "sha256": "9c0a33a06954560fa69fbbc7b76f1eef069cb7ab8c5e7ebe76feffb07ad8a78e"
+    },
+    {
+      "bytes": 4123,
+      "path": "reps6.txt",
+      "sha256": "d622eb04bd5f762b4ebbc13743c85864b7401bbc8c00c813e0bee00cfb3d0c5b"
+    },
+    {
+      "bytes": 23115,
+      "path": "reps7.txt",
+      "sha256": "065b935ea8c6b6ef29bf5a91405ad2f9e7a07d804de963cde46f76a91a9330a5"
+    },
+    {
+      "bytes": 4848,
+      "path": "verify.cpp",
+      "sha256": "f67f94a66001268b5ac0ac0e8f18784c99a0f91820e434f6df7d57f0082d8e5c"
+    },
+    {
+      "bytes": 138,
+      "path": "verify6.log",
+      "sha256": "89faa6555a1d12d2f50587397d60894137a3ecd2c870981f2befc8dfa409db84"
+    },
+    {
+      "bytes": 138,
+      "path": "verify6.ubsan.log",
+      "sha256": "89faa6555a1d12d2f50587397d60894137a3ecd2c870981f2befc8dfa409db84"
+    },
+    {
+      "bytes": 142,
+      "path": "verify7.log",
+      "sha256": "d94df8cb150294e8c47a42291cd81f5bbbfea9f158c44caf4ca3dc1406be1ef8"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S146.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "replay.py",
+      "stdout_sha256": "df1ee43260226ab4ff9417d8b904953f6c96ad175d526a78df0b4a603e721209"
+    }
+  ],
+  "schema": 1,
+  "scope": "Session 146 order-seven rational fixed-attachment response dimension and higher-order lower bound; independently audited certificate."
+}

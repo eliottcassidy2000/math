@@ -77,3 +77,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session144](S144.md): Jacobian degree/fiber/gauge classifications and boundary corrections; audited ETH interfaces; MRB filter/finite-part/precision theorems. Full map classification and MRB arithmetic remain open.
 
 [Session145](S145.md): Pooled interior-parity attachment carrier and exact six-vertex minimum 571 (570 normalized); higher-order linear minimality remains open.
+
+[Session146](S146.md): Full fixed-attachment response dimension 2668 at order seven, with all-order lower bounds; higher-order minimality remains open.
