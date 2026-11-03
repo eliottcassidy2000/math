@@ -142,6 +142,16 @@ This session extends the arithmetic run formulas and supplies the explicit
 quadratic machine in [HOURGLASS.md](HOURGLASS.md); it does not relabel the
 finite triangle compiler as a uniform Goldbach decision procedure.
 
+The later [signed-clock/PRIMEGAME packet](../residue_290_transport_20261102/README.md)
+adds a different literal triangular chart: a division trial (n,d),
+1<=d<n, maps to (p,q)=(2d+1,2(n-d)+1). It is invertible by
+d=(p-1)/2, n=(p+q-2)/2, and d|n iff (p-1)|(q-1). Thus row sum290
+represents candidate144 in this chart, whereas a Goldbach row290 has
+center145. The trial (144,2) gives(5,285): the division predicate holds
+but primality of both entries fails. This checks the distinction directly.
+The source trial, rule priority and division clock remain part of the
+PRIMEGAME interpretation; this change of coordinates does not erase them.
+
 ## P4. Modulo 290 remains a hostile control
 
 The inherited quadratic numerator map F(a)=(a^2-29)/4 descends to the

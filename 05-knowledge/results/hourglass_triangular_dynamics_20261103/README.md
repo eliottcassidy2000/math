@@ -22,6 +22,10 @@ HYP-3053, not a partial tournament or a magic-square configuration.
    an explicit closed two-line Boolean rule and a source/clock-preserving
    FRACTRAN encoding. Its 8->4->3 image ladder has different fibres from
    tournament isomorphism and converse merging.
+   The classification also singles out k=4 as the only nonempty bounded
+   graph in the family admitting transition-preserving tournament completions:
+   exactly982540 are strong, verified by all2^20 orientations and the
+   inherited source-SCC recurrence.
 3. [All-modulus prime wheels](PRIME_WHEELS.md): classify every maximal run
    in the +2 unit wheel at every even modulus via a second-difference
    formula. Joint-offset counts have exact CRT recurrences; future ports

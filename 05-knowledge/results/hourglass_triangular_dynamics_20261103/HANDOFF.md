@@ -19,6 +19,11 @@ eight-point classification or the modulo290 census.
   model, and a genuine finite CA with phase modulo3.
 * All-even-modulus unit-wheel run histogram is a second difference of CRT
   shared-offset counts. Pure powers of two are the cycle exception.
+* D1 singles out k=4 as the only parameter with a nonempty bounded graph
+  whose entire transition relation embeds in a tournament. Its full8-state
+  graph has982540 strong labelled completions, independently counted in
+  all2^20 orientations;491270 classes when the functional graph decoration
+  is retained and its two-leaf swap is allowed. This is not A000568(8).
 
 ## Do not blur with parallel results
 

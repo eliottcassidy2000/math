@@ -9,8 +9,13 @@ import sys
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
 def digest(p):return sha256(p.read_bytes().replace(b'\r\n',b'\n')).hexdigest()
-for a,b in [('normal.json','optimized.json'),('audit.normal.json','audit.optimized.json')]:
+for a,b in [('normal.json','optimized.json'),('audit.normal.json','audit.optimized.json'),
+            ('completions.json','completions.optimized.json')]:
     if (HERE/a).read_bytes()!=(HERE/b).read_bytes():raise ValueError(('receipt mismatch',a,b))
+direct=json.loads((HERE/'completion_direct.json').read_text())
+recur=json.loads((HERE/'completions.json').read_text())
+if direct!={'full_strong':recur['full']['strong'],'quotient_strong':recur['line_quotient']['strong']}:
+    raise ValueError('completion census mismatch')
 links=0
 for file in HERE.glob('*.md'):
     for link in re.findall(r'\]\(([^)]+)\)',file.read_text(encoding='utf-8')):
@@ -34,6 +39,8 @@ deps=[
  '05-knowledge/results/hourglass_quadratic_ports_20261103/README.md',
  '05-knowledge/results/hourglass_quadratic_ports_20261103/NATIVE.md',
  '05-knowledge/results/hourglass_quadratic_ports_20261103/ARITHMETIC.md',
+ '05-knowledge/results/hourglass_quadratic_ports_20261103/COMPLETIONS.md',
+ '05-knowledge/results/residue_290_transport_20261102/README.md',
  '05-knowledge/results/quadratic_2916_odd_pair_triangles_n4_20261102.md',
  '05-knowledge/results/session146_carrier_primegame_20261103/carrier9/PROOF.md',
  '05-knowledge/results/session146_carrier_primegame_20261103/carrier10/PROOF.md',

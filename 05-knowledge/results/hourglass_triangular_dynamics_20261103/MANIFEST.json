@@ -1,23 +1,28 @@
 {
   "artifacts": {
-    "AUDIT.md": "61a373db3ba02638d8f7523c05828c914250931b0dade19b31ef695929895ebb",
+    "AUDIT.md": "1f7fb433b15d4f13a08af5b593dea6edaa534f2dd3c712647827e8d4b7bd7b70",
     "DYNAMICS.md": "2ed6455c783a5938da214568ae2740d4a2f2614a69c2931851c3fe132bbc4210",
-    "HANDOFF.md": "3af4c689211640d2bce17d43ce1574962bc2ecd380f2028aae150bd923bb6e0f",
-    "HOURGLASS.md": "9a852c7ce7dd0fe92c388eddd31e0bb834c476c06225f66c461a93e1c777869c",
-    "PRIME_WHEELS.md": "958cd65d22896b0271c231f17cd18031adfd6d4c873e5cece96b0c8076bb38ec",
-    "README.md": "5f40663500d632b9ae389a0488513a179fc033ae763a9892fc26e451a2b9117e",
-    "SOURCE_PINS.json": "5ac1f85a92b4e86544296807ee5d73b21b983f43307dc416c10258f4b4a4adfe",
+    "HANDOFF.md": "6210308b359465affa898e6e880c0fe42c7aeb18d9e02c831b898c1d4bfc8ea5",
+    "HOURGLASS.md": "46c09b7d62f4ad3d8f8baa311b86062f52bf5d83e20eb0a354f6d828c96d78da",
+    "PRIME_WHEELS.md": "253102121ec4285d97aec2e7df2cac599ecc062c7e54ba0afab5a6ac58fc2437",
+    "README.md": "befd7af39b3000e28c05a6ef014e797731de4a1ab8ad0fcaf32dc925cb8b770c",
+    "SOURCE_PINS.json": "c857d30741c5fa7fe63898f1f17712ae2c18f068658f496a6bb8ed2bc3f4a6c4",
     "audit.normal.json": "2e9546d9a99bee3c4fca7046a517eee4fd4e88ba47d85bf1ddb70aee1e15f11c",
     "audit.optimized.json": "2e9546d9a99bee3c4fca7046a517eee4fd4e88ba47d85bf1ddb70aee1e15f11c",
     "audit.py": "c981c408e365916fc0d832a0b2d55895c50dd2aa14df5eae96bbb10bf7431679",
+    "completion_direct.cpp": "a7c3dc2152df7a4e02b88b7783cb9c9f395b6ab74c57d00a940f29d40338b48b",
+    "completion_direct.json": "d347794cfccc71e8b990e8709ace6115350723db9dee34408aec11d71dc999e0",
+    "completions.json": "ef549fbbd97b59fdc8e1d8e4878afc167a4809f30fcfa89b30e0f0e2348e1d84",
+    "completions.optimized.json": "ef549fbbd97b59fdc8e1d8e4878afc167a4809f30fcfa89b30e0f0e2348e1d84",
+    "completions.py": "881e25f2859984331b0ca60656bb9a8ba652610526c78432c75c1e33959b065c",
     "normal.json": "784622a351f48b56366ee318cd6b647a574e80fadcbfb4d6bd814997bbe9b5d5",
     "optimized.json": "784622a351f48b56366ee318cd6b647a574e80fadcbfb4d6bd814997bbe9b5d5",
     "retained_control.json": "0e61a8a7faee98cac7e0381c9d525e5b8d965264e4df7f3bbf0eb245a4d9e6eb",
     "retained_control.py": "38598973e1527d799ef1a3a09c3052fd0aecd248395dce7d2bf39e9df2dc1dec",
-    "seal.py": "dfc7556cf4860968eeb4d4fd3d5429877d25329a9f46e28fe38321d69ef27e22",
+    "seal.py": "f1ee9a290f95a01ea61a50a94db5b88e82344b7440fef595aa28b33f48bba9ee",
     "verify.py": "003fe5ac3ab6896cb82bf644c113bda07ed53865eb17faa5ded0d1e03c490206"
   },
   "hash_basis": "CRLF normalized to LF",
-  "local_links_checked": 24,
-  "source_count": 19
+  "local_links_checked": 26,
+  "source_count": 21
 }

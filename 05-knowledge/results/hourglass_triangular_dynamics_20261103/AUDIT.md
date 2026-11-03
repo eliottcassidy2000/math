@@ -48,6 +48,10 @@ python -X utf8 -O verify.py > optimized.json
 python -X utf8 audit.py > audit.normal.json
 python -X utf8 -O audit.py > audit.optimized.json
 python -X utf8 retained_control.py > retained_control.json
+python -X utf8 completions.py > completions.json
+python -X utf8 -O completions.py > completions.optimized.json
+g++ -O2 -std=c++17 completion_direct.cpp -o completion_direct
+./completion_direct > completion_direct.json
 python -X utf8 seal.py
 ```
 
@@ -65,6 +69,11 @@ python -X utf8 seal.py
   H/Aut fibres, both quotient failures,72 source/clock machine steps,
   and a multi-control hostile are checked directly. An independent exact
   determinant verifies det(I-zA)=1-z^3 and twelve return traces.
+* The source-SCC recurrence and an independent C++ reachability census
+  agree on982540 strong completions among1048576 orientations of the
+  full bounded quadratic graph, and three among four on its line quotient.
+  All40320 permutations verify its two functional-graph automorphisms.
+  Labelled counts and decoration-preserving isomorphism counts are separate.
 * Wheel producer: every even m=4..2000, plus1160,1890,2310,5510,30030;
   independent circular-block scanner:496 moduli with odd-prime factors.
   Joint-port check:762 nonempty masks, including repeated residues and
