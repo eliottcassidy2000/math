@@ -36,11 +36,15 @@ sources=[
  '05-knowledge/results/weighted_crt_clocks_20261028/CLOCKS.md',
  '05-knowledge/results/collatz_atom_route_memory_20261003.md',
  '05-knowledge/results/collatz_five_mirrors_20260929.md',
+ '05-knowledge/results/uniform_prime_transport_20261103/README.md',
 ]
 def pin(p):
-    b=p.read_bytes();return dict(bytes=len(b),sha256=hashlib.sha256(b).hexdigest())
+    b=p.read_bytes().replace(b'\r\n',b'\n')
+    return dict(bytes_lf=len(b),sha256_lf=hashlib.sha256(b).hexdigest())
 artifacts={p.name:pin(p) for p in sorted(HERE.iterdir()) if p.is_file() and p.name!='manifest.json'}
 deps={name:pin(ROOT/name) for name in sources}
-out=dict(source_base='5e1cedf452c7cc1ec447205939a9d6cf4c0e8743',artifacts=artifacts,dependencies=deps)
+out=dict(source_base='5e1cedf452c7cc1ec447205939a9d6cf4c0e8743',
+         normalization='Text bytes with CRLF normalized to LF; portable across Git checkouts',
+         artifacts=artifacts,dependencies=deps)
 (HERE/'manifest.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n',encoding='utf-8')
 print(json.dumps(dict(artifacts=len(artifacts),dependencies=len(deps),rank=571,normal_optimized_identical=True)))

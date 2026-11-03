@@ -57,7 +57,9 @@ record sequence, sieve bound2000000 and reproduction code are stored.
 
 Independent draws uniformly distributed over the phi(m) units have success
 probability2/phi(m); their geometric waiting time has mean phi(m)/2.
-That is a valid model calculation. It is not a theorem for primes examined
+That is a valid model calculation. In the actual prime ordering, however,
+all candidates below m-1 have zero chance to hit: the starting phase is
+already incompatible with an iid constant-hazard model. It is not a theorem for primes examined
 in increasing order. For a fixed modulus, the prime number theorem in
 progressions supplies asymptotic equal proportions; it supplies neither
 independence nor a random distribution for the first prime. Dirichlet's

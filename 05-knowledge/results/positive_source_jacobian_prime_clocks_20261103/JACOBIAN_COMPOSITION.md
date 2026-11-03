@@ -2,7 +2,7 @@
 
 Status: **PROVED**, with exact symbolic controls; same-agent audit.
 This corrects the unrestricted linear-scaling language of
-[THM-4727, mixed-weight torus reduction](../../01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md)
+[THM-4727, mixed-weight torus reduction](../../../01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md)
 and settles the existence clause of HYP-9343(c)(2). It does not classify
 all Keller counterexamples or settle JC(2).
 
@@ -110,7 +110,7 @@ one specialization. Equation(4) is checked over Q in full.
 
 ## 4. What a complete classification would still require
 
-[THM-1330, Keller monoid necessary-structure atlas](../../01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md)
+[THM-1330, Keller monoid necessary-structure atlas](../../../01-canon/theorems/THM-1330-keller-monoid-exact-picture-inverse-jelonek-cusp-rule.md)
 already distinguishes necessary covering data from a classification. Its
 composition law is the mechanism missing from the later linear-scaling
 claim. The inherited degree spectrum in dimensions>=3 is{1,3,4,5,...};

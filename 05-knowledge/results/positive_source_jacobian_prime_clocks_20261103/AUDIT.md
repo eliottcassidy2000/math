@@ -105,7 +105,12 @@ No complete Keller classification, JC(2), LRC(14), Collatz convergence,
 Fermat-prime finiteness, MRB irrationality, or all-order7/21 spectrum proof
 is claimed. ETH is a primary-source scope citation; no Lean build was run.
 
-Artifact and dependency SHA-256 pins are in manifest.json. The maintained
-documentation check is run after mainline integration, using the Windows
+Artifact and dependency SHA-256 pins are in manifest.json. These
+pins normalize CRLF to LF so they survive ordinary Git platform conversion.
+The full81/27 cover profiles were independently recomputed after reading
+the incoming uniform-prime transport result; the all-order averaged-query
+blindness follows from the new recurrence, not a finite word scan.
+The maintained
+documentation check passed after mainline integration, using the Windows
 extended-path prefix because some unrelated repository filenames exceed
 the ordinary Windows path length.

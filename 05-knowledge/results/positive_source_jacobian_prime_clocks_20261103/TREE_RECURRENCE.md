@@ -129,3 +129,17 @@ The 81/27 pair is retained in `sidecars.json`: identical cyclic triples and
 H=462915 do not determine a named growth response. Port8 after a sink gives
 2390013 versus1754919. Therefore (3) must not be promoted from a uniform
 average to a port-by-port update.
+
+In fact the full unordered path-cover profiles of the pair are equal:
+
+    c_1..c_12 = (462915,4505949,13435794,18254079,13393350,
+                 5803110,1558116,264627,28305,1839,66,1).
+
+This equality was also reported for ordered runs in the incoming
+[uniform-prime transport packet](../uniform_prime_transport_20261103/README.md);
+`sidecars.py` independently recomputes it by subset/block DP. Equations(1),(2)
+now give an all-order consequence: every predetermined sequence of uniform
+old-port births and sinks has identical expected H from these two sources.
+The proof is induction with the same linear profile transfer at each size.
+This does not say their resulting distributions or shared moments agree,
+nor does it permit source-dependent stopping or selected-port choices.

@@ -24,6 +24,10 @@ closed two specific tests and found a smaller mean carrier.
    other jump sizes or changed sources with a proven transport. The old
    finite coverage through99999999 has not been extended here. Prime and
    7p entry obligations remain distinct from scalar response recurrences.
+   Incoming `uniform_prime_transport_20261103` now supplies native three-command
+   homogeneous-module exchange and explicit prime/7p candidate families;
+   use those actual source transports as the next biased-law test. Their
+   full run content filters are necessary, not sufficient for primeness.
 4. **Jacobian classification must be closed under composition.** Nonlinear
    orbit scaling exists, explicitly l2=l(2-3lA-l^2B); delta_k=(3*5^(k-1)-1)/2.
    Incoming Session144 also settles every raw nonlinear degree by an
@@ -46,6 +50,11 @@ Hostile controls: the actual81/27 pair; the six-vertex F1/F2 strictly
 positive laws invisible to every fixed attachment mean; order-four
 uniform birth prefixes; the three rational Keller collision points;
 fixed finite MRB quadrature; equal-density unequal-gap waiting clocks.
+
+The81/27 pair has the same full path-cover profile, independently replayed.
+Thus ANY predetermined sequence of uniform-port births and sinks has equal
+expected H from both, by the new recurrence. Named-port queries separate
+them; never replace them by averaged port counts when reconstructing a source.
 
 The ETH preprint/formalization scope is CITED, not independently Lean-built
 here. Any computational import must keep its CNF input-size accounting.

@@ -1,0 +1,176 @@
+{
+  "artifacts": {
+    "ARITHMETIC_CLOCKS.md": {
+      "bytes_lf": 7057,
+      "sha256_lf": "dc2e34eb6d898eb893a3d56fc100d79f81fc3d10a1f55a2eb2f89346d7e8aada"
+    },
+    "AUDIT.md": {
+      "bytes_lf": 7434,
+      "sha256_lf": "722d8eb7066ca36ef6c84de6e5a000bdcfdf966d023b67a9eeb7547486cbc3e7"
+    },
+    "HANDOFF.md": {
+      "bytes_lf": 4068,
+      "sha256_lf": "973f43e4a3f771a53b9dc6e099bbfcd0337375a047bc02f7edaa0873b3201cb2"
+    },
+    "JACOBIAN_COMPOSITION.md": {
+      "bytes_lf": 8526,
+      "sha256_lf": "a84a43528edf0acdfc87b1aecb1a13a4754a49bf02f3a5298c33144b7adfece7"
+    },
+    "PARITY_CARRIER.md": {
+      "bytes_lf": 10579,
+      "sha256_lf": "05bdbebcbdddbd98ec814e133f0e577444b0541d50561a9293acb572cf83d010"
+    },
+    "README.md": {
+      "bytes_lf": 3051,
+      "sha256_lf": "fc473adc5779e60ead9daf173b546c7f624f2fc66bf49d7b6ed7db2342180805"
+    },
+    "SYNTHESIS.md": {
+      "bytes_lf": 8428,
+      "sha256_lf": "3c9cf994dce59242e837be3911933b98376f9413383a85add9c8433f15ba7a64"
+    },
+    "TREE_RECURRENCE.md": {
+      "bytes_lf": 7028,
+      "sha256_lf": "6a216191742f9cdb5c16c99ece02fec9f58051f89d3a1e79f250c1af61c180ec"
+    },
+    "carrier.json": {
+      "bytes_lf": 724,
+      "sha256_lf": "001ff4471ace1997081d3cdb4ae577b2abf63d0a7f0c48d8ba420e362cb1c3cc"
+    },
+    "carrier.py": {
+      "bytes_lf": 5386,
+      "sha256_lf": "4828fde50b2a7c570e40f3a6f1dcdd44d53c900c4448a2ae1ef9f9df01dd75e9"
+    },
+    "carrier_literal.cpp": {
+      "bytes_lf": 1885,
+      "sha256_lf": "349b4d39413da4cf77040066a625ff37c1309c6a3c9a542faaa6140598c1f53a"
+    },
+    "carrier_literal.json": {
+      "bytes_lf": 10236,
+      "sha256_lf": "f0d65e532c9b9b96ffdc2453acedcd16256f60a8413e741ba2ead0f23ec19bae"
+    },
+    "carrier_optimized.json": {
+      "bytes_lf": 724,
+      "sha256_lf": "001ff4471ace1997081d3cdb4ae577b2abf63d0a7f0c48d8ba420e362cb1c3cc"
+    },
+    "carrier_rank.cpp": {
+      "bytes_lf": 3457,
+      "sha256_lf": "64d68801fc8c94e11ef865643f6fee483a2fa20d03b491166d8582f1bf4b7a68"
+    },
+    "carrier_rank.json": {
+      "bytes_lf": 5519,
+      "sha256_lf": "c4bbc821af1acdae6cfa0289fcc8cdc41dfa026d02d07ef82a39263794cc3b14"
+    },
+    "rank_contexts.txt": {
+      "bytes_lf": 5354,
+      "sha256_lf": "e1bcf7a8bdba3b84caf68015f6e0e3de9c503a8fb2339619067cefbcac73270a"
+    },
+    "rank_input.py": {
+      "bytes_lf": 626,
+      "sha256_lf": "ca8b8c187048171d30b874070a3315b6d9112d0d688f7430998f7f4cda3239ee"
+    },
+    "rank_input.txt": {
+      "bytes_lf": 11697,
+      "sha256_lf": "a179c7f9b4ca685919dd837af10dd8b0f28ed4a1363bfd9b5707ace3773d4d33"
+    },
+    "rank_literal.cpp": {
+      "bytes_lf": 2620,
+      "sha256_lf": "f57faa648efccf04a12cc909be6e830f501f80bc01cc5795658cd7da73c7f5b1"
+    },
+    "rank_literal.json": {
+      "bytes_lf": 4571,
+      "sha256_lf": "5b1ca354920478477a81e547ec3dfbe10cfa2935d5553afbea0fcd12800cbf24"
+    },
+    "rank_types.json": {
+      "bytes_lf": 43265,
+      "sha256_lf": "4923d93228dfff4798e460db1f67648e2ec9fade6bef11fc7bfe956bede2a7e7"
+    },
+    "seal.py": {
+      "bytes_lf": 3057,
+      "sha256_lf": "4fe3558fcc2de8c37288aa52986d9ef44eee7c69f6fc7c02155628abe14c54a9"
+    },
+    "sidecars.json": {
+      "bytes_lf": 1324,
+      "sha256_lf": "5ac35f24e73a0c3a85637d1f0ba241e9346763d26302db930808cfa6727140bd"
+    },
+    "sidecars.py": {
+      "bytes_lf": 2784,
+      "sha256_lf": "f91fa42b28a6cda9480cd0a7a5b4f188d10ffe69099da237e361045c5c61e45c"
+    },
+    "verification.json": {
+      "bytes_lf": 10291,
+      "sha256_lf": "6ab149d3ec5110e9937c9c15d5d6dcf241a6be7c8b222e10a0692a19102b54c3"
+    },
+    "verification_optimized.json": {
+      "bytes_lf": 10291,
+      "sha256_lf": "6ab149d3ec5110e9937c9c15d5d6dcf241a6be7c8b222e10a0692a19102b54c3"
+    },
+    "verify.py": {
+      "bytes_lf": 10111,
+      "sha256_lf": "aba6bc00b7592fc3c974f9fba6f890a3f86079a173bc77e74572bf65f4677514"
+    }
+  },
+  "dependencies": {
+    "05-knowledge/results/collatz_atom_route_memory_20261003.md": {
+      "bytes_lf": 19455,
+      "sha256_lf": "0effa18c102cac4c455914c06d49cbaf28db7ac10483176bbb93d367e10f24d3"
+    },
+    "05-knowledge/results/collatz_five_mirrors_20260929.md": {
+      "bytes_lf": 108589,
+      "sha256_lf": "6305a4beda154c2447c10c43429524363e38f36e4c293d1f3039e5957657fa8c"
+    },
+    "05-knowledge/results/jacobian_eth_prime_wait_20261102/WEIGHTED-CLASSIFICATION.md": {
+      "bytes_lf": 10337,
+      "sha256_lf": "0b38eeb7a6f3657282d612ce8f18f6b49c52165aab48c1d640b38c6d01bb46fc"
+    },
+    "05-knowledge/results/overnight_rank_return_20261029/TWO_RUN.md": {
+      "bytes_lf": 11180,
+      "sha256_lf": "8b19727952bea6be41a6fdcf2d2cbbfa271139de56e86030a995853f945d976f"
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md": {
+      "bytes_lf": 13698,
+      "sha256_lf": "c19454f45ca6958abf84535500d70f4813670aab9fe060a63cb8eba14d401956"
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/growth_identity.py": {
+      "bytes_lf": 2659,
+      "sha256_lf": "53a8e4f7dbe7ef2dbb0a48932b1e664f90257904b5f2121a719615d142f23b3b"
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/port_scout.py": {
+      "bytes_lf": 2365,
+      "sha256_lf": "90301a791adba44e839d4ad6441dbc1323d70adc60c3395670c88a577c6d615b"
+    },
+    "05-knowledge/results/primegame_port_spectrum_20261103/verify.py": {
+      "bytes_lf": 8160,
+      "sha256_lf": "3a12b3d8c1a61964f3cfbf98e76963eda0336c95ee70592762d24ecb84486804"
+    },
+    "05-knowledge/results/regular_parent_symmetry_20261029/verify.py": {
+      "bytes_lf": 21132,
+      "sha256_lf": "6c0ad650be0902e35ad225aac7a23491e3533a83bfd130d8f0e201cb01541aa5"
+    },
+    "05-knowledge/results/session144_jacobian_eth_mrb_20261103/jacobian/equivariant_composition_tower.md": {
+      "bytes_lf": 9990,
+      "sha256_lf": "3ccfe330a6764a55019c6015f0ca17e41b899045a48de2b29b48e8d96633e1f1"
+    },
+    "05-knowledge/results/session144_jacobian_eth_mrb_20261103/jacobian_followup/equivariant_gauge_hostile.md": {
+      "bytes_lf": 2479,
+      "sha256_lf": "446528f6282100ee3e3d2541a30e63215f94c90ec3254f6b055c40a9c180f80f"
+    },
+    "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md": {
+      "bytes_lf": 17957,
+      "sha256_lf": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790"
+    },
+    "05-knowledge/results/session31_mirror_mrb_20261022/tree-moments/TREE_MOMENT_BRIDGE.md": {
+      "bytes_lf": 22354,
+      "sha256_lf": "41b885384b4af3227c15ce6f599bf37f9942efc765555c59a3d0bd16b4b42a86"
+    },
+    "05-knowledge/results/uniform_prime_transport_20261103/README.md": {
+      "bytes_lf": 3676,
+      "sha256_lf": "7f16f0b7d81ca9374fa823efec49ed998d49a22d80faf818d291ad41079ea574"
+    },
+    "05-knowledge/results/weighted_crt_clocks_20261028/CLOCKS.md": {
+      "bytes_lf": 4709,
+      "sha256_lf": "97e1ec3d2bb93927e1a327a5930110341837fa3e999f64b56afc53c79ca52c6a"
+    }
+  },
+  "normalization": "Text bytes with CRLF normalized to LF; portable across Git checkouts",
+  "source_base": "5e1cedf452c7cc1ec447205939a9d6cf4c0e8743"
+}
