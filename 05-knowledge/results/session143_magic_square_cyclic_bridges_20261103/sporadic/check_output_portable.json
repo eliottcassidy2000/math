@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "checks_executed": 45,
+  "coefficient_order": "ascending",
+  "q": [
+    1,
+    3,
+    4,
+    2,
+    1
+  ],
+  "regular_charpoly": [
+    -2,
+    -5,
+    -5,
+    0,
+    0,
+    1
+  ],
+  "cases": [
+    {
+      "case": "C5 regular",
+      "degree": 5,
+      "nonidentity_character": 0,
+      "multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "operator_trace": 0
+    },
+    {
+      "case": "B 5A",
+      "degree": 4371,
+      "nonidentity_character": 21,
+      "multiplicities": [
+        891,
+        870,
+        870,
+        870,
+        870
+      ],
+      "operator_trace": 42
+    },
+    {
+      "case": "B 5B",
+      "degree": 4371,
+      "nonidentity_character": -4,
+      "multiplicities": [
+        871,
+        875,
+        875,
+        875,
+        875
+      ],
+      "operator_trace": -8
+    }
+  ],
+  "cyclotomic_degrees": [
+    4,
+    16,
+    64
+  ],
+  "source_transcription_check": "not requested: imported Baby Monster data remain CITED",
+  "boundary": "Algebra checked; cited Baby Monster character table not independently reconstructed."
+}

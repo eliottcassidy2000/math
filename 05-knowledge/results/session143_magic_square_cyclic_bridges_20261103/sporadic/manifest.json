@@ -1,0 +1,62 @@
+{
+  "schema": "session143-sporadic-portable-v2",
+  "source_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+  "checked_utc_date": "2026-11-03",
+  "status": "PASS finite exact algebra, source transcription, optimization-safe checks, and all 10 positive/negative regression cases; GAP script NOT EXECUTED",
+  "reproduce": [
+    "python3 check_bridge.py",
+    "python3 -O check_bridge.py",
+    "python3 test_bridge.py",
+    "python3 test_bridge.py --sources-dir PATH_WITH_PRIMARY_SNAPSHOTS"
+  ],
+  "artifacts": [
+    {
+      "path": "report.md",
+      "bytes": 9409,
+      "sha256": "3d27da11e7b0f939bef765b027b5e2b3fe1ff52120f14b348e6e572c030c86cb"
+    },
+    {
+      "path": "check_bridge.py",
+      "bytes": 6862,
+      "sha256": "1b46c4971d35e23d157abd37402158cae27a12a7dc564d485d402d9cd081ec42"
+    },
+    {
+      "path": "check_output.json",
+      "bytes": 1126,
+      "sha256": "db4eb01ea0dbd0e21014050873a5a308ff27d8b9a4c1b33220a1afe3355db678"
+    },
+    {
+      "path": "check_output_portable.json",
+      "bytes": 1112,
+      "sha256": "ab97021b4a53cdad2ce77af976fc651653cc46331a72769a5dda65f062746e18"
+    },
+    {
+      "path": "test_bridge.py",
+      "bytes": 2036,
+      "sha256": "7939bc4b183ebecb9e21f21dd026e377020ebf33ec09615797857057dde7b3cd"
+    },
+    {
+      "path": "test_output.json",
+      "bytes": 1493,
+      "sha256": "ba95f3017897fb4581f9515808187265ff41e72f4dea619e611f539c4a98f4b7"
+    },
+    {
+      "path": "verify_baby_monster.g",
+      "bytes": 1299,
+      "sha256": "3d24d8b3fdc3923f5eb5859a0011681910397a96ec41a600ccd7f076e1869ae6"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 2913,
+      "sha256": "9d41191534d7d05c92d6c1f80e2ace94f3abf043293b2ee50971ec3a7baed7ba"
+    }
+  ],
+  "excluded_third_party_snapshots": [
+    "ctblbm.html",
+    "ctblbm.txt",
+    "atlas_b.html",
+    "m13.html"
+  ],
+  "scope": "Generic complex C5 representation operator; cited Baby Monster specialization; no universal correspondence or LRC conclusion.",
+  "supersedes_manifest_sha256": "f21187e1774c6b55e1599e46913a1f8077f200e640d280dee90b7aa5e069850a"
+}

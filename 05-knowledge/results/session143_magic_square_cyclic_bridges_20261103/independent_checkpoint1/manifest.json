@@ -1,0 +1,41 @@
+{
+  "schema": "session143-independent-checkpoint1-v1",
+  "status": "PASS scoped independent audit",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 4419,
+      "sha256": "327acc70fcf9e187e8946448fb4279bb1fe9ceb37af8029277c67032a7c348e3"
+    },
+    {
+      "path": "check_checkpoint1.py",
+      "bytes": 5607,
+      "sha256": "096a7ead35857018a4a930fc80a3675ffacbfbd5ff6af5872c9c7c2a90b108d7"
+    },
+    {
+      "path": "external_source_checks.json",
+      "bytes": 3443,
+      "sha256": "b7d3be26d771dfeef993cc59cd7c2452d3336b7e52d5a9e664b399ee78524fa4"
+    },
+    {
+      "path": "repository_source_checks.json",
+      "bytes": 1454,
+      "sha256": "c8458c5f988bb0b10a1f68680e4fcc46af97923f0ddaf85e8012ce1ec87ae1c9"
+    },
+    {
+      "path": "result.json",
+      "bytes": 4304,
+      "sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "path": "result.optimized.json",
+      "bytes": 4304,
+      "sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "path": "verify_manifest.py",
+      "bytes": 1001,
+      "sha256": "308239646c81577627de83a278258cb3af1c5621037e7e0151c5a5301a758ef9"
+    }
+  ]
+}

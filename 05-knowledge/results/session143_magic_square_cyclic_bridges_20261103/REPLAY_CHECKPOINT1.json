@@ -1,0 +1,225 @@
+{
+  "checkpoint": "1",
+  "expected_rejections": 12,
+  "fresh_relocation": true,
+  "normal_and_optimized": true,
+  "positive_executions": 18,
+  "runs": [
+    {
+      "expected_rejection": false,
+      "label": "n5-census",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "mckay-catalogue",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "259d4534d58a656d6e194f5cc88df11b0cbe840403b2da2fe364394b521ecea4"
+    },
+    {
+      "expected_rejection": false,
+      "label": "tournament-lane-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "bd3859324f8ddc3f43573f7da3ccdf345cffcfbf5e6ba494936116e96a787028"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-operator",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "ab97021b4a53cdad2ce77af976fc651653cc46331a72769a5dda65f062746e18"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-lane-hostile-suite",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "103a39f0f11baac12fa07d0a16413a9c0124b10b4a427e6752973eccc019f408"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-eigenvalue",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-character",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "historical-source-pins",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "c10192fe5b69df5ad3db3173e88c4333c532f0a8c5dcf91a25457bd65417396a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-census-C5",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-lane-manifest",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "47c9553026781c11e86800e4c0048e29ff6edf873f2d82c825d52df35037b73c"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-wrong-spectrum",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "normal",
+      "returncode": 0,
+      "stdout_sha256": "6a6af353a3f09638bd1aba2269e347d8ced61f96507a9fdc1177762b9d283b7c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "n5-census",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "expected_rejection": false,
+      "label": "mckay-catalogue",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "259d4534d58a656d6e194f5cc88df11b0cbe840403b2da2fe364394b521ecea4"
+    },
+    {
+      "expected_rejection": false,
+      "label": "tournament-lane-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "bd3859324f8ddc3f43573f7da3ccdf345cffcfbf5e6ba494936116e96a787028"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-operator",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "ab97021b4a53cdad2ce77af976fc651653cc46331a72769a5dda65f062746e18"
+    },
+    {
+      "expected_rejection": false,
+      "label": "C5-lane-hostile-suite",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "103a39f0f11baac12fa07d0a16413a9c0124b10b4a427e6752973eccc019f408"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-eigenvalue",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "bad-character",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "historical-source-pins",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "c10192fe5b69df5ad3db3173e88c4333c532f0a8c5dcf91a25457bd65417396a"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-census-C5",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "expected_rejection": false,
+      "label": "independent-lane-manifest",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "47c9553026781c11e86800e4c0048e29ff6edf873f2d82c825d52df35037b73c"
+    },
+    {
+      "expected_rejection": true,
+      "label": "independent-wrong-spectrum",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": false,
+      "label": "source-integrity",
+      "mode": "optimized",
+      "returncode": 0,
+      "stdout_sha256": "6a6af353a3f09638bd1aba2269e347d8ced61f96507a9fdc1177762b9d283b7c"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-tournament-census",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-tournament-census",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-cyclotomic-inverse",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "wrong-cyclotomic-inverse",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "normal",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "expected_rejection": true,
+      "label": "same-size-proof-corruption",
+      "mode": "optimized",
+      "returncode": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Checkpoint1: finite order-five tournament universe, C5 operator algebra with cited Baby Monster character data, source identities, and named hostile controls. No external character table rebuild, GAP execution, canonical-source status promotion, or magic-square conjecture closure.",
+  "source_files_verified": 35,
+  "source_manifest_sha256": "c32533e8f01f08080f56a795f6ab9663a73031ec20a8ec58ff59f6790daf5395",
+  "status": "PASS",
+  "total_executions": 30,
+  "unrelated_cwd": true
+}

@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "bytes": 14827,
+      "path": "RESEARCH.md",
+      "sha256": "fa95d4d59517699d46a0e174e737261ba8af6a4920a2b418a77711dd69c058eb"
+    },
+    {
+      "bytes": 12700,
+      "path": "check_tournaments.py",
+      "sha256": "8da47091f761a8c2d9a7d0149f713fd34fc9546aee1d94b854850fddb2c277ee"
+    },
+    {
+      "bytes": 17412,
+      "path": "classification.json",
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "bytes": 2029,
+      "path": "source_pins.json",
+      "sha256": "d4e219e68154f76e327dbe6e0a2d22b8472bfdcab173445a5188cbc909c14c37"
+    },
+    {
+      "bytes": 953,
+      "path": "verify_manifest.py",
+      "sha256": "1b3adcf623d0617775b382911930ed2031db6c3ec1de015012d80719300aa326"
+    },
+    {
+      "bytes": 770,
+      "path": "mckay_catalogue.json",
+      "sha256": "7a7b0a73764399fdf287976c907558558d616a34cf5b49f8b73fae1bdd1f8d0f"
+    },
+    {
+      "bytes": 1249,
+      "path": "catalogue_crosscheck.py",
+      "sha256": "d59ccae45d8927460cc197f8a76f62bf1afcb5db60b9a4c50e2595e5c311b8ae"
+    }
+  ],
+  "hash_basis": "raw bytes"
+}

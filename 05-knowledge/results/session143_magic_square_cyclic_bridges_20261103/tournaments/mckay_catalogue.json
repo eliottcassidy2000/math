@@ -1,0 +1,15 @@
+{
+  "provenance": "Numeric catalogue records transcribed from primary-source web responses on 2026-11-03; each bit string is upper adjacency triangle in row order.",
+  "all": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/tourn5.txt",
+    "records": ["0000000000", "0000000101", "0000100010", "0000100100", "0001100100", "0010100101", "1000001000", "1000010000", "1000100000", "1000100101", "1000110101", "1100101110"]
+  },
+  "self_converse": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/selfcontourn5.txt",
+    "records": ["1111111111", "1100111111", "1101110111", "1101111101", "1101111110", "1100110111", "1111101111", "1110101111"]
+  },
+  "regular": {
+    "url": "https://users.cecs.anu.edu.au/~bdm/data/rt5.txt",
+    "records": ["1100101110"]
+  }
+}

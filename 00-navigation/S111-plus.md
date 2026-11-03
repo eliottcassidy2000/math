@@ -71,3 +71,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session141](S141.md): functional-layer capacity and connected extremizers; tau<=17 excess-two classification; sharp hyperbolic binary-tree capacity; square-path common blocks and cubic n26. Typed20 roles, no conjecture shortcut.
 
 [Session142](S142.md): recovered7/21 exclusion, exact prime-lane obstruction and factor length; Jacobian parity and legal-source barriers. Universal tournament spectrum remains OPEN.
+
+[Session143](S143.md): corrected n=5 census/spectra and a C5 operator bridge with cited Baby Monster multiplicities; magic-square-of-squares remains OPEN.

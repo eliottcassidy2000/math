@@ -1,0 +1,93 @@
+{
+  "mutations": [
+    {
+      "after": "len(orbits) == 13, '1024 labels,12 classes'",
+      "before": "len(orbits) == 12, '1024 labels,12 classes'",
+      "label": "wrong-tournament-census",
+      "reason": "1024 labels,12 classes",
+      "returncode": 1,
+      "script": "tournaments/check_tournaments.py",
+      "target": "tournaments/check_tournaments.py"
+    },
+    {
+      "after": "linear_combo([-16, -18, -2, -1, 5], powers[:5])",
+      "before": "linear_combo([-17, -18, -2, -1, 5], powers[:5])",
+      "label": "wrong-cyclotomic-inverse",
+      "reason": "11P polynomial reconstruction",
+      "returncode": 1,
+      "script": "tournaments/check_tournaments.py",
+      "target": "tournaments/check_tournaments.py"
+    }
+  ],
+  "proof_corruption": "tournaments/RESEARCH.md",
+  "scope": "Checkpoint1: finite order-five tournament universe, C5 operator algebra with cited Baby Monster character data, source identities, and named hostile controls. No external character table rebuild, GAP execution, canonical-source status promotion, or magic-square conjecture closure.",
+  "tests": [
+    {
+      "label": "n5-census",
+      "output": "tournaments/classification.json",
+      "script": "tournaments/check_tournaments.py"
+    },
+    {
+      "label": "mckay-catalogue",
+      "output": "tournaments/catalogue_crosscheck.stdout.txt",
+      "script": "tournaments/catalogue_crosscheck.py"
+    },
+    {
+      "label": "tournament-lane-manifest",
+      "script": "tournaments/verify_manifest.py"
+    },
+    {
+      "label": "C5-operator",
+      "output": "sporadic/check_output_portable.json",
+      "script": "sporadic/check_bridge.py"
+    },
+    {
+      "label": "C5-lane-hostile-suite",
+      "output": "sporadic/test_output_portable.json",
+      "script": "sporadic/test_bridge.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "bad-eigenvalue"
+      ],
+      "label": "bad-eigenvalue",
+      "reason": "rem(qalpha,phi5)==[0]",
+      "returncode": 1,
+      "script": "sporadic/check_bridge.py"
+    },
+    {
+      "argv": [
+        "--mutate",
+        "bad-character"
+      ],
+      "label": "bad-character",
+      "reason": "multiplicities==expected",
+      "returncode": 1,
+      "script": "sporadic/check_bridge.py"
+    },
+    {
+      "label": "historical-source-pins",
+      "output": "SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "script": "verify_source_pins.py"
+    },
+    {
+      "label": "independent-census-C5",
+      "output": "independent_checkpoint1/result.json",
+      "script": "independent_checkpoint1/check_checkpoint1.py"
+    },
+    {
+      "label": "independent-lane-manifest",
+      "script": "independent_checkpoint1/verify_manifest.py"
+    },
+    {
+      "argv": [
+        "--mutate-spectrum"
+      ],
+      "label": "independent-wrong-spectrum",
+      "reason": "nine distinct adjacency spectra",
+      "returncode": 1,
+      "script": "independent_checkpoint1/check_checkpoint1.py"
+    }
+  ]
+}

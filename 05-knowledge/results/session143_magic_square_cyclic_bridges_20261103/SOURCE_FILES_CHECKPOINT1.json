@@ -1,0 +1,180 @@
+{
+  "files": [
+    {
+      "bytes": 2931,
+      "path": "REPLAY_CONFIG_CHECKPOINT1.json",
+      "sha256": "0a0c5f4175354b79a37808789ddaa950647d7165ce0612126369fd26e4d780e7"
+    },
+    {
+      "bytes": 221,
+      "path": "SOURCE_INTEGRITY_CHECKPOINT1.json",
+      "sha256": "c10192fe5b69df5ad3db3173e88c4333c532f0a8c5dcf91a25457bd65417396a"
+    },
+    {
+      "bytes": 1425,
+      "path": "SOURCE_PINS_CHECKPOINT1.json",
+      "sha256": "3fd0a6729c8186b563f852817d7a596c5938d322cabcc46f709c0079e58e162c"
+    },
+    {
+      "bytes": 4419,
+      "path": "independent_checkpoint1/REVIEW.md",
+      "sha256": "327acc70fcf9e187e8946448fb4279bb1fe9ceb37af8029277c67032a7c348e3"
+    },
+    {
+      "bytes": 5607,
+      "path": "independent_checkpoint1/check_checkpoint1.py",
+      "sha256": "096a7ead35857018a4a930fc80a3675ffacbfbd5ff6af5872c9c7c2a90b108d7"
+    },
+    {
+      "bytes": 3443,
+      "path": "independent_checkpoint1/external_source_checks.json",
+      "sha256": "b7d3be26d771dfeef993cc59cd7c2452d3336b7e52d5a9e664b399ee78524fa4"
+    },
+    {
+      "bytes": 1198,
+      "path": "independent_checkpoint1/manifest.json",
+      "sha256": "cd652ea8492a76ed7c10b82eb77a8b977b96a6b22cd4b6ec80c63e780692c047"
+    },
+    {
+      "bytes": 1454,
+      "path": "independent_checkpoint1/repository_source_checks.json",
+      "sha256": "c8458c5f988bb0b10a1f68680e4fcc46af97923f0ddaf85e8012ce1ec87ae1c9"
+    },
+    {
+      "bytes": 4304,
+      "path": "independent_checkpoint1/result.json",
+      "sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "bytes": 4304,
+      "path": "independent_checkpoint1/result.optimized.json",
+      "sha256": "7f56abfa4ee290bfb05213fb848627a20e23f92461fdac65edbd668313cb4066"
+    },
+    {
+      "bytes": 1001,
+      "path": "independent_checkpoint1/verify_manifest.py",
+      "sha256": "308239646c81577627de83a278258cb3af1c5621037e7e0151c5a5301a758ef9"
+    },
+    {
+      "bytes": 4964,
+      "path": "inheritance/tournaments/THM-1858-no-tournament-has-exactly-two-distinct-eigenvalues.md",
+      "sha256": "8e9b6bacbc371b5a91b1a42f360dd1c9085b826723a959e294ba25ab6caf58f6"
+    },
+    {
+      "bytes": 25351,
+      "path": "inheritance/tournaments/THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient.md",
+      "sha256": "e8aa36c8f1c5d33d5c88e43c43d9c2ad9d43791aa0ec97417b38732ce31888a4"
+    },
+    {
+      "bytes": 11216,
+      "path": "inheritance/tournaments/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "sha256": "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf"
+    },
+    {
+      "bytes": 5222,
+      "path": "replay_checkpoint1.py",
+      "sha256": "b27015437ecf7e0fc75f6de3c4dc322b7b1f9e598d194d13c1e321aca2249f75"
+    },
+    {
+      "bytes": 6862,
+      "path": "sporadic/check_bridge.py",
+      "sha256": "1b46c4971d35e23d157abd37402158cae27a12a7dc564d485d402d9cd081ec42"
+    },
+    {
+      "bytes": 1126,
+      "path": "sporadic/check_output.json",
+      "sha256": "db4eb01ea0dbd0e21014050873a5a308ff27d8b9a4c1b33220a1afe3355db678"
+    },
+    {
+      "bytes": 1112,
+      "path": "sporadic/check_output_portable.json",
+      "sha256": "ab97021b4a53cdad2ce77af976fc651653cc46331a72769a5dda65f062746e18"
+    },
+    {
+      "bytes": 2084,
+      "path": "sporadic/manifest.json",
+      "sha256": "20a2e90b012f482a301b6c4fd3560982414845d2157243c5658019293a2522ae"
+    },
+    {
+      "bytes": 9409,
+      "path": "sporadic/report.md",
+      "sha256": "3d27da11e7b0f939bef765b027b5e2b3fe1ff52120f14b348e6e572c030c86cb"
+    },
+    {
+      "bytes": 2913,
+      "path": "sporadic/sources.json",
+      "sha256": "9d41191534d7d05c92d6c1f80e2ace94f3abf043293b2ee50971ec3a7baed7ba"
+    },
+    {
+      "bytes": 2036,
+      "path": "sporadic/test_bridge.py",
+      "sha256": "7939bc4b183ebecb9e21f21dd026e377020ebf33ec09615797857057dde7b3cd"
+    },
+    {
+      "bytes": 1493,
+      "path": "sporadic/test_output.json",
+      "sha256": "ba95f3017897fb4581f9515808187265ff41e72f4dea619e611f539c4a98f4b7"
+    },
+    {
+      "bytes": 965,
+      "path": "sporadic/test_output_portable.json",
+      "sha256": "103a39f0f11baac12fa07d0a16413a9c0124b10b4a427e6752973eccc019f408"
+    },
+    {
+      "bytes": 1299,
+      "path": "sporadic/verify_baby_monster.g",
+      "sha256": "3d24d8b3fdc3923f5eb5859a0011681910397a96ec41a600ccd7f076e1869ae6"
+    },
+    {
+      "bytes": 14827,
+      "path": "tournaments/RESEARCH.md",
+      "sha256": "fa95d4d59517699d46a0e174e737261ba8af6a4920a2b418a77711dd69c058eb"
+    },
+    {
+      "bytes": 1249,
+      "path": "tournaments/catalogue_crosscheck.py",
+      "sha256": "d59ccae45d8927460cc197f8a76f62bf1afcb5db60b9a4c50e2595e5c311b8ae"
+    },
+    {
+      "bytes": 83,
+      "path": "tournaments/catalogue_crosscheck.stdout.txt",
+      "sha256": "259d4534d58a656d6e194f5cc88df11b0cbe840403b2da2fe364394b521ecea4"
+    },
+    {
+      "bytes": 12700,
+      "path": "tournaments/check_tournaments.py",
+      "sha256": "8da47091f761a8c2d9a7d0149f713fd34fc9546aee1d94b854850fddb2c277ee"
+    },
+    {
+      "bytes": 17412,
+      "path": "tournaments/classification.json",
+      "sha256": "ee229b05f85c44da5c949bc11033e5b5129ac803ba3a68ec58d2a68ad328933c"
+    },
+    {
+      "bytes": 1122,
+      "path": "tournaments/manifest.json",
+      "sha256": "97f8f00d91d6e7b435379e124e3f75be02a72f4ef5526ef6892cbdaba60db26b"
+    },
+    {
+      "bytes": 770,
+      "path": "tournaments/mckay_catalogue.json",
+      "sha256": "7a7b0a73764399fdf287976c907558558d616a34cf5b49f8b73fae1bdd1f8d0f"
+    },
+    {
+      "bytes": 2029,
+      "path": "tournaments/source_pins.json",
+      "sha256": "d4e219e68154f76e327dbe6e0a2d22b8472bfdcab173445a5188cbc909c14c37"
+    },
+    {
+      "bytes": 953,
+      "path": "tournaments/verify_manifest.py",
+      "sha256": "1b3adcf623d0617775b382911930ed2031db6c3ec1de015012d80719300aa326"
+    },
+    {
+      "bytes": 1419,
+      "path": "verify_source_pins.py",
+      "sha256": "8c7d8c23203ab9b158e6dce63d470849a1d2a20ad427434063bd6a77283e8329"
+    }
+  ],
+  "schema": "session143-source-files-v1"
+}

@@ -1,0 +1,1 @@
+PASS: exact canonical match with McKay catalogues; all12, self-converse8, regular1

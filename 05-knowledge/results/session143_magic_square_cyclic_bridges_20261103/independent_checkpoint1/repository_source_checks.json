@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "sources": [
+    {
+      "lane": "tournaments",
+      "repository_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "01-canon/theorems/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "git_blob_oid": "ab415482c9a32d0dbd3442135244c4eb7e22fd61",
+      "sha256": "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf",
+      "bytes": 11216,
+      "verification": "git show exact named path; bytes/OID/SHA256 match lane pins"
+    },
+    {
+      "lane": "tournaments",
+      "repository_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "01-canon/theorems/THM-1858-no-tournament-has-exactly-two-distinct-eigenvalues.md",
+      "git_blob_oid": "22d1e5681adb3ea0118183a692a72a3aca7efcf8",
+      "sha256": "8e9b6bacbc371b5a91b1a42f360dd1c9085b826723a959e294ba25ab6caf58f6",
+      "bytes": 4964,
+      "verification": "git show exact named path; bytes/OID/SHA256 match lane pins"
+    },
+    {
+      "lane": "tournaments",
+      "repository_commit": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+      "path": "01-canon/theorems/THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient.md",
+      "git_blob_oid": "cecfce235ca49fcd2f5847ae832184640ae378ec",
+      "sha256": "e8aa36c8f1c5d33d5c88e43c43d9c2ad9d43791aa0ec97417b38732ce31888a4",
+      "bytes": 25351,
+      "verification": "git show exact named path; bytes/OID/SHA256 match lane pins"
+    }
+  ]
+}

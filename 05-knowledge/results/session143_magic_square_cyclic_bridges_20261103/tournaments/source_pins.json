@@ -1,0 +1,46 @@
+{
+  "external_sources": [
+    {
+      "author": "Brendan McKay",
+      "observed_utc_date": "2026-11-03",
+      "scope": "Primary catalogue:12 order-five tournament classes,8 self-converse,1 regular. Not used as a dependency of the exact census.",
+      "url": "https://users.cecs.anu.edu.au/~bdm/data/digraphs.html"
+    },
+    {
+      "observed_utc_date": "2026-11-03",
+      "scope": "CITED list includes maximal subgroup5:4 x HS:2 of order1774080000. Not independently constructed.",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/spor/B/"
+    },
+    {
+      "observed_utc_date": "2026-11-03",
+      "scope": "CITED maximal subgroup list and two named order-five conjugacy classes; no class-spectrum identification imported.",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B"
+    },
+    {
+      "observed_utc_date": "2026-11-03",
+      "scope": "Subgroup program landing page inspected; downloaded program not executed; listed certification is file existence.",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/subgroup/BG1-max15W1"
+    }
+  ],
+  "repository_revision": "8286d710498a3b4e9b9f1ac683c6eb77716f3f4b",
+  "repository_sources": [
+    {
+      "bytes": 11216,
+      "git_blob_oid": "ab415482c9a32d0dbd3442135244c4eb7e22fd61",
+      "path": "01-canon/theorems/THM-3447-regular-group-orbit-tournament-parity-and-involution-ties.md",
+      "sha256": "e93209774784b915a1c7f63300974f2da53ba3957143511a84d4a19bacfefabf"
+    },
+    {
+      "bytes": 4964,
+      "git_blob_oid": "22d1e5681adb3ea0118183a692a72a3aca7efcf8",
+      "path": "01-canon/theorems/THM-1858-no-tournament-has-exactly-two-distinct-eigenvalues.md",
+      "sha256": "8e9b6bacbc371b5a91b1a42f360dd1c9085b826723a959e294ba25ab6caf58f6"
+    },
+    {
+      "bytes": 25351,
+      "git_blob_oid": "cecfce235ca49fcd2f5847ae832184640ae378ec",
+      "path": "01-canon/theorems/THM-2532-cyclic-tournament-cayley-algebra-and-chi7-even-quotient.md",
+      "sha256": "e8aa36c8f1c5d33d5c88e43c43d9c2ad9d43791aa0ec97417b38732ce31888a4"
+    }
+  ]
+}

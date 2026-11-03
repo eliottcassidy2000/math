@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "test": "portable-positive",
+      "optimized": false,
+      "exit_code": 0,
+      "checks_executed": 45
+    },
+    {
+      "test": "bad-eigenvalue",
+      "optimized": false,
+      "exit_code": 1,
+      "rejection": "FAIL: rem(qalpha,phi5)==[0]"
+    },
+    {
+      "test": "bad-character",
+      "optimized": false,
+      "exit_code": 1,
+      "rejection": "FAIL: multiplicities==expected"
+    },
+    {
+      "test": "portable-positive",
+      "optimized": true,
+      "exit_code": 0,
+      "checks_executed": 45
+    },
+    {
+      "test": "bad-eigenvalue",
+      "optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: rem(qalpha,phi5)==[0]"
+    },
+    {
+      "test": "bad-character",
+      "optimized": true,
+      "exit_code": 1,
+      "rejection": "FAIL: multiplicities==expected"
+    }
+  ],
+  "boundary": "Negative controls certify rejection of named corruptions, not all possible checker faults."
+}

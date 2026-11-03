@@ -1,0 +1,78 @@
+{
+  "status": "CITED primary data; exact transcription checked where snapshots present",
+  "sources": [
+    {
+      "id": "atlas-b",
+      "url": "https://brauer.maths.qmul.ac.uk/Atlas/v3/spor/B",
+      "kind": "primary ATLAS database",
+      "locator": "Order; maximal subgroups; conjugacy classes",
+      "snapshot": "atlas_b.html",
+      "imported_facts": [
+        "group order",
+        "two order-five classes and centralizers",
+        "5:4 x HS:2 maximal subgroup",
+        "class ordering"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "snapshot_bytes": 76448,
+      "snapshot_sha256": "2dfac4ac49865ef042865be4fb18170ca3fd66709bbd38f0ef35293c43f354e3"
+    },
+    {
+      "id": "bmw-ctbl",
+      "url": "https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/htm/ctblbm.htm",
+      "kind": "primary computation protocol by Breuer, Magaard, Wilson",
+      "locator": "Section 6: galoisinfo and power maps; Section 7: chi reordered by bfuslabels, final Irr agreement",
+      "snapshot": "ctblbm.html",
+      "imported_facts": [
+        "5A and 5B rational classes",
+        "rational ordinary character degree 4371",
+        "4371-character values 21 and -4"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "snapshot_bytes": 186374,
+      "snapshot_sha256": "6f341f9b274f2b477f140de8b7453604ef4fe26e362c4aa16dcb8dd78ee2e436"
+    },
+    {
+      "id": "cem-m13",
+      "url": "https://arxiv.org/html/math/0508630v1",
+      "kind": "primary paper by Conway, Elkies, Martin",
+      "locator": "Introduction; Section 2.2; Section 5",
+      "snapshot": "m13.html",
+      "download_url": "https://arxiv.org/html/math/0508630",
+      "imported_facts": [
+        "13-point PG(2,3) board",
+        "12 counters plus hole",
+        "double transposition move",
+        "M12 from closed paths; M13 pseudogroup not group"
+      ],
+      "checked_utc_date": "2026-11-03",
+      "snapshot_bytes": 585896,
+      "snapshot_sha256": "c4033b7388c10a5eba58d8602a0d9918d8df0a9184ab2cb830a61f8de54147c7"
+    },
+    {
+      "id": "steel-thesis",
+      "url": "https://magma.maths.usyd.edu.au/~allan/reps/AllanSteelPhD.pdf",
+      "kind": "primary construction thesis, 2012",
+      "locator": "Section 5.11, printed page119 / PDF page129",
+      "access": "browser verified; no local snapshot",
+      "imported_facts": [
+        "minimal faithful ordinary dimension4371",
+        "realizable overQ"
+      ],
+      "checked_utc_date": "2026-11-03"
+    },
+    {
+      "id": "dlns-x013",
+      "url": "https://math.mit.edu/~drew/mcom3213.pdf",
+      "doi": "10.1090/mcom/3213",
+      "kind": "primary research paper",
+      "locator": "Section6.1, Proposition6.2 proof, printed page446 / PDF page22",
+      "access": "browser verified; no local snapshot",
+      "imported_facts": [
+        "X0(13) genus0",
+        "explicit rational j(t) parameterization"
+      ],
+      "checked_utc_date": "2026-11-03"
+    }
+  ]
+}
