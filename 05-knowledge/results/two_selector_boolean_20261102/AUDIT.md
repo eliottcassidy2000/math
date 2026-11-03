@@ -42,6 +42,14 @@ Incoming Session142's prime witnesses80557 and100000007 and its path-cover
 amplification are credited from CHECKPOINT3.md. They do not extend the current
 uniform interval ceiling in this packet. The complete spectrum remains OPEN.
 
+The close-out fetch brought072cd911c3, Session143's independently audited
+[cyclic bridge](../session143_magic_square_cyclic_bridges_20261103/SYNTHESIS.md).
+Its exact census and regular polynomial agree with our direct checks.
+INSPIRATION.md now credits its positive group-algebra replacement for the
+pasted Baby Monster identification, retaining the distinction between a
+proved Fourier lemma and cited character-table inputs. That comparison is
+not a dependency of the carrier, inverse or joint-law proofs.
+
 ## Exact universes and independent calculations
 
 `experiment.py` counts paths by summing the Boolean subcubes of every

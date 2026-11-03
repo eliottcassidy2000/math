@@ -137,6 +137,25 @@ The finite fact that there are eight self-converse classes among the twelve
 five-vertex tournament classes is correct and independently enumerated here.
 It does not generate the proposed matrices from projective anchors.
 
+**Late incoming positive repair, credited to Session143.** Its
+[cyclic operator theorem](../session143_magic_square_cyclic_bridges_20261103/SYNTHESIS.md)
+supplies the missing kind of object: for an order-five element g in a complex
+representation rho, use B_g=rho(g)+rho(g)^2. The regular tournament is the
+special case P+P^2 for the five-cycle permutation matrix. Writing
+q(t)=t^4+2t^3+4t^2+3t+1, a representation of degree d with constant character
+value c on the four nonidentity powers has operator polynomial
+
+`(t-2)^((d+4c)/5) q(t)^((d-c)/5).`
+
+That packet's **CITED** Baby Monster character inputs d=4371 and c=21,-4
+give powers(891,870) and(871,875). This is an explicit generic group-algebra
+operator bridge with multiplicities, not a five-point Baby Monster action
+or an identification of its two classes with the two pasted adjacency
+matrices. Our packet does not reconstruct the character table. The identical
+eigenvalue support but different multiplicities makes the information-loss
+boundary precise; Session143 independently confirms the corrected regular
+polynomial and the five-vertex census.
+
 ## The projective pentad and every proposed anchor fail
 
 The supplied points P2,P4,P5 are collinear: P5-P4=P2 over F3. In fact no
