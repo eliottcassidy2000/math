@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** for 1<=i<2^k, T(2^k+i)=T(2^k)+2T(i)+T(i+1)-1, as in Applegate–Pol–Sloane, arXiv:1004.3036v2, Corollary3. T1544 now cites that source and separates ordinary class parity from converse fixed classes. All-order tournament parity and a specified class pairing are proved/recovered in `05-knowledge/results/tournament_joint_parity_20261102/parity.md`.
 - **Missing coordinate / new question:** the stage-zero/first-birth boundary and the fixed-point locus. Reflection orbit counts alone do not decide exposed physical ports or an H-preserving pairing; the packet's toothpick shared-port hostile and unique-H1 obstruction give the exact repair boundaries.
 
+## 2026-11-03 — a greedy matching-frame cover was called a minimum
+
+- **Scope / first failed implication:** `07-reflections/almost-fixed-frame-and-the-coupling-s533.md` reported that the twelve n5 tournament classes require five full matching-frame blocks. `04-computation/almost_fixed_frame_s533.py` uses a greedy cover and prints MIN; a greedy upper bound is not an optimum certificate.
+- **Exact repair:** all256 frames for matching(0,1),(2,3) yield136 full frames and15 distinct full four-class blocks. No three cover all12 classes; four do, from base masks2,270,842,282. The minimum is therefore4. The displayed classes, exhaustive check and normal/optimized receipts are in `05-knowledge/results/paired_recursions_20261103/PAIRINGS.md` and `verify.py`.
+- **Strongest survivor / missing coordinate:** the disjoint three-block tiling remains impossible. Count divisibility supplies an abstract free binary action, not native matching flips. Its compatibility with converse needs the self-converse fixed locus; its compatibility with H needs the fixed counts in every H fibre. Claims identifying this finite obstruction with LRC coupling are interpretations, not equivalences. The same reflection's universal extra factor at even n>=8 is false at n14 and has been scoped to its tested n8,10,12 cases.
+- **Next question:** determine the minimum allowed native move set that realizes a converse-compatible pairing at arbitrary order; a sorted class pairing does not answer this geometric question.
+
 ## 2026-11-03 — a capped face is not the gross interior of a nested cycle
 
 - **Scope:** prepublication fence argument in `05-knowledge/results/chart_clique_norm_20261103/FENCES_AND_PORTS.md`; no accepted theorem is retracted.

@@ -1,10 +1,21 @@
 ---
 source: oracle-2026-06-01-S533
-status: result — divisibility verified; clean frame-factorization holds only n<=4; breakdown = the coupling
+status: historical reflection; corrected 2026-11-03 — n5 cover minimum four, no three-block tiling; all-order count divisibility proved elsewhere
 tags: [tournaments, A000568, independent-pairs, frame, 2-adic, coupling, multi-channel, LRC]
 ---
 
 # The almost-fixed frame: it works exactly at n<=4, and its failure is the LRC coupling
+
+**Correction / historical boundary (2026-11-03):** the exact n5 minimum is
+**four** full matching-frame blocks, not five. All256 frames produce136 full
+frames and15 distinct full blocks; no three cover all12 classes, but the
+[explicit four-frame witness and exhaustive check](../05-knowledge/results/paired_recursions_20261103/PAIRINGS.md#p4-native-matching-frames-are-a-stronger-demand)
+do. The old script used a greedy cover and labelled it MIN, which does not
+prove optimality. The n5 non-tiling result survives. The broader statements
+below identifying this with LRC coupling or native free actions at all orders
+are historical interpretations, not proved equivalences. Count divisibility
+has an [all-order arithmetic proof](../05-knowledge/results/port_residual_integral_20261025/precision/README.md);
+its abstract binary action need not be matching flips or commute with converse.
 
 **Prompt (user):** consider `2^x` tournament iso classes as `x` independent-pair
 flips on a fixed frame; understand how an ALMOST fixed frame can satisfy this.
@@ -16,9 +27,9 @@ the negative half is the same wall as the LRC difficulty.
 
 Verified for n=3..12: `2^{floor(n/2)} | A000568(n)`, with quotients
 `1, 1, 3, 7, 57, 430, 11971, ...`. The `floor(n/2)` independent-pair flips
-contribute a genuine factor of `2^{floor(n/2)}` to the tournament count. (The
-2-adic valuation even *exceeds* `floor(n/2)` for even `n >= 8` — an extra pair-flip
-2 at n=8,10,12 — so the pair-flip factor is a lower bound, not the whole 2-part.)
+were used to motivate a factor of `2^{floor(n/2)}` in the count. The valuation
+exceeds `floor(n/2)` at n=8,10,12, but not at every even n>=8: n=14 has
+valuation7. The arithmetic factor does not by itself identify native pair flips.
 
 So "x pair flips" really is a `2^x` factor of the iso-class count, for every n.
 
@@ -41,7 +52,8 @@ Computed (`almost_fixed_frame_s533.py` + partition search):
   action is generically free — the local `2^x` structure is there);
 - but **no 3 of those 136 blocks are pairwise disjoint** — there is NO partition
   of the 12 iso classes into disjoint pair-flip blocks. The blocks genuinely
-  overlap; a minimal cover needs 5 frames (not 3), Hamming-spread 4 of 8 arcs.
+  overlap; a minimal cover needs 4 frames (not 3), corrected by the exhaustive
+  2026-11-03 check. The old five-frame greedy witness is not an optimum.
 
 So an exactly-fixed frame fails (quotient > 1), and an *almost*-fixed frame fails
 too: the frames a cover needs are far apart, and no disjoint tiling exists. The

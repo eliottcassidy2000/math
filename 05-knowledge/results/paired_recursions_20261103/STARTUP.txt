@@ -1,0 +1,99 @@
+MATH RESEARCH STARTUP PACKET (read-only, bounded)
+
+== Git state ==
+branch: codex/session-paired_recursions_20261103
+HEAD:   e30c89e9fcdc
+target (cached refs): origin/main
+relative to target: behind 0, ahead 0
+working tree: DIRTY (1 paths; first 12 shown)
+  ?? .scratch-startup-paired.txt
+ACTION: identify ownership; do not sweep unrelated files into a commit.
+
+== Recent commits (8) ==
+e30c89e9fc (HEAD -> codex/session-paired_recursions_20261103, origin/main, origin/HEAD) Session149 checkpoint 1: scope toothpick symmetry correspondence
+3857c6f714 square-birth: reconcile incoming cycle, Pell plateau and prime-shell proofs
+4947234327 square-birth: preserve and replay incoming frozen prime certificates on Windows
+522c2bfa50 square-birth: certify 761/903 complement controllers and root-labelled growth
+5ffac37a51 [session148]: prove Pell plateaus and audit graph bridges
+7102ed8e69 mac-mini-2026-11-02-triangles: close-out letter (audited; MISTAKE-702)
+e809cda3d0 mac-mini-2026-11-02-triangles: point to the concurrent hourglass_triangular_dynamics packet (owner's clarification: the four-vertex hourglass is HYP-3053's diagonal-layer relation, matching this note's reading)
+5932e6a95e mac-mini-2026-11-02-triangles: apply independent audit (SOUND WITH CORRECTIONS; MISTAKE-702) - credits for the concurrent PRIME-MRB packet (same P(m), prime-neighbour census) and session146 prime290 (same eight-point classification, odd-pair triangle), one-out-edge note and Walde-Russo; index 'exactly when' scoped to the proved direction; THM-4139 date, 'units mod 16' typed GENERIC (f does not act mod 16), ratio 16.99994, inner-loop wording, hourglass reading labelled an interpretation; audit folder
+Freshness is cached-only: run `git fetch origin` before strict reliance.
+
+== Canonical startup route ==
+always read:
+  [OK] 00-navigation/START-HERE.md
+  [OK] 00-navigation/CURRENT-FRONTIER.md
+  [OK] 01-canon/ACTIVE-GUARDRAILS.md
+mathematical workflow:
+  [OK] 00-navigation/RESEARCH-PROTOCOL.md
+  [OK] 00-navigation/META-PATTERNS.md
+on demand:
+  [OK] 05-knowledge/reference/CORE-PAPERS.md
+  [OK] 00-navigation/PROBLEM-LEDGER.md
+Historical logs/reflections are searched for provenance, not read as truth.
+
+== Session posture ==
+Anchor: A000568 parity involution doubling seven-term toothpick Hamilton spectrum
+Inheritance: name the closest proved mechanism, hostile example,
+corrected near miss, and least-used relevant sidecar before deriving.
+Choose one underexplored Niche and one freely generated Wildcard.
+Keep a 3–7 concept board; compare each new result against every item.
+Explain the mechanism or failure anatomy, not only the verdict.
+Type connections as map / preserved predicate / loss / sidecar / test.
+Select a relevant META-PATTERNS card; at closeout record cards used
+and evidence for any candidate card or counterindication.
+Treat RESERVED and CLAIMED files as unproved; never use them as proved dependencies.
+
+== Front-of-ledger correction headings ==
+- MISTAKE-597 (2026-10-13, opus-2026-10-13-S25 five-manuscripts note, THM-4627, THM-4628, HYP-9258; found by the session's independent adversarial audit after checkpoint 6dde94b60c was pushed) -- an inverted substitution misidentifying an elliptic curve, nonexistent fixed primes of order twenty, a run index reported as a location, and four overclaims
+- MISTAKE-593 (2026-10-12, opus-2026-10-12-S24 six-colour core and band-budget notes, THM-4614, HYP-9247, HYP-9248; found by the session's independent adversarial audit after checkpoint d75e3ac2a was pushed) -- a source charge read from a truncated trace, a ledger count recorded before the last rule, "PROVED under the random model" for a large-deviation heuristic, a residue-colouring no-go scoped to all primes from one, and a port quantifier
+- MISTAKE-592 (2026-10-12, opus-2026-10-12-S23 chess proof-system note, THM-4612 and THM-4613; found by the session's independent adversarial audit A after checkpoints fc6ead521, 95493b988 and cec488f34 were pushed) -- a retrograde solver that could not lose by boundary moves alone, an unsupported numeric range, a stale output file, and five wording overclaims
+- MISTAKE-591 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit H after checkpoints cd2dead5a5 and 6c272b0bc1 were pushed) -- float evidence typed as exact, "need" where only "were" was shown, a verification claimed for all maps that covered half, a lost log quoted as evidence, a one-form experiment stated as a theorem, an overgeneralized existence claim, "semi-decidable" misused, and a false reason in a proof (fixed before the audit finished)
+- MISTAKE-590 (2026-10-08, mac-mini-2026-10-08-rank; found by independent audit G after checkpoint 97b640656d was pushed) -- a per-offset "iff" claimed where only a limit was proved, a missing positivity hypothesis, a missed second kind of congruence obstruction, a wrong parameter restriction on a sketch route, an over-general impossibility claim, an uncredited criterion, a census miscount, an "equality" that was a strict failure, and a constant attached to the wrong form
+- MISTAKE-589 (2026-10-08, mac-mini-2026-10-08-reframes; found by independent audits E (THM-4606) and F (HYP-9244 and the results note) after checkpoint 8de8989efb was pushed) -- a conjecture stated without an accessibility clause, a false "sheet-blind" reading, a diagnostic that could not show what was claimed, a single-event estimate, an "exact" label on a pruned search, a density bound stated for all offsets, a proof sentence wrong for non-integer starts, heuristics stated as identities, and a per-depth tail read from correlated samples
+- MISTAKE-588 (2026-10-07, opus-2026-10-07-S21 Mersenne-line barriers note, THM-4605 and HYP-9243; found by the session's independent adversarial audit after checkpoint 023a49bcf was pushed) -- an absorbed block assumed to be an interval, a "collapse together" claim no committed code checked, a band "agreement" with the orphan law that was a bookkeeping artifact, a provable consequence typed as heuristic, an uncited published algorithm, and a Mahler analogy at the wrong place; then (second audit) a misstated trivial-cycle case and a missed canon theorem (THM-4593)
+- MISTAKE-587 (2026-10-07, mac-mini-2026-10-07-twoanchor continuation; found by independent audits C (Collatz) and D (reducible locus) after checkpoint a0a33b38cd was pushed) -- an orphan-law exponent claimed from data that cannot fix it, a selection artifact read as a signal, a classification typed PROVED that rests on an open periodicity question, non-realisable transitions listed, a lemma stated without its scope, and a frieze "reading" that was wrong about where friezes live and what minors see
+Topic-matched older corrections:
+- MISTAKE-693 (2026-10-28, opus-2026-10-28-S68, HYP-9437, THM-4839, MISTAKE-691 and the note `05-knowledge/results/attractors_modular_triangle_world_abc_genealogy_20261028.md` at the pre-audit commit 4e32454073; found by the independent audit `04-computation/experiments/attractors_census_bridges_20261028_audit_S68/AUDIT.md`, SOUND WITH CORRECTIONS, all applied) -- a lexicon bug ('Hecke' matching 'checked') that manufactured a census hub, the wrong modular curve for Pythagorean Frey curves, and over-statements in the bridges and the genealogy
+- MISTAKE-053: Systemic HYP-number collisions — five `HYP-N` reused in one 30-hour LRC burst
+- MISTAKE-055: Busch (2006) strong-min recurrence mis-cited as p(n)=p(n−1)+p(n−2)+1 (gives 41,67); true minH_strong is 3,5,9,15,25,45,75
+- MISTAKE-209 (2026-07-21, codex audit of THM-1985/THM-1990) -- a harmonic SUBSET was computed as a term MULTISET, and the claimed linear-growth iff misses the whole Bertrand boundary
+Read ACTIVE-GUARDRAILS first; open the full entry only when relevant.
+
+== Topic packet: A000568 parity involution doubling seven-term toothpick Hamilton spectrum ==
+rank terms: A000568 parity involution doubling seven-term toothpick Hamilton spectrum, A000568, parity, involution, doubling, seven-term, toothpick, Hamilton
+Current-route matches (ranked):
+  00-navigation/LRC14-PROOF-MAP.md:52: Independently audited THM-2449 says any rational lawful anchored continuation either fires all `72` mixed source-target colours after one rectangle defect or is exactly delta plus six replicas. THM-2456 identifies that failure as a uniform owner-minus-replica root-density offset: it is trivial on one Boolean chart, but...
+Detailed files (truth precedence first; specificity within group):
+  Established canon:
+    [OPEN] 01-canon/theorems/THM-4845-a000568-as-a-gaussian-average-gcd-covariance-cycle-index-exponential-and-the-meromorphic-normalized-series-with-poles-at-powers-of-four.md
+    [CITED] 01-canon/theorems/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md
+    [PROVED] 01-canon/theorems/THM-584-complement-is-antipodal-map-level-parity-spectrum.md
+    ... 780 more; refine the query
+  Unproved candidates (not results):
+    [CLAIMED] 01-canon/theorems/THM-454-blowup-product-and-lift-laws.md
+  Hypotheses:
+    [UNLABELLED] 05-knowledge/hypotheses/HYP-3133-lrc14-a000568-edge-sandwich.md
+    [OPEN] 05-knowledge/hypotheses/HYP-1977-lrc-a000568-projection-defect.md
+    [OPEN] 05-knowledge/hypotheses/HYP-1978-lrc-a000568-marked-quotient.md
+    ... 367 more; refine the query
+  Historical reflections:
+    [HISTORY] 07-reflections/endpoint-half-filter-a000568-s671.md
+    [HISTORY] 07-reflections/formalizing-lrc-a000568-results-s513.md
+    [HISTORY] 07-reflections/lrc-a000568-isoclass-analogy-s509.md
+    ... 721 more; refine the query
+Niche/artifact hits (evidence or inspiration; not truth authority):
+  05-knowledge/results/session67_metagraph_enumeration_information_20261026/session67-incoming/source-canonical/THM-4803-intransitivity-is-the-relation-modulo-its-modular-tree-and-a000568-from-the-prime-cycle-index-census.md
+  04-computation/lrc14_a000568_edge_sandwich_codex_20260627.py
+  04-computation/lrc_a000568_marked_chamber_s510.py
+  05-knowledge/results/lrc14_a000568_edge_sandwich_codex_20260627.out
+  04-computation/fast_a000568_s90dh.py
+  05-knowledge/results/aliquot_66_five_fifteen_20261028/occurrences.json
+  ... 6124 more; refine the query
+
+== Coordination ==
+machine identity: opus
+Use `python3 agents/processor.py --status --peek --limit 8`;
+remove --peek only when intentionally consuming the displayed messages.
+Legacy IDs collide: cite every theorem as ID + slug/path.
