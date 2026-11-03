@@ -34,6 +34,13 @@ int main(){
    for(int i=0;i<10;i++)if(i!=drop){int jj=0;for(int j=0;j<10;j++)if(j!=drop){if((src[k][i]>>j)&1)x[ii]|=1<<jj;jj++;}ii++;}
    need(paths(x,9)==deletion[k][drop],"deleted vertex path count");
   }
+  long mindel2=1000000;
+  for(int p=0;p<10;p++)for(int q=p+1;q<10;q++){
+   int x[8]={},ii=0;
+   for(int i=0;i<10;i++)if(i!=p && i!=q){int jj=0;for(int j=0;j<10;j++)if(j!=p && j!=q){if((src[k][i]>>j)&1)x[ii]|=1<<jj;jj++;}ii++;}
+   mindel2=min(mindel2,paths(x,8));
+  }
+  need(mindel2==(k?3:1),"two-vertex deletion minimum");
   int a[13]={};for(int i=0;i<3;i++)a[i]=(1<<((i+1)%3))|(((1<<10)-1)<<3);
   for(int j=0;j<10;j++)a[3+j]=src[k][j]<<3;
   long h=paths(a,13);need(h==basewant[k],"base h");

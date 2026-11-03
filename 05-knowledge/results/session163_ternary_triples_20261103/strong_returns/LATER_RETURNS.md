@@ -1,6 +1,6 @@
 # Later source returns: two scoped obstructions
 
-**Status.** The first observation is an all-word finite-state certificate for a specific 65-atom language. The second is an explicit 60-graph test of one kind of nonuniform strong repair. Neither excludes other source languages, source re-markings, multiple cross-edge reversals or arbitrary strong tournaments. In particular, the tournament path-count spectrum and the closed ternary source bank remain open. No novelty relative to the wider literature is asserted.
+**Status.** The first observation is an all-word finite-state certificate for a specific 65-atom language. The second is a symbolic obstruction for every cross-edge rewiring with the two internal blocks fixed, with an explicit 60-graph test of the one-reversal subclass. Neither excludes other source languages, source re-markings, changes to the internal blocks, or arbitrary strong tournaments. In particular, the tournament path-count spectrum and the closed ternary source bank remain open. No novelty relative to the wider literature is asserted.
 
 Let `(h,x,y)` be the physical observer defined in [the strong-return note](NOTE.md), and t=(2,−1,0). The two returned strong sources there have states
 
@@ -24,22 +24,28 @@ A test of reduced arithmetic alone can miss this issue: for each modulus m=2,…
 
 For any fixed common suffix W in `{b,q2}` applied to both sides, the obstruction also rules out a predecessor word V in this alphabet satisfying `v(VW)=(3R_i+j t)P_W`: both atom matrices are nonsingular, with determinants 1 and 5, so cancellation would give the already excluded `v(V)=3R_i+j t`. This applies only to a common suffix and the named source alphabet. It does not rule out a graph with a different suffix representation, a different port, or an external construction.
 
-## One nonuniform crossing edge
+## Arbitrary cross-edge rewiring
 
-The universally available marked-source 0 branch gives the nonstrong ordinal products C3⊕R2 and C3⊕R4, with counts 855 and 873 and the original source port retained. For each product reverse exactly one of its 30 cross edges, leaving all internal edges unchanged. Every resulting graph is strong: its two internally strong blocks now have edges in both directions.
+The universally available marked-source 0 branch gives the nonstrong ordinal products C3⊕R2 and C3⊕R4, with counts 855 and 873 and the original source port retained. Keep the internal orientations of C3 and X fixed, where X is either R2 or R4, but orient the 30 cross edges arbitrarily. If the resulting tournament is strong, its Hamilton-path count exceeds 3H(X) by at least 6 for R2 and at least 18 for R4. Therefore **none of the strong tournaments among these 2^30 cross-edge patterns supplies +2 or +4**, regardless of the output port.
 
-The [odd-cycle-packing identity](https://github.com/eliottcassidy2000/math/blob/7589463e54e20585aff6a2e68019ee4a4af582cd/05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md) gives a general lower bound. If the reversed cross edge is v→u, where v lies in X and u lies in C3, then
+The proof uses the [odd-cycle-packing identity](https://github.com/eliottcassidy2000/math/blob/7589463e54e20585aff6a2e68019ee4a4af582cd/05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md): an odd-cycle packing with k cycles contributes 2^k to H. All packings internal to the two blocks persist under every cross-edge rewiring, contributing exactly H(C3)H(X)=3H(X). We exhibit additional crossing-triangle packings.
 
-    H(new) ≥ 3H(X)+2H(X−v).
+* If some v in X has mixed orientations to C3, the directed triangle C3 has an arc u→w with v→u and w→v. The crossing triangle v→u→w→v can be paired with every odd-cycle packing of X−v, giving an extra 2H(X−v).
+* Otherwise each vertex of X uniformly dominates C3 or is uniformly dominated by it. Both classes A,B are nonempty, because the tournament is strong. Strongness also forces some b∈B and a∈A with b→a: otherwise A dominates both B and C3. For each of the three vertices u∈C3, the triangle u→b→a→u can be paired with every packing of X−{a,b}. The three families are distinct, contributing 6H(X−{a,b}).
 
-Indeed every old packing remains, and the new triangle u→w→v→u, with w the out-neighbor of u in C3, can be combined with every odd-cycle packing of X−v. By the same identity their total weight is 2H(X−v). Direct nine-vertex path enumeration gives
+Thus, for a strong rewiring with X of order at least two,
+
+    H(new)−3H(X) ≥ min(2 min_v H(X−v), 6 min_{a≠b} H(X−{a,b})).
+
+All minima here are over vertices of X. Direct endpoint/subset enumeration gives
 
     H(R2−v): 163, 175, 95, 15, 27, 123, 87, 27, 81, 165
-    H(R4−v):  97,  97, 97,159, 27,  15, 81, 51, 81, 159.
+    H(R4−v):  97,  97, 97,159, 27,  15, 81, 51, 81, 159,
+    min H(R2−{a,b})=1,  min H(R4−{a,b})=3.
 
-Thus the symbolic lower bound alone gives a jump of at least 30 in either case, excluding +2 and +4.
+The resulting bounds are min(30,6)=6 and min(30,18)=18. This is a theorem for arbitrary cross-edge rewirings of these fixed internal graphs, not a no-go theorem for changing the blocks themselves or for other sources.
 
-There are only ten distinct results by cyclic symmetry of C3. Listed by the R vertex label 0,…,9, exact Hamilton-path count changes are
+For comparison, reverse exactly one of the original 30 cross edges. Every resulting graph is strong, and cyclic symmetry leaves ten distinct count changes per source. Listed by the R vertex label 0,…,9, exact changes are
 
     R2: 2162, 1000, 760, 1080, 2790, 4426, 3670, 4470, 10572, 12570
     R4: 1668, 1668, 1668, 822, 846, 1524, 4770, 6288, 10050, 11508.
@@ -48,4 +54,4 @@ Thus every one-edge nonuniform strong repair overshoots the desired +2 and +4 co
 
 ## Reproduction
 
-Place `bank65.json` beside `later_bank_check.py` and run both `python3 later_bank_check.py` and `python3 -O later_bank_check.py`. The program verifies the pinned checksum, h-monotonicity, full bounded reachable-state closure, the six exclusions and the modular orbits. Run `g++ -std=c++17 -O2 -Wall -Wextra crossing_check.cpp -o crossing_check && ./crossing_check`; this independently constructs all 60 labelled crossing reversals, checks strong connectivity, and uses endpoint/subset dynamic programming to verify every exact count and all 20 deletion counts. Assertions remain active under optimized Python and C++ builds.
+Place `bank65.json` beside `later_bank_check.py` and run both `python3 later_bank_check.py` and `python3 -O later_bank_check.py`. The program verifies the pinned checksum, h-monotonicity, full bounded reachable-state closure, the six exclusions and the modular orbits. Run `g++ -std=c++17 -O2 -Wall -Wextra crossing_check.cpp -o crossing_check && ./crossing_check`; this independently constructs all 60 labelled crossing reversals, checks strong connectivity, and uses endpoint/subset dynamic programming to verify every exact count and all 20 single-deletion counts, and both minima over all 45 two-deletion counts. Assertions remain active under optimized Python and C++ builds.
