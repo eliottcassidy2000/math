@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "factor_examples": {
+    "1": [
+      23,
+      43
+    ],
+    "2": [
+      283,
+      353
+    ],
+    "3": [
+      269,
+      37171
+    ],
+    "4": [
+      127,
+      7873937
+    ]
+  },
+  "independent_orbits": 1491,
+  "additional_n6_tournaments": 8
+}
