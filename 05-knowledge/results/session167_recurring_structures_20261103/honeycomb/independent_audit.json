@@ -1,0 +1,225 @@
+{
+  "all_checks_passed": true,
+  "general_layered_cycles": 24681,
+  "general_mechanical_triples": 3067,
+  "joint_and_radius_controls": [
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 48,
+      "first_noninjective_ball_radius": 12,
+      "targets": [
+        4,
+        9,
+        16
+      ]
+    },
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 64,
+      "first_noninjective_ball_radius": 16,
+      "targets": [
+        9,
+        16,
+        25
+      ]
+    },
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 80,
+      "first_noninjective_ball_radius": 20,
+      "targets": [
+        16,
+        25,
+        36
+      ]
+    },
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 20,
+      "first_noninjective_ball_radius": 5,
+      "targets": [
+        0,
+        6,
+        15
+      ]
+    },
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 8,
+      "first_noninjective_ball_radius": 2,
+      "targets": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 8,
+      "first_noninjective_ball_radius": 2,
+      "targets": [
+        3,
+        6,
+        9
+      ]
+    },
+    {
+      "centers_checked": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          -3,
+          0
+        ],
+        [
+          5,
+          -3,
+          1
+        ]
+      ],
+      "first_joint_extra_return": 12,
+      "first_noninjective_ball_radius": 3,
+      "targets": [
+        10,
+        12,
+        16
+      ]
+    }
+  ],
+  "simple_cycles": 6176
+}
