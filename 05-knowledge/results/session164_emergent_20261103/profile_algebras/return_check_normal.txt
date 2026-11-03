@@ -1,0 +1,10 @@
+DCCDCD multiplier 29 H 87 vertices 9
+CCDDCD multiplier 29 H 87 vertices 9
+DCCDDCD multiplier 49 H 147 vertices 10
+DCCCDDCD multiplier 91 H 273 vertices 11
+modulus 7 all 7 residues reached
+modulus 49 all 49 residues reached
+modulus 343 all 343 residues reached
+modulus 2401 all 2401 residues reached
+modulus 16807 all 16807 residues reached
+PASS: 511 word controls; parametric returns; four literal sources; residues through7^5.
