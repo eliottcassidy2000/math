@@ -1,0 +1,1852 @@
+{
+  "color_rows": [
+    {
+      "colors": 1,
+      "diamonds": 1,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 2,
+      "diamonds": 1,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 3,
+      "diamonds": 1,
+      "proper_colorings": 6
+    },
+    {
+      "colors": 4,
+      "diamonds": 1,
+      "proper_colorings": 48
+    },
+    {
+      "colors": 5,
+      "diamonds": 1,
+      "proper_colorings": 180
+    },
+    {
+      "colors": 1,
+      "diamonds": 2,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 2,
+      "diamonds": 2,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 3,
+      "diamonds": 2,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 4,
+      "diamonds": 2,
+      "proper_colorings": 384
+    },
+    {
+      "colors": 5,
+      "diamonds": 2,
+      "proper_colorings": 5040
+    },
+    {
+      "colors": 1,
+      "diamonds": 3,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 2,
+      "diamonds": 3,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 3,
+      "diamonds": 3,
+      "proper_colorings": 0
+    },
+    {
+      "colors": 4,
+      "diamonds": 3,
+      "proper_colorings": 3264
+    },
+    {
+      "colors": 5,
+      "diamonds": 3,
+      "proper_colorings": 142560
+    }
+  ],
+  "exact_coordinate_rows": [
+    {
+      "diamonds": 1,
+      "edges": 5,
+      "rigidity_rank": 5,
+      "vertices": 4
+    },
+    {
+      "diamonds": 2,
+      "edges": 11,
+      "rigidity_rank": 11,
+      "vertices": 7
+    },
+    {
+      "diamonds": 3,
+      "edges": 17,
+      "rigidity_rank": 17,
+      "vertices": 10
+    },
+    {
+      "diamonds": 4,
+      "edges": 23,
+      "rigidity_rank": 23,
+      "vertices": 13
+    },
+    {
+      "diamonds": 5,
+      "edges": 29,
+      "rigidity_rank": 29,
+      "vertices": 16
+    },
+    {
+      "diamonds": 6,
+      "edges": 35,
+      "rigidity_rank": 35,
+      "vertices": 19
+    },
+    {
+      "diamonds": 7,
+      "edges": 41,
+      "rigidity_rank": 41,
+      "vertices": 22
+    },
+    {
+      "diamonds": 8,
+      "edges": 47,
+      "rigidity_rank": 47,
+      "vertices": 25
+    },
+    {
+      "diamonds": 9,
+      "edges": 53,
+      "rigidity_rank": 53,
+      "vertices": 28
+    },
+    {
+      "diamonds": 10,
+      "edges": 59,
+      "rigidity_rank": 59,
+      "vertices": 31
+    },
+    {
+      "diamonds": 11,
+      "edges": 65,
+      "rigidity_rank": 65,
+      "vertices": 34
+    },
+    {
+      "diamonds": 12,
+      "edges": 71,
+      "rigidity_rank": 71,
+      "vertices": 37
+    },
+    {
+      "diamonds": 16,
+      "edges": 95,
+      "rigidity_rank": 95,
+      "vertices": 49
+    },
+    {
+      "diamonds": 24,
+      "edges": 143,
+      "rigidity_rank": 143,
+      "vertices": 73
+    }
+  ],
+  "exact_squared_distance_checks": 6846,
+  "field": "Q(sqrt(3),sqrt(11))",
+  "fresh_step_words": [
+    {
+      "diamonds": 2,
+      "injective_tip_words": 2,
+      "local_words": 2
+    },
+    {
+      "diamonds": 3,
+      "injective_tip_words": 2,
+      "local_words": 4
+    },
+    {
+      "diamonds": 4,
+      "injective_tip_words": 2,
+      "local_words": 8
+    },
+    {
+      "diamonds": 5,
+      "injective_tip_words": 2,
+      "local_words": 16
+    },
+    {
+      "diamonds": 6,
+      "injective_tip_words": 2,
+      "local_words": 32
+    },
+    {
+      "diamonds": 7,
+      "injective_tip_words": 2,
+      "local_words": 64
+    },
+    {
+      "diamonds": 8,
+      "injective_tip_words": 2,
+      "local_words": 128
+    },
+    {
+      "diamonds": 9,
+      "injective_tip_words": 2,
+      "local_words": 256
+    },
+    {
+      "diamonds": 10,
+      "injective_tip_words": 2,
+      "local_words": 512
+    },
+    {
+      "diamonds": 11,
+      "injective_tip_words": 2,
+      "local_words": 1024
+    },
+    {
+      "diamonds": 12,
+      "injective_tip_words": 2,
+      "local_words": 2048
+    }
+  ],
+  "graph_classification_rows": [
+    {
+      "all_graphs": 1,
+      "bipartite_graphs": 1,
+      "linear_forests": 1,
+      "vertices": 1
+    },
+    {
+      "all_graphs": 2,
+      "bipartite_graphs": 2,
+      "linear_forests": 2,
+      "vertices": 2
+    },
+    {
+      "all_graphs": 8,
+      "bipartite_graphs": 7,
+      "linear_forests": 7,
+      "vertices": 3
+    },
+    {
+      "all_graphs": 64,
+      "bipartite_graphs": 41,
+      "linear_forests": 34,
+      "vertices": 4
+    },
+    {
+      "all_graphs": 1024,
+      "bipartite_graphs": 376,
+      "linear_forests": 206,
+      "vertices": 5
+    }
+  ],
+  "hamiltonian_rows": [
+    {
+      "diamonds": 1,
+      "unoriented_hamilton_cycles": 1,
+      "unoriented_hamilton_paths": 6
+    },
+    {
+      "diamonds": 2,
+      "unoriented_hamilton_cycles": 4,
+      "unoriented_hamilton_paths": 48
+    },
+    {
+      "diamonds": 3,
+      "unoriented_hamilton_cycles": 0,
+      "unoriented_hamilton_paths": 80
+    },
+    {
+      "diamonds": 4,
+      "unoriented_hamilton_cycles": 0,
+      "unoriented_hamilton_paths": 64
+    },
+    {
+      "diamonds": 5,
+      "unoriented_hamilton_cycles": 0,
+      "unoriented_hamilton_paths": 0
+    }
+  ],
+  "minimum_path_cover_certificates": [
+    {
+      "cover": [
+        [
+          0,
+          2,
+          3,
+          1
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0
+      ],
+      "diamonds": 1,
+      "minimum_paths": 1,
+      "remaining_components": 1
+    },
+    {
+      "cover": [
+        [
+          0,
+          2,
+          3,
+          1,
+          4,
+          5,
+          6
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0
+      ],
+      "diamonds": 2,
+      "minimum_paths": 1,
+      "remaining_components": 1
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4
+      ],
+      "diamonds": 3,
+      "minimum_paths": 1,
+      "remaining_components": 3
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4
+      ],
+      "diamonds": 4,
+      "minimum_paths": 1,
+      "remaining_components": 3
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10
+      ],
+      "diamonds": 5,
+      "minimum_paths": 2,
+      "remaining_components": 5
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10
+      ],
+      "diamonds": 6,
+      "minimum_paths": 2,
+      "remaining_components": 5
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16
+      ],
+      "diamonds": 7,
+      "minimum_paths": 3,
+      "remaining_components": 7
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16
+      ],
+      "diamonds": 8,
+      "minimum_paths": 3,
+      "remaining_components": 7
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22
+      ],
+      "diamonds": 9,
+      "minimum_paths": 4,
+      "remaining_components": 9
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22
+      ],
+      "diamonds": 10,
+      "minimum_paths": 4,
+      "remaining_components": 9
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28
+      ],
+      "diamonds": 11,
+      "minimum_paths": 5,
+      "remaining_components": 11
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28
+      ],
+      "diamonds": 12,
+      "minimum_paths": 5,
+      "remaining_components": 11
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34
+      ],
+      "diamonds": 13,
+      "minimum_paths": 6,
+      "remaining_components": 13
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34
+      ],
+      "diamonds": 14,
+      "minimum_paths": 6,
+      "remaining_components": 13
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40
+      ],
+      "diamonds": 15,
+      "minimum_paths": 7,
+      "remaining_components": 15
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40
+      ],
+      "diamonds": 16,
+      "minimum_paths": 7,
+      "remaining_components": 15
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46
+      ],
+      "diamonds": 17,
+      "minimum_paths": 8,
+      "remaining_components": 17
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46
+      ],
+      "diamonds": 18,
+      "minimum_paths": 8,
+      "remaining_components": 17
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ],
+        [
+          56,
+          57,
+          55
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52
+      ],
+      "diamonds": 19,
+      "minimum_paths": 9,
+      "remaining_components": 19
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ],
+        [
+          56,
+          57,
+          55,
+          58,
+          59,
+          60
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52
+      ],
+      "diamonds": 20,
+      "minimum_paths": 9,
+      "remaining_components": 19
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ],
+        [
+          56,
+          57,
+          55,
+          58,
+          59,
+          60
+        ],
+        [
+          62,
+          63,
+          61
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52,
+        58
+      ],
+      "diamonds": 21,
+      "minimum_paths": 10,
+      "remaining_components": 21
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ],
+        [
+          56,
+          57,
+          55,
+          58,
+          59,
+          60
+        ],
+        [
+          62,
+          63,
+          61,
+          64,
+          65,
+          66
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52,
+        58
+      ],
+      "diamonds": 22,
+      "minimum_paths": 10,
+      "remaining_components": 21
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ],
+        [
+          56,
+          57,
+          55,
+          58,
+          59,
+          60
+        ],
+        [
+          62,
+          63,
+          61,
+          64,
+          65,
+          66
+        ],
+        [
+          68,
+          69,
+          67
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52,
+        58,
+        64
+      ],
+      "diamonds": 23,
+      "minimum_paths": 11,
+      "remaining_components": 23
+    },
+    {
+      "cover": [
+        [
+          2,
+          3,
+          1,
+          4,
+          5,
+          6,
+          0,
+          8,
+          9,
+          7,
+          10,
+          11,
+          12
+        ],
+        [
+          14,
+          15,
+          13,
+          16,
+          17,
+          18
+        ],
+        [
+          20,
+          21,
+          19,
+          22,
+          23,
+          24
+        ],
+        [
+          26,
+          27,
+          25,
+          28,
+          29,
+          30
+        ],
+        [
+          32,
+          33,
+          31,
+          34,
+          35,
+          36
+        ],
+        [
+          38,
+          39,
+          37,
+          40,
+          41,
+          42
+        ],
+        [
+          44,
+          45,
+          43,
+          46,
+          47,
+          48
+        ],
+        [
+          50,
+          51,
+          49,
+          52,
+          53,
+          54
+        ],
+        [
+          56,
+          57,
+          55,
+          58,
+          59,
+          60
+        ],
+        [
+          62,
+          63,
+          61,
+          64,
+          65,
+          66
+        ],
+        [
+          68,
+          69,
+          67,
+          70,
+          71,
+          72
+        ]
+      ],
+      "deleted_root_and_odd_tips": [
+        0,
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52,
+        58,
+        64
+      ],
+      "diamonds": 24,
+      "minimum_paths": 11,
+      "remaining_components": 23
+    }
+  ],
+  "modular_rank_prime": 100057,
+  "sqrt11_mod_p": 5188,
+  "sqrt3_mod_p": 41664
+}
