@@ -1,0 +1,11 @@
+{
+  "word": "DCCCCCCCCCCCCCCD",
+  "query_states": [
+    [12737, 30352, 0],
+    [22419, 53424, 0],
+    [42629, 101584, 0]
+  ],
+  "observer": [43089, 16377, 34185],
+  "orders_counted": [19, 20, 21],
+  "status": "PASS"
+}
