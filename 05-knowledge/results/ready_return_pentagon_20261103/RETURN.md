@@ -106,6 +106,11 @@ Using `1!S(k,1)=1`, `2!S(k,2)=2^k-2` and
     v_minus=(9*2^k-1,12*2^k-8,12*2^k-7),
     v_plus =(9*2^k+1,7*3^k+4*2^k-4,7*3^k+4*2^k-2).    (R1)
 
+The coefficient7 is explained by the fourteen admissible three-run
+S(2) skeletons and the observer's division by two. The minus return
+has no three-run term. Thus the direction erased at characteristic7
+comes from an actual incidence multiplicity, not a fitted residue law.
+
 The script counts skeletons directly and independently compares the
 joint polynomial program and ordinary subset path DP. All five Q4
 presentations are applied both by their inherited integer matrices and

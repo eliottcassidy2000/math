@@ -22,7 +22,7 @@ def main():
         if runs[0]!=runs[1] or (languages and languages[0]!=languages[1]):raise RuntimeError(('normal/-O mismatch',script))
         (HERE/output).write_text(runs[0],encoding='utf-8',newline='\n')
         result['checks'][script]=dict(normal_optimized_identical=True,receipt=output,sha256=digest(HERE/output))
-    for name in ('README.md','OBSTRUCTION.md','ATLAS.md','RETURN.md','PENTAGON.md','AUDIT.md',
+    for name in ('README.md','OBSTRUCTION.md','ATLAS.md','RETURN.md','PENTAGON.md','AUDIT.md','INCOMING.md',
                  'explore_returns.py','obstruction.py','return_program.py','ready_inverse.py','replay.py'):
         result['local_hashes'][name]=digest(HERE/name)
     for rel in ('two_entry_funnels_20261103/research.py','two_entry_funnels_20261103/verify.py',
@@ -30,7 +30,10 @@ def main():
                 'two_entry_funnels_20261103/TWO_ENTRY.md','polarized_path_calculus_20261103/explore.py',
                 'polarized_path_calculus_20261103/recognize.py','source_selection_closure_20261103/graded_carrier.py',
                 'golden_inverse_defects_20261103/inverse.py','golden_seam_recurrence_20261103/atom_atlas.json',
-                'adaptive_metagraph_reformulation_20261103/metagraph_probe.py'):
+                'adaptive_metagraph_reformulation_20261103/metagraph_probe.py',
+                'session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md',
+                'session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md',
+                'mrb_square_probe_spectrum_20261103/HORIZON.md'):
         result['inherited_hashes'][rel]=digest(HERE.parent/rel)
     result['checks']['languages.json']=dict(sha256=digest(HERE/'languages.json'))
     (HERE/'manifest.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n',encoding='utf-8',newline='\n')

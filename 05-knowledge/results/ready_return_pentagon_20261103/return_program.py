@@ -54,6 +54,23 @@ def common_three(k):
     return dict(k=k,n=len(T),ports=ports,joint_terms=len(v),skeleton_types=len(graded.skeletons(3)))
 
 
+def zero_continuation(k,lane,j):
+    T,p,v=source(k,lane)
+    for step_number in range(j+1):
+        T,p,v=step(T,p,v,(0,2,1));T,p,v=step(T,p,v,(0,2,2))
+        if step_number==0:initial=observer(v,0)
+        require(observer(v,0)==tuple(3**step_number*x for x in initial),'incoming fixed-port zero return before converse')
+    require(graded.scalar(v)==3**j*(9*2**k+(-1 if lane==1 else 1)),'all-size zero suffix scalar')
+    out=opposite(T);w=converse(v);obs=observer(w,0)
+    require(strong(out),'actual strong zero continuation')
+    if len(T)<=11:
+        P,E,S=bin_values(out,p[0],2)
+        require(obs==(P[1],(S[2]-E[1])//2,(S[2]+E[1])//2),'independent returned zero-suffix observer')
+        tables.cache_clear()
+    return dict(k=k,lane=lane,zero_steps=j,n=len(T),ports=p,returned_observer=obs,
+                phase=field(obs),joint_terms=len(w))
+
+
 def compositions(n,m):
     if m==1:yield (n,);return
     for a in range(n+1):
@@ -248,7 +265,8 @@ def main():
         literal_full_joint_checks=literal,literal_Q4_checks=direct,six_clock_controls=phase,
         pentagons=[pentagon(k) for k in (1,2,3,20,100)],long_returns=long,
         precision_clocks=precision,synthetic_phase_closures=[phase_closure(lane) for lane in (1,2)],
-        common_three_port_controls=[common_three(k) for k in (1,2,3,6,12)]),indent=2,sort_keys=True))
+        common_three_port_controls=[common_three(k) for k in (1,2,3,6,12)],
+        incoming_zero_continuations=[zero_continuation(k,lane,j) for lane in (1,2) for k,j in ((1,0),(1,1),(1,2),(2,3),(20,20))]),indent=2,sort_keys=True))
 
 
 if __name__=='__main__':main()

@@ -118,6 +118,218 @@
       "skeleton_types": 88
     }
   ],
+  "incoming_zero_continuations": [
+    {
+      "joint_terms": 61,
+      "k": 1,
+      "lane": 1,
+      "n": 6,
+      "phase": [
+        2,
+        3,
+        0
+      ],
+      "ports": [
+        3,
+        4
+      ],
+      "returned_observer": [
+        17,
+        16,
+        17
+      ],
+      "zero_steps": 0
+    },
+    {
+      "joint_terms": 96,
+      "k": 1,
+      "lane": 1,
+      "n": 8,
+      "phase": [
+        2,
+        4,
+        5
+      ],
+      "ports": [
+        3,
+        6
+      ],
+      "returned_observer": [
+        51,
+        115,
+        116
+      ],
+      "zero_steps": 1
+    },
+    {
+      "joint_terms": 131,
+      "k": 1,
+      "lane": 1,
+      "n": 10,
+      "phase": [
+        0,
+        3,
+        3
+      ],
+      "ports": [
+        3,
+        8
+      ],
+      "returned_observer": [
+        153,
+        772,
+        773
+      ],
+      "zero_steps": 2
+    },
+    {
+      "joint_terms": 184,
+      "k": 2,
+      "lane": 1,
+      "n": 13,
+      "phase": [
+        6,
+        0,
+        0
+      ],
+      "ports": [
+        4,
+        11
+      ],
+      "returned_observer": [
+        945,
+        12739,
+        12740
+      ],
+      "zero_steps": 3
+    },
+    {
+      "joint_terms": 1103,
+      "k": 20,
+      "lane": 1,
+      "n": 65,
+      "phase": [
+        4,
+        3,
+        4
+      ],
+      "ports": [
+        22,
+        63
+      ],
+      "returned_observer": [
+        32905422473782383,
+        452830347863178553737940,
+        452830347863178553737941
+      ],
+      "zero_steps": 20
+    },
+    {
+      "joint_terms": 61,
+      "k": 1,
+      "lane": 2,
+      "n": 6,
+      "phase": [
+        0,
+        6,
+        6
+      ],
+      "ports": [
+        0,
+        4
+      ],
+      "returned_observer": [
+        19,
+        25,
+        27
+      ],
+      "zero_steps": 0
+    },
+    {
+      "joint_terms": 96,
+      "k": 1,
+      "lane": 2,
+      "n": 8,
+      "phase": [
+        2,
+        0,
+        1
+      ],
+      "ports": [
+        0,
+        6
+      ],
+      "returned_observer": [
+        57,
+        173,
+        175
+      ],
+      "zero_steps": 1
+    },
+    {
+      "joint_terms": 131,
+      "k": 1,
+      "lane": 2,
+      "n": 10,
+      "phase": [
+        5,
+        4,
+        6
+      ],
+      "ports": [
+        0,
+        8
+      ],
+      "returned_observer": [
+        171,
+        1157,
+        1159
+      ],
+      "zero_steps": 2
+    },
+    {
+      "joint_terms": 184,
+      "k": 2,
+      "lane": 2,
+      "n": 13,
+      "phase": [
+        3,
+        5,
+        0
+      ],
+      "ports": [
+        0,
+        11
+      ],
+      "returned_observer": [
+        999,
+        22655,
+        22657
+      ],
+      "zero_steps": 3
+    },
+    {
+      "joint_terms": 1103,
+      "k": 20,
+      "lane": 2,
+      "n": 65,
+      "phase": [
+        3,
+        6,
+        5
+      ],
+      "ports": [
+        0,
+        63
+      ],
+      "returned_observer": [
+        32905429447351185,
+        811209011084812895563400291,
+        811209011084812895563400293
+      ],
+      "zero_steps": 20
+    }
+  ],
   "literal_Q4_checks": 10,
   "literal_full_joint_checks": 2,
   "long_returns": [

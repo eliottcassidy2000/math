@@ -117,3 +117,28 @@ Its mod7 phase has period dividing3, including all five Q4 phase images.
 This projection omits the word and the full joint polynomial carrier;
 it is sufficient only for the specified phase queries. Actual native
 complements still require their literal path guard and source relation.
+
+## A5. The next layer already reaches prime ready-image obstructions
+
+O3's complete inverse excludes the attained prime values41,43,67,83,101
+from both ready lanes. The chart nevertheless supplies explicit infinite
+families, with the same verified finite-core formula:
+
+|C|Tail|H(k), k>=1|Examples|
+|---:|---|---|---|
+|6|00,00,10|19*2^k+3|41,79,155|
+|6|10,00,10|20*2^k+3|43,83,163|
+|6|01,00,00,10|45*2^k+11|101,191,371|
+|4|01,10,10|30*2^k+7|67,127,247|
+
+No infinitude of primes in these exponential families is asserted.
+Among positive neutral defects, the minimum at H35 and H67 is4; the
+minimum at H41,H43,H83,H101 is6. To check the latter statement, C2 is
+excluded by the ready inverse, and none of the sixteen C4 formulas has
+those four values. At k>=4 all C4 values exceed101, so that check has
+only three k values per tail. The displayed C6 words attain the bound.
+The word "positive" matters: zero-defect guards are a different class.
+
+Thus enlarging the interface is relevant to the prime lane itself,
+not just to composite counts such as35. A reusable nonzero-offset
+operation on these specific words would be a concrete next advance.

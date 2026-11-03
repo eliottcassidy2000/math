@@ -99,6 +99,11 @@ def main():
         result.append(r)
     (HERE/'languages.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print('C4',result[1]['families'])
+    four_values={f['A']*2**k+f['B'] for f in result[1]['families'] for k in (1,2,3)}
+    require(not four_values.intersection((41,43,83,101)),'complete C4 prime-value exclusions')
+    require(all(f['A']*16+f['B']>101 for f in result[1]['families']),'C4 tail of value exclusion')
+    six_values={f['A']*2**k+f['B'] for f in result[2]['families'] for k in (1,2,3)}
+    require({41,43,83,101}<=six_values and {35,67}<=four_values,'actual higher-grade witnesses')
     energy_checks=direct_checks=0
     accepted={r['target']:set(r['tails']) for r in result}
     for m in range(1,10):

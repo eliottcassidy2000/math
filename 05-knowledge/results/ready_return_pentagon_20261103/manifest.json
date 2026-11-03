@@ -21,7 +21,7 @@
     "return_program.py": {
       "normal_optimized_identical": true,
       "receipt": "returns.json",
-      "sha256": "57ddaa6eb396162b2079f5de0611970f798546334bdae8d66f29479b59df2616"
+      "sha256": "c85a3e7080e7a23a7403134a9668b266f892bc3a1edf71cc3bf22aedff048e6a"
     }
   },
   "hash_convention": "SHA256 after CRLF-to-LF normalization",
@@ -29,8 +29,11 @@
     "adaptive_metagraph_reformulation_20261103/metagraph_probe.py": "75266c143e3c4fbbadd5202984ec5cd6a0b7b9310a37850ff04fb6e92585ed84",
     "golden_inverse_defects_20261103/inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
     "golden_seam_recurrence_20261103/atom_atlas.json": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba",
+    "mrb_square_probe_spectrum_20261103/HORIZON.md": "a6be8f9b4d59a16701b3f8da5f472755056264f3bc0453edcbad651574c8e547",
     "polarized_path_calculus_20261103/explore.py": "343b6168f5116275538a87959e6a0949ad8518aaede6d5a5952479069255bbb4",
     "polarized_path_calculus_20261103/recognize.py": "967693a89ed94465be01753b8b0b2e9c20e67bbcd5257200d224c39527b2fc85",
+    "session163_ternary_triples_20261103/strong_returns/FIRST_STEP.md": "6618ddc51467ee130dc76edb60f2a774be0169b216556d9ce4b539444d2de96c",
+    "session163_ternary_triples_20261103/strong_returns/MOVING_GUARD.md": "280404ec6535d7ebedab81c62f8bcd4a6108f5274232b6183193e621ee9ab3cb",
     "source_selection_closure_20261103/graded_carrier.py": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b",
     "two_entry_funnels_20261103/READY.md": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c",
     "two_entry_funnels_20261103/TWO_ENTRY.md": "31c18d359d4f56c5778492ccdb4435793d117890d8318138b727b8816e8e4c93",
@@ -39,17 +42,18 @@
     "two_entry_funnels_20261103/verify.py": "7f982b5173292ec904d99bc75f074cd66ee885674bda361c0142aed8f9a30de1"
   },
   "local_hashes": {
-    "ATLAS.md": "afb2bdee4ad66ab8a511b3b5e0730beaa9aebbb7e9dee62c7e3d6f20a693c163",
-    "AUDIT.md": "5297237a9a46256e443d9014b4af1d9ab0805b3b199b65104afa03f26b3de808",
+    "ATLAS.md": "455588b2733871e3f80ac826c1bfa0bd65a62d9af2d516c6a444e3927a0e3a40",
+    "AUDIT.md": "603d3c41ee9775394ddc082f99f917ff4c46f9ed2848c8912015e72ce4944dbf",
+    "INCOMING.md": "2de39e4938b3457c01f53e0d64ab0de1ae00484a4a3e024482eb4d4212b4c935",
     "OBSTRUCTION.md": "5890c526288797d4bd80ffaa5eefaa9aa148ee928163f104dea76fc5c4fc39ef",
     "PENTAGON.md": "77b33516a17d180217d5dc07ab734d9b83dbd01e6a15196fdf21439ea489998b",
-    "README.md": "fc5880c2dee23682ead5b4b3478f308a45f8c11556239d90672712b50635df36",
-    "RETURN.md": "065254286ab2dee6086e02e6426754ed6ba4b7570f7934fe55d751e9924415f6",
-    "explore_returns.py": "7c2628666cc5e6f019e2375ed506af4690210557628a5959c8bcdf58af9fcdee",
+    "README.md": "a360f71a78b99b715e2533957aa30b913cb0d88865c13563a5a4667157bd1121",
+    "RETURN.md": "8ab46a08a61592f3ea42cb33756bf115f50ff856ddd5dd521df92dfd0dbfddb4",
+    "explore_returns.py": "e2c6e592ec4d7e04c42fa917a8346fd1be8ab9ca59c1961ec32d9b420660ca19",
     "obstruction.py": "d42725c29297481d8e5a75a8697a3b3bf778b9e467e2a99ded9164d0c1218a11",
     "ready_inverse.py": "4c9f06467d9acdaef9707e7542668d3fb5d8656f8ccc6eec1942a585c36cdbec",
-    "replay.py": "472c414e52044d75f99a7e77c5d5775f21f2fe9ba9a01d642aa6a94fbc7e4d57",
-    "return_program.py": "143cba88100d6be1c93a756580a187615c3eb794ed175fcb94214812c6db3789"
+    "replay.py": "70828f90240a8ca0f75f4d9d8ca1beb094f12e7163db21de373c7c3f666a7eca",
+    "return_program.py": "7c1685b15117716b161929ca262d4397737865d4f8560ff7b26bc7869d4fcbbf"
   },
   "status": "PASS"
 }

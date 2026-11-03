@@ -46,6 +46,11 @@ reverses them. Its21 states and42-element group follow from a trace-zero
 translation commutator. Lifting every synthetic phase operation to actual
 source tournaments remains open.
 
+[Incoming integration](INCOMING.md) combines Session163's moving guard
+with both ladders, giving strong families3^j(9*2^k-1) and3^j(9*2^k+1)
+for all k>=1,j>=0. Their joint programs retain the correct dual observer:
+tripling before converse need not triple that observer after converse.
+
 ## Inheritance and concept board
 
 **Anchor:** ternary source returns. Closest proved mechanism:
