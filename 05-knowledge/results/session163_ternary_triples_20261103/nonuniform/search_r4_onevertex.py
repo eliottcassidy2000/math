@@ -28,5 +28,7 @@ for mask in range(1<<n):
  direct=H(add(r,mask));need(prediction==direct,f'quadratic mismatch {mask}')
  values[direct]+=1
 need(not values[875] and not values[877],'unexpected ternary branch')
+need(min(values)==291 and len(values)==454,'unexpected extrema/distinct counts')
 print('PASS: 1024 orientations, polynomial = literal DP; no H=875 or 877')
+print('minimum',min(values),'distinct positive counts',len(values))
 print('values near targets:',sorted(v for v in values if 700<=v<=1000))

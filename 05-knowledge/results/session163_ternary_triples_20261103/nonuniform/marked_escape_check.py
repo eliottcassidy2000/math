@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Endpoint-subset controls for the R4 nonuniform marked-interface escape."""
 from itertools import combinations
+from math import gcd
 
 def need(p,msg):
  if not p:raise ValueError(msg)
@@ -54,7 +55,15 @@ for k in range(4):
   rows=add(r,set(beat));actual=state(rows,9)
   need(actual==expected[k],f'bad state {beat}: {actual}')
   if k:need(strong(rows),'escape strong')
+need({v[0] for v in expected}=={291,1965,3445,4731},'exact H set')
+need(all(gcd(v[0],15)>1 for v in expected),'unexpected unit mod 15')
+need(gcd(3445,4731)==1,'coprime strong cases')
 print('retained-port states by |z-out-neighbors in triangle|:',expected)
+print('exact H set has no unit mod 15; 3445 and 4731 are coprime strong counts')
+unrestricted=add(r,{0,3});need(strong(unrestricted),'unrestricted strong')
+need(state(unrestricted,9)==(6011,2980,4531),'unrestricted state')
+need(gcd(6011,15)==1,'unrestricted unit')
+print('unrestricted z->0,3: strong state (6011,2980,4531), a unit mod 15')
 single=add(r,{0});single=reorder(single,tuple(i for i in range(len(single)) if i!=9)+(9,))
 q2=join(single,(8,1,3,6));need(strong(q2),'q2 strong');need(H(q2)==28033,'q2 exact count')
 print('one-edge escape after literal q2: 28033')
