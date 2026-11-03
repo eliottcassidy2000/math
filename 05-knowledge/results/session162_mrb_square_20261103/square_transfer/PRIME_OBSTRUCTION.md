@@ -9,7 +9,7 @@ Proof: If every gap of p were odd, the adjacent endpoints would have opposite pa
 
 ## Exact 3-adic weights
 
-Let k be the number of even gaps. The same argument gives 3^k dividing every source and 3^(k+1) dividing the middle source. More precisely, for even d,
+Assume exactly one selected interval for each path gap, with arbitrary singleton padding, and let k be the number of even gaps. The same argument gives 3^k dividing every source and 3^(k+1) dividing the middle source. More precisely, for even d,
 
   v₃(q_d)=1+v₃(d−1),       v₃(t_d)=1+v₃(d/2).
 
@@ -17,7 +17,7 @@ Odd gaps give 3-adic valuation zero for both factors. For q use the 3-adic lifti
 
   a=∑_{d even}(1+v₃(d−1)),    b=∑_{d even}(1+v₃(d/2)),
 
-the exact valuations of P,R are a,b, independent of all singleton padding. If a≠b, the three source valuations are exactly min(a,b), min(a,b)+1, min(a,b). If a=b cancellation can increase a valuation, so no equality is asserted. For the [15] path in NOTE.md, k=7, a=10 and b=9; its three source valuations are exactly (9,10,9).
+the exact valuations of P,R are a,b, independent of all singleton padding. If extra non-singleton intervals are included, the exact sums must instead range over all selected interval gaps, counting multiplicity; the divisibility conclusions remain valid. If a≠b, the three source valuations are exactly min(a,b), min(a,b)+1, min(a,b). If a=b cancellation can increase a valuation, so no equality is asserted. For the [15] path in NOTE.md, k=7, a=10 and b=9; its three source valuations are exactly (9,10,9).
 
 There are no square-sum Hamilton paths on [2] or [3]. The singleton graph [1] has an empty gap sequence and is a necessary exception if arbitrary transitive padding is admitted: P=1, R=2^g and the chain is
 
