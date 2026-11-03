@@ -1,0 +1,8111 @@
+{
+  "first25_prime_comparisons": [
+    {
+      "bipartition_sizes": [
+        1,
+        0
+      ],
+      "index": 1,
+      "integer_Q_index_edges": 0,
+      "integer_Q_prime_edges": 0,
+      "is_ogg_prime": true,
+      "prime": 2,
+      "prime_graph_components": [
+        [
+          2
+        ]
+      ],
+      "prime_graph_edges": 0
+    },
+    {
+      "bipartition_sizes": [
+        1,
+        1
+      ],
+      "index": 2,
+      "integer_Q_index_edges": 0,
+      "integer_Q_prime_edges": 1,
+      "is_ogg_prime": true,
+      "prime": 3,
+      "prime_graph_components": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "prime_graph_edges": 0
+    },
+    {
+      "bipartition_sizes": [
+        2,
+        1
+      ],
+      "index": 3,
+      "integer_Q_index_edges": 1,
+      "integer_Q_prime_edges": 2,
+      "is_ogg_prime": true,
+      "prime": 5,
+      "prime_graph_components": [
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "prime_graph_edges": 0
+    },
+    {
+      "bipartition_sizes": [
+        2,
+        2
+      ],
+      "index": 4,
+      "integer_Q_index_edges": 1,
+      "integer_Q_prime_edges": 4,
+      "is_ogg_prime": true,
+      "prime": 7,
+      "prime_graph_components": [
+        [
+          2,
+          7
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "prime_graph_edges": 1
+    },
+    {
+      "bipartition_sizes": [
+        2,
+        3
+      ],
+      "index": 5,
+      "integer_Q_index_edges": 2,
+      "integer_Q_prime_edges": 8,
+      "is_ogg_prime": true,
+      "prime": 11,
+      "prime_graph_components": [
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          3
+        ]
+      ],
+      "prime_graph_edges": 2
+    },
+    {
+      "bipartition_sizes": [
+        3,
+        3
+      ],
+      "index": 6,
+      "integer_Q_index_edges": 3,
+      "integer_Q_prime_edges": 11,
+      "is_ogg_prime": true,
+      "prime": 13,
+      "prime_graph_components": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "prime_graph_edges": 3
+    },
+    {
+      "bipartition_sizes": [
+        4,
+        3
+      ],
+      "index": 7,
+      "integer_Q_index_edges": 4,
+      "integer_Q_prime_edges": 17,
+      "is_ogg_prime": true,
+      "prime": 17,
+      "prime_graph_components": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          17
+        ]
+      ],
+      "prime_graph_edges": 3
+    },
+    {
+      "bipartition_sizes": [
+        4,
+        4
+      ],
+      "index": 8,
+      "integer_Q_index_edges": 5,
+      "integer_Q_prime_edges": 20,
+      "is_ogg_prime": true,
+      "prime": 19,
+      "prime_graph_components": [
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "prime_graph_edges": 4
+    },
+    {
+      "bipartition_sizes": [
+        4,
+        5
+      ],
+      "index": 9,
+      "integer_Q_index_edges": 6,
+      "integer_Q_prime_edges": 28,
+      "is_ogg_prime": true,
+      "prime": 23,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          23
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "prime_graph_edges": 6
+    },
+    {
+      "bipartition_sizes": [
+        5,
+        5
+      ],
+      "index": 10,
+      "integer_Q_index_edges": 7,
+      "integer_Q_prime_edges": 40,
+      "is_ogg_prime": true,
+      "prime": 29,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          23,
+          29
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "prime_graph_edges": 7
+    },
+    {
+      "bipartition_sizes": [
+        5,
+        6
+      ],
+      "index": 11,
+      "integer_Q_index_edges": 8,
+      "integer_Q_prime_edges": 44,
+      "is_ogg_prime": true,
+      "prime": 31,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          23,
+          29
+        ],
+        [
+          5,
+          11,
+          31
+        ],
+        [
+          17,
+          19
+        ]
+      ],
+      "prime_graph_edges": 8
+    },
+    {
+      "bipartition_sizes": [
+        6,
+        6
+      ],
+      "index": 12,
+      "integer_Q_index_edges": 9,
+      "integer_Q_prime_edges": 59,
+      "is_ogg_prime": false,
+      "prime": 37,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          23,
+          29
+        ],
+        [
+          5,
+          11,
+          31
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          37
+        ]
+      ],
+      "prime_graph_edges": 8
+    },
+    {
+      "bipartition_sizes": [
+        7,
+        6
+      ],
+      "index": 13,
+      "integer_Q_index_edges": 11,
+      "integer_Q_prime_edges": 68,
+      "is_ogg_prime": true,
+      "prime": 41,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          23,
+          29,
+          41
+        ],
+        [
+          5,
+          11,
+          31
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          37
+        ]
+      ],
+      "prime_graph_edges": 9
+    },
+    {
+      "bipartition_sizes": [
+        7,
+        7
+      ],
+      "index": 14,
+      "integer_Q_index_edges": 13,
+      "integer_Q_prime_edges": 74,
+      "is_ogg_prime": false,
+      "prime": 43,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          23,
+          29,
+          41
+        ],
+        [
+          5,
+          11,
+          31
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ]
+      ],
+      "prime_graph_edges": 9
+    },
+    {
+      "bipartition_sizes": [
+        7,
+        8
+      ],
+      "index": 15,
+      "integer_Q_index_edges": 15,
+      "integer_Q_prime_edges": 86,
+      "is_ogg_prime": true,
+      "prime": 47,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          7,
+          13,
+          17,
+          19,
+          23,
+          29,
+          41,
+          47
+        ],
+        [
+          5,
+          11,
+          31
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ]
+      ],
+      "prime_graph_edges": 11
+    },
+    {
+      "bipartition_sizes": [
+        8,
+        8
+      ],
+      "index": 16,
+      "integer_Q_index_edges": 16,
+      "integer_Q_prime_edges": 102,
+      "is_ogg_prime": false,
+      "prime": 53,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ]
+      ],
+      "prime_graph_edges": 13
+    },
+    {
+      "bipartition_sizes": [
+        8,
+        9
+      ],
+      "index": 17,
+      "integer_Q_index_edges": 17,
+      "integer_Q_prime_edges": 120,
+      "is_ogg_prime": true,
+      "prime": 59,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ]
+      ],
+      "prime_graph_edges": 15
+    },
+    {
+      "bipartition_sizes": [
+        9,
+        9
+      ],
+      "index": 18,
+      "integer_Q_index_edges": 18,
+      "integer_Q_prime_edges": 127,
+      "is_ogg_prime": false,
+      "prime": 61,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ]
+      ],
+      "prime_graph_edges": 16
+    },
+    {
+      "bipartition_sizes": [
+        9,
+        10
+      ],
+      "index": 19,
+      "integer_Q_index_edges": 20,
+      "integer_Q_prime_edges": 147,
+      "is_ogg_prime": false,
+      "prime": 67,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 16
+    },
+    {
+      "bipartition_sizes": [
+        9,
+        11
+      ],
+      "index": 20,
+      "integer_Q_index_edges": 22,
+      "integer_Q_prime_edges": 159,
+      "is_ogg_prime": true,
+      "prime": 71,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61,
+          71
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 17
+    },
+    {
+      "bipartition_sizes": [
+        10,
+        11
+      ],
+      "index": 21,
+      "integer_Q_index_edges": 24,
+      "integer_Q_prime_edges": 166,
+      "is_ogg_prime": false,
+      "prime": 73,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61,
+          71,
+          73
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 18
+    },
+    {
+      "bipartition_sizes": [
+        10,
+        12
+      ],
+      "index": 22,
+      "integer_Q_index_edges": 26,
+      "integer_Q_prime_edges": 190,
+      "is_ogg_prime": false,
+      "prime": 79,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61,
+          71,
+          73,
+          79
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 19
+    },
+    {
+      "bipartition_sizes": [
+        10,
+        13
+      ],
+      "index": 23,
+      "integer_Q_index_edges": 28,
+      "integer_Q_prime_edges": 203,
+      "is_ogg_prime": false,
+      "prime": 83,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61,
+          71,
+          73,
+          79,
+          83
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 21
+    },
+    {
+      "bipartition_sizes": [
+        11,
+        13
+      ],
+      "index": 24,
+      "integer_Q_index_edges": 30,
+      "integer_Q_prime_edges": 226,
+      "is_ogg_prime": false,
+      "prime": 89,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61,
+          71,
+          73,
+          79,
+          83,
+          89
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 22
+    },
+    {
+      "bipartition_sizes": [
+        12,
+        13
+      ],
+      "index": 25,
+      "integer_Q_index_edges": 32,
+      "integer_Q_prime_edges": 258,
+      "is_ogg_prime": false,
+      "prime": 97,
+      "prime_graph_components": [
+        [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          41,
+          47,
+          53,
+          59,
+          61,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97
+        ],
+        [
+          37
+        ],
+        [
+          43
+        ],
+        [
+          67
+        ]
+      ],
+      "prime_graph_edges": 24
+    }
+  ],
+  "first_unused_majority": 56,
+  "ogg_A": [
+    2,
+    5,
+    13,
+    17,
+    29,
+    41
+  ],
+  "ogg_B": [
+    3,
+    7,
+    11,
+    19,
+    23,
+    31,
+    47,
+    59,
+    71
+  ],
+  "orientation_controls": [
+    {
+      "active_guard_orientations": 4864,
+      "acyclic_active_guard_orientations": 20,
+      "n": 25
+    },
+    {
+      "active_guard_orientations": 11232,
+      "acyclic_active_guard_orientations": 24,
+      "n": 26
+    },
+    {
+      "active_guard_orientations": 62952,
+      "acyclic_active_guard_orientations": 70,
+      "n": 27
+    }
+  ],
+  "prefix_ledger": [
+    {
+      "birth": 0,
+      "component_sizes": [
+        1
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 1,
+      "edges": 0,
+      "excess_over_twice_path": 0,
+      "n": 1,
+      "parents": [],
+      "roots": [],
+      "unused_in_every_path": []
+    },
+    {
+      "birth": 0,
+      "component_sizes": [
+        1,
+        1
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 0,
+      "excess_over_twice_path": -2,
+      "n": 2,
+      "parents": [],
+      "roots": []
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        2,
+        1
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 1,
+      "excess_over_twice_path": -3,
+      "n": 3,
+      "parents": [
+        1
+      ],
+      "roots": [
+        2
+      ]
+    },
+    {
+      "birth": 0,
+      "component_sizes": [
+        2,
+        1,
+        1
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 1,
+      "excess_over_twice_path": -5,
+      "n": 4,
+      "parents": [],
+      "roots": []
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        2,
+        2,
+        1
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 2,
+      "excess_over_twice_path": -6,
+      "n": 5,
+      "parents": [
+        4
+      ],
+      "roots": [
+        3
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        3,
+        2,
+        1
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 3,
+      "excess_over_twice_path": -7,
+      "n": 6,
+      "parents": [
+        3
+      ],
+      "roots": [
+        3
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        3,
+        2,
+        2
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 4,
+      "excess_over_twice_path": -8,
+      "n": 7,
+      "parents": [
+        2
+      ],
+      "roots": [
+        3
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        4,
+        2,
+        2
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 5,
+      "excess_over_twice_path": -9,
+      "n": 8,
+      "parents": [
+        1
+      ],
+      "roots": [
+        3
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        4,
+        3,
+        2
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 6,
+      "excess_over_twice_path": -10,
+      "n": 9,
+      "parents": [
+        7
+      ],
+      "roots": [
+        4
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        5,
+        3,
+        2
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 7,
+      "excess_over_twice_path": -11,
+      "n": 10,
+      "parents": [
+        6
+      ],
+      "roots": [
+        4
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        5,
+        3,
+        3
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 8,
+      "excess_over_twice_path": -12,
+      "n": 11,
+      "parents": [
+        5
+      ],
+      "roots": [
+        4
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        5,
+        4,
+        3
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 9,
+      "excess_over_twice_path": -13,
+      "n": 12,
+      "parents": [
+        4
+      ],
+      "roots": [
+        4
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        10,
+        3
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 11,
+      "excess_over_twice_path": -13,
+      "n": 13,
+      "parents": [
+        3,
+        12
+      ],
+      "roots": [
+        4,
+        5
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        14
+      ],
+      "cycle_rank": 0,
+      "directed_paths": 0,
+      "edges": 13,
+      "excess_over_twice_path": -13,
+      "n": 14,
+      "parents": [
+        2,
+        11
+      ],
+      "roots": [
+        4,
+        5
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        15
+      ],
+      "cycle_rank": 1,
+      "directed_paths": 2,
+      "edges": 15,
+      "excess_over_twice_path": -13,
+      "n": 15,
+      "parents": [
+        1,
+        10
+      ],
+      "roots": [
+        4,
+        5
+      ],
+      "unused_in_every_path": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        16
+      ],
+      "cycle_rank": 1,
+      "directed_paths": 2,
+      "edges": 16,
+      "excess_over_twice_path": -14,
+      "n": 16,
+      "parents": [
+        9
+      ],
+      "roots": [
+        5
+      ],
+      "unused_in_every_path": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        17
+      ],
+      "cycle_rank": 1,
+      "directed_paths": 2,
+      "edges": 17,
+      "excess_over_twice_path": -15,
+      "n": 17,
+      "parents": [
+        8
+      ],
+      "roots": [
+        5
+      ],
+      "unused_in_every_path": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "birth": 1,
+      "component_sizes": [
+        18
+      ],
+      "cycle_rank": 1,
+      "directed_paths": 0,
+      "edges": 18,
+      "excess_over_twice_path": -16,
+      "n": 18,
+      "parents": [
+        7
+      ],
+      "roots": [
+        5
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        19
+      ],
+      "cycle_rank": 2,
+      "directed_paths": 0,
+      "edges": 20,
+      "excess_over_twice_path": -16,
+      "n": 19,
+      "parents": [
+        6,
+        17
+      ],
+      "roots": [
+        5,
+        6
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        20
+      ],
+      "cycle_rank": 3,
+      "directed_paths": 0,
+      "edges": 22,
+      "excess_over_twice_path": -16,
+      "n": 20,
+      "parents": [
+        5,
+        16
+      ],
+      "roots": [
+        5,
+        6
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        21
+      ],
+      "cycle_rank": 4,
+      "directed_paths": 0,
+      "edges": 24,
+      "excess_over_twice_path": -16,
+      "n": 21,
+      "parents": [
+        4,
+        15
+      ],
+      "roots": [
+        5,
+        6
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        22
+      ],
+      "cycle_rank": 5,
+      "directed_paths": 0,
+      "edges": 26,
+      "excess_over_twice_path": -16,
+      "n": 22,
+      "parents": [
+        3,
+        14
+      ],
+      "roots": [
+        5,
+        6
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        23
+      ],
+      "cycle_rank": 6,
+      "directed_paths": 6,
+      "edges": 28,
+      "excess_over_twice_path": -16,
+      "n": 23,
+      "parents": [
+        2,
+        13
+      ],
+      "roots": [
+        5,
+        6
+      ],
+      "unused_in_every_path": [
+        [
+          1,
+          15
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        24
+      ],
+      "cycle_rank": 7,
+      "directed_paths": 0,
+      "edges": 30,
+      "excess_over_twice_path": -16,
+      "n": 24,
+      "parents": [
+        1,
+        12
+      ],
+      "roots": [
+        5,
+        6
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        25
+      ],
+      "cycle_rank": 8,
+      "directed_paths": 20,
+      "edges": 32,
+      "excess_over_twice_path": -16,
+      "n": 25,
+      "parents": [
+        11,
+        24
+      ],
+      "roots": [
+        6,
+        7
+      ],
+      "unused_in_every_path": [
+        [
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        26
+      ],
+      "cycle_rank": 9,
+      "directed_paths": 24,
+      "edges": 34,
+      "excess_over_twice_path": -16,
+      "n": 26,
+      "parents": [
+        10,
+        23
+      ],
+      "roots": [
+        6,
+        7
+      ],
+      "unused_in_every_path": [
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        27
+      ],
+      "cycle_rank": 10,
+      "directed_paths": 70,
+      "edges": 36,
+      "excess_over_twice_path": -16,
+      "n": 27,
+      "parents": [
+        9,
+        22
+      ],
+      "roots": [
+        6,
+        7
+      ],
+      "unused_in_every_path": []
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        28
+      ],
+      "cycle_rank": 11,
+      "directed_paths": 104,
+      "edges": 38,
+      "excess_over_twice_path": -16,
+      "n": 28,
+      "parents": [
+        8,
+        21
+      ],
+      "roots": [
+        6,
+        7
+      ],
+      "unused_in_every_path": [
+        [
+          7,
+          9
+        ]
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        29
+      ],
+      "cycle_rank": 12,
+      "edges": 40,
+      "excess_over_twice_path": -16,
+      "n": 29,
+      "parents": [
+        7,
+        20
+      ],
+      "roots": [
+        6,
+        7
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        30
+      ],
+      "cycle_rank": 13,
+      "edges": 42,
+      "excess_over_twice_path": -16,
+      "n": 30,
+      "parents": [
+        6,
+        19
+      ],
+      "roots": [
+        6,
+        7
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        31
+      ],
+      "cycle_rank": 14,
+      "edges": 44,
+      "excess_over_twice_path": -16,
+      "n": 31,
+      "parents": [
+        5,
+        18
+      ],
+      "roots": [
+        6,
+        7
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        32
+      ],
+      "cycle_rank": 15,
+      "edges": 46,
+      "excess_over_twice_path": -16,
+      "n": 32,
+      "parents": [
+        4,
+        17
+      ],
+      "roots": [
+        6,
+        7
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        33
+      ],
+      "cycle_rank": 17,
+      "edges": 49,
+      "excess_over_twice_path": -15,
+      "n": 33,
+      "parents": [
+        3,
+        16,
+        31
+      ],
+      "roots": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        34
+      ],
+      "cycle_rank": 19,
+      "edges": 52,
+      "excess_over_twice_path": -14,
+      "n": 34,
+      "parents": [
+        2,
+        15,
+        30
+      ],
+      "roots": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        35
+      ],
+      "cycle_rank": 21,
+      "edges": 55,
+      "excess_over_twice_path": -13,
+      "n": 35,
+      "parents": [
+        1,
+        14,
+        29
+      ],
+      "roots": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        36
+      ],
+      "cycle_rank": 22,
+      "edges": 57,
+      "excess_over_twice_path": -13,
+      "n": 36,
+      "parents": [
+        13,
+        28
+      ],
+      "roots": [
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        37
+      ],
+      "cycle_rank": 23,
+      "edges": 59,
+      "excess_over_twice_path": -13,
+      "n": 37,
+      "parents": [
+        12,
+        27
+      ],
+      "roots": [
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        38
+      ],
+      "cycle_rank": 24,
+      "edges": 61,
+      "excess_over_twice_path": -13,
+      "n": 38,
+      "parents": [
+        11,
+        26
+      ],
+      "roots": [
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        39
+      ],
+      "cycle_rank": 25,
+      "edges": 63,
+      "excess_over_twice_path": -13,
+      "n": 39,
+      "parents": [
+        10,
+        25
+      ],
+      "roots": [
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        40
+      ],
+      "cycle_rank": 26,
+      "edges": 65,
+      "excess_over_twice_path": -13,
+      "n": 40,
+      "parents": [
+        9,
+        24
+      ],
+      "roots": [
+        7,
+        8
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        41
+      ],
+      "cycle_rank": 28,
+      "edges": 68,
+      "excess_over_twice_path": -12,
+      "n": 41,
+      "parents": [
+        8,
+        23,
+        40
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        42
+      ],
+      "cycle_rank": 30,
+      "edges": 71,
+      "excess_over_twice_path": -11,
+      "n": 42,
+      "parents": [
+        7,
+        22,
+        39
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        43
+      ],
+      "cycle_rank": 32,
+      "edges": 74,
+      "excess_over_twice_path": -10,
+      "n": 43,
+      "parents": [
+        6,
+        21,
+        38
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        44
+      ],
+      "cycle_rank": 34,
+      "edges": 77,
+      "excess_over_twice_path": -9,
+      "n": 44,
+      "parents": [
+        5,
+        20,
+        37
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        45
+      ],
+      "cycle_rank": 36,
+      "edges": 80,
+      "excess_over_twice_path": -8,
+      "n": 45,
+      "parents": [
+        4,
+        19,
+        36
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        46
+      ],
+      "cycle_rank": 38,
+      "edges": 83,
+      "excess_over_twice_path": -7,
+      "n": 46,
+      "parents": [
+        3,
+        18,
+        35
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        47
+      ],
+      "cycle_rank": 40,
+      "edges": 86,
+      "excess_over_twice_path": -6,
+      "n": 47,
+      "parents": [
+        2,
+        17,
+        34
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        48
+      ],
+      "cycle_rank": 42,
+      "edges": 89,
+      "excess_over_twice_path": -5,
+      "n": 48,
+      "parents": [
+        1,
+        16,
+        33
+      ],
+      "roots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        49
+      ],
+      "cycle_rank": 43,
+      "edges": 91,
+      "excess_over_twice_path": -5,
+      "n": 49,
+      "parents": [
+        15,
+        32
+      ],
+      "roots": [
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 2,
+      "component_sizes": [
+        50
+      ],
+      "cycle_rank": 44,
+      "edges": 93,
+      "excess_over_twice_path": -5,
+      "n": 50,
+      "parents": [
+        14,
+        31
+      ],
+      "roots": [
+        8,
+        9
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        51
+      ],
+      "cycle_rank": 46,
+      "edges": 96,
+      "excess_over_twice_path": -4,
+      "n": 51,
+      "parents": [
+        13,
+        30,
+        49
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        52
+      ],
+      "cycle_rank": 48,
+      "edges": 99,
+      "excess_over_twice_path": -3,
+      "n": 52,
+      "parents": [
+        12,
+        29,
+        48
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        53
+      ],
+      "cycle_rank": 50,
+      "edges": 102,
+      "excess_over_twice_path": -2,
+      "n": 53,
+      "parents": [
+        11,
+        28,
+        47
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        54
+      ],
+      "cycle_rank": 52,
+      "edges": 105,
+      "excess_over_twice_path": -1,
+      "n": 54,
+      "parents": [
+        10,
+        27,
+        46
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        55
+      ],
+      "cycle_rank": 54,
+      "edges": 108,
+      "excess_over_twice_path": 0,
+      "n": 55,
+      "parents": [
+        9,
+        26,
+        45
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        56
+      ],
+      "cycle_rank": 56,
+      "edges": 111,
+      "excess_over_twice_path": 1,
+      "n": 56,
+      "parents": [
+        8,
+        25,
+        44
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        57
+      ],
+      "cycle_rank": 58,
+      "edges": 114,
+      "excess_over_twice_path": 2,
+      "n": 57,
+      "parents": [
+        7,
+        24,
+        43
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        58
+      ],
+      "cycle_rank": 60,
+      "edges": 117,
+      "excess_over_twice_path": 3,
+      "n": 58,
+      "parents": [
+        6,
+        23,
+        42
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        59
+      ],
+      "cycle_rank": 62,
+      "edges": 120,
+      "excess_over_twice_path": 4,
+      "n": 59,
+      "parents": [
+        5,
+        22,
+        41
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        60
+      ],
+      "cycle_rank": 64,
+      "edges": 123,
+      "excess_over_twice_path": 5,
+      "n": 60,
+      "parents": [
+        4,
+        21,
+        40
+      ],
+      "roots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        61
+      ],
+      "cycle_rank": 67,
+      "edges": 127,
+      "excess_over_twice_path": 7,
+      "n": 61,
+      "parents": [
+        3,
+        20,
+        39,
+        60
+      ],
+      "roots": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        62
+      ],
+      "cycle_rank": 70,
+      "edges": 131,
+      "excess_over_twice_path": 9,
+      "n": 62,
+      "parents": [
+        2,
+        19,
+        38,
+        59
+      ],
+      "roots": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        63
+      ],
+      "cycle_rank": 73,
+      "edges": 135,
+      "excess_over_twice_path": 11,
+      "n": 63,
+      "parents": [
+        1,
+        18,
+        37,
+        58
+      ],
+      "roots": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        64
+      ],
+      "cycle_rank": 75,
+      "edges": 138,
+      "excess_over_twice_path": 12,
+      "n": 64,
+      "parents": [
+        17,
+        36,
+        57
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        65
+      ],
+      "cycle_rank": 77,
+      "edges": 141,
+      "excess_over_twice_path": 13,
+      "n": 65,
+      "parents": [
+        16,
+        35,
+        56
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        66
+      ],
+      "cycle_rank": 79,
+      "edges": 144,
+      "excess_over_twice_path": 14,
+      "n": 66,
+      "parents": [
+        15,
+        34,
+        55
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        67
+      ],
+      "cycle_rank": 81,
+      "edges": 147,
+      "excess_over_twice_path": 15,
+      "n": 67,
+      "parents": [
+        14,
+        33,
+        54
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        68
+      ],
+      "cycle_rank": 83,
+      "edges": 150,
+      "excess_over_twice_path": 16,
+      "n": 68,
+      "parents": [
+        13,
+        32,
+        53
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        69
+      ],
+      "cycle_rank": 85,
+      "edges": 153,
+      "excess_over_twice_path": 17,
+      "n": 69,
+      "parents": [
+        12,
+        31,
+        52
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        70
+      ],
+      "cycle_rank": 87,
+      "edges": 156,
+      "excess_over_twice_path": 18,
+      "n": 70,
+      "parents": [
+        11,
+        30,
+        51
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        71
+      ],
+      "cycle_rank": 89,
+      "edges": 159,
+      "excess_over_twice_path": 19,
+      "n": 71,
+      "parents": [
+        10,
+        29,
+        50
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        72
+      ],
+      "cycle_rank": 91,
+      "edges": 162,
+      "excess_over_twice_path": 20,
+      "n": 72,
+      "parents": [
+        9,
+        28,
+        49
+      ],
+      "roots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        73
+      ],
+      "cycle_rank": 94,
+      "edges": 166,
+      "excess_over_twice_path": 22,
+      "n": 73,
+      "parents": [
+        8,
+        27,
+        48,
+        71
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        74
+      ],
+      "cycle_rank": 97,
+      "edges": 170,
+      "excess_over_twice_path": 24,
+      "n": 74,
+      "parents": [
+        7,
+        26,
+        47,
+        70
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        75
+      ],
+      "cycle_rank": 100,
+      "edges": 174,
+      "excess_over_twice_path": 26,
+      "n": 75,
+      "parents": [
+        6,
+        25,
+        46,
+        69
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        76
+      ],
+      "cycle_rank": 103,
+      "edges": 178,
+      "excess_over_twice_path": 28,
+      "n": 76,
+      "parents": [
+        5,
+        24,
+        45,
+        68
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        77
+      ],
+      "cycle_rank": 106,
+      "edges": 182,
+      "excess_over_twice_path": 30,
+      "n": 77,
+      "parents": [
+        4,
+        23,
+        44,
+        67
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        78
+      ],
+      "cycle_rank": 109,
+      "edges": 186,
+      "excess_over_twice_path": 32,
+      "n": 78,
+      "parents": [
+        3,
+        22,
+        43,
+        66
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        79
+      ],
+      "cycle_rank": 112,
+      "edges": 190,
+      "excess_over_twice_path": 34,
+      "n": 79,
+      "parents": [
+        2,
+        21,
+        42,
+        65
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        80
+      ],
+      "cycle_rank": 115,
+      "edges": 194,
+      "excess_over_twice_path": 36,
+      "n": 80,
+      "parents": [
+        1,
+        20,
+        41,
+        64
+      ],
+      "roots": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        81
+      ],
+      "cycle_rank": 117,
+      "edges": 197,
+      "excess_over_twice_path": 37,
+      "n": 81,
+      "parents": [
+        19,
+        40,
+        63
+      ],
+      "roots": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        82
+      ],
+      "cycle_rank": 119,
+      "edges": 200,
+      "excess_over_twice_path": 38,
+      "n": 82,
+      "parents": [
+        18,
+        39,
+        62
+      ],
+      "roots": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        83
+      ],
+      "cycle_rank": 121,
+      "edges": 203,
+      "excess_over_twice_path": 39,
+      "n": 83,
+      "parents": [
+        17,
+        38,
+        61
+      ],
+      "roots": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 3,
+      "component_sizes": [
+        84
+      ],
+      "cycle_rank": 123,
+      "edges": 206,
+      "excess_over_twice_path": 40,
+      "n": 84,
+      "parents": [
+        16,
+        37,
+        60
+      ],
+      "roots": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        85
+      ],
+      "cycle_rank": 126,
+      "edges": 210,
+      "excess_over_twice_path": 42,
+      "n": 85,
+      "parents": [
+        15,
+        36,
+        59,
+        84
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        86
+      ],
+      "cycle_rank": 129,
+      "edges": 214,
+      "excess_over_twice_path": 44,
+      "n": 86,
+      "parents": [
+        14,
+        35,
+        58,
+        83
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        87
+      ],
+      "cycle_rank": 132,
+      "edges": 218,
+      "excess_over_twice_path": 46,
+      "n": 87,
+      "parents": [
+        13,
+        34,
+        57,
+        82
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        88
+      ],
+      "cycle_rank": 135,
+      "edges": 222,
+      "excess_over_twice_path": 48,
+      "n": 88,
+      "parents": [
+        12,
+        33,
+        56,
+        81
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        89
+      ],
+      "cycle_rank": 138,
+      "edges": 226,
+      "excess_over_twice_path": 50,
+      "n": 89,
+      "parents": [
+        11,
+        32,
+        55,
+        80
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        90
+      ],
+      "cycle_rank": 141,
+      "edges": 230,
+      "excess_over_twice_path": 52,
+      "n": 90,
+      "parents": [
+        10,
+        31,
+        54,
+        79
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        91
+      ],
+      "cycle_rank": 144,
+      "edges": 234,
+      "excess_over_twice_path": 54,
+      "n": 91,
+      "parents": [
+        9,
+        30,
+        53,
+        78
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        92
+      ],
+      "cycle_rank": 147,
+      "edges": 238,
+      "excess_over_twice_path": 56,
+      "n": 92,
+      "parents": [
+        8,
+        29,
+        52,
+        77
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        93
+      ],
+      "cycle_rank": 150,
+      "edges": 242,
+      "excess_over_twice_path": 58,
+      "n": 93,
+      "parents": [
+        7,
+        28,
+        51,
+        76
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        94
+      ],
+      "cycle_rank": 153,
+      "edges": 246,
+      "excess_over_twice_path": 60,
+      "n": 94,
+      "parents": [
+        6,
+        27,
+        50,
+        75
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        95
+      ],
+      "cycle_rank": 156,
+      "edges": 250,
+      "excess_over_twice_path": 62,
+      "n": 95,
+      "parents": [
+        5,
+        26,
+        49,
+        74
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        96
+      ],
+      "cycle_rank": 159,
+      "edges": 254,
+      "excess_over_twice_path": 64,
+      "n": 96,
+      "parents": [
+        4,
+        25,
+        48,
+        73
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        97
+      ],
+      "cycle_rank": 162,
+      "edges": 258,
+      "excess_over_twice_path": 66,
+      "n": 97,
+      "parents": [
+        3,
+        24,
+        47,
+        72
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        98
+      ],
+      "cycle_rank": 165,
+      "edges": 262,
+      "excess_over_twice_path": 68,
+      "n": 98,
+      "parents": [
+        2,
+        23,
+        46,
+        71
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        99
+      ],
+      "cycle_rank": 169,
+      "edges": 267,
+      "excess_over_twice_path": 71,
+      "n": 99,
+      "parents": [
+        1,
+        22,
+        45,
+        70,
+        97
+      ],
+      "roots": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        100
+      ],
+      "cycle_rank": 172,
+      "edges": 271,
+      "excess_over_twice_path": 73,
+      "n": 100,
+      "parents": [
+        21,
+        44,
+        69,
+        96
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        101
+      ],
+      "cycle_rank": 175,
+      "edges": 275,
+      "excess_over_twice_path": 75,
+      "n": 101,
+      "parents": [
+        20,
+        43,
+        68,
+        95
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        102
+      ],
+      "cycle_rank": 178,
+      "edges": 279,
+      "excess_over_twice_path": 77,
+      "n": 102,
+      "parents": [
+        19,
+        42,
+        67,
+        94
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        103
+      ],
+      "cycle_rank": 181,
+      "edges": 283,
+      "excess_over_twice_path": 79,
+      "n": 103,
+      "parents": [
+        18,
+        41,
+        66,
+        93
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        104
+      ],
+      "cycle_rank": 184,
+      "edges": 287,
+      "excess_over_twice_path": 81,
+      "n": 104,
+      "parents": [
+        17,
+        40,
+        65,
+        92
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        105
+      ],
+      "cycle_rank": 187,
+      "edges": 291,
+      "excess_over_twice_path": 83,
+      "n": 105,
+      "parents": [
+        16,
+        39,
+        64,
+        91
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        106
+      ],
+      "cycle_rank": 190,
+      "edges": 295,
+      "excess_over_twice_path": 85,
+      "n": 106,
+      "parents": [
+        15,
+        38,
+        63,
+        90
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        107
+      ],
+      "cycle_rank": 193,
+      "edges": 299,
+      "excess_over_twice_path": 87,
+      "n": 107,
+      "parents": [
+        14,
+        37,
+        62,
+        89
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        108
+      ],
+      "cycle_rank": 196,
+      "edges": 303,
+      "excess_over_twice_path": 89,
+      "n": 108,
+      "parents": [
+        13,
+        36,
+        61,
+        88
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        109
+      ],
+      "cycle_rank": 199,
+      "edges": 307,
+      "excess_over_twice_path": 91,
+      "n": 109,
+      "parents": [
+        12,
+        35,
+        60,
+        87
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        110
+      ],
+      "cycle_rank": 202,
+      "edges": 311,
+      "excess_over_twice_path": 93,
+      "n": 110,
+      "parents": [
+        11,
+        34,
+        59,
+        86
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        111
+      ],
+      "cycle_rank": 205,
+      "edges": 315,
+      "excess_over_twice_path": 95,
+      "n": 111,
+      "parents": [
+        10,
+        33,
+        58,
+        85
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        112
+      ],
+      "cycle_rank": 208,
+      "edges": 319,
+      "excess_over_twice_path": 97,
+      "n": 112,
+      "parents": [
+        9,
+        32,
+        57,
+        84
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        113
+      ],
+      "cycle_rank": 212,
+      "edges": 324,
+      "excess_over_twice_path": 100,
+      "n": 113,
+      "parents": [
+        8,
+        31,
+        56,
+        83,
+        112
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        114
+      ],
+      "cycle_rank": 216,
+      "edges": 329,
+      "excess_over_twice_path": 103,
+      "n": 114,
+      "parents": [
+        7,
+        30,
+        55,
+        82,
+        111
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        115
+      ],
+      "cycle_rank": 220,
+      "edges": 334,
+      "excess_over_twice_path": 106,
+      "n": 115,
+      "parents": [
+        6,
+        29,
+        54,
+        81,
+        110
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        116
+      ],
+      "cycle_rank": 224,
+      "edges": 339,
+      "excess_over_twice_path": 109,
+      "n": 116,
+      "parents": [
+        5,
+        28,
+        53,
+        80,
+        109
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        117
+      ],
+      "cycle_rank": 228,
+      "edges": 344,
+      "excess_over_twice_path": 112,
+      "n": 117,
+      "parents": [
+        4,
+        27,
+        52,
+        79,
+        108
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        118
+      ],
+      "cycle_rank": 232,
+      "edges": 349,
+      "excess_over_twice_path": 115,
+      "n": 118,
+      "parents": [
+        3,
+        26,
+        51,
+        78,
+        107
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        119
+      ],
+      "cycle_rank": 236,
+      "edges": 354,
+      "excess_over_twice_path": 118,
+      "n": 119,
+      "parents": [
+        2,
+        25,
+        50,
+        77,
+        106
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        120
+      ],
+      "cycle_rank": 240,
+      "edges": 359,
+      "excess_over_twice_path": 121,
+      "n": 120,
+      "parents": [
+        1,
+        24,
+        49,
+        76,
+        105
+      ],
+      "roots": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        121
+      ],
+      "cycle_rank": 243,
+      "edges": 363,
+      "excess_over_twice_path": 123,
+      "n": 121,
+      "parents": [
+        23,
+        48,
+        75,
+        104
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        122
+      ],
+      "cycle_rank": 246,
+      "edges": 367,
+      "excess_over_twice_path": 125,
+      "n": 122,
+      "parents": [
+        22,
+        47,
+        74,
+        103
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        123
+      ],
+      "cycle_rank": 249,
+      "edges": 371,
+      "excess_over_twice_path": 127,
+      "n": 123,
+      "parents": [
+        21,
+        46,
+        73,
+        102
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        124
+      ],
+      "cycle_rank": 252,
+      "edges": 375,
+      "excess_over_twice_path": 129,
+      "n": 124,
+      "parents": [
+        20,
+        45,
+        72,
+        101
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        125
+      ],
+      "cycle_rank": 255,
+      "edges": 379,
+      "excess_over_twice_path": 131,
+      "n": 125,
+      "parents": [
+        19,
+        44,
+        71,
+        100
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        126
+      ],
+      "cycle_rank": 258,
+      "edges": 383,
+      "excess_over_twice_path": 133,
+      "n": 126,
+      "parents": [
+        18,
+        43,
+        70,
+        99
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        127
+      ],
+      "cycle_rank": 261,
+      "edges": 387,
+      "excess_over_twice_path": 135,
+      "n": 127,
+      "parents": [
+        17,
+        42,
+        69,
+        98
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        128
+      ],
+      "cycle_rank": 264,
+      "edges": 391,
+      "excess_over_twice_path": 137,
+      "n": 128,
+      "parents": [
+        16,
+        41,
+        68,
+        97
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        129
+      ],
+      "cycle_rank": 268,
+      "edges": 396,
+      "excess_over_twice_path": 140,
+      "n": 129,
+      "parents": [
+        15,
+        40,
+        67,
+        96,
+        127
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        130
+      ],
+      "cycle_rank": 272,
+      "edges": 401,
+      "excess_over_twice_path": 143,
+      "n": 130,
+      "parents": [
+        14,
+        39,
+        66,
+        95,
+        126
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        131
+      ],
+      "cycle_rank": 276,
+      "edges": 406,
+      "excess_over_twice_path": 146,
+      "n": 131,
+      "parents": [
+        13,
+        38,
+        65,
+        94,
+        125
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        132
+      ],
+      "cycle_rank": 280,
+      "edges": 411,
+      "excess_over_twice_path": 149,
+      "n": 132,
+      "parents": [
+        12,
+        37,
+        64,
+        93,
+        124
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        133
+      ],
+      "cycle_rank": 284,
+      "edges": 416,
+      "excess_over_twice_path": 152,
+      "n": 133,
+      "parents": [
+        11,
+        36,
+        63,
+        92,
+        123
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        134
+      ],
+      "cycle_rank": 288,
+      "edges": 421,
+      "excess_over_twice_path": 155,
+      "n": 134,
+      "parents": [
+        10,
+        35,
+        62,
+        91,
+        122
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        135
+      ],
+      "cycle_rank": 292,
+      "edges": 426,
+      "excess_over_twice_path": 158,
+      "n": 135,
+      "parents": [
+        9,
+        34,
+        61,
+        90,
+        121
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        136
+      ],
+      "cycle_rank": 296,
+      "edges": 431,
+      "excess_over_twice_path": 161,
+      "n": 136,
+      "parents": [
+        8,
+        33,
+        60,
+        89,
+        120
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        137
+      ],
+      "cycle_rank": 300,
+      "edges": 436,
+      "excess_over_twice_path": 164,
+      "n": 137,
+      "parents": [
+        7,
+        32,
+        59,
+        88,
+        119
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        138
+      ],
+      "cycle_rank": 304,
+      "edges": 441,
+      "excess_over_twice_path": 167,
+      "n": 138,
+      "parents": [
+        6,
+        31,
+        58,
+        87,
+        118
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        139
+      ],
+      "cycle_rank": 308,
+      "edges": 446,
+      "excess_over_twice_path": 170,
+      "n": 139,
+      "parents": [
+        5,
+        30,
+        57,
+        86,
+        117
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        140
+      ],
+      "cycle_rank": 312,
+      "edges": 451,
+      "excess_over_twice_path": 173,
+      "n": 140,
+      "parents": [
+        4,
+        29,
+        56,
+        85,
+        116
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        141
+      ],
+      "cycle_rank": 316,
+      "edges": 456,
+      "excess_over_twice_path": 176,
+      "n": 141,
+      "parents": [
+        3,
+        28,
+        55,
+        84,
+        115
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        142
+      ],
+      "cycle_rank": 320,
+      "edges": 461,
+      "excess_over_twice_path": 179,
+      "n": 142,
+      "parents": [
+        2,
+        27,
+        54,
+        83,
+        114
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        143
+      ],
+      "cycle_rank": 324,
+      "edges": 466,
+      "excess_over_twice_path": 182,
+      "n": 143,
+      "parents": [
+        1,
+        26,
+        53,
+        82,
+        113
+      ],
+      "roots": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 4,
+      "component_sizes": [
+        144
+      ],
+      "cycle_rank": 327,
+      "edges": 470,
+      "excess_over_twice_path": 184,
+      "n": 144,
+      "parents": [
+        25,
+        52,
+        81,
+        112
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        145
+      ],
+      "cycle_rank": 331,
+      "edges": 475,
+      "excess_over_twice_path": 187,
+      "n": 145,
+      "parents": [
+        24,
+        51,
+        80,
+        111,
+        144
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        146
+      ],
+      "cycle_rank": 335,
+      "edges": 480,
+      "excess_over_twice_path": 190,
+      "n": 146,
+      "parents": [
+        23,
+        50,
+        79,
+        110,
+        143
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        147
+      ],
+      "cycle_rank": 339,
+      "edges": 485,
+      "excess_over_twice_path": 193,
+      "n": 147,
+      "parents": [
+        22,
+        49,
+        78,
+        109,
+        142
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        148
+      ],
+      "cycle_rank": 343,
+      "edges": 490,
+      "excess_over_twice_path": 196,
+      "n": 148,
+      "parents": [
+        21,
+        48,
+        77,
+        108,
+        141
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        149
+      ],
+      "cycle_rank": 347,
+      "edges": 495,
+      "excess_over_twice_path": 199,
+      "n": 149,
+      "parents": [
+        20,
+        47,
+        76,
+        107,
+        140
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        150
+      ],
+      "cycle_rank": 351,
+      "edges": 500,
+      "excess_over_twice_path": 202,
+      "n": 150,
+      "parents": [
+        19,
+        46,
+        75,
+        106,
+        139
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        151
+      ],
+      "cycle_rank": 355,
+      "edges": 505,
+      "excess_over_twice_path": 205,
+      "n": 151,
+      "parents": [
+        18,
+        45,
+        74,
+        105,
+        138
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        152
+      ],
+      "cycle_rank": 359,
+      "edges": 510,
+      "excess_over_twice_path": 208,
+      "n": 152,
+      "parents": [
+        17,
+        44,
+        73,
+        104,
+        137
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        153
+      ],
+      "cycle_rank": 363,
+      "edges": 515,
+      "excess_over_twice_path": 211,
+      "n": 153,
+      "parents": [
+        16,
+        43,
+        72,
+        103,
+        136
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        154
+      ],
+      "cycle_rank": 367,
+      "edges": 520,
+      "excess_over_twice_path": 214,
+      "n": 154,
+      "parents": [
+        15,
+        42,
+        71,
+        102,
+        135
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        155
+      ],
+      "cycle_rank": 371,
+      "edges": 525,
+      "excess_over_twice_path": 217,
+      "n": 155,
+      "parents": [
+        14,
+        41,
+        70,
+        101,
+        134
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        156
+      ],
+      "cycle_rank": 375,
+      "edges": 530,
+      "excess_over_twice_path": 220,
+      "n": 156,
+      "parents": [
+        13,
+        40,
+        69,
+        100,
+        133
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        157
+      ],
+      "cycle_rank": 379,
+      "edges": 535,
+      "excess_over_twice_path": 223,
+      "n": 157,
+      "parents": [
+        12,
+        39,
+        68,
+        99,
+        132
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        158
+      ],
+      "cycle_rank": 383,
+      "edges": 540,
+      "excess_over_twice_path": 226,
+      "n": 158,
+      "parents": [
+        11,
+        38,
+        67,
+        98,
+        131
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        159
+      ],
+      "cycle_rank": 387,
+      "edges": 545,
+      "excess_over_twice_path": 229,
+      "n": 159,
+      "parents": [
+        10,
+        37,
+        66,
+        97,
+        130
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        160
+      ],
+      "cycle_rank": 391,
+      "edges": 550,
+      "excess_over_twice_path": 232,
+      "n": 160,
+      "parents": [
+        9,
+        36,
+        65,
+        96,
+        129
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        161
+      ],
+      "cycle_rank": 395,
+      "edges": 555,
+      "excess_over_twice_path": 235,
+      "n": 161,
+      "parents": [
+        8,
+        35,
+        64,
+        95,
+        128
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        162
+      ],
+      "cycle_rank": 399,
+      "edges": 560,
+      "excess_over_twice_path": 238,
+      "n": 162,
+      "parents": [
+        7,
+        34,
+        63,
+        94,
+        127
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        163
+      ],
+      "cycle_rank": 404,
+      "edges": 566,
+      "excess_over_twice_path": 242,
+      "n": 163,
+      "parents": [
+        6,
+        33,
+        62,
+        93,
+        126,
+        161
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        164
+      ],
+      "cycle_rank": 409,
+      "edges": 572,
+      "excess_over_twice_path": 246,
+      "n": 164,
+      "parents": [
+        5,
+        32,
+        61,
+        92,
+        125,
+        160
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        165
+      ],
+      "cycle_rank": 414,
+      "edges": 578,
+      "excess_over_twice_path": 250,
+      "n": 165,
+      "parents": [
+        4,
+        31,
+        60,
+        91,
+        124,
+        159
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        166
+      ],
+      "cycle_rank": 419,
+      "edges": 584,
+      "excess_over_twice_path": 254,
+      "n": 166,
+      "parents": [
+        3,
+        30,
+        59,
+        90,
+        123,
+        158
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        167
+      ],
+      "cycle_rank": 424,
+      "edges": 590,
+      "excess_over_twice_path": 258,
+      "n": 167,
+      "parents": [
+        2,
+        29,
+        58,
+        89,
+        122,
+        157
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        168
+      ],
+      "cycle_rank": 429,
+      "edges": 596,
+      "excess_over_twice_path": 262,
+      "n": 168,
+      "parents": [
+        1,
+        28,
+        57,
+        88,
+        121,
+        156
+      ],
+      "roots": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        169
+      ],
+      "cycle_rank": 433,
+      "edges": 601,
+      "excess_over_twice_path": 265,
+      "n": 169,
+      "parents": [
+        27,
+        56,
+        87,
+        120,
+        155
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        170
+      ],
+      "cycle_rank": 437,
+      "edges": 606,
+      "excess_over_twice_path": 268,
+      "n": 170,
+      "parents": [
+        26,
+        55,
+        86,
+        119,
+        154
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        171
+      ],
+      "cycle_rank": 441,
+      "edges": 611,
+      "excess_over_twice_path": 271,
+      "n": 171,
+      "parents": [
+        25,
+        54,
+        85,
+        118,
+        153
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        172
+      ],
+      "cycle_rank": 445,
+      "edges": 616,
+      "excess_over_twice_path": 274,
+      "n": 172,
+      "parents": [
+        24,
+        53,
+        84,
+        117,
+        152
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        173
+      ],
+      "cycle_rank": 449,
+      "edges": 621,
+      "excess_over_twice_path": 277,
+      "n": 173,
+      "parents": [
+        23,
+        52,
+        83,
+        116,
+        151
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        174
+      ],
+      "cycle_rank": 453,
+      "edges": 626,
+      "excess_over_twice_path": 280,
+      "n": 174,
+      "parents": [
+        22,
+        51,
+        82,
+        115,
+        150
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        175
+      ],
+      "cycle_rank": 457,
+      "edges": 631,
+      "excess_over_twice_path": 283,
+      "n": 175,
+      "parents": [
+        21,
+        50,
+        81,
+        114,
+        149
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        176
+      ],
+      "cycle_rank": 461,
+      "edges": 636,
+      "excess_over_twice_path": 286,
+      "n": 176,
+      "parents": [
+        20,
+        49,
+        80,
+        113,
+        148
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        177
+      ],
+      "cycle_rank": 465,
+      "edges": 641,
+      "excess_over_twice_path": 289,
+      "n": 177,
+      "parents": [
+        19,
+        48,
+        79,
+        112,
+        147
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        178
+      ],
+      "cycle_rank": 469,
+      "edges": 646,
+      "excess_over_twice_path": 292,
+      "n": 178,
+      "parents": [
+        18,
+        47,
+        78,
+        111,
+        146
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        179
+      ],
+      "cycle_rank": 473,
+      "edges": 651,
+      "excess_over_twice_path": 295,
+      "n": 179,
+      "parents": [
+        17,
+        46,
+        77,
+        110,
+        145
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        180
+      ],
+      "cycle_rank": 477,
+      "edges": 656,
+      "excess_over_twice_path": 298,
+      "n": 180,
+      "parents": [
+        16,
+        45,
+        76,
+        109,
+        144
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        181
+      ],
+      "cycle_rank": 482,
+      "edges": 662,
+      "excess_over_twice_path": 302,
+      "n": 181,
+      "parents": [
+        15,
+        44,
+        75,
+        108,
+        143,
+        180
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        182
+      ],
+      "cycle_rank": 487,
+      "edges": 668,
+      "excess_over_twice_path": 306,
+      "n": 182,
+      "parents": [
+        14,
+        43,
+        74,
+        107,
+        142,
+        179
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        183
+      ],
+      "cycle_rank": 492,
+      "edges": 674,
+      "excess_over_twice_path": 310,
+      "n": 183,
+      "parents": [
+        13,
+        42,
+        73,
+        106,
+        141,
+        178
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        184
+      ],
+      "cycle_rank": 497,
+      "edges": 680,
+      "excess_over_twice_path": 314,
+      "n": 184,
+      "parents": [
+        12,
+        41,
+        72,
+        105,
+        140,
+        177
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        185
+      ],
+      "cycle_rank": 502,
+      "edges": 686,
+      "excess_over_twice_path": 318,
+      "n": 185,
+      "parents": [
+        11,
+        40,
+        71,
+        104,
+        139,
+        176
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        186
+      ],
+      "cycle_rank": 507,
+      "edges": 692,
+      "excess_over_twice_path": 322,
+      "n": 186,
+      "parents": [
+        10,
+        39,
+        70,
+        103,
+        138,
+        175
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        187
+      ],
+      "cycle_rank": 512,
+      "edges": 698,
+      "excess_over_twice_path": 326,
+      "n": 187,
+      "parents": [
+        9,
+        38,
+        69,
+        102,
+        137,
+        174
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        188
+      ],
+      "cycle_rank": 517,
+      "edges": 704,
+      "excess_over_twice_path": 330,
+      "n": 188,
+      "parents": [
+        8,
+        37,
+        68,
+        101,
+        136,
+        173
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        189
+      ],
+      "cycle_rank": 522,
+      "edges": 710,
+      "excess_over_twice_path": 334,
+      "n": 189,
+      "parents": [
+        7,
+        36,
+        67,
+        100,
+        135,
+        172
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        190
+      ],
+      "cycle_rank": 527,
+      "edges": 716,
+      "excess_over_twice_path": 338,
+      "n": 190,
+      "parents": [
+        6,
+        35,
+        66,
+        99,
+        134,
+        171
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        191
+      ],
+      "cycle_rank": 532,
+      "edges": 722,
+      "excess_over_twice_path": 342,
+      "n": 191,
+      "parents": [
+        5,
+        34,
+        65,
+        98,
+        133,
+        170
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        192
+      ],
+      "cycle_rank": 537,
+      "edges": 728,
+      "excess_over_twice_path": 346,
+      "n": 192,
+      "parents": [
+        4,
+        33,
+        64,
+        97,
+        132,
+        169
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        193
+      ],
+      "cycle_rank": 542,
+      "edges": 734,
+      "excess_over_twice_path": 350,
+      "n": 193,
+      "parents": [
+        3,
+        32,
+        63,
+        96,
+        131,
+        168
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        194
+      ],
+      "cycle_rank": 547,
+      "edges": 740,
+      "excess_over_twice_path": 354,
+      "n": 194,
+      "parents": [
+        2,
+        31,
+        62,
+        95,
+        130,
+        167
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        195
+      ],
+      "cycle_rank": 552,
+      "edges": 746,
+      "excess_over_twice_path": 358,
+      "n": 195,
+      "parents": [
+        1,
+        30,
+        61,
+        94,
+        129,
+        166
+      ],
+      "roots": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        196
+      ],
+      "cycle_rank": 556,
+      "edges": 751,
+      "excess_over_twice_path": 361,
+      "n": 196,
+      "parents": [
+        29,
+        60,
+        93,
+        128,
+        165
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        197
+      ],
+      "cycle_rank": 560,
+      "edges": 756,
+      "excess_over_twice_path": 364,
+      "n": 197,
+      "parents": [
+        28,
+        59,
+        92,
+        127,
+        164
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        198
+      ],
+      "cycle_rank": 564,
+      "edges": 761,
+      "excess_over_twice_path": 367,
+      "n": 198,
+      "parents": [
+        27,
+        58,
+        91,
+        126,
+        163
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        199
+      ],
+      "cycle_rank": 568,
+      "edges": 766,
+      "excess_over_twice_path": 370,
+      "n": 199,
+      "parents": [
+        26,
+        57,
+        90,
+        125,
+        162
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 5,
+      "component_sizes": [
+        200
+      ],
+      "cycle_rank": 572,
+      "edges": 771,
+      "excess_over_twice_path": 373,
+      "n": 200,
+      "parents": [
+        25,
+        56,
+        89,
+        124,
+        161
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        201
+      ],
+      "cycle_rank": 577,
+      "edges": 777,
+      "excess_over_twice_path": 377,
+      "n": 201,
+      "parents": [
+        24,
+        55,
+        88,
+        123,
+        160,
+        199
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        202
+      ],
+      "cycle_rank": 582,
+      "edges": 783,
+      "excess_over_twice_path": 381,
+      "n": 202,
+      "parents": [
+        23,
+        54,
+        87,
+        122,
+        159,
+        198
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        203
+      ],
+      "cycle_rank": 587,
+      "edges": 789,
+      "excess_over_twice_path": 385,
+      "n": 203,
+      "parents": [
+        22,
+        53,
+        86,
+        121,
+        158,
+        197
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        204
+      ],
+      "cycle_rank": 592,
+      "edges": 795,
+      "excess_over_twice_path": 389,
+      "n": 204,
+      "parents": [
+        21,
+        52,
+        85,
+        120,
+        157,
+        196
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        205
+      ],
+      "cycle_rank": 597,
+      "edges": 801,
+      "excess_over_twice_path": 393,
+      "n": 205,
+      "parents": [
+        20,
+        51,
+        84,
+        119,
+        156,
+        195
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        206
+      ],
+      "cycle_rank": 602,
+      "edges": 807,
+      "excess_over_twice_path": 397,
+      "n": 206,
+      "parents": [
+        19,
+        50,
+        83,
+        118,
+        155,
+        194
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        207
+      ],
+      "cycle_rank": 607,
+      "edges": 813,
+      "excess_over_twice_path": 401,
+      "n": 207,
+      "parents": [
+        18,
+        49,
+        82,
+        117,
+        154,
+        193
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        208
+      ],
+      "cycle_rank": 612,
+      "edges": 819,
+      "excess_over_twice_path": 405,
+      "n": 208,
+      "parents": [
+        17,
+        48,
+        81,
+        116,
+        153,
+        192
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        209
+      ],
+      "cycle_rank": 617,
+      "edges": 825,
+      "excess_over_twice_path": 409,
+      "n": 209,
+      "parents": [
+        16,
+        47,
+        80,
+        115,
+        152,
+        191
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        210
+      ],
+      "cycle_rank": 622,
+      "edges": 831,
+      "excess_over_twice_path": 413,
+      "n": 210,
+      "parents": [
+        15,
+        46,
+        79,
+        114,
+        151,
+        190
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        211
+      ],
+      "cycle_rank": 627,
+      "edges": 837,
+      "excess_over_twice_path": 417,
+      "n": 211,
+      "parents": [
+        14,
+        45,
+        78,
+        113,
+        150,
+        189
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        212
+      ],
+      "cycle_rank": 632,
+      "edges": 843,
+      "excess_over_twice_path": 421,
+      "n": 212,
+      "parents": [
+        13,
+        44,
+        77,
+        112,
+        149,
+        188
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        213
+      ],
+      "cycle_rank": 637,
+      "edges": 849,
+      "excess_over_twice_path": 425,
+      "n": 213,
+      "parents": [
+        12,
+        43,
+        76,
+        111,
+        148,
+        187
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        214
+      ],
+      "cycle_rank": 642,
+      "edges": 855,
+      "excess_over_twice_path": 429,
+      "n": 214,
+      "parents": [
+        11,
+        42,
+        75,
+        110,
+        147,
+        186
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        215
+      ],
+      "cycle_rank": 647,
+      "edges": 861,
+      "excess_over_twice_path": 433,
+      "n": 215,
+      "parents": [
+        10,
+        41,
+        74,
+        109,
+        146,
+        185
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        216
+      ],
+      "cycle_rank": 652,
+      "edges": 867,
+      "excess_over_twice_path": 437,
+      "n": 216,
+      "parents": [
+        9,
+        40,
+        73,
+        108,
+        145,
+        184
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        217
+      ],
+      "cycle_rank": 657,
+      "edges": 873,
+      "excess_over_twice_path": 441,
+      "n": 217,
+      "parents": [
+        8,
+        39,
+        72,
+        107,
+        144,
+        183
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        218
+      ],
+      "cycle_rank": 662,
+      "edges": 879,
+      "excess_over_twice_path": 445,
+      "n": 218,
+      "parents": [
+        7,
+        38,
+        71,
+        106,
+        143,
+        182
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        219
+      ],
+      "cycle_rank": 667,
+      "edges": 885,
+      "excess_over_twice_path": 449,
+      "n": 219,
+      "parents": [
+        6,
+        37,
+        70,
+        105,
+        142,
+        181
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        220
+      ],
+      "cycle_rank": 672,
+      "edges": 891,
+      "excess_over_twice_path": 453,
+      "n": 220,
+      "parents": [
+        5,
+        36,
+        69,
+        104,
+        141,
+        180
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        221
+      ],
+      "cycle_rank": 678,
+      "edges": 898,
+      "excess_over_twice_path": 458,
+      "n": 221,
+      "parents": [
+        4,
+        35,
+        68,
+        103,
+        140,
+        179,
+        220
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        222
+      ],
+      "cycle_rank": 684,
+      "edges": 905,
+      "excess_over_twice_path": 463,
+      "n": 222,
+      "parents": [
+        3,
+        34,
+        67,
+        102,
+        139,
+        178,
+        219
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        223
+      ],
+      "cycle_rank": 690,
+      "edges": 912,
+      "excess_over_twice_path": 468,
+      "n": 223,
+      "parents": [
+        2,
+        33,
+        66,
+        101,
+        138,
+        177,
+        218
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        224
+      ],
+      "cycle_rank": 696,
+      "edges": 919,
+      "excess_over_twice_path": 473,
+      "n": 224,
+      "parents": [
+        1,
+        32,
+        65,
+        100,
+        137,
+        176,
+        217
+      ],
+      "roots": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        225
+      ],
+      "cycle_rank": 701,
+      "edges": 925,
+      "excess_over_twice_path": 477,
+      "n": 225,
+      "parents": [
+        31,
+        64,
+        99,
+        136,
+        175,
+        216
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        226
+      ],
+      "cycle_rank": 706,
+      "edges": 931,
+      "excess_over_twice_path": 481,
+      "n": 226,
+      "parents": [
+        30,
+        63,
+        98,
+        135,
+        174,
+        215
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        227
+      ],
+      "cycle_rank": 711,
+      "edges": 937,
+      "excess_over_twice_path": 485,
+      "n": 227,
+      "parents": [
+        29,
+        62,
+        97,
+        134,
+        173,
+        214
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        228
+      ],
+      "cycle_rank": 716,
+      "edges": 943,
+      "excess_over_twice_path": 489,
+      "n": 228,
+      "parents": [
+        28,
+        61,
+        96,
+        133,
+        172,
+        213
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        229
+      ],
+      "cycle_rank": 721,
+      "edges": 949,
+      "excess_over_twice_path": 493,
+      "n": 229,
+      "parents": [
+        27,
+        60,
+        95,
+        132,
+        171,
+        212
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        230
+      ],
+      "cycle_rank": 726,
+      "edges": 955,
+      "excess_over_twice_path": 497,
+      "n": 230,
+      "parents": [
+        26,
+        59,
+        94,
+        131,
+        170,
+        211
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        231
+      ],
+      "cycle_rank": 731,
+      "edges": 961,
+      "excess_over_twice_path": 501,
+      "n": 231,
+      "parents": [
+        25,
+        58,
+        93,
+        130,
+        169,
+        210
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        232
+      ],
+      "cycle_rank": 736,
+      "edges": 967,
+      "excess_over_twice_path": 505,
+      "n": 232,
+      "parents": [
+        24,
+        57,
+        92,
+        129,
+        168,
+        209
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        233
+      ],
+      "cycle_rank": 741,
+      "edges": 973,
+      "excess_over_twice_path": 509,
+      "n": 233,
+      "parents": [
+        23,
+        56,
+        91,
+        128,
+        167,
+        208
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        234
+      ],
+      "cycle_rank": 746,
+      "edges": 979,
+      "excess_over_twice_path": 513,
+      "n": 234,
+      "parents": [
+        22,
+        55,
+        90,
+        127,
+        166,
+        207
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        235
+      ],
+      "cycle_rank": 751,
+      "edges": 985,
+      "excess_over_twice_path": 517,
+      "n": 235,
+      "parents": [
+        21,
+        54,
+        89,
+        126,
+        165,
+        206
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        236
+      ],
+      "cycle_rank": 756,
+      "edges": 991,
+      "excess_over_twice_path": 521,
+      "n": 236,
+      "parents": [
+        20,
+        53,
+        88,
+        125,
+        164,
+        205
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        237
+      ],
+      "cycle_rank": 761,
+      "edges": 997,
+      "excess_over_twice_path": 525,
+      "n": 237,
+      "parents": [
+        19,
+        52,
+        87,
+        124,
+        163,
+        204
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        238
+      ],
+      "cycle_rank": 766,
+      "edges": 1003,
+      "excess_over_twice_path": 529,
+      "n": 238,
+      "parents": [
+        18,
+        51,
+        86,
+        123,
+        162,
+        203
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        239
+      ],
+      "cycle_rank": 771,
+      "edges": 1009,
+      "excess_over_twice_path": 533,
+      "n": 239,
+      "parents": [
+        17,
+        50,
+        85,
+        122,
+        161,
+        202
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        240
+      ],
+      "cycle_rank": 776,
+      "edges": 1015,
+      "excess_over_twice_path": 537,
+      "n": 240,
+      "parents": [
+        16,
+        49,
+        84,
+        121,
+        160,
+        201
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        241
+      ],
+      "cycle_rank": 781,
+      "edges": 1021,
+      "excess_over_twice_path": 541,
+      "n": 241,
+      "parents": [
+        15,
+        48,
+        83,
+        120,
+        159,
+        200
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        242
+      ],
+      "cycle_rank": 786,
+      "edges": 1027,
+      "excess_over_twice_path": 545,
+      "n": 242,
+      "parents": [
+        14,
+        47,
+        82,
+        119,
+        158,
+        199
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        243
+      ],
+      "cycle_rank": 792,
+      "edges": 1034,
+      "excess_over_twice_path": 550,
+      "n": 243,
+      "parents": [
+        13,
+        46,
+        81,
+        118,
+        157,
+        198,
+        241
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        244
+      ],
+      "cycle_rank": 798,
+      "edges": 1041,
+      "excess_over_twice_path": 555,
+      "n": 244,
+      "parents": [
+        12,
+        45,
+        80,
+        117,
+        156,
+        197,
+        240
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        245
+      ],
+      "cycle_rank": 804,
+      "edges": 1048,
+      "excess_over_twice_path": 560,
+      "n": 245,
+      "parents": [
+        11,
+        44,
+        79,
+        116,
+        155,
+        196,
+        239
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        246
+      ],
+      "cycle_rank": 810,
+      "edges": 1055,
+      "excess_over_twice_path": 565,
+      "n": 246,
+      "parents": [
+        10,
+        43,
+        78,
+        115,
+        154,
+        195,
+        238
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        247
+      ],
+      "cycle_rank": 816,
+      "edges": 1062,
+      "excess_over_twice_path": 570,
+      "n": 247,
+      "parents": [
+        9,
+        42,
+        77,
+        114,
+        153,
+        194,
+        237
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        248
+      ],
+      "cycle_rank": 822,
+      "edges": 1069,
+      "excess_over_twice_path": 575,
+      "n": 248,
+      "parents": [
+        8,
+        41,
+        76,
+        113,
+        152,
+        193,
+        236
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        249
+      ],
+      "cycle_rank": 828,
+      "edges": 1076,
+      "excess_over_twice_path": 580,
+      "n": 249,
+      "parents": [
+        7,
+        40,
+        75,
+        112,
+        151,
+        192,
+        235
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        250
+      ],
+      "cycle_rank": 834,
+      "edges": 1083,
+      "excess_over_twice_path": 585,
+      "n": 250,
+      "parents": [
+        6,
+        39,
+        74,
+        111,
+        150,
+        191,
+        234
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        251
+      ],
+      "cycle_rank": 840,
+      "edges": 1090,
+      "excess_over_twice_path": 590,
+      "n": 251,
+      "parents": [
+        5,
+        38,
+        73,
+        110,
+        149,
+        190,
+        233
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        252
+      ],
+      "cycle_rank": 846,
+      "edges": 1097,
+      "excess_over_twice_path": 595,
+      "n": 252,
+      "parents": [
+        4,
+        37,
+        72,
+        109,
+        148,
+        189,
+        232
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        253
+      ],
+      "cycle_rank": 852,
+      "edges": 1104,
+      "excess_over_twice_path": 600,
+      "n": 253,
+      "parents": [
+        3,
+        36,
+        71,
+        108,
+        147,
+        188,
+        231
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        254
+      ],
+      "cycle_rank": 858,
+      "edges": 1111,
+      "excess_over_twice_path": 605,
+      "n": 254,
+      "parents": [
+        2,
+        35,
+        70,
+        107,
+        146,
+        187,
+        230
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        255
+      ],
+      "cycle_rank": 864,
+      "edges": 1118,
+      "excess_over_twice_path": 610,
+      "n": 255,
+      "parents": [
+        1,
+        34,
+        69,
+        106,
+        145,
+        186,
+        229
+      ],
+      "roots": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        256
+      ],
+      "cycle_rank": 869,
+      "edges": 1124,
+      "excess_over_twice_path": 614,
+      "n": 256,
+      "parents": [
+        33,
+        68,
+        105,
+        144,
+        185,
+        228
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        257
+      ],
+      "cycle_rank": 874,
+      "edges": 1130,
+      "excess_over_twice_path": 618,
+      "n": 257,
+      "parents": [
+        32,
+        67,
+        104,
+        143,
+        184,
+        227
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        258
+      ],
+      "cycle_rank": 879,
+      "edges": 1136,
+      "excess_over_twice_path": 622,
+      "n": 258,
+      "parents": [
+        31,
+        66,
+        103,
+        142,
+        183,
+        226
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        259
+      ],
+      "cycle_rank": 884,
+      "edges": 1142,
+      "excess_over_twice_path": 626,
+      "n": 259,
+      "parents": [
+        30,
+        65,
+        102,
+        141,
+        182,
+        225
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        260
+      ],
+      "cycle_rank": 889,
+      "edges": 1148,
+      "excess_over_twice_path": 630,
+      "n": 260,
+      "parents": [
+        29,
+        64,
+        101,
+        140,
+        181,
+        224
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        261
+      ],
+      "cycle_rank": 894,
+      "edges": 1154,
+      "excess_over_twice_path": 634,
+      "n": 261,
+      "parents": [
+        28,
+        63,
+        100,
+        139,
+        180,
+        223
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        262
+      ],
+      "cycle_rank": 899,
+      "edges": 1160,
+      "excess_over_twice_path": 638,
+      "n": 262,
+      "parents": [
+        27,
+        62,
+        99,
+        138,
+        179,
+        222
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        263
+      ],
+      "cycle_rank": 904,
+      "edges": 1166,
+      "excess_over_twice_path": 642,
+      "n": 263,
+      "parents": [
+        26,
+        61,
+        98,
+        137,
+        178,
+        221
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 6,
+      "component_sizes": [
+        264
+      ],
+      "cycle_rank": 909,
+      "edges": 1172,
+      "excess_over_twice_path": 646,
+      "n": 264,
+      "parents": [
+        25,
+        60,
+        97,
+        136,
+        177,
+        220
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        265
+      ],
+      "cycle_rank": 915,
+      "edges": 1179,
+      "excess_over_twice_path": 651,
+      "n": 265,
+      "parents": [
+        24,
+        59,
+        96,
+        135,
+        176,
+        219,
+        264
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        266
+      ],
+      "cycle_rank": 921,
+      "edges": 1186,
+      "excess_over_twice_path": 656,
+      "n": 266,
+      "parents": [
+        23,
+        58,
+        95,
+        134,
+        175,
+        218,
+        263
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        267
+      ],
+      "cycle_rank": 927,
+      "edges": 1193,
+      "excess_over_twice_path": 661,
+      "n": 267,
+      "parents": [
+        22,
+        57,
+        94,
+        133,
+        174,
+        217,
+        262
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        268
+      ],
+      "cycle_rank": 933,
+      "edges": 1200,
+      "excess_over_twice_path": 666,
+      "n": 268,
+      "parents": [
+        21,
+        56,
+        93,
+        132,
+        173,
+        216,
+        261
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        269
+      ],
+      "cycle_rank": 939,
+      "edges": 1207,
+      "excess_over_twice_path": 671,
+      "n": 269,
+      "parents": [
+        20,
+        55,
+        92,
+        131,
+        172,
+        215,
+        260
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        270
+      ],
+      "cycle_rank": 945,
+      "edges": 1214,
+      "excess_over_twice_path": 676,
+      "n": 270,
+      "parents": [
+        19,
+        54,
+        91,
+        130,
+        171,
+        214,
+        259
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        271
+      ],
+      "cycle_rank": 951,
+      "edges": 1221,
+      "excess_over_twice_path": 681,
+      "n": 271,
+      "parents": [
+        18,
+        53,
+        90,
+        129,
+        170,
+        213,
+        258
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        272
+      ],
+      "cycle_rank": 957,
+      "edges": 1228,
+      "excess_over_twice_path": 686,
+      "n": 272,
+      "parents": [
+        17,
+        52,
+        89,
+        128,
+        169,
+        212,
+        257
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        273
+      ],
+      "cycle_rank": 963,
+      "edges": 1235,
+      "excess_over_twice_path": 691,
+      "n": 273,
+      "parents": [
+        16,
+        51,
+        88,
+        127,
+        168,
+        211,
+        256
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        274
+      ],
+      "cycle_rank": 969,
+      "edges": 1242,
+      "excess_over_twice_path": 696,
+      "n": 274,
+      "parents": [
+        15,
+        50,
+        87,
+        126,
+        167,
+        210,
+        255
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        275
+      ],
+      "cycle_rank": 975,
+      "edges": 1249,
+      "excess_over_twice_path": 701,
+      "n": 275,
+      "parents": [
+        14,
+        49,
+        86,
+        125,
+        166,
+        209,
+        254
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        276
+      ],
+      "cycle_rank": 981,
+      "edges": 1256,
+      "excess_over_twice_path": 706,
+      "n": 276,
+      "parents": [
+        13,
+        48,
+        85,
+        124,
+        165,
+        208,
+        253
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        277
+      ],
+      "cycle_rank": 987,
+      "edges": 1263,
+      "excess_over_twice_path": 711,
+      "n": 277,
+      "parents": [
+        12,
+        47,
+        84,
+        123,
+        164,
+        207,
+        252
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        278
+      ],
+      "cycle_rank": 993,
+      "edges": 1270,
+      "excess_over_twice_path": 716,
+      "n": 278,
+      "parents": [
+        11,
+        46,
+        83,
+        122,
+        163,
+        206,
+        251
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        279
+      ],
+      "cycle_rank": 999,
+      "edges": 1277,
+      "excess_over_twice_path": 721,
+      "n": 279,
+      "parents": [
+        10,
+        45,
+        82,
+        121,
+        162,
+        205,
+        250
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        280
+      ],
+      "cycle_rank": 1005,
+      "edges": 1284,
+      "excess_over_twice_path": 726,
+      "n": 280,
+      "parents": [
+        9,
+        44,
+        81,
+        120,
+        161,
+        204,
+        249
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        281
+      ],
+      "cycle_rank": 1011,
+      "edges": 1291,
+      "excess_over_twice_path": 731,
+      "n": 281,
+      "parents": [
+        8,
+        43,
+        80,
+        119,
+        160,
+        203,
+        248
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        282
+      ],
+      "cycle_rank": 1017,
+      "edges": 1298,
+      "excess_over_twice_path": 736,
+      "n": 282,
+      "parents": [
+        7,
+        42,
+        79,
+        118,
+        159,
+        202,
+        247
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        283
+      ],
+      "cycle_rank": 1023,
+      "edges": 1305,
+      "excess_over_twice_path": 741,
+      "n": 283,
+      "parents": [
+        6,
+        41,
+        78,
+        117,
+        158,
+        201,
+        246
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        284
+      ],
+      "cycle_rank": 1029,
+      "edges": 1312,
+      "excess_over_twice_path": 746,
+      "n": 284,
+      "parents": [
+        5,
+        40,
+        77,
+        116,
+        157,
+        200,
+        245
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        285
+      ],
+      "cycle_rank": 1035,
+      "edges": 1319,
+      "excess_over_twice_path": 751,
+      "n": 285,
+      "parents": [
+        4,
+        39,
+        76,
+        115,
+        156,
+        199,
+        244
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        286
+      ],
+      "cycle_rank": 1041,
+      "edges": 1326,
+      "excess_over_twice_path": 756,
+      "n": 286,
+      "parents": [
+        3,
+        38,
+        75,
+        114,
+        155,
+        198,
+        243
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        287
+      ],
+      "cycle_rank": 1047,
+      "edges": 1333,
+      "excess_over_twice_path": 761,
+      "n": 287,
+      "parents": [
+        2,
+        37,
+        74,
+        113,
+        154,
+        197,
+        242
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        288
+      ],
+      "cycle_rank": 1053,
+      "edges": 1340,
+      "excess_over_twice_path": 766,
+      "n": 288,
+      "parents": [
+        1,
+        36,
+        73,
+        112,
+        153,
+        196,
+        241
+      ],
+      "roots": [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        289
+      ],
+      "cycle_rank": 1059,
+      "edges": 1347,
+      "excess_over_twice_path": 771,
+      "n": 289,
+      "parents": [
+        35,
+        72,
+        111,
+        152,
+        195,
+        240,
+        287
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        290
+      ],
+      "cycle_rank": 1065,
+      "edges": 1354,
+      "excess_over_twice_path": 776,
+      "n": 290,
+      "parents": [
+        34,
+        71,
+        110,
+        151,
+        194,
+        239,
+        286
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        291
+      ],
+      "cycle_rank": 1071,
+      "edges": 1361,
+      "excess_over_twice_path": 781,
+      "n": 291,
+      "parents": [
+        33,
+        70,
+        109,
+        150,
+        193,
+        238,
+        285
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        292
+      ],
+      "cycle_rank": 1077,
+      "edges": 1368,
+      "excess_over_twice_path": 786,
+      "n": 292,
+      "parents": [
+        32,
+        69,
+        108,
+        149,
+        192,
+        237,
+        284
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        293
+      ],
+      "cycle_rank": 1083,
+      "edges": 1375,
+      "excess_over_twice_path": 791,
+      "n": 293,
+      "parents": [
+        31,
+        68,
+        107,
+        148,
+        191,
+        236,
+        283
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        294
+      ],
+      "cycle_rank": 1089,
+      "edges": 1382,
+      "excess_over_twice_path": 796,
+      "n": 294,
+      "parents": [
+        30,
+        67,
+        106,
+        147,
+        190,
+        235,
+        282
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        295
+      ],
+      "cycle_rank": 1095,
+      "edges": 1389,
+      "excess_over_twice_path": 801,
+      "n": 295,
+      "parents": [
+        29,
+        66,
+        105,
+        146,
+        189,
+        234,
+        281
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        296
+      ],
+      "cycle_rank": 1101,
+      "edges": 1396,
+      "excess_over_twice_path": 806,
+      "n": 296,
+      "parents": [
+        28,
+        65,
+        104,
+        145,
+        188,
+        233,
+        280
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        297
+      ],
+      "cycle_rank": 1107,
+      "edges": 1403,
+      "excess_over_twice_path": 811,
+      "n": 297,
+      "parents": [
+        27,
+        64,
+        103,
+        144,
+        187,
+        232,
+        279
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        298
+      ],
+      "cycle_rank": 1113,
+      "edges": 1410,
+      "excess_over_twice_path": 816,
+      "n": 298,
+      "parents": [
+        26,
+        63,
+        102,
+        143,
+        186,
+        231,
+        278
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        299
+      ],
+      "cycle_rank": 1119,
+      "edges": 1417,
+      "excess_over_twice_path": 821,
+      "n": 299,
+      "parents": [
+        25,
+        62,
+        101,
+        142,
+        185,
+        230,
+        277
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "birth": 7,
+      "component_sizes": [
+        300
+      ],
+      "cycle_rank": 1125,
+      "edges": 1424,
+      "excess_over_twice_path": 826,
+      "n": 300,
+      "parents": [
+        24,
+        61,
+        100,
+        141,
+        184,
+        229,
+        276
+      ],
+      "roots": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    }
+  ],
+  "status": "FINITE-EXACT; all-size formulas are proved in GROWTH.md",
+  "user_sets_components": [
+    [
+      1,
+      3,
+      6,
+      8,
+      10,
+      17
+    ],
+    [
+      2,
+      7,
+      9,
+      16,
+      18
+    ],
+    [
+      4,
+      5,
+      11,
+      12
+    ]
+  ],
+  "user_sets_edges": [
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      18
+    ],
+    [
+      8,
+      17
+    ],
+    [
+      9,
+      16
+    ]
+  ]
+}

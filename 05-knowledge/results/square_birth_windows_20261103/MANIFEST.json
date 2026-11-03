@@ -1,0 +1,65 @@
+{
+  "files": {
+    "AUDIT.md": {
+      "bytes_lf": 5645,
+      "sha256_lf": "79bc678e7597a993520c63daf707997729ff4cf06ea38b1d2099d3287b88a1a3"
+    },
+    "BIRTH_WINDOW.md": {
+      "bytes_lf": 8250,
+      "sha256_lf": "945e2843b4b5df3f4b2f5f862bc1c84121a63bbe5e085e318fde2105f311d501"
+    },
+    "GROWTH.md": {
+      "bytes_lf": 9028,
+      "sha256_lf": "170436b999c37adcc09ff90353d0ba604a9b478c4c87256d5c9b582d52bd48ad"
+    },
+    "LEDGER.md": {
+      "bytes_lf": 1527,
+      "sha256_lf": "3d311171d93e64e641d6bafef15da7e1414687801d26134bb433d52e8cbb6b6d"
+    },
+    "README.md": {
+      "bytes_lf": 3147,
+      "sha256_lf": "bf3dc2d16d6f061215e1a3b895c749ceb73168f2aa35a6ca18b2058860da58ef"
+    },
+    "RECOVERY.md": {
+      "bytes_lf": 8150,
+      "sha256_lf": "04a5b21899b73509137ad41a626cf5df61e45b466c5f4a5d9cdb9c2a7fd1829a"
+    },
+    "birth.json": {
+      "bytes_lf": 844900,
+      "sha256_lf": "caf5a3eb118099d0e899cf38fb5011ae601341eec6e09f0e6c8d61ec7c3787ec"
+    },
+    "birth.py": {
+      "bytes_lf": 10391,
+      "sha256_lf": "25aea70347d614b9bbf7d3ab8a045e38ad8aa8f6a678d6dd2883edcf71921049"
+    },
+    "checks.json": {
+      "bytes_lf": 7712,
+      "sha256_lf": "de77db5d5813f4cfdb18342ba05a7b62af7c2ac2e5f252744f8d527641e301da"
+    },
+    "growth.json": {
+      "bytes_lf": 118670,
+      "sha256_lf": "e5ebfee4255b11cc7fc8430eea8ba9c99ed36166b30d61994c2c05cf935041ed"
+    },
+    "growth.py": {
+      "bytes_lf": 7168,
+      "sha256_lf": "67387c3b0aab819b29d8d00bb1813fafc3de82059ef415187a55a21cf524b015"
+    },
+    "path56.json": {
+      "bytes_lf": 216,
+      "sha256_lf": "10fa6b12685ff535219a54f4201887f91ad7a8832887e2aa5a4cf4ec66bd7854"
+    },
+    "seal.py": {
+      "bytes_lf": 983,
+      "sha256_lf": "6962aecb32ea14af051bb2f6aa3ce41593f84c1f71b88544e8f756b242f0fb9d"
+    },
+    "sources.json": {
+      "bytes_lf": 4807,
+      "sha256_lf": "2be4897b131f6383b922cdd1ade19d3355cf4ac62b630c499e286ffec8832a84"
+    },
+    "verify.py": {
+      "bytes_lf": 1274,
+      "sha256_lf": "ddfc878d75a7aa412c287ec016bcc74bb555b957d5d07bd7c59f484700c66ce9"
+    }
+  },
+  "normalization": "CRLF to LF for this text-only packet"
+}

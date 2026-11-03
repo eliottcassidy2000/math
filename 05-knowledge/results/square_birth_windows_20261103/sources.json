@@ -1,0 +1,95 @@
+{
+  "primary_web_source": "https://arxiv.org/html/1411.5354v2",
+  "sources": [
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "fe6083ee6421b39aa59d4d79f884b3af7b1e92d5",
+      "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/NATIVE_26.md",
+      "sha256_blob": "d5666ac7500372ac16b9084330229c6409f29533f8b318a622e45f27634fb672"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "370656d8705e53ed3cfee18f94d4ee49b3d01884",
+      "path": "05-knowledge/results/twenty_curvature_ports_20261102/THREE_WINDOW_CARRIER.md",
+      "sha256_blob": "b5a25cfe5336b0f6c4f8537e69415f7bad5d8c5e6394286e2d9ba405a6152239"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "dfbdf284249b860d46e0213f6c0e6d1a7911680f",
+      "path": "05-knowledge/results/session147_square_sum_20261103/core/REPORT.md",
+      "sha256_blob": "b7c2e8f2abab294225ce97caf84299d81ee7ee6611e252325ed8f33798cdb3d7"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "c7dd375f3f0b71535918bf34a1ee06f1b32eb60d",
+      "path": "05-knowledge/results/session147_square_sum_20261103/tripartitions/RESULTS.md",
+      "sha256_blob": "7bddeec27db5a6c301c4baeb799bb42184c5d59a6e98972bcf0b4afc916eba9f"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "d4547e987ea2e2c6a57e990fe91f3adc22786da1",
+      "path": "05-knowledge/results/monster_levels_square_sum_7_21_20261022.md",
+      "sha256_blob": "5cfeb3ab340d47ffa4bb9f90cb35f05728a6979d7d2ed357e13863465a263c19"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "3b8d75d518c755630154079948cda37fc18eeae5",
+      "path": "05-knowledge/results/session32_square_monster_20261023/PELL_ARRIVAL_CLOCKS.md",
+      "sha256_blob": "1fe6a59bc33e1f674e6c36622bb77178a4566f680e4d2321b26185202750a8f8"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "79ca61cacb8e1c9ad6a4b07077fd76a94c76d2cc",
+      "path": "05-knowledge/results/session132_fractran_tournament_recursion_20261031/prime_graphs/PROOFS.md",
+      "sha256_blob": "d88ec62f95b54240544536cb3caf1a8ad626f20e26cc926772671f1409ca03b9"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "dd14df76a81c029e95d41715fa82f2ce2d264944",
+      "path": "05-knowledge/results/session131_reflection_numeration_moonshine_20261031/moonshine/README.md",
+      "sha256_blob": "ee4daab42bbbb9cba1ecc82010c11d130dba5e9d2cee9c1191e9741a195a8d67"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "52469e65b7cfca90eb5ac14d4a9a1f326e9bac23",
+      "path": "05-knowledge/results/lca_ports_reverse_20261025/order14/GUARD_EXTENSION.md",
+      "sha256_blob": "81c4e2e5a413de51e8d2519c7e42ad31f174611fe65a975d8eb45053201dda08"
+    },
+    {
+      "commit": "13e4842a46e59208801510596c37cdde99d29371",
+      "git_blob": "3b5b448fb66d98499b62f56cc159bfed11079e91",
+      "path": "05-knowledge/results/hourglass_quadratic_ports_20261103/COMPLETIONS.md",
+      "sha256_blob": "e53d8a97c0af8b337e1811eb3523068b6a2739d86cf23faf5bd5ee0d4368d20c"
+    },
+    {
+      "commit": "7102ed8e6997a7d850b8ba5c835b300b8e3d51aa",
+      "git_blob": "eeb03b6dcca9bf1587c474142970aa3a04734d8e",
+      "path": "05-knowledge/results/session148_square_sum_20261103/growth/GROWTH.md",
+      "sha256_blob": "b54951e8f94914edf36796cbea51c26623c0f1d9489047349c1d757503c21edd"
+    },
+    {
+      "commit": "7102ed8e6997a7d850b8ba5c835b300b8e3d51aa",
+      "git_blob": "000a4b5d5c0e72b136d51536819e5c1436b53a50",
+      "path": "05-knowledge/results/session148_square_sum_20261103/oriented/REPORT.md",
+      "sha256_blob": "c57cb6a5c4e77d555fbf1380310aead705e93e8a4a781a84e866eb18ca6537dc"
+    },
+    {
+      "commit": "7102ed8e6997a7d850b8ba5c835b300b8e3d51aa",
+      "git_blob": "b4e52b9d643c018fc91567ce056aad0677d50224",
+      "path": "05-knowledge/results/session148_square_sum_20261103/prime_alignment/README.md",
+      "sha256_blob": "3d2c1f7af47743b7af61d728531e7e563296503b935cc481481e76378a646545"
+    },
+    {
+      "commit": "7102ed8e6997a7d850b8ba5c835b300b8e3d51aa",
+      "git_blob": "d94669ff2664e1cb5f23ba20cbefc9a94a00f365",
+      "path": "05-knowledge/results/session147_square_sum_20261103/unicyclic/THEOREM.md",
+      "sha256_blob": "4454e41059f43cfe2e19ae5a37054fa4bbbf5341f733885bbd045eb81ece65dd"
+    },
+    {
+      "commit": "7102ed8e6997a7d850b8ba5c835b300b8e3d51aa",
+      "git_blob": "92fb8fa5a9dcefe452ae52e461ff1915fe996ada",
+      "path": "05-knowledge/results/hourglass_triangular_dynamics_20261103/README.md",
+      "sha256_blob": "befd7af39b3000e28c05a6ef014e797731de4a1ab8ad0fcaf32dc925cb8b770c"
+    }
+  ]
+}
