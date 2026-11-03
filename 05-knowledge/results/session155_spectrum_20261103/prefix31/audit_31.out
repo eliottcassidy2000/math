@@ -1,0 +1,6 @@
+base 1729 Q^T identity; A,C mod31 (27, 5, 7, 22) (12, 15, 13, 6)
+31-kernel orbit 960 full set of nonzero vectors
+p 7 vectors [(5, 2), (4, 5)] det 3
+p 13 vectors [(6, 4), (6, 1)] det 8
+p 19 vectors [(5, 3), (7, 1)] det 3
+p 31 vectors [(0, 23), (21, 0)] det 13
