@@ -1,0 +1,7 @@
+sizes 1 1 checked
+sizes 1 2 checked
+sizes 2 2 checked
+sizes 2 3 checked
+sizes 3 3 checked
+sizes 1 4 checked
+PASS 6740 ear cases
