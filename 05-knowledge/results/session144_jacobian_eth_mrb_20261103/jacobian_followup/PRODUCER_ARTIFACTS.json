@@ -1,0 +1,73 @@
+{
+  "files": [
+    {
+      "bytes": 11331,
+      "file": "classification_scope_and_repairs.md",
+      "sha256": "3e86abfd5878fd02d562ca808cf2e29c3214581e15de9dace033f9455199f351"
+    },
+    {
+      "bytes": 6940,
+      "file": "universal_equivariant_boundary_corollary.md",
+      "sha256": "402a811a56da7aabcf695feb6dfac824c4a4d87ec6f9d2ec82109680c7a2f9bd"
+    },
+    {
+      "bytes": 1052,
+      "file": "verify_padded_boundary.py",
+      "sha256": "273b40c09df5b20f0d2785db582bd2a930d7baba839f8f458027e314784699b0"
+    },
+    {
+      "bytes": 1260,
+      "file": "padded_boundary.json",
+      "sha256": "a47858b650483c9ba0b7b63a13dcade56d87fa7505caf20a600860a0abebbc79"
+    },
+    {
+      "bytes": 1260,
+      "file": "padded_boundary.optimized.json",
+      "sha256": "a47858b650483c9ba0b7b63a13dcade56d87fa7505caf20a600860a0abebbc79"
+    },
+    {
+      "bytes": 2479,
+      "file": "equivariant_gauge_hostile.md",
+      "sha256": "446528f6282100ee3e3d2541a30e63215f94c90ec3254f6b055c40a9c180f80f"
+    },
+    {
+      "bytes": 1065,
+      "file": "verify_equivariant_gauge.py",
+      "sha256": "57d3acab6f717b707b7c8e75b735927a0dc066dda72321fc509dae7b61e9cc28"
+    },
+    {
+      "bytes": 1567,
+      "file": "equivariant_gauge.json",
+      "sha256": "676002ae8d1f3c95c59c3b53362add4145259480f31f5bf2edb3e4f607e00aa9"
+    },
+    {
+      "bytes": 1567,
+      "file": "equivariant_gauge.optimized.json",
+      "sha256": "676002ae8d1f3c95c59c3b53362add4145259480f31f5bf2edb3e4f607e00aa9"
+    },
+    {
+      "bytes": 863,
+      "file": "verify_coordinate_fibers.py",
+      "sha256": "89974313018de6a7f29b360f40c9667541d012cf7e2503601ba613010495e9e5"
+    },
+    {
+      "bytes": 990,
+      "file": "coordinate_fibers.json",
+      "sha256": "8e1bf057f8f17815bb129eac362488cd504a4ea93229c1afacb5d4da0453c8b8"
+    },
+    {
+      "bytes": 990,
+      "file": "coordinate_fibers.optimized.json",
+      "sha256": "8e1bf057f8f17815bb129eac362488cd504a4ea93229c1afacb5d4da0453c8b8"
+    },
+    {
+      "bytes": 4635,
+      "file": "THM-4727-replacement-guidance.md",
+      "sha256": "bba83901f1cf6f15df01686db735a411911de2f41e18cbac936f1946d5093daa"
+    }
+  ],
+  "independent_audit": "Universal theorem audit passed; root separately audited gauge and coordinate-fiber additions.",
+  "limits": "No full-map classification, primitive-new species, formal proof build, or general zero-fiber formula beyond the seed.",
+  "status": "READY TO FREEZE",
+  "verification": "All three exact companions passed normally and under -O, byte-identical outputs."
+}

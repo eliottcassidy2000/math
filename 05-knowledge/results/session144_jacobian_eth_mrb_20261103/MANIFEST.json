@@ -1,0 +1,309 @@
+{
+  "files": [
+    {
+      "bytes": 8118,
+      "path": "SYNTHESIS.md",
+      "sha256": "30a9fd7164e38da573da781e1f4ec9b218994e1b628ea83b671b55d778cb827f"
+    },
+    {
+      "bytes": 19162,
+      "path": "eth/ETH_AUDIT.md",
+      "sha256": "2dc961ab356d73554a2b335f6a7a27787284a313a74c991c7a3d83487b051a0b"
+    },
+    {
+      "bytes": 3839,
+      "path": "eth/INDEPENDENT_SOURCE_BYTES.json",
+      "sha256": "7b2ff6cda2b8a15fe28a3b4460b1e4b8ec4bc28eecbc5abfaacd3395e0a5da63"
+    },
+    {
+      "bytes": 11545,
+      "path": "eth/SOURCES.json",
+      "sha256": "acffb34385191be457be85bf376e53d74db2de98d906178ec46dc4efca79e022"
+    },
+    {
+      "bytes": 1302,
+      "path": "eth/verification.json",
+      "sha256": "5903dbc089cd90c675ec6599fbe8c376c1b1cf08ea5641667fcd85367f1f4885"
+    },
+    {
+      "bytes": 1302,
+      "path": "eth/verification.optimized.json",
+      "sha256": "5903dbc089cd90c675ec6599fbe8c376c1b1cf08ea5641667fcd85367f1f4885"
+    },
+    {
+      "bytes": 8168,
+      "path": "eth/verify_eth_interfaces.py",
+      "sha256": "d85bd0f52c107b8458ab063563c56578d7202563037fb85639433b96a68168a1"
+    },
+    {
+      "bytes": 2534,
+      "path": "jacobian_followup/PRODUCER_ARTIFACTS.json",
+      "sha256": "fc866d0fd90346b0bea0ab6616fcb72b575781939dd955504c6fb8cc4789b489"
+    },
+    {
+      "bytes": 4635,
+      "path": "jacobian_followup/THM-4727-replacement-guidance.md",
+      "sha256": "bba83901f1cf6f15df01686db735a411911de2f41e18cbac936f1946d5093daa"
+    },
+    {
+      "bytes": 11331,
+      "path": "jacobian_followup/classification_scope_and_repairs.md",
+      "sha256": "3e86abfd5878fd02d562ca808cf2e29c3214581e15de9dace033f9455199f351"
+    },
+    {
+      "bytes": 990,
+      "path": "jacobian_followup/coordinate_fibers.json",
+      "sha256": "8e1bf057f8f17815bb129eac362488cd504a4ea93229c1afacb5d4da0453c8b8"
+    },
+    {
+      "bytes": 990,
+      "path": "jacobian_followup/coordinate_fibers.optimized.json",
+      "sha256": "8e1bf057f8f17815bb129eac362488cd504a4ea93229c1afacb5d4da0453c8b8"
+    },
+    {
+      "bytes": 1567,
+      "path": "jacobian_followup/equivariant_gauge.json",
+      "sha256": "676002ae8d1f3c95c59c3b53362add4145259480f31f5bf2edb3e4f607e00aa9"
+    },
+    {
+      "bytes": 1567,
+      "path": "jacobian_followup/equivariant_gauge.optimized.json",
+      "sha256": "676002ae8d1f3c95c59c3b53362add4145259480f31f5bf2edb3e4f607e00aa9"
+    },
+    {
+      "bytes": 2479,
+      "path": "jacobian_followup/equivariant_gauge_hostile.md",
+      "sha256": "446528f6282100ee3e3d2541a30e63215f94c90ec3254f6b055c40a9c180f80f"
+    },
+    {
+      "bytes": 3846,
+      "path": "jacobian_followup/independent/QUARTIC_BOUNDARY_AUDIT.md",
+      "sha256": "5ae10085b2c3cb5c81147a9b66e38a095d70751cb91e46ff7c12c5143058e8bb"
+    },
+    {
+      "bytes": 2585,
+      "path": "jacobian_followup/independent/UNIVERSAL_COROLLARY_AUDIT.md",
+      "sha256": "b4bd64d9b4ce5e0268b9812d107d270c0468ac076c9e363fadbd26b02f922140"
+    },
+    {
+      "bytes": 907,
+      "path": "jacobian_followup/independent/quartic_checks.json",
+      "sha256": "ded92cf422af0f53cbce2a2f456677b98ff1a216f46fdb2e4fee499a113b0432"
+    },
+    {
+      "bytes": 907,
+      "path": "jacobian_followup/independent/quartic_checks.optimized.json",
+      "sha256": "ded92cf422af0f53cbce2a2f456677b98ff1a216f46fdb2e4fee499a113b0432"
+    },
+    {
+      "bytes": 3006,
+      "path": "jacobian_followup/independent/verify_quartic_boundary.py",
+      "sha256": "4d7fb0c7cba0ebc8367ba728a2adbe5a7655948b0da4671904166542f4b3ce95"
+    },
+    {
+      "bytes": 1260,
+      "path": "jacobian_followup/padded_boundary.json",
+      "sha256": "a47858b650483c9ba0b7b63a13dcade56d87fa7505caf20a600860a0abebbc79"
+    },
+    {
+      "bytes": 1260,
+      "path": "jacobian_followup/padded_boundary.optimized.json",
+      "sha256": "a47858b650483c9ba0b7b63a13dcade56d87fa7505caf20a600860a0abebbc79"
+    },
+    {
+      "bytes": 6940,
+      "path": "jacobian_followup/universal_equivariant_boundary_corollary.md",
+      "sha256": "402a811a56da7aabcf695feb6dfac824c4a4d87ec6f9d2ec82109680c7a2f9bd"
+    },
+    {
+      "bytes": 863,
+      "path": "jacobian_followup/verify_coordinate_fibers.py",
+      "sha256": "89974313018de6a7f29b360f40c9667541d012cf7e2503601ba613010495e9e5"
+    },
+    {
+      "bytes": 1065,
+      "path": "jacobian_followup/verify_equivariant_gauge.py",
+      "sha256": "57d3acab6f717b707b7c8e75b735927a0dc066dda72321fc509dae7b61e9cc28"
+    },
+    {
+      "bytes": 1052,
+      "path": "jacobian_followup/verify_padded_boundary.py",
+      "sha256": "273b40c09df5b20f0d2785db582bd2a930d7baba839f8f458027e314784699b0"
+    },
+    {
+      "bytes": 3973,
+      "path": "mrb/MANIFEST.json",
+      "sha256": "0aafe2756ac339a2c5ad81ab79d134cad0c43f6224087f2989c15bee977b8c0c"
+    },
+    {
+      "bytes": 3123,
+      "path": "mrb/README.md",
+      "sha256": "2a65ec9d9e9a77736a80ff8b44ca76033e799dbab7d0d048750ffbabf677061c"
+    },
+    {
+      "bytes": 17804,
+      "path": "mrb/RESEARCH.md",
+      "sha256": "cb574aca3217cfd0ea9ff65f8e5209302241167a28d1b0f8f67af7a8d7d01c59"
+    },
+    {
+      "bytes": 2642,
+      "path": "mrb/SOURCES.json",
+      "sha256": "4b7fdf2ddba66b876703827ee7a5cac9ab395f9d3dc8dfb020ea783837288706"
+    },
+    {
+      "bytes": 11610,
+      "path": "mrb/audit/README.md",
+      "sha256": "c73bff11ac6236ce31485243e92cfbcb4e169db07b1b2a2cb3a8437d17e8ad70"
+    },
+    {
+      "bytes": 1318,
+      "path": "mrb/audit/compare_receipts.py",
+      "sha256": "99d6f79f1eedfe4c3321668c512eb4f0d2b77f61fedaee72b6f51289e226ab40"
+    },
+    {
+      "bytes": 8006,
+      "path": "mrb/audit/exact_precision_audit.py",
+      "sha256": "590bf12e8c3643551b81ea9f1e69c5f9c3aa3312b4c764eed6c72218867f6391"
+    },
+    {
+      "bytes": 3120,
+      "path": "mrb/audit/exact_precision_results.json",
+      "sha256": "d1dc8848deb0531dc59b7055906fdae7e8bab186c883e0afc4be765bcb9e633d"
+    },
+    {
+      "bytes": 3119,
+      "path": "mrb/audit/exact_precision_results_optimized.json",
+      "sha256": "7729167a3b3d6636c2fa9b6eb07b25107524163aef98757c6ad1010410079a33"
+    },
+    {
+      "bytes": 272,
+      "path": "mrb/audit/hostile_results.json",
+      "sha256": "7e7527c130d38f76fd6ea6396a9be2c698e97dc9ba2be93aded0d3ae6266a9ad"
+    },
+    {
+      "bytes": 272,
+      "path": "mrb/audit/hostile_results_optimized.json",
+      "sha256": "7e7527c130d38f76fd6ea6396a9be2c698e97dc9ba2be93aded0d3ae6266a9ad"
+    },
+    {
+      "bytes": 293,
+      "path": "mrb/audit/normalized_receipt.json",
+      "sha256": "d9524c0218c71a81df75a3dff09122fadbee9332affb813dd48f8e5d31a78409"
+    },
+    {
+      "bytes": 1114,
+      "path": "mrb/certificate_comparison.json",
+      "sha256": "d01d93a224a219ab87d45ac76a99c164858196366827ddab7eb7c6f412a10514"
+    },
+    {
+      "bytes": 114,
+      "path": "mrb/certificate_comparison.optimized.out",
+      "sha256": "0d46225a3427058aaaec96c98ea628143df8b7ab06244e69fcb4c0cb52251c37"
+    },
+    {
+      "bytes": 114,
+      "path": "mrb/certificate_comparison.out",
+      "sha256": "0d46225a3427058aaaec96c98ea628143df8b7ab06244e69fcb4c0cb52251c37"
+    },
+    {
+      "bytes": 385,
+      "path": "mrb/check.optimized.out",
+      "sha256": "fc4ba6374d51dbbf4e892f2296f9c3880376d6d5b7fc206d649c818f14a1cf41"
+    },
+    {
+      "bytes": 385,
+      "path": "mrb/check.out",
+      "sha256": "fc4ba6374d51dbbf4e892f2296f9c3880376d6d5b7fc206d649c818f14a1cf41"
+    },
+    {
+      "bytes": 6404,
+      "path": "mrb/check.py",
+      "sha256": "a06e69e45dc2f374f73ffbcf04550d2290b8e196d5b3d2f7b7781fd2fe6e1ae7"
+    },
+    {
+      "bytes": 1394,
+      "path": "mrb/compare_certificates.py",
+      "sha256": "9822b852aa556e42e064554d297f635a0268de19962fe70edfc9f5def9644e3d"
+    },
+    {
+      "bytes": 4160,
+      "path": "mrb/inherited/certify_mrb.py",
+      "sha256": "0658417c503fdb8cb206db2a75d890c14d482dcda35e532a0c0d3de9b28bf210"
+    },
+    {
+      "bytes": 6248,
+      "path": "mrb/inherited/certify_mrb.replay.out",
+      "sha256": "e0fed3a2f54b5f5c48ed6718087883efe65acab542a5ec6683bb72a64181126b"
+    },
+    {
+      "bytes": 7100,
+      "path": "mrb/inherited/independent_checks.py",
+      "sha256": "e377df81341056d92ad19f78da7c4f23f88af0d9c6300d93d3afb288cc863624"
+    },
+    {
+      "bytes": 274,
+      "path": "mrb/rejections.optimized.out",
+      "sha256": "87231dab552c761b2e6aec3d741513563212617877c2bffb0abe69ff9aad224e"
+    },
+    {
+      "bytes": 274,
+      "path": "mrb/rejections.out",
+      "sha256": "87231dab552c761b2e6aec3d741513563212617877c2bffb0abe69ff9aad224e"
+    },
+    {
+      "bytes": 9308,
+      "path": "mrb/results.json",
+      "sha256": "9cbb74913c8532c397ad24efe409a4b0b277172bff4e512e7def7110ccdb526b"
+    },
+    {
+      "bytes": 9308,
+      "path": "mrb/results.normal.json",
+      "sha256": "9cbb74913c8532c397ad24efe409a4b0b277172bff4e512e7def7110ccdb526b"
+    },
+    {
+      "bytes": 843,
+      "path": "mrb/test_rejections.py",
+      "sha256": "e9eca7306b250009e016b2b6e477bf1468f1d455153b199816f503f84cd61d51"
+    },
+    {
+      "bytes": 3527,
+      "path": "mrb_independent/MRB_INDEPENDENT_AUDIT.md",
+      "sha256": "57a9e64c186784858d170db65f2c3f7481224a05c548a8069eaf5af58052e959"
+    },
+    {
+      "bytes": 987,
+      "path": "mrb_independent/check_mrb_boundary.py",
+      "sha256": "4dd80f59b0e216cce5828a6643dea5793840c12f3acf5406760aa35c653b6392"
+    },
+    {
+      "bytes": 936,
+      "path": "mrb_independent/mrb_boundary.normal.json",
+      "sha256": "257340b2898cb3906d423d88cd840ebed3fe25f3189b2f73bb269357d97962d7"
+    },
+    {
+      "bytes": 936,
+      "path": "mrb_independent/mrb_boundary.optimized.json",
+      "sha256": "257340b2898cb3906d423d88cd840ebed3fe25f3189b2f73bb269357d97962d7"
+    },
+    {
+      "bytes": 2982,
+      "path": "mrb_independent/precision.normalized.json",
+      "sha256": "1afc6db43ab6a7e81ab1602c0a343b55d35acf26193da878b8d2dc02efdac1d8"
+    },
+    {
+      "bytes": 4107,
+      "path": "verify_checkpoint2.py",
+      "sha256": "4ba9a2a7c00a2db63b1dbd26b6ac98a078ddca1a6c41eba798039f8afea68221"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "README.md",
+    "VERIFICATION.md",
+    "../../../00-navigation/S144.md",
+    "../../../00-navigation/S111-plus.md"
+  ],
+  "replay": [],
+  "schema": 1,
+  "scope": "Frozen checkpoint-2 additive Jacobian proofs/audits, ETH source and interface audit, MRB proofs/receipts and synthesis; no full-map classification or new large formal build."
+}

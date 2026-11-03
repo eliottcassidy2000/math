@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "hostile_controls": [
+    "nonpositive_precision",
+    "negative_atanh_argument",
+    "large_atanh_argument",
+    "negative_exp_argument",
+    "large_exp_argument",
+    "corrupted_weight",
+    "corrupted_rounding",
+    "undersized_precision"
+  ]
+}

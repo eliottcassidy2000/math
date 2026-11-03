@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "comparison": "Exact rational comparisons against parsed decimal endpoints",
+  "rows": [
+    {
+      "mode": "normal",
+      "p": 1,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "normal",
+      "p": 8,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "normal",
+      "p": 16,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "normal",
+      "p": 32,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "optimized",
+      "p": 1,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "optimized",
+      "p": 8,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "optimized",
+      "p": 16,
+      "inherited_interval_strictly_contained": true
+    },
+    {
+      "mode": "optimized",
+      "p": 32,
+      "inherited_interval_strictly_contained": true
+    }
+  ],
+  "scope": "Consistency check of two elementary evaluation routes sharing the proved Euler remainder mechanism; not independence of the analytic theorem."
+}

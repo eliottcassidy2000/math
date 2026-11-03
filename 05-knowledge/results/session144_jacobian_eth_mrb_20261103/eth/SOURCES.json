@@ -1,0 +1,168 @@
+{
+  "retrieved_at_utc": "2026-11-03T01:54Z",
+  "upstream_repository": "openai/math",
+  "upstream_main_commit_observed": "4eaee87548250b2682affda7d05d947c05554bae",
+  "repo_audited_commit": "5e1cedf",
+  "primary_sources": [
+    {
+      "upstream_path": "preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex",
+      "retrieved_local_name": "main_full_version.tex",
+      "bytes": 214857,
+      "sha256": "b2e6159d4fb7ea6aa4f89ac15605152b0333a5f7cafe93323492bc20a5c066aa",
+      "git_blob_sha1": "f7af85e623b58e0ca9f4b9416916d442defa963a",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex",
+      "initial_local_materialization": {
+        "bytes": 214858,
+        "sha256": "9cbb021b0ec54f151d4027cff1765bc714b16e89caa72e19fd8bc9d228c8a537",
+        "git_blob_sha1": "f5b156d5644fbad2b9eb2f73cf5de6d6708a6a69",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex"
+    },
+    {
+      "upstream_path": "preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/quantitative-contraction.tex",
+      "retrieved_local_name": "quantitative-contraction.tex",
+      "bytes": 27544,
+      "sha256": "671642d7b53154d92344e8c4be0240f18929632ebcfdf73b07c3e9939b873860",
+      "git_blob_sha1": "51ba54efc29f51bbc0426f848003030da484f354",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/quantitative-contraction.tex",
+      "initial_local_materialization": {
+        "bytes": 27545,
+        "sha256": "10914f7bc5895eb94048adecded34229865b63e7fe4914abd4d5482c59e6d952",
+        "git_blob_sha1": "6dd3655e088ed77af279c87a242019c632cce623",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/quantitative-contraction.tex"
+    },
+    {
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "retrieved_local_name": "Final.lean",
+      "bytes": 11701,
+      "sha256": "040360a8465957622d934e5f1bb4f2cce8dab950e78f52033fbf70da493184f5",
+      "git_blob_sha1": "a69635a2492e06a26f2e33d4251edd1e21ba3332",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "initial_local_materialization": {
+        "bytes": 11702,
+        "sha256": "458ca0c8612ab8579b8bc949eec2fb80cc81a5290cc4046c38168c44bcfbde59",
+        "git_blob_sha1": "e52b649ad910e8dc1dd9ebfc95c4fdbaafdedc87",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean"
+    },
+    {
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/Encoding.lean",
+      "retrieved_local_name": "Encoding.lean",
+      "bytes": 11285,
+      "sha256": "6875b913ebc1583e30f3a4f87dd547a94c7f73a279b6963110c613467c4efe6c",
+      "git_blob_sha1": "684229598d06d381ae27e4ca70421a46786deeca",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/Encoding.lean",
+      "initial_local_materialization": {
+        "bytes": 11286,
+        "sha256": "211e95cac9d231a9edb63c1a2b0a35954df5b7063d23e1cfd230f8bbd27acd0c",
+        "git_blob_sha1": "4f06e54771f638ebb262d884b8fdd018bce36445",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/Encoding.lean"
+    },
+    {
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLog/StatementCanonical.lean",
+      "retrieved_local_name": "StatementCanonical.lean",
+      "bytes": 3412,
+      "sha256": "976a5f725dabf195e2f5c856254dc12f745d07c0b6570378d9655194d08c311d",
+      "git_blob_sha1": "9fe5d4f524a679d7885f5d5dd351063f8302fd83",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLog/StatementCanonical.lean",
+      "initial_local_materialization": {
+        "bytes": 3413,
+        "sha256": "a2ffaf5bc069d3799518075f77aaa246e7938bc5c2324246d4ab8dc87dbf14e9",
+        "git_blob_sha1": "26f1367ab9f819cadcaf0f1794c5f385b36d5951",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLog/StatementCanonical.lean"
+    },
+    {
+      "upstream_path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Statement.lean",
+      "retrieved_local_name": "SpaceStatement.lean",
+      "bytes": 1584,
+      "sha256": "13b195bd1e472dd0e1fc57902d0bcec7c55e4a8ddf751cb7380b984b79368ee8",
+      "git_blob_sha1": "13872427d1192f79283b667aa616a1cc8e8d1f85",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Statement.lean",
+      "initial_local_materialization": {
+        "bytes": 1585,
+        "sha256": "4c74ae5b3b0335f3391d11a18f746c1cf2dbe951c05806a939f324e9aaf7ea38",
+        "git_blob_sha1": "7e31b454fa4d67a13a115c8b1f5afbb390d8778a",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Statement.lean"
+    },
+    {
+      "upstream_path": "lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "retrieved_local_name": "Challenge.lean",
+      "bytes": 7833,
+      "sha256": "4183b2057cff350d66848215ff7167196dfc20e1891b598fdddea59077a76685",
+      "git_blob_sha1": "a8d5ff3a3e80323675b1f2d1ea611560b783e9ca",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "initial_local_materialization": {
+        "bytes": 7834,
+        "sha256": "7a0cedc4a9ebcfb069814b94111e3c57d12b7e37342440634b01ee55c0381e24",
+        "git_blob_sha1": "7bb297466a7365b3e2b793287205c65dd36efcce",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/ComparatorChallenges/SubexponentialSAT.lean"
+    },
+    {
+      "upstream_path": "lean/docs/378.md",
+      "retrieved_local_name": "scope378.md",
+      "bytes": 1090,
+      "sha256": "a2f7b390d6308997350b903be02c40a1227ebd2b9376982da528574500531f79",
+      "git_blob_sha1": "223bbe187394bffca8a2c7ba1656538bfba26e3b",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/378.md",
+      "initial_local_materialization": {
+        "bytes": 1091,
+        "sha256": "cc7ecd5d2aa6a839f4b294da5c9248f3773b84317be324d789878b9b8370eff7",
+        "git_blob_sha1": "3e4b340d456b44e1263ca0bf9f92ad5f18da8ba1",
+        "difference_from_upstream": "One extra terminal LF introduced by the local patch-writing wrapper."
+      },
+      "independently_verified_raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/378.md"
+    }
+  ],
+  "independent_primary_reports": [
+    {
+      "url": "https://ethdiscussion.blog/2026/10/26/eth-refutation-examination-and-discussion/",
+      "status": "Organizers explicitly distinguish examination from certification."
+    },
+    {
+      "url": "https://ethdiscussion.blog/2026/10/30/lean-replications/",
+      "status": "Public participant replication reports, not a new run by this session."
+    },
+    {
+      "url": "https://carlostoledo.co/eth/",
+      "status": "Independent author reports Comparator, Lean and nanoda acceptance, with explicit semantic model caveats."
+    },
+    {
+      "url": "https://www.cs.cmu.edu/~odonnell/some_eth_false_exposition.pdf",
+      "status": "October 30 author exposition; used only for the exact local replacement-matrix identity."
+    }
+  ],
+  "publication_note": "Keep this manifest; do not copy sources/ into the repository. Source text downloaded only for targeted audit.",
+  "materialization_provenance": {
+    "retrieval_route": "GitHub connector fetch: structuredContent.content. Text was materialized locally with apply_patch. The connector itself was not found to add a newline.",
+    "initial_writer_error": "The wrapper split already newline-terminated content on LF and emitted a patch addition for the final empty element. apply_patch thereby wrote one extra terminal LF beyond the fetched text.",
+    "initial_manifest_status": "The first local SOURCES.json was generated from these extra-LF materializations. Those hashes described temporary local artifacts, not the upstream Git blobs. No upstream source revision occurred.",
+    "correction_utc": "2026-11-03T01:54:41Z",
+    "correction_operation": "Removed exactly one final LF byte from each of the eight locally materialized sources; no other bytes changed. Current primary_sources bytes/sha256/git_blob_sha1 refer to the corrected content.",
+    "initial_hash_record_method": "The initial bytes and hashes below were reconstructed exactly as corrected bytes plus one LF. This reconstructs the known writer output and matches the initially reported hashes; it is not a second upstream retrieval.",
+    "checks_already_completed": "Corrected main_full_version.tex and quantitative-contraction.tex Git blob SHA-1 values match the GitHub directory metadata read during retrieval. Parent independently downloaded the pinned Comparator challenge and confirmed 7833 bytes and SHA-256 4183b2057cff350d66848215ff7167196dfc20e1891b598fdddea59077a76685.",
+    "independent_raw_byte_check": {
+      "status": "PASS",
+      "source_count": 8,
+      "checked_utc": "2026-11-03T02:03Z",
+      "method": "Independent raw.githubusercontent.com retrieval, byte-for-byte comparison",
+      "checks": "Every canonical local file matches its pinned raw URL byte for byte, and matches recorded byte count, SHA-256 and Git blob SHA-1.",
+      "receipt_name": "eth_source_bytes.json",
+      "receipt_sha256": "7b2ff6cda2b8a15fe28a3b4460b1e4b8ec4bc28eecbc5abfaacd3395e0a5da63",
+      "verification_script_name": "verify_eth_source_bytes.py",
+      "verification_script_sha256": "6c35c1f5da7b541b587eb770b7a31f7241e77b0ec88fcc79f64d7281e47ed846",
+      "performed_by": "Independent parent audit in session 144."
+    }
+  }
+}

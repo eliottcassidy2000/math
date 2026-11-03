@@ -1,0 +1,55 @@
+{
+  "source_snapshot": "5e1cedf452c7cc1ec447205939a9d6cf4c0e8743",
+  "retrieved_primary_sources": [
+    {
+      "title": "Richard E. Crandall, Unified algorithms for polylogarithm, L-series, and zeta variants (2012), section 7.5, pp.28-29",
+      "url": "https://www.marvinrayburns.com/UniversalTOC25.pdf",
+      "status": "RETRIEVED_PRIMARY",
+      "used_for": "Prior MRB eta-derivative representation and existing high-precision computation; not novelty or a modular defect identity."
+    },
+    {
+      "title": "NIST DLMF 25.12.12",
+      "url": "https://dlmf.nist.gov/25.12#E12",
+      "status": "RETRIEVED_REFERENCE",
+      "used_for": "Independent polylogarithm pole-cancellation check of Abel singularity; direct proof does not depend on the polylog formula."
+    },
+    {
+      "title": "NIST DLMF 25.2.4-5",
+      "url": "https://dlmf.nist.gov/25.2#E4",
+      "status": "RETRIEVED_REFERENCE",
+      "used_for": "Stieltjes constant sign convention."
+    },
+    {
+      "title": "NIST DLMF 5.7.3",
+      "url": "https://dlmf.nist.gov/5.7#E3",
+      "status": "RETRIEVED_REFERENCE",
+      "used_for": "Gamma expansion for the two logarithmic exponential moments."
+    }
+  ],
+  "inherited_paths": [
+    "05-knowledge/results/session31_mirror_mrb_20261022/mrb/MRB_CONTOUR_AUDIT.md",
+    "05-knowledge/results/session31_mirror_mrb_20261022/ENTIRE_MRB_DEFORMATION.md",
+    "05-knowledge/results/session31_mirror_mrb_20261022/analytic-audit/AUDIT.md",
+    "05-knowledge/results/session31_mirror_mrb_20261022/GREEDY_INVERSE_CLOCKS.md",
+    "05-knowledge/results/session52_saturation_residues_metagraph_20261024/mrb-supersingular/RESEARCH.md"
+  ],
+  "new_to_recovered_lineage": [
+    "Uniform all-algebraic-order right-half-plane invisible perturbation using smooth compactly supported Laplace density.",
+    "Complete all-modulus periodic-filter and Fourier-resonance classification.",
+    "Cutoff/Abel finite-part conversion with explicit lower-order and constant counterterms.",
+    "Explicit fixed-C unary-precision exact-rational evaluator and conditioning contract."
+  ],
+  "novelty_limit": "Elementary independent derivations and synthesis relative to recovered repository lineage; no literature-wide priority claim.",
+  "script_inputs": {
+    "certify_mrb.py": {
+      "sha256": "0658417c503fdb8cb206db2a75d890c14d482dcda35e532a0c0d3de9b28bf210",
+      "replayed": true,
+      "original_assertions_survive_python_O": false
+    },
+    "independent_checks.py": {
+      "sha256": "e377df81341056d92ad19f78da7c4f23f88af0d9c6300d93d3afb288cc863624",
+      "replayed": false,
+      "original_assertions_survive_python_O": false
+    }
+  }
+}

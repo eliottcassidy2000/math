@@ -1,0 +1,47 @@
+{
+  "Keller_interpolation_interface": {
+    "full_grid": "{0,1,2}^2",
+    "full_grid_rank": 9,
+    "hostile_polynomial": "x(x-1)",
+    "per_variable_degree_bound": 2,
+    "undersized_grid": "{0,1}^2",
+    "undersized_grid_rank": 4,
+    "variables": 2
+  },
+  "conditional_lower_bound_hostile": [
+    {
+      "ETH": false,
+      "SAT_algorithm": true,
+      "separate_target_lower_bound": true
+    }
+  ],
+  "cube_replacement": {
+    "Hermite_samples": 9,
+    "constant_after_dropping_correction": "81",
+    "constant_with_correction": "1",
+    "correction_rank": 2,
+    "cube_dimension": 3,
+    "independent_permutation_evaluations": 5,
+    "insufficient_jet_hostile_constant_shift": "72",
+    "matrix_order": 8,
+    "permanent_coefficients": [
+      "1",
+      "0",
+      "49/9",
+      "8/3",
+      "2401/216",
+      "196/27",
+      "138385/11664",
+      "2401/486",
+      "5764801/1679616"
+    ]
+  },
+  "encoding": {
+    "exact_formula": "L=n+2+4m+sum_{literal codes c}(4c+8)",
+    "formulas_checked": 1434,
+    "source_upper_bound": "L<=n+2+[4+(8n+8)k]m",
+    "universe": "n=0..3, k=0..3, every distinct-clause CNF with m<=2"
+  },
+  "not_established": "No replay of the complete ETH algorithm, Lean dependency build, or asymptotic runtime proof.",
+  "status": "FINITE-EXACT INTERFACE CHECKS PASSED"
+}

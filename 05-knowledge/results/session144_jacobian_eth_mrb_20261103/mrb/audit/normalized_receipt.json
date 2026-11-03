@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "normal_and_optimized_mathematical_receipts_equal": true,
+  "hostile_receipts_equal": true,
+  "precision_inputs": [
+    1,
+    8,
+    16,
+    32
+  ],
+  "hostile_test_count": 8,
+  "normalized_sha256": "45e5fa67f2ac36dc9385e89e91577ee755262fb241629adcb15bc5c1d40de444"
+}

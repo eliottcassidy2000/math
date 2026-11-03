@@ -1,0 +1,5 @@
+PASS: 2046 exact binary periodic masks and 40 unit masks.
+PASS: falling-factorial identity and finite-prefix zeros (exact).
+PASS: six strictly nonzero shift intervals with analytic tails and independent scalar-integral checks.
+PASS: finite-part sign controls and finite-scale numerical illustrations.
+All pass/fail predicates use explicit exceptions and remain active under python -O.

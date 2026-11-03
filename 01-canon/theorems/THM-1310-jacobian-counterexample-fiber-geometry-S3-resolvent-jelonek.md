@@ -1,5 +1,7 @@
 # THM-1310 — The fiber geometry of the Jacobian counterexample: conic pair, depressed cubic, S₃ resolvent −L, and the Jelonek quartic
 
+> **S144 correction (2026-11-03).** The conic pair in (1) loses a condition at u=0; restore the exact E1,E2 equations below. The trace law in (2) applies off L=0 and sums actual source points, retaining repeated x coordinates. The deformation conclusion in (9) is local, not valid throughout an arbitrary parameter family. The complete corrected complex-fiber classification is 3 points for L≠0, 1 for L=0,Q≠0, and 0 for L=Q=0. [Independent proof and seven hostile controls](../../05-knowledge/results/session144_jacobian_eth_mrb_20261103/jacobian/independent/INDEPENDENT_AUDIT.md). Other legacy claims are not blanket re-audited by this correction.
+
 **Status:** VERIFIED-EXACT (symbolic derivation, exact rational arithmetic, and a
 0/8316 pointwise cross-validation; every identity is a finite polynomial identity,
 Lean-ready). **Author:** kind-pasteur-2026-07-19-S128c98 (HYP-8090). Builds on
@@ -13,10 +15,10 @@ F = (u³z + y²u(4+3xy), y + 3xu²z + 3xy²(4+3xy), 2x − 3x²y − x³z), u = 
 owner's counterexample to JC₃ (det J ≡ −2, verified HYP-8070). Target coordinates
 (a, b, g). Write s = xy.
 
-## Statements (all proved by explicit symbolic computation, frozen in results)
+## Statements (historical certificates with S144 scope repairs)
 
 **(1) The conic pair.** F is affine in z; eliminating z and clearing the spurious
-factors u^k, the fiber of F over (a,b,g) is, for x ≠ 0, the solution set of
+factors u^k, the fiber of F over (a,b,g) is, on the chart x≠0 and u≠0, the solution set of
 
     C1:  3a·x² = u·(bx − s)                    [u = 1+s]
     C2:  a·x³ + g·u³ = x·u·(u+1)
@@ -24,13 +26,15 @@ factors u^k, the fiber of F over (a,b,g) is, for x ≠ 0, the solution set of
 with y = s/x and z reconstructed linearly. The plane {x=0} maps to
 (z + 4y², y, 0), covering the g = 0 plane once.
 
+**S144 exact wall sidecar:** for all x≠0, including u=0, use E1=a x³+g u³−x u(u+1)=0 and E2=b x²−x(2+4u)+3g u²=0, then y=(u−1)/x and z=(x(5−3u)−g)/x³. The identity uE2−3E1=−xC1 explains the lost condition. At u=0 one must also require a=0 and bx=2. The target (0,0,0), x=1,u=0 satisfies the conic pair but reconstructs (1,−1,5), whose image is (0,2,0).
+
 **(2) The fiber cubic and the TRACE LAW.** Res_s(C1, C2) = a·x³·N(x) with
 
     N(x) = L·x³ + (4 − 3bg)·x − 2g,
     L(a,b,g) = 27a²g² − 18abg + 16a + b³g − b²   (irreducible quartic).
 
-The x²-coefficient of N vanishes IDENTICALLY: **the three preimages of every
-target satisfy x₁ + x₂ + x₃ = 0** — an exact conservation law of the
+The x²-coefficient of N vanishes IDENTICALLY: **the three actual preimages of each
+complex target off L=0 satisfy x₁ + x₂ + x₃ = 0**, counting repeated x coordinates of distinct source points separately — an exact conservation law of the
 counterexample. (At the collision target (−1/4, 0, 0): N = −4x(x−1)(x+1), roots
 {0, ±1}, sum 0.)
 
@@ -88,15 +92,14 @@ wt(x,y,z) = (1,−1,−2), wt(F) = (−2,−1,1). For the general template weigh
 wt = (1,−1,1−k), the middle component has weight −(k−2), which is a coordinate
 weight only for k = 3 ⟹ for k ≠ 3 the linear part at the origin is singular and
 NO Keller map of that equivariance class exists (numeric check: det J(0) = 0 on
-random (1,−1,−3) instances). **k = 3 is the unique ℂ*-equivariant degree.**
+random (1,−1,−3) instances). **k=3 is the unique matched-weight case of this particular template, not the unique degree of equivariant Keller counterexamples.**
 
 **(9) The iteration ladder — infinitely many inequivalent counterexamples.**
 Field degree is invariant under composition with automorphisms on either side;
 deg(F^{∘m}) = 3^m ⟹ **{F^{∘m}} are pairwise Aut×Aut-INEQUIVALENT explicit
 counterexamples** (all Keller, det (−2)^m; non-injectivity inherited). Verified:
 F∘F attains fiber size 9 mod 11. Non-injectivity is also OPEN in the Keller
-space (implicit function theorem at a collision pair, J invertible), so every
-Keller deformation of a counterexample is a counterexample.
+space (implicit function theorem at a collision pair, J invertible), so sufficiently small deformations within a fixed finite-dimensional Keller family preserve a collision. The global conclusion for every parameter is false: F_h(X)=h^(-1)F(hX) extends polynomially to h=0 with constant determinant −2 and invertible linear endpoint F_0(x,y,z)=(z,y,2x).
 
 ## Files
 - `04-computation/jacobian_fiber_geometry_kps_S128c98.py` + `.out` (parts 1–6)

@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "commit": "4eaee87548250b2682affda7d05d947c05554bae",
+  "source": "Independent raw.githubusercontent.com retrieval, byte-for-byte comparison",
+  "rows": [
+    {
+      "path": "preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/main_full_version.tex",
+      "bytes": 214857,
+      "sha256": "b2e6159d4fb7ea6aa4f89ac15605152b0333a5f7cafe93323492bc20a5c066aa",
+      "git_blob": "f7af85e623b58e0ca9f4b9416916d442defa963a",
+      "status": "MATCH"
+    },
+    {
+      "path": "preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/quantitative-contraction.tex",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/build/quantitative-contraction.tex",
+      "bytes": 27544,
+      "sha256": "671642d7b53154d92344e8c4be0240f18929632ebcfdf73b07c3e9939b873860",
+      "git_blob": "51ba54efc29f51bbc0426f848003030da484f354",
+      "status": "MATCH"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Final.lean",
+      "bytes": 11701,
+      "sha256": "040360a8465957622d934e5f1bb4f2cce8dab950e78f52033fbf70da493184f5",
+      "git_blob": "a69635a2492e06a26f2e33d4251edd1e21ba3332",
+      "status": "MATCH"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/Encoding.lean",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/Encoding.lean",
+      "bytes": 11285,
+      "sha256": "6875b913ebc1583e30f3a4f87dd547a94c7f73a279b6963110c613467c4efe6c",
+      "git_blob": "684229598d06d381ae27e4ca70421a46786deeca",
+      "status": "MATCH"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLog/StatementCanonical.lean",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLog/StatementCanonical.lean",
+      "bytes": 3412,
+      "sha256": "976a5f725dabf195e2f5c856254dc12f745d07c0b6570378d9655194d08c311d",
+      "git_blob": "9fe5d4f524a679d7885f5d5dd351063f8302fd83",
+      "status": "MATCH"
+    },
+    {
+      "path": "lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Statement.lean",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/OAI/Algorithms/SubexponentialSAT/SqrtLogSpace/Statement.lean",
+      "bytes": 1584,
+      "sha256": "13b195bd1e472dd0e1fc57902d0bcec7c55e4a8ddf751cb7380b984b79368ee8",
+      "git_blob": "13872427d1192f79283b667aa616a1cc8e8d1f85",
+      "status": "MATCH"
+    },
+    {
+      "path": "lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/ComparatorChallenges/SubexponentialSAT.lean",
+      "bytes": 7833,
+      "sha256": "4183b2057cff350d66848215ff7167196dfc20e1891b598fdddea59077a76685",
+      "git_blob": "a8d5ff3a3e80323675b1f2d1ea611560b783e9ca",
+      "status": "MATCH"
+    },
+    {
+      "path": "lean/docs/378.md",
+      "raw_url": "https://raw.githubusercontent.com/openai/math/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/378.md",
+      "bytes": 1090,
+      "sha256": "a2f7b390d6308997350b903be02c40a1227ebd2b9376982da528574500531f79",
+      "git_blob": "223bbe187394bffca8a2c7ba1656538bfba26e3b",
+      "status": "MATCH"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 ---
 id: THM-1305
-title: The equivariant anatomy of the Jacobian counterexample — the six-function normal form (zA+y^kB, yC+x^{k−1}zD, x(E₀−E₁s)) is fully general for weights (1,−1,−k); the s-graded determinant law (c₂, c₁, c₀ derived and verified); c₂ = 0 forces A = v^{k+1}, D = δv² at EVERY k (the cube of u is theorem, not choice); every rational in the owner's expression is DERIVED (Φ = tC+E₀D = 4t+6 linear by det-cancellation, root t* = −3/2; Ψ = E₀A+t²B = (1+t)(2+t), Ψ(t*) = −1/4; E₀(t*) = 13/2; unit-crossing −1/2); and the counterexample is INFINITESIMALLY RIGID modulo equivariant automorphisms (moduli tangent 0; each row unique up to scalar given the other two).
+title: The equivariant anatomy of the Jacobian counterexample — the six-function z-affine chart (zA+y^kB, yC+x^{k−1}zD, x(E₀−E₁s)) is a restricted chart for weights (1,−1,−k), with the full bivariate form repaired in S144; the s-graded determinant law (c₂, c₁, c₀ derived and verified); for nonzero A,D, c₂ = 0 forces A = aV^((k+1)/g), D = dV^(2/g), g = gcd(k+1,2), as corrected in S144; every rational in the owner's expression is DERIVED (Φ = tC+E₀D = 4t+6 linear by det-cancellation, root t* = −3/2; Ψ = E₀A+t²B = (1+t)(2+t), Ψ(t*) = −1/4; E₀(t*) = 13/2; unit-crossing −1/2); and the counterexample is INFINITESIMALLY RIGID modulo equivariant automorphisms (moduli tangent 0; each row unique up to scalar given the other two).
 status: >
-  PROVED/VERIFIED-EXACT — the normal form (weight-monomial classification, three
-  lines); the decode identities (I)–(VI) (exact script); the s-grading formulas
+  PROVED/VERIFIED-EXACT IN STATED SCOPES; S144 CORRECTED — the full bivariate normal form
+  replaces the older restricted-chart generality claim; the decode identities (I)–(VI) (exact script); the s-grading formulas
   for det J (hand-derived, engine-verified at k=2: c₂ = 0, c₁ = 0, c₀ = −2);
-  the universal relation c₂ = −2A′D + (k+1)AD′ (E₁ = const), hence A = v^{k+1},
-  D = δv²; the rigidity computations (nullity 9 = orbit-tangent 9 within the
+  the restricted-chart relation c₂ = −2A′D + (k+1)AD′ (E₁ = const), with its
+  nonzero-solution powers corrected to A=aV^((k+1)/g), D=dV^(2/g), g=gcd(k+1,2); the rigidity computations (nullity 9 = orbit-tangent 9 within the
   22-parameter chart; per-row solution spaces are exactly the scalar lines
   through the witness). EVIDENCE (numeric, labeled) — the k=3 rung: the reduced
   2-parameter slice is EXACTLY inconsistent ((e₁+1)² = 0 forced, then
@@ -30,21 +30,23 @@ scripts:
 
 # THM-1305 — anatomy, decode, and rigidity of the equivariant Keller counterexample
 
-## 1. The normal form (PROVED, fully general)
+> **S144 correction (2026-11-03).** The earlier univariate A,D normal form omits equivariant monomials such as x^k z^2. The full unique form has A,D,E bivariate in (t,s) and B,C univariate in t. The old determinant and tangent calculations apply only inside their z-affine, degree-capped charts. The c₂ power law also needs gcd(k+1,2) and scalar units; k=3,A=t²,D=t is the minimal hostile. These repairs do not re-audit every legacy sentence or turn finite tangent rigidity into global classification. [Proof and scope atlas](../../05-knowledge/results/session144_jacobian_eth_mrb_20261103/jacobian_followup/classification_scope_and_repairs.md).
+
+## 1. The full normal form (S144 corrected) and the restricted chart
 
 For the ℂ*-action with weights w(x,y,z) = (1, −1, −k), k ≥ 2, the invariant
 ring is ℚ[t, s], t = xy, s = x^k z, and EVERY equivariant polynomial map with
 component weights (−k, −1, +1) is exactly
 
-  F₁ = z·A(t) + y^k·B(t),  F₂ = y·C(t) + x^{k−1}z·D(t),  F₃ = x·E(t, s)
+  F₁ = z·A(t,s) + y^k·B(t),  F₂ = y·C(t) + x^{k−1}z·D(t,s),  F₃ = x·E(t,s)
 
-(the weight-monomial classification is three lines). The owner's map is the
+(A,D,E are bivariate; B,C are univariate, uniquely by splitting monomials according to whether their z exponent is zero). The calculations below restrict A,D to be univariate. The owner's map is the
 case k = 2, E = E₀ − s: **six univariate functions**
 A = u³, B = u(4+3t), C = 1+12t+9t², D = 3u², E₀ = 2−3t, E₁ = 1 (u = 1+t).
 
 ## 2. The determinant law (derived + verified)
 
-det JF is weight-0, hence ∈ ℚ[t,s]; with E = E₀ − E₁s it is quadratic in s:
+In the restricted chart A=A(t), D=D(t), det JF is weight-0, hence ∈ ℚ[t,s]; with E = E₀ − E₁s it is quadratic in s:
 det = c₀(t) + c₁(t)s + c₂(t)s². Hand-derivation (verified exactly by engine at
 k = 2, reproducing 0, 0, −2):
 
@@ -54,11 +56,7 @@ k = 2, reproducing 0, 0, −2):
 
 **Keller ⟺ c₂ = 0, c₁ = 0, c₀ = nonzero const.**
 
-**The cube is forced:** c₂ = 0 ⟺ (k+1)AD′ = 2A′D ⟺ D³⁺ᵏ⁻¹…, concretely
-**A = v^{k+1}, D = δv²** for a polynomial v and constant δ — at EVERY k the
-D-row is quadratic in v (they coincide with "D = A′-shaped" only at k = 2,
-which is what makes the witness look deceptively differentiable: D = A′ there).
-For the witness: v = u, δ = 3.
+**S144 corrected power law:** for nonzero polynomials A,D over characteristic zero, c₂=0 iff A=aV^((k+1)/g), D=dV^(2/g), where g=gcd(k+1,2) and a,d are nonzero scalar units. This follows by comparing valuations at every irreducible polynomial. For even k the exponents are (k+1,2); for odd k they are ((k+1)/2,1). The cases A=0 or D=0 satisfy this coefficient equation automatically and must be handled separately. For the original k=2 witness: V=u,a=1,d=3. The remaining c₁,c₀ equations still have to hold.
 
 ## 3. The rationals decode (VERIFIED — nothing in the expression is arbitrary)
 
@@ -138,9 +136,7 @@ witness is a property of its rung, not of the grading calculus.
 
 ## 6. What this hands the fleet
 
-- The normal form + grading is a complete calculus for weight-(1,−1,−k)
-  Keller maps: any future equivariant counterexample search is 3 linear
-  solves + 1 quadratic system, not a blind det expansion.
+- The displayed determinant grading is a calculus for its restricted z-affine chart. The full equivariant normal form permits bivariate A,D and arbitrary E; the claimed reduction to three linear solves and one quadratic system is not a classification of that larger class.
 - The TRAP reading (polysemous-constants template): the collision is two
   units crossing at one point — a codimension-1 coincidence, and Φ linear
   means the coincidence is UNAVOIDABLE in this class. "Keller counterexamples

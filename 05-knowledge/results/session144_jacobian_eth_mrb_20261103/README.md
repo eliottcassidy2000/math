@@ -1,26 +1,15 @@
 # Session 144: Jacobian classification, ETH and MRB
 
-**2026-11-03. Checkpoint 1: independently audited Jacobian composition and correction.** The ETH and MRB continuations are in progress and are not claimed as results of this checkpoint.
+**Completed in two independently audited checkpoints, 2026-11-03.** [Read the synthesis](SYNTHESIS.md) for the distinctions between proved classifications, constructed families, external claims and open problems.
 
-## What is established now
+- **Jacobian:** [composition tower](jacobian/equivariant_composition_tower.md), [complete fixed-map fibers](jacobian/independent/INDEPENDENT_AUDIT.md), [all-degree inheritance and repairs](jacobian_followup/classification_scope_and_repairs.md), and [universal equivariant boundary law](jacobian_followup/universal_equivariant_boundary_corollary.md). [Arbitrary primitive scale degree is a gauge artifact](jacobian_followup/equivariant_gauge_hostile.md); [a quartic hostile requires an escaping-sheet term](jacobian_followup/independent/QUARTIC_BOUNDARY_AUDIT.md). Full map-equivalence classification and the planar conjecture remain open.
+- **ETH:** [source, quantifier and encoding audit](eth/ETH_AUDIT.md), an exact bounded-integer Keller-collision interface, and quantitative reduction budgets. The imported large SAT result is CITED/EXTERNAL, not newly built here. [All eight source byte pins independently match](eth/INDEPENDENT_SOURCE_BYTES.json).
+- **MRB:** [complete periodic-filter convergence and finite-part formulas](mrb/RESEARCH.md), stronger entire-perturbation nonuniqueness, and [an exact rational precision evaluator](mrb/audit/README.md). [Packet and commands](mrb/README.md), [independent analytic audit](mrb_independent/MRB_INDEPENDENT_AUDIT.md).
 
-[The composition theorem](jacobian/equivariant_composition_tower.md) constructs an equivariant Keller tower `G^m` with determinant `2^m`, generic degree `3^m`, and orbit-scale degree `(3*5^(m-1)-1)/2`. The first nonlinear scale already occurs at `m=2`, with degree seven. Its reduced scale divisor has at least m disjoint smooth irreducible components. This is an infinite structural family, not a finite-box inference.
+## Verification and immutable scope
 
-The tower corrects the literal higher-scale existence question in [THM-4727](../../../01-canon/theorems/THM-4727-mixed-weight-torus-reduction-of-keller-maps-ramification-exponent-twisted-planar-jacobian-equation-and-the-dimension-profile.md). Affine-scale tangent-sweep seeds do not exhaust their composition closure. The divisor component count obstructs equivalence to an affine-scale map under equivariant source/target automorphisms; scale degree is not asserted invariant under arbitrary coordinate changes.
+The first checkpoint's [Jacobian manifest](jacobian/MANIFEST.json) remains frozen. Its producer and independent programs have 37 and 46 explicit checks; the latter rejects seven corruptions and compares all 1,799 finite-field targets. It can be replayed with `python3 -B jacobian/verify_frozen_packet.py`, normally or with `-O`.
 
-[The independent audit](jacobian/independent/INDEPENDENT_AUDIT.md) also gives a complete complex-fiber classification for the fixed degree-three map, with explicit boundary equations, a missing-curve certificate, and hostile examples for the discarded-wall and global-deformation claims. This classifies one map's fibers, not all Keller maps.
+The second checkpoint's manifest and replay guide are linked in [verification](VERIFICATION.md). All new executable acceptance gates remain active under Python optimization. The MRB precision receipts differ only in interpreter-mode/timing metadata before exact normalization; they are not advertised as raw-byte-identical. The original inherited MRB assertion-based scripts are archived as historical evidence, not optimized-mode validators.
 
-[Correction lineage](jacobian/CORRECTION_LINEAGE.md) and [source pins](jacobian/SOURCE_PINS.json) preserve the inherited evidence. No complete classification of dimension-three or higher counterexamples, primitive solutions, or arbitrary Aut-by-Aut equivalence classes is claimed. The planar Jacobian conjecture remains open.
-
-## Verification
-
-The producer's 37 explicit checks and the auditor's 46 checks use exact algebra and remain active under Python optimization. Seven corrupted certificates are rejected; independent source enumeration agrees with reconstructed fibers at all 1,799 targets over `F5`, `F7`, and `F11`. Those finite checks do not replace the universal proofs.
-
-The [frozen Jacobian manifest](jacobian/MANIFEST.json) excludes this mutable overview and navigation. Run from the `jacobian` directory:
-
-```
-python3 -B verify_frozen_packet.py
-python3 -B -O verify_frozen_packet.py
-```
-
-Both modes verify every frozen file hash and replay the two exact programs against pinned output bytes. SymPy is required. No new Isabelle or Lean build was run. Full repository documentation checks were not run because they read the restricted central ledger; scoped owned-file/link/hash checks and unchanged startup-surface identities are recorded with the publication evidence.
+The universal statements are supported by written proofs, not extrapolated from finite tests. No new Isabelle/Lean build or full ETH proof replay was run. Documentation checks cover owned bytes, links and unchanged startup objects; the repository-wide checker was not run because it opens the restricted central ledger. No central ledger was read or modified, no empty theorem ID was reserved, and all unrelated prior packets are preserved.

@@ -1,0 +1,113 @@
+{
+  "status": "FINAL: proofs and normal/optimized checks complete",
+  "source_commit": "5e1cedf452c7cc1ec447205939a9d6cf4c0e8743",
+  "files": {
+    "README.md": {
+      "sha256": "2a65ec9d9e9a77736a80ff8b44ca76033e799dbab7d0d048750ffbabf677061c",
+      "bytes": 3123
+    },
+    "RESEARCH.md": {
+      "sha256": "cb574aca3217cfd0ea9ff65f8e5209302241167a28d1b0f8f67af7a8d7d01c59",
+      "bytes": 17804
+    },
+    "SOURCES.json": {
+      "sha256": "4b7fdf2ddba66b876703827ee7a5cac9ab395f9d3dc8dfb020ea783837288706",
+      "bytes": 2642
+    },
+    "audit/README.md": {
+      "sha256": "c73bff11ac6236ce31485243e92cfbcb4e169db07b1b2a2cb3a8437d17e8ad70",
+      "bytes": 11610
+    },
+    "audit/compare_receipts.py": {
+      "sha256": "99d6f79f1eedfe4c3321668c512eb4f0d2b77f61fedaee72b6f51289e226ab40",
+      "bytes": 1318
+    },
+    "audit/exact_precision_audit.py": {
+      "sha256": "590bf12e8c3643551b81ea9f1e69c5f9c3aa3312b4c764eed6c72218867f6391",
+      "bytes": 8006
+    },
+    "audit/exact_precision_results.json": {
+      "sha256": "d1dc8848deb0531dc59b7055906fdae7e8bab186c883e0afc4be765bcb9e633d",
+      "bytes": 3120
+    },
+    "audit/exact_precision_results_optimized.json": {
+      "sha256": "7729167a3b3d6636c2fa9b6eb07b25107524163aef98757c6ad1010410079a33",
+      "bytes": 3119
+    },
+    "audit/hostile_results.json": {
+      "sha256": "7e7527c130d38f76fd6ea6396a9be2c698e97dc9ba2be93aded0d3ae6266a9ad",
+      "bytes": 272
+    },
+    "audit/hostile_results_optimized.json": {
+      "sha256": "7e7527c130d38f76fd6ea6396a9be2c698e97dc9ba2be93aded0d3ae6266a9ad",
+      "bytes": 272
+    },
+    "audit/normalized_receipt.json": {
+      "sha256": "d9524c0218c71a81df75a3dff09122fadbee9332affb813dd48f8e5d31a78409",
+      "bytes": 293
+    },
+    "certificate_comparison.json": {
+      "sha256": "d01d93a224a219ab87d45ac76a99c164858196366827ddab7eb7c6f412a10514",
+      "bytes": 1114
+    },
+    "certificate_comparison.optimized.out": {
+      "sha256": "0d46225a3427058aaaec96c98ea628143df8b7ab06244e69fcb4c0cb52251c37",
+      "bytes": 114
+    },
+    "certificate_comparison.out": {
+      "sha256": "0d46225a3427058aaaec96c98ea628143df8b7ab06244e69fcb4c0cb52251c37",
+      "bytes": 114
+    },
+    "check.optimized.out": {
+      "sha256": "fc4ba6374d51dbbf4e892f2296f9c3880376d6d5b7fc206d649c818f14a1cf41",
+      "bytes": 385
+    },
+    "check.out": {
+      "sha256": "fc4ba6374d51dbbf4e892f2296f9c3880376d6d5b7fc206d649c818f14a1cf41",
+      "bytes": 385
+    },
+    "check.py": {
+      "sha256": "a06e69e45dc2f374f73ffbcf04550d2290b8e196d5b3d2f7b7781fd2fe6e1ae7",
+      "bytes": 6404
+    },
+    "compare_certificates.py": {
+      "sha256": "9822b852aa556e42e064554d297f635a0268de19962fe70edfc9f5def9644e3d",
+      "bytes": 1394
+    },
+    "inherited/certify_mrb.py": {
+      "sha256": "0658417c503fdb8cb206db2a75d890c14d482dcda35e532a0c0d3de9b28bf210",
+      "bytes": 4160
+    },
+    "inherited/certify_mrb.replay.out": {
+      "sha256": "e0fed3a2f54b5f5c48ed6718087883efe65acab542a5ec6683bb72a64181126b",
+      "bytes": 6248
+    },
+    "inherited/independent_checks.py": {
+      "sha256": "e377df81341056d92ad19f78da7c4f23f88af0d9c6300d93d3afb288cc863624",
+      "bytes": 7100
+    },
+    "rejections.optimized.out": {
+      "sha256": "87231dab552c761b2e6aec3d741513563212617877c2bffb0abe69ff9aad224e",
+      "bytes": 274
+    },
+    "rejections.out": {
+      "sha256": "87231dab552c761b2e6aec3d741513563212617877c2bffb0abe69ff9aad224e",
+      "bytes": 274
+    },
+    "results.json": {
+      "sha256": "9cbb74913c8532c397ad24efe409a4b0b277172bff4e512e7def7110ccdb526b",
+      "bytes": 9308
+    },
+    "results.normal.json": {
+      "sha256": "9cbb74913c8532c397ad24efe409a4b0b277172bff4e512e7def7110ccdb526b",
+      "bytes": 9308
+    },
+    "test_rejections.py": {
+      "sha256": "e9eca7306b250009e016b2b6e477bf1468f1d455153b199816f503f84cd61d51",
+      "bytes": 843
+    }
+  },
+  "new_scripts_assert_free": 5,
+  "source_repository_modified": false,
+  "published": false
+}

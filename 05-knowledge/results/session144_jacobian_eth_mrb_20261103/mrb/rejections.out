@@ -1,0 +1,6 @@
+REJECTED: even unit mask incorrectly converges
+REJECTED: odd mask loses parity sidecar
+REJECTED: perturbation sign reversed
+REJECTED: Abel logarithmic counterterm omitted
+REJECTED: Abel finite shift reversed
+PASS: all five hostile mutations rejected by explicit exceptions.

@@ -1,0 +1,80 @@
+{
+  "finite_controls": [
+    {
+      "jacobian_exponent": 3,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -1
+      ]
+    },
+    {
+      "jacobian_exponent": 4,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -2
+      ]
+    },
+    {
+      "jacobian_exponent": 5,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -3
+      ]
+    },
+    {
+      "jacobian_exponent": 7,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -5
+      ]
+    },
+    {
+      "jacobian_exponent": 4,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -1,
+        -1
+      ]
+    },
+    {
+      "jacobian_exponent": 6,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -1,
+        -3
+      ]
+    },
+    {
+      "jacobian_exponent": 9,
+      "status": "PASS",
+      "weights": [
+        1,
+        -1,
+        -2,
+        -2,
+        -5
+      ]
+    }
+  ],
+  "source_map": "untwisted Alpoge map times identity",
+  "status": "PASS",
+  "theorem_scope": "One positive weight equal to 1; remaining weights strictly negative; no claim for multiple positive or zero weights."
+}

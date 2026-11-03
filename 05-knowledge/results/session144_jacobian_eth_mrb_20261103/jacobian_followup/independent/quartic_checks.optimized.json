@@ -1,0 +1,31 @@
+{
+  "check_count": 13,
+  "checks": [
+    "all coordinates polynomial",
+    "coordinate degrees 12,11,4",
+    "determinant -6",
+    "source invariant plane restriction",
+    "fold elimination",
+    "three distinct exact fiber points",
+    "inverse quartic identity",
+    "quartic monic in w",
+    "quartic defines prime graph ideal",
+    "reconstructed gamma",
+    "reconstructed u",
+    "target P recovered",
+    "target Q recovered modulo T"
+  ],
+  "generic_field_degree": 4,
+  "generic_invariant_hyperplane_finite_points": 3,
+  "generic_missing_sheet_count": 1,
+  "hostiles_rejected": [
+    "wrong fold degree d-minus-one",
+    "wrong determinant",
+    "altered third source point",
+    "wrong quartic sign"
+  ],
+  "invariant_source_plane_degree": 1,
+  "orbit_zero_surface_degree": 2,
+  "scope": "Explicit quartic map; refutes unqualified general d-minus-restricted-degree formula.",
+  "status": "PASS"
+}

@@ -1,0 +1,333 @@
+{
+  "status": "PASS",
+  "periodic_masks_exactly_checked": 2046,
+  "unit_mask_cases": [
+    {
+      "m": 1,
+      "phi": 1,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 2,
+      "phi": 1,
+      "mean": "-1/2",
+      "converges": false
+    },
+    {
+      "m": 3,
+      "phi": 2,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 4,
+      "phi": 2,
+      "mean": "-1/2",
+      "converges": false
+    },
+    {
+      "m": 5,
+      "phi": 4,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 6,
+      "phi": 2,
+      "mean": "-1/3",
+      "converges": false
+    },
+    {
+      "m": 7,
+      "phi": 6,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 8,
+      "phi": 4,
+      "mean": "-1/2",
+      "converges": false
+    },
+    {
+      "m": 9,
+      "phi": 6,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 10,
+      "phi": 4,
+      "mean": "-2/5",
+      "converges": false
+    },
+    {
+      "m": 11,
+      "phi": 10,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 12,
+      "phi": 4,
+      "mean": "-1/3",
+      "converges": false
+    },
+    {
+      "m": 13,
+      "phi": 12,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 14,
+      "phi": 6,
+      "mean": "-3/7",
+      "converges": false
+    },
+    {
+      "m": 15,
+      "phi": 8,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 16,
+      "phi": 8,
+      "mean": "-1/2",
+      "converges": false
+    },
+    {
+      "m": 17,
+      "phi": 16,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 18,
+      "phi": 6,
+      "mean": "-1/3",
+      "converges": false
+    },
+    {
+      "m": 19,
+      "phi": 18,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 20,
+      "phi": 8,
+      "mean": "-2/5",
+      "converges": false
+    },
+    {
+      "m": 21,
+      "phi": 12,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 22,
+      "phi": 10,
+      "mean": "-5/11",
+      "converges": false
+    },
+    {
+      "m": 23,
+      "phi": 22,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 24,
+      "phi": 8,
+      "mean": "-1/3",
+      "converges": false
+    },
+    {
+      "m": 25,
+      "phi": 20,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 26,
+      "phi": 12,
+      "mean": "-6/13",
+      "converges": false
+    },
+    {
+      "m": 27,
+      "phi": 18,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 28,
+      "phi": 12,
+      "mean": "-3/7",
+      "converges": false
+    },
+    {
+      "m": 29,
+      "phi": 28,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 30,
+      "phi": 8,
+      "mean": "-4/15",
+      "converges": false
+    },
+    {
+      "m": 31,
+      "phi": 30,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 32,
+      "phi": 16,
+      "mean": "-1/2",
+      "converges": false
+    },
+    {
+      "m": 33,
+      "phi": 20,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 34,
+      "phi": 16,
+      "mean": "-8/17",
+      "converges": false
+    },
+    {
+      "m": 35,
+      "phi": 24,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 36,
+      "phi": 12,
+      "mean": "-1/3",
+      "converges": false
+    },
+    {
+      "m": 37,
+      "phi": 36,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 38,
+      "phi": 18,
+      "mean": "-9/19",
+      "converges": false
+    },
+    {
+      "m": 39,
+      "phi": 24,
+      "mean": "0",
+      "converges": true
+    },
+    {
+      "m": 40,
+      "phi": 16,
+      "mean": "-2/5",
+      "converges": false
+    }
+  ],
+  "falling_factorial_coefficient_tests": {
+    "K": "0..10",
+    "n": "1..80",
+    "method": "exact integers"
+  },
+  "explicit_perturbation_intervals": [
+    {
+      "K": 1,
+      "r": 1,
+      "signed_shift_interval": "[0.017810730307408963991258482021810870302521447409506436831691911765073644146396297679990112857088, 0.017810730307408963991258482021810870302521447409506436831691911765073644146396297679990113739191]",
+      "analytic_tail": "[1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617462496e-96, 1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617471689e-96]",
+      "independent_scalar_integral": "0.017810730307408963991258482021810870302521447409506436831691911765",
+      "scalar_check_status": "NUMERICAL, not an interval certificate"
+    },
+    {
+      "K": 1,
+      "r": 3,
+      "signed_shift_interval": "[0.0038908887302439266926779720363842132673588612255859403180294710348937580235872770846226422498526, 0.0038908887302439266926779720363842132673588612255859403180294710348937580235872770846226423639507]",
+      "analytic_tail": "[1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617462496e-96, 1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617471689e-96]",
+      "independent_scalar_integral": "0.0038908887302439266926779720363842132673588612255859403180294710349",
+      "scalar_check_status": "NUMERICAL, not an interval certificate"
+    },
+    {
+      "K": 2,
+      "r": 1,
+      "signed_shift_interval": "[-0.0020047455199582966086421480929105161313562069449576185959475057509160225493871132397185851984595, -0.0020047455199582966086421480929105161313562069449576185959475057509160225493871132397185850872379]",
+      "analytic_tail": "[1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617462496e-96, 1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617471689e-96]",
+      "independent_scalar_integral": "-0.0020047455199582966086421480929105161313562069449576185959475057509",
+      "scalar_check_status": "NUMERICAL, not an interval certificate"
+    },
+    {
+      "K": 2,
+      "r": 2,
+      "signed_shift_interval": "[-0.00070026577379619936841487278680106286002089781295458203639533184800020779065853976090218660526925, -0.00070026577379619936841487278680106286002089781295458203639533184800020779065853976090218657626532]",
+      "analytic_tail": "[1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617462496e-96, 1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617471689e-96]",
+      "independent_scalar_integral": "-0.000700265773796199368414872786801062860020897812954582036395331848",
+      "scalar_check_status": "NUMERICAL, not an interval certificate"
+    },
+    {
+      "K": 3,
+      "r": 1,
+      "signed_shift_interval": "[0.00022759891763373201506464526269510193189836239657257951770610740455831346346408900618244577932011, 0.00022759891763373201506464526269510193189836239657257951770610740455831346346408900618244578690068]",
+      "analytic_tail": "[1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617462496e-96, 1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617471689e-96]",
+      "independent_scalar_integral": "0.00022759891763373201506464526269510193189836239657257951770610740456",
+      "scalar_check_status": "NUMERICAL, not an interval certificate"
+    },
+    {
+      "K": 4,
+      "r": 2,
+      "signed_shift_interval": "[-0.0000056471595408162646765598446589132066358226706757729062672217297374236528458595077059195062421401, -0.0000056471595408162646765598446589132066358226706757729062672217297374236528458595077059195060024382]",
+      "analytic_tail": "[1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617462496e-96, 1.6600439415236193691562506583343666419819632249525191164916586759932341354810360016992617471689e-96]",
+      "independent_scalar_integral": "-0.0000056471595408162646765598446589132066358226706757729062672217297374",
+      "scalar_check_status": "NUMERICAL, not an interval certificate"
+    }
+  ],
+  "regularization_numerical_checks": [
+    {
+      "N": 100,
+      "corrected_difference": 0.8347414968478213,
+      "limit_Q": 0.9890559953279725,
+      "absolute_difference": 0.15431449848015122,
+      "damping_truncation_bound": 4.227147886908285e-16,
+      "status": "NUMERICAL finite-scale illustration, not proof or certified interval"
+    },
+    {
+      "N": 1000,
+      "corrected_difference": 0.9402653880518459,
+      "limit_Q": 0.9890559953279725,
+      "absolute_difference": 0.04879060727612661,
+      "damping_truncation_bound": 4.246230432193597e-15,
+      "status": "NUMERICAL finite-scale illustration, not proof or certified interval"
+    },
+    {
+      "N": 10000,
+      "corrected_difference": 0.9775005068092044,
+      "limit_Q": 0.9890559953279725,
+      "absolute_difference": 0.011555488518768087,
+      "damping_truncation_bound": 4.248141841119048e-14,
+      "status": "NUMERICAL finite-scale illustration, not proof or certified interval"
+    }
+  ],
+  "proof_dependencies": "RESEARCH.md; elementary binomial generating identity and summation by parts",
+  "limits": [
+    "Finite checks do not replace all-K analytic proof.",
+    "Numerical quadrature is separated from interval shift certificates.",
+    "No irrationality, transcendence, modularity, SAT, ETH, or Jacobian classification claim."
+  ]
+}
