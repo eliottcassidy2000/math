@@ -1,0 +1,16 @@
+{
+  "read_source_sha256": {
+    "01-canon/MISTAKES.md": "ba9bfdae2d5da6c6ab12ea6cbab70aa2e45094371c2a2a0293da9a0c8ebf497d",
+    "05-knowledge/results/collatz_adaptive_mixture_flow_20261005.md": "0f75e006321c83946ffb4c1992000cec665f2980b1012ccf6981c90ec994b7ca",
+    "05-knowledge/results/paid_root_cycle_budget_20261026/README.md": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c",
+    "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c",
+    "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint2.md": "1b4eeadecf776a78d60156ea16b6f1064f16e2df8486e6cb9e78ad34208b8133",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md": "81b33007341cfea0ce0a93bc83577d44a3b1005cb549ca207d08243aa0b7626c",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-audit/REPORT.md": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-transport/REPORT.md": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa",
+    "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267"
+  },
+  "scope": "Current base sources; historical lost packet not available",
+  "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3"
+}

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "REPORT.md": "347ae9c5df41f2c2593a660d9cb098f7ce3ed6e599eba031d398d55efab6dd82",
+    "check.py": "9087ce375d8a865a68674cc71b2fa5c08580a6628cab7e04898ca2b58f2ea134",
+    "normal.json": "802e4046a46bb1392beb5580e6e9f2a595f0a9d30cb68d5237e6e6eb032f6858",
+    "optimized.json": "802e4046a46bb1392beb5580e6e9f2a595f0a9d30cb68d5237e6e6eb032f6858"
+  },
+  "gates": 83323,
+  "producer_files": {
+    "RESULT.md": "46fc5ead18e8cf66a88d7ac59614b89b71064f104b56d2de5cb1134c0ffe70f3",
+    "SOURCE_MANIFEST.json": "92f586b492465ff0e4ef26ea1ea749664a56ac4658ececb8e430c87addbc99ee",
+    "check.py": "681a2f4b8d387db173e0b2e694f87f80e909613abfdb670d81b8fa3013a38e8d",
+    "normal.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b",
+    "optimized.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b"
+  },
+  "promotion": {
+    "candidate_sha256": "4add1a89370b9ec62c622e62132ba7b0c2c8b160e5262bf91acfd867baa37c8a",
+    "new": "**PROVED M1\u2013M4; independently audited PASS.**\n[Independent audit](../audit_machines/REPORT.md).",
+    "old": "**PROOF CANDIDATE M1\u2013M4; independent audit pending.**",
+    "path": "machines/RESULT.md",
+    "promoted_sha256": "46fc5ead18e8cf66a88d7ac59614b89b71064f104b56d2de5cb1134c0ffe70f3"
+  },
+  "status": "PASS M1\u2013M4"
+}

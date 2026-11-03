@@ -1,0 +1,329 @@
+{
+  "actual_prime_emissions": [
+    [
+      19,
+      2
+    ],
+    [
+      69,
+      3
+    ],
+    [
+      281,
+      5
+    ],
+    [
+      710,
+      7
+    ],
+    [
+      2375,
+      11
+    ],
+    [
+      3893,
+      13
+    ],
+    [
+      8102,
+      17
+    ],
+    [
+      11361,
+      19
+    ],
+    [
+      19268,
+      23
+    ]
+  ],
+  "direct_composite4_emits16_in_steps": 26,
+  "first_prime_selfhit_loss": [
+    7,
+    3,
+    11
+  ],
+  "gates": 454980,
+  "kernels": [
+    {
+      "M": 3,
+      "rank": 2,
+      "total": 4
+    },
+    {
+      "M": 5,
+      "rank": 3,
+      "total": 16
+    },
+    {
+      "M": 7,
+      "rank": 4,
+      "total": 36
+    },
+    {
+      "M": 11,
+      "rank": 6,
+      "total": 100
+    },
+    {
+      "M": 15,
+      "rank": 6,
+      "total": 64
+    },
+    {
+      "M": 21,
+      "rank": 8,
+      "total": 144
+    },
+    {
+      "M": 35,
+      "rank": 12,
+      "total": 576
+    },
+    {
+      "M": 105,
+      "rank": 24,
+      "total": 2304
+    },
+    {
+      "M": 145,
+      "rank": 45,
+      "total": 12544
+    }
+  ],
+  "odd_pairs": 62250,
+  "plane_jumps": [
+    7,
+    11,
+    23,
+    59,
+    167,
+    491,
+    1463,
+    4379,
+    13127
+  ],
+  "prime_pairs": 8221,
+  "primitive_prime_pair_triples": 8127,
+  "priority_hostile": [
+    39,
+    33,
+    29
+  ],
+  "row290": {
+    "prime_pairs": [
+      [
+        7,
+        283
+      ],
+      [
+        13,
+        277
+      ],
+      [
+        19,
+        271
+      ],
+      [
+        61,
+        229
+      ],
+      [
+        67,
+        223
+      ],
+      [
+        79,
+        211
+      ],
+      [
+        97,
+        193
+      ],
+      [
+        109,
+        181
+      ],
+      [
+        127,
+        163
+      ],
+      [
+        139,
+        151
+      ]
+    ],
+    "unit_pairs_excluding_one": 55,
+    "unit_pairs_including_one": 56
+  },
+  "status": "PASS",
+  "trial_examples": [
+    {
+      "d": 1,
+      "divides": true,
+      "endpoint": 8,
+      "n": 3,
+      "odd_pair": [
+        3,
+        5
+      ],
+      "steps": 20
+    },
+    {
+      "d": 2,
+      "divides": false,
+      "endpoint": 11375,
+      "n": 3,
+      "odd_pair": [
+        5,
+        3
+      ],
+      "steps": 22
+    },
+    {
+      "d": 1,
+      "divides": true,
+      "endpoint": 16,
+      "n": 4,
+      "odd_pair": [
+        3,
+        7
+      ],
+      "steps": 26
+    },
+    {
+      "d": 2,
+      "divides": true,
+      "endpoint": 112,
+      "n": 4,
+      "odd_pair": [
+        5,
+        5
+      ],
+      "steps": 22
+    },
+    {
+      "d": 1,
+      "divides": true,
+      "endpoint": 536870912,
+      "n": 29,
+      "odd_pair": [
+        3,
+        57
+      ],
+      "steps": 176
+    },
+    {
+      "d": 15,
+      "divides": true,
+      "endpoint": 728236479319770136576,
+      "n": 30,
+      "odd_pair": [
+        31,
+        31
+      ],
+      "steps": 126
+    }
+  ],
+  "universes": {
+    "actual_orbit_steps": 20000,
+    "all_trials": 496,
+    "literal_trial_steps": 66498,
+    "trial_n_max": 32,
+    "unordered_odd_pairs_sum_at_most": 1000
+  },
+  "unweighted_quotient_degree": 28,
+  "weighted_145_rows": [
+    112,
+    108,
+    84,
+    81
+  ],
+  "weighted_local_spectra": [
+    {
+      "characteristic_high_to_low": [
+        1,
+        0,
+        -2,
+        0
+      ],
+      "ell": 3
+    },
+    {
+      "characteristic_high_to_low": [
+        1,
+        0,
+        -8,
+        -8,
+        0,
+        0
+      ],
+      "ell": 5
+    },
+    {
+      "characteristic_high_to_low": [
+        1,
+        0,
+        -18,
+        -40,
+        -24,
+        0,
+        0,
+        0
+      ],
+      "ell": 7
+    },
+    {
+      "characteristic_high_to_low": [
+        1,
+        0,
+        -50,
+        -240,
+        -480,
+        -448,
+        -160,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ell": 11
+    },
+    {
+      "characteristic_high_to_low": [
+        1,
+        0,
+        -392,
+        -6552,
+        -56784,
+        -320320,
+        -1281280,
+        -3788928,
+        -8456448,
+        -14350336,
+        -18450432,
+        -17704960,
+        -12300288,
+        -5849088,
+        -1703936,
+        -229376,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ell": 29
+    }
+  ]
+}

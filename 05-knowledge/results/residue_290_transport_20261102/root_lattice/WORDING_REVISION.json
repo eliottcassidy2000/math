@@ -1,0 +1,9 @@
+{
+  "new": "A faithful split two-color ring presentation over the full modulus therefore\nfails for a different reason than in E6: ramification here, inertness there.\nThis does not exclude nonfaithful observations that support selected operations.",
+  "old": "A split two-color observer over the full modulus therefore\nfails for a different reason than in E6: ramification here, inertness there.",
+  "previous_candidate_sha256": "936816961daa4c2f44dc25aef91393b065a9c992c71ecc5ded8a7f78c106ac74",
+  "previous_promoted_sha256": "99167ad09513a908d87a578e8d772866fd190bd4027cbcbdc78cd6c77e9555bf",
+  "reason": "Independent auditor: nonreduced ring obstructs faithful split ring presentation, not every nonfaithful deterministic observer",
+  "revised_candidate_sha256": "fd8bc3e5ed62977ed959dc3742b426e972461a859e48069b395e5763e8510138",
+  "revised_promoted_sha256": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101"
+}

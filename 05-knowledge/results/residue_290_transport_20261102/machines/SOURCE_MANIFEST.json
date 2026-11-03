@@ -1,0 +1,48 @@
+{
+  "amendment_lineage": [
+    {
+      "inverse_proof_verified": true,
+      "new_files": {
+        "RESULT.md": "4add1a89370b9ec62c622e62132ba7b0c2c8b160e5262bf91acfd867baa37c8a",
+        "check.py": "681a2f4b8d387db173e0b2e694f87f80e909613abfdb670d81b8fa3013a38e8d",
+        "normal.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b",
+        "optimized.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b"
+      },
+      "old_files": {
+        "RESULT.md": "c230ba6dab9ec5d0e736e6355d82ed3c17afcca00a01d598b0ed36d15e5e0b23",
+        "check.py": "335b86f03457d1db89183307995462faa9fea9d6cebfd36e907a6f6807730bd6",
+        "normal.json": "1d1201545980a5f9f845f4d97f7d0f6f40c6c14b1efc59574a99cb8e26c298de",
+        "optimized.json": "1d1201545980a5f9f845f4d97f7d0f6f40c6c14b1efc59574a99cb8e26c298de"
+      },
+      "proof_added_text": "\n### The correctly weighted spectrum\n\nFor an odd prime ell, the full ell-by-ell symmetric matrix S_ell has\ncharacteristic polynomial\n\n    X^((ell-1)/2) (X+2)^((ell-3)/2)\n       [X\u00b2-(ell-3)X-(ell-1)].                            (3)\n\nIndeed the functions odd under d\u2194-d form a zero eigenspace of dimension\n(ell-1)/2. On the even functions, use the negation-orbit quotient with\nweights(1,2,...,2). The functions zero at0 whose values on the nonzero\norbits sum to0 have eigenvalue-2, with dimension(ell-3)/2. The remaining\ntwo-dimensional space consists of a value x at0 and a common value y at\nall nonzero orbits. Its matrix is\n\n    [ 0   ell-1 ]\n    [ 1   ell-3 ],\n\nwhose characteristic polynomial is the bracket in(3). These spaces exhaust\nthe carrier. In particular S5 has nonzero eigenvalues1+sqrt5,1-sqrt5,-2;\nS29 has13+sqrt197,13-sqrt197 and-2 with multiplicity13. CRT makes S145,\nafter the same permutation of rows and columns, S5 tensor S29. Its nonzero\neigenvalues are therefore the45 products of those nonzero local values,\nwith multiplicities; the remaining100 eigenvalues are0.\n\nThis is an exact source-weighted spectral calculation. Its zero odd sector\noccurs because the sieve predicate deliberately forgets either local sign;\nit is not the signed-unit doubling observer, whose odd sector carries\norientation transport. Nor is S145 a tournament adjacency matrix. The\nappearance of sqrt5 here follows from the displayed weighted2-by-2 block;\nit is not evidence that the native operations of the other lanes coincide.\n",
+      "reason": "Parent-authorized weighted-spectrum corollary inM2 and exact characteristic-polynomial controls; all other proof sections unchanged."
+    }
+  ],
+  "files": {
+    "RESULT.md": "4add1a89370b9ec62c622e62132ba7b0c2c8b160e5262bf91acfd867baa37c8a",
+    "check.py": "681a2f4b8d387db173e0b2e694f87f80e909613abfdb670d81b8fa3013a38e8d",
+    "normal.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b",
+    "optimized.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b"
+  },
+  "gates": 454980,
+  "optimization_check": "byte-identical normal and -O; explicit exceptions rather than asserts",
+  "primary_source": {
+    "accessed": "2026-11-02",
+    "read_scope": "printed pp.4 and9-10, ordered list and division phase",
+    "title": "Conway, FRACTRAN (1987)",
+    "url": "https://gwern.net/doc/cs/computable/1987-conway.pdf"
+  },
+  "source_pins": {
+    "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md": "e694122f3b7d2ca1170e486481fffc16d2c068943149a13f612b2d71e82c1683",
+    "01-canon/theorems/THM-4853-primegame-step-counts-in-closed-form-oeis-a007546-is-the-15-14-list-a007547-the-conway-1987-list-and-their-difference-is-a-sum-of-largest-proper-divisors.md": "4ff7228cd571bb550babfab17f0ad6f3f68be69e718f32be3b21e24dcd8d3085",
+    "01-canon/theorems/THM-4854-primegame-four-blocks-register-decomposition-bipartite-flags-triangular-semiprimes-metagraph-quotient-of-complement-graph.md": "584e2c55f5ed835ed123389a7c7039e2ad69d2c757d5db3fad599f0892e4c43c",
+    "05-knowledge/results/fractran_turing_circulant_goldbach_20261101.md": "b7b5a57f5059abc0d1d07e81e54ccb8c1e5264af4e76e5bdaa06b6da4f5dc602",
+    "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc",
+    "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d",
+    "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/README.md": "fe98f7ba5190a1551ae943e685dc0cb363ac09376b46255206b3bc1bd0585539",
+    "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d",
+    "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
+  },
+  "source_revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+  "status": "PROOF CANDIDATE M1-M4; FINITE-EXACT controls; independent audit pending"
+}

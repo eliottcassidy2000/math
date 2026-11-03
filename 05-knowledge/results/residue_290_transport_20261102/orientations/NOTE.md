@@ -1,6 +1,7 @@
 # A signed doubling lift of the 290 wheel
 
-**PROOF CANDIDATE O1–O4; independent audit pending.** Classical character
+**PROVED O1–O4; independently audited PASS.**
+[Independent audit](../audit_orientations/REPORT.md). Classical character
 orthogonality and cyclotomic degree are CITED; the elementary transport and
 scope proofs are supplied below. No historical-priority claim is made.
 

@@ -1,0 +1,9 @@
+{
+  "new_candidate_sha256": "936816961daa4c2f44dc25aef91393b065a9c992c71ecc5ded8a7f78c106ac74",
+  "previous_candidate_sha256": "a517258dc64efa5f7b1ddb9150d97ecc2d3676dbc0f4b6de244ffac68e38b3dc",
+  "reason": [
+    "Auditor: retain k>=T guard for dyadic bin relabeling and map-prefix census scope",
+    "Auditor: define U and A Euclid branches locally",
+    "Root-authorized additive E7 Gaussian145 and290 quotient comparison"
+  ]
+}

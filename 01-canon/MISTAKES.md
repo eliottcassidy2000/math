@@ -11,6 +11,13 @@ a historical synthesis or promoting computational evidence.
 - **Repair / strongest survivor:** associate each cycle in an embedded pseudoforest with the face immediately inside it, subtracting immediate child interiors. These faces partition the bounded regions. A unit triangle contributes at most sqrt3/4; a cycle of length m>=4 contributes at most1<=m/4. The total-area bound n/4, including nesting, survives; at12 edges the restricted maximum3 is attained by three squares.
 - **Missing coordinate:** containment/face incidence. Cycle count or gross polygon area alone cannot implement the capped-area objective or geometric gluing.
 
+## 2026-11-02 — a collision fibre needs its actual target value
+
+- **Scope:** prepublication incoming reconciliation in `residue_290_transport_20261102/INCOMING_RECONCILIATION.md`; no accepted theorem is retracted.
+- **Witness / failed step:** the correct triples {-10,2,8} and {-8,-2,10} were initially paired with incorrect mental-arithmetic values21273 and22553 for C_28(t)=28^3+1-t^3+84t. Equal-source-fibre classification does not validate a transcribed target constant.
+- **Repair / strongest survivor:** direct substitution and the independent reviewer give22113 and21793 respectively. The complete two-triple census and injectivity of C_145,C_290 are unchanged. A reproduction command now prints the actual fibres.
+- **Missing coordinate / guard:** retain the exact target value, and distinguish modular unit-norm surjectivity from integral realization;145 and290 are not themselves units modulo290. The precise unit hostile is17: Q(1,18)=307=17 mod290, but17 is not an integral Eisenstein norm.
+
 ## 2026-11-03 — equal H15 does not select a homogeneous module response
 
 - **Scope:** prepublication scout in `05-knowledge/results/uniform_prime_transport_20261103`; no accepted theorem is retracted.

@@ -1,0 +1,488 @@
+{
+  "files": {
+    ".gitattributes": "05bce1f34342a39f8e6b5a3f06183ca80dfe09934dd7d2e19fba4bf4a10ecbfc",
+    "AUDIT.md": "cae9113468e6b7023ba0c4c1cf7eff80abf1cd5979f8f607799bd1c98abf2bbc",
+    "BOARD.md": "9daa9a92092a1be3761320aef9826d49305ae08758be3aaaaaa7e85a632556e0",
+    "INCOMING_RECONCILIATION.md": "24ead81e7cf18733a142d7d97a523deaf5ade6fa373cd5b6beced6937fb92691",
+    "INCOMING_SOURCES.json": "7e8e502dd2ff37ca59fd66ab2d306503e410409013456a9dd618b949482b0d0c",
+    "NAVIGATION_PATCH.json": "512f92d92549fef499dba8110c01708af9e29e2d077ed15de80042cf52e39c08",
+    "README.md": "399b33fdf72ca76191dabf86bd1894e77d7b1f1d28e8d746473a43aa1be8bde2",
+    "audit_machines/MANIFEST.json": "0c821b19cb5a28d7ab2a8f1811bccc3670eb87ca0b726fedb3ab088bdc95a272",
+    "audit_machines/REPORT.md": "347ae9c5df41f2c2593a660d9cb098f7ce3ed6e599eba031d398d55efab6dd82",
+    "audit_machines/check.py": "9087ce375d8a865a68674cc71b2fa5c08580a6628cab7e04898ca2b58f2ea134",
+    "audit_machines/normal.json": "802e4046a46bb1392beb5580e6e9f2a595f0a9d30cb68d5237e6e6eb032f6858",
+    "audit_machines/optimized.json": "802e4046a46bb1392beb5580e6e9f2a595f0a9d30cb68d5237e6e6eb032f6858",
+    "audit_orientations/MANIFEST.json": "da2460e5b88277af6dbb81b1a4f52096b787af90157c56b6e5f8e6d7374ac312",
+    "audit_orientations/REPORT.md": "ca4257849303cac6f3ace664e211f5fd2947c336aad97bdaf452dc9ca39406c8",
+    "audit_orientations/check_independent.py": "16f5371ad76fd882d0cd3bcc978fafc46e58c0c076381cf152a2bb956868ea1b",
+    "audit_orientations/normal.json": "d1fcddc4e4a5a2b8a0c1850f84d9a189d3f0fbf1341d5872ee8f162b62fa2b47",
+    "audit_orientations/optimized.json": "d1fcddc4e4a5a2b8a0c1850f84d9a189d3f0fbf1341d5872ee8f162b62fa2b47",
+    "audit_orientations/producer.normal.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c",
+    "audit_orientations/producer.optimized.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c",
+    "audit_root_lattice/MANIFEST.json": "7457daa4c9759381c9ea7c3c652f8e1c57ad4311c029e09f90f733473536dcd6",
+    "audit_root_lattice/REPORT.md": "f54c66993e6972befdeb68f4effb49628b89cc9736fabdf9461dd8070c5e483f",
+    "audit_root_lattice/check.py": "6bd818b8a249f6370d090f036a090449b268559ad65eb656d69526a9936b9c68",
+    "audit_root_lattice/normal.json": "39bea8fdcdedf6e7b2401731dad3c29205ebad1bfe414fc8a11b79fba84e70d6",
+    "audit_root_lattice/optimized.json": "39bea8fdcdedf6e7b2401731dad3c29205ebad1bfe414fc8a11b79fba84e70d6",
+    "audit_tournament/MANIFEST.json": "82f59ccce4a89cc5c39b8ab9a85e415d66ec0166b4038c8c22ee79e8062d0e42",
+    "audit_tournament/REPORT.md": "ef0678bb692511adfce35b109f2117b9258bb31bb74e69afc5e1a735fd542b7b",
+    "audit_tournament/check.py": "f2ab4a81d0d4bed1b9d610eb308520d85b39d0e067b27f9603d3b81f208b388b",
+    "audit_tournament/normal.json": "503c8928aa93d3c7c3ad7763fa6f6bb46dadf988e5926c7c18508a001a417596",
+    "audit_tournament/optimized.json": "503c8928aa93d3c7c3ad7763fa6f6bb46dadf988e5926c7c18508a001a417596",
+    "figures/render.py": "04beb25a713df394d62319e1f45f023b3ad48b804ce4086b7562809e36c5fc83",
+    "figures/triangle-and-wheel.png": "a39100f185ef5206e9661e4c4a27a14b7fd3c631fd645888b1c46ec3487ac227",
+    "figures/triangle-and-wheel.svg": "681e096353b7e774b40cfea2263f7334e152865896fbbac507ce8f4ccba73180",
+    "machines/PROMOTION.json": "eb3fb9936b939d3147f0da4d627bd593dcb50d47cf3f2706449cd2d8d58851b7",
+    "machines/RESULT.md": "46fc5ead18e8cf66a88d7ac59614b89b71064f104b56d2de5cb1134c0ffe70f3",
+    "machines/SOURCE_MANIFEST.json": "92f586b492465ff0e4ef26ea1ea749664a56ac4658ececb8e430c87addbc99ee",
+    "machines/check.py": "681a2f4b8d387db173e0b2e694f87f80e909613abfdb670d81b8fa3013a38e8d",
+    "machines/normal.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b",
+    "machines/optimized.json": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b",
+    "orientations/MANIFEST.json": "fa496ab2fc7ace446a0780a9bb1cfa39b12abad59c142eb0a6d937472c8f0c8d",
+    "orientations/NOTE.md": "3a6894b1589ef4ed3f469bab985d617984d97a9216800ba95f0352c3dccbf5a9",
+    "orientations/check.py": "bc12a8e8f99ee375168db096ce5528bdc476a05b4c6b999a206cdee58b3c772b",
+    "orientations/normal.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c",
+    "orientations/optimized.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c",
+    "root_lattice/MANIFEST.json": "e3f1fc1d348cec6d0dc9f4e321284ba75b1b0c18e229f698e2c46af982ad42a7",
+    "root_lattice/PROOF.md": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101",
+    "root_lattice/REVISION.json": "ffdaf70a9b97ce17344e8803fb64095e8e751b6ce13a4e330c09f5977242e220",
+    "root_lattice/SOURCES.json": "670fb2df1c2fb9b75f889c73c7b5e7eefcfbb0502e639887ae29af37ab4921b9",
+    "root_lattice/WORDING_REVISION.json": "52431777af3df66f59147dcbaeda315724b0e2c30590eeec479eb524902eff1c",
+    "root_lattice/check.py": "06d8eebc0e0a320c83ac9846b6c163e82836d294280038cf8ec3a48198a9c2b2",
+    "root_lattice/normal.json": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77",
+    "root_lattice/optimized.json": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77",
+    "tournament/MANIFEST.json": "c22377aadccb4be3545fb5aef96f3d105a2953d6afb1cb05fdedac5ff6712279",
+    "tournament/README.md": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5",
+    "tournament/SOURCE_PINS.json": "77d067f6866d4f06b012cc8ae340f5a107af49d90e8ad0c2cb3eba1fa9fe018c",
+    "tournament/check.py": "c49e3d33aec1c808f7dc7db12755aa5b9ba124a701e956e6182c6d1f4024da60",
+    "tournament/normal.json": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a",
+    "tournament/optimized.json": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a",
+    "verify_packet.py": "bf2e8ee0580a81eb413243eaef38668dfdb44e496eefd470fb8cadfc9d8b6be2"
+  },
+  "promotions": [
+    {
+      "candidate_sha256": "05ee2bd0827c719cae8ed933a6d438e8cb31fefea488d31fc899a93da9827d33",
+      "new": "**PROVED R1\u2013R2, independently audited PASS; R3 and the black-core results\nbelow are INHERITED PROVED with their stated scopes. Fresh checks are\nFINITE-EXACT.** [Independent review](../audit_tournament/REPORT.md).",
+      "old": "**PROOF CANDIDATE R1\u2013R2 pending current independent review; R3 and the\nblack-core results below are INHERITED PROVED with their stated scopes.\nFresh checks are FINITE-EXACT.**",
+      "path": "tournament/README.md",
+      "promoted_sha256": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5"
+    },
+    {
+      "candidate_sha256": "729baac8ea4a5d7435d11e5e23b7cb20aceb3c4fea9ca17b5820c2a18d84380e",
+      "new": "**PROVED O1\u2013O4; independently audited PASS.**\n[Independent audit](../audit_orientations/REPORT.md).",
+      "old": "**PROOF CANDIDATE O1\u2013O4; independent audit pending.**",
+      "path": "orientations/NOTE.md",
+      "promoted_sha256": "3a6894b1589ef4ed3f469bab985d617984d97a9216800ba95f0352c3dccbf5a9"
+    },
+    {
+      "candidate_sha256": "fd8bc3e5ed62977ed959dc3742b426e972461a859e48069b395e5763e8510138",
+      "inverse_verified": true,
+      "new": "**Status: PROVED U1\u2013U3, P1 and E1\u2013E7; independently audited PASS.**\n[Independent audit](../audit_root_lattice/REPORT.md).",
+      "old": "**Status: PROOF CANDIDATE U1\u2013U3, P1 and E1\u2013E7; root audit pending.**",
+      "path": "root_lattice/PROOF.md",
+      "promoted_sha256": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101"
+    },
+    {
+      "candidate_sha256": "4add1a89370b9ec62c622e62132ba7b0c2c8b160e5262bf91acfd867baa37c8a",
+      "new": "**PROVED M1\u2013M4; independently audited PASS.**\n[Independent audit](../audit_machines/REPORT.md).",
+      "old": "**PROOF CANDIDATE M1\u2013M4; independent audit pending.**",
+      "path": "machines/RESULT.md",
+      "promoted_sha256": "46fc5ead18e8cf66a88d7ac59614b89b71064f104b56d2de5cb1134c0ffe70f3"
+    }
+  ],
+  "proof_amendments": [
+    {
+      "before_sha256": "936816961daa4c2f44dc25aef91393b065a9c992c71ecc5ded8a7f78c106ac74",
+      "new": "A faithful split two-color ring presentation over the full modulus therefore\nfails for a different reason than in E6: ramification here, inertness there.\nThis does not exclude nonfaithful observations that support selected operations.",
+      "old": "A split two-color observer over the full modulus therefore\nfails for a different reason than in E6: ramification here, inertness there.",
+      "path": "root_lattice/PROOF.md"
+    },
+    {
+      "before_sha256": "c230ba6dab9ec5d0e736e6355d82ed3c17afcca00a01d598b0ed36d15e5e0b23",
+      "new": "\n### The correctly weighted spectrum\n\nFor an odd prime ell, the full ell-by-ell symmetric matrix S_ell has\ncharacteristic polynomial\n\n    X^((ell-1)/2) (X+2)^((ell-3)/2)\n       [X\u00b2-(ell-3)X-(ell-1)].                            (3)\n\nIndeed the functions odd under d\u2194-d form a zero eigenspace of dimension\n(ell-1)/2. On the even functions, use the negation-orbit quotient with\nweights(1,2,...,2). The functions zero at0 whose values on the nonzero\norbits sum to0 have eigenvalue-2, with dimension(ell-3)/2. The remaining\ntwo-dimensional space consists of a value x at0 and a common value y at\nall nonzero orbits. Its matrix is\n\n    [ 0   ell-1 ]\n    [ 1   ell-3 ],\n\nwhose characteristic polynomial is the bracket in(3). These spaces exhaust\nthe carrier. In particular S5 has nonzero eigenvalues1+sqrt5,1-sqrt5,-2;\nS29 has13+sqrt197,13-sqrt197 and-2 with multiplicity13. CRT makes S145,\nafter the same permutation of rows and columns, S5 tensor S29. Its nonzero\neigenvalues are therefore the45 products of those nonzero local values,\nwith multiplicities; the remaining100 eigenvalues are0.\n\nThis is an exact source-weighted spectral calculation. Its zero odd sector\noccurs because the sieve predicate deliberately forgets either local sign;\nit is not the signed-unit doubling observer, whose odd sector carries\norientation transport. Nor is S145 a tournament adjacency matrix. The\nappearance of sqrt5 here follows from the displayed weighted2-by-2 block;\nit is not evidence that the native operations of the other lanes coincide.\n",
+      "old": "",
+      "path": "machines/RESULT.md"
+    }
+  ],
+  "review_bindings": [
+    {
+      "path": "tournament/check.py",
+      "sha256": "c49e3d33aec1c808f7dc7db12755aa5b9ba124a701e956e6182c6d1f4024da60"
+    },
+    {
+      "path": "tournament/normal.json",
+      "sha256": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a"
+    },
+    {
+      "path": "tournament/optimized.json",
+      "sha256": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a"
+    },
+    {
+      "path": "audit_tournament/check.py",
+      "sha256": "f2ab4a81d0d4bed1b9d610eb308520d85b39d0e067b27f9603d3b81f208b388b"
+    },
+    {
+      "path": "audit_tournament/normal.json",
+      "sha256": "503c8928aa93d3c7c3ad7763fa6f6bb46dadf988e5926c7c18508a001a417596"
+    },
+    {
+      "path": "audit_tournament/optimized.json",
+      "sha256": "503c8928aa93d3c7c3ad7763fa6f6bb46dadf988e5926c7c18508a001a417596"
+    },
+    {
+      "path": "orientations/check.py",
+      "sha256": "bc12a8e8f99ee375168db096ce5528bdc476a05b4c6b999a206cdee58b3c772b"
+    },
+    {
+      "path": "orientations/normal.json",
+      "sha256": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c"
+    },
+    {
+      "path": "orientations/optimized.json",
+      "sha256": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c"
+    },
+    {
+      "path": "audit_orientations/check_independent.py",
+      "sha256": "16f5371ad76fd882d0cd3bcc978fafc46e58c0c076381cf152a2bb956868ea1b"
+    },
+    {
+      "path": "audit_orientations/normal.json",
+      "sha256": "d1fcddc4e4a5a2b8a0c1850f84d9a189d3f0fbf1341d5872ee8f162b62fa2b47"
+    },
+    {
+      "path": "audit_orientations/optimized.json",
+      "sha256": "d1fcddc4e4a5a2b8a0c1850f84d9a189d3f0fbf1341d5872ee8f162b62fa2b47"
+    },
+    {
+      "path": "root_lattice/check.py",
+      "sha256": "06d8eebc0e0a320c83ac9846b6c163e82836d294280038cf8ec3a48198a9c2b2"
+    },
+    {
+      "path": "root_lattice/normal.json",
+      "sha256": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77"
+    },
+    {
+      "path": "root_lattice/optimized.json",
+      "sha256": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77"
+    },
+    {
+      "path": "audit_root_lattice/check.py",
+      "sha256": "6bd818b8a249f6370d090f036a090449b268559ad65eb656d69526a9936b9c68"
+    },
+    {
+      "path": "audit_root_lattice/normal.json",
+      "sha256": "39bea8fdcdedf6e7b2401731dad3c29205ebad1bfe414fc8a11b79fba84e70d6"
+    },
+    {
+      "path": "audit_root_lattice/optimized.json",
+      "sha256": "39bea8fdcdedf6e7b2401731dad3c29205ebad1bfe414fc8a11b79fba84e70d6"
+    },
+    {
+      "path": "machines/check.py",
+      "sha256": "681a2f4b8d387db173e0b2e694f87f80e909613abfdb670d81b8fa3013a38e8d"
+    },
+    {
+      "path": "machines/normal.json",
+      "sha256": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b"
+    },
+    {
+      "path": "machines/optimized.json",
+      "sha256": "ecd181b8acba3b32c0c3d94298fef1ff0e77ab0e22d88952f7630583a4c9954b"
+    },
+    {
+      "path": "audit_machines/check.py",
+      "sha256": "9087ce375d8a865a68674cc71b2fa5c08580a6628cab7e04898ca2b58f2ea134"
+    },
+    {
+      "path": "audit_machines/normal.json",
+      "sha256": "802e4046a46bb1392beb5580e6e9f2a595f0a9d30cb68d5237e6e6eb032f6858"
+    },
+    {
+      "path": "audit_machines/optimized.json",
+      "sha256": "802e4046a46bb1392beb5580e6e9f2a595f0a9d30cb68d5237e6e6eb032f6858"
+    },
+    {
+      "path": "tournament/README.md",
+      "sha256": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5"
+    },
+    {
+      "path": "orientations/NOTE.md",
+      "sha256": "3a6894b1589ef4ed3f469bab985d617984d97a9216800ba95f0352c3dccbf5a9"
+    },
+    {
+      "path": "root_lattice/PROOF.md",
+      "sha256": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101"
+    },
+    {
+      "path": "machines/RESULT.md",
+      "sha256": "46fc5ead18e8cf66a88d7ac59614b89b71064f104b56d2de5cb1134c0ffe70f3"
+    },
+    {
+      "path": "audit_tournament/REPORT.md",
+      "sha256": "ef0678bb692511adfce35b109f2117b9258bb31bb74e69afc5e1a735fd542b7b"
+    },
+    {
+      "path": "audit_orientations/REPORT.md",
+      "sha256": "ca4257849303cac6f3ace664e211f5fd2947c336aad97bdaf452dc9ca39406c8"
+    },
+    {
+      "path": "audit_root_lattice/REPORT.md",
+      "sha256": "f54c66993e6972befdeb68f4effb49628b89cc9736fabdf9461dd8070c5e483f"
+    },
+    {
+      "path": "audit_machines/REPORT.md",
+      "sha256": "347ae9c5df41f2c2593a660d9cb098f7ce3ed6e599eba031d398d55efab6dd82"
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "01-canon/MISTAKES.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "ba9bfdae2d5da6c6ab12ea6cbab70aa2e45094371c2a2a0293da9a0c8ebf497d"
+    },
+    {
+      "path": "01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "3faf679d5aded24746c0198daedfec04f7729fcbac3daff52035b92ec42dda89"
+    },
+    {
+      "path": "01-canon/theorems/THM-4146-rational-three-cycle-order-six-lift-horizontal-divisor-fibre-firewall.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "c610612bfd5d5ded0a7a20d967bfc59942c1592d19877d8865985f54255f0634"
+    },
+    {
+      "path": "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "e484d2fc378983faa144d1945573a382603a55f9cd6f60ebde64b838a983e2fe"
+    },
+    {
+      "path": "01-canon/theorems/THM-4819-regular-tournaments-under-native-moves-the-transitive-slab-exact-distance-and-the-prescribed-black-core.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "c74a00964dc37b9332c6630e3032fb77e6ab118d2fa1b51105e81da70b2aace6"
+    },
+    {
+      "path": "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9"
+    },
+    {
+      "path": "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5"
+    },
+    {
+      "path": "05-knowledge/results/arithmetic_braids_20260917_geometry.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "a9e3a8fda096cd97f1d14f4924fc76eedd81b094ef122ff7b567b7131b52c708"
+    },
+    {
+      "path": "05-knowledge/results/collatz_adaptive_mixture_flow_20261005.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "0f75e006321c83946ffb4c1992000cec665f2980b1012ccf6981c90ec994b7ca"
+    },
+    {
+      "path": "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
+    },
+    {
+      "path": "05-knowledge/results/paid_root_cycle_budget_20261026/README.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c"
+    },
+    {
+      "path": "05-knowledge/results/primitive_hopf_lie_bijection_20261020/PRIMITIVE_HOPF_LIE_BIJECTION.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "fd3ed52c18a0bbe924f9a151cc5575f3a7621d28e7655fa4d639f89a9a145e12"
+    },
+    {
+      "path": "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c"
+    },
+    {
+      "path": "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5"
+    },
+    {
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint2.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "1b4eeadecf776a78d60156ea16b6f1064f16e2df8486e6cb9e78ad34208b8133"
+    },
+    {
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "81b33007341cfea0ce0a93bc83577d44a3b1005cb549ca207d08243aa0b7626c"
+    },
+    {
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-audit/ADVERSARIAL_REPORT.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "4fed89b0c5d65711af71ef31f2609307cf39dbba408abebcb9de03398309156a"
+    },
+    {
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-core/BLACK_CORE_GEODESICS.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "c4c15eaafd577706bb74a8b03f67b3077c4c1732777e53b264cee70628e2994e"
+    },
+    {
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-audit/REPORT.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1"
+    },
+    {
+      "path": "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-transport/REPORT.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/limits/LIMITS_AND_NORMALIZATION.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "fee711c1ae3cbd8beef64d3b36d67e1f6d1d662a889aae730180c42c8c126a17"
+    },
+    {
+      "path": "05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "9a7842df21867e9c7760505d6f91d37ebcee5902e43b27a16486054b9904c017"
+    },
+    {
+      "path": "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md",
+      "revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+      "sha256": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267"
+    },
+    {
+      "path": "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "e694122f3b7d2ca1170e486481fffc16d2c068943149a13f612b2d71e82c1683"
+    },
+    {
+      "path": "01-canon/theorems/THM-4853-primegame-step-counts-in-closed-form-oeis-a007546-is-the-15-14-list-a007547-the-conway-1987-list-and-their-difference-is-a-sum-of-largest-proper-divisors.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "4ff7228cd571bb550babfab17f0ad6f3f68be69e718f32be3b21e24dcd8d3085"
+    },
+    {
+      "path": "01-canon/theorems/THM-4854-primegame-four-blocks-register-decomposition-bipartite-flags-triangular-semiprimes-metagraph-quotient-of-complement-graph.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "584e2c55f5ed835ed123389a7c7039e2ad69d2c757d5db3fad599f0892e4c43c"
+    },
+    {
+      "path": "05-knowledge/results/fractran_turing_circulant_goldbach_20261101.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "b7b5a57f5059abc0d1d07e81e54ccb8c1e5264af4e76e5bdaa06b6da4f5dc602"
+    },
+    {
+      "path": "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
+    },
+    {
+      "path": "05-knowledge/results/lenses_tm_ca_fractran_tournaments_20261101.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "05a76f5255329b45109806fce7599efe0e2e5826654a5e530a0411e810a0159d"
+    },
+    {
+      "path": "05-knowledge/results/machines_automata_fractran_tournaments_dictionary_20261101/README.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "fe98f7ba5190a1551ae943e685dc0cb363ac09376b46255206b3bc1bd0585539"
+    },
+    {
+      "path": "05-knowledge/results/stability_priority_moduli_20261102/FRACTRAN_PRECISION.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "09b0e82518ceebccdeedf90bb5160c21e7e4a74275a569b30be2dff93631486d"
+    },
+    {
+      "path": "05-knowledge/results/twin_pythagorean_124_20261026/tree/RESULT.md",
+      "revision": "89c753882f26fb6a61d5954c5e8cb52c13725007",
+      "sha256": "3fc084520a95c7c3b6bae1f02f862f36ca4d2e43e0abcdeae36f5a421076a4c3"
+    },
+    {
+      "path": "00-navigation/S146.md",
+      "revision": "f139791ef3f194128283655cde6c1e77e2504337",
+      "sha256": "7dd82ca7f7789d0c2c07974559c572a0a7d1f5626c79e649686a50cf0bb3598b"
+    },
+    {
+      "path": "05-knowledge/results/chart_clique_norm_20261103/ARITHMETIC.md",
+      "revision": "f139791ef3f194128283655cde6c1e77e2504337",
+      "sha256": "ad09f562b0689d8076df48abbf9f46780c58f2bd57cd310935d6618b95044543"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier10_upper/PROOF.md",
+      "revision": "f139791ef3f194128283655cde6c1e77e2504337",
+      "sha256": "830fad776d3ff32a0bda00d8241fb79319864255c71f7822af9420c6f50d2b51"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/machines/README.md",
+      "revision": "f139791ef3f194128283655cde6c1e77e2504337",
+      "sha256": "bfc6c8a635443363424641d8b86e850d65947938cc04ff87314e274d4efc815b"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/prime290/README.md",
+      "revision": "f139791ef3f194128283655cde6c1e77e2504337",
+      "sha256": "c0696bf9adf5987a1e915ff052587e6d92480202de98c201bd79e883a69b594b"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/prime290/WHEEL_GENERAL.md",
+      "revision": "f139791ef3f194128283655cde6c1e77e2504337",
+      "sha256": "c87a8e4aff0dbe6b7cf8ecb4b08b961973285e705ce05fb2e009460b9a42f8c9"
+    }
+  ],
+  "status": "PROVED scoped with independent audits; finite controls explicitly bounded",
+  "suites": [
+    {
+      "count_key": "checks",
+      "gates": 158599,
+      "normal": "tournament/normal.json",
+      "optimized": "tournament/optimized.json",
+      "program": "tournament/check.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 60356,
+      "normal": "audit_tournament/normal.json",
+      "optimized": "audit_tournament/optimized.json",
+      "program": "audit_tournament/check.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 51902,
+      "normal": "orientations/normal.json",
+      "optimized": "orientations/optimized.json",
+      "program": "orientations/check.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 174568,
+      "normal": "audit_orientations/normal.json",
+      "optimized": "audit_orientations/optimized.json",
+      "program": "audit_orientations/check_independent.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 719750,
+      "normal": "root_lattice/normal.json",
+      "optimized": "root_lattice/optimized.json",
+      "program": "root_lattice/check.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 705606,
+      "normal": "audit_root_lattice/normal.json",
+      "optimized": "audit_root_lattice/optimized.json",
+      "program": "audit_root_lattice/check.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 454980,
+      "normal": "machines/normal.json",
+      "optimized": "machines/optimized.json",
+      "program": "machines/check.py"
+    },
+    {
+      "count_key": "gates",
+      "gates": 83323,
+      "normal": "audit_machines/normal.json",
+      "optimized": "audit_machines/optimized.json",
+      "program": "audit_machines/check.py"
+    }
+  ]
+}

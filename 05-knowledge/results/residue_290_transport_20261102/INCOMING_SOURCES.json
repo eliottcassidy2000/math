@@ -1,0 +1,12 @@
+{
+  "scope": "Read proofs and independently reviewed overlap; large incoming certificates not rerun",
+  "source_revision": "f139791ef3f194128283655cde6c1e77e2504337",
+  "sources": {
+    "00-navigation/S146.md": "7dd82ca7f7789d0c2c07974559c572a0a7d1f5626c79e649686a50cf0bb3598b",
+    "05-knowledge/results/chart_clique_norm_20261103/ARITHMETIC.md": "ad09f562b0689d8076df48abbf9f46780c58f2bd57cd310935d6618b95044543",
+    "05-knowledge/results/session146_carrier_primegame_20261103/carrier10_upper/PROOF.md": "830fad776d3ff32a0bda00d8241fb79319864255c71f7822af9420c6f50d2b51",
+    "05-knowledge/results/session146_carrier_primegame_20261103/machines/README.md": "bfc6c8a635443363424641d8b86e850d65947938cc04ff87314e274d4efc815b",
+    "05-knowledge/results/session146_carrier_primegame_20261103/prime290/README.md": "c0696bf9adf5987a1e915ff052587e6d92480202de98c201bd79e883a69b594b",
+    "05-knowledge/results/session146_carrier_primegame_20261103/prime290/WHEEL_GENERAL.md": "c87a8e4aff0dbe6b7cf8ecb4b08b961973285e705ce05fb2e009460b9a42f8c9"
+  }
+}

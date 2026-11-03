@@ -32,3 +32,28 @@ through an exact operation; failures are recorded with their strongest survivor.
 Startup used start_session.py and current protocol/guardrail/frontier routes.
 Targeted processor invocation failed because .machine-id is absent; no machine
 identity or registration was invented. No chronological log was used as truth.
+
+## Final board revisit
+
+- The56 coincidence now has an exact odd-unit-pair map, with ten prime pairs;
+  the Cayley/tournament identification remains obstructed by nonuniform degree.
+- Sign folding produces both the MRB cancellation obstruction and an exact
+  signed doubling lift. The local sieve deliberately forgets more signs, with
+  rank45 and explicit weights; these are different observation targets.
+- The same triangle supports prime-pair, divisor-trial and literal-register
+  charts, but their guards and clocks differ. Ordered ports and v2 repair two
+  actual machine ambiguities; spatial bounded-step encoding still fails.
+- Eisenstein145/290 are inert-norm obstructions; Gaussian145 splits and290
+  ramifies. Faithful ring recovery is stronger than supporting a selected shear.
+- The scalar recurrence is literal and noncircular, with a growing arithmetic
+  coefficient cost. Current black-core and Session98 work are inherited by scope.
+- ROOT's zero-forcing mode carries a boundary value, not a native P debt payment.
+  Common-prefix clock transport exposes cross-prefix interactions as the next
+  unpaid interface. None of these maps settles the listed famous conjectures.
+
+The final incoming pass adds two useful boundaries: the pooled-parity carrier
+has invisible directions from order10, and integral Eisenstein norms exactly
+govern the inherited cubic's integer collisions. The28/145/290 comparison is
+now an explicit norm-to-collision map; the local norm17 control shows which
+integer-height information is lost modulo290. Session146's tape CA and our
+literal-value-plane obstruction concern different spatial encodings.

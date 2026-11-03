@@ -81,3 +81,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session146](S146.md): Full fixed-attachment response dimension 2668 at order seven, with all-order lower bounds; higher-order minimality remains open.
 
 [Session147](S147.md): Square-sum component decomposition, triangle-free pair obstruction and sharp distance threshold; exact finite graph audits.
+
+[290 signed transport](../05-knowledge/results/residue_290_transport_20261102/README.md): audited prime-pair/PRIMEGAME triangles, weighted sieve rank45, signed doubling and lattice norms; explicit scalar A000568 recurrence and recovered ROOT/black-core routes. Uniform debt and global connectivity remain open.

@@ -1,9 +1,13 @@
 {
   "files": {
-    "NOTE.md": "729baac8ea4a5d7435d11e5e23b7cb20aceb3c4fea9ca17b5820c2a18d84380e",
+    "NOTE.md": "3a6894b1589ef4ed3f469bab985d617984d97a9216800ba95f0352c3dccbf5a9",
     "check.py": "bc12a8e8f99ee375168db096ce5528bdc476a05b4c6b999a206cdee58b3c772b",
     "normal.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c",
     "optimized.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c"
+  },
+  "independent_audit": {
+    "path": "../audit_orientations/REPORT.md",
+    "sha256": "ca4257849303cac6f3ace664e211f5fd2947c336aad97bdaf452dc9ca39406c8"
   },
   "primary_sources": [
     {
@@ -17,6 +21,13 @@
       "url": "https://dlmf.nist.gov/27.8#E6"
     }
   ],
+  "promotion": {
+    "candidate_sha256": "729baac8ea4a5d7435d11e5e23b7cb20aceb3c4fea9ca17b5820c2a18d84380e",
+    "new": "**PROVED O1\u2013O4; independently audited PASS.**\n[Independent audit](../audit_orientations/REPORT.md).",
+    "old": "**PROOF CANDIDATE O1\u2013O4; independent audit pending.**",
+    "path": "orientations/NOTE.md",
+    "promoted_sha256": "3a6894b1589ef4ed3f469bab985d617984d97a9216800ba95f0352c3dccbf5a9"
+  },
   "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
   "sources": {
     "01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md": "3faf679d5aded24746c0198daedfec04f7729fcbac3daff52035b92ec42dda89",
@@ -24,5 +35,5 @@
     "05-knowledge/results/arithmetic_braids_20260917_geometry.md": "a9e3a8fda096cd97f1d14f4924fc76eedd81b094ef122ff7b567b7131b52c708",
     "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
   },
-  "status": "PROOF CANDIDATE O1\u2013O4, independent audit pending"
+  "status": "PROVED O1\u2013O4 after independent audit"
 }

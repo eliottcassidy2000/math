@@ -1,0 +1,50 @@
+{
+  "files": {
+    "REPORT.md": "f54c66993e6972befdeb68f4effb49628b89cc9736fabdf9461dd8070c5e483f",
+    "check.py": "6bd818b8a249f6370d090f036a090449b268559ad65eb656d69526a9936b9c68",
+    "normal.json": "39bea8fdcdedf6e7b2401731dad3c29205ebad1bfe414fc8a11b79fba84e70d6",
+    "optimized.json": "39bea8fdcdedf6e7b2401731dad3c29205ebad1bfe414fc8a11b79fba84e70d6"
+  },
+  "independent_gates": 705606,
+  "inherited": {
+    "01-canon/MISTAKES.md": "ba9bfdae2d5da6c6ab12ea6cbab70aa2e45094371c2a2a0293da9a0c8ebf497d",
+    "05-knowledge/results/collatz_adaptive_mixture_flow_20261005.md": "0f75e006321c83946ffb4c1992000cec665f2980b1012ccf6981c90ec994b7ca",
+    "05-knowledge/results/paid_root_cycle_budget_20261026/README.md": "21b5845d0fea0aa2a5b1f347d208686d05f30b8f410fbf6f894f8d5a0fb16b3c",
+    "05-knowledge/results/session140_collatz_hexagonal_geometry_20261102/collatz_hex/PROOF.md": "e742e475d53cd2bd8532dc3aaef7ace817ede5fed9803b46477260f9f8bfc07c",
+    "05-knowledge/results/session73_paid_root_exception_budgets_20261027/session73-root-forcing/REPORT.md": "ca29b91168c1ff2c8b51c6e991bc467d493875002a470e45ca31d1e4c9e3e3c5",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint2.md": "1b4eeadecf776a78d60156ea16b6f1064f16e2df8486e6cb9e78ad34208b8133",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/README.checkpoint3.md": "81b33007341cfea0ce0a93bc83577d44a3b1005cb549ca207d08243aa0b7626c",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-audit/REPORT.md": "cb04bbad1117e909e9357b9ca2d21483d4e2e23f6f3e4a5bc3d4571eaf206da1",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-root-transport/REPORT.md": "553963c69c948b315c055473c826e14a77f31cb51ae779cfb24458d7b55ab5aa",
+    "05-knowledge/results/six_seven_gale_cube_20261025/NORM_SEVEN_CONTINUATION.md": "86890d0f37b3e9ff37c09d0bf345981c8d6e4748660589a4b23f0b23ae37f267"
+  },
+  "producer_replay_gates": 719750,
+  "promotion_inverse_verified": {
+    "candidate_sha256": "fd8bc3e5ed62977ed959dc3742b426e972461a859e48069b395e5763e8510138",
+    "inverse_verified": true,
+    "new": "**Status: PROVED U1\u2013U3, P1 and E1\u2013E7; independently audited PASS.**\n[Independent audit](../audit_root_lattice/REPORT.md).",
+    "old": "**Status: PROOF CANDIDATE U1\u2013U3, P1 and E1\u2013E7; root audit pending.**",
+    "path": "PROOF.md",
+    "promoted_sha256": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101"
+  },
+  "reviewed": {
+    "PROOF.md": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101",
+    "REVISION.json": "ffdaf70a9b97ce17344e8803fb64095e8e751b6ce13a4e330c09f5977242e220",
+    "SOURCES.json": "670fb2df1c2fb9b75f889c73c7b5e7eefcfbb0502e639887ae29af37ab4921b9",
+    "WORDING_REVISION.json": "52431777af3df66f59147dcbaeda315724b0e2c30590eeec479eb524902eff1c",
+    "check.py": "06d8eebc0e0a320c83ac9846b6c163e82836d294280038cf8ec3a48198a9c2b2",
+    "normal.json": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77",
+    "optimized.json": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77"
+  },
+  "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+  "verdict": "PASS U1-U3, P1, E1-E7 after three precision repairs",
+  "wording_inverse_verified": {
+    "new": "A faithful split two-color ring presentation over the full modulus therefore\nfails for a different reason than in E6: ramification here, inertness there.\nThis does not exclude nonfaithful observations that support selected operations.",
+    "old": "A split two-color observer over the full modulus therefore\nfails for a different reason than in E6: ramification here, inertness there.",
+    "previous_candidate_sha256": "936816961daa4c2f44dc25aef91393b065a9c992c71ecc5ded8a7f78c106ac74",
+    "previous_promoted_sha256": "99167ad09513a908d87a578e8d772866fd190bd4027cbcbdc78cd6c77e9555bf",
+    "reason": "Independent auditor: nonreduced ring obstructs faithful split ring presentation, not every nonfaithful deterministic observer",
+    "revised_candidate_sha256": "fd8bc3e5ed62977ed959dc3742b426e972461a859e48069b395e5763e8510138",
+    "revised_promoted_sha256": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101"
+  }
+}

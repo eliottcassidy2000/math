@@ -1,0 +1,10 @@
+{
+  "independent_report_sha256": "347ae9c5df41f2c2593a660d9cb098f7ce3ed6e599eba031d398d55efab6dd82",
+  "promotion": {
+    "candidate_sha256": "4add1a89370b9ec62c622e62132ba7b0c2c8b160e5262bf91acfd867baa37c8a",
+    "new": "**PROVED M1\u2013M4; independently audited PASS.**\n[Independent audit](../audit_machines/REPORT.md).",
+    "old": "**PROOF CANDIDATE M1\u2013M4; independent audit pending.**",
+    "path": "machines/RESULT.md",
+    "promoted_sha256": "46fc5ead18e8cf66a88d7ac59614b89b71064f104b56d2de5cb1134c0ffe70f3"
+  }
+}

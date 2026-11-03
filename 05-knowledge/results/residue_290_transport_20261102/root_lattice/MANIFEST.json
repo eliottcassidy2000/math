@@ -1,0 +1,28 @@
+{
+  "files": {
+    "PROOF.md": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101",
+    "REVISION.json": "ffdaf70a9b97ce17344e8803fb64095e8e751b6ce13a4e330c09f5977242e220",
+    "SOURCES.json": "670fb2df1c2fb9b75f889c73c7b5e7eefcfbb0502e639887ae29af37ab4921b9",
+    "WORDING_REVISION.json": "52431777af3df66f59147dcbaeda315724b0e2c30590eeec479eb524902eff1c",
+    "check.py": "06d8eebc0e0a320c83ac9846b6c163e82836d294280038cf8ec3a48198a9c2b2",
+    "normal.json": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77",
+    "optimized.json": "c871cec1381c2b9cb5756644209bd5b87ac65a79434c9fd421a95d1c8314fe77"
+  },
+  "gates": 719750,
+  "independent_audit": {
+    "path": "../audit_root_lattice/REPORT.md",
+    "sha256": "f54c66993e6972befdeb68f4effb49628b89cc9736fabdf9461dd8070c5e483f"
+  },
+  "normal_optimized_identical": true,
+  "promotion": {
+    "candidate_sha256": "fd8bc3e5ed62977ed959dc3742b426e972461a859e48069b395e5763e8510138",
+    "inverse_verified": true,
+    "new": "**Status: PROVED U1\u2013U3, P1 and E1\u2013E7; independently audited PASS.**\n[Independent audit](../audit_root_lattice/REPORT.md).",
+    "old": "**Status: PROOF CANDIDATE U1\u2013U3, P1 and E1\u2013E7; root audit pending.**",
+    "path": "PROOF.md",
+    "promoted_sha256": "ef6d6cbbdded7601c7938565b5e2be766bd71d22b21c656f0bfbe88e4fb9d101"
+  },
+  "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+  "status": "PROVED U1\u2013U3/P1/E1\u2013E7; independent audit PASS; finite controls FINITE-EXACT",
+  "wording_revision": "WORDING_REVISION.json"
+}
