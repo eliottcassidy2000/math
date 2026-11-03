@@ -1,0 +1,15 @@
+{
+  "common_H": [
+    462915,
+    462915
+  ],
+  "common_cyclic_triples": 67,
+  "groups": [
+    81,
+    27
+  ],
+  "port8_after_sink": [
+    2390013,
+    1754919
+  ]
+}
