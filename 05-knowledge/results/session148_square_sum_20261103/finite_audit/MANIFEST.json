@@ -1,0 +1,37 @@
+{
+  "files": [
+    {
+      "bytes": 1707,
+      "path": "README.md",
+      "sha256": "5e8c1d5a537c0e1ae50db90d4ed96f4759efae6c693d03ccb77c51b55eff834a"
+    },
+    {
+      "bytes": 6139,
+      "path": "results.json",
+      "sha256": "015602b0685f395416504096a7c1df645ce08de135b5716a80c72a1087d8cfd9"
+    },
+    {
+      "bytes": 3165,
+      "path": "verify.py",
+      "sha256": "85c1102d5515fd0490fa06e007e102bf6ddf26dda37f378b2003599c901ff39a"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S148.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "verify.py",
+      "stdout_sha256": "015602b0685f395416504096a7c1df645ce08de135b5716a80c72a1087d8cfd9"
+    }
+  ],
+  "schema": 1,
+  "scope": "Independent finite audit: square-sum births n<=500 and ordered Hamilton paths n<=25"
+}

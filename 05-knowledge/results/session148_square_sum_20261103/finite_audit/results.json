@@ -1,0 +1,379 @@
+{
+  "checks": "PASS",
+  "scope": "n=1..500 edge enumeration; n=1..25 exact oriented Hamilton paths",
+  "rows": [
+    {
+      "n": 1,
+      "birth": 0,
+      "edges": 0,
+      "edges_minus_n_minus_1": 0,
+      "oriented_paths": 1,
+      "endpoint_counts": {
+        "1": 1
+      }
+    },
+    {
+      "n": 2,
+      "birth": 0,
+      "edges": 0,
+      "edges_minus_n_minus_1": -1,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 3,
+      "birth": 1,
+      "edges": 1,
+      "edges_minus_n_minus_1": -1,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 4,
+      "birth": 0,
+      "edges": 1,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 5,
+      "birth": 1,
+      "edges": 2,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 6,
+      "birth": 1,
+      "edges": 3,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 7,
+      "birth": 1,
+      "edges": 4,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 8,
+      "birth": 1,
+      "edges": 5,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 9,
+      "birth": 1,
+      "edges": 6,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 10,
+      "birth": 1,
+      "edges": 7,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 11,
+      "birth": 1,
+      "edges": 8,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 12,
+      "birth": 1,
+      "edges": 9,
+      "edges_minus_n_minus_1": -2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 13,
+      "birth": 2,
+      "edges": 11,
+      "edges_minus_n_minus_1": -1,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 14,
+      "birth": 2,
+      "edges": 13,
+      "edges_minus_n_minus_1": 0,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 15,
+      "birth": 2,
+      "edges": 15,
+      "edges_minus_n_minus_1": 1,
+      "oriented_paths": 2,
+      "endpoint_counts": {
+        "8": 1,
+        "9": 1
+      }
+    },
+    {
+      "n": 16,
+      "birth": 1,
+      "edges": 16,
+      "edges_minus_n_minus_1": 1,
+      "oriented_paths": 2,
+      "endpoint_counts": {
+        "8": 1,
+        "16": 1
+      }
+    },
+    {
+      "n": 17,
+      "birth": 1,
+      "edges": 17,
+      "edges_minus_n_minus_1": 1,
+      "oriented_paths": 2,
+      "endpoint_counts": {
+        "16": 1,
+        "17": 1
+      }
+    },
+    {
+      "n": 18,
+      "birth": 1,
+      "edges": 18,
+      "edges_minus_n_minus_1": 1,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 19,
+      "birth": 2,
+      "edges": 20,
+      "edges_minus_n_minus_1": 2,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 20,
+      "birth": 2,
+      "edges": 22,
+      "edges_minus_n_minus_1": 3,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 21,
+      "birth": 2,
+      "edges": 24,
+      "edges_minus_n_minus_1": 4,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 22,
+      "birth": 2,
+      "edges": 26,
+      "edges_minus_n_minus_1": 5,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 23,
+      "birth": 2,
+      "edges": 28,
+      "edges_minus_n_minus_1": 6,
+      "oriented_paths": 6,
+      "endpoint_counts": {
+        "2": 1,
+        "9": 1,
+        "18": 3,
+        "22": 1
+      }
+    },
+    {
+      "n": 24,
+      "birth": 2,
+      "edges": 30,
+      "edges_minus_n_minus_1": 7,
+      "oriented_paths": 0,
+      "endpoint_counts": {}
+    },
+    {
+      "n": 25,
+      "birth": 2,
+      "edges": 32,
+      "edges_minus_n_minus_1": 8,
+      "oriented_paths": 20,
+      "endpoint_counts": {
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "13": 1,
+        "18": 10,
+        "22": 1,
+        "23": 1
+      }
+    }
+  ],
+  "p15": [
+    8,
+    1,
+    15,
+    10,
+    6,
+    3,
+    13,
+    12,
+    4,
+    5,
+    11,
+    14,
+    2,
+    7,
+    9
+  ],
+  "prime_rows": [
+    {
+      "p": 2,
+      "birth": 0,
+      "edges": 0
+    },
+    {
+      "p": 3,
+      "birth": 1,
+      "edges": 1
+    },
+    {
+      "p": 5,
+      "birth": 1,
+      "edges": 2
+    },
+    {
+      "p": 7,
+      "birth": 1,
+      "edges": 4
+    },
+    {
+      "p": 11,
+      "birth": 1,
+      "edges": 8
+    },
+    {
+      "p": 13,
+      "birth": 2,
+      "edges": 11
+    },
+    {
+      "p": 17,
+      "birth": 1,
+      "edges": 17
+    },
+    {
+      "p": 19,
+      "birth": 2,
+      "edges": 20
+    },
+    {
+      "p": 23,
+      "birth": 2,
+      "edges": 28
+    },
+    {
+      "p": 29,
+      "birth": 2,
+      "edges": 40
+    },
+    {
+      "p": 31,
+      "birth": 2,
+      "edges": 44
+    },
+    {
+      "p": 37,
+      "birth": 2,
+      "edges": 59
+    },
+    {
+      "p": 41,
+      "birth": 3,
+      "edges": 68
+    },
+    {
+      "p": 43,
+      "birth": 3,
+      "edges": 74
+    },
+    {
+      "p": 47,
+      "birth": 3,
+      "edges": 86
+    },
+    {
+      "p": 53,
+      "birth": 3,
+      "edges": 102
+    },
+    {
+      "p": 59,
+      "birth": 3,
+      "edges": 120
+    },
+    {
+      "p": 61,
+      "birth": 4,
+      "edges": 127
+    },
+    {
+      "p": 67,
+      "birth": 3,
+      "edges": 147
+    },
+    {
+      "p": 71,
+      "birth": 3,
+      "edges": 159
+    },
+    {
+      "p": 73,
+      "birth": 4,
+      "edges": 166
+    },
+    {
+      "p": 79,
+      "birth": 4,
+      "edges": 190
+    },
+    {
+      "p": 83,
+      "birth": 3,
+      "edges": 203
+    },
+    {
+      "p": 89,
+      "birth": 4,
+      "edges": 226
+    },
+    {
+      "p": 97,
+      "birth": 4,
+      "edges": 258
+    }
+  ],
+  "hostile_controls": "PASS"
+}

@@ -83,3 +83,5 @@ individual session routes preserve scope and remaining open obligations.
 [Session147](S147.md): Square-sum component decomposition, triangle-free pair obstruction and sharp distance threshold; exact finite graph audits.
 
 [290 signed transport](../05-knowledge/results/residue_290_transport_20261102/README.md): audited prime-pair/PRIMEGAME triangles, weighted sieve rank45, signed doubling and lattice norms; explicit scalar A000568 recurrence and recovered ROOT/black-core routes. Uniform debt and global connectivity remain open.
+
+[Session148](S148.md): Independent finite square-sum growth and Hamilton-path audit.
