@@ -1,0 +1,50 @@
+[
+  {
+    "repository": "eliottcassidy2000/math",
+    "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+    "path": "05-knowledge/results/primegame_port_spectrum_20261103/FOREST_RESPONSE_RECURRENCE.md",
+    "git_blob": "46f7bedfbb4518fe744107e0accb2cbe238183c3",
+    "sha256": "0bb6a6b0624495b9ccc4123a2db544f2764f92c01138c4b0b241d6ef2ad73b0b",
+    "local_copy": "sources/0_FOREST_RESPONSE_RECURRENCE.md.txt"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+    "path": "05-knowledge/results/session86_relations_attachment_carriers_20261028/CLOSED_ATTACHMENT_CARRIERS.md",
+    "git_blob": "099424cff6a169fd9d388f4396afa45fceabf061",
+    "sha256": "a5eba655f7c265321bff8dfd0ec6ef77fbf39a6b488704ab2b7048ac653971bf",
+    "local_copy": "sources/1_CLOSED_ATTACHMENT_CARRIERS.md.txt"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+    "path": "05-knowledge/results/kernels_games_detours_20261020f/walks_knots.md",
+    "git_blob": "b4b6d4ae417b5d0d1d2a67a15723b1d251eb60c4",
+    "sha256": "ef0670192a754af7477ead0a6b92ef5572795bc5049a220b7ce15a88f7d733b5",
+    "local_copy": "sources/2_walks_knots.md.txt"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+    "path": "05-knowledge/results/ramsey_saturated_ports_20261030/README.md",
+    "git_blob": "65510057e2dbc017259dfe15b1a9cbde6f0eb5d1",
+    "sha256": "e69a6cd018ae159e5a117746cd92a0a8e3ad26bd0b75fdb05710e1df1b0c0282",
+    "local_copy": "sources/3_README.md.txt"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+    "path": "05-knowledge/results/ramsey_neighbourhood_lifts_20261030/NEIGHBOURHOODS.md",
+    "git_blob": "04bd02d837f332d7d7d510cab5078a14608c24a3",
+    "sha256": "f99ee85dabcfdaeb5de311a420e4eb33f027575e46fe55c618a8d556859f33ee",
+    "local_copy": "sources/4_NEIGHBOURHOODS.md.txt"
+  },
+  {
+    "repository": "eliottcassidy2000/math",
+    "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+    "path": "05-knowledge/results/session54_reframed_numerology_20261025/paley-endpoint-observer/RESULT.md",
+    "git_blob": "5baec95cc923f63e80c1300eba7628517c3657f5",
+    "sha256": "f19983c65ee697973d3d744babe582ee19d964a44a6c24a571b9940032e84ba0",
+    "local_copy": "sources/5_RESULT.md.txt"
+  }
+]

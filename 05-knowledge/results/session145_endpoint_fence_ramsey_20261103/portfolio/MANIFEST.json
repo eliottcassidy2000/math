@@ -1,0 +1,441 @@
+{
+  "files": [
+    {
+      "bytes": 933,
+      "path": "fences/CORRECTIONS.md",
+      "sha256": "5b2849a7c19c96826228c66ca403a51c1a200dd16506937d7388ec351471c32d"
+    },
+    {
+      "bytes": 10650,
+      "path": "fences/PROOF.md",
+      "sha256": "a9abe6f191238fd786da875e713f731a95cbbb7f90d565463911e3d359790826"
+    },
+    {
+      "bytes": 426,
+      "path": "fences/PUBLIC_FILES.json",
+      "sha256": "344a25bd90b1b564aa09dab8bb1359b1faaee142391dedb40e181888faa70ec2"
+    },
+    {
+      "bytes": 2537,
+      "path": "fences/README.md",
+      "sha256": "903241138ef17c55fec05ad6cc62a0aaa738b6189330c425eebb7ac919864891"
+    },
+    {
+      "bytes": 1383,
+      "path": "fences/SHA256SUMS",
+      "sha256": "538065d37aa235ca63d9a043bc316331cf1438db72796444b7c56583bd5b6dee"
+    },
+    {
+      "bytes": 2010,
+      "path": "fences/SOURCE_PINS.json",
+      "sha256": "8d1e3146b4c58fb19e1bcf57184b10f25aebfee39afed7f537ef07fb500dfbb1"
+    },
+    {
+      "bytes": 1867,
+      "path": "fences/draw.py",
+      "sha256": "9bd3d222c61453c9dc00330ab1da5a01065edcebd108dc2d31ea22b8251955f4"
+    },
+    {
+      "bytes": 41184,
+      "path": "fences/theta12.svg",
+      "sha256": "1e041aeae8879fe1843bb7fd9deead41ad21dcf957e04bf6b9246f895140ee78"
+    },
+    {
+      "bytes": 4993,
+      "path": "fences/theta_addendum/PROOF.md",
+      "sha256": "e3edc02c161d7a03b549cbbacd7d18d42fd806b322c6a3430c37a5a5f180b52f"
+    },
+    {
+      "bytes": 850,
+      "path": "fences/theta_addendum/README.md",
+      "sha256": "b2fc627dc0da15a2530a148e84de2fb74a87b37bea81439d46b67978f124bc2a"
+    },
+    {
+      "bytes": 666,
+      "path": "fences/theta_addendum/SOURCE_PINS.json",
+      "sha256": "1ea04700905b51bca907c1fea728f4bdd4daa8c0969314076babc772c9e46e84"
+    },
+    {
+      "bytes": 498,
+      "path": "fences/theta_addendum/verification.json",
+      "sha256": "d7f970460d805f2167467d78ecf95deb4a965a8b4b0c9ff608703b2b92d3fb44"
+    },
+    {
+      "bytes": 498,
+      "path": "fences/theta_addendum/verification.optimized.json",
+      "sha256": "d7f970460d805f2167467d78ecf95deb4a965a8b4b0c9ff608703b2b92d3fb44"
+    },
+    {
+      "bytes": 3041,
+      "path": "fences/theta_addendum/verify.py",
+      "sha256": "6786fd8d45533e75d5a4936c1bc6beb9a6a0f630ef15910fc9c94aa97a70c3c6"
+    },
+    {
+      "bytes": 12777,
+      "path": "fences/verification.json",
+      "sha256": "e42c26c8636b584f3b0a5f6dd462024f56cd13ba7e36586de6ce4c4c5f6a727b"
+    },
+    {
+      "bytes": 12777,
+      "path": "fences/verification.optimized.json",
+      "sha256": "e42c26c8636b584f3b0a5f6dd462024f56cd13ba7e36586de6ce4c4c5f6a727b"
+    },
+    {
+      "bytes": 13944,
+      "path": "fences/verify.py",
+      "sha256": "db9b5646c07b0067ecd0a8d146cbd9a3935b0b0736a2fdcd384fefab0ef84ad4"
+    },
+    {
+      "bytes": 13506,
+      "path": "independent_bridge/AUDIT.md",
+      "sha256": "51911b17a0e4df0b5de4742147bb66444bdaba06127294cc8e8115adb75114c6"
+    },
+    {
+      "bytes": 1269,
+      "path": "independent_bridge/AUDIT_RECEIPTS.json",
+      "sha256": "165918673e3f49931eaea42382c99d30837d2d55777c94b1f6fb794690709e35"
+    },
+    {
+      "bytes": 2116,
+      "path": "independent_bridge/CORRECTION_LINEAGE.md",
+      "sha256": "bcb607d376a59882aa3df4e44aef9727be290296539f565ba318dd54025d6a48"
+    },
+    {
+      "bytes": 1969,
+      "path": "independent_bridge/MANIFEST.json",
+      "sha256": "41869bdbe5e50cf92aaceb6ceef4d797d36924a959cec233dda7d4c76aee75a3"
+    },
+    {
+      "bytes": 2499,
+      "path": "independent_bridge/README.md",
+      "sha256": "cb3091f9db227ca4208f78005931ee9ba3e7763b8c151fd5ebd25842d6f58cfc"
+    },
+    {
+      "bytes": 3907,
+      "path": "independent_bridge/SOURCE_EVIDENCE.json",
+      "sha256": "f3c4f6a00b61a9a4eb3e9915da2f82ce2c3d06aefe3a2517a1fcc2de3d26cb2e"
+    },
+    {
+      "bytes": 9025,
+      "path": "independent_bridge/check_magic_fence.py",
+      "sha256": "6bca8762e5ef372162f2c8397bb921cb5d2a91474b5cdefc56c101d28cbef7d8"
+    },
+    {
+      "bytes": 7092,
+      "path": "independent_bridge/check_ramsey_knots.py",
+      "sha256": "2a77245353585251825435eaf3924763e61e47cf539639991a542a573004a53a"
+    },
+    {
+      "bytes": 2093,
+      "path": "independent_bridge/check_theta.py",
+      "sha256": "2139b0e3065a3acf0537e394853000e013800418eef445583d5bbe4eb6a79a2f"
+    },
+    {
+      "bytes": 812,
+      "path": "independent_bridge/magic_fence.normal.json",
+      "sha256": "2c24f5b72b61d7ba18f3fa6c010f45b04d8d8a38383fe16c24e0fe27c386ea58"
+    },
+    {
+      "bytes": 812,
+      "path": "independent_bridge/magic_fence.optimized.json",
+      "sha256": "2c24f5b72b61d7ba18f3fa6c010f45b04d8d8a38383fe16c24e0fe27c386ea58"
+    },
+    {
+      "bytes": 2232,
+      "path": "independent_bridge/ramsey.normal.json",
+      "sha256": "7951fc83b0ac6b63122ebdfd69317a61208cd358b99fcd11679edaabdb52bcd0"
+    },
+    {
+      "bytes": 2232,
+      "path": "independent_bridge/ramsey.optimized.json",
+      "sha256": "7951fc83b0ac6b63122ebdfd69317a61208cd358b99fcd11679edaabdb52bcd0"
+    },
+    {
+      "bytes": 355,
+      "path": "independent_bridge/theta.normal.json",
+      "sha256": "5adebe0e42b43572abbaa0e70bd1f8d8de111affce7cb1b65b01182848ba2ee0"
+    },
+    {
+      "bytes": 355,
+      "path": "independent_bridge/theta.optimized.json",
+      "sha256": "5adebe0e42b43572abbaa0e70bd1f8d8de111affce7cb1b65b01182848ba2ee0"
+    },
+    {
+      "bytes": 2590,
+      "path": "independent_bridge/verify_package.py",
+      "sha256": "394bab6b97d5b0db3d495a1249e1721a7c1d87e24af69534dfe8cf0beda1c73e"
+    },
+    {
+      "bytes": 1858,
+      "path": "magic_frequency/MANIFEST.json",
+      "sha256": "f20bc9003c5d2750245727fb0c58d909f40a93f4cd6965433ba9d82f3705011f"
+    },
+    {
+      "bytes": 13226,
+      "path": "magic_frequency/PROOF.md",
+      "sha256": "f789de6a505748d66d27cedbddaea747b58db2e2be66345a3d1dc1736e8094d1"
+    },
+    {
+      "bytes": 1799,
+      "path": "magic_frequency/README.md",
+      "sha256": "2f6514407347a7f8824c810edecc3a3855cad89abee14a8afb7b0eb8768e8db2"
+    },
+    {
+      "bytes": 1151,
+      "path": "magic_frequency/SOURCE_PINS.json",
+      "sha256": "4c261d7139c1e848a3642eac9f4d2872d975905a34dfb2befe930356af8aac45"
+    },
+    {
+      "bytes": 888,
+      "path": "magic_frequency/hostile_results.json",
+      "sha256": "a0110fa94335873e6a0a0661914763abbb5f44e746e33aed81c949665734b83b"
+    },
+    {
+      "bytes": 888,
+      "path": "magic_frequency/hostile_results.optimized.json",
+      "sha256": "a0110fa94335873e6a0a0661914763abbb5f44e746e33aed81c949665734b83b"
+    },
+    {
+      "bytes": 2037,
+      "path": "magic_frequency/result.json",
+      "sha256": "02ca9ce680f9c778f7cfd74a4d41cf7a84d22a014396a80cc35cf0c4d893abd4"
+    },
+    {
+      "bytes": 2037,
+      "path": "magic_frequency/result.optimized.json",
+      "sha256": "02ca9ce680f9c778f7cfd74a4d41cf7a84d22a014396a80cc35cf0c4d893abd4"
+    },
+    {
+      "bytes": 10636,
+      "path": "magic_frequency/sources/frobenius_PROOF.md.txt",
+      "sha256": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f"
+    },
+    {
+      "bytes": 4039,
+      "path": "magic_frequency/sources/prior_f2_solfeggio.py",
+      "sha256": "e457f0f0785594760f5dc79475fd55ff39f9bcedc2370f5853d31cad5f762f6c"
+    },
+    {
+      "bytes": 40098,
+      "path": "magic_frequency/sources/prior_solfeggio_atlas.md.txt",
+      "sha256": "04662d781c3dc9ef6aa1e10f7722f49873a24d3ed3642977877080ef085a9517"
+    },
+    {
+      "bytes": 3073,
+      "path": "magic_frequency/test_controls.py",
+      "sha256": "aef88de391c84767358d5b16e349f2baa841fae01ecf6bb099d666cbc802a5a7"
+    },
+    {
+      "bytes": 7567,
+      "path": "magic_frequency/verify.py",
+      "sha256": "d2d20e444e6afed961ef0177e2591bf8b13b9a0067708f37bd694f3377afe5b1"
+    },
+    {
+      "bytes": 454,
+      "path": "magic_frequency/verify_manifest.py",
+      "sha256": "0e52ca7605ffddaedaa4d2a5f2305b9b6f31972bed551fee69e38792d878d71d"
+    },
+    {
+      "bytes": 638,
+      "path": "magic_frequency/verify_source_pins.py",
+      "sha256": "9736cb62e87212eb5c46437c836aa3f426fedc0741a407d49af3dad8196c1ba7"
+    },
+    {
+      "bytes": 1239,
+      "path": "ramsey_knots/CORRECTION_LINEAGE.md",
+      "sha256": "7face000d55d8465e6552848712d9df19253af7e5f60e3d1b7d16d90bea5b8b8"
+    },
+    {
+      "bytes": 1866,
+      "path": "ramsey_knots/MANIFEST.json",
+      "sha256": "09cb7fb10b7e6de17f4795292497c32eb7b7ae7fe18a07bac647d270ae1c9397"
+    },
+    {
+      "bytes": 16162,
+      "path": "ramsey_knots/PROOFS.md",
+      "sha256": "c6b81f47311eca1bfe7ebd4de374d5a16f6863283eedb49c0b98cd81fe5acb00"
+    },
+    {
+      "bytes": 1730,
+      "path": "ramsey_knots/README.md",
+      "sha256": "c8857ab60d1b66a104c35d93120bc71a0e7329358d49d5c01d6a3c5c56e61338"
+    },
+    {
+      "bytes": 4561,
+      "path": "ramsey_knots/SOURCES.md",
+      "sha256": "f3ab15f126a9ad65ea3b181e86e529b360efd4675a2761f88e063a350ed8a0a9"
+    },
+    {
+      "bytes": 2424,
+      "path": "ramsey_knots/SOURCE_PINS.json",
+      "sha256": "13231f0e0d5dc8ba225f8502e474fdcbaf8967ed1d023c28f37b2786bc076449"
+    },
+    {
+      "bytes": 1365,
+      "path": "ramsey_knots/independent.normal.json",
+      "sha256": "8115f5472fa76e73b6809fd06e47fee98268e4d9a38d728a4776572e24bdccf0"
+    },
+    {
+      "bytes": 1365,
+      "path": "ramsey_knots/independent.optimized.json",
+      "sha256": "8115f5472fa76e73b6809fd06e47fee98268e4d9a38d728a4776572e24bdccf0"
+    },
+    {
+      "bytes": 5138,
+      "path": "ramsey_knots/independent_checks.py",
+      "sha256": "e76af105ac96ea94b7a9431b00296e4ecbe74b7c0f22f1fbe1f34d19443a91c1"
+    },
+    {
+      "bytes": 13290,
+      "path": "ramsey_knots/sources/0_FOREST_RESPONSE_RECURRENCE.md.txt",
+      "sha256": "0bb6a6b0624495b9ccc4123a2db544f2764f92c01138c4b0b241d6ef2ad73b0b"
+    },
+    {
+      "bytes": 27896,
+      "path": "ramsey_knots/sources/1_CLOSED_ATTACHMENT_CARRIERS.md.txt",
+      "sha256": "a5eba655f7c265321bff8dfd0ec6ef77fbf39a6b488704ab2b7048ac653971bf"
+    },
+    {
+      "bytes": 7555,
+      "path": "ramsey_knots/sources/2_walks_knots.md.txt",
+      "sha256": "ef0670192a754af7477ead0a6b92ef5572795bc5049a220b7ce15a88f7d733b5"
+    },
+    {
+      "bytes": 4281,
+      "path": "ramsey_knots/sources/3_README.md.txt",
+      "sha256": "e69a6cd018ae159e5a117746cd92a0a8e3ad26bd0b75fdb05710e1df1b0c0282"
+    },
+    {
+      "bytes": 7052,
+      "path": "ramsey_knots/sources/4_NEIGHBOURHOODS.md.txt",
+      "sha256": "f99ee85dabcfdaeb5de311a420e4eb33f027575e46fe55c618a8d556859f33ee"
+    },
+    {
+      "bytes": 8166,
+      "path": "ramsey_knots/sources/5_RESULT.md.txt",
+      "sha256": "f19983c65ee697973d3d744babe582ee19d964a44a6c24a571b9940032e84ba0"
+    },
+    {
+      "bytes": 4721,
+      "path": "ramsey_knots/verification.normal.json",
+      "sha256": "c201cb24785baf5789d12bd78a57d130d5f97b3362ec7e09b53854b521d496d0"
+    },
+    {
+      "bytes": 4721,
+      "path": "ramsey_knots/verification.optimized.json",
+      "sha256": "c201cb24785baf5789d12bd78a57d130d5f97b3362ec7e09b53854b521d496d0"
+    },
+    {
+      "bytes": 1919,
+      "path": "ramsey_knots/verify_packet.py",
+      "sha256": "c1fa44e5178eb22f50c509d5b2219c9614aac49119c18aa1f9053548956569de"
+    },
+    {
+      "bytes": 6576,
+      "path": "ramsey_knots/verify_structures.py",
+      "sha256": "0a6f357ae3c34bc5b151398cc8458b5db1c74fbfa2234291c5704cc9dcb208ba"
+    },
+    {
+      "bytes": 825,
+      "path": "replay_receipt_script.py",
+      "sha256": "84810519b2ca9272157f5fba9d46c2425440d7921c47bcd732ea1c2373992d30"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "../README.md",
+    "../SYNTHESIS.md",
+    "../VERIFICATION.md",
+    "00-navigation/S145.md"
+  ],
+  "replay": [
+    {
+      "args": [
+        "--directory",
+        "fences",
+        "--script",
+        "verify.py"
+      ],
+      "script": "replay_receipt_script.py",
+      "stdout_sha256": "e42c26c8636b584f3b0a5f6dd462024f56cd13ba7e36586de6ce4c4c5f6a727b"
+    },
+    {
+      "args": [
+        "--directory",
+        "fences/theta_addendum",
+        "--script",
+        "verify.py"
+      ],
+      "script": "replay_receipt_script.py",
+      "stdout_sha256": "d7f970460d805f2167467d78ecf95deb4a965a8b4b0c9ff608703b2b92d3fb44"
+    },
+    {
+      "args": [],
+      "script": "magic_frequency/verify.py",
+      "stdout_sha256": "02ca9ce680f9c778f7cfd74a4d41cf7a84d22a014396a80cc35cf0c4d893abd4"
+    },
+    {
+      "args": [],
+      "script": "magic_frequency/test_controls.py",
+      "stdout_sha256": "a0110fa94335873e6a0a0661914763abbb5f44e746e33aed81c949665734b83b"
+    },
+    {
+      "args": [],
+      "script": "ramsey_knots/verify_structures.py",
+      "stdout_sha256": "c201cb24785baf5789d12bd78a57d130d5f97b3362ec7e09b53854b521d496d0"
+    },
+    {
+      "args": [],
+      "script": "ramsey_knots/independent_checks.py",
+      "stdout_sha256": "8115f5472fa76e73b6809fd06e47fee98268e4d9a38d728a4776572e24bdccf0"
+    },
+    {
+      "args": [
+        "--directory",
+        "independent_bridge",
+        "--script",
+        "check_magic_fence.py"
+      ],
+      "script": "replay_receipt_script.py",
+      "stdout_sha256": "2c24f5b72b61d7ba18f3fa6c010f45b04d8d8a38383fe16c24e0fe27c386ea58"
+    },
+    {
+      "args": [
+        "--directory",
+        "independent_bridge",
+        "--script",
+        "check_theta.py"
+      ],
+      "script": "replay_receipt_script.py",
+      "stdout_sha256": "5adebe0e42b43572abbaa0e70bd1f8d8de111affce7cb1b65b01182848ba2ee0"
+    },
+    {
+      "args": [],
+      "script": "independent_bridge/check_ramsey_knots.py",
+      "stdout_sha256": "7951fc83b0ac6b63122ebdfd69317a61208cd358b99fcd11679edaabdb52bcd0"
+    },
+    {
+      "script": "magic_frequency/verify_source_pins.py",
+      "stdout_sha256": "8dd1761833c39b95c6ae65265458b1512def50e513a4f10d6ed5944d13ee1b99"
+    },
+    {
+      "script": "magic_frequency/verify_manifest.py",
+      "stdout_sha256": "f91c628e605f702b7b7a8f9d999169475d1e92c8b629ce6ccd9ff69a6300bbc4"
+    },
+    {
+      "script": "ramsey_knots/verify_packet.py",
+      "stdout_sha256": "abc2249f86582be1d1fbdf9e0b9745dea98c7fe9ad8ecba4d3e687b3109805b1"
+    },
+    {
+      "script": "independent_bridge/verify_package.py",
+      "stdout_sha256": "3478539f49840590a43470c4064d8a9478bfc47d6cf5d654c42059654d95dfb7"
+    }
+  ],
+  "schema": 1,
+  "scope": "S145 CP2 immutable geometry, sparse Ramsey, knot-component and nine-label magic-map proofs, with independent exact audits and corrected scope boundaries."
+}

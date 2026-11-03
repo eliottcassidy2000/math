@@ -1,43 +1,60 @@
-# Session 145: endpoint carriers and typed geometric bridges
+# Session 145: sharp attachment carriers and scoped bridges
 
-**Checkpoint 1: PROVED all-order carrier compression; FINITE-EXACT minimum at
-order six. Other portfolio lanes are not yet part of this checkpoint.**
+**Two verified checkpoints.** The main new result is the smaller pooled-parity
+attachment carrier and its exact six-vertex minimum. The geometry, Ramsey,
+knot, and nine-label lanes add separate proved classifications and explicit
+boundaries; their shared vocabulary is not used to claim a grand equivalence.
 
-[Carrier proof](carrier/POOLED_PARITY_CARRIER.md) ·
+[Research synthesis](SYNTHESIS.md) · [Verification](VERIFICATION.md)
+
+## Attachment carrier: the strongest advance
+
+[Proof](carrier/POOLED_PARITY_CARRIER.md) ·
 [Independent audit](carrier/independent/AUDIT.md) ·
-[Verification](VERIFICATION.md) ·
-[Frozen carrier manifest](carrier/MANIFEST.json)
+[Frozen manifest](carrier/MANIFEST.json)
 
-The clearest new proof target produced a sharper theorem. Fixed source-oblivious
-Hamiltonian-count attachments need not retain which named internal vertices
-belong to which old path. Pool those vertices while retaining isolated labels,
-endpoint pairing, and each component's parity. This gives a rational linear
-carrier closed under every fixed attachment, relabelling, and ordinary converse.
-Its dimensions begin **1, 1, 2, 7, 28, 126, 571, 2668**.
+Pool named internal vertices across old path components, but retain isolated
+labels, endpoint pairing, and each component's parity. This gives an all-order
+closed rational carrier for means under all fixed source-oblivious attachments.
+Its coordinate counts begin **1,1,2,7,28,126,571,2668**. At order six, 90 pairs of
+the old 661 coordinates merge, and an independently reconstructed matrix has
+rank 571 modulo 101 and 103. Hence the exact rational linear minimum is **571**,
+or **570 varying coordinates** for normalized laws. The inherited minima
+7,28,126 and original all-order upper bound remain correct.
 
-At six old vertices the previous 661 coordinates compress to 571: 481 singleton
-classes and 90 paired classes. An independently reconstructed 571-by-571 exterior
-coefficient matrix has nonzero determinant modulo both 101 and 103. Multilinear
-interpolation places its rows in the span of actual fixed attachment responses.
-Thus **571 is the exact rational linear minimum at order six**, or 570 varying
-coordinates for normalized laws. The query class is all fixed attachments,
-not merely the restricted S/B word bank. All-order minimum dimension remains
-open; the all-order theorem is a closed upper bound and the coarsest exact
-pairwise signed-monomial quotient.
+All-order linear minimality remains open. The all-order classification is the
+coarsest pairwise signed-monomial quotient, which is not itself a rank theorem.
+Conditioning, source-adaptive attachments, and shared-source higher moments
+require additional information.
 
-The inherited endpoint-block bound and its exact minima 7, 28, 126 at orders
-three through five remain correct. The new result extends them rather than
-correcting a false statement. All older packets are preserved unchanged.
+## Three separate bridge lanes
 
-A strictly positive pair of source laws has identical means under every fixed
-attachment but different old endpoint-block coordinates. Shared-source second
-moments distinguish the laws in an explicit two-birth context. Conditioning
-and source-adaptive attachments are outside the proved operation class.
+- **[Fences and product packing](portfolio/fences/PROOF.md).** In the supported, nonoverlapping fence model with each field area at most one,
+  split-graph pseudoforests obey total field area at most n/4. Endpoint-only product cacti
+  have an exact balanced-cycle optimum. The known twelve-edge theta value
+  `(89+26 sqrt(13))/16` beats the cactus value `6+3 sqrt(3)`.
+  A [separate theorem](portfolio/fences/theta_addendum/PROOF.md) proves that
+  theta value optimal when its two-edge path separates the fields and the
+  terminal chord lies inside the outer polygon. The global optimum is open.
+- **[Sparse Ramsey and knot interfaces](portfolio/ramsey_knots/PROOFS.md).**
+  The maximum avoiding orders under the four stated forest/pseudoforest
+  promises are exactly `2,3,4,5` times `(k-1)`. Matching closures have loop
+  polynomial `product_(j=0)^(r-1)(z+2j)`, but matching does not determine knot
+  type. Pre-existing closed components require an additional count m.
+  The Paley-11 number 1729 is an endpoint-channel sum and an affine-orbit
+  count; a specified directed arc occurs in 17290 Hamilton words.
+- **[Nine labels and magic maps](portfolio/magic_frequency/PROOF.md).**
+  The actual nine decimal labels cannot be fully magic under any permutation
+  or nonconstant affine relabelling: their required center 555 is absent.
+  In the prescribed Lo Shu placement, every real-valued magic map is exactly
+  `c+pU+qV`, and strict increase is exactly `p>0, q>2p`. The raw layout's one
+  defective diagonal is explained by its nonzero V-squared term.
 
-This boundary-state mechanism does not by itself prove a knot invariant,
-Ramsey number, fence optimum, pseudoforest theorem, or frequency correspondence.
-Those lanes require their own maps, retained information, and hostile controls.
+The [independent bridge audit](portfolio/independent_bridge/AUDIT.md) checks
+these scopes with separate exact algorithms. Exact unrestricted Ramsey
+numbers, general twelve-edge product optimality, knot classification, and
+higher-order attachment minimality are not claimed solved.
 
-The science under `carrier/` is immutable once its manifest is frozen. This
-README, the verification overview, and the Session 145 navigation page may be
-extended by a later audited checkpoint without changing that science packet.
+Both science packets have immutable manifests. This navigation overview and
+the synthesis may change without rewriting either frozen packet. All earlier
+research packets and concurrently published work are preserved unchanged.

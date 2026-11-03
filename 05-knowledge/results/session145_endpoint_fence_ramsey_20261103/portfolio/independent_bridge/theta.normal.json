@@ -1,0 +1,8 @@
+{
+  "checked_conditions": 15,
+  "checker_sha256": "2139b0e3065a3acf0537e394853000e013800418eef445583d5bbe4eb6a79a2f",
+  "g2_squared": "89/16 + 13*sqrt(13)/8",
+  "scope": "Endpoint-only theta(5,5,2), outer 5+5 Jordan polygon, interior 2-edge separator, open straight terminal chord interior.",
+  "status": "PASS",
+  "witness_circle_center_y_over_D": "1"
+}

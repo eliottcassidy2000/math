@@ -1,0 +1,179 @@
+{
+  "U": [
+    0,
+    1,
+    -1,
+    -1,
+    0,
+    1,
+    1,
+    -1,
+    0
+  ],
+  "V": [
+    -1,
+    1,
+    0,
+    1,
+    0,
+    -1,
+    0,
+    -1,
+    1
+  ],
+  "frequencies": [
+    174,
+    285,
+    396,
+    417,
+    528,
+    639,
+    741,
+    852,
+    963
+  ],
+  "frequency_magic_arrangements": 0,
+  "frequency_mean": 555,
+  "frequency_near_grid": [
+    285,
+    963,
+    417,
+    741,
+    528,
+    396,
+    639,
+    174,
+    852
+  ],
+  "magic_constraint_rank": 6,
+  "magic_function_dimension": 3,
+  "near_line_sums": [
+    1665,
+    1665,
+    1665,
+    1665,
+    1665,
+    1665,
+    1665,
+    1584
+  ],
+  "nearest_magic_grid": [
+    "543/2",
+    "1899/2",
+    444,
+    "1455/2",
+    555,
+    "765/2",
+    666,
+    "321/2",
+    "1677/2"
+  ],
+  "order_map": [
+    104,
+    108,
+    112,
+    122,
+    126,
+    130,
+    140,
+    144,
+    148
+  ],
+  "order_map_rotation_line_sums": [
+    378,
+    378,
+    378,
+    378,
+    378,
+    378,
+    378,
+    324
+  ],
+  "polynomial_constraint_ranks_degree_0_to_8": [
+    0,
+    1,
+    2,
+    2,
+    3,
+    4,
+    5,
+    5,
+    6
+  ],
+  "projection_residual": [
+    "27/2",
+    "27/2",
+    -27,
+    "27/2",
+    -27,
+    "27/2",
+    -27,
+    "27/2",
+    "27/2"
+  ],
+  "projection_squared_error": "6561/2",
+  "rank_placement": [
+    2,
+    9,
+    4,
+    7,
+    5,
+    3,
+    6,
+    1,
+    8
+  ],
+  "source_revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+  "status": "PASS",
+  "target": [
+    108,
+    148,
+    122,
+    140,
+    126,
+    112,
+    130,
+    104,
+    144
+  ],
+  "target_line_sums": [
+    378,
+    378,
+    378,
+    378,
+    378,
+    378,
+    378,
+    378
+  ],
+  "target_magic_arrangements": 8,
+  "trace_fibers": {
+    "0": [
+      104,
+      140,
+      122
+    ],
+    "1": [
+      130,
+      112,
+      148
+    ],
+    "2": [
+      108,
+      126,
+      144
+    ]
+  },
+  "trace_map": [
+    130,
+    108,
+    104,
+    112,
+    126,
+    140,
+    148,
+    144,
+    122
+  ],
+  "universe": "Nine fixed frequency labels and all 3x3 placements; real-valued maps on those nine states."
+}

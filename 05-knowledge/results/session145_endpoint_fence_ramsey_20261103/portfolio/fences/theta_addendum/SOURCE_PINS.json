@@ -1,0 +1,20 @@
+{
+  "inspected": "2026-11-03",
+  "sources": [
+    {
+      "authors": [
+        "Hana Kou\u0159imsk\u00e1",
+        "Lara Skuppin",
+        "Boris Springborn"
+      ],
+      "title": "A Variational Principle for Cyclic Polygons with Prescribed Edge Lengths",
+      "published": 2016,
+      "url": "https://link.springer.com/chapter/10.1007/978-3-662-50447-5_5",
+      "used": [
+        "Theorem 1.1: existence and uniqueness of convex cyclic polygon under strict polygon inequalities",
+        "Theorem 1.5: classical maximum area at cyclic polygon for given side lengths"
+      ],
+      "status": "CITED classical input; primary text directly inspected"
+    }
+  ]
+}

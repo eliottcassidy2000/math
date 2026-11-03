@@ -1,0 +1,27 @@
+{
+  "repository": "eliottcassidy2000/math",
+  "revision": "7b76044ca13e6684d1746923285b83dbf83828d2",
+  "sources": [
+    {
+      "snapshot": "sources/prior_solfeggio_atlas.md.txt",
+      "repository_path": "05-knowledge/results/preprint_connections_solfeggio_digits_20261017.md",
+      "git_blob_sha1": "47e1786c59464a9f208b1b1d7edfd7eb38ffd222",
+      "sha256": "04662d781c3dc9ef6aa1e10f7722f49873a24d3ed3642977877080ef085a9517",
+      "bytes": 40098
+    },
+    {
+      "snapshot": "sources/prior_f2_solfeggio.py",
+      "repository_path": "04-computation/experiments/first_arrival_20261018/audit_F2/f2_solfeggio.py",
+      "git_blob_sha1": "a488588a0f8c949a691154eb01fd3f79918ef4dc",
+      "sha256": "e457f0f0785594760f5dc79475fd55ff39f9bcedc2370f5853d31cad5f762f6c",
+      "bytes": 4039
+    },
+    {
+      "snapshot": "sources/frobenius_PROOF.md.txt",
+      "repository_path": "05-knowledge/results/session143_frobenius_magic_followup_20261103/producer/PROOF.md",
+      "git_blob_sha1": "cb0720b9ac3296e058aaabb7bece393bc82b24c0",
+      "sha256": "92762cf5812c0f18bb86edce4a88f8453a49e7764c94c1336f31ad5232ba869f",
+      "bytes": 10636
+    }
+  ]
+}

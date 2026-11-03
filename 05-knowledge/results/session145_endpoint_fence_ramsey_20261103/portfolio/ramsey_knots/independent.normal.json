@@ -1,0 +1,80 @@
+{
+  "K5_avoiding": 29197,
+  "checks": {
+    "Fox_matrix_cube": 1,
+    "Fox_matrix_fixed_points": 1,
+    "K5_avoiding_census": 1,
+    "Paley_direct_arc_enumeration": 1,
+    "Paley_full_endpoint_matrix": 121,
+    "Paley_word_enumeration": 1,
+    "closed_components_add_to_matching_loops": 76,
+    "extra_circle_hostile": 57,
+    "forest_2_coloring": 3271,
+    "linear_forest_count": 1,
+    "mixed_4_coloring": 28905,
+    "pseudoforest_3_coloring": 9200,
+    "separate_pseudoforest_5_coloring": 28917,
+    "two_path_forest_coloring": 42436
+  },
+  "fox_matrix_cube": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "graph_counts": [
+    {
+      "forests": 1,
+      "n": 1,
+      "pseudoforests": 1
+    },
+    {
+      "forests": 2,
+      "n": 2,
+      "pseudoforests": 2
+    },
+    {
+      "forests": 7,
+      "n": 3,
+      "pseudoforests": 8
+    },
+    {
+      "forests": 38,
+      "n": 4,
+      "pseudoforests": 57
+    },
+    {
+      "forests": 291,
+      "n": 5,
+      "pseudoforests": 608
+    },
+    {
+      "forests": 2932,
+      "n": 6,
+      "pseudoforests": 8524
+    }
+  ],
+  "paley11": {
+    "H": 95095,
+    "arc_0_1": 17290,
+    "endpoint_row_0": [
+      0,
+      628,
+      1101,
+      628,
+      628,
+      628,
+      1101,
+      1101,
+      1101,
+      628,
+      1101
+    ]
+  },
+  "status": "PASS",
+  "two_linear_forest_pairs": 42436
+}

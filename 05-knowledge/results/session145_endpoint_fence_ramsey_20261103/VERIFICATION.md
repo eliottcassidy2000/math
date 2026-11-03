@@ -51,3 +51,30 @@ to the explicit source pins, owned files, links, and startup budgets.
 Published commit and tree identities are external receipts. They will be
 verified against the actual remote by the publisher, not inferred from a local
 preparation result.
+
+
+## Checkpoint 2: independently audited portfolio
+
+The second immutable packet is under `portfolio/`. Its outer manifest pins the
+complete geometry, Ramsey/knot, magic-map, and independent-audit artifacts.
+Lane-local seals are retained and validated. Archived source notes preserve
+exact upstream bytes under `.md.txt` names, preventing misleading relocation
+of their original relative links.
+
+Run from `portfolio/`:
+
+```sh
+python3 -B verify_frozen_packet.py
+python3 -B -O verify_frozen_packet.py
+```
+
+All replays use the frozen scripts and exact expected stdout. Checkers that
+write receipts run in isolated temporary copies and their regenerated receipt
+bytes are compared with the pinned artifacts. The discovery geometry checks
+retain 4,014 gates; the separate theta addendum retains 177. The independent
+geometry/magic and theta checks use SymPy for exact symbolic arithmetic.
+
+The tangle scope correction and its lineage are preserved in the Ramsey
+packet: matching-only loop counts require no pre-existing closed components;
+otherwise the count is m+c(P,Q). Added-circle hostile controls make this
+boundary executable. No published CP1 science bytes are changed by CP2.

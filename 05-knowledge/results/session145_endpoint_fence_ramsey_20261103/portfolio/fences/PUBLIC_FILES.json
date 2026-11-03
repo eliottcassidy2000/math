@@ -1,0 +1,19 @@
+[
+  "README.md",
+  "PROOF.md",
+  "CORRECTIONS.md",
+  "SOURCE_PINS.json",
+  "verify.py",
+  "verification.json",
+  "verification.optimized.json",
+  "theta12.svg",
+  "theta_addendum/README.md",
+  "theta_addendum/PROOF.md",
+  "theta_addendum/SOURCE_PINS.json",
+  "theta_addendum/verify.py",
+  "theta_addendum/verification.json",
+  "theta_addendum/verification.optimized.json",
+  "PUBLIC_FILES.json",
+  "SHA256SUMS",
+  "draw.py"
+]

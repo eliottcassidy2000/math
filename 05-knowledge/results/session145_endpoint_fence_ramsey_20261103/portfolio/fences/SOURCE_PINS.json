@@ -1,0 +1,53 @@
+{
+  "repository_commit": "7b76044ca13e6684d1746923285b83dbf83828d2",
+  "repository_sources": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dbec8437757703aa444271e71775735fd1e521d8a42426329f115dcb9306dff6",
+      "bytes": 6823
+    },
+    {
+      "path": "01-canon/theorems/THM-4505-small-graphs-encoding-arithmetic-square-sum-zigzag-fences-collatz-alphabet.md",
+      "sha256": "619ee1a2ae6aed62a1a25775e51cd0ae4090cdbc07ad3a6d17ff16f873174dce",
+      "bytes": 11780
+    },
+    {
+      "path": "01-canon/theorems/THM-4509-fence-corner-lemma-and-density-bound.md",
+      "sha256": "e65083470bfefc93b9ff1ac6bbd8a0c69be7002bdb4fd421d82b80b41aa80f75",
+      "bytes": 10870
+    },
+    {
+      "path": "05-knowledge/results/procgen_fence2_20260926_per_fence_accounting.md",
+      "sha256": "eb158930165d5505646eac24058382ff662996cf9a4289a024783995289f151d",
+      "bytes": 34404
+    },
+    {
+      "path": "05-knowledge/results/procgen_fencelim_20260926_fence_density.md",
+      "sha256": "cc8c24871bc53facf92af6899a08f427f5a05f90d905c8c0d59e5eee57e57a8b",
+      "bytes": 32284
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://erich-friedman.github.io/packing/fence/",
+      "inspected": "2026-11-03",
+      "status": "primary problem definition and best-known lower bounds"
+    },
+    {
+      "url": "https://erich-friedman.github.io/packing/product/",
+      "inspected": "2026-11-03",
+      "status": "primary definition; n=12 construction attributed to Erich Friedman, July 2026"
+    },
+    {
+      "url": "https://erich-friedman.github.io/packing/product/12.gif",
+      "inspected": "2026-11-03",
+      "status": "pixels inspected; downloaded reference excluded from publication",
+      "sha256": "e3b1bf9b45d67d6bf9371dbdaf5efa8883c74aead90c00c2eb0fdd67dfd3015c"
+    },
+    {
+      "url": "https://beniamin-bogosel.github.io/pdfs/DiscreteIsopShorter_Rev.pdf",
+      "inspected": "2026-11-03",
+      "status": "author primary text, revision2024-05-16; classical polygonal isoperimetry"
+    }
+  ]
+}

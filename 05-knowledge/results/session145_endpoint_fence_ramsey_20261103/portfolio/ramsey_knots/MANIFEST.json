@@ -1,0 +1,23 @@
+{
+  "files": {
+    "CORRECTION_LINEAGE.md": "7face000d55d8465e6552848712d9df19253af7e5f60e3d1b7d16d90bea5b8b8",
+    "PROOFS.md": "c6b81f47311eca1bfe7ebd4de374d5a16f6863283eedb49c0b98cd81fe5acb00",
+    "README.md": "c8857ab60d1b66a104c35d93120bc71a0e7329358d49d5c01d6a3c5c56e61338",
+    "SOURCES.md": "f3ab15f126a9ad65ea3b181e86e529b360efd4675a2761f88e063a350ed8a0a9",
+    "SOURCE_PINS.json": "13231f0e0d5dc8ba225f8502e474fdcbaf8967ed1d023c28f37b2786bc076449",
+    "independent.normal.json": "8115f5472fa76e73b6809fd06e47fee98268e4d9a38d728a4776572e24bdccf0",
+    "independent.optimized.json": "8115f5472fa76e73b6809fd06e47fee98268e4d9a38d728a4776572e24bdccf0",
+    "independent_checks.py": "e76af105ac96ea94b7a9431b00296e4ecbe74b7c0f22f1fbe1f34d19443a91c1",
+    "sources/0_FOREST_RESPONSE_RECURRENCE.md.txt": "0bb6a6b0624495b9ccc4123a2db544f2764f92c01138c4b0b241d6ef2ad73b0b",
+    "sources/1_CLOSED_ATTACHMENT_CARRIERS.md.txt": "a5eba655f7c265321bff8dfd0ec6ef77fbf39a6b488704ab2b7048ac653971bf",
+    "sources/2_walks_knots.md.txt": "ef0670192a754af7477ead0a6b92ef5572795bc5049a220b7ce15a88f7d733b5",
+    "sources/3_README.md.txt": "e69a6cd018ae159e5a117746cd92a0a8e3ad26bd0b75fdb05710e1df1b0c0282",
+    "sources/4_NEIGHBOURHOODS.md.txt": "f99ee85dabcfdaeb5de311a420e4eb33f027575e46fe55c618a8d556859f33ee",
+    "sources/5_RESULT.md.txt": "f19983c65ee697973d3d744babe582ee19d964a44a6c24a571b9940032e84ba0",
+    "verification.normal.json": "c201cb24785baf5789d12bd78a57d130d5f97b3362ec7e09b53854b521d496d0",
+    "verification.optimized.json": "c201cb24785baf5789d12bd78a57d130d5f97b3362ec7e09b53854b521d496d0",
+    "verify_packet.py": "c1fa44e5178eb22f50c509d5b2219c9614aac49119c18aa1f9053548956569de",
+    "verify_structures.py": "0a6f357ae3c34bc5b151398cc8458b5db1c74fbfa2234291c5704cc9dcb208ba"
+  },
+  "source_revision": "7b76044ca13e6684d1746923285b83dbf83828d2"
+}

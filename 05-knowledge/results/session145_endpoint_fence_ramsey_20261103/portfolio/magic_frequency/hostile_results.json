@@ -1,0 +1,28 @@
+{
+  "integer_parameter_pairs_tested": 625,
+  "mathematical_hostiles": {
+    "U_only_loses_injectivity": true,
+    "center_shift_preserves_magic": true,
+    "equal_weights_collide": true,
+    "fiber_preserving_18_mutation_breaks_magic": true,
+    "literal_cubic_trace_not_magic": true,
+    "nonconstant_affine_raw_not_magic": true,
+    "order_boundary_collides": true,
+    "raw_frequency_rank_grid_not_magic": true,
+    "same_placement_traces_not_magic": true,
+    "squared_target_not_magic": true,
+    "symmetric_cube_trace_not_magic": true
+  },
+  "rejected_mutations": [
+    "one_grid_entry_changed",
+    "frequency_center_mistated",
+    "trace_and_order_maps_confused",
+    "raw_labels_declared_magic",
+    "carry_defect_erased",
+    "magic_function_dimension_wrong",
+    "degree_seven_mode_missed",
+    "projection_error_wrong",
+    "rotation_declared_magic"
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,140 @@
+{
+  "closed_component_cases": 496,
+  "fox_full_diagram_colorings": {
+    "1": 3,
+    "2": 3,
+    "3": 9,
+    "4": 3,
+    "5": 3,
+    "6": 9,
+    "7": 3,
+    "8": 3,
+    "9": 9,
+    "10": 3,
+    "11": 3,
+    "12": 9
+  },
+  "matchings": [
+    {
+      "coefficients_constant_first": [
+        1
+      ],
+      "contextual_rows": 1,
+      "matchings": 1,
+      "r": 0
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        1
+      ],
+      "contextual_rows": 1,
+      "matchings": 1,
+      "r": 1
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        2,
+        1
+      ],
+      "contextual_rows": 3,
+      "matchings": 3,
+      "r": 2
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        8,
+        6,
+        1
+      ],
+      "contextual_rows": 15,
+      "matchings": 15,
+      "r": 3
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        48,
+        44,
+        12,
+        1
+      ],
+      "contextual_rows": 105,
+      "matchings": 105,
+      "r": 4
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        384,
+        400,
+        140,
+        20,
+        1
+      ],
+      "contextual_rows": null,
+      "matchings": 945,
+      "r": 5
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        3840,
+        4384,
+        1800,
+        340,
+        30,
+        1
+      ],
+      "contextual_rows": null,
+      "matchings": 10395,
+      "r": 6
+    },
+    {
+      "coefficients_constant_first": [
+        0,
+        46080,
+        56448,
+        25984,
+        5880,
+        700,
+        42,
+        1
+      ],
+      "contextual_rows": null,
+      "matchings": 135135,
+      "r": 7
+    }
+  ],
+  "paley11": {
+    "H": 95095,
+    "affine_word_orbits": 1729,
+    "all_55_arc_counts": 17290,
+    "closed_rooted_words": 60555,
+    "direct_cycles_mod_rotation": 5505,
+    "endpoint_row_0": [
+      0,
+      628,
+      1101,
+      628,
+      628,
+      628,
+      1101,
+      1101,
+      1101,
+      628,
+      1101
+    ]
+  },
+  "status": "PASS",
+  "support_graphs": {
+    "distinct_unions": 26918,
+    "linear_forests": 1486,
+    "n": 6,
+    "ordered_pairs": 2208196,
+    "verified_chromatic_bound": 4,
+    "verified_degeneracy_bound": 3
+  }
+}

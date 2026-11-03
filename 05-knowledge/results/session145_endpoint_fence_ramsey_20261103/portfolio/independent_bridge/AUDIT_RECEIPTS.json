@@ -1,0 +1,38 @@
+{
+  "bounded_theta_discovery": {
+    "checked_conditions": 177,
+    "status": "PASS"
+  },
+  "fence_discovery": {
+    "checked_conditions": 4014,
+    "labelled_graphs": 1099,
+    "partitions": 1885,
+    "source_blobs_replayed": 5,
+    "status": "PASS"
+  },
+  "final_scope_review": {
+    "fences": "Distinct original fences meet in at most one point; collinear overlaps excluded. Inherited convention made explicit; no numerical change.",
+    "tangle": "Arc-only condition explicit; general count m+c(P,Q) retains pre-existing closed components. Correction verified."
+  },
+  "magic_discovery": {
+    "integer_parameter_pairs": 625,
+    "mathematical_hostiles": 11,
+    "result_mutations_rejected": 9,
+    "source_blobs_replayed": 3,
+    "status": "PASS"
+  },
+  "normal_optimized_match": true,
+  "ramsey_discovery": {
+    "checked_conditions": 106874,
+    "status": "PASS"
+  },
+  "ramsey_separate_independent": {
+    "added_closed_component_equalities": 76,
+    "added_extra_circle_hostiles": 57,
+    "normal_optimized_and_final_receipts_identical": true,
+    "original_checked_conditions": 112856,
+    "publication_checked_conditions": 112989,
+    "publication_receipt_sha256": "8115f5472fa76e73b6809fd06e47fee98268e4d9a38d728a4776572e24bdccf0"
+  },
+  "status": "PASS"
+}

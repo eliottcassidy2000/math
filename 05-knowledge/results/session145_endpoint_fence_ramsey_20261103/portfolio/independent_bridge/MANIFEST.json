@@ -1,0 +1,62 @@
+{
+  "AUDIT.md": {
+    "bytes": 13506,
+    "sha256": "51911b17a0e4df0b5de4742147bb66444bdaba06127294cc8e8115adb75114c6"
+  },
+  "AUDIT_RECEIPTS.json": {
+    "bytes": 1269,
+    "sha256": "165918673e3f49931eaea42382c99d30837d2d55777c94b1f6fb794690709e35"
+  },
+  "CORRECTION_LINEAGE.md": {
+    "bytes": 2116,
+    "sha256": "bcb607d376a59882aa3df4e44aef9727be290296539f565ba318dd54025d6a48"
+  },
+  "README.md": {
+    "bytes": 2499,
+    "sha256": "cb3091f9db227ca4208f78005931ee9ba3e7763b8c151fd5ebd25842d6f58cfc"
+  },
+  "SOURCE_EVIDENCE.json": {
+    "bytes": 3907,
+    "sha256": "f3c4f6a00b61a9a4eb3e9915da2f82ce2c3d06aefe3a2517a1fcc2de3d26cb2e"
+  },
+  "check_magic_fence.py": {
+    "bytes": 9025,
+    "sha256": "6bca8762e5ef372162f2c8397bb921cb5d2a91474b5cdefc56c101d28cbef7d8"
+  },
+  "check_ramsey_knots.py": {
+    "bytes": 7092,
+    "sha256": "2a77245353585251825435eaf3924763e61e47cf539639991a542a573004a53a"
+  },
+  "check_theta.py": {
+    "bytes": 2093,
+    "sha256": "2139b0e3065a3acf0537e394853000e013800418eef445583d5bbe4eb6a79a2f"
+  },
+  "magic_fence.normal.json": {
+    "bytes": 812,
+    "sha256": "2c24f5b72b61d7ba18f3fa6c010f45b04d8d8a38383fe16c24e0fe27c386ea58"
+  },
+  "magic_fence.optimized.json": {
+    "bytes": 812,
+    "sha256": "2c24f5b72b61d7ba18f3fa6c010f45b04d8d8a38383fe16c24e0fe27c386ea58"
+  },
+  "ramsey.normal.json": {
+    "bytes": 2232,
+    "sha256": "7951fc83b0ac6b63122ebdfd69317a61208cd358b99fcd11679edaabdb52bcd0"
+  },
+  "ramsey.optimized.json": {
+    "bytes": 2232,
+    "sha256": "7951fc83b0ac6b63122ebdfd69317a61208cd358b99fcd11679edaabdb52bcd0"
+  },
+  "theta.normal.json": {
+    "bytes": 355,
+    "sha256": "5adebe0e42b43572abbaa0e70bd1f8d8de111affce7cb1b65b01182848ba2ee0"
+  },
+  "theta.optimized.json": {
+    "bytes": 355,
+    "sha256": "5adebe0e42b43572abbaa0e70bd1f8d8de111affce7cb1b65b01182848ba2ee0"
+  },
+  "verify_package.py": {
+    "bytes": 2590,
+    "sha256": "394bab6b97d5b0db3d495a1249e1721a7c1d87e24af69534dfe8cf0beda1c73e"
+  }
+}

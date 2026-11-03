@@ -1,0 +1,36 @@
+{
+  "checked_conditions": 7160,
+  "checker_sha256": "6bca8762e5ef372162f2c8397bb921cb5d2a91474b5cdefc56c101d28cbef7d8",
+  "fence": {
+    "T_fixture_cycle_edge_lengths": [
+      "1",
+      "1",
+      "1/3"
+    ],
+    "cycle_rank": 2,
+    "distinct_vertices": 11,
+    "endpoint_contacts": 15,
+    "field_area_squared": "89/16 + 13*sqrt(13)/8",
+    "product": "89/16 + 13*sqrt(13)/8",
+    "unit_segments": 12
+  },
+  "magic": {
+    "full_permutations": 362880,
+    "nullity": 3,
+    "polynomial_magic_dimensions_degree_0_to_8": [
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    "rational_parameter_pairs": 2025,
+    "target_magic_arrangements": 8
+  },
+  "method": "No discovery code imported; exact SymPy algebra and independent integer enumeration.",
+  "status": "PASS"
+}

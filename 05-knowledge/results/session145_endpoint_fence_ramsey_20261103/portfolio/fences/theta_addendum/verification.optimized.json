@@ -1,0 +1,19 @@
+{
+  "checked_conditions": 177,
+  "derivative_identity_coefficients": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "proof_sha256": "e3edc02c161d7a03b549cbbacd7d18d42fd806b322c6a3430c37a5a5f180b52f",
+  "scope": "theta(5,5,2), shared two-edge separator, straight terminal chord inside outer polygon",
+  "source_sha256": "6786fd8d45533e75d5a4936c1bc6beb9a6a0f630ef15910fc9c94aa97a70c3c6",
+  "squared_cap_area": {
+    "rational": "89/16",
+    "sqrt13": "13/8"
+  },
+  "status": "PASS"
+}

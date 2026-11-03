@@ -1,0 +1,675 @@
+{
+  "checked_conditions": 4014,
+  "geometry": {
+    "T_bridge_cactus": {
+      "T_contacts": 2,
+      "cactus": true,
+      "components": 1,
+      "cycle_rank": 2,
+      "cycles": [
+        3,
+        3
+      ],
+      "edges": 7,
+      "minimum_degree": 2,
+      "original_fences": 5,
+      "pseudoforest": false,
+      "squared_face_areas": [
+        {
+          "rational": "35/1296",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "35/1296",
+          "sqrt13": "0"
+        }
+      ],
+      "vertices": 6
+    },
+    "adjacent_squares": {
+      "T_contacts": 0,
+      "cactus": false,
+      "components": 1,
+      "cycle_rank": 2,
+      "cycles": [
+        4,
+        4,
+        6
+      ],
+      "edges": 7,
+      "minimum_degree": 2,
+      "original_fences": 7,
+      "pseudoforest": false,
+      "squared_face_areas": [
+        {
+          "rational": "1",
+          "sqrt13": "0"
+        },
+        {
+          "rational": "1",
+          "sqrt13": "0"
+        }
+      ],
+      "vertices": 6
+    },
+    "product_theta12": {
+      "T_contacts": 0,
+      "cactus": false,
+      "components": 1,
+      "cycle_rank": 2,
+      "cycles": [
+        7,
+        7,
+        10
+      ],
+      "edges": 12,
+      "minimum_degree": 2,
+      "original_fences": 12,
+      "pseudoforest": false,
+      "squared_face_areas": [
+        {
+          "rational": "89/16",
+          "sqrt13": "13/8"
+        },
+        {
+          "rational": "89/16",
+          "sqrt13": "13/8"
+        }
+      ],
+      "vertices": 11
+    },
+    "square": {
+      "T_contacts": 0,
+      "cactus": true,
+      "components": 1,
+      "cycle_rank": 1,
+      "cycles": [
+        4
+      ],
+      "edges": 4,
+      "minimum_degree": 2,
+      "original_fences": 4,
+      "pseudoforest": true,
+      "squared_face_areas": [
+        {
+          "rational": "1",
+          "sqrt13": "0"
+        }
+      ],
+      "vertices": 4
+    }
+  },
+  "graph_reduction": {
+    "graphs": 1099,
+    "minimum_degree_two_pseudoforests": 16,
+    "universe": "all labelled simple graphs of orders 1 through 5"
+  },
+  "partitions": {
+    "partitions_tested": 1885,
+    "table": [
+      {
+        "maximizing_cycle_lengths": [
+          3
+        ],
+        "maximum_interval": [
+          "0.433012701892",
+          "0.433012701893"
+        ],
+        "n": 3
+      },
+      {
+        "maximizing_cycle_lengths": [
+          4
+        ],
+        "maximum_interval": [
+          "0.999999999999",
+          "1.000000000001"
+        ],
+        "n": 4
+      },
+      {
+        "maximizing_cycle_lengths": [
+          5
+        ],
+        "maximum_interval": [
+          "1.720477400588",
+          "1.720477400589"
+        ],
+        "n": 5
+      },
+      {
+        "maximizing_cycle_lengths": [
+          6
+        ],
+        "maximum_interval": [
+          "2.598076211353",
+          "2.598076211354"
+        ],
+        "n": 6
+      },
+      {
+        "maximizing_cycle_lengths": [
+          7
+        ],
+        "maximum_interval": [
+          "3.633912444001",
+          "3.633912444002"
+        ],
+        "n": 7
+      },
+      {
+        "maximizing_cycle_lengths": [
+          8
+        ],
+        "maximum_interval": [
+          "4.828427124746",
+          "4.828427124747"
+        ],
+        "n": 8
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9
+        ],
+        "maximum_interval": [
+          "6.181824193772",
+          "6.181824193773"
+        ],
+        "n": 9
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10
+        ],
+        "maximum_interval": [
+          "7.694208842938",
+          "7.694208842939"
+        ],
+        "n": 10
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11
+        ],
+        "maximum_interval": [
+          "9.365639906945",
+          "9.365639906946"
+        ],
+        "n": 11
+      },
+      {
+        "maximizing_cycle_lengths": [
+          12
+        ],
+        "maximum_interval": [
+          "11.196152422706",
+          "11.196152422707"
+        ],
+        "n": 12
+      },
+      {
+        "maximizing_cycle_lengths": [
+          13
+        ],
+        "maximum_interval": [
+          "13.185768328323",
+          "13.185768328324"
+        ],
+        "n": 13
+      },
+      {
+        "maximizing_cycle_lengths": [
+          14
+        ],
+        "maximum_interval": [
+          "15.334501936371",
+          "15.334501936372"
+        ],
+        "n": 14
+      },
+      {
+        "maximizing_cycle_lengths": [
+          15
+        ],
+        "maximum_interval": [
+          "17.642362910544",
+          "17.642362910545"
+        ],
+        "n": 15
+      },
+      {
+        "maximizing_cycle_lengths": [
+          8,
+          8
+        ],
+        "maximum_interval": [
+          "23.313708498984",
+          "23.313708498985"
+        ],
+        "n": 16
+      },
+      {
+        "maximizing_cycle_lengths": [
+          8,
+          9
+        ],
+        "maximum_interval": [
+          "29.848487617625",
+          "29.848487617626"
+        ],
+        "n": 17
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9
+        ],
+        "maximum_interval": [
+          "38.214950362715",
+          "38.214950362716"
+        ],
+        "n": 18
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          10
+        ],
+        "maximum_interval": [
+          "47.564246377216",
+          "47.564246377217"
+        ],
+        "n": 19
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "59.200849718747",
+          "59.200849718748"
+        ],
+        "n": 20
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          11
+        ],
+        "maximum_interval": [
+          "72.061189391793",
+          "72.061189391794"
+        ],
+        "n": 21
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          11
+        ],
+        "maximum_interval": [
+          "87.715210866568",
+          "87.715210866569"
+        ],
+        "n": 22
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          12
+        ],
+        "maximum_interval": [
+          "104.859131934345",
+          "104.859131934346"
+        ],
+        "n": 23
+      },
+      {
+        "maximizing_cycle_lengths": [
+          12,
+          12
+        ],
+        "maximum_interval": [
+          "125.353829072479",
+          "125.353829072480"
+        ],
+        "n": 24
+      },
+      {
+        "maximizing_cycle_lengths": [
+          12,
+          13
+        ],
+        "maximum_interval": [
+          "147.629872014411",
+          "147.629872014412"
+        ],
+        "n": 25
+      },
+      {
+        "maximizing_cycle_lengths": [
+          8,
+          9,
+          9
+        ],
+        "maximum_interval": [
+          "184.518102902167",
+          "184.518102902168"
+        ],
+        "n": 26
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          9
+        ],
+        "maximum_interval": [
+          "236.238104716068",
+          "236.238104716069"
+        ],
+        "n": 27
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          10
+        ],
+        "maximum_interval": [
+          "294.033809013251",
+          "294.033809013252"
+        ],
+        "n": 28
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "365.969245083266",
+          "365.969245083267"
+        ],
+        "n": 29
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "455.503701415437",
+          "455.503701415438"
+        ],
+        "n": 30
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10,
+          11
+        ],
+        "maximum_interval": [
+          "554.453840650979",
+          "554.453840650980"
+        ],
+        "n": 31
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          11,
+          11
+        ],
+        "maximum_interval": [
+          "674.899151109737",
+          "674.899151109738"
+        ],
+        "n": 32
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          11,
+          11
+        ],
+        "maximum_interval": [
+          "821.509079338072",
+          "821.509079338073"
+        ],
+        "n": 33
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          11,
+          12
+        ],
+        "maximum_interval": [
+          "982.072870651958",
+          "982.072870651959"
+        ],
+        "n": 34
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          12,
+          12
+        ],
+        "maximum_interval": [
+          "1174.018824049631",
+          "1174.018824049632"
+        ],
+        "n": 35
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          9,
+          9
+        ],
+        "maximum_interval": [
+          "1460.382431224845",
+          "1460.382431224846"
+        ],
+        "n": 36
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          9,
+          10
+        ],
+        "maximum_interval": [
+          "1817.665314345315",
+          "1817.665314345316"
+        ],
+        "n": 37
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "2262.357533432538",
+          "2262.357533432539"
+        ],
+        "n": 38
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          10,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "2815.843801763058",
+          "2815.843801763059"
+        ],
+        "n": 39
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "3504.740607421710",
+          "3504.740607421711"
+        ],
+        "n": 40
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10,
+          10,
+          11
+        ],
+        "maximum_interval": [
+          "4266.083643737780",
+          "4266.083643737781"
+        ],
+        "n": 41
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10,
+          11,
+          11
+        ],
+        "maximum_interval": [
+          "5192.815016559984",
+          "5192.815016559985"
+        ],
+        "n": 42
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          11,
+          11,
+          11
+        ],
+        "maximum_interval": [
+          "6320.862422796959",
+          "6320.862422796960"
+        ],
+        "n": 43
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          11,
+          11,
+          11
+        ],
+        "maximum_interval": [
+          "7693.958217366654",
+          "7693.958217366655"
+        ],
+        "n": 44
+      },
+      {
+        "maximizing_cycle_lengths": [
+          11,
+          11,
+          11,
+          12
+        ],
+        "maximum_interval": [
+          "9197.740868906451",
+          "9197.740868906452"
+        ],
+        "n": 45
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          9,
+          9,
+          10
+        ],
+        "maximum_interval": [
+          "11236.487416401694",
+          "11236.487416401695"
+        ],
+        "n": 46
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          9,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "13985.496535137647",
+          "13985.496535137648"
+        ],
+        "n": 47
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          9,
+          10,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "17407.051339624340",
+          "17407.051339624341"
+        ],
+        "n": 48
+      },
+      {
+        "maximizing_cycle_lengths": [
+          9,
+          10,
+          10,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "21665.690279857861",
+          "21665.690279857862"
+        ],
+        "n": 49
+      },
+      {
+        "maximizing_cycle_lengths": [
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        "maximum_interval": [
+          "26966.206173828491",
+          "26966.206173828492"
+        ],
+        "n": 50
+      }
+    ],
+    "universe": "all integer partitions with parts >=3 for 3<=n<=30; all balanced candidates through n=50"
+  },
+  "source_sha256": "db9b5646c07b0067ecd0a8d146cbd9a3935b0b0736a2fdcd384fefab0ef84ad4",
+  "status": "PASS"
+}
