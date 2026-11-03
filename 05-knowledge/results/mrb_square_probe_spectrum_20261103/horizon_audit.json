@@ -1,0 +1,37 @@
+{
+  "arithmetic_host_selected_graphs": 77,
+  "audit": "same agent; independent Boolean adjacency and full permutations",
+  "permutation_censuses": [
+    {
+      "counts": 128,
+      "horizon": 2,
+      "sha256": "ed6c8a9bf9e16d804f1c35006c7a03ca1e7b7d09345477651ad7efacf878a761",
+      "source": [
+        2,
+        4,
+        1
+      ]
+    },
+    {
+      "counts": 128,
+      "horizon": 2,
+      "sha256": "50ebd4d0473b9e3dc1f04240dd04769c18c648b8d1b8863783c9f7f8fa9538a9",
+      "source": [
+        4,
+        1,
+        2
+      ]
+    },
+    {
+      "counts": 4096,
+      "horizon": 3,
+      "sha256": "1ed6ad5eb087118750e1f766cdcadcbe5c158ccd5756948829d06ac73675224e",
+      "source": [
+        2,
+        4,
+        1
+      ]
+    }
+  ],
+  "terminal_constraint_hostiles": "both independently confirmed"
+}

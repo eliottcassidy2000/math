@@ -67,3 +67,30 @@ No demonstrated false canon claim was found; no correction entry is
 necessary. The three candidate rediscoveries (scaled pair universality,
 quadratic ear response, and one-birth triangle blindness) were identified
 before promotion and are credited as inherited throughout.
+
+## Fixed-horizon extension audit
+
+The birth blocks are disjoint edge-variable sets, although their vertices
+overlap. Each block's variables are incident to its own newborn. A
+Hamilton path uses at most two of them, so the separate degree bound holds
+even with all later edges present. Tensor interpolation has signed weights
+and never replaces its actual final target graph by a positive assembly.
+
+The common host scales the entire candidate pool at each stage. A selected
+history uses only one candidate per level, while every unused candidate
+remains outside its Hamilton-path universe. Exact P1 nonedges prevent
+unintended incidences with earlier selected candidates. Common scaling
+therefore gives identical source labels across every complete history.
+
+The constant-cut identity is used only at the last birth. Both supplied
+earlier-stage hostiles violate it after a fixed future birth; this is a
+scope boundary of the original correctly stated terminal theorem, not a
+retraction. No uniform finite-horizon bound is promoted to an all-depth
+observation or target-selection theorem.
+
+`horizon.py` uses the already audited subset DP and arithmetic bank. Its
+independent auditor imports neither producer and constructs Boolean
+adjacency matrices directly. Full permutations reproduce all4352 requested
+count values (128+128+4096), and all77 selected arithmetic host graphs.
+Normal and optimized horizon producers match byte for byte. The separate
+receipts are `horizon.json` and `horizon_audit.json`.

@@ -11,6 +11,14 @@ response, with one pair probe recoverable for free. Period-four MRB filters
 give a nonzero, rigorously signed test for the two named port phases of the
 actual H31 branching source. Neither statement supplies recursive coverage.
 
+The [finite-horizon extension](HORIZON.md) goes further: every fixed number
+of future births has an exact sparse-program observation bank. One66-label
+arithmetic host represents all77 sparse two-birth continuations of C3,
+which determine all128 unrestricted continuations. The free-pair shortcut
+is terminal only; a fixed future context supplies a minimal failure.
+See [incoming integration](INCOMING.md) for the concurrent MRB, square-sum
+and module-resilience mechanisms used in this extension.
+
 ## 1. Inheritance and the live board
 
 Base snapshot: `d79221bc31`. Counts throughout are raw directed Hamilton-path
