@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "grammar_inverse.json",
+      "receipt_sha256": "500ede091976f735db9d36c184f6709947b7b22baa4ba08919c82bcad0f29fad",
+      "script": "grammar_inverse.py",
+      "script_sha256": "f57dd47e077a0349df76158ac85a28e2a9ab08dd8f57b62831a4834d310e4ced"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "branch_probe.json",
+      "receipt_sha256": "4d6514ae4952f10c936c3a8840660faeef7eaa040450c72dacbb02ae94808941",
+      "script": "branch_probe.py",
+      "script_sha256": "6aad41f84f0a9ab191162fb6d8f183cfc78f41074d13620854a09b474e74f784"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "native_port_selector.json",
+      "receipt_sha256": "414bac09a4a1ccc521b26425854ccd100a7960a3be7e5e1a84df65608e912e0e",
+      "script": "native_port_selector.py",
+      "script_sha256": "4fed06f0ad93e9f37c78e7e759d658381f1f85f31b42ae4a2f3ef1d2adc0a4b5"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "graded_carrier.json",
+      "receipt_sha256": "dba83ee5b2f9bfd4a0c2ba4bfcc5f94423b2afe6e0cc760a1ffc631fab2b3cff",
+      "script": "graded_carrier.py",
+      "script_sha256": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b"
+    },
+    {
+      "normal_exact": true,
+      "optimized_exact": true,
+      "receipt": "independent_audit.json",
+      "receipt_sha256": "bb7a78cb37500da325d498a335b55cc8d8108aaa5bbc22d21b0361571f2df67e",
+      "script": "independent_audit.py",
+      "script_sha256": "b81c9ae018467e22c08c295253eb79ca4b41ad6ccb1faf05c011cd9b6d63c850"
+    }
+  ],
+  "scope": "Five frozen jobs reproduced in normal and optimized Python; no enlarged universe",
+  "status": "PASS"
+}
