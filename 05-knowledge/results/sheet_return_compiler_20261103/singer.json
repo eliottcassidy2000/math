@@ -1,0 +1,94 @@
+{
+  "field": "F7[t]/(t^3+t^2+1)",
+  "primitive": [
+    0,
+    1,
+    5
+  ],
+  "new_root_exponents": [
+    146,
+    314,
+    338
+  ],
+  "chosen_exponent": 146,
+  "alpha": [
+    4,
+    4,
+    1
+  ],
+  "gamma": [
+    4,
+    2,
+    4
+  ],
+  "trace_zero_line": [
+    8,
+    15,
+    19,
+    38,
+    48,
+    50,
+    51,
+    56
+  ],
+  "records": [
+    {
+      "kind": "straight",
+      "encoded_initial": [
+        4,
+        6,
+        1
+      ],
+      "trace_offset": 12,
+      "zero_growth_residues_mod57": [
+        2,
+        3,
+        7,
+        9,
+        19,
+        37,
+        40,
+        51
+      ],
+      "zero_n_residues_mod57": [
+        6,
+        7,
+        11,
+        13,
+        23,
+        41,
+        44,
+        55
+      ]
+    },
+    {
+      "kind": "revisit",
+      "encoded_initial": [
+        6,
+        4,
+        1
+      ],
+      "trace_offset": 15,
+      "zero_growth_residues_mod57": [
+        0,
+        10,
+        28,
+        31,
+        42,
+        50,
+        51,
+        55
+      ],
+      "zero_n_residues_mod57": [
+        2,
+        4,
+        14,
+        32,
+        35,
+        46,
+        54,
+        55
+      ]
+    }
+  ]
+}

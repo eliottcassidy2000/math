@@ -6,6 +6,11 @@ review and independent counting implementations; no external priority claim.
 The unrestricted assertion that 7 and 21 are the only missing odd Hamilton
 counts, and a reusable constructor closing both ternary branches, remain **OPEN**.
 
+Continuation: [actual escape laws and joint clocks](../sheet_return_compiler_20261103/README.md)
+extends the two161 escapes to infinite strong families, proves their exact
+scalar/joint recurrences and why the same templates fail to return, and
+transports the surviving joint clock into the older Singer57 chart.
+
 Input checkpoint: `6ef21267ad`. This continues the
 [ready-return packet](../ready_return_pentagon_20261103/README.md).
 Incoming Session164/165 work through `d0bda46cae` is integrated in

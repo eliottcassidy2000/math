@@ -1,0 +1,73 @@
+[
+  {
+    "m": 1,
+    "h": 71,
+    "flip": [
+      6,
+      3
+    ],
+    "shared_paths": 62,
+    "single_target_values": [
+      [
+        215,
+        217
+      ],
+      [
+        215,
+        217
+      ]
+    ],
+    "literal_target_counts": [
+      15,
+      22
+    ],
+    "paired": []
+  },
+  {
+    "m": 2,
+    "h": 119,
+    "flip": [
+      7,
+      4
+    ],
+    "shared_paths": 104,
+    "single_target_values": [
+      [
+        359,
+        361
+      ],
+      [
+        359,
+        361
+      ]
+    ],
+    "literal_target_counts": [
+      10,
+      12
+    ],
+    "paired": []
+  },
+  {
+    "m": 3,
+    "h": 215,
+    "flip": [
+      8,
+      5
+    ],
+    "shared_paths": 188,
+    "single_target_values": [
+      [
+        647,
+        649
+      ],
+      [
+        647
+      ]
+    ],
+    "literal_target_counts": [
+      11,
+      5
+    ],
+    "paired": []
+  }
+]

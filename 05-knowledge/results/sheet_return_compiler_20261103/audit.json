@@ -1,0 +1,302 @@
+{
+  "literal": [
+    {
+      "kind": "straight",
+      "n": 2,
+      "H": 291,
+      "observer": [
+        291,
+        1833,
+        1836
+      ],
+      "phase": [
+        0,
+        2,
+        2
+      ],
+      "cycle": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        8,
+        6,
+        7,
+        9,
+        3
+      ]
+    },
+    {
+      "kind": "straight",
+      "n": 3,
+      "H": 485,
+      "observer": [
+        485,
+        4665,
+        4668
+      ],
+      "phase": [
+        1,
+        6,
+        3
+      ],
+      "cycle": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        9,
+        6,
+        7,
+        8,
+        10,
+        3
+      ]
+    },
+    {
+      "kind": "straight",
+      "n": 4,
+      "H": 873,
+      "observer": [
+        873,
+        12276,
+        12279
+      ],
+      "phase": [
+        0,
+        1,
+        4
+      ],
+      "cycle": null
+    },
+    {
+      "kind": "straight",
+      "n": 5,
+      "H": 1649,
+      "observer": [
+        1649,
+        32889,
+        32892
+      ],
+      "phase": [
+        2,
+        6,
+        5
+      ],
+      "cycle": null
+    },
+    {
+      "kind": "straight",
+      "n": 6,
+      "H": 3007,
+      "observer": [
+        3007,
+        87390,
+        87393
+      ],
+      "phase": [
+        5,
+        5,
+        6
+      ],
+      "cycle": null
+    },
+    {
+      "kind": "revisit",
+      "n": 2,
+      "H": 255,
+      "observer": [
+        255,
+        734,
+        736
+      ],
+      "phase": [
+        0,
+        1,
+        2
+      ],
+      "cycle": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        9,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "kind": "revisit",
+      "n": 3,
+      "H": 487,
+      "observer": [
+        487,
+        1970,
+        1972
+      ],
+      "phase": [
+        6,
+        5,
+        6
+      ],
+      "cycle": [
+        0,
+        2,
+        1,
+        3,
+        4,
+        10,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "kind": "revisit",
+      "n": 4,
+      "H": 889,
+      "observer": [
+        889,
+        5242,
+        5244
+      ],
+      "phase": [
+        2,
+        1,
+        6
+      ],
+      "cycle": null
+    },
+    {
+      "kind": "revisit",
+      "n": 5,
+      "H": 1631,
+      "observer": [
+        1631,
+        13926,
+        13928
+      ],
+      "phase": [
+        4,
+        5,
+        2
+      ],
+      "cycle": null
+    },
+    {
+      "kind": "revisit",
+      "n": 6,
+      "H": 3007,
+      "observer": [
+        3007,
+        37038,
+        37040
+      ],
+      "phase": [
+        5,
+        3,
+        1
+      ],
+      "cycle": null
+    }
+  ],
+  "phase_hostile": [
+    {
+      "observer": [
+        53,
+        225,
+        226
+      ],
+      "phase": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "observer": [
+        53,
+        204,
+        205
+      ],
+      "phase": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "next_escapes": [
+    {
+      "source": 485,
+      "target": 1457,
+      "root_phase": [
+        2,
+        2,
+        6
+      ]
+    },
+    {
+      "source": 485,
+      "target": 1459,
+      "root_phase": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "source": 487,
+      "target": 1465,
+      "root_phase": [
+        3,
+        5,
+        4
+      ]
+    },
+    {
+      "source": 487,
+      "target": 1463,
+      "root_phase": [
+        5,
+        1,
+        6
+      ]
+    }
+  ],
+  "inherited_81_27_scope": "unchanged twelve-vertex two/three-run separator, not a member of this specialized carrier",
+  "dependencies": {
+    "defect_offset_dynamics_20261103/wing.py": "5de01c634fafc83dcc624f4870904fd4d6a395ff611c55aeeb143e8803a4ffd7",
+    "defect_offset_dynamics_20261103/ESCAPES.md": "7f5558a9e65a5bd484bc71f3058c3a08c8e095fe44890e22a8c8b890b8a09a07",
+    "defect_offset_dynamics_20261103/native_escape_161.json": "cc42463deb566e4d42cc9b6670a58b37e03d22ca2f553bbd02d107828bcd0995",
+    "overnight_rank_return_20261029/RUN_RECURRENCE.md": "51e5fdda1dc226d1f19376574e8a571224a00c626a49b8bf1915809a268f50d2",
+    "overnight_rank_return_20261029/defect_transfer.py": "94881a90038f4ad37c47c10e3b35c1857094334e849d4348d882aca11fad322d",
+    "overnight_rank_return_20261029/defect_transfer.json": "eaefe310c05207fb8f81766a45aa06687212aa0b8bf2ce3817c4a8072a926ba4",
+    "session35_dimensions_dualities_20261023/arithmetic/SINGER_LINE_FLIPS.md": "2fd1fb8f3b1d38e866412f1130499e0146c97f232e34b6f1c0a03f623b0b588c",
+    "session166_planar_metagraph_20261103/reflection_voltages/REFLECTION_VOLTAGES.md": "e53b064de0ff785d8ec49d5909eba6559a4fcd0bda9077e08b4bce389f980c85",
+    "golden_inverse_defects_20261103/inverse.py": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb",
+    "ready_return_pentagon_20261103/return_program.py": "7c1685b15117716b161929ca262d4397737865d4f8560ff7b26bc7869d4fcbbf"
+  },
+  "files": {
+    "audit.py": "00105a3ffea6e47ad83e2492abbccd09fe98db55d7be22d4f7bb9e888190c0b6",
+    "bulk.json": "4b85dd03a2402eb31c1392e49eea0bfd3479db6098e6ce4870514448d94b0116",
+    "bulk.py": "4ea6c2740e4bb751e089c954dba7e49f9f3b93ced89bb40d71af18ee108fa203",
+    "escape_lifts.py": "348a98f31cd9223a51c8c514b35d5632f86ffc0b213f793b8b4f7557c0a29798",
+    "exploration.json": "92c9612d3abb4b979f5f801015d736fd24e274308f235a457a46449fa588c917",
+    "next_escapes.json": "f8cdc4e305642d7b6ae36fc219037a5a41c206f517fb81dc086f1ff492b3341c",
+    "next_escapes.py": "80ec29f08fad8edc732f7c43b08a23fbefe7d9cfddaabc1b2e0f9b6d390956f3",
+    "phase.py": "8d33576af7de6cb03c0e597e18ed71d61c396773fe58d0f5ac4d77d4d6eab27e",
+    "phase_bulk.json": "018b03847206c435f1060e4cfae4eca677760c6902c74f453ae0afdc87e1c469",
+    "singer.json": "25cb3b580826f7649a08bce3e471acd3fd3aad61b826446faec90b65a5884179",
+    "singer.py": "3cda7aba1b17fb0910b0deb981b3e4261690fd589bba008107de338cfe1259cd",
+    "switch_search.json": "37cfdbe0a690479501c8fa699cda2016cc8ddb53415ccffa1f2b2b5eb1389d9a",
+    "switch_search.py": "a846c6f3bc1597bcf1ea2a60910b90e3487b2c148698fe48050d544f6f3b31ae"
+  }
+}

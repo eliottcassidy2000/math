@@ -19,6 +19,23 @@ joint-port continuation distinguishes replacement and persistent policies
 and tests their actual operators separately. No re-marking of a forgotten
 old vertex is free.
 
+## 2026-11-03 — fixed native escape templates lose the source's dyadic clock
+
+- **Candidate, not a retracted theorem:** grow the right transitive block in
+  the literal161-to-485/487 programs and expect reusable3H+2/3H+4 returns.
+- **First failed implication:** an exact finite offset step does not preserve
+  the eigenvalues of the source-growth operation. The two actual outputs have
+  the inherited interval cubic `X^3-X^2-X-1`; the source has dyadic growth.
+  The first larger source has H305, while the lifted targets have873/889,
+  rather than917/919.
+- **Repair:** [ESCAPE_LAWS](../05-knowledge/results/sheet_return_compiler_20261103/ESCAPE_LAWS.md)
+  proves both all-size strong families and that n=3 is the sole matching
+  parameter. The rooted joint response also needs the distinct cubic
+  `X^3-2X^2-X-2`, with an observable F343 phase.
+- **Missing coordinate / next question:** retain the paired boundary and its
+  scale phase; seek a state-dependent path or coupled boundary move that
+  returns both response sectors to a physically realizable source chart.
+
 ## 2026-11-03 — Path-order indexing and the incomplete historical P4 proof
 
 **Affected:** THM-1425 (`theorems/THM-1425-the-ocf-is-the-weight-two-shifted-pascal-identity.md`)
