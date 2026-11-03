@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "bytes": 4954,
+      "path": "THEOREM.md",
+      "sha256": "4454e41059f43cfe2e19ae5a37054fa4bbbf5341f733885bbd045eb81ece65dd"
+    },
+    {
+      "bytes": 796,
+      "path": "check.out",
+      "sha256": "6f554b35fa5a51c3c7ffc66459a1815daf67cbef2e2f7c465dd09e00506f3cd2"
+    },
+    {
+      "bytes": 6042,
+      "path": "check.py",
+      "sha256": "7e05d077fa85bdd682b412664cc29a7874cddf30b8e0e3994c27ac80c62a8e64"
+    },
+    {
+      "bytes": 796,
+      "path": "check_O.out",
+      "sha256": "6f554b35fa5a51c3c7ffc66459a1815daf67cbef2e2f7c465dd09e00506f3cd2"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S147.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check.py",
+      "stdout_sha256": "6f554b35fa5a51c3c7ffc66459a1815daf67cbef2e2f7c465dd09e00506f3cd2"
+    }
+  ],
+  "schema": 1,
+  "scope": "Finite connected simple unicyclic graph Hamilton paths, edge trichotomy and deletion counts, with square-sum applications"
+}

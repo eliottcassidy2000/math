@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "bytes": 4917,
+      "path": "REPORT.md",
+      "sha256": "4287d864906f0bce54aa03ae8ab4ae2e6376f837f86e73dfe9b25ac2c431f9c7"
+    },
+    {
+      "bytes": 1344,
+      "path": "audit.out",
+      "sha256": "7ea11dcbc0eb5c799aac5151599ff45e28aa9862bbc9ca83a93ffd3ad514a822"
+    },
+    {
+      "bytes": 5186,
+      "path": "audit.py",
+      "sha256": "ad59a30cf875e32d505a9f33924f5f83ff4e4790812116fc76f110564bb12098"
+    },
+    {
+      "bytes": 1344,
+      "path": "audit_O.out",
+      "sha256": "7ea11dcbc0eb5c799aac5151599ff45e28aa9862bbc9ca83a93ffd3ad514a822"
+    },
+    {
+      "bytes": 112,
+      "path": "edge_families.out",
+      "sha256": "7f81564ad2aa4a6f84a9e84f82a06cdc7bd053d1bf4fe169044f3e48ebdc3c6f"
+    },
+    {
+      "bytes": 1030,
+      "path": "edge_families.py",
+      "sha256": "6d449dba1ddc58e07b16c33ff1902ebcdf88eb57fcffa4c9ae6e522457429b68"
+    },
+    {
+      "bytes": 112,
+      "path": "edge_families_O.out",
+      "sha256": "7f81564ad2aa4a6f84a9e84f82a06cdc7bd053d1bf4fe169044f3e48ebdc3c6f"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S147.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "audit.py",
+      "stdout_sha256": "7ea11dcbc0eb5c799aac5151599ff45e28aa9862bbc9ca83a93ffd3ad514a822"
+    },
+    {
+      "script": "edge_families.py",
+      "stdout_sha256": "7f81564ad2aa4a6f84a9e84f82a06cdc7bd053d1bf4fe169044f3e48ebdc3c6f"
+    }
+  ],
+  "schema": 1,
+  "scope": "Independent unicyclic path, growth and edge-family audit"
+}

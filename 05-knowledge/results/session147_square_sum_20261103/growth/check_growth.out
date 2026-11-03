@@ -1,0 +1,9 @@
+G15 old neighbors [1, 10], cycle rank 1
+G16 old neighbors [9], cycle rank 1
+G17 old neighbors [8], cycle rank 1
+G18 old neighbors [7], cycle rank 1
+G19 old neighbors [6, 17], cycle rank 2
+G20 old neighbors [5, 16], cycle rank 3
+G21 old neighbors [4, 15], cycle rank 4
+G22 old neighbors [3, 14], cycle rank 5
+Checked graph growth and square window through n=10000; all checks passed.

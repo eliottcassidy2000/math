@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "bytes": 2016,
+      "path": "REPORT.md",
+      "sha256": "6b99172ce59e70f2418126d7f277459bf12a84c2e426d25ae1806c5bba752e94"
+    },
+    {
+      "bytes": 383,
+      "path": "check_growth.out",
+      "sha256": "28e87dbf3766f7a00a648c38bb89f50efd9ae84e24916f3d7a964947a6f6d5af"
+    },
+    {
+      "bytes": 1662,
+      "path": "check_growth.py",
+      "sha256": "2d3980be1db82fc8291ffad1e689e2acef0115a28036f6a86922edfc5ea0bc96"
+    },
+    {
+      "bytes": 383,
+      "path": "check_growth_O.out",
+      "sha256": "28e87dbf3766f7a00a648c38bb89f50efd9ae84e24916f3d7a964947a6f6d5af"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S147.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "check_growth.py",
+      "stdout_sha256": "28e87dbf3766f7a00a648c38bb89f50efd9ae84e24916f3d7a964947a6f6d5af"
+    }
+  ],
+  "schema": 1,
+  "scope": "All-order growth of square-sum prefix graph and exact connected-unicyclic range"
+}
