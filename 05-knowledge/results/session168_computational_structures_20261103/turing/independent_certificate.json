@@ -1,0 +1,22 @@
+{
+  "seed_profiles_recomputed": 2,
+  "separator_profile_recomputed": true,
+  "fractran_arcs_replayed": 10,
+  "tm_arcs_replayed": 16,
+  "growth_old_order": 11,
+  "growth_new_order": 16,
+  "growth_old_arcs_unchanged": true,
+  "growth_increment_arc": [
+    8,
+    10
+  ],
+  "reference_arithmetic_trace": [
+    12,
+    18,
+    27,
+    45,
+    75,
+    125
+  ],
+  "reference_tm_steps": 6
+}

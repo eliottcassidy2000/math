@@ -1,0 +1,657 @@
+{
+  "scope": "Finite checks, plus structural proof in NOTE.md. Not a universal-program execution.",
+  "seed": [
+    {
+      "mask": 8,
+      "profile": [
+        0,
+        9,
+        33,
+        31,
+        10,
+        1
+      ],
+      "unique_degree2_outneighbor_degrees": [
+        1,
+        1
+      ]
+    },
+    {
+      "mask": 10,
+      "profile": [
+        0,
+        9,
+        33,
+        31,
+        10,
+        1
+      ],
+      "unique_degree2_outneighbor_degrees": [
+        1,
+        3
+      ]
+    }
+  ],
+  "two_slot_products": [
+    {
+      "bits": [
+        0,
+        0
+      ],
+      "profile": [
+        0,
+        81,
+        3447,
+        24666,
+        57141,
+        55725,
+        26059,
+        6216,
+        762,
+        45,
+        1
+      ]
+    },
+    {
+      "bits": [
+        0,
+        1
+      ],
+      "profile": [
+        0,
+        81,
+        3447,
+        24666,
+        57141,
+        55725,
+        26059,
+        6216,
+        762,
+        45,
+        1
+      ]
+    },
+    {
+      "bits": [
+        1,
+        0
+      ],
+      "profile": [
+        0,
+        81,
+        3447,
+        24666,
+        57141,
+        55725,
+        26059,
+        6216,
+        762,
+        45,
+        1
+      ]
+    },
+    {
+      "bits": [
+        1,
+        1
+      ],
+      "profile": [
+        0,
+        81,
+        3447,
+        24666,
+        57141,
+        55725,
+        26059,
+        6216,
+        762,
+        45,
+        1
+      ]
+    }
+  ],
+  "four_bit_labelled_distance_pairs": 256,
+  "fractran_exhaustive_capacity3": {
+    "halt": 4,
+    "step": 45,
+    "overflow": 15
+  },
+  "fractran_demo": {
+    "program": [
+      "3/2",
+      "5/3"
+    ],
+    "primes": [
+      2,
+      3,
+      5
+    ],
+    "capacities": [
+      3,
+      3,
+      3
+    ],
+    "integers": [
+      12,
+      18,
+      27,
+      45,
+      75,
+      125
+    ],
+    "tournament_order": 45,
+    "common_H": 387420489,
+    "trace": [
+      {
+        "status": "step",
+        "source": [
+          2,
+          1,
+          0
+        ],
+        "rule": 0,
+        "target": [
+          1,
+          2,
+          0
+        ],
+        "flips": [
+          {
+            "register": 0,
+            "coordinate": 1,
+            "arc": [
+              5,
+              7
+            ],
+            "exponents": [
+              1,
+              1,
+              0
+            ],
+            "graph_sha256": "13d85149c12cc1729f4f6f6d0b423d21f0919a1005873a6728b607d356d0d948"
+          },
+          {
+            "register": 1,
+            "coordinate": 4,
+            "arc": [
+              20,
+              22
+            ],
+            "exponents": [
+              1,
+              2,
+              0
+            ],
+            "graph_sha256": "49b122d8e653a1283a6f475412848f87b6603f8ef231d4ac892357ade3aaedcd"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "source": [
+          1,
+          2,
+          0
+        ],
+        "rule": 0,
+        "target": [
+          0,
+          3,
+          0
+        ],
+        "flips": [
+          {
+            "register": 0,
+            "coordinate": 0,
+            "arc": [
+              0,
+              2
+            ],
+            "exponents": [
+              0,
+              2,
+              0
+            ],
+            "graph_sha256": "2f44adb5c7981171f1c4b6066239ebea0f261bd163b29f15437fa0db2d57ee97"
+          },
+          {
+            "register": 1,
+            "coordinate": 5,
+            "arc": [
+              25,
+              27
+            ],
+            "exponents": [
+              0,
+              3,
+              0
+            ],
+            "graph_sha256": "eef27f03cd9103be2e831d839a76cb7de038ee0cff62528bccbf0b689d8f8e90"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "source": [
+          0,
+          3,
+          0
+        ],
+        "rule": 1,
+        "target": [
+          0,
+          2,
+          1
+        ],
+        "flips": [
+          {
+            "register": 1,
+            "coordinate": 5,
+            "arc": [
+              25,
+              27
+            ],
+            "exponents": [
+              0,
+              2,
+              0
+            ],
+            "graph_sha256": "2f44adb5c7981171f1c4b6066239ebea0f261bd163b29f15437fa0db2d57ee97"
+          },
+          {
+            "register": 2,
+            "coordinate": 6,
+            "arc": [
+              30,
+              32
+            ],
+            "exponents": [
+              0,
+              2,
+              1
+            ],
+            "graph_sha256": "67160b0ee7616e95a264b72a13ef2ba5fe8118db1d1051f230d4938936dc4fe5"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "source": [
+          0,
+          2,
+          1
+        ],
+        "rule": 1,
+        "target": [
+          0,
+          1,
+          2
+        ],
+        "flips": [
+          {
+            "register": 1,
+            "coordinate": 4,
+            "arc": [
+              20,
+              22
+            ],
+            "exponents": [
+              0,
+              1,
+              1
+            ],
+            "graph_sha256": "ad90db7c7732d74167268c999a56bf0c0a1a60782ae78e70858012cc9ac15859"
+          },
+          {
+            "register": 2,
+            "coordinate": 7,
+            "arc": [
+              35,
+              37
+            ],
+            "exponents": [
+              0,
+              1,
+              2
+            ],
+            "graph_sha256": "4ee7a94c146d5aebb547cd6fc604a546296120853acc42929f9c15ae39418694"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "source": [
+          0,
+          1,
+          2
+        ],
+        "rule": 1,
+        "target": [
+          0,
+          0,
+          3
+        ],
+        "flips": [
+          {
+            "register": 1,
+            "coordinate": 3,
+            "arc": [
+              15,
+              17
+            ],
+            "exponents": [
+              0,
+              0,
+              2
+            ],
+            "graph_sha256": "515e061453ae94107f9af5ed7cf1ae91fd0dac6f4085f85cce123a4c24401338"
+          },
+          {
+            "register": 2,
+            "coordinate": 8,
+            "arc": [
+              40,
+              42
+            ],
+            "exponents": [
+              0,
+              0,
+              3
+            ],
+            "graph_sha256": "3078f06e697befdd1812d899be6d7b7aad7f82de601f712e87eb9bafffd22910"
+          }
+        ]
+      },
+      {
+        "status": "halt",
+        "source": [
+          0,
+          0,
+          3
+        ]
+      }
+    ]
+  },
+  "tm_exhaustive_four_cells": {
+    "step": 96,
+    "overflow": 32,
+    "halt": 64
+  },
+  "tm_demo": {
+    "rules": [
+      {
+        "state": "A",
+        "read": 0,
+        "new_state": "B",
+        "write": 1,
+        "move": 1
+      },
+      {
+        "state": "A",
+        "read": 1,
+        "new_state": "B",
+        "write": 1,
+        "move": -1
+      },
+      {
+        "state": "B",
+        "read": 0,
+        "new_state": "A",
+        "write": 1,
+        "move": -1
+      },
+      {
+        "state": "B",
+        "read": 1,
+        "new_state": "H",
+        "write": 1,
+        "move": 1
+      }
+    ],
+    "tape_coordinates": [
+      -2,
+      -1,
+      0,
+      1
+    ],
+    "tournament_order": 80,
+    "macro_steps": 6,
+    "arc_flips": 16,
+    "common_H": 1853020188851841,
+    "trace": [
+      {
+        "tape": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "head": 2,
+        "state": "A",
+        "graph_sha256": "a3752cf3e464c0fc60fa59927b3527581e3d03a15193e682fec49fed49fdffc9"
+      },
+      {
+        "status": "step",
+        "tape": [
+          0,
+          0,
+          1,
+          0
+        ],
+        "head": 3,
+        "state": "B",
+        "flips": [
+          {
+            "phase": "write",
+            "coordinate": 8,
+            "arc": [
+              40,
+              42
+            ],
+            "graph_sha256": "02ddfb6f58d411b076bdafa922207c159bdceae706ccffc750dfbefe2cadd219"
+          },
+          {
+            "phase": "add_head",
+            "coordinate": 14,
+            "arc": [
+              70,
+              72
+            ],
+            "graph_sha256": "ddc39cba42f8edb91b825c9219f37004b65cd5437ed54aaf00257b41a2ac3d43"
+          },
+          {
+            "phase": "remove_head",
+            "coordinate": 9,
+            "arc": [
+              45,
+              47
+            ],
+            "graph_sha256": "3b79e2f20916ae17577612e27768a010ca7359f301fb8d4f1e2a6f2c3d9fc41c"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "tape": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "head": 2,
+        "state": "A",
+        "flips": [
+          {
+            "phase": "write",
+            "coordinate": 12,
+            "arc": [
+              60,
+              62
+            ],
+            "graph_sha256": "ff7498d61b20555fa8238abf92a1355660c79cd8305a41696f7b90d8d2f9b3e3"
+          },
+          {
+            "phase": "add_head",
+            "coordinate": 9,
+            "arc": [
+              45,
+              47
+            ],
+            "graph_sha256": "39fd7a748a45982381b25a85ebf145cef1437db834fd6285acb01562a44e196c"
+          },
+          {
+            "phase": "remove_head",
+            "coordinate": 14,
+            "arc": [
+              70,
+              72
+            ],
+            "graph_sha256": "30edf1becd741d2dfdd8d780586c11196a695f1a89777c48de54867e20883a60"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "tape": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "head": 1,
+        "state": "B",
+        "flips": [
+          {
+            "phase": "add_head",
+            "coordinate": 6,
+            "arc": [
+              30,
+              32
+            ],
+            "graph_sha256": "b18b64b5a0459e5f96285c4b5e28d147efa8b1437e1e80cc09bd429049609dda"
+          },
+          {
+            "phase": "remove_head",
+            "coordinate": 9,
+            "arc": [
+              45,
+              47
+            ],
+            "graph_sha256": "5e9b9111f892b298051da48c49ee248bc57946b3eaf4336d33293bba0cfd5ec7"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "tape": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "head": 0,
+        "state": "A",
+        "flips": [
+          {
+            "phase": "write",
+            "coordinate": 4,
+            "arc": [
+              20,
+              22
+            ],
+            "graph_sha256": "13341e2f5ccb82992f9da9cb23f1f2f252368c988497940def8d6feca5c2eba5"
+          },
+          {
+            "phase": "add_head",
+            "coordinate": 1,
+            "arc": [
+              5,
+              7
+            ],
+            "graph_sha256": "efe6717a310bbe92bc11b16e8e0f7211f36221b412e7f9674ead6e31c4d700b7"
+          },
+          {
+            "phase": "remove_head",
+            "coordinate": 6,
+            "arc": [
+              30,
+              32
+            ],
+            "graph_sha256": "c76ea5cdf4c4c9a9fbbea3e9d58c5629aec21d99f0109a6cc87a05d3779c1918"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "tape": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "head": 1,
+        "state": "B",
+        "flips": [
+          {
+            "phase": "write",
+            "coordinate": 0,
+            "arc": [
+              0,
+              2
+            ],
+            "graph_sha256": "d004c37f6a031e6370ec08a0a445fd7dd59b7d83e69fa6e05362dd72a0d35556"
+          },
+          {
+            "phase": "add_head",
+            "coordinate": 6,
+            "arc": [
+              30,
+              32
+            ],
+            "graph_sha256": "bd11a5bb68943473e127f27f34952ec0ecd38ccaaa6c95916b2a1b82946ef68c"
+          },
+          {
+            "phase": "remove_head",
+            "coordinate": 1,
+            "arc": [
+              5,
+              7
+            ],
+            "graph_sha256": "701eba1416dc0c7717fe26f44811c22623192824200feb1408500c851bd5c943"
+          }
+        ]
+      },
+      {
+        "status": "step",
+        "tape": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "head": 2,
+        "state": "H",
+        "flips": [
+          {
+            "phase": "add_head",
+            "coordinate": 11,
+            "arc": [
+              55,
+              57
+            ],
+            "graph_sha256": "425603172a56a888d5830eec1a2916c24b63418ad7d814d7a7294fc4df7cbc7f"
+          },
+          {
+            "phase": "remove_head",
+            "coordinate": 6,
+            "arc": [
+              30,
+              32
+            ],
+            "graph_sha256": "e607576e1a0a76b7de4a42b425bf1092c0af016ba6308a7a84ae37e5e6c78243"
+          }
+        ]
+      }
+    ]
+  }
+}
