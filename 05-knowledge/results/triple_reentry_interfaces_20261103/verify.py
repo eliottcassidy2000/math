@@ -183,8 +183,31 @@ def small_controls():
         divisor_examples.append({'N': x, 'F': f, 'S': s, 'U': u})
         require(math.prod(support(x)) == 1335, 'radical promotion')
         require((f == s + u) == (x != 1335), 'balance witness')
-    # Same two-source triangle transfer sees a two-path-cover sidecar.
-    return {'path_values': path_values, 'divisor_examples': divisor_examples}
+    clocks = []
+    def vector(k, m):
+        a, b = pow(2,k,m), pow(3,k,m)
+        return ((2*a+1)%m, (2*b+1)%m, (2*a+4*b+3)%m)
+    for m in range(1,129):
+        K, L = 0, 1
+        for p in support(m):
+            pe, e = 1, 0
+            while m % (pe*p) == 0:
+                pe *= p; e += 1
+            for base in (2,3):
+                if base % p == 0:
+                    # Both bases here are prime; their p-valuation is one.
+                    K = max(K,e)
+                else:
+                    order = 1
+                    while pow(base,order,pe) != 1:
+                        order += 1
+                    L = math.lcm(L,order)
+        require(all(vector(k,m) == vector(k+L,m) for k in range(K,K+L+1)),
+                'joint exponential clock')
+        clocks.append([m,K,L])
+    require(vector(0,72) != vector(6,72), 'singular preperiod hostile')
+    return {'path_values': path_values, 'divisor_examples': divisor_examples,
+            'parameter_clock_controls': clocks}
 
 
 def census():

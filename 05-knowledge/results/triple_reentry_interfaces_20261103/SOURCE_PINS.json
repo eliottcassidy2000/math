@@ -86,5 +86,40 @@
       "path": "05-knowledge/results/ternary_integer_returns_20261029/RANKS_AND_CONNECTIONS.md",
       "blob": "ea3d1bb0f920aa285807f77a8aa196c66984af1c"
     }
+  ],
+  "incoming_revision": "89416555c4d95c6fa20c9ebafca1a180ad3fcaf3",
+  "incoming_pins": [
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/complementary_guard/COMPLEMENTARY_OFFSETS.md",
+      "blob": "bcc7caa7dceadbf555b1f9816da1142e100cd016"
+    },
+    {
+      "path": "05-knowledge/results/ready_return_pentagon_20261103/RETURN.md",
+      "blob": "13afe57cd12a276622a483c132beea0849f72161"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/complementary_guard/UNIVERSAL_GUARD_LIFT.md",
+      "blob": "5955f0236917adf298bd5b3b488ccb7e7e8cdd7a"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/profile_algebras/CANONICAL_RETURNS.md",
+      "blob": "ec3cd4692d81d47a792409cc342a486a8fc3ed13"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/boolean_gates/CLOSED_OBSERVER.md",
+      "blob": "ab3748eeea46b6519696f4f2f08ee53edf4fb22f"
+    },
+    {
+      "path": "05-knowledge/results/session164_emergent_20261103/nonuniform_operator/NOTE.md",
+      "blob": "04d5b12defbc6326f8901730bf85d8a320063f38"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "blob": "963ba70f0d5f1154b07fd406cb24245eda16debc"
+    },
+    {
+      "path": "05-knowledge/results/rooted_carry_closure_20261103/ROOTED_RETURN.md",
+      "blob": "06b724e9ff6d709c932aff6fea51a2e0fe3b0091"
+    }
   ]
 }

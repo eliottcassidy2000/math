@@ -190,7 +190,38 @@ def main():
         for j in reversed(word):
             current = 3*current + 2*j
         check(current == h, 'exact ternary address replay')
-    result = {'status': 'PASS', 'raw_seeds': seed_audit, 'scalar_roots_through_100001': root_counts, 'independently_counted_literal_cuts': cubes,
+    lifts = json.loads((HERE / 'seed_lifts.json').read_text())
+    for item in lifts:
+        rows = item['rows']; n = len(rows)
+        K = [0]*n
+        for word in itertools.permutations(range(n)):
+            for split in range(1, n+1):
+                P, Q = word[:split], word[split:]
+                if all(rows[a] >> b & 1 for path in (P, Q)
+                       for a, b in zip(path, path[1:])):
+                    K[P[-1]] += 1
+        check([k-item['H'] for k in K] == item['J'], 'permutation-cut slack audit')
+        def ear(old, q):
+            n0 = len(old); a, b = n0, n0+1
+            return [r | ((1 << a) if i == q else 0) for i,r in enumerate(old)] + [
+                (((1 << n0)-1) ^ (1 << q)) | (1 << b), (1 << n0)-1]
+        def ham_dp(r):
+            dp = {(1 << i, i): 1 for i in range(len(r))}
+            for mask in range(1, 1 << len(r)):
+                for last in range(len(r)):
+                    val = dp.get((mask,last), 0)
+                    if val:
+                        for nxt in range(len(r)):
+                            if not mask >> nxt & 1 and r[last] >> nxt & 1:
+                                key = (mask | (1 << nxt), nxt)
+                                dp[key] = dp.get(key,0) + val
+            return sum(dp.get(((1 << len(r))-1, i),0) for i in range(len(r)))
+        for q in item['best_ports']:
+            first = ear(rows, q)
+            second = ear(first, n)
+            check(ham_dp(first) == 3*item['H']+2*item['minimum_J'], 'literal first ear')
+            check(ham_dp(second) == item['minimum_lift_H'], 'literal two-ear canonical lift')
+    result = {'status': 'PASS', 'raw_seeds': seed_audit, 'independent_rooted_lift_profiles': len(lifts), 'scalar_roots_through_100001': root_counts, 'independently_counted_literal_cuts': cubes,
               'orbit_census': results}
     print(json.dumps(result, indent=2, sort_keys=True))
 

@@ -15,6 +15,8 @@ ternary-return aspiration into a concrete sufficient closure target.
 
 - [RETURN_FOREST](RETURN_FOREST.md): exact roots `1,23,25,63,65,67`, literal
   witnesses, and the source-return hypothesis that remains unproved.
+- [INCOMING](INCOMING.md): newer repeated scalar returns, universal guard entry,
+  and the measured normalization price on the six actual seeds.
 - [TRIPLE_ATLAS](TRIPLE_ATLAS.md): older triples, exact maps, lost coordinates,
   and the transfer that is useful for this problem.
 - [RESEARCH_CYCLES](RESEARCH_CYCLES.md): inheritance, hostile tests, metanalysis,
@@ -193,6 +195,38 @@ This elementary bound can be loose; it pays for the actual forbidden-value
 alphabet rather than assuming a universal width of two or three. It assumes
 that a unit exists and supplies no universal source-return theorem.
 
+## P7. Parameter-dependent interfaces have a joint clock for every modulus
+
+Suppose a finite family of named legal interfaces has counts
+`c_s(k)=b_s+sum_j a_sj lambda_j^k`, with integer coefficients and fixed
+integer bases `lambda_j>=2`. Retain the actual parameter k, names and costs.
+For a modulus `m=product p^e`, define
+
+    K=max ceil(e/v_p(lambda_j)) over p dividing lambda_j,
+    L=lcm ord_(p^e)(lambda_j) over p not dividing lambda_j,
+
+with empty maximum0 and empty lcm1. Then the entire count vector modulo m,
+and hence its minimum-unit-cost profile, is periodic with period dividing
+L for k>=K. Proof: modulo each prime power a nonunit base has vanished
+by K and a unit base repeats with its multiplicative order; apply CRT to
+the **same** k and interface labels.
+
+For unit decisions alone, replacing m by rad(m) improves the certified
+preperiod to at most1 and replaces every prime-power order by its prime
+order. Exact residues, divisions and rooted observer values generally
+need the larger clock. This gives a finite procedure for each modulus,
+not one fixed clock uniform over all moduli. A periodic selector still
+must use the actual source with its original k; changing k freely can
+change the integer count being proved.
+
+The incoming ready-return observers contain both2^k and3^k. Their extra
+seven-adic phase bit is therefore relevant data, even where one term is
+invisible modulo7. The [incoming rooted controller](../rooted_carry_closure_20261103/ROOTED_RETURN.md)
+also gives a concrete positive use of shared selection: either fixed port
+fails infinitely often, while selecting a at even k and b at odd k always
+passes the stated primitive-return guards. These are precisely the sorts
+of named joint constraints that separate modulus tests can lose.
+
 ## A concrete F=U+S bridge, with its boundary
 
 The three exponent promotions of 1335 are
@@ -213,6 +247,7 @@ Run from the repository root:
 
 ```sh
 python3 -B 05-knowledge/results/triple_reentry_interfaces_20261103/verify.py
+python3 -B 05-knowledge/results/triple_reentry_interfaces_20261103/seed_lifts.py
 python3 -B 05-knowledge/results/triple_reentry_interfaces_20261103/verify.py --census
 python3 -B 05-knowledge/results/triple_reentry_interfaces_20261103/independent_audit.py
 python3 -O -B 05-knowledge/results/triple_reentry_interfaces_20261103/independent_audit.py
@@ -224,6 +259,10 @@ cuts, all source-orbit minima through the declared order-six universe,
 actual strongness of the unit outputs, all six root tournaments, and exact
 inverse/replay addresses for every allowed odd target through 100001.
 The address check is a finite control for P1, not tournament coverage.
+P7 also has exact mixed-base clock controls for every modulus1..128,
+including the singular preperiod failure at72. The incoming extension
+checks every rooted slack at all six literal seeds and independently counts
+the best-port one-ear and two-ear graphs.
 
 The survey repaired THM-1425's path-order shift:
 `I(P_m,2)=J_(m+2)`, not `J_(m+1)`. It also replaced THM-202's incomplete

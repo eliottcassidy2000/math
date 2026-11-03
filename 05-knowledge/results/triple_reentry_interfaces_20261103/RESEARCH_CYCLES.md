@@ -82,6 +82,18 @@ THM-1425 was wrong by one; THM-202's original direct P4 argument was not a
 complete proof. Both were repaired with lineage in MISTAKES. The latter's
 conclusion follows noncircularly from the already proved global H=21 exclusion.
 
+## Cycle D — integrating incoming mathematical progress
+
+The clean-tree fetch brought S164's repeated scalar offsets, universal guard
+entry, positive profile operators and canonical returns, plus actual graded
+ready returns from the parallel source work. [INCOMING](INCOMING.md) records
+the exact scope changes. We computed every rooted slack on the six printed
+seeds and audited both literal ear outputs. The missing source entry is
+now a **priced** entry problem: the canonical lift changes H to9H+6J.
+The six minimum slacks are0,1,2,0,4,5, so even the finite seed normalizations
+have different costs. This is the next useful link between the arithmetic
+forest and physical source operations.
+
 ## Decisive next tests
 
 1. Equip the six scalar seeds with the actual observer/guard predicates of

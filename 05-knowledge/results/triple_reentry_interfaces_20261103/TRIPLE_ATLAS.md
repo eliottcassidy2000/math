@@ -234,6 +234,11 @@ that remains valid after the next operation**. Berggren provides all three;
 Zeckendorf adds a carry; path-cover substitution adds run ownership; the
 unit-interface compiler adds joint prime supports and named cuts.
 
+Incoming work has now implemented parts of this richer carrier, including
+actual graded ready returns and a universal priced guard lift; see
+[INCOMING](INCOMING.md). A universal finite linear compression is already
+excluded for the incoming repeated-head family.
+
 The most useful proposed experiment is therefore not another matching of
 three numerical labels. Give a tournament return source an expanded state
 consisting of its marked path-cover profile plus the nonuniform interface

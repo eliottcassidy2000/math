@@ -59,7 +59,11 @@ For 63 the inherited recipe has seed `(1,0,0)` and blocks
 `1,0,0,1,1,0,0`. Its nine-vertex output has a universal source; deleting
 that forced first vertex preserves H. The remaining strong tournament has
 rows `(126,252,248,112,96,192,128,25)`. This recovers existing realizability,
-not a new discovery of count 63. Credit:
+not a new discovery of count 63. The older THM-4094
+[prime-lane reduction](../../../01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md)
+already uses63 as a strong carry atom; the new forest is a different,
+sufficient return-lifting organization, not a replacement for that stronger
+existing multiplicative reduction. Credit:
 [the million-count constructor](../session124_million_path_spectrum_20261031/construct_witness.py).
 The new verifier does not depend on running that constructor.
 
@@ -114,6 +118,12 @@ second correction. Moreover, its automatically propagated guard has zero
 charge, so a one-off scalar `+2` or `+4` does not give a repeatable nonzero
 branch. These are source-coordinate obstructions, not failures of ternary
 arithmetic.
+
+The incoming S164 complementary construction now repeats scalar offsets and
+provides universal entry to a canonical source bank, with a count-changing
+price. The old exclusion applies to its specified ear, not to every changed
+attachment. [INCOMING](INCOMING.md) integrates those stronger results and
+measures the price on all six literal seeds.
 
 The next decisive target is therefore a return with either (a) an explicitly
 transported new observer chart that changes this sign constraint, or (b) a
