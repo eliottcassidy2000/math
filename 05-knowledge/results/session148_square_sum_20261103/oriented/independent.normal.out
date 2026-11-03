@@ -1,0 +1,11 @@
+Verified insertion for 1098 labelled graphs n=2..5, orientation histogram for all n<=4 and K5.
+n=15 directed count=2, independent endpoint DP states=328
+n=16 directed count=2, independent endpoint DP states=368
+n=17 directed count=2, independent endpoint DP states=428
+n=18 directed count=0, independent endpoint DP states=474
+n=23 directed count=6, independent endpoint DP states=12244
+n=24 directed count=0, independent endpoint DP states=22319
+n=25 directed count=20, independent endpoint DP states=44155
+n=26 directed count=24, independent endpoint DP states=87120
+n=27 directed count=70, independent endpoint DP states=164700
+Independent checks passed.

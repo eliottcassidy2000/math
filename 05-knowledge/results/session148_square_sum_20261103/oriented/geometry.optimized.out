@@ -1,0 +1,4 @@
+Verified 8,10 prefix distances n=10..40 and t=2..100 witness family.
+n=23 independently verified every edge incidence, 6 directed paths.
+n=25 independently verified every edge incidence, 20 directed paths.
+All distance and independent edge-incidence checks passed.

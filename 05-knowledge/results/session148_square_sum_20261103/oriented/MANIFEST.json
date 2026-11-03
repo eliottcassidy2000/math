@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "bytes": 8364,
+      "path": "REPORT.md",
+      "sha256": "c57cb6a5c4e77d555fbf1380310aead705e93e8a4a781a84e866eb18ca6537dc"
+    },
+    {
+      "bytes": 265,
+      "path": "geometry.normal.out",
+      "sha256": "43324ca6c9705986f49d768a6d562c52b34f63cf718afb0cec20c55fe84e1cc2"
+    },
+    {
+      "bytes": 265,
+      "path": "geometry.optimized.out",
+      "sha256": "43324ca6c9705986f49d768a6d562c52b34f63cf718afb0cec20c55fe84e1cc2"
+    },
+    {
+      "bytes": 658,
+      "path": "independent.normal.out",
+      "sha256": "2b4cbae8c46446d25df2dada71dbffb1bd126c9f8f626a0b62176e40f73b8950"
+    },
+    {
+      "bytes": 658,
+      "path": "independent.optimized.out",
+      "sha256": "2b4cbae8c46446d25df2dada71dbffb1bd126c9f8f626a0b62176e40f73b8950"
+    },
+    {
+      "bytes": 1283,
+      "path": "orientation.normal.out",
+      "sha256": "a9dc7f3b22cc426f4a97f0ab6b82277bb58fb58252278c31727839b4fafa448e"
+    },
+    {
+      "bytes": 1283,
+      "path": "orientation.optimized.out",
+      "sha256": "a9dc7f3b22cc426f4a97f0ab6b82277bb58fb58252278c31727839b4fafa448e"
+    },
+    {
+      "bytes": 2560,
+      "path": "orientation.py",
+      "sha256": "8bdc9d0d37d1bd6e126bc93151b90be74708dae304fccdbfbf80010ab585b357"
+    },
+    {
+      "bytes": 1571,
+      "path": "test_geometry_and_edges.py",
+      "sha256": "d9b5b2b57b4a0962cf5c11c02bbfff9ed0755e5627cfd51b76fa8cb8d339a327"
+    },
+    {
+      "bytes": 2694,
+      "path": "test_independent.py",
+      "sha256": "cc758af044a4773127039e884a82abd3d8318a8c084862df19e7ee7402889b33"
+    },
+    {
+      "bytes": 1932,
+      "path": "verify_frozen_packet.py",
+      "sha256": "8fae6c01968493af95cf16c9a00443fa47268e8f7d7512ccc2a8fc8db4e97317"
+    }
+  ],
+  "manifest_self_hash": "External publication metadata pins this manifest; it does not hash itself.",
+  "mutable_paths_excluded": [
+    "00-navigation/S148.md",
+    "00-navigation/S111-plus.md"
+  ],
+  "replay": [
+    {
+      "script": "orientation.py",
+      "stdout_sha256": "a9dc7f3b22cc426f4a97f0ab6b82277bb58fb58252278c31727839b4fafa448e"
+    },
+    {
+      "script": "test_independent.py",
+      "stdout_sha256": "2b4cbae8c46446d25df2dada71dbffb1bd126c9f8f626a0b62176e40f73b8950"
+    },
+    {
+      "script": "test_geometry_and_edges.py",
+      "stdout_sha256": "43324ca6c9705986f49d768a6d562c52b34f63cf718afb0cec20c55fe84e1cc2"
+    }
+  ],
+  "schema": 1,
+  "scope": "Oriented paths, insertion recursion and distance witnesses"
+}
