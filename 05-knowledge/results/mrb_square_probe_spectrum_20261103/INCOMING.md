@@ -56,6 +56,24 @@ the original dependencies; these additional references are pinned separately.
    program. Its child reentry still remains open. Such actual reset
    programs, combined with a controlled joint observer, remain the most
    relevant next input to a completeness proof.
+8. **Final integration through `6cadc8d75d`.** The incoming
+   [two-ear return certificate](../session163_ternary_triples_20261103/strong_returns/TWO_EARS.md)
+   continues the strong source chains to855 and873, preserving their full
+   three-coordinate observers and the old port. Its exhaustive pruned
+   census excludes both offsets from those supplied ten-vertex parents
+   with at most two added vertices. This is precisely the distinction
+   HORIZON keeps: all two-birth responses are observable, but their target
+   image may still omit the requested values. The updated later-return
+   note also excludes +2/+4 under *all* cross-edge rewirings with the C3
+   and returned-source internal blocks fixed, by lower bounds6 and18.
+   [Marked escape](../session163_ternary_triples_20261103/nonuniform/MARKED_ESCAPE.md)
+   extends quadratic interpolation to the fixed-port observer itself,
+   with a concrete failure of simultaneous prime escape modulo15. This
+   overlaps our sparse-observation mechanism and is credited; the new
+   contribution here is the common arithmetic host and arbitrary finite
+   horizon. The [H497 checkpoint](../rooted_carry_closure_20261103/README.md)
+   is explicitly FINITE-EXACT with its proof write-up pending. Its primitive
+   return signals are not used as an all-size proved dependency here.
 
 The conceptual improvement is a hierarchy of *faithful finite future
 observations*. It resolves the one-step information obstruction at any

@@ -1,15 +1,18 @@
 {
   "base_commit": "d79221bc31b8b251b2fb035a2f03387b22052806",
-  "incoming_snapshot": "f516a84aa4ee00dae7567844ad84d96c6de3df13",
+  "incoming_snapshot": "6737025340bc55d6dfa87e1f6d0b38aecc75982b",
   "incoming_source_files": {
+    "05-knowledge/results/rooted_carry_closure_20261103/README.md": "39c6164eeb761f1cc675bcf6a33e2ea1b34de293c73d68a0be2b986c6c9dafb1",
     "05-knowledge/results/session162_mrb_square_20261103/cycle_transform/NOTE.md": "33d787e0ee949e2171fcbc6d6c63619123754216e5f1589e731dbe81588537de",
     "05-knowledge/results/session162_mrb_square_20261103/mrb_star/NOTE.md": "acc9c32609c5c45e299305be6ae5712cb586448761a27b624facdbfc4d92cd2c",
     "05-knowledge/results/session162_mrb_square_20261103/mrb_weighted/RESULT.md": "d6185b1b0bcfd2351fe790c3f5d4f44d77e151a81f2487faec1c5b91072d08ee",
     "05-knowledge/results/session162_mrb_square_20261103/square_transfer/MODULE_BARRIER.md": "e720bf47a47ac281afe9ea11cb2b71e2db9a1c2aad2f4c110bba4a6287df0677",
     "05-knowledge/results/session162_mrb_square_20261103/square_transfer/NOTE.md": "27da2734e2a58d33f6aecf61e57473da97850ff295793da787f9eb0198ac716b",
+    "05-knowledge/results/session163_ternary_triples_20261103/nonuniform/MARKED_ESCAPE.md": "b5ec72bb306a52da5cdad472d80f0596bbf4a6ebb63e206065a3f34a3f3fcf9f",
     "05-knowledge/results/session163_ternary_triples_20261103/nonuniform/NOTE.md": "d642a383a63f007a59b1594e83473667f15eb0a4238f0c89fd22db67987b431f",
-    "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/LATER_RETURNS.md": "531f5809c0e1ab90b064c238fd46c3b8a8471815b48cc4a809bfa98bb33259be",
+    "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/LATER_RETURNS.md": "828ae13cfe4345a5ecc754e983db175dfc9a71519a108febd627c20c7d9ccbb9",
     "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/NOTE.md": "bf3c4573ff007fd9ea5fc5e10568f920e882d2219893a3c5e980d269241740a7",
+    "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/TWO_EARS.md": "ff0dd6500840ac06a2934e93577cdb0cbe7d25653dcdb7c114e382e60faba161",
     "05-knowledge/results/two_entry_funnels_20261103/README.md": "2edcc73428e17da37314298a72b48c52e9353d9b8edc4291c55eb14f2009021c"
   },
   "source_files": {

@@ -138,3 +138,8 @@ incoming strong returns31->95->285 and31->97->291 prove particular returns,
 while the65-atom exclusion of their six next exact source states shows
 that simply replaying that alphabet is insufficient. A larger observation
 bank diagnoses that failure; it does not supply the missing source.
+
+The final incoming two-ear computation continues the zero branches to855
+and873 and exhaustively excludes the positive offsets for those supplied
+parents with at most two added vertices. See INCOMING item8: this sharpens
+the source-selection boundary without changing the interpolation theorem.
