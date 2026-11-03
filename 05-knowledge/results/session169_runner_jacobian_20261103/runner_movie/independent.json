@@ -1,0 +1,54 @@
+{
+  "shifted": {
+    "closed_wall_atoms": [
+      "13/24",
+      "2/3"
+    ],
+    "quaternion_permutation": [
+      4,
+      5,
+      6,
+      7,
+      0,
+      1,
+      2,
+      3
+    ],
+    "strict_grid_cells": [
+      13,
+      14,
+      15
+    ]
+  },
+  "strict_safe_cut": {
+    "cut_atom_verified": true,
+    "strict_grid_points": [
+      "0",
+      "1/24",
+      "1/12",
+      "1/8",
+      "7/8",
+      "11/12",
+      "23/24",
+      "1"
+    ],
+    "strict_mass": "1/3"
+  },
+  "unshifted": {
+    "closed_wall_atoms": [
+      "1/3",
+      "2/3"
+    ],
+    "quaternion_permutation": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "strict_grid_cells": []
+  }
+}

@@ -1,0 +1,459 @@
+{
+  "claims": "Finite controls only; universal statements use NOTE.md proofs.",
+  "doubling_sign_pair_checks": 21844,
+  "examples": {
+    "shifted": {
+      "closed_intervals": [
+        [
+          "13/24",
+          "2/3"
+        ]
+      ],
+      "cut_atom": {
+        "closed_safe": false,
+        "strict_safe": false,
+        "time": "0",
+        "trits": [
+          0,
+          0
+        ]
+      },
+      "holonomy": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ],
+      "phases": [
+        "0",
+        "1/4"
+      ],
+      "physical_lift": {
+        "arc_flips": 19,
+        "final_unit": 4,
+        "order": 35,
+        "state_hash": "9120bc327ee26a37ff023eed42f16e374676e1f9d932e3b4db08fa2469bfe86b"
+      },
+      "speeds": [
+        1,
+        2
+      ],
+      "strict_intervals": [
+        [
+          "13/24",
+          "2/3"
+        ]
+      ],
+      "strict_mass": "1/8",
+      "threshold": "1/3",
+      "threshold_flips": 12,
+      "transport_word": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "wall_times": [
+        "1/24",
+        "5/24",
+        "1/3",
+        "13/24",
+        "2/3",
+        "17/24"
+      ]
+    },
+    "strict_safe_cut": {
+      "closed_intervals": [
+        [
+          "0",
+          "1/6"
+        ],
+        [
+          "5/6",
+          "1"
+        ]
+      ],
+      "cut_atom": {
+        "closed_safe": true,
+        "strict_safe": true,
+        "time": "0",
+        "trits": [
+          2
+        ]
+      },
+      "holonomy": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "phases": [
+        "1/2"
+      ],
+      "speeds": [
+        1
+      ],
+      "strict_intervals": [
+        [
+          "0",
+          "1/6"
+        ],
+        [
+          "5/6",
+          "1"
+        ]
+      ],
+      "strict_mass": "1/3",
+      "threshold": "1/3",
+      "threshold_flips": 4,
+      "transport_word": [
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "wall_times": [
+        "1/6",
+        "5/6"
+      ]
+    },
+    "tie_reflected": {
+      "closed_intervals": [
+        [
+          "1/3",
+          "5/12"
+        ],
+        [
+          "7/12",
+          "2/3"
+        ]
+      ],
+      "cut_atom": {
+        "closed_safe": false,
+        "strict_safe": false,
+        "time": "0",
+        "trits": [
+          0,
+          0
+        ]
+      },
+      "holonomy": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "phases": [
+        "0",
+        "0"
+      ],
+      "speeds": [
+        1,
+        4
+      ],
+      "strict_intervals": [
+        [
+          "1/3",
+          "5/12"
+        ],
+        [
+          "7/12",
+          "2/3"
+        ]
+      ],
+      "strict_mass": "1/6",
+      "threshold": "1/3",
+      "threshold_flips": 20,
+      "transport_word": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "wall_times": [
+        "1/12",
+        "1/6",
+        "1/3",
+        "5/12",
+        "7/12",
+        "2/3",
+        "5/6",
+        "11/12"
+      ]
+    },
+    "tie_same_order": {
+      "closed_intervals": [
+        [
+          "1/3",
+          "5/12"
+        ],
+        [
+          "7/12",
+          "2/3"
+        ]
+      ],
+      "cut_atom": {
+        "closed_safe": false,
+        "strict_safe": false,
+        "time": "0",
+        "trits": [
+          0,
+          0
+        ]
+      },
+      "holonomy": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ],
+      "phases": [
+        "0",
+        "0"
+      ],
+      "speeds": [
+        1,
+        4
+      ],
+      "strict_intervals": [
+        [
+          "1/3",
+          "5/12"
+        ],
+        [
+          "7/12",
+          "2/3"
+        ]
+      ],
+      "strict_mass": "1/6",
+      "threshold": "1/3",
+      "threshold_flips": 20,
+      "transport_word": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "wall_times": [
+        "1/12",
+        "1/6",
+        "1/3",
+        "5/12",
+        "7/12",
+        "2/3",
+        "5/6",
+        "11/12"
+      ]
+    },
+    "unshifted": {
+      "closed_intervals": [
+        [
+          "1/3",
+          "1/3"
+        ],
+        [
+          "2/3",
+          "2/3"
+        ]
+      ],
+      "cut_atom": {
+        "closed_safe": false,
+        "strict_safe": false,
+        "time": "0",
+        "trits": [
+          0,
+          0
+        ]
+      },
+      "holonomy": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "phases": [
+        "0",
+        "0"
+      ],
+      "physical_lift": {
+        "arc_flips": 18,
+        "final_unit": 0,
+        "order": 35,
+        "state_hash": "b2da1f857ce653e6df856097bd17b0a9d6a29fb4f4590eb054cf7654ad862bda"
+      },
+      "speeds": [
+        1,
+        2
+      ],
+      "strict_intervals": [],
+      "strict_mass": "0",
+      "threshold": "1/3",
+      "threshold_flips": 12,
+      "transport_word": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "wall_times": [
+        "1/6",
+        "1/3",
+        "2/3",
+        "5/6"
+      ]
+    }
+  },
+  "phase_chamber_checks": 84,
+  "seed_profiles": [
+    [
+      0,
+      9,
+      33,
+      31,
+      10,
+      1
+    ],
+    [
+      0,
+      9,
+      33,
+      31,
+      10,
+      1
+    ]
+  ],
+  "shifted_exact_cases": 400,
+  "unshifted_exact_cases": 168
+}
