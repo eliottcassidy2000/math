@@ -116,7 +116,7 @@ The new [terminal-port compiler](OBSERVER_INDUCTION.md) is an iff test when
 an actual C3 ancestry is supplied. Retain future root names **and the two
 required final names**, then test width2 and a compatible slot coloring,
 including the initial oriented triangle. This constructs a legal named
-program. A strong H5 graph with prescribed ports gives the minimal hostile
+program. A strong H5 graph with prescribed ports gives an explicit hostile
 to ignoring the final pair; it even has an actual weak graph predecessor,
 so a formal inverse plus graph existence is insufficient.
 
