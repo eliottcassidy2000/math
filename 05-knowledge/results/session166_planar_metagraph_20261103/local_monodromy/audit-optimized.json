@@ -1,0 +1,211 @@
+{
+  "all_degree_controls": [
+    {
+      "deck_count": 2,
+      "degree": 2,
+      "vertices": 8
+    },
+    {
+      "deck_count": 1,
+      "degree": 3,
+      "vertices": 12
+    },
+    {
+      "deck_count": 1,
+      "degree": 4,
+      "vertices": 16
+    },
+    {
+      "deck_count": 1,
+      "degree": 5,
+      "vertices": 20
+    },
+    {
+      "deck_count": 1,
+      "degree": 6,
+      "vertices": 24
+    },
+    {
+      "deck_count": 1,
+      "degree": 7,
+      "vertices": 28
+    }
+  ],
+  "diamond_S3_census": [
+    {
+      "assignments": 9,
+      "connected": false,
+      "deck_count": 2
+    },
+    {
+      "assignments": 1,
+      "connected": false,
+      "deck_count": 6
+    },
+    {
+      "assignments": 18,
+      "connected": true,
+      "deck_count": 1
+    },
+    {
+      "assignments": 8,
+      "connected": true,
+      "deck_count": 3
+    }
+  ],
+  "guard_bank_cover": {
+    "base_edges": 48,
+    "base_vertices": 24,
+    "color_automorphisms": 1,
+    "connected": true,
+    "cycle_rank": 25,
+    "edges": 144,
+    "twisted_edges": [
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "vertices": 72
+  },
+  "independent_diamond_color_automorphisms": 1,
+  "independent_diamond_fiber_permutations": 1296,
+  "literal_Y_family": [
+    {
+      "n": 6,
+      "observations": [
+        19,
+        33,
+        57
+      ],
+      "state": [
+        5,
+        14,
+        0
+      ]
+    },
+    {
+      "n": 7,
+      "observations": [
+        39,
+        69,
+        117
+      ],
+      "state": [
+        9,
+        30,
+        0
+      ]
+    },
+    {
+      "n": 8,
+      "observations": [
+        79,
+        141,
+        237
+      ],
+      "state": [
+        17,
+        62,
+        0
+      ]
+    },
+    {
+      "n": 9,
+      "observations": [
+        159,
+        285,
+        477
+      ],
+      "state": [
+        33,
+        126,
+        0
+      ]
+    },
+    {
+      "n": 10,
+      "observations": [
+        319,
+        573,
+        957
+      ],
+      "state": [
+        65,
+        254,
+        0
+      ]
+    }
+  ],
+  "observation_lattice_grid": {
+    "integral_preimages": 3439,
+    "triples": 6859
+  },
+  "physical_rank_loss": {
+    "after_D": [
+      9,
+      18,
+      0
+    ],
+    "before": [
+      [
+        6,
+        9,
+        3
+      ],
+      [
+        8,
+        9,
+        1
+      ]
+    ],
+    "words": [
+      "CDC",
+      "DDC"
+    ]
+  },
+  "status": "PASS",
+  "two_color_cycles": [
+    {
+      "colorings": 0,
+      "length": 3
+    },
+    {
+      "colorings": 2,
+      "length": 4
+    },
+    {
+      "colorings": 0,
+      "length": 5
+    },
+    {
+      "colorings": 2,
+      "length": 6
+    },
+    {
+      "colorings": 0,
+      "length": 7
+    },
+    {
+      "colorings": 2,
+      "length": 8
+    },
+    {
+      "colorings": 0,
+      "length": 9
+    },
+    {
+      "colorings": 2,
+      "length": 10
+    }
+  ],
+  "word_controls": {
+    "max_length": 15,
+    "words": 65535,
+    "zero_d_words": 32768
+  }
+}
