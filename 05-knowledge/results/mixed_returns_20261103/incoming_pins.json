@@ -1,0 +1,17 @@
+{
+  "input_commit": "3f58f67ceef35168766783b0fa6a837a7153aeb7",
+  "normalization": "CRLF to LF",
+  "sha256_lf": {
+    "05-knowledge/results/session156_spectrum_20261103/returns/check.py": "427f54bcb43242914517dbd5b5bc6f59acd8edba480a812bd9db69c8d5a366c6",
+    "05-knowledge/results/session156_spectrum_20261103/returns/bank65_check.py": "6245e78df403fa3a1f271e9a36cafad08b0a1ec6f100fa3aa2e14acfd50c4d8e",
+    "05-knowledge/results/session156_spectrum_20261103/returns/bank65.json": "26fad58d82f2428be3bba1e7b72e93e6494983eb8e33d1a3dba1f10c2c62ca20",
+    "05-knowledge/results/session156_spectrum_20261103/returns/actual_swap_check.py": "31225b060f54e1944c0a890c45df73f6e1db370255e71720547e2bad22755183",
+    "05-knowledge/results/session156_spectrum_20261103/returns/verify_swap2.py": "6ab6391939ad2fe18da418e657c9efd84e8ea67c682612f14fdbd62037004d3e",
+    "05-knowledge/results/session156_spectrum_20261103/returns/frontier.py": "d71d16ad187e6722e2bca3f2e8f10cfec336625072d3ab37823ed3c9dbed8e24",
+    "05-knowledge/results/session155_spectrum_20261103/returns/MIXED.md": "e9ed40ee5f4f57feeaf21859ac617527c71a714e39af4461e58e3baf2295e3a9",
+    "05-knowledge/results/session155_spectrum_20261103/returns/NOTE.md": "5292ef81073818b4883970ca33cd76610f0c4686685996a96528ffc3e6a6da44",
+    "05-knowledge/results/session156_spectrum_20261103/returns/NOTE.md": "49b4373b29f80b1df6ca7d1855293c42fe453d0dce4bb66dc7e7f986518a1b3c",
+    "05-knowledge/results/session156_spectrum_20261103/states/NOTE.md": "ac84be5d30a66600157232fa9ea3cd5764284163cae0008c115f19f330d7d1f6",
+    "05-knowledge/results/session156_spectrum_20261103/interfaces/BRIDGE.md": "3da3a587ec0438425d486b414cead5ba5076b0147e9b2013e5b9262e65d6ca50"
+  }
+}

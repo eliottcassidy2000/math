@@ -9,7 +9,8 @@ def main():
         if digest(ROOT/path)!=h:raise RuntimeError(('changed dependency',path))
     records=[]
     for script,out in [('return_census.py','return_census.json'),('verify.py','verification.json'),
-                       ('carry_complete.py','carry_complete.json'),('controllers.py','controllers.json')]:
+                       ('carry_complete.py','carry_complete.json'),('controllers.py','controllers.json'),
+                       ('incoming_audit.py','incoming_audit.json')]:
         runs=[];hashes=[]
         for optimized in (False,True):
             cmd=[sys.executable,'-X','utf8','-B']+(['-O'] if optimized else [])+[str(HERE/script)]

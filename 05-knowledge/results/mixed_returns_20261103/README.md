@@ -39,4 +39,6 @@ and the external two/three-birth positives are replayed; the previous complete
 three-birth exclusion is retained as a pinned inherited certificate.
 
 See [audit and recovery](AUDIT.md) and [next decisive test](HANDOFF.md).
+The [concurrent-work reconciliation](INCOMING.md) retains independent
+physical mixed-return examples and identifies a richer two-apex search language.
 Run `python -X utf8 -B reproduce.py` here for normal/optimized agreement.

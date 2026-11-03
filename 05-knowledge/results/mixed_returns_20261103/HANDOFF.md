@@ -61,6 +61,10 @@ Choose an operation that actually leaves it:
 3. A transverse-carry rule on an infinite parameterized family with a proved
    source selector, rather than a finite exact fixed-seed bank.
 
+The incoming [two-apex transfer and positive mixed resets](INCOMING.md)
+provide a concrete candidate for option3. Those resets are verified actual
+sources, but transporting them through a suffix is not family closure.
+
 First target the known actual H295 source `a t12083`, state(295,216,260),
 or an actual H883 source with the required residues. It is already an
 endpoint of a legal finite repair, but it has no permitted old return.

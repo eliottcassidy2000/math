@@ -80,7 +80,11 @@ the packet supplies another explicit mechanism and counterindication.
    are independently recounted; the complete prior three-birth exclusion is
    hash-pinned and inherited, not redundantly rerun or reclassified.
 
-`reproduce.py` verifies the pinned inputs, runs the four probes normally and
+The [incoming-work reconciliation](INCOMING.md) distinguishes the independent
+seven-macro cone proof and transported source identities. Its literal mixed
+return graphs and ports are replayed by an additional pinned audit.
+
+`reproduce.py` verifies the pinned inputs, runs the five probes normally and
 with Python optimization, and requires identical LF-normalized result hashes.
 No assertions disappearing under `-O` carry proof obligations. `seal.py`
 checks local links and records the artifact manifest. No formal Lean proof
