@@ -1,0 +1,9 @@
+# Strong witnesses and a finite spectrum extension
+
+**Status: finite exact, conditional on the already established base certificates.** The inherited source is `01-canon/theorems/THM-4104-selected-order-eleven-strong-ear-solid-interval.md`: every odd H ≤ 80,405 except 7 and 21 is attained, and the seven-prime lane 7p is attained for primes p ≤ 11,519. The elementary ordinal sum of tournaments multiplies H, because each Hamiltonian path passes through its strong components in order.
+
+Eleven new strong tournaments have H = 80,407, 80,429, 80,447, 80,449, 80,471, 80,473, 80,489, 80,491, 80,513, 80,527, 80,537. Their explicit codes are in `frontier_witnesses.txt`; each is checked independently by `verify.py`. Combining these with the inherited results yields **every odd H ≤ 80,555 except 7 and 21**. For each other odd integer in 80,407–80,555, `check_prefix.py` explicitly finds two attained odd factors ≤ 80,405 other than 7 and 21. The exceptions to such factorizations are 80,423 = 7·11,489, 80,437 = 7·11,491, and 80,479 = 7·11,497, and 80,521 = 7·11,503, covered by the inherited seven-prime lane. A direct primality check of these four p's gives trial-division verification if desired. This is a finite extension, not an all-order spectrum theorem.
+
+Encoding: parent vertices 0,...,9; bits of `parent` correspond to (0,1),(0,2),...,(8,9) in lexicographic order, least significant first. A set bit means the smaller vertex points to the larger. Vertex 10 is adjoined; cut bit i = 1 means i points to 10, otherwise 10 points to i. The checker independently counts directed Hamiltonian paths by start-vertex subset DP and checks strong connectivity by transitive closure; it does not use the search algorithm or its ear formula.
+
+From this directory run `python3 check_prefix.py` and `python3 -O check_prefix.py`. Both must end in PASS. The search artifacts are ancillary; these two Python files and the witness text form the reusable finite certificate.
