@@ -52,7 +52,10 @@ is inferred from the six-name neutral component.
   Root checked the elementary prime-count comparison. The incoming
   one-apex polylogarithmic bound was derived by spectrum and checked by root.
 
-All reviewed statements passed without a theorem retraction. Cheap failed
+All reviewed statements passed without a theorem retraction. A reversed
+orientation phrase in the final incoming square-sum attachment proof was
+repaired in its source and the mistakes ledger; its formula and guard were
+unchanged, as explained in INCOMING. Cheap failed
 extensions are retained with their precise scope: free re-marking at H31,
 one-level mask3 closure, the fixed-C3 cycle's mod7 omission, and a universally
 finite linear observer after both birth polarities are admitted.

@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-03 — a forward attachment was described with the wrong arc direction
+
+- **Scope:** proof prose in `05-knowledge/results/session158_creative_20261103/square_overlap/CONTIGUOUS.md`, inherited at `6bb391f902`. The attachment formula and its zero-endpoint guard remain valid.
+- **Witness / failed implication:** for an original label i and a new interior label j, i<j and the construction specifies i→j. The sentence saying that the interior vertices dominate all original labels reversed this declared direction.
+- **Repair / strongest survivor:** replace that phrase by “are beaten by all original labels.” The path-expansion argument then agrees with its actual prefix/interior/extreme/suffix ordering; its count `(1+2^k)H(T)` and iterative endpoint guard are unchanged. The coordinator reviewed the symbolic placement argument; no 21-vertex computation was rerun.
+- **Missing coordinate:** retain the smaller-to-larger orientation convention when transporting a path decomposition across an attachment. This is a local proof-description correction, not a counterexample to the incoming theorem.
+
 ## 2026-11-03 — continuation divisibility needs a growth guard to exclude later primes
 
 - **Scope:** prepublication R3 in `05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md`; no accepted theorem is retracted.

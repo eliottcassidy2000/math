@@ -140,3 +140,29 @@ History, spectrum and toothpick reviewed these operation scopes. Root
 checked the literal cover aggregation and the distinction between f and F.
 The incoming finite computations were not rerun, and none changes the open
 status of the full prime and7p lanes.
+
+## Final square-sum attachment continuation
+
+Three further commits through `6bb391f902df4a6fd34b947a7923f64a0d5e6057`
+add the [Zeckendorf code](../session158_creative_20261103/square_overlap/ZECKENDORF.md)
+and [contiguous interval attachment](../session158_creative_20261103/square_overlap/CONTIGUOUS.md).
+The latter retains a precise endpoint guard: deleting the old top vertex
+leaves no Hamilton path ending at its unique backward neighbor. That guard
+makes the next attachment multiply H by 1+2^k and propagates to the next
+step. This is another actual closure mechanism whose boundary data must be
+retained, rather than inferred from the scalar count.
+
+For arbitrary finite triangular-edge index sets S, the displayed family has
+H=265 product_(n in S)(1+2^n); contiguous runs from the core are strong.
+The nonconsecutive Zeckendorf choice supplies an injective integer code,
+while a Fibonacci carry has the explicitly nonzero count defect given in
+the incoming note. These particular code outputs all retain the factor
+265=5*53, so none is a prime or7p for prime p. This says nothing about
+later attachments that change their count or rooted profile.
+
+Root reviewed the attachment projection and found one reversed-direction
+phrase in its proof: new interior vertices are beaten by every old vertex,
+as required by the declared increasing-label orientation. That phrase was
+corrected in the source and recorded in
+[MISTAKES](../../../01-canon/MISTAKES.md). The attachment theorem and its
+guard survive; the incoming 21-vertex computation was not rerun.
