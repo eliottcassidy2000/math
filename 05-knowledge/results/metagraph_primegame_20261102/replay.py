@@ -12,10 +12,11 @@ def run(args,**kw):
     return subprocess.run([str(x) for x in args],check=True,**kw)
 
 def main():
-    pin=json.loads((HERE/'SOURCES.json').read_text())
-    for item in pin['sources']:
-        raw=subprocess.check_output(['git','show',pin['public_commit']+':'+item['path']],cwd=HERE)
-        need(hashlib.sha256(raw).hexdigest()==item['sha256'],'pinned source: '+item['path'])
+    for filename in ['SOURCES.json','INCOMING_SOURCES.json']:
+        pin=json.loads((HERE/filename).read_text())
+        for item in pin['sources']:
+            raw=subprocess.check_output(['git','show',pin['public_commit']+':'+item['path']],cwd=HERE)
+            need(hashlib.sha256(raw).hexdigest()==item['sha256'],'pinned source: '+item['path'])
     p=json.loads((HERE/'ports.json').read_text());sources=[];signs=defaultdict(set)
     for order in p['orders']:
         for v in order['strong_below125']:

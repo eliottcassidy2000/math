@@ -22,6 +22,9 @@ map, rather than using numerical coincidences as proof dependencies.
   need an operator and normalization. Conditional spectral tests are recorded;
   no unprovided assignment is assumed.
 
+The [incoming-work synthesis](INCOMING.md) adds the exact cyclic reconstruction,
+Boolean joint-memory controls, and the canonical PRIMEGAME circulation quotient.
+
 See [AUDIT.md](AUDIT.md) for reproduction and [HANDOFF.md](HANDOFF.md) for
 next decisive work. Claims marked PROVED are the elementary arguments plus
 explicit all-order reductions and complete finite certificates. Independent

@@ -45,3 +45,12 @@ alone can lose the overlap information needed for Hamilton-path counts.
 In this session the PRIMEGAME-to-Fano map is already defined and tested;
 this proposed spectral map remains a separate open lane. Cardinality or
 root-list similarities are not used as dependencies of the birth theorem.
+
+Concurrent integration supplies a defined positive alternative, credited to
+[Session143's exact tournament spectra](../session143_magic_square_cyclic_bridges_20261103/tournaments/RESEARCH.md)
+and its [integral reconstruction theorem](../session143_magic_square_cyclic_bridges_20261103/cyclic_integral_order/PROOF.md).
+For the regular T5, A=P+P^2 and chi_A=X^5-5X^2-5X-2. Ordinary integer
+polynomials in A have index11 in Z[P], but P=A-A circ A^2 reconstructs the
+chosen shift integrally, including modulo11. This locates a genuine
+operation-dependent loss and its repair. It does not assign the proposed
+radicals to the n5 metagraph nodes; that separate interpretation remains OPEN.

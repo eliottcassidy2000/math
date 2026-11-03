@@ -38,3 +38,10 @@ Reproduction: python3 05-knowledge/results/metagraph_primegame_20261102/replay.p
 from the repo root. It restores inputs from the public pin, with no nauty
 installation needed, and compares all receipts under C++ O0/O2 and Python
 normal/-O. Source hashes and exact positive adjacency masks are included.
+
+Incoming work was integrated through cc36cd9f73; see INCOMING.md rather than
+rediscovering the one-selector closed observer, the depth-three A/B family,
+or the integral P=A-A circ A^2 repair. A quantitative alternative next target
+is a positive, actual-source law with E[(H-h)^2]<4 for odd h, retaining its
+joint port constraints. The clamping corollary is proved; such a uniform law
+has not been constructed. Scalar means alone do not meet this criterion.

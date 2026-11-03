@@ -47,6 +47,19 @@ def main():
  need(rank(A)==10 and rank(B)==4,'rational ranks')
  for p in [2,3,5,7,11,13]:need(rank(A,p)==10 and rank(B,p)==4,'finite field ranks')
  need(all(sum(x*y for x,y in zip(row,b))==0 for row in A for b in B),'kernel basis')
+ entries=sorted(set(a for a,b in FRACTIONS)|set(b for a,b in FRACTIONS))
+ incidence=[[int(a==v)-int(b==v) for a,b in FRACTIONS] for v in entries]
+ valuation=list(map(list,zip(*(exponents(v) for v in entries))))
+ need(len(entries)==19 and rank(incidence)==13,'entry graph rank')
+ need([[sum(valuation[i][k]*incidence[k][j] for k in range(19)) for j in range(14)] for i in range(10)]==A,'valuation factors through entry incidence')
+ kernel_images=[[sum(row[i]*b[i] for i in range(14)) for row in incidence] for b in B]
+ need(all(v==0 for v in kernel_images[1]) and rank([kernel_images[i] for i in [0,2,3]])==3,'reciprocal quotient has three arithmetic directions')
+ probe_groups={}
+ for index,letter in enumerate(LETTERS):
+  if letter in 'JK':continue
+  form=tuple(B[i][index] for i in [0,2,3])
+  if any(form):probe_groups.setdefault(form,[]).append(letter)
+ need(len(probe_groups)==7,'exactly seven distinct nonzero quotient coordinate observations')
  selected=list('DCEMALB');atoms=[7,2,5,19,89,59,29]
  G=[[b[LETTERS.index(k)] for k in selected] for b in [B[0],B[2],B[3]]]
  columns=list(map(list,zip(*G)))
@@ -77,7 +90,7 @@ def main():
  # The actual periodic words inherited from Session129 use only g and j.
  actual_accept=sum(sum(x[i]*(B[0][LETTERS.index(k)]%2) for i,k in enumerate(selected))%2==0 for x in product([0,1],repeat=7))
  need(actual_accept==64,'priority loses two parity tests')
- output=dict(status='PASS',prime_order=PRIMES,fractions=FRACTIONS,increment_matrix=A,kernel_basis_gjtm=B,
+ output=dict(status='PASS',entry_values=entries,entry_incidence_rank=13,arithmetic_quotient_rank=3,quotient_probe_groups=[dict(form=list(k),letters=v) for k,v in sorted(probe_groups.items())],prime_order=PRIMES,fractions=FRACTIONS,increment_matrix=A,kernel_basis_gjtm=B,
              selected_letters=selected,arithmetic_primes=atoms,integer_probe_matrix=G,parity_column_labels=labels,
              simplex_words=sorted(simplex),hamming_weight_enumerator=code_weights,circuits=circuits,
              fano_lines_with_integer_lifts=lines,exact_square_sigma_equivalences=equivalences,

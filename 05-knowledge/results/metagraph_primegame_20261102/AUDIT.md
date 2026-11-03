@@ -70,3 +70,15 @@ entry is needed for a failed research candidate that was never promoted.
 The algebraic labels remain OPEN as an operator-identification question.
 The two-birth theorem supersedes the finite depth limitation of
 WORD_SEARCH.json; that search remains a reproducible independent probe.
+
+## Completed replay and incoming integration
+
+All six C++ programs and receipts passed under both O0 and O2. Python
+normal/-O outputs also matched. After integrating the incoming packets, the
+C++ sources and receipts were unchanged. The expanded PRIMEGAME checker was
+rerun normally and under -O: the19-entry incidence factorization, rank13,
+rank-three circulation quotient, seven exact probe classes, and the line
+determinants(2,-2,0,0,0,0,2) passed. INTEGRATION_AUDIT.json records its hashes;
+INCOMING_SOURCES.json pins the exact eight incoming documents read. The replay
+command now checks both source-pin sets. Documentation and whitespace checks
+are also part of Git close-out.

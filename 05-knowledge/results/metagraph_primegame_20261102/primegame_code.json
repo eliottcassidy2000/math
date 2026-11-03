@@ -10,6 +10,7 @@
     59,
     29
   ],
+  "arithmetic_quotient_rank": 3,
   "circuits": [
     [
       "M",
@@ -88,6 +89,28 @@
       "C",
       "E"
     ]
+  ],
+  "entry_incidence_rank": 13,
+  "entry_values": [
+    1,
+    2,
+    7,
+    11,
+    13,
+    15,
+    17,
+    19,
+    23,
+    29,
+    33,
+    38,
+    51,
+    55,
+    77,
+    78,
+    85,
+    91,
+    95
   ],
   "exact_square_sigma_equivalences": 128,
   "fano_lines_with_integer_lifts": [
@@ -615,6 +638,81 @@
     19,
     23,
     29
+  ],
+  "quotient_probe_groups": [
+    {
+      "form": [
+        0,
+        0,
+        1
+      ],
+      "letters": [
+        "M"
+      ]
+    },
+    {
+      "form": [
+        0,
+        1,
+        0
+      ],
+      "letters": [
+        "C",
+        "H"
+      ]
+    },
+    {
+      "form": [
+        0,
+        1,
+        1
+      ],
+      "letters": [
+        "L"
+      ]
+    },
+    {
+      "form": [
+        1,
+        0,
+        0
+      ],
+      "letters": [
+        "D",
+        "G"
+      ]
+    },
+    {
+      "form": [
+        1,
+        1,
+        1
+      ],
+      "letters": [
+        "B"
+      ]
+    },
+    {
+      "form": [
+        1,
+        1,
+        2
+      ],
+      "letters": [
+        "E",
+        "F"
+      ]
+    },
+    {
+      "form": [
+        1,
+        2,
+        1
+      ],
+      "letters": [
+        "A"
+      ]
+    }
   ],
   "scope": "Formal arithmetic return multisets; actual periodic words rely on the inherited complete priority classification",
   "selected_letters": [

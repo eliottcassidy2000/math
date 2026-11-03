@@ -46,3 +46,11 @@ worktree's sparse view excludes it. No repository content changed.
 The lowest-use archival sidecar remains THM-505's corrected spectral/packing
 boundary. Its lesson now has an explicit count-quotient witness, rather than
 another analogy based only on dimensions or repeated small numbers.
+
+After fetching ten concurrent commits through cc36cd9f73, the board changes
+again: the seven PRIMEGAME probes are now intrinsic to the arithmetic/entry
+kernel quotient; the regular T5's integral Hadamard reconstruction is a
+positive operation-enlargement example; and actual depth-three Boolean tests
+show why joint memory cannot be replaced by total H. These are credited in
+INCOMING.md. The hard induced-embedding failures remain: better observations
+alone do not create a missing extension.

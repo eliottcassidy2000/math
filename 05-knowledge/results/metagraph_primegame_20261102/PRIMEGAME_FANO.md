@@ -114,3 +114,49 @@ Sources: `session129_primegame_tournament_partition_20261031/partition/README.md
 `session85_arithmetic_codes_free_bits_20261028/ARITHMETIC_FREE_BITS.md`.
 Bounded prior-art searches inspected the current PRIMEGAME and partition
 packets for this code; no external novelty priority is asserted.
+
+## Incoming incidence theorem makes the quotient canonical
+
+The concurrent [entry-incidence analysis](../primegame_path_orbits_20261102/CONNECTIONS.md)
+identifies the integer factorization
+
+    Z^14 --B--> Z^19 --V--> Z^10,       Delta=VB.
+
+Here B sends each instruction to numerator-entry minus denominator-entry,
+and V takes the ten prime valuations. Its entry graph has six components,
+rank(B)=13, and ker_Z(B)=Z*(JK). The exact kernel(1) of Delta therefore gives
+
+    ker_Z(Delta)/ker_Z(B) ~= Z^3,
+
+with coordinates(g,t,m). Equivalently this is ker(V) intersect im(B), by the
+map induced by B. This identifies the three extra arithmetic circulations
+created by factorization; it justifies quotienting out j intrinsically.
+The entry-incidence factorization and its ranks are credited to the incoming
+packet; its combination with the seven-probe code is made explicit here.
+
+J and K individually do not descend to this quotient. Among the remaining
+twelve coordinate observations, I,N are zero and the exact nonzero forms
+fall into precisely seven classes:
+
+    D=G, C=H, E=F, M, A, L, B.
+
+Thus the seven columns in the table exhaust the distinct nonzero surviving
+instruction observations; they were not selected from a larger collection
+of unrelated binary vectors. Their reduction modulo2 is the Fano plane.
+Four Fano-line relations lift exactly over the integers; the other three
+have determinant +2 or -2. The latter become lines only in characteristic2.
+The rank-three integer carrier and the binary incidence carrier are distinct.
+
+There is also an exact Galois reading. Put K=Q(sqrt(2),sqrt(3),sqrt(5)).
+A formal return with parameter parities u=(g,t,m) specifies the Galois
+sign-change automorphism of K with those three signs. For every S in(2),
+
+    sigma_u(sqrt(sigma(n_S)))
+       = (-1)^(sum_(i in S) z_i) sqrt(sigma(n_S)).
+
+Here the outer sigma_u is a field automorphism and the inner sigma is the
+sum-of-divisors function; their types differ. The equality follows directly
+from the displayed square classes. It transports a character evaluation,
+not a PRIMEGAME execution. The incoming octonion sign-character construction
+in Session143 supplies a further action-level comparison on the same binary
+labels, but its nonassociative multiplication is not transported by this map.

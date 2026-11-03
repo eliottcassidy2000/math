@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "incoming_commit": "cc36cd9f738bf983ac37b70b1890bd673ff0f89e",
+  "python_receipt_sha256": [
+    "d941950051097d257971b5ca31129557f31caa3d5430c81501c85d1259f7963b",
+    "d941950051097d257971b5ca31129557f31caa3d5430c81501c85d1259f7963b"
+  ],
+  "integer_line_determinants": [
+    2,
+    -2,
+    0,
+    0,
+    0,
+    0,
+    2
+  ],
+  "cpp_scope": "All six C++ receipts passed O0/O2 before this integration; those sources and receipts are unchanged."
+}
