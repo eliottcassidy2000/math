@@ -1,0 +1,16 @@
+{
+  "hash_basis": "UTF-8 with universal-newline LF normalization",
+  "sha256": {
+    "AUDIT.md": "356b5797ea45465f15bff40c01e47a5fd63c1a4198261993213837c34f190a07",
+    "LIVE_FIBRES.md": "9fa9a96208bb56ff0030190db371101588fd2f1877053640b19c2bc283237579",
+    "PROJECTIVE.md": "b6edb33db89e6eae45d0848f5b8f06b86f7fb216ae029238bffc7704ee829685",
+    "README.md": "ee1e18c434a567b085e631db485367257884cda63e856a888a6b84f1f705df8e",
+    "RECOVERY.md": "258f12d202c4ac04fc323f370e82745f4c90012dee21b37a56d6555bbf22b463",
+    "TRANSPORT.md": "fd18c0f04f217a09328866b28959f8076b6be3b87635946832ae8e7be0dda074",
+    "audit.cpp": "1992c446b7e0563aae156a1019cf8db7bee9e486fcee7423c3ab865a1077e90f",
+    "monoid.cpp": "c23612161309f1b18bc8f598f57fad51b2a009b1a33bbdabbba9f04bb5a443cd",
+    "receipt.json": "60c90c67e483984a9412be28e3d484fcca7f3e0fb9faf27eb02e2fa3e78a9e36",
+    "seal.py": "3bebf5b1ecad433d733feb2f6e0c5b214f3409d3f3d6177be9730915c9f6c794",
+    "verify.py": "1e3224f1ca81e30d85fc9f769aebf7b471024f9d4e6a1ad8803a87284e8b2cfb"
+  }
+}
