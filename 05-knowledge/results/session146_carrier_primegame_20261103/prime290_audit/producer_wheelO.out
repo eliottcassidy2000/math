@@ -1,0 +1,4 @@
+p,q 3 5 component lengths {1: 2, 2: 3}
+p,q 3 7 component lengths {1: 2, 2: 5}
+p,q 5 29 component lengths {1: 2, 2: 2, 3: 2, 4: 25}
+PASS: 91 distinct odd-prime pairs below 50; explicit checks survive -O

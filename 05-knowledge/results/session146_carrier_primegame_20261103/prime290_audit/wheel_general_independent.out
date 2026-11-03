@@ -1,0 +1,2 @@
+PASS 276 distinct unordered odd-prime pairs below 100; counts, simple directed edges, CRT hole edges, path components, maximum lengths and wrap verified
+examples {(3, 5): {1: 2, 2: 3}, (3, 7): {1: 2, 2: 5}, (5, 29): {1: 2, 2: 2, 3: 2, 4: 25}}

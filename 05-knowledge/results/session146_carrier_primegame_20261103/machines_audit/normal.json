@@ -1,0 +1,8 @@
+{
+  "assert_gates_used": false,
+  "cases": 16894,
+  "primitive_step_bound": "at most 4m",
+  "priority_hostile_detected": true,
+  "scope": "Independent fraction interpreter and independently enumerated first-pair oracle applied to producer-generated programs; not an independent program generator.",
+  "status": "PASS"
+}

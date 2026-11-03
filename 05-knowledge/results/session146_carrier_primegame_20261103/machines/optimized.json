@@ -1,0 +1,19 @@
+{
+  "ca_exhaustive_cases": 16894,
+  "exhaustive_arbitrary_vector_cases": 16894,
+  "hostile_controls": [
+    "5 and 29 exceptions",
+    "diagonal 3+3",
+    "composite formal vector 15+15",
+    "first-applicable ordering",
+    "cancelled guard",
+    "proper divisors",
+    "CA collision",
+    "CA shift",
+    "CA frozen halt"
+  ],
+  "prime_vector_full_vs_pruned_cases": 2550,
+  "primegame_stream_pair_cases": 110,
+  "status": "PASS",
+  "tm_exhaustive_cases": 16894
+}

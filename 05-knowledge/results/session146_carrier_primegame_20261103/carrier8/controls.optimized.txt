@@ -1,0 +1,3 @@
+direct Hamilton permutation controls N=8: 9 passed
+exact fixed-cut Walsh extraction N=4: -2 passed
+invalid contexts rejected: old-old, loop, duplicate-reversed, out-of-range, truncated, trailing

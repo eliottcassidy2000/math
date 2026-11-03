@@ -1,0 +1,8 @@
+{
+  "assert_gates_used": false,
+  "integer_interpreter_cases": 10,
+  "lists": "both 14-rule published lists",
+  "prime_oracle": "trial division",
+  "status": "PASS",
+  "stop": "first qualifying state-free configuration at or past 2N+2"
+}

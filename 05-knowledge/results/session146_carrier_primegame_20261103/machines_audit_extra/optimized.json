@@ -1,0 +1,58 @@
+{
+  "checked_machine_sha256": "7b541d671d8e5533df59a76ca339efb45608c42714bfeb3911e364b9ecd351f0",
+  "local_neighborhoods": 6400,
+  "single_head_traces_N_1_to_6": 3198,
+  "status": "PASS",
+  "stream_checks": [
+    {
+      "N": 6,
+      "list": "owner",
+      "steps": 4524
+    },
+    {
+      "N": 6,
+      "list": "guy",
+      "steps": 4507
+    },
+    {
+      "N": 7,
+      "list": "owner",
+      "steps": 6313
+    },
+    {
+      "N": 7,
+      "list": "guy",
+      "steps": 6286
+    },
+    {
+      "N": 8,
+      "list": "owner",
+      "steps": 9129
+    },
+    {
+      "N": 8,
+      "list": "guy",
+      "steps": 9095
+    },
+    {
+      "N": 9,
+      "list": "owner",
+      "steps": 12622
+    },
+    {
+      "N": 9,
+      "list": "guy",
+      "steps": 12580
+    },
+    {
+      "N": 10,
+      "list": "owner",
+      "steps": 16006
+    },
+    {
+      "N": 10,
+      "list": "guy",
+      "steps": 15949
+    }
+  ]
+}

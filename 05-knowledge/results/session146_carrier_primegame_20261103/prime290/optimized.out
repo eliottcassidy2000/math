@@ -1,0 +1,17 @@
+N 10000 all_units -16.605660936796 residual -0.224624016145 signed_pm -0.000201446216
+N 100000 all_units -25.821823537701 residual -0.226453349184 signed_pm -0.000207003167
+N 1000000 all_units -37.084013818017 residual -0.226680746553 signed_pm -0.000207702622
+vertices 112 edges 81 component lengths [(1, 2), (2, 2), (3, 2), (4, 25)] isolates [27, 263]
+first +1 1451 first -1 2029 first boundary twin (6089, 6091)
+center counts h divisible by 5,29: {(False, False): 81, (False, True): 84, (True, False): 108, (True, True): 112}
+PASS; finite tests only; primality via trial division; no asserts
+cycle (5, 289, 283) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+cycle (9, 13, 35) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+cycle (29, 203, 145) basin 5 preperiod {0: 3, 1: 2}
+cycle (33, 265, 149) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+cycle (63, 115, 109) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+cycle (93, 125, 129) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+cycle (173, 225, 179) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+cycle (183, 245, 209) basin 20 preperiod {0: 3, 1: 7, 2: 10}
+F-CENSUS PASS; modular dynamics only
+LIFT PASS; all odd |a|<=7 enter the cycle; 9 escapes despite period-3 residue

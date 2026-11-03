@@ -1,0 +1,42 @@
+{
+  "base_commit": "14823946db2a12a234d83daccd7142c920aa8c7d",
+  "scope": "Exact inherited sources and frozen order-seven certificate; this records dependencies rather than asserting independent reproof.",
+  "sources": [
+    {
+      "path": "05-knowledge/results/session145_endpoint_fence_ramsey_20261103/carrier/POOLED_PARITY_CARRIER.md",
+      "blob": "df6662e19f704959c36c649344d3220f7d0d9e38",
+      "bytes": 17957,
+      "sha256": "84cff4e5b5fb768fb1dc93638be7c1bf1170b65d1f0bac606a7bb9053cb65790"
+    },
+    {
+      "path": "01-canon/theorems/THM-4852-primegame-phase-law-both-published-lists-agree-selector-cellular-automaton-in-base-29-primorial.md",
+      "blob": "86e44602db2f47846746b4ef889c39b7b9e0c44f",
+      "bytes": 6852,
+      "sha256": "e694122f3b7d2ca1170e486481fffc16d2c068943149a13f612b2d71e82c1683"
+    },
+    {
+      "path": "05-knowledge/results/session135_fractran_tm_structure_20261101/SYNTHESIS.md",
+      "blob": "f1fac87deb2d51d2086fca42eb876f5c0f4ae2cc",
+      "bytes": 8064,
+      "sha256": "2fd25bef641d6df39cffb0f8e1a1f94d92f0d0bb92a6868696751a4bb87acc0c"
+    },
+    {
+      "path": "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md",
+      "blob": "72d7a758f12c45408297be030897a0d6883555ac",
+      "bytes": 10011,
+      "sha256": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier7/PROOF.md",
+      "blob": "5ef4d8a6e664944609b06f6d11c9e0305e204b3e",
+      "bytes": 4861,
+      "sha256": "c119c8dea4252860f1db9ef0f4e7255e5db8f6328eab5ed0bcee8063efd6b5c9"
+    },
+    {
+      "path": "05-knowledge/results/session146_carrier_primegame_20261103/carrier7/MANIFEST.json",
+      "blob": "be96e6bfa64b5eee7fe718532d325ba49df1eb84",
+      "bytes": 3494,
+      "sha256": "7e49c583ab83e3f0a8c5a02f37e0958a1afa05fef8f5ca91ee1d8f5196862798"
+    }
+  ]
+}
