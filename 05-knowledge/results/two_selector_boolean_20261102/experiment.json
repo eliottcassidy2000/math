@@ -1,0 +1,651 @@
+{
+  "carrier": {
+    "C_R_S_target_inverse": {
+      "distance_histogram": {
+        "-1": 32616,
+        "0": 68,
+        "1": 68,
+        "2": 6,
+        "3": 8,
+        "4": 2
+      },
+      "farthest_witness": [
+        {
+          "command_index": 0,
+          "counts": [
+            93,
+            31
+          ],
+          "source": 868,
+          "target": 31899
+        },
+        {
+          "command_index": 2,
+          "counts": [
+            31,
+            31
+          ],
+          "source": 31899,
+          "target": 24510
+        },
+        {
+          "command_index": 1,
+          "counts": [
+            31,
+            31
+          ],
+          "source": 24510,
+          "target": 15
+        },
+        {
+          "command_index": 0,
+          "counts": [
+            31,
+            17
+          ],
+          "source": 15,
+          "target": 32752
+        }
+      ],
+      "maximum_distance": 4,
+      "reachable": 152,
+      "target": 17
+    },
+    "C_R_target_inverse": {
+      "distance_histogram": {
+        "-1": 32620,
+        "0": 68,
+        "1": 68,
+        "2": 6,
+        "3": 6
+      },
+      "farthest_witness": [
+        {
+          "command_index": 0,
+          "counts": [
+            77,
+            31
+          ],
+          "source": 8257,
+          "target": 24510
+        },
+        {
+          "command_index": 1,
+          "counts": [
+            31,
+            31
+          ],
+          "source": 24510,
+          "target": 15
+        },
+        {
+          "command_index": 0,
+          "counts": [
+            31,
+            17
+          ],
+          "source": 15,
+          "target": 32752
+        }
+      ],
+      "maximum_distance": 3,
+      "reachable": 148,
+      "target": 17
+    },
+    "H_histogram": {
+      "1": 1,
+      "3": 5,
+      "5": 20,
+      "9": 57,
+      "11": 33,
+      "13": 39,
+      "15": 94,
+      "17": 68,
+      "19": 76,
+      "23": 184,
+      "25": 125,
+      "27": 117,
+      "29": 290,
+      "31": 186,
+      "33": 341,
+      "35": 70,
+      "37": 444,
+      "39": 78,
+      "41": 287,
+      "43": 258,
+      "45": 225,
+      "47": 94,
+      "49": 343,
+      "51": 306,
+      "53": 212,
+      "55": 220,
+      "57": 152,
+      "59": 472,
+      "61": 61,
+      "65": 715,
+      "67": 402,
+      "69": 552,
+      "71": 497,
+      "73": 584,
+      "75": 425,
+      "77": 770,
+      "79": 395,
+      "81": 891,
+      "83": 581,
+      "85": 85,
+      "87": 87,
+      "89": 1246,
+      "91": 1365,
+      "93": 651,
+      "95": 475,
+      "97": 582,
+      "99": 242,
+      "101": 1010,
+      "103": 1030,
+      "105": 420,
+      "109": 1526,
+      "111": 1036,
+      "113": 452,
+      "115": 805,
+      "117": 819,
+      "121": 484,
+      "123": 984,
+      "125": 125,
+      "127": 127,
+      "129": 817,
+      "131": 1048,
+      "133": 798,
+      "135": 792,
+      "137": 822,
+      "139": 834,
+      "141": 423,
+      "143": 429,
+      "145": 290,
+      "147": 147,
+      "151": 755,
+      "153": 459,
+      "155": 155,
+      "157": 157,
+      "159": 530,
+      "171": 57,
+      "175": 25,
+      "189": 9
+    },
+    "base_states": 3008,
+    "common_C_and_R_partition": 4680,
+    "domain": 4096,
+    "marking_hostile": {
+      "R": [
+        0,
+        5,
+        6,
+        3,
+        4,
+        1,
+        2
+      ],
+      "base_states": [
+        [
+          1,
+          17,
+          71,
+          33
+        ],
+        [
+          1,
+          17,
+          33,
+          71
+        ]
+      ],
+      "tiles": [
+        24511,
+        31
+      ]
+    },
+    "n": 7,
+    "one_selector_rounds": [
+      77,
+      4680,
+      8392,
+      10455,
+      10455
+    ],
+    "one_selector_states": 10455,
+    "operation_cube": {
+      "0": {
+        "commands": [],
+        "refinement_rounds": [
+          77,
+          77
+        ],
+        "states": 77
+      },
+      "1": {
+        "commands": [
+          "C"
+        ],
+        "refinement_rounds": [
+          77,
+          3008,
+          3008
+        ],
+        "states": 3008
+      },
+      "2": {
+        "commands": [
+          "R"
+        ],
+        "refinement_rounds": [
+          77,
+          146,
+          146
+        ],
+        "states": 146
+      },
+      "3": {
+        "commands": [
+          "C",
+          "R"
+        ],
+        "refinement_rounds": [
+          77,
+          4680,
+          8392,
+          10455,
+          10455
+        ],
+        "states": 10455
+      },
+      "4": {
+        "commands": [
+          "S"
+        ],
+        "refinement_rounds": [
+          77,
+          151,
+          151
+        ],
+        "states": 151
+      },
+      "5": {
+        "commands": [
+          "C",
+          "S"
+        ],
+        "refinement_rounds": [
+          77,
+          4606,
+          7846,
+          9545,
+          9545
+        ],
+        "states": 9545
+      },
+      "6": {
+        "commands": [
+          "R",
+          "S"
+        ],
+        "refinement_rounds": [
+          77,
+          281,
+          431,
+          431
+        ],
+        "states": 431
+      },
+      "7": {
+        "commands": [
+          "C",
+          "R",
+          "S"
+        ],
+        "refinement_rounds": [
+          77,
+          6439,
+          12771,
+          15849,
+          15874,
+          15874
+        ],
+        "states": 15874
+      }
+    },
+    "phase_source_counts": {
+      "0": 24576,
+      "1": 4096,
+      "2": 4096
+    },
+    "phase_state_counts": {
+      "0": 2955,
+      "1": 3750,
+      "2": 3750
+    },
+    "second_domain": 4096,
+    "second_selector": [
+      0,
+      3,
+      4,
+      1,
+      2,
+      5,
+      6
+    ],
+    "second_selector_hostile": {
+      "distinguishing_word": [
+        "C",
+        "S"
+      ],
+      "first_state": [
+        0,
+        91,
+        37
+      ],
+      "tiles": [
+        74,
+        76
+      ]
+    },
+    "selector": [
+      0,
+      5,
+      6,
+      3,
+      4,
+      1,
+      2
+    ],
+    "tiles": 32768,
+    "two_selector_rounds": [
+      77,
+      6439,
+      12771,
+      15849,
+      15874,
+      15874
+    ],
+    "two_selector_states": 15874
+  },
+  "traps": {
+    "packet_cubes": [
+      {
+        "changes": [
+          0,
+          14,
+          1
+        ],
+        "counts": [
+          15,
+          13,
+          27,
+          23,
+          13,
+          9,
+          23,
+          17
+        ],
+        "energies": [
+          4,
+          16,
+          100,
+          36,
+          16,
+          64,
+          36,
+          0
+        ],
+        "energy_mobius": [
+          4,
+          12,
+          96,
+          -76,
+          12,
+          36,
+          -76,
+          -8
+        ],
+        "even_energy_numerator_over4": 140,
+        "independent_common_bias_energy_coefficients": [
+          4,
+          120,
+          -116,
+          -8
+        ],
+        "odd_energy_numerator_over4": 132,
+        "orbit_size": 240,
+        "shared_path": [
+          5,
+          0,
+          4,
+          1,
+          3,
+          2
+        ],
+        "source": 72,
+        "target_hit_numerators_over4": [
+          0,
+          1
+        ]
+      },
+      {
+        "changes": [
+          0,
+          4,
+          9
+        ],
+        "counts": [
+          15,
+          13,
+          33,
+          23,
+          13,
+          9,
+          29,
+          17
+        ],
+        "energies": [
+          4,
+          16,
+          256,
+          36,
+          16,
+          64,
+          144,
+          0
+        ],
+        "energy_mobius": [
+          4,
+          12,
+          252,
+          -232,
+          12,
+          36,
+          -124,
+          40
+        ],
+        "even_energy_numerator_over4": 248,
+        "independent_common_bias_energy_coefficients": [
+          4,
+          276,
+          -320,
+          40
+        ],
+        "odd_energy_numerator_over4": 288,
+        "orbit_size": 144,
+        "shared_path": [
+          5,
+          1,
+          4,
+          2,
+          0,
+          3
+        ],
+        "source": 140,
+        "target_hit_numerators_over4": [
+          0,
+          1
+        ]
+      },
+      {
+        "changes": [
+          0,
+          5,
+          3
+        ],
+        "counts": [
+          15,
+          13,
+          31,
+          23,
+          13,
+          9,
+          29,
+          17
+        ],
+        "energies": [
+          4,
+          16,
+          196,
+          36,
+          16,
+          64,
+          144,
+          0
+        ],
+        "energy_mobius": [
+          4,
+          12,
+          192,
+          -172,
+          12,
+          36,
+          -64,
+          -20
+        ],
+        "even_energy_numerator_over4": 248,
+        "independent_common_bias_energy_coefficients": [
+          4,
+          216,
+          -200,
+          -20
+        ],
+        "odd_energy_numerator_over4": 228,
+        "orbit_size": 240,
+        "shared_path": [
+          0,
+          5,
+          1,
+          4,
+          3,
+          2
+        ],
+        "source": 178,
+        "target_hit_numerators_over4": [
+          0,
+          1
+        ]
+      },
+      {
+        "changes": [
+          0,
+          5,
+          13
+        ],
+        "counts": [
+          15,
+          13,
+          33,
+          23,
+          11,
+          9,
+          29,
+          17
+        ],
+        "energies": [
+          4,
+          16,
+          256,
+          36,
+          36,
+          64,
+          144,
+          0
+        ],
+        "energy_mobius": [
+          4,
+          12,
+          252,
+          -232,
+          32,
+          16,
+          -144,
+          60
+        ],
+        "even_energy_numerator_over4": 248,
+        "independent_common_bias_energy_coefficients": [
+          4,
+          296,
+          -360,
+          60
+        ],
+        "odd_energy_numerator_over4": 308,
+        "orbit_size": 144,
+        "shared_path": [
+          0,
+          4,
+          3,
+          1,
+          5,
+          2
+        ],
+        "source": 314,
+        "target_hit_numerators_over4": [
+          0,
+          1
+        ]
+      }
+    ],
+    "same_target_mean_laws": {
+      "denominator": 5,
+      "energy_numerators": [
+        144,
+        136
+      ],
+      "mean": 17,
+      "source": 72,
+      "target_hit_numerators": [
+        0,
+        1
+      ],
+      "weights": [
+        [
+          2,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "scope": "independent requested two-edge replay; three-edge packets inherited",
+    "traps": 768,
+    "two_or_three_distance_histogram": {
+      "2": 480,
+      "3": 288
+    }
+  }
+}

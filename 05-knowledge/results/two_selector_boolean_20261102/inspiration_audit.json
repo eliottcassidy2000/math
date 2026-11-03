@@ -1,0 +1,382 @@
+{
+  "clock_magic": {
+    "Lucas5_edges": 15,
+    "Lucas5_labels": {
+      "0": 0,
+      "1": 1,
+      "2": 4,
+      "4": 5,
+      "5": 6,
+      "8": 9,
+      "9": 10,
+      "10": 2,
+      "16": 3,
+      "18": 7,
+      "20": 8
+    },
+    "Lucas5_words": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      8,
+      9,
+      10,
+      16,
+      18,
+      20
+    ],
+    "cycle": [
+      4,
+      8,
+      3,
+      7,
+      2,
+      6,
+      10,
+      5,
+      9
+    ],
+    "magic_array": [
+      [
+        5,
+        10,
+        3
+      ],
+      [
+        4,
+        6,
+        8
+      ],
+      [
+        9,
+        2,
+        7
+      ]
+    ],
+    "magic_line_sum": 18,
+    "mod3_observer_states": 3,
+    "modulus": 9,
+    "parity_observer_states": 9,
+    "squared_line_sums": [
+      134,
+      116,
+      134,
+      122,
+      140,
+      122,
+      110,
+      126
+    ],
+    "step": 4
+  },
+  "fixed_reversal_counts": [
+    {
+      "n": 1,
+      "orientations": 1,
+      "reversing_involution": [
+        0
+      ]
+    },
+    {
+      "n": 2,
+      "orientations": 2,
+      "reversing_involution": [
+        1,
+        0
+      ]
+    },
+    {
+      "n": 3,
+      "orientations": 4,
+      "reversing_involution": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "n": 4,
+      "orientations": 16,
+      "reversing_involution": [
+        1,
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "n": 5,
+      "orientations": 64,
+      "reversing_involution": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ]
+    },
+    {
+      "n": 6,
+      "orientations": 512,
+      "reversing_involution": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4
+      ]
+    }
+  ],
+  "matrix_audits": [
+    {
+      "H": 15,
+      "characteristic_descending": [
+        1,
+        0,
+        0,
+        -5,
+        -5,
+        -2
+      ],
+      "rows": [
+        6,
+        12,
+        24,
+        17,
+        3
+      ]
+    },
+    {
+      "H": 15,
+      "characteristic_descending": [
+        1,
+        0,
+        0,
+        -4,
+        -3,
+        -3
+      ],
+      "rows": [
+        14,
+        20,
+        24,
+        18,
+        1
+      ]
+    }
+  ],
+  "projective": {
+    "anchors": [
+      {
+        "anchor": [
+          0,
+          1,
+          1
+        ],
+        "ties": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          0,
+          1,
+          2
+        ],
+        "ties": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          1,
+          0,
+          1
+        ],
+        "ties": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          1,
+          0,
+          2
+        ],
+        "ties": [
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          1,
+          1,
+          0
+        ],
+        "ties": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          1,
+          1,
+          2
+        ],
+        "ties": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          1,
+          2,
+          0
+        ],
+        "ties": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      {
+        "anchor": [
+          1,
+          2,
+          2
+        ],
+        "ties": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      }
+    ],
+    "cap_counts": {
+      "3": 234,
+      "4": 234,
+      "5": 0
+    },
+    "points": 13,
+    "supplied_collinear_triples_zero_indexed": [
+      [
+        1,
+        3,
+        4
+      ]
+    ]
+  },
+  "self_converse_n5": {
+    "classes": {
+      "0": {
+        "self_converse": true,
+        "size": 120
+      },
+      "2": {
+        "self_converse": false,
+        "size": 40
+      },
+      "4": {
+        "self_converse": false,
+        "size": 120
+      },
+      "5": {
+        "self_converse": true,
+        "size": 40
+      },
+      "8": {
+        "self_converse": true,
+        "size": 120
+      },
+      "9": {
+        "self_converse": false,
+        "size": 120
+      },
+      "10": {
+        "self_converse": true,
+        "size": 120
+      },
+      "11": {
+        "self_converse": false,
+        "size": 40
+      },
+      "12": {
+        "self_converse": true,
+        "size": 120
+      },
+      "40": {
+        "self_converse": true,
+        "size": 40
+      },
+      "41": {
+        "self_converse": true,
+        "size": 120
+      },
+      "76": {
+        "self_converse": true,
+        "size": 24
+      }
+    },
+    "self_converse_classes": 8,
+    "unlabelled_classes": 12
+  }
+}

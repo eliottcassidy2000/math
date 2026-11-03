@@ -1,0 +1,9 @@
+{
+  "all_count_states": 32768,
+  "method": "endpoint subset DP; all command words through the bounds; exact congruence check",
+  "one_selector_classes": 10455,
+  "one_selector_word_bound": 3,
+  "status": "PASS",
+  "two_selector_classes": 15874,
+  "two_selector_word_bound": 4
+}

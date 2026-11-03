@@ -4,6 +4,13 @@
 statements so future agents do not repeat them. Search this ledger before using
 a historical synthesis or promoting computational evidence.
 
+## 2026-11-02 — a pasted projective pentad and MRB decay do not define tournament structure
+
+- **Scope:** the user's inspirational attachment, audited in `05-knowledge/results/two_selector_boolean_20261102/INSPIRATION.md`; no accepted repository theorem is retracted.
+- **Exact failures:** its first matrix has eigenvalue2, but its claimed characteristic polynomial evaluates to19 there. The correct two polynomials are t^5-5t^2-5t-2 and t^5-4t^2-3t-3. Supplied projective points P2,P4,P5 are collinear; every proposed anchor leaves a zero determinant, since five points occupy only four lines through it. Changing a projective representative also changes determinant signs.
+- **Decay correction:** the inherited reversing-involution mechanism gives2^floor(n^2/4) compatible labelled tournaments for a fixed involution. Elementary class bounds yield log(S_n/T_n)=-(log2)n^2/4+O(n log n), incompatible with the pasted fixed-constant formula's leading -n^2 log n/4. The eight self-converse classes among twelve at order five are verified and retained; no Baby Monster character map or MRB parameter follows.
+- **Repair / missing coordinate:** retain actual line incidences, zero/tie guards, representative gauge and a specified representation before comparing spectra. The valid Conway moving-hole mechanism has source-dependent permutations, not the failed pentad construction. The reported source laws and closed carrier are developed independently of those false premises.
+
 ## 2026-11-02 — least-rank inverse selection can discard an actual source
 
 - **Scope:** prepublication candidate tested in `05-knowledge/results/spectrum_descent_jacobian_20261102/DESCENT.md`; no accepted theorem is retracted.

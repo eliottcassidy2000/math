@@ -1,0 +1,225 @@
+{
+  "constructor_negative": {
+    "allowed_commands": [
+      "C",
+      "R"
+    ],
+    "exhausted_component_size": 2,
+    "reachable": false,
+    "scope": "exact shortest word in this fixed-path command language only",
+    "source_rows": [
+      18,
+      92,
+      25,
+      17,
+      32,
+      79,
+      29
+    ],
+    "source_tile": 868,
+    "target_H": 17
+  },
+  "constructor_positive": {
+    "allowed_commands": [
+      "C",
+      "R",
+      "S"
+    ],
+    "minimum_commands": 4,
+    "reachable": true,
+    "scope": "exact shortest word in this fixed-path command language only",
+    "source_rows": [
+      18,
+      92,
+      25,
+      17,
+      32,
+      79,
+      29
+    ],
+    "source_tile": 868,
+    "target_H": 17,
+    "target_rows": [
+      66,
+      124,
+      121,
+      113,
+      97,
+      65,
+      0
+    ],
+    "target_vertex_order": [
+      0,
+      5,
+      6,
+      1,
+      2,
+      3,
+      4
+    ],
+    "trace": [
+      {
+        "H_after": 31,
+        "H_before": 93,
+        "command": "C",
+        "selected_path_in_current_labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "source": 868,
+        "source_vertex_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "target": 31899,
+        "target_vertex_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "H_after": 31,
+        "H_before": 31,
+        "command": "S",
+        "selected_path_in_current_labels": [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5,
+          6
+        ],
+        "source": 31899,
+        "source_vertex_order": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "target": 24510,
+        "target_vertex_order": [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5,
+          6
+        ]
+      },
+      {
+        "H_after": 31,
+        "H_before": 31,
+        "command": "R",
+        "selected_path_in_current_labels": [
+          0,
+          5,
+          6,
+          3,
+          4,
+          1,
+          2
+        ],
+        "source": 24510,
+        "source_vertex_order": [
+          0,
+          3,
+          4,
+          1,
+          2,
+          5,
+          6
+        ],
+        "target": 15,
+        "target_vertex_order": [
+          0,
+          5,
+          6,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "H_after": 17,
+        "H_before": 31,
+        "command": "C",
+        "selected_path_in_current_labels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "source": 15,
+        "source_vertex_order": [
+          0,
+          5,
+          6,
+          1,
+          2,
+          3,
+          4
+        ],
+        "target": 32752,
+        "target_vertex_order": [
+          0,
+          5,
+          6,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "word": [
+      "C",
+      "S",
+      "R",
+      "C"
+    ]
+  },
+  "pinned_files": 23,
+  "runs": [
+    {
+      "receipt": "experiment.json",
+      "script": "experiment.py",
+      "sha256": "d8f633021e3b3a62ac85e6bd1a8b82fa246941c671466a32049647ea0aec1304"
+    },
+    {
+      "receipt": "independent.json",
+      "script": "independent.py",
+      "sha256": "63d4ba722098c41b12c6aaab8e2629179efaa23d3421c9d43f2fb09520414216"
+    },
+    {
+      "receipt": "inspiration_audit.json",
+      "script": "inspiration_audit.py",
+      "sha256": "9a24cb82fcda2d7092f0c5c3ee4fc3032040fbd6a5933653b239943ca578883e"
+    }
+  ],
+  "status": "PASS",
+  "transport": "every named original-label arc checked at every step"
+}

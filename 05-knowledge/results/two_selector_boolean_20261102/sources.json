@@ -1,0 +1,98 @@
+{
+  "attachment_sha256": "3243677d0e4014cf3ae5b43ca7e27cae1fba216dab283ea15e31ccd67e4a772a",
+  "base_commit": "8286d710498a",
+  "files": [
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/AUDIT.md",
+      "sha256": "b7f0b1f0f67ec11d276c2bec8729a391ef91883c97b16aeab601490602665088"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/CARRIER.md",
+      "sha256": "4e603929924cc9bbee397064abe6c90daa0d6fbc81b2b56f65aed19bba1c3136"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/constructor.py",
+      "sha256": "bac9960f4be0d5e83b747b8b01ac38d3ccbd63cbe010193f02e9f0e71a943486"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/experiment.json",
+      "sha256": "d8f633021e3b3a62ac85e6bd1a8b82fa246941c671466a32049647ea0aec1304"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/experiment.py",
+      "sha256": "ee58cd39150890e194219f5b32f0250ab78e1f9a7f84e2483e4c21b27260b2b0"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/independent.json",
+      "sha256": "63d4ba722098c41b12c6aaab8e2629179efaa23d3421c9d43f2fb09520414216"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/independent.py",
+      "sha256": "f616f4690c51c460f80eed8e93c21571c206bc91e98a49c59759d26710e213de"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/INSPIRATION.md",
+      "sha256": "267b97a14caddc81d51fcae57496463d55449933d8b8efff25614124ad9c36d5"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/inspiration_audit.json",
+      "sha256": "9a24cb82fcda2d7092f0c5c3ee4fc3032040fbd6a5933653b239943ca578883e"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/inspiration_audit.py",
+      "sha256": "bf5438de19de401eec7a1b442436d175110ee75674e77ce6cb145259ce864461"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/JOINT_REPAIRS.md",
+      "sha256": "c6057316841540c392a665a34dfc2a84e4093bdc9c33457f10474220139766be"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/README.md",
+      "sha256": "0f7dab9340f05dd170a756ed7951f0f60aa1b131dff956d94a07c728cee3bfc8"
+    },
+    {
+      "path": "05-knowledge/results/two_selector_boolean_20261102/replay.py",
+      "sha256": "1667c22d3aea9f1d78174c25108e9629619ed712119471ed47d67c0b6e3e0fff"
+    },
+    {
+      "path": "05-knowledge/results/boolean_realization_71_17_20261102/THEORY.md",
+      "sha256": "ed0ac47d0130a8a3e271b9dd646906ccb8dd67710abc78978a0ef10a1481d023"
+    },
+    {
+      "path": "05-knowledge/results/boolean_realization_71_17_20261102/verification.json",
+      "sha256": "f2d72a51362c322b73337a36f606901c17fd2b55eede7491648aac2eeed5d008"
+    },
+    {
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/MOVES.md",
+      "sha256": "d8b3c8d381d586c9142cd054168b3db35c2261d69d48260b89d1b75f598f0da7"
+    },
+    {
+      "path": "05-knowledge/results/prime_inverse_ports_20261102/escape_audit.json",
+      "sha256": "0c4710342065c2a43febf433486048d7ff4ea6b7f8a2ea12fd46983a37727ca8"
+    },
+    {
+      "path": "05-knowledge/results/eleven_wedge_honeycomb_20261102/NATIVE_26.md",
+      "sha256": "d5666ac7500372ac16b9084330229c6409f29533f8b318a622e45f27634fb672"
+    },
+    {
+      "path": "05-knowledge/results/session57_square_sum_magic_paths_20261025/ap-biclique-bridge/REPORT.md",
+      "sha256": "7fca97fea71296b968103c2136f20f6f776c8165cc0a2a2de99056fcab1f27db"
+    },
+    {
+      "path": "05-knowledge/results/liouville_mobius_eleven_20261027/ELEVEN.md",
+      "sha256": "993c5a92533c9494ad53f1f13510b354a9b3fb15edcb66eb6774a226c11a3309"
+    },
+    {
+      "path": "05-knowledge/results/lucas_mirror_gap_spaces_20261028/LUCAS_MIRRORS.md",
+      "sha256": "8ca3e3139dea8bf95cb4c32950881acebfbda4fbdc95b17ff11e021c6938f4ab"
+    },
+    {
+      "path": "05-knowledge/results/collatz_mod6_20260922_paley_fano_octonion_design.md",
+      "sha256": "e91bdda77e95033f7775cefef67309eb6809719cadc332110c7d6c5a08d05939"
+    },
+    {
+      "path": "05-knowledge/results/consecutive_flags_order10_20261028/THEORY.md",
+      "sha256": "80f172a373418c9bb60f25c6ba9a7946e10c223699607a343ac62e5bd9d40104"
+    }
+  ]
+}
