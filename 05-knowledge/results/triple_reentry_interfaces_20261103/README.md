@@ -16,7 +16,8 @@ ternary-return aspiration into a concrete sufficient closure target.
 - [RETURN_FOREST](RETURN_FOREST.md): exact roots `1,23,25,63,65,67`, literal
   witnesses, and the source-return hypothesis that remains unproved.
 - [INCOMING](INCOMING.md): newer repeated scalar returns, universal guard entry,
-  and the measured normalization price on the six actual seeds.
+  the measured normalization price on the six actual seeds, and an induced-R5
+  obstruction ruling out birth-only ready repair of the printed65 source.
 - [TRIPLE_ATLAS](TRIPLE_ATLAS.md): older triples, exact maps, lost coordinates,
   and the transfer that is useful for this problem.
 - [RESEARCH_CYCLES](RESEARCH_CYCLES.md): inheritance, hostile tests, metanalysis,

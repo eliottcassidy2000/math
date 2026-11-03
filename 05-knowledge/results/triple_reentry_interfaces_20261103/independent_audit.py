@@ -221,7 +221,22 @@ def main():
             second = ear(first, n)
             check(ham_dp(first) == 3*item['H']+2*item['minimum_J'], 'literal first ear')
             check(ham_dp(second) == item['minimum_lift_H'], 'literal two-ear canonical lift')
-    result = {'status': 'PASS', 'raw_seeds': seed_audit, 'independent_rooted_lift_profiles': len(lifts), 'scalar_roots_through_100001': root_counts, 'independently_counted_literal_cuts': cubes,
+    r5_copies = {}
+    for h, seed in seeds.items():
+        rows = seed['rows']
+        copies = [ids for ids in itertools.combinations(range(len(rows)),5)
+                  if all(sum(rows[a] >> b & 1 for b in ids) == 2 for a in ids)]
+        r5_copies[h] = copies
+        for ids in copies:
+            starts = {a:0 for a in ids}
+            for word in itertools.permutations(ids):
+                if all(rows[a] >> b & 1 for a,b in zip(word,word[1:])):
+                    starts[word[0]] += 1
+            check(set(starts.values()) == {3}, 'regular-five starting multiplicities')
+    check(r5_copies['65'] == [(0,1,2,3,6)], 'literal induced ready obstruction')
+    check(all(not copies for h,copies in r5_copies.items() if h != '65'),
+          'other seed R5 controls')
+    result = {'status': 'PASS', 'raw_seeds': seed_audit, 'independent_rooted_lift_profiles': len(lifts), 'r5_copies_by_seed': r5_copies, 'scalar_roots_through_100001': root_counts, 'independently_counted_literal_cuts': cubes,
               'orbit_census': results}
     print(json.dumps(result, indent=2, sort_keys=True))
 

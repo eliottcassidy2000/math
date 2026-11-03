@@ -121,5 +121,20 @@
       "path": "05-knowledge/results/rooted_carry_closure_20261103/ROOTED_RETURN.md",
       "blob": "06b724e9ff6d709c932aff6fea51a2e0fe3b0091"
     }
+  ],
+  "last_incoming_revision": "8e1fdebbdc1c72e5e1b231c2ec736bb847376533",
+  "last_incoming_pins": [
+    {
+      "path": "05-knowledge/results/lambda_emergent_20261103/READY_REPAIR.md",
+      "blob": "fb34d200ecc0b28e2efeb6ad42185bd0166d7fce"
+    },
+    {
+      "path": "05-knowledge/results/session165_geometry_representation_20261103/guard_geometry/NOTE.md",
+      "blob": "3cd5795c139a70f92e018c8601e653d59ffca618"
+    },
+    {
+      "path": "05-knowledge/results/session165_geometry_representation_20261103/guard_adjunctions/UNIVERSAL_CODES.md",
+      "blob": "c5c6e0389660ae91db38c932876472967242fcba"
+    }
   ]
 }
