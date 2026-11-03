@@ -1,0 +1,162 @@
+{
+  "status": "INHERITED_PINNED_NOT_ALL_RETESTED",
+  "startup_commit": "d79221bc31b8",
+  "incoming_through": "5891f002e2",
+  "ready_source_commit": "4ed40bd587",
+  "recovery": "RECOVERY.md",
+  "hash_scheme": "SHA256 UTF8 text with LF newlines",
+  "dependencies": [
+    {
+      "path": "05-knowledge/results/ordered_response_ten_20261103/NEUTRAL_CARRIES.md",
+      "sha256": "1eeddc0610234012034affe80e4bd512aa529aeb8001abb782b4991251c49b33"
+    },
+    {
+      "path": "05-knowledge/results/ordered_response_ten_20261103/neutral_carries.json",
+      "sha256": "2ece655a0ea098c4bf460373a32e11b12183d61bae3b909d4fc7a86ab06507b3"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/mechanisms.py",
+      "sha256": "236fd8f13b71365cf806fbfc8e19592c2a70bec9c1219554d79a7dff9b80519c"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md",
+      "sha256": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/gluing/check.py",
+      "sha256": "e8e3c4d901db3583910d9e5dccc0a745f850da4acfa727811d8f73d30fb87432"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/gluing/NOTE.md",
+      "sha256": "9b2acb148d353a59ffd0a0aa5e87d3a8abd42cb07f7bd11da11f805a18694a9f"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/junction.py",
+      "sha256": "23a4c897277e68e825aa5cbf6393178aa037bd991def78328671f3a59c590b61"
+    },
+    {
+      "path": "05-knowledge/results/coverage_machine_induction_20261103/RESET_JUNCTION.md",
+      "sha256": "27d99326c5ea879612c47c08cba42ea263c98c046afceca48b1b33156bf516f6"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/native_port_selector.py",
+      "sha256": "4fed06f0ad93e9f37c78e7e759d658381f1f85f31b42ae4a2f3ef1d2adc0a4b5"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/NATIVE_SELECTION.md",
+      "sha256": "5e7c574cf63fe13db453d9c4f63f3d1035194516a0957e489d88b60d299db178"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/graded_carrier.py",
+      "sha256": "312e82d56d36fed9d717a656721a17a3039d3245ab10f6bae926fcee5700639b"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/GRADED_OBSERVER.md",
+      "sha256": "8bdbf8891da17d45a4a67709a14f7958ed60466d7576291cad96a74baf83b5e9"
+    },
+    {
+      "path": "05-knowledge/results/source_selection_closure_20261103/BALANCED_BOUNDARY.md",
+      "sha256": "f4ce18e04986dfaf5739e5a6e506b8232fff1cb79b86b6198693cd620b2b0db5"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.py",
+      "sha256": "8eb8f928730dca30224d02e2a2b194287e86b198a0db571603710c036aebb524"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_state_induction_20261103/live_port.json",
+      "sha256": "6703d24d3d1a4fe8b121c3a5d9942f2d57d67dc7ca8738d855f7260c7f8e2f23"
+    },
+    {
+      "path": "05-knowledge/results/adaptive_metagraph_reformulation_20261103/ADAPTIVE.md",
+      "sha256": "1e40bf058d9c86a8d5ff7f63dc6439a68eae3f62920794a7baa40694dfce4971"
+    },
+    {
+      "path": "05-knowledge/results/two_port_return_induction_20261103/ROOTED_RESETS.md",
+      "sha256": "bb76b7566e1b114a5d81e19e08274380be37938ea71b8d6024d60f601591cf9f"
+    },
+    {
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/inverse.py",
+      "sha256": "6d168811df51cc876283973587251361ad957144665f01d11ea2091f6c7b9feb"
+    },
+    {
+      "path": "05-knowledge/results/golden_inverse_defects_20261103/TRANSPORT.md",
+      "sha256": "03183aa0957fd817393972510e7d924994ba7b77c6dde738f1a93c2722318b56"
+    },
+    {
+      "path": "05-knowledge/results/golden_seam_recurrence_20261103/atom_atlas.json",
+      "sha256": "b7f7715f5e6577c056da67ea2752f4643bd4ae16a8ef06707c2286032b434eba"
+    },
+    {
+      "path": "05-knowledge/results/mixed_returns_20261103/controllers.json",
+      "sha256": "d6633b1e8c042f15b2a1828c8b4985cbeb88cafe003ed48c6b990eb8d7a8e5b9"
+    },
+    {
+      "path": "05-knowledge/results/session156_spectrum_20261103/returns/NOTE.md",
+      "sha256": "49b4373b29f80b1df6ca7d1855293c42fe453d0dce4bb66dc7e7f986518a1b3c"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/READY.md",
+      "sha256": "722883a9d774e488fff3fe122b3dccc2c30566e00c378cbae69fad0ed832e28c"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/TRANSPORT.md",
+      "sha256": "8ee3708fe971e2e2e649fab17ed6dce3b98a841df5194ba8f892c8e8b32f7210"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/carrier.py",
+      "sha256": "b64813435c45418e8d2173d8cdc19678715bf338b8c2242495b49020692157bb"
+    },
+    {
+      "path": "05-knowledge/results/two_entry_funnels_20261103/AUDIT.md",
+      "sha256": "a5f13dfb589c89c20f31282fd26440e3904361b79d8a5cfcf8c3eb7182258c6b"
+    },
+    {
+      "path": "05-knowledge/results/twin_pythagorean_124_20261026/finite_field/README.md",
+      "sha256": "38ea6edc4f92c8d132d16efe1cbbaa4f006e7499baa0a8ec9d2bad91a2e33413"
+    },
+    {
+      "path": "05-knowledge/results/session55_parker_fields_integer_lifts_20261025/finite-fields/README.md",
+      "sha256": "4c7ba043935f21db5e54efd46652d4aee61aea98290f4fb2f6a311ccc437397c"
+    },
+    {
+      "path": "05-knowledge/results/golden_prime_clocks_20261003.md",
+      "sha256": "842ea375f82165c5dc8ece1b3ee822ca87666ec560518d7315371d4913bf60bd"
+    },
+    {
+      "path": "05-knowledge/results/exception_pathcover_transfers_20261021/session24-pathcovers/PATHCOVERS.md",
+      "sha256": "e18b58b2aa8b0da2714a770f106aa95f8a6cbae1081a9ffdcce08be3fb6ba97a"
+    },
+    {
+      "path": "05-knowledge/results/aliquot_table_untouchable_primes_chains_seven_twentyone_20261026.md",
+      "sha256": "2b72047a3cb163ccb12ed7e70d5f11d9b13011fbc9ba11c8eaf670df31b56e7e"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/strong_returns/NOTE.md",
+      "sha256": "bf3c4573ff007fd9ea5fc5e10568f920e882d2219893a3c5e980d269241740a7"
+    },
+    {
+      "path": "05-knowledge/results/session163_ternary_triples_20261103/nonuniform/MARKED_ESCAPE.md",
+      "sha256": "b5ec72bb306a52da5cdad472d80f0596bbf4a6ebb63e206065a3f34a3f3fcf9f"
+    },
+    {
+      "path": "05-knowledge/results/session162_mrb_square_20261103/square_transfer/NOTE.md",
+      "sha256": "27da2734e2a58d33f6aecf61e57473da97850ff295793da787f9eb0198ac716b"
+    }
+  ],
+  "hostile81_27": {
+    "groups": [
+      81,
+      27
+    ],
+    "common_H": [
+      462915,
+      462915
+    ],
+    "port8_after_sink": [
+      2390013,
+      1754919
+    ],
+    "common_cyclic_triples": 67
+  },
+  "one_birth55_orientations": 768
+}

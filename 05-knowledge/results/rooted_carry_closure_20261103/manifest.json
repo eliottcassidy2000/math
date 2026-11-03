@@ -1,0 +1,32 @@
+{
+  "receipts": [
+    {
+      "file": "observer.json",
+      "sha256": "77077cef57e03827ee0f0b6b5cd1ae961762c2425b4b613bddb1b78912c598fd"
+    },
+    {
+      "file": "carrier6.json",
+      "sha256": "4e48debb315ab7801d04aab7dcbef3ba6c7cc1c0d688af88e437c775d74cbd8d"
+    },
+    {
+      "file": "returns.json",
+      "sha256": "cd32d4afdaa5fe5b1563d41bc935687ae3cf3a86df37480ddf4a9979998f087c"
+    },
+    {
+      "file": "field_clock.json",
+      "sha256": "7de942e09841c03e25c2c8c4366ba361b41b4fb5a2753d6b971ad632224fd0e6"
+    },
+    {
+      "file": "ternary_probe.json",
+      "sha256": "9fbb533029ce176bc063005fc530a96ab6907f1fe1765976c180dff3f08f05bb"
+    },
+    {
+      "file": "golden_transport.json",
+      "sha256": "0d2b5baa5ce3706af9856f05bfbd10bbf5ce476cd2b1f7d454bbfb3a15cb6f51"
+    },
+    {
+      "file": "phase_recurrence.json",
+      "sha256": "b5026d9ff006285ae859abc5fdf9de289e1c5099ce503f76412f96df5c3385d5"
+    }
+  ]
+}

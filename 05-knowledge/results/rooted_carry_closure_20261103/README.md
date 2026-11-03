@@ -1,38 +1,42 @@
-# Named H497 returns and phase-preserving shared attachments
+# Named H497 returns and shared phase control
 
-**FINITE-EXACT computational checkpoint.** The accompanying proof write-up
-and incoming ready-source synthesis are in preparation. No complete ternary
-coverage, full tournament spectrum, or A000568 classification is asserted.
+**PROVED within the stated operation languages, with FINITE-EXACT controls
+and same-agent review using independent implementations.** After the neutral
+H497 reset, a parity choice between its two retained apexes gives a primitive
+balanced return at every sealing length. One C5 step enters the inherited
+repeatable primitive controller. Actual sources, native paths, names and
+clocks accompany the formulas.
 
-The computations retain the literal H497 source, both physical apexes,
-native paths, helper deletions, and independent clocks. They extract all
-eighteen endpoint-cover polynomials, test their six-polynomial edge
-difference, and compile parity-selected seals into actual balanced returns.
+- [RC1–RC3: rooted returns and recurrences](ROOTED_RETURN.md): entry costs
+  ten native moves and five helper births/deletions, independently of k.
+  Final order is k+19. The full golden observer has an all-order recurrence
+  and an exact six-clock. Literal H178561 and transfer-certified
+  H23981447=7*3425921 are positive controls.
+- [EC1: six polynomial edge-difference coordinates](DERIVATIVE_CARRIER.md):
+  sharp pointwise linear dimension6 inside the eighteen-polynomial observer,
+  closed under eight fixed-port births, cyclic gluing and converse.
+- [PC1–PC4: guarded actions and49/50/51](PHASE_49_50_51.md): actual balanced
+  returns generate GL2(F7); up to three supplied sources share a phase
+  legalizer at every7-power precision. One mixed-source selector refines
+  the algebraic projective observation quotient from10 to51 classes.
+- [Recovery](RECOVERY.md), [audit](AUDIT.md), [next decisive task](HANDOFF.md).
 
-Reproduce from the repository root with Python and SymPy:
+This is **balanced primitive return closure**. Incoming ready-root work
+proves these final resets have no ready root. The complete bounded
+six-command search from either H497 orientation also misses1493 and1495.
+Exact ternary source closure, all prime/7p coverage, the full Hamilton-count
+spectrum and A000568 recreation remain **OPEN**.
+
+The inherited golden Q4 phase and the new balanced-pair field coordinate
+are different sourced observables; both are retained. The actual81/27 and
+failed55->111 controls are pinned inherited boundaries, not rerun censuses.
+No external literature-priority claim is made. RC/EC/PC labels are local.
+
+From the repository root, with Python and SymPy:
 
 ```text
-python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/observer.py
-python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/carrier6.py
-python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/returns.py
-python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/field_clock.py
-python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/ternary_probe.py
+python -X utf8 -B 05-knowledge/results/rooted_carry_closure_20261103/reproduce.py
+python -X utf8 -B -O 05-knowledge/results/rooted_carry_closure_20261103/reproduce.py
 ```
 
-The main new constructive signal is that choosing apex7 at even sealing
-lengths and apex8 at odd lengths makes every tested seal primitive, and a
-single C5 return enters the inherited repeatable controller. Closed formulas
-and divisor congruences establish the all-length version; these are being
-written out with the native realization. The independently counted
-18-vertex return has H178561. The 24-vertex exit H23981447=7*3425921 is
-certified by the marked block transfer and literal program replay, not by
-a 24-vertex subset-DP count.
-
-The phase experiments give GL2(F7), common legalizers for up to three
-supplied sources, and a projective completion with49 affine coordinates,
-50 directions and51 classes including zero. This is not a51-state faithful
-carrier for whole tournaments. All sources and integral data remain present.
-
-The bounded six-command search from each supplied H497 orientation misses
-1493 and1495. Primitive return closure and exact ternary target closure
-are different obligations.
+The runner checks source pins and reproduces seven deterministic receipts.
