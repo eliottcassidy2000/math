@@ -168,3 +168,7 @@ scripts/*.ps1 text eol=crlf
 # Prime defects, geometric sectors and elliptic tree: portable proof records.
 04-computation/experiments/prime_shells_20260921_* text eol=lf
 05-knowledge/results/prime_shells_20260921_* text eol=lf
+
+# Session148's frozen CSV is committed with CRLF; preserve its audited bytes.
+05-knowledge/results/session148_square_sum_20261103/prime_alignment/alignment.csv -text
+05-knowledge/results/session148_square_sum_20261103/prime_alignment/paths.json text eol=lf

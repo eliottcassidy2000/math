@@ -10,6 +10,7 @@ From the repository root:
 
 ```text
 python -B 05-knowledge/results/square_birth_windows_20261103/verify.py
+python -B 05-knowledge/results/square_birth_windows_20261103/incoming_check.py
 python -B 05-knowledge/results/square_birth_windows_20261103/seal.py --check
 ```
 
@@ -97,3 +98,20 @@ to a proposed Hamilton-path-preserving identification.
 Repository `agents/check_docs.py` passed before publication, including bounded
 startup, status/frontmatter, correction sentinels and router smoke. Explicit
 path staging and a clean rebase preserve concurrent packets.
+
+Post-rebase portability repair: incoming Session148 `alignment.csv` had
+26 CRLF records and was byte-for-byte identical to HEAD, but the repository's
+text-cleaning rule reported it dirty. An exact-path `-text` exception in root
+`.gitattributes` preserves that frozen CSV's audited bytes. Its companion
+`paths.json` initially failed the incoming frozen-byte checker because Windows
+checkout expanded LF to CRLF. After verifying equality up to line endings,
+that file was restored to the exact HEAD bytes and given an exact-path LF
+attribute. No incoming record, path witness or mathematical claim was changed
+or staged; the two attributes preserve the existing manifest conventions.
+The incoming wrapper still compares platform-native stdout bytes to its LF
+hash and therefore rejects Windows CRLF stdout. `incoming_check.py` checks
+every artifact against that unchanged manifest, then replays its verifier
+normally and with `-O`, normalizing ONLY stdout newlines before comparison.
+Both match the published output hash. This portability limitation and its
+exact normalized checks are retained in `incoming_check.json`; the frozen
+incoming wrapper itself was not edited.
