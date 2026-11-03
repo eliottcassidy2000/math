@@ -1,0 +1,30 @@
+checked 957 cases
+A 1 0 H 1 P 2
+A 2 0 H 1 P 4
+A 2 1 H 1 P 4
+A 3 0 H 1 P 8
+A 3 1 H 1 P 8
+A 3 2 H 3 P 12
+A 3 3 H 1 P 8
+A 3 4 H 1 P 8
+A 3 5 H 3 P 12
+A 3 6 H 1 P 8
+A 3 7 H 1 P 8
+seed root coefficients [7, 9, 6, 5]
+trial division prime 31 through 5
+trial division prime 313 through 17
+trial division prime 6269 through 79
+trial division prime 9341 through 96
+trial division prime 197233 through 444
+root family 0 1 249
+root family 0 2 7293
+root family 0 3 230001
+root family 1 1 313
+root family 1 2 9341
+root family 1 3 295537
+root family 2 1 217
+root family 2 2 6269
+root family 2 3 197233
+root family 3 1 185
+root family 3 2 5245
+root family 3 3 164465
