@@ -44,10 +44,20 @@ Add z, keeping original port 9, with z→i for i∈D⊆B and every other old ver
     |D|=2: (3445,1781,2633)
     |D|=3: (4731,2379,3552).
 
-For |D|=1 or 2, the new tournament is strong: z has edges both ways to the old strong tournament. Two reversed incidences escape immediately, with H=3445≡1 mod3; one gives H=1965≡0 but x=1103≡2 and y=1564≡1. Append literal q2, whose first output coordinate is 5h+8x+6y. The resulting strong physical tournament has exactly
+Equivalently, with k=|D| and c=binom(k,2), the exact state is
+
+    (291+1674k−194c, 345+758k−80c, 345+1219k−150c).
+
+For |D|=1, 2 or 3, the new tournament is strong: z has edges both ways to the old strong tournament. Two reversed incidences escape immediately, with H=3445≡1 mod3; one gives H=1965≡0 but x=1103≡2 and y=1564≡1. Append literal q2, whose first output coordinate is 5h+8x+6y. The resulting strong physical tournament has exactly
 
     H=5·1965+8·1103+6·1564=28033≡1 (mod 3).
 
-Thus one nonuniform edge into the protected triangle suffices to escape after one marked-state transfer, although it does not suffice immediately. Note that adding a uniform sink |D|=0 preserves H=291 but changes the marked state from (291,120,225) to (291,345,345); the original and new states must not be conflated.
+Thus one nonuniform edge into the protected triangle suffices to escape after one marked-state transfer, although it does not suffice immediately. The four possible counts also give a concrete failure of simultaneous escape modulo 15: 291,1965,3445,4731 are each divisible by 3 or 5. Yet the strong |D|=2 and |D|=3 cases have coprime counts 3445 and 4731; the former escapes 3 and the latter escapes 5. Thus gcd 1 across a family, and escape from each prime separately, do not force a single interface that escapes every prime at once. Note that adding a uniform sink |D|=0 preserves H=291 but changes the marked state from (291,120,225) to (291,345,345); the original and new states must not be conflated.
 
 `marked_escape_check.py` independently checks R4's tournament module, all eight literal interface states, strong connectivity, the appended q2 tournament, and its exact count. Run under both Python and Python -O.
+
+## All one-vertex extensions of R4
+
+The immediate ternary-offset target counts from R4 are 875 and 877. No tournament formed by adding a single vertex to this literal R4 has either count, regardless of which port is chosen afterwards. `search_r4_onevertex.py` reconstructs the count polynomial from 56 values and evaluates every one of the 1024 choices of edges between the new vertex and R4. It also independently runs literal endpoint-subset DP on all 1024 graphs and checks equality with the polynomial, in both normal and optimized Python. This is a finite exhaustion, not a claim about two or more new vertices or different source replacements.
+
+The same finite exhaustion extends to all five marked sources U,U2,U4,R2,R4 in the return note. For each source, define its two exact targets 3v+t and 3v+2t, where t=(2,−1,0). No single-vertex extension achieves either target at any port. Target-COUNT hits do occur: for U the new vertex's out-neighbor mask is 1,33,117,125, giving counts 97,95,95,97 respectively; for U2 the only hit is mask 4, giving 289. None of those count hits has a target observer at any port. U4, R2, and R4 have no target-count hit at all. Here a mask bit i means the new vertex beats old vertex i. The script `five_source_branches_check.py` independently runs literal Hamilton endpoint DP on every orientation and cross-checks the count polynomial; it tests the full observer at every possible port for each target-count hit. Run it both normally and with `python -O`. This finite result is limited to induced extensions by one vertex, and does not rule out replacing a seed, adding two or more vertices, or changing the branch family.
