@@ -12,6 +12,26 @@ for d in range(1, 13):
     if d % 2 == 0:
         check(q % 3 == t % 3 == 0, ('mod3', d))
 
+def v3(x):
+    value=0
+    while x % 3 == 0:
+        value += 1
+        x //= 3
+    return value
+
+for d in range(2, 202, 2):
+    q=1+2**(d-1)
+    t=2**(d+1)+2*(3**(d-1)-1)
+    check(v3(q)==1+v3(d-1), ('valuation q',d))
+    check(v3(t)==1+v3(d//2), ('valuation t',d))
+
+path15=[8,1,15,10,6,3,13,12,4,5,11,14,2,7,9]
+deltas=[abs(x-y) for x,y in zip(path15,path15[1:])]
+even=[d for d in deltas if d % 2 == 0]
+check(len(even)==7, 'example even count')
+check(sum(1+v3(d-1) for d in even)==10, 'example v3(P)')
+check(sum(1+v3(d//2) for d in even)==9, 'example v3(R)')
+
 def restricted_neighbors(v,n):
     ans=[]
     for s in range(2,isqrt(v+n)+1):
@@ -39,4 +59,4 @@ def prime(p):
     return p>=2 and all(p%d for d in range(2,isqrt(p)+1))
 for g,pv in ((1,19),(7,1171)):
     check(prime(pv) and 5+2**(g+6)==7*pv, ('prime instance',g,pv))
-print('PASS mod-3 and mod-7 factors, degree certificate, isomorphism, prime cofactors')
+print('PASS mod-3 valuations and mod-7 factors, degree certificate, isomorphism, prime cofactors')

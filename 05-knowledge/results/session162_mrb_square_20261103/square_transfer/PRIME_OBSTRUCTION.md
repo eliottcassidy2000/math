@@ -6,6 +6,19 @@ Use the transfer in NOTE.md, with an actual Hamilton path p in the square-sum gr
 
 Proof: If every gap of p were odd, the adjacent endpoints would have opposite parity and their sum would be an odd square, congruent to 1 modulo 4. Hence each edge lies wholly within one of the two residue sets {0,1} or {2,3} modulo 4. Both sets occur among 1,...,n for n≥4, so no spanning path can use only odd gaps. Thus some d is even. The interval factors are q_d=1+2^(d−1) and t_d=2^(d+1)+2(3^(d−1)−1). For even d, q_d=t_d=0 modulo 3. Therefore the products P and R are both divisible by 3 and so are the three sources P+32R, 3P+48R, 5P+64R. The first is at least 33 because P,R≥1; the others are larger. If 7p were divisible by 3 then p=3, making the number 21, excluded by the size bound.
 
+
+## Exact 3-adic weights
+
+Let k be the number of even gaps. The same argument gives 3^k dividing every source and 3^(k+1) dividing the middle source. More precisely, for even d,
+
+  v₃(q_d)=1+v₃(d−1),       v₃(t_d)=1+v₃(d/2).
+
+Odd gaps give 3-adic valuation zero for both factors. For q use the 3-adic lifting-the-exponent formula for 2^(d−1)+1, since d−1 is odd. For t observe t_d/2=(2^d−1)+3^(d−1). When d≥4 is even, the first summand has valuation 1+v₃(d/2), strictly smaller than d−1; d=2 is checked directly. Thus, writing
+
+  a=∑_{d even}(1+v₃(d−1)),    b=∑_{d even}(1+v₃(d/2)),
+
+the exact valuations of P,R are a,b, independent of all singleton padding. If a≠b, the three source valuations are exactly min(a,b), min(a,b)+1, min(a,b). If a=b cancellation can increase a valuation, so no equality is asserted. For the [15] path in NOTE.md, k=7, a=10 and b=9; its three source valuations are exactly (9,10,9).
+
 There are no square-sum Hamilton paths on [2] or [3]. The singleton graph [1] has an empty gap sequence and is a necessary exception if arbitrary transitive padding is admitted: P=1, R=2^g and the chain is
 
   1+2^(g+5) → 3+3·2^(g+4) → 5+2^(g+6).
