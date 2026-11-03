@@ -1,0 +1,107 @@
+{
+  "status": "INHERITED_PINNED_NOT_RETESTED",
+  "base_commit": "34fc4d716863",
+  "hash_scheme": "sha256 of UTF8 text with LF newlines",
+  "dependencies": [
+    {
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/axioms/NOTE.md",
+      "sha256": "aeb538f733fb47ecb1f18e1d5727f5730bfd34fdf5e6756701ebb8aad704568a"
+    },
+    {
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/priority_tilings/NOTE.md",
+      "sha256": "fa5db873ae3ba6aa1531c76c682ff64c50ff5cebe9a21b5cbf902573a528f0aa"
+    },
+    {
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/metagraph/NOTE.md",
+      "sha256": "2e58cf831a59b6a861f805c21db09556931246f62d607b899fdf08b06f63d4fa"
+    },
+    {
+      "path": "05-knowledge/results/session160_ordered_programs_20261103/adaptive_codes/NOTE.md",
+      "sha256": "f205bbb9a08588837a52163c3f7392710d1171c750e65a7fbd8a50ef7f7d9eee"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/mechanisms.py",
+      "sha256": "236fd8f13b71365cf806fbfc8e19592c2a70bec9c1219554d79a7dff9b80519c"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/profile.py",
+      "sha256": "b89055ae23c591a830483b080d194d0cfe0fa31e958015b9f74731936d24cbae"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/THEORY.md",
+      "sha256": "67232eb30059e1bef39bbf1a79c465ad8f72e73ca6067c8a7372ebde8c12476e"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/PROFILE.md",
+      "sha256": "9576fb0131d8d754a0b8ed7b6722ecbcb0c23dfa9b2d144c4ff8b1b068bdb295"
+    },
+    {
+      "path": "05-knowledge/results/apex_wedge_constructor_20261103/CARRIER.md",
+      "sha256": "033285ac66934419032708c4ac215dbaba18c5e8ad39d8bd8fbfe6f95a2bed12"
+    },
+    {
+      "path": "05-knowledge/results/session159_constructions_20261103/cycle_profiles/NOTE.md",
+      "sha256": "ac4a128208d4774e999a8ff06f85fb8de8532d24df03e9451f20f0a8fb888608"
+    },
+    {
+      "path": "05-knowledge/results/session159_constructions_20261103/profile_operator/NOTE.md",
+      "sha256": "ae763db7c3c30a125d335893e952f401c23f92a65d87fb907f362713cfdcb698"
+    },
+    {
+      "path": "05-knowledge/results/session156_spectrum_20261103/states/witnesses.json",
+      "sha256": "69649f1a0049c0646782dab1caa77bc5a1d87f3aa5ef4a5d406a60931fc68a00"
+    },
+    {
+      "path": "05-knowledge/results/polarized_path_calculus_20261103/CALCULUS.md",
+      "sha256": "e610e04041da3956aeb4ea2d965c2272e48c97000a393d2f1a2cae00d4088728"
+    },
+    {
+      "path": "05-knowledge/results/session36_information_curl_contexts_20261023/root/CURL_COCENTER_AND_LIE_BOUNDARY.md",
+      "sha256": "634350e83011d585f0f3b947642ad38d0e31efc20418175582a75e15cfc439ef"
+    },
+    {
+      "path": "05-knowledge/results/session81_counterexample_families_20261028/LIFTING.md",
+      "sha256": "9e16db2aaf25575813d1ccafbcd9efd4b8e8e894743d50630312a731f6b53108"
+    },
+    {
+      "path": "07-reflections/tournament-subset-decks-higher-order-faces-and-kneser-middle-duality-codex-20260821.md",
+      "sha256": "d6381a96e505a3a73ded4e149e7269907dd6e067cd11950d202cda162623e37c"
+    },
+    {
+      "path": "04-computation/tournament_subset_deck_hierarchy_scout_codex_20260821.py",
+      "sha256": "35ca4f0b0a0c9c4650510bf5a33909354f15a4b0f01a243d3d89872d55edb78a"
+    },
+    {
+      "path": "05-knowledge/results/tournament_subset_deck_hierarchy_scout_codex_20260821.out",
+      "sha256": "811999d0601863af218ffa9e1cf67087ac504fad35c9f6e17865599ab2c919c2"
+    },
+    {
+      "path": "05-knowledge/results/black_descent_20261020c/snarks.md",
+      "sha256": "96a208d516ff5f349d310f5b655a1aa55f8ca475700d0cbfda420397123afce5"
+    },
+    {
+      "path": "01-canon/theorems/THM-4094-hamiltonian-matching-deficit-and-two-prime-lane-completeness.md",
+      "sha256": "1d025e38fbb6271868b368a9dc2f6e80f2c0e1569dd746078b6a946cb0c9f7e9"
+    },
+    {
+      "path": "05-knowledge/results/mixed_returns_20261103/controllers.json",
+      "sha256": "d6633b1e8c042f15b2a1828c8b4985cbeb88cafe003ed48c6b990eb8d7a8e5b9"
+    }
+  ],
+  "hostile81_27": {
+    "groups": [
+      81,
+      27
+    ],
+    "common_H": [
+      462915,
+      462915
+    ],
+    "port8_after_sink": [
+      2390013,
+      1754919
+    ],
+    "common_cyclic_triples": 67
+  },
+  "one_birth55_orientations": 768
+}

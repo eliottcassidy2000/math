@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "python": "3.13.14",
+  "sympy": "1.14.0",
+  "dependency_count": 21,
+  "source_manifest_sha256": "ee7720fe72903c6c462b0edad47ea3d862dd30cbe6f8fa9a287330fb2f246029",
+  "runs": [
+    {
+      "script": "normal_forms.py",
+      "script_sha256": "7a3d5d9c062d1f065aba6b817186db507cd2e430f9e7bfb81e8b81633159a041",
+      "receipt": "normal_forms.json",
+      "sha256": "6572e82818f97b00ef528f18cfd2a365f3fd9663528c44724d61fd9a2018f6d8",
+      "normal_equals_optimized": true,
+      "output": "PASS: 8008 normal forms; 22880 competing edges; all-input formula controls"
+    },
+    {
+      "script": "bank.py",
+      "script_sha256": "657a9a533182093d33f321379d9701d17d27ffae07daa3488a91dda49e99275f",
+      "receipt": "bank.json",
+      "sha256": "669633c99a6c37e43b9672ceef1f972f8d376347ac89927d27b0d2d1201ed345",
+      "normal_equals_optimized": true,
+      "output": "PASS: ten independent profiles; minimal seven-state primitive guard; composite25 repairs 7p"
+    },
+    {
+      "script": "controllers.py",
+      "script_sha256": "a6392bda00098dffd84b19dd0fc01fc0d4b7636f81425d078c1d0892d40a6bc1",
+      "receipt": "controllers.json",
+      "sha256": "4062a06d3492e211d17951159f0473e83d7bdc44737c226e4c9a0217bb48ca86",
+      "normal_equals_optimized": true,
+      "output": "PASS: 13 feasible / 10 complement-compatible guards; K2,3; 49 native routes; 70 selector transitions"
+    },
+    {
+      "script": "neutral_carries.py",
+      "script_sha256": "5047e892f2252e9c2c16588fe094011b17bbe01af914810b6b3bf25e71b3d7c1",
+      "receipt": "neutral_carries.json",
+      "sha256": "aa17672c85f8dbd6effb6db2dfce21542a30da64ecc50429d018dca943b81bf1",
+      "normal_equals_optimized": true,
+      "output": "PASS: 128 carry formulas and named native resets; H497 neutral repair gains48 after G"
+    }
+  ]
+}
