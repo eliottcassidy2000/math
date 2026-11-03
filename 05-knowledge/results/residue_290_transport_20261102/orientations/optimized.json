@@ -1,0 +1,213 @@
+{
+  "gates": 51902,
+  "mrb_numeric_not_exact": [
+    {
+      "block_cut": 290,
+      "proved_tail_upper_evaluated_approximately": 0.019687243486,
+      "sum_illustrative": -0.019800492689
+    },
+    {
+      "block_cut": 2900,
+      "proved_tail_upper_evaluated_approximately": 0.002752077441,
+      "sum_illustrative": -0.0029416954
+    },
+    {
+      "block_cut": 29000,
+      "proved_tail_upper_evaluated_approximately": 0.000354363851,
+      "sum_illustrative": -0.00055972878
+    },
+    {
+      "block_cut": 290000,
+      "proved_tail_upper_evaluated_approximately": 4.3371962e-05,
+      "sum_illustrative": -0.000250870878
+    }
+  ],
+  "selected_wheels": [
+    {
+      "N": 5,
+      "folded_cycles": 1,
+      "folded_period": 2,
+      "odd_sign": -1,
+      "phi": 4,
+      "unit_cycles": 1,
+      "unit_order": 4
+    },
+    {
+      "N": 7,
+      "folded_cycles": 1,
+      "folded_period": 3,
+      "odd_sign": 1,
+      "phi": 6,
+      "unit_cycles": 2,
+      "unit_order": 3
+    },
+    {
+      "N": 9,
+      "folded_cycles": 1,
+      "folded_period": 3,
+      "odd_sign": -1,
+      "phi": 6,
+      "unit_cycles": 1,
+      "unit_order": 6
+    },
+    {
+      "N": 29,
+      "folded_cycles": 1,
+      "folded_period": 14,
+      "odd_sign": -1,
+      "phi": 28,
+      "unit_cycles": 1,
+      "unit_order": 28
+    },
+    {
+      "N": 145,
+      "folded_cycles": 4,
+      "folded_period": 14,
+      "odd_sign": -1,
+      "phi": 112,
+      "unit_cycles": 4,
+      "unit_order": 28
+    }
+  ],
+  "status": "PASS",
+  "traces": [
+    {
+      "N": 5,
+      "coefficients": [
+        -1,
+        1,
+        1
+      ],
+      "degree": 2,
+      "multiplier": -4,
+      "period": 2
+    },
+    {
+      "N": 7,
+      "coefficients": [
+        -1,
+        -2,
+        1,
+        1
+      ],
+      "degree": 3,
+      "multiplier": 8,
+      "period": 3
+    },
+    {
+      "N": 9,
+      "coefficients": [
+        1,
+        -3,
+        0,
+        1
+      ],
+      "degree": 3,
+      "multiplier": -8,
+      "period": 3
+    },
+    {
+      "N": 29,
+      "coefficients": [
+        -1,
+        7,
+        28,
+        -56,
+        -126,
+        126,
+        210,
+        -120,
+        -165,
+        55,
+        66,
+        -12,
+        -13,
+        1,
+        1
+      ],
+      "degree": 14,
+      "multiplier": -16384,
+      "period": 14
+    },
+    {
+      "N": 145,
+      "coefficients": [
+        1,
+        -28,
+        -868,
+        119,
+        58121,
+        47684,
+        -1536668,
+        -1437712,
+        21428076,
+        19849366,
+        -182411738,
+        -162318830,
+        1038075272,
+        875475432,
+        -4202705896,
+        -3327005656,
+        12653935228,
+        9326802291,
+        -29269894991,
+        -19943041341,
+        53288328688,
+        33345272673,
+        -77767778249,
+        -44422502676,
+        92246301175,
+        47823798122,
+        -89871897201,
+        -42048099050,
+        72472889525,
+        30424790474,
+        -48634976697,
+        -18210186223,
+        27251728738,
+        9041542515,
+        -12767942312,
+        -3726399797,
+        4999141929,
+        1272742132,
+        -1631480980,
+        -358738848,
+        441584800,
+        82845952,
+        -98348482,
+        -15502530,
+        17814788,
+        2312258,
+        -2580534,
+        -268276,
+        291600,
+        23324,
+        -24753,
+        -1429,
+        1484,
+        55,
+        -56,
+        -1,
+        1
+      ],
+      "degree": 56,
+      "multiplier": -16384,
+      "period": 14
+    }
+  ],
+  "universe": {
+    "all_tail_offsets": 290,
+    "all_unit_pairs_290": 12544,
+    "odd_moduli": [
+      3,
+      301
+    ],
+    "trace_conductors": [
+      5,
+      7,
+      9,
+      29,
+      145
+    ]
+  }
+}

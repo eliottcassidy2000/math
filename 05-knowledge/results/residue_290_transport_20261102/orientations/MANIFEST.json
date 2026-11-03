@@ -1,0 +1,28 @@
+{
+  "files": {
+    "NOTE.md": "729baac8ea4a5d7435d11e5e23b7cb20aceb3c4fea9ca17b5820c2a18d84380e",
+    "check.py": "bc12a8e8f99ee375168db096ce5528bdc476a05b4c6b999a206cdee58b3c772b",
+    "normal.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c",
+    "optimized.json": "e2994afe7ffa0c3ebad80ad09110ee33c364517108985362985383796f138c0c"
+  },
+  "primary_sources": [
+    {
+      "accessed": "2026-11-02",
+      "scope": "Theorem2.5 cyclotomic degree; Example3.2 real fixed field",
+      "url": "https://kconrad.math.uconn.edu/blurbs/galoistheory/cyclotomic.pdf"
+    },
+    {
+      "accessed": "2026-11-02",
+      "scope": "character orthogonality",
+      "url": "https://dlmf.nist.gov/27.8#E6"
+    }
+  ],
+  "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+  "sources": {
+    "01-canon/theorems/THM-4139-rational-three-cycle-order-six-lift-and-horizontal-carrier.md": "3faf679d5aded24746c0198daedfec04f7729fcbac3daff52035b92ec42dda89",
+    "01-canon/theorems/THM-4146-rational-three-cycle-order-six-lift-horizontal-divisor-fibre-firewall.md": "c610612bfd5d5ded0a7a20d967bfc59942c1592d19877d8865985f54255f0634",
+    "05-knowledge/results/arithmetic_braids_20260917_geometry.md": "a9e3a8fda096cd97f1d14f4924fc76eedd81b094ef122ff7b567b7131b52c708",
+    "05-knowledge/results/jacobian_eth_prime_wait_20261102/PRIME-MRB.md": "43cca6915515ff8743a89f928f7e36f87d2042250fde29e2e1ad76b69255eccc"
+  },
+  "status": "PROOF CANDIDATE O1\u2013O4, independent audit pending"
+}

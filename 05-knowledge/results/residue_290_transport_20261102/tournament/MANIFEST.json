@@ -1,0 +1,29 @@
+{
+  "checks": 158599,
+  "files": {
+    "README.md": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5",
+    "SOURCE_PINS.json": "77d067f6866d4f06b012cc8ae340f5a107af49d90e8ad0c2cb3eba1fa9fe018c",
+    "check.py": "c49e3d33aec1c808f7dc7db12755aa5b9ba124a701e956e6182c6d1f4024da60",
+    "normal.json": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a",
+    "optimized.json": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a"
+  },
+  "independent_audit": {
+    "path": "../audit_tournament/REPORT.md",
+    "sha256": "ef0678bb692511adfce35b109f2117b9258bb31bb74e69afc5e1a735fd542b7b"
+  },
+  "old_receipts_reused": false,
+  "promotion": {
+    "candidate_sha256": "05ee2bd0827c719cae8ed933a6d438e8cb31fefea488d31fc899a93da9827d33",
+    "new": "**PROVED R1\u2013R2, independently audited PASS; R3 and the black-core results\nbelow are INHERITED PROVED with their stated scopes. Fresh checks are\nFINITE-EXACT.** [Independent review](../audit_tournament/REPORT.md).",
+    "old": "**PROOF CANDIDATE R1\u2013R2 pending current independent review; R3 and the\nblack-core results below are INHERITED PROVED with their stated scopes.\nFresh checks are FINITE-EXACT.**",
+    "path": "tournament/README.md",
+    "promoted_sha256": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5"
+  },
+  "review_required": [
+    "R1 connected arithmetic scalar coefficient proof",
+    "R2 exact positive unit-tail response rank",
+    "reconciliation with fixed-degree projective recurrence and current prescribed-black-core theorem"
+  ],
+  "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+  "status": "PROVED R1\u2013R2 after independent review; inherited scopes unchanged"
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "exact source bytes read at current snapshot; proof claims scoped in README",
+  "source_revision": "4c6f0ca13528f249e22184129966ef727d4db0e3",
+  "sources": {
+    "01-canon/theorems/THM-4811-arc-strong-connectivity-is-the-exact-complement-distance-to-the-nonstrong-locus-black-refinement-and-the-dipole-law.md": "e484d2fc378983faa144d1945573a382603a55f9cd6f60ebde64b838a983e2fe",
+    "01-canon/theorems/THM-4819-regular-tournaments-under-native-moves-the-transitive-slab-exact-distance-and-the-prescribed-black-core.md": "c74a00964dc37b9332c6630e3032fb77e6ab118d2fa1b51105e81da70b2aace6",
+    "01-canon/theorems/THM-514-the-a000568-unit-tail-core-kernel-and-prime-tail-ladder.md": "da2cf8ca88a33c6ce1cb00dc9fe645da178e259ea360e03a3ac72daff76fccb9",
+    "01-canon/theorems/THM-516-burnside-core-kernel-phi-reframe.md": "10ef8808ad62bd5aee87ff0261380a0ec4648fed026747ec978e89eb157845f5",
+    "05-knowledge/results/primitive_hopf_lie_bijection_20261020/PRIMITIVE_HOPF_LIE_BIJECTION.md": "fd3ed52c18a0bbe924f9a151cc5575f3a7621d28e7655fa4d639f89a9a145e12",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-audit/ADVERSARIAL_REPORT.md": "4fed89b0c5d65711af71ef31f2609307cf39dbba408abebcb9de03398309156a",
+    "05-knowledge/results/session75_overnight_black_root_spectral_20261027/session75-black-core/BLACK_CORE_GEODESICS.md": "c4c15eaafd577706bb74a8b03f67b3077c4c1732777e53b264cee70628e2994e",
+    "05-knowledge/results/session98_tournament_growth_20261029/limits/LIMITS_AND_NORMALIZATION.md": "fee711c1ae3cbd8beef64d3b36d67e1f6d1d662a889aae730180c42c8c126a17",
+    "05-knowledge/results/session98_tournament_growth_20261029/recurrence/PROJECTIVE_RESPONSE.md": "9a7842df21867e9c7760505d6f91d37ebcee5902e43b27a16486054b9904c017"
+  }
+}

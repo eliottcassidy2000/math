@@ -1,0 +1,25 @@
+{
+  "files": {
+    "REPORT.md": "ef0678bb692511adfce35b109f2117b9258bb31bb74e69afc5e1a735fd542b7b",
+    "check.py": "f2ab4a81d0d4bed1b9d610eb308520d85b39d0e067b27f9603d3b81f208b388b",
+    "normal.json": "503c8928aa93d3c7c3ad7763fa6f6bb46dadf988e5926c7c18508a001a417596",
+    "optimized.json": "503c8928aa93d3c7c3ad7763fa6f6bb46dadf988e5926c7c18508a001a417596"
+  },
+  "gates": 60356,
+  "promotion": {
+    "candidate_sha256": "05ee2bd0827c719cae8ed933a6d438e8cb31fefea488d31fc899a93da9827d33",
+    "new": "**PROVED R1\u2013R2, independently audited PASS; R3 and the black-core results\nbelow are INHERITED PROVED with their stated scopes. Fresh checks are\nFINITE-EXACT.** [Independent review](../audit_tournament/REPORT.md).",
+    "old": "**PROOF CANDIDATE R1\u2013R2 pending current independent review; R3 and the\nblack-core results below are INHERITED PROVED with their stated scopes.\nFresh checks are FINITE-EXACT.**",
+    "path": "tournament/README.md",
+    "promoted_sha256": "21e50788bc4e88bf3a7cb9bec9df114308d0bf55bb19d2d27c66d09035e94cd5"
+  },
+  "reviewed_candidate": {
+    "MANIFEST.json": "66374c1858a22a9d41a3b30df31c954b97bd456d0cdde6631e8f69b07703561c",
+    "README.md": "05ee2bd0827c719cae8ed933a6d438e8cb31fefea488d31fc899a93da9827d33",
+    "SOURCE_PINS.json": "77d067f6866d4f06b012cc8ae340f5a107af49d90e8ad0c2cb3eba1fa9fe018c",
+    "check.py": "c49e3d33aec1c808f7dc7db12755aa5b9ba124a701e956e6182c6d1f4024da60",
+    "normal.json": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a",
+    "optimized.json": "62ce269e2207221c2266930eb81536a2165d1bb258872bb5c1b34446dd93f85a"
+  },
+  "status": "PASS R1\u2013R2"
+}

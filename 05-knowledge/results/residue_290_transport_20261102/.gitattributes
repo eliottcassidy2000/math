@@ -1,0 +1,4 @@
+*.md -filter
+*.py -filter
+*.json -filter
+.gitattributes -filter
