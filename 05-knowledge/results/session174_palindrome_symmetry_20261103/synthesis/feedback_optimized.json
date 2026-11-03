@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "explicit_checks": 226,
+  "all_labelled_feedback_orders": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "values": {
+    "1": [
+      3
+    ],
+    "2": [
+      5
+    ],
+    "3": [
+      9,
+      15
+    ],
+    "4": [
+      17,
+      27,
+      37
+    ]
+  },
+  "method": "independent literal permutations and subset two-slot covers, no imports from author"
+}
