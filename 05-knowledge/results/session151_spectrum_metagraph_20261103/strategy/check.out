@@ -1,0 +1,4 @@
+order 3 strong checked 2 first nonsolid None
+order 4 strong checked 24 first nonsolid None
+order 5 strong checked 1 first nonsolid (5, 8, 9, [15, 17, 19, 23, 25, 27, 29, 33, 37, 41], [21, 31, 35, 39])
+C3 -> C3 code 24573 H 9 ear image [9, 15, 31, 41, 45, 61, 75, 99]
